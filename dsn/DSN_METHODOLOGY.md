@@ -1,18 +1,14 @@
-# DSN_METHODOLOGY_v1.3
+# DSN_METHODOLOGY_v1.4
 
 **Title:** Dense Semantic Notation — Methodology, Grammar, and Canonical Tag Registry  
-**Date:** September 20, 2026  
-**Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok  
-**Revision editor:** ChatGPT; finalized from PI-approved Draft 1. The inherited author list is not a record of separate approval by the other contributors.  
+**Date:** 22 October 2026  
+**Scope:** Rules for scientific records, evidence, ownership, imports, document profiles, repository custody, and controlled corpus maintenance. This document contains no RTG physics result and does not decide any study's scientific OPEN.  
 **Document class:** Methodology / governance reference  
-**Status:** ADOPTED — active canonical methodology for the RTG corpus update. Supersedes DSN_METHODOLOGY_v1.2 as the governing reference; existing study files retain their declared methodology version until individually migrated.  
-**Revision base:** `DSN_METHODOLOGY_v1_2.md` (`DSN_METHODOLOGY_v1.2`), read in full.  
-**Approved draft:** `DSN_METHODOLOGY_v1_3_DRAFT.md` — Draft 1, September 19, 2026.  
-**Adoption:** Mustafa (PI) approved all proposed updates, including P1–P5, in this update branch on September 20, 2026.  
-**Release record:** `DSN_METHODOLOGY_v1_3_RELEASE_RECORD.md`.  
-**Supersedes:** `DSN_METHODOLOGY_v1.2`; the earlier file and approved draft are preserved unchanged as historical records.  
-**Scope:** Rules for scientific records, evidence, ownership, imports, document profiles, and controlled corpus maintenance. This document contains no RTG physics result and does not decide any study's scientific OPEN.  
-**Status summary:** This adopted revision preserves the DSN claim-block model, established tag spellings, and the standard technical-ledger section order. It separates proof status from assumptions, physical interpretation, evidence availability, and workflow completion; makes ownership and source-version handling explicit; and adds document profiles and a two-pass migration protocol. The PI has accepted all rule revisions and policy proposals P1–P5; the release record preserves that decision and the remaining nonblocking archive/tooling follow-ups. Adoption changes the methodology, not any scientific claim, study split, proof ownership, or programme maturity; corpus migration proceeds document by document.
+**Document status:** DRAFT — proposed v1.4 for editor review and PI adoption.  
+**Supersedes:** `DSN_METHODOLOGY_v1.3` (SHA-256 `3e23ba94606706b3c8d50aecfb2184df52042cf8e65cdd3c3e0cd3159254ec7e`; tag `methodology-v1.3`).  
+**Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok. Inherited authorship is not a record of separate approval of this revision.  
+**Revision:** prepared by Claude; editor review by ChatGPT; adoption by the PI (§13.1). Release record: `records/methodology/`.  
+**Status summary:** v1.4 keeps the claim-block model, tag registry, technical-ledger layout and evidence discipline of v1.3. It adds the live-file rule (live sections state the current state; history is in the repository), current-only headers, compact version histories, claim-preserving compaction releases, advisory size reporting, and the repository workflow (`rtg-corpus`: fixed filenames, tags, pull requests, records and evidence without redundant copies, project-knowledge synchronization). Adoption changes the methodology, not any scientific claim; each DSN migrates at its next release.
 
 ---
 
@@ -36,13 +32,13 @@ Methodology governs records, not scientific truth. Administrative approval canno
 
 There is one adopted methodology and one designated canonical DSN per **study**, not one file per entire continuous or discrete branch. Each claim has one designated owner. Other studies import it rather than maintaining competing authoritative copies.
 
-A study may have versioned technical appendices, certificate bundles, datasets, and historical snapshots. The canonical DSN must identify them and retain the claim statements, scope, current status, dependencies, and evidence locations. A supplement must not acquire an independent competing current-state ledger. Splits, mergers, and ownership transfers follow §13; this permission does not authorize a particular restructuring.
+A study may have versioned technical appendices, certificate bundles, datasets, and historical snapshots; in the corpus repository these are files and tags (§13.7). The canonical DSN must identify them and retain the claim statements, scope, current status, dependencies, and evidence locations. A supplement must not acquire an independent competing current-state ledger. Splits, mergers, and ownership transfers follow §13; this permission does not authorize a particular restructuring.
 
 ### 0.4 Design Priorities, in Order
 
 1. **Epistemic honesty:** separate what was defined, proved, observed, inferred, or merely proposed.
 2. **Current-state legibility:** locate the current position without reading a version history.
-3. **Provenance preservation:** never silently erase a scientific correction, rejection, or source dependency.
+3. **Provenance preservation:** never silently erase a scientific correction, rejection, or source dependency. Provenance is preserved by immutable adopted versions (repository tags), release records and Appendix B — not by keeping superseded text in live sections (§1.1).
 4. **AI-context efficiency:** a bounded orientation core points to the complete record; it is not a self-contained substitute for every technical dependency.
 5. **Human maintainability:** stable grammar and ownership allow focused updates without reinterpreting the entire corpus.
 
@@ -59,6 +55,7 @@ Every document declares a profile. Claim grammar, evidence discipline, ownership
 | Historical / legacy provenance ledger | Declared section map and archival scope | Preserves historical findings and revalidation gates. A new layout or filename does not promote historical evidence. |
 | Programme overview | Programme-specific layout | Owns the study inventory, programme-level dependencies, maturity definitions, and programme guards; it does not substitute for source derivations. |
 | Methodology / governance reference | This document's layout | Owns grammar and maintenance rules, not scientific results or programme maturity decisions. |
+| Noncanonical registry or study | Declared section map; stored under `noncanonical/` | May be adopted as a working registry at a stated scope; it does not own the imported owner results it records and does not make them canonical. |
 | Working note, review, or handoff memo | Explicitly noncanonical layout | Records proposals, checks, and requests. Adoption into an owner DSN is a separate recorded action. |
 
 A nonstandard profile supplies a short map to current state, OPENs, guards, routing, technical content, imports, artifacts, and history. Missing functions are stated as not applicable with a reason. Profile selection must not be used to evade evidence or scope requirements.
@@ -117,11 +114,17 @@ Required fields, in this order; additional metadata follows them:
 
 The summary is present-state information, not a chain of version addenda. Authorship, revision editor, owner, programme pointer, and archive locator may follow. Do not invent an approval, date, archive DOI, or source version. Ancillary notes are not additional competing summaries.
 
+Header rules:
+- One line per field. *Document status* states the current status only, with a pointer to the current adoption record.
+- *Supersedes* names the **immediately preceding adopted edition and its hash** (or “none — first adoption”). It never lists earlier editions; the lineage is recoverable from each predecessor's header and from the repository tags. Do not invent a hash for an unavailable historical source; say that it is not recorded.
+- No “History —”, “previous status”, “rX.Y was”, or dated release-boundary text in a header field. Earlier-round narratives belong in release records.
+- Exactly one footer line, describing the current edition.
+
 ### §1 — Current Canonical State
 
 A compact, tagged account of accepted definitions and results, with their limitations and references to the detailed ledger. This is the navigation entry point; exact claim statements, evidence, and owner records govern technical use.
 
-Target: 200–400 words. Above 500 words, move derivations, campaign tables, and history to their proper locations or record a justified profile exception. An inconsistency between the summary and detailed record must be reported and resolved, not settled by whichever location sounds stronger.
+Target: 200–400 words. Above 500 words, either move derivations, campaign tables, and history to their proper locations, or declare a profile exception **in the header** with a one-line reason. This is a documentation obligation, not a size gate: exceeding 500 words is not itself a failure, but a generic “deferred” note does not replace the exception. An inconsistency between the summary and detailed record must be reported and resolved, not settled by whichever location sounds stronger.
 
 ### §2 — Active Frontier / OPEN Registry
 
@@ -180,7 +183,7 @@ Contributors and actual roles, revision authorship, adoption record, canonical a
 - **§X.Y [change class]:** [specific change and reason; affected RID(s) where applicable]
 ```
 
-Recent versions retain detailed entries. Older entries may be summarized only if the full record remains recoverable in an immutable version or linked history. Compression never removes a correction's original statement or provenance. Version numbers in filenames and headers remain; the prohibition on top-of-file history concerns the narrative, not necessary metadata.
+One compact entry per version: date and status; change classes; affected RIDs; every scope or grade correction; a one-sentence reason; the release-record locator and the predecessor tag. Draft-round records, review verdicts, gate lists and verbatim old→new line maps belong in the release record (§13.7), not in Appendix A. Older entries may be shortened to one line once their full text is recoverable from a tagged edition; compression never removes a correction's original statement or provenance, which remain in Appendix B or the tagged edition. The version number lives in the header and the tag; repository filenames carry no version (§13.7).
 
 ### Appendix B — Retired and Rejected Claims
 
@@ -198,7 +201,21 @@ Basis: [counterexample, contradiction, or limited route-failure evidence].
 Replacement: [RID/location or none]. Recorded in: vX.Y.
 ```
 
-An original statement's identifier is a historical reference here, not a second active claim. A correction to an unnumbered rule uses an administrative correction key and exact old section, not a fabricated historical RID. Erroneous rejection records are corrected under §7, never erased.
+An original statement's identifier is a historical reference here, not a second active claim. A correction to an unnumbered rule uses an administrative correction key and exact old section, not a fabricated historical RID. Erroneous rejection records are corrected under §7, never erased. Appendix B also retains currently operative negative constraints.
+
+<a id="dsn-live-file-rule"></a>
+
+### 1.1 Live-File Rule
+
+“Live” is functional, not fixed by section number: it covers §§0–9, current scientific appendices, and the corresponding sections of nonstandard profiles (§0.5). A historical/legacy study's current assessment of historical evidence is live content. Operative assumptions, negative constraints, proof limitations, source-access limits and current adoption scope are not obsolete merely because their evidence or origin is old.
+
+1. **Current only.** Live sections contain current statements, scopes, pins and statuses. Superseded wording, dated overlays (“rX.Y current-use overlay”), “kept as history” sentences and replaced pins are removed from live sections when a release touches them.
+2. **Replace, then record.** A changed status, pin or scope is edited in place. The change is recorded once: a compact entry in Appendix A, cross-referenced from Appendix B where §7 requires a scientific correction record. Superseded prose need not be reproduced; it remains in the tagged predecessor.
+3. **One home per statement.** Each claim is stated in full once, at its owner location (§6 block or registry record). §1, §2, §5, export tables and notice tables give the RID and a short, accurate readout that keeps its load-bearing qualifications, plus a pointer. An OPEN record keeps its question, residual obligations and closure criterion (§5); it is not reduced to a status-only pointer.
+4. **One current pin per claim or use.** A reference carries the pin actually used for that claim. Different claim-level uses may keep different editions; the latest companion edition and the proof-source pin are distinct fields. A historical pin stays live only when it is itself the load-bearing source, labelled so.
+5. **Repeated clauses by key.** A clause used in more than two places may be defined once and cited by key: evidence states (§12.2), guards (§3, keeping the §2 first-use callout and later pointers), or per-file standard clauses listed in a short “Standard clauses” block. A key must resolve inside the document or its release package and stay attached to every governed use. Quantifiers, model/domain restrictions and distinct evidence states are not generic disclaimers and are never removed as such.
+
+This rule removes history from live sections. It never removes a current statement, assumption, scope, grade, RID, OPEN obligation or evidence pointer, and it never moves a live result to Appendix B.
 
 ---
 
@@ -374,8 +391,9 @@ RIDs identify claims, definitions, OPEN modules, and artifacts independently of 
 | `RTG-OFN` | Existing Ontological Foundations namespace; match before the broader `RTG` prefix |
 | `PL` | Pre-Legacy provenance records |
 | `L0L1`, `L2` | Legacy-ledger namespaces; historical spellings retained and owner-qualified |
+| `RRF` | Relational Representation Framework registry: representation profiles and interface identifiers |
 
-The additions beyond v1.2 are adopted registry synchronization in v1.3. They recognize custodians and existing usage; they neither assign programme maturity nor create/close a study. Shortnames such as OFN are not automatic RID aliases. Preserve existing nonstandard IDs (for example, legacy OPEN/LEM/PROP spellings) with an explicit owner map rather than silently rewriting them.
+The additions beyond v1.2 are adopted registry synchronization in v1.3. They recognize custodians and existing usage; they neither assign programme maturity nor create/close a study. Shortnames such as OFN are not automatic RID aliases. Local navigation keys of noncanonical registries (for example `RER-*`) are not scientific RIDs. Preserve existing nonstandard IDs (for example, legacy OPEN/LEM/PROP spellings) with an explicit owner map rather than silently rewriting them.
 
 | Category | Meaning |
 |---|---|
@@ -496,7 +514,7 @@ For a standard technical ledger, the core spans exactly §1–§4. It gives orie
 
 Examples and quoted markers inside code fences are not extraction boundaries. For a nonstandard profile, declare the corresponding core sections explicitly. Methodology itself is exempt from the scientific-ledger marker requirement.
 
-The core should not exceed 800 lines. If it does, move historical addenda, complete proofs, closed-module detail, and raw tables out of the core; document any temporary migration exception. Do not achieve the limit by deleting assumptions.
+The orientation core has no fixed line-count budget. Its size is reported under §13.8. Move historical addenda, complete proofs, closed-module detail and raw tables to their proper locations when they obscure orientation; never remove assumptions to reduce a metric. The core boundaries, marker and profile map remain required.
 
 ### 6.2 Instructions for AI Systems Reading a DSN
 
@@ -514,11 +532,11 @@ The core should not exceed 800 lines. If it does, move historical addenda, compl
 1. Write new technical results in §6; update §1 only for changed canonical content. Keep closed proofs out of the active registry.
 2. Follow the claim, OPEN, import, artifact, and correction formats. Assign owner RIDs only with recorded authority; retain explicit missing-ID requests otherwise.
 3. Distinguish exact symbolic computation, rigorous interval verification, ordinary numerical tests, and physical interpretation. State which checks were actually executed.
-4. Preserve frozen inputs and exact source history. Use assertion-gated edits, a versioned output, a readable diff, and a change record; verify that promised result bodies survived the edit.
+4. Preserve frozen inputs and exact source history. Use assertion-gated edits on a repository branch, a readable diff, and a change record; verify that promised result bodies survived the edit. Do not create versioned copies of a file inside the repository (§13.7).
 5. Follow §13 for splits, merges, transfer, and the two-pass corpus update. A recommendation in a review or memo does not itself authorize a scientific reclassification.
 6. Keep prose and metadata in English under §0.7. Preserve exact historical identifiers and notation.
 7. Ask focused questions for missing definitions, versions, conventions, scripts, datasets, or owner decisions. Record unresolved requests explicitly; do not invent archive paths, hashes, approvals, or previous-session content.
-8. Finish with the actual output version, checks performed, unresolved limitations, and affected consumers. Never claim that inaccessible project files or remote archives were updated.
+8. Finish with the actual output version, branch and commit, checks performed, unresolved limitations, and affected consumers. Never claim that inaccessible project files, remote archives, merges or tags were updated.
 
 ---
 
@@ -678,7 +696,7 @@ Use `$...$` inline and `$$...$$` for display equations. When plain-text mathemat
 
 ### 10.4 Code and Artifact References
 
-Use backticks for filenames and exact symbols. Pin the file version/hash or repository commit in §8. A relative path is resolved against a named archive/package root. A filename mentioned in a transcript is not evidence that the corresponding file is present.
+Use backticks for filenames and exact symbols. Pin an artifact by repository path plus commit or tag, and its SHA-256, in §8. A relative path is resolved against a named archive/package root. A filename mentioned in a transcript is not evidence that the corresponding file is present.
 
 ### 10.5 Blockquotes
 
@@ -716,7 +734,7 @@ Preserve source equations, filenames, identifiers, and meaning when moving conte
 | Promoting high precision, guessed relations, or a finite sweep to exact general proof | Computation has not covered the claim's quantifiers | Separate numerical evidence, finite exact verification, and all-parameter derivation. |
 | Using an observable fit as a primitive-map identity | Silently changes the mathematical object | Supply the coordinate/observable map and approximation scope. |
 | Reusing a number in two differently normalized models | Numerical agreement is not an identification | Trace variables, dimensions, normalization, and transfer assumptions. |
-| Loading a long changelog before current state | Conceals the present position | One current summary; history in Appendix A. |
+| Loading a long changelog before current state | Conceals the present position | One current summary; compact Appendix A; detail in release records and tagged editions. |
 | Keeping closed proofs in the active OPEN registry | Obscures residual obligations | Full proof in §6; short closed reference in §2. |
 | A bare `[RESULT]` or a slash-combined truth label | Hides the actual grade of the conclusion | One paired status for each assertion, with conditional logic under §3.4. |
 | Local alias overriding a canonical tag | Changes meaning without a methodology decision | Correct the alias or request a central revision. |
@@ -729,6 +747,12 @@ Preserve source equations, filenames, identifiers, and meaning when moving conte
 | Copying a reviewer deduction into an owner as already approved | Erases adoption and authorship | Record the contribution, verification, and owner decision. |
 | Treating file split/merger as scientific reconciliation | Layout does not establish model equivalence | Keep incompatible objects and disputed claims explicit. |
 | Claiming the entire corpus was synchronized after editing one file | Consumers and pinned imports may remain unchanged | Maintain per-consumer completion records in the two-pass update. |
+| Keeping superseded text in live sections as “history” | Readers must reconstruct the current state from layers; files grow every release | Replace in place; record once (§1.1). |
+| Revision chains in header fields | The header grows with every release | Immediate predecessor and hash only (§1, header rules). |
+| Draft-round records in Appendix A | Appendix A becomes most of the file | Release record (§13.7). |
+| The same status restated in several sections | Inconsistency risk; size | One home, accurate short readouts elsewhere (§1.1). |
+| Versioned copies of files in the repository (`*_v1_2.md`, `*_DRAFT_r2.md`) | Duplicates bytes git already keeps; obscures which file is current | Fixed filename; versions are commits and tags (§13.7). |
+| Treating a compaction checker PASS as proof that meaning is preserved | Token checks do not see a dropped qualification | Claim-block preservation with a movement map (§13.6); semantic change goes to review. |
 
 ---
 
@@ -743,7 +767,7 @@ For a load-bearing computational artifact, record these fields inline or in an i
 | Field | Required content |
 |---|---|
 | Identity | Artifact RID, exact filename, version or commit, and hash when available |
-| Custody | Owner and retrievable archive/package location; explicitly unknown if absent |
+| Custody | Owner and retrievable location: repository path plus commit or tag, or external archive locator; explicitly unknown if absent |
 | Target | Exact claim/RID and the part actually checked |
 | Inputs | Model, coordinates, conventions, parameters, seeds/data identities, inclusion/exclusion rules |
 | Arithmetic | Exact field/ring or numerical precision; interval method and rounding guarantees if used |
@@ -758,6 +782,20 @@ Not every artifact needs an executable script: a complete written proof can be i
 ### 12.2 Separate Identity, Execution, and Adequacy
 
 Use explicit review states, not a single overloaded “verified” flag: **source statement inspected**, **artifact bytes available**, **hash checked**, **code inspected**, **executed in this review**, **independent mathematical check**, and **claim coverage assessed**. Record only the actions actually performed. A reported prior run remains reported until locally checked.
+
+These states may be cited by key. A key means exactly its definition; it still carries the claim or artifact, the reviewer or executor, the date or review context, and the extent required by §12.1. It is not a blanket verification flag.
+
+| Key | Meaning |
+|---|---|
+| `EV-SRC-READ` | Source statement inspected |
+| `EV-SRC-REPORTED` | Attributed source or prior-executor report, not independently established by the present review |
+| `EV-BYTES` | Artifact bytes available |
+| `EV-HASH` | Hash checked against a recorded value |
+| `EV-CODE` | Code inspected |
+| `EV-RUN` | Executed in this review |
+| `EV-NOT-RERUN` | The named computation was not executed in the stated review; this neither retracts a prior run nor contradicts source inspection or hash verification |
+| `EV-INDEP` | Independent mathematical check |
+| `EV-COVER` | Claim coverage assessed |
 
 A successful exit code establishes only that the implemented acceptance conditions passed. A falsifier can deliberately return nonzero on a valid counterexample; preserve its documented semantics. Distinguish execution errors, failed assertions, inconclusive resource limits, and a scientifically successful negative result.
 
@@ -785,19 +823,21 @@ A syntax linter checks only documented machine-verifiable rules. It cannot certi
 
 Preserve the adopted source version. Create one explicit target version as a draft; record its base, editor, date, and change record. New drafts are not described as adopted merely because their text was generated. Record the PI/authorized owner acceptance before changing the adopted pointer.
 
+In the corpus repository (`rtg-corpus`, §13.7): a draft is a branch (`claude/...` for Claude sessions, or another named branch) that edits the fixed-name file in place; a review is a pull request plus its review record; adoption is recorded in the release record, then the PI merges into `main` and creates the annotated tag `<study>-v<version>`. A merge or a tag is not by itself an adoption decision, and a passing check is not an approval. Intermediate drafts are commits on the branch; a draft that must stay citable gets a tag (`<study>-v<version>-rN`).
+
 Use one target version through the coordinated revision cycle; identify intermediate drafts separately. Do not invent minor-version successors for every cross-reference adjustment. If an already adopted target changes materially, issue a new immutable version. A release manifest identifies the actual adopted versions, profiles, and hashes; it does not replace their claims.
 
 ### 13.2 Issue Record
 
 The maintenance register is administrative, not a scientific DSN. Each issue records: tracking key; source/version/location; class (editorial, scope/typing, scientific, evidence, governance); proposed action; owner; proof/artifact or reason; decision state; affected consumers; and pass-two completion.
 
-Decision states distinguish **proposed**, **accepted**, **deferred**, **rejected**, and **needs evidence**. They are not claim-status tags. No row is closed merely because a file was edited; the specified evidence and propagation must also be checked.
+Repository issues may serve as the register when they carry these fields. Decision states distinguish **proposed**, **accepted**, **deferred**, **rejected**, and **needs evidence**. They are not claim-status tags. No row is closed merely because a file was edited; the specified evidence and propagation must also be checked.
 
 ### 13.3 Split, Merge, and Ownership-Transfer Protocol
 
 Before restructuring, record the purpose and boundaries, proposed canonical owners, and a claim-by-claim movement map. Do not merge different generators, coordinate conventions, or diagnostic models solely because they share symbols or topics.
 
-For each moved claim preserve its statement, assumptions, proof grade, RID, evidence, and history. If any of those scientific contents changes, record a separate scientific correction. Keep original frozen files; add source/destination pointers and update importers. A new filename is not a new proof.
+For each moved claim preserve its statement, assumptions, proof grade, RID, evidence, and history. If any of those scientific contents changes, record a separate scientific correction. Keep original frozen files (tagged editions); add source/destination pointers and update importers. A new filename is not a new proof.
 
 A split has one designated owner for each claim and no competing current summaries. A merger retains all source histories and marks retired files explicitly. Technical appendices remain subordinate to a canonical DSN and are versioned or hash-pinned. They may carry full derivations without becoming a parallel research ledger.
 
@@ -809,7 +849,7 @@ This Methodology authorizes a process, not a specific Genesis, Triadic, Number G
 
 **Pass 2 — consumer and registry synchronization:** traverse all affected imports, summary statements, OPEN states, guards, and artifact pointers against the accepted owner versions. Update foundational feedback and programme status summaries after their technical inputs are reconciled. Check current-state agreement without erasing intentionally pinned historical citations.
 
-A methodology change alone does not apply itself to all source files, retag their claims, reassign theorem ownership, or satisfy programme bridge gates. Existing v1.2 documents remain identified as such until individually migrated.
+A methodology change alone does not apply itself to all source files, retag their claims, reassign theorem ownership, or satisfy programme bridge gates. Existing documents keep their declared governing edition (v1.2 or v1.3) until individually migrated; v1.4 applies to each DSN at its next release, and no DSN is forced into a separate compaction-only release.
 
 ### 13.5 Release Checks
 
@@ -819,58 +859,83 @@ Before calling the corpus synchronized, verify the owner-to-consumer records and
 
 Formatting/structure checks and scientific checks are separate. A snapshot may be archived with declared limitations; do not call it fully certified or fully synchronized beyond the completed checks.
 
+For a repository release also check: the file's SHA-256 equals the value in its release record; the header follows §1; the size report (§13.8) and, where used, the compaction report (§13.6) are attached to the release record.
+
+<a id="dsn-compaction"></a>
+
+### 13.6 Compaction Change
+
+A **compaction change** performs layout, deduplication, navigation and history relocation without changing scientific content. It is editorial work: it requires no new scientific review when the mechanical-preservation checks below pass. Passing them establishes editorial eligibility only; adoption and the immutable release identity remain governed by §13.1. Unchanged scientific certificates are not rerun solely for compaction.
+
+Use a source-to-destination **movement map**. For each affected block record its source locator and hash, its destination locator and hash, and the operation: retain, move, replace an exact duplicate by a pointer, extract an identical standard clause (§1.1.5), relocate superseded history, or apply an independently approved correction. Unnumbered blocks use version/section/span locators; the checker does not invent scientific RIDs.
+
+The checker verifies:
+
+1. **Qualified claim preservation.** Every distinct live claim remains at its designated live home with its statement, status, assumptions, quantifiers, domain, conventions, clock/order, dependencies, guards and evidence/proof references, inline or through an explicitly mapped, unchanged clause. Formula and tag checks are per claim block, not global set membership. A live result is never moved to Appendix B to satisfy a check.
+2. **Mechanical scope.** Protected scientific text is unchanged, except for declared purely presentational transformations and exact reference substitution. Every other changed scientific passage belongs to the separately approved correction delta. New navigation readouts are mapped to their authoritative records; the checker does not certify free paraphrase as equivalent. An unexplained substantive edit goes to scoped review of that edit only.
+3. **Removal accounting.** Each removed passage maps either to a surviving identical qualified record, or to an identified historical location with retrievable immutable bytes (a tagged edition or a release record). Recoverability justifies removing history; it never justifies removing a current obligation, assumption or result.
+4. **Integrity.** RIDs, applicable OPEN states, anchors, imports, proof/evidence locators and clause keys resolve after the move. Unavailable artifacts stay explicitly unavailable. Broken links introduced by the move fail the check. Parser limitations are reported, not treated as preserved or absent.
+5. **Presentation.** Current-only header, immediate-predecessor identity, one footer, and the current-state/history separation of §1.1 for the declared profile.
+
+A release may combine scientific or interface corrections with compaction. Build it in two recorded stages: adopted edition → corrected intermediate baseline (hash recorded; a build stage, not an adopted version) → compacted candidate. The first delta receives the review its content requires; the second is checked against the intermediate baseline, so stale statuses corrected in stage one are not required to survive. New substantive claims cannot enter through the compaction stage. The release record states which part was checked by which means. The checker proves neither mathematical truth nor the semantic equivalence of unrestricted rewrites (§12.4).
+
+<a id="dsn-repository"></a>
+
+### 13.7 Repository Custody, Records and Evidence
+
+The corpus repository is `rtg-corpus` (public). It is the archive of adopted editions and their records.
+
+**Layout.** `dsn/` canonical DSNs and this Methodology; `noncanonical/` noncanonical registries and studies; `records/<study>/` release records, advisory, disposition, closeout and review notes; `evidence/<study>/` scripts and outputs; `atlas/` the State Atlas; `tools/` lint and checkers; `BASELINE.md` the manifest of files and verified hashes.
+
+**History lives in git.**
+1. One file per study with a **fixed filename without version number**. Each adopted edition is a commit on `main` with an annotated tag `<study>-v<version>`; the tag message carries the adopted SHA-256. Earlier editions are retrieved from tags.
+2. Files are byte-exact (`.gitattributes: * -text`): the SHA-256 in the repository equals the one in the release record. A file enters only after its hash is checked against an owner or cross-stream record, or it is marked as PI-supplied in `BASELINE.md`.
+3. There is no separate history file. Retired Appendix A detail and superseded prose stay in the tagged editions and release records.
+
+**No redundant copies.** The repository does not store anything git can reconstruct:
+- no versioned copies of a DSN (`*_v1_2.md`, `*_DRAFT_r2.md`) and no copies of a DSN inside an evidence package: drafts are commits or tags;
+- no stored diffs: release records cite commits, and diffs are generated on demand;
+- working notes (advisory, closeout, review) keep one fixed filename and are updated in place; their rounds are commits;
+- certification scripts live once, under `evidence/<study>/scripts/` with fixed names; a release record cites script path, commit, command and output hash; only small per-release outputs (logs, JSON) are added under `evidence/<study>/<version>/`;
+- frozen external packages that must stay byte-complete may be kept as received, with a README naming files kept elsewhere in the repository.
+
+**Release record.** One per release, `records/<study>/<STUDY>_v<version>_RELEASE_RECORD.md`, never edited after adoption (later facts go in a dated addendum file). It carries identities and hashes, the predecessor tag, the build stages, the adoption decision, the checks run and their extent (§12.2 keys), the size report (§13.8), and pointers to reviews and evidence.
+
+**Removal from `main`.** A file removed from the current tree remains in its tags and commits; removal is recorded in the release record or commit message. Nothing adopted is deleted from history.
+
+<a id="dsn-size-reporting"></a>
+
+### 13.8 Size Reporting
+
+There are no fixed size budgets. A lint script reports, for each release: file size and growth against the predecessor; growth per new RID (N/A when no RID is added); §1 word count; orientation-core size; header field lengths; Appendix A words per version; count of history phrases in live sections; near-duplicate paragraphs. The report states its counting method and goes in the release record. Metrics and duplicate flags are advisory: they do not delete text and do not block a release because of size. Provenance and integrity checks remain separate.
+
+### 13.9 Project Knowledge Synchronization
+
+AI working contexts (for example a Claude project) load current files from `main` (`dsn/`, `noncanonical/`, `atlas/`) through the repository integration; synchronization is refreshed after each merge. Working notes still in progress may sit in the project until they are committed under `records/`. A project copy is never the authority: in a conflict, the tagged repository file governs. No historical file is loaded as current scientific context.
+
 ---
 
 <a id="dsn-appendix-a"></a>
 
 ## Appendix A — Version History
 
-### v1.3 — September 20, 2026 — Adopted
+### v1.4 — 22 October 2026 — DRAFT
 
-- **Adoption [governance]:** Mustafa (PI) approved all proposed updates in Draft 1, including policy proposals P1–P5 and the rule repairs recorded under M13-C01–M13-C12. V1.3 is the active canonical methodology, superseding v1.2.
-- **Finalization [editorial/governance]:** Updated release metadata, namespace-adoption wording, the Appendix B introduction, and the footer; added the adoption record. No new substantive rule was introduced beyond the approved draft.
-- **Preservation [provenance]:** The September 19 Draft 1 entry below remains the historical pre-adoption record. V1.2, Draft 1, and its change record are retained unchanged in the release package.
-- **Scope [governance]:** No scientific result was promoted, demoted, transferred, or closed; no study split or merger was enacted. Other DSNs migrate individually under §13.
-- **Follow-up [evidence/governance]:** Archive-amendment recovery and compatibility with any existing owner linter/renderer remain nonblocking, unverified items in `DSN_METHODOLOGY_v1_3_RELEASE_RECORD.md`. The next document-level step is Programme Overview's inventory/architecture pass.
+- **§§0.4, 1, 1.1 [governance]:** live-file rule; current-only header with immediate predecessor; compact Appendix A; §1 exception declared in the header.
+- **§§6.1, 13.8 [governance]:** fixed size budgets removed, including the 800-line core rule; advisory size reporting.
+- **§§12.2, 13.6 [evidence/governance]:** evidence-state keys; compaction changes checked per claim block with a movement map and a two-stage build.
+- **§§0.5, 4.2, 13.1, 13.7, 13.9 [governance]:** repository custody (`rtg-corpus`), fixed filenames, tags, pull requests, records and evidence without redundant copies, project synchronization; noncanonical-registry profile; `RRF` namespace.
+- **§11 [editorial]:** six anti-patterns added; changelog row aligned.
+- **Sources:** size-discipline proposal v0.1 and PI decisions D1–D5 (22 Oct 2026); editor review v0.1 findings M14R-01–06; repository decision. Records: `records/methodology/`. Predecessor: tag `methodology-v1.3`.
+- No scientific result, RID, grade or OPEN status in any DSN changes.
 
-### v1.3 — September 19, 2026 — Draft 1 (not yet adopted)
+### v1.3 — 20 September 2026 — Adopted
 
-- **§0 [governance]:** Recast the single-file rule as one canonical owner per study; add document profiles, independent status axes, and English-language maintenance.
-- **§1 [scope/typing]:** Preserve the technical §0–§9 template; formalize nonstandard profile maps, one current summary, and versioned technical appendices.
-- **§§3/8/9 [scientific-method correction]:** Separate complete conditional proofs from unproved physical premises; remove convention independence as a prerequisite for `[THM]`; distinguish exact computation from high precision and resolve the `[NUM]` reproducibility inconsistency.
-- **§§3/4 [governance]:** Preserve canonical import syntax; add exact source-version, missing-RID, namespace, and owner-transfer rules. Registry additions are proposed synchronization, not programme promotion.
-- **§§5/7 [governance]:** Separate scoped scientific closure from identifier/archive tasks; disambiguate consumers; preserve but permit explicit correction of mistaken rejection decisions.
-- **§§3/10 [editorial]:** Preserve old anchors after moves; use semantic anchors for new sections; correct the heading-attribute description and avoid undeclared mixed tags.
-- **§12 [evidence]:** Add artifact/check-coverage requirements and explicit distinctions between reported, inspected, rerun, and independently reconstructed evidence.
-- **§13 [governance]:** Add assertion-gated editing, draft/adoption states, issue records, split/merge custody, and owner-first/consumer-second migration.
-- **Appendix B [provenance]:** Record substantive replacements of v1.2 rules. Earlier version histories remain verbatim below.
-- No RTG scientific result is promoted, demoted, transferred, or closed by this draft. No companion document is edited.
+Profiles, independent status axes, conditional-proof rule, import/missing-RID/namespace rules, OPEN closure separation, evidence contract, two-pass corpus update; rule replacements M13-C01–C12 (Appendix B). Full entries (adoption and Draft 1): `git show methodology-v1.3:dsn/DSN_METHODOLOGY.md`, Appendix A.
 
-### v1.2 — June 2026
+### v1.2, v1.1, v1.0 — June 2026
 
-- **§3.2 [format]:** Replaced backtick scope qualifiers with plain-bracket format; introduced canonical shorthand keys (`[conv:]`, `[family:]`, `[scope:]`, `[horizon:]`, `[obs-fit]`, `[import:]`). Eliminates the visual ambiguity between truth-status tags (backtick) and scope qualifiers (plain bracket).
-- **§3.5 [format]:** Added persistent HTML anchor requirement `{#sec-N-M-slug}` to all §6 subsection headings. Anchor slug is content-based, not tag-based, so promotion/demotion does not break links.
-- **§1 architecture [format]:** Added `<!-- AI_CONTEXT_CORE_END -->` HTML comment as a machine-parseable boundary marker at the end of §4 in the scientific DSN template.
-- **§10.2 [format]:** Introduced the table vs. structured-list split: tables for fixed-column comparisons; `::` structured lists for Import Ledger, Artifact Registry, and OPEN sub-items. Reduces token overhead in long-running registries.
-- **§4.3 [format]:** Import Ledger entry format updated to `::` structured list.
-- **§11 [format]:** Added anti-pattern entry for Markdown tables in long registries.
-- **§8.2 [format]:** Scope qualifier shorthand table added as canonical reference, mirroring §3.2.
-- No changes to tag definitions, promotion criteria, OPEN format logic, or demotion protocol.
-
-### v1.1 — June 2026
-
-- Claim-block model introduced (§3.1); replaced per-sentence tagging.
-- `[RESULT]` mandatory truth-status pairing added (§3.4).
-- Section heading rule changed to primary-positive-status + `/ mixed` (§3.5).
-- Stable Identifier (RID) system added (§4).
-- OPEN entries gained RIDs, `Exports to` field, and sub-item RIDs (§5.1).
-- Import Ledger added as mandatory §7 (§1 architecture).
-- Formal Demotion Table added symmetric to Promotion Table (§9.2).
-- Anti-patterns catalogue extended with four new entries.
-
-### v1.0 — June 2026
-
-Initial release. Consolidated tag definitions, fixed document architecture, AI reading/writing instructions, OPEN entry format, promotion criteria, and anti-patterns from the DSN critique process.
+v1.2: plain-bracket qualifiers, persistent anchors, AI-core marker, `::` registries. v1.1: claim blocks, `[RESULT]` pairing, RIDs, Import Ledger, demotion table. v1.0: initial release. Full entries in the tagged v1.3 edition, Appendix A.
 
 ---
 
@@ -878,7 +943,7 @@ Initial release. Consolidated tag definitions, fixed document architecture, AI r
 
 ## Appendix B — Retired and Replaced Methodology Rules
 
-These administrative correction keys are not historical scientific RIDs. They identify the rule replacements adopted in v1.3 on September 20, 2026. Exact old locations refer to the preserved `DSN_METHODOLOGY_v1_2.md`; the original Draft 1 proposal and its change record remain historical records.
+These administrative correction keys are not historical scientific RIDs. M13-C01–C12 identify the rule replacements adopted in v1.3 on September 20, 2026; M14-C01–C04 those proposed in v1.4. Old locations of M13 keys refer to the preserved `DSN_METHODOLOGY_v1_2.md`; those of M14 keys to the tagged v1.3 edition.
 
 **M13-C01 — Single-file scope.** Original §0.3: “one dedicated scientific DSN per study branch.” Replacement: §0.3, one canonical DSN per study with versioned supplements and explicit custody. Reason: a scientific branch already contains multiple studies; file structure must not imply duplicate claim authority.
 
@@ -904,7 +969,14 @@ These administrative correction keys are not historical scientific RIDs. They id
 
 **M13-C12 — Archival finality and historical compression.** Original §8.3 says no further updates are expected for `[ARCHIVE-READY]`; §1 compresses older histories without specifying preserved source access. Replacement: §§1/8.3/13, archival readiness applies to an immutable snapshot, not to future research; full correction history stays recoverable.
 
+**M14-C01 — Location of provenance.** v1.3 §0.4 item 3 was read as requiring superseded text to stay in the live file. Replacement: §§0.4/1.1/13.7, provenance is kept by tagged editions, release records and Appendix B.
+
+**M14-C02 — Appendix A content.** v1.3 §1 Appendix A: “Recent versions retain detailed entries.” Replacement: §1, one compact entry per version; draft-round records go to the release record.
+
+**M14-C03 — Orientation-core line budget.** v1.3 §6.1: “The core should not exceed 800 lines.” Replacement: §§6.1/13.8, no fixed budget; size is reported.
+
+**M14-C04 — Versioned outputs.** v1.3 §6.3 item 4: “a versioned output.” Replacement: §§6.3/13.7, edits on a branch to the fixed-name file; versions are tags.
+
 ---
 
-*END OF DOCUMENT — DSN_METHODOLOGY_v1.3*  
-*Active canonical methodology, adopted September 20, 2026. Supersedes v1.2 as the governing reference; scientific claims and existing study files are not automatically changed by methodology adoption.*
+*END OF DOCUMENT — DSN_METHODOLOGY_v1.4 (DRAFT, 22 October 2026).*
