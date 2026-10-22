@@ -117,7 +117,7 @@ In the "Dependency structure" paragraph:
 
 **E-2 | Appendix A size** [R8; row FB-22] — executed pilot deliverable
 - The v6.4.20 draft-round records add about 92k characters: r1 44k, r2 13k, P1 13k, adoption 22k.
-- Move the long draft comparisons, review correspondence and the 55 verbatim-quoted release lines (old→new map) into a frozen supplement of the v6.4.21 release record. They stay complete there and remain in v6.4.20 at its tag.
+- Leave the long draft comparisons, review correspondence and the 55 verbatim-quoted release lines (old→new map) in v6.4.20, where they stay complete at its tag; the v6.4.21 release record cites them there and does not copy them (Methodology v1.4 §13.7, no redundant copies).
 - **Appendix A keeps, per edition:** a compact change summary; the affected RIDs; every scope and grade correction; the release-record locator and predecessor tag (Methodology v1.4 §1). Appendix B keeps the required scientific correction records and the currently operative negative constraints.
 - If E-1 or E-2 is not executed, the pilot is reported incomplete; it is not closed by a stated reason.
 
@@ -219,7 +219,7 @@ v6.4.21 is the single target release. It combines the closeout errata with a mec
 
 **Two build stages, one target:** `adopted v6.4.20 → corrected intermediate → compacted v6.4.21 candidate`.
 1. **Stage 1 — corrections.** S-1 to S-6, the accepted FC-34 action, and the E-1 footer/record wording. The intermediate's hash is recorded. Its delta gets the targeted review its content needs; unchanged mathematics and its certificates are not reopened. An intermediate file is not an adopted version.
-2. **Stage 2 — compaction.** Layout, deduplication, navigation and history relocation only, under Methodology v1.4 §§1, 1.1 and 13.6: current-only header (*Supersedes* = v6.4.20 and its hash); one footer; §1 compacted or an exception declared (E-1); Appendix A compacted with the draft-round records moved to the release-record supplement (E-2); superseded prose and stacked overlays removed from live sections. A movement map records every changed block. New substantive claims, including Tier C results, cannot enter here.
+2. **Stage 2 — compaction.** Layout, deduplication, navigation and history relocation only, under Methodology v1.4 §§1, 1.1 and 13.6: current-only header (*Supersedes* = v6.4.20 and its hash); one footer; §1 compacted or an exception declared (E-1); Appendix A compacted, with the draft-round records left in v6.4.20 at its tag (E-2); superseded prose and stacked overlays removed from live sections. A movement map records every changed block. New substantive claims, including Tier C results, cannot enter here.
 
 **Checks.** `tools/check_compaction.py` checks the stage-2 delta against the intermediate, not against v6.4.20, so stale statuses corrected in stage 1 are not required to survive. It preserves qualified claim blocks (statement, status, assumptions, scope, RID association, OPEN obligations, evidence links), accounts for every removed passage, and reports its parser limits. Its negative controls must reject silent assumption deletion, scope widening, wrong RID association and broken source links. `tools/dsn_lint.py` gives the informational size report. Both reports go in the release record. A passing check does not authorize publication.
 
