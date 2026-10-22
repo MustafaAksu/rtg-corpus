@@ -57,4 +57,18 @@ Received documents keep their original filenames, because other documents cite t
 | `OFN_REPLY_TO_FMS_MODEL_SELECTION_v0_8_2.md` | `records/ofn/` | `6e4fc3c3…4b1d` | OFN v0.10 (governing input) |
 | `RRF_EDITOR_QUESTION_PACKET_RER_PHASEA_v0_2_20261019.md` | `records/rer/` | `b1a67b6e…2ccf` | — |
 
-**Still missing** (were in the project, no copy found yet): `DYAD_OPEN20_ANALYTIC_ROOTS_P1B_SESSION_v0_1_1.md`, `DYAD_OPEN20_ANALYTIC_ROOTS_P1C_SESSION_v0_1.md`, `DYAD_OPEN20_ANALYTIC_ROOTS_P1C2_SESSION_v0_1.md`, `DYAD_OPEN20_ANALYTIC_ROOTS_P1C2B_SESSION_v0_1_1.md`, `DYAD_OPEN20_ANALYTIC_ROOTS_P1C5_SESSION_v0_1.md`, `RECOG_v0_3_22_POST_RELEASE_MAINTENANCE_NOTE.md`.
+| `DYAD_OPEN20_ANALYTIC_ROOTS_P1B_SESSION_v0_1_1.md` | `records/dyad/` | `6c202d51…` | — |
+| `DYAD_OPEN20_ANALYTIC_ROOTS_P1C_SESSION_v0_1.md` | `records/dyad/` | `9f6f09d8…` | — |
+| `DYAD_OPEN20_ANALYTIC_ROOTS_P1C2_SESSION_v0_1.md` | `records/dyad/` | `7e7aa09f…` | — |
+| `DYAD_OPEN20_ANALYTIC_ROOTS_P1C2B_SESSION_v0_1_1.md` | `records/dyad/` | `578c8f02…` | — |
+| `DYAD_OPEN20_ANALYTIC_ROOTS_P1C5_SESSION_v0_1.md` | `records/dyad/` | `11917ba2…` | — |
+| `DYAD_OPEN20_AN_P1C_PACKAGE_v0_1.zip` | `evidence/dyad/open20-an/` | `d0b5f929…` | internal SHA256SUMS 8/8 OK |
+| `DYAD_OPEN20_AN_P1C2_PACKAGE_v0_1.zip` | `evidence/dyad/open20-an/` | `e7b53ff0…` | internal SHA256SUMS 7/7 OK |
+| `DYAD_OPEN20_AN_P1C2B_PACKAGE_v0_1_1.zip` | `evidence/dyad/open20-an/` | `a8de6c31…` | internal SHA256SUMS 6/6 OK |
+| `DYAD_OPEN20_AN_P1C5_PACKAGE_v0_1.zip` | `evidence/dyad/open20-an/` | `f5724f9c…` | internal SHA256SUMS 11/11 OK |
+
+The session note inside each package is byte-identical to the standalone note in `records/dyad/`. Packages are kept as received (Methodology v1.4 §13.7, frozen packages).
+
+**Superseded rounds, kept in history only** (commit `19124ac`): `DYAD_OPEN20_ANALYTIC_ROOTS_P1B_SESSION_v0_1.md` (`a9edbf53…`), `DYAD_OPEN20_ANALYTIC_ROOTS_P1C2B_SESSION_v0_1.md` (`9e15d23a…`), `DYAD_OPEN20_AN_P1C2B_PACKAGE_v0_1.zip` (`1864492c…`, internal SHA256SUMS 6/6 OK). Retrieve with `git show 19124ac:<path>`.
+
+**Still missing:** `RECOG_v0_3_22_POST_RELEASE_MAINTENANCE_NOTE.md`.
