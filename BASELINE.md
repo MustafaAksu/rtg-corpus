@@ -27,6 +27,8 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 | Legacy | `RTG_L0_L1_L2_BRIDGE_LEGACY_DSN.md` | v0.7 | `3b707c90eb5e048717513c6ba161b738d0d1d4cd341eb0a125fb15779afd7e13` | PI | `legacy-v0.7` |
 | Pre-Legacy | `RTG_PRE_LEGACY_DSN.md` | v0.8 | `22ecf37869cd1192b7fc3a13efe364d6cc2644928f4ecf5afe38e0ad8b95a446` | PI | `prelegacy-v0.8` |
 
+The table lists the **governing adopted editions**. Divergence on `main`: `dsn/DSN_METHODOLOGY.md` holds the v1.4 DRAFT (merged by PR #3 before adoption). It is working material; `methodology-v1.3` governs until v1.4 is adopted and tagged.
+
 ## Noncanonical registries and studies (`noncanonical/`)
 
 | Study | File | Version | SHA-256 | Verification | Tag |
