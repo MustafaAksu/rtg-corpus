@@ -11,7 +11,7 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 
 | Study | File | Version | SHA-256 | Verification | Tag |
 |---|---|---|---|---|---|
-| Methodology | `DSN_METHODOLOGY.md` | v1.3 | `3e23ba94606706b3c8d50aecfb2184df52042cf8e65cdd3c3e0cd3159254ec7e` | XREF: RRF v0.7 §10 | `methodology-v1.3` |
+| Methodology | `DSN_METHODOLOGY.md` | v1.4 | `cdacab5feb79161cd86313086065ca67313ef354e30ceaf205386cf2f3a0f2df` | OWNER: release record `records/methodology/DSN_METHODOLOGY_v1.4_RELEASE_RECORD.md` | `methodology-v1.4` |
 | Programme | `RTG_PROGRAMME_OVERVIEW.md` | v1.2 | `4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359` | XREF: RRF v0.7 §10 | `programme-v1.2` |
 | DYAD | `RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.20 | `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852` | OWNER: release record; external verification receipt | `dyad-v6.4.20` (v6.4.19: `dyad-v6.4.19`) |
 | TRIAD | `RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.6.1 | `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f` | XREF: RER v0.2 §7 (`TRIAD161`, byte-verified there) | `triad-v1.6.1` |
@@ -27,7 +27,7 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 | Legacy | `RTG_L0_L1_L2_BRIDGE_LEGACY_DSN.md` | v0.7 | `3b707c90eb5e048717513c6ba161b738d0d1d4cd341eb0a125fb15779afd7e13` | PI | `legacy-v0.7` |
 | Pre-Legacy | `RTG_PRE_LEGACY_DSN.md` | v0.8 | `22ecf37869cd1192b7fc3a13efe364d6cc2644928f4ecf5afe38e0ad8b95a446` | PI | `prelegacy-v0.8` |
 
-The table lists the **governing adopted editions**. Divergence on `main`: `dsn/DSN_METHODOLOGY.md` holds the v1.4 DRAFT (merged by PR #3 before adoption). It is working material; `methodology-v1.3` governs until v1.4 is adopted and tagged.
+The table lists the **governing adopted editions**. Predecessor: Methodology v1.3, `3e23ba94…ec7e`, tag `methodology-v1.3`.
 
 ## Noncanonical registries and studies (`noncanonical/`)
 

@@ -4,7 +4,7 @@
 **Date:** 22 October 2026  
 **Scope:** Rules for scientific records, evidence, ownership, imports, document profiles, repository custody, and controlled corpus maintenance. This document contains no RTG physics result and does not decide any study's scientific OPEN.  
 **Document class:** Methodology / governance reference  
-**Document status:** DRAFT — proposed v1.4 for editor review and PI adoption.  
+**Document status:** ADOPTED — PI, 22 October 2026. Release record: `records/methodology/DSN_METHODOLOGY_v1.4_RELEASE_RECORD.md`.  
 **Supersedes:** `DSN_METHODOLOGY_v1.3` (SHA-256 `3e23ba94606706b3c8d50aecfb2184df52042cf8e65cdd3c3e0cd3159254ec7e`; tag `methodology-v1.3`).  
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok. Inherited authorship is not a record of separate approval of this revision.  
 **Revision:** prepared by Claude; editor review by ChatGPT; adoption by the PI (§13.1). Release record: `records/methodology/`.  
@@ -919,7 +919,7 @@ AI working contexts (for example a Claude project) may mirror files from `main` 
 
 ## Appendix A — Version History
 
-### v1.4 — 22 October 2026 — DRAFT
+### v1.4 — 22 October 2026 — Adopted
 
 - **§§0.4, 1, 1.1 [governance]:** live-file rule; current-only header with immediate predecessor; compact Appendix A; §1 exception declared in the header.
 - **§§6.1, 13.8 [governance]:** fixed size budgets removed, including the 800-line core rule; advisory size reporting.
@@ -944,7 +944,7 @@ v1.2: plain-bracket qualifiers, persistent anchors, AI-core marker, `::` registr
 
 ## Appendix B — Retired and Replaced Methodology Rules
 
-These administrative correction keys are not historical scientific RIDs. M13-C01–C12 identify the rule replacements adopted in v1.3 on September 20, 2026; M14-C01–C04 those proposed in v1.4. Old locations of M13 keys refer to the preserved `DSN_METHODOLOGY_v1_2.md`; those of M14 keys to the tagged v1.3 edition.
+These administrative correction keys are not historical scientific RIDs. M13-C01–C12 identify the rule replacements adopted in v1.3 on September 20, 2026; M14-C01–C04 those adopted in v1.4 on October 22, 2026. Old locations of M13 keys refer to the preserved `DSN_METHODOLOGY_v1_2.md`; those of M14 keys to the tagged v1.3 edition.
 
 **M13-C01 — Single-file scope.** Original §0.3: “one dedicated scientific DSN per study branch.” Replacement: §0.3, one canonical DSN per study with versioned supplements and explicit custody. Reason: a scientific branch already contains multiple studies; file structure must not imply duplicate claim authority.
 
@@ -980,4 +980,4 @@ These administrative correction keys are not historical scientific RIDs. M13-C01
 
 ---
 
-*END OF DOCUMENT — DSN_METHODOLOGY_v1.4 (DRAFT, 22 October 2026).*
+*END OF DOCUMENT — DSN_METHODOLOGY_v1.4 (ADOPTED, 22 October 2026).*
