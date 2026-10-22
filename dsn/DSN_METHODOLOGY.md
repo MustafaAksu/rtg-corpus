@@ -4,7 +4,7 @@
 **Date:** 22 October 2026  
 **Scope:** Rules for scientific records, evidence, ownership, imports, document profiles, repository custody, and controlled corpus maintenance. This document contains no RTG physics result and does not decide any study's scientific OPEN.  
 **Document class:** Methodology / governance reference  
-**Document status:** DRAFT — proposed v1.4 for editor review and PI adoption.  
+**Document status:** ADOPTED — PI, 22 October 2026. Release record: `records/methodology/DSN_METHODOLOGY_v1.4_RELEASE_RECORD.md`.  
 **Supersedes:** `DSN_METHODOLOGY_v1.3` (SHA-256 `3e23ba94606706b3c8d50aecfb2184df52042cf8e65cdd3c3e0cd3159254ec7e`; tag `methodology-v1.3`).  
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok. Inherited authorship is not a record of separate approval of this revision.  
 **Revision:** prepared by Claude; editor review by ChatGPT; adoption by the PI (§13.1). Release record: `records/methodology/`.  
@@ -393,7 +393,7 @@ RIDs identify claims, definitions, OPEN modules, and artifacts independently of 
 | `L0L1`, `L2` | Legacy-ledger namespaces; historical spellings retained and owner-qualified |
 | `RRF` | Relational Representation Framework registry: representation profiles and interface identifiers |
 
-The additions beyond v1.2 are adopted registry synchronization in v1.3. They recognize custodians and existing usage; they neither assign programme maturity nor create/close a study. Shortnames such as OFN are not automatic RID aliases. Local navigation keys of noncanonical registries (for example `RER-*`) are not scientific RIDs. Preserve existing nonstandard IDs (for example, legacy OPEN/LEM/PROP spellings) with an explicit owner map rather than silently rewriting them.
+The namespaces added beyond v1.2 by the adopted v1.3 registry keep their established owner scopes. v1.4 additionally registers `RRF` for representation-profile and interface identifiers. These entries recognize custodians and existing usage; they neither create nor transfer scientific theorem ownership, certify a physical representation, assign programme maturity, nor create or close a study. Shortnames such as OFN are not automatic RID aliases. Local navigation keys of noncanonical registries (for example `RER-*`) are not scientific RIDs. Preserve existing nonstandard IDs (for example, legacy OPEN/LEM/PROP spellings) with an explicit owner map rather than silently rewriting them.
 
 | Category | Meaning |
 |---|---|
@@ -823,7 +823,7 @@ A syntax linter checks only documented machine-verifiable rules. It cannot certi
 
 Preserve the adopted source version. Create one explicit target version as a draft; record its base, editor, date, and change record. New drafts are not described as adopted merely because their text was generated. Record the PI/authorized owner acceptance before changing the adopted pointer.
 
-In the corpus repository (`rtg-corpus`, §13.7): a draft is a branch (`claude/...` for Claude sessions, or another named branch) that edits the fixed-name file in place; a review is a pull request plus its review record; adoption is recorded in the release record, then the PI merges into `main` and creates the annotated tag `<study>-v<version>`. A merge or a tag is not by itself an adoption decision, and a passing check is not an approval. Intermediate drafts are commits on the branch; a draft that must stay citable gets a tag (`<study>-v<version>-rN`).
+In the corpus repository (`rtg-corpus`, §13.7): a draft is a branch (`claude/...` for Claude sessions, or another named branch) that edits the fixed-name file in place; a review is a pull request plus its review record; the normal order is PI/owner decision → completed release record → merge into `main` → annotated tag `<study>-v<version>` created by the PI. A draft of a canonical file stays on its review branch until that decision; it is not merged into `main` earlier. A pull request, its approval, a merge, a tag or a passing check is not by itself an adoption decision. Intermediate drafts are commits on the branch; a draft that must stay citable gets a tag (`<study>-v<version>-rN`).
 
 Use one target version through the coordinated revision cycle; identify intermediate drafts separately. Do not invent minor-version successors for every cross-reference adjustment. If an already adopted target changes materially, issue a new immutable version. A release manifest identifies the actual adopted versions, profiles, and hashes; it does not replace their claims.
 
@@ -849,7 +849,7 @@ This Methodology authorizes a process, not a specific Genesis, Triadic, Number G
 
 **Pass 2 — consumer and registry synchronization:** traverse all affected imports, summary statements, OPEN states, guards, and artifact pointers against the accepted owner versions. Update foundational feedback and programme status summaries after their technical inputs are reconciled. Check current-state agreement without erasing intentionally pinned historical citations.
 
-A methodology change alone does not apply itself to all source files, retag their claims, reassign theorem ownership, or satisfy programme bridge gates. Existing documents keep their declared governing edition (v1.2 or v1.3) until individually migrated; v1.4 applies to each DSN at its next release, and no DSN is forced into a separate compaction-only release.
+A methodology change alone does not apply itself to all source files, retag their claims, reassign theorem ownership, or satisfy programme bridge gates. Existing documents keep their declared governing edition (v1.2 or v1.3) until individually migrated; v1.4 applies to each DSN at its next release, and no DSN is forced into a separate compaction-only release. A DSN release uses v1.4 only after v1.4 is adopted; earlier use requires a separately recorded, scoped PI authorization and does not make v1.4 governing for other studies.
 
 ### 13.5 Release Checks
 
@@ -899,9 +899,9 @@ The corpus repository is `rtg-corpus` (public). It is the archive of adopted edi
 - certification scripts live once, under `evidence/<study>/scripts/` with fixed names; a release record cites script path, commit, command and output hash; only small per-release outputs (logs, JSON) are added under `evidence/<study>/<version>/`;
 - frozen external packages that must stay byte-complete may be kept as received, with a README naming files kept elsewhere in the repository.
 
-**Release record.** One per release, `records/<study>/<STUDY>_v<version>_RELEASE_RECORD.md`, never edited after adoption (later facts go in a dated addendum file). It carries identities and hashes, the predecessor tag, the build stages, the adoption decision, the checks run and their extent (§12.2 keys), the size report (§13.8), and pointers to reviews and evidence.
+**Release record.** One per release, `records/<study>/<STUDY>_v<version>_RELEASE_RECORD.md`, never edited after adoption (later facts go in a dated addendum file). It carries identities and hashes, the predecessor tag, the build stages, the adoption decision, the checks run and their extent (§12.2 keys), the size report (§13.8), and pointers to reviews and evidence. Working records may be updated at their fixed paths, but every adopted release cites the exact commit (or blob hash) of each working-note revision it relied on; updating the path never changes what was reviewed. Release records and accepted certificate identities are frozen on adoption; corrections are dated, hash-pinned addenda.
 
-**Removal from `main`.** A file removed from the current tree remains in its tags and commits; removal is recorded in the release record or commit message. Nothing adopted is deleted from history.
+**Removal from `main`.** A file removed from the current tree remains in its tags and commits; removal is recorded in the release record or commit message. Nothing adopted is deleted from history. Published tags are never moved or rewritten, and published history is never force-pushed or pruned. Git preserves only what was committed: an external artifact that a claim depends on keeps its hash and a durable locator. “No redundant copies” is a housekeeping rule; it never permits discarding a byte-complete certificate bundle or other provenance cited by a published claim.
 
 <a id="dsn-size-reporting"></a>
 
@@ -911,7 +911,7 @@ There are no fixed size budgets. A lint script reports, for each release: file s
 
 ### 13.9 Project Knowledge Synchronization
 
-AI working contexts (for example a Claude project) load current files from `main` (`dsn/`, `noncanonical/`, `atlas/`) through the repository integration; synchronization is refreshed after each merge. Working notes still in progress may sit in the project until they are committed under `records/`. A project copy is never the authority: in a conflict, the tagged repository file governs. No historical file is loaded as current scientific context.
+AI working contexts (for example a Claude project) may mirror files from `main` (`dsn/`, `noncanonical/`, `atlas/`) through the repository integration; synchronization is refreshed after each merge. The governing edition of each study is its most recent adopted tagged release supported by its release record, not the latest `main` content or a status header. A file on `main` that is DRAFT, REVIEW-READY or otherwise unadopted is working material, not authority. `BASELINE.md` records, for each study, the governing adopted tag and any divergence of the working tree from it; a synchronization check reports such a divergence as pending, never as current. Working notes still in progress may sit in the project until they are committed under `records/`. A project copy is never the authority, imports stay pinned to their actual owner versions, and no historical or unadopted file is loaded as current scientific context.
 
 ---
 
@@ -919,14 +919,15 @@ AI working contexts (for example a Claude project) load current files from `main
 
 ## Appendix A — Version History
 
-### v1.4 — 22 October 2026 — DRAFT
+### v1.4 — 22 October 2026 — Adopted
 
 - **§§0.4, 1, 1.1 [governance]:** live-file rule; current-only header with immediate predecessor; compact Appendix A; §1 exception declared in the header.
 - **§§6.1, 13.8 [governance]:** fixed size budgets removed, including the 800-line core rule; advisory size reporting.
 - **§§12.2, 13.6 [evidence/governance]:** evidence-state keys; compaction changes checked per claim block with a movement map and a two-stage build.
 - **§§0.5, 4.2, 13.1, 13.7, 13.9 [governance]:** repository custody (`rtg-corpus`), fixed filenames, tags, pull requests, records and evidence without redundant copies, project synchronization; noncanonical-registry profile; `RRF` namespace.
 - **§11 [editorial]:** six anti-patterns added; changelog row aligned.
-- **Sources:** size-discipline proposal v0.1 and PI decisions D1–D5 (22 Oct 2026); editor review v0.1 findings M14R-01–06; repository decision. Records: `records/methodology/`. Predecessor: tag `methodology-v1.3`.
+- **§§4.2, 13.1, 13.4, 13.7, 13.9 [governance]:** editor review v0.2 edits: `RRF` attributed to v1.4; decision before merge, drafts stay on branches; adoption before use; working-note commits pinned, tags never rewritten; governing edition = adopted tag, not `main`.
+- **Sources:** size-discipline proposal v0.1 and PI decisions D1–D5 (22 Oct 2026); editor review findings M14R-01–06 and review of the assembled draft (commit `799e344`); repository decision. Records: `records/methodology/`. Predecessor: tag `methodology-v1.3`.
 - No scientific result, RID, grade or OPEN status in any DSN changes.
 
 ### v1.3 — 20 September 2026 — Adopted
@@ -943,7 +944,7 @@ v1.2: plain-bracket qualifiers, persistent anchors, AI-core marker, `::` registr
 
 ## Appendix B — Retired and Replaced Methodology Rules
 
-These administrative correction keys are not historical scientific RIDs. M13-C01–C12 identify the rule replacements adopted in v1.3 on September 20, 2026; M14-C01–C04 those proposed in v1.4. Old locations of M13 keys refer to the preserved `DSN_METHODOLOGY_v1_2.md`; those of M14 keys to the tagged v1.3 edition.
+These administrative correction keys are not historical scientific RIDs. M13-C01–C12 identify the rule replacements adopted in v1.3 on September 20, 2026; M14-C01–C04 those adopted in v1.4 on October 22, 2026. Old locations of M13 keys refer to the preserved `DSN_METHODOLOGY_v1_2.md`; those of M14 keys to the tagged v1.3 edition.
 
 **M13-C01 — Single-file scope.** Original §0.3: “one dedicated scientific DSN per study branch.” Replacement: §0.3, one canonical DSN per study with versioned supplements and explicit custody. Reason: a scientific branch already contains multiple studies; file structure must not imply duplicate claim authority.
 
@@ -979,4 +980,4 @@ These administrative correction keys are not historical scientific RIDs. M13-C01
 
 ---
 
-*END OF DOCUMENT — DSN_METHODOLOGY_v1.4 (DRAFT, 22 October 2026).*
+*END OF DOCUMENT — DSN_METHODOLOGY_v1.4 (ADOPTED, 22 October 2026).*
