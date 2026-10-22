@@ -1,0 +1,85 @@
+{
+ "date": "2026-10-21",
+ "decision": "DYAD v6.4.20 — OWNER ADOPTION AUTHORIZED",
+ "edition": "DYAD v6.4.20",
+ "external_hash_verification": "pending",
+ "files": [
+  {
+   "file": "RTG_DYADIC_OSCILLATOR_DSN_v6_4_20.md",
+   "project_path": "claude/RTG_DYADIC_OSCILLATOR_DSN_v6_4_20.md",
+   "role": "adopted DSN file",
+   "sha256": "0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852"
+  },
+  {
+   "file": "RTG_DYADIC_v6_4_20_RELEASE_RECORD.md",
+   "project_path": "claude/RTG_DYADIC_v6_4_20_RELEASE_RECORD.md",
+   "role": "release record",
+   "sha256": "9887a5a608923a899e04c3245ddfa88f52c823be8618b36abaf2954061cc176b"
+  },
+  {
+   "file": "RTG_DYADIC_OSCILLATOR_DSN_v6_4_20_DRAFT_r2.md",
+   "project_path": "claude/atlas/p2r2/RTG_DYADIC_OSCILLATOR_DSN_v6_4_20_DRAFT_r2.md",
+   "role": "reviewed DRAFT r2 (input)",
+   "sha256": "f2030f853b94a7caa1d1d7c4afd8bdf9b6059582d331100bb0033226fd68465e"
+  },
+  {
+   "file": "base_v6_4_19.md",
+   "project_path": "RTG_DYADIC_OSCILLATOR_DSN_v6_4_19.md",
+   "role": "prior adopted v6.4.19 (census reference)",
+   "sha256": "40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9"
+  },
+  {
+   "file": "release_v6_4_20.py",
+   "project_path": "claude/atlas/release/release_v6_4_20.py",
+   "role": "release transform",
+   "sha256": "14384eaaa4e0208072c40d876b73cc79343ac672a0e4455753ebc8e3c4e0091d"
+  },
+  {
+   "file": "release_v6_4_20_log.json",
+   "project_path": "claude/atlas/release/release_v6_4_20_log.json",
+   "role": "release transform log",
+   "sha256": "7ac86364ac0c4559219804c60bb13ad1659096a53b5ccd2374e9c950053e3c68"
+  },
+  {
+   "file": "check_release_v6_4_20.py",
+   "project_path": "claude/atlas/release/check_release_v6_4_20.py",
+   "role": "release checker R0-R11",
+   "sha256": "5350a72168a7c7002ff26be24f87a39d17025855cd3c27c832140c7a9207badb"
+  },
+  {
+   "file": "check_release_v6_4_20.json",
+   "project_path": "claude/atlas/release/check_release_v6_4_20.json",
+   "role": "release checker result",
+   "sha256": "e08340e9be0abc3162b9f05b1d11ccebedd97b4e631fc3d40aac3ea6f33e3a96"
+  },
+  {
+   "file": "p2_release_controls.py",
+   "project_path": "claude/atlas/release/p2_release_controls.py",
+   "role": "release negative controls",
+   "sha256": "79c20746b195c15ef26800982f389bfd3e919b0ce0b41c599876c4365809a59d"
+  },
+  {
+   "file": "release_controls_v6_4_20.json",
+   "project_path": "claude/atlas/release/release_controls_v6_4_20.json",
+   "role": "release controls result",
+   "sha256": "d06fc098585455709913ec0ce022ce0307fef827b11c871819a8b1e3984b78b6"
+  },
+  {
+   "file": "r2_to_final.diff",
+   "project_path": "claude/atlas/release/r2_to_final.diff",
+   "role": "r2 -> final diff",
+   "sha256": "4961ee46599e784e13025bc50ba8541f55dbc6bf6bc0df63609d6df7b07c0499"
+  }
+ ],
+ "project_installation": "record, manifest and release scripts written; final DSN file write refused (project at size limit) — installation and read-back pending",
+ "reproduction": [
+  "python -B release_v6_4_20.py RTG_DYADIC_OSCILLATOR_DSN_v6_4_20_DRAFT_r2.md RTG_DYADIC_OSCILLATOR_DSN_v6_4_20.md",
+  "python -B check_release_v6_4_20.py --final RTG_DYADIC_OSCILLATOR_DSN_v6_4_20.md --r2 RTG_DYADIC_OSCILLATOR_DSN_v6_4_20_DRAFT_r2.md --base base_v6_4_19.md",
+  "python -B p2_release_controls.py"
+ ],
+ "review": "DYAD v6.4.20 DRAFT r2 — REVIEW ACCEPTED",
+ "supersedes": {
+  "edition": "v6.4.19",
+  "sha256": "40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9"
+ }
+}

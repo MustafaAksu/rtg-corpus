@@ -1,0 +1,30 @@
+{
+ "all_pass": true,
+ "final_sha256": "0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852",
+ "gates": {
+  "R0": true,
+  "R1": true,
+  "R10": true,
+  "R11": true,
+  "R2": true,
+  "R3": true,
+  "R4": true,
+  "R5": true,
+  "R6": true,
+  "R7": true,
+  "R8": true,
+  "R9": true
+ },
+ "info": {
+  "R2": {
+   "changed": 55,
+   "log": 55,
+   "why": []
+  },
+  "R3": {
+   "tagged": 148,
+   "v6_4_19": 135
+  },
+  "R6": []
+ }
+}

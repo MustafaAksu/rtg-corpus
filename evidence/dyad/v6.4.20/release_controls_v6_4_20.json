@@ -1,0 +1,132 @@
+{
+ "all_as_expected": true,
+ "controls": [
+  {
+   "as_expected": true,
+   "description": "unmutated final (--norebuild)",
+   "exit": 0,
+   "failing_gates": [],
+   "id": "P0"
+  },
+  {
+   "as_expected": true,
+   "description": "one-byte edit (full transform)",
+   "exit": 1,
+   "expected_gate": "R0",
+   "failing_gates": [
+    "R0",
+    "R2"
+   ],
+   "id": "N0"
+  },
+  {
+   "as_expected": true,
+   "description": "constant 403/250 -> 403/251 in section 6",
+   "exit": 1,
+   "expected_gate": "R4",
+   "failing_gates": [
+    "R2",
+    "R4"
+   ],
+   "id": "X1"
+  },
+  {
+   "as_expected": true,
+   "description": "grade tag ALG -> THM in section 6",
+   "exit": 1,
+   "expected_gate": "R5",
+   "failing_gates": [
+    "R2",
+    "R5"
+   ],
+   "id": "X2"
+  },
+  {
+   "as_expected": true,
+   "description": "one RID tag removed",
+   "exit": 1,
+   "expected_gate": "R3",
+   "failing_gates": [
+    "R2",
+    "R3"
+   ],
+   "id": "X3"
+  },
+  {
+   "as_expected": true,
+   "description": "\"registered only at adoption\" back in live text",
+   "exit": 1,
+   "expected_gate": "R6",
+   "failing_gates": [
+    "R2",
+    "R6"
+   ],
+   "id": "X4"
+  },
+  {
+   "as_expected": true,
+   "description": "PI decision label removed from the header",
+   "exit": 1,
+   "expected_gate": "R7",
+   "failing_gates": [
+    "R7"
+   ],
+   "id": "X5"
+  },
+  {
+   "as_expected": true,
+   "description": "second footer",
+   "exit": 1,
+   "expected_gate": "R8",
+   "failing_gates": [
+    "R2",
+    "R8"
+   ],
+   "id": "X6"
+  },
+  {
+   "as_expected": true,
+   "description": "OPEN 20 status sentence altered",
+   "exit": 1,
+   "expected_gate": "R9",
+   "failing_gates": [
+    "R2",
+    "R9"
+   ],
+   "id": "X7"
+  },
+  {
+   "as_expected": true,
+   "description": "combined G14-G15 NOT COMPLETED item dropped from the record",
+   "exit": 1,
+   "expected_gate": "R10",
+   "failing_gates": [
+    "R10"
+   ],
+   "id": "X8"
+  },
+  {
+   "as_expected": true,
+   "description": "E.1 row back to \"proposed, not adopted\"",
+   "exit": 1,
+   "expected_gate": "R11",
+   "failing_gates": [
+    "R2",
+    "R6",
+    "R11"
+   ],
+   "id": "X9"
+  },
+  {
+   "as_expected": true,
+   "description": "the word \"not\" removed from a section 3 sentence",
+   "exit": 1,
+   "expected_gate": "R2",
+   "failing_gates": [
+    "R2"
+   ],
+   "id": "X10"
+  }
+ ],
+ "script": "p2_release_controls.py"
+}

@@ -1,0 +1,427 @@
+4,5c4,5
+< **Edition:** v6.4.20 DRAFT r2 — 21 October 2026  
+< **Status:** DRAFT r2 — not adopted, not released. Adopted `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19` (SHA-256 `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`) remains the canonical Dyadic ledger until a separate external review and an explicit PI adoption decision. r1 built by `build_dyad_v6_4_20_r1.py` from the verified ATLAS P1 working file (SHA-256 `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905`) under `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED` (P2 authorized, 21 Oct 2026); r2 = r1 with the record corrections of the r1 review (`TECHNICAL REVIEW PASSED — MINOR RECORD CORRECTIONS REQUIRED`), built by `build_dyad_v6_4_20_r2.py`.  
+---
+> **Edition:** v6.4.20 — adopted 21 October 2026  
+> **Status:** ADOPTED — owner/PI adoption recorded 21 October 2026 (`DYAD v6.4.20 — OWNER ADOPTION AUTHORIZED`) after external review of DRAFT r2 (`DYAD v6.4.20 DRAFT r2 — REVIEW ACCEPTED`; r2 SHA-256 `f2030f853b94a7caa1d1d7c4afd8bdf9b6059582d331100bb0033226fd68465e`). Earlier reviews: `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED` (P1 working file `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905`) and `v6.4.20 r1 — REVIEW ACCEPTED WITH MINOR CORRECTIONS` (r1 `a5c70f5b1468ab01ba1cdf932fb9205c4bf00976a2b6523e8b90210e5e457c4a`). Built by `build_dyad_v6_4_20_r1.py` (P1 → r1), `build_dyad_v6_4_20_r2.py` (r1 → r2) and `release_v6_4_20.py` (r2 → this file, labels and metadata only). Release record: `RTG_DYADIC_v6_4_20_RELEASE_RECORD.md`; external verification of this file's SHA-256 is recorded separately.  
+7c7
+< **Supersedes (on adoption only):** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19`. Lineage and all release records: Appendix A.  
+---
+> **Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19` (adopted 20 Oct 2026, `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`; kept unchanged as the historical adopted release). Lineage and all release records: Appendix A.  
+11,12c11,12
+< **Status summary:** The dyad map has theorem-grade and exact-algebraic certification for the six-step resonant module ($c_{21}$, the local quintic normalization pipeline, OPEN 11, OPEN 18); the local return enclosure of §6.14 (exact degree-6 normalizer and jet, primitive contraction with invariant tube, inverse coordinates, normalized remainders); the OPEN 3 spiral-residual results and the primitive-variable remainder (OPEN 21; conditional on `RECOG-THM-R9-MEMORY`); the L-PHASE angular remainder on row A (`[THM]`; the constant $\tfrac{403}{250}$ is an upper bound); the formal centralizer and ℤ₆ generator (§6.16); Lemma F with F1–F3 and the smooth flow embedding (§6.17). OPEN 9 is PARTIAL: low-degree anti-holomorphic vanishing is `[ALG]` for $b\in\{2,3,4\}$ ($p\ge b+2$), it fails at $b=5$ for every $p\ge6$, all-$b\ge5$ persistence is `[OPEN]`, and the $q=4,(0,3)$ phase law is closed for all $p$. OPEN 20 is PARTIAL: B-∞ existence and flat uniqueness are CLOSED; B-an and B-6 are OPEN. This draft adds the ATLAS P1 scientific corrections and the P2 interface work (Appendix A). Proposed RIDs are registered only on adoption; no adopted RID is renamed or regraded.  
+< **Draft record:** Appendix A, "v6.4.20 DRAFT r2" and "v6.4.20 DRAFT r1"; session records `DYAD_ATLAS_P2_R2_CORRECTION_SESSION_v0_1.md` and `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md`. The v6.4.19 header, adoption metadata, release summaries and footers are preserved verbatim there.
+---
+> **Status summary:** The dyad map has theorem-grade and exact-algebraic certification for the six-step resonant module ($c_{21}$, the local quintic normalization pipeline, OPEN 11, OPEN 18); the local return enclosure of §6.14 (exact degree-6 normalizer and jet, primitive contraction with invariant tube, inverse coordinates, normalized remainders); the OPEN 3 spiral-residual results and the primitive-variable remainder (OPEN 21; conditional on `RECOG-THM-R9-MEMORY`); the L-PHASE angular remainder on row A (`[THM]`; the constant $\tfrac{403}{250}$ is an upper bound); the formal centralizer and ℤ₆ generator (§6.16); Lemma F with F1–F3 and the smooth flow embedding (§6.17). OPEN 9 is PARTIAL: low-degree anti-holomorphic vanishing is `[ALG]` for $b\in\{2,3,4\}$ ($p\ge b+2$), it fails at $b=5$ for every $p\ge6$, all-$b\ge5$ persistence is `[OPEN]`, and the $q=4,(0,3)$ phase law is closed for all $p$. OPEN 20 is PARTIAL: B-∞ existence and flat uniqueness are CLOSED; B-an and B-6 are OPEN. v6.4.20 adds the ATLAS P1 scientific corrections and the P2 interface work (Appendix A). Its 13 new RIDs are registered by this adoption; no earlier RID is renamed or regraded.  
+> **Adoption and draft records:** Appendix A, "v6.4.20 — adopted 21 October 2026", "v6.4.20 DRAFT r2" and "v6.4.20 DRAFT r1"; session records `DYAD_ATLAS_P2_R2_CORRECTION_SESSION_v0_1.md` and `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md`. The v6.4.19 header, adoption metadata, release summaries and footers are preserved verbatim there.
+60c60
+< **Version markers.** `[v6.4.20]` marks text introduced by the ATLAS P1 and P2 passes (the P1 working file wrote these as P1 markers). `[v6.4.20 entry]` marks a whole new entry; a proposed RID carries `[v6.4.20; proposed RID, registered only at adoption]`.
+---
+> **Version markers.** `[v6.4.20]` marks text introduced by the ATLAS P1 and P2 passes (the P1 working file wrote these as P1 markers). `[v6.4.20 entry]` marks a whole new entry; a RID new in v6.4.20 carries `[v6.4.20; RID registered at adoption, 21 Oct 2026]`.
+254c254
+< - Channel boundary all-$p$ (DYAD-OPEN-B5-ALLP): **CLOSED `[ALG]`**. `[v6.4.20: result RID proposed, DYAD-ALG-B5-ALLP-NONVANISHING (§6.11); the lifecycle identifier is unchanged]` For $p\ge13$, $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$ with $S_{\rm eff}/S=N/D$, $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$. Cyclotomic non-division: $\deg N=6$ so $\Phi_p\mid N$ requires $\varphi(p)\le6$ (finite set); exact check shows $\Phi_p\nmid N$ for all, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. With the exact sweep $p=6..12$: $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$. Remaining (separate): all-$b\ge5$ persistence and the general-coefficient version: `[OPEN]`
+---
+> - Channel boundary all-$p$ (DYAD-OPEN-B5-ALLP): **CLOSED `[ALG]`**. `[v6.4.20: result RID registered at adoption, DYAD-ALG-B5-ALLP-NONVANISHING (§6.11); the lifecycle identifier is unchanged]` For $p\ge13$, $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$ with $S_{\rm eff}/S=N/D$, $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$. Cyclotomic non-division: $\deg N=6$ so $\Phi_p\mid N$ requires $\varphi(p)\le6$ (finite set); exact check shows $\Phi_p\nmid N$ for all, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. With the exact sweep $p=6..12$: $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$. Remaining (separate): all-$b\ge5$ persistence and the general-coefficient version: `[OPEN]`
+481c481
+< `[DEF]` `[v6.4.20 entry; proposed RID, registered only at adoption]` [RID: DYAD-DEF-CRITICAL-CURVE] **Critical curve (rank-one locus).** $C_0:=\{\det DT=0\}=\{1+(e^\rho-1)\cos\eta=0\}$. Because $|\cos\eta|\le1$, this is the set described in the next entry ($\rho\ge\ln2$). On $C_0$ the kernel of $DT$ is spanned by $k=(\cos\eta,1)$, since $DT\,k=(0,\det DT)$ identically; RECOG-ALG-P2-C0-WHITNEY-FOLD uses this direction. Owner check M2.
+---
+> `[DEF]` `[v6.4.20 entry; RID registered at adoption, 21 Oct 2026]` [RID: DYAD-DEF-CRITICAL-CURVE] **Critical curve (rank-one locus).** $C_0:=\{\det DT=0\}=\{1+(e^\rho-1)\cos\eta=0\}$. Because $|\cos\eta|\le1$, this is the set described in the next entry ($\rho\ge\ln2$). On $C_0$ the kernel of $DT$ is spanned by $k=(\cos\eta,1)$, since $DT\,k=(0,\det DT)$ identically; RECOG-ALG-P2-C0-WHITNEY-FOLD uses this direction. Owner check M2.
+532c532
+< `[ALG]` [RID: DYAD-ALG-ISP-MAPS] `[v6.4.20; proposed RID, registered only at adoption; covers the forward map and the reconstruction below; owner check M4]` **Forward map:**
+---
+> `[ALG]` [RID: DYAD-ALG-ISP-MAPS] `[v6.4.20; RID registered at adoption, 21 Oct 2026; covers the forward map and the reconstruction below; owner check M4]` **Forward map:**
+545c545
+< `[ALG]` [RID: DYAD-ALG-QC-CRITICAL-AMPLITUDE] `[v6.4.20; proposed RID, registered only at adoption; owner check M3]` **Critical ISP amplitude:** $Q_c := (\arcsin(\ln 2))^2 \approx 0.5865$. If $Q < Q_c$ at pre-crossing, critical curve is unreachable at the crossing step.
+---
+> `[ALG]` [RID: DYAD-ALG-QC-CRITICAL-AMPLITUDE] `[v6.4.20; RID registered at adoption, 21 Oct 2026; owner check M3]` **Critical ISP amplitude:** $Q_c := (\arcsin(\ln 2))^2 \approx 0.5865$. If $Q < Q_c$ at pre-crossing, critical curve is unreachable at the crossing step.
+553c553
+< `[ALG]` `[scope: fixed-radius uniform-angle mean in the raw $W$-frame]` [RID: DYAD-ALG-RAW-ANGULAR-MEAN] `[v6.4.20; proposed RID, registered only at adoption; owner check M8]` **Raw angular-mean recurrence coefficient.** Define
+---
+> `[ALG]` `[scope: fixed-radius uniform-angle mean in the raw $W$-frame]` [RID: DYAD-ALG-RAW-ANGULAR-MEAN] `[v6.4.20; RID registered at adoption, 21 Oct 2026; owner check M8]` **Raw angular-mean recurrence coefficient.** Define
+563c563
+< `[ALG]` [RID: DYAD-ALG-ONE-BLOCK-BURST] `[v6.4.20; proposed RID, registered only at adoption; owner check M7]` **One-block burst on the positive real primitive ray** $(\rho,\eta)=(t,0)$, $t>0$, $Q_0=t^2$:
+---
+> `[ALG]` [RID: DYAD-ALG-ONE-BLOCK-BURST] `[v6.4.20; RID registered at adoption, 21 Oct 2026; owner check M7]` **One-block burst on the positive real primitive ray** $(\rho,\eta)=(t,0)$, $t>0$, $Q_0=t^2$:
+607c607
+< `[ALG]` [RID: DYAD-ALG-SIXSTEP-CUBIC-JET] `[v6.4.20; proposed RID, registered only at adoption; covers the jet and M+M^T=-I; owner check M5]` **6-step cubic jet** in primitive $(\rho,\eta)$ coordinates:
+---
+> `[ALG]` [RID: DYAD-ALG-SIXSTEP-CUBIC-JET] `[v6.4.20; RID registered at adoption, 21 Oct 2026; covers the jet and M+M^T=-I; owner check M5]` **6-step cubic jet** in primitive $(\rho,\eta)$ coordinates:
+663c663
+< `[ALG]` [RID: DYAD-ALG-KP-FRAME-SCALE] `[v6.4.20; proposed RID, registered only at adoption]` `[proof: exact algebra; `dyad_p1_math_checks.py` P1-1]` **Frame qualifier for the bridge lemma.** The lemma holds in each linear eigenframe for that frame's one-step coefficient. For the declared $K_p$ family the two frames in use are $Z$ ($\eta=Z+\bar Z$, $\rho=uZ+\bar u\bar Z$, $u=1/(1-\lambda)$; RECOG) and $W_p=\rho+\tfrac{\lambda-1}{K_p}\eta$ (Dyadic; the §1 frame at $p=6$). Since $\bar u+\tfrac{\lambda-1}{K_p}=0$ and $u=\tfrac12+\tfrac i2\cot(\pi/p)$,
+---
+> `[ALG]` [RID: DYAD-ALG-KP-FRAME-SCALE] `[v6.4.20; RID registered at adoption, 21 Oct 2026]` `[proof: exact algebra; `dyad_p1_math_checks.py` P1-1]` **Frame qualifier for the bridge lemma.** The lemma holds in each linear eigenframe for that frame's one-step coefficient. For the declared $K_p$ family the two frames in use are $Z$ ($\eta=Z+\bar Z$, $\rho=uZ+\bar u\bar Z$, $u=1/(1-\lambda)$; RECOG) and $W_p=\rho+\tfrac{\lambda-1}{K_p}\eta$ (Dyadic; the §1 frame at $p=6$). Since $\bar u+\tfrac{\lambda-1}{K_p}=0$ and $u=\tfrac12+\tfrac i2\cot(\pi/p)$,
+702c702
+< `[ALG]` (all $p$, complete) [RID: DYAD-ALG-B5-ALLP-NONVANISHING] `[v6.4.20; proposed RID for the b=5 statement (F_raw^p(0,5) != 0 for every p >= 6), registered only at adoption; the lifecycle identifier DYAD-OPEN-B5-ALLP is unchanged]` **Channel classification boundary at $b=4$ (dyadic map).** Universal pure anti-holomorphic vanishing (for $p\ge b+2$) holds for $b\in\{2,3,4\}$ `[ALG]` (source $\beta$-sets carry no secular mode; exceptional orders bounded by $b+1$), and FAILS at $b=5$ for EVERY $p\ge6$ `[ALG]`. Proof of the $b=5$ failure: the $(0,5)$ source carries the secular mode $\beta=1$ with five-term coefficient $S\propto c_{02}^2$ (nonzero `[ALG]`). For $p=6..12$, exact cyclotomic certificates give $F_{\rm raw}^p(0,5)\ne0$ in $\mathbb{Q}(\zeta_p)$ `[ALG]` `[scope: finite sweep]` (e.g. $F_{\rm raw}^7(0,5)=\tfrac{15}{2}\lambda^5+\tfrac{23}{8}\lambda^4+\tfrac{21}{8}\lambda^3+\tfrac{15}{2}\lambda^2-\tfrac18\lambda+\tfrac{17}{2}$). For $p\ge13$, all nonsecular $m=0$ modes vanish (geometric sums, $p\nmid(\beta-1)$ for $\beta-1\in\{-6,\dots,-1,1\}$) and the polynomial mode $(-2,1)$ has exact sum $-p/(1-\lambda^{-3})$, giving the exact identity $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$, $S_{\rm eff}=S-c_{(-2,1)}/(1-\lambda^{-3})$. The effective ratio is the explicit rational $S_{\rm eff}/S=N/D$ with $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$ ($\lim_{\lambda\to1}=3$, `[ALG]`). Since $\deg N=6$, a primitive $p$-th root can be a zero of $N$ only if $\varphi(p)\le6$ (finitely many $p$: $\{1..10,12,14,18\}$); exact division shows $\Phi_p\nmid N$ for every one, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. Therefore $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$ `[ALG]` (complete proof, not a finite scan). Net `[ALG]` for the dyadic map: **universal pure anti-holomorphic raw vanishing holds for $b\in\{2,3,4\}$ and first fails at $b=5$, for every $p\ge6$.** Whether it fails for every $b\ge6$ is `[OPEN]` (all-$b\ge5$ persistence; scan-confirmed $b=6$ only), as is the general-coefficient version. `[COR]` `[v6.4.11]` The former wording "holds iff $b\le4$" asserted the open $b\ge6$ direction and is withdrawn. [cert: rtg_b5_Seff_limit_cert.py (all-$p$ closure); exact_Fraw_b5_sweep.py ($p=6..12$); rtg_b5_step3_reduction.py; rtg_extract_b5_secular_coeff.py (source)]
+---
+> `[ALG]` (all $p$, complete) [RID: DYAD-ALG-B5-ALLP-NONVANISHING] `[v6.4.20; RID for the b=5 statement (F_raw^p(0,5) != 0 for every p >= 6), registered at adoption, 21 Oct 2026; the lifecycle identifier DYAD-OPEN-B5-ALLP is unchanged]` **Channel classification boundary at $b=4$ (dyadic map).** Universal pure anti-holomorphic vanishing (for $p\ge b+2$) holds for $b\in\{2,3,4\}$ `[ALG]` (source $\beta$-sets carry no secular mode; exceptional orders bounded by $b+1$), and FAILS at $b=5$ for EVERY $p\ge6$ `[ALG]`. Proof of the $b=5$ failure: the $(0,5)$ source carries the secular mode $\beta=1$ with five-term coefficient $S\propto c_{02}^2$ (nonzero `[ALG]`). For $p=6..12$, exact cyclotomic certificates give $F_{\rm raw}^p(0,5)\ne0$ in $\mathbb{Q}(\zeta_p)$ `[ALG]` `[scope: finite sweep]` (e.g. $F_{\rm raw}^7(0,5)=\tfrac{15}{2}\lambda^5+\tfrac{23}{8}\lambda^4+\tfrac{21}{8}\lambda^3+\tfrac{15}{2}\lambda^2-\tfrac18\lambda+\tfrac{17}{2}$). For $p\ge13$, all nonsecular $m=0$ modes vanish (geometric sums, $p\nmid(\beta-1)$ for $\beta-1\in\{-6,\dots,-1,1\}$) and the polynomial mode $(-2,1)$ has exact sum $-p/(1-\lambda^{-3})$, giving the exact identity $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$, $S_{\rm eff}=S-c_{(-2,1)}/(1-\lambda^{-3})$. The effective ratio is the explicit rational $S_{\rm eff}/S=N/D$ with $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$ ($\lim_{\lambda\to1}=3$, `[ALG]`). Since $\deg N=6$, a primitive $p$-th root can be a zero of $N$ only if $\varphi(p)\le6$ (finitely many $p$: $\{1..10,12,14,18\}$); exact division shows $\Phi_p\nmid N$ for every one, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. Therefore $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$ `[ALG]` (complete proof, not a finite scan). Net `[ALG]` for the dyadic map: **universal pure anti-holomorphic raw vanishing holds for $b\in\{2,3,4\}$ and first fails at $b=5$, for every $p\ge6$.** Whether it fails for every $b\ge6$ is `[OPEN]` (all-$b\ge5$ persistence; scan-confirmed $b=6$ only), as is the general-coefficient version. `[COR]` `[v6.4.11]` The former wording "holds iff $b\le4$" asserted the open $b\ge6$ direction and is withdrawn. [cert: rtg_b5_Seff_limit_cert.py (all-$p$ closure); exact_Fraw_b5_sweep.py ($p=6..12$); rtg_b5_step3_reduction.py; rtg_extract_b5_secular_coeff.py (source)]
+711c711
+< - [RID: DYAD-ALG-Q3-DEG2-CANCEL] `[v6.4.20; proposed RID, registered only at adoption; evidence rtg_p_certs.py (DYAD-ART-P-CERTS), not rerun in P2]` Degree-2 $q=3,(0,2)$ cancellation for all $p>3$ with $3\mid p$.
+---
+> - [RID: DYAD-ALG-Q3-DEG2-CANCEL] `[v6.4.20; RID registered at adoption, 21 Oct 2026; evidence rtg_p_certs.py (DYAD-ART-P-CERTS), not rerun in P2]` Degree-2 $q=3,(0,2)$ cancellation for all $p>3$ with $3\mid p$.
+815c815
+< `[ALG]` `[v6.4.20 entry; proposed RID, registered only at adoption]` [RID: DYAD-ALG-P5-RADIAL] **Degree-five radial part of the six-step return.** In primitive coordinates $Q(T^6x)-Q=-Q^2+P_5+O(\|x\|^6)$ with $P_5=\tfrac{Q}{24}(5\eta^3-43\eta^2\rho+4\eta\rho^2-5\rho^3)$, $Q=\rho^2-\rho\eta+\eta^2$; the quadratic and cubic parts vanish. This registers as a result the identity used inside `DYAD-THM-PRIM-CTR` below; no statement changes. Owner check M6.
+---
+> `[ALG]` `[v6.4.20 entry; RID registered at adoption, 21 Oct 2026]` [RID: DYAD-ALG-P5-RADIAL] **Degree-five radial part of the six-step return.** In primitive coordinates $Q(T^6x)-Q=-Q^2+P_5+O(\|x\|^6)$ with $P_5=\tfrac{Q}{24}(5\eta^3-43\eta^2\rho+4\eta\rho^2-5\rho^3)$, $Q=\rho^2-\rho\eta+\eta^2$; the quadratic and cubic parts vanish. This registers as a result the identity used inside `DYAD-THM-PRIM-CTR` below; no statement changes. Owner check M6.
+1066c1066
+< `[THM]` [RID: DYAD-THM-SMOOTH-EQUIVARIANT-CHART] `[v6.4.20; proposed RID, registered only at adoption]` `[corollary of DYAD-THM-SMOOTH-EMBEDDING E3–E4; proof: finite-group averaging]` **Smooth equivariant chart.** Let $J$ be the $C^\infty$ germ of E4 ($J^6=\mathrm{id}$, $DJ(0)=A$, $JT=TJ$) and $\Phi:=\tfrac16\sum_{k=0}^{5}A^{-k}J^k$. Then $\Phi$ is a $C^\infty$ local diffeomorphism with $\Phi(0)=0$, $D\Phi(0)=I$, $\Phi\circ J=A\circ\Phi$, and $N_\Phi:=\Phi T\Phi^{-1}$ commutes with $A$.  
+---
+> `[THM]` [RID: DYAD-THM-SMOOTH-EQUIVARIANT-CHART] `[v6.4.20; RID registered at adoption, 21 Oct 2026]` `[corollary of DYAD-THM-SMOOTH-EMBEDDING E3–E4; proof: finite-group averaging]` **Smooth equivariant chart.** Let $J$ be the $C^\infty$ germ of E4 ($J^6=\mathrm{id}$, $DJ(0)=A$, $JT=TJ$) and $\Phi:=\tfrac16\sum_{k=0}^{5}A^{-k}J^k$. Then $\Phi$ is a $C^\infty$ local diffeomorphism with $\Phi(0)=0$, $D\Phi(0)=I$, $\Phi\circ J=A\circ\Phi$, and $N_\Phi:=\Phi T\Phi^{-1}$ commutes with $A$.  
+1087c1087
+< `[DEF]` `[v6.4.20]` One table of the editions this ledger uses. A hash marked "project copy hashed by DYAD" was computed from the project file for this draft; "not recorded" means this ledger carries no hash for that edition.
+---
+> `[DEF]` `[v6.4.20]` One table of the editions this ledger uses. A hash marked "project copy hashed by DYAD" was computed from the project file during the v6.4.20 draft work; "not recorded" means this ledger carries no hash for that edition.
+1091,1092c1091,1092
+< | Dyadic (this ledger) | v6.4.19 | ADOPTED 20 Oct 2026; canonical until a v6.4.20 adoption decision | `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9` | release record; verification record | base of P1/P2 |
+< | Dyadic ATLAS P1 working file | v6.4.20 P1 | noncanonical; reviewed (`ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED`) | `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905` | P1 record; reviewer hash check | base of this draft |
+---
+> | Dyadic (this ledger) | v6.4.19 | ADOPTED 20 Oct 2026; superseded by v6.4.20 (this edition, adopted 21 Oct 2026; its SHA-256 is in `RTG_DYADIC_v6_4_20_RELEASE_RECORD.md`) | `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9` | release record; verification record | base of P1/P2 |
+> | Dyadic ATLAS P1 working file | v6.4.20 P1 | noncanonical; reviewed (`ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED`) | `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905` | P1 record; reviewer hash check | base of the v6.4.20 drafts |
+1141c1141
+< `[DEF]` `[v6.4.20]` One recipient per row. "Where recorded" names the consumer record read for this draft; "NOT RECORDED" means no receipt was found there, not that the notice was refused. Notices N16–N20 (ATLAS disposition §6) are issued only after adoption; none is prepared in this draft.
+---
+> `[DEF]` `[v6.4.20]` One recipient per row. "Where recorded" names the consumer record read for this edition; "NOT RECORDED" means no receipt was found there, not that the notice was refused. Notices N16–N20 (ATLAS disposition §6) are prepared only after external verification of this edition's SHA-256; none is prepared in this edition.
+1261,1262c1261,1262
+< - [RID: DYAD-ART-ATLAS-P1] `[v6.4.20; proposed RID, registered only at adoption]` :: `build_dyad_p1.py`, `check_dyad_p1.py`, `dyad_p1_math_checks.py`; records `DYAD_ATLAS_P1_SCIENTIFIC_CORRECTION_SESSION_v0_1.md`, `DYAD_FC32_HNG_R9FREE_SESSION_v0_1.md` (project `claude/atlas/p1/`) :: P1 working-file builder, gates G0–G13, checks P1-1–P1-5; reviewer replay recorded in the P1 review :: `[ENG]`
+< - [RID: DYAD-ART-ATLAS-P2] `[v6.4.20; proposed RID, registered only at adoption]` :: `build_dyad_v6_4_20_r1.py` with `p2_content.py`, `check_dyad_v6_4_20_r1.py`; r2: `build_dyad_v6_4_20_r2.py`, `check_dyad_v6_4_20_r2.py`; `dyad_p2_math_checks.py` (M1–M11), `p2_source_checks.py` (S1–S4); record `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md` (project `claude/atlas/p2/`) :: this draft: builders, gates, owner math and source checks; r1 package replayed by the external reviewer (21 Oct 2026), r2 OWNER-RUN :: `[ENG]`
+---
+> - [RID: DYAD-ART-ATLAS-P1] `[v6.4.20; RID registered at adoption, 21 Oct 2026]` :: `build_dyad_p1.py`, `check_dyad_p1.py`, `dyad_p1_math_checks.py`; records `DYAD_ATLAS_P1_SCIENTIFIC_CORRECTION_SESSION_v0_1.md`, `DYAD_FC32_HNG_R9FREE_SESSION_v0_1.md` (project `claude/atlas/p1/`) :: P1 working-file builder, gates G0–G13, checks P1-1–P1-5; reviewer replay recorded in the P1 review :: `[ENG]`
+> - [RID: DYAD-ART-ATLAS-P2] `[v6.4.20; RID registered at adoption, 21 Oct 2026]` :: `build_dyad_v6_4_20_r1.py` with `p2_content.py`, `check_dyad_v6_4_20_r1.py`; r2: `build_dyad_v6_4_20_r2.py`, `check_dyad_v6_4_20_r2.py`; `dyad_p2_math_checks.py` (M1–M11), `p2_source_checks.py` (S1–S4); record `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md` (project `claude/atlas/p2/`) :: the v6.4.20 drafts: builders, gates, owner math and source checks; r1 package replayed by the external reviewer (21 Oct 2026), r2 OWNER-RUN :: `[ENG]`
+1282a1283,1514
+> ### v6.4.20 — adopted 21 October 2026
+> 
+> - **Owner decision:** explicit PI adoption, 21 Oct 2026 ("Ben onaylıyorum", 18:14 +03:00), recorded as `DYAD v6.4.20 — OWNER ADOPTION AUTHORIZED`. It follows the external review `DYAD v6.4.20 DRAFT r2 — REVIEW ACCEPTED` of DRAFT r2 (`f2030f853b94a7caa1d1d7c4afd8bdf9b6059582d331100bb0033226fd68465e`). Review acceptance and owner adoption are separate decisions.
+> - **Chain:** v6.4.19 (`40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`) → ATLAS P1 working file (`6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905`; `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED`) → DRAFT r1 (`a5c70f5b1468ab01ba1cdf932fb9205c4bf00976a2b6523e8b90210e5e457c4a`; `v6.4.20 r1 — REVIEW ACCEPTED WITH MINOR CORRECTIONS`) → DRAFT r2 (`f2030f853b94a7caa1d1d7c4afd8bdf9b6059582d331100bb0033226fd68465e`; `DYAD v6.4.20 DRAFT r2 — REVIEW ACCEPTED`) → this file by `release_v6_4_20.py` (labels and metadata only; 55 lines replaced in place, quoted below).
+> - **Registered by this adoption (13 RIDs):** `DYAD-ALG-KP-FRAME-SCALE`, `DYAD-THM-SMOOTH-EQUIVARIANT-CHART`, `DYAD-ALG-B5-ALLP-NONVANISHING`, `DYAD-ALG-RAW-ANGULAR-MEAN`, `DYAD-ALG-ONE-BLOCK-BURST`, `DYAD-ALG-P5-RADIAL`, `DYAD-ALG-SIXSTEP-CUBIC-JET`, `DYAD-ALG-Q3-DEG2-CANCEL`, `DYAD-DEF-CRITICAL-CURVE`, `DYAD-ALG-QC-CRITICAL-AMPLITUDE`, `DYAD-ALG-ISP-MAPS`, `DYAD-ART-ATLAS-P1`, `DYAD-ART-ATLAS-P2`. Census A (tagged identifiers): v6.4.19 135 → v6.4.20 148; every v6.4.19 identifier is kept.
+> - **Unchanged:** every earlier statement, grade, scope and OPEN status. OPEN 20 PARTIAL (B-∞ existence and flat uniqueness CLOSED; B-an and B-6 OPEN); OPEN 9 PARTIAL.
+> - **Kept distinctions:** FA-08 — the `DYAD-THM-RAW-CUBIC` formula is verified, its direct match with the historical OPEN 9 source is not complete. FA-04 — `degree_b_vanishing_cert_v2.py` is not available and is not presented as recreated. FC-32 (H-NG) stays a SESSION result and is not imported. Editions without a recorded hash (Triadic, OPEN-M, Programme, Methodology, DZT, AZ) stay "not recorded".
+> - **Evidence levels:** `REVIEWER-REPLAYED` — r2 review: r2 G0–G21, the r2 negative controls, M1–M11, S1–S4 with C1–C2 (with the RECOG v0.3.20/v0.3.21/v0.3.22 files), R1–R4 with D1–D2; r1 review: r1 hashes, builder, G0–G18, N0–N16, K1–K3. `OWNER-RUN` — this release transform and its release checker with negative controls. `REVIEWER FULL REPLAY NOT COMPLETED` — the combined G14–G15 run carried from v6.4.19 (a separate historical item, not closed by the v6.4.20 reviews); the release checker of this edition until it is replayed. The release-record hashes in the v6.4.17/v6.4.18 addenda v0.1.1 are `REVIEWER-MEASURED` (r1 review), not owner-measured.
+> - **Outbound:** N16–N20 (ATLAS disposition §6) are prepared only after external verification of this file's SHA-256 and are sent by the PI. No notice is sent by this release.
+> 
+> #### v6.4.20 adoption — replaced DRAFT r2 lines (verbatim)
+> 
+> **r2 line 4**
+> 
+> > **Edition:** v6.4.20 DRAFT r2 — 21 October 2026  
+> 
+> **r2 line 5**
+> 
+> > **Status:** DRAFT r2 — not adopted, not released. Adopted `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19` (SHA-256 `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`) remains the canonical Dyadic ledger until a separate external review and an explicit PI adoption decision. r1 built by `build_dyad_v6_4_20_r1.py` from the verified ATLAS P1 working file (SHA-256 `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905`) under `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED` (P2 authorized, 21 Oct 2026); r2 = r1 with the record corrections of the r1 review (`TECHNICAL REVIEW PASSED — MINOR RECORD CORRECTIONS REQUIRED`), built by `build_dyad_v6_4_20_r2.py`.  
+> 
+> **r2 line 7**
+> 
+> > **Supersedes (on adoption only):** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19`. Lineage and all release records: Appendix A.  
+> 
+> **r2 line 11**
+> 
+> > **Status summary:** The dyad map has theorem-grade and exact-algebraic certification for the six-step resonant module ($c_{21}$, the local quintic normalization pipeline, OPEN 11, OPEN 18); the local return enclosure of §6.14 (exact degree-6 normalizer and jet, primitive contraction with invariant tube, inverse coordinates, normalized remainders); the OPEN 3 spiral-residual results and the primitive-variable remainder (OPEN 21; conditional on `RECOG-THM-R9-MEMORY`); the L-PHASE angular remainder on row A (`[THM]`; the constant $\tfrac{403}{250}$ is an upper bound); the formal centralizer and ℤ₆ generator (§6.16); Lemma F with F1–F3 and the smooth flow embedding (§6.17). OPEN 9 is PARTIAL: low-degree anti-holomorphic vanishing is `[ALG]` for $b\in\{2,3,4\}$ ($p\ge b+2$), it fails at $b=5$ for every $p\ge6$, all-$b\ge5$ persistence is `[OPEN]`, and the $q=4,(0,3)$ phase law is closed for all $p$. OPEN 20 is PARTIAL: B-∞ existence and flat uniqueness are CLOSED; B-an and B-6 are OPEN. This draft adds the ATLAS P1 scientific corrections and the P2 interface work (Appendix A). Proposed RIDs are registered only on adoption; no adopted RID is renamed or regraded.  
+> 
+> **r2 line 12**
+> 
+> > **Draft record:** Appendix A, "v6.4.20 DRAFT r2" and "v6.4.20 DRAFT r1"; session records `DYAD_ATLAS_P2_R2_CORRECTION_SESSION_v0_1.md` and `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md`. The v6.4.19 header, adoption metadata, release summaries and footers are preserved verbatim there.
+> 
+> **r2 line 60**
+> 
+> > **Version markers.** `[v6.4.20]` marks text introduced by the ATLAS P1 and P2 passes (the P1 working file wrote these as P1 markers). `[v6.4.20 entry]` marks a whole new entry; a proposed RID carries `[v6.4.20; proposed RID, registered only at adoption]`.
+> 
+> **r2 line 254**
+> 
+> > - Channel boundary all-$p$ (DYAD-OPEN-B5-ALLP): **CLOSED `[ALG]`**. `[v6.4.20: result RID proposed, DYAD-ALG-B5-ALLP-NONVANISHING (§6.11); the lifecycle identifier is unchanged]` For $p\ge13$, $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$ with $S_{\rm eff}/S=N/D$, $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$. Cyclotomic non-division: $\deg N=6$ so $\Phi_p\mid N$ requires $\varphi(p)\le6$ (finite set); exact check shows $\Phi_p\nmid N$ for all, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. With the exact sweep $p=6..12$: $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$. Remaining (separate): all-$b\ge5$ persistence and the general-coefficient version: `[OPEN]`
+> 
+> **r2 line 481**
+> 
+> > `[DEF]` `[v6.4.20 entry; proposed RID, registered only at adoption]` [RID: DYAD-DEF-CRITICAL-CURVE] **Critical curve (rank-one locus).** $C_0:=\{\det DT=0\}=\{1+(e^\rho-1)\cos\eta=0\}$. Because $|\cos\eta|\le1$, this is the set described in the next entry ($\rho\ge\ln2$). On $C_0$ the kernel of $DT$ is spanned by $k=(\cos\eta,1)$, since $DT\,k=(0,\det DT)$ identically; RECOG-ALG-P2-C0-WHITNEY-FOLD uses this direction. Owner check M2.
+> 
+> **r2 line 532**
+> 
+> > `[ALG]` [RID: DYAD-ALG-ISP-MAPS] `[v6.4.20; proposed RID, registered only at adoption; covers the forward map and the reconstruction below; owner check M4]` **Forward map:**
+> 
+> **r2 line 545**
+> 
+> > `[ALG]` [RID: DYAD-ALG-QC-CRITICAL-AMPLITUDE] `[v6.4.20; proposed RID, registered only at adoption; owner check M3]` **Critical ISP amplitude:** $Q_c := (\arcsin(\ln 2))^2 \approx 0.5865$. If $Q < Q_c$ at pre-crossing, critical curve is unreachable at the crossing step.
+> 
+> **r2 line 553**
+> 
+> > `[ALG]` `[scope: fixed-radius uniform-angle mean in the raw $W$-frame]` [RID: DYAD-ALG-RAW-ANGULAR-MEAN] `[v6.4.20; proposed RID, registered only at adoption; owner check M8]` **Raw angular-mean recurrence coefficient.** Define
+> 
+> **r2 line 563**
+> 
+> > `[ALG]` [RID: DYAD-ALG-ONE-BLOCK-BURST] `[v6.4.20; proposed RID, registered only at adoption; owner check M7]` **One-block burst on the positive real primitive ray** $(\rho,\eta)=(t,0)$, $t>0$, $Q_0=t^2$:
+> 
+> **r2 line 607**
+> 
+> > `[ALG]` [RID: DYAD-ALG-SIXSTEP-CUBIC-JET] `[v6.4.20; proposed RID, registered only at adoption; covers the jet and M+M^T=-I; owner check M5]` **6-step cubic jet** in primitive $(\rho,\eta)$ coordinates:
+> 
+> **r2 line 663**
+> 
+> > `[ALG]` [RID: DYAD-ALG-KP-FRAME-SCALE] `[v6.4.20; proposed RID, registered only at adoption]` `[proof: exact algebra; `dyad_p1_math_checks.py` P1-1]` **Frame qualifier for the bridge lemma.** The lemma holds in each linear eigenframe for that frame's one-step coefficient. For the declared $K_p$ family the two frames in use are $Z$ ($\eta=Z+\bar Z$, $\rho=uZ+\bar u\bar Z$, $u=1/(1-\lambda)$; RECOG) and $W_p=\rho+\tfrac{\lambda-1}{K_p}\eta$ (Dyadic; the §1 frame at $p=6$). Since $\bar u+\tfrac{\lambda-1}{K_p}=0$ and $u=\tfrac12+\tfrac i2\cot(\pi/p)$,
+> 
+> **r2 line 702**
+> 
+> > `[ALG]` (all $p$, complete) [RID: DYAD-ALG-B5-ALLP-NONVANISHING] `[v6.4.20; proposed RID for the b=5 statement (F_raw^p(0,5) != 0 for every p >= 6), registered only at adoption; the lifecycle identifier DYAD-OPEN-B5-ALLP is unchanged]` **Channel classification boundary at $b=4$ (dyadic map).** Universal pure anti-holomorphic vanishing (for $p\ge b+2$) holds for $b\in\{2,3,4\}$ `[ALG]` (source $\beta$-sets carry no secular mode; exceptional orders bounded by $b+1$), and FAILS at $b=5$ for EVERY $p\ge6$ `[ALG]`. Proof of the $b=5$ failure: the $(0,5)$ source carries the secular mode $\beta=1$ with five-term coefficient $S\propto c_{02}^2$ (nonzero `[ALG]`). For $p=6..12$, exact cyclotomic certificates give $F_{\rm raw}^p(0,5)\ne0$ in $\mathbb{Q}(\zeta_p)$ `[ALG]` `[scope: finite sweep]` (e.g. $F_{\rm raw}^7(0,5)=\tfrac{15}{2}\lambda^5+\tfrac{23}{8}\lambda^4+\tfrac{21}{8}\lambda^3+\tfrac{15}{2}\lambda^2-\tfrac18\lambda+\tfrac{17}{2}$). For $p\ge13$, all nonsecular $m=0$ modes vanish (geometric sums, $p\nmid(\beta-1)$ for $\beta-1\in\{-6,\dots,-1,1\}$) and the polynomial mode $(-2,1)$ has exact sum $-p/(1-\lambda^{-3})$, giving the exact identity $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$, $S_{\rm eff}=S-c_{(-2,1)}/(1-\lambda^{-3})$. The effective ratio is the explicit rational $S_{\rm eff}/S=N/D$ with $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$ ($\lim_{\lambda\to1}=3$, `[ALG]`). Since $\deg N=6$, a primitive $p$-th root can be a zero of $N$ only if $\varphi(p)\le6$ (finitely many $p$: $\{1..10,12,14,18\}$); exact division shows $\Phi_p\nmid N$ for every one, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. Therefore $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$ `[ALG]` (complete proof, not a finite scan). Net `[ALG]` for the dyadic map: **universal pure anti-holomorphic raw vanishing holds for $b\in\{2,3,4\}$ and first fails at $b=5$, for every $p\ge6$.** Whether it fails for every $b\ge6$ is `[OPEN]` (all-$b\ge5$ persistence; scan-confirmed $b=6$ only), as is the general-coefficient version. `[COR]` `[v6.4.11]` The former wording "holds iff $b\le4$" asserted the open $b\ge6$ direction and is withdrawn. [cert: rtg_b5_Seff_limit_cert.py (all-$p$ closure); exact_Fraw_b5_sweep.py ($p=6..12$); rtg_b5_step3_reduction.py; rtg_extract_b5_secular_coeff.py (source)]
+> 
+> **r2 line 711**
+> 
+> > - [RID: DYAD-ALG-Q3-DEG2-CANCEL] `[v6.4.20; proposed RID, registered only at adoption; evidence rtg_p_certs.py (DYAD-ART-P-CERTS), not rerun in P2]` Degree-2 $q=3,(0,2)$ cancellation for all $p>3$ with $3\mid p$.
+> 
+> **r2 line 815**
+> 
+> > `[ALG]` `[v6.4.20 entry; proposed RID, registered only at adoption]` [RID: DYAD-ALG-P5-RADIAL] **Degree-five radial part of the six-step return.** In primitive coordinates $Q(T^6x)-Q=-Q^2+P_5+O(\|x\|^6)$ with $P_5=\tfrac{Q}{24}(5\eta^3-43\eta^2\rho+4\eta\rho^2-5\rho^3)$, $Q=\rho^2-\rho\eta+\eta^2$; the quadratic and cubic parts vanish. This registers as a result the identity used inside `DYAD-THM-PRIM-CTR` below; no statement changes. Owner check M6.
+> 
+> **r2 line 1066**
+> 
+> > `[THM]` [RID: DYAD-THM-SMOOTH-EQUIVARIANT-CHART] `[v6.4.20; proposed RID, registered only at adoption]` `[corollary of DYAD-THM-SMOOTH-EMBEDDING E3–E4; proof: finite-group averaging]` **Smooth equivariant chart.** Let $J$ be the $C^\infty$ germ of E4 ($J^6=\mathrm{id}$, $DJ(0)=A$, $JT=TJ$) and $\Phi:=\tfrac16\sum_{k=0}^{5}A^{-k}J^k$. Then $\Phi$ is a $C^\infty$ local diffeomorphism with $\Phi(0)=0$, $D\Phi(0)=I$, $\Phi\circ J=A\circ\Phi$, and $N_\Phi:=\Phi T\Phi^{-1}$ commutes with $A$.  
+> 
+> **r2 line 1087**
+> 
+> > `[DEF]` `[v6.4.20]` One table of the editions this ledger uses. A hash marked "project copy hashed by DYAD" was computed from the project file for this draft; "not recorded" means this ledger carries no hash for that edition.
+> 
+> **r2 line 1091**
+> 
+> > | Dyadic (this ledger) | v6.4.19 | ADOPTED 20 Oct 2026; canonical until a v6.4.20 adoption decision | `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9` | release record; verification record | base of P1/P2 |
+> 
+> **r2 line 1092**
+> 
+> > | Dyadic ATLAS P1 working file | v6.4.20 P1 | noncanonical; reviewed (`ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED`) | `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905` | P1 record; reviewer hash check | base of this draft |
+> 
+> **r2 line 1141**
+> 
+> > `[DEF]` `[v6.4.20]` One recipient per row. "Where recorded" names the consumer record read for this draft; "NOT RECORDED" means no receipt was found there, not that the notice was refused. Notices N16–N20 (ATLAS disposition §6) are issued only after adoption; none is prepared in this draft.
+> 
+> **r2 line 1261**
+> 
+> > - [RID: DYAD-ART-ATLAS-P1] `[v6.4.20; proposed RID, registered only at adoption]` :: `build_dyad_p1.py`, `check_dyad_p1.py`, `dyad_p1_math_checks.py`; records `DYAD_ATLAS_P1_SCIENTIFIC_CORRECTION_SESSION_v0_1.md`, `DYAD_FC32_HNG_R9FREE_SESSION_v0_1.md` (project `claude/atlas/p1/`) :: P1 working-file builder, gates G0–G13, checks P1-1–P1-5; reviewer replay recorded in the P1 review :: `[ENG]`
+> 
+> **r2 line 1262**
+> 
+> > - [RID: DYAD-ART-ATLAS-P2] `[v6.4.20; proposed RID, registered only at adoption]` :: `build_dyad_v6_4_20_r1.py` with `p2_content.py`, `check_dyad_v6_4_20_r1.py`; r2: `build_dyad_v6_4_20_r2.py`, `check_dyad_v6_4_20_r2.py`; `dyad_p2_math_checks.py` (M1–M11), `p2_source_checks.py` (S1–S4); record `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md` (project `claude/atlas/p2/`) :: this draft: builders, gates, owner math and source checks; r1 package replayed by the external reviewer (21 Oct 2026), r2 OWNER-RUN :: `[ENG]`
+> 
+> **r2 line 2351**
+> 
+> > `[DEF]` `[v6.4.20]` One row per result or definition identifier carried by this ledger (adopted and proposed). Evidence levels are kept apart: **OWNER-RUN** (run by the Dyadic owner), **REVIEWER-REPLAYED** (rerun by an external reviewer), **REVIEWER FULL REPLAY NOT COMPLETED** (named runs a reviewer did not finish). "not recorded" means this ledger carries no record; an absent attachment is recorded as absent, not inferred. "Written proof" is the section of the entry. P2 checks M1–M11 are in `dyad_p2_math_checks.py` (OWNER-RUN, 21 Oct 2026; REVIEWER-REPLAYED from the r1 package, 21 Oct 2026 — the same script rerun, not a second method). `[v6.4.20]` (r2) **Grade rule:** the grade is the grade tag governing the identifier's canonical RID tag (the nearest grade tag before it on that line, otherwise the first after it; for a list item without a grade tag, the grade of the list's lead-in line); proposed identifiers read "— proposed, not adopted". `DYAD-CAND-FLAT-CENTRALIZER` and `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` carry `[THM]` since the v6.4.13 adoption decision; their identifiers were kept. **Scope rule:** the scope span of the entry, or a stated split where the entry has parts of different coverage.
+> 
+> **r2 line 2359**
+> 
+> > | `DYAD-ALG-B5-ALLP-NONVANISHING` | ALG — proposed, not adopted | all $p\ge6$: $6\le p\le12$ by exact cyclotomic certificates (finite part); $p\ge13$ by algebraic proof ($\Phi_p\nmid N$) | §6.11 | `rtg_b5_Seff_limit_cert.py`, `exact_Fraw_b5_sweep.py`, `rtg_b5_step3_reduction.py` | not recorded | exact cyclotomic | all $p\ge6$ |
+> 
+> **r2 line 2366**
+> 
+> > | `DYAD-ALG-ISP-MAPS` | ALG — proposed, not adopted | as stated at the entry | §6.4 | P2 M4 | `dyad_p2_math_checks.py` | SymPy exact | forward map and reconstruction |
+> 
+> **r2 line 2367**
+> 
+> > | `DYAD-ALG-KP-FRAME-SCALE` | ALG — proposed, not adopted | as stated at the entry | §6.9 | P1 math checks | `dyad_p1_math_checks.py` | SymPy | declared $K_p$ family |
+> 
+> **r2 line 2373**
+> 
+> > | `DYAD-ALG-ONE-BLOCK-BURST` | ALG — proposed, not adopted | as stated at the entry | §6.5 | P2 M7 | `dyad_p2_math_checks.py` | exact rational jets | positive real ray |
+> 
+> **r2 line 2376**
+> 
+> > | `DYAD-ALG-P5-RADIAL` | ALG — proposed, not adopted | as stated at the entry | §6.14 | P2 M6 | `dyad_p2_math_checks.py` | exact rational jets | degrees 2–5 |
+> 
+> **r2 line 2381**
+> 
+> > | `DYAD-ALG-Q3-DEG2-CANCEL` | ALG — proposed, not adopted | as stated at the entry | §6.11 | `rtg_p_certs.py` (DYAD-ART-P-CERTS) | not recorded | SymPy/cyclotomic | all $p>3$, $3\mid p$ |
+> 
+> **r2 line 2382**
+> 
+> > | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | ALG — proposed, not adopted | as stated at the entry | §6.4 | P2 M3 | `dyad_p2_math_checks.py` | SymPy | value to 4 d.p. |
+> 
+> **r2 line 2383**
+> 
+> > | `DYAD-ALG-RAW-ANGULAR-MEAN` | ALG — proposed, not adopted | scope: fixed-radius uniform-angle mean in the raw $W$-frame | §6.5 | P2 M8 | `dyad_p2_math_checks.py` | exact rational jets | raw fixed-radius mean |
+> 
+> **r2 line 2384**
+> 
+> > | `DYAD-ALG-SIXSTEP-CUBIC-JET` | ALG — proposed, not adopted | as stated at the entry | §6.7 | P2 M5 | `dyad_p2_math_checks.py` | exact rational jets | cubic order |
+> 
+> **r2 line 2393**
+> 
+> > | `DYAD-DEF-CRITICAL-CURVE` | DEF — proposed, not adopted | as stated at the entry | §6.1 | P2 M2 | `dyad_p2_math_checks.py` | SymPy exact | full statement |
+> 
+> **r2 line 2414**
+> 
+> > | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | THM — proposed, not adopted | as stated at the entry | §6.17 | P1 SESSION derivation | `dyad_p1_math_checks.py` (linear part) | SymPy | $C^\infty$ germs |
+> 
+> **r2 line 2422**
+> 
+> > | `DYAD-ALG-B5-ALLP-NONVANISHING` | historical (v6.4.7) | not recorded | not recorded | not recorded | proposed RID; all-$b\ge5$ OPEN |
+> 
+> **r2 line 2429**
+> 
+> > | `DYAD-ALG-ISP-MAPS` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M4 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+> 
+> **r2 line 2430**
+> 
+> > | `DYAD-ALG-KP-FRAME-SCALE` | P1 | reviewer general-angle algebraic check | — | yes (reviewer) | proposed RID |
+> 
+> **r2 line 2436**
+> 
+> > | `DYAD-ALG-ONE-BLOCK-BURST` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M7 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+> 
+> **r2 line 2439**
+> 
+> > | `DYAD-ALG-P5-RADIAL` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M6 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+> 
+> **r2 line 2444**
+> 
+> > | `DYAD-ALG-Q3-DEG2-CANCEL` | historical | not recorded | not recorded | not recorded | proposed RID; not rerun in P2 |
+> 
+> **r2 line 2445**
+> 
+> > | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M3 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+> 
+> **r2 line 2446**
+> 
+> > | `DYAD-ALG-RAW-ANGULAR-MEAN` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M8 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID; long-orbit identification OPEN |
+> 
+> **r2 line 2447**
+> 
+> > | `DYAD-ALG-SIXSTEP-CUBIC-JET` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M5 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+> 
+> **r2 line 2456**
+> 
+> > | `DYAD-DEF-CRITICAL-CURVE` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M2 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+> 
+> **r2 line 2477**
+> 
+> > | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | P1 | reviewer ACCEPT `[THM — SESSION]` (FB-13) | — | reviewer check of the averaging argument | proposed RID; analyticity OPEN |
+> 
+> **r2 line 2483**
+> 
+> > `[DEF]` `[v6.4.20]` Every Dyadic-pattern string printed in DZT v0.8 (§7) and AZ v0.6 (§§4.1, 8), classified. Classes: exact match; component of `DYAD-THM-Q403-PHASELAW`; historical note label; artifact; unmatched. No alias is created by this table; consumer repins are requested after adoption (planned notice N17).
+> 
+> **r2 line 2487**
+> 
+> > | DZT v0.8 §7 | DYAD-OPEN-B5-ALLP | exact match | `DYAD-OPEN-B5-ALLP` (closed lifecycle item, untagged in this ledger) | result RID proposed: `DYAD-ALG-B5-ALLP-NONVANISHING` |
+> 
+> **r2 line 2509**
+> 
+> > | AZ v0.6 §8 | DYAD-ALG-Q3-CANCEL | unmatched | statement = the degree-2 $q=3,(0,2)$ cancellation (§6.11 micro-certification, no RID in v6.4.19) | proposed `DYAD-ALG-Q3-DEG2-CANCEL` covers the statement; no alias is created; AZ may repin after adoption |
+> 
+> **r2 line 2515**
+> 
+> > `[DEF]` `[v6.4.20]` Every v6.4.19 heading and its place in this draft. Anchors are kept. Relocated text is listed in Appendix A (H-P2-*).
+> 
+> **r2 line 2517**
+> 
+> > | v6.4.19 | v6.4.20 DRAFT r2 (headings as in r1) | Change |
+> 
+> **r2 line 2547**
+> 
+> > | `## Appendix A — Version History {#appendix-a}` | `## Appendix A — Version History {#appendix-a}` | v6.4.20 DRAFT r2 and r1 records added; P1 record and older history retained |
+> 
+> **r2 line 2560**
+> 
+> > *END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.20 DRAFT r2*  
+> 
+> **r2 line 2561**
+> 
+> > *DRAFT r2, 21 October 2026 — not adopted, not released. Adopted v6.4.19 (`40c9e63f…6ec9`) remains canonical. The r1 footer and every other replaced r1 line are quoted verbatim in Appendix A (v6.4.20 DRAFT r2 record); the v6.4.19 and inherited footers remain in the r1 record (H-P2-12).*
+> 
+2351c2583
+< `[DEF]` `[v6.4.20]` One row per result or definition identifier carried by this ledger (adopted and proposed). Evidence levels are kept apart: **OWNER-RUN** (run by the Dyadic owner), **REVIEWER-REPLAYED** (rerun by an external reviewer), **REVIEWER FULL REPLAY NOT COMPLETED** (named runs a reviewer did not finish). "not recorded" means this ledger carries no record; an absent attachment is recorded as absent, not inferred. "Written proof" is the section of the entry. P2 checks M1–M11 are in `dyad_p2_math_checks.py` (OWNER-RUN, 21 Oct 2026; REVIEWER-REPLAYED from the r1 package, 21 Oct 2026 — the same script rerun, not a second method). `[v6.4.20]` (r2) **Grade rule:** the grade is the grade tag governing the identifier's canonical RID tag (the nearest grade tag before it on that line, otherwise the first after it; for a list item without a grade tag, the grade of the list's lead-in line); proposed identifiers read "— proposed, not adopted". `DYAD-CAND-FLAT-CENTRALIZER` and `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` carry `[THM]` since the v6.4.13 adoption decision; their identifiers were kept. **Scope rule:** the scope span of the entry, or a stated split where the entry has parts of different coverage.
+---
+> `[DEF]` `[v6.4.20]` One row per result or definition identifier carried by this ledger (including those new in v6.4.20). Evidence levels are kept apart: **OWNER-RUN** (run by the Dyadic owner), **REVIEWER-REPLAYED** (rerun by an external reviewer), **REVIEWER FULL REPLAY NOT COMPLETED** (named runs a reviewer did not finish). "not recorded" means this ledger carries no record; an absent attachment is recorded as absent, not inferred. "Written proof" is the section of the entry. P2 checks M1–M11 are in `dyad_p2_math_checks.py` (OWNER-RUN, 21 Oct 2026; REVIEWER-REPLAYED from the r1 package, 21 Oct 2026 — the same script rerun, not a second method). `[v6.4.20]` (r2) **Grade rule:** the grade is the grade tag governing the identifier's canonical RID tag (the nearest grade tag before it on that line, otherwise the first after it; for a list item without a grade tag, the grade of the list's lead-in line); identifiers registered at the v6.4.20 adoption read "— new in v6.4.20" (in r2: "— proposed, not adopted"). `DYAD-CAND-FLAT-CENTRALIZER` and `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` carry `[THM]` since the v6.4.13 adoption decision; their identifiers were kept. **Scope rule:** the scope span of the entry, or a stated split where the entry has parts of different coverage.
+2359c2591
+< | `DYAD-ALG-B5-ALLP-NONVANISHING` | ALG — proposed, not adopted | all $p\ge6$: $6\le p\le12$ by exact cyclotomic certificates (finite part); $p\ge13$ by algebraic proof ($\Phi_p\nmid N$) | §6.11 | `rtg_b5_Seff_limit_cert.py`, `exact_Fraw_b5_sweep.py`, `rtg_b5_step3_reduction.py` | not recorded | exact cyclotomic | all $p\ge6$ |
+---
+> | `DYAD-ALG-B5-ALLP-NONVANISHING` | ALG — new in v6.4.20 | all $p\ge6$: $6\le p\le12$ by exact cyclotomic certificates (finite part); $p\ge13$ by algebraic proof ($\Phi_p\nmid N$) | §6.11 | `rtg_b5_Seff_limit_cert.py`, `exact_Fraw_b5_sweep.py`, `rtg_b5_step3_reduction.py` | not recorded | exact cyclotomic | all $p\ge6$ |
+2366,2367c2598,2599
+< | `DYAD-ALG-ISP-MAPS` | ALG — proposed, not adopted | as stated at the entry | §6.4 | P2 M4 | `dyad_p2_math_checks.py` | SymPy exact | forward map and reconstruction |
+< | `DYAD-ALG-KP-FRAME-SCALE` | ALG — proposed, not adopted | as stated at the entry | §6.9 | P1 math checks | `dyad_p1_math_checks.py` | SymPy | declared $K_p$ family |
+---
+> | `DYAD-ALG-ISP-MAPS` | ALG — new in v6.4.20 | as stated at the entry | §6.4 | P2 M4 | `dyad_p2_math_checks.py` | SymPy exact | forward map and reconstruction |
+> | `DYAD-ALG-KP-FRAME-SCALE` | ALG — new in v6.4.20 | as stated at the entry | §6.9 | P1 math checks | `dyad_p1_math_checks.py` | SymPy | declared $K_p$ family |
+2373c2605
+< | `DYAD-ALG-ONE-BLOCK-BURST` | ALG — proposed, not adopted | as stated at the entry | §6.5 | P2 M7 | `dyad_p2_math_checks.py` | exact rational jets | positive real ray |
+---
+> | `DYAD-ALG-ONE-BLOCK-BURST` | ALG — new in v6.4.20 | as stated at the entry | §6.5 | P2 M7 | `dyad_p2_math_checks.py` | exact rational jets | positive real ray |
+2376c2608
+< | `DYAD-ALG-P5-RADIAL` | ALG — proposed, not adopted | as stated at the entry | §6.14 | P2 M6 | `dyad_p2_math_checks.py` | exact rational jets | degrees 2–5 |
+---
+> | `DYAD-ALG-P5-RADIAL` | ALG — new in v6.4.20 | as stated at the entry | §6.14 | P2 M6 | `dyad_p2_math_checks.py` | exact rational jets | degrees 2–5 |
+2381,2384c2613,2616
+< | `DYAD-ALG-Q3-DEG2-CANCEL` | ALG — proposed, not adopted | as stated at the entry | §6.11 | `rtg_p_certs.py` (DYAD-ART-P-CERTS) | not recorded | SymPy/cyclotomic | all $p>3$, $3\mid p$ |
+< | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | ALG — proposed, not adopted | as stated at the entry | §6.4 | P2 M3 | `dyad_p2_math_checks.py` | SymPy | value to 4 d.p. |
+< | `DYAD-ALG-RAW-ANGULAR-MEAN` | ALG — proposed, not adopted | scope: fixed-radius uniform-angle mean in the raw $W$-frame | §6.5 | P2 M8 | `dyad_p2_math_checks.py` | exact rational jets | raw fixed-radius mean |
+< | `DYAD-ALG-SIXSTEP-CUBIC-JET` | ALG — proposed, not adopted | as stated at the entry | §6.7 | P2 M5 | `dyad_p2_math_checks.py` | exact rational jets | cubic order |
+---
+> | `DYAD-ALG-Q3-DEG2-CANCEL` | ALG — new in v6.4.20 | as stated at the entry | §6.11 | `rtg_p_certs.py` (DYAD-ART-P-CERTS) | not recorded | SymPy/cyclotomic | all $p>3$, $3\mid p$ |
+> | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | ALG — new in v6.4.20 | as stated at the entry | §6.4 | P2 M3 | `dyad_p2_math_checks.py` | SymPy | value to 4 d.p. |
+> | `DYAD-ALG-RAW-ANGULAR-MEAN` | ALG — new in v6.4.20 | scope: fixed-radius uniform-angle mean in the raw $W$-frame | §6.5 | P2 M8 | `dyad_p2_math_checks.py` | exact rational jets | raw fixed-radius mean |
+> | `DYAD-ALG-SIXSTEP-CUBIC-JET` | ALG — new in v6.4.20 | as stated at the entry | §6.7 | P2 M5 | `dyad_p2_math_checks.py` | exact rational jets | cubic order |
+2393c2625
+< | `DYAD-DEF-CRITICAL-CURVE` | DEF — proposed, not adopted | as stated at the entry | §6.1 | P2 M2 | `dyad_p2_math_checks.py` | SymPy exact | full statement |
+---
+> | `DYAD-DEF-CRITICAL-CURVE` | DEF — new in v6.4.20 | as stated at the entry | §6.1 | P2 M2 | `dyad_p2_math_checks.py` | SymPy exact | full statement |
+2414c2646
+< | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | THM — proposed, not adopted | as stated at the entry | §6.17 | P1 SESSION derivation | `dyad_p1_math_checks.py` (linear part) | SymPy | $C^\infty$ germs |
+---
+> | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | THM — new in v6.4.20 | as stated at the entry | §6.17 | P1 SESSION derivation | `dyad_p1_math_checks.py` (linear part) | SymPy | $C^\infty$ germs |
+2422c2654
+< | `DYAD-ALG-B5-ALLP-NONVANISHING` | historical (v6.4.7) | not recorded | not recorded | not recorded | proposed RID; all-$b\ge5$ OPEN |
+---
+> | `DYAD-ALG-B5-ALLP-NONVANISHING` | historical (v6.4.7) | not recorded | not recorded | not recorded | new RID (v6.4.20); all-$b\ge5$ OPEN |
+2429,2430c2661,2662
+< | `DYAD-ALG-ISP-MAPS` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M4 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+< | `DYAD-ALG-KP-FRAME-SCALE` | P1 | reviewer general-angle algebraic check | — | yes (reviewer) | proposed RID |
+---
+> | `DYAD-ALG-ISP-MAPS` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M4 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | new RID (v6.4.20) |
+> | `DYAD-ALG-KP-FRAME-SCALE` | P1 | reviewer general-angle algebraic check | — | yes (reviewer) | new RID (v6.4.20) |
+2436c2668
+< | `DYAD-ALG-ONE-BLOCK-BURST` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M7 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+---
+> | `DYAD-ALG-ONE-BLOCK-BURST` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M7 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | new RID (v6.4.20) |
+2439c2671
+< | `DYAD-ALG-P5-RADIAL` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M6 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+---
+> | `DYAD-ALG-P5-RADIAL` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M6 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | new RID (v6.4.20) |
+2444,2447c2676,2679
+< | `DYAD-ALG-Q3-DEG2-CANCEL` | historical | not recorded | not recorded | not recorded | proposed RID; not rerun in P2 |
+< | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M3 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+< | `DYAD-ALG-RAW-ANGULAR-MEAN` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M8 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID; long-orbit identification OPEN |
+< | `DYAD-ALG-SIXSTEP-CUBIC-JET` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M5 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+---
+> | `DYAD-ALG-Q3-DEG2-CANCEL` | historical | not recorded | not recorded | not recorded | new RID (v6.4.20); not rerun in P2 |
+> | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M3 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | new RID (v6.4.20) |
+> | `DYAD-ALG-RAW-ANGULAR-MEAN` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M8 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | new RID (v6.4.20); long-orbit identification OPEN |
+> | `DYAD-ALG-SIXSTEP-CUBIC-JET` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M5 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | new RID (v6.4.20) |
+2456c2688
+< | `DYAD-DEF-CRITICAL-CURVE` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M2 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
+---
+> | `DYAD-DEF-CRITICAL-CURVE` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M2 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | new RID (v6.4.20) |
+2477c2709
+< | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | P1 | reviewer ACCEPT `[THM — SESSION]` (FB-13) | — | reviewer check of the averaging argument | proposed RID; analyticity OPEN |
+---
+> | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | P1 | reviewer ACCEPT `[THM — SESSION]` (FB-13) | — | reviewer check of the averaging argument | new RID (v6.4.20); analyticity OPEN |
+2483c2715
+< `[DEF]` `[v6.4.20]` Every Dyadic-pattern string printed in DZT v0.8 (§7) and AZ v0.6 (§§4.1, 8), classified. Classes: exact match; component of `DYAD-THM-Q403-PHASELAW`; historical note label; artifact; unmatched. No alias is created by this table; consumer repins are requested after adoption (planned notice N17).
+---
+> `[DEF]` `[v6.4.20]` Every Dyadic-pattern string printed in DZT v0.8 (§7) and AZ v0.6 (§§4.1, 8), classified. Classes: exact match; component of `DYAD-THM-Q403-PHASELAW`; historical note label; artifact; unmatched. No alias is created by this table; consumer repins are requested by planned notice N17, after external verification of this edition's SHA-256.
+2487c2719
+< | DZT v0.8 §7 | DYAD-OPEN-B5-ALLP | exact match | `DYAD-OPEN-B5-ALLP` (closed lifecycle item, untagged in this ledger) | result RID proposed: `DYAD-ALG-B5-ALLP-NONVANISHING` |
+---
+> | DZT v0.8 §7 | DYAD-OPEN-B5-ALLP | exact match | `DYAD-OPEN-B5-ALLP` (closed lifecycle item, untagged in this ledger) | result RID registered at v6.4.20 adoption: `DYAD-ALG-B5-ALLP-NONVANISHING` |
+2509c2741
+< | AZ v0.6 §8 | DYAD-ALG-Q3-CANCEL | unmatched | statement = the degree-2 $q=3,(0,2)$ cancellation (§6.11 micro-certification, no RID in v6.4.19) | proposed `DYAD-ALG-Q3-DEG2-CANCEL` covers the statement; no alias is created; AZ may repin after adoption |
+---
+> | AZ v0.6 §8 | DYAD-ALG-Q3-CANCEL | unmatched | statement = the degree-2 $q=3,(0,2)$ cancellation (§6.11 micro-certification, no RID in v6.4.19) | `DYAD-ALG-Q3-DEG2-CANCEL` (registered at v6.4.20 adoption) covers the statement; no alias is created; AZ may repin |
+2515c2747
+< `[DEF]` `[v6.4.20]` Every v6.4.19 heading and its place in this draft. Anchors are kept. Relocated text is listed in Appendix A (H-P2-*).
+---
+> `[DEF]` `[v6.4.20]` Every v6.4.19 heading and its place in this edition. Anchors are kept. Relocated text is listed in Appendix A (H-P2-*).
+2517c2749
+< | v6.4.19 | v6.4.20 DRAFT r2 (headings as in r1) | Change |
+---
+> | v6.4.19 | v6.4.20 (headings as in r1) | Change |
+2547c2779
+< | `## Appendix A — Version History {#appendix-a}` | `## Appendix A — Version History {#appendix-a}` | v6.4.20 DRAFT r2 and r1 records added; P1 record and older history retained |
+---
+> | `## Appendix A — Version History {#appendix-a}` | `## Appendix A — Version History {#appendix-a}` | v6.4.20 adoption record, DRAFT r2 and r1 records added; P1 record and older history retained |
+2560,2561c2792,2793
+< *END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.20 DRAFT r2*  
+< *DRAFT r2, 21 October 2026 — not adopted, not released. Adopted v6.4.19 (`40c9e63f…6ec9`) remains canonical. The r1 footer and every other replaced r1 line are quoted verbatim in Appendix A (v6.4.20 DRAFT r2 record); the v6.4.19 and inherited footers remain in the r1 record (H-P2-12).*
+---
+> *END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.20*  
+> *Adopted 21 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.19 (adopted 20 October 2026). v6.4.20 carries the ATLAS P1 scientific corrections and the P2 interface work; it registers 13 new RIDs and changes no earlier grade or OPEN status (OPEN 20 PARTIAL; B-an, B-6 OPEN). The replaced DRAFT r2 lines, including its footer, are quoted in Appendix A (v6.4.20 adoption record); the r1 footer is in the DRAFT r2 record, the v6.4.19 and inherited footers in the r1 record (H-P2-12).*
