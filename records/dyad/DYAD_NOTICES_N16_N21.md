@@ -68,7 +68,9 @@ RER v0.2 already records `DYAD-THM-SMOOTH-EMBEDDING` from v6.4.18 ($C^\infty$ ex
 | RER | — | — | — | — |
 | ER-2B | — | — | — | — |
 
-## N21 → v6.4.21 delta (send after adoption)
+## N21 → v6.4.21 delta
+
+Source: adopted `RTG_DYADIC_OSCILLATOR_DSN_v6.4.21`, SHA-256 `a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d` (tag `dyad-v6.4.21`, after the PI creates it).
 
 | Recipient | Content |
 |---|---|

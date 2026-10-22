@@ -1,7 +1,7 @@
 # RTG Dyadic Oscillator DSN v6.4.21 — release record
 
-**Status:** DRAFT — candidate prepared; **not adopted**. This record is completed at adoption and frozen from then on (Methodology v1.4 §13.7).
-**Prepared by:** Claude (atlas owner), at the PI's direction of 22 Oct 2026 to start the pilot. **Owner/PI adoption:** pending.
+**Status:** ADOPTED — PI, 22 October 2026. This record is frozen from adoption; later facts go in a dated addendum (Methodology v1.4 §13.7).
+**Prepared by:** Claude (atlas owner), at the PI's direction of 22 Oct 2026. **Receiving review:** ChatGPT, rounds 1 and 2 (`records/dyad/DYAD_v6_4_21_TARGETED_REVIEW.md`; round 2 at commit `0fd07a5`: REVIEW ACCEPTED — OWNER/PI ADOPTION READY). **Owner/PI adoption:** 22 Oct 2026, 22:38 +03:00 (§6).
 **Governing methodology:** DSN Methodology v1.4 (tag `methodology-v1.4`).
 **Predecessor:** v6.4.20, tag `dyad-v6.4.20`, SHA-256 `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852`.
 **Instructions implemented:** `records/dyad/ATLAS_CLOSEOUT_DYAD_v6_4_20.md` at commit `7856c9e` (closeout with editor finding M14R-05 applied), and the targeted review `records/dyad/DYAD_v6_4_21_TARGETED_REVIEW.md` (ChatGPT, 22 Oct 2026; SHA-256 `6024765c01db2f18a59a874be53c55f26db0766fbccb92385339196f7d4055d6`): stage 1 ACCEPT WITH MINOR EDITS, checker REVISE, pilot NOT READY. Round 2 implements it.
@@ -12,8 +12,9 @@
 |---|---|---|---|---|
 | Adopted v6.4.20 | tag `dyad-v6.4.20` | `0b2d5a44…4852` | — | — |
 | Round 1 (superseded by round 2; in git history) | `649441a`, `a5b1a12` | `0572120a…36b5`, `31523bd8…d12d` | — | targeted review |
-| 1 — corrected intermediate (build stage, not an edition) | `6622dcd` | `f2b20419898ae1c84235a808479391f2d29fc05b2f9a0e46f606539327d29119` | `evidence/dyad/scripts/build_dyad_v6_4_21_stage1.py` (30 assertion-gated edits, live text only) | round-1 edits reviewed (ACCEPT WITH MINOR EDITS); round-2 additions to be confirmed |
-| 2 — compacted candidate | `6f4a667` | `277e640819cc35ce5cb664d396cda1feb675589db49a8d21746be568ead47510` | `evidence/dyad/scripts/build_dyad_v6_4_21_stage2.py` (19 declared operations) | `tools/check_compaction.py`: PENDING (all checks pass; regions R1, R2 await reviewer confirmation) |
+| 1 — corrected intermediate (build stage, not an edition) | `6622dcd` | `f2b20419898ae1c84235a808479391f2d29fc05b2f9a0e46f606539327d29119` | `evidence/dyad/scripts/build_dyad_v6_4_21_stage1.py` (30 assertion-gated edits, live text only) | round 1 ACCEPT WITH MINOR EDITS; round 2 ACCEPT |
+| 2 — compacted candidate | `6f4a667` | `277e640819cc35ce5cb664d396cda1feb675589db49a8d21746be568ead47510` | `evidence/dyad/scripts/build_dyad_v6_4_21_stage2.py` (19 declared operations) | `tools/check_compaction.py`: PASS with the reviewer's R1/R2 confirmations (`0fd07a5`) |
+| Adopted edition (publication transform, status lines only) | this commit | `a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d` | `evidence/dyad/scripts/release_dyad_v6_4_21.py` (3 assertion-gated line replacements: header status, Appendix A heading, footer) | diff against the candidate: exactly those 3 lines |
 
 Reproduce: `git show dyad-v6.4.20:dsn/RTG_DYADIC_OSCILLATOR_DSN.md > v.md` → stage-1 builder → `f2b20419…9119`; then the stage-2 builder with the intermediate and `v.md` → `277e6408…7510`. The check reads the v6.4.20 archive through `git show`.
 
@@ -67,10 +68,13 @@ No RID added, renamed or regraded. One scope tag changes text (§6.14 primitive-
 | S-6a | owner script run; exact sympy recomputation | PASS (EV-RUN; exact) |
 | FC-34 | Genesis v2.8.9 §6.3 read; reviewer ratio check | $16/3$ (EV-SRC-READ; reviewer PASS) |
 | Independent reproduction (round 1) | reviewer applied both diffs to v6.4.20 and replayed the checker | hashes and positive report byte-identical |
-| Compaction (round 2) | `tools/check_compaction.py` on intermediate → candidate with movement map and region registry | **PENDING**: re-derivation exact; 609 claim blocks in live text, 573 byte-identical, 36 changed by declared operations, 0 unexplained; RID set, heading anchors, source hashes and qualifier tags preserved; 27 archive targets resolved in the pinned v6.4.20; presentation passes; M03 and M18 structurally eligible, reviewer confirmation of regions R1, R2 pending. Report: `evidence/dyad/v6.4.21/check_compaction_report.json` |
+| Compaction (round 2) | `tools/check_compaction.py` on intermediate → candidate with movement map and region registry | **PASS** with the reviewer's R1/R2 confirmations (PENDING before them): re-derivation exact; 609 claim blocks in live text, 573 byte-identical, 36 changed by declared operations, 0 unexplained; RID set, heading anchors, source hashes and qualifier tags preserved; 27 archive targets resolved in the pinned v6.4.20; presentation passes. Reviewer replay reproduced both the PENDING and the PASS results. Reports: `evidence/dyad/v6.4.21/check_compaction_report.json`, `round2_receiver_verification.json` |
 | Negative controls (round 2) | `tools/test_check_compaction.py`, with region confirmations simulated | 16/16 rejected, including the reviewer's REVIEW-N1 (hypothesis deleted as a reference edit), REVIEW-N2 (nonexistent H-999), REVIEW-N3 (live §6.7 relocated as tag examples) and its registered-region variant. Report: `evidence/dyad/v6.4.21/negative_controls_report.json` |
 
-Checker limits are listed in its report. A passing or pending check authorizes nothing.
+| Receiving review, round 2 | ChatGPT: stage-1 round-2 delta, S-6a (including an alternative rational composition, 10/10), R1/R2, checker replay, 16/16 controls | ACCEPT; adoption ready at the reviewed maintenance/pilot scope |
+| Publication transform | diff candidate → adopted file | 3 status lines changed; no other byte |
+
+Checker limits are listed in its report. A passing check authorizes nothing.
 
 ## 4. Size report (`tools/dsn_lint.py`; informational)
 
@@ -93,9 +97,12 @@ Counting method: in `evidence/dyad/v6.4.21/size_report.json`. The remaining "his
 
 - Completion matrix (C-1), evidence supplement (C-2), installation read-back (C-4): `records/dyad/DYAD_ADVISORY_v6_4_19_COMPLETION_MATRIX.md`.
 - Notices N16–N20 and the v6.4.21 delta N21 (C-3): `records/dyad/DYAD_NOTICES_N16_N21.md` (prepared, not sent; pending consumer decisions do not block adoption).
-- Open before adoption: reviewer confirmation of regions R1 and R2 (checker PENDING → PASS); review of the round-2 stage-1 additions; owner/PI adoption decision.
-- Open for the closeout criterion but not blocking adoption: C-2 files; sending the notices and recording their states.
+- Retained limitations, open after adoption (closeout criterion, not adoption): C-2 source files; sending N16–N21 and recording their states; installation read-back of v6.4.21; atlas refresh. Advisory completion and consumer synchronization are not claimed. The historical identity of DYAD-THM-RAW-CUBIC remains unresolved.
 
 ## 6. Adoption
 
-Pending. At adoption: the header status and the Appendix A heading of v6.4.21 become ADOPTED (status lines only), the adopted hash is recorded here, the PR is merged, the PI creates the tag `dyad-v6.4.21`, and `BASELINE.md` is updated.
+- **Decision:** PI (Mustafa), 22 October 2026, 22:38 +03:00, in the Claude session that prepared the release: "Bende DSN documanını bu kaliyle benimsiyorum." (verbatim) (I adopt the DSN document as it stands.) Given after the round-2 receiving review (REVIEW ACCEPTED — OWNER/PI ADOPTION READY).
+- **Adopted file:** `dsn/RTG_DYADIC_OSCILLATOR_DSN.md`, 256,508 bytes, SHA-256 `a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d`. The candidate hash `277e6408…7510` identifies the reviewed candidate only.
+- **Scope:** the reviewed maintenance/pilot scope: closeout S-1–S-6, FC-34 and the Methodology v1.4 compaction. No RID added, renamed or regraded.
+- **Publication:** merge of `claude/dyad-v6.4.21` into `main` (merge commit, not squash), then the annotated tag `dyad-v6.4.21` created by the PI with this hash in its message. `BASELINE.md` lists v6.4.21 as the governing edition.
+- **Notices:** N16–N21 are prepared (`records/dyad/DYAD_NOTICES_N16_N21.md`) and sent by the PI; N21 cites the hash above.

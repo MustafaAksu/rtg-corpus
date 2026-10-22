@@ -4,7 +4,7 @@
 **Date:** 22 October 2026  
 **Scope:** The primitive 2D non-symplectic dyad map, its six-step resonant dynamics, ISP crossing geometry, normalized $p$-step structure, and $p$-resonance generalization program.  
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,500 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).  
-**Document status:** DRAFT — v6.4.21 candidate (closeout errata and Methodology v1.4 compaction pilot); not adopted.  
+**Document status:** ADOPTED — PI, 22 October 2026 (closeout errata and Methodology v1.4 compaction pilot). Adoption record: `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`.  
 **Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.20` (SHA-256 `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852`; tag `dyad-v6.4.20`).  
 **Companion documents:** one current-edition table, §7.0.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
@@ -1250,7 +1250,7 @@ Exports to (via Import Ledger entries in those documents):
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, replaced lines and every `[COR]` entry — are in Appendix A of v6.4.20 (tag `dyad-v6.4.20`, SHA-256 `0b2d5a44…4852`). Scientific corrections, retractions and regrades are also recorded in Appendix B.
 
-### v6.4.21 — 22 October 2026 — DRAFT candidate
+### v6.4.21 — 22 October 2026 — Adopted
 
 - **Errata [status/scope/provenance] (closeout S-1–S-6; targeted review R21-01):** current status at the point of use for OPEN 3 (CLOSED within scope), P4, OPEN 21, RECOG R11 and the P2B v2 coefficient verification (§1, §2, §5, §6.14, §8); closed OPEN 9 items moved out of the active list; N11 recorded as adopted use by RECOG (§7 notices); subclaim dependencies of DYAD-ALG-OPEN3-PHASE-OFFSET (§7); notation overloads (Appendix C); DYAD-THM-RAW-CUBIC provenance caveat and its range $p\ge3$ (§2, Appendix F); unrecovered OPEN 9 definitions named at the point of use (§6.11). Scope tag of the primitive-variable form in §6.14 now points to OPEN 21. Field label of the archival $h_4$ corrected from $\mathbb Q(\sqrt3)$ to $\mathbb Q(i\sqrt3)$, confirmed by exact recomputation (§1, §8). RECOG R11 stated as CLOSED where the fitted-backbone identification stays open (§1, §6.5). No grade changes; no new RID.
 - **FC-DYAD-34 [bookkeeping]:** squared shear/healing ratio equals Genesis's leading ratio $16/3$ (§6.12); selects no birth policy.
@@ -1558,4 +1558,4 @@ The v6.4.19→v6.4.20 section map is Appendix G of v6.4.20 (tag `dyad-v6.4.20`).
 
 ---
 
-*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.21 (DRAFT candidate, 22 October 2026).*
+*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.21 (ADOPTED, 22 October 2026).*

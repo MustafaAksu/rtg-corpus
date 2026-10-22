@@ -3,7 +3,7 @@
 **Date:** 22 October 2026.
 **Prepared by:** Claude (atlas owner), for the Dyadic owner and the PI. **Status:** working record, noncanonical. The owner decides; this record proposes the completion state.
 **Contract:** `records/dyad/ATLAS_ADVISORY_DYAD_v6_4_19.md` (34 rows). **Pre-implementation decisions:** `records/dyad/ATLAS_DISPOSITION_DYAD_v6_4_19_SESSION_v0_1.md` §8 (ACCEPT 30, REVISE 1, INVESTIGATE 1, DEFER 2). **Closeout:** `records/dyad/ATLAS_CLOSEOUT_DYAD_v6_4_20.md`.
-**Editions:** v6.4.20 adopted (`0b2d5a44…4852`, tag `dyad-v6.4.20`); v6.4.21 candidate on branch `claude/dyad-v6.4.21`, round 2 after the targeted review (`records/dyad/DYAD_v6_4_21_TARGETED_REVIEW.md`) — stage 1 commit `6622dcd` (intermediate `f2b20419…9119`), stage 2 commit `6f4a667` (candidate `277e6408…7510`). Round 1 (`649441a`, `a5b1a12`) is in git history. v6.4.21 is not adopted.
+**Editions:** v6.4.20 adopted (`0b2d5a44…4852`, tag `dyad-v6.4.20`); v6.4.21 candidate on branch `claude/dyad-v6.4.21`, round 2 after the targeted review (`records/dyad/DYAD_v6_4_21_TARGETED_REVIEW.md`) — stage 1 commit `6622dcd` (intermediate `f2b20419…9119`), stage 2 commit `6f4a667` (candidate `277e6408…7510`). Round 1 (`649441a`, `a5b1a12`) is in git history. v6.4.21 adopted by the PI on 22 Oct 2026 (publication transform of the candidate: `a412f34d…dc7d`, tag `dyad-v6.4.21`); DONE v6.4.21 rows are therefore implemented in the adopted edition.
 **Revision:** working record at a fixed path; one primary state per row (review R21-04).
 
 States (one per row): **DONE v6.4.20** (implemented in the adopted edition) · **DONE v6.4.21** (implemented in the candidate; final at its adoption) · **OPEN** (work remaining, with the next step) · **DEFERRED** (reason and next test) · **RESEARCH** (Tier C, not a maintenance blocker).
@@ -47,7 +47,7 @@ States (one per row): **DONE v6.4.20** (implemented in the adopted edition) · *
 | FC-DYAD-33 | lag-sign corollary | ACCEPT (research) | OPEN (prepared, not sent) | N18 (C-3), base points only | NUMGEN checks anchor indexing and seven-step coverage. |
 | FC-DYAD-34 | shear/recoil relation | ACCEPT (reference note) | DONE v6.4.21 | §6.12 export table, shear/healing row: $(4\sqrt3/3)^2=16/3$ = Genesis v2.8.9 §6.3 leading ratio | Verified against Genesis v2.8.9 §6.3 ($\kappa_{\rm shear}=-2\sqrt3/3$, $\kappa_{\rm recoil}=-\tfrac12$, ratio $16/3$; EV-SRC-READ). |
 
-**Count (one state per row):** DONE v6.4.20 18; DONE v6.4.21 10 (candidate; final only at adoption); OPEN 4 (FB-17, FB-19, FB-21, FC-33); RESEARCH 2 (FC-31, FC-32); total 34.
+**Count (one state per row):** DONE v6.4.20 18; DONE v6.4.21 10 (adopted); OPEN 4 (FB-17, FB-19, FB-21, FC-33); RESEARCH 2 (FC-31, FC-32); total 34.
 
 **Pilot engineering residuals (not scientific rows):**
 - R21-02 checker false positives (review controls REVIEW-N1–N3): repaired in `tools/check_compaction.py` (reference grammar for substitutions; archive targets resolved in the pinned archive; registered, hash-bound, reviewer-confirmed regions for tag_examples/navigation). Controls 16/16 rejected.
