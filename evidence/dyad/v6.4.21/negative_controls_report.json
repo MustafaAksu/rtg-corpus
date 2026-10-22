@@ -1,0 +1,143 @@
+{
+ "result": "PASS",
+ "runs": [
+  {
+   "id": "P0",
+   "what": "unmutated inputs",
+   "expect": "PASS",
+   "got": "PASS",
+   "fails": []
+  },
+  {
+   "id": "N1",
+   "what": "silent deletion of an [assuming:] qualifier (undeclared)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 99: derived 'assuming: RECOG-THM-R9-MEMORY]` `[v6.4.15]` **Asymptotic-phase transfer (OPEN 3b' / candidate 'v6.4.15]` **Asymptotic-phase transfer (OPEN 3b).** The primitive asymptotic phas'",
+    "FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained",
+    "FAIL  qualifier tags preserved  — lost: ['`[assuming: RECOG-THM-R9-MEMORY]`']"
+   ]
+  },
+  {
+   "id": "N2",
+   "what": "deletion of an [assuming:] qualifier declared as history removal",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation X2 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: 'assuming: RECOG-THM-R9-MEMORY]` `['",
+    "FAIL  qualifier tags preserved  — lost: ['`[assuming: RECOG-THM-R9-MEMORY]`']"
+   ]
+  },
+  {
+   "id": "N3",
+   "what": "scope widening ($p\\ge5$ → $p\\ge3$) declared as a reference substitution",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation X3 (ref-subst)  — load-bearing features changed: {'math': {'-': ['$p\\\\ge5$'], '+': ['$p\\\\ge3$']}}"
+   ]
+  },
+  {
+   "id": "N4",
+   "what": "result re-attributed to another RID, declared as a reference substitution",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation X4 (ref-subst)  — load-bearing features changed: {'rid': {'-': ['DYAD-THM-OPEN3-SPIRAL-REM'], '+': ['DYAD-THM-OPEN3-ASYMPTOTIC-PHASE']}}"
+   ]
+  },
+  {
+   "id": "N4b",
+   "what": "result re-attributed to another RID (undeclared)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 97: derived 'SPIRAL-REM`, §6.14). OPEN 3 is CLOSED within its defined scope (v6.4.16); P4 is ' / candidate 'ASYMPTOTIC-PHASE`, §6.14). OPEN 3 is CLOSED within its defined scope (v6.4.16); '",
+    "FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained"
+   ]
+  },
+  {
+   "id": "N5",
+   "what": "pointer repointed to a nonexistent tagged edition",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  references resolve  — unknown tag dyad-v6.4.99"
+   ]
+  },
+  {
+   "id": "N5b",
+   "what": "pointer to a nonexistent appendix",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  references resolve  — Appendix Q (no such appendix): 'e text are rendered by the tag normalization map of v6.4.20 Appendix Q; every rendering keeps the grade token. The four aliases ab'"
+   ]
+  },
+  {
+   "id": "N6",
+   "what": "removed passages not present in the named archive",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation M01 (presentation)  — old header not found in archive",
+    "FAIL  operation M03 (history-section)  — removed section not found byte-identical in the named archive",
+    "FAIL  operation M05 (history-removal)  — removed span not found byte-identical in the named archive",
+    "FAIL  operation M06 (history-removal)  — removed span not found byte-identical in the named archive",
+    "FAIL  operation M13 (history-removal)  — removed span not found byte-identical in the named archive",
+    "FAIL  operation M15 (history-removal)  — removed span not found byte-identical in the named archive",
+    "FAIL  operation M18 (history-section)  — removed section not found byte-identical in the named archive",
+    "FAIL  operation M16 (history-appendix)  — removed section not found byte-identical in the named archive",
+    "FAIL  operation M19 (presentation)  — old footer not found in archive"
+   ]
+  },
+  {
+   "id": "N7",
+   "what": "live results (§6.17) relocated as a history section",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — M14: old text occurs 0 times in base",
+    "FAIL  operation X7 (history-section)  — section carries claim tags; a live result cannot be relocated",
+    "FAIL  operation M18 (history-section)  — section bounds not resolved",
+    "FAIL  operation M16 (history-appendix)  — section bounds not resolved",
+    "FAIL  qualified claim blocks  — 609 claim blocks in base live text: 563 byte-identical, 45 changed by declared operations, 1 unexplained",
+    "FAIL  heading anchors preserved  — missing: ['{#sec-6-17-flat}']",
+    "FAIL  source hashes preserved in live text  — missing: ['0a2ae5e2…4dfb']",
+    "FAIL  qualifier tags preserved  — lost: ['`[assuming: hypotheses stated in the entry]`', '`[assuming: hypotheses stated in the entry]`', '`[proof: Borel realization + flat conjugacy by inverse iteration + polynomial derivative bounds + Lemma F/F2/F3; scope: $C^\\\\infty$ local germs at $P_1$, raw frame $W$, lifted chart]`', '`[proof: elementary; uses DYAD-THM-PRIM-CTR only; scope: stated ball and flat-contact hypothesis]`', '`[scope: illustration only]`']"
+   ]
+  },
+  {
+   "id": "N8",
+   "what": "two footer lines",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 1561: derived 'RTG_DYADIC_OSCILLATOR_DSN_v6.4.21 (DRAFT candidate, 22 October 2026).*\\n' / candidate 'extra*\\n*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.21 (DRAFT candidate, 22'",
+    "FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line"
+   ]
+  },
+  {
+   "id": "N9",
+   "what": "source hash pin altered (undeclared)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 864: derived 'd59b0ff68b4341debf5e8a7542bf3865b63dd63e36546952db95298c2bd5c6ce`, inside DYAD-A' / candidate '059b0ff68b4341debf5e8a7542bf3865b63dd63e36546952db95298c2bd5c6ce`, inside DYAD-A'",
+    "FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained"
+   ]
+  },
+  {
+   "id": "N10",
+   "what": "a result paragraph deleted (undeclared)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 103: derived '`[THM]` `[v6.4.18]` `[scope: $C^\\\\infty$ local germs at $P_1$]` **Smooth flow emb' / candidate '\\n`[THM]` `[v6.4.19]` `[scope: block base points in $U$ of DYAD-THM-PRIM-CTR; cha'",
+    "FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained",
+    "FAIL  qualifier tags preserved  — lost: ['`[scope: $C^\\\\infty$ local germs at $P_1$]`']"
+   ]
+  }
+ ]
+}

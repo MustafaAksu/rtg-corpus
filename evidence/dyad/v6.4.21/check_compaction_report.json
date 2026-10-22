@@ -1,0 +1,306 @@
+{
+ "base_sha256": "0572120aa6ad74b520d8338e10a712838f5a0b97c00f37e921f1915e16f836b5",
+ "candidate_sha256": "31523bd87de9e55dd719a35f4f665caf88608e3dc16f0ecb36a319374104d12d",
+ "map_sha256": "320e7abb6fe4596d7c7d11f044d1bf3c1ebe3c40a848c2d03893c1c8bf92c98b",
+ "operations": [
+  {
+   "id": "M01",
+   "op": "replace-header",
+   "class": "presentation",
+   "result": "PASS",
+   "detail": "header replaced; status-summary sentences are a subset of the base summary"
+  },
+  {
+   "id": "M02",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M03",
+   "op": "replace-section",
+   "class": "history-section",
+   "result": "PASS",
+   "detail": "section relocated (2156 chars), found in ['dyad-v6.4.20'] (claim tags present only as notation examples; declared)"
+  },
+  {
+   "id": "M04",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M05",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (153 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "id": "M06",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (32 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "id": "M07",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M08",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M09",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M10",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M11",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M12",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M13",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (55 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "id": "M14",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M15",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (37 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "id": "M18",
+   "op": "replace-section",
+   "class": "history-section",
+   "result": "PASS",
+   "detail": "section relocated (7603 chars), found in ['dyad-v6.4.20'] (navigation section: only [DEF] tags, no identifiers, 3 symbol mentions; declared)"
+  },
+  {
+   "id": "M16",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "result": "PASS",
+   "detail": "section relocated (150738 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "id": "M17",
+   "op": "edit",
+   "class": "ref-subst",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "id": "M19",
+   "op": "replace-footer",
+   "class": "presentation",
+   "result": "PASS",
+   "detail": "footer replaced"
+  }
+ ],
+ "claim_blocks": {
+  "base": 609,
+  "identical": 573,
+  "declared_change": 36,
+  "unexplained": []
+ },
+ "checks": [
+  {
+   "check": "base identity",
+   "result": "PASS",
+   "detail": "map base_sha256 vs file"
+  },
+  {
+   "check": "candidate identity",
+   "result": "PASS",
+   "detail": "map candidate_sha256 vs file"
+  },
+  {
+   "check": "archive identity dyad-v6.4.20",
+   "result": "PASS",
+   "detail": "0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852"
+  },
+  {
+   "check": "mechanical scope (re-derivation)",
+   "result": "PASS",
+   "detail": "candidate equals base + declared operations"
+  },
+  {
+   "check": "operation M01 (presentation)",
+   "result": "PASS",
+   "detail": "header replaced; status-summary sentences are a subset of the base summary"
+  },
+  {
+   "check": "operation M02 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M03 (history-section)",
+   "result": "PASS",
+   "detail": "section relocated (2156 chars), found in ['dyad-v6.4.20'] (claim tags present only as notation examples; declared)"
+  },
+  {
+   "check": "operation M04 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M05 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (153 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "check": "operation M06 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (32 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "check": "operation M07 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M08 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M09 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M10 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M11 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M12 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M13 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (55 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "check": "operation M14 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M15 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (37 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "check": "operation M18 (history-section)",
+   "result": "PASS",
+   "detail": "section relocated (7603 chars), found in ['dyad-v6.4.20'] (navigation section: only [DEF] tags, no identifiers, 3 symbol mentions; declared)"
+  },
+  {
+   "check": "operation M16 (history-appendix)",
+   "result": "PASS",
+   "detail": "section relocated (150738 chars), found in ['dyad-v6.4.20']"
+  },
+  {
+   "check": "operation M17 (ref-subst)",
+   "result": "PASS",
+   "detail": "reference substitution; claim features unchanged"
+  },
+  {
+   "check": "operation M19 (presentation)",
+   "result": "PASS",
+   "detail": "footer replaced"
+  },
+  {
+   "check": "qualified claim blocks",
+   "result": "PASS",
+   "detail": "609 claim blocks in base live text: 573 byte-identical, 36 changed by declared operations, 0 unexplained"
+  },
+  {
+   "check": "RID set preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "heading anchors preserved",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "source hashes preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "qualifier tags preserved",
+   "result": "PASS",
+   "detail": "lost: []"
+  },
+  {
+   "check": "references resolve",
+   "result": "PASS",
+   "detail": "Appendix references, H-labels and tags resolve"
+  },
+  {
+   "check": "presentation (header, footer)",
+   "result": "PASS",
+   "detail": "required fields present; one predecessor; one footer"
+  }
+ ],
+ "result": "PASS",
+ "limitations": [
+  "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
+  "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",
+  "RID pattern covers the registered namespace prefixes listed in the script; other identifiers are not tracked.",
+  "Reference resolution covers 'Appendix X', H-labels and repository tags; section numbers (§n.m) are not resolved.",
+  "Archive membership is a byte-substring test against the named archive files."
+ ]
+}

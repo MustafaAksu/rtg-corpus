@@ -1,0 +1,45 @@
+{
+ "file": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md (v6.4.21 candidate)",
+ "bytes": 255492,
+ "lines": 1561,
+ "header_chars": 2193,
+ "live_body_chars": 247954,
+ "appendix_a_chars": 3647,
+ "section1_words": 1466,
+ "header_fields": {
+  "Title": 70,
+  "Date": 27,
+  "Scope": 182,
+  "Document class": 293,
+  "Document status": 118,
+  "Supersedes": 151,
+  "Companion documents": 59,
+  "DSN Methodology": 53,
+  "Programme tier": 93,
+  "Status summary": 998,
+  "Release record": 101
+ },
+ "appendix_a_words_per_edition": {
+  "v6.4.21 — 22 October 2026 — DRAFT candidate": 172,
+  "v6.4.20 — 21 October 2026 — Adopted": 297
+ },
+ "footer_lines": 1,
+ "history_phrases_live": {
+  "overlay": 1,
+  "historical": 52,
+  "superseded": 11,
+  "former": 7,
+  "retained as": 3,
+  "no longer": 2
+ },
+ "near_duplicate_paragraphs": [],
+ "rids_total": 182,
+ "previous": {
+  "file": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md at tag dyad-v6.4.20",
+  "bytes": 411765
+ },
+ "growth_bytes": -156273,
+ "growth_percent": -38.0,
+ "new_rids": [],
+ "growth_per_new_rid": "N/A"
+}
