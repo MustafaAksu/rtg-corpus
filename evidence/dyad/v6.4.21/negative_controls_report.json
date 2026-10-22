@@ -35,7 +35,7 @@
    "expect": "FAIL",
    "got": "FAIL",
    "fails": [
-    "FAIL  operation X3 (ref-subst)  — load-bearing features changed: {'math': {'-': ['$p\\\\ge5$'], '+': ['$p\\\\ge3$']}}"
+    "FAIL  operation X3 (ref-subst)  — changed text is not reference text: 'ge5$. Owner: RECOG. Not a statement about arbitrary generators, finite amplitudes or birth mechanism' (offending: ['ge', '5$', 'Owner', 'RECOG', 'Not'])"
    ]
   },
   {
@@ -44,7 +44,7 @@
    "expect": "FAIL",
    "got": "FAIL",
    "fails": [
-    "FAIL  operation X4 (ref-subst)  — load-bearing features changed: {'rid': {'-': ['DYAD-THM-OPEN3-SPIRAL-REM'], '+': ['DYAD-THM-OPEN3-ASYMPTOTIC-PHASE']}}"
+    "FAIL  operation X4 (ref-subst)  — changed text is not reference text: 'SPIRAL-REM`, §6.14' (offending: ['SPIRAL', 'REM', '`', '§6', '14'])"
    ]
   },
   {
@@ -89,7 +89,8 @@
     "FAIL  operation M15 (history-removal)  — removed span not found byte-identical in the named archive",
     "FAIL  operation M18 (history-section)  — removed section not found byte-identical in the named archive",
     "FAIL  operation M16 (history-appendix)  — removed section not found byte-identical in the named archive",
-    "FAIL  operation M19 (presentation)  — old footer not found in archive"
+    "FAIL  operation M19 (presentation)  — old footer not found in archive",
+    "FAIL  references resolve  — Local Tag Aliases not in dyad-v6.4.20; Appendix A not in dyad-v6.4.20; v6.2 has no Appendix A entry in dyad-v6.4.20; v6.2 has no Appendix A entry in dyad-v6.4.20; Appendix A not in dyad-v6.4.20; Appendix A not in dyad-v6.4.20"
    ]
   },
   {
@@ -137,6 +138,42 @@
     "FAIL  mechanical scope (re-derivation)  — first difference at line 103: derived '`[THM]` `[v6.4.18]` `[scope: $C^\\\\infty$ local germs at $P_1$]` **Smooth flow emb' / candidate '\\n`[THM]` `[v6.4.19]` `[scope: block base points in $U$ of DYAD-THM-PRIM-CTR; cha'",
     "FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained",
     "FAIL  qualifier tags preserved  — lost: ['`[scope: $C^\\\\infty$ local germs at $P_1$]`']"
+   ]
+  },
+  {
+   "id": "REVIEW-N1",
+   "what": "'with zero linear part' removed, declared as ref-subst with a valid tag",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation XR1 (ref-subst)  — changed text is not reference text: 'generators with zero linear part' (offending: ['generators', 'with', 'zero', 'linear', 'part'])"
+   ]
+  },
+  {
+   "id": "REVIEW-N2",
+   "what": "archive pointer to nonexistent H-999 with the valid tag kept",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  references resolve  — H-999 not defined in dyad-v6.4.20"
+   ]
+  },
+  {
+   "id": "REVIEW-N3",
+   "what": "live §6.7 result body replaced by a pointer, declared tag_examples",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation XR3 (history-section)  — tag_examples/navigation requires a registered region (regions file)"
+   ]
+  },
+  {
+   "id": "REVIEW-N3b",
+   "what": "same, with §6.7 registered and confirmed as a tag_examples region",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation XR3 (history-section)  — region RX: identifier DYAD-ALG-SIXSTEP-CUBIC-JET occurs outside a tag spelling in a table row; a region carrying results cannot be relocated"
    ]
   }
  ]

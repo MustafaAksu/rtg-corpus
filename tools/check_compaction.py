@@ -34,6 +34,12 @@ HISTORY_WORDS = ("relocated", "text:", "wording:", "paragraph:", "former", "hist
 # words whose silent removal narrows or widens a statement
 PROTECTED_WORDS = re.compile(r"\b(?:assuming|conditional|unless|only if|pending|requires|restricted|not established)\b", re.I)
 
+# A reference substitution may change only reference text: these tokens and punctuation.
+REF_WORDS = {"Appendix", "of", "in", "the", "to", "its", "version", "history", "relocated", "list", "lists",
+             "below", "tag", "tagged", "edition", "normalization", "map", "Local", "Tag", "Aliases", "See",
+             "see", "COR", "items", "and", "at"}
+RE_REF_TOKEN = re.compile(r"`[a-z0-9]+-v[0-9][0-9.]*(?:-r[0-9]+)?`|H-(?:P2-)?\d+|v\d+(?:\.\d+)*|[A-G]\b|[A-Za-z]+|[()\[\],;:.*\s–-]")
+
 FOOTER = re.compile(r"^\*END OF DOCUMENT")
 HEADER_FIELDS = ["Title", "Date", "Scope", "Document class", "Document status", "Supersedes",
                  "Companion documents", "DSN Methodology", "Status summary"]
@@ -100,12 +106,17 @@ class Check:
         self.items = []
 
     def add(self, name, ok, detail=""):
-        self.items.append({"check": name, "result": "PASS" if ok else "FAIL", "detail": detail})
+        res = "PENDING" if ok == "PENDING" else ("PASS" if ok is True else "FAIL")
+        self.items.append({"check": name, "result": res, "detail": detail})
         return ok
 
     @property
     def ok(self):
         return all(i["result"] == "PASS" for i in self.items)
+
+    @property
+    def failed(self):
+        return any(i["result"] == "FAIL" for i in self.items)
 
 
 def load_archives(mp):
@@ -159,7 +170,7 @@ def apply_ops(base, mp):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("base"); ap.add_argument("candidate"); ap.add_argument("map")
-    ap.add_argument("--report")
+    ap.add_argument("--report"); ap.add_argument("--regions", help="reviewed-regions registry (JSON)")
     a = ap.parse_args()
     try:
         base_b = open(a.base, "rb").read(); cand_b = open(a.candidate, "rb").read()
@@ -168,6 +179,9 @@ def main():
     except Exception as e:
         print("input error:", e); return 2
     base, cand = base_b.decode("utf-8"), cand_b.decode("utf-8")
+    if a.regions:
+        for r in json.load(open(a.regions, encoding="utf-8"))["regions"]:
+            REGIONS[r["id"]] = r
     C = Check()
     rep = {"base_sha256": sha(base_b), "candidate_sha256": sha(cand_b), "map_sha256": sha(open(a.map, "rb").read())}
 
@@ -191,7 +205,8 @@ def main():
     ops_report = []
     for op in mp["operations"]:
         ok, why = check_op(op, arch, cand)
-        ops_report.append({"id": op["id"], "op": op["op"], "class": op.get("class"), "result": "PASS" if ok else "FAIL", "detail": why})
+        res = "PENDING" if ok == "PENDING" else ("PASS" if ok is True else "FAIL")
+        ops_report.append({"id": op["id"], "op": op["op"], "class": op.get("class"), "result": res, "detail": why})
         C.add(f'operation {op["id"]} ({op.get("class", op["op"])})', ok, why)
     rep["operations"] = ops_report
 
@@ -238,20 +253,26 @@ def main():
     C.add("presentation (header, footer)", ok, why)
 
     rep["checks"] = C.items
-    rep["result"] = "PASS" if C.ok else "FAIL"
+    rep["warnings"] = WARNINGS
+    rep["result"] = "FAIL" if C.failed else ("PASS" if C.ok else "PENDING")
     rep["limitations"] = [
         "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
         "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",
         "RID pattern covers the registered namespace prefixes listed in the script; other identifiers are not tracked.",
-        "Reference resolution covers 'Appendix X', H-labels and repository tags; section numbers (§n.m) are not resolved.",
+        "Reference resolution: in the sentence of each tagged-edition pointer, H-labels (as '**H-n** —' definitions), 'Appendix X' headings, 'Local Tag Aliases' and version entries ('### vX') are looked up in the pinned archive; section numbers (§n.m) are not resolved.",
+        "Reference substitutions may change only reference vocabulary (REF_WORDS, labels, versions, tags, punctuation); any other changed word fails.",
+        "tag_examples/navigation relocations need a registered region (hash, kind) and a reviewer confirmation; unconfirmed regions give PENDING. In a tag_examples region an identifier may occur only inside a tag spelling in a table row (and must survive in the live text); a navigation region may carry no identifier and only [DEF] tags.",
+        "An H-label resolves if the archive defines it ('**H-n** —') or defines its lettered group ('**H-na** —').",
         "Archive membership is a byte-substring test against the named archive files.",
     ]
     if a.report:
         json.dump(rep, open(a.report, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for i in C.items:
         print(f'{i["result"]}  {i["check"]}' + (f'  — {i["detail"]}' if i["detail"] else ""))
+    for w in WARNINGS:
+        print("WARN ", w)
     print("RESULT:", rep["result"])
-    return 0 if C.ok else 1
+    return {"PASS": 0, "FAIL": 1, "PENDING": 3}[rep["result"]]
 
 
 def heading_anchors(s):
@@ -286,6 +307,11 @@ def check_op(op, arch, cand):
     if k == "edit":
         old, new = op["old"], op["new"]
         if cls == "ref-subst":
+            so, sn = changed_spans(old, new)
+            for span in (so, sn):
+                bad = ref_grammar_violations(span)
+                if bad:
+                    return False, f"changed text is not reference text: {span[:100]!r} (offending: {bad[:5]})"
             fo, fn = features(old), features(new)
             if fo != fn:
                 return False, f"load-bearing features changed: {diff_feat(fo, fn)}"
@@ -293,7 +319,7 @@ def check_op(op, arch, cand):
                 return False, "qualifying words changed"
             if not (RE_TAGREF.search(new) or RE_APPREF.search(new) or "release record" in new):
                 return False, "replacement names no resolvable target"
-            return True, "reference substitution; claim features unchanged"
+            return True, f"reference substitution only ({so!r} → {sn!r})"
         if cls == "history-removal":
             removed = removed_part(old, new)
             if removed is None:
@@ -315,13 +341,15 @@ def check_op(op, arch, cand):
         if not in_archive(removed, arch, names):
             return False, "removed section not found byte-identical in the named archive"
         rids = set(RE_RID.findall(removed))
+        if op.get("tag_examples") or op.get("navigation"):
+            ok, why = check_region(op, removed, rids)
+            if ok is not True:
+                return ok, why
         lost = sorted(r for r in rids if r not in live_text(cand))
         if lost and cls != "history-appendix":
             return False, f"live identifiers lost with the section: {lost[:8]}"
-        if cls == "history-section" and RE_STATUS.search(removed) and not op.get("tag_examples"):
-            only_def = set(RE_STATUS.findall(removed)) <= {"`[DEF]`"}
-            if not (op.get("navigation") and only_def and not rids):
-                return False, "section carries claim tags; a live result cannot be relocated"
+        if cls == "history-section" and RE_STATUS.search(removed) and not (op.get("tag_examples") or op.get("navigation")):
+            return False, "section carries claim tags; a live result cannot be relocated"
         if cls == "history-appendix":
             # identifiers named in the new history text must exist in the live text
             missing = sorted(r for r in set(RE_RID.findall(new)) if r not in live_text(cand))
@@ -329,9 +357,9 @@ def check_op(op, arch, cand):
                 return False, f"history entry names identifiers absent from the live text: {missing}"
         elif RE_STATUS.search(new) or RE_MATH.search(new):
             return False, "pointer text carries claim tags or math"
-        note = " (claim tags present only as notation examples; declared)" if op.get("tag_examples") else ""
-        if op.get("navigation"):
-            note = f" (navigation section: only [DEF] tags, no identifiers, {len(RE_MATH.findall(removed))} symbol mentions; declared)"
+        note = ""
+        if op.get("tag_examples") or op.get("navigation"):
+            note = f"; reviewed region {op.get('region')} confirmed by {REGIONS[op['region']]['confirmed_by']}"
         return True, f"section relocated ({len(removed)} chars), found in {names}{note}"
     if k == "replace-header":
         removed = op.get("_removed", "")
@@ -349,6 +377,71 @@ def check_op(op, arch, cand):
             return False, "old footer not found in archive"
         return True, "footer replaced"
     return False, "unknown operation"
+
+
+REGIONS = {}
+
+
+def check_region(op, removed, rids):
+    """tag_examples / navigation are allowed only for a registered, structurally checked,
+    reviewer-confirmed source region whose bytes match its registered hash."""
+    rid = op.get("region")
+    if not rid or rid not in REGIONS:
+        return False, "tag_examples/navigation requires a registered region (regions file)"
+    r = REGIONS[rid]
+    kind = "tag_examples" if op.get("tag_examples") else "navigation"
+    if r.get("kind") != kind:
+        return False, f"region {rid} is registered as {r.get('kind')}, not {kind}"
+    if sha(removed) != r.get("sha256"):
+        return False, f"region {rid}: removed bytes do not match the registered hash"
+    for x in rids:
+        for l in removed.split("\n"):
+            if x not in l:
+                continue
+            outside = re.sub(r"`\[[^`]*\]`", "", l)
+            if not l.startswith("|") or x in outside:
+                return False, f"region {rid}: identifier {x} occurs outside a tag spelling in a table row; a region carrying results cannot be relocated"
+    if "$$" in removed:
+        return False, f"region {rid} contains display math"
+    if kind == "tag_examples":
+        stray = [l for l in removed.split("\n") if RE_STATUS.search(l) and not l.startswith("|")]
+        if stray:
+            return False, f"region {rid}: claim tags outside table rows: {stray[0][:100]!r}"
+    else:
+        if not set(RE_STATUS.findall(removed)) <= {"`[DEF]`"}:
+            return False, f"region {rid}: navigation region carries non-[DEF] tags"
+    if not r.get("confirmed_by"):
+        return "PENDING", f"region {rid} structurally eligible; reviewer confirmation pending"
+    return True, ""
+
+
+def changed_spans(old, new):
+    """Minimal differing spans of old/new, widened to word boundaries."""
+    i = 0
+    while i < min(len(old), len(new)) and old[i] == new[i]:
+        i += 1
+    j = 0
+    while j < min(len(old), len(new)) - i and old[-1 - j] == new[-1 - j]:
+        j += 1
+    while i > 0 and old[i - 1].isalnum():
+        i -= 1
+    while j > 0 and old[len(old) - j].isalnum():
+        j -= 1
+    return old[i:len(old) - j], new[i:len(new) - j]
+
+
+def ref_grammar_violations(span):
+    bad, pos = [], 0
+    for m in RE_REF_TOKEN.finditer(span):
+        if m.start() != pos:
+            bad.append(span[pos:m.start()])
+        t = m.group(0)
+        if t.isalpha() and len(t) > 1 and t not in REF_WORDS:
+            bad.append(t)
+        pos = m.end()
+    if pos != len(span):
+        bad.append(span[pos:])
+    return bad
 
 
 def removed_part(old, new):
@@ -391,13 +484,45 @@ def check_links(cand, arch):
         ctx = lt[max(0, m.start() - 160):m.end() + 40]
         if not RE_TAGREF.search(ctx):
             bad.append(f"{m.group(0)} without a tagged edition: {ctx!r}")
-    for m in RE_TAGREF.finditer(cand):
+    resolved = 0
+    for m in RE_TAGREF.finditer(lt):
         t = m.group(0).strip("`")
         if t.startswith("dyad-") and t not in arch and t not in KNOWN_TAGS:
-            bad.append(f"unknown tag {t}")
-    return (not bad), ("; ".join(bad[:6]) if bad else "Appendix references, H-labels and tags resolve")
+            bad.append(f"unknown tag {t}"); continue
+        if t not in arch:
+            continue
+        at = arch[t]["text"]
+        ctx = sentence_at(lt, m.start())
+        for h in RE_HLABEL.findall(ctx):
+            resolved += 1
+            if f"**{h}** —" not in at and not re.search(r"\*\*%s[a-z]\*\* —" % re.escape(h), at):
+                bad.append(f"{h} not defined in {t}")
+        for x in RE_APPREF.findall(ctx):
+            resolved += 1
+            if f"\n## Appendix {x} " not in at:
+                bad.append(f"Appendix {x} not in {t}")
+        if "Local Tag Aliases" in ctx:
+            resolved += 1
+            if "\n## Local Tag Aliases" not in at:
+                bad.append(f"Local Tag Aliases not in {t}")
+        own = t.split("-v", 1)[1]
+        for v in re.findall(r"\bv(\d+(?:\.\d+)+)\b", ctx):
+            if v == own:
+                continue
+            resolved += 1
+            if not re.search(r"^### v%s\b" % re.escape(v), at, re.M):
+                bad.append(f"v{v} has no Appendix A entry in {t}")
+    return (not bad), ("; ".join(bad[:6]) if bad else f"Appendix references, H-labels and tags resolve; {resolved} archive targets found in the pinned archive")
 
 
+def sentence_at(t, i):
+    a = max(t.rfind(". ", 0, i), t.rfind("\n", 0, i)) + 1
+    b_candidates = [x for x in (t.find(". ", i), t.find("\n", i)) if x >= 0]
+    b = min(b_candidates) if b_candidates else len(t)
+    return t[a:b]
+
+
+WARNINGS = []
 KNOWN_TAGS = {"dyad-v6.4.19", "dyad-v6.4.20", "methodology-v1.3", "methodology-v1.4"}
 
 
@@ -415,7 +540,7 @@ def check_presentation(cand, mp):
         probs.append("history text in header")
     st = field(head, "Document status") or ""
     if len(st.split()) > 60:
-        probs.append("Document status longer than 60 words")
+        WARNINGS.append("Document status longer than 60 words (advisory; no size gate)")
     feet = [l for l in cand.split("\n") if FOOTER.match(l)]
     if len(feet) != 1:
         probs.append(f"{len(feet)} footer lines (exactly one required)")

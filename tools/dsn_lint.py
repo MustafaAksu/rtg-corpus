@@ -15,6 +15,8 @@ Counting method
 - header fields: characters per "**Field:**" line of the header.
 - Appendix A words per edition: tokens under each "### v…" heading.
 - history phrases: case-insensitive counts in the live body of the phrases in HISTORY.
+- orientation core (Methodology v1.4 §6.1): "## §1." up to "## §5." for a standard technical
+  ledger; characters, lines and words; whether the AI_CONTEXT_CORE_END marker is present.
 - near-duplicates: paragraphs of at least 200 characters whose 8-word shingle sets have
   Jaccard similarity >= 0.8 with another paragraph of the live body.
 """
@@ -55,7 +57,12 @@ def report(path, prev=None):
     head, body, appA = regions(s)
     r = {"file": path, "bytes": len(raw), "lines": s.count("\n"),
          "header_chars": len(head), "live_body_chars": len(body), "appendix_a_chars": len(appA)}
+    r["counting_method"] = __doc__.split("Counting method", 1)[1].strip()
     r["section1_words"] = len(section(s, "## §1.").split()) - 4
+    i, j = s.find("\n## §1."), s.find("\n## §5.")
+    core = s[i:j] if i >= 0 and j > i else ""
+    r["orientation_core"] = {"chars": len(core), "lines": core.count("\n"), "words": len(core.split()),
+                             "core_end_marker_present": "AI_CONTEXT_CORE_END" in s}
     r["header_fields"] = {m.group(1): len(m.group(0)) for m in re.finditer(r"^\*\*([^*]+):\*\*.*$", head, re.M)}
     eds = re.split(r"\n### (v[0-9][^\n]*)", appA)
     r["appendix_a_words_per_edition"] = {eds[i]: len(eds[i + 1].split()) for i in range(1, len(eds) - 1, 2)}
@@ -96,7 +103,11 @@ def main():
     if a.json:
         json.dump(r, open(a.json, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for k, v in r.items():
+        if k == "counting_method":
+            continue
         if isinstance(v, (dict, list)):
+            if k == "counting_method":
+                continue
             if k in ("near_duplicate_paragraphs", "new_rids"):
                 print(f"{k}: {len(v)}")
             elif k == "appendix_a_words_per_edition":

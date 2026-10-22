@@ -10,7 +10,7 @@ usage: build_dyad_v6_4_21_stage2.py INTERMEDIATE V6_4_20 OUT_CANDIDATE OUT_MAP
 """
 import hashlib, json, re, sys
 
-INTERMEDIATE_SHA = "0572120aa6ad74b520d8338e10a712838f5a0b97c00f37e921f1915e16f836b5"
+INTERMEDIATE_SHA = "f2b20419898ae1c84235a808479391f2d29fc05b2f9a0e46f606539327d29119"
 V6420_SHA = "0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852"
 TAG = "`dyad-v6.4.20`"
 
@@ -31,7 +31,7 @@ def header(base):
         "**Title:** RTG Dyadic Oscillator Study — Canonical Scientific Ledger  \n"
         "**Date:** 22 October 2026  \n"
         f"**Scope:** {scope}  \n"
-        "**Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,450 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).  \n"
+        "**Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,500 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).  \n"
         "**Document status:** DRAFT — v6.4.21 candidate (closeout errata and Methodology v1.4 compaction pilot); not adopted.  \n"
         f"**Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.20` (SHA-256 `{V6420_SHA}`; tag {TAG}).  \n"
         "**Companion documents:** one current-edition table, §7.0.  \n"
@@ -56,10 +56,10 @@ def appendix_a(base):
         "\n## Appendix A — Version History {#appendix-a}\n\n"
         "One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, replaced lines and every `[COR]` entry — are in Appendix A of v6.4.20 (tag `dyad-v6.4.20`, SHA-256 `0b2d5a44…4852`). Scientific corrections, retractions and regrades are also recorded in Appendix B.\n\n"
         "### v6.4.21 — 22 October 2026 — DRAFT candidate\n\n"
-        "- **Errata [status/scope/provenance] (closeout S-1–S-5):** current status at the point of use for OPEN 3 (CLOSED within scope), P4, OPEN 21, RECOG R11 and the P2B v2 coefficient verification (§1, §2, §5, §6.14, §8); closed OPEN 9 items moved out of the active list; N11 recorded as adopted use by RECOG (§7 notices); subclaim dependencies of DYAD-ALG-OPEN3-PHASE-OFFSET (§7); notation overloads (Appendix C); DYAD-THM-RAW-CUBIC provenance caveat and its range $p\\ge3$ (§2, Appendix F); unrecovered OPEN 9 definitions named at the point of use (§6.11). Scope tag of the primitive-variable form in §6.14 now points to OPEN 21. No grade changes; no new RID.\n"
+        "- **Errata [status/scope/provenance] (closeout S-1–S-6; targeted review R21-01):** current status at the point of use for OPEN 3 (CLOSED within scope), P4, OPEN 21, RECOG R11 and the P2B v2 coefficient verification (§1, §2, §5, §6.14, §8); closed OPEN 9 items moved out of the active list; N11 recorded as adopted use by RECOG (§7 notices); subclaim dependencies of DYAD-ALG-OPEN3-PHASE-OFFSET (§7); notation overloads (Appendix C); DYAD-THM-RAW-CUBIC provenance caveat and its range $p\\ge3$ (§2, Appendix F); unrecovered OPEN 9 definitions named at the point of use (§6.11). Scope tag of the primitive-variable form in §6.14 now points to OPEN 21. Field label of the archival $h_4$ corrected from $\\mathbb Q(\\sqrt3)$ to $\\mathbb Q(i\\sqrt3)$, confirmed by exact recomputation (§1, §8). RECOG R11 stated as CLOSED where the fitted-backbone identification stays open (§1, §6.5). No grade changes; no new RID.\n"
         "- **FC-DYAD-34 [bookkeeping]:** squared shear/healing ratio equals Genesis's leading ratio $16/3$ (§6.12); selects no birth policy.\n"
         "- **Compaction [layout] (Methodology v1.4 pilot):** current-only header with the §1 profile exception; one footer; this compact Appendix A; tag normalization map and the v6.4.19→v6.4.20 section map left in v6.4.20; history pointers in live text removed or repointed to the tagged edition.\n"
-        "- **Records:** release record `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`; corrected intermediate SHA-256 `0572120a…36b5`; predecessor tag `dyad-v6.4.20`.\n\n"
+        "- **Records:** release record `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`; corrected intermediate SHA-256 `f2b20419…9119`; predecessor tag `dyad-v6.4.20`.\n\n"
         "### v6.4.20 — 21 October 2026 — Adopted\n\n"
         "- **Content:** ATLAS P1 scientific corrections and P2 interface work. 13 RIDs registered at adoption: `DYAD-ALG-KP-FRAME-SCALE`, `DYAD-THM-SMOOTH-EQUIVARIANT-CHART`, `DYAD-ALG-B5-ALLP-NONVANISHING`, `DYAD-ALG-RAW-ANGULAR-MEAN`, `DYAD-ALG-ONE-BLOCK-BURST`, `DYAD-ALG-P5-RADIAL`, `DYAD-ALG-SIXSTEP-CUBIC-JET`, `DYAD-ALG-Q3-DEG2-CANCEL`, `DYAD-DEF-CRITICAL-CURVE`, `DYAD-ALG-QC-CRITICAL-AMPLITUDE`, `DYAD-ALG-ISP-MAPS`, `DYAD-ART-ATLAS-P1`, `DYAD-ART-ATLAS-P2`. No earlier RID renamed or regraded.\n"
         "- **Grade corrections to unnumbered statements (P1):** §6.5 historical backbone ansatz `[ALG]`→`[DEF]`; §6.6 $p=6$ linear order `[THM]`→`[ALG]`; §6.6 classification by $p$ `[THM]`→`[DEF]`. The v6.4.20 footer described the r2→final step as metadata only; that was true of r2→final, while these P1 retaggings were made earlier in the cycle.\n"
@@ -83,7 +83,7 @@ def ops_for(base):
          "Legacy compound spellings in live text are rendered by the normalization map below;",
          "Legacy compound spellings in live text are rendered by the tag normalization map of v6.4.20 (tag `dyad-v6.4.20`, Local Tag Aliases);")
     ops.append({"id": "M03", "op": "replace-section", "class": "history-section", "tag_examples": True,
-                "start": "**Tag normalization map (v6.4.20).**", "end": "**Section headings.**", "new": "",
+                "region": "R1", "start": "**Tag normalization map (v6.4.20).**", "end": "**Section headings.**", "new": "",
                 "archive": ["dyad-v6.4.20"], "note": "legacy-spelling map (v6.4.19 → v6.4.20); claim tags appear only as spelling examples"})
     edit("M04", "ref-subst",
          "| retired identifiers; promoted in v6.2 to `DYAD-ALG-VANISH-B3`, `DYAD-ALG-VANISH-B4` `[ALG]` | Appendix A, v6.2 |",
@@ -120,7 +120,7 @@ def ops_for(base):
     edit("M15", "history-removal",
          "(§6.2, §6.11, §6.12, SG-15). (v6.4.19 paragraph: Appendix A H-5.)",
          "(§6.2, §6.11, §6.12, SG-15).")
-    ops.append({"id": "M18", "op": "replace-section", "class": "history-section", "navigation": True,
+    ops.append({"id": "M18", "op": "replace-section", "class": "history-section", "navigation": True, "region": "R2",
                 "start": "\n## Appendix G — Old→new section map {#appendix-g}", "end": "\n---\n\n*END OF DOCUMENT",
                 "new": "\n## Appendix G — Old→new section map {#appendix-g}\n\nThe v6.4.19→v6.4.20 section map is Appendix G of v6.4.20 (tag `dyad-v6.4.20`). v6.4.21 keeps every heading anchor of v6.4.20.\n",
                 "archive": ["dyad-v6.4.20"], "note": "navigation history of the previous release"})

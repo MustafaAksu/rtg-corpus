@@ -18,7 +18,10 @@ def sha(t):
     return hashlib.sha256(t.encode("utf-8")).hexdigest()
 
 
-def run(base, cand, mp, tmp, name):
+REGIONS = None  # registry with confirmations simulated (tests the checker logic, not the review)
+
+
+def run(base, cand, mp, tmp, name, regions=None):
     d = os.path.join(tmp, name); os.makedirs(d, exist_ok=True)
     bp, cp, mpp = (os.path.join(d, x) for x in ("base.md", "cand.md", "map.json"))
     open(bp, "w", encoding="utf-8").write(base)
@@ -28,7 +31,12 @@ def run(base, cand, mp, tmp, name):
     for op in mp["operations"]:
         op.pop("_removed", None)
     json.dump(mp, open(mpp, "w", encoding="utf-8"), ensure_ascii=False)
-    r = subprocess.run([sys.executable, CHECKER, bp, cp, mpp], capture_output=True, text=True)
+    cmd = [sys.executable, CHECKER, bp, cp, mpp]
+    reg = regions if regions is not None else REGIONS
+    if reg is not None:
+        rp = os.path.join(d, "regions.json"); json.dump(reg, open(rp, "w", encoding="utf-8"), ensure_ascii=False)
+        cmd += ["--regions", rp]
+    r = subprocess.run(cmd, capture_output=True, text=True)
     fails = [l for l in r.stdout.splitlines() if l.startswith("FAIL")]
     return r.returncode, fails
 
@@ -44,8 +52,13 @@ def live_once(cand, pat):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("base"); ap.add_argument("candidate"); ap.add_argument("map")
-    ap.add_argument("--report")
+    ap.add_argument("--report"); ap.add_argument("--regions")
     a = ap.parse_args()
+    global REGIONS
+    if a.regions:
+        REGIONS = json.load(open(a.regions, encoding="utf-8"))
+        for r in REGIONS["regions"]:
+            r["confirmed_by"] = r.get("confirmed_by") or "SIMULATED-FOR-CONTROLS"
     base = open(a.base, encoding="utf-8").read()
     cand = open(a.candidate, encoding="utf-8").read()
     mp = json.load(open(a.map, encoding="utf-8"))
@@ -172,7 +185,59 @@ def main():
             return base, cand[:line_start] + cand[line_end + 1:], mp
         control("N10", "a result paragraph deleted (undeclared)", n10)
 
+        def r1():  # REVIEW-N1: hypothesis removed, declared as a reference substitution with a valid tag
+            pat = "unique among $C^\\infty$ generators with zero linear part; hence"
+            i = live_once(cand, pat)
+            if i < 0: return None
+            ls = cand.rfind("\n", 0, i) + 1; le = cand.index("\n", i)
+            old = cand[ls:le]
+            if base.count(old) != 1: return None
+            new = old.replace(pat, "unique among $C^\\infty$ generators; see tag `dyad-v6.4.20`; hence", 1)
+            m = copy.deepcopy(mp)
+            m["operations"].insert(1, {"id": "XR1", "op": "edit", "class": "ref-subst", "old": old, "new": new, "archive": ["dyad-v6.4.20"]})
+            return base, cand.replace(old, new, 1), m
+        control("REVIEW-N1", "'with zero linear part' removed, declared as ref-subst with a valid tag", r1)
+
+        def r2():  # REVIEW-N2: archive target changed to a nonexistent label, tag kept
+            o = next((x for x in mp["operations"] if x["op"] == "edit" and "H-7" in x.get("new", "")), None)
+            if o is None: return None
+            m = copy.deepcopy(mp); oo = next(x for x in m["operations"] if x["id"] == o["id"])
+            bad = oo["new"].replace("H-7", "H-999")
+            c2 = cand.replace(oo["new"], bad, 1); oo["new"] = bad
+            return base, c2, m
+        control("REVIEW-N2", "archive pointer to nonexistent H-999 with the valid tag kept", r2)
+
+        def r3():  # REVIEW-N3: live §6.7 result body replaced by a pointer, declared tag_examples
+            start, end = "\n### §6.7", "\n### §6.8"
+            if base.count(start) != 1: return None
+            i = base.index(start); j = base.index(end, i)
+            head = base[i:base.index("\n", i + 1)]
+            ptr = head + "\n\nSee v6.4.20 (tag `dyad-v6.4.20`).\n"
+            m = copy.deepcopy(mp)
+            m["operations"].insert(1, {"id": "XR3", "op": "replace-section", "class": "history-section", "tag_examples": True, "start": start, "end": end, "new": ptr, "archive": ["dyad-v6.4.20"]})
+            ci = cand.index(start); cj = cand.index(end, ci)
+            return base, cand[:ci] + ptr + cand[cj:], m
+        control("REVIEW-N3", "live §6.7 result body replaced by a pointer, declared tag_examples", r3)
+
+        def r3b():  # same, pretending §6.7 is a registered, confirmed region
+            res = r3()
+            if res is None or REGIONS is None: return None
+            b2, c2, m2 = res
+            i = base.index("\n### §6.7"); j = base.index("\n### §6.8", i)
+            reg = copy.deepcopy(REGIONS)
+            reg["regions"].append({"id": "RX", "kind": "tag_examples", "sha256": hashlib.sha256(base[i:j].encode()).hexdigest(), "confirmed_by": "SIMULATED"})
+            next(x for x in m2["operations"] if x["id"] == "XR3")["region"] = "RX"
+            rc, f = run(b2, c2, m2, tmp, "REVIEW-N3b", regions=reg)
+            out.append({"id": "REVIEW-N3b", "what": "same, with §6.7 registered and confirmed as a tag_examples region", "expect": "FAIL", "got": "FAIL" if rc == 1 else ("PASS" if rc == 0 else f"EXIT {rc}"), "fails": f})
+            return "done"
+        if r3b() is None:
+            out.append({"id": "REVIEW-N3b", "what": "registered-region variant", "expect": "FAIL", "got": "NOT APPLICABLE"})
+
     ok = out[0]["got"] == "PASS" and all(r["got"] == "FAIL" for r in out[1:])
+    return finish(a, out, ok)
+
+
+def finish(a, out, ok):
     for r in out:
         flag = "ok " if (r["got"] == r["expect"]) else "BAD"
         print(f'{flag} {r["id"]:4} expect {r["expect"]:4} got {r["got"]:14} {r["what"]}')
