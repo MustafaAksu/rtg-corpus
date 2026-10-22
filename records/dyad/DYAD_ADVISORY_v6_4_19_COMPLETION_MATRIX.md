@@ -55,6 +55,8 @@ States (one per row): **DONE v6.4.20** (implemented in the adopted edition) · *
 
 ## C-2 Evidence supplement
 
+The full list of DYAD-cited files missing from the repository (143, in four priority tiers, with recorded hashes) is `records/dyad/DYAD_SOURCE_RECOVERY_LIST.md`; the C-2 items below are part of it.
+
 None of the requested files is in the repository yet. Their bytes are needed only to inspect them here; their absence means "not independently inspected", not "never done".
 
 | File | Known hash | Where cited |
