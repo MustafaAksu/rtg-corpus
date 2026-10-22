@@ -13,8 +13,8 @@
    "chars": 2156,
    "description": "Legacy-spelling map v6.4.19/P1 → canonical rendering; claim tags appear only as spellings in table rows; no identifiers.",
    "same_bytes_in_v6.4.20": true,
-   "confirmed_by": "",
-   "confirmed_at": ""
+   "confirmed_by": "ChatGPT — receiving reviewer; round-2 scoped review",
+   "confirmed_at": "2026-10-22"
   },
   {
    "id": "R2",
@@ -26,8 +26,8 @@
    "chars": 7603,
    "description": "v6.4.19 → v6.4.20 heading map; one [DEF] line, no identifiers.",
    "same_bytes_in_v6.4.20": true,
-   "confirmed_by": "",
-   "confirmed_at": ""
+   "confirmed_by": "ChatGPT — receiving reviewer; round-2 scoped review",
+   "confirmed_at": "2026-10-22"
   }
  ]
 }

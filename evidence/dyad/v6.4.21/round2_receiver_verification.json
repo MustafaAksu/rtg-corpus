@@ -1,0 +1,76 @@
+{
+  "review": "DYAD-v6.4.21-round2",
+  "reviewer": "ChatGPT",
+  "date": "2026-10-22",
+  "status": "REVIEW_ACCEPTED_OWNER_PI_ADOPTION_READY",
+  "adoption_performed": false,
+  "reviewed_repository_commit": "4385dfd24721a01c90592fa8ef46bd4cb329e37c",
+  "intermediate_sha256": "f2b20419898ae1c84235a808479391f2d29fc05b2f9a0e46f606539327d29119",
+  "candidate_sha256": "277e640819cc35ce5cb664d396cda1feb675589db49a8d21746be568ead47510",
+  "candidate_bytes": 256463,
+  "movement_map_sha256": "b76d753e7301b781c6f5ff7d2ce3718ec7855f010955117cbb125de1dc28eaf8",
+  "checker_sha256": "22d1ef56545d4dbcbbddeddccd446799e5c9a8e6cb0e1c53d51ccaf137c61495",
+  "test_harness_sha256": "059b9004b35c16957328e9db139f09027e5f16ccf571c59edc97f43d072a95f7",
+  "reviewed_regions_sha256": "d9364edd7aa7d8d35c4793e2fef766b4a4c803f832cc9038597b97843bb06002",
+  "compaction": {
+    "before_confirmation": "PENDING",
+    "before_exit_code": 3,
+    "supplied_pending_report_byte_identical": true,
+    "after_confirmation": "PASS",
+    "after_exit_code": 0,
+    "report_sha256": "1c4e1d4657e1d3b0f5bee8edffb6a9b3cb4007cdfbcde23e3a89803365760992",
+    "parsed_claim_blocks": 609,
+    "byte_identical": 573,
+    "declared_changes": 36,
+    "unexplained": 0,
+    "archive_targets_checked": 27
+  },
+  "negative_controls": {
+    "result": "PASS",
+    "rejected": 16,
+    "total_negative": 16,
+    "positive_control": "PASS",
+    "supplied_report_byte_identical": true,
+    "report_sha256": "1f4c2d4584870b10587126e1d8c0d8ca7e6615a2f518e47bcc734e2acfb5efde",
+    "prior_false_PASS_cases": [
+      "REVIEW-N1",
+      "REVIEW-N2",
+      "REVIEW-N3",
+      "REVIEW-N3b"
+    ]
+  },
+  "archival_h4": {
+    "original_script_sha256": "cec918f808cbc02c53beba5f88faf1edbed830a87dac7283e6ac2511d2ec5835",
+    "original_script_rerun": true,
+    "original_arithmetic": "mpmath, 120 dps, tolerance-pruned; numerical only",
+    "producer_exact_script_sha256": "7617c431aae8a33243541f398ee40afa988f6a0faf254c7f14291561a2c4716c",
+    "producer_exact_rerun": "PASS; five coefficients",
+    "receiver_method": "Fraction arithmetic in native rho/eta through degree 4, followed by exact algebraic W conversion",
+    "receiver_checks_passed": 10,
+    "field": "Q(i sqrt(3))",
+    "coefficients": {
+      "4,0": "-1/16+7*i*sqrt(3)/144",
+      "3,1": "-1/6-2*i*sqrt(3)/9",
+      "2,2": "-5/24-11*i*sqrt(3)/24",
+      "1,3": "1/3+i*sqrt(3)/9",
+      "0,4": "0"
+    }
+  },
+  "completion_matrix_primary_counts": {
+    "done_v6.4.20": 18,
+    "done_v6.4.21_candidate": 10,
+    "open": 4,
+    "research": 2,
+    "total": 34
+  },
+  "execution_environment": {
+    "python": "3.13.5"
+  },
+  "execution_boundary": "Local source copies authenticated against GitHub-returned blob IDs. Positive checker: only load_archives adapted to identical local predecessor bytes. Subprocess tests: only archive locator changed from git-show to that local path. Checker and test rules unchanged.",
+  "nonclaims": [
+    "No universal semantic-equivalence or checker-completeness certification",
+    "No rerun of inherited scientific certificate campaigns",
+    "C-2 not recovered; notices not sent",
+    "No adoption, PR, merge, tag or main change"
+  ]
+}
