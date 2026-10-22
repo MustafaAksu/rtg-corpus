@@ -38,3 +38,23 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 ## Not yet in the repository
 
 Release/adoption records of the streams other than DYAD v6.4.20 (to `records/<study>/` when supplied), and the DYAD v6.4.19 disposition record.
+
+## Records recovered after the project cleanup (22 October 2026)
+
+Received documents keep their original filenames, because other documents cite them by name or hash. SHA-256 is of the committed file; "Cited in" means a hash for this file appears there and matches.
+
+| File | Location | SHA-256 | Cited in |
+|---|---|---|---|
+| `ATLAS_DISPOSITION_DYAD_v6_4_19_SESSION_v0_1.md` | `records/dyad/` | `7b2d1573…465c` | DYAD v6.4.20 |
+| `DYAD_OPEN20_ANALYTIC_ROOTS_SCOPE_SESSION_v0_1.md` | `records/dyad/` | `5154ca52…a8b0` | — |
+| `DYAD_REPLY_TO_FMS_OPEN20_PRIORITY_v0_1.md` | `records/dyad/` | `208ec09a…dda3` | DYAD v6.4.20 |
+| `DYAD_REPLY_TO_NUMGEN_LPHASE_ROWA_v0_1.md` | `records/dyad/` | `45cdd704…51cf` | DYAD v6.4.20 |
+| `DYAD_REPLY_TO_RECOG_G3_v0_1_2.md` | `records/dyad/` | `836853b0…7104` | — |
+| `DYAD_v6_4_19_OUTBOUND_NOTICES_N15.md` | `records/dyad/` | `e221e633…617a` | — |
+| `FMS_PILOT_CLOSEOUT_RECORD_v0_1_SESSION.md` | `records/fms/` | `dc65ca48…3349` | — |
+| `FMS_TO_DYAD_OPEN20_PRIORITY_REQUEST_v0_1.md` | `records/fms/` | `03da0e34…45ac` | — |
+| `GENESIS_V2_8_9_NOTICE_ERRATUM_OFN_Q6_v0_1.md` | `records/gen/` | `81d97f25…94e1` | — |
+| `OFN_REPLY_TO_FMS_MODEL_SELECTION_v0_8_2.md` | `records/ofn/` | `6e4fc3c3…4b1d` | OFN v0.10 (governing input) |
+| `RRF_EDITOR_QUESTION_PACKET_RER_PHASEA_v0_2_20261019.md` | `records/rer/` | `b1a67b6e…2ccf` | — |
+
+**Still missing** (were in the project, no copy found yet): `DYAD_OPEN20_ANALYTIC_ROOTS_P1B_SESSION_v0_1_1.md`, `DYAD_OPEN20_ANALYTIC_ROOTS_P1C_SESSION_v0_1.md`, `DYAD_OPEN20_ANALYTIC_ROOTS_P1C2_SESSION_v0_1.md`, `DYAD_OPEN20_ANALYTIC_ROOTS_P1C2B_SESSION_v0_1_1.md`, `DYAD_OPEN20_ANALYTIC_ROOTS_P1C5_SESSION_v0_1.md`, `RECOG_v0_3_22_POST_RELEASE_MAINTENANCE_NOTE.md`.
