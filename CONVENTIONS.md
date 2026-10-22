@@ -7,3 +7,4 @@
 5. **Drafts and reviews** go through pull requests. Merge plus tag records PI/owner adoption; the release record still states the adoption decision explicitly.
 6. **Study keys:** `dyad`, `triad`, `gen`, `tdrg`, `recog`, `dzt`, `az`, `uvm`, `numgen`, `ofn`, `rrf`, `rer`, `er2b`, `fms`, `programme`, `methodology`, `legacy`, `prelegacy`, `atlas`.
 7. **History:** history lives in git (commits, tags). Do not keep superseded text in live sections (Methodology v1.4 draft, S1).
+8. **Who writes where:** Claude sessions push only to `claude/*` branches. The PI reviews and merges into `main` and creates the release tags. A merge into `main` is not by itself an adoption record; the release record states the adoption decision.
