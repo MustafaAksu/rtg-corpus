@@ -12,7 +12,7 @@ Earlier archive: Zenodo DOI 10.5281/zenodo.17568897.
 | `dsn/` | Current canonical DSNs and the DSN Methodology. **One file per study, fixed filename, no version number in the name.** The version is in the file header and in the git tag. |
 | `noncanonical/` | Adopted or working registries and studies that are explicitly noncanonical (RER, ER-2B, FMS). Same fixed-name rule. |
 | `records/<study>/` | Release records, advisory/disposition/closeout notes, notices. |
-| `evidence/<study>/<version>/` | Release packages: scripts, logs, diffs, checksums. |
+| `evidence/<study>/` | Scripts and certificates (`scripts/`), small per-release outputs (`<version>/`), frozen evidence packages. |
 | `atlas/` | RTG State Atlas (AI-oriented relational map of all DSNs) and its method. |
 | `tools/` | Lint and release/compaction checkers. |
 | `BASELINE.md` | Which files are in the repository, their verified hashes, and which are still pending. |
@@ -28,4 +28,4 @@ Earlier archive: Zenodo DOI 10.5281/zenodo.17568897.
 
 Documents keep their own DSN status (DRAFT, ADOPTED, …). Working notes are marked SESSION / NONCANONICAL in their headers. Presence in this repository is not adoption.
 
-See `CONVENTIONS.md` for commit, tag and review rules.
+See `CONVENTIONS.md` for how a stream works here: the live file, releases, evidence, uploads and notices.

@@ -1,6 +1,6 @@
 # DYAD — missing source files (recovery list)
 
-**Date:** 22 October 2026. **Prepared by:** Claude (atlas owner). **Status:** working record at a fixed path; updated as files arrive.
+**Date:** 22 October 2026. **Prepared by:** Claude (atlas owner). **Status:** working record at a fixed path; updated as files arrive. **Collection deferred by the PI (22 Oct 2026):** most files are on the PI's machine; they will be gathered later. Until then the DSN's availability notes stand.
 **Source of the list:** every file name cited in `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` v6.4.21 (tag `dyad-v6.4.21`), mostly from the §8 artifact registry, checked against the repository tree and the members of the ZIP packages in it.
 **Result:** 149 distinct files cited; 6 present (`normalize_p6_liegauge_exact.py`, `dyad_h4_archival_exact_check.py`, `qw.py` inside the OPEN 20 packages, and three records); **143 missing** (plus one closeout record not cited in the DSN): Tier 1 64, Tier 2 42, Tier 3 28, Tier 4 10.
 
