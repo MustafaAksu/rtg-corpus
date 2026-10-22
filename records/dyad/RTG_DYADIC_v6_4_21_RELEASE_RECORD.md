@@ -4,21 +4,22 @@
 **Prepared by:** Claude (atlas owner), at the PI's direction of 22 Oct 2026 to start the pilot. **Owner/PI adoption:** pending.
 **Governing methodology:** DSN Methodology v1.4 (tag `methodology-v1.4`).
 **Predecessor:** v6.4.20, tag `dyad-v6.4.20`, SHA-256 `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852`.
-**Instructions implemented:** `records/dyad/ATLAS_CLOSEOUT_DYAD_v6_4_20.md` at commit `7856c9e` (closeout with editor finding M14R-05 applied).
+**Instructions implemented:** `records/dyad/ATLAS_CLOSEOUT_DYAD_v6_4_20.md` at commit `7856c9e` (closeout with editor finding M14R-05 applied), and the targeted review `records/dyad/DYAD_v6_4_21_TARGETED_REVIEW.md` (ChatGPT, 22 Oct 2026; SHA-256 `6024765c01db2f18a59a874be53c55f26db0766fbccb92385339196f7d4055d6`): stage 1 ACCEPT WITH MINOR EDITS, checker REVISE, pilot NOT READY. Round 2 implements it.
 
 ## 1. Build stages (branch `claude/dyad-v6.4.21`)
 
 | Stage | Commit | File SHA-256 | Builder | Check |
 |---|---|---|---|---|
 | Adopted v6.4.20 | tag `dyad-v6.4.20` | `0b2d5a44…4852` | — | — |
-| 1 — corrected intermediate (build stage, not an edition) | `649441a` | `0572120aa6ad74b520d8338e10a712838f5a0b97c00f37e921f1915e16f836b5` | `evidence/dyad/scripts/build_dyad_v6_4_21_stage1.py` (25 assertion-gated edits, live text only) | targeted review of the stage-1 diff (pending) |
-| 2 — compacted candidate | `a5b1a12` | `31523bd87de9e55dd719a35f4f665caf88608e3dc16f0ecb36a319374104d12d` | `evidence/dyad/scripts/build_dyad_v6_4_21_stage2.py` (19 declared operations) | `tools/check_compaction.py`: PASS |
+| Round 1 (superseded by round 2; in git history) | `649441a`, `a5b1a12` | `0572120a…36b5`, `31523bd8…d12d` | — | targeted review |
+| 1 — corrected intermediate (build stage, not an edition) | `6622dcd` | `f2b20419898ae1c84235a808479391f2d29fc05b2f9a0e46f606539327d29119` | `evidence/dyad/scripts/build_dyad_v6_4_21_stage1.py` (30 assertion-gated edits, live text only) | round-1 edits reviewed (ACCEPT WITH MINOR EDITS); round-2 additions to be confirmed |
+| 2 — compacted candidate | `6f4a667` | `277e640819cc35ce5cb664d396cda1feb675589db49a8d21746be568ead47510` | `evidence/dyad/scripts/build_dyad_v6_4_21_stage2.py` (19 declared operations) | `tools/check_compaction.py`: PENDING (all checks pass; regions R1, R2 await reviewer confirmation) |
 
-Reproduce: `git show dyad-v6.4.20:dsn/RTG_DYADIC_OSCILLATOR_DSN.md > v.md` → stage-1 builder → `0572120a…36b5`; then the stage-2 builder with the intermediate and `v.md` → `31523bd8…d12d`. The check reads the v6.4.20 archive through `git show`.
+Reproduce: `git show dyad-v6.4.20:dsn/RTG_DYADIC_OSCILLATOR_DSN.md > v.md` → stage-1 builder → `f2b20419…9119`; then the stage-2 builder with the intermediate and `v.md` → `277e6408…7510`. The check reads the v6.4.20 archive through `git show`.
 
 ## 2. Changes
 
-**Stage 1 — scientific/scope wording (targeted review required).** Diff: `git diff dyad-v6.4.20 649441a -- dsn/`.
+**Stage 1 — scientific/scope wording (targeted review).** Diff: `git diff dyad-v6.4.20 6622dcd -- dsn/RTG_DYADIC_OSCILLATOR_DSN.md`; round-2 additions alone: compare with round 1 by `git diff 649441a 6622dcd -- dsn/RTG_DYADIC_OSCILLATOR_DSN.md`.
 
 | Closeout item | Location | Change |
 |---|---|---|
@@ -39,14 +40,17 @@ Reproduce: `git show dyad-v6.4.20:dsn/RTG_DYADIC_OSCILLATOR_DSN.md > v.md` → s
 | S-5 | §2 RAW-CUBIC, Appendix F | provenance caveat; range $p\ge3$ |
 | S-5 | §6.11 projector inventory, eigenframe lemma | unrecovered definitions named with source and next step |
 | FC-34 | §6.12 export table | $(4\sqrt3/3)^2=16/3$ cross-reference to Genesis v2.8.9 §6.3 |
+| S-6a (round 2) | §1 OPEN 13 entry; §8 DYAD-ART-NORM-P6 | archival $h_4$: "exact over $\mathbb Q(\sqrt3)$" → coefficients in $\mathbb Q(i\sqrt3)$; script hash pinned; exact recomputation named |
+| R21-01 (round 2) | Appendix C $U$ row | start/base-point set $U$; invariant tube $U_T$ |
+| R21-01 (round 2) | §1 backbone entry; §6.5 `[OPEN]` entry and historical-fit entry | RECOG R11 CLOSED at its final-chart ledger scope; the fitted-backbone identification remains `[OPEN]`; "§6.5 and SG-19 non-transfer qualifications" |
 
 No RID added, renamed or regraded. One scope tag changes text (§6.14 primitive-variable form: "remainder not certified" → "remainder certified separately, OPEN 21"); the `[ALG]` grade of the formal expansion is unchanged.
 
-**Not done in stage 1:** S-6a (FA-05 residual): the §1 label "$h_4$ exact over $\mathbb Q(\sqrt3)$" needs the owner check against `normalize_p6_liegauge_exact.py`, which §8 records as a 120-digit numerical script, not exact. S-6b (FB-20 residual) needed no edit: the pointer is already in the §6.11 paragraph.
+**S-6a evidence.** The PI supplied the owner script `normalize_p6_liegauge_exact.py` (SHA-256 `cec918f808cbc02c53beba5f88faf1edbed830a87dac7283e6ac2511d2ec5835`) on 22 Oct 2026; it is now in `evidence/dyad/scripts/`. Run here, its 120-digit $h_4$ values match its printed closed forms to $10^{-100}$ — numerical identification only. `evidence/dyad/scripts/dyad_h4_archival_exact_check.py` (SHA-256 `7617c431aae8a33243541f398ee40afa988f6a0faf254c7f14291561a2c4716c`) recomputes, in the script's frame and with exact sympy arithmetic, the degree-4 part of $F^6$ (all degree-4 channels are non-resonant at $p=6$, so $h_4=V_4$): $h_4^{(1,3)}=\tfrac13+\tfrac{\sqrt3}9i$, $h_4^{(2,2)}=-\tfrac5{24}-\tfrac{11\sqrt3}{24}i$, $h_4^{(3,1)}=-\tfrac16-\tfrac{2\sqrt3}9i$, $h_4^{(4,0)}=-\tfrac1{16}+\tfrac{7\sqrt3}{144}i$, $h_4^{(0,4)}=0$, all exact matches. These lie in $\mathbb Q(i\sqrt3)$, not in the real field $\mathbb Q(\sqrt3)$. This is the archival Lie-gauge object, not the DYAD-ALG-NF6 normalizer (SG-19). The `[ALG]` grade and the $c_\theta^{(6)}$ value of the entry are unchanged. S-6b (FB-20 residual) needed no edit: the pointer is already in the §6.11 paragraph.
 
-**Stage 2 — layout only (mechanically checked).** Diff: `git diff 649441a a5b1a12 -- dsn/`. Movement map: `evidence/dyad/v6.4.21/movement_map.json`.
+**Stage 2 — layout only (mechanically checked).** Diff: `git diff 6622dcd 6f4a667 -- dsn/RTG_DYADIC_OSCILLATOR_DSN.md`. Movement map: `evidence/dyad/v6.4.21/movement_map.json`; region registry: `evidence/dyad/v6.4.21/reviewed_regions.json`.
 - M01 header: current-only fields; §1 profile exception (E-1); *Supersedes* = v6.4.20 and its hash; Methodology v1.4.
-- M03 tag normalization map (v6.4.19→v6.4.20 spellings) left in v6.4.20; M18 Appendix G section map left in v6.4.20 (pointer kept).
+- M03 tag normalization map (v6.4.19→v6.4.20 spellings; region R1) left in v6.4.20; M18 Appendix G section map (region R2) left in v6.4.20 (pointer kept).
 - M16 Appendix A: compact entries for v6.4.21 and v6.4.20, one line per earlier edition; full records at tag `dyad-v6.4.20` (E-2). Draft-round records, review verdicts and the 55 replaced release lines are not copied (Methodology v1.4 §13.7: no redundant copies).
 - M05, M06, M13, M15 history pointers removed; M02, M04, M07–M12, M14, M17 references repointed to the tagged edition.
 - M19 one footer.
@@ -57,37 +61,40 @@ No RID added, renamed or regraded. One scope tag changes text (§6.14 primitive-
 
 | Check | Extent | Result |
 |---|---|---|
-| Stage-1 edits applied | each edit asserts a unique match in live text; base hash asserted | PASS (25/25) |
-| Stage-1 acceptance search (closeout S-1) | live text searched for OPEN 3, R11, OPEN 21, P4, P2 provenance | no contradicting current status; observation on the "(R11)" label in §1/§6.5 recorded in the completion matrix |
-| RAW-CUBIC range | float evaluation, $p=3..24$, of the $z^2\bar z$ coefficient from the cubic Taylor terms vs the displayed formula | agreement $\le5\cdot10^{-15}$ (EV-RUN; not an exact proof; the owner's exact P1-2 check stands) |
-| FC-34 | Genesis v2.8.9 §6.3 read | ratio $16/3$, $\kappa_{\rm shear}=-2\sqrt3/3$, $\kappa_{\rm recoil}=-\tfrac12$ (EV-SRC-READ) |
-| Compaction | `tools/check_compaction.py` on intermediate → candidate with the movement map | PASS: re-derivation exact; 609 claim blocks in live text, 573 byte-identical, 36 changed by declared operations, 0 unexplained; RID set, heading anchors, source hashes and qualifier tags preserved; references resolve; presentation. Report: `evidence/dyad/v6.4.21/check_compaction_report.json` |
-| Negative controls | `tools/test_check_compaction.py` | 12/12 rejected: silent or declared assumption deletion; scope widening; wrong RID association (declared and undeclared); broken links (unknown tag, missing appendix); removed text not in the archive; live results relocated; two footers; hash pin altered; result paragraph deleted. Report: `evidence/dyad/v6.4.21/negative_controls_report.json` |
-| Reproduction | builders and checker rerun from repository state | PASS |
+| Stage-1 edits applied | each edit asserts a unique match in live text; base hash asserted | PASS (30/30) |
+| Stage-1 acceptance search (closeout S-1) | live text searched for OPEN 3, R11, OPEN 21, P4, P2 provenance | no contradicting current status |
+| RAW-CUBIC range | float evaluation, $p=3..24$ (this preparer); exact symbolic identity for all integer $p\ge3$ via $t=\tan(\pi/p)$ (reviewer, SESSION) | PASS; does not settle the historical identity |
+| S-6a | owner script run; exact sympy recomputation | PASS (EV-RUN; exact) |
+| FC-34 | Genesis v2.8.9 §6.3 read; reviewer ratio check | $16/3$ (EV-SRC-READ; reviewer PASS) |
+| Independent reproduction (round 1) | reviewer applied both diffs to v6.4.20 and replayed the checker | hashes and positive report byte-identical |
+| Compaction (round 2) | `tools/check_compaction.py` on intermediate → candidate with movement map and region registry | **PENDING**: re-derivation exact; 609 claim blocks in live text, 573 byte-identical, 36 changed by declared operations, 0 unexplained; RID set, heading anchors, source hashes and qualifier tags preserved; 27 archive targets resolved in the pinned v6.4.20; presentation passes; M03 and M18 structurally eligible, reviewer confirmation of regions R1, R2 pending. Report: `evidence/dyad/v6.4.21/check_compaction_report.json` |
+| Negative controls (round 2) | `tools/test_check_compaction.py`, with region confirmations simulated | 16/16 rejected, including the reviewer's REVIEW-N1 (hypothesis deleted as a reference edit), REVIEW-N2 (nonexistent H-999), REVIEW-N3 (live §6.7 relocated as tag examples) and its registered-region variant. Report: `evidence/dyad/v6.4.21/negative_controls_report.json` |
 
-Checker limits: byte comparison, regular-expression features; it does not assess semantic equivalence of rewritten prose or prove mathematics (listed in the report). A passing check authorizes nothing.
+Checker limits are listed in its report. A passing or pending check authorizes nothing.
 
 ## 4. Size report (`tools/dsn_lint.py`; informational)
 
 | Metric | v6.4.20 | v6.4.21 candidate |
 |---|---:|---:|
-| Bytes | 411,765 | 255,492 (−38.0%) |
+| Bytes | 411,765 | 256,463 (−37.7%) |
 | Lines | 2,793 | 1,561 |
 | Header characters | 3,251 | 2,193 |
-| Live body characters | 254,180 | 247,954 |
-| Appendix A characters | 150,738 | 3,647 |
-| §1 words | 1,434 | 1,466 (profile exception declared) |
+| Live body characters | 254,180 | 248,669 |
+| Appendix A characters | 150,738 | 3,899 |
+| §1 words | 1,434 | 1,500 (profile exception declared) |
+| Orientation core (§1–§4) | 41,502 chars, 4,997 words | 42,126 chars, 5,059 words; `AI_CONTEXT_CORE_END` present |
 | Footer lines | 1 (two-line footer) | 1 |
 | New RIDs | — | 0 (growth per new RID: N/A) |
-| History phrases in live text (advisory) | historical 49, relocated 8, superseded 11, former 8 | historical 52, relocated 0, superseded 11, former 7 |
+| History phrases in live text (advisory) | historical 49, relocated 8, superseded 11, former 8 | historical 53, relocated 0, superseded 11, former 7 |
 
-Report: `evidence/dyad/v6.4.21/size_report.json`. The remaining "historical"/"superseded" phrases are mostly current statements about historical objects (fits, archival normalizations); they were not reviewed one by one in this pilot.
+Counting method: in `evidence/dyad/v6.4.21/size_report.json`. The remaining "historical"/"superseded" phrases are mostly current statements about historical objects (fits, archival normalizations); they were not reviewed one by one in this pilot.
 
 ## 5. Records and closeout state
 
 - Completion matrix (C-1), evidence supplement (C-2), installation read-back (C-4): `records/dyad/DYAD_ADVISORY_v6_4_19_COMPLETION_MATRIX.md`.
 - Notices N16–N20 and the v6.4.21 delta N21 (C-3): `records/dyad/DYAD_NOTICES_N16_N21.md` (prepared, not sent; pending consumer decisions do not block adoption).
-- Open before the closeout criterion is met: S-6a owner check; C-2 files; sending the notices.
+- Open before adoption: reviewer confirmation of regions R1 and R2 (checker PENDING → PASS); review of the round-2 stage-1 additions; owner/PI adoption decision.
+- Open for the closeout criterion but not blocking adoption: C-2 files; sending the notices and recording their states.
 
 ## 6. Adoption
 

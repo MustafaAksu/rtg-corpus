@@ -92,7 +92,7 @@ In the "Dependency structure" paragraph:
 **S-4 | Notation table** [AR20-04, R6; row FB-23]
 - Correct the J_Q row: J_Q = 𝓛⁻¹i𝓛 is defined and used in §6.12 (L764–766).
 - Add rows for:
-  - U_ISP = (√3/2)ρ (§6.4) versus the tube U (§6.14) versus the projection-window U of OPEN 16;
+  - U_ISP = (√3/2)ρ (§6.4) versus the start/base-point set U = {0<Q≤1/625} (§6.14; its invariant six-phase tube is U_T) versus the projection-window U of OPEN 16;
   - formal ĥ, finite h₆ and OPEN-M h_src (SG-15);
   - the majorant M(s) versus the memory M/M_W, the matrix M, the amplitude M_p and the count M(D);
   - the NF-INV κ = M′(R) versus κ_bb;

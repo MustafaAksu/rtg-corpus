@@ -75,6 +75,7 @@ RER v0.2 already records `DYAD-THM-SMOOTH-EMBEDDING` from v6.4.18 ($C^\infty$ ex
 | RECOG | Current-status pointers that name RECOG objects: R11 CLOSED and the chart value (§1 OPEN 13 entry); N11 adopted use (§7 notices). Request: reconcile RECOG §7.2. |
 | DZT; AZ | `DYAD-THM-RAW-CUBIC`: caveat and admissible range $p\ge3$ (§2, Appendix F). |
 | Genesis; Triadic | FC-DYAD-34 bookkeeping cross-reference in §6.12: $(4\sqrt3/3)^2=16/3$ equals Genesis v2.8.9 §6.3's leading homogeneous-graph ratio; selects no birth policy. |
+| RECOG; Genesis | OPEN 13 archival object: $h_4$ coefficient field corrected to $\mathbb Q(i\sqrt3)$ (was "$\mathbb Q(\sqrt3)$"), confirmed exactly; $c_\theta^{(6)}$ and grades unchanged; still not a chart quantity (SG-19). |
 | all consumers | Layout-only compaction under Methodology v1.4: section numbers and anchors are unchanged; Appendix A is compact and earlier records stay at tag `dyad-v6.4.20`. No RID, grade or OPEN status changes. |
 
 State fields for N21 are added when it is sent.
