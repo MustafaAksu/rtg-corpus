@@ -1,28 +1,28 @@
-# Atlas Closeout Proposal — Dyadic DSN v6.4.20 → one errata/maintenance successor — FINAL v1.2
+# Atlas Closeout — Dyadic DSN v6.4.20 → errata/maintenance successor v6.4.21
 
 **To:** the Dyadic stream owner and the PI.
 **From:** the atlas owner (Claude). This note consolidates two independent completion checks of the same adopted file.
-- **[C]** `ATLAS_VERIFICATION_DYAD_v6_4_20_v1_0.md`: atlas owner, residuals R1–R8.
+- **[C]** `records/dyad/ATLAS_VERIFICATION_DYAD_v6_4_20.md`: atlas owner, residuals R1–R8.
 - **[G]** `RTG_DYADIC_v6_4_20_ATLAS_COMPLETION_REVIEW_v0_1.md`: peer reviewer, findings AR20-01 to AR20-09. It comes with `DYAD_v6_4_20_ATLAS_ROW_CHECK.csv` (a 34-row assessment) and `DYAD_v6_4_20_EXTERNAL_VERIFICATION_RECEIPT.md`.
 
 **Date:** 22 October 2026.
-**Edition:** v1.2 supersedes v1.1. It contains the peer reviewer's four clarifications (§7) and the size-discipline pilot instruction (§8, PI decision of 22 Oct 2026). Neither opens a new advisory cycle.
+**Revision:** working record at a fixed path; earlier rounds (v1.0–v1.2) are in git history. This round applies editor finding M14R-05 (`records/methodology/DSN_METHODOLOGY_v1_4_EDITOR_REVIEW.md`): contrary instructions are replaced at their own locations. Governing methodology: DSN Methodology v1.4 (tag `methodology-v1.4`).
 **Status:** noncanonical closeout proposal. It is not an amendment, adoption, regrade or notice. The owner decides every item.
 
-**Target:** `RTG_DYADIC_OSCILLATOR_DSN_v6_4_20.md`, 2,793 lines, 411,765 bytes, SHA-256 `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852`.
+**Target:** `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` at tag `dyad-v6.4.20`, 2,793 lines, 411,765 bytes, SHA-256 `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852`.
 
-**Contract being closed:** `ATLAS_ADVISORY_DYAD_v6_4_19_FINAL_v1_0.md`, 34 rows.
+**Contract being closed:** `records/dyad/ATLAS_ADVISORY_DYAD_v6_4_19.md`, 34 rows.
 
 ---
 
 ## 0. Decision requested
 
 1. **Keep v6.4.20 as adopted.** Every scientific result stays at its current scope. Nothing is reopened, and no full NF, interval-arithmetic or smooth-embedding campaign is repeated.
-2. **Issue one batched errata/maintenance successor** (for example v6.4.21). It implements §2 below, carries its own hash, and sends a notice delta. v6.4.20 is never overwritten.
+2. **Issue one batched errata/maintenance successor, v6.4.21.** It implements §2 below and the size-discipline pilot (§7) in the same release, carries its own hash and tag, and sends a notice delta. v6.4.20 stays retrievable at its tag.
 3. **Close the advisory administratively** with the records in §3: an owner completion matrix, an evidence supplement, notices and installation read-back.
 4. **Leave Tier C research open with named targets** (§4). It does not block maintenance acceptance.
 
-**Final review of the successor is change-focused.** It checks only that S-1 to S-6 are implemented, E-1 is met, archive moves lose nothing, the dependency and notice records are made, and the new edition identity is correct. Earlier verifications of unchanged scientific content are not re-run. If a mathematical statement is actually changed, only the check that change needs is added.
+**Final review of the successor is change-focused.** It checks only that S-1 to S-6 are implemented, E-1 and E-2 are met, the compaction check passes (§7), the dependency and notice records are made, and the new edition identity is correct. Earlier verifications of unchanged scientific content are not re-run. If a mathematical statement is actually changed, only the check that change needs is added.
 
 **What is already settled:**
 - **External hash verification of v6.4.20.** [G] verified it independently: 12/12 package hashes, deterministic r2→final rebuild, checker R0–R11 12/12, and 11/11 negative controls rejected. [C] independently recomputed the hash and the 12/12 sums.
@@ -68,18 +68,18 @@ All line numbers in [G] were re-located by the atlas owner in the target file. L
 | §2 closed list, OPEN 19 line | "formal centralizer of T⁶ is {exp(sX)}" | add "tangent to the identity, DG(0)=I" |
 | §1 L126 | F1–F3 "No existence is asserted." | add "existence: DYAD-THM-SMOOTH-EMBEDDING (§6.17)" |
 | §5 spiral-residual row | P4 transfer among the forbidden conclusions | "not implied by the per-block result alone; see DYAD-THM-OPEN3-ASYMPTOTIC-PHASE" |
-| §6.14 L863 and L874 (and following "recorded distinctions") | "remains an open provenance item", "remainder not certified", "only the chart-variable law is certified" | keep as dated records, but add a current pointer at each: the v6.4.16 record (the reproduced h, J coefficients equal the P2B v2 certificate coefficients in exact arithmetic); OPEN 21 |
+| §6.14 L863 and L874 (and following "recorded distinctions") | "remains an open provenance item", "remainder not certified", "only the chart-variable law is certified" | replace in place with the current status: coefficient verification complete (v6.4.16 record: the reproduced h, J coefficients equal the P2B v2 certificate coefficients in exact arithmetic); primitive remainder → OPEN 21. The superseded wording stays in v6.4.20 (tag `dyad-v6.4.20`); Appendix A records the change once |
 | §8 L1262 (DYAD-ART-ATLAS-P2) | "r2 OWNER-RUN" | the recorded r2 reviewer replays, attributed as recorded |
 
 *Scope of the provenance pointer.* The v6.4.16 discharge is an **exact coefficient equality**, not a byte identity of files; §6.14 itself says neither file is a byte copy of the other. The pointer must say "coefficient verification complete" and must not imply that any byte-identity check was done. The earlier review's provenance-closure suggestion is read with the same limit.
 
-*Acceptance:* a search for OPEN 3, R11, OPEN 21, P4 and P2 provenance in live text (§§0–9, App. B–G) finds no unqualified status that contradicts the current one.
+*Acceptance:* a search for OPEN 3, R11, OPEN 21, P4 and P2 provenance in live content (by profile, Methodology v1.4 §1.1: §§0–9 and the live technical appendices) finds no status that contradicts the current one. An explicit historical quotation in Appendix B is not a contradictory current status.
 
 **S-2 | N11 adopted use** [AR20-02; row FB-18]
-- Split the N11→RECOG row into two entries: "v0.3.21: RECEIVED — reference import (SG-R14)" and "v0.3.22: ADOPTED USE — `RECOG-THM-A1A-CD-IDENTIFICATION` depends on T1/T2 (`DYAD-THM-OPEN3-ASYMPTOTIC-PHASE`), at RECOG's pin".
-- Do not invent a receipt and do not repin.
-- Ask RECOG to reconcile its own §7.2 mirror.
-- This also corrects the FINAL advisory FB-18 and the atlas.
+- The live N11→RECOG row records the current adopted use and its evidence: "v0.3.22: ADOPTED USE — `RECOG-THM-A1A-CD-IDENTIFICATION` depends on T1/T2 (`DYAD-THM-OPEN3-ASYMPTOTIC-PHASE`), at RECOG's pin".
+- The earlier event ("v0.3.21: RECEIVED — reference import (SG-R14)") is preserved in the notice history of v6.4.20 (tag) and in the v6.4.21 release record, with a pointer from the live row. It is not erased, and no receipt is invented.
+- Do not repin. Ask RECOG to reconcile its own §7.2 mirror.
+- This also corrects the advisory row FB-18 and the atlas.
 
 **S-3 | Subclaim dependencies in §7** [AR20-03; row FA-01]
 
@@ -92,7 +92,7 @@ In the "Dependency structure" paragraph:
 **S-4 | Notation table** [AR20-04, R6; row FB-23]
 - Correct the J_Q row: J_Q = 𝓛⁻¹i𝓛 is defined and used in §6.12 (L764–766).
 - Add rows for:
-  - U_ISP = (√3/2)ρ (§6.4) versus the tube U (§6.14) versus the projection-window U of OPEN 16;
+  - U_ISP = (√3/2)ρ (§6.4) versus the start/base-point set U = {0<Q≤1/625} (§6.14; its invariant six-phase tube is U_T) versus the projection-window U of OPEN 16;
   - formal ĥ, finite h₆ and OPEN-M h_src (SG-15);
   - the majorant M(s) versus the memory M/M_W, the matrix M, the amplitude M_p and the count M(D);
   - the NF-INV κ = M′(R) versus κ_bb;
@@ -112,17 +112,14 @@ In the "Dependency structure" paragraph:
 ### 2.2 Size and orientation (E-1 is required; E-2 is should-fix)
 
 **E-1 | §1 and the "unchanged" claim** [AR20-07; row FB-22] — **required record obligation**
-- §1 is 1,438 words. Methodology v1.3 §1 targets 200–400 words; 500 is not an absolute cap, but above it the content must be relocated **or** a justified profile exception declared. One of the two is required in the successor. A plain "deferred" note does not replace a profile exception.
-- Either compact §1 to a status list with pointers, or declare the technical-ledger profile exception with its reason.
-- Rewrite the footer and release-record wording:
-  - "r2→final changes publication metadata only; registered RID grades are retained; the P1 corrections to unnumbered statements (§6.5 backbone [ALG]→[DEF]; §6.6 [THM]→[ALG]/[DEF]) are recorded separately."
-  - Describe tag-map preservation as semantic.
+- §1 is 1,438 words. Methodology v1.4 §1 targets 200–400 words; above 500, either relocate the content or declare a profile exception in the header with a one-line reason. One of the two is required in v6.4.21; a generic "deferred" note does not meet it.
+- v6.4.21 has one current footer. The v6.4.20 r2→final comparison and the P1 retagging explanation ("r2→final changes publication metadata only; registered RID grades are retained; the P1 corrections to unnumbered statements — §6.5 backbone [ALG]→[DEF]; §6.6 [THM]→[ALG]/[DEF] — are recorded separately"; tag-map preservation is semantic) belong in the v6.4.21 release record as a correction of the v6.4.20 record, not in inherited footer prose. The v6.4.20 release record itself is not edited.
 
-**E-2 | Appendix A size** [R8; row FB-22]
+**E-2 | Appendix A size** [R8; row FB-22] — executed pilot deliverable
 - The v6.4.20 draft-round records add about 92k characters: r1 44k, r2 13k, P1 13k, adoption 22k.
-- Move the long draft comparisons and review correspondence to a versioned, hash-pinned archive file (they may stay complete there).
-- **Appendix A keeps, per edition:** a short scientific change summary; the affected RIDs; every scope and grade correction; links (with hashes) to the detailed archive. What was corrected and why must stay readable in the DSN itself (Methodology preservation rule).
-- Keep the 55 verbatim-quoted release lines as an old→new map in the release record.
+- Leave the long draft comparisons, review correspondence and the 55 verbatim-quoted release lines (old→new map) in v6.4.20, where they stay complete at its tag; the v6.4.21 release record cites them there and does not copy them (Methodology v1.4 §13.7, no redundant copies).
+- **Appendix A keeps, per edition:** a compact change summary; the affected RIDs; every scope and grade correction; the release-record locator and predecessor tag (Methodology v1.4 §1). Appendix B keeps the required scientific correction records and the currently operative negative constraints.
+- If E-1 or E-2 is not executed, the pilot is reported incomplete; it is not closed by a stated reason.
 
 ## 3. Closeout records (outside the DSN text)
 
@@ -145,6 +142,7 @@ In the "Dependency structure" paragraph:
 - The successor gets its own notice delta.
 - Route all notices through the PI.
 - Keep separate fields for sent, received, statement accepted and adopted use.
+- Notices not yet accepted or adopted by other streams do not block adoption of v6.4.21; they stay listed as pending (§5).
 
 | Notice | Recipients | Content |
 |---|---|---|
@@ -154,7 +152,7 @@ In the "Dependency structure" paragraph:
 | N19 | RECOG; RRF | R9 claim-level import row; S_h = j⁶R₀ routing; **N11 adopted-use correction (S-2)**; FC-32 offered; frame rule |
 | N20 | Triadic; plus RER/ER-2B through the PI | **new v6.4.20 content only:** `DYAD-ALG-KP-FRAME-SCALE` frame qualifier (κ_shear unchanged) and `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (no triad transfer). RER v0.2 already records `DYAD-THM-SMOOTH-EMBEDDING` from v6.4.18 (C^∞ existence, generator uniqueness under DX(0)=0, qualitative radius bound; analyticity and triad transfer kept separate); N20 does not ask RER to close smooth existence. That earlier acceptance does not extend to the new v6.4.20 results |
 
-**C-4 | Installation read-back.** Read back the project copy of v6.4.20 and compare it with `0b2d5a44…4852`. Record this separately from the external byte verification.
+**C-4 | Installation read-back.** Read back the project copy of v6.4.20 (now synchronized from `rtg-corpus`) and compare it with `0b2d5a44…4852`. Record this separately from the external byte verification. Repeat for v6.4.21 after its installation.
 
 ## 4. Research items (may stay open; not maintenance blockers)
 
@@ -198,11 +196,14 @@ The 19 + 8 + 3 + 4 split is a working summary, not a closure type.
 **Research (§4):** FC-31, FC-32, FC-33, FC-34 (FC-34: prior ACCEPT; implementation or reasoned deferral record missing). FC-32's SESSION result is not adopted silently during maintenance; OPEN 21 keeps its R9 dependency.
 
 **Completion criterion for the advisory:**
-- the successor is adopted, with S-1 to S-6 implemented (E-1 and E-2 implemented, or recorded with a reason);
-- C-1 to C-4 are on record;
+- v6.4.21 is adopted, with S-1 to S-6 implemented and E-1 and E-2 executed;
+- the compaction check (§7) passes on the stage-2 delta, and the stage-1 scientific and scope changes have had their targeted review;
+- C-1 to C-4 are on record, with FC-34 implemented or deferred with a dated reason;
 - the atlas is refreshed from the adopted successor.
 
-**Two closures are kept separate (Methodology v1.3 §13.5):** acceptance of the Dyadic maintenance release ≠ completed synchronization of every consumer. Dyadic can complete its own corrections, evidence package and notices while other streams' adoption decisions are still pending. Pending consumer decisions do not reopen the Dyadic successor, and the corpus is not described as fully synchronized until they are recorded.
+Notices sent but not yet accepted by other streams are recorded as pending; they do not block adoption of v6.4.21.
+
+**Two closures are kept separate (Methodology v1.4 §13.5):** acceptance of the Dyadic maintenance release ≠ completed synchronization of every consumer. Dyadic can complete its own corrections, evidence package and notices while other streams' adoption decisions are still pending. Pending consumer decisions do not reopen the Dyadic successor, and the corpus is not described as fully synchronized until they are recorded.
 
 ## 6. Atlas self-corrections recorded with this closeout
 
@@ -212,23 +213,16 @@ The 19 + 8 + 3 + 4 split is a working summary, not a closure type.
 - Atlas source table: RER is listed as "v0.2 DRAFT r4.6 (2026-10-19)". It will read **v0.2 ADOPTED 21 Oct 2026, NONCANONICAL**, keeping the exception for the two blocked ER-2B records (T6D, CARRIER). H1's RER.E2 item is re-checked against v0.2, which already records smooth existence.
 - The atlas DYAD slice will be regenerated from the adopted successor, keeping any open residual as an L5 line.
 
-## 7. v1.1 change log (peer clarifications, same instruction)
+## 7. Pilot implementation (Methodology v1.4)
 
-| # | Clarification | Where applied |
-|---|---|---|
-| 1 | Exact coefficient equality ≠ byte identity of files; precise "no new finding" sentence | §1, §2 S-1 |
-| 2 | RER already holds the v6.4.18 smooth-embedding result; N20 carries only new v6.4.20 content; atlas shows RER v0.2 ADOPTED | §3 C-3, §6 |
-| 3 | E-1 is a required record obligation; E-2 keeps a scientific change summary, affected RIDs, scope/grade corrections and archive links in Appendix A | §2.2 |
-| 4 | FA-05/FB-20 "main scope implemented; residual open"; FC-34 "prior ACCEPT; implementation or deferral record missing"; maintenance acceptance ≠ consumer synchronization; change-focused final review | §0, §3, §4, §5 |
+v6.4.21 is the single target release. It combines the closeout errata with a mechanically checked compaction. There is no separate compaction release and no full scientific re-audit. Methodology v1.4 is adopted (tag `methodology-v1.4`), so the pilot cites it directly.
 
-## 8. Size-discipline pilot (v1.2; PI decision of 22 October 2026)
+**Two build stages, one target:** `adopted v6.4.20 → corrected intermediate → compacted v6.4.21 candidate`.
+1. **Stage 1 — corrections.** S-1 to S-6, the accepted FC-34 action, and the E-1 footer/record wording. The intermediate's hash is recorded. Its delta gets the targeted review its content needs; unchanged mathematics and its certificates are not reopened. An intermediate file is not an adopted version.
+2. **Stage 2 — compaction.** Layout, deduplication, navigation and history relocation only, under Methodology v1.4 §§1, 1.1 and 13.6: current-only header (*Supersedes* = v6.4.20 and its hash); one footer; §1 compacted or an exception declared (E-1); Appendix A compacted, with the draft-round records left in v6.4.20 at its tag (E-2); superseded prose and stacked overlays removed from live sections. A movement map records every changed block. New substantive claims, including Tier C results, cannot enter here.
 
-The successor (e.g. v6.4.21) is also the pilot of `DSN_METHODOLOGY_v1_4_AMENDMENT_DRAFT_v0_1.md`, in the same release (no separate compaction release).
-- **Live sections (§1.1):** remove superseded wording and dated overlays from §§0–9; one home per statement; one current pin per reference. S-1 is implemented this way: current status at the point of use, with the old form recorded once in Appendix A.
-- **Header/footer (A2):** one line per field; *Supersedes* = v6.4.20 and its hash only; one footer.
-- **§1 (A3):** compact to 200–400 words or declare the profile exception in the header (E-1).
-- **Appendix A (A5):** v6.4.20 draft-round records (r1, r2, P1, adoption, the 55 quoted lines) move to the release record; older entries move to `DYAD_HISTORY.md` in the project (A8); Appendix A keeps per-version summaries and pointers (E-2).
-- **Checker (A7):** the release checker adds the compaction gates (RIDs, tag sequence, OPEN lines and math spans preserved; every removed passage found byte-identical in v6.4.20, the release record or `DYAD_HISTORY.md`). The scientific part (S-1 to S-6) keeps the change-focused review of §0.
-- **Size report (A9):** record size, growth and §1 word count in the release record. No fixed budget.
+**Checks.** `tools/check_compaction.py` checks the stage-2 delta against the intermediate, not against v6.4.20, so stale statuses corrected in stage 1 are not required to survive. It preserves qualified claim blocks (statement, status, assumptions, scope, RID association, OPEN obligations, evidence links), accounts for every removed passage, and reports its parser limits. Its negative controls must reject silent assumption deletion, scope widening, wrong RID association and broken source links. `tools/dsn_lint.py` gives the informational size report. Both reports go in the release record. A passing check does not authorize publication.
+
+**Release.** Owner/PI adoption is recorded in `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`, then merge and the tag `dyad-v6.4.21`. Earlier release records are not edited.
 
 *End of closeout proposal. No DSN was edited; no notice was sent.*

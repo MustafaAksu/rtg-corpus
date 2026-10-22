@@ -1,0 +1,33 @@
+{
+ "purpose": "Source regions that a compaction may relocate under the tag_examples or navigation exemption (tools/check_compaction.py). An entry takes effect only when a reviewer fills confirmed_by.",
+ "study": "DYAD",
+ "target": "v6.4.21",
+ "regions": [
+  {
+   "id": "R1",
+   "kind": "tag_examples",
+   "archive": "dyad-v6.4.20",
+   "start": "**Tag normalization map (v6.4.20).**",
+   "end": "**Section headings.**",
+   "sha256": "443fa0b0d35b21bacfe0b3d3316d09cb6407028f4f7df856409052e763f9b44b",
+   "chars": 2156,
+   "description": "Legacy-spelling map v6.4.19/P1 → canonical rendering; claim tags appear only as spellings in table rows; no identifiers.",
+   "same_bytes_in_v6.4.20": true,
+   "confirmed_by": "ChatGPT — receiving reviewer; round-2 scoped review",
+   "confirmed_at": "2026-10-22"
+  },
+  {
+   "id": "R2",
+   "kind": "navigation",
+   "archive": "dyad-v6.4.20",
+   "start": "\n## Appendix G — Old→new section map {#appendix-g}",
+   "end": "\n---\n\n*END OF DOCUMENT",
+   "sha256": "6e8466bdd4380ee3eca36a7375f042ba431f1106111de4bcaff8c59a034d2562",
+   "chars": 7603,
+   "description": "v6.4.19 → v6.4.20 heading map; one [DEF] line, no identifiers.",
+   "same_bytes_in_v6.4.20": true,
+   "confirmed_by": "ChatGPT — receiving reviewer; round-2 scoped review",
+   "confirmed_at": "2026-10-22"
+  }
+ ]
+}

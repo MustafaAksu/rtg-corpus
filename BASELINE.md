@@ -13,7 +13,7 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 |---|---|---|---|---|---|
 | Methodology | `DSN_METHODOLOGY.md` | v1.4 | `cdacab5feb79161cd86313086065ca67313ef354e30ceaf205386cf2f3a0f2df` | OWNER: release record `records/methodology/DSN_METHODOLOGY_v1.4_RELEASE_RECORD.md` | `methodology-v1.4` |
 | Programme | `RTG_PROGRAMME_OVERVIEW.md` | v1.2 | `4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359` | XREF: RRF v0.7 §10 | `programme-v1.2` |
-| DYAD | `RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.20 | `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852` | OWNER: release record; external verification receipt | `dyad-v6.4.20` (v6.4.19: `dyad-v6.4.19`) |
+| DYAD | `RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.21 | `a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d` | OWNER: release record `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`; receiving review rounds 1–2 | `dyad-v6.4.21` (v6.4.20: `0b2d5a44…4852`, `dyad-v6.4.20`; v6.4.19: `dyad-v6.4.19`) |
 | TRIAD | `RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.6.1 | `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f` | XREF: RER v0.2 §7 (`TRIAD161`, byte-verified there) | `triad-v1.6.1` |
 | GEN | `RTG_GENESIS_GEOMETRY_DSN.md` | v2.8.9 | `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc` | XREF: OFN v0.10 IMP-O10-01 (`d143673e…c6fc`) | `gen-v2.8.9` |
 | TDRG | `RTG_DISCRETE_GENESIS_DSN.md` | v2.12.13 | `aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f` | XREF: RER v0.2 §7 | `tdrg-v2.12.13` |

@@ -1,0 +1,52 @@
+{
+ "file": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md (v6.4.21 candidate)",
+ "bytes": 256463,
+ "lines": 1561,
+ "header_chars": 2193,
+ "live_body_chars": 248669,
+ "appendix_a_chars": 3899,
+ "counting_method": "- bytes and lines of the UTF-8 file; characters for regions.\n- regions: header = start of file to the first \"## \" heading; live body = header end to\n  \"## Appendix A\" plus \"## Appendix B\" to the footer; Appendix A = its own region.\n- §1 words: whitespace-separated tokens between the \"## §1.\" heading and the next \"## \" heading.\n- RIDs: registered-namespace identifiers (pattern in check_compaction.py); new RIDs = RIDs in\n  FILE absent from PREVIOUS_EDITION.\n- header fields: characters per \"**Field:**\" line of the header.\n- Appendix A words per edition: tokens under each \"### v…\" heading.\n- history phrases: case-insensitive counts in the live body of the phrases in HISTORY.\n- orientation core (Methodology v1.4 §6.1): \"## §1.\" up to \"## §5.\" for a standard technical\n  ledger; characters, lines and words; whether the AI_CONTEXT_CORE_END marker is present.\n- near-duplicates: paragraphs of at least 200 characters whose 8-word shingle sets have\n  Jaccard similarity >= 0.8 with another paragraph of the live body.",
+ "section1_words": 1500,
+ "orientation_core": {
+  "chars": 42126,
+  "lines": 351,
+  "words": 5059,
+  "core_end_marker_present": true
+ },
+ "header_fields": {
+  "Title": 70,
+  "Date": 27,
+  "Scope": 182,
+  "Document class": 293,
+  "Document status": 118,
+  "Supersedes": 151,
+  "Companion documents": 59,
+  "DSN Methodology": 53,
+  "Programme tier": 93,
+  "Status summary": 998,
+  "Release record": 101
+ },
+ "appendix_a_words_per_edition": {
+  "v6.4.21 — 22 October 2026 — DRAFT candidate": 207,
+  "v6.4.20 — 21 October 2026 — Adopted": 297
+ },
+ "footer_lines": 1,
+ "history_phrases_live": {
+  "overlay": 1,
+  "historical": 53,
+  "superseded": 11,
+  "former": 7,
+  "retained as": 3,
+  "no longer": 2
+ },
+ "near_duplicate_paragraphs": [],
+ "rids_total": 182,
+ "previous": {
+  "file": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md at tag dyad-v6.4.20",
+  "bytes": 411765
+ },
+ "growth_bytes": -155302,
+ "growth_percent": -37.7,
+ "new_rids": [],
+ "growth_per_new_rid": "N/A"
+}

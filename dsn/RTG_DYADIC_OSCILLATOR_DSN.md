@@ -1,15 +1,16 @@
-# RTG_DYADIC_OSCILLATOR_DSN_v6.4.20
+# RTG_DYADIC_OSCILLATOR_DSN_v6.4.21
 
 **Title:** RTG Dyadic Oscillator Study — Canonical Scientific Ledger  
-**Edition:** v6.4.20 — adopted 21 October 2026  
-**Status:** ADOPTED — owner/PI adoption recorded 21 October 2026 (`DYAD v6.4.20 — OWNER ADOPTION AUTHORIZED`) after external review of DRAFT r2 (`DYAD v6.4.20 DRAFT r2 — REVIEW ACCEPTED`; r2 SHA-256 `f2030f853b94a7caa1d1d7c4afd8bdf9b6059582d331100bb0033226fd68465e`). Earlier reviews: `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED` (P1 working file `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905`) and `v6.4.20 r1 — REVIEW ACCEPTED WITH MINOR CORRECTIONS` (r1 `a5c70f5b1468ab01ba1cdf932fb9205c4bf00976a2b6523e8b90210e5e457c4a`). Built by `build_dyad_v6_4_20_r1.py` (P1 → r1), `build_dyad_v6_4_20_r2.py` (r1 → r2) and `release_v6_4_20.py` (r2 → this file, labels and metadata only). Release record: `RTG_DYADIC_v6_4_20_RELEASE_RECORD.md`; external verification of this file's SHA-256 is recorded separately.  
+**Date:** 22 October 2026  
 **Scope:** The primitive 2D non-symplectic dyad map, its six-step resonant dynamics, ISP crossing geometry, normalized $p$-step structure, and $p$-resonance generalization program.  
-**Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19` (adopted 20 Oct 2026, `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`; kept unchanged as the historical adopted release). Lineage and all release records: Appendix A.  
-**Companion and consumer editions:** one current-edition table, §7.0.  
-**DSN Methodology:** `DSN_METHODOLOGY_v1.3`. Legacy compound tags are rendered in canonical form (normalization map after the Local Tag Aliases); no grade changes.  
+**Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,500 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).  
+**Document status:** ADOPTED — PI, 22 October 2026 (closeout errata and Methodology v1.4 compaction pilot). Adoption record: `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`.  
+**Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.20` (SHA-256 `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852`; tag `dyad-v6.4.20`).  
+**Companion documents:** one current-edition table, §7.0.  
+**DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Programme tier:** Tier 3 — Continuous Programme, upstream source (Programme Overview §6).  
-**Status summary:** The dyad map has theorem-grade and exact-algebraic certification for the six-step resonant module ($c_{21}$, the local quintic normalization pipeline, OPEN 11, OPEN 18); the local return enclosure of §6.14 (exact degree-6 normalizer and jet, primitive contraction with invariant tube, inverse coordinates, normalized remainders); the OPEN 3 spiral-residual results and the primitive-variable remainder (OPEN 21; conditional on `RECOG-THM-R9-MEMORY`); the L-PHASE angular remainder on row A (`[THM]`; the constant $\tfrac{403}{250}$ is an upper bound); the formal centralizer and ℤ₆ generator (§6.16); Lemma F with F1–F3 and the smooth flow embedding (§6.17). OPEN 9 is PARTIAL: low-degree anti-holomorphic vanishing is `[ALG]` for $b\in\{2,3,4\}$ ($p\ge b+2$), it fails at $b=5$ for every $p\ge6$, all-$b\ge5$ persistence is `[OPEN]`, and the $q=4,(0,3)$ phase law is closed for all $p$. OPEN 20 is PARTIAL: B-∞ existence and flat uniqueness are CLOSED; B-an and B-6 are OPEN. v6.4.20 adds the ATLAS P1 scientific corrections and the P2 interface work (Appendix A). Its 13 new RIDs are registered by this adoption; no earlier RID is renamed or regraded.  
-**Adoption and draft records:** Appendix A, "v6.4.20 — adopted 21 October 2026", "v6.4.20 DRAFT r2" and "v6.4.20 DRAFT r1"; session records `DYAD_ATLAS_P2_R2_CORRECTION_SESSION_v0_1.md` and `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md`. The v6.4.19 header, adoption metadata, release summaries and footers are preserved verbatim there.
+**Status summary:** The dyad map has theorem-grade and exact-algebraic certification for the six-step resonant module ($c_{21}$, the local quintic normalization pipeline, OPEN 11, OPEN 18); the local return enclosure of §6.14 (exact degree-6 normalizer and jet, primitive contraction with invariant tube, inverse coordinates, normalized remainders); the OPEN 3 spiral-residual results and the primitive-variable remainder (OPEN 21; conditional on `RECOG-THM-R9-MEMORY`); the L-PHASE angular remainder on row A (`[THM]`; the constant $\tfrac{403}{250}$ is an upper bound); the formal centralizer and ℤ₆ generator (§6.16); Lemma F with F1–F3 and the smooth flow embedding (§6.17). OPEN 9 is PARTIAL: low-degree anti-holomorphic vanishing is `[ALG]` for $b\in\{2,3,4\}$ ($p\ge b+2$), it fails at $b=5$ for every $p\ge6$, all-$b\ge5$ persistence is `[OPEN]`, and the $q=4,(0,3)$ phase law is closed for all $p$. OPEN 20 is PARTIAL: B-∞ existence and flat uniqueness are CLOSED; B-an and B-6 are OPEN.  
+**Release record:** `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`. Version history: Appendix A.
 
 ## Local Tag Aliases
 
@@ -20,40 +21,8 @@
 | `[ENG/NUM strong]` | `[ENG]` co-certified with `[NUM strong]` | engineering result cross-verified numerically |
 | `[ALG/NUM]` | `[ALG]` co-certified with `[NUM]` | exact identity cross-verified numerically |
 
-`[DEF]` Ledger entries use canonical claim statuses from `DSN_METHODOLOGY_v1.3`. `[v6.4.20]` Legacy compound spellings in live text are rendered by the normalization map below; every rendering keeps the grade token. The four aliases above remain declared.  
+`[DEF]` Ledger entries use canonical claim statuses from `DSN_METHODOLOGY_v1.3`. `[v6.4.20]` Legacy compound spellings in live text are rendered by the tag normalization map of v6.4.20 (tag `dyad-v6.4.20`, Local Tag Aliases); every rendering keeps the grade token. The four aliases above remain declared.  
 `[DEF]` Canonical tags such as `[ALG via IA]` and `[THM-ALG via IA]` are used directly and do not require local aliasing.
-
-**Tag normalization map (v6.4.20).** Left: legacy spelling in v6.4.19 / P1 live text. Right: canonical rendering. The grade token is unchanged in every row; qualifiers move into `[scope:]`, `[assuming:]`, `[proof:]` or a version marker.
-
-| Legacy spelling | Canonical rendering |
-|---|---|
-| `[ALG, exact under OPEN-P0 representation-phase convention]` | `[ALG]` `[assuming: OPEN-P0 representation-phase convention]` |
-| `[ALG, exact]` | `[ALG]` |
-| `[ALG structure / NUM strong]` | `[ALG]` `[scope: structure]` `[NUM]` `[scope: strong numerical evidence]` |
-| `[ALG structure]` | `[ALG]` `[scope: structure]` |
-| `[ALG candidate]` | `[CAND]` `[target: ALG]` |
-| `[ALG finite sweep]` | `[ALG]` `[scope: finite sweep]` |
-| `[ALG validation]` | `[ALG]` `[scope: validation]` |
-| `[ALG — formal second order; remainder not certified]` | `[ALG]` `[scope: formal second order; remainder not certified]` |
-| `[ALG — formal]` | `[ALG]` `[scope: formal]` |
-| `[ALG / ENG]` | `[ENG]` `[ALG]` |
-| `[ENG / NUM strong]` | `[ENG]` `[NUM]` `[scope: strong numerical evidence]` |
-| `[NUM strong]` | `[NUM]` `[scope: strong numerical evidence]` |
-| `[CAND/conditional]` | `[CAND]` `[scope: conditional]` |
-| `[HYP inherited]` | `[HYP]` `[scope: inherited]` |
-| `[THM — analytic]` | `[THM]` `[scope: analytic]` |
-| `[THM — conditional on RECOG-THM-R9-MEMORY]` | `[THM]` `[assuming: RECOG-THM-R9-MEMORY]` |
-| `[THM — conditional on R9]` | `[THM]` `[assuming: RECOG-THM-R9-MEMORY]` |
-| `[THM — conditional on T1]` | `[THM]` `[assuming: T1]` |
-| `[THM — conditional]` | `[THM]` `[assuming: hypotheses stated in the entry]` |
-| `[THM/ALG, all-$p$]` | `[THM]` `[proof: exact algebraic identity]` `[scope: all $p=4s$, $s\ge2$]` |
-| `[THM/ALG]` | `[THM]` `[proof: exact algebraic identity]` |
-| **`[CLOSED v6.4.9, THM/ALG]`** | **CLOSED (v6.4.9)** `[THM]` `[proof: exact algebraic identity]` |
-| `[COR v6.4.11: "iff $b\le4$" shorthand withdrawn]` | `[COR]` `[v6.4.11: "iff $b\le4$" shorthand withdrawn]` |
-| `[COR v6.4.10]` | `[COR]` `[v6.4.10]` |
-| `[COR v6.4.11]` | `[COR]` `[v6.4.11]` |
-| `[P1 COR]` | `[COR]` `[v6.4.20]` |
-| `[P1]`, `[P1: …]` | `[v6.4.20]`, `[v6.4.20: …]` |
 
 **Section headings.** A §6 heading lists the grades of the entries in that subsection ("entry grades: …"), computed from the entry tags. It is an index, not a grade of the section. A subsection without tagged entries (§6.13, a specification table) keeps its former heading tag.
 
@@ -68,7 +37,7 @@
 | `DYAD-CAND-FLAT-CENTRALIZER` | `[THM]` (Lemma F) | §6.17 |
 | `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` | `[THM]` `[assuming: hypotheses stated in the entry]` (F1–F3; existence of the $C^\infty$ object is a hypothesis) | §6.17 |
 | `DYAD-CAND-P0-DYADIC` | `[CAND]` `[scope: conditional]` | §6.11, §6.12 |
-| `DYAD-CAND-VANISH-B3`, `DYAD-CAND-VANISH-B4` | retired identifiers; promoted in v6.2 to `DYAD-ALG-VANISH-B3`, `DYAD-ALG-VANISH-B4` `[ALG]` | Appendix A, v6.2 |
+| `DYAD-CAND-VANISH-B3`, `DYAD-CAND-VANISH-B4` | retired identifiers; promoted in v6.2 to `DYAD-ALG-VANISH-B3`, `DYAD-ALG-VANISH-B4` `[ALG]` | Appendix A of v6.4.20 (tag `dyad-v6.4.20`), v6.2 |
 | `DYAD-CAND-PHISTAR-ENTRY-PHASE` | never a Dyadic identifier (former NUMGEN pin; removed by NUMGEN v1.20.8, notice N3) | §7 notices |
 
 ---
@@ -101,7 +70,7 @@ The equality $\det J=1$ holds on $\rho=0$ and on $\cos\eta=0$, not globally. Non
 
 `[ALG]` **Canonical constants.** $\tau = 2\sqrt{3}/3$, $|\sigma|^2 = 19/12$, $\lambda_{\rm DSI} = e^{\pi\sqrt{3}} \approx 230.76$. Definition-ledger identities (v6.4.11, §6.3): $Q_{\rm true}$ is the unique $A$-invariant quadratic form up to scale; $\tau=(\det B)^{-1/2}$; $F=T^6$ is a cubic parabolic germ.
 
-`[ALG]` `[scope: fixed-radius uniform-angle mean in the raw $W$-frame]` **Backbone coefficient $47/54$.** $\mathcal A_{\rm raw}(Q):=\tfrac1{2\pi}\int_0^{2\pi}|F_W(\sqrt Q\,e^{i\theta})|^2d\theta=Q-Q^2+\tfrac{47}{54}Q^3+O(Q^4)$ (§6.5). `[COR]` `[v6.4.10]` The former unqualified scalar backbone map did not identify its averaging/projection operator; the long-orbit backbone law $Q_m\sim1/(m+\kappa_{\rm bb})$ (`[v6.4.20]` $\kappa\to\kappa_{\rm bb}$; certified leading decay: §6.5) is retained as a historical fitted surrogate under its own definition, and its identification with $\mathcal A_{\rm raw}$ or with any final-chart quantity is `[OPEN]` (R11).
+`[ALG]` `[scope: fixed-radius uniform-angle mean in the raw $W$-frame]` **Backbone coefficient $47/54$.** $\mathcal A_{\rm raw}(Q):=\tfrac1{2\pi}\int_0^{2\pi}|F_W(\sqrt Q\,e^{i\theta})|^2d\theta=Q-Q^2+\tfrac{47}{54}Q^3+O(Q^4)$ (§6.5). `[COR]` `[v6.4.10]` The former unqualified scalar backbone map did not identify its averaging/projection operator; the long-orbit backbone law $Q_m\sim1/(m+\kappa_{\rm bb})$ (`[v6.4.20]` $\kappa\to\kappa_{\rm bb}$; certified leading decay: §6.5) is retained as a historical fitted surrogate under its own definition, and its identification with $\mathcal A_{\rm raw}$ or with any final-chart quantity remains `[OPEN]` as a fitted-backbone identification problem. RECOG R11 is CLOSED at its final-chart ledger scope; the SG-19 non-transfer guard remains.
 
 `[ALG]` **One-block burst** (on the positive real primitive ray $(\rho,\eta)=(t,0)$, $Q_0=t^2$): $Q_6 = Q_0 - Q_0^2 - \frac{5}{24}Q_0^{5/2} + \frac{37}{40}Q_0^3 + O(Q_0^{7/2})$. `[COR]` `[v6.4.10]` The half-power term $-\frac5{24}Q_0^{5/2}$ is nonzero on this ray (it is $P_5$ restricted to the ray, §6.14); earlier statements omitting it are superseded. Coefficient $37/40$ is distinct from the raw fixed-radius angular-mean coefficient $47/54$; a different symmetrized observable, if intended, needs its own definition (the fixed-radius mean $\mathcal A_{\rm raw}$ is already defined in §6.5).
 
@@ -109,7 +78,7 @@ The equality $\det J=1$ holds on $\rho=0$ and on $\cos\eta=0$, not globally. Non
 
 `[THM-ALG via IA]` **OPEN 18 closed.** First-footprint branch monotonicity: $dQ/dq>0$ and $d\Theta/dq<0$ on both branches; $q=q_*$ is the branch split. `DYAD-THM-OPEN18`
 
-`[ALG]` `[conv: Lie strict-kernel gauge]` **OPEN 13 archived.** Archival Lie-gauge 6-step object: $h_4$ exact over $\mathbb{Q}(\sqrt{3})$, $c_\theta^{(6)} = -119\sqrt{3}/648$. `[COR]` `[v6.4.10]` The historical statement "$h_3=0$" refers to the **non-resonant cubic part of the return logarithm** in the archival coordinate change $\Phi_{\rm archive}=\mathrm{id}+h_4+h_{5,\rm nr}$ (which preserves every raw coefficient through degree 5); it is **not** a statement about the one-step polynomial conjugacy, whose $h_3\ne0$ (three channels, §6.14, DYAD-ALG-NF6). $c_\theta^{(6)}$ is retained under its own convention and is not transferred to the conjugacy chart pending RECOG R11 (SG-19). Gauge-universal formulations remain `[OPEN]`. `DYAD-ALG-LIEGAUGE-NORM`
+`[ALG]` `[conv: Lie strict-kernel gauge]` **OPEN 13 archived.** Archival Lie-gauge 6-step object: $h_4$ exact with coefficients in $\mathbb{Q}(i\sqrt3)$ (real parts in $\mathbb Q$, imaginary parts in $\mathbb Q\sqrt3$; exact recomputation `dyad_h4_archival_exact_check.py`, v6.4.21), $c_\theta^{(6)} = -119\sqrt{3}/648$. `[COR]` `[v6.4.10]` The historical statement "$h_3=0$" refers to the **non-resonant cubic part of the return logarithm** in the archival coordinate change $\Phi_{\rm archive}=\mathrm{id}+h_4+h_{5,\rm nr}$ (which preserves every raw coefficient through degree 5); it is **not** a statement about the one-step polynomial conjugacy, whose $h_3\ne0$ (three channels, §6.14, DYAD-ALG-NF6). $c_\theta^{(6)}$ is retained under its own convention and is not transferred to the conjugacy chart (SG-19; permanent non-transfer guard). The chart quintic phase coefficient is $+\tfrac{89\sqrt3}{324}$ (RECOG-ALG-CHART-LAWS); RECOG R11 is CLOSED (RECOG v0.3.2). Gauge-universal formulations remain `[OPEN]`. `DYAD-ALG-LIEGAUGE-NORM`
 
 `[ALG]` `[conv: Lie strict-kernel gauge]` **OPEN 17 closed through $a_2$.** Intrinsic projection coefficients: $a_1 = 559\sqrt{15}/4860$, $a_2 = 86775991\sqrt{15}/755827200$. Gauge-universal projection remains `[OPEN]`. `DYAD-ALG-A1A2-LIEGAUGE`
 
@@ -123,9 +92,9 @@ The equality $\det J=1$ holds on $\rho=0$ and on $\cos\eta=0$, not globally. Non
 
 `[THM]` `[scope: formal category]` **OPEN 19 closed (v6.4.12).** The formal tangent-to-identity centralizer of the six-step return $F=T^6$ is $\{\exp(sX)\}$, $X=\log F$; the unique formal involution with linear part $-I$ commuting with $F$ is $R_0=T^3\circ F^{-1/2}$ ($=\widehat S$). Analytic involutions commuting with $T^6$ (nontrivial branch) commute exactly with $T$. Convergence/realization is OPEN 20. `DYAD-THM-FORMAL-CENTRALIZER` `DYAD-THM-FORMAL-INVOLUTION-UNIQUE` `DYAD-THM-ANALYTIC-CLOCK-BRIDGE` (§6.15–§6.16)
 
-`[THM]` `[scope: formal]` `[v6.4.13]` **Canonical ℤ₆ generator.** $J=T\circ F^{-1/6}$ is the unique formal map with $J^6=\mathrm{id}$, $DJ(0)=A$ commuting with $F$; $R_0=J^3$. `DYAD-THM-FORMAL-Z6-GENERATOR` (§6.16). `[THM]` `[v6.4.13; scope: local, forward-invariant ball, flat contact]` **Flat centralizer triviality** (Lemma F, §6.17): a map commuting with $F$ and flat-close to the identity is the identity. `[THM]` `[assuming: hypotheses stated in the entry]` Consequences for *existing* $C^\infty$ objects: $C^\infty$ clock bridge, $C^\infty$ uniqueness, smooth roots commute with $T$ (F1–F3). No existence is asserted. `DYAD-CAND-FLAT-CENTRALIZER` `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES`
+`[THM]` `[scope: formal]` `[v6.4.13]` **Canonical ℤ₆ generator.** $J=T\circ F^{-1/6}$ is the unique formal map with $J^6=\mathrm{id}$, $DJ(0)=A$ commuting with $F$; $R_0=J^3$. `DYAD-THM-FORMAL-Z6-GENERATOR` (§6.16). `[THM]` `[v6.4.13; scope: local, forward-invariant ball, flat contact]` **Flat centralizer triviality** (Lemma F, §6.17): a map commuting with $F$ and flat-close to the identity is the identity. `[THM]` `[assuming: hypotheses stated in the entry]` Consequences for *existing* $C^\infty$ objects: $C^\infty$ clock bridge, $C^\infty$ uniqueness, smooth roots commute with $T$ (F1–F3). F1–F3 assert no existence; existence is DYAD-THM-SMOOTH-EMBEDDING (§6.17). `DYAD-CAND-FLAT-CENTRALIZER` `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES`
 
-`[THM]` `[v6.4.14]` **Spiral residual, per block (OPEN 3).** In the chart of DYAD-ALG-NF6 the per-block primitive–normalized differences $S_Q=\Delta Q_{\rm prim}-\Delta q$ and $S_\Theta=\Delta\Theta_W-\Delta\Theta_z$ have exact leading terms $[S_Q]_5=DD_3[\mu qz]$, $L_\Theta=[S_\Theta]_3$ (`DYAD-ALG-OPEN3-LEADING`) and certified remainders $|S_\Theta-L_\Theta|\le K_\Theta q^2$, $|S_Q-[S_Q]_5|\le K_Qq^3$ on $|z|\le\tfrac1{20}$ and $|z|\le\tfrac1{40}$ (`DYAD-THM-OPEN3-SPIRAL-REM`, §6.14). OPEN 3 is PARTIAL: asymptotic-phase transfer (P4) OPEN.
+`[THM]` `[v6.4.14]` **Spiral residual, per block (OPEN 3).** In the chart of DYAD-ALG-NF6 the per-block primitive–normalized differences $S_Q=\Delta Q_{\rm prim}-\Delta q$ and $S_\Theta=\Delta\Theta_W-\Delta\Theta_z$ have exact leading terms $[S_Q]_5=DD_3[\mu qz]$, $L_\Theta=[S_\Theta]_3$ (`DYAD-ALG-OPEN3-LEADING`) and certified remainders $|S_\Theta-L_\Theta|\le K_\Theta q^2$, $|S_Q-[S_Q]_5|\le K_Qq^3$ on $|z|\le\tfrac1{20}$ and $|z|\le\tfrac1{40}$ (`DYAD-THM-OPEN3-SPIRAL-REM`, §6.14). OPEN 3 is CLOSED within its defined scope (v6.4.16); P4 is `DYAD-THM-OPEN3-ASYMPTOTIC-PHASE` (`[assuming: RECOG-THM-R9-MEMORY]`); the primitive-variable remainder is OPEN 21 (CLOSED, v6.4.17).
 
 `[THM]` `[assuming: RECOG-THM-R9-MEMORY]` `[v6.4.15]` **Asymptotic-phase transfer (OPEN 3b).** The primitive asymptotic phase $\Psi_W=\Theta_W-\tau\log Q_{\rm prim}$ and the normalized $\Psi_z$ differ by the exact static offset $\Delta_0(z_m)$, certified $O(\sqrt{q_m})$; their limits coincide (conditional on RECOG-THM-R9-MEMORY), and the retained memories differ by $-\Delta_0(z_0)=O(\sqrt{q_0})$ (`DYAD-ALG-OPEN3-PHASE-OFFSET`, `DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS`, `DYAD-THM-OPEN3-ASYMPTOTIC-PHASE`, §6.14).
 
@@ -150,7 +119,7 @@ There are two queues:
 **Handoff queue** — used when a downstream Genesis/Triadic document is being updated:
 1. **Dyad-to-triad bridge handoff** — see `dyad_triad_antisymmetric_bridge_v1_1.md`. Dyad exports $\mu$, $\tau$, protection matrix, shear/healing ratio $4\sqrt{3}/3$; does not export Genesis lift scale $\beta$ or UV parameters.
 
-**Internal dyadic frontier** — used when no downstream handoff is specified. `[v6.4.20]` Rebuilt from live items only; the former list (items 0–5, including the closed items 1, 4 and 4b) is relocated verbatim to Appendix A (H-4).
+**Internal dyadic frontier** — used when no downstream handoff is specified.
 1. **OPEN 20 (B-an, B-6)** — analytic convergence of $F^{1/2}$ and $F^{1/6}$ ($J$).
 2. **L-PHASE row B** — a constant for the row $|z|\le\tfrac1{40}$, and the optimal constant (DYAD-THM-LPHASE-ROWA-REMAINDER covers row A only).
 3. **OPEN 9 remainder** — universal missing-slot rules $Z^{\rm miss}_{p,q,D}$; bridge-gap smooth baseline ($G_{32}$, $K_p$); general $\nu_5^{(p)}$; all-$b\ge5$ persistence; general-coefficient version.
@@ -178,7 +147,7 @@ Current state: tracked under OPEN 5.
 Status: **CLOSED (v6.4.16) — within its defined scope** (3a per-block chart residual, 3b asymptotic-phase transfer, 3c historical-fit comparison). Not part of this closure: the certified primitive-variable remainder, carried as OPEN 21 (DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER).  
 `[v6.4.14]` Sub-items:  
 (OPEN 3a — per-block chart residual) **CLOSED.** Fit-free definitions $S_Q=D_Q\circ\widehat F-D_Q$, $S_\Theta=D_\Theta\circ\widehat F-D_\Theta$ (§6.14); exact leading terms `DYAD-ALG-OPEN3-LEADING` (the $2\operatorname{Re}(\bar Wh_2)$ origin made exact: $D_3=2\operatorname{Re}(\bar zh_2)$, $D_{\Theta,1}=\Im(h_2/z)$); certified remainders `DYAD-THM-OPEN3-SPIRAL-REM` on both NF-REM rows.  
-(OPEN 3b — P4, asymptotic-phase transfer) **CLOSED (v6.4.15).** (i) Limit equality $\Psi_{W,\infty}=\Psi_\infty$ (T1, conditional on RECOG-THM-R9-MEMORY) and (ii) the finite-start offset $M_W-M=-\Delta_0(z_0)$, $|M_W-M|\le K_0\sqrt{q_0}$ (T2, conditional on T1), proved as separate results (`DYAD-THM-OPEN3-ASYMPTOTIC-PHASE`, §6.14). Primitive-variable remainder beyond formal second order not certified.  
+(OPEN 3b — P4, asymptotic-phase transfer) **CLOSED (v6.4.15).** (i) Limit equality $\Psi_{W,\infty}=\Psi_\infty$ (T1, conditional on RECOG-THM-R9-MEMORY) and (ii) the finite-start offset $M_W-M=-\Delta_0(z_0)$, $|M_W-M|\le K_0\sqrt{q_0}$ (T2, conditional on T1), proved as separate results (`DYAD-THM-OPEN3-ASYMPTOTIC-PHASE`, §6.14). The primitive-variable remainder beyond formal second order is certified by `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` (OPEN 21; R9 premise; rows A/B unchanged).  
 (OPEN 3c — P0, historical fit) **CLOSED (v6.4.16) — historical fit reconciled as a documented model discrepancy.** `spiral_phase_fit.py` (DYAD-ART-SPIRAL-FIT) recovered and compared with the adopted leading terms (§6.14, v6.4.16 entries). This does not validate the historical fit or promote any of its outputs; it records why the tool is not a source of scientific results.
 
 ---
@@ -218,7 +187,7 @@ Owner branch: RTG_DYADIC_OSCILLATOR_DSN
 Imports to: RTG_TRIADIC_BIRTH_LIFT_DSN, RTG_GENESIS_GEOMETRY_DSN
 
 Closed sub-items:
-- Raw cubic theorem: `[THM]` ✓ [RID: DYAD-THM-RAW-CUBIC] `[v6.4.20: statement recovered]` For the declared $K_p$ family in the raw $Z_p$ eigenframe ($\eta=Z+\bar Z$, $\rho=uZ+\bar u\bar Z$, $u=1/(1-\lambda)$, $\lambda=e^{2\pi i/p}$), the $z^2\bar z$ coefficient of the **raw one-step map** (before any normalizer $h_d$) is $\nu_{3,\rm raw}^{(p)}=\tfrac{K_p}{4}+i\,\tfrac{2\cos^2(2\pi/p)-2\cos(2\pi/p)+1}{4\sin(2\pi/p)}$. Source: `OPEN9_full_onestep_normalization_table_v2.md` §4 (companion to DSN v5.4.x; SHA-256 `af90dc13…700e`). Proof: a one-step coefficient involves no composition, so it is read off the cubic Taylor terms $\rho'\ni\eta^3/6$, $\eta'\ni K_p(\rho^3+\eta^3)/6$; owner re-derivation in P1 (`dyad_p1_math_checks.py` P1-2). Scope: one-step, raw frame. It is not the normalized $\nu_3$ of RECOG-ALG-NU3-CLOSED-FORM, not the six-step $\mu$, and not a statement about the raw $p$-step map.
+- Raw cubic theorem: `[THM]` ✓ [RID: DYAD-THM-RAW-CUBIC] `[v6.4.21: formula recovered and algebraically verified; identity with the historical proposition not yet established (Appendix E)]` For the declared $K_p$ family in the raw $Z_p$ eigenframe ($\eta=Z+\bar Z$, $\rho=uZ+\bar u\bar Z$, $u=1/(1-\lambda)$, $\lambda=e^{2\pi i/p}$), the $z^2\bar z$ coefficient of the **raw one-step map** (before any normalizer $h_d$) is $\nu_{3,\rm raw}^{(p)}=\tfrac{K_p}{4}+i\,\tfrac{2\cos^2(2\pi/p)-2\cos(2\pi/p)+1}{4\sin(2\pi/p)}$. Source: `OPEN9_full_onestep_normalization_table_v2.md` §4 (companion to DSN v5.4.x; SHA-256 `af90dc13…700e`). Proof: a one-step coefficient involves no composition, so it is read off the cubic Taylor terms $\rho'\ni\eta^3/6$, $\eta'\ni K_p(\rho^3+\eta^3)/6$; owner re-derivation in P1 (`dyad_p1_math_checks.py` P1-2). Scope: one-step, raw frame; $p\ge3$ (the raw $Z_p$ eigenframe needs $\lambda\ne\bar\lambda$; the denominator $4\sin(2\pi/p)$ vanishes at $p=2$). It is not the normalized $\nu_3$ of RECOG-ALG-NU3-CLOSED-FORM, not the six-step $\mu$, and not a statement about the raw $p$-step map.
 - First pure lattice harmonic $(0,p-1)$ at degree $p-1$: `[ALG]` ✓
 - Finite one-step ledger $p=5,6,7$: `[ALG]` ✓ [RID: DYAD-ALG-P567-LEDGER]
 - $G_{\rm lattice}(5)=0$ (both sides nonzero and equal): `[ALG]` ✓ `DYAD-ALG-GLATTICE5`
@@ -238,6 +207,8 @@ Closed sub-items:
 - Degree-3 raw-vanishing $F_{\rm raw}^p(0,3)=0$ for $p\ge5$ ($\beta$-set $\{-3,-2,0\}$, no secular): `[ALG]` ✓ `DYAD-ALG-VANISH-B3`
 - Degree-4 raw-vanishing $F_{\rm raw}^p(0,4)=0$ for $p\ge6$ ($\beta$-set $\{-4,-3,-2,-1,0,2\}$, no secular): `[ALG]` ✓ `DYAD-ALG-VANISH-B4`
 - All-$p$ cubic radial contraction $\Re\mu_p^Z=-p\sin^2(\pi/p)<0$, $k_{\rm ret}(p)=3$, $p\ge5$ (declared $K_p$ family): `[ALG]` ✓ imported, owner RECOG [RID: RECOG-ALG-NU3-CLOSED-FORM, RECOG-ALG-NU3-NONVANISHING] (v6.4.11)
+- Exact cubic cascade formula for $q=4,(0,3)$: **CLOSED (v6.4.9)** `[THM]` `[proof: exact algebraic identity]` — all-$p$ closed form, $Q_p=i\zeta_p^3 M_p$, $M_p\in\mathbb{Q}(\zeta_p)^+$ (DYAD-THM-Q403-PHASELAW)
+- Channel boundary all-$p$ (DYAD-OPEN-B5-ALLP): **CLOSED `[ALG]`**. `[v6.4.20: result RID registered at adoption, DYAD-ALG-B5-ALLP-NONVANISHING (§6.11); the lifecycle identifier is unchanged]` For $p\ge13$, $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$ with $S_{\rm eff}/S=N/D$, $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$. Cyclotomic non-division: $\deg N=6$ so $\Phi_p\mid N$ requires $\varphi(p)\le6$ (finite set); exact check shows $\Phi_p\nmid N$ for all, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. With the exact sweep $p=6..12$: $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$. Remaining (separate): all-$b\ge5$ persistence and the general-coefficient version: `[OPEN]`
 
 Retracted sub-items:
 - Sub-horizon inheritance conjecture: `[RETRACTED]` `[scope: reframed]` — $G_{04}(10)=0$ is not divisor inheritance; $(0,4)$ is dynamically active in $J^{extra,raw}_{10,5,D}$.
@@ -248,10 +219,8 @@ Active sub-items:
 - General Lie-gauge retained-channel theorem: `[OPEN]`
 - Higher lattice harmonics beyond the first: `[OPEN]`
 - Universal missing-slot rules $Z^{\rm miss}_{p,q,D}$: `[OPEN]`
-- Exact cubic cascade formula for $q=4,(0,3)$: **CLOSED (v6.4.9)** `[THM]` `[proof: exact algebraic identity]` — all-$p$ closed form, $Q_p=i\zeta_p^3 M_p$, $M_p\in\mathbb{Q}(\zeta_p)^+$ (DYAD-THM-Q403-PHASELAW)
 - Near-cancellation structure of $-13+15\sqrt{3}/2\approx-0.0096$ (modulus $0.0096$; `[v6.4.20]` sign restored; DZT-ALG-P12-NORM records its norm $\tfrac14$, finite DZT scope): `[OPEN]` — the exact large-$p$ behaviour of $|Q_p|$ is the Tier-C target FC-DYAD-31
 - Exact asymptotic structure of $G_{32}(p)$: `[OPEN]`
-- Channel boundary all-$p$ (DYAD-OPEN-B5-ALLP): **CLOSED `[ALG]`**. `[v6.4.20: result RID registered at adoption, DYAD-ALG-B5-ALLP-NONVANISHING (§6.11); the lifecycle identifier is unchanged]` For $p\ge13$, $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$ with $S_{\rm eff}/S=N/D$, $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$. Cyclotomic non-division: $\deg N=6$ so $\Phi_p\mid N$ requires $\varphi(p)\le6$ (finite set); exact check shows $\Phi_p\nmid N$ for all, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. With the exact sweep $p=6..12$: $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$. Remaining (separate): all-$b\ge5$ persistence and the general-coefficient version: `[OPEN]`
 - Channel boundary all-$b\ge5$: prove the secular $\beta=1$ mode persists (nonzero coefficient) for every $b\ge5$ (scan-confirmed $b=6$); and the general-coefficient (non-dyadic) version: `[OPEN]`
 - OPEN-P0-DYADIC h-source bridge: whether the SU(2) factor transfers to OPEN-M $h$ as $\times2$ (amplitude) or $\times4$ (energy) or neither; requires OPEN M proper (Genesis SG-5/SG-6 block the dyadic route): `[OPEN]`
 - Exact smooth baseline for $G_{32}/K_p$: `[OPEN]`
@@ -261,7 +230,6 @@ Evidence / candidate patterns:
 - Channel boundary at $b=4$: universal vanishing `[ALG]` for $b\in\{2,3,4\}$; fails at $b=5$ for EVERY $p\ge6$ `[ALG]` (all-$p$ theorem closed, DYAD-OPEN-B5-ALLP). SOURCE $\beta=1$ coefficient exactly nonzero (five-term $\propto c_{02}^2$); $F_{\rm raw}^p(0,5)\ne0$ exactly for $p=6..12$ `[ALG]` `[scope: finite sweep]`; for $p\ge13$, $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$ with $S_{\rm eff}/S=N/D$, $\deg N=6$, and $\Phi_p\nmid N$ for all $p$ (cyclotomic non-division), so $S_{\rm eff}\ne0$ for all $p\ge13$. Dyadic boundary `[ALG]`: universal vanishing for $b\in\{2,3,4\}$, first failure at $b=5$ for every $p\ge6$ `[COR]` `[v6.4.11: "iff $b\le4$" shorthand withdrawn]`. Remaining (separate): all-$b\ge5$ persistence and the general-coefficient version: `[OPEN]`
 
 Next required artifacts:
-- ~~Exact cubic cascade computation for $q=4,(0,3)$ via `rtg_p_certs.py`~~ **DONE v6.4.9** (DYAD-THM-Q403-PHASELAW; certificate `q4_03_R_identity_certificate.py`)
 - Universal $Z^{\rm miss}_{p,q,D}$ proof using reachable-basis projector formalism
 
 Dependencies:
@@ -339,7 +307,7 @@ Closed OPENs (one-line):
 - **OPEN 18** `DYAD-THM-OPEN18` :: `[THM-ALG via IA]` ✓ CLOSED — first-footprint branch monotonicity.
 - **OPEN 3** `DYAD-OPEN-SPIRAL-RESIDUAL` :: `[ALG]`/`[THM]` (3a, 3b at their adopted grades; 3c documented discrepancy) ✓ CLOSED (v6.4.16) within its defined scope — the primitive-variable remainder continues as OPEN 21.
 - **OPEN 21** `DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER` → closed by `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` :: `[THM]` `[assuming: RECOG-THM-R9-MEMORY]` ✓ CLOSED (v6.4.17) — certified primitive-variable phase remainder, rows A/B not mixed.
-- **OPEN 19** `DYAD-OPEN-FORMAL-CENTRALIZER` → closed by `DYAD-THM-FORMAL-CENTRALIZER` :: `[THM]` `[scope: formal]` ✓ CLOSED (v6.4.12) — formal centralizer of $T^6$ is $\{\exp(sX)\}$; unique formal involution $R_0$ (§6.16). Realization: OPEN 20.
+- **OPEN 19** `DYAD-OPEN-FORMAL-CENTRALIZER` → closed by `DYAD-THM-FORMAL-CENTRALIZER` :: `[THM]` `[scope: formal]` ✓ CLOSED (v6.4.12) — formal tangent-to-identity centralizer ($DG(0)=I$) of $T^6$ is $\{\exp(sX)\}$; unique formal involution $R_0$ (§6.16). Realization: OPEN 20.
 
 ---
 
@@ -394,12 +362,12 @@ Violation: describing a dyadic result as physically primitive, inevitable or uni
 Violation: Claiming the p=6 NF closes OPEN-M, asserting a definite $\times2$ or $\times4$ OPEN-M gate factor from the dyadic alone, or describing this route as correcting a certified OPEN-M deficit.
 
 **[SG-16]** Low-degree vanishing path-enumeration guard. Manual path enumeration is unsafe for pure anti-holomorphic vanishing claims (the $p=3,b=3$ nonzero case, where the direct term already vanishes, exhibits a cross-path that naive listing misses). For $b\le4$, automatic $\beta$-mode path enumeration certifies `[ALG]` (source $\beta$-sets carry no secular mode). `[v6.4.20]` Available certificates, owner-rerun 21 Oct 2026: `rtg_betagraded_vanishing.py` (DYAD-ART-VANISH-BGRADED) and `degree_b_vanishing_cert.py`; the registry name `degree_b_vanishing_cert_v2.py` is not available in the project (audit note, §6.11). For $b\ge5$, no promotion without the same source $\beta$-set certificate.  
-Violation: `[v6.4.20]` (i) tagging a vanishing statement `[ALG]` without a registered enumeration proof; (ii) using DYAD-ALG-VANISH-B2/B3/B4 outside $p\ge b+2$, or asserting "$(c_{02})^2$ is the only cross-term". The certified statements for $b=2,3,4$ at $p\ge b+2$ are not violations. (v6.4.19 text: Appendix A H-6.)
+Violation: `[v6.4.20]` (i) tagging a vanishing statement `[ALG]` without a registered enumeration proof; (ii) using DYAD-ALG-VANISH-B2/B3/B4 outside $p\ge b+2$, or asserting "$(c_{02})^2$ is the only cross-term". The certified statements for $b=2,3,4$ at $p\ge b+2$ are not violations.
 
 **[SG-19]** Normalization-object guard (v6.4.10). Three distinct operations have historically all been called "normalization": (i) the **archival coordinate change** $\Phi_{\rm archive}=\mathrm{id}+h_4+h_{5,\rm nr}$ (`normalize_p6_liegauge_exact.py`; preserves every raw coefficient through degree 5, $F_4\ne0$ survives); (ii) the **log-channel projection** $G_{\rm proj}=\exp(\mathscr P_{\rm keep}\log F_W)$, $\mathscr P_{\rm keep}$ the channel projector onto the retained channels (`normalize_pstep_lie.py`; a defined reduced model, not a solved conjugacy); (iii) the **polynomial conjugacy** $\mathcal J_{\le6}(f\circ h-h\circ n)=0$ with additive $h$ and the resonant monomial coefficients of each $h_n$ zero (§6.14). A "normalized coefficient" claim must name which operation it refers to. $G_{\rm proj}$ is never called the normalized return. Coefficients are not transferred between operations: the standing example is the obstruction $c^{({\rm raw},6)}_{05}-a_{05}=\tfrac{-13+3i\sqrt3}{576}\ne0$ (DYAD-ALG-NF6-OBS). Finite jets ($n$, $J$) are stated as finite-order identities, never as all-orders polynomial identities; the actual maps $\widehat f=h^{-1}fh$, $\widehat F=h^{-1}F_Wh$ are exact only on their proved domains.  
 Violation: Calling $G_{\rm proj}$ "the normalized return"; inserting raw $c_{05}$ (or $c_\theta$, $a_1$, $a_2$, or a long-orbit backbone) into the conjugacy chart without the R11 reconciliation; writing $f\circ h=h\circ n$ without the $\mathcal J_{\le6}$ qualifier.
 
-`[DEF]` `[v6.4.20]` SG-17 and SG-18 do not occur in this ledger or in its Appendix A history; the numbers are unassigned.
+`[DEF]` `[v6.4.20]` SG-17 and SG-18 do not occur in this ledger or in its version history (tag `dyad-v6.4.20`, Appendix A); the numbers are unassigned.
 
 ---
 
@@ -450,7 +418,7 @@ Routing rules:
 | Canonical ℤ₆ generator $J$ (§6.16, v6.4.13) | Formal: unique $J=TF^{-1/6}$ with $J^6=\mathrm{id}$, $DJ(0)=A$; $R_0=J^3$, $G=J^2$; analytic realization ⟺ B-6 | Convergence of $J$; B-6 equated with B-an; a physical chirality or ℤ₆ action | §2 OPEN 20, §6.16 |
 | Lemma F and F1–F3 (§6.17, v6.4.13) | `[THM]`: flat-close $F$-commuting maps are trivial on the stated forward-invariant ball; `[THM]` `[assuming: hypotheses stated in the entry]` for existing $C^\infty$ objects: clock bridge, uniqueness, root commutation | Existence of a $C^\infty$ root or involution from Lemma F / F1–F3 alone (`[v6.4.20]` existence: DYAD-THM-SMOOTH-EMBEDDING, §6.17); finite-$C^k$ versions; analytic convergence; reading the RID word `CAND` as a status | §6.17 |
 | Smooth flow embedding (§6.17, v6.4.18) | `[THM]`, $C^\infty$ germ scope: $F=\varphi_X^1$, $X\in C^\infty$, $j^\infty X=\log F$; uniqueness of $X$ among generators with $DX(0)=0$; $C^\infty$ roots $K_m$, $J$, $R$ commuting with $T$ | Analyticity (B-an, B-6); uniqueness among all $C^\infty$ generators (no $DX(0)=0$); a quantitative radius or finite-$C^k$ constants; convergence of the §6.17 route $F^{-n}R_\infty F^n$; physical exchange, G2 realization, $EF=TE$ vs $EF=T^6E$ (SG-14/15) | §2 OPEN 20, §6.17 |
-| Spiral residual (§6.14, v6.4.14) | Exact leading terms of $S_Q,S_\Theta$ `[ALG]`; per-block remainder bounds with majorant constants on $\vert z\vert \le\tfrac1{20}$, $\tfrac1{40}$ `[THM]` | Reading $K_\Theta,K_Q$ as true-error maxima; identifying $S_Q$ with $P_5$ (cross term $-2qD_3$); primitive asymptotic-phase transfer (P4); equivalence with the historical fit; $C_{\rm est}$/$\kappa_{\rm est}$; transfer to NUMGEN L1 or ISP-angle coefficients (SG-7, SG-19) | §2 OPEN 3, §6.14 |
+| Spiral residual (§6.14, v6.4.14) | Exact leading terms of $S_Q,S_\Theta$ `[ALG]`; per-block remainder bounds with majorant constants on $\vert z\vert \le\tfrac1{20}$, $\tfrac1{40}$ `[THM]` | Reading $K_\Theta,K_Q$ as true-error maxima; identifying $S_Q$ with $P_5$ (cross term $-2qD_3$); the primitive asymptotic-phase transfer (P4) as implied by the per-block result alone (P4 is DYAD-THM-OPEN3-ASYMPTOTIC-PHASE); equivalence with the historical fit; $C_{\rm est}$/$\kappa_{\rm est}$; transfer to NUMGEN L1 or ISP-angle coefficients (SG-7, SG-19) | §2 OPEN 3, §6.14 |
 | Asymptotic-phase transfer (§6.14, v6.4.15) | Exact offset $\Psi_W-\Psi_z=\Delta_0$ `[ALG]`; certified $K_0,K_1,K_2$ `[THM]`; limit equality conditional on R9; memory offset $-\Delta_0(z_0)$ conditional on T1; chart-variable memory law conditional on R9 | An independent existence theorem for $\Psi_\infty$; R9 read directly on the raw track; transfer to the $C_W^{(h)}$ comparator; a certified primitive-variable ($W_0$) remainder from these results alone (`[v6.4.20]` see DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER); physical reading of $-\sqrt3/3$; C_est/κ_est or historical-fit statements (SG-7) | §2 OPEN 3, §6.14 |
 | Historical-fit reconciliation (§6.14, v6.4.16) | Documented model differences D1–D4 of `spiral_phase_fit.py` against the adopted leading terms; `[NUM]` two-harmonic amplitudes agree with the predictions within about 1% | Validation of the historical fit; reading its $\kappa$, $A$, $B$, $c_\theta$ outputs as coefficients; C_est/κ_est (SG-7); transfer to NUMGEN L1 or ISP-angle coefficients (SG-19); a certified primitive-variable remainder from the fit (`[v6.4.20]` the remainder is DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER) | §2 OPEN 3, §6.14 |
 | Primitive-variable phase remainder (§6.14, v6.4.17) | `[THM]` `[assuming: RECOG-THM-R9-MEMORY]`: $\vert M_W-\mathcal P_2(W_0)\vert \le K'_jQ_0^{3/2}+C_{2,j}(256/225)^2Q_0^2$ per row ($K'_A=3951/1000$, $K'_B=971/250$); single-constant $K_A=8831/250$, $K_B=883/100$; majorant suprema | An unconditional result (R9 enters through T1 and the memory law); re-certification of R9 or of its $C_2$; reading the `[NUM]` ratio $\approx0.35$ as a proved constant or as absence of higher-order terms; mixing rows; transfer to $C_W^{(h)}$, NUMGEN L1 or ISP-angle coefficients (SG-19); C_est/κ_est (SG-7) | §2 OPEN 21, §6.14 |
@@ -556,9 +524,9 @@ The exact radial jet gives
 $$\mathcal A_{\rm raw}(Q)=Q-Q^2+\tfrac{47}{54}Q^3+O(Q^4),\qquad \tfrac{47}{54}=\tfrac{19}{12}+2\Re c^{({\rm raw},6)}_{32}=[W^3\bar W^3]\,\Delta Q_6 ,$$
 since odd total degrees average to zero and the degree-six $(3,3)$ coefficient is $47/54$. This is an averaging operator, not a pointwise recurrence for $Q$ along arbitrary primitive orbits (the pointwise update carries the nonzero $Q^{5/2}$ term below), and not by itself a long-orbit backbone theorem.
 
-`[COR]` `[v6.4.10]` The former unqualified wording $Q_{m+1}=Q_m-Q_m^2+\tfrac{47}{54}Q_m^3+O(Q_m^4)$ did not identify its averaging or projection operator; it is superseded by the scoped statement above. Its historical occurrence and evidence are preserved (Appendix A). The $37/40$ positive-ray coefficient and the $47/54$ raw angular-mean coefficient are different scoped coefficients.
+`[COR]` `[v6.4.10]` The former unqualified wording $Q_{m+1}=Q_m-Q_m^2+\tfrac{47}{54}Q_m^3+O(Q_m^4)$ did not identify its averaging or projection operator; it is superseded by the scoped statement above. Its historical occurrence and evidence are preserved (Appendix A of v6.4.20, tag `dyad-v6.4.20`). The $37/40$ positive-ray coefficient and the $47/54$ raw angular-mean coefficient are different scoped coefficients.
 
-`[OPEN]` Any autonomous backbone recursion, the fitted logarithmic correction below, or a final-chart transfer requires its explicit observable/projection definition and proof or stated numerical scope. This revision does not transfer those claims through $h$ or close RECOG R11.
+`[OPEN]` Any autonomous backbone recursion, the fitted logarithmic correction below, or a final-chart transfer requires its explicit observable/projection definition and proof or stated numerical scope. This ledger does not transfer those claims through $h$. RECOG R11 is CLOSED at its final-chart ledger scope; that closure does not identify the historical fitted backbone with the exact dynamics or transfer it through $h$.
 
 `[ALG]` [RID: DYAD-ALG-ONE-BLOCK-BURST] `[v6.4.20; RID registered at adoption, 21 Oct 2026; owner check M7]` **One-block burst on the positive real primitive ray** $(\rho,\eta)=(t,0)$, $t>0$, $Q_0=t^2$:
 $$Q(T^6(t,0))=t^2-t^4-\tfrac{5}{24}t^5+\tfrac{37}{40}t^6+O(t^7),\qquad\text{i.e.}\qquad Q_6=Q_0-Q_0^2-\tfrac{5}{24}Q_0^{5/2}+\tfrac{37}{40}Q_0^3+O(Q_0^{7/2}).$$
@@ -568,13 +536,13 @@ $$Q(T^6(t,0))=t^2-t^4-\tfrac{5}{24}t^5+\tfrac{37}{40}t^6+O(t^7),\qquad\text{i.e.
 
 `[DEF]` **Historical fitting ansatz — DSI logarithmic transport (retained, not identified with the exact primitive orbit law).** The recorded fitting form is
 $$\kappa_{\rm fit}(M)\approx\tfrac{1}{Q_6}-1+\tfrac{7}{54}\ln(MQ_6)+O(1/M).$$
-`[COR]` `[v6.4.10]` This records the earlier fit expression; it does not certify the displayed error or the logarithmic coefficient for the exact primitive dynamics of $T$. Its fitting protocol/surrogate, observation window, and the identification of its amplitude must accompany any use; the primitive/final-chart interpretation remains `[OPEN]` under the §6.5/R11 qualification. `[v6.4.20]` The certified leading decay is the statement at the top of this section; the offset form $1/(m+\kappa_{\rm bb})$ is the historical ansatz. No new fit validation is claimed.
+`[COR]` `[v6.4.10]` This records the earlier fit expression; it does not certify the displayed error or the logarithmic coefficient for the exact primitive dynamics of $T$. Its fitting protocol/surrogate, observation window, and the identification of its amplitude must accompany any use; the primitive/final-chart interpretation remains `[OPEN]` under the §6.5 and SG-19 non-transfer qualifications. `[v6.4.20]` The certified leading decay is the statement at the top of this section; the offset form $1/(m+\kappa_{\rm bb})$ is the historical ansatz. No new fit validation is claimed.
 
 ### §6.6 Resonant Structure and Homological Algebra — entry grades: ALG, DEF, OPEN {#sec-6-6-resonance}
 
 `[ALG]` `[v6.4.20: retagged from [THM]; content stated exactly]` **$p=6$ linear order.** $\lambda=e^{i\pi/3}$ has order exactly six: $\lambda^j\ne1$ for $1\le j\le5$ and $\lambda^6=1$. This concerns the linear part only; it holds for every primitive root of unity and is not a uniqueness property of $p=6$.
 
-`[ALG]` `[v6.4.20]` **Homological resonance is a separate condition.** In the one-step normal form a monomial $z^a\bar z^b$ ($a+b\ge2$) is resonant iff $\lambda^a\bar\lambda^b=\lambda$, i.e. $a-b-1\equiv0\pmod 6$. Resonant monomials occur at every odd degree and at no even degree: $z^2\bar z$ at degree 3 ($\lambda^2\bar\lambda=\lambda$; coefficient $n_{21}$), $z^3\bar z^2$ and $\bar z^5$ at degree 5 ($n_{32}$, $n_{05}$; DYAD-ALG-NF6). They stay in the normal form and cannot be removed by the normalizer. For non-resonant monomials the homological divisors $\lambda-\lambda^a\bar\lambda^b=\lambda(1-\lambda^{a-b-1})$ have modulus $1$, $\sqrt3$ or $2$, so no small divisors occur at any degree (`dyad_p1_math_checks.py` P1-3). `[COR]` `[v6.4.20]` The v6.4.19 sentence "No intermediate resonance obstruction occurs" conflated the order of $\lambda$ with homological resonance; it is withdrawn (Appendix A H-7).
+`[ALG]` `[v6.4.20]` **Homological resonance is a separate condition.** In the one-step normal form a monomial $z^a\bar z^b$ ($a+b\ge2$) is resonant iff $\lambda^a\bar\lambda^b=\lambda$, i.e. $a-b-1\equiv0\pmod 6$. Resonant monomials occur at every odd degree and at no even degree: $z^2\bar z$ at degree 3 ($\lambda^2\bar\lambda=\lambda$; coefficient $n_{21}$), $z^3\bar z^2$ and $\bar z^5$ at degree 5 ($n_{32}$, $n_{05}$; DYAD-ALG-NF6). They stay in the normal form and cannot be removed by the normalizer. For non-resonant monomials the homological divisors $\lambda-\lambda^a\bar\lambda^b=\lambda(1-\lambda^{a-b-1})$ have modulus $1$, $\sqrt3$ or $2$, so no small divisors occur at any degree (`dyad_p1_math_checks.py` P1-3). `[COR]` `[v6.4.20]` The v6.4.19 sentence "No intermediate resonance obstruction occurs" conflated the order of $\lambda$ with homological resonance; it is withdrawn (v6.4.20 Appendix A H-7, tag `dyad-v6.4.20`).
 
 `[DEF]` `[v6.4.20: replaces the v6.4.19 [THM] "three-tier hierarchy"]` **Classification by $p$** (declared $K_p$ family): sub-resonant $p<6$, resonant $p=6$, super-resonant $p>6$. A naming convention, not a theorem.
 
@@ -703,9 +671,9 @@ Unique non-trivial degree-4 lattice bridge cancellation.
 
 `[ALG]` `DYAD-ALG-P6-FACEFLUX` **p=6 / K₄ face-flux identity (OPEN-P0-DYADIC).** $\lambda=e^{i\pi/3}=e^{iF_f/2}$, $F_f=2\pi/3$; $E_{\rm full}/E_{\rm half}=4$ `[ALG]` (Pre-Legacy §1.8). The R11 cascade-gate conversion is `[ALG]`: at $\theta_f=2\pi/3$, the factor is $3/4$, so the cascade threshold $0.024$ maps to $\rho r^4\gtrsim0.032=4/125$. The threshold $0.024$ itself inherits OPEN-GEN-II-7B `[HYP]` status, so the gate's physical scope is `[HYP]` `[scope: inherited]` while the conversion is exact. `[CAND]` `[scope: conditional]` **h-transfer:** R11 treats $h$ as an external amplitude (Audit-1: $|H|_B=hr^2$ at the optimum). `[v6.4.20: Audit-1 = OPEN-M v0.7.1 R16, UVM-RESULT-AUDIT1, a conditional calibration branch. The 0.024 threshold and its image 4/125 inherit the reduced birth-race wrapper, the 9C raw-array premise, the large-g limit, state/window matching and the source normalization (OPEN-M v0.7.1; GEN-OPEN-UVJET-SCOPE); OPEN-M records no certified numerical deficit]` Whether the SU(2) factor enters $\rho=h\ell/(gm)$ as $\times2$, $\times4$, or not at all is undetermined by R11 and blocked from the dyadic side by Genesis SG-5. Any OPEN-M gate correction is `[CAND]` `[scope: conditional]` pending the h-source bridge (OPEN M proper). See §6.12, SG-15. [RID: DYAD-CAND-P0-DYADIC]
 
-`[ALG]` **Subgroup-charge projector formalism.** Current OPEN 9 canonical objects: $\mathcal{Q}(p)$, $s=p/q$, $\chi_p(a,b)=a-b-1\pmod p$, $K^{\rm extra}_{p,q}$ with $|K^{\rm extra}_{p,q}|=s-1$, $\Pi^{\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\mathcal{B}^{extra}_{p,q,D}$, $Z^{\rm miss}_{p,q,D}$, $C^{\rm mult}_{\rm sub}$, $C^{\rm uniq}_{\rm sub}$, $\Delta_{\rm overlap}$.
+`[ALG]` **Subgroup-charge projector formalism.** Current OPEN 9 canonical objects: $\mathcal{Q}(p)$, $s=p/q$, $\chi_p(a,b)=a-b-1\pmod p$, $K^{\rm extra}_{p,q}$ with $|K^{\rm extra}_{p,q}|=s-1$, $\Pi^{\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\mathcal{B}^{extra}_{p,q,D}$, $Z^{\rm miss}_{p,q,D}$, $C^{\rm mult}_{\rm sub}$, $C^{\rm uniq}_{\rm sub}$, $\Delta_{\rm overlap}$. Eight of these objects ($\mathcal Q(p)$, $\Pi^{\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\mathcal B^{extra}_{p,q,D}$, $Z^{\rm miss}_{p,q,D}$, $C^{\rm mult}_{\rm sub}$, $C^{\rm uniq}_{\rm sub}$, $\Delta_{\rm overlap}$) have no recovered definition (Appendix D). Named source: the OPEN 9 owner working files of the v5.4.x series beyond `OPEN9_arithmetic_horizon_definitions.md`; next step: the owner locates them and records the definitions, or records them as unrecoverable.
 
-`[ALG]` **Eigenframe linear-part lemma.** Anchors the degree-2 no-cascade bypass.
+`[ALG]` **Eigenframe linear-part lemma.** Anchors the degree-2 no-cascade bypass. Its statement is not recovered (Appendix D); named source: the OPEN 9 owner working files of the v5.4.x series; next step: the owner recovers and records the statement.
 
 `[ALG]` **Exact micro-certifications:**
 - [RID: DYAD-ALG-Q3-DEG2-CANCEL] `[v6.4.20; RID registered at adoption, 21 Oct 2026; evidence rtg_p_certs.py (DYAD-ART-P-CERTS), not rerun in P2]` Degree-2 $q=3,(0,2)$ cancellation for all $p>3$ with $3\mid p$.
@@ -746,7 +714,7 @@ Certified exports: $\mu=-\frac{1}{2}-i\tau$; $\tau=2\sqrt{3}/3$; shear/healing r
 | primitive linear frame $W=\mathcal L(\rho,\eta)=\rho+\omega\eta$, $v_\perp$ | §1, §6.14 definition of $\mathcal L$ | `[DEF]` | lifted local; no gauge choice |
 | $\mu=-\tfrac12-i\tau$ | DYAD-THM-C21 | `[THM]` | raw six-step, $p=6$, $K=1$ |
 | $\tau=2\sqrt3/3$ | §6.3 | `[ALG]` | constant |
-| shear/healing ratio $4\sqrt3/3=\vert \Im\mu\vert /\vert \Re\mu\vert $ | derived from DYAD-THM-C21 | `[ALG]` | ratio of cubic coefficients |
+| shear/healing ratio $4\sqrt3/3=\vert \Im\mu\vert /\vert \Re\mu\vert $ | derived from DYAD-THM-C21 | `[ALG]` | ratio of cubic coefficients; bookkeeping cross-reference (FC-DYAD-34): $(4\sqrt3/3)^2=16/3$ equals Genesis v2.8.9 §6.3's leading homogeneous-graph ratio $Q(c_{0,\rm shear}^{[3]})/Q(c_{0,\rm recoil}^{[3]})$ ($\kappa_{\rm shear}=-2\sqrt3/3$, $\kappa_{\rm recoil}=-\tfrac12$); arithmetic identity only, selects no birth policy |
 | $\mathcal P_{\rm dyad}(R^2)$ | DYAD-ALG-PROTECTION-MATRIX | `[ALG]` | linear eigenframe, cubic order |
 | $\mu_p=p\bar\lambda\nu_3^{(1,p)}$ | DYAD-ALG-BRIDGE-LEMMA | `[ALG]` | normalized one-step frame |
 
@@ -860,9 +828,9 @@ with static constants $|D_\Theta-D_{\Theta,1}|\le c_1q$, $\|DD_\Theta\|\le c_2$ 
 
 *Proof outline* (full text in the P3 record). Block displacement $\widehat Fz-z=\mu qz+\rho$, $|\rho|\le A_5|z|^5+C_7|z|^7$ ($A_5=|a_{32}|+|a_{05}|$; NF-REM). Angular: with $g=(h-z)/z$, $g_1=h_2/z$, $S_\Theta-L_\Theta=A_1+A_2+B+C$ (second-order Taylor term of $g_1$, using $\|D^2(\bar w^2/w)\|\le8/|w|$; $Dg_1[\rho]$; increment of $g-g_1$; increment of $\Im[\operatorname{Log}(1+g)-g]$ on the principal branch). Radial: $D_Q$ is an exact polynomial of degrees 3–12 (the explicit $Q\leftrightarrow q$ bridge); its degree-3 part is expanded to second order, degrees $\ge4$ by the mean-value inequality. DYAD-THM-PRIM-CTR is not an input. Each majorant divided by $s^4$ (resp. $s^6$), $s=|z|$, is nondecreasing, so it is evaluated at $s=r$ in exact rational arithmetic; stated constants are three-decimal ceilings. *Certificate:* DYAD-ART-OPEN3-P3 (exit 0; negative controls `neg_K`, `neg_h2`, `neg_mu` exit 1; reviewer replay byte-identical).
 
-`[DEF]` `[v6.4.14]` **Recorded distinctions.** (i) The constants are suprema of **majorants**, attained at $s=r$; they are not the suprema of the true errors ([NUM] sampled maxima: $|S_\Theta-L_\Theta|/q^2\approx0.196$, $0.189$; $|S_Q-[S_Q]_5|/q^3\approx0.949$, $0.909$; $|\widehat F-J|/|z|^7\approx0.971$ against the adopted $C_7=100$, $30$, which are used unchanged). (ii) The per-block theorem does **not** by itself prove the primitive asymptotic-phase transfer (OPEN 3b / P4); along an orbit $\sum_{m<M}S_\Theta(z_m)=D_\Theta(z_M)-D_\Theta(z_0)$ telescopes. (iii) $h$ and $J$ were regenerated exactly from $T$ and checked against the adopted data ($h_2$; 23 coefficients; resonant coefficients zero; $M(s)$ ceilings; $\mu$; RECOG-ALG-CHART-LAWS identities $\tfrac{245}{216}$, $\tfrac{89\sqrt3}{324}$) and coefficient-by-coefficient (23/23) against the independent 19 Sep 2026 audit reconstruction `coordinate_h_deg6_reconstructed.json` (`bb09bace…99f6`; marked "not historical owner artifact"). This does **not** replace the byte-level comparison with the adopted P2B v2 `certificate.json` (`jets.h_degree6`, `jets.J_through6`), which remains an open provenance item.
+`[DEF]` `[v6.4.14]` **Recorded distinctions.** (i) The constants are suprema of **majorants**, attained at $s=r$; they are not the suprema of the true errors ([NUM] sampled maxima: $|S_\Theta-L_\Theta|/q^2\approx0.196$, $0.189$; $|S_Q-[S_Q]_5|/q^3\approx0.949$, $0.909$; $|\widehat F-J|/|z|^7\approx0.971$ against the adopted $C_7=100$, $30$, which are used unchanged). (ii) The per-block theorem does **not** by itself prove the primitive asymptotic-phase transfer (OPEN 3b / P4); along an orbit $\sum_{m<M}S_\Theta(z_m)=D_\Theta(z_M)-D_\Theta(z_0)$ telescopes. (iii) $h$ and $J$ were regenerated exactly from $T$ and checked against the adopted data ($h_2$; 23 coefficients; resonant coefficients zero; $M(s)$ ceilings; $\mu$; RECOG-ALG-CHART-LAWS identities $\tfrac{245}{216}$, $\tfrac{89\sqrt3}{324}$) and coefficient-by-coefficient (23/23) against the independent 19 Sep 2026 audit reconstruction `coordinate_h_deg6_reconstructed.json` (`bb09bace…99f6`; marked "not historical owner artifact"). Coefficient verification against the adopted P2B v2 `certificate.json` (`jets.h_degree6`, `jets.J_through6`) is complete: the v6.4.16 record shows the reproduced $h$, $J$ coefficients equal the certificate coefficients in exact arithmetic. This is coefficient equality, not byte identity of files; no byte-identity check is claimed.
 
-`[OPEN]` `[v6.4.20]` **Not established (current; consolidates the v6.4.14–v6.4.16 lists relocated to Appendix A H-2):** any statement on $C_{\rm est}$, $\kappa_{\rm est}$ (SG-7); transfer of the chart coefficients to NUMGEN L1 primitive phase coefficients, ISP-angle coefficients, $47/54$, $c_\theta^{(6)}$, $a_1$, $a_2$ (SG-19); a certified bound on $\Delta\Theta_z$ beyond RECOG-ALG-CHART-LAWS; the combined $\pm6$ coefficient of $\Lambda_1$ and $P_{W2}$; byte identity with the P2B v2 `certificate.json` (provenance is exact-coefficient and transitive, DYAD-ART-LPHASE-P2B-PROV); any effect on OPEN 20, G2 or physical readings. Resolved since those lists: OPEN 3b (v6.4.15), OPEN 3c (v6.4.16), the primitive-variable remainder (OPEN 21, v6.4.17).
+`[OPEN]` `[v6.4.20]` **Not established (current; consolidates the v6.4.14–v6.4.16 lists in v6.4.20 Appendix A H-2, tag `dyad-v6.4.20`):** any statement on $C_{\rm est}$, $\kappa_{\rm est}$ (SG-7); transfer of the chart coefficients to NUMGEN L1 primitive phase coefficients, ISP-angle coefficients, $47/54$, $c_\theta^{(6)}$, $a_1$, $a_2$ (SG-19); a certified bound on $\Delta\Theta_z$ beyond RECOG-ALG-CHART-LAWS; the combined $\pm6$ coefficient of $\Lambda_1$ and $P_{W2}$; byte identity with the P2B v2 `certificate.json` (provenance is exact-coefficient and transitive, DYAD-ART-LPHASE-P2B-PROV); any effect on OPEN 20, G2 or physical readings. Resolved since those lists: OPEN 3b (v6.4.15), OPEN 3c (v6.4.16), the primitive-variable remainder (OPEN 21, v6.4.17).
 
 **OPEN 3b — asymptotic-phase transfer (v6.4.15).** Source: P4 proof record v0.1 (§8 DYAD-ART-OPEN3-P4-RECORD), reviewed 19 Oct 2026 as a SESSION record (`P4 SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION PENDING`).
 
@@ -871,7 +839,7 @@ with static constants $|D_\Theta-D_{\Theta,1}|\le c_1q$, $\|DD_\Theta\|\le c_2$ 
 `[ALG]` [RID: DYAD-ALG-OPEN3-PHASE-OFFSET] `[v6.4.15]` `[scope: chart of DYAD-ALG-NF6; row disks; $z=re^{i\Theta}$]` **Exact offset and leading terms.** (P4-0) $\Psi_W(m)-\Psi_z(m)=\Delta_0(z_m)$ for every $m$ (telescoping of $S_\Theta$ as real numbers, and $Q=q+D_Q$). Leading terms:
 $$\Delta_1=[\Delta_0]_1=D_{\Theta,1}-\tau D_3/q=r\bigl[\tfrac{17\sqrt3}{36}\cos\Theta-\tfrac1{12}\sin\Theta-\tfrac{7\sqrt3}{72}\cos3\Theta+\tfrac18\sin3\Theta\bigr],$$
 $$\Delta_2=[\Delta_0]_2=r^2\bigl[\tfrac{\sqrt3}{108}+\tfrac{\sqrt3}{1296}\cos2\Theta+\tfrac7{432}\sin2\Theta-\tfrac{\sqrt3}{324}\cos4\Theta-\tfrac5{108}\sin4\Theta-\tfrac{\sqrt3}{1728}\cos6\Theta-\tfrac5{576}\sin6\Theta\bigr].$$
-$\Delta_1$ has harmonics $\pm1,\pm3$, zero angular mean, and is nonzero (on $\Theta=0$: $\tfrac{3\sqrt3}8r$); $\Delta_2$ has harmonics $0,\pm2,\pm4,\pm6$. *Certificate:* DYAD-ART-OPEN3-P4 (`dyad_open3_p4_exact.py`; two routes — unit-circle Laurent arithmetic and real ray series compared at 60 digits, the latter internal to the same script; six negative controls fail). `[ALG]` `[scope: formal second order; remainder not certified]` **Primitive-variable form.** With $h^{-1}(W)=W-h_2(W)+O(|W|^3)$: $M_W(W_0)=-\Delta_1(W_0)+Q_0[c_{\rm iso}+\Lambda_1(\Theta_{W_0})]+P_{W2}(W_0)+O(Q_0^{3/2})$ with $P_{W2}=-\Delta_2+D\Delta_1[h_2]=|W|^2\bigl[-\tfrac{5\sqrt3}{27}+\tfrac{47\sqrt3}{1296}\cos2\Theta-\tfrac{19}{432}\sin2\Theta-\tfrac{11\sqrt3}{324}\cos4\Theta+\tfrac1{54}\sin4\Theta-\tfrac{\sqrt3}{1728}\cos6\Theta-\tfrac5{576}\sin6\Theta\bigr]$; hence the $Q_0$-order isotropic coefficient on the raw track is $c_{\rm iso}+\langle P_{W2}\rangle=-\tfrac{\sqrt3}3$ (arithmetic identity; no interpretation claimed). The $O(Q_0^{3/2})$ remainder in primitive variables is **not** certified (it needs a second-order bound on $h^{-1}-(\mathrm{id}-h_2)$); this part is not a `[THM]`.
+$\Delta_1$ has harmonics $\pm1,\pm3$, zero angular mean, and is nonzero (on $\Theta=0$: $\tfrac{3\sqrt3}8r$); $\Delta_2$ has harmonics $0,\pm2,\pm4,\pm6$. *Certificate:* DYAD-ART-OPEN3-P4 (`dyad_open3_p4_exact.py`; two routes — unit-circle Laurent arithmetic and real ray series compared at 60 digits, the latter internal to the same script; six negative controls fail). `[ALG]` `[scope: formal second order; remainder certified separately, OPEN 21]` **Primitive-variable form.** With $h^{-1}(W)=W-h_2(W)+O(|W|^3)$: $M_W(W_0)=-\Delta_1(W_0)+Q_0[c_{\rm iso}+\Lambda_1(\Theta_{W_0})]+P_{W2}(W_0)+O(Q_0^{3/2})$ with $P_{W2}=-\Delta_2+D\Delta_1[h_2]=|W|^2\bigl[-\tfrac{5\sqrt3}{27}+\tfrac{47\sqrt3}{1296}\cos2\Theta-\tfrac{19}{432}\sin2\Theta-\tfrac{11\sqrt3}{324}\cos4\Theta+\tfrac1{54}\sin4\Theta-\tfrac{\sqrt3}{1728}\cos6\Theta-\tfrac5{576}\sin6\Theta\bigr]$; hence the $Q_0$-order isotropic coefficient on the raw track is $c_{\rm iso}+\langle P_{W2}\rangle=-\tfrac{\sqrt3}3$ (arithmetic identity; no interpretation claimed). This expansion is formal at second order and is not itself a `[THM]`; its $O(Q_0^{3/2})$ remainder in primitive variables is certified separately by `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` (OPEN 21, `[assuming: RECOG-THM-R9-MEMORY]`).
 
 `[THM]` [RID: DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS] `[v6.4.15]` `[proof: analytic majorant + exact-rational certificate]` `[scope: NF-REM rows, not mixed]` **Certified offset bounds.** For $0<|z|\le r$: $|\Delta_0|\le K_0\sqrt q$, $|\Delta_0-\Delta_1|\le K_1q$, $|\Delta_0-\Delta_1-\Delta_2|\le K_2q^{3/2}$,
 
@@ -887,9 +855,9 @@ Majorants of $\operatorname{Im}\operatorname{Log}(1+g)$ and $\log(1+u)$, $g=(h-z
 - **T2 (finite-start offset)** `[THM]` `[assuming: T1]`: $M_W-M=-\Delta_0(z_0)$, $|M_W-M+\Delta_1(z_0)|\le K_1q_0$, $|M_W-M|\le K_0\sqrt{q_0}$; the leading $-\Delta_1(z_0)$ is $O(\sqrt{q_0})$, nonzero, and larger than R9's $O(q_0)$ memory — the quantitative reason R9 is not read on the raw track (SG-R14).
 - **Chart-variable memory law** `[THM]` `[assuming: RECOG-THM-R9-MEMORY]`: $M_W(z_0)=-\Delta_1(z_0)-\Delta_2(z_0)+q_0[c_{\rm iso}+\Lambda_1(\Theta_0)]+E$, $|E|\le C_2q_0^2+K_2q_0^{3/2}$, with R9's own $C_2$ and $q_0$ windows ($517$, $\tfrac1{400}$; $163$, $\tfrac1{1600}$) on the matching NF-REM row; $z_0=h^{-1}(W_0)$.
 
-`[DEF]` `[v6.4.15]` **Recorded distinctions.** (i) T1 depends on R9's limit and is not a new existence theorem. (ii) The primitive-variable expansion is formal at second order; only the chart-variable law is certified. (iii) $M_W$ is the primitive asymptotic-phase memory defined above; no statement is made about the comparator $C_W^{(h)}$. (iv) [NUM] illustration (not a proof input): the P4-0 identity holds along 6 primitive orbits × 4000 blocks to $\le1.5\cdot10^{-40}$; sampled $|\Psi_W-\Psi_z|/\sqrt{q_m}\le0.792$, $|\Delta_0-\Delta_1|/q\le0.075$, $|\Delta_0-\Delta_1-\Delta_2|/q^{3/2}\le0.139$; primitive expansion matches $-P_{W2}$ to $1.4\cdot10^{-13}$.
+`[DEF]` `[v6.4.15]` **Recorded distinctions.** (i) T1 depends on R9's limit and is not a new existence theorem. (ii) The primitive-variable expansion of DYAD-ALG-OPEN3-PHASE-OFFSET is formal at second order; its remainder is certified by DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER (OPEN 21), and the chart-variable law by DYAD-THM-OPEN3-ASYMPTOTIC-PHASE. (iii) $M_W$ is the primitive asymptotic-phase memory defined above; no statement is made about the comparator $C_W^{(h)}$. (iv) [NUM] illustration (not a proof input): the P4-0 identity holds along 6 primitive orbits × 4000 blocks to $\le1.5\cdot10^{-40}$; sampled $|\Psi_W-\Psi_z|/\sqrt{q_m}\le0.792$, $|\Delta_0-\Delta_1|/q\le0.075$, $|\Delta_0-\Delta_1-\Delta_2|/q^{3/2}\le0.139$; primitive expansion matches $-P_{W2}$ to $1.4\cdot10^{-13}$.
 
-*`[v6.4.20]` v6.4.15 "Not established" list relocated to Appendix A H-2; the current list is under OPEN 3a above.*
+*`[v6.4.20]` v6.4.15 "Not established" list in v6.4.20 Appendix A H-2 (tag `dyad-v6.4.20`); the current list is under OPEN 3a above.*
 
 **OPEN 3c, provenance and carried hashes (v6.4.16).** Source: recovered-artifacts SESSION record v0.1.1 (§8 DYAD-ART-OPEN3-P0), reviewed 19 Oct 2026 as a SESSION record.
 
@@ -901,7 +869,7 @@ Majorants of $\operatorname{Im}\operatorname{Log}(1+g)$ and $\log(1+u)$, $g=(h-z
 
 `[DEF]` `[v6.4.16]` **Carried v6.4.10 hashes.** Owner-measured SHA-256: `DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip` `e4e2bab004d4e39b76920e486607acc34749037ae2638809a9c2117d548fdbe4`; `check_owner_adoption.py` (inside `DYAD_OWNER_ADOPTION_REVIEW_v1.zip`) `c04096e1cd9ab559d5997c92ad8a442fbf79d350e801e9ed01e6e6a9e19800fe`. Agreement with the reviewer-measured identities of 22 Sep 2026 as reported by the owner; not independently re-measured in the v6.4.16 review.
 
-*`[v6.4.20]` v6.4.16 "Not established" list relocated to Appendix A H-2; the current list is under OPEN 3a above.*
+*`[v6.4.20]` v6.4.16 "Not established" list in v6.4.20 Appendix A H-2 (tag `dyad-v6.4.20`); the current list is under OPEN 3a above.*
 
 **OPEN 21 — primitive-variable phase remainder (v6.4.17).** Sources: P5 scope note v0.1 and P5 proof record v0.1.2 (§8 DYAD-ART-OPEN21-P5-RECORDS), reviewed 19 Oct 2026 as SESSION records (three rounds; final `P5 v0.1.2 — SCIENTIFIC REVIEW ACCEPTED`).
 
@@ -984,7 +952,7 @@ This does not presuppose $R(0)=0$; it only guarantees that both compositions are
 *Proof.* $j^\infty R$ is a formal involution commuting with $F$ with linear part $-I$, so $j^\infty R=R_0$ (§6.16). $R_0$ commutes with $T$ formally, so the Taylor series of $RT-TR$ is $R_0T-TR_0=0$. Since $T(0)=R(0)=0$, both compositions are defined and real-analytic on a connected neighbourhood of $0$; an analytic map with vanishing Taylor series vanishes there. $\square$
 
 - If $R_0$ diverges (negative answer to OPEN 20 (B-an)), no analytic non-identity involution commutes with $T^6$ under the hypotheses of (b).
-- For $C^\infty$ $R$, the argument of this section gives only $j^\infty(RT-TR)=0$; exact primitive-clock commutation is F1 (§6.17) and existence is DYAD-THM-SMOOTH-EMBEDDING (§6.17). `[v6.4.20]` (v6.4.12/v6.4.13 wording: Appendix A H-9.)
+- For $C^\infty$ $R$, the argument of this section gives only $j^\infty(RT-TR)=0$; exact primitive-clock commutation is F1 (§6.17) and existence is DYAD-THM-SMOOTH-EMBEDDING (§6.17).
 - This does not identify the distinct factor contracts $EF=TE$ and $EF=T^6E$, and it does not establish the existence of an analytic or $C^\infty$ involution.
 
 *Provenance.* Proposed by the RRF sync review v0.2 ("analytic clock bridge"); endorsed by the external reviewer (16 Oct 2026); proof written and checked by the Dyadic owner.
@@ -1053,7 +1021,7 @@ No normalizer is used. `[ALG]` **Identification.** For any formal Poincaré–Du
 - **F2 ($C^\infty$ uniqueness).** Two such involutions coincide near $0$.
 - **F3 (smooth roots).** A $C^\infty$ tangent-to-identity $K$ with $K^m=F$ commutes with $T$ and is unique. Hence in $C^\infty$: $F^{1/6}$ exists ⟺ $J$ exists ⟺ an exactly $\lambda$-equivariant $C^\infty$ chart exists, without a separate commutation hypothesis; likewise $F^{1/2}$ ⟺ $R_0$.
 
-*`[v6.4.20]` v6.4.17 "Not established" list relocated to Appendix A H-3; the current list is the v6.4.18 one below. The proposed route $F^{-n}R_\infty F^n$ remains unproved (Recorded distinctions (ii)).*
+*`[v6.4.20]` v6.4.17 "Not established" list in v6.4.20 Appendix A H-3 (tag `dyad-v6.4.20`); the current list is the v6.4.18 one below. The proposed route $F^{-n}R_\infty F^n$ remains unproved (Recorded distinctions (ii)).*
 
 **OPEN 20 B-∞ existence — smooth flow embedding (v6.4.18).** Sources: the O20-∞ SESSION records (§8 DYAD-ART-OPEN20-BINF-RECORDS), reviewed 19–20 Oct 2026 (P2-b v0.2.1, P3-a v0.1 and P3-b/c v0.1 accepted; integration audit v0.1 accepted with the E2 scope correction applied in v0.1.1). Requested by FMS (OPEN 20 priority, `DYAD_REPLY_TO_FMS_OPEN20_PRIORITY_v0_1.md`).
 
@@ -1075,7 +1043,7 @@ No normalizer is used. `[ALG]` **Identification.** For any formal Poincaré–Du
 
 ## §7. Import Ledger {#sec-7-imports}
 
-`[COR]` `[v6.4.20]` **Dependency structure.** The self-contained foundation of this study is derived from the postulated primitive map $T(\rho,\eta)$ with no upstream scientific DSN import: DYAD-ALG-NF6, DYAD-ALG-NF6-OBS, DYAD-THM-NF-INV, DYAD-THM-NF-REM, DYAD-THM-PRIM-CTR, the OPEN 3 per-block and offset results (DYAD-ALG-OPEN3-LEADING, DYAD-THM-OPEN3-SPIRAL-REM, DYAD-ALG-OPEN3-PHASE-OFFSET, DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS), DYAD-THM-LPHASE-ROWA-REMAINDER, the six-step module and the OPEN 9 arithmetic ledger. **R9-dependent layer:** T1, T2 and the chart-variable memory law (DYAD-THM-OPEN3-ASYMPTOTIC-PHASE) and DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER are `[THM]` `[assuming: RECOG-THM-R9-MEMORY]`; R9 is load-bearing for them (claim-level row below). Chain: Dyadic NF6, PRIM-CTR, NF-REM → RECOG-THM-R9-MEMORY → Dyadic T1/T2/OPEN 21 → RECOG-THM-A1A-CD-IDENTIFICATION and RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (RECOG v0.3.22). RECOG records that no A1a result is used to establish R9; the chain is acyclic. A change to R9 (statement, rows or $C_2$) reaches this document through RECOG v0.3.22 §7.3 (downstream dependents register). Custody does not move. Cross-study interpretations elsewhere (face-flux identity, OPEN-M gate conversion) use external inputs whose provenance is recorded at their entries (§6.2, §6.11, §6.12, SG-15). (v6.4.19 paragraph: Appendix A H-5.)
+`[COR]` `[v6.4.20]` **Dependency structure.** The self-contained foundation of this study is derived from the postulated primitive map $T(\rho,\eta)$ with no upstream scientific DSN import: DYAD-ALG-NF6, DYAD-ALG-NF6-OBS, DYAD-THM-NF-INV, DYAD-THM-NF-REM, DYAD-THM-PRIM-CTR, the OPEN 3 per-block and offset results (DYAD-ALG-OPEN3-LEADING, DYAD-THM-OPEN3-SPIRAL-REM, DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS, and of DYAD-ALG-OPEN3-PHASE-OFFSET the static-offset identity and $\Delta_1,\Delta_2$; its primitive-memory expansion uses the R9 memory law, $c_{\rm iso}$ and $\Lambda_1$), DYAD-THM-LPHASE-ROWA-REMAINDER, the six-step module and the native OPEN 9 derivations, excluding the named RECOG imports. **R9-dependent layer:** T1, T2 and the chart-variable memory law (DYAD-THM-OPEN3-ASYMPTOTIC-PHASE) and DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER are `[THM]` `[assuming: RECOG-THM-R9-MEMORY]`; R9 is load-bearing for them (claim-level row below). Chain: Dyadic NF6, PRIM-CTR, NF-REM → RECOG-THM-R9-MEMORY → Dyadic T1/T2/OPEN 21 → RECOG-THM-A1A-CD-IDENTIFICATION and RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (RECOG v0.3.22). RECOG records that no A1a result is used to establish R9; the chain is acyclic. A change to R9 (statement, rows or $C_2$) reaches this document through RECOG v0.3.22 §7.3 (downstream dependents register). Custody does not move. Cross-study interpretations elsewhere (face-flux identity, OPEN-M gate conversion) use external inputs whose provenance is recorded at their entries (§6.2, §6.11, §6.12, SG-15).
 
 **Claim-level scientific imports** `[v6.4.20]`:
 - `[THM]` [import: RECOG v0.3.22 §6.13a | RECOG-THM-R9-MEMORY] track $C_z$ in the chart of DYAD-ALG-NF6; rows $(C_2,q_0)=(517,\tfrac1{400})$ on $|z|\le\tfrac1{20}$ and $(163,\tfrac1{1600})$ on $|z|\le\tfrac1{40}$, not mixed. Used by DYAD-THM-OPEN3-ASYMPTOTIC-PHASE (T1, memory law) and DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER. Custody: RECOG.
@@ -1158,7 +1126,7 @@ Exports to (via Import Ledger entries in those documents):
 | N9 | v6.4.13 | OFN | same | ANSWERED at owner level | OFN v0.10 O10-P7, RF-O10-04; release record N-O10-1 |
 | N10 | v6.4.14 | RECOG | OPEN 3 chart-level spiral residual | RECEIVED — no use | RECOG v0.3.22 §7.2 |
 | N10 | v6.4.14 | NUMGEN | same | RECEIVED — no use | NUMGEN v1.20.8 §9.1 |
-| N11 | v6.4.15 | RECOG | OPEN 3b offset and memory | RECEIVED — reference import (SG-R14) | RECOG v0.3.22 §7.2 |
+| N11 | v6.4.15 | RECOG | OPEN 3b offset and memory | ADOPTED USE — `RECOG-THM-A1A-CD-IDENTIFICATION` depends on T1/T2 (`DYAD-THM-OPEN3-ASYMPTOTIC-PHASE`) at RECOG's pin; the earlier v0.3.21 reference import (SG-R14) is in the v6.4.20 notice table | RECOG v0.3.22 §6.13b; §7.2 mirror to be reconciled by RECOG |
 | N11 | v6.4.15 | NUMGEN | same | RECEIVED — no use | NUMGEN v1.20.8 §9.1 |
 | N12 | v6.4.16 | RECOG | OPEN 3 closed in scope; OPEN 21 opened | RECEIVED — no use | RECOG v0.3.22 §7.2 |
 | N12 | v6.4.16 | NUMGEN | same | RECEIVED — no use | NUMGEN v1.20.8 §9.1 |
@@ -1194,7 +1162,7 @@ Exports to (via Import Ledger entries in those documents):
 - [RID: DYAD-ART-OPEN18] :: `open18_arb_cert_final.cpp` :: FLINT/Arb certificate for OPEN 18 footprint monotonicity :: `[THM-ALG via IA]` ✓
 
 **Normalization pipeline artifacts:**
-- [RID: DYAD-ART-NORM-P6] :: `normalize_p6_liegauge_exact.py` :: Archival coordinate change $\Phi_{\rm archive}=\mathrm{id}+h_4+h_{5,\rm nr}$ (SG-19 operation (i)); `mp.dps=120` numerical with tolerance pruning, not exact; "$h_3=0$" refers to the non-resonant cubic of the return logarithm; does not zero non-resonant channels; preserves all raw coefficients through degree 5 :: role: archival coordinate change (numerical, 120-dps, tolerance-pruned); availability: repository; `[ENG]` validated behavior: reproduces the recorded raw coefficients through degree 5 on its inputs. Numerical residual tests recorded under `[NUM]` scope. `[COR]` v6.4.10: previously graded `[ALG]`; that grade described a proof the script does not perform.
+- [RID: DYAD-ART-NORM-P6] :: `normalize_p6_liegauge_exact.py` (SHA-256 `cec918f808cbc02c53beba5f88faf1edbed830a87dac7283e6ac2511d2ec5835`, `evidence/dyad/scripts/`; its $h_4$ closed forms are confirmed exactly by `dyad_h4_archival_exact_check.py`) :: Archival coordinate change $\Phi_{\rm archive}=\mathrm{id}+h_4+h_{5,\rm nr}$ (SG-19 operation (i)); `mp.dps=120` numerical with tolerance pruning, not exact; "$h_3=0$" refers to the non-resonant cubic of the return logarithm; does not zero non-resonant channels; preserves all raw coefficients through degree 5 :: role: archival coordinate change (numerical, 120-dps, tolerance-pruned); availability: repository; `[ENG]` validated behavior: reproduces the recorded raw coefficients through degree 5 on its inputs. Numerical residual tests recorded under `[NUM]` scope. `[COR]` v6.4.10: previously graded `[ALG]`; that grade described a proof the script does not perform.
 - [RID: DYAD-ART-HOM-P6] :: `homological_solver_p6_numeric.py` :: 1-step discrete homological solver (80-digit numeric); recovered copy regenerates `phi1_p6_deg5.json`, all 18 nonzero coefficients agreeing with the exact solve (DYAD-ALG-NF6) to $\sim5\times10^{-81}$; original output byte identity `[OPEN]` :: `[ENG]`
 - [RID: DYAD-ART-ACCUM-P56] :: `step_accumulation_p5_p6_cli.py` :: $p$-step accumulation of normalized 1-step models; computes $F_1^p$ :: `[ENG]`
 - [RID: DYAD-ART-NORM-PSTEP] :: `normalize_pstep_lie.py` :: Log-channel projection $G_{\rm proj}=\exp(\mathscr P_{\rm keep}\log F_W)$ (SG-19 operation (ii)); a reduced model, not a solved conjugacy :: `[ENG]`
@@ -1259,7 +1227,7 @@ Exports to (via Import Ledger entries in those documents):
 
 **ATLAS revision artifacts (v6.4.20):**
 - [RID: DYAD-ART-ATLAS-P1] `[v6.4.20; RID registered at adoption, 21 Oct 2026]` :: `build_dyad_p1.py`, `check_dyad_p1.py`, `dyad_p1_math_checks.py`; records `DYAD_ATLAS_P1_SCIENTIFIC_CORRECTION_SESSION_v0_1.md`, `DYAD_FC32_HNG_R9FREE_SESSION_v0_1.md` (project `claude/atlas/p1/`) :: P1 working-file builder, gates G0–G13, checks P1-1–P1-5; reviewer replay recorded in the P1 review :: `[ENG]`
-- [RID: DYAD-ART-ATLAS-P2] `[v6.4.20; RID registered at adoption, 21 Oct 2026]` :: `build_dyad_v6_4_20_r1.py` with `p2_content.py`, `check_dyad_v6_4_20_r1.py`; r2: `build_dyad_v6_4_20_r2.py`, `check_dyad_v6_4_20_r2.py`; `dyad_p2_math_checks.py` (M1–M11), `p2_source_checks.py` (S1–S4); record `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md` (project `claude/atlas/p2/`) :: the v6.4.20 drafts: builders, gates, owner math and source checks; r1 package replayed by the external reviewer (21 Oct 2026), r2 OWNER-RUN :: `[ENG]`
+- [RID: DYAD-ART-ATLAS-P2] `[v6.4.20; RID registered at adoption, 21 Oct 2026]` :: `build_dyad_v6_4_20_r1.py` with `p2_content.py`, `check_dyad_v6_4_20_r1.py`; r2: `build_dyad_v6_4_20_r2.py`, `check_dyad_v6_4_20_r2.py`; `dyad_p2_math_checks.py` (M1–M11), `p2_source_checks.py` (S1–S4); record `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md` (project `claude/atlas/p2/`) :: the v6.4.20 drafts: builders, gates, owner math and source checks; r1 and r2 packages replayed by the external reviewer (21 Oct 2026; r2: G0–G21, the r2 negative controls, M1–M11, S1–S4 with C1–C2, R1–R4 with D1–D2), as recorded at adoption :: `[ENG]`
 
 ---
 
@@ -1280,1220 +1248,57 @@ Exports to (via Import Ledger entries in those documents):
 
 ## Appendix A — Version History {#appendix-a}
 
-### v6.4.20 — adopted 21 October 2026
-
-- **Owner decision:** explicit PI adoption, 21 Oct 2026 ("Ben onaylıyorum", 18:14 +03:00), recorded as `DYAD v6.4.20 — OWNER ADOPTION AUTHORIZED`. It follows the external review `DYAD v6.4.20 DRAFT r2 — REVIEW ACCEPTED` of DRAFT r2 (`f2030f853b94a7caa1d1d7c4afd8bdf9b6059582d331100bb0033226fd68465e`). Review acceptance and owner adoption are separate decisions.
-- **Chain:** v6.4.19 (`40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`) → ATLAS P1 working file (`6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905`; `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED`) → DRAFT r1 (`a5c70f5b1468ab01ba1cdf932fb9205c4bf00976a2b6523e8b90210e5e457c4a`; `v6.4.20 r1 — REVIEW ACCEPTED WITH MINOR CORRECTIONS`) → DRAFT r2 (`f2030f853b94a7caa1d1d7c4afd8bdf9b6059582d331100bb0033226fd68465e`; `DYAD v6.4.20 DRAFT r2 — REVIEW ACCEPTED`) → this file by `release_v6_4_20.py` (labels and metadata only; 55 lines replaced in place, quoted below).
-- **Registered by this adoption (13 RIDs):** `DYAD-ALG-KP-FRAME-SCALE`, `DYAD-THM-SMOOTH-EQUIVARIANT-CHART`, `DYAD-ALG-B5-ALLP-NONVANISHING`, `DYAD-ALG-RAW-ANGULAR-MEAN`, `DYAD-ALG-ONE-BLOCK-BURST`, `DYAD-ALG-P5-RADIAL`, `DYAD-ALG-SIXSTEP-CUBIC-JET`, `DYAD-ALG-Q3-DEG2-CANCEL`, `DYAD-DEF-CRITICAL-CURVE`, `DYAD-ALG-QC-CRITICAL-AMPLITUDE`, `DYAD-ALG-ISP-MAPS`, `DYAD-ART-ATLAS-P1`, `DYAD-ART-ATLAS-P2`. Census A (tagged identifiers): v6.4.19 135 → v6.4.20 148; every v6.4.19 identifier is kept.
-- **Unchanged:** every earlier statement, grade, scope and OPEN status. OPEN 20 PARTIAL (B-∞ existence and flat uniqueness CLOSED; B-an and B-6 OPEN); OPEN 9 PARTIAL.
-- **Kept distinctions:** FA-08 — the `DYAD-THM-RAW-CUBIC` formula is verified, its direct match with the historical OPEN 9 source is not complete. FA-04 — `degree_b_vanishing_cert_v2.py` is not available and is not presented as recreated. FC-32 (H-NG) stays a SESSION result and is not imported. Editions without a recorded hash (Triadic, OPEN-M, Programme, Methodology, DZT, AZ) stay "not recorded".
-- **Evidence levels:** `REVIEWER-REPLAYED` — r2 review: r2 G0–G21, the r2 negative controls, M1–M11, S1–S4 with C1–C2 (with the RECOG v0.3.20/v0.3.21/v0.3.22 files), R1–R4 with D1–D2; r1 review: r1 hashes, builder, G0–G18, N0–N16, K1–K3. `OWNER-RUN` — this release transform and its release checker with negative controls. `REVIEWER FULL REPLAY NOT COMPLETED` — the combined G14–G15 run carried from v6.4.19 (a separate historical item, not closed by the v6.4.20 reviews); the release checker of this edition until it is replayed. The release-record hashes in the v6.4.17/v6.4.18 addenda v0.1.1 are `REVIEWER-MEASURED` (r1 review), not owner-measured.
-- **Outbound:** N16–N20 (ATLAS disposition §6) are prepared only after external verification of this file's SHA-256 and are sent by the PI. No notice is sent by this release.
-
-#### v6.4.20 adoption — replaced DRAFT r2 lines (verbatim)
-
-**r2 line 4**
-
-> **Edition:** v6.4.20 DRAFT r2 — 21 October 2026  
-
-**r2 line 5**
-
-> **Status:** DRAFT r2 — not adopted, not released. Adopted `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19` (SHA-256 `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`) remains the canonical Dyadic ledger until a separate external review and an explicit PI adoption decision. r1 built by `build_dyad_v6_4_20_r1.py` from the verified ATLAS P1 working file (SHA-256 `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905`) under `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED` (P2 authorized, 21 Oct 2026); r2 = r1 with the record corrections of the r1 review (`TECHNICAL REVIEW PASSED — MINOR RECORD CORRECTIONS REQUIRED`), built by `build_dyad_v6_4_20_r2.py`.  
-
-**r2 line 7**
-
-> **Supersedes (on adoption only):** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19`. Lineage and all release records: Appendix A.  
-
-**r2 line 11**
-
-> **Status summary:** The dyad map has theorem-grade and exact-algebraic certification for the six-step resonant module ($c_{21}$, the local quintic normalization pipeline, OPEN 11, OPEN 18); the local return enclosure of §6.14 (exact degree-6 normalizer and jet, primitive contraction with invariant tube, inverse coordinates, normalized remainders); the OPEN 3 spiral-residual results and the primitive-variable remainder (OPEN 21; conditional on `RECOG-THM-R9-MEMORY`); the L-PHASE angular remainder on row A (`[THM]`; the constant $\tfrac{403}{250}$ is an upper bound); the formal centralizer and ℤ₆ generator (§6.16); Lemma F with F1–F3 and the smooth flow embedding (§6.17). OPEN 9 is PARTIAL: low-degree anti-holomorphic vanishing is `[ALG]` for $b\in\{2,3,4\}$ ($p\ge b+2$), it fails at $b=5$ for every $p\ge6$, all-$b\ge5$ persistence is `[OPEN]`, and the $q=4,(0,3)$ phase law is closed for all $p$. OPEN 20 is PARTIAL: B-∞ existence and flat uniqueness are CLOSED; B-an and B-6 are OPEN. This draft adds the ATLAS P1 scientific corrections and the P2 interface work (Appendix A). Proposed RIDs are registered only on adoption; no adopted RID is renamed or regraded.  
-
-**r2 line 12**
-
-> **Draft record:** Appendix A, "v6.4.20 DRAFT r2" and "v6.4.20 DRAFT r1"; session records `DYAD_ATLAS_P2_R2_CORRECTION_SESSION_v0_1.md` and `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md`. The v6.4.19 header, adoption metadata, release summaries and footers are preserved verbatim there.
-
-**r2 line 60**
-
-> **Version markers.** `[v6.4.20]` marks text introduced by the ATLAS P1 and P2 passes (the P1 working file wrote these as P1 markers). `[v6.4.20 entry]` marks a whole new entry; a proposed RID carries `[v6.4.20; proposed RID, registered only at adoption]`.
-
-**r2 line 254**
-
-> - Channel boundary all-$p$ (DYAD-OPEN-B5-ALLP): **CLOSED `[ALG]`**. `[v6.4.20: result RID proposed, DYAD-ALG-B5-ALLP-NONVANISHING (§6.11); the lifecycle identifier is unchanged]` For $p\ge13$, $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$ with $S_{\rm eff}/S=N/D$, $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$. Cyclotomic non-division: $\deg N=6$ so $\Phi_p\mid N$ requires $\varphi(p)\le6$ (finite set); exact check shows $\Phi_p\nmid N$ for all, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. With the exact sweep $p=6..12$: $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$. Remaining (separate): all-$b\ge5$ persistence and the general-coefficient version: `[OPEN]`
-
-**r2 line 481**
-
-> `[DEF]` `[v6.4.20 entry; proposed RID, registered only at adoption]` [RID: DYAD-DEF-CRITICAL-CURVE] **Critical curve (rank-one locus).** $C_0:=\{\det DT=0\}=\{1+(e^\rho-1)\cos\eta=0\}$. Because $|\cos\eta|\le1$, this is the set described in the next entry ($\rho\ge\ln2$). On $C_0$ the kernel of $DT$ is spanned by $k=(\cos\eta,1)$, since $DT\,k=(0,\det DT)$ identically; RECOG-ALG-P2-C0-WHITNEY-FOLD uses this direction. Owner check M2.
-
-**r2 line 532**
-
-> `[ALG]` [RID: DYAD-ALG-ISP-MAPS] `[v6.4.20; proposed RID, registered only at adoption; covers the forward map and the reconstruction below; owner check M4]` **Forward map:**
-
-**r2 line 545**
-
-> `[ALG]` [RID: DYAD-ALG-QC-CRITICAL-AMPLITUDE] `[v6.4.20; proposed RID, registered only at adoption; owner check M3]` **Critical ISP amplitude:** $Q_c := (\arcsin(\ln 2))^2 \approx 0.5865$. If $Q < Q_c$ at pre-crossing, critical curve is unreachable at the crossing step.
-
-**r2 line 553**
-
-> `[ALG]` `[scope: fixed-radius uniform-angle mean in the raw $W$-frame]` [RID: DYAD-ALG-RAW-ANGULAR-MEAN] `[v6.4.20; proposed RID, registered only at adoption; owner check M8]` **Raw angular-mean recurrence coefficient.** Define
-
-**r2 line 563**
-
-> `[ALG]` [RID: DYAD-ALG-ONE-BLOCK-BURST] `[v6.4.20; proposed RID, registered only at adoption; owner check M7]` **One-block burst on the positive real primitive ray** $(\rho,\eta)=(t,0)$, $t>0$, $Q_0=t^2$:
-
-**r2 line 607**
-
-> `[ALG]` [RID: DYAD-ALG-SIXSTEP-CUBIC-JET] `[v6.4.20; proposed RID, registered only at adoption; covers the jet and M+M^T=-I; owner check M5]` **6-step cubic jet** in primitive $(\rho,\eta)$ coordinates:
-
-**r2 line 663**
-
-> `[ALG]` [RID: DYAD-ALG-KP-FRAME-SCALE] `[v6.4.20; proposed RID, registered only at adoption]` `[proof: exact algebra; `dyad_p1_math_checks.py` P1-1]` **Frame qualifier for the bridge lemma.** The lemma holds in each linear eigenframe for that frame's one-step coefficient. For the declared $K_p$ family the two frames in use are $Z$ ($\eta=Z+\bar Z$, $\rho=uZ+\bar u\bar Z$, $u=1/(1-\lambda)$; RECOG) and $W_p=\rho+\tfrac{\lambda-1}{K_p}\eta$ (Dyadic; the §1 frame at $p=6$). Since $\bar u+\tfrac{\lambda-1}{K_p}=0$ and $u=\tfrac12+\tfrac i2\cot(\pi/p)$,
-
-**r2 line 702**
-
-> `[ALG]` (all $p$, complete) [RID: DYAD-ALG-B5-ALLP-NONVANISHING] `[v6.4.20; proposed RID for the b=5 statement (F_raw^p(0,5) != 0 for every p >= 6), registered only at adoption; the lifecycle identifier DYAD-OPEN-B5-ALLP is unchanged]` **Channel classification boundary at $b=4$ (dyadic map).** Universal pure anti-holomorphic vanishing (for $p\ge b+2$) holds for $b\in\{2,3,4\}$ `[ALG]` (source $\beta$-sets carry no secular mode; exceptional orders bounded by $b+1$), and FAILS at $b=5$ for EVERY $p\ge6$ `[ALG]`. Proof of the $b=5$ failure: the $(0,5)$ source carries the secular mode $\beta=1$ with five-term coefficient $S\propto c_{02}^2$ (nonzero `[ALG]`). For $p=6..12$, exact cyclotomic certificates give $F_{\rm raw}^p(0,5)\ne0$ in $\mathbb{Q}(\zeta_p)$ `[ALG]` `[scope: finite sweep]` (e.g. $F_{\rm raw}^7(0,5)=\tfrac{15}{2}\lambda^5+\tfrac{23}{8}\lambda^4+\tfrac{21}{8}\lambda^3+\tfrac{15}{2}\lambda^2-\tfrac18\lambda+\tfrac{17}{2}$). For $p\ge13$, all nonsecular $m=0$ modes vanish (geometric sums, $p\nmid(\beta-1)$ for $\beta-1\in\{-6,\dots,-1,1\}$) and the polynomial mode $(-2,1)$ has exact sum $-p/(1-\lambda^{-3})$, giving the exact identity $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$, $S_{\rm eff}=S-c_{(-2,1)}/(1-\lambda^{-3})$. The effective ratio is the explicit rational $S_{\rm eff}/S=N/D$ with $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$ ($\lim_{\lambda\to1}=3$, `[ALG]`). Since $\deg N=6$, a primitive $p$-th root can be a zero of $N$ only if $\varphi(p)\le6$ (finitely many $p$: $\{1..10,12,14,18\}$); exact division shows $\Phi_p\nmid N$ for every one, so $N(\lambda_p)\ne0$ for all $p$, hence $S_{\rm eff}\ne0$ for all $p\ge13$. Therefore $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$ `[ALG]` (complete proof, not a finite scan). Net `[ALG]` for the dyadic map: **universal pure anti-holomorphic raw vanishing holds for $b\in\{2,3,4\}$ and first fails at $b=5$, for every $p\ge6$.** Whether it fails for every $b\ge6$ is `[OPEN]` (all-$b\ge5$ persistence; scan-confirmed $b=6$ only), as is the general-coefficient version. `[COR]` `[v6.4.11]` The former wording "holds iff $b\le4$" asserted the open $b\ge6$ direction and is withdrawn. [cert: rtg_b5_Seff_limit_cert.py (all-$p$ closure); exact_Fraw_b5_sweep.py ($p=6..12$); rtg_b5_step3_reduction.py; rtg_extract_b5_secular_coeff.py (source)]
-
-**r2 line 711**
-
-> - [RID: DYAD-ALG-Q3-DEG2-CANCEL] `[v6.4.20; proposed RID, registered only at adoption; evidence rtg_p_certs.py (DYAD-ART-P-CERTS), not rerun in P2]` Degree-2 $q=3,(0,2)$ cancellation for all $p>3$ with $3\mid p$.
-
-**r2 line 815**
-
-> `[ALG]` `[v6.4.20 entry; proposed RID, registered only at adoption]` [RID: DYAD-ALG-P5-RADIAL] **Degree-five radial part of the six-step return.** In primitive coordinates $Q(T^6x)-Q=-Q^2+P_5+O(\|x\|^6)$ with $P_5=\tfrac{Q}{24}(5\eta^3-43\eta^2\rho+4\eta\rho^2-5\rho^3)$, $Q=\rho^2-\rho\eta+\eta^2$; the quadratic and cubic parts vanish. This registers as a result the identity used inside `DYAD-THM-PRIM-CTR` below; no statement changes. Owner check M6.
-
-**r2 line 1066**
-
-> `[THM]` [RID: DYAD-THM-SMOOTH-EQUIVARIANT-CHART] `[v6.4.20; proposed RID, registered only at adoption]` `[corollary of DYAD-THM-SMOOTH-EMBEDDING E3–E4; proof: finite-group averaging]` **Smooth equivariant chart.** Let $J$ be the $C^\infty$ germ of E4 ($J^6=\mathrm{id}$, $DJ(0)=A$, $JT=TJ$) and $\Phi:=\tfrac16\sum_{k=0}^{5}A^{-k}J^k$. Then $\Phi$ is a $C^\infty$ local diffeomorphism with $\Phi(0)=0$, $D\Phi(0)=I$, $\Phi\circ J=A\circ\Phi$, and $N_\Phi:=\Phi T\Phi^{-1}$ commutes with $A$.  
-
-**r2 line 1087**
-
-> `[DEF]` `[v6.4.20]` One table of the editions this ledger uses. A hash marked "project copy hashed by DYAD" was computed from the project file for this draft; "not recorded" means this ledger carries no hash for that edition.
-
-**r2 line 1091**
-
-> | Dyadic (this ledger) | v6.4.19 | ADOPTED 20 Oct 2026; canonical until a v6.4.20 adoption decision | `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9` | release record; verification record | base of P1/P2 |
-
-**r2 line 1092**
-
-> | Dyadic ATLAS P1 working file | v6.4.20 P1 | noncanonical; reviewed (`ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED`) | `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905` | P1 record; reviewer hash check | base of this draft |
-
-**r2 line 1141**
-
-> `[DEF]` `[v6.4.20]` One recipient per row. "Where recorded" names the consumer record read for this draft; "NOT RECORDED" means no receipt was found there, not that the notice was refused. Notices N16–N20 (ATLAS disposition §6) are issued only after adoption; none is prepared in this draft.
-
-**r2 line 1261**
-
-> - [RID: DYAD-ART-ATLAS-P1] `[v6.4.20; proposed RID, registered only at adoption]` :: `build_dyad_p1.py`, `check_dyad_p1.py`, `dyad_p1_math_checks.py`; records `DYAD_ATLAS_P1_SCIENTIFIC_CORRECTION_SESSION_v0_1.md`, `DYAD_FC32_HNG_R9FREE_SESSION_v0_1.md` (project `claude/atlas/p1/`) :: P1 working-file builder, gates G0–G13, checks P1-1–P1-5; reviewer replay recorded in the P1 review :: `[ENG]`
-
-**r2 line 1262**
-
-> - [RID: DYAD-ART-ATLAS-P2] `[v6.4.20; proposed RID, registered only at adoption]` :: `build_dyad_v6_4_20_r1.py` with `p2_content.py`, `check_dyad_v6_4_20_r1.py`; r2: `build_dyad_v6_4_20_r2.py`, `check_dyad_v6_4_20_r2.py`; `dyad_p2_math_checks.py` (M1–M11), `p2_source_checks.py` (S1–S4); record `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md` (project `claude/atlas/p2/`) :: this draft: builders, gates, owner math and source checks; r1 package replayed by the external reviewer (21 Oct 2026), r2 OWNER-RUN :: `[ENG]`
-
-**r2 line 2351**
-
-> `[DEF]` `[v6.4.20]` One row per result or definition identifier carried by this ledger (adopted and proposed). Evidence levels are kept apart: **OWNER-RUN** (run by the Dyadic owner), **REVIEWER-REPLAYED** (rerun by an external reviewer), **REVIEWER FULL REPLAY NOT COMPLETED** (named runs a reviewer did not finish). "not recorded" means this ledger carries no record; an absent attachment is recorded as absent, not inferred. "Written proof" is the section of the entry. P2 checks M1–M11 are in `dyad_p2_math_checks.py` (OWNER-RUN, 21 Oct 2026; REVIEWER-REPLAYED from the r1 package, 21 Oct 2026 — the same script rerun, not a second method). `[v6.4.20]` (r2) **Grade rule:** the grade is the grade tag governing the identifier's canonical RID tag (the nearest grade tag before it on that line, otherwise the first after it; for a list item without a grade tag, the grade of the list's lead-in line); proposed identifiers read "— proposed, not adopted". `DYAD-CAND-FLAT-CENTRALIZER` and `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` carry `[THM]` since the v6.4.13 adoption decision; their identifiers were kept. **Scope rule:** the scope span of the entry, or a stated split where the entry has parts of different coverage.
-
-**r2 line 2359**
-
-> | `DYAD-ALG-B5-ALLP-NONVANISHING` | ALG — proposed, not adopted | all $p\ge6$: $6\le p\le12$ by exact cyclotomic certificates (finite part); $p\ge13$ by algebraic proof ($\Phi_p\nmid N$) | §6.11 | `rtg_b5_Seff_limit_cert.py`, `exact_Fraw_b5_sweep.py`, `rtg_b5_step3_reduction.py` | not recorded | exact cyclotomic | all $p\ge6$ |
-
-**r2 line 2366**
-
-> | `DYAD-ALG-ISP-MAPS` | ALG — proposed, not adopted | as stated at the entry | §6.4 | P2 M4 | `dyad_p2_math_checks.py` | SymPy exact | forward map and reconstruction |
-
-**r2 line 2367**
-
-> | `DYAD-ALG-KP-FRAME-SCALE` | ALG — proposed, not adopted | as stated at the entry | §6.9 | P1 math checks | `dyad_p1_math_checks.py` | SymPy | declared $K_p$ family |
-
-**r2 line 2373**
-
-> | `DYAD-ALG-ONE-BLOCK-BURST` | ALG — proposed, not adopted | as stated at the entry | §6.5 | P2 M7 | `dyad_p2_math_checks.py` | exact rational jets | positive real ray |
-
-**r2 line 2376**
-
-> | `DYAD-ALG-P5-RADIAL` | ALG — proposed, not adopted | as stated at the entry | §6.14 | P2 M6 | `dyad_p2_math_checks.py` | exact rational jets | degrees 2–5 |
-
-**r2 line 2381**
-
-> | `DYAD-ALG-Q3-DEG2-CANCEL` | ALG — proposed, not adopted | as stated at the entry | §6.11 | `rtg_p_certs.py` (DYAD-ART-P-CERTS) | not recorded | SymPy/cyclotomic | all $p>3$, $3\mid p$ |
-
-**r2 line 2382**
-
-> | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | ALG — proposed, not adopted | as stated at the entry | §6.4 | P2 M3 | `dyad_p2_math_checks.py` | SymPy | value to 4 d.p. |
-
-**r2 line 2383**
-
-> | `DYAD-ALG-RAW-ANGULAR-MEAN` | ALG — proposed, not adopted | scope: fixed-radius uniform-angle mean in the raw $W$-frame | §6.5 | P2 M8 | `dyad_p2_math_checks.py` | exact rational jets | raw fixed-radius mean |
-
-**r2 line 2384**
-
-> | `DYAD-ALG-SIXSTEP-CUBIC-JET` | ALG — proposed, not adopted | as stated at the entry | §6.7 | P2 M5 | `dyad_p2_math_checks.py` | exact rational jets | cubic order |
-
-**r2 line 2393**
-
-> | `DYAD-DEF-CRITICAL-CURVE` | DEF — proposed, not adopted | as stated at the entry | §6.1 | P2 M2 | `dyad_p2_math_checks.py` | SymPy exact | full statement |
-
-**r2 line 2414**
-
-> | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | THM — proposed, not adopted | as stated at the entry | §6.17 | P1 SESSION derivation | `dyad_p1_math_checks.py` (linear part) | SymPy | $C^\infty$ germs |
-
-**r2 line 2422**
-
-> | `DYAD-ALG-B5-ALLP-NONVANISHING` | historical (v6.4.7) | not recorded | not recorded | not recorded | proposed RID; all-$b\ge5$ OPEN |
-
-**r2 line 2429**
-
-> | `DYAD-ALG-ISP-MAPS` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M4 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
-
-**r2 line 2430**
-
-> | `DYAD-ALG-KP-FRAME-SCALE` | P1 | reviewer general-angle algebraic check | — | yes (reviewer) | proposed RID |
-
-**r2 line 2436**
-
-> | `DYAD-ALG-ONE-BLOCK-BURST` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M7 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
-
-**r2 line 2439**
-
-> | `DYAD-ALG-P5-RADIAL` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M6 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
-
-**r2 line 2444**
-
-> | `DYAD-ALG-Q3-DEG2-CANCEL` | historical | not recorded | not recorded | not recorded | proposed RID; not rerun in P2 |
-
-**r2 line 2445**
-
-> | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M3 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
-
-**r2 line 2446**
-
-> | `DYAD-ALG-RAW-ANGULAR-MEAN` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M8 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID; long-orbit identification OPEN |
-
-**r2 line 2447**
-
-> | `DYAD-ALG-SIXSTEP-CUBIC-JET` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M5 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
-
-**r2 line 2456**
-
-> | `DYAD-DEF-CRITICAL-CURVE` | P2, 21 Oct 2026 | r1 review, 21 Oct 2026: `dyad_p2_math_checks.py` M2 rerun from the r1 package (same script) | — | no (same-script replay, not a second method) | proposed RID |
-
-**r2 line 2477**
-
-> | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | P1 | reviewer ACCEPT `[THM — SESSION]` (FB-13) | — | reviewer check of the averaging argument | proposed RID; analyticity OPEN |
-
-**r2 line 2483**
-
-> `[DEF]` `[v6.4.20]` Every Dyadic-pattern string printed in DZT v0.8 (§7) and AZ v0.6 (§§4.1, 8), classified. Classes: exact match; component of `DYAD-THM-Q403-PHASELAW`; historical note label; artifact; unmatched. No alias is created by this table; consumer repins are requested after adoption (planned notice N17).
-
-**r2 line 2487**
-
-> | DZT v0.8 §7 | DYAD-OPEN-B5-ALLP | exact match | `DYAD-OPEN-B5-ALLP` (closed lifecycle item, untagged in this ledger) | result RID proposed: `DYAD-ALG-B5-ALLP-NONVANISHING` |
-
-**r2 line 2509**
-
-> | AZ v0.6 §8 | DYAD-ALG-Q3-CANCEL | unmatched | statement = the degree-2 $q=3,(0,2)$ cancellation (§6.11 micro-certification, no RID in v6.4.19) | proposed `DYAD-ALG-Q3-DEG2-CANCEL` covers the statement; no alias is created; AZ may repin after adoption |
-
-**r2 line 2515**
-
-> `[DEF]` `[v6.4.20]` Every v6.4.19 heading and its place in this draft. Anchors are kept. Relocated text is listed in Appendix A (H-P2-*).
-
-**r2 line 2517**
-
-> | v6.4.19 | v6.4.20 DRAFT r2 (headings as in r1) | Change |
-
-**r2 line 2547**
-
-> | `## Appendix A — Version History {#appendix-a}` | `## Appendix A — Version History {#appendix-a}` | v6.4.20 DRAFT r2 and r1 records added; P1 record and older history retained |
-
-**r2 line 2560**
-
-> *END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.20 DRAFT r2*  
-
-**r2 line 2561**
-
-> *DRAFT r2, 21 October 2026 — not adopted, not released. Adopted v6.4.19 (`40c9e63f…6ec9`) remains canonical. The r1 footer and every other replaced r1 line are quoted verbatim in Appendix A (v6.4.20 DRAFT r2 record); the v6.4.19 and inherited footers remain in the r1 record (H-P2-12).*
-
-### v6.4.20 DRAFT r2 — 21 October 2026 (draft record; not adopted)
-
-- **Base:** v6.4.20 DRAFT r1, SHA-256 `a5c70f5b1468ab01ba1cdf932fb9205c4bf00976a2b6523e8b90210e5e457c4a` (unchanged; reviewed).
-- **Authority:** external r1 review of 21 Oct 2026, `TECHNICAL REVIEW PASSED — MINOR RECORD CORRECTIONS REQUIRED`; final line `v6.4.20 r1 — REVIEW ACCEPTED WITH MINOR CORRECTIONS`. P2 technical replay PASS; scientific scope transfer ACCEPT; Appendix E consistency MINOR CORRECTION REQUIRED. This is not an adoption decision.
-- **Scope of r2 (limited to the review items):** C1 three Appendix E.1 rows and the grade/scope rule (new checker gate G19); C2 `|` inside math in live table rows (G21); C3 reviewer replays recorded as REVIEWER-REPLAYED; C4 edition markers; C5 this record. No theorem, statement, grade in §1–§9, OPEN status or RID is changed. The full release-record hashes measured by the reviewer go to the addenda v0.1.1, not to this ledger.
-- **Official state unchanged:** v6.4.19 adopted; OPEN 20 PARTIAL (B-an, B-6 OPEN). No notice is sent; N16–N20 follow a release.
-
-**E.1 corrections (C1).** The three rows named by the review are `DYAD-ALG-B5-ALLP-NONVANISHING` (scope split: finite certificate range and all-$p$ algebraic proof), `DYAD-CAND-P0-DYADIC` (grade `[CAND]`, conditional; its exact arithmetic sub-results stay under `DYAD-ALG-P6-FACEFLUX`) and `DYAD-ALG-Q3-DEG2-CANCEL` (grade `[ALG]`, proposed, not adopted; source script not rerun in P2). The other rows below change only by the "proposed, not adopted" suffix.
-
-| RID | r1 Grade | r2 Grade | r1 Scope | r2 Scope |
-|---|---|---|---|---|
-| `DYAD-ALG-B5-ALLP-NONVANISHING` | ALG | ALG — proposed, not adopted | scope: finite sweep | all $p\ge6$: $6\le p\le12$ by exact cyclotomic certificates (finite part); $p\ge13$ by algebraic proof ($\Phi_p\nmid N$) |
-| `DYAD-ALG-ISP-MAPS` | ALG | ALG — proposed, not adopted | as stated at the entry | as stated at the entry |
-| `DYAD-ALG-KP-FRAME-SCALE` | ALG | ALG — proposed, not adopted | as stated at the entry | as stated at the entry |
-| `DYAD-ALG-ONE-BLOCK-BURST` | ALG | ALG — proposed, not adopted | as stated at the entry | as stated at the entry |
-| `DYAD-ALG-P5-RADIAL` | ALG | ALG — proposed, not adopted | as stated at the entry | as stated at the entry |
-| `DYAD-ALG-Q3-DEG2-CANCEL` | — | ALG — proposed, not adopted | as stated at the entry | as stated at the entry |
-| `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | ALG | ALG — proposed, not adopted | as stated at the entry | as stated at the entry |
-| `DYAD-ALG-RAW-ANGULAR-MEAN` | ALG | ALG — proposed, not adopted | scope: fixed-radius uniform-angle mean in the raw $W$-frame | scope: fixed-radius uniform-angle mean in the raw $W$-frame |
-| `DYAD-ALG-SIXSTEP-CUBIC-JET` | ALG | ALG — proposed, not adopted | as stated at the entry | as stated at the entry |
-| `DYAD-CAND-P0-DYADIC` | ALG | CAND | scope: inherited | conditional h-transfer (h-source bridge OPEN in OPEN-M); exact sub-results are not part of this row: face-flux identity and R11 factor $3/4$ under `DYAD-ALG-P6-FACEFLUX` `[ALG]`; threshold $0.024$ `[HYP]` inherited |
-| `DYAD-DEF-CRITICAL-CURVE` | DEF | DEF — proposed, not adopted | as stated at the entry | as stated at the entry |
-| `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | THM | THM — proposed, not adopted | as stated at the entry | as stated at the entry |
-
-**Table repairs (C2).** 6 live table rows; inside `$…$` the bar `|` is written `\vert` and `\|` is written `\Vert`. The mathematics is unchanged. Appendix A quotations are not touched (history stays verbatim).
-
-**Evidence levels after the r1 review.** REVIEWER-REPLAYED (r1 package, clean folder): hashes of v6.4.19, the P1 working file, r1 and the ZIP; ZIP inventory 16/16; deterministic builder byte-for-byte; checker G0–G18 19/19; negative controls N0–N16 17/17; M1–M11 11/11; K1–K3 exit 1; RECOG v0.3.22 and NUMGEN v1.20.8 hashes with content checks S4 and S3; RECOG §7.2 receipt rows N10–N13. OWNER-RUN only: S1 for RECOG v0.3.20/v0.3.21, S2 (v0.3.20 → v0.3.22 paragraph identity), C1–C2, the records check R1–R4 with D1–D2, and everything new in r2. The r2 package carries the source files so that S1/S2 can be replayed. A same-script replay is not a second method; the scientific results keep their own evidence rows.
-
-#### v6.4.20 DRAFT r2 — replaced r1 lines (verbatim)
-
-**r1 line 4** (C4)
-
-> **Edition:** v6.4.20 DRAFT r1 — 21 October 2026  
-
-**r1 line 5** (C4)
-
-> **Status:** DRAFT r1 — not adopted, not released. Adopted `RTG_DYADIC_OSCILLATOR_DSN_v6.4.19` (SHA-256 `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`) remains the canonical Dyadic ledger until a separate external review and an explicit PI adoption decision. Built by `build_dyad_v6_4_20_r1.py` from the verified ATLAS P1 working file (SHA-256 `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905`) under `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED` (P2 authorized, 21 Oct 2026).  
-
-**r1 line 12** (C4)
-
-> **Draft record:** Appendix A, "v6.4.20 DRAFT r1"; session record `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md`. The v6.4.19 header, adoption metadata, release summaries and footers are preserved verbatim there.
-
-**r1 line 453** (C2)
-
-> | Spiral residual (§6.14, v6.4.14) | Exact leading terms of $S_Q,S_\Theta$ `[ALG]`; per-block remainder bounds with majorant constants on $|z|\le\tfrac1{20}$, $\tfrac1{40}$ `[THM]` | Reading $K_\Theta,K_Q$ as true-error maxima; identifying $S_Q$ with $P_5$ (cross term $-2qD_3$); primitive asymptotic-phase transfer (P4); equivalence with the historical fit; $C_{\rm est}$/$\kappa_{\rm est}$; transfer to NUMGEN L1 or ISP-angle coefficients (SG-7, SG-19) | §2 OPEN 3, §6.14 |
-
-**r1 line 456** (C2)
-
-> | Primitive-variable phase remainder (§6.14, v6.4.17) | `[THM]` `[assuming: RECOG-THM-R9-MEMORY]`: $|M_W-\mathcal P_2(W_0)|\le K'_jQ_0^{3/2}+C_{2,j}(256/225)^2Q_0^2$ per row ($K'_A=3951/1000$, $K'_B=971/250$); single-constant $K_A=8831/250$, $K_B=883/100$; majorant suprema | An unconditional result (R9 enters through T1 and the memory law); re-certification of R9 or of its $C_2$; reading the `[NUM]` ratio $\approx0.35$ as a proved constant or as absence of higher-order terms; mixing rows; transfer to $C_W^{(h)}$, NUMGEN L1 or ISP-angle coefficients (SG-19); C_est/κ_est (SG-7) | §2 OPEN 21, §6.14 |
-
-**r1 line 457** (C2)
-
-> | L-PHASE angular remainder, row A (§6.14, v6.4.19) | `[THM]`: $|r_m|\le\tfrac{403}{250}Q_m^{3/2}$ for block base points in $U$, $Q_m$ primitive; branch certificate $\varepsilon\le0.04654$ on $U_T$; the constant is the ceiling of a majorant (certificate value $1.61112$; angular supremum of the true error $\to\Lambda^*\approx1.4003$ as $Q\to0$, `[NUM]`) | Optimality of $403/250$; row B ($|z|\le\tfrac1{40}$) or larger domains; a statement beyond the first-order block law; reading $403/250$ or $\Lambda^*$ as a NUMGEN L1/ISP-angle coefficient or as a correction of NUMGEN's measured values (SG-19); discharge of GAP-LOCK angular hypotheses; any $\phi^*$ statement; byte identity with the P2B v2 `certificate.json` (provenance is exact-coefficient and transitive) | §6.14, §7 |
-
-**r1 line 749** (C2)
-
-> | shear/healing ratio $4\sqrt3/3=|\Im\mu|/|\Re\mu|$ | derived from DYAD-THM-C21 | `[ALG]` | ratio of cubic coefficients |
-
-**r1 line 782** (C2)
-
-> | Analytic coordinate | $W_{\rm DSN}=u+iv$, $Q=|W_{\rm DSN}|^2$ — $p=6$ primitive frame |
-
-**r1 line 827** (C2)
-
-> | $|z|\le$ | $|\widehat F(z)-J(z)|\le C_7|z|^7$ | $\|D\widehat F(z)-DJ(z)\|_2\le C_D|z|^6$ |
-
-**r1 line 1262** (C4)
-
-> - [RID: DYAD-ART-ATLAS-P2] `[v6.4.20; proposed RID, registered only at adoption]` :: `build_dyad_v6_4_20_r1.py` with `p2_content.py`, `check_dyad_v6_4_20_r1.py`, `dyad_p2_math_checks.py` (M1–M11), `p2_source_checks.py` (S1–S4); record `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md` (project `claude/atlas/p2/`) :: this draft: builder, gates, owner math and source checks; OWNER-RUN only :: `[ENG]`
-
-**r1 line 2165** (C3)
-
-> `[DEF]` `[v6.4.20]` One row per result or definition identifier carried by this ledger (adopted and proposed). Evidence levels are kept apart: **OWNER-RUN** (run by the Dyadic owner), **REVIEWER-REPLAYED** (rerun by an external reviewer), **REVIEWER FULL REPLAY NOT COMPLETED** (named runs a reviewer did not finish). "not recorded" means this ledger carries no record; an absent attachment is recorded as absent, not inferred. "Written proof" is the section of the entry. P2 checks M1–M11 are in `dyad_p2_math_checks.py` (OWNER-RUN, 21 Oct 2026).
-
-**r1 line 2173** (C1)
-
-> | `DYAD-ALG-B5-ALLP-NONVANISHING` | ALG | scope: finite sweep | §6.11 | `rtg_b5_Seff_limit_cert.py`, `exact_Fraw_b5_sweep.py`, `rtg_b5_step3_reduction.py` | not recorded | exact cyclotomic | all $p\ge6$ |
-
-**r1 line 2180** (C1)
-
-> | `DYAD-ALG-ISP-MAPS` | ALG | as stated at the entry | §6.4 | P2 M4 | `dyad_p2_math_checks.py` | SymPy exact | forward map and reconstruction |
-
-**r1 line 2181** (C1)
-
-> | `DYAD-ALG-KP-FRAME-SCALE` | ALG | as stated at the entry | §6.9 | P1 math checks | `dyad_p1_math_checks.py` | SymPy | declared $K_p$ family |
-
-**r1 line 2187** (C1)
-
-> | `DYAD-ALG-ONE-BLOCK-BURST` | ALG | as stated at the entry | §6.5 | P2 M7 | `dyad_p2_math_checks.py` | exact rational jets | positive real ray |
-
-**r1 line 2190** (C1)
-
-> | `DYAD-ALG-P5-RADIAL` | ALG | as stated at the entry | §6.14 | P2 M6 | `dyad_p2_math_checks.py` | exact rational jets | degrees 2–5 |
-
-**r1 line 2195** (C1)
-
-> | `DYAD-ALG-Q3-DEG2-CANCEL` | — | as stated at the entry | §6.11 | `rtg_p_certs.py` (DYAD-ART-P-CERTS) | not recorded | SymPy/cyclotomic | all $p>3$, $3\mid p$ |
-
-**r1 line 2196** (C1)
-
-> | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | ALG | as stated at the entry | §6.4 | P2 M3 | `dyad_p2_math_checks.py` | SymPy | value to 4 d.p. |
-
-**r1 line 2197** (C1)
-
-> | `DYAD-ALG-RAW-ANGULAR-MEAN` | ALG | scope: fixed-radius uniform-angle mean in the raw $W$-frame | §6.5 | P2 M8 | `dyad_p2_math_checks.py` | exact rational jets | raw fixed-radius mean |
-
-**r1 line 2198** (C1)
-
-> | `DYAD-ALG-SIXSTEP-CUBIC-JET` | ALG | as stated at the entry | §6.7 | P2 M5 | `dyad_p2_math_checks.py` | exact rational jets | cubic order |
-
-**r1 line 2204** (C1)
-
-> | `DYAD-CAND-P0-DYADIC` | ALG | scope: inherited | §6.11 | none | — | — | conditional calibration branch |
-
-**r1 line 2207** (C1)
-
-> | `DYAD-DEF-CRITICAL-CURVE` | DEF | as stated at the entry | §6.1 | P2 M2 | `dyad_p2_math_checks.py` | SymPy exact | full statement |
-
-**r1 line 2228** (C1)
-
-> | `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | THM | as stated at the entry | §6.17 | P1 SESSION derivation | `dyad_p1_math_checks.py` (linear part) | SymPy | $C^\infty$ germs |
-
-**r1 line 2243** (C3)
-
-> | `DYAD-ALG-ISP-MAPS` | P2, 21 Oct 2026 | none | not replayed | no | proposed RID |
-
-**r1 line 2250** (C3)
-
-> | `DYAD-ALG-ONE-BLOCK-BURST` | P2, 21 Oct 2026 | none | not replayed | no | proposed RID |
-
-**r1 line 2253** (C3)
-
-> | `DYAD-ALG-P5-RADIAL` | P2, 21 Oct 2026 | none | not replayed | no | proposed RID |
-
-**r1 line 2259** (C3)
-
-> | `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | P2, 21 Oct 2026 | none | not replayed | no | proposed RID |
-
-**r1 line 2260** (C3)
-
-> | `DYAD-ALG-RAW-ANGULAR-MEAN` | P2, 21 Oct 2026 | none | not replayed | no | proposed RID; long-orbit identification OPEN |
-
-**r1 line 2261** (C3)
-
-> | `DYAD-ALG-SIXSTEP-CUBIC-JET` | P2, 21 Oct 2026 | none | not replayed | no | proposed RID |
-
-**r1 line 2270** (C3)
-
-> | `DYAD-DEF-CRITICAL-CURVE` | P2, 21 Oct 2026 | none | not replayed | no | proposed RID |
-
-**r1 line 2331** (C4)
-
-> | v6.4.19 | v6.4.20 DRAFT r1 | Change |
-
-**r1 line 2339** (C4)
-
-> | `## §5. High-Risk Claims Ledger {#sec-5-high-risk}` | `## §5. High-Risk Claims Ledger {#sec-5-high-risk}` | R11 row conditions (H-P2-7) |
-
-**r1 line 2352** (C4)
-
-> | `### §6.12 Dyad-to-Triad Bridge Export '[ALG]' {#sec-6-12-bridge}` | `### §6.12 Dyad-to-Triad Bridge Export — entry grades: ALG, DEF, CAND, OPEN {#sec-6-12-bridge}` | heading grade tag replaced by the computed entry-grade list |
-
-**r1 line 2353** (C4)
-
-> | `### §6.13 Simulation Invariants and Audit Discipline '[ENG]' {#sec-6-13-audit}` | `### §6.13 Simulation Invariants and Audit Discipline '[ENG]' {#sec-6-13-audit}` | heading grade tag replaced by the computed entry-grade list |
-
-**r1 line 2354** (C4)
-
-> | `### §6.14 Local Return Enclosure — Normalizer, Contraction, Inverse, Remainders '[ALG / THM]' {#sec-6-14-enclosure}` | `### §6.14 Local Return Enclosure — Normalizer, Contraction, Inverse, Remainders — entry grades: ALG, THM, DEF, OPEN, NUM, ENG {#sec-6-14-enclosure}` | heading grade tag replaced by the computed entry-grade list |
-
-**r1 line 2361** (C4)
-
-> | `## Appendix A — Version History {#appendix-a}` | `## Appendix A — Version History {#appendix-a}` | v6.4.20 DRAFT r1 record added; P1 record and older history retained |
-
-**r1 line 2367** (C4)
-
-> | — | `## Appendix E — Claim-to-evidence matrix {#appendix-e}` | new in v6.4.20 |
-
-**r1 line 2374** (C4)
-
-> *END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.20 DRAFT r1*  
-
-**r1 line 2375** (C4)
-
-> *DRAFT r1, 21 October 2026 — not adopted, not released. Adopted v6.4.19 (`40c9e63f…6ec9`) remains canonical. The v6.4.19 footer and the inherited footers are preserved verbatim in Appendix A (v6.4.20 DRAFT r1 record, H-P2-12).*
-
-### v6.4.20 DRAFT r1 — 21 October 2026 (draft record; not adopted)
-
-- **Base:** verified ATLAS P1 working file, SHA-256 `6f30f347b4f896a512cc7f1018d57721e33889d70e039fbb69377770fdc2c905` (itself built from adopted v6.4.19 `40c9e63f…6ec9`, unchanged).
-- **Authority:** `ATLAS P1 — SCIENTIFIC REVIEW ACCEPTED` (reviewer, 21 Oct 2026): P2 authorized; FA-07 and FB-13 candidates kept; no v6.4.19 identifier lost; source pins, receipts, claim-to-evidence matrix and section map completed in this round. External review of this draft and the PI adoption decision are separate.
-- **Scope:** disposition items FB-DYAD-09, 10, 11, 14, 16, 17, 18, 20, 22, 23, 24, 26, 27, 28, 29, 30 and the section map. Tier-C items (FC-31, FC-32) are outside this draft.
-- **Kept distinctions:** FA-08 — the formula of `DYAD-THM-RAW-CUBIC` is independently verified, its historical-source match is not (source file outside the review package). FA-04 — `degree_b_vanishing_cert_v2.py` is not available and is not presented as recreated. FB-13 is a proposed `[THM]` RID; FC-32 is a SESSION record only.
-- **Official state unchanged:** v6.4.19 adopted; OPEN 20 PARTIAL (B-an, B-6 OPEN). No notice is sent.
-
-**Proposed identifiers (registered only at adoption).**
-
-| RID | Grade | Where | Statement | Evidence |
-|---|---|---|---|---|
-| `DYAD-ALG-KP-FRAME-SCALE` | ALG | §6.9 | $W_p=i\cot(\pi/p)Z$; $\mu_p^Z=\cot^2(\pi/p)\mu_p^{W_p}$ | P1 math checks; reviewer general-angle check (P1 review FA-07) |
-| `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | THM | §6.17 | smooth $\Phi$ with $D\Phi(0)=I$, $\Phi J=A\Phi$ | P1 SESSION; reviewer ACCEPT (P1 review FB-13) |
-| `DYAD-ALG-B5-ALLP-NONVANISHING` | ALG | §6.11 | $F_{\rm raw}^p(0,5)\ne0$ for every $p\ge6$ (result of the closed lifecycle item DYAD-OPEN-B5-ALLP) | rtg_b5_Seff_limit_cert.py, exact_Fraw_b5_sweep.py (§8); not rerun in P2 |
-| `DYAD-ALG-RAW-ANGULAR-MEAN` | ALG | §6.5 | $\mathcal A_{\rm raw}(Q)=Q-Q^2+\tfrac{47}{54}Q^3+O(Q^4)$, $\tfrac{47}{54}=[W^3\bar W^3]\Delta Q_6$ | P2 M8 (exact) |
-| `DYAD-ALG-ONE-BLOCK-BURST` | ALG | §6.5 | positive-ray burst $Q_6=Q_0-Q_0^2-\tfrac5{24}Q_0^{5/2}+\tfrac{37}{40}Q_0^3+O(Q_0^{7/2})$ | P2 M7 (exact) |
-| `DYAD-ALG-P5-RADIAL` | ALG | §6.14 | $Q(T^6x)-Q=-Q^2+P_5+O(\vert x\vert ^6)$, $P_5=\tfrac{Q}{24}(5\eta^3-43\eta^2\rho+4\eta\rho^2-5\rho^3)$ | P2 M6 (exact) |
-| `DYAD-ALG-SIXSTEP-CUBIC-JET` | ALG | §6.7 | six-step cubic jet in $(\rho,\eta)$; $M+M^T=-I$ | P2 M5 (exact) |
-| `DYAD-ALG-Q3-DEG2-CANCEL` | ALG | §6.11 | degree-2 $q=3,(0,2)$ cancellation for all $p>3$, $3\mid p$ | rtg_p_certs.py (DYAD-ART-P-CERTS); not rerun in P2 |
-| `DYAD-DEF-CRITICAL-CURVE` | DEF | §6.1 | $C_0=\{\det DT=0\}$; kernel direction $(\cos\eta,1)$ | P2 M2 (exact) |
-| `DYAD-ALG-QC-CRITICAL-AMPLITUDE` | ALG | §6.4 | $Q_c=(\arcsin\ln2)^2\approx0.5865$ | P2 M3 |
-| `DYAD-ALG-ISP-MAPS` | ALG | §6.4 | ISP forward map and reconstruction | P2 M4 (exact) |
-| `DYAD-ART-ATLAS-P1` | ENG | §8 | ATLAS P1 builder, checker and math checks | project claude/atlas/p1/ |
-| `DYAD-ART-ATLAS-P2` | ENG | §8 | ATLAS P2 builder, checker, math and source checks | project claude/atlas/p2/ |
-
-**RID census.** Census A counts distinct identifiers carried by a RID tag anywhere in the file, multi-identifier tags split. Census B counts distinct RID-shaped Dyadic strings (prefix DYAD- followed by ALG, THM, DEF, OPEN, ART, CAND, NUM or CF) anywhere. v6.4.19: A = 135, B = 136; the B-only strings are `DYAD-ART-B5-LIMIT-CERT`, `DYAD-CAND-PHISTAR-ENTRY-PHASE`, `DYAD-OPEN-B5-ALLP` (a lifecycle identifier that is never tagged, an artifact named only in history, and a string quoted in notice N3 that never existed). The "136 RIDs" of the P1 record is Census B; the P1 gate G1 regex counted first tokens of tags (131). P1: A = 137 (+2 proposed). This draft: A = 148, adding `DYAD-ALG-B5-ALLP-NONVANISHING`, `DYAD-ALG-ISP-MAPS`, `DYAD-ALG-ONE-BLOCK-BURST`, `DYAD-ALG-P5-RADIAL`, `DYAD-ALG-Q3-DEG2-CANCEL`, `DYAD-ALG-QC-CRITICAL-AMPLITUDE`, `DYAD-ALG-RAW-ANGULAR-MEAN`, `DYAD-ALG-SIXSTEP-CUBIC-JET`, `DYAD-ART-ATLAS-P1`, `DYAD-ART-ATLAS-P2`, `DYAD-DEF-CRITICAL-CURVE`. Every P1 identifier remains tagged; every v6.4.19 Census-B string remains present (checker gate G2).
-
-**Anchored edits (stage 1).**
-
-| Edit | Row | Old (SHA-256, 16 hex) | New |
-|---|---|---|---|
-| P01 | FB-22 | `02bf59ad9ad0b46f` | `ae3eb04da919fb43` |
-| P02 | FB-24 | `4d9dcc04f4f46737` | `7af0691c85c42a5b` |
-| P03 | FB-24 | `a358c95312cf9a5b` | `58dee5842ebb96d3` |
-| P04 | FB-28 | `912ec1ace7e17883` | `840cefae1cfdd2f9` |
-| P05 | FB-20 | `7f296e9157bf3a0e` | `0799b9ab20efa806` |
-| P06 | FB-27 | `b2d3896d18711239` | `826f668c82c1fdf5` |
-| P07 | FB-27 | `0a5478c023b43a8a` | `c3618ee6b0579f24` |
-| P08 | FB-27 | `9f43db6b81fb033d` | `e7d0ee5b0d506c75` |
-| P09 | FB-10 | `45d85b5b8b6c99d1` | `95617f2699fc633a` |
-| P10 | FB-26 | `eaf1011d3e0659ea` | `923d9df3d5991861` |
-| P11 | FB-27 | `a32059cb2514d872` | `dbd514805a32f91d` |
-| P12 | FB-18 | `d74c29c4fc3dd4c8` | `e4ea22de360536c9` |
-| P13 | FB-20 | `8bba2f49e7a5a79f` | `685beca13fb96b78` |
-| P14 | FB-28 | `460f2ce8e60cc79e` | `43eca1d6ba860a76` |
-| P15 | FB-10 | `9f7f65191150c4c1` | `c69e93a43514133b` |
-| P16 | FB-30 | `3cba64fb37fbb36c` | `2264a3852d512917` |
-| P17 | FB-22 | `4a4ce34af8905994` | `ecab0c71e5de43c4` |
-| P18 | FB-10 | `83c7172bb792ca72` | `ca337611366bb978` |
-| P19 | FB-10 | `8a8e8372d2084d8e` | `9015f0614c3a4889` |
-| P20 | FB-10 | `af1c0201e18b1a54` | `e77b7470b7dbd7ba` |
-| P21 | FB-10 | `c655c73a5897fc06` | `84835b73fd3372e1` |
-| P22 | FB-10 | `e79bddb325679c78` | `a8dc696dd52914cb` |
-| P23 | FA-04 | `373b10cf7e3a9c44` | `8128c9283dacfac2` |
-| P24 | FB-10 | `929da23952ee1b11` | `c67a8a86d4b45328` |
-| P25 | FB-20 | `bf328144bc3be633` | `03c7a50536ef81a3` |
-| P26 | FB-10 | `de44692f9f3f5728` | `0e36b9d8d30c00b2` |
-| P27 | FB-20 | `7d08ec51207d8dde` | `04ecd47633821f82` |
-| P28 | FB-10 | `d89ecb12bd053658` | `b9c3592db3f0f665` |
-| P29 | FB-18 | `6476d1bd9787264f` | `2d695ed8f6cd2bb7` |
-| P30 | FB-14 | `1aaf4d0e233189c3` | `dcdcc656cabed576` |
-| P31 | FB-14 | `f40e0098e8d67546` | `6adbcb31c7fa52b6` |
-| P32 | FB-16 | `e5745316e3bb90ef` | `a89076167a6c3a21` |
-| P33 | FB-26 | `77528ca9f9d4f8b9` | `480f82fc252885cc` |
-| P34 | FA-04 | `b3ce8d5871e83056` | `9fd2a1044c9a9514` |
-| P35 | FB-10 | `4436c80129e4473d` | `9b2a554b48c5c0f1` |
-| P36 | FB-22 | `0a70851dc538d9b4` | `5a0e839d45dba836` |
-
-**Global transforms (stages 2–3).**
-
-| Global transform | Count |
-|---|---|
-| P1 marker | 39 |
-| RID tags converted to code spans | 30 |
-| RIDs with a canonical tag | 146 |
-| breaker primes | 3 |
-| double-escape lines Appendix A | 38 |
-| double-escape lines live | 2 |
-| tag **`[CLOSED v6.4.9, THM/ALG]`** | 1 |
-| tag `[ALG / ENG]` | 1 |
-| tag `[ALG candidate]` | 2 |
-| tag `[ALG finite sweep]` | 3 |
-| tag `[ALG structure / NUM strong]` | 1 |
-| tag `[ALG structure]` | 10 |
-| tag `[ALG validation]` | 1 |
-| tag `[ALG — formal second order; remainder not certified]` | 1 |
-| tag `[ALG — formal]` | 2 |
-| tag `[ALG, exact under OPEN-P0 representation-phase convention]` | 1 |
-| tag `[ALG, exact]` | 16 |
-| tag `[CAND/conditional]` | 8 |
-| tag `[COR v6.4.10]` | 8 |
-| tag `[COR v6.4.11: "iff $b\le4$" shorthand withdrawn]` | 1 |
-| tag `[COR v6.4.11]` | 1 |
-| tag `[ENG / NUM strong]` | 1 |
-| tag `[HYP inherited]` | 1 |
-| tag `[NUM strong]` | 4 |
-| tag `[P1 COR]` | 3 |
-| tag `[THM — analytic]` | 1 |
-| tag `[THM — conditional on R9]` | 1 |
-| tag `[THM — conditional on RECOG-THM-R9-MEMORY]` | 8 |
-| tag `[THM — conditional on T1]` | 1 |
-| tag `[THM — conditional]` | 5 |
-| tag `[THM/ALG, all-$p$]` | 1 |
-| tag `[THM/ALG]` | 3 |
-| §6 headings | 17 |
-| §6 headings kept (no tagged entries) | 1 |
-
-**Evidence levels for this draft.** OWNER-RUN: builder rebuild, checker gates, `dyad_p2_math_checks.py` M1–M11 with controls K1–K3, `p2_source_checks.py` S1–S4 with controls C1–C2 (all 21 Oct 2026). REVIEWER-REPLAYED: none yet. REVIEWER FULL REPLAY NOT COMPLETED: not applicable before review.
-
-#### v6.4.20 DRAFT r1 relocated text (verbatim from the P1 working file)
-
-**H-P2-1** — origin: title, P1 banner, v6.4.19 header fields, status summary and release summaries v6.4.11–v6.4.19 (lines 1–31 of the P1 working file). Verbatim P1-working-file text:
-
-> # RTG_DYADIC_OSCILLATOR_DSN_v6.4.19
-> 
-> > **P1 WORKING FILE — noncanonical.** Built from adopted v6.4.19 (SHA-256 `40c9e63f…6ec9`) by `build_dyad_p1.py` under the reviewer decision `P1 — SCIENTIFIC CORRECTION PASS AUTHORIZED` (21 Oct 2026; disposition `ATLAS_DISPOSITION_DYAD_v6_4_19_SESSION_v0_1.md`). Not a draft for adoption and not a release; adopted v6.4.19 remains in force. The header, adoption metadata and footer below are those of v6.4.19 and are not updated in P1 (P2 and the v6.4.20 draft do that). Every P1 change carries `[P1]`; the edit list and the verbatim relocated text are in Appendix A (P1 working record).
-> 
-> **Title:** RTG Dyadic Oscillator Study — Canonical Scientific Ledger  
-> **Date:** 20 October 2026  
-> **Status:** ADOPTED — owner/PI adoption recorded 20 October 2026 (`DYAD v6.4.19 — OWNER ADOPTION AUTHORIZED`) after external review of DRAFT r1 (`v6.4.19 r1 — SCIENTIFIC REVIEW ACCEPTED` (`SCIENTIFIC CONTENT ACCEPTED — OWNER ADOPTION READY, WITH REPLAY QUALIFICATION`); r1 SHA-256 `f6211201b95c5a7a5c8d992cdd943e56d3655b9a757cb1b427d72a8fd85d6e47`; no correction to the mathematics or the RID structure; RIDs 132 → 136, none lost; prior grades unchanged; evidence levels kept separate — `REVIEWER-REPLAYED`: draft, draft-package and provenance-package hashes, draft manifest 32/32, deterministic builder, the 11 draft-checker negative controls, provenance gate v0.1.1 main run 9/9 with its 4 internal negative controls; `OWNER-RUN`: combined draft checker 16/16 (including G14 certificate replay and G15 provenance replay), separate negative-control processes M1–M4 (exit 1 each; `lphase_p2b_provenance_control_exits.json` `e2ffa46b…1a1e`), gate JSON `58cfafd3…fc89`, certificate JSON `8697c697…ad4fa`, and the split release replays `replay_g14_certificate.py`, `replay_g15_provenance.py`; `REVIEWER FULL REPLAY NOT COMPLETED`: the combined G14–G15 run and the independent `--record-exit-codes` run (reviewer time limit). NUMGEN receipt replay: certificate JSON byte-identical, same algorithm (not an independent engine)). **Adoption decision (scientific):** `DYAD-THM-LPHASE-ROWA-REMAINDER` `[THM]` at the reviewed DRAFT r1 scope — $|r_m|\le\tfrac{403}{250}Q_m^{3/2}$ for $0<Q_0\le\tfrac1{625}$, $m\ge0$, $Q_m$ the primitive observable, with the branch certificate on $U_T$; NUMGEN interface objects I1–I5 kept; $\tfrac{403}{250}$ is a certified upper bound, not an optimal coefficient. All other scientific results, RID grades and OPEN statuses unchanged; OPEN 20 PARTIAL (B-an, B-6 OPEN). Release edits: draft/proposed labels replaced by adopted labels, release metadata, N15 → PENDING (to be sent only after external verification of the final SHA-256), Appendix A release record, footer. Installation manifest: `RTG_DYADIC_v6_4_19_INSTALL_MANIFEST.json`. Revision base: adopted `RTG_DYADIC_OSCILLATOR_DSN_v6.4.18` (SHA-256 `f70308f19f5955c0597c03a27b572abfd4c8746aef6922c959675eb0d56e458d`), preserved unchanged as the prior adopted release. Session source: `DYAD_NUMGEN_LPHASE_ROWA_CERTIFICATE_SESSION_v0_1.md` (`775c6715…f233d`).  
-> **Scope:** The primitive 2D non-symplectic dyad map, its six-step resonant dynamics, ISP crossing geometry, normalized $p$-step structure, and $p$-resonance generalization program.  
-> **Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.18`. Scientific lineage: v6.4.18 (adopted 20 Oct 2026) ← v6.4.17 (adopted 19 Oct 2026) ← v6.4.16 (adopted 19 Oct 2026) ← v6.4.15 (adopted 19 Oct 2026) ← v6.4.14 (adopted 19 Oct 2026) ← v6.4.13 (adopted 18 Oct 2026) ← v6.4.12.1 (metadata release of v6.4.12, 17 Oct 2026) ← v6.4.12 (adopted 16 Oct 2026) ← v6.4.11 ← v6.4.10.  
-> **Companion documents:** `RTG_PROGRAMME_OVERVIEW_v1.2` · `RTG_ONTOLOGICAL_FOUNDATIONS_v0.9` · `DSN_METHODOLOGY_v1.3` · `dyad_triad_antisymmetric_bridge_v1_1.md` · return-enclosure evidence packages (§8, §6.14). **Consumer editions inspected for v6.4.14 (19 Oct 2026):** `RTG_GENESIS_GEOMETRY_DSN_v2.8.8` (adopted 19 Oct 2026, `9abd3616…0f37`; live pins name DYAD v6.4.13; N8 RECEIVED) · `RTG_RRF_REPRESENTATION_REGISTRY_v0.8.3` (adopted working standard 19 Oct 2026; inspected file `b393657e…a187`; N9 RECEIVED). **Consumer editions inspected for v6.4.13 (18 Oct 2026):** `RTG_GENESIS_GEOMETRY_DSN_v2.8.7` (adopted; pins DYAD v6.4.11, repin deferred) · `RTG_RRF_REPRESENTATION_REGISTRY_v0.8.2` (adopted working standard; N7 receipt) · noncanonical: `GENESIS_DYAD_v6_4_12_1_CONSUMER_IMPACT_NOTE.md`, `FMS_MODEL_SELECTION_LEDGER_v0_5_1_SESSION.md`, `OFN_REPLY_TO_FMS_MODEL_SELECTION_v0_7.md`. **Editions inspected in the v6.4.11 synchronization pass and not re-inspected since:** `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20` (live header: freeze candidate) · `RTG_NUMBER_GENESIS_DSN_v1.20.7` · `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6` · `RTG_OPEN_M_DSN_v0.7.1` · `RTG_RRF_REPRESENTATION_REGISTRY_v0.8` (working standard; reference only)  
-> **DSN Methodology:** DSN_METHODOLOGY_v1.3 governs this revision. Scientific-result grades are not changed by methodology migration. Scoped unfinished migration: pre-existing entries retain their v1.2-era spellings except where touched by this revision; full v1.3 conformity of untouched sections is not claimed. **Result-review state:** `[v6.4.19]` payload reviewed as SESSION records on 20 Oct 2026: scope note v0.1 (`L-PHASE SCOPE ACCEPTED — ROW A CERTIFICATION AUTHORIZED`), row-A certificate record v0.1 (`L-PHASE ROW A SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION PENDING`), P2B provenance gate v0.1 (`PROVENANCE CHAIN ACCEPTED IN PRINCIPLE — FULL REPLAY NOT VERIFIED`) and v0.1.1 (replay tooling; main gate re-run by the reviewer in the r1 review); NUMGEN interface confirmation (I1–I5 CONFIRMED) and receipt replay; DRAFT r1 reviewed 20 Oct 2026 (`v6.4.19 r1 — SCIENTIFIC REVIEW ACCEPTED` (`SCIENTIFIC CONTENT ACCEPTED — OWNER ADOPTION READY, WITH REPLAY QUALIFICATION`); evidence levels kept separate — `REVIEWER-REPLAYED`: draft, draft-package and provenance-package hashes, draft manifest 32/32, deterministic builder, the 11 draft-checker negative controls, provenance gate v0.1.1 main run 9/9 with its 4 internal negative controls; `OWNER-RUN`: combined draft checker 16/16 (including G14 certificate replay and G15 provenance replay), separate negative-control processes M1–M4 (exit 1 each; `lphase_p2b_provenance_control_exits.json` `e2ffa46b…1a1e`), gate JSON `58cfafd3…fc89`, certificate JSON `8697c697…ad4fa`, and the split release replays `replay_g14_certificate.py`, `replay_g15_provenance.py`; `REVIEWER FULL REPLAY NOT COMPLETED`: the combined G14–G15 run and the independent `--record-exit-codes` run (reviewer time limit). NUMGEN receipt replay: certificate JSON byte-identical, same algorithm (not an independent engine)); owner/PI adoption 20 Oct 2026 with the grade listed in Status. *v6.4.18 record:* `[v6.4.18]` payload reviewed as SESSION records on 19–20 Oct 2026: P1 scope (`SCOPE REVIEW ACCEPTED`), P2-a (`ACCEPT`), P2-b v0.2.1 (`PROOF REVIEW ACCEPTED — P3-a AUTHORIZED`), P3-a v0.1 (`SCIENTIFIC REVIEW ACCEPTED — P3-b AUTHORIZED`), P3-b/c v0.1 (`SCIENTIFIC REVIEW ACCEPTED — FINAL OWNER INTEGRATION AUDIT REQUIRED`; P3C-01/02 applied in v0.1.1), integration audit v0.1 (`SMOOTH EMBEDDING CHAIN ACCEPTED — E2 SCOPE CORRECTION REQUIRED`) and v0.1.1 (E2/L7 correction accepted in the r1 review); DRAFT r1 reviewed 20 Oct 2026 (`v6.4.18 DRAFT r1 — SCIENTIFIC REVIEW ACCEPTED`; manifest 20/20; package draft byte-identical to the uploaded draft; draft checker 13/13; payload check scripts re-executed with their internal negative controls (integration 6/6, P3-a 8/8, P3-b/c v0.1.1 3/3); E2/L7 scope correction of integration audit v0.1.1 accepted; RIDs 129 → 132, none lost; prior grades unchanged; the eight draft-checker negative controls (`--neg`) are owner reruns recorded in the package); owner/PI adoption 20 Oct 2026 with the grade listed in Status. *v6.4.17 record:* `[v6.4.17]` P5 payload reviewed as a SESSION record through three rounds on 19 Oct 2026 (final `P5 v0.1.2 — SCIENTIFIC REVIEW ACCEPTED`; certificate 28/28 replayed with byte-identical JSON; $P_{W2}=-\Delta_2+D\Delta_1[h_2]$ re-derived independently by Laurent polynomials); DRAFT r1 reviewed 19 Oct 2026 (`SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION READY`; draft checker and negative controls re-executed; the P5 negative controls verified from the package records); owner/PI adoption 19 Oct 2026 with the grade listed in Status. *v6.4.16 record:* `[v6.4.16]` payload reviewed as a SESSION record on 19 Oct 2026; DRAFT r1 reviewed 19 Oct 2026 (`SCIENTIFIC AND LIFECYCLE REVIEW ACCEPTED — OWNER ADOPTION READY`). Reviewer-executed: package manifest, rebuild, checker and negative controls, the P2B v2 $h,J$ coefficient comparison with its negative control, the P2B v2 referee, and the P0 numerical comparison. Owner-measured only: the two carried v6.4.10 hashes. Owner/PI adoption 19 Oct 2026. *v6.4.15 record:* `[v6.4.15]` P4 payload reviewed as a SESSION record on 19 Oct 2026 (`P4 SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION PENDING`; exact script and rational certificate re-executed, byte-identical JSON); DRAFT r1 reviewed 19 Oct 2026 (`REVIEW ACCEPTED — OWNER ADOPTION READY`); owner/PI adoption 19 Oct 2026 with the grades listed in Status. *v6.4.14 record:* `[v6.4.14]` OPEN 3 payload reviewed as SESSION records on 19 Oct 2026 (scope note v0.1.1 `SESSION REVIEW PASSED`; P1/P2 `SCIENTIFIC REVIEW ACCEPTED — P3 READY`; P3 `SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION PENDING`, certificate replayed byte-identically); DRAFT r1 reviewed 19 Oct 2026 (`REVIEW ACCEPTED — OWNER ADOPTION READY`); owner/PI adoption 19 Oct 2026 with the grades listed in Status. *v6.4.13 record:* DRAFT r1 reviewed 18 Oct 2026 (ACCEPTED, corrections R1–R2 → r2); DRAFT r2 reviewed 18 Oct 2026 (ACCEPTED — ADOPTION READY); owner/PI adoption 18 Oct 2026 with the grade promotions listed in Status. Lemma F and F1–F3 (§6.17) are adopted `[THM]` at their stated scopes; `DYAD-THM-FORMAL-Z6-GENERATOR` and `DYAD-ALG-NU5-P5` are adopted owner results; adopted v6.4.12 content (§6.15–§6.16) keeps its review record (Appendix A v6.4.12). Consumer acceptance: §6.14 exports recorded by RECOG and NUMGEN; v6.4.12 results received by RRF v0.8.2 and acknowledged by Genesis (N7); OFN pending.  
-> **Programme tier:** Tier 3 — Continuous Programme, upstream source (see Programme Overview §6)  
-> **Status summary:** The dyad map has theorem-grade and exact-algebraic certification for the core six-step resonant module, including $c_{21}$, the local quintic normalization pipeline, the raw fixed-radius angular-mean coefficient $47/54$, OPEN 11 (chirality closure), and OPEN 18 (footprint monotonicity). OPEN 17 ($a_2$ projection coefficient) is closed under Lie-gauge convention. The finite OPEN 9 one-step ledger is exact for $p=5,6,7$. The low-degree anti-holomorphic vanishing theorem is now `[ALG]` for all $b\in\{2,3,4\}$ with exact ranges $p\ge b+2$, proved by automatic $\beta$-mode path enumeration (no source $\beta$-set contains the secular mode). OPEN-P0-DYADIC (SU(2) analysis of the p=6 resonance) is partially absorbed: the exact structural result is $\lambda=e^{i\pi/3}=e^{iF_f/2}$ `[ALG, exact]`; its transfer to the OPEN-M source amplitude remains `[CAND/conditional]`. The cubic cascade formula for $q=4,(0,3)$ is now **CLOSED all-$p$** (v6.4.9): the subgroup-strobe coefficient factors as $Q_p=i\zeta_p^3 M_p$ with $M_p\in\mathbb{Q}(\zeta_p)^+$ on the family $p=4s$, $s\ge2$ ($p=8$ zero degeneracy), via a three-path degree-3 derivation with the remainder relation $\sigma_{-1}(Q)=-\zeta_p^{-6}Q$ proved as an exact symbolic identity (DYAD-THM-Q403-PHASELAW). The active frontier is the remaining OPEN 9 arithmetic-horizon program: universal missing-slot rules and the all-$b\ge5$ persistence extension. The $b=4$ channel boundary is `[ALG]` for the dyadic map in the following two-part sense: universal vanishing holds for $b\in\{2,3,4\}$ (range $p\ge b+2$), and it first fails at $b=5$, for EVERY $p\ge6$ (all-$p$ theorem closed via cyclotomic non-division). Failure for every $b\ge6$ is **not** established (scan-confirmed at $b=6$ only); all-$b\ge5$ persistence and the general-coefficient version remain `[OPEN]`. `[COR v6.4.11]` The former shorthand "universal vanishing iff $b\le4$" overstated the $b\ge6$ direction. **v6.4.10 adopts** the independently reviewed local return-enclosure package (§6.14): the exact one-step polynomial normalizer $h$ through degree 6 with its six-step normal-form jet $J$ `[ALG]`, the normalization obstruction `[ALG]`, explicit primitive contraction with a six-phase invariant tube `[THM]`, the quantitative inverse-coordinate theorem `[THM]`, and radius-indexed normalized value/first-derivative remainders `[THM]`; installs SG-19 (normalization-object guard); corrects the `jet1_deg5.json` registry label and the archival $h_3=0$ wording (COR-RE-1..3); and reconciles the raw complex-form order symbol and the real-ray burst at their points of use. No pre-existing **scientific-result** RID is renamed or regraded; artifact-role corrections in §8 are explicitly recorded. RECOG R8/R9/R10/R11 and NUMGEN GAP-LOCK closures are **not** obtained here.
-> 
-> **v6.4.11 — synchronization (adopted 16 Oct 2026).** Consumer acceptance of the §6.14 package is now recorded by RECOG (v0.3.2 onward; R8–R11 closed in the consumer) and NUMGEN (v1.20; seed admission), and OFN v0.9 imports DYAD-THM-PRIM-CTR; §7 rows are synchronized. New registrations: `DYAD-DEF-PRIMITIVE-MAP` (provisional, Genesis alias pending), `DYAD-DEF-BRIDGE-EXPORT-CONTRACT` + `DYAD-ALG-PROTECTION-MATRIX` (per-item grades retained), definition-ledger identities (`DYAD-ALG-Q-INVARIANT-FORM`, `DYAD-ALG-TAU-DETB`, `DYAD-ALG-CUBIC-PARABOLIC`), and `DYAD-ALG-NF6-DEG10` (finite fixed-$h_6$ statement). r2 adds `DYAD-THM-LOCAL-INVOLUTION-GERM` (§6.15: a local $C^1$ involution commuting with $T$, or a local $C^3$ involution commuting with $T^6$, is either the identity germ or has $DR(0)=-I$; conditional mathematics, no physical exchange claim) and the separate `[OPEN]` `DYAD-OPEN-FORMAL-CENTRALIZER`. Imported at owner grade: RECOG all-$p$ cubic radial contraction for the declared $K_p$ family, the general bridge-lemma proof (cross-reference; Dyadic RID retained), chart-native laws, the R9 lattice-memory theorem (scoped), and the P₂ manifold theorems (OPEN 12 → PARTIAL by consumer). §6.12/SG-15 wording updated to Genesis v2.8.5 typing and OPEN-M v0.7.1 (no certified numerical deficit). No certified v6.4.10 result is changed.
-> 
-> **v6.4.19 — adopted 20 Oct 2026.** NUMGEN interface: L-PHASE angular remainder on row A (`DYAD-THM-LPHASE-ROWA-REMAINDER`, `[THM]`). For every orbit started in $U=\{0<Q\le\tfrac1{625}\}$ and every block $m\ge0$: $\hat\varphi_{6(m+1)}-\hat\varphi_{6m}=2\pi-\tau Q_m+r_m$, $|r_m|\le\tfrac{403}{250}Q_m^{3/2}$ ($Q_m$ primitive); on the six-phase tube every one-step increment satisfies $|\delta_T-\pi/3|\le\arcsin(0.04654)$, which fixes the six-step branch. Route: exact identity $r=\Lambda_3+[S_\Theta-L_\Theta]+\tau[D_Q-D_3]+[\operatorname{Arg}(J/z)+\tau q]+\operatorname{Arg}(\widehat F/J)$ in the chart of DYAD-ALG-NF6, adopted row-A bounds, exact-rational certificate, explicit $q\to Q$ bridge. No OPEN item changes; new notice N15. No adopted RID is renamed or regraded.
-> 
-> **v6.4.18 — adopted 20 Oct 2026.** OPEN 20 B-∞ existence: smooth flow embedding of the six-step return (`DYAD-THM-SMOOTH-EMBEDDING`, `[THM]`, $C^\infty$ germ scope). $F=\varphi_X^1$ with $X\in C^\infty$, $j^\infty X=\log F$; $X$ unique among generators with $DX(0)=0$; $C^\infty$ roots $K_m$, $J=T\circ K_6^{-1}$ ($J^6=\mathrm{id}$, $DJ(0)=A$, $JT=TJ$) and $R=T^3\circ K_2^{-1}$ ($R^2=\mathrm{id}$, $DR(0)=-I$, $RT=TR$). Route: Borel realization $X_\infty$ of $\log F$, $G_\infty=\varphi^1_{X_\infty}$, $\Phi_\infty=\lim G_\infty^{-n}F^n$ (flat, $C^\infty$), $X=\Phi_\infty^*X_\infty$. OPEN 20 B-∞ existence → CLOSED; OPEN 20 stays PARTIAL (B-an, B-6 OPEN). New notice N14. No adopted RID is renamed or regraded.
-> 
-> **v6.4.17 — adopted 19 Oct 2026.** OPEN 21 (P5): certified primitive-variable phase remainder (`[THM — conditional on RECOG-THM-R9-MEMORY]`): $|M_W-\mathcal P_2(W_0)|\le K'_jQ_0^{3/2}+C_{2,j}(256/225)^2Q_0^2$ with $K'_A=3951/1000$ ($|W_0|\le3/64$), $K'_B=971/250$ ($|W_0|\le3/128$); single-constant form $K_A=8831/250$, $K_B=883/100$; $\mathcal P_2$ is the adopted primitive-variable second-order form (§6.14). OPEN 21 → CLOSED. New notice N13. No adopted RID is renamed or regraded; OPEN 3 and OPEN 20 unchanged.
-> 
-> **v6.4.16 — adopted 19 Oct 2026.** Lifecycle only. OPEN 3c (P0): the recovered `spiral_phase_fit.py` is compared with the adopted OPEN 3 leading terms; four model differences are documented (one log-harmonic instead of $k=1,3$; $C=6$ step normalization on block-index data; archival Lie-gauge $c_\theta$ reference; single-window regression) and a `[NUM]` two-harmonic fit recovers the predicted amplitudes; OPEN 3c → CLOSED as a documented discrepancy, OPEN 3 → CLOSED within its defined scope; new OPEN 21 for the certified primitive-variable remainder. P2B v2 provenance: exact coefficient equality of $h$, $J$ with the enclosure certificate. Carried v6.4.10 hashes recorded (owner-measured). No RID is renamed or regraded; OPEN 20 unchanged.
-> 
-> **v6.4.15 — adopted 19 Oct 2026.** OPEN 3b (P4): with consistently lifted block phases, $\Psi_W-\Psi_z=\Delta_0(z_m)$, $\Delta_0=D_\Theta-\tau\log(1+D_Q/q)$ exactly; certified $|\Delta_0|\le K_0\sqrt q$, $|\Delta_0-\Delta_1|\le K_1q$, $|\Delta_0-\Delta_1-\Delta_2|\le K_2q^{3/2}$ per row; T1 limit equality $\Psi_{W,\infty}=\Psi_\infty$ (conditional on R9); T2 finite-start offset $M_W-M=-\Delta_0(z_0)=O(\sqrt{q_0})$ (conditional on T1); chart-variable raw-track memory law (conditional on R9); primitive-variable second order `[ALG — formal]` only (§6.14). OPEN 3b → CLOSED; OPEN 3 PARTIAL. New notice N11. No adopted RID is renamed or regraded; OPEN 20 unchanged.
-> 
-> **v6.4.14 — adopted 19 Oct 2026.** (1) OPEN 3 spiral residual, defined fit-free in the normalized chart ($S_Q=D_Q\circ\widehat F-D_Q$, $S_\Theta=D_\Theta\circ\widehat F-D_\Theta$): exact leading terms `DYAD-ALG-OPEN3-LEADING` `[ALG]`, including the corrected radial identity $P_5(\mathcal L^{-1}z)=DD_3[\mu qz]+2qD_3$, and certified per-block remainders `DYAD-THM-OPEN3-SPIRAL-REM` `[THM]` ( rows $|z|\le\tfrac1{20}$, $\tfrac1{40}$ unmixed) (§6.14). (2) OPEN 3 → PARTIAL: per-block chart sub-problem CLOSED; P4 asymptotic-phase transfer OPEN; P0 historical fit comparison BLOCKED. (3) N8/N9 receipts (Genesis v2.8.8, RRF v0.8.3); N10 to RECOG/NUMGEN. No adopted RID is renamed or regraded; OPEN 20 unchanged (PARTIAL).
-> 
-> **v6.4.13 — adopted 18 Oct 2026.** (1) `DYAD-THM-FORMAL-Z6-GENERATOR` `[THM — formal]`: $J=T\circ F^{-1/6}$ is the unique formal map with $J^6=\mathrm{id}$, $DJ(0)=A$, commuting with $F$; $R_0=J^3$, $G=J^2$ (§6.16). (2) OPEN 20 restructured: B-an ($F^{1/2}$), new **B-6** ($F^{1/6}$ ⟺ $J$ ⟺ exactly $\lambda$-equivariant chart; B-6 ⇒ B-an), B-∞ split into existence (OPEN) and flat uniqueness (closure **proposed**, §6.17). (3) §6.17 Lemma F (flat centralizer triviality) `[THM]` and F1–F3 `[THM — conditional]`, adopted after two review rounds; OPEN 20 B-∞ flat uniqueness CLOSED at the $C^\infty$ scope (existence stays OPEN). (4) M2c: $\nu_5^{(5)}$ closed form registered with an exact certificate (`DYAD-ALG-NU5-P5`). (5) N1/N2 (Genesis) answered, N7 status, custody text and consumer pins synchronized. No adopted RID is renamed or regraded.
-> 
-> **v6.4.12 — formal centralizer (adopted 16 Oct 2026).** OPEN 19 is closed in the formal category (§6.16): `DYAD-ALG-CENT-KERNEL` (homogeneous kernel of $\operatorname{ad}_{X_3}$ for every degree $k\ge2$), `DYAD-THM-FORMAL-CENTRALIZER` ($\operatorname{Cent}_{\rm formal,\,DG=I}(T^6)=\{\exp(sX)\}$), `DYAD-THM-FORMAL-INVOLUTION-UNIQUE` ($R_0=T^3\circ F^{-1/2}$ is the unique formal involution with linear part $-I$ commuting with $F=T^6$; it commutes with $T$ and equals $\widehat S$). §6.15 gains `DYAD-THM-ANALYTIC-CLOCK-BRIDGE` (Corollary A: an analytic involution commuting with $T^6$ with $DR(0)=-I$ commutes exactly with $T$). New OPEN 20 (`DYAD-OPEN-INVOLUTION-REALIZATION`): convergence of $R_0$ / of $F^{1/2}$, and $C^\infty$ realization and flat uniqueness. Not claimed: existence of any analytic or $C^\infty$ involution, any factor-contract equivalence, any physical exchange (SG-14/15).
-
-**H-P2-2** — origin: Local Tag Aliases, migration sentence. Verbatim P1-working-file text:
-
-> `[DEF]` New ledger entries use canonical claim statuses from `DSN_METHODOLOGY_v1.3`. Pre-existing entries may retain legacy compound spellings; those are not claimed to be fully normalized, and where this revision unpacks a mixed alias into separate evidence/claim statements the scientific grade is preserved.
-
-**H-P2-3** — origin: §1 OPEN-P0-DYADIC paragraph, Audit-1 clause. Verbatim P1-working-file text:
-
-> (Audit-1; Genesis SG-5). `[v6.4.11]` OPEN-M v0.7.1 records **no certified numerical deficit** (R15 corrected; the $0.024$/$4/125$ target additionally conditional on the 9C premise, the large-$g$ limit and state matching), so this route
-
-**H-P2-4** — origin: §2 OPEN 2B status lines. Verbatim P1-working-file text:
-
-> Status: ACTIVE  
-> Current state: Equivalent to OPEN 5.
-
-**H-P2-5** — origin: §3 SG-14. Verbatim P1-working-file text:
-
-> **[SG-14]** Programme-level cross-branch firewall (SG-PROG-1 in `RTG_PROGRAMME_OVERVIEW_v1.2`) applies. All dyadic results carry `[scope: conditional on postulated continuous generator T]` at the programme level until OPEN-P0 (generator selection) is resolved.
-
-**H-P2-6** — origin: §4 layer-routing table, observable row. Verbatim P1-working-file text:
-
-> | What does a long run measure? | Observable / fit | Backbone fits, spiral phase, $\kappa_{\rm fit}$, $\phi_*$ |
-
-**H-P2-7** — origin: §5 R11 cascade-gate row. Verbatim P1-working-file text:
-
-> | R11 cascade gate $4/125$ | Arithmetic conversion `[ALG, exact]`; physical threshold `[HYP inherited]` from OPEN-GEN-II-7B; OPEN-M v0.7.1 adds 9C/large-$g$/state-matching conditions |
-
-**H-P2-8** — origin: §6.4, ISP layer sentence (wording). Verbatim P1-working-file text:
-
-> remain ontological ground truth.
-
-**H-P2-9** — origin: §6.14 boundary sentence, GAP-LOCK item. Verbatim P1-working-file text:
-
-> Still not established anywhere: quantitative GAP-LOCK angular inequalities; historical
-
-**H-P2-10** — origin: §7 programme-context list, export rows and outbound-notice table (v6.4.11–v6.4.19 states). Verbatim P1-working-file text:
-
-> The following are programme context, except where a claim-level row above applies:
-> - `RTG_PROGRAMME_OVERVIEW_v1.2` — SG-PROG-1 through SG-PROG-4.
-> - `RTG_ONTOLOGICAL_FOUNDATIONS_v0.9` — Motivational layer for the generator choice; does not derive $T$. OFN v0.9 imports DYAD-THM-PRIM-CTR (IMP-O08-20) and records CUST-O09-01 (answered provisionally by DYAD-DEF-PRIMITIVE-MAP).
-> - `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20` (freeze candidate) — source of the v6.4.11 imports: RECOG-ALG-NU3-CLOSED-FORM, RECOG-ALG-NU3-NONVANISHING, RECOG-ALG-LEADING-RETURN-EQUIVARIANCE (bridge-lemma proof provenance), RECOG-ALG-CHART-LAWS, RECOG-THM-R9-MEMORY, RECOG-THM-P2-HET, RECOG-THM-P2-C0-FIRST. `[P1 COR]` RECOG-THM-R9-MEMORY is load-bearing for the R9-dependent layer (claim-level row above); the others feed OPEN 9/OPEN 12 status and cross-references. Edition pins in this list are updated in P2 (FB-DYAD-16).
-> 
-> Exports to (via Import Ledger entries in those documents):
-> - `RTG_TRIADIC_BIRTH_LIFT_DSN` (v1.6 inspected; its §7.1 pins are historical v6.4.8.1 via bridge note v1.1) — imports: $\mu_6$, $\tau$, Birkhoff frame, protection matrix, fracture-state kinematics [RID: DYAD-ALG-BRIDGE-LEMMA, DYAD-THM-C21, DYAD-ALG-LIEGAUGE-NORM]. `[v6.4.11]` Repin requested: frame and protection matrix → DYAD-DEF-BRIDGE-EXPORT-CONTRACT / DYAD-ALG-PROTECTION-MATRIX (not Lie-gauge dependent). NOTE (v6.4.10): the odd-projected residual $E_{\rm odd}$ (§6.12) is offered as a mathematical diagnostic export only; its identification with the Triadic/Genesis fracture residual is pending consumer acceptance.
-> - `RTG_GENESIS_GEOMETRY_DSN` (v2.8.7 inspected `[v6.4.13]`; requests (i)–(ii) below answered in v2.8.6, Genesis pins DYAD v6.4.11 pending its own repin) — imports: $\mu_6$, $\tau$, $4\sqrt{3}/3$, OPEN 9 finite ledger, alias phase, $\lambda=e^{iF_f/2}$ face-flux identity `[ALG, exact]` [RID: DYAD-ALG-A1A2-LIEGAUGE, DYAD-ALG-ALIAS-PHASE, DYAD-ALG-P567-LEDGER, DYAD-ALG-P6-FACEFLUX]. `[v6.4.11]` Genesis v2.8.5 records the typed residuals of §6.12 (definition only; physical selection OPEN) and the archival-$h_3$ correction (GCL-07). Requests: (i) recognize GEN-DEF-PRIMITIVE-MAP as import/alias of DYAD-DEF-PRIMITIVE-MAP; (ii) repin "Birkhoff frame, $v_\perp$, protection matrix" from DYAD-ALG-LIEGAUGE-NORM to DYAD-DEF-BRIDGE-EXPORT-CONTRACT; (iii) optionally cite DYAD-ALG-NF6 where §6.2/§6.3 use "the adopted isolated-dyad normalizing chart $h$". NOTE: the OPEN-M gate-correction route (DYAD-CAND-P0-DYADIC) is `[CAND/conditional]` and must NOT be imported as a certified gate factor.
-> - **Consumer (acceptance recorded): `RTG_RELATIONAL_RECOGNITION_DSN`** — DYAD-ALG-NF6, DYAD-ALG-NF6-OBS, DYAD-THM-PRIM-CTR, DYAD-THM-NF-INV, DYAD-THM-NF-REM. `[v6.4.11]` Acceptance recorded in RECOG v0.3.2 §7 and retained through v0.3.20 (live header: freeze candidate; final freeze record not inspected). Consumer outcomes, at RECOG's grades: R11 CLOSED (chart ledger), R10 DELIVERED/ACCEPTED, R9 CLOSED (RECOG-THM-R9-MEMORY), R8 CLOSED (RECOG-THM-P2-HET; PRIM-CTR as entry target). Scope unchanged: fixed $T$, exact $h$, stated domains, first real derivative; rows of NF-REM not mixed.
-> - **Consumer (acceptance recorded): `RTG_NUMBER_GENESIS_DSN`** — DYAD-THM-PRIM-CTR. `[v6.4.11]` Acceptance recorded in NUMGEN v1.20 (retained in v1.20.7 §§6.2/9.1): seed $(\tfrac1{100},\tfrac1{250})\in U$ `[ALG]`; whole explicit tube inside the NUMGEN P3 injectivity box ($|\rho|,|\eta|<0.0665$, rechecked). NUMGEN left this upstream row to the Dyadic owner pass; synchronized here. Lineage: NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION retains its ownership. Tube membership does **not** certify GAP-LOCK's angular hypotheses. NUMGEN also imports DYAD-THM-Q403-PHASELAW (ownership Dyadic) and cites the typed-object distinctions of §6.5 (SG-NG-18).
-> - **Offered import (v6.4.19): `RTG_NUMBER_GENESIS_DSN`** — DYAD-THM-LPHASE-ROWA-REMAINDER (`[THM]`), the explicit constant $\tfrac{403}{250}$ and branch certificate for NUMGEN's L-PHASE on row A. Interface objects I1–I5 confirmed by NUMGEN (20 Oct 2026); NUMGEN receipt replay byte-identical. Import by RID only after DYAD adoption; NUMGEN v1.20.8 records an `[OPEN]` sub-item without a value. No coefficient transfer (SG-19).
-> - **Reference consumers (v6.4.11):** OFN v0.9 (IMP-O08-20 → DYAD-THM-PRIM-CTR; replaces its ambiguous backbone import); OPEN-M v0.7.1 (DYAD-CAND-P0-DYADIC as conditional only; archival/adopted $h_3$ distinction; OPEN-M-6 reopened); RRF v0.8 (profiles `RRF-DYAD-W`, `RRF-DYAD-NF`; VF-1 now registered here as DYAD-ALG-NF6-DEG10).
-> 
-> ### Outbound notices (v6.4.11) — pending owner action
-> 
-> | Notice | To | Request | Status |
-> |---|---|---|---|
-> | N1 | Genesis | Recognize GEN-DEF-PRIMITIVE-MAP as import/alias of DYAD-DEF-PRIMITIVE-MAP (OFN CUST-O09-01) | ANSWERED `[v6.4.13]` — Genesis v2.8.6 G-B02 (retained v2.8.7) |
-> | N2 | Genesis, Triadic | Repin frame/protection-matrix imports from DYAD-ALG-LIEGAUGE-NORM to DYAD-DEF-BRIDGE-EXPORT-CONTRACT / DYAD-ALG-PROTECTION-MATRIX | Genesis ANSWERED `[v6.4.13]` (v2.8.6 G-B03); Triadic PENDING |
-> | N3 | NUMGEN | `DYAD-CAND-PHISTAR-ENTRY-PHASE` (NUMGEN pre-registration pin) does not exist in Dyadic v6.4.10/v6.4.11. Identify the historical source of the $\phi^*$ entry-phase law before any Dyadic RID is assigned or the citation replaced. **No Dyadic RID is created.** | PENDING |
-> | N4 | OFN | CUST-O09-01 answered (DYAD-DEF-PRIMITIVE-MAP; Genesis alias recorded in v2.8.6 `[v6.4.13]`) | INFORMATIONAL |
-> | N5 | RECOG | Bridge-lemma general proof cross-referenced; Dyadic RID retained; ownership offer acknowledged, not executed | INFORMATIONAL |
-> | N7 `[v6.4.12 r1]` | RRF, OFN, Genesis | OPEN 19 closed (formal; DYAD-ALG-CENT-KERNEL, DYAD-THM-FORMAL-CENTRALIZER, DYAD-THM-FORMAL-INVOLUTION-UNIQUE) and DYAD-THM-ANALYTIC-CLOCK-BRIDGE available for import (RRF v0.8.2 sync; G2 v0.2.1 §3 qualification). Realization stays OPEN 20; the K3 dimension split remains Genesis-owned. | RRF RECEIVED (v0.8.2, 17 Oct 2026); Genesis ACKNOWLEDGED, no import (consumer-impact note, 17 Oct; release record v2.8.7); OFN PENDING `[v6.4.13]` |
-> | N8 `[v6.4.13]` | Genesis | M2c answered: $\nu_5^{(5)}$ closed form registered as DYAD-ALG-NU5-P5 (§6.11) with exact certificate; the Genesis v2.8.7 §6.2 value is confirmed | RECEIVED `[v6.4.14]` — Genesis v2.8.8 adopted 19 Oct 2026 (`9abd3616…0f37`): M2c CLOSED at the point of use with convention tag; live pins repinned to v6.4.13; replay [NUM] 4/4 |
-> | N9 `[v6.4.13]` | OFN, RRF | Canonical ℤ₆ generator $J$ (DYAD-THM-FORMAL-Z6-GENERATOR, formal), the B-6 realization target, and the adopted Lemma F / F1–F3 (`[THM]` at the stated $C^\infty$ scope; existence OPEN). Bears on OFN reply v0.7 §3.5(b),(e): the C^∞ branch no longer needs an added commutation hypothesis or L-SHADOW-POLY | RRF RECEIVED `[v6.4.14]` — RRF v0.8.3 adopted 19 Oct 2026 (inspected `b393657e…a187`; §2.4b–c, all requested lines); OFN RECEIVED at session level (reply v0.7.1), owner level pending OFN v0.10 |
-> | N10 `[v6.4.14]` | RECOG, NUMGEN | OPEN 3 chart-level spiral residual: DYAD-ALG-OPEN3-LEADING and DYAD-THM-OPEN3-SPIRAL-REM (adopted v6.4.14: `[ALG]`, `[THM]`). For RECOG: the per-block primitive-minus-normalized amplitude and phase increments ($S_Q$, $S_\Theta$) are bounded in the chart; no statement on the comparator $C_W^{(h)}$ and no R9 transfer to the raw track (SG-R14) is made (OPEN 3b). For NUMGEN: no L1 coefficient is transferred (SG-19) | PENDING |
-> | N11 `[v6.4.15]` | RECOG, NUMGEN | OPEN 3b: exact offset $\Psi_W-\Psi_z=\Delta_0$ and certified bounds; R9 limit transfers to the primitive phase (T1, conditional on R9); raw-track memory $M_W=M-\Delta_0(z_0)$ (T2) and chart-variable memory law (conditional on R9). For RECOG: this quantifies SG-R14; no $C_W^{(h)}$ statement. For NUMGEN: no L1 transfer (SG-19) | PENDING |
-> | N12 `[v6.4.16]` | RECOG, NUMGEN, RRF | OPEN 3 closed within its defined scope (lifecycle only; no RID or grade change); the historical fit `spiral_phase_fit.py` is a documented discrepancy and none of its outputs is a coefficient (SG-7, SG-19); new OPEN 21 for the primitive-variable remainder | PENDING (informational) |
-> | N13 `[v6.4.17]` | RECOG, NUMGEN | OPEN 21: DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER (`[THM — conditional on RECOG-THM-R9-MEMORY]`), the certified primitive-variable remainder of the P4 memory expansion, per row, R9 term separate. For RECOG: uses R9 at statement level only; please flag any change of R9 statement, rows or $C_2$; a sharper $C_2$ would tighten the single constant directly. For NUMGEN: no L1/ISP-angle transfer (SG-19) | PENDING |
-> | N14 `[v6.4.18]` | FMS, RRF, OFN | OPEN 20 B-∞ existence: DYAD-THM-SMOOTH-EMBEDDING (`[THM]`, $C^\infty$ germ scope) — $F=\varphi^1_X$, $X\in C^\infty$, $j^\infty X=\log F$; $C^\infty$ $F^{1/m}$, $J$, $R$ commuting with $T$. For FMS: answers the OPEN 20 priority request at the $C^\infty$ scope; B-an/B-6 (analytic) stay OPEN. For RRF: L-SHADOW-POLY not imported or used; G2 physical realization untouched. For OFN: bears on reply v0.7 §3.5(b),(e) (the $C^\infty$ branch now has an existing object); no physical reading | PENDING |
-> | N15 `[v6.4.19]` | NUMGEN | L-PHASE angular remainder, row A: DYAD-THM-LPHASE-ROWA-REMAINDER (`[THM]`) — $|r_m|\le\tfrac{403}{250}Q_m^{3/2}$ for block base points in $U$, $Q_m$ primitive; branch certificate on $U_T$. Interface I1–I5 as confirmed by NUMGEN. Majorant ceiling, not an optimum; no correction of NUMGEN's measured values; no L1/ISP-angle transfer (SG-19); row B not covered | PENDING |
-> | N6 | RRF, OFN | G2-FIX mathematical content registered as DYAD-THM-LOCAL-INVOLUTION-GERM (a)+(b); RRF may narrow the G2 contract by reference; OFN retains the physical question of when $EF=TE$ holds and whether edge exchange is nontrivial | INFORMATIONAL |
-
-**H-P2-11** — origin: §7 export protocol, first rule. Verbatim P1-working-file text:
-
-> `[DEF]` All exported dyadic claims carry `[scope: conditional on postulated continuous generator T]` until programme-level OPEN-P0 is resolved.
-
-**H-P2-12** — origin: v6.4.19 footer and the inherited footers v6.4.18–v6.4.12. Verbatim P1-working-file text:
-
-> ---
-> 
-> *END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.19*  
-> *Adopted 20 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 (adopted 20 October 2026). v6.4.19 adds the L-PHASE angular remainder on row A for NUMGEN, `DYAD-THM-LPHASE-ROWA-REMAINDER` `[THM]` ($|r_m|\le\tfrac{403}{250}Q_m^{3/2}$, $0<Q_0\le\tfrac1{625}$); no other RID, grade or OPEN status changed. v6.4.18 footer follows.*  
-> *Adopted 20 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.17 (adopted 19 October 2026). v6.4.18 adds the smooth flow embedding of the six-step return `DYAD-THM-SMOOTH-EMBEDDING` `[THM]` ($C^\infty$ germ scope); OPEN 20 B-∞ existence CLOSED; OPEN 20 PARTIAL (B-an, B-6 OPEN). v6.4.17 footer follows.*  
-> *Adopted 19 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.16 (adopted 19 October 2026). v6.4.17 adds the certified primitive-variable phase remainder `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` `[THM — conditional on RECOG-THM-R9-MEMORY]`, rows A/B not mixed; OPEN 21 CLOSED. v6.4.16 footer follows.*  
-> *Adopted 19 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.15 (adopted 19 October 2026). Lifecycle only: OPEN 3c closed as a documented model discrepancy, OPEN 3 CLOSED within its defined scope, new OPEN 21 (primitive-variable remainder), P2B v2 provenance closed (exact coefficient equality), carried v6.4.10 hashes closed (owner-measured); no RID or grade changed. v6.4.15 footer follows.*  
-> *Adopted 19 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.14 (adopted 19 October 2026). v6.4.15 adds the OPEN 3b asymptotic-phase transfer: exact offset `[ALG]`, certified bounds `[THM]`, limit equality and memory law conditional on R9, memory offset conditional on T1; OPEN 3b CLOSED, OPEN 3 PARTIAL (P0 BLOCKED). v6.4.14 footer follows.*  
-> *Adopted 19 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.13 (adopted 18 October 2026). v6.4.14 adds the fit-free OPEN 3 spiral residual with exact leading terms (`[ALG]`) and certified per-block remainders (`[THM]`); OPEN 3 is PARTIAL (P4 OPEN, P0 BLOCKED). v6.4.13 footer follows.*  
-> *Adopted 18 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.12.1 (metadata release of v6.4.12, adopted 16 October 2026). v6.4.13 adds the canonical ℤ₆ generator, the OPEN 20 realization hierarchy, Lemma F with F1–F3, and the $p=5$ quintic closed form; closes OPEN 20 B-∞ flat uniqueness at the $C^\infty$ scope; existence, analytic convergence and physical realization remain OPEN.*  
-> *v6.4.12.1 is a metadata-only revision of v6.4.12. v6.4.12 (adopted 16 October 2026) supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.11 (adopted 16 October 2026): formal centralizer (OPEN 19 CLOSED, formal), Corollary A, OPEN 20 opened; outbound notices N1–N3 and N7 pending. Governing methodology: DSN_METHODOLOGY_v1.3 for edits since v6.4.10; untouched sections retain their prior status and are not claimed revalidated. Consumer acceptance of the §6.14 exports is recorded by RECOG and NUMGEN (§7); the §6.12 diagnostic definition is consumer-recorded by Genesis v2.8.5, its physical identification remains OPEN.*
-
-### P1 working record — 21 October 2026 (noncanonical; not adopted)
-
-- **Base:** adopted v6.4.19, SHA-256 `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9`, unchanged.
-- **Authority:** `P1 — SCIENTIFIC CORRECTION PASS AUTHORIZED` (reviewer, 21 Oct 2026), on disposition v0.1 (`7b2d1573…465c`). Preparation only: no adoption, no release, no notice.
-- **Scope:** Tier A (FA-DYAD-01–08) and the scientific Tier B items FB-DYAD-12, 13, 15, 25. RID registration (FB-DYAD-10), edition pins, notice states and editorial items are P2.
-- **Proposed RIDs (registered only at adoption):** DYAD-ALG-KP-FRAME-SCALE (`[ALG]`), DYAD-THM-SMOOTH-EQUIVARIANT-CHART (`[THM]`, corollary). No existing RID is renamed, removed or regraded, except that the two §6.6 statements without RIDs are retagged ([THM] → [ALG] and [DEF]).
-- **FC-DYAD-32** is a separate SESSION record (`DYAD_FC32_HNG_R9FREE_SESSION_v0_1.md`); no text here.
-
-| Edit | Row | Old (SHA-256, 16 hex) | New |
-|---|---|---|---|
-| E01 | all | `14dfd51e1e443176` | `4a3c1449b903f1c4` |
-| E02 | FA-08 | `942c30baa762b98f` | `7d9c3cca0cf016c1` |
-| E03 | FB-15 | `a9752cb7111bd3ed` | `6ae7ffc6fcebbbce` |
-| E04a | FA-02 | `70ad0d6b0b898c71` | `e3b0c44298fc1c14` |
-| E04b | FA-02 | `77fa2ef86bd605f9` | `e3b0c44298fc1c14` |
-| E04c | FA-02 | `e296837f110b3abb` | `e3b0c44298fc1c14` |
-| E04d | FA-02 | `f7a0375369e338cf` | `e3b0c44298fc1c14` |
-| E05a | FA-02 | `c43c57096734593c` | `e3b0c44298fc1c14` |
-| E05b | FA-02 | `fc02b4d3fc059409` | `e3b0c44298fc1c14` |
-| E05c | FA-02 | `80f8879a0e243e45` | `e3b0c44298fc1c14` |
-| E05d | FA-02/FB-24 | `34c64ca1fea4d986` | `7e14b5491121bc81` |
-| E06 | FA-02 | `8a10b5694d268e55` | `e3b0c44298fc1c14` |
-| E07 | FA-02 | `eebaa0f0d2029593` | `db2f3823a6d4f135` |
-| E08 | FA-03/FA-04 | `003d063760b715f5` | `97617fa5984c3ab1` |
-| E09a | FB-25 | `8a75abfb5387556c` | `685b46b49f438641` |
-| E09b | FA-03 | `9c226cda1e401d9d` | `06e50ff2ab17c2da` |
-| E09c | FA-03 | `0445c2412ba1c28c` | `1687be86c73a9104` |
-| E09d | FA-03 | `8d58a376b039fa25` | `b6e83bf6d43df367` |
-| E09e | FA-03 | `49a8769a960d0d77` | `5c2f448ef25f1279` |
-| E09f | FA-03 | `0fa809bc2ea1c2a3` | `06a1178101801e72` |
-| E09g | FA-03 | `147b63d0db4ac1cc` | `97b5bc7b51fa7570` |
-| E09h | FA-07/FB-13 | `af53dc2fb5729ac1` | `15b18a3c5fc49b2d` |
-| E10a | FA-05 | `24cc43f6be3320c9` | `a71d4ee1149945ca` |
-| E10b | FA-05 | `eaefe1b4a3a62357` | `9d515dedc979f83b` |
-| E10c | FA-05 | `b8878e2ff62f17ae` | `8f5055db1962f386` |
-| E11a | FA-06 | `a0e7b4bff765befc` | `13981a4d43d501da` |
-| E11b | FA-06 | `cbdd3fe5c1c78825` | `555ea85fa3011cd7` |
-| E12a | FA-07 | `6f2436b34be65887` | `7b81117bdf7b196a` |
-| E12b | FA-07 | `63995bec332bae29` | `08e5d469f91118b9` |
-| E12c | FA-07 | `9d17b2d056b7ed42` | `7c0e9ad64fa22422` |
-| E13 | FA-02 | `863e62c23ef48420` | `b85c3bb1adb4c4d1` |
-| E14a | FA-04 | `0547909e4aa80fb3` | `82c688f4f0ac7f45` |
-| E14b | FA-04 | `ddb4996f8f8afac5` | `378896af55d42c72` |
-| E15a | FB-12 | `777b3ed68b8b9683` | `e336675cdfe47b16` |
-| E15b | FB-12 | `2132246d02883252` | `55d39e80f9aad143` |
-| E15c | FB-12 | `7626463ed3f6f5f1` | `3bca65337a9d9981` |
-| E16 | FB-13 | `11acc1fbbc129259` | `37a2edf7ba22fa20` |
-| E17 | FA-02 | `35fed544594a0128` | `a779b75db023d98d` |
-| E18a | FA-02 | `85452523c237615c` | `6005bfef5d02fd3a` |
-| E18b | FA-02 | `0b8019492cc3bd01` | `0d5d5579cdbeeee9` |
-| E18c | FA-02 | `5cf60ea2a2d551c4` | `7fdc5436e0b8c13c` |
-| E19 | FA-02 | `2fc6fa20f331deca` | `294f400269c2955c` |
-| E19b | FA-02 | `e73f5c40a7448d8f` | `e3b0c44298fc1c14` |
-| E20a | FA-01 | `ad9b20c403cc3580` | `7773f9210125d8fa` |
-| E20b | FA-01 | `e4f4243c1a7028f3` | `84bf54d5139f10b3` |
-| E20c | FA-01 | `7e2de987a250bc75` | `8c0afdb9e47766bd` |
-| E21 | FA-02 | `094d0f8161f92b9e` | `88034132eb37f78f` |
-
-#### P1 relocated history (verbatim from v6.4.19)
-
-**H-1a** — origin: §2 OPEN 3, status line. Verbatim v6.4.19 text:
-
->  *v6.4.14–v6.4.15 status line, retained as history:* PARTIAL `[v6.4.14]` (v6.4.13: ACTIVE)
-
-**H-1b** — origin: §2 OPEN 3, current-state line. Verbatim v6.4.19 text:
-
-> Current state (v6.4.13, retained as history): Mechanistic origin identified: geometric projection from $2\operatorname{Re}(\bar{W}h_2)$ `[ALG structure]`. Theorem-grade Taylor remainder bounds remain `[OPEN]`.  
-
-**H-1c** — origin: §2 OPEN 3b. Verbatim v6.4.19 text:
-
->  *v6.4.14 state, retained as history:* `[OPEN]`. From $\Psi_W-\Psi_z=D_\Theta-\tau\log(1+D_Q/q)$: (i) equality of the primitive and normalized asymptotic-phase limits and (ii) the finite-$q_0$ $O(\sqrt{q_0})$ static offset in the initial memory are to be proved as separate results. The per-block theorem does not by itself prove either.
-
-**H-1d** — origin: §2 OPEN 3c. Verbatim v6.4.19 text:
-
->  *v6.4.14–v6.4.15 state, retained as history:* `BLOCKED` — `spiral_phase_fit.py` (DYAD-ART-SPIRAL-FIT) is unavailable; the fit is not a definition of the residual and is not a premise of OPEN 3a.
-
-**H-1e** — origin: §2 OPEN 20, status line. Verbatim v6.4.19 text:
-
->  *v6.4.17 status, retained as history:* PARTIAL (v6.4.13) — B-∞ flat uniqueness CLOSED at the $C^\infty$ scope; B-an, B-6 and B-∞ existence ACTIVE
-
-**H-1f** — origin: §2 OPEN 20, B-∞ existence pointer. Verbatim v6.4.19 text:
-
->  The next line is the v6.4.17 text, retained as history.
-
-**H-1g** — origin: §2 OPEN 20, v6.4.17 B-∞ existence line. Verbatim v6.4.19 text:
-
-> (B-∞ existence) `[OPEN]` Does a $C^\infty$ local involution with $DR(0)=-I$ commuting with $T$ exist (equivalently, by F3, a $C^\infty$ tangent-to-identity square root of $F$)? Same question for $F^{1/6}$ / $J$. A proposed construction route is recorded in §6.17; neither convergence nor the limit's properties are claimed.  
-
-**H-1h** — origin: §2 OPEN 21, status line. Verbatim v6.4.19 text:
-
->  *v6.4.16 status, retained as history:* OPEN
-
-**H-4** — origin: §2 priority ordering, internal frontier. Verbatim v6.4.19 text:
-
-> **Internal dyadic frontier** — used when no downstream handoff is specified:
-> 0. **OPEN-P0-DYADIC absorption** — `[PARTIAL v6.1]`: $\lambda=e^{iF_f/2}$ and SU(2) energy ratio registered `[ALG, exact]`; h-transfer to OPEN-M remains `[CAND/conditional]`. See §6.2, §6.6, §6.12.
-> 1. **OPEN 9 cubic cascade formula — `[CLOSED v6.4.9]`.** Exact all-$p$ closed form $Q(L,I)=L^5(IL^2+I-L^2+1)/(2(L+1)^4(L^2+L+1))$; $p=8$ cancels ($Q_8=0$ zero degeneracy) while $p\ge12$ survives as $Q_p=i\zeta_p^3 M_p$, $M_p\in\mathbb{Q}(\zeta_p)^+$. Three-path degree-3 derivation; remainder relation $\sigma_{-1}(Q)=-\zeta_p^{-6}Q$ exact-symbolic. See §6.11 (DYAD-THM-Q403-PHASELAW).
-> 2. **Universal missing-slot rules** — prove $Z^{\rm miss}_{p,q,D}$ using reachable-basis projector formalism.
-> 3. **Bridge-gap smooth baseline** — compare $G_{32}$, $K_p$, $G_{32}/K_p$, $p^2G_{32}$, subgroup diagnostics over dense $p$ windows.
-> 4. **Low-degree anti-holomorphic vanishing — `[COMPLETED v6.2]`.** $F_{\rm raw}^p(0,b)=0$ for $p\ge b+2$ is now `[ALG]` for all $b\in\{2,3,4\}$ via automatic $\beta$-mode path enumeration (source $\beta$-sets contain no secular mode). See §6.11.
-> 4b. **Channel boundary $b=4$ — `[COMPLETED v6.4]` for the dyadic map.** The $b=5$ secular coefficient is proved nonzero (symbolic, not identically zero, $\propto c_{02}^2$; and nonzero at dyadic values). Proved `[ALG]`: vanishing for $b\in\{2,3,4\}$ and first failure at $b=5$ for all $p\ge6$. `[COR v6.4.11]` Not proved: failure for all $b\ge6$ (the former "$b\le4$ iff" shorthand). Remaining: all-$b\ge5$ persistence and general-coefficient version (§6.11).
-> 5. **General $\nu_5^{(p)}$ theorem** — only after subgroup-strobe definitions and cancellation rules are stabilized.
-
-**H-6** — origin: §3 SG-16 (full v6.4.19 text). Verbatim v6.4.19 text:
-
-> **[SG-16]** Low-degree vanishing path-enumeration guard. Manual path enumeration is unsafe for pure anti-holomorphic vanishing claims (the $p=3,b=3$ nonzero case, where the direct term already vanishes, exhibits a cross-path that naive listing misses). For $b\le4$, automatic $\beta$-mode path enumeration has now been completed and certifies `[ALG]` (source $\beta$-sets carry no secular mode; cert: degree_b_vanishing_cert_v2.py). For $b\ge5$, NO promotion is allowed without the same source $\beta$-set certificate.  
-> Violation: Tagging the $b=3,4$ vanishing as `[ALG]`, or asserting "$(c_{02})^2$ is the only cross-term" without the path-enumeration proof.
-
-**H-7** — origin: §6.6, "p=6 uniqueness" and "three-tier hierarchy". Verbatim v6.4.19 text:
-
-> `[THM]` **$p=6$ uniqueness.** For the resonant case $p=6$ ($\lambda = e^{i\pi/3}$), the eigenvalues $\lambda^j$ for $j=1,\ldots,5$ satisfy $\lambda^j \neq 1$. No intermediate resonance obstruction occurs: the 6-step tangent-to-identity normalization proceeds without spurious small-denominator cancellations at intermediate steps.
-> 
-> `[THM]` **Three-tier resonance hierarchy.** The $p$-resonance family decomposes into:
-> - **Sub-resonant** ($p < 6$): rotation angle is not a rational multiple of $2\pi$ for which a six-step return is exact; faster decay.
-> - **Resonant** ($p = 6$): unique six-step order-6 elliptic resonance; canonical study case.
-> - **Super-resonant** ($p > 6$): more lattice harmonics activate; richer arithmetic-horizon structure.
-
-**H-8** — origin: §6.9 operation-labelled objects. Verbatim v6.4.19 text:
-
->  until RECOG R11 completes the final-chart ledger.
-
-**H-10** — origin: §6.5 backbone law. Verbatim v6.4.19 text:
-
-> `[ALG]` **Backbone law:**
-> $$Q_m\sim\tfrac{1}{m+\kappa},\quad Q_n\sim\tfrac{6}{n+C},\quad C=6\kappa.$$
-
-**H-9** — origin: §6.15 bullet. Verbatim v6.4.19 text:
-
-> - For $C^\infty$ $R$, only $j^\infty(RT-TR)=0$ follows. Exact primitive-clock commutation then needs a flat-uniqueness argument, currently OPEN (OPEN 20 (B-∞); RRF L-SHADOW-POLY, not imported). `[v6.4.13]` Superseded for existing $C^\infty$ involutions by §6.17 F1 (`[THM — conditional]`): exact primitive-clock commutation holds. The sentence is kept as the v6.4.12 record; existence remains OPEN 20.
-
-**H-2a** — origin: §6.14 OPEN 3a, v6.4.14 list. Verbatim v6.4.19 text:
-
-> `[OPEN]` `[v6.4.14]` **Not established** *(v6.4.14 state; OPEN 3b is addressed by the v6.4.15 entries below)*: OPEN 3b (P4) — equality of the primitive and normalized asymptotic-phase limits and the finite-$q_0$ $O(\sqrt{q_0})$ memory offset, as separate results; OPEN 3c (P0) — comparison with the historical fit (BLOCKED); any statement on $C_{\rm est}$, $\kappa_{\rm est}$ (SG-7); transfer of the chart coefficients to NUMGEN L1 primitive phase coefficients, ISP-angle coefficients, $47/54$, $c_\theta^{(6)}$, $a_1$, $a_2$ (SG-19); a certified bound on $\Delta\Theta_z$ beyond RECOG-ALG-CHART-LAWS; any effect on OPEN 20, G2 or physical readings.
-
-**H-2b** — origin: §6.14 OPEN 3b, v6.4.15 list. Verbatim v6.4.19 text:
-
-> `[OPEN]` `[v6.4.15]` **Not established** *(v6.4.15 state; OPEN 3c, the provenance comparison and the primitive-variable remainder are addressed by the v6.4.16 entries below)*: a certified primitive-variable remainder; the combined $\pm6$ coefficient of $\Lambda_1$ and $P_{W2}$ (exact $\Lambda_1$ not inspected); OPEN 3c (P0, BLOCKED); C_est/κ_est (SG-7); NUMGEN L1/ISP-angle transfer (SG-19); the P2B v2 `certificate.json` provenance comparison (carried); any effect on OPEN 20, G2 or physical readings.
-
-**H-2c** — origin: §6.14 OPEN 3c, v6.4.16 list. Verbatim v6.4.19 text:
-
-> `[OPEN]` `[v6.4.16]` **Not established** *(v6.4.16 state; the primitive-variable remainder (OPEN 21) is addressed by the v6.4.17 entries below)*: a certified primitive-variable remainder (OPEN 21); the combined $\pm6$ coefficient of $\Lambda_1$ and $P_{W2}$; C_est/κ_est (SG-7); NUMGEN L1/ISP-angle transfer (SG-19); any effect on OPEN 20, G2 or physical readings.
-
-**H-3** — origin: §6.17, v6.4.17 list. Verbatim v6.4.19 text:
-
-> `[OPEN]` `[v6.4.17]` **Not established** *(v6.4.17 state; existence of $C^\infty$ roots, $J$ and $R$ is addressed by the v6.4.18 entries below)*: existence of any $C^\infty$ root, involution or $J$ (OPEN 20 B-∞ existence; proposed construction route: the conjugation sequence $F^{-n}R_\infty F^n$ with $R_\infty$ a Borel realization of $R_0$. `[COR r2, review R1]` Its $C^0$ convergence, higher-derivative convergence, and the commutation properties of a limit are **not proved**; Lemma F gives uniqueness of an existing flat-close commuting map, not convergence of approximately commuting conjugates. r1's statement that $C^0$ convergence follows from Lemma-F-type estimates is withdrawn); finite-$C^k$ analogues; analytic B-an/B-6; physical exchange or G2 realization; identification of $EF=TE$ with $EF=T^6E$.
-
-**H-1i** — origin: §8 DYAD-ART-SPIRAL-FIT entry. Verbatim v6.4.19 text:
-
->  *v6.4.14 note, retained:* `[v6.4.14]` file unavailable (OPEN 3c BLOCKED)
-
-**H-5** — origin: §7 first paragraph. Verbatim v6.4.19 text:
-
-> The self-contained local core of this study (the six-step module, the OPEN 9 arithmetic ledger, and the return-enclosure package of §6.14) has no upstream scientific DSN imports; it is derived from the postulated primitive map $T(\rho,\eta)$. Cross-study interpretations elsewhere (face-flux identity, OPEN-M gate conversion) use external inputs whose provenance is recorded at their entries (§6.2, §6.11, §6.12, SG-15).
-
-### v6.4.19 — adopted 20 October 2026
-
-- **Adoption:** owner/PI decision of 20 Oct 2026 (`DYAD v6.4.19 — OWNER ADOPTION AUTHORIZED`) after external review of DRAFT r1 (`v6.4.19 r1 — SCIENTIFIC REVIEW ACCEPTED` (`SCIENTIFIC CONTENT ACCEPTED — OWNER ADOPTION READY, WITH REPLAY QUALIFICATION`); r1 `f6211201b95c5a7a5c8d992cdd943e56d3655b9a757cb1b427d72a8fd85d6e47`). r1 scientific text unchanged.
-- **Grade taken at adoption:** `DYAD-THM-LPHASE-ROWA-REMAINDER` `[THM]` — (B) branch certificate on $U_T$, $\varepsilon\le0.04654$; (R) $|r_m|\le\tfrac{403}{250}Q_m^{3/2}$, $0<Q_0\le\tfrac1{625}$, $m\ge0$, $Q_m$ primitive; NUMGEN interface I1–I5 kept; $\tfrac{403}{250}$ a certified upper bound, not an optimum. No other RID, grade or OPEN status changed.
-- **Release edits:** body status labels ("v6.4.19 draft", "proposed grade, not in force", "proposed `[THM]`", "ON ADOPTION" → adopted labels; N15 PENDING), header metadata, this record, footer. Release transform `release_v6_4_19.py`; checker `check_release_v6_4_19.py`.
-- **Evidence levels (PI decision):** `OWNER-RUN` — combined draft checker 16/16 with G14/G15, the 11 draft-checker negative controls, provenance controls M1–M4 as separate processes (exit 1 each), certificate JSON `8697c697…ad4fa`, gate JSON `58cfafd3…fc89`, control exit codes `e2ffa46b…1a1e`, split replays `replay_g14_certificate.py` / `replay_g15_provenance.py`. `REVIEWER-REPLAYED` — hashes of the draft and both packages, manifest 32/32, deterministic builder, the 11 draft negative controls, provenance gate main run 9/9 with 4 internal controls. `REVIEWER FULL REPLAY NOT COMPLETED` — combined G14–G15 run and the independent `--record-exit-codes` run; this line changes only after new independent runs.
-- **Release tools (no scientific text):** G14 and G15 of the draft checker are separately runnable (`replay_g14_certificate.py`; `replay_g15_provenance.py` with `--control Mk` and `--all-controls`), each with deterministic JSON output and crash exit code 3.
-- **Carried open:** row B; reviewer full replay of G14–G15; N15 (to be sent only after external verification of the final SHA-256); N3 (pending NUMGEN v1.20.8); Triadic part of N2; N7/N9 OFN owner level; N10–N14 receipts; OPEN 20 B-an, B-6.
-- Draft history follows.
-
-### v6.4.19 — DRAFT r1, 20 October 2026 (draft record; not adopted)
-
-- **Basis:** PI/reviewer decision `v6.4.19 DRAFT r1 — PREPARATION AUTHORIZED` (20 Oct 2026), given with the review of the P2B provenance gate v0.1 (`PROVENANCE CHAIN ACCEPTED IN PRINCIPLE — FULL REPLAY NOT VERIFIED`); earlier reviews: scope note (`ROW A CERTIFICATION AUTHORIZED`), certificate (`L-PHASE ROW A SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION PENDING`); NUMGEN interface confirmation I1–I5 and receipt replay. Not a final adoption decision.
-- **Scientific payload (proposed grade):** `DYAD-THM-LPHASE-ROWA-REMAINDER` `[THM]` — (B) branch certificate on $U_T$, $\varepsilon\le0.04654$; (R) $|r_m|\le\tfrac{403}{250}Q_m^{3/2}$ for block base points in $U$, $Q_m$ primitive. Sign convention and six-step phase lift as confirmed by NUMGEN.
-- **Registrations:** §1 line; §5 scope row; §6.14 block (interface objects, theorem, recorded distinctions, not-established list); §7 offered-import row and notice N15 (ON ADOPTION); §8 artifacts DYAD-ART-LPHASE-ROWA, DYAD-ART-LPHASE-P2B-PROV, DYAD-ART-LPHASE-ROWA-RECORDS.
-- **Provenance (reviewer table):** P2B coefficient chain recorded as a transitive exact-coefficient comparison; gate v0.1.1 owner replay ALL PASS with separate control exit codes; reviewer full replay pending, to be done before adoption.
-- **Unchanged:** all adopted RIDs and grades of v6.4.18 (including DYAD-THM-SMOOTH-EMBEDDING, OPEN 21, the §6.14 enclosure theorems used as inputs); OPEN 20 PARTIAL (B-an, B-6 OPEN); N3 (pending NUMGEN v1.20.8); Triadic part of N2; N7/N9 OFN owner level; N10–N14 (PENDING).
-
-### v6.4.18 — adopted 20 October 2026
-
-- **Adoption:** owner/PI decision of 20 Oct 2026 after external review of DRAFT r1 (`v6.4.18 DRAFT r1 — SCIENTIFIC REVIEW ACCEPTED`; r1 `6abed0b86332728d41eeea265eb97e8fac6bc1a036e538fa671493112ea3d1b3`; manifest 20/20; package draft byte-identical to the uploaded draft; draft checker 13/13; payload check scripts re-executed with their internal negative controls (integration 6/6, P3-a 8/8, P3-b/c v0.1.1 3/3); E2/L7 scope correction of integration audit v0.1.1 accepted; RIDs 129 → 132, none lost; prior grades unchanged). r1 scientific text unchanged.
-- **Grade taken at adoption:** `DYAD-THM-SMOOTH-EMBEDDING` `[THM]`, $C^\infty$ germ scope (E1–E4; E2 only for generators with $DX'(0)=0$). OPEN 20 B-∞ existence CLOSED; OPEN 20 PARTIAL (B-an, B-6 OPEN).
-- **Release edits:** body status labels ("v6.4.18 draft", "proposed grade, not in force", "CLOSED (proposed …)", "ON ADOPTION" → adopted labels; N14 PENDING), header metadata, this record, footer. Release transform `release_v6_4_18.py`; checker `check_release_v6_4_18.py`.
-- **Evidence distinction:** the r1 review re-executed the draft checker (13/13) and the three payload check scripts with their internal negative controls; the eight draft-checker negative controls (`--neg`) are owner reruns recorded in the package.
-- **Carried open:** OPEN 20 B-an, B-6; N3; Triadic part of N2; N7/N9 OFN owner level; N10–N13 receipts; N14 (to be sent only after release verification, citing the verified final hash).
-- Draft history follows.
-
-### v6.4.18 — DRAFT r1, 20 October 2026 (draft record; not adopted)
-
-- **Basis:** external review of the integration audit v0.1 (`SMOOTH EMBEDDING CHAIN ACCEPTED — E2 SCOPE CORRECTION REQUIRED`, 20 Oct 2026), which supports a v6.4.18 DRAFT r1 after the E2 narrowing (applied in audit v0.1.1), with no new numerical campaign and no new physical claim.
-- **Scientific payload (proposed grade):** `DYAD-THM-SMOOTH-EMBEDDING` `[THM]` ($C^\infty$ germ scope) — E1 smooth flow embedding, E2 uniqueness among generators with zero linear part, E3 smooth roots (F3), E4 smooth $J$ and $R$ (F3, F2, §6.15 convention).
-- **Lifecycle:** OPEN 20 B-∞ existence OPEN → CLOSED (proposed); OPEN 20 stays PARTIAL; the v6.4.17 status and B-∞ existence text are kept as history; the v6.4.17 §6.17 "Not established" paragraph is annotated, not removed; §1 line; §5 scope row; §8 artifacts (DYAD-ART-OPEN20-BINF-RECORDS, DYAD-ART-OPEN20-BINF-CHECKS); notice N14.
-- **Recorded distinctions:** $G_\infty$ vs $G=J^2$; route $G_\infty^{-n}F^n$ vs the unproved §6.17 route; E2 scope; F1–F3 grades unchanged, existence condition discharged; qualitative radius; analyticity untouched; SG-14/15.
-- **Unchanged:** all adopted RIDs and grades of v6.4.17 (including Lemma F, F1–F3, DYAD-THM-FORMAL-Z6-GENERATOR, OPEN 21); B-an, B-6; N3; Triadic part of N2; N7/N9 OFN owner level; N10–N13 (PENDING).
-
-### v6.4.17 — adopted 19 October 2026
-
-- **Adoption:** owner/PI decision of 19 Oct 2026 after external review of DRAFT r1 (`SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION READY`; r1 `191110e3432d69df3a3d9c7e41162f7756ad508783bbed0858fd50f6839c74e1`; manifest 20/20; v6.4.16→r1 diff applied byte-exactly; checker 13/13; negative controls 7/7; P5 certificate 28/28, JSON byte-identical; RIDs 126 → 129, none lost). r1 scientific text unchanged.
-- **Grade taken at adoption:** `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` `[THM — conditional on RECOG-THM-R9-MEMORY]`; constants per row as reviewed ($K'_A=3951/1000$, $K'_B=971/250$; $K_A=8831/250$, $K_B=883/100$; $C_{2,j}(256/225)^2$ kept separate). OPEN 21 CLOSED.
-- **Release edits:** body status labels ("v6.4.17 draft", "proposed grade, not in force", "CLOSED (proposed, …)", "ON ADOPTION" → adopted labels; N13 PENDING), header metadata, this record, footer. Release transform `release_v6_4_17.py`; checker `check_release_v6_4_17.py`.
-- **Evidence distinction (reviewer note):** the r1 review re-executed the draft checker and its negative controls; the seven P5 negative controls were verified from the package records (owner reruns), not re-executed in that round.
-- **Carried open:** OPEN 20 B-an, B-6, B-∞ existence; N3; Triadic part of N2; N7/N9 OFN owner level; N10, N11, N12, N13 receipts (N13 to be sent only after release verification).
-- Draft history follows.
-
-### v6.4.17 — DRAFT r1, 19 October 2026 (draft record; not adopted)
-
-- **Basis:** external review `P5 v0.1.2 — SCIENTIFIC REVIEW ACCEPTED` (19 Oct 2026), which approves a v6.4.17 DRAFT r1 carrying the reviewed P5 result into the owner DSN, with no new physical or representational claim and no new certificate campaign.
-- **Scientific payload (proposed grade):** `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` `[THM — conditional on RECOG-THM-R9-MEMORY]` — primary decomposed inequality with $K'_A=3951/1000$, $K'_B=971/250$ and the separate R9 term $C_{2,j}(256/225)^2Q_0^2$; secondary single constants $K_A=8831/250$, $K_B=883/100$; rows not mixed.
-- **Lifecycle:** OPEN 21 OPEN → CLOSED (proposed); the v6.4.16 status is kept as history; the v6.4.16 §6.14 "Not established" paragraph is annotated, not removed; closed-list entry; §1 line; §5 scope row; §8 artifacts (DYAD-ART-OPEN21-P5, DYAD-ART-OPEN21-P5-RECORDS); notice N13.
-- **Recorded distinctions:** R9 at statement level only, not re-certified; R9 term kept separate; `[NUM]` sampling supporting only; the v6.4.15 `[ALG — formal]` entry is unchanged.
-- **Unchanged:** all adopted RIDs and grades of v6.4.16 (including T1, T2 and the chart-variable memory law); OPEN 3 (CLOSED, defined scope); OPEN 20 (PARTIAL); N3; Triadic part of N2; N7/N9 OFN owner level; N10, N11, N12 (PENDING).
-
-### v6.4.16 — adopted 19 October 2026
-
-- **Adoption:** owner/PI decision of 19 Oct 2026 after external review of DRAFT r1 (`SCIENTIFIC AND LIFECYCLE REVIEW ACCEPTED — OWNER ADOPTION READY`; r1 `a24bf77d9c0b6721717346155a9910e644204689fbcb6757a47db20d43b1982f`; manifest 16/16; rebuild PASS; checker 13/13; negative controls 7/7). r1 text unchanged except labels and metadata.
-- **Statuses taken at adoption:** OPEN 3c CLOSED — documented model discrepancy; OPEN 3 CLOSED within its defined scope; OPEN 21 `DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER` OPEN; P2B v2 provenance CLOSED (exact coefficient equality); carried v6.4.10 hashes CLOSED — owner-measured. No scientific RID added, no grade changed.
-- **Evidence distinction (reviewer condition):** reviewer-executed — P2B coefficient comparison and its negative control, P2B v2 referee, P0 numerical comparison, build/check chain; owner-measured only — `DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip` `e4e2bab0…fdbe4` and `check_owner_adoption.py` `c04096e1…00fe` (historical reviewer match as reported, not re-measured).
-- **Release edits:** draft/proposed labels → adopted labels (header, OPEN 3 status, OPEN 3c, closed list, OPEN 21 tag, §5 row, §6.14 v6.4.16 entries, §8 tags), N12 PENDING (informational), header metadata, this record, footer. Release transform `release_v6_4_16.py`; checker `check_release_v6_4_16.py`.
-- **Carried open:** OPEN 21 (certified primitive-variable remainder); OPEN 20 B-an, B-6, B-∞ existence; N3; Triadic part of N2; N7/N9 OFN owner level; N10, N11, N12.
-- Draft history follows.
-
-### v6.4.16 — DRAFT r1, 19 October 2026 (draft record; not adopted)
-
-- **Basis:** external review of the recovered-artifacts SESSION record (19 Oct 2026), supporting a v6.4.16 DRAFT r1 with option (a): OPEN 3 closed within its defined scope, the primitive-variable remainder separated as a new OPEN, provenance and carried hashes closed. Session record v0.1.1 applies the review notes (exact coefficient equality, not byte identity; hashes owner-measured; engine added to the package).
-- **Lifecycle (proposed):** OPEN 3c BLOCKED → CLOSED (documented model discrepancy); OPEN 3 PARTIAL → CLOSED within its defined scope (history lines retained; closed-list entry added); new OPEN 21 `DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER`; P2B v2 provenance comparison CLOSED; the two carried v6.4.10 hashes CLOSED (owner-measured). §5 scope row, §6.14 v6.4.16 entries (the v6.4.15 "Not established" paragraph is annotated, not removed), §8 (DYAD-ART-SPIRAL-FIT updated; DYAD-ART-RE-P2B2 and DYAD-ART-RE-SUPPL annotated with hashes; new DYAD-ART-OPEN3-P0), notice N12 (informational).
-- **New RIDs:** `DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER` (OPEN item), `DYAD-ART-OPEN3-P0` (artifact). No scientific RID added; no grade changed.
-- **Unchanged:** all adopted RIDs and grades of v6.4.15 (including the conditional T1/T2 and memory-law grades of DYAD-THM-OPEN3-ASYMPTOTIC-PHASE); OPEN 20 (PARTIAL); N3; Triadic part of N2; N7/N9 OFN owner level; N10, N11 (PENDING).
-
-### v6.4.15 — adopted 19 October 2026
-
-- **Adoption:** owner/PI decision of 19 Oct 2026 after external review of DRAFT r1 (`SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION READY`; r1 `d2be05c54680715a8567370a334be1812ca509c07fe00bd7f9217627a0f79f64`; v6.4.14→r1 diff applied byte-exactly; checker 13/13; negative controls 6/6 re-run by the reviewer). r1 scientific text unchanged.
-- **Grades taken at adoption:** `DYAD-ALG-OPEN3-PHASE-OFFSET` `[ALG]` (primitive-variable part `[ALG — formal]`); `DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS` `[THM]`; `DYAD-THM-OPEN3-ASYMPTOTIC-PHASE`: T1 `[THM — conditional on R9]`, T2 `[THM — conditional on T1]`, chart-variable memory law `[THM — conditional on R9]`. OPEN 3b CLOSED; OPEN 3 PARTIAL (3c BLOCKED).
-- **Release edits:** body status labels ("v6.4.15 draft", "proposed grade, not in force", "CLOSED (proposed, …)", "ON ADOPTION" → adopted labels; N11 PENDING; §1 line tagged with its R9 condition), header metadata, this record, footer. Release transform `release_v6_4_15.py`; checker `check_release_v6_4_15.py`.
-- **Installation note:** the project installation is recorded separately from adoption (reviewer guidance): "adopted and installed" only once the file and manifest are written to the project; otherwise "adoption authorized, installation pending".
-- **Carried open:** certified primitive-variable remainder; OPEN 3c (P0); P2B v2 `certificate.json` comparison; OPEN 20 B-an, B-6, B-∞ existence; N3; Triadic part of N2; N7/N9 OFN owner level; N10, N11; the two carried v6.4.10 hashes.
-- Draft history follows.
-
-### v6.4.15 — DRAFT r1, 19 October 2026 (draft record; not adopted)
-
-- **Basis:** external P4 review of 19 Oct 2026 (`P4 SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION PENDING`), recommending a v6.4.15 DRAFT r1 with the P4 results, their R9 dependencies and the primitive-variable proof gap stated explicitly; OPEN 3b to be closed only by an owner adoption decision.
-- **Scientific payload (proposed grades, as recommended by the review):** `DYAD-ALG-OPEN3-PHASE-OFFSET` `[ALG]` (P4-0, $\Delta_1$, $\Delta_2$; primitive-variable second order `[ALG — formal]`); `DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS` `[THM]` ($K_0,K_1,K_2$ per row: $\tfrac1{20}$: $\tfrac{1101}{1000},\tfrac{691}{500},\tfrac{1323}{1000}$; $\tfrac1{40}$: $\tfrac{533}{500},\tfrac{1341}{1000},\tfrac{641}{500}$); `DYAD-THM-OPEN3-ASYMPTOTIC-PHASE` — T1 `[THM — conditional on R9]`, T2 `[THM — conditional on T1]`, chart-variable memory law `[THM — conditional on R9]`.
-- **Lifecycle:** OPEN 3b `[OPEN]` → CLOSED (proposed); OPEN 3 remains PARTIAL (3a CLOSED, 3c BLOCKED); the v6.4.14 OPEN 3b line is kept as history; the v6.4.14 §6.14 "Not established" paragraph is annotated, not removed. §1 line, SG-9 asymptotic note, §5 scope row, §8 artifacts (DYAD-ART-OPEN3-P4, DYAD-ART-OPEN3-P4-RECORD), notice N11.
-- **Recorded distinctions:** T1 is conditional on R9 and not an independent existence theorem; the primitive-variable $O(Q_0^{3/2})$ remainder is not certified; no $C_W^{(h)}$ statement.
-- **Unchanged:** all adopted RIDs and grades of v6.4.14 (including DYAD-ALG-OPEN3-LEADING, DYAD-THM-OPEN3-SPIRAL-REM and the §6.14 consumer imports); OPEN 20 (PARTIAL); N3; Triadic part of N2; N7/N9 OFN owner level; N10 (issued, PENDING); P2B v2 provenance comparison; the two carried v6.4.10 hashes.
-
-### v6.4.14 — adopted 19 October 2026
-
-- **Adoption:** owner/PI decision of 19 Oct 2026 after external review of DRAFT r1 (`SCIENTIFIC REVIEW ACCEPTED`, `REVIEW ACCEPTED — OWNER ADOPTION READY`; r1 `7f7ea7f3d7262b1297da5b5dc65f73f8e55ab03370189a6302ab44967aef6ebf`; package integrity, deterministic rebuild and 12/12 gates confirmed by the reviewer). r1 scientific text unchanged.
-- **Grades taken at adoption:** `DYAD-ALG-OPEN3-LEADING` `[ALG]`; `DYAD-THM-OPEN3-SPIRAL-REM` `[THM]` (constants per row as reviewed; majorant suprema, not true-error suprema). OPEN 3 PARTIAL: 3a CLOSED, 3b (P4) OPEN, 3c (P0) BLOCKED.
-- **Release edits:** status labels in the body ("v6.4.14 draft", "proposed grade, not in force", "CLOSED (proposed)", "ON ADOPTION" → adopted labels; N10 PENDING), header metadata, this record, footer. Release transform `release_v6_4_14.py`; checker `check_release_v6_4_14.py`.
-- **Carried open:** P4 (OPEN 3b); P0 (OPEN 3c, artifact unavailable); comparison of $h$, $J$ with the adopted P2B v2 `certificate.json`; OPEN 20 B-an, B-6, B-∞ existence; N3; Triadic part of N2; N7/N9 OFN owner level; N10; the two carried v6.4.10 hashes.
-- Draft history follows.
-
-### v6.4.14 — DRAFT r1, 19 October 2026 (draft record; not adopted)
-
-- **Authorization:** PI work decision of 19 Oct 2026 — v6.4.14 DRAFT r1 approved, containing only the reviewed P2/P3 results and the required lifecycle updates; formal adoption of the `[ALG]`/`[THM]` promotions only after review of the final draft and a separate adoption record; v6.4.13 unchanged; P4 to follow as a separate task.
-- **Scientific payload (proposed grades):** §6.14 `[DEF]` fit-free spiral residual; `DYAD-ALG-OPEN3-LEADING` (proposed `[ALG]`); `DYAD-THM-OPEN3-SPIRAL-REM` (proposed `[THM]`), constants per row exactly as reviewed ($\tfrac1{20}$: $K_\Theta=\tfrac{123}{125}$, $K_Q=\tfrac{2353}{1000}$; $\tfrac1{40}$: $K_\Theta=\tfrac{909}{1000}$, $K_Q=\tfrac{258}{125}$).
-- **Lifecycle:** OPEN 3 ACTIVE → PARTIAL (proposed): OPEN 3a per-block chart residual CLOSED, OPEN 3b (P4) OPEN, OPEN 3c (P0) BLOCKED; the v6.4.13 state line is kept as history. SG-9 gains a certified chart-level note (guard text unchanged). §1 summary line, §5 scope row, §8 artifacts (DYAD-ART-OPEN3-P2/-P3/-RECORDS; DYAD-ART-SPIRAL-FIT annotated).
-- **Recorded distinctions (PI condition):** majorant supremum ≠ true-error supremum; the per-block theorem does not prove the asymptotic-phase transfer; the independent regeneration of $h$ (23/23 against the 19 Sep audit reconstruction) does not replace verification against the adopted P2B v2 `certificate.json`.
-- **Synchronization:** N8 RECEIVED (Genesis v2.8.8); N9 RRF RECEIVED (RRF v0.8.3), OFN session level; new N10 (RECOG, NUMGEN; on adoption); consumer-edition pins.
-- **Unchanged:** all adopted RIDs and grades (DYAD-THM-PRIM-CTR, NF-INV, NF-REM, NF6 and the §6.14 consumer imports); OPEN 20 (PARTIAL; B-an, B-6, B-∞ existence OPEN); G2 status; SG-14/15; N3; Triadic part of N2; the two carried v6.4.10 hashes.
-
-### v6.4.13 — adopted 18 October 2026
-
-- **Adoption:** owner/PI decision of 18 Oct 2026 after external review of DRAFT r2 (`SCIENTIFIC REVIEW ACCEPTED — OWNER ADOPTION READY`, r2 `d6bebcc9022637469d93c46c88e1249e4c06adbda1be838ea56af8cc393dee41`; review manifest `DYAD_v6_4_13_r2_REVIEW_MANIFEST.json`: v6.4.12.1→r1 and r1→r2 diffs byte-exact, 0 RID loss, 6 new RIDs, M2c replay PASS with negative control exit 1).
-- **Scientific status decisions taken at adoption (recorded here, in OPEN 20 and in the change record):** `DYAD-CAND-FLAT-CENTRALIZER` (Lemma F) `[CAND]` → `[THM]` with explicit domain (D1–D3) and flat-contact hypotheses; `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` (F1–F3) `[CAND]` → `[THM — conditional]` on Lemma F and on the existence of the smooth object; OPEN 20 B-∞ flat uniqueness `[OPEN]` → CLOSED at the proved $C^\infty$ scope, OPEN 20 status ACTIVE → PARTIAL; `DYAD-THM-FORMAL-Z6-GENERATOR` and `DYAD-ALG-NU5-P5` adopted at their draft grades. RIDs unchanged (DSN v1.3 §4.2). Not adopted: any existence statement; B-an/B-6; the construction route of §6.17.
-- **Reviewer record items (release edits):** §8 DYAD-ART-LEMMA-F-RECORD repinned to proof record v0.3 (v0.2 kept as reviewed predecessor); §1 and §6.15 review wording updated; live summary relabelled; OPEN 20 closure wording limited to existing smooth objects; notices N8/N9 set PENDING.
-- **Carried open:** OPEN 20 B-an, B-6, B-∞ existence; G2 physical realization; N3, N7 (OFN), N8, N9; Triadic part of N2; the two carried v6.4.10 hashes.
-- Draft history follows (r2 → r1).
-
-### v6.4.13 — DRAFT r2, 18 October 2026 (draft record; not adopted)
-
-- **Review of r1** (`eea9b68e4b238d5c521bc2f1730f9406092fd5ebeb396ee8a740356166a06352`): `SCIENTIFIC REVIEW ACCEPTED`. Lemma F with D1–D3 ACCEPT; F1–F3 ACCEPT conditional on Lemma F; formal $J$ ACCEPT; M2c exact certificate PASS (with the note that the $p=6$ calibration fixes the declared convention and does not prove equivalence of alternative normalization conventions); diff and RID preservation PASS; owner adoption not yet done.
-- **R1 (applied):** §6.17 and OPEN 20 (B-∞ existence) no longer state that $C^0$ convergence of $F^{-n}R_\infty F^n$ follows from Lemma-F-type estimates; the sequence is a proposed construction route only. Proof record bumped to v0.3 (same correction; `2e6c5c59…8ece`).
-- **R2 (applied):** review/adoption metadata current — header Status and Result-review line, §6.17 heading and status, OPEN 20 flat-uniqueness line. B-∞ flat uniqueness stays `[OPEN]` (closure proposed); Lemma F, F1–F3 stay `[CAND]`; `DYAD-THM-FORMAL-Z6-GENERATOR` and `DYAD-ALG-NU5-P5` are reviewed draft entries, not adopted results.
-- No mathematical change, no new RID, no numerical work.
-
-### v6.4.13 — DRAFT r1, 18 October 2026 (draft record; not adopted)
-
-- **Authorization:** PI work decision of 18 Oct 2026 — v6.4.13 drafting approved; Lemma F to independent review; scientific adoption a separate decision; B-∞ flat uniqueness not to be declared CLOSED before review.
-- **Owner-grade additions (resting on adopted theorems):** DYAD-THM-FORMAL-Z6-GENERATOR (§6.16; uniqueness from Theorem C alone); analytic realization hierarchy and new OPEN 20 sub-item B-6 (B-6 ⟺ B-an ∧ B-3; B-6 ⇒ B-an); DYAD-ALG-NU5-P5 (M2c; exact certificate with $p=6$ calibration).
-- **Candidate layer:** §6.17 DYAD-CAND-FLAT-CENTRALIZER (Lemma F) and DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES (F1–F3), `[CAND]` (review ACCEPTED in r1 review; adoption pending); OPEN 20 B-∞ split into existence (OPEN) and flat uniqueness (closure proposed, status OPEN).
-- **Synchronization:** N1 answered; N2 answered for Genesis (Triadic pending); N7 receipts (RRF received, Genesis acknowledged, OFN pending); new notices N8 (M2c), N9 (J/B-6; candidate guard); §1 custody text; consumer-edition pins; Result-review line.
-- **Unchanged:** all adopted RIDs and grades; §6.15 adopted statements (a pointer to §6.17 is added); G2 status; SG-14/15; the two carried v6.4.10 hashes still pending; N3 pending.
-
-### v6.4.12 — adopted 16 October 2026
-
-- **Adoption:** owner/PI decision of 16 Oct 2026 after external review of DRAFT r1 (`REVIEW ACCEPTED — OWNER ADOPTION PENDING`; Lemma K boundary correction, Theorem C, Corollary U and Corollary A accepted; OPEN 20 split accepted). r1 scientific text unchanged.
-- **Release edits:** metadata (title, status, supersedes, labels, footer, N7 status); two reviewer record notes — (i) the closed-OPEN line now names both the lifecycle RID `DYAD-OPEN-FORMAL-CENTRALIZER` and the closing theorem RID; (ii) DYAD-ART-OPEN19-R0CERT records which review round reran which script.
-- **Interface note (no DYAD claim):** `DYAD_RRF_OFN_G2_CONSOLIDATED_NOTE_v0_4.md` is noncanonical. Its polar-coordinate proof of Lemma K (ChatGPT) is an independent second derivation using only $\Re\mu\Im\mu\ne0$; it is a candidate for citation in a later revision, not imported here. Its §5b $h$-transported network construction is not a DYAD isolated-map theorem and is not owned here (RRF/OFN evaluation).
-- **Carried open:** OPEN 20 (B-an, B-∞); N1–N3 and N7 PENDING; the two carried v6.4.10 hashes; G2 physical realization; K3 dimension split (Genesis-owned).
-
-### v6.4.12 — DRAFT r1, 16 October 2026 (draft record; not adopted)
-
-- **Trigger:** RRF owner decision `ACCEPT SCOPED` on `RTG_RRF_OPEN19_G2_POSTADOPTION_SYNC_REVIEW_v0_2.md`, order item 1 ("DYAD takes the all-degree proof and the proposed Corollary A into the owner version"); external review of SESSION v1.1 (ACCEPT).
-- **OPEN 19 → CLOSED (formal):** new §6.16 with DYAD-ALG-CENT-KERNEL (Lemma K, all $k\ge2$), DYAD-THM-FORMAL-CENTRALIZER (Theorem C), DYAD-THM-FORMAL-INVOLUTION-UNIQUE (Corollary U, explicit $R_0=T^3F^{-1/2}$; no normalizer used); OPEN 19 block, closed list and §1 updated. The question as registered (normal-form return, $\lambda$-equivariance) is answered through the identification $\widehat S=R_0$.
-- **RRF boundary correction applied:** Lemma K Step 2 now records the isolated output equation $\mu\bar c_{0,b}=0$ at $(b+2,0)$; Step 3 uses only $\mu\ne0$; the inaccurate statement that $(p,0)$ outputs give no condition is withdrawn (`[COR r1]`).
-- **Corollary A:** DYAD-THM-ANALYTIC-CLOCK-BRIDGE in §6.15 — analytic $R$, $RT^6=T^6R$, $DR(0)=-I$ ⇒ $RT=TR$ exactly near $0$; $C^\infty$ gives only a flat commutator. The §6.15 `[OPEN]` paragraph on formal uniqueness is replaced by a pointer; DYAD-THM-LOCAL-INVOLUTION-GERM itself is unchanged.
-- **New OPEN 20:** DYAD-OPEN-INVOLUTION-REALIZATION — (B-an) convergence of $R_0$ ⇔ of $F^{1/2}$; (B-∞) $C^\infty$ realization and flat uniqueness.
-- **Registry:** protection-matrix rows (§5); notice N7 (§7); artifacts DYAD-ART-OPEN19-SESSION, -KERNEL, -R0CERT (§8); `cent.py` recorded as reviewer-reported cross-check only.
-- **Owner checks for this draft:** kernel check PASS ($k=2..13$); $R_0$ certificate 7/7 PASS at $N=6,8,12$; new $a=0$ boundary check PASS ($b=0..7$) with failing negative control.
-- **Unchanged:** all v6.4.11 RIDs and grades; G2 status (CONTRACT READY / PHYSICAL REALIZATION OPEN); SG-14/15; RRF OPEN-A; N1–N3 still PENDING; the two carried v6.4.10 hashes still pending.
-
-### v6.4.11 — adopted 16 October 2026
-
-- **Adoption:** owner/PI decision of 16 Oct 2026 after external final review of DRAFT r3 (scientific review PASS; no r4). Release edits are metadata only (title, date, status, supersedes, status-summary label, this entry, footer); r3 scientific text unchanged.
-- **Carried open, not closed by adoption:** outbound notices N1–N3 (PENDING); two owner-measured hashes carried from the v6.4.10 manifest (P2-B v2 evidence zip, `check_owner_adoption.py`); OPEN 19; G2 physical realization; RECOG/NUMGEN certificates not rerun by Dyadic.
-- Draft history follows (r3 → r1).
-
-### v6.4.11 — DRAFT r3, 16 October 2026 (draft record)
-
-- **R2-01 (release blocker, fixed):** §6.15 domain convention now requires $0\in\operatorname{int}(V_\Phi\cap R^{-1}(V_\Phi))$, so the fixed-point step and the differentiation at $0$ are justified without presupposing $R(0)=0$.
-- **R2-02 (fixed):** §6.15(b) Taylor expansion of $R$ written with $o(|W|^3)$ (correct for $C^3$); cubic comparison unchanged.
-- **D01 (carried from r1 review, fixed):** live "universal vanishing iff $b\le4$" statements (status summary, §2 item 4b, §2 evidence line, §6.11 boundary block, DYAD-ART-B5-SECULAR) restated as vanishing for $b\in\{2,3,4\}$ plus first failure at $b=5$; failure for all $b\ge6$ marked `[OPEN]`. Historical changelog lines quoting the old wording are left as history and are superseded by this entry. No result regraded; no computation.
-- **D02 (carried from r1 review, fixed):** §6.14 "not established by this section" list now states at the same point that RECOG R8–R11 have since been closed in the consumer, at RECOG's grades, outside Dyadic custody.
-- Unchanged: all §6.15 mathematics, OPEN 19, G2 status, SG-14/15, RRF OPEN-A.
-
-### v6.4.11 — DRAFT r2, 16 October 2026 (draft record)
-
-- **New §6.15:** DYAD-THM-LOCAL-INVOLUTION-GERM `[THM conditional]` — (a) primitive clock, $C^1$, lifted chart $|\eta|<\pi$; (b) six-step clock, $C^3$, six-phase tube, cubic chirality $\Im\mu\ne0$; (c) germ dichotomy and Bochner conjugacy. Part (b) is a Dyadic-owner strengthening of the G2-FIX argument (which had noted the loss of linear selectivity at $DT^6(0)=I$), accepted by external review (`ACCEPT SCOPED`). Domain stated in G2-DOM form.
-- **New OPEN 19:** DYAD-OPEN-FORMAL-CENTRALIZER — formal tangent-to-identity centralizer; conditional reduction of $j^\infty R=\widehat S$ recorded, not proved.
-- §5 high-risk row; §7 notice N6. Unchanged: G2 status (CONTRACT READY / PHYSICAL REALIZATION OPEN), SG-14/15, RRF OPEN-A. No numerical work.
-
-### v6.4.11 — DRAFT r1, 16 October 2026 (draft record)
-
-**Owner synchronization against the October 2026 corpus** (OFN v0.9, RRF v0.8, RECOG v0.3.20, NUMGEN v1.20.7, Genesis v2.8.5, Triadic v1.6, OPEN-M v0.7.1). Drafting authorized by the PI/reviewer decision of 16 Oct 2026 with these boundaries: preserve all v6.4.10 certificates and scientific RIDs; register the primitive-map definition provisionally; give the bridge exports a contract RID with per-item grades; import consumer results at owner grade/domain/version; register the degree-ten finite-chart result with provenance; correct OPEN-M deficit language, the Genesis residual reference and OPEN 12; do not broaden the physical meaning of cubic contraction, lattice memory or network symmetry; keep unresolved RID/provenance decisions visibly pending.
-- **New registrations:** DYAD-DEF-PRIMITIVE-MAP (provisional; N1); DYAD-DEF-BRIDGE-EXPORT-CONTRACT (`[DEF]` list/typing) and DYAD-ALG-PROTECTION-MATRIX (RID for an existing `[ALG]` block); DYAD-ALG-Q-INVARIANT-FORM, DYAD-ALG-TAU-DETB, DYAD-ALG-CUBIC-PARABOLIC (known identities registered in the definition ledger, relayed by NUMGEN; not new results); DYAD-ALG-NF6-DEG10 + DYAD-ART-NF6-DEG10.
-- **Imports / cross-references (owner grades, not rerun):** RECOG all-$p$ cubic radial contraction ($K_p$ family, $Z$-frame; OPEN 9 closed sub-item); general bridge-lemma proof (RECOG §6.12; Dyadic RID retained); RECOG chart laws and R9 lattice memory ($C_z$ track, stated windows); RECOG P₂ theorems (OPEN 12 → PARTIAL by consumer).
-- **Corrections of currency:** §6.12 $E_{\rm odd}$ text updated to Genesis v2.8.5 typing; §1/§6.12/SG-15/§5 OPEN-M language updated to v0.7.1 (no certified numerical deficit); §7 consumer rows converted from "proposed, pending" to recorded acceptance with versions; companion pointer OFN v0.8 → v0.9.
-- **Not done (deliberate):** no Dyadic RID for $\phi^*$ (N3); no re-registration of $S_h$ or the $\mathbb C^*$ rewrite (owned/registered in RECOG/RRF); no change to Programme Overview pointers; no new numerical campaign; install-manifest pending hashes from v6.4.10 still pending.
-- **Dyadic-side checks performed for this draft (16 Oct 2026):** ν₃ closed form and $\Re\mu_p^Z$ at $p=5,6,7,12,50$; $6\bar\lambda\nu_3(\zeta_6)=3\mu^W$; $245/216$, $89\sqrt3/324$, $c_{\rm iso}$ and $G$; $\det B$, $\tau$; NUMGEN box bound $0.0665$; $\mathcal L J_Q\mathcal L^{-1}=i$ for the Genesis $J_Q$.
-
-### v6.4.10 — September 2026 (adopted 24 Sep 2026)
-
-**Local return-enclosure adoption (new §6.14) and normalization-object reconciliation:**
-- New results: DYAD-ALG-NF6 (exact one-step normalizer $h$ through degree 6, six-step jet $J$, ledger identities $\mu=6\bar\lambda n_{21}$, $a_{05}=6\bar\lambda n_{05}$, $(3,2)$ iteration formula), DYAD-ALG-NF6-OBS (raw $c_{05}$ obstruction), DYAD-THM-PRIM-CTR $(108,\tfrac1{400},\tfrac1{625},\tfrac12)$ with six-phase tube and NUMGEN seed admission, DYAD-THM-NF-INV (injective on $|z|\le\tfrac1{10}$, inverse on $|W|\le\tfrac9{100}$), DYAD-THM-NF-REM (radius-indexed $C_7/C_D$: $\tfrac1{20}$: $100/1000$; $\tfrac1{40}$: $30/250$; full tube inside the normalized disk; normalized one-orbit contraction). `[THM]` entries carry the proof qualifier *analytic majorant + exact-rational certificate*; finite identities are `[ALG]`.
-- New scope guard SG-19 (normalization-object guard): archival coordinate change / log-channel projection / polynomial conjugacy are distinct; finite jets stated with $\mathcal J_{\le6}$; no cross-operation coefficient transfer.
-- Corrections at point of use `[COR]`: §1/§6.5 real-ray burst gains the nonzero half-power term $-\tfrac5{24}Q_0^{5/2}$; §6.7 raw complex-form remainder $O(|W|^5)\to O(|W|^4)$; §1 OPEN 13 "$h_3=0$" scoped to the archival return-log object (the conjugacy $h_3\ne0$); §6.9 operation labels added, $c_\theta$, $a_1$, $a_2$ explicitly not transferred pending R11.
-- Registry `[COR]`: `jet1_deg5.json` relabelled raw one-step jet; `normalize_p6_liegauge_exact.py` regraded `[ALG]`→`[ENG]` with role/arithmetic metadata and its numerical tests under `[NUM]` scope; `gauge_bridge_p6.py` retagged `[ENG]`, no exit gate; `normalize_pstep_lie.py` labelled as projection; `homological_solver_p6_numeric.py` provenance note. New artifacts DYAD-ART-RE-P0P1 / -P2B2 / -REVIEWS / -REFEREE / -SUPPL.
-- High-risk ledger: cross-operation coefficient transfer row. Appendix B: withdrawn $(64,\tfrac1{256},\tfrac1{1024})$ record (withdrawn, not falsified).
-- Companion/methodology declarations updated to Programme Overview v1.2, Ontological Foundations v0.8, Methodology v1.3 (SG-14, §7, local grammar rule, footer reconciled; pre-existing entries not regraded; scoped migration limits stated). §7 gains proposed consumer rows (RECOG, NUMGEN; acceptance pending) and its blanket no-import statement is narrowed to the self-contained local core.
-- Final (adoption): metadata set to adopted; "proposed" removed from the $E_{\rm odd}$ diagnostic definition only (physical/consumer bridge stays `[OPEN]`); §1 micro-edit ("a different symmetrized observable"); installation manifest referenced.
-- r3 (final text patch, r2 review): C04 propagated to all live uses (status summary, §1, §6.5 DEF, §6.8 note; duplicate high-risk row merged; DSI logarithmic transport retained as a historical fitting ansatz `[DEF]`, not `[ALG]`); C05 narrowed to a typed diagnostic export $E_{\rm odd}$ with cubic parts in $(s_*,w_*)$ variables and the physical/consumer bridge `[OPEN]` (SG-13/§7 notes); notation: resonant *monomial coefficients*, $F_W$ conjugated by $H_2=\mathrm{id}+h_2$, channel projector $\mathscr P_{\rm keep}$ vs polynomial $P$.
-- Draft-review corrections applied (D6410-C01–C08): §6.9 conjugacy residual vs coefficient gap; §6.2 $W$-component quintic resonance list; §6.7 real-vector remainder $O(\|X\|^4)$ and ray quartic; §1/§6.5 $47/54$ scoped as the raw fixed-radius angular mean $\mathcal A_{\rm raw}$ with the pointwise/long-orbit identification `[OPEN]`; §6.12 birth-residual typing ($E_{\rm raw}/E_{\rm odd}/E_{\rm NF}$); §6.14 definitions ($\lambda$, $H$, $S_j$, $P$, $D_{\rm poly}$, $Q_m$ vs $q_m$, $h$-table path); §8 artifact roles split from numerical evidence and archive contents named exactly.
-- Unchanged: all pre-existing scientific-result RIDs and grades, $c_{21}$, the number $47/54$ (now scoped as the raw angular-mean coefficient $=[W^3\bar W^3]\Delta Q_6$), OPEN 9 program, all-$b\ge5$ persistence `[OPEN]`. Not closed: RECOG R8/R9/R10/R11, quantitative GAP-LOCK, historical $\Phi_1$ byte identity, optimality.
-
-### v6.4.9 — June 2026
-
-**Cubic cascade $q=4,(0,3)$ all-$p$ closure (new theorem):**
-- Closed the OPEN 9 cubic cascade formula for $q=4,(0,3)$ all-$p$ on the family $p=4s$, $s\ge2$: $Q_p=i\zeta_p^3 M_p$ with $M_p\in\mathbb{Q}(\zeta_p)^+$, closed form $Q(L,I)=L^5(IL^2+I-L^2+1)/(2(L+1)^4(L^2+L+1))$ (DYAD-THM-Q403-PHASELAW, §6.11). $p=8$ is the zero degeneracy ($Q_8=0$).
-- Proof: degree-3 near-identity recursion $(\mathcal H_s)_3=\sum_j H_{j,3}+\sum_{j<k}DH_{k,2}\cdot H_{j,2}$; degree counting bounds insertion depth to $\le2$, giving exactly three contributing paths (one cubic cancelling by $S_{-4}=0$ = LEAD; two ordered quadratic–quadratic). Remainder relation $\sigma_{-1}(Q)=-L^{-6}Q$ proved as an exact symbolic identity over $\mathbb{Q}(I)(L)$; supporting links $\lambda^{-s}=-i$, reality, leading cancellation all all-$p$ `[THM]`.
-- Verification: closed form matches the certified in-field extractor at $p=8,12,\dots,52$ (independent method); three-path derivation, $h$-coefficient cross-check, and the $\sigma_{-1}$ identity all symbolic. Artifacts DYAD-ART-Q403-CERT (`q4_03_R_identity_certificate.py` → CERTIFICATE PASS) and DYAD-ART-Q403-EXTRACT registered.
-- Scope discipline: family statement for $p=4s$ via the forced collapse $I=\zeta_p^{p/4}=i$; NOT a generic-$s$ formula (the generic-$s$ cascade differs). The earlier `[FAIL]` "universal cancellation" line is retained with a scope note (channel survives $p\ge12$); the surviving value is now characterized by the theorem.
-- Updated: status summary, §2 frontier (lines for OPEN 9 cubic cascade → CLOSED), high-risk ledger, artifact registry. Single core-end marker preserved. all-$b\ge5$ persistence, universal missing-slot rules, and general-coefficient version remain `[OPEN]`.
-
-### v6.4.8.1 — June 2026
-
-**Stale-line hygiene patch (no scientific change):**
-- §2 evidence/candidate line still listed the all-$p$ ($p\ge6$) monotone failure among `[OPEN]` items and tagged the $p=6..15$ scan `[NUM strong]`, both superseded by the v6.4.8 closure. Corrected to state the all-$p$ theorem is `[ALG]` (closed via cyclotomic non-division). The §status-summary and §6.11 block were already correct.
-- Residual "broader $p=6..15$ scan `[NUM strong]`" wording now appears only in historical changelog entries (v6.4.2/v6.4.3), which is correct.
-- all-$b\ge5$ persistence and general-coefficient version remain `[OPEN]`. Single core-end marker preserved.
-
-### v6.4.8 — June 2026
-
-**DYAD-OPEN-B5-ALLP CLOSED — all-$p$ theorem proved `[ALG]`:**
-- The open all-$p$ statement $F_{\rm raw}^p(0,5)\ne0\ \forall p\ge6$ is now a theorem. Closing step: the effective ratio $S_{\rm eff}/S$ is the explicit rational $N/D$ with $N=2\lambda^6+\lambda^5-5\lambda^4-3\lambda^3-4\lambda^2+2\lambda+1$ (re-derived from the $\beta$-graded engine, confirmed identical to the reviewer's closed form). Since $\deg N=6$, a primitive $p$-th root is a zero of $N$ only if $\Phi_p\mid N$, possible only for $\varphi(p)\le6$ (finite set $\{1..10,12,14,18\}$); exact division shows $\Phi_p\nmid N$ for all of them. Hence $N(\lambda_p)\ne0$ for all $p$, so $S_{\rm eff}\ne0$ for all $p\ge13$. With the exact sweep $p=6..12$, $F_{\rm raw}^p(0,5)\ne0$ for ALL $p\ge6$. This is a complete proof (degree bound $\Rightarrow$ finitely many candidate $p$), not a scan.
-- §6.11 boundary block rewritten: "universal pure anti-holomorphic raw vanishing holds iff $b\le4$, and fails at $b=5$ for every $p\ge6$" `[ALG]` (dyadic map). Previously `[NUM strong / ALG candidate]` for the all-$p$ extension.
-- The $\mathrm{Re}(S_{\rm eff}/S)>0$ numeric scan (DYAD-ART-B5-SEFF, `[NUM strong]`) is now superseded by the exact cyclotomic argument; retained as cross-check.
-- §8: artifact DYAD-ART-B5-ALLP-CERT registered (the fast certificate proving the all-$p$ closure).
-- Remaining `[OPEN]` (separate problems): all-$b\ge5$ persistence; general-coefficient (non-dyadic) version.
-- No change to any prior `[ALG]` result.
-
-### v6.4.7 — June 2026
-
-**Artifact-trail correction (no scientific change):**
-- The v6.4.6 `[ALG]` claim $\lim_{\lambda\to1}S_{\rm eff}/S=3$ was reported from local work but the registered artifact `rtg_b5_step3_Seff.py` only performed the numerical $\mathrm{Re}(S_{\rm eff}/S)>0$ scan, not the symbolic limit. Added a dedicated executable certificate `rtg_b5_Seff_limit_cert.py` that builds the $(0,5)$ source, extracts $S$ and $c_{(-2,1)}$, substitutes the exact dyadic $c_{ab}(\lambda)$, forms $S_{\rm eff}/S$, and computes $\lim_{\lambda\to1}=3$ symbolically (passes, exit 0). The `[ALG]` tag on the limit is now backed by an executable certificate.
-- DYAD-ART-B5-SEFF re-tagged `[NUM strong]` (numeric scan only); new artifact DYAD-ART-B5-LIMIT-CERT `[ALG]` carries the exact limit.
-- No change to any result; this is artifact-discipline hygiene.
-
-### v6.4.6 — June 2026
-
-**Step 3 reduction of the all-$p$ boundary theorem (DYAD-OPEN-B5-ALLP):**
-- New `[ALG]` results. For $p\ge13$: every $m=0$ nonsecular source mode of $(0,5)$ vanishes exactly (geometric sum $\sum_k\lambda^{(\beta-1)k}=0$ since $p\nmid(\beta-1)$ for $\beta-1\in\{-6,\dots,-1,1\}$), and the sole polynomial mode $(-2,1)$ has exact sum $\sum_{k=0}^{p-1}k\lambda^{-3k}=-p/(1-\lambda^{-3})$. Hence the exact identity $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{\rm eff}$ with $S_{\rm eff}=S-c_{(-2,1)}/(1-\lambda^{-3})$.
-- New `[ALG]`: $\lim_{\lambda\to1}S_{\rm eff}/S=3$ (exact symbolic), the asymptotic anchor. Validated: $p|S_{\rm eff}|$ matches direct iteration for $p=13..23$.
-- The open all-$p$ theorem is thereby reduced to a single scalar nonvanishing: $S_{\rm eff}\ne0$ for all $p\ge13$ (equivalently $\mathrm{Re}(S_{\rm eff}/S)>0$), `[NUM strong]` to $p=200$ (monotone $\to3$). With $p=6..12$ closed by exact sweep, only an explicit error bound for finite $p\ge13$ remains for full `[ALG]`.
-- §8: artifacts DYAD-ART-B5-STEP3 (reduction) and DYAD-ART-B5-SEFF (S_eff analysis) registered.
-- No change to established `[ALG]` results.
-
-### v6.4.5 — June 2026
-
-**Hygiene patch (no scientific change):**
-- Adopted the fixed Step-2 evaluator `rtg_b5_secular_decomposition.py` (the prior upload left unevaluated symbolic summations after substituting $p$, raising a float-conversion error; the fix evaluates the nonsecular Duhamel contribution at fixed $p$ as the finite sum $\lambda^{p-1}\sum_{k=0}^{p-1}k^m\lambda^{(\beta-1)k}$). Reconstructs swept values $p=6..12$ (match) and the ratio-to-3 trend $p=7..15$.
-- Artifact DYAD-ART-B5-DECOMP tag split: `[ALG structure]` (decomposition) / `[ALG validation]` ($p=6..12$ reconstruction) / `[NUM strong]` (ratio-to-3 trend), rather than a single `[ALG structure]` umbrella.
-- Softened the non-cancellation wording: the ratio staying far from the cancellation point is `[NUM strong]`, not a proof; proving $R_p/(p\lambda^{p-1}S)\ne-1$ for all $p$ is Step 3 and remains `[OPEN]`.
-- Step 3 scope sharpened: $p=6..12$ closed by exact sweep, so only $p\ge13$ needs the ratio bound.
-- No change to any `[ALG]` result.
-
-### v6.4.4 — June 2026
-
-**Secular decomposition of the first failing channel (DYAD-OPEN-B5-ALLP Step 2):**
-- §6.11 / new result note: exact decomposition $F_{\rm raw}^p(0,5)=p\lambda^{p-1}S_{05}^{(\beta=1)}+R_p$ `[ALG structure]`, where $S_{05}^{(\beta=1)}$ is the five-term secular source coefficient ($\propto c_{02}^2$, nonzero) and $R_p$ is the nonsecular + polynomial-mode residual. The $(0,5)$ source has nine modes with a single secular mode $(1,0)$ and a single polynomial mode $(-2,1)$.
-- Validated: the decomposition reconstructs all swept exact values $p=6..12$ to full precision.
-- Structural discovery: the complex ratio $F_{\rm raw}^p(0,5)/(p\lambda^{p-1}S)\to3$ as $p\to\infty$ (real part $\to3$, imaginary $\to0$); equivalently $R_p\sim2p\lambda^{p-1}S$. This reduces the open all-$p$ theorem to a single ratio-bound (Step 3): prove $R_p/(p\lambda^{p-1}S)\ne-1$ for all $p\ge6$.
-- §8: artifact DYAD-ART-B5-DECOMP registered.
-- No change to established `[ALG]` results (b∈{2,3,4} vanishing, source coeff, $p=7$ witness, $p=6..12$ sweep).
-
-### v6.4.3 — June 2026
-
-**Exact finite sweep of the first failing channel (DYAD-OPEN-B5-ALLP Step 1):**
-- §6.11 channel boundary: $F_{\rm raw}^p(0,5)\ne0$ promoted from `[NUM strong]` to `[ALG finite sweep]` for ALL of $p=6,7,8,9,10,11,12$ — exact cyclotomic certificates in $\mathbb{Q}(\zeta_p)$, each a canonical reduced nonzero element (e.g. $p=6$: $\tfrac{43}{360}\lambda+\tfrac{7}{36}$; $p=8$: $-8\lambda^3+\tfrac{27}{2}\lambda^2-\tfrac{23}{2}\lambda+\tfrac52$; $p=10$: $-\tfrac54\lambda^3+\tfrac94\lambda^2-\tfrac94\lambda+\tfrac12$). Magnitudes match the prior direct-iteration scan exactly.
-- $p=13,14,15$ remain `[NUM strong]` (not yet exactly swept). The all-$p$ ($p\ge6$) theorem remains `[OPEN]` (Steps 2–3: general secular decomposition + non-cancellation proof).
-- §8: artifact DYAD-ART-FRAW-B5-SWEEP registered.
-- No change to the $b\in\{2,3,4\}$ `[ALG]` results, the source-level `[ALG]` coefficient, or the $p=7$ exact witness.
-
-### v6.4.2 — June 2026
-
-**Exact final-coefficient witness closes the micro-gap at p=7:**
-- §6.11 channel boundary: the residual `[NUM strong]` final-coefficient gap is closed for the witness prime $p=7$. Exact cyclotomic 7-fold iteration (degree-5 truncation, field reduction mod $\Phi_7$) gives $F_{\rm raw}^7(0,5)=\tfrac{15}{2}\lambda^5+\tfrac{23}{8}\lambda^4+\tfrac{21}{8}\lambda^3+\tfrac{15}{2}\lambda^2-\tfrac18\lambda+\tfrac{17}{2}\ne0$ in $\mathbb{Q}(\zeta_7)$ `[ALG]` (canonical reduced degree-5 form; numeric $0.1289-0.2062i$, $|{\cdot}|=0.2432$, matching the 60-dps iteration to 12 digits).
-- Dyadic boundary statement promoted to `[ALG]`: **universal pure anti-holomorphic raw vanishing holds through $b=4$ and fails at $b=5$**, with the $b=5$ failure certified by the exact $p=7$ witness. (Was `[ALG]` source-level / `[NUM strong]` final-coefficient in v6.4.1.)
-- Scope guard retained: the exact witness is for $p=7$; it does NOT assert $F_{\rm raw}^p(0,5)\ne0$ for every $p\ge6$. The all-$p$ monotone failure remains `[OPEN]` (broader $p=6..15$ scan is `[NUM strong]`).
-- Script fix: `exact_Fraw7_certificate.py` corrected — the cyclotomic inverse used `gcdex` with the wrong return-value order; replaced with `sp.invert(den_p, Phi)`. (External reviewer caught the bug and supplied the corrected engine; reproduced and verified here: exact polynomial confirmed in canonical reduced form, numeric value matches independent direct iteration.)
-- §8: artifact DYAD-ART-FRAW7-B5 registered.
-- No change to $b\in\{2,3,4\}$ `[ALG]` vanishing results or the source-level `[ALG]` coefficient.
-
-### v6.4.1 — June 2026
-
-**Wording correction (separate source-level `[ALG]` from final-coefficient `[NUM strong]`):**
-- §6.11 channel boundary: v6.4 stated "$b=5$ breaks universal vanishing `[ALG]`", conflating two distinct objects. Corrected: the $(0,5)$ SOURCE secular coefficient ($\beta=1$ slot) is exactly nonzero `[ALG]` (five-term $\propto c_{02}^2$, not identically zero; dyadic $p=7$ reduces to $\tfrac{11}{56}\lambda^5-\tfrac{13}{56}\lambda^4+\tfrac14\lambda^3-\tfrac{11}{56}\lambda^2+\tfrac{3}{14}\lambda-\tfrac{3}{28}\ne0$ in $\mathbb{Q}(\zeta_7)$, exact). The FINAL raw coefficient $F_{\rm raw}^p(0,5)$ nonvanishing is `[NUM strong]` (60 dps; $|F_{\rm raw}^7(0,5)|=0.243$; secular growth $0.27\to1.28$), pending an exact $\mathbb{Q}(\zeta_p)$ certificate of the final coefficient.
-- Net boundary statement unchanged in substance ("vanishing through $b=4$; first secular obstruction at $b=5$") but now correctly tagged `[ALG]` source-level / `[NUM strong]` final-coefficient.
-- §2: residual micro-gap (exact $F_{\rm raw}^p(0,5)$ certificate) added as a distinct `[OPEN]` item.
-- Credit: exact $p=7$ source-coefficient reduction supplied by external reviewer; reproduced.
-- No change to $b\in\{2,3,4\}$ `[ALG]` vanishing results.
-
-### v6.4 — June 2026
-
-**Channel boundary "$b\le4$ iff" promoted to `[ALG]` for the dyadic map:**
-- §6.11 channel-classification block rewritten: the $b=5$ failure is now `[ALG]`, not numerical. The $(0,5)$ source secular coefficient (slot $(1,0)$, $\beta=1$) was extracted by one $F$-application on the degree-$\le4$ jet (no secular recursion solved) and is the five-term expression $\propto c_{02}^2$: $\{c_{02}^3\bar c_{02},\ c_{02}^2c_{11}c_{20}(\times2),\ c_{02}^2c_{11}\bar c_{11},\ c_{02}^2c_{21}\}$. It is NOT identically zero (symbolic) and NONZERO at the actual dyadic coefficients ($|{\cdot}|\approx1.2$–$1.3\times10^{-2}$, $p=6,7,8$).
-- Consistency: nonzero $\beta=1$ source $\Rightarrow$ resonant accumulation $A^p\sim C p\lambda^{p-1}$; direct iteration confirms $|F_{\rm raw}^p(0,5)|$ grows $0.27\to1.28$ for $p=6..15$.
-- Result: for the dyadic map, **universal pure anti-holomorphic raw vanishing holds iff $b\le4$** `[ALG]`. (Was `[NUM strong / ALG candidate]` in v6.3.)
-- §2 priority item 4b marked `[COMPLETED v6.4]` for the dyadic boundary; active frontier refocused on the all-$b\ge5$ monotone-failure extension and the general-coefficient (non-dyadic) version, both `[OPEN]` (the secular coefficient is nonzero on a Zariski-open set containing the dyadic values; scan confirms $b=6$ also secular).
-- §8: certificate rtg_extract_b5_secular_coeff.py registered.
-- No change to the $b\in\{2,3,4\}$ `[ALG]` results.
-
-### v6.3 — June 2026
-
-**Channel boundary at b=4 sharpened (b=5 secular entry confirmed):**
-- §6.11 channel-classification block: recorded that the secular mode $\beta=1$ ENTERS the $(0,5)$ source $\beta$-set $\{-5,-4,-3,-2,-1,0,1,2\}$ (plus a polynomial mode $(-2,1)$), breaking universal vanishing at $b=5$. Direct iteration of the actual dyadic map confirms $F_{\rm raw}^p(0,5)\ne0$ for all tested $p=6..13$ (vs $b=4$ machine-zero for $p\ge6$).
-- Boundary statement "universal vanishing iff $b\le4$" upgraded from conjecture to `[NUM strong / ALG candidate]` (was `[NUM strong / CAND]`): the $b=5$ failure is now directly evidenced, not merely "tested generically nonzero." Full `[ALG]` boundary awaits a symbolic nonzero-coefficient certificate for the $b=5$ secular source.
-- §2: active sub-item refocused on symbolically certifying the $b=5$ secular coefficient; evidence-line updated.
-- Adopted patched engine rtg_betagraded_vanishing.py v1.1 (records each source $\beta$-set at generation time, avoiding the reporting hang at MAXDEG$\ge5$ once secular modes appear). README updated to v1.1.
-- No change to the $b\in\{2,3,4\}$ `[ALG]` results (v6.2); they remain certified.
-
-### v6.2 — June 2026
-
-**Degree-b vanishing promoted `[NUM strong / ALG candidate]` → `[ALG]` for b=3,4:**
-- §6.11: $F_{\rm raw}^p(0,3)=0$ for $p\ge5$ and $F_{\rm raw}^p(0,4)=0$ for $p\ge6$ promoted to `[ALG]` (RIDs DYAD-CAND-VANISH-B3/B4 → DYAD-ALG-VANISH-B3/B4). Proof: automatic $\beta$-mode path enumeration via $\beta$-graded jet composition (enumerates ALL cascade paths, resolving the gap the $p=3,b=3$ counter-instance exposed). Source $\beta$-sets: $(0,3)=\{-3,-2,0\}$, $(0,4)=\{-4,-3,-2,-1,0,2\}$; neither contains the secular mode $\beta=1$, and breaker primes are bounded by $b+1$, so vanishing holds for $p\ge b+2$.
-- Doubly certified: exact symbolic evaluation at primitive $p$-th roots + direct 50–60 dps iteration. Certificate degree_b_vanishing_cert_v2.py passes (two independent representations).
-- §3 SG-16 RELAXED (not deleted): $b\le4$ now certified `[ALG]`; $b\ge5$ still requires a source $\beta$-set certificate before any promotion.
-- §2 priority item 4 marked `[COMPLETED v6.2]`; two proof-task sub-items closed; active frontier refocused on the $b\ge5$ channel-boundary classification.
-- §6.11 channel-classification boundary: $b\in\{2,3,4\}$ all `[ALG]`; the "$b\le4$ iff" boundary remains `[NUM strong / CAND]` pending the $b\ge5$ $\beta$-set scan.
-- §8: certificate and engine artifacts registered.
-
-### v6.1 — June 2026
-
-**Low-degree anti-holomorphic vanishing (`[ALG candidate]` → split tags, ranges corrected):**
-- §6.11: $F_{\rm raw}^p(0,2)=0$ for $p\ge4$ promoted to `[ALG]` (degree 2 admits no cross-path: any cross-term has degree $\ge4$). [RID: DYAD-ALG-VANISH-B2]
-- §6.11: $F_{\rm raw}^p(0,3)=0$ for $p\ge5$ and $F_{\rm raw}^p(0,4)=0$ for $p\ge6$ are `[NUM strong / ALG candidate]` — direct-term mechanism exact, cross-path enumeration open. [RID: DYAD-CAND-VANISH-B3, DYAD-CAND-VANISH-B4]
-- Direct-accumulation weight corrected to $\lambda^{-(b+1)k}$ (resonant exception $p=b+1$); ranges corrected to $p\ge b+2$. The first-draft weight $\lambda^{-bk}$ and "also $p=3$" claims were errors, removed.
-- §6.11: exact lemmas registered separately: direct-weight vanishing `[ALG, exact]` (DYAD-ALG-DIRECT-WEIGHT); cross-term cyclotomic identity `[ALG, exact]` (DYAD-ALG-CROSS-IDENTITY).
-- §6.11: channel boundary $b=4$ `[NUM strong / CAND]`.
-- §3 SG-16 `[NEW]`: path-enumeration guard.
-
-**OPEN-P0-DYADIC partial absorption (structural leg only):**
-- §6.2 `[NEW ALG, exact]` (DYAD-ALG-P6-FACEFLUX): $\lambda=e^{i\pi/3}=e^{iF_f/2}$.
-- §6.6 `[NEW]`: p=6 SU(2) period selection, scoped to OPEN-P0 representation-phase convention.
-- §6.11/§6.12 `[NEW]`: R11 gate conversion `[ALG, exact]`, physical threshold `[HYP inherited]`; h-transfer `[CAND/conditional]` (DYAD-CAND-P0-DYADIC).
-- §3 SG-15 `[NEW]`: OPEN-P0-DYADIC scope guard.
-- §5 High-Risk: six rows added. §7 exports updated. §8: two artifacts registered.
-
-**Two review rounds applied before freeze:**
-- R1: phase factor $\lambda^{-bk}\to\lambda^{-(b+1)k}$; ranges $p\ge b+2$; false "also $p=3$" removed; h-transfer downgraded to `[CAND/conditional]`.
-- R2: vanishing tag downgraded `[ALG]`→`[NUM strong / ALG candidate]` for $b=3,4$ (path enumeration not closed, per $p=3,b=3$ counter-instance); R11 gate threshold scoped `[HYP inherited]`; artifact tag corrected to `[NUM strong]` for finite scan.
-- R3: $b=2$ split out as genuine `[ALG]` (degree-2 admits no cross-path — complete proof).
-
-**v6.1 freeze note:** Final review applied. §6.11 p=6 one-step lattice coefficient $c_{05}^{(1,6)}$ corrected to $\frac{43}{17280}-i\frac{227\sqrt3}{155520}$ (one-step engine/DSN bridge convention), avoiding conflation with the §6.9 raw six-step Lie-gauge coefficient $-61/2160-i\,43\sqrt3/6480$. The two values belong to distinct ontology layers (raw six-step Lie-gauge ≠ one-step p=6 lattice).
-
-### v6.0 — June 2026
-
-Full refactor to DSN_METHODOLOGY_v1.2 architecture. All active scientific ledger content preserved; structure changed throughout.
-
-Errata applied before canonical freeze:
-- **§1 [COR]:** split fixed-point `[ALG]` claim from `[DEF]` dyad-map claim-block; compressed OPEN 9 §1 entry; removed `[ALG candidate]` low-degree vanishing from §1 (detail belongs in §6.11).
-- **§3 [COR]:** corrected SG-3 cross-reference from §6.10 to §6.11.
-- **§5 [COR]:** softened $G_{04}(10)=0$ high-risk row to distinguish exact `[ALG]` reinterpretation from still-open `[ALG candidate]` universal pattern.
-- **§2 [COR]:** normalized OPEN 9 retracted sub-item tags to `[RETRACTED]` `[scope: reframed]` and `[FAIL]` `[scope: obsolete heuristic]`.
-- **§6.1/§6.2/§6.10 [COR]:** marked mixed-status section headings explicitly with `/ mixed`.
-- **§8 [COR]:** replaced noncanonical `[NUM diagnostic]` with `[NUM]` `[scope: diagnostic]`.
-
-Final errata applied before freeze:
-- **Local Tag Aliases [COR]:** Removed unused `[REJ]` and `[FAIL to confirm]` migration rows; DEF note updated to reflect normalization is complete.
-- **§2 OPEN 9 [COR]:** `[ALG candidate]` degree-4 raw-vanishing pattern moved from closed sub-items to new "Evidence / candidate patterns" block; corresponding `[OPEN]` for universal proof added to active sub-items.
-- **§2 OPEN 4b [COR]:** Compound tag `[OBS / ALG structure]` split to `[OBS]` `[ALG structure]`.
-- **§3 SG-4 [COR]:** "exact six-step discrete map" → "exact six-step finite iterate of the primitive map" (avoids confusion with TDR-G discrete programme).
-- **§4 layer routing table [COR]:** "Exact discrete map" → "Exact primitive map".
-- **§6.1 heading [COR]:** `[DEF / ALG / mixed]` → `[ALG / mixed]` (internal `[DEF]` on map entry is sufficient).
-- **§6.6 [NEW]:** $p=6$ uniqueness `[THM]` and three-tier resonance hierarchy `[THM]` added.
-- **§6.12 [COR]:** Bridge export boundary tagged `[DEF]` `[scope: bridge export boundary]`.
-- **§7 [NEW]:** Export protocol block added (three `[DEF]` entries: generator-T scope, convention tagging, export scope limits).
-- **Appendix A marker string [COR]:** Literal HTML marker string → plain text.
-- **Appendix B [COR]:** Sub-horizon conjecture `[FAIL]` `[scope: retracted / reframed]` → `[RETRACTED]` `[scope: reframed]`.
-
-- **Header:** Updated title to `RTG_DYADIC_OSCILLATOR_DSN`; added programme tier, companion documents, DSN methodology reference.
-- **Changelogs v5.4.5–v5.4.16 [MOVED]:** Entire blockquote changelog preamble (~120 lines) moved to Appendix A subsections below.
-- **Status tag table [REMOVED]:** Replaced by pointer to `DSN_METHODOLOGY_v1.2` + Local Tag Aliases.
-- **§17 Ground Truth Compression [PROMOTED]:** Becomes §1 Current Canonical State with explicit DSN tags on each claim-block.
-- **§14 OPEN Registry [RESTRUCTURED]:** Prose OPEN entries → structured ledger format with RIDs, Closed/Active/Retracted sub-items. OPEN 9 paragraph → structured sub-item ledger.
-- **§15 Simulation Invariants [MOVED]:** → §6.13 with anchor.
-- **§16 Priority Defaults [MOVED]:** → §2 priority ordering subsection.
-- **§15.2 / §15.3 Artifact tables [CONVERTED]:** → §8 structured list format with RIDs.
-- **Scope Guards [RENUMBERED]:** SG-1 through SG-14; `[!]` blockquote format → `**[SG-N]**` format. Added SG-14 (programme-level cross-branch firewall).
-- **Collaboration Identity [MOVED]:** → §9.
-- **All §6 subsections:** Added `{#sec-N-M-slug}` persistent anchors.
-- **AI Context Core marker:** Inserted at end of §4.
-
-### v5.4.16 — June 2026
-
-- §10.7: cardinality lemma $|K^{\rm extra}_{p,q}|=s-1$ `[ALG]`.
-- §10.7b: eigenframe linear-part lemma anchoring degree-2 no-cascade bypass `[ALG]`.
-- §10.7/§10.13/§14: unified $G_{04}(10)=0$ retraction wording.
-- §10.13: replaced `[REPLACED AS CANONICAL]` with `[REJ / obsolete heuristic]`; near-cancellation modulus $|{-13+15\sqrt3/2}|\approx0.010$ archived.
-- §15.3: expanded `rtg_invariant_algebraic_engine_surgical.py` role.
-- §17: updated ground-truth compression.
-
-### v5.4.15 — June 2026 (carried forward patch)
-
-- §10.7: replaced rectangular-support heuristic with subgroup-charge projector formalism.
-- §10.7b: exact subgroup-strobe micro-certifications and degree-2 $q=3,(0,2)$ cancellation theorem.
-- §10.13: universal $q=4,(0,3)$ cancellation `[FAIL]`; $p=12,q=4,(0,3)$ cascade boundary exact.
-
-### v5.4.14 — May 2026
-
-- $F_{\rm raw}^p(0,4)=0$ universally for tested $p\ne5$ `[ALG candidate]`.
-- Sub-horizon channel conjecture `[RETRACTED / REFRAMED]`.
-
-### v5.4.13 — May 2026
-
-- $G_{04}(15)\approx0$ `[NUM strong / ALG candidate]`.
-- $G_{06}(21)\ne0$ `[NUM strong]`.
-
-### v5.4.12 — May 2026
-
-- §10.12.3: interpretation refined; sub-horizon-resonant channel phrasing.
-
-### v5.4.11 — May 2026
-
-- $G_{06}(7)\ne0$: prime-horizon transparency `[FAIL]`.
-- $G_{04}(10)=0$ `[ALG]` confirmed.
-
-### v5.4.10 — May 2026
-
-- $p=5$ primary lattice bridge cancellation promoted to `[ALG]` via exact cyclotomic arithmetic over $\mathbb{Q}(\zeta_5)$.
-
-### v5.4.9 — May 2026
-
-- $W=u+iv$ labeled as $p=6$ primitive frame, not generic.
-- One-step to $p$-step bridge lemma $\mu_p=p\bar\lambda\nu_3^{(1,p)}$ `[ALG]`.
-
-### v5.4.5 — May 2026
-
-- OPEN 11 sharpened closure: T1/F1 residual-free `[ALG via IA]` via IFT transversality certificate.
+One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, replaced lines and every `[COR]` entry — are in Appendix A of v6.4.20 (tag `dyad-v6.4.20`, SHA-256 `0b2d5a44…4852`). Scientific corrections, retractions and regrades are also recorded in Appendix B.
+
+### v6.4.21 — 22 October 2026 — Adopted
+
+- **Errata [status/scope/provenance] (closeout S-1–S-6; targeted review R21-01):** current status at the point of use for OPEN 3 (CLOSED within scope), P4, OPEN 21, RECOG R11 and the P2B v2 coefficient verification (§1, §2, §5, §6.14, §8); closed OPEN 9 items moved out of the active list; N11 recorded as adopted use by RECOG (§7 notices); subclaim dependencies of DYAD-ALG-OPEN3-PHASE-OFFSET (§7); notation overloads (Appendix C); DYAD-THM-RAW-CUBIC provenance caveat and its range $p\ge3$ (§2, Appendix F); unrecovered OPEN 9 definitions named at the point of use (§6.11). Scope tag of the primitive-variable form in §6.14 now points to OPEN 21. Field label of the archival $h_4$ corrected from $\mathbb Q(\sqrt3)$ to $\mathbb Q(i\sqrt3)$, confirmed by exact recomputation (§1, §8). RECOG R11 stated as CLOSED where the fitted-backbone identification stays open (§1, §6.5). No grade changes; no new RID.
+- **FC-DYAD-34 [bookkeeping]:** squared shear/healing ratio equals Genesis's leading ratio $16/3$ (§6.12); selects no birth policy.
+- **Compaction [layout] (Methodology v1.4 pilot):** current-only header with the §1 profile exception; one footer; this compact Appendix A; tag normalization map and the v6.4.19→v6.4.20 section map left in v6.4.20; history pointers in live text removed or repointed to the tagged edition.
+- **Records:** release record `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`; corrected intermediate SHA-256 `f2b20419…9119`; predecessor tag `dyad-v6.4.20`.
+
+### v6.4.20 — 21 October 2026 — Adopted
+
+- **Content:** ATLAS P1 scientific corrections and P2 interface work. 13 RIDs registered at adoption: `DYAD-ALG-KP-FRAME-SCALE`, `DYAD-THM-SMOOTH-EQUIVARIANT-CHART`, `DYAD-ALG-B5-ALLP-NONVANISHING`, `DYAD-ALG-RAW-ANGULAR-MEAN`, `DYAD-ALG-ONE-BLOCK-BURST`, `DYAD-ALG-P5-RADIAL`, `DYAD-ALG-SIXSTEP-CUBIC-JET`, `DYAD-ALG-Q3-DEG2-CANCEL`, `DYAD-DEF-CRITICAL-CURVE`, `DYAD-ALG-QC-CRITICAL-AMPLITUDE`, `DYAD-ALG-ISP-MAPS`, `DYAD-ART-ATLAS-P1`, `DYAD-ART-ATLAS-P2`. No earlier RID renamed or regraded.
+- **Grade corrections to unnumbered statements (P1):** §6.5 historical backbone ansatz `[ALG]`→`[DEF]`; §6.6 $p=6$ linear order `[THM]`→`[ALG]`; §6.6 classification by $p$ `[THM]`→`[DEF]`. The v6.4.20 footer described the r2→final step as metadata only; that was true of r2→final, while these P1 retaggings were made earlier in the cycle.
+- **Records:** `records/dyad/RTG_DYADIC_v6_4_20_RELEASE_RECORD.md`; adoption, draft-round records and the 55 replaced lines: Appendix A of v6.4.20 (tag `dyad-v6.4.20`).
+
+### Earlier editions
+
+- v6.4.19 — adopted 20 October 2026
+- v6.4.18 — adopted 20 October 2026
+- v6.4.17 — adopted 19 October 2026
+- v6.4.16 — adopted 19 October 2026
+- v6.4.15 — adopted 19 October 2026
+- v6.4.14 — adopted 19 October 2026
+- v6.4.13 — adopted 18 October 2026
+- v6.4.12 — adopted 16 October 2026
+- v6.4.11 — adopted 16 October 2026
+- v6.4.10 — September 2026 (adopted 24 Sep 2026)
+- v6.4.9 — June 2026
+- v6.4.8.1 — June 2026
+- v6.4.8 — June 2026
+- v6.4.7 — June 2026
+- v6.4.6 — June 2026
+- v6.4.5 — June 2026
+- v6.4.4 — June 2026
+- v6.4.3 — June 2026
+- v6.4.2 — June 2026
+- v6.4.1 — June 2026
+- v6.4 — June 2026
+- v6.3 — June 2026
+- v6.2 — June 2026
+- v6.1 — June 2026
+- v6.0 — June 2026
+- v5.4.16 — June 2026
+- v5.4.15 — June 2026 (carried forward patch)
+- v5.4.14 — May 2026
+- v5.4.13 — May 2026
+- v5.4.12 — May 2026
+- v5.4.11 — May 2026
+- v5.4.10 — May 2026
+- v5.4.9 — May 2026
+- v5.4.5 — May 2026
 
 ---
 
@@ -2501,7 +1306,7 @@ Final errata applied before freeze:
 
 `[RETRACTED]` `[scope: withdrawn as unsupported delivery, not falsified]` **(v6.4.10)** Primitive contraction constants $(C_6,q_{\rm ctr},q_{\rm in})=(64,\tfrac1{256},\tfrac1{1024})$ with a displayed remainder bound $53.3157$: advertised in a working message without a delivered proof; the same-named archive documented $(1560,\tfrac1{3600},\tfrac1{10000})$ instead. Withdrawn as an unsupported delivery record. A looser proved bound does not falsify it; do not import on the authority of that message. Operative profile: DYAD-THM-PRIM-CTR (§6.14).
 
-`[RETIRED wording]` **(v6.4.10)** "$jet1\_deg5.json$ = one-step normalized coefficient dictionary" (it is the raw one-step jet); "$O(|W|^5)$" for the raw complex form; the real-ray burst without the $Q_0^{5/2}$ term; and any reading of the archival "$h_3=0$" as a property of the one-step polynomial conjugacy. See COR items in Appendix A v6.4.10.
+`[RETIRED wording]` **(v6.4.10)** "$jet1\_deg5.json$ = one-step normalized coefficient dictionary" (it is the raw one-step jet); "$O(|W|^5)$" for the raw complex form; the real-ray burst without the $Q_0^{5/2}$ term; and any reading of the archival "$h_3=0$" as a property of the one-step polynomial conjugacy. See the v6.4.10 COR items in Appendix A of v6.4.20 (tag `dyad-v6.4.20`).
 
 - `[FAIL]` $6\phi^2$ as crossing target.
 - `[FAIL]` $\Im(\nu_5)$ invariant under general real-analytic residual gauge — gauge derivative $d\Im(u_{32})/d\lambda=-4\sqrt{3}/3\ne0$ computed exactly.
@@ -2521,7 +1326,7 @@ Final errata applied before freeze:
 |---|---|---|---|
 | $T$ | primitive dyad map (DYAD-DEF-PRIMITIVE-MAP); in §6.11 also the map family with $K_p$ | §1, §6.1, §6.11 | family parameter stated when $p\ne6$ |
 | $F$, $F_W$, $\widehat F$ | $F=T^6$; $F_W=\mathcal L T^6\mathcal L^{-1}$ (raw $W$-frame); $\widehat F=h^{-1}F_Wh$ (chart) | §6.7, §6.14, §6.16 | raw, archival, projected and conjugated returns are distinct (SG-19) |
-| $J$ | (i) Jacobian $DT$ in §1/§6.1; (ii) six-step normal-form jet in §6.14; (iii) ℤ₆ generator $T\circ F^{-1/6}$ in §6.16–§6.17 | see column | read by section; $J_Q$ is Genesis/Triadic notation, not used here |
+| $J$ | (i) Jacobian $DT$ in §1/§6.1; (ii) six-step normal-form jet in §6.14; (iii) ℤ₆ generator $T\circ F^{-1/6}$ in §6.16–§6.17 | see column | read by section; $J_Q=\mathcal L^{-1}i\mathcal L$ is the rotation defined and used in §6.12 (birth kinematics; Genesis/Triadic notation) |
 | $h$, $h_6$, $n$ | degree-6 additive normalizer; one-step normal-form jet | §6.14 | archival $\Phi_{\rm archive}$ is a different operation |
 | $\mu$, $\mu_p$ | six-step cubic coefficient $-\tfrac12-i\tau$; frame-dependent $\mu_p^Z$, $\mu_p^{W_p}$ | §6.2, §6.7, §6.9, §6.11 | compare across frames only with DYAD-ALG-KP-FRAME-SCALE |
 | $\tau$ | $2\sqrt3/3$ | §6.3 | — |
@@ -2543,6 +1348,11 @@ Final errata applied before freeze:
 | $R_0$, $K_m$, $X$, $\Phi$ | formal involution; smooth roots; generator; equivariant chart (§6.17); $\Phi_1$, $\Phi_{\rm archive}$ are other maps | §6.9, §6.16–§6.17 | formal vs $C^\infty$ vs analytic |
 | $\nu_3$, $\nu_5$, $c_{21}$, $c_\theta$, $a_1$, $a_2$, $a_{05}$ | normal-form coefficients (raw, one-step, Lie-gauge, chart) | §6.2, §6.9, §6.11, §6.14 | always name the frame/convention |
 | $K_p$, $u$ | $2-2\cos(2\pi/p)$; $1/(1-\lambda)$ in the $K_p$ eigenframe | §2 OPEN 9, §6.11, Appendix D | — |
+| $U$ (other uses) | (i) ISP anti-correlation coordinate $U=\tfrac{\sqrt3}2\rho$ (§6.4); (ii) the start/base-point set $U=\{0<Q\le\tfrac1{625}\}$ (§6.14), whose invariant six-phase tube is $U_T$ (see the $U$, $U_T$ row); (iii) the projection window $U$ of OPEN 16, $\Pi(Q_0,U,\mathcal O)$ | §6.4, §6.14, §2 OPEN 16 | read by section |
+| $\widehat h$, $h_6$, $h$ (OPEN-M) | formal Poincaré–Dulac normalizer; finite adopted degree-6 normalizer; OPEN-M source amplitude $h$ | §6.16, §6.14, SG-15 | the OPEN-M $h$ is not a normalizer (SG-15) |
+| $M(s)$ | majorant of $h-\mathrm{id}$ in DYAD-THM-NF-INV; distinct from the $M$ entries above | §6.14 | — |
+| $\kappa$ | $\kappa=M'(R)$, contraction constant of DYAD-THM-NF-INV; not the historical fit parameter $\kappa_{\rm bb}$ | §6.14, §6.5 | — |
+| $r$, $r_m$ | polar radius $z=re^{i\Theta}$; L-PHASE remainder $r_m$ | §6.14 | — |
 
 ---
 
@@ -2728,7 +1538,7 @@ Final errata applied before freeze:
 | DZT v0.8 §7 | DYAD-ALG-PHASELAW | historical note label | superseded finite-horizon phase law $\arg Q_p=\tfrac\pi2+\tfrac{6\pi}p$ (now part of `DYAD-THM-Q403-PHASELAW`) | no alias created |
 | DZT v0.8 §7 | DYAD-ALG-CASCADE-P12 | unmatched | the §6.11 micro-certification $p=12,q=4,(0,3)$ value $-13+15\sqrt3/2$ (no RID) | DZT marks it subsumed by its artifact string |
 | DZT v0.8 §7 | DYAD-ART-CASCADE-Q4-03 | artifact (correspondence not hash-verified) | content matches `DYAD-ART-Q403-EXTRACT` (`q4_03_cascade_extract.py`, gates $p=8\to0$, $p=12\to-13+15\sqrt3/2$) | DZT prints extractor SHA-256 `ecdb805f…05eac2`; §8 prints no hash, so no byte identity is claimed |
-| AZ v0.6 §8 | DYAD-THM-RAW-CUBIC | exact match | `DYAD-THM-RAW-CUBIC` | statement recovered in P1 (FA-08) |
+| AZ v0.6 §8 | DYAD-THM-RAW-CUBIC | exact match | `DYAD-THM-RAW-CUBIC` | formula recovered and algebraically verified (P1, FA-08); identity with the historical proposition not yet established (Appendix E) |
 | AZ v0.6 §8 | DYAD-ALG-P567-LEDGER | exact match | `DYAD-ALG-P567-LEDGER` | — |
 | AZ v0.6 §8 | DYAD-ALG-GLATTICE5 | exact match | `DYAD-ALG-GLATTICE5` | — |
 | AZ v0.6 §8 | DYAD-OPEN-P-RESONANCE (sub-item labels) | exact match (lifecycle RID with free-text sub-labels) | `DYAD-OPEN-P-RESONANCE` | sub-labels are not identifiers |
@@ -2744,50 +1554,8 @@ Final errata applied before freeze:
 
 ## Appendix G — Old→new section map {#appendix-g}
 
-`[DEF]` `[v6.4.20]` Every v6.4.19 heading and its place in this edition. Anchors are kept. Relocated text is listed in Appendix A (H-P2-*).
-
-| v6.4.19 | v6.4.20 (headings as in r1) | Change |
-|---|---|---|
-| header (title, metadata, status summary, release summaries) | compact header | v6.4.19 header relocated verbatim to Appendix A (H-P2-1) |
-| `## Local Tag Aliases` | `## Local Tag Aliases` | tag normalization map, version markers, RID tag convention and CAND lookup added |
-| `## §1. Current Canonical State {#sec-1-canonical-state}` | `## §1. Current Canonical State {#sec-1-canonical-state}` | fixed-point scope table added; Audit-1 clause rewritten (H-P2-3) |
-| `## §2. Active Frontier / OPEN Registry {#sec-2-open-registry}` | `## §2. Active Frontier / OPEN Registry {#sec-2-open-registry}` | OPEN 2B alias; OPEN 4b label note; B5 result pointer |
-| `## §3. Scope Guards {#sec-3-scope-guards}` | `## §3. Scope Guards {#sec-3-scope-guards}` | SG-14 restated (H-P2-5); SG-17/18 note |
-| `## §4. Layer Routing {#sec-4-layer-routing}` | `## §4. Layer Routing {#sec-4-layer-routing}` | $\phi_*$ removed (H-P2-6) |
-| `## §5. High-Risk Claims Ledger {#sec-5-high-risk}` | `## §5. High-Risk Claims Ledger {#sec-5-high-risk}` | R11 row conditions (H-P2-7); r2: absolute-value bars inside math in table rows written as `\vert` (3 rows) |
-| `## §6. Main Scientific Ledger {#sec-6-ledger}` | `## §6. Main Scientific Ledger {#sec-6-ledger}` | unchanged |
-| `### §6.1 Core Map and Fixed Points '[ALG / mixed]' {#sec-6-1-map}` | `### §6.1 Core Map and Fixed Points — entry grades: ALG, THM, DEF, FAIL {#sec-6-1-map}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.2 Linear Structure and Cubic Coefficient '[THM / mixed]' {#sec-6-2-cubic}` | `### §6.2 Linear Structure and Cubic Coefficient — entry grades: ALG, THM {#sec-6-2-cubic}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.3 Canonical Constants '[ALG]' {#sec-6-3-constants}` | `### §6.3 Canonical Constants — entry grades: ALG {#sec-6-3-constants}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.4 ISP Coordinate System '[ALG structure]' {#sec-6-4-isp}` | `### §6.4 ISP Coordinate System — entry grades: ALG, DEF {#sec-6-4-isp}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.5 Backbone and Asymptotic Structure '[ALG]' {#sec-6-5-backbone}` | `### §6.5 Backbone and Asymptotic Structure — entry grades: ALG, THM, DEF, OPEN {#sec-6-5-backbone}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.6 Resonant Structure and Homological Algebra '[ALG structure / THM]' {#sec-6-6-resonance}` | `### §6.6 Resonant Structure and Homological Algebra — entry grades: ALG, DEF, OPEN {#sec-6-6-resonance}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.7 Six-Step Cubic Jet and Complex Form '[ALG]' {#sec-6-7-jet}` | `### §6.7 Six-Step Cubic Jet and Complex Form — entry grades: ALG {#sec-6-7-jet}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.8 ISP Transport and Footprint '[ALG structure / THM-ALG via IA]' {#sec-6-8-transport}` | `### §6.8 ISP Transport and Footprint — entry grades: THM-ALG via IA, ALG {#sec-6-8-transport}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.9 Normalization Hierarchy and Gauge '[ALG / mixed]' {#sec-6-9-normalization}` | `### §6.9 Normalization Hierarchy and Gauge — entry grades: ALG, DEF, FAIL {#sec-6-9-normalization}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.10 OPEN 11 / Chirality Closure '[THM-ALG via IA / mixed]' {#sec-6-10-open11}` | `### §6.10 OPEN 11 / Chirality Closure — entry grades: THM-ALG via IA, ENG {#sec-6-10-open11}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.11 OPEN 9 — $p$-Resonance Arithmetic Horizon '[ALG / mixed]' {#sec-6-11-open9}` | `### §6.11 OPEN 9 — $p$-Resonance Arithmetic Horizon — entry grades: ALG, THM, OPEN, FAIL {#sec-6-11-open9}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.12 Dyad-to-Triad Bridge Export '[ALG]' {#sec-6-12-bridge}` | `### §6.12 Dyad-to-Triad Bridge Export — entry grades: ALG, DEF, CAND, OPEN {#sec-6-12-bridge}` | heading grade tag replaced by the computed entry-grade list; r2: absolute-value bars inside math in table rows written as `\vert` (1 row) |
-| `### §6.13 Simulation Invariants and Audit Discipline '[ENG]' {#sec-6-13-audit}` | `### §6.13 Simulation Invariants and Audit Discipline '[ENG]' {#sec-6-13-audit}` | heading grade tag replaced by the computed entry-grade list; r2: absolute-value bars inside math in table rows written as `\vert` (1 row) |
-| `### §6.14 Local Return Enclosure — Normalizer, Contraction, Inverse, Remainders '[ALG / THM]' {#sec-6-14-enclosure}` | `### §6.14 Local Return Enclosure — Normalizer, Contraction, Inverse, Remainders — entry grades: ALG, THM, DEF, OPEN, NUM, ENG {#sec-6-14-enclosure}` | heading grade tag replaced by the computed entry-grade list; r2: absolute-value bars inside math in table rows written as `\vert` (1 row) |
-| `### §6.15 Local Involutions Commuting with the Return '[THM conditional / OPEN]' {#sec-6-15-involution}` | `### §6.15 Local Involutions Commuting with the Return — entry grades: THM, DEF {#sec-6-15-involution}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.16 Formal Centralizer of the Six-Step Return '[ALG / THM — formal]' {#sec-6-16-centralizer}` | `### §6.16 Formal Centralizer of the Six-Step Return — entry grades: ALG, THM, DEF, OPEN {#sec-6-16-centralizer}` | heading grade tag replaced by the computed entry-grade list |
-| `### §6.17 Flat Centralizer Triviality '[THM / THM — conditional]' {#sec-6-17-flat}` | `### §6.17 Flat Centralizer Triviality — entry grades: THM, DEF, OPEN, NUM {#sec-6-17-flat}` | heading grade tag replaced by the computed entry-grade list |
-| `## §7. Import Ledger {#sec-7-imports}` | `## §7. Import Ledger {#sec-7-imports}` | §7.0 editions, §7.0a L-PHASE interface and the notice-state table replace the old context list, rows and notice table (H-P2-10) |
-| `## §8. Artifact and Script Registry {#sec-8-artifacts}` | `## §8. Artifact and Script Registry {#sec-8-artifacts}` | ATLAS artifacts; FA-04 custody note; double escapes repaired |
-| `## §9. Collaboration and Provenance {#sec-9-provenance}` | `## §9. Collaboration and Provenance {#sec-9-provenance}` | unchanged |
-| `## Appendix A — Version History {#appendix-a}` | `## Appendix A — Version History {#appendix-a}` | v6.4.20 adoption record, DRAFT r2 and r1 records added; P1 record and older history retained |
-| `## Appendix B — Retired and Rejected Claims {#appendix-b}` | `## Appendix B — Retired and Rejected Claims {#appendix-b}` | unchanged |
-| — | `### §7.0 Current editions and source pins {#sec-7-0-editions}` | new in v6.4.20 |
-| — | `### §7.0a L-PHASE row-A export interface (I1–I5) {#sec-7-0a-lphase}` | new in v6.4.20 |
-| — | `## Appendix C — Notation {#appendix-c}` | new in v6.4.20 |
-| — | `## Appendix D — OPEN 9 definitions (recovered) {#appendix-d}` | new in v6.4.20 |
-| — | `## Appendix E — Claim-to-evidence matrix {#appendix-e}` | new in v6.4.20; r2: grade/scope rule, three rows corrected, reviewer replays recorded |
-| — | `## Appendix F — DZT / AZ string crosswalk {#appendix-f}` | new in v6.4.20 |
-| — | `## Appendix G — Old→new section map {#appendix-g}` | new in v6.4.20 |
-| footer (v6.4.19 and inherited footers) | single footer | relocated verbatim to Appendix A (H-P2-12) |
+The v6.4.19→v6.4.20 section map is Appendix G of v6.4.20 (tag `dyad-v6.4.20`). v6.4.21 keeps every heading anchor of v6.4.20.
 
 ---
 
-*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.20*  
-*Adopted 21 October 2026; supersedes RTG_DYADIC_OSCILLATOR_DSN_v6.4.19 (adopted 20 October 2026). v6.4.20 carries the ATLAS P1 scientific corrections and the P2 interface work; it registers 13 new RIDs and changes no earlier grade or OPEN status (OPEN 20 PARTIAL; B-an, B-6 OPEN). The replaced DRAFT r2 lines, including its footer, are quoted in Appendix A (v6.4.20 adoption record); the r1 footer is in the DRAFT r2 record, the v6.4.19 and inherited footers in the r1 record (H-P2-12).*
+*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.21 (ADOPTED, 22 October 2026).*
