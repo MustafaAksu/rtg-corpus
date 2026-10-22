@@ -57,6 +57,23 @@ EDITS = [
 ("S-1k", "§8 DYAD-ART-ATLAS-P2 (evidence attribution)",
  r"r1 package replayed by the external reviewer (21 Oct 2026), r2 OWNER-RUN",
  r"r1 and r2 packages replayed by the external reviewer (21 Oct 2026; r2: G0–G21, the r2 negative controls, M1–M11, S1–S4 with C1–C2, R1–R4 with D1–D2), as recorded at adoption"),
+# ---- S-6a field label (owner script recovered 22 Oct 2026; exact recomputation) ----
+("S-6a", "§1 OPEN 13 entry (h4 coefficient field)",
+ r"Archival Lie-gauge 6-step object: $h_4$ exact over $\mathbb{Q}(\sqrt{3})$,",
+ r"Archival Lie-gauge 6-step object: $h_4$ exact with coefficients in $\mathbb{Q}(i\sqrt3)$ (real parts in $\mathbb Q$, imaginary parts in $\mathbb Q\sqrt3$; exact recomputation `dyad_h4_archival_exact_check.py`, v6.4.21),"),
+("S-6a-reg", "§8 DYAD-ART-NORM-P6 (source pin)",
+ r"- [RID: DYAD-ART-NORM-P6] :: `normalize_p6_liegauge_exact.py` :: Archival",
+ r"- [RID: DYAD-ART-NORM-P6] :: `normalize_p6_liegauge_exact.py` (SHA-256 `cec918f808cbc02c53beba5f88faf1edbed830a87dac7283e6ac2511d2ec5835`, `evidence/dyad/scripts/`; its $h_4$ closed forms are confirmed exactly by `dyad_h4_archival_exact_check.py`) :: Archival"),
+# ---- review R21-01: R11 wording ----
+("R11-a", "§1 backbone entry (R11 label)",
+ r"and its identification with $\mathcal A_{\rm raw}$ or with any final-chart quantity is `[OPEN]` (R11).",
+ r"and its identification with $\mathcal A_{\rm raw}$ or with any final-chart quantity remains `[OPEN]` as a fitted-backbone identification problem. RECOG R11 is CLOSED at its final-chart ledger scope; the SG-19 non-transfer guard remains."),
+("R11-b", "§6.5 OPEN entry (R11 sentence)",
+ r"This revision does not transfer those claims through $h$ or close RECOG R11.",
+ r"This ledger does not transfer those claims through $h$. RECOG R11 is CLOSED at its final-chart ledger scope; that closure does not identify the historical fitted backbone with the exact dynamics or transfer it through $h$."),
+("R11-c", "§6.5 historical fit (qualification label)",
+ r"remains `[OPEN]` under the §6.5/R11 qualification.",
+ r"remains `[OPEN]` under the §6.5 and SG-19 non-transfer qualifications."),
 # ---- S-2 N11 adopted use ----
 ("S-2", "§7 notices: N11→RECOG row",
  "| N11 | v6.4.15 | RECOG | OPEN 3b offset and memory | RECEIVED — reference import (SG-R14) | RECOG v0.3.22 §7.2 |",
@@ -72,7 +89,7 @@ EDITS = [
 ("S-4b", "Appendix C: overload rows",
  r"| $K_p$, $u$ | $2-2\cos(2\pi/p)$; $1/(1-\lambda)$ in the $K_p$ eigenframe | §2 OPEN 9, §6.11, Appendix D | — |",
  r"| $K_p$, $u$ | $2-2\cos(2\pi/p)$; $1/(1-\lambda)$ in the $K_p$ eigenframe | §2 OPEN 9, §6.11, Appendix D | — |"
- "\n" r"| $U$ (other uses) | (i) ISP anti-correlation coordinate $U=\tfrac{\sqrt3}2\rho$ (§6.4); (ii) the tube $\{0<Q\le\tfrac1{625}\}$ (§6.14); (iii) the projection window $U$ of OPEN 16, $\Pi(Q_0,U,\mathcal O)$ | §6.4, §6.14, §2 OPEN 16 | read by section |"
+ "\n" r"| $U$ (other uses) | (i) ISP anti-correlation coordinate $U=\tfrac{\sqrt3}2\rho$ (§6.4); (ii) the start/base-point set $U=\{0<Q\le\tfrac1{625}\}$ (§6.14), whose invariant six-phase tube is $U_T$ (see the $U$, $U_T$ row); (iii) the projection window $U$ of OPEN 16, $\Pi(Q_0,U,\mathcal O)$ | §6.4, §6.14, §2 OPEN 16 | read by section |"
  "\n" r"| $\widehat h$, $h_6$, $h$ (OPEN-M) | formal Poincaré–Dulac normalizer; finite adopted degree-6 normalizer; OPEN-M source amplitude $h$ | §6.16, §6.14, SG-15 | the OPEN-M $h$ is not a normalizer (SG-15) |"
  "\n" r"| $M(s)$ | majorant of $h-\mathrm{id}$ in DYAD-THM-NF-INV; distinct from the $M$ entries above | §6.14 | — |"
  "\n" r"| $\kappa$ | $\kappa=M'(R)$, contraction constant of DYAD-THM-NF-INV; not the historical fit parameter $\kappa_{\rm bb}$ | §6.14, §6.5 | — |"
