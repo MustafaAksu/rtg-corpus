@@ -9,11 +9,11 @@ Base `atlas-v0.2`, SHA-256 `9963aead02fad686a9a5bd4d1824882a890ef6279d50899c4090
 
 | Object | SHA-256 |
 |---|---|
-| `atlas/RTG_STATE_ATLAS.md` | `1707fa933a2c1d441642e3a876095cc1eb75e478cb9da61636d9d864e60dd319` |
+| `atlas/RTG_STATE_ATLAS.md` | `dad844027a8d2c614a90c0a3c1a5736dae9d0a49824b70f788ede7c62a3487c3` |
 | `atlas/RTG_STATE_ATLAS_METHOD.md` | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` |
 | `evidence/atlas/v0.3/source_manifest.json` | `db347c8f48da659d1f491fc8f764b6cbc7de2c729c2c1eba1a449f0985b10c96` |
 | `tools/atlas_check.py` | `0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d` |
-| `evidence/atlas/build/refresh_v0_3.py` | `ddc10767d6390072dffb55cd9dcf170b0e7d5b45ecd59a1523d907789680d4e0` |
+| `evidence/atlas/build/refresh_v0_3.py` | `4e9ed2f826b291084a0aa8c3de243765e4f98f8308828ffe44ae046a83325efa` |
 
 ## 2. Review scope
 
@@ -29,11 +29,11 @@ Read the new theorem and owner-corrected passages against the tagged DSN; the co
 
 ## 3. Dispositions and mechanical checks
 
-20 existing D3 diagnostic records: {'retired': 10, 'reworded': 7, 'retained': 3}. Full reasons and hashes: `evidence/atlas/v0.3/dispositions.json`. Retired IDs are not reused or left dangling. `97` exact-once operations; reproducible by `python3 -I evidence/atlas/build/refresh_v0_3.py`; edit locators and hashes in `edit_log.json`.
+20 existing D3 diagnostic records: {'retired': 10, 'reworded': 7, 'retained': 3}. Full reasons and hashes: `evidence/atlas/v0.3/dispositions.json`. Retired IDs are not reused or left dangling. `98` exact-once operations; reproducible by `python3 -I evidence/atlas/build/refresh_v0_3.py`; edit locators and hashes in `edit_log.json`.
 
 RECOG inventory: 73 scientific/definition/lifecycle homes, 37 artifact declarations inventoried separately. Artifact declarations are not extra scientific-result PASSes. The coverage file pins source and home lines by hash; shared closed-module homes are explicit.
 
-Shared checker: zero FAIL; 18/18 controls as expected. Additional scoped guards: 17/17 PASS; negative fixtures 13/13 detected. Reports in `evidence/atlas/v0.3/`. Unverified links, naming-only artifact checks and inherited wording warnings remain separate; see the report rather than interpreting exit 0 as a proof of completeness. Two builds give identical Atlas bytes.
+Shared checker: zero FAIL; 18/18 controls as expected. Additional scoped guards: 18/18 PASS; negative fixtures 14/14 detected. Reports in `evidence/atlas/v0.3/`. Unverified links, naming-only artifact checks and inherited wording warnings remain separate; see the report rather than interpreting exit 0 as a proof of completeness. Two builds give identical Atlas bytes.
 
 ## 4. Questions for receiving review
 

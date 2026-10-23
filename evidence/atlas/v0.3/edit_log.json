@@ -11,6 +11,15 @@
   {
     "id": "AR03-002",
     "operation": "replace",
+    "locator": "*END — RTG STATE ATLAS v0.2.",
+    "old_sha256": "9975816483bde45fd103b0c71c15856d3de50976c51c45a3057a5041bea20bd9",
+    "new_sha256": "ccaa4f0e0ecd7f862fcd3f3dcd80a54b2f8820e810880e034122852e264d66c4",
+    "occurrences": 1,
+    "reason": "matching footer edition"
+  },
+  {
+    "id": "AR03-003",
+    "operation": "replace",
     "locator": "evidence/atlas/source_manifest_v0_2.json",
     "old_sha256": "94f77c9fa8537cefe25fbd88bd1f9f402a0dfcaf482d71898a40108a22e84cac",
     "new_sha256": "787bc74dcca1a5433959e783c94105815d1fecd2c975c158f31d408094bdd83a",
@@ -18,7 +27,7 @@
     "reason": "frozen source manifest"
   },
   {
-    "id": "AR03-003",
+    "id": "AR03-004",
     "operation": "replace",
     "locator": "| RECOG | RTG_RELATIONAL_RECOGNITION_DSN | v0.3.22 | `recog-v0.3.22` | canonical Tier 3 |",
     "old_sha256": "767b7282784ce97e621a29caf73d8d7c2c00e2eb551321a990f302444ef57314",
@@ -27,7 +36,7 @@
     "reason": "adopted owner edition"
   },
   {
-    "id": "AR03-004",
+    "id": "AR03-005",
     "operation": "replace",
     "locator": "(owner RECOG = RTG_RELATIONAL_RECOGNITION_DSN v0.3.22, adopted 2026-10-20;",
     "old_sha256": "529b20a3ba605f6f2c6e4e4cc8932773a6bb084f2d43cc6644689346b975b90e",
@@ -36,7 +45,7 @@
     "reason": "D3 owner snapshot; no release narrative"
   },
   {
-    "id": "AR03-005",
+    "id": "AR03-006",
     "operation": "replace",
     "locator": "H5 D-LINK high — missing proof sources already exist elsewhere: GEN chrono-protection G₂=0 (GEN-ART-G2-CHRONO missing) follows from NUMGEN cyclic-average theorem (NUMGEN.N-L6) and ",
     "old_sha256": "e75b7e69ee3590be3e35c7afd0b147b0e46425de0751291cf7f644978d2ab1cd",
@@ -45,7 +54,7 @@
     "reason": "A2/A3: separate adopted existence from remaining Atlas-derived interfaces"
   },
   {
-    "id": "AR03-006",
+    "id": "AR03-007",
     "operation": "replace",
     "locator": "H12 ~ D-LINK med — DYAD states that RECOG/RRF's S_h equals R₀ through degree 6 and is not an exact commuting involution (DYAD §6.15–6.17, relation to S_h); the C^∞ involution R=T³∘",
     "old_sha256": "8726b7996f8b16af83636c3182b24128a848c480a16bcc7636968d3519e1a1e5",
@@ -54,7 +63,7 @@
     "reason": "A1: involution, dynamical commutation, comparator covariance and physical exchange separated"
   },
   {
-    "id": "AR03-007",
+    "id": "AR03-008",
     "operation": "replace",
     "locator": "memory and return · RECOG-THM-R9-MEMORY, RECOG-ALG-LEADING-RETURN-EQUIVARIANCE, A1A chain (D3) > DYAD bridge lemma, OPEN 9/12/21, NUMGEN L-BACKBONE/φ*",
     "old_sha256": "c797df9880e927e40ab015c295ef345404d0d987b5dfb4eaf821bfbe56936f1f",
@@ -63,7 +72,7 @@
     "reason": "cross-domain index: actual uses versus proposed interfaces"
   },
   {
-    "id": "AR03-008",
+    "id": "AR03-009",
     "operation": "replace",
     "locator": "RRF.F7 ~ D-LINK: |χ₁(−z)−χ₁(z)|≤2C₇|z|⁶ and VF-1 are delivered-chart facts; RRF lists S_h=R₀ only through degree 6, which DYAD states (S_h equals R₀ through degree 6, not an exact ",
     "old_sha256": "0815e1428722375d8c94ff13cf5ceb121e9ff91b5373a00799a93340f53e926d",
@@ -72,7 +81,7 @@
     "reason": "A1 propagated to representation interface"
   },
   {
-    "id": "AR03-009",
+    "id": "AR03-010",
     "operation": "replace",
     "locator": "NUMGEN.N-B ~ D-LINK | explicit L-BACKBONE exists upstream on U: PRIM-CTR gives 1/(Q−aQ²)−1/Q=a/(1−aQ)∈[0.50040,1.50361] for Q≤1/625 (atlas) ⇒ ½≤…≤3; RECOG-THM-A1A-RECIPROCAL-AMPLIT",
     "old_sha256": "62d926ab92ec41a3b4641f23fda1c941313a49df2218de3f45b6ee7281cf444d",
@@ -81,7 +90,7 @@
     "reason": "A2: explicit upstream theorem and outstanding consumer contract"
   },
   {
-    "id": "AR03-010",
+    "id": "AR03-011",
     "operation": "replace",
     "locator": "NUMGEN.N-D D-RID | φ* entry-phase law has no owner: DYAD-CAND-PHISTAR-ENTRY-PHASE was never a Dyadic identifier; NUMGEN keeps the [CAND] cap with \"historical source not identified\"",
     "old_sha256": "8f54270aa75f9f7e9dbe0acefae0218834178ae3de1adea5bfe046bd8635fe65",
@@ -90,7 +99,7 @@
     "reason": "A3: candidate source not owner identity"
   },
   {
-    "id": "AR03-011",
+    "id": "AR03-012",
     "operation": "replace",
     "locator": "NUMGEN-RESULT-N5AS1-L-BACKBONE RES[ALG] | sc: existential tube | from q_{m+1}=q_m−q_m²+O(q_m^{5/2}): ½≤1/q_{m+1}−1/q_m≤3 ⇒ q_m=Θ(1/m); 1/q_{m+1}−1/q_m=1+O(√q_m), 1/q_M=M+O(√M), q_M",
     "old_sha256": "6e2c0c62db66619d4e1e1bc958e12ba41542c2d5e0f7c5e2b24c980a36d47270",
@@ -99,7 +108,7 @@
     "reason": "A2 typed backbone input"
   },
   {
-    "id": "AR03-012",
+    "id": "AR03-013",
     "operation": "replace",
     "locator": "DYAD-THM-LPHASE-ROWA-REMAINDER THM | x∈U: (B) ∀y∈U_T |W(Ty)/(λW(y))−1|≤ε≤0.04654 ⇒ |δ_T−π/3|≤arcsin ε (=0.046557<π/6), six-step lifted increment=2π+Arg(F_W(W)/W); (R) φ̂_{6(m+1)}−φ",
     "old_sha256": "341634e4967e29c517238ce325f4f6e7f248e6f6c6dd96a9496120e4cc87b836",
@@ -108,7 +117,7 @@
     "reason": "record actual new RECOG use; leave NUMGEN state unchanged"
   },
   {
-    "id": "AR03-013",
+    "id": "AR03-014",
     "operation": "replace",
     "locator": "imports (edges only): T, DT, det DT=1+(e^ρ−1)cosη, C₀, P₁, P₂, Q_c=(arcsin ln2)² <DYAD-DEF-PRIMITIVE-MAP · A=DT(P₁), B, Q=rᵀBr=ρ²−ρη+η², J_Q, I_ab, ω_ab, 𝒪₀=0 <GEN-DEF-PRIMITIVE-ME",
     "old_sha256": "a1f3664738c39c795626d09ae95e4423c3082b6fdf08b0261aebe93b3e149302",
@@ -117,7 +126,7 @@
     "reason": "D3 current imports with producer pins distinguished"
   },
   {
-    "id": "AR03-014",
+    "id": "AR03-015",
     "operation": "replace",
     "locator": "imports (edges only): T, DT, det DT=1+(e^ρ−1)cosη, C₀, P₁, P₂, Q_c=(arcsin ln2)² <DYAD-DEF-PRIMITIVE-MAP · A=DT(P₁), B, Q=rᵀBr=ρ²−ρη+η², J_Q, I_ab, ω_ab, 𝒪₀=0 <GEN-DEF-PRIMITIVE-ME",
     "old_sha256": "7e9f9e454f44044d2e6141ec00d45610c19675ef9000f74def336a611dfd893e",
@@ -126,7 +135,7 @@
     "reason": "claim-level Dyadic identifiers"
   },
   {
-    "id": "AR03-015",
+    "id": "AR03-016",
     "operation": "replace",
     "locator": "R9 observable (track C_z, chart z) | Θ=continuous lift of arg z (|F̂(z)/z−1|<1 each step); Ψ(z)=Θ−τlog q; M(z₀)=Ψ_∞−Ψ(z₀); g(Θ)=c_iso+Im(Ge^{−6iΘ}); Φ=Ψ+qg(Θ); c_iso=Im[(1−2iτ)β]=−",
     "old_sha256": "6ee359a0e7ebdb7917f72154eb1877aa1e97b206ef7e764dc5bf83600f666f0a",
@@ -135,7 +144,7 @@
     "reason": "exact R9 magnitude and rounded display"
   },
   {
-    "id": "AR03-016",
+    "id": "AR03-017",
     "operation": "replace",
     "locator": "*RECOG:remainder-by-frame ALG | raw quartic six-step jet nonzero (channels (4,0),(3,1),(2,2),(1,3)); on (t,0): W(T⁶(t,0))=t+μ₆t³−(5+25i√3)/48·t⁴+O(t⁵); raw χ₆=1+μ₆Q+O(Q^{3/2}), |χ₆",
     "old_sha256": "e08572116f623a2ba7d46ddf6b5b981c986655a2dea37032508dfdab63a5cab2",
@@ -144,7 +153,7 @@
     "reason": "qualified frame invariance"
   },
   {
-    "id": "AR03-017",
+    "id": "AR03-018",
     "operation": "replace",
     "locator": "*RECOG:swap-odd-rho ALG·c | if: pole-swap covariance HYP (radial row / linear order) | ρ′=ρ+f(η): ρ swap-even ⇒ f′(0)=0, but f′(0)=−1 ⇒ ρ swap-odd, S_o=(−ρ,−η), Fix(S_o) on wrapped",
     "old_sha256": "bdab7febc843ce3621b22584ba71861bf3dfa56b462f587af90899808207d6de",
@@ -153,7 +162,7 @@
     "reason": "owner registers existing conditional lemma"
   },
   {
-    "id": "AR03-018",
+    "id": "AR03-019",
     "operation": "replace",
     "locator": "RECOG-OPEN-INTERSECTION HYP (registered under R6) | recognition event = nontrivial algebraic comparison stratum ∩ dynamically distinguished stratum; realized by P₂ (Ĉ_pole=−1, T(P₂",
     "old_sha256": "3ab31419038af656ba213c1ab650c9ecd36b2ffb18eede5d8faaac87001ea736",
@@ -162,7 +171,7 @@
     "reason": "HYP aligned at point of use; immutable OPEN prefix not grade"
   },
   {
-    "id": "AR03-019",
+    "id": "AR03-020",
     "operation": "replace",
     "locator": "RECOG-ALG-LEADING-RETURN-EQUIVARIANCE ALG | F=L+F₂+…, L^p=I, F^p=id+G_k+O(k+1), G_k≠0 ⇒ LG_k(x)=G_k(Lx); method: degree-k part of F∘F^p=F^p∘F; gauge-independent; any number of mode",
     "old_sha256": "100490bac4bf64aaf6b4a0f2bb7d2eef439421972e1798e2989ced76aa77f07f",
@@ -171,7 +180,7 @@
     "reason": "settled custody, no advisory chronology"
   },
   {
-    "id": "AR03-020",
+    "id": "AR03-021",
     "operation": "replace",
     "locator": "RECOG-ALG-LEADING-RETURN-EQUIVARIANCE ALG | F=L+F₂+…, L^p=I, F^p=id+G_k+O(k+1), G_k≠0 ⇒ LG_k(x)=G_k(Lx); method: degree-k part of F∘F^p=F^p∘F; gauge-independent; any number of mode",
     "old_sha256": "ae38730172fc87617127f2391d270a0f4ecc1387f8bfbda97f1759848f600163",
@@ -180,7 +189,7 @@
     "reason": "remove retired custody diagnostic reference"
   },
   {
-    "id": "AR03-021",
+    "id": "AR03-022",
     "operation": "replace",
     "locator": "RECOG-ALG-LATTICE-STRENGTH ALG | |μ|²=19/12; 𝓘_lat=|c₀₅^NF|/|μ|²≈0.0134426, invariant under W→cW (both ∝|c|⁻⁴) and U(1)-equivariant residual gauge; lattice/leading comparator ampli",
     "old_sha256": "5b8750bb993279155d2d8e450f39ba0896276bc4aaaafd1292c46406717641c0",
@@ -189,7 +198,7 @@
     "reason": "frame-labelled ratios; no stale diagnostic"
   },
   {
-    "id": "AR03-022",
+    "id": "AR03-023",
     "operation": "replace",
     "locator": "RECOG-ALG-LATTICE-CLOCK ALG(cons) | Ψ_lat invariant under linear W→cW (c̃₀₅=c c̄⁻⁵c₀₅, Θ̃=Θ+φ), not under nonlinear equivariant gauge W̃=e^{ia|W|²}W (shift −6aQ); along backbone Θ_",
     "old_sha256": "4975705a78a7acef8f8abd7eba466634ac4db1077000aeb8d6409f3363793457",
@@ -198,7 +207,7 @@
     "reason": "deferred alternative proof stays open, not a grade promotion"
   },
   {
-    "id": "AR03-023",
+    "id": "AR03-024",
     "operation": "replace",
     "locator": "*RECOG:R9-corollary THM | q_a=q_b=q₀, Θ_b−Θ_a=δ: lim(Θ_{b,m}−Θ_{a,m})=δ+q₀[Λ₁(Θ_a+δ)−Λ₁(Θ_a)]+(R_b−R_a), |R_b−R_a|≤2C₂q₀² (τlog(q_b/q_a) vanishes; 1/q_m=m+O(log m)); δ=π/6 ⇒ differ",
     "old_sha256": "025b362025a4c0abe2bcaab00a2434860bc67ded505dfa49c5997e0a5457534d",
@@ -207,7 +216,7 @@
     "reason": "owner RID for existing exact-map corollary"
   },
   {
-    "id": "AR03-024",
+    "id": "AR03-025",
     "operation": "replace",
     "locator": "RECOG-THM-R9-COMPARATOR-INCOMPLETENESS THM | q_a=q_b=q₀, Θ_b−Θ_a=δ: lim(Θ_{b,m}−Θ_{a,m})=δ+q₀[Λ₁(Θ_a+δ)−Λ₁(Θ_a)]+(R_b−R_a), |R_b−R_a|≤2C₂q₀² (τlog(q_b/q_a) vanishes; 1/q_m=m+O(log ",
     "old_sha256": "a8da258bf6880b2d9583b27826fb51c2379486b6bbd34aa927ffbcd3c8b465ae",
@@ -216,7 +225,7 @@
     "reason": "registered corollary no longer RID gap"
   },
   {
-    "id": "AR03-025",
+    "id": "AR03-026",
     "operation": "replace",
     "locator": "RECOG-THM-R9-COMPARATOR-INCOMPLETENESS THM | q_a=q_b=q₀, Θ_b−Θ_a=δ: lim(Θ_{b,m}−Θ_{a,m})=δ+q₀[Λ₁(Θ_a+δ)−Λ₁(Θ_a)]+(R_b−R_a), |R_b−R_a|≤2C₂q₀² (τlog(q_b/q_a) vanishes; 1/q_m=m+O(log ",
     "old_sha256": "c911bd2cfc0223cf3f21a39ddac7560e2e10aee50499eee05150542b6776ebdd",
@@ -225,7 +234,7 @@
     "reason": "witness-window rounded values"
   },
   {
-    "id": "AR03-026",
+    "id": "AR03-027",
     "operation": "replace",
     "locator": "*RECOG:R9-budget ALG | degree≥7 contribution to retained memory ≤2C₇q₀² (200q₀² on |z|≤1/20, 60q₀² on |z|≤1/40); |Λ₁|≤0.0076520; leading dominates for q₀<|Λ₁|/(2C₇)=3.83×10⁻⁵ (C₇=1",
     "old_sha256": "dcfc0a37167b2af587af0ad556969daa459930947ca6db4d778cbd4015418c91",
@@ -234,7 +243,7 @@
     "reason": "partial degree-seven budget versus complete R9 remainder"
   },
   {
-    "id": "AR03-027",
+    "id": "AR03-028",
     "operation": "replace",
     "locator": "RECOG-DEF-A1A-PHASE-INTERFACE DEF | x₀∈U, x_m=T^{6m}x₀: (i) D_M^U (NUMGEN formula on U; = D_M on U∩U_NUMGEN; extends a definition, not a NUMGEN theorem); (ii) Θ_W(m) from principal",
     "old_sha256": "3a65c520198e5e9c1efebe7d2262ffdd98392ccc691a96bf3cb915422944ade5",
@@ -243,7 +252,7 @@
     "reason": "owner current imports"
   },
   {
-    "id": "AR03-028",
+    "id": "AR03-029",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-LIFT-ALIGNMENT THM | sc: U_T | ∀x∈U_T: π/6<δ_T(x)<π/2 ⇒ ∀x₀∈U, M≥1: D_M^U=Θ_W(0)−Θ_W(M) | method: W(Tx)=λW+λ(η−sinη)+ω(e^ρ−1−ρ) exactly (ω²=−1−ω); |ρ|,|η|≤(2/√3)|W|<2",
     "old_sha256": "3757dfd2cc6e1f94f7e086c4f8ff136375f47849439dadba58f9d6995c7c6314",
@@ -252,7 +261,7 @@
     "reason": "lift alignment home and current dependency without retired R-L1"
   },
   {
-    "id": "AR03-029",
+    "id": "AR03-030",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-RECIPROCAL-AMPLITUDE THM | sc: x₀∈U | |Q_{m+1}⁻¹−Q_m⁻¹−1|<(15/2)√Q_m ⇒ Q_M⁻¹=Q₀⁻¹+M+O(√M), MQ_M→1 | method: Q_{m+1}=Q_m(1−Q_m+ε_m), |ε_m|≤(16931/10000)Q_m^{3/2}+108Q_",
     "old_sha256": "3df43593defeaa4fc73f59ee7bfcec3ff0de2a6bd275ab75974eda5f064da7f2",
@@ -261,7 +270,7 @@
     "reason": "A2 point-of-use scope"
   },
   {
-    "id": "AR03-030",
+    "id": "AR03-031",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-RECIPROCAL-AMPLITUDE THM | sc: x₀∈U | |Q_{m+1}⁻¹−Q_m⁻¹−1|<(15/2)√Q_m ⇒ Q_M⁻¹=Q₀⁻¹+M+O(√M), MQ_M→1 | method: Q_{m+1}=Q_m(1−Q_m+ε_m), |ε_m|≤(16931/10000)Q_m^{3/2}+108Q_",
     "old_sha256": "de9e601cd46de4b47b1c987ad49b05a4bcfb005619e3c3341b1d4a5d38c22ce5",
@@ -270,7 +279,7 @@
     "reason": "retired existence diagnostic replaced with consumer interface"
   },
   {
-    "id": "AR03-031",
+    "id": "AR03-032",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-PHASE-EXISTENCE-ALT THM·c | if: H-NG (lim_M(D_M^U−τlog M) exists for the orbit) | sc: x₀∈U | Ψ_{W,∞}, Ψ_{z,∞} exist, Ψ_{z,∞}=Ψ_{W,∞}=Θ_W(0)−lim(D_M^U−τlog M); limit =",
     "old_sha256": "2cacb3c697705b2d0b372dc1d02ff26203dc0f63d5e92ce68ecb5d526ad76fb6",
@@ -279,7 +288,7 @@
     "reason": "A4 do not identify domains of H-NG and INF-1"
   },
   {
-    "id": "AR03-032",
+    "id": "AR03-033",
     "operation": "replace",
     "locator": "RECOG-RESULT-A1A-PHASE-EXISTENCE-NG RES[from ALG] | sc: x₀∈U∩U_NUMGEN (no explicit radius) | (a) Ψ_{z,∞}=Ψ_{W,∞}=Θ_W(0)−C_D, C_D=τlog Q₀−M_W; existence only (no memory coefficients",
     "old_sha256": "4a3972a82c6c5ddf20f653613d3bd1c983046cbd2ccde2d89d3b1736c9acae37",
@@ -288,7 +297,7 @@
     "reason": "preserve existing route, no silent regrade"
   },
   {
-    "id": "AR03-033",
+    "id": "AR03-034",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-CD-IDENTIFICATION THM | sc: x₀∈U | (b) C_D^ext(x₀)=lim_M(D_M^U−τlog M) exists, C_D^ext=τlog Q₀−M_W=τlog q₀+D_Θ(z₀)−M(z₀) | <RECOG-THM-R9-MEMORY (row |z|≤1/20, q₀≤1/40",
     "old_sha256": "deaefc55b62992ed44f7a97dffe5260c772f839c6ae0912d5af9c19fa76d7757",
@@ -297,7 +306,7 @@
     "reason": "conditional-proof grammar current edition"
   },
   {
-    "id": "AR03-034",
+    "id": "AR03-035",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-CD-IDENTIFICATION THM | sc: x₀∈U | (b) C_D^ext(x₀)=lim_M(D_M^U−τlog M) exists, C_D^ext=τlog Q₀−M_W=τlog q₀+D_Θ(z₀)−M(z₀) | <RECOG-THM-R9-MEMORY (row |z|≤1/20, q₀≤1/40",
     "old_sha256": "8a8dd204c2c318c585489ef0e1c7efee16eb7eae8d998e41fe3fca84f3c42190",
@@ -306,7 +315,7 @@
     "reason": "A3 no phi ownership identification"
   },
   {
-    "id": "AR03-035",
+    "id": "AR03-036",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION THM | sc: rows not mixed | (c) 𝒫₂(W₀)=−Δ₁(W₀)+Q₀[c_iso+Λ₁(Θ_{W₀})]+P_W2(W₀), Δ₁(W)=|W|[17√3/36cosΘ−1/12sinΘ−7√3/72cos3Θ+1/8sin3Θ], P_W2(W)=−Δ₂+",
     "old_sha256": "8df1f08d643a3fc10d40e0e6970cc7258a57d03a48824dcf583c7de3bfaec53c",
@@ -315,7 +324,7 @@
     "reason": "adopted explicit-U theorem; independent proof route, not research suggestion"
   },
   {
-    "id": "AR03-036",
+    "id": "AR03-037",
     "operation": "replace",
     "locator": "*RECOG:A1a-scope DEF | (i) (a) is the only R9-free claim, only on the existential intersection; (ii) no Dyadic domain widened, no Dyadic grade changed, INF-1 gains no radius; (iii)",
     "old_sha256": "93ee7727c9b553bd0a0f82346a33938b0be65320d6785906ff9b0d4396bc54dc",
@@ -324,7 +333,7 @@
     "reason": "two distinct R9-free routes"
   },
   {
-    "id": "AR03-037",
+    "id": "AR03-038",
     "operation": "replace",
     "locator": "*RECOG:relabeling-Sh ALG | S_h=h∘(−I)∘h⁻¹ exact involution on h(D); 𝒥_{≤6}(f∘S_h−S_h∘f)=0 (degree 6, not all orders); C_W(S_ht,S_ht)−C_W(t,t)=(3/2)t³+O(t⁴) (independent of h); C_W ",
     "old_sha256": "8177f34002c93466d5c5ae3ae78620ca6d10d050e8e454bc4b6a88634b38542c",
@@ -333,7 +342,7 @@
     "reason": "A1 exact involution versus finite jet commutation; full refusal list"
   },
   {
-    "id": "AR03-038",
+    "id": "AR03-039",
     "operation": "replace",
     "locator": "*RECOG:prerequisite-ladder RES | rank and pole-level pair symmetry need no history; state-level pair symmetry needs co-presence or retained comparison data; spectral stratum needs ",
     "old_sha256": "d623045192bb1d080970fa7876db08be69db4b8fc9e7729883d65b2e946cccea",
@@ -342,7 +351,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-039",
+    "id": "AR03-040",
     "operation": "replace",
     "locator": "*RECOG:radial-fate-law RES | Re μ₆=3b−4a²: healing ⇔ 4a²>3b, neutral ⇔ =, expansion ⇔ < (cubic order only); g=ρ+γρ⁵: (a,b)=(0,0) yet Q(T⁶(t,0))−t²=6γt⁶+O(t⁸), either sign; two heal",
     "old_sha256": "17b33f7301cdf43b341af1276efae318df62615cd29cd04d5005fe4c70e42805",
@@ -351,7 +360,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-040",
+    "id": "AR03-041",
     "operation": "replace",
     "locator": "*RECOG:order-rigid RES | return-defect order rigid across shear-jet family; content (arg μ, Re μ) and radial fate shear-selected; J₃ = mathematical recognition residue (SG-R6); del",
     "old_sha256": "7a0baa81cb8ae5f2191c0029f3bf6622ae2c64058835fd9438e100839b79b582",
@@ -360,7 +369,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-041",
+    "id": "AR03-042",
     "operation": "replace",
     "locator": "*RECOG:unification RES | recurrence and encounter recognition are diagonal/off-diagonal cases of one comparator algebra through degree p−2 (R6 sub-item closed) | @§6.12",
     "old_sha256": "7d7a01411f4ef8d90319dbdfaf13a52c49887b08c26a94e9cbc008a293d822bd",
@@ -369,7 +378,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-042",
+    "id": "AR03-043",
     "operation": "replace",
     "locator": "*RECOG:comparator-incompleteness-truncated RES (historical diagnostic) | pairs 𝒫_α: (Q_a,Q_b)=(q,q), (Θ_a,Θ_b)=(α,α+π/6): identical comparator data yet ΔΦ_lat(α)=−2Λ(q,α)+O(q²): +3",
     "old_sha256": "526bed4a44975b06c7cb2ca4d546b7a4ed429e77d130ec736e7599c6ea345fd6",
@@ -378,7 +387,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-043",
+    "id": "AR03-044",
     "operation": "replace",
     "locator": "*RECOG:R5-restated RES | under twisted-cocycle premise \"which function?\" → \"which k?\", exhaustive: P1 composition (twisted cocycle along r_AC=r_ABr_BC? → RRF OPEN-B→OPEN-E1, OFN/OP",
     "old_sha256": "8d14477af676f996ef1f4c34f47d9dbc6f600dd4111dfade1014047b1f6f401b",
@@ -387,7 +396,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-044",
+    "id": "AR03-045",
     "operation": "replace",
     "locator": "*RECOG:radial≠rank-entry RES | universal radial access does not imply universal rank-side entry; survivor sits on stable manifold of a positive-D_s hyperbolic period-9 orbit (certi",
     "old_sha256": "e7ebc0a9d45d1133820a64fbd7e4b62d6877f093c135d17f563d1aa960922339",
@@ -396,7 +405,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-045",
+    "id": "AR03-046",
     "operation": "replace",
     "locator": "*RECOG:R7-independence RES | radial access universal (THM); rank-side entry not universal (THM); rank locus accessible (THM); logically independent; genericity uncertified | @§6.15",
     "old_sha256": "852aeca637b6ff50549684270ad28147869b6ce789c3f85c6eafebb1dcddf4f3",
@@ -405,7 +414,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-046",
+    "id": "AR03-047",
     "operation": "replace",
     "locator": "RECOG-RESULT-TWIN-QC-DEGENERACY RES | under crossing-step semantics the twin has no finite amplitude threshold (crossing-step rank safety unconditional); primitive C₀ starts at ρ=l",
     "old_sha256": "325aaa8bf5a04401f1ebfab2db378ac83de3f41c8e587a0e745e788ad904c163",
@@ -414,7 +423,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-047",
+    "id": "AR03-048",
     "operation": "replace",
     "locator": "RECOG-RESULT-EVENT-UNDERDETERMINATION RES | among rank transition, lattice threshold, retained non-comparator memory and the NG physical 7-gap token, no unique physical-event predi",
     "old_sha256": "a1d23d908b396a0de4912bba029f932d6df935ac38e86f589be8d553ccd3a561",
@@ -423,7 +432,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-048",
+    "id": "AR03-049",
     "operation": "replace",
     "locator": "*RECOG:F2a-table RES | criterion 1: rank PASS; lattice threshold FAIL; NG B/7-gap PASS (transported section); native/literal replacement section = different token rule (F2(a3) sele",
     "old_sha256": "81de6a67bbd81cba32b840dee3e8d8c21f10e80776fa66a13f8df6ca5ab44ab5",
@@ -432,7 +441,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-049",
+    "id": "AR03-050",
     "operation": "replace",
     "locator": "RECOG-RESULT-P2-FOLD-NO-REGISTERED-RETENTION RES (registry-relative) | inventory: lifted state (same image), present-state comparators (factor through y), R9 Ψ/M (domain near P₁; s",
     "old_sha256": "ba95c49f19977625e5c14195d95d57dcfd28a07489aa24617665108fdb4f81ae",
@@ -441,7 +450,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-050",
+    "id": "AR03-051",
     "operation": "replace",
     "locator": "*RECOG:Btoken-Rlog RES | B/7-gap: R_log only, R_ind not established; owner law D_{M_k}=C+(k−1)π/3+o(1) (block-sampled defect) = predictability/locking of the slip stream, not reten",
     "old_sha256": "1b7addcaaea4e3e3765184512f14c8a0983bbddc40a0685bde6d3f62fd1be0f4",
@@ -450,7 +459,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-051",
+    "id": "AR03-052",
     "operation": "replace",
     "locator": "*RECOG:criterion-table RES | rank (B3 fold): crit1 PASS, crit4 PASS (rank class), crit5 E, no registered R · B/7-gap: PASS (transported), PASS (return word), R_log only · lattice t",
     "old_sha256": "0ca295f078afd0a0ad619ae782f159ce0c9f49c70d5243bb91bfb75f2d688556",
@@ -459,7 +468,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-052",
+    "id": "AR03-053",
     "operation": "replace",
     "locator": "RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH RES | R9 carrier (Ψ,Φ) has analytic block updates (smooth cohomological cancellation), no event-gated channel ⇒ no identifiable token-specific",
     "old_sha256": "df55d7e94c37c968c04189449a60fcbf8a680a7a2012b0ecfb215ef7e5986c4f",
@@ -468,7 +477,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-053",
+    "id": "AR03-054",
     "operation": "replace",
     "locator": "*RECOG:F3-outcome RES | C0 expected (common driver α); C1 no certified signal through O(q); C2 absent; profiles: B/7-gap token+transition+R_log; fold token/transition+E, no R; R9 R",
     "old_sha256": "2c39714099e6dd21803bd53a56233d2a2364d3ed988e0b59cf5d41813d84ba07",
@@ -477,7 +486,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-054",
+    "id": "AR03-055",
     "operation": "replace",
     "locator": "RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS RES (registry-relative) | token→Δ[a] test not well-posed; required: W1 fixed directed graph, coefficient module, edge cochain a with registere",
     "old_sha256": "565b52f0e38ffc8c92e4d36f1807f1e199f2203f485d9894286782310bc25e0e",
@@ -486,7 +495,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-055",
+    "id": "AR03-056",
     "operation": "replace",
     "locator": "*RECOG:F4-alignment RES (no import) | (i) a W1–W4 mechanism would instantiate the NG-7B \"birth/history data\" candidate: R6 network successor ∩ NG-7B at that candidate; (ii) CELL-G1",
     "old_sha256": "f2a9193f575ead8a700cd5eb331d1a8b8d3aa592ad4d936a5f8c48165b78ecf9",
@@ -495,7 +504,7 @@
     "reason": "owner RESULT pairing; statement/scope retained"
   },
   {
-    "id": "AR03-056",
+    "id": "AR03-057",
     "operation": "replace",
     "locator": "*RECOG:tokenisation-consequence RES[from NUM+, ALG] | owner physical return-section token = primitive B-event; 7-gap decided by raw window 0≤o_j<Δ_j=O(Q); h-chart lag crossings (in",
     "old_sha256": "721b0193aafddea011272a93c7c7643c2461cae101a16cc6b68bda214c0ae3fd",
@@ -504,7 +513,7 @@
     "reason": "owner separates numerical token and algebraic schema conclusions"
   },
   {
-    "id": "AR03-057",
+    "id": "AR03-058",
     "operation": "replace",
     "locator": "*RECOG:R-E-separation RES[from THM, ALG, RES] | package has retention without transition (R9 in rank-safe tube), transition/noninjectivity without registered retention (fold), and ",
     "old_sha256": "78c9b4dc956585392b839bd801a288be6604c4f10d3a7eec993d9f955bda9fcc",
@@ -513,7 +522,7 @@
     "reason": "owner split retention and transition/token statuses"
   },
   {
-    "id": "AR03-058",
+    "id": "AR03-059",
     "operation": "replace",
     "locator": "*RECOG:F3-common-driver ALG | by R9: ΔM_{q,δ}(α)=q[Λ₁(α+δ)−Λ₁(α)]+O(q²) (δ=π/6: −2qΛ₁(α)+O(q²)); depends on α only via 6α ⇒ C1 no certified signal through O(q); residual inside O(q",
     "old_sha256": "3aef6ad1baffea441ea391cb672ab279bfe19945348a088f690422a642627f47",
@@ -522,7 +531,7 @@
     "reason": "current explicit owner citation"
   },
   {
-    "id": "AR03-059",
+    "id": "AR03-060",
     "operation": "replace",
     "locator": "*RECOG:F3-common-driver ALG | by R9: ΔM_{q,δ}(α)=q[Λ₁(α+δ)−Λ₁(α)]+O(q²) (δ=π/6: −2qΛ₁(α)+O(q²)); depends on α only via 6α ⇒ C1 no certified signal through O(q); residual inside O(q",
     "old_sha256": "cd617fa12cdcb5a04d66256fcd5e7da60713a2edbee090ff7f197f5c13fe11d4",
@@ -531,7 +540,7 @@
     "reason": "remove obsolete indirect-reference diagnostic"
   },
   {
-    "id": "AR03-060",
+    "id": "AR03-061",
     "operation": "replace",
     "locator": "closed (constraints only) | R2 RECOG-OPEN-KRET-P · R8 RECOG-OPEN-P2-HET-ENTRY · R9 RECOG-OPEN-LATTICE-MEMORY-NF · R10 RECOG-OPEN-RETURN-ENCLOSURE (delivered/accepted) · R11 RECOG-O",
     "old_sha256": "d87db0eb3125696e9191da87efb1020464cd45f20c260d6aa2bafe829ae2d521",
@@ -540,7 +549,7 @@
     "reason": "closed lifecycle modules not open frontier"
   },
   {
-    "id": "AR03-061",
+    "id": "AR03-062",
     "operation": "replace",
     "locator": "*RECOG:F4-alignment RES[from DEF] (no import) | (i) a W1–W4 mechanism would instantiate the NG-7B \"birth/history data\" candidate: R6 network successor ∩ NG-7B at that candidate; (i",
     "old_sha256": "122f384db4e217ca3c04d996caacd99e0a15401b2958010e860354cf33997937",
@@ -549,7 +558,7 @@
     "reason": "explicit shared lifecycle home without changing census"
   },
   {
-    "id": "AR03-062",
+    "id": "AR03-063",
     "operation": "replace",
     "locator": "non-blocking | C₇ sharpening (widens R9 incompleteness window proportionally; DYAD HEUR deferred) · genericity/full measure of twin rank-side entry (NUM only) · explicit radius for",
     "old_sha256": "b458e4b5bc2754a5a2bbdb0280ada32f54dfb559600944c2ab1df41322343f80",
@@ -558,7 +567,7 @@
     "reason": "deferred scientific alternatives stay OPEN, no advisory keys"
   },
   {
-    "id": "AR03-063",
+    "id": "AR03-064",
     "operation": "replace",
     "locator": "RECOG-OPEN-EVENT-RULE (R6) ACTIVE (priority) | missing representation-safe tokenisation/selection principle and a token → R_ind coupling; routes: (1) new event-gated non-counting s",
     "old_sha256": "be0797832a7f9f64cc114c11d45caee3310d2d5ea64384dad2fe8f79b6431c26",
@@ -567,7 +576,7 @@
     "reason": "no process-priority assertion in Atlas"
   },
   {
-    "id": "AR03-064",
+    "id": "AR03-065",
     "operation": "replace",
     "locator": "RECOG-OPEN-EVENT-RULE (R6) ACTIVE | missing representation-safe tokenisation/selection principle and a token → R_ind coupling; routes: (1) new event-gated non-counting single-dyad ",
     "old_sha256": "b89297d3329820f94440fc97d92080d7df5bb21d762a466f3639a19ed5a7a290",
@@ -576,7 +585,7 @@
     "reason": "F5 scope as prospective task, not installed science or necessary nonsmoothness"
   },
   {
-    "id": "AR03-065",
+    "id": "AR03-066",
     "operation": "replace",
     "locator": "SG-R10 lattice scopes: 𝓘_lat, clock ratio, leading Λ invariant under linear frame and U(1)-equivariant residual gauge; Ψ_lat linear-frame only (shift −6aQ); arg c₀₅, |c₀₅|/|β|, cro",
     "old_sha256": "ffc032bc06c8a9b8bd0099e888722abd531530c4a6745f19b70244898bb39e91",
@@ -585,7 +594,7 @@
     "reason": "valid SG-R10 guard with complete R9 bound"
   },
   {
-    "id": "AR03-066",
+    "id": "AR03-067",
     "operation": "replace",
     "locator": "forbidden overclaims (beyond the ¬ fields above) | χ₆ torsor-free · derivation of π/3 or p=6 from eigenphase · Fix = pole stratum · \"arrow of history from swap breaking\" · Q_c as n",
     "old_sha256": "596116de8eccf7beca149d0b72256a2d7932ed9522398df84302e17a0a647426",
@@ -594,7 +603,7 @@
     "reason": "remove obsolete explicit-U prohibition; preserve new boundary"
   },
   {
-    "id": "AR03-067",
+    "id": "AR03-068",
     "operation": "replace",
     "locator": "export protocol (§6.9; witness citations, tags/scopes verbatim) | C_→ structure + Ĉ=±1; k_ret(6)=3, χ₆; CUBIC-RETURN-RIGIDITY; radial-fate law; strata/ladder (candidates); all-p re",
     "old_sha256": "be16787d6a9bbe9d0a0276027def6a493bf4c17615c13999c621682f8ef50145",
@@ -603,7 +612,7 @@
     "reason": "do not conflate full R9 and witness domains"
   },
   {
-    "id": "AR03-068",
+    "id": "AR03-069",
     "operation": "replace",
     "locator": "export protocol (§6.9; witness citations, tags/scopes verbatim) | C_→ structure + Ĉ=±1; k_ret(6)=3, χ₆; CUBIC-RETURN-RIGIDITY; radial-fate law; strata/ladder (candidates); all-p re",
     "old_sha256": "0c364da84ccbbe166b172e3438eaa33d734e59a693cc2580f66abc768a139ed3",
@@ -612,7 +621,7 @@
     "reason": "current consumer edition; its actual historical RECOG pin preserved"
   },
   {
-    "id": "AR03-069",
+    "id": "AR03-070",
     "operation": "replace",
     "locator": "RECOG.R-L1 ~ D-LINK (high) | an R9-free explicit-domain existence proof of C_D^ext on all of U follows from adopted results: DYAD-THM-LPHASE-ROWA-REMAINDER (row A, x∈U) gives φ̂_{6",
     "old_sha256": "f17a616ab0b991d60dc26a3fa600529c3e147a9ae6a567efb40e0a826e06a8db",
@@ -621,7 +630,7 @@
     "reason": "Explicit-U R9/INF-1-free existence is registered by the owner; residual NUMGEN interface is NUMGEN.N-B."
   },
   {
-    "id": "AR03-070",
+    "id": "AR03-071",
     "operation": "replace",
     "locator": "RECOG.R-L3 ~ D-LINK (candidate regrade) | RECOG-ALG-LATTICE-CLOCK imports its rate from NUMGEN, yet RECOG's own THMs imply it on the C_z track: R9 gives Θ_m=Ψ_∞+τlog q_m+o(1), the ",
     "old_sha256": "ac3b64089fe0c6a204ee26682bf2b24ab81c7b9f397ec74612f7f3c713956a3c",
@@ -630,7 +639,7 @@
     "reason": "Alternative clock proof is an open scientific task in D3.L3, not an adopted proof or regrade."
   },
   {
-    "id": "AR03-071",
+    "id": "AR03-072",
     "operation": "replace",
     "locator": "RECOG.R-L4 D-LINK (custody; ≡ DYAD.X6) | general-p bridge statement μ_p=pλ̄ν₃^(1,p) is DYAD-ALG-BRIDGE-LEMMA (DYAD RID) while its general-p proof is RECOG-ALG-LEADING-RETURN-EQUIVA",
     "old_sha256": "be3e0bf24575e4975bf0bf3574e86b857054370500d948070d51c0f75c943279",
@@ -639,7 +648,7 @@
     "reason": "Proof/export custody stated by both owners; no unsettled ownership recommendation."
   },
   {
-    "id": "AR03-072",
+    "id": "AR03-073",
     "operation": "replace",
     "locator": "RECOG.R-L7 D-LINK | RECOG uses DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER in CD-PRIMITIVE-EXPANSION and T1/T2 in CD-IDENTIFICATION with the R9 premise discharged by RECOG-THM-R9-MEM",
     "old_sha256": "0f54268beaab937e4d4a990a3861d0e91d9eaa6f5cf96240bc5e7496f7307092",
@@ -648,7 +657,7 @@
     "reason": "Owner import table and adopted A1a use record the R9 dependency; conditional theorem grades unchanged."
   },
   {
-    "id": "AR03-073",
+    "id": "AR03-074",
     "operation": "replace",
     "locator": "RECOG.R-L8 D-LINK | VF-1 (delivered map not all-orders ℤ₆ / −z symmetric), cited in RECOG F3(b) and the §7 RRF v0.4 row (\"reported even degree-ten term not used\"), is registered si",
     "old_sha256": "928f64dbc8c990558602f5560b7f4984bcda81624caeced79db5e3a791efc515",
@@ -657,7 +666,7 @@
     "reason": "VF-1 cited by DYAD-ALG-NF6-DEG10 in the owner."
   },
   {
-    "id": "AR03-074",
+    "id": "AR03-075",
     "operation": "replace",
     "locator": "RECOG.R-S2 D-SCOPE (SG-R10 self-violation) | RECOG-ALG-LATTICE-STRENGTH \"|μ|/|c₀₅|≈41.3 outside the local regime\" has no frame label: 41.27 is raw-frame |μ|/|c₀₅^raw|; post-H₂ |μ|/",
     "old_sha256": "d64195b76562db3126ac01b2dc98142d98ef2b01475f0d1f6617307c950f5382",
@@ -666,7 +675,7 @@
     "reason": "Raw and post-H2 ratios explicitly frame-labelled."
   },
   {
-    "id": "AR03-075",
+    "id": "AR03-076",
     "operation": "replace",
     "locator": "RECOG.R-G1 D-GRADE | RECOG-OPEN-INTERSECTION tagged [OPEN] in §1 and [HYP] in §6.5/R6; RID uses OPEN type for a hypothesis.",
     "old_sha256": "c8db0758e8979eadf96dad38cec591fcd7dd01ff7717c5425cc2df5994408248",
@@ -675,7 +684,7 @@
     "reason": "Hypothesis grade aligned; OPEN in immutable RID is not live status."
   },
   {
-    "id": "AR03-076",
+    "id": "AR03-077",
     "operation": "replace",
     "locator": "RECOG.R-R3 D-RID | RID type vs grade: RECOG-THM-TWIN-P9-SADDLE and RECOG-THM-TWIN-P9-STABLE-LOCAL are THM RIDs graded [ALG via IA]; RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE is a RESULT ",
     "old_sha256": "374fcfdcb77c9687d4df60ae951fcb9731f23de8de5133555027a65d0e43272c",
@@ -684,7 +693,7 @@
     "reason": "Immutable-prefix nonissues removed; canonical home and E2C custody supplied."
   },
   {
-    "id": "AR03-077",
+    "id": "AR03-078",
     "operation": "replace",
     "locator": "RECOG.R-P2 D-STALE (→NUMGEN) | §6.13b/§7 import NUMGEN D_M and INF-1 as \"RID unavailable\"; NUMGEN v1.20.8 registers NUMGEN-DEF-N5AS1-DEFECT, -DEF-N5AS1-PRIMITIVE-LIFT, -RESULT-N5AS",
     "old_sha256": "ed241ef0321b78f8e957cfdcb3e96e148e663ff6fa6f489102d22e28fe90b455",
@@ -693,7 +702,7 @@
     "reason": "NUMGEN definition and INF-1 imported at v1.20.8 by their owner RIDs."
   },
   {
-    "id": "AR03-078",
+    "id": "AR03-079",
     "operation": "replace",
     "locator": "RECOG.R-T2 D-STALE | §4 layer-routing row \"p-family / normal form\" still lists c_θ^(6) and \"backbone\" as canonical objects (forbidden by SG-R13 / refusal line); SG-R10 says leading",
     "old_sha256": "41e5a843915671d58dec9ad726d135cd08d31dec52252f610f7d4d92d4caec9c",
@@ -702,7 +711,7 @@
     "reason": "Current guard, routing and adopted T1/T2 use reconciled; leading-only warning remains valid."
   },
   {
-    "id": "AR03-079",
+    "id": "AR03-080",
     "operation": "replace",
     "locator": "RECOG.R-L1b ~ D-LINK/D-RID | NUMGEN's φ* has no owner node (DYAD states DYAD-CAND-PHISTAR-ENTRY-PHASE was never a Dyadic identifier); RECOG-THM-A1A-CD-IDENTIFICATION (C_D^ext=τlog ",
     "old_sha256": "4b3ad88b93ce5ad6ed13b6071c60c77753d55fb08b1d6d11e10714f3bf1f8c49",
@@ -711,7 +720,7 @@
     "reason": "A3 scoped candidate comparison"
   },
   {
-    "id": "AR03-080",
+    "id": "AR03-081",
     "operation": "replace",
     "locator": "RECOG.R-L5 ~ D-LINK (DYAD OPEN 20 / R1 / RRF OPEN-A) | DYAD-THM-SMOOTH-EMBEDDING E4 gives a unique C^∞ involution R=T³∘K₂⁻¹ with DR(0)=−I, RF=FR, RT=TR near P₁; DYAD states S_h=h₆∘",
     "old_sha256": "0a74174d07a43a62f6eb5bfedd25f483e6c1b5079523599aa3832fb4b9a58822",
@@ -720,7 +729,7 @@
     "reason": "A1 remove false premise-discharge claim, retain genuine candidate link"
   },
   {
-    "id": "AR03-081",
+    "id": "AR03-082",
     "operation": "replace",
     "locator": "RECOG.R-R2 D-RID | theorem-grade/adopted claims without RID: R9 exact-map comparator-incompleteness corollary [THM] (cited by export interface and R6); P2-HET corollary (C₀ avoidan",
     "old_sha256": "f1f91b3ee1552b676c1a94e2e5231dbda7fcff8b7cab8eedbcc1cc999a2f09de",
@@ -729,7 +738,7 @@
     "reason": "registered versus named sub-statements; owner not forced to invent identifiers"
   },
   {
-    "id": "AR03-082",
+    "id": "AR03-083",
     "operation": "replace",
     "locator": "RECOG.R-P3 D-STALE | §7.1 notice \"OFN pins RECOG v0.3.1 — current v0.3.20\" contradicts RECOG's own current edition; RRF v0.4 row keeps \"PI adoption pending\" for the S_h convention.",
     "old_sha256": "598958cd56b02514ccc55b1372ab085b4819d3874ae0fc5959adb611deb2c2c0",
@@ -738,7 +747,7 @@
     "reason": "recorded history exception, not false current-state conflict"
   },
   {
-    "id": "AR03-083",
+    "id": "AR03-084",
     "operation": "replace",
     "locator": "RECOG.R-T1 D-STALE | closed OPEN entries (R8, R9, R11) keep \"[OPEN]\" target and active sub-items as \"retained specification\"; R11 has a \"Former text … Active sub-items [OPEN]\" bloc",
     "old_sha256": "c23a68a1f19453e885d484e9b93182136287c2ac4dab264ad02a24d6ebab7fdd",
@@ -747,7 +756,7 @@
     "reason": "partial live-file exception accurately scoped"
   },
   {
-    "id": "AR03-084",
+    "id": "AR03-085",
     "operation": "replace",
     "locator": "RECOG.R-Y1 D-SYM | overloads: J (Jacobian DT incl. J(P₂), det J, Δ_J; six-step NF jet ≡ DYAD J_NF; J_{k_ret}/J₃; J_Q) · M (memory M(z₀), M_W; block count M in D_M^U and lim_M; slip",
     "old_sha256": "49a79f9b043ff6e0d0ce0e73630c93ae7ddc273f90433ea785ec551d75dcc618",
@@ -756,7 +765,7 @@
     "reason": "notation line resolves undefined-use reading"
   },
   {
-    "id": "AR03-085",
+    "id": "AR03-086",
     "operation": "replace",
     "locator": "RECOG.R-D1 D-PROOF (c)/(b) | (c) Arb executions for R9 (RECOG-ART-R9-MEMORY), B3 (b3_cert.json) and E2C leaves run once; reviewers checked bindings/hashes and reconstructed constan",
     "old_sha256": "e3bf4b3c800abc7cf9b8f90dcde5d6755fd442af05b74d9a541f99a9cc8f2ad3",
@@ -765,7 +774,7 @@
     "reason": "artifact recovery updates availability, not proof grade or replay state"
   },
   {
-    "id": "AR03-086",
+    "id": "AR03-087",
     "operation": "replace",
     "locator": "*ATLAS:checked-D2 | evidence record, not a claim; adopts nothing; owner wins on conflict | context: atlas v0.1 build checks (21 Oct 2026, sources as then read) carried forward unch",
     "old_sha256": "b69590b864a8f3f87cb05aaa3fad001d0fc47514776c959189681ff08e66a0a7",
@@ -774,7 +783,7 @@
     "reason": "move 80-digit norm evaluations into numerical evidence; exact p12 remains exact"
   },
   {
-    "id": "AR03-087",
+    "id": "AR03-088",
     "operation": "replace",
     "locator": "OFN.O11 ~ D-LINK: DYAD OPEN 3 phase imports (IMP-O10-05) include DYAD-THM-OPEN3-ASYMPTOTIC-PHASE conditional on RECOG R9; RECOG R-L1 (L-PHASE + A1a reciprocal amplitude may remove ",
     "old_sha256": "1d72cd26d15f3c774373846bcfb4a9d577aea40e46ad5fa5fa6fbf41d5c9e010",
@@ -783,7 +792,7 @@
     "reason": "explicit existence does not discharge every R9-dependent consumer claim"
   },
   {
-    "id": "AR03-088",
+    "id": "AR03-089",
     "operation": "replace",
     "locator": "NUMGEN-RESULT-N5AS1-INF1 RES[ALG] | sc: existential tube | D_M=τΣq_m−Σr_m=τ log M+C_D+o(1)→∞ | <L-BACKBONE, L-PHASE | >RECOG-RESULT-A1A-PHASE-EXISTENCE-NG, RECOG-RESULT-A1A-CD-AGRE",
     "old_sha256": "3b319619af4ef3ba0dd815ba866fc6c3e7c6d091f4f7a1c0d9e5ce25be90715a",
@@ -792,7 +801,7 @@
     "reason": "owner theorem replaces derived link without consumer regrade"
   },
   {
-    "id": "AR03-089",
+    "id": "AR03-090",
     "operation": "replace",
     "locator": "E2C-ENG-SPLIT-REFINEMENT ENG | inherited R8 split path refinement-inefficient (subtiles keep parent centre; axis-aligned renormalization destroys thin frames); E2C uses frame-nativ",
     "old_sha256": "429c1078fb75934bdbf49efc480efaf32bde3e6dec078ccff6c025c0380c6da9",
@@ -801,7 +810,7 @@
     "reason": "E2C local custody is declared"
   },
   {
-    "id": "AR03-090",
+    "id": "AR03-091",
     "operation": "replace",
     "locator": " | ! RECOG.R-R3",
     "old_sha256": "489b6ea1bf0f29ae3844251b665c1ed4ea96d19dd4d512988ba9ff5178ffdb47",
@@ -810,7 +819,7 @@
     "reason": "immutable RID category is not live grade"
   },
   {
-    "id": "AR03-091",
+    "id": "AR03-092",
     "operation": "replace",
     "locator": "PROG.G4 ~ D-LINK: IF14 (\"RECOG pins NUMGEN v1.15\"), IF16 (quintic interface unresolved), IF17 (general-return transfer) — check against RECOG v0.3.22 and DYAD v6.4.22.",
     "old_sha256": "49969c3240a92ba23bd439a8dd18c0b3b978dc65c624d003d5e80b8d7785f815",
@@ -819,7 +828,7 @@
     "reason": "current owner comparison; Programme source not repinned"
   },
   {
-    "id": "AR03-092",
+    "id": "AR03-093",
     "operation": "replace",
     "locator": "NUMGEN.N-G1 D-GRADE/D-STALE | §9.2 says RECOG uses GAP-LOCK 3 \"at HEUR\"; RECOG v0.3.22 uses it at ALG (BTOKEN-LOG-EQUIVALENCE); row from RECOG v0.3.5.",
     "old_sha256": "7198bbd432dc95aff9bea28611a5228ec4c609ad7c64df83e547980c699d1d85",
@@ -828,7 +837,7 @@
     "reason": "downstream grade-of-use mismatch remains"
   },
   {
-    "id": "AR03-093",
+    "id": "AR03-094",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION THM | sc: rows not mixed | (c) 𝒫₂(W₀)=−Δ₁(W₀)+Q₀[c_iso+Λ₁(Θ_{W₀})]+P_W2(W₀), Δ₁(W)=|W|[17√3/36cosΘ−1/12sinΘ−7√3/72cos3Θ+1/8sin3Θ], P_W2(W)=−Δ₂+",
     "old_sha256": "8df1f08d643a3fc10d40e0e6970cc7258a57d03a48824dcf583c7de3bfaec53c",
@@ -837,7 +846,7 @@
     "reason": "current imported qualifier spelling; dependency unchanged"
   },
   {
-    "id": "AR03-094",
+    "id": "AR03-095",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION THM | sc: rows not mixed | (c) 𝒫₂(W₀)=−Δ₁(W₀)+Q₀[c_iso+Λ₁(Θ_{W₀})]+P_W2(W₀), Δ₁(W)=|W|[17√3/36cosΘ−1/12sinΘ−7√3/72cos3Θ+1/8sin3Θ], P_W2(W)=−Δ₂+",
     "old_sha256": "9ba1701a4adc9da88bff37797fcefd6e1aca38c3d0af6c4cf637f1d22c74ecda",
@@ -846,7 +855,7 @@
     "reason": "pin and evidence edition kept distinct"
   },
   {
-    "id": "AR03-095",
+    "id": "AR03-096",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-CD-IDENTIFICATION THM | sc: x₀∈U | (b) C_D^ext(x₀)=lim_M(D_M^U−τlog M) exists, C_D^ext=τlog Q₀−M_W=τlog q₀+D_Θ(z₀)−M(z₀) | <RECOG-THM-R9-MEMORY (row |z|≤1/20, q₀≤1/40",
     "old_sha256": "d51c15a666d11b8b478046241a12b3bd5592736ee2d805ae03150d981a4b36e6",
@@ -855,7 +864,7 @@
     "reason": "A3 tightened point of use"
   },
   {
-    "id": "AR03-096",
+    "id": "AR03-097",
     "operation": "replace",
     "locator": "RECOG-THM-A1A-LIFT-ALIGNMENT THM | sc: U_T of DYAD-THM-PRIM-CTR | π/6<δ_T(x)<π/2 for every x∈U_T; x₀∈U, integer M≥1 ⇒ D_M^U=Θ_W(0)−Θ_W(M) | proof: exact W(Tx)/(λW) identity, 4R+(4/",
     "old_sha256": "7178d04a07146561474affdfda526f48c1f5ff326b37b420d79b7a05f8dac54e",
@@ -864,7 +873,7 @@
     "reason": "retain exact local proof-input facts"
   },
   {
-    "id": "AR03-097",
+    "id": "AR03-098",
     "operation": "replace",
     "locator": "RECOG.R-L5 ~ D-LINK | RECOG §6.14 records exact S_h involution, degree-6 commutation, j⁶S_h=j⁶R₀ and the distinct smooth R of DYAD-THM-SMOOTH-EMBEDDING. The prospective transfer of",
     "old_sha256": "b086d01878664341a790f064588f5f21996fa5c493b17e75f7e3724b234e52fc",

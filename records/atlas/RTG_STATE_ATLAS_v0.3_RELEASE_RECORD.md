@@ -7,11 +7,11 @@
 
 | Object | SHA-256 |
 |---|---|
-| `atlas/RTG_STATE_ATLAS.md` | `1707fa933a2c1d441642e3a876095cc1eb75e478cb9da61636d9d864e60dd319` |
+| `atlas/RTG_STATE_ATLAS.md` | `dad844027a8d2c614a90c0a3c1a5736dae9d0a49824b70f788ede7c62a3487c3` |
 | `atlas/RTG_STATE_ATLAS_METHOD.md` | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` |
 | `evidence/atlas/v0.3/source_manifest.json` | `db347c8f48da659d1f491fc8f764b6cbc7de2c729c2c1eba1a449f0985b10c96` |
 | `tools/atlas_check.py` | `0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d` |
-| `evidence/atlas/build/refresh_v0_3.py` | `ddc10767d6390072dffb55cd9dcf170b0e7d5b45ecd59a1523d907789680d4e0` |
+| `evidence/atlas/build/refresh_v0_3.py` | `4e9ed2f826b291084a0aa8c3de243765e4f98f8308828ffe44ae046a83325efa` |
 
 ## 2. Basis and limits
 

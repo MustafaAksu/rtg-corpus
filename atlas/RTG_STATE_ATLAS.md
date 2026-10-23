@@ -1557,4 +1557,4 @@ PREL.P8 D-SCOPE (minor; atlas-checked): β(g)=0.72g−0.63g²−0.011g³ positiv
 D6.X1 ~ D-LINK: PREL β₁=8 (grown N=175) and Legacy R0 "seven large vertex clusters, possible β₁≈8" — different ensembles (N=175 ESM vs R2 N=10 seeds 17–26); same number, not shown to be the same object.
 D6.X2 D-CONV (owner-flagged): PREL Ca-40 radius 3.47 fm vs 4.80 fm is an internal unresolved conflict (NEED CHECK), not D-WRONG.
 
-*END — RTG STATE ATLAS v0.2. Noncanonical; owner DSNs govern.*
+*END — RTG STATE ATLAS v0.3. Noncanonical; owner DSNs govern.*

@@ -56,6 +56,7 @@ class Edit:
 
 def refresh(a: Edit):
     a.replace('# RTG STATE ATLAS v0.2', '# RTG STATE ATLAS v0.3', 'candidate edition')
+    a.replace('*END — RTG STATE ATLAS v0.2.', '*END — RTG STATE ATLAS v0.3.', 'matching footer edition')
     a.replace('evidence/atlas/source_manifest_v0_2.json','evidence/atlas/v0.3/source_manifest.json','frozen source manifest')
     a.replace('| RECOG | RTG_RELATIONAL_RECOGNITION_DSN | v0.3.22 | `recog-v0.3.22` | canonical Tier 3 |',
               '| RECOG | RTG_RELATIONAL_RECOGNITION_DSN | v0.3.23 | `recog-v0.3.23` | canonical Tier 3 |','adopted owner edition')
@@ -307,6 +308,7 @@ def scope_checks(text, retired, source):
     def line(prefix):
         hits=[l for l in text.splitlines() if l.startswith(prefix)]
         return hits[0] if len(hits)==1 else ''
+    check('edition-presentation', text.startswith('# RTG STATE ATLAS v0.3\n') and text.rstrip().endswith('*END — RTG STATE ATLAS v0.3. Noncanonical; owner DSNs govern.*'))
     n=line(NEW_RESULT+' ')
     check('new-result-home',n.startswith(NEW_RESULT+' THM |'))
     check('explicit-U-and-series',all(s in n for s in ['0<Q₀≤1/625','τH(a)','−ψ(a)','absolutely convergent']))
@@ -356,6 +358,7 @@ def focused_controls(c, text, src, retired):
     lines=[l for l in text.splitlines() if not l.startswith(NEW_RESULT+' ')]
     inv=recog_inventory(c,src,'\n'.join(lines))
     controls.append(dict(id='U13 RID left in dependencies is not coverage',detected=any(r['id']==NEW_RESULT and r['status']=='FAIL' for r in inv)))
+    mutate('U14 mismatched footer', '*END — RTG STATE ATLAS v0.3.', '*END — RTG STATE ATLAS v0.2.', 'edition-presentation')
     return controls
 
 

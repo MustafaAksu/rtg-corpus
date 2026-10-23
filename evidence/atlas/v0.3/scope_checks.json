@@ -1,5 +1,9 @@
 [
   {
+    "id": "edition-presentation",
+    "result": "PASS"
+  },
+  {
     "id": "new-result-home",
     "result": "PASS"
   },

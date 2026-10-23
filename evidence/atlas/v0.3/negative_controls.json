@@ -95,12 +95,21 @@
     "id": "U12 retired diagnostic",
     "expected_failure": "no-retired-diagnostics",
     "failures": [
+      "edition-presentation",
       "no-retired-diagnostics"
     ],
     "detected": true
   },
   {
     "id": "U13 RID left in dependencies is not coverage",
+    "detected": true
+  },
+  {
+    "id": "U14 mismatched footer",
+    "expected_failure": "edition-presentation",
+    "failures": [
+      "edition-presentation"
+    ],
     "detected": true
   }
 ]
