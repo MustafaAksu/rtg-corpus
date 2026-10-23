@@ -3,8 +3,9 @@
 
 For every load-bearing RECOG import row, the owner text at the current tag is read (git show) and the
 statement-carrying strings RECOG quotes are required to occur in the owner text at the cited RID's entry
-or section. This is a source-read check of quoted statements (EV-SRC-READ), not a recertification:
-no owner certificate is rerun. Each row also records RECOG's pin in v0.3.22 and the current owner tag form.
+or section. This is a current-source presence check of the quoted statements (EV-SRC-READ): it does not
+compare with the earlier pinned owner editions (most are not in the repository; the earlier comparisons
+are RECOG's G2 audits of v0.3.18 and v0.3.21), and it is not a recertification: no owner certificate is rerun. Each row also records RECOG's pin in v0.3.22 and the current owner tag form.
 
 usage (from the repository root):  python -I evidence/recog/scripts/recog_v0_3_23_claim_audit.py OUT_JSON
 exit 0 iff every row passes.
@@ -131,9 +132,9 @@ def main(out):
         rows.append({"key": key, "recog_location": loc, "owner": ids[owner]["tag"], "owner_rid_or_section": rid,
                      "recog_v0_3_22_pin": pin, "current_owner_tag_form": tagform, "anchor_found": a,
                      "statement_strings": len(pats), "missing": miss,
-                     "class": "U (statement unchanged at the current tag)" if good else "CHECK"})
+                     "class": "P (quoted statement present at the current tag)" if good else "CHECK"})
     json.dump({"sources": ids, "rows": rows, "all_pass": ok,
-               "evidence_state": "EV-SRC-READ (quoted statements present at the tag); no owner certificate rerun"},
+               "evidence_state": "EV-SRC-READ: current-source presence of the quoted statements; no comparison with earlier pinned editions; no owner certificate rerun"},
               open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for r in rows:
         print(("PASS " if not r["missing"] and r["anchor_found"] else "FAIL ") + r["key"], r["missing"] or "")

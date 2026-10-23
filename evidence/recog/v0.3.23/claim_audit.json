@@ -22,7 +22,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NF6",
@@ -34,7 +34,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NF6-OBS",
@@ -46,7 +46,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "PRIM-CTR",
@@ -58,7 +58,7 @@
    "anchor_found": true,
    "statement_strings": 7,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NF-INV",
@@ -70,7 +70,7 @@
    "anchor_found": true,
    "statement_strings": 4,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NF-REM",
@@ -82,7 +82,7 @@
    "anchor_found": true,
    "statement_strings": 4,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "BRIDGE",
@@ -94,7 +94,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "KP-FRAME",
@@ -106,7 +106,7 @@
    "anchor_found": true,
    "statement_strings": 3,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "FACEFLUX",
@@ -118,7 +118,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "PRIMITIVE-MAP",
@@ -130,7 +130,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "CRITICAL-CURVE",
@@ -142,7 +142,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "QC",
@@ -154,7 +154,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "ISP",
@@ -166,7 +166,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "SIXSTEP-JET",
@@ -178,7 +178,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "RAW-MEAN",
@@ -190,7 +190,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "LIEGAUGE",
@@ -202,7 +202,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "ALIAS",
@@ -214,7 +214,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "CONSTANTS",
@@ -226,7 +226,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "H2",
@@ -238,7 +238,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "FIXED-POINTS",
@@ -250,7 +250,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "OFFSET",
@@ -262,7 +262,7 @@
    "anchor_found": true,
    "statement_strings": 4,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "OFFSET-BOUNDS",
@@ -274,7 +274,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "T1T2",
@@ -286,7 +286,7 @@
    "anchor_found": true,
    "statement_strings": 3,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "OPEN21",
@@ -298,7 +298,7 @@
    "anchor_found": true,
    "statement_strings": 3,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "LPHASE-ROWA",
@@ -310,7 +310,7 @@
    "anchor_found": true,
    "statement_strings": 5,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "SH-R0",
@@ -322,7 +322,7 @@
    "anchor_found": true,
    "statement_strings": 3,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NF6-DEG10",
@@ -334,7 +334,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NG-DEFECT",
@@ -346,7 +346,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NG-LIFT",
@@ -358,7 +358,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NG-INF1",
@@ -370,7 +370,7 @@
    "anchor_found": true,
    "statement_strings": 3,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NG-RATIO",
@@ -382,7 +382,7 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NG-L1",
@@ -394,7 +394,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NG-N1C",
@@ -406,7 +406,7 @@
    "anchor_found": true,
    "statement_strings": 1,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   },
   {
    "key": "NG-GAPLOCK3",
@@ -418,9 +418,9 @@
    "anchor_found": true,
    "statement_strings": 2,
    "missing": [],
-   "class": "U (statement unchanged at the current tag)"
+   "class": "P (quoted statement present at the current tag)"
   }
  ],
  "all_pass": true,
- "evidence_state": "EV-SRC-READ (quoted statements present at the tag); no owner certificate rerun"
+ "evidence_state": "EV-SRC-READ: current-source presence of the quoted statements; no comparison with earlier pinned editions; no owner certificate rerun"
 }

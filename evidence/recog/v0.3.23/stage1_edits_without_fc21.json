@@ -1,7 +1,7 @@
 {
  "base_sha256": "0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9",
  "variant": "without-fc21",
- "intermediate_sha256": "5cb316674ff2aff875af238166119326530f53366f2d7198a9ab0aa9b3f54345",
+ "intermediate_sha256": "c36e57f810602d9ca4c5dca5b51a5b3db641fe15b77b4ef969263e0f3462c905",
  "declared_new_recog_rids": [
   "RECOG-ALG-SWAP-ODD-RHO",
   "RECOG-THM-R9-COMPARATOR-INCOMPLETENESS"
@@ -16,9 +16,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "3ef63cda4f2cb19b1b5b8e65b2d43135f85fc1309a2ed3ce8ed7921093cbcf9c",
-   "new_sha256": "86af995f3c003f769a69064033c7dbb1a5362a8fa9aef9dfb6430b8693d96ed2",
+   "new_sha256": "453bd1b8c9c3a82eb110b6512c16974f83be7a9ada60acae7a9476120d21be22",
    "old": "`RTG_DYADIC_OSCILLATOR_DSN_v6.4.10` (adopted 24 Sep 2026; source pin of all Dyadic imports below;",
-   "new": "`RTG_DYADIC_OSCILLATOR_DSN_v6.4.10` (adopted 24 Sep 2026; source pin of the Dyadic imports below unless a row names another edition; current tagged counterpart `dyad-v6.4.22` (`2363ca40…8c29`), claim-level audited v0.3.23, §7;"
+   "new": "`RTG_DYADIC_OSCILLATOR_DSN_v6.4.10` (adopted 24 Sep 2026; source pin of the Dyadic imports below unless a row names another edition; current tagged counterpart `dyad-v6.4.22` (`2363ca40…8c29`), quoted statements present at the cited RIDs in the current source (claim audit v0.3.23, §7);"
   },
   {
    "key": "H-2",
@@ -40,9 +40,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "9013a6e4d9c08fa41513a3d8ea32517e183012404070ccc3ca8cb5e20e723e16",
-   "new_sha256": "227b11f1d4ce7770da6ab53e2d5908b05ae8b9359c5fd7666b61f7373da501a5",
+   "new_sha256": "0dbd39b179197c814f3097f3ed377d5f9da3d0560ce1f2dce96289b002313d39",
    "old": "`RTG_NUMBER_GENESIS_DSN_v1.20.7` (sha256 `c4637e7a…ab28`; claim-level synchronized v0.3.18, §7.1; the $D_M$ definition and INF-1 are imported by §6.13b as `RID unavailable`; dedicated RID decided by the NUMGEN owner (reply v0.1 `184a74fc…5227`; co-owner ruling of 20 Oct 2026 approving the allocation); string to be fixed in NUMGEN v1.20.8; responsible owner NUMGEN; A1a-G1 allocation resolved, canonical repin pending NUMGEN v1.20.8)",
-   "new": "`RTG_NUMBER_GENESIS_DSN_v1.20.8` (tag `numgen-v1.20.8`, sha256 `835a56f8…7e2f`; claim-level audited v0.3.23, §7; §6.13b imports the $D_M$ definition and INF-1 by their owner RIDs `NUMGEN-DEF-N5AS1-DEFECT` and `NUMGEN-RESULT-N5AS1-INF1`; A1a-G1 closed; earlier pin v1.20.7 `c4637e7a…ab28`, claim-level synchronized v0.3.18, §7.1)"
+   "new": "`RTG_NUMBER_GENESIS_DSN_v1.20.8` (tag `numgen-v1.20.8`, sha256 `835a56f8…7e2f`; quoted statements present at the cited RIDs in the current source (claim audit v0.3.23, §7); §6.13b imports the $D_M$ definition and INF-1 by their owner RIDs `NUMGEN-DEF-N5AS1-DEFECT` and `NUMGEN-RESULT-N5AS1-INF1`; A1a-G1 closed; earlier pin v1.20.7 `c4637e7a…ab28`, claim-level synchronized v0.3.18, §7.1)"
   },
   {
    "key": "H-4",
@@ -196,9 +196,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "1c51ca25cbd8ca9c990058f59f7175680dfb6ad2488de4fba1d9ad046ea6eb40",
-   "new_sha256": "a6af436b795e7a9633c36afb16a9db0d616e356a0e2ffc746f6019ccc1432be3",
+   "new_sha256": "3590def7234106d61e865fbde43e540bcb93a99ed8bc06198363101f37a2aa74",
    "old": "`[import: RTG_NUMBER_GENESIS_DSN_v1.20.7 N-5A-S1-INF / GAP-LOCK Lemma 3]`",
-   "new": "`[import: RTG_NUMBER_GENESIS_DSN_v1.20.8 §6.6 N-5A-S1-INF / GAP-LOCK Lemma 3]` (pinned at v1.20.7 since v0.3.18; v1.20.8 has no theorem-level change; claim audit v0.3.23)"
+   "new": "`[import: RTG_NUMBER_GENESIS_DSN_v1.20.8 §6.6 N-5A-S1-INF / GAP-LOCK Lemma 3]` (pinned at v1.20.7 since v0.3.18; the owner records no theorem-level change in v1.20.8; the Lemma 3 text is present in the current source, claim audit v0.3.23)"
   },
   {
    "key": "S2-4",
@@ -316,9 +316,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "bfe44e918937a14da9f1fcc4ab85f6248276715005304836de77994e6deb4f0c",
-   "new_sha256": "cb7a73aa6135c24c63883966ef1aefd020fa4d9096994dd402da5317d4d10c01",
+   "new_sha256": "25bb251f3116a601f01af6e986f442eb56436107ddb6e765d790cb8ef49d9da8",
    "old": "`[RESULT]` `[from: ALG conditional]` The stationarity",
-   "new": "`[RESULT]` `[from: ALG]` [assumes: pole-swap covariance of the radial row; certified $A=DT(P_1)$] The stationarity"
+   "new": "`[RESULT]` `[from: ALG]` [assuming: pole-swap covariance of the radial row; certified $A=DT(P_1)$] The stationarity"
   },
   {
    "key": "S66-1",
@@ -328,9 +328,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "f1a9449c3278dc4a6dafe8b7fe9ba994fc2d618bdd1cf75f8d18d82974a6c92b",
-   "new_sha256": "16119fb97733e63c6ae56b0a14f40c1ee4f2f7fe00f3c6ee87e8746ae02c18b6",
+   "new_sha256": "576b19cb19c772543c0b1caa8ccb9ffb63b21a40c68a411b65bf0465149f50d2",
    "old": "`[RESULT]` **R5 restated.**",
-   "new": "`[RESULT]` `[from: ALG]` [assumes: the twisted-cocycle premise] **R5 restated.**"
+   "new": "`[RESULT]` `[from: ALG]` [assuming: the twisted-cocycle premise] **R5 restated.**"
   },
   {
    "key": "S69-1",
@@ -544,9 +544,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "cd715cf4fecf9908171bf5611d30defb88f0b925d5701f9d2f28dee0b2f3781b",
-   "new_sha256": "a0c1a02db23f41ba1bf6df330f87e2cc33b12b3ecedda1087ac1b5a4e69cbc67",
+   "new_sha256": "4d526cc73eb3fc958133d02c0d46e0a32d1bcb2875a8fb2c8be761aa84538d47",
    "old": "Statements unchanged since v6.4.10 (§7 rows).",
-   "new": "Statements unchanged since v6.4.10 (claim audit v0.3.23; §7 rows)."
+   "new": "Statements recorded unchanged from v6.4.10 to v6.4.17 by the G2 audit of v0.3.21 (§7.2); the quoted statements are present at the cited RIDs in the current source v6.4.22 (claim audit v0.3.23)."
   },
   {
    "key": "S613b-7",
@@ -604,9 +604,9 @@
    "mode": "line",
    "region": "live",
    "old_sha256": "6214f8f888f38c3a35e80d13195b496d92a5e770e358cb177e6fe2102cd276c9",
-   "new_sha256": "f33a7ee6d55c7f910e8288611758d9891bd07b6cfedfbe5fb90d372cef659cfc",
+   "new_sha256": "2dfea85d09bc6ae217f12273a98a6e6faf6d6218795e6de97f06b303769319a0",
    "old": "`[THM — conditional on RECOG-THM-R9-MEMORY]` [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.14 lines 843–850, sha256 `f70308f19f5955c0597c03a27b572abfd4c8746aef6922c959675eb0d56e458d` | DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER] $\\lvert M_W-\\mathcal P_2(W_0)\\rvert\\le K'_jQ_0^{3/2}+C_{2,j}(\\tfrac{256}{225})^2Q_0^2$, rows A, B not mixed. Source-statement check PASS against v6.4.18 (A1a-E2, `941f42d6…126e`); the Dyadic P5 certificate and RECOG's R9 Arb certificate were not rerun; first published in v6.4.17 (owner-reported §6.14 identity).",
-   "new": "`[THM]` `[assuming: RECOG-THM-R9-MEMORY]` [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14, OPEN 21 (first published v6.4.17; pinned at v6.4.18 `f70308f19f5955c0597c03a27b572abfd4c8746aef6922c959675eb0d56e458d` in v0.3.22) | DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER] $\\lvert M_W-\\mathcal P_2(W_0)\\rvert\\le K'_jQ_0^{3/2}+C_{2,j}(\\tfrac{256}{225})^2Q_0^2$, rows A, B not mixed. Statement, grade, rows and constants re-read at `dyad-v6.4.22`: unchanged (claim audit v0.3.23). The v6.4.18 source-statement check (A1a-E2, `941f42d6…126e`) is kept as historical evidence; the Dyadic P5 certificate and RECOG's R9 Arb certificate were not rerun."
+   "new": "`[THM]` `[assuming: RECOG-THM-R9-MEMORY]` [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14, OPEN 21 (first published v6.4.17; pinned at v6.4.18 `f70308f19f5955c0597c03a27b572abfd4c8746aef6922c959675eb0d56e458d` in v0.3.22) | DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER] $\\lvert M_W-\\mathcal P_2(W_0)\\rvert\\le K'_jQ_0^{3/2}+C_{2,j}(\\tfrac{256}{225})^2Q_0^2$, rows A, B not mixed. The quoted statement, owner tag, rows and constants are present at the cited RID in the current source `dyad-v6.4.22` (claim audit v0.3.23). The v6.4.18 source-statement check (A1a-E2, `941f42d6…126e`) is kept as historical evidence; the Dyadic P5 certificate and RECOG's R9 Arb certificate were not rerun."
   },
   {
    "key": "S613b-12",
@@ -616,9 +616,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "bdd5ded5e3a79c59765b28defad807c34da1239e2468c33b42a53f613bc553f9",
-   "new_sha256": "41cd86d73a8b15d66095838bc4a8e6777adced6d3fb3ac219f4da5b96b3ae3bb",
+   "new_sha256": "69c90942f7aca052676c700bf50defa0c26fc6d509fc98459d426c6a9e0b809c",
    "old": "(Dyadic v6.4.18 §6.14 lines 806–809), and $c_{\\rm iso}$",
-   "new": "(Dyadic §6.14, DYAD-ALG-OPEN3-PHASE-OFFSET, primitive-variable form; unchanged at v6.4.22), and $c_{\\rm iso}$"
+   "new": "(Dyadic §6.14, DYAD-ALG-OPEN3-PHASE-OFFSET, primitive-variable form; present at the cited RID in the current source v6.4.22), and $c_{\\rm iso}$"
   },
   {
    "key": "S613b-13",
@@ -628,9 +628,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "e9d5f622b60cf01ed389ed8c8cea0098e83a58f8871a0df19b1a0de1dda0e1a1",
-   "new_sha256": "34e85dba686c210d43f730204dc616d461d076190ac48ee5bef5f7184de9fb94",
+   "new_sha256": "b655ed0c50425528b0759408863b872b4f666b5870261dc121488ad537f92dd0",
    "old": "Source fidelity of the OPEN 21 statement, constants and rows: A1a-E2 PASS on v6.4.18; this is not a recertification.",
-   "new": "Source fidelity of the OPEN 21 statement, constants and rows: A1a-E2 PASS on v6.4.18, re-read unchanged at v6.4.22 (claim audit v0.3.23); this is not a recertification."
+   "new": "Source fidelity of the OPEN 21 statement, constants and rows: A1a-E2 PASS on v6.4.18, quoted statement, constants and rows present at the cited RID in the current source v6.4.22 (claim audit v0.3.23); this is not a recertification."
   },
   {
    "key": "S614-1",
@@ -640,9 +640,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "f161b0cbf02aea3da34c059aadf923134b548db26d8f154fd330f6c2b6f87891",
-   "new_sha256": "60708a136e7a9855048f6324e66e80bc4c6084d040a77e345e252192e47588e5",
+   "new_sha256": "bab6209dff7fcdfc1549e0800d2d56900378232c58281682d7240e59ea7f4026",
    "old": "`[import: Dyadic v6.4.10 §6.14]` **Owner package (accepted).**",
-   "new": "`[import: Dyadic v6.4.10 §6.14; current counterpart v6.4.22 §6.14, statements unchanged (claim audit v0.3.23)]` **Owner package (accepted).**"
+   "new": "`[import: Dyadic v6.4.10 §6.14; current counterpart v6.4.22 §6.14, quoted statements present at the cited RIDs in the current source (claim audit v0.3.23)]` **Owner package (accepted).**"
   },
   {
    "key": "S614-2",
@@ -652,9 +652,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "a89fffd25724cc8c9cbafc33f507f7d8ef15b92383cb7cecafbb1d8798ea8d72",
-   "new_sha256": "02c851d005d16246c699c1cae8271bdaa08c9405f6755f53b98de81fe0d08684",
+   "new_sha256": "db52281ff0655b347def9335cdc5421bd3e2790b2c702853f0e3d62e0c94f982",
    "old": "Whether $S_h$ is the physical pole relabeling is RRF OPEN-A, outside RECOG.",
-   "new": "$j^6S_h=j^6R_0$, with $R_0=T^3\\circ F^{-1/2}$ the unique formal involution with linear part $-I$ commuting with $F=T^6$ (Dyadic v6.4.22 §6.15–§6.16: $S_h$ equals $R_0$ through degree 6 and is not upgraded by the closure of OPEN 19); $S_h$ is not itself an exact commuting involution. At germ scope, DYAD-THM-SMOOTH-EMBEDDING (Dyadic v6.4.22 §6.17, E4) gives a $C^\\infty$ involution $R=T^3\\circ K_2^{-1}$, $DR(0)=-I$, commuting exactly with $T$. $R$ is **not** identified with the delivered finite-chart action $S_h$; no finite-chart radius transfers to it; it is not read as physical pole or node exchange; it does not discharge the §6.4 linear-swap covariance premise. Whether $S_h$ (or $R$) is the physical pole relabeling is RRF OPEN-A, outside RECOG; R1 and OPEN-OFN-OPA stay open."
+   "new": "$j^6S_h=j^6R_0$, with $R_0=T^3\\circ F^{-1/2}$ the unique formal involution with linear part $-I$ commuting with $F=T^6$ (Dyadic v6.4.22 §6.15–§6.16: $S_h$ equals $R_0$ through degree 6 and is not upgraded by the closure of OPEN 19); $S_h$ is an exact involution; its commutation with $F$ is certified only through degree 6. At germ scope, DYAD-THM-SMOOTH-EMBEDDING (Dyadic v6.4.22 §6.17, E4) gives a $C^\\infty$ involution $R=T^3\\circ K_2^{-1}$, $DR(0)=-I$, commuting exactly with $T$. $R$ is **not** identified with the delivered finite-chart action $S_h$; no finite-chart radius transfers to it; it is not read as physical pole or node exchange; it does not discharge the §6.4 linear-swap covariance premise. Whether $S_h$ (or $R$) is the physical pole relabeling is RRF OPEN-A, outside RECOG; R1 and OPEN-OFN-OPA stay open."
   },
   {
    "key": "S614-3",
@@ -976,9 +976,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "16806e6bcf94c2db1518f38978e7ccece5c690f75976c979739a0dc1b8b07b0c",
-   "new_sha256": "7bb0d3196f8edb97b297922f3d9bf7e14e3e1e0ce6462d40919e8ff08988bd6c",
+   "new_sha256": "891c15833cb30d3121a482a9a8cb96daea26a8136ebd467ecb1d5502945f7cdf",
    "old": "*Synchronization note (v0.3.21).* Source pins below are retained for provenance (v0.3.18 practice). Each load-bearing row was compared claim by claim with the current owner edition (Dyadic v6.4.17, Genesis v2.8.9, OFN v0.10, RRF v0.8.3); dispositions are in §7.2. Where a row below adds a v0.3.21 remark, it records an identifier, a scope note or a mutual-citation guard only.",
-   "new": "*Synchronization note.* Source pins below are producer or historical pins, kept where they are valid for the cited claim. Current owner editions: Dyadic `dyad-v6.4.22` (`2363ca40…8c29`), NUMGEN `numgen-v1.20.8` (`835a56f8…7e2f`), Genesis v2.8.9, OFN v0.10, RRF v0.8.4. For v0.3.23 every load-bearing Dyadic and NUMGEN row was re-read claim by claim at its tag: statements, scopes, rows and constants unchanged; the current owner tag forms are quoted at the point of use (claim audit `evidence/recog/v0.3.23/claim_audit.json`; table in the v0.3.23 release record). Genesis, OFN and RRF rows are as audited v0.3.21 (§7.2); RECOG's RRF rows are convention or registry references. Where a row below adds a remark, it records an identifier, a scope note or a mutual-citation guard only."
+   "new": "*Synchronization note.* Source pins below are producer or historical pins, kept where they are valid for the cited claim. Current owner editions: Dyadic `dyad-v6.4.22` (`2363ca40…8c29`), NUMGEN `numgen-v1.20.8` (`835a56f8…7e2f`), Genesis v2.8.9, OFN v0.10, RRF v0.8.4. For v0.3.23, for every load-bearing Dyadic and NUMGEN row, the statement strings RECOG quotes (scopes, rows and constants included) were checked to be present in the owner text at its tag. The audit establishes that the quoted statement is present at the cited RID in the current source; it is not a comparison with the earlier pinned editions, most of which are not in the repository; the earlier comparisons are those of §7.1–§7.2. The current owner tag forms are quoted at the point of use (claim audit `evidence/recog/v0.3.23/claim_audit.json`; table in the v0.3.23 release record). Genesis, OFN and RRF rows are as audited v0.3.21 (§7.2); RECOG's RRF rows are convention or registry references. Where a row below adds a remark, it records an identifier, a scope note or a mutual-citation guard only."
   },
   {
    "key": "S7-2",
@@ -988,9 +988,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "5a91f8ce8cc82957891fc05b2e30de5dbe51461c3c5668ab2dcf273602d16ecc",
-   "new_sha256": "88a1e22e1930bd24336099ecb0acb7c245550013704af63a61aa5663ba6e1851",
+   "new_sha256": "464d56c12c478441fc9d515ba11bc862c8626cf681f54ab898e456a06eacee63",
    "old": "- [RID: (none — §6.1 block); map definition registered since Dyadic v6.4.11 as DYAD-DEF-PRIMITIVE-MAP (provisional custody; identifier only, content unchanged)] :: dyad map, $J$, $\\det J$, $C_0$, $P_1,P_2$, escape law, non-symplecticity :: Dyadic §6.1 ::",
-   "new": "- [RID: DYAD-DEF-PRIMITIVE-MAP (map; custody note Dyadic §1), DYAD-DEF-CRITICAL-CURVE ($C_0$, kernel field $k$); $J$, $\\det J$, $P_1,P_2$, the escape law and non-symplecticity have no Dyadic RID] :: dyad map, $J$, $\\det J$, $C_0$, $P_1,P_2$, escape law, non-symplecticity :: Dyadic §6.1 (v6.4.22; RIDs registered v6.4.11 and v6.4.20; content unchanged) ::"
+   "new": "- [RID: DYAD-DEF-PRIMITIVE-MAP (map; custody note Dyadic §1), DYAD-DEF-CRITICAL-CURVE ($C_0$, kernel field $k$); $J$, $\\det J$, $P_1,P_2$, the escape law and non-symplecticity have no Dyadic RID] :: dyad map, $J$, $\\det J$, $C_0$, $P_1,P_2$, escape law, non-symplecticity :: Dyadic §6.1 (v6.4.22; RIDs registered v6.4.11 and v6.4.20; quoted content present) ::"
   },
   {
    "key": "S7-3",
@@ -1000,9 +1000,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "d16eab4965b67b26e20c05273b77c52c7de14409974760dbee54677eab542d03",
-   "new_sha256": "53328d3dfe3d87361337aae000e7c1eebce2e3ed3ce5cccb8564bbcd2b8c65e1",
+   "new_sha256": "8a1e750d2ea0f785a44626c50f3f9b77193e1a72623279104684e8534007673b",
    "old": "- [RID: (none — §6.4 block)] :: $Q_c=(\\arcsin\\ln2)^2$, winding-index invisibility, ISP $\\Theta$ :: Dyadic §6.4 ::",
-   "new": "- [RID: DYAD-ALG-QC-CRITICAL-AMPLITUDE ($Q_c$), DYAD-ALG-ISP-MAPS (ISP maps, $\\Theta$); winding-index invisibility has no Dyadic RID] :: $Q_c=(\\arcsin\\ln2)^2$, winding-index invisibility, ISP $\\Theta$ :: Dyadic §6.4 (v6.4.22; RIDs registered v6.4.20; content unchanged) ::"
+   "new": "- [RID: DYAD-ALG-QC-CRITICAL-AMPLITUDE ($Q_c$), DYAD-ALG-ISP-MAPS (ISP maps, $\\Theta$); winding-index invisibility has no Dyadic RID] :: $Q_c=(\\arcsin\\ln2)^2$, winding-index invisibility, ISP $\\Theta$ :: Dyadic §6.4 (v6.4.22; RIDs registered v6.4.20; quoted content present) ::"
   },
   {
    "key": "S7-4",
@@ -1012,9 +1012,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "dcacb442a3e076c59b3c736cdba139d5aac46499ea896575dd54250ec3ab29a5",
-   "new_sha256": "64d12e6ca453ed060813f843dfd535466e1c8743637e9e27ccb9d9a1421d7a05",
+   "new_sha256": "9ab24148ec1cf029866a4b2e1cc544babdaf86f53a943d5f35ce1739d8484b96",
    "old": "- [RID: (none — §6.7/§6.8 block)] :: $M+M^\\top=-I$, $Q_{m+1}=Q_m-Q_m^2+\\cdots$, $\\Theta_{m+1}=\\Theta_m-\\tau Q_m$ :: Dyadic §6.7–6.8 ::",
-   "new": "- [RID: DYAD-ALG-SIXSTEP-CUBIC-JET (jet and $M+M^\\top=-I$); the block recurrences have no separate Dyadic RID] :: $M+M^\\top=-I$, $Q_{m+1}=Q_m-Q_m^2+\\cdots$, $\\Theta_{m+1}=\\Theta_m-\\tau Q_m$ :: Dyadic §6.7–6.8 (v6.4.22; RID registered v6.4.20; content unchanged) ::"
+   "new": "- [RID: DYAD-ALG-SIXSTEP-CUBIC-JET (jet and $M+M^\\top=-I$); the block recurrences have no separate Dyadic RID] :: $M+M^\\top=-I$, $Q_{m+1}=Q_m-Q_m^2+\\cdots$, $\\Theta_{m+1}=\\Theta_m-\\tau Q_m$ :: Dyadic §6.7–6.8 (v6.4.22; RID registered v6.4.20; quoted content present) ::"
   },
   {
    "key": "S7-5",
@@ -1048,9 +1048,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "36a2bb5271e0f70ff8415f96b2a49c8d2fdb03eac4f62c6d87873b450f32aecf",
-   "new_sha256": "f7878cfb39c61141766b7a8c8801cb77a4d07849727d368a7df5dbb8ad30f628",
+   "new_sha256": "c84247a4e9572c8407150ef271b3468b125ba586503b39290dcb860d21ab4ce5",
    "old": "- [RID: NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION] (source pin v1.15 retained; RID resolves in v1.20.4; current owner v1.20.7;",
-   "new": "- [RID: NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION] (source pin v1.15 retained; RID resolves in v1.20.4; current owner v1.20.8, `numgen-v1.20.8` §6.2, statement and RID unchanged (claim audit v0.3.23);"
+   "new": "- [RID: NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION] (source pin v1.15 retained; RID resolves in v1.20.4; current owner v1.20.8, `numgen-v1.20.8` §6.2, quoted statement present at the cited RID in the current source (claim audit v0.3.23);"
   },
   {
    "key": "S7-8",
@@ -1060,9 +1060,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "515fb178af6e772d8275a2a7002ba4a53776eaed7545490efd0522fb912a009e",
-   "new_sha256": "041e8756e64142d92a5a6c779b4fa7108d646fb5e2391c676827cfc6bc485990",
+   "new_sha256": "f697537b06eaa97d9083440a3b4cfecfac1d26107a4e6e0d9e614202c2ebdf7c",
    "old": "- [RID: NUMGEN-OPEN-N1C] (source pin v1.15 retained; RID resolves in v1.20.4; current owner v1.20.7;",
-   "new": "- [RID: NUMGEN-OPEN-N1C] (source pin v1.15 retained; RID resolves in v1.20.4; current owner v1.20.8, `numgen-v1.20.8` §6.2, statement and RID unchanged (claim audit v0.3.23);"
+   "new": "- [RID: NUMGEN-OPEN-N1C] (source pin v1.15 retained; RID resolves in v1.20.4; current owner v1.20.8, `numgen-v1.20.8` §6.2, quoted statement present at the cited RID in the current source (claim audit v0.3.23);"
   },
   {
    "key": "S7-9",
@@ -1072,9 +1072,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "327c5885846e070ae52d0dd62455a5c946748e6c5ebe20c78b5449eaca121cbe",
-   "new_sha256": "11bffb2602000d7083956e7c2b0459a3a9afb7a6241ab4b1bd62f11e15241c09",
+   "new_sha256": "212f0d450da8e9c2c58a5b23bcf8969c46c4232172c1406ae6738d0d4f6aa6bb",
    "old": "RID present, statement unchanged, owner tag normalised to `[RESULT] [from: ALG]` under K5)",
-   "new": "RID present, statement unchanged, owner tag normalised to `[RESULT] [from: ALG]` under K5; current counterpart `numgen-v1.20.8` §6.6, statement and tag unchanged, claim audit v0.3.23)"
+   "new": "RID present, statement unchanged, owner tag normalised to `[RESULT] [from: ALG]` under K5; current counterpart `numgen-v1.20.8` §6.6, quoted statement and tag present at the cited RID in the current source, claim audit v0.3.23)"
   },
   {
    "key": "S7-10",
@@ -1144,9 +1144,9 @@
    "mode": "line",
    "region": "live",
    "old_sha256": "ef56226ec3ffda5603d09d76e86e7f8e811bc9bff5d1c34f6a367f44677b9c14",
-   "new_sha256": "8546bf4ea85bfe3fc0c4ddb4188e2a39005e3ee0cd5808946fe6df8ca7e70f58",
+   "new_sha256": "0f35d9482616462112b8bec6bcd1e9200ffbbe6c61fa778b72942db49026377d",
    "old": "- [RID: DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER] :: $\\lvert M_W-\\mathcal P_2(W_0)\\rvert\\le K'_jQ_0^{3/2}+C_{2,j}(\\tfrac{256}{225})^2Q_0^2$, $K'_A=\\tfrac{3951}{1000}$, $K'_B=\\tfrac{971}{250}$, $C_{2,A}=517$, $C_{2,B}=163$, conditional on RECOG-THM-R9-MEMORY :: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.14 lines 843–850 (`f70308f1…458d`; first published v6.4.17) :: §6.13b (c) :: source-statement check PASS (A1a-E2, `941f42d6…126e`); P5 certificate not rerun; rows not mixed",
-   "new": "- [RID: DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER] :: $\\lvert M_W-\\mathcal P_2(W_0)\\rvert\\le K'_jQ_0^{3/2}+C_{2,j}(\\tfrac{256}{225})^2Q_0^2$, $K'_A=\\tfrac{3951}{1000}$, $K'_B=\\tfrac{971}{250}$, $C_{2,A}=517$, $C_{2,B}=163$; owner form `[THM]` `[assuming: RECOG-THM-R9-MEMORY]` :: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14, OPEN 21 (first published v6.4.17; pinned at v6.4.18 `f70308f1…458d` in v0.3.22) :: §6.13b (c) :: source-statement check PASS on v6.4.18 (A1a-E2, `941f42d6…126e`), re-read unchanged at v6.4.22; P5 certificate not rerun; rows not mixed"
+   "new": "- [RID: DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER] :: $\\lvert M_W-\\mathcal P_2(W_0)\\rvert\\le K'_jQ_0^{3/2}+C_{2,j}(\\tfrac{256}{225})^2Q_0^2$, $K'_A=\\tfrac{3951}{1000}$, $K'_B=\\tfrac{971}{250}$, $C_{2,A}=517$, $C_{2,B}=163$; owner form `[THM]` `[assuming: RECOG-THM-R9-MEMORY]` :: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14, OPEN 21 (first published v6.4.17; pinned at v6.4.18 `f70308f1…458d` in v0.3.22) :: §6.13b (c) :: source-statement check PASS on v6.4.18 (A1a-E2, `941f42d6…126e`), statement, rows and constants present at v6.4.22; P5 certificate not rerun; rows not mixed"
   },
   {
    "key": "S7-16",
@@ -1180,9 +1180,9 @@
    "mode": "str",
    "region": "live",
    "old_sha256": "39c04b39fa833fe1e4a54ab6dcba54f659a267aa2e4662ad406c90b6e07eae3b",
-   "new_sha256": "c212b00387591fd2212567c11f35d79d56edc01372321db0983ed980ffc1222c",
+   "new_sha256": "3df77e2261ccb5042e07f3beed900a837bdee55a23764c4f6ab02b3eabeee9a9",
    "old": "used in RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (§6.13b) at the v6.4.18 pin,",
-   "new": "used in RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (§6.13b), pinned at v6.4.18 in v0.3.22 and cited at `dyad-v6.4.22` from v0.3.23 (statement unchanged),"
+   "new": "used in RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (§6.13b), pinned at v6.4.18 in v0.3.22 and cited at `dyad-v6.4.22` from v0.3.23 (quoted statement present at that tag),"
   },
   {
    "key": "S72-3",
@@ -1324,9 +1324,9 @@
    "mode": "str",
    "region": "appA",
    "old_sha256": "f938437e049e434e3122d20ef7319970d9578b19d7d8e547595d65d6cbb7f57a",
-   "new_sha256": "9a2ca9d3df8182978f705a65ca621916b776b6e05122d11be3f5b5e6422def89",
+   "new_sha256": "9eae5e1812bcf2fd92a20ecc012c8eda545786debe4f94a2023f34af6ba45373",
    "old": "## Appendix A — Version History\n\n### v0.3.22 — 20 October 2026",
-   "new": "## Appendix A — Version History\n\n### v0.3.23 — DRAFT, stage 1 (corrected intermediate; not adopted)\n- **Basis:** the atlas advisory `records/recog/ATLAS_ADVISORY_RECOG_v0_3_22.md` as disposed by the PI on 23 Oct 2026 (`records/recog/ATLAS_ADVISORY_RECOG_v0_3_22_DISPOSITION_RECONCILIATION.md` §5), erratum E-0322-1, Methodology v1.4. Full change list, per-block RESULT ledger, claim audit and checks: `records/recog/RECOG_v0_3_23_RELEASE_RECORD.md`.\n- **New RIDs (statements unchanged):** RECOG-THM-R9-COMPARATOR-INCOMPLETENESS (§6.13a corollary), RECOG-ALG-SWAP-ODD-RHO (§6.4 lemma). Named sub-statements: the radial identity under RECOG-ALG-NU3-CLOSED-FORM; the $C_0$-avoidance corollary under RECOG-THM-P2-HET.\n- **Imports:** NUMGEN $D_M$ and INF-1 by RID (`NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, v1.20.8; A1a-G1 closed); Dyadic A1a imports by RID and section at v6.4.22 with the current owner tag forms (line pins removed); §7 rows gain the Dyadic RIDs registered in v6.4.20; claim-level audit at `dyad-v6.4.22` and `numgen-v1.20.8`.\n- **Status and wording:** R10 status \"CLOSED (v0.3.2) — delivered and accepted\"; §1 RECOG-OPEN-INTERSECTION carries the `[HYP]` tag of its §6.5 entry; frame labels and rounded equalities ($|\\mu|/|c_{05}^{\\rm raw}|\\approx41.27$, post-$H_2$ $\\approx59.12$; $|G|$ and windows with $\\approx$; the original sentence is kept in the release record); R9 finite-$q_0$ pointer and partial budget; $j^6S_h=j^6R_0$; bare and combined `[RESULT]` blocks paired or split per block; stale F2 pointers; §7.2/§7.3 current state (RF-1 fulfilled; no notice state changed); §8 repository locations.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED).\n\n### v0.3.22 — 20 October 2026"
+   "new": "## Appendix A — Version History\n\n### v0.3.23 — DRAFT, stage 1 (corrected intermediate; not adopted)\n- **Basis:** the atlas advisory `records/recog/ATLAS_ADVISORY_RECOG_v0_3_22.md` as disposed by the PI on 23 Oct 2026 (`records/recog/ATLAS_ADVISORY_RECOG_v0_3_22_DISPOSITION_RECONCILIATION.md` §5), erratum E-0322-1, Methodology v1.4. Full change list, per-block RESULT ledger, claim audit and checks: `records/recog/RECOG_v0_3_23_RELEASE_RECORD.md`.\n- **New RIDs (statements unchanged):** RECOG-THM-R9-COMPARATOR-INCOMPLETENESS (§6.13a corollary), RECOG-ALG-SWAP-ODD-RHO (§6.4 lemma). Named sub-statements: the radial identity under RECOG-ALG-NU3-CLOSED-FORM; the $C_0$-avoidance corollary under RECOG-THM-P2-HET.\n- **Imports:** NUMGEN $D_M$ and INF-1 by RID (`NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, v1.20.8; A1a-G1 closed); Dyadic A1a imports by RID and section at v6.4.22 with the current owner tag forms (line pins removed); §7 rows gain the Dyadic RIDs registered in v6.4.20; claim audit at `dyad-v6.4.22` and `numgen-v1.20.8`: quoted statements present at the cited RIDs in the current source.\n- **Status and wording:** R10 status \"CLOSED (v0.3.2) — delivered and accepted\"; §1 RECOG-OPEN-INTERSECTION carries the `[HYP]` tag of its §6.5 entry; frame labels and rounded equalities ($|\\mu|/|c_{05}^{\\rm raw}|\\approx41.27$, post-$H_2$ $\\approx59.12$; $|G|$ and windows with $\\approx$; the original sentence is kept in the release record); R9 finite-$q_0$ pointer and partial budget; $j^6S_h=j^6R_0$; bare and combined `[RESULT]` blocks paired or split per block; stale F2 pointers; §7.2/§7.3 current state (RF-1 fulfilled; no notice state changed); §8 repository locations.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED).\n\n### v0.3.22 — 20 October 2026"
   }
  ]
 }
