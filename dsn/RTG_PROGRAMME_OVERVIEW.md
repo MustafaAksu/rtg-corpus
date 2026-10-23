@@ -4,7 +4,7 @@
 **Date:** 23 October 2026
 **Scope:** Inventory, ownership, branch/layer architecture, programme OPENs and scope guards, synchronized to the governing editions of the corpus; pass-two revision of the adopted v1.2 architecture.
 **Document class:** Programme overview, under DSN Methodology v1.4 §0.5.
-**Document status:** DRAFT — v1.3 candidate (stage 1: corrections; stage 2: compaction); not adopted. `programme-v1.2` governs until adoption.
+**Document status:** ADOPTED — PI, 24 October 2026 (pass-two synchronization of the v1.2 architecture under Methodology v1.4; adoption record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`). Supersedes `programme-v1.2`.
 **Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.2` (tag `programme-v1.2`, SHA-256 `4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359`, adopted 20 September 2026).
 **Repository:** `MustafaAksu/rtg-corpus`, `main`. A study's governing edition is its latest adopted tag with its release record (Methodology v1.4 §13.9); `BASELINE.md` lists the governing editions with their SHA-256; `CONVENTIONS.md` gives the working rules. Project copies mirror `main`.
 **Companion documents:** the governing editions in §6.1 (by tag). The list is not a substitute for claim-level imports; each consumer's own pins are in its Import Ledger (§7.2 records them where they differ).
@@ -554,7 +554,7 @@ Adoption is the PI's decision, recorded in the release record; publication is a 
 
 One compact entry per edition (Methodology v1.4 §1.1). Full entries of v1.0–v1.2, the Draft 1 history of v1.2 and the adopted replacement ledger's provenance are in Appendix A of v1.2 (tag `programme-v1.2`); the full stage-1 draft entry of v1.3 is at the stage-1 commit named in the release record.
 
-### v1.3 — 23 October 2026 — DRAFT candidate
+### v1.3 — 24 October 2026 — Adopted
 
 - **Basis:** atlas advisory `records/programme/ATLAS_ADVISORY_PROGRAMME_v1_2.md` as disposed by the PI on 23 October 2026 (its §5); Methodology v1.4.
 - **Inventory and interfaces:** governing editions by tag for every home; class column; new rows for RRF (adopted working standard), RER, FMS, ER-2B (noncanonical) and the State Atlas (derived map); §6.2–6.5 reduced to custody and interface records pointing to the owners' status summaries; §7 pins at governing tags or labelled consumer pins; IF17 retired as a transfer proposal; IF26–IF36 added.
@@ -611,4 +611,4 @@ These administrative keys are not fabricated historical theorem RIDs. Each entry
 
 ---
 
-*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.3 (DRAFT candidate, 23 October 2026; pass-two synchronization of the adopted v1.2 architecture under DSN Methodology v1.4; `programme-v1.2` governs until adoption).*
+*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.3 (ADOPTED, 24 October 2026; pass-two synchronization of the adopted v1.2 architecture under DSN Methodology v1.4).*

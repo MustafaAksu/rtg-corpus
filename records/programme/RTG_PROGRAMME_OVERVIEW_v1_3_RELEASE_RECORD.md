@@ -1,6 +1,6 @@
 # Programme Overview v1.3 — release record
 
-**Status:** DRAFT — stage 1 and stage 2 built; change-focused review (ChatGPT) and PI adoption pending. `programme-v1.2` governs until the tag `programme-v1.3` exists.
+**Status:** ADOPTED by the PI, 24 October 2026 (§6). Adopted file SHA-256 `1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06`. Governing from the annotated tag `programme-v1.3` on the merge commit of PR #29; `programme-v1.2` is the predecessor.
 **Editor:** Claude (atlas owner), by PI decision of 23 October 2026 (`records/programme/ATLAS_ADVISORY_PROGRAMME_v1_2.md` §5). **Reviewer:** ChatGPT (change-focused review of stage 1; mechanical review of stage 2). **Adoption:** PI.
 **Object:** `dsn/RTG_PROGRAMME_OVERVIEW.md`. **Governing rules:** Methodology v1.4 (§§1.1, 13), `CONVENTIONS.md`.
 
@@ -10,7 +10,9 @@
 |---|---|---|---|---|---|
 | Base: adopted v1.2 (tag `programme-v1.2`) | — | `4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359` | 686 lines, 73,019 B | — | — |
 | 1 — corrected intermediate (build stage, not an edition) | `951371d` | `e4fe4e7b1df4de12b2e01cc187e223c27b7cd3d6c9beb030f227f9c88c54b136` | 709 lines, 81,600 B | `evidence/programme/scripts/build_programme_v1_3_stage1.py` (25 exact-once edits; log `evidence/programme/v1.3/stage1_edits.json`) | `check_programme_v1_3_stage1.py`: 13 gates PASS, 12/12 negative controls caught (`check_stage1_output.txt`) |
-| 2 — compacted candidate (not adopted) | `f7ff205` | `01199132609a4782dbce1f572d65e2fd1406857db3835c21eb8a7edd43215a35` | 614 lines, 68,836 B | `build_programme_v1_3_stage2.py` (3 operations; `movement_map.json`) | `tools/check_compaction.py` (unchanged from `main`), Programme profile: PASS (`check_compaction_output.txt`, `_report.json`); `test_check_compaction_programme.py`: 10/10 controls rejected, Programme invariants PASS |
+| 2 — compacted candidate (reviewed) | `f7ff205` | `01199132609a4782dbce1f572d65e2fd1406857db3835c21eb8a7edd43215a35` | 614 lines, 68,836 B | `build_programme_v1_3_stage2.py` (3 operations; `movement_map.json`) | `tools/check_compaction.py` (unchanged from `main`), Programme profile: PASS (`check_compaction_output.txt`, `_report.json`); `test_check_compaction_programme.py`: 10/10 controls rejected, Programme invariants PASS |
+
+| **Adopted v1.3** | publication commit | `1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06` | 614 lines | `release_programme_v1_3.py` on the stage-2 candidate (status lines only) | diff against the candidate = 3 lines |
 
 Reproduce from the repository root: `git show programme-v1.2:dsn/RTG_PROGRAMME_OVERVIEW.md > base.md`; stage-1 builder → `e4fe4e7b…b136`; `git show 951371d:dsn/RTG_PROGRAMME_OVERVIEW.md > inter.md`; stage-2 builder → `01199132…2a35` and the movement map byte-identical to the committed one. The size went down 5.7 % against v1.2 and 15.6 % against the intermediate; compaction was not a goal, synchronization was.
 
@@ -65,8 +67,9 @@ Checker results: candidate = base + declared operations; 24 claim blocks byte-id
 |---|---|---|
 | Stage-1 change-focused review | ChatGPT | **ACCEPT WITH MINOR EDITS** (24 Oct 2026, on `951371d` / `f7ff205`): class and tier placements, §5 custody/criteria split, §4 maturity statement (DZT and AZ Level A; no other header verified to declare one) and §7.2 pin treatment confirmed. P13-R1: the κ table has eleven rows, not twelve — the count in this record is corrected (the table is unchanged; the twelfth row of the draft, κ_f, was dropped before stage 1 because Genesis writes no such symbol). P13-R2: at publication the adopted file's SHA-256, `BASELINE.md`, this record and the annotated tag must name the same bytes; `01199132…2a35` is the candidate identity. |
 | Stage-2 mechanical review (movement map, tool run, controls) | ChatGPT | M01–M03 accepted; 24/24 claim blocks; Appendix B carried as a documented exception; checker and controls not independently rerun by the reviewer (editor's runs in `evidence/programme/v1.3/`). No further review round requested. |
-| PI adoption | PI | pending |
-| Publication transform (status lines only), merge commit, annotated tag `programme-v1.3` naming the adopted SHA-256 | editor; PI merges and tags | pending |
+| PI adoption | PI | **ADOPTED**, 24 October 2026, 00:16 +03:00, in the atlas session: "Evet programme DSN dokümanını bu haliyle benimsiyorum." (verbatim; yes, I adopt the Programme DSN document as it stands). Given on the stage-2 candidate `01199132…2a35` after the ChatGPT review (ACCEPT WITH MINOR EDITS; P13-R1 applied to this record, P13-R2 satisfied below). |
+| Publication transform (status lines only) | editor | done: `evidence/programme/scripts/release_programme_v1_3.py` on `01199132…2a35` → **adopted file `1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06`** (three status lines: header Document status, Appendix A heading, footer; nothing else). `BASELINE.md` Programme row → v1.3 and this hash. |
+| Merge commit (not squash; `951371d` must stay reachable as the stage-2 archive), annotated tag `programme-v1.3` naming the hash above | PI | pending |
 
 ## 7. After adoption
 
