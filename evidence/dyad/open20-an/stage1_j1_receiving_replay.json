@@ -1,0 +1,107 @@
+{
+  "evidence_levels": [
+    "EV-HASH",
+    "EV-CODE",
+    "EV-RUN"
+  ],
+  "execution_note": "An aggregate runner was interrupted after its positive, B and R runs had completed; their persisted results were verified. T and A were then run separately. Only completed runs are listed.",
+  "limits": "Same-code receiving replays. S7 shares raw jets and arithmetic with the first route; not a fully independent implementation. No high-order scouting or analytic Stokes computation.",
+  "output": {
+    "git_blob": "88bb04c23c6e911d96092d9d0fa0399abac6c81f",
+    "matches_repository_blob": true,
+    "sha256": "2c9ae6376e0c482f2ba520a7ea8e2b38606a6821f7ac3bfa259d4d6020d04739"
+  },
+  "preserved_comparisons": {
+    "S1": true,
+    "S2": true,
+    "S6_psi_equals_graph": true,
+    "alpha": true,
+    "k": true,
+    "m": true,
+    "raw_coefficients": true,
+    "reported_horizontal_terms": true
+  },
+  "reviewed_commit": "ae78387bfc6a6f3925b1b232affeb1bf12b667dd",
+  "runs": [
+    {
+      "command": [
+        "-I",
+        "-B",
+        "dyad_open20_an_stage1_prep.py",
+        "--out",
+        "positive.json"
+      ],
+      "exit": 0,
+      "failed_gates": [],
+      "run": "positive"
+    },
+    {
+      "command": [
+        "-I",
+        "-B",
+        "dyad_open20_an_stage1_prep.py",
+        "--control",
+        "B"
+      ],
+      "exit": 1,
+      "failed_gates": [
+        "S4",
+        "S5_form",
+        "S6"
+      ],
+      "run": "B"
+    },
+    {
+      "command": [
+        "-I",
+        "-B",
+        "dyad_open20_an_stage1_prep.py",
+        "--control",
+        "R"
+      ],
+      "exit": 1,
+      "failed_gates": [
+        "S4",
+        "S5_form",
+        "S6"
+      ],
+      "run": "R"
+    },
+    {
+      "command": [
+        "-I",
+        "-B",
+        "dyad_open20_an_stage1_prep.py",
+        "--control",
+        "T"
+      ],
+      "exit": 1,
+      "failed_gates": [
+        "S6",
+        "S7"
+      ],
+      "run": "T"
+    },
+    {
+      "command": [
+        "-I",
+        "-B",
+        "dyad_open20_an_stage1_prep.py",
+        "--control",
+        "A"
+      ],
+      "exit": 1,
+      "failed_gates": [
+        "S4"
+      ],
+      "run": "A"
+    }
+  ],
+  "source": {
+    "helper_sha256": "dd06a1a20466dbe16da9c9b2e5bfe01a209decbedeed5a2c4a3ba33c783c1e6d",
+    "retrieval": "Reconstructed from the previously retained source and the GitHub commit delta; bytes matched the GitHub blob and recorded SHA-256 before execution.",
+    "script_git_blob": "23cea0a85292687b536a0861c7516473039993fb",
+    "script_sha256": "5c22ff7aab5d9dabdf243bfc6e279616b4fdbc5ea9d8429fa513c3b2584d8568"
+  },
+  "status": "SESSION; no adoption or canonical modification"
+}

@@ -1,0 +1,131 @@
+== files
+003683c6ab5b93857e1d7f7c0374bc02c1fc4f313dfa36cc668ea6011c46feb9   control_N36_dps60.json
+c5c728621cccc0f3ad9750fa09e4e71a3c3fc1a3dba7929c9ebc1cd0ad2a9fd8   control_N36_dps60.stdout.txt
+a85a95eadbdcea4bb6dc94d8252544ee3d7b2344c9503c0572cbd0deed07604e   run_all.sh
+5cd5c1d946d3b6e348e3d1f244a7f18c1d28565460d5ba501fed22bf255ef4d8   scout_N144_dps600.json
+b4639b4c43cd503eaceaa2e1f8632f13a492756c02ef0bf4778b113dfa03c075   scout_N144_dps600.stdout.txt
+f941105900ab542bb1af97e194ab1e62000f1a529f10cf04a4819804e6cde47a   scout_N144_dps700.json
+b4639b4c43cd503eaceaa2e1f8632f13a492756c02ef0bf4778b113dfa03c075   scout_N144_dps700.stdout.txt
+6ca8c663061ce2fa9e062938a1e6046c932da4cbddccc6e3e2c3de4df68c477e   scout_N216_dps840.json
+b4639b4c43cd503eaceaa2e1f8632f13a492756c02ef0bf4778b113dfa03c075   scout_N216_dps840.stdout.txt
+eb5c6c585eda2b71c8235a769a97f231bf73c6ccee5545af0bf4f76052b30c01   scout_N72_dps330.json
+b4639b4c43cd503eaceaa2e1f8632f13a492756c02ef0bf4778b113dfa03c075   scout_N72_dps330.stdout.txt
+04629640acb3d5414dfe2b520fc5227b644327c22b916909650055ffd7146813   scout_N72_dps400.json
+b4639b4c43cd503eaceaa2e1f8632f13a492756c02ef0bf4778b113dfa03c075   scout_N72_dps400.stdout.txt
+
+== gates
+control_N36_dps60.json {'C0_Fz_is_z_plus_O_z4': True, 'C1_a3_matches_stage1': True, 'C2_a4_matches_stage1': True, 'C3_ball_radii_below_1e-30': False, 'C4_linear_coefficient_is_L_k_for_k_3_to_8': True} all_pass= False
+scout_N144_dps600.json {'C0_Fz_is_z_plus_O_z4': True, 'C1_a3_matches_stage1': True, 'C2_a4_matches_stage1': True, 'C3_ball_radii_below_1e-30': True, 'C4_linear_coefficient_is_L_k_for_k_3_to_8': True} all_pass= True
+scout_N144_dps700.json {'C0_Fz_is_z_plus_O_z4': True, 'C1_a3_matches_stage1': True, 'C2_a4_matches_stage1': True, 'C3_ball_radii_below_1e-30': True, 'C4_linear_coefficient_is_L_k_for_k_3_to_8': True} all_pass= True
+scout_N216_dps840.json {'C0_Fz_is_z_plus_O_z4': True, 'C1_a3_matches_stage1': True, 'C2_a4_matches_stage1': True, 'C3_ball_radii_below_1e-30': True, 'C4_linear_coefficient_is_L_k_for_k_3_to_8': True} all_pass= True
+scout_N72_dps330.json {'C0_Fz_is_z_plus_O_z4': True, 'C1_a3_matches_stage1': True, 'C2_a4_matches_stage1': True, 'C3_ball_radii_below_1e-30': True, 'C4_linear_coefficient_is_L_k_for_k_3_to_8': True} all_pass= True
+scout_N72_dps400.json {'C0_Fz_is_z_plus_O_z4': True, 'C1_a3_matches_stage1': True, 'C2_a4_matches_stage1': True, 'C3_ball_radii_below_1e-30': True, 'C4_linear_coefficient_is_L_k_for_k_3_to_8': True} all_pass= True
+
+== truncation stability (max relative difference of a_k, k <= min(N1,N2))
+scout_N144_dps600.json vs scout_N216_dps840.json: k<= 144: 0.0
+scout_N144_dps600.json vs scout_N72_dps330.json: k<= 72: 0.0
+scout_N144_dps600.json vs scout_N72_dps400.json: k<= 72: 0.0
+scout_N144_dps700.json vs scout_N216_dps840.json: k<= 144: 0.0
+scout_N144_dps700.json vs scout_N72_dps330.json: k<= 72: 0.0
+scout_N144_dps700.json vs scout_N72_dps400.json: k<= 72: 0.0
+scout_N216_dps840.json vs scout_N72_dps330.json: k<= 72: 0.0
+scout_N216_dps840.json vs scout_N72_dps400.json: k<= 72: 0.0
+
+== precision stability (same N, different dps)
+scout_N144_dps600.json vs scout_N144_dps700.json: max rel diff of stored midpoints 0.0; max ball radius 3.5792e-199 / 2.1337e-299; residual sup (mid) 4.5970675e-208 / 1.8078245e-308
+scout_N72_dps330.json vs scout_N72_dps400.json: max rel diff of stored midpoints 0.0; max ball radius 3.9833e-115 / 5.7720e-185; residual sup (mid) 2.9307456e-124 / 6.7950061e-194
+
+== coefficient magnitudes |a_k| (largest run), every 6th order
+run scout_N216_dps840.json  minimum |a_k| at k = 39 = 3.09637928012e-7
+  k=   2 |a_k|=0.150696784110
+  k=   8 |a_k|=0.00308338799516
+  k=  14 |a_k|=0.000492143626807
+  k=  20 |a_k|=8.68409342145e-5
+  k=  26 |a_k|=2.21144136038e-5
+  k=  32 |a_k|=5.72652294809e-6
+  k=  38 |a_k|=3.68885334762e-7
+  k=  44 |a_k|=1.05826972210e-6
+  k=  50 |a_k|=1.39712741065e-6
+  k=  56 |a_k|=2.52429333522e-6
+  k=  62 |a_k|=4.66148387719e-6
+  k=  68 |a_k|=8.61883138934e-6
+  k=  74 |a_k|=2.05802650811e-5
+  k=  80 |a_k|=6.61854078945e-5
+  k=  86 |a_k|=0.000230956722221
+  k=  92 |a_k|=0.000819088736555
+  k=  98 |a_k|=0.00309414445009
+  k= 104 |a_k|=0.0136400710007
+  k= 110 |a_k|=0.0720584420238
+  k= 116 |a_k|=0.424961049892
+  k= 122 |a_k|=2.63893818221
+  k= 128 |a_k|=17.0825938341
+  k= 134 |a_k|=117.795242438
+  k= 140 |a_k|=895.302578874
+  k= 146 |a_k|=7626.58628830
+  k= 152 |a_k|=71550.0308918
+  k= 158 |a_k|=717290.738904
+  k= 164 |a_k|=7540432.41008
+  k= 170 |a_k|=82861087.2438
+  k= 176 |a_k|=959800540.052
+  k= 182 |a_k|=11876791019.6
+  k= 188 |a_k|=1.58507350957e+11
+  k= 194 |a_k|=2.27833359398e+12
+  k= 200 |a_k|=3.48898940160e+13
+  k= 206 |a_k|=5.62212589060e+14
+  k= 212 |a_k|=9.45607186535e+15
+  k= 216 |a_k|=6.10904362956e+16
+
+== Borel-scale estimates per residue class r (k = 3n + r); model |zeta_z| = 21.344131603  model arg/pi mod 1 = -0.435667447326
+scout_N144_dps600.json r=0: fit n in [31, 46] (16 pts): |zeta|=14.8524765 (x0.695857 model), arg/pi mod 1=-0.482630 (model -0.435667; diff -0.046962), beta=-13.7650-17.2198i; last |s_n|/n^2: [(44, '0.004092'), (45, '0.003751'), (46, '0.004020')]
+scout_N144_dps600.json r=1: fit n in [31, 45] (15 pts): |zeta|=16.4826592 (x0.772233 model), arg/pi mod 1=0.4858604 (model -0.435667; diff -0.078472), beta=-13.1360-25.7678i; last |s_n|/n^2: [(43, '0.004047'), (44, '0.004024'), (45, '0.003864')]
+scout_N144_dps600.json r=2: fit n in [30, 45] (16 pts): |zeta|=18.0921480 (x0.847640 model), arg/pi mod 1=0.4546465 (model -0.435667; diff -0.109686), beta=-13.0183-37.4456i; last |s_n|/n^2: [(43, '0.004220'), (44, '0.003925'), (45, '0.004040')]
+scout_N144_dps700.json r=0: fit n in [31, 46] (16 pts): |zeta|=14.8524765 (x0.695857 model), arg/pi mod 1=-0.482630 (model -0.435667; diff -0.046962), beta=-13.7650-17.2198i; last |s_n|/n^2: [(44, '0.004092'), (45, '0.003751'), (46, '0.004020')]
+scout_N144_dps700.json r=1: fit n in [31, 45] (15 pts): |zeta|=16.4826592 (x0.772233 model), arg/pi mod 1=0.4858604 (model -0.435667; diff -0.078472), beta=-13.1360-25.7678i; last |s_n|/n^2: [(43, '0.004047'), (44, '0.004024'), (45, '0.003864')]
+scout_N144_dps700.json r=2: fit n in [30, 45] (16 pts): |zeta|=18.0921480 (x0.847640 model), arg/pi mod 1=0.4546465 (model -0.435667; diff -0.109686), beta=-13.0183-37.4456i; last |s_n|/n^2: [(43, '0.004220'), (44, '0.003925'), (45, '0.004040')]
+scout_N216_dps840.json r=0: fit n in [47, 70] (24 pts): |zeta|=21.3796771 (x1.001665 model), arg/pi mod 1=-0.395821 (model -0.435667; diff 0.0398464), beta=28.99026+0.719969i; last |s_n|/n^2: [(68, '0.003495'), (69, '0.003601'), (70, '0.003489')]
+scout_N216_dps840.json r=1: fit n in [47, 69] (23 pts): |zeta|=19.2597100 (x0.902342 model), arg/pi mod 1=-0.418245 (model -0.435667; diff 0.0174219), beta=12.55880-9.84035i; last |s_n|/n^2: [(67, '0.003614'), (68, '0.003554'), (69, '0.003626')]
+scout_N216_dps840.json r=2: fit n in [46, 69] (24 pts): |zeta|=19.0140133 (x0.890830 model), arg/pi mod 1=-0.378517 (model -0.435667; diff 0.0571496), beta=10.72188+8.083689i; last |s_n|/n^2: [(67, '0.003589'), (68, '0.003637'), (69, '0.003609')]
+scout_N72_dps330.json r=0: fit n in [15, 22] (8 pts): |zeta|=7.96478501 (x0.373160 model), arg/pi mod 1=0.4980187 (model -0.435667; diff -0.066313), beta=-15.6271-5.47861i; last |s_n|/n^2: [(20, '0.005059'), (21, '0.004618'), (22, '0.005721')]
+scout_N72_dps330.json r=1: fit n in [15, 21] (7 pts): |zeta|=4.79032488 (x0.224432 model), arg/pi mod 1=0.3632476 (model -0.435667; diff -0.201084), beta=-19.0056-2.06027i; last |s_n|/n^2: [(19, '0.006504'), (20, '0.004568'), (21, '0.005246')]
+scout_N72_dps330.json r=2: fit n in [14, 21] (8 pts): |zeta|=6.46435103 (x0.302863 model), arg/pi mod 1=-0.489794 (model -0.435667; diff -0.054127), beta=-15.6468-2.76027i; last |s_n|/n^2: [(19, '0.006365'), (20, '0.004622'), (21, '0.005902')]
+scout_N72_dps400.json r=0: fit n in [15, 22] (8 pts): |zeta|=7.96478501 (x0.373160 model), arg/pi mod 1=0.4980187 (model -0.435667; diff -0.066313), beta=-15.6271-5.47861i; last |s_n|/n^2: [(20, '0.005059'), (21, '0.004618'), (22, '0.005721')]
+scout_N72_dps400.json r=1: fit n in [15, 21] (7 pts): |zeta|=4.79032488 (x0.224432 model), arg/pi mod 1=0.3632476 (model -0.435667; diff -0.201084), beta=-19.0056-2.06027i; last |s_n|/n^2: [(19, '0.006504'), (20, '0.004568'), (21, '0.005246')]
+scout_N72_dps400.json r=2: fit n in [14, 21] (8 pts): |zeta|=6.46435103 (x0.302863 model), arg/pi mod 1=-0.489794 (model -0.435667; diff -0.054127), beta=-15.6468-2.76027i; last |s_n|/n^2: [(19, '0.006365'), (20, '0.004622'), (21, '0.005902')]
+
+== local beta-free scale estimates (largest run): zeta^2 ~ 2 / (s_{n+2} - 2 s_{n+1} + s_n), s_n = c_{n+2}/c_n, c_n = a_{3n+r}
+  r=0: n=57..68: |zeta| local = ['1.311', '1.315', '1.322', '1.32', '1.331', '1.327', '1.338', '1.336', '1.343', '1.348', '1.349', '1.359']; min 1.311 max 1.359 mean 1.333; arg/pi mod 1 = ['0.236', '-0.328', '0.108', '-0.453', '-0.0166', '0.424', '-0.139', '0.302', '-0.259', '0.183', '-0.376', '0.0649']
+  r=1: n=56..67: |zeta| local = ['1.314', '1.309', '1.319', '1.319', '1.324', '1.33', '1.329', '1.34', '1.336', '1.347', '1.346', '1.353']; min 1.309 max 1.353 mean 1.331; arg/pi mod 1 = ['-0.0558', '0.382', '-0.183', '0.255', '-0.308', '0.13', '-0.43', '0.0077', '0.45', '-0.112', '0.331', '-0.23']
+  r=2: n=56..67: |zeta| local = ['1.314', '1.311', '1.323', '1.318', '1.328', '1.327', '1.333', '1.339', '1.339', '1.349', '1.346', '1.357']; min 1.311 max 1.357 mean 1.332; arg/pi mod 1 = ['0.0896', '-0.472', '-0.0379', '0.402', '-0.163', '0.277', '-0.285', '0.155', '-0.404', '0.0349', '0.478', '-0.0827']
+
+== Borel–Padé singularity scouting (largest run): poles of the diagonal Padé approximants of B_r(t) = sum_n c_n t^n / n!, c_n = a_{3n+r}
+   (nearest poles by modulus; a string of poles marks a branch cut; the first element of each string is the branch-point estimate; NUM only)
+  r=0 Pade[14/14] nearest poles (|t|, arg/pi): [('12.055', '0.8467'), ('14.458', '0.6339'), ('14.638', '-0.5059'), ('15.411', '-0.5564'), ('15.495', '0.6924')]
+  r=0 Pade[22/22] nearest poles (|t|, arg/pi): [('15.892', '0.5938'), ('15.933', '-0.477'), ('16.145', '0.6221'), ('16.156', '-0.5059'), ('16.758', '-0.5336')]
+  r=0 Pade[30/30] nearest poles (|t|, arg/pi): [('11.339', '-0.5355'), ('14.919', '0.6495'), ('16.605', '0.598'), ('16.635', '0.5786'), ('16.754', '-0.4649')]
+  r=0 Pade[34/34] nearest poles (|t|, arg/pi): [('17.088', '0.5893'), ('17.133', '-0.4601'), ('17.137', '0.5745'), ('17.171', '-0.4761'), ('17.22', '0.6029')]
+  r=1 Pade[14/14] nearest poles (|t|, arg/pi): [('14.185', '0.6259'), ('14.716', '0.679'), ('15.061', '-0.4984'), ('15.856', '-0.53'), ('15.992', '0.7289')]
+  r=1 Pade[22/22] nearest poles (|t|, arg/pi): [('15.796', '0.5934'), ('15.816', '-0.476'), ('16.016', '-0.5053'), ('16.043', '0.6221'), ('16.429', '0.3582')]
+  r=1 Pade[30/30] nearest poles (|t|, arg/pi): [('16.203', '0.5607'), ('16.537', '0.5832'), ('16.661', '0.6018'), ('16.863', '-0.4636'), ('16.957', '-0.4822')]
+  r=1 Pade[34/34] nearest poles (|t|, arg/pi): [('17.002', '0.5881'), ('17.027', '-0.4594'), ('17.041', '-0.4758'), ('17.079', '0.573'), ('17.113', '0.6021')]
+  r=2 Pade[14/14] nearest poles (|t|, arg/pi): [('14.068', '-0.5016'), ('14.48', '-0.5541'), ('14.764', '0.6346'), ('15.305', '-0.6107'), ('15.917', '0.6884')]
+  r=2 Pade[22/22] nearest poles (|t|, arg/pi): [('15.952', '0.5946'), ('16.018', '-0.4779'), ('16.213', '0.6228'), ('16.265', '-0.5065'), ('16.897', '-0.534')]
+  r=2 Pade[30/30] nearest poles (|t|, arg/pi): [('16.797', '0.5963'), ('16.808', '0.5785'), ('17.013', '0.6128'), ('17.091', '-0.4662'), ('17.244', '-0.4843')]
+  r=2 Pade[34/34] nearest poles (|t|, arg/pi): [('17.073', '0.5906'), ('17.111', '0.5754'), ('17.172', '-0.4621'), ('17.223', '0.6045'), ('17.253', '-0.4782')]
+   model: |zeta_z| = 21.34413 arg/pi = -0.4357 and +0.5643 (two singularities ±zeta, design D6)
+   in the xi^3 Borel variable (|t_u| = |t_z| |ell|): model |t_u| = 2 pi/3 = 2.0944 ; observed nearest |t_u| per class at the highest order: ['1.6767', '1.6683', '1.6753']
+
+== candidate points (largest run); direction arg xi = pi/6 (centre of the overlap S_0 ∩ S_1, design D7); arg z = pi/6 - arg c
+   jump-scale bracket exp(-|zeta_z|/|z*|^3) for |zeta_z| = 17.1 (Borel–Padé [34/34] branch-point estimate, N = 216) and 21.34 (model); NUM
+  target 1e-10: |z*|^3=0.926964; exp(-17.1/|z*|^3)=9.737e-9; exp(-21.34/|z*|^3)=1.004e-10
+  target 1e-15: |z*|^3=0.617976; exp(-17.1/|z*|^3)=9.608e-13; exp(-21.34/|z*|^3)=1.007e-15
+  target 1e-20: |z*|^3=0.463482; exp(-17.1/|z*|^3)=9.481e-17; exp(-21.34/|z*|^3)=1.009e-20
+  target 1e-30: |z*|^3=0.308988; exp(-17.1/|z*|^3)=9.232e-25; exp(-21.34/|z*|^3)=1.013e-30
+  target 1e-10: |xi*|=0.44972563 z*=0.8753097528-0.429568709i |z*|=0.97503663 least term k=39 (inside range: True; model n-estimate k~69) |term|=1.15524e-7
+  target 1e-15: |xi*|=0.39287152 z*=0.7646535006-0.375262833i |z*|=0.85177295 least term k=74 (inside range: True; model n-estimate k~104) |term|=1.43686e-10
+  target 1e-20: |xi*|=0.35694747 z*=0.6947338112-0.340948910i |z*|=0.77388709 least term k=104 (inside range: True; model n-estimate k~138) |term|=3.60817e-14
+  target 1e-30: |xi*|=0.31182233 z*=0.6069058856-0.297846308i |z*|=0.67605264 least term k=161 (inside range: True; model n-estimate k~207) |term|=9.14503e-22
+
+== negative control(s)
+control_N36_dps60.json max ball radius 3.0105e+52  |a_N| = 1.50526509025e+52  C3 = False
+
+SUMMARY OK
