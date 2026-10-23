@@ -1,0 +1,100 @@
+{
+ "study": "PROG",
+ "target": "v1.3",
+ "stage": "compaction",
+ "base": "corrected intermediate (stage 1; commit 951371d)",
+ "base_sha256": "e4fe4e7b1df4de12b2e01cc187e223c27b7cd3d6c9beb030f227f9c88c54b136",
+ "archives": [
+  {
+   "name": "programme-v1.2",
+   "git": "programme-v1.2:dsn/RTG_PROGRAMME_OVERVIEW.md",
+   "sha256": "4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359",
+   "role": "adopted predecessor; holds Appendices A-C of v1.2 and every relocated passage"
+  },
+  {
+   "name": "programme-v1.3-stage1",
+   "git": "951371dde884a21616fbcab20cdc17646a312b1b:dsn/RTG_PROGRAMME_OVERVIEW.md",
+   "sha256": "e4fe4e7b1df4de12b2e01cc187e223c27b7cd3d6c9beb030f227f9c88c54b136",
+   "role": "reviewed stage-1 intermediate (commit 951371d); holds the full stage-1 Appendix A entry"
+  }
+ ],
+ "profile": {
+  "study": "PROG",
+  "ref_words": [
+   "PREL"
+  ],
+  "history_words": [],
+  "checked_tag_prefixes": [
+   "programme-"
+  ],
+  "known_tags": [
+   "atlas-v0.2",
+   "atlas-v0.3",
+   "az-v0.6",
+   "dyad-v6.4.19",
+   "dyad-v6.4.20",
+   "dyad-v6.4.21",
+   "dyad-v6.4.22",
+   "dzt-v0.8",
+   "er2b-v0.3",
+   "fms-v0.6.4",
+   "gen-v2.8.9",
+   "legacy-v0.7",
+   "methodology-v1.3",
+   "methodology-v1.4",
+   "numgen-v1.20.8",
+   "ofn-v0.10",
+   "prelegacy-v0.8",
+   "programme-v1.2",
+   "recog-v0.3.22",
+   "recog-v0.3.23",
+   "rer-v0.2",
+   "rrf-v0.8.4",
+   "tdrg-v2.12.13",
+   "triad-v1.6.1",
+   "uvm-v0.7.1"
+  ],
+  "summary_from": [
+   "header"
+  ]
+ },
+ "operations": [
+  {
+   "id": "M01",
+   "op": "edit",
+   "class": "ref-subst",
+   "old": "See Appendix C, PREL.",
+   "new": "See Appendix C of v1.2 (tag `programme-v1.2`), PREL.",
+   "archive": [
+    "programme-v1.2"
+   ],
+   "note": "the v1.2 reference ledger stays at its tag"
+  },
+  {
+   "id": "M02",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "start": "\n## Appendix A — Version History",
+   "end": "\n---\n\n<a id=\"prog-corrections\"></a>",
+   "new": "\n## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1.1). Full entries of v1.0–v1.2, the Draft 1 history of v1.2 and the adopted replacement ledger's provenance are in Appendix A of v1.2 (tag `programme-v1.2`); the full stage-1 draft entry of v1.3 is at the stage-1 commit named in the release record.\n\n### v1.3 — 23 October 2026 — DRAFT candidate\n\n- **Basis:** atlas advisory `records/programme/ATLAS_ADVISORY_PROGRAMME_v1_2.md` as disposed by the PI on 23 October 2026 (its §5); Methodology v1.4.\n- **Inventory and interfaces:** governing editions by tag for every home; class column; new rows for RRF (adopted working standard), RER, FMS, ER-2B (noncanonical) and the State Atlas (derived map); §6.2–6.5 reduced to custody and interface records pointing to the owners' status summaries; §7 pins at governing tags or labelled consumer pins; IF17 retired as a transfer proposal; IF26–IF36 added.\n- **Pointers:** OFN v0.10 and RRF v0.8.4 as criterion homes for P0 and P2B; OPEN M v0.7.1 for P3; §8.2 cross-stream κ table; §9.2 maintenance record with the remaining queue (Pre-Legacy, TDR-G, DZT, AZ); §9.3 repository-based evidence and adoption.\n- **Compaction [layout]:** compact Appendix A; Appendix C of v1.2 left at tag `programme-v1.2`; Appendix B retained (see release record).\n- **Unchanged:** architecture, maturity semantics and the v1.1 maturity records, the five programme OPEN RIDs (all ACTIVE), SG-PROG-1–4, the restructuring queue, the TDR-T launch-gate record.\n- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`; v1.2 release and change records recorded as missing.\n\n### v1.2 — 20 September 2026 — Adopted\n\n- Inventory/architecture release under Methodology v1.3: 14-home inventory, typed interfaces IF01–IF25, maturity semantics, OPEN-P closure criteria, scope guards SG-PROG-1–4 clarified (P12-P1–P12-P4 accepted by the PI). No scientific claim promoted, demoted or closed. Full entry and Draft 1 history: tag `programme-v1.2`.\n\n### v1.1 — June 2026\n\n- Four OPEN clusters; $T$ as postulated effective generator until OPEN-P0 closes; discrete wording corrected; filenames updated to the June editions. Full entry: tag `programme-v1.2`.\n\n### v1.0 — June 2026\n\n- Initial release from the RTG hierarchy analysis and the multi-AI design review: OPEN-P0–P3, maturity ladder, SG-PROG-1–4, five-tier hierarchy, dependency graph. Full entry: tag `programme-v1.2`.\n\n",
+   "archive": [
+    "programme-v1.2",
+    "programme-v1.3-stage1"
+   ],
+   "note": "compact Appendix A; full entries at tag programme-v1.2 and at the stage-1 commit"
+  },
+  {
+   "id": "M03",
+   "op": "replace-section",
+   "class": "history-section",
+   "start": "\n<a id=\"prog-sources\"></a>\n## Appendix C — Versioned Reference Ledger and Verification Scope",
+   "end": "\n---\n\n*END OF DOCUMENT",
+   "new": "",
+   "archive": [
+    "programme-v1.2"
+   ],
+   "note": "v1.2 package ledger (inspected locations, package paths, validation scope); current editions are §6.1 and BASELINE.md"
+  }
+ ],
+ "candidate_sha256": "01199132609a4782dbce1f572d65e2fd1406857db3835c21eb8a7edd43215a35"
+}
