@@ -34,6 +34,7 @@ jobs:
           set -euo pipefail
           mkdir -p /tmp/atlas-v03
           git archive --format=tar HEAD | gzip > /tmp/atlas-v03/repository.tar.gz
+          git bundle create /tmp/atlas-v03/repository.bundle --all
           git rev-parse HEAD > /tmp/atlas-v03/commit.txt
           git show atlas-v0.2:atlas/RTG_STATE_ATLAS.md > /tmp/atlas-v03/atlas-v0.2.md
           git show recog-v0.3.23:dsn/RTG_RELATIONAL_RECOGNITION_DSN.md > /tmp/atlas-v03/recog-v0.3.23.md
