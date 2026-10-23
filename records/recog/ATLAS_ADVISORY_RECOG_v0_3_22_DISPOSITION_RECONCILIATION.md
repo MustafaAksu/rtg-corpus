@@ -67,3 +67,10 @@ The RECOG co-owner session ([C-O]) offers to build stage 1 on `claude/recog-v0.3
 - (b) the session hands the built files to the PI. The PI uploads them unchanged to `upload/recog-v0.3.23-stage1`, and the atlas session hash-checks them and moves them to the `claude/` branch.
 
 The change-focused review of stage 1 is done by the other co-owner, plus the atlas owner for the advisory rows.
+
+## 5. PI decisions (23 October 2026)
+
+1. **FB-13:** the two new RIDs are created, `RECOG-THM-R9-COMPARATOR-INCOMPLETENESS` and `RECOG-ALG-SWAP-ODD-RHO`. The rest is handled as [C-O] proposes: named sub-statements, others deferred.
+2. **Notices:** left as they stand for now. A separate structure for cross-stream notices will be set up later. Until then v0.3.23 changes no recorded notice state on the basis of evidence it does not hold: G3-RER as recorded by RER; G3-OFN and G3-RRF prepared; v0.3.22 notices and Dyadic N19/N21 prepared.
+3. **F5:** posed with [G-O]'s scope (a non-smooth or event-gated signature is a sufficient witness, not a necessary condition); [C-O]'s stronger statement is its test question.
+4. **Build route (a):** every session gets read and write access to the repository. The [C-O] session builds stage 1 on `claude/recog-v0.3.23-stage1`. Version number v0.3.23.
