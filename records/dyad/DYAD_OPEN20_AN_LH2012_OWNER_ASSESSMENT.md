@@ -4,7 +4,7 @@
 
 ## Assessed material
 
-- **Review:** `DYAD_LH2012_SUMMABILITY_REVIEW.md`, 23 Oct 2026 (SHA-256 `e5b815eacdcf99706bd6d3f28c2f2240223bb929cae9ba2eeab7cf822bd18d9f`), with its Turkish cover note (`ef7fbc12…915b`). The PI forwarded both to the owner session. Neither is in the repository yet; per CONVENTIONS §6 they go unchanged to an `upload/…` branch. The review's script and outputs (`check_lh2012_dyad_transfer.py`, `transfer_checks.json`, `negative_controls.json`) were **not** supplied to the owner, so its "9/9, three controls" result is EV-SRC-REPORTED here.
+- **Review:** `DYAD_LH2012_SUMMABILITY_REVIEW.md`, 23 Oct 2026 (SHA-256 `e5b815eacdcf99706bd6d3f28c2f2240223bb929cae9ba2eeab7cf822bd18d9f`), with its Turkish cover note (`ef7fbc12…915b`). The PI forwarded both to the owner session. The review, its script `check_lh2012_dyad_transfer.py` (`71bf1c70…853d`) and its JSON outputs are now on `upload/dyad-lh2012-review` (`incoming/dyad-lh2012-review/`, PR #20); the owner checked them against that folder's `SHA256SUMS.txt` (7/7 OK) and the review hash above. **Owner replay (EV-RUN, 23 Oct 2026):** the script exits 0, and its `--negative ratio|branch|coefficient` runs exit 1; all four JSON outputs are byte-identical to the uploaded ones. The Turkish cover note is not on the upload branch; its bytes (`ef7fbc12…915b`) are in the owner session and go to the PI for upload.
 - **Article:** L. López-Hernanz, "Summable formal invariant curves of diffeomorphisms", *Ergodic Theory Dynam. Systems* 32 (2012) 211–221, DOI 10.1017/S0143385710000805 [L12].
   - The owner read the supplied Markdown transcription in full: 681 lines, SHA-256 `9aa1ffa88ab87a92c5d77e0a672f409eaca17ee696dbb0f17cb605629d622978` (EV-SRC-READ).
   - The transcription was not compared with the PDF. Neither file is committed: the article is under publisher copyright and this repository is public. The PI keeps the source privately; it is cited here by hash.
@@ -38,11 +38,11 @@ The owner checked the argument step by step. Each step holds:
 - **Branch exchange.** $T(\Gamma_+)=\Gamma_-$, so $\hat\phi_+$ converges ⟺ $\hat\phi_-$ converges. The all-order statement uses P1-c's uniqueness of the two branches.
 - **Consequences for B-an and B-6.** A nonzero jump ⇒ the branch diverges ⇒ $\log F$ diverges (Lemma 5b-1). This does **not** decide $F^{1/2}$ or $F^{1/6}$. A convergent branch gives an invariant analytic curve for any analytic tangent-to-identity root. B-an and B-6 are unchanged.
 - **Real slice.** The sectorial curves have no real-slice points near the origin ($|w|=O(|z|^2)$ against $|w|=|z|$). Real tube and L-PHASE constants do not transfer.
-- **Terminology.** Gevrey-$1/3$ ⟺ **3-summable** in $z$ ⟺ 1-summable after $t=z^3$ (with the residue-class split). This replaces the P1-c-5 wording "1/3-summable".
+- **Terminology** (corrected after the receiving review, R1). [L12] gives **3-summability** in $z$, which **implies** Gevrey order $1/3$. A Gevrey-$1/3$ coefficient bound alone does **not** give 3-summability; the application rests on the [L12] summability theorem, not on the earlier coefficient bound. Under the residue-class split after $t=z^3$, 3-summability in $z$ becomes 1-summability of the three component series in $t$. "3-summable" replaces the P1-c-5 wording "1/3-summable".
 
 ## 2. Independent owner check of the finite inputs (EV-RUN; EV-INDEP relative to the review's unseen script)
 
-`evidence/dyad/scripts/dyad_lh2012_transfer_check.py`, SHA-256 `6b443e2893f142414cb5babbcaa755c2d05b08abf65b1972584600cafffa13e5`. It composes $T^6$ in exact rationals in the real chart to degree 5, using the engine of `dyad_h4_real_route_check.py`. It then works in the complexified raw frame $z=\rho+\omega\eta$, $w=\rho+\bar\omega\eta$ ($z=W$) with exact sympy.
+`evidence/dyad/scripts/dyad_lh2012_transfer_check.py`, SHA-256 `adbe4c47b563c75c2ccf71e4846548aacd0a4406ffcee2cd3560d89b5935dbbc` (revised after the receiving review; the first version `6b443e28…13e5`, reviewed at commit `be9ea79`, used a floating-point nonzero test in L5). It composes $T^6$ in exact rationals in the real chart to degree 5, using the engine of `dyad_h4_real_route_check.py`. It then works in the complexified raw frame $z=\rho+\omega\eta$, $w=\rho+\bar\omega\eta$ ($z=W$) with exact sympy.
 
 **Gates:**
 
@@ -52,7 +52,7 @@ The owner checked the argument step by step. Each step holds:
 | L2 | weighted divisibility for $(z,w)=(x,x^2u)$ |
 | L3 | the recorded coefficients: $\mu$; $c_{40}=-\tfrac1{16}+\tfrac{7\sqrt3}{144}i$; $d_{31}=\tfrac13-\tfrac{\sqrt3}9i$; $C=-\tfrac{61}{2160}+\tfrac{43\sqrt3}{6480}i$ |
 | L4 | $A=\tfrac12+2i\sqrt3$, $B=\tfrac{11}{24}-\tfrac{5i\sqrt3}{24}$ |
-| L5 | $\ell_\pm\neq0$ and $\ell_-=-\ell_+$ |
+| L5 | $\ell_\pm\neq0$ **exactly** (R2): a root with $\ell=0$ would be $a=-c_{40}/\mu$, and $P(-c_{40}/\mu)=-\tfrac{49}{8640}+\tfrac{307\sqrt3}{25920}i\neq0$ in $\mathbb Q(i\sqrt3)$; $\ell_-=-\ell_+$ exactly (equivalently $\ell_+\ell_-=-\tfrac{22487}{2540160}+\tfrac{16661\sqrt3}{7620480}i\neq0$) |
 | L6 | $\alpha=-\tfrac{102}{19}-\tfrac{16\sqrt3}{19}i$ for both roots |
 | L7 | $a_++a_-=\tfrac{1+i\sqrt3}{12}$ |
 | L8 | $T$ has linear part $(\lambda z,\bar\lambda w)$, $\lambda=e^{i\pi/3}$, and $[T_w]_{2,0}=-\tfrac16$ |
@@ -60,14 +60,14 @@ The owner checked the argument step by step. Each step holds:
 
 **Results:**
 - All nine gates pass, exit 0. The output is `evidence/dyad/open20-an/lh2012_transfer_check_output.txt`.
-- Negative controls: `--control C` (altered $C$) fails L3 and exits 1; `--control S` (altered $T$ coefficient) fails L8 and L9 and exits 1.
+- Negative controls: `--control C` (altered $C$) fails L3 and L5, exit 1; `--control S` (altered $T$ coefficient) fails L8 and L9, exit 1; `--control Z` sets $C=Bc_{40}/\mu-A(c_{40}/\mu)^2$, which puts the root at $-c_{40}/\mu$ (here a double root, since $B/A=2c_{40}/\mu$), and fails L3, L5 and L6, exit 1. Numeric root values are display-only.
 - The $(4,0)$, $(3,1)$ and $(0,4)$ values agree with the archival $h_4$ closed forms of §1/§8: $[F_w]_{3,1}=\overline{h_4^{(1,3)}}$ and $[F_w]_{4,0}=\overline{h_4^{(0,4)}}=0$.
 
 **Owner observation** (`[ALG]`, exact; SESSION). $\ell_-=-\ell_+$ is equivalent to $B/A=2c_{40}/\mu$, and this identity holds. As a consequence:
 
 $$\alpha=\frac{2A}{\mu}=\frac{2\bar\mu}{\mu}-4=-\frac{102}{19}-\frac{16\sqrt3}{19}i,$$
 
-independent of the root and of $C$. So the Briot–Bouquet ratio of both branches is fixed by the six-step cubic coefficient $\mu$ (DYAD-THM-C21) alone. This also explains why control C leaves L6 unchanged.
+independent of the root and of $C$, through the polynomial identity $P'(a)=\tfrac{2A}{\mu}(c_{40}+\mu a)$. The premise is $B\mu=2Ac_{40}$, which ties the quartic coefficients $d_{31}$ and $c_{40}$ to $\mu$; it holds for this map. So in **this** reduction the ratio equals $2\bar\mu/\mu-4$; it does not follow that every germ with the same cubic coefficient has this ratio. The ratio does not determine any jump.
 
 **Limit.** This is finite algebra only: it checks the inputs of the imported theorems, not the theorems themselves.
 
