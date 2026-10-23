@@ -1,0 +1,32 @@
+{
+  "reviewer": "ChatGPT",
+  "date": "2026-10-23",
+  "reviewed_pr": 13,
+  "reviewed_head": "c548bab259cea349ad252fc0b4927340ab390687",
+  "recog_full_read": true,
+  "recog_lines": 1581,
+  "recog_bytes": 329148,
+  "recog_sha256": "0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9",
+  "recog_git_blob": "3025d5805fd5f6322b7d0d7c164cdce2de45583d",
+  "advisory_rows_assessed": 22,
+  "additional_point_of_use_findings": 4,
+  "bounded_exact_checks_executed": 12,
+  "bounded_exact_checks_passed": 12,
+  "original_owner_certificates_rerun": false,
+  "FC19_written_convergence_proof": "SESSION deduction verified, not owner-adopted; explicit U, no R9 or INF-1 premise",
+  "result_grammar_scope": "line-leading RESULT blocks in sections 1-6, through source line 1111; not tables, headings or history",
+  "bare_RESULT_lines": [548, 837, 853, 865, 873, 905, 956, 995, 999, 1019, 1021, 1030, 1052, 1054, 1108, 1110],
+  "noncanonical_from_lines": [487, 927, 1003],
+  "numerical_displays": {
+    "lattice_ratio_raw": "41.26943551859369749735310",
+    "lattice_ratio_post_H2": "59.11943035666435621440500",
+    "G_exact": "sqrt(481897)/90720",
+    "G_decimal": "0.007651984290981194000801989",
+    "incompleteness_A": "0.00001480074330944138104603866",
+    "incompleteness_B": "0.00004694468890172511656933736"
+  },
+  "original_RECOG_release_records_recovered": false,
+  "local_zip_member_lists_searched": 7,
+  "recovery_seed_filename_occurrences_from_section8": 71,
+  "nonclaims": ["No owner adoption or DSN edit", "No global source-recovery search", "No inherited Arb or token-production replay", "No automatic consumer repin", "No PR merge, release tag or branch deletion"]
+}
