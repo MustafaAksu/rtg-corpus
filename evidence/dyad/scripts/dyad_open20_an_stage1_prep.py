@@ -21,8 +21,11 @@ Gates:
       F_1 = xi - xi^4 + O(xi^4 Y, xi^5);  F_2 = Y - alpha xi^3 Y + O(xi^3 Y^2, xi^4 Y) + xi^5 psi(xi), psi(0) != 0.
   S5  formal inverse of the normalized map (x-order <= 5, Y-degree <= 2): both compositions are the identity to that order;
       after xi~ = rho xi, rho = e^{i pi/3}, the inverse has the same form with the same alpha and m = 2.
-Negative controls (exit 1): --control B  b_1 perturbed (S4: a pure xi^4 term appears);  --control R  c^3 = +ell
-  (S4: xi^4 coefficient +1);  --control A  alpha altered (S4).
+  S6  graph consistency of the vertical jet (added after the stage-1 receiving review, J1): psi(0) = (alpha - 2) b_2 / c^2.
+  S7  second computation route: direct substitution z = xi/c, w = (xi/c)^2 (a + b_1 xi/c + Y) into the raw degree-7 jets
+      and division by z'^2 reproduces the vertical normalized jet F_2 coefficient by coefficient (x-order <= 5, Y-degree <= 2).
+Negative controls (exit 1): --control B  b_1 perturbed (S4);  --control R  c^3 = +ell (S4);  --control A  alpha altered (S4);
+  --control T  the pre-substitution truncation of the first version restored (raw w-degree <= 2 before w = x^2 u): S6 and S7 fail.
 Output JSON is deterministic (exact strings).  Exit 0 PASS / 1 FAIL / 3 crash.
 Usage: python -I -B dyad_open20_an_stage1_prep.py [--control B|R|A] [--out stage1_prep.json]
 """
@@ -178,7 +181,7 @@ class Ser:
 
 def main():
     import argparse, mpmath
-    ap = argparse.ArgumentParser(); ap.add_argument('--control', choices=['B', 'R', 'A']); ap.add_argument('--out', default='stage1_prep.json')
+    ap = argparse.ArgumentParser(); ap.add_argument('--control', choices=['B', 'R', 'A', 'T']); ap.add_argument('--out', default='stage1_prep.json')
     opt = ap.parse_args()
     Ec.C3 = ELL if opt.control == 'R' else -ELL
     G, info = {}, {}
@@ -253,7 +256,10 @@ def main():
     NX, NY = 5, 2
     Xb = Ser({(1, 0): Ec.c(1)}, 7, NY); Ub = Ser({(0, 1): Ec.c(1), (0, 0): Ec([A_E, 0, 0])}, 7, NY)
     W2 = Xb * Xb * Ub
-    Fzl = Ser(FzS.d, 7, NY).compose(Xb, W2); Fwl = Ser(FwS.d, 7, NY).compose(Xb, W2)
+    # J1 (stage-1 receiving review): substitute w = x^2 u into the FULL degree-7 jets; raw w-degree and lifted y-degree are different
+    # truncation orders, so truncating the raw w-degree before substitution loses terms (e.g. d13 z w^3 -> d13 x^7 (a+y)^3 -> x^5 after /x'^2).
+    src_z, src_w = (Ser(FzS.d, 7, NY), Ser(FwS.d, 7, NY)) if opt.control == 'T' else (FzS, FwS)
+    Fzl = src_z.compose(Xb, W2); Fwl = src_w.compose(Xb, W2)
     def shift(s, n, nx):
         d = {}
         for (i, j), v in s.d.items():
@@ -296,6 +302,28 @@ def main():
     G['S5_form'] = def41(J1, J2, ALPHA)
     info['S5'] = {'inverse_xi4': repr(Ix.coef(4, 0)), 'inverse_xi3Y': repr(Iy.coef(3, 1)), 'rotated_inverse_xi4': repr(J1.coef(4, 0)),
                   'rotated_inverse_xi3Y': repr(J2.coef(3, 1)), 'rotated_inverse_psi0': repr(J2.coef(5, 0)), 'rho': 'e^{i pi/3}, rho^3 = -1'}
+    # ---- S6: graph consistency of the normalized vertical jet: psi(0) = (alpha - 2) b_2 / c^2 ----
+    Cinv2 = Cinv * Cinv
+    G['S6'] = F2.coef(5, 0) == Ec.c(E_(ALPHA) - 2) * Ec([a4, 0, 0]) * Cinv2
+    info['S6'] = {'identity': 'psi(0) = (alpha - 2) b_2 / c^2, from Y(xi) = b_2 xi^2/c^2 + O(xi^3) in the normalized invariance equation at order xi^5',
+                  'rhs': repr(Ec.c(E_(ALPHA) - 2) * Ec([a4, 0, 0]) * Cinv2)}
+    # ---- S7: direct substitution route z = xi/c, w = (xi/c)^2 (a + b_1 xi/c + Y) into the raw jets; vertical jet must agree ----
+    Xi = Ser({(1, 0): Ec.c(1)}, 7, NY); Yd = Ser({(0, 1): Ec.c(1)}, 7, NY)
+    zd = Xi * Cinv; wd = zd * zd * (Yd + Ec([A_E, 0, 0]) + zd * Ec([b1, 0, 0]))
+    zp = FzS.compose(zd, wd); wp = FwS.compose(zd, wd)
+    # F_2 = w'/z'^2 - a - b_1 z' ; z' = (xi/c)(1 + t), t = O(xi^3): 1/z'^2 = c^2 xi^-2 (1 - 2t + 3t^2)
+    td = {}
+    for (i, j), v in zp.d.items():
+        if i >= 1: td[(i - 1, j)] = v
+    one_plus_t = Ser(td, 7, NY) * Cc            # z' c / xi = 1 + t
+    tt = one_plus_t - Ser.c(1, 7, NY)
+    inv2 = Ser.c(1, 7, NY) - 2 * tt + 3 * (tt * tt)
+    wd2 = {}
+    for (i, j), v in wp.d.items():
+        if i >= 2: wd2[(i - 2, j)] = v
+    F2d = Ser(wd2, 7, NY) * Cc * Cc * inv2 - Ec([A_E, 0, 0]) - zp * Ec([b1, 0, 0])
+    F2d = Ser(F2d.d, NX, NY)
+    G['S7'] = F2d == F2
     ok = all(G.values())
     for k in sorted(G): print(k, 'PASS' if G[k] else 'FAIL')
     print('RESULT', 'PASS' if ok else 'FAIL')

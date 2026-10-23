@@ -121,9 +121,15 @@ Only the article's qualitative existence of these constants is available; every 
 - **No change** to the DSN, RIDs, OPEN statuses or notices.
 - **Next:** stage 1 can start after the receiving review of this design and the PI's go-ahead.
 
-## 7. Stage 1 — exact preparation (done, 23 October 2026; OWNER-RUN)
+## 7. Stage 1 — exact preparation (done, 23 October 2026; OWNER-RUN; corrected the same day)
 
-`evidence/dyad/scripts/dyad_open20_an_stage1_prep.py` (SHA-256 `c3c110543e0ea768109377de8781a9849dd9b61caf89195c1075561b91112cc4`; output `evidence/dyad/open20-an/stage1_prep.json`, byte-deterministic). Exact arithmetic in the tower $\mathbb Q(i\sqrt3)\subset E=\mathbb Q(i\sqrt3)[a]/(P)\subset E(c)=E[c]/(c^3+\ell)$, implemented directly (no symbolic engine); identities in $E$ hold for both roots at once, and only S1 selects the root. $F=T^6$ is composed to degree 7 in exact rationals in the real chart and converted to $(z,w)$. Runtime under one second.
+`evidence/dyad/scripts/dyad_open20_an_stage1_prep.py` (SHA-256 `5c22ff7aab5d9dabdf243bfc6e279616b4fdbc5ea9d8429fa513c3b2584d8568`; output `evidence/dyad/open20-an/stage1_prep.json`, byte-deterministic).
+
+**Correction J1** (stage-1 receiving review `records/dyad/DYAD_LH2012_STAGE1_RECEIVING_REVIEW.md`). The first version (`c3c11054…2cc4`, commit `272d273`) truncated the raw jets at $w$-degree 2 **before** substituting $w=x^2(a+y)$. The raw $w$-degree and the lifted $y$-degree are different truncation orders: the term $d_{13}zw^3$ with $d_{13}=[F_w]_{1,3}=-\tfrac16+\tfrac{2i\sqrt3}9\neq0$ becomes $d_{13}x^7(a+y)^3$, which the division by $x'^2$ brings to order $x^5$, inside the kept jet. The lost part of the vertical normalized jet was $\tfrac{d_{13}}{c^5}\xi^5(a^3+3a^2Y+3aY^2)$; in particular $\psi(0)$ was wrong by $d_{13}a^3/c^5$, and S5 could not see it because it inverted the wrong jet consistently. The horizontal jet, $b_1$, $b_2$, $m$, $k$ and $\alpha$ were unaffected. The corrected script substitutes into the full degree-7 jets and truncates afterwards, and adds two gates:
+- **S6**, the graph-consistency identity $\psi(0)=(\alpha-2)\,b_2/c^2$, which follows from $Y(\xi)=b_2\xi^2/c^2+O(\xi^3)$ in the normalized invariance equation at order $\xi^5$;
+- **S7**, a second route: direct substitution $z=\xi/c$, $w=(\xi/c)^2(a+b_1\xi/c+Y)$ into the raw jets and division by $z'^2$ must reproduce $F_2$ coefficient by coefficient.
+
+The negative control `--control T` restores the first version's early truncation; it fails S6 and S7 (exit 1), while S1–S5 still pass, which is the signature of the defect. Exact arithmetic in the tower $\mathbb Q(i\sqrt3)\subset E=\mathbb Q(i\sqrt3)[a]/(P)\subset E(c)=E[c]/(c^3+\ell)$, implemented directly (no symbolic engine); identities in $E$ hold for both roots at once, and only S1 selects the root. $F=T^6$ is composed to degree 7 in exact rationals in the real chart and converted to $(z,w)$. Runtime under one second.
 
 | Gate | Content | Result |
 |---|---|---|
@@ -132,10 +138,12 @@ Only the article's qualitative existence of these constants is available; every 
 | S3 | lifted map: $F_z(x,x^2u)-x$ divisible by $x^4$, $F_w(x,x^2u)-x^2u$ by $x^5$; $y'-y$ has no $x^0..x^2$ terms and its $x^3Y^0$ coefficient vanishes ($P(a)=0$) | PASS |
 | S4 | normalized forward map in $(\xi,Y)$: $F_1=\xi-\xi^4+O(\xi^4Y,\xi^5)$, $F_2=Y-\alpha\xi^3Y+O(\xi^3Y^2,\xi^4Y)+\xi^5\psi(\xi)$, $\psi(0)\ne0$, with $\alpha=-\tfrac{102}{19}-\tfrac{16\sqrt3}{19}i$ ($x$-order $\le5$, $Y$-degree $\le2$) | PASS |
 | S5 | formal inverse to the same order: both compositions are the identity; after $\tilde\xi=\rho\xi$ it has the same Definition-4.1 form with the same $\alpha$ and $m=2$ | PASS |
+| S6 | $\psi(0)=(\alpha-2)\,b_2/c^2$ (graph consistency) | PASS |
+| S7 | direct-substitution route reproduces $F_2$ | PASS |
 
-Negative controls: `--control B` ($b_1$ perturbed) fails S4 and S5; `--control R` ($c^3=+\ell$) fails S4 and S5; `--control A` ($\alpha$ altered) fails S4. Each exits 1.
+Negative controls: `--control B` ($b_1$ perturbed) fails S4, S5, S6; `--control R` ($c^3=+\ell$) fails S4, S5, S6; `--control A` ($\alpha$ altered) fails S4; `--control T` (early truncation) fails S6, S7. Each exits 1.
 
-Numerical values for the pilot root (display only): $b_1\approx-0.0378863102-0.0333746170\,i$, $b_2\approx0.0061030467-0.0061397892\,i$.
+Exact: $b_1=(1-i\sqrt3)(\tfrac1{108}-\tfrac a6)$; $b_2=\tfrac{199}{19845}+\tfrac{2603\sqrt3}{476280}i+\bigl(-\tfrac{23}{216}+\tfrac{\sqrt3}{216}i\bigr)a$. Numerical values for the pilot root (display only): $b_1\approx-0.0378863102-0.0333746170\,i$, $b_2\approx0.0061030467-0.0061397892\,i$.
 
 What stage 1 does **not** do: no domain, contraction, tail or inverse-branch bound (E1–E6); no sectorial sum; no jump. Stages 2 and 3 wait for separate decisions.
 
