@@ -27,7 +27,7 @@ Reproduce from the repository root: `git show programme-v1.2:dsn/RTG_PROGRAMME_O
 | PB-07 OPEN-P pointers | S5-1, S5-2, S5-3 | §5 | P0: OFN v0.10 and RRF v0.8.4 as criterion homes; P2B: OFN OPEN-OFN-3B (`RTG-OFN-OPEN-PRIMACY-3B`) as the criterion home, no construction owner assigned; P3: OPEN M v0.7.1 state (no physical UV blocks; no certified deficit) |
 | PB-09 maturity table | S4-1 | §4 | column "v1.3": records retained; current headers re-read (DZT and AZ declare A; no other owner declares an A–D grade); no grade issued |
 | PB-10 counts and wording | S0-1, S6-3 | §0.1, §6.6 | recount; AI-reader paragraph (PC-13) |
-| PC-12 κ table | S8-1 | §8.2 new | twelve rows: symbol, owner, section, what it names; the class-C κ ≡ γ relation stated as an atlas reading, not an owner statement |
+| PC-12 κ table | S8-1 | §8.2 new | eleven rows: symbol, owner, section, what it names; the class-C κ ≡ γ relation stated as an atlas reading, not an owner statement |
 | release entry | A-1 | Appendix A | stage-1 draft entry (compacted in stage 2) |
 
 Not changed: §1, §2.3, §3, §4 semantics, §5 criteria and the five RIDs, §6.6 table, §6.7 queue, §8 SG-PROG-1–4 (byte-identical, gate G4), Appendix B except B-1. Gate G6: the tag multiset `[DEF]`×10, `[HYP]`×5, `[COR]`×3 is unchanged; no `[THM]`/`[ALG]`/`[NUM]`/`[RESULT]` introduced.
@@ -63,8 +63,8 @@ Checker results: candidate = base + declared operations; 24 claim blocks byte-id
 
 | Step | Who | Result |
 |---|---|---|
-| Stage-1 change-focused review | ChatGPT | pending |
-| Stage-2 mechanical review (movement map, tool run, controls) | ChatGPT | pending |
+| Stage-1 change-focused review | ChatGPT | **ACCEPT WITH MINOR EDITS** (24 Oct 2026, on `951371d` / `f7ff205`): class and tier placements, §5 custody/criteria split, §4 maturity statement (DZT and AZ Level A; no other header verified to declare one) and §7.2 pin treatment confirmed. P13-R1: the κ table has eleven rows, not twelve — the count in this record is corrected (the table is unchanged; the twelfth row of the draft, κ_f, was dropped before stage 1 because Genesis writes no such symbol). P13-R2: at publication the adopted file's SHA-256, `BASELINE.md`, this record and the annotated tag must name the same bytes; `01199132…2a35` is the candidate identity. |
+| Stage-2 mechanical review (movement map, tool run, controls) | ChatGPT | M01–M03 accepted; 24/24 claim blocks; Appendix B carried as a documented exception; checker and controls not independently rerun by the reviewer (editor's runs in `evidence/programme/v1.3/`). No further review round requested. |
 | PI adoption | PI | pending |
 | Publication transform (status lines only), merge commit, annotated tag `programme-v1.3` naming the adopted SHA-256 | editor; PI merges and tags | pending |
 
