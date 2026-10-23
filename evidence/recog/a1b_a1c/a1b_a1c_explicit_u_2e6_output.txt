@@ -1,0 +1,21 @@
+Q0=1.60e-03 th=0.3: ev 333332 mismatch 0 | maxdev 0.0178 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.328 Delta/Q [1.157,1.206] | gaps [6, 7] spread 2.7e-10 crit 0 | slips 7 eps/sqrtQ last -0.164 max 0.555 | decoder a_hat 611.0 (true 625.0) L_err -1.28e-03 drift 1.6e-13
+Q0=1.60e-03 th=1.7: ev 333332 mismatch 0 | maxdev 0.0150 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.329 Delta/Q [1.156,1.210] | gaps [6, 7] spread 3.7e-10 crit 0 | slips 7 eps/sqrtQ last -0.249 max 0.748 | decoder a_hat 646.0 (true 625.0) L_err -9.58e-04 drift -9.1e-14
+Q0=1.60e-03 th=3.9: ev 333332 mismatch 0 | maxdev 0.0142 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.329 Delta/Q [1.156,1.207] | gaps [6, 7] spread 5.4e-10 crit 0 | slips 7 eps/sqrtQ last -0.248 max 0.732 | decoder a_hat 646.7 (true 625.0) L_err -9.47e-04 drift -5.1e-13
+Q0=1.60e-03 th=5.1: ev 333332 mismatch 0 | maxdev 0.0161 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.329 Delta/Q [1.156,1.205] | gaps [6, 7] spread 4.3e-10 crit 0 | slips 7 eps/sqrtQ last -0.180 max 0.331 | decoder a_hat 613.8 (true 625.0) L_err -9.70e-04 drift 6.9e-14
+Q0=1.00e-03 th=0.3: ev 333332 mismatch 0 | maxdev 0.0140 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.329 Delta/Q [1.156,1.195] | gaps [6, 7] spread 3.1e-10 crit 0 | slips 7 eps/sqrtQ last -0.164 max 0.545 | decoder a_hat 982.5 (true 1000.0) L_err -9.76e-04 drift -1.3e-13
+Q0=1.00e-03 th=1.7: ev 333332 mismatch 0 | maxdev 0.0118 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.330 Delta/Q [1.157,1.198] | gaps [6, 7] spread 3.7e-10 crit 0 | slips 6 eps/sqrtQ last -0.269 max 0.749 | decoder a_hat 1026.3 (true 1000.0) L_err -8.35e-04 drift 5.3e-14
+Q0=1.00e-03 th=3.9: ev 333332 mismatch 0 | maxdev 0.0112 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.330 Delta/Q [1.157,1.196] | gaps [6, 7] spread 5.4e-10 crit 0 | slips 6 eps/sqrtQ last -0.267 max 0.722 | decoder a_hat 1026.6 (true 1000.0) L_err -8.89e-04 drift -2.5e-13
+Q0=1.00e-03 th=5.1: ev 333333 mismatch 0 | maxdev 0.0126 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.330 Delta/Q [1.156,1.194] | gaps [6, 7] spread 2.7e-10 crit 0 | slips 6 eps/sqrtQ last -0.158 max 0.333 | decoder a_hat 985.4 (true 1000.0) L_err -8.67e-04 drift -2.1e-13
+Q0=4.00e-04 th=0.3: ev 333332 mismatch 0 | maxdev 0.0088 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.330 Delta/Q [1.156,1.180] | gaps [6, 7] spread 3.1e-10 crit 0 | slips 6 eps/sqrtQ last -0.137 max 0.557 | decoder a_hat 2471.3 (true 2500.0) L_err -7.20e-04 drift 4.4e-14
+Q0=4.00e-04 th=1.7: ev 333332 mismatch 0 | maxdev 0.0075 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.330 Delta/Q [1.157,1.182] | gaps [6, 7] spread 4.7e-10 crit 0 | slips 5 eps/sqrtQ last -0.297 max 0.724 | decoder a_hat 2539.5 (true 2500.0) L_err -6.79e-04 drift -3.0e-13
+Q0=4.00e-04 th=3.9: ev 333333 mismatch 0 | maxdev 0.0071 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.330 Delta/Q [1.157,1.181] | gaps [6, 7] spread 3.5e-10 crit 0 | slips 5 eps/sqrtQ last -0.295 max 0.700 | decoder a_hat 2540.0 (true 2500.0) L_err -6.99e-04 drift -2.2e-13
+Q0=4.00e-04 th=5.1: ev 333333 mismatch 0 | maxdev 0.0079 (B 0.0466) dev/sqrtQ 0.452 | L5max 5.236 L7min 7.330 Delta/Q [1.156,1.180] | gaps [6, 7] spread 2.7e-10 crit 0 | slips 5 eps/sqrtQ last -0.125 max 0.327 | decoder a_hat 2476.6 (true 2500.0) L_err -6.35e-04 drift -2.5e-13
+fiber alpha=0.0: dPsi_true -5.759568 dM_true 1.876e-05 R9 lead 1.875e-05 (diff 1.3e-08, bound 1.6e-03); decode err last slip k=6: naive -3.0e-03, true-a -6.6e-05 (|/dM| 4); record-only -9.2e-05 (|/dM| 5)
+fiber alpha=0.5: dPsi_true 0.523580 dM_true -1.859e-05 R9 lead -1.857e-05 (diff -2.1e-08, bound 1.6e-03); decode err last slip k=6: naive 3.1e-03, true-a -3.1e-05 (|/dM| 2); record-only 1.0e-04 (|/dM| 6)
+fiber alpha=1.0: dPsi_true 0.523617 dM_true 1.805e-05 R9 lead 1.802e-05 (diff 2.9e-08, bound 1.6e-03); decode err last slip k=6: naive -3.1e-03, true-a -3.0e-04 (|/dM| 16); record-only -3.7e-05 (|/dM| 2)
+fiber alpha=1.5: dPsi_true 0.523582 dM_true -1.715e-05 R9 lead -1.712e-05 (diff -3.7e-08, bound 1.6e-03); decode err last slip k=6: naive 3.2e-03, true-a 1.0e-04 (|/dM| 6); record-only 7.0e-05 (|/dM| 4)
+done 220s
+
+real	3m40.736s
+user	3m36.552s
+sys	0m1.585s
