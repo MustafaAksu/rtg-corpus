@@ -1,13 +1,14 @@
 # RTG Dyadic Oscillator DSN v6.4.22 — release record
 
-**Status:** DRAFT — prepared for the change-focused review; **not adopted**. This record becomes frozen at adoption; the adoption section (§6) is filled in only after an explicit PI decision.
+**Status:** ADOPTED — PI, 23 October 2026 (§6). This record is frozen from adoption; later facts go in a dated addendum (Methodology v1.4 §13.7).
+**Receiving review:** ChatGPT, change-focused review of 23 Oct 2026 on PR #9: `CHANGE-FOCUSED REVIEW ACCEPTED`; no correction required.
 **Prepared by:** Claude (Dyadic DSN owner), 23 October 2026, branch `claude/dyad-v6.4.22`.
 **Authority:** co-owner review of 23 Oct 2026 on `records/dyad/DYAD_OWNER_REVIEW_v6_4_21.md` (PR #8): `OWNER REVIEW ACCEPTED — v6.4.22 ERRATA DRAFT AUTHORIZED`. That decision accepted F1–F5, the three wordings and the h₄ evidence reference. It extended F4 to every live R11 use, classified by source rather than by blind replacement, and excluded the §1 reduction from this release.
 **Governing methodology:** DSN Methodology v1.4 (tag `methodology-v1.4`).
 **Predecessor:** v6.4.21, tag `dyad-v6.4.21`, SHA-256 `a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d`.
-**Official state unchanged:**
-- v6.4.21 is the governing edition.
-- OPEN 20 is PARTIAL; B-an and B-6 are OPEN.
+**State after publication:**
+- v6.4.22 is the governing edition once the merge and the tag `dyad-v6.4.22` exist; until then v6.4.21 governs (Methodology v1.4 §13.9).
+- Unchanged: OPEN 20 is PARTIAL; B-an and B-6 are OPEN.
 - N16–N21 are prepared and not sent.
 
 ## 1. Build
@@ -15,7 +16,8 @@
 | Stage | File SHA-256 | Tool | Check |
 |---|---|---|---|
 | Adopted v6.4.21 | `a412f34d…dc7d` | `git show dyad-v6.4.21:dsn/RTG_DYADIC_OSCILLATOR_DSN.md` | — |
-| v6.4.22 candidate | `c6cb222f6f6f58a5d3c1fe269f8b2b86c62131657f464a2e55d09e362cada95a` (258,927 bytes, 1,570 lines) | `evidence/dyad/scripts/build_dyad_v6_4_22.py` (37 assertion-gated edits, one stage, no compaction) | `evidence/dyad/scripts/check_dyad_v6_4_22.py`: C0–C8 ALL PASS |
+| v6.4.22 candidate (reviewed) | `c6cb222f6f6f58a5d3c1fe269f8b2b86c62131657f464a2e55d09e362cada95a` (258,927 bytes, 1,570 lines) | `evidence/dyad/scripts/build_dyad_v6_4_22.py` (37 assertion-gated edits, one stage, no compaction) | `evidence/dyad/scripts/check_dyad_v6_4_22.py`: C0–C8 ALL PASS |
+| **Adopted edition** (publication transform, status lines only) | **`2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29`** (258,972 bytes, 1,570 lines) | `evidence/dyad/scripts/release_dyad_v6_4_22.py` (3 assertion-gated line replacements: header status, Appendix A heading, footer; asserts the candidate hash and exactly 3 changed lines) | candidate → adopted: exactly those 3 lines; two runs byte-identical |
 
 **Reproduce:**
 ```
@@ -94,14 +96,18 @@ The new Appendix C row cites `RECOG-OPEN-QUINTIC-FRAME`. That is a RECOG identif
 | Level | Content |
 |---|---|
 | `OWNER-RUN` | build, C0–C8, the 11 negative controls; `dyad_h4_real_route_check.py` (exit 0, `--control K` exit 1) |
-| `REVIEWER-REPLAYED` | none yet for v6.4.22. The co-owner review compared the h₄ script and recommended running it separately |
-| `REVIEWER FULL REPLAY NOT COMPLETED` | everything new in v6.4.22. Carried: the combined G14–G15 run (v6.4.19) |
+| `REVIEWER-REPLAYED` | change-focused review (23 Oct 2026): SHA-256 of v6.4.21 and of the candidate recomputed from GitHub; the 37 edits re-applied to the canonical v6.4.21 by a separate comparison method, giving exactly the candidate; RID tags, the DYAD RID set and the §2 OPEN status lines unchanged; R11 owner labels and F5 evidence levels checked. The owner checker and control reports were read, **not rerun** |
+| `REVIEWER FULL REPLAY NOT COMPLETED` | the Python checkers of this release (C0–C8, the 11 controls) and `dyad_h4_real_route_check.py` (recommended in the co-owner review); the publication transform. Carried: the combined G14–G15 run (v6.4.19) |
 
 ## 6. Adoption
 
-Not adopted. After the change-focused review, an explicit PI decision is needed. Only then would the following be done, in this order:
-1. this section is filled in;
-2. a status-lines-only publication commit gives the final hash (header status, Appendix A heading, footer);
-3. the PI merges with a merge commit and creates the tag `dyad-v6.4.22` with the hash;
-4. `BASELINE.md` is updated;
-5. a notice delta is added to `records/dyad/DYAD_NOTICES_N16_N21.md` if consumers need one. F4 and F1–F3 concern wording only; the owner sees no consumer action.
+- **Decision:** PI (Mustafa), 23 October 2026: "Ben bu değişikliği benimsiyorum." (verbatim; "I adopt this change.") The statement is relayed in the change-focused review that the PI brought to the owner session on 23 Oct 2026 at 09:55 +03:00. The reviewer recorded it as the explicit PI decision for the reviewed errata scope, and also recorded it as a comment on PR #9.
+- **Adopted file:** `dsn/RTG_DYADIC_OSCILLATOR_DSN.md`, 258,972 bytes, SHA-256 `2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29`. The candidate hash `c6cb222f…a95a` identifies the reviewed candidate only.
+- **Scope:** the reviewed errata scope of §2 (F1–F5, R11 owner labels, W1–W3, h₄ evidence reference). No RID added, renamed or regraded; no statement or OPEN status changed.
+- **Publication:**
+  1. PR #8 (`claude/dyad-owner-review`) is merged first.
+  2. PR #9 (`claude/dyad-v6.4.22`) is retargeted to `main` and merged by the PI with a merge commit (not squash).
+  3. The PI creates the annotated tag `dyad-v6.4.22`, with this hash in its message.
+  - `BASELINE.md` lists v6.4.22 as the governing edition in this commit. It becomes true when the merge and the tag exist.
+- **Notices:** no new notice is required (§2: wording only). An optional informational line to the OPEN-M and RECOG owners on the R11 labels is noted in `records/dyad/DYAD_NOTICES_N16_N21.md`; the PI decides. N16–N21 are unchanged and unsent.
+- **After publication:** the owner reads back the tagged file (completion matrix C-4 procedure).

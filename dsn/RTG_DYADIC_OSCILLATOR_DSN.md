@@ -4,7 +4,7 @@
 **Date:** 23 October 2026  
 **Scope:** The primitive 2D non-symplectic dyad map, its six-step resonant dynamics, ISP crossing geometry, normalized $p$-step structure, and $p$-resonance generalization program.  
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,500 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).  
-**Document status:** DRAFT — v6.4.22 candidate (owner errata: current-state wording, owner labels for RECOG R11 and OPEN-M R11, three wordings, second-route $h_4$ evidence); not adopted.  
+**Document status:** ADOPTED — PI, 23 October 2026 (owner errata: current-state wording, owner labels for RECOG R11 and OPEN-M R11, three wordings, second-route $h_4$ evidence). Adoption record: `records/dyad/RTG_DYADIC_v6_4_22_RELEASE_RECORD.md`.  
 **Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.21` (SHA-256 `a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d`; tag `dyad-v6.4.21`).  
 **Companion documents:** one current-edition table, §7.0.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
@@ -1250,7 +1250,7 @@ Exports to (via Import Ledger entries in those documents):
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, replaced lines and every `[COR]` entry — are in Appendix A of v6.4.20 (tag `dyad-v6.4.20`, SHA-256 `0b2d5a44…4852`). Scientific corrections, retractions and regrades are also recorded in Appendix B.
 
-### v6.4.22 — 23 October 2026 — DRAFT candidate
+### v6.4.22 — 23 October 2026 — Adopted
 
 - **Errata [status/wording] (owner review of v6.4.21, F1–F3, F5):** §7.0 Dyadic row names this edition and its predecessor; the notice-table and Appendix F intros state that N16–N21 are prepared and not sent; the P2B provenance replay status is stated at its recorded level (§6.14, §8).
 - **Labels [notation] (F4):** every live "R11" names its owner — RECOG R11 (final-chart ledger, CLOSED) or OPEN-M R11 (cascade-gate/assembly formulas); Appendix C row.
@@ -1567,4 +1567,4 @@ The v6.4.19→v6.4.20 section map is Appendix G of v6.4.20 (tag `dyad-v6.4.20`).
 
 ---
 
-*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 (DRAFT candidate, 23 October 2026).*
+*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 (ADOPTED, 23 October 2026).*
