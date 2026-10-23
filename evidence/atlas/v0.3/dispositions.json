@@ -1,0 +1,142 @@
+[
+  {
+    "key": "RECOG.R-L1",
+    "disposition": "retired",
+    "reason": "Explicit-U R9/INF-1-free existence is registered by the owner; residual NUMGEN interface is NUMGEN.N-B.",
+    "previous_sha256": "518409656089927a3682a744ddfc988dba974d022aad158792cf0ecd7653195f",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-L1b",
+    "disposition": "reworded",
+    "reason": "A3: comparison source is not phi-star ownership; both phase existence routes are distinguished.",
+    "previous_sha256": "e9fc55b48398125724c3f32607f4fff5bfb4bcfecf1cd3bb40cffd74b6049dc0",
+    "current_sha256": "d9198eb7b53013449e07420244c9886f49558f8cd3827dac206a1cfa076e42fd"
+  },
+  {
+    "key": "RECOG.R-L2",
+    "disposition": "retained",
+    "reason": "Unchanged owner statement, dependency and diagnostic scope.",
+    "previous_sha256": "e0a09cd83e0872fe43c0f71b1d948b061c13f807cbb5e5991dc056e01a30a9ef",
+    "current_sha256": "e0a09cd83e0872fe43c0f71b1d948b061c13f807cbb5e5991dc056e01a30a9ef"
+  },
+  {
+    "key": "RECOG.R-L3",
+    "disposition": "retired",
+    "reason": "Alternative clock proof is an open scientific task in D3.L3, not an adopted proof or regrade.",
+    "previous_sha256": "21dbc1b3db095d93a8ccda9650ef88435296e2cab4250356f414557a341b8757",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-L4",
+    "disposition": "retired",
+    "reason": "Proof/export custody stated by both owners; no unsettled ownership recommendation.",
+    "previous_sha256": "5cafe73f861309e18a061a54fd716b8598d24d421af509cfa382c42fffe8cff1",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-L5",
+    "disposition": "reworded",
+    "reason": "A1: physical covariance not discharged; smooth section-shadow transfer stays an unadopted proposal.",
+    "previous_sha256": "44b371275998d30c94d8d1b69745aa6011b39ea5b6886d0c8783814ec65dce32",
+    "current_sha256": "e848f74b3364a4c6fc0164a87255ef3a3edd44aeac9d0029560e10ca3a755dad"
+  },
+  {
+    "key": "RECOG.R-L6",
+    "disposition": "retained",
+    "reason": "Unchanged owner statement, dependency and diagnostic scope.",
+    "previous_sha256": "2ca65bd0b7933d18021f0890eed4e7d615f23883cb6e2fe145d57bc3d712a6f8",
+    "current_sha256": "2ca65bd0b7933d18021f0890eed4e7d615f23883cb6e2fe145d57bc3d712a6f8"
+  },
+  {
+    "key": "RECOG.R-L7",
+    "disposition": "retired",
+    "reason": "Owner import table and adopted A1a use record the R9 dependency; conditional theorem grades unchanged.",
+    "previous_sha256": "66dcc3187c399c22fc4412e0d57713c36990a528fc81e87fbd49730c05812158",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-L8",
+    "disposition": "retired",
+    "reason": "VF-1 cited by DYAD-ALG-NF6-DEG10 in the owner.",
+    "previous_sha256": "3400874675cfb941c243484906ae46184a97a17f8639e9f2563e6628142507ee",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-S2",
+    "disposition": "retired",
+    "reason": "Raw and post-H2 ratios explicitly frame-labelled.",
+    "previous_sha256": "ca36b7b293f159205a20c669567109af9ef7c7618fd5432e4ec0150af39ad9ac",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-G1",
+    "disposition": "retired",
+    "reason": "Hypothesis grade aligned; OPEN in immutable RID is not live status.",
+    "previous_sha256": "6bd1854478bcdcd236547336d13816d5a07afc7b8957ae9a072100ed14153bd9",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-R2",
+    "disposition": "reworded",
+    "reason": "Two new maintenance RIDs no longer missing; residual named sub-statements remain owner-scoped.",
+    "previous_sha256": "1803422c33573a99a38a3d0b7194ac901a9d1d1b157b16b65f40986b948f9bad",
+    "current_sha256": "53905880c05c8c2ac04a081e0da452d77a36a26c0adffc28698efd9ec8fc3054"
+  },
+  {
+    "key": "RECOG.R-R3",
+    "disposition": "retired",
+    "reason": "Immutable-prefix nonissues removed; canonical home and E2C custody supplied.",
+    "previous_sha256": "463e018878c0cfe546ca6f6c428f48e7e36b98a5e8135fda325ce2e7fa003a99",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-P2",
+    "disposition": "retired",
+    "reason": "NUMGEN definition and INF-1 imported at v1.20.8 by their owner RIDs.",
+    "previous_sha256": "32bc00128cb500d0a04ef8de9e7f92f6489a58056343d837304939032deb4374",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-P3",
+    "disposition": "reworded",
+    "reason": "Owner-adopted historical audit exception, not a live repin or receipt claim.",
+    "previous_sha256": "8b1d969c0edf1d35a8cb5a12296e171a32cdedf5ae7617902984f8e5b2c7f588",
+    "current_sha256": "85612ac50113733a434874b42432f5bd8a3659ae9d20f4ebe61afdb2a018b7c2"
+  },
+  {
+    "key": "RECOG.R-T1",
+    "disposition": "reworded",
+    "reason": "Owner live-file exception preserves historical specs without reopening closed modules.",
+    "previous_sha256": "edb156495197daa26377e7d1e381d93fe7a233e9a273e91abf77a7b1dd938792",
+    "current_sha256": "1834af6b0bbc1fcf2d727d1b4e86c4aa222b28213debd04ccc6d3d6d871e21c8"
+  },
+  {
+    "key": "RECOG.R-T2",
+    "disposition": "retired",
+    "reason": "Current guard, routing and adopted T1/T2 use reconciled; leading-only warning remains valid.",
+    "previous_sha256": "b8c7cc447ea08efb26d24a2fc28127ab649803039cf388f1580cb5aa02830d9e",
+    "current_sha256": null
+  },
+  {
+    "key": "RECOG.R-Y1",
+    "disposition": "reworded",
+    "reason": "Notation is expressly typed by the owner; remaining symbol overload is a scoped concern.",
+    "previous_sha256": "d432d3dc2ef3531f9438f93ec2677782c180214c6723c0fd78ca3c4bbe934078",
+    "current_sha256": "2b5f8049373f18d71fa665ac16dd2dd4021864a9bb65db6380dcfd3fee8054d4"
+  },
+  {
+    "key": "RECOG.R-Y2",
+    "disposition": "retained",
+    "reason": "Unchanged owner statement, dependency and diagnostic scope.",
+    "previous_sha256": "d006edfe997d9e70be8d1a9686f728f8793cbe2d0a05700c39602e877140a206",
+    "current_sha256": "d006edfe997d9e70be8d1a9686f728f8793cbe2d0a05700c39602e877140a206"
+  },
+  {
+    "key": "RECOG.R-D1",
+    "disposition": "reworded",
+    "reason": "Recovered evidence availability distinguished from execution; missing historical hashes remain listed.",
+    "previous_sha256": "ff31ebafb5a3b232bc87343541d5d9a5832e7e613c7ad9018c6b3c66403594ab",
+    "current_sha256": "6295f7f018e2d008d772d9d7d6fb9d4a3d094e9677959118b1fb395fc092c432"
+  }
+]

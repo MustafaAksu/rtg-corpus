@@ -1,0 +1,70 @@
+[
+  {
+    "id": "new-result-home",
+    "result": "PASS"
+  },
+  {
+    "id": "explicit-U-and-series",
+    "result": "PASS"
+  },
+  {
+    "id": "no-R9-or-INF1-proof-dependency",
+    "result": "PASS"
+  },
+  {
+    "id": "unchanged-domain-and-quantitative-nonclaims",
+    "result": "PASS"
+  },
+  {
+    "id": "preserve-R9-chart-route",
+    "result": "PASS"
+  },
+  {
+    "id": "preserve-NUMGEN-overlap-route",
+    "result": "PASS"
+  },
+  {
+    "id": "swap-odd-premise",
+    "result": "PASS"
+  },
+  {
+    "id": "no-physical-swap-discharge",
+    "result": "PASS"
+  },
+  {
+    "id": "backbone-input-not-full-constant",
+    "result": "PASS"
+  },
+  {
+    "id": "phi-comparison-not-ownership",
+    "result": "PASS"
+  },
+  {
+    "id": "F5-sufficient-not-necessary",
+    "result": "PASS"
+  },
+  {
+    "id": "clock-alternative-remains-open",
+    "result": "PASS"
+  },
+  {
+    "id": "R6-active-and-closed-census",
+    "result": "PASS"
+  },
+  {
+    "id": "new-artifact-support",
+    "result": "PASS"
+  },
+  {
+    "id": "no-retired-diagnostics",
+    "result": "PASS"
+  },
+  {
+    "id": "full-R9-vs-partial-budget",
+    "result": "PASS"
+  },
+  {
+    "id": "DZT-numeric-not-exact",
+    "result": "PASS"
+  }
+]

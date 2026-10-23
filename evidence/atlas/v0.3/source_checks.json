@@ -1,0 +1,146 @@
+[
+  {
+    "source": "METH",
+    "bytes": 86709,
+    "sha256": "cdacab5feb79161cd86313086065ca67313ef354e30ceaf205386cf2f3a0f2df",
+    "commit": "72d8a838db04f249bbb93a0930804e9ec8b9d289",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "PROG",
+    "bytes": 73019,
+    "sha256": "4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "DYAD",
+    "bytes": 258972,
+    "sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+    "commit": "7130978f43b417d335622d2072abe9e571b4e142",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "TRIAD",
+    "bytes": 159762,
+    "sha256": "95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "GEN",
+    "bytes": 198348,
+    "sha256": "d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "TDRG",
+    "bytes": 148073,
+    "sha256": "aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "RECOG",
+    "bytes": 281915,
+    "sha256": "0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a",
+    "commit": "4edaa88c6bcbbca82663e84a4c7949e188d0d9ad",
+    "previous_equal": false,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "NUMGEN",
+    "bytes": 339003,
+    "sha256": "835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "OFN",
+    "bytes": 195460,
+    "sha256": "acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "UVM",
+    "bytes": 92170,
+    "sha256": "0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "RRF",
+    "bytes": 108615,
+    "sha256": "2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "DZT",
+    "bytes": 50547,
+    "sha256": "cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "AZ",
+    "bytes": 73633,
+    "sha256": "dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "LEGACY",
+    "bytes": 138141,
+    "sha256": "3b707c90eb5e048717513c6ba161b738d0d1d4cd341eb0a125fb15779afd7e13",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "PREL",
+    "bytes": 70805,
+    "sha256": "22ecf37869cd1192b7fc3a13efe364d6cc2644928f4ecf5afe38e0ad8b95a446",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "RER",
+    "bytes": 222178,
+    "sha256": "58feee5ff1f16a37fc4ee029f24499928ea7439731de0a090d8794c1cbe57ad0",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "ER2B",
+    "bytes": 60351,
+    "sha256": "80669c69ada042230c36883f5f1de7a0738e637793a4d1cf4b590990da57a134",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  },
+  {
+    "source": "FMS",
+    "bytes": 43516,
+    "sha256": "d6313b707464da7ae016662e32fc366981cae9cc5335033129acfcce515d3984",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "previous_equal": true,
+    "snapshot_equals_tag": true
+  }
+]

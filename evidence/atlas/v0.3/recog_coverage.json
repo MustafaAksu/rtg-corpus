@@ -1,0 +1,1144 @@
+[
+  {
+    "id": "RECOG-ALG-BTOKEN-TRANSPORT",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 797,
+    "home_id": "RECOG-ALG-BTOKEN-TRANSPORT",
+    "home_sha256": "bd17ae4ba5962afa88c9a541d64defb4c4b3c0798938e4f93a6ca7660741c855",
+    "owner_line": 897,
+    "source_line_sha256": "c24ade405cc492ad3da5885d45c7827e1b1a2b9155013ed0a5e4aea05543dc5f"
+  },
+  {
+    "id": "RECOG-ALG-CHART-LAWS",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 381,
+    "home_id": "RECOG-ALG-CHART-LAWS",
+    "home_sha256": "07357b826616bcab2005aea9a4195409529608959ad496bb467d46e3d8638b8b",
+    "owner_line": 746,
+    "source_line_sha256": "16d43be227ef371df48307e1b76cf73f20f11e45d938928dfa765a996feda270"
+  },
+  {
+    "id": "RECOG-ALG-CHART-SHADOW",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 792,
+    "home_id": "RECOG-ALG-CHART-SHADOW",
+    "home_sha256": "5fd727d9509ff676ec7e849076d295f5cf90746d175412fecb04dc213be7da56",
+    "owner_line": 881,
+    "source_line_sha256": "dfa63ae52f503b894a7e271ad2aa3e491de77957a04511a444f351d171d7687a"
+  },
+  {
+    "id": "RECOG-ALG-COMPARATOR-CLOSURE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 710,
+    "home_id": "RECOG-ALG-COMPARATOR-CLOSURE",
+    "home_sha256": "e0e021d506c110d1c5372794fc84f98f638133dead745a4e5239a6338fe67314",
+    "owner_line": 39,
+    "source_line_sha256": "1e86966c47b47a5d6c589c24c4430dbb27b189c0f929ec8d37f856fdccfd6d2b"
+  },
+  {
+    "id": "RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 811,
+    "home_id": "RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE",
+    "home_sha256": "b1cd39992555fb14b92c935dd802229af10fdefeff5cfe112a15ce46aeaac658",
+    "owner_line": 1014,
+    "source_line_sha256": "6c13f64086d30ade50feb6cf0147f1077ac199eb50eea7a45e73da87961cb548"
+  },
+  {
+    "id": "RECOG-ALG-CUBIC-RETURN-RIGIDITY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 699,
+    "home_id": "RECOG-ALG-CUBIC-RETURN-RIGIDITY",
+    "home_sha256": "9d369b0db91febfdaffb9da8bafdb060bb5357fb77946cc1215c7aaa193f37bb",
+    "owner_line": 35,
+    "source_line_sha256": "892cc7eb7d0fe81e1a55e8c208532d27b5fb7c8c6e7ccd7411449ae55ed85801"
+  },
+  {
+    "id": "RECOG-ALG-FATE-BOUNDARY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 700,
+    "home_id": "RECOG-ALG-FATE-BOUNDARY",
+    "home_sha256": "ffe39beed0469c20f9729ee59ce0d61b12995c5db9f401b55a0bb529b97ca156",
+    "owner_line": 528,
+    "source_line_sha256": "68140ac231defbd7bbed09ac46605554415c4bccea3ea35f88e3a6ae0abe48a0"
+  },
+  {
+    "id": "RECOG-ALG-INVARIANT-FORM",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 655,
+    "home_id": "RECOG-ALG-INVARIANT-FORM",
+    "home_sha256": "93e99767e413a24ad675b5f758e04a30c50ff78a7e76a8ae0cd7c2fab27f8cb8",
+    "owner_line": 27,
+    "source_line_sha256": "c72d636289910951c7722abf0f8068d0d127ee260ac6a0122e6a4e025d9aedca"
+  },
+  {
+    "id": "RECOG-ALG-LATTICE-CLOCK",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 725,
+    "home_id": "RECOG-ALG-LATTICE-CLOCK",
+    "home_sha256": "adf06e135b0a26f1275752b495dacff8c7ea94907fd5e4ffa28984e1072a46fb",
+    "owner_line": 41,
+    "source_line_sha256": "254e53328200cf10665f883a4a2fc9bc969580f85e819d7477879cfe77bf70d6"
+  },
+  {
+    "id": "RECOG-ALG-LATTICE-MEMORY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 726,
+    "home_id": "RECOG-ALG-LATTICE-MEMORY",
+    "home_sha256": "ef9fcdaec6eae30ae9cac0145be9b373ffb2899e6623b83347f3322a29b40b81",
+    "owner_line": 41,
+    "source_line_sha256": "254e53328200cf10665f883a4a2fc9bc969580f85e819d7477879cfe77bf70d6"
+  },
+  {
+    "id": "RECOG-ALG-LATTICE-STRENGTH",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 724,
+    "home_id": "RECOG-ALG-LATTICE-STRENGTH",
+    "home_sha256": "02e3f2d18329e5dc3bfd9c3bf5483534a1cafb63023966f983d2c387dbe3f15f",
+    "owner_line": 41,
+    "source_line_sha256": "254e53328200cf10665f883a4a2fc9bc969580f85e819d7477879cfe77bf70d6"
+  },
+  {
+    "id": "RECOG-ALG-LEADING-RETURN-EQUIVARIANCE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 709,
+    "home_id": "RECOG-ALG-LEADING-RETURN-EQUIVARIANCE",
+    "home_sha256": "b4fd36db208fa0c0d3fbb04b5c245f9aa4997902b4a9b239dde462481af3fbbc",
+    "owner_line": 39,
+    "source_line_sha256": "1e86966c47b47a5d6c589c24c4430dbb27b189c0f929ec8d37f856fdccfd6d2b"
+  },
+  {
+    "id": "RECOG-ALG-NU3-CLOSED-FORM",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 468,
+    "home_id": "RECOG-ALG-NU3-CLOSED-FORM",
+    "home_sha256": "33985171274b1daee4194862a98b885f97974078ce364ee4fde5e0f0e0930175",
+    "owner_line": 39,
+    "source_line_sha256": "1e86966c47b47a5d6c589c24c4430dbb27b189c0f929ec8d37f856fdccfd6d2b"
+  },
+  {
+    "id": "RECOG-ALG-NU3-NONVANISHING",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 715,
+    "home_id": "RECOG-ALG-NU3-NONVANISHING",
+    "home_sha256": "9a7d02cb4ff2a29216df9ff6c369e98858d400a8106bf3f3754c6509fa08144e",
+    "owner_line": 39,
+    "source_line_sha256": "1e86966c47b47a5d6c589c24c4430dbb27b189c0f929ec8d37f856fdccfd6d2b"
+  },
+  {
+    "id": "RECOG-ALG-P2-C0-WHITNEY-FOLD",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 767,
+    "home_id": "RECOG-ALG-P2-C0-WHITNEY-FOLD",
+    "home_sha256": "534d312c5eeb7a58f302d7e06be998ce620af8b748a17ed29ba39b99c9b8dca1",
+    "owner_line": 922,
+    "source_line_sha256": "9975761518570718340303ec53dc25bc8aea5c06ee2a59b1e687dbd22577b9bd"
+  },
+  {
+    "id": "RECOG-ALG-SELECTION-SIN",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 675,
+    "home_id": "RECOG-ALG-SELECTION-SIN",
+    "home_sha256": "3a2cfc13bbc5a82c17f42fb5b00fea5b3a25e3372a5dbb00233e39f164d1fe64",
+    "owner_line": 435,
+    "source_line_sha256": "e1b97ffdbbeef79d76bffbcc0d01f326e4c934bc106e640004ac40b7ea75fbc8"
+  },
+  {
+    "id": "RECOG-ALG-SH-SECTION-SHADOW",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 798,
+    "home_id": "RECOG-ALG-SH-SECTION-SHADOW",
+    "home_sha256": "3b18312ab70a3177a4800774f7896711a1aa00cae668946c9a820757a7c038f3",
+    "owner_line": 912,
+    "source_line_sha256": "8abedd5f1040b603f8b203c93b0dd59fe0a6b2e75bdfae2905e4004a437ea888"
+  },
+  {
+    "id": "RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 688,
+    "home_id": "RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION",
+    "home_sha256": "535342384239b03b8c7fc9768ac6b6055fb005f6de4822759825a82adb79ca46",
+    "owner_line": 484,
+    "source_line_sha256": "2d667e59f80b7cf54ec24d2ee81cc42c8a376b81db88e87b2fd607923d4f55df"
+  },
+  {
+    "id": "RECOG-ALG-SHEAR-INVERSION-PROJECTION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 689,
+    "home_id": "RECOG-ALG-SHEAR-INVERSION-PROJECTION",
+    "home_sha256": "bf4be7b675d5ceae3f73e5ba7defd34848e52359330dcd08e20ff343d8f65109",
+    "owner_line": 486,
+    "source_line_sha256": "bfb6fc450d2be289bf9fdbd72b9c42caf81f1e38b90b3485968f0d0a48bd10c2"
+  },
+  {
+    "id": "RECOG-ALG-SHEAR-JET",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 695,
+    "home_id": "RECOG-ALG-SHEAR-JET",
+    "home_sha256": "947a2bf37d7dceeb0cb76f11fe14e26ff31dc4129375aadb3e5b4dfc9701bf29",
+    "owner_line": 33,
+    "source_line_sha256": "f21a23baaf9096e2ed0a9455eb715aa9b081cfc6ea84f4173ddfa0a30b9aa81c"
+  },
+  {
+    "id": "RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 690,
+    "home_id": "RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY",
+    "home_sha256": "471cc3289ce564f233915b212cd417eba5682fe7d057e6de8c3c6f9af87c5250",
+    "owner_line": 490,
+    "source_line_sha256": "15449638e89e82bce77837e22ebc280bdb46fcee1ba3ff34950c4f4a2afbd5a2"
+  },
+  {
+    "id": "RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 691,
+    "home_id": "RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION",
+    "home_sha256": "3c1cdeb8c40ff5cad09ccce290f6c60c5b62901a99a7dc0c1cff0e69c4bda1bb",
+    "owner_line": 494,
+    "source_line_sha256": "c396189c9213b6b871d70f0fdba08ca0b88a1c15b60042407f1781270a0735d5"
+  },
+  {
+    "id": "RECOG-ALG-SWAP-ODD-RHO",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 674,
+    "home_id": "RECOG-ALG-SWAP-ODD-RHO",
+    "home_sha256": "9cb33a883736e7167dccb3c8a6cd2e553e66a667cd30d72fb875364c76e2c050",
+    "owner_line": 433,
+    "source_line_sha256": "a940840092044780c2175e852d76e62b6769b9071553dffa4266808a67bf6ef3"
+  },
+  {
+    "id": "RECOG-ALG-SWAP-SPLIT",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 686,
+    "home_id": "RECOG-ALG-SWAP-SPLIT",
+    "home_sha256": "96d16e1f30c1b17c671fd00614474f450ea54971d7dbd1f44000a50bcc09dcd2",
+    "owner_line": 468,
+    "source_line_sha256": "b35131f8916b674067054f1ce2d3c67f778710a881507fe08152214f79dafe71"
+  },
+  {
+    "id": "RECOG-ALG-TWIN-ANNULUS",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 773,
+    "home_id": "RECOG-ALG-TWIN-ANNULUS",
+    "home_sha256": "c708943aef217fbcee4cca35e741d210e5f799204cb754336122bcfdae378e49",
+    "owner_line": 771,
+    "source_line_sha256": "1bf3a60c973c34d5731098a626859bb0a384327b3770999ed5b30eada0e34c25"
+  },
+  {
+    "id": "RECOG-ALG-TWIN-ANNULUS-TRANSPORT",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 774,
+    "home_id": "RECOG-ALG-TWIN-ANNULUS-TRANSPORT",
+    "home_sha256": "04cb99b1cbdfddae77c5c534a718a246208df5f156172633cb86f838aed9b9a9",
+    "owner_line": 773,
+    "source_line_sha256": "490be5bb3951b2c9d78a92adfb94355873678552fcc46342c2ca698399d332d3"
+  },
+  {
+    "id": "RECOG-ALG-TWIN-CROSSING-RANK-SAFE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 785,
+    "home_id": "RECOG-ALG-TWIN-CROSSING-RANK-SAFE",
+    "home_sha256": "04f84dadc51d1f5ab6da6c95ecfaac05cba9aaee369db3ad3d09eee83bbc1930",
+    "owner_line": 821,
+    "source_line_sha256": "6e9d49fa56e6c40277485e8d4245a50e970df2d83bc8b8fc800d1a7b96954480"
+  },
+  {
+    "id": "RECOG-ALG-TWIN-EXPANSION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 772,
+    "home_id": "RECOG-ALG-TWIN-EXPANSION",
+    "home_sha256": "823c87323367979e5e9bc2780cc17f92ff524977099a0a23ac2ce66cf86ec90c",
+    "owner_line": 769,
+    "source_line_sha256": "4580357230c96eb490c247f3666d6c898ff52c6cf54ead34b3ce827c7e8bf3b2"
+  },
+  {
+    "id": "RECOG-ALG-TWIN-STAGE2-COMPACTNESS",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 777,
+    "home_id": "RECOG-ALG-TWIN-STAGE2-COMPACTNESS",
+    "home_sha256": "477e2694379766dbf7e3c5171c94f55cf84c167c02977351d36642b709179d16",
+    "owner_line": 785,
+    "source_line_sha256": "259bfb888398dec783c136cdf7ce6a577332f86c394f6d2eeeb203340e93a887"
+  },
+  {
+    "id": "RECOG-ART-A1A-C1-CHECK",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1227,
+    "source_line_sha256": "48871df79d09e26830e943c51ecc28b89818a0cfe7c61c434863c485bb52c1b3",
+    "atlas_occurrences": [
+      737
+    ],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-A1A-EXISTENCE-U",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1229,
+    "source_line_sha256": "545c4d7ec9fbe27e32789b25784fd4e1654eb581eb999101ecfc6ee7b6fdf563",
+    "atlas_occurrences": [
+      745
+    ],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-A1A-NUM",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1228,
+    "source_line_sha256": "dce3c5bffacabb6dd75ab2f6c9b27444fa1e5e23f9a58fbfddefa676932e138d",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-A1A-RECORDS",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1230,
+    "source_line_sha256": "7a40a6baa0835e76b5eefe07017b438437392ae2a72504fcadd8ddfeb56bf604",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-A1A-SOURCE-AND-GOVERNANCE",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1231,
+    "source_line_sha256": "2c3ae379301ef8b55afc2a3d81d3099b13d66e4577ed978a2bbf6878cfb427bc",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-B3-FIRST",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1216,
+    "source_line_sha256": "d77e1b1989416b00c0ba6d0f2b838f64fec8ae7f863a638f5b490b889a953506",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-B3-RESULT",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1217,
+    "source_line_sha256": "efa4646179f517d5baf596b213fa19fbe6660f9c7a95418f006c7ceb5475f868",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-CELL-A-P5",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1193,
+    "source_line_sha256": "7784a51881e36548e157ebaf73b8501d7df2eae4d3a58cebb1a2dc94a622bdd3",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-CELL-A-P7-RAW",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1194,
+    "source_line_sha256": "ff70793a987935c3e69f7cec74038177c59b2c49165cfe4cb3bde7a82a50b94a",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-CELL-A2",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1195,
+    "source_line_sha256": "f7df6ce36ecc07d76812c9c449d0a96f596b69576ed295e6194bd10e4b2fba11",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-CELL-B",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1196,
+    "source_line_sha256": "1636a9242412493052d6e5ce23cb1c1e34b77fc519997edb0e5951f4f5aed92c",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-CELL-C",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1197,
+    "source_line_sha256": "c07f2fcbc59d1ee7ad85fbd44885593dbeb6a2720ea76286fda0f6eab14032d1",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-CELL-D",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1198,
+    "source_line_sha256": "845475ec3f15cfd640a7f89d3de056ef00bb351ab38e70308d39ab35db5d2470",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E1",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1210,
+    "source_line_sha256": "b00b86a5d6810ff67c9d549815feec1302f39385ad6f1b080460b991cbb5bc40",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E2A",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1211,
+    "source_line_sha256": "efefd83a89f207bc2a37475b2f1409fb3d8dca0fe9a8d041678e72a219d80326",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E2C-CORE",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1212,
+    "source_line_sha256": "c8ebef17f5f6744926b603b9a31f83f678050c6873a065e21dc9921ce8c63934",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E2C-GATE-V2",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1215,
+    "source_line_sha256": "4d0fb82a587e528fe8dff4b1685dcb742218b8204fdcce89673c132420af4fb8",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E2C-PRODUCTION",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1213,
+    "source_line_sha256": "5b63b83d29fc89277ec68aaf574e022743360a078c6af524cd3fec8b842d70c0",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E2C-REFINEMENT",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1214,
+    "source_line_sha256": "a41e359ff729fcae9769980c4c5ba7e754ef2c3bbd304d3550bc56ef7143826b",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E3A1",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1205,
+    "source_line_sha256": "4df84fa0deba132fc6783983034e1148a260eeae6ad1b4431f50e0919049870b",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E3A3A",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1206,
+    "source_line_sha256": "f789038f8533af247bd69be4f4df067f13386c686fd6ea556e3c776c59b14774",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E3A3B",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1207,
+    "source_line_sha256": "1205bfef1c7856c1c5ad1e828964f0e54def2a4e3dc6b13286c8981c4af774d8",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E3A4",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1209,
+    "source_line_sha256": "bbb033961a2e4e8868b5e058995ce7ecd2f19a787e5dce8ffdf0de754931636e",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-E3B",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1208,
+    "source_line_sha256": "1287d37459af814bf0ae89000d73f7565cd59efee1f12d3f189ee005897529b8",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-F2A",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1203,
+    "source_line_sha256": "905da10a65990b620168f7192df81e97ded0959083e0bab01d6667d1e14abe77",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-F2B",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1204,
+    "source_line_sha256": "529370f09e39daaa170b24f787472a9cb58c90d160860ba35fdb7d1bbb65dcbe",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-F2C0",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1202,
+    "source_line_sha256": "c83bb66b372695ca9d9e340787458b71c31b368037b48ff1608de8989807f12c",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-FREEZE-0320",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1224,
+    "source_line_sha256": "08c1d88b65a59843a278eef31ef205471a9a7d28c4c14afadf5a624c86f3e2d8",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-G2-AUDIT",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1225,
+    "source_line_sha256": "ea7d592ca3e7c920d303573c55e3e64af5d8b0f9dccc6ddb2acf60c08d9ee8a6",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-MEMO",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1222,
+    "source_line_sha256": "2dabd181e254c4d193a8c419c0282e16176dcc5484145d97648e2b29894417cd",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-MEMO-R6-ADDENDUM",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1223,
+    "source_line_sha256": "bbae7252939363d7df02d4ab131eb286faaf80efdf0727a57db2ac037b5f885f",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-R11-LEDGER",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1220,
+    "source_line_sha256": "6eda0903341d4b446b2fdf2210c1542570aa8ffa40449c18e75e5e392decc4aa",
+    "atlas_occurrences": [
+      174
+    ],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-R8-GATE",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1219,
+    "source_line_sha256": "db8a07a3b16e1a1dcf34d2148a03dbb09fa133ef878c9579306bdc46f44c77b6",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-R8-RESULTS",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1200,
+    "source_line_sha256": "90a3b82cd51793b91941be8c333d9b4625d8c42761a48a3768fdfd3ce387b502",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-R8-TRANSPORT",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1199,
+    "source_line_sha256": "0b6a9a358959fe1531fb73053b551cd39d6fa1d8d31ae72fdf3d5d17da2cd447",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-R9-MEMORY",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1218,
+    "source_line_sha256": "d10c11a2df9233aca44a40474ba690e037f3b08b4d71fd3993ad520b4ba27b7a",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-ART-SHEAR-JET-CERT",
+    "type": "artifact",
+    "status": "DECLARATION_INVENTORIED",
+    "owner_line": 1192,
+    "source_line_sha256": "e2dfa543510e92ef37593c3b31c50ffb5ec7045c27f3fc9a5148812550696f5d",
+    "atlas_occurrences": [],
+    "note": "Evidence identity, not a scientific-result coverage PASS; availability/execution not inferred."
+  },
+  {
+    "id": "RECOG-DEF-A1A-PHASE-INTERFACE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 640,
+    "home_id": "RECOG-DEF-A1A-PHASE-INTERFACE",
+    "home_sha256": "83d16ea7b14e7f69a8c28de615786ca5804ef97ba0ff876a0c0dd466ba193ee6",
+    "owner_line": 698,
+    "source_line_sha256": "0d7db2f04fa96159ddcdae0aeda6d4062975feacd8e11e21e3c9d5dd27f40eda"
+  },
+  {
+    "id": "RECOG-DEF-EVENT-TOKEN-SCHEMA",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 645,
+    "home_id": "RECOG-DEF-EVENT-TOKEN-SCHEMA",
+    "home_sha256": "c93e118e7578838abf2cc020417ea3c0cb01e98e10c15fc295a8662470e85d1b",
+    "owner_line": 853,
+    "source_line_sha256": "cb8f3eba25bec66923683e6c6a5b4bd714a76c72e8e237c98001ad3234b36397"
+  },
+  {
+    "id": "RECOG-DEF-POLE-COMPARATOR",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 628,
+    "home_id": "RECOG-DEF-POLE-COMPARATOR",
+    "home_sha256": "fc79f26101253fb6a4a36b339a5a487a8df2500b69adf8fb40c076c03667a7be",
+    "owner_line": 376,
+    "source_line_sha256": "ca47226169c1bfa206dda6981a0f453e2ddabf3559b2692db2d27ce5c46dfcc2"
+  },
+  {
+    "id": "RECOG-DEF-STATE-COMPARATOR",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 629,
+    "home_id": "RECOG-DEF-STATE-COMPARATOR",
+    "home_sha256": "851eff3ae96022ce6fbbbf1735a1b4d64200726832fb14a247a3dc7175104a21",
+    "owner_line": 378,
+    "source_line_sha256": "ae14735ea50335e67185b988f892d63aeca89dd6961f3cc1978b15cb83c2146c"
+  },
+  {
+    "id": "RECOG-NUM-E1-TWIN-SURVEY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 771,
+    "home_id": "RECOG-NUM-E1-TWIN-SURVEY",
+    "home_sha256": "0847cf9b452c26c2e4a5364f9ce7138a8d2c2aa31c228fef1be2f7cbad4f1d18",
+    "owner_line": 767,
+    "source_line_sha256": "d7c5f71204ccd5b7cdd4a7d1438fa16ef5a743f828cb7030a0a067d2fa031fc8"
+  },
+  {
+    "id": "RECOG-NUM-E3A1-SURVIVOR-PROBE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 778,
+    "home_id": "RECOG-NUM-E3A1-SURVIVOR-PROBE",
+    "home_sha256": "b74330aab80ba7c4fd4dc42a0542e10193279b0b71af9927189e709d93da794c",
+    "owner_line": 787,
+    "source_line_sha256": "8e7a0a5a2b394a4e1d0bc7647911953786390dd40a65001ed1309c36d56dde8f"
+  },
+  {
+    "id": "RECOG-NUM-F2B-TOKEN-SHADOW",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 794,
+    "home_id": "RECOG-NUM-F2B-TOKEN-SHADOW",
+    "home_sha256": "cac48240e2bb1ea08777502cc78fcd39418dafb26a4861415f1d6dd0d48003af",
+    "owner_line": 885,
+    "source_line_sha256": "5dbffdb78e862bdf8350260c36018f94d775d1395da83219cd591fc08a3ccc4a"
+  },
+  {
+    "id": "RECOG-NUM-P2-C0-FIRST",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 761,
+    "home_id": "RECOG-NUM-P2-C0-FIRST",
+    "home_sha256": "dd007a22f10107b960a20843582e456b1d5cd68ceaf727787048f62c98445822",
+    "owner_line": 47,
+    "source_line_sha256": "82d5acbdc9e8a7a12a87bac0ace1f9dc12b4dd8d3fc1704a241ecb9e1b8e294c"
+  },
+  {
+    "id": "RECOG-NUM-P2-HET-NEG",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 762,
+    "home_id": "RECOG-NUM-P2-HET-NEG",
+    "home_sha256": "f2aa111f34ce0d9dba3a1052241dd731eab95a4316f4398e6f75af37a3de7af3",
+    "owner_line": 47,
+    "source_line_sha256": "82d5acbdc9e8a7a12a87bac0ace1f9dc12b4dd8d3fc1704a241ecb9e1b8e294c"
+  },
+  {
+    "id": "RECOG-OPEN-EVENT-RULE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 830,
+    "home_id": "RECOG-OPEN-EVENT-RULE",
+    "home_sha256": "bf879d7997ee73cd7c40d099d9c74642af00dea49ed8f4e11cc9d6f446255c61",
+    "owner_line": 157,
+    "source_line_sha256": "ddc88a372db3ebc45ff735015793192398441b5bfb7bdfd8311816237d7af7a6"
+  },
+  {
+    "id": "RECOG-OPEN-INTERSECTION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 681,
+    "home_id": "RECOG-OPEN-INTERSECTION",
+    "home_sha256": "95d43b49374f69151b9e6177bc0edfb7fad91340184c20f8edc25e871f8b172e",
+    "owner_line": 37,
+    "source_line_sha256": "469e7b8198d10aa398158a68d73f91b6766817631de136566db385e472a8c16b"
+  },
+  {
+    "id": "RECOG-OPEN-KRET-P",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "closed-lifecycle",
+    "home_line": 817,
+    "home_id": "RECOG:closed-modules",
+    "home_sha256": "da9bead16222457757b62f927ef92efa9e57d0f4d76373b4708bcf46771a6248",
+    "owner_line": 77,
+    "source_line_sha256": "7f8c54e16876325a2359b1e8837030705c30566dc39676e9cf64ceebf60337df"
+  },
+  {
+    "id": "RECOG-OPEN-LATTICE-MEMORY-NF",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "closed-lifecycle",
+    "home_line": 817,
+    "home_id": "RECOG:closed-modules",
+    "home_sha256": "da9bead16222457757b62f927ef92efa9e57d0f4d76373b4708bcf46771a6248",
+    "owner_line": 188,
+    "source_line_sha256": "ffe5af526729f995d01c061e24a6aa2061fac110ac85ff8d823c42a260918056"
+  },
+  {
+    "id": "RECOG-OPEN-ONESIDED-SHEAR",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 827,
+    "home_id": "RECOG-OPEN-ONESIDED-SHEAR",
+    "home_sha256": "d319203e3542f13a433aafd12592c284915ee8083cab2b3966d56448b4aa0e16",
+    "owner_line": 139,
+    "source_line_sha256": "2e912d20985877caa967e8212dde1c8b18de59d4927dd32986998193ca7ebae1"
+  },
+  {
+    "id": "RECOG-OPEN-P2-BAND",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 828,
+    "home_id": "RECOG-OPEN-P2-BAND",
+    "home_sha256": "213574c462261a6b1bf2d398f938dae69d4d22972a7cc5b2238577f05585301d",
+    "owner_line": 91,
+    "source_line_sha256": "1b478fbd1f2fc8225e9dbb2b3ffca8c20b9216d7b2057d011f795550e17b78f3"
+  },
+  {
+    "id": "RECOG-OPEN-P2-HET-ENTRY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "closed-lifecycle",
+    "home_line": 817,
+    "home_id": "RECOG:closed-modules",
+    "home_sha256": "da9bead16222457757b62f927ef92efa9e57d0f4d76373b4708bcf46771a6248",
+    "owner_line": 110,
+    "source_line_sha256": "6a51b8314ff8f3fdf3686f2682857c5389576780284aeb3ce1edfa26b3d51ed4"
+  },
+  {
+    "id": "RECOG-OPEN-QUINTIC-FRAME",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "closed-lifecycle",
+    "home_line": 817,
+    "home_id": "RECOG:closed-modules",
+    "home_sha256": "da9bead16222457757b62f927ef92efa9e57d0f4d76373b4708bcf46771a6248",
+    "owner_line": 205,
+    "source_line_sha256": "81458b27cba784af09208760a93d381cf6d9765799f70789e1990c0a41f4bedc"
+  },
+  {
+    "id": "RECOG-OPEN-RETURN-ENCLOSURE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "closed-lifecycle",
+    "home_line": 817,
+    "home_id": "RECOG:closed-modules",
+    "home_sha256": "da9bead16222457757b62f927ef92efa9e57d0f4d76373b4708bcf46771a6248",
+    "owner_line": 237,
+    "source_line_sha256": "f58686f895e670ea4da852aa734a0281a16dfb96b9070c6aeede03e49ea4734e"
+  },
+  {
+    "id": "RECOG-OPEN-RHO-PARITY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 826,
+    "home_id": "RECOG-OPEN-RHO-PARITY",
+    "home_sha256": "77376539945c314e1094ca603a4d4baad9a8693c7392ac11e36ca85bc22fdd82",
+    "owner_line": 56,
+    "source_line_sha256": "10209e41af6674daee6c0704e48047e282b707ad93b9022ed27d0b0156494bc3"
+  },
+  {
+    "id": "RECOG-OPEN-TWIN-ACCESS",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "closed-lifecycle",
+    "home_line": 817,
+    "home_id": "RECOG:closed-modules",
+    "home_sha256": "da9bead16222457757b62f927ef92efa9e57d0f4d76373b4708bcf46771a6248",
+    "owner_line": 244,
+    "source_line_sha256": "2eaa13ce513c0c70e7f54efbea4d02a40b2bc7f641ac203edf3a9d6cdbfa0714"
+  },
+  {
+    "id": "RECOG-OPEN-TYPE-CHANGE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 829,
+    "home_id": "RECOG-OPEN-TYPE-CHANGE",
+    "home_sha256": "04f2dd4668c8d3da46c75084ffd516ec332403d3f6c364ef9fe216c58e1b5516",
+    "owner_line": 126,
+    "source_line_sha256": "33386151e8524e44c8055846d96bed8fc14c0f2130b388bae92aacaaaeeb5370"
+  },
+  {
+    "id": "RECOG-RESULT-A1A-CD-AGREEMENT",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 743,
+    "home_id": "RECOG-RESULT-A1A-CD-AGREEMENT",
+    "home_sha256": "bf16ccdfeb32bef9074ed3ede8f14ff883e5675bcd06bbc5ec6e4d795cd1d8b2",
+    "owner_line": 716,
+    "source_line_sha256": "2a17d3f73769a36df4bab6a1a2f94b97f20e8aa64cdaa821f66d447a530e4c8d"
+  },
+  {
+    "id": "RECOG-RESULT-A1A-PHASE-EXISTENCE-NG",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 741,
+    "home_id": "RECOG-RESULT-A1A-PHASE-EXISTENCE-NG",
+    "home_sha256": "f53bc41f98ae493079b59177ea62495ffc8df8bfa62372a0f172700bcf4f1b8a",
+    "owner_line": 712,
+    "source_line_sha256": "95556ee0ef7e739ad010d1b595bc8b6c1bd3582835d8c88931b8e1befc60075d"
+  },
+  {
+    "id": "RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 804,
+    "home_id": "RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE",
+    "home_sha256": "ac0eb4249ded41864c72a974b9d7867a9ee1510919fcd28563021a878ed3e2fe",
+    "owner_line": 975,
+    "source_line_sha256": "f6f4bd4aee50d84966cf092fd57a6b7018b5d2a828adeb6b95526519b1b1ecbf"
+  },
+  {
+    "id": "RECOG-RESULT-EVENT-UNDERDETERMINATION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 789,
+    "home_id": "RECOG-RESULT-EVENT-UNDERDETERMINATION",
+    "home_sha256": "e0e5328703efedbec28d99ee5fa166634dc503282f5591ace8b19d23b5300722",
+    "owner_line": 833,
+    "source_line_sha256": "92f48da24794171dd56024988f8ba491528a5ff6cb5d62db8734fa2a44c7f367"
+  },
+  {
+    "id": "RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 815,
+    "home_id": "RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS",
+    "home_sha256": "f8c3fdf2531886ea958879de59050b7fad09ce70951ac9f98128262f25dd093c",
+    "owner_line": 1072,
+    "source_line_sha256": "9cb24ad628884ae6c2361314d55d2fb16e6e1a120e88ac9d5a973bc6542732ed"
+  },
+  {
+    "id": "RECOG-RESULT-P2-FOLD-NO-REGISTERED-RETENTION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 801,
+    "home_id": "RECOG-RESULT-P2-FOLD-NO-REGISTERED-RETENTION",
+    "home_sha256": "97c3ab8eb6c035c9538a7b8bea835c670cbcf861b564c9aa4517540c2e07a1af",
+    "owner_line": 957,
+    "source_line_sha256": "d911aa5c462eee946042a7606a2700735192e0ceaab585972a9dd36ed678de8f"
+  },
+  {
+    "id": "RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 812,
+    "home_id": "RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH",
+    "home_sha256": "fdca9b1752e81f9aa0a837eba66a7d9c75a27ebfffdb19acb7b5e32220435985",
+    "owner_line": 1016,
+    "source_line_sha256": "f36bd821c5ffdcfb05a3356445c8149bd5855ab04d876d5bf9fa3201b194b668"
+  },
+  {
+    "id": "RECOG-RESULT-TWIN-QC-DEGENERACY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 786,
+    "home_id": "RECOG-RESULT-TWIN-QC-DEGENERACY",
+    "home_sha256": "6295de5114fe7a35c0e1bb728c0d8073f98d133e7b3010912f568fa62865c9ec",
+    "owner_line": 825,
+    "source_line_sha256": "96365dde97e2e723bb5815e184cb0f3d94314a5f27553cb93fc37b22c39f7543"
+  },
+  {
+    "id": "RECOG-THM-A1A-CD-IDENTIFICATION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 742,
+    "home_id": "RECOG-THM-A1A-CD-IDENTIFICATION",
+    "home_sha256": "bb33fb8bd0d6af27a95b07c3fbda67bfe682beeff4b8083b5761bed88b0d2d09",
+    "owner_line": 43,
+    "source_line_sha256": "7851edede625978703a2babfe9b5042e690a5fd09859f3496b778c24805b0e8e"
+  },
+  {
+    "id": "RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 744,
+    "home_id": "RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION",
+    "home_sha256": "83132f17fad91fc5596864c39798e5f8fd5b28f7deb2b54c0713fca36f936539",
+    "owner_line": 718,
+    "source_line_sha256": "81ccfe4a2d9ffab721f035b17030c55abc414aa29abdd75ad281edad5fc5a864"
+  },
+  {
+    "id": "RECOG-THM-A1A-LIFT-ALIGNMENT",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 737,
+    "home_id": "RECOG-THM-A1A-LIFT-ALIGNMENT",
+    "home_sha256": "10c44cd77fa8e71027f889fef3ce4b92593ecf4a1b91aef75613dd55592370cf",
+    "owner_line": 700,
+    "source_line_sha256": "386ae3d29fbc6ce3425c2b98061034cfdeab2671d571901b214d57d44bdb64b7"
+  },
+  {
+    "id": "RECOG-THM-A1A-PHASE-EXISTENCE-ALT",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 740,
+    "home_id": "RECOG-THM-A1A-PHASE-EXISTENCE-ALT",
+    "home_sha256": "386ebfbdfc7b1dfab53fa1cb6af628553aa1e691bfa39985fdf16b01e8299a86",
+    "owner_line": 710,
+    "source_line_sha256": "e3374a283a2a98f3f0c184bbdba1164df8826963c5661b1fccbbb8960dcaaa49"
+  },
+  {
+    "id": "RECOG-THM-A1A-PHASE-EXISTENCE-U",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 745,
+    "home_id": "RECOG-THM-A1A-PHASE-EXISTENCE-U",
+    "home_sha256": "940b32f3c63c0fa966c28c3eae0935f61280c7ca2c34ff20de6ed1bb0dc8868d",
+    "owner_line": 12,
+    "source_line_sha256": "c7a9d74dcc2d2259398a0834e29a750a760d4b60878a8fd9b416ce8c05cb572f"
+  },
+  {
+    "id": "RECOG-THM-A1A-RECIPROCAL-AMPLITUDE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 738,
+    "home_id": "RECOG-THM-A1A-RECIPROCAL-AMPLITUDE",
+    "home_sha256": "5a18ec8c81a8753373d589a11b17a2c8928edd6190d6dc089b7036bd72b59ff3",
+    "owner_line": 703,
+    "source_line_sha256": "a0247124e41e0488256f4be0df4685dd108b85d1b1faf017a7f8f7a62f80fa50"
+  },
+  {
+    "id": "RECOG-THM-P2-C0-FIRST",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 426,
+    "home_id": "RECOG-THM-P2-C0-FIRST",
+    "home_sha256": "ea000995ffe130ec33c3be332a81ba13c41be0a40b4f648692c8a24d39797d0f",
+    "owner_line": 47,
+    "source_line_sha256": "82d5acbdc9e8a7a12a87bac0ace1f9dc12b4dd8d3fc1704a241ecb9e1b8e294c"
+  },
+  {
+    "id": "RECOG-THM-P2-HET",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 425,
+    "home_id": "RECOG-THM-P2-HET",
+    "home_sha256": "b2ca3a7bfa0cee1ab3c54695ea30ffa3004d4785f4b04949c2c18a4a8be98629",
+    "owner_line": 47,
+    "source_line_sha256": "82d5acbdc9e8a7a12a87bac0ace1f9dc12b4dd8d3fc1704a241ecb9e1b8e294c"
+  },
+  {
+    "id": "RECOG-THM-R9-COMPARATOR-INCOMPLETENESS",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 731,
+    "home_id": "RECOG-THM-R9-COMPARATOR-INCOMPLETENESS",
+    "home_sha256": "a0cd3548e72cf594ef73c81412b073ed0a2e3014bfc46730f78cf6b2a5bbea67",
+    "owner_line": 659,
+    "source_line_sha256": "e1910a836f78692d09b9ae16d864f4866787c635150e9e38cdb3eaf43f44ae82"
+  },
+  {
+    "id": "RECOG-THM-R9-MEMORY",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 399,
+    "home_id": "RECOG-THM-R9-MEMORY",
+    "home_sha256": "7b9ec02368491b9694ae4140f917a13ed496099304e1a7b2219ed68a48488914",
+    "owner_line": 655,
+    "source_line_sha256": "a41ec97cf781c8aabde6a5e3478abff5fd96d12377b4b95ba5860c1fd6a40e9d"
+  },
+  {
+    "id": "RECOG-THM-TWIN-C0-ACCESS",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 783,
+    "home_id": "RECOG-THM-TWIN-C0-ACCESS",
+    "home_sha256": "f45e80311cbb7cdebe2234f647ea31a5d4493eed10e67e8ad7d827a11a5747ce",
+    "owner_line": 807,
+    "source_line_sha256": "57fdf7b07b7e0ec1dc5f5f0830e57167413c1597e8efd20acd7081e88aa28b2f"
+  },
+  {
+    "id": "RECOG-THM-TWIN-P9-SADDLE",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 779,
+    "home_id": "RECOG-THM-TWIN-P9-SADDLE",
+    "home_sha256": "dc8e45d4575792b25ac4d0fe816025976d191b97c852e3c93f3a4376fb584b29",
+    "owner_line": 789,
+    "source_line_sha256": "d286f13830ab59be5a5114765570662db2b16cd4e2fd9441ac6d847e0a8da8ba"
+  },
+  {
+    "id": "RECOG-THM-TWIN-P9-STABLE-LOCAL",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 780,
+    "home_id": "RECOG-THM-TWIN-P9-STABLE-LOCAL",
+    "home_sha256": "639125e0255072b9e46273b2ab7d1ada6c7d6c60707b8c832679b383c93b66fd",
+    "owner_line": 791,
+    "source_line_sha256": "011499dc751d181490466153583bfe396da8f6d9d4b3653ba6a5a4081bfdf5e4"
+  },
+  {
+    "id": "RECOG-THM-TWIN-RADIAL-ACCESS",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 776,
+    "home_id": "RECOG-THM-TWIN-RADIAL-ACCESS",
+    "home_sha256": "f9b6816a6a3df74beac225ae2f82d3a0432b8bd1676f2a21fb2c98e27dd7e3ed",
+    "owner_line": 775,
+    "source_line_sha256": "5cf1396c61aeb80b17b84a98dd0af3a85f11f62735d00595c00e4bd4961ba561"
+  },
+  {
+    "id": "RECOG-THM-TWIN-STAGE2-NONUNIVERSAL",
+    "type": "scientific",
+    "status": "PASS",
+    "home_kind": "direct",
+    "home_line": 781,
+    "home_id": "RECOG-THM-TWIN-STAGE2-NONUNIVERSAL",
+    "home_sha256": "01b7afcbe86742e5100fc361f10480b2c76ba43f7aca113f79ae48a6e0b1d61c",
+    "owner_line": 793,
+    "source_line_sha256": "a310593584fc3a5b570b69b6d1645a2022364f85a853c8686647588a0cfbb98f"
+  }
+]
