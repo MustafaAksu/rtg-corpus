@@ -1,0 +1,41 @@
+{
+  "scope": "Focused component fixtures; original repository not changed; no full-suite replay",
+  "results": [
+    {
+      "id": "RV-N1-explicitly-denied-identifier",
+      "expected": "DOCUMENTED-UNRESOLVED, never PASS",
+      "observed": [["links", "PASS", "DYAD-CAND-PHISTAR-ENTRY-PHASE", "declared in DYAD"]],
+      "explanation": "A table cell explicitly denying RID ownership is accepted as a declaration."
+    },
+    {
+      "id": "RV-N1b-denied-identifier-as-node",
+      "expected": "FAIL or explicitly unresolved, never PASS",
+      "observed": [["links", "PASS", "DYAD-CAND-PHISTAR-ENTRY-PHASE", "declared in DYAD"]],
+      "explanation": "No source claim exists, but generic first-table-cell recognition passes it."
+    },
+    {
+      "id": "RV-P1-explicit-claim-present",
+      "expected": "PASS",
+      "observed": [["coverage", "PASS", "DYAD-ALG-RAW-ANGULAR-MEAN", "node/edge at line 2"]],
+      "explanation": "Positive control for the same source declaration."
+    },
+    {
+      "id": "RV-N2-missing-claim-dependency-left",
+      "expected": "FAIL/UNVERIFIED unless an explicit reviewed shared-home mapping resolves the claim",
+      "observed": [["coverage", "PASS", "DYAD-ALG-RAW-ANGULAR-MEAN", "node/edge at line 2"]],
+      "explanation": "Only a bare dependency remains; there is no claim statement or a shared claim home."
+    },
+    {
+      "id": "RV-N2b-missing-claim-l0-left",
+      "expected": "FAIL (L0 identifier mention is not result coverage)",
+      "observed": [["coverage", "PASS", "DYAD-ALG-RAW-ANGULAR-MEAN", "node/edge at line 2"]],
+      "explanation": "Atlas.kind treats L0 as node content and grants coverage."
+    },
+    {
+      "id": "RV-N3-marker-substring",
+      "expected": "FAIL for this fixture, or limit gate label strictly to a lexical marker test",
+      "observed": [["qualifiers", "PASS", "DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER", "conditional marker kept"]],
+      "explanation": "The marker conditional is a substring of unconditional. This is a supplemental implementation limitation."
+    }
+  ]
+}
