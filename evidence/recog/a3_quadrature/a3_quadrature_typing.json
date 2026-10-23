@@ -25,7 +25,7 @@
   "det2": "-exp(rho - 1)*sin(exp(rho) - 2) + sin(exp(rho) - 2) + 1",
   "tr2_depends_on_rho": true
  },
- "Q6_swap_fixed_stratum_inventory": {
+ "Q6_pole_stratum_wrapped_periodic_inventory": {
   "rho_m": "log(1 + m pi)",
   "period": "1 if m even (winding fixed points), 2 if m odd (new)",
   "period2_multipliers": "(tr, det) = (1, 1 - m^2 pi^2)",

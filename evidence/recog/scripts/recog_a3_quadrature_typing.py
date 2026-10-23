@@ -10,8 +10,9 @@ Exact gates (sympy):
   Q3  Comparator-geometric characterisations of Qd (statements about the canonical observables rho, eta, not about a chart):
         (a) rho(Tx) - rho(x) = -Im C_pole, so |Delta rho| <= 1 with equality exactly on Qd (extremal radial transfer);
         (b) d(rho o T - rho)/d eta = -Re C_pole: Qd is the critical locus of the radial transfer along the comparator fiber;
-        (c) det_{d rho ^ d eta} DT - 1 = (e^rho - 1) Re C_pole: Qd together with {rho = 0} is the area-neutral locus of the
-            one-step transport for the swap-invariant comparator area form d rho ^ d eta (S: (rho,eta) -> (-rho,-eta) preserves it).
+        (c) with the DECLARED reference form Omega = d rho ^ d eta = d conj(zeta) ^ d zeta / (2 i |zeta|^2) on the RRF wrapped native ratio
+            zeta = e^{rho + i eta} (multiplicative Haar form, S-invariant): T^* Omega = (1 + (e^rho - 1) Re C_pole) Omega, so Qd together with
+            {rho = 0} is the Omega-area-neutral locus. Scope: relative to the declared Omega (transported with charts); not an RRF observable.
   Q4  Retyping witnesses (why the unipotent type carries no chart-free content):
         chart A  phi_A(rho, eta) = (rho + eps sin eta, eta): on Qd the transformed one-step Jacobian has
                  tr = 2 + eps e^rho cos(eta') with eta' = eta + e^rho - 1 - sin eta, det = 1; so Qd points become
@@ -22,7 +23,8 @@ Exact gates (sympy):
   Q5  (t,d)-plane: for a period-n point the multiplier pair (tr M_n, det M_n) is chart-invariant, but a quadrature crossing
         contributes the factor det J = 1 to d_n and is not separable in t_n; verified on a symbolic 2-step example that
         tr(J(Tx) J(x)) on Qd depends on the partner point (no fixed signature).
-  Q6  Exact inventory of periodic orbits of the wrapped map inside the swap-fixed stratum Sigma = {sin eta = 0}: on Sigma, rho is
+  Q6  Exact inventory of periodic orbits of the WRAPPED map inside the pole-comparator inversion-fixed value stratum Sigma = {C_pole = +-1} = {sin eta = 0}
+        (S-invariant as a set, not pointwise fixed by the state swap S): on Sigma, rho is
         preserved and eta -> eta + e^rho - 1, so an orbit stays in Sigma iff e^rho - 1 = m pi (m in Z, m >= 0 since e^rho > 0... m >= 0
         with m = 0 the zero-winding P1, P2); m even: the winding fixed points (log(1+2 pi k), 0/pi), k = m/2 (Dyadic §1 table);
         m odd: NEW period-2 orbits {(log(1+m pi), 0), (log(1+m pi), pi)} alternating between the pole strata C_pole = +1 and -1,
@@ -32,7 +34,8 @@ Negative controls:
   NC2 chart A with eps = 0 must reproduce the primitive-chart unipotent on Qd.
 [NUM] probe (numpy): Newton search for periodic orbits T^n x = x + (0, 2 pi L), n <= 8, |L| <= 2, in rho in [-2.5, 2.5], from a grid;
   deduplicated; P1-degenerate false positives (T^6 = id + O(|x|^3)) rejected; for each orbit (t_n, d_n), the minimal |cos eta| along
-  the orbit and whether consecutive points lie on opposite sides of Qd. Exploratory: no completeness claim, no certificate.
+  the orbit and whether consecutive points lie on opposite sides of Qd. Exploratory sampled search: no completeness claim, no
+  nonexistence claim about periodic points on Qd, no certificate.
 usage: python -I recog_a3_quadrature_typing.py [OUT_JSON]
 """
 import json, math, sys
@@ -113,7 +116,7 @@ JL = transformed_jacobian(phiL)
 nc1 = (sp.simplify(JL.trace() - trJ) == 0) and (sp.simplify(JL.det() - detJ) == 0)
 # NC2 chart A with eps = 0 reproduces the primitive unipotent on Qd
 nc2 = (sp.simplify(JA.subs({eps: 0, eta: sp.pi/2})) == sp.Matrix([[1, 0], [sp.exp(rho), 1]]))
-# Q6 swap-fixed stratum inventory (exact, symbolic m)
+# Q6 pole-stratum (C_pole = +-1) wrapped-periodic inventory (exact, symbolic m)
 m = sp.symbols('m', integer=True, positive=True)
 rm = sp.log(1 + m*sp.pi)
 T0 = T.subs({rho: rm, eta: 0}, simultaneous=True); Tpi = T.subs({rho: rm, eta: sp.pi}, simultaneous=True)
@@ -125,7 +128,7 @@ k = sp.symbols('k', integer=True, positive=True)
 J0 = J.subs({rho: sp.log(1 + 2*sp.pi*k), eta: 0}, simultaneous=True); Jpi = J.subs({rho: sp.log(1 + 2*sp.pi*k), eta: sp.pi}, simultaneous=True)
 q6 &= (sp.simplify(J0.trace() - 1) == 0) and (sp.simplify(J0.det() - (1 + 2*sp.pi*k)) == 0) and (sp.simplify(Jpi.trace() - 3) == 0) and (sp.simplify(Jpi.det() - (1 - 2*sp.pi*k)) == 0)
 # converse: a wrapped-periodic orbit inside Sigma needs e^rho - 1 in pi Z (eta advances by e^rho - 1 each step and must stay in pi Z)
-res["Q6_swap_fixed_stratum_inventory"] = {"rho_m": "log(1 + m pi)", "period": "1 if m even (winding fixed points), 2 if m odd (new)",
+res["Q6_pole_stratum_wrapped_periodic_inventory"] = {"rho_m": "log(1 + m pi)", "period": "1 if m even (winding fixed points), 2 if m odd (new)",
                                           "period2_multipliers": "(tr, det) = (1, 1 - m^2 pi^2)", "fixed_multipliers": "(1, 1+2 pi k) at eta=0; (3, 1-2 pi k) at eta=pi", "ok": bool(q6)}
 res["gates"] = {"Q1": bool(q1), "Q2": bool(q2), "Q3": bool(q3), "Q4": bool(q4), "Q5": bool(q5), "Q6": bool(q6), "NC1_conjugacy_preserves_type": bool(nc1), "NC2_eps0_reproduces": bool(nc2)}
 
