@@ -1,12 +1,17 @@
-# RTG State Atlas — Method v0.1
+# RTG State Atlas — Method v0.2
 
-**Status:** working method, 21 October 2026. Owner of the method and of the atlas: Claude (atlas owner), under PI (Mustafa) authority. Not a DSN; not governed by the DSN release cycle. Amend by new version of this file.
+**Status:** working method of a derived, NONCANONICAL product. Owner of the method and of the atlas: Claude (atlas owner), under PI (Mustafa) authority. Not a DSN. The method changes by a new version of this file. Versions and their acceptance records are in git (tag `atlas-v<version>`, `records/atlas/`).
 
 ## 1. Purpose
 
-The RTG State Atlas is one file that lets an AI session grasp the entire current RTG scope in a single read: what exists, what is established at which grade and scope, what depends on what, what is open and what blocks it, and where the corpus is inconsistent or has unnoticed links.
+The RTG State Atlas is one file that lets an AI session grasp the entire current RTG scope in a single read:
+- what exists;
+- what is established, at which grade and scope;
+- what depends on what;
+- what is open and what blocks it;
+- where the corpus is inconsistent or has unnoticed links.
 
-Reader: AI only. Human readability is secondary.
+The reader is an AI; human readability is secondary.
 
 Priority order of optimization:
 1. relational expression (objects, claims and the edges between them);
@@ -15,26 +20,44 @@ Priority order of optimization:
 ## 2. Status and authority
 
 - The atlas is **derived and noncanonical**. It is never the source of a claim. Every node cites its owner document and RID. On any conflict the owner DSN wins.
-- The atlas owner has **no authority** over any stream. It reports and advises; stream owners decide; the PI holds final decision.
-- The atlas header lists the exact source versions it was built from, so staleness is visible at a glance.
+- The atlas owner has **no authority** over any stream. It reports and advises; stream owners decide; the PI holds the final decision.
+- An updated owner node in the atlas does not mean that a consumer has adopted that owner edition (§4, rule 10).
+- An atlas computation (PASS) does not confer owner adoption.
 
-## 3. Inputs
+## 3. Inputs and source snapshot
 
-All canonical DSNs and registries in the project root, plus the noncanonical working documents the PI includes (currently ER-2B consolidated study, RER registry draft, FMS session ledger), each tagged `noncanonical` at node level. DSN_METHODOLOGY contributes tag semantics to L0 only.
-
-Reading order for the first pass: GEN (pilot, done) → DYAD → RECOG → TRIAD → NUMGEN → RRF → RER → OFN → FMS → ER-2B → OPEN-M → DART → Arithmetic/Zeta → Discrete Genesis → L0/L1/L2 Bridge → Pre-Legacy → Programme Overview → Methodology.
+- **Inputs.** The files in `dsn/` and `noncanonical/` of `rtg-corpus`, each at its governing tag as listed in `BASELINE.md`. For a canonical source this is the latest adopted tag. A noncanonical source is used at the tagged snapshot the PI selected, and its class and status (NONCANONICAL, SESSION, adopted scope) are kept as node metadata; a tag alone does not establish adoption. The DSN Methodology contributes grade and identifier semantics to L0 only.
+- **Frozen snapshot.** A build starts by freezing a source manifest (`evidence/atlas/source_manifest_v<version>.json`). For each source it records: owner key, path, edition, class, tag, resolved commit, full SHA-256, and the authority record.
+- **Header.** The atlas header carries a compact source table (key, document, edition, tag, class).
+- **Changes during a build.** A source that changes after the freeze is a declared divergence, handled in the next refresh. Inputs are never switched halfway through a build.
+- **"Unchanged" means equal bytes.** A source is unchanged only if the bytes of the previous build's input equal the bytes of the new tagged input. Where the previous input hash was not retained, the equality is recorded as unverified.
 
 ## 4. Content rules
 
-1. **Current state only.** Version history, review verdicts, draft rounds, adoption records and hashes are excluded; they stay in the DSNs, release records and archive.
-2. **Rejected claims are current state.** FAIL / RETRACTED entries are kept as live constraints ("this route is closed"), compactly.
-3. **One node per object and per claim.** An imported claim is not restated; the consumer gets an edge to the owner's node.
-4. **No stream partitioning.** Stream labels (DYAD, GEN, …) mark provenance only, never structure.
-5. **No fact is dropped for size.** The size target (≈60–90k tokens) yields to completeness.
-6. **Proofs are not summarized.** A claim carries at most a one-line method pointer; full proofs stay in the owner DSN.
-7. **Facts that are clearly wrong** against the rest of the established corpus are not used as nodes. They are recorded as one L5 line (claim, location, conflicting evidence), never silently dropped. Unproved or uncertain facts are included at their stated grade.
-8. **Atlas-derived links** (identities, dependencies or equivalences the atlas notices but no owner records) are marked `~` and must be verified before use.
-9. **Language:** English.
+1. **Current scientific state only.** The atlas describes the current scientific state at its frozen source snapshot:
+   - definitions;
+   - established and conditional claims;
+   - operative negative constraints;
+   - unresolved scientific interfaces;
+   - current evidence limitations.
+
+   It excludes the chronology of edits, reviews, advisory dispositions and notice handling. Obsolete diagnostics are absent from the live atlas; their removal and justification stay in the versioned review record under `records/atlas/`. Source identity, source class and scoped acceptance are kept as metadata, not narrated as release history.
+2. **Evidence boundaries are current state.** Statements such as "source-reported", "not rerun", "certificate unavailable" and "conditional use" stay. A retracted assertion is not a theorem of its falsity.
+3. **Rejected claims are current state.** FAIL and RETRACTED entries are kept compactly, at their scope, as live constraints ("this route is closed").
+4. **One node per object and per claim.** An imported claim is not restated; the consumer gets an edge to the owner's node. A module that is no longer open leaves L3, but the results that closed it stay in L2.
+5. **No stream partitioning.** Stream labels (DYAD, GEN, …) mark provenance only, never structure.
+6. **No fact is dropped for size.** The size target (≈60–90k tokens) yields to completeness. Wording compression is a separate pass.
+7. **Proofs are not summarized.** A claim carries at most a one-line method pointer; full proofs stay in the owner DSN.
+8. **Clearly wrong facts.** A fact clearly wrong against the rest of the established corpus is not used as a node. It is recorded as one L5 D-WRONG line (claim, location, conflicting evidence), never silently dropped. Unproved or uncertain facts are included at their stated grade.
+9. **Atlas-derived links** (identities, dependencies or equivalences the atlas notices but no owner records) are marked `~` and must be verified before use.
+10. **Owner state and consumer pins are separate.** An edge from a consumer to an owner node carries the edition the consumer actually imports. It is joined to the current owner node only through a documented same-claim, same-scope relation. An edge whose target is no longer in the latest owner file is kept, as a typed reference or diagnostic, until owner, claim identity, imported edition and scope have been checked. Absence from the latest file is not by itself grounds for deletion or for repinning.
+11. **Identifier types.** These are different kinds of identifier and are never counted as each other:
+    - scientific RIDs;
+    - artifact RIDs (`-ART-`), cited in `cert` fields, normally not as nodes, but always link-checked;
+    - local registry keys (`RER-*`, ER2B-Cxx, FMS session labels);
+    - Methodology section keys;
+    - representation-profile identifiers.
+12. **Language:** English. Words such as "history", "resolved" or "return" keep their mathematical meanings. Wording checks only raise review warnings; they never delete anything automatically.
 
 ## 5. Output structure
 
@@ -44,10 +67,10 @@ L1 OBJECTS    every mathematical object defined once; aliases (≡); symbol coll
 L2 CLAIMS     one record per claim, grouped by topic (not by stream)
 L3 FRONTIER   OPEN items in dependency order: what each blocks and is blocked by
 L4 CONSTRAINTS scope guards and firewalls as rules; exportability; required bridges
-L5 DIAGNOSTICS inconsistencies, gaps, collisions, pin drift, unnoticed links; passed checks
+L5 DIAGNOSTICS current inconsistencies, gaps, collisions, pin mismatches, unnoticed links
 ```
 
-A short headline list of the most consequential L5 items is placed directly after L0, so a reader sees critical problems first; the full L5 stays at the end.
+A short HEADLINE list of the most consequential L5 items comes directly after L0, so a reader sees critical problems first; the full L5 stays in each domain. The body is grouped in seven subject domains: D1 foundations, governance and representation · D2 dyad core and resonance arithmetic · D3 recognition, return and memory · D4a triad, primitive K₃/K₄ and model families · D4b geometry, metric, network and UV · D5 discrete branch and graph diagnostics · D6 historical provenance.
 
 Record syntax:
 
@@ -55,49 +78,57 @@ Record syntax:
 ID GRADE | statement | sc: scope | if: premises | <dep | >used-by | ¬ not-claimed | cert | @owner§
 ```
 
-- `ID` = owner RID; `*STREAM:slug` when the owner gives no RID (this is itself an L5 item).
-- grades: THM ALG DEF CAND HYP RES NUM HEUR INTERP OPEN FAIL RET CONV; qualifiers `·c` conditional, `·s` structural, `·dx` diagnostic only.
+- `ID` = owner RID; `*STREAM:slug` when the owner gives no RID (itself an L5 D-RID item; the atlas never invents an owner RID).
+- grades: THM ALG DEF CAND HYP RES NUM HEUR INTERP OPEN FAIL RET CONV; qualifiers `·c` conditional, `·s` structural, `·dx` diagnostic only, `nc` node from a noncanonical source.
 - edges: `<` depends on · `>` consumed by · `≡` same object · `⊥` symbol collision · `!` tension/conflict · `~` atlas-derived link.
+- `@owner§` may carry the consumer's actual import pin (`@GEN§7 [DYAD v6.4.13]`) when it differs from the source table.
 - formulas in LaTeX-like plain text; exact values kept exactly.
+
+L5 IDs are stable keys (`STREAM.<id>`). A deleted diagnostic's key is never reused. HEADLINE numbering is a display order only.
 
 ## 6. Diagnostic classes (L5)
 
 | Class | Meaning |
 |---|---|
-| D-RID | claim without RID; duplicate RID; RID heading two entries |
-| D-PROOF | adopted THM/ALG whose proof source or certificate is missing |
-| D-GRADE | grade inconsistent with premises (e.g. THM resting on OPEN/HYP), or same claim at different grades in different places |
+| D-RID | claim without RID; duplicate RID; RID heading two entries; cited RID that does not resolve at its owner (phantom) |
+| D-PROOF | one of three distinct states, always named: (a) the proof argument is missing; (b) the certificate or artifact is not available; (c) the check was not rerun in the cited review. (b) and (c) do not by themselves withdraw an adopted result. |
+| D-GRADE | an omitted premise; an unjustified unconditional application of a conditional result; or the same claim at different grades. A complete proof of $H\Rightarrow P$ under an explicit hypothesis $H$ is a valid THM even if $H$ is HYP or OPEN. RESULT keeps its explicit `from` status. Grades are not propagated by RID prefix or by a total order of tags. |
 | D-CONV | sign, normalization or convention conflict between sites |
 | D-SYM | symbol collision or undefined symbol |
-| D-PIN | consumer pins an outdated owner version, or cites a value without its RID |
-| D-STALE | frontier/registry entries whose stated status contradicts the entry body |
+| D-PIN | a demonstrated content or scope mismatch between a consumer's pin and its use; an unresolved identity; an incorrect representation of a present use. An older, intentional pin that is still valid is not a defect; age alone only prompts inspection. |
+| D-STALE | an entry whose stated status contradicts its own body or the owner's current statement |
 | D-SCOPE | scope label missing where two sites differ only by scope |
-| D-LINK | unrecorded identity, equivalence or dependency between claims (often cross-stream) |
-| D-WRONG | fact excluded as clearly wrong (rule 4.7) |
-| PASS | atlas-verified consistency checks (exact arithmetic re-done) |
+| D-LINK | an unrecorded identity, equivalence or dependency between claims (often cross-stream) |
+| D-WRONG | a fact excluded as clearly wrong (rule 4.8) |
+
+Facts the atlas checked are placed at their content layer with a scoped evidence pointer (`atlas-checked: …`), not kept as a list of passed checks. Each is typed: **exact** (symbolic or rational identity), **numerical** (floating or high-precision evaluation; rounded values are written with ≈, never =) or **source** (consistency of statements between documents, no computation). Each carries its execution context (which atlas build ran it; whether it was rerun for the current version). Carrying a check forward does not make it a new computation. An evidence record is not a claim and receives no scientific RID.
 
 ## 7. Process
 
-**Pass 1: extraction.** Each source is read in full and transcribed into the atlas format. The slice is merged into the master atlas, unifying objects and collapsing imports to owner nodes. Diagnostics are recorded as found.
+**Build.** Each source is read and transcribed into the record format. Its slice is merged into the master atlas: objects are unified and imports collapse to owner nodes.
 
-**Pass 2: owner consultation.** For each stream the atlas owner issues an **Atlas Advisory Note** to that stream's owner:
-- one row per finding: class, location, observation, suggested fix, and whether it is editorial or scientific;
-- the stream owner records a disposition for each row (accept / reject / defer, with reason);
-- accepted fixes are made by the stream owner in the DSN through its normal draft → review → adoption cycle. The atlas never edits a DSN;
-- the atlas is updated from the adopted DSN, not from the note.
+**Refresh (impact-based).**
+- **Triggers:** a new governing tag of a source, a schema change or a change of diagnostic semantics.
+- **Changed sources:** a changed source is re-extracted in full.
+- **Affected records:** every edge into a changed source, and every diagnostic whose truth or meaning depends on changed inputs or changed semantics, is validated against the new snapshot. Unchanged owners are not reread unless affected.
+- **L5 dispositions:** each L5 item receives a current-snapshot disposition (retained, reworded, deleted, new). Text about unchanged sources is carried forward only when its dependencies and governing semantics are also unchanged. Dispositions and their reasons are recorded under `records/atlas/`.
+- **Certificates:** scientific certificates are not rerun for an atlas refresh.
 
-Typical disciplining targets are missing RIDs, missing proof sources, untyped conventions and stale pins.
+**Checks** (`tools/atlas_check.py`; report-only, with PASS, FAIL and UNVERIFIED kept separate):
+- **sources:** the source table matches the frozen manifest and `BASELINE.md`;
+- **typed coverage:** each live owner item of a re-extracted source maps to a home: a node whose ID is that item, a reviewed shared home (an OPEN record or a shared record listed in the coverage map with its reason), a `cert` reference (artifacts only), or a justified out-of-scope disposition. A dependency mention, an index or L0 mention, an L5 mention or an unrelated `cert` field is not a home;
+- **owner-resolved links:** each cited RID resolves to an active declaration in its owner's file at the snapshot. Owner-denied names, historical labels and consumer strings classified by the owner are typed as such (documented unresolved), never as resolved; unrecognized declaration syntax stays UNVERIFIED;
+- **qualifiers:** a conditional owner result keeps an explicit conditional marker and its named prerequisite on its atlas node (narrow check, stated as such in the report);
+- **diagnostic keys:** no retired L5 key is referenced anywhere in the atlas;
+- **process residue:** advisory keys and process-status phrases fail; other history-like wording is listed as review warnings.
 
-**Pass 3: automation.** Once the corpus is disciplined (RIDs complete, proof sources registered), add machine checks:
-- a coverage gate: every live owner RID and every exact formula appears in the atlas;
-- link integrity: every edge target exists;
-- grade propagation: no THM rests on an OPEN or HYP premise without a `·c` qualifier;
-- pin freshness against the source version list.
+Unparsed or unchecked items are not counted as PASS. Content fidelity remains a matter for the change-focused review.
 
-**Regeneration.** On each adopted release of any source, re-extract that source's slice and refresh the version list. A full rebuild is done when the method changes.
+**Advisories (Pass 2).** For each stream, the atlas owner issues one batched advisory to its owners from the accepted atlas snapshot and the checked owner sources:
+- one row per finding (class, location, observation, suggested fix, editorial or scientific);
+- the stream owner records a disposition for each row;
+- accepted fixes go through the stream's own release cycle; the atlas never edits a DSN and is refreshed from the adopted result.
 
-## 8. Current state of work
+Advisories and dispositions live under `records/<study>/` and are never mentioned in the atlas.
 
-- Pass 1 complete (2026-10-21): 18 sources sliced and merged into `RTG_STATE_ATLAS_v0_1.md` (≈424k chars). Body grouped in seven subject domains: D1 foundations/governance/representation · D2 dyad core and resonance arithmetic · D3 recognition/return/memory · D4a triad, primitive K₃/K₄ and model families · D4b geometry/metric/network/UV · D5 discrete branch and graph diagnostics · D6 historical provenance. Header: source edition table, L0 key, headline L5 (H1–H12), D-WRONG list, cross-domain object index.
-- Size exceeds the 60–90k-token target; per rule 4.5 completeness was kept. A later wording-compression pass (no fact removal) is possible.
-- Next: Pass 2 — Atlas Advisory Notes, one per stream, rows keyed by the L5 IDs (STREAM.<id>). Coverage gate still deferred to Pass 3.
+**Acceptance.** An atlas version is accepted by the PI after a change-focused review. A short acceptance record (`records/atlas/`) pins the atlas, method and source-manifest identities. The PI creates the annotated tag `atlas-v<version>`. The tag identifies a noncanonical derived artifact; it adopts no owner science.

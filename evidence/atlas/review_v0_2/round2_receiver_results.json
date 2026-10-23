@@ -1,0 +1,26 @@
+{
+  "review": "ATLAS-v0.2-round2",
+  "date": "2026-10-23",
+  "reviewer": "ChatGPT",
+  "reviewed_commit": "9660389eb755558cba1912f5a341d297534db25d",
+  "verdict": "ACCEPT_SCOPED_NO_BLOCKING_RECEIVING_FINDINGS",
+  "execution_scope": "Original six-fixture harness, verbatim selected current checker functions; local file paths only. Not a full repository replay.",
+  "fixture_harness_git_blob": "0634552ade6b7a2dc36a775dffa4fff398090c9b",
+  "owner_identifier_map_git_blob": "200e322141eddea9e89ce94a54776beebe1af199",
+  "passed_expected": 6,
+  "total": 6,
+  "cases": [
+    {"id": "RV-N1-explicitly-denied-identifier", "observed": ["DOCUMENTED-UNRESOLVED"], "matches_expected": true},
+    {"id": "RV-N1b-denied-identifier-as-node", "observed": ["FAIL"], "matches_expected": true},
+    {"id": "RV-P1-explicit-claim-present", "observed": ["PASS"], "matches_expected": true},
+    {"id": "RV-N2-missing-claim-dependency-left", "observed": ["FAIL"], "matches_expected": true},
+    {"id": "RV-N2b-missing-claim-l0-left", "observed": ["FAIL"], "matches_expected": true},
+    {"id": "RV-N3-marker-substring", "observed": ["FAIL"], "matches_expected": true}
+  ],
+  "producer_full_controls": {"reported_expected": 18, "reported_total": 18, "receiver_read": true, "receiver_reran_full_suite": false},
+  "current_report_limits": {"unverified": 7, "documented_unresolved": 11, "wording_warnings": 19, "prior_input_equality_unverified_sources": 13},
+  "whole_atlas_sha256_recomputed": false,
+  "pi_acceptance_performed": false,
+  "merge_performed": false,
+  "tag_created": false
+}
