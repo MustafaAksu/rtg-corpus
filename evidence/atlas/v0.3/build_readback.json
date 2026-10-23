@@ -1,9 +1,12 @@
 {
-  "status": "PASS",
-  "remote_build_commit": "da81f14b8ea80bfbfd3c5f03b22e86a562d83425",
-  "local_remote_files_equal": 16,
-  "atlas_sha256": "dad844027a8d2c614a90c0a3c1a5736dae9d0a49824b70f788ede7c62a3487c3",
-  "workflow_run": 39981589480,
-  "workflow_result": "success",
-  "scientific_certificate_replays": 0
+  "status": "REMOTE_BUILD_MATCHES_LOCAL_EXPECTED_IDENTITY",
+  "context": "V1-V3 receiving corrections; same generator, not an independent scientific engine",
+  "workflow_commit": "33031576bfbc3ae9b1ce74254b3e446892db4112",
+  "atlas_sha256": "71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b",
+  "builder_sha256": "9ab9c8d6dfed9c87b725244ac63d4b4fcfcbc79269f26e722bb5ed833da6b458",
+  "peer_review_commit": "afdef2bf2ae9e40f42cb42fde6facc5756d322e0",
+  "peer_review_blob": "60fe23e9f6967a59541da66229b31aa9bdb35e6c",
+  "peer_review_copied_unchanged": true,
+  "final_receiving_acceptance": "PENDING",
+  "PI_acceptance": "PENDING"
 }

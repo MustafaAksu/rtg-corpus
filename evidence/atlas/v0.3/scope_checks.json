@@ -70,5 +70,21 @@
   {
     "id": "DZT-numeric-not-exact",
     "result": "PASS"
+  },
+  {
+    "id": "V1-direct-owner-citation",
+    "result": "PASS"
+  },
+  {
+    "id": "V2-current-RRF-consumer",
+    "result": "PASS"
+  },
+  {
+    "id": "V3-record-sourced-proposal",
+    "result": "PASS"
+  },
+  {
+    "id": "postulated-generator-wording",
+    "result": "PASS"
   }
 ]

@@ -7,7 +7,8 @@
       "explicit-U-and-series",
       "no-R9-or-INF1-proof-dependency",
       "unchanged-domain-and-quantitative-nonclaims",
-      "new-artifact-support"
+      "new-artifact-support",
+      "postulated-generator-wording"
     ],
     "detected": true
   },
@@ -109,6 +110,38 @@
     "expected_failure": "edition-presentation",
     "failures": [
       "edition-presentation"
+    ],
+    "detected": true
+  },
+  {
+    "id": "V1 duplicate self-equivalence",
+    "expected_failure": "V1-direct-owner-citation",
+    "failures": [
+      "V1-direct-owner-citation"
+    ],
+    "detected": true
+  },
+  {
+    "id": "V2 stale RRF edge",
+    "expected_failure": "V2-current-RRF-consumer",
+    "failures": [
+      "V2-current-RRF-consumer"
+    ],
+    "detected": true
+  },
+  {
+    "id": "V3 proposal wrongly sourced to DSN",
+    "expected_failure": "V3-record-sourced-proposal",
+    "failures": [
+      "V3-record-sourced-proposal"
+    ],
+    "detected": true
+  },
+  {
+    "id": "V4 generator wording regression",
+    "expected_failure": "postulated-generator-wording",
+    "failures": [
+      "postulated-generator-wording"
     ],
     "detected": true
   }
