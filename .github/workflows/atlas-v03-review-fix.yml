@@ -1,0 +1,114 @@
+name: Atlas v0.3 receiving corrections
+on:
+  push:
+    branches: [chatgpt/atlas-v0.3]
+    paths: ['.github/workflows/atlas-v03-review-fix.yml']
+permissions:
+  contents: write
+jobs:
+  correct:
+    if: github.ref == 'refs/heads/chatgpt/atlas-v0.3'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Apply bounded source changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, sys
+          p=Path('evidence/atlas/build/refresh_v0_3.py')
+          b=p.read_bytes()
+          if hashlib.sha256(b).hexdigest()=='9ab9c8d6dfed9c87b725244ac63d4b4fcfcbc79269f26e722bb5ed833da6b458':
+              sys.exit(0)
+          assert hashlib.sha256(b).hexdigest()=='4e9ed2f826b291084a0aa8c3de243765e4f98f8308828ffe44ae046a83325efa'
+          s=b.decode()
+          patches=[]
+          old="""    a.editline('*RECOG:F3-common-driver ', 'VF-1', 'DYAD-ALG-NF6-DEG10 (VF-1)', 'current explicit owner citation')
+              a.editline('*RECOG:F3-common-driver ', 'RECOG.R-L8', 'DYAD-ALG-NF6-DEG10', 'remove obsolete indirect-reference diagnostic')"""
+          new="""    a.editline('*RECOG:F3-common-driver ', ' | VF-1 ≡ DYAD-ALG-NF6-DEG10 (RECOG.R-L8)', '', 'V1 remove retired diagnostic field without composing a self-equivalence')
+              a.editline('*RECOG:F3-common-driver ', 'VF-1', 'DYAD-ALG-NF6-DEG10 (VF-1)', 'V1 retain the explicit owner citation in the statement')
+              a.editline('RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS ', '>RRF v0.8.3 §6.3 (RF-1: RRF restates W3 across spaces), RER v0.2 G9',
+                '>RRF v0.8.4 §6.3 (W3 quoted verbatim with RID at RECOG v0.3.21; inter-space transport is a separate RRF OPEN extension; RF-1 fulfilled as a content state, not a notice receipt), RER v0.2 G9', 'V2 current RRF consumer edge with its actual RECOG pin and separate extension')"""
+          patches.append((old,new))
+          patches.append(("| <RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE; @RECOG§6.16f–g',", "| <RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE | provenance: PI decision 23 Oct 2026, records/recog/ATLAS_ADVISORY_RECOG_v0_3_22_DISPOSITION_RECONCILIATION.md §5 at snapshot 9453e35cec6d5a4da076652527c13176db27f6f8; proposal not in RECOG v0.3.23',"))
+          patches.append(('RECOG-THM-A1A-PHASE-EXISTENCE-U THM | sc: selected T;', 'RECOG-THM-A1A-PHASE-EXISTENCE-U THM | sc: postulated T;'))
+          old="    # This is a scoped structural guard list, not a proof checker."
+          new="""    f3=line('*RECOG:F3-common-driver ')
+              check('V1-direct-owner-citation', f3.count('DYAD-ALG-NF6-DEG10')==1 and f3.endswith('| <RECOG-THM-R9-MEMORY | @§6.16f'))
+              f4=line('RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS ')
+              check('V2-current-RRF-consumer', all(s in f4 for s in ['>RRF v0.8.4 §6.3', 'RECOG v0.3.21', 'inter-space transport is a separate RRF OPEN extension']) and '>RRF v0.8.3' not in f4)
+              f5=line('*RECOG:event-carrier-interface ')
+              check('V3-record-sourced-proposal', all(s in f5 for s in ['<RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE', 'PI decision 23 Oct 2026', 'records/recog/ATLAS_ADVISORY_RECOG_v0_3_22_DISPOSITION_RECONCILIATION.md §5', 'proposal not in RECOG v0.3.23']) and '@RECOG§6.16f–g' not in f5)
+              check('postulated-generator-wording', 'sc: postulated T;' in n)
+              # This is a scoped structural guard list, not a proof checker."""
+          patches.append((old,new))
+          old='    return controls\n'
+          new="""    f3=next(l for l in text.splitlines() if l.startswith('*RECOG:F3-common-driver '))
+              mutate('V1 duplicate self-equivalence', f3, f3.replace(' | @§6.16f', ' | DYAD-ALG-NF6-DEG10 ≡ DYAD-ALG-NF6-DEG10 | @§6.16f'), 'V1-direct-owner-citation')
+              f4=next(l for l in text.splitlines() if l.startswith('RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS '))
+              mutate('V2 stale RRF edge', f4, f4.replace('>RRF v0.8.4 §6.3', '>RRF v0.8.3 §6.3'), 'V2-current-RRF-consumer')
+              f5=next(l for l in text.splitlines() if l.startswith('*RECOG:event-carrier-interface '))
+              mutate('V3 proposal wrongly sourced to DSN', f5, f5.split(' | provenance:')[0]+' | @RECOG§6.16f–g', 'V3-record-sourced-proposal')
+              mutate('V4 generator wording regression', bound, bound.replace('sc: postulated T;', 'sc: selected T;'), 'postulated-generator-wording')
+              return controls
+          """
+          patches.append((old,new))
+          old="    (RECORDS/'ATLAS_V0_3_REVIEW_PACKET.md').write_text(packet,encoding='utf-8')"
+          new='''    packet += """\n## 6. Receiving-review corrections V1–V3\n\nBasis: Claude's receiving review `records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md` at immutable commit `afdef2bf2ae9e40f42cb42fde6facc5756d322e0` (separate review branch), verdict REVISE — three corrections, then ACCEPT. This is the producer response; the requested receiving readback of the three sites and new hash remains pending.\n\n- V1: remove the retired R-L8 pointer field before inserting the direct VF-1 owner citation; no self-equivalence remains.\n- V2: F4's consumer is RRF v0.8.4; its actual RECOG v0.3.21 pin remains explicit. W3 uses one space; inter-space transport is a separate RRF OPEN extension. Content fulfilment is not notice receipt.\n- V3: F5 stays a prospective OPEN task, anchored to CONTINUOUS-CARRIER-NOWRITE, but its proposal is sourced to the PI decision in the reconciliation record §5 at the frozen snapshot, not to a nonexistent DSN F5 cell. This record is supplementary proposal provenance, not a nineteenth scientific owner source.\n- Optional wording: the new theorem says postulated T, matching its owner.\n\nFour targeted guards and four negative fixtures cover these edits. No scientific source, Method, shared checker, disposition count or adoption field is changed. The previously accepted scientific scope is not reopened.\n"""
+              (RECORDS/'ATLAS_V0_3_REVIEW_PACKET.md').write_text(packet,encoding='utf-8')'''
+          patches.append((old,new))
+          patches.append(('**Status:** DRAFT — receiving review and PI decision pending.', '**Status:** DRAFT — receiving corrections V1–V3 implemented; final receiving readback and PI decision pending.'))
+          patches.append(('- Receiving review: pending.', '- Receiving review: Claude, 23 Oct 2026, `records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md` at commit `afdef2bf2ae9e40f42cb42fde6facc5756d322e0`: REVISE (V1–V3). Corrections implemented; final receiving readback pending.'))
+          for old,new in patches:
+              assert s.count(old)==1,(old[:160],s.count(old))
+              s=s.replace(old,new)
+          p.write_text(s,encoding='utf-8')
+          compile(s,str(p),'exec')
+          assert hashlib.sha256(p.read_bytes()).hexdigest()=='9ab9c8d6dfed9c87b725244ac63d4b4fcfcbc79269f26e722bb5ed833da6b458'
+          PY
+      - name: Build and compare with locally tested bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I evidence/atlas/build/refresh_v0_3.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          s=json.loads(Path('evidence/atlas/v0.3/verification_summary.json').read_text())
+          assert s['atlas_sha256']=='71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b'
+          assert s['scope_checks']==22 and s['negative_controls']==18 and s['shared_controls']==18
+          assert all('FAIL' not in x for x in s['shared_counts'].values())
+          p=Path('records/recog/ATLAS_ADVISORY_RECOG_v0_3_22_DISPOSITION_RECONCILIATION.md')
+          assert hashlib.sha256(p.read_bytes()).hexdigest()=='9bc7a57cd91472a43670b25039f9d03a521b616587b495da7ef07974a76ec30f'
+          PY
+          git fetch origin claude/atlas-v0.3-review
+          git show afdef2bf2ae9e40f42cb42fde6facc5756d322e0:records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md > records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md
+          test "$(git hash-object records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md)" = 60fe23e9f6967a59541da66229b31aa9bdb35e6c
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib,os
+          p=Path('evidence/atlas/v0.3/build_readback.json')
+          p.write_text(json.dumps({'status':'REMOTE_BUILD_MATCHES_LOCAL_EXPECTED_IDENTITY','context':'V1-V3 receiving corrections; same generator, not an independent scientific engine','workflow_commit':os.environ['GITHUB_SHA'],'atlas_sha256':'71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b','builder_sha256':'9ab9c8d6dfed9c87b725244ac63d4b4fcfcbc79269f26e722bb5ed833da6b458','peer_review_commit':'afdef2bf2ae9e40f42cb42fde6facc5756d322e0','peer_review_blob':'60fe23e9f6967a59541da66229b31aa9bdb35e6c','peer_review_copied_unchanged':True,'final_receiving_acceptance':'PENDING','PI_acceptance':'PENDING'},ensure_ascii=False,indent=2)+'\n')
+          PY
+          git add atlas/RTG_STATE_ATLAS.md evidence/atlas/build/refresh_v0_3.py evidence/atlas/v0.3 records/atlas/ATLAS_V0_3_REVIEW_PACKET.md records/atlas/RTG_STATE_ATLAS_v0.3_RELEASE_RECORD.md records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md
+          if ! git diff --cached --quiet; then
+            git -c user.name='RTG Atlas build' -c user.email='noreply@github.com' commit -m 'atlas v0.3: V1-V3 corrected candidate and verification records [skip ci]'
+            git push origin HEAD:refs/heads/chatgpt/atlas-v0.3
+          fi
+      - name: Package generated files for byte readback
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/atlas-v03-review
+          git archive --format=tar HEAD atlas/RTG_STATE_ATLAS.md evidence/atlas/build/refresh_v0_3.py evidence/atlas/v0.3 records/atlas/ATLAS_V0_3_REVIEW_PACKET.md records/atlas/RTG_STATE_ATLAS_v0.3_RELEASE_RECORD.md records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md | gzip > /tmp/atlas-v03-review/readback.tar.gz
+          git rev-parse HEAD > /tmp/atlas-v03-review/commit.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: atlas-v03-review-readback
+          path: /tmp/atlas-v03-review/
+          retention-days: 7
