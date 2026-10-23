@@ -108,3 +108,10 @@ Atlas PROG.G4.
 2. Are the v1.2 release and change records (and the three JSON registers) available for `upload/programme-records`?
 3. Does the Programme list the atlas as a (derived, noncanonical) home? The atlas Method says it is never a source; listing it as a map, not a home, avoids that reading.
 4. PC-12 κ table: Programme home, or a separate small record under `records/programme/`?
+
+## 5. PI decisions (23 October 2026)
+
+1. **Editor:** Claude (atlas owner) writes v1.3; ChatGPT reviews (change-focused review of stage 1, mechanical review of stage 2).
+2. **v1.2 records:** the PI searched and did not find `RTG_PROGRAMME_OVERVIEW_v1_2_RELEASE_RECORD.md`, `…_CHANGE_RECORD.md`, `adoption_record.json`, `source_inventory.json`, `interface_register.json`. They are recorded as missing in the v1.3 release record; nothing is reconstructed. The v1.2 header's statement of the PI's adoption on 20 Sep 2026 stands as the adoption evidence.
+3. **Atlas:** listed in the inventory as a derived, noncanonical map, not a home; never a source of a claim.
+4. **κ table (PC-12):** inside the Programme (one section), not a separate record.
