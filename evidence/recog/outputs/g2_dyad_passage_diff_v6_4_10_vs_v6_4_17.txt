@@ -1,0 +1,182 @@
+FILE v6_4_10.md  sha256 7455811928606076b3bc3075632275dc2a24e37fdbf0ae20036db5529a1b56b7
+FILE v6_4_17.md  sha256 e07cf2b93b532554d9e1d05d2bfef3be34829b7cb892627c0bb03d1d182d4bfc
+MODE whitespace-normalized comparison; --extend 0
+
+=== C21 ===
+  v6_4_10.md: blocks=3 lines=9
+    L40-40: `[THM]` **Cubic coefficient.** $c_{21} = -\frac{1}{2} - i\frac{2\sqrt{3}}{3}$. `[RID: DYAD
+    L228-232: - **OPEN 1** [RID: DYAD-THM-C21] :: `[THM]` ✓ CLOSED — archival proof of $c_{21}$.
+    L365-367: `[THM]` `[RID: DYAD-THM-C21]` **Cubic coefficient:**
+  v6_4_17.md: blocks=3 lines=12
+    L55-55: `[THM]` **Cubic coefficient.** $c_{21} = -\frac{1}{2} - i\frac{2\sqrt{3}}{3}$. `[RID: DYAD
+    L288-295: - **OPEN 1** [RID: DYAD-THM-C21] :: `[THM]` ✓ CLOSED — archival proof of $c_{21}$.
+    L441-443: `[THM]` `[RID: DYAD-THM-C21]` **Cubic coefficient:**
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_DIFFERS
+    --- v6_4_10.md
+    +++ v6_4_17.md
+    @@ -6,0 +7,3 @@
+    +- **OPEN 3** [RID: DYAD-OPEN-SPIRAL-RESIDUAL] :: `[ALG]`/`[THM]` (3a, 3b at their adopted grades; 3c documented discrepancy) ✓ CLOSED (v6.4.16) within its defined scope — the primitive-variable remainder continues as OPEN 21.
+    +- **OPEN 21** [RID: DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER] → closed by [RID: DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER] :: `[THM — conditional on RECOG-THM-R9-MEMORY]` ✓ CLOSED (v6.4.17) — certified primitive-variable phase remainder, rows A/B not mixed.
+    +- **OPEN 19** [RID: DYAD-OPEN-FORMAL-CENTRALIZER] → closed by [RID: DYAD-THM-FORMAL-CENTRALIZER] :: `[THM]` `[scope: formal]` ✓ CLOSED (v6.4.12) — formal centralizer of $T^6$ is $\{\exp(sX)\}$; unique formal involution $R_0$ (§6.16). Realization: OPEN 20.
+
+=== NF6 ===
+  v6_4_10.md: blocks=1 lines=6
+    L633-638: `[ALG]` `[RID: DYAD-ALG-NF6]` **One-step polynomial normalizer and six-step normal-form je
+  v6_4_17.md: blocks=1 lines=6
+    L735-740: `[ALG]` `[RID: DYAD-ALG-NF6]` **One-step polynomial normalizer and six-step normal-form je
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== NF6-OBS ===
+  v6_4_10.md: blocks=1 lines=3
+    L640-642: `[ALG]` `[RID: DYAD-ALG-NF6-OBS]` **Normalization obstruction (raw $c_{05}$ is not a conju
+  v6_4_17.md: blocks=1 lines=3
+    L742-744: `[ALG]` `[RID: DYAD-ALG-NF6-OBS]` **Normalization obstruction (raw $c_{05}$ is not a conju
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== PRIM-CTR ===
+  v6_4_10.md: blocks=1 lines=3
+    L644-646: `[THM]` `[proof: analytic majorant + exact-rational certificate]` `[RID: DYAD-THM-PRIM-CTR
+  v6_4_17.md: blocks=1 lines=3
+    L746-748: `[THM]` `[proof: analytic majorant + exact-rational certificate]` `[RID: DYAD-THM-PRIM-CTR
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== NF-INV ===
+  v6_4_10.md: blocks=1 lines=3
+    L648-650: `[THM]` `[proof: majorant + contraction mapping]` `[RID: DYAD-THM-NF-INV]` **Quantitative 
+  v6_4_17.md: blocks=1 lines=3
+    L750-752: `[THM]` `[proof: majorant + contraction mapping]` `[RID: DYAD-THM-NF-INV]` **Quantitative 
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== NF-REM ===
+  v6_4_10.md: blocks=2 lines=5
+    L652-652: `[THM]` `[proof: exact vector jet to degree 9 + majorant tail from degree 10 + finite defe
+    L654-657: | $|z|\le$ | $|\widehat F(z)-J(z)|\le C_7|z|^7$ | $\|D\widehat F(z)-DJ(z)\|_2\le C_D|z|^6$
+  v6_4_17.md: blocks=2 lines=5
+    L754-754: `[THM]` `[proof: exact vector jet to degree 9 + majorant tail from degree 10 + finite defe
+    L756-759: | $|z|\le$ | $|\widehat F(z)-J(z)|\le C_7|z|^7$ | $\|D\widehat F(z)-DJ(z)\|_2\le C_D|z|^6$
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== BRIDGE-LEMMA ===
+  v6_4_10.md: blocks=2 lines=6
+    L513-516: `[ALG]` **One-step to $p$-step bridge lemma:** $\mu_p = p\bar\lambda\nu_3^{(1,p)}$. `[RID:
+    L998-999: - $W=u+iv$ labeled as $p=6$ primitive frame, not generic.
+  v6_4_17.md: blocks=2 lines=7
+    L597-601: `[ALG]` **One-step to $p$-step bridge lemma:** $\mu_p = p\bar\lambda\nu_3^{(1,p)}$. `[RID:
+    L1471-1472: - $W=u+iv$ labeled as $p=6$ primitive frame, not generic.
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_DIFFERS
+    --- v6_4_10.md
+    +++ v6_4_17.md
+    @@ -1,0 +2 @@
+    +`[v6.4.11]` General-$p$ proof (all $p\ge5$, via leading-defect equivariance $LG_k=G_k\circ L$): RECOG v0.3.20 §6.12 (RECOG-ALG-LEADING-RETURN-EQUIVARIANCE), cross-referenced as provenance. The Dyadic RID and statement are retained; ownership of RECOG's proof is not transferred by this cross-reference.
+
+=== P6-FACEFLUX ===
+  v6_4_10.md: blocks=1 lines=3
+    L361-363: `[ALG, exact]` `[RID: DYAD-ALG-P6-FACEFLUX]` **K₄ face-flux connection.** The p=6 eigenval
+  v6_4_17.md: blocks=1 lines=3
+    L437-439: `[ALG, exact]` `[RID: DYAD-ALG-P6-FACEFLUX]` **K₄ face-flux connection.** The p=6 eigenval
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== ALIAS-PHASE ===
+  v6_4_10.md: blocks=1 lines=1
+    L56-56: `[ALG]` **OPEN 16 partial.** Alias phase at $U=\pi/\tau$: $G_-(\pi/\tau) = 1/(1-i\tau) = 3
+  v6_4_17.md: blocks=1 lines=1
+    L71-71: `[ALG]` **OPEN 16 partial.** Alias phase at $U=\pi/\tau$: $G_-(\pi/\tau) = 1/(1-i\tau) = 3
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== LIEGAUGE-NORM ===
+  v6_4_10.md: blocks=2 lines=3
+    L506-507: `[ALG]` `[conv: Lie strict-kernel gauge]` Canonical 6-step jet coefficients over $\mathbb{
+    L509-509: `[ALG]` `[conv: Lie strict-kernel gauge]` $c_\theta^{(6)}=-119\sqrt{3}/648$.
+  v6_4_17.md: blocks=2 lines=3
+    L590-591: `[ALG]` `[conv: Lie strict-kernel gauge]` Canonical 6-step jet coefficients over $\mathbb{
+    L593-593: `[ALG]` `[conv: Lie strict-kernel gauge]` $c_\theta^{(6)}=-119\sqrt{3}/648$.
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== MAP-6.1 ===
+  v6_4_10.md: blocks=3 lines=4
+    L344-345: `[ALG]` **Jacobian:**
+    L349-349: `[ALG]` **Critical curve:** $C_0=\{\rho\ge\ln2,\;\cos\eta=-1/(e^\rho-1)\}$. Map not global
+    L351-351: `[ALG]` **$P_2$ saddle:** $\lambda_+=\phi^2\approx2.618$, $\lambda_-=\phi^{-2}\approx0.382
+  v6_4_17.md: blocks=3 lines=4
+    L420-421: `[ALG]` **Jacobian:**
+    L425-425: `[ALG]` **Critical curve:** $C_0=\{\rho\ge\ln2,\;\cos\eta=-1/(e^\rho-1)\}$. Map not global
+    L427-427: `[ALG]` **$P_2$ saddle:** $\lambda_+=\phi^2\approx2.618$, $\lambda_-=\phi^{-2}\approx0.382
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== ISP-6.4 ===
+  v6_4_10.md: blocks=2 lines=2
+    L399-399: `[ALG]` **Winding-index invisibility.** Winding index $\ell\in\mathbb{Z}$ is invisible to 
+    L401-401: `[ALG]` **Critical ISP amplitude:** $Q_c := (\arcsin(\ln 2))^2 \approx 0.5865$. If $Q < Q_
+  v6_4_17.md: blocks=2 lines=2
+    L483-483: `[ALG]` **Winding-index invisibility.** Winding index $\ell\in\mathbb{Z}$ is invisible to 
+    L485-485: `[ALG]` **Critical ISP amplitude:** $Q_c := (\arcsin(\ln 2))^2 \approx 0.5865$. If $Q < Q_
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== JET-6.7-6.8 ===
+  v6_4_10.md: blocks=2 lines=5
+    L463-465: In the linear primitive eigenframe $X=(\Re W,\Im W)^\top$, $Q=\|X\|_2^2$: $X_{m+1}=X_m+MX_
+    L477-478: `[ALG structure]` **Cubic-vector truncation only.** At cubic vector order:
+  v6_4_17.md: blocks=2 lines=5
+    L547-549: In the linear primitive eigenframe $X=(\Re W,\Im W)^\top$, $Q=\|X\|_2^2$: $X_{m+1}=X_m+MX_
+    L561-562: `[ALG structure]` **Cubic-vector truncation only.** At cubic vector order:
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== CONST-6.3 ===
+  v6_4_10.md: blocks=1 lines=2
+    L379-380: $$\tau=\tfrac{2\sqrt3}{3}\approx1.154700538,\quad|\sigma|^2=\tfrac{19}{12},\quad\alpha_{\r
+  v6_4_17.md: blocks=1 lines=2
+    L455-456: $$\tau=\tfrac{2\sqrt3}{3}\approx1.154700538,\quad|\sigma|^2=\tfrac{19}{12},\quad\alpha_{\r
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== H2-6.2 ===
+  v6_4_10.md: blocks=1 lines=3
+    L369-371: `[ALG]` **Quadratic near-identity correction:**
+  v6_4_17.md: blocks=1 lines=3
+    L445-447: `[ALG]` **Quadratic near-identity correction:**
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== NU5-1-6 ===
+  v6_4_10.md: blocks=1 lines=4
+    L531-534: `[ALG]` `[family: p=5,6,7]` **Finite one-step ledger.** Exact coefficients:
+  v6_4_17.md: blocks=1 lines=4
+    L616-619: `[ALG]` `[family: p=5,6,7]` **Finite one-step ledger.** Exact coefficients:
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_DIFFERS
+    --- v6_4_10.md
+    +++ v6_4_17.md
+    @@ -3 +3 @@
+    -- $p=5$: $\nu_5^{(5)}$ exact over $\mathbb{Q}(\sqrt5, \sqrt{10+2\sqrt5})$
+    +- $p=5$: $\nu_5^{(5)}$ exact over $\mathbb{Q}(\sqrt5, \sqrt{10+2\sqrt5})$. `[v6.4.13]` `[ALG]` [RID: DYAD-ALG-NU5-P5] Closed form $\nu_5^{(5)}=\tfrac{355-159\sqrt5}{48}+i\,\tfrac{(1106\sqrt5-2473)\sqrt{10+2\sqrt5}}{48}$, the $(3,2)$ coefficient of the one-step normal form of the declared $K_5$ family ($\rho'=\rho-\sin\eta$, $\eta'=\eta+K_5(e^\rho-1)-K_5\sin\eta$) in the frame $W_p=\rho+\tfrac{\lambda-1}{K_p}\eta$ (equal to the §1 frame at $p=6$) with resonant normalizer coefficients set to zero (the DYAD-ALG-NF6 convention). Certificate `dyad_m2c_nu5_p5_exact.py`: exact arithmetic in $\mathbb
+
+=== 47/54-6.5 ===
+  v6_4_10.md: blocks=1 lines=5
+    L408-412: `[ALG]` `[scope: fixed-radius uniform-angle mean in the raw $W$-frame]` **Raw angular-mean
+  v6_4_17.md: blocks=1 lines=5
+    L492-496: `[ALG]` `[scope: fixed-radius uniform-angle mean in the raw $W$-frame]` **Raw angular-mean
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+=== OPEN12 ===
+  v6_4_10.md: blocks=1 lines=1
+    L195-195: **OPEN 12 — $P_2$ saddle manifold and large-amplitude dynamics** [RID: DYAD-OPEN-P2-SADDLE
+  v6_4_17.md: blocks=1 lines=1
+    L227-227: **OPEN 12 — $P_2$ saddle manifold and large-amplitude dynamics** [RID: DYAD-OPEN-P2-SADDLE
+  ANCHORS_FOUND=YES
+  v6_4_17.md: PASSAGE_IDENTICAL
+
+CLAIM_EQUIVALENT: not decided by this script (reviewer verdict, field by field).

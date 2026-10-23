@@ -1,0 +1,11 @@
+  G1 PASS
+  G2 PASS
+  G3 PASS
+  G4 PASS
+  G5 PASS
+  G6 PASS
+  ceiling = 143209/750000
+  NC1 R=1/5 (G4)             caught
+  NC2 lambda dropped (G1)    caught
+  NC3 eps bound 1/10 (G4)    caught
+RESULT: PASS

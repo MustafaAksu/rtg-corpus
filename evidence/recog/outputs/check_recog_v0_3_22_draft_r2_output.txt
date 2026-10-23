@@ -1,0 +1,34 @@
+BASE  sha256 a3459522c8f58204f83f5e65e3d1a99912f9651d1c17cc4fb0c090196f670ae3
+DRAFT sha256 8f7f6f861e419afa2e43c11e32b0d5e1647f37a81f63baafdc41a15905c1624e
+EDITS 17
+GATES:
+  C0         PASS 
+  C1         PASS (BUILD)
+  C2         PASS (POSITIVE)
+  C3         PASS (REVERSE)
+  C4         PASS (SPAN TAGS)
+  C5         PASS (SPAN RIDS)
+  C6         PASS (STATUS)
+  C7         PASS (RID SET)
+  C8         PASS (VOCAB)
+  C9         PASS (N13)
+  C10        PASS (A1A CELL)
+  C11        PASS (ROWS)
+  C12        PASS (L1 HEADER TYPING)
+
+NEGATIVE CONTROLS (each must FAIL):
+  NC1 omit one edit                          caught
+  NC2 grade changed outside spans            caught
+  NC3 compensating pair of grade changes     caught
+  NC4 OPEN status altered                    caught
+  NC5 READ/DECODE vocabulary inserted        caught
+  NC6 N13 worded as acceptance               caught
+  NC7 RID swapped between statements         caught
+  NC8 owner qualifier promoted to [THM]      caught
+  NC9 RID-governance wording dropped         caught
+  NC10 rows mixed (C2 of row B in row A)     caught
+  NC11 R9 statement altered                  caught
+  NC13 L1 reverted in header                 caught
+  NC12 extra undeclared RECOG RID            caught
+
+RESULT: PASS

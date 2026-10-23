@@ -1,0 +1,26 @@
+BASE  sha256 fdb8c9a72cbea67bae339a890f440b7d67c608979f7886279e2cd00bdabfb8df
+DRAFT sha256 a59436eec6049ecdb8da03ebe628edb9499afcad178279efd540c46948795980
+EDITS 21
+GATES:
+  C0         PASS 
+  C1         PASS (BUILD)
+  C2         PASS (POSITIVE)
+  C3         PASS (REVERSE)
+  C4         PASS (SPAN TAGS)
+  C5         PASS (SPAN RIDS)
+  C6         PASS (STATUS)
+  C7         PASS (RID SET)
+  C8         PASS (VOCAB)
+  C9         PASS (N13)
+
+NEGATIVE CONTROLS (each must FAIL):
+  NC1 omit one edit                          caught
+  NC2 grade changed outside spans            caught
+  NC3 compensating pair of grade changes     caught
+  NC4 OPEN status altered                    caught
+  NC5 READ/DECODE vocabulary inserted        caught
+  NC6 N13 worded as acceptance               caught
+  NC7 RID swapped between statements         caught
+  NC8 grade changed inside an edit span      caught
+
+RESULT: PASS

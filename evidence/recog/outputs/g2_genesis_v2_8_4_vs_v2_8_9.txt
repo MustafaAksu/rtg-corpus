@@ -1,0 +1,93 @@
+OWNER genesis
+FILE gen_v2_8_4.md  sha256 c145f5d2a3e30fafcd9603132761cc1039f7f33e2a9da56ce1e7cafe2032cebd
+FILE gen_v2_8_9.md  sha256 d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc
+MODE exact selected lines
+
+=== G1 zero origin / first dyad [BLOCK] ===
+  pinned: L549-549
+  current: L636-636
+  IDENTICAL
+
+=== G1b first dyad [BLOCK] ===
+  pinned: L551-551
+  current: L638-638
+  IDENTICAL
+
+=== G2 metric B, Q [BLOCK] ===
+  pinned: L562-562
+  current: L649-649
+  DIFFERS
+    --- pinned
+    +++ current
+    @@ -1 +1 @@
+    -`[DEF]` **Quadratic form:** $B = \begin{pmatrix}1&-\frac{1}{2}\\-\frac{1}{2}&1\end{pmatrix}$; $Q(r) = r^\top Br = \rho^2 - \rho\eta + \eta^2$.
+    +`[DEF]` `[RID: GEN-DEF-PRIMITIVE-METRIC]` **Quadratic form:** $B = \begin{pmatrix}1&-\frac{1}{2}\\-\frac{1}{2}&1\end{pmatrix}$; $Q(r) = r^\top Br = \rho^2 - \rho\eta + \eta^2$.
+
+=== G3 A^T B A = B [BLOCK] ===
+  pinned: L564-564
+  current: L651-651
+  DIFFERS
+    --- pinned
+    +++ current
+    @@ -1 +1 @@
+    -`[THM]` $A^\top BA = B$.
+    +`[THM]` `[RID: GEN-THM-PRIMITIVE-METRIC-INVARIANCE]` $A^\top BA = B$.
+
+=== G4 phase variables [BLOCK] ===
+  pinned: L676-676
+  current: L958-958
+  IDENTICAL
+
+=== G5 plateau shear bridge [BLOCK] ===
+  pinned: L686-688
+  current: L968-970
+  IDENTICAL
+
+=== G6 J_Q identity [BLOCK] ===
+  pinned: L692-694
+  current: L974-976
+  IDENTICAL
+
+=== G7 J_Q convention [BLOCK] ===
+  pinned: L696-696
+  current: L978-978
+  DIFFERS
+    --- pinned
+    +++ current
+    @@ -1 +1 @@
+    -`[CONVENTION]` (v2.7.3) The identity $a^\top B J_Q b = \tfrac{\sqrt{3}}{2}\omega_{ab}$ uses the index order $\omega_{ab}=a_2b_1-a_1b_2$ for the stated $J_Q$. The independent re-derivation (GEN-ART-REDERIV) confirmed that $\{J_Q^\top B J_Q=B,\ J_Q^2=-I\}$ has exactly two solutions $\pm J_Q$; the documented $+\tfrac{\sqrt{3}}{2}$ sign fixes the branch/index-order pairing. No downstream result depends on this sign: the load-bearing properties ($J_Q^\top B J_Q=B$, $J_Q^2=-I$) are branch-independent
+    +`[CONVENTION]` (v2.7.3) The identity \(a^\top B J_Q b=\tfrac{\sqrt3}{2}\omega_{ab}\) uses the index order \(\omega_{ab}=a_2b_1-a_1b_2\) for the stated \(J_Q\). The independent re-derivation confirmed that \(\{J_Q^\top BJ_Q=B,\ J_Q^2=-I\}\) has exactly two solutions \(\pm J_Q\); the documented \(+\tfrac{\sqrt3}{2}\) sign fixes the branch/index-order pairing. **For calculations in which the orientation convention is transported consistently**, the metric identities are branch-independent and the 
+
+=== G8 section 6.1 (whole) [SECTION] ===
+  pinned: L547-565
+  current: L634-652
+  DIFFERS
+    --- pinned
+    +++ current
+    @@ -9 +9 @@
+    -`[DEF]` **RTG dyad generator.**
+    +`[DEF]` **RTG dyad generator.** *(Same formula as `GEN-DEF-PRIMITIVE-MAP` = alias of `DYAD-DEF-PRIMITIVE-MAP`; no further RID.)*
+    @@ -16 +16 @@
+    -`[DEF]` **Quadratic form:** $B = \begin{pmatrix}1&-\frac{1}{2}\\-\frac{1}{2}&1\end{pmatrix}$; $Q(r) = r^\top Br = \rho^2 - \rho\eta + \eta^2$.
+    +`[DEF]` `[RID: GEN-DEF-PRIMITIVE-METRIC]` **Quadratic form:** $B = \begin{pmatrix}1&-\frac{1}{2}\\-\frac{1}{2}&1\end{pmatrix}$; $Q(r) = r^\top Br = \rho^2 - \rho\eta + \eta^2$.
+    @@ -18 +18 @@
+    -`[THM]` $A^\top BA = B$.
+    +`[THM]` `[RID: GEN-THM-PRIMITIVE-METRIC-INVARIANCE]` $A^\top BA = B$.
+
+=== G9 section 6.6 (whole) [SECTION] ===
+  pinned: L674-706
+  current: L956-988
+  DIFFERS
+    --- pinned
+    +++ current
+    @@ -23 +23 @@
+    -`[CONVENTION]` (v2.7.3) The identity $a^\top B J_Q b = \tfrac{\sqrt{3}}{2}\omega_{ab}$ uses the index order $\omega_{ab}=a_2b_1-a_1b_2$ for the stated $J_Q$. The independent re-derivation (GEN-ART-REDERIV) confirmed that $\{J_Q^\top B J_Q=B,\ J_Q^2=-I\}$ has exactly two solutions $\pm J_Q$; the documented $+\tfrac{\sqrt{3}}{2}$ sign fixes the branch/index-order pairing. No downstream result depends on this sign: the load-bearing properties ($J_Q^\top B J_Q=B$, $J_Q^2=-I$) are branch-independent
+    +`[CONVENTION]` (v2.7.3) The identity \(a^\top B J_Q b=\tfrac{\sqrt3}{2}\omega_{ab}\) uses the index order \(\omega_{ab}=a_2b_1-a_1b_2\) for the stated \(J_Q\). The independent re-derivation confirmed that \(\{J_Q^\top BJ_Q=B,\ J_Q^2=-I\}\) has exactly two solutions \(\pm J_Q\); the documented \(+\tfrac{\sqrt3}{2}\) sign fixes the branch/index-order pairing. **For calculations in which the orientation convention is transported consistently**, the metric identities are branch-independent and the 
+    @@ -25 +25 @@
+    -`[THM]` **Birth-symmetry (corrected v2.2).** For the certified $s^3$-seeded apex at $d_0=0$: $I_{ds}^{(1)} = \omega_{ds}^{(1)} = -Q_s^2/16$, hence $\omega_{ds}^{(1)} = +I_{ds}^{(1)} < 0$ and $\phi_{ds}^{(1)} = \pi + \arctan(\sqrt{3}/2) \approx 3.8553$ rad (3rd quadrant). Gives $\Delta Q_d^{[s^3]} = \tfrac{7}{512}Q_s^3 = 2Q_{d,1}$. The prior $\omega_{ds}^{(1)}=-I_{ds}^{(1)}$ and second-quadrant branch are `[FAIL]` (Appendix B).
+    +`[THM]` **Birth-symmetry (corrected v2.2).** For the certified $s^3$-seeded apex at $d_0=0$: $I_{ds}^{(1)} = \omega_{ds}^{(1)} = -Q_s^2/16$, hence $\omega_{ds}^{(1)} = +I_{ds}^{(1)} < 0$ and $\phi_{ds}^{(1)} = \pi + \arctan(\sqrt{3}/2) \approx 3.8553$ rad (3rd quadrant). The selected seeded-vector radial channel evaluates to $D_{\rm birth}^{[s^3]}=\tfrac{7}{512}Q_s^3=2Q(V_s)$. This is distinct from the seeded-state squared amplitude $Q(V_s)=Q_{d,1}^{[s^3]}=\tfrac{7}{1024}Q_s^3$ and is not by it
+    @@ -32 +32 @@
+    -`[RESULT]` `[scope: reduced birth-race model]` **Isolated-$K_4$ saturation ceiling.** The full $\mathcal{P}_4$ flow has a fixed point $Q_d^* \approx 1.13\times10^{-2}$ (≈23% of the $Q_{d,\rm thresh}=0.05$ reference), with control-loss value $Q_d(n_{\rm ctrl}) \approx 5.6\times10^{-3}$ universally across $Q_{s,0}\in[10^{-3},5\times10^{-2}]$ and both $\kappa$ policies. Identical-cell network aggregation $m\mathcal{P}_4$ does not move the $\mathcal{P}_4=0$ zero, so cascade is impossible from $\mat
+    +`[RESULT]` `[scope: reduced birth-race model]` **Isolated-$K_4$ saturation ceiling.** The full $\mathcal{P}_4$ flow has a fixed point $Q_d^* \approx 1.13\times10^{-2}$ (≈23% of the $Q_{d,\rm thresh}=0.05$ reference), with control-loss value $Q_d(n_{\rm ctrl})\approx5.6\times10^{-3}$ over the lower initial-state window $Q_{s,0}\in[10^{-3},10^{-2}]$, declining to $2.3\times10^{-3}$ at $Q_{s,0}=5\times10^{-2}$, across the recorded policies. Identical-cell network aggregation $m\mathcal{P}_4$ does 
+
+CLAIM_EQUIVALENT: not decided by this script (reviewer verdict).

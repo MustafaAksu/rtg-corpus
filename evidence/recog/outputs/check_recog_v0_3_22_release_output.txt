@@ -1,0 +1,32 @@
+R3      sha256 8f496d3c1fd0182e058e5fd814c5530e3952d5469b3ea932d3d3f27718fbd959
+ADOPTED sha256 0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9
+EDITS 12
+GATES:
+  P0   PASS 
+  P1   PASS (BUILD)
+  P2   PASS (POSITIVE)
+  P3   PASS (REVERSE)
+  P4   PASS (TAGS)
+  P5   PASS (RIDS)
+  P6   PASS (STATUS)
+  P7   PASS (VOCAB)
+  P8   PASS (SCIENCE)
+  P9   PASS (N13)
+  P10  PASS (NUMGEN STRINGS)
+  P11  PASS (PROVENANCE)
+  P12  PASS (MARKERS)
+
+NEGATIVE CONTROLS (each must FAIL):
+  NC1 omit one release edit          caught
+  NC2 grade changed outside spans    caught
+  NC3 A1a theorem regraded           caught
+  NC4 R6 status altered              caught
+  NC5 R9 row altered                 caught
+  NC6 N13 worded as imported         caught
+  NC7 NUMGEN string cited early      caught
+  NC8 final-reply hash missing       caught
+  NC9 draft marker left in footer    caught
+  NC11 status summary left as proposed caught
+  NC10 OPEN-21 constant altered      caught
+
+RESULT: PASS

@@ -1,0 +1,66 @@
+OWNER ofn
+FILE ofn_v0_8.md  sha256 56bc991d28c4a6f3e841eec5ac8c4550528fbaac91bcfc23ab0dc2540bd2a514
+FILE ofn_v0_10.md  sha256 acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa
+MODE exact selected lines
+
+=== O1 section 6.2a (whole) [SECTION] ===
+  pinned: L428-441
+  current: L542-570
+  DIFFERS
+    --- pinned
+    +++ current
+    @@ -7,7 +7,8 @@
+    -| $\rho'=\rho-\sin\eta$ | What physical comparator/action selects odd periodic radial forcing and its coefficient? | Conditional sine lemma in §6.4; symmetry/minimality premises not selected |
+    -| $\eta'=\eta+e^\rho-1-\sin\eta$ | Why one-sided ratio shear rather than another permitted function? | RECOG splits the odd and even parts; no full generator derived |
+    -| $A^6=I$ | Why the $p=6$ member rather than another defined family member? | Owner resonance families are mathematical alternatives, not selected universes |
+    -| Non-area-preserving map | Which physical/state measure, if any, should be preserved? | A primitive-chart determinant does not choose the physical measure |
+    -| Local $Q$ healing | Why this local behavior and this observable? | Exact behavior for a selected model is distinct from a selection principle |
+    -| Pole exchange | Is exchange a passive presentation change or a physical operation, and what else transforms? | Full covariance under $S_o=-I$ is not satisfied by the printed map |
+    -| Birth and memory | Which state/account is transported or enlarged, under which law? | Birth, recurrence, comparison and retained memory are not equated |
+    +| $\rho'=\rho-\sin\eta$ | What physical comparator/action selects odd periodic radial forcing and its coefficient? | Conditional sine lemma in §6.4; its radial-row premises do not select full-map covariance |
+    +| Phase shear — P1: composition | Does the physical phase drive obey the stated twisted composition law on a realized relational carrier? | CELL-G1 classifies solutions under that law; the physical premise and multiplicative network realization are not selected |
+    +| Phase shear — P2: weight magnitude | Why the weight magnitude $\vert k\vert =1$ rather than another value? | Matching the already specified primitive cubic coefficient identifies $\vert k\vert =1$ within the family; this is not a derivation of the model |
+    +| Phase shear — P3: orientation | Are $k$ and $-k$ passive descriptions or physically distinct oriented-role assignments? | Exact $S T_k S=T_{-k}$ excludes selection by conjugacy-invariant isolated-dyad data alone; OPEN-OPA retains the physical question |
+    +| $A^6=I$ | Why order six rather than another defined family member? | A resonance family is not a selected family of physical universes |
+    +| Non-area-preserving map | Which physical/state measure, if any, should be preserved? | The primitive-coordinate determinant does not choose that measure |
+    +| Local $Q$ contraction | Why this behavior and this observable in the intended physical sector? | IMP-O08-20 supplies an identified local bound; its physical selection is separate |
+    +| Birth and memory | Which response or retained consequence, if any, makes a distinguished token a physical interaction? | Current RECOG results are inventoried in RF-O09-02; independent retention is not made mandatory here |
+    @@ -14,0 +16,14 @@
+    +`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION] [scope: diagnostic power-character family; source statement inspected; release qualification in §12.1] For $r,s>0$, fixed real $k$, and the assumed law
+    +$$g(rs)=g(r)+r^k g(s),\qquad g'(1)=1,$$
+    +the owner obtains
+    +$$g_k(r)=\frac{r^k-1}{k}\quad(k\ne0),\qquad g_0(r)=\log r.$$
+    +For $k\ne0$, the algebraic proportionality $g=c(r^k-1)$ uses no extra regularity assumption; normalization fixes $c=1/k$. For $k=0$, the stated measurable/continuous-at-a-point Cauchy class and normalization give the logarithm.
+    +Depends on: the composition law, the specified power character and source normalization/regularity assumptions. These premises are not adopted as physical laws by OFN. See IMP-O09-01.
+    +
+    +`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION] In the corresponding fixed-radial-row family, the cubic coefficient is
+    +$$\mu_6(k)=-\frac{k^2}{2}-i\frac{\sqrt3}{3}(1+k^2),$$
+    +and it equals the selected primitive coefficient precisely when $|k|=1$.
+    +Depends on: that family and the source shear-jet law, not a uniqueness principle for all admissible generators. See IMP-O09-02. This is inverse identification from specified return data.
+    +
+    +**Notation boundary:** $k$ in these RECOG blocks is a real power-character weight. It is not TDR-G's integer defect-band half-width $k$ in §7.3. No numerical identification or cross-branch bridge is proposed.
+    +
+
+=== O2 section 7.3 (whole) [SECTION] ===
+  pinned: L495-512
+  current: L633-650
+  IDENTICAL
+
+=== O3 OPEN-OFN-OPA (whole entry) [ENTRY] ===
+  pinned: L749-760
+  current: L908-928
+  DIFFERS
+    --- pinned
+    +++ current
+    @@ -9,0 +10,9 @@
+    +Additional source dependency: `RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY` (IMP-O09-03) proves sign-conjugacy of the specified family, not symmetry of fixed $T_1$. The next physical decision is whether that action passively transforms state and role/parameter description together or exchanges distinct oriented roles. RRF OPEN-A's nonlinear $S_h$ is a different candidate action. None resolves the separate orientation-conservation or antipodal-trigger questions, and none changes the OFN definition of 
+    +
+    +This passive-relabeling/distinct-role dichotomy is exhaustive only for the isolated-dyad question in the registered family; G1-P1's composition question remains routed to RRF and OFN/OPEN-P0, so passive dyad relabeling does not close orientation for a composed system.
+    +
+    +Reconciliation input (v0.10): Q5 (§5.5.2) requires complete-state relabeling covariance in the genuine-triad class and does not require active dynamical reversal on a fixed raw-edge model. Whether physical pole-role exchange is the same operation as bookkeeping relabeling stays here. For class C, radial contraction removes flat ambiguity among admissible smooth commuting realizations (DYAD Lemma F / F3, IMP-O10-04); existence remains open, and identifying any realization with pole exchange need
+    +
+    +As an OPEN-question cross-reference only, Finding A (§4.1; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`) has the analogous distinction between transporting a rule family and preserving a fixed adopted member, with the token-origin convention fixed modulo $N/2$ (residual $2c=0$); its discrete statement and the continuous $k\leftrightarrow-k$ conjugacy remain separately scoped and owned, and no physical discrete–continuous bridge is asserted.
+    +
+    +
+
+CLAIM_EQUIVALENT: not decided by this script (reviewer verdict).
