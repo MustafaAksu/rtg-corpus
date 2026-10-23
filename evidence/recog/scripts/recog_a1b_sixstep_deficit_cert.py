@@ -18,6 +18,17 @@ Gates (exit 0 iff all pass):
   G4 explicit K with |Delta - tau Q| <= K Q^{3/2} on U_T, and the weaker uniform statement Lambda_6 < 2 pi on U_T
 Negative controls: conjugating mu (Im mu -> +tau) must make the deficit non-positive; inflating the tail ceiling by 1e8 must fail G3.
   G5 the coefficient sums c_7, c_8, c_9 lie within Dyadic's vector ceilings 2079/1000, 577/500, 1763/1000 (NF-REM ingredients)
+Grid-free gates (round-2 review #5631395296; exact rational arithmetic only, no floating point):
+  G6 rational ceilings r_{d,k} >= |coefficient| (verified by r^2 >= a^2 + 3 b^2 exactly) and
+     H := sum_d (sum_k r_{d,k}) T^{d-4} + 332000 T^6 < 1783/1000,  T = 47/1000;  hence e(Q) <= H t^3 for t = |W| <= T
+  G7 tau bracket 1154700538/1e9 < tau < 1154700539/1e9 (checked by squaring against 4/3)
+  G8 with d = T^2/2 + H T^3 and B = (tau + H T)/(1 - d), the uniform bounds on all of U_T (t <= T):
+       (Delta - tau t^2)/t^3 <= (H + tau (T/2 + H T^2))/(1 - d) < 1.818
+       (tau t^2 - Delta)/t^3 <= H (1 + tau T^2) + B^3 T^3/3          < 1.788
+       Delta/(tau t^2)       >= (1 - H T/tau)/(1 + H T^3) - B^3 T^4/(3 tau) > 0.927
+     derived from Delta = arctan(y/x), y = tau Q - Im E in [tau Q - e, tau Q + e], x = 1 - Q/2 + Re E in [1 - Q/2 - e, 1 + e],
+     u - u^3/3 <= arctan u <= u (u >= 0), A := (tau Q + e)/(1 - Q/2 - e) <= B t^2.  Published constants: K = 1.82, Delta >= 0.927 tau Q.
+  (G4's 50-point grid and 40-digit values are kept as an illustration only; the proof is G6-G8.)
 usage: python -I recog_a1b_sixstep_deficit_cert.py [OUT_JSON]
 """
 import json, math, sys
@@ -138,11 +149,39 @@ res["gates"]["G5_ceilings"] = res["c_d_within_dyadic_ceilings"]
 res["inputs"] = {"tube": "|W| < 47/1000 (DYAD-THM-PRIM-CTR)", "tail": "|R_{>=10}| <= 332000 |W|^10 on |W| <= 1/16 (DYAD-THM-NF-REM ingredients, dyad-v6.4.22 §6.14)",
                  "lift": "Lambda_6 = 2 pi + Arg(W(T^6 y)/W(y)) on U_T (RECOG-THM-A1A-LIFT-ALIGNMENT)",
                  "arithmetic": "exact Q(i sqrt3) coefficients (fractions); |coeff| and the final bounds in 40-digit mpmath"}
+# ---- grid-free gates G6-G8 (exact rationals) ----
+def rat_ceil_abs(c, digits=12):
+    """rational r with r^2 >= a^2 + 3 b^2 (exact check), r = round-up of the 40-digit sqrt to `digits` decimals"""
+    sq = c[0]*c[0] + 3*c[1]*c[1]
+    r = Fr(int(mp.ceil(mp.sqrt(mp.mpf(sq.numerator)/sq.denominator)*10**digits)), 10**digits)
+    while r*r < sq: r += Fr(1, 10**digits)
+    return r
+T = Fr(47, 1000)
+cd_rat = {d: sum((rat_ceil_abs(c) for c in parts.get(d, {}).values()), Fr(0)) for d in range(4, DEG + 1)}
+H = sum(cd_rat[d]*T**(d - 4) for d in cd_rat) + 332000*T**6
+H_CEIL = Fr(1783, 1000)
+g6 = H < H_CEIL and all(mp.mpf(cd_rat[d].numerator)/cd_rat[d].denominator >= cd[d] - mp.mpf(10)**-11 for d in cd_rat)
+res["G6_rational_coefficient_sums"] = {str(d): str(v) for d, v in cd_rat.items()}
+res["G6_H_exact"] = str(H); res["G6_H_float"] = float(H); res["G6_H_lt_1783_over_1000"] = bool(H < H_CEIL)
+tau_lo, tau_hi = Fr(1154700538, 10**9), Fr(1154700539, 10**9)
+g7 = (3*tau_lo*tau_lo < 4) and (4 < 3*tau_hi*tau_hi)
+res["G7_tau_bracket_ok"] = bool(g7)
+Hc = H_CEIL                                   # use the published ceiling, as in the review
+dd = T*T/2 + Hc*T**3
+B = (tau_hi + Hc*T)/(1 - dd)
+up_bound  = (Hc + tau_hi*(T/2 + Hc*T*T))/(1 - dd)
+low_bound = Hc*(1 + tau_hi*T*T) + B**3*T**3/3
+pos_bound = (1 - Hc*T/tau_lo)/(1 + Hc*T**3) - B**3*T**4/(3*tau_lo)
+g8 = up_bound < Fr(1818, 1000) and low_bound < Fr(1788, 1000) and pos_bound > Fr(927, 1000)
+res["G8_upper_branch_bound"] = float(up_bound); res["G8_lower_branch_bound"] = float(low_bound); res["G8_positivity_ratio_bound"] = float(pos_bound)
+res["G8_published"] = {"K": 1.82, "Delta_over_tauQ_min": 0.927}
+res["gates"]["G6_rational_H"] = bool(g6); res["gates"]["G7_tau_bracket"] = bool(g7); res["gates"]["G8_gridfree_bounds"] = bool(g8)
 ok = all(res["gates"].values())
 res["ALL_PASS"] = ok
 out = sys.argv[1] if len(sys.argv) > 1 else "a1b_sixstep_deficit_cert.json"
 json.dump(res, open(out, "w"), indent=1)
 for k, v in res["gates"].items(): print(k, "PASS" if v else "FAIL")
-print("c_d:", res["coefficient_sums_c_d"]); print("sup e/(tau Q) on U_T:", res["G3_sup_e_over_tauQ_on_UT"], " K:", res["G4_K"], " Delta/(tau Q) lower at Qmax:", res["Delta_lower_bound_over_tauQ_at_QMAX"])
+print("c_d:", res["coefficient_sums_c_d"]); print("sup e/(tau Q) on U_T:", res["G3_sup_e_over_tauQ_on_UT"], " K(grid, illustration):", res["G4_K"], " Delta/(tau Q) lower at Qmax:", res["Delta_lower_bound_over_tauQ_at_QMAX"])
+print("H =", res["G6_H_float"], "< 1.783:", res["G6_H_lt_1783_over_1000"], "| grid-free: upper", res["G8_upper_branch_bound"], "< 1.818; lower", res["G8_lower_branch_bound"], "< 1.788; positivity", res["G8_positivity_ratio_bound"], "> 0.927 | published K = 1.82")
 print("ALL PASS" if ok else "FAILURES")
 sys.exit(0 if ok else 1)
