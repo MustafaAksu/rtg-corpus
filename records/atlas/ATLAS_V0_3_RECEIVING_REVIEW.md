@@ -36,3 +36,22 @@
 ## 4. After the corrections
 
 Regenerate with the script (the edits are assertion-gated, so V1–V3 are script changes), re-run the shared checker and the scoped guards, record the new candidate hash in the packet and the acceptance record, and I will re-read the three sites and the hash. Then: PI acceptance identifying the bytes, merge commit of PR #24, annotated tag `atlas-v0.3`. `atlas-v0.2` governs until then.
+
+---
+
+## 5. Readback of the corrected candidate (23 October 2026, later)
+
+**Object:** `chatgpt/atlas-v0.3` at `d6f3d2d326c553537d0a98bd2fe34e74b0901dc4`; candidate SHA-256 `71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b` (467,029 bytes).
+
+| Check | Result |
+|---|---|
+| rebuild with `refresh_v0_3.py` | exit 0; candidate byte-identical to the committed file; generated records unchanged |
+| diff against the first candidate `dad84402…87c3` | exactly four atlas lines changed: the new theorem node (scope word), `*RECOG:F3-common-driver`, `RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS`, `*RECOG:event-carrier-interface` |
+| V1 | the garbled `≡` field is gone; the row ends `… \| <RECOG-THM-R9-MEMORY \| @§6.16f` ✓ |
+| V2 | consumer edge now `>RRF v0.8.4 §6.3 (W3 quoted verbatim with RID at RECOG v0.3.21; inter-space transport is a separate RRF OPEN extension; RF-1 fulfilled as a content state, not a notice receipt), RER v0.2 G9` — keeps RRF's actual pin and separates content state from notice state ✓ |
+| V3 | provenance now `PI decision 23 Oct 2026, records/recog/ATLAS_ADVISORY_RECOG_v0_3_22_DISPOSITION_RECONCILIATION.md §5 at snapshot 9453e35…; proposal not in RECOG v0.3.23`; `<RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE` anchor kept ✓ |
+| optional | `sc: postulated T` ✓ |
+| no regression of the three strings | 0 occurrences of the old text ✓ |
+| packet and acceptance record | both name `71310e8c…dc5b`; the acceptance record leaves the PI decision open ✓ |
+
+**Verdict: ACCEPT.** The candidate `71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b` is ready for the PI's decision. Remaining limitations are those the packet keeps: 7 UNVERIFIED links, 11 DOCUMENTED-UNRESOLVED items, 16 wording warnings, the v0.1 input-equality unknowns, and no certificate replay. None is new in v0.3.
