@@ -1,6 +1,6 @@
 # RTG State Atlas v0.2 — acceptance record
 
-**Status:** DRAFT — PI decision pending. Nothing below is accepted until the PI fills in §3.
+**Status:** DRAFT — receiving review ACCEPT SCOPED; PI decision pending. Nothing below is PI-accepted until the PI fills in §3.
 **Object:** derived, NONCANONICAL product (Method v0.2 §2). Acceptance identifies this atlas edition; it adopts no owner science, changes no DSN and gives the atlas no authority over any stream.
 
 ## 1. Identities
@@ -21,8 +21,8 @@ Values are those after the AV02 corrections (review packet §1); if review edits
 - Review packet `records/atlas/ATLAS_V0_2_REVIEW_PACKET.md`; L5 dispositions `records/atlas/ATLAS_V0_2_L5_DISPOSITIONS.md`.
 - Check report `evidence/atlas/atlas_check_report_v0_2.md` (no FAIL; 4 link and 3 artifact UNVERIFIED, 11 DOCUMENTED-UNRESOLVED listed separately) and controls `evidence/atlas/atlas_check_selftest_v0_2.txt` (18/18 as expected, including the receiving-review fixtures).
 - Separate limitation: byte equality with the v0.1 extraction input is UNVERIFIED for 13 sources.
-- Receiving review 1: `records/atlas/ATLAS_V0_2_RECEIVING_REVIEW.md` (ChatGPT, 23 Oct 2026, REVISE: AV02-01–04), applied (review packet §12).
-- Receiving review 2 (focused on the AV02 corrections): _(reviewer, date, verdict — to be added)_.
+- Receiving review 1: `records/atlas/ATLAS_V0_2_RECEIVING_REVIEW.md` at `98f1ef4db546aea97632104499c2c894fd4c1663` (ChatGPT, 23 Oct 2026, REVISE: AV02-01–04), applied (review packet §12).
+- Receiving review 2: ChatGPT, 23 October 2026, **ACCEPT SCOPED — no blocking receiving finding remains** for correction commit `9660389eb755558cba1912f5a341d297534db25d`; current `records/atlas/ATLAS_V0_2_RECEIVING_REVIEW.md`, SHA-256 `6ae3ddd8f1158651c0357616368be0b57a23e9ebd5f5476072cbc67c751b863b`. Receiver replay: six component fixtures, 6/6 expected; full 18-control producer report inspected, not independently rerun. Summary: `evidence/atlas/review_v0_2/round2_receiver_results.json`. Review §4 preserves the evidence limitations and the nonblocking DZT numerical-grouping note.
 
 ## 3. Decision
 
