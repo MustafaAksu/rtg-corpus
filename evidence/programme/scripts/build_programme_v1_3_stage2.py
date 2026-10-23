@@ -3,10 +3,9 @@
 
 Operations (Methodology v1.4 §13.6; checked by tools/check_compaction.py with the Programme profile):
   M01 ref-subst   §2.1 "See Appendix C, PREL." -> points to Appendix C of v1.2 (tag programme-v1.2)
-  M02 ref-subst   §6.4 "Its Appendix C" (TDR-G's) -> names the TDR-G tag so the reference resolves
-  M03 history-appendix  Appendix A -> one compact entry per edition; full entries at tag programme-v1.2
+  M02 history-appendix  Appendix A -> one compact entry per edition; full entries at tag programme-v1.2
                         and, for the stage-1 draft entry, at the stage-1 commit
-  M04 history-section   Appendix C (v1.2 package ledger: inspected locations, package paths, validation scope)
+  M03 history-section   Appendix C (v1.2 package ledger: inspected locations, package paths, validation scope)
                         -> removed; it lives at tag programme-v1.2. §6.1 and BASELINE.md carry the current editions.
 Not moved: Appendix B (adopted replacements of v1.1 statements). It carries claim-tag spellings inside prose
 (`[HYP]`, `[HEUR strong]`), which the compaction tool refuses to relocate outside table rows; it stays in the
@@ -16,8 +15,8 @@ usage (repository root): build_programme_v1_3_stage2.py INTERMEDIATE OUT_CANDIDA
 """
 import hashlib, json, subprocess, sys
 
-INTER_SHA = "08a236c0eb3d0171be2884ce672ff7701711d3db4b5483ca375fe0293845b8d9"
-STAGE1_COMMIT = "c1deb5f"
+INTER_SHA = "e4fe4e7b1df4de12b2e01cc187e223c27b7cd3d6c9beb030f227f9c88c54b136"
+STAGE1_COMMIT = "951371d"
 
 def sha(s): return hashlib.sha256(s.encode("utf-8") if isinstance(s, str) else s).hexdigest()
 
@@ -70,11 +69,9 @@ def main(inter_path, out_path, map_path):
 
     edit("M01", "See Appendix C, PREL.", "See Appendix C of v1.2 (tag `programme-v1.2`), PREL.", ["programme-v1.2"],
          "the v1.2 reference ledger stays at its tag")
-    edit("M02", "Its Appendix C still carries an older D/A/B gate", "Its Appendix C (at `tdrg-v2.12.13`) still carries an older D/A/B gate", ["programme-v1.2"],
-         "TDR-G's own appendix; the tag makes the reference resolvable after the Programme's Appendix C is gone")
-    replace_section("M03", "history-appendix", "\n## Appendix A — Version History", "\n---\n\n<a id=\"prog-corrections\"></a>", APPA,
+    replace_section("M02", "history-appendix", "\n## Appendix A — Version History", "\n---\n\n<a id=\"prog-corrections\"></a>", APPA,
                     ["programme-v1.2", "programme-v1.3-stage1"], "compact Appendix A; full entries at tag programme-v1.2 and at the stage-1 commit")
-    replace_section("M04", "history-section", "\n<a id=\"prog-sources\"></a>\n## Appendix C — Versioned Reference Ledger and Verification Scope",
+    replace_section("M03", "history-section", "\n<a id=\"prog-sources\"></a>\n## Appendix C — Versioned Reference Ledger and Verification Scope",
                     "\n---\n\n*END OF DOCUMENT", "", ["programme-v1.2"],
                     "v1.2 package ledger (inspected locations, package paths, validation scope); current editions are §6.1 and BASELINE.md")
 

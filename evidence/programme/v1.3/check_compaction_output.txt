@@ -1,0 +1,16 @@
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  archive identity programme-v1.2  — 4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359
+PASS  archive identity programme-v1.3-stage1  — e4fe4e7b1df4de12b2e01cc187e223c27b7cd3d6c9beb030f227f9c88c54b136
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation M01 (ref-subst)  — reference substitution only ('C' → 'C of v1.2 (tag `programme-v1.2`)')
+PASS  operation M02 (history-appendix)  — section relocated (5611 chars), found in ['programme-v1.2', 'programme-v1.3-stage1']
+PASS  operation M03 (history-section)  — section relocated (9488 chars), found in ['programme-v1.2']
+PASS  qualified claim blocks  — 24 claim blocks in base live text: 24 byte-identical, 0 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 1 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS

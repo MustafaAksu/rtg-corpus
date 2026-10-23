@@ -69,7 +69,7 @@ The central research question is retained: can a universe with no pre-given phys
 
 ### 2.1 ESM studies and Pre-Legacy provenance
 
-Reference-only history: the Pre-Legacy ledger (v0.8, `prelegacy-v0.8`) records the sequence from node-resonance models through cubic and spherical substrates to tetrahedral ESM. It preserves kernel constructions, campaigns, rejected assumptions and proposed current-study connections. These are historical records with source-specific evidence and limitations, not current-branch certifications merely because they appear in this timeline. See Appendix C, PREL.
+Reference-only history: the Pre-Legacy ledger (v0.8, `prelegacy-v0.8`) records the sequence from node-resonance models through cubic and spherical substrates to tetrahedral ESM. It preserves kernel constructions, campaigns, rejected assumptions and proposed current-study connections. These are historical records with source-specific evidence and limitations, not current-branch certifications merely because they appear in this timeline. See Appendix C of v1.2 (tag `programme-v1.2`), PREL.
 
 ### 2.2 L0 / L1 / L2 studies
 
@@ -552,43 +552,29 @@ Adoption is the PI's decision, recorded in the release record; publication is a 
 <a id="prog-history-appendix"></a>
 ## Appendix A — Version History
 
-### v1.3 — 23 October 2026 — DRAFT, stage 1 (corrected intermediate; not adopted)
+One compact entry per edition (Methodology v1.4 §1.1). Full entries of v1.0–v1.2, the Draft 1 history of v1.2 and the adopted replacement ledger's provenance are in Appendix A of v1.2 (tag `programme-v1.2`); the full stage-1 draft entry of v1.3 is at the stage-1 commit named in the release record.
 
-- **Basis [governance]:** atlas advisory `records/programme/ATLAS_ADVISORY_PROGRAMME_v1_2.md` (atlas v0.3 H10, PROG.G1–G7) as disposed by the PI on 23 October 2026 (its §5); Methodology v1.4.
-- **§§0/6 [inventory]:** governing editions by tag for all homes (nine rows moved: METH v1.4, OFN v0.10, LEGACY v0.7, NUMGEN v1.20.8, DYAD v6.4.22, TRIAD v1.6.1, GEN v2.8.9, UVM v0.7.1, RECOG v0.3.23); class column; new rows RRF (adopted working standard), RER, FMS, ER-2B (noncanonical) and the State Atlas (derived map); §6.2–6.5 reduced to custody and interface records that point to the owners' status summaries.
-- **§7 [interfaces]:** pins to governing tags or labelled consumer pins; IF17 retired as a transfer proposal (settled custody split); IF26–IF36 added (RECOG → DYAD/OFN, NUMGEN's consumer record of RECOG, RRF as standard, OFN feedback imports, noncanonical records, atlas).
-- **§§5/8/9 [pointers]:** OFN v0.10 and RRF v0.8.4 named as criterion homes for P0 and P2B (OPEN-OFN-3B); OPEN M v0.7.1 for P3; §8.2 cross-stream κ table; §9.2 maintenance record with the remaining queue (Pre-Legacy, TDR-G, DZT, AZ); §9.3 repository-based evidence and adoption.
-- **Unchanged:** two-branch architecture, maturity semantics and the v1.1 maturity records, all five programme OPEN RIDs and their ACTIVE status, SG-PROG-1–4, the restructuring queue, the TDR-T launch-gate record, Appendix B replacement ledger.
-- **Records:** release record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`; v1.2 release and change records recorded as missing.
+### v1.3 — 23 October 2026 — DRAFT candidate
 
-### v1.2 — September 20, 2026 — Adopted inventory/architecture release
+- **Basis:** atlas advisory `records/programme/ATLAS_ADVISORY_PROGRAMME_v1_2.md` as disposed by the PI on 23 October 2026 (its §5); Methodology v1.4.
+- **Inventory and interfaces:** governing editions by tag for every home; class column; new rows for RRF (adopted working standard), RER, FMS, ER-2B (noncanonical) and the State Atlas (derived map); §6.2–6.5 reduced to custody and interface records pointing to the owners' status summaries; §7 pins at governing tags or labelled consumer pins; IF17 retired as a transfer proposal; IF26–IF36 added.
+- **Pointers:** OFN v0.10 and RRF v0.8.4 as criterion homes for P0 and P2B; OPEN M v0.7.1 for P3; §8.2 cross-stream κ table; §9.2 maintenance record with the remaining queue (Pre-Legacy, TDR-G, DZT, AZ); §9.3 repository-based evidence and adoption.
+- **Compaction [layout]:** compact Appendix A; Appendix C of v1.2 left at tag `programme-v1.2`; Appendix B retained (see release record).
+- **Unchanged:** architecture, maturity semantics and the v1.1 maturity records, the five programme OPEN RIDs (all ACTIVE), SG-PROG-1–4, the restructuring queue, the TDR-T launch-gate record.
+- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`; v1.2 release and change records recorded as missing.
 
-- **Approval [governance]:** Mustafa (PI) accepted all changes in Draft 1, including P12-P1–P12-P4. V1.2 supersedes v1.1 as the active Programme reference for the corpus-update cycle.
-- **Finalization [administrative]:** Remove the live draft designation; record adoption and supersession; update the Programme inventory entry, IF01 and accepted replacement dispositions; preserve the approved substantive rules and the complete Draft 1 history below.
-- **Scope [governance]:** Adoption covers inventory, navigation/profile placement, maturity and programme OPEN criteria, scope guards, typed interfaces and retention of the restructuring queue. No scientific claim is promoted, demoted or closed; no new bridge, split, merger, rename, theorem transfer or TDR-T launch is authorized by this release.
-- **Follow-up [administrative]:** Owner updates, archive requests and full consumer reconciliation remain pending. Material pass-two changes require a new immutable Programme version under Methodology §13.1.
-- **Evidence [administrative]:** The release package preserves the approved review package, source snapshot, finalization change map, both comparison diffs, scoped release validation and integrity manifests. No physics certificate is executed.
+### v1.2 — 20 September 2026 — Adopted
 
-### v1.2 — September 20, 2026 — Draft 1, inventory/architecture pass
-
-- **§§0/6 [governance/editorial]:** Adopt the Programme profile for this draft, add the full 14-home source inventory, distinguish existing documents from proposed studies, and pin RECOG v0.3 / Number Genesis v1.18 / DZT v0.8 as the available sources.
-- **§§2/3 [scope/typing/evidence]:** Correct the absent-provenance-document description; preserve the unresolved historical generator attribution; replace overbroad branch-comparison rows with typed model questions.
-- **§§4/5/8 [governance/scope]:** Propose scoped maturity semantics, route-specific P0/P1 dependencies, reduction-versus-primacy separation, and branch/layer rather than tier-based physical transfer guards. No programme scientific OPEN closes.
-- **§§6/7 [editorial/evidence]:** Index source-reported closures and actual custody, record the TDR-T gate discrepancy, and add typed interfaces including direct DYAD→GEN, GEN↔UVM, NUMGEN realization sectors and RECOG/DZT ownership boundaries.
-- **§§6.7/9 [governance]:** Record restructuring recommendations without executing them; retain one target Programme revision and the owner-first / consumer-second sequence.
-- **Appendices B/C [provenance]:** Add a traceable record of replaced v1.1 formulations and exact source editions. Preserve both older history entries verbatim below.
-- **No scientific owner edit, theorem transfer, grade change, study split/merger, corpus-wide migration or archive publication is performed.**
+- Inventory/architecture release under Methodology v1.3: 14-home inventory, typed interfaces IF01–IF25, maturity semantics, OPEN-P closure criteria, scope guards SG-PROG-1–4 clarified (P12-P1–P12-P4 accepted by the PI). No scientific claim promoted, demoted or closed. Full entry and Draft 1 history: tag `programme-v1.2`.
 
 ### v1.1 — June 2026
-- **§0/§5:** Rephrased programme-level OPENs as four clusters; clarified that OPEN-P2A/P2B are sub-problems of one P2 cluster.
-- **§2–§4:** Normalized generator-selection language: $T$ is a postulated/canonical effective continuous generator until OPEN-P0 closes.
-- **§3/§6:** Corrected discrete interaction wording from derived to motivated/open; aligned TDR-G status with OPEN TDR-1, TDR-19, and TDR-24.
-- **§6/§7:** Updated current DSN filenames to Dyadic v6.0, Triadic v1.0, Genesis v2.0, and Discrete v2.0; replaced stale Triadic/Genesis pump language with limited-pump / chiral-admissibility wording.
-- **§6:** Updated discrete triadic gate reference from obsolete §26 to Appendix C of `RTG_DISCRETE_GENESIS_DSN_v2.0`.
+
+- Four OPEN clusters; $T$ as postulated effective generator until OPEN-P0 closes; discrete wording corrected; filenames updated to the June editions. Full entry: tag `programme-v1.2`.
 
 ### v1.0 — June 2026
 
-Initial release. Created from the RTG hierarchy analysis (`RTG_HIERARCHY_ANALYSIS_v1.0`) incorporating critique notes from the multi-AI programme design review. Registers OPEN-P0 through OPEN-P3, the maturity ladder, programme-level scope guards SG-PROG-1 through SG-PROG-4, the five-tier study hierarchy, and the dependency graph.
+- Initial release from the RTG hierarchy analysis and the multi-AI design review: OPEN-P0–P3, maturity ladder, SG-PROG-1–4, five-tier hierarchy, dependency graph. Full entry: tag `programme-v1.2`.
+
 
 ---
 
@@ -622,87 +608,6 @@ These administrative keys are not fabricated historical theorem RIDs. Each entry
 **PROG12-C12 — Naming and current-state maintenance.** Original §9 limits the example to two version components and supplies only four study prefixes. Replacement: §9 preserves real filenames and uses the adopted Methodology namespace registry. Reference-only status refreshes, review findings and adopted scientific changes are separate actions.
 
 ---
-
-<a id="prog-sources"></a>
-## Appendix C — Versioned Reference Ledger and Verification Scope
-
-The following ledger records the selected source editions and this adopted Programme output. Entries are reference/provenance metadata, not new scientific imports or re-owned claims. Unchanged owner sources, Methodology and the v1.1 revision baseline are copied byte-for-byte under `sources/` in the release package; Programme v1.2 is the final file at the package root. The original review snapshot and inventories are preserved under `prior_review/`. Package paths are reproducibility locations, not claims about a canonical remote repository.
-
-- **METH** :: `DSN_METHODOLOGY_v1.3` :: `DSN_METHODOLOGY_v1_3.md` :: Methodology / governance reference
-  Inspected locations: Header; §§0.5–0.7, 4, 5, 12–13. Use: Governance; no physical branch.
-  Source/adoption record: ADOPTED in this update cycle. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: Not applicable. No ownership transfer implied.
-
-- **PROG** :: `RTG_PROGRAMME_OVERVIEW_v1.2` :: `RTG_PROGRAMME_OVERVIEW_v1_2.md` :: Programme overview
-  Reviewed material: Complete approved Draft 1 and its release-status changes. Revision baseline: `RTG_PROGRAMME_OVERVIEW_v1_1.md`, inspected in full during drafting and preserved unchanged under `sources/`. Use: Programme navigation; no physical branch.
-  Source/adoption record: ADOPTED September 20, 2026, superseding v1.1; final inventory/architecture release, not final scientific reconciliation. Verification: approved-draft identity, finalization diff and scoped release checks; no scientific certificates executed.
-  Maturity provenance: Not applicable. No ownership transfer implied.
-
-- **OFN** :: `RTG_ONTOLOGICAL_FOUNDATIONS_v0.7` :: `RTG_ONTOLOGICAL_FOUNDATIONS_v0_7.md` :: Foundational ontology / model-selection ledger
-  Inspected locations: Header; §§0–4, 8–11. Use: Programme-wide commitments; technical imports scoped by branch.
-  Source/adoption record: Selected source; not migrated in this pass. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: Not assigned as a technical-model grade. No ownership transfer implied.
-
-- **LEGACY** :: `RTG_L0_L1_L2_BRIDGE_LEGACY_DSN_v0.6` :: `RTG_L0_L1_L2_BRIDGE_LEGACY_DSN_v0_6.md` :: Historical / legacy provenance ledger
-  Inspected locations: Header; §§0–1, 5, 9–12. Use: Historical L0/L1/L2; not a current physical branch.
-  Source/adoption record: Selected historical source; revalidation gates retained. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: Historical; no current-model grade assigned. No ownership transfer implied.
-
-- **PREL** :: `RTG_PRE_LEGACY_DSN_v0.8` :: `RTG_PRE_LEGACY_DSN_v0_8.md` :: Historical / legacy provenance ledger
-  Inspected locations: Header; §§0–4, 6–9. Use: Historical ESM/node-resonance models; imports require scope review.
-  Source/adoption record: Selected historical source; revalidation scope retained. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: Historical; no current-model grade assigned. No ownership transfer implied.
-
-- **DYAD** :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.9` :: `RTG_DYADIC_OSCILLATOR_DSN_v6_4_9.md` :: Technical scientific ledger
-  Inspected locations: Header; §§1–3, 6.1–6.2, 6.7, 6.9–6.13, 7–8. Use: Continuous; primitive dyad and explicitly defined p-family.
-  Source/adoption record: Selected scientific owner; update pending. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: B in Programme v1.1; not regraded here. No ownership transfer implied.
-
-- **TDRG** :: `RTG_DISCRETE_GENESIS_DSN_v2.12.13` :: `RTG_DISCRETE_GENESIS_DSN_v2_12_13.md` :: Technical scientific ledger
-  Inspected locations: Header; §§1–3, 6.1–6.5, 6.8, 6.11–6.12, Appendix C. Use: Discrete; cyclic-state rules, birth policies and no-birth sectors.
-  Source/adoption record: Selected scientific owner; update pending. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: B in Programme v1.1; not regraded here. No ownership transfer implied.
-
-- **NUMGEN** :: `RTG_NUMBER_GENESIS_DSN_v1.18` :: `RTG_NUMBER_GENESIS_DSN_v1_18.md` :: Foundational/technical bridge ledger
-  Inspected locations: Header; §§0–4, 7–8; N-1/N-2, N5AS1-INF/GAP-LOCK, C7B/C7C. Use: Shared framework; continuous and discrete realizations separately typed.
-  Source/adoption record: Selected scientific owner; update pending. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: Not assigned; no new maturity decision. No ownership transfer implied.
-
-- **DZT** :: `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.8` :: `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8.md` :: Technical scientific ledger
-  Inspected locations: Header; §§1–3, 6.1–6.3, 7–8. Use: Continuous downstream arithmetic diagnostic.
-  Source/adoption record: Selected scientific owner; update pending. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: A in owner header; not regraded here. No ownership transfer implied.
-
-- **GEN** :: `RTG_GENESIS_GEOMETRY_DSN_v2.8.4` :: `RTG_GENESIS_GEOMETRY_DSN_v2_8_4.md` :: Technical scientific ledger
-  Inspected locations: Header; §§1–3, 6.1–6.11, 7–8. Use: Continuous integrating study; discrete uses remain bridge-gated.
-  Source/adoption record: One existing owner file; proposed split not enacted. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: A/B in Programme v1.1; scoped reassessment deferred. No ownership transfer implied.
-
-- **TRIAD** :: `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.5` :: `RTG_TRIADIC_BIRTH_LIFT_DSN_v1_5.md` :: Technical scientific ledger
-  Inspected locations: Header; §§1–3, 6.1–6.17, 7–8. Use: Continuous birth and diagnostic lift models.
-  Source/adoption record: Selected scientific owner; update pending. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: B/C locally in Programme v1.1; scope ambiguity retained for review. No ownership transfer implied.
-
-- **UVM** :: `RTG_OPEN_M_DSN_v0.6` :: `RTG_OPEN_M_DSN_v0_6.md` :: Technical scientific ledger
-  Inspected locations: Header; §0.2–0.3, §§1–3, 6 (R1–R16), 7–9. Use: Continuous UV-completion sub-study; not a third substrate branch.
-  Source/adoption record: Selected scientific owner; update pending. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: B conditionality in owner summary; not regraded here. No ownership transfer implied.
-
-- **RECOG** :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3` :: `RTG_RELATIONAL_RECOGNITION_DSN_v0_3.md` :: Technical scientific ledger
-  Inspected locations: Header; §§1–4, 6.1–6.13, 7–9. Use: Continuous downstream comparator/return/memory study.
-  Source/adoption record: Selected source supersedes v0.2.1 for current inventory. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: A requested in owner header/memo; recorded without promotion. No ownership transfer implied.
-
-- **AZ** :: `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6` :: `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0_6.md` :: Infrastructure / diagnostic ledger
-  Inspected locations: Header; §0.1, §§1–4.3.5, 6, 8–10. Use: Shared infrastructure; Thread A continuous reference, Thread C discrete diagnostics.
-  Source/adoption record: Selected infrastructure owner; own graph mathematics retained. Verification: source text inspected; scientific certificates not executed in this pass.
-  Maturity provenance: A retained in owner header; local promotion gate not generalized. No ownership transfer implied.
-
-**Additional inspected administrative/handoff sources.** `DSN_METHODOLOGY_v1_3_RELEASE_RECORD.md` records the PI's Methodology approval and its limited effect. `RECOG_MEMO_TO_STREAMS_2026-09-17 (1).md` records the proposed general-return ownership handoff and enclosure/RID requests; its older Number Genesis status is not substituted for v1.18. Both are copied in the package; neither is a replacement scientific owner.
-
-**Historical or unprovided references.** RECOG v0.2.1 and Methodology v1.2 remain historical available inputs, not the selected current targets. The old `RTG_HIERARCHY_ANALYSIS_v1.0`, the specific historical generator handoff and any independent physical discrete–continuous bridge are not supplied/established by this inventory. DZT v0.17 is mentioned in Number Genesis v1.18 but its owner file is not supplied. These absences are not failed proofs.
-
-**Validation scope.** The release package checks exact input/source identity, declared inventory and interface consistency, retention of the five programme OPEN RIDs and four scope-guard IDs, recorded adoption and limited supersession, approved-content preservation, anchors, history, tables, fences, pending restructuring and reconstruction from both comparison diffs. It does not rerun scientific artifacts, independently re-prove the source claims, or certify compatibility with an unavailable external renderer/linter. Prior reading-audit deductions remain working evidence for the upcoming owner updates; none is silently promoted here.
 
 ---
 
