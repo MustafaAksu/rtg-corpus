@@ -43,7 +43,7 @@ All earlier editions v0.1 … v0.3.21 and the v0.3.21/v0.3.22 drafts were handed
 `git show f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip > bundle.zip`.
 Whether to tag them is the PI's decision.
 
-One mismatch: the DSN cites v0.3.5 as `3ba74002…abd6`; the bundle's `RTG_RELATIONAL_RECOGNITION_DSN_v0_3_5.md` is `9dd73601…6ab1`. It is a different version, not the cited one.
+One mismatch: the DSN cites v0.3.5 as `3ba74002…abd6`; the bundle's `RTG_RELATIONAL_RECOGNITION_DSN_v0_3_5.md` is `9dd73601…6ab1`. It is a different version, not the cited one. Its header reads "v0.3.5 freeze candidate, 28 Sep 2026": it is the pre-freeze candidate, and the frozen bytes `3ba74002…abd6` were never held by the co-owner session (co-owner disposition, 23 Oct 2026). The frozen v0.3.5 is recorded as missing.
 
 ## 4. Other owners' earlier editions (pins, not RECOG evidence)
 
