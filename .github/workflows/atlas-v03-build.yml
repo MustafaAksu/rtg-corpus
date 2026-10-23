@@ -16,17 +16,37 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           fetch-depth: 0
-      - name: Build candidate when the reviewed refresh script is present
+      - name: Finalize the pinned builder and build candidate
         shell: bash
         run: |
           set -euo pipefail
-          if test -f evidence/atlas/build/refresh_v0_3.py; then
-            python3 -I evidence/atlas/build/refresh_v0_3.py
-            git add atlas/RTG_STATE_ATLAS.md evidence/atlas/v0.3 records/atlas/ATLAS_V0_3_REVIEW_PACKET.md records/atlas/RTG_STATE_ATLAS_v0.3_RELEASE_RECORD.md
-            if ! git diff --cached --quiet; then
-              git -c user.name='RTG Atlas build' -c user.email='noreply@github.com' commit -m 'atlas v0.3: generated candidate and validation records [skip ci]'
-              git push origin HEAD:refs/heads/chatgpt/atlas-v0.3
-            fi
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('evidence/atlas/build/refresh_v0_3.py')
+          s=p.read_text()
+          patches=[]
+          old="    a.replace('# RTG STATE ATLAS v0.2', '# RTG STATE ATLAS v0.3', 'candidate edition')"
+          new=old+"\n    a.replace('*END — RTG STATE ATLAS v0.2.', '*END — RTG STATE ATLAS v0.3.', 'matching footer edition')"
+          patches.append((old,new))
+          old="    n=line(NEW_RESULT+' ')"
+          new="    check('edition-presentation', text.startswith('# RTG STATE ATLAS v0.3\\n') and text.rstrip().endswith('*END — RTG STATE ATLAS v0.3. Noncanonical; owner DSNs govern.*'))\n"+old
+          patches.append((old,new))
+          old="    return controls\n"
+          new="    mutate('U14 mismatched footer', '*END — RTG STATE ATLAS v0.3.', '*END — RTG STATE ATLAS v0.2.', 'edition-presentation')\n"+old
+          patches.append((old,new))
+          for old,new in patches:
+              if new not in s:
+                  assert s.count(old)==1,old
+                  s=s.replace(old,new)
+          p.write_text(s)
+          import hashlib
+          assert hashlib.sha256(p.read_bytes()).hexdigest()=='4e9ed2f826b291084a0aa8c3de243765e4f98f8308828ffe44ae046a83325efa'
+          PY
+          python3 -I evidence/atlas/build/refresh_v0_3.py
+          git add atlas/RTG_STATE_ATLAS.md evidence/atlas/v0.3 evidence/atlas/build/refresh_v0_3.py records/atlas/ATLAS_V0_3_REVIEW_PACKET.md records/atlas/RTG_STATE_ATLAS_v0.3_RELEASE_RECORD.md
+          if ! git diff --cached --quiet; then
+            git -c user.name='RTG Atlas build' -c user.email='noreply@github.com' commit -m 'atlas v0.3: generated candidate and validation records [skip ci]'
+            git push origin HEAD:refs/heads/chatgpt/atlas-v0.3
           fi
       - name: Package inspected inputs and generated outputs
         shell: bash
