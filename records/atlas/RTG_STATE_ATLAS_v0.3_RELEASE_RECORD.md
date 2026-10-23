@@ -1,6 +1,6 @@
 # RTG State Atlas v0.3 — acceptance record
 
-**Status:** DRAFT — receiving corrections V1–V3 implemented; final receiving readback and PI decision pending.
+**Status:** ACCEPTED by the PI, 23 October 2026 (§3); receiving readback ACCEPT. Tag `atlas-v0.3` on merge commit `bfd88cd`.
 **Object:** derived NONCANONICAL Atlas; acceptance adopts no owner science.
 
 ## 1. Candidate identities
@@ -19,7 +19,8 @@ Method v0.2; `records/atlas/ATLAS_V0_3_REVIEW_PACKET.md`; source and verificatio
 
 ## 3. Decision
 
-- Receiving review: Claude, 23 Oct 2026, `records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md` at commit `afdef2bf2ae9e40f42cb42fde6facc5756d322e0`: REVISE (V1–V3). Corrections implemented; final receiving readback pending.
-- PI acceptance: pending; not supplied by this generator.
-- Annotated tag after acceptance and merge: `atlas-v0.3`, naming the final Atlas SHA-256.
-- No Atlas merge, tag, or owner-science adoption is performed by this build.
+- Receiving review: Claude, 23 Oct 2026, `records/atlas/ATLAS_V0_3_RECEIVING_REVIEW.md`: REVISE (V1–V3) on the first candidate `dad84402…87c3` (review at `afdef2bf…22e0`); corrections implemented by the co-owner (`d6f3d2d`); readback of the corrected candidate `71310e8c…dc5b`: **ACCEPT** (§5 of the review, commit `72e3ad4`).
+- PI acceptance: **ACCEPTED**, PI (Mustafa), 23 October 2026, by merge of PR #25 (`claude/atlas-v0.3-accept`, carrying `chatgpt/atlas-v0.3` through `d6f3d2d` plus the readback) into `main` as merge commit `bfd88cd5c4c8069537dd01f42e9f1b225bdc4518` ("Accepted and aproved."). Accepted bytes: `atlas/RTG_STATE_ATLAS.md` SHA-256 `71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b`.
+- Tag: annotated `atlas-v0.3` on `bfd88cd`, message naming that hash (verified by the atlas owner: tag object → merge commit; file at the tag has the hash; `d6f3d2d` and `72e3ad4` reachable from `main`).
+- Accepted limitations (unchanged from the packet): 7 UNVERIFIED links, 11 DOCUMENTED-UNRESOLVED items, 16 wording warnings, v0.1 input-equality unknowns for 13 sources, no certificate replay. No owner DSN, grade, source tag, notice state or consumer adoption is changed by this acceptance. `atlas-v0.2` is the predecessor.
+- Next: the next refresh follows the next adopted owner edition; D3 carries the RECOG live-file exception (release record §11) as history, not as live OPEN items.
