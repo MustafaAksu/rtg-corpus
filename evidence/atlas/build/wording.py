@@ -1,0 +1,12 @@
+import sys,json; sys.path.insert(0,'.')
+from lib import A
+a=A(); DISP=json.load(open('disp.json'))
+a.line("governance pending | canonical repin of NUMGEN",None); DISP.append(['D3.L3 governance line','deleted','process state (repin requests, notice/receipt status, ownership offers); scientific residue kept in RECOG.R-P2 and RECOG.R-L4'])
+a.line("governance: TRIAD REQ-T16-JQ",None); DISP.append(['D4a.L3 governance line','deleted','process state (RID requests, disposition records, Programme pass); RID gaps kept in D4a.L5 F13'])
+a.rep("RRF v0.8.4 §6.2a now has class-C contract + psi-readout;","RRF v0.8.4 §6.2a has a class-C contract + psi-readout;")
+a.rep("· Methodology v1.3 semantics → L0.M)","· Methodology v1.4 semantics → L0.M)")
+a.rep("(existence of Φ not asserted by GEN — now supplied in C^∞ by D2 B-∞, L5 F5)","(existence of Φ not asserted by GEN; supplied in C^∞ by DYAD-THM-SMOOTH-EQUIVARIANT-CHART, D2; L5 F5)")
+a.rep("uses χ exponent 0.836 (no longer current)","uses the superseded χ exponent 0.836")
+a.rep("(now invariant-reduction criterion, row agreement","(OFN criterion: invariant reduction, row agreement")
+a.rep("(now six-step resonance selection)","(OFN: six-step resonance selection)")
+a.save(); json.dump(DISP,open('disp.json','w'),ensure_ascii=False,indent=0)

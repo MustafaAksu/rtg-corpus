@@ -1,0 +1,9 @@
+PASS  NC1 omitted claim, RID kept in L5  [DYAD-ALG-A1A2-LIEGAUGE]
+PASS  NC2 wrong owner  [GEN-THM-SMOOTH-EMBEDDING]
+PASS  NC3 lost qualifier  [DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES]
+PASS  NC4 invalid artifact target  [DYAD-ART-NO-SUCH-CERTIFICATE]
+PASS  NC5 missing artifact link  [no_such_owner_script_zz9.py]
+PASS  NC6a unknown RID only in L5 not resolved  [DYAD-THM-FAKE-ONLY-ZZ9]
+PASS  NC6b unknown RID in a node fails  [DYAD-THM-FAKE-ONLY-ZZ9]
+PASS  NC7 source table mismatch  [DYAD]
+negative controls: all detected
