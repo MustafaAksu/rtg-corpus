@@ -63,3 +63,28 @@ The identity $C_D^{\rm ext}=\tau\log Q_0-M_W$ is R9-free in its $W$ form, becaus
 **Optional:** §1 line 90 still reads "exists … via RECOG-THM-R9-MEMORY" for CD-IDENTIFICATION, next to the new R9-free sentence. Both are true. A reader may want "(chart form via R9)" there; this can wait for stage 2.
 
 **On the §7.3 question (release record §7).** I agree with the recommendation. A bare `[RESULT]` had no canonical status. Pairing it with the status of its existing load-bearing input grades nothing up or down. `[from: DEF]` for F4 matches its own "prerequisites, not a birth law" guard, and `[from: ALG]` for R9-NO-TOKEN-WRITETHROUGH matches how v0.3.13 introduced it. So: notify on release with the hash. That also fits PI decision 2 (no notice-state work in this release).
+
+---
+
+## Addendum — stage-1 round 2 and stage 2 (23 October 2026)
+
+**Stage 1, round 2** (`97b0425`, intermediate `0b2d5109…bc76`). I rebuilt it independently and got the same bytes, with 116 edits. The without-FC-21 build is `c36e57f8…c905`. The checker with controls, the claim audit and the value checks all pass. A1, A2 and G are applied as requested. The "unchanged" wording that remains is either the FC-21 premise, compared at `dyad-v6.4.19` and `dyad-v6.4.22` (the entry line hashes identically in both), or attributed to owner records or to the G2 audit.
+
+**Stage 2** (`4e7efd9`, candidate `771f87f2…bf9c`).
+
+Reproduction:
+- The stage-2 builder gives the candidate and a `movement_map.json` byte-identical to the committed ones.
+- `tools/check_compaction.py` passes on the RECOG profile: 460 claim blocks, 459 identical, 1 declared.
+- The RECOG negative controls reject 17 of 17.
+
+Shared tool regression. I ran both the `main` version and the branch version of `tools/check_compaction.py` on the DYAD v6.4.21 triple: base `6622dcd` (`f2b20419…`), candidate `6f4a667` (`277e6408…`), with its map and reviewed regions.
+- Both give PASS with the same check list. The only difference is the M01 message, which now ends in "(header)".
+- The DYAD harness still rejects 16 of 16.
+- The profile is a declared calibration, printed in the report. `summary_from: section1` widens where the status-summary sentences may come from: they may now also be taken from base §1, whose blocks the same tool checks.
+
+No check is weakened for DYAD.
+
+Findings:
+- **B1 — archive reachability (PI, at merge).** The map uses the untagged commit `97b0425` as an archive for the stage-1 Appendix A entry and header lines. PR #19 must be merged with a merge commit, not squashed, so that `97b0425` stays reachable. The release record should name the commit as the archive locator. A lightweight tag on it is optional.
+- **B2 — status summary (optional, presentation).** The new summary covers A1a, FC-21 and "R6 stays ACTIVE" only. A current-only header would read better if it also carried the OPEN census sentence from §1 (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED). This is allowed by the profile, since the sentence is in base §1.
+- **B3 — FA-RECOG-01 partly carried.** The tool cannot relocate tagged text, so several FA-01 items stay in place: the R8 v0.3.2 specification, the former R11 text with its `[OPEN]` sub-items, the R9 degree-7 paragraph, R7's "Active sub-items" heading over closed items, the §7.1/§7.2 audit tables and the SG order. The release record lists them as carried. The former-R11 `[OPEN]` sub-items under a CLOSED OPEN are the most misleading of these for a reader. They should be the first stage-1-type item of the next release. This does not block v0.3.23.
