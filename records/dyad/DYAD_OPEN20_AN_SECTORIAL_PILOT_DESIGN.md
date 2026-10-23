@@ -1,6 +1,6 @@
 # DYAD OPEN 20 (analytic branch) — written design of a sectorial pilot for one formal branch
 
-**Date:** 23 October 2026 (revised the same day after the receiving review `records/dyad/DYAD_LH2012_PILOT_RECEIVING_REVIEW.md`: P-R3 domains, P-R4 inverse branch and full-map quotients, the §6 bookkeeping guards). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It is a written design; stage 1 (exact preparation, §7) has been run. No sectorial sum, jump or Stokes quantity has been computed.
+**Date:** 23 October 2026 (revised the same day after the receiving review `records/dyad/DYAD_LH2012_PILOT_RECEIVING_REVIEW.md`: P-R3 domains, P-R4 inverse branch and full-map quotients, the §6 bookkeeping guards). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It is a written design; stage 1 (exact preparation, §7) is complete and stage 2 (limited `[NUM]` scouting, §5 item 2) has been run. No sectorial sum, jump or Stokes quantity has been computed.
 
 **Authority:** receiving review `records/dyad/DYAD_LH2012_RECEIVING_REVIEW.md` §6 ("WRITTEN PILOT DESIGN SUPPORTED"), on `records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md`.
 
@@ -104,8 +104,8 @@ Only the article's qualitative existence of these constants is available; every 
 1. **Exact preparation (small).** $b_1$, $m$ and the normalized forward and inverse jets of D3–D5, exact in $E(c_+)$, with a checker and negative controls. **Done; see §7.** It is exact preparation only, not an inverse-domain or remainder certificate.
 2. **Scouting (non-rigorous).**
    - Estimate the jump scale $e^{-A/|z|^3}$ from the growth of the coefficients of $\hat\phi_+$; P1-c computed many of them. Use a Borel-plane singularity estimate.
-   - From it, choose $|z_*|$ so that the expected jump exceeds the achievable error budget while $z_*$ stays inside $\bigcup S_j$.
-   - The result of this stage is an estimate only; it is not recorded as evidence.
+   - From it, choose $|z_*|$ so that the expected jump exceeds the achievable error budget while $z_*$ stays inside the overlap region $S_j\cap S_{j+1}$ of two sums of the same branch (not merely inside the union of the sectors). Until a certified admissible radius exists, $z_*$ is a candidate, not a point known to lie in $\Delta_j\cap\Delta_{j+1}$.
+   - The result of this stage is an estimate only, recorded as `[NUM]` with its provenance (commands, outputs, hashes); it is not theorem/certificate evidence. **Done at the limited scope cleared by the J1 closeout review; see `records/dyad/DYAD_OPEN20_AN_STAGE2_SCOUTING_NUM.md`.**
 3. **Certification (heavier; on the PI's machine if needed).** E1–E7 for two adjacent sectors around one singular direction, then an enclosure of $\Delta_{+,j}(z_*)$.
    - It is delivered as a script with a fixed command, its JSON output with hashes, and negative controls (wrong branch, wrong log branch, perturbed $\alpha$).
 4. **Decision.**
@@ -119,7 +119,7 @@ Only the article's qualitative existence of these constants is available; every 
 - **Truncations.** The formal object is the full series. No finite truncation is identified with a sum.
 - **Prior results.** Prior SESSION results keep their custody.
 - **No change** to the DSN, RIDs, OPEN statuses or notices.
-- **Next:** stage 1 can start after the receiving review of this design and the PI's go-ahead.
+- **Status of the stages:** stage 1 is complete (§7; accepted by `records/dyad/DYAD_LH2012_STAGE1_J1_CLOSEOUT_REVIEW.md`); stage 2 was cleared at receiving-review scope by the same review and by the PI's decision of 23 October 2026 and has been run (§5 item 2); stage 3 is not authorized and waits for a separate decision after its analytic bounds (E1–E6) are available.
 
 ## 7. Stage 1 — exact preparation (done, 23 October 2026; OWNER-RUN; corrected the same day)
 
@@ -145,5 +145,5 @@ Negative controls: `--control B` ($b_1$ perturbed) fails S4, S5, S6; `--control 
 
 Exact: $b_1=(1-i\sqrt3)(\tfrac1{108}-\tfrac a6)$; $b_2=\tfrac{199}{19845}+\tfrac{2603\sqrt3}{476280}i+\bigl(-\tfrac{23}{216}+\tfrac{\sqrt3}{216}i\bigr)a$. Numerical values for the pilot root (display only): $b_1\approx-0.0378863102-0.0333746170\,i$, $b_2\approx0.0061030467-0.0061397892\,i$.
 
-What stage 1 does **not** do: no domain, contraction, tail or inverse-branch bound (E1–E6); no sectorial sum; no jump. Stages 2 and 3 wait for separate decisions.
+What stage 1 does **not** do: no domain, contraction, tail or inverse-branch bound (E1–E6); no sectorial sum; no jump. Stage 2 was cleared and run separately (§5 item 2, §6); stage 3 waits for a separate decision.
 
