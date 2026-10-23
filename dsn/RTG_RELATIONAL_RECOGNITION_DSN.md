@@ -4,7 +4,7 @@
 **Date:** 23 October 2026
 **Scope:** Substrate-level mathematics of *recognition* — how a relational distinction is compared with its transported self or with another distinction, what residue a closed history leaves, and which loci of the comparator/transport geometry qualify as candidate recognition events — worked on the postulated continuous dyad generator $T$ and its diagnostic shear twins. Ontological readings are carried as `[HYP]` only.
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,300 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).
-**Document status:** DRAFT — v0.3.23 candidate (atlas-advisory corrections and FC-21, stage 1, reviewed; Methodology v1.4 compaction, stage 2); not adopted.
+**Document status:** ADOPTED — PI, 23 October 2026 (atlas-advisory corrections and FC-21; Methodology v1.4 compaction, with the live-file exception recorded in the release record §11). Adoption record: `records/recog/RECOG_v0_3_23_RELEASE_RECORD.md`.
 **Supersedes:** `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.22` (SHA-256 `0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9`; tag `recog-v0.3.22`).
 **Companion documents:** current owner editions and every import pin: §7 (synchronization note) and §7.3 — Dyadic `dyad-v6.4.22`, Number Genesis `numgen-v1.20.8`, Genesis v2.8.9, OFN v0.10, RRF v0.8.4 (convention and registry reference); Discrete Genesis v2.12.13 (reference only, no import).
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`); `RECOG | RTG Relational Recognition` is in its namespace registry.
@@ -1288,7 +1288,7 @@ Owner editions that consume RECOG RIDs (as inspected v0.3.23 at the tags `dyad-v
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.
 
-### v0.3.23 — 23 October 2026 — DRAFT candidate
+### v0.3.23 — 23 October 2026 — Adopted
 
 - **Basis:** the atlas advisory `records/recog/ATLAS_ADVISORY_RECOG_v0_3_22.md` as disposed by the PI on 23 Oct 2026 (`records/recog/ATLAS_ADVISORY_RECOG_v0_3_22_DISPOSITION_RECONCILIATION.md` §5), erratum E-0322-1, Methodology v1.4.
 - **New RIDs (statements unchanged):** RECOG-THM-R9-COMPARATOR-INCOMPLETENESS (§6.13a corollary), RECOG-ALG-SWAP-ODD-RHO (§6.4 lemma). Named sub-statements: the radial identity under RECOG-ALG-NU3-CLOSED-FORM; the $C_0$-avoidance corollary under RECOG-THM-P2-HET.
@@ -1388,4 +1388,4 @@ Identities as printed in the v0.3.22 header; full entries in Appendix A of v0.3.
 
 ---
 
-*END OF DOCUMENT — RTG_RELATIONAL_RECOGNITION_DSN_v0.3.23 (DRAFT candidate, 23 October 2026).*
+*END OF DOCUMENT — RTG_RELATIONAL_RECOGNITION_DSN_v0.3.23 (ADOPTED, 23 October 2026).*

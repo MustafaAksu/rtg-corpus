@@ -1,8 +1,8 @@
 # RTG Relational Recognition DSN v0.3.23 — release record
 
-**Status:** DRAFT — stage 1 reviewed and corrected (round 2); stage 2 (compaction) built and checked, under review. Not adopted. Not adopted. This record is completed at adoption (Methodology v1.4 §13.7) and frozen then.
+**Status:** ADOPTED — PI, 23 October 2026 (§11). This record is frozen from adoption; later facts go in a dated addendum (Methodology v1.4 §13.7).
 **Prepared by:** RECOG co-owner (Claude), at the PI's direction of 23 October 2026 ("Go for stage 1 of RECOG v0.3.23").
-**Reviews requested:** change-focused review of stage 1 by the second RECOG co-owner (ChatGPT); the advisory rows checked by the atlas owner; a separate verdict on the FC-21 science block (§4).
+**Reviews:** stage 1 — second RECOG co-owner (ChatGPT), GitHub review #5629416922: STAGE 1 ACCEPTED WITH ONE LIMITED CORRECTION, FC-21 VERIFIED; atlas-owner row check: ROWS IMPLEMENTED AS DISPOSED (A1, A2). Stage 2 — co-owner, GitHub review #5630069165: STAGE 2 MECHANICAL REVIEW ACCEPTED — FA-RECOG-01 PARTIAL (§10).
 **Governing methodology:** DSN Methodology v1.4 (tag `methodology-v1.4`, `cdacab5f…f2df`). v0.3.22 was adopted under v1.3; the migration is a successor action.
 **Predecessor:** v0.3.22, tag `recog-v0.3.22`, SHA-256 `0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9`; release record `records/recog/RECOG_v0_3_22_RELEASE_RECORD.md`.
 **Instructions implemented:**
@@ -21,7 +21,8 @@
 | Round 1 (superseded; in git history) | `6a1bdfb062c9233ea56da15760878b73f41f067eea512ddff5ea267b17b4ec06` (without FC-21 `5cb31667…4345`) | commit `4b94723` | co-owner review of PR #19 (GitHub review #5629416922): STAGE 1 ACCEPTED WITH ONE LIMITED CORRECTION — FC-21 VERIFIED; corrections ACCEPTED; FB-13 RIDs PASS; source mappings PASS; checks author-reported, not rerun by the reviewer. Atlas-owner row check (`records/recog/ATLAS_ROW_CHECK_RECOG_v0_3_23_STAGE1.md`, branch `claude/recog-v0.3.23-atlas-check`): rows implemented as disposed; build and checks reproduced byte-exactly. Corrections requested (PI, 23 Oct 2026): A1 `[assuming: …]` in S64-2, S66-1; A2 $S_h$ wording in S614-2; G claim-audit wording |
 | **1 — corrected intermediate, with FC-21 (round 2: A1, A2, G applied)** (build stage, not an edition; commit `97b0425`) | `0b2d5109d75f457ea6168d32f342a6814d8410554808a3b11a596aa467aabc76` | `evidence/recog/scripts/build_recog_v0_3_23_stage1.py` (116 assertion-gated edits; Appendix A masked except the new entry) | `check_recog_v0_3_23_stage1.py`: 22/22 gates PASS, 22/22 negative controls caught by their target gate |
 | 1′ — same, without FC-21 (decoupling variant; not committed as a file) | `c36e57f810602d9ca4c5dca5b51a5b3db641fe15b77b4ef969263e0f3462c905` | same builder, `--without-fc21` (110 edits) | 21/21 gates PASS (C18 applies only to the with-FC-21 variant) |
-| **2 — compacted candidate** (this is `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on the branch) | `771f87f29e57c51c0d88eee945f9cbe673fa6b131b4f9d45c195579f835ebf9c` | `evidence/recog/scripts/build_recog_v0_3_23_stage2.py` (7 declared operations; movement map `evidence/recog/v0.3.23/movement_map.json`) | `tools/check_compaction.py` (RECOG profile) against `0b2d5109…bc76`: PASS; RECOG negative controls 17/17 rejected; DYAD regression 16/16 |
+| **2 — compacted candidate** (reviewed candidate) | `771f87f29e57c51c0d88eee945f9cbe673fa6b131b4f9d45c195579f835ebf9c` | `evidence/recog/scripts/build_recog_v0_3_23_stage2.py` (5 declared operations M01, M04, M05, M06, M07 — ids M02 and M03 were withdrawn before the run; movement map `evidence/recog/v0.3.23/movement_map.json`) | `tools/check_compaction.py` (RECOG profile) against `0b2d5109…bc76`: PASS; RECOG negative controls 17/17 rejected; DYAD regression 16/16 |
+| **Adopted edition** (publication transform, status lines only; this is `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`) | `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a` | `evidence/recog/scripts/release_recog_v0_3_23.py` (3 line replacements) | diff against the candidate: exactly those 3 lines |
 
 **Reproduce** (repository root; the redirection must be byte-exact, so on Windows use `cmd /c`, not PowerShell `>`):
 
@@ -238,7 +239,7 @@ Recommendation: treat these as additive or grammatical and notify on release wit
 | Claim audit | `recog_v0_3_23_claim_audit.py` | 34/34 rows P: quoted statement present at the cited RID in the current source (§5) |
 | Values | `recog_v0_3_23_value_checks.py` | Part A exact A1–A7 PASS; Part B `[NUM]` illustration of FC-21 PASS (12 starts, 20000 blocks; not a proof input) |
 | Size report (informational, no gate) | `tools/dsn_lint.py --prev` | 346,451 bytes (+17,303, +5.3 %); 1,609 lines; §1 1,286 words; 24 stacked status summaries in the header — compaction is stage 2 (`dsn_lint_stage1.txt`) |
-| Compaction (stage 2) | `tools/check_compaction.py` with the RECOG profile of the map | PASS: re-derivation exact; 7 operations PASS; 460 claim blocks in base live text — 459 byte-identical, 1 changed by the declared reference substitution M05, 0 unexplained; RID set, heading anchors, source hashes and qualifier tags of the live text preserved; references resolve; header and footer (`check_compaction_output.txt`, `check_compaction_report.json`) |
+| Compaction (stage 2) | `tools/check_compaction.py` with the RECOG profile of the map | PASS: re-derivation exact; 5 operations PASS; 460 claim blocks in base live text — 459 byte-identical, 1 changed by the declared reference substitution M05, 0 unexplained; RID set, heading anchors, source hashes and qualifier tags of the live text preserved; references resolve; header and footer (`check_compaction_output.txt`, `check_compaction_report.json`) |
 | Compaction negative controls | `test_check_compaction_recog.py` | 17/17 rejected: qualifier deleted (undeclared; declared as history), scope widened as ref-subst, RID re-attributed (declared; undeclared), pointer to a missing tag and to a missing appendix, archive mismatch, live §6.13a relocated, two footers, hash altered, theorem deleted, evidence pointer deleted, stale R10 wording restored, status-summary sentence added, R6 status altered, tagged R11 history relocated (`negative_controls_output.txt`) |
 | Checker calibration regression | `tools/test_check_compaction.py` on the DYAD v6.4.21 triple | PASS, 16/16 controls rejected (`dyad_regression_test_check_compaction.txt`) |
 | Size report, stage 2 | `tools/dsn_lint.py --prev` | 281,836 bytes (−64,615, −18.7 % against the intermediate); header 3,199 chars (was 37,229); Appendix A 5,087 chars (was 34,540); 1,391 lines (`dsn_lint_stage2.txt`) |
@@ -250,7 +251,9 @@ Calibration notes. The checker's RECOG profile was built for this file: header i
 | File | SHA-256 |
 |---|---|
 | stage-1 intermediate (`dsn/…` at commit `97b0425`) | `0b2d5109d75f457ea6168d32f342a6814d8410554808a3b11a596aa467aabc76` |
-| `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` (stage-2 candidate) | `771f87f29e57c51c0d88eee945f9cbe673fa6b131b4f9d45c195579f835ebf9c` |
+| stage-2 candidate (`dsn/…` at commit `4e7efd9`) | `771f87f29e57c51c0d88eee945f9cbe673fa6b131b4f9d45c195579f835ebf9c` |
+| `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` (adopted v0.3.23) | `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a` |
+| `evidence/recog/scripts/release_recog_v0_3_23.py` | `2bc658f2a089ef428612d74efd685054e4f26c369f49882cfeec52a8d60702fb` |
 | `records/recog/RECOG_v0_3_23_FC21_PROOF_CELL.md` | `42a5dc67327e9c21a5afe83f723340e8db3ea32e38bd39df4dc1b5393026bd11` |
 | `evidence/recog/scripts/build_recog_v0_3_23_stage1.py` | `6b28185b8c181e535c5cab9483c0bd5311f7b18117fb08d5c98b58f6479958a7` |
 | `evidence/recog/scripts/check_recog_v0_3_23_stage1.py` | `88fdb80bd7393d80ebdddb2f75cbcefb4504b24257c55d0b653337e4ef87ddb8` |
@@ -285,6 +288,36 @@ Environment: Python 3.13, sympy 1.14, mpmath 1.3; Linux workspace of the RECOG c
 | Stage-1 change-focused review (co-owner, ChatGPT) | round 1: ACCEPTED WITH ONE LIMITED CORRECTION (GitHub review #5629416922 on `4b94723`); correction applied in round 2 |
 | Advisory-row check (atlas owner) | ROWS IMPLEMENTED AS DISPOSED; A1, A2 applied in round 2 (`ATLAS_ROW_CHECK_RECOG_v0_3_23_STAGE1.md`, branch `claude/recog-v0.3.23-atlas-check`) |
 | FC-21 block verdict | VERIFIED (same review) |
-| Stage 2 (compaction, FA-01) | built and checked; change-focused review requested, including the FA-RECOG-01 must-stay-live list (§2a) |
-| PI adoption | — |
-| Publication transform, merge, tag `recog-v0.3.23` | — (PI) |
+| Stage 2 (compaction, FA-01) | co-owner (ChatGPT), GitHub review #5630069165 on `4e7efd9`: STAGE 2 MECHANICAL REVIEW ACCEPTED — FA-RECOG-01 PARTIAL. Independent replay of the movement map by a separate implementation: byte-identical; scientific content (§1, R6, F1–F4, A1a, FC-21, §3, §7, §8) byte-identical; must-stay-live items present. Remaining point: Methodology v1.4 §1.1 live-file compliance (historical blocks listed in §2a); editorial: operation count, duplicated "Not adopted" (both fixed here) |
+| PI adoption | 23 October 2026 (§11) |
+| Publication transform | `evidence/recog/scripts/release_recog_v0_3_23.py`: 3 assertion-gated status lines (header document status, Appendix A heading, footer) on the reviewed candidate `771f87f2…bf9c`; adopted file `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a` |
+| Merge (merge commit, not squash), annotated tag `recog-v0.3.23` | PI |
+
+## 11. Adoption
+
+- **Decision:** PI (Mustafa), 23 October 2026, 17:57 +03:00, in the RECOG co-owner session: "ben bu haliyle dokümanı benimsiyorum" (verbatim; I adopt the document as it stands). Given after the stage-1 reviews (co-owner and atlas owner; corrections applied in round 2) and the stage-2 review (STAGE 2 MECHANICAL REVIEW ACCEPTED — FA-RECOG-01 PARTIAL).
+- **Adopted file:** `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`, 281,915 bytes, SHA-256 `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a`. The candidate hash `771f87f2…bf9c` and the intermediate hash `0b2d5109…bc76` identify the reviewed build stages only.
+- **Scope:** the accepted advisory rows, the extra stage-1 items, the two new RIDs (RECOG-THM-R9-COMPARATOR-INCOMPLETENESS, RECOG-ALG-SWAP-ODD-RHO), the FC-21 science block (RECOG-THM-A1A-PHASE-EXISTENCE-U, verified), and the stage-2 compaction. No existing RID renamed or regraded; no OPEN status changed.
+- **Recorded exception (live-file rule, Methodology v1.4 §1.1).** The PI adopts the document as it stands; this is the second route the stage-2 review named. These historical blocks remain in the live file:
+  - R8's retained v0.3.2 specification;
+  - R9's v0.3.2 specification, including the degree-7 budget paragraph;
+  - the former R11 text with its `[OPEN]` sub-items;
+  - R7's closed items under "Active sub-items";
+  - the §7.1/§7.2 audit tables and the G2 "unchanged" sentence of §6.13b;
+  - the SG order, R13 and R14 before R12.
+
+  They are listed in §2a.
+- **Follow-up obligation:** the next RECOG release separates these blocks from the live text. It does so by a controlled stage-1 correction (current status at the point of use; tagged history moved to the tagged edition), then a compaction checked by `tools/check_compaction.py`. Until then, a reader treats them as history, not as current status.
+- **Publication:** merge of `claude/recog-v0.3.23-stage1` into `main` (merge commit, not squash), then the annotated tag `recog-v0.3.23`, created by the PI with the hash above in its message. `BASELINE.md` lists v0.3.23 as the governing edition from that tag; `recog-v0.3.22` is its predecessor.
+- **Notices (§7.3, PI decision of 23 Oct 2026):**
+  - Consumers are notified with the release hash after the tag: Dyadic, OFN, RRF and RER, and NUMGEN for FC-21.
+  - The notices carry the new RIDs, FC-21 and the two `[from: …]` pairings, which are a normalization, not a grade change.
+  - They are routed through the PI.
+  - No notice state is recorded here before a real dispatch.
+- **Open after adoption** (not adoption criteria):
+  - the follow-up obligation above;
+  - sending the v0.3.23 notices and the earlier prepared ones, and recording their states;
+  - the atlas refresh from the adopted edition;
+  - the Programme Overview's selected RECOG edition;
+  - the research order agreed in the reconciliation: R6 F5 with the PI's scope, then R4 or R3.
+
