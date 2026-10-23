@@ -1,6 +1,6 @@
 # RTG State Atlas v0.2 — acceptance record
 
-**Status:** DRAFT — receiving review ACCEPT SCOPED; PI decision pending. Nothing below is PI-accepted until the PI fills in §3.
+**Status:** ACCEPTED by the PI, 23 October 2026 (§3); receiving review ACCEPT SCOPED (§2). Tag `atlas-v0.2` on merge commit `6c52666`.
 **Object:** derived, NONCANONICAL product (Method v0.2 §2). Acceptance identifies this atlas edition; it adopts no owner science, changes no DSN and gives the atlas no authority over any stream.
 
 ## 1. Identities
@@ -27,6 +27,6 @@ Values are those after the AV02 corrections (review packet §1); if review edits
 ## 3. Decision
 
 - PI decision: **accept** ("Current version adapted as is") — 23 October 2026. PR #11 merged with merge commit `6c526669181e4950a7d0361f178f9b49f8940c37` (parents `44b55d6`, `c5effbc`); atlas SHA-256 at the merge commit equals §1.
-- Tag: annotated `atlas-v0.2` on `6c52666`, message naming the atlas SHA-256 of §1.
+- Tag: annotated `atlas-v0.2` on `6c52666` (created; message names the atlas SHA-256 of §1, verified by the receiving reviewer).
 - Accepted limitations (not PASS): 7 UNVERIFIED checker items, 11 DOCUMENTED-UNRESOLVED names, 13 sources with UNVERIFIED v0.1-input byte equality; nonblocking presentation note (DZT 80-digit norm list belongs in the numerical part of `*ATLAS:checked-D2`), deferred to the next presentation pass.
 - Next stream (plan Q4, accepted in the plan review): RECOG advisory from this snapshot, recorded under `records/recog/`.
