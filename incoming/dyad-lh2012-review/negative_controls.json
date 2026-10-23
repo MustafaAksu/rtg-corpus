@@ -1,0 +1,26 @@
+[
+  {
+    "control": "ratio",
+    "exit_code": 1,
+    "expected_rejection": true,
+    "failed_gates": [
+      "BB_ratio_for_both_roots"
+    ]
+  },
+  {
+    "control": "branch",
+    "exit_code": 1,
+    "expected_rejection": true,
+    "failed_gates": [
+      "T_exchanges_a2"
+    ]
+  },
+  {
+    "control": "coefficient",
+    "exit_code": 1,
+    "expected_rejection": true,
+    "failed_gates": [
+      "raw_coefficients"
+    ]
+  }
+]
