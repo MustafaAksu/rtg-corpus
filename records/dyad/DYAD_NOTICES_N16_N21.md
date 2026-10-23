@@ -81,3 +81,11 @@ Source: adopted `RTG_DYADIC_OSCILLATOR_DSN_v6.4.21`, SHA-256 `a412f34d4db6a6fa92
 | all consumers | Layout-only compaction under Methodology v1.4: section numbers and anchors are unchanged; Appendix A is compact and earlier records stay at tag `dyad-v6.4.20`. No RID, grade or OPEN status changes. |
 
 State fields for N21 are added when it is sent.
+
+## v6.4.22 (23 October 2026) — no new notice
+
+v6.4.22 (SHA-256 `2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29`, tag `dyad-v6.4.22` once the PI creates it) changes wording and labels only (release record §2). No consumer action is needed, and N16–N21 keep their content and sources. The PI may add one informational line when these notices are sent:
+
+| Recipient | Content |
+|---|---|
+| OPEN-M (UVM); RECOG | Dyadic now names the owner of every "R11" it uses: "OPEN-M R11" for the OPEN-M-2B assembly formulas (cascade-gate conversion, $\theta_f=2\pi/3$) and "RECOG R11" for RECOG's final-chart ledger (CLOSED). New Appendix C row. Nothing is asked of either owner. |

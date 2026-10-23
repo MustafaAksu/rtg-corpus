@@ -1,0 +1,35 @@
+{
+ "all_pass": true,
+ "base_sha256": "a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d",
+ "candidate_sha256": "c6cb222f6f6f58a5d3c1fe269f8b2b86c62131657f464a2e55d09e362cada95a",
+ "gates": {
+  "C0": true,
+  "C1": true,
+  "C2": true,
+  "C3": true,
+  "C4": true,
+  "C5": true,
+  "C6": true,
+  "C7": true,
+  "C8": true
+ },
+ "info": {
+  "C2": {
+   "appendix_a_kept": true,
+   "line_delta": 1,
+   "unexplained": []
+  },
+  "C3": {
+   "math_added_undeclared": [],
+   "math_removed": []
+  },
+  "C4": {
+   "bad": [],
+   "counts": {
+    "OPEN-M": 13,
+    "RECOG": 9
+   }
+  },
+  "C5": []
+ }
+}
