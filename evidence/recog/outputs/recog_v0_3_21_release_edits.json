@@ -1,0 +1,40 @@
+{
+ "input_sha256": "be164a9f7dba3943e06d76e8a9448cb9b02d395f9ab18947498bdf3a8fef58c2",
+ "edits": [
+  {
+   "id": "P1",
+   "old": "# RTG_RELATIONAL_RECOGNITION_DSN_v0.3.21 (DRAFT r2)\n",
+   "new": "# RTG_RELATIONAL_RECOGNITION_DSN_v0.3.21\n"
+  },
+  {
+   "id": "P2",
+   "old": "**Date:** 20 October 2026 (v0.3.21 DRAFT r2 — synchronization release, no new mathematics; not adopted)\n",
+   "new": "**Date:** 20 October 2026 (v0.3.21 — synchronization release, no new mathematics; adopted 20 Oct 2026)\n"
+  },
+  {
+   "id": "P3",
+   "old": "**Supersedes (on adoption):** `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20`",
+   "new": "**Supersedes:** `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20`"
+  },
+  {
+   "id": "P4",
+   "old": "**Status summary (v0.3.21 DRAFT r2):**",
+   "new": "**Status summary (v0.3.21):**"
+  },
+  {
+   "id": "P5",
+   "old": "**Freeze status:** v0.3.21 DRAFT r2 (not adopted).",
+   "new": "**Freeze status:** v0.3.21 adopted 20 Oct 2026 (PI authorization in the RECOG co-owner conversation, after the independent receiving review `9a7ae8aa…31c45` accepted DRAFT r2 `be164a9f…58c2`; release record `RECOG_v0_3_21_RELEASE_RECORD.md`); current authoritative edition, not frozen (a freeze is a separate decision)."
+  },
+  {
+   "id": "P6",
+   "old": "### v0.3.21 — DRAFT r2, 20 October 2026 (owner synchronization; not adopted)\n",
+   "new": "### v0.3.21 — 20 October 2026 (owner synchronization; adopted)\n- **Adoption:** DRAFT r2 (`be164a9f…58c2`) accepted for adoption by the independent receiving review (`9a7ae8aa…31c45`); adopted by the PI 20 Oct 2026. The adoption pass changed edition markers only (title, date, supersedes, status-summary label, freeze status, this heading and line, footer).\n"
+  },
+  {
+   "id": "P7",
+   "old": "*END OF DOCUMENT — RTG_RELATIONAL_RECOGNITION_DSN_v0.3.21 (DRAFT r2; not adopted; v0.3.20 frozen `fdb8c9a7…b8df` remains authoritative until adoption)*",
+   "new": "*END OF DOCUMENT — RTG_RELATIONAL_RECOGNITION_DSN_v0.3.21*"
+  }
+ ]
+}

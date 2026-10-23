@@ -39,7 +39,7 @@ The table lists the **governing adopted editions**. Predecessor: Methodology v1.
 
 ## Not yet in the repository
 
-Release/adoption records of the streams other than DYAD v6.4.20 (to `records/<study>/` when supplied), and the DYAD v6.4.19 disposition record.
+Release/adoption records of the streams other than DYAD v6.4.20–v6.4.22 and RECOG v0.3.21–v0.3.22 (to `records/<study>/` when supplied), and the DYAD v6.4.19 disposition record.
 
 ## Records recovered after the project cleanup (22 October 2026)
 
@@ -73,4 +73,20 @@ The session note inside each package is byte-identical to the standalone note in
 
 **Superseded rounds, kept in history only** (commit `19124ac`): `DYAD_OPEN20_ANALYTIC_ROOTS_P1B_SESSION_v0_1.md` (`a9edbf53…`), `DYAD_OPEN20_ANALYTIC_ROOTS_P1C2B_SESSION_v0_1.md` (`9e15d23a…`), `DYAD_OPEN20_AN_P1C2B_PACKAGE_v0_1.zip` (`1864492c…`, internal SHA256SUMS 6/6 OK). Retrieve with `git show 19124ac:<path>`.
 
-**Still missing:** `RECOG_v0_3_22_POST_RELEASE_MAINTENANCE_NOTE.md`.
+## RECOG records and evidence recovered (23 October 2026)
+
+Received from the RECOG co-owner sessions via the PI on `upload/recog-record-recovery` (commits `d2ace94`, `f177eee`, `5c4dfc9`, `95725a4`) and placed unchanged. Hand-over bundle `RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip` `c20e1aa56dd341288c1cc65cce10340d605bdc8586a42115e99ebb6eba3bbd79`, internal SHA256SUMS 174/174 OK; kept in history only (its `editions/` are not placed).
+
+| File | Location | SHA-256 | Cited in |
+|---|---|---|---|
+| `RECOG_v0_3_22_RELEASE_RECORD.md` | `records/recog/` | `d9636a8d…0820` | — |
+| `RECOG_v0_3_21_RELEASE_RECORD.md` | `records/recog/` | `4b7aefee…ef72` | — |
+| `RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md` | `records/recog/` | `5c00f66d…9b55` | RER v0.2 |
+| `RECOG_v0_3_22_POST_RELEASE_MAINTENANCE_NOTE.md` | `records/recog/` | `b5b9131c…eab0` | — |
+| `RECOG_A1A_G1_DISPOSITION_RECORD_20261020.md` | `records/recog/a1a/g1/` | `0e5f91c0…71a7` | RECOG v0.3.22 |
+| `RECOG_G3_NOTICE_TO_RER_20261020.md` | `records/recog/g3/` | `53341b9a…b4b5` | RER v0.2 |
+| `RECOG_COOWNER_STATE_REVIEW_v0_3_22_20261023.md` | `records/recog/` | `5ae79687…93a7` | — |
+| `RECOG_OWNER_SELF_REVIEW_20261023.md` (received as `attachment.txt`) | `records/recog/` | `33a491d0…c845` | — |
+| `e2c_prod.zip` (PI production run) | `evidence/recog/packages/` | `4f171da6…b22d` | 29/29 chunk hashes of `e2c_production_certificate_v2.json` |
+
+Full per-hash inventory, placement map and the items still missing: `records/recog/RECOG_SOURCE_RECOVERY_LIST.md`.

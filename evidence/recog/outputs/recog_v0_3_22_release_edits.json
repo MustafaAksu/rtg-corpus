@@ -1,0 +1,77 @@
+{
+ "input_sha256": "8f496d3c1fd0182e058e5fd814c5530e3952d5469b3ea932d3d3f27718fbd959",
+ "edits": [
+  {
+   "id": "P1",
+   "kind": "marker",
+   "old": "# RTG_RELATIONAL_RECOGNITION_DSN_v0.3.22 (DRAFT r3)\n",
+   "new": "# RTG_RELATIONAL_RECOGNITION_DSN_v0.3.22\n"
+  },
+  {
+   "id": "P2",
+   "kind": "marker",
+   "old": "**Date:** 20 October 2026 (v0.3.22 DRAFT r3 — A1a scientific cell: asymptotic phase and the Number Genesis constant $C_D$; not adopted)\n",
+   "new": "**Date:** 20 October 2026 (v0.3.22 — A1a scientific cell: asymptotic phase and the Number Genesis constant $C_D$; adopted 20 Oct 2026)\n"
+  },
+  {
+   "id": "P3",
+   "kind": "marker",
+   "old": "**Supersedes (on adoption):** `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.21`",
+   "new": "**Supersedes:** `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.21`"
+  },
+  {
+   "id": "P4",
+   "kind": "adoption",
+   "old": "**Status summary (v0.3.22 DRAFT r3):** One new scientific cell, §6.13b (A1a), with eight proposed RIDs (registered only on adoption) and four artifact IDs (§8).",
+   "new": "**Status summary (v0.3.22):** One new scientific cell, §6.13b (A1a), with eight scientific RIDs and four artifact IDs (§8), all registered on adoption (20 Oct 2026)."
+  },
+  {
+   "id": "P5",
+   "kind": "adoption",
+   "old": "canonical repin of the two NUMGEN imports pending NUMGEN v1.20.8; PI adoption pending.",
+   "new": "canonical repin of the two NUMGEN imports pending NUMGEN v1.20.8; adopted by the PI 20 Oct 2026 on DRAFT r3 `8f496d3c…d959` after the independent delta review `2a65093b…fc96`."
+  },
+  {
+   "id": "P6",
+   "kind": "marker",
+   "old": "**Freeze status:** v0.3.22 DRAFT r3 (not adopted; v0.3.21 remains the authoritative edition until adoption). *Earlier:* v0.3.21 adopted",
+   "new": "**Freeze status:** v0.3.22 adopted 20 Oct 2026 (PI authorization in the RECOG co-owner conversation, after the independent delta review `2a65093b…fc96` accepted DRAFT r3 `8f496d3c…d959`; release record `RECOG_v0_3_22_RELEASE_RECORD.md`); current authoritative edition, not frozen (a freeze is a separate decision). *Earlier:* v0.3.21 adopted"
+  },
+  {
+   "id": "P7",
+   "kind": "adoption",
+   "old": "**RIDs in this subsection are proposed and are registered only on adoption of this release.**",
+   "new": "**RIDs in this subsection were registered on adoption of v0.3.22 (20 Oct 2026).**"
+  },
+  {
+   "id": "P8",
+   "kind": "adoption",
+   "old": "| v0.3.22 draft: proposed use in RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (§6.13b) at the v6.4.18 pin, R9 premise discharged by RECOG's own R9; takes effect only on adoption (v0.3.21 state: conditional receipt only) |",
+   "new": "| v0.3.22 (adopted 20 Oct 2026): used in RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (§6.13b) at the v6.4.18 pin, R9 premise discharged by RECOG's own R9; in effect from adoption (v0.3.21 state: conditional receipt only) |"
+  },
+  {
+   "id": "P9",
+   "kind": "provenance",
+   "old": "draft pending the string ruling — the final dispatched copy, same body with updated header, to be recorded on receipt);",
+   "new": "draft pending the string ruling); final reply `NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1_1.md` (`a2e7bf98fe08d2d64a883b8996c285ba4b67c94f73bb53548abe206f228b1902`; final for dispatch; body byte-identical to v0.1, header and title only) with addendum `RECOG_A1A_G1_DISPOSITION_ADDENDUM_FINAL_REPLY_20261020.md` (`582d931e0055964fccd541e9ba33defce65f57c6e1cb53385d0f1f155502ceae`);"
+  },
+  {
+   "id": "P10",
+   "kind": "provenance",
+   "old": "integrated receiving review of DRAFT r2 `RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md` (`fee7e519f3e6cd8bf32aa2be0402bef667178148ea43c9fa8521159a1d500efe`);",
+   "new": "integrated receiving review of DRAFT r2 `RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md` (`fee7e519f3e6cd8bf32aa2be0402bef667178148ea43c9fa8521159a1d500efe`); independent delta receiving review of DRAFT r3 `RECOG_v0_3_22_DRAFT_r3_DELTA_RECEIVING_REVIEW_20261020.md` (`2a65093baa6a07e57faa056ecd755cc8689f94c59d5f071996b31ebb5979fc96`);"
+  },
+  {
+   "id": "P11",
+   "kind": "adoption",
+   "old": "### v0.3.22 — DRAFT r3, 20 October 2026 (A1a scientific cell; not adopted)\n",
+   "new": "### v0.3.22 — 20 October 2026 (A1a scientific cell; adopted)\n- **Adoption:** DRAFT r3 (`8f496d3c…d959`) accepted by the independent delta review (`2a65093b…fc96`: release candidate ready for PI adoption decision); adopted by the PI 20 Oct 2026 (\"ADOPTION APPROVED — PROCEED WITH CONTROLLED RELEASE\"). The adoption pass changed edition markers, adoption information and §8 provenance metadata only: title, date, supersedes, status-summary label and release state, freeze status, the §6.13b registration sentence, the §7.2 N13 use field, the §8 governance row (final NUMGEN reply v0.1.1 and addendum; r3 delta review), this heading and line, footer. Registered on adoption: the eight scientific RIDs of §6.13b and the four artifact RIDs of §8. Carried open: canonical repin of the two NUMGEN imports after NUMGEN v1.20.8 adoption (separate RECOG revision); R6 ACTIVE; G3 notices to OFN, RRF and RER unsent.\n- *Draft history (r1–r3) follows.*\n"
+  },
+  {
+   "id": "P12",
+   "kind": "marker",
+   "old": "*END OF DOCUMENT — RTG_RELATIONAL_RECOGNITION_DSN_v0.3.22 (DRAFT r3; not adopted; v0.3.21 `a3459522…0ae3` remains authoritative until adoption)*",
+   "new": "*END OF DOCUMENT — RTG_RELATIONAL_RECOGNITION_DSN_v0.3.22*"
+  }
+ ]
+}

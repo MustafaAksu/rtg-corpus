@@ -1,0 +1,25 @@
+R2      sha256 be164a9f7dba3943e06d76e8a9448cb9b02d395f9ab18947498bdf3a8fef58c2
+ADOPTED sha256 a3459522c8f58204f83f5e65e3d1a99912f9651d1c17cc4fb0c090196f670ae3
+EDITS 7
+GATES:
+  P0   PASS 
+  P1   PASS (BUILD)
+  P2   PASS (POSITIVE)
+  P3   PASS (REVERSE)
+  P4   PASS (TAGS)
+  P5   PASS (RIDS)
+  P6   PASS (STATUS)
+  P7   PASS (VOCAB)
+  P8   PASS (N13)
+  P9   PASS (MARKERS)
+
+NEGATIVE CONTROLS (each must FAIL):
+  RC1 release edit omitted                 caught
+  RC2 grade changed in body                caught
+  RC3 OPEN status altered                  caught
+  RC4 N13 worded as acceptance             caught
+  RC5 RID renamed                          caught
+  RC6 body text changed outside markers    caught
+  RC7 draft marker left in title           caught
+
+RESULT: PASS

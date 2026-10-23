@@ -1,0 +1,1710 @@
+{
+ "dsn_sha256": "0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9",
+ "rows": [
+  {
+   "cited": "a3459522…0ae3",
+   "kind": "short",
+   "lines": [
+    6,
+    1322
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!RTG_RELATIONAL_RECOGNITION_DSN_v0_3_21.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!RTG_RELATIONAL_RECOGNITION_DSN_v0_3_21.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!RTG_RELATIONAL_RECOGNITION_DSN_v0_3_21.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_21.md"
+   ]
+  },
+  {
+   "cited": "fdb8c9a7…b8df",
+   "kind": "short",
+   "lines": [
+    6,
+    1332
+   ],
+   "name_before": "RECOG_v0_3_21_RELEASE_RECORD.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_20.md"
+   ]
+  },
+  {
+   "cited": "2b006b9f…2b36",
+   "kind": "short",
+   "lines": [
+    6,
+    52,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_19.md"
+   ]
+  },
+  {
+   "cited": "9a4c7184…904e",
+   "kind": "short",
+   "lines": [
+    6,
+    52,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_18.md"
+   ]
+  },
+  {
+   "cited": "e04452b9…8f2",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_17.md"
+   ]
+  },
+  {
+   "cited": "6e010221…4152d",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_16.md"
+   ]
+  },
+  {
+   "cited": "e97fa520…25d5cd",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_15.md"
+   ]
+  },
+  {
+   "cited": "d10c2a98…4b43",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_14.md"
+   ]
+  },
+  {
+   "cited": "acbdeffc…aacb7",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_13.md"
+   ]
+  },
+  {
+   "cited": "fca3f986…3129",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_12.md"
+   ]
+  },
+  {
+   "cited": "686e3fff…0fa1",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_11.md"
+   ]
+  },
+  {
+   "cited": "077e8fe7…0ba",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_10.md"
+   ]
+  },
+  {
+   "cited": "d1112cee…eb9a",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_9.md"
+   ]
+  },
+  {
+   "cited": "4b7347d4…240d",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_8.md"
+   ]
+  },
+  {
+   "cited": "b77a549a…4648",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_7.md"
+   ]
+  },
+  {
+   "cited": "fc790fad…16eb",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_6.md"
+   ]
+  },
+  {
+   "cited": "3ba74002…abd6",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": []
+  },
+  {
+   "cited": "39665f89…80df",
+   "kind": "short",
+   "lines": [
+    6,
+    52
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_4.md"
+   ]
+  },
+  {
+   "cited": "701d56ac…decb",
+   "kind": "short",
+   "lines": [
+    6
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_3.md"
+   ]
+  },
+  {
+   "cited": "e07cf2b9…4bfc",
+   "kind": "short",
+   "lines": [
+    7,
+    1199
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "33c14c5c…59e0",
+   "kind": "short",
+   "lines": [
+    7,
+    1150
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "f70308f1…458d",
+   "kind": "short",
+   "lines": [
+    7,
+    1151,
+    1152,
+    1199
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "c145f5d2…cebd",
+   "kind": "short",
+   "lines": [
+    7,
+    1190
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "d143673e…c6fc",
+   "kind": "short",
+   "lines": [
+    7
+   ],
+   "name_before": null,
+   "found": [
+    "dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag atlas-v0.2:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag az-v0.6:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag dyad-v6.4.21:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag dyad-v6.4.22:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag dzt-v0.8:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag er2b-v0.3:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag fms-v0.6.4:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag gen-v2.8.9:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag legacy-v0.7:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag methodology-v1.3:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag methodology-v1.4:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag numgen-v1.20.8:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag ofn-v0.10:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag prelegacy-v0.8:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag programme-v1.2:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag rer-v0.2:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag rrf-v0.8.4:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag tdrg-v2.12.13:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag triad-v1.6.1:dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+    "tag uvm-v0.7.1:dsn/RTG_GENESIS_GEOMETRY_DSN.md"
+   ]
+  },
+  {
+   "cited": "acb70a8c…5dfa",
+   "kind": "short",
+   "lines": [
+    7
+   ],
+   "name_before": null,
+   "found": [
+    "dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag atlas-v0.2:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag az-v0.6:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag dyad-v6.4.21:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag dyad-v6.4.22:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag dzt-v0.8:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag er2b-v0.3:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag fms-v0.6.4:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag gen-v2.8.9:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag legacy-v0.7:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag methodology-v1.3:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag methodology-v1.4:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag numgen-v1.20.8:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag ofn-v0.10:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag prelegacy-v0.8:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag programme-v1.2:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag rer-v0.2:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag rrf-v0.8.4:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag tdrg-v2.12.13:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag triad-v1.6.1:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md",
+    "tag uvm-v0.7.1:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md"
+   ]
+  },
+  {
+   "cited": "b393657e…a187",
+   "kind": "short",
+   "lines": [
+    7,
+    1123
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "c4637e7a…ab28",
+   "kind": "short",
+   "lines": [
+    7,
+    1148
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "184a74fc…5227",
+   "kind": "short",
+   "lines": [
+    7,
+    728,
+    1325
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/g1/NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/g1/NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md",
+    "records/recog/a1a/g1/NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md"
+   ]
+  },
+  {
+   "cited": "56bc991d…a514",
+   "kind": "short",
+   "lines": [
+    7
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "8f496d3c…d959",
+   "kind": "short",
+   "lines": [
+    12,
+    52,
+    1320
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!RTG_RELATIONAL_RECOGNITION_DSN_v0_3_22_DRAFT_r3.md",
+    "evidence/recog/packages/RECOG_v0_3_22_RELEASE_VERIFICATION_PACKAGE.zip!RTG_RELATIONAL_RECOGNITION_DSN_v0_3_22_DRAFT_r3.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_22_DRAFT_r3.md"
+   ]
+  },
+  {
+   "cited": "2a65093b…fc96",
+   "kind": "short",
+   "lines": [
+    12,
+    52,
+    1320
+   ],
+   "name_before": null,
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/reviews/RECOG_v0_3_22_DRAFT_r3_DELTA_RECEIVING_REVIEW_20261020.md",
+    "records/recog/a1a/reviews/RECOG_v0_3_22_DRAFT_r3_DELTA_RECEIVING_REVIEW_20261020.md"
+   ]
+  },
+  {
+   "cited": "fdb8c9a72cbea67bae339a890f440b7d67c608979f7886279e2cd00bdabfb8df",
+   "kind": "full",
+   "lines": [
+    52
+   ],
+   "name_before": "RECOG_v0_3_21_RELEASE_RECORD.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_20.md"
+   ]
+  },
+  {
+   "cited": "9a7ae8aa…31c45",
+   "kind": "short",
+   "lines": [
+    52,
+    1331
+   ],
+   "name_before": "RECOG_v0_3_22_RELEASE_RECORD.md",
+   "found": []
+  },
+  {
+   "cited": "be164a9f…58c2",
+   "kind": "short",
+   "lines": [
+    52,
+    1331
+   ],
+   "name_before": "RECOG_v0_3_22_RELEASE_RECORD.md",
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/editions/RTG_RELATIONAL_RECOGNITION_DSN_v0_3_21_DRAFT_r2.md"
+   ]
+  },
+  {
+   "cited": "8a887ef3…bc4d",
+   "kind": "short",
+   "lines": [
+    730,
+    1260
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "f70308f19f5955c0597c03a27b572abfd4c8746aef6922c959675eb0d56e458d",
+   "kind": "full",
+   "lines": [
+    742
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "941f42d6…126e",
+   "kind": "short",
+   "lines": [
+    742,
+    1152,
+    1199
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+    "records/recog/a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md"
+   ]
+  },
+  {
+   "cited": "c4637e7a5cfaf8eaf001746f172111385f5df2a8cd552e3ab56308ff7abfab28",
+   "kind": "full",
+   "lines": [
+    917,
+    1140,
+    1160
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "7a31357729e1561c600673cf673c785b645666ae65d8280ebbaf9b57722d6b89",
+   "kind": "full",
+   "lines": [
+    1123
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "56bc991d28c4a6f3e841eec5ac8c4550528fbaac91bcfc23ab0dc2540bd2a514",
+   "kind": "full",
+   "lines": [
+    1160
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "c0ef4446…1e39",
+   "kind": "short",
+   "lines": [
+    1199
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "e1d2444f9d8d8c940270d73df4ca20d0323504d93f89dbb2fe6da1a9a3fe48a4",
+   "kind": "full",
+   "lines": [
+    1223
+   ],
+   "name_before": "recog_shear_jet_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_shear_jet_cert.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_shear_jet_cert.py"
+   ]
+  },
+  {
+   "cited": "0a87d59d600a11414fb1b26dd90ef770d3e2ae282a2e5da7b61c8ab648f84383",
+   "kind": "full",
+   "lines": [
+    1224
+   ],
+   "name_before": "recog_cell_a_p5_rawcomp_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_a_p5_rawcomp_cert.py"
+   ]
+  },
+  {
+   "cited": "0414f3a031a4bf9bfe2d1a7d508128114f78d2ca5a28f7b3e99823a62f1979ab",
+   "kind": "full",
+   "lines": [
+    1225
+   ],
+   "name_before": "recog_cell_a_p7_rawcomp_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_a_p7_rawcomp_cert.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_a_p7_rawcomp_cert.py"
+   ]
+  },
+  {
+   "cited": "222c964532a48e04dd37baeb86017620060b8dece250a135552b83d3e3cab2cd",
+   "kind": "full",
+   "lines": [
+    1226
+   ],
+   "name_before": "recog_cell_a2_nu3_closed_form_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_a2_nu3_closed_form_cert.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_a2_nu3_closed_form_cert.py"
+   ]
+  },
+  {
+   "cited": "7ea5e161b9ffa244b279681a067047e66a0a477a29477d0946637694f10b216e",
+   "kind": "full",
+   "lines": [
+    1227
+   ],
+   "name_before": "recog_cell_b_p2_manifolds.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_b_p2_manifolds.py"
+   ]
+  },
+  {
+   "cited": "73a919e24fe5349e7a0944e4c1dc4aeb9fc7d1bd43f8d89f3e25e29ee1476083",
+   "kind": "full",
+   "lines": [
+    1228
+   ],
+   "name_before": "recog_cell_c_lattice_readability_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_c_lattice_readability_cert.py"
+   ]
+  },
+  {
+   "cited": "242b13e33357b7e41c5575a4a39d6eff24b26773fa38360a4effcf85592a8b7f",
+   "kind": "full",
+   "lines": [
+    1229
+   ],
+   "name_before": "recog_cell_d_lattice_memory_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_d_lattice_memory_cert.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_d_lattice_memory_cert.py"
+   ]
+  },
+  {
+   "cited": "b92b9936…59cd",
+   "kind": "short",
+   "lines": [
+    1229
+   ],
+   "name_before": "recog_cell_d_lattice_memory_cert.py",
+   "found": []
+  },
+  {
+   "cited": "5c678051…d3ad",
+   "kind": "short",
+   "lines": [
+    1229
+   ],
+   "name_before": "recog_cell_d_lattice_memory_cert.py",
+   "found": []
+  },
+  {
+   "cited": "1f8876a8a3fc31428d5ffb4873e62eb0780c08763b80281e1edeb8c1ab1223fd",
+   "kind": "full",
+   "lines": [
+    1230,
+    1247
+   ],
+   "name_before": "recog_cell_r8_hetero_enclosure.py",
+   "found": [
+    "evidence/recog/packages/RECOG_E2C_production_bundle.zip!recog_cell_r8_hetero_enclosure.py",
+    "evidence/recog/packages/e2c_prod.zip!e2c_prod/recog_cell_r8_hetero_enclosure.py",
+    "evidence/recog/scripts/recog_cell_r8_hetero_enclosure.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_r8_hetero_enclosure.py"
+   ]
+  },
+  {
+   "cited": "7455811928606076b3bc3075632275dc2a24e37fdbf0ae20036db5529a1b56b7",
+   "kind": "full",
+   "lines": [
+    1230
+   ],
+   "name_before": "recog_cell_r8_hetero_enclosure.py",
+   "found": []
+  },
+  {
+   "cited": "3e98c447af2a28c796eb96fe1c60f1f4106930d3415f1d9b37cdfef70feb0997",
+   "kind": "full",
+   "lines": [
+    1231
+   ],
+   "name_before": "r8_cert.jsonl",
+   "found": [
+    "evidence/recog/outputs/r8_cert.jsonl",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/r8_cert.jsonl"
+   ]
+  },
+  {
+   "cited": "0452547f6e280cb35a1d40de209d92d1e509568e0c9cbd90099d58d769a27d00",
+   "kind": "full",
+   "lines": [
+    1233
+   ],
+   "name_before": "recog_cell_f2c0_fold_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_f2c0_fold_cert.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_f2c0_fold_cert.py"
+   ]
+  },
+  {
+   "cited": "e961997763fd03f43a6241510a1745aeb7041c05cb7ea96327c4f7a4ac074b50",
+   "kind": "full",
+   "lines": [
+    1234
+   ],
+   "name_before": "recog_cell_f2a_sh_section_shadow.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_f2a_sh_section_shadow.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_f2a_sh_section_shadow.py"
+   ]
+  },
+  {
+   "cited": "a78de837fd4b2ac8b517ba7070c269292f37cfd4e5ca965c04e271451a31ba1d",
+   "kind": "full",
+   "lines": [
+    1235
+   ],
+   "name_before": "recog_cell_f2b_token_bridge.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_f2b_token_bridge.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_f2b_token_bridge.py"
+   ]
+  },
+  {
+   "cited": "07082c4cd19f8fc7f790bf393a7426f7ccbd923fed03025d40f230af51e9f3ff",
+   "kind": "full",
+   "lines": [
+    1235
+   ],
+   "name_before": "f2b_results_rev2.json",
+   "found": [
+    "evidence/recog/outputs/f2b_results_rev2.json"
+   ]
+  },
+  {
+   "cited": "9c0b065523a6c90375a1ec51acdfeb1064e1617a052740d3e47bce0c3009e46a",
+   "kind": "full",
+   "lines": [
+    1235
+   ],
+   "name_before": "f2b_results_rev2.json",
+   "found": []
+  },
+  {
+   "cited": "76c9b2309341fd9a6a0b801d932ac70b841a2c34c0c0409434d71dc90a9fcf39",
+   "kind": "full",
+   "lines": [
+    1236
+   ],
+   "name_before": "recog_cell_e3a1_survivor_probe_rev3_1.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3a1_survivor_probe_rev3_1.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3a1_survivor_probe_rev3_1.py"
+   ]
+  },
+  {
+   "cited": "40b0f170ca13de190df84e774819c023e83d46bca926ec7b91b5faeb5253673e",
+   "kind": "full",
+   "lines": [
+    1236
+   ],
+   "name_before": "e3a1r31_summary.json",
+   "found": [
+    "evidence/recog/outputs/e3a1r31_summary.json"
+   ]
+  },
+  {
+   "cited": "0a59d01ef9c8ac0026fa61dbdc60f840297a3574d6bbe81be02fedd2d2956be4",
+   "kind": "full",
+   "lines": [
+    1236
+   ],
+   "name_before": "e3a1r31_late_cells.jsonl",
+   "found": [
+    "evidence/recog/outputs/e3a1r31_late_cells.jsonl"
+   ]
+  },
+  {
+   "cited": "81b792ec7c3a5700892cd9d37fb89327ae882dcb033279b3131abef921e26589",
+   "kind": "full",
+   "lines": [
+    1236
+   ],
+   "name_before": "e3a1r31_late_cells.jsonl",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3a1_survivor_probe.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3a1_survivor_probe.py"
+   ]
+  },
+  {
+   "cited": "a7c5bbb57e41e03114b6a705ca4e46db5d4cbe680033cfc9e7b2164f2b891ec9",
+   "kind": "full",
+   "lines": [
+    1236
+   ],
+   "name_before": "e3a1r31_late_cells.jsonl",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3a1_survivor_probe_rev2.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3a1_survivor_probe_rev2.py"
+   ]
+  },
+  {
+   "cited": "fc9ce655abb2cbdb1129efcdf2d6a22547f5e9aaed9de3bb873cf8c5694598c3",
+   "kind": "full",
+   "lines": [
+    1236
+   ],
+   "name_before": "e3a1r31_late_cells.jsonl",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3a1_survivor_probe_rev3.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3a1_survivor_probe_rev3.py"
+   ]
+  },
+  {
+   "cited": "a90dd72e7ce9964dc0b1be23c388728c5d1dd81f1297610b7f619bfeec789d9e",
+   "kind": "full",
+   "lines": [
+    1237
+   ],
+   "name_before": "recog_cell_e3a3a_p9_saddle_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3a3a_p9_saddle_cert.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3a3a_p9_saddle_cert.py"
+   ]
+  },
+  {
+   "cited": "01ba69c3b5a36afc6ff5baf46eaf14de86876533546f7e6f93c4b187bb642cef",
+   "kind": "full",
+   "lines": [
+    1237
+   ],
+   "name_before": "e3a3a_p9_saddle.json",
+   "found": [
+    "evidence/recog/outputs/e3a3a_p9_saddle.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/e3a3a_p9_saddle.json"
+   ]
+  },
+  {
+   "cited": "ede0b7e1074463c3c526177ea9dc55486bdf46c000753f0351a6cb7903448e21",
+   "kind": "full",
+   "lines": [
+    1238
+   ],
+   "name_before": "recog_cell_e3a3b_p9_stable_local.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3a3b_p9_stable_local.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3a3b_p9_stable_local.py"
+   ]
+  },
+  {
+   "cited": "545ecf628d6bdc40fe16530624935380868ae7252d6da23ad10f88421fc4531a",
+   "kind": "full",
+   "lines": [
+    1238
+   ],
+   "name_before": "e3a3b_p9_stable_local.json",
+   "found": [
+    "evidence/recog/outputs/e3a3b_p9_stable_local.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/e3a3b_p9_stable_local.json"
+   ]
+  },
+  {
+   "cited": "d130f2db21a8263e899497d598f6e379ad80f65b1ecbea5dc44c9073a70840f9",
+   "kind": "full",
+   "lines": [
+    1239
+   ],
+   "name_before": "recog_cell_e3b_c0_access.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3b_c0_access.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3b_c0_access.py"
+   ]
+  },
+  {
+   "cited": "225b4fa0ab665e3f9d895328417235bf10669033e65f4ab68b6f78c5e99d763e",
+   "kind": "full",
+   "lines": [
+    1239
+   ],
+   "name_before": "e3b_candidate.json",
+   "found": [
+    "evidence/recog/outputs/e3b_candidate.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/e3b_candidate.json"
+   ]
+  },
+  {
+   "cited": "eba9bad71f1b1ca396abee2f0c736e5c6170d3f9c7fb0fe8d52814ec87e2b1ed",
+   "kind": "full",
+   "lines": [
+    1239
+   ],
+   "name_before": "e3b_cert.json",
+   "found": [
+    "evidence/recog/outputs/e3b_cert.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/e3b_cert.json"
+   ]
+  },
+  {
+   "cited": "354832ef837a26dce2cf5a930034bf87870dcc4cdd16153977df073faad95d4f",
+   "kind": "full",
+   "lines": [
+    1240
+   ],
+   "name_before": "RECOG_E3A4_PREREGISTRATION.md",
+   "found": [
+    "records/recog/RECOG_E3A4_PREREGISTRATION.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/RECOG_E3A4_PREREGISTRATION.md"
+   ]
+  },
+  {
+   "cited": "6245533cb48ad9e32207ec13aaa11377d68b6587885724534fd539f696ce8f54",
+   "kind": "full",
+   "lines": [
+    1240
+   ],
+   "name_before": "recog_cell_e3a4_crossing.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3a4_crossing.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3a4_crossing.py"
+   ]
+  },
+  {
+   "cited": "462f25ad82ec8c1b2ecb259c6e2933a8ccd5d64a015ebd97de698c008c3bb31f",
+   "kind": "full",
+   "lines": [
+    1240
+   ],
+   "name_before": "e3a4_candidate.json",
+   "found": [
+    "evidence/recog/outputs/e3a4_candidate.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/e3a4_candidate.json"
+   ]
+  },
+  {
+   "cited": "8bb7bc8a3010d344b67214ab18345b5c3bd87abaebd77e76db99d0335359e64d",
+   "kind": "full",
+   "lines": [
+    1240
+   ],
+   "name_before": "e3a4_cert.json",
+   "found": [
+    "evidence/recog/outputs/e3a4_cert.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/e3a4_cert.json"
+   ]
+  },
+  {
+   "cited": "431232b2b3cfa66402ce6240076de77b9d7185dfb0f2ed57f85ac4e61f9d8904",
+   "kind": "full",
+   "lines": [
+    1240
+   ],
+   "name_before": "recog_cell_e3a4_gate.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e3a4_gate.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e3a4_gate.py"
+   ]
+  },
+  {
+   "cited": "b7d481e906743a05022f7e8366ee02b717ac7a5f9c9b0d619bb4f3c776da9702",
+   "kind": "full",
+   "lines": [
+    1241
+   ],
+   "name_before": "recog_cell_e1_twin_survey.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e1_twin_survey.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e1_twin_survey.py"
+   ]
+  },
+  {
+   "cited": "6cf4a0a37ec7373d2b7bb4eaa304d31bcd2985cf01ec9443af79fa2d44fac253",
+   "kind": "full",
+   "lines": [
+    1241
+   ],
+   "name_before": "e1_survey.json",
+   "found": [
+    "evidence/recog/outputs/e1_survey.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/e1_survey.json"
+   ]
+  },
+  {
+   "cited": "7f58c163598ebae58f13beef180879e9e5638ac41394d056d85ac29bd8d72967",
+   "kind": "full",
+   "lines": [
+    1242
+   ],
+   "name_before": "recog_cell_e2a_twin_expansion.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_e2a_twin_expansion.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e2a_twin_expansion.py"
+   ]
+  },
+  {
+   "cited": "e0522aec291a6d3573ccb15e28045ad42b32e4e7225b5a616eeae34a0e1a1b22",
+   "kind": "full",
+   "lines": [
+    1243
+   ],
+   "name_before": "recog_cell_e2c_twin_radial_access.py",
+   "found": [
+    "evidence/recog/packages/RECOG_E2C_production_bundle.zip!recog_cell_e2c_twin_radial_access.py",
+    "evidence/recog/packages/e2c_prod.zip!e2c_prod/recog_cell_e2c_twin_radial_access.py",
+    "evidence/recog/scripts/recog_cell_e2c_twin_radial_access.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e2c_twin_radial_access.py"
+   ]
+  },
+  {
+   "cited": "26da4ccaabf7834a5a444db4e429977f2b60231d4b98d90599e81c78e04a51a6",
+   "kind": "full",
+   "lines": [
+    1243
+   ],
+   "name_before": "e2c_calibration_clip.jsonl",
+   "found": [
+    "evidence/recog/outputs/e2c_calibration_clip.jsonl",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/e2c_calibration_clip.jsonl"
+   ]
+  },
+  {
+   "cited": "09632da1d709c115912aba85ace7b9f099ec5e677bd9bc699a5726a08537e97a",
+   "kind": "full",
+   "lines": [
+    1243
+   ],
+   "name_before": "e2c_witness_audit.py",
+   "found": [
+    "evidence/recog/scripts/e2c_witness_audit.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/e2c_witness_audit.py"
+   ]
+  },
+  {
+   "cited": "0c42131cf3ab209f7ea1f2b7fafddf96267cb5e0317fa334fde42d018074cb4b",
+   "kind": "full",
+   "lines": [
+    1244
+   ],
+   "name_before": "e2c_production_driver.py",
+   "found": [
+    "evidence/recog/packages/RECOG_E2C_production_bundle.zip!e2c_production_driver.py",
+    "evidence/recog/packages/e2c_prod.zip!e2c_prod/e2c_production_driver.py",
+    "evidence/recog/scripts/e2c_production_driver.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/e2c_production_driver.py"
+   ]
+  },
+  {
+   "cited": "d8364d439f876ac2df9fcad82a3ade609f9dbf55fefbd6eb34f315f72fc2fc40",
+   "kind": "full",
+   "lines": [
+    1244
+   ],
+   "name_before": "e2c_production_gate.py",
+   "found": [
+    "evidence/recog/packages/RECOG_E2C_production_bundle.zip!e2c_production_gate.py",
+    "evidence/recog/packages/e2c_prod.zip!e2c_prod/e2c_production_gate.py",
+    "evidence/recog/scripts/e2c_production_gate.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/e2c_production_gate.py"
+   ]
+  },
+  {
+   "cited": "4762077256f0cfb113c22e4f9898b9c77e0afb374f308eb2127c68677a095ca2",
+   "kind": "full",
+   "lines": [
+    1245
+   ],
+   "name_before": "e2c_refine_driver.py",
+   "found": [
+    "evidence/recog/packages/RECOG_E2C_refinement_and_gate_v2.zip!e2c_refine_driver.py"
+   ]
+  },
+  {
+   "cited": "5f354fc163e49e53818e963ccdcaeb198441da063594fdb423a23cf9d83bbd99",
+   "kind": "full",
+   "lines": [
+    1245
+   ],
+   "name_before": "e2c_refine_m2.jsonl",
+   "found": [
+    "evidence/recog/packages/RECOG_E2C_refinement_and_gate_v2.zip!e2c_refine_m2.jsonl"
+   ]
+  },
+  {
+   "cited": "daa3abb3012723370987767d98161a045ab234341b4bf4c2b90ba1fa64caa842",
+   "kind": "full",
+   "lines": [
+    1246
+   ],
+   "name_before": "e2c_production_gate_v2.py",
+   "found": [
+    "evidence/recog/packages/RECOG_E2C_refinement_and_gate_v2.zip!e2c_production_gate_v2.py"
+   ]
+  },
+  {
+   "cited": "1d58749b12f187d879ef142a79d60c9a507c76cb325cf9888d4717a06b697c15",
+   "kind": "full",
+   "lines": [
+    1246
+   ],
+   "name_before": "e2c_production_certificate_v2.json",
+   "found": [
+    "evidence/recog/packages/RECOG_E2C_refinement_and_gate_v2.zip!e2c_production_certificate_v2.json"
+   ]
+  },
+  {
+   "cited": "738e80a95e7da3acf233ca24cc5f5f422938d4bbfe13a48d3b5364bbef3f77b9",
+   "kind": "full",
+   "lines": [
+    1247
+   ],
+   "name_before": "recog_cell_b3_p2_c0_first.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_b3_p2_c0_first.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_b3_p2_c0_first.py"
+   ]
+  },
+  {
+   "cited": "f50e1a23b41d4cbcf9079b9a02f6639477d7b3a1e468bba8e61519a6e5e27bfd",
+   "kind": "full",
+   "lines": [
+    1248
+   ],
+   "name_before": "b3_cert.json",
+   "found": [
+    "evidence/recog/outputs/b3_cert.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/b3_cert.json"
+   ]
+  },
+  {
+   "cited": "c033fa85ae48054cbcc6ae411e59b4dc9c6536672a69676b05f72e655c3c1717",
+   "kind": "full",
+   "lines": [
+    1249
+   ],
+   "name_before": "recog_cell_r9_memory_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_r9_memory_cert.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_r9_memory_cert.py"
+   ]
+  },
+  {
+   "cited": "a492d1636e93ad392d22364a34f40ea4b86aed8b8c9b773ad238b3d9474f087c",
+   "kind": "full",
+   "lines": [
+    1250
+   ],
+   "name_before": "recog_cell_r8_gate.py",
+   "found": [
+    "evidence/recog/scripts/recog_cell_r8_gate.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_r8_gate.py"
+   ]
+  },
+  {
+   "cited": "a4950ed525f2e6ee4be0ddd7f9607b2c3c14d8e31052a88db6ae163fa5d6e5e5",
+   "kind": "full",
+   "lines": [
+    1251
+   ],
+   "name_before": "recog_r11_chart_ledger_cert.py",
+   "found": [
+    "evidence/recog/scripts/recog_r11_chart_ledger_cert.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_r11_chart_ledger_cert.py"
+   ]
+  },
+  {
+   "cited": "24a9fd85e35c08fb3cc7e3d5f4e35f506e080124feae036c05442bf0fed4c9f3",
+   "kind": "full",
+   "lines": [
+    1254
+   ],
+   "name_before": "RECOG_MEMO_TO_STREAMS_2026-09-30_R6_ADDENDUM.md",
+   "found": [
+    "records/recog/RECOG_MEMO_TO_STREAMS_2026-09-30_R6_ADDENDUM.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/RECOG_MEMO_TO_STREAMS_2026-09-30_R6_ADDENDUM.md"
+   ]
+  },
+  {
+   "cited": "5c00f66dae7d4de6ccd4a04d642a23edfc861bbd6bd55e432513747fbd679b55",
+   "kind": "full",
+   "lines": [
+    1255
+   ],
+   "name_before": "RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+   "found": [
+    "records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md"
+   ]
+  },
+  {
+   "cited": "99fce74bd8f3c2151da2de548e4d66603b89ec9aefbd1773cfa2126381ba20aa",
+   "kind": "full",
+   "lines": [
+    1256
+   ],
+   "name_before": "RECOG_G2_DYADIC_CLAIM_AUDIT_v0_1_2.md",
+   "found": [
+    "records/recog/RECOG_G2_DYADIC_CLAIM_AUDIT_v0_1_2.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/RECOG_G2_DYADIC_CLAIM_AUDIT_v0_1_2.md"
+   ]
+  },
+  {
+   "cited": "8cb0119331c70b52412701f9056c7db651ff87fbe5f75ebff370aa002fa15ecb",
+   "kind": "full",
+   "lines": [
+    1256
+   ],
+   "name_before": "RECOG_G2_DYADIC_SOURCE_FIDELITY_RUN_v0_1.md",
+   "found": [
+    "records/recog/RECOG_G2_DYADIC_SOURCE_FIDELITY_RUN_v0_1.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/RECOG_G2_DYADIC_SOURCE_FIDELITY_RUN_v0_1.md"
+   ]
+  },
+  {
+   "cited": "97a24f129f62060356611ef74561aeecc3e0fe8a1025ce1a65634eeb146b1d30",
+   "kind": "full",
+   "lines": [
+    1256
+   ],
+   "name_before": "RECOG_G2_DYADIC_SOURCE_FIDELITY_RUN_v0_1_1.md",
+   "found": [
+    "records/recog/RECOG_G2_DYADIC_SOURCE_FIDELITY_RUN_v0_1_1.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/RECOG_G2_DYADIC_SOURCE_FIDELITY_RUN_v0_1_1.md"
+   ]
+  },
+  {
+   "cited": "36e44660836f83448b871253ac0bfe98bb23a65d8033504086d84cd312ba151e",
+   "kind": "full",
+   "lines": [
+    1256
+   ],
+   "name_before": "RECOG_G2_GENESIS_OFN_RRF_CLAIM_AUDIT_v0_1.md",
+   "found": [
+    "records/recog/RECOG_G2_GENESIS_OFN_RRF_CLAIM_AUDIT_v0_1.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/RECOG_G2_GENESIS_OFN_RRF_CLAIM_AUDIT_v0_1.md"
+   ]
+  },
+  {
+   "cited": "8af2a00da31461d557dea765af0c4a04882608f0428232d6f39eb7edf782a364",
+   "kind": "full",
+   "lines": [
+    1256
+   ],
+   "name_before": "recog_g2_dyad_passage_diff.py",
+   "found": [
+    "evidence/recog/scripts/recog_g2_dyad_passage_diff.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_g2_dyad_passage_diff.py"
+   ]
+  },
+  {
+   "cited": "aade4354d2172b96590de70c9d6236214e84646b2527133f60ffce7a033204d9",
+   "kind": "full",
+   "lines": [
+    1256
+   ],
+   "name_before": "recog_g2_section_diff.py",
+   "found": [
+    "evidence/recog/scripts/recog_g2_section_diff.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_g2_section_diff.py"
+   ]
+  },
+  {
+   "cited": "343d737e480a065dea36b68a56e776f1432b5e96c6ad2bb3d09f69c3b5965c7a",
+   "kind": "full",
+   "lines": [
+    1258
+   ],
+   "name_before": "recog_a1a_c1_angle_bound_check.py",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/c4/recog_a1a_c1_angle_bound_check.py",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/c4/recog_a1a_c1_angle_bound_check.py",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/c4/recog_a1a_c1_angle_bound_check.py",
+    "evidence/recog/scripts/recog_a1a_c1_angle_bound_check.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_a1a_c1_angle_bound_check.py"
+   ]
+  },
+  {
+   "cited": "6ef14428001c6ed51d0066d9062d0e1247927eea3ccba60e1aaff20e641882ea",
+   "kind": "full",
+   "lines": [
+    1258
+   ],
+   "name_before": "recog_a1a_c1_angle_bound_check_output.txt",
+   "found": [
+    "evidence/recog/outputs/recog_a1a_c1_angle_bound_check_output.txt",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/c4/recog_a1a_c1_angle_bound_check_output.txt",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/c4/recog_a1a_c1_angle_bound_check_output.txt",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/c4/recog_a1a_c1_angle_bound_check_output.txt",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/recog_a1a_c1_angle_bound_check_output.txt"
+   ]
+  },
+  {
+   "cited": "efccd210007ac206aff8ed1804051dc29f1ed110a426aee66325778ce90c791b",
+   "kind": "full",
+   "lines": [
+    1259
+   ],
+   "name_before": "recog_a1a_cd_identity_num.py",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/recog_a1a_cd_identity_num.py",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/recog_a1a_cd_identity_num.py",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/recog_a1a_cd_identity_num.py",
+    "evidence/recog/scripts/recog_a1a_cd_identity_num.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_a1a_cd_identity_num.py"
+   ]
+  },
+  {
+   "cited": "09136040e85dcece83c52e1f159129c76f279ee23446580ab06f9d70478c9740",
+   "kind": "full",
+   "lines": [
+    1259
+   ],
+   "name_before": "a1a_cd_identity_num.json",
+   "found": [
+    "evidence/recog/outputs/a1a_cd_identity_num.json",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/a1a_cd_identity_num.json",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/a1a_cd_identity_num.json",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/a1a_cd_identity_num.json",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/outputs/a1a_cd_identity_num.json"
+   ]
+  },
+  {
+   "cited": "cf22e325…f218",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_1.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_1.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_1.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_1.md",
+    "records/recog/a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_1.md"
+   ]
+  },
+  {
+   "cited": "b4906ddf…c428",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_2.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_2.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_2.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_2.md",
+    "records/recog/a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_2.md"
+   ]
+  },
+  {
+   "cited": "e542d105…8de0",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_3.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_3.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_3.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_3.md",
+    "records/recog/a1a/RECOG_A1A_CD_IDENTIFICATION_SESSION_v0_3.md"
+   ]
+  },
+  {
+   "cited": "fe80d507…2edd",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_DYADIC_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_DYADIC_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_DYADIC_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/c4/RECOG_A1A_C4_QUESTION_TO_DYADIC_20261020.md",
+    "records/recog/a1a/c4/RECOG_A1A_C4_QUESTION_TO_DYADIC_20261020.md"
+   ]
+  },
+  {
+   "cited": "f2b92173…9fec",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020.md",
+    "records/recog/a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020.md"
+   ]
+  },
+  {
+   "cited": "7a0752c7…6598",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020_r2.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020_r2.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020_r2.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020_r2.md",
+    "records/recog/a1a/c4/RECOG_A1A_C4_QUESTION_TO_NUMGEN_20261020_r2.md"
+   ]
+  },
+  {
+   "cited": "36e20687…ee91",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/c4/RECOG_A1A_C4_DYAD_RESPONSE_RECEIPT_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/c4/RECOG_A1A_C4_DYAD_RESPONSE_RECEIPT_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/c4/RECOG_A1A_C4_DYAD_RESPONSE_RECEIPT_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/c4/RECOG_A1A_C4_DYAD_RESPONSE_RECEIPT_20261020.md",
+    "records/recog/a1a/c4/RECOG_A1A_C4_DYAD_RESPONSE_RECEIPT_20261020.md"
+   ]
+  },
+  {
+   "cited": "e5a5fcec…fec1",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "511e3c1d…782d",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_1.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_1.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_1.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/RECOG_A1A_CELL_DRAFT_v0_1.md",
+    "records/recog/a1a/RECOG_A1A_CELL_DRAFT_v0_1.md"
+   ]
+  },
+  {
+   "cited": "7adace40…ad79",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_2.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_2.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_2.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/RECOG_A1A_CELL_DRAFT_v0_2.md",
+    "records/recog/a1a/RECOG_A1A_CELL_DRAFT_v0_2.md"
+   ]
+  },
+  {
+   "cited": "febed7f9…9562",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_3.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_3.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_3.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/RECOG_A1A_CELL_DRAFT_v0_3.md",
+    "records/recog/a1a/RECOG_A1A_CELL_DRAFT_v0_3.md"
+   ]
+  },
+  {
+   "cited": "11758403…f4f7",
+   "kind": "short",
+   "lines": [
+    1260,
+    1322
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_4.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_4.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/RECOG_A1A_CELL_DRAFT_v0_4.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/RECOG_A1A_CELL_DRAFT_v0_4.md",
+    "records/recog/a1a/RECOG_A1A_CELL_DRAFT_v0_4.md"
+   ]
+  },
+  {
+   "cited": "02762139…f0e8b",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "1b1c664e…7068a0",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "d9b20aea…7a5",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "5ccf9098…f994",
+   "kind": "short",
+   "lines": [
+    1260
+   ],
+   "name_before": null,
+   "found": []
+  },
+  {
+   "cited": "941f42d6273f707bb161c24bd7e753c12acacda991dd29ff4050cbdcbfa6126e",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+    "records/recog/a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/e2/RECOG_A1A_E2_OPEN21_SOURCE_CHECK_v6_4_18_20261020.md"
+   ]
+  },
+  {
+   "cited": "d195af7aa5453d7392bfbb9f56fafb33cf8a391bf036935c7af56c15f8445274",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+    "records/recog/a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md"
+   ]
+  },
+  {
+   "cited": "a89b69243f24d63f74fed29c9af809f8616017ecdbbd8ef07446ed646e0246a0",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_TO_NUMGEN_A1A_RID_REQUEST_20261020.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/g1/RECOG_TO_NUMGEN_A1A_RID_REQUEST_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/g1/RECOG_TO_NUMGEN_A1A_RID_REQUEST_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/g1/RECOG_TO_NUMGEN_A1A_RID_REQUEST_20261020.md",
+    "records/recog/a1a/g1/RECOG_TO_NUMGEN_A1A_RID_REQUEST_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/g1/RECOG_TO_NUMGEN_A1A_RID_REQUEST_20261020.md"
+   ]
+  },
+  {
+   "cited": "184a74fcede666c9427d0f959ed94b15c4206435b371b7d69b438a7254265227",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/g1/NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md",
+    "records/recog/a1a/g1/NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/g1/NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md"
+   ]
+  },
+  {
+   "cited": "a2e7bf98fe08d2d64a883b8996c285ba4b67c94f73bb53548abe206f228b1902",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1_1.md",
+   "found": [
+    "records/recog/a1a/g1/NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1_1.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/g1/NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1_1.md"
+   ]
+  },
+  {
+   "cited": "582d931e0055964fccd541e9ba33defce65f57c6e1cb53385d0f1f155502ceae",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_A1A_G1_DISPOSITION_ADDENDUM_FINAL_REPLY_20261020.md",
+   "found": [
+    "records/recog/a1a/g1/RECOG_A1A_G1_DISPOSITION_ADDENDUM_FINAL_REPLY_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/g1/RECOG_A1A_G1_DISPOSITION_ADDENDUM_FINAL_REPLY_20261020.md"
+   ]
+  },
+  {
+   "cited": "87a0d9ce72f717be4a1cd256a12ff98b399578047d1d6da7b81fd447ac40722b",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_A1A_G1_RECEIPT_OF_NUMGEN_REPLY_20261020.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/g1/RECOG_A1A_G1_RECEIPT_OF_NUMGEN_REPLY_20261020.md",
+    "records/recog/a1a/g1/RECOG_A1A_G1_RECEIPT_OF_NUMGEN_REPLY_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/g1/RECOG_A1A_G1_RECEIPT_OF_NUMGEN_REPLY_20261020.md"
+   ]
+  },
+  {
+   "cited": "0e5f91c0dabbd34bb8261ddd6e0a34361be4dbaaa9b3545b0f98fc14e3e971a7",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_A1A_G1_DISPOSITION_RECORD_20261020.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/g1/RECOG_A1A_G1_DISPOSITION_RECORD_20261020.md",
+    "records/recog/a1a/g1/RECOG_A1A_G1_DISPOSITION_RECORD_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/g1/RECOG_A1A_G1_DISPOSITION_RECORD_20261020.md"
+   ]
+  },
+  {
+   "cited": "fee7e519f3e6cd8bf32aa2be0402bef667178148ea43c9fa8521159a1d500efe",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/reviews/RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md",
+    "records/recog/a1a/reviews/RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/reviews/RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md"
+   ]
+  },
+  {
+   "cited": "2a65093baa6a07e57faa056ecd755cc8689f94c59d5f071996b31ebb5979fc96",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_v0_3_22_DRAFT_r3_DELTA_RECEIVING_REVIEW_20261020.md",
+   "found": [
+    "records/recog/a1a/reviews/RECOG_v0_3_22_DRAFT_r3_DELTA_RECEIVING_REVIEW_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/reviews/RECOG_v0_3_22_DRAFT_r3_DELTA_RECEIVING_REVIEW_20261020.md"
+   ]
+  },
+  {
+   "cited": "c1d4901381305a101d11b88a5f553619eceb562829c40580fcf6734b34d88d17",
+   "kind": "full",
+   "lines": [
+    1261
+   ],
+   "name_before": "RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/reviews/RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/reviews/RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md",
+    "records/recog/a1a/reviews/RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/reviews/RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md"
+   ]
+  },
+  {
+   "cited": "d195af7a…8445274",
+   "kind": "short",
+   "lines": [
+    1322
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r1_package.zip!a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md",
+    "records/recog/a1a/reviews/RECOG_A1A_CELL_DRAFT_v0_4_RELEASE_READINESS_REVIEW_20261020.md"
+   ]
+  },
+  {
+   "cited": "fee7e519…0efe",
+   "kind": "short",
+   "lines": [
+    1325
+   ],
+   "name_before": "RECOG_A1A_G1_DISPOSITION_RECORD_20261020.md",
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/reviews/RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/reviews/RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md",
+    "records/recog/a1a/reviews/RECOG_v0_3_22_DRAFT_r2_INDEPENDENT_RECEIVING_REVIEW_20261020.md"
+   ]
+  },
+  {
+   "cited": "c1d49013…8d17",
+   "kind": "short",
+   "lines": [
+    1327
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r2_package.zip!a1a/reviews/RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md",
+    "evidence/recog/packages/RECOG_v0_3_22_DRAFT_r3_package.zip!a1a/reviews/RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/a1a/reviews/RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md",
+    "records/recog/a1a/reviews/RECOG_v0_3_22_DRAFT_r1_INTEGRATED_RECEIVING_REVIEW_20261020.md"
+   ]
+  },
+  {
+   "cited": "8cb01193…15ecb",
+   "kind": "short",
+   "lines": [
+    1339
+   ],
+   "name_before": null,
+   "found": [
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/records/RECOG_G2_DYADIC_SOURCE_FIDELITY_RUN_v0_1.md",
+    "records/recog/RECOG_G2_DYADIC_SOURCE_FIDELITY_RUN_v0_1.md"
+   ]
+  },
+  {
+   "cited": "7f58c163…d72967",
+   "kind": "short",
+   "lines": [
+    1440
+   ],
+   "name_before": null,
+   "found": [
+    "evidence/recog/scripts/recog_cell_e2a_twin_expansion.py",
+    "history f177eee:upload/recog-record-recovery/RECOG_HANDOVER_RECORDS_AND_EVIDENCE_20261023.zip!recog-records/evidence/scripts/recog_cell_e2a_twin_expansion.py"
+   ]
+  }
+ ]
+}
