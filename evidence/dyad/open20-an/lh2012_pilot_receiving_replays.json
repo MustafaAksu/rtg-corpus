@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-23",
+  "reviewer": "ChatGPT",
+  "reviewed_commit": "220cc75d39e1796e3409e3bcc81fd275b154483f",
+  "scope": "Same-code finite-input replay and receiving algebra checks; no Stokes computation or pilot campaign.",
+  "script_sha256": "adbe4c47b563c75c2ccf71e4846548aacd0a4406ffcee2cd3560d89b5935dbbc",
+  "helper_sha256": "dd06a1a20466dbe16da9c9b2e5bfe01a209decbedeed5a2c4a3ba33c783c1e6d",
+  "command": "python -I -B evidence/dyad/scripts/dyad_lh2012_transfer_check.py [--control C|S|Z]",
+  "runs": [
+    {"control": null, "exit": 0, "pass_count": 9, "failing_gates": [], "stdout_sha256": "01d01083c7ffe9fce45dcf2de102eebcade61d22288860e7a7765a56137f7352"},
+    {"control": "C", "exit": 1, "pass_count": 7, "failing_gates": ["L3", "L5"], "stdout_sha256": "a1192843944e0e8cfc96dddf2f452ca25fac6dced45e329e2a277fc0fd5f408c"},
+    {"control": "S", "exit": 1, "pass_count": 7, "failing_gates": ["L8", "L9"], "stdout_sha256": "65bc5e861e4f6719976dcf909f075e3b028a7e80613c4d6b37860e318329937d"},
+    {"control": "Z", "exit": 1, "pass_count": 6, "failing_gates": ["L3", "L5", "L6"], "stdout_sha256": "6ae9fee9e011bb585655fb1e899c119bece09a5ee721a1de463c28ac0ad9423f"}
+  ],
+  "positive_stdout_git_blob": "f489b6ce19ea34bd8ca3e01bc9150fc79b310258",
+  "positive_stdout_matches_committed_output": true,
+  "exact_geometry_check": {
+    "map": "f(xi)=xi-xi^4",
+    "direction": "4/5+3i/5",
+    "cos_3theta": "-44/125",
+    "radius_cutoff": "1/100",
+    "input_radius": "9999999/1000000000",
+    "input_within_angle_and_radius": true,
+    "image_radius_exceeds_cutoff": true,
+    "norm_squared_minus_cutoff_squared": "50400065799927040027295994435200699295944000002799999920000001/1000000000000000000000000000000000000000000000000000000000000000000000000",
+    "adjacent_overlap_width_pi_units": "1/12",
+    "explanation": "Exact rational model counterexample to straight-sector radial invariance; not a DYAD orbit certificate. See receiving review P-R3."
+  },
+  "full_P1c_proof_rerun": false,
+  "source_PDF_compared": false,
+  "canonical_DSN_changed": false
+}
