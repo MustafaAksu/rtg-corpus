@@ -1,0 +1,67 @@
+{
+  "status": "DRAFT_REVIEW_READY",
+  "source_snapshot": "9453e35cec6d5a4da076652527c13176db27f6f8",
+  "source_tag": "recog-v0.3.23",
+  "source_sha256": "0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a",
+  "atlas_sha256": "71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b",
+  "atlas_bytes": 467029,
+  "method_changed": false,
+  "owner_files_changed": false,
+  "source_rows": 18,
+  "unchanged_source_bytes": 17,
+  "changed_source_bytes": 1,
+  "edit_operations": 99,
+  "d3_diagnostic_dispositions": {
+    "retired": 10,
+    "reworded": 7,
+    "retained": 3
+  },
+  "recog_scientific_homes": 73,
+  "recog_artifact_declarations": 37,
+  "scope_checks": 22,
+  "negative_controls": 18,
+  "shared_controls": 18,
+  "shared_counts": {
+    "sources": {
+      "PASS": 72
+    },
+    "coverage": {
+      "PASS": 128
+    },
+    "qualifiers": {
+      "PASS": 3
+    },
+    "links": {
+      "PASS": 410,
+      "UNVERIFIED": 4,
+      "DOCUMENTED-UNRESOLVED": 11
+    },
+    "artifacts": {
+      "PASS": 96,
+      "UNVERIFIED": 3
+    },
+    "keys": {
+      "PASS": 51
+    },
+    "process": {},
+    "wording": {
+      "WARN": 16
+    }
+  },
+  "identities": {
+    "atlas/RTG_STATE_ATLAS.md": "71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b",
+    "atlas/RTG_STATE_ATLAS_METHOD.md": "fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04",
+    "evidence/atlas/v0.3/source_manifest.json": "db347c8f48da659d1f491fc8f764b6cbc7de2c729c2c1eba1a449f0985b10c96",
+    "tools/atlas_check.py": "0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d",
+    "evidence/atlas/build/refresh_v0_3.py": "9ab9c8d6dfed9c87b725244ac63d4b4fcfcbc79269f26e722bb5ed833da6b458"
+  },
+  "independent_scientific_certificate_replays": 0,
+  "build_replay_identical": true,
+  "limitations": [
+    "Structural checks do not establish semantic completeness or mathematical truth.",
+    "Source manifests authenticate tagged bytes, not historical v0.1 extraction-input equality.",
+    "Artifact declarations/names do not establish execution; inherited reports are source-reported.",
+    "Consumer pins remain at their actual editions; Atlas refresh is not downstream adoption.",
+    "FC-22 clock derivation and smooth section-shadow transfer remain unadopted research tasks."
+  ]
+}

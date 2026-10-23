@@ -1,0 +1,148 @@
+[
+  {
+    "id": "U01 remove new result home",
+    "expected_failure": "new-result-home",
+    "failures": [
+      "new-result-home",
+      "explicit-U-and-series",
+      "no-R9-or-INF1-proof-dependency",
+      "unchanged-domain-and-quantitative-nonclaims",
+      "new-artifact-support",
+      "postulated-generator-wording"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U02 widen start domain",
+    "expected_failure": "explicit-U-and-series",
+    "failures": [
+      "explicit-U-and-series"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U03 remove R9-free scope",
+    "expected_failure": "no-R9-or-INF1-proof-dependency",
+    "failures": [
+      "no-R9-or-INF1-proof-dependency"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U04 remove domain boundary",
+    "expected_failure": "unchanged-domain-and-quantitative-nonclaims",
+    "failures": [
+      "unchanged-domain-and-quantitative-nonclaims"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U05 widen old NUMGEN route",
+    "expected_failure": "preserve-NUMGEN-overlap-route",
+    "failures": [
+      "preserve-NUMGEN-overlap-route"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U06 physical covariance inference",
+    "expected_failure": "no-physical-swap-discharge",
+    "failures": [
+      "no-physical-swap-discharge"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U07 remove swap lemma assumption",
+    "expected_failure": "swap-odd-premise",
+    "failures": [
+      "swap-odd-premise"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U08 false full backbone constant",
+    "expected_failure": "backbone-input-not-full-constant",
+    "failures": [
+      "backbone-input-not-full-constant"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U09 necessity overclaim",
+    "expected_failure": "F5-sufficient-not-necessary",
+    "failures": [
+      "F5-sufficient-not-necessary"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U10 phi ownership",
+    "expected_failure": "phi-comparison-not-ownership",
+    "failures": [
+      "phi-comparison-not-ownership"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U11 evidence pointer removed",
+    "expected_failure": "new-artifact-support",
+    "failures": [
+      "new-artifact-support"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U12 retired diagnostic",
+    "expected_failure": "no-retired-diagnostics",
+    "failures": [
+      "edition-presentation",
+      "no-retired-diagnostics"
+    ],
+    "detected": true
+  },
+  {
+    "id": "U13 RID left in dependencies is not coverage",
+    "detected": true
+  },
+  {
+    "id": "U14 mismatched footer",
+    "expected_failure": "edition-presentation",
+    "failures": [
+      "edition-presentation"
+    ],
+    "detected": true
+  },
+  {
+    "id": "V1 duplicate self-equivalence",
+    "expected_failure": "V1-direct-owner-citation",
+    "failures": [
+      "V1-direct-owner-citation"
+    ],
+    "detected": true
+  },
+  {
+    "id": "V2 stale RRF edge",
+    "expected_failure": "V2-current-RRF-consumer",
+    "failures": [
+      "V2-current-RRF-consumer"
+    ],
+    "detected": true
+  },
+  {
+    "id": "V3 proposal wrongly sourced to DSN",
+    "expected_failure": "V3-record-sourced-proposal",
+    "failures": [
+      "V3-record-sourced-proposal"
+    ],
+    "detected": true
+  },
+  {
+    "id": "V4 generator wording regression",
+    "expected_failure": "postulated-generator-wording",
+    "failures": [
+      "postulated-generator-wording"
+    ],
+    "detected": true
+  }
+]
