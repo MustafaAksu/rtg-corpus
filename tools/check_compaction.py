@@ -182,6 +182,10 @@ def main():
     if a.regions:
         for r in json.load(open(a.regions, encoding="utf-8"))["regions"]:
             REGIONS[r["id"]] = r
+    PROFILE.update(mp.get("profile", {}))
+    global BASE_SECTION1
+    i = base.find("\n## §1.")
+    BASE_SECTION1 = base[i:base.find("\n## ", i + 1)] if i >= 0 else ""
     C = Check()
     rep = {"base_sha256": sha(base_b), "candidate_sha256": sha(cand_b), "map_sha256": sha(open(a.map, "rb").read())}
 
@@ -252,6 +256,7 @@ def main():
     ok, why = check_presentation(cand, mp)
     C.add("presentation (header, footer)", ok, why)
 
+    rep["profile"] = PROFILE
     rep["checks"] = C.items
     rep["warnings"] = WARNINGS
     rep["result"] = "FAIL" if C.failed else ("PASS" if C.ok else "PENDING")
@@ -264,6 +269,7 @@ def main():
         "tag_examples/navigation relocations need a registered region (hash, kind) and a reviewer confirmation; unconfirmed regions give PENDING. In a tag_examples region an identifier may occur only inside a tag spelling in a table row (and must survive in the live text); a navigation region may carry no identifier and only [DEF] tags.",
         "An H-label resolves if the archive defines it ('**H-n** —') or defines its lettered group ('**H-na** —').",
         "Archive membership is a byte-substring test against the named archive files.",
+        "Study profile (map key 'profile'): extra history words, extra reference words and the status-summary source (base header summary, optionally base §1) are calibration inputs declared in the map and printed in the report.",
     ]
     if a.report:
         json.dump(rep, open(a.report, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -328,7 +334,7 @@ def check_op(op, arch, cand):
                 return False, f"removed span carries a claim tag, qualifier, RID or math: {removed[:120]!r}"
             if PROTECTED_WORDS.search(removed):
                 return False, f"removed span carries a qualifying word: {removed[:120]!r}"
-            if not any(w in removed for w in HISTORY_WORDS):
+            if not any(w in removed for w in HISTORY_WORDS + tuple(PROFILE.get("history_words", []))):
                 return False, f"removed span is not marked as history: {removed[:120]!r}"
             if not in_archive(removed.strip(), arch, names):
                 return False, "removed span not found byte-identical in the named archive"
@@ -365,13 +371,19 @@ def check_op(op, arch, cand):
         removed = op.get("_removed", "")
         if not in_archive(removed, arch, names):
             return False, "old header not found in archive"
-        old_sum = field(removed, "Status summary"); new_sum = field(op["new"], "Status summary")
+        old_sum = summary_field(removed); new_sum = field(op["new"], "Status summary")
         if new_sum is None:
             return False, "no Status summary"
-        extra = [x for x in sentences(new_sum) if x not in old_sum]
+        if old_sum is None:
+            return False, "base header has no status summary"
+        pool = [old_sum]
+        src = PROFILE.get("summary_from", ["header"])
+        if "section1" in src:
+            pool.append(BASE_SECTION1)
+        extra = [x for x in sentences(new_sum) if not any(x in p for p in pool)]
         if extra:
-            return False, f"status summary adds text not in the base summary: {extra[:2]}"
-        return True, "header replaced; status-summary sentences are a subset of the base summary"
+            return False, f"status summary adds text not in the base summary ({'/'.join(src)}): {extra[:2]}"
+        return True, f"header replaced; status-summary sentences are a subset of the base summary ({'/'.join(src)})"
     if k == "replace-footer":
         if not in_archive(op.get("_removed", "").strip(), arch, names):
             return False, "old footer not found in archive"
@@ -380,6 +392,14 @@ def check_op(op, arch, cand):
 
 
 REGIONS = {}
+
+# Study profile (map key "profile"; Methodology v1.4 §13.6 calibration). Defaults reproduce the DYAD pilot.
+#   history_words  extra markers that identify a removed span as history (history-removal)
+#   ref_words      extra words allowed in a reference substitution
+#   checked_tag_prefixes, known_tags  tag pointers with these prefixes must name an archive or a known tag
+#   summary_from   ["header"] (default) or ["header", "section1"]: where the candidate's status-summary
+#                  sentences may come from (base header summary; base §1 text, which the block checks cover)
+PROFILE = {}
 
 
 def check_region(op, removed, rids):
@@ -436,7 +456,7 @@ def ref_grammar_violations(span):
         if m.start() != pos:
             bad.append(span[pos:m.start()])
         t = m.group(0)
-        if t.isalpha() and len(t) > 1 and t not in REF_WORDS:
+        if t.isalpha() and len(t) > 1 and t not in REF_WORDS and t not in PROFILE.get("ref_words", []):
             bad.append(t)
         pos = m.end()
     if pos != len(span):
@@ -463,6 +483,18 @@ def diff_feat(a, b):
     return {k: {"-": multiset_minus(a[k], b[k]), "+": multiset_minus(b[k], a[k])} for k in a if a[k] != b[k]}
 
 
+def summary_field(h):
+    """The base status summary: '**Status summary:**', else the first (newest) '**Status summary (…):**'."""
+    v = field(h, "Status summary")
+    if v is not None:
+        return v
+    m = re.search(r"^\*\*Status summary \([^)]*\):\*\*\s*(.*)$", h, re.M)
+    return m.group(1).strip() if m else None
+
+
+BASE_SECTION1 = ""
+
+
 def field(h, name):
     m = re.search(r"^\*\*%s:\*\*\s*(.*)$" % re.escape(name), h, re.M)
     return m.group(1).strip() if m else None
@@ -487,7 +519,8 @@ def check_links(cand, arch):
     resolved = 0
     for m in RE_TAGREF.finditer(lt):
         t = m.group(0).strip("`")
-        if t.startswith("dyad-") and t not in arch and t not in KNOWN_TAGS:
+        pref = ("dyad-",) + tuple(PROFILE.get("checked_tag_prefixes", []))
+        if t.startswith(pref) and t not in arch and t not in KNOWN_TAGS and t not in PROFILE.get("known_tags", []):
             bad.append(f"unknown tag {t}"); continue
         if t not in arch:
             continue

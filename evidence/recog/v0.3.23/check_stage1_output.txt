@@ -1,0 +1,52 @@
+base 0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9
+intermediate 0b2d5109d75f457ea6168d32f342a6814d8410554808a3b11a596aa467aabc76 (with-fc21, 116 edits)
+calibration: base §§1-6 has 19 unpaired or combined [RESULT] blocks (advisory count: 19)
+GATES:
+  C0   PASS BASE
+  C1   PASS BUILD
+  C2   PASS REVERSE
+  C3   PASS APPENDIX A
+  C4   PASS SPAN TAGS 
+  C5   PASS SPAN RIDS []
+  C6   PASS STATUS
+  C7   PASS RID SET
+  C8   PASS RID ATTACH
+  C9   PASS RESULT
+  C10  PASS QUALIFIERS
+  C11  PASS VOCAB
+  C12  PASS IMPORTS
+  C13  PASS R9/OPEN21
+  C14  PASS HEADER
+  C15  PASS HEADINGS
+  C16  PASS §8 FILES
+  C17  PASS LIVE
+  C18  PASS DECOUPLE
+  C19  PASS VALUES
+  C20  PASS NOTICES
+  C21  PASS TAG CENSUS
+
+NEGATIVE CONTROLS (each must be caught by its target gate):
+  NC01 new RID removed                         target C7: caught  (failing: C1, C2, C7, C8)
+  NC02 RID attached to another statement       target C8: caught  (failing: C1, C2, C8)
+  NC03 bare [RESULT] reintroduced              target C9: caught  (failing: C1, C10, C2, C9)
+  NC04 combined from-tag reintroduced          target C9: caught  (failing: C1, C2, C9)
+  NC05 scope qualifier deleted                 target C10: caught  (failing: C1, C10, C14, C2, C8)
+  NC06 evidence pointer deleted                target C10: caught  (failing: C1, C10, C2)
+  NC07 OPEN status altered (R6)                target C6: caught  (failing: C1, C2, C6)
+  NC08 stale state kept (RID unavailable)      target C12: caught  (failing: C1, C12, C2)
+  NC09 Dyadic line pin reinserted              target C12: caught  (failing: C1, C12, C2)
+  NC10 R9 statement altered                    target C13: caught  (failing: C1, C13, C2)
+  NC11 OPEN 21 rows mixed                      target C13: caught  (failing: C1, C13, C2)
+  NC12 header identity altered                 target C14: caught  (failing: C1, C14, C15, C2)
+  NC13 READ/DECODE vocabulary inserted         target C11: caught  (failing: C1, C11, C2)
+  NC14 Appendix A history edited               target C3: caught  (failing: C1, C2, C3)
+  NC15 §8 evidence file renamed                target C16: caught  (failing: C1, C16, C2, C8)
+  NC16 must-stay-live item deleted             target C17: caught  (failing: C1, C17, C2)
+  NC17 notice state changed                    target C20: caught  (failing: C1, C2, C20)
+  NC18 wrong value display                     target C19: caught  (failing: C1, C19, C2)
+  NC19 heading changed                         target C15: caught  (failing: C1, C15, C2)
+  NC20 grade changed outside the spans         target C21: caught  (failing: C1, C2, C21)
+  NC21 extra undeclared RECOG RID              target C7: caught  (failing: C1, C2, C7, C8)
+  NC22 old Dyadic tag form restored            target C12: caught  (failing: C1, C10, C12, C2, C21)
+
+RESULT: PASS

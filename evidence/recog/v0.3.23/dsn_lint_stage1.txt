@@ -1,0 +1,20 @@
+file: dsn/RTG_RELATIONAL_RECOGNITION_DSN.md
+bytes: 346451
+lines: 1609
+header_chars: 37229
+live_body_chars: 272674
+appendix_a_chars: 34540
+section1_words: 1286
+orientation_core: {"chars": 45909, "lines": 307, "words": 5556, "core_end_marker_present": true}
+header_fields: {"Title": 114, "Date": 134, "Scope": 422, "Supersedes": 1230, "Companion documents": 1890, "DSN Methodology": 186, "Programme tier": 381, "Status summary (v0.3.22)": 1398, "Status summary (v0.3.21)": 1058, "Status summary (v0.3.20)": 645, "Status summary (v0.3.19)": 930, "Status summary (v0.3.18)": 868, "Status summary (v0.3.17)": 904, "Status summary (v0.3.16)": 734, "Status summary (v0.3.15)": 732, "Status summary (v0.3.14)": 1465, "Status summary (v0.3.13)": 1351, "Status summary (v0.3.12)": 1082, "Status summary (v0.3.11)": 1046, "Status summary (v0.3.10)": 790, "Status summary (v0.3.9)": 1185, "Status summary (v0.3.8)": 1422, "Status summary (v0.3.7)": 1158, "Status summary (v0.3.6)": 1798, "Status summary (v0.3.5)": 1629, "Status summary (v0.3.4)": 1693, "Status summary (v0.3.3)": 862, "Freeze status": 4629, "Status summary (v0.3.2)": 1792, "Status summary (v0.3.1)": 1112, "Status summary (v0.3)": 1431, "Status summary (v0.2.1, retained)": 1058}
+appendix_a_words_per_edition: 27 editions, max 569 words
+footer_lines: 1
+history_phrases_live: {"historical": 26, "superseded": 37, "former": 3, "retained as": 8, "no longer": 3}
+near_duplicate_paragraphs: 0
+rids_total: 176
+previous: {"file": "/tmp/claude-0/scr/base.md", "bytes": 329148}
+growth_bytes: 17303
+growth_percent: 5.3
+new_rids: 19
+growth_per_new_rid: 910.7
+(informational report; no gate)

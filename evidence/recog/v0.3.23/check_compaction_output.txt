@@ -1,0 +1,18 @@
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  archive identity recog-v0.3.22  — 0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9
+PASS  archive identity recog-v0.3.23-stage1  — 0b2d5109d75f457ea6168d32f342a6814d8410554808a3b11a596aa467aabc76
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation M01 (presentation)  — header replaced; status-summary sentences are a subset of the base summary (header/section1)
+PASS  operation M04 (history-section)  — section relocated (577 chars), found in ['recog-v0.3.22']
+PASS  operation M05 (ref-subst)  — reference substitution only ('template below' → 'v0.3.2 template (tag `recog-v0.3.22`)')
+PASS  operation M06 (history-appendix)  — section relocated (34540 chars), found in ['recog-v0.3.23-stage1']
+PASS  operation M07 (presentation)  — footer replaced
+PASS  qualified claim blocks  — 460 claim blocks in base live text: 459 byte-identical, 1 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 1 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS

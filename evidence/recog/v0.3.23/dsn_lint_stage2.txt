@@ -1,0 +1,20 @@
+file: dsn/RTG_RELATIONAL_RECOGNITION_DSN.md
+bytes: 281836
+lines: 1391
+header_chars: 3199
+live_body_chars: 272120
+appendix_a_chars: 5087
+section1_words: 1286
+orientation_core: {"chars": 45355, "lines": 304, "words": 5485, "core_end_marker_present": true}
+header_fields: {"Title": 114, "Date": 25, "Scope": 422, "Document class": 291, "Document status": 156, "Supersedes": 155, "Companion documents": 292, "DSN Methodology": 118, "Programme tier": 296, "Status summary": 1039, "Release record": 238}
+appendix_a_words_per_edition: 2 editions, max 389 words
+footer_lines: 1
+history_phrases_live: {"historical": 26, "superseded": 37, "former": 3, "retained as": 8, "no longer": 3}
+near_duplicate_paragraphs: 0
+rids_total: 175
+previous: {"file": "/tmp/claude-0/s2/inter.md", "bytes": 346451}
+growth_bytes: -64615
+growth_percent: -18.7
+new_rids: 0
+growth_per_new_rid: N/A
+(informational report; no gate)
