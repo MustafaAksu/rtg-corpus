@@ -101,7 +101,7 @@ L5 IDs are stable keys (`STREAM.<id>`). A deleted diagnostic's key is never reus
 | D-LINK | an unrecorded identity, equivalence or dependency between claims (often cross-stream) |
 | D-WRONG | a fact excluded as clearly wrong (rule 4.8) |
 
-Exact facts the atlas recomputed are placed at their content layer with a scoped evidence pointer (`atlas-checked: …`), not kept as a list of passed checks.
+Facts the atlas checked are placed at their content layer with a scoped evidence pointer (`atlas-checked: …`), not kept as a list of passed checks. Each is typed: **exact** (symbolic or rational identity), **numerical** (floating or high-precision evaluation; rounded values are written with ≈, never =) or **source** (consistency of statements between documents, no computation). Each carries its execution context (which atlas build ran it; whether it was rerun for the current version). Carrying a check forward does not make it a new computation. An evidence record is not a claim and receives no scientific RID.
 
 ## 7. Process
 
@@ -116,9 +116,11 @@ Exact facts the atlas recomputed are placed at their content layer with a scoped
 
 **Checks** (`tools/atlas_check.py`; report-only, with PASS, FAIL and UNVERIFIED kept separate):
 - **sources:** the source table matches the frozen manifest and `BASELINE.md`;
-- **typed coverage:** each live owner item of a re-extracted source maps to a node, an owner-approved alias or shared node, a `cert` reference, or a justified out-of-scope disposition. A RID that appears only in L5, in the source table or in an unrelated `cert` field does not cover its claim;
-- **owner-resolved links:** each cited RID resolves to a declaration in its owner's file at the snapshot. Known phantom RIDs documented in L5 are reported separately as documented unresolved references, never as resolved;
-- **wording:** history and process phrases are listed as review warnings.
+- **typed coverage:** each live owner item of a re-extracted source maps to a home: a node whose ID is that item, a reviewed shared home (an OPEN record or a shared record listed in the coverage map with its reason), a `cert` reference (artifacts only), or a justified out-of-scope disposition. A dependency mention, an index or L0 mention, an L5 mention or an unrelated `cert` field is not a home;
+- **owner-resolved links:** each cited RID resolves to an active declaration in its owner's file at the snapshot. Owner-denied names, historical labels and consumer strings classified by the owner are typed as such (documented unresolved), never as resolved; unrecognized declaration syntax stays UNVERIFIED;
+- **qualifiers:** a conditional owner result keeps an explicit conditional marker and its named prerequisite on its atlas node (narrow check, stated as such in the report);
+- **diagnostic keys:** no retired L5 key is referenced anywhere in the atlas;
+- **process residue:** advisory keys and process-status phrases fail; other history-like wording is listed as review warnings.
 
 Unparsed or unchecked items are not counted as PASS. Content fidelity remains a matter for the change-focused review.
 

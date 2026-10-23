@@ -1,16 +1,16 @@
 # Atlas v0.2 — L5 dispositions
 
-**Date:** 23 October 2026. **Atlas owner:** Claude. **Scope:** every L5 item of atlas v0.1 (HEADLINE H1–H12, D-WRONG and D1–D6 L5), dispositioned against the v0.2 source snapshot (`evidence/atlas/source_manifest_v0_2.json`) and the v0.2 diagnostic semantics (Method v0.2 §6: D-PIN, D-GRADE, D-PROOF). This record holds the reasons; the atlas holds only the current state (Method v0.2 §4.1, §7).
+**Date:** 23 October 2026. **Atlas owner:** Claude. **Scope:** every L5 item of atlas v0.1 (HEADLINE H1–H12, D-WRONG and D1–D6 L5), dispositioned against the v0.2 source snapshot (`evidence/atlas/source_manifest_v0_2.json`) and the v0.2 diagnostic semantics (Method v0.2 §6: D-PIN, D-GRADE, D-PROOF). This record holds the reasons; the atlas holds only the current state (Method v0.2 §4.1, §7). Rows marked **[AV02]** apply the receiving review `records/atlas/ATLAS_V0_2_RECEIVING_REVIEW.md` (AV02-02–04).
 
-Dispositions: deleted 16, moved 7, new 1, retained 107, reworded 66.
+L5 dispositions (195 items): deleted 16, moved 7, new 1, retained 105, reworded 66. Further rows record non-L5 edits made under the same rules (two process-only L3 lines deleted, edge replacements, process-wording removals, evidence-record typing).
 
 - **retained** — the item's sources, its dependencies and the diagnostic rule applied to it are unchanged; text carried forward.
 - **reworded** — still holds, restated against the current sources or semantics (reason given).
-- **deleted** — no longer holds at the snapshot, or is process state; the key is retired and never reused.
+- **deleted** — no longer holds at the snapshot, or is process state; the key is retired and never reused (`evidence/atlas/retired_l5_keys_v0_2.json`, checked by `tools/atlas_check.py` check `keys`).
 - **moved** — PASS lists leave L5 (Method v0.2 §6, last paragraph).
 - **new** — finding from the v0.2 re-extraction.
 
-Two L3 lines that carried only process state are also listed (`deleted`). Retained items were not re-derived; scientific certificates were not rerun (Method v0.2 §7).
+Retained items were not re-derived; scientific certificates were not rerun (Method v0.2 §7).
 
 | # | key | disposition | reason |
 |---|---|---|---|
@@ -75,17 +75,17 @@ Two L3 lines that carried only process state are also listed (`deleted`). Retain
 | 59 | NUMGEN.N-SC1 | retained | sources, dependencies and diagnostic semantics unchanged |
 | 60 | NUMGEN.N-R1 | retained | sources, dependencies and diagnostic semantics unchanged |
 | 61 | NUMGEN.N-R2 | retained | sources, dependencies and diagnostic semantics unchanged |
-| 62 | DYAD.X4 | reworded | RIDs registered for six-step jet, 47/54 mean, burst, b5 boundary and ISP facts; list restated against DYAD v6.4.22 |
+| 62 | DYAD.X4 | reworded | [AV02] prefix–grade difference of immutable CAND identifiers removed (DYAD gives a current-grade lookup; the prefix is not the grade); classification-by-p DEF dropped; only results without RID remain |
 | 63 | DYAD.X5 | deleted | DYAD-ALG-B5-ALLP-NONVANISHING registered; OPEN RID kept only as closed lifecycle item |
 | 64 | DYAD.X11 | reworded | statement now located in DYAD (§6.11); remaining issue is identity with the historical proposition |
 | 65 | DYAD.X6 | reworded | not a grade defect under D-GRADE v0.2; reclassified; notice wording removed |
-| 66 | DYAD.X9 | retained | sources, dependencies and diagnostic semantics unchanged |
+| 66 | DYAD.X9 | deleted | [AV02] DYAD v6.4.22 §6.12 export table records the 16/3=(4√3/3)² bookkeeping cross-reference (FC-DYAD-34); the identity stays at its content home (DYAD-DEF-BRIDGE-EXPORT-CONTRACT node) |
 | 67 | AZ.A2 (D2 copy) | retained | AZ unchanged; Q403-PHASELAW closure and GEN v2.8.9 current |
 | 68 | DYAD.X3 | deleted | DYAD v6.4.22: N2 Triadic ANSWERED; §7.0 one current-edition table (RECOG v0.3.22, NUMGEN v1.20.8, OFN v0.10) |
 | 69 | DYAD.X7 | deleted | DYAD v6.4.22 internal frontier lists only open items; edition tags inside entries are owner provenance, not a contradiction |
 | 70 | NUMGEN.N-F | reworded | D-PIN v0.2: deliberate valid pins (DYAD v6.4.18 etc.) are not defects; reverse DYAD pointer now v1.20.8; RECOG part is RECOG.R-P2 |
 | 71 | NUMGEN.N-C1 | retained | sources, dependencies and diagnostic semantics unchanged |
-| 72 | NUMGEN.N-C2 | retained | sources, dependencies and diagnostic semantics unchanged |
+| 72 | NUMGEN.N-C2 | deleted | [AV02] DYAD-THM-Q403-PHASELAW is [THM] [proof: exact algebraic identity]; NUMGEN imports it as [RESULT] [from: THM] — consistent; NUMGEN's "not graded here" for N-3C+ is an explicit scope statement, not a conflict |
 | 73 | NUMGEN.N-D1 | reworded | D-PROOF state named |
 | 74 | NUMGEN.N-G1 | retained | sources, dependencies and diagnostic semantics unchanged |
 | 75 | NUMGEN.N-T1 | retained | sources, dependencies and diagnostic semantics unchanged |
@@ -209,9 +209,13 @@ Two L3 lines that carried only process state are also listed (`deleted`). Retain
 | 193 | PASS block D2 | moved | PASS list removed from D2.L5 (Method v0.2 §6: atlas-checked facts at content layer); placed as evidence record *ATLAS:checked-D2 at the end of D2.L2; per-node distribution deferred to the compression pass |
 | 194 | PASS block D1 | moved | PASS list removed from D1.L5 (Method v0.2 §6: atlas-checked facts at content layer); placed as evidence record *ATLAS:checked-D1 at the end of D1.L2; per-node distribution deferred to the compression pass |
 | 195 | NUMGEN.N-C | reworded | PASS wording replaced by atlas-checked scope note |
-| 196 | D3.L3 governance line | deleted | process state (repin requests, notice/receipt status, ownership offers); scientific residue kept in RECOG.R-P2 and RECOG.R-L4 |
-| 197 | D4a.L3 governance line | deleted | process state (RID requests, disposition records, Programme pass); RID gaps kept in D4a.L5 F13 |
+| 196 | D3.L3 governance line | deleted (non-L5) | process state (repin requests, notice/receipt status, ownership offers); scientific residue kept in RECOG.R-P2 and RECOG.R-L4 |
+| 197 | D4a.L3 governance line | deleted (non-L5) | process state (RID requests, disposition records, Programme pass); RID gaps kept in D4a.L5 F13 |
+| 198 | D3.L1 K_p family; *RECOG:Kp-frame | edge replaced | [AV02] dangling pointer to retired RECOG.R-C3 replaced by the content edge ≡ DYAD-ALG-KP-FRAME-SCALE |
+| 199 | D1 owners line; D2.L3 p-resonance, phase constants | process wording removed | [AV02] "pass one done / pass two pending", advisory tier/key "Tier-C target FC-DYAD-31", "(governance only)", "NUMGEN-side not started" removed; open target, available owner result and missing obligation kept |
+| 200 | *ATLAS:checked-D1…D6 | typed | [AV02] each evidence record split into exact / numerical / source with execution context (atlas v0.1 build, carried forward, EV-NOT-RERUN); rounded evaluations written ≈ (e.g. 517·(256/225)²=33882112/50625≈669.276; 1.51632·1.06252=1.6111203264≈1.61112); diagnostic-key labels [PROG.G3]/[PROG.G8]/[METH.M3] dropped |
+| 201 | *RECOG:fixed-points; *GEN WPHASE line; D2 b5/cascade lines | edge/marker corrected | [AV02] retired RECOG.R-L9 pointer replaced by the DYAD §1 content edge; abbreviated TRIAD-ALG-T6M replaced by the owner RID TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN (found by the stricter link check); owner-classified strings marked as not owner RIDs |
 
 ## Retired keys
 
-Never reused: OFN.O2, DZT.Q2, DYAD.X5, DYAD.X3, DYAD.X7, DZT.Q3, AZ.A3(part), RECOG.R-L9, RECOG.R-C3, RECOG.R-P1, RECOG.R-T3, F21, GEN.D8, NUMGEN.N-F (DISC part), D3.L3 governance line, D4a.L3 governance line; D5.X2 (PASS content moved into `*ATLAS:checked-D5`); RRF.F1 (merged into OFN.O1, RRF side not stale); RER.E2 citation removed from F5 (RER imports SMOOTH-EMBEDDING).
+Never reused: OFN.O2, RRF.F1 (merged into OFN.O1, RRF side not stale), DZT.Q2, DZT.Q3, DYAD.X3, DYAD.X5, DYAD.X7, DYAD.X9, NUMGEN.N-C2, RECOG.R-L9, RECOG.R-C3, RECOG.R-P1, RECOG.R-T3, GEN.D8, D5.X2 (PASS content moved into `*ATLAS:checked-D5`), F21. The RER slice key RER.E2 is no longer cited in F5 (RER imports SMOOTH-EMBEDDING).

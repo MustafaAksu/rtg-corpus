@@ -1,0 +1,30 @@
+{
+ "_note": "Typed non-resolved owner identifiers (atlas v0.2). Source: DYAD v6.4.22 Local Tag Aliases / current-grade lookup and Appendix F (DZT/AZ string crosswalk). No alias is created; these strings never resolve. prerequisite_aliases: atlas short names accepted for a named prerequisite in the qualifier check.",
+ "DYAD": {
+  "denied": {
+   "DYAD-CAND-PHISTAR-ENTRY-PHASE": "never a Dyadic identifier (DYAD current-grade lookup)"
+  },
+  "historical_label": {
+   "DYAD-THM-Q403-PHASE-ALLP": "historical note label; theorem DYAD-THM-Q403-PHASELAW (App F)",
+   "DYAD-ALG-PHASELAW": "historical note label; superseded finite-horizon law, part of DYAD-THM-Q403-PHASELAW (App F)"
+  },
+  "consumer_string": {
+   "DYAD-THM-P1": "component of DYAD-THM-Q403-PHASELAW, no separate RID (App F)",
+   "DYAD-THM-REALITY": "component of PHASELAW (App F)",
+   "DYAD-THM-LEAD": "component of PHASELAW (App F)",
+   "DYAD-THM-R": "component of PHASELAW (App F)",
+   "DYAD-CF-Q403": "component of PHASELAW (App F)",
+   "DYAD-ALG-CASCADE-P12": "unmatched; p=12 micro-certification value has no RID (App F)",
+   "DYAD-ART-CASCADE-Q4-03": "artifact string; content matches DYAD-ART-Q403-EXTRACT, no byte identity (App F)",
+   "DYAD-ALG-Q3-CANCEL": "unmatched; statement = DYAD-ALG-Q3-DEG2-CANCEL (App F)"
+  },
+  "closed_lifecycle_untagged": {
+   "DYAD-OPEN-B5-ALLP": "closed lifecycle item, untagged; result RID DYAD-ALG-B5-ALLP-NONVANISHING (App F)"
+  }
+ },
+ "prerequisite_aliases": {
+  "RECOG-THM-R9-MEMORY": [
+   "R9"
+  ]
+ }
+}

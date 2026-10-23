@@ -1,0 +1,83 @@
+{
+  "scope": "Focused component fixtures; original repository not changed; no full-suite replay",
+  "results": [
+    {
+      "id": "RV-N1-explicitly-denied-identifier",
+      "expected": "DOCUMENTED-UNRESOLVED, never PASS",
+      "observed": [
+        [
+          "links",
+          "DOCUMENTED-UNRESOLVED",
+          "DYAD-CAND-PHISTAR-ENTRY-PHASE",
+          "DYAD denied: never a Dyadic identifier (DYAD current-grade lookup); cited only in L5 or marked unresolved"
+        ]
+      ],
+      "explanation": "A table cell explicitly denying RID ownership is accepted as a declaration."
+    },
+    {
+      "id": "RV-N1b-denied-identifier-as-node",
+      "expected": "FAIL or explicitly unresolved, never PASS",
+      "observed": [
+        [
+          "links",
+          "FAIL",
+          "DYAD-CAND-PHISTAR-ENTRY-PHASE",
+          "DYAD denied: never a Dyadic identifier (DYAD current-grade lookup); used without an unresolved marker at line 2"
+        ]
+      ],
+      "explanation": "No source claim exists, but generic first-table-cell recognition passes it."
+    },
+    {
+      "id": "RV-P1-explicit-claim-present",
+      "expected": "PASS",
+      "observed": [
+        [
+          "coverage",
+          "PASS",
+          "DYAD-ALG-RAW-ANGULAR-MEAN",
+          "home: node line 2"
+        ]
+      ],
+      "explanation": "Positive control for the same source declaration."
+    },
+    {
+      "id": "RV-N2-missing-claim-dependency-left",
+      "expected": "FAIL/UNVERIFIED unless an explicit reviewed shared-home mapping resolves the claim",
+      "observed": [
+        [
+          "coverage",
+          "FAIL",
+          "DYAD-ALG-RAW-ANGULAR-MEAN",
+          "DYAD item has no home; mentioned only in node (not a home)"
+        ]
+      ],
+      "explanation": "Only a bare dependency remains; there is no claim statement or a shared claim home."
+    },
+    {
+      "id": "RV-N2b-missing-claim-l0-left",
+      "expected": "FAIL (L0 identifier mention is not result coverage)",
+      "observed": [
+        [
+          "coverage",
+          "FAIL",
+          "DYAD-ALG-RAW-ANGULAR-MEAN",
+          "DYAD item has no home; mentioned only in l0 (not a home)"
+        ]
+      ],
+      "explanation": "Atlas.kind treats L0 as node content and grants coverage."
+    },
+    {
+      "id": "RV-N3-marker-substring",
+      "expected": "FAIL for this fixture, or limit gate label strictly to a lexical marker test",
+      "observed": [
+        [
+          "qualifiers",
+          "FAIL",
+          "DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER",
+          "no conditional marker; node says unconditional; prerequisite RECOG-THM-R9-MEMORY not named"
+        ]
+      ],
+      "explanation": "The marker conditional is a substring of unconditional. This is a supplemental implementation limitation."
+    }
+  ]
+}

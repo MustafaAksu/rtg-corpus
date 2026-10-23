@@ -1,0 +1,146 @@
+{
+ "_note": "Typed source-item -> home map (atlas v0.2). Items whose atlas node ID equals the item need no entry. 'homes': reviewed shared homes (line prefix of the home record, kind, reason). 'exclusions': justified out-of-scope items.",
+ "homes": {
+  "DYAD-OPEN-BREAKOUT-PHASE": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-FORMAL-CENTRALIZER": {
+   "home": "*DYAD:closed-modules",
+   "kind": "closed lifecycle item; shared closure record"
+  },
+  "DYAD-OPEN-INTERMEDIATE": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-INVOLUTION-REALIZATION": {
+   "home": "**smooth/analytic realization** DYAD-OPEN-INVOLUTION-REALIZA",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-LOW-Q-TRANSITION": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-MICROREGIME-IA": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-MORPHOLOGY": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-P-RESONANCE": {
+   "home": "**p-resonance** DYAD-OPEN-P-RESONANCE (OPEN 9) PARTIAL: univ",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-P2-SADDLE": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-PHASE-MATCH": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER": {
+   "home": "*DYAD:closed-modules",
+   "kind": "closed lifecycle item; shared closure record"
+  },
+  "DYAD-OPEN-PROJECTION": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-SPIRAL-RESIDUAL": {
+   "home": "*DYAD:closed-modules",
+   "kind": "closed lifecycle item; shared closure record"
+  },
+  "DYAD-OPEN-TRANSPORT-HIGH-Q": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "DYAD-OPEN-WEDGE-IA": {
+   "home": "**dyad dynamics** DYAD-OPEN-TRANSPORT-HIGH-Q (OPEN 2A) trans",
+   "kind": "OPEN lifecycle item; shared L3 frontier record"
+  },
+  "RER-C01": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-C02": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-D01": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-D02": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-D03": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-E01": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-G01": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-G10": {
+   "home": "RER guards (nc, current)",
+   "kind": "RRF-facing guard; shared RER guards record"
+  },
+  "RER-G7": {
+   "home": "RER-RRF-CND01 THM·EXACT_CONDITIONAL nc",
+   "kind": "RRF-facing guard; same discipline as RER-RRF-CND01 (RER G7 realization contract = CND01)"
+  },
+  "RER-G8": {
+   "home": "RER guards (nc, current)",
+   "kind": "RRF-facing guard; shared RER guards record"
+  },
+  "RER-G9": {
+   "home": "RER guards (nc, current)",
+   "kind": "RRF-facing guard; shared RER guards record"
+  },
+  "RER-N01": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-N02": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-N03": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-P01": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  },
+  "RER-T01": {
+   "home": "RER-GEN-C01 ALG·EXACT_SURROGATE",
+   "kind": "v0.1 machine entry; current-use record per RER §4 table"
+  },
+  "RER-T02": {
+   "home": "RER-GEN-C02 ALG·EXACT_SURROGATE",
+   "kind": "v0.1 machine entry; current-use record per RER §4 table"
+  },
+  "RER-T03": {
+   "home": "RER-ER2B-T6D ALG·EXACT_LOCAL nc",
+   "kind": "v0.1 machine entry; current-use record per RER §4 table"
+  },
+  "RER-T04": {
+   "home": "RER-GEN-C07 ALG·EXACT_LOCAL nc",
+   "kind": "v0.1 machine entry; current-use record per RER §4 table"
+  },
+  "RER-T05": {
+   "home": "RER v0.1 retained entries (no new closure)",
+   "kind": "v0.1 machine entry retained without new closure; shared retained-entries record"
+  }
+ },
+ "exclusions": {}
+}

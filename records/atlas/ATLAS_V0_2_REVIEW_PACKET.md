@@ -6,14 +6,17 @@
 
 The atlas is derived and noncanonical. Nothing in this packet adopts owner science; certificates were not rerun.
 
-## 1. Identities at packet time
+## 1. Identities (after the AV02 corrections)
 
 | object | path | SHA-256 |
 |---|---|---|
-| Atlas v0.2 | `atlas/RTG_STATE_ATLAS.md` | `8a5b51d2356fbb460d90d5fe37c5f13aa72b9035759ca60934980f7368bbf167` |
-| Method v0.2 | `atlas/RTG_STATE_ATLAS_METHOD.md` | `afa4127f0f12b30da689ef94a5d2eae905df82c168dc342fb646765c12f29d7f` |
+| Atlas v0.2 | `atlas/RTG_STATE_ATLAS.md` | `9963aead02fad686a9a5bd4d1824882a890ef6279d50899c4090e0e5092331c5` |
+| Method v0.2 | `atlas/RTG_STATE_ATLAS_METHOD.md` | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` |
 | Source manifest | `evidence/atlas/source_manifest_v0_2.json` | `35013c11eea7b6854287e0ab69db04b81ccbc15de63b23850fcf0eacc75e5a98` |
-| Checker | `tools/atlas_check.py` | `4377a389f34871bd15d3b827fcac6272dcead5018557a21478b34ed4ab471d1d` |
+| Checker | `tools/atlas_check.py` | `0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d` |
+| Coverage map | `evidence/atlas/coverage_map_v0_2.json` | `31a5fcbeae61bd93f7d5e83482719ec42faee816801abc8b6ce6e96b849845e2` |
+| Owner identifier map | `evidence/atlas/owner_identifier_map_v0_2.json` | `dde03f8cfee8c2f0fd59cdc6dd4137410ba18c7c327f5aa1f84b1e7f19aa5ccb` |
+| Retired L5 keys | `evidence/atlas/retired_l5_keys_v0_2.json` | `85ee8e0893a0670cc620d7e706179ec70515e0b54cf28b88d1d8f7c58f97ba77` |
 
 If review edits change any of these, the acceptance record takes the final values.
 
@@ -24,7 +27,7 @@ If review edits change any of these, the acceptance record takes the final value
 3. **DYAD delta** — `## D2` (L1–L4) and the DYAD edges elsewhere (§5 below).
 4. **RER delta** — the RER nodes in `## D4a` and the RER queue line in `D4a.L3` (§6 below).
 5. **Changed cross-domain edges** — §7 below.
-6. **L5 dispositions** — `records/atlas/ATLAS_V0_2_L5_DISPOSITIONS.md` (197 rows).
+6. **L5 dispositions** — `records/atlas/ATLAS_V0_2_L5_DISPOSITIONS.md` (195 L5 items plus rows for non-L5 edits).
 7. **Check report** — `evidence/atlas/atlas_check_report_v0_2.md` and `evidence/atlas/atlas_check_selftest_v0_2.txt`.
 8. **Acceptance record draft** — `records/atlas/RTG_STATE_ATLAS_v0.2_RELEASE_RECORD.md`.
 
@@ -88,7 +91,7 @@ Unchanged-source content outside these areas was carried forward and is not in s
 
 ## 8. L5
 
-197 dispositions: retained 107, reworded 66, deleted 16, moved 7 (PASS blocks), new 1 (F29). Main grounds:
+195 L5 items: retained 105, reworded 66, deleted 16, moved 7 (PASS blocks), new 1 (F29); two process-only L3 lines deleted separately. (The first packet counted 197 because it included those two L3 lines and had DYAD.X9 and NUMGEN.N-C2 as retained; both are deleted after AV02-02.) Main grounds:
 - **DYAD changes:** X3, X5, X7, F21, R-L9, R-C3, DZT.Q2 deleted; H1/H3/H12, O1, X1, X4, X11, DZT.Q1, R-L5, R-L7, RRF.F7, N-D reworded.
 - **RER changes:** F2, F4, F5, F8, F13, F18, F27 reworded; F29 new.
 - **D-PIN v0.2:** age-only pin items deleted (OFN.O2, DZT.Q3, AZ.A3 part, GEN.D8, R-P1) or reduced to the demonstrated mismatch (RRF.F2, PROG.G1, NUMGEN.N-F, R-P2, R-P3, F8, OPENM.U1, TDRG.G3, AZ.A3, PREL.P1).
@@ -97,22 +100,26 @@ Unchanged-source content outside these areas was carried forward and is not in s
 - **Process wording** ("Advisory", "merge-time", "resolved", notice/receipt state) removed; R-T3 deleted as notice handling.
 - HEADLINE recomputed; H-numbers are display order only.
 
-## 9. Check report (summary)
+## 9. Check report (summary, after AV02)
 
 | check | PASS | FAIL | UNVERIFIED | other |
 |---|---|---|---|---|
 | sources | 72 | 0 | 0 | — |
 | coverage | 128 | 0 | 0 | — |
 | qualifiers | 3 | 0 | 0 | — |
-| links | 407 | 0 | 15 | — |
+| links | 406 | 0 | 4 | DOCUMENTED-UNRESOLVED 11 |
 | artifacts | 94 | 0 | 3 | — |
-| wording | — | — | — | WARN 28 |
+| keys | 31 | 0 | 0 | — |
+| process | 0 | 0 | 0 | — |
+| wording | — | — | — | WARN 19 |
 
-- The 15 unverified links are strings present in the owner file but not in a declaration form: the DZT/AZ strings classified by DYAD App F, DYAD-CAND-PHISTAR (never a Dyadic identifier), three AZ OPEN labels, NUMGEN-ART-ROTNUM-OBSTRUCTION and TRIAD-ALG-T6M. All are either L5 subjects (H3, DZT.Q1, N-D) or owner labels to inspect; none is counted as resolved.
-- The 3 unverified artifacts are scripts named in a source other than the line owner (`cm.py`, `fit.py` on a GEN line; `prove_core_equiv.py` on a line without a namespace owner).
-- The 28 wording warnings were read; the remaining ones are owner statuses or owner-quoted text ("pending", "RESOLVED", "was THM" in a COR record), kept by rule 4.12.
-- Negative controls (`--self-test`): omitted claim with RID left in L5; wrong owner; lost conditional qualifier; invalid artifact RID; script named nowhere; fabricated RID only in L5 (reported DOCUMENTED-UNRESOLVED, not PASS) and in a node (FAIL); source-table mismatch — **all detected**.
-- Checker limits: a "declaration" is a `[RID: …]` tag, a heading, a first table cell, an `RID:` field or a line-initial RID; owners using other forms show as UNVERIFIED, not PASS. The qualifier check covers DYAD declarations carrying `[assuming: …]` only. The checker does not judge content fidelity.
+- **coverage:** of the 113 DYAD and RER items, 78 have a node whose ID is the item and 35 have a reviewed shared home in `evidence/atlas/coverage_map_v0_2.json` (15 DYAD OPEN lifecycle RIDs → their L3 frontier record or the closed-modules record; 16 RER v0.1 machine entries → the retained-entries record or, for RER-T01–T04, the current-use record named in RER §4; RER-G7–G10 → RER-RRF-CND01 and the guards record); 15 METH section keys exist in v1.4. Dependency, index, L0 and L5 mentions are not homes.
+- **links:** active declarations only. DYAD uses its `[RID: …]` convention; the 11 DOCUMENTED-UNRESOLVED are the owner-denied name DYAD-CAND-PHISTAR-ENTRY-PHASE and the DZT/AZ strings DYAD classifies in App F (`evidence/atlas/owner_identifier_map_v0_2.json`); they are cited only in L5 or on lines that mark them as not owner RIDs. DYAD-OPEN-B5-ALLP resolves as a real closed lifecycle identifier. The 4 UNVERIFIED are three AZ OPEN labels and NUMGEN-ART-ROTNUM-OBSTRUCTION (present in the owner file, declaration form not recognized).
+- **qualifiers (narrow):** the three DYAD declarations carrying `[assuming: …]` keep an explicit conditional marker and the named prerequisite (e.g. R9 for RECOG-THM-R9-MEMORY); "unconditional" fails (a negated "¬ unconditional" does not).
+- **artifacts:** script checks establish naming in the owner file only, not availability or execution. The 3 UNVERIFIED are scripts named in a source other than the line owner.
+- **keys / process:** no retired L5 key is referenced; no advisory key or process-status phrase remains. The 19 wording warnings are owner statuses or owner-quoted text used by a diagnosis.
+- **controls (`--self-test`, 18):** NC1 omitted claim with RID in L5; NC1b omitted claim with RID left as a dependency edge; NC2 wrong owner; NC3 lost qualifier; NC3b "unconditional"; NC4 invalid artifact RID; NC5 script named nowhere; NC6a/b fabricated RID in L5 / in a node; NC7 source-table mismatch; NC8 retired key referenced; NC9 advisory key; and the six receiving-review fixtures RV-N1, RV-N1b, RV-P1, RV-N2, RV-N2b, RV-N3 with the reviewer's inputs — **18/18 as expected**. The reviewer's own script `evidence/atlas/review_v0_2/replay_against_repository.py` run against the corrected checker gives the expected result for all six (`evidence/atlas/review_v0_2/replay_after_av02.json`).
+- **Separate limitation (not a checker row):** byte equality with the v0.1 extraction input is UNVERIFIED for 13 sources (manifest `v0_1_input_equality`); the 72 current-source checks do not establish it.
 
 ## 10. Known limitations and deferred work
 
@@ -126,3 +133,16 @@ Unchanged-source content outside these areas was carried forward and is not in s
 1. Is the PASS-block placement (one `*ATLAS:checked-Dk` evidence record per domain, distribution deferred) acceptable for v0.2?
 2. Are the D-PIN deletions (age-only pin inventories) acceptable, given the inventories stay recoverable from v0.1 at `44b55d6`?
 3. Should UNVERIFIED declaration forms (§9) be resolved now by per-owner declaration grammars in the checker, or left as UNVERIFIED for v0.2?
+
+## 12. Receiving-review corrections (AV02-01–04)
+
+Review: `records/atlas/ATLAS_V0_2_RECEIVING_REVIEW.md` (REVISE, four bounded corrections). All four are applied in this PR.
+
+| item | change |
+|---|---|
+| AV02-01 checker | typed line kinds (L0 and the cross-domain index are not node content); coverage needs a home (node ID or reviewed shared home in the coverage map); links accept active declarations only and type owner-denied names, historical labels and consumer strings as DOCUMENTED-UNRESOLVED (FAIL if used in node content without an unresolved marker); qualifier gate with bounded markers and named prerequisites; new checks `keys` (retired L5 keys) and `process` (advisory keys, process-status phrases); receiving-review fixtures added to the self-test. The stricter link check found one real defect: GEN WPHASE line cited the abbreviation TRIAD-ALG-T6M; corrected to TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN. |
+| AV02-02 stale items | DYAD.X9 deleted (DYAD §6.12 records the 16/3 cross-reference); DYAD.X4 reduced to results without RID (prefix–grade difference removed); NUMGEN.N-C2 deleted (PHASELAW is [THM] with exact-algebra proof; NUMGEN imports [RESULT][from: THM]); PHASELAW node grade written THM (proof: exact algebraic identity); dangling RECOG.R-C3 pointers (D3.L1 K_p family, *RECOG:Kp-frame) replaced by ≡ DYAD-ALG-KP-FRAME-SCALE; dangling RECOG.R-L9 pointer (*RECOG:fixed-points) replaced by the DYAD §1 fixed-point edge. |
+| AV02-03 process wording | removed "pass one done / pass two pending", "Tier-C target FC-DYAD-31", "(governance only)", "NUMGEN-side not started"; kept the open target (exact large-p behaviour of |Q_p|), the available owner result and the missing NUMGEN obligation. RER triad records now read "registry-level acceptance in RER, not installed in the TRIAD DSN". |
+| AV02-04 evidence typing | each `*ATLAS:checked-Dk` record split into exact / numerical / source with its context (atlas v0.1 build checks, carried forward, EV-NOT-RERUN); rounded values written ≈ (517·(256/225)²=33882112/50625≈669.276; 1.51632·1.06252=1.6111203264≈1.61112; K_A≈35.3225; K_B≈8.8292); L0 and Method §6 define the three kinds and require the execution context. |
+
+Build record: `evidence/atlas/build/av02.py` (with the earlier scripts); the checker data files are listed in §1.
