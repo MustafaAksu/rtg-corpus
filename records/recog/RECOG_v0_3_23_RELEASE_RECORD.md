@@ -1,6 +1,6 @@
 # RTG Relational Recognition DSN v0.3.23 — release record
 
-**Status:** DRAFT — stage 1 built, checked and reviewed (round 1 accepted with one correction; round 2 applies it). Not adopted. This record is completed at adoption (Methodology v1.4 §13.7) and frozen then.
+**Status:** DRAFT — stage 1 reviewed and corrected (round 2); stage 2 (compaction) built and checked, under review. Not adopted. Not adopted. This record is completed at adoption (Methodology v1.4 §13.7) and frozen then.
 **Prepared by:** RECOG co-owner (Claude), at the PI's direction of 23 October 2026 ("Go for stage 1 of RECOG v0.3.23").
 **Reviews requested:** change-focused review of stage 1 by the second RECOG co-owner (ChatGPT); the advisory rows checked by the atlas owner; a separate verdict on the FC-21 science block (§4).
 **Governing methodology:** DSN Methodology v1.4 (tag `methodology-v1.4`, `cdacab5f…f2df`). v0.3.22 was adopted under v1.3; the migration is a successor action.
@@ -19,9 +19,9 @@
 |---|---|---|---|
 | Adopted v0.3.22 (tag `recog-v0.3.22`) | `0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9` | — | — |
 | Round 1 (superseded; in git history) | `6a1bdfb062c9233ea56da15760878b73f41f067eea512ddff5ea267b17b4ec06` (without FC-21 `5cb31667…4345`) | commit `4b94723` | co-owner review of PR #19 (GitHub review #5629416922): STAGE 1 ACCEPTED WITH ONE LIMITED CORRECTION — FC-21 VERIFIED; corrections ACCEPTED; FB-13 RIDs PASS; source mappings PASS; checks author-reported, not rerun by the reviewer. Atlas-owner row check (`records/recog/ATLAS_ROW_CHECK_RECOG_v0_3_23_STAGE1.md`, branch `claude/recog-v0.3.23-atlas-check`): rows implemented as disposed; build and checks reproduced byte-exactly. Corrections requested (PI, 23 Oct 2026): A1 `[assuming: …]` in S64-2, S66-1; A2 $S_h$ wording in S614-2; G claim-audit wording |
-| **1 — corrected intermediate, with FC-21 (round 2: A1, A2, G applied)** (build stage, not an edition; this is `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on the branch) | `0b2d5109d75f457ea6168d32f342a6814d8410554808a3b11a596aa467aabc76` | `evidence/recog/scripts/build_recog_v0_3_23_stage1.py` (116 assertion-gated edits; Appendix A masked except the new entry) | `check_recog_v0_3_23_stage1.py`: 22/22 gates PASS, 22/22 negative controls caught by their target gate |
+| **1 — corrected intermediate, with FC-21 (round 2: A1, A2, G applied)** (build stage, not an edition; commit `97b0425`) | `0b2d5109d75f457ea6168d32f342a6814d8410554808a3b11a596aa467aabc76` | `evidence/recog/scripts/build_recog_v0_3_23_stage1.py` (116 assertion-gated edits; Appendix A masked except the new entry) | `check_recog_v0_3_23_stage1.py`: 22/22 gates PASS, 22/22 negative controls caught by their target gate |
 | 1′ — same, without FC-21 (decoupling variant; not committed as a file) | `c36e57f810602d9ca4c5dca5b51a5b3db641fe15b77b4ef969263e0f3462c905` | same builder, `--without-fc21` (110 edits) | 21/21 gates PASS (C18 applies only to the with-FC-21 variant) |
-| 2 — compacted candidate | — | not started; layout only, after the stage-1 review (FA-01) | `tools/check_compaction.py` against the intermediate |
+| **2 — compacted candidate** (this is `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on the branch) | `771f87f29e57c51c0d88eee945f9cbe673fa6b131b4f9d45c195579f835ebf9c` | `evidence/recog/scripts/build_recog_v0_3_23_stage2.py` (7 declared operations; movement map `evidence/recog/v0.3.23/movement_map.json`) | `tools/check_compaction.py` (RECOG profile) against `0b2d5109…bc76`: PASS; RECOG negative controls 17/17 rejected; DYAD regression 16/16 |
 
 **Reproduce** (repository root; the redirection must be byte-exact, so on Windows use `cmd /c`, not PowerShell `>`):
 
@@ -34,7 +34,15 @@ python -I evidence/recog/scripts/recog_v0_3_23_claim_audit.py claim_audit.json
 python -I evidence/recog/scripts/recog_v0_3_23_value_checks.py value_checks.json
 python tools/dsn_lint.py inter.md --prev base.md
 ```
-`inter.md` must equal `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` (`0b2d5109…bc76`). Diff: `git diff recog-v0.3.22 -- dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on the branch.
+`inter.md` must equal the stage-1 file at commit `97b0425` (`0b2d5109…bc76`). Stage 2:
+
+```
+python -I evidence/recog/scripts/build_recog_v0_3_23_stage2.py inter.md cand.md map.json
+python tools/check_compaction.py inter.md cand.md map.json --report check_compaction_report.json
+python evidence/recog/scripts/test_check_compaction_recog.py inter.md cand.md map.json
+python tools/dsn_lint.py cand.md --prev inter.md
+```
+`cand.md` must equal `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` (`771f87f2…bf9c`) and `map.json` must equal `evidence/recog/v0.3.23/movement_map.json`. Diffs: stage 1 `git diff recog-v0.3.22 97b0425 -- dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`; stage 2 `git diff 97b0425 <stage-2 commit> -- dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`.
 
 ## 2. Changes (stage 1)
 
@@ -82,6 +90,45 @@ Edit keys refer to `evidence/recog/v0.3.23/stage1_edits.json`, which holds each 
 | Appendix A entry | A-1 | compact draft entry for v0.3.23; the publication commit sets its heading |
 
 **Deferred or routed (no edit):** FC-22 (missing: first-passage index definition, eventual monotonicity of $\Theta_m$, vanishing overshoot); FC-24 (missing: frame match of $S_h$ and $R$ at second order in the B-section frame); FC-23 routed to GEN; GAP-LOCK Lemma 3 use and the explicit-domain inputs routed to NUMGEN, the phase-moment retest to GEN (informational, via the PI); R6 F5 not in this release (PI decision 3). Header identity lines, the stacked status summaries, the freeze history, closed-OPEN specifications, §9, the SG order and Appendix A compaction are stage 2 (FA-01).
+
+## 2a. Stage 2 — layout-only compaction
+
+Base: the reviewed stage-1 intermediate `0b2d5109…bc76` (commit `97b0425`). Builder `evidence/recog/scripts/build_recog_v0_3_23_stage2.py`; movement map `evidence/recog/v0.3.23/movement_map.json`. Archives in the map: tag `recog-v0.3.22` (every relocated passage that predates v0.3.23) and the stage-1 file at commit `97b0425` (the header with its stage-1 lines and the stage-1 Appendix A entry). No claim, grade, qualifier, RID, OPEN status or evidence pointer of the live text changes (checker: 459 of 460 claim blocks byte-identical, one (the R10 status line) changed by the declared reference substitution M05; RID set, anchors, hashes and qualifier tags preserved).
+
+| Op | Kind | What moves | Where it now is |
+|---|---|---|---|
+| M01 | replace-header | 24 stacked status summaries (v0.2.1–v0.3.22), the 25-edition Supersedes list, the freeze history, the long companion and methodology lines | header and Appendix A of `recog-v0.3.22`; the stage-1 header lines at `97b0425`. New header: current fields only, with the §1 profile exception, *Supersedes* = v0.3.22 and its full hash, one status summary whose sentences are verbatim from the base header summary and base §1 |
+| M04, M05 | replace-section, ref-subst | OPEN R10: the v0.3.2 enclosure template (instantiated by Dyadic v6.4.10) | v0.3.22 §2 (tag `recog-v0.3.22`); the R10 status sentence points there |
+| M06 | replace-section (history-appendix) | Appendix A: 27 full entries | compact entries for v0.3.23 and v0.3.22, one table row per earlier edition with its printed identity; full entries in Appendix A of `recog-v0.3.22` and, for the stage-1 draft entry, at `97b0425` |
+| M07 | replace-footer | footer | one footer for the candidate |
+
+**Not relocated, and why.** The checker relocates no passage that carries a claim tag, and keeps every live RID and source hash in the live text. So these stay in place for now:
+- the retained v0.3.2 specification of the closed R8 (it quotes `[OPEN]` and `[NUM strong]`);
+- the former R11 text, with its `[OPEN]` sub-items;
+- the R9 degree-7 budget paragraph (`[ALG]`; it also carries the old phrasing "$|\Lambda_1|\le0.0076520$, … $q_0<3.8\times10^{-5}$");
+- the R7 "Active sub-items" heading over closed items;
+- the §7.1 and §7.2 audit tables (they carry `[ALG]`/`[THM]` in their cells and full source hashes), and with them the G2-audit "unchanged" sentence in §6.13b, which the PI allowed to move with that history;
+- the SG order (R13 and R14 before R12), because the checker has no move operation;
+- §9 "**Archive.** none yet".
+
+Each of these is either a correction of stale tagged text (stage-1 type) or a reorder. They are proposed for the next RECOG release, built as a stage-1 correction and then compacted.
+
+**Checker calibration (RECOG profile).** `tools/check_compaction.py` gained a study profile read from the map (`"profile"`; recorded in the report). Defaults reproduce the DYAD pilot: the DYAD v6.4.21 triple still PASSES and its 16 controls are still rejected. The profile can set:
+- extra reference words (RECOG uses one: "template");
+- extra history words (none used);
+- the tag prefixes whose pointers must resolve, and the known repository tags;
+- the source of the status-summary sentences: the base header summary, plus base §1, which the claim-block checks already cover.
+
+The base status summary is now found as `**Status summary:**` or, failing that, the newest `**Status summary (…):**`; before this change a RECOG header made the checker fail with an exception. No check was removed or relaxed for DYAD.
+
+**FA-RECOG-01 must-stay-live list (for the review).**
+- F2(a3)'s selection question: §2 R6 and §6.16b, unchanged.
+- Registry-relative limits: 16 occurrences.
+- The absence of independent write-through: RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH and the R6 remaining question.
+- W1–W5: §6.16g.
+- R6 status line: "Status: ACTIVE (sharpened v0.3; identifiability audited v0.3.7)".
+
+All are byte-identical to the intermediate (checker: claim blocks).
 
 ## 3. FA-08 — per-block `[RESULT]` ledger
 
@@ -174,7 +221,7 @@ Tool: `evidence/recog/scripts/recog_v0_3_23_claim_audit.py`, output `evidence/re
 
 **No notice state changes in this release** (PI decision 2, 23 Oct 2026). Current states as printed in §7.2: G3 to RER as recorded by RER v0.2 §G9 r4.11 (received by the RER preparer via the PI, 21 Oct 2026, `53341b9a…b4b5`); G3 to OFN and to RRF prepared; v0.3.22 notices N-D, N-NG, N-O/R/E prepared; Dyadic N19 and N21 to RECOG prepared by Dyadic and not sent, used as input only. A separate structure for cross-stream notices is to be set up later by the PI.
 
-**§7.3 notification rule — PI decision pending.** The co-owner review and the atlas row check both agree with the recommendation below. The rule asks for pre-release notice of any change to the statement, hypotheses, domain, rows, constants, track or grade of a listed RID. This release:
+**§7.3 notification rule — PI decision (23 Oct 2026): approved as recommended.** The two `[from: …]` pairings are a normalization, not a grade change; consumers are notified with the release hash after adoption. The co-owner review and the atlas row check agreed. The rule asks for pre-release notice of any change to the statement, hypotheses, domain, rows, constants, track or grade of a listed RID. This release:
 - changes no statement, hypothesis, domain, row, constant or track of a listed RID;
 - adds the pairing tag to two consumed `[RESULT]` RIDs: `RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS` `[from: DEF]` (consumers RRF v0.8.4 §6.3, RER v0.2 G9, OFN v0.10) and `RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH` `[from: ALG]` (OFN v0.10). The pairing records the existing canonical status and does not grade the claim up or down;
 - adds RIDs (two maintenance, one FC-21) and the $\approx$ displays of $\lvert G\rvert$, an R9 object, with unchanged value.
@@ -191,6 +238,10 @@ Recommendation: treat these as additive or grammatical and notify on release wit
 | Claim audit | `recog_v0_3_23_claim_audit.py` | 34/34 rows P: quoted statement present at the cited RID in the current source (§5) |
 | Values | `recog_v0_3_23_value_checks.py` | Part A exact A1–A7 PASS; Part B `[NUM]` illustration of FC-21 PASS (12 starts, 20000 blocks; not a proof input) |
 | Size report (informational, no gate) | `tools/dsn_lint.py --prev` | 346,451 bytes (+17,303, +5.3 %); 1,609 lines; §1 1,286 words; 24 stacked status summaries in the header — compaction is stage 2 (`dsn_lint_stage1.txt`) |
+| Compaction (stage 2) | `tools/check_compaction.py` with the RECOG profile of the map | PASS: re-derivation exact; 7 operations PASS; 460 claim blocks in base live text — 459 byte-identical, 1 changed by the declared reference substitution M05, 0 unexplained; RID set, heading anchors, source hashes and qualifier tags of the live text preserved; references resolve; header and footer (`check_compaction_output.txt`, `check_compaction_report.json`) |
+| Compaction negative controls | `test_check_compaction_recog.py` | 17/17 rejected: qualifier deleted (undeclared; declared as history), scope widened as ref-subst, RID re-attributed (declared; undeclared), pointer to a missing tag and to a missing appendix, archive mismatch, live §6.13a relocated, two footers, hash altered, theorem deleted, evidence pointer deleted, stale R10 wording restored, status-summary sentence added, R6 status altered, tagged R11 history relocated (`negative_controls_output.txt`) |
+| Checker calibration regression | `tools/test_check_compaction.py` on the DYAD v6.4.21 triple | PASS, 16/16 controls rejected (`dyad_regression_test_check_compaction.txt`) |
+| Size report, stage 2 | `tools/dsn_lint.py --prev` | 281,836 bytes (−64,615, −18.7 % against the intermediate); header 3,199 chars (was 37,229); Appendix A 5,087 chars (was 34,540); 1,391 lines (`dsn_lint_stage2.txt`) |
 
 Calibration notes. The checker's RECOG profile was built for this file: header identity lines, heading/anchor list, the RECOG `[RID: …]` grammar with after-text attachment, local alias `[assumes: …]`, OPEN `Status:` lines, §8 file names. C1 BUILD catches every byte change by construction; the controls therefore report which semantic gate catches each mutation. A passing check authorizes nothing.
 
@@ -198,7 +249,8 @@ Calibration notes. The checker's RECOG profile was built for this file: header i
 
 | File | SHA-256 |
 |---|---|
-| `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` (stage-1 intermediate) | `0b2d5109d75f457ea6168d32f342a6814d8410554808a3b11a596aa467aabc76` |
+| stage-1 intermediate (`dsn/…` at commit `97b0425`) | `0b2d5109d75f457ea6168d32f342a6814d8410554808a3b11a596aa467aabc76` |
+| `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` (stage-2 candidate) | `771f87f29e57c51c0d88eee945f9cbe673fa6b131b4f9d45c195579f835ebf9c` |
 | `records/recog/RECOG_v0_3_23_FC21_PROOF_CELL.md` | `42a5dc67327e9c21a5afe83f723340e8db3ea32e38bd39df4dc1b5393026bd11` |
 | `evidence/recog/scripts/build_recog_v0_3_23_stage1.py` | `6b28185b8c181e535c5cab9483c0bd5311f7b18117fb08d5c98b58f6479958a7` |
 | `evidence/recog/scripts/check_recog_v0_3_23_stage1.py` | `88fdb80bd7393d80ebdddb2f75cbcefb4504b24257c55d0b653337e4ef87ddb8` |
@@ -213,6 +265,16 @@ Calibration notes. The checker's RECOG profile was built for this file: header i
 | `evidence/recog/v0.3.23/value_checks.json` | `eb8df08a7fa77c99cc05d4a92cbe25450052c6e44b977f6c505f864cd6fb70fe` |
 | `evidence/recog/v0.3.23/value_checks_output.txt` | `20dbcdc90f738c37d0eca8cc921a3e8c4773a7efac936570742204f5ae68697c` |
 | `evidence/recog/v0.3.23/dsn_lint_stage1.txt` | `d73b0511940d7a0cd9538b9e8a423d3904d6daa33680a04f8e0cb8356dd51ec5` |
+| `evidence/recog/scripts/build_recog_v0_3_23_stage2.py` | `551517e1cf7a41524b1cf9ec95c93f5f7b53d75e42265e389fc3116bf3f687e8` |
+| `evidence/recog/scripts/test_check_compaction_recog.py` | `70df97fe3c385326610f5ac15d2f775a85b4dc59c464b7fa8ce370b1d594e03a` |
+| `tools/check_compaction.py` (calibrated, §2a) | `be41f30e975d2afa18f0814f77cf23175a47acaf0a626a7c0166cce0a6bcecb1` |
+| `evidence/recog/v0.3.23/movement_map.json` | `f89334cef308f70090fce3afd26223fe7b9e25f469fd67bf735558a49aa5ef6e` |
+| `evidence/recog/v0.3.23/check_compaction_report.json` | `a8060ebe600e53b55a4ecda30079ee3b675d4bc13741db336e7800f0d6b66f0b` |
+| `evidence/recog/v0.3.23/check_compaction_output.txt` | `a8073823cb4e6f08d9add282db70096f93623afa090573d7eab89bc4d1ffeee1` |
+| `evidence/recog/v0.3.23/negative_controls_report.json` | `65742672e853c5fb11d2ba44a6a371e88311ce5fb63e98ccd5af9900b5fbee28` |
+| `evidence/recog/v0.3.23/negative_controls_output.txt` | `142ab300f49f379d54d72b1f9d70bf63cd6dc65e92482fff9c04f2b55236408b` |
+| `evidence/recog/v0.3.23/dyad_regression_test_check_compaction.txt` | `0ab7f5f75ac0be03328af219740ebf5a1c590d7f757cf78599134ffd3d96ccd0` |
+| `evidence/recog/v0.3.23/dsn_lint_stage2.txt` | `ba5706012910868f7206a34d4c9aecf4c46967fdd48a66e9590799ca1ba8152c` |
 
 Environment: Python 3.13, sympy 1.14, mpmath 1.3; Linux workspace of the RECOG co-owner session. Part B of the value checks is float64; its numbers can differ in the last digits on another platform; its pass thresholds do not depend on them.
 
@@ -223,6 +285,6 @@ Environment: Python 3.13, sympy 1.14, mpmath 1.3; Linux workspace of the RECOG c
 | Stage-1 change-focused review (co-owner, ChatGPT) | round 1: ACCEPTED WITH ONE LIMITED CORRECTION (GitHub review #5629416922 on `4b94723`); correction applied in round 2 |
 | Advisory-row check (atlas owner) | ROWS IMPLEMENTED AS DISPOSED; A1, A2 applied in round 2 (`ATLAS_ROW_CHECK_RECOG_v0_3_23_STAGE1.md`, branch `claude/recog-v0.3.23-atlas-check`) |
 | FC-21 block verdict | VERIFIED (same review) |
-| Stage 2 (compaction, FA-01) | not started; after the stage-1 review |
+| Stage 2 (compaction, FA-01) | built and checked; change-focused review requested, including the FA-RECOG-01 must-stay-live list (§2a) |
 | PI adoption | — |
 | Publication transform, merge, tag `recog-v0.3.23` | — (PI) |
