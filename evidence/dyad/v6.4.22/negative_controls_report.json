@@ -1,0 +1,130 @@
+{
+ "all_as_expected": true,
+ "controls": [
+  {
+   "as_expected": true,
+   "description": "unmutated candidate",
+   "exit": 0,
+   "failing_gates": [],
+   "id": "P0"
+  },
+  {
+   "as_expected": true,
+   "description": "one-byte edit (full rebuild)",
+   "exit": 1,
+   "expected_gate": "C0",
+   "failing_gates": [
+    "C0",
+    "C2"
+   ],
+   "id": "N0"
+  },
+  {
+   "as_expected": true,
+   "description": "one OPEN-M R11 written bare again (§6.12)",
+   "exit": 1,
+   "expected_gate": "C4",
+   "failing_gates": [
+    "C4"
+   ],
+   "id": "Q1"
+  },
+  {
+   "as_expected": true,
+   "description": "an OPEN-M occurrence relabelled RECOG (§6.12 factor)",
+   "exit": 1,
+   "expected_gate": "C4",
+   "failing_gates": [
+    "C4"
+   ],
+   "id": "Q2"
+  },
+  {
+   "as_expected": true,
+   "description": "stale replay wording restored (§8)",
+   "exit": 1,
+   "expected_gate": "C5",
+   "failing_gates": [
+    "C5"
+   ],
+   "id": "Q3"
+  },
+  {
+   "as_expected": true,
+   "description": "constant changed in §6.14 (403/250 -> 403/251)",
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "id": "Q4"
+  },
+  {
+   "as_expected": true,
+   "description": "grade tag changed in §6 (ALG -> THM)",
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "id": "Q5"
+  },
+  {
+   "as_expected": true,
+   "description": "one RID tag removed",
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "id": "Q6"
+  },
+  {
+   "as_expected": true,
+   "description": "older Appendix A entry edited",
+   "exit": 1,
+   "expected_gate": "C2",
+   "failing_gates": [
+    "C2"
+   ],
+   "id": "Q7"
+  },
+  {
+   "as_expected": true,
+   "description": "a section 2 Status line changed",
+   "exit": 1,
+   "expected_gate": "C7",
+   "failing_gates": [
+    "C2",
+    "C7"
+   ],
+   "id": "Q8"
+  },
+  {
+   "as_expected": true,
+   "description": "header status set to ADOPTED",
+   "exit": 1,
+   "expected_gate": "C6",
+   "failing_gates": [
+    "C2",
+    "C6"
+   ],
+   "id": "Q9"
+  },
+  {
+   "as_expected": true,
+   "description": "cited hash of the h4 second-route script altered",
+   "exit": 1,
+   "expected_gate": "C8",
+   "failing_gates": [
+    "C2",
+    "C8"
+   ],
+   "id": "Q10"
+  }
+ ],
+ "script": "check_dyad_v6_4_22_controls.py"
+}
