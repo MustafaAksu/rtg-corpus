@@ -1,0 +1,302 @@
+{
+ "base_sha256": "a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d",
+ "edits": [
+  {
+   "key": "ED-1",
+   "location": "title",
+   "new": "# RTG_DYADIC_OSCILLATOR_DSN_v6.4.22\n",
+   "new_sha256": "e2dd8ca4b9af9d75001186b0dd575cd110e746255f6b305888efd2a0428cda45",
+   "old": "# RTG_DYADIC_OSCILLATOR_DSN_v6.4.21\n",
+   "old_sha256": "df44ac1f381e436d957ee4c318ca6d259f59e7d848a4eea27e2fdfd2ea62dae3"
+  },
+  {
+   "key": "ED-2",
+   "location": "header date",
+   "new": "**Date:** 23 October 2026  \n",
+   "new_sha256": "826dad5d97dd6791f0d91eaeb54fb2d97b51291031ca6ccdc594c05d57ac46c9",
+   "old": "**Date:** 22 October 2026  \n",
+   "old_sha256": "95cc0a9a71922d531463d3dc7b0517388f2de410fe8ff957acdfa8670b116043"
+  },
+  {
+   "key": "ED-3",
+   "location": "header status",
+   "new": "**Document status:** DRAFT — v6.4.22 candidate (owner errata: current-state wording, owner labels for RECOG R11 and OPEN-M R11, three wordings, second-route $h_4$ evidence); not adopted.",
+   "new_sha256": "c43ab014b9237ef02fa7e5d14a6300a6ad608e3860e093a95bd203323c01d41e",
+   "old": "**Document status:** ADOPTED — PI, 22 October 2026 (closeout errata and Methodology v1.4 compaction pilot). Adoption record: `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`.",
+   "old_sha256": "3cc870f5cffdcd6e2cbf4f8da0c5907894efd96e2a7181c6303cb6df38174358"
+  },
+  {
+   "key": "ED-4",
+   "location": "header supersedes",
+   "new": "**Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.21` (SHA-256 `a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d`; tag `dyad-v6.4.21`).",
+   "new_sha256": "75117cb1899e021ca9ccd34c872cb3f75a0a360b6b36051503f05949b18d986c",
+   "old": "**Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.20` (SHA-256 `0b2d5a44eb818598bb330464dfa4f2e9d75521715f577a7c2e589e165f1a4852`; tag `dyad-v6.4.20`).",
+   "old_sha256": "4592fcd87c6b8ffa95582fb3cded20ed1a5ed427e89b5e8dae1667a492e714b7"
+  },
+  {
+   "key": "ED-5",
+   "location": "header release record",
+   "new": "**Release record:** `records/dyad/RTG_DYADIC_v6_4_22_RELEASE_RECORD.md`. Version history: Appendix A.",
+   "new_sha256": "d3cede27cf7bbcc158a7bad55495470ce546add1f7617fb4334ccb3b07140544",
+   "old": "**Release record:** `records/dyad/RTG_DYADIC_v6_4_21_RELEASE_RECORD.md`. Version history: Appendix A.",
+   "old_sha256": "b0dbf9bb546683a52f75018cd0255937437b3ae39b4da2c606e3fca59b944738"
+  },
+  {
+   "key": "ED-6",
+   "location": "Appendix G note",
+   "new": "v6.4.21 and v6.4.22 keep every heading anchor of v6.4.20.",
+   "new_sha256": "dc4b2c5aa43e3909ab136467264569793613b5b7dc7beb1a86cf63192c0e1715",
+   "old": "v6.4.21 keeps every heading anchor of v6.4.20.",
+   "old_sha256": "3e088560d16f040ca9e5fc3ff33edfe1d8b77e972e0fb5a615fdb637a739e186"
+  },
+  {
+   "key": "ED-7",
+   "location": "footer",
+   "new": "*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 (DRAFT candidate, 23 October 2026).*",
+   "new_sha256": "57470481fbe3a917751b6006fa8189ed3fbb02b6e2007d0d7ee52943bbfc69ba",
+   "old": "*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.21 (ADOPTED, 22 October 2026).*",
+   "old_sha256": "2417b02fede3655db661824c88ecdf42f41e50e9bb32c9a971541b2840e1fad6"
+  },
+  {
+   "key": "F1",
+   "location": "§7.0 Dyadic row",
+   "new": "| Dyadic (this ledger) | v6.4.22 | this edition; status in the header; its SHA-256 is in its release record | predecessor v6.4.21: `a412f34d4db6a6fa92705a5c33334127b3efc3a30a903fecb3c91bd0cf1cdc7d` | tag `dyad-v6.4.21`; release records in `records/dyad/` | earlier editions by tag (`dyad-v6.4.20`, `dyad-v6.4.19`; v6.4.19 is the base of the ATLAS P1/P2 work) |",
+   "new_sha256": "da825a9d3506d70da5d4c95609498f5ff57617f9c9b5473a80eed086e0c5e4a5",
+   "old": "| Dyadic (this ledger) | v6.4.19 | ADOPTED 20 Oct 2026; superseded by v6.4.20 (this edition, adopted 21 Oct 2026; its SHA-256 is in `RTG_DYADIC_v6_4_20_RELEASE_RECORD.md`) | `40c9e63f14baef581db9ef4a362ea8f8ac1f124c9f29a63f6b1c3f8931686ec9` | release record; verification record | base of P1/P2 |",
+   "old_sha256": "0ba86f3c8f9746254f2126005d658a0eac8687ef3c41f8897c992dc5a50aa1dd"
+  },
+  {
+   "key": "F2",
+   "location": "§7 notice-table intro",
+   "new": "\"Where recorded\" names the consumer record read when the row was last updated; \"NOT RECORDED\" means no receipt was found there, not that the notice was refused. Notices N16–N21 are prepared and not yet sent (`records/dyad/DYAD_NOTICES_N16_N21.md`, routed through the PI); their states per recipient (sent, received, statement accepted, adopted use) are kept there and entered in this table when a state is recorded.",
+   "new_sha256": "21462f80f41bfa2d18eb0b9bda83667457e9f1967fefdf5dcdf5ac6266444264",
+   "old": "\"Where recorded\" names the consumer record read for this edition; \"NOT RECORDED\" means no receipt was found there, not that the notice was refused. Notices N16–N20 (ATLAS disposition §6) are prepared only after external verification of this edition's SHA-256; none is prepared in this edition.",
+   "old_sha256": "a20837ed5dbc9998bbdc06dd3b999404bd86d3184f784cbf73cf85f24ebc8c7c"
+  },
+  {
+   "key": "F3",
+   "location": "Appendix F intro",
+   "new": "consumer repins are requested by notice N17 (prepared, not yet sent; `records/dyad/DYAD_NOTICES_N16_N21.md`).",
+   "new_sha256": "d243a2ee0313aae78f6b3f47b188d88a8937f84b30107864579a48685853f8c1",
+   "old": "consumer repins are requested by planned notice N17, after external verification of this edition's SHA-256.",
+   "old_sha256": "1494fbeeb5eb9eb3f181ff35afe3c7b691feb63af2772c995e6cf0aa503ee5c4"
+  },
+  {
+   "key": "F5a",
+   "location": "§6.14 L-PHASE distinctions (iv)",
+   "new": "negative-control exit codes recorded separately. Reviewer replay (v6.4.19 release verification, 21 Oct 2026): G14 and the G15 main gate each replayed separately; the combined G14–G15 run and the separate-process M1–M4 exit codes are **not completed**.",
+   "new_sha256": "e3ef888058791f6ab88d7cb7cb31c6b897f8801e1f897ba2606ae4813cd88fc3",
+   "old": "negative-control exit codes recorded separately; **reviewer full replay pending**.",
+   "old_sha256": "0cad906a4ecfbafe76442f94fe207e3c5bb17dc93c4306ec24f6a5e1bdd4235a"
+  },
+  {
+   "key": "F5b",
+   "location": "§8 DYAD-ART-LPHASE-P2B-PROV",
+   "new": "4 negative controls (exit 1 each; crash exits 3); owner replay; reviewer replay of the main gate separately (v6.4.19 release verification), combined G14–G15 run and separate-process M1–M4 exit codes not completed ::",
+   "new_sha256": "4156286be8f4fc9b0e44fd5494e49f0ce0972d5ab6c30044cff028839e386d18",
+   "old": "4 negative controls (exit 1 each; crash exits 3); owner replay; reviewer full replay pending ::",
+   "old_sha256": "31c1abf1658e31b916776601803dd3645d88c37d786a3540c61d5a3190cff5c3"
+  },
+  {
+   "key": "W1",
+   "location": "§1 one-block burst",
+   "new": "(it is $P_5$ restricted to the ray, §6.14). Coefficient",
+   "new_sha256": "b60220cb297571db0bb9cb0d8e2691fa5b440ad530184805ecb1884f5fa9a66c",
+   "old": "(it is $P_5$ restricted to the ray, §6.14); earlier statements omitting it are superseded. Coefficient",
+   "old_sha256": "744aef094d22857c7086c84c6721960f0a4fe3df5a9c1cb6d142d71aa817702b"
+  },
+  {
+   "key": "W2",
+   "location": "§6.5 half-power term",
+   "new": "(§6.14). The $Q_0^3$ coefficient",
+   "new_sha256": "43da69f767be19e5cfadbc4f04a583bbd9b83beca0ca4a88388c805156da56fe",
+   "old": "(§6.14); the earlier form without it is superseded. The $Q_0^3$ coefficient",
+   "old_sha256": "a19d30307686d540268489a5941a0999d720ec010ff3d0b434ff66879ebe0fcc"
+  },
+  {
+   "key": "W3",
+   "location": "tag tables: §6.13 heading",
+   "new": "keeps its `[ENG]` heading tag.",
+   "new_sha256": "1ac56ec1b2a008287da360fbd09d7bc11bed2d5473278a5d1123d662c1d55be9",
+   "old": "keeps its former heading tag.",
+   "old_sha256": "340d0ecaf38c94127171c5f06eeed56967624b34d39324a34c1c01997b26629e"
+  },
+  {
+   "key": "H4a",
+   "location": "§1 OPEN 13 entry",
+   "new": "exact recomputation `dyad_h4_archival_exact_check.py`, v6.4.21; second route `dyad_h4_real_route_check.py`, exact rational $T^6$ in the real chart, v6.4.22)",
+   "new_sha256": "0489601beacfd4faa677c43f9b3517a8a621d6dc312c49f1d6fe207ebe14cf56",
+   "old": "exact recomputation `dyad_h4_archival_exact_check.py`, v6.4.21)",
+   "old_sha256": "68c346f6f4bc3fd00ad9fe385f8051c4e8b707f0e8c1f56243a120f6755b708c"
+  },
+  {
+   "key": "H4b",
+   "location": "§8 DYAD-ART-NORM-P6",
+   "new": "its $h_4$ closed forms are confirmed exactly by `dyad_h4_archival_exact_check.py` and, by a second route (exact rational $T^6$ in the real chart), by `dyad_h4_real_route_check.py`, SHA-256 `dd06a1a20466dbe16da9c9b2e5bfe01a209decbedeed5a2c4a3ba33c783c1e6d`)",
+   "new_sha256": "e773cd023466efc850f88784974fa12f42c1aa9a6fda0ce09cef5a1b5004719f",
+   "old": "its $h_4$ closed forms are confirmed exactly by `dyad_h4_archival_exact_check.py`)",
+   "old_sha256": "1e2a727f9a798481c47256191bd743b6636e8d5081167df3f60a899a82261f85"
+  },
+  {
+   "key": "H4c",
+   "location": "Appendix E.1 LIEGAUGE-NORM row",
+   "new": "| `normalize_p6_liegauge_exact.py` (DYAD-ART-NORM-P6, `[ENG]`, 120 dps); $h_4$ field: `dyad_h4_archival_exact_check.py`, `dyad_h4_real_route_check.py` (exact) | not recorded | mpmath, tolerance-pruned; sympy and exact rationals for $h_4$ |",
+   "new_sha256": "a85cadc7001eecae4ff463556de417de738651bc6409ae6f510d2cb48b173073",
+   "old": "| `normalize_p6_liegauge_exact.py` (DYAD-ART-NORM-P6, `[ENG]`, 120 dps) | not recorded | mpmath, tolerance-pruned |",
+   "old_sha256": "263ccac9cce580376a52949e76689078a652cdf76e881bcd5e01b85c3d3ef051"
+  },
+  {
+   "key": "H4d",
+   "location": "Appendix E.2 LIEGAUGE-NORM row",
+   "new": "| `DYAD-ALG-LIEGAUGE-NORM` | historical; $h_4$ closed forms recomputed exactly (v6.4.21; second route v6.4.22) | not recorded | not recorded | second route: different composition engine and chart, same definitions | gauge-universal form OPEN |",
+   "new_sha256": "0649cd7ce0012b1ac0582e6c10d328b5c63e944308c60975b48bdae837f90fa7",
+   "old": "| `DYAD-ALG-LIEGAUGE-NORM` | historical | not recorded | not recorded | not recorded | gauge-universal form OPEN |",
+   "old_sha256": "963dea0fef9f7716713daa5c0fe9521f0a2b2810a67fa3d692dc9263f76b9200"
+  },
+  {
+   "key": "F4-01",
+   "location": "§1 P0-DYADIC entry (OPEN-M)",
+   "new": "The OPEN-M R11 cascade-gate arithmetic conversion is `[ALG]`;",
+   "new_sha256": "614003749171535704b4dee4c5a14fe0f849039a40b45a57fdb0589762fdcd33",
+   "old": "The R11 cascade-gate arithmetic conversion is `[ALG]`;",
+   "old_sha256": "6a695fc684f429b9586865d05835bf22ec50c84325f294b337880a9d8e283762"
+  },
+  {
+   "key": "F4-02",
+   "location": "§1 P0-DYADIC entry (OPEN-M)",
+   "new": "`[scope: conditional]`: OPEN-M R11 treats $h$ as an external amplitude (Audit-1 = OPEN-M v0.7.1 R16,",
+   "new_sha256": "233c658a3c62efa8b87d07a82fdef2d79c50c55c9fcd937c9b2cf5d612373a74",
+   "old": "`[scope: conditional]`: R11 treats $h$ as an external amplitude (Audit-1 = OPEN-M v0.7.1 R16,",
+   "old_sha256": "71ef0bd9116969f4de6c98232c9e643ce28d449831faa444ade7358d7125d7d0"
+  },
+  {
+   "key": "F4-03",
+   "location": "§3 SG-15 (OPEN-M)",
+   "new": "However OPEN-M R11 treats $h$ as an external amplitude parameter",
+   "new_sha256": "87ede2782756ad188d279c31613e4cc9b63dcf45d269d4df2b2cd5cae7314a97",
+   "old": "However R11 treats $h$ as an external amplitude parameter",
+   "old_sha256": "e5a94bd9134f7c425f7904ba0d66289d4a782e2d4207afe111cd8e5455899cd1"
+  },
+  {
+   "key": "F4-04",
+   "location": "§3 SG-19 violation (RECOG)",
+   "new": "into the conjugacy chart without the RECOG R11 reconciliation (final-chart ledger);",
+   "new_sha256": "9142476b248eb904db9e0299ecc4943d2cf13cbc2a2d5565b5026b64e34a9a70",
+   "old": "into the conjugacy chart without the R11 reconciliation;",
+   "old_sha256": "18553ac2d7201eeb8b3d4a324a3dcfed907ea2a761a242ca807c5bb9817c801d"
+  },
+  {
+   "key": "F4-05",
+   "location": "§5 cascade-gate row (OPEN-M)",
+   "new": "| OPEN-M R11 cascade gate $4/125$ |",
+   "new_sha256": "e95b03cd0a1066221a730698df841562ccf585a75d05b4768f58a679f9bb4fa5",
+   "old": "| R11 cascade gate $4/125$ |",
+   "old_sha256": "4c7b1a7ce47e22ab1d48149604e658ceb009344dc131d57aca2dafd9216fdc65"
+  },
+  {
+   "key": "F4-06",
+   "location": "§6.2 angular optimum (OPEN-M)",
+   "new": "$\\theta_f=2\\pi/3$ (OPEN-M R11 `[ALG]`) equals the face flux",
+   "new_sha256": "818351c602a40fb53a1481d7acf6c0a01f424eaab6bc2896e77eabdde45e4805",
+   "old": "$\\theta_f=2\\pi/3$ (R11 `[ALG]`) equals the face flux",
+   "old_sha256": "c70c522ab48ae2edb699100e8287a64053d21aa04fabfe46b07bac4f30d71f67"
+  },
+  {
+   "key": "F4-07",
+   "location": "§6.11 face-flux entry (OPEN-M)",
+   "new": "(Pre-Legacy §1.8). The OPEN-M R11 cascade-gate conversion is `[ALG]`: at",
+   "new_sha256": "28f3250af740038d879d2eb5ac31db715bfc80a0d9a83c7cc6a5d190ad9032c9",
+   "old": "(Pre-Legacy §1.8). The R11 cascade-gate conversion is `[ALG]`: at",
+   "old_sha256": "a502a993d043a36ae47dfdcdd1f29801fdb6a40437bcb47243907e2cdb69d415"
+  },
+  {
+   "key": "F4-08",
+   "location": "§6.11 h-transfer (OPEN-M)",
+   "new": "**h-transfer:** OPEN-M R11 treats $h$ as an external amplitude (Audit-1:",
+   "new_sha256": "98332822fd8b903a4c4c834a0c3bc09c5ed449f10e1ec60226a3f7e38cbf45f3",
+   "old": "**h-transfer:** R11 treats $h$ as an external amplitude (Audit-1:",
+   "old_sha256": "a429807f9f1c196d5a064bb3e6bdfe0239fbe3f30db1a52d82d52c6fb2752c8b"
+  },
+  {
+   "key": "F4-09",
+   "location": "§6.11 SU(2) factor (OPEN-M)",
+   "new": "or not at all is undetermined by OPEN-M R11 and blocked",
+   "new_sha256": "f5c9bcc1b41c2ee860483084d2f0d06c7668d00eb5d56b0313b0f1129f329f9e",
+   "old": "or not at all is undetermined by R11 and blocked",
+   "old_sha256": "2c17c19887064fc74d309d4322a6e226b565b1d53ad43552637619ac43b1c8ae"
+  },
+  {
+   "key": "F4-10",
+   "location": "§6.12 calibration route (OPEN-M)",
+   "new": "via the OPEN-M R11 factor $3/4$ at $\\theta_f=2\\pi/3$;",
+   "new_sha256": "d9e126348b1fc8f73e63d9fbd5991d7e71fe158c9bec7c095d558040762d4fe4",
+   "old": "via the R11 factor $3/4$ at $\\theta_f=2\\pi/3$;",
+   "old_sha256": "d61c104d67467eda26691ee0d18f407a5afe1a4079a6030dea1b8aa27de3e522"
+  },
+  {
+   "key": "F4-11",
+   "location": "§6.12 calibration route (OPEN-M)",
+   "new": "status. OPEN-M R11's source formula $|H|_B=hr^2$",
+   "new_sha256": "7b250272fc9c2dab2b15d69a36633480177e5b576160e59b138dc6774c82bccc",
+   "old": "status. R11's source formula $|H|_B=hr^2$",
+   "old_sha256": "30b985640a05648b7fab0bb5540201362377280a48bb7db8864cf8bc2e931a07"
+  },
+  {
+   "key": "F4-12",
+   "location": "§6.12 calibration route (OPEN-M)",
+   "new": "source scaling, which OPEN-M R11 does not fix",
+   "new_sha256": "e7d9dafb2c2e9bdb748da449de7664eb99cf6a9bec717909745a7d139cbc8fb5",
+   "old": "source scaling, which R11 does not fix",
+   "old_sha256": "37e1e597ad170413f86f72503dd33c96c9a2a9342eaf64bac01905648c7e0522"
+  },
+  {
+   "key": "F4-13",
+   "location": "§6.14 boundaries (RECOG)",
+   "new": "R10 acceptance and RECOG R11 final-chart ledger (amplitude,",
+   "new_sha256": "2edeb4d68543eedb1511e54f79b074db0e83a8edc0adfc4ae2c043766f57656e",
+   "old": "R10 acceptance and R11 final-chart ledger (amplitude,",
+   "old_sha256": "1c9f8f29f303134745b762c8a150e7b3a5e75a82990bac3b874b03699063315c"
+  },
+  {
+   "key": "F4-14",
+   "location": "§6.14 boundaries (RECOG)",
+   "new": "R10 delivered/accepted, RECOG R11 chart ledger (RECOG v0.3.20;",
+   "new_sha256": "e3f4bdcd2580ed1c490a2586e588ce65ce672422ac23924c2bd1f3fc0db68b31",
+   "old": "R10 delivered/accepted, R11 chart ledger (RECOG v0.3.20;",
+   "old_sha256": "64a2477778c8358d343fb78047cb140d5494255d4d67da091a0b55cf5b041e7d"
+  },
+  {
+   "key": "F4-15",
+   "location": "§7 RECOG consumer line (RECOG)",
+   "new": "Consumer outcomes at RECOG grades: RECOG R11 CLOSED,",
+   "new_sha256": "5e8a545faac2ce3c0d06cf1a697c5a60555c17d608a41609f488279b50754236",
+   "old": "Consumer outcomes at RECOG grades: R11 CLOSED,",
+   "old_sha256": "7046cb94499fa9bce19d6c35e6d2cd493dff8a2a7723438b065e05b9f939473c"
+  },
+  {
+   "key": "F4-16",
+   "location": "Appendix E.1 P0-DYADIC row (OPEN-M)",
+   "new": "face-flux identity and OPEN-M R11 factor $3/4$ under",
+   "new_sha256": "fba97ba97504ac9099b96e96ee66ec2d85f354bb5348db3c3fc1c4c9135864de",
+   "old": "face-flux identity and R11 factor $3/4$ under",
+   "old_sha256": "25f66e51007ced217853999ca7817b086f83b3e49e4049723256346a2baead43"
+  },
+  {
+   "key": "F4-17",
+   "location": "Appendix C: R11 row",
+   "new": "| $r$, $r_m$ | polar radius $z=re^{i\\Theta}$; L-PHASE remainder $r_m$ | §6.14 | — |\n| R11 | (i) RECOG OPEN R11 (`RECOG-OPEN-QUINTIC-FRAME`), the final-chart ledger, CLOSED (RECOG v0.3.2); (ii) OPEN-M R11, the OPEN-M-2B assembly formulas: cascade-gate conversion, source/stiffness maps, angular optimum $\\theta_f=2\\pi/3$ (OPEN-M v0.7.1) | (i) §1, SG-19, §6.5, §6.9, §6.14, §7; (ii) §1, SG-15, §5, §6.2, §6.11, §6.12, Appendix E | always written with its owner: \"RECOG R11\" or \"OPEN-M R11\" |\n",
+   "new_sha256": "6893f19c2b1ffb6b7e90fbae9d74f8478b58ee4dd51b13da712dfaf8a432bcec",
+   "old": "| $r$, $r_m$ | polar radius $z=re^{i\\Theta}$; L-PHASE remainder $r_m$ | §6.14 | — |\n",
+   "old_sha256": "f4d7ba13491df5c0f18270f460218fed9213022002fe5336f74b82a2372a2cf3"
+  },
+  {
+   "key": "ED-8",
+   "location": "Appendix A entry",
+   "new": "### v6.4.22 — 23 October 2026 — DRAFT candidate\n\n- **Errata [status/wording] (owner review of v6.4.21, F1–F3, F5):** §7.0 Dyadic row names this edition and its predecessor; the notice-table and Appendix F intros state that N16–N21 are prepared and not sent; the P2B provenance replay status is stated at its recorded level (§6.14, §8).\n- **Labels [notation] (F4):** every live \"R11\" names its owner — RECOG R11 (final-chart ledger, CLOSED) or OPEN-M R11 (cascade-gate/assembly formulas); Appendix C row.\n- **Wording:** two \"superseded\" sentences removed (§1 one-block burst, §6.5); §6.13 heading-tag sentence.\n- **Evidence:** second-route exact check of the archival $h_4$ coefficients, `evidence/dyad/scripts/dyad_h4_real_route_check.py` (§1, §8, Appendix E).\n- No RID, grade, statement or OPEN status changed. Release record `records/dyad/RTG_DYADIC_v6_4_22_RELEASE_RECORD.md`; predecessor tag `dyad-v6.4.21`.\n\n",
+   "new_sha256": "e8cc94b411e337c032373a3d21c0de62de68d3c3848172d7800ea05a2862fdc0",
+   "old": "",
+   "old_sha256": null
+  }
+ ],
+ "out_sha256": "c6cb222f6f6f58a5d3c1fe269f8b2b86c62131657f464a2e55d09e362cada95a"
+}
