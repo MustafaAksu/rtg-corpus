@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "remote_build_commit": "da81f14b8ea80bfbfd3c5f03b22e86a562d83425",
+  "local_remote_files_equal": 16,
+  "atlas_sha256": "dad844027a8d2c614a90c0a3c1a5736dae9d0a49824b70f788ede7c62a3487c3",
+  "workflow_run": 39981589480,
+  "workflow_result": "success",
+  "scientific_certificate_replays": 0
+}
