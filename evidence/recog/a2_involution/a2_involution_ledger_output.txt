@@ -1,0 +1,14 @@
+G1 PASS
+G2 PASS
+G3 PASS
+G4 PASS
+G5 PASS
+G6 PASS
+G7 PASS
+G8 PASS
+NC1 PASS
+NC2 PASS
+NC3 PASS
+r2 (degree-2 part of R_0): {'rho': {'2,0': '-1', '1,1': '1', '0,2': '-1/2'}, 'eta': {'2,0': '-1/2', '0,2': '1/2'}}
+real-ray degree 2: ['-1', '-1/2']
+ALL PASS

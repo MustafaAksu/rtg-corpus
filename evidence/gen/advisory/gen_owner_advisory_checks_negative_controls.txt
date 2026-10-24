@@ -1,0 +1,6 @@
+[FAIL] S3 |d|^2 (tau^2-kappa^2)^2 = sigma^2 (tau^2 + 2 s a tau + kappa^2); s=+1 <-> K_-, s=-1 <-> K_+
+NC1 exit 1
+[FAIL] S4 [NUM] global minimiser on the circle: tau <= -kappa and branch secular eq.; 3999 cases, 3999 failures
+NC2 exit 1
+[FAIL] K3 Pi_+ pole at tau-g = +kappa (m>0), -kappa (m<0) under kappa=|m||w|
+NC3 exit 1

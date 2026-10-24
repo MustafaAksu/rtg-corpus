@@ -1,0 +1,12 @@
+# upload/gen-records — Genesis v2.8.6–v2.8.9 records held by the Genesis co-owner session (Claude)
+
+Uploaded 24 October 2026 at the PI's request (`records/gen/GEN_COOWNER_ENTRY_NOTE.md` §2). Every file except this README and `SHA256SUMS.txt` is **byte-identical** to the copy produced in the original sessions (16–19 Oct 2026); nothing was edited, renamed or reconstructed. `SHA256SUMS.txt` lists all 36 files (`sha256sum -c SHA256SUMS.txt`). The zip packages carry their own internal manifests (`SHA256SUMS.txt`, `REL_SHA256SUMS.txt`, `KIT_SHA256SUMS.txt`, `RELEASE_SHA256SUMS.txt`), all verified OK before upload; three packages have no internal manifest (`GENESIS_V2_8_6_RELEASE.zip`, `GENESIS_DYAD_v6_4_13_CONSUMER_PACKAGE.zip`, `K3_6S_v0_3_package.zip`).
+
+Key identities cited by the adopted editions:
+- `GENESIS_V2_8_9_RELEASE_RECORD.md` `f6df5d11b877cfb79640290744e87cd73e2487a2c71b1492fffeb615a13e4181` (cited by the erratum on `main`).
+- `GENESIS_V2_8_9_DRAFT_PACKAGE.zip` `a3ceb92e…e973`, `GENESIS_V2_8_9_ADOPTION_KIT.zip` `5dfa9fbc…df52`, `GENESIS_V2_8_9_RELEASE.zip` `db4084b9…11ab`.
+- `GENESIS_TRANSPORTED_FACTOR_TRANSFER_D4_SESSION_v0_1_1.md` `1a5f7f56…cee3`; `…OWNER_PASS_MANIFEST_v0_1.md` `53782f85…0570`; `GENESIS_V2_8_9_OCCURRENCE_DISPOSITION_PLAN_v0_1.md` `aee218c0…1ee3` (cited in v2.8.9 §6.3c / §8 / Appendix A).
+- `K3_CUBIC_FACTOR_OBSTRUCTION_SESSION_RECORD_v0_1_2.md` `9f95d48d…083a` and `K3_KAPPA_SIX_STEP_CLOCK_NOTE_v0_3.md` `049e313e…bc9e` (cited in §8).
+- Evidence scripts cited in §6.3a.1/§6.3b/§6.3c are inside the packages: `d4_transported_cubic_cert.py` (`f4c38285…3f6d`, v2.8.9 draft package), `kappa_pq_symbolic.py` (`091a4210…42b2`), `kappa_pq_independent.py`, `lemmaS_hand_identities.py`, `lemmaS_burnside_check.py` (`K3_6S_v0_3_package.zip`, v2.8.7 draft package), `genesis_nu5_p5_replay.py` (`34bab140…61cb`, v2.8.8 draft package and consumer package).
+
+**Not held by this session** (not uploaded, not reconstructed): the receiving-review texts and owner decisions of 16–19 Oct (they reached this session as chat messages, not files; their content is quoted in the release records); the v2.8.5 and earlier editions and their records; `k3_obstruction_exact_check.py`, `fac.py`, `exact_chiral.py`, `k3.py`, `K3_factor_obstruction.zip`, `exact_q.py`, and every pre-v2.8.6 script named in §8 (e.g. `genesis_k4_route_census.py`, `genesis_birth_race_model.py`, `secular_numerator_trace.py`).
