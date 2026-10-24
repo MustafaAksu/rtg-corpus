@@ -102,13 +102,14 @@ Nothing else changes: no archive is named because nothing is removed or relocate
 
 | Stage | Reviewer / decision | Outcome |
 |---|---|---|
-| Stage 1 — group A1b | co-owner (ChatGPT), review #5639519847 on `5312dd3` | ACCEPTED |
-| Stage 1 — group A1c | same | CONDITIONAL ACCEPTANCE — A1C-1, A1C-2 applied in round 2; limited-diff check pending |
+| Stage 1 — group A1b | co-owner (ChatGPT), review #5639519847 on `5312dd3`; round 2 #5639581025 on `e42c81c` | ACCEPTED |
+| Stage 1 — group A1c | same | ACCEPTED (round 2, after A1C-1 and A1C-2) |
 | Stage 1 — group A3 | same | ACCEPTED |
-| Stage 1 — group MNT | same | CONDITIONAL ACCEPTANCE — MNT-1 applied in round 2; limited-diff check pending |
+| Stage 1 — group MNT | same | ACCEPTED (round 2, after MNT-1) |
+| Stage 1 overall | review #5639581025: `STAGE-1 REVIEW ACCEPTED — STAGE-2 PREPARATION APPROVED`; the 29 edits independently re-applied byte-exactly; variant hashes matched | accepted |
 | Stage 1 — atlas row check | atlas owner | PI-DEFERRED (the PI postponed atlas changes; not a stage-1 gate; no atlas edit or PR) |
-| Stage 2 (compaction) | co-owner (ChatGPT), mechanical review | pending |
-| Adoption | PI | — |
+| Stage 2 (compaction) | co-owner (ChatGPT), review #5639812908 on `a164704`: `STAGE-2 MECHANICAL REVIEW ACCEPTED` — base, candidate and map hashes verified; SG-R12 bytes identical; independent replay of the move PASS; 456/456 claim blocks; control and regression records inspected (campaigns not rerun) | ACCEPTED |
+| Adoption | PI — four separate decisions (A1b `[THM]`; A1c `[RESULT]` + two OPEN sub-items; A3 two `[ALG]`; MNT structural) | pending |
 
 Requested of the stage-1 review: (i) each science block against its accepted cell (no strengthening in transit; the Q1′ scope note and the finite-prefix wording as corrected); (ii) the MNT pointers against `recog-v0.3.23` (checker C22) and the must-stay-live list (F2(a3), W1–W5, R6 ACTIVE, registry-relative limits, no write-through; C17); (iii) the §7 import-row uses; (iv) the four variant hashes.
 
