@@ -1,0 +1,15 @@
+file: /tmp/claude-0/-home-claude/cc26b1d5-bb7e-523a-9023-7a34cf37ba65/scratchpad/cand.md
+bytes: 295014
+lines: 1381
+header_chars: 3293
+live_body_chars: 282487
+appendix_a_chars: 7723
+section1_words: 1392
+orientation_core: {"chars": 44255, "lines": 288, "words": 5364, "core_end_marker_present": true}
+header_fields: {"Title": 114, "Date": 25, "Scope": 422, "Document class": 291, "Document status": 250, "Supersedes": 155, "Companion documents": 292, "DSN Methodology": 118, "Programme tier": 296, "Status summary": 1039, "Release record": 238}
+appendix_a_words_per_edition: 3 editions, max 389 words
+footer_lines: 1
+history_phrases_live: {"historical": 28, "superseded": 37, "former": 3, "retained as": 6, "no longer": 2}
+near_duplicate_paragraphs: 0
+rids_total: 181
+(informational report; no gate)

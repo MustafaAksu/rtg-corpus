@@ -16,6 +16,11 @@ presentation). Exit 0 = PASS, 1 = FAIL, 2 = usage or input error.
 
 It does not prove mathematical truth or the semantic equivalence of rewritten prose
 (§12.4). Parser limits are listed in the report.
+
+Operations: edit (classes ref-subst, history-removal), replace-section (history-section,
+history-appendix; tag_examples/navigation with a registered region), replace-header,
+replace-footer, and move (class reorder: a whole block reinserted byte-identical before a
+unique anchor inside the same section; added for RECOG v0.3.24 stage 2).
 """
 import argparse, hashlib, json, re, sys
 
@@ -153,6 +158,26 @@ def apply_ops(base, mp):
             r = split_regions(s)["header"]
             op["_removed"] = s[r[0]:r[1]]
             s = op["new"] + s[r[1]:]
+        elif k == "move":
+            # byte-preserving reorder of one whole block inside the live text: the block (exactly once in the
+            # base, bounded by blank lines) is cut and reinserted, byte-identical, before a unique anchor that
+            # itself starts a block. Nothing else changes; prose is never rewritten.
+            blk, anchor = op["block"], op["before"]
+            n = s.count(blk)
+            if n != 1:
+                raise ValueError(f'{op["id"]}: block occurs {n} times in base')
+            i = s.index(blk)
+            if not (i == 0 or s[i - 2:i] == "\n\n") or s[i + len(blk):i + len(blk) + 2] != "\n\n":
+                raise ValueError(f'{op["id"]}: block is not a whole blank-line-delimited block')
+            s2 = s[:i] + s[i + len(blk) + 2:]
+            m = s2.count(anchor)
+            if m != 1:
+                raise ValueError(f'{op["id"]}: anchor occurs {m} times after removal')
+            j = s2.index(anchor)
+            if not (j == 0 or s2[j - 2:j] == "\n\n"):
+                raise ValueError(f'{op["id"]}: anchor does not start a block')
+            s = s2[:j] + blk + "\n\n" + s2[j:]
+            op["_moved"] = blk
         elif k == "replace-footer":
             lines = s.split("\n")
             idx = [n for n, l in enumerate(lines) if FOOTER.match(l)]
@@ -183,7 +208,8 @@ def main():
         for r in json.load(open(a.regions, encoding="utf-8"))["regions"]:
             REGIONS[r["id"]] = r
     PROFILE.update(mp.get("profile", {}))
-    global BASE_SECTION1
+    global BASE_SECTION1, BASE_TEXT
+    BASE_TEXT = base
     i = base.find("\n## §1.")
     BASE_SECTION1 = base[i:base.find("\n## ", i + 1)] if i >= 0 else ""
     C = Check()
@@ -270,6 +296,7 @@ def main():
         "An H-label resolves if the archive defines it ('**H-n** —') or defines its lettered group ('**H-na** —').",
         "Archive membership is a byte-substring test against the named archive files.",
         "Study profile (map key 'profile'): extra history words, extra reference words and the status-summary source (base header summary, optionally base §1) are calibration inputs declared in the map and printed in the report.",
+        "A 'move' (class reorder) cuts one whole blank-line-delimited block and reinserts it byte-identical before a unique block-starting anchor inside the same section of the live text; it can change no text, tag, RID, math or hash (re-derivation and the block-multiset test).",
     ]
     if a.report:
         json.dump(rep, open(a.report, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -279,6 +306,21 @@ def main():
         print("WARN ", w)
     print("RESULT:", rep["result"])
     return {"PASS": 0, "FAIL": 1, "PENDING": 3}[rep["result"]]
+
+
+BASE_TEXT = ""
+
+
+def enclosing_heading(s, blk):
+    """The nearest markdown heading line (## or ###) preceding the block in s."""
+    i = s.find(blk)
+    if i < 0:
+        return None
+    head = s[:i]
+    k = max(head.rfind("\n## "), head.rfind("\n### "))
+    if k < 0:
+        return None
+    return head[k + 1:head.index("\n", k + 1)]
 
 
 def heading_anchors(s):
@@ -384,6 +426,23 @@ def check_op(op, arch, cand):
         if extra:
             return False, f"status summary adds text not in the base summary ({'/'.join(src)}): {extra[:2]}"
         return True, f"header replaced; status-summary sentences are a subset of the base summary ({'/'.join(src)})"
+    if k == "move":
+        blk = op["block"]
+        if cls != "reorder":
+            return False, "a move must be of class reorder"
+        if op.get("new") is not None or op.get("old") is not None:
+            return False, "a move carries no old/new text"
+        lb, lc = live_text(BASE_TEXT), live_text(cand)
+        if lb.count(blk) != 1 or lc.count(blk) != 1:
+            return False, "moved block must occur exactly once in the live text of base and candidate"
+        if blk in BASE_TEXT[:split_regions(BASE_TEXT)["header"][1]] or blk in cand[:split_regions(cand)["header"][1]]:
+            return False, "moved block lies in the header"
+        hb, hc = enclosing_heading(BASE_TEXT, blk), enclosing_heading(cand, blk)
+        if hb != hc or not hb:
+            return False, f"moved block changes section ({hb!r} -> {hc!r}); a reorder stays inside its section"
+        if blocks(lb) != blocks(lc) and sorted(blocks(lb)) != sorted(blocks(lc)):
+            return False, "block multiset of the live text changed"
+        return True, f"block reordered inside {hb!r} ({len(blk)} chars, byte-identical)"
     if k == "replace-footer":
         if not in_archive(op.get("_removed", "").strip(), arch, names):
             return False, "old footer not found in archive"

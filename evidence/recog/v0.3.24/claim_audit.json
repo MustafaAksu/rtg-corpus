@@ -1,0 +1,87 @@
+{
+ "checks": [
+  {
+   "tag": "dyad-v6.4.22",
+   "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+   "sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+   "label": "DYAD-THM-LPHASE-ROWA-REMAINDER",
+   "present": {
+    "[RID: DYAD-THM-LPHASE-ROWA-REMAINDER]": 1,
+    "$|W(Ty)/(\\lambda W(y))-1|\\le\\varepsilon$ with $\\varepsilon\\le0.04654$": 1,
+    "\\tfrac{403}{250}": 6
+   },
+   "status": "present"
+  },
+  {
+   "tag": "dyad-v6.4.22",
+   "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+   "sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+   "label": "DYAD-THM-NF-REM ingredients",
+   "present": {
+    "`[RID: DYAD-THM-NF-REM]`": 1,
+    "vector ceilings $|F_7|\\le\\tfrac{2079}{1000}|W|^7$, $|F_8|\\le\\tfrac{577}{500}|W|^8$, $|F_9|\\le\\tfrac{1763}{1000}|W|^9$": 1,
+    "tail $|R^{\\rm prim}_{\\ge10,\\rm vec}|\\le332000|W|^{10}$ on $|W|\\le\\tfrac1{16}$": 1
+   },
+   "status": "present"
+  },
+  {
+   "tag": "dyad-v6.4.22",
+   "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+   "sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+   "label": "DYAD-THM-PRIM-CTR",
+   "present": {
+    "DYAD-THM-PRIM-CTR": 27,
+    "\\tfrac1{625}": 10,
+    "\\tfrac{47}{1000}": 1
+   },
+   "status": "present"
+  },
+  {
+   "tag": "dyad-v6.4.22",
+   "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+   "sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+   "label": "DYAD-THM-C21",
+   "present": {
+    "DYAD-THM-C21": 11,
+    "-\\tfrac12-i\\tfrac{2\\sqrt3}{3}": 2
+   },
+   "status": "present"
+  },
+  {
+   "tag": "dyad-v6.4.22",
+   "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+   "sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+   "label": "Dyadic \u00a71 fixed-point scope (winding fixed points)",
+   "present": {
+    "$(\\log(1+2\\pi k),0)$ and $(\\log(1+2\\pi k),\\pi)$": 1
+   },
+   "status": "present"
+  },
+  {
+   "tag": "recog-v0.3.23",
+   "path": "dsn/RTG_RELATIONAL_RECOGNITION_DSN.md",
+   "sha256": "0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a",
+   "label": "RECOG A1a inputs",
+   "present": {
+    "[RID: RECOG-THM-A1A-PHASE-EXISTENCE-U]": 3,
+    "[RID: RECOG-THM-A1A-LIFT-ALIGNMENT]": 1,
+    "[RID: RECOG-THM-A1A-RECIPROCAL-AMPLITUDE]": 1,
+    "[RID: RECOG-THM-A1A-PHASE-EXISTENCE-ALT]": 1,
+    "[RID: RECOG-DEF-EVENT-TOKEN-SCHEMA]": 1,
+    "[RID: RECOG-DEF-POLE-COMPARATOR]": 1
+   },
+   "status": "present"
+  },
+  {
+   "tag": "rrf-v0.8.4",
+   "path": "dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+   "sha256": "2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce",
+   "label": "RRF wrapped native ratio (for the declared form Omega)",
+   "present": {
+    "RRF-DYAD-WRAPPED": 3
+   },
+   "status": "present"
+  }
+ ],
+ "ALL_PRESENT": true
+}

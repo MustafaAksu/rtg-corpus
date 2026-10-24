@@ -1,0 +1,126 @@
+{
+ "base_sha256": "881be125201180b987e1f430390507c10f4167df29c19c0b19fbd07eb6dee03c",
+ "candidate_sha256": "63f36a9e4826e92ce6986f9fe722d3a08ac13ff050ce5fbcef2d1ea10866cc35",
+ "map_sha256": "29fc53586853c6a77dbc042d7081e94e572924215cd6601042b83288faf55cd1",
+ "operations": [
+  {
+   "id": "M01",
+   "op": "move",
+   "class": "reorder",
+   "result": "PASS",
+   "detail": "block reordered inside '## §3. Scope Guards {#sec-3-guards}' (522 chars, byte-identical)"
+  }
+ ],
+ "claim_blocks": {
+  "base": 456,
+  "identical": 456,
+  "declared_change": 0,
+  "unexplained": []
+ },
+ "profile": {
+  "study": "RECOG",
+  "ref_words": [
+   "template"
+  ],
+  "history_words": [],
+  "checked_tag_prefixes": [
+   "recog-",
+   "numgen-",
+   "methodology-",
+   "gen-",
+   "ofn-",
+   "rrf-",
+   "rer-"
+  ],
+  "known_tags": [
+   "dyad-v6.4.19",
+   "dyad-v6.4.20",
+   "dyad-v6.4.21",
+   "dyad-v6.4.22",
+   "numgen-v1.20.8",
+   "methodology-v1.3",
+   "methodology-v1.4",
+   "gen-v2.8.9",
+   "ofn-v0.10",
+   "rrf-v0.8.4",
+   "rer-v0.2",
+   "recog-v0.3.22",
+   "recog-v0.3.23"
+  ],
+  "summary_from": [
+   "header",
+   "section1"
+  ]
+ },
+ "checks": [
+  {
+   "check": "base identity",
+   "result": "PASS",
+   "detail": "map base_sha256 vs file"
+  },
+  {
+   "check": "candidate identity",
+   "result": "PASS",
+   "detail": "map candidate_sha256 vs file"
+  },
+  {
+   "check": "mechanical scope (re-derivation)",
+   "result": "PASS",
+   "detail": "candidate equals base + declared operations"
+  },
+  {
+   "check": "operation M01 (reorder)",
+   "result": "PASS",
+   "detail": "block reordered inside '## §3. Scope Guards {#sec-3-guards}' (522 chars, byte-identical)"
+  },
+  {
+   "check": "qualified claim blocks",
+   "result": "PASS",
+   "detail": "456 claim blocks in base live text: 456 byte-identical, 0 changed by declared operations, 0 unexplained"
+  },
+  {
+   "check": "RID set preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "heading anchors preserved",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "source hashes preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "qualifier tags preserved",
+   "result": "PASS",
+   "detail": "lost: []"
+  },
+  {
+   "check": "references resolve",
+   "result": "PASS",
+   "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
+  },
+  {
+   "check": "presentation (header, footer)",
+   "result": "PASS",
+   "detail": "required fields present; one predecessor; one footer"
+  }
+ ],
+ "warnings": [],
+ "result": "PASS",
+ "limitations": [
+  "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
+  "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",
+  "RID pattern covers the registered namespace prefixes listed in the script; other identifiers are not tracked.",
+  "Reference resolution: in the sentence of each tagged-edition pointer, H-labels (as '**H-n** —' definitions), 'Appendix X' headings, 'Local Tag Aliases' and version entries ('### vX') are looked up in the pinned archive; section numbers (§n.m) are not resolved.",
+  "Reference substitutions may change only reference vocabulary (REF_WORDS, labels, versions, tags, punctuation); any other changed word fails.",
+  "tag_examples/navigation relocations need a registered region (hash, kind) and a reviewer confirmation; unconfirmed regions give PENDING. In a tag_examples region an identifier may occur only inside a tag spelling in a table row (and must survive in the live text); a navigation region may carry no identifier and only [DEF] tags.",
+  "An H-label resolves if the archive defines it ('**H-n** —') or defines its lettered group ('**H-na** —').",
+  "Archive membership is a byte-substring test against the named archive files.",
+  "Study profile (map key 'profile'): extra history words, extra reference words and the status-summary source (base header summary, optionally base §1) are calibration inputs declared in the map and printed in the report.",
+  "A 'move' (class reorder) cuts one whole blank-line-delimited block and reinserts it byte-identical before a unique block-starting anchor inside the same section of the live text; it can change no text, tag, RID, math or hash (re-derivation and the block-multiset test)."
+ ]
+}

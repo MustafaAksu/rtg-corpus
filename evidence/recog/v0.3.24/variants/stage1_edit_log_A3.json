@@ -1,0 +1,104 @@
+{
+ "base_sha256": "0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a",
+ "base_tag": "recog-v0.3.23",
+ "groups": [
+  "A3"
+ ],
+ "intermediate_sha256": "699c9a7b904d60634486ccf9919cc6aa70fe2ae5e65c9f59091f1acae1ee9460",
+ "declared_new_recog_rids": [
+  "RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY",
+  "RECOG-ALG-QUADRATURE-TYPING",
+  "RECOG-ART-A3-QUADRATURE-TYPING"
+ ],
+ "edit_count": 8,
+ "edits": [
+  {
+   "key": "S1-A3a",
+   "group": "A3",
+   "location": "§1 fixed points: pole-stratum periodic inventory",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "fe20bbc9deb8279a412635f1d41efc5f7d75b37a5b70187619faa2c5df44f68b",
+   "new_sha256": "be50961fba03fe8466104bd834e08edc3c664c90dc24cf1efc94870fd48cca4a",
+   "old": "$P_1$: $\\widehat C_{\\rm pole}=+1$, elliptic; $P_2$: $\\widehat C_{\\rm pole}=-1$, hyperbolic. `[ALG conditional]` Under pole-swap covariance",
+   "new": "$P_1$: $\\widehat C_{\\rm pole}=+1$, elliptic; $P_2$: $\\widehat C_{\\rm pole}=-1$, hyperbolic. `[ALG]` (v0.3.24) Inside the pole stratum $\\{\\widehat C_{\\rm pole}=\\pm1\\}$ the wrapped-periodic orbits are exactly $e^\\rho-1=m\\pi$; odd $m$ gives period-2 orbits $(\\ln(1+m\\pi),0)\\leftrightarrow(\\ln(1+m\\pi),\\pi)$ with $(t_2,d_2)=(1,1-m^2\\pi^2)$ (RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY, §6.3). `[ALG conditional]` Under pole-swap covariance"
+  },
+  {
+   "key": "S1-A3b",
+   "group": "A3",
+   "location": "§1 candidate strata: quadrature content",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "cfd30652eedc1a8c2ae678a84cc7b4d47bae4e346990e45e43d4b17042b5f5cd",
+   "new_sha256": "f5218a48bc1300ef247d5820cb46f5a9f09373a68f9dc8bd1e1519c5bbf0164a",
+   "old": "loop/spectral stratum ($(\\operatorname{tr}M_n,\\det M_n)$; closed transport). `[ALG]` Of single-step Jacobian invariants,",
+   "new": "loop/spectral stratum ($(\\operatorname{tr}M_n,\\det M_n)$; closed transport). `[ALG]` (v0.3.24) The pole-comparator quadrature $\\{\\operatorname{Re}\\widehat C_{\\rm pole}=0\\}$ is the locus of extremal one-step radial transfer, $|\\rho(Tx)-\\rho(x)|=1$; its primitive-chart unipotent type has no chart-free content (RECOG-ALG-QUADRATURE-TYPING, §6.5). `[ALG]` Of single-step Jacobian invariants,"
+  },
+  {
+   "key": "S2-R4",
+   "group": "A3",
+   "location": "§2 OPEN R4 sub-items (R4 stays ACTIVE)",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "147274aa5c6029c4bbcdf5cceccd2d8fa10649311d8de0e5cc308bf3415afe0a",
+   "new_sha256": "4b4580b517cdce6b3cf153f170c403a8a70bd18235f2bc60503afaa582c77ee4",
+   "old": "Active sub-items:\n- Does the primitive-chart locus $\\cos\\eta=0$ (parabolic, unipotent $J$) have a coordinate-free counterpart via periodic-orbit multipliers in the $(t,d)$-plane or via comparator geometry? :: `[OPEN]`\n- Global periodic-orbit inventory of $T$ beyond $P_1,P_2$ (none exist in the small punctured $P_1$ sector) :: `[OPEN]`\n\nDependencies:\n- §6.5, SG-R3",
+   "new": "Active sub-items:\n- Coordinate-free counterpart of the primitive-chart locus $\\cos\\eta=0$ — **answered in reframed form (v0.3.24)**, RECOG-ALG-QUADRATURE-TYPING (§6.5): via comparator geometry yes (extremal radial transfer; $\\Omega$-area-neutral transport relative to the declared Haar form); via periodic-orbit multipliers no signature forced by the local identities; as an eigenvalue type no chart-free content (explicit retyping charts). The stronger target — an intrinsic *dynamical* type-change locus of $T$ — remains :: `[OPEN]`\n- Global periodic-orbit inventory of $T$ beyond $P_1,P_2$ (none exist in the small punctured $P_1$ sector). Partial (v0.3.24): complete inside the pole stratum $\\{\\widehat C_{\\rm pole}=\\pm1\\}$ — RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY (§6.3; new period-2 family for odd $m$); outside it a `[NUM]` sampled list only (RECOG-ART-A3-QUADRATURE-TYPING) :: `[OPEN]`\n\nDependencies:\n- §6.3, §6.5, SG-R3"
+  },
+  {
+   "key": "S3-SGR3",
+   "group": "A3",
+   "location": "§3 SG-R3 violation line: pointer to the typing record",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "e945dd7a769d5b127119fabb7bb6e052356009dc6976e00b27ea0bc2ef6d7a88",
+   "new_sha256": "c9f15aa274ea9a395bab6157ee977b68de487ceee0e581a470c08dbe98171a81",
+   "old": "Violation: the quadrature locus $\\cos\\eta=0$ is `[ALG]` [scope: primitive chart] only.",
+   "new": "Violation: the quadrature locus $\\cos\\eta=0$ is `[ALG]` [scope: primitive chart] only (its chart-free content is comparator-geometric, RECOG-ALG-QUADRATURE-TYPING, §6.5)."
+  },
+  {
+   "key": "S63-A3",
+   "group": "A3",
+   "location": "§6.3: pole-stratum periodic inventory",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "280960383ec6d59b79257c745e86b5f13b9212d38bd1246c174c28a284384665",
+   "new_sha256": "89a2f0bc787c6c4e06e16b1a7d1216564cb19db21447ab1f1b1d6fe23bb067ca",
+   "old": "(The Dyadic fixed-point scope table, v6.4.22 §1, lists the lifted-chart fixed points and the wrapped-cylinder winding fixed points and records agreement with this section.)",
+   "new": "(The Dyadic fixed-point scope table, v6.4.22 §1, lists the lifted-chart fixed points and the wrapped-cylinder winding fixed points and records agreement with this section.)\n\n`[ALG]` [RID: RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY] [scope: conditional on postulated $T$ (OPEN-P0); wrapped cylinder; v0.3.24] [cert: `recog_a3_quadrature_typing.py`, gate Q6 (symbolic $m$, $k$)] **Periodic orbits inside the pole stratum $\\{\\widehat C_{\\rm pole}=\\pm1\\}$.** On $\\Sigma:=\\{\\widehat C_{\\rm pole}=\\pm1\\}=\\{\\sin\\eta=0\\}$ — the set where the pole-comparator *value* is fixed under the inversion $C\\mapsto C^{-1}$ (the \"swap-fixed pole stratum\" of the next paragraph; $S$-invariant as a set, not pointwise fixed by $S$) — $\\rho$ is preserved and $\\eta\\mapsto\\eta+e^\\rho-1$. Hence the wrapped-periodic orbits of $\\bar T$ contained in $\\Sigma$ are exactly those with $e^\\rho-1=m\\pi$, $m\\in\\mathbb Z_{\\ge0}$: $m=0$ gives $P_1,P_2$; $m=2k$ the winding fixed points above, with $(\\operatorname{tr},\\det)=(1,1+2\\pi k)$ at $\\eta=0$ and $(3,1-2\\pi k)$ at $\\eta=\\pi$; $m$ odd gives the period-2 orbits $(\\ln(1+m\\pi),0)\\leftrightarrow(\\ln(1+m\\pi),\\pi)$, alternating between the pole-level values $\\widehat C_{\\rm pole}=+1$ and $-1$, with $M_2=J_{(\\rho_m,\\pi)}J_{(\\rho_m,0)}$, $(t_2,d_2)=(1,\\,1-m^2\\pi^2)$ — hyperbolic ($\\Delta=4m^2\\pi^2-3>0$) and orientation-reversing. These are periodic for the wrapped map only (on the lift $\\eta$ advances by $2m\\pi$ over the two steps); none lies in the zero-winding local sector; no point of $\\Sigma$ lies on the quadrature $\\{\\cos\\eta=0\\}$. Complete inside $\\Sigma$; no completeness claim outside it (OPEN R4, inventory). Alternating pole values are not recognition events (SG-R6). `[NUM]` sampled list of further orbits (periods $\\le8$, $|L|\\le2$, $\\rho\\in[-2.5,2.5]$; 11 orbits outside $\\Sigma$, uncertified): RECOG-ART-A3-QUADRATURE-TYPING (§8)."
+  },
+  {
+   "key": "S65-A3",
+   "group": "A3",
+   "location": "§6.5: quadrature typing after the discriminant",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "cc19812b109224faa753391beac5588109f19fd60326c6113e6606e243e981bf",
+   "new_sha256": "7d1a42944c1e42a77c226444b95e023583de48656605b09f88aaa1ad0575bb1d",
+   "old": "No intrinsic conjugacy-class statement is made off the fixed points (SG-R3). `[OPEN]` intrinsic counterpart: OPEN R4.",
+   "new": "No intrinsic conjugacy-class statement is made off the fixed points (SG-R3). Comparator-geometric counterpart and the chart-dependence of the type: RECOG-ALG-QUADRATURE-TYPING below; the intrinsic dynamical type-change question stays OPEN R4.\n\n`[ALG]` [RID: RECOG-ALG-QUADRATURE-TYPING] [scope: conditional on postulated $T$ (OPEN-P0); dyad observables $(\\rho,\\eta)$ of the lifted primitive chart; v0.3.24] [cert: `recog_a3_quadrature_typing.py`, exact sympy gates Q1–Q5 and controls NC1–NC2 (RECOG-ART-A3-QUADRATURE-TYPING, §8)] **Pole-comparator quadrature: typing and its chart-free content.** Let $\\mathcal Q=\\{\\operatorname{Re}\\widehat C_{\\rm pole}=0\\}=\\{\\cos\\eta=0\\}$ (swap-invariant as a set; the two branches $\\eta=\\pm\\pi/2$ are exchanged). (1) *Primitive-chart typing:* on $\\mathcal Q$, $J=\\begin{pmatrix}1&0\\\\e^\\rho&1\\end{pmatrix}$, a nontrivial unipotent shear with $1$-eigenspace $\\partial_\\eta$ (both branches). (2) *Comparator-geometric characterizations* (statements about the named native observables, not about a chart): (a) $\\rho(Tx)-\\rho(x)=-\\operatorname{Im}\\widehat C_{\\rm pole}(x)$, so $|\\rho(Tx)-\\rho(x)|\\le1$ with equality exactly on $\\mathcal Q$ — the quadrature is the locus of extremal one-step radial transfer; (b) $\\partial_\\eta[\\rho\\circ T-\\rho]=-\\operatorname{Re}\\widehat C_{\\rm pole}$, zero exactly on $\\mathcal Q$; (c) `[scope: derived / model-intrinsic on the RRF wrapped profile relative to the declared form $\\Omega$; $\\Omega$ is transported with any chart change; not an RRF-registered observable; no OPEN-A bearing]` with $\\Omega=d\\rho\\wedge d\\eta=d\\bar\\zeta\\wedge d\\zeta/(2i|\\zeta|^2)$ the multiplicative Haar form on the RRF wrapped native ratio $\\zeta=e^{\\rho+i\\eta}$ ($S^*\\Omega=\\Omega$): $T^*\\Omega=\\bigl(1+(e^\\rho-1)\\operatorname{Re}\\widehat C_{\\rm pole}\\bigr)\\Omega$, so $\\mathcal Q\\cup\\{\\rho=0\\}$ is the $\\Omega$-area-neutral locus of the one-step transport. (3) *The type is not chart-invariant:* the global unimodular charts $\\varphi_A=(\\rho+\\varepsilon\\sin\\eta,\\eta)$ and $\\varphi_B=(\\rho,\\eta+\\tfrac e{e-1}e^\\rho)$ give on $\\mathcal Q$ a transformed one-step Jacobian with $\\det=1$ and $\\operatorname{tr}=2+\\varepsilon e^\\rho\\cos\\eta'$ ($\\eta'=\\eta+e^\\rho-1-\\sin\\eta$; hyperbolic for $\\varepsilon=\\tfrac12$, elliptic for $\\varepsilon=-\\tfrac12$ at $\\rho=0$), respectively the identity on the branch $\\eta=\\pi/2$; a constant linear chart preserves $\\operatorname{tr}$ and $\\det$ (control). Hence \"$\\mathcal Q$ is parabolic\" is a primitive-chart sentence (SG-R3), and the rotational/stretching dichotomy of the discriminant above is the sign of $\\operatorname{Re}\\widehat C_{\\rm pole}$. (4) *Multipliers:* a quadrature point on a periodic orbit contributes the factor $\\det J=1$ to $d_n$ and no separable factor to $t_n$; no universal multiplier signature of $\\mathcal Q$ follows from quadrature membership alone (not a nonexistence statement: periodic orbits through $\\mathcal Q$ are neither forced nor excluded; none found in the sampled search of RECOG-ART-A3-QUADRATURE-TYPING). *Not supplied:* an intrinsic dynamical type-change locus (OPEN R4 remains); any RRF registration of $\\Omega$ (informational interface question, routed via the PI); any event reading of a quadrature transition (SG-R6). Session record `records/recog/RECOG_A3_QUADRATURE_TYPING_SESSION_v0_1.md`."
+  },
+  {
+   "key": "S8-A3",
+   "group": "A3",
+   "location": "§8 new artifact row: A3 certificate (variant without A1B)",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "545c4d7ec9fbe27e32789b25784fd4e1654eb581eb999101ecfc6ee7b6fdf563",
+   "new_sha256": "f7eff5436fa6fd97b1210022e724735c383155aaa62e76bdce89a664a0f7c170",
+   "old": "- [RID: RECOG-ART-A1A-EXISTENCE-U] `[v0.3.23]` :: proof cell `records/recog/RECOG_v0_3_23_FC21_PROOF_CELL.md`; illustration `evidence/recog/scripts/recog_v0_3_23_value_checks.py` Part B with output `evidence/recog/v0.3.23/value_checks.json` :: written proof of RECOG-THM-A1A-PHASE-EXISTENCE-U checked against `dyad-v6.4.22` (lift, domain, indexing, amplitude inversion); float64 illustration on 12 starts in $U$ over 20000 blocks (sampled $\\max\\lvert r_m\\rvert/Q_m^{3/2}\\approx1.42\\le\\tfrac{403}{250}$; the $\\psi$-corrected partial series varies by $<5\\times10^{-3}$ from $N=10^4$ to $2\\times10^4$) :: `[SESSION]` record; the illustration is `[NUM]` and not a proof input",
+   "new": "- [RID: RECOG-ART-A1A-EXISTENCE-U] `[v0.3.23]` :: proof cell `records/recog/RECOG_v0_3_23_FC21_PROOF_CELL.md`; illustration `evidence/recog/scripts/recog_v0_3_23_value_checks.py` Part B with output `evidence/recog/v0.3.23/value_checks.json` :: written proof of RECOG-THM-A1A-PHASE-EXISTENCE-U checked against `dyad-v6.4.22` (lift, domain, indexing, amplitude inversion); float64 illustration on 12 starts in $U$ over 20000 blocks (sampled $\\max\\lvert r_m\\rvert/Q_m^{3/2}\\approx1.42\\le\\tfrac{403}{250}$; the $\\psi$-corrected partial series varies by $<5\\times10^{-3}$ from $N=10^4$ to $2\\times10^4$) :: `[SESSION]` record; the illustration is `[NUM]` and not a proof input\n- [RID: RECOG-ART-A3-QUADRATURE-TYPING] `[v0.3.24]` :: `recog_a3_quadrature_typing.py` (sha256 `936d4c97950b53085b019411616324450a79b3c762b19a5688c06e53acb93e6b`) + output `evidence/recog/a3_quadrature/a3_quadrature_typing.json` (`65475ba57b48e17055b810dace404aaf964e194d79c2a63626fccd5965291e70`) :: exact sympy gates Q1–Q6 (Jacobian identities; unipotent shear on the quadrature; the three comparator-geometric identities and $S^*\\Omega=\\Omega$; the retyping charts $\\varphi_A$, $\\varphi_B$; the two-step trace on the quadrature; the pole-stratum inventory with symbolic $m,k$) and controls NC1 (constant linear chart preserves tr, det), NC2 ($\\varepsilon=0$ reproduces the primitive unipotent); `[NUM]` Newton probe for periodic orbits ($n\\le8$, $|L|\\le2$, $\\rho\\in[-2.5,2.5]$): 18 orbits, of which $P_1$, $P_2$, the winding fixed points $k=1,2$ and the $m=1$ period-2 orbit are the exact ones, 11 further orbits uncertified; no sampled orbit has a point on the quadrature (no nonexistence claim). Session record `records/recog/RECOG_A3_QUADRATURE_TYPING_SESSION_v0_1.md` v0.2 (`262e2529a9288ddf56e1842f074a12bcaf66f43e96cc53f3cd12b939c1cd1d17`) :: `[ALG]` certificate (exact) and `[NUM]` sampled list"
+  },
+  {
+   "key": "A-1",
+   "group": "ALL",
+   "location": "Appendix A: v0.3.24 draft entry (per variant)",
+   "mode": "str",
+   "region": "appA",
+   "old_sha256": "47bf02e0ddd817ea0d9acfa7d2104359ab0575414abe719e2464f30be15854eb",
+   "new_sha256": "a747e9c6bcec1987ee33b95d315bc66f50ee42284c531bf07a61940f8173ed82",
+   "old": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.23 — 23 October 2026 — Adopted",
+   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.24 — DRAFT, stage 1 (corrected intermediate; not adopted)\n- **Basis:** PI decisions of 23–24 Oct 2026 (`START A1b/A1c`, `A3 AUTHORIZED`, `PREPARE A1B THEOREM CANDIDATE — APPROVED`, stage-1 preparation recommended by the receiving review #5638910665); co-owner reviews of PRs #23, #28, #30; the v0.3.23 release record §11 follow-up obligation. Each group below carries its own acceptance decision; three are scientific (A1b, A1c, A3) and one is structural maintenance.\n- **New science, group A3 (separately reviewed):** RECOG-ALG-QUADRATURE-TYPING (§6.5) — the pole-comparator quadrature is the extremal-radial-transfer locus and, relative to the declared Haar form $\\Omega$, the area-neutral locus; its parabolic one-step type has no chart-free content (explicit retyping charts); RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY (§6.3) — complete wrapped-periodic inventory inside $\\{\\widehat C_{\\rm pole}=\\pm1\\}$ with the new odd-$m$ period-2 family; RECOG-ART-A3-QUADRATURE-TYPING (§8). OPEN R4 sub-item 1 answered in reframed form; R4 stays ACTIVE.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED).\n- **Records:** release record `records/recog/RECOG_v0_3_24_RELEASE_RECORD.md`; predecessor tag `recog-v0.3.23` (SHA-256 `0d583400…a31a`).\n\n### v0.3.23 — 23 October 2026 — Adopted"
+  }
+ ]
+}

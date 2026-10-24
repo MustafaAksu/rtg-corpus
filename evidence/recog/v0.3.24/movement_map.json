@@ -1,0 +1,56 @@
+{
+ "study": "RECOG",
+ "target": "v0.3.24",
+ "stage": "compaction",
+ "base": "corrected intermediate (stage 1, round 2; commit e42c81c)",
+ "base_sha256": "881be125201180b987e1f430390507c10f4167df29c19c0b19fbd07eb6dee03c",
+ "candidate_sha256": "63f36a9e4826e92ce6986f9fe722d3a08ac13ff050ce5fbcef2d1ea10866cc35",
+ "archives": [],
+ "archives_note": "nothing is removed or relocated by this stage, so no archive is named. The stage-1 history pointers to `recog-v0.3.23` were verified by the stage-1 checker (gate C22: every moved passage exists at that tag); the tag is listed in known_tags. Naming the tag as an archive here would make the checker read the version strings in those pointer sentences (v0.3.1, v0.3.2, v0.3.3: the era of the relocated specifications) as Appendix A entries, which the compact Appendix A of v0.3.23 does not carry.",
+ "profile": {
+  "study": "RECOG",
+  "ref_words": [
+   "template"
+  ],
+  "history_words": [],
+  "checked_tag_prefixes": [
+   "recog-",
+   "numgen-",
+   "methodology-",
+   "gen-",
+   "ofn-",
+   "rrf-",
+   "rer-"
+  ],
+  "known_tags": [
+   "dyad-v6.4.19",
+   "dyad-v6.4.20",
+   "dyad-v6.4.21",
+   "dyad-v6.4.22",
+   "numgen-v1.20.8",
+   "methodology-v1.3",
+   "methodology-v1.4",
+   "gen-v2.8.9",
+   "ofn-v0.10",
+   "rrf-v0.8.4",
+   "rer-v0.2",
+   "recog-v0.3.22",
+   "recog-v0.3.23"
+  ],
+  "summary_from": [
+   "header",
+   "section1"
+  ]
+ },
+ "operations": [
+  {
+   "id": "M01",
+   "op": "move",
+   "class": "reorder",
+   "block": "**[SG-R12]** The linear eigenframe $W=\\rho+\\omega\\eta$ does not descend to the phase cylinder ($W(\\rho,\\eta+2\\pi)=W+2\\pi\\omega$). $Q$, $C_\\to$ and state-comparator phases are defined on a lifted chart, or with the Dyadic wrap $\\eta_{\\rm wrap}\\in(-\\pi,\\pi]$ and its seam convention; $W(P_2)$ uses the representative $+\\pi$ ($\\arg W=2\\pi/3$; $-\\pi$ gives the negative). $|C_\\to|$ is not invariant under $B\\to cB$; $\\widehat C$ and amplitude ratios are.\nViolation: comparing state comparators across the seam or across lifts.",
+   "before": "**[SG-R13]**",
+   "what": "SG-R12 moved to its numerical place before SG-R13 (§3 Scope Guards); byte-identical",
+   "why": "v0.3.23 release record §2a: 'the SG order (R13 and R14 before R12), because the checker has no move operation'"
+  }
+ ]
+}
