@@ -12,10 +12,8 @@ This note is **preparation only.** It is neither a build nor an adoption. It doe
 **Decision state (24 Oct 2026):**
 - **Q1 is decided** (reconciliation §5, PR #37 commit `b0e974e`). v2.9 is built in two stages. If stage 2 is not ready when stage 1 has passed review, the stage-1 baseline may be adopted as v2.8.10.
 - The atlas owner reviewed this matrix: it is consistent with both disposition records and the reconciliation. The atlas owner also advises accepting F-1 under conditions (§4).
-- **Still open for the PI**, each awaiting a one-word confirmation:
-  1. authorize the 21 reconciled dispositions as the stage-1 scope;
-  2. F-1, the κ_f rename.
-- The build does not start before both confirmations.
+- **Both confirmed by the PI**, 24 Oct 2026, 23:45 ("her ikisini de onaylıyorum"): the 21 reconciled dispositions as the stage-1 scope, and F-1.
+- **Stage 1 is built:** intermediate `21480757…2087`; edit log, checker (15/15) and controls (9/9) under `evidence/gen/v2.9/`. Release record DRAFT: `records/gen/GEN_v2_9_RELEASE_RECORD.md`. Deviations from this matrix are listed there (E26 folded into E05; E27 cited in the new Appendix A entry instead of editing v2.8.9 history; E28 left to publication).
 
 **Basis:**
 - `records/gen/GEN_OWNER_DISPOSITION_ADVISORY_v2_8_9_claude-genowner_20261024.md` (PR #39, including §9 reconciliation);

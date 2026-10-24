@@ -1,0 +1,11 @@
+[CAUGHT] NC1 9A sign dropped: must fail ['C1', 'C8']; failed ['C1', 'C2', 'C8']
+[CAUGHT] NC2 edit inside §6.3c: must fail ['C1', 'C4']; failed ['C1', 'C2', 'C4']
+[CAUGHT] NC3 minimizer clause back: must fail ['C1', 'C9']; failed ['C1', 'C2', 'C9']
+[CAUGHT] NC4 birth κ renamed: must fail ['C1', 'C6']; failed ['C1', 'C2', 'C6']
+[CAUGHT] NC5 base not v2.8.9: must fail ['C0', 'C1']; failed ['C0', 'C1', 'C10', 'C2']
+[CAUGHT] NC6 RID dropped: must fail ['C1', 'C5']; failed ['C1', 'C2', 'C5']
+[CAUGHT] NC7 Appendix A history edited: must fail ['C1', 'C3']; failed ['C1', 'C11', 'C2', 'C3']
+[CAUGHT] NC8 header status edited: must fail ['C1', 'C10']; failed ['C1', 'C10', 'C2']
+[CAUGHT] NC9 bare face-lift κ reintroduced: must fail ['C1', 'C6']; failed ['C1', 'C2', 'C6']
+
+all controls caught
