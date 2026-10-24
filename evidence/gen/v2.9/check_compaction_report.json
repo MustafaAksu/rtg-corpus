@@ -1,0 +1,147 @@
+{
+ "base_sha256": "ca431ce90669cfb8bebdf104b52833d05c1147a36ab696fbb4a6160874867845",
+ "candidate_sha256": "3d1c0ba54b25fc3cf5c7539d612c52e8426f7a1c6f2b1dc70acfb3df0632389e",
+ "map_sha256": "a759a3bc254492e0f5bc30bde923d20fd0950fe15dab8b7f1d0d45a270da1c3a",
+ "operations": [
+  {
+   "id": "S2-H",
+   "op": "replace-header",
+   "class": null,
+   "result": "PASS",
+   "detail": "header replaced; status-summary sentences are a subset of the base summary (header/section1)"
+  },
+  {
+   "id": "S2-A",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "result": "PASS",
+   "detail": "section relocated (47529 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-F",
+   "op": "replace-footer",
+   "class": null,
+   "result": "PASS",
+   "detail": "footer replaced"
+  }
+ ],
+ "claim_blocks": {
+  "base": 360,
+  "identical": 359,
+  "declared_change": 1,
+  "unexplained": []
+ },
+ "profile": {
+  "study": "GEN",
+  "ref_words": [],
+  "history_words": [],
+  "checked_tag_prefixes": [
+   "gen-",
+   "triad-",
+   "programme-",
+   "ofn-",
+   "methodology-",
+   "rrf-",
+   "recog-"
+  ],
+  "known_tags": [
+   "gen-v2.8.9",
+   "dyad-v6.4.22",
+   "triad-v1.6.1",
+   "programme-v1.3",
+   "ofn-v0.10",
+   "methodology-v1.4",
+   "rrf-v0.8.4"
+  ],
+  "summary_from": [
+   "header",
+   "section1"
+  ]
+ },
+ "checks": [
+  {
+   "check": "base identity",
+   "result": "PASS",
+   "detail": "map base_sha256 vs file"
+  },
+  {
+   "check": "candidate identity",
+   "result": "PASS",
+   "detail": "map candidate_sha256 vs file"
+  },
+  {
+   "check": "archive identity stage1-intermediate",
+   "result": "PASS",
+   "detail": "ca431ce90669cfb8bebdf104b52833d05c1147a36ab696fbb4a6160874867845"
+  },
+  {
+   "check": "mechanical scope (re-derivation)",
+   "result": "PASS",
+   "detail": "candidate equals base + declared operations"
+  },
+  {
+   "check": "operation S2-H (replace-header)",
+   "result": "PASS",
+   "detail": "header replaced; status-summary sentences are a subset of the base summary (header/section1)"
+  },
+  {
+   "check": "operation S2-A (history-appendix)",
+   "result": "PASS",
+   "detail": "section relocated (47529 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-F (replace-footer)",
+   "result": "PASS",
+   "detail": "footer replaced"
+  },
+  {
+   "check": "qualified claim blocks",
+   "result": "PASS",
+   "detail": "360 claim blocks in base live text: 359 byte-identical, 1 changed by declared operations, 0 unexplained"
+  },
+  {
+   "check": "RID set preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "heading anchors preserved",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "source hashes preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "qualifier tags preserved",
+   "result": "PASS",
+   "detail": "lost: []"
+  },
+  {
+   "check": "references resolve",
+   "result": "PASS",
+   "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
+  },
+  {
+   "check": "presentation (header, footer)",
+   "result": "PASS",
+   "detail": "required fields present; one predecessor; one footer"
+  }
+ ],
+ "warnings": [],
+ "result": "PASS",
+ "limitations": [
+  "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
+  "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",
+  "RID pattern covers the registered namespace prefixes listed in the script; other identifiers are not tracked.",
+  "Reference resolution: in the sentence of each tagged-edition pointer, H-labels (as '**H-n** —' definitions), 'Appendix X' headings, 'Local Tag Aliases' and version entries ('### vX') are looked up in the pinned archive; section numbers (§n.m) are not resolved.",
+  "Reference substitutions may change only reference vocabulary (REF_WORDS, labels, versions, tags, punctuation); any other changed word fails.",
+  "tag_examples/navigation relocations need a registered region (hash, kind) and a reviewer confirmation; unconfirmed regions give PENDING. In a tag_examples region an identifier may occur only inside a tag spelling in a table row (and must survive in the live text); a navigation region may carry no identifier and only [DEF] tags.",
+  "An H-label resolves if the archive defines it ('**H-n** —') or defines its lettered group ('**H-na** —').",
+  "Archive membership is a byte-substring test against the named archive files.",
+  "Study profile (map key 'profile'): extra history words, extra reference words and the status-summary source (base header summary, optionally base §1) are calibration inputs declared in the map and printed in the report.",
+  "A 'move' (class reorder) cuts one whole blank-line-delimited block and reinserts it byte-identical before a unique block-starting anchor inside the same section of the live text; it can change no text, tag, RID, math or hash (re-derivation and the block-multiset test)."
+ ]
+}

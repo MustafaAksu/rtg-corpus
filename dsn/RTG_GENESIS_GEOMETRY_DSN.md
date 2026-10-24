@@ -1,14 +1,16 @@
-# RTG_GENESIS_GEOMETRY_DSN_v2.8.9
+# RTG_GENESIS_GEOMETRY_DSN_v2.9
 
 **Title:** RTG Genesis Geometry Study — Canonical Scientific Ledger  
-**Date:** 19 October 2026  
-**Document status:** ADOPTED owner ledger — scientific release (D-4: transported chiral factor obstruction, §6.3c).  
+**Date:** 25 October 2026  
+**Document status:** STAGE-2 CANDIDATE — not adopted (corrections of the reconciled v2.8.9 advisory and Methodology v1.4 compaction). Release record: `records/gen/GEN_v2_9_RELEASE_RECORD.md`.  
 **Scope:** Primitive dyadic/triadic/tetrahedral Genesis algebra, quaternionic metric lift, UV completion, foam network structure, and Regge bridge. Imports settled continuous-branch results from Dyadic and Triadic with inherited scope; routes TDR-G dependencies through explicit bridge requirements only.  
-**Supersedes:** `RTG_GENESIS_GEOMETRY_DSN_v2.8.8` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.7` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.6` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.5` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.4` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.3` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.2` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.1` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.0` · `RTG_GENESIS_GEOMETRY_DSN_v2.7.7` · `RTG_GENESIS_GEOMETRY_DSN_v2.7.6` · `RTG_GENESIS_GEOMETRY_DSN_v2.7.5` · `RTG_GENESIS_GEOMETRY_DSN_v2.7.4` · `RTG_GENESIS_GEOMETRY_DSN_v2.7.3` · `RTG_GENESIS_GEOMETRY_DSN_v2.7.2` · `RTG_GENESIS_GEOMETRY_DSN_v2.7.1` · `RTG_GENESIS_GEOMETRY_DSN_v2.7` · `RTG_GENESIS_GEOMETRY_DSN_v2.6` · `RTG_GENESIS_GEOMETRY_DSN_v2.5` · `RTG_GENESIS_GEOMETRY_DSN_v2.4` · `RTG_GENESIS_GEOMETRY_DSN_v2.3` · `RTG_GENESIS_GEOMETRY_DSN_v2.2` · `RTG_GENESIS_GEOMETRY_DSN_v2.1` · `RTG_GENESIS_GEOMETRY_DSN_v2.0` · `DSN_RTG_Genesis_Study_v1.1` · `DSN_GENESIS_II_UV_PATCH_v0.1` (absorbed)  
-**Companion documents:** `RTG_PROGRAMME_OVERVIEW_v1.2` · `RTG_ONTOLOGICAL_FOUNDATIONS_v0.9` · `DSN_METHODOLOGY_v1.3` · `RTG_DYADIC_OSCILLATOR_DSN_v6.4.13` · `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6` · `RTG_DISCRETE_GENESIS_DSN_v2.12.13`  
-**DSN Methodology:** DSN_METHODOLOGY_v1.3  
+**Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives statement-level readouts of the theorem-grade results with their hypotheses and scope qualifications (about 1,000 words); a pointer-only list would drop those qualifications.  
+**Supersedes:** `RTG_GENESIS_GEOMETRY_DSN_v2.8.9` (SHA-256 `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc`; tag `gen-v2.8.9`).  
+**Companion documents:** current editions, producer pins and companion references in §7 (Pins; Programme-context references).  
+**DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Programme tier:** Tier 3 — integrating study (placement recorded in Programme v1.3 §6.1); imports scoped continuous-branch results from Dyadic and Triadic; routes Discrete/TDR-G dependencies through explicit bridge requirements only.  
-**Status summary:** *(v2.8.9 adopted scientific release on the v2.8.8 base; v2.8.8 is the adopted maintenance release on the v2.8.7 base; v2.8.7 is built on the v2.8.6 base, and v2.8.6 on the v2.8.5 correction/reconciliation base. Version history remains in Appendix A.)* Primitive Genesis algebra through the certified tetrahedral quartic polynomials is retained. This release applies the frozen GCL-01–11 corrections and reconciles adopted Triadic v1.6 consumer notices without importing the optional v0.20 cubic/quartic extensions. The principal owner-state changes are: (i) the birth residual is object-typed — the raw six-step residual contains a nonzero quartic term, while the odd/normal-form residuals support the fifth-order remainder; the physical residual choice remains OPEN; (ii) the physical child W-ratio is \(i\kappa Q_s\) at leading order, not the unit-quarter-turn identity \(i\), and the full face-phase remainder is conditional on the child remainder order; (iii) §6.8/9B-tau contains a sign-branch inconsistency — the printed \(+2a\tau\) numerator reconstructs exactly with \(K=\tau I-\Delta M_f\), while the physical operator sign remains OPEN; (iv) 9B closes the covector type but does not uniquely force \(B\) as the physical lowering map, so the PSD residue is retained conditional on \(S_f=Bc_f\); (v) the 9C family is retained as the exact solution of an additional raw-array \(B\)-self-adjointness premise, not a requirement implied by 9B; (vi) the former apex–UV slot identity is retracted while the Jacobi \(d\)-mode and primitive seed diagnostics remain; (vii) Triadic v1.6 withdraws current use of the historical \(x_*\), 5.5° wedge, no-safe-basin and phase-steering route-obstruction chain, while preserving the exact reference quarter-turn and narrowed T-6s/t/u successor results; (viii) OPEN 1A candidate #2 is archival-chart evidence only, not a proved gauge-class invariance theorem; (ix) the ×2 SU(2) amplitude verdict is conditional on both the \(h\leftrightarrow\|H\|_B\) bridge and an explicit energy-to-amplitude square-root constitutive relation; and (x) the reduced-model saturation ceiling \(Q_d^*\approx1.13\times10^{-2}\) is distinguished from the window-dependent control-loss values. Internal typing/model questions therefore remain OPEN alongside OPEN M and OPEN 0-Regge. Candidates A–C and V20-O1–O5 are not admitted in this release. **v2.8.6 addition:** the projected-\(K_3\) primitive map has no local submersive factor of lower real dimension (§6.3a; \(C^3\) for planar targets, \(C^1\) for \(d=1,3\)); this is a mathematical semiconjugacy exclusion, not a physical node-exchange, carrier or network–dyad selection. Primitive-map custody, bridge-frame/protection-matrix sources and OFN pointers are synchronized to adopted Dyadic v6.4.11 and OFN v0.9. **v2.8.7 addition:** the projected-\(K_3\) map also has no local \(C^3\) submersive factor of lower real dimension under the six-step contract \(E\circ F_1^6=T'\circ E\), for any \(C^3\) target (§6.3a.1); for the mean-feedback family \(F_\gamma\) (§6.3b) the same holds for \(\gamma\notin\{0,2\}\) under the spectral condition \((H_{\rm spec})\). These are mathematical semiconjugacy exclusions, not a selection of a physical \(\gamma\), closure condition, carrier or node exchange (SG-16). **v2.8.8 maintenance:** the live Dyadic source pins move to adopted `RTG_DYADIC_OSCILLATOR_DSN_v6.4.13` (the v2.8.6 statements above that name v6.4.11 are historical); the \(\nu_5^{(5)}\) closed form of §6.2 is attributed to `DYAD-ALG-NU5-P5` with its normalization convention (M2c point-of-use attribution). No scientific claim is added, changed or regraded. **v2.8.9 addition:** `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` (§6.3c) excludes local \(C^3\) submersive six-step factors for every real \(C^3\) network germ with the stated linear structure, zero quadratic part and chiral cubic invariant \(\mu\neq0\), under \((H_{\rm spec})\); a primitive-clock companion is recorded at the same grade as the §6.3b primitive statement. This is a mathematical semiconjugacy exclusion for the stated real \(C^3\) class; no physical model, carrier, closure condition or \(\gamma\) is selected, and existence of an exactly transported realization is not asserted.
+**Status summary:** **Local sourced-junction theorem** (§6.9, `GEN-THM-SOURCED-JUNCTION`). If $w=0$, $\sigma_f\neq0$ and $\Delta_3>0$: vacuum gluing fails ($S_f = 0$ is impossible), and the constrained birth equation, which at $w=0$ reads $\tau d_\perp+S_f=0$ on $|d_\perp|^2=\Delta_3$, has exactly two antipodal solutions; selection of the physical branch is OPEN (GCL-02, §6.8). Primitive Genesis algebra through the certified tetrahedral quartic polynomials is retained. The standalone triad is a **universal chiral pump**: no quartic safe surface exists except $c=0$. `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` (§6.3c) excludes local \(C^3\) submersive six-step factors for every real \(C^3\) network germ with the stated linear structure, zero quadratic part and chiral cubic invariant \(\mu\neq0\), under \((H_{\rm spec})\); a primitive-clock companion is recorded at the same grade as the §6.3b primitive statement. This is a mathematical semiconjugacy exclusion for the stated real \(C^3\) class; no physical model, carrier, closure condition or \(\gamma\) is selected, and existence of an exactly transported realization is not asserted. The 9B physical lowering bridge, the 9B-tau physical sign/energy selection, and physical realization of the 9C raw-array premise remain open. Internal typing/model questions therefore remain OPEN alongside OPEN M and OPEN 0-Regge.  
+**Release record:** `records/gen/GEN_v2_9_RELEASE_RECORD.md`. Version history: Appendix A.
 
 ## Local Tag Aliases
 
@@ -1291,353 +1293,46 @@ Consumer-declared pins are the consumers' state and are not repinned here. Statu
 
 ## Appendix A — Version History {#appendix-a}
 
-### v2.9 — stage 1 intermediate (build stage, not adopted)
+One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the inherited footer chain — are in Appendix A, the header and the footer of v2.8.9 (tag `gen-v2.8.9`, SHA-256 `d143673e…c6fc`), and in the release records named below.
 
-Corrections to v2.8.9 (`d143673e…c6fc`) from the reconciled v2.8.9 advisory; scope authorized by the PI on 24 October 2026 (21 dispositions; F-1). Changes: sourced-junction theorem rescoped to its algebraic content, the minimizer clause withdrawn (GA-01); face-lift magnitude renamed κ → κ_f, sign-explicit 9A pole–projector map, $B_*$ declared undefined (GA-02, GA-03, F-1); the withdrawn clause is recorded in Appendix B; scope words (GA-04, GA-05, GA-08, GA-09); one record per `GEN-OPEN-WPHASE` (GA-06); closed items out of active lists (GA-07); RIDs `GEN-THM-QH-NOGO`, `GEN-THM-SINGLE-FACE-METRIC`, `GEN-THM-SOURCED-JUNCTION` (GB-10); proof-source custody states (GB-11); $c_\theta^{(6)}$ archival status (GB-12); custody and independent-contribution standard clauses defined once in §8 (GB-11); GSPLIT/DELTA-QC specialization with its $\omega_{sc}$ convention (GB-13); T-6u case label (GB-14); tier wording (GB-16); Dyadic v6.4.22 import and G-20 note for §6.3c (C2) (GC-17); §7 Consumers and Pins, companion references refreshed (GC-18, GC-19). The OFN Q6 notice erratum (`records/gen/GENESIS_V2_8_9_NOTICE_ERRATUM_OFN_Q6_v0_1.md`) is a `[SESSION]` record accepted by the owner on 19 October 2026; it corrects notice wording only and is not an adopted theorem (GC-21). §6.3a–§6.3c are unchanged except the G-20 note. Build, edit log and checker: `evidence/gen/scripts/build_gen_v2_9_stage1.py`, `evidence/gen/v2.9/`. Release record: `records/gen/GEN_v2_9_RELEASE_RECORD.md`.
+### v2.9 — 25 October 2026 — stage-2 candidate (not adopted)
 
-### v2.8.9 — 19 October 2026 — Adopted scientific release
+- **Basis:** the reconciled v2.8.9 advisory (`records/gen/ATLAS_ADVISORY_GEN_v2_8_9_RECONCILIATION.md`) and the two owner disposition records; PI authorization of 24 October 2026 (21 dispositions; F-1); atlas row check `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE1.md` with B1–B3 applied in stage 1.
+- **Corrections [science/scope] (stage 1):** local sourced-junction theorem rescoped to its algebraic content with $\Delta_3>0$; the minimizer clause is recorded in Appendix B (GA-01). Face-lift magnitude renamed $\kappa\to\kappa_f$ (notation only), sign-explicit 9A pole–projector map, $B_*$ declared undefined (GA-02, GA-03, F-1). Scope words (GA-04, GA-05, GA-08, GA-09); one record per `GEN-OPEN-WPHASE` (GA-06); closed items out of active lists (GA-07).
+- **RIDs and evidence (stage 1):** `GEN-THM-QH-NOGO`, `GEN-THM-SINGLE-FACE-METRIC`, `GEN-THM-SOURCED-JUNCTION` (statements as in §6.7/§6.9; GB-10); custody states of the nine proof-source artifacts and the independent-contribution clause, defined once in §8 (GB-11); $c_\theta^{(6)}$ archival status (GB-12); GSPLIT/DELTA-QC specialization with its $\omega_{sc}$ convention (GB-13); T-6u case label (GB-14); tier wording (GB-16).
+- **Interfaces (stage 1):** Dyadic v6.4.22 import and the G-20 existence note for §6.3c (C2), the only change in §6.3a–§6.3c (GC-17); §7 Consumers and Pins, companion references at Programme v1.3 and OFN v0.10 (GC-18, GC-19). The OFN Q6 notice erratum (`records/gen/GENESIS_V2_8_9_NOTICE_ERRATUM_OFN_Q6_v0_1.md`) is a `[SESSION]` record accepted by the owner on 19 October 2026; it corrects notice wording only (GC-21).
+- **Compaction [layout] (stage 2):** current-only header with the §1 profile exception; this compact Appendix A; one footer. Movement map `evidence/gen/v2.9/movement_map.json`, checked by `tools/check_compaction.py`.
+- **Unchanged:** §6.3a–§6.3c apart from the G-20 note; every other RID's statement and grade; every OPEN status.
+- **Records:** release record `records/gen/GEN_v2_9_RELEASE_RECORD.md`; stage-1 intermediate SHA-256 `ca431ce9…7845`; predecessor tag `gen-v2.8.9`.
 
-**Adoption:** Adopted by Genesis stream owner decision, 19 October 2026, following the independent Genesis v2.8.9 receiving review (11/11 PASS in --final --cert mode, 0 SKIP); scientific payload unchanged from the reviewed draft. Scientific payload is the reviewed DRAFT bytes `b2cc5c5cb637459b3e2aded30b1c48ad859f2591a93684f463f89fbab503f62a` (independent receiving review, 19 October 2026: `check_v2_8_9_draft.py --final --cert` 11/11 PASS, 0 SKIP; certificate `d4_transported_cubic_cert.py` (`f4c382855b130249ce290d3ca939b283aadd27d6ea9a1af551599f4cd9533f6d`) rerun 6/6 PASS; package `a3ceb92e66d7cd2caf4d96d5e65f6d17607b5b7e50f2f88a6f0582335573e973`, 12/12 SHA256SUMS entries verified). Negative controls: the package record shows 8/8 caught; the reviewer's independent full replay did not complete within the execution time limit, which is recorded as an execution-coverage limitation with no observed control failure. The adoption transform `release_v2_8_9.py` changes metadata, status, history and footer only; `check_release_v2_8_9.py` proves it. In force from this release: `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` (§6.3c; six-step; real C³ germs with the stated third jet; γ ∉ {0,2}; μ ≠ 0; (H_spec)); the primitive-clock companion remains an algebraic statement without RID. No v2.8.8 claim, claim tag or RID changed; the Dyadic pins remain v6.4.13 (repin deferred). Outbound notices (OFN informational, Q6 regularity remaining an OFN decision; RRF and FMS informational) are issued after adoption.
+### v2.8.9 — 19 October 2026 — Adopted
 
-#### v2.8.9 — DRAFT record, 19 October 2026 — scientific (D-4)
+- **Content:** `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` (§6.3c) with the primitive-clock companion at `[ALG]` grade without RID (D-4).
+- **Records:** release record `upload/gen-records/GENESIS_V2_8_9_RELEASE_RECORD.md` (SHA-256 `f6df5d11…4181`); adoption, draft record and the negative-control replay note: Appendix A of v2.8.9 (tag `gen-v2.8.9`).
 
-Scientific successor built deterministically from the exact adopted v2.8.8 bytes (`9abd3616…0f37`) by `build_v2_8_9_draft.py`. Control: D-4 SESSION v0.1.1 (`1a5f7f56…cee3`), owner-pass manifest v0.1 (`53782f85…0570`), occurrence disposition plan v0.1 (`aee218c0…1ee3`) and owner decisions of 19 Oct 2026 (D1–D5, R-1–R-5, primitive proof dependency clarified).
+### v2.8.8 — 19 October 2026 — Adopted
 
-- **G9-01:** new §6.3c with one new theorem RID `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` (six-step, real C³ third-jet class, μ ≠ 0, (H_spec)); a primitive-clock companion without RID at the grade of the §6.3b primitive statement, proved by the direct primitive argument (not as a corollary of the six-step theorem); instances C1 (polynomial, exists), C2 (conditional on a C³ chart Φ; existence not asserted) and C3; guards G-JET, G-20, G-SEL, G-OFN at the point of use.
-- **G9-02:** entries for the new RID in §1, §5, §7 export and §8.
-- **G9-03:** status-summary sentence; header and footer.
-- **Not in this draft:** any change to §6.3a, §6.3a.1, §6.3b, SG-15, SG-16 or the five existing K3/6S RID lines; widening or regrading of existing RIDs; a new scope guard; any import of the Dyadic formal generator, centralizer or realization results; OFN/FMS verdicts as premises; Dyadic repin to v6.4.14 (deferred, R-1); physical γ, carrier, closure or model selection.
-- **No v2.8.8 claim corrected, regraded or retracted.**
+- **Content:** maintenance: live Dyadic pins to v6.4.13; $\nu_5^{(5)}$ attributed to `DYAD-ALG-NU5-P5` with its convention; no scientific claim changed.
+- **Records:** `upload/gen-records/GENESIS_V2_8_8_RELEASE_RECORD.md` (SHA-256 `03deb7cb…c049`).
 
-### v2.8.8 — 19 October 2026 — Adopted maintenance release
+### v2.8.7 — 18 October 2026 — Adopted
 
-**Adoption:** Adopted by Genesis stream owner decision, 19 October 2026, following the independent Genesis v2.8.8 receiving review (11/11 PASS in --final mode, 0 SKIP); scientific payload unchanged from the reviewed draft. Scientific payload is the reviewed DRAFT bytes `4dcf0185ab14815e34e06eb35dd52616d74cbf91726ff96e62f616c84923f884` (independent receiving review, 19 October 2026: `check_v2_8_8_draft.py --final --dyad --replay` 11/11 PASS, 0 SKIP, against adopted Dyadic v6.4.13 `5958f7fe8a3e0ec94546cb7e915c5f690d09827a3d680d13a17c9d880b968542`; package `bea4cd5034be39055266f9da2a7a2cfeaf71e67c57014b0b150f2df7c0cd9ba0`). The adoption transform `release_v2_8_8.py` changes metadata, status, history and footer only; `check_release_v2_8_8.py` proves it. In force from this release: the live Dyadic pins name v6.4.13 (deferred D5 executed), and M2c is CLOSED at the point of use (`DYAD-ALG-NU5-P5` with its normalization convention; exact certificate Dyadic-owned; Genesis replay [NUM] only). No scientific claim, claim tag or GEN RID changed. Outbound notices (Dyadic N8 RECEIVED with repin executed; RRF/FMS/OFN informational) are issued after adoption.
+- **Content:** `GEN-THM-CHIRAL-CUBIC-FACTOR-LEMMA`, `GEN-THM-K3-SIXSTEP-FACTOR-NOGO`, `GEN-DEF-MEANFEEDBACK-FAMILY`, `GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO`, SG-16.
+- **Records:** `upload/gen-records/GENESIS_V2_8_7_RELEASE_RECORD.md` (SHA-256 `d3fcc38e…9223`).
 
-#### v2.8.8 — DRAFT record, 19 October 2026 — maintenance
+### v2.8.6 — 16 October 2026 — Adopted
 
-Maintenance successor built deterministically from the exact adopted v2.8.7 bytes (`d5d1e57c…e361`) by `build_v2_8_8_draft.py`. Control: owner-pass manifest v0.1 (`81939e5f…f542`) and owner decisions D1–D4 of 19 Oct 2026. Upstream: adopted Dyadic v6.4.13 (`5958f7fe…8542`), consumer audit `check_genesis_dyad_v6_4_13_consumer.py` 8/8 PASS on the adopted bytes.
+- **Content:** `GEN-THM-K3-PLANAR-FACTOR-NOGO` (§6.3a); Dyadic v6.4.11 / OFN v0.9 source synchronization.
+- **Records:** `upload/gen-records/GENESIS_V2_8_6_RELEASE_RECORD.md` (SHA-256 `b6137587…3fec`).
 
-- **G8-01 (deferred D5 executed in this draft):** live Dyadic pointers v6.4.11 → v6.4.13 (companion header, P0-DYADIC status, OPEN 9, §4 routing, §6.2 OPEN 9 imports, §7 header, OPEN 16/17 continuity, §8 P0-DYADIC import). Dated v2.8.6 statements naming v6.4.11 are kept as history (D1).
-- **G8-02:** §6.2 \(\nu_5^{(5)}\) closed form unchanged; the same line now names its source `DYAD-ALG-NU5-P5` and convention (D2); new §7 import line.
-- **G8-03 — M2c:** source and numerical check RESOLVED; point-of-use metadata applied in this draft, effective on adoption. Exact certificate: Dyadic owner (`dyad_m2c_nu5_p5_exact.py`). Genesis-side independent replay, numerical grade [NUM] only (D3): `genesis_nu5_p5_replay.py` (`34bab140…61cb`), 4/4 PASS — p=6 calibration against DYAD-ALG-NF6, p=5 value to 1e-50, negative control, and convention sensitivity (a resonant normalizer coefficient h21 = i/10 shifts Im n32 by 0.01127).
-- **G8-04:** status-summary maintenance sentence (D4); header and footer.
-- **Not in this draft:** any import of the formal ℤ₆ generator, Lemma F or F1–F3; any change to §6.3a, §6.3a.1, §6.3b, SG-15 or SG-16; physical G2, OPEN-B/E1 or γ selection; new GEN RIDs or claim tags.
-- **No v2.8.7 claim corrected, regraded or retracted.**
+### v2.8.5 — 5 October 2026 — Adopted
 
-### v2.8.7 — 18 October 2026 — Adopted owner release
+- **Content:** correction/reconciliation release: GCL-01–11 dispositions; adopted Triadic v1.6 reconciliation (CN-01–CN-05).
+- **Records:** release record not in the repository; adoption and draft records: Appendix A of v2.8.9 (tag `gen-v2.8.9`).
 
-**Adoption:** Adopted by Genesis stream owner decision, 18 October 2026, following the independent Genesis v2.8.7 receiving review (17/17 PASS in --final mode, 0 SKIP); scientific payload unchanged from the reviewed draft. Scientific payload is the reviewed DRAFT bytes `81a9bd9c954f6e71d47e2cb28a9417f6dd27b51fe6132b2efe72134bf3ea7a22` (independent receiving review, 18 October 2026: 17/17 gates PASS in `--final` mode, 0 SKIP; package `114ff19b27a121ab15f5d0714651cf738027998fe6e9b06f8692d4386646d4c7`). The adoption transform `release_v2_8_7.py` changes metadata, status, history and footer only; `check_release_v2_8_7.py` proves it. `k3_six_step_factor_check.py` remains HISTORICAL / CONFIRMATORY / NOT REPLAYED and is not a proof input; M2c is unchanged; the Dyadic v6.4.12.1 repin remains deferred (D5). Outbound notices (RRF G2-CLOCK six-step; FMS/OFN terminology) are issued after adoption.
+### Earlier editions
 
-#### v2.8.7 — DRAFT record, 18 October 2026 — Stage B
-
-Built deterministically from the exact adopted v2.8.6 bytes (`294c6fc2…a269`) by `build_v2_8_7_draft.py`. Control: owner-pass manifest v0.1 (`7519e14f…135a`) and owner decisions D1–D7 of 18 Oct 2026, with the two owner record corrections (four new RIDs only; direct primitive-clock spectral condition).
-
-- **G7-01:** chiral cubic factor lemma `GEN-THM-CHIRAL-CUBIC-FACTOR-LEMMA` (§6.3a.1).
-- **G7-02:** `GEN-THM-K3-SIXSTEP-FACTOR-NOGO` (§6.3a.1), with entries in §1, §5, §7 and §8.
-- **G7-03:** new §6.3b: `GEN-DEF-MEANFEEDBACK-FAMILY`; exact cubic data \((c_\gamma,\beta_\gamma)\) without a separate RID; `GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO` under \((H_{\rm spec})\); primitive-clock family statement at \(C^3\) under \((H_{\rm prim})\).
-- **G7-04:** SG-16. **G7-05:** §7 six-step export line. **G7-06:** provenance in §6.3a.1, §6.3b and §8.
-- The adopted §6.3a and SG-15 are byte-identical; `GEN-THM-K3-PLANAR-FACTOR-NOGO` is neither widened nor regraded.
-- **Not in this draft:** Dyadic v6.4.12.1 repin (D5 deferred; pins stay on v6.4.11); physical \(\gamma\) selection; OPEN-B/E1; Dyadic OPEN 20; FMS model-selection verdicts; V20-O1–O5; Candidates A–C; `Q-SUCC-UV-01`. M2c is unchanged.
-- **No v2.8.6 claim corrected, regraded or retracted.**
-
-### v2.8.6 — 16 October 2026 — Adopted owner release
-
-**Adoption:** Adopted by owner/PI decision, 16 October 2026, following Genesis v2.8.6 receiving review (19/19 PASS); scientific payload unchanged from the reviewed draft. Scientific payload is the reviewed DRAFT bytes `434ea62a85b620dd95aa9b2798690cb09e535f1f02141d4a9cbcf829aba47104` (receiving review: 19/19 gates PASS, including M6c). The adoption transform `release_v2_8_6.py` changes metadata, status, history and footer only; `check_release_v2_8_6.py` proves it. Open provenance item M2c (ν₅⁽⁵⁾ closed form not printed in the Dyadic source) is non-blocking and is **not** marked source-verified. Outbound notices (RRF G2-CLOCK, Dyadic N1/N2, OFN CUST-O09-01) are issued after adoption.
-
-#### v2.8.6 — DRAFT record, 16 October 2026 — Stage B
-
-Built deterministically from the exact adopted v2.8.5 bytes (`41ed7660…475cf`) by `build_v2_8_6_draft.py`. Owner decisions D1–D4 of 16 Oct 2026 apply.
-
-- **G-B01:** new `[THM]` `GEN-THM-K3-PLANAR-FACTOR-NOGO` (§6.3a), with entries in §1, §5, §7 and §8 and new SG-15. Source: Stage-A SESSION record v0.1.2.
-- **G-B02 (Dyadic N1):** `GEN-DEF-PRIMITIVE-MAP` recognized as import/alias of `DYAD-DEF-PRIMITIVE-MAP`; the Genesis RID is retained.
-- **G-B03 (Dyadic N2):** frame and \(v_\perp\) → `DYAD-DEF-BRIDGE-EXPORT-CONTRACT`; protection matrix → `DYAD-ALG-PROTECTION-MATRIX`; antisymmetric channel recorded as Genesis-native (D3); `DYAD-ALG-NF6` cited only where the chart \(h\) is used; `DYAD-ALG-LIEGAUGE-NORM` no longer imported.
-- **G-B04:** RRF G2-CLOCK export line (§7) without any physical selection.
-- **G-B05:** provenance hashes in §8.
-- **Mechanical:** live Dyadic pointers v6.4.10 → v6.4.11; OFN v0.8 → v0.9 (D2). Historical version-history text unchanged.
-- **Not in this draft:** UV-interface type split (`Q-SUCC-UV-01`, formerly `Q-2.8.6-01`; trigger not met); V20-O1–O5; Candidates A–C; OPEN-B/E1; Problem B; Dyadic OPEN 19.
-- **No v2.8.5 claim corrected, regraded or retracted.**
-
-### v2.8.5 — 5 October 2026 — Adopted correction/reconciliation owner release
-
-**Adoption:** adopted by authorized co-owner decision after final receiving review of exact r2 bytes `883644f5009fb54cbefa202846b0ecaf8bfd1e91d04d59756ad025428beb7cec`. The user/PI explicitly delegated the adoption decision in the review turn. Scientific payload is the reviewed r2 payload; the optional vector-orientation sentence was deferred as nonblocking.
-
-- **Frozen GCL disposition:** applies GCL-01–11 to live owner text without editing the frozen correction ledger.
-- **Triadic v1.6 reconciliation:** consumes CN-01/02/03/05 for Genesis and records CN-04 as a downstream OPEN-M notification; historical wedge/no-basin/phase-steering exports withdrawn from live Genesis use.
-- **Import scope repairs:** T-6s no-gain requires \(0\le g_2\le2\) in its declared coherent family; T-6t is mode-label scope, not physical source-direction independence.
-- **Typing repairs:** raw/odd/NF residuals separated; face-phase child ratio/sign corrected; 9B covector type separated from physical \(B\)-lowering; §6.8/9B-tau sign contradiction made explicit; 9C family made conditional on its additional raw-array premise.
-- **Apex typing:** primitive \([s^3]\) seed, \([d^3]\) self-channel and hypothetical UV source separated; former apex–UV slot `[RESULT]` retracted.
-- **Calibration:** ×2 verdict carries both source/HINDEX and energy→amplitude constitutive premises.
-- **Saturation provenance:** \(Q_d^*\) ceiling separated from window-dependent control-loss values; the historical \(2.3\times10^{-3}\) source location is answered in owner text without modifying GCL-11.
-- **Mechanical:** companion/import pointers moved to Methodology v1.3, Dyadic v6.4.10, Triadic v1.6, TDR-G v2.12.13; §6.1 owner RIDs assigned.
-- **Owner-pass disposition companion:** `GENESIS_V2_8_5_OCCURRENCE_DISPOSITION_v0_2.md` records all GCL-01–11 and Triadic CN-01–CN-05 live-occurrence dispositions, deferred items and remaining gates.
-- **Excluded by default:** proposed Candidates A–C and V20-O1–O5 are not scientifically integrated in this correction-first release.
-
-### v2.8.4 — June 2026
-
-**Content-integration release.** Imports the Triadic T-6u apex-source result and adds the Genesis-side apex–UV slot-identity frame map. Additions-only; no prior claim corrected or retracted (the canonical-Gram $\sqrt{3/2}$ apex estimate was a Genesis-side working value, not a registered claim — explicitly superseded here).
-
-- **§2 OPEN-GEN-II-7B [NEW]:** `[CAND]` seam note GEN-CAND-APEX-T6U importing Triadic T-6u. Certified primitive $K_4$ apex/in-plane seed ratio $R_{\rm apex}=\sqrt{21}/64\approx0.0716$ (~20x below $\sqrt2$); the $B_3$-isometric apex-lift model (~1.488) rejected as a physical source; the certified apex is a weakly seeded, self-damped torque channel. Strengthens the non-$\mathcal{P}_4$ $\sigma_f$ conclusion; consistent with the isolated-$K_4$ saturation ceiling.
-- **§2 [NEW] `[RESULT]` GEN-OPEN-APEX-SLOT:** apex–UV slot-identity frame map. $d_{\mathcal{P}_4}$ and the hypothetical UV apex source $H_{\rm UV}^{(d)}$ share the transverse out-of-plane slot (the SG-7 no-go slot) at different dynamical order; the 9C off-diagonal $D$ is distinct (in-plane). Localizes the missing OPEN-M factor to one transverse slot. Numerical completion `[OPEN]` pending the UV $3\times3$ $B$-extension.
-- **§1 OPEN 5/2B frontier [COR]:** annotated that T-6u closes the apex $\mathcal{P}_4$ route and the frame map localizes the residual to the transverse UV-source slot.
-- **§8 [NEW]:** artifact RIDs GEN-CAND-APEX-T6U, GEN-OPEN-APEX-SLOT.
-- **Supersession recorded:** canonical-Gram apex ratio $\sqrt{3/2}\approx1.22$ → certified dynamical $\sqrt{21}/64\approx0.0716$ (T-6u uses the actual certified drive coefficients, not mode Gram weights).
-- **Consistency:** GSPLIT in-plane birth gap ($\tfrac13Q_c^2+\tfrac34Q_sQ_c$, v2.8.3) and the T-6u apex seed are the two channels the frame map separates (in-plane vs transverse); verified mutually consistent, no conflict.
-
-### v2.8.3 — June 2026
-- **Status summary / §2 OPEN 5/2B [COR]:** OPEN 5/2B-a added as `[ALG diagnostic]`: certified in-plane birth gap is $\frac13Q_c^2+\frac34Q_sQ_c$, not scalar $G(F_W)$; phase-chord/angular-gap/squared-gap candidates superseded as complete descriptions of the certified in-plane birth gap.
-- **§2 OPEN 1T [CLOSED]:** Triadic v1.4 import status updated: Genesis may import obstruction diagnostics only; no sufficient escape basin or apex sufficiency.
-- **OPEN-M candidate notes [NEW]:** T-6s in-plane no-rescue and T-6t apex well-posedness recorded as candidate seam notes, scoped to no realization/sufficiency claim.
-
-### v2.8.2 — June 2026
-
-**Provenance pointer refresh only; no claim-status changes.** Maintenance release. Every cited value was verified unchanged in the current source DSN before its pointer was updated; document claim-tag counts are identical to v2.8.1 ([THM] 81, [FAIL] 57, [RESULT] 51, [CERT] 8, [ALG] 64, [HYP] 25, [CAND] 5, [RETRACTED] 13, [DEF] 20).
-
-- **Companion documents [COR]:** Dyadic v6.0→v6.4.8.1; Triadic v1.0→v1.3; Discrete Genesis v2.0→v2.12; Ontological Foundations v0.3→v0.7.
-- **§7 import headers [COR]:** Dyadic/Triadic/Discrete-Genesis import-source pointers refreshed to current versions.
-- **§6.1 κ provenance [COR]:** $\kappa_{\rm shear}=-2\sqrt3/3$ `[from: Triadic v1.0]`→`[from: Triadic v1.3]` (value verified unchanged: Triadic v1.3 §6, line 277).
-- **OPEN 9 / OPEN 16 / OPEN 17 ledger pointers [COR]:** dyadic primary-ledger references refreshed to v6.4.8.1 (cited closures verified present with matching RIDs: DYAD-ALG-ALIAS-PHASE, DYAD-ALG-A1A2-LIEGAUGE, DYAD-ALG-P567-LEDGER).
-- **Verification record:** $\kappa_{\rm shear}=-2\sqrt3/3$, $\mu_6=-\tfrac12-i\tau$ with $\tau=2\sqrt3/3$, $h_3=0$ structural, and the $p=5,6,7$ finite ledger all confirmed unchanged in the current sources. The cited imports are scientifically identical to the v6.0/v1.0/v2.0 originals; only the pointers moved.
-- **Held (not in this release):** the dyadic $b=5$ all-$p$ theorem as a scoped `[CAND/conditional]` second-amplitude-factor bridge for OPEN-M — deferred pending dyadic-team export consent (would land as v2.8.3 or with the next result cluster).
-
-### v2.8.1 — June 2026
-
-**Content-integration release (Pass B).** Integrates the result-cluster held out of v2.8.0. This pass *does* change claims (adds `[CAND]`, `[RESULT]`, and an import); the additions and their tags are enumerated below for audit against the v2.8.0 baseline.
-
-- **Header/footer [COR]:** Title v2.8.1; supersedes v2.8.0.
-- **§2 OPEN 5/2B [NEW]:** registry entry with the direction-independence certificate ($W_{\rm child}/W_{\rm parent}=i$ exact, shared factor $=Q(s_*)$), $F_W=\tfrac{\pi}{2}+\arg\mu_6$ fixed and policy-independent `[ALG]`/`[RESULT]`, reframing to the gap functional $G$ with candidate table, prior $F_W(\eta_*)$ parametrization `[RETRACTED]` for the $J_Q$ policy. Frontier line 5 updated to match.
-- **§2 OPEN 1A [NEW]:** candidate #2 (dyadic Lie-gauge) gauge-invariance result `[RESULT]` and the candidate table; computable phase candidates marked exhausted; OPEN 1 remains ACTIVE.
-- **§2 RESULT-P0-DYADIC [NEW import]:** `[CAND/conditional]` import from Dyadic DSN v6.4.8.1 under the SG-15 guard (Genesis does not certify the $\times4$ rescue), plus the AUDIT-1-DIMENSIONAL ×2 cross-stream verdict `[RESULT]` (cascade amplitude-linear ⇒ $\times2$; conditional on the $h\leftrightarrow\|H\|_B$ / CAND-M-BCH bridge).
-- **§8 [NEW]:** artifact RIDs GEN-OPEN-PHASE-MOMENT-C2, GEN-OPEN-WPHASE, GEN-IMPORT-P0-DYADIC.
-- **No prior claim corrected or retracted** beyond the scoped $F_W(\eta_*)$ parametrization retraction (which was our own prior-turn candidate, not a document claim). Scalar-M 9-series theorem statuses unchanged.
-
-### v2.8.0 — June 2026
-
-**Structural-repair release (no claim changes).** Pass A of the v2.8 consolidation: readability and internal-consistency only; no result added, corrected, or retracted. Verified: every claim-tag count in the document body is identical to v2.7.7 ([THM] 79, [FAIL] 56, [RESULT] 38, [CERT] 6, [ALG] 61, [HYP] 20, [RETRACTED] 10), and every claim from the prior status summary is preserved elsewhere in the document.
-
-- **Header [COR]:** Title v2.8.0; supersedes field updated to include v2.7.7.
-- **Status summary [REWRITE]:** the ~9,000-character single-paragraph version-by-version narrative (whose version mentions were chronologically scrambled) is replaced by a ~2,800-character stable present-state summary. No claim is dropped; the version-by-version narrative remains in this Appendix A, where it is correctly ordered.
-- **§1 frontier [COR]:** the stale frontier line — which still framed "derive $\alpha_f$ / $|\alpha_f|\gtrsim0.012$" as the next target — is corrected to the certified $(\|H\|_B/g)|w|\gtrsim0.024$ $B$-native OPEN M deliverable, with OPEN 0-Regge and OPEN 1 follow-up. The $0.012$ reduced-wrapper estimate retains its `[HYP]` status everywhere it legitimately appears (OPEN-GEN-II-7B, §6.6, the audit/scope rows); only the *frontier framing* of it as the next target was stale.
-- **Deferred to v2.8.1 (Pass B):** OPEN 5/2B W-phase certificate, OPEN 1A candidate #2 (dyadic Lie-gauge), the ×2 cross-stream amplitude-linear verdict, and the RESULT-P0-DYADIC `[CAND]` import are NOT in this release — they are the content batch, integrated separately so the structural diff stays auditable.
-
-### v2.7.7 — June 2026
-
-OPEN-GEN-II-HINDEX closed (no scalar-M theorem-status changes). Artifacts `independent_hindex_trace.py` (PI), `hindex_verification.py` (independent re-verification).
-
-- **Header [COR]:** Title v2.7.7; supersedes field updated to include v2.7.6.
-- **Status summary [NEW]:** HINDEX closure recorded; guard on numerical $\|H\|$ lifted.
-- **§1/§2 [COR]:** frontier item (iii) and item 3c updated to closed.
-- **§2 OPEN-GEN-II-HINDEX [COR]:** entry rewritten as CLOSED with the full tag table — covector-valued $H$ `[THM]`, norm definition `[DEF/ALG]`, $\sigma B$ checksum `[CERT]`, Euclidean norm `[diagnostic only]`, vector-valued norm `[FAIL]` with the explicit $\{9/4,1/4\}\sigma^2$ fork.
-- **§2 [NEW] norm unification `[CERT]`:** on the 9C admissible family, the HINDEX singular spectrum equals the squared $B$-native eigenvalue spectrum, so $\|H\|_B$ and $\|M\|_B$ are one convention and $c_0$ is matched-raising by construction.
-- **§8 [COR]:** GEN-OPEN-HINDEX updated to CLOSED with both artifacts.
-- **Scope discipline:** the theorem rests on the index trace; the $H=\sigma B$ case is the implementation checksum, not the theorem. The OPEN M deliverable is unchanged ($\|H\|_B$, $g$).
-
-### v2.7.6 — June 2026
-
-9C admissible-family certificate + B-native norm closure (no theorem-status changes; no retractions). Artifacts `mspin2_admissible_family.py`, `open_m_constraint_scope.py` (norm identification).
-
-- **Header [COR]:** Title v2.7.6; supersedes field updated to include v2.7.5.
-- **Status summary [COR]:** v2.7.6 paragraph added (admissible family; commutant collapse; norm closure; HINDEX prerequisite).
-- **§1 [COR]:** frontier item 3b extended with the admissible-family landing zone; new item 3c (OPEN-GEN-II-HINDEX).
-- **§2 OPEN-GEN-II-9C [NEW]:** entry rebuilt — criterion re-certified `[CERT ×2]`; complete admissible family $M_{\rm spin2}(g,D)=gI-m\Im(w)\sigma_3+D\sigma_1$ `[ALG]`; commutant collapse $K=gI+(D-m\Re w)P$ with shared $B$ eigenframe and closed-form soft mode at $g=|D-m\Re w|$; `[INTERP]` eigenframe reading; OPEN M target statement tagged `[RESULT][from: ALG][scope: operator-side admissibility]`; explicit guard that the physical block is not claimed admissible.
-- **§2 CHECK-GEN-II-7B-NORM [NEW→RESOLVED]:** the factor-2 normalization fork (local Euclidean $\|M\|_E\to g$ vs wrapper $\to2g$), flagged during the 9C certificate audit, is resolved as `[DEF/CONVENTION]`: the wrapper norm is the $B$-native generalized-eigenvalue norm $\|M\|_B$ (spectrum of $B^{-1}M_{\rm spin2}$), index-consistent with the 9B $(0,2)$-Hessian calculus; exact $\lambda_\pm$ recorded; scalar anchor $\|gI\|_B=2g$; naming guard $\|\cdot\|_B$ vs $\|\cdot\|_E$ installed; cascade target $0.024$ stands; the convention-bracketed $0.012$ alternative is withdrawn.
-- **§2 OPEN-GEN-II-HINDEX [NEW]:** prerequisite registered — 9B-style index-placement trace for the source block $H$ required before any numerical $\|H\|$ enters the cascade test ($c_0=\|H\|_B/\|M\|_B$ is convention-invariant only with matched raising).
-- **§6.9 [NEW]:** admissible-family `[ALG]` entry + norm caution box appended to the 9C ledger.
-- **§8 [COR/NEW]:** GEN-OPEN-MSPIN2-ANISO updated; new RIDs GEN-DEF-NORM-BNATIVE, GEN-OPEN-HINDEX; GEN-OPEN-UVJET-SCOPE annotated with the pinned norm convention.
-- **Method note:** the norm fork was caught by cross-checking the new admissible-family Euclidean spectrum against the v2.7.5 wrapper asymptotic — a naming collision between two correct objects, not an error in either; resolved by reading the convention off the producing artifact rather than adjudicating from prose. Same failure class as the smooth-$\chi$/susceptibility-$\chi$ collision; same fix (naming guard).
-
-### v2.7.5 — June 2026
-
-OPEN-GEN-II-7B frontier-sharpening entry (no theorem-status changes). Artifact `open_m_constraint_scope.py` (verified).
-
-- **Header [COR]:** Title v2.7.5; supersedes field updated to include v2.7.4.
-- **Status summary [NEW]:** OPEN M constraint scoping recorded — blocker reduced to two UV scalars $\{\|H\|, g\}$; cascade test $(\|H\|/g)|w|\gtrsim0.024$ in the large-$g$ asymptotic, inheriting the reduced-wrapper `[HYP]`.
-- **§2 OPEN-GEN-II-7B [NEW]:** constraint-scoping `[RESULT]` block added — $M_{\rm spin2}$ diagonal split fixed (9C), off-diagonal by the spin-2 sector once instantiated, soft-mode $g$-covariant, $\|M\|_{\rm op}\to2g$, single-inequality target.
-- **§2 OPEN-GEN-II-9C [COR]:** off-diagonal wording softened to "fixed by the documented spin-2 sector once that sector is instantiated with an explicit expression" (§6.7 names the sector but gives no closed off-diagonal formula).
-- **§8 [NEW]:** artifact RID GEN-OPEN-UVJET-SCOPE.
-- **Scope discipline:** this is a boundary/scoping result, NOT a UV derivation. The $0.024$ constant is a target inequality (large-$g$ asymptotic + reduced-wrapper `[HYP]`), not a first-principles threshold. $\|H\|$ and $g$ remain the irreducible OPEN M inputs requiring the UV completion. No scalar-M theorem statuses changed.
-
-### v2.7.4 — June 2026
-
-OPEN 1A phase-moment reduction added (no OPEN M status changes). Artifacts `open1_moment_reduction.py`, `open1_plateau_candidate.py` (verified).
-
-- **Header [COR]:** Title v2.7.4; supersedes field updated to include v2.7.3.
-- **Status summary [NEW]:** OPEN 1A reduction and plateau candidate #1 verdict recorded.
-- **§2 [NEW]:** frontier item 1 annotated with the 1A reduction; new OPEN 1A registry entry inserted before OPEN 1C, with the 13-moment linearity, leading criterion, and candidate #1 (plateau) result.
-- **§8 [NEW]:** artifact RID GEN-OPEN-PHASE-MOMENT.
-- **Scope discipline:** OPEN 1 is *reduced* to a finite moment problem, **not** closed — no global bound over all phase distributions is claimed. The plateau candidate is leading-favorable but threshold-insufficient in the reduced model. Scalar-M 9-series theorem statuses unchanged.
-- **Method note:** the leading criterion explains the v2.7.2 saturation at the phase-moment level (favorable side, insufficient magnitude); the decisive cascade source remains the non-$\mathcal{P}_4$ OPEN M $\sigma_f$ term (OPEN-GEN-II-7B), independent of phase selection.
-
-### v2.7.3 — June 2026
-
-Certification / housekeeping patch (no theorem-status changes). Added the independent clean-room re-derivation of the scalar-M 9-series, closing the due-diligence gate flagged after the 9-series correction/retraction cycle (v2.4 retract, v2.7 overpromote-correct, three sign/branch subtleties).
-
-- **Header [COR]:** Title v2.7.3; supersedes field updated to include v2.7.2.
-- **Status summary [NEW]:** `[CERT]` independent-verification layer recorded; scalar-M 9-series declared load-bearing.
-- **§6.6 [NEW]:** `[CONVENTION]` note at the $J_Q$ definition — the $a^\top BJ_Q b=+\tfrac{\sqrt3}{2}\omega_{ab}$ sign fixes the $\omega$ index-order / $\pm J_Q$ branch; downstream results depend only on $J_Q^\top BJ_Q=B$ and $J_Q^2=-I$, both branch-independent.
-- **§8 [NEW]:** artifact RID GEN-ART-REDERIV (`independent_rederivation.py`, `INDEPENDENT_REDERIVATION_REPORT.md`).
-- **Scope:** clean-room SymPy rebuilt $B$ (120° Gram), $J_Q$ (solved from $\{J^\top BJ=B,J^2=-I\}$), $\Delta M_f$ (traceless Euclidean-symmetric, square $=\kappa^2I$), the secular reconstruction, the lowered-source PSD residue, and the 9C criterion — all reproduced without reusing `source_pairing.py` / `index_placement_trace.py` / `tau_coupling_trace.py` / `secular_numerator_trace.py`. Only discrepancy: a cosmetic $\omega$ index-order convention (no downstream effect). No claim corrected or retracted; the $[\mathrm{CERT}]$ layer is additive.
-
-### v2.7.2 — June 2026
-
-Checksum-certification release. The reduced-model $\mathcal{P}_4$-only cascade-impossibility result is verified and recorded as a scoped `[RESULT]`, registered as a closed sub-item of OPEN 1 (which itself remains ACTIVE — the physical $\mathcal{M}_{\rm phase}$ is still open). Artifact `checksum_v272.py` (verified, all PASS).
-
-- **Header [COR]:** Title v2.7.2; supersedes field updated to include v2.7.1.
-- **Status summary [NEW]:** checksum-certified `[RESULT]` `[scope: reduced birth-race model]` for $\mathcal{P}_4$-only cascade impossibility; explicitly not a theorem over arbitrary $\mathcal{M}_{\rm phase}$; $|\alpha_f|\gtrsim0.012$ kept `[HYP]` `[scope: reduced wrapper estimate]`.
-- **§2 OPEN 1 [NEW]:** added closed sub-item "$\mathcal{P}_4$-only cascade within the reduced birth-race model: impossible" with the three checksum numbers ($Q_d^*$, $Q_d(n_{\rm ctrl})$, $\max_{\rm scanned}<0.05$). OPEN 1 remains ACTIVE; the physically selected distribution is not claimed closed.
-- **§2 OPEN-GEN-II-7B [COR]:** current-state updated to v2.7.2 with checksum cross-reference; $|\alpha_f|$ estimate explicitly tagged `[scope: reduced wrapper estimate]`; "verify, correct, or reject" sub-item retained.
-- **§8 [COR]:** GEN-ART-SATURATION artifact entry updated with checksum results and `checksum_v272.py`.
-- **Scope discipline:** the closure is of the reduced-model sub-question only. OPEN 1 (physical phase-moment distribution) and OPEN-GEN-II-7B (UV-derived $\alpha_f$) remain open; no theorem over arbitrary phase measures is claimed.
-
-### v2.7.1 — June 2026
-
-Correction + promotion. External review correctly flagged that v2.7's "full secular equation verified" was overpromoted: `tau_coupling_trace.py` had verified only the denominator factor $(\tau^2-\kappa^2)^2$ via the determinant argument, not the full numerator. v2.7.1 (a) downgrades the denominator-only claim to its correct scope, and (b) supplies the genuine full reconstruction.
-
-- **Header [COR]:** Title v2.7.1; supersedes field updated to include v2.7.
-- **Status summary [COR]:** 9B-tau denominator-level result correctly scoped; full secular reconstruction added as the theorem-grade closure.
-- **Full reconstruction (new, `secular_numerator_trace.py`):** with Euclidean face-gauge constraint $d^\top d=\Delta_3$, Euclidean unit source $S_f=\sigma_f r_\phi$, and soft-branch operator $K=\tau I-\Delta M_f$, the complete documented secular equation $\Delta_3(\tau^2-\kappa^2)^2=\sigma_f^2(\tau^2+2a\tau+\kappa^2)$ reconstructs with residual identically zero. The $\pm\Delta M_f$ branch sets the sign of $2a\tau$; documented $+2a\tau$ = the $-\Delta M_f$ soft branch (9A label).
-- **§6.9 [COR]:** 9B-tau theorem upgraded from denominator-only to full secular reconstruction.
-- **§8 [COR]:** artifact entry updated; `secular_numerator_trace.py` added.
-- **Honesty note:** the v2.7 "verified" language conflated denominator-match with full-reconstruction. The determinant argument was always sound; the overclaim was in scope, not substance. v2.7.1 separates the two and supplies the missing numerator derivation, so the theorem-grade claim is now backed end-to-end.
-
-### v2.7 — June 2026
-
-OPEN-GEN-II-9B-tau closed: the constrained multiplier is $\tau I$, from the documented §6.8 secular equation. Artifact `tau_coupling_trace.py` (verified). The scalar-M soft-mode frame is now self-contained with no outstanding OPEN M dependency.
-
-- **Header [COR]:** Title v2.7; supersedes field updated to include v2.6.
-- **Status summary [COR]:** 9B-tau closure recorded ($\tau I$ via $\det(\Delta M_f+\tau I)^2$ match; $\tau B$ excluded); scalar-M frame fully load-bearing.
-- **§2 [COR]:** Source-pairing dependency line updated to 9B-tau CLOSED.
-- **§6.9 [NEW]:** 9B closed-line extended with the 9B-tau resolution; new `[THM]` 9B-tau entry (secular-equation determinant argument + canonical-face-gauge orthonormal frame + frame-invariance consistency with 9B).
-- **§8 [COR]:** GEN-OPEN-SOURCE-PAIRING artifact entry updated to include 9B-tau and `tau_coupling_trace.py`.
-- **Method note:** like 9B, 9B-tau was closed from existing certified structure (the secular equation) with no new OPEN M input. The 9-series scalar-M frame (9A/9B/9B-tau) is now complete; remaining OPEN M items (9C, $H(x)$, $M_{\rm spin2}(x)$) concern generalization beyond scalar-M, not validation of the scalar-M frame.
-
-### v2.6 — June 2026
-
-OPEN-GEN-II-9B closed by index-placement trace (no OPEN M input required). Artifact `index_placement_trace.py` (verified).
-
-- **Header [COR]:** Title v2.6; supersedes field updated to include v2.5.
-- **Status summary [COR]:** 9B closure recorded — lowered-covector source forced by the $(0,2)$ Hessian character of the secular operator; single coherent origin for the 9A mixed structure; 9B-tau residual handed to OPEN M.
-- **§1 [COR]:** Immediate-frontier item (iii) updated to OPEN M proper (9B no longer pending).
-- **§2 [COR]:** OPEN-GEN-II-9B moved from ACTIVE to CLOSED with the five-step trace; removed from active frontier; added to "Recently closed". Sub-step 5 and dependency lines updated.
-- **§6.9 [COR]:** 9B PSD `[RESULT]` upgraded to `[THM]` closed-by-trace with the $(0,2)$ Hessian derivation.
-- **§8 [COR]:** GEN-OPEN-SOURCE-PAIRING artifact entry updated to CLOSED `[THM]`.
-- **Method note:** the closure is structural (index calculus of the §6.8 energy), so it required no new OPEN M data; the one normalization assumption ($\tau I$ vs $\tau B$ coupling) is explicitly flagged as 9B-tau for OPEN M, not silently assumed.
-
-### v2.5 — June 2026
-
-Correction release. The v2.4 OPEN-GEN-II-9B resolution contained an index-placement error; the saddle-node `[FAIL]` verdict is retracted. Artifact `source_pairing.py` re-verified.
-
-- **Header [COR]:** Title v2.5; supersedes field updated to include v2.4.
-- **Status summary [COR]:** v2.4 source-pairing resolution and saddle-node `[FAIL]` retracted; corrected to PSD physical residue under both source-index conventions.
-- **Core correction:** The variational source is a vector ($S_f=c_f$, residue $c_f^\top\Pi_+c_f$) or a $B$-lowered covector ($S_f=Bc_f$, susceptibility $c_f^\top BL^{-1}Bc_f$, residue $c_f^\top B\Pi_+Bc_f$). Both are Euclidean-orthogonal-projector quadratic forms ⇒ PSD, generically nonzero. The one-$B$ oblique form $c_f^\top B\Pi_+c_f$ (used in v2.4) is sign-indefinite but is a diagnostic, not the variational susceptibility. Verified: $\det\mathrm{sym}(B\Pi_+B)=0$, nonzero eigenvalue $\in[\tfrac14,\tfrac94]>0$.
-- **§1 [COR]:** Immediate-frontier item (iii) reworded to OPEN M source index + $M_{\rm spin2}$ structure (not "sign of soft divergence").
-- **§2 [COR]:** OPEN-GEN-II-9B reverted from RESOLVED to ACTIVE, rewritten as the source-index question with both PSD residues established and the v2.4 claim explicitly `[RETRACTED]`. 9B removed from "Recently closed". OPEN-GEN-II-9C significance revised (structural simplification, not saddle-node prerequisite). Priority ordering items 3b/3c updated. Sub-step 5 reverted to `[ALG structure]`; dependency lines corrected.
-- **§6.9 [COR]:** Saddle-node `[FAIL]` line replaced by PSD `[RESULT]` + explicit `[RETRACTED]` note; 9C criterion reframed as structural simplification.
-- **§8 [COR]:** GEN-OPEN-SOURCE-PAIRING artifact entry corrected.
-- **Appendix B [NEW]:** v2.4 saddle-node `[FAIL]` retraction entry with reason and verification.
-- **Provenance:** correction prompted by external review patch `OPEN_GEN_II_9B_correction_patch.md`, independently re-derived and confirmed.
-
-### v2.4 — June 2026
-
-OPEN-GEN-II-9B resolved by deriving the source pairing from the §6.8 variational structure (not by convention choice); OPEN-GEN-II-9C opened with a sharp $M_{\rm spin2}$ anisotropy prediction. Artifact: `source_pairing.py` (exact SymPy, verified).
-
-- **Header [COR]:** Title v2.4; supersedes field updated to include v2.3.
-- **Status summary [COR]:** 9B resolution (oblique $B$-source/Euclidean-operator pairing; sign-indefinite physical residue; saddle-node `[FAIL]` as universal theorem under scalar-M; birth-direction-selective lift) and 9C prediction recorded.
-- **§1 [COR]:** Immediate-frontier line updated to the $M_{\rm spin2}$ anisotropy target (9C / OPEN M).
-- **§2 [COR]:** Priority item 3b replaced by OPEN-GEN-II-9C; 9B added to "Recently closed". OPEN-GEN-II-9B registry entry rewritten as RESOLVED with the three-fact derivation; new OPEN-GEN-II-9C registry entry added with the $B$-self-adjointness criterion. OPEN-GEN-II-9 sub-step 5 reclassified to `[FAIL]`-universal / 9C-conditional; dependency lines updated.
-- **§6.9 [COR/NEW]:** 9A saddle-node `[ALG structure]` line replaced by 9B `[FAIL]`-under-scalar-M result and 9C `[ALG]` restoration criterion.
-- **§8 [NEW]:** Artifact RIDs GEN-OPEN-SOURCE-PAIRING and GEN-OPEN-MSPIN2-ANISO added.
-- **Scope discipline:** the saddle-node is now an explicit `[FAIL]` as a *universal* theorem under scalar-M (a positive structural result: birth-direction selectivity), not a deferral; a definite-sign version is conditional on the OPEN M $M_{\rm spin2}$ anisotropy.
-
-### v2.3 — June 2026
-
-OPEN-GEN-II-9 sub-steps 1–4 closed under the scalar-M ansatz (new sub-item OPEN-GEN-II-9A), with the source-pairing ambiguity isolated as OPEN-GEN-II-9B. Artifacts: `resolvent_soft_mode.py`, `chi_susceptibility.py` (exact SymPy, executed and verified).
-
-- **Header [COR]:** Title v2.3; supersedes field updated to include v2.2.
-- **Status summary [COR]:** OPEN-GEN-II-9A result and 9B deferral recorded; immediate frontier updated.
-- **§1 [COR]:** Immediate-frontier line extended with the source-pairing decision (9B).
-- **§2 [COR]:** Priority ordering — OPEN-GEN-II-9 annotated (sub-steps 1–4 closed); 9B added as item 3b; 9A added to "Recently closed". OPEN-GEN-II-9 registry entry: sub-steps 1–4 moved to closed-under-scalar-M block with tags `[THM]`/`[ALG]`; sub-step 5 held at `[ALG structure]`; new OPEN-GEN-II-9B entry added.
-- **§6.9 [NEW]:** Certified scalar-M eigendecomposition `[THM]`, eigenbasis $B$-non-orthogonality `[ALG]`, soft-pole residues both pairings `[ALG]` (Euclidean PSD / $B$ indefinite), soft-pole excitation `[RESULT]`, saddle-node `[ALG structure]`. Supersedes the prior forward-looking scoped residue-vanishing note.
-- **§8 [NEW]:** Artifact RID GEN-THM-SCALARM-EIGEN added.
-- **Scope discipline:** "Dominance" claim avoided; only soft-pole *excitation* certified. Residue numerator and sign are convention-dependent; the saddle-node bifurcation type is deferred to 9B, not asserted.
-
-### v2.2 — June 2026
-
-Genesis II archival-recovery items certified and promoted following attachment of computational artifacts (`genesis_k4_route_census.py`, all PASS; `genesis_birth_race_model.py`). OPEN 1C closed. SG-14 lifted for the now-attached items; model-dependent numerics retain explicit scope tags.
-
-- **Header [COR]:** Title v2.2; supersedes field updated to include v2.1.
-- **Status summary [COR]:** OPEN 1C closure and capacity-matching `[FAIL]` recorded; archival items marked promoted.
-- **§1 [NEW]:** Triad chiral admissibility `[THM]` (standalone + K4-shadow pump forms), no-$Q_s^3$-safe-surface `[FAIL]`, NF/primitive sign split `[THM]`. Immediate-frontier line updated (OPEN 1C removed; OPEN 1 + OPEN-GEN-II-7B promoted). Archival-recovery OPEN converted to `[RESULT]` promotion note.
-- **§2 [COR]:** Priority ordering — OPEN 1C moved to "Recently closed"; OPEN-GEN-II-7B promoted to immediate frontier item 2; OPEN-GEN-II-ARCHIVE marked RESOLVED. OPEN 1C registry entry rewritten as CLOSED with full result. OPEN 1 network sub-item annotated with saturation ceiling. OPEN K connection resolved. OPEN M HYP-B sub-item promoted. OPEN-GEN-II-7B current-state updated with artifact certification.
-- **§6.3 [COR]:** Capacity-matching conditional converted to resolved `[FAIL]`.
-- **§6.5 [NEW]:** $\Delta Q_c^{(4)}$ standalone + shadow `[THM]`; channel ledger; universal chiral pump `[RESULT]`; NF/primitive sign split `[THM]`; $G_{3,d}(s,c,0)$ vector seeding and $\Delta Q_s^{(4)}$ shadow `[ALG verified]`.
-- **§6.6 [NEW]:** Corrected $J_Q$, birth-symmetry, and phase-drift law `[ALG]`; saturation ceiling `[RESULT]` `[scope: reduced birth-race model]`. Phase-drift recovery OPEN removed (resolved).
-- **§8 [COR]:** $\Delta Q_c$ artifact entry closed `[THM]`; new artifact RIDs added (G3D-SEED, DELTA-QS-SHADOW, JQ-PHASEDRIFT, SATURATION).
-- **Appendix B [COR]:** Pending-migration subsection converted to certified Genesis II rejected/corrected claims; added single-neighbor-cascade `[FAIL]`.
-- **Scope note:** The $|\alpha_f|\ge0.012$ threshold and saturation numerics remain `[HYP]`/`[RESULT scope: reduced model]` pending full UV-dynamics confirmation; not promoted to `[THM]`.
-
-### v2.1 — June 2026
-
-Genesis II archival-recovery items from May 22 conversation audit incorporated. No existing v2.0 certified claims modified.
-
-- **Header [COR]:** Updated companion documents to `RTG_PROGRAMME_OVERVIEW_v1.1` and `RTG_ONTOLOGICAL_FOUNDATIONS_v0.3`; supersedes field updated to include v2.0.
-- **§1 [NEW]:** Genesis II archival-recovery frontier notice added after UV-data OPEN.
-- **§2 [NEW]:** Priority items 3b (OPEN-GEN-II-7B) and 3c (OPEN-GEN-II-ARCHIVE) added to immediate frontier ordering.
-- **§2 OPEN M [COR]:** HYP-B pending-recovery sub-item added.
-- **§2 [NEW]:** Full OPEN-GEN-II-7B entry (UV-jet amplitude and cascade threshold, RID: GEN-OPEN-UVJET-ALPHAF).
-- **§2 [NEW]:** Full OPEN-GEN-II-ARCHIVE entry (Genesis II correction/rejection recovery, RID: GEN-OPEN-GENII-ARCHIVE).
-- **§3 [NEW]:** SG-14 (conversation-recovered items are not certified claims until artifact attached).
-- **§4 [COR]:** Routing rule for SG-14 added.
-- **§5 [NEW]:** Three high-risk rows: $|\alpha_f|\ge0.012$ threshold, hard saturation ceiling, HYP-B mechanism.
-- **§6.6 [NEW]:** Phase-drift recovery OPEN (RID: GEN-OPEN-PHASEDRIFT-RECOVERY).
-- **§6.8 [NEW]:** UV-jet amplitude threshold recovery OPEN (inline, see OPEN-GEN-II-7B).
-- **§6.9 [NEW]:** Hard-saturation recovery OPEN (RID: GEN-OPEN-HARDSAT-RECOVERY); $J_Q$ and smooth-$\chi$ correction recovery OPEN (RID: GEN-OPEN-JQ-CHI-RECOVERY).
-- **Appendix B [NEW]:** Pending Genesis II archival migration candidates subsection with six `[FAIL]` recovery entries (HYP-A, HYP-C, incoherent seeding, old $J_Q$, smooth-$\chi$ parametrization, old birth-symmetry/phase-drift law).
-
-### v2.0 — June 2026
-
-Full refactor to DSN_METHODOLOGY_v1.2 architecture. Active scientific ledger content preserved or routed; Genesis II UV patch absorbed.
-
-- **Naming [COR]:** Canonical name changed to `RTG_GENESIS_GEOMETRY_DSN` per dual-name convention.
-- **Status Tags table [REMOVED]:** Replaced by `DSN_METHODOLOGY_v1.2` pointer + Local Tag Aliases.
-- **v1.1 Update Summary [MOVED]:** To this Appendix A subsection below.
-- **Part XII §30 Settled Claims [PROMOTED]:** → §1 Current Canonical State with explicit DSN tags.
-- **Part XII §31–32 Immediate/Secondary Next Derivation [MOVED]:** → §2 priority ordering.
-- **Part X OPEN Ledger [RESTRUCTURED]:** Prose OPEN entries → structured ledger entries with RIDs and sub-items.
-- **Part XI Forbidden Overclaims [MOVED]:** → §5 High-Risk Claims Ledger + Appendix B.
-- **Import Ledger §7:** Full import ledger with RIDs, inherited scope clauses, and cross-branch firewall notes.
-- **Genesis II UV patch [ABSORBED]:** Three `[COR]` downgrades integrated into §2 OPEN-GEN-II-9 and §6.9; scalar-M resolvent registered as `[RID: GEN-ALG-SCALARM-RESOLVENT]`.
-- **Prior errata round:** Header scope, `[ARCHIVE-READY]` alias, scalar-M pole ($\pm\kappa$), OPEN 9 $\Phi_p$ wording, OPEN 1T, SG-12b, §4 routing rules, §5 table, §6.2 Birkhoff label, §6.4 cycle-averaging tag, §7 import scope and OPEN K reference, §8 artifact expansion.
-
-Final errata applied before canonical freeze:
-- **Programme tier [COR]:** Discrete/TDR-G routed through bridge requirements, not directly imported.
-- **Status summary [COR]:** Distinguished closed scalar-M ansatz resolvent `[ALG]` from still-open full constrained soft-mode susceptibility / physical branch selection.
-- **§2 [COR]:** OPEN 1T added to priority ordering (item 2b). OPEN 1C: defined $s^+$ as post-fracture/post-birth longitudinal state. OPEN-GEN-II-9: sub-step 1 split into scalar-M first pass (1) and full $M_{\rm spin2}$ generalization (1b).
-- **§6.1/§6.2/§6.3/§6.4/§6.5/§6.7/§6.8/§6.9 [COR]:** Marked mixed-status section headings explicitly with `/ mixed`.
-- **§6.10 [COR]:** Replaced `[OPEN-if-exists]` with canonical `[OPEN]` `[scope: if invariant exists]`.
-- **AI Context Core marker:** Inserted at end of §4.
-
-Final errata applied before freeze:
-- **Local Tag Aliases [COR]:** `[ARCHIVE-READY]` row removed (unused).
-- **§1 [COR]:** Decorative boxes removed from primitive generator and scalar-M resolvent formulae; $\mathcal{P}_4$ box retained as primary scientific object.
-- **§2 OPEN 1 [COR]:** TDR-G policy-induced moments dependency strengthened to require TDR-24D/A/B, TDR-T, and a named bridge theorem — not just TDR-19 and T-6m.
-- **§2 handoff queue [COR]:** TDR-G dependency wording strengthened to include TDR-T statistics and named bridge theorem.
-- **§2 [NEW]:** Secondary / blocked frontier queue added (OPEN 5/2B, OPEN K, OPEN M-foam, OPEN 0-Regge → OPEN 0).
-- **§2 [COR]:** OPEN 16 and OPEN 17 removed from Active Frontier; moved to §7 Programme continuity references.
-- **§6.6/§6.10/§6.11 [COR]:** Section headings marked `/ mixed`.
-- **§6.9 [COR]:** Projection residue condition branch-scoped to $+\kappa$ soft branch; $-\kappa$ branch sign-reversal noted; branch selection routed to OPEN-GEN-II-9.
-- **§7 [NEW]:** Programme continuity references subsection added (OPEN 16, OPEN 17).
-- **§7 [NEW]:** Export protocol added (four `[DEF]` entries: exportable content, blocked exports, generator-T scope, TDR-G bridge requirement).
-- **§8 [NEW]:** Added proof-source placeholder RIDs for pure chiral protection, $\Phi_{2\to3}$ birth theorem, $G_2=0$ chronological protection, phase-moment closure, and W-phase insertion target.
-- **Appendix B [COR]:** Genesis II UV patch `[COR]` demotion entries converted to `[RETRACTED]` with reason format.
-
-### v1.1 Update Summary (from superseded document)
-
-- OPEN 9 / general $p$-resonance imports including $p=5,6,7$ finite ledgers.
-- Dyad-to-triad antisymmetric bridge: canonical $W$-frame, $v_\perp$, raw-vs-normalized cubic coefficient distinction.
-- Corrected $\Phi_{2\to3}$ policy split: shear, recoil, capacity/defect-conservation branches.
-- Closed primitive tetrahedral $Q_d$-quartic drift polynomial $\mathcal{P}_4(s,c,d)$.
-- Phase-moment bridge and uniform independent phase-average sink result.
-- Next load-bearing computation identified: $\Delta Q_c^{(4)}=2c^\top BG_{3,c}(s,c,0)$.
+- v2.8.4, v2.8.3, v2.8.2, v2.8.1, v2.8.0, v2.7.7, v2.7.6, v2.7.5, v2.7.4, v2.7.3, v2.7.2, v2.7.1, v2.7, v2.6, v2.5, v2.4, v2.3, v2.2, v2.1, v2.0 — June 2026; the v1.1 update summary. Entries: Appendix A of v2.8.9 (tag `gen-v2.8.9`). Editions before v2.8.6 are not in the repository.
 
 ---
 
@@ -1689,9 +1384,4 @@ Final errata applied before freeze:
 
 ---
 
-*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.8.9*  
-*Adopted scientific successor to RTG_GENESIS_GEOMETRY_DSN_v2.8.8. v2.8.9 adds GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO (§6.3c) only. Inherited v2.8.8 footer follows:*  
-*Adopted maintenance successor to RTG_GENESIS_GEOMETRY_DSN_v2.8.7. v2.8.8 moves the live Dyadic pins to v6.4.13 and attributes the ν₅⁽⁵⁾ closed form to DYAD-ALG-NU5-P5 with its convention; no scientific claim changes. Inherited v2.8.7 footer follows:*  
-*Adopted successor to RTG_GENESIS_GEOMETRY_DSN_v2.8.6. v2.8.7 adds GEN-THM-CHIRAL-CUBIC-FACTOR-LEMMA, GEN-THM-K3-SIXSTEP-FACTOR-NOGO, GEN-DEF-MEANFEEDBACK-FAMILY, GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO and SG-16 only. Inherited v2.8.6 footer follows:*  
-*Adopted successor to RTG_GENESIS_GEOMETRY_DSN_v2.8.5. v2.8.6 adds GEN-THM-K3-PLANAR-FACTOR-NOGO and Dyadic v6.4.11 / OFN v0.9 source synchronization only. Inherited v2.8.5 footer follows:*  
-*Adopted successor to RTG_GENESIS_GEOMETRY_DSN_v2.8.4. Correction-first scope: GCL-01–11 dispositions, adopted Triadic v1.6 reconciliation, current source/RID repairs, and no default admission of V20-O1–O5 or Candidates A–C. The former apex–UV slot identity and historical Triadic wedge/phase-steering obstruction chain are not live claims. Physical residual, lowering map, constrained-lift sign, 9C modelling premise, \(\kappa_{\rm phys}\), UV source realization and all-order bridges remain OPEN. New/edited v2.8.5 blocks follow DSN_METHODOLOGY_v1.3; untouched inherited mixed-tag text is preserved under the declared bounded migration.*
+*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.9 (stage-2 candidate; not adopted).*
