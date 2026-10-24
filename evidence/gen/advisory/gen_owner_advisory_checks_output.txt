@@ -1,0 +1,10 @@
+[PASS] K1 (DeltaM_f)^2 = m^2|w|^2 I
+[PASS] K2 signed kappa_s=m|w|: projectors m-free, inverse and eigen-relations exact, v_+ eigenvector
+[PASS] K3 Pi_+ pole at tau-g = +kappa (m>0), -kappa (m<0) under kappa=|m||w|
+[PASS] K4 R^(E)_+, R^(B)_+ unchanged under m -> -m
+[PASS] S1 w=0: DeltaM_f=0, K_+ = K_- = tau I
+[PASS] S2 two antipodal stationary points, tau=+-|S|/sqrt(Delta_3); none for Delta_3=0
+[PASS] S3 |d|^2 (tau^2-kappa^2)^2 = sigma^2 (tau^2 + 2 s a tau + kappa^2); s=+1 <-> K_-, s=-1 <-> K_+
+[PASS] S4 [NUM] global minimiser on the circle: tau <= -kappa and branch secular eq.; 3999 cases, 0 failures
+
+8/8 gates PASS
