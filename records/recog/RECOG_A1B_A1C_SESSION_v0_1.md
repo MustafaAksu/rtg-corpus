@@ -1,6 +1,6 @@
 # RECOG A1b/A1c — slip schedule and decoder audit on the explicit start set $U$
 
-**Date:** 23 October 2026 · **Author:** RECOG co-owner (Claude) · **Status:** `[SESSION]` scientific record, **v0.2.1** (v0.1 at commit `a2bf585`; v0.2 at `3b0b232` after review #5630982748 `PROMISING — GAPS FOUND — THM PROMOTION DEFERRED`; v0.2.1 after round-2 review #5631395296 `ROUND-2 CONDITIONAL ACCEPTANCE`: grid-free certificate gates, $K=1.82$, two scope refinements; dispositions in §7). No DSN is edited; nothing is adopted; grades below are targets for a later cell. PI decision of 23 Oct 2026: `START A1b/A1c — EXPLICIT-U FEASIBILITY AND DECODER AUDIT`.
+**Date:** 23 October 2026 · **Author:** RECOG co-owner (Claude) · **Status:** `[SESSION]` scientific record, **v0.2.2** (v0.1 at commit `a2bf585`; v0.2 at `3b0b232` after review #5630982748 `PROMISING — GAPS FOUND — THM PROMOTION DEFERRED`; v0.2.1 after round-2 review #5631395296 `ROUND-2 CONDITIONAL ACCEPTANCE`: grid-free certificate gates, $K=1.82$, two scope refinements; v0.2.2: one sentence of §4 corrected after review #5638820480 of the theorem candidate — see §7c; dispositions in §7). No DSN is edited; nothing is adopted; grades below are targets for a later cell. PI decision of 23 Oct 2026: `START A1b/A1c — EXPLICIT-U FEASIBILITY AND DECODER AUDIT`.
 **Base:** RECOG v0.3.23 (tag `recog-v0.3.23`, `0d583400…a31a`), in particular §6.13b (A1a; RECOG-THM-A1A-PHASE-EXISTENCE-U, FC-21) and §6.16a/§6.16e (F2(b), F2(d)). Owner sources read: NUMGEN `numgen-v1.20.8` §6.6 (canonical B-event predicate, GATE 1, GAP-LOCK Lemmas 1–3, `NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT`); Dyadic `dyad-v6.4.22` §6.14 (`DYAD-THM-LPHASE-ROWA-REMAINDER` (B) and (R), `DYAD-THM-PRIM-CTR`). Plan: `records/recog/RECOG_STUDY_PLAN_2026-10-19_r1.md` §3 A1b/A1c and Appendix A.1.
 **Question (PI):** does FC-21's explicit domain $U$ carry the slip schedule and the asymptotic-phase readout, or must the results stay on $U\cap U_{\rm NUMGEN}$? Then: what does a token record determine, from which data, where, and under which assumptions — kept apart from any token-to-memory write-through (C2), which this cell does not address.
 **Certificate (v0.2):** `evidence/recog/scripts/recog_a1b_sixstep_deficit_cert.py` — exact six-step jet in $\mathbb Q(i\sqrt3)$ to degree 9, Dyadic tail ceiling, explicit grid-free deficit bounds on all of $U_T$ in exact rational arithmetic (G1–G8 and two negative controls PASS; output `evidence/recog/a1b_a1c/a1b_sixstep_deficit_cert.json`).
@@ -93,7 +93,7 @@ Illustration ($q=1.225\times10^{-3}$, $\delta=\tfrac\pi6$, $\alpha\in\{0,0.5,1,1
 
 ## 4. Consequences for R6 and F5 (proposals, not adoptions)
 
-- **F2(d) anti-tautology guard:** add the finite-versus-limit qualifier the plan asked for: $\Psi_\infty$ is a function of the complete token history (so $R_{\log}$-type in the limit), while every finite prefix leaves a window $\gg|\Delta M|$. The $R_{\log}$ verdict for the B/7-gap token stands. $R_{\rm ind}$ for R9's $M$ stands as a statement about finite histories; a positive Q1′ would make $M$ a function of the complete history (information content) without changing its carrier status, so the $R_{\rm ind}$ classification is not automatically lowered by Q1′.
+- **F2(d) anti-tautology guard:** add the finite-versus-limit qualifier the plan asked for: $\Psi_\infty$ is a function of the complete token history (so $R_{\log}$-type in the limit); the finite-prefix envelope tends to $0$ as $k\to\infty$, and within the illustration's observed horizon ($M\lesssim3.3\times10^5$) the prefix window exceeds $|\Delta M|$ by a factor $2$–$6$ (`[NUM]`; v0.2.1 said "every finite prefix leaves a window $\gg|\Delta M|$", which is not true in general — corrected in v0.2.2). The $R_{\log}$ verdict for the B/7-gap token stands. $R_{\rm ind}$ for R9's $M$ stands as a statement about finite histories; a positive Q1′ would make $M$ a function of the complete history (information content) without changing its carrier status, so the $R_{\rm ind}$ classification is not automatically lowered by Q1′.
 - **F3 ladder:** the fiber result is an exact C0 statement — the records and $\Delta M$ are both functions of the common phase $\alpha$ — not a C1 residual and not C2. "Comparator-invisible" memory is token-visible, in the limit, because the tokens are phase crossings. No grade changes.
 - **F5 scoping:** a token stream that is a readout of the carrier's phase cannot witness write-through; the sufficient witness (PI's scope) must show the carrier's update changing at a token (non-smooth or event-gated), which no readout does. Negative, and it narrows F5's search: candidates must be carriers that are *not* functions of the phase the tokens already read.
 - **R6 residual:** unchanged. Tokenisation/selection principle still missing.
@@ -172,4 +172,10 @@ Not a proof input: the runs illustrate the lemmas' inequalities and the schedule
 | unknown-$a$ prefix OPEN; least-squares `[NUM]` | unchanged |
 | long run not needed | unchanged (deferred) |
 | proceed to A3 | PI decision `A3 AUTHORIZED` (23 Oct 2026); A3 opens as a separate cell |
+
+## 7c. v0.2.2 — correction carried from the theorem-candidate review (#5638820480)
+
+| Point | Disposition |
+|---|---|
+| §4 F2(d) sentence "every finite prefix leaves a window $\gg|\Delta M|$" is not true in general: the envelope $|\varepsilon_k|\to0$ | corrected; the $|\Delta M|$ comparison is scoped to the illustration's horizon as `[NUM]`. No other change; certificates not rerun. |
 
