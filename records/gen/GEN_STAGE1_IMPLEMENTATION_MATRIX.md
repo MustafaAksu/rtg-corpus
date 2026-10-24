@@ -9,9 +9,13 @@ This note is **preparation only.** It is neither a build nor an adoption. It doe
 - No edit below is applied, and no RID is assigned.
 - Preparing a stage-1 candidate does not authorize a merge, a tag or scientific adoption.
 
-**Still open for the PI:**
-1. Authorize the 21 reconciled dispositions as the stage-1 scope.
-2. Q1, the edition: v2.9 in two stages, or v2.8.10 as the fallback.
+**Decision state (24 Oct 2026):**
+- **Q1 is decided** (reconciliation §5, PR #37 commit `b0e974e`). v2.9 is built in two stages. If stage 2 is not ready when stage 1 has passed review, the stage-1 baseline may be adopted as v2.8.10.
+- The atlas owner reviewed this matrix: it is consistent with both disposition records and the reconciliation. The atlas owner also advises accepting F-1 under conditions (§4).
+- **Still open for the PI**, each awaiting a one-word confirmation:
+  1. authorize the 21 reconciled dispositions as the stage-1 scope;
+  2. F-1, the κ_f rename.
+- The build does not start before both confirmations.
 
 **Basis:**
 - `records/gen/GEN_OWNER_DISPOSITION_ADVISORY_v2_8_9_claude-genowner_20261024.md` (PR #39, including §9 reconciliation);
@@ -126,9 +130,25 @@ GA-02 fixes the sign of the second κ, but the shared symbol remains.
 
 It is not applied without a decision. If adopted, E05–E09 use $\kappa_f$.
 
+**Atlas owner advice (24 Oct 2026): accept, notation-only, in stage 1.** The conditions, taken over as build rules if the PI confirms:
+- **F1-a.** $\kappa_f:=\lvert m\rvert\lvert w\rvert$ is defined once, in §6.8 at line 1004. It replaces the face-lift κ at every matrix site: 81–82, 434–438, 1004–1083 and the §2 mentions. Triadic-birth κ sites (38, 140, 183–198, 303–307, 536, 614, 721–733) and $\kappa_{\rm phys}$ / $\kappa_{\rm RTG}$ are not touched. The checker lists every replaced occurrence.
+- **F1-b.** Appendix A of the new edition records the convention change ("face-lift magnitude renamed κ → κ_f; no scientific change").
+- **F1-c.** The GC-20 note (E26) becomes "γ (§6.3c) ≠ κ_f (§6.8) ≠ birth κ (§6.1); no parameter identification".
+- **F1-d.** The atlas already labels the face-lift κ as κ_f (atlas v0.4, C04-10). If the owner renames it, the atlas label becomes owner notation.
+- **F1-e.** The Programme v1.3 §8.2 κ table has no face-lift row. The atlas owner has noted a κ_f row for the next Programme edition (E-P13-2). That is Programme's change, not Genesis's.
+
+**Consumers to be named in the release record as "to be notified"** (no notices now; PI decision). **UVM, `RTG_OPEN_M_DSN.md` v0.7.1:**
+- line 65 imports the 9B-tau secular numerator from the Genesis v2.8.5 pin;
+- line 239 (R2) uses $\lvert mw\rvert$ and "consistent with $m=2Q_sB_*$".
+
+The pin is unchanged. The record should state:
+- (i) the face-lift magnitude is now $\kappa_f=\lvert m\rvert\lvert w\rvert$, the same quantity as UVM's $\lvert mw\rvert$;
+- (ii) Genesis records $B_*$ as undefined, with unknown sign (GA-03);
+- (iii) the sourced-junction minimizer claim is rescoped (GA-01).
+
 ## 5. Next steps
 
-**After PI authorization:**
+**After the PI confirms the scope and F-1:**
 - write `build_gen_stage1.py` and `check_gen_stage1.py` with the negative controls;
 - produce the intermediate baseline and its hash;
 - the ChatGPT co-owner and the atlas owner give change-focused review.
