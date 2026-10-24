@@ -67,7 +67,7 @@ Evidence keys: K1–K4, S1–S3 are EV-CODE + EV-RUN (exact). S4 is EV-CODE + EV
 | GB-10 / I06 | P1 | **accept with change** | Assign RIDs, exported theorems first. Assign them only after the statement is final (the sourced-junction RID waits for GA-01). Merge the §1/§6 duplicate statements to one home each. Proposed names are in §3 and are not yet assigned. |
 | GB-11 / I06 | P1 | **accept** | Per-artifact custody state recorded in §5. No reconstruction is presented as recovery. |
 | GB-12 / I05 | P1 | **accept (archival reference-only)** | Line 682 keeps the value only as an archival reference under DYAD-ALG-LIEGAUGE-NORM `[conv: Lie strict-kernel gauge]`, not imported (consistent with line 1142). It is never a chart or phase-moment input. Add a pointer to the Dyadic chart value +89√3/324. |
-| GC-17 | P1 | **accept** | One import row for DYAD v6.4.22, `DYAD-THM-SMOOTH-EMBEDDING` + `DYAD-THM-SMOOTH-EQUIVARIANT-CHART`, scope C^∞ local germs. One sentence after G-20. The analytic case stays OPEN (Dyadic OPEN 20 B-an/B-6). |
+| GC-17 | P1 | **accept** | Tag check done (§9): `dyad-v6.4.22` exists, the Dyadic file on `main` equals it, both RIDs are present. One import row for DYAD v6.4.22, `DYAD-THM-SMOOTH-EMBEDDING` + `DYAD-THM-SMOOTH-EQUIVARIANT-CHART`, scope C^∞ local germs. One sentence after G-20. The analytic case stays OPEN (Dyadic OPEN 20 B-an/B-6). |
 | GA-06 / I10 | P2 | **accept** | One `GEN-OPEN-WPHASE` record (§2, line 171). Line 275 becomes a pointer, or moves to history in stage 2. |
 | GA-07 / I10 | P2 | **accept** | OPEN 1T leaves the frontier list at line 94 (CLOSED at line 256). Completed OPEN 2 items leave the active lists. |
 | GA-08 / I07 | P2 | **accept with change** | A scoped non-identity sentence, with no rank or map claim. The 6-moment set (line 965) is an `[ALG structure]` closure ansatz, not a basis of the exact 13-moment space (line 138). A map or rank result would be new science and is out of stage-1 scope. |
@@ -78,7 +78,7 @@ Evidence keys: K1–K4, S1–S3 are EV-CODE + EV-RUN (exact). S4 is EV-CODE + EV
 | GC-18, GC-19 / I11 | P2 | **accept** | Four-part §7 (imports / exports / consumers / pins). Remove stale "current" words. Add a Consumers block from Programme v1.3 §7.2. Record the RRF v0.8.4 consumer pin (v2.8.9). |
 | GB-16 | opt. | **accept** | Tier wording only. |
 | GC-20 | opt. | **accept with change** | Notation note only: "γ of §6.3c is not the κ of §6.8". No physical identification or selection of κ or γ (entry note §5). |
-| GC-21 | opt. | **accept** | Cite the OFN Q6 erratum (`records/gen/GENESIS_V2_8_9_NOTICE_ERRATUM_OFN_Q6_v0_1.md`) in the v2.8.9 Appendix A entry and in the next release record. |
+| GC-21 | opt. | **accept** | Cite the OFN Q6 erratum (`records/gen/GENESIS_V2_8_9_NOTICE_ERRATUM_OFN_Q6_v0_1.md`) in the v2.8.9 Appendix A entry and in the next release record. Describe it as a `[SESSION]` erratum record that the owner accepted on 19 Oct 2026; that acceptance corrects the notice wording only and does not make the erratum an adopted theorem. *(Revised, §9.)* |
 
 No row is rejected or deferred. Where these dispositions might differ from the other co-owner's, the atlas owner reconciles.
 
@@ -117,7 +117,7 @@ The live statement is at line 70 (§1) and line 1048 (§6.9). The proposed scope
    - In 9A write N̂ := N(w)/|w| and Π± := ½(I ± N̂).
    - Then λ± = (τ−g) ∓ sgn(m)κ, and L_sc⁻¹ = Π₊/(τ−g−sgn(m)κ) + Π₋/(τ−g+sgn(m)κ).
    - The soft eigenvector v₊ = (μ₁, μ₂ − |w|) is the +1 eigenvector of N̂ for either sign of m (K2).
-   - "Soft branch" is defined as the branch whose pole approaches τ = g as κ → 0⁺ along the physical path. Its label is Π₊ if m > 0 and Π₋ if m < 0.
+   - The pole–projector assignment is written explicitly with sgn(m): the pole at τ − g = +κ carries Π₊ if m > 0 and Π₋ if m < 0. *(Revised after reconciliation, §9.)* No definition of the *physical* soft branch is given; its limiting-path definition stays OPEN, and the 9A "soft branch" wording is not relabelled beyond this explicit sgn(m) map.
    - Domain: m ≠ 0, w ≠ 0. At κ = 0, L_sc = (τ−g)I and there is no split.
 3. **Residues.** R^(E)₊ and R^(B)₊, with Π₊ defined via N̂, do not depend on m (K4). The 9A residue statements (PSD / sign-indefinite) therefore survive the convention change unchanged. Only the pole each one attaches to depends on sgn m. **Audit range for the build:** lines 437, 1004, 1060–1074. The script's gates become the stage-1 checks.
 4. **B_*.**
@@ -227,3 +227,30 @@ The atlas owner hash-checks and places these files. Nothing was reconstructed.
 - No physical selection of κ, γ or the sourced-junction branch: GA-01 and GA-02 are scoping and notation only.
 - No notices sent.
 - No hash, RID or approval is asserted beyond those quoted from the repository or computed here.
+
+## 9. Reconciliation with the other co-owner (PR #41), 24 October 2026
+
+The other Genesis co-owner's record is `records/gen/GEN_OWNER_DISPOSITION_ADVISORY_v2_8_9_chatgpt_20261024.md` (branch `chatgpt/gen-owner-disposition-20261024`, commit `fa8561c`). It was read in full.
+
+**No scientific disagreement.** Both records accept all 21 rows; neither rejects or defers any. The two label counts (13 + 8 here, 10 + 11 there) differ only in labelling, so neither record is rewritten to match the other.
+
+**Five points settled between the co-owners.** The ChatGPT co-owner agreed to the five points below in a message relayed by the PI on 24 Oct 2026.
+
+| Row | Agreed text for stage 1 |
+|---|---|
+| GC-17 | The other record's condition is met. `dyad-v6.4.22` exists; `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` on `main` equals it; both RIDs are present (EV-SRC-READ). A C^∞ chart does not close the analytic OPEN 20 / B-6 case and proves no network-level node exchange. |
+| GC-18 | Four-part §7: Imports / Exports / Consumers / Pins. The other record's distinctions sit inside these parts: navigation, scoped scientific imports versus representation-standard citations, blocked requests, and companion references versus historical proof pins. Consumers are not repinned in bulk. |
+| GA-02 | The pole–projector map is written explicitly with sgn(m). The limiting-path definition of the physical soft branch stays OPEN. §3 is revised accordingly. |
+| GB-13 | If the stage-1 script cannot verify the specialization symbolically, the line does not enter the live owner text. It stays in the working record only. |
+| GC-21 | The erratum is cited both as a `[SESSION]` record and as a correction the owner accepted on 19 Oct 2026. That acceptance does not make it an adopted scientific theorem. §2 is revised accordingly. |
+
+**PI remark, 24 Oct 2026, verbatim:** "bence benimsenmeye hazır kısımlar benimsenebilir."
+
+This record does not itself fix the dispositions or the edition.
+- The PI decides which PRs to merge.
+- The PI decides Q1 (v2.9 two-stage, or v2.8.10 fallback).
+- The atlas owner may keep the final reconciliation in its own record.
+
+Stage 1 is the same under either Q1 answer. GA-01 and GA-02/03 come first.
+
+**Repository maintenance:** PR #42 untracks the bytecode cache `tools/__pycache__/check_compaction.cpython-313.pyc`. `.gitignore` already excludes it; history is not rewritten.
