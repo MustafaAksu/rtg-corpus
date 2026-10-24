@@ -68,4 +68,4 @@
 
 ## 5. PI decisions
 
-_(to be filled)_
+- 24 Oct 2026 (Q2): the Genesis co-owners prepare the next edition; the advisory is handed to them with a proper engagement note (`records/gen/GEN_COOWNER_ENTRY_NOTE.md`); the atlas owner advises and reviews, it does not build. Q1, Q3, Q4: open — to be decided after the owners' disposition records.
