@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 """Genesis v2.9, stage 1: corrected intermediate (a build stage, not an edition).
+Round 2 (25 Oct 2026; atlas row check records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE1.md §3, ChatGPT concurrence §6):
+B1 no dated "v2.9" markers in live text, and the withdrawn minimizer clause recorded in Appendix B, not in the theorem
+block; B2 the custody clause and the independent-contribution clause defined once as standard clauses at the head of
+§8 and cited by key; B3 the omega_sc convention cited at the GB-13 line. Applied in place to the round-1 edits.
+Also E29 (prerequisite for the B4 header replacement in stage 2): the header field label "**Status summary.**" becomes
+"**Status summary:**", punctuation only, so that tools/check_compaction.py can read the base status summary.
 
 Applies, to the adopted v2.8.9 file (tag gen-v2.8.9, sha256 d143673e...c6fc), the corrections authorized by the PI
 on 24 Oct 2026 ("her ikisini de onaylıyorum": the 21 reconciled dispositions as stage-1 scope, and F-1 κ -> κ_f).
@@ -20,7 +26,7 @@ Rules:
 - GB-13 is inserted only if its identity is verified symbolically here (gate GB13); otherwise it is skipped and
   the skip is logged;
 - header identity lines (title, date, status, supersedes, companions, methodology) and the footer are left for
-  the publication transform; the only header line changed is the tier line (GB-16).
+  the publication transform; the header lines changed are the tier line (GB-16) and the Status-summary field label (E29, punctuation only).
 
 usage: build_gen_v2_9_stage1.py BASE OUT EDITLOG_JSON
   BASE = `git show gen-v2.8.9:dsn/RTG_GENESIS_GEOMETRY_DSN.md`
@@ -38,15 +44,25 @@ KF_RE = re.compile(r"\\kappa(?![A-Za-z_])")
 NEW_RIDS = ["GEN-THM-QH-NOGO", "GEN-THM-SINGLE-FACE-METRIC", "GEN-THM-SOURCED-JUNCTION"]
 
 def ev(gates):
-    return f"`evidence/gen/scripts/gen_owner_advisory_checks.py` gates {gates} (`0ba256be…bf99`; independent contribution, not a rerun or recovery)"
+    return f"`[indep-AC]` gates {gates}"
 
-CUSTODY = ("proof source not in the repository; custody (a) missing — held by neither Genesis co-owner session and not "
-           "among the records offered on `upload/gen-records` (owner disposition records of 24 Oct 2026) — `EV-NOT-RERUN`")
+CUSTODY = "`[custody-A]`"
+STD_CLAUSES = (
+ "**Standard clauses** (each defined once here and cited by key).\n\n"
+ "- `[custody-A]` :: proof source not in the repository; custody (a) missing — held by neither Genesis co-owner session "
+ "and not among the held records placed at `upload/gen-records/` (hash check `records/gen/GEN_UPLOAD_HASH_CHECK_20261024.md`; "
+ "owner disposition records of 24 Oct 2026) — `EV-NOT-RERUN`.\n"
+ "- `[indep-AC]` :: independent contribution, not a rerun of missing original code and not a recovery of the original "
+ "source (Methodology §12.3): `evidence/gen/scripts/gen_owner_advisory_checks.py` (`0ba256be…bf99`), exact sympy gates "
+ "K1–K4 and S1–S3 (S4 is numerical and supports no live text) — `EV-CODE`, `EV-RUN`, `EV-INDEP`.\n\n")
 
-GB13_LINE = (r"`[ALG]` (v2.9) **Specialization of `GEN-THM-DELTA-QC`.** At \(I_{sc}=0\) the standalone surface "
+GB13_LINE = (r"`[ALG]` **Specialization of `GEN-THM-DELTA-QC`.** At \(I_{sc}=0\) the standalone surface "
              r"\(\Delta Q_c^{(4)}=\tfrac13Q_c^2+\tfrac14(I_{sc}+\omega_{sc})^2+\tfrac5{16}\omega_{sc}^2\) (§6.5) equals the gap "
              r"\(\tfrac13Q_c^2+\tfrac34Q_sQ_c\) above, by the identity \(Q_sQ_c-I_{sc}^2=\tfrac34\omega_{sc}^2\) for the declared "
-             r"\(B\) (Gram determinant \(\tfrac34\); \(\omega_{sc}\) enters squared, so the index order of §6.5 does not matter). "
+             r"\(B\) (Gram determinant \(\tfrac34\)), with \(\omega_{sc}\) in the RTG canonical B-metric convention "
+             r"`[conv: RTG canonical B-metric]`, \(I_{sc}^2+\tfrac34\omega_{sc}^2=Q_sQ_c\) (Triadic §7.1, cross-convention note for "
+             r"T-6m §6.12, as read at `triad-v1.6.1`; the T-6d normalization \(\omega_{sc}^{(\mathrm{T6d})}\) differs and is not used "
+             r"here); \(\omega_{sc}\) enters squared, so the index order of §6.5 does not matter. "
              r"The K4-shadow form of §6.5 gives \(\tfrac13Q_c^2+\tfrac5{12}Q_sQ_c\) at \(I_{sc}=0\) instead. This is a consistency "
              r"identity between the two certified expressions under the declared inner product, not a UV energy statement. "
              r"Check: `build_gen_v2_9_stage1.py` gate GB13 (exact).")
@@ -59,7 +75,7 @@ EDITS = [
  r"`[THM]` **Local sourced-junction theorem** (§6.9, `GEN-THM-SOURCED-JUNCTION`). If $w=0$, $\sigma_f\neq0$ and $\Delta_3>0$: vacuum gluing fails ($S_f = 0$ is impossible), and the constrained birth equation, which at $w=0$ reads $\tau d_\perp+S_f=0$ on $|d_\perp|^2=\Delta_3$, has exactly two antipodal solutions; selection of the physical branch is OPEN (GCL-02, §6.8). The foam branch is sourced-birth, not no-birth."),
 ("E02", "P0", "GA-01 §6.9 statement (single home; RID GB-10)", "line",
  r"`[THM]` **Local sourced-junction theorem.** If $w=0$, $\sigma_f\neq0$: vacuum gluing fails; constrained birth $(\Delta M_f + \tau I)d_\perp + S_f = 0$ has a valid minimizer.",
- r"`[THM]` `[RID: GEN-THM-SOURCED-JUNCTION]` **Local sourced-junction theorem.** If $w=0$, $\sigma_f\neq0$ and $\Delta_3>0$: vacuum gluing fails ($S_f=0$ is impossible). Since $\Delta M_f(0)=0$, the two branches of §6.8 coincide, $K_\pm=\tau I$, and the constrained birth equation $\tau d_\perp+S_f=0$, $|d_\perp|^2=\Delta_3$, has exactly the two antipodal solutions $d_\perp=\mp\sqrt{\Delta_3}\,S_f/|S_f|$, with $\tau=\pm|S_f|/\sqrt{\Delta_3}$; for $\Delta_3=0$ it has none. Which solution is the physical birth requires the birth energy and its constrained second variation, which are OPEN (GCL-02, §6.8); no minimizer is selected here. *(v2.9: the former clause “has a valid minimizer” is withdrawn. Proof of the algebraic statement: " + ev("S1–S2") + r"; the original source GEN-ART-SOURCED-JUNCTION is not recovered.)*"),
+ r"`[THM]` `[RID: GEN-THM-SOURCED-JUNCTION]` **Local sourced-junction theorem.** If $w=0$, $\sigma_f\neq0$ and $\Delta_3>0$: vacuum gluing fails ($S_f=0$ is impossible). Since $\Delta M_f(0)=0$, the two branches of §6.8 coincide, $K_\pm=\tau I$, and the constrained birth equation $\tau d_\perp+S_f=0$, $|d_\perp|^2=\Delta_3$, has exactly the two antipodal solutions $d_\perp=\mp\sqrt{\Delta_3}\,S_f/|S_f|$, with $\tau=\pm|S_f|/\sqrt{\Delta_3}$; for $\Delta_3=0$ it has none. Which solution is the physical birth requires the birth energy and its constrained second variation, which are OPEN (GCL-02, §6.8); no minimizer is selected here. Proof of the algebraic statement: " + ev("S1–S2") + r" (§8); the original source GEN-ART-SOURCED-JUNCTION is not recovered. Corrected-claim record: Appendix B."),
 ("E03", "P0", "GA-01 §7 export (with GB-10 RIDs)", "line",
  r"`[DEF]` Genesis may export theorem-grade primitive algebra through tetrahedral quartic drift, the block-diagonal quaternionic no-go, the smooth single-face metric criterion, and the local sourced-junction theorem with their stated scopes.",
  r"`[DEF]` Genesis may export theorem-grade primitive algebra through tetrahedral quartic drift, the block-diagonal quaternionic no-go (`GEN-THM-QH-NOGO`), the smooth single-face metric criterion (`GEN-THM-SINGLE-FACE-METRIC`), and the local sourced-junction theorem (`GEN-THM-SOURCED-JUNCTION`: the algebraic statement at $w=0$, $\Delta_3>0$; physical branch selection OPEN) with their stated scopes."),
@@ -70,7 +86,7 @@ EDITS = [
 ("E05", "P0", "GA-02/GA-03/F-1/GC-20 §6.8 definition of κ_f, N̂ and B_* status", "line",
  r"$$\Delta M_f(w) = m\begin{pmatrix}\Im w & -\Re w \\ -\Re w & -\Im w\end{pmatrix}, \quad m = 2Q_s B_*, \quad (\Delta M_f)^2 = \kappa_f^2 I, \quad \kappa_f = |m||w|.$$",
  r"$$\Delta M_f(w) = m\begin{pmatrix}\Im w & -\Re w \\ -\Re w & -\Im w\end{pmatrix}, \quad m = 2Q_s B_*, \quad (\Delta M_f)^2 = \kappa_f^2 I, \quad \kappa_f = |m||w|.$$" "\n\n"
- r"`[DEF]` (v2.9) **Face-lift magnitude, sign and $B_*$.** $\kappa_f:=|m||w|\ge0$ is the face-lift magnitude (renamed from $\kappa$ in v2.9, notation only). It is distinct from the triadic birth coefficient of §6.1, from $\kappa_{\rm phys}$ and $\kappa_{\rm RTG}$, and from the $\gamma$ of §6.3b–§6.3c; no parameter identification is made. For $w\neq0$ write $N(w)$ for the matrix above, so $\Delta M_f=m\,N(w)$, and $\hat N:=N(w)/|w|$, so $\Delta M_f=\operatorname{sgn}(m)\,\kappa_f\hat N$. $B_*$ is not defined in the current owner text and its sign is unknown; every statement below that depends on $\operatorname{sgn}(m)$ carries that dependence explicitly. $B_*$ is not identified with any quantity of another stream."),
+ r"`[DEF]` **Face-lift magnitude, sign and $B_*$.** $\kappa_f:=|m||w|\ge0$ is the face-lift magnitude. It is distinct from the triadic birth coefficient of §6.1, from $\kappa_{\rm phys}$ and $\kappa_{\rm RTG}$, and from the $\gamma$ of §6.3b–§6.3c; no parameter identification is made. For $w\neq0$ write $N(w)$ for the matrix above, so $\Delta M_f=m\,N(w)$, and $\hat N:=N(w)/|w|$, so $\Delta M_f=\operatorname{sgn}(m)\,\kappa_f\hat N$. $B_*$ is not defined in the current owner text and its sign is unknown; every statement below that depends on $\operatorname{sgn}(m)$ carries that dependence explicitly. $B_*$ is not identified with any quantity of another stream."),
 ("E06a", "P0", "GA-02 §6.9 9A eigenvalues", "str",
  r"eigenvalues are $\lambda_\pm=(\tau-g)\mp\kappa_f$, $\kappa_f=m|w|$, and",
  r"eigenvalues are $\lambda_\pm=(\tau-g)\mp\operatorname{sgn}(m)\kappa_f$ with $\kappa_f=|m||w|$ (§6.8; domain $m\neq0$, $w\neq0$), and"),
@@ -79,7 +95,7 @@ EDITS = [
  r"$$L_{\rm sc}^{-1} = \frac{\Pi_+}{\tau-g-\operatorname{sgn}(m)\kappa_f} + \frac{\Pi_-}{\tau-g+\operatorname{sgn}(m)\kappa_f}, \qquad \Pi_\pm=\tfrac{1}{2}\!\left(I\pm\hat N\right).$$"),
 ("E06c", "P0", "GA-02 §6.9 9A soft-branch sentence", "str",
  r"The soft branch is $\tau-g-\kappa_f\to0$ with soft eigenvector $v_+=(\mu_1,\ \mu_2-|w|)$.",
- r"The vector $v_+=(\mu_1,\ \mu_2-|w|)$ spans the range of $\Pi_+$ for either sign of $m$. The pole at $\tau-g=+\kappa_f$ carries $\Pi_+$ if $m>0$ and $\Pi_-$ if $m<0$ (v2.9 sign-explicit form; for $m>0$ it is the previous text). The limiting-path definition of the physical soft branch is OPEN (OPEN-GEN-II-9). Both signs of $m$: " + ev("K2–K4") + "."),
+ r"The vector $v_+=(\mu_1,\ \mu_2-|w|)$ spans the range of $\Pi_+$ for either sign of $m$. The pole at $\tau-g=+\kappa_f$ carries $\Pi_+$ if $m>0$ and $\Pi_-$ if $m<0$. The limiting-path definition of the physical soft branch is OPEN (OPEN-GEN-II-9). Both signs of $m$: " + ev("K2–K4") + " (§8)."),
 ("E07a", "P0", "GA-02 §2 OPEN-GEN-II-9 item 1", "str",
  r"1. Scalar-M eigendecomposition $\lambda_\pm=(\tau-g)\mp\kappa_f$, $\kappa_f=m|w|$:",
  r"1. Scalar-M eigendecomposition $\lambda_\pm=(\tau-g)\mp\operatorname{sgn}(m)\kappa_f$, $\kappa_f=|m||w|$:"),
@@ -116,9 +132,9 @@ EDITS = [
  r"`[THM]` **Smooth single-face metric criterion** (§6.9, `GEN-THM-SINGLE-FACE-METRIC`)."),
 ("E14e", "P1", "GB-10 §8 rows for the new RIDs", "str",
  "\n\n---\n\n## §9. Collaboration and Provenance",
- "\n- [RID: GEN-THM-QH-NOGO] :: block-diagonal quaternionic no-go (RID assigned v2.9; statement unchanged) :: `[THM]` `[scope: §6.7]` — proof source GEN-ART-QH-NOGO, not in the repository"
- "\n- [RID: GEN-THM-SINGLE-FACE-METRIC] :: smooth single-face metric criterion (RID assigned v2.9; statement unchanged) :: `[THM]` `[scope: §6.9]` — proof source not identified in the owner text; not in the repository"
- "\n- [RID: GEN-THM-SOURCED-JUNCTION] :: local sourced-junction theorem, algebraic statement at $w=0$, $\\Delta_3>0$ (v2.9; minimizer clause withdrawn) :: `[THM]` `[scope: §6.9]` — proof: " + ev("S1–S2") + "; original source GEN-ART-SOURCED-JUNCTION not in the repository"
+ "\n- [RID: GEN-THM-QH-NOGO] :: block-diagonal quaternionic no-go (statement as before; RID newly assigned) :: `[THM]` `[scope: §6.7]` — proof source GEN-ART-QH-NOGO, not in the repository"
+ "\n- [RID: GEN-THM-SINGLE-FACE-METRIC] :: smooth single-face metric criterion (statement as before; RID newly assigned) :: `[THM]` `[scope: §6.9]` — proof source not identified in the owner text; not in the repository"
+ "\n- [RID: GEN-THM-SOURCED-JUNCTION] :: local sourced-junction theorem, algebraic statement at $w=0$, $\\Delta_3>0$ (minimizer clause withdrawn, Appendix B) :: `[THM]` `[scope: §6.9]` — proof: " + ev("S1–S2") + "; original source GEN-ART-SOURCED-JUNCTION not in the repository"
  "\n\n---\n\n## §9. Collaboration and Provenance"),
 ] + [
 ("E15-" + k, "P1", f"GB-11 custody {k}", "str",
@@ -135,9 +151,9 @@ EDITS = [
   ("PHASE-CLOSURE", r"phase-moment closure and plateau shear bridge derivation", "`[ALG structure]`", ""),
   ("QH-NOGO", r"block-diagonal quaternionic no-go proof ($T_{\mathbb{H}}=T\oplus T \Rightarrow w=0$)", "`[THM]`", ""),
   ("FACE-LIFT", r"canonical face lift matrix $\Delta M_f(w)$ and constrained lift secular equation", "`[ALG]`",
-   "; independent re-derivation of the algebra (not a recovery): " + ev("K1, S3") + "; the UV derivation is not re-derived ($B_*$ undefined, §6.8)"),
+   "; the algebra is re-derived: " + ev("K1, S3") + "; the UV derivation is not re-derived ($B_*$ undefined, §6.8)"),
   ("SOURCED-JUNCTION", r"local sourced-junction theorem proof", "`[THM]`",
-   "; the v2.9 algebraic statement is proved independently: " + ev("S1–S2")),
+   "; the corrected algebraic statement is proved independently: " + ev("S1–S2")),
  ]
 ] + [
 ("E16", "P1", "GB-12 c_θ⁽⁶⁾ archival status", "line",
@@ -146,10 +162,10 @@ EDITS = [
 ("E17a", "P1", "GC-17 note after G-20 (§6.3c; the only §6.3c change)", "str",
  r"Preservation under \(C^3\) conjugacy is a mathematical statement about an existing diffeomorphism, not a choice of physical network representation.",
  r"Preservation under \(C^3\) conjugacy is a mathematical statement about an existing diffeomorphism, not a choice of physical network representation." "\n"
- r"- **G-20 (v2.9 note, GC-17).** By `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (Dyadic v6.4.22; §7) a real \(C^\infty\) — hence \(C^3\) — \(\Phi\) with \(\Phi(0)=0\), \(D\Phi(0)=I\) and \(\Phi T\Phi^{-1}\) commuting with \(A\) exists, so (C2) is non-vacuous at \(C^\infty\). The analytic case remains Dyadic OPEN 20 (B-an/B-6); no network-level node exchange and no physical realization follows."),
+ r"- **G-20, existence note (GC-17).** By `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (Dyadic v6.4.22; §7) a real \(C^\infty\) — hence \(C^3\) — \(\Phi\) with \(\Phi(0)=0\), \(D\Phi(0)=I\) and \(\Phi T\Phi^{-1}\) commuting with \(A\) exists, so (C2) is non-vacuous at \(C^\infty\). The analytic case remains Dyadic OPEN 20 (B-an/B-6); no network-level node exchange and no physical realization follows."),
 ("E17b", "P1", "GC-17 §7 import block", "str",
  "### From `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6`",
- "### From `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22` (v2.9)\n\n"
+ "### From `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22`\n\n"
  "Scoped import for the §6.3c (C2) note only (`dyad-v6.4.22`). The rows above remain pinned to v6.4.13 (historical proof pins; no bulk repin).\n\n"
  r"- [RID: DYAD-THM-SMOOTH-EMBEDDING] :: $C^\infty$ flow embedding at $P_1$ (OPEN 20 B-∞ existence) supplying the $C^\infty$ germ $J$ ($J^6=\mathrm{id}$, $DJ(0)=A$, $JT=TJ$) `[scope: C^\infty local germs at P_1]` :: §6.3c G-20 note" "\n"
  r"- [RID: DYAD-THM-SMOOTH-EQUIVARIANT-CHART] :: $C^\infty$ local diffeomorphism $\Phi$ with $\Phi(0)=0$, $D\Phi(0)=I$, $\Phi\circ J=A\circ\Phi$ and $\Phi T\Phi^{-1}$ commuting with $A$ `[scope: C^\infty local germs at P_1]`. Frame note: Genesis uses it through the linear frame $W=\mathcal L(\rho,\eta)$ of `DYAD-DEF-BRIDGE-EXPORT-CONTRACT`; a linear conjugation preserves $\Phi(0)=0$, $D\Phi(0)=I$ and the commutation. The analytic case (Dyadic OPEN 20 B-an/B-6) is not imported :: §6.3c G-20 note" "\n\n"
@@ -157,7 +173,7 @@ EDITS = [
 # ---------------- P2 ----------------
 ("E18", "P2", "GA-06 one record per RID", "line",
  r"**OPEN 5 / 2B — face-phase / healing-core insertion** [RID: GEN-OPEN-WPHASE]",
- r"**OPEN 5 / 2B — face-phase / healing-core insertion** (question carried by the `GEN-OPEN-WPHASE` record above; v2.9: no second record for that RID)"),
+ r"**OPEN 5 / 2B — face-phase / healing-core insertion** (question carried by the `GEN-OPEN-WPHASE` record above; no second record for that RID)"),
 ("E19a", "P2", "GA-07 OPEN 1T out of the active frontier", "str",
  "\n1b. **OPEN 1T — Triadic v1.6 phase/interface import protocol.** Reconciled in this release: the historical $x_*$, $[0^\\circ,5.5^\\circ]$ safety wedge, no-safe-basin and phase-steering route-obstruction chain are withdrawn from current Genesis use under CN-05. Retained imports are limited to currently adopted, explicitly scoped Triadic v1.6 statements; no replacement global phase/basin theorem is imported.",
  ""),
@@ -169,7 +185,7 @@ EDITS = [
  "\n\nClosed sub-item:\n- Compute $\\Delta Q_s^{(4)}$, $\\Delta Q_c^{(4)}$ as needed:"),
 ("E20", "P2", "GA-08 6 vs 13 phase moments", "str",
  r"Cascade condition: $\langle\mathcal{P}_4\rangle > 0$.",
- r"Cascade condition: $\langle\mathcal{P}_4\rangle > 0$. (v2.9) This six-member set is a coarse closure ansatz; it is not a basis of the 13-moment space of OPEN 1A (§2), and no rank or linear map between the two is asserted."),
+ r"Cascade condition: $\langle\mathcal{P}_4\rangle > 0$. This six-member set is a coarse closure ansatz; it is not a basis of the 13-moment space of OPEN 1A (§2), and no rank or linear map between the two is asserted."),
 ("E22a", "P2", "GA-09 §1 sign-split wording", "str",
  r"opposite signs in their declared constructions.",
  r"opposite signs for different objects in different declared constructions (not a verified passive conjugacy)."),
@@ -189,15 +205,15 @@ EDITS = [
  "- `RTG_ONTOLOGICAL_FOUNDATIONS` v0.10 (`ofn-v0.10`) — foundational context; not proof of Genesis birth laws or UV embeddings. OFN §5.5 and IMP-O10-01 import §6.3a–§6.3c (Programme IF32); no OFN claim is imported into Genesis. *(The v2.8.6 note on OFN v0.9 and CUST-O09-01 is history at `gen-v2.8.9`; the §1 alias answering CUST-O09-01 is unchanged.)*"),
 ("E21b", "P2", "GC-18/19 §7 Consumers and Pins blocks", "str",
  "\n\n---\n\n## §8. Artifact Registry",
- "\n\n### Consumers (v2.9; Programme v1.3 §7.2)\n\n"
- "Consumer-declared pins are the consumers' state and are not repinned here. Status of each row: declared use; no notice has been sent for v2.9 (PI decision); the release record lists what would be notified.\n\n"
+ "\n\n### Consumers (Programme v1.3 §7.2)\n\n"
+ "Consumer-declared pins are the consumers' state and are not repinned here. Status of each row: declared use; no notice has been sent for the current corrections (PI decision); the release record lists what would be notified.\n\n"
  "- TRIAD (IF06) :: Triadic §7, pin v2.8.7 :: primitive tetrahedral seed and metric conventions\n"
- "- UVM / OPEN M (IF08) :: OPEN M §0.3, §7, pin v2.8.5 :: secular frame, norms, cascade test and geometry requirements; imports the 9B-tau secular numerator and uses $|mw|$ and $m=2Q_sB_*$ — affected by the v2.9 renaming $\\kappa_f=|m||w|$ (same quantity), the $B_*$ status (§6.8) and the sourced-junction rescoping (to be notified)\n"
+ "- UVM / OPEN M (IF08) :: OPEN M §0.3, §7, pin v2.8.5 :: secular frame, norms, cascade test and geometry requirements; imports the 9B-tau secular numerator and uses $|mw|$ and $m=2Q_sB_*$ — affected by the renaming $\\kappa_f=|m||w|$ (same quantity), the $B_*$ status (§6.8) and the sourced-junction rescoping (to be notified)\n"
  "- RECOG (IF15) :: RECOG §7, as declared there :: $B$, $J_Q$, pairings and phase-memory context\n"
  "- RRF (IF30) :: RRF §2 table, pin v2.8.9 :: registry imports with RID; §6.2a cites §6.3c\n"
  "- OFN (IF32) :: OFN §11 rows IMP-O10-*, §5.5 :: §6.3a–§6.3c\n"
  "- RER, FMS, ER-2B (IF33–IF35) :: noncanonical records, as declared in each\n\n"
- "### Pins (v2.9)\n\n"
+ "### Pins\n\n"
  "- Dyadic: v6.4.13 for the historical rows above (proof pins); v6.4.22 (`dyad-v6.4.22`) for the two §6.3c (C2) rows only.\n"
  "- Triadic: v1.6 for the imports above; the §6.17 table is read at `triad-v1.6.1` for the T-6u case label (§8), a companion reading.\n"
  "- Discrete Genesis: v2.12.13, blocked interface (Programme IF25); no import.\n"
@@ -205,14 +221,29 @@ EDITS = [
  "---\n\n## §8. Artifact Registry"),
 ]
 
+EDITS.append(("E29", "P2", "B4 prerequisite: header field label 'Status summary.' -> 'Status summary:' (punctuation only; makes the field parseable by tools/check_compaction.py for the stage-2 header replacement)", "str",
+ "**Status summary.** *(v2.8.9 adopted", "**Status summary:** *(v2.8.9 adopted"))
+EDITS.append(("E15-STD", "P1", "GB-11/B2 standard clauses defined once at the head of §8", "str",
+ "## §8. Artifact Registry {#sec-8-artifacts}\n\n", "## §8. Artifact Registry {#sec-8-artifacts}\n\n" + STD_CLAUSES))
+
+APPB_START = "## Appendix B — Retired and Rejected Claims {#appendix-b}\n\n"
+APPB_ENTRY = (
+ "### Corrected claims (stage-1 corrections of the v2.8.9 advisory)\n\n"
+ r"**[RETRACTED | RID: GEN-THM-SOURCED-JUNCTION]** Clause “the constrained birth $(\Delta M_f + \tau I)d_\perp + S_f = 0$ has a valid "
+ r"minimizer” of the local sourced-junction theorem (v2.8.9 and earlier; §1 and §6.9). Reason: at $w=0$, $\Delta M_f=0$, so $K_\pm=\tau I$, "
+ r"and on $|d_\perp|^2=\Delta_3$ the equation has exactly two antipodal solutions (none for $\Delta_3=0$); which one is the physical birth "
+ r"requires the birth energy and its constrained second variation, which are OPEN (GCL-02, §6.8). Existence of some minimizer on the circle "
+ r"is trivial by compactness and selects nothing. Corrected statement: §6.9 `GEN-THM-SOURCED-JUNCTION` (hypothesis $\Delta_3>0$ added). "
+ "Record: Appendix A, v2.9 stage-1 entry; owner dispositions GA-01 (`records/gen/`).\n\n")
+
 APPA_ENTRY = (
  "### v2.9 — stage 1 intermediate (build stage, not adopted)\n\n"
  "Corrections to v2.8.9 (`d143673e…c6fc`) from the reconciled v2.8.9 advisory; scope authorized by the PI on 24 October 2026 "
  "(21 dispositions; F-1). Changes: sourced-junction theorem rescoped to its algebraic content, the minimizer clause withdrawn (GA-01); "
  "face-lift magnitude renamed κ → κ_f, sign-explicit 9A pole–projector map, $B_*$ declared undefined (GA-02, GA-03, F-1); "
- "scope words (GA-04, GA-05, GA-08, GA-09); one record per `GEN-OPEN-WPHASE` (GA-06); closed items out of active lists (GA-07); "
+ "the withdrawn clause is recorded in Appendix B; scope words (GA-04, GA-05, GA-08, GA-09); one record per `GEN-OPEN-WPHASE` (GA-06); closed items out of active lists (GA-07); "
  "RIDs `GEN-THM-QH-NOGO`, `GEN-THM-SINGLE-FACE-METRIC`, `GEN-THM-SOURCED-JUNCTION` (GB-10); proof-source custody states (GB-11); "
- "$c_\\theta^{(6)}$ archival status (GB-12); GSPLIT/DELTA-QC specialization if verified (GB-13); T-6u case label (GB-14); tier wording (GB-16); "
+ "$c_\\theta^{(6)}$ archival status (GB-12); custody and independent-contribution standard clauses defined once in §8 (GB-11); GSPLIT/DELTA-QC specialization with its $\\omega_{sc}$ convention (GB-13); T-6u case label (GB-14); tier wording (GB-16); "
  "Dyadic v6.4.22 import and G-20 note for §6.3c (C2) (GC-17); §7 Consumers and Pins, companion references refreshed (GC-18, GC-19). "
  "The OFN Q6 notice erratum (`records/gen/GENESIS_V2_8_9_NOTICE_ERRATUM_OFN_Q6_v0_1.md`) is a `[SESSION]` record accepted by the owner on "
  "19 October 2026; it corrects notice wording only and is not an adopted theorem (GC-21). §6.3a–§6.3c are unchanged except the G-20 note. "
@@ -294,12 +325,17 @@ def build(base_text):
         record.append({"key": k, "group": grp, "row": row, "mode": mode,
                        "old_sha256": hashlib.sha256(old.encode()).hexdigest(),
                        "new_sha256": hashlib.sha256(new.encode()).hexdigest(), "old": old, "new": new})
-    assert appa.count(APPA_START) == 1
+    assert appa.count(APPA_START) == 1 and appa.count(APPB_START) == 1
     appa = appa.replace(APPA_START, APPA_START + APPA_ENTRY)
+    appa = appa.replace(APPB_START, APPB_START + APPB_ENTRY)
     record.append({"key": "APPA", "group": "APPA", "row": "new Appendix A entry (cites GC-21)", "mode": "appa-insert",
                    "old_sha256": hashlib.sha256(APPA_START.encode()).hexdigest(),
                    "new_sha256": hashlib.sha256((APPA_START + APPA_ENTRY).encode()).hexdigest(),
                    "old": APPA_START, "new": APPA_START + APPA_ENTRY})
+    record.append({"key": "APPB", "group": "APPB", "row": "B1: corrected-claim record for the withdrawn minimizer clause", "mode": "appb-insert",
+                   "old_sha256": hashlib.sha256(APPB_START.encode()).hexdigest(),
+                   "new_sha256": hashlib.sha256((APPB_START + APPB_ENTRY).encode()).hexdigest(),
+                   "old": APPB_START, "new": APPB_START + APPB_ENTRY})
     return live + appa, record, (ok13, msg13)
 
 def main(argv):

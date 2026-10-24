@@ -1,20 +1,20 @@
 file: dsn/RTG_GENESIS_GEOMETRY_DSN.md
-bytes: 210742
-lines: 1688
+bytes: 210154
+lines: 1697
 header_chars: 6261
-live_body_chars: 154190
-appendix_a_chars: 47377
+live_body_chars: 153474
+appendix_a_chars: 47529
 section1_words: 1006
-orientation_core: {"chars": 62134, "lines": 580, "words": 7601, "core_end_marker_present": true}
-header_fields: {"Title": 69, "Date": 27, "Document status": 117, "Scope": 306, "Supersedes": 938, "Companion documents": 230, "DSN Methodology": 43, "Programme tier": 237}
+orientation_core: {"chars": 62426, "lines": 580, "words": 7633, "core_end_marker_present": true}
+header_fields: {"Title": 69, "Date": 27, "Document status": 117, "Scope": 306, "Supersedes": 938, "Companion documents": 230, "DSN Methodology": 43, "Programme tier": 237, "Status summary": 4250}
 appendix_a_words_per_edition: 27 editions, max 504 words
 footer_lines: 1
-history_phrases_live: {"historical": 24, "former": 6, "retained as": 1, "no longer": 4}
+history_phrases_live: {"historical": 24, "former": 5, "retained as": 1, "no longer": 4}
 near_duplicate_paragraphs: 0
 rids_total: 86
 previous: {"file": "/tmp/claude-0/-home-claude/f2095d3e-6910-56fc-ba56-4b428e1f7242/scratchpad/base_v2_8_9.md", "bytes": 198348}
-growth_bytes: 12394
-growth_percent: 6.2
+growth_bytes: 11806
+growth_percent: 6.0
 new_rids: 6
-growth_per_new_rid: 2065.7
+growth_per_new_rid: 1967.7
 (informational report; no gate)

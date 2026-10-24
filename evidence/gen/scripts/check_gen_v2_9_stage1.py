@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Checker for Genesis v2.9 stage 1 (corrected intermediate; not an edition).
+"""Checker for Genesis v2.9 stage 1 (corrected intermediate; not an edition). Round 2 (25 Oct 2026): B1–B3 of the
+atlas row check; C3 covers the Appendix B insertion; C15 added; controls NC10–NC11 added.
 
 usage: check_gen_v2_9_stage1.py BASE INTERMEDIATE EDITLOG_JSON [--root REPO] [--controls]
   BASE = `git show gen-v2.8.9:dsn/RTG_GENESIS_GEOMETRY_DSN.md`; INTERMEDIATE = dsn/RTG_GENESIS_GEOMETRY_DSN.md on the
@@ -10,20 +11,24 @@ Gates (exit 0 iff all PASS):
  C0  BASE         base bytes are adopted v2.8.9 (d143673e...c6fc)
  C1  BUILD        the builder reproduces the intermediate byte-exactly and the log hash matches
  C2  REVERSE      undoing the logged edits in reverse order recovers the base byte-exactly
- C3  APPENDIX     Appendix A/B and footer region = base with only the declared new entry inserted
+ C3  APPENDIX     Appendix A/B and footer region = base with only the declared Appendix A and Appendix B entries inserted
  C4  PROTECTED    §6.3a–§6.3c identical to base except the one declared G-20 note line; §8 rows of the protected RIDs identical
  C5  RID SET      GEN RID set = base set + the three declared RIDs, each attached once at its [THM] statement;
                   the new RIDs occur in no other dsn/ file
  C6  KAPPA        no bare face-lift κ remains in §6.8–§6.9 except the declared definition line; the bare-κ lines outside
-                  the face-lift list are the base ones (triadic birth κ untouched) plus that one definition line
+                  the face-lift list are the base ones (triadic birth κ untouched), plus the definition line if it names κ
  C7  TAGS         per-tag census: base + Σ(new−old over edits) = intermediate, and no edit removes a claim tag
  C8  SIGN         9A eigenvalues/inverse/projectors are sgn(m)-explicit; no signed κ (κ=m|w|) and no Π = ΔM_f/κ form remains
- C9  GA-01        no live sentence "…has a valid minimizer." (the withdrawal note may quote the clause); both statements carry Δ₃>0; §7 export carries the scope
- C10 HEADER       header lines other than the tier line, and the footer, are unchanged
+ C9  GA-01        "has a valid minimizer" absent from live text (it is recorded in Appendix B); both statements carry Δ₃>0; §7 export carries the scope
+ C10 HEADER       header lines other than the tier line and the Status-summary label (E29, '.' -> ':'), and the footer, are unchanged
  C11 HEADINGS     base headings all survive; new headings are exactly the declared ones
  C12 EVIDENCE     every evidence/ path cited in the live text exists; the advisory-check script hash matches
  C13 GB13         the GSPLIT/DELTA-QC identity re-verified here (independent code path)
- C14 SOURCES      cited source facts are present at their tags (dyad-v6.4.22, triad-v1.6.1, programme-v1.3)
+ C14 SOURCES      cited source facts are present at their tags (dyad-v6.4.22, triad-v1.6.1, programme-v1.3), incl. the
+                  Triadic `[conv: RTG canonical B-metric]` normalization cited at the GB-13 line (B3)
+ C15 LIVE         B1/B2: no dated "v2.9" marker in the live text; the standard clauses [custody-A] and [indep-AC] are
+                  defined exactly once (head of §8) and cited by key; the nine GEN-ART custody rows cite [custody-A];
+                  the withdrawn clause appears only in Appendix B
 """
 import hashlib, importlib.util, json, os, re, subprocess, sys
 
@@ -32,10 +37,12 @@ APPA = "## Appendix A — Version History {#appendix-a}\n\n"
 NEW_RIDS = {"GEN-THM-QH-NOGO", "GEN-THM-SINGLE-FACE-METRIC", "GEN-THM-SOURCED-JUNCTION"}
 PROTECTED_RIDS = ["GEN-THM-K3-PLANAR-FACTOR-NOGO", "GEN-THM-CHIRAL-CUBIC-FACTOR-LEMMA", "GEN-THM-K3-SIXSTEP-FACTOR-NOGO",
                   "GEN-DEF-MEANFEEDBACK-FAMILY", "GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO", "GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO"]
-G20_NOTE_PREFIX = "- **G-20 (v2.9 note, GC-17).**"
-KF_DEF_PREFIX = "`[DEF]` (v2.9) **Face-lift magnitude, sign and $B_*$.**"
-NEW_HEADINGS = {"### From `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22` (v2.9)", "### Consumers (v2.9; Programme v1.3 §7.2)",
-                "### Pins (v2.9)", "### v2.9 — stage 1 intermediate (build stage, not adopted)"}
+G20_NOTE_PREFIX = "- **G-20, existence note (GC-17).**"
+KF_DEF_PREFIX = "`[DEF]` **Face-lift magnitude, sign and $B_*$.**"
+NEW_HEADINGS = {"### From `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22`", "### Consumers (Programme v1.3 §7.2)", "### Pins",
+                "### v2.9 — stage 1 intermediate (build stage, not adopted)",
+                "### Corrected claims (stage-1 corrections of the v2.8.9 advisory)"}
+APPB = "## Appendix B — Retired and Rejected Claims {#appendix-b}\n\n"
 TAGS = ["[THM]", "[ALG]", "[OPEN]", "[DEF]", "[RESULT]", "[COR]", "[HYP]", "[FAIL]", "[CAND]", "[RETRACTED]",
         "[ALG structure]", "[ALG diagnostic]", "[CONVENTION]"]
 BARE_K = re.compile(r"\\kappa(?![A-Za-z_])")
@@ -117,9 +124,9 @@ def check(base, inter, log, root, verbose=True):
     gate("C1", ok1, "BUILD")
     rev = reverse_full(inter, log)
     gate("C2", rev == base, "REVERSE")
-    entry = next(e for e in log["edits"] if e["key"] == "APPA")
+    ea = next(e for e in log["edits"] if e["key"] == "APPA"); eb = next(e for e in log["edits"] if e["key"] == "APPB")
     tail_b, tail_i = base[base.index(APPA):], inter[inter.index(APPA):] if APPA in inter else ""
-    gate("C3", tail_i == tail_b.replace(APPA, entry["new"], 1), "APPENDIX")
+    gate("C3", tail_i == tail_b.replace(APPA, ea["new"], 1).replace(APPB, eb["new"], 1), "APPENDIX")
     a0, a1 = "### §6.3a ", "### §6.4 "
     pb, pi = span(base, a0, a1), span(inter, a0, a1)
     pi_lines = [l for l in pi.split("\n") if not l.startswith(G20_NOTE_PREFIX)]
@@ -136,13 +143,13 @@ def check(base, inter, log, root, verbose=True):
     gate("C5", ri == rb | NEW_RIDS and not coll and homes, f"RID SET {sorted(ri ^ (rb | NEW_RIDS))} collisions={coll}")
     kf = set(log["kf_lines"])
     bl = base.split("\n"); il = inter.split("\n")
-    base_bare = sorted(l for n, l in enumerate(bl, 1) if BARE_K.search(l) and n not in kf and not l.startswith("### v2.") and n < bl.index(APPA.strip()) + 1)
+    base_bare = sorted(l.replace("**Status summary.**", "**Status summary:**", 1) for n, l in enumerate(bl, 1) if BARE_K.search(l) and n not in kf and not l.startswith("### v2.") and n < bl.index(APPA.strip()) + 1)
     lv = live(inter).split("\n")
     inter_bare = sorted(l for l in lv if BARE_K.search(l))
     defl = [l for l in lv if l.startswith(KF_DEF_PREFIX)]
     fl = span(inter, "### §6.8 ", "### §6.10 ")
     fl_bare = [l for l in fl.split("\n") if BARE_K.search(l) and not l.startswith(KF_DEF_PREFIX)]
-    gate("C6", len(defl) == 1 and inter_bare == sorted(base_bare + defl) and not fl_bare, f"KAPPA (face-lift bare κ left: {len(fl_bare)})")
+    gate("C6", len(defl) == 1 and inter_bare == sorted(base_bare + [l for l in defl if BARE_K.search(l)]) and not fl_bare, f"KAPPA (face-lift bare κ left: {len(fl_bare)})")
     okt = True; bad = []
     for t in TAGS:
         d = sum(e["new"].count(t) - e["old"].count(t) for e in log["edits"])
@@ -158,10 +165,12 @@ def check(base, inter, log, root, verbose=True):
     L = live(inter)
     sj = [l for l in L.split("\n") if "**Local sourced-junction theorem" in l]
     exp = [l for l in L.split("\n") if l.startswith("`[DEF]` Genesis may export theorem-grade primitive algebra")]
-    gate("C9", re.search(r"has a valid minimizer\.", L) is None and len(sj) == 2 and all(r"\Delta_3>0" in l for l in sj)
+    gate("C9", "has a valid minimizer" not in L and len(sj) == 2 and all(r"\Delta_3>0" in l for l in sj)
          and len(exp) == 1 and "physical branch selection OPEN" in exp[0], "GA-01")
     hb, hi = bl[:12], il[:12]
-    hdr = all(x == y for k, (x, y) in enumerate(zip(hb, hi)) if k != 9) and hb[9] != hi[9] and hi[9].startswith("**Programme tier:** Tier 3 ")
+    hdr = (all(x == y for k, (x, y) in enumerate(zip(hb, hi)) if k not in (9, 10)) and hb[9] != hi[9]
+           and hi[9].startswith("**Programme tier:** Tier 3 ")
+           and hi[10] == hb[10].replace("**Status summary.**", "**Status summary:**", 1) and hb[10] != hi[10])
     foot = base[base.index("*END OF DOCUMENT"):] == inter[inter.index("*END OF DOCUMENT"):]
     gate("C10", hdr and foot, "HEADER")
     hset_b, hset_i = heads(base), heads(inter)
@@ -180,21 +189,34 @@ def check(base, inter, log, root, verbose=True):
             and re.search(r"\| Shear, \$-2\\sqrt3/3\$ \| Vector seed[^|]*\| \$\\sqrt\{21\}/64\$", t6) is not None
             and "the largest diagnostic ratio is $\\sqrt{14}/16$" in t6
             and "| IF06 | GEN → TRIAD |" in pg and "| v2.8.7 |" in pg and "| IF08 | GEN → UVM |" in pg and "| v2.8.5 |" in pg
-            and "Tier 3" in pg)
+            and "Tier 3" in pg
+            and "`[conv: RTG canonical B-metric]` The canonical normalization uses" in t6
+            and r"I_{sc}^2+\frac34(\omega_{sc}^{(\mathrm{RTG})})^2=Q_sQ_c" in t6
+            and "Cross-convention warning for T-6m" in t6)
     gate("C14", ok14, "SOURCES")
+    defs = {k: len(re.findall(r"^- `\[" + k + r"\]` ::", L, re.M)) for k in ("custody-A", "indep-AC")}
+    art = [l for l in L.split("\n") if re.match(r"- \[RID: GEN-ART-(PURE-CHIRAL|PHI-2TO3|G2-CHRONO|P4-PRIMITIVE|PHASE-AVG|PHASE-CLOSURE|QH-NOGO|FACE-LIFT|SOURCED-JUNCTION)\]", l)]
+    ok15 = ("v2.9" not in L and all(v == 1 for v in defs.values()) and len(art) == 9
+            and all("`[custody-A]`" in l and "held by neither" not in l for l in art)
+            and L.count("held by neither Genesis co-owner session") == 1
+            and L.count("not a rerun of missing original code") == 1
+            and "has a valid" not in L and "has a valid minimizer" in inter[inter.index(APPB):])
+    gate("C15", ok15, f"LIVE (standard-clause definitions {defs}; custody rows {len(art)})")
     return R
 
 CONTROLS = [
  # (name, target, mutation, gates that must fail)
  ("NC1 9A sign dropped", "inter", (r"\frac{\Pi_+}{\tau-g-\operatorname{sgn}(m)\kappa_f}", r"\frac{\Pi_+}{\tau-g-\kappa_f}"), {"C1", "C8"}),
  ("NC2 edit inside §6.3c", "inter", ("**G-SEL.** No physical model", "**G-SEL.** No physical models"), {"C1", "C4"}),
- ("NC3 minimizer clause back", "inter", ("no minimizer is selected here.", "it has a valid minimizer."), {"C1", "C9"}),
+ ("NC3 minimizer clause back", "inter", ("no minimizer is selected here.", "it has a valid minimizer."), {"C1", "C9", "C15"}),
  ("NC4 birth κ renamed", "inter", (r"Both retained reference policies have \(\kappa<0\)", r"Both retained reference policies have \(\kappa_f<0\)"), {"C1", "C6"}),
  ("NC5 base not v2.8.9", "base", ("**Date:** 19 October 2026", "**Date:** 18 October 2026"), {"C0", "C1"}),
  ("NC6 RID dropped", "inter", ("`[THM]` `[RID: GEN-THM-QH-NOGO]` ", "`[THM]` "), {"C1", "C5"}),
  ("NC7 Appendix A history edited", "inter", ("### v2.8.9 — 19 October 2026 — Adopted scientific release", "### v2.8.9 — 19 October 2026 — Adopted release"), {"C1", "C3"}),
  ("NC8 header status edited", "inter", ("**Date:** 19 October 2026", "**Date:** 24 October 2026"), {"C1", "C10"}),
  ("NC9 bare face-lift κ reintroduced", "inter", (r"$|a(\phi)| \leq \kappa_f$", r"$|a(\phi)| \leq \kappa$"), {"C1", "C6"}),
+ ("NC10 dated marker in live text", "inter", ("Cascade condition: $\\langle\\mathcal{P}_4\\rangle > 0$. This six-member", "Cascade condition: $\\langle\\mathcal{P}_4\\rangle > 0$. (v2.9) This six-member"), {"C1", "C15"}),
+ ("NC11 custody clause inlined", "inter", ("closure and plateau shear bridge derivation :: `[ALG structure]` — `[custody-A]`", "closure and plateau shear bridge derivation :: `[ALG structure]` — proof source not in the repository; custody (a) missing — held by neither Genesis co-owner session"), {"C1", "C15"}),
 ]
 
 def controls(base, inter, log, root):
