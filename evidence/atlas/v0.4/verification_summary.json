@@ -2,14 +2,14 @@
  "status": "DRAFT_REVIEW_READY",
  "base_atlas": "atlas-v0.3",
  "base_sha256": "71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e14f424ad1dc5b",
- "atlas_sha256": "988d0fa93e4962240ecbe8dc296acf7626e7b47e05c302c749d9fe82d1c6b3c4",
- "atlas_bytes": 469440,
+ "atlas_sha256": "b63eaf8b85dbb1f4a8fbee61cb82f2af089276797c387e6a8a0b13922805c35b",
+ "atlas_bytes": 469991,
  "atlas_lines": 1557,
  "source_snapshot": "21edfb8d019f6f3130217035f387855cde87ce87",
  "changed_sources": [
   "PROG"
  ],
- "edit_operations": 35,
+ "edit_operations": 37,
  "retired_keys": [
   "PROG.G1",
   "PROG.G2",
@@ -48,7 +48,7 @@
   }
  },
  "shared_controls": 18,
- "focused_controls": 6,
+ "focused_controls": 8,
  "h_l5": {
   "dangling": [],
   "high_without_h": [],
@@ -56,7 +56,7 @@
  },
  "tool_sha256": {
   "tools/atlas_check.py": "0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d",
-  "evidence/atlas/build/refresh_v0_4.py": "0fb9f466cade2172959f967639d8f73b7009b7b9517f44cfface05f7aa0f5c56"
+  "evidence/atlas/build/refresh_v0_4.py": "c2e405c33c8c2ca5d929d280c3570141f6f6eca8d44869087e1dac67515eeca9"
  },
  "limitations": [
   "Structural checks only; no owner certificate rerun; semantic cross-reference is for the receiving review.",

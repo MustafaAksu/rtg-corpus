@@ -28,5 +28,15 @@
   "id": "U6",
   "what": "high row F2 loses its H citation",
   "detected": true
+ },
+ {
+  "id": "U7",
+  "what": "stale Programme edition in a live domain introduction (V04-01)",
+  "detected": true
+ },
+ {
+  "id": "U8",
+  "what": "raw/transported model equality inserted into the index (V04-02)",
+  "detected": true
  }
 ]

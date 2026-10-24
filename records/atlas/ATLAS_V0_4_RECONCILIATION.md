@@ -32,7 +32,11 @@ Rule applied throughout: owner text decides; the atlas records what owners state
 
 ## 4. Scope of the v0.4 edit (closed list)
 
-Title, SOURCES header and PROG row, footer; H1 (keys), H6, H7, H8, H10, H11; cross-domain index lines for class C and K₃ model identity; D1 nodes PROG-TIERS, PROG-INTERFACE-TYPES, `*PROG:IF-register`, κ line; D1.L5 RRF.F5, PROG.G1/G2/G4/G7 (retired), PROG.G5/G6 (reworded); D4a κ line, F1, F2; D4b FACE-LIFT node, κ line, `*GEN:secular-K−`, GEN-THM-SCALARM-EIGEN flag, GEN.D5; D5.L5 AZ.A3. 35 exact-once operations (`evidence/atlas/v0.4/edit_log.json`). Nothing else in the atlas is touched; no owner DSN, source tag, Method edition or shared checker is changed.
+Title, SOURCES header and PROG row, footer; D1 introduction (Programme edition; V04-01); H1 (keys), H6, H7, H8, H10, H11; cross-domain index lines for class C and K₃ model identity; D1 nodes CLASS-C (≠ GEN raw F_γ; V04-02), PROG-TIERS, PROG-INTERFACE-TYPES, `*PROG:IF-register`, κ line; D1.L5 RRF.F5, PROG.G1/G2/G4/G7 (retired), PROG.G5/G6 (reworded); D4a κ line, F1, F2; D4b FACE-LIFT node, κ line, `*GEN:secular-K−`, GEN-THM-SCALARM-EIGEN flag, GEN.D5; D5.L5 AZ.A3. 37 exact-once operations (`evidence/atlas/v0.4/edit_log.json`). Nothing else in the atlas is touched; no owner DSN, source tag, Method edition or shared checker is changed.
+
+## 4a. Receiving review (added 24 October 2026)
+
+`records/atlas/ATLAS_V0_4_RECEIVING_REVIEW.md` (ChatGPT): REVISE — V04-01 (D1 introduction still Programme v1.2) and V04-02 (CLASS-C node / class-C index line identify OFN's transported class-C model with GEN's raw F_γ by `≡`). Both accepted and applied; see the review packet §6. The ruling of §2 stands and is sharpened: γ≡κ is an owner-stated **parameter** convention; the **model** identity raw F_γ ↔ class-C F^N_κ is asserted by no owner (OFN §5.5.4: different conditional model, not passive transport; IMP-O10-01: "does not cover class C"), and the atlas now writes class C as the same declared operation as GEN G^N_γ (§6.3c), not as GEN F_γ.
 
 ## 5. Left for later
 
@@ -40,4 +44,5 @@ Title, SOURCES header and PROG row, footer; H1 (keys), H6, H7, H8, H10, H11; cro
 - Programme next edition: E-P13-1 (κ≡γ provenance sentence in §8.2).
 - RER owner: scope sentence citing OFN v0.10 (F2) and per-record applicability of the flat-sector reading.
 - Pre-Legacy, TDR-G, DZT, AZ owner passes (Programme v1.3 §9.2); AZ.A3.
+- `RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION` `~` link to the κ-family (review §4, nonblocking): disambiguate at the Genesis/RECOG dependency review.
 - Cross-stream notice structure (PI decision: none sent for now).

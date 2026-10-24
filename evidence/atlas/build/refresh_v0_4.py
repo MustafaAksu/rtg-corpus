@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Atlas v0.3 -> v0.4 candidate: internal-consistency refresh after the two independent audits
 (records/atlas/ATLAS_V0_4_AUDIT_CLAUDE.md C04-01..10; records/atlas/ATLAS_V0_4_INDEPENDENT_CHATGPT_AUDIT.md A04-01..06;
-reconciled in records/atlas/ATLAS_V0_4_RECONCILIATION.md).
+reconciled in records/atlas/ATLAS_V0_4_RECONCILIATION.md; receiving review V04-01/V04-02 in
+records/atlas/ATLAS_V0_4_RECEIVING_REVIEW.md applied in the same deterministic build).
 
 Scope. One source moved: Programme v1.2 -> v1.3 (`programme-v1.3`). Edits: SOURCES row and manifest; H6/H7/H8/H10/H11;
 cross-domain index (class C, K3 identity); D1 PROG nodes; D1.L5 PROG.* and RRF.F5; D4a kappa line, F1, F2; D4b FACE-LIFT,
@@ -65,9 +66,14 @@ def refresh(a: Edit):
     a.rep('(LEGACY.Y3, PREL.P3)', '(LEGACY.Y3)', 'C04-04', 'H11 key 2')
     # ---- cross-domain index ----
     a.rep('class C · CLASS-C node (D1) ≡ GEN F_γ (γ≡κ) ≡ FMS model C ≡ RRF class-C contract;',
-          'class C · CLASS-C node (D1) ≡ GEN F_γ (γ≡κ by the OFN §11.4 / RRF §6.2a class-C parameter convention, κ∈ℝ∖{0,2} under (H_spec); GEN itself writes γ) ≡ FMS model C ≡ RRF class-C contract;', 'C04-05 / A04-03', 'index class C')
+          'class C · CLASS-C node (D1) = OFN F^N_κ, the same declared operation as GEN G^N_γ (§6.3c) under the OFN §11.4 / RRF §6.2a γ≡κ parameter convention (κ∈ℝ∖{0,2}, (H_spec); GEN itself writes γ); ≠ GEN raw F_γ (§6.3b): a different conditional model, not passive transport of the raw family (OFN §5.5.4, RRF §0.3), no owner conjugacy; ≡ FMS model C ≡ RRF class-C contract;', 'C04-05 / A04-03 / V04-02', 'index class C')
     a.rep('K₃ model identity · RER-E-CONJ node (D4a) ≡ GEN F₁ ≡ ER-2B 𝒩 ≡ RER 𝒩 ≡ OFN raw κ=1 (A1, excluded flat sector)',
           'K₃ model identity · RER-E-CONJ node (D4a) ≡ GEN F₁ ≡ ER-2B 𝒩 ≡ RER 𝒩 ≡ OFN raw κ=1 (A1, excluded flat sector); the extension to the RER records built on 𝒩 is an atlas reading per record (~, F2), not an identity', 'A04-04', 'index K3 identity')
+    # ---- receiving review V04-01 / V04-02 ----
+    a.rep('· Programme Overview v1.2 adopted 2026-09-20, Tier 0 navigation, no physical theorem by appearance ·',
+          '· Programme Overview v1.3 adopted 2026-10-24, Tier 0 navigation, no physical theorem by appearance ·', 'V04-01', 'D1 introduction')
+    a.rep('CLASS-C DEF (RTG-OFN-DEF-TRIAD-MODEL-CONTRACT part) ≡ GEN F_γ/G^N_γ (γ≡κ) ≡ FMS "model C" ≡ *RRF:class-C-contract |',
+          'CLASS-C DEF (RTG-OFN-DEF-TRIAD-MODEL-CONTRACT part) ≡ GEN G^N_γ (§6.3c; same declared operation, γ≡κ parameter convention) ≡ FMS "model C" ≡ *RRF:class-C-contract; ≠ GEN raw F_γ (§6.3b; GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO covers the raw family only, OFN IMP-O10-01 "does not cover class C") |', 'V04-02', 'D1 CLASS-C node')
     # ---- D1 nodes (C04-03 / A04-02) ----
     a.line('PROG-TIERS DEF |',
            'PROG-TIERS DEF | navigation only: 0 programme · 1 methodology · 2 foundational/historical/common-home (OFN, LEGACY, PREL, NUMGEN) · 3 continuous (DYAD, TRIAD, GEN, UVM, RECOG, DZT) · 4 discrete (TDRG) · 5 shared infrastructure and standards (AZ, RRF); classes distinct from tiers: 14 canonical homes + RRF adopted working standard (15 files in dsn/) · RER, FMS, ER2B noncanonical (no tier) · ATLAS derived map (no tier; never a source); homes ≠ branches; GEN header tier statement is the owner\'s, placed Tier 3; discrete inputs = blocked interfaces; BASELINE.md is the hash authority @PROG§6.1', 'C04-03 / A04-02', 'D1 PROG-TIERS')
@@ -78,7 +84,7 @@ def refresh(a: Edit):
     a.line('⊥ κ: class-C coupling κ(≡GEN γ) ·',
            '⊥ κ: class-C coupling κ (≡GEN γ by the OFN §11.4 / RRF §6.2a parameter convention) · GEN birth κ · DYAD backbone κ · GEN face-lift κ (atlas label κ_f) · RRF-CN05 κ (units) · PROG κ_RTG=𝒢_e/J_e · (D6: κ=2πc, κ_grav, κ_top, κ₃, κ′, κ_B) — programme-wide node in header; owner-side navigation table: Programme v1.3 §8.2 (11 rows)', 'C04-05 / C04-10 / A04-02', 'D1 kappa line')
     # ---- D1.L5 ----
-    a.line('RRF.F5 ~ D-LINK:', 'RRF.F5 D-LINK (owner-stated convention): class-C κ ≡ GEN γ is OFN\'s and RRF\'s parameter convention — OFN v0.10 §11.4 (claim-level import of GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO: γ ≡ κ ∈ ℝ∖{0,2}, under (H_spec)) and RRF v0.8.4 §6.2a (γ≡κ in the OFN class-C parameter convention); GEN writes γ and states no identification of its own; FMS model C ≡ class C (CLASS-C node). κ still collides with GEN birth κ, GEN face-lift κ (atlas label κ_f), DYAD backbone κ (F1).', 'C04-05 / A04-03', 'RRF.F5')
+    a.line('RRF.F5 ~ D-LINK:', 'RRF.F5 D-LINK (owner-stated convention): class-C κ ≡ GEN γ is OFN\'s and RRF\'s parameter convention — OFN v0.10 §11.4 (claim-level import of GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO: γ ≡ κ ∈ ℝ∖{0,2}, under (H_spec)) and RRF v0.8.4 §6.2a (γ≡κ in the OFN class-C parameter convention); the §11.4 row is the raw-family dictionary and says it does not cover class C; GEN writes γ and states no identification of its own; no owner asserts a model identity raw F_γ ↔ class-C F^N_κ (different conditional model, OFN §5.5.4); FMS model C ≡ class C (CLASS-C node). κ still collides with GEN birth κ, GEN face-lift κ (atlas label κ_f), DYAD backbone κ (F1).', 'C04-05 / A04-03', 'RRF.F5')
     a.drop_line('PROG.G1 D-STALE:', 'C04-02 / A04-01', 'PROG.G1 retired')
     a.drop_line('PROG.G2 D-SCOPE:', 'C04-02 / A04-01', 'PROG.G2 retired')
     a.drop_line('PROG.G4 ~ D-LINK:', 'C04-02 / A04-01', 'PROG.G4 retired')
@@ -128,6 +134,14 @@ def h_l5_map(text):
     high = [k for k, i in rows.items() if re.search(r'\bhigh\b', lines[i-1][:120]) and k not in cited]
     return dict(rows=out, dangling=dangling, high_l5_without_h=high, l5_rows=len(rows))
 
+def stale_prog(text):
+    """V04-01 guard: no live line names Programme v1.2 as the governing/adopted edition."""
+    return [l[:80] for l in text.split('\n') if re.search(r'Programme Overview v1\.2 adopted|`programme-v1\.2`|\| v1\.2 \| `programme', l)]
+
+def raw_classc_identity(text):
+    """V04-02 guard: no line identifies the CLASS-C node with GEN's raw F_γ by ≡."""
+    return [l[:80] for l in text.split('\n') if 'CLASS-C' in l and re.search(r'≡ GEN F_γ', l)]
+
 def unlabelled_kf(text):
     """Lines using the atlas label κ_f (not κ_fit) must say so on the same line."""
     return [l for l in text.split('\n') if re.search(r'κ_f(?![A-Za-z0-9])', l) and 'atlas label' not in l]
@@ -140,6 +154,8 @@ def main():
     base = at('atlas-v0.3', ATLAS).decode(); assert sha(base) == BASE_SHA
     a = Edit(base); refresh(a); text = a.text
     assert not unlabelled_kf(text), 'unlabelled κ_f remains'
+    assert not stale_prog(text), stale_prog(text)
+    assert not raw_classc_identity(text), raw_classc_identity(text)
     # ---- manifest ----
     old = json.loads(at('atlas-v0.3', 'evidence/atlas/v0.3/source_manifest.json'))
     m = json.loads(json.dumps(old))
@@ -197,6 +213,8 @@ def main():
     t = text.replace('| v1.3 | `programme-v1.3` |', '| v1.2 | `programme-v1.2` |', 1); ctl('U4', 'SOURCES row older than manifest', bool(c.run(t, m, src, cmap, idmap, retired).fails()))
     t = text.replace('GEN face-lift κ (atlas label κ_f)', 'GEN face-lift κ_f', 1); ctl('U5', 'unlabelled κ_f reintroduced', unlabelled_kf(t))
     t = text.replace('(F2, F3)', '(F3)', 1).replace('(the F2 list)', '(the list)', 1).replace('(~, F2)', '(~)', 1); ctl('U6', 'high row F2 loses its H citation', 'F2' in h_l5_map(t)['high_l5_without_h'] and 'F2' not in hm['high_l5_without_h'])
+    t = text.replace('Programme Overview v1.3 adopted 2026-10-24', 'Programme Overview v1.2 adopted 2026-09-20', 1); ctl('U7', 'stale Programme edition in a live domain introduction (V04-01)', bool(stale_prog(t)))
+    t = text.replace('class C · CLASS-C node (D1) = OFN F^N_κ,', 'class C · CLASS-C node (D1) ≡ GEN F_γ (raw) = OFN F^N_κ,', 1); ctl('U8', 'raw/transported model equality inserted into the index (V04-02)', bool(raw_classc_identity(t)))
     wjson(OUT / 'negative_controls.json', controls); assert all(x['detected'] for x in controls), controls
     wjson(OUT / 'edit_log.json', a.log)
     r = Edit(base); refresh(r); assert r.text == text

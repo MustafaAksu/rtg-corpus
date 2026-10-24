@@ -1,7 +1,7 @@
 # RTG State Atlas v0.4 — change-focused review packet
 
 **Date:** 24 October 2026. **Prepared by:** Claude, Atlas owner.
-**Status:** DRAFT / NONCANONICAL — receiving review requested (ChatGPT, Atlas co-owner); no PI acceptance or owner-science adoption. `atlas-v0.3` governs until acceptance.
+**Status:** DRAFT / NONCANONICAL — second candidate; receiving review REVISE (V04-01, V04-02) applied, focused readback requested (ChatGPT, Atlas co-owner); no PI acceptance or owner-science adoption. `atlas-v0.3` governs until acceptance.
 
 ## 1. Inputs and identities
 
@@ -9,17 +9,17 @@ Base `atlas-v0.3`, SHA-256 `71310e8c5e1b29979a854ee2ee932efa4765f038bbe0c10299e1
 
 | Object | SHA-256 |
 |---|---|
-| `atlas/RTG_STATE_ATLAS.md` (candidate) | `988d0fa93e4962240ecbe8dc296acf7626e7b47e05c302c749d9fe82d1c6b3c4` (469,440 bytes, 1,557 lines) |
+| `atlas/RTG_STATE_ATLAS.md` (candidate) | `b63eaf8b85dbb1f4a8fbee61cb82f2af089276797c387e6a8a0b13922805c35b` (469,991 bytes, 1,557 lines; second candidate after the receiving review, §6) |
 | `atlas/RTG_STATE_ATLAS_METHOD.md` (unchanged) | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` |
 | `evidence/atlas/v0.4/source_manifest.json` | `dc8a840694f6da4cb42b5829efac02c4021c36a7ba52ac801b4e1d29409ca037` |
 | `tools/atlas_check.py` (unchanged) | `0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d` |
-| `evidence/atlas/build/refresh_v0_4.py` | `0fb9f466cade2172959f967639d8f73b7009b7b9517f44cfface05f7aa0f5c56` |
+| `evidence/atlas/build/refresh_v0_4.py` | `c2e405c33c8c2ca5d929d280c3570141f6f6eca8d44869087e1dac67515eeca9` |
 
 Decision basis: `records/atlas/ATLAS_V0_4_RECONCILIATION.md` (the two audits C04-01…10 and A04-01…06 and their reconciliation).
 
 ## 2. Review scope
 
-This is an internal-consistency refresh plus the Programme v1.3 source move — not a re-extraction of any scientific domain. 35 exact-once operations in a closed list (reconciliation §4):
+This is an internal-consistency refresh plus the Programme v1.3 source move — not a re-extraction of any scientific domain. 37 exact-once operations in a closed list (reconciliation §4, extended by §6 below):
 
 - **Programme move (C04-01/02/03, A04-01/02).** SOURCES row and manifest to v1.3. H10 rebuilt: the "corpus map out of date" claim is withdrawn (Programme v1.3 inventories every home, RRF, the noncanonical records and the atlas at their governing tags); what remains are the OPEN-M chart audit (OPENM.U1) and the Pre-Legacy owner pass, now cited from Programme v1.3 §9.2 (PREL.P1, PROG.G6). PROG.G1, G2, G4, G7 retired; G5 and G6 reworded; AZ.A3 mentions v1.3. D1 nodes PROG-TIERS, PROG-INTERFACE-TYPES and `*PROG:IF-register` rebuilt from §6.1, §7.1, §7.2 (IF01–IF36; IF17 settled custody split); the D1 κ line cites §8.2 as the owner-side navigation table.
 - **κ ≡ γ provenance (C04-05 vs A04-03; owner text decides).** RRF.F5 becomes an owner-stated convention row citing OFN v0.10 §11.4 (claim-level import of `GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO`: γ ≡ κ ∈ ℝ∖{0,2}, under (H_spec)) and RRF v0.8.4 §6.2a; H8, the D1 κ line and the cross-domain class-C line carry the convention and its scope; "GEN itself writes γ" is stated. The Programme v1.3 §8.2 sentence calling this an atlas reading is the Programme's error (E-P13-1), not reproduced.
@@ -32,7 +32,7 @@ This is an internal-consistency refresh plus the Programme v1.3 source move — 
 
 11 touched L5 rows: 4 retired (PROG.G1, G2, G4, G7; keys added to `evidence/atlas/v0.4/retired_l5_keys.json`, not reused), 7 reworded (RRF.F5, PROG.G5, PROG.G6, AZ.A3, F1, F2, GEN.D5); hashes in `evidence/atlas/v0.4/dispositions.json`. Edit locators and hashes in `edit_log.json`; two builds give identical bytes; reproduce with `python3 -I evidence/atlas/build/refresh_v0_4.py` at the snapshot (the script asserts the base hash, every source tag's file hash and commit, and tag/snapshot byte equality).
 
-Shared checker `tools/atlas_check.py`: **zero FAIL** (the v0.3-era `sources · PROG` FAIL is cleared); PASS counts sources 72, coverage 128, qualifiers 3, links 410, artifacts 96, keys 59. Carried, unchanged from v0.3 by text: 4 link UNVERIFIED + 3 artifact UNVERIFIED (= the 7 UNVERIFIED of the v0.3 record), 11 DOCUMENTED-UNRESOLVED, 16 wording WARN (three new time-relative words introduced by the first build were removed before this candidate). Shared negative controls 18/18 as expected; focused controls 6/6 detected (dangling H key; owner key cited as a row; retired key reused; SOURCES row older than the manifest; unlabelled κ_f; high row losing its H citation) — `evidence/atlas/v0.4/negative_controls.json`, `shared_controls.json`, `verification_summary.json`.
+Shared checker `tools/atlas_check.py`: **zero FAIL** (the v0.3-era `sources · PROG` FAIL is cleared); PASS counts sources 72, coverage 128, qualifiers 3, links 410, artifacts 96, keys 59. Carried, unchanged from v0.3 by text: 4 link UNVERIFIED + 3 artifact UNVERIFIED (= the 7 UNVERIFIED of the v0.3 record), 11 DOCUMENTED-UNRESOLVED, 16 wording WARN (three new time-relative words introduced by the first build were removed before this candidate). Shared negative controls 18/18 as expected; focused controls 8/8 detected (dangling H key; owner key cited as a row; retired key reused; SOURCES row older than the manifest; unlabelled κ_f; high row losing its H citation; stale Programme edition in a live domain introduction; raw/transported model equality inserted into the index) — `evidence/atlas/v0.4/negative_controls.json`, `shared_controls.json`, `verification_summary.json`.
 
 ## 4. Questions for receiving review
 
@@ -45,4 +45,19 @@ Shared checker `tools/atlas_check.py`: **zero FAIL** (the v0.3-era `sources · P
 
 ## 5. Publication boundary
 
-The candidate is not accepted by this build. Acceptance needs the receiving review, then PI acceptance identifying the bytes `988d0fa9…6b3c4`, a merge commit (not squash) of `claude/atlas-v0.4` into `main`, and an annotated `atlas-v0.4` tag on that merge naming the hash. No owner DSN, grade, source tag, notice state, Method edition or consumer adoption is changed. `atlas-v0.3` remains the accepted Atlas until that decision.
+The candidate is not accepted by this build. Acceptance needs the receiving review, then PI acceptance identifying the bytes `b63eaf8b…5c35b`, a merge commit (not squash) of `claude/atlas-v0.4` into `main`, and an annotated `atlas-v0.4` tag on that merge naming the hash. No owner DSN, grade, source tag, notice state, Method edition or consumer adoption is changed. `atlas-v0.3` remains the accepted Atlas until that decision.
+
+## 6. Correction pass after the receiving review (24 October 2026)
+
+Receiving review: `records/atlas/ATLAS_V0_4_RECEIVING_REVIEW.md` (ChatGPT, commit `aaddc51a342619941aa4d6db862090fcb100362e`, PR #34): REVISE on the first candidate `988d0fa9…6b3c4` — V04-01 (D1 introduction still "Programme Overview v1.2 adopted 2026-09-20") and V04-02 (CLASS-C node and class-C index line write `≡ GEN F_γ`, identifying OFN's transported class-C model with GEN's raw family). Both verified against the owners: Programme v1.3 header "ADOPTED — PI, 24 October 2026"; OFN v0.10 §5.5.4 ("different conditional model, not a passive transport of the raw κ-family"), OFN IMP-O10-01 ("Does not cover class C"), GEN v2.8.9 §6.3c (G^N_γ defined by the same expression as OFN's F^N_κ with T replaced by N; F_γ in §6.3b is the raw family).
+
+Applied in the same deterministic build (two more exact-once operations, 37 in all; guards `stale_prog`, `raw_classc_identity`; controls U7, U8), four lines changed against the first candidate:
+
+- line 82 (D1 introduction): "Programme Overview v1.3 adopted 2026-10-24" (V04-01);
+- line 107 (CLASS-C node): "≡ GEN G^N_γ (§6.3c; same declared operation, γ≡κ parameter convention) … ; ≠ GEN raw F_γ (§6.3b; GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO covers the raw family only, OFN IMP-O10-01 "does not cover class C")" (V04-02);
+- line 67 (cross-domain index, class C): "= OFN F^N_κ, the same declared operation as GEN G^N_γ (§6.3c) under the … γ≡κ parameter convention …; ≠ GEN raw F_γ (§6.3b): a different conditional model, not passive transport of the raw family (OFN §5.5.4, RRF §0.3), no owner conjugacy" (V04-02);
+- line 252 (RRF.F5): adds that the §11.4 row is the raw-family dictionary and that no owner asserts a raw ↔ class-C model identity (V04-02, coherence).
+
+H8 and the D1 κ line were re-read: they state the parameter convention only and are unchanged. D4a line 882 already writes the transported family as "FMS M_{κ,N} ≡ OFN class C ≡ RRF class-C-contract ≡ GEN G^N_γ" (not F_γ); unchanged. The nonblocking item of review §4 (`RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION` `~` link to the κ-family) is left as a `~` atlas inference for the Genesis/RECOG dependency review.
+
+Second candidate: `atlas/RTG_STATE_ATLAS.md` SHA-256 `b63eaf8b85dbb1f4a8fbee61cb82f2af089276797c387e6a8a0b13922805c35b`; shared checker zero FAIL with the carried non-PASS rows unchanged by text; 18/18 shared and 8/8 focused controls; H→L5 map 0 dangling, 0 high rows without H; two builds identical.
