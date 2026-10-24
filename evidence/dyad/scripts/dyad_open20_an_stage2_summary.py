@@ -94,6 +94,7 @@ def main(d):
               f"arg/pi mod 1 = {[mp.nstr(a, 3) for _, _, a in tail]}")
     print('\n== Borel–Padé singularity scouting (largest run): poles of the diagonal Padé approximants of B_r(t) = sum_n c_n t^n / n!, c_n = a_{3n+r}')
     print('   (nearest poles by modulus; a string of poles marks a branch cut; the first element of each string is the branch-point estimate; NUM only)')
+    print('   (doublet test: a pole whose nearest numerator zero lies within 5% of |t| is a Froissart doublet and is excluded from the estimate)')
     from mpmath import matrix, lu_solve, polyroots, factorial
     mp.dps = 120          # the stored coefficients carry 80 digits; the Hankel systems below are ill-conditioned
     C = coeffs(I)
@@ -113,9 +114,15 @@ def main(d):
             except ZeroDivisionError:
                 print(f"  r={r} Pade[{L}/{M}]: Hankel system numerically singular at the stored precision; skipped"); continue
             roots = sorted(polyroots([q[M - 1 - j] for j in range(M)] + [mpf(1)], maxsteps=400, extraprec=600), key=lambda z: abs(z))
-            near = [(mp.nstr(abs(z), 5), mp.nstr(mp.arg(z) / mp.pi, 4)) for z in roots[:5]]
-            pade[(r, M)] = roots
-            print(f"  r={r} Pade[{L}/{M}] nearest poles (|t|, arg/pi): {near}")
+            # numerator P(t) = [B(t) Q(t)]_{<= L}; a pole with a numerator zero closer than 5% of |t| is a Froissart doublet (spurious)
+            qq = [mpf(1)] + [q[j] for j in range(M)]
+            pc = [sum(qq[i] * b[j - i] for i in range(0, min(j, M) + 1)) for j in range(L + 1)]
+            zeros = polyroots(list(reversed(pc)), maxsteps=400, extraprec=600) if L > 0 else []
+            def dz(z): return min(abs(z - w) for w in zeros) / abs(z) if zeros else mpf(1)
+            near = [(mp.nstr(abs(z), 5), mp.nstr(mp.arg(z) / mp.pi, 4), 'DOUBLET' if dz(z) < mpf('0.05') else 'pole') for z in roots[:5]]
+            clean = [z for z in roots if dz(z) >= mpf('0.05')]
+            pade[(r, M)] = clean
+            print(f"  r={r} Pade[{L}/{M}] nearest poles (|t|, arg/pi, doublet test): {near}; nearest non-doublet pole |t|={mp.nstr(abs(clean[0]), 5) if clean else 'none'}")
     print('   model: |zeta_z| =', I['borel']['model_abs_zeta_z'][:8], 'arg/pi = -0.4357 and +0.5643 (two singularities ±zeta, design D6)')
     print('   in the xi^3 Borel variable (|t_u| = |t_z| |ell|):', 'model |t_u| = 2 pi/3 =', mp.nstr(2 * mp.pi / 3, 6), '; observed nearest |t_u| per class at the highest order:',
           [mp.nstr(abs(pade[(r, max(M for (rr, M) in pade if rr == r))][0]) * mpf(I['abs_ell']), 5) for r in (0, 1, 2) if any(rr == r for (rr, _) in pade)])

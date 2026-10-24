@@ -12,5 +12,8 @@ run scout_N144_dps700 --N 144 --dps 700
 run control_N36_dps60 --N 36 --dps 60          # negative control: expected exit 1 (C3 fails)
 run scout_N216_dps840 --N 216 --dps 840
 rm -f stage1_prep.json
+# exact cross-check of a_5..a_8 (co-owner review check 1): stage-1 field tower, jets to degree 11; control W evaluates at the other root (expected exit 1)
+python3 -I -B ../../scripts/dyad_open20_an_stage2_exact_crosscheck.py --scout scout_N216_dps840.json --out exact_crosscheck.json > exact_crosscheck.stdout.txt; echo "exact_crosscheck exit=$?"
+python3 -I -B ../../scripts/dyad_open20_an_stage2_exact_crosscheck.py --scout scout_N216_dps840.json --out exact_crosscheck_control_W.json --control W > exact_crosscheck_control_W.stdout.txt; echo "exact_crosscheck control W exit=$?"
 python3 -I -B ../../scripts/dyad_open20_an_stage2_summary.py . > summary_output.txt 2>&1; echo "summary exit=$?"
-sha256sum control_N36_dps60.json control_N36_dps60.stdout.txt scout_N*.json scout_N*.stdout.txt summary_output.txt run_all.sh > SHA256SUMS.txt
+sha256sum control_N36_dps60.json control_N36_dps60.stdout.txt scout_N*.json scout_N*.stdout.txt exact_crosscheck*.json exact_crosscheck*.stdout.txt summary_output.txt run_all.sh > SHA256SUMS.txt
