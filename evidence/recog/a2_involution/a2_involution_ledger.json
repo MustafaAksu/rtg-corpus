@@ -1,0 +1,72 @@
+{
+ "N": 8,
+ "G1": {
+  "A3_is_minus_I": true,
+  "F_tangent_identity_no_deg2": true,
+  "cubic_part_is_mu_W2W": true
+ },
+ "G2_K_is_F_minus_half": true,
+ "G3": {
+  "R0_involution": true,
+  "R0_commutes_T": true,
+  "DR0_minus_I": true,
+  "R0_not_minus_I": true,
+  "r2_homological_equation": true,
+  "r2": {
+   "rho": {
+    "2,0": "-1",
+    "1,1": "1",
+    "0,2": "-1/2"
+   },
+   "eta": {
+    "2,0": "-1/2",
+    "0,2": "1/2"
+   }
+  },
+  "real_ray_deg2": [
+   "-1",
+   "-1/2"
+  ],
+  "matches_j2_Sh": true,
+  "W_frame_value": "-1 + omega*(-1/2) = -(3 + i sqrt3)/4 = 2c"
+ },
+ "G4": {
+  "R0_symmetric_twin_is_minus_I": true,
+  "R0_log_twin_is_minus_I": true
+ },
+ "G5": {
+  "Phi_tangent_identity": true,
+  "Phi_T1_Phiinv_eq_Tminus1": true,
+  "R0_minus1_eq_So_R0_So": true,
+  "So_T1_So_eq_Tminus1": true
+ },
+ "G6_perturbed_germ": {
+  "involution": true,
+  "commutes": true,
+  "linear_part_minus_I": true
+ },
+ "G7": {
+  "T_defect_is_2coshm1": true,
+  "Ts_defect_zero": true
+ },
+ "G8": {
+  "wrapped_inversion_is_So": true
+ },
+ "NC1_A3_plus_I_caught": true,
+ "NC2_wrong_root_caught": true,
+ "NC3_T_not_So_symmetric_caught": true,
+ "gates": {
+  "G1": true,
+  "G2": true,
+  "G3": true,
+  "G4": true,
+  "G5": true,
+  "G6": true,
+  "G7": true,
+  "G8": true,
+  "NC1": true,
+  "NC2": true,
+  "NC3": true
+ },
+ "ALL_PASS": true
+}
