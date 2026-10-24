@@ -33,3 +33,15 @@ Unchanged from the stage-1 record §4, plus: Appendix B now carries the retracte
 ## 5. Verdict
 
 Stage 1 round 2 and stage 2 are reproducible and layout-only as claimed; B1–B4 are resolved; owner-text quotations hold at their tags. **ACCEPT once V1 is applied** (one stage-1 edit, stage-2 rerun, hashes refreshed in the release record) **and V2 is decided** (paths in Appendix A consistent with the records' home). After that: release record final → PI decision → publication transform (four status lines) → merge commit → annotated `gen-v2.9` → atlas verification and refresh. `gen-v2.8.9` governs until then.
+
+## 6. Addendum — co-owner finding G29-FINAL-01 verified (25 October 2026, 00:48)
+
+The ChatGPT co-owner's final reading (PR #44 comment) reports a scope inconsistency left by GC-17. Verified in the candidate `3d1c0ba5…389e`:
+
+- line 898, G-20: "(C2) is vacuous if no such Φ exists" — immediately followed (line 899) by the existence note that such a Φ exists at C^∞;
+- line 903, §6.3c `[OPEN]` list: "existence of an exactly transported realization" listed as OPEN without the C^∞/analytic split;
+- line 633, §5 high-risk table, "not covered" column: "existence of an exactly transported realization" — same wording.
+
+The three sites still read as if existence were open or unasserted in every sense, while the imported Dyadic theorem settles the C^∞ mathematical existence. Agreed correction (semantic clarification, bounded, not a theorem change): at each site separate (i) mathematical C^∞ existence — imported, `DYAD-THM-SMOOTH-EQUIVARIANT-CHART`, G-20 note; (ii) analytic existence — Dyadic OPEN 20 (B-an/B-6), OPEN; (iii) physical carrier / network-level realization and any model selection — OPEN (G-SEL unchanged). Suggested wordings: line 898 "… (C2) would be vacuous without such a Φ; a C^∞ Φ is imported (next item), the analytic case is open"; lines 633 and 903 "existence of an analytic exactly transported realization, and any physical or network-level realization (the C^∞ mathematical existence is imported, G-20 note)".
+
+**Bundle with V1:** stage-1 round 3 = E30 (V1, Methodology line) + E31 (G29-FINAL-01, three sites in §5/§6.3c; §6.3c protected-region gate C4 must be widened to allow exactly these lines, with the theorem statement and proof still byte-checked), rerun checker and controls (one new control: the old "vacuous if no such Φ exists" wording reintroduced must fail), then the deterministic stage-2 rerun; new hashes in the release record. Both reviewers then do a short targeted readback of the round-3 diff only. Verdict after the addendum: **ACCEPT WITH TWO SCOPED CORRECTIONS (V1, G29-FINAL-01) and the V2 decision.**
