@@ -1,0 +1,263 @@
+{
+ "upload_branch": "origin/upload/gen-records",
+ "upload_commit": "2425539a24b130a34d326ff07027232ee1966879",
+ "files": 38,
+ "sha256sums_entries": 36,
+ "sha256sums_all_ok": true,
+ "listed_mismatch": [],
+ "listed_but_absent": [],
+ "unlisted_files": [],
+ "zip_members": 101,
+ "cited_identities_in_gen_and_erratum": 36,
+ "cited_and_present": [
+  {
+   "sha256": "049e313e4f07ffe5e576018426a5776aab9b602b0c5c55ef286c71d750babc9e",
+   "where": [
+    "K3_KAPPA_SIX_STEP_CLOCK_NOTE_v0_3.md",
+    "GENESIS_V2_8_7_DRAFT_PACKAGE.zip::K3_KAPPA_SIX_STEP_CLOCK_NOTE_v0_3.md",
+    "K3_6S_v0_3_package.zip::K3_KAPPA_SIX_STEP_CLOCK_NOTE_v0_3.md"
+   ]
+  },
+  {
+   "sha256": "091a42105cff7965127c55a4a5adffa281021cd71957ed789409de320c5d42b2",
+   "where": [
+    "GENESIS_V2_8_7_DRAFT_PACKAGE.zip::scripts/kappa_pq_symbolic.py",
+    "K3_6S_v0_3_package.zip::kappa_pq_symbolic.py"
+   ]
+  },
+  {
+   "sha256": "114ff19b27a121ab15f5d0714651cf738027998fe6e9b06f8692d4386646d4c7",
+   "where": [
+    "GENESIS_V2_8_7_DRAFT_PACKAGE.zip"
+   ]
+  },
+  {
+   "sha256": "1a5f7f56690b1496d9972dc294053334e2eeca40a1d1d9e9f41185d84da3cee3",
+   "where": [
+    "GENESIS_TRANSPORTED_FACTOR_TRANSFER_D4_SESSION_v0_1_1.md"
+   ]
+  },
+  {
+   "sha256": "2429212d0c8d38c240a03bac66b8157c687697348c9187f596a0dbc71cb6ea9d",
+   "where": [
+    "K3_6S_v0_3_package.zip::lemmaS_burnside_check.py"
+   ]
+  },
+  {
+   "sha256": "294c6fc26482d7deae42900cb50b3029ac81e96d66e239bfe8b797e95fdaa269",
+   "where": [
+    "GENESIS_V2_8_6_RELEASE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_6.md"
+   ]
+  },
+  {
+   "sha256": "34bab14033a1f6bdf51f47e5c9694de43b68c2e05e6f410a7d6fa91e27f661cb",
+   "where": [
+    "GENESIS_DYAD_v6_4_13_CONSUMER_PACKAGE.zip::genesis_nu5_p5_replay.py",
+    "GENESIS_V2_8_8_DRAFT_PACKAGE.zip::genesis_nu5_p5_replay.py"
+   ]
+  },
+  {
+   "sha256": "434ea62a85b620dd95aa9b2798690cb09e535f1f02141d4a9cbcf829aba47104",
+   "where": [
+    "GENESIS_V2_8_6_DRAFT_PACKAGE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_6_DRAFT.md",
+    "GENESIS_V2_8_6_RELEASE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_6_DRAFT.md"
+   ]
+  },
+  {
+   "sha256": "4dcf0185ab14815e34e06eb35dd52616d74cbf91726ff96e62f616c84923f884",
+   "where": [
+    "GENESIS_V2_8_8_DRAFT_PACKAGE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_8_DRAFT.md"
+   ]
+  },
+  {
+   "sha256": "53782f8509949c2ae989bbf8fe3a9a64207b7157831988a727c7ba4dde910570",
+   "where": [
+    "GENESIS_TRANSPORTED_FACTOR_TRANSFER_D4_OWNER_PASS_MANIFEST_v0_1.md"
+   ]
+  },
+  {
+   "sha256": "7056b077e30ff498b17cf96737a32366305995283de3e332d38654bbfe4aef97",
+   "where": [
+    "GENESIS_V2_8_7_DRAFT_PACKAGE.zip::scripts/kappa_pq_independent.py",
+    "K3_6S_v0_3_package.zip::kappa_pq_independent.py"
+   ]
+  },
+  {
+   "sha256": "7519e14fc2768cd5ca7f2bc91c7079f09a61f6f4834fddf0d4951f2eace7135a",
+   "where": [
+    "GENESIS_V2_8_7_OWNER_PASS_MANIFEST_v0_1.md",
+    "GENESIS_V2_8_7_DRAFT_PACKAGE.zip::GENESIS_V2_8_7_OWNER_PASS_MANIFEST_v0_1.md"
+   ]
+  },
+  {
+   "sha256": "81939e5f054fc2e5bc64c3c6bf950143770d7225adb3398fe633f87ecba2f542",
+   "where": [
+    "GENESIS_V2_8_8_OWNER_PASS_MANIFEST_v0_1.md",
+    "GENESIS_V2_8_8_DRAFT_PACKAGE.zip::GENESIS_V2_8_8_OWNER_PASS_MANIFEST_v0_1.md"
+   ]
+  },
+  {
+   "sha256": "81a9bd9c954f6e71d47e2cb28a9417f6dd27b51fe6132b2efe72134bf3ea7a22",
+   "where": [
+    "GENESIS_V2_8_7_DRAFT_PACKAGE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_7_DRAFT.md"
+   ]
+  },
+  {
+   "sha256": "9abd36169a4bf6056318605c0399ff1f91c53f157b9181bdbfdb9faed3000f37",
+   "where": [
+    "GENESIS_V2_8_8_RELEASE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_8.md",
+    "GENESIS_V2_8_9_DRAFT_PACKAGE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_8.md"
+   ]
+  },
+  {
+   "sha256": "9f95d48d23a340738146271d4bcf1a483b04252e9210c9f403a7f23172dd083a",
+   "where": [
+    "K3_CUBIC_FACTOR_OBSTRUCTION_SESSION_RECORD_v0_1_2.md"
+   ]
+  },
+  {
+   "sha256": "a3ceb92e66d7cd2caf4d96d5e65f6d17607b5b7e50f2f88a6f0582335573e973",
+   "where": [
+    "GENESIS_V2_8_9_DRAFT_PACKAGE.zip"
+   ]
+  },
+  {
+   "sha256": "aee218c0661f20db9bf9ac9c4b273ff37481f00da5f4720438fabf9422cd1ee3",
+   "where": [
+    "GENESIS_V2_8_9_OCCURRENCE_DISPOSITION_PLAN_v0_1.md"
+   ]
+  },
+  {
+   "sha256": "af8e79c36f2312c78150c808e5a7a57fc6aeccba9de5355263f5b9c012989674",
+   "where": [
+    "GENESIS_V2_8_7_DRAFT_PACKAGE.zip::scripts/lemmaS_hand_identities.py",
+    "K3_6S_v0_3_package.zip::lemmaS_hand_identities.py"
+   ]
+  },
+  {
+   "sha256": "b2cc5c5cb637459b3e2aded30b1c48ad859f2591a93684f463f89fbab503f62a",
+   "where": [
+    "GENESIS_V2_8_9_ADOPTION_KIT.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_9_DRAFT.md",
+    "GENESIS_V2_8_9_DRAFT_PACKAGE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_9_DRAFT.md",
+    "GENESIS_V2_8_9_RELEASE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_9_DRAFT.md"
+   ]
+  },
+  {
+   "sha256": "bea4cd5034be39055266f9da2a7a2cfeaf71e67c57014b0b150f2df7c0cd9ba0",
+   "where": [
+    "GENESIS_V2_8_8_DRAFT_PACKAGE.zip"
+   ]
+  },
+  {
+   "sha256": "d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc",
+   "where": [
+    "GENESIS_V2_8_9_RELEASE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_9.md"
+   ]
+  },
+  {
+   "sha256": "d5d1e57c6eea0800cf8bf3e3f6b5905873e719df0969d15144ca55197cd2e361",
+   "where": [
+    "GENESIS_V2_8_7_RELEASE.zip::RTG_GENESIS_GEOMETRY_DSN_v2_8_7.md"
+   ]
+  },
+  {
+   "sha256": "f4c382855b130249ce290d3ca939b283aadd27d6ea9a1af551599f4cd9533f6d",
+   "where": [
+    "GENESIS_V2_8_9_DRAFT_PACKAGE.zip::d4_transported_cubic_cert.py"
+   ]
+  },
+  {
+   "sha256": "f6df5d11b877cfb79640290744e87cd73e2487a2c71b1492fffeb615a13e4181",
+   "where": [
+    "GENESIS_V2_8_9_RELEASE_RECORD.md",
+    "GENESIS_V2_8_9_RELEASE.zip::GENESIS_V2_8_9_RELEASE_RECORD.md"
+   ]
+  }
+ ],
+ "cited_not_in_upload": [
+  {
+   "prefix": "046ac458…85cc",
+   "context": "68a6…af7d`), `k3.py` `[NUM]` (`dcb08a27…1038`) in `K3_factor_obstruction.zip` (`046ac458…85cc`; no internal "
+  },
+  {
+   "prefix": "06d5e0c9…82b1",
+   "context": "matory only); historical coefficient source `ER2B_OBSERVABLE_RESPONSE_v1.zip` (`06d5e0c9…82b1`)"
+  },
+  {
+   "prefix": "384aaa5f…01ee",
+   "context": "- Exact source-data certificate: `k3_obstruction_exact_check.py`, SHA-256 `384aaa5f17ecd0786960b3a97fc0"
+  },
+  {
+   "prefix": "41ed7660…475c",
+   "context": "Built deterministically from the exact adopted v2.8.5 bytes (`41ed7660…475cf`) by `build_v"
+  },
+  {
+   "prefix": "44105683…6001",
+   "context": " manifold, both chiral components, five exact sample points) and `exact_q.py` (`44105683b5da2b57fa9dfbd2f9e0"
+  },
+  {
+   "prefix": "5958f7fe…8542",
+   "context": "py --final --dyad --replay` 11/11 PASS, 0 SKIP, against adopted Dyadic v6.4.13 `5958f7fe8a3e0ec94546cb7e915c"
+  },
+  {
+   "prefix": "7d761090…d4ff",
+   "context": ". The branch \\(c-i\\beta=0\\) is not stated here; `k3_six_step_factor_check.py` (`7d761090378781c5c74ec64abc1f"
+  },
+  {
+   "prefix": "883644f5…7cec",
+   "context": "by authorized co-owner decision after final receiving review of exact r2 bytes `883644f5009fb54cbefa202846b0"
+  },
+  {
+   "prefix": "91608cb7…7f2b",
+   "context": "cate `k3_obstruction_exact_check.py` (`384aaa5f…01ee`); confirmatory `fac.py` (`91608cb7…7f2b`), `exact_chir"
+  },
+  {
+   "prefix": "dcb08a27…1038",
+   "context": "c.py` (`91608cb7…7f2b`), `exact_chiral.py` (`e5e268a6…af7d`), `k3.py` `[NUM]` (`dcb08a27…1038`) in `K3_facto"
+  },
+  {
+   "prefix": "e5e268a6…af7d",
+   "context": "(`384aaa5f…01ee`); confirmatory `fac.py` (`91608cb7…7f2b`), `exact_chiral.py` (`e5e268a6…af7d`), `k3.py` `[N"
+  }
+ ],
+ "file_hashes": {
+  "GENESIS_DYADIC_v6_4_13_CONSUMER_IMPACT_v0_1.md": "1e412c43bc14a2ddd05f9588fdc72795129b878fb7885816a70797ab3c8138d1",
+  "GENESIS_DYAD_v6_4_12_1_CONSUMER_IMPACT_NOTE.md": "fac865df1cb083a46781d0b100838fdd97cc173c89eb006a572be207638c67d3",
+  "GENESIS_DYAD_v6_4_13_CONSUMER_PACKAGE.zip": "240af8ac5eb92c46c608de75d49a5642d3382af8ae318820da9ea4d2db0286ec",
+  "GENESIS_FMS_OFN_G2_MODEL_SELECTION_SCOPE_v0_1.md": "0525511321599f166f6f6adf5d63c235b8632198f3d765be8bf3a2fcbdd7b3fd",
+  "GENESIS_TRANSPORTED_FACTOR_TRANSFER_D4_OWNER_PASS_MANIFEST_v0_1.md": "53782f8509949c2ae989bbf8fe3a9a64207b7157831988a727c7ba4dde910570",
+  "GENESIS_TRANSPORTED_FACTOR_TRANSFER_D4_SESSION_v0_1.md": "182f47568a4516a194fca35a7650427040789525270a720204a60dc6b060bacf",
+  "GENESIS_TRANSPORTED_FACTOR_TRANSFER_D4_SESSION_v0_1_1.md": "1a5f7f56690b1496d9972dc294053334e2eeca40a1d1d9e9f41185d84da3cee3",
+  "GENESIS_V2_8_5_OWNER_PASS_QUEUE_v0_4.md": "f5fa239c078e34d7f567e70b6e62220cdac8c433a49efb8a5711e853d552344f",
+  "GENESIS_V2_8_6_ADOPTION_KIT.zip": "df83fb5d36dfe52f03b225407aefecb91edf14087382f258ade11325dd92ea92",
+  "GENESIS_V2_8_6_DRAFT_PACKAGE.zip": "7c50d62a8a3ab2fee7518cade0b85291ba40d893cebadec3c8c798a1e5224dfc",
+  "GENESIS_V2_8_6_OCCURRENCE_DISPOSITION_v0_1.md": "a7a5cdf54d8dbbad8ca61ee13bcf541c45da2b44307914449878a7303549a2fe",
+  "GENESIS_V2_8_6_OWNER_PASS_MANIFEST_v0_1.md": "5cdc4ee6559681d33c0a87236eea7501743a90bd829d77291f43c1842977259e",
+  "GENESIS_V2_8_6_RELEASE.zip": "5efd04fc68fa4747afe83015d898a71a7d39cd37ca2fd841eb3aebeaf1fb983b",
+  "GENESIS_V2_8_6_RELEASE_RECORD.md": "b61375872aa5038b2976954b6f3b3d44b52e4b16da9d5b049d5c61a6b6cc3fec",
+  "GENESIS_V2_8_7_ADOPTION_KIT.zip": "6490922e049a42d97bf4107518b4fedfadef6cf00fef32860d57e8a588a306d6",
+  "GENESIS_V2_8_7_DRAFT_PACKAGE.zip": "114ff19b27a121ab15f5d0714651cf738027998fe6e9b06f8692d4386646d4c7",
+  "GENESIS_V2_8_7_OCCURRENCE_DISPOSITION_v0_1.md": "e5f27795945d4060224e7eb663bf5a4d1f80471ac2c529ecd4e5b120dad4b07e",
+  "GENESIS_V2_8_7_OWNER_PASS_MANIFEST_v0_1.md": "7519e14fc2768cd5ca7f2bc91c7079f09a61f6f4834fddf0d4951f2eace7135a",
+  "GENESIS_V2_8_7_RELEASE.zip": "3c1c5774722a0d59398f3cb3bd15482fde342f8c64afa4258f0ad58447a03f0f",
+  "GENESIS_V2_8_7_RELEASE_RECORD.md": "d3fcc38e3d795e4c4cb55660ae9664d5914d5531f7351ae43b1e65e5086e9223",
+  "GENESIS_V2_8_8_ADOPTION_KIT.zip": "295462360dc8c7284e5153803d577b2987a83ecc0954513fe9a36353c4d68f68",
+  "GENESIS_V2_8_8_DRAFT_PACKAGE.zip": "bea4cd5034be39055266f9da2a7a2cfeaf71e67c57014b0b150f2df7c0cd9ba0",
+  "GENESIS_V2_8_8_OCCURRENCE_DISPOSITION_v0_1.md": "72bd4e46b37556ceade70d143002ced54bb1cb6fdedd0677bacbccc8b8326707",
+  "GENESIS_V2_8_8_OWNER_PASS_MANIFEST_v0_1.md": "81939e5f054fc2e5bc64c3c6bf950143770d7225adb3398fe633f87ecba2f542",
+  "GENESIS_V2_8_8_RELEASE.zip": "2b23140a73d63e3daaf52de15e85de8401fa94ba191f5d4808c135dc9b46b74d",
+  "GENESIS_V2_8_8_RELEASE_RECORD.md": "03deb7cbacf787d7961d192cb7b35d1331b16f389a77a61971dcea84d608c049",
+  "GENESIS_V2_8_9_ADOPTION_KIT.zip": "5dfa9fbcf6f5771ff18d43bdc9da447e91a9d46e48576f77cff776e12688df52",
+  "GENESIS_V2_8_9_ADOPTION_KIT_NOTE.md": "47e71861a8277fc49ce1fde23db84f68e25964157e6cfa9f7a7b6d881b2233df",
+  "GENESIS_V2_8_9_DRAFT_PACKAGE.zip": "a3ceb92e66d7cd2caf4d96d5e65f6d17607b5b7e50f2f88a6f0582335573e973",
+  "GENESIS_V2_8_9_OCCURRENCE_DISPOSITION_PLAN_v0_1.md": "aee218c0661f20db9bf9ac9c4b273ff37481f00da5f4720438fabf9422cd1ee3",
+  "GENESIS_V2_8_9_OCCURRENCE_DISPOSITION_v0_1.md": "2e128a2b4e9452deaaf735d3473dd20ce9e993222701b852bf495ce1fd8e275c",
+  "GENESIS_V2_8_9_RELEASE.zip": "db4084b96ae600da5de3af50f6fac90d8c6b4bef7041334713972895d89d11ab",
+  "GENESIS_V2_8_9_RELEASE_RECORD.md": "f6df5d11b877cfb79640290744e87cd73e2487a2c71b1492fffeb615a13e4181",
+  "K3_6S_v0_3_package.zip": "f260d166da042741cc106a5b073faa6aab632cd0a8ac21fd4a785604d9ec77ce",
+  "K3_CUBIC_FACTOR_OBSTRUCTION_SESSION_RECORD_v0_1_2.md": "9f95d48d23a340738146271d4bcf1a483b04252e9210c9f403a7f23172dd083a",
+  "K3_KAPPA_SIX_STEP_CLOCK_NOTE_v0_3.md": "049e313e4f07ffe5e576018426a5776aab9b602b0c5c55ef286c71d750babc9e",
+  "README_UPLOAD.md": "ecab081821477b7d963abbf93c7742adf2a3ab11881b64d583800256b8f534e5",
+  "SHA256SUMS.txt": "beb32a22e3162d590058efdfc04074466f34122d78de837fe161ce1fc4f7f8ca"
+ }
+}
