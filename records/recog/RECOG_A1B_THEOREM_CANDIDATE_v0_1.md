@@ -1,6 +1,6 @@
 # RECOG — Theorem candidate `RECOG-THM-A1B-SLIP-SCHEDULE-U` (registration draft)
 
-**Date:** 24 October 2026 · **Author:** RECOG co-owner (Claude) · **Status:** `[SESSION]` **candidate record** for the next RECOG stage-1 item. PI decision of 24 Oct 2026: `PREPARE A1B THEOREM CANDIDATE — APPROVED` (preparation only: no DSN change, no RID adoption, no release). Review basis: co-owner reviews of PR #23 — #5630982748 (round 1), #5631395296 (round 2), #5634312954 (A1b proof cell ACCEPTED; theorem candidate may be submitted for registration and adoption review).
+**Date:** 24 October 2026 · **Author:** RECOG co-owner (Claude) · **Status:** `[SESSION]` **candidate record** for the next RECOG stage-1 item, **v0.2** (v0.1 at commit `79e6e6b`; revised after review #5638820480: `THM ACCEPTED — A1C RESULT NEEDS LIMITED CORRECTIONS`; dispositions in §7). PI decision of 24 Oct 2026: `PREPARE A1B THEOREM CANDIDATE — APPROVED` (preparation only: no DSN change, no RID adoption, no release). Review basis: co-owner reviews of PR #23 — #5630982748 (round 1), #5631395296 (round 2), #5634312954 (A1b proof cell ACCEPTED; theorem candidate may be submitted for registration and adoption review).
 **Governing edition:** `recog-v0.3.23` (DSN SHA-256 `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a`). Producer: Dyadic `dyad-v6.4.22`. NUMGEN `numgen-v1.20.8` (custody only).
 **Source cell:** `records/recog/RECOG_A1B_A1C_SESSION_v0_1.md` v0.2.1 at commit `7acdaca` on `claude/recog-a1b-a1c` (PR #23), SHA-256 `ae3ae4edd158c78e86561f20b8a9f8284d6216696192231a5404898b7f1c98c5`. This record restates that cell's proved content in registration form; it adds no new mathematics. Where the two differ, the cell's proofs govern and this record is to be corrected.
 
@@ -36,9 +36,9 @@ Depends on: RECOG-THM-A1A-PHASE-EXISTENCE-U (existence of $\Psi_{W,\infty}$; the
 
 ## 2. Separate result (proposed, §6.16e after F2(d)) — infinite-record phase readout
 
-`[RESULT]` `[from: THM]` [RID: RECOG-RESULT-A1C-RECORD-PHASE-READOUT] [assuming: RECOG-THM-A1B-SLIP-SCHEDULE-U] [scope: $x_0\in U$; the complete infinite token record $\mathcal R(x_0)=(n_0;g_1g_2\ldots)$ in the F2(b) conventions] The record determines $L(x_0)=\lim_k[\tau\log M_k-(k-1)\tfrac\pi3]$ and hence $\Psi_{W,\infty}(x_0)=\Psi_{z,\infty}(x_0)$ modulo $2\pi$, without any state datum and without the value of $a$. It does not determine $a$, $M_W$ or $M(z_0)$ from the schedule limit $L$ alone. For a finite prefix of $k$ slips with $a$ known, $L$ lies in a window of width $2|\varepsilon_k|$ (a-priori envelope, not a record-only decoder interval); with $a$ unknown no window is derived (`[NUM]` only: least-squares $(\hat a,\hat L)$, relative error $\le3.5\%$ on the illustration runs, no guarantee). Reading for F2(d): $\Psi_\infty$ is a function of the complete token history ($R_{\log}$-type in the limit); every finite prefix leaves a window $\gg|\Delta M|$; the $R_{\rm ind}$ classification of R9's carrier $M$ is **not** lowered by this result, nor would it be by a positive answer to the injectivity question below (retrospective reconstruction is not write-through; SG-R6).
+`[RESULT]` `[from: THM]` [RID: RECOG-RESULT-A1C-RECORD-PHASE-READOUT] [scope: $x_0\in U$; the complete infinite token record $\mathcal R(x_0)=(n_0;g_1g_2\ldots)$ in the F2(b) conventions] The record determines $L(x_0)=\lim_k[\tau\log M_k-(k-1)\tfrac\pi3]$ and hence $\Psi_{W,\infty}(x_0)=\Psi_{z,\infty}(x_0)$ modulo $2\pi$, without any state datum and without the value of $a$. The schedule limit $L$ alone provides no reconstruction of $a$, $M_W$ or $M(z_0)$; this is a statement about the available method, not a non-recoverability theorem (the injectivity question A1c-Q1′ below is open). For a finite prefix of $k$ slips with $a$ known, $L$ lies in a window of width $2|\varepsilon_k|$ (a-priori envelope, not a record-only decoder interval), and this envelope tends to $0$ as $k\to\infty$; with $a$ unknown no window is derived (`[NUM]` only: least-squares $(\hat a,\hat L)$, relative error $\le3.5\%$ on the illustration runs, no guarantee). Reading for F2(d): $\Psi_\infty$ is a function of the complete token history ($R_{\log}$-type in the limit); within the observed horizon of the illustration ($M\lesssim3.3\times10^5$ blocks) the prefix window exceeds the comparator-fiber difference $|\Delta M|$ by a factor $2$–$6$ (`[NUM]`; no general statement about finite prefixes is made); the $R_{\rm ind}$ classification of R9's carrier $M$ is **not** lowered by this result, nor would it be by a positive answer to the injectivity question below (retrospective reconstruction is not write-through; SG-R6). Depends on: RECOG-THM-A1B-SLIP-SCHEDULE-U (same release; hence `Depends on:` rather than `[assuming:]`, Methodology v1.4 §3.4); RECOG-THM-A1A-PHASE-EXISTENCE-ALT ($\Psi_{z,\infty}=\Psi_{W,\infty}$).
 
-**Proposed OPEN sub-items (under R6, §7):**
+**Proposed OPEN sub-items (under OPEN R6, RECOG-OPEN-EVENT-RULE, in the §2 OPEN Registry):**
 - `[OPEN]` A1c-Q1′ — injectivity of $x_0\mapsto\mathcal R(x_0)$ on $U$. Known: record level sets have empty interior. Either answer has a stated consequence (cell §3); neither affects the carrier classification.
 - `[OPEN]` A1c-decoder — a finite-prefix window for $(a,L)$ with $a$ unknown, and a record-only (declared-data) majorant for the known-$a$ window via $Q_m\le Q_0/(1+\tfrac12Q_0m)$ and the FC-21 tail estimates.
 
@@ -77,9 +77,9 @@ Explicit constants used in the statement and where they come from: $0.04654$ (Dy
 
 - §6.13b: insert the THM block of §1 after RECOG-THM-A1A-PHASE-EXISTENCE-U and its "Scope and custody" paragraph; add one line to the §6.13b status summary.
 - §6.16e: insert the RESULT block of §2 after F2(d); the F2(d) finite-versus-limit qualifier as stated.
-- §7 OPEN R6: add the two `[OPEN]` sub-items; R6 stays ACTIVE; no other OPEN status changes.
+- §2 OPEN Registry, OPEN R6 (RECOG-OPEN-EVENT-RULE): add the two `[OPEN]` sub-items under "Active sub-items"; R6 stays ACTIVE; no other OPEN status changes. (§7 is the Import Ledger: it receives the consumer-use rows below, not the OPEN items.)
 - §8 census: `RECOG-ART-A1B-SIXSTEP-DEFICIT` with the two hashes; the illustration listed as `[NUM]`.
-- Appendix/claim tables: consumer-use rows for the four Dyadic RIDs.
+- §7 Import Ledger / claim tables: consumer-use rows for the four Dyadic RIDs.
 - Not in this item: A3's two `[ALG]` RIDs (separate scientific review item of the same release); the v0.3.23 live-file cleanup (maintenance item of the same release, per the PI's grouping).
 
 ---
@@ -89,7 +89,21 @@ Explicit constants used in the statement and where they come from: $0.04654$ (Dy
 1. The THM text of §1 against the cell's Lemmas A, B, C′ and Proposition (no strengthening in transit; in particular the $\varepsilon_k$ bound names the block maximum $Q$ and the two tails).
 2. The dependency list: every constant has an owner RID or a cell derivation; nothing imported from NUMGEN beyond conventions and custody.
 3. "Not supplied" and "Scope and custody" against the round-2 refinements (a-priori envelope; no carrier downgrade; SG-R6).
-4. The RESULT of §2: `[from: THM]` with the explicit `[assuming:]`; the two OPEN sub-items worded as questions.
+4. The RESULT of §2: `[from: THM]` with `Depends on:` the same-release THM; the finite-prefix comparison scoped to the illustration horizon; the two OPEN sub-items worded as questions.
 5. Hashes of §3 against `git show 7acdaca:<path> | sha256sum`.
 
 Nothing in this record is adopted. The PI decides registration at the stage-1 review of the next release.
+
+---
+
+## 7. Review round 1 — dispositions (review #5638820480 on `79e6e6b`: `THM ACCEPTED — A1C RESULT NEEDS LIMITED CORRECTIONS`)
+
+| Review point | Disposition in v0.2 |
+|---|---|
+| (A), (C′), (B), (S) accepted; THM scope accepted | §1 unchanged |
+| finite-prefix sentence "every finite prefix leaves a window $\gg|\Delta M|$" not true in general (envelope $\to0$) | replaced: envelope $\to0$ as $k\to\infty$ stated; the $|\Delta M|$ comparison scoped to the illustration's observed horizon as `[NUM]`; same sentence corrected in the source cell (v0.2.2, PR #23) |
+| $L$ gives no reconstruction method, but this is not a non-recoverability theorem; Q1′ open | reworded accordingly |
+| same-release A1b: `Depends on:` instead of `[assuming:]` | done (Methodology v1.4 §3.4) |
+| R6's OPEN record is in §2, not §7 | placement corrected (§2 OPEN Registry for the sub-items; §7 Import Ledger for consumer-use rows) |
+| no certificate rerun needed | none performed |
+
