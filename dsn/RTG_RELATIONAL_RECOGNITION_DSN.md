@@ -1,16 +1,16 @@
-# RTG_RELATIONAL_RECOGNITION_DSN_v0.3.23
+# RTG_RELATIONAL_RECOGNITION_DSN_v0.3.24
 
 **Title:** RTG Relational Recognition Study — Comparators, Return Defect, and Event Strata on the Dyadic Substrate
-**Date:** 23 October 2026
+**Date:** 24 October 2026
 **Scope:** Substrate-level mathematics of *recognition* — how a relational distinction is compared with its transported self or with another distinction, what residue a closed history leaves, and which loci of the comparator/transport geometry qualify as candidate recognition events — worked on the postulated continuous dyad generator $T$ and its diagnostic shear twins. Ontological readings are carried as `[HYP]` only.
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,300 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).
-**Document status:** ADOPTED — PI, 23 October 2026 (atlas-advisory corrections and FC-21; Methodology v1.4 compaction, with the live-file exception recorded in the release record §11). Adoption record: `records/recog/RECOG_v0_3_23_RELEASE_RECORD.md`.
-**Supersedes:** `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.22` (SHA-256 `0dcce9e44d48fbedbcd5af083283fce12560cc17a3951a7632ff0e50db44bcd9`; tag `recog-v0.3.22`).
+**Document status:** ADOPTED — PI, 24 October 2026 (four groups adopted: A1b slip-schedule theorem, A1c infinite-record readout with two OPEN R6 sub-items, A3 quadrature typing and pole-stratum periodic inventory, structural maintenance of the v0.3.23 live-file exception; stage-1 corrections and stage-2 layout compaction reviewed). Adoption record: `records/recog/RECOG_v0_3_24_RELEASE_RECORD.md`.
+**Supersedes:** `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.23` (SHA-256 `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a`; tag `recog-v0.3.23`).
 **Companion documents:** current owner editions and every import pin: §7 (synchronization note) and §7.3 — Dyadic `dyad-v6.4.22`, Number Genesis `numgen-v1.20.8`, Genesis v2.8.9, OFN v0.10, RRF v0.8.4 (convention and registry reference); Discrete Genesis v2.12.13 (reference only, no import).
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`); `RECOG | RTG Relational Recognition` is in its namespace registry.
 **Programme tier:** Tier 3 — Continuous Programme, downstream of Dyadic and Genesis (Programme Overview §6). The study prefix `RECOG` is registered in DSN Methodology v1.4 and in Programme Overview v1.2 Tier 3; the Programme entry's selected RECOG edition is updated by programme synchronization.
 **Status summary:** On the explicit start set $U=\{0<Q_0\le\tfrac1{625}\}$, A1a's local extension $D_M^U$ of the Number Genesis defect formula aligns exactly with Dyadic's block phase, and $MQ_M\to1$; on the intersection with NUMGEN's existential tube $U_{\rm NUMGEN}$, $D_M^U$ equals NUMGEN's $D_M$. Hence: the limit $C_D^{\rm ext}=\lim_M(D_M^U-\tau\log M)$ exists and equals $\tau\log Q_0-M_W$ (`[THM]`, using RECOG's own R9 through Dyadic T1/T2); on $U\cap U_{\rm NUMGEN}$ it equals NUMGEN's $C_D$, and the asymptotic phase exists **without R9** (existence only, `[RESULT] [from: ALG]`, no explicit radius); quantitatively $C_D^{\rm ext}=\tau\log Q_0-\mathcal P_2(W_0)+E$ per Dyadic OPEN 21 row (`[THM]`). `[THM]` [RID: RECOG-THM-A1A-PHASE-EXISTENCE-U] (v0.3.23) On all of $U$, without R9 and without NUMGEN INF-1, $C_D^{\rm ext}$ exists and equals an explicit absolutely convergent series in the block amplitudes and the Dyadic row-A block remainders (existence and that series only). $C_D$ depends on the start state. R6 stays ACTIVE.
-**Release record:** `records/recog/RECOG_v0_3_23_RELEASE_RECORD.md`. Version history: Appendix A. The earlier header — status summaries v0.2.1–v0.3.22, the full supersedes list and the freeze history — is in v0.3.22 (tag `recog-v0.3.22`).
+**Release record:** `records/recog/RECOG_v0_3_24_RELEASE_RECORD.md`. Version history: Appendix A. The earlier header — status summaries v0.2.1–v0.3.22, the full supersedes list and the freeze history — is in v0.3.22 (tag `recog-v0.3.22`).
 
 ## Local Tag Aliases
 
@@ -1269,14 +1269,15 @@ Owner editions that consume RECOG RIDs (as inspected v0.3.23 at the tags `dyad-v
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.
 
-### v0.3.24 — DRAFT, stage 1 (corrected intermediate; not adopted)
+### v0.3.24 — 24 October 2026 — Adopted
 - **Basis:** PI decisions of 23–24 Oct 2026 (`START A1b/A1c`, `A3 AUTHORIZED`, `PREPARE A1B THEOREM CANDIDATE — APPROVED`, stage-1 preparation recommended by the receiving review #5638910665); co-owner reviews of PRs #23, #28, #30; the v0.3.23 release record §11 follow-up obligation. Each group below carries its own acceptance decision; three are scientific (A1b, A1c, A3) and one is structural maintenance.
 - **New science, group A1b (separately reviewed):** RECOG-THM-A1B-SLIP-SCHEDULE-U (§6.13b) — on explicit $U$: B-events are lift crossings; six-step deficit $0.927\tau Q<\Delta<\tau Q+1.82Q^{3/2}$ on $U_T$ (exact rational certificate); return alphabet $\{6,7\}$ with logarithmic $7$-gap count; digamma slip schedule $\tau\psi(a+M_k)-(k-1)\tfrac\pi3=L+\varepsilon_k$ with explicit error ceiling; RECOG-ART-A1B-SIXSTEP-DEFICIT (§8); §7 import rows record the new uses (LPHASE row A and branch (B), NF-REM ingredients, PRIM-CTR, C21).
 - **New science, group A1c (separately reviewed):** RECOG-RESULT-A1C-RECORD-PHASE-READOUT (§6.16e) — the complete B-event record determines $\Psi_\infty$ mod $2\pi$, conditional on A1b; no carrier downgrade; OPEN R6 gains the sub-items A1c-Q1′ (injectivity of the record map) and A1c-decoder (unknown-$a$ / declared-data windows); §5 readout guard.
 - **New science, group A3 (separately reviewed):** RECOG-ALG-QUADRATURE-TYPING (§6.5) — the pole-comparator quadrature is the extremal-radial-transfer locus and, relative to the declared Haar form $\Omega$, the area-neutral locus; its parabolic one-step type has no chart-free content (explicit retyping charts); RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY (§6.3) — complete wrapped-periodic inventory inside $\{\widehat C_{\rm pole}=\pm1\}$ with the new odd-$m$ period-2 family; RECOG-ART-A3-QUADRATURE-TYPING (§8). OPEN R4 sub-item 1 answered in reframed form; R4 stays ACTIVE.
 - **Structural maintenance (follow-up obligation of the v0.3.23 release record §11; separate acceptance):** current status at the point of use, history pointed to `recog-v0.3.23` — R8 and R9 v0.3.2 specifications (§2), the former R11 text with its `[OPEN]` sub-items (§2), the R7 heading over closed items (§2), the §7.1/§7.2 audit tables and the G2 \"unchanged\" sentence of §6.13b, §9 archive line. Layout reorder (SG order): stage 2.
 - **Unchanged:** every existing RID's statement and grade; every OPEN status (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED).
-- **Records:** release record `records/recog/RECOG_v0_3_24_RELEASE_RECORD.md`; predecessor tag `recog-v0.3.23` (SHA-256 `0d583400…a31a`).
+- **Compaction [layout]:** SG-R12 reordered to its numerical place (`move`, byte-identical); stage-2 candidate `63f36a9e…cc35`.
+- **Records:** release record `records/recog/RECOG_v0_3_24_RELEASE_RECORD.md`; stage-1 intermediate (round 2) SHA-256 `881be125…e03c`; predecessor tag `recog-v0.3.23` (SHA-256 `0d583400…a31a`).
 
 ### v0.3.23 — 23 October 2026 — Adopted
 
@@ -1378,4 +1379,4 @@ Identities as printed in the v0.3.22 header; full entries in Appendix A of v0.3.
 
 ---
 
-*END OF DOCUMENT — RTG_RELATIONAL_RECOGNITION_DSN_v0.3.23 (ADOPTED, 23 October 2026).*
+*END OF DOCUMENT — RTG_RELATIONAL_RECOGNITION_DSN_v0.3.24 (ADOPTED, 24 October 2026).*
