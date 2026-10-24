@@ -1,0 +1,79 @@
+[
+ {
+  "key": "RRF.F5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "677e2067b457d375732a1fc65767a521276500e45cf433807ff7a63b3cff1234",
+  "current_sha256": "f1dbe262901f7412001fc2e8eefc126d4bd916d8b829e991d5fe186a7dce7b90"
+ },
+ {
+  "key": "PROG.G1",
+  "disposition": "retired",
+  "reason": "Programme v1.3 §6.1-6.5 lists every governing edition at its tag and points to owner status summaries; the superseded v1.2 reports are gone.",
+  "previous_sha256": "51c5bbd925ffc42abfc34d8d2592d1e0b5df46d0ec544effad4eb821f4911bc9",
+  "current_sha256": null
+ },
+ {
+  "key": "PROG.G2",
+  "disposition": "retired",
+  "reason": "Programme v1.3 §6.1 inventories RRF, RER, FMS, ER-2B and the atlas; §7.2 IF29-IF36 carry their edges.",
+  "previous_sha256": "c1a6390aed0ca8ecaf66b916049478c7b38a2481d42d71bbacc7d50d01ce3582",
+  "current_sha256": null
+ },
+ {
+  "key": "PROG.G4",
+  "disposition": "retired",
+  "reason": "Programme v1.3 §7.2: IF14 by RID at v1.20.8; IF16 v6.4.22 by RID and section; IF17 settled custody split, retired as transfer-proposal.",
+  "previous_sha256": "22f3504c4efeefda06963db4f7c093e05ab69d171e513c102e48e43b80ff4316",
+  "current_sha256": null
+ },
+ {
+  "key": "PROG.G5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "7bafeec03177e9f9d96a0369bdc5247d007ed5da0a3a4f53ca9a20786f9661e0",
+  "current_sha256": "56f59fe9bb41136b96e17f32be0ff117ef4a43c746c6441951f411fd0d3da90f"
+ },
+ {
+  "key": "PROG.G6",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "898f38cace348cf66d348fff98c9b9b8afcbd743cbf4c09007ba705d4641a733",
+  "current_sha256": "8cd253834f5f6d4dac9ad2930c819d92ac3e1283dc70747b7125c3e56ac95596"
+ },
+ {
+  "key": "PROG.G7",
+  "disposition": "retired",
+  "reason": "Programme v1.3 §8.2 carries κ_RTG as hypothesis-grade in the cross-stream κ table; no separate diagnostic remains.",
+  "previous_sha256": "2e5b6ddf096949303e4fe30c8ee35d3f4b82ae0ff8d4f2ff856d1e597157e096",
+  "current_sha256": null
+ },
+ {
+  "key": "AZ.A3",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "dc8eb1c2699302cbad9a251707faaa89d24ff60fd6a290cab5d6fa1bb9a64e92",
+  "current_sha256": "006c12a97196f422bdc615ba94c862af9123d21af3f8cbe66ebcacd25af7fb8e"
+ },
+ {
+  "key": "F1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "8f40e9c7a8e1cfb7b368cb2751c1d36605f5466f7a4f0d8b6b21bbd3f2aaaf8d",
+  "current_sha256": "3515093ce054e7f3a7a1c0b29dfb8c575361607b24c974b2de38a21f7a077e26"
+ },
+ {
+  "key": "F2",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "867e4ff84010beeaf34374ffa88c8db28dea621c415629c87a264b9cbeb3d1f3",
+  "current_sha256": "384449feb0ce864bee700f4e18c1f40aecba75032cbad2c481595e5286ced3b8"
+ },
+ {
+  "key": "GEN.D5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "05cdf935fcc4d8c50efa6a309f45386871edf1cb1ca7fb5d94df26e7bf898cb1",
+  "current_sha256": "3f97aa95b8451a5cbbb30711258ef1afa83235b3b13f7bba00a80b6cf7567db3"
+ }
+]

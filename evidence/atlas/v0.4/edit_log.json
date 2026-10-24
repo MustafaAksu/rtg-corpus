@@ -1,0 +1,335 @@
+[
+ {
+  "id": "AR04-001",
+  "finding": "identity",
+  "where": "title",
+  "old_sha256": "cb6bcc732322895663b1771633e2b230cd96bcd6fc885877a23342f9232d8c13",
+  "new_sha256": "880221a086c21366015e81d33ca0f3fa8161517fc06d9a2095d91351fcf743e4",
+  "old": "# RTG STATE ATLAS v0.3\n",
+  "new": "# RTG STATE ATLAS v0.4\n"
+ },
+ {
+  "id": "AR04-002",
+  "finding": "C04-01",
+  "where": "SOURCES header",
+  "old_sha256": "d77c503bb0db11840bce12ee661ce8fa9aad5c38f108b2757af9f769db6b2362",
+  "new_sha256": "734a8f35ac622a623c34fc9481af6d7478bb6380e610a3e5fc70b894bc19b332",
+  "old": "full identities in evidence/atlas/v0.3/source_manifest.json",
+  "new": "full identities in evidence/atlas/v0.4/source_manifest.json"
+ },
+ {
+  "id": "AR04-003",
+  "finding": "C04-01 / A04-01",
+  "where": "SOURCES PROG row",
+  "old_sha256": "fdfda1c2691df6b113e1cd1d086699283d4cc111f52665d382e58e7152c5bba8",
+  "new_sha256": "cd7a504dad627f82f893cdda519f6079eba40238020bf1485ab2832abc574f42",
+  "old": "| PROG | RTG_PROGRAMME_OVERVIEW | v1.2 | `programme-v1.2` | canonical Tier 0 |",
+  "new": "| PROG | RTG_PROGRAMME_OVERVIEW | v1.3 | `programme-v1.3` | canonical Tier 0 |"
+ },
+ {
+  "id": "AR04-004",
+  "finding": "identity",
+  "where": "footer",
+  "old_sha256": "766e9dccb6d3ee02171efb0d08b4367e63374ecd4204e1a9e9468f2284495d7d",
+  "new_sha256": "da943be1f9dccce6fa0cc989b06e25c673163f32662b09032c3ea8635b120954",
+  "old": "*END — RTG STATE ATLAS v0.3. Noncanonical; owner DSNs govern.*",
+  "new": "*END — RTG STATE ATLAS v0.4. Noncanonical; owner DSNs govern.*"
+ },
+ {
+  "id": "AR04-005",
+  "finding": "C04-04 / A04-05",
+  "where": "H1 keys",
+  "old_sha256": "505fc6e161c87e74b537b2318e448518b41b648086661a06234c79d27ab67e52",
+  "new_sha256": "a89599125fb0108966f18e8ff1c8406c7d0f91a9eba63a3718c82f644404c637",
+  "old": "persists at OFN (O1), GEN §6.3c C2 and G-20, FMS (M1) and ER-2B (Z2) (D4a F5, DYAD.X1).",
+  "new": "persists at OFN, GEN §6.3c C2 and G-20, FMS and ER-2B (OFN.O1, F5, DYAD.X1)."
+ },
+ {
+  "id": "AR04-006",
+  "finding": "C04-10",
+  "where": "H6",
+  "old_sha256": "896b347669d8d14087c14e95bdc5b40a5489d2f82cb05a5397d5f2ceb6d804b3",
+  "new_sha256": "fa82a89d2e863c86a0557852daf7a11b8e71cb6b5de942be2dbc0f6d86d22df6",
+  "old": "face-lift κ_f=|m||w| vs m|w| flips the soft-branch label for m<0 (GEN.D2)",
+  "new": "face-lift κ=|m||w| (GEN §6.8) vs κ=m|w| (GEN §6.9) flips the soft-branch label for m<0 (GEN.D2; the atlas labels this face-lift κ as κ_f, GEN writes κ)"
+ },
+ {
+  "id": "AR04-007",
+  "finding": "A04-04 / C04-04",
+  "where": "H7",
+  "old_sha256": "dd64a7aa68e061e978f99957aec0827a761c8fe28766c39c48856dd7833589d3",
+  "new_sha256": "246cae92c9343fb6b10c8e13cae28422b084cd1fd3c51fce5c2ca220041fb399",
+  "old": "and the RER modal map ≡ GEN F₁ ≡ OFN raw κ=1, i.e. every RER Triadic record sits in the flat A1 sector OFN excludes, unstated in RER (RER.E1, D4a F2/F3, FMS.M5, ER2B.Z1).",
+  "new": "and the RER modal map 𝒩 ≡ GEN F₁ ≡ OFN raw κ=1 (RER-E-CONJ), so ~ the RER Triadic records built on 𝒩 (the F2 list) read as flat-sector reference results in the A1 sector OFN excludes — a per-record scope reading, unstated in RER and not verified against each record's hypotheses (F2, F3)."
+ },
+ {
+  "id": "AR04-008",
+  "finding": "C04-05 / A04-03",
+  "where": "H8 convention",
+  "old_sha256": "252bb74d914c3e569b327617a306562d5f7d37df3f3b48642dbc6d6057cfd02b",
+  "new_sha256": "8a19542e320dff76f438a496e017f6b6817468684e90af526a401ae7c7434cac",
+  "old": "κ collision programme-wide (class-C coupling κ≡GEN γ ·",
+  "new": "κ collision programme-wide (class-C coupling κ, ≡GEN γ by the OFN §11.4 / RRF §6.2a parameter convention ·"
+ },
+ {
+  "id": "AR04-009",
+  "finding": "C04-10",
+  "where": "H8 kappa_f",
+  "old_sha256": "a333fee5ac4097c8f5db4ba8b0c2ecbc81c6b204341a928c142693015bc8242b",
+  "new_sha256": "3c8699dfc4ac352c21468d0ae1fa4b7cde444ad56edf8faab77f77a1cb7f38f7",
+  "old": "· DYAD backbone κ · face-lift κ_f · RRF-CN05 κ ·",
+  "new": "· DYAD backbone κ · GEN face-lift κ (atlas label κ_f) · RRF-CN05 κ ·"
+ },
+ {
+  "id": "AR04-010",
+  "finding": "C04-02 / C04-04 / A04-02",
+  "where": "H8 keys and advice",
+  "old_sha256": "02a71c35c6651614cd1e5f1b81046f4ca7e532d6d20357a3c6ddc161f091c6ff",
+  "new_sha256": "16358ae6567274916cc03d453ca2a942a4618362ad87340984a267e42184f4f5",
+  "old": "treated differently at four sites (OFN.O8, RRF.F6, RER.E5, PROG.G7); U/U_T denote both NUMGEN's existential tube and DYAD's explicit PRIM-CTR tube (NUMGEN.N-S1). Advice: one cross-stream κ table; rename NUMGEN tube.",
+  "new": "treated differently across the sites listed at OFN.O8 + RRF.F6 and F1; U/U_T denote both NUMGEN's existential tube and DYAD's explicit PRIM-CTR tube (NUMGEN.N-S1). The owner corpus carries a cross-stream κ table (Programme v1.3 §8.2, navigation only; the collisions themselves remain). Advice: rename NUMGEN tube."
+ },
+ {
+  "id": "AR04-011",
+  "finding": "C04-02 / A04-01",
+  "where": "H10",
+  "old_sha256": "9df26542bd8e38a239505f7a95bc2142445ed992a7f80144e036e32f1949c7d7",
+  "new_sha256": "75c7d12df5008fc907b46fdb4fa0329359f857f0891fd0a3661cc5ddb803dd02",
+  "old": "H10 D-SCOPE/D-STALE med — corpus map out of date: Programme v1.2 inventory and owner-status reports describe superseded owner states and omit RRF, RER, FMS, ER-2B (no interface edges) (PROG.G1/G2); OPEN-M's chart-dependent OPEN-M-6 audit does not consider DYAD's smooth λ-equivariant chart (OPENM.U1); Pre-Legacy pointers to OFN 3B/OPEN-OFN-6 point to changed content (PREL.P1, PROG.G6).",
+  "new": "H10 D-STALE med — owner passes outstanding: OPEN-M's chart-dependent OPEN-M-6 audit does not consider DYAD's smooth λ-equivariant chart (OPENM.U1); the Pre-Legacy owner pass of the Programme maintenance sequence is recorded as not executed (Programme v1.3 §9.2) and Pre-Legacy's pointers to OFN 3B/OPEN-OFN-6 point to changed content (PREL.P1, PROG.G6). The corpus map itself is current at this snapshot: Programme v1.3 (`programme-v1.3`) inventories every home, RRF, the noncanonical records and the atlas at their governing tags."
+ },
+ {
+  "id": "AR04-012",
+  "finding": "C04-04",
+  "where": "H11 key 1",
+  "old_sha256": "431719ae705c0c046ba07ed61f9c4e520de0c9f0bf0f55c972f1983f195f7220",
+  "new_sha256": "38ec8970d15507eee289371521fe4dd8c18519570d5ff7070c0838cabd246880",
+  "old": "(LEGACY.Y2 ≡ PREL.P2 ≡ OPENM.U9)",
+  "new": "(LEGACY.Y2 ≡ OPENM.U9; PREL side in LEGACY.Y2)"
+ },
+ {
+  "id": "AR04-013",
+  "finding": "C04-04",
+  "where": "H11 key 2",
+  "old_sha256": "6124d9e275d7d77eca651e6703df022eaafe081a9d385e06bbba5e267862f58a",
+  "new_sha256": "672b489f494c4d73c4f2ddda430e49ebebe5ef2dec0f07423bc4d92ac83d6f5d",
+  "old": "(LEGACY.Y3, PREL.P3)",
+  "new": "(LEGACY.Y3)"
+ },
+ {
+  "id": "AR04-014",
+  "finding": "C04-05 / A04-03 / V04-02",
+  "where": "index class C",
+  "old_sha256": "38cc2b1698da36b8c7951aa588551d7f21e5a4e42f16b6a2353935597f356fc0",
+  "new_sha256": "07da7278657200344baadb50ab9ee8fc5d8d691cc0a4c58bf38436a383286c0d",
+  "old": "class C · CLASS-C node (D1) ≡ GEN F_γ (γ≡κ) ≡ FMS model C ≡ RRF class-C contract;",
+  "new": "class C · CLASS-C node (D1) = OFN F^N_κ, the same declared operation as GEN G^N_γ (§6.3c) under the OFN §11.4 / RRF §6.2a γ≡κ parameter convention (κ∈ℝ∖{0,2}, (H_spec); GEN itself writes γ); ≠ GEN raw F_γ (§6.3b): a different conditional model, not passive transport of the raw family (OFN §5.5.4, RRF §0.3), no owner conjugacy; ≡ FMS model C ≡ RRF class-C contract;"
+ },
+ {
+  "id": "AR04-015",
+  "finding": "A04-04",
+  "where": "index K3 identity",
+  "old_sha256": "3148ac0958c2e5883c0acda6156e09c765be8a1a50fda2fc7c3cdcce78be1204",
+  "new_sha256": "7b4b7665708a94cf9c8a59188ddac4b1028141b96f0c9dfae26fe4becb67b45f",
+  "old": "K₃ model identity · RER-E-CONJ node (D4a) ≡ GEN F₁ ≡ ER-2B 𝒩 ≡ RER 𝒩 ≡ OFN raw κ=1 (A1, excluded flat sector)",
+  "new": "K₃ model identity · RER-E-CONJ node (D4a) ≡ GEN F₁ ≡ ER-2B 𝒩 ≡ RER 𝒩 ≡ OFN raw κ=1 (A1, excluded flat sector); the extension to the RER records built on 𝒩 is an atlas reading per record (~, F2), not an identity"
+ },
+ {
+  "id": "AR04-016",
+  "finding": "V04-01",
+  "where": "D1 introduction",
+  "old_sha256": "b1ff05c480acdd172708823bf49205a35c922b24e57f6e6b3996b6674027bc16",
+  "new_sha256": "5ed9f6fef074bc3ec5c77da786d239b64f85aa85f0797dd6386c7c58ef91d495",
+  "old": "· Programme Overview v1.2 adopted 2026-09-20, Tier 0 navigation, no physical theorem by appearance ·",
+  "new": "· Programme Overview v1.3 adopted 2026-10-24, Tier 0 navigation, no physical theorem by appearance ·"
+ },
+ {
+  "id": "AR04-017",
+  "finding": "V04-02",
+  "where": "D1 CLASS-C node",
+  "old_sha256": "4dee3a57566eef8bd8a5fbf5aae827a08181ce61d776838eaa33f726609a2831",
+  "new_sha256": "e377dd1a8b7e0657a705730323aa08f318113aaa5820ce0ad1e8fd2806623f49",
+  "old": "CLASS-C DEF (RTG-OFN-DEF-TRIAD-MODEL-CONTRACT part) ≡ GEN F_γ/G^N_γ (γ≡κ) ≡ FMS \"model C\" ≡ *RRF:class-C-contract |",
+  "new": "CLASS-C DEF (RTG-OFN-DEF-TRIAD-MODEL-CONTRACT part) ≡ GEN G^N_γ (§6.3c; same declared operation, γ≡κ parameter convention) ≡ FMS \"model C\" ≡ *RRF:class-C-contract; ≠ GEN raw F_γ (§6.3b; GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO covers the raw family only, OFN IMP-O10-01 \"does not cover class C\") |"
+ },
+ {
+  "id": "AR04-018",
+  "finding": "C04-03 / A04-02",
+  "where": "D1 PROG-TIERS",
+  "old_sha256": "67cec4a219e5dc5e4eed96efa9823b6acd628943b78a992bd52a187c46b7137f",
+  "new_sha256": "93dbaa7e6c9d2e1e58e5cd608accfcdce816b72113a9b0c68ef6be7566ac7dc2",
+  "old": "PROG-TIERS DEF | navigation only: 0 programme · 1 methodology · 2 foundational/historical/common-home (OFN, LEGACY, PREL, NUMGEN) · 3 continuous (DYAD, TRIAD, GEN, UVM, RECOG, DZT) · 4 discrete (TDRG) · 5 shared infra (AZ); 14 document homes ≠ 14 branches; GEN header \"Tier 3/4\" placed Tier 3, discrete inputs = blocked interfaces @PROG§6.1",
+  "new": "PROG-TIERS DEF | navigation only: 0 programme · 1 methodology · 2 foundational/historical/common-home (OFN, LEGACY, PREL, NUMGEN) · 3 continuous (DYAD, TRIAD, GEN, UVM, RECOG, DZT) · 4 discrete (TDRG) · 5 shared infrastructure and standards (AZ, RRF); classes distinct from tiers: 14 canonical homes + RRF adopted working standard (15 files in dsn/) · RER, FMS, ER2B noncanonical (no tier) · ATLAS derived map (no tier; never a source); homes ≠ branches; GEN header tier statement is the owner's, placed Tier 3; discrete inputs = blocked interfaces; BASELINE.md is the hash authority @PROG§6.1"
+ },
+ {
+  "id": "AR04-019",
+  "finding": "C04-03 / A04-02",
+  "where": "D1 PROG-INTERFACE-TYPES",
+  "old_sha256": "d9b744bea51da915ab9e6031084c219537294438fd0344c1514f7d4a22d94a26",
+  "new_sha256": "e05b76fab2573166e61a7d6a4e0225a4bf00042e804b389cd7c1a549d22978fc",
+  "old": "PROG-INTERFACE-TYPES DEF | declared-import · requested-deliverable · transfer-proposal · feedback-proposal/request · reference-only · historical-reference/hypothesis · blocked-cross-branch · normative · constraint @PROG§7.1",
+  "new": "PROG-INTERFACE-TYPES DEF | declared-import · standard reference (RRF conventions/contracts/identifiers) · requested-deliverable (incomplete) · feedback-proposal/request · mutual citation (settled custody split) · consumer record · verbatim owner import · interface contract · reference-only · historical-reference/hypothesis · noncanonical record (transfers nothing) · derived map · blocked-cross-branch · normative · constraint; transfer-proposal has no live instance (IF17 retired as such) @PROG§7.1"
+ },
+ {
+  "id": "AR04-020",
+  "finding": "C04-03 / A04-02",
+  "where": "D1 *PROG:IF-register",
+  "old_sha256": "8bc448e8c32ee5d46540cb87777cf16c247195ff70a7034055c8365bb2036d26",
+  "new_sha256": "04379375cfc2d5589b12987c33841deddf69fa1b4f7ea2188c69c2b7f1fc1e54",
+  "old": "*PROG:IF-register | IF01 METH→PROG normative · IF02 OFN→DYAD constraint (commitments, not derivation of T) · IF03 OFN→TDRG constraint · IF04 DYAD→TRIAD (fracture state, local return, frame) · IF05 DYAD→GEN direct · IF06 GEN→TRIAD (tetrahedral seed, metric conventions T-6s/t/u) · IF07 TRIAD→GEN (T-6p scoped diagnostic exports; no sufficient escape basin) · IF08 GEN→UVM (secular frame, norms, cascade test) · IF09 UVM→GEN requested UV blocks (uncompleted) · IF10 DYAD→UVM · IF11 TRIAD→UVM (chirality, seed comparison) · IF12 DYAD→NUMGEN continuous · IF13 TDRG→NUMGEN DISC · IF14 NUMGEN→RECOG (contraction, phase-defect) · IF15 GEN→RECOG (B, J_Q, pairings, phase memory) · IF16 DYAD→RECOG (map, return coefficients, normal form; quintic interface unresolved) · IF17 RECOG→DYAD transfer-proposal (general return) · IF18 DYAD→DZT · IF19 DZT→DYAD feedback-proposal · IF20 DYAD→AZ-A reference-only · IF21 TDRG→AZ-B/C · IF22 LEGACY→PREL historical · IF23 PREL→UVM historical-hypothesis (harmonic/log-frustration, ladder priors) · IF24 NUMGEN→OFN feedback-request (holonomy operator) · IF25 TDRG→GEN blocked-cross-branch @PROG§7.2",
+  "new": "*PROG:IF-register | IF01 METH→PROG normative · IF02 OFN→DYAD constraint (commitments, not derivation of T) · IF03 OFN→TDRG constraint (v0.6 historical pin) · IF04 DYAD→TRIAD (fracture state, local return, frame) · IF05 DYAD→GEN direct · IF06 GEN→TRIAD (tetrahedral seed, metric conventions) · IF07 TRIAD→GEN (T-6 scoped diagnostic exports) · IF08 GEN→UVM (secular frame, norms, cascade test; GEN keeps verdict custody) · IF09 UVM→GEN requested UV blocks (open; no cascade implied) · IF10 DYAD→UVM · IF11 TRIAD→UVM (chirality, seed comparison) · IF12 DYAD→NUMGEN continuous · IF13 TDRG→NUMGEN DISC · IF14 NUMGEN→RECOG by RID at v1.20.8 (N5AS1 DEFECT/INF1, L1, N1C, GAP-LOCK; v1.15 producer pins retained where load-bearing) · IF15 GEN→RECOG (B, J_Q, pairings, phase memory) · IF16 DYAD→RECOG (map, return coefficients, normal form, chart laws; v6.4.22 by RID and section) · IF17 RECOG↔DYAD mutual citation (bridge-lemma statement RID Dyadic's, general-p proof RECOG's; retired as transfer-proposal; settled) · IF18 DYAD→DZT · IF19 DZT→DYAD feedback-proposal (open) · IF20 DYAD→AZ-A reference-only · IF21 TDRG→AZ-B/C · IF22 LEGACY→PREL historical · IF23 PREL→UVM historical-hypothesis (harmonic/log-frustration, ladder priors) · IF24 NUMGEN→OFN feedback (recorded import; holonomy operator) · IF25 TDRG→GEN blocked-cross-branch · IF26 RECOG→DYAD (R9 memory as `[assuming:]` of OPEN 3/21; reciprocal amplitude; v0.3.22) · IF27 NUMGEN records RECOG as consumer (explicit-domain A1a theorems not listed as inputs) · IF28 RECOG→OFN comparator DEFs (IMP rows) · IF29 RRF→DYAD/TRIAD/RECOG/OFN standard reference (DYAD v0.8.4, TRIAD v0.8.2, RECOG v0.8.4) · IF30 owners→RRF verbatim import with RID · IF31 OFN↔RRF class-C contract (OFN N-O10-3 / RRF §6.2a) · IF32 DYAD/GEN/TRIAD/UVM/TDRG→OFN scoped feedback IMP-O10-* · IF33 RER, IF34 FMS, IF35 ER2B noncanonical records (RER RECOG pin v0.3.20 frozen) · IF36 owners→ATLAS derived map; consumer pins per row @PROG§7.2"
+ },
+ {
+  "id": "AR04-021",
+  "finding": "C04-05 / C04-10 / A04-02",
+  "where": "D1 kappa line",
+  "old_sha256": "64ed2a1d90d99f46993529b2cca8453646df36747873892e53f8f41cfa3e8503",
+  "new_sha256": "227dddfea6187906f558dd0b7c614f33f0346ba4f8885a08070d10c90e9a00bf",
+  "old": "⊥ κ: class-C coupling κ(≡GEN γ) · GEN birth κ · DYAD backbone κ · GEN face-lift κ_f · RRF-CN05 κ (units) · PROG κ_RTG=𝒢_e/J_e · (D6: κ=2πc, κ_grav, κ_top, κ₃, κ′, κ_B) — programme-wide node in header",
+  "new": "⊥ κ: class-C coupling κ (≡GEN γ by the OFN §11.4 / RRF §6.2a parameter convention) · GEN birth κ · DYAD backbone κ · GEN face-lift κ (atlas label κ_f) · RRF-CN05 κ (units) · PROG κ_RTG=𝒢_e/J_e · (D6: κ=2πc, κ_grav, κ_top, κ₃, κ′, κ_B) — programme-wide node in header; owner-side navigation table: Programme v1.3 §8.2 (11 rows)"
+ },
+ {
+  "id": "AR04-022",
+  "finding": "C04-05 / A04-03",
+  "where": "RRF.F5",
+  "old_sha256": "677e2067b457d375732a1fc65767a521276500e45cf433807ff7a63b3cff1234",
+  "new_sha256": "f1dbe262901f7412001fc2e8eefc126d4bd916d8b829e991d5fe186a7dce7b90",
+  "old": "RRF.F5 ~ D-LINK: class-C κ ≡ GEN γ ≡ FMS model C (CLASS-C node); κ collides with GEN birth κ, κ_f, DYAD backbone κ.",
+  "new": "RRF.F5 D-LINK (owner-stated convention): class-C κ ≡ GEN γ is OFN's and RRF's parameter convention — OFN v0.10 §11.4 (claim-level import of GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO: γ ≡ κ ∈ ℝ∖{0,2}, under (H_spec)) and RRF v0.8.4 §6.2a (γ≡κ in the OFN class-C parameter convention); the §11.4 row is the raw-family dictionary and says it does not cover class C; GEN writes γ and states no identification of its own; no owner asserts a model identity raw F_γ ↔ class-C F^N_κ (different conditional model, OFN §5.5.4); FMS model C ≡ class C (CLASS-C node). κ still collides with GEN birth κ, GEN face-lift κ (atlas label κ_f), DYAD backbone κ (F1)."
+ },
+ {
+  "id": "AR04-023",
+  "finding": "C04-02 / A04-01",
+  "where": "PROG.G1 retired",
+  "old_sha256": "692117ca30bb9b712c20a2a38bf2f9e9415064901525a84f9560161c428e5366",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "PROG.G1 D-STALE: the Programme 14-home table and §6 owner-status reports describe superseded owner states (e.g. DYAD v6.4.9, TRIAD v1.5, GEN v2.8.4, RECOG v0.3, NUMGEN v1.18, OFN v0.7 contents; \"RECOG general return not transferred\", \"NUMGEN GAP-LOCK Lemma 3 closed after v1.15\"); each status report must be re-read against the owner before use.\n",
+  "new": ""
+ },
+ {
+  "id": "AR04-024",
+  "finding": "C04-02 / A04-01",
+  "where": "PROG.G2 retired",
+  "old_sha256": "76cd6758b631638b815729f10fe2bb6d89fdac28a5a13fb197fd3f73ba072c28",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "PROG.G2 D-SCOPE: inventory omits four live documents — RRF v0.8.4 (adopted working standard), RER v0.2, FMS v0.6.4, ER-2B v0.3 (noncanonical) ⇒ no IF edges RRF→all, RER↔GEN/TRIAD, FMS↔DYAD/GEN/RRF/OFN/NUMGEN, ER-2B↔TRIAD/GEN; register at pass-two Programme version.\n",
+  "new": ""
+ },
+ {
+  "id": "AR04-025",
+  "finding": "C04-02 / A04-01",
+  "where": "PROG.G4 retired",
+  "old_sha256": "7b13fb67f1d423f04e8a1ff2eee23b00fd372ea98319bcc4e268e9bffa35b88b",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "PROG.G4 ~ D-LINK: IF14 (\"RECOG pins NUMGEN v1.15\"), IF16 (quintic interface unresolved), IF17 (general-return transfer) — check against RECOG v0.3.23 and DYAD v6.4.22.\n",
+  "new": ""
+ },
+ {
+  "id": "AR04-026",
+  "finding": "C04-02",
+  "where": "PROG.G5",
+  "old_sha256": "7bafeec03177e9f9d96a0369bdc5247d007ed5da0a3a4f53ca9a20786f9661e0",
+  "new_sha256": "56f59fe9bb41136b96e17f32be0ff117ef4a43c746c6441951f411fd0d3da90f",
+  "old": "PROG.G5 ~ D-LINK: P2B criterion = OPEN-OFN-3B criterion; PREL still quotes old row-agreement form (D6 PREL.P1); one node should own the text (P2B-CRITERION node) and OFN, PROG cite it.",
+  "new": "PROG.G5 ~ D-LINK: P2B criterion = OPEN-OFN-3B criterion; Programme v1.3 §7.1 names OFN OPEN-OFN-3B as the criterion home (Programme side consistent with the node); PREL still quotes the old row-agreement form (PREL.P1); the P2B-CRITERION node (D1) carries the one text."
+ },
+ {
+  "id": "AR04-027",
+  "finding": "C04-02 / A04-02",
+  "where": "PROG.G6",
+  "old_sha256": "898f38cace348cf66d348fff98c9b9b8afcbd743cbf4c09007ba705d4641a733",
+  "new_sha256": "8cd253834f5f6d4dac9ad2930c819d92ac3e1283dc70747b7125c3e56ac95596",
+  "old": "PROG.G6 D-STALE: maintenance order OFN → Legacy → Pre-Legacy …: Pre-Legacy still v0.8 (June) with v0.5/v0.3/v1.1/v1.2 pins although Legacy/OFN/Programme moved ⇒ Pre-Legacy owner pass not executed (bears on D6 PREL.P1).",
+  "new": "PROG.G6 D-STALE (owner-recorded): Programme v1.3 §9.2 records the maintenance sequence as executed for OFN, Legacy, Dyadic, Number Genesis, Genesis, Triadic, OPEN M, RECOG and not executed for Pre-Legacy, TDR-G, DZT, AZ; Pre-Legacy (v0.8, June) still carries v0.5/v0.3/v1.1/v1.2 pins (bears on PREL.P1)."
+ },
+ {
+  "id": "AR04-028",
+  "finding": "C04-02 / A04-02",
+  "where": "PROG.G7 retired",
+  "old_sha256": "5e7eacdb2978ca1e8faf3a296162cd3a047a7b8cef9546845a23487fd9a959e3",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "PROG.G7 D-SYM: κ_RTG=𝒢_e/J_e adds to κ collision family; HYP only, keep subscript.\n",
+  "new": ""
+ },
+ {
+  "id": "AR04-029",
+  "finding": "C04-02",
+  "where": "AZ.A3",
+  "old_sha256": "dc8eb1c2699302cbad9a251707faaa89d24ff60fd6a290cab5d6fa1bb9a64e92",
+  "new_sha256": "006c12a97196f422bdc615ba94c862af9123d21af3f8cbe66ebcacd25af7fb8e",
+  "old": "AZ.A3 D-STALE: AZ's programme-patch request is satisfied by Programme v1.2 but still listed as open.",
+  "new": "AZ.A3 D-STALE: AZ's programme-patch request is satisfied by Programme v1.2 and v1.3 but still listed as open in AZ v0.6."
+ },
+ {
+  "id": "AR04-030",
+  "finding": "C04-10",
+  "where": "D4a kappa line",
+  "old_sha256": "6658206a00a34c65c1bad134bfff20257a2d746d1ff2a29d1fba64e4dc1e73e9",
+  "new_sha256": "7ddf195cbbde3435fc9c5f5d63146bca074272854b0308ea3ad2b5628e74d735",
+  "old": "vs GEN face-lift κ=|m||w| (D4b) vs κ_RTG (D4b) vs κ_f. Atlas convention in this domain:",
+  "new": "vs GEN face-lift κ=|m||w| (D4b; atlas label κ_f) vs κ_RTG (D4b). Atlas convention in this domain:"
+ },
+ {
+  "id": "AR04-031",
+  "finding": "C04-10 / A04-02",
+  "where": "F1",
+  "old_sha256": "9455792b9bfec6fd640609ce6888e65af34e05387e92eeeec900e83414248851",
+  "new_sha256": "d54a8612ceb2a7501807b4cd90d1ebbfa85392c2a6c242eba2571afbbae6d100",
+  "old": "Plus face-lift κ, κ_RTG, κ_f. Fix: one programme-wide rename (γ for family).",
+  "new": "Plus face-lift κ (atlas label κ_f), κ_RTG. Owner-side navigation: Programme v1.3 §8.2 κ table; the owners' symbols are unchanged."
+ },
+ {
+  "id": "AR04-032",
+  "finding": "A04-04",
+  "where": "F2 scope",
+  "old_sha256": "66ef719e249f5813af052c72adbec469a05288d28940f56851dafa37480bde03",
+  "new_sha256": "c2521c72595d7027124b695eb7123236f940b27fd139deabf8b1bc59e7437bd5",
+  "old": "all RER Triadic records (C01–C09, age family, 3-fold, N7/N8, triad involution, birth graph) are flat-sector reference results in OFN terms.",
+  "new": "the RER Triadic records built on 𝒩 (atlas list: C01–C09, age family, 3-fold, N7/N8, triad involution, birth graph) read as flat-sector reference results in OFN terms — a per-record scope reading; the transfer to each record's own hypotheses (conditional age sheets, transported contracts, blocked ER-2B interfaces) is not verified."
+ },
+ {
+  "id": "AR04-033",
+  "finding": "C04-10",
+  "where": "D4b FACE-LIFT node",
+  "old_sha256": "547f396cd8b95beb6fbcc3abc4e0c38129c28ef2a279276520fe76f411c4a8f4",
+  "new_sha256": "4e3ab412d42b72e79d9dbf84ded9e62085e8480ab7c2f276777c9e7ca78d832e",
+  "old": "(ΔM_f)²=κ_f²I, κ_f=|m||w|; a(φ)=r_φᵀΔM_f r_φ=m(Im w cos2φ−Re w sin2φ), |a|≤κ_f |",
+  "new": "(ΔM_f)²=κ²I, κ=|m||w| (GEN writes κ; the atlas labels this face-lift κ as κ_f elsewhere); a(φ)=r_φᵀΔM_f r_φ=m(Im w cos2φ−Re w sin2φ), |a|≤κ |"
+ },
+ {
+  "id": "AR04-034",
+  "finding": "C04-10",
+  "where": "GEN.D5",
+  "old_sha256": "29f9866eab257baa4d790e102ca9fc0bcc9b6ddf26709231a8e9bbf1f87c42f8",
+  "new_sha256": "ad84c83dbd9c00b89d71fa1b94d4f010c3bf64823d106f75f3758988954c640b",
+  "old": "κ (birth vs κ_f vs scalar-M κ vs κ_RTG)",
+  "new": "κ (birth vs face-lift κ, atlas label κ_f, vs scalar-M κ vs κ_RTG)"
+ },
+ {
+  "id": "AR04-035",
+  "finding": "C04-10",
+  "where": "D4b kappa line",
+  "old_sha256": "9a8ef26832b28a4a58f2e6608b08af9d3214e49a2ec93081aeb7e005155b8e49",
+  "new_sha256": "b064682f54ed707d49d349c45cef6db8ed60664bfdf9ec57b792d81e8dc40e55",
+  "old": "κ (birth coefficient vs κ_f=|m||w| vs scalar-M κ=m|w| (sign: GEN.D2) vs κ_RTG=𝒢_e/J_e",
+  "new": "κ (birth coefficient vs face-lift κ=|m||w| (GEN §6.8; atlas label κ_f) vs scalar-M κ=m|w| (GEN §6.9; sign: GEN.D2) vs κ_RTG=𝒢_e/J_e"
+ },
+ {
+  "id": "AR04-036",
+  "finding": "C04-10",
+  "where": "D4b SCALARM node",
+  "old_sha256": "3cc9f54ff4c0b009dbf0a587e543e42a3e85651c39175988e6c0d0a5e2231945",
+  "new_sha256": "817a213b2ce75c58e1d08b62c930a6dd001184d7a4653db988d1e575f17e04a1",
+  "old": "| ! GEN.D2 (κ=m|w| here vs κ_f=|m||w| in §6.8) |",
+  "new": "| ! GEN.D2 (κ=m|w| here vs κ=|m||w| in §6.8, atlas label κ_f) |"
+ },
+ {
+  "id": "AR04-037",
+  "finding": "C04-10",
+  "where": "D4b secular-K− node",
+  "old_sha256": "cc0b6e5530ca3fcac9b77042200d7190db78f798fc09d6c9d24fda65fc00fe75",
+  "new_sha256": "cd31d32173ce42e9c3e4042126062552c7009731b13d877062d2ff880dae5398",
+  "old": "Δ₃(τ²−κ_f²)²=σ_f²(τ²+2a(φ)τ+κ_f²) exactly;",
+  "new": "Δ₃(τ²−κ_f²)²=σ_f²(τ²+2a(φ)τ+κ_f²) exactly (κ_f: atlas label for the face-lift κ=|m||w|, GEN writes κ);"
+ }
+]
