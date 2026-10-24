@@ -1,5 +1,5 @@
 base 0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a
-intermediate 3ef2dfd03a63eecbf3394a224909285117b9ca25ee588bb86f51921393400984 (groups A1B,A1C,A3,MNT, 29 edits)
+intermediate 881be125201180b987e1f430390507c10f4167df29c19c0b19fbd07eb6dee03c (groups A1B,A1C,A3,MNT, 29 edits)
 GATES:
   C0   PASS BASE
   C1   PASS BUILD
@@ -24,6 +24,7 @@ GATES:
   C20  PASS NOTICES
   C21  PASS TAG CENSUS
   C22  PASS HISTORY
+  C23  PASS REFERENTS (§7.1 summary names existing RIDs)
 
 NEGATIVE CONTROLS (each must be caught by its target gate):
   NC01 new RID removed                           target C7: caught  (failing: C1, C2, C7, C8)
@@ -45,6 +46,7 @@ NEGATIVE CONTROLS (each must be caught by its target gate):
   NC17 R9 statement altered                      target C13: caught  (failing: C1, C13, C2)
   NC18 history pointer without the tag           target C22: caught  (failing: C1, C2, C22)
   NC19 R6 sub-item status altered                target C17: caught  (failing: C1, C17, C2, C6)
+  NC21 §7.1 summary RID misspelt                 target C23: caught  (failing: C1, C2, C22, C23)
   NC20 stale state restored (RID unavailable)    target C12: caught  (failing: C1, C12, C2)
 
 RESULT: PASS

@@ -1,7 +1,7 @@
 # RECOG v0.3.24 — Release record (stage 1: corrected intermediate; not adopted)
 
 **Study:** RECOG · **Base (governing edition):** `recog-v0.3.23`, DSN SHA-256 `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a` (281,915 bytes).
-**Stage-1 intermediate:** `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on `claude/recog-v0.3.24-stage1`, SHA-256 `3ef2dfd03a63eecbf3394a224909285117b9ca25ee588bb86f51921393400984` (294,370 bytes). A build stage, not an edition: header identity lines, status summary and footer are untouched; the Appendix A entry is a DRAFT line.
+**Stage-1 intermediate (round 2):** `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on `claude/recog-v0.3.24-stage1`, SHA-256 `881be125201180b987e1f430390507c10f4167df29c19c0b19fbd07eb6dee03c`. Round 1 (commit `5312dd3`): `3ef2dfd03a63eecbf3394a224909285117b9ca25ee588bb86f51921393400984` (294,370 bytes), reviewed in #5639519847; round 2 applies that review's three text corrections in place (§2a). A build stage, not an edition: header identity lines, status summary and footer are untouched; the Appendix A entry is a DRAFT line.
 **Date:** 24 October 2026 · **Builder:** RECOG co-owner (Claude). **Method:** DSN Methodology v1.4 two-stage release; CONVENTIONS.md.
 **Decision basis:** PI decisions of 23–24 Oct 2026 (`START A1b/A1c`, `A3 AUTHORIZED`, `PREPARE A1B THEOREM CANDIDATE — APPROVED`); receiving review #5638910665 on PR #30 (`A1B/A1C CANDIDATE ACCEPTED — STAGE-1 PREPARATION RECOMMENDED`), which also set the grouping below: **three scientific acceptance decisions (A1b, A1c, A3) and one structural-maintenance acceptance**, each separate.
 
@@ -9,7 +9,7 @@
 
 | Group | Kind | Content | New RIDs | Source cell and reviews | Decision (PI) |
 |---|---|---|---|---|---|
-| **A1b** | scientific | `[THM]` slip schedule on explicit $U$ (§6.13b): (A) events = lift crossings; (C′) six-step deficit $0.927\tau Q<\Delta<\tau Q+1.82Q^{3/2}$ on $U_T$; (B) alphabet $\{6,7\}$, $s(M)=\tfrac{3\tau}\pi\log M+O(1)$; (S) $\tau\psi(a+M_k)-(k-1)\tfrac\pi3=L+\varepsilon_k$ with explicit ceiling | RECOG-THM-A1B-SLIP-SCHEDULE-U; RECOG-ART-A1B-SIXSTEP-DEFICIT | PR #23 cell v0.2.2 (`1ef20de`, `205c68ef…eb23`); PR #30 candidate v0.2 (`9777685`, `4d1719ba…9fbb`); reviews #5630982748, #5631395296, #5634312954 (ACCEPTED), #5638820480, #5638910665 | pending |
+| **A1b** | scientific | `[THM]` slip schedule on explicit $U$ (§6.13b): (A) events = lift crossings; (C′) six-step deficit $0.927\tau Q<\Delta<\tau Q+1.82Q^{3/2}$ on $U_T$; (B) alphabet $\{6,7\}$, $s(M)=\tfrac{3\tau}\pi\log M+O(1)$; (S) $\tau\psi(a+M_k)-(k-1)\tfrac\pi3=L+\varepsilon_k$ with explicit ceiling | RECOG-THM-A1B-SLIP-SCHEDULE-U; RECOG-ART-A1B-SIXSTEP-DEFICIT | PR #23 cell v0.2.2 (`1ef20de`, `205c68ef…eb23`); PR #30 candidate v0.2.1 (`01de252f…333d`; v0.2 at `9777685`, `4d1719ba…9fbb`); reviews #5630982748, #5631395296, #5634312954 (ACCEPTED), #5638820480, #5638910665 | pending |
 | **A1c** | scientific | `[RESULT]` `[from: THM]` infinite-record phase readout (§6.16e); two OPEN R6 sub-items (A1c-Q1′ injectivity; A1c-decoder); §5 readout guard | RECOG-RESULT-A1C-RECORD-PHASE-READOUT | same cell §3; reviews as above (limited corrections of #5638820480 applied in candidate v0.2 and cell v0.2.2) | pending |
 | **A3** | scientific | `[ALG]` quadrature typing (§6.5): extremal radial transfer; $\Omega$-area-neutral locus relative to the declared Haar form; type not chart-invariant (explicit charts); no multiplier signature forced. `[ALG]` pole-stratum periodic inventory (§6.3): $e^\rho-1=m\pi$, new odd-$m$ period-2 family. R4 sub-item 1 answered in reframed form; R4 ACTIVE | RECOG-ALG-QUADRATURE-TYPING; RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY; RECOG-ART-A3-QUADRATURE-TYPING | PR #28 record v0.2 (`0ab5ff5`, `262e2529…1d17`); reviews #5634320866, #5638545763 (`A3 SCIENTIFIC SESSION ACCEPTED`) | pending |
 | **MNT** | structural maintenance | follow-up obligation of the v0.3.23 release record §11 (stage-1 part): current status at the point of use; the tagged history stays at `recog-v0.3.23` and is pointed to — R8 and R9 v0.3.2 specifications, the former R11 text with its `[OPEN]` sub-items, the R7 heading over closed items, the §7.1/§7.2 audit tables and the G2 "unchanged" sentence of §6.13b, §9 archive line, §7 synchronization note pointer | none | this record; checker gate C22 | pending |
@@ -20,7 +20,7 @@ Not in stage 1: the SG reorder (R13 and R14 before R12) — a layout move for st
 
 - Builder: `evidence/recog/scripts/build_recog_v0_3_24_stage1.py` (assertion-gated; modes `str`, `line`, `span`; Appendix A masked for live edits; `--only GROUP` builds a single-group variant). Base file kept as `evidence/recog/v0.3.24/base_v0_3_23.md` (= `git show recog-v0.3.23:dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`).
 - Edit log: `evidence/recog/v0.3.24/stage1_edit_log.json` (29 edits, old and new text with hashes).
-- Decoupling variants (`evidence/recog/v0.3.24/variants/`): A1B alone `5508f2a6…27a0` (8 edits); A1C alone `54566c63…4bd4` (4); A3 alone `699c9a7b…9460` (8); MNT alone `edb48503…d615` (12). Each carries exactly its own new RIDs (checker C18).
+- Decoupling variants (`evidence/recog/v0.3.24/variants/`, round 2): A1B alone `5508f2a6…27a0` (8 edits); A1C alone `0e918314…e326` (4); A3 alone `699c9a7b…9460` (8); MNT alone `07a1d910…07ee` (12). Round-1 values: A1C `54566c63…4bd4`, MNT `edb48503…d615`. Each carries exactly its own new RIDs (checker C18).
 
 | Key | Group | Location | Mode |
 |---|---|---|---|
@@ -41,10 +41,10 @@ Not in stage 1: the SG reorder (R13 and R14 before R12) — a layout move for st
 | S65-A3 | A3 | §6.5: quadrature typing block after the discriminant | str |
 | S613-G2 | MNT | §6.13b: G2 "unchanged" sentence to history | str |
 | S613-A1B | A1B | §6.13b: A1b theorem block after the FC-21 scope paragraph | str |
-| S616e-A1C | A1C | §6.16e: A1c readout result before §6.16f | str |
+| S616e-A1C | A1C | §6.16e: A1c readout result before §6.16f; round 2: separate `[NUM]` sentence for the record-only decoder-error measurement | str |
 | S7-note | MNT | §7 synchronization note: §7.1–§7.2 are summaries | str |
 | S7-C21, S7-PRIMCTR, S7-NFREM, S7-LPHASE | A1B | §7 import rows: new A1b uses (C21; PRIM-CTR; NF-REM ingredients; LPHASE row A / branch (B)) | str |
-| M-71 | MNT | §7.1: v0.3.18 audit table, consumer-direction note and OFN notices → summary + pointer | span |
+| M-71 | MNT | §7.1: v0.3.18 audit table, consumer-direction note and OFN notices → summary + pointer; round 2: exact RID spellings | span |
 | M-72 | MNT | §7.2: v0.3.21 audit table and scope notes → summary + pointer (receipts table and outbound-notices paragraph unchanged) | span |
 | S8-A1B | A1B | §8 artifact row RECOG-ART-A1B-SIXSTEP-DEFICIT | line |
 | S8-A3 | A3 | §8 artifact row RECOG-ART-A3-QUADRATURE-TYPING | str |
@@ -53,9 +53,20 @@ Not in stage 1: the SG reorder (R13 and R14 before R12) — a layout move for st
 
 Per-group `[RESULT]` pairing: the one new `[RESULT]` block (A1c) is paired `[from: THM]` with `Depends on:` the same-release THM (Methodology v1.4 §3.4); no existing block touched.
 
+## 2a. Round 2 — corrections from the stage-1 review (#5639519847 on `5312dd3`: `STAGE-1 TWO GROUPS ACCEPTED (A1B, A3); TWO GROUPS CONDITIONALLY ACCEPTED (A1C, MNT)`)
+
+| Item | Correction | Edit |
+|---|---|---|
+| A1C-1 | the "factor 2–6" figure is the absolute error of the fitted record-only pair decoder on four sampled comparator-fiber pairs (cell §5: $2.1$–$5.6$), not a finite-prefix window bound; removed from the `[RESULT]` sentence and stated as a separate `[NUM]` sentence (Methodology v1.4 §3.4) | S616e-A1C |
+| A1C-2 | "Known: record level sets have empty interior" removed from the OPEN R6 sub-item; marked as a `[SESSION]` conjectural observation with an open proof obligation; neither answer established | S2-R6 |
+| MNT-1 | §7.1 summary names the exact owner RIDs `RECOG-DEF-POLE-COMPARATOR` and `RECOG-DEF-STATE-COMPARATOR`; checker gate C23 and control NC21 added | M-71 |
+| process | atlas row check recorded as PI-DEFERRED (§6); no atlas edit or PR | — |
+
+The theorem candidate record was aligned in the same two sentences (v0.2.1). A1b and A3 texts unchanged. Certificates not rerun.
+
 ## 3. Checks
 
-- `evidence/recog/scripts/check_recog_v0_3_24_stage1.py` — 23 gates C0–C22 **all PASS**; 20 negative controls each caught by its target gate (`evidence/recog/v0.3.24/stage1_check_output.txt`). Gates of note: C6 status words unchanged (only the two declared R8/R9 history sentences differ); C7/C8 RID set and attachments; C16 every file named in §8 exists in the repository and every SHA-256 quoted in the new §8 rows is the hash of the named file; C19 the displayed constants agree with the certificate JSONs (A1b: $H<1.783$, $1.8170$, $1.7876$, $0.92725$; A3: chart instances, 18 orbits, 11 uncertified, none on the quadrature); C20 the §7.2 outbound-notices paragraph is unchanged; C22 every MNT pointer names `recog-v0.3.23` and the moved passages exist there.
+- `evidence/recog/scripts/check_recog_v0_3_24_stage1.py` — 24 gates C0–C23 **all PASS**; 21 negative controls each caught by its target gate (`evidence/recog/v0.3.24/stage1_check_output.txt`). Gates of note: C6 status words unchanged (only the two declared R8/R9 history sentences differ); C7/C8 RID set and attachments; C16 every file named in §8 exists in the repository and every SHA-256 quoted in the new §8 rows is the hash of the named file; C19 the displayed constants agree with the certificate JSONs (A1b: $H<1.783$, $1.8170$, $1.7876$, $0.92725$; A3: chart instances, 18 orbits, 11 uncertified, none on the quadrature); C20 the §7.2 outbound-notices paragraph is unchanged; C22 every MNT pointer names `recog-v0.3.23` and the moved passages exist there.
 - Claim audit `evidence/recog/scripts/recog_v0_3_24_claim_audit.py` → `evidence/recog/v0.3.24/claim_audit.json`: the quoted owner statements are present in the current source at its tag — Dyadic `dyad-v6.4.22` (`2363ca40…8c29`): LPHASE row A with branch $\varepsilon\le0.04654$ and $\tfrac{403}{250}$; NF-REM ingredients (vector ceilings, tail $332000|W|^{10}$ on $|W|\le\tfrac1{16}$); PRIM-CTR; C21; §1 winding fixed points; RECOG `recog-v0.3.23`: the A1a RIDs, the token schema and the pole-comparator definition; RRF `rrf-v0.8.4`: the wrapped profile name. ALL PRESENT. (Presence at the cited RID in the current source; not a comparison with earlier editions.)
 - Certificates (not rerun for this build; unchanged since their cells): `recog_a1b_sixstep_deficit_cert.py` (10/10 gates), `recog_a3_quadrature_typing.py` (8/8 gates + probe); hashes in §8 of the intermediate and in the §1 table above.
 - Vocabulary: no READ/WRITE/DECODE in the DSN (C11); the scientific blocks speak of crossings, records and readout.
@@ -79,11 +90,11 @@ Layout-only compaction against the reviewed stage-1 intermediate: the SG reorder
 
 | Stage | Reviewer / decision | Outcome |
 |---|---|---|
-| Stage 1 — group A1b | co-owner (ChatGPT) | pending |
-| Stage 1 — group A1c | co-owner (ChatGPT) | pending |
-| Stage 1 — group A3 | co-owner (ChatGPT) | pending |
-| Stage 1 — group MNT | co-owner (ChatGPT) | pending |
-| Stage 1 — atlas row check | atlas owner | pending |
+| Stage 1 — group A1b | co-owner (ChatGPT), review #5639519847 on `5312dd3` | ACCEPTED |
+| Stage 1 — group A1c | same | CONDITIONAL ACCEPTANCE — A1C-1, A1C-2 applied in round 2; limited-diff check pending |
+| Stage 1 — group A3 | same | ACCEPTED |
+| Stage 1 — group MNT | same | CONDITIONAL ACCEPTANCE — MNT-1 applied in round 2; limited-diff check pending |
+| Stage 1 — atlas row check | atlas owner | PI-DEFERRED (the PI postponed atlas changes; not a stage-1 gate; no atlas edit or PR) |
 | Stage 2 | — | not started |
 | Adoption | PI | — |
 
@@ -92,7 +103,7 @@ Requested of the stage-1 review: (i) each science block against its accepted cel
 ## 7. Records and evidence of this release
 
 - `records/recog/RECOG_A1B_A1C_SESSION_v0_1.md` v0.2.2 — `205c68ef56e432bd98267efccaab3975b2daca7e94ca3bd545277b268c9feb23`
-- `records/recog/RECOG_A1B_THEOREM_CANDIDATE_v0_1.md` v0.2 — `4d1719bab66f4588e26fda2fce911a729b2d0e2dd2bc94aac0ef7e1ab30c9fbb`
+- `records/recog/RECOG_A1B_THEOREM_CANDIDATE_v0_1.md` v0.2.1 — `01de252f33757cfc003635785a7bbf826c57960a59925cd6943f7b06af97333d` (v0.2: `4d1719ba…9fbb`)
 - `records/recog/RECOG_A3_QUADRATURE_TYPING_SESSION_v0_1.md` v0.2 — `262e2529a9288ddf56e1842f074a12bcaf66f43e96cc53f3cd12b939c1cd1d17`
 - `evidence/recog/scripts/recog_a1b_sixstep_deficit_cert.py` — `b418af086dfb7515faff5d266a7ea1d2e7f76efb74421021268c14495a1b35b0`; output `evidence/recog/a1b_a1c/a1b_sixstep_deficit_cert.json` — `cc1f7e30def4defd8d8cb7af89aafe75b4207d3d6d0ab571e0ca20d78ce7c8f1`
 - `evidence/recog/scripts/recog_a1b_a1c_explicit_u.py` — `cc964a51ee746f2cb6d8be6f85765fab8dd5766f212f097075e547d56b7be2c2`; output `evidence/recog/a1b_a1c/a1b_a1c_explicit_u_2e6.json` — `0ea54e81cfbe7a9b528eb121aba054023ad0726fdcd85b4aec3f68f2fc988dcb`

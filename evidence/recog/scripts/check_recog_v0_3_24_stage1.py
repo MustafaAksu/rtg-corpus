@@ -7,7 +7,7 @@ usage (from the repository root):
   (any group variant: the gates read the declared groups from the log).
 exit 0 = every gate PASS (and, with --controls, every negative control caught by its target gate).
 
-Gates (as v0.3.23 stage 1, with the v0.3.24 declarations):
+Gates (as v0.3.23 stage 1, with the v0.3.24 declarations; C23 added in round 2):
   C0  BASE       base SHA-256 is the adopted v0.3.23 identity (tag recog-v0.3.23)
   C1  BUILD      intermediate == exact-once application of the logged edits (Appendix A masked for "live")
   C2  REVERSE    undoing every edit recovers the base byte-exactly
@@ -36,6 +36,7 @@ Gates (as v0.3.23 stage 1, with the v0.3.24 declarations):
   C20 NOTICES    the §7.2 outbound-notices paragraph is unchanged (no notice state changed)
   C21 TAG CENSUS global backticked-tag multiset delta == sum of the per-edit deltas
   C22 HISTORY    every MNT pointer names the predecessor tag, and the pointed-to passages exist at that tag
+  C23 REFERENTS  the new §7.1 summary names the exact existing owner RIDs (RECOG-DEF-POLE-COMPARATOR, -STATE-COMPARATOR)
 """
 import hashlib, importlib.util, json, os, re, subprocess, sys, zipfile
 from collections import Counter
@@ -261,6 +262,10 @@ def check(base, inter, log, root, verbose=True, files=None):
             if e["key"] in MNT_MOVES:
                 ok &= f"`{PREV_TAG}`" in e["new"] and e["old"] in prev and e["new"] in L
     gate("C22", ok, "HISTORY")
+    s71 = section(inter, "### §7.1 Owner Synchronization Audit", "### §7.2 Owner Synchronization Audit")
+    ok = all(x in s71 for x in ("`RECOG-DEF-POLE-COMPARATOR`", "`RECOG-DEF-STATE-COMPARATOR`")) and "RECOG-DEF-COMPARATOR-POLE" not in s71 and "RECOG-DEF-COMPARATOR-STATE" not in s71
+    ok &= all(f"[RID: {x}]" in L for x in ("RECOG-DEF-POLE-COMPARATOR", "RECOG-DEF-STATE-COMPARATOR"))
+    gate("C23", ok, "REFERENTS (§7.1 summary names existing RIDs)")
     return res
 
 def controls(base, inter, log, root):
@@ -297,6 +302,7 @@ def controls(base, inter, log, root):
      ("NC17 R9 statement altered", "C13", outside(L, "$(C_2,q_{\\max})=(517,\\tfrac1{400})$", "$(C_2,q_{\\max})=(163,\\tfrac1{400})$", anchor="#### §6.13a")),
      ("NC18 history pointer without the tag", "C22", L.replace("`recog-v0.3.23` §2, OPEN R11", "an earlier edition §2, OPEN R11")),
      ("NC19 R6 sub-item status altered", "C17", once(L, "Status: ACTIVE (sharpened v0.3; identifiability audited v0.3.7)", "Status: PARTIAL (sharpened v0.3; identifiability audited v0.3.7)")),
+     ("NC21 §7.1 summary RID misspelt", "C23", once(L, "`RECOG-DEF-POLE-COMPARATOR` and `RECOG-DEF-STATE-COMPARATOR`, content unchanged", "`RECOG-DEF-COMPARATOR-POLE` and `RECOG-DEF-COMPARATOR-STATE`, content unchanged")),
      ("NC20 stale state restored (RID unavailable)", "C12", once(L, "[import: RTG_NUMBER_GENESIS_DSN_v1.20.8 §6.6 | NUMGEN-RESULT-N5AS1-INF1]", "[import: RTG_NUMBER_GENESIS_DSN_v1.20.7 §6.6, INF-1 | RID unavailable]")),
     ]
     allok = True
