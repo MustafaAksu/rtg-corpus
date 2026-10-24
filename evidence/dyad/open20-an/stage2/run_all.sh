@@ -15,5 +15,7 @@ rm -f stage1_prep.json
 # exact cross-check of a_5..a_8 (co-owner review check 1): stage-1 field tower, jets to degree 11; control W evaluates at the other root (expected exit 1)
 python3 -I -B ../../scripts/dyad_open20_an_stage2_exact_crosscheck.py --scout scout_N216_dps840.json --out exact_crosscheck.json > exact_crosscheck.stdout.txt; echo "exact_crosscheck exit=$?"
 python3 -I -B ../../scripts/dyad_open20_an_stage2_exact_crosscheck.py --scout scout_N216_dps840.json --out exact_crosscheck_control_W.json --control W > exact_crosscheck_control_W.stdout.txt; echo "exact_crosscheck control W exit=$?"
+# two-singularity model fit (co-owner review check 3): scipy double-precision least squares on the stored coefficients; reproducible to ~1e-8, not byte-identical across platforms
+python3 -I -B ../../scripts/dyad_open20_an_stage2_twosing_fit.py --scout scout_N216_dps840.json --out twosing_fit.json > twosing_fit.stdout.txt 2>&1; echo "twosing_fit exit=$?"
 python3 -I -B ../../scripts/dyad_open20_an_stage2_summary.py . > summary_output.txt 2>&1; echo "summary exit=$?"
-sha256sum control_N36_dps60.json control_N36_dps60.stdout.txt scout_N*.json scout_N*.stdout.txt exact_crosscheck*.json exact_crosscheck*.stdout.txt summary_output.txt run_all.sh > SHA256SUMS.txt
+sha256sum control_N36_dps60.json control_N36_dps60.stdout.txt scout_N*.json scout_N*.stdout.txt exact_crosscheck*.json exact_crosscheck*.stdout.txt twosing_fit.json twosing_fit.stdout.txt summary_output.txt run_all.sh > SHA256SUMS.txt
