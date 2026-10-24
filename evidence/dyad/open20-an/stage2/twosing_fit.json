@@ -1,0 +1,643 @@
+{
+ "N": 216,
+ "abs_model_z": 21.344132,
+ "classes": {
+  "0": {
+   "20-70": {
+    "one": {
+     "abs_z": 18.062708,
+     "arg_z_over_pi": 0.58533465,
+     "b": [
+      4.734644,
+      -7.1786504
+     ],
+     "nfev": 20,
+     "rms_rel_residual": 0.065495451
+    },
+    "two": {
+     "abs_K2_over_K1": 0.047749191,
+     "abs_z1": 18.04692,
+     "abs_z2": 18.147246,
+     "arg_z1_over_pi": 0.58607362,
+     "arg_z2_minus_arg_z1_over_pi": -1.0525546,
+     "arg_z2_over_pi": -0.46648097,
+     "b1": [
+      4.69918,
+      -7.0546059
+     ],
+     "b2": [
+      3.2983485,
+      7.6006226
+     ],
+     "nfev": 40,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.013599117
+    }
+   },
+   "30-60": {
+    "one": {
+     "abs_z": 18.186986,
+     "arg_z_over_pi": 0.58510525,
+     "b": [
+      5.1263704,
+      -7.2870044
+     ],
+     "nfev": 26,
+     "rms_rel_residual": 0.0526191
+    },
+    "two": {
+     "abs_K2_over_K1": 0.047958496,
+     "abs_z1": 18.113429,
+     "abs_z2": 18.371112,
+     "arg_z1_over_pi": 0.5859226,
+     "arg_z2_minus_arg_z1_over_pi": -1.0492371,
+     "arg_z2_over_pi": -0.46331454,
+     "b1": [
+      4.9326377,
+      -7.115445
+     ],
+     "b2": [
+      3.8519992,
+      8.1620812
+     ],
+     "nfev": 31,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0026602246
+    }
+   },
+   "30-70": {
+    "one": {
+     "abs_z": 18.247574,
+     "arg_z_over_pi": 0.58476581,
+     "b": [
+      5.276307,
+      -7.3607316
+     ],
+     "nfev": 25,
+     "rms_rel_residual": 0.047697128
+    },
+    "two": {
+     "abs_K2_over_K1": 0.041131793,
+     "abs_z1": 18.212176,
+     "abs_z2": 18.48124,
+     "arg_z1_over_pi": 0.5855241,
+     "arg_z2_minus_arg_z1_over_pi": -1.0509081,
+     "arg_z2_over_pi": -0.46538399,
+     "b1": [
+      5.1788643,
+      -7.2137184
+     ],
+     "b2": [
+      4.206969,
+      7.9694916
+     ],
+     "nfev": 49,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0050516674
+    }
+   },
+   "40-65": {
+    "one": {
+     "abs_z": 18.323588,
+     "arg_z_over_pi": 0.58311013,
+     "b": [
+      5.4863027,
+      -7.7121111
+     ],
+     "nfev": 20,
+     "rms_rel_residual": 0.039963104
+    },
+    "two": {
+     "abs_K2_over_K1": 0.037803332,
+     "abs_z1": 18.295638,
+     "abs_z2": 18.328972,
+     "arg_z1_over_pi": 0.58525304,
+     "arg_z2_minus_arg_z1_over_pi": -1.047604,
+     "arg_z2_over_pi": -0.46235098,
+     "b1": [
+      5.455386,
+      -7.3006938
+     ],
+     "b2": [
+      3.7183856,
+      8.4240561
+     ],
+     "nfev": 46,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0010437448
+    }
+   },
+   "40-70": {
+    "one": {
+     "abs_z": 18.333576,
+     "arg_z_over_pi": 0.58336178,
+     "b": [
+      5.5247651,
+      -7.6741477
+     ],
+     "nfev": 18,
+     "rms_rel_residual": 0.037932494
+    },
+    "two": {
+     "abs_K2_over_K1": 0.035151492,
+     "abs_z1": 18.338279,
+     "abs_z2": 18.448365,
+     "arg_z1_over_pi": 0.58506307,
+     "arg_z2_minus_arg_z1_over_pi": -1.0486539,
+     "arg_z2_over_pi": -0.46359078,
+     "b1": [
+      5.5792724,
+      -7.3507484
+     ],
+     "b2": [
+      4.084801,
+      8.2969993
+     ],
+     "nfev": 28,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0016323111
+    }
+   },
+   "50-70": {
+    "one": {
+     "abs_z": 18.298874,
+     "arg_z_over_pi": 0.58384513,
+     "b": [
+      5.3924986,
+      -7.5680212
+     ],
+     "nfev": 19,
+     "rms_rel_residual": 0.031425866
+    },
+    "two": {
+     "abs_K2_over_K1": 0.030476751,
+     "abs_z1": 18.438328,
+     "abs_z2": 18.410573,
+     "arg_z1_over_pi": 0.58464823,
+     "arg_z2_minus_arg_z1_over_pi": -1.0504209,
+     "arg_z2_over_pi": -0.46577266,
+     "b1": [
+      5.9215063,
+      -7.4755288
+     ],
+     "b2": [
+      3.9803233,
+      7.8465625
+     ],
+     "nfev": 32,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.00038857097
+    }
+   },
+   "spread": {
+    "one_abs_z_min_max": [
+     18.062708,
+     18.333576
+    ],
+    "two_abs_z1_min_max": [
+     18.04692,
+     18.438328
+    ],
+    "two_abs_z2_min_max": [
+     18.147246,
+     18.48124
+    ]
+   }
+  },
+  "1": {
+   "20-70": {
+    "one": {
+     "abs_z": 18.042117,
+     "arg_z_over_pi": 0.58548167,
+     "b": [
+      5.0127086,
+      -7.1472167
+     ],
+     "nfev": 22,
+     "rms_rel_residual": 0.065226677
+    },
+    "two": {
+     "abs_K2_over_K1": 0.04629551,
+     "abs_z1": 18.056071,
+     "abs_z2": 18.049154,
+     "arg_z1_over_pi": 0.58604306,
+     "arg_z2_minus_arg_z1_over_pi": -1.0536648,
+     "arg_z2_over_pi": -0.46762176,
+     "b1": [
+      5.0558765,
+      -7.0628129
+     ],
+     "b2": [
+      3.3871221,
+      7.4003293
+     ],
+     "nfev": 46,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.013443567
+    }
+   },
+   "30-60": {
+    "one": {
+     "abs_z": 18.131411,
+     "arg_z_over_pi": 0.58439585,
+     "b": [
+      5.2787759,
+      -7.3739351
+     ],
+     "nfev": 21,
+     "rms_rel_residual": 0.052231265
+    },
+    "two": {
+     "abs_K2_over_K1": 0.04714262,
+     "abs_z1": 18.12196,
+     "abs_z2": 18.134857,
+     "arg_z1_over_pi": 0.58588671,
+     "arg_z2_minus_arg_z1_over_pi": -1.0496524,
+     "arg_z2_over_pi": -0.46376564,
+     "b1": [
+      5.2883026,
+      -7.1243434
+     ],
+     "b2": [
+      3.5946648,
+      8.0149169
+     ],
+     "nfev": 42,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0026088203
+    }
+   },
+   "30-70": {
+    "one": {
+     "abs_z": 18.209194,
+     "arg_z_over_pi": 0.58459187,
+     "b": [
+      5.4874295,
+      -7.3773502
+     ],
+     "nfev": 21,
+     "rms_rel_residual": 0.047390481
+    },
+    "two": {
+     "abs_K2_over_K1": 0.040301724,
+     "abs_z1": 18.22,
+     "abs_z2": 18.372597,
+     "arg_z1_over_pi": 0.58549367,
+     "arg_z2_minus_arg_z1_over_pi": -1.0499088,
+     "arg_z2_over_pi": -0.46441514,
+     "b1": [
+      5.5346812,
+      -7.2220466
+     ],
+     "b2": [
+      4.1734364,
+      8.0804156
+     ],
+     "nfev": 29,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.004966629
+    }
+   },
+   "40-65": {
+    "one": {
+     "abs_z": 18.226252,
+     "arg_z_over_pi": 0.5836979,
+     "b": [
+      5.5217929,
+      -7.5533861
+     ],
+     "nfev": 20,
+     "rms_rel_residual": 0.03963152
+    },
+    "two": {
+     "abs_K2_over_K1": 0.037341114,
+     "abs_z1": 18.302096,
+     "abs_z2": 18.259618,
+     "arg_z1_over_pi": 0.58522382,
+     "arg_z2_minus_arg_z1_over_pi": -1.0505531,
+     "arg_z2_over_pi": -0.4653293,
+     "b1": [
+      5.8082421,
+      -7.3085387
+     ],
+     "b2": [
+      3.8980748,
+      7.8895747
+     ],
+     "nfev": 41,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0010321135
+    }
+   },
+   "40-70": {
+    "one": {
+     "abs_z": 18.26944,
+     "arg_z_over_pi": 0.58414606,
+     "b": [
+      5.6634681,
+      -7.4961309
+     ],
+     "nfev": 18,
+     "rms_rel_residual": 0.037629263
+    },
+    "two": {
+     "abs_K2_over_K1": 0.034703493,
+     "abs_z1": 18.344497,
+     "abs_z2": 18.41179,
+     "arg_z1_over_pi": 0.58503608,
+     "arg_z2_minus_arg_z1_over_pi": -1.0499787,
+     "arg_z2_over_pi": -0.46494258,
+     "b1": [
+      5.9322272,
+      -7.3583378
+     ],
+     "b2": [
+      4.3054968,
+      8.0262231
+     ],
+     "nfev": 43,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0016141274
+    }
+   },
+   "50-70": {
+    "one": {
+     "abs_z": 18.320361,
+     "arg_z_over_pi": 0.58576494,
+     "b": [
+      5.8626209,
+      -7.1761237
+     ],
+     "nfev": 16,
+     "rms_rel_residual": 0.031125491
+    },
+    "two": {
+     "abs_K2_over_K1": 0.030226684,
+     "abs_z1": 18.44378,
+     "abs_z2": 18.562056,
+     "arg_z1_over_pi": 0.58462465,
+     "arg_z2_minus_arg_z1_over_pi": -1.0521045,
+     "arg_z2_over_pi": -0.46747984,
+     "b1": [
+      6.2736037,
+      -7.4825768
+     ],
+     "b2": [
+      4.8631825,
+      7.5570064
+     ],
+     "nfev": 32,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.00038561117
+    }
+   },
+   "spread": {
+    "one_abs_z_min_max": [
+     18.042117,
+     18.320361
+    ],
+    "two_abs_z1_min_max": [
+     18.056071,
+     18.44378
+    ],
+    "two_abs_z2_min_max": [
+     18.049154,
+     18.562056
+    ]
+   }
+  },
+  "2": {
+   "20-70": {
+    "one": {
+     "abs_z": 18.040312,
+     "arg_z_over_pi": 0.58597022,
+     "b": [
+      5.3506619,
+      -7.068708
+     ],
+     "nfev": 20,
+     "rms_rel_residual": 0.064622558
+    },
+    "two": {
+     "abs_K2_over_K1": 0.045377276,
+     "abs_z1": 18.065111,
+     "abs_z2": 18.05049,
+     "arg_z1_over_pi": 0.58601327,
+     "arg_z2_minus_arg_z1_over_pi": -1.0555347,
+     "arg_z2_over_pi": -0.46952144,
+     "b1": [
+      5.4124144,
+      -7.0708496
+     ],
+     "b2": [
+      3.7443887,
+      7.109033
+     ],
+     "nfev": 50,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.013304435
+    }
+   },
+   "30-60": {
+    "one": {
+     "abs_z": 18.075634,
+     "arg_z_over_pi": 0.5849364,
+     "b": [
+      5.4650574,
+      -7.2563006
+     ],
+     "nfev": 29,
+     "rms_rel_residual": 0.051795897
+    },
+    "two": {
+     "abs_K2_over_K1": 0.033898781,
+     "abs_z1": 18.130309,
+     "abs_z2": 96.301368,
+     "arg_z1_over_pi": 0.58536334,
+     "arg_z2_minus_arg_z1_over_pi": -1.3882169,
+     "arg_z2_over_pi": -0.80285356,
+     "b1": [
+      5.6205181,
+      -7.2058909
+     ],
+     "b2": [
+      104.83922,
+      -170.31951
+     ],
+     "nfev": 45,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.02290378
+    }
+   },
+   "30-70": {
+    "one": {
+     "abs_z": 18.184592,
+     "arg_z_over_pi": 0.58514085,
+     "b": [
+      5.7559298,
+      -7.2715592
+     ],
+     "nfev": 23,
+     "rms_rel_residual": 0.047081047
+    },
+    "two": {
+     "abs_K2_over_K1": 0.039566933,
+     "abs_z1": 18.227451,
+     "abs_z2": 18.296636,
+     "arg_z1_over_pi": 0.58546421,
+     "arg_z2_minus_arg_z1_over_pi": -1.0508378,
+     "arg_z2_over_pi": -0.46537364,
+     "b1": [
+      5.8894854,
+      -7.230065
+     ],
+     "b2": [
+      4.2910427,
+      7.8626916
+     ],
+     "nfev": 35,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0049049953
+    }
+   },
+   "40-65": {
+    "one": {
+     "abs_z": 18.205951,
+     "arg_z_over_pi": 0.58522755,
+     "b": [
+      5.8324139,
+      -7.2572222
+     ],
+     "nfev": 17,
+     "rms_rel_residual": 0.03924166
+    },
+    "two": {
+     "abs_K2_over_K1": 0.036977664,
+     "abs_z1": 18.308505,
+     "abs_z2": 18.343323,
+     "arg_z1_over_pi": 0.5851972,
+     "arg_z2_minus_arg_z1_over_pi": -1.0529981,
+     "arg_z2_over_pi": -0.46780092,
+     "b1": [
+      6.1610966,
+      -7.3159217
+     ],
+     "b2": [
+      4.5249545,
+      7.4860418
+     ],
+     "nfev": 25,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0010235798
+    }
+   },
+   "40-70": {
+    "one": {
+     "abs_z": 18.270353,
+     "arg_z_over_pi": 0.58544156,
+     "b": [
+      6.0317678,
+      -7.2476165
+     ],
+     "nfev": 20,
+     "rms_rel_residual": 0.037262774
+    },
+    "two": {
+     "abs_K2_over_K1": 0.034358757,
+     "abs_z1": 18.350605,
+     "abs_z2": 18.460739,
+     "arg_z1_over_pi": 0.58501032,
+     "arg_z2_minus_arg_z1_over_pi": -1.0510715,
+     "arg_z2_over_pi": -0.46606118,
+     "b1": [
+      6.284939,
+      -7.365658
+     ],
+     "b2": [
+      4.8068897,
+      7.8144276
+     ],
+     "nfev": 34,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.0015996437
+    }
+   },
+   "50-70": {
+    "one": {
+     "abs_z": 18.408702,
+     "arg_z_over_pi": 0.5870695,
+     "b": [
+      6.5564254,
+      -6.9467918
+     ],
+     "nfev": 23,
+     "rms_rel_residual": 0.030796349
+    },
+    "two": {
+     "abs_K2_over_K1": 0.030001446,
+     "abs_z1": 18.449382,
+     "abs_z2": 18.747733,
+     "arg_z1_over_pi": 0.58460194,
+     "arg_z2_minus_arg_z1_over_pi": -1.0515153,
+     "arg_z2_over_pi": -0.46691336,
+     "b1": [
+      6.6263807,
+      -7.4895291
+     ],
+     "b2": [
+      5.8251502,
+      7.7299025
+     ],
+     "nfev": 34,
+     "ordering": "index 1 = larger amplitude at the window centre",
+     "rms_rel_residual": 0.00038075035
+    }
+   },
+   "spread": {
+    "one_abs_z_min_max": [
+     18.040312,
+     18.408702
+    ],
+    "two_abs_z1_min_max": [
+     18.065111,
+     18.449382
+    ],
+    "two_abs_z2_min_max": [
+     18.05049,
+     96.301368
+    ]
+   }
+  }
+ },
+ "model_z": [
+  4.2844837,
+  -20.90969
+ ],
+ "reading": "heuristic fits; a window-stable |z| with a small residual indicates the scale, a window-dependent one does not; no theorem, no certificate; the model form itself is an assumption",
+ "windows": [
+  [
+   20,
+   70
+  ],
+  [
+   30,
+   70
+  ],
+  [
+   40,
+   70
+  ],
+  [
+   50,
+   70
+  ],
+  [
+   30,
+   60
+  ],
+  [
+   40,
+   65
+  ]
+ ]
+}

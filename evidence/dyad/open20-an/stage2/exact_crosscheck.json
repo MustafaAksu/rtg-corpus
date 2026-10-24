@@ -1,0 +1,60 @@
+{
+ "all_pass": true,
+ "control": null,
+ "gates": {
+  "X1": true,
+  "X2": true
+ },
+ "info": {
+  "X1": {
+   "L3=ell(k*-3)": true,
+   "L4=ell(k*-4)": true,
+   "L5=ell(k*-5)": true,
+   "L6=ell(k*-6)": true,
+   "L7=ell(k*-7)": true,
+   "L8=ell(k*-8)": true,
+   "residual_vanishes_through_z11": true,
+   "z0..z5_vanish": true,
+   "z10_solved": true,
+   "z11_solved": true,
+   "z6_solved": true,
+   "z7_solved": true,
+   "z8_solved": true,
+   "z9_solved": true
+  },
+  "X2": {
+   "abs_difference_exact_minus_stage2": {
+    "3": "0.0",
+    "4": "1.3589e-63",
+    "5": "1.3589e-63",
+    "6": "0.0",
+    "7": "1.5193e-64",
+    "8": "3.3972e-64"
+   },
+   "evaluated_at": "a_pil",
+   "gates": {
+    "a3": true,
+    "a4": true,
+    "a5": true,
+    "a6": true,
+    "a7": true,
+    "a8": true
+   },
+   "stage2_N_dps": [
+    216,
+    840
+   ],
+   "stage2_source": "scout_N216_dps840.json"
+  },
+  "exact_a_k_in_E": {
+   "3": "(1/108 + -1/108*i*sqrt3) + (-1/6 + 1/6*i*sqrt3)*a",
+   "4": "(199/19845 + 2603/476280*i*sqrt3) + (-23/216 + 1/216*i*sqrt3)*a",
+   "5": "(-162839/65297988 + 9383197/1958939640*i*sqrt3) + (-202/19845 + -5393/119070*i*sqrt3)*a",
+   "6": "(-2167069/435319920 + -6220019/11753637840*i*sqrt3) + (10933/285768 + 41731/4286520*i*sqrt3)*a",
+   "7": "(7693116883/51833542874400 + -57198632983/51833542874400*i*sqrt3) + (-62215969/3917879280 + 25297757/3917879280*i*sqrt3)*a",
+   "8": "(108945653919354878267/317220787277326463731200 + 811090858750410234683/4758311809159896955968000*i*sqrt3) + (-333722233588595583023/44058442677406453296000 + -371757533303645436119/36047816736059825424000*i*sqrt3)*a"
+  },
+  "jet_degree": 11
+ },
+ "script": "dyad_open20_an_stage2_exact_crosscheck.py"
+}

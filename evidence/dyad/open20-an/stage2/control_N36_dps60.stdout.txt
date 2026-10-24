@@ -1,0 +1,6 @@
+C0_Fz_is_z_plus_O_z4 PASS
+C1_a3_matches_stage1 PASS
+C2_a4_matches_stage1 PASS
+C3_ball_radii_below_1e-30 FAIL
+C4_linear_coefficient_is_L_k_for_k_3_to_8 PASS
+RESULT FAIL

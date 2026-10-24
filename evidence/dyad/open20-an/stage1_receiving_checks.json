@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-23",
+  "reviewer": "ChatGPT",
+  "reviewed_commit": "272d273c64b2b2db573e859f125d301f99736b67",
+  "scope": "SESSION receiving replay and finite exact coordinate-route comparison; no owner files modified",
+  "owner_script_sha256": "c3c110543e0ea768109377de8781a9849dd9b61caf89195c1075561b91112cc4",
+  "owner_script_git_blob": "cb9ac9d8cdf0bce9824602a99373f79475ff45a9",
+  "helper_sha256": "dd06a1a20466dbe16da9c9b2e5bfe01a209decbedeed5a2c4a3ba33c783c1e6d",
+  "positive_json_sha256": "f1efcb59dac073dd2ad92d3205d9d0e490367f7341bfac56b2252d13df1833c8",
+  "positive_json_git_blob": "0123dd10b969d12deff2dbc231800ba559b7bf92",
+  "committed_json_blob_matches": true,
+  "owner_replays": [
+    {"control": null, "exit": 0, "failed_gates": [], "stdout_sha256": "cb86954ef31252256a94ef92085a41d77a13e9a4b07f06bb4b405edf2ebbd94d"},
+    {"control": "B", "exit": 1, "failed_gates": ["S4", "S5_form"], "stdout_sha256": "a7dec9af05383c591b826c0344cb8b4dbe9acdc892def3f3927b9356b5a353e8"},
+    {"control": "R", "exit": 1, "failed_gates": ["S4", "S5_form"], "stdout_sha256": "a7dec9af05383c591b826c0344cb8b4dbe9acdc892def3f3927b9356b5a353e8"},
+    {"control": "A", "exit": 1, "failed_gates": ["S4"], "stdout_sha256": "d2e5247ad712a294a4512c546971946680ad96a6c4c1c55957b08c8743be07d2"}
+  ],
+  "diagnostic_script": "evidence/dyad/scripts/check_lh2012_stage1_pullback.py",
+  "diagnostic_script_sha256": "50d9817304a4f92688d25c06ba1ca5324f5dc246d70ef4ea4b82eabcb2f384de",
+  "diagnostic_script_git_blob": "315448727dcb4c33d96b31174adc2c49b8b45bf2",
+  "diagnostic_method": "Same exact field arithmetic and raw engine, direct full coordinate substitution; compare complete target jet and graph-derived psi0",
+  "original_diagnostic": {
+    "exit": 1,
+    "json_sha256": "903ff49df29573ec6f693251b43f29e55906082bf7de5ed8b41c373c47b53bb2",
+    "P0_owner_gates_all_pass": true,
+    "P1_horizontal_direct_match": true,
+    "P2_vertical_direct_match": false,
+    "P3_graph_psi_relation": false,
+    "P4_direct_graph_psi_relation": true,
+    "P5_owner_inverse_of_actual_jet": false,
+    "changed_vertical_coefficients": [[5, 0], [5, 1], [5, 2]],
+    "d13": "-1/6 + 2*i*sqrt(3)/9",
+    "exact_psi_defect": "psi_true - psi_owner = d13*a^3/c^5 != 0"
+  },
+  "delayed_cut_diagnostic": {
+    "exit": 0,
+    "json_sha256": "7cba0a53dcdc3faff7a8fa0435c28d6dfec29a354dbe4949f3a3234ce870507d",
+    "P0_owner_gates_all_pass": true,
+    "P1_horizontal_direct_match": true,
+    "P2_vertical_direct_match": true,
+    "P3_graph_psi_relation": true,
+    "P4_direct_graph_psi_relation": true,
+    "P5_owner_inverse_of_actual_jet": true,
+    "changed_vertical_coefficients": [],
+    "repair_scope": "one-line transform in memory only; owner source unchanged"
+  },
+  "graph_identity": "psi0 = (alpha - 2)*b2/c^2",
+  "classification": "Original replay passes but true-map jet fidelity fails; local source correction and regeneration required",
+  "canonical_change": false,
+  "stokes_computation": false
+}
