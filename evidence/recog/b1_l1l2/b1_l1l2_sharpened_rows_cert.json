@@ -1,0 +1,133 @@
+{
+ "gates": {
+  "G1": true,
+  "G2": true,
+  "G3": true,
+  "G4": true,
+  "NC1_wrong_integral_caught": true,
+  "NC2_unsafe_ceiling_refused": true
+ },
+ "G1_lemma_bracket": {
+  "0.0025": {
+   "lower": 6.250029248123055e-06,
+   "upper(=lemma bound)": 6.265625e-06,
+   "lower/upper": 0.9975109024435798
+  },
+  "0.000625": {
+   "lower": 3.906251143932529e-07,
+   "upper(=lemma bound)": 3.90869140625e-07,
+   "lower/upper": 0.9993756830448244
+  },
+  "1e-4": {
+   "lower": 1.0000000074995e-08,
+   "upper(=lemma bound)": 1.0001e-08,
+   "lower/upper": 0.9999000174977503
+  },
+  "1e-6": {
+   "lower": 1.00000000000075e-12,
+   "upper(=lemma bound)": 1.000001e-12,
+   "lower/upper": 0.99999900000175
+  }
+ },
+ "G1_lemma": {
+  "rows": {
+   "0.0025": {
+    "sum_float": 6.257817383772013e-06,
+    "bound": 6.265625e-06,
+    "ratio": 0.9987538966618674,
+    "ok": true,
+    "note": "float64 sanity; the proof is the integral comparison"
+   },
+   "0.000625": {
+    "sum_float": 3.907470894010179e-07,
+    "bound": 3.9086914062500005e-07,
+    "ratio": 0.9996877440265891,
+    "ok": true,
+    "note": "float64 sanity; the proof is the integral comparison"
+   },
+   "0.0001": {
+    "sum_float": 1.000050001256157e-08,
+    "bound": 1.0001e-08,
+    "ratio": 0.9999500062555315,
+    "ok": true,
+    "note": "float64 sanity; the proof is the integral comparison"
+   }
+  },
+  "integral_identity": true
+ },
+ "G2_reproduction": {
+  "K_Phi_100": [
+   258.48478185860273,
+   258.48478185860273
+  ],
+  "K_Phi_30": [
+   81.43280001857495,
+   81.43280001857495
+  ]
+ },
+ "G3_rows": [
+  {
+   "row": "L1 large",
+   "C7": "100",
+   "qbar": "1/400",
+   "basis": "adopted statements only",
+   "K_Phi_upper": 258.48478185860273,
+   "C2_new_exact_upper": 259.13099381324923,
+   "C2_new_ceiling_4sig": 259.2,
+   "C2_old": 517,
+   "window_new": 2.9521544332489176e-05,
+   "window_old": 1.4800743309441381e-05,
+   "gain": 1.9945987654320987
+  },
+  {
+   "row": "L1 small",
+   "C7": "30",
+   "qbar": "1/1600",
+   "basis": "adopted statements only",
+   "K_Phi_upper": 81.43280001857495,
+   "C2_new_exact_upper": 81.48369551858656,
+   "C2_new_ceiling_4sig": 81.49,
+   "C2_old": 163,
+   "window_new": 9.3900899386197e-05,
+   "window_old": 4.694468890172512e-05,
+   "gain": 2.00024542888698
+  },
+  {
+   "row": "L1+L2 large",
+   "C7": "85.1",
+   "qbar": "1/400",
+   "basis": "conditional on the Dyadic certificate value 85.07 as ceiling 85.1",
+   "K_Phi_upper": 220.84707215293315,
+   "C2_new_exact_upper": 221.3991898333155,
+   "C2_new_ceiling_4sig": 221.4,
+   "C2_old": 517,
+   "window_new": 3.4561807999011716e-05,
+   "window_old": 1.4800743309441381e-05,
+   "gain": 2.335140018066847
+  },
+  {
+   "row": "L1+L2 small",
+   "C7": "27.7",
+   "qbar": "1/1600",
+   "basis": "conditional on the Dyadic certificate value 27.60 as ceiling 27.7",
+   "K_Phi_upper": 75.63920819270386,
+   "C2_new_exact_upper": 75.6864826978243,
+   "C2_new_ceiling_4sig": 75.69,
+   "C2_old": 163,
+   "window_new": 0.0001010963706035301,
+   "window_old": 4.694468890172512e-05,
+   "gain": 2.1535209406790856
+  }
+ ],
+ "constants": {
+  "|G|": [
+   0.007651984290981194,
+   0.007651984290981194
+  ],
+  "norm": [
+   2.516611478423583,
+   2.516611478423583
+  ]
+ },
+ "ALL_PASS": true
+}
