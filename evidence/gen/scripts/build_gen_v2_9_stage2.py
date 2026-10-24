@@ -21,7 +21,7 @@ usage: build_gen_v2_9_stage2.py STAGE1 CANDIDATE MAP
 """
 import hashlib, json, sys
 
-STAGE1_SHA = "ca431ce90669cfb8bebdf104b52833d05c1147a36ab696fbb4a6160874867845"
+STAGE1_SHA = "5677d706d5ccca0e3b822f484e1de7641e771e8ec3e83c51b50daf336833cd98"
 ARCHIVE = {"name": "stage1-intermediate", "path": "evidence/gen/v2.9/stage1_intermediate.md", "sha256": STAGE1_SHA}
 REL = "`records/gen/GEN_v2_9_RELEASE_RECORD.md`"
 
@@ -33,7 +33,8 @@ SUMMARY = " ".join([
     "Primitive Genesis algebra through the certified tetrahedral quartic polynomials is retained.",
     "The standalone triad is a **universal chiral pump**: no quartic safe surface exists except $c=0$.",
     r"`GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` (§6.3c) excludes local \(C^3\) submersive six-step factors for every real \(C^3\) network germ with the stated linear structure, zero quadratic part and chiral cubic invariant \(\mu\neq0\), under \((H_{\rm spec})\); a primitive-clock companion is recorded at the same grade as the §6.3b primitive statement.",
-    r"This is a mathematical semiconjugacy exclusion for the stated real \(C^3\) class; no physical model, carrier, closure condition or \(\gamma\) is selected, and existence of an exactly transported realization is not asserted.",
+    # round 3 (G29-FINAL-01): the base sentence ending "existence of an exactly transported realization is not asserted" is not
+    # reused, because the C^infinity existence is now imported (G-20 note); the summary keeps only sentences true as stated
     "The 9B physical lowering bridge, the 9B-tau physical sign/energy selection, and physical realization of the 9C raw-array premise remain open.",
     "Internal typing/model questions therefore remain OPEN alongside OPEN M and OPEN 0-Regge.",
 ])
@@ -66,7 +67,8 @@ APPA_NEW = (
     "SHA-256 `d143673e…c6fc`), and in the release records named below.\n\n"
     "### v2.9 — 25 October 2026 — stage-2 candidate (not adopted)\n\n"
     "- **Basis:** the reconciled v2.8.9 advisory (`records/gen/ATLAS_ADVISORY_GEN_v2_8_9_RECONCILIATION.md`) and the two owner disposition records; "
-    "PI authorization of 24 October 2026 (21 dispositions; F-1); atlas row check `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE1.md` with B1–B3 applied in stage 1.\n"
+    "PI authorization of 24 October 2026 (21 dispositions; F-1); atlas row checks `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE1.md` (B1–B3) and "
+    "`records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE2.md` (V1, G29-FINAL-01), applied in stage 1.\n"
     "- **Corrections [science/scope] (stage 1):** local sourced-junction theorem rescoped to its algebraic content with $\\Delta_3>0$; the minimizer clause "
     "is recorded in Appendix B (GA-01). Face-lift magnitude renamed $\\kappa\\to\\kappa_f$ (notation only), sign-explicit 9A pole–projector map, $B_*$ declared "
     "undefined (GA-02, GA-03, F-1). Scope words (GA-04, GA-05, GA-08, GA-09); one record per `GEN-OPEN-WPHASE` (GA-06); closed items out of active lists (GA-07).\n"
@@ -78,8 +80,12 @@ APPA_NEW = (
     "is a `[SESSION]` record accepted by the owner on 19 October 2026; it corrects notice wording only (GC-21).\n"
     "- **Compaction [layout] (stage 2):** current-only header with the §1 profile exception; this compact Appendix A; one footer. Movement map "
     "`evidence/gen/v2.9/movement_map.json`, checked by `tools/check_compaction.py`.\n"
-    "- **Unchanged:** §6.3a–§6.3c apart from the G-20 note; every other RID's statement and grade; every OPEN status.\n"
-    f"- **Records:** release record {REL}; stage-1 intermediate SHA-256 `ca431ce9…7845`; predecessor tag `gen-v2.8.9`.\n\n"
+    "- **Methodology and existence scope (stage 1, round 3):** the Local Tag Aliases methodology sentence restated for v1.4 with the bounded migration of "
+    "inherited `[RESULT]` blocks without `[from:]` (V1; census in the release record); $C^\\infty$ mathematical existence (imported), analytic existence (OPEN) "
+    "and physical or network-level realization (OPEN) separated at G-20, in the §6.3c OPEN list and in §5 (G29-FINAL-01).\n"
+    "- **Unchanged:** the statement, hypotheses and proof of `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO`; §6.3a–§6.3c apart from the G-20 note and the two "
+    "existence-scope wordings; every other RID's statement and grade; every OPEN status.\n"
+    f"- **Records:** release record {REL}; stage-1 intermediate SHA-256 `5677d706…cd98`; predecessor tag `gen-v2.8.9`.\n\n"
     "### v2.8.9 — 19 October 2026 — Adopted\n\n"
     "- **Content:** `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` (§6.3c) with the primitive-clock companion at `[ALG]` grade without RID (D-4).\n"
     "- **Records:** release record `upload/gen-records/GENESIS_V2_8_9_RELEASE_RECORD.md` (SHA-256 `f6df5d11…4181`); adoption, draft record and the "
@@ -132,7 +138,7 @@ def build(s1):
     t = "\n".join(lines[:k]) + "\n" + FOOTER_NEW
     mp = {
         "study": "GEN", "target": "v2.9", "stage": "compaction",
-        "base": "frozen stage-1 intermediate (round 2; commit e3dfee9)",
+        "base": "frozen stage-1 intermediate (round 3)",
         "base_sha256": STAGE1_SHA, "candidate_sha256": sha(t),
         "archives": [ARCHIVE],
         "archives_note": "The stage-1 intermediate holds every removed byte (old header, Appendix A, footer chain). The tag gen-v2.8.9 is "

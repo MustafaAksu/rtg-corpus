@@ -8,6 +8,8 @@
 [CAUGHT] NC8 header status edited: must fail ['C1', 'C10']; failed ['C1', 'C10', 'C2']
 [CAUGHT] NC9 bare face-lift κ reintroduced: must fail ['C1', 'C6']; failed ['C1', 'C2', 'C6']
 [CAUGHT] NC10 dated marker in live text: must fail ['C1', 'C15']; failed ['C1', 'C15', 'C2']
+[CAUGHT] NC12 old G-20 wording back: must fail ['C1', 'C15', 'C4']; failed ['C1', 'C15', 'C2', 'C4']
+[CAUGHT] NC13 methodology sentence reverted: must fail ['C1', 'C15']; failed ['C1', 'C15', 'C16', 'C2']
 [CAUGHT] NC11 custody clause inlined: must fail ['C1', 'C15']; failed ['C1', 'C15', 'C2']
 
 all controls caught

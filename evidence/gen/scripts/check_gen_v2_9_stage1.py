@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Checker for Genesis v2.9 stage 1 (corrected intermediate; not an edition). Round 2 (25 Oct 2026): B1–B3 of the
-atlas row check; C3 covers the Appendix B insertion; C15 added; controls NC10–NC11 added.
+atlas row check; C3 covers the Appendix B insertion; C15 added; controls NC10–NC11 added. Round 3 (25 Oct 2026): V1 and
+G29-FINAL-01 of the stage-2 row check; C4 allows exactly the E31a/E31b wordings inside §6.3c; C15 extended; C16 added;
+controls NC12–NC13 added.
 
 usage: check_gen_v2_9_stage1.py BASE INTERMEDIATE EDITLOG_JSON [--root REPO] [--controls]
   BASE = `git show gen-v2.8.9:dsn/RTG_GENESIS_GEOMETRY_DSN.md`; INTERMEDIATE = dsn/RTG_GENESIS_GEOMETRY_DSN.md on the
@@ -12,7 +14,9 @@ Gates (exit 0 iff all PASS):
  C1  BUILD        the builder reproduces the intermediate byte-exactly and the log hash matches
  C2  REVERSE      undoing the logged edits in reverse order recovers the base byte-exactly
  C3  APPENDIX     Appendix A/B and footer region = base with only the declared Appendix A and Appendix B entries inserted
- C4  PROTECTED    §6.3a–§6.3c identical to base except the one declared G-20 note line; §8 rows of the protected RIDs identical
+ C4  PROTECTED    §6.3a–§6.3c identical to base except the one declared G-20 note line and the two declared existence-scope
+                  wordings (E31a at G-20, E31b in the OPEN list); theorem, hypotheses and proof therefore byte-checked;
+                  §8 rows of the protected RIDs identical
  C5  RID SET      GEN RID set = base set + the three declared RIDs, each attached once at its [THM] statement;
                   the new RIDs occur in no other dsn/ file
  C6  KAPPA        no bare face-lift κ remains in §6.8–§6.9 except the declared definition line; the bare-κ lines outside
@@ -28,7 +32,11 @@ Gates (exit 0 iff all PASS):
                   Triadic `[conv: RTG canonical B-metric]` normalization cited at the GB-13 line (B3)
  C15 LIVE         B1/B2: no dated "v2.9" marker in the live text; the standard clauses [custody-A] and [indep-AC] are
                   defined exactly once (head of §8) and cited by key; the nine GEN-ART custody rows cite [custody-A];
-                  the withdrawn clause appears only in Appendix B
+                  the withdrawn clause appears only in Appendix B; (round 3) no "vacuous if no such" wording, and the
+                  old unqualified existence items of §5 and the §6.3c OPEN list are gone; the live methodology sentence
+                  names methodology-v1.4 and the bounded migration, and no live text cites DSN_METHODOLOGY_v1.3 except the
+                  header line left to stage 2
+ C16 MIGRATION    the bounded-migration census of unpaired [RESULT] occurrences recomputed here equals the logged one
 """
 import hashlib, importlib.util, json, os, re, subprocess, sys
 
@@ -129,11 +137,16 @@ def check(base, inter, log, root, verbose=True):
     gate("C3", tail_i == tail_b.replace(APPA, ea["new"], 1).replace(APPB, eb["new"], 1), "APPENDIX")
     a0, a1 = "### §6.3a ", "### §6.4 "
     pb, pi = span(base, a0, a1), span(inter, a0, a1)
+    e31 = {e["key"]: e for e in log["edits"] if e["key"] in ("E31a", "E31b")}
+    pb_mod = pb
+    for k in ("E31a", "E31b"):
+        if k in e31:
+            pb_mod = pb_mod.replace(e31[k]["old"], e31[k]["new"], 1) if pb_mod.count(e31[k]["old"]) == 1 else pb_mod + "\x00"
     pi_lines = [l for l in pi.split("\n") if not l.startswith(G20_NOTE_PREFIX)]
     nnote = sum(1 for l in pi.split("\n") if l.startswith(G20_NOTE_PREFIX))
     rows_ok = all([l for l in base.split("\n") if l.startswith(f"- [RID: {r}]")] ==
                   [l for l in inter.split("\n") if l.startswith(f"- [RID: {r}]")] for r in PROTECTED_RIDS)
-    gate("C4", "\n".join(pi_lines) == pb and nnote == 1 and rows_ok, "PROTECTED")
+    gate("C4", "\n".join(pi_lines) == pb_mod and nnote == 1 and rows_ok and len(e31) == 2, "PROTECTED")
     rid = re.compile(r"\[RID: (GEN-[A-Z0-9-]+)\]")
     rb, ri = set(rid.findall(base)), set(rid.findall(inter))
     others = "".join(open(os.path.join(root, "dsn", f), encoding="utf-8").read()
@@ -200,8 +213,19 @@ def check(base, inter, log, root, verbose=True):
             and all("`[custody-A]`" in l and "held by neither" not in l for l in art)
             and L.count("held by neither Genesis co-owner session") == 1
             and L.count("not a rerun of missing original code") == 1
-            and "has a valid" not in L and "has a valid minimizer" in inter[inter.index(APPB):])
+            and "has a valid" not in L and "has a valid minimizer" in inter[inter.index(APPB):]
+            and "vacuous if no such" not in L
+            and "physical model; existence of an exactly transported realization;" not in L
+            and "as such; existence of an exactly transported realization;" not in L
+            and len([l for l in L.split("\n") if l.startswith("`[DEF]` This file follows Methodology v1.4 (`methodology-v1.4`)") and "**bounded migration**" in l]) == 1
+            and "DSN_METHODOLOGY_v1.3" not in L[L.index("\n## Local Tag Aliases"):])
     gate("C15", ok15, f"LIVE (standard-clause definitions {defs}; custody rows {len(art)})")
+    try:
+        cen = load_builder(root).unpaired_results(inter)
+        ok16 = cen == log.get("bounded_migration_result_census")
+    except Exception:
+        ok16, cen = False, {}
+    gate("C16", ok16, f"MIGRATION ({cen.get('unpaired')} of {cen.get('result_occurrences')} [RESULT] occurrences without [from:], recorded)")
     return R
 
 CONTROLS = [
@@ -216,6 +240,8 @@ CONTROLS = [
  ("NC8 header status edited", "inter", ("**Date:** 19 October 2026", "**Date:** 24 October 2026"), {"C1", "C10"}),
  ("NC9 bare face-lift κ reintroduced", "inter", (r"$|a(\phi)| \leq \kappa_f$", r"$|a(\phi)| \leq \kappa$"), {"C1", "C6"}),
  ("NC10 dated marker in live text", "inter", ("Cascade condition: $\\langle\\mathcal{P}_4\\rangle > 0$. This six-member", "Cascade condition: $\\langle\\mathcal{P}_4\\rangle > 0$. (v2.9) This six-member"), {"C1", "C15"}),
+ ("NC12 old G-20 wording back", "inter", (r"(C2) would be vacuous without such a \(\Phi\).", r"(C2) is vacuous if no such \(\Phi\) exists."), {"C1", "C4", "C15"}),
+ ("NC13 methodology sentence reverted", "inter", ("`[DEF]` This file follows Methodology v1.4 (`methodology-v1.4`) for the live-file rule", "`[DEF]` This file follows `DSN_METHODOLOGY_v1.3` for the live-file rule"), {"C1", "C15"}),
  ("NC11 custody clause inlined", "inter", ("closure and plateau shear bridge derivation :: `[ALG structure]` — `[custody-A]`", "closure and plateau shear bridge derivation :: `[ALG structure]` — proof source not in the repository; custody (a) missing — held by neither Genesis co-owner session"), {"C1", "C15"}),
 ]
 

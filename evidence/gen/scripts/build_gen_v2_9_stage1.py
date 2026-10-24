@@ -4,6 +4,12 @@ Round 2 (25 Oct 2026; atlas row check records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE
 B1 no dated "v2.9" markers in live text, and the withdrawn minimizer clause recorded in Appendix B, not in the theorem
 block; B2 the custody clause and the independent-contribution clause defined once as standard clauses at the head of
 §8 and cited by key; B3 the omega_sc convention cited at the GB-13 line. Applied in place to the round-1 edits.
+Round 3 (25 Oct 2026; atlas stage-2 row check records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE2.md V1 and §6 G29-FINAL-01, PI
+instruction of 25 Oct 2026): E30 restates the Local Tag Aliases methodology sentence for v1.4 with the bounded
+migration of inherited [RESULT] blocks without a [from:] companion (counted and listed in the log, not asserted zero);
+E31a–c separate C^∞ mathematical existence (imported, G-20 note), analytic existence (Dyadic OPEN 20) and physical or
+network-level realization (OPEN) at G-20, in the §6.3c OPEN list and in the §5 high-risk row. The theorem statement,
+its hypotheses and its proof are unchanged.
 Also E29 (prerequisite for the B4 header replacement in stage 2): the header field label "**Status summary.**" becomes
 "**Status summary:**", punctuation only, so that tools/check_compaction.py can read the base status summary.
 
@@ -223,6 +229,18 @@ EDITS = [
 
 EDITS.append(("E29", "P2", "B4 prerequisite: header field label 'Status summary.' -> 'Status summary:' (punctuation only; makes the field parseable by tools/check_compaction.py for the stage-2 header replacement)", "str",
  "**Status summary.** *(v2.8.9 adopted", "**Status summary:** *(v2.8.9 adopted"))
+EDITS.append(("E30", "P2", "V1: methodology sentence restated for v1.4 with the bounded migration (Local Tag Aliases)", "line",
+ "`[DEF]` New and edited v2.8.5 blocks use canonical scientific status tags from `DSN_METHODOLOGY_v1.3`, with scope/assumption/provenance recorded separately. Local aliases above are permitted where explicitly declared. Untouched inherited mixed-tag text is retained under a **bounded migration** and is not claimed to have been globally retagged in this release.  ",
+ "`[DEF]` This file follows Methodology v1.4 (`methodology-v1.4`) for the live-file rule (§1.1), the header and Appendix A. Blocks written or edited from v2.8.5 onward use the canonical scientific status tags, with scope/assumption/provenance recorded separately. Local aliases above are permitted where explicitly declared. Inherited blocks not re-edited since then keep their earlier mixed-tag form; in particular, inherited `[RESULT]` blocks without a `[from: TAG]` companion (Methodology §3.4) are retained under a **bounded migration**, counted and listed in the release record; pairing them is retagging work for a later edition and is not done here.  "))
+EDITS.append(("E31a", "P1", "G29-FINAL-01: G-20 existence scope (§6.3c)", "str",
+ r"The theorem neither requires nor supplies existence of an exactly transported realization; (C2) is vacuous if no such \(\Phi\) exists.",
+ r"The theorem neither requires nor supplies existence of an exactly transported realization; (C2) would be vacuous without such a \(\Phi\). A real \(C^\infty\) \(\Phi\) is imported (next item); analytic existence is open (Dyadic OPEN 20, B-an/B-6), and no physical or network-level realization is asserted."))
+EDITS.append(("E31b", "P1", "G29-FINAL-01: §6.3c OPEN list", "str",
+ r"formal power-series maps as such; existence of an exactly transported realization; any physical selection (OFN/FMS).",
+ r"formal power-series maps as such; existence of an analytic exactly transported realization (the \(C^\infty\) mathematical existence is imported, G-20 note); any physical or network-level realization; any physical selection (OFN/FMS)."))
+EDITS.append(("E31c", "P1", "G29-FINAL-01: §5 high-risk row, not-covered column", "str",
+ r"Selection of model C or of any physical model; existence of an exactly transported realization; sub-$C^3$",
+ r"Selection of model C or of any physical model; existence of an analytic exactly transported realization, and any physical or network-level realization (the $C^\infty$ mathematical existence is imported, §6.3c G-20 note); sub-$C^3$"))
 EDITS.append(("E15-STD", "P1", "GB-11/B2 standard clauses defined once at the head of §8", "str",
  "## §8. Artifact Registry {#sec-8-artifacts}\n\n", "## §8. Artifact Registry {#sec-8-artifacts}\n\n" + STD_CLAUSES))
 
@@ -246,7 +264,10 @@ APPA_ENTRY = (
  "$c_\\theta^{(6)}$ archival status (GB-12); custody and independent-contribution standard clauses defined once in §8 (GB-11); GSPLIT/DELTA-QC specialization with its $\\omega_{sc}$ convention (GB-13); T-6u case label (GB-14); tier wording (GB-16); "
  "Dyadic v6.4.22 import and G-20 note for §6.3c (C2) (GC-17); §7 Consumers and Pins, companion references refreshed (GC-18, GC-19). "
  "The OFN Q6 notice erratum (`records/gen/GENESIS_V2_8_9_NOTICE_ERRATUM_OFN_Q6_v0_1.md`) is a `[SESSION]` record accepted by the owner on "
- "19 October 2026; it corrects notice wording only and is not an adopted theorem (GC-21). §6.3a–§6.3c are unchanged except the G-20 note. "
+ "19 October 2026; it corrects notice wording only and is not an adopted theorem (GC-21). Methodology statement restated for v1.4, with the bounded "
+ "migration of inherited `[RESULT]` blocks recorded (V1). Existence scope separated into $C^\\infty$ mathematical existence (imported), analytic existence "
+ "(OPEN) and physical or network-level realization (OPEN) at G-20, in the §6.3c OPEN list and in §5 (G29-FINAL-01). §6.3a–§6.3c are unchanged except "
+ "the G-20 note and these two existence-scope wordings; the theorem, its hypotheses and its proof are unchanged. "
  "Build, edit log and checker: `evidence/gen/scripts/build_gen_v2_9_stage1.py`, `evidence/gen/v2.9/`. Release record: `records/gen/GEN_v2_9_RELEASE_RECORD.md`.\n\n")
 
 def gb13_identity():
@@ -338,6 +359,22 @@ def build(base_text):
                    "old": APPB_START, "new": APPB_START + APPB_ENTRY})
     return live + appa, record, (ok13, msg13)
 
+def unpaired_results(text):
+    """Bounded-migration census (V1). Occurrences of the backticked tag `[RESULT]` in the live text (Local Tag Aliases ..
+    Appendix A), excluding the methodology sentence that names the rule. An occurrence is paired if a `[from: ` tag
+    follows it on the same line. Prose mentions of the tag are counted too (they are listed). Counted, not asserted zero."""
+    import re as _re
+    live = text[text.index("\n## Local Tag Aliases"):text.index("## Appendix A — Version History")]
+    occ = []
+    for line in live.split("\n"):
+        if line.startswith("`[DEF]` This file follows Methodology v1.4"):
+            continue
+        for m in _re.finditer(r"`\[RESULT\]`", line):
+            occ.append(("`[from: " in line[m.end():], line[:160]))
+    return {"result_occurrences": len(occ), "paired": sum(1 for p, _ in occ if p),
+            "unpaired": sum(1 for p, _ in occ if not p),
+            "unpaired_lines": [l for p, l in occ if not p]}
+
 def main(argv):
     base, out, log = argv[1:4]
     raw = open(base, "rb").read()
@@ -346,6 +383,7 @@ def main(argv):
     open(out, "wb").write(data)
     json.dump({"base_sha256": BASE_SHA, "base_tag": BASE_TAG, "intermediate_sha256": hashlib.sha256(data).hexdigest(),
                "declared_new_gen_rids": NEW_RIDS, "kf_lines": KF_LINES, "gate_GB13": {"pass": ok13, "detail": msg13},
+               "bounded_migration_result_census": unpaired_results(text),
                "edit_count": len(record), "edits": record},
               open(log, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(hashlib.sha256(data).hexdigest(), len(record), "edits;", "GB13", "PASS" if ok13 else "SKIPPED", msg13)

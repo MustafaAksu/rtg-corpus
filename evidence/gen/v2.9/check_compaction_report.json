@@ -1,7 +1,7 @@
 {
- "base_sha256": "ca431ce90669cfb8bebdf104b52833d05c1147a36ab696fbb4a6160874867845",
- "candidate_sha256": "3d1c0ba54b25fc3cf5c7539d612c52e8426f7a1c6f2b1dc70acfb3df0632389e",
- "map_sha256": "a759a3bc254492e0f5bc30bde923d20fd0950fe15dab8b7f1d0d45a270da1c3a",
+ "base_sha256": "5677d706d5ccca0e3b822f484e1de7641e771e8ec3e83c51b50daf336833cd98",
+ "candidate_sha256": "89cef1713292e889f8c6923e7d391e36668c7909d66e2504fe553037a967561a",
+ "map_sha256": "9e0233486ac4852ab367abadd560e2b966fcc811ee14a04bd52cd3001d5a1dd9",
  "operations": [
   {
    "id": "S2-H",
@@ -15,7 +15,7 @@
    "op": "replace-section",
    "class": "history-appendix",
    "result": "PASS",
-   "detail": "section relocated (47529 chars), found in ['stage1-intermediate']"
+   "detail": "section relocated (47949 chars), found in ['stage1-intermediate']"
   },
   {
    "id": "S2-F",
@@ -72,7 +72,7 @@
   {
    "check": "archive identity stage1-intermediate",
    "result": "PASS",
-   "detail": "ca431ce90669cfb8bebdf104b52833d05c1147a36ab696fbb4a6160874867845"
+   "detail": "5677d706d5ccca0e3b822f484e1de7641e771e8ec3e83c51b50daf336833cd98"
   },
   {
    "check": "mechanical scope (re-derivation)",
@@ -87,7 +87,7 @@
   {
    "check": "operation S2-A (history-appendix)",
    "result": "PASS",
-   "detail": "section relocated (47529 chars), found in ['stage1-intermediate']"
+   "detail": "section relocated (47949 chars), found in ['stage1-intermediate']"
   },
   {
    "check": "operation S2-F (replace-footer)",

@@ -1,8 +1,9 @@
 # Genesis Geometry v2.9 — Release Record (DRAFT)
 
 **Status:** DRAFT. **Not adopted.**
-- Stage 1 is frozen and accepted for stage 2 by both reviewers.
-- Stage 2 (layout-only compaction) is built and awaits the atlas owner's review.
+- Stage 1 is frozen at round 3 (V1 and G29-FINAL-01 applied).
+- Stage 2 (layout-only compaction) has been rebuilt deterministically on it.
+- A targeted readback of the round-3 diff by both reviewers is pending.
 - The adopted Genesis edition remains v2.8.9 (`gen-v2.8.9`, `d143673e…c6fc`).
 
 **Owner session:** Genesis co-owner (Claude), 24–25 October 2026.
@@ -18,21 +19,25 @@
 | Dispositions | `records/gen/GEN_OWNER_DISPOSITION_ADVISORY_v2_8_9_claude-genowner_20261024.md` (PR #39, incl. §9); `records/gen/GEN_OWNER_DISPOSITION_ADVISORY_v2_8_9_chatgpt_20261024.md` (PR #41); reconciliation §3 |
 | Edit plan | `records/gen/GEN_STAGE1_IMPLEMENTATION_MATRIX.md` (E01–E28; F-1 conditions F1-a–F1-e) |
 | Stage-1 review, round 1 (`21480757…2087`) | Atlas row check `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE1.md` (PR #47): build, checker and controls rerun; 21 rows and F-1 verified at owner tags; ACCEPT for stage 2 with B1–B3 fixed in stage 1 and B4 recorded. The ChatGPT co-owner concurs (row check §6; PR #44 review `5640003252`). |
+| Stage-2 review (round 2 + stage 2 at `5acc2c9`) | Atlas row check `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE2.md` (PR #50): reruns identical; ACCEPT with V1 (methodology sentence / bounded migration) and V2 (records home); §6 addendum G29-FINAL-01 (existence scope at G-20, §6.3c OPEN list, §5), bundled as stage-1 round 3. ChatGPT co-owner follow-up review on PR #44 (`5640109252`). |
+| PI decision V2 | PI, 25 Oct 2026, 01:13: the permanent home of the recovered Genesis records is `upload/gen-records/`; no move to `records/gen/`; names, bytes and SHA-256 kept; the `upload/gen-records/…` citations in Appendix A stay; the PR #43 placement plan is updated accordingly; `BASELINE.md` may carry a pointer; `records/gen/` remains the home of current review, disposition and release records. |
+| Instruction for round 3 | PI and ChatGPT co-owner, 25 Oct 2026, 01:13: V1 and G29-FINAL-01 in one stage-1 round 3 — E30 records the limits of the Methodology v1.4 migration honestly; E31 separates mathematical \(C^\infty\) existence, analytic existence and physical network realization; the theorem's proof and hypotheses are kept; then a deterministic stage-2 rerun and all new hashes here. |
 | Instruction for round 2 and stage 2 | PI, 25 Oct 2026, 00:18. Apply B1–B3 as one stage-1 correction package; rerun; record the hash; list B4; then stage 2 (layout-only, `tools/check_compaction.py`, movement map, negative fixtures), preserving §6.3a–c, the GA-01/02 text and the nine custody states. No new scientific review round for stage 1; the atlas owner re-reads the B1–B3 diff only. |
 
-## 2. Stage 1 — identities (round 2, frozen)
+## 2. Stage 1 — identities (round 3, frozen)
 
 | Object | SHA-256 |
 |---|---|
 | Base: adopted v2.8.9 (`gen-v2.8.9`) | `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc` |
 | Round-1 intermediate (reviewed in PR #47; superseded by round 2) | `21480757eb5b47035efa973e847263d4a50728f8fb13410e323685d37d162087` |
-| **Stage-1 intermediate, round 2 (frozen)**; copy at `evidence/gen/v2.9/stage1_intermediate.md` (1,697 lines; a build stage, not an edition) | **`ca431ce90669cfb8bebdf104b52833d05c1147a36ab696fbb4a6160874867845`** |
-| `evidence/gen/scripts/build_gen_v2_9_stage1.py` | `53e5f7e684c0b646216c1f96ae43e6be47edf5723f42fa3a8aa25a3b5faf99d2` |
-| `evidence/gen/scripts/check_gen_v2_9_stage1.py` | `cdbed5f2710009439f123aea288badbeab93e0bc4067096a05f3315811be91f9` |
-| `evidence/gen/v2.9/stage1_edit_log.json` (65 logged edits) | `6eb77f7834779a4b1b0ad219825af029163908c7ae017bd4e75199e292877b5b` |
-| `evidence/gen/v2.9/stage1_check_output.txt` (16/16 PASS) | `0531c1ba53faca2b118667cdbd997fc2b43366797683113a029d9b84cff84430` |
-| `evidence/gen/v2.9/stage1_negative_controls_output.txt` (11/11 caught) | `948fa86fcae2615219c2cd1c963a37f93113e3aeafb1d3d7a6e9f6caabe3bccf` |
-| `evidence/gen/v2.9/dsn_lint_stage1.txt` (informational) | `67605a17b3ddac1da09c7d7f7db8a4936637cf7d3caa15f89b6be837f55c4fc7` |
+| Round-2 intermediate (reviewed in PR #50; superseded by round 3) | `ca431ce90669cfb8bebdf104b52833d05c1147a36ab696fbb4a6160874867845` |
+| **Stage-1 intermediate, round 3 (frozen)** at `evidence/gen/v2.9/stage1_intermediate.md` (1,697 lines; a build stage, not an edition) | **`5677d706d5ccca0e3b822f484e1de7641e771e8ec3e83c51b50daf336833cd98`** |
+| `evidence/gen/scripts/build_gen_v2_9_stage1.py` | `1172585b090d718a634a0180102da053e5b63ea64b40c7a878fb12d2ceea88cd` |
+| `evidence/gen/scripts/check_gen_v2_9_stage1.py` | `25af1cf04ac3a74c52437c388d0fd5a250aa28ce954d8edd5a24bb1df3b91fd3` |
+| `evidence/gen/v2.9/stage1_edit_log.json` (69 logged edits; includes the bounded-migration census) | `73fff7b511fc357db6aecff27ba602942599d1cb916c4e64a656d27ee144e4e8` |
+| `evidence/gen/v2.9/stage1_check_output.txt` (17/17 PASS) | `c35fb2d3f1aeef46f85dbc9253d63d53ddd12a1c4c547900a54a20ed0d917645` |
+| `evidence/gen/v2.9/stage1_negative_controls_output.txt` (13/13 caught) | `f7d39c91c0bc2d780002fb3633cc77e57928768735da74f1ea8657fd1407b47f` |
+| `evidence/gen/v2.9/dsn_lint_stage1.txt` (informational) | `ad311b526f25c0990071e17f6a87c65a28d67952e9b9e840e00409ac1c0b1dcc` |
 | `evidence/gen/scripts/gen_owner_advisory_checks.py` (cited as `[indep-AC]`; 8/8 PASS, rerun 24 Oct) | `0ba256be3999606e936a0b14f92311600fd5bd3ff041dd3a828d7688dab6bf99` |
 
 **Commands** (from the repository root; Python 3.13, sympy 1.14.0). The DSN file on the branch is now the stage-2 candidate, so the stage-1 commands use the archived intermediate:
@@ -71,34 +76,43 @@ Every edit is applied exactly once, at a unique anchor, and is logged with its o
 | **B1** (round 2) | E02, E05, E06c, E14e, E17a–b, E18, E20, E21b, E23; APPB | No dated "v2.9" marker in the live text (gate C15). The withdrawn clause "has a valid minimizer" is recorded in Appendix B ("Corrected claims", `[RETRACTED | RID: GEN-THM-SOURCED-JUNCTION]`, pointing to GCL-02 and the v2.9 Appendix A entry), not in the theorem block. |
 | **B2** (round 2) | E15-STD, E15-× | `[custody-A]` and `[indep-AC]` are defined once and cited by key. The nine custody rows carry `[custody-A]` (gate C15). |
 | **B3** (round 2) | E23 | ω_sc convention cited at the GB-13 line: `[conv: RTG canonical B-metric]`, I_sc²+¾ω_sc²=Q_sQ_c, as read at `triad-v1.6.1` (checked in C14). That convention text sits in Triadic **§7.1** (cross-convention note for T-6m, the §6.12 audit), line 791, not in §6.12 itself; the citation names §7.1. |
+| **E30** (round 3; V1) | E30 | The Local Tag Aliases methodology sentence is restated for v1.4. The live-file rule, header and Appendix A follow v1.4; blocks written or edited from v2.8.5 use the canonical tags; inherited blocks keep their mixed-tag form; inherited `[RESULT]` occurrences without a `[from: TAG]` companion stay under a **bounded migration**. Census in the edit log: **29 of 32** `[RESULT]` occurrences in the live text are unpaired, 3 paired. This counts occurrences on a line, prose mentions included, and excludes the methodology sentence itself; the atlas count of 30 of 33 used a slightly different span. The 29 lines are listed under `bounded_migration_result_census` in `stage1_edit_log.json` and are recorded, not asserted zero (gate C16). Pairing them is retagging work for a later edition. |
+| **E31a–c** (round 3; G29-FINAL-01) | E31a, E31b, E31c | Existence scope separated at the three sites the atlas verified. G-20 (§6.3c): "(C2) would be vacuous without such a Φ"; a real C^∞ Φ is imported (next item); analytic existence is open (Dyadic OPEN 20, B-an/B-6); no physical or network-level realization is asserted. The §6.3c OPEN list and the §5 high-risk row now read "existence of an analytic exactly transported realization … any physical or network-level realization (the C^∞ mathematical existence is imported, G-20 note)". The theorem statement, hypotheses and proof are byte-checked unchanged: gate C4 allows exactly E31a/E31b inside §6.3c. The §7 export sentence ("Genesis does not select … the existence of an exactly transported realization") states what Genesis does not select; it is not an existence claim and was left unchanged. |
 | **E29** (round 2; B4 prerequisite) | E29 | Header field label `**Status summary.**` → `**Status summary:**`, punctuation only. Without it `tools/check_compaction.py` cannot read the base status summary, and the stage-2 header replacement (B4) cannot be checked. **This is the one edit beyond B1–B3, for the atlas owner's B1–B3 re-read.** |
 
-## 4. Stage 1 — checks (round 2)
+## 4. Stage 1 — checks (round 3)
 
-- **Checker gates C0–C15: 16/16 PASS.**
+- **Checker gates C0–C16: 17/17 PASS.**
   - Base hash, rebuild, reverse to base.
   - Appendix A/B region; protected §6.3a–c and §8 rows.
   - RID set and placement, κ census, tag census.
   - Sign-explicit 9A; GA-01 wording; header and footer.
   - Headings; evidence paths and hash; GB-13; source facts at tags.
-  - **C15 (new):** no live "v2.9"; standard clauses defined once and cited; withdrawn clause only in Appendix B.
-- **Negative controls NC1–NC11: 11/11 caught.** NC10 (dated marker) and NC11 (inlined custody clause) are new.
+  - **C15:** no live "v2.9"; standard clauses defined once and cited; withdrawn clause only in Appendix B. Round 3 adds: no "vacuous if no such" wording; the old unqualified existence items are gone; the methodology sentence names `methodology-v1.4` and the bounded migration.
+  - **C4, widened in round 3:** exactly E31a/E31b inside §6.3c.
+  - **C16 (new):** the bounded-migration census is recomputed and equals the log.
+- **Negative controls NC1–NC13: 13/13 caught.**
+  - NC10 (dated marker) and NC11 (inlined custody clause) were added in round 2.
+  - NC12 (old G-20 "vacuous if no such Φ exists" reintroduced; must fail C4 and C15) and NC13 (methodology sentence reverted to v1.3) are new in round 3.
 - **Round-1 note.** NC6 was first missed because C5 did not check where a RID is attached; C5 was strengthened before the recorded round-1 run.
 
 ## 5. Stage 2 — layout-only compaction
 
 | Object | SHA-256 |
 |---|---|
-| Base: frozen stage-1 intermediate (round 2) | `ca431ce90669cfb8bebdf104b52833d05c1147a36ab696fbb4a6160874867845` |
-| **Stage-2 candidate** `dsn/RTG_GENESIS_GEOMETRY_DSN.md` (1,387 lines) | **`3d1c0ba54b25fc3cf5c7539d612c52e8426f7a1c6f2b1dc70acfb3df0632389e`** |
-| `evidence/gen/scripts/build_gen_v2_9_stage2.py` | `94bae3c96dc9a6b3b0dcf3a28ebfe75d18a7495fd16b1d8020531163b3145920` |
+| Base: frozen stage-1 intermediate (round 3) | `5677d706d5ccca0e3b822f484e1de7641e771e8ec3e83c51b50daf336833cd98` |
+| Previous stage-2 candidate (reviewed in PR #50; superseded) | `3d1c0ba54b25fc3cf5c7539d612c52e8426f7a1c6f2b1dc70acfb3df0632389e` |
+| **Stage-2 candidate** `dsn/RTG_GENESIS_GEOMETRY_DSN.md` (1,388 lines) | **`89cef1713292e889f8c6923e7d391e36668c7909d66e2504fe553037a967561a`** |
+| `evidence/gen/scripts/build_gen_v2_9_stage2.py` | `c7fb50f13bd5a2003e5c28d37249598ffd37adf9f6bbbf199c7c63e8ec95ebfe` |
 | `evidence/gen/scripts/check_gen_v2_9_stage2.py` (owner guards and negative fixtures) | `a8e572d51b9f63217d4cc445def1146e661cf5e7d79482c6e3e428d6ddf7c3af` |
-| `evidence/gen/v2.9/movement_map.json` (3 operations) | `a759a3bc254492e0f5bc30bde923d20fd0950fe15dab8b7f1d0d45a270da1c3a` |
-| `evidence/gen/v2.9/check_compaction_output.txt` (RESULT: PASS) | `73e89431021b43e45652c7d50bb4309a169c53bfd0ea267f83d2b698e5581a3d` |
-| `evidence/gen/v2.9/check_compaction_report.json` | `2d74aea38892514dff0cfeba1f35094058f62c6a4ad4613dbe5e90793ee13150` |
-| `evidence/gen/v2.9/stage2_guards_output.txt` (7/7 PASS) | `28eb12b431124dbaec4b553b2d85bb6b762e32c3e2f146aa6557c0775fa0aa9c` |
+| `evidence/gen/v2.9/movement_map.json` (3 operations) | `9e0233486ac4852ab367abadd560e2b966fcc811ee14a04bd52cd3001d5a1dd9` |
+| `evidence/gen/v2.9/check_compaction_output.txt` (RESULT: PASS) | `a521693e4dde450151474f95a7aebd9b84cf90870105421ae9ed9abcae28aebe` |
+| `evidence/gen/v2.9/check_compaction_report.json` | `1c3739a9d60fe54b7dc5ccdbbd20357ae73edcb4117435b368aae18937ec594a` |
+| `evidence/gen/v2.9/stage2_guards_output.txt` (7/7 PASS) | `8bfaea17c0c3660f9144aa68d1e94895d455387f53cdd173d74de43a5ee5e45d` |
 | `evidence/gen/v2.9/stage2_negative_fixtures_output.txt` (9/9 caught) | `5d60ac0e28e370add74e777350e607569e476951f01ab3184629d5995bd78a2f` |
-| `evidence/gen/v2.9/dsn_lint_stage2.txt` (informational; −23.0 % bytes against stage 1) | `785faf1a7c192e973aa6f4eb43a8e852e80ff17a48e03f27eced6e0537b0792f` |
+| `evidence/gen/v2.9/dsn_lint_stage2.txt` (informational; −22.9 % bytes against stage 1) | `83529a53518d43cb8298bf027e03ce4c05394f34afc2b6592f8c936b1fb48fc3` |
+
+**Determinism (round 3).** A fresh build of stage 1 from the base, then of stage 2 from that output, reproduces `stage1_intermediate.md`, the candidate and the movement map byte-identically. The negative-fixture output is unchanged from round 2.
 
 **Commands:**
 
@@ -117,6 +131,7 @@ python -I evidence/gen/scripts/check_gen_v2_9_stage2.py evidence/gen/v2.9/stage1
   - Companion documents point to §7; DSN Methodology v1.4 (tag `methodology-v1.4`);
   - tier line as in stage 1;
   - Status summary built only from sentences of the base summary and base §1 (profile `summary_from` = header + section1).
+  - Round 3: the base sentence ending "existence of an exactly transported realization is not asserted" is no longer reused (G29-FINAL-01).
 - **S2-A `replace-section`, class history-appendix.** Appendix A becomes one compact entry per edition: v2.9; v2.8.9–v2.8.5 with their release records on `upload/gen-records/`; earlier editions pointed to Appendix A of `gen-v2.8.9`. Removed: 47,529 characters, all in the archive.
 - **S2-F `replace-footer`.** One footer line; the inherited footer chain is in the archive.
 
@@ -127,7 +142,7 @@ python -I evidence/gen/scripts/check_gen_v2_9_stage2.py evidence/gen/v2.9/stage1
 - RID set, heading anchors, source hashes and qualifier tags preserved.
 - References resolve; presentation passes (fields present, one predecessor, one footer).
 
-**Owner guards G1–G7: 7/7 PASS.**
+**Owner guards G1–G7: 7/7 PASS** (on the round-3 base).
 - The live body from "## Local Tag Aliases" to Appendix A is byte-identical to stage 1. This covers §1–§9, so no live text changed in stage 2.
 - §6.3a–c byte-identical.
 - GA-01: both statements, the §7 export and the Appendix B entry.
@@ -173,6 +188,9 @@ A compaction PASS shows mechanical preservation only, not scientific equivalence
 
 ## 7. Not done (deliberately)
 
+- **Bounded methodology migration (V1).** 29 inherited `[RESULT]` occurrences carry no `[from:]` companion. They are recorded (E30, C16), not repaired; pairing them is retagging work for a later edition. No metadata-only claim of v1.4 compliance is made.
+- **Records home (V2, PI decision).** The recovered Genesis records stay at `upload/gen-records/` (names, bytes, SHA-256 unchanged). The Appendix A citations `upload/gen-records/GENESIS_V2_8_x_RELEASE_RECORD.md` are therefore final. The PR #43 placement plan and the `BASELINE.md` pointer are updated in a separate repository-maintenance PR (`claude/gen-records-home`).
+
 - **§1 size.** About 1,000 words against 200–400. It is kept under the declared §1 profile exception, because the compaction checker cannot shorten claim prose and a pointer-only list would drop the hypotheses. The §1 sourced-junction statement beside its §6.9 home stays for the same reason.
 - **§7 headings.** No grouping headings are added; the checker has no insert operation. The stage-1 order already runs Imports (producer blocks and companion references) → Export protocol → Consumers → Pins.
 - **Live history pointers carrying RIDs or tags** (e.g. "(v2.8.6 repin …)"). Not removable by a history-removal edit, which rejects RIDs, and not touched.
@@ -181,10 +199,8 @@ A compaction PASS shows mechanical preservation only, not scientific equivalence
 
 ## 8. Reviews
 
-- Stage 1: done (§1).
-- Next, atlas owner:
-  - re-read of the round-2 diff: B1–B3 and E29;
-  - review of stage 2: movement map, tool report, guards, fixtures.
+- Stage 1 rounds 1–2 and stage 2: done (§1; PR #47, PR #50, PR #44 reviews).
+- Next, both reviewers: a targeted readback of the round-3 diff only, i.e. E30, E31a–c, the C4/C15/C16 gate changes and NC12–NC13. Stage 2 is unchanged in method; its rerun hashes are in §5.
 - Results go to `records/gen/`.
 
 ## 9. What would be notified (no notices sent; PI decision)
@@ -194,10 +210,10 @@ A compaction PASS shows mechanical preservation only, not scientific equivalence
   - B_* is recorded as undefined with unknown sign; UVM R2 cites m = 2Q_sB_*.
   - The sourced-junction minimizer clause is withdrawn (Appendix B); physical branch selection is OPEN.
 - **RRF (IF30, pin v2.8.9).** The §7 export names three new RIDs. The sourced-junction export is rescoped. §6.3c exports are unchanged.
-- **OFN (IF32).** §6.3a–§6.3c are unchanged apart from the G-20 note: (C2) is non-vacuous at C^∞ via Dyadic v6.4.22, and the analytic case stays OPEN.
+- **OFN (IF32).** The statement, hypotheses and proof in §6.3a–§6.3c are unchanged. The G-20 note and the existence-scope wording are new: (C2) is non-vacuous at C^∞ via Dyadic v6.4.22; analytic existence and any physical or network-level realization stay OPEN.
 - **Dyadic.** Informational: two v6.4.22 RIDs are imported for the §6.3c note. The v6.4.13 pins are unchanged.
 - **Triadic.** Informational: §6.17 four-case maximum, and the §7.1 ω_sc convention, cited at v1.6.1 as companion readings.
 
 ## 10. Adoption
 
-Not adopted. Order (CONVENTIONS §4): atlas review of round 2 and stage 2 → release record final → PI decision → publication commit (status lines, §6) → merge commit and tag `gen-v2.9` by the PI.
+Not adopted; no adoption, merge or tag authority given (PI, 25 Oct 2026). Order (CONVENTIONS §4): targeted readback of round 3 → release record final → PI decision → publication commit (status lines, §6) → merge commit and tag `gen-v2.9` by the PI.

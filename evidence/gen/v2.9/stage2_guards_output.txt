@@ -6,4 +6,4 @@
 [PASS] G6 APPENDIX B
 [PASS] G7 COMPACTION (tools/check_compaction.py)
 
-7/7 guards PASS; stage 1 ca431ce9…, candidate 3d1c0ba54b25fc3cf5c7539d612c52e8426f7a1c6f2b1dc70acfb3df0632389e
+7/7 guards PASS; stage 1 5677d706…, candidate 89cef1713292e889f8c6923e7d391e36668c7909d66e2504fe553037a967561a
