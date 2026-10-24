@@ -2,7 +2,7 @@
 
 **Date:** 24 October 2026 · **Author:** RECOG co-owner (Claude) · **Status:** `[SESSION]` **candidate record** for the next RECOG stage-1 item, **v0.2** (v0.1 at commit `79e6e6b`; revised after review #5638820480: `THM ACCEPTED — A1C RESULT NEEDS LIMITED CORRECTIONS`; dispositions in §7). PI decision of 24 Oct 2026: `PREPARE A1B THEOREM CANDIDATE — APPROVED` (preparation only: no DSN change, no RID adoption, no release). Review basis: co-owner reviews of PR #23 — #5630982748 (round 1), #5631395296 (round 2), #5634312954 (A1b proof cell ACCEPTED; theorem candidate may be submitted for registration and adoption review).
 **Governing edition:** `recog-v0.3.23` (DSN SHA-256 `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a`). Producer: Dyadic `dyad-v6.4.22`. NUMGEN `numgen-v1.20.8` (custody only).
-**Source cell:** `records/recog/RECOG_A1B_A1C_SESSION_v0_1.md` v0.2.1 at commit `7acdaca` on `claude/recog-a1b-a1c` (PR #23), SHA-256 `ae3ae4edd158c78e86561f20b8a9f8284d6216696192231a5404898b7f1c98c5`. This record restates that cell's proved content in registration form; it adds no new mathematics. Where the two differ, the cell's proofs govern and this record is to be corrected.
+**Source cell:** `records/recog/RECOG_A1B_A1C_SESSION_v0_1.md` v0.2.2 at commit `1ef20de` on `claude/recog-a1b-a1c` (PR #23), SHA-256 `205c68ef56e432bd98267efccaab3975b2daca7e94ca3bd545277b268c9feb23` (v0.2.1 at `7acdaca`, `ae3ae4ed…98c5`, differs only in the §4 sentence corrected per §7 below; the proofs and certificates are unchanged). This record restates that cell's proved content in registration form; it adds no new mathematics. Where the two differ, the cell's proofs govern and this record is to be corrected.
 
 ---
 
@@ -46,11 +46,11 @@ Not proposed for registration: the comparator-fiber $\Delta M$ numerics (cell §
 
 ---
 
-## 3. Certificates and hashes (as committed at `7acdaca`)
+## 3. Certificates and hashes (cell at `1ef20de`; certificates unchanged since `7acdaca`)
 
 | Item | Path | SHA-256 | Role |
 |---|---|---|---|
-| Session cell v0.2.1 | `records/recog/RECOG_A1B_A1C_SESSION_v0_1.md` | `ae3ae4edd158c78e86561f20b8a9f8284d6216696192231a5404898b7f1c98c5` | proofs; dispositions §7/§7b |
+| Session cell v0.2.2 | `records/recog/RECOG_A1B_A1C_SESSION_v0_1.md` | `205c68ef56e432bd98267efccaab3975b2daca7e94ca3bd545277b268c9feb23` | proofs; dispositions §7/§7b/§7c |
 | Six-step deficit certificate | `evidence/recog/scripts/recog_a1b_sixstep_deficit_cert.py` | `b418af086dfb7515faff5d266a7ea1d2e7f76efb74421021268c14495a1b35b0` | (C′): exact jet, G1–G8, NC1–NC2 |
 | Certificate output | `evidence/recog/a1b_a1c/a1b_sixstep_deficit_cert.json` | `cc1f7e30def4defd8d8cb7af89aafe75b4207d3d6d0ab571e0ca20d78ce7c8f1` | $H=1.78218$, bounds $1.8170/1.7876/0.92725$ |
 | Illustration script | `evidence/recog/scripts/recog_a1b_a1c_explicit_u.py` | `cc964a51ee746f2cb6d8be6f85765fab8dd5766f212f097075e547d56b7be2c2` | `[NUM]` only |
@@ -90,7 +90,7 @@ Explicit constants used in the statement and where they come from: $0.04654$ (Dy
 2. The dependency list: every constant has an owner RID or a cell derivation; nothing imported from NUMGEN beyond conventions and custody.
 3. "Not supplied" and "Scope and custody" against the round-2 refinements (a-priori envelope; no carrier downgrade; SG-R6).
 4. The RESULT of §2: `[from: THM]` with `Depends on:` the same-release THM; the finite-prefix comparison scoped to the illustration horizon; the two OPEN sub-items worded as questions.
-5. Hashes of §3 against `git show 7acdaca:<path> | sha256sum`.
+5. Hashes of §3 against `git show 1ef20de:<path> | sha256sum` (cell) and `git show 7acdaca:<path> | sha256sum` (certificates).
 
 Nothing in this record is adopted. The PI decides registration at the stage-1 review of the next release.
 
