@@ -1,0 +1,5 @@
+# Programme Overview v1.3 — post-release maintenance note
+
+**Date:** 24 October 2026. **By:** Claude (v1.3 editor). **Status:** errata register for the adopted v1.3 (`programme-v1.3`, `1b8358b3…aea06`). The adopted file is not changed; each entry is corrected in the next Programme edition.
+
+**E-P13-1 — §8.2 κ table, first row.** The row says the class-C κ's "relation to Genesis's γ is an atlas reading, not an owner statement". Wrong: OFN v0.10 §11.4 records `GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO` with "(γ ≡ κ ∈ ℝ∖{0,2}, under (H_spec))", and RRF v0.8.4 §6.2a writes "(`γ≡κ` in the OFN class-C parameter convention)". The identification is OFN's and RRF's stated parameter convention; Genesis writes γ and does not state the identification itself. Corrected wording for the next edition: "class-C model coupling of the OFN/RRF model contract; OFN §11.4 and RRF §6.2a record γ ≡ κ as the class-C parameter convention (Genesis writes γ)". Found during the atlas v0.4 audit (`records/atlas/ATLAS_V0_4_AUDIT_CLAUDE.md`, C04-05). Editorial; no OPEN, grade or interface changes.
