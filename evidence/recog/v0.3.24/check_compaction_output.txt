@@ -1,0 +1,12 @@
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation M01 (reorder)  — block reordered inside '## §3. Scope Guards {#sec-3-guards}' (522 chars, byte-identical)
+PASS  qualified claim blocks  — 456 claim blocks in base live text: 456 byte-identical, 0 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS

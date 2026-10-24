@@ -1,4 +1,4 @@
-# RECOG v0.3.24 — Release record (stage 1: corrected intermediate; not adopted)
+# RECOG v0.3.24 — Release record (stage 1 reviewed; stage 2 built; not adopted)
 
 **Study:** RECOG · **Base (governing edition):** `recog-v0.3.23`, DSN SHA-256 `0d5834003ce8f6819a760ac02ec4e1b65c4d34a0eb13381d0fe4e175af9ca31a` (281,915 bytes).
 **Stage-1 intermediate (round 2):** `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on `claude/recog-v0.3.24-stage1`, SHA-256 `881be125201180b987e1f430390507c10f4167df29c19c0b19fbd07eb6dee03c`. Round 1 (commit `5312dd3`): `3ef2dfd03a63eecbf3394a224909285117b9ca25ee588bb86f51921393400984` (294,370 bytes), reviewed in #5639519847; round 2 applies that review's three text corrections in place (§2a). A build stage, not an edition: header identity lines, status summary and footer are untouched; the Appendix A entry is a DRAFT line.
@@ -82,9 +82,21 @@ The theorem candidate record was aligned in the same two sentences (v0.2.1). A1b
 
 Routed through the PI; no notice state is recorded before a real dispatch. The v0.3.23 notices remain in their recorded states.
 
-## 5. Stage 2 (to follow after the stage-1 review)
+## 5. Stage 2 — layout-only compaction (built; PI decision `STAGE-2 PREPARATION APPROVED`, 24 Oct 2026)
 
-Layout-only compaction against the reviewed stage-1 intermediate: the SG reorder (R13, R14 after R12) if `tools/check_compaction.py` gains a move operation or by an equivalent checked route, and any history the stage-1 review allows to move; movement map, negative controls, RECOG profile. No claim, grade, qualifier, RID, OPEN status or evidence pointer changes.
+**Base:** the reviewed stage-1 round-2 intermediate `881be125…e03c` (commit `e42c81c`; kept as `evidence/recog/v0.3.24/stage1_intermediate_round2.md`). **Candidate:** `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`, SHA-256 `63f36a9e4826e92ce6986f9fe722d3a08ac13ff050ce5fbcef2d1ea10866cc35`. Builder `evidence/recog/scripts/build_recog_v0_3_24_stage2.py`; movement map `evidence/recog/v0.3.24/movement_map.json`.
+
+| Op | Kind | What moves | Where it now is |
+|---|---|---|---|
+| M01 | move (class reorder) | the scope guard **SG-R12** (522 bytes, byte-identical), formerly after SG-R14 | §3, in its numerical place before SG-R13 |
+
+Nothing else changes: no archive is named because nothing is removed or relocated out of the live text (the stage-1 pointers to `recog-v0.3.23` were verified by stage-1 gate C22; see the map's `archives_note` for why naming that tag as an archive here would misread the version strings of those pointer sentences). Header identity lines, status summary and the Appendix A DRAFT entry stay as in stage 1; the release script sets them at adoption, as for v0.3.23.
+
+**Checker extension (general-purpose, byte-preserving).** `tools/check_compaction.py` gains the operation `move` (class `reorder`): one whole blank-line-delimited block is cut and reinserted byte-identical before a unique anchor that itself starts a block, inside the same `##`/`###` section of the live text; the operation carries no old/new text, so it can change no prose, tag, qualifier, RID, math or hash (re-derivation; block-multiset test; header excluded; section test). Regression: the DYAD v6.4.21 triple still PASSES with 16/16 controls rejected (`dyad_regression_test_check_compaction.txt`); the RECOG v0.3.23 triple (`97b0425` → `4e7efd9`) still PASSES with 17/17 (`recog_v0_3_23_regression_test_check_compaction.txt`). No existing check was removed or relaxed.
+
+**Checks.** `tools/check_compaction.py` on the triple: PASS (`check_compaction_output.txt`, `check_compaction_report.json`): re-derivation byte-exact; 456 claim blocks in the base live text, 456 byte-identical; RID set, heading anchors, source hashes, qualifier tags preserved; references resolve; presentation. **Move-specific negative controls** `evidence/recog/scripts/test_check_compaction_move.py`: 12/12 rejected — a word changed inside the moved block (candidate only; and with the declared block changed to match), block moved into another section, into the header, duplicated, deleted under a declared move, anchor splitting a paragraph, anchor not unique, declared block off by one byte, a second undeclared reorder, wrong class, a grade changed outside the move (`negative_controls_move_output.txt`, `_report.json`). `tools/dsn_lint.py` informational report: `dsn_lint_stage2.txt`.
+
+**Must-stay-live list (FA-RECOG-01, as for v0.3.23):** F2(a3) selection question, registry-relative limits, RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH and the R6 remaining question, W1–W5, the R6 status line — all byte-identical (claim-block check: 456/456).
 
 ## 6. Reviews and adoption
 
@@ -95,7 +107,7 @@ Layout-only compaction against the reviewed stage-1 intermediate: the SG reorder
 | Stage 1 — group A3 | same | ACCEPTED |
 | Stage 1 — group MNT | same | CONDITIONAL ACCEPTANCE — MNT-1 applied in round 2; limited-diff check pending |
 | Stage 1 — atlas row check | atlas owner | PI-DEFERRED (the PI postponed atlas changes; not a stage-1 gate; no atlas edit or PR) |
-| Stage 2 | — | not started |
+| Stage 2 (compaction) | co-owner (ChatGPT), mechanical review | pending |
 | Adoption | PI | — |
 
 Requested of the stage-1 review: (i) each science block against its accepted cell (no strengthening in transit; the Q1′ scope note and the finite-prefix wording as corrected); (ii) the MNT pointers against `recog-v0.3.23` (checker C22) and the must-stay-live list (F2(a3), W1–W5, R6 ACTIVE, registry-relative limits, no write-through; C17); (iii) the §7 import-row uses; (iv) the four variant hashes.
@@ -109,6 +121,7 @@ Requested of the stage-1 review: (i) each science block against its accepted cel
 - `evidence/recog/scripts/recog_a1b_a1c_explicit_u.py` — `cc964a51ee746f2cb6d8be6f85765fab8dd5766f212f097075e547d56b7be2c2`; output `evidence/recog/a1b_a1c/a1b_a1c_explicit_u_2e6.json` — `0ea54e81cfbe7a9b528eb121aba054023ad0726fdcd85b4aec3f68f2fc988dcb`
 - `evidence/recog/scripts/recog_a3_quadrature_typing.py` — `936d4c97950b53085b019411616324450a79b3c762b19a5688c06e53acb93e6b`; output `evidence/recog/a3_quadrature/a3_quadrature_typing.json` — `65475ba57b48e17055b810dace404aaf964e194d79c2a63626fccd5965291e70`
 - Stage-1 build and checks: `evidence/recog/scripts/build_recog_v0_3_24_stage1.py`, `check_recog_v0_3_24_stage1.py`, `recog_v0_3_24_claim_audit.py`; `evidence/recog/v0.3.24/` (base, edit log, variants, check output, claim audit).
+- Stage-2 build and checks: `evidence/recog/scripts/build_recog_v0_3_24_stage2.py`, `test_check_compaction_move.py`; `tools/check_compaction.py` (move operation); `evidence/recog/v0.3.24/` (stage-1 round-2 intermediate, movement map, checker report and output, move controls, DYAD and RECOG v0.3.23 regression outputs, lint).
 - The branch `claude/recog-v0.3.24-stage1` contains the merged cell branches of PRs #23, #28 and #30 (their files are cited by §8 of the intermediate and checked by C16).
 
 ## 8. Adoption

@@ -1,0 +1,129 @@
+{
+ "controls": [
+  {
+   "id": "P0",
+   "what": "unmutated inputs",
+   "expect": "PASS",
+   "got": "PASS",
+   "fails": []
+  },
+  {
+   "id": "N1",
+   "what": "word changed inside the moved block (candidate)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 281: derived 'eigenframe $W=\\\\rho+\\\\omega\\\\eta$ does not descend to the phase cylinder ($W(\\\\rho,\\\\' / candidate 'frame $W=\\\\rho+\\\\omega\\\\eta$ does not descend to the phase cylinder ($W(\\\\rho,\\\\eta+2'",
+    "FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate"
+   ]
+  },
+  {
+   "id": "N2",
+   "what": "word changed inside the block, declared block changed to match",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — M01: block occurs 0 times in base",
+    "FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate"
+   ]
+  },
+  {
+   "id": "N3",
+   "what": "block moved into another section (declared)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation M01 (reorder)  — moved block changes section ('## §3. Scope Guards {#sec-3-guards}' -> '## §4. Layer Routing {#sec-4-routing}'); a reorder stays inside its section"
+   ]
+  },
+  {
+   "id": "N4",
+   "what": "block moved into the header (declared)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — M01: anchor does not start a block",
+    "FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate"
+   ]
+  },
+  {
+   "id": "N5",
+   "what": "block duplicated instead of moved",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 292: derived '---\\n\\n## §4. Layer Routing {#sec-4-routing}\\n\\n| Layer | Canonical objects | Owner ' / candidate '**[SG-R12]** The linear eigenframe $W=\\\\rho+\\\\omega\\\\eta$ does not descend to the p'",
+    "FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate"
+   ]
+  },
+  {
+   "id": "N6",
+   "what": "block deleted, move declared",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 281: derived '2]** The linear eigenframe $W=\\\\rho+\\\\omega\\\\eta$ does not descend to the phase cyl' / candidate '3]** (v0.3.2, adopts Dyadic SG-19) Three operations are all historically called '",
+    "FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate"
+   ]
+  },
+  {
+   "id": "N7",
+   "what": "anchor splits a paragraph (declared)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — M01: anchor does not start a block",
+    "FAIL  operation M01 (reorder)  — block multiset of the live text changed"
+   ]
+  },
+  {
+   "id": "N8",
+   "what": "anchor occurs more than once",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — M01: anchor occurs 13 times after removal"
+   ]
+  },
+  {
+   "id": "N9",
+   "what": "declared block is not the base block (one byte)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — M01: block occurs 0 times in base",
+    "FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate"
+   ]
+  },
+  {
+   "id": "N10",
+   "what": "second reorder not declared",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 257: derived '4]** Shear twins $T_s$, $T_{\\\\log}$, $T_{\\\\tanh}$ and the $(a,b)$-family are diagn' / candidate '5]** No continuous↔discrete transfer. The TDR-G antipodal defect band $\\\\mathcal '"
+   ]
+  },
+  {
+   "id": "N11",
+   "what": "move declared with class history-section",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  operation M01 (history-section)  — a move must be of class reorder"
+   ]
+  },
+  {
+   "id": "N12",
+   "what": "grade changed outside the move",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 442: derived 'ALG]` [RID: RECOG-ALG-QUADRATURE-TYPING] [scope: conditional on postulated $T$ (' / candidate 'THM]` [RID: RECOG-ALG-QUADRATURE-TYPING] [scope: conditional on postulated $T$ ('",
+    "FAIL  operation M01 (reorder)  — block multiset of the live text changed",
+    "FAIL  qualified claim blocks  — 456 claim blocks in base live text: 455 byte-identical, 0 changed by declared operations, 1 unexplained"
+   ]
+  }
+ ],
+ "result": "PASS"
+}
