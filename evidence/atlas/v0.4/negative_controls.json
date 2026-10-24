@@ -1,0 +1,32 @@
+[
+ {
+  "id": "U1",
+  "what": "H cites a nonexistent L5 row",
+  "detected": true
+ },
+ {
+  "id": "U2",
+  "what": "H cites an owner key that is not a row id",
+  "detected": true
+ },
+ {
+  "id": "U3",
+  "what": "retired key reused",
+  "detected": true
+ },
+ {
+  "id": "U4",
+  "what": "SOURCES row older than manifest",
+  "detected": true
+ },
+ {
+  "id": "U5",
+  "what": "unlabelled κ_f reintroduced",
+  "detected": true
+ },
+ {
+  "id": "U6",
+  "what": "high row F2 loses its H citation",
+  "detected": true
+ }
+]
