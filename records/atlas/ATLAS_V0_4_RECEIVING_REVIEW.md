@@ -63,3 +63,27 @@ The existing 7 UNVERIFIED, 11 DOCUMENTED-UNRESOLVED and 16 wording warnings stay
 Make **one combined, source-pinned correction pass** for V04-01 and V04-02; update the deterministic refresh builder, committed Atlas, affected dispositions and acceptance draft, and add bounded regression fixtures. Re-run the common structural checker and existing negative tests. Return the candidate hash and 2-site diff for a focused readback; no full campaign replay and no unnecessary new review cycle. PI adoption, main merge and `atlas-v0.4` tag follow only after receiving acceptance.
 
 **Verdict:** `REVISE — two precise corrections then receiving ACCEPT review`. No changes to the scientific owners or Atlas were made by this review.
+
+---
+
+## 6. Focused readback of receiving corrections — FINAL VERDICT (24 October 2026)
+
+**Reviewed correction commit:** `1039075b86d0a1572b25da277b8b7d499a04de2e` on `claude/atlas-v0.4` (PR #33).  
+**Second candidate (producer identity, shared report):** `atlas/RTG_STATE_ATLAS.md` SHA-256 `b63eaf8b85dbb1f4a8fbee61cb82f2af089276797c387e6a8a0b13922805c35b`, 469,991 bytes / 1,557 lines.  
+**Verdict: ACCEPT — receiving review complete for the second candidate at the stated scopes.** This supersedes the provisional REVISE verdict in §5 for this exact hash only. PI acceptance/merge/tag are separate.
+
+### Correction readback
+
+- **V04-01, candidate line 82 — ACCEPT.** The D1 domain introduction now names `Programme Overview v1.3 adopted 2026-10-24`; `programme-v1.3` in SOURCES, H10 and PROG-TIERS is consistent with the adopted Programme header. No historical consumer pins were modified by this correction.
+- **V04-02, candidate line 67 — ACCEPT.** The cross-domain index now equates **the declared operation** `OFN F^N_κ` with `GEN G^N_γ`, under the owner parameter convention `γ≡κ`, and explicitly distinguishes both from GEN **raw** `F_γ`. GEN v2.8.9 §6.3c defines `G^N_γ(w)_e=N(w_e)-(γ/3)Σ_j N(w_j)`; OFN v0.10 §5.5.4 defines the same class-C operation `F^N_κ`. This is equation-level model-form agreement only, not a passive conjugacy or physical identity.
+- **V04-02, candidate line 107 — ACCEPT.** D1 CLASS-C now uses `GEN G^N_γ` and the raw-family exclusion is explicit; GEN §6.3b `GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO` remains raw-family-only, while GEN §6.3c `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` retains its separate third-jet, regularity and `(H_spec)` hypotheses. No theorem grade, physical use or model selection transfers.
+- **V04-02, candidate line 252 — ACCEPT.** RRF.F5 correctly identifies `γ≡κ` as the OFN/RRF **parameter convention**, attributes the raw imported GEN result to OFN IMP-O10-01, and states that no owner asserts raw `F_γ` ↔ class-C `F^N_κ` model identity.
+- **Other affected sites checked:** H8 and D1 κ line state only the parameter convention; D4a transported-family home uses `G^N_γ` and does not restore the raw/transported conflation. Packet §6 uses the corrected Atlas locators (line 252 for RRF.F5 and line 882 for transported family). 
+
+### Evidence and remaining bounds
+
+GitHub compare from the first candidate `1ad2f6c` to correction `1039075` shows **four modified Atlas lines**, plus deterministic builder/evidence/packet/reconciliation/release-draft changes; no scientific owner DSN, Atlas Method or shared checker changed. `evidence/atlas/v0.4/verification_summary.json` and the release draft both name the same candidate SHA-256; shared report: zero FAIL, 18/18 controls, 8/8 focused negative controls, 37 asserted edits, 137 L5 rows with no dangling H keys or high rows lacking an H path, and unchanged 7 UNVERIFIED / 11 DOCUMENTED-UNRESOLVED / 16 warnings.
+
+**Review extent:** independently read the exact four changed Atlas passages and their tagged GEN/OFN/RRF owner statements, the branch-diff file list and the submitted verification summary. Did **not** rerun the full build, checksum every source locally, or rerun inherited scientific certificates. Therefore this ACCEPT is a change-focused semantic receiving verdict, not an independent computational replay or scientific owner adoption.
+
+**Next authorized sequence:** PI accepts precisely `b63eaf8b…5c35b` → PR #33 merged by merge commit (not squash) → annotated `atlas-v0.4` created by PI naming full file hash → acceptance record §3 populated after tag verification. The standalone records-only PR #34 may be reconciled/merged independently by PI authorization. Do not merge/tag automatically on this receiving verdict.
