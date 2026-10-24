@@ -1,0 +1,137 @@
+{
+ "result": "PASS",
+ "controls": [
+  {
+   "id": "P0",
+   "what": "unmutated inputs",
+   "expect": "PASS",
+   "got": "PASS",
+   "tool_fails": [],
+   "invariants": []
+  },
+  {
+   "id": "N1",
+   "what": "undeclared deletion of a [DEF] tag in §4",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 119: derived '`[DEF]` Maturity describes a **specified study/model and scope**, not every clai' / candidate 'Maturity describes a **specified study/model and scope**, not every claim in a d'",
+    "FAIL  qualified claim blocks  — 24 claim blocks in base live text: 23 byte-identical, 0 changed by declared operations, 1 unexplained"
+   ],
+   "invariants": []
+  },
+  {
+   "id": "N2",
+   "what": "undeclared edit of the §6.1 inventory table",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 264: derived '2 | `dyad-v6.4.22` | canonical | 3 | Selected primitive map, local return and no' / candidate '1 | `dyad-v6.4.22` | canonical | 3 | Selected primitive map, local return and no'"
+   ],
+   "invariants": [
+    "§6.1 table"
+   ]
+  },
+  {
+   "id": "N3",
+   "what": "Appendix B relocated as history (claim-tag spellings in prose)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  operation X3 (history-section)  — removed section not found byte-identical in the named archive",
+    "FAIL  references resolve  — Appendix B (no such appendix): 'in evidence must be recovered separately. See PROG12-C02 in Appendix B and REQ-P12-02 in the change record.\\n\\n### 2.3 Current progr'; Appendix B (no such appendix): 'on deficit (its R15/R16 reinterpretation; see OPEN M §6 and Appendix B); OPEN M completion is not by itself Regge closure. Prepara'; Appendix B (no such appendix): ' Their old wording and replacement reasons are preserved in Appendix B. Existing consumers remain pinned to their stated Programme'; v1.3 has no Appendix A entry in programme-v1.2"
+   ],
+   "invariants": [
+    "Appendix B",
+    "anchors ['<a id=\"prog-corrections\"></a>']"
+   ]
+  },
+  {
+   "id": "N4",
+   "what": "ref-subst that changes a non-reference word",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  operation X (ref-subst)  — changed text is not reference text: 'enacted' (offending: ['enacted'])"
+   ],
+   "invariants": []
+  },
+  {
+   "id": "N5",
+   "what": "pointer to a nonexistent tagged edition (declared)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  references resolve  — unknown tag programme-v1.9"
+   ],
+   "invariants": []
+  },
+  {
+   "id": "N6",
+   "what": "two footer lines",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 615: derived '' / candidate '*END OF DOCUMENT — duplicate.*\\n'",
+    "FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line"
+   ],
+   "invariants": []
+  },
+  {
+   "id": "N7",
+   "what": "OPEN-P status changed, declared as ref-subst",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  operation X (ref-subst)  — changed text is not reference text: 'ACTIVE' (offending: ['ACTIVE'])"
+   ],
+   "invariants": [
+    "ACTIVE count"
+   ]
+  },
+  {
+   "id": "N8",
+   "what": "SG-PROG-2 removed, declared as history-section (tool-blind; invariants catch it)",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 0,
+   "tool_fails": [],
+   "invariants": [
+    "SG-PROG-2 text"
+   ]
+  },
+  {
+   "id": "N9",
+   "what": "undeclared removal of an <a id> anchor",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 460: derived '<a id=\"prog-guards\"></a>\\n## 8. Programme-Level Scope Guards\\n\\nThese are the adopt' / candidate '## 8. Programme-Level Scope Guards\\n\\nThese are the adopted clarifications of the '"
+   ],
+   "invariants": [
+    "anchors ['<a id=\"prog-guards\"></a>']"
+   ]
+  },
+  {
+   "id": "N10",
+   "what": "§7.2 register row edited undeclared",
+   "expect": "FAIL",
+   "got": "FAIL",
+   "tool_rc": 1,
+   "tool_fails": [
+    "FAIL  mechanical scope (re-derivation)  — first difference at line 421: derived '13 |\\n| IF06 | GEN → TRIAD | declared-import | primitive tetrahedral seed and met' / candidate '22 |\\n| IF06 | GEN → TRIAD | declared-import | primitive tetrahedral seed and met'"
+   ],
+   "invariants": [
+    "§7.2 register"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+PASS  G0 BASE      — 4207da05dca2
+PASS  G1 BUILD     — 25 edits; hash e4fe4e7b1df4
+PASS  G2 REVERSE   — base recovered
+PASS  G3 OPEN RIDS — 5 RIDs, 5 ACTIVE
+PASS  G4 GUARDS    — SG-PROG-1..4 byte-identical
+PASS  G5 ANCHORS   — 18 anchors; missing []
+PASS  G6 TAGS      — base {'DEF': 10, 'HYP': 5, 'COR': 3, 'ALG': 1, 'THM': 1, 'HEUR': 1} inter {'DEF': 10, 'HYP': 5, 'COR': 3, 'ALG': 1, 'THM': 1, 'HEUR': 1}
+PASS  G7 INVENTORY — 18 tagged rows + PROG; []
+PASS  G8 IF PINS   — every pin occurs in the named consumer file
+PASS  G9 SECTIONS  — new ['# RTG_PROGRAMME_OVERVIEW_v1.3'] gone ['# RTG_PROGRAMME_OVERVIEW_v1.2']
+PASS  G10 NO SCIENCE — numbers []
+PASS  G11 FILENAMES — versioned filenames in live text: []
+PASS  G12 METHODOLOGY — no stale methodology pointer
+RESULT: PASS
+
+== negative controls ==
+ok  N1 undeclared edit                       expect FAIL at G1 BUILD; failed gates: ['G1 BUILD', 'G2 REVERSE', 'G3 OPEN RIDS']
+ok  N2 OPEN status changed and logged        expect FAIL at G3 OPEN RIDS; failed gates: ['G1 BUILD', 'G3 OPEN RIDS']
+ok  N3 guard text edited and logged          expect FAIL at G4 GUARDS; failed gates: ['G4 GUARDS']
+ok  N4 anchor removed                        expect FAIL at G5 ANCHORS; failed gates: ['G2 REVERSE', 'G5 ANCHORS']
+ok  N5 THM tag introduced                    expect FAIL at G6 TAGS; failed gates: ['G6 TAGS']
+ok  N6 inventory edition wrong               expect FAIL at G7 INVENTORY; failed gates: ['G7 INVENTORY']
+ok  N7 inventory tag nonexistent             expect FAIL at G7 INVENTORY; failed gates: ['G7 INVENTORY']
+ok  N8 invented consumer pin                 expect FAIL at G8 IF PINS; failed gates: ['G8 IF PINS']
+ok  N9 science restated in §6                expect FAIL at G10 NO SCIENCE; failed gates: ['G10 NO SCIENCE']
+ok  N10 versioned filename in live text      expect FAIL at G11 FILENAMES; failed gates: ['G11 FILENAMES']
+ok  N11 stale methodology pointer            expect FAIL at G12 METHODOLOGY; failed gates: ['G12 METHODOLOGY']
+ok  N12 heading removed                      expect FAIL at G9 SECTIONS; failed gates: ['G9 SECTIONS']
+CONTROLS: 12/12 caught
