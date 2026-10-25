@@ -90,3 +90,16 @@ Received from the RECOG co-owner sessions via the PI on `upload/recog-record-rec
 | `e2c_prod.zip` (PI production run) | `evidence/recog/packages/` | `4f171da6…b22d` | 29/29 chunk hashes of `e2c_production_certificate_v2.json` |
 
 Full per-hash inventory, placement map and the items still missing: `records/recog/RECOG_SOURCE_RECOVERY_LIST.md`.
+
+## Genesis records recovered (24–25 October 2026)
+
+Held Genesis records for editions v2.8.6–v2.8.9 were received from the Genesis co-owner session on `upload/gen-records` and merged unchanged (PR #40). Their **permanent home is `upload/gen-records/`** by PI decision V2 of 25 October 2026; they are not moved, renamed or re-encoded.
+
+| Item | Location | SHA-256 |
+|---|---|---|
+| 36 held files (release records, manifests, dispositions, kit notes, session records, 7 zip packages) | `upload/gen-records/` | per `upload/gen-records/SHA256SUMS.txt` (`beb32a22…f8ca`; 36/36 OK) |
+| Upload README (what was not held) | `upload/gen-records/README_UPLOAD.md` | `ecab0818…34e5` |
+| Atlas hash check and placement record | `records/gen/GEN_UPLOAD_HASH_CHECK_20261024.md` | — |
+| Inventory (files, zip members, cited identities present or missing) | `evidence/gen/inventory/gen_upload_inventory_20261024.json` | `5b97dfa0…10be` |
+
+Among them: the Genesis release records of v2.8.6 (`b6137587…3fec`), v2.8.7 (`d3fcc38e…9223`), v2.8.8 (`03deb7cb…c049`) and v2.8.9 (`f6df5d11…4181`). The 11 cited identities not held are listed in the hash-check record and stay missing; nothing was reconstructed.
