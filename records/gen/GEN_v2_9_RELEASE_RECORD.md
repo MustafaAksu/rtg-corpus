@@ -200,7 +200,13 @@ A compaction PASS shows mechanical preservation only, not scientific equivalence
 ## 8. Reviews
 
 - Stage 1 rounds 1–2 and stage 2: done (§1; PR #47, PR #50, PR #44 reviews).
-- Next, both reviewers: a targeted readback of the round-3 diff only, i.e. E30, E31a–c, the C4/C15/C16 gate changes and NC12–NC13. Stage 2 is unchanged in method; its rerun hashes are in §5.
+- Round 3, targeted readback (scope: E30, E31a–c, the C4/C15/C16 gate changes, NC12–NC13 and the stage-2 rerun):
+  - **ChatGPT co-owner — done.** PR #44 review `5643144174` at commit `4438250`, 25 Oct 2026.
+    - Verdict: **ACCEPT FOR FINAL ATLAS / RELEASE PREPARATION**, not adoption. E30 and E31 accepted.
+    - Recorded results confirmed from the repository records: stage 1 17/17 and 13/13; stage 2 compaction PASS, guards 7/7, fixtures 9/9; hashes `5677d706…cd98` and `89cef171…561a`.
+    - The scripts were not rerun independently in that review.
+    - Limitation stated by the reviewer: the 29 inherited `[RESULT]` occurrences without `[from:]` remain unpaired. This is declared (E30, C16) and does not block release preparation. Full v1.4 grammar compliance is **not** claimed.
+  - **Atlas owner — pending.** Final targeted check of the round-3 diff.
 - Results go to `records/gen/`.
 
 ## 9. What would be notified (no notices sent; PI decision)
