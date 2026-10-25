@@ -2,7 +2,7 @@
 
 **Title:** RTG Genesis Geometry Study — Canonical Scientific Ledger  
 **Date:** 25 October 2026  
-**Document status:** STAGE-2 CANDIDATE — not adopted (corrections of the reconciled v2.8.9 advisory and Methodology v1.4 compaction). Release record: `records/gen/GEN_v2_9_RELEASE_RECORD.md`.  
+**Document status:** ADOPTED — PI, 25 October 2026 (corrections of the reconciled v2.8.9 advisory and Methodology v1.4 compaction; stage 1 and stage 2 reviewed). Adoption record: `records/gen/GEN_v2_9_RELEASE_RECORD.md`.  
 **Scope:** Primitive dyadic/triadic/tetrahedral Genesis algebra, quaternionic metric lift, UV completion, foam network structure, and Regge bridge. Imports settled continuous-branch results from Dyadic and Triadic with inherited scope; routes TDR-G dependencies through explicit bridge requirements only.  
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives statement-level readouts of the theorem-grade results with their hypotheses and scope qualifications (about 1,000 words); a pointer-only list would drop those qualifications.  
 **Supersedes:** `RTG_GENESIS_GEOMETRY_DSN_v2.8.9` (SHA-256 `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc`; tag `gen-v2.8.9`).  
@@ -1295,7 +1295,7 @@ Consumer-declared pins are the consumers' state and are not repinned here. Statu
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the inherited footer chain — are in Appendix A, the header and the footer of v2.8.9 (tag `gen-v2.8.9`, SHA-256 `d143673e…c6fc`), and in the release records named below.
 
-### v2.9 — 25 October 2026 — stage-2 candidate (not adopted)
+### v2.9 — 25 October 2026 — Adopted
 
 - **Basis:** the reconciled v2.8.9 advisory (`records/gen/ATLAS_ADVISORY_GEN_v2_8_9_RECONCILIATION.md`) and the two owner disposition records; PI authorization of 24 October 2026 (21 dispositions; F-1); atlas row checks `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE1.md` (B1–B3) and `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE2.md` (V1, G29-FINAL-01), applied in stage 1.
 - **Corrections [science/scope] (stage 1):** local sourced-junction theorem rescoped to its algebraic content with $\Delta_3>0$; the minimizer clause is recorded in Appendix B (GA-01). Face-lift magnitude renamed $\kappa\to\kappa_f$ (notation only), sign-explicit 9A pole–projector map, $B_*$ declared undefined (GA-02, GA-03, F-1). Scope words (GA-04, GA-05, GA-08, GA-09); one record per `GEN-OPEN-WPHASE` (GA-06); closed items out of active lists (GA-07).
@@ -1385,4 +1385,4 @@ One compact entry per edition (Methodology v1.4 §1). Full records of earlier ed
 
 ---
 
-*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.9 (stage-2 candidate; not adopted).*
+*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.9 (ADOPTED, 25 October 2026).*

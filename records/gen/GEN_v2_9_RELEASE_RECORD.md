@@ -1,10 +1,10 @@
-# Genesis Geometry v2.9 — Release Record (DRAFT)
+# Genesis Geometry v2.9 — Release Record
 
-**Status:** DRAFT. **Not adopted.**
-- Stage 1 is frozen at round 3 (V1 and G29-FINAL-01 applied).
-- Stage 2 (layout-only compaction) has been rebuilt deterministically on it.
-- A targeted readback of the round-3 diff by both reviewers is pending.
-- The adopted Genesis edition remains v2.8.9 (`gen-v2.8.9`, `d143673e…c6fc`).
+**Status:** **ADOPTED — PI, 25 October 2026** ("çalışmayı bu haliyle benimsiyorum").
+- Adopted payload: stage-2 candidate `89cef1713292e889f8c6923e7d391e36668c7909d66e2504fe553037a967561a` (PR #44 at `4438250`).
+- Published file after the status-only publication transform (§10): **`9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac`**.
+- Reviews of round 3 are complete (§8): ChatGPT co-owner ACCEPT; atlas owner ACCEPT FOR ADOPTION.
+- Merge commit and the annotated tag `gen-v2.9` are the PI's (§10). Until the tag exists, `gen-v2.8.9` (`d143673e…c6fc`) is the latest tagged edition.
 
 **Owner session:** Genesis co-owner (Claude), 24–25 October 2026.
 
@@ -206,7 +206,11 @@ A compaction PASS shows mechanical preservation only, not scientific equivalence
     - Recorded results confirmed from the repository records: stage 1 17/17 and 13/13; stage 2 compaction PASS, guards 7/7, fixtures 9/9; hashes `5677d706…cd98` and `89cef171…561a`.
     - The scripts were not rerun independently in that review.
     - Limitation stated by the reviewer: the 29 inherited `[RESULT]` occurrences without `[from:]` remain unpaired. This is declared (E30, C16) and does not block release preparation. Full v1.4 grammar compliance is **not** claimed.
-  - **Atlas owner — pending.** Final targeted check of the round-3 diff.
+  - **Atlas owner — done.** `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE2.md` §7, 25 Oct 2026, 15:25 (PR #50, merged).
+    - Reruns of stage 1 (`5677d706…cd98`, 17/17, controls all caught) and stage 2 (`89cef171…561a`; guards 7/7; fixtures 9/9; compaction PASS) were byte-identical.
+    - The round 2 → round 3 diff is exactly E30 + E31 (+ the Appendix A entry sentence). V2 is settled (PR #52).
+    - Census note: a plain line count over the whole file gives 30, not 29. The extra occurrence is the Appendix B retraction entry ("downgraded from `[RESULT]` to `[OPEN]`"), which lies outside the live region that C16 counts.
+    - Verdict: **ACCEPT FOR ADOPTION.**
 - Results go to `records/gen/`.
 
 ## 9. What would be notified (no notices sent; PI decision)
@@ -220,6 +224,54 @@ A compaction PASS shows mechanical preservation only, not scientific equivalence
 - **Dyadic.** Informational: two v6.4.22 RIDs are imported for the §6.3c note. The v6.4.13 pins are unchanged.
 - **Triadic.** Informational: §6.17 four-case maximum, and the §7.1 ω_sc convention, cited at v1.6.1 as companion readings.
 
-## 10. Adoption
+## 10. Adoption and publication
 
-Not adopted; no adoption, merge or tag authority given (PI, 25 Oct 2026). Order (CONVENTIONS §4): targeted readback of round 3 → release record final → PI decision → publication commit (status lines, §6) → merge commit and tag `gen-v2.9` by the PI.
+**Decision.** PI, 25 October 2026, verbatim: "çalışmayı bu haliyle benimsiyorum". Adopted object: the stage-2 candidate `89cef1713292e889f8c6923e7d391e36668c7909d66e2504fe553037a967561a` on PR #44 at commit `4438250`.
+- Basis: the reviews of §1 and §8, i.e. atlas row checks PR #47 and PR #50 §7 (ACCEPT FOR ADOPTION), and ChatGPT co-owner reviews `5640003252`, `5640109252` and `5643144174`.
+- The bounded methodology migration of §7 (29 unpaired `[RESULT]` occurrences) is adopted as declared. Full v1.4 grammar compliance is not claimed.
+
+**Publication transform.** `evidence/gen/scripts/release_gen_v2_9.py`, assertion-gated: it accepts only the `89cef171…561a` input and changes status lines only.
+- Changed lines (3):
+  - Document status → "ADOPTED — PI, 25 October 2026 (…; stage 1 and stage 2 reviewed). Adoption record: `records/gen/GEN_v2_9_RELEASE_RECORD.md`";
+  - Appendix A heading → "### v2.9 — 25 October 2026 — Adopted";
+  - footer → "*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.9 (ADOPTED, 25 October 2026).*".
+- The Date line already reads "25 October 2026" in the candidate. The script asserts it and leaves it byte-unchanged.
+- Nothing else changes: live body, Appendix B, every other header field and the claim-tag census are byte-identical (gate P6).
+
+| Object | SHA-256 |
+|---|---|
+| Adopted stage-2 candidate (input) | `89cef1713292e889f8c6923e7d391e36668c7909d66e2504fe553037a967561a` |
+| **Published `dsn/RTG_GENESIS_GEOMETRY_DSN.md` (v2.9, 1,388 lines)** | **`9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac`** |
+| `evidence/gen/scripts/release_gen_v2_9.py` | `6e1e62187d480573aa4e6330242802eb33e84f36bf643a81ade98bf3ac0e9416` |
+| `evidence/gen/v2.9/release_check_output.txt` (P1–P6: 6/6 PASS) | `5287135ebbbccb908124e73e9b59478cc76709c8cbcbaf693f110d7702bbf255` |
+| `evidence/gen/v2.9/release_negative_controls_output.txt` (RC1–RC4: 4/4 caught) | `6c4b25a37ff3e7802902d6088e40e1425473f981233b0ed5ec3f9c2dade6347e` |
+| Predecessor `gen-v2.8.9` | `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc` |
+
+**Gates P1–P6, 6/6 PASS:**
+- P1 candidate hash;
+- P2 output = transform;
+- P3 exactly the three declared lines differ, and the Date line equals the decision date;
+- P4 the reverse transform recovers the candidate;
+- P5 no "candidate"/"not adopted" marker in the header status lines, the v2.9 Appendix A heading or the footer;
+- P6 every other line and the claim-tag census are byte-identical.
+
+**Controls RC1–RC4, 4/4 caught:**
+- RC1 wrong input refused;
+- RC2 tampered footer date;
+- RC3 undeclared header edit;
+- RC4 Appendix A heading left as candidate.
+
+**Commands:**
+
+```
+git show 4438250:dsn/RTG_GENESIS_GEOMETRY_DSN.md > cand.md      # 89cef171…561a
+python -I evidence/gen/scripts/release_gen_v2_9.py cand.md dsn/RTG_GENESIS_GEOMETRY_DSN.md "25 October 2026"
+python -I evidence/gen/scripts/release_gen_v2_9.py cand.md dsn/RTG_GENESIS_GEOMETRY_DSN.md "25 October 2026" --check
+```
+
+**For the PI (publication, CONVENTIONS §4.6):**
+1. Merge PR #44 with a **merge commit** (not squash, not rebase).
+2. Create the annotated tag `gen-v2.9` **on that merge commit**, with a message naming the published hash, e.g. "Genesis Geometry v2.9 — adopted by the PI 25 October 2026; dsn/RTG_GENESIS_GEOMETRY_DSN.md SHA-256 9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac".
+3. `BASELINE.md`, GEN row: v2.9, `9178ca2c…00ac`, OWNER: this release record, tag `gen-v2.9` (predecessor `d143673e…c6fc`, `gen-v2.8.9`). Done after the tag, by the PI or the atlas owner.
+
+**After the tag.** The atlas owner verifies tag → merge commit → file hash, then starts the atlas refresh (row check §4 notes). No notices are sent (PI decision); §9 lists what would be notified.
