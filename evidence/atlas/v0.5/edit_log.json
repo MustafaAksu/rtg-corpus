@@ -1,0 +1,614 @@
+[
+ {
+  "id": "AR05-001",
+  "finding": "identity",
+  "where": "title",
+  "old_sha256": "880221a086c21366015e81d33ca0f3fa8161517fc06d9a2095d91351fcf743e4",
+  "new_sha256": "dd0d740f89e0bf0206912cd2d4ddbffc7580bd1e0d562ba90b83d6ef622d0969",
+  "old": "# RTG STATE ATLAS v0.4\n",
+  "new": "# RTG STATE ATLAS v0.5\n"
+ },
+ {
+  "id": "AR05-002",
+  "finding": "identity",
+  "where": "SOURCES header",
+  "old_sha256": "734a8f35ac622a623c34fc9481af6d7478bb6380e610a3e5fc70b894bc19b332",
+  "new_sha256": "206c4e708b11f30268eaa9ad591aa3f0105a2dc46b7ed0f03294756757e3655c",
+  "old": "full identities in evidence/atlas/v0.4/source_manifest.json",
+  "new": "full identities in evidence/atlas/v0.5/source_manifest.json"
+ },
+ {
+  "id": "AR05-003",
+  "finding": "RECOG move",
+  "where": "SOURCES RECOG row",
+  "old_sha256": "a0f7d353264dc978704e06fc40df1378026b8575b0416d02efd8105b027e3fd0",
+  "new_sha256": "8ef87a72f8f44fe1487bed88a285e8e3f9f4cd68deba58127e6bb046f9dd077f",
+  "old": "| RECOG | RTG_RELATIONAL_RECOGNITION_DSN | v0.3.23 | `recog-v0.3.23` | canonical Tier 3 |",
+  "new": "| RECOG | RTG_RELATIONAL_RECOGNITION_DSN | v0.3.24 | `recog-v0.3.24` | canonical Tier 3 |"
+ },
+ {
+  "id": "AR05-004",
+  "finding": "GEN move",
+  "where": "SOURCES GEN row",
+  "old_sha256": "21ee5cfeb23d1247369f7a864f5f3d6e9e6127a7a69906e1aa507c0a3b4ad5aa",
+  "new_sha256": "7281f100541723474f030bd799f0dca3f4eb9cd03d09580e6827c6e90d95e36d",
+  "old": "| GEN | RTG_GENESIS_GEOMETRY_DSN | v2.8.9 | `gen-v2.8.9` | canonical Tier 3 |",
+  "new": "| GEN | RTG_GENESIS_GEOMETRY_DSN | v2.9 | `gen-v2.9` | canonical Tier 3 |"
+ },
+ {
+  "id": "AR05-005",
+  "finding": "identity",
+  "where": "footer",
+  "old_sha256": "da943be1f9dccce6fa0cc989b06e25c673163f32662b09032c3ea8635b120954",
+  "new_sha256": "109b69e6c2a108b6faccc19b75373bd83d69a0452f50c9b1e25df23d785d37df",
+  "old": "*END — RTG STATE ATLAS v0.4. Noncanonical; owner DSNs govern.*",
+  "new": "*END — RTG STATE ATLAS v0.5. Noncanonical; owner DSNs govern.*"
+ },
+ {
+  "id": "AR05-006",
+  "finding": "RECOG move",
+  "where": "D3 header",
+  "old_sha256": "3a08bc89098af80fbeffff352b0c5aa380164d3046f283025fd2c7f08db85d4c",
+  "new_sha256": "32a3e07465901cb12f5ce3ac29a8949d647864099c45ccd84e26fc84376259df",
+  "old": "(owner RECOG = RTG_RELATIONAL_RECOGNITION_DSN v0.3.23;",
+  "new": "(owner RECOG = RTG_RELATIONAL_RECOGNITION_DSN v0.3.24;"
+ },
+ {
+  "id": "AR05-007",
+  "finding": "GEN move",
+  "where": "D4a header",
+  "old_sha256": "8e5f1e0c2bed69cd2dbe6927116190f6594652c9da7913f1e3355da79f0c5797",
+  "new_sha256": "a251cde6423e7f018d2f0b1afd011794cdfbb03585b78531dc79dd3f9b9832ae",
+  "old": "(sources: GEN v2.8.9 primitive/triad/K3/K4/phase parts ·",
+  "new": "(sources: GEN v2.9 primitive/triad/K3/K4/phase parts ·"
+ },
+ {
+  "id": "AR05-008",
+  "finding": "GEN move",
+  "where": "D4b header",
+  "old_sha256": "ed9109815e5874dd12439adaf13d4086ff61b4880528ef480ef2ad35b6b20648",
+  "new_sha256": "4c1af992212af84d5d30be9e8616b4665dff92284f08e2a1ffcd516072079a3a",
+  "old": "(owners: GEN = RTG_GENESIS_GEOMETRY_DSN v2.8.9; UVM = RTG_OPEN_M_DSN v0.7.1",
+  "new": "(owners: GEN = RTG_GENESIS_GEOMETRY_DSN v2.9 (Methodology v1.4 declared with a bounded migration of inherited [RESULT] blocks, GEN.D17); UVM = RTG_OPEN_M_DSN v0.7.1"
+ },
+ {
+  "id": "AR05-009",
+  "finding": "GEN GC-17",
+  "where": "H1",
+  "old_sha256": "cd1a204afdfea182dd8f3dc1b5a6cbcfa462c70efb451f5b7d135e74a7665263",
+  "new_sha256": "8d517bd2b3f76e7a6863c024c2ec49fe453c8f11e1c73a2e8b2751fd047f451c",
+  "old": "persists at OFN, GEN §6.3c C2 and G-20, FMS and ER-2B (OFN.O1, F5, DYAD.X1). Fix in OFN, GEN, FMS, ER-2B.",
+  "new": "persists at OFN, FMS and ER-2B (OFN.O1, F5, DYAD.X1); GEN v2.9 §6.3c G-20 records the imported C^∞ existence (analytic and physical/network realization kept open). Fix in OFN, FMS, ER-2B."
+ },
+ {
+  "id": "AR05-010",
+  "finding": "RECOG A1b/A1c",
+  "where": "H5",
+  "old_sha256": "d99d4015137ebcaff87ad9ca523e9bbf00ecd58e06c6f9f919160359889afd6f",
+  "new_sha256": "8f7d561e184bb5020f50c681765ad92639d26db63843797dc2ee082c742a37b2",
+  "old": "RECOG-THM-A1A-PHASE-EXISTENCE-U proves C_D^ext on U without R9 or INF-1 (D3). Remaining interfaces:",
+  "new": "RECOG-THM-A1A-PHASE-EXISTENCE-U proves C_D^ext on U without R9 or INF-1, and RECOG v0.3.24 adds on the same U the slip-schedule theorem RECOG-THM-A1B-SLIP-SCHEDULE-U (events = lift crossings; gaps {6,7}; digamma schedule) and the infinite-record readout RECOG-RESULT-A1C-RECORD-PHASE-READOUT (D3; NUMGEN informed, no custody change). Remaining interfaces:"
+ },
+ {
+  "id": "AR05-011",
+  "finding": "GEN v2.9",
+  "where": "H6",
+  "old_sha256": "4855e6b447e31d58fdb1ff189084fe7bf9f84879f5249cc116d1a0aa624a653a",
+  "new_sha256": "b254394aece3a04971147d439c381f3cc762efefc3c4c73633863eae2bfb43f8",
+  "old": "H6 D-CONV high — sign/normalization splits in GEN interfaces: sourced-junction THM stated with K₊ while secular equation and GCL-02 use K₋ (GEN.D1); face-lift κ=|m||w| (GEN §6.8) vs κ=m|w| (GEN §6.9) flips the soft-branch label for m<0 (GEN.D2; the atlas labels this face-lift κ as κ_f, GEN writes κ); GEN c_θ^(6)=−119√3/648 is raw/Lie-gauge while the chart coefficient is +89√3/324 — a phase-moment retest should use RECOG CHART-LAWS/R9 (RECOG.R-L6).",
+  "new": "H6 D-CONV med — GEN v2.9 settled the face-lift convention (κ_f := |m||w| defined once in §6.8; 9A written sign-explicitly with sgn(m)) and rescoped the sourced-junction theorem (GEN-THM-SOURCED-JUNCTION: at w=0 both branches coincide, two antipodal stationary solutions; the \"valid minimizer\" clause is retracted to Appendix B). Still open on the owner side: the physical ±ΔM_f branch, energy functional and minimizer at w≠0 (GCL-02; no energy functional in the held archive) and B_* undefined (GEN.D6); the nine proof sources carry custody state (a) missing (GEN.D3). GEN c_θ^(6)=−119√3/648 is marked archival reference only in v2.9 (not imported); a phase-moment retest should use RECOG CHART-LAWS/R9 (RECOG.R-L6)."
+ },
+ {
+  "id": "AR05-012",
+  "finding": "GEN F-1",
+  "where": "H8",
+  "old_sha256": "09ab6c20a6ee595c2f9778f4c981df62ee4c6247728c0b09a3c1d71c63e1db45",
+  "new_sha256": "fa4a19e48a1446da8cd4055b053a22f3244b9da5c04d7cd470024f58d2376601",
+  "old": "· GEN face-lift κ (atlas label κ_f) · RRF-CN05 κ ·",
+  "new": "· GEN face-lift κ_f (owner notation, GEN v2.9 §6.8) · RRF-CN05 κ ·"
+ },
+ {
+  "id": "AR05-013",
+  "finding": "GEN F-1",
+  "where": "RRF.F5",
+  "old_sha256": "bc8a633c45e2208b8f8b93c5e9f12839cd9506901bd5e121fe08f9251efc0fb3",
+  "new_sha256": "a0b87795ab467dc96bba7668f785a3198228948d67ee04b03020dac5066d52f8",
+  "old": "GEN face-lift κ (atlas label κ_f), DYAD backbone κ (F1).",
+  "new": "GEN face-lift κ_f (owner notation, GEN v2.9 §6.8), DYAD backbone κ (F1)."
+ },
+ {
+  "id": "AR05-014",
+  "finding": "GEN F-1",
+  "where": "D1 kappa line",
+  "old_sha256": "664bd16153ba695ffd269edaf9df2c356c79e2d5ca210538e48b42bcea8de69e",
+  "new_sha256": "b3397d0bccf00a7654c54f8e0506887d015a9de002f4578fbcc5438ecb5e4d52",
+  "old": "· GEN face-lift κ (atlas label κ_f) · RRF-CN05 κ (units) ·",
+  "new": "· GEN face-lift κ_f (owner notation, GEN v2.9 §6.8) · RRF-CN05 κ (units) ·"
+ },
+ {
+  "id": "AR05-015",
+  "finding": "PROG κ table",
+  "where": "D1 kappa line pointer",
+  "old_sha256": "9997d2c8f5aa9fade5a958024c2e685bd8d67657b2552eb10a1fa08b811a7d17",
+  "new_sha256": "7bbbe749c8e6984b525c6e58c097bde896794617489f70150272c1c2acdc9dee",
+  "old": "owner-side navigation table: Programme v1.3 §8.2 (11 rows)",
+  "new": "owner-side navigation table: Programme v1.3 §8.2 (11 rows; no κ_f row yet, PROG.G8)"
+ },
+ {
+  "id": "AR05-016",
+  "finding": "PROG κ table",
+  "where": "D1.L5 PROG.G8",
+  "old_sha256": "d774b7e50a79b65b620d04b3d0c7f6e953f6d25f1871881e0c35e1d68305ea59",
+  "new_sha256": "a6e9aee71567212842fb827994119a672ebdfe41674b0ce9c42c80bd43485d60",
+  "old": "PROG.G6 D-STALE (owner-recorded): Programme v1.3 §9.2 records the maintenance sequence as executed for OFN, Legacy, Dyadic, Number Genesis, Genesis, Triadic, OPEN M, RECOG and not executed for Pre-Legacy, TDR-G, DZT, AZ; Pre-Legacy (v0.8, June) still carries v0.5/v0.3/v1.1/v1.2 pins (bears on PREL.P1).\n",
+  "new": "PROG.G6 D-STALE (owner-recorded): Programme v1.3 §9.2 records the maintenance sequence as executed for OFN, Legacy, Dyadic, Number Genesis, Genesis, Triadic, OPEN M, RECOG and not executed for Pre-Legacy, TDR-G, DZT, AZ; Pre-Legacy (v0.8, June) still carries v0.5/v0.3/v1.1/v1.2 pins (bears on PREL.P1).\nPROG.G8 D-SCOPE (atlas reading of Programme v1.3 §8.2 against GEN v2.9 §6.8 and OFN §11.4 / RRF §6.2a): the κ table has no row for GEN's face-lift κ_f (owner symbol since v2.9), and its first row calls γ≡κ \"an atlas reading, not an owner statement\" although OFN and RRF state it — the latter already recorded by the Programme owner as E-P13-1 (records/programme/ post-release note). Both for the next Programme edition.\n"
+ },
+ {
+  "id": "AR05-017",
+  "finding": "GEN GC-17",
+  "where": "OFN.O1",
+  "old_sha256": "291fde577d42af54237d343161d3008152341d6a064b95ef880110ab602c5c52",
+  "new_sha256": "a0c677de44fb2e482a292e3fb0a909c86f312480ad75207118dd69722b2c8a99",
+  "old": "GEN v2.8.9 §6.3c C2 (\"existence of such Φ not asserted\", G-20) and OFN do not. Fix: OFN, GEN.",
+  "new": "GEN v2.9 §6.3c G-20 records the imported C^∞ existence (analytic case Dyadic OPEN 20; physical/network realization open); OFN does not. Fix: OFN."
+ },
+ {
+  "id": "AR05-018",
+  "finding": "GEN GC-17",
+  "where": "DYAD.X1",
+  "old_sha256": "1f9ecc0c3d56d8225709c6d42abf5549882a8030151ecda1b782bb1eaabe1878",
+  "new_sha256": "1a6c9df4acce944c620e4aee5ca5d99d69cf295c67691a88f64e1e9227427dea",
+  "old": "is exactly GEN §6.3c instance C2's hypothesis, recorded there as \"existence not asserted\"; C2 is non-vacuous in C^∞. GEN v2.8.9 §6.3c and OFN v0.10 §5.5.4 do not record it;",
+  "new": "is exactly GEN §6.3c instance C2's hypothesis; C2 is non-vacuous in C^∞. GEN v2.9 §6.3c records it (G-20 existence note; scoped DYAD v6.4.22 import of this RID and DYAD-THM-SMOOTH-EMBEDDING); OFN v0.10 §5.5.4 does not;"
+ },
+ {
+  "id": "AR05-019",
+  "finding": "GEN GC-17",
+  "where": "D2 SMOOTH-EQUIVARIANT-CHART node",
+  "old_sha256": "a4b79607e9265b44eef2e20d99dffc1d6fb5f476a25dd7bf34076c4ffcd4fbd8",
+  "new_sha256": "46196863a991cb02574b32349af67cea8016db50fd8a36f96bb86cb199b1dc14",
+  "old": "meeting the hypothesis of GEN v2.8.9 §6.3c instance C2 (Φ(0)=0, DΦ(0)=I, ΦTΦ⁻¹ commuting with A); whether GEN C2 or OFN class C uses it is their owners' decision;",
+  "new": "meeting the hypothesis of GEN §6.3c instance C2 (Φ(0)=0, DΦ(0)=I, ΦTΦ⁻¹ commuting with A); GEN v2.9 imports it for the G-20 existence note (scoped, C^∞ local germs); whether OFN class C uses it is OFN's decision;"
+ },
+ {
+  "id": "AR05-020",
+  "finding": "GEN move",
+  "where": "D2 BRIDGE-EXPORT-CONTRACT node",
+  "old_sha256": "79e64bc41af5724d5fcc731ad32d1ae1668982f044f8bff2b9f6950edbc6ab33",
+  "new_sha256": "6554d97f3d0f82bd98b32d0a9c0151a1a8e6c2d90330780c7f64e6e5ed519166",
+  "old": "(4√3/3)²=16/3 = GEN v2.8.9 §6.3 leading",
+  "new": "(4√3/3)²=16/3 = GEN §6.3 leading"
+ },
+ {
+  "id": "AR05-021",
+  "finding": "RECOG move",
+  "where": "D3 A1a node locator",
+  "old_sha256": "086d1c4f5c74202160811352916932e4d684a8205bb9505b1c79bd410fa613ba",
+  "new_sha256": "36ad84e5e5c86297f4d6461ca6457bcd65efd2227d46ba96e11d3e75d075a41f",
+  "old": "@RECOG v0.3.23 §6.13b",
+  "new": "@RECOG §6.13b"
+ },
+ {
+  "id": "AR05-022",
+  "finding": "RECOG A3",
+  "where": "D3 A3 nodes",
+  "old_sha256": "52fd4205d4632515ede9179666784fd371c6471f6c55a3cdcc00b8ce5c1b7134",
+  "new_sha256": "91ea09313e8c75404f8e4374d12b8b68ec642e0065e4ee4678c249f14b9750d9",
+  "old": "*RECOG:discriminant ALG | sc: primitive chart | c=cosη: tr J=2−c, det J=1+(e^ρ−1)c, Δ_J=c(c−4e^ρ); ρ>−ln4: sign Δ=−sign c (rotational cosη>0, stretching cosη<0); second zero branch cosη=4e^ρ only for ρ≤−ln4; on cosη=0: det J=1, Δ_J=0, J=[[1,0],[e^ρ,1]] nontrivial unipotent | ¬ intrinsic conjugacy class off fixed points (SG-R3) | FAIL \"cosη=0 unique global type-change surface\" (RECOG-ALG-QUADRATURE-GLOBAL) | >R4 | @§6.5\n",
+  "new": "*RECOG:discriminant ALG | sc: primitive chart | c=cosη: tr J=2−c, det J=1+(e^ρ−1)c, Δ_J=c(c−4e^ρ); ρ>−ln4: sign Δ=−sign c (rotational cosη>0, stretching cosη<0); second zero branch cosη=4e^ρ only for ρ≤−ln4; on cosη=0: det J=1, Δ_J=0, J=[[1,0],[e^ρ,1]] nontrivial unipotent | ¬ intrinsic conjugacy class off fixed points (SG-R3) | FAIL \"cosη=0 unique global type-change surface\" (RECOG-ALG-QUADRATURE-GLOBAL) | >R4 | @§6.5\nRECOG-ALG-QUADRATURE-TYPING ALG | sc: postulated T; dyad observables (ρ,η) of the lifted primitive chart; v0.3.24 | 𝒬={Re Ĉ_pole=0}={cosη=0} (swap-invariant as a set; branches η=±π/2 exchanged): (1) primitive-chart typing — on 𝒬 J=[[1,0],[e^ρ,1]], nontrivial unipotent shear with 1-eigenspace ∂_η; (2) comparator-geometric content — ρ(Tx)−ρ(x)=−Im Ĉ_pole(x), so |Δρ|≤1 with equality exactly on 𝒬 (extremal one-step radial transfer); ∂_η[ρ∘T−ρ]=−Re Ĉ_pole, zero exactly on 𝒬; relative to the multiplicative Haar form Ω=dρ∧dη on the RRF wrapped native ratio ζ=e^{ρ+iη} (S*Ω=Ω; derived, model-intrinsic, transported with chart changes, not an RRF-registered observable, no OPEN-A bearing) 𝒬 is the Ω-area-neutral locus | ¬ chart-invariant type (explicit charts change it); ¬ periodic-orbit multiplier signature forced | answers R4 sub-item 1 in reframed form (R4 stays ACTIVE) | cert RECOG-ART-A3-QUADRATURE-TYPING (exact sympy gates Q1–Q5, controls NC1–NC2) | @§6.5\nRECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY ALG | sc: postulated T; wrapped cylinder; v0.3.24 | on Σ={Ĉ_pole=±1}={sinη=0} (S-invariant as a set) ρ is preserved and η↦η+e^ρ−1, so the wrapped-periodic orbits inside Σ are exactly e^ρ−1=mπ, m∈ℤ_{≥0}: m=0 → P₁,P₂; m=2k → the winding fixed points ((tr,det)=(1,1+2πk) at η=0, (3,1−2πk) at η=π); m odd → period-2 orbits (ln(1+mπ),0)↔(ln(1+mπ),π) alternating Ĉ_pole=+1/−1, M₂=J_{(ρ_m,π)}J_{(ρ_m,0)}, (t₂,d₂)=(1,1−m²π²), hyperbolic (Δ=4m²π²−3>0), orientation-reversing; periodic for the wrapped map only (lift advances 2mπ); none in the zero-winding local sector; Σ∩𝒬=∅ | complete inside Σ; ¬ completeness outside Σ (R4 inventory: NUM sampled list only) | cert RECOG-ART-A3-QUADRATURE-TYPING gate Q6 (symbolic m,k) | @§6.3\n"
+ },
+ {
+  "id": "AR05-023",
+  "finding": "RECOG A1b/A1c",
+  "where": "D3 A1b/A1c nodes",
+  "old_sha256": "aa47b043dec27e93487629e192005b79797e22859e3ebd7b87388ad4d447e06d",
+  "new_sha256": "e64e0855b0c095f6a235c0fbc3809074e1025c911db92904e3c0b1fe817e2d2b",
+  "old": "*RECOG:A1a-scope DEF | (i) (a) R9-free on the overlap; RECOG-THM-A1A-PHASE-EXISTENCE-U R9/INF-1-free on explicit U; (ii) no Dyadic domain widened, no Dyadic grade changed, INF-1 gains no radius; (iii) nothing transferred to C_W^(h) or the R9 incompleteness corollary; (iv) C_D start-dependent, not universal; (v) Dyadic C4 acceptance = review, not owner adoption, no Dyadic RID; (vi) no event/token schedule, R6 untouched | @§6.13b\n",
+  "new": "*RECOG:A1a-scope DEF | (i) (a) R9-free on the overlap; RECOG-THM-A1A-PHASE-EXISTENCE-U R9/INF-1-free on explicit U; (ii) no Dyadic domain widened, no Dyadic grade changed, INF-1 gains no radius; (iii) nothing transferred to C_W^(h) or the R9 incompleteness corollary; (iv) C_D start-dependent, not universal; (v) Dyadic C4 acceptance = review, not owner adoption, no Dyadic RID; (vi) no event/token schedule, R6 untouched | @§6.13b\nRECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b\nRECOG-RESULT-A1C-RECORD-PHASE-READOUT RES[from THM] | sc: x₀∈U; the complete infinite token record ℛ(x₀)=(n₀;g₁g₂…) in F2(b) conventions; v0.3.24 | the record determines L(x₀)=lim_k[τlog M_k−(k−1)π/3] and hence Ψ_{W,∞}=Ψ_{z,∞} mod 2π, with no state datum and without the value of a | ¬ reconstruction of a, M_W or M(z₀) from L (statement about the method, not a non-recoverability theorem); finite prefix with a known: window of width 2|ε_k| (a-priori envelope, →0), with a unknown no window (NUM least-squares (â,L̂) ≤3.5% on illustration runs, no guarantee); ¬ R_ind downgrade of R9's carrier M (retrospective reconstruction is not write-through, SG-R6); ¬ carrier downgrade | <RECOG-THM-A1B-SLIP-SCHEDULE-U | >R6 sub-items A1c-Q1′ (injectivity of x₀↦ℛ(x₀) on U, open), A1c-decoder | @§6.16e\n"
+ },
+ {
+  "id": "AR05-024",
+  "finding": "RECOG A3",
+  "where": "D3 R4",
+  "old_sha256": "04f2dd4668c8d3da46c75084ffd516ec332403d3f6c364ef9fe216c58e1b5516",
+  "new_sha256": "2d06fa4508bffc9f3615952ed2db784c0a0dae3cd5d8ded8d41d0de4f77c1a33",
+  "old": "RECOG-OPEN-TYPE-CHANGE (R4) ACTIVE | coordinate-free counterpart of cosη=0 (periodic-orbit multipliers in (t,d)-plane or comparator geometry); global periodic-orbit inventory beyond P₁,P₂ (none in small punctured P₁ sector; winding fixed points recorded)",
+  "new": "RECOG-OPEN-TYPE-CHANGE (R4) ACTIVE | sub-item 1 answered in reframed form (v0.3.24): the chart-free content of cosη=0 is comparator-geometric (extremal radial transfer; Ω-area-neutral locus relative to the declared Haar form), the one-step type is not chart-invariant, no periodic-orbit multiplier signature is forced (RECOG-ALG-QUADRATURE-TYPING) · global periodic-orbit inventory beyond P₁,P₂: complete inside the pole stratum Σ={Ĉ_pole=±1} (RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY: e^ρ−1=mπ; new odd-m period-2 family), outside Σ a NUM sampled list only; none in the small punctured P₁ sector"
+ },
+ {
+  "id": "AR05-025",
+  "finding": "RECOG A1c",
+  "where": "D3 R6",
+  "old_sha256": "417b5ee994ab74ec66036ceaf46aea65d5e4bcf546e5958759200ea44141d347",
+  "new_sha256": "8c5ac7126caf738e93f3cd90e4dfe26a571e4e4fe2929bb830f9203e76a64d88",
+  "old": "HYPs: memory-version event reading, RECOG-OPEN-INTERSECTION",
+  "new": "HYPs: memory-version event reading, RECOG-OPEN-INTERSECTION · OPEN sub-items (v0.3.24): A1c-Q1′ — is x₀↦ℛ(x₀) (start state → complete token record) injective on U? neither answer established (the cell's local-nonconstancy argument is SESSION, conjectural); A1c-decoder — finite-prefix window for (a,L) with a unknown, and a record-only majorant for the known-a window via Q_m≤Q₀/(1+½Q₀m) and the A1a tail estimates"
+ },
+ {
+  "id": "AR05-026",
+  "finding": "RECOG v0.3.24",
+  "where": "D3 export protocol",
+  "old_sha256": "7df8672106e3444c6268ac98d9906c4911560826344f83a0a060d4fa9ab18bfd",
+  "new_sha256": "82eae2578c9535436389563b65003965afd1b8f32fb550c6011bbe50c5e694aa",
+  "old": "RECOG-THM-A1A-PHASE-EXISTENCE-U at explicit U with its nonclaims;",
+  "new": "RECOG-THM-A1A-PHASE-EXISTENCE-U, RECOG-THM-A1B-SLIP-SCHEDULE-U and RECOG-RESULT-A1C-RECORD-PHASE-READOUT at explicit U with their nonclaims (no decoding of a, no event mechanism, no R_ind downgrade); RECOG-ALG-QUADRATURE-TYPING and RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY at their scopes;"
+ },
+ {
+  "id": "AR05-027",
+  "finding": "RECOG MNT",
+  "where": "RECOG.R-P3 retired",
+  "old_sha256": "c7f78bde883022d1278cbd9575617f8703eea1cc3d694566c9d2017de32ba36a",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "RECOG.R-P3 D-SCOPE | §7.1/§7.2 audit tables retain historical pins and receipt wording under the owner live-file exception. These are not current adoption/notice assertions; current §7 claim imports and §7.3 consumer records govern their stated use. A reader must not silently upgrade RRF/RER/OFN historical pins to RECOG v0.3.23.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-028",
+  "finding": "RECOG MNT",
+  "where": "RECOG.R-T1 retired",
+  "old_sha256": "b4db9d7beac0c1f11c33524e276fa97c905a92d39941973e78290be516bca10e",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "RECOG.R-T1 D-SCOPE | retained R8/R9 specifications, former R11 [OPEN] sub-items and R7 closed Active sub-items are historical under the explicit owner exception. Current census: R1/R3 PARTIAL; R4/R5/R6 ACTIVE; R2/R7–R11 CLOSED. Residual presentation risk is mistaking the retained specifications for live research obligations; no scientific closure is reversed.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-029",
+  "finding": "RECOG v0.3.24",
+  "where": "RECOG.R-D1",
+  "old_sha256": "1aed0eac553683c00141f92ed77adfd2d61bd5731e6ea13d7b9a2196c0e0db91",
+  "new_sha256": "2dd18d7320a129bfee882bc0da0c7ec71bf8ef27db5c52502ccd776ae5cae522",
+  "old": "The reciprocal-amplitude and explicit-U existence theorems have in-ledger written proofs.",
+  "new": "The reciprocal-amplitude and explicit-U existence theorems have in-ledger written proofs; the v0.3.24 artifacts RECOG-ART-A1B-SIXSTEP-DEFICIT and RECOG-ART-A3-QUADRATURE-TYPING are in evidence/recog/ with hashes (naming checked, not rerun here)."
+ },
+ {
+  "id": "AR05-030",
+  "finding": "GEN F-1",
+  "where": "F1",
+  "old_sha256": "7b8a6fb8c211842c2d26d98aae4cb5b46235b324c570939e127b8d60713d808b",
+  "new_sha256": "d2a442a2031a86fc9bff787e978bdfe2be608ec4cabd2c1cf0e6717a21caea12",
+  "old": "Plus face-lift κ (atlas label κ_f), κ_RTG.",
+  "new": "Plus face-lift κ_f (owner notation since GEN v2.9), κ_RTG."
+ },
+ {
+  "id": "AR05-031",
+  "finding": "GEN F-1",
+  "where": "D4a kappa line",
+  "old_sha256": "5776f07aa5ace7dfae1fa97b51c5b3299f412d9d25254f11f632b3b0f082d8d3",
+  "new_sha256": "859430310ebe84cf87411f67c9b1e743619fd4e56508e44ebdc74d9daf22f792",
+  "old": "vs GEN face-lift κ=|m||w| (D4b; atlas label κ_f) vs κ_RTG (D4b).",
+  "new": "vs GEN face-lift κ_f=|m||w| (D4b; GEN v2.9 §6.8) vs κ_RTG (D4b)."
+ },
+ {
+  "id": "AR05-032",
+  "finding": "GEN GC-17",
+  "where": "F5",
+  "old_sha256": "1651fafb4df3ce3aad2405ade551bdcbfd1b6d76dffc62d09dc46ec06e341fe9",
+  "new_sha256": "dc90517e15aa591c919eaef6ff396c151f301026480029c1ddff9ede12e44e17",
+  "old": "Also makes GEN transported instance C2 non-vacuous in C^∞ (GEN.D15).",
+  "new": "Also makes GEN transported instance C2 non-vacuous in C^∞ — recorded by GEN v2.9 §6.3c (G-20 existence note)."
+ },
+ {
+  "id": "AR05-033",
+  "finding": "GEN GB-13",
+  "where": "F9 retired",
+  "old_sha256": "6bff5dc72c0916094e617f84c91d9c0a05df636f99422a3d7dff5b3a55047313",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "F9 D-LINK (GEN.D10 corrected by TRIAD.T8): GSPLIT ΔE_c^birth=⅓Q_c²+¾Q_sQ_c = GEN-THM-DELTA-QC standalone at I_sc=0 (¼ω²+5/16ω²=9/16ω²=¾Q_sQ_c via ω²=4/3Q_sQ_c). TRIAD CN-03 records it; missing only a GEN-side lemma line tying GEN-OPEN-WPHASE-GSPLIT to GEN-THM-DELTA-QC.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-034",
+  "finding": "GEN GB-14",
+  "where": "F10 retired",
+  "old_sha256": "47e5a7df3c457e65f84b5f0d4a17a9290d1817e0f5e802af9c4cc10a55aaff0d",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "F10 D-SCOPE (TRIAD.T6): GEN-CAND-APEX-T6U quotes only shear/vector R_apex=√21/64 (\"≈20× below √2\"); TRIAD headline is four-case max R=√14/16, shortfall >6×. GEN should cite the table or label the case.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-035",
+  "finding": "GEN GB-11",
+  "where": "F14",
+  "old_sha256": "9576b0812bf3c5ea7a258c2809b8f2be3d90a91634b41b09f58b7632292998cc",
+  "new_sha256": "9a9792de4996a0b22ba023e838c4382c49752b765d3479afb9b9f25831801ef7",
+  "old": "and GEN PURE-CHIRAL, PHI-2TO3, G2-CHRONO, P4-PRIMITIVE, PHASE-AVG, PHASE-CLOSURE (\"proof-source reference required\"; load-bearing: P4 feeds the cascade chain; QH-NOGO, FACE-LIFT, SOURCED-JUNCTION → D4b);",
+  "new": "and GEN PURE-CHIRAL, PHI-2TO3, G2-CHRONO, P4-PRIMITIVE, PHASE-AVG, PHASE-CLOSURE (GEN v2.9 §8 custody state (a) missing, clause key [custody-A], EV-NOT-RERUN; held by neither Genesis co-owner session and not among the records placed at upload/gen-records/; load-bearing: P4 feeds the cascade chain; QH-NOGO, FACE-LIFT, SOURCED-JUNCTION → D4b);"
+ },
+ {
+  "id": "AR05-036",
+  "finding": "GEN GA-08",
+  "where": "F15 retired",
+  "old_sha256": "fdfb80d7a9ff4b752ef37b9d1e94497aad96f983d6b4a29d30cbb078b7bc3393",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "F15 D-LINK (GEN.D13): two phase-moment sets, §6.6 ℳ_phase (6 named) vs OPEN 1A (13 trigonometric); no map.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-037",
+  "finding": "GEN GB-12",
+  "where": "F16 retired",
+  "old_sha256": "b54216a0628fb427128baf9c0418af0e9e2de1d4aeef32da3c3d6269db8a5c46",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "F16 D-PIN (GEN.D9): GEN §6.2 imports c_θ^(6)=−119√3/648 while §7 says DYAD-ALG-LIEGAUGE-NORM \"not imported\"; add import or drop value.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-038",
+  "finding": "GEN GA-09",
+  "where": "F17 retired",
+  "old_sha256": "859f128ac27161f00f9c672ec64938ba33750e5de488d1c9143998b950eee4e4",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "F17 ! D-CONV wording (GEN.D16): §1 \"no claim that passive representation change explains the sign\" vs §6.5 \"NF healing is a coordinate statement, not a primitive-amplitude statement\" — compatible only as \"different objects\".\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-039",
+  "finding": "GEN GA-06",
+  "where": "F19 retired",
+  "old_sha256": "4c9da86f3baeadf97697852e83eb884f323413594819d4f5653f9e1b7832423c",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "F19 D-RID (GEN.D11): RID GEN-OPEN-WPHASE heads two §2 entries (corrected block + stub \"OPEN 5/2B\").\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-040",
+  "finding": "GEN GA-07",
+  "where": "F20 narrowed",
+  "old_sha256": "66c1c3e778512a2ca16b814c0f30d052328446b099331e8c924da8969be5311f",
+  "new_sha256": "d6bcf49ab9a0f58ac8a945c7d487aed4efe758c6cd7239934f0cebbe5358cd73",
+  "old": "F20 D-STALE (GEN.D12, TRIAD.T9): GEN OPEN 1T CLOSED but listed as frontier 1b; OPEN 2 lists \"done v2.2\" under Active; TRIAD §1 says CN-01–CN-05 \"consumer acceptance pending\" while §7.4 records dispositions.",
+  "new": "F20 D-STALE (TRIAD.T9): TRIAD §1 says CN-01–CN-05 \"consumer acceptance pending\" while §7.4 records dispositions."
+ },
+ {
+  "id": "AR05-041",
+  "finding": "GEN GC-17",
+  "where": "D4a TRANSPORTED node",
+  "old_sha256": "2bc420d8c96d387b98e0c79951cf484938070d5b74b832d9b8559d8aa76347a3",
+  "new_sha256": "dbeeeaa66a4b119e3cbee4da7e4ebcfc1fb3ec999efb8e1fc58f5a2e0f03f1fb",
+  "old": "¬ physical model/carrier/closure/γ (incl. class C), ¬ existence of exactly transported realization, ¬ formal series,",
+  "new": "¬ physical model/carrier/closure/γ (incl. class C), ¬ existence of an analytic exactly transported realization or any physical/network-level realization (the C^∞ mathematical existence is imported: DYAD-THM-SMOOTH-EQUIVARIANT-CHART, GEN v2.9 §6.3c G-20 note, scoped DYAD v6.4.22 import), ¬ formal series,"
+ },
+ {
+  "id": "AR05-042",
+  "finding": "GEN GB-13",
+  "where": "D4a GSPLIT node",
+  "old_sha256": "0d31a1ff58387f968d92e5b9770bfaa88798a10be8e4098195a7892c526c3133",
+  "new_sha256": "77b520e90feb04442adcf5832a04b9ece6d47bbec69a08a1543580ee3f966af0",
+  "old": "≡ GEN-THM-DELTA-QC standalone at I_sc=0 (L5 F9) | @GEN§2",
+  "new": "≡ GEN-THM-DELTA-QC standalone at I_sc=0 (GEN v2.9 §2 specialization line, under the RTG canonical B-metric convention for ω_sc; not a UV energy statement) | @GEN§2"
+ },
+ {
+  "id": "AR05-043",
+  "finding": "GEN GB-14",
+  "where": "D4a T6U node",
+  "old_sha256": "49a9eac229c9f815282a9c170080409c7c1e6875d324a8166a8934c7f4716ff4",
+  "new_sha256": "4f0519ea55f8638a54172a47659eca920be53697f68fcbd3764bd9fb30708863",
+  "old": "— shear/vec case only, L5 F10) | @§6.17",
+  "new": "— shear policy, vector-seed reading; GEN v2.9 §8 labels the case and cites the four-case maximum √14/16) | @§6.17"
+ },
+ {
+  "id": "AR05-044",
+  "finding": "GEN GA-08",
+  "where": "D4a moment-closure node",
+  "old_sha256": "d02f233b35f3a29a06a5a1795027eda55f27b980adb843fd2ce65ff35e5e2b53",
+  "new_sha256": "4321cff5b680ab51f68410bf502a1add14e70f9b7b3633f5bc5e57761e0999e1",
+  "old": "cascade ⇔ ⟨𝒫₄⟩>0 | ! L5 F15 | @§6.6",
+  "new": "cascade ⇔ ⟨𝒫₄⟩>0 | GEN v2.9: coarse closure ansatz, not a basis of the 13-moment space (no map asserted) | @§6.6"
+ },
+ {
+  "id": "AR05-045",
+  "finding": "GEN GB-12",
+  "where": "D4a c_theta node",
+  "old_sha256": "4fa8adb9f699289c7a4b0ff857a6c4d5489bbde310a55addb98d58f0a2848ac4",
+  "new_sha256": "64cbe8d0872d2f04056f178c599a9bd59601bfc41ac638a6094f5bb9bac7b77d",
+  "old": "c_θ^(6)=−119√3/648 [Lie strict-kernel] ! L5 F16",
+  "new": "c_θ^(6)=−119√3/648 [Lie strict-kernel; GEN v2.9 §6.2: archival reference only, not imported, not a chart or phase-moment input]"
+ },
+ {
+  "id": "AR05-046",
+  "finding": "GEN GA-09",
+  "where": "D4a sign-split node",
+  "old_sha256": "9850216e8b4288ceb1df309d6de9edd6f8ad5ca592b93a30f8449e3f3d0df289",
+  "new_sha256": "93ff5a1c3cf0765aca3d8b23698ba7641a90cd8936ea68ba453616feaf60a782",
+  "old": "| ¬ passive representation change explains it (Candidate B deferred) | ! L5 F17 | @§1,§6.5",
+  "new": "| ¬ passive representation change explains it (Candidate B deferred); different objects in different declared constructions, no verified passive conjugacy (GEN v2.9 wording) | @§1,§6.5"
+ },
+ {
+  "id": "AR05-047",
+  "finding": "GEN GA-08",
+  "where": "index phase moments",
+  "old_sha256": "5328a5f0237e477e0371706d3b210c6520966d652f3fcf1a59a8b9a797b68dc7",
+  "new_sha256": "97c4bda232bcf397553202ee818d4eda311438521877547a7852288d7ae350be",
+  "old": "*GEN:moment-closure (6 moments) (D4a; no map between them, GEN.D13)",
+  "new": "*GEN:moment-closure (6 moments) (D4a; GEN v2.9 §6.6: the six are a coarse closure ansatz, not a basis of the 13-moment space, no map asserted)"
+ },
+ {
+  "id": "AR05-048",
+  "finding": "GEN GA-04",
+  "where": "D4b 9-downgrades node",
+  "old_sha256": "beb59c086695dbcfdd92d390fba4bb702a787e378252bf2ef1fe432a1ed68ab4",
+  "new_sha256": "32c2bdd6c34c554cae3a0379924b065e5dbf4b6e03d68d197a294731669d6a44",
+  "old": "exact scalar susceptibility derived | >SG-13 | ! GEN.D4 | @GEN§6.9",
+  "new": "exact scalar susceptibility derived; projection nontriviality: generic under the scalar-M ansatz (off the residue zero set), OPEN beyond it (GEN v2.9 scope words) | >SG-13 | @GEN§6.9"
+ },
+ {
+  "id": "AR05-049",
+  "finding": "GEN GA-05",
+  "where": "D4b MSPIN2-ANISO node",
+  "old_sha256": "75b81e7f58ca5fa2302411eea2b73c2aad31ce5ff6c17a65289e043319636327",
+  "new_sha256": "c580b7e29f728b795c2bc0e0a0fe8b7da8b17f687220917bb2a594821d263146",
+  "old": "| ≡ UVM-9C | ! GEN.D14 | @GEN§2,§6.9",
+  "new": "| ≡ UVM-9C | @GEN§2,§6.9"
+ },
+ {
+  "id": "AR05-050",
+  "finding": "GEN GA-04",
+  "where": "D4b OPEN-GEN-II-9 frontier",
+  "old_sha256": "be599d7bc04edc0eb37641e5a01039e57888ed0466f340cc45dd1b9ca4ba09aa",
+  "new_sha256": "d0837cc605fa07c57d1b4b25f446331cef68ad186f591f97506e4845c8651099",
+  "old": "sub-step 3 (projection nontriviality) closed only under scalar-M (GEN.D4)",
+  "new": "sub-step 3 (projection nontriviality) closed only under the scalar-M ansatz, OPEN beyond it (scope words GEN v2.9)"
+ },
+ {
+  "id": "AR05-051",
+  "finding": "GEN F-1/GA-02/GA-03",
+  "where": "D4b FACE-LIFT",
+  "old_sha256": "ece61ef659ae6aa72ffed7313298ab6f29148331c1b795ac88dcdf3091b519a0",
+  "new_sha256": "25d61636e5cee4de1c48a81b9d5c35cf343ff705cbed70e004017128c50d3fea",
+  "old": "FACE-LIFT GEN-ART-FACE-LIFT ALG | ΔM_f(w)=m[[Im w,−Re w],[−Re w,−Im w]], m=2Q_sB_*, (ΔM_f)²=κ²I, κ=|m||w| (GEN writes κ; the atlas labels this face-lift κ as κ_f elsewhere); a(φ)=r_φᵀΔM_f r_φ=m(Im w cos2φ−Re w sin2φ), |a|≤κ | proof source missing (L5 GEN.D3) | B_* undefined (GEN.D6) | ≡ UVM-R2 2θ law | @GEN§6.8",
+  "new": "FACE-LIFT GEN-ART-FACE-LIFT ALG | ΔM_f(w)=m N(w), N(w)=[[Im w,−Re w],[−Re w,−Im w]], m=2Q_sB_*, (ΔM_f)²=κ_f²I, κ_f:=|m||w|≥0 (GEN v2.9 §6.8 DEF: face-lift magnitude, distinct from the birth κ of §6.1, κ_phys, κ_RTG and the γ of §6.3b–c); for w≠0 N̂=N/|w|, ΔM_f=sgn(m)κ_f N̂; a(φ)=r_φᵀΔM_f r_φ=m(Im w cos2φ−Re w sin2φ), |a|≤κ_f | proof source [custody-A] (GEN.D3); algebra re-derived independently [indep-AC] gates K1, S3 | B_* undefined and its sign unknown — owner declaration (GEN.D6) | ≡ UVM-R2 2θ law | @GEN§6.8"
+ },
+ {
+  "id": "AR05-052",
+  "finding": "GEN F-1/GA-02",
+  "where": "D4b kappa line",
+  "old_sha256": "b064682f54ed707d49d349c45cef6db8ed60664bfdf9ec57b792d81e8dc40e55",
+  "new_sha256": "8ea99490899fe47af8093f3acec8b2aa6194c7612d2bc3e5c317c0c94606bacb",
+  "old": "κ (birth coefficient vs face-lift κ=|m||w| (GEN §6.8; atlas label κ_f) vs scalar-M κ=m|w| (GEN §6.9; sign: GEN.D2) vs κ_RTG=𝒢_e/J_e",
+  "new": "κ (birth coefficient vs face-lift κ_f=|m||w| (GEN v2.9 §6.8; 9A uses sgn(m)κ_f) vs κ_RTG=𝒢_e/J_e"
+ },
+ {
+  "id": "AR05-053",
+  "finding": "GEN GB-10",
+  "where": "D4b QH-NOGO",
+  "old_sha256": "feec5351141fee10cec79efc4ddce8be74ee5bd18796f757617aeb026ded7824",
+  "new_sha256": "63dd198affadb1254ce66421ff559dc6ae3531fc7108573b501d46cdf9d33b26",
+  "old": "*GEN:QH-nogo THM | T_ℍ=T⊕T ⇒ w=0: a block-diagonal quaternionic extension gives no smooth 3D metric branch | art GEN-ART-QH-NOGO (proof source missing) | ≡ UVM-BLOCK-DIAG (imported, RID unavailable) | >SG-7 | @GEN§6.7",
+  "new": "GEN-THM-QH-NOGO THM | T_ℍ=T⊕T ⇒ w=0: a block-diagonal quaternionic extension gives no smooth 3D metric branch | RID assigned v2.9 (statement unchanged); art GEN-ART-QH-NOGO [custody-A] | ≡ UVM-BLOCK-DIAG (imported at \"RID unavailable\"; OPEN M has not repinned to the RID, OPENM.U3) | >SG-7 | @GEN§6.7"
+ },
+ {
+  "id": "AR05-054",
+  "finding": "GEN GB-10",
+  "where": "D4b METRIC",
+  "old_sha256": "70cfd54e38a94069a56db4656005679c4d3b49ae26570400d97c753ac7e7fd84",
+  "new_sha256": "6d119caf62f62435f08d36dd7f55bba56bb7fc21e40cf0cfdc60b3354fe90a13",
+  "old": "*GEN:metric-criterion THM | Q_s>0, β≠0, Δ₃>0, σ_f≠0, w≠0 ⇒ det Γ_ℍ=β²Δ₃Q_s³>0 | @GEN§1,§6.9",
+  "new": "GEN-THM-SINGLE-FACE-METRIC THM | Q_s>0, β≠0, Δ₃>0, σ_f≠0, w≠0 ⇒ det Γ_ℍ=β²Δ₃Q_s³>0 | RID assigned v2.9 (statement unchanged); proof source not identified in the owner text | @GEN§1,§6.9"
+ },
+ {
+  "id": "AR05-055",
+  "finding": "GEN GA-01",
+  "where": "D4b SOURCED-JUNCTION",
+  "old_sha256": "f58122e14c231469baeb2c7b7bbf646d30bf31f2b09bdf5392329021903c056d",
+  "new_sha256": "be2c9be87bd69099d578c529176a5b92d9c1e54810f956ead28c6e8ea0b0cd6e",
+  "old": "*GEN:sourced-junction THM | w=0, σ_f≠0: vacuum gluing fails (S_f=0 is impossible); constrained birth (ΔM_f+τI)d⊥+S_f=0 has a valid minimizer; the foam branch is sourced birth | art GEN-ART-SOURCED-JUNCTION (proof source missing) | ! GEN.D1 (stated with K₊ while the secular equation belongs to K₋) | @GEN§1,§6.9",
+  "new": "GEN-THM-SOURCED-JUNCTION THM | w=0, σ_f≠0, Δ₃>0: vacuum gluing fails (S_f=0 is impossible); since ΔM_f(0)=0 the two §6.8 branches coincide, K±=τI, and the constrained birth equation τd⊥+S_f=0 on |d⊥|²=Δ₃ has exactly the two antipodal solutions d⊥=∓√Δ₃ S_f/|S_f|, τ=±|S_f|/√Δ₃ (none at Δ₃=0); which is the physical birth needs the birth energy and its constrained second variation — OPEN (GCL-02); the foam branch is sourced birth | RET (GEN Appendix B, v2.9): \"has a valid minimizer\" | proof of the algebraic statement [indep-AC] gates S1–S2; original source GEN-ART-SOURCED-JUNCTION [custody-A] | export carries the same scope (GEN §7); OPEN M-foam downstream | @GEN§1,§6.9"
+ },
+ {
+  "id": "AR05-056",
+  "finding": "GEN F-1",
+  "where": "D4b secular-K−",
+  "old_sha256": "6ec97a01ce84897fabf424a605d7650f6662563ef5e5c938409df779cee1a88d",
+  "new_sha256": "4d995e47a87a132db8778e677d92d883c86d20f9660a1c2b3007d5bad96dd873",
+  "old": "(κ_f: atlas label for the face-lift κ=|m||w|, GEN writes κ)",
+  "new": "(κ_f=|m||w|, GEN v2.9 §6.8)"
+ },
+ {
+  "id": "AR05-057",
+  "finding": "GEN F-1",
+  "where": "D4b SCALARM-RESOLVENT",
+  "old_sha256": "3ed0dbce3cbe594ef5c2dae8a118a3b0a8d0a4dd559cba08b188f32eb9672f73",
+  "new_sha256": "90f741512c12cfb24723e6618a3a9a6bb6c77b06f78fb5440794a9fd8e171a7a",
+  "old": "GEN-ALG-SCALARM-RESOLVENT ALG | sc: M=gI | ((τ−g)I−ΔM_f)⁻¹=((τ−g)I+ΔM_f)/((τ−g)²−κ²); poles at τ−g=±κ; physical branch is OPEN-GEN-II-9 | @GEN§1,§6.9",
+  "new": "GEN-ALG-SCALARM-RESOLVENT ALG | sc: M=gI | ((τ−g)I−ΔM_f)⁻¹=((τ−g)I+ΔM_f)/((τ−g)²−κ_f²); poles at τ−g=±κ_f; physical branch is OPEN-GEN-II-9 | @GEN§1,§6.9"
+ },
+ {
+  "id": "AR05-058",
+  "finding": "GEN GA-02",
+  "where": "D4b SCALARM-EIGEN",
+  "old_sha256": "27c94a1e504acb174f9d188d1b7cd7a6923e5f0378f2cc5ac495850b259e121b",
+  "new_sha256": "3efe82446f4d6efd3bde5b45c3e36b3fee3e4fe10d2f51bcee27ed72f17f5458",
+  "old": "GEN-THM-SCALARM-EIGEN THM | sc: M=gI | λ±=(τ−g)∓κ, κ=m|w|; L_sc⁻¹=Π₊/(τ−g−κ)+Π₋/(τ−g+κ), Π±=½(I±ΔM_f/κ); soft branch τ−g−κ→0 with v₊=(μ1,μ2−|w|); v₊·v₋=0 but v₊ᵀBv₋=−μ1μ2≠0; R^(E)₊=(v₊·H₀)²/|v₊|²≥0; R^(B)₊=H₀ᵀBΠ₊H₀ is sign-indefinite (discriminant +1/20); RES: at H₀=J_Qs* both are generically ≠0, so the soft pole is excited | ! GEN.D2 (κ=m|w| here vs κ=|m||w| in §6.8, atlas label κ_f) | @GEN§6.9 (9A)",
+  "new": "GEN-THM-SCALARM-EIGEN THM | sc: M=gI; m≠0, w≠0 | λ±=(τ−g)∓sgn(m)κ_f, κ_f=|m||w|; L_sc⁻¹=Π₊/(τ−g−sgn(m)κ_f)+Π₋/(τ−g+sgn(m)κ_f), Π±=½(I±N̂) independent of m; v₊=(μ1,μ2−|w|) spans range Π₊ for either sign of m; the pole at τ−g=+κ_f carries Π₊ if m>0 and Π₋ if m<0 (v2.9 sign-explicit form); limiting-path definition of the physical soft branch OPEN (OPEN-GEN-II-9); v₊·v₋=0 but v₊ᵀBv₋=−μ1μ2≠0; R^(E)₊=(v₊·H₀)²/|v₊|²≥0 and R^(B)₊=H₀ᵀBΠ₊H₀ sign-indefinite (discriminant +1/20), both independent of sgn m; RES: at H₀=J_Qs* both generically ≠0, so the soft pole is excited | both signs checked [indep-AC] gates K2–K4 | @GEN§6.9 (9A)"
+ },
+ {
+  "id": "AR05-059",
+  "finding": "GEN GC-18/19",
+  "where": "D4b exports",
+  "old_sha256": "ecf8c0c87668c499f6e57439c4fc12e6a3f7dc3cb30fe6a27e06309e135777bd",
+  "new_sha256": "975d811d57a333dc067a48ff788b27fbcccd7b79488cf145966581fe1fe926a7",
+  "old": "exports: allowed from this domain — QH no-go, metric criterion, sourced junction (with hypotheses), the word-sector dichotomy (category-scoped).",
+  "new": "exports: allowed from this domain — GEN-THM-QH-NOGO, GEN-THM-SINGLE-FACE-METRIC, GEN-THM-SOURCED-JUNCTION (algebraic statement at w=0, Δ₃>0; physical branch selection OPEN), the word-sector dichotomy (category-scoped); GEN v2.9 §7 lists its consumers (TRIAD IF06, UVM IF08, RECOG IF15, RRF IF30, OFN IF32, nc records IF33–35) with their declared pins, not repinned."
+ },
+ {
+  "id": "AR05-060",
+  "finding": "GEN GA-01",
+  "where": "GEN.D1 retired",
+  "old_sha256": "594a0a2ef002c955967d015a3f49b5f653963e7c6dfddc69601238aac5b59c9d",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "GEN.D1 ! D-CONV: the sourced-junction THM is stated with (ΔM_f+τI)d⊥+S_f=0 (=K₊) in §1 and §6.9, while §6.8/GCL-02 says the documented secular equation belongs to K₋ and the physical sign is OPEN. The theorem statement is not re-typed. Check whether the minimizer claim holds for both signs, or restate it for K∓.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-061",
+  "finding": "GEN GA-02",
+  "where": "GEN.D2 retired",
+  "old_sha256": "8bed752c95d178717efde045a517d90ba36a84601c6d919bf3a62c6b7dd95ae9",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "GEN.D2 ! D-CONV: κ=|m||w| in §6.8 but κ=m|w| in §6.9 9A and OPEN-GEN-II-9 item 1. With m<0 the soft-branch label (τ−g−κ→0) and v₊ swap. A sign convention for m (m=2Q_sB_*) is needed.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-062",
+  "finding": "GEN GB-11",
+  "where": "GEN.D3",
+  "old_sha256": "8d7b01bb8c44c3164e0c531f9798bfe88da20fc3ebd41a0879a0aeb4792e0b58",
+  "new_sha256": "daeb11c28639bd52f0d1a435444368ba4226997afbf1bd6131269efa1e6ecc99",
+  "old": "GEN.D3 D-PROOF (b) (D4b part; the rest is in D4a F14): adopted items whose artifact entries read \"proof-source reference required\" in this domain are QH-NOGO, FACE-LIFT, SOURCED-JUNCTION, PHASE-AVG (uniform-phase sink), PHASE-CLOSURE (moment closure). The full list of nine is shared with D4a (PURE-CHIRAL, PHI-2TO3, G2-CHRONO, P4-PRIMITIVE).",
+  "new": "GEN.D3 D-PROOF (b) (D4b part; the rest is in D4a F14): proof sources of QH-NOGO, FACE-LIFT, SOURCED-JUNCTION, PHASE-AVG (uniform-phase sink), PHASE-CLOSURE (moment closure) carry the owner custody state (a) missing since GEN v2.9 (clause [custody-A], EV-NOT-RERUN; not held by either Genesis co-owner session, not in upload/gen-records/); independent re-derivations ([indep-AC]: face-lift algebra, sourced-junction algebraic statement) are not recoveries. The full list of nine is shared with D4a (PURE-CHIRAL, PHI-2TO3, G2-CHRONO, P4-PRIMITIVE)."
+ },
+ {
+  "id": "AR05-063",
+  "finding": "GEN GA-04",
+  "where": "GEN.D4 retired",
+  "old_sha256": "8a7bf81a57a2b250a298842a893e9160fd612bd9f251270243ff08f4e50818f3",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "GEN.D4 ! D-SCOPE: projection nontriviality is OPEN in §6.9 and SG-13 but marked closed under scalar-M in OPEN-GEN-II-9 sub-step 3. This reads consistently only if the OPEN is general-M; the scope label is missing at both sites.\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-064",
+  "finding": "GEN F-1",
+  "where": "GEN.D5",
+  "old_sha256": "3f97aa95b8451a5cbbb30711258ef1afa83235b3b13f7bba00a80b6cf7567db3",
+  "new_sha256": "349affbe7c914bc568dfd70f53e14243a121cf708d5c8d226a76d0181199b698",
+  "old": "GEN.D5 D-SYM (D4b part): c₀ vs c₀^UV; κ (birth vs face-lift κ, atlas label κ_f, vs scalar-M κ vs κ_RTG); χ; β; μ1, μ2 vs μ, μ6; m; w vs w_e; D vs 𝒟 vs apex D; p. Full GEN list shared with D4a.",
+  "new": "GEN.D5 D-SYM (D4b part): c₀ vs c₀^UV; κ (birth κ vs κ_f vs κ_RTG — κ_f owner notation since v2.9, one collision fewer); χ; β; μ1, μ2 vs μ, μ6; m; w vs w_e; D vs 𝒟 vs apex D; p. Full GEN list shared with D4a."
+ },
+ {
+  "id": "AR05-065",
+  "finding": "GEN GA-03",
+  "where": "GEN.D6",
+  "old_sha256": "e682bf4cf8198673a9efcf4c85669bdbc1deb833cbcdff3d1a569b0b9a6e3d62",
+  "new_sha256": "f0b1b7e1c81e31fa50eb49e81d6910869c3920757efade833124aae1bd5d4735",
+  "old": "GEN.D6 D-SYM: B_* (in m=2Q_sB_*) is not defined anywhere in GEN; OPEN M reuses m=2Q_sB_* in R2.",
+  "new": "GEN.D6 D-SYM (owner-declared): B_* (in m=2Q_sB_*) is declared undefined with unknown sign in GEN v2.9 §6.8; every sgn(m)-dependent statement carries the dependence explicitly; its source in editions ≤ v2.8.5 is not held. OPEN M reuses m=2Q_sB_* in R2; UVM would be notified (GEN v2.9 release record)."
+ },
+ {
+  "id": "AR05-066",
+  "finding": "GEN GB-10",
+  "where": "GEN.D7",
+  "old_sha256": "5d47c81456264b3dd9e662e9391ca51003c653a7e646c7eebfd063a3aa89cdf0",
+  "new_sha256": "a045a7b985d6189d53d8dcd0468638a5ab9ffb8460c4428447b435f54d551a94",
+  "old": "GEN.D7 D-RID (D4b part): the unnumbered THMs QH-nogo, metric criterion, sourced junction and birth symmetry have no RIDs (GEN-ART-* stand in), so OPEN M imports them as \"RID unavailable\" (OPENM.U3). The others are in D4a.",
+  "new": "GEN.D7 D-RID (D4b part, narrowed v2.9): the exported theorems carry RIDs since v2.9 (GEN-THM-QH-NOGO, GEN-THM-SINGLE-FACE-METRIC, GEN-THM-SOURCED-JUNCTION); still RID-less: birth symmetry here, pure chiral protection and tetrahedral chronological protection in D4a (second priority, deferred by the owner). OPEN M still imports at \"RID unavailable\" until its repin (OPENM.U3)."
+ },
+ {
+  "id": "AR05-067",
+  "finding": "GEN retirements",
+  "where": "D4b cross-pointer",
+  "old_sha256": "4e6a91641286453eded93d9d8d7bdf24426093817cec05931c9a79bbc771efb4",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "(GEN.D11, GEN.D12, GEN.D13: see D4a.L5 F19, F20, F15)\n",
+  "new": ""
+ },
+ {
+  "id": "AR05-068",
+  "finding": "GEN V1",
+  "where": "GEN.D14 → GEN.D17",
+  "old_sha256": "43e9d75344cb582aa69920795f79b5ce0d2aad84d676b7fca93c06e0a8a74f83",
+  "new_sha256": "8528f226a4344bdba736ad40675831326269ea56d54325814f52553c03c91025",
+  "old": "GEN.D14 D-SCOPE: the OPEN-GEN-II-9 dependency line still says \"diagonal splitting −2m Im w gives B-self-adjointness (generalization beyond scalar-M)\" without the \"additional raw-array premise\" qualifier used everywhere else.",
+  "new": "GEN.D17 D-GRADE (owner-declared): GEN v2.9 declares Methodology v1.4 with a bounded migration — 29 inherited [RESULT] blocks carry no [from: TAG] companion (v1.4 §3.4), counted in the release record (gate C16); pairing is retagging work for a later edition. Not a defect in any claim; readers should not take the header as full v1.4 retagging."
+ }
+]
