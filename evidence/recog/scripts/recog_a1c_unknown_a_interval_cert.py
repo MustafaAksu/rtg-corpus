@@ -33,6 +33,14 @@ spec = importlib.util.spec_from_file_location("p1b", P1B); p1b = importlib.util.
 I, up, lo, f, tau, envelope_new = p1b.I, p1b.up, p1b.lo, p1b.f, p1b.tau, p1b.envelope_new
 assert all(p1b.res["gates"].values()), "part-1b gates must pass"
 PI3 = iv.pi/3
+def fdn(x):
+    """float rounded DOWN (never above x); x an mp.mpf"""
+    v = float(x)
+    return math.nextafter(v, -math.inf) if mp.mpf(v) > x else v
+def fup(x):
+    """float rounded UP (never below x)"""
+    v = float(x)
+    return math.nextafter(v, math.inf) if mp.mpf(v) < x else v
 res = {"gates": {}, "imports": {"recog_a1c_tail_averaging_cert.py_sha256": hashlib.sha256(open(P1B, "rb").read()).hexdigest()}}
 # ---------------- Lemma 7: interval digamma ----------------
 def psi_iv(x, full=True):
@@ -72,7 +80,7 @@ def lemma8_interval(k1, M1, k2, M2, ceiling=mp.mpf("0.62"), tol=mp.mpf("1e-6")):
         if up(h_iv(I(m_), M1, M2)) < t_lo: R_ = m_
         else: L_ = m_
     a_plus = R_                                    # outer: a^+ <= R_
-    return float(a_minus), float(a_plus)
+    return fdn(a_minus), fup(a_plus)                 # outward float rounding of the interval ends
 # ---------------- Prop. 4: box enclosure ----------------
 def classify(a_box, slips):
     """EXCLUDED: some pair has inf(c_j - E_j) > sup(c_k + E_k) on the box (no a in the box is admissible).
@@ -83,7 +91,9 @@ def classify(a_box, slips):
     status = "EXCLUDED" if lo_lo > hi_hi else ("SURE" if lo_hi <= hi_lo else "UNDECIDED")
     return status, (lo_lo, hi_hi)
 def enclosure(slips, a_lo, a_hi, w_min=0.25):
-    kept = []; n_eval = 0
+    """returns (outer components, inner components, n_eval, undecided_length): outer = SURE + small UNDECIDED boxes (contains A_K);
+       inner = SURE boxes only (contained in A_K). All float ends rounded outward for the outer set and inward for the inner set."""
+    kept = []; sure = []; n_eval = 0; undecided_len = mp.mpf(0)
     stack = [(mp.mpf(a_lo), mp.mpf(a_hi))]
     while stack:
         x1, x2 = stack.pop(); n_eval += 1
@@ -91,14 +101,18 @@ def enclosure(slips, a_lo, a_hi, w_min=0.25):
         if status == "EXCLUDED": continue
         if status == "UNDECIDED" and x2 - x1 > w_min:
             m_ = (x1 + x2)/2; stack.append((x1, m_)); stack.append((m_, x2))
-        else: kept.append((float(x1), float(x2), float(Llo), float(Lhi)))
-    kept.sort()
-    # merge contiguous boxes into intervals
-    comps = []
-    for b in kept:
-        if comps and abs(comps[-1][1] - b[0]) < 1e-9: comps[-1] = (comps[-1][0], b[1], min(comps[-1][2], b[2]), max(comps[-1][3], b[3]))
-        else: comps.append(b)
-    return comps, n_eval
+        else:
+            kept.append((fdn(x1), fup(x2), fdn(Llo), fup(Lhi)))
+            if status == "SURE": sure.append((fup(x1), fdn(x2)))
+            else: undecided_len += x2 - x1
+    def merge(boxes, with_L):
+        boxes.sort(); comps = []
+        for b in boxes:
+            if comps and abs(comps[-1][1] - b[0]) < 1e-9:
+                comps[-1] = (comps[-1][0], b[1], min(comps[-1][2], b[2]), max(comps[-1][3], b[3])) if with_L else (comps[-1][0], b[1])
+            else: comps.append(b)
+        return comps
+    return merge(kept, True), merge(sure, False), n_eval, float(undecided_len)
 # ---------------- orbits ----------------
 TAU = float(up(tau)); OMEGA = complex(-0.5, math.sqrt(3)/2)
 def run_orbits(N):
@@ -141,19 +155,22 @@ if __name__ == "__main__":
         prog = []
         prev_w = None
         for K in range(2, len(sl) + 1):
-            comps, n_eval = enclosure(sl[:K], am, ap)
+            comps, inner, n_eval, und = enclosure(sl[:K], am, ap)
             hull = [comps[0][0], comps[-1][1]] if comps else None
+            inner_hull = [inner[0][0], inner[-1][1]] if inner else None
             Lh = [min(c[2] for c in comps), max(c[3] for c in comps)] if comps else None
             w = (hull[1] - hull[0]) if hull else 0.0
             contains = any(c[0] <= a <= c[1] for c in comps)
-            prog.append({"K": K, "components": comps, "a_hull": hull, "width": w, "L_hull": Lh, "n_boxes_evaluated": n_eval, "contains_a": contains})
+            prog.append({"K": K, "components": comps, "a_hull": hull, "width": w, "L_hull": Lh, "inner_components": inner, "inner_hull": inner_hull,
+                         "inner_width": (inner_hull[1] - inner_hull[0]) if inner_hull else 0.0, "undecided_length": und, "n_boxes_evaluated": n_eval, "contains_a": contains})
             if prev_w is not None: g4 &= w <= prev_w + 1e-9
             prev_w = w
             g4 &= hull is not None and hull[0] >= am - 1e-9 and hull[1] <= ap + 1e-9
         o["enclosures"] = prog
         last = prog[-1]
         g3 &= last["contains_a"] and last["L_hull"] is not None and (last["L_hull"][0] - o["L_tol"] <= o["L_est"] <= last["L_hull"][1] + o["L_tol"])
-        o["final"] = {"K": last["K"], "a_hull": last["a_hull"], "width": last["width"], "relative_width": last["width"]/a, "L_hull": last["L_hull"], "L_est": o["L_est"]}
+        o["final"] = {"K": last["K"], "a_hull": last["a_hull"], "width": last["width"], "relative_width": last["width"]/a, "L_hull": last["L_hull"], "L_est": o["L_est"],
+                      "inner_hull": last["inner_hull"], "inner_width": last["inner_width"], "undecided_length": last["undecided_length"]}
     res["gates"]["G2_lemma8_contains_a"] = bool(g2); res["gates"]["G3_enclosure_contains_a_and_L"] = bool(g3); res["gates"]["G4_nesting"] = bool(g4)
     # ---- negative controls ----
     nc1 = False
@@ -167,7 +184,7 @@ if __name__ == "__main__":
         if len(sl) < 3: continue
         bad = sl[:-1] + [(sl[-1][0] + 1, sl[-1][1])]                 # last slip index shifted by +1 (a phantom 7-gap)
         am, ap = o["lemma8"]["interval"]
-        comps, _ = enclosure(bad, am, ap)
+        comps, _, _, _ = enclosure(bad, am, ap)
         if not comps: nc2 = True; break
     res["gates"]["NC1_bad_bracket_caught"] = bool(nc1); res["gates"]["NC2_corrupt_record_empty"] = bool(nc2)
     res["N_steps"] = N; res["orbits"] = orbits
@@ -179,5 +196,5 @@ if __name__ == "__main__":
         l8 = o["lemma8"]; fi = o["final"]
         print("a=%4d th=%.1f slips=%s | Lemma8 pair %s: [%.1f, %.1f] (w=%.1f) | all %d slips: a in [%.1f, %.1f] (w=%.1f, %.1f%%) comps=%d | L in [%.4f, %.4f] (L_est %.4f +- %.4f)"
               % (o["a"], o["theta0"], [(k, M) for k, M in o["slips"]], l8["pair"], l8["interval"][0], l8["interval"][1], l8["width"], fi["K"], fi["a_hull"][0], fi["a_hull"][1], fi["width"], 100*fi["relative_width"], len(o["enclosures"][-1]["components"]), fi["L_hull"][0], fi["L_hull"][1], fi["L_est"], o["L_tol"]))
-        print("      widths by K:", [(p["K"], round(p["width"], 1)) for p in o["enclosures"]])
+        print("      widths by K (outer / inner / undecided length):", [(p["K"], round(p["width"], 1), round(p["inner_width"], 1), round(p["undecided_length"], 2)) for p in o["enclosures"]])
     print("ALL PASS" if ok else "FAILURES"); sys.exit(0 if ok else 1)
