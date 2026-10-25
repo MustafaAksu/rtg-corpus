@@ -1,0 +1,9 @@
+[PASS] G1 LIVE BODY
+[PASS] G2 §6.3a–c
+[PASS] G3 GA-01 (4 lines)
+[PASS] G4 GA-02/F-1
+[PASS] G5 CUSTODY (11 lines)
+[PASS] G6 APPENDIX B
+[PASS] G7 COMPACTION (tools/check_compaction.py)
+
+7/7 guards PASS; stage 1 5677d706…, candidate 89cef1713292e889f8c6923e7d391e36668c7909d66e2504fe553037a967561a
