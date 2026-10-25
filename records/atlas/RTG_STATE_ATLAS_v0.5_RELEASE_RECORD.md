@@ -1,6 +1,6 @@
 # RTG State Atlas v0.5 — acceptance record
 
-**Status:** DRAFT — candidate under receiving review; not accepted. `atlas-v0.4` governs until the PI decision in §3.
+**Status:** PI ACCEPTED — 25 October 2026; PR #57 merged by merge commit `b77c8c7a488bbb2ec7e72fda6ec5f55c1fc80c22`. Annotated `atlas-v0.5` tag pending; `atlas-v0.4` remains the preceding tagged edition until publication.
 **Object:** derived NONCANONICAL Atlas; acceptance adopts no owner science.
 
 ## 1. Candidate identities
@@ -19,7 +19,7 @@ Method v0.2; `records/atlas/ATLAS_V0_5_REVIEW_PACKET.md`; verification files und
 
 ## 3. Decision
 
-- Receiving review: ChatGPT, 25 Oct 2026, `records/atlas/ATLAS_V0_5_RECEIVING_REVIEW.md` (PR #58, `9a419073`): REVISE (AV05-R1, AV05-R2) on the first candidate `3479e046…7cec`; corrections applied (packet §6); readback of the second candidate `cf250c91…b0e5`: _pending_.
-- PI acceptance: _pending_ — merge commit of `claude/atlas-v0.5` into `main` (not squash); accepted bytes `cf250c91…b0e5`.
-- Tag: _pending_ — annotated `atlas-v0.5` on the merge commit, message naming the hash; verified by the atlas owner after creation.
+- Receiving review: ChatGPT, 25 Oct 2026, `records/atlas/ATLAS_V0_5_RECEIVING_REVIEW.md` (PR #58, merged `398b52d082f0da4f4efcdb4211ac91742e4c566a`): REVISE (AV05-R1/R2) on first candidate `3479e046…7cec`; the three-line correction at PR #57 head `34fc66beb0c7dea54fdb96b71e0d2fcb8e094779` was independently source-read and **ACCEPTED** for candidate `cf250c91…b0e5` (review readback commit `470a6ae136eb442f2a43eccb46f1272dabf89875`). This receiving review did not independently rerun the build or owner certificates.
+- PI acceptance: **ACCEPTED** in the project conversation, 25 October 2026 (conditional on focused receiving check, fulfilled above; PI authorized merge and necessary repository steps). Accepted derived Atlas file SHA-256 `cf250c9140e6ee26c65b2497a2a61dc1e326a69574d590132f0cea9646a2b0e5` (producer-reported 477,266 bytes). PR #57 merged by merge commit `b77c8c7a488bbb2ec7e72fda6ec5f55c1fc80c22`, not squash; PR #58 receiving review merged independently at `398b52d082f0da4f4efcdb4211ac91742e4c566a`. Acceptance adopts a NONCANONICAL derived map, not owner science.
+- Tag: **PENDING PI ACTION** — create an **annotated** `atlas-v0.5` tag on the **PR #57 merge commit `b77c8c7a488bbb2ec7e72fda6ec5f55c1fc80c22`**, naming the complete accepted Atlas SHA-256 in the tag message. Do not tag a later records-only commit. The available GitHub connector cannot create annotated tag objects. Tag target, annotated type, message and file identity require independent verification after creation.
 - Next: NUMGEN advisory (two independent passes); Programme next edition carries E-P13-1/E-P13-2 (PROG.G8); OFN/FMS/ER-2B class-C wording (H1).
