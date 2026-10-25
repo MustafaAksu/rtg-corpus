@@ -1,0 +1,177 @@
+[
+ {
+  "key": "GEN.D1",
+  "disposition": "retired",
+  "reason": "GEN v2.9 GEN-THM-SOURCED-JUNCTION: w=0 ⇒ K₊=K₋; minimizer clause retracted (GA-01); physical branch OPEN is the owner's GCL-02, not an inconsistency.",
+  "previous_sha256": "fb572f34f3a2ab95f3c571df4c09deccc87b54af1a74266c1cb9f220ab042fcc",
+  "current_sha256": null
+ },
+ {
+  "key": "GEN.D2",
+  "disposition": "retired",
+  "reason": "GEN v2.9 §6.8/§6.9: κ_f defined once, 9A sign-explicit (GA-02).",
+  "previous_sha256": "5f97ab3d9e97eb741aee535d17582e8046014e38172e3b17ae2d9c0099447059",
+  "current_sha256": null
+ },
+ {
+  "key": "GEN.D3",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "8d7b01bb8c44c3164e0c531f9798bfe88da20fc3ebd41a0879a0aeb4792e0b58",
+  "current_sha256": "daeb11c28639bd52f0d1a435444368ba4226997afbf1bd6131269efa1e6ecc99"
+ },
+ {
+  "key": "GEN.D4",
+  "disposition": "retired",
+  "reason": "GEN v2.9: scope words at OPEN-GEN-II-9 item 3, SG-13, §6.9 (GA-04).",
+  "previous_sha256": "4f23ea9e661ab133efaebd991dc6c400fd919b453b1b5ab421c6e74f64732915",
+  "current_sha256": null
+ },
+ {
+  "key": "GEN.D5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "3f97aa95b8451a5cbbb30711258ef1afa83235b3b13f7bba00a80b6cf7567db3",
+  "current_sha256": "349affbe7c914bc568dfd70f53e14243a121cf708d5c8d226a76d0181199b698"
+ },
+ {
+  "key": "GEN.D6",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "e682bf4cf8198673a9efcf4c85669bdbc1deb833cbcdff3d1a569b0b9a6e3d62",
+  "current_sha256": "f0b1b7e1c81e31fa50eb49e81d6910869c3920757efade833124aae1bd5d4735"
+ },
+ {
+  "key": "GEN.D7",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "5d47c81456264b3dd9e662e9391ca51003c653a7e646c7eebfd063a3aa89cdf0",
+  "current_sha256": "a045a7b985d6189d53d8dcd0468638a5ab9ffb8460c4428447b435f54d551a94"
+ },
+ {
+  "key": "GEN.D14",
+  "disposition": "retired",
+  "reason": "GEN v2.9: raw-array premise named at the dependency line (GA-05); key reused for nothing — GEN.D17 is new.",
+  "previous_sha256": "43e9d75344cb582aa69920795f79b5ce0d2aad84d676b7fca93c06e0a8a74f83",
+  "current_sha256": null
+ },
+ {
+  "key": "F1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "3515093ce054e7f3a7a1c0b29dfb8c575361607b24c974b2de38a21f7a077e26",
+  "current_sha256": "9885dcef52993fc829ee14d53d094e6cc0a9ba81f032cceb462cbda8ab363afa"
+ },
+ {
+  "key": "F5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "b06a23c225b8c4b62e32e632e19e869688368e42c09e693966ddb09fda36571c",
+  "current_sha256": "238d7c1e16e32a4393ef5851d325c5ce813750d8eb0d9714e2653c88f7634dd9"
+ },
+ {
+  "key": "F9",
+  "disposition": "retired",
+  "reason": "GEN v2.9 §2: specialization line GEN-THM-DELTA-QC → GSPLIT with the convention caveat (GB-13).",
+  "previous_sha256": "381b7424b3cfb2103db71f2490b8f4a8336b8731af6b64a5a9e5cf05878f09bb",
+  "current_sha256": null
+ },
+ {
+  "key": "F10",
+  "disposition": "retired",
+  "reason": "GEN v2.9 §8 GEN-CAND-APEX-T6U labels the shear/vector-seed case and cites the Triadic §6.17 four-case maximum (GB-14).",
+  "previous_sha256": "48b7160e8d3041753e036c65ac4d67e5d627502fe80c538fc1b01bbf7668dee2",
+  "current_sha256": null
+ },
+ {
+  "key": "F14",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "f67c6b6fa1417447a939dcdda612b2eec8c90b83f283e5f4d970531fb51f3c29",
+  "current_sha256": "c7ff171726bd58810ef58b93674617a5df77649cb4adc771ab6e87a2c2124bd5"
+ },
+ {
+  "key": "F15",
+  "disposition": "retired",
+  "reason": "GEN v2.9 §6.6: six-member set declared a coarse closure ansatz, not a basis of the 13-moment space (GA-08).",
+  "previous_sha256": "4271fd2ce887ba53c7c17052a20760f176c507acb1a3771653dbf29884592e83",
+  "current_sha256": null
+ },
+ {
+  "key": "F16",
+  "disposition": "retired",
+  "reason": "GEN v2.9 §6.2: c_θ⁽⁶⁾ marked archival reference only, not imported; chart value pointer (GB-12).",
+  "previous_sha256": "fb768233cfbefa7fc0432b618abe64b8f61ac4e0e850b8f1d324697ad95ebbe9",
+  "current_sha256": null
+ },
+ {
+  "key": "F17",
+  "disposition": "retired",
+  "reason": "GEN v2.9 §1/§6.5: \"different objects, not a verified passive conjugacy\" (GA-09).",
+  "previous_sha256": "d003088b694b375df2b0383f43544e4e3a99d2b86e7e740d9f813b45b18f745e",
+  "current_sha256": null
+ },
+ {
+  "key": "F19",
+  "disposition": "retired",
+  "reason": "GEN v2.9 §2: one GEN-OPEN-WPHASE record; second heading is a pointer (GA-06).",
+  "previous_sha256": "da813e6231fc7b6f788ea9c60a11ea0e27f8a5c4d1f352e18ac091f53d1f769f",
+  "current_sha256": null
+ },
+ {
+  "key": "F20",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "66c1c3e778512a2ca16b814c0f30d052328446b099331e8c924da8969be5311f",
+  "current_sha256": "d6bcf49ab9a0f58ac8a945c7d487aed4efe758c6cd7239934f0cebbe5358cd73"
+ },
+ {
+  "key": "OFN.O1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "ebe8c4af541232167f161ff2d0fe1c0b1ea3ed510dfd47c031bd2b7c9b6cab0f",
+  "current_sha256": "0c680f270fe50be0b0643f7f58364ad46b1488f155be6c26c04b7bd9f4bcab13"
+ },
+ {
+  "key": "DYAD.X1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "83504708fa0349b1b6129cac39bc0ff5b6e056a43ba820bdefea972dbdc272ff",
+  "current_sha256": "aab4341feeaa00f93da20c5908f03ea7b10acf443c281fdbfe8d11e25755d298"
+ },
+ {
+  "key": "RECOG.R-P3",
+  "disposition": "retired",
+  "reason": "RECOG v0.3.24 MNT: §7.1/§7.2 audit tables carry current status at the point of use; history pointed to at recog-v0.3.23.",
+  "previous_sha256": "85612ac50113733a434874b42432f5bd8a3659ae9d20f4ebe61afdb2a018b7c2",
+  "current_sha256": null
+ },
+ {
+  "key": "RECOG.R-T1",
+  "disposition": "retired",
+  "reason": "RECOG v0.3.24 MNT: R8/R9 specifications, former R11 sub-items and the R7 heading resolved to current state; history at recog-v0.3.23.",
+  "previous_sha256": "1834af6b0bbc1fcf2d727d1b4e86c4aa222b28213debd04ccc6d3d6d871e21c8",
+  "current_sha256": null
+ },
+ {
+  "key": "RECOG.R-D1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "6295f7f018e2d008d772d9d7d6fb9d4a3d094e9677959118b1fb395fc092c432",
+  "current_sha256": "0056b18e58d564112e5198a5912fcb8e4a4fa2578a4ab54e59b0e39d4053785a"
+ },
+ {
+  "key": "PROG.G8",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "1d38e0c5de23d96911cd1399add9486b98ddb1f5cc1c33d3d81e109305574b8c"
+ },
+ {
+  "key": "GEN.D17",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "8528f226a4344bdba736ad40675831326269ea56d54325814f52553c03c91025"
+ }
+]
