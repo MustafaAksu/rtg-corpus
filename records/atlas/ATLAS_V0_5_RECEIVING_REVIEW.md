@@ -54,3 +54,19 @@ and **immediately defines `Q` as the largest primitive amplitude among points of
 **REVISE** only the two RECOG D3 nodes, optionally make the PROG.G8 attribution refinement in the same patch. Update builder assertion anchors, review packet and acceptance candidate SHA-256, and rerun the bounded Atlas checker and existing negative controls. Return the changed lines and hashes for **one focused receiving readback**. Do not rerun unchanged GEN, RECOG or DYAD scientific campaigns.
 
 No PI adoption, `main` merge, scientific owner text edit, downstream consumer acceptance or annotated tag is authorized by this receiving note.
+
+---
+
+## 5. Focused readback of second candidate — ACCEPT (25 October 2026)
+
+**Object:** PR #57 correction commit `34fc66beb0c7dea54fdb96b71e0d2fcb8e094779`, producer SHA-256 `cf250c9140e6ee26c65b2497a2a61dc1e326a69574d590132f0cea9646a2b0e5` (477,266 bytes; 1,549 lines by the owner's counting convention). This readback supersedes the §4 REVISE verdict for **this exact candidate only**.
+
+**AV05-R1 ACCEPT:** Atlas D3 line 748 now says `without the value of a` in the affirmative infinite-token-record RESULT. It retains the separate, method-limited lack of a reconstruction from `L`, and does not infer non-recoverability of `a` or carrier downgrade. Inspected against `recog-v0.3.24` §6.16e, `RECOG-RESULT-A1C-RECORD-PHASE-READOUT`.
+
+**AV05-R2 ACCEPT:** Atlas D3 line 747 now defines `Q` as the maximum primitive amplitude within the kth slip block, treats `S^tail` and `R^tail` as a-priori A1a series tails, includes the owner theorem's `M_{k+1}/M_k→exp(π/(3τ))`, and explicitly forbids a finite-record computable decoder claim from the stated ceiling. Compared against `recog-v0.3.24` §6.13b, `RECOG-THM-A1B-SLIP-SCHEDULE-U`.
+
+**PROG.G8 ACCEPT:** Atlas D1.L5 line 256 now calls this an `atlas reading` derived from Programme v1.3 §8.2 against GEN v2.9 §6.8 and OFN/RRF, without pretending Programme registered this new diagnostic. Programme's independent E-P13-1 record is retained.
+
+GitHub compare from the first candidate `d52a24bf9833cc99554ece535a05a996642af876` to `34fc66b` contains exactly **three changed Atlas lines** and accompanying builder/report/manifest-record changes. The refreshed verification summary and release draft both report the candidate SHA-256 above, 68 exact-once operations, zero shared-checker FAIL, 18/18 shared and 6/6 focused negative controls, and no dangling/high-unmapped H→L5 keys. These computations were **read from the producer's evidence records, not independently executed by this receiving reviewer**. No scientific owner certificate was rerun. All accepted v0.4 inherited limitations remain non-PASS and preserved.
+
+**FINAL RECEIVING VERDICT: ACCEPT, scoped to the reviewed v0.5 candidate SHA-256 `cf250c91…b0e5`.** PI acceptance of the derived NONCANONICAL Atlas remains distinct from this review; owner DSNs, scientific grades, consumer pins and physical-model selection are unchanged.
