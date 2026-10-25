@@ -5,7 +5,7 @@ G4_NUM_residuals_within_bounds PASS
 NC1_wrong_direction_caught PASS
 NC2_wrong_r_caught PASS
 G5_part2_narrower PASS
-constants: {'e_sqrt': 0.7038470655877729, 'e_lin': 0.25660011963983365, 'c2': 0.5275109814967862, 'c_delta_on_U_T': 0.7926954230699744, 'sup|g|': 0.45166057150662586, "sup|g'|": 0.6907799414730644}
+constants: {'e_sqrt': 0.7038470655877729, 'e_lin': 0.2566001196398337, 'c2': 0.5275109814967863, 'c_delta_on_U_T': 0.7926954230699744, 'sup|g|': 0.45166057150662586, "sup|g'|": 0.6907799414730644, 'asin_enclosure_contains_mp_asin': True}
 a=625 M=    1000: r=0: E''=0.06717 (E' 0.166, x2.5; inblock 5.67e-04 vs 9.94e-02)  r=3: E''=0.07325 (E' 0.166, x2.3; inblock 6.65e-03 vs 9.94e-02)  r=5: E''=0.07787 (E' 0.166, x2.1; inblock 1.13e-02 vs 9.94e-02)  E''sqrt(r=5)=3.14
 a=625 M=   10000: r=0: E''=0.02167 (E' 0.05744, x2.7; inblock 6.52e-05 vs 3.58e-02)  r=3: E''=0.02247 (E' 0.05744, x2.6; inblock 8.69e-04 vs 3.58e-02)  r=5: E''=0.02308 (E' 0.05744, x2.5; inblock 1.48e-03 vs 3.58e-02)  E''sqrt(r=5)=2.38
 a=625 M=  100000: r=0: E''=0.00642 (E' 0.01769, x2.8; inblock 6.09e-06 vs 1.13e-02)  r=3: E''=0.0065 (E' 0.01769, x2.7; inblock 8.62e-05 vs 1.13e-02)  r=5: E''=0.006561 (E' 0.01769, x2.7; inblock 1.47e-04 vs 1.13e-02)  E''sqrt(r=5)=2.08

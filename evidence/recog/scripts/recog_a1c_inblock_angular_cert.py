@@ -20,7 +20,8 @@ Cor. 11 (sharpened schedule, known a, r_k from the record). With the reference (
     |eps''_k| <= E''(a, M_k, r_k) := xi_max + c_P(r_k) + kappa(r_k) |sqrt(Q_star) - (a+M)^{-1/2}|_max + tau Sbar'(a,M) + Rbar'(a,M),
     where xi_max bounds |(tau/2)(a+M)^{-1} - o| and the reference error uses the two-sided in-block amplitude bracket [Qd_lo, Qd].
     Asymptotically E'' sqrt(a+M) -> tau 0.7485 + 1.0753 = 1.94 (E': 5.46; E: 187.3): the in-block term is now O(1/(a+M)).
-Gates: G1 exact identities (sympy); G2 constants (interval); G3 E'' < E' on the (a, M, r) grid, asymptotic constant; G4 [NUM] 12 orbits:
+Gates: G1 exact identities (sympy); G2 constants (interval); G3 E'' < E' on the tested (a, M, r) grid only (no universal claim; IB-1),
+    asymptotic constant; G4 [NUM] 12 orbits:
     |P_{r_k} - kappa sqrt(Q_star)| <= c_P bound and |eps''_k| <= E'' (+ L-estimate tolerance) at every slip; G5 part-2 enclosures recomputed with
     the new centres/envelope: narrower than with E' on every orbit, true a inside. NC1 wrong phase direction (kappa from g(+s pi/3)) and
     NC2 r shifted by one both break G4.
@@ -37,7 +38,16 @@ def load(name):
     return m, hashlib.sha256(open(pth, "rb").read()).hexdigest()
 p1b, h1b = load("recog_a1c_tail_averaging_cert.py")
 p2, h2 = load("recog_a1c_unknown_a_interval_cert.py")
-I, up, lo, f, tau = p1b.I, p1b.up, p1b.lo, p1b.f, p1b.tau
+I, up, lo, tau = p1b.I, p1b.up, p1b.lo, p1b.tau
+fup, fdn = p2.fup, p2.fdn                              # directed float rounding (part 2)
+def f(x): return fup(up(x))                            # every reported upper bound is rounded UP to a float (IB-2)
+def asin_iv(x):
+    """rigorous interval enclosure of arcsin on 0 <= x < 1: arcsin x = sum c_n x^{2n+1}, c_n = (2n)!/(4^n n!^2 (2n+1)) decreasing;
+       truncation after n = 2 with tail 0 <= R <= c_3 x^7/(1 - x^2), c_3 = 5/112 (IB-2)"""
+    x = iv.mpf(x)
+    base = x + x**3/6 + 3*x**5/40
+    tail = (I(5)/112)*x**7/(1 - x**2)
+    return iv.mpf([lo(base), up(base + tail)])
 envelope_new, old_envelope, cQ, cQp = p1b.envelope_new, p1b.old_envelope, p1b.cQ, p1b.cQp
 res = {"gates": {}, "imports": {"recog_a1c_tail_averaging_cert.py": h1b, "recog_a1c_unknown_a_interval_cert.py": h2}}
 s3 = iv.sqrt(I(3)); PI = iv.pi
@@ -82,7 +92,9 @@ gp_iv = lambda t: I(2)/3*(-2*iv.cos(t - PI/6)*iv.sin(t - PI/6)*iv.sin(PI/3 - t) 
 # crude second-derivative ceilings: g is a trig polynomial of degree 3 with coefficients summing (in modulus) to <= 2/3*(1/2+1/2)*... use |g''| <= 9*sup|g| <= 9*(2/3) = 6, |g'''| <= 27*(2/3) = 18
 SUP_G = sup_grid(g_iv, mp.mpf(6)); SUP_GP = sup_grid(gp_iv, mp.mpf(18))
 res["G2_constants"].update({"sup|g|": float(SUP_G), "sup|g'|": float(SUP_GP)})
-res["gates"]["G2_constants"] = bool(up(e_sqrt) <= mp.mpf("0.705") and up(e_lin) <= mp.mpf("0.257") and SUP_G < 0.46 and SUP_GP < 0.70 and up(c_delta(QUT)) < 0.8)
+asin_ok = all(lo(asin_iv(I(x))) <= mp.asin(mp.mpf(x)) <= up(asin_iv(I(x))) for x in ("0.001", "0.01", "0.0331", "0.05"))
+res["G2_constants"]["asin_enclosure_contains_mp_asin"] = bool(asin_ok)
+res["gates"]["G2_constants"] = bool(asin_ok and up(e_sqrt) <= mp.mpf("0.705") and up(e_lin) <= mp.mpf("0.257") and SUP_G < 0.46 and SUP_GP < 0.70 and up(c_delta(QUT)) < 0.8)
 # ---------------- the sharpened envelope ----------------
 def inblock(a, M, r):
     """returns dict with Qd (in-block ceiling), Qd_lo (floor), xi_max, c_P (absolute, already multiplied), ref_err, and the pieces"""
@@ -98,7 +110,7 @@ def inblock(a, M, r):
     sq = 1/iv.sqrt((1 - kap)*(bp + M))
     QM_lo = 1/((a + Delta_a + M + epsM)*(1 + cQ*sq/(1 - cQ*sq)))
     Qd_lo = QM_lo*(1 - ebar(Qd))**10
-    eb = ebar(Qd); alphabar = I(mp.asin(up(eb)))*(1 + I(10)**-30)
+    eb = ebar(Qd); alphabar = asin_iv(eb)
     Deltabar = tau*Qd + I("1.82")*Qd**(I(3)/2)
     cd = c_delta(Qd)
     rho_P = I(0)
