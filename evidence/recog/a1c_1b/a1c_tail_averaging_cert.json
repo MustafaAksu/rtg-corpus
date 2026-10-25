@@ -4,6 +4,7 @@
   "G2_constants": true,
   "G3_closed_forms_dominate": true,
   "G4_table": true,
+  "G6_universal_ceiling_0.31": true,
   "G5_NUM_orbits": true,
   "NC1_wrong_h2_caught": true,
   "NC2_missing_first_term_caught": true
@@ -534,6 +535,18 @@
   5.464633231150927
  ],
  "G4_asymptotic_old": 187.3090326144346,
+ "G6_universal": {
+  "b'_min": 603.8677333333334,
+  "boxes": 755,
+  "box_max": 0.30954930987440055,
+  "box_argmax": [
+   604.8677333333334,
+   610.9164106666667
+  ],
+  "tail_logfree_at_N_inf": 0.006474671986652422,
+  "tail_monotone_samples": true,
+  "E(625,1)": 0.30343776427610963
+ },
  "G5": {
   "N_steps": 6000000,
   "N_blocks": 1000000,

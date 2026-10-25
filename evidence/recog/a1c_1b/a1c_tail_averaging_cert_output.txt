@@ -2,6 +2,7 @@ G1_exact_identities PASS
 G2_constants PASS
 G3_closed_forms_dominate PASS
 G4_table PASS
+G6_universal_ceiling_0.31 PASS
 G5_NUM_orbits PASS
 NC1_wrong_h2_caught PASS
 NC2_missing_first_term_caught PASS
@@ -22,6 +23,7 @@ a=2500 M=  100000: Sbar'=2.771e-03 (old 4.685e-01, x169.1)  Rbar'=3.379e-03 (old
 a=2500 M= 1000000: Sbar'=7.926e-04 (old 1.498e-01, x189.0)  Rbar'=1.076e-03 (old 9.096e-03, x8.5)  block'=3.537e-03 (old 5.002e-03)  E'=0.0055 (old 0.1871, x33.8)  E'sqrt=5.54  [A0=4.2e-05 A1=2.5e-06 B=7.5e-04 C=3.7e-07]
 a=2500 M=10000000: Sbar'=2.413e-04 (old 4.743e-02, x196.5)  Rbar'=3.402e-04 (old 2.883e-03, x8.5)  block'=1.116e-03 (old 1.579e-03)  E'=0.0017 (old 0.0592, x34.1)  E'sqrt=5.49  [A0=4.2e-06 A1=3.8e-07 B=2.4e-04 C=3.7e-08]
 asymptotic E' sqrt(a+M) -> [5.464633231150927, 5.464633231150927]  old: 187.3090326144346
+universal ceiling: {"b'_min": 603.8677333333334, 'boxes': 755, 'box_max': 0.30954930987440055, 'box_argmax': (604.8677333333334, 610.9164106666667), 'tail_logfree_at_N_inf': 0.006474671986652422, 'tail_monotone_samples': True, 'E(625,1)': 0.30343776427610963}
 NUM orbits: max ratio S 0.8661853094782421  max ratio R 0.9045799292601974
 Q0=1.60e-03 th=0.3 | M=1000 S=+1.17e-02/3.30e-02 R=+4.61e-03/2.85e-02 M=3000 S=+1.53e-02/1.89e-02 R=+1.61e-02/1.86e-02 M=10000 S=+5.96e-03/9.48e-03 R=+2.68e-03/1.07e-02 M=30000 S=-1.17e-03/5.06e-03 R=-3.58e-03/6.22e-03
 Q0=1.60e-03 th=1.7 | M=1000 S=-2.46e-02/3.30e-02 R=-1.88e-02/2.85e-02 M=3000 S=-8.03e-03/1.89e-02 R=-1.41e-03/1.86e-02 M=10000 S=+4.06e-03/9.48e-03 R=+8.77e-03/1.07e-02 M=30000 S=+3.13e-03/5.06e-03 R=+3.23e-03/6.22e-03

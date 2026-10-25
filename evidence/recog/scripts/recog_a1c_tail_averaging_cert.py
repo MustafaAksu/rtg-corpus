@@ -28,7 +28,8 @@ Derivation (record §1-§3). b := 1/q_0, |a - b| <= Delta_a := (16/15) c_Q sqrt 
   All sums majorised by closed forms (integral comparison) in (a, M) only.  Leading constant of Sbar': |phi1|/|s_1-1| + |phi3|/|s_3-1| = 0.7485.
 Gates: G1 exact identities (sympy); G2 constants by interval arithmetic; G3 closed forms dominate brute-force sums, |zeta(s_k, b+M)| within the
        Euler-Maclaurin bound; G4 the envelope table, old vs new; G5 [NUM] 12 primitive orbits (N blocks): |S^N_M| <= Sbar'(M) + Sbar'(N),
-       |R^N_M| <= Rbar'(M) + Rbar'(N), Q_M <= its bound (illustration, not a proof input; S^N_M = S^tail_M - S^tail_N).
+       |R^N_M| <= Rbar'(M) + Rbar'(N), Q_M <= its bound (illustration, not a proof input; S^N_M = S^tail_M - S^tail_N);
+       G6 universal ceiling E'(a,M) <= 0.31 for all a >= 625, M >= 1 (one-variable majorant in n' = b'(a)+M, interval boxes + log-free tail).
 Negative controls: NC1 wrong h_2 coefficient breaks the harmonic identity; NC2 a closed form without its first-term correction fails G3.
 usage: python -I recog_a1c_tail_averaging_cert.py [OUT_JSON] [N_STEPS]
 """
@@ -213,6 +214,55 @@ lead = 5*I("0.705") + tau*(abs_phi1/den(1) + abs_phi3/den(3)) + abs_lam1/den(1) 
 res["G4_table"] = table; res["G4_asymptotic_constant_E"] = [f(lo(lead)), f(up(lead))]
 res["G4_asymptotic_old"] = TAU*150 + 403/250*4*math.sqrt(2) + 5*0.705*math.sqrt(2)
 res["gates"]["G4_table"] = bool(g4)
+# ---------------- G6: universal ceiling E'(a,M) <= 0.31 for all a >= 625, M >= 1 ----------------
+# Majorant in the single variable n' = b'(a) + M >= b'_min + 1 (b'_min = b'(625)): every (a,M)-dependence is replaced by its worst case,
+#   1/b' <= 1/b'_min (q0bar, sigma2, e_const, kappa increase);  log(1 + M/2b') <= log(1 + n'/2b'_min);  b'^{-p} <= b'_min^{-p};
+#   A0 <= psi(n') with Delta_a <= (16/15) c_Q sqrt(a+M) and a+M >= n' (psi decreasing);  n_M >= n' - epsbar^+(n').
+# Log-free variant (log(1+y) <= sqrt(y); all logs sit with p >= 2) is a sum of decreasing power functions, so its value at N_inf bounds the tail.
+bpmin = I(625) - I(16)/15*cQ*iv.sqrt(I(625))
+def envelope_universal(npr, logfree=False):
+    q0b = 1/bpmin; sigma2 = 2*q0b + q0b**2; e_const = gamma0*q0b + gamma1*sigma2; kappa = e_const/bpmin + gamma0/(iv.sqrt(I(2))*bpmin)
+    LOG = (lambda y: iv.sqrt(y)) if logfree else (lambda y: iv.log(1 + y))
+    Pp = lambda p: npr**(-p) + npr**(1 - p)/(p - 1)
+    Lg_ = lambda p: bpmin**(-p) + npr**(1 - p)/(p - 1)*LOG(npr/(2*bpmin)) + npr**(1 - p)/(p - 1)**2
+    Lam = lambda p: e_const*Pp(p) + 2*gamma0*Lg_(p)
+    D = I(16)/15*cQ*iv.sqrt(npr)
+    A0 = D/(npr*(npr - D)) + (D/(npr - D) if logfree else iv.log(npr/(npr - D)))      # log(n/(n-D)) <= D/(n-D)
+    A1 = Lam(I(2))/(1 - kappa)
+    etabar = c_theta*Pp(I(2))/(1 - kappa)**2 + tau*(Pp(I(2))/2 + Lam(I(2))/(1 - kappa))
+    Bk = lambda k: npr**(-I(1)/2)/den(I(k)) + (I(1)/2 + abs_s(I(k))/3)*npr**(-I(3)/2) + I(3)/2*Lam(I(5)/2)/(1 - kappa)**(I(5)/2) + I(k)*etabar*Pp(I(3)/2)/(1 - kappa)**(I(3)/2)
+    B1, B3 = Bk(1), Bk(3)
+    Sbar = A0 + A1 + abs_phi1*B1 + abs_phi3*B3 + cQp*Pp(I(2))/(1 - kappa)**2
+    Rbar = abs_lam1*B1 + abs_lam3*B3 + c_r2*Pp(I(2))/(1 - kappa)**2 + c_r3*Pp(I(3))/(1 - kappa)**3
+    nn = npr - (e_const + 2*gamma0*LOG(npr/(2*bpmin)))
+    Qs = 1/(nn - cQ*iv.sqrt(nn))
+    for _ in range(5): Qs = Qs*(1 + I("0.705")*iv.sqrt(Qs) + I("0.257")*Qs)**2
+    xarg = I("0.705")*iv.sqrt(Qs) + I("0.257")*Qs
+    block = tau*Qs + I("1.82")*Qs**(I(3)/2) + 5*I(mp.asin(up(xarg)))*(1 + I(10)**-30)
+    return block + tau*Sbar + Rbar
+N_inf = I(10)**6; ratio = mp.mpf("1.01")
+edges = [up(bpmin) + 1]
+while edges[-1] < up(N_inf): edges.append(min(edges[-1]*ratio, up(N_inf)))
+box_max = mp.mpf(0); arg_max = None; n_boxes = 0
+CEIL = mp.mpf("0.31")
+def box_bound(lo_, hi_, depth=0):
+    """interval enclosure on [lo_, hi_]; a box whose bound exceeds the ceiling is bisected (up to depth 12) before it is reported"""
+    global n_boxes
+    n_boxes += 1
+    v = up(envelope_universal(iv.mpf([lo_, hi_])))
+    if v > CEIL and depth < 12:
+        mid = (lo_ + hi_)/2
+        return max(box_bound(lo_, mid, depth + 1), box_bound(mid, hi_, depth + 1))
+    return v
+for lo_, hi_ in zip(edges[:-1], edges[1:]):
+    v = box_bound(lo_, hi_)
+    if v > box_max: box_max, arg_max = v, (float(lo_), float(hi_))
+tail_max = up(envelope_universal(N_inf, logfree=True))
+# monotone decrease of the log-free majorant on [N_inf, inf): sampled (illustration) + structural (sum of decreasing power functions)
+tail_mono = all(up(envelope_universal(I(10)**k, logfree=True)) < up(envelope_universal(I(10)**(k - 1), logfree=True)) for k in range(7, 13))
+E_625_1 = up(envelope_new(625, 1)["E"])
+res["G6_universal"] = {"b'_min": f(bpmin), "boxes": n_boxes, "box_max": float(box_max), "box_argmax": arg_max, "tail_logfree_at_N_inf": float(tail_max), "tail_monotone_samples": bool(tail_mono), "E(625,1)": float(E_625_1)}
+res["gates"]["G6_universal_ceiling_0.31"] = bool(box_max <= mp.mpf("0.31") and tail_max <= mp.mpf("0.31") and tail_mono and E_625_1 <= box_max)
 # ---------------- G5: [NUM] orbit check ----------------
 OMEGA = complex(-0.5, math.sqrt(3)/2)
 def run_orbits(Nsteps, Ms):
@@ -259,6 +309,7 @@ if __name__ == "__main__":
         for M, v in row.items():
             print(f"a={a} M={M:>8}: Sbar'={v['Sbar']:.3e} (old {v['old_Sbar']:.3e}, x{v['gain_S']:.1f})  Rbar'={v['Rbar']:.3e} (old {v['old_Rbar']:.3e}, x{v['gain_R']:.1f})  block'={v['block']:.3e} (old {v['old_block']:.3e})  E'={v['E']:.4f} (old {v['old_E']:.4f}, x{v['gain_E']:.1f})  E'sqrt={v['E_sqrt(a+M)']:.2f}  [A0={v['A0']:.1e} A1={v['A1']:.1e} B={v['B']:.1e} C={v['C']:.1e}]")
     print("asymptotic E' sqrt(a+M) ->", res["G4_asymptotic_constant_E"], " old:", res["G4_asymptotic_old"])
+    print("universal ceiling:", res["G6_universal"])
     print("NUM orbits: max ratio S", res["G5"]["max_ratio_S"], " max ratio R", res["G5"]["max_ratio_R"])
     for o in orbits:
         print("Q0=%.2e th=%.1f | " % (o["Q0"], o["theta0"]) + " ".join("M=%s S=%+.2e/%.2e R=%+.2e/%.2e" % (M, r["S_N_M"], r["Sbar_M"], r["R_N_M"], r["Rbar_M"]) for M, r in o["rows"].items()))
