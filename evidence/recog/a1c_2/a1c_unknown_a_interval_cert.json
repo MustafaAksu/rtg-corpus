@@ -5,7 +5,8 @@
   "G3_enclosure_contains_a_and_L": true,
   "G4_nesting": true,
   "NC1_bad_bracket_caught": true,
-  "NC2_corrupt_record_empty": true
+  "NC2_corrupt_record_empty": true,
+  "NC3_gap_not_bridged": true
  },
  "imports": {
   "recog_a1c_tail_averaging_cert.py_sha256": "2d446dd753d293bff8e5d1e5c2ecf4fc85c7a3a8645a4967f2b5e1bb54e53cf0"
