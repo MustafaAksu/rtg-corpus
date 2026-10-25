@@ -19,7 +19,8 @@ Gates: G1 digamma bracket contains mp.digamma at 2000 points, h decreasing (trig
        G3 the all-slip enclosure contains a_true and its L-hull contains the [NUM] L estimate (tolerance = tail scale of the estimate);
        G4 nesting: enclosure(K slips) subset Lemma-8 interval, widths non-increasing in K.
 Negative controls: NC1 a digamma bracket without the 1/(12x^2) term fails containment; NC2 a corrupted record (one slip index k shifted by +1)
-       yields an EMPTY enclosure for at least one orbit (the exclusion logic detects the inconsistency).
+       yields an EMPTY enclosure for at least one orbit (the exclusion logic detects the inconsistency); NC3 the component merge bridges
+       only overlapping / exactly adjacent boxes (exact mp ends), never a positive gap.
 [NUM] orbits: 12 starts in U, N_STEPS primitive steps; slips by the F2(b) predicate; L estimated at the end of the run (tail scale sqrt(Q_end)).
 usage: python -I recog_a1c_unknown_a_interval_cert.py [OUT_JSON] [N_STEPS]
 """
@@ -102,17 +103,21 @@ def enclosure(slips, a_lo, a_hi, w_min=0.25):
         if status == "UNDECIDED" and x2 - x1 > w_min:
             m_ = (x1 + x2)/2; stack.append((x1, m_)); stack.append((m_, x2))
         else:
-            kept.append((fdn(x1), fup(x2), fdn(Llo), fup(Lhi)))
-            if status == "SURE": sure.append((fup(x1), fdn(x2)))
+            kept.append((x1, x2, Llo, Lhi))                          # exact (mp) ends; rounded only after merging
+            if status == "SURE": sure.append((x1, x2))
             else: undecided_len += x2 - x1
     def merge(boxes, with_L):
+        """merge boxes into components ONLY when they overlap or share an exact endpoint (mp comparison; bisection ends are exact dyadics).
+           A positive gap, however small, is never bridged (NC3)."""
         boxes.sort(); comps = []
         for b in boxes:
-            if comps and abs(comps[-1][1] - b[0]) < 1e-9:
-                comps[-1] = (comps[-1][0], b[1], min(comps[-1][2], b[2]), max(comps[-1][3], b[3])) if with_L else (comps[-1][0], b[1])
+            if comps and b[0] <= comps[-1][1]:
+                comps[-1] = (comps[-1][0], max(comps[-1][1], b[1]), min(comps[-1][2], b[2]), max(comps[-1][3], b[3])) if with_L else (comps[-1][0], max(comps[-1][1], b[1]))
             else: comps.append(b)
         return comps
-    return merge(kept, True), merge(sure, False), n_eval, float(undecided_len)
+    outer = [(fdn(c[0]), fup(c[1]), fdn(c[2]), fup(c[3])) for c in merge(kept, True)]     # outward rounding after the exact merge
+    inner = [(fup(c[0]), fdn(c[1])) for c in merge(sure, False) if fup(c[0]) <= fdn(c[1])]  # inward rounding; drop a component that collapses
+    return outer, inner, n_eval, float(undecided_len)
 # ---------------- orbits ----------------
 TAU = float(up(tau)); OMEGA = complex(-0.5, math.sqrt(3)/2)
 def run_orbits(N):
@@ -186,7 +191,15 @@ if __name__ == "__main__":
         am, ap = o["lemma8"]["interval"]
         comps, _, _, _ = enclosure(bad, am, ap)
         if not comps: nc2 = True; break
-    res["gates"]["NC1_bad_bracket_caught"] = bool(nc1); res["gates"]["NC2_corrupt_record_empty"] = bool(nc2)
+    # NC3: the inner merge must not bridge a positive gap: two sure boxes [1,2] and [2+1e-9,3] stay two components; [1,2] and [2,3] merge
+    def _merge_test(boxes):
+        bs = sorted(boxes); comps = []
+        for b in bs:
+            if comps and b[0] <= comps[-1][1]: comps[-1] = (comps[-1][0], max(comps[-1][1], b[1]))
+            else: comps.append(b)
+        return comps
+    nc3 = len(_merge_test([(mp.mpf(1), mp.mpf(2)), (mp.mpf(2) + mp.mpf("1e-9"), mp.mpf(3))])) == 2 and len(_merge_test([(mp.mpf(1), mp.mpf(2)), (mp.mpf(2), mp.mpf(3))])) == 1
+    res["gates"]["NC1_bad_bracket_caught"] = bool(nc1); res["gates"]["NC2_corrupt_record_empty"] = bool(nc2); res["gates"]["NC3_gap_not_bridged"] = bool(nc3)
     res["N_steps"] = N; res["orbits"] = orbits
     ok = all(res["gates"].values()); res["ALL_PASS"] = ok
     json.dump(res, open(outp, "w"), indent=1, default=lambda o: bool(o) if isinstance(o, np.bool_) else (float(o) if isinstance(o, (np.floating, np.integer)) else str(o)))
