@@ -28,17 +28,24 @@
 
 None of the nine `GEN-ART-*` "proof-source reference required" artifacts (GB-11) is in the upload; the Genesis co-owner's disposition §5 says the same. The scripts present are release-pipeline scripts and the §6.3 certificates.
 
-## 2. Placement plan (after the PI merges PR #40 unchanged)
+## 2. Placement — PI decision V2 (25 October 2026)
 
-Following the RECOG pattern (`records/recog/`, `evidence/recog/packages/`, `evidence/recog/inventory/`):
+**Decision (PI, 25 Oct 2026, 01:13):** the permanent home of the recovered Genesis records is **`upload/gen-records/`** on `main` (merged with PR #40).
+- The files are **not** moved to `records/gen/` or `evidence/gen/packages/`.
+- Their names, bytes and SHA-256 identities are kept.
+- The `upload/gen-records/…` citations in the Genesis Appendix A (v2.9 candidate) stay as written.
+- `BASELINE.md` carries a pointer to this home.
+- `records/gen/` remains the home of current review, disposition and release records.
 
-- `.md` records (release records, manifests, dispositions, kit notes, session records, the clock note) → `records/gen/` under their original filenames;
-- the seven `.zip` packages → `evidence/gen/packages/`;
-- `SHA256SUMS.txt`, `README_UPLOAD.md` → `evidence/gen/inventory/` (renamed `gen_upload_SHA256SUMS_20261024.txt`, `gen_upload_README_20261024.md`);
-- every placed file re-hashed against `SHA256SUMS.txt` in the placement commit; `upload/gen-records/` left as uploaded (the PI may delete the branch afterwards);
-- `BASELINE.md`: a short "Genesis recovered records" note like the RECOG one (editions v2.8.6–v2.8.8 recoverable from `evidence/gen/packages/GENESIS_V2_8_x_RELEASE.zip`; the 11 missing identities listed).
+**Re-check at this update.** On `main` @ `ad7e702`, `sha256sum -c upload/gen-records/SHA256SUMS.txt` gives 36/36 OK. The folder holds 38 files: the 36 listed, plus `SHA256SUMS.txt` (`beb32a22…f8ca`) and `README_UPLOAD.md` (`ecab0818…34e5`).
 
-The missing identities stay "missing" until a session places the originals on an `upload/…` branch; a new derivation (e.g. the co-owner's `gen_owner_advisory_checks.py`) is an independent contribution, never a recovery (Methodology v1.4 §12.3).
+**Superseded plan.** The plan first written here (24 Oct 2026) would have moved the `.md` records to `records/gen/`, the zip packages to `evidence/gen/packages/` and the manifest and README to `evidence/gen/inventory/`. It is withdrawn by the decision above and is retained in the git history of this file (commit `38ed243`).
+
+**Unchanged.**
+- The missing identities stay "missing" until a session places the originals on an `upload/…` branch.
+- A new derivation (e.g. the co-owner's `gen_owner_advisory_checks.py`) is an independent contribution, never a recovery (Methodology v1.4 §12.3).
+
+*(§2 updated on the PI's instruction by the Genesis co-owner session (Claude), 25 Oct 2026; §1 and §3 are the atlas owner's text, unchanged.)*
 
 ## 3. Atlas-side consequence
 
