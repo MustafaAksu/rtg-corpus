@@ -1,7 +1,7 @@
 # RTG State Atlas v0.5 — change-focused review packet
 
 **Date:** 25 October 2026. **Prepared by:** Claude, Atlas owner.
-**Status:** DRAFT / NONCANONICAL — receiving review requested (ChatGPT, Atlas co-owner); no PI acceptance or owner-science adoption. `atlas-v0.4` governs until acceptance.
+**Status:** DRAFT / NONCANONICAL — second candidate; receiving review REVISE (AV05-R1, AV05-R2) applied, focused readback requested (ChatGPT, Atlas co-owner); no PI acceptance or owner-science adoption. `atlas-v0.4` governs until acceptance.
 
 ## 1. Inputs and identities
 
@@ -9,11 +9,11 @@ Base `atlas-v0.4`, SHA-256 `b63eaf8b85dbb1f4a8fbee61cb82f2af089276797c387e6a8a0b
 
 | Object | SHA-256 |
 |---|---|
-| `atlas/RTG_STATE_ATLAS.md` (candidate) | `3479e046bffeb2e521237a7ee4a537a5b269f5d590f05f9653974e647d3a7cec` (476,910 bytes, 1,549 lines) |
+| `atlas/RTG_STATE_ATLAS.md` (candidate) | `cf250c9140e6ee26c65b2497a2a61dc1e326a69574d590132f0cea9646a2b0e5` (477,266 bytes, 1,549 lines; second candidate, §6) |
 | `atlas/RTG_STATE_ATLAS_METHOD.md` (unchanged) | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` |
 | `evidence/atlas/v0.5/source_manifest.json` | `923e87cc59c803359ed44dc87f333cf10911b3bf887c59d7f9f0fa8c38cc9ce3` |
 | `tools/atlas_check.py` (unchanged) | `0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d` |
-| `evidence/atlas/build/refresh_v0_5.py` | `6c5912b4edf6df861b222486f64040353e625e8e8390ceb24f4c0b71e22cc1f1` |
+| `evidence/atlas/build/refresh_v0_5.py` | `b08fafa347a0a316dae21749b801482338949e9ad70a1696eae70201d1fa212e` |
 
 Decision basis: the Genesis cycle records (`records/gen/ATLAS_ADVISORY_GEN_v2_8_9_RECONCILIATION.md`, the two owner dispositions, `ATLAS_ROW_CHECK_GEN_v2_9_STAGE1.md` §4 and `…STAGE2.md` §4 "atlas-side notes", `GEN_v2_9_RELEASE_RECORD.md`) and the RECOG v0.3.24 release record (`records/recog/RECOG_v0_3_24_RELEASE_RECORD.md`).
 
@@ -52,4 +52,13 @@ Shared checker: **zero FAIL** (the two `sources` FAILs of the moved rows cleared
 
 ## 5. Publication boundary
 
-Not accepted by this build. Acceptance needs the receiving review, then PI acceptance identifying the bytes `3479e046…7cec`, a merge commit (not squash) of `claude/atlas-v0.5` into `main`, and an annotated `atlas-v0.5` tag naming the hash. No owner DSN, grade, source tag, Method edition or consumer adoption is changed. `atlas-v0.4` remains the accepted Atlas until that decision.
+Not accepted by this build. Acceptance needs the receiving review, then PI acceptance identifying the bytes `cf250c91…b0e5`, a merge commit (not squash) of `claude/atlas-v0.5` into `main`, and an annotated `atlas-v0.5` tag naming the hash. No owner DSN, grade, source tag, Method edition or consumer adoption is changed. `atlas-v0.4` remains the accepted Atlas until that decision.
+
+## 6. Correction pass after the receiving review (25 October 2026)
+
+Receiving review `records/atlas/ATLAS_V0_5_RECEIVING_REVIEW.md` (ChatGPT, PR #58, commit `9a419073`): REVISE on the first candidate `3479e046…7cec`. Both findings verified against `recog-v0.3.24`:
+- **AV05-R1** — the A1c node ended its positive statement with "without a"; owner §6.16e: "without the value of a" (the record determines the phase limit without the value of a; not a non-recoverability theorem). Fixed.
+- **AV05-R2** — the A1b node quoted the ε_k ceiling without saying that Q is the largest primitive amplitude of the k-th slip block and that the tails are a-priori quantities, and omitted the owner's consequence M_{k+1}/M_k → e^{π/(3τ)}; both added, with the owner's caveat that no computable finite-record decoder guarantee follows. Fixed.
+- Accepted suggestion: PROG.G8 labelled as an atlas reading (of Programme §8.2 against GEN §6.8 and OFN/RRF) rather than "owner-recorded"; E-P13-1 remains cited as the Programme owner's own record.
+
+Three lines changed against the first candidate (D3 A1b node, D3 A1c node, D1.L5 PROG.G8). Second candidate `atlas/RTG_STATE_ATLAS.md` SHA-256 `cf250c9140e6ee26c65b2497a2a61dc1e326a69574d590132f0cea9646a2b0e5`; builder `b08fafa3…212e`; checker zero FAIL, carried rows unchanged; 18/18 + 6/6 controls; two builds identical.
