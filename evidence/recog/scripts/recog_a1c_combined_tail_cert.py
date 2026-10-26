@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """A1c -- combined tail tau S^tail - R^tail: the leading harmonics cancel to a single boundary term (telescoping), and the known-a
-envelope loses its M^{-1/2} order.
+envelope loses its M^{-1/2} order (it becomes O_a((1+log(a+M))/(a+M))).
 
 Exact identity (Prop. 13). With the Dyadic decomposition of the block remainder under branch (B),
     r_m = S_Theta(z_m) + tau D_Q(z_m) + [Arg(J(z_m)/z_m) + tau q_m] + Arg(hat F(z_m)/J(z_m)),      S_Theta(z) = D_Theta(hat F z) - D_Theta(z),
@@ -14,7 +14,7 @@ Leading harmonics: separately, tau S and R carry tau phi_k and lambda_k; combine
 Known phase (Cor. 14). At a slip block, the block base point has primitive angle -r pi/3 + O(sqrt Q) (in-block cell), and d(-r pi/3) = -sqrt3/8 for
     r = 0,1,2 and +sqrt3/8 for r = 3,4,5. Combined with kappa(r) = (0,0,0,sqrt3/4,sqrt3/4,sqrt3/4): kappa(r) - d(-r pi/3) = sqrt3/8 for EVERY r.
     Sharpened schedule:  tau psi(a+M_k) - (k-1) pi/3 + (sqrt3/8)(a+M_k)^{-1/2} + (tau/2)(a+M_k)^{-1} = L + eps'''_k,   |eps'''_k| <= E'''(a, M_k, r_k),
-    E''' = xi_max + rho_P + kappa ref_kappa + tau (A0 + A1) + varrho_D + (sqrt3/8) ref_d + c_J^R Sigma_2 + c_7^R Sigma_3 = O((a+M)^{-1})
+    E''' = xi_max + rho_P + kappa ref_kappa + tau (A0 + A1) + varrho_D + (sqrt3/8) ref_d + c_J^R Sigma_2 + c_7^R Sigma_3 = O_a((1 + log(a+M))/(a+M))  [tau A_1 is O(log/(a+M)); CT-1]
     (dominant term tau A0 <= tau Delta_a/(a+M) ~ 0.98 sqrt(a)/(a+M): the unknown start offset a - b).
 Gates: G1 exact identities (sympy): d from h_2 equals the published D_{Theta,1}; ell_k = lambda_k - tau phi_k equals the published L_Theta harmonics;
     the six values d(-s pi/3); kappa - d = sqrt3/8 for all r; the harmonic-amplitude identities |ell_1|/|s_1-1| = 1/sqrt12, |ell_3|/|s_3-1| = 1/12.
