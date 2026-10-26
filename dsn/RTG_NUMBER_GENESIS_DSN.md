@@ -75,9 +75,9 @@ New entries should prefer the canonical form directly.
 
 `[GUARD]` **RF-06 state/gauge scope of the imported finite phase support.** The imported statement above is kept verbatim (K4); this note fixes its scope. (1) The global-phase quotient is the only **unrestricted** gauge. (2) The TDR-G transition state also carries tokens / relative advances; state completeness follows OFN v0.8 SG-OFN-STATE (a gauge-invariant observable is not a complete state unless the dynamics is well defined on the quotient). (3) A common token-origin shift is **not** a gauge of the star rule: OFN v0.8 RTG-OFN-ALG-STAR-TOKEN-SHIFT (fixed-star covariance iff `2c = 0`; the star step negates the center token). (4) On the frozen no-birth SWAP/P3 route used by C7B-DISC, the rule **is** equivariant under every common token shift: by direct reading of the pinned v18 transition, phase advance turns a token shift into a common phase shift, SWAP and P3 permute tokens, and path orientation uses token differences; corroborated by a finite spot check (`NG_SELFCHECK_REFERENCE_TRANSPORT_v1`). Hence the DISC phase-and-token-difference cycle key is a legitimate state key on that route. The source-side correction belongs to the Discrete Genesis owner.
 
-`[RESULT]` `[from: DEF]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 SG-10; RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 SG-14; RTG_PROGRAMME_OVERVIEW_v1.2 SG-PROG-1 | RID unavailable]` **Cross-branch firewall.** No continuous dynamical law/coefficient may be imported into TDR-G and no discrete coefficient may be imported into the continuous branch without an explicit bridge theorem.
+`[RESULT]` `[from: DEF]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 SG-10; RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 SG-14; RTG_PROGRAMME_OVERVIEW_v1.3 SG-PROG-1 | RID unavailable]` **Cross-branch firewall.** No continuous dynamical law/coefficient may be imported into TDR-G and no discrete coefficient may be imported into the continuous branch without an explicit bridge theorem.
 
-`[GUARD]` **Programme generator-selection ceiling.** `[import: RTG_PROGRAMME_OVERVIEW_v1.2 SG-PROG-2 | RTG-OPEN-GENERATOR-SELECTION]` All N-1/N-2/N-3 results constructed from the continuous primitive map are exact/scoped results **within the selected canonical effective generator `T`**. They do not establish that `T`, or the resulting arithmetic realization, is physically primitive or universal before OPEN-P0 closes.
+`[GUARD]` **Programme generator-selection ceiling.** `[import: RTG_PROGRAMME_OVERVIEW_v1.3 SG-PROG-2 | RTG-OPEN-GENERATOR-SELECTION]` All N-1/N-2/N-3 results constructed from the continuous primitive map are exact/scoped results **within the selected canonical effective generator `T`**. They do not establish that `T`, or the resulting arithmetic realization, is physically primitive or universal before OPEN-P0 closes.
 
 ### §1.2 Number Genesis thesis — relational composition before numerical representation
 
@@ -160,7 +160,7 @@ relational distinguishability
 
 **In-branch Number Genesis proof queue**
 
-1. **C7C-M — interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20.7]` C7C-M2 instrument frozen and Census-1 executed: INCONCLUSIVE / INCONCLUSIVE — no admitted nondegenerate composable source chain in Census-1 evidence; M2-1 transported chain identity adopted (algebra only). Full-interface typed WD-DOM remains OPEN; missing evidence object: a certified composable three-stream witness. `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closure are CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL on `D_chain`; full-interface typed WD-DOM, associativity admissibility-transfer, and carrier identity/inverse remain OPEN; M-4 realization search HOLD pending the Discrete-owner P2 policy. `[v1.19]` **C7C-WD is ADOPTED** and **C7C-0 is CLOSED `[ALG]`** (`NG_C7C0_RECIPROCAL_CERT_v2.md`). The framework splits **domain congruence** (WD-DOM: admissibility itself must descend through `==_Q`, or the operation must be typed to a class-saturated sector) from **value congruence** (WD-VAL: equivalent representatives give equivalent outputs when composed); "whenever all four compositions are admissible" is necessary but one condition short of a quotient operation. Diag3 showed equal labels sit on dynamically different realizations, and `1` already carries realizations in two disjoint families (N5-PHYS-1 continuous dyad; DISC-2 TDR-G), so WD-DOM is a genuine RTG obligation for any *binary* `Phi`. C7C-0 discharges WD-DOM because `S` is **total** on `R_bd` (physical admissibility established for every `x in R_bd`, hence `D_S = R_bd`); unary-ness alone would not suffice for a partial operation. C7C-M inherits WD-DOM in full. Design requirement: propose an owner-native binary composition with its typed signature `Phi_{tau1,tau2}^{tau3}` and its WD-DOM obligation stated explicitly **before** any outcome-sensitive computation; the product `pu/qv` must *emerge* (WD-REP), never define `Phi`. **C7C-A** addition only if the multiplication carrier survives; laws (associativity, commutativity, distributivity, identities) remain separate downstream obligations. **Campaign hold:** design/algebra may proceed, but the first C7C-M realization search (M-4) is not opened until the Discrete-Genesis owner resolves the P2 antipodal-endpoint presentation-covariance policy used by the current SWAP/P3 implementation.
+1. **C7C-M — interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20.7]` C7C-M2 instrument frozen and Census-1 executed: INCONCLUSIVE / INCONCLUSIVE — no admitted nondegenerate composable source chain in Census-1 evidence; M2-1 transported chain identity adopted (algebra only). Full-interface typed WD-DOM remains OPEN; missing evidence object: a certified composable three-stream witness. `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closure are CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL on `D_chain`; full-interface typed WD-DOM, associativity admissibility-transfer, and carrier identity/inverse remain OPEN; M-4 realization search HOLD pending the Discrete-owner P2 policy. `[v1.19]` **C7C-WD is ADOPTED** and **C7C-0 is CLOSED `[ALG]`** (`NG_C7C0_RECIPROCAL_CERT_v2.md`). The framework splits **domain congruence** (WD-DOM: admissibility itself must descend through `==_Q`, or the operation must be typed to a class-saturated sector) from **value congruence** (WD-VAL: equivalent representatives give equivalent outputs when composed); "whenever all four compositions are admissible" is necessary but one condition short of a quotient operation. Diag3 showed equal labels sit on dynamically different realizations, and `1` already carries realizations in two disjoint families (N5-PHYS-1 continuous dyad; DISC-2 TDR-G), so WD-DOM is a genuine RTG obligation for any *binary* `Phi`. C7C-0 discharges WD-DOM because `S` is **total** on `R_bd` (physical admissibility established for every `x in R_bd`, hence `D_S = R_bd`); unary-ness alone would not suffice for a partial operation. C7C-M inherits WD-DOM in full. Design requirement: propose an owner-native binary composition with its typed signature `Phi_{tau1,tau2}^{tau3}` and its WD-DOM obligation stated explicitly **before** any outcome-sensitive computation; the product `pu/qv` must *emerge* (WD-REP), never define `Phi`. **C7C-A** addition only if the multiplication carrier survives; laws (associativity, commutativity, distributivity, identities) remain separate downstream obligations. **Campaign hold:** design/algebra may proceed, but the first C7C-M realization search (M-4) is not opened until the Discrete-Genesis owner resolves the P2 antipodal-endpoint presentation-covariance policy used by the current SWAP/P3 implementation. **TDR-G dependency:** the request for TDR-G's orientation-policy disposition at `S=0`, `|E|=N/2` is filed as `pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md` (`blocks: C7C-M4`); before any status change, the 40 convention-exposed DISC-2 witnesses (§6.6 P2 audit) receive a sensitivity audit under the policy TDR-G adopts. The abstract WD-DOM design continues meanwhile.
 2. **C7B — global breadth.** C7B-DISC-1 and C7B-DISC-2 are CLOSED, establishing ten dynamic labels. Global breadth remains OPEN. A further campaign (DISC-3) is **deferred**, not blocked: more labels do not imply an operation, and the present spectrum already spans integers and non-integer rationals sufficiently to expose whether a physical arithmetic construction works or fails. Continue only through separately pre-registered owner-native axes and fresh domains; do not infer `Q_RTG^dyn = Q_(>0)` or that the ten established labels exhaust it.
 3. **N-4 — global/domain extension in parallel.** Local N-5 work no longer depends on N-4; N-4 remains relevant to global winding/critical-curve structure. GAP-LOCK Lemmas 1–3 are CLOSED and no longer occupy the queue.
 4. **N-6 — classify incommensurable/order-completion structure by R-like labels** (representation-level in the continuous branch under SG-NG-19 unless substrate-independence/bridge conditions are met).
@@ -259,7 +259,7 @@ relational distinguishability
 
 **[SG-NG-22] Relational-arrow / representation primitivity guard.** No claim that additive/difference structure is physically prior to ratio/proportion structure, or vice versa, is admissible from notation alone. A primitivity claim requires both (i) a certified physical mechanism and (ii) a certified sector gauge/covariance. Admissible examples of representation mechanisms include the free-exponent map of a certified endomorphism monoid, a genuine logarithmic group isomorphism for an independently certified positive multiplicative sector, and cover/character constructions for compact phase. An admissible relational arrow may not be silently replaced by a primitive numerical ratio, difference, logarithm, or coordinate label. In particular, quotient and angle-difference descriptions of the same `U(1)` invariant do not constitute evidence of ontological priority.
 
-**[SG-NG-23] Non-relabeling ≠ nontrivial commensurability.** Showing that a recurrence/event stream is not a fixed blocking `T^m` is necessary for N-5A independence but does not by itself establish incommensurability, a nontrivial Q-like commensurability class, or an R-like invariant. Density limits, subleading discrepancy laws, and asymptotic slip constants must be separately typed. In particular, continuous-dyad constants built from `pi`, `exp`, `tau`, or other already-real-valued chart/normal-form data are representation-level diagnostics under SG-NG-19 and OPEN-P0 unless a substrate-independence or named bridge theorem licenses stronger foundational use.
+**[SG-NG-23] Non-relabeling ≠ nontrivial commensurability.** Showing that a recurrence/event stream is not a fixed blocking `T^m` is necessary for N-5A independence but does not by itself establish incommensurability, a nontrivial Q-like commensurability class, or an R-like invariant. Density limits, subleading discrepancy laws, and asymptotic slip constants must be separately typed. In particular, continuous-dyad constants built from `pi`, `exp`, `tau`, or other already-real-valued chart/normal-form data are representation-level diagnostics under SG-NG-19 and OPEN-P0 unless a substrate-independence or named bridge theorem licenses stronger foundational use. The number `exp(pi/(3 tau)) = exp(sqrt(3) pi/6)` appears with three scopes: here a representation-level diagnostic (SG-NG-19); in RECOG a clock ratio under RECOG's own SG-R10; and in `RECOG-THM-A1B-SLIP-SCHEDULE-U` (`recog-v0.3.24`) a THM consequence on `U_R,base`. They are not identified beyond their stated scopes.
 
 **[SG-NG-24] Rational density ≠ physical commensurability.** A rational limiting event-density, or even a sublinear relative synchronization defect, is insufficient by itself for a genesis-grade Q-like commensurability claim. The active N-5 candidate requires a certified common-order integer synchronization defect to remain bounded, or a separately proved stronger common-measure criterion. Any weaker quotient that discards an **unbounded certified relational discrepancy** must state and physically justify that information loss explicitly. The canonical A/B pair motivates this guard: its leading event-density tends to `6`, while its certified physical 7-gap count / synchronization discrepancy grows like `log M`.
 
@@ -391,7 +391,7 @@ is one `U(1)` invariant written in multiplicative and angular notation. Verifyin
 
 `[OPEN] [target: ALG/NUM]` **HYP-NG-0R-COV — covariance audit.** Before any amplitude-sector ratio-primitivity claim is promoted, audit the certified primitive-dyad laws under the candidate sector transformations. A positive result requires one declared transformation law to act covariantly on the gauge-reduced observables with no independent contradictory additive symmetry. A falsifier is any certified law whose gauge-reduced form breaks the proposed covariance. The phase-sector quotient/difference identity is excluded from the audit because it is representation-equivalent and non-falsifiable.
 
-`[DEF]` **Declared primary transformation (pre-registration pin).** The first audited candidate is amplitude scaling `Q -> lambda Q` on the certified primitive-dyad sector. Predicted covariance form: naive form-invariance of `Delta Q_true = -Q_true^2 + O(Q_true^(5/2))` under pure scaling is expected to FAIL (the law carries an intrinsic scale); the covariance to be tested is translation along the flow in `ln Q` — equivalently, `Q_0 -> lambda Q_0` acting on gauge-reduced entry data only through the entry-phase shift `tau ln lambda` of the `[CAND]` phi* law (`[RID unavailable — historical phi* entry-phase law; source not identified (Dyadic N3)]`; v1.20.8 correction: the former pin `DYAD-CAND-PHISTAR-ENTRY-PHASE` names no Dyadic RID and is removed; the Dyadic asymptotic-phase objects of v6.4.15 are not a substitute without a separate comparison proof). Falsifier: a certified gauge-reduced law on the sector that admits an independent additive-`Q` symmetry or breaks the flow-translation form. Any conclusion inheriting the phi* leg is capped at `[CAND]` until that law is promoted. Secondary transformations may be declared only by ledger entry before their audit runs.
+`[DEF]` **Declared primary transformation (pre-registration pin).** The first audited candidate is amplitude scaling `Q -> lambda Q` on the certified primitive-dyad sector. Predicted covariance form: naive form-invariance of `Delta Q_true = -Q_true^2 + O(Q_true^(5/2))` under pure scaling is expected to FAIL (the law carries an intrinsic scale); the covariance to be tested is translation along the flow in `ln Q` — equivalently, `Q_0 -> lambda Q_0` acting on gauge-reduced entry data only through the entry-phase shift `tau ln lambda` of the `[CAND]` phi* law (`[RID unavailable — historical phi* entry-phase law; source not identified (Dyadic N3)]`; v1.20.8 correction: the former pin `DYAD-CAND-PHISTAR-ENTRY-PHASE` names no Dyadic RID and is removed; the Dyadic asymptotic-phase objects of v6.4.15 are not a substitute without a separate comparison proof). Falsifier: a certified gauge-reduced law on the sector that admits an independent additive-`Q` symmetry or breaks the flow-translation form. Any conclusion inheriting the phi* leg is capped at `[CAND]` until that law is promoted. Secondary transformations may be declared only by ledger entry before their audit runs. Available comparison (not an identification): `RECOG-THM-A1A-CD-IDENTIFICATION` (`recog-v0.3.24` §6.13b) gives `C_D^ext(x_0) = tau log Q_0 - M_W(x_0)` on `U_R,base`, so `Q_0 -> lambda Q_0` at fixed phase shifts `C_D^ext` by `tau ln lambda + O(sqrt(Q_0))`. Whether `phi*` equals `C_D^ext` stays OPEN (`NUMGEN-OPEN-NG0R-COV`) until chart, lift, readout, clock, start state and overlap (`U_R,base ∩ U_NG`) are matched; RECOG's infinite-record readout (A1c) recovers neither the start amplitude nor any change to its memory classification.
 
 `[GUARD]` NG-0R is not a new foundational branch and does not block NG-7A, N-2-ORD, or N-5A. It is a semantics/covariance layer under the existing Number Genesis programme.
 
@@ -434,7 +434,7 @@ N-1 has one foundational spine plus one robustness branch:
 N-1A-MIN  isolated relational event equivalence  [CLOSED scoped]
    -> N-1A2  boundary locality / context robustness  [CLOSED scoped]
    -> N-1B-MIN  fixed-support successor extensibility  [CLOSED scoped]
-   -> N-1C  operational history quotient / free-history test  [CLOSED local dyad by L1]
+   -> N-1C  operational history quotient / free-history test  [CLOSED on U_NG,tube by L1; abstract N-1A0/N-1A1 open]
 
 parallel strengthening after N-1B-MIN:
    N-1B-GROWTH  topology-changing successor robustness  [OPEN]
@@ -447,7 +447,7 @@ parallel strengthening after N-1B-MIN:
 ##### OPEN N-1A0 — Strict Relational Equivalence
 
 **RID:** `NUMGEN-OPEN-N1A0`  
-**Status:** ACTIVE  
+**Status:** ACTIVE (abstract question; the local primitive-dyad instance is closed on `U_NG,tube` by N-1 / L1)  
 **Epistemic target:** `[DEF]` + elementary `[ALG]` once the admissible morphism class is fixed
 
 `[DEF candidate]` **Relational event token.** An event token `e` is represented by a finite transition neighborhood
@@ -499,7 +499,7 @@ N_e1 and N_e2 are isomorphic in G_adm.
 ##### OPEN N-1A1 — Counting Equivalence
 
 **RID:** `NUMGEN-OPEN-N1A1`  
-**Status:** PARTIAL — closed for N-1A-MIN; general boundary-aware form continues in N-1A2  
+**Status:** PARTIAL — closed for N-1A-MIN and, locally, on `U_NG,tube` by N-1 / L1; the general boundary-aware form continues in N-1A2  
 **Epistemic target:** `[DEF]` after admissibility conditions on the counting map are fixed
 
 `[DEF candidate]` **Counting-type map.** A counting type is specified by a map
@@ -967,6 +967,8 @@ Delta Q_5 = Q_true*(5 eta^3 - 43 eta^2 rho
                     + 4 eta rho^2 - 5 rho^3)/24.
 ```
 
+*Owner alias:* `Delta Q_5` is the polynomial `P_5` of `DYAD-ALG-P5-RADIAL` (`dyad-v6.4.22` §6.14), the identity used inside DYAD-THM-PRIM-CTR. Exact equality, together with `Delta Q_4 = -Q_true^2` and vanishing degrees 1–3, is recomputed from `T` in `evidence/numgen/scripts/numgen_v1_21_stage1_checks.py` gate A1 (exact rational arithmetic; negative control fails). The L1 constants of this section are NUMGEN's; no Dyadic ceiling replaces them.
+
 Therefore
 
 ```text
@@ -1062,6 +1064,18 @@ T : U_T -> U_T,
 ```
 
 and L1's strict `F`-contraction holds at every point of the tube, not only on the base phase.
+
+`[DEF]` **Domain labels.** Five domains share the letters `U` and `U_T` across Number Genesis, Dyadic and RECOG; they are not identified with each other beyond what is proved at the point of use.
+
+| Label | Set | Source | Used for |
+|---|---|---|---|
+| `U_NG` | `{0 < Q_true < delta}`, the existential L1 base sector above (radius chosen by continuity, not stated) | this section | every NUMGEN statement proved "after shrinking"; RECOG writes it `U_NUMGEN` |
+| `U_NG,tube` | `U_NG union T(U_NG) union ... union T^5(U_NG)` (the `U_T` above) | this section | N-1/N-3A one-chart tube, L-MONO, the canonical B predicate |
+| `U_D,base` | `{0 < Q_true <= 1/625}` | DYAD-THM-PRIM-CTR (`dyad-v6.4.22` §6.14; Dyadic writes `U`) | explicit base; seed admission; row-A block base points |
+| `U_D,tube` | `union_(j<6) T^j(U_D,base)`, contained in `{|W| < 47/1000}` | DYAD-THM-PRIM-CTR (Dyadic writes `U_T`) | explicit tube; row-A branch clause |
+| `U_R,base` | the set `U_D,base`, as RECOG's start domain | RECOG §6.13b (RECOG writes `U`) | RECOG's A1a/A1b explicit-domain theorems |
+
+In this document an unlabelled `U` or `U_T` in a theorem scope means `U_NG` or `U_NG,tube`. No inclusion between `U_NG` and `U_D,base` is asserted. The L1 coordinate `U = sqrt(3) rho/2` is a coordinate, not a domain. `q_m` is the primitive `Q_true` at block base points (Dyadic's `Q_m`), not the Dyadic/RECOG chart variable `q = |z|^2`.
 
 `[DEF]` **Primitive counting type.** For each `x in U_T`, the event token is
 
@@ -1487,7 +1501,7 @@ In particular,
 \]
 This is the exact representation-theoretic origin of the one-step p-resonance condition. `[COR v1.19]` The exact-order hypothesis is load-bearing: `lambda^p=1` alone is insufficient (for example `lambda=1` makes the conjugation action trivial). The output-vector `-1` charge is essential; the rule must not be derived from a scalar `rho^a chi_b` projector.
 
-`[RESULT][from: ALG]` **First-nonlinear cyclic-average theorem.** If `f=R+h_d+O(d+1)` with `h_d` the lowest nonlinear homogeneous degree, then
+`[RESULT][from: ALG]` [RID: NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE] **First-nonlinear cyclic-average theorem.** If `f=R+h_d+O(d+1)` with `h_d` the lowest nonlinear homogeneous degree, then
 \[
 [f^p-id]_d=pR^{-1}\Pi_0h_d.
 \]
@@ -2125,7 +2139,7 @@ close the event-predicate obligation at the local tube scope. SG-NG-11 is satisf
 
 `[RESULT] [from: ALG]` **GATE 4 CLOSED — common order.** For any two canonical B-event anchors on one primitive orbit inside `U_T`, N-2-ORD gives a unique forward-reachability relation: the later anchor is `T^k` of the earlier for one positive Track-A history count `k`, and antisymmetry excludes the reverse. Thus their interleaving is defined entirely by `<=_T`; no external clock or frequency is introduced. The associated word of unique Track-A reachability counts is a representation of this certified relational order, not an external time parameter. `[NUM]` On the audited seed run this represented word has alphabet `{6,7}` over 6665 gaps and contains the documented step-33229 slip. The observed word is NUM evidence for gate 5/LOGSLIP, not the theorem warrant for gate 4.
 
-`[RESULT] [from: THM] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.14 | DYAD-THM-PRIM-CTR]` **Explicit-domain boundary CLOSED (v1.20).** The Dyadic owner certifies an explicit primitive contraction and six-phase invariant tube: `0 < Q - (3/2)Q^2 <= Q(T^6 x) <= Q - (1/2)Q^2 < Q` for `Q <= 1/400`, with `U = {0 < Q <= 1/625}` and `U_T = U_{j<6} T^j(U)`. **Corollary `[ALG]`:** the canonical long-horizon seed `(rho,eta) = (1/100, 1/250)` has `Q_0 = 19/250000 < 1/625`, so it lies in `U`; the N-1 / N-2-ORD tube-membership premise for that seed is now theorem-grade, not `[NUM]`. **Corollary `[ALG]`:** with the owner's enclosure `U_T ⊂ {Q < 2209/10^6}` and `Q >= (1/2)(rho^2 + eta^2)`, every point of the explicit tube satisfies `|rho|,|eta| < 0.0665 < 1/10`, so the whole explicit tube sits inside the v1.19 P3 injectivity box; N-1 / N-2-ORD may be exhibited on a **named explicit tube**, not only a shrunken existential one. **Ownership unchanged:** L1 remains a Number Genesis theorem; `DYAD-THM-PRIM-CTR` is an independent upstream strengthening. **NUMGEN-side consumer acceptance recorded**; upstream Dyadic consumer-row synchronization (v6.4.10 "acceptance pending") is left to the Dyadic stream's own owner pass; Number Genesis does not edit the Dyadic owner. `[GUARD]` seed ∈ certified tube ⇏ all GAP-LOCK angular hypotheses certified by Dyadic; those remain Number Genesis obligations discharged by L-MONO / L-PHASE.
+`[RESULT] [from: THM] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.14 | DYAD-THM-PRIM-CTR]` **Explicit-domain boundary CLOSED (v1.20).** The Dyadic owner certifies an explicit primitive contraction and six-phase invariant tube: `0 < Q - (3/2)Q^2 <= Q(T^6 x) <= Q - (1/2)Q^2 < Q` for `Q <= 1/400`, with `U_D,base = {0 < Q <= 1/625}` and `U_D,tube = U_{j<6} T^j(U_D,base)` (§6.2 domain labels). **Corollary `[ALG]`:** the canonical long-horizon seed `(rho,eta) = (1/100, 1/250)` has `Q_0 = 19/250000 < 1/625`, so it lies in `U_D,base`; the N-1 / N-2-ORD tube-membership premise for that seed is now theorem-grade, not `[NUM]`. **Corollary `[ALG]`:** with the owner's enclosure `U_D,tube ⊂ {Q < 2209/10^6}` and `Q >= (1/2)(rho^2 + eta^2)`, every point of the explicit tube satisfies `|rho|,|eta| < 0.0665 < 1/10`, so the whole explicit tube sits inside the v1.19 P3 injectivity box; N-1 / N-2-ORD may be exhibited on a **named explicit tube**, not only a shrunken existential one. **Ownership unchanged:** L1 remains a Number Genesis theorem; `DYAD-THM-PRIM-CTR` is an independent upstream strengthening. **NUMGEN-side consumer acceptance recorded**; upstream Dyadic consumer-row synchronization (v6.4.10 "acceptance pending") is left to the Dyadic stream's own owner pass; Number Genesis does not edit the Dyadic owner. `[GUARD]` seed ∈ certified tube ⇏ all GAP-LOCK angular hypotheses certified by Dyadic; those remain Number Genesis obligations discharged by L-MONO / L-PHASE.
 
 #### N-5A-S1-INF — CLOSED at v1.11
 
@@ -2161,6 +2175,8 @@ Hence `sum q_m = infinity`, `sum q_m^2 < infinity`, `sum q_m^(3/2)<infinity`, an
 sum_(m<M) q_m = log M + C_Q + o(1).
 ```
 
+*Explicit-domain counterpart (consumer theorem; not imported):* `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` (`recog-v0.3.24` §6.13b) bounds the per-block reciprocal increment by `(15/2) sqrt(Q_m)` on `U_R,base`. It is an increment bound (error type 1), not an L-BACKBONE constant; L-BACKBONE keeps `U_NG` and its existential constants. See the acceptance matrix in §9.1.
+
 `[RESULT] [from: ALG]` [RID: NUMGEN-RESULT-N5AS1-L-MONO] **L-MONO CLOSED, sharpened at v1.12.1.** In the primitive analytic coordinate `W`, the exact one-step map satisfies
 ```text
 W(Tx)=exp(i pi/3) W+O(|W|^2).
@@ -2174,6 +2190,8 @@ After shrinking once more this implies the convenient corollary
 pi/6 < delta_T(x) < pi/2.
 ```
 The asymptotic form, not the exactly-period-wide corollary, is the preferred branch-control statement. Thus the primitive angular lift is strictly increasing. A positive lap crossing of `Theta=0` forces `eta^-<0<=eta^+`; the exact primitive update then implies `rho^->0` and `rho^+>0`, so lap crossings coincide with the canonical lift-free B predicate. This also retires the gate-1 orientation caveat.
+
+*Explicit-domain counterparts:* `RECOG-THM-A1A-LIFT-ALIGNMENT` (`recog-v0.3.24` §6.13b; consumer theorem, not imported) proves `pi/6 < delta_T < pi/2` on `U_D,tube`; the branch clause (B) of the imported DYAD-THM-LPHASE-ROWA-REMAINDER (below) gives `|delta_T - pi/3| <= arcsin(0.04654)` there. L-MONO keeps `U_NG,tube`. See the acceptance matrix in §9.1.
 
 `[RESULT] [from: ALG]` [RID: NUMGEN-RESULT-N5AS1-L-PHASE] **L-PHASE CLOSED from the exact primitive six-step iterate.** Exact Taylor composition gives no quadratic `F=T^6` term and the cubic primitive-coordinate jet
 ```text
@@ -2193,7 +2211,9 @@ phi_hat_(6(m+1))-phi_hat_(6m)
 ```
 This is an exact-primitive finite-iterate theorem, not an import from the continuous cubic-vector truncation.
 
-`[OPEN]` `[target: THM]` `[v1.20.8]` **L-PHASE explicit constant — Dyadic row-A theorem adopted upstream; NUMGEN import deferred.** An explicit rational `C` on the Dyadic tube `U = {0 < Q_true <= 1/625}` (block base points), with the one-step branch certified on `U_T`, is an adopted Dyadic owner result: `DYAD-THM-LPHASE-ROWA-REMAINDER`, Dyadic v6.4.19 §6.14 (adopted 20 Oct 2026, `40c9e63f…6ec9`; notice N15). Its interface objects are the ones NUMGEN confirmed as I1–I5, and the NUMGEN receipt replay was byte-identical (§9.1 dispositions; execution pins in §9.2). No constant is entered in this edition: the `C` of L-PHASE stays existential here, and the import by RID is reserved for a NUMGEN edition after v1.20.8. An explicit-tube INF-1 would additionally need an explicit L-BACKBONE constant (NUMGEN-side; not started).
+`[THM]` [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14 (producer edition v6.4.19) | DYAD-THM-LPHASE-ROWA-REMAINDER] `[scope: block base points in U_D,base = {0 < Q_true <= 1/625}; one-step branch on U_D,tube; primitive observable]` **L-PHASE explicit constant on the explicit Dyadic tube (imported).** For every start `x` in `U_D,base` and every block `m >= 0`: (R) `phi_hat_(6(m+1)) - phi_hat_(6m) = 2 pi - tau Q_m + r_m` with `|r_m| <= (403/250) Q_m^(3/2)`; (B) for every `y` in `U_D,tube`, `|W(Ty)/(lambda W(y)) - 1| <= 0.04654`, so `|delta_T - pi/3| <= arcsin(0.04654) < pi/6`. Typed interface (Dyadic I1–I5, confirmed by NUMGEN at receipt): Dyadic's frame `𝓛` is NUMGEN's `W = rho + omega eta`; Dyadic's `Q_m` is NUMGEN's block-sampled primitive `q_m`; Dyadic's increasing lift is NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT; the block defect is a lag (`D_M` increases); block base points lie in `U_D,base`, intermediate steps in `U_D,tube`. Only this imported statement carries the constant `403/250`; NUMGEN-RESULT-N5AS1-L-PHASE above keeps its existential constant on `U_NG`, its proof and its grade. Depends on: DYAD-THM-PRIM-CTR (`U_D,base`, `U_D,tube`), DYAD-THM-NF-REM row A (owner proof). Evidence: statement read at `dyad-v6.4.22` (`EV-SRC-READ`); the Dyadic certificate was replayed byte-identically by NUMGEN at receipt (§9.2), not rerun for this edition (`EV-NOT-RERUN`). See §9.1.
+
+`[RESULT] [from: NUM]` `[scope: seed-family sampling on U_NG; not a proof input]` **Sampled ratio range.** `sup|r|/Q^(3/2)` lies in `[1.3449, 1.3565]` across a 256-fold `Q_0` range (`NG_N5AS1_INF_REDUCTION_v1.md`, `90eb6658…6e0b`; `ng_n5as1_inf_reduction_cert_v1.py` / `.log`, `41917710…ee36` / `4100e3a5…f755`; `EV-NOT-RERUN`), below the imported ceiling `403/250`. The Dyadic owner cites this range beside its own sampled values.
 
 `[DEF]` [RID: NUMGEN-DEF-N5AS1-DEFECT] `[v1.20.8]` **Accumulated block defect.** For `M >= 0`, `D_M := 2 pi M - (phi_hat_(6M) - phi_hat_0)`, with `phi_hat` as in NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT and the block counter taken from the start `x`; no B-event anchor enters. The INF-1 block below restates this definition verbatim.
 
@@ -2206,9 +2226,11 @@ L-BACKBONE and L-PHASE give
 D_M = tau log M + C_D + o(1) -> infinity.
 ```
 
-`[GUARD]` `[v1.20.8]` **Identifier scope.** `NUMGEN-OPEN-N5AS1-INF` remains the lifecycle RID of the closed research module; it is not the identity of INF-1 (`NUMGEN-RESULT-N5AS1-INF1`). `NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO` remains the identity of the consecutive-ratio theorem that uses INF-1. Allocation of the six N-5A-S1 RIDs changes no statement, proof, domain or grade.
+*Explicit-domain counterpart (consumer theorems; not imported):* `RECOG-THM-A1A-PHASE-EXISTENCE-U` (`recog-v0.3.24` §6.13b) proves on all of `U_R,base`, without RECOG R9 and without INF-1, that `lim_N (D_N^U - tau log N)` exists, with an explicit absolutely convergent series (its tails are error type 2); `D_N^U` is RECOG's extension of NUMGEN-DEF-N5AS1-DEFECT to `U_R,base`. `RECOG-RESULT-A1A-CD-AGREEMENT` identifies the limit with `C_D` on `U_R,base ∩ U_NG`. INF-1 keeps `U_NG`; NUMGEN registers no explicit-domain INF-1 of its own. See the acceptance matrix in §9.1.
 
-`[RESULT] [from: ALG]` **INF-2 / crossing count.** L-MONO identifies the canonical B count with the lap count:
+`[GUARD]` `[v1.20.8]` **Identifier scope.** `NUMGEN-OPEN-N5AS1-INF` remains the lifecycle RID of the closed research module; it is not the identity of INF-1 (`NUMGEN-RESULT-N5AS1-INF1`). `NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO` remains the identity of the consecutive-ratio theorem that uses INF-1. Allocation of the six N-5A-S1 RIDs changes no statement, proof, domain or grade. The module record points to the result RIDs of its closed statements: NUMGEN-RESULT-N5AS1-INF1, NUMGEN-RESULT-N5AS1-INF2, NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET, NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT, NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO. The category word in an identifier is not a grade (Methodology v1.4 §4.2): NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO is graded RESULT-from-ALG as tagged at its statement, and module RIDs of the form `NUMGEN-OPEN-*` stay lifecycle records of closed modules.
+
+`[RESULT] [from: ALG]` [RID: NUMGEN-RESULT-N5AS1-INF2] **INF-2 / crossing count.** L-MONO identifies the canonical B count with the lap count:
 ```text
 N_B(M)
  = M - D_M/(2 pi) + O(1)
@@ -2232,7 +2254,7 @@ verified: `|Delta phi_T - pi/3|/sqrt(Q)` is stable (0.3979, 0.3948, 0.3934, 0.39
 
 `[COR] [scope: v1.12 corollary only]` **Physical 7-gap count was originally promoted one lemma too early; v1.13 supplies the missing premises.** The v1.12.1 correction remains part of the error ledger, while the live theorem state is now:
 
-`[RESULT] [from: ALG]` **GAP-LOCK Lemma 1 CLOSED — local return alphabet `{6,7}`.** L-PHASE is a local expansion at the fixed point and therefore applies at every sufficiently small basepoint:
+`[RESULT] [from: ALG]` [RID: NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET] **GAP-LOCK Lemma 1 CLOSED — local return alphabet `{6,7}`.** L-PHASE is a local expansion at the fixed point and therefore applies at every sufficiently small basepoint:
 ```text
 Lambda_6(x) = 2 pi - tau Q(x) + O(Q(x)^(3/2)).
 ```
@@ -2248,7 +2270,7 @@ after sufficient shrinking. Hence every complete local B-return gap lies in `{6,
 
 `[NUM]` The certificate checks `Lambda_6<2pi` at all 3582 sampled basepoints and finds `min(Lambda_7-2pi)=1.0436`; long runs show only `{6,7}` in the small regime. A large-amplitude control produces an `11` gap, demonstrating that the local-smallness hypothesis is load-bearing rather than decorative. Certificate: `NG_N5AS1_GAPLOCK_PARTIAL_v1.md`; `ng_n5as1_gaplock12_cert_v1.py` / `.log` (7 assertion families, exit 0).
 
-`[RESULT] [from: ALG]` **GAP-LOCK Lemma 2 CLOSED — physical bookkeeping.** With the local alphabet `{6,7}`, telescoping complete return gaps over the first `6M` primitive steps gives
+`[RESULT] [from: ALG]` [RID: NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT] **GAP-LOCK Lemma 2 CLOSED — physical bookkeeping.** With the local alphabet `{6,7}`, telescoping complete return gaps over the first `6M` primitive steps gives
 ```text
 6M = 6 N_B(M) + s(M) + O(1),
 ```
@@ -2278,7 +2300,7 @@ M_(k+1)^(def) / M_k^(def) -> exp(pi/(3 tau))
 ```
 This remains theorem-grade at the defect-threshold level.
 
-`[RESULT] [from: ALG]` **GAP-LOCK Lemma 3 CLOSED — event-time physical-slip locking.** Let `n_j` be successive physical B-event steps, `o_j` their phase overshoots, `s_j` the number of 7-gaps among the first `j` returns, and
+`[RESULT] [from: ALG]` [RID: NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO] **GAP-LOCK Lemma 3 CLOSED — event-time physical-slip locking.** Let `n_j` be successive physical B-event steps, `o_j` their phase overshoots, `s_j` the number of 7-gaps among the first `j` returns, and
 ```text
 G_n := (pi/3)n - (phi_hat_n - phi_hat_0),    G_(6M)=D_M.
 ```
@@ -2314,6 +2336,8 @@ M_(k+1)^(phys)/M_k^(phys) -> exp(pi/(3tau))
 `[COR]` **Threshold/physical wording.** The defect-threshold and physical-slip **consecutive-ratio limits now coincide** at `exp(sqrt(3)pi/6)`. Their event sequences are not identified term-by-term. The Fatou/`C_D` normalization question is optional refinement, not a GAP-LOCK blocker.
 
 `[GUARD]` SG-NG-23 remains unchanged: N-5A closure and the physical 7-gap count law are **not** a nontrivial Q-like commensurability theorem. The average primitive steps per B event still tends to `6`, while the certified physical 7-gap count diverges logarithmically. The mean physical exponential rate and the **physical consecutive 7-gap ratio limit** are theorem-grade; GAP-LOCK Lemmas 1–3 are CLOSED.
+
+*Explicit-domain counterpart (consumer theorem; not imported):* `RECOG-THM-A1B-SLIP-SCHEDULE-U` (`recog-v0.3.24` §6.13b) proves on `U_R,base`, with estimates on `U_D,tube`: events are lift crossings; every gap is `6` or `7`; `s(M) = (3 tau/pi) log M + O(1)`; the digamma slip schedule `tau psi(a+M_k) - (k-1) pi/3 = L + epsilon_k` with an a-priori ceiling `epsilon_k` (error type 3, not computable from `(a,k,M_k)` alone); hence `M_(k+1)/M_k -> exp(pi/(3 tau))`. RECOG states that GAP-LOCK Lemmas 1–3 and INF-1 remain NUMGEN's. INF-2 and GAP-LOCK 1–3 keep `U_NG`; the digamma schedule is RECOG's result and is not a NUMGEN statement. See the acceptance matrix in §9.1.
 
 
 ---
@@ -2360,7 +2384,7 @@ M_(k+1)^(phys)/M_k^(phys) -> exp(pi/(3tau))
 
 `[RESULT] [from: ALG] [scope: finite directed multigraph operator layer; field coefficients plus fundamental-integral-cycle completeness over abelian coefficient groups]` **NG-7A CLOSED.** Null theorem `C D^T = 0`; completeness `im D^T = ker(C·)` over field coefficients making `h = Ca` and `[a] ∈ H^1(G;F) ~= F^beta` equivalent complete obstructions; orientation, gauge, and cycle-basis invariance with the invariant statistics identified; the PI-typed statistic (scalar observable is `h`/`[a]`, never a rank; `r_hol = rank(CA)` reserved for `d>=2`, channel-GL invariant, `<= min(beta,d)`, zero iff flat); separation instances certifying **cycle capacity ≠ holonomy content** in both directions (field-general full-rank witness by a right inverse of `C`; executable `Q` witness `A=C^T`); the mandatory TDR-G `Z_N` zero-control with **cycle-sensitive** unit-defect detection; and `[v1.19]` fundamental-integral-cycle completeness over arbitrary abelian coefficient groups by spanning-forest integration. Certificate: `NG_NG7A_HOLONOMY_NULL_CERT_v1.md` (original NG-7A package) plus the v1.19 in-ledger extension.
 
-`[RESULT] [from: ALG]` **Foundations export.** T1–T7 discharge the operator half of `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`. D15 OFN-side synchronization is complete in OFN v0.8 (RF-O08-10); the OFN whole target remains ACTIVE for physical source, non-Abelian extension, and curvature.
+`[RESULT] [from: ALG]` **Foundations export.** T1–T7 discharge the operator half of `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`. D15 OFN-side synchronization is complete in OFN v0.8 (RF-O08-10); the OFN whole target remains ACTIVE for physical source, non-Abelian extension, and curvature. The current OFN edition (`ofn-v0.10`, §11; Programme IF24) records the additive result and the fundamental-integral-cycle extension from NUMGEN v1.20.7 §6.8; OFN's acceptance is OFN's. `r_hol` is the additive multichannel rank only: it is not a non-Abelian holonomy invariant and not a curvature; NG-7A closed does not close NG-7B.
 
 `[GUARD]` Fundamental-integral-cycle completeness over `Z_N` is now certified, but completeness for an arbitrary nonprimitive/rescaled integer cycle-row presentation is not implied. SG-NG-7 (holonomy ≠ curvature) is unchanged; the ring `Z_N` defect residue is not identified with Track-C winding/character labels absent a proved map; no non-Abelian rank exists until NG-7B defines and certifies its invariant (Case E2 additionally requires its flatness and topology guards).
 
@@ -2561,7 +2585,7 @@ The equality is identity of the same ordered primitive event history under two g
 **RID:** `NUMGEN-OPEN-GENESIS-TRUNCATION`  
 **Status:** OPEN / cross-ledger diagnostic
 
-`[RESULT]` `[from: NUM]` `[scope: reduced birth-race model]` `[source: RTG_GENESIS_GEOMETRY_DSN_v2.8.9 §6.6; RID: GEN-ART-SATURATION]` Genesis contains an artifact-certified saturation ceiling `Q_d* ~ 1.13e-2` in the reduced `P4` birth-race sector.
+`[RESULT]` `[from: NUM]` `[scope: reduced birth-race model]` `[source: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.6; RID: GEN-ART-SATURATION]` Genesis contains an artifact-certified saturation ceiling `Q_d* ~ 1.13e-2` in the reduced `P4` birth-race sector.
 
 **Question:** Does a bounded dynamical amplitude imply a finite bound on distinguishable event repetition in that sector?
 
@@ -2647,7 +2671,7 @@ Candidate areas:
 4. `[CLOSED]` faithful abstract character isomorphism `G_T ~= widehat(S^1)`;
 5. `[CLOSED]` exact primitive character pullback and proof of non-translational label dynamics;
 6. `[CLOSED]` finite-character restriction with kernel `N G_T` and explicit no-dynamics-transfer guard;
-7. `[CLOSED by import]` the specific `q=4,(0,3)` nonlinear cascade item is closed by Dyadic v6.4.10 `DYAD-THM-Q403-PHASELAW`; ownership remains Dyadic;
+7. `[CLOSED by import]` the specific `q=4,(0,3)` nonlinear cascade item is closed by Dyadic v6.4.18 `DYAD-THM-Q403-PHASELAW` (§9.1); ownership remains Dyadic;
 8. `[ROUTED]` reachable-basis/universal missing-slot projector work is an Arithmetic-Dynamics/Dyadic OPEN-9 interface target, not a Number Genesis foundation blocker;
 9. `[OPEN]` establish, if desired, any separate physical observability theorem for harmonic coefficients beyond their role as mathematical function-space coordinates.
 
@@ -2718,7 +2742,7 @@ Candidate areas:
 
 **Arithmetic-Dynamics handoff:** N-3C+ reachable-basis/projector machinery may be exported as representation input to the Dyadic OPEN-9 horizon programme. Number Genesis does not own the nonlinear coefficient theorems.
 
-`[PROVENANCE]` The programme-review audit reports DZT v0.17 as a frozen closure state containing all-`p` odd-support and denominator theorems and numerically reproduces them with `ng_review_dzt_independent_audit_v1.py`. Because the v0.17 owner DSN is not presently in the project corpus, this DSN records it only as a source-synchronization note; no NG claim relies on the audit memo as a substitute owner source.
+`[PROVENANCE]` The programme-review audit `RTG_NG_PROGRAMME_REVIEW_AUDIT_v1.md` reports a DZT edition it calls "v0.17" as a frozen closure state containing all-`p` odd-support and denominator theorems and numerically reproduces them with `ng_review_dzt_independent_audit_v1.py`. No DZT document of that number is in the repository; the governing DZT edition is `dzt-v0.8` (`RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`). Number Genesis imports nothing from DZT and uses the audit memo as no owner source.
 
 ---
 
@@ -2726,16 +2750,17 @@ Candidate areas:
 
 ### §9.1 Import Ledger
 
-| Imported object | Current pointer target | Use in this DSN | Validation state carried into v1.19 |
+| Imported object | Current pointer target | Use in this DSN | Validation state at the pin |
 |---|---|---|---|
-| programme generator-selection ceiling | `[import: RTG_PROGRAMME_OVERVIEW_v1.2 SG-PROG-2 | RTG-OPEN-GENERATOR-SELECTION]` | scope of all continuous-`T` Number Genesis results | verified against live source; no status promotion |
+| programme generator-selection ceiling | `[import: RTG_PROGRAMME_OVERVIEW_v1.3 SG-PROG-2 | RTG-OPEN-GENERATOR-SELECTION]` | scope of all continuous-`T` Number Genesis results | read at `programme-v1.3` (SG-PROG-1–4 restated there as clarifications; this use unchanged); no status promotion |
 | relational primacy / global-phase gauge / no pre-given physical time | `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.1 | RTG-OFN-DEF-RELATIONAL-CONTENT]` · `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.1 | RTG-OFN-DEF-PHASE-GAUGE]` · `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.2 | RTG-OFN-DEF-BACKGROUND-TIME]` | NG0, history/time interpretation | `[v1.20.8]` narrowed to the OFN definition RIDs and wording at source grade DEF (OFN v0.10 §12.3 consumer register); definition bodies unchanged since OFN v0.9 |
 | holonomy-rank diagnostic / discrete-flat narrowing | `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §4.4, §9 | RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC]` | NG-7A/NG-7B | **D15 SYNC COMPLETE (v1.20):** OFN v0.8 RF-O08-10 inspected NUMGEN v1.19 NG-7A/NG-7B and records the additive result and the fundamental-integral-cycle extension; OFN whole target remains ACTIVE (physical source / non-Abelian / curvature). Alignment note: OFN v0.8 quotient/presentation guards agree with C7C-WD and the P2 finding — a quotient is not the full state unless transitions descend; presentation convention is not physical invariance. `[v1.20.8]` OFN v0.10: §4.4 typing and the OPEN record unchanged; status ACTIVE; NUMGEN §6.8 still cited by OFN as the inspected operator source |
 | primitive dyad map, `Q_true`, order-6 structure / winding | `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.1, §6.4 | RID unavailable]` | N-1C-DYAD / N-4 | verified; `[v1.20.8]` §6.1/§6.4 statements unchanged in v6.4.18 (map definition now carries `DYAD-DEF-PRIMITIVE-MAP`, provisional; not imported here); N-1 L1 remains independently certified by NG artifacts |
-| explicit primitive contraction / six-phase invariant tube | `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.14 | DYAD-THM-PRIM-CTR]` | N-1 / N-2-ORD explicit-domain closure; canonical seed in `U` | verified (v1.20); `[v1.20.8]` statement unchanged in v6.4.18 (§6.14 passage byte-identical v6.4.17→v6.4.18 per the Dyadic owner); Dyadic §7 consumer row records the NUMGEN acceptance; NUMGEN-side consumer acceptance recorded; upstream consumer-row sync left to the Dyadic stream's own owner pass |
+| explicit primitive contraction / six-phase invariant tube | `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.14 | DYAD-THM-PRIM-CTR]` | N-1 / N-2-ORD explicit-domain closure; canonical seed in `U_D,base` | verified (v1.20); `[v1.20.8]` statement unchanged in v6.4.18 (§6.14 passage byte-identical v6.4.17→v6.4.18 per the Dyadic owner); Dyadic §7 consumer row records the NUMGEN acceptance; NUMGEN-side consumer acceptance recorded; upstream consumer-row sync left to the Dyadic stream's own owner pass |
 | `q=4,(0,3)` all-`p` cascade closure | `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.11 | DYAD-THM-Q403-PHASELAW]` | retire stale N-3C+ item 5; representation/dynamics boundary | verified against owner source; `[v1.20.8]` unchanged in v6.4.18; ownership remains Dyadic |
+| L-PHASE row-A remainder and branch (explicit domain) | `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14 (producer edition v6.4.19) | DYAD-THM-LPHASE-ROWA-REMAINDER]` | §6.6 explicit L-PHASE constant on `U_D,base`; branch clause on `U_D,tube` | statement read at `dyad-v6.4.22`, unchanged since v6.4.19 (`EV-SRC-READ`); certificate replayed byte-identically by NUMGEN at receipt, not rerun (`EV-NOT-RERUN`); received (N15), statement accepted (owner dispositions, 26 Oct 2026), adopted use (this row) |
 | TDR-G `Z_N`, finite recurrence, cross-branch firewall | `RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1–§6.2`, SG-10 | N-3D / NG-8 guard / NG-7 zero-control / C7B-DISC-1 owner-native search | verified against live source; per-cycle `N=24,k=1` enumerator/export still pending in accessible corpus |
-| Genesis reduced-sector saturation ceiling | `RTG_GENESIS_GEOMETRY_DSN_v2.8.9 §6.6`, RID `GEN-ART-SATURATION` | NG-10 only | verified unchanged: `Q_d* approx 1.13e-2`, reduced birth-race scope retained; `[v1.20.8]` value and scope unchanged in v2.8.9 |
+| Genesis reduced-sector saturation ceiling | `RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.6`, RID `GEN-ART-SATURATION` | NG-10 only | read at `gen-v2.9` (§6.6 and the §8 artifact row): `Q_d* approx 1.13e-2`, reduced birth-race scope retained |
 
 `[GUARD]` Pointer refresh never upgrades claim status. Owner-source RIDs/sections govern imported scientific claims. Audit memos and reproduction scripts may support provenance checks but do not replace a missing owner DSN.
 
@@ -2747,13 +2772,44 @@ Candidate areas:
 | N10–N13 — OPEN 3 / OPEN 3b / OPEN 3 lifecycle / OPEN 21 | Dyadic (v6.4.14–v6.4.17) | RECEIVED, no use. SG-19 accepted: no chart coefficient is read as an L1 or ISP-angle coefficient. N13 is conditional on RECOG R9; NUMGEN takes no R9-conditional input |
 | N14 — smooth embedding | Dyadic (v6.4.18) | not addressed to NUMGEN; seen only |
 | L-PHASE row-A certificate | Dyadic (SESSION, 20 Oct 2026) | interface I1–I5 CONFIRMED (`NUMGEN_INTERFACE_CONFIRMATION_LPHASE_ROWA_20261020_v0_1.md`, `7a91c223…f78f`); receipt replay byte-identical (`NUMGEN_RECEIPT_REPLAY_LPHASE_ROWA_20261020_v0_1.md`, `71bfc4c5…b66f`; execution pins in §9.2); no constant imported (§6.6 OPEN sub-item) |
-| N15 — `DYAD-THM-LPHASE-ROWA-REMAINDER` | Dyadic (v6.4.19, `40c9e63f…6ec9`) | RECEIVED: owner theorem adopted 20 Oct 2026 at THM grade on the I1–I5 interface; import by RID deferred to a NUMGEN edition after v1.20.8 (§6.6 OPEN sub-item); no constant entered here. N3 status on the Dyadic side follows adoption of this edition |
+| N15 — `DYAD-THM-LPHASE-ROWA-REMAINDER` | Dyadic (v6.4.19, `40c9e63f…6ec9`) | RECEIVED; statement accepted (owner dispositions, 26 Oct 2026); adopted use: §6.6 import and §9.1 import row, at `dyad-v6.4.22` §6.14 |
 | REQ-O09-03 — L-BACKBONE RID and `q_m` typing | OFN (v0.9) | ANSWERED: `NUMGEN-RESULT-N5AS1-L-BACKBONE`; `q_m` typed in §6.6 as block-sampled primitive `Q_true` |
 | §1.1 opening-import scope | OFN v0.10 §12.3 | ANSWERED: §1.1 narrowed to three DEF imports, one per OFN RID (`RTG-OFN-DEF-RELATIONAL-CONTENT`, `RTG-OFN-DEF-PHASE-GAUGE`, `RTG-OFN-DEF-BACKGROUND-TIME`) at source grade |
 | A1a RID request (INF-1, D_M) | RECOG (20 Oct 2026) | ANSWERED (option 1): `NUMGEN-RESULT-N5AS1-INF1`, `NUMGEN-DEF-N5AS1-DEFECT`; canonical from the adoption of this edition (21 Oct 2026) |
 | FMS v0.6.4 R8 provenance label | FMS (session ledger) | Outbound notice prepared (`NUMGEN_NOTICE_TO_FMS_R8_ATTRIBUTION_20261020_v0_1.md`): no such statement in v1.20.7; correction is FMS's |
+| A1a/A1b explicit-domain theorems (`RECOG-THM-A1A-PHASE-EXISTENCE-U`, `RECOG-THM-A1B-SLIP-SCHEDULE-U`) | RECOG (v0.3.24; `pipes/NUMGEN/20261026-RECOG-a1b-slip-schedule-informed.md`) | statement accepted as independent agreement (acceptance matrix below); not imported; custody of GAP-LOCK 1–3 and INF-1 unchanged |
+
+**Acceptance matrix — explicit-domain theorems of RECOG v0.3.24 on NUMGEN objects** (owner dispositions of 26 Oct 2026). Relationship ∈ {independent agreement, consumed theorem, not adopted}. Custody of every NUMGEN statement is unchanged; nothing is imported from RECOG. Error types: (1) per-block reciprocal-amplitude increment; (2) summed tail / backbone constant; (3) slip-schedule `epsilon_k`. None substitutes for another.
+
+| NUMGEN statement | Counterpart RID | Event predicate / anchor | Primitive lift | Domains (no inclusion claimed; `U_R,base = U_D,base` as sets) | Clock | Estimate scope | Evidence grade | Relationship | Receiving status |
+|---|---|---|---|---|---|---|---|---|---|
+| L-BACKBONE `NUMGEN-RESULT-N5AS1-L-BACKBONE` | `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | none (amplitude) | — | NUMGEN: `U_NG`; RECOG: starts in `U_R,base` (comparison only; no inclusion claimed) | block `m` | increment `(15/2) sqrt(Q_m)` (type 1) | THM | independent agreement | statement accepted; not imported |
+| L-MONO `NUMGEN-RESULT-N5AS1-L-MONO` | `RECOG-THM-A1A-LIFT-ALIGNMENT` | — | NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT (principal one-step increments) | NUMGEN: `U_NG,tube`; RECOG: `U_D,tube` (comparison only; no inclusion claimed) | one step | branch bound | THM | independent agreement | statement accepted; not imported |
+| L-PHASE `NUMGEN-RESULT-N5AS1-L-PHASE` | `DYAD-THM-LPHASE-ROWA-REMAINDER` (Dyadic, not RECOG) | — | same (I1–I5) | NUMGEN: `U_NG`; imported Dyadic theorem: `U_D,base` base points (no inclusion claimed) | block `m`; `q_m` ≡ Dyadic `Q_m` | remainder ceiling `403/250` | THM | consumed theorem | adopted use: §6.6 import and the row above |
+| INF-1 `NUMGEN-RESULT-N5AS1-INF1` | `RECOG-THM-A1A-PHASE-EXISTENCE-U`; `RECOG-RESULT-A1A-CD-AGREEMENT` | none (block defect) | same; `D_N^U` extends NUMGEN-DEF-N5AS1-DEFECT | NUMGEN: `U_NG`; RECOG: `U_R,base` (comparison only; no inclusion claimed); RECOG's agreement result holds on `U_R,base ∩ U_NG` | block count | existence and series; tails (type 2) | THM; RESULT | independent agreement | statement accepted; not imported |
+| INF-2 `NUMGEN-RESULT-N5AS1-INF2` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (A), (B) | canonical B predicate | same | NUMGEN: `U_NG`; RECOG: `U_R,base` (comparison only; no inclusion claimed) | steps / blocks | `O(1)` | THM | independent agreement | statement accepted; not imported |
+| GAP-LOCK 1 `NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (B), (C′) | NUMGEN: token `x -> T(x)` with `w(x) < 0 <= w(Tx)`, positive `rho`; RECOG: same predicate, anchor `n+1`; gaps coincide | same | NUMGEN: `U_NG,tube`; RECOG: starts in `U_R,base`, estimates on `U_D,tube` (comparison only; no inclusion claimed) | primitive steps | deficit `0.927 tau Q < Delta < tau Q + 1.82 Q^(3/2)` | THM | independent agreement | statement accepted; not imported |
+| GAP-LOCK 2 `NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (B) | as above | same | NUMGEN: `U_NG`; RECOG: `U_R,base` (comparison only; no inclusion claimed) | `6M` primitive steps | `O(1)` | THM | independent agreement | statement accepted; not imported |
+| GAP-LOCK 3 and slip rate `NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (S) | as above; `M_k` = block index of the `k`-th 7-gap anchor | same | NUMGEN: `U_NG`; RECOG: `U_R,base` (comparison only; no inclusion claimed) | blocks | a-priori `epsilon_k` (type 3) | THM | independent agreement for the ratio limit; digamma schedule not adopted | statement accepted; not imported |
+
+**Consumers and pins.** Owner record of the interfaces; the Programme interface register (IF rows) is the Programme's. `Current companion` is the governing edition at this build; `Pin used` is the edition actually used for the claim.
+
+| Direction | Counterpart | Objects | Pin used | Current companion | Programme row |
+|---|---|---|---|---|---|
+| import | Dyadic | §6.1/§6.4 map and winding, SG-14, §6.11 DYAD-THM-Q403-PHASELAW, §6.14 DYAD-THM-PRIM-CTR | v6.4.18 (statements unchanged at v6.4.22) | `dyad-v6.4.22` | IF12 |
+| import | Dyadic | §6.14 DYAD-THM-LPHASE-ROWA-REMAINDER | v6.4.22 (producer v6.4.19) | `dyad-v6.4.22` | IF12 |
+| import | TDR-G | `Z_N`, finite recurrence, SG-10 firewall, DISC harness input | v2.12.13 | `tdrg-v2.12.13` | IF13 |
+| import | OFN | §1.1 definitions, holonomy-rank diagnostic | v0.10 | `ofn-v0.10` | — |
+| import | Programme | SG-PROG-1, SG-PROG-2 (`RTG-OPEN-GENERATOR-SELECTION`) | v1.3 | `programme-v1.3` | — |
+| import | Genesis | §6.6 GEN-ART-SATURATION (NG-10 only) | v2.9 | `gen-v2.9` | — |
+| export | RECOG | by RID: NUMGEN-DEF-N5AS1-DEFECT, NUMGEN-RESULT-N5AS1-INF1, NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO, NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION, NUMGEN-OPEN-N1C; GAP-LOCK Lemma 3 as cited in RECOG §7 | v1.20.8 (RECOG keeps v1.15 producer pins where load-bearing) | `recog-v0.3.24` | IF14 |
+| received | RECOG | A1a/A1b explicit-domain theorems: consumer-side confirmations (acceptance matrix above) | v0.3.24 | `recog-v0.3.24` | IF27 |
+| export | OFN | NG-7A additive operator and representation results (OFN §11 inspected NUMGEN v1.20.7 §6.8) | as declared in OFN §11 | `ofn-v0.10` | IF24 |
+| reference | RRF | cites §6.6 M2-1/Census-1, §6.4 N-3A, §6.8 NG-7A | v1.20.7 | `rrf-v0.8.4` | — |
 
 ### §9.2 Artifact Registry
+
+**Evidence states and availability.** Rows keyed `[in-ledger]` are complete written proofs in this DSN with no separate certificate (Methodology §12.1; `EV-SRC-READ`), not a lower grade. The files held by the Number Genesis co-owner session were uploaded unchanged on the branch `upload/numgen-records` (PR #69), at the paths `upload/numgen-records/<file>` listed in that branch's `SHA256SUMS.txt` (hash check `records/numgen/NUMGEN_UPLOAD_HASH_CHECK_20261026.md`). A cited file among them is reachable at the release commit only if that branch is merged before the release; the release record states which is the case. A file cited below that is not among them, or not reachable at the release commit, is not in the repository, and its cited state is `EV-SRC-REPORTED`. No certificate was rerun for this edition (`EV-NOT-RERUN`).
 
 | Artifact | Role | Status |
 |---|---|---|
@@ -2796,10 +2852,10 @@ Candidate areas:
 | `NG_GAPLOCK_LEMMA3_CLOSURE_v3.md` + `ng_gaplock_lemma3_cert_v2.py/.log` | Lemma 3 CLOSED by the exact event-time defect identity; certificate finite facts only; v1 bootstrap retracted as circular | `[RESULT][from: ALG]` + `[COR]` provenance |
 | `NG_N5C6_CANONICAL_PAIR_FALSIFIER_v1.md` | N5-C6 theorem: canonical A/B pair has unbounded bounded-defect candidate for every positive rational `p:q`; density limit remains 6 | `[RESULT][from: ALG]` conditional on N-5-COMM-BD definition |
 | `ng_n5c6_canonical_pair_falsifier_v1.py` / `.log` | exit-code-gated algebraic audit of zero-slope uniqueness/reblocking cases | `[ENG/ALG audit]` |
-| `N5-C1–C4 in-ledger proofs (v1.15)` | relational defect definition, finite-origin invariance, rescaling, reduced-class uniqueness using prefix-cofinal repeatability | `[RESULT][from: ALG]` — no separate external certificate yet |
-| `C5-SYN-13 in-ledger control (v1.15)` | synthetic periodic `13:2` bounded positive control plus neighboring linear-failure control | `[RESULT][from: ALG]` — not an RTG physical realization |
-| `N5-PHYS-1 in-ledger proof (v1.15)` | opposite phase-coincidence `B_+ / B_-` strict alternation and uniform `1:1` discrepancy bound | `[RESULT][from: ALG]` — local continuous-dyad physical witness |
-| `N5-C7A in-ledger theorem (v1.15; notation corrected at v1.16)` | well-defined unique positive-rational invariant on every certified bounded physical pair; current notation `1 in Q_RTG^bd` | `[RESULT][from: ALG]` |
+| `N5-C1–C4 in-ledger proofs (v1.15)` | relational defect definition, finite-origin invariance, rescaling, reduced-class uniqueness using prefix-cofinal repeatability | `[RESULT][from: ALG]` — `[in-ledger]` |
+| `C5-SYN-13 in-ledger control (v1.15)` | synthetic periodic `13:2` bounded positive control plus neighboring linear-failure control | `[RESULT][from: ALG]` — `[in-ledger]`; not an RTG physical realization |
+| `N5-PHYS-1 in-ledger proof (v1.15)` | opposite phase-coincidence `B_+ / B_-` strict alternation and uniform `1:1` discrepancy bound | `[RESULT][from: ALG]` — `[in-ledger]`; local continuous-dyad physical witness |
+| `N5-C7A in-ledger theorem (v1.15; notation corrected at v1.16)` | well-defined unique positive-rational invariant on every certified bounded physical pair; current notation `1 in Q_RTG^bd` | `[RESULT][from: ALG]` — `[in-ledger]` |
 | `C7B-DISC-1 protocol (v1.15)` | frozen pre-data TDR-G SWAP/P3 discrimination architecture; historical pre-registration record | `[CLOSED protocol; superseded status by v1.16 result]` |
 | `NG_DISC1_RESULT_v4.md` + `disc1_result.json` | ratified DISC-1B PASS / DISC-1D PASS-INT; `2,3 in Q_RTG^dyn`, no exhaustiveness claim | `[RESULT][from: ALG]` |
 | `disc1_safeguards_v2.py/.log` + `genesis_mode_b_mc_v18.py` | owner differential, independent recount, fixed-period control, archetype regression; all safeguards pass | `[NUM/ENG provenance]` |
@@ -2808,7 +2864,7 @@ Candidate areas:
 | `NG_N5AS1_CLOSURE_VERIFICATION_v1.md` | independent verification of the closure incl. the exact `dQ = -Q^2` cross-check and L-MONO sharpening; its v1.12 physical-slip-rate promotion is scope-corrected by `NG_N5AS1_SLIP_RATE_SCOPE_AUDIT_v1.md` | `[RESULT][from: ALG]` for closure cross-checks + `[COR]` on slip-rate interpretation |
 | `ng_n5as1_closure_verification_v1.py` / `.log` | 11 assertion families, exact symbolic + high-precision, exit 0 | `[ENG/ALG audit]` |
 | `NG_N5AS1_SLIP_RATE_SCOPE_AUDIT_v1.md` | v1.12 scope audit: separates theorem-grade defect threshold rate from still-open physical 7-gap locking; corrects offset/Fatou wording | `[COR]` + `[RESULT][from: ALG]` routing memo |
-| `NG_TO_DYAD_RELAY_RIEMANN_LENS_v1.md` | relay to Dyadic owner: `Q_true` unique invariant form, `tau = 1/sqrt(det g)`, cubic-parabolic class | `[RESULT][from: ALG]` relay — not claimed in NG |
+| `NG_TO_DYAD_RELAY_RIEMANN_LENS_v1.md` | relay to Dyadic owner: `Q_true` unique invariant form, `tau = 1/sqrt(det g)`, cubic-parabolic class | `[RESULT][from: ALG]` relay — not claimed in NG; owner records `DYAD-ALG-Q-INVARIANT-FORM`, `DYAD-ALG-TAU-DETB`, `DYAD-ALG-CUBIC-PARABOLIC` (`dyad-v6.4.22` §6.3) |
 | `ng_riemann_lens_cert_v1.py` / `.log` | 8 assertion families, exit 0 | `[ENG/ALG audit]` |
 | `NG_N5AS1_INF_EXTERNAL_BRIEF_v1.md` | filtered external-reviewer briefing (scope firewall, three lemmas, literature map) | `[ENG]` briefing |
 | `NG_N5AS1_INF_CLOSURE_v1.md` | exact local closure of L-BACKBONE/L-MONO/L-PHASE; logarithmic defect/count theorem; Gate 2 + ALG Gate 5; N-5A-S1 closure | `[RESULT][from: ALG]` + `[COR][from: ALG]` |
@@ -2820,12 +2876,11 @@ Candidate areas:
 | `NG_N5AS1_LONG_HORIZON_CORRECTION_v1.md` | correction memo: high-precision 7-step slip, retraction of v1.7 obstruction, revised N-5A-S1 routing | `[COR]` + `[NUM]` |
 | `ng_n5a_s1_long_horizon_recheck_v1.py` / `.log` | 60-dps decisive recheck plus 12-section long sweep | `[NUM]` corrective audit |
 | `NG_N2ORD_PHYSICAL_ORDER_CERT_v1.md` | N-2-ORD closure: reachability order, shift covariance, positive cone, physical sign realization, `Q_true` witness, flagged P3 premise, demonstrated non-claims | `[RESULT] [from: ALG]` documentation |
-| `N-2-ORD P3 in-ledger refinement (v1.19)` | derivative lower-bound on `|rho|,|eta|<=1/10`; existential tube shrunk inside the box; injectivity, ORD-2 reflection, and cross-orbit merge criterion promoted on that scope | `[RESULT][from: ALG]` — no explicit maximal-radius/seed-inclusion certificate |
-| known consumer: `RECOG v0.3.5` / `RECOG-ALG-LATTICE-CLOCK` | consumes `NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO`, repinned upstream to Number Genesis v1.20.4 (RECOG v0.3.5, pre-freeze sync of 29 Sep 2026); RECOG additionally cross-references GAP-LOCK Lemma 3 at heuristic grade (HEUR in RECOG's own ledger; defect-threshold and physical event sequences are not identified term by term) | `[PROVENANCE]` consumer record, not a theorem change |
-| known consumer (v1.20.8): `RECOG v0.3.22` (adopted 20 Oct 2026, `0dcce9e4…bcd9`; project copy hashed; predecessor v0.3.21 `a3459522…0ae3`) | claim-level synchronized against v1.20.7 at RECOG v0.3.18 (L1 contraction, N-1C, defect-threshold ratio, GAP-LOCK Lemma 3, GATE 1, INF-1: identical); v0.3.22 §6.13b/§7 imports INF-1 and `D_M` from v1.20.7 §6.6 verbatim with `RID unavailable` and the recorded governance line, resolved by the v1.20.8 allocations `NUMGEN-RESULT-N5AS1-INF1` / `NUMGEN-DEF-N5AS1-DEFECT` (repin is RECOG's, in a separate revision after adoption of this edition) | `[PROVENANCE]` consumer record, not a theorem change |
+| `N-2-ORD P3 in-ledger refinement (v1.19)` | derivative lower-bound on `|rho|,|eta|<=1/10`; existential tube shrunk inside the box; injectivity, ORD-2 reflection, and cross-orbit merge criterion promoted on that scope | `[RESULT][from: ALG]` — `[in-ledger]`; no explicit maximal-radius/seed-inclusion certificate |
+| known consumer: `RECOG v0.3.24` (`recog-v0.3.24`, `8c64bea2…69e7c1`) | imports by RID `NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO`, `NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, `NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION`, `NUMGEN-OPEN-N1C` (RECOG §7); GAP-LOCK Lemma 3 is tagged `[HEUR cross-reference]` in RECOG §7 and is used inside the ALG identity `RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE`; RECOG's explicit-domain route is `RECOG-THM-A1B-SLIP-SCHEDULE-U`. Number Genesis asserts no grade for RECOG's use (finding filed: `pipes/RECOG/20261026-NUMGEN-gap-lock-3-grade-of-import.md`) | `[PROVENANCE]` consumer record, not a theorem change |
 | working-methodology references (noncanonical) | PRR / RRF v0.6 (still noncanonical; candidate for PI adoption) — typed partial composition, interface identification/transport vocabulary | `[PROVENANCE]` only; no theorem import; no `RRF-*` profile as canonical fact |
 | representation registry reference (v1.20.8) | `RTG_RRF_REPRESENTATION_REGISTRY_v0.8.4` (adopted working standard, 20 Oct 2026, `2fb0a0fe…afce`; predecessor v0.8.3 `b393657e…a187`) supersedes the RRF v0.6 pointer above; it cites v1.20.7 §6.6 (M2-1, Census-1), §6.4 N-3A and §6.8 NG-7A correctly | `[PROVENANCE]` only; no theorem import; no `RRF-*` profile as canonical fact |
-| `NG-7A abelian fundamental-cycle extension (v1.19)` | spanning-forest integration proves zero fundamental integral cycle sums imply exact node-potential data over any abelian coefficient group, including `Z_N`; nonprimitive rescaled bases excluded | `[RESULT][from: ALG]` — in-ledger extension; no new physical-source claim |
+| `NG-7A abelian fundamental-cycle extension (v1.19)` | spanning-forest integration proves zero fundamental integral cycle sums imply exact node-potential data over any abelian coefficient group, including `Z_N`; nonprimitive rescaled bases excluded | `[RESULT][from: ALG]` — `[in-ledger]`; no new physical-source claim |
 | `ng_n2ord_order_cert_v1.py` | exit-code-gated certificate; abstract order layer + exact primitive-map layer (dps=60); 14 assertion families | `[ENG/ALG audit]` |
 | `ng_n2ord_order_cert_v1.log` | execution record; all pass, exit 0 | `[NUM]` execution record |
 | `NG_NG7A_HOLONOMY_NULL_CERT_v1.md` | NG-7A closure: null theorem, completeness, orientation/gauge/basis invariance, typed statistic, separation, `Z_N` zero-control, guards, OFN export note | `[RESULT] [from: ALG]` documentation |
@@ -2833,7 +2888,7 @@ Candidate areas:
 | `ng7a_holonomy_null_cert_v1.log` | execution record; all pass, exit 0 | `[NUM]` execution record |
 | `RTG_NG_PROGRAMME_REVIEW_AUDIT_v1.md` | independent programme-review/state audit; pointer revalidation and DZT-state report | `[ENG audit memo]` — not owner-source replacement |
 | `ng_review_dzt_independent_audit_v1.py` | independent numerical reproduction of audit-reported DZT norm laws for 60 points `p=12..248` | `[NUM]` audit support — no NG claim promotion |
-| `NG_C7C_M2_PREREG_DRAFT_v4.md` (`248f128c…8987`) + `NG_C7C_M2_PREREG_FREEZE_MANIFEST_v1.md` (`cefb7180…b165b`) | frozen C7C-M2 preregistration (interface object, germ calculus, κ_b registry, WD-DOM quantifiers, N1/N2, evidence guards) | instrument; frozen before any case was examined |
+| `NG_C7C_M2_PREREG_DRAFT_v4.md` (`248f128c…8987`) + `NG_C7C_M2_PREREG_FREEZE_MANIFEST_v1.md` (`cefb7180…165b`) | frozen C7C-M2 preregistration (interface object, germ calculus, κ_b registry, WD-DOM quantifiers, N1/N2, evidence guards) | instrument; frozen before any case was examined |
 | `NG_C7C_M2_CENSUS_PROTOCOL_v1.md` (`f2a4a9a4…5795`) | evidence-sufficiency census protocol (F1–F7; replay contract) | instrument; frozen |
 | `NG_C7C_M2_CENSUS1_UDYAD_RESULT_v1.json` (`ed3c72af…eae9`) + `NG_C7C_M2_CENSUS1_UTDRG_RESULT_v1.json` (`23f298dc…d33a`) | Census-1 results: 2/2 dyad and 118/158 TDR-G records admissible; 40 excluded by P2 quarantine only | census record; not a scientific claim |
 | `census1_tdrg_replay_v1.py` (`73cfa2e3…8188`) + manifest (`19e929aa…a30a`) + records (`7b7dc451…77c8`) | C-1 replay: 158/158 reproduce sealed fields, stepwise agreement, owner-v18 lockstep | reconstruction record |
@@ -2893,6 +2948,10 @@ Historical (v1.19): `[HYP]` programme thesis plus `[DEF]/[INTERP]` paradigm clar
 ---
 
 ## Changelog
+### v1.21 — stage 1 intermediate (build stage, not adopted)
+
+Corrections of the v1.20.8 advisory (owner dispositions of 26 Oct 2026; reconciliation `records/numgen/NUMGEN_OWNER_DISPOSITION_RECONCILIATION_v1_20_8.md`), built by `evidence/numgen/scripts/build_numgen_v1_21_stage1.py` from `numgen-v1.20.8`. Dyadic row-A theorem imported at §6.6 (the explicit-constant OPEN sub-item is closed by the import; NUMGEN's L-PHASE unchanged); RECOG v0.3.24 explicit-domain theorems recorded as consumer-side confirmations with an acceptance matrix (§9.1; nothing imported); domain labels (§6.2); RIDs NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET, -GAPLOCK-COUNT, -GAPLOCK-SLIP-RATIO, -INF2 and NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE registered; pins Programme v1.3, Genesis v2.9, §7 Q403 v6.4.18; consumers-and-pins block; evidence-state clause; owner alias DYAD-ALG-P5-RADIAL; scope words at N-1A0/N-1A1; C7C-M4 hold pointer. No grade, proof or domain of an existing statement changes.
+
 ### v1.20.8 — October 21, 2026 (adopted)
 
 **Adoption.** PI decision of 21 Oct 2026 on DRAFT r3 (`9d59cfa1…e7b3`), after the co-owner delta review of r3 (scientific review accepted; artifact verification passed; adoption ready; no r4). The release pass changes publication metadata only: title, date, document status, the A1a disposition cell and this heading and paragraph. The six N-5A-S1 RIDs are canonical owner RIDs from this adoption. The draft record follows unchanged.
