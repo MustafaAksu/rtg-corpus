@@ -21,6 +21,10 @@ Cor. 19 (centred offset, iterated). Start: b in [a - Delta_a, a + Delta_a], L-wi
     -> centred A_0: A_0 = omega S_M(b), S_M(b) = sum_{m>=M} 1/((a+m)(b+m)) in [1/(c+ + M), 1/(c- + M)^2 + 1/(c- + M)], c+ = max(a, b+), c- = min(a, b-)
     -> schedule centre c4_k = c'''_k - tau mid(omega S) (eps''' carries + tau A_M), envelope E4_k = E'''_k - tau A0_k(part 1b) + tau halfwidth(omega S)
     -> new L-window I_K from (c4, E4); new b-range [a - omega+, a - omega-].  Each step maps valid enclosures to valid enclosures; 4 rounds.
+Invariant (Cor. 19): at every round the true (a, L, b, Theta_0, omega) satisfies all current enclosures (b-range, Theta_0 arc, omega interval, L window);
+    each round only applies enclosure-valid maps, so the invariant propagates. SO-1: n_0 <= 7 from hat phi_0 in (-pi, pi] and delta_T >= pi/3 - arcsin 0.04654
+    on U_T (adopted); the amplitude majorant f^{n_0}(Q_0) is capped by the U_T bound 2209e-6 since the orbit stays in U_T. SO-2: circle arcs are intersected
+    over every 2 pi branch that can meet; all reported arc/interval ends are rounded outward.
 Gates: G1 constants (beta(a), sup|Phi|, sup|Phi'|, sup|d|) and the exact identities (sympy: Phi from h_2; a - b = -D_Q/(q_0 Q_0));
     G2 [NUM] the Lemma-16 sector contains the true theta_W0 for all 12 orbits (all n_0 classes that occur); G3 [NUM] the final Theta_0 interval
     contains theta_W0 within the D0+ allowance; G4 [NUM] |eps4_k| <= E4_k at every slip (L from the run's end, corrected as in the combined-tail
@@ -70,17 +74,25 @@ def Phi_range(t_lo, t_hi, n=4000):
     vals = [Phi_iv(I(t_lo + j*h)) for j in range(n + 1)]
     return mp.mpf(min(lo(v) for v in vals)) - LIP_PHI*h/2, mp.mpf(max(up(v) for v in vals)) + LIP_PHI*h/2
 def circ_intersect(A, B):
-    """intersection of two arcs [lo, hi] (widths < 2 pi) on the circle; returns the hull of the overlapping pieces or None"""
+    """intersection of two arcs [lo, hi] (widths < 2 pi) on the circle; returns the hull of the overlapping pieces or None.
+       The shift range covers every k with [B + 2 pi k] possibly meeting A (SO-2): k from floor((A_lo - B_hi)/2pi) - 1 to ceil((A_hi - B_lo)/2pi) + 1"""
+    assert A[1] - A[0] < TWOPI and B[1] - B[0] < TWOPI
     pieces = []
-    for k in range(-3, 4):
+    kmin = int(mp.floor((A[0] - B[1])/TWOPI)) - 1; kmax = int(mp.ceil((A[1] - B[0])/TWOPI)) + 1
+    for k in range(kmin, kmax + 1):
         lo_ = max(A[0], B[0] + k*TWOPI); hi_ = min(A[1], B[1] + k*TWOPI)
         if lo_ <= hi_: pieces.append((lo_, hi_))
     if not pieces: return None
     return (min(p[0] for p in pieces), max(p[1] for p in pieces))
+N0_MAX = 7                                   # Lemma 16 (SO-1): hat phi_0 in (-pi, pi], delta_T >= pi/3 - arcsin(0.04654) on U_T (branch (B), adopted) => n_0 <= 7
+Q_UT = I("0.002209")                         # U_T subset {Q < 2209e-6} (DYAD-THM-PRIM-CTR): every point of the orbit stays in U_T, so the amplitude ceiling is capped there
+ALPHA_T = asin_iv(I("0.04654"))
+assert up(2*PI/(PI/3 - ALPHA_T)) < N0_MAX   # 2 pi / (pi/3 - alpha_T) = 6.28.. < 7: the first crossing of the next multiple of 2 pi happens within 7 steps
 def sector(n0, a):
-    """Lemma 16: arc for theta_W0 (mod 2 pi) and the widened arc for Theta_0"""
+    """Lemma 16: arc for theta_W0 (mod 2 pi) and the widened arc for Theta_0; requires 1 <= n0 <= N0_MAX (SO-1)"""
+    assert 1 <= int(n0) <= N0_MAX, "first anchor outside the certified range"
     a = I(a); Q = 1/a
-    for _ in range(int(n0)): Q = Q*(1 + pib.ebar(Q))**2
+    for _ in range(int(n0)): Q = iv.mpf([lo(Q), min(up(Q*(1 + pib.ebar(Q))**2), up(Q_UT))])    # f^{n0}(Q_0) capped by the tube bound (SO-1)
     alpha0 = asin_iv(pib.ebar(Q))
     lo_ = -n0*PI/3 - n0*alpha0; hi_ = -(n0 - 1)*PI/3 + (n0 + 1)*alpha0
     q0p = I(256)/(225*a); D0 = SUP_D*iv.sqrt(q0p) + C1*q0p
@@ -115,7 +127,7 @@ def centred(a, n0, slips, rounds=4, phi_sign=+1):
         c = pct.combined(a, M, r); base[(k, M, r)] = (c["E3"], c["tauA0"])
     cfun = lambda a_, M, r: pct.centre_shift(a_, M, r); Efun = lambda a_, M, r: base[next(key for key in base if key[1] == M)][0]
     Lw = window(a, slips, cfun, Efun)
-    hist = [{"round": 0, "L_window": [float(Lw[0]), float(Lw[1])], "L_width": float(Lw[1] - Lw[0]), "b_range": [float(bw[0]), float(bw[1])]}]
+    hist = [{"round": 0, "L_window": [fdn(Lw[0]), fup(Lw[1])], "L_width": fup(Lw[1] - Lw[0]), "b_range": [fdn(bw[0]), fup(bw[1])]}]
     omega = None; Tarc = None
     for it in range(1, rounds + 1):
         T18 = theta0_from_L(a, n0, Lw, bw)
@@ -135,8 +147,8 @@ def centred(a, n0, slips, rounds=4, phi_sign=+1):
         cfun2 = lambda a_, M, r, sh=shifts: pct.centre_shift(a_, M, r) + sh[next(key for key in sh if key[1] == M)]
         Efun2 = lambda a_, M, r, en=envs: en[next(key for key in en if key[1] == M)]
         Lw = window(a, slips, cfun2, Efun2); bw = bw_new
-        hist.append({"round": it, "Theta0_arc": [float(Tarc[0]), float(Tarc[1])], "Theta0_width": float(Tarc[1] - Tarc[0]), "omega": [float(om[0]), float(om[1])], "omega_width": float(om[1] - om[0]),
-                     "L_window": [float(Lw[0]), float(Lw[1])], "L_width": float(Lw[1] - Lw[0]), "b_range": [float(bw[0]), float(bw[1])]})
+        hist.append({"round": it, "Theta0_arc": [fdn(Tarc[0]), fup(Tarc[1])], "Theta0_width": fup(Tarc[1] - Tarc[0]), "omega": [fdn(om[0]), fup(om[1])], "omega_width": fup(om[1] - om[0]),
+                     "L_window": [fdn(Lw[0]), fup(Lw[1])], "L_width": fup(Lw[1] - Lw[0]), "b_range": [fdn(bw[0]), fup(bw[1])]})     # outward float rounding (SO-2)
         cfun, Efun = cfun2, Efun2
     return hist, cfun, Efun, arcW, arcT, D0, Delta_a, omega, Tarc
 # ---------------- [NUM] ----------------
@@ -166,6 +178,7 @@ if __name__ == "__main__":
         dN = -math.sqrt(3)/12*math.cos(thN) + 0.25*math.sin(thN) - math.sqrt(3)/24*math.cos(3*thN) - math.sin(3*thN)/24
         L = math.pi/3*n0 - 2*math.pi*ell0 + (hist_phi[i, 6*Nb] - 2*math.pi*Nb) + TAU*float(mp.digamma(a + Nb)) - dN/math.sqrt(a + Nb)
         Ltol = TAU*Delta_a/(a + Nb) + 3/(a + Nb)
+        inv_ok = all(h["L_window"][0] - Ltol <= L <= h["L_window"][1] + Ltol for h in hist); g4 &= inv_ok      # invariant: the true L stays in every round's window
         rows = []
         for (k, M, r) in slips:
             ck = TAU*float(mp.digamma(a + M)) - (k - 1)*math.pi/3 + f(cfun(a, M, r)); E4 = f(Efun(a, M, r))
@@ -180,8 +193,8 @@ if __name__ == "__main__":
                 ck = TAU*float(mp.digamma(a + M)) - (k - 1)*math.pi/3 + f(cf_nc(a, M, r)); E4n = f(Ef_nc(a, M, r))
                 if abs(ck - L) > E4n + Ltol: nc2 = True
         except RuntimeError: nc2 = True                                   # an empty window / empty Theta_0 arc counts as detection
-        orbits.append({"a": a, "theta0": ths[i], "theta_W0_principal": theta_W0, "n0": int(n0), "sector_thetaW": [float(arcW[0]), float(arcW[1])], "sector_in": in_sec, "D0_plus": D0,
-                       "history": hist, "final_Theta0_arc": [float(Tarc[0]), float(Tarc[1])], "Theta0_arc_contains": in_T, "omega_final": [float(omega[0]), float(omega[1])], "omega_width": float(omega[1] - omega[0]),
+        orbits.append({"a": a, "theta0": ths[i], "theta_W0_principal": theta_W0, "n0": int(n0), "sector_thetaW": [fdn(arcW[0]), fup(arcW[1])], "sector_in": in_sec, "D0_plus": D0,
+                       "history": hist, "final_Theta0_arc": [fdn(Tarc[0]), fup(Tarc[1])], "Theta0_arc_contains": in_T, "omega_final": [fdn(omega[0]), fup(omega[1])], "omega_width": fup(omega[1] - omega[0]),
                        "two_Delta_a": 2*Delta_a, "slips": rows, "L_est": L, "L_tol": Ltol})
     res["gates"].update({"G2_sector_contains_thetaW0": bool(g2), "G3_Theta0_arc_contains": bool(g3), "G4_eps4_within_E4_and_E4_below_E3": bool(g4), "G5_omega_narrower_than_2Delta_a": bool(g5),
                          "NC1_wrong_n0_sector_excludes": bool(nc1), "NC2_wrong_Phi_sign_breaks_G4": bool(nc2)})
