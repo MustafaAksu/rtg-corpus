@@ -1,0 +1,8 @@
+[PASS] T1a common-source multiplicity: with N_A=m_A L+O(1), N_B=m_B L+O(1), the L-coefficient of q N_A - p N_B is (m_A q - m_B p), so the defect is bounded IFF q m_A = p m_B — the reduced class is FORCED to m_A:m_B independently of the dynamics generating L
+[PASS] T1b at (p,q)=(m_A,m_B) the parent count cancels identically, leaving the constant m_B c_A - m_A c_B
+[PASS] T2 periodicity triviality: for an exactly periodic co-realized word with a A-events and b B-events per period, b N_A - a N_B = b r_A - a r_B — the period count k cancels identically, so EVERY exactly periodic pair is boundedly commensurate at a:b BY CONSTRUCTION. Exact-cycle designs therefore cannot fail the boundedness test.
+[PASS] P1a mode-locked class is STABLE on an open set: Delta_(2:1) bounded (oscillation 1) for Omega in [0.48, 0.49, 0.5, 0.51, 0.52] — an interval, not a point, so the class survives small admissible perturbation
+[PASS] P1b mode-locked class is CONTINGENT: the same predicates give linearly unbounded defect for Omega in [0.44, 0.46, 0.47, 0.475, 0.525, 0.53, 0.54, 0.56], so boundedness is a fact about the dynamics rather than about the predicates
+[PASS] P2 the B_+/B_- ray class is NOT contingent: max|Delta_(1:1)| = [1, 1, 1, 1, 1, 1, 1, 1] <= 1 for every perturbation eps in [-1,2] of the generator. Universality, not dynamical content — it cannot distinguish any two admissible dynamics
+----------------------------------------------------------------------
+RESULT: ALL PASS — T1/T2 proved symbolically; two-sided discrimination criterion (stability + contingency) demonstrated on a mode-locking template and shown to reject the ray-multiplicity class.

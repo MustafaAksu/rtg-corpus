@@ -1,0 +1,13 @@
+[PASS] S1 structure: C spans ker D, rank C = beta = m-n+c, rank D = n-c (all graphs incl. multigraph, forest, Petersen)
+[PASS] T1 null theorem: C*D^T = 0 as exact matrix identity and h(D^T x) = 0 for sampled potentials (all graphs)
+[PASS] T2 completeness over field coefficients: im D^T = ker(C·) by exact dimension count + sampled equivalence h=0 <=> D^T x = a solvable
+[PASS] T3 orientation consistency: h invariant under simultaneous edge reorientation (C S, S a); row reversal flips only that component; zero-set invariant
+[PASS] T4 gauge invariance: h(a + D^T g) = h(a); per-component constant potential shifts are exact gauge (D^T 1_comp = 0)
+[PASS] T5 basis change C -> M C (M in GL(beta,Q)): h' = M h exactly; zero-set and multi-channel rank invariant
+[PASS] T6 typing: rank(C a) in {0,1} for every scalar sample (both values realized) — scalar observable is h, never a 'rank'; r_hol = rank(CA) for d>=2 is channel-GL invariant, <= min(beta,d), 0 iff all channels integrable; mixed witness has r_hol = 1
+[PASS] T7 separation: beta > 0 with r_hol = 0 (flat data) AND r_hol = beta (Gram witness A = C^T) realized on every cyclic test graph — cycle capacity and holonomy content are independent axes
+[PASS] T8 TDR-G zero-control: node-difference Z_N phase data has zero holonomy mod N (rings N=6,8,12 and random graphs); a single unit defect is detected. Mod-N completeness deliberately NOT claimed
+[PASS] T9 multiplicative layer: potential ratios w_e = p_head/p_tail give cycle product exactly 1; a single-edge x7 defect gives product != 1 (positive-sector log/exp intertwiner, cf. NG-0R mechanism 2)
+[PASS] T10 edge cases: forest has empty h and total integrability; self-loop carries zero node-difference but detectable defect; partial data handled by recomputing (D,C) on the declared support subgraph
+----------------------------------------------------------------------
+RESULT: ALL ASSERTIONS PASS — NG-7A operator/null package certified: null theorem, field-coefficient completeness, orientation/gauge/basis invariance, typed scalar-vs-multichannel statistic, separation instances, TDR-G Z_N zero-control, multiplicative spot theorem, domain convention.

@@ -1,0 +1,140 @@
+{
+  "n_seeds": 5,
+  "disc1b": {
+    "n_base_dual_active": 4,
+    "class_multiset": [
+      [
+        [
+          1,
+          1
+        ],
+        1
+      ],
+      [
+        [
+          3,
+          2
+        ],
+        2
+      ],
+      [
+        [
+          5,
+          1
+        ],
+        1
+      ]
+    ],
+    "n_non1": 3,
+    "verdict": "PASS (non-1 class present)"
+  },
+  "disc1d": {
+    "n_dual_active_by_k": {
+      "0": 5,
+      "1": 4,
+      "2": 5,
+      "3": 5
+    },
+    "n_eligible_after_stability_fence": 3,
+    "n_pass_interior_k3": 1,
+    "n_pass_boundary_only_k0": 1,
+    "admitted_class_multiset": [
+      [
+        "(3, 2)",
+        2
+      ]
+    ],
+    "verdict": "PASS"
+  },
+  "transport_tuples": {
+    "A": [
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        5,
+        2
+      ]
+    ],
+    "B": [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "C": [
+      [
+        1,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "D": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "E": [
+      [
+        1,
+        1
+      ],
+      null,
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  }
+}
+
+SELF-TEST: PASS

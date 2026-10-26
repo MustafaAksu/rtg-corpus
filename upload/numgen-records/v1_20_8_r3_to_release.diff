@@ -1,0 +1,34 @@
+--- RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r3.md	2026-10-21 09:27:47.609141956 +0300
++++ RTG_NUMBER_GENESIS_DSN_v1_20_8.md	2026-10-21 09:27:48.036786489 +0300
+@@ -1,8 +1,8 @@
+-# RTG Number Genesis DSN v1.20.8 — DRAFT r3
++# RTG Number Genesis DSN v1.20.8
+ 
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+-**Date:** October 21, 2026 (DRAFT r3; v1.20.7 dated September 25, 2026)  
+-**Document status:** DRAFT r3 — not adopted. **Maintenance release: consumer synchronization + RID allocation + interface definition.** No theorem-level change. **Supersedes on adoption:** v1.20.7 (`c4637e7a…ab28`, frozen 2026-10-01), which remains the canonical owner until adoption. Predecessor document status (v1.20.7): ACTIVE owner ledger; owner synchronization + scoped algebra adoption + governance repair; supersedes v1.20.6 (`2a51c4b1…48c5`).  
++**Date:** October 21, 2026 (adopted; v1.20.7 dated September 25, 2026)  
++**Document status:** ADOPTED owner ledger — PI adoption 21 Oct 2026 on DRAFT r3 (`9d59cfa1…e7b3`) after the co-owner delta review (scientific review accepted; artifact verification passed). **Maintenance release: consumer synchronization + RID allocation + interface definition.** No theorem-level change. **Supersedes:** v1.20.7 (`c4637e7a…ab28`, frozen 2026-10-01), retained unchanged as the prior adopted edition. Release record: `NUMGEN_v1_20_8_RELEASE_RECORD.md`. Predecessor document status (v1.20.7): ACTIVE owner ledger; owner synchronization + scoped algebra adoption + governance repair; supersedes v1.20.6 (`2a51c4b1…48c5`).  
+ **DSN Methodology:** v1.3; §2/§6 structural migration completed in v1.20.3.  
+ **Methodology note:** the §2/§6 structural migration is complete (v1.20.3). The normalization of the ruled combined-grade inventory is complete (v1.20.6): the 19 raw combined `[from: X/Y]` rows resolve into 11 owner grade decisions and 8 mirror synchronizations; the §9.2 provenance mirrors are synchronized; two latent substantive definitions were extracted into DEF blocks. **Remaining inventory resolved in v1.20.7 before freeze:** all 12 bare RESULT tags and the one DEF/INTERP tag are normalized — 10 by K5 mirror pairing with from: ALG, and the rest by co-owner-ruled K1/K2 splits (C7C-WD / C7C-0; the §8 N-5 summary; the §8 paradigm note). No live bare RESULT or combined truth-status tag remains. §9.2 artifact-role labels (e.g. `ENG/ALG audit`, `NUM/ENG provenance`) classify artifacts, not claims, and are out of scope.  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+@@ -2750,7 +2750,7 @@
+ | N15 — `DYAD-THM-LPHASE-ROWA-REMAINDER` | Dyadic (v6.4.19, `40c9e63f…6ec9`) | RECEIVED: owner theorem adopted 20 Oct 2026 at THM grade on the I1–I5 interface; import by RID deferred to a NUMGEN edition after v1.20.8 (§6.6 OPEN sub-item); no constant entered here. N3 status on the Dyadic side follows adoption of this edition |
+ | REQ-O09-03 — L-BACKBONE RID and `q_m` typing | OFN (v0.9) | ANSWERED: `NUMGEN-RESULT-N5AS1-L-BACKBONE`; `q_m` typed in §6.6 as block-sampled primitive `Q_true` |
+ | §1.1 opening-import scope | OFN v0.10 §12.3 | ANSWERED: §1.1 narrowed to three DEF imports, one per OFN RID (`RTG-OFN-DEF-RELATIONAL-CONTENT`, `RTG-OFN-DEF-PHASE-GAUGE`, `RTG-OFN-DEF-BACKGROUND-TIME`) at source grade |
+-| A1a RID request (INF-1, D_M) | RECOG (20 Oct 2026) | ANSWERED (option 1): `NUMGEN-RESULT-N5AS1-INF1`, `NUMGEN-DEF-N5AS1-DEFECT`; canonical on adoption of this edition |
++| A1a RID request (INF-1, D_M) | RECOG (20 Oct 2026) | ANSWERED (option 1): `NUMGEN-RESULT-N5AS1-INF1`, `NUMGEN-DEF-N5AS1-DEFECT`; canonical from the adoption of this edition (21 Oct 2026) |
+ | FMS v0.6.4 R8 provenance label | FMS (session ledger) | Outbound notice prepared (`NUMGEN_NOTICE_TO_FMS_R8_ATTRIBUTION_20261020_v0_1.md`): no such statement in v1.20.7; correction is FMS's |
+ 
+ ### §9.2 Artifact Registry
+@@ -2893,7 +2893,9 @@
+ ---
+ 
+ ## Changelog
+-### v1.20.8 — DRAFT r3 — October 21, 2026 (not adopted)
++### v1.20.8 — October 21, 2026 (adopted)
++
++**Adoption.** PI decision of 21 Oct 2026 on DRAFT r3 (`9d59cfa1…e7b3`), after the co-owner delta review of r3 (scientific review accepted; artifact verification passed; adoption ready; no r4). The release pass changes publication metadata only: title, date, document status, the A1a disposition cell and this heading and paragraph. The six N-5A-S1 RIDs are canonical owner RIDs from this adoption. The draft record follows unchanged.
+ 
+ **Maintenance release: consumer synchronization + RID allocation + interface definition** (co-owner GO, 20 Oct 2026). No result, proof, domain or grade changes; no constant is imported.
+ 

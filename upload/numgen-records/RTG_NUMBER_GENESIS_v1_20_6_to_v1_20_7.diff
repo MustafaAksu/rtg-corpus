@@ -1,0 +1,215 @@
+--- RTG_NUMBER_GENESIS_DSN_v1_20_6.md	2026-09-30 06:30:30.259492000 +0000
++++ RTG_NUMBER_GENESIS_DSN_v1_20_7.md	2026-10-05 05:21:05.950817283 +0000
+@@ -1,16 +1,16 @@
+-# RTG Number Genesis DSN v1.20.6
++# RTG Number Genesis DSN v1.20.7
+ 
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+ **Date:** September 25, 2026  
+-**Document status:** ACTIVE owner ledger; **grade-normalization patch.** **Supersedes:** v1.20.5 (`351384dc…d3f34c`).  
++**Document status:** ACTIVE owner ledger; **owner synchronization + scoped algebra adoption + governance repair.** **Supersedes:** v1.20.6 (`2a51c4b1…48c5`).  
+ **DSN Methodology:** v1.3; §2/§6 structural migration completed in v1.20.3.  
+-**Methodology note:** the §2/§6 structural migration is complete (v1.20.3). The normalization of the ruled combined-grade inventory is complete (v1.20.6): the 19 raw combined `[from: X/Y]` rows resolve into 11 owner grade decisions and 8 mirror synchronizations; the §9.2 provenance mirrors are synchronized; two latent substantive definitions were extracted into DEF blocks. **Carried forward, unchanged:** one live combined truth-status tag DEF/INTERP (§8, paradigm-synchronization note), written without `from:` and therefore outside the ruled inventory, found during v1.20.6 verification; and 12 bare RESULT tags without a paired `[from:]` (Methodology v1.3 §3.4). §9.2 artifact-role labels (e.g. `ENG/ALG audit`, `NUM/ENG provenance`) classify artifacts, not claims, and are out of scope.  
++**Methodology note:** the §2/§6 structural migration is complete (v1.20.3). The normalization of the ruled combined-grade inventory is complete (v1.20.6): the 19 raw combined `[from: X/Y]` rows resolve into 11 owner grade decisions and 8 mirror synchronizations; the §9.2 provenance mirrors are synchronized; two latent substantive definitions were extracted into DEF blocks. **Remaining inventory resolved in v1.20.7 before freeze:** all 12 bare RESULT tags and the one DEF/INTERP tag are normalized — 10 by K5 mirror pairing with from: ALG, and the rest by co-owner-ruled K1/K2 splits (C7C-WD / C7C-0; the §8 N-5 summary; the §8 paradigm note). No live bare RESULT or combined truth-status tag remains. §9.2 artifact-role labels (e.g. `ENG/ALG audit`, `NUM/ENG provenance`) classify artifacts, not claims, and are out of scope.  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+ **Document class:** Foundational/technical bridge ledger. It does **not** modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics.  
+ **Companion documents (current verified pointer targets):** `RTG_PROGRAMME_OVERVIEW_v1.2` · `RTG_ONTOLOGICAL_FOUNDATIONS_v0.8` · `RTG_DYADIC_OSCILLATOR_DSN_v6.4.10` · `RTG_DISCRETE_GENESIS_DSN_v2.12.13` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.4`  
+ **Pointer-validation note:** the current source files listed above were revalidated during the v1.3 state-synchronization pass and retained unchanged through v1.19 (no fresh external owner-source revalidation was performed in v1.19). Section/guard pointers used below were checked in v1.17 against the live owner sources, the GAP-LOCK Lemma-3 closure record, and the ratified DISC-1 / DISC-2 artifact bundles. `DZT v0.17` is reported as the frozen current DZT state by `RTG_NG_PROGRAMME_REVIEW_AUDIT_v1.md`, but the v0.17 owner DSN is not present in the current project corpus; this Number Genesis DSN therefore does **not** use audit-reported DZT theorem status as an owner-source import.  
+ **Methodology:** DSN Methodology v1.3. This ledger does **not** itself constitute an OPEN-P1 physical bridge (Programme v1.2 SG-PROG-4: document location and representation theorems create no bridge authority).  
+-**Status summary (scientific state fixed at v1.20; carried unchanged through v1.20.6, which normalizes grade notation only):** Local Track-A/Track-B number-like representations are certified on an explicit Dyadic-certified tube; the canonical section stream is a non-fixed re-blocking with theorem-grade logarithmic defect and physical slip-ratio limit (GAP-LOCK 1–3 closed); bounded commensurability yields unique rational labels (C7A) with a ratified ten-label dynamic lower bound `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} ⊆ Q_RTG^dyn`; C7C-0 reciprocal is closed and C7C-M is partially resolved (exact chain identity and conditional carrier closure `[ALG]`; interface-typed WD-DOM OPEN). C7B global breadth, C7C-A, N-4, N-6, NG-7B and full NG-8 remain OPEN. The full v0.4→v1.19 status narrative is preserved in Appendix A history.  
++**Status summary (scientific state fixed at v1.20; theorem-level state carried through v1.20.6; v1.20.7 adopts the M2-1 transported chain identity at ALG grade and records the C7C-M2 Census-1 outcome INCONCLUSIVE / INCONCLUSIVE):** Local Track-A/Track-B number-like representations are certified on an explicit Dyadic-certified tube; the canonical section stream is a non-fixed re-blocking with theorem-grade logarithmic defect and physical slip-ratio limit (GAP-LOCK 1–3 closed); bounded commensurability yields unique rational labels (C7A) with a ratified ten-label dynamic lower bound `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} ⊆ Q_RTG^dyn`; C7C-0 reciprocal is closed and C7C-M is partially resolved (exact chain identity and conditional carrier closure `[ALG]`; interface-typed WD-DOM OPEN). C7B global breadth, C7C-A, N-4, N-6, NG-7B and full NG-8 remain OPEN. The full v0.4→v1.19 status narrative is preserved in Appendix A history.  
+ 
+ ---
+ 
+@@ -69,6 +69,8 @@
+ 
+ `[THM]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.2 | RID unavailable]` `[scope: deterministic system under a fixed node-count cap]` **Finite phase support — recurrence.** Capped deterministic dynamics are eventually periodic.
+ 
++`[GUARD]` **RF-06 state/gauge scope of the imported finite phase support.** The imported statement above is kept verbatim (K4); this note fixes its scope. (1) The global-phase quotient is the only **unrestricted** gauge. (2) The TDR-G transition state also carries tokens / relative advances; state completeness follows OFN v0.8 SG-OFN-STATE (a gauge-invariant observable is not a complete state unless the dynamics is well defined on the quotient). (3) A common token-origin shift is **not** a gauge of the star rule: OFN v0.8 RTG-OFN-ALG-STAR-TOKEN-SHIFT (fixed-star covariance iff `2c = 0`; the star step negates the center token). (4) On the frozen no-birth SWAP/P3 route used by C7B-DISC, the rule **is** equivariant under every common token shift: by direct reading of the pinned v18 transition, phase advance turns a token shift into a common phase shift, SWAP and P3 permute tokens, and path orientation uses token differences; corroborated by a finite spot check (`NG_SELFCHECK_REFERENCE_TRANSPORT_v1`). Hence the DISC phase-and-token-difference cycle key is a legitimate state key on that route. The source-side correction belongs to the Discrete Genesis owner.
++
+ `[RESULT]` `[from: DEF]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 SG-10; RTG_DYADIC_OSCILLATOR_DSN_v6.4.10 SG-14; RTG_PROGRAMME_OVERVIEW_v1.2 SG-PROG-1 | RID unavailable]` **Cross-branch firewall.** No continuous dynamical law/coefficient may be imported into TDR-G and no discrete coefficient may be imported into the continuous branch without an explicit bridge theorem.
+ 
+ `[GUARD]` **Programme generator-selection ceiling.** `[import: RTG_PROGRAMME_OVERVIEW_v1.2 SG-PROG-2 | RTG-OPEN-GENERATOR-SELECTION]` All N-1/N-2/N-3 results constructed from the continuous primitive map are exact/scoped results **within the selected canonical effective generator `T`**. They do not establish that `T`, or the resulting arithmetic realization, is physically primitive or universal before OPEN-P0 closes.
+@@ -154,7 +156,7 @@
+ 
+ **In-branch Number Genesis proof queue**
+ 
+-1. **C7C-M — interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closure are CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL on `D_chain`; full-interface typed WD-DOM, associativity admissibility-transfer, and carrier identity/inverse remain OPEN; M-4 realization search HOLD pending the Discrete-owner P2 policy. `[v1.19]` **C7C-WD is ADOPTED** and **C7C-0 is CLOSED `[ALG]`** (`NG_C7C0_RECIPROCAL_CERT_v2.md`). The framework splits **domain congruence** (WD-DOM: admissibility itself must descend through `==_Q`, or the operation must be typed to a class-saturated sector) from **value congruence** (WD-VAL: equivalent representatives give equivalent outputs when composed); "whenever all four compositions are admissible" is necessary but one condition short of a quotient operation. Diag3 showed equal labels sit on dynamically different realizations, and `1` already carries realizations in two disjoint families (N5-PHYS-1 continuous dyad; DISC-2 TDR-G), so WD-DOM is a genuine RTG obligation for any *binary* `Phi`. C7C-0 discharges WD-DOM because `S` is **total** on `R_bd` (physical admissibility established for every `x in R_bd`, hence `D_S = R_bd`); unary-ness alone would not suffice for a partial operation. C7C-M inherits WD-DOM in full. Design requirement: propose an owner-native binary composition with its typed signature `Phi_{tau1,tau2}^{tau3}` and its WD-DOM obligation stated explicitly **before** any outcome-sensitive computation; the product `pu/qv` must *emerge* (WD-REP), never define `Phi`. **C7C-A** addition only if the multiplication carrier survives; laws (associativity, commutativity, distributivity, identities) remain separate downstream obligations. **Campaign hold:** design/algebra may proceed, but the first C7C-M realization search (M-4) is not opened until the Discrete-Genesis owner resolves the P2 antipodal-endpoint presentation-covariance policy used by the current SWAP/P3 implementation.
++1. **C7C-M — interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20.7]` C7C-M2 instrument frozen and Census-1 executed: INCONCLUSIVE / INCONCLUSIVE — no admitted nondegenerate composable source chain in Census-1 evidence; M2-1 transported chain identity adopted (algebra only). Full-interface typed WD-DOM remains OPEN; missing evidence object: a certified composable three-stream witness. `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closure are CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL on `D_chain`; full-interface typed WD-DOM, associativity admissibility-transfer, and carrier identity/inverse remain OPEN; M-4 realization search HOLD pending the Discrete-owner P2 policy. `[v1.19]` **C7C-WD is ADOPTED** and **C7C-0 is CLOSED `[ALG]`** (`NG_C7C0_RECIPROCAL_CERT_v2.md`). The framework splits **domain congruence** (WD-DOM: admissibility itself must descend through `==_Q`, or the operation must be typed to a class-saturated sector) from **value congruence** (WD-VAL: equivalent representatives give equivalent outputs when composed); "whenever all four compositions are admissible" is necessary but one condition short of a quotient operation. Diag3 showed equal labels sit on dynamically different realizations, and `1` already carries realizations in two disjoint families (N5-PHYS-1 continuous dyad; DISC-2 TDR-G), so WD-DOM is a genuine RTG obligation for any *binary* `Phi`. C7C-0 discharges WD-DOM because `S` is **total** on `R_bd` (physical admissibility established for every `x in R_bd`, hence `D_S = R_bd`); unary-ness alone would not suffice for a partial operation. C7C-M inherits WD-DOM in full. Design requirement: propose an owner-native binary composition with its typed signature `Phi_{tau1,tau2}^{tau3}` and its WD-DOM obligation stated explicitly **before** any outcome-sensitive computation; the product `pu/qv` must *emerge* (WD-REP), never define `Phi`. **C7C-A** addition only if the multiplication carrier survives; laws (associativity, commutativity, distributivity, identities) remain separate downstream obligations. **Campaign hold:** design/algebra may proceed, but the first C7C-M realization search (M-4) is not opened until the Discrete-Genesis owner resolves the P2 antipodal-endpoint presentation-covariance policy used by the current SWAP/P3 implementation.
+ 2. **C7B — global breadth.** C7B-DISC-1 and C7B-DISC-2 are CLOSED, establishing ten dynamic labels. Global breadth remains OPEN. A further campaign (DISC-3) is **deferred**, not blocked: more labels do not imply an operation, and the present spectrum already spans integers and non-integer rationals sufficiently to expose whether a physical arithmetic construction works or fails. Continue only through separately pre-registered owner-native axes and fresh domains; do not infer `Q_RTG^dyn = Q_(>0)` or that the ten established labels exhaust it.
+ 3. **N-4 — global/domain extension in parallel.** Local N-5 work no longer depends on N-4; N-4 remains relevant to global winding/critical-curve structure. GAP-LOCK Lemmas 1–3 are CLOSED and no longer occupy the queue.
+ 4. **N-6 — classify incommensurable/order-completion structure by R-like labels** (representation-level in the continuous branch under SG-NG-19 unless substrate-independence/bridge conditions are met).
+@@ -330,7 +332,7 @@
+ | winding and harmonics both give `Z` | `[MATH]` standard structures | proof they are the same RTG history representation |
+ | `Z_N` phase vs `S^1` | exact candidate character restriction `[MATH]`; RTG bridge `[OPEN]` | discrete/continuous dynamical equivalence |
+ | bounded synchronization class gives unique rational invariant | `[RESULT][from: ALG]` C1–C4 + N5-PHYS-1 + C7A; `1 in Q_RTG^bd` | claim that boundedness alone is dynamic admission, that all `Q_(>0)` is physically realized, or that rational arithmetic is already derived |
+-| strong dynamic rational admission | `[RESULT]` frozen DISC-1 + DISC-2 establish ten labels `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn` | equality with that set or with `Q_(>0)`, post-data gate retuning, or arithmetic from a label list |
++| strong dynamic rational admission | `[RESULT][from: ALG]` frozen DISC-1 + DISC-2 establish ten labels `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn` | equality with that set or with `Q_(>0)`, post-data gate retuning, or arithmetic from a label list |
+ | owner implementation agreement ⟹ presentation covariance | `[REJECTED]` — exhaustive equality to the pinned v18 implementation certifies implementation agreement, not node-relabeling covariance; P2 post-hoc audit finds 40/136 DISC-2 witness records convention-exposed while the ten-label projection remains robust | treating sorted-node tie-breaking as a physical invariant without an owner policy/theorem |
+ | equal `rho_Q` labels ⟹ interchangeable/composable physical inputs | `[REJECTED]` — `==_Q` is representation equivalence only; WD-DOM must be proved per operation (`1` already spans two disjoint realization families) | any operation defined on labels rather than realizations |
+ | `Q_RTG^bd` reciprocal closure | `[RESULT][from: ALG]` C7C-0 involution `S`; WD-DOM trivial for this **total** unary map (`D_S = R_bd`), not for unary maps in general | multiplication, addition, field structure, or `Q_RTG^dyn` reciprocal closure |
+@@ -1283,7 +1285,7 @@
+ 
+ The former OPEN target has been discharged by `NG_N2ORD_PHYSICAL_ORDER_CERT_v1.md`. The canonical theorem statement, guards, P3-dependent refinements, and `Q_true` witness are maintained in this §6.3a ledger block.
+ 
+-`[RESULT]` The physical order is reachability-first, not `Q_true`-defined. Reachability is a partial order on `U_T`, total on each primitive orbit; the N-2 positive cone gives the ordered signed-history group; signed-history sign is physically realized by endpoint reachability orientation.
++`[RESULT] [from: ALG]` The physical order is reachability-first, not `Q_true`-defined. Reachability is a partial order on `U_T`, total on each primitive orbit; the N-2 positive cone gives the ordered signed-history group; signed-history sign is physically realized by endpoint reachability orientation.
+ 
+ `[GUARD]` Primitive-step/cross-residue monotonicity is false in general; the numerical certificate supplies explicit counterexamples. `[v1.19]` P3 injectivity is now discharged algebraically on a sufficiently shrunken tube, so the ORD-2 reflection/cross-orbit merge refinements are theorem-level on that shrunken scope.
+ 
+@@ -1572,9 +1574,9 @@
+ 
+ `[GUARD]` **Bounded realization ≠ dynamic admission.** Bounded realization and dynamic admission are distinct.
+ 
+-`[RESULT]` **C7B-DISC-1 CLOSED.** Frozen DISC-1B PASS and DISC-1D PASS-INT establish `2,3 in Q_RTG^dyn subseteq Q_RTG^bd`.
++`[RESULT] [from: ALG]` **C7B-DISC-1 CLOSED.** Frozen DISC-1B PASS and DISC-1D PASS-INT establish `2,3 in Q_RTG^dyn subseteq Q_RTG^bd`.
+ 
+-`[RESULT]` **C7B-DISC-2 CLOSED.** Frozen B-check PASS and D-check PASS on the registered supplementary family establish eight additional labels and add further witnesses for `2` and `3`. The currently established dynamic lower bound is therefore
++`[RESULT] [from: ALG]` **C7B-DISC-2 CLOSED.** Frozen B-check PASS and D-check PASS on the registered supplementary family establish eight additional labels and add further witnesses for `2` and `3`. The currently established dynamic lower bound is therefore
+ 
+ ```text
+ {1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn.
+@@ -1584,9 +1586,13 @@
+ 
+ `[OPEN]` **C7B global breadth.** Determine which additional positive rationals occur; no exhaustiveness theorem is claimed.
+ 
+-`[RESULT]` **C7C-WD ADOPTED; C7C-0 CLOSED.** The well-definedness framework (WD-PHYS/CLOSE/DOM/VAL/DESCENT, arithmetic compatibility WD-REP only afterward) is adopted; the orientation swap descends to a representative-independent involution on bounded classes, so `Q_RTG^bd` is closed under `r -> r^(-1)`. No `Q_RTG^dyn` reciprocal closure is claimed.
++`[DEF]` **C7C-WD ADOPTED.** The well-definedness framework (WD-PHYS/CLOSE/DOM/VAL/DESCENT, arithmetic compatibility WD-REP only afterward) is adopted.
++
++`[RESULT] [from: ALG]` **C7C-0 CLOSED.** The orientation swap descends to a representative-independent involution on bounded classes, so `Q_RTG^bd` is closed under `r -> r^(-1)`.
++
++`[GUARD]` No `Q_RTG^dyn` reciprocal closure is claimed.
+ 
+-`[RESULT]` **C7C-M partially resolved (v1.20):** M-1A exact chain identity and M-1B conditional carrier closure on `D_chain` are CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL; WD-VAL on admitted chains PASS; associativity only for admitted bracketings. `[OPEN]` full-interface typed WD-DOM (the frontier), admissibility transfer, carrier identity/inverse, physical commutativity; C7C-A not opened; M-4 HOLD (P2).
++`[RESULT] [from: ALG]` **C7C-M partially resolved (v1.20; C7C-M2 Census-1 INCONCLUSIVE / INCONCLUSIVE at v1.20.7):** M-1A exact chain identity and M-1B conditional carrier closure on `D_chain` are CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL; WD-VAL on admitted chains PASS; associativity only for admitted bracketings. `[OPEN]` full-interface typed WD-DOM (the frontier), admissibility transfer, carrier identity/inverse, physical commutativity; C7C-A not opened; M-4 HOLD (P2).
+ 
+ `[GUARD]` N-5 therefore has a certified physical rational-label mechanism but is **not yet a derivation of the full field `Q`**. Full realization spectrum and arithmetic remain explicit open obligations.
+ 
+@@ -1923,7 +1929,7 @@
+ ```
+ Depends on: the DISC-2 finite certificate (discrimination verdicts), the `Q_RTG^dyn` DEF, C7B-ALG-T4.
+ 
+-`[RESULT]` **`1 in Q_RTG^dyn`.** Established independently of the N5-PHYS-1 bounded control by 26 dynamically discriminating SWAP/P3 realizations (24 interior, 2 boundary). `1 in Q_RTG^bd` and `1 in Q_RTG^dyn` are **separate** statements of different epistemic status; the label-neutrality ruling makes the second admissible, since membership is existential through a certified realization and not a property of the numeral.
++`[RESULT] [from: ALG]` **`1 in Q_RTG^dyn`.** Established independently of the N5-PHYS-1 bounded control by 26 dynamically discriminating SWAP/P3 realizations (24 interior, 2 boundary). `1 in Q_RTG^bd` and `1 in Q_RTG^dyn` are **separate** statements of different epistemic status; the label-neutrality ruling makes the second admissible, since membership is existential through a certified realization and not a property of the numeral.
+ 
+ `[COR]` **`k=0` retention was load-bearing.** All six `PASS_BDY_ONLY` witnesses hold the base class at `k=1,2,3` and break it only at `k=0` — two transport patterns, `5:2 -> 2:1 -> 2:1 -> 2:1` (x4, `C_0=2`) and `11:1 -> 1:1 -> 1:1 -> 1:1` (x2, `C_0=30`). **All 6/6 disappear if `k=0` is removed**; an earlier "four of six" statement is retracted (four is only the `2:1` block). The architectural ruling to retain `k=0` was made when DISC-1 had produced zero boundary passes, i.e. against the then-available empirical signal.
+ 
+@@ -1991,6 +1997,16 @@
+ 
+ `[RESULT] [from: ALG]` **M-1B — conditional carrier closure. CLOSED.** On `D_chain`, M-1A gives `(A,C) in R_bd` at `red(pu,qv)` and `rho_Q(A,C) = rho_Q(A,B) rho_Q(B,C)`.
+ 
++`[DEF]` **Transported chain data (C7C-M2 instrument; preregistration `NG_C7C_M2_PREREG_DRAFT_v4`, `248f128c…8987`).** For `x = (A,B)` at `p:q` and `y = (B′,C)` at `u:v` whose middle interfaces are aligned by a cofinal order-preserving tail map `φ` between their comparison prefix posets, with single-stream discrepancy `ε_B(H) := N_{B′}(φH) − N_B(H)` bounded on the tail, define `Δ^{AC,φ}_{pu:qv}(H) := q v N_A(H) − p u N_C(φH)`.
++
++`[RESULT] [from: ALG]` **M2-1 — transported chain identity. CLOSED (algebra only).**
++```text
++Delta^{AC,phi}_{pu:qv}(H) = v Delta^{AB}_{p:q}(H) + p Delta^{B'C}_{u:v}(phi H) - p v eps_B(H)
++```
++Hence bounded input defects and bounded `ε_B` give a bounded transported outer defect; at `B′ = B`, `φ = id`, `ε_B = 0` this is exactly M-1A. Proved in the frozen preregistration before any case was examined; symbolically verified.
++
++`[GUARD]` **M2-1 no-closure.** M2-1 is algebra only. It does **not** establish Π (outer `R_pair` admissibility of the transported pair), WD-DOM, carrier closure, or the existence of any admitted chain. A transport map aligns comparison contexts; it does not create co-realization. The instrument lemmas M2-0 (germ calculus) and M2-2 (value descent under WD-DOM) remain internal to the preregistration and are not owner claims.
++
+ `[RESULT] [from: ALG]` **Unrestricted WD-CLOSE: FAIL on the current carrier.** For any `x=(A,B) in R_bd`, C7C-0 gives `Sx=(B,A) in R_bd`, but the chain output `x ∘ Sx = (A,A)` is not two independent event types (SG-NG-20) and is not in `R_pair`. This is a closure counterexample, not merely an inverse-law remark.
+ 
+ `[RESULT] [from: ALG]` **Naive/global label-only WD-DOM: FAIL for `D_chain`.** The label-quotiented shared-middle domain is not saturated under `==_Q`: `rho_Q` carries no shared-interface provenance, equivalent representatives may be drawn from disjoint realization families (the label `1` already is), and composability changes. **This does not rule out a richer interface-typed saturated carrier; that is exactly the remaining OPEN.**
+@@ -2003,7 +2019,13 @@
+ 
+ `[OPEN]` **Physical commutativity.** The representation-level product commutes, but domain swap-equivariance of the physical operation is not established.
+ 
+-`[OPEN]` **Full-interface typed WD-DOM — the frontier.** Which relational interface information carries physical composition, and under which quotient it descends without loss.
++`[OPEN]` **Full-interface typed WD-DOM — the frontier.** Which relational interface information carries physical composition, and under which quotient it descends without loss. **Live state (v1.20.7):** the C7C-M2 instrument is frozen and Census-1 has been executed, with outcome INCONCLUSIVE / INCONCLUSIVE because no admitted nondegenerate composable source chain exists in Census-1 evidence. Full-interface typed WD-DOM **remains OPEN**.
++
++`[RESULT] [from: ALG]` `[scope: frozen C7C-M2 instrument; Census-1 admissible evidence, 120 records]` **C7C-M2 Census-1 — no admitted source chain at either level.** At level a, `≈_a` is the identity on the admissible set and every candidate middle chain is `x ∘ Sx`, with outer pair `(A,A) ∉ R_pair` (L1994). At level b, every dyad candidate's outer pair is the same stream, a re-indexing of it, or two streams on distinct orbits that are not co-realized. TDR-G contributes no candidate chain at either level, because every admissible record is oriented `(SWAP, P3)`. Hence the admitted-chain domain is empty at both levels.
++
++`[GUARD]` **C7C-M2 Census-1 is not a WD-DOM verdict.** By the frozen preregistration, an empty admitted-chain domain makes WD-DOM vacuous: neither PASS nor FAIL. Level a: INCONCLUSIVE (vacuous); level b: INCONCLUSIVE (vacuous at N2; N1 is satisfied by the continuous-dyad analytic witness). Reading-matrix placement: INCONCLUSIVE / INCONCLUSIVE. Nothing here states that WD-DOM holds or fails.
++
++**Missing evidence object (queue).** A certified nondegenerate composable three-stream configuration — `(A,B) ∈ R_bd`, `(B,C) ∈ R_bd`, `(A,C) ∈ R_pair` — within one certified comparison architecture, with a suitable middle-interface witness. Three event types are a necessary intuition, not a sufficient condition. This identifies the evidence shape only; it authorizes no realization search. A broader Census-2 is not presently priority-justified unless it can add evidence toward this witness shape; no claim is made that it would or would not do so. Provenance: `NG_C7C_M2_ANALYSIS_LOG.md` (`e7b85fd2…0139`, E0–E6) and the pins listed in §9.2.
+ 
+ `[HOLD]` **M-4 realization search** — pending the Discrete-owner P2 antipodal-endpoint policy ruling. `NG_C7C_M_DESIGN_v1.md` is retained as **historical**; its statements "typed by `B` suffices" and "associativity free at the realization level" are superseded by the above.
+ 
+@@ -2634,27 +2656,33 @@
+ 
+ ## §8. Immediate Next Action
+ 
+-`[RESULT]` **NG-8A and NG-8B are now closed.** Their certificates are registered below; they no longer occupy the active proof queue.
++`[RESULT] [from: ALG]` **NG-8A and NG-8B are now closed.** Their certificates are registered below; they no longer occupy the active proof queue.
+ 
+-`[DEF/INTERP]` **Paradigm synchronization complete at documentation level.** Number Genesis is explicitly composition-first and representation-after-construction, and the v1.4 paradigm release makes no universal claim that ratio/proportion is ontologically prior to addition/difference. NG-0R/SG-NG-22 require sector-specific mechanisms and gauges before either direction is promoted.
++**Paradigm synchronization complete at documentation level.** *(status metadata; not a graded claim)*
+ 
+-`[RESULT]` **NG-7A is closed at v1.5** and **N-2-ORD at v1.6**; both certificates are registered below.
++`[DEF]` **Adopted documentation semantics.** Number Genesis is explicitly composition-first and representation-after-construction.
+ 
+-`[RESULT]` **Foundational chain complete on the local object:** N-like repetition (N-1) → Z-like signed comparison (N-2) → physically realized order (N-2-ORD), all on the same certified primitive-dyad tube.
++`[GUARD]` The v1.4 paradigm release makes no universal claim that ratio/proportion is ontologically prior to addition/difference. NG-0R/SG-NG-22 require sector-specific mechanisms and gauges before either direction is promoted.
+ 
+-`[RESULT]` **N-5 commensurability architecture now has both negative and positive physical tests.** C1–C4 establish the bounded-defect quotient structure; C5 supplies mathematical controls; C6 falsifies the density-only canonical pair; N5-PHYS-1 supplies a genuine physical `1:1` bounded class; C7A maps every certified bounded pair to a unique positive-rational invariant. `Q_RTG^bd` is nonempty. **C7B-DISC-1 and C7B-DISC-2 are CLOSED** and establish
++`[RESULT] [from: ALG]` **NG-7A is closed at v1.5** and **N-2-ORD at v1.6**; both certificates are registered below.
++
++`[RESULT] [from: ALG]` **Foundational chain complete on the local object:** N-like repetition (N-1) → Z-like signed comparison (N-2) → physically realized order (N-2-ORD), all on the same certified primitive-dyad tube.
++
++`[RESULT] [from: ALG]` **N-5 commensurability architecture now has both negative and positive physical tests.** C1–C4 establish the bounded-defect quotient structure; C5 supplies mathematical controls; C6 falsifies the density-only canonical pair; N5-PHYS-1 supplies a genuine physical `1:1` bounded class; C7A maps every certified bounded pair to a unique positive-rational invariant. `Q_RTG^bd` is nonempty. **C7B-DISC-1 and C7B-DISC-2 are CLOSED** and establish
+ 
+ ```text
+ {1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn.
+ ```
+ 
+-This is a certified lower bound, **not** an exhaustive spectrum. C7B global breadth and C7C physical arithmetic remain OPEN.
++`[GUARD]` This is a certified lower bound, **not** an exhaustive spectrum.
++
++`[OPEN]` C7B global breadth and C7C physical arithmetic remain OPEN.
+ 
+ **Current in-branch proof queue:**
+ 
+ *(This queue mirrors the section 2 queue; it is not an independently editable second queue.)*
+ 
+-1. **C7C-M — interface-typed WD-DOM / partial-composition closure.** M-1A/M-1B CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL; full-interface typed WD-DOM OPEN; M-4 HOLD (P2). Then `C7C-A` only if the composition carrier survives.
++1. **C7C-M — interface-typed WD-DOM / partial-composition closure.** M-1A/M-1B CLOSED `[ALG]`; M2-1 adopted (algebra only); unrestricted WD-CLOSE and naive label-only WD-DOM FAIL; C7C-M2 Census-1 INCONCLUSIVE / INCONCLUSIVE (no admitted composable source chain); full-interface typed WD-DOM OPEN; M-4 HOLD (P2). Then `C7C-A` only if the composition carrier survives.
+ 2. **C7B global breadth.** DISC-1 and DISC-2 CLOSED; DISC-3 deferred, not blocked.
+ 3. **N-4 — global/domain extension in parallel.**
+ 4. **N-6 — R-like incommensurability/completion**, SG-NG-19 retained.
+@@ -2741,7 +2769,7 @@
+ | `N5-PHYS-1 in-ledger proof (v1.15)` | opposite phase-coincidence `B_+ / B_-` strict alternation and uniform `1:1` discrepancy bound | `[RESULT][from: ALG]` — local continuous-dyad physical witness |
+ | `N5-C7A in-ledger theorem (v1.15; notation corrected at v1.16)` | well-defined unique positive-rational invariant on every certified bounded physical pair; current notation `1 in Q_RTG^bd` | `[RESULT][from: ALG]` |
+ | `C7B-DISC-1 protocol (v1.15)` | frozen pre-data TDR-G SWAP/P3 discrimination architecture; historical pre-registration record | `[CLOSED protocol; superseded status by v1.16 result]` |
+-| `NG_DISC1_RESULT_v4.md` + `disc1_result.json` | ratified DISC-1B PASS / DISC-1D PASS-INT; `2,3 in Q_RTG^dyn`, no exhaustiveness claim | `[RESULT]` |
++| `NG_DISC1_RESULT_v4.md` + `disc1_result.json` | ratified DISC-1B PASS / DISC-1D PASS-INT; `2,3 in Q_RTG^dyn`, no exhaustiveness claim | `[RESULT][from: ALG]` |
+ | `disc1_safeguards_v2.py/.log` + `genesis_mode_b_mc_v18.py` | owner differential, independent recount, fixed-period control, archetype regression; all safeguards pass | `[NUM/ENG provenance]` |
+ 
+ | `ng_n5as1_gaplock12_cert_v1.py` / `.log` | 7 assertion families incl. scope-necessity demonstration; exit 0 | `[ENG/ALG audit]` |
+@@ -2771,6 +2799,13 @@
+ | `ng7a_holonomy_null_cert_v1.log` | execution record; all pass, exit 0 | `[NUM]` execution record |
+ | `RTG_NG_PROGRAMME_REVIEW_AUDIT_v1.md` | independent programme-review/state audit; pointer revalidation and DZT-state report | `[ENG audit memo]` — not owner-source replacement |
+ | `ng_review_dzt_independent_audit_v1.py` | independent numerical reproduction of audit-reported DZT norm laws for 60 points `p=12..248` | `[NUM]` audit support — no NG claim promotion |
++| `NG_C7C_M2_PREREG_DRAFT_v4.md` (`248f128c…8987`) + `NG_C7C_M2_PREREG_FREEZE_MANIFEST_v1.md` (`cefb7180…b165b`) | frozen C7C-M2 preregistration (interface object, germ calculus, κ_b registry, WD-DOM quantifiers, N1/N2, evidence guards) | instrument; frozen before any case was examined |
++| `NG_C7C_M2_CENSUS_PROTOCOL_v1.md` (`f2a4a9a4…5795`) | evidence-sufficiency census protocol (F1–F7; replay contract) | instrument; frozen |
++| `NG_C7C_M2_CENSUS1_UDYAD_RESULT_v1.json` (`ed3c72af…eae9`) + `NG_C7C_M2_CENSUS1_UTDRG_RESULT_v1.json` (`23f298dc…d33a`) | Census-1 results: 2/2 dyad and 118/158 TDR-G records admissible; 40 excluded by P2 quarantine only | census record; not a scientific claim |
++| `census1_tdrg_replay_v1.py` (`73cfa2e3…8188`) + manifest (`19e929aa…a30a`) + records (`7b7dc451…77c8`) | C-1 replay: 158/158 reproduce sealed fields, stepwise agreement, owner-v18 lockstep | reconstruction record |
++| `NG_C7C_M2_ANALYSIS_OPENING_MANIFEST_v1.json` (`d170efb5…5d73`) + `NG_C7C_M2_ANALYSIS_LOG.md` (`e7b85fd2…0139`) | evidence set fixed at the start of outcome inspection; append-only analysis E0–E6 | analysis record — outcome INCONCLUSIVE / INCONCLUSIVE |
++| `NG_C7C_M2_E4_TDRG_DENSITY_v1.json` (`c67342a9…6fa8`) | exact ordered TDR-G event densities; 15 classes | supporting analysis record |
++| `NG_SELFCHECK_REFERENCE_TRANSPORT_v1.md` (`b39de45c…ded4`) + `ng_rf06_token_shift_spotcheck_v1.py` (`2a064eb9…f148`) | RF-06 self-check; token-shift equivariance on the no-birth SWAP/P3 route | review record; finite spot check plus code reading |
+ 
+ ---
+ 
+@@ -2821,6 +2856,22 @@
+ ---
+ 
+ ## Changelog
++### v1.20.7 — October 1, 2026
++
++**Owner synchronization + scoped algebra adoption + governance repair.** No theorem-level result changes except the adoption of M2-1, an algebraic identity proved before any outcome inspection.
++
++**1. C7C-M2 outcome sync (scientific sync).** The frozen C7C-M2 instrument and Census-1 are recorded (§6.6 and §9.2 pins). Outcome INCONCLUSIVE / INCONCLUSIVE: no admitted nondegenerate composable source chain exists in Census-1 evidence at either level. This states neither that WD-DOM holds nor that it fails. Full-interface typed WD-DOM remains OPEN; M-4 remains HOLD pending the Discrete-owner P2 ruling. The missing evidence object — a certified composable three-stream witness — enters the queue as an evidence shape, with no search authorized.
++
++**2. M2-1 adopted (scoped algebra).** The transported chain identity, a strict generalization of M-1A under bounded interface transport, enters the owner at ALG grade, with its transport definition and a no-closure guard: it establishes no Π, WD-DOM, carrier closure or admitted chain. M2-0 and M2-2 remain internal to the preregistration.
++
++**3. RF-06 scope note (governance).** The imported row-1a statement is kept verbatim (K4). A scope guard fixes: global phase is the only unrestricted gauge; the transition state carries tokens (OFN SG-OFN-STATE); a common token shift is not a gauge of the star rule (OFN RTG-OFN-ALG-STAR-TOKEN-SHIFT); on the frozen no-birth DISC SWAP/P3 route it is equivariant, so the DISC reduced key stands at that scope. The source-side correction belongs to Discrete Genesis.
++
++**4. Queue and §8 synchronized** with the C7C-M2 live state; §2 and §8 remain consistent.
++
++**5. Methodology normalization (no scientific-state change).** Ten bare RESULT tags that are pure mirrors of already-ruled owner rows are paired with "from: ALG" under K5: the §5 ten-label row, the two §6.6 DISC summaries, the §6.6 C7C-M summary, the `1 in Q_RTG^dyn` statement, the §9.2 DISC-1 result row, the §6.3a N-2-ORD summary, and the three §8 closure summaries (NG-8A/NG-8B, NG-7A/N-2-ORD, foundational chain). Every summarized owner was checked to be single-grade ALG.
++
++**6. Remaining grade items resolved before freeze (co-owner ruling, `NG_V1207_REMAINING_GRADE_RULINGS_v1`).** Three rows bundled parts of different status and are split under K1/K2, with substantive wording preserved — no substantive proposition was reworded; only split-boundary punctuation/capitalization, the corresponding conjunction adjustment, and bold block labels were changed (itemized in the rulings record): the §6.6 C7C-WD / C7C-0 summary into a DEF (framework adopted), an ALG result (C7C-0 involution; Q_RTG^bd closed under reciprocals) and a GUARD (no Q_RTG^dyn reciprocal closure); the §8 N-5 summary into an ALG result (C1–C7A + DISC lower-bound synthesis), a GUARD (lower bound, not exhaustive) and an OPEN item (C7B global breadth, C7C physical arithmetic); the §8 paradigm note into status metadata, a DEF (composition-first, representation-after-construction) and a GUARD (no universal ontological-priority claim; sector-specific mechanisms and gauges required). Navigation phrases such as "certificates are registered below" are not graded (K1). Result: no live bare RESULT and no live combined truth-status tag.
++
+ ### v1.20.6 — September 29, 2026
+ 
+ **Grade-normalization patch.** Applies the co-owner rulings recorded in `NG_V1206_RULING_LEDGER.json` (groups 1–3). No new result; every change re-expresses an existing claim's grade under Methodology v1.3, splits a block whose parts differ in status, domain or evidential basis (K2), or re-types a latent definition.

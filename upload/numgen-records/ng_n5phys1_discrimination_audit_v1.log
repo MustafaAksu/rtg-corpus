@@ -1,0 +1,10 @@
+  dyad: D_1:1=[0, -1, 0, 0], D_2:1=[0, -1, 0, -2], D_4:1=[0, -2, 0, -3], D_3:2=[0, 1, 0, -1]
+  rotation-control: D_1:1=[0, -1, 0, -1], D_2:1=[-2, -1, -2, -1], D_4:1=[-3, -2, -3, -2], D_3:2=[-1, 1, -1, 1]
+[PASS] A1 N5-PHYS-1 reproduced: B_+/B_- strictly alternate on the dyad with |Delta_(1:1)| <= 1 — the DSN proof is correct as stated
+[PASS] A2 DISCRIMINATION FAILURE: the pure-rotation control, which has no slips, no {6,7} alphabet and no logarithmic defect, reproduces the SAME 1:1 bounded class with |Delta| <= 1. The 1:1 witness therefore carries no dynamical information about the RTG dyad.
+[PASS] A3 rho=0 (amplitude-coincidence) rays are relationally clean by exactly the v1.9 argument that admitted eta_wrap=0, so C_+/C_- are admissible event predicates on the same footing as B_+/B_-
+[PASS] A4 NON-1 RATIONALS ARE ALREADY REALIZABLE in the continuous branch from canonical ray families: (B_+ u B_-) vs C_+ gives a bounded 2:1 class; all four rays vs C_+ gives 4:1; (B_+,B_-,C_+) vs (C_+,C_-) gives 3:2
+[PASS] A5 ALL of those non-1 classes are ALSO reproduced by the rotation control with the same bounded defects — so a positive C7B answer obtained this way would be spurious: the ratio equals the ray-multiplicity of the defining predicates, identically, for every monotone lift
+[PASS] A6 mechanism: a monotone lift crosses each fixed ray exactly once per lap, so for ray-families of sizes m1,m2 the counts satisfy N_1/N_2 -> m1/m2 with bounded defect BY CONSTRUCTION; the class is fixed by how many rays the predicate names, not by the dynamics
+----------------------------------------------------------------------
+RESULT: ALL PASS — N5-PHYS-1 is correctly proved but dynamically non-discriminating; C7B is at risk of spurious positive closure inside the continuous branch. Proposed remedy: SG-NG-26 + discrimination witness requirement.

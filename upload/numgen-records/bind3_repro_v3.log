@@ -1,0 +1,20 @@
+[PASS] A1 primary retrigger-entry family = 3456 ICs with per-d counts {-2: 576, -1: 1152, 1: 1152, 2: 576} (DSN: 3456; 1152 at d=+-1, 576 at d=+-2)
+[PASS] A2 the six published supplementary rows are reproduced exactly at 1728 ICs each (d=+-3,+-4,+-5), totalling the owner's 10368. Extending the same generator beyond the owner-tabulated range to all |d|_c>2k yields 32832 ICs; that larger set is an UNREGISTERED EXTRAPOLATION of the generation rule and is used in no owner comparison.
+[PASS] A3-ID/NUM: for all 331776 reduced states, the three DECLARED lifts (c,b) = (0,0), (5,7), (17,3) give the same next reduced state (0 mismatches). This row decides those three lifts only; the all-lift statement is the memo [ALG] theorem (a common (c,b) shift moves every advanced phase by c+b, leaving the defect graph fixed, and commutes with swap and the P3 successor shift) and is NOT asserted here. The quotient is a derived no-birth dynamical symmetry, not SG-2 gauge.
+
+--- (b) convention sweep (now executable, was memo-only in v1) ---
+sde     tie      medP  maxP  nDist  maxPre   ties  dominant
+offset  inert     138  1638     80     629     68  [15, 30, 48, 357, 396, 228]
+offset  fwd       138  1638     79     629      0  [15, 30, 48, 357, 396, 228]
+offset  rev       138  1638     79     629      0  [15, 30, 48, 357, 396, 228]
+neg     inert     108  1008     78     959    280  [264, 15, 54, 702, 1008, 72]
+neg     fwd       108  1008     77     959      0  [54, 264, 15, 702, 1008, 72]
+neg     rev       108  1008     77     959      0  [54, 264, 15, 702, 1008, 72]
+raw     inert     126  1872    120    1766    256  [3, 132, 36, 822, 720, 108]
+raw     fwd       126  1872    118    1766      0  [3, 33, 132, 36, 822, 720]
+raw     rev       126  1872    118    1766      0  [3, 132, 36, 822, 720, 108]
+DSN target        138  1638     79     830      -  [15, 48, 357, 396, 228, 1638]
+[PASS] A4 canonical variant (sde=offset, ties inert) matches the DSN on median period (138=138), max period (1638=1638), median preperiod (0=0), K3 events in cycles (0=0), and 5 of the 6 published dominant periods [15, 48, 228, 357, 396]. Every clause here is decided by the expression.
+  [REPORT, not asserted] residual mismatch: distinct lengths 80 vs published 79; max preperiod 629 vs published 830. REPRODUCTION IS CLOSE BUT NOT EXACT — not usable as DISC-1 input.
+----------------------------------------------------------------------
+RESULT: published IC cardinalities and d-resolved multiplicities reproduced exactly (pairing supported, not owner-verified); three-lift quotient regression checked exhaustively over all reduced states (all-lift well-definedness is the companion memo [ALG] theorem); cycle statistics now match on median/max period and 5 of 6 dominant periods but NOT on distinct-length count or max preperiod. Unblock still requires the v18 signed_defect_error and the published cycle-key convention.

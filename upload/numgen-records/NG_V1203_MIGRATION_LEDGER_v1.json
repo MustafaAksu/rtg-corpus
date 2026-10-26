@@ -1,0 +1,26 @@
+{
+ "reconciled": [
+  {
+   "discarded_h": "1907080a56d6c48fe837a6eed1de0b7afd52c02a1b83ffc7ee5bb16895eba154",
+   "retained_h": "f3b014514021502b8391d3945252bd69244f97589e681b19f0c20164b421eb09"
+  }
+ ],
+ "tag_norm": [],
+ "stop": [],
+ "registry_conversion": [
+  "e1f4cfdb1d2cafdb4831cc537040402da1f3f2cd93296875d190b6f551fc2e98",
+  "2af5d0820c974eb89caaed6c0f67fd8484a54a9ae3a9c35c74215dfd09c6bd2a",
+  "4125a131367c38be7a16048e961882259a66bece89c6668d8963b960bc90da75"
+ ],
+ "registry_only_inplace": [
+  "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99"
+ ],
+ "heading_demotion": [
+  {
+   "class": "HEADING-DEMOTION",
+   "base_line": 1832,
+   "before_h": "846d30ac27beb9c2959813b1ecd44337af831a23dc255175ffd6c90a20d857bb",
+   "after_h": "dac362a8d49f4e428ed1436d57dc4c71cd1e538391e9c8b686495abe9ab9c7a5"
+  }
+ ]
+}

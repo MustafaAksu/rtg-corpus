@@ -1,0 +1,2168 @@
+{
+ "base_sha256": "35fe1a65e831b620ec1d81819cdd614f07836395870f694dcc2d91a31dde1053",
+ "generator": "build_inventory.py",
+ "n": 119,
+ "status": "v2 \u2014 rebased onto v1.20.2 (hashes/lines of all 119 blocks unchanged); NG-10 -> APPROVED \u00a76.9a; dispositions approved by co-owner (114 MOVE / 4 REGISTRY-ONLY / 1 MIRROR-RECONCILED / 0 STOP); NO text moved",
+ "blocks": [
+  {
+   "line": 154,
+   "end": 173,
+   "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "Priority ordering",
+   "s2_submodule": "Priority ordering",
+   "disposition": "REGISTRY-ONLY",
+   "destination_module": null,
+   "destination_heading_line": null,
+   "relationship": null,
+   "status_header": false,
+   "rationale": "\u00a72 queue/priority line; registry material, not a theorem body",
+   "stop_signals": [],
+   "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B condi"
+  },
+  {
+   "line": 181,
+   "end": 193,
+   "h": "ee93f1ad10880dcf35abf167dc3de1b7909eb52e7d1df217fc1f734ea36b36c9",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1 \u2014 Relational repetition / natural-number realization",
+   "s2_submodule": "CLOSED N-1 \u2014 Relational repetition / natural-number realization",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[RESULT][from: ALG]` `[scope: sufficiently small punctured primitive dyad tube]` \u2014 N-1A event identity, N-1B successor, "
+  },
+  {
+   "line": 205,
+   "end": 252,
+   "h": "def311694a709182157a11bc37a7055dbfc4331ea5dd16422d6b6994fea621e0",
+   "tags": [
+    "ALG",
+    "DEF"
+   ],
+   "s2_module": "OPEN N-1A0 \u2014 Strict Relational Equivalence",
+   "s2_submodule": "OPEN N-1A0 \u2014 Strict Relational Equivalence",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Epistemic target:** `[DEF]` + elementary `[ALG]` once the admissible morphism class is fixed"
+  },
+  {
+   "line": 316,
+   "end": 317,
+   "h": "e1f4cfdb1d2cafdb4831cc537040402da1f3f2cd93296875d190b6f551fc2e98",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "s2_submodule": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "disposition": "REGISTRY-ONLY",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": null,
+   "status_header": true,
+   "rationale": "bare module status header; status migrates to the \u00a72 registry row and INV-S",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[ALG]` `[scope: isolated abstract oriented dyadic phase-step]`"
+  },
+  {
+   "line": 335,
+   "end": 336,
+   "h": "20b4a26afefcca38eb8c78c2b3d5aef099e3645f54ef125c1193b767ca60400c",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "s2_submodule": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Strict-equivalence test.** Two tokens with identical reduced transition `Delta^- -> Delta^+` after admissible relabeling/global-ph"
+  },
+  {
+   "line": 337,
+   "end": 345,
+   "h": "13bed6db0dfb7a7fb34a07f226a7859e15a72a571afae6fd4f84a5edea1c5cdb",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "s2_submodule": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Counting-but-not-strict test.** Example:"
+  },
+  {
+   "line": 346,
+   "end": 359,
+   "h": "d038ca66ca6707f23890fb8cb3e4360d19fb040ace009ae0577b3979ebd46bcf",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "s2_submodule": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Proper refinement.** On this model,"
+  },
+  {
+   "line": 360,
+   "end": 371,
+   "h": "a7c93d8921419db9dcfd7affa61023d1fc2baef281d37420bd92b6f64e571990",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "s2_submodule": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Orientation retention.** If `delta>0` and `delta'<0`, then"
+  },
+  {
+   "line": 375,
+   "end": 378,
+   "h": "5520ea1de854290cb8c2d9930b01341c1f8734f401743a16059ddfb6c7d55359",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "s2_submodule": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[ALG]` `[scope: abstract three-node boundary-aware oriented phase-step; specified local law]`"
+  },
+  {
+   "line": 456,
+   "end": 465,
+   "h": "8fecc5782e39d56f0b6fc2bb2e3a5783223cb791661da4fe4b75f4715a3d12ba",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "s2_submodule": "Scoped three-node model",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Case A2-1 \u2014 strict boundary compatibility.** Let `beta_1=beta_2=0.5`, with event 2 differing only by an admissible orientation-pre"
+  },
+  {
+   "line": 466,
+   "end": 475,
+   "h": "fae7ac22658bcd70fc2266ade6751ffca0a7d333d4071fa29be33250101b7fbf",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "s2_submodule": "Scoped three-node model",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Case A2-2 \u2014 context-dependent same type.** Let `beta_3=0.2`."
+  },
+  {
+   "line": 476,
+   "end": 485,
+   "h": "d14c0d6be65ea456a3f78d5e6e29f1ae3b31b18277d4d3b5c13cad99bf718d90",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "s2_submodule": "Scoped three-node model",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Case A2-3 \u2014 causal/type-changing boundary.** Let `beta_4=-2.0`."
+  },
+  {
+   "line": 504,
+   "end": 521,
+   "h": "de180ff547baa9dcf3962f1745a987083dd2f23479453792843431ba9e057f6b",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "s2_submodule": "Boundary minimality correction and theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Minimality for the scoped law.** For `F_S(x,beta)=x+1+beta`, suppose such a non-injective `q` exists. Then there are `beta_a != be"
+  },
+  {
+   "line": 525,
+   "end": 529,
+   "h": "15847c48b26b9478db78cf6a174708fa3ffd545aaad54f2edae29d468120b2ba",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "s2_submodule": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** PARTIAL \u2014 N-1B-MIN CLOSED `[ALG]`; N-1B-GROWTH ACTIVE"
+  },
+  {
+   "line": 560,
+   "end": 561,
+   "h": "0d9682388e9c863fa1fac898ccd3b501f0b2dad85719814c0ade8d7b6e74520f",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "s2_submodule": "N-1B-MIN \u2014 Fixed-support oriented recurrence",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **No-terminal-vertex theorem.** `R_d` is total on `S^1`. Hence every vertex `x` has the outgoing `E+` edge `x -> R_d(x)`. Therefore "
+  },
+  {
+   "line": 562,
+   "end": 563,
+   "h": "fef43378b14f0b19fdcdac3a666009478534f47f2773c502a747b04e349b91c3",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "s2_submodule": "N-1B-MIN \u2014 Fixed-support oriented recurrence",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Periodic-endpoint guard.** If `d=2pi p/q` with coprime integers `p,q`, then repeated application returns the instantaneous phase s"
+  },
+  {
+   "line": 575,
+   "end": 582,
+   "h": "5c843c3c131a0b36a239c25bf249b3861cb6fbbe9a9b102e6e3db221de3fae7e",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "s2_submodule": "N-1B-MIN \u2014 Fixed-support oriented recurrence",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "CLOSED [ALG]"
+  },
+  {
+   "line": 586,
+   "end": 606,
+   "h": "3212fd1c3790db82846ce6fbeaa45dae9ff83bd88a9646bd425c3d2e1f70c82b",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED locally `[RESULT][from: ALG]` `[scope: sufficiently small punctured primitive-dyad tube]`; general branching/nondetermini"
+  },
+  {
+   "line": 633,
+   "end": 634,
+   "h": "e2449b44a51084f81792c595fcdb19943b65ee13257c490f2026fdef197e65f9",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` `[scope: local primitive dyad]` **History-separation criterion satisfied locally.** The exact primitive realization d"
+  },
+  {
+   "line": 645,
+   "end": 646,
+   "h": "06f6dbfe48dc24f7aad3d314101cded811e8729f9582c407ad698cb7d3be52cb",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "N-1C-DYAD \u2014 Radial Memory Test",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "status line carries a substantive residual clause (v0.9 alignment closed; branching/topology history semantics OPEN) -> must not be reduced to registry",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED locally `[RESULT] [from: ALG] [scope: sufficiently small punctured p=6 primitive dyad sector]`. Primitive event-type/doma"
+  },
+  {
+   "line": 664,
+   "end": 678,
+   "h": "396a04058a580c57b0ab7ce7251ff74e198abb577c80454de47a4b162b7f30e3",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "N-1C-DYAD \u2014 Radial Memory Test",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: NUM] [scope: high-precision canonical-family witness]` **Same wrapped phase / different radial state.** Independent 120-dig"
+  },
+  {
+   "line": 681,
+   "end": 691,
+   "h": "834ccddc8464704379ddbbb16d0f9fc5912f70ec08958bcb1e482c8164f3d77c",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "N-1C-DYAD \u2014 Radial Memory Test",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG] [conditional on an exact return root]` **Exact witness identities and active memory.** If `eta_6=eta_0=q_*` exactly on"
+  },
+  {
+   "line": 705,
+   "end": 706,
+   "h": "2af5d0820c974eb89caaed6c0f67fd8484a54a9ae3a9c35c74215dfd09c6bd2a",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "REGISTRY-ONLY",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": null,
+   "status_header": true,
+   "rationale": "bare module status header; status migrates to the \u00a72 registry row and INV-S",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[RESULT] [from: ALG] [scope: sufficiently small punctured p=6 primitive dyad sector]`"
+  },
+  {
+   "line": 707,
+   "end": 769,
+   "h": "bb72838bc09fc4c636a342cdfe91390114fac7c4d8ec822000952f286d9eea70",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` Exact symbolic composition of the primitive map through quartic coordinate order reproduces the certified cubic six-step jet and giv"
+  },
+  {
+   "line": 770,
+   "end": 789,
+   "h": "dd71951fcbe61895b5f2807c2b0768b0d78094a885e81114d59228c70c2ecc16",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Strict contraction.** There exist `C>0` and `epsilon>0` such that for every state with `0<Q_true<epsilon`,"
+  },
+  {
+   "line": 790,
+   "end": 797,
+   "h": "164e529eea020b8776fbe9e681aa37b30723595038060a781b0e690855ab5177",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Scoped block freeness / operational non-collapse.** Since `Q_true` is a gauge-invariant present-state observable, d"
+  },
+  {
+   "line": 798,
+   "end": 800,
+   "h": "dd9a620132a63a513b0212f6483af0c4bef11fa1a26cd0eb81dba893ce92848c",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **T-vs-F reduction lemma.** On any composition-closed `T`-invariant sector, if `T^r=T^s`, then raising both transformations to the s"
+  },
+  {
+   "line": 801,
+   "end": 821,
+   "h": "8096d7561c1f8080c3ece4972fcda45ca73e1153b6ec8aed9df3e6c8329e11b4",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **N-1 unified primitive-dyad alignment (v0.9).** Let `V_L1={x:0<Q_true(x)<epsilon_L1}` be a punctured L1 contraction "
+  },
+  {
+   "line": 836,
+   "end": 837,
+   "h": "a7fdfd11f4bf6ddc90ffee76dab26da5902ccc60ba6a59823ec48cf0956005c6",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **N-1A on the tube.** Strict equivalence is inherited from the admissible fixed-support relational groupoid after gau"
+  },
+  {
+   "line": 838,
+   "end": 839,
+   "h": "49143df41b78a59cd6989475cc3eb8984b22e6f4a087798a8bdbcb30ed00a209",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **N-1B on the tube.** Since `T(U_T) subset U_T`, every admissible state has one further `T`-edge. The primitive event"
+  },
+  {
+   "line": 840,
+   "end": 865,
+   "h": "76ebe604c106d6cdf1cf3376cd9b6b0b8fdbbcb50b302b6187fcd78474c198b8",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Orbit-level non-collapse and primitive-power freeness.** Since `U_T subset V_L1`, strict block contraction holds ev"
+  },
+  {
+   "line": 866,
+   "end": 880,
+   "h": "c2f97759c9b7b0a7126885000aa4e55a4978c1c7fc6a8bb1e03e0b8184f1d30c",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Free-monogenic universal property.** `M_T` is generated by the distinguished element `T` and has no relation betwee"
+  },
+  {
+   "line": 885,
+   "end": 886,
+   "h": "187463314376d702af837b371af6802412664a5d446c1b83c717b59f24f1eeb7",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **N-1A strict/counting alignment made explicit.** For all `x,y in U_T`, the tokens `e_x:x->T(x)` and `e_y:y->T(y)` ar"
+  },
+  {
+   "line": 906,
+   "end": 907,
+   "h": "8bb34be94ff3e8e0b7c8085a63aad5b519eab8a0946179728b29c5e821aaf3c8",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "s2_submodule": "L1 \u2014 Primitive-frame phase-uniform contraction",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "destination_heading_line": 2303,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**N-1 closure verdict:** `[RESULT][from: ALG]` `[scope: sufficiently small punctured primitive-dyad tube]`. Event identity, successor extens"
+  },
+  {
+   "line": 917,
+   "end": 922,
+   "h": "4b98286f953550f69e967dde4b4bd80e2ae250a68f6c8e71d51cff527261ea10",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "s2_submodule": "CLOSED N-2 \u2014 Signed-history group completion",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "destination_heading_line": 2329,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[RESULT][from: ALG]` `[scope: local primitive-dyad Track-A monoid]`"
+  },
+  {
+   "line": 929,
+   "end": 930,
+   "h": "f21a744756e51a2bd0a1d3ed039435f0e8f75227764c1d35365af849dd8106a0",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "s2_submodule": "CLOSED N-2 \u2014 Signed-history group completion",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "destination_heading_line": 2329,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Equivalence relation.** Reflexivity follows from commutativity; symmetry from equality symmetry; transitivity uses "
+  },
+  {
+   "line": 931,
+   "end": 953,
+   "h": "c767cc7693de73074cfa38873130c3c3c32254d1a00992e76a489e17a20ad562",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "s2_submodule": "CLOSED N-2 \u2014 Signed-history group completion",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "destination_heading_line": 2329,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Common-forward-extension invariance.** For every `K in M_T`,"
+  },
+  {
+   "line": 954,
+   "end": 962,
+   "h": "b32a4c9dae6f266eb3eeeffd48be43b00a034753534411a0f834d8dd6ef49c16",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "s2_submodule": "CLOSED N-2 \u2014 Signed-history group completion",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "destination_heading_line": 2329,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Injective forward-history embedding.** The canonical map"
+  },
+  {
+   "line": 963,
+   "end": 976,
+   "h": "9064b1805cd055a4f1d57272f96d0bac1dd4f9430d4760634a9e355e0ea2c85a",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "s2_submodule": "CLOSED N-2 \u2014 Signed-history group completion",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "destination_heading_line": 2329,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Infinite cyclic completion.** Let `g=[T,id]`. Every pair class is generated by `g` and its comparison inverse `-g=["
+  },
+  {
+   "line": 977,
+   "end": 978,
+   "h": "36d002c848964daf70608b9f951e04e18b63841557cad3a11f827a321df1b6ed",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "s2_submodule": "CLOSED N-2 \u2014 Signed-history group completion",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "destination_heading_line": 2329,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Grothendieck universal property.** For every abelian group `G` and monoid homomorphism `f:M_T->G`, there is a uniqu"
+  },
+  {
+   "line": 990,
+   "end": 993,
+   "h": "4b6930a112d6f4eecf696ebde3997839728aed58bd9c7f33cce833882767d9ff",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "s2_submodule": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.3a N-2-ORD physical order representation \u2014 CLOSED at v1.6",
+   "destination_heading_line": 2341,
+   "relationship": "PARTIAL-OVERLAP-MODULE",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED at v1.6 `[RESULT][from: ALG]` `[scope: local primitive-dyad Track-A tube/orbits]`"
+  },
+  {
+   "line": 994,
+   "end": 995,
+   "h": "d3996398f377a6063952a6e5304313753b602e274b09c942306b86b58ff02a22",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "s2_submodule": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.3a N-2-ORD physical order representation \u2014 CLOSED at v1.6",
+   "destination_heading_line": 2341,
+   "relationship": "PARTIAL-OVERLAP-MODULE",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT]` The physical order is reachability-first, not `Q_true`-defined. Reachability is a partial order on `U_T`, total on each primitive"
+  },
+  {
+   "line": 996,
+   "end": 997,
+   "h": "1907080a56d6c48fe837a6eed1de0b7afd52c02a1b83ffc7ee5bb16895eba154",
+   "tags": [
+    "ALG",
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "s2_submodule": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "disposition": "MIRROR-RECONCILED",
+   "destination_module": "\u00a76.3a N-2-ORD physical order representation \u2014 CLOSED at v1.6",
+   "destination_heading_line": 2341,
+   "relationship": "PARTIAL-OVERLAP-MODULE",
+   "status_header": false,
+   "rationale": "ORD-4 twin of \u00a76 L2357 (review P05); retain \u00a76 L2357, discard this copy with quote",
+   "stop_signals": [],
+   "anchor": "`[RESULT][from: ALG]` The fixed-residue `F=T^6` witness is exact on the full certified tube: for every `j=0,...,5`, put `y=T^j x in U_T`. L1",
+   "retained_twin_h": "f3b014514021502b8391d3945252bd69244f97589e681b19f0c20164b421eb09",
+   "retained_twin_line": 2357
+  },
+  {
+   "line": 1006,
+   "end": 1007,
+   "h": "4125a131367c38be7a16048e961882259a66bece89c6668d8963b960bc90da75",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "s2_submodule": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "disposition": "REGISTRY-ONLY",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": null,
+   "status_header": true,
+   "rationale": "bare module status header; status migrates to the \u00a72 registry row and INV-S",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[RESULT][from: ALG]` `[scope: sufficiently small one-chart N-1 tube]`"
+  },
+  {
+   "line": 1008,
+   "end": 1024,
+   "h": "d82942a6b6ebdf1e1bce01910b892373e6591194233eadb0062f38e2d6e62bd9",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "s2_submodule": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Natural lifted primitive map.** On"
+  },
+  {
+   "line": 1025,
+   "end": 1026,
+   "h": "0948175a8daf4319415c9d830de31b4441e062d6c4beab116b71b6ad8b13a177",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "s2_submodule": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **One-chart shrinking theorem.** Starting from the L1/N-1 base sector, continuity of the finitely many lifted iterate"
+  },
+  {
+   "line": 1027,
+   "end": 1034,
+   "h": "a6178d702205721a9bd60f8182fd044fff832b207db212d614d0582d8e37439d",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "s2_submodule": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Local winding triviality.** Every finite primitive orbit remains in the same deck sheet. Hence the actual deck cocy"
+  },
+  {
+   "line": 1044,
+   "end": 1058,
+   "h": "d2462bfd0809b05905626a4c92c4ac317141428231eaa2b654fb149ad20eb0b9",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3B \u2014 Abstract circle-character representation",
+   "s2_submodule": "CLOSED N-3B \u2014 Abstract circle-character representation",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[RESULT][from: MATH/ALG]` `[scope: abstract representation of the local Track-A group]`"
+  },
+  {
+   "line": 1059,
+   "end": 1064,
+   "h": "9fca3d6fc261152227e6930efc786908a1ba01c0ee06aeebf7d748d9ce125e0a",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3B \u2014 Abstract circle-character representation",
+   "s2_submodule": "CLOSED N-3B \u2014 Abstract circle-character representation",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: MATH/ALG]` This is the unique group homomorphism sending `g` to `chi_1`; it is surjective and has trivial kernel. Thus"
+  },
+  {
+   "line": 1072,
+   "end": 1082,
+   "h": "e9682dc52a969e26f2b39b09a719a510d4d4e51e89a50e792fd196689dd10645",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "s2_submodule": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED at structural level `[RESULT][from: ALG]`; detailed resonance-sector decomposition remains OPEN"
+  },
+  {
+   "line": 1083,
+   "end": 1099,
+   "h": "5cbec5c6c0f4ecd7f5467df7d9ac91d15b995c72ef499019fabc7742823bd8da",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "s2_submodule": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` For every `m != 0`, this is not `chi_(m+c)` for any fixed integer `c` on an open dyadic domain, because the pullback "
+  },
+  {
+   "line": 1100,
+   "end": 1101,
+   "h": "8445bd7ac5eb3ed1f86a97cb1a61a67f7790ddb2b61ef4e6af4c47511e4d9124",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "s2_submodule": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: MATH/ALG]` Primitive `T` therefore mixes phase-character sectors with `rho`-dependent amplitudes rather than translating th"
+  },
+  {
+   "line": 1109,
+   "end": 1123,
+   "h": "c0c50a33996b74d5a7cc86ae33300eb4bdbddb43b3d1b90af9915b8210715ecf",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3D \u2014 Finite-character quotient / representation bridge",
+   "s2_submodule": "CLOSED N-3D \u2014 Finite-character quotient / representation bridge",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED as pure representation theory `[RESULT][from: MATH/ALG]`; discrete dynamical realization remains OPEN"
+  },
+  {
+   "line": 1124,
+   "end": 1134,
+   "h": "176a5f70674b892561599afe212afea5c73d7fcd69237aa5d135874b8a676c18",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3D \u2014 Finite-character quotient / representation bridge",
+   "s2_submodule": "CLOSED N-3D \u2014 Finite-character quotient / representation bridge",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: MATH/ALG]` The restriction is surjective with kernel `{chi_(qN):q in Z}`. Composing with N-3B gives"
+  },
+  {
+   "line": 1145,
+   "end": 1170,
+   "h": "2dae3d32a700ef47f7762893a67ffa32d78db4beac32c22cd1ff66c030da359a",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "s2_submodule": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED at representation-kinematic level `[RESULT][from: ALG/MATH]`; the formerly OPEN `q=4,(0,3)` nonlinear cascade item is CLO"
+  },
+  {
+   "line": 1173,
+   "end": 1182,
+   "h": "d7d4b6d207b511d2416b2179213af3d9929c242195eb9931011de12d19f27a09",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "s2_submodule": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT][from: ALG]` **First-nonlinear cyclic-average theorem.** If `f=R+h_d+O(d+1)` with `h_d` the lowest nonlinear homogeneous degree, th"
+  },
+  {
+   "line": 1183,
+   "end": 1184,
+   "h": "5c5dd1f586f48c2d84bc5e0f217c082d0c5d4c3518afa49cd1917d09959eeaf7",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "s2_submodule": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT][from: ALG]` **p=6 support audit.** Solving `a+b=D` and `a-b==1 mod 6` gives: degree 2 none; degree 3 `(2,1)`; degree 4 none; degre"
+  },
+  {
+   "line": 1185,
+   "end": 1186,
+   "h": "8bc5b301155386c9e971bf13f384ec76a332f9d56fd58a69370153418badb863",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "s2_submodule": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT][from: ALG structure]` **Reachable-charge rule.** The rotation conjugation is an automorphism of the multilinear/Lie operations use"
+  },
+  {
+   "line": 1187,
+   "end": 1188,
+   "h": "97d2dc017308d20cb0c7ba29d2d28804e57cc037bc32fcf4e1648a73fc9435b7",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "s2_submodule": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT][from: existing ALG + projector theorem]` **OPEN-9 boundary witness.** For subgroup order `q=4`, target `(0,3)` has charge `0-3-1=-"
+  },
+  {
+   "line": 1189,
+   "end": 1198,
+   "h": "9c09921c7a7555e9d5139003981f1c7e19e23451d23bb474516d9e0dab3bc727",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "s2_submodule": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: THM]` `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.10 \u00a76.11 | DYAD-THM-Q403-PHASELAW]` **All-`p` cascade closure imported.** On"
+  },
+  {
+   "line": 1199,
+   "end": 1204,
+   "h": "794fff92e84183686f37669507a84ebf42f689e708ff88053d79a98cfaf625d9",
+   "tags": [
+    "ALG"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "s2_submodule": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "destination_heading_line": 2383,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[ALG]` **Scalar Bessel-residue projector (separate object).** From N-3C,"
+  },
+  {
+   "line": 1233,
+   "end": 1252,
+   "h": "e82d8302ea0b1c049a00df79ae70d7d8561ad0020e85e28dad7bf8f5200d3148",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "CLOSED N-5A \u2014 Second co-realized recurrence / event stream",
+   "s2_submodule": "CLOSED N-5A \u2014 Second co-realized recurrence / event stream",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED locally at v1.11 `[RESULT][from: ALG]` `[scope: sufficiently small certified primitive-dyad tube]` \u2014 prerequisite dischar"
+  },
+  {
+   "line": 1267,
+   "end": 1279,
+   "h": "75bd5f6ab444b7ca8094e22d99ee9093eb586f8ff5099637f647002632f55545",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C1 \u2014 relational definability \u2014 CLOSED",
+   "s2_submodule": "N5-C1 \u2014 relational definability \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` Let `P` be the directed set/poset of finite admissible common-order prefixes under extension. For certified event pre"
+  },
+  {
+   "line": 1302,
+   "end": 1311,
+   "h": "15f4655472be67223d2d7be4a5057b6eaced967804a42ad95108e2b8ab365951",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C2 \u2014 finite-origin/prefix invariance \u2014 CLOSED",
+   "s2_submodule": "N5-C2 \u2014 finite-origin/prefix invariance \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` For a fixed finite initial prefix `H_0` and any extension decomposed as `H=H_0 o H_>0`,"
+  },
+  {
+   "line": 1316,
+   "end": 1325,
+   "h": "8593421f4988836bbb88ea5593988395ccb94cdb08ebf9012a61fa069af15e72",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C3 \u2014 positive integer rescaling invariance \u2014 CLOSED",
+   "s2_submodule": "N5-C3 \u2014 positive integer rescaling invariance \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` For every positive integer `k`,"
+  },
+  {
+   "line": 1328,
+   "end": 1347,
+   "h": "fe2531e4e36225a78ab8d2a56a06d5ddcd4697b4a0a7dbfa777a14e8debfd3be",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C4 \u2014 uniqueness of reduced positive class \u2014 CLOSED",
+   "s2_submodule": "N5-C4 \u2014 uniqueness of reduced positive class \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` Suppose the same indefinitely repeatable pair is bounded for two positive pairs `(p,q)` and `(p',q')`:"
+  },
+  {
+   "line": 1350,
+   "end": 1351,
+   "h": "46cf617ce4baa1c9eb3023113531d8886882be4dbb102bab36166353a2d4736b",
+   "tags": [
+    "COR v1.19",
+    "RESULT"
+   ],
+   "s2_module": "N5-C5 \u2014 control package \u2014 CLOSED at mathematical-control level",
+   "s2_submodule": "N5-C5 \u2014 control package \u2014 CLOSED at mathematical-control level",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **One-stream reblocking zero-control.** If `B=T^m` is merely a derived blocking of one Track-A stream, then at primit"
+  },
+  {
+   "line": 1352,
+   "end": 1375,
+   "h": "1a607248355821f0cbf7cd6d4441194bb4573d662aa5118436da96ad0d84cb97",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C5 \u2014 control package \u2014 CLOSED at mathematical-control level",
+   "s2_submodule": "N5-C5 \u2014 control package \u2014 CLOSED at mathematical-control level",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: MATH/ALG]` **C5-SYN-13 positive synthetic control.** Define the finite period"
+  },
+  {
+   "line": 1376,
+   "end": 1385,
+   "h": "1920f3a34fbad3a203f79d952431788fb9a28305c06693d41e8be1d09eb78737",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C5 \u2014 control package \u2014 CLOSED at mathematical-control level",
+   "s2_submodule": "N5-C5 \u2014 control package \u2014 CLOSED at mathematical-control level",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: MATH/ALG]` **Nearby negative control.**"
+  },
+  {
+   "line": 1390,
+   "end": 1414,
+   "h": "08851de21073229f82b9de19ba92dd510dad5fcc065f3f9c3256ff96a9b9f128",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C6 \u2014 canonical A/B falsifier \u2014 CLOSED",
+   "s2_submodule": "N5-C6 \u2014 canonical A/B falsifier \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` Certificate: `NG_N5C6_CANONICAL_PAIR_FALSIFIER_v1.md` + executable audit. For the admissible canonical prefixes `H_M`"
+  },
+  {
+   "line": 1415,
+   "end": 1422,
+   "h": "4cbb9b4b445a0828f6025779f87b57b955fd4ea3a98dd41f2ef76bff63e6ca8e",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C6 \u2014 canonical A/B falsifier \u2014 CLOSED",
+   "s2_submodule": "N5-C6 \u2014 canonical A/B falsifier \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Density-resonance separation.**"
+  },
+  {
+   "line": 1433,
+   "end": 1434,
+   "h": "b23007a6d25e126e48f22ea9e9ee0cfabdbfa941a81fddbdd24cbe874660afff",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "s2_submodule": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Physical distinction / gauge audit.** The sign of the relational radial observable `rho` distinguishes the two even"
+  },
+  {
+   "line": 1435,
+   "end": 1443,
+   "h": "eeae4ebfd1c9f45bc95e93ccd126ca2c65241c39dad867d5d28c2223f9acc0e7",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "s2_submodule": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Strict alternation.** L-MONO gives, after local shrinking,"
+  },
+  {
+   "line": 1444,
+   "end": 1450,
+   "h": "cf75d4110d6d10886660de08ad611d58bf3f7dd06564f857f4c2d9b119b41089",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "s2_submodule": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Prefix-cofinal repeatability.** The closed phase-growth law"
+  },
+  {
+   "line": 1451,
+   "end": 1460,
+   "h": "2b757cf3296a5d7add2419e8aa4c515e0d5a476d0012d05969f22a5d186a0cb2",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "s2_submodule": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Physical bounded class.** Strict alternation implies for every admissible common-order prefix"
+  },
+  {
+   "line": 1483,
+   "end": 1491,
+   "h": "b8687deda12c1cc25cf918f06b54e9db06fdc69b026c24b18e7ef64a988b3bcf",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7A \u2014 bounded realized rational-label theorem \u2014 CLOSED",
+   "s2_submodule": "N5-C7A \u2014 bounded realized rational-label theorem \u2014 CLOSED",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG/MATH]` C2 makes boundedness independent of finite origin convention; C3 identifies positive common rescalings; C4 prove"
+  },
+  {
+   "line": 1502,
+   "end": 1528,
+   "h": "786663a5900c8e533016f8854555a4cb6ec6f4a0bcebdbb776c03e617b49df4f",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "s2_submodule": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: NUM/ALG under frozen protocol]` **C7B-DISC-1 CLOSED \u2014 DISC-1B PASS \u00b7 DISC-1D PASS-INT.** The frozen `N=24` TDR-G retrigger-"
+  },
+  {
+   "line": 1529,
+   "end": 1543,
+   "h": "19be1d314b5a4f623166ba8cd8eb607cbe1bb527459ef9110b19d8718ebdaf4c",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "s2_submodule": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: NUM/ALG under frozen protocol]` **C7B-DISC-2 CLOSED \u2014 B-check PASS \u00b7 D-check PASS.** Protocol `NG_C7B_DISC2_PREREG_v1.md` ("
+  },
+  {
+   "line": 1544,
+   "end": 1545,
+   "h": "5ab9d7a449538a7a435cd56b660c9480a9af0a0314511f90b69b822916f57e7a",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "s2_submodule": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT]` **`1 in Q_RTG^dyn`.** Established independently of the N5-PHYS-1 bounded control by 26 dynamically discriminating SWAP/P3 realiza"
+  },
+  {
+   "line": 1579,
+   "end": 1584,
+   "h": "ef03cf757b1d0703582b133d12e480c194e8b0a18c7b82aad7889f28be9e0b79",
+   "tags": [
+    "COR v1.18.1",
+    "RESULT"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "s2_submodule": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **C7B transport lemmas** (identity certificate `ng_n5_discrimination_identity_cert_v5.py`, exit 0; interpretation in "
+  },
+  {
+   "line": 1598,
+   "end": 1599,
+   "h": "09d23493c8d864d12e2bdaa2451335a61266704b74b28c5cc0d0dfeb37f31c1f",
+   "tags": [
+    "COR",
+    "GUARD",
+    "RESULT"
+   ],
+   "s2_module": "N5-C7C \u2014 physical rational arithmetic \u2014 OPEN (C7C-WD ADOPTED; C7C-0 CLOSED)",
+   "s2_submodule": "N5-C7C \u2014 physical rational arithmetic \u2014 OPEN (C7C-WD ADOPTED; C7C-0 CLOSED)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG] [v1.18]` **C7C-0 CLOSED \u2014 reciprocal.** (`NG_C7C0_RECIPROCAL_CERT_v2.md`.) For `x=(A,B) in R_bd` define `S(A,B):=(B,A)"
+  },
+  {
+   "line": 1602,
+   "end": 1607,
+   "h": "5868b23e0f71071ad68b28de9c5f5a9a9b3d0c0a759315525f3b8fccec97c348",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "s2_submodule": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **M-1A \u2014 exact chain identity. CLOSED.** For `x=(A,B)` at class `p:q` and `y=(B,C)` at class `u:v` with `Delta^{AB}_{"
+  },
+  {
+   "line": 1610,
+   "end": 1611,
+   "h": "ef7a2e081db945a91bf6b433c2e1add45851894285e859702daa6e7e7f6524ec",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "s2_submodule": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **M-1B \u2014 conditional carrier closure. CLOSED.** On `D_chain`, M-1A gives `(A,C) in R_bd` at `red(pu,qv)` and `rho_Q(A"
+  },
+  {
+   "line": 1612,
+   "end": 1613,
+   "h": "a1744277697bd26c1dda3116063ad475f44a81318c6c4ca9c29a0de233d7b163",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "s2_submodule": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Unrestricted WD-CLOSE: FAIL on the current carrier.** For any `x=(A,B) in R_bd`, C7C-0 gives `Sx=(B,A) in R_bd`, bu"
+  },
+  {
+   "line": 1614,
+   "end": 1615,
+   "h": "c4fd1f81ae67bf54e29a4a2305c9bee29a271645759ec38cff342b18ffd33cff",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "s2_submodule": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Naive/global label-only WD-DOM: FAIL for `D_chain`.** The label-quotiented shared-middle domain is not saturated un"
+  },
+  {
+   "line": 1616,
+   "end": 1617,
+   "h": "885cf9e4f6d75001ad42ade4f692456a3ea3ba0e9ae37b04ec5eaa23d7277b30",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "s2_submodule": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **WD-VAL on admitted chains: PASS.** Equivalent admitted inputs yield equivalent outputs, by M-1A/M-1B."
+  },
+  {
+   "line": 1618,
+   "end": 1619,
+   "h": "cd4b2dbc8a964d1c87732315df7b89e8114d4ecd9e70b3b30cd83f20045c69bd",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "s2_submodule": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG] [scope: admitted bracketings only]` **Associativity, partial.** If both bracketings of `((A,B),(B,C),(C,D))` are admit"
+  },
+  {
+   "line": 1735,
+   "end": 1737,
+   "h": "6bc28a4dcb84a5a399e70a3d7a3f07668a30c254df0bc139dcf41c0dbaaecac7",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": true,
+   "rationale": "status header followed by certificate pointer; provenance must live in the \u00a76.8 body",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[RESULT][from: ALG]` `[scope: finite directed multigraph operator layer, field coefficients; Z_N zero-control certified]"
+  },
+  {
+   "line": 1738,
+   "end": 1739,
+   "h": "c287f37a84faacbd7bab9fe336f76cf392e9b8d7b2181485b20bc2ef430c7443",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Null theorem.** `C D^T = 0` as an operator identity; hence `A = D^T X \u27f9 C A = 0`. Loops and parallel edges included"
+  },
+  {
+   "line": 1740,
+   "end": 1741,
+   "h": "6cce9c6df22cd52591bfbaac8c9bc748672c73924b71765e55694edf467e5e1c",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Completeness over field coefficients.** `im D^T = ker(C\u00b7)` by the exact dimension count `m \u2212 beta = n \u2212 c = rank D^"
+  },
+  {
+   "line": 1742,
+   "end": 1743,
+   "h": "8021d6ae1305f303f1026c1d3f3df5f9409556df39928141ac036a8764425523",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Invariance package.** Orientation: simultaneous edge reorientation `(DS, CS, Sa)` leaves `h` fixed; reversing one b"
+  },
+  {
+   "line": 1744,
+   "end": 1745,
+   "h": "b53ba4830eaa40bc70e6088894707cb4eb1a4b27ddba4b99841ca05da3f55a1f",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Typed statistic and bounds.** `rank(C a) \u2208 {0,1}` for every scalar cochain (both values realized in the certificate"
+  },
+  {
+   "line": 1746,
+   "end": 1747,
+   "h": "386ed3b5d232c8552f0edb21d27cfb62473f8a518e55de7c5386bbb90fa436ae",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Separation instances.** Flat data realize `(beta > 0, r_hol = 0)`. For the field-general full-content direction, be"
+  },
+  {
+   "line": 1748,
+   "end": 1749,
+   "h": "2ce54ce8e6b10fed65e59c9a1de8c947f30be5cda70526556d6c24c10198dfed",
+   "tags": [
+    "COR v1.19",
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: NUM/ALG]` **TDR-G `Z_N` zero-control.** Integer cycle vectors annihilate node-difference `Z_N` phase data mod `N` (rings `N"
+  },
+  {
+   "line": 1750,
+   "end": 1751,
+   "h": "e5880a6ec8056b36718a83cb6e948dd0e9cde24dd105b495f2a5c42a54a05e8c",
+   "tags": [
+    "GUARD",
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG] [v1.19]` **Fundamental-cycle completeness over abelian coefficient groups.** Fix a spanning forest and its fundamental"
+  },
+  {
+   "line": 1756,
+   "end": 1757,
+   "h": "6dc49143e87d83be4a837e89357363c71ab54b02f2cefce9d9a0449987d389b1",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "s2_submodule": "NG-7A \u2014 Additive operator / null theorem",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "destination_heading_line": 2457,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.8 \u00a79 | RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC]` **Source narrowing already kn"
+  },
+  {
+   "line": 1794,
+   "end": 1805,
+   "h": "6cf2e560c8e3eaacac06cfb10d2bcd50ce7cca3765cfb8edb9a712494daf9cc7",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-8A \u2014 Ordinal-to-cardinal orbit-state compatibility",
+   "s2_submodule": "NG-8A \u2014 Ordinal-to-cardinal orbit-state compatibility",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "destination_heading_line": 2467,
+   "relationship": "UNDER-SUMMARY-OF-MANY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[RESULT][from: ALG]` `[scope: local primitive-dyad tube U_T]`"
+  },
+  {
+   "line": 1813,
+   "end": 1823,
+   "h": "e4ae3aa08cadfc7119ef754a07ed80a60576e5108ef911b48edec8b6051f027f",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "NG-8B \u2014 Multiplication by physical re-blocking",
+   "s2_submodule": "NG-8B \u2014 Multiplication by physical re-blocking",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "destination_heading_line": 2467,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": true,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "**Status:** CLOSED `[RESULT][from: ALG]` `[scope: local primitive-dyad tube U_T]`"
+  },
+  {
+   "line": 1848,
+   "end": 1851,
+   "h": "1a73722d6eed4d12d962a3c9493bd8ebfc242f889731660a26c636c19e358488",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "s2_submodule": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: NUM] [scope: audited orbit]` **Gate-5 numerical verdict reversed.** A single section-crossing stream realizes at least two "
+  },
+  {
+   "line": 1861,
+   "end": 1866,
+   "h": "741d0f225b6f40f1efae476c135ca377560f3ae3ee1f46ecce2b9c0225b1742d",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "s2_submodule": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: NUM] [scope: audited orbit and finite horizons]` **Quantitative LOGSLIP prediction passes the present numerical tests.** Th"
+  },
+  {
+   "line": 1881,
+   "end": 1886,
+   "h": "ca056fac0a19e2f095c0506e1b2c1144f22b02f22292bafcee26245704aeb036",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "s2_submodule": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG] [scope: canonical section on the certified one-chart local tube]` **Canonical section identity \u2014 gate 1 core.** For `T"
+  },
+  {
+   "line": 1889,
+   "end": 1890,
+   "h": "b0cf71bbee254266a9bad7996d286d4a82c26e0e05a113796d2955a0389771f5",
+   "tags": [
+    "GUARD",
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "s2_submodule": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Lift-free/gauge admissibility.** The B predicate uses only the gauge-reduced relational transition neighbourhood an"
+  },
+  {
+   "line": 1891,
+   "end": 1894,
+   "h": "fa0a447e6cf4258348414ef6fca05324046ba6850373575b5e5ad33c3a7ba32a",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "s2_submodule": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **GATE 1 CLOSED \u2014 structural event admissibility.** The exact section identity, fixed-support lift-free transition pr"
+  },
+  {
+   "line": 1897,
+   "end": 1898,
+   "h": "e94c5f7ee9f410b5e55f54d4dec4d4c5c4231682c6547dd6f8afb5b885d2f41e",
+   "tags": [
+    "GUARD",
+    "NUM",
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "s2_submodule": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **GATE 3 CLOSED \u2014 structural co-realization.** By definition, every canonical B-event is one of the primitive `T` tra"
+  },
+  {
+   "line": 1899,
+   "end": 1900,
+   "h": "45688cdef7f7dcc977a0189645aad7fe70ddef09d6a64fa284506e559a4f2f6b",
+   "tags": [
+    "NUM",
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "s2_submodule": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **GATE 4 CLOSED \u2014 common order.** For any two canonical B-event anchors on one primitive orbit inside `U_T`, N-2-ORD "
+  },
+  {
+   "line": 1901,
+   "end": 1902,
+   "h": "c379d21c93afabc233346300a7c2cbcada29746cf4440af9b1138e5881ad9b87",
+   "tags": [
+    "ALG",
+    "GUARD",
+    "NUM",
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "s2_submodule": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: THM] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.10 \u00a76.14 | DYAD-THM-PRIM-CTR]` **Explicit-domain boundary CLOSED (v1.20).** Th"
+  },
+  {
+   "line": 1910,
+   "end": 1928,
+   "h": "2e58a0e565becbeb8565054ffe2b087ba2a86e4bec77a892b074e3512d7ff3be",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **L-BACKBONE CLOSED from L1.** From"
+  },
+  {
+   "line": 1929,
+   "end": 1942,
+   "h": "c2616511805b7b72cdb4fa9bf48286f8742306912c9c98a7a53cf747681a771e",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **L-MONO CLOSED, sharpened at v1.12.1.** In the primitive analytic coordinate `W`, the exact one-step map satisfies"
+  },
+  {
+   "line": 1943,
+   "end": 1960,
+   "h": "3c117219477e6225af326afbe0a07739eb05241e33084045c6ea20ca5d0cf37f",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **L-PHASE CLOSED from the exact primitive six-step iterate.** Exact Taylor composition gives no quadratic `F=T^6` ter"
+  },
+  {
+   "line": 1961,
+   "end": 1969,
+   "h": "5b6ac411fd9c523ec8eda822eae697d9f9cf12ca339c7eb0f20033ff422120aa",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **INF-1.** With"
+  },
+  {
+   "line": 1970,
+   "end": 1977,
+   "h": "54bf70e3d810f27aa7875ba1512d21858738fdff199c540596222f3f5aa308d4",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **INF-2 / crossing count.** L-MONO identifies the canonical B count with the lap count:"
+  },
+  {
+   "line": 1978,
+   "end": 1979,
+   "h": "5c14637e4ed5023e1b9fb0c675f9a8430cb908fb0220de5aafc7e673725a6643",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **N-5A-S1 CLOSED.** Together with gates 1/3/4 from v1.9.1, the canonical B stream supplies a second independently cer"
+  },
+  {
+   "line": 1980,
+   "end": 1985,
+   "h": "d2979d5fa2dd84e9f2be472a75680367a43ba7cfea451a7973d4bcab57a7cde4",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Independent verification of the closure (v1.12).** Every exact assertion re-derived with an independent expansion r"
+  },
+  {
+   "line": 1994,
+   "end": 2007,
+   "h": "1a1c1d7d16ceb39f26905e4cfec8873df5905ae975a6df0dbe91f6f345cc82ff",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **GAP-LOCK Lemma 1 CLOSED \u2014 local return alphabet `{6,7}`.** L-PHASE is a local expansion at the fixed point and ther"
+  },
+  {
+   "line": 2010,
+   "end": 2032,
+   "h": "03462d4eb86fafcd3d4a42938d84fc4613771474cfbe81a8c357a764782f8711",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **GAP-LOCK Lemma 2 CLOSED \u2014 physical bookkeeping.** With the local alphabet `{6,7}`, telescoping complete return gaps"
+  },
+  {
+   "line": 2033,
+   "end": 2039,
+   "h": "d458111f041d343461b887c225b83dc3052e71a9d73db264c8657f38944f9a0f",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **Defect-threshold consecutive-ratio theorem retained.** For first crossings of fixed `pi/3` increments of the eventu"
+  },
+  {
+   "line": 2040,
+   "end": 2068,
+   "h": "397973ab44ee2d9bad17c6df9d31bbe6e793b24695dd5a230e6d5500b053d9f3",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **GAP-LOCK Lemma 3 CLOSED \u2014 event-time physical-slip locking.** Let `n_j` be successive physical B-event steps, `o_j`"
+  },
+  {
+   "line": 2080,
+   "end": 2081,
+   "h": "b1fc0603f3868eb99dc08e30472fe42d506dd87eba0171ad3db5b1c12344058d",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "s2_submodule": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "destination_heading_line": 2409,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "theorem body relocates under its \u00a76 module",
+   "stop_signals": [],
+   "anchor": "`[RESULT] [from: ALG]` **N-5A gate ledger after v1.11:** gates 1\u20135 are CLOSED on the sufficiently small certified local primitive-dyad tube."
+  },
+  {
+   "line": 2094,
+   "end": 2097,
+   "h": "76be03c1362ec068612046c39e6d3f14265280f114709ccfb2db65149525d1e9",
+   "tags": [
+    "RESULT"
+   ],
+   "s2_module": "OPEN NG-10 \u2014 Genesis saturation and counting truncation",
+   "s2_submodule": "OPEN NG-10 \u2014 Genesis saturation and counting truncation",
+   "disposition": "MOVE",
+   "destination_module": "\u00a76.9a NG-10 \u2014 Genesis saturation and counting truncation",
+   "destination_heading_line": null,
+   "relationship": "NO-PRIOR-\u00a76-SUMMARY",
+   "status_header": false,
+   "rationale": "NG-10 has no prior \u00a76 home; APPROVED structural heading \u00a76.9a (co-owner 2026-09-25), heading only, no new claim; avoids renumbering \u00a76.10",
+   "stop_signals": [],
+   "anchor": "`[RESULT]` `[from: NUM]` `[scope: reduced birth-race model]` `[source: RTG_GENESIS_GEOMETRY_DSN_v2.8.4 \u00a76.6; RID: GEN-ART-SATURATION]` Genes"
+  }
+ ],
+ "base_file": "RTG_NUMBER_GENESIS_DSN_v1_20_2.md"
+}

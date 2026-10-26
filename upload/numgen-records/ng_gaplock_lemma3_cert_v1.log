@@ -1,0 +1,9 @@
+  3333331 laps over 2e7 primitive steps; 6 7-gaps at [33229, 198242, 606981, 1619416, 4127027, 10337784]
+[PASS] L3-1 the criterion 'gap_(j+1) = 7 iff o_j < tau q_j' reproduces the realized gap at every one of the 3333330 laps (0 mismatches). The locking is exact, not asymptotic.
+[PASS] L3-2a on gap-6 laps, o_(j+1) = o_j - tau q_j + eps with sup|eps|/q^(3/2) = 1.7257 over 399995 laps — the same half-power scale as L-PHASE
+[PASS] L3-2b on gap-7 laps the overshoot jumps by delta = pi/3 + c*sqrt(q) with c in [0.4330, 0.4332], tending to sqrt(3)/4 = 0.4330. Bounded and O(sqrt q), which is all the argument needs.
+[PASS] L3-3 alpha_k = D(M_k) - k pi/3 is BOUNDED and monotone: [-0.641961, -0.645207, -0.647303, -0.648622, -0.649464, -0.649997] — the Step-1 hypothesis of the bootstrap
+[PASS] L3-4 the increments of alpha decay GEOMETRICALLY at rate [0.6458, 0.629, 0.6391, 0.6325], against the predicted rho^(-1/2) = exp(-sqrt3 pi/12) = 0.6354. Summable, so alpha_k converges (partial sum of |increments| = 0.008036).
+[PASS] L3-5 the consecutive physical slip ratios converge to exp(sqrt3 pi/6) = 2.476632271: observed [2.471014, 2.474584, 2.476007, 2.476487, 2.476651]
+----------------------------------------------------------------------
+RESULT: ALL ROWS PASS. The locking criterion is exact; the overshoot recursion and its O(sqrt q) jump are as stated; alpha_k is bounded and its increments decay geometrically; the physical consecutive slip ratios converge to exp(sqrt3 pi/6). The bootstrap closing GAP-LOCK Lemma 3 from these facts is the companion memo's [ALG] argument and is NOT asserted by this exit code.

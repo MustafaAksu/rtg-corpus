@@ -1,0 +1,10 @@
+[PASS] T1a-ID: the L-coefficient of q(m_A L + c_A) - p(m_B L + c_B) equals (m_A q - m_B p).
+[PASS] T1b-ID: substituting (p,q)=(m_A,m_B) yields exactly c_A m_B - c_B m_A (the L terms cancel identically).
+[PASS] T2-ID: b(a m + r_A) - a(b m + r_B) equals b r_A - a r_B identically (the m terms cancel).
+[PASS] T3-ID: the m-coefficient of q(a m + r_A) - p(b m + r_B) equals (a q - b p).
+[PASS] T3-COR-ID: that coefficient is nonzero at a worked instance (p,q,a,b)=(5,1,6,1), where it equals 1.
+[PASS] T4-ID: the m-coefficient of b(a' m + r_A) - a(b' m + r_B) equals (a' b - a b').
+[PASS] T4-ex-ID: with (a,b)=(6,1), Delta_(6:1) has m-coefficient 0; with (a,b)=(5,1) it equals -1.
+[PASS] P1a-ID: at Omega=1/2 the lift satisfies f(0)=1/2 and f(1/2)=1, and f'(0)*f'(1/2) equals 1 - K^2.
+----------------------------------------------------------------------
+RESULT: ALL IDENTITY ROWS PASS. Every row above states only what its expression decides. NOT asserted by this exit code: eventual periodicity; positivity/uniqueness of the reduced class; the biconditional readings of T1/T3; hyperbolicity and hyperbolic persistence in P1a; the monotone-lift ray-crossing theorem; sector closure; the same-realization quantifier; and the DISC-1D design constraint D1. All of these are argued in the companion memo.

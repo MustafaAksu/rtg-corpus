@@ -1,0 +1,13 @@
+[PASS] V1 F=T^6 has no quadratic primitive term
+[PASS] V2 exact cubic rho jet = (8eta-7rho)Q/6
+[PASS] V3 exact cubic eta jet = (eta-8rho)Q/6
+[PASS] V4 [cross-check] cubic jet induces dQ = -Q^2 exactly, independently reproducing the certified L1 radial law
+[PASS] V5 c21 = -1/2 - i*2sqrt(3)/3 in the primitive W frame
+[PASS] V6 Re(c21) = -1/2 is FORCED by dQ = -Q^2 (since d|W|^2 = 2Re(c21)|W|^4), so only Im(c21) = -tau carries new information
+[PASS] V7 quartic angular ray coefficient = -25sqrt(3)/48 != 0, so a uniform O(Q^2) post-leading remainder is FALSE by exact Taylor algebra
+[PASS] V8 directional sup |Im(dW4/W)|/Q^(3/2) = 1.4003163; measured orbit values 1.3565->1.3449 lie below it, as required (orbits sample directions non-uniformly)
+[PASS] V9 L-MONO sharpening: |dphi_T - pi/3|/sqrt(Q) stable (['0.397915', '0.39478', '0.393395', '0.392748']) while /Q diverges (['22.822', '45.2844', '90.251', '180.205']) -> dphi_T = pi/3 + O(Q^(1/2)). The stated (pi/6,pi/2) bracket is sufficient but gives an exactly 2pi-wide window with zero margin; the sharper form removes that.
+[PASS] V10 slip-count corollary s(M) = 6(M - N_B(M)) = (3 tau/pi) log M + O(1): predictions [0.387, 1.385, 2.384, 3.384] vs observed slip indices [1, 2, 3, 4]; consecutive differences [0.997, 0.999, 1.0] track each individual slip
+[PASS] V11 exponential slip rate is now theorem-grade: s(M_k)=k gives (1/k) log M_k -> pi/(3 tau) = sqrt(3) pi/6, i.e. rate exp(sqrt(3) pi/6) = 2.476632271 (observed consecutive ratios 2.4710, 2.4746, 2.4760). Convergence of the O(1) offset remains OPEN.
+----------------------------------------------------------------------
+RESULT: ALL PASS — closure independently verified (incl. the dQ=-Q^2 cross-check); L-MONO margin note; slip-count corollary and theorem-grade exponential rate established.

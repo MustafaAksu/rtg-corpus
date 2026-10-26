@@ -1,0 +1,73 @@
+{
+ "doc_id": "NG_C7C_M2_CENSUS1_UDYAD_UNIVERSE_v1",
+ "protocol": {
+  "file": "NG_C7C_M2_CENSUS_PROTOCOL_v1.md",
+  "sha256": "f2a4a9a4a9453d10688ca98fad049dd0e2f844f986a38db3a6a0ec4477215795"
+ },
+ "owner_source": {
+  "file": "RTG_NUMBER_GENESIS_DSN_v1_20_6.md",
+  "sha256": "2a51c4b1a8037105d75e68ea7f24c721a970ab5ec32c27e810139020ccb948c5"
+ },
+ "stage": "U-DYAD universe enumeration ONLY. No field F1–F7 has been assessed. No record is admissible or non-admissible at this stage.",
+ "rule": "C-3: each explicit ordered physical pair (A,B; domain, order, provenance) whose membership in R_bd is certified by a live owner block within the continuous-dyad family, including a certified carrier-preserving image when the owner explicitly proves the image lies in R_bd. Owner-certified carrier objects, not points/orbits/initial conditions of a sector. No records from equal labels, from C7A's abstract existence statement, or from enumerating a sector.",
+ "search_procedure": "All live (pre-changelog) lines of the owner were scanned for R_bd / Q_RTG^bd membership claims carrying a claim tag, and for every '~_comm' certification; each hit was classified by its owner block. Historical and changelog text excluded.",
+ "records": [
+  {
+   "record_id": "U-DYAD-1",
+   "pair": "(B_+, B_-)",
+   "family": "continuous dyad",
+   "certifying_block": "§6.6 N5-PHYS-1 'Physical bounded class' [RESULT][from: ALG] (L1817), certification statement 'B_+ ~_comm^(1:1) B_-' (L1823); event predicates [DEF] (L1793)",
+   "inclusion_basis": "explicit owner-certified carrier object"
+  },
+  {
+   "record_id": "U-DYAD-2",
+   "pair": "(B_-, B_+)",
+   "family": "continuous dyad",
+   "certifying_block": "§6.6 N5-C7C C7C-0 [RESULT][from: ALG] (L1980): for every x=(A,B) in R_bd, S(A,B)=(B,A) in R_bd; applied to U-DYAD-1",
+   "inclusion_basis": "certified carrier-preserving image under an owner theorem (C7C-0), NOT inclusion by label"
+  }
+ ],
+ "candidates_considered_and_excluded": [
+  {
+   "where": "L1645 N5-C1",
+   "what": "general definition 'A ~_comm^(p:q) B'",
+   "reason": "a definition, not a certified record"
+  },
+  {
+   "where": "L1774 N5-C6",
+   "what": "'A !~_comm^(p:q) B'",
+   "reason": "certified NON-membership (falsifier); not a carrier member"
+  },
+  {
+   "where": "§6.6 C5-SYN-13 / negative control",
+   "what": "synthetic periodic languages",
+   "reason": "owner: synthetic control, not an RTG physical realization — not in R_pair"
+  },
+  {
+   "where": "L2276 SG-NG-23",
+   "what": "N-5A closure, GAP-LOCK, physical 7-gap count law",
+   "reason": "owner guard: 'not a nontrivial Q-like commensurability theorem' — no R_bd membership certified"
+  },
+  {
+   "where": "L1571, L1850 C7A",
+   "what": "'every certified bounded physical pair has a unique invariant'",
+   "reason": "abstract existence/well-definedness statement; excluded by rule"
+  },
+  {
+   "where": "L1992 M-1B",
+   "what": "chain outputs (A,C)",
+   "reason": "conditional on a D_chain instance; no explicit certified continuous-dyad chain instance exists in the owner, so no explicit output record"
+  },
+  {
+   "where": "L1994 unrestricted WD-CLOSE",
+   "what": "(A,A) from x∘Sx",
+   "reason": "owner: not in R_pair (SG-NG-20)"
+  },
+  {
+   "where": "L1926 and C7B-DISC",
+   "what": "TDR-G 1:1 and other witnesses",
+   "reason": "TDR-G family — belongs to U-TDRG, enumerated separately after U-DYAD closes"
+  }
+ ],
+ "count": 2
+}

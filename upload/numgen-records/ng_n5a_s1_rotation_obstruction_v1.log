@@ -1,0 +1,11 @@
+=== A. section-independence: many sections Theta_0, small-amplitude seeds ===
+distinct return gaps over 12 sections x 3 seeds: [6]
+=== B. mean rotation per primitive step vs Q (limit pi/3 = 1.0471976) ===
+  Q0=    7.6e-5  mean rot (first 12 steps) = 1.047182776  rot.number = 0.16666432
+  Q0=    0.0079  mean rot (first 12 steps) = 1.045523776  rot.number = 0.16640028
+  Q0=    0.1575  mean rot (first 12 steps) = 1.006053902  rot.number = 0.16011845
+  Q0=      1.29  mean rot (first 12 steps) = 0.564715592  rot.number = 0.089877278
+=== C. asymptotic tail: gap word deep in the contracted regime ===
+  Q0=    1.29 -> Qend=   0.00641  last-40 gaps distinct=[6, 7]
+  Q0=  0.9475 -> Qend=  0.006296  last-40 gaps distinct=[6]
+  Q0=    1.71 -> Qend=   0.00705  last-40 gaps distinct=[6, 7]

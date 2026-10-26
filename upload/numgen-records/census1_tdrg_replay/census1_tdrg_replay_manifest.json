@@ -1,0 +1,35 @@
+{
+ "script": "census1_tdrg_replay_v1.py",
+ "script_sha256": "73cfa2e31cbb98a1c493c9e6e500c9a8a9edd53089615648c9ea8ddd95048188",
+ "input_sha256": {
+  "universe": "80b0c3b17349e8746b939c241007b7a0a67c2e69160badc4ebbfa3f1973513e9",
+  "owner": "9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e",
+  "d1_code": "41a86011c6ad7ccb378097aa62106bf2dfbf5acf9a4b56792a690379a6eae929",
+  "d1_data": "dab769a075400d55fbadfb0aa3324286244a614a6e802f465e4e520a53efc83d",
+  "d2_code": "b7cee9220f73252af3b7322b50a67ecff4227424b6b1309f241d5e24babb35df",
+  "d2_data": "6840f822e9674329aeb8217b23eda14013334ab8a3cbad5b6f66a597ed5acc0a"
+ },
+ "argv": [
+  "--universe",
+  "NG_C7C_M2_CENSUS1_UTDRG_UNIVERSE_v1.json",
+  "--owner",
+  "genesis_mode_b_mc_v18.py",
+  "--d1-code",
+  "bind3_enumerate_k0123_v1.py",
+  "--d1-data",
+  "bind3_disc1_enumeration_k0123.json",
+  "--d2-code",
+  "disc2_supplementary_enumerator_v3_1.py",
+  "--d2-data",
+  "/mnt/user-data/uploads/disc2_enumeration_sup_d345.json",
+  "--out",
+  "census1_tdrg_replay"
+ ],
+ "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+ "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+ "records": 158,
+ "replay_contract_pass": 158,
+ "records_file": "census1_tdrg_replay_records.jsonl",
+ "records_sha256": "7b7dc4510a6d80a396172237f17e5740ff2a54535289ff8ff90096673d5977c8",
+ "smoke_test_limit": null
+}

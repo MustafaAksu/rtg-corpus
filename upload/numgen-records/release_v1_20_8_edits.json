@@ -1,0 +1,27 @@
+[
+ {
+  "id": "R1",
+  "old": "# RTG Number Genesis DSN v1.20.8 — DRAFT r3\n",
+  "new": "# RTG Number Genesis DSN v1.20.8\n"
+ },
+ {
+  "id": "R2",
+  "old": "**Date:** October 21, 2026 (DRAFT r3; v1.20.7 dated September 25, 2026)  \n",
+  "new": "**Date:** October 21, 2026 (adopted; v1.20.7 dated September 25, 2026)  \n"
+ },
+ {
+  "id": "R3",
+  "old": "**Document status:** DRAFT r3 — not adopted. **Maintenance release: consumer synchronization + RID allocation + interface definition.** No theorem-level change. **Supersedes on adoption:** v1.20.7 (`c4637e7a…ab28`, frozen 2026-10-01), which remains the canonical owner until adoption.",
+  "new": "**Document status:** ADOPTED owner ledger — PI adoption 21 Oct 2026 on DRAFT r3 (`9d59cfa1…e7b3`) after the co-owner delta review (scientific review accepted; artifact verification passed). **Maintenance release: consumer synchronization + RID allocation + interface definition.** No theorem-level change. **Supersedes:** v1.20.7 (`c4637e7a…ab28`, frozen 2026-10-01), retained unchanged as the prior adopted edition. Release record: `NUMGEN_v1_20_8_RELEASE_RECORD.md`."
+ },
+ {
+  "id": "R4",
+  "old": "`NUMGEN-RESULT-N5AS1-INF1`, `NUMGEN-DEF-N5AS1-DEFECT`; canonical on adoption of this edition |",
+  "new": "`NUMGEN-RESULT-N5AS1-INF1`, `NUMGEN-DEF-N5AS1-DEFECT`; canonical from the adoption of this edition (21 Oct 2026) |"
+ },
+ {
+  "id": "R5",
+  "old": "### v1.20.8 — DRAFT r3 — October 21, 2026 (not adopted)\n\n",
+  "new": "### v1.20.8 — October 21, 2026 (adopted)\n\n**Adoption.** PI decision of 21 Oct 2026 on DRAFT r3 (`9d59cfa1…e7b3`), after the co-owner delta review of r3 (scientific review accepted; artifact verification passed; adoption ready; no r4). The release pass changes publication metadata only: title, date, document status, the A1a disposition cell and this heading and paragraph. The six N-5A-S1 RIDs are canonical owner RIDs from this adoption. The draft record follows unchanged.\n\n"
+ }
+]

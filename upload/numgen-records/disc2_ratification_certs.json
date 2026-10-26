@@ -1,0 +1,2588 @@
+{
+ "certs": {
+  "sup_11_0_20_12": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -26
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_0_20_8": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_0_21_21": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -16
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_0_4_12": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -2
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_0_4_16": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_11_20_12": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -20
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_11_20_8": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_11_3_0": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -16
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_11_4_12": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -2
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_11_4_16": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -20
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_12_19_15": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -12
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_12_20_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_12_20_8": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_12_21_21": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_12_3_0": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 32,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_12_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 10,
+    "1": 0,
+    "2": 0,
+    "3": -24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_12_4_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_12_4_16": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_13_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -44
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_13_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -44
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_15_20_5": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -108
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_17_21_11": {
+   "class": [
+    5,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -62
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_17_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -36
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_18_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -36
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_1_21_8": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 30
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_20_20_5": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -12
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_22_21_13": {
+   "class": [
+    7,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": -72
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_23_19_19": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 30,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_BDY_ONLY"
+  },
+  "sup_11_23_20_12": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": -26
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_23_20_20": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -3
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_23_3_0": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_23_3_17": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -198
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_23_4_16": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -20
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_23_4_9": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -12
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_3_21_14": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_4_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -36
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_4_5_7": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": 24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_5_3_11": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -1
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_7_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 10,
+    "1": 0,
+    "2": 0,
+    "3": -36
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_7_5_7": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 24,
+    "1": 0,
+    "2": 0,
+    "3": 24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_8_21_11": {
+   "class": [
+    5,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -62
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_11_8_21_14": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_0_21_12": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -98
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_0_21_9": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -78
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_0_3_15": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -98
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_0_3_22": {
+   "class": [
+    2,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_BDY_ONLY"
+  },
+  "sup_12_0_5_2": {
+   "class": [
+    2,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_BDY_ONLY"
+  },
+  "sup_12_11_20_12": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": 8
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_11_20_8": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 34
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_11_21_21": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_11_4_0": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": -3
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_11_4_16": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": -26
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_12_19_21": {
+   "class": [
+    2,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_BDY_ONLY"
+  },
+  "sup_12_12_21_12": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -98
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_12_21_19": {
+   "class": [
+    2,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_BDY_ONLY"
+  },
+  "sup_12_12_3_12": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -78
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_12_3_15": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -98
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_13_20_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_13_20_8": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_13_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_13_21_21": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_13_3_0": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_13_4_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_13_4_16": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": -20
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_13_5_20": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -12
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_15_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -14
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_16_19_15": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 10,
+    "1": 0,
+    "2": 0,
+    "3": -108
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_16_21_13": {
+   "class": [
+    7,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -44
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_16_3_14": {
+   "class": [
+    5,
+    1
+   ],
+   "C": {
+    "0": -27,
+    "1": 0,
+    "2": 0,
+    "3": -401
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_18_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_1_19_15": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -12
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_1_20_12": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": -20
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_1_20_8": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_1_21_21": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_1_3_0": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_1_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_1_4_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_1_4_16": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_20_19_15": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 10,
+    "1": 0,
+    "2": 0,
+    "3": -108
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_20_21_13": {
+   "class": [
+    7,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -44
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_21_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -30
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_23_20_12": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": -26
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_23_20_20": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": -3
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_23_3_0": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_23_4_12": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 34
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_23_4_16": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": 8
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_3_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -14
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_4_21_11": {
+   "class": [
+    5,
+    1
+   ],
+   "C": {
+    "0": -27,
+    "1": 0,
+    "2": 0,
+    "3": -401
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_4_3_16": {
+   "class": [
+    7,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -44
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_4_5_20": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 10,
+    "1": 0,
+    "2": 0,
+    "3": -108
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_6_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_8_3_16": {
+   "class": [
+    7,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -44
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_8_5_20": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 10,
+    "1": 0,
+    "2": 0,
+    "3": -108
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_12_9_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -30
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_0_20_12": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -20
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_0_20_8": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -2
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_0_21_21": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -16
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_0_4_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_0_4_16": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": -20
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_11_3_16": {
+   "class": [
+    7,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": -72
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_12_20_12": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -20
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_12_20_5": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -12
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_12_21_14": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -198
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_12_21_21": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_12_4_0": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -3
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_12_4_16": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 4,
+    "1": 0,
+    "2": 0,
+    "3": -26
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_12_5_0": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 30,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "qualifying": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_BDY_ONLY"
+  },
+  "sup_13_13_20_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_13_20_8": {
+   "class": [
+    4,
+    3
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -2
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_13_3_0": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -16
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_13_4_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_13_4_16": {
+   "class": [
+    3,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -26
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_14_3_11": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 30
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_16_3_17": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_17_19_2": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": 24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_17_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -36
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_18_21_8": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -1
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_1_20_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_1_20_8": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_1_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 10,
+    "1": 0,
+    "2": 0,
+    "3": -24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_1_21_21": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 32,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_1_3_0": {
+   "class": [
+    9,
+    4
+   ],
+   "C": {
+    "0": 8,
+    "1": 0,
+    "2": 0,
+    "3": -68
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_1_4_12": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_1_4_16": {
+   "class": [
+    1,
+    1
+   ],
+   "C": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 6
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_1_5_20": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -12
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_20_19_2": {
+   "class": [
+    5,
+    2
+   ],
+   "C": {
+    "0": 24,
+    "1": 0,
+    "2": 0,
+    "3": 24
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_20_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 10,
+    "1": 0,
+    "2": 0,
+    "3": -36
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_21_3_14": {
+   "class": [
+    5,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -62
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_21_3_17": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 12,
+    "1": 0,
+    "2": 0,
+    "3": -4
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_2_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -44
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_2_3_16": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -44
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_4_4_9": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -108
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_6_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -36
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_6_3_14": {
+   "class": [
+    5,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -62
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_7_21_13": {
+   "class": [
+    3,
+    1
+   ],
+   "C": {
+    "0": 2,
+    "1": 0,
+    "2": 0,
+    "3": -36
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  },
+  "sup_13_9_4_9": {
+   "class": [
+    4,
+    1
+   ],
+   "C": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": -12
+   },
+   "qualifying": {
+    "0": false,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "subtype": "PASS_INT"
+  }
+ }
+}
