@@ -1,12 +1,12 @@
 # Number Genesis v1.21 — Release Record
 
-**Status:** ADOPTED by the PI, 26 October 2026 (§13). Publication pending: the merge commit and the annotated tag `numgen-v1.21` are the PI's steps and have not happened yet. Until the tag exists, `numgen-v1.20.8` remains the tagged governing edition on GitHub.
+**Status:** ADOPTED by the PI, 26 October 2026 (§13), and published: merged into `main` and tagged `numgen-v1.21` (annotated, on merge commit `7b77eab848558fdf5fbce46fc4733a415e05ee0d`). `numgen-v1.21` is the governing edition.
 **Date:** 26 October 2026
 **Prepared by:** Claude, Number Genesis co-owner session (branch `claude/numgen-v1.21-stage2`, stacked on PR #74).
 **Edition:** v1.21, built in two stages under DSN Methodology v1.4 §13.6. Stage 1 makes the corrections. Stage 2 is layout-only compaction.
 **Predecessor:** `RTG_NUMBER_GENESIS_DSN_v1.20.8`, tag `numgen-v1.20.8`, SHA-256 `835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e`.
 
-Fields marked *(to be filled)* depend on steps that have not happened yet: the merge, the tag and the notices. This record invents no hash, approval or review identifier. Every hash below was computed on the branch files.
+Fields marked *(to be filled)* depend on steps that have not happened yet. This record invents no hash, approval or review identifier. Every hash below was computed on the branch files.
 
 ## 1. Authorization and reviews
 
@@ -33,7 +33,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet: the m
 | **Stage-1 intermediate, round 2 (accepted; the stage-2 base)**, 354,024 bytes, 3,471 lines; archived at `evidence/numgen/v1.21/stage1_intermediate.md`. A build stage, not an edition | **`ab25c162a727b0826adfb0b8fd5f3898969ed78260fc00e8bbcaa9e1e3b899d2`** |
 | **Stage-2 candidate** `dsn/RTG_NUMBER_GENESIS_DSN.md`, 274,236 bytes, 2,970 lines | **`05b3315fe74ec006b5610b1823522f843f55d677c01f1ec39b42144dd4be4258`** |
 | **Published file** `dsn/RTG_NUMBER_GENESIS_DSN.md` after the publication transform (§13.2), 274,246 bytes, 2,970 lines | **`4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701`** |
-| Tag `numgen-v1.21` | *(to be filled by the PI)* |
+| Tag `numgen-v1.21` (annotated; tagger Mustafa Aksu, 26 Oct 2026 19:54:05 UTC; message "NUMGEN v1.21 adopted 2026-10-26; SHA-256 4805760d…5701") | on commit `7b77eab848558fdf5fbce46fc4733a415e05ee0d`; the file at the tag hashes to `4805760d…5701` (verified) |
 
 | Build or check file | SHA-256 |
 |---|---|
@@ -183,7 +183,7 @@ Inbox checkpoint: 26 Oct 2026 on `origin/main` (`252e803`) and on the open PRs. 
 
 ## 9. Affected consumers and notices (after the tag)
 
-One `kind: notice` item per consumer, filed by NUMGEN after `numgen-v1.21` exists. *(to be filled: paths and commits)*
+One `kind: notice` item per consumer, filed by NUMGEN after `numgen-v1.21` exists: `pipes/<RECOG|DYAD|TDRG|GEN|OFN>/20261026-NUMGEN-v1-21-adopted.md` (state `open`; filing is a queue event, not evidence of receipt).
 
 | Consumer | What changes for them |
 |---|---|
@@ -219,10 +219,10 @@ Net change against v1.20.8: −64,767 bytes (−19.1 %). The history region (79,
 | 1 | Publication transform from the accepted candidate (§13.2); final SHA-256 | NUMGEN co-owner session | done: `4805760d…5701` |
 | 2 | Adoption decision and final hash entered in this record | NUMGEN co-owner session | done (§13) |
 | 3 | Reverse transform recovers the candidate byte-exactly (gate P4) | NUMGEN co-owner session | done |
-| 4 | Merge commits (not squash), in dependency order: #69, #70, #72, #73, #74, #76, #77 | PI (CONVENTIONS: the PI merges into `main`) | *(to be filled: merge commits)* |
-| 5 | Annotated tag `numgen-v1.21` on the merged commit carrying `4805760d…5701`, with the hash in the tag message | PI | *(to be filled)* |
-| 6 | `BASELINE.md` NUMGEN row: entered on this branch (v1.21, `4805760d…5701`, tag `numgen-v1.21`); registration of the tag after it exists | row: NUMGEN co-owner session; tag registration: PI | row done; tag *(to be filled)* |
-| 7 | Five `kind: notice` items (§9) and closure of the dispositioned inbox item; GEN offer text correction (RID named) | NUMGEN co-owner session, after the tag | *(to be filled: paths and commits)* |
+| 4 | Merge commits (not squash), in dependency order: #69, #70, #72, #73, #74, #76, #77 | PI (CONVENTIONS: the PI merges into `main`) | done: #69 `2888656`, #70 `0c44347`, #72 `11b1801`, #73 `ae8d494`, #74 `825598e`, #76 `2539d45`, #77 `7b77eab` |
+| 5 | Annotated tag `numgen-v1.21` on the merged commit carrying `4805760d…5701`, with the hash in the tag message | PI | done: on `7b77eab` |
+| 6 | `BASELINE.md` NUMGEN row: entered on this branch (v1.21, `4805760d…5701`, tag `numgen-v1.21`); registration of the tag after it exists | row: NUMGEN co-owner session; tag registration: PI | done (row on `main` names `numgen-v1.21`; tag exists) |
+| 7 | Five `kind: notice` items (§9) and closure of the dispositioned inbox item; GEN offer text correction (RID named) | NUMGEN co-owner session, after the tag | filed on branch `claude/numgen-v1.21-notices` (§9); inbox item closed; GEN offer dated line added |
 | 8 | "Sync now" in the Claude project | PI | *(to be filled)* |
 
 ## 13. Adoption decision (PI, 26 October 2026)
@@ -273,3 +273,12 @@ Published: `dsn/RTG_NUMBER_GENESIS_DSN.md`, 274,246 bytes, SHA-256 **`4805760d68
 - E42 hash form: the RECOG v0.3.24 hash is written `8c64bea2…69e7c1` (six-character suffix) instead of prefix…last four (`…e7c1`). Atlas note, non-blocking; next edition.
 - Two non-blocking notes of the atlas owner on `tools/check_compaction.py` (PR #77): for the next tool edition.
 - NC-17 (Dyadic q* question) deferred until Dyadic answers.
+
+## 15. Post-tag verification (26 October 2026, EV-RUN)
+
+In a clean worktree at `numgen-v1.21`:
+- Stage 1 rebuilt from `numgen-v1.20.8` → `ab25c162…99d2`; checker C0–C13 PASS; controls all caught; gate A1 PASS.
+- Stage 2 rebuilt → `05b3315f…4258`, map `fb93b2a9…dbfa9`; `tools/check_compaction.py` PASS; guards G0–G6 PASS; fixtures F1–F11 caught.
+- Publication transform `--check` P1–P6 PASS → `4805760d…5701`, equal to `dsn/RTG_NUMBER_GENESIS_DSN.md` at the tag and on `main`.
+- `upload/numgen-records/SHA256SUMS.txt`: 278/278 OK. `tools/pipes_index.py --check`: OK.
+- Every repository path cited by the published DSN (12) and by this record (39) exists at the tag.
