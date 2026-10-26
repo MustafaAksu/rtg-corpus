@@ -72,4 +72,4 @@
 
 ## 5. PI decisions
 
-_(to be filled)_
+- 26 Oct 2026, 11:49 — **Q1: v1.21** (Methodology v1.4 migration with stage-2 compaction of the 518-line changelog and legacy notes). **Q2: the NUMGEN co-owners build**; the other co-owner and the atlas owner review. **Q3:** cross-stream exchange is to be put on a standard; the PI asked for a proposal → `records/programme/CROSS_STREAM_PIPES_PROPOSAL_v0_1.md` (per-stream inbox files with a fixed schema and four states; producer stays owner; consumer records by RID in its Import Ledger; consumer-side confirmations recorded as independent agreement). Until the PI decides on it, the default for NA-01 is: record RECOG's theorems in §9.1 as consumer-side confirmations, import by RID only where the owner decides to consume. **Q4:** no requests are forwarded to other streams now; an item concerning a stream is looked at when that stream's turn comes (I06: C7C-M4 hold recorded in NUMGEN's text; TDR-G asked only at its turn or through the pipes if adopted). Hand-over: `records/numgen/NUMGEN_COOWNER_ENTRY_NOTE.md`.
