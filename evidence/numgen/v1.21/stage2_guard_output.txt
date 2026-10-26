@@ -1,0 +1,8 @@
+[PASS] G0 BASE 
+[PASS] G1 LIVE BODY 
+[PASS] G2 APPENDIX B 
+[PASS] G3 APPENDIX C 
+[PASS] G4 HEADER fields=['Title', 'Date', 'Scope', 'Document class', 'Document status', 'Supersedes', 'Companion documents', 'DSN Methodology', 'Status summary', 'Release record']
+[PASS] G5 HISTORY 
+[PASS] G6 COMPACTION tools/check_compaction.py exit 0
+RESULT: PASS
