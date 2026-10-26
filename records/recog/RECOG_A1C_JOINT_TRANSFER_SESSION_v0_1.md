@@ -1,0 +1,48 @@
+# RECOG A1c — joint unknown-$a$ / start-offset transfer: a record-only outer enclosure of the admissible $(a,L,b,\Theta_0)$ region: session record
+
+**Date:** 26 October 2026 · **Author:** RECOG co-owner (Claude) · **Status:** `[SESSION]` scientific record, v0.1. PI decision of 26 Oct 2026 (with reviews #5651241407, #5651241772): `START A1C JOINT UNKNOWN-a / START-OFFSET TRANSFER` — combine the unknown-$a$ enclosure (part 2) with the known-$a$ centring (start-offset cell) in the joint admissible region; rule: the true $a$ of the known-$a$ computation must never be given to the unknown-$a$ algorithm — in every box $a$, $L$, $b$, $\Theta_0$ and $a-b$ are interval variables; the output is a certified outer region of the true parameter, with no uniqueness or injectivity claim. No DSN is edited; nothing is adopted.
+**Governing edition:** `recog-v0.3.24` (`8c64bea2…e7c1`) and the stacked session cells: part 2 (Lemma 8 start region, box classification), combined tail (centres $c'''$, envelopes $E'''$), start offset (Lemmas 16–17, Prop. 18, Cor. 19 and its invariant). Branch `claude/recog-a1c-joint` stacked on `claude/recog-a1c-start-offset`.
+**Certificate:** `evidence/recog/scripts/recog_a1c_joint_transfer_cert.py` — imports the start-offset script unchanged (and through it the whole stack; hashes in the JSON); interval contractor per $a$-box; `[NUM]` 12 records ($1.8\times10^6$ steps); gates G1–G3, controls NC1–NC2; outputs `evidence/recog/a1c_joint/a1c_joint_transfer_cert.json`, `_output.txt`.
+
+## 0. Summary
+
+1. **Algorithm (Prop. 20, a certified computation).** Record-only inputs: $n_0$, the slips $(k,M_k,r_k)$, $x_0\in U$. Start region: the Lemma-8 interval $[a^-,a^+]$ (first two slips, $|h-D\tfrac\pi3|\le0.62$). For an $a$-box $A=[a_1,a_2]$ the **contractor** runs: $\omega=a-b\in[-\Delta_A,\Delta_A]$, $\Delta_A=\tfrac{16}{15}c_Q\sqrt{a_2}$; $L$-window $I=[\max_k\inf_A(c'''_k-E'''_k),\min_k\sup_A(c'''_k+E'''_k)]$; then three rounds of: $\Theta_0$-arc $=$ Lemma-16 sector$(n_0,A)$ $\cap$ Prop.-18 arc$(A,I,b)$ (on the circle; an arc of width $\ge2\pi$ is no constraint) $\to$ $\omega$-interval from Lemma 17 with $\sqrt A$ and $\beta(A)$ (intersected with the previous one) $\to$ $b=A-\omega$ $\to$ centred constraints $c^{(4)}_k=c'''_k(A)-\tau\,{\rm mid}(\omega S_{M_k})$, $E^{(4)}_k=E'''_k(A)-\tau A_0(A,M_k)+\tau\,{\rm half}(\omega S_{M_k})$ $\to$ new $I$ (intersected). A box is **excluded** when any window or arc becomes empty; otherwise it is bisected down to $w_{\min}=\tfrac14$ and kept. The union $\mathcal U$ of kept boxes is an outer enclosure of the admissible $a$-set; the hulls of the kept boxes' final $I$, $\omega$ and $\Theta_0$-arcs enclose the admissible $L$, start offset and start angle.
+2. **Invariant.** The true $(a,L,b,\Theta_0,\omega)$ satisfies every enclosure at every step of every box containing $a$ (all maps are enclosure-valid on the box: Lemma 16, Prop. 18, Lemma 17, the $S_M$ bracket, the interval evaluation of $c'''$, $E'''$, $A_0$, and the outer window), hence the true $a$ is never excluded and the true $L$, $\omega$, $\Theta_0$ lie in the hulls. No inner (sure) test is attempted for the joint region, so no statement about the exact admissible set, uniqueness, or injectivity is made.
+3. **Results (`[NUM]`, 12 records).** Record-only outer $a$-enclosures of width $5$–$21$ (combined-tail cell: $6$–$114$; part 2: $173$–$965$), $L$-hulls $0.7$–$2.8\times10^{-4}$ rad, $\omega=a-b$ hulls of width $1.6$–$2.2$ (uncentred $2\Delta_a=42$–$85$), $\Theta_0$-hulls $0.004$–$0.023$ rad; true $a$, reference $L$ and true $\theta_{W,0}$ inside in all records (G1); every enclosure a single interval (§2).
+4. **Typing.** Same dependencies as the start-offset cell ((D5) $c_Q,c'_Q$; R9; the Dyadic rows of the previous cells); the enclosure is an outer approximation (undecided boxes of width $\le\tfrac14$ at the ends and possibly inside; no distance bound to the exact set, as in part 2 v0.2.1).
+
+## 1. Proposition 20 (contractor; validity)
+
+For a box $A$ and a record, define the maps of §0 item 1. Each is an enclosure-valid map on $A$: (i) $c'''_k(A)$, $E'''_k(A)$, $A_0(A,M_k)$ are interval evaluations of the combined-tail and part-1b formulas, which hold pointwise for every $a\in A$; (ii) the Lemma-16 sector with $\bar\alpha_0$ evaluated on $A$ contains $\Theta_0$ for every $a\in A$; (iii) the Prop.-18 arc with $L\in I$, $b\in[b^-,b^+]$ and the R9 memory interval contains $\Theta_0$ whenever $(L,b)$ are admissible; (iv) the Lemma-17 interval with $\sqrt A$ and $\beta(A)$ contains $\omega$ for every $a\in A$ and $\Theta_0$ in the arc; (v) $S_M(a,b)\in[\tfrac1{c^++M},\tfrac1{(c^-+M)^2}+\tfrac1{c^-+M}]$ with $c^+=\max(a_2,b^+)$, $c^-=\min(a_1,b^-)$; (vi) the centred window is the outer window of $|c^{(4)}_k(a)-L|\le E^{(4)}_k(a)$ over $a\in A$, valid by the combined-tail identity ($\varepsilon'''_k$ contains $+\tau\omega S_{M_k}$ exactly up to the $A_1$-bounded remainder). Intersections with previous enclosures keep validity. Hence if the true $a\in A$, no step empties, and the box is kept with the true $L,\omega,\Theta_0$ in its final enclosures. $\square$
+
+## 2. `[NUM]` results (12 records; not a proof input)
+
+| $a$ | $\theta_0$ | $n_0$ | $K$ | outer $a$-enclosure (width) | #64 width | $L$-hull width | $\omega$-hull (width) | $2\Delta_a$ | $\Theta_0$-hull width | boxes |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 625 | 0.3 | 6 | 7 | $[625.00,629.82]$ ($4.8$) | $5.7$ | $1.0\times10^{-4}$ | $[18.49,20.18]$ ($1.70$) | $42.3$ | $0.0149$ | 79 |
+| 625 | 1.7 | 5 | 7 | $[625.00,629.87]$ ($4.9$) | $39.6$ | $2.0\times10^{-4}$ | $[-14.60,-12.73]$ ($1.87$) | $42.3$ | $0.0144$ | 119 |
+| 625 | 3.9 | 3 | 7 | $[625.00,630.75]$ ($5.7$) | $43.9$ | $1.4\times10^{-4}$ | $[-15.35,-13.32]$ ($2.03$) | $42.3$ | $0.0166$ | 121 |
+| 625 | 5.1 | 2 | 6 | $[625.00,633.83]$ ($8.8$) | $11.5$ | $2.1\times10^{-4}$ | $[17.13,18.81]$ ($1.68$) | $42.3$ | $0.0226$ | 137 |
+| 1000 | 0.3 | 6 | 7 | $[996.18,1004.75]$ ($8.6$) | $60.0$ | $7.4\times10^{-5}$ | $[23.55,25.28]$ ($1.73$) | $53.5$ | $0.0130$ | 171 |
+| 1000 | 1.7 | 5 | 6 | $[995.11,1004.27]$ ($9.2$) | $63.8$ | $2.8\times10^{-4}$ | $[-18.37,-16.50]$ ($1.87$) | $53.5$ | $0.0129$ | 237 |
+| 1000 | 3.9 | 3 | 6 | $[992.66,1005.85]$ ($13.2$) | $80.8$ | $1.9\times10^{-4}$ | $[-19.04,-16.82]$ ($2.23$) | $53.5$ | $0.0184$ | 299 |
+| 1000 | 5.1 | 2 | 6 | $[992.21,1008.14]$ ($15.9$) | $68.4$ | $1.7\times10^{-4}$ | $[21.89,23.55]$ ($1.66$) | $53.5$ | $0.0218$ | 297 |
+| 2500 | 0.3 | 6 | 6 | $[2496.55,2504.17]$ ($7.6$) | $91.6$ | $1.7\times10^{-4}$ | $[37.77,39.43]$ ($1.66$) | $84.5$ | $0.0044$ | 227 |
+| 2500 | 1.7 | 5 | 5 | $[2495.41,2504.99]$ ($9.6$) | $104.5$ | $2.4\times10^{-4}$ | $[-28.58,-26.82]$ ($1.76$) | $84.5$ | $0.0051$ | 229 |
+| 2500 | 3.9 | 3 | 5 | $[2488.87,2510.30]$ ($21.4$) | $113.7$ | $2.1\times10^{-4}$ | $[-29.53,-27.34]$ ($2.18$) | $84.5$ | $0.0108$ | 353 |
+| 2500 | 5.1 | 2 | 5 | $[2493.04,2508.37]$ ($15.3$) | $102.1$ | $1.4\times10^{-4}$ | $[35.07,36.70]$ ($1.63$) | $84.5$ | $0.0080$ | 245 |
+
+All enclosures single components; the true $a$ in the enclosure, the reference $L$ in the $L$-hull (tolerance $\approx10^{-4}$) and the true $\theta_{W,0}$ in the $\Theta_0$-hull (within $D_0^+$) on 12/12 records (G1). Record-only $a$-windows of width $5$–$21$ ($0.3$–$0.9$ % of $a$; part 2: $173$–$965$, the combined-tail cell: $6$–$114$), $L$-windows $0.7$–$2.8\times10^{-4}$ rad (part 2: $0.02$–$0.035$), start offset $a-b$ pinned to width $1.6$–$2.2$ without knowing $a$ (uncentred slack $2\Delta_a=42$–$85$), start angle to $0.004$–$0.023$ rad. The $a=625$ records are clipped at the $U$ boundary $a\ge625$. Cost: $79$–$353$ box evaluations per record ($\approx0.3$ s each). NC1 (corrupted record) empties the enclosure; NC2 ($n_0+1$) excludes the true $a$ or empties, on at least one record each.
+
+## 3. Consequences and next steps
+
+- The unknown-$a$ decoder now returns, from the record alone, a certified $a$-window at the scale of the start-offset residual plus the in-block residual at the first slip, and an $L$-window close to the known-$a$ one; nothing about uniqueness.
+- Remaining levers (unchanged): the in-block $c_P$ bookkeeping at $r\ge3$ slips; centring the logarithmic chart drift; part 3's Q1′ remains open.
+
+## 4. Not claimed
+
+No exact admissible set; no inner enclosure; no uniqueness or injectivity; no universal performance theorem (widths are per-record computations); the reference $L$ used in G1 is a simulation estimate with its stated tolerance.
+
+## 5. Certificate
+
+G1 containment (true $a$ in $\mathcal U$; reference $L$ in the $L$-hull within tolerance; true $\theta_{W,0}$ in the $\Theta_0$-hull within $D_0^+$) on 12/12 records. G2 the $a$-hull narrower than the combined-tail cell's enclosure on every record. G3 the $\omega$-hull narrower than $2\Delta_a$. NC1 a corrupted record (last slip index $+1$) gives an empty enclosure. NC2 the sector with $n_0+1$ excludes the true $a$ or empties. Directed rounding of all reported ends; arcs intersected over all $2\pi$-branches; the true $a$ enters only the containment tests.
