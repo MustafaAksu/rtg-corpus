@@ -1,0 +1,56 @@
+base 8c64bea231b3691b737f4143f6f4105030ee183fcc90d7f604ec83a4c869e7c1
+intermediate aecffdd109a987ae17078880aa818b107dd2c7851b1552b4ce8a17c93e3b5fa6 (groups A1CD,A1CE,A1CQ,B1, 24 edits)
+GATES:
+  C0   PASS BASE
+  C1   PASS BUILD
+  C2   PASS REVERSE
+  C3   PASS APPENDIX A
+  C4   PASS SPAN TAGS 
+  C5   PASS SPAN RIDS []
+  C6   PASS STATUS (byte-identical)
+  C7   PASS RID SET
+  C8   PASS RID ATTACH
+  C9   PASS RESULT
+  C10  PASS QUALIFIERS
+  C11  PASS VOCAB
+  C12  PASS IMPORTS
+  C13  PASS R9/A1B statements unchanged
+  C14  PASS HEADER
+  C15  PASS HEADINGS
+  C16  PASS §8 FILES (37 hashes checked)
+  C17  PASS LIVE
+  C18  PASS DECOUPLE
+  C19  PASS VALUES
+  C20  PASS NOTICES
+  C21  PASS TAG CENSUS
+  C22  PASS ASSUMING (source-conditioned blocks carry the qualifier; unconditional ones do not)
+  C23  PASS RECORDS (paths exist; §8 record versions match the records' status lines)
+
+NEGATIVE CONTROLS (each must be caught by its target gate):
+  NC01 new RID removed                           target C7: caught  (failing: C1, C2, C7, C8)
+  NC02 RID attached to another statement         target C8: caught  (failing: C1, C2, C8)
+  NC03 bare [RESULT] reintroduced                target C9: caught  (failing: C1, C2, C9)
+  NC04 scope qualifier deleted                   target C10: caught  (failing: C1, C10, C2, C8)
+  NC05 OPEN status altered (R4 closed)           target C6: caught  (failing: C1, C17, C2, C6)
+  NC06 header identity altered                   target C14: caught  (failing: C1, C14, C15, C2)
+  NC07 READ/DECODE vocabulary inserted           target C11: caught  (failing: C1, C11, C2)
+  NC08 Appendix A history edited                 target C3: caught  (failing: C1, C2, C3)
+  NC09 §8 quoted hash altered (full)             target C16: caught  (failing: C1, C16, C2)
+  NC10 §8 quoted hash altered (abbreviated)      target C16: caught  (failing: C1, C16, C2)
+  NC11 §8 evidence file renamed                  target C16: caught  (failing: C1, C16, C2, C8)
+  NC12 must-stay-live item deleted               target C17: caught  (failing: C1, C17, C2)
+  NC13 Q1′ sub-item closed                       target C17: caught  (failing: C1, C17, C2, C21)
+  NC14 notice state changed                      target C20: caught  (failing: C1, C2, C20)
+  NC15 wrong value display (B1 row)              target C19: caught  (failing: C1, C19, C2)
+  NC16 wrong value display (A1c constant)        target C19: caught  (failing: C1, C19, C2)
+  NC17 heading changed                           target C15: caught  (failing: C1, C15, C2)
+  NC18 grade changed outside the spans           target C21: caught  (failing: C1, C2, C21)
+  NC19 extra undeclared RECOG RID                target C7: caught  (failing: C1, C2, C7, C8)
+  NC20 adopted R9 row altered                    target C13: caught  (failing: C1, C13, C2)
+  NC21 A1b theorem statement altered             target C13: caught  (failing: C1, C13, C2)
+  NC22 [assuming:] dropped from the C7 rows      target C22: caught  (failing: C1, C10, C2, C22, C8)
+  NC23 [assuming:] added to an unconditional block target C22: caught  (failing: C1, C10, C2, C22, C8)
+  NC24 stale state restored (RID unavailable)    target C12: caught  (failing: C1, C12, C2)
+  NC25 record version misstated in §8            target C23: caught  (failing: C1, C2, C23)
+
+RESULT: PASS

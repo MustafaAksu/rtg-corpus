@@ -1,0 +1,65 @@
+{
+ "sources": {
+  "dyad-v6.4.22:dsn/RTG_DYADIC_OSCILLATOR_DSN.md": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+  "recog-v0.3.24:dsn/RTG_RELATIONAL_RECOGNITION_DSN.md": "8c64bea231b3691b737f4143f6f4105030ee183fcc90d7f604ec83a4c869e7c1"
+ },
+ "checks": [
+  {
+   "source": "Dyadic",
+   "tag": "dyad-v6.4.22",
+   "label": "DYAD-THM-NF-REM: rows, one-orbit contraction and the published certificate values used as [assuming:] ceilings (B1 L2)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "Dyadic",
+   "tag": "dyad-v6.4.22",
+   "label": "(D5) row-A bridge proof constants c_Q, c'_Q in the LPHASE row-A proof, certified by DYAD-ART-LPHASE-ROWA (A1c, [assuming:])",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "Dyadic",
+   "tag": "dyad-v6.4.22",
+   "label": "branch (B) of LPHASE row A and the block law (A1c in-block, combined tail, start offset)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "Dyadic",
+   "tag": "dyad-v6.4.22",
+   "label": "PRIM-CTR tube bound used to cap the first-anchor amplitude majorant (A1c start offset)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "Dyadic",
+   "tag": "dyad-v6.4.22",
+   "label": "NF-INV row bound and NF6 chart (A1c-Q fiber result)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "RECOG",
+   "tag": "recog-v0.3.24",
+   "label": "R9 rows extended by B1 (adopted rows stay in force)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "RECOG",
+   "tag": "recog-v0.3.24",
+   "label": "A1b slip schedule extended by A1c-E (statement unchanged)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "RECOG",
+   "tag": "recog-v0.3.24",
+   "label": "A1c record readout and the two OPEN R6 sub-items answered/reworded by A1c-D and A1c-Q",
+   "present": true,
+   "missing": []
+  }
+ ],
+ "ALL_PRESENT": true
+}
