@@ -4,4 +4,4 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| — | — | — | — | (empty) | — | — |
+| 2026-10-26 | NUMGEN | notice | open | NUMGEN v1.21 §6.8 Foundations export (OFN v0.10 consumer pointer, additive-rank scope); §1.1 OFN imports | — | `20261026-NUMGEN-v1-21-adopted.md` |

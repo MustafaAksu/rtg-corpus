@@ -5,3 +5,4 @@
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
 | 2026-10-26 | NUMGEN | offer | open | NUMGEN §6.4 N-3C+ first-nonlinear cyclic-average theorem (no RID yet); GEN v2.9 §8 GEN-ART-G2-CHRONO ([custody-A], proof source missing); GEN tetrahedral chronological protection G₂(Z)=0 | — | `20261026-NUMGEN-cyclic-average-route-to-g2-zero.md` |
+| 2026-10-26 | NUMGEN | notice | open | NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE (NUMGEN v1.21 §6.4); NUMGEN §6.9a NG-10 source and §9.1 Genesis row at gen-v2.9 | — | `20261026-NUMGEN-v1-21-adopted.md` |
