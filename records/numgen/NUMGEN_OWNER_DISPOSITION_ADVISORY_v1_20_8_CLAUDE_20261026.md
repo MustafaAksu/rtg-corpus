@@ -170,3 +170,28 @@ The RECOG item (GAP-LOCK 3 grade) is accurate; no change.
 - No new Dyadic or RECOG RID.
 
 The held v1.20.x records are uploaded unchanged on `upload/numgen-records` (PR #69) for the atlas hash check.
+
+## 9. Comparison with the other co-owner record (added 26 Oct 2026)
+
+The other co-owner record is `records/numgen/NUMGEN_OWNER_DISPOSITION_ADVISORY_v1_20_8_chatgpt_20261026.md` (PR #72, commit `2a293f55`), read in full.
+
+**Agreement.** The two records agree on every substantive decision:
+- NA-01: consumer-side confirmation, no blanket import, acceptance matrix, the three error types;
+- NA-02: execute the row-A import as a separate, strictly typed block; NUMGEN's existential L-PHASE is unchanged;
+- I02: φ* vs C_D^ext stays OPEN;
+- I06: C7C-M4 HOLD;
+- I07, I11, NA-04/NC-19, NA-05, NB-09, NC-12, NC-13 (gated on a producer check), NC-16, NC-18 (no tightened bound);
+- the two-stage v1.4 migration;
+- the inbox verdict *accept with change*.
+
+**Differences.** Each is of form, not substance:
+
+| Row | Claude | ChatGPT | Proposed resolution |
+|---|---|---|---|
+| NC-17 | accept with change (no edit unless Dyadic answers before the stage-1 freeze) | defer | Same outcome. Record it as **defer**, using the ChatGPT label. |
+| NA-03 labels | `U_NG`, `U_NG,T`, `U_D`, `U_D,T`, `U_R` | `U_NG`, `U_D,base`, `U_D,tube`, `U_R,base` | Adopt the ChatGPT labels, which match the reconciliation wording, and add `U_NG,tube` for NUMGEN's six-phase tube. |
+| NB-07 | named tier-1 RIDs (GAP-LOCK 1–3, INF-2, cyclic average), tier 2 conditional | the same priority list; no names registered by a disposition record | Compatible. The names in §4 stay proposals until the stage-1 collision check, as §4 already says. |
+| Matrix columns | domain / clock / error type / grade / state | adds an explicit `relationship` column next to `receiving status` | Use the ChatGPT column set. The §2 content fills it unchanged: relationship ∈ {independent agreement, consumed theorem, not adopted}. |
+| Inbox `state` | set to `acknowledged` (PR #70) | not changed | No conflict. `acknowledged` is a queue state only; the verdict is written when the matrix is in the stage-1 text. |
+
+Neither record changes a grade, imports from RECOG, or identifies φ* with C_D^ext.
