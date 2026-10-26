@@ -1,12 +1,12 @@
 # Number Genesis v1.21 — Release Record
 
-**Status:** DRAFT. Not adopted. `numgen-v1.20.8` governs until the PI adopts v1.21 and tags it.
+**Status:** ADOPTED by the PI, 26 October 2026 (§13). Publication pending: the merge commit and the annotated tag `numgen-v1.21` are the PI's steps and have not happened yet. Until the tag exists, `numgen-v1.20.8` remains the tagged governing edition on GitHub.
 **Date:** 26 October 2026
 **Prepared by:** Claude, Number Genesis co-owner session (branch `claude/numgen-v1.21-stage2`, stacked on PR #74).
 **Edition:** v1.21, built in two stages under DSN Methodology v1.4 §13.6. Stage 1 makes the corrections. Stage 2 is layout-only compaction.
 **Predecessor:** `RTG_NUMBER_GENESIS_DSN_v1.20.8`, tag `numgen-v1.20.8`, SHA-256 `835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e`.
 
-Fields marked *(to be filled)* depend on steps that have not happened yet: the atlas row check, PI adoption, the publication transform, the merge and the tag. This record invents no hash, approval or review identifier. Every hash below was computed on the branch files.
+Fields marked *(to be filled)* depend on steps that have not happened yet: the merge, the tag and the notices. This record invents no hash, approval or review identifier. Every hash below was computed on the branch files.
 
 ## 1. Authorization and reviews
 
@@ -19,10 +19,10 @@ Fields marked *(to be filled)* depend on steps that have not happened yet: the a
 | Hash check of the held records | `records/numgen/NUMGEN_UPLOAD_HASH_CHECK_20261026.md` (PR #73): `upload/numgen-records/SHA256SUMS.txt` 278/278 OK (PR #69) | filed; not merged |
 | Stage-1 review, round 1 (`702e3917…3880`) | ChatGPT co-owner on PR #74: ACCEPT WITH CHANGE. R1: no domain arrows in the acceptance matrix. R2: `upload/numgen-records` is a branch, so say what the release commit can reach | applied as round 2 |
 | Stage-1 review, round 2 (`ab25c162…99d2`) | ChatGPT co-owner, 26 Oct 2026: round 2 ACCEPTED, **Stage 2 GO**. Limits: base `ab25c162…99d2` only; Methodology v1.4 layout and compaction only; no new claim, RID, grade or OPEN change; movement map, `tools/check_compaction.py` and negative controls required; this record DRAFT until PI adoption; atlas row check before final stage-2 acceptance; PR #74 not to be merged yet | given |
-| Stage-2 review | *(to be filled: co-owner review of the stage-2 PR)* | pending |
-| Atlas row check (stage 1 rows and stage 2) | *(to be filled: required before final stage-2 acceptance)* | pending |
-| Review of the `tools/check_compaction.py` extension (§5.3) | *(to be filled: atlas owner; the tool is shared by all streams)* | pending |
-| PI adoption | *(to be filled)* | pending |
+| Stage-2 review | ChatGPT co-owner on PR #76 (comment `6417476658`): SCIENTIFIC/COMPACTION SCOPE ACCEPTED; final acceptance conditioned on the atlas row check and the shared-tool review; G2/G3 byte guards are load-bearing and must stay | accepted (conditions met by PR #77) |
+| Atlas row check (stage 1 rows and stage 2) | PR #77 (head `fff3e2f`): `records/numgen/ATLAS_ROW_CHECK_NUMGEN_v1_21_STAGE1.md` — stage 1 rebuilt byte-identical, C0–C13, NC1–NC12, A1 rerun, 45 edits checked at the owner tags: **CONCUR**; `…_STAGE2.md` — candidate and map rebuilt byte-identical, checker output identical, G0–G6, F1–F11: **ACCEPT FOR ADOPTION (atlas side)**. Non-blocking: E42 writes the RECOG v0.3.24 hash with a six-character suffix (`…69e7c1`); left for the next edition (§14) | done |
+| Review of the `tools/check_compaction.py` extension (§5.3) | PR #77: diff read in full; DYAD v6.4.21, RECOG v0.3.23, RECOG v0.3.24, GEN v2.9 (+ fixtures) and Programme v1.3 rerun with the branch and the `main` checker, outputs byte-identical in all five; five extra atlas fixtures on the key FAIL as required (`evidence/atlas/rowcheck/numgen_v1_21/`): **ACCEPT** for `main`, two non-blocking notes for the next tool edition | done |
+| PI adoption | PI, 26 Oct 2026, 22:46 +03:00, in the co-owner session: scope fixed by stage 1 `ab25c162…99d2` and stage 2 `05b3315f…4258`; no further scientific review or r4 needed for publication (§13) | given |
 
 ## 2. Identities
 
@@ -32,7 +32,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet: the a
 | Stage-1 intermediate, round 1 (reviewed on PR #74; superseded by round 2) | `702e3917126edfeeda41e43b6a8ad820695b5feec19a61e724b12849dfb83880` |
 | **Stage-1 intermediate, round 2 (accepted; the stage-2 base)**, 354,024 bytes, 3,471 lines; archived at `evidence/numgen/v1.21/stage1_intermediate.md`. A build stage, not an edition | **`ab25c162a727b0826adfb0b8fd5f3898969ed78260fc00e8bbcaa9e1e3b899d2`** |
 | **Stage-2 candidate** `dsn/RTG_NUMBER_GENESIS_DSN.md`, 274,236 bytes, 2,970 lines | **`05b3315fe74ec006b5610b1823522f843f55d677c01f1ec39b42144dd4be4258`** |
-| Published file (after the publication transform) | *(to be filled)* |
+| **Published file** `dsn/RTG_NUMBER_GENESIS_DSN.md` after the publication transform (§13.2), 274,246 bytes, 2,970 lines | **`4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701`** |
 | Tag `numgen-v1.21` | *(to be filled by the PI)* |
 
 | Build or check file | SHA-256 |
@@ -56,8 +56,11 @@ Fields marked *(to be filled)* depend on steps that have not happened yet: the a
 | `tools/check_compaction.py` (branch; extended, §5.3) | `2ba2a4093391d069b38325783823ea48217a3a4637c252a2c9a517d89f087306` |
 | `tools/check_compaction.py` on `main` before the extension | `6ed877986d47b485ca3dfcacbfb1493e93270af73a70bdb80533f58e5453b603` |
 | `evidence/numgen/v1.21/tool_regression_summary.txt` | `b1e7ddcd58643d3ab09ffe5152c4dc603c23a9f961498d9ce718c69434b9566d` |
+| `evidence/numgen/scripts/release_numgen_v1_21.py` (publication transform) | `19ff1869dfe2fdd75e1229d4c582abcd729685de6b43d47ca5e1fd54618b95f1` |
+| `evidence/numgen/v1.21/release_check_output.txt` (P1–P6 PASS) | `5529724e9616b81c359e771eb0a3a1d899396a313202efbba1ce5d743bfb6709` |
+| `evidence/numgen/v1.21/release_negative_controls_output.txt` (N1–N5 rejected) | `650747eb5f0228ff862b474b4148d7cfe9c17182af32ed90823f50006c967297` |
 
-**Reproduce.** `git show numgen-v1.20.8:dsn/RTG_NUMBER_GENESIS_DSN.md > v.md`. Run the stage-1 builder on `v.md` to get `ab25c162…99d2`. Then run `build_numgen_v1_21_stage2.py ab25c162-file OUT MAP`. That gives `05b3315f…4258` and the map `fb93b2a9…dbfa9`. The stage-2 build was rerun from scratch on 26 Oct 2026 and both hashes reproduced.
+**Reproduce.** `git show numgen-v1.20.8:dsn/RTG_NUMBER_GENESIS_DSN.md > v.md`. Run the stage-1 builder on `v.md` to get `ab25c162…99d2`. Then run `build_numgen_v1_21_stage2.py ab25c162-file OUT MAP`. That gives `05b3315f…4258` and the map `fb93b2a9…dbfa9`. The stage-2 build was rerun from scratch on 26 Oct 2026 and both hashes reproduced. Then `release_numgen_v1_21.py CANDIDATE OUT "26 October 2026"` gives `4805760d…5701`; the candidate is also at commit `19432b9` (`git show 19432b9:dsn/RTG_NUMBER_GENESIS_DSN.md`).
 
 ## 3. Stage 1 — edits by disposition (round 2, accepted)
 
@@ -207,14 +210,66 @@ Net change against v1.20.8: −64,767 bytes (−19.1 %). The history region (79,
 - No ALG→THM promotion.
 - No φ* ≡ `C_D^ext`.
 - No action on outbound pipe items beyond text correction.
-- No merge of PR #74.
-- No adoption.
+- No merge and no tag by this session: both are the PI's steps (§12).
 
-## 12. Remaining steps, in order
+## 12. Steps after adoption, in order
 
-1. Co-owner review of the stage-2 PR.
-2. Atlas row check, which also covers the §5.3 checker extension.
-3. This record leaves DRAFT on PI adoption.
-4. Publication transform: Document status, Date, the Appendix A v1.21 heading and the footer; nothing else. Record the published hash here.
-5. PI merges #69 (if the evidence clause should be reachable at the release commit), #70, #72, #73, #74 and the stage-2 PR in that order, then makes the annotated tag `numgen-v1.21`.
-6. NUMGEN files the five notices (§9) and closes the dispositioned inbox item.
+| # | Step | Who | State |
+|---|---|---|---|
+| 1 | Publication transform from the accepted candidate (§13.2); final SHA-256 | NUMGEN co-owner session | done: `4805760d…5701` |
+| 2 | Adoption decision and final hash entered in this record | NUMGEN co-owner session | done (§13) |
+| 3 | Reverse transform recovers the candidate byte-exactly (gate P4) | NUMGEN co-owner session | done |
+| 4 | Merge commits (not squash), in dependency order: #69, #70, #72, #73, #74, #76, #77 | PI (CONVENTIONS: the PI merges into `main`) | *(to be filled: merge commits)* |
+| 5 | Annotated tag `numgen-v1.21` on the merged commit carrying `4805760d…5701`, with the hash in the tag message | PI | *(to be filled)* |
+| 6 | `BASELINE.md` NUMGEN row: entered on this branch (v1.21, `4805760d…5701`, tag `numgen-v1.21`); registration of the tag after it exists | row: NUMGEN co-owner session; tag registration: PI | row done; tag *(to be filled)* |
+| 7 | Five `kind: notice` items (§9) and closure of the dispositioned inbox item; GEN offer text correction (RID named) | NUMGEN co-owner session, after the tag | *(to be filled: paths and commits)* |
+| 8 | "Sync now" in the Claude project | PI | *(to be filled)* |
+
+## 13. Adoption decision (PI, 26 October 2026)
+
+### 13.1 Decision
+
+Given by the PI on 26 October 2026 at 22:46 +03:00 in the NUMGEN co-owner session. Recorded verbatim in the parts that fix the scope:
+
+> [SESSION — governance] Benimseme kapsamı şu iki nesneyle sabittir:
+> Stage 1 — frozen intermediate `ab25c162a727b0826adfb0b8fd5f3898969ed78260fc00e8bbcaa9e1e3b899d2`;
+> Stage 2 — accepted candidate `05b3315fe74ec006b5610b1823522f843f55d677c01f1ec39b42144dd4be4258`.
+> Bilimsel içerik ve Methodology v1.4 sıkıştırması benimsendi. C7C-M4 HOLD, Census-1 INCONCLUSIVE ve diğer açık yükümlülükler mevcut statülerini koruyor.
+> Yayın işlemi için ayrıca bir bilimsel inceleme veya r4 gerekmiyor.
+> … PI bilimsel benimsemesi verilmiştir; yayın commit'i, merge ve tag henüz gerçekleştirilmiş değildir.
+
+Summary in English: the scientific content (stage 1) and the Methodology v1.4 compaction (stage 2) are adopted, scoped by exactly the two hashes above. C7C-M4 HOLD, Census-1 INCONCLUSIVE / INCONCLUSIVE and every other open obligation keep their status. No further scientific review or round 4 is required for publication. Adoption is not publication: the merge and the tag follow (§12).
+
+### 13.2 Publication transform
+
+`evidence/numgen/scripts/release_numgen_v1_21.py`, applied to the accepted candidate `05b3315f…4258` with decision date "26 October 2026". Three lines change, each exactly once:
+
+| Line | Candidate | Published |
+|---|---|---|
+| Document status | DRAFT — v1.21 stage-2 candidate, not adopted; v1.20.8 governs until PI adoption. Release record (DRAFT): … | ADOPTED — PI, 26 October 2026 (corrections of the reconciled v1.20.8 advisory and Methodology v1.4 compaction; stage 1 and stage 2 reviewed). Release record: … |
+| Appendix A v1.21 heading | `### v1.21 — 26 October 2026 — DRAFT (stage-2 candidate; not adopted)` | `### v1.21 — 26 October 2026 — Adopted` |
+| Footer | `*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.21 (DRAFT stage-2 candidate; not adopted).*` | `*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.21 (ADOPTED, 26 October 2026).*` |
+
+The Date line already reads 26 October 2026 and is asserted, not changed. Nothing else changes: no live text, no other header field, no claim, grade, RID or OPEN status.
+
+### 13.3 Checks (EV-RUN)
+
+| Gate | Result |
+|---|---|
+| P1 input is the accepted candidate `05b3315f…4258` | PASS |
+| P2 output equals the transform of the candidate | PASS |
+| P3 exactly the declared lines differ (3: status, Appendix A heading, footer); Date line = decision date | PASS |
+| P4 reverse transform recovers the candidate byte-exactly | PASS |
+| P5 no DRAFT / candidate / not-adopted marker in the header fields, the Appendix A v1.21 heading or the footer | PASS |
+| P6 every other line byte-identical; claim-tag census identical | PASS |
+| Negative controls N1 (live-text change), N2 (footer not transformed), N3 (wrong decision date), N4 (one `[OPEN]` regraded), N5 (another header field edited) | all rejected |
+
+Published: `dsn/RTG_NUMBER_GENESIS_DSN.md`, 274,246 bytes, SHA-256 **`4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701`**. The candidate hash `05b3315f…4258` identifies the reviewed candidate only.
+
+## 14. Open items carried forward
+
+- Census-1 INCONCLUSIVE / INCONCLUSIVE; C7C-M4 HOLD pending the TDR-G orientation-policy request; C7B global breadth, C7C-A, N-4, N-6, NG-7B and full NG-8 OPEN — unchanged.
+- LOGSLIP relocation (NA-06) and the dated `[v1.20.x]` markers in untouched rows (§6): content work for a later edition.
+- E42 hash form: the RECOG v0.3.24 hash is written `8c64bea2…69e7c1` (six-character suffix) instead of prefix…last four (`…e7c1`). Atlas note, non-blocking; next edition.
+- Two non-blocking notes of the atlas owner on `tools/check_compaction.py` (PR #77): for the next tool edition.
+- NC-17 (Dyadic q* question) deferred until Dyadic answers.

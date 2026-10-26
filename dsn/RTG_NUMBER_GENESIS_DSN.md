@@ -4,7 +4,7 @@
 **Date:** 26 October 2026  
 **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
 **Document class:** Foundational/technical bridge ledger (Methodology v1.4 §0.5); it does not modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics, and it is not itself an OPEN-P1 physical bridge (Programme v1.3 SG-PROG-4). §1 profile exception: §1 states the imported foundations, the thesis and the three-track counting architecture with their scope guards in full (above the 400-word guide); a pointer-only §1 would drop those qualifications.  
-**Document status:** DRAFT — v1.21 stage-2 candidate, not adopted; v1.20.8 governs until PI adoption. Release record (DRAFT): `records/numgen/NUMGEN_v1_21_RELEASE_RECORD.md`.  
+**Document status:** ADOPTED — PI, 26 October 2026 (corrections of the reconciled v1.20.8 advisory and Methodology v1.4 compaction; stage 1 and stage 2 reviewed). Release record: `records/numgen/NUMGEN_v1_21_RELEASE_RECORD.md`.  
 **Supersedes:** `RTG_NUMBER_GENESIS_DSN_v1.20.8` (SHA-256 `835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e`; tag `numgen-v1.20.8`).  
 **Companion documents:** current editions, pins used and consumers in §9.1 (Consumers and pins).  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
@@ -2902,7 +2902,7 @@ Candidate areas:
 
 One compact entry per recent edition (Methodology v1.4 §1). The full changelog of v0.1–v1.20.8 and the three legacy notes (v0.3 Change Note, v1.0 Result Note, v0.9 Result Note) are in the predecessor edition (tag `numgen-v1.20.8`, sections "Changelog" and the notes after it); the held release records and packages of v1.20.x are on the branch `upload/numgen-records` (hash check `records/numgen/NUMGEN_UPLOAD_HASH_CHECK_20261026.md`).
 
-### v1.21 — 26 October 2026 — DRAFT (stage-2 candidate; not adopted)
+### v1.21 — 26 October 2026 — Adopted
 
 - **Basis:** the reconciled v1.20.8 advisory (`records/numgen/ATLAS_ADVISORY_NUMGEN_v1_20_8_RECONCILIATION.md`), the two owner disposition records and their reconciliation (`records/numgen/NUMGEN_OWNER_DISPOSITION_RECONCILIATION_v1_20_8.md`); PI "başla" of 26 October 2026; co-owner review of stage 1 (PR #74, ACCEPTED after round 2).
 - **Interfaces [science/scope] (stage 1):** `DYAD-THM-LPHASE-ROWA-REMAINDER` imported at §6.6 (pin `dyad-v6.4.22`, producer v6.4.19; the explicit-constant OPEN sub-item closed by the import; NUMGEN-RESULT-N5AS1-L-PHASE unchanged); RECOG v0.3.24 explicit-domain theorems recorded as consumer-side confirmations with the §9.1 acceptance matrix (nothing imported); domain labels (§6.2); consumers and pins (§9.1); pins Programme v1.3, Genesis v2.9, §7 Q403 v6.4.18; C7C-M4 hold with the TDR-G request.
@@ -2967,4 +2967,4 @@ Historical (v1.19): `[HYP]` programme thesis plus `[DEF]/[INTERP]` paradigm clar
 
 ---
 
-*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.21 (DRAFT stage-2 candidate; not adopted).*
+*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.21 (ADOPTED, 26 October 2026).*
