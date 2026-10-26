@@ -1,8 +1,12 @@
+JT1_sector_width_uniform_lt_2pi PASS
+JT2_circular_hull_controls PASS
 G1_containment_a_L_theta PASS
 G2_narrower_than_combined_tail_cell PASS
 G3_omega_narrower_than_2Delta_a PASS
 NC1_corrupt_record_empty PASS
 NC2_wrong_n0_excludes PASS
+JT1_wide_box_conservative PASS
+JT2_circular_hull_on_data PASS
 a= 625 th=0.3 n0=6 K=7: a-hull [625.00, 629.82] (w=4.82; #64 cell 5.7; comps=1, boxes 79) | L-hull width 1.01e-04 | omega [18.49, 20.18] (w=1.70; 2Da=42.3) | Theta0 width 0.0149 | contains a/L/theta: True/True/True
 a= 625 th=1.7 n0=5 K=7: a-hull [625.00, 629.87] (w=4.87; #64 cell 39.6; comps=1, boxes 119) | L-hull width 1.97e-04 | omega [-14.60, -12.73] (w=1.87; 2Da=42.3) | Theta0 width 0.0144 | contains a/L/theta: True/True/True
 a= 625 th=3.9 n0=3 K=7: a-hull [625.00, 630.75] (w=5.75; #64 cell 43.9; comps=1, boxes 121) | L-hull width 1.36e-04 | omega [-15.35, -13.32] (w=2.03; 2Da=42.3) | Theta0 width 0.0166 | contains a/L/theta: True/True/True
