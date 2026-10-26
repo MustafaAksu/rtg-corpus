@@ -1,0 +1,11 @@
+[PASS] C1 S antisymmetric under reversal; E antisymmetric except exactly on the degenerate set (E=+N/2 under both listings) — 145152 (state,k) path cases, 1152 degenerate
+[PASS] C2 on the degenerate set G=sc(δ_v1−δ_c)−sc(δ_v3−δ_c) is never 0 and flips sign under reversal (covariant orientation exists everywhere there for P_3)
+[INFO] C3 ratified witnesses 136; exposed to the degenerate set under v18: 40
+[INFO] C3 policy reverse     : verdict/class changes  10 of 136; admitted label set identical to v18: True
+[INFO] C3 policy inert       : verdict/class changes  20 of 136; admitted label set identical to v18: True
+[INFO] C3 policy covariant-G : verdict/class changes  12 of 136; admitted label set identical to v18: True
+[INFO] labels lacking an unexposed witness: []
+[INFO] C4 census k=1 v18         : 331776 gauge-reduced states, 9800 eventual cycles, 77 cycles contain a degenerate event, 16322 states flow into such a cycle
+[INFO] C4 census k=1 covariant-G : 331776 gauge-reduced states, 9857 eventual cycles, 134 cycles contain a degenerate event, 16590 states flow into such a cycle
+[INFO] C4 census k=1 inert       : 331776 gauge-reduced states, 9789 eventual cycles, 66 cycles contain a degenerate event, 8526 states flow into such a cycle
+RESULT: PASS
