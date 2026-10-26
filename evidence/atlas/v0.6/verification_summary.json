@@ -1,0 +1,80 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.5",
+ "base_sha256": "cf250c9140e6ee26c65b2497a2a61dc1e326a69574d590132f0cea9646a2b0e5",
+ "atlas_sha256": "35ebee6d61f4db93211f2ed6f2de2bb973aa2fc6f2ea3cdf670656b1e961bd8a",
+ "atlas_bytes": 479995,
+ "atlas_lines": 1544,
+ "source_snapshot": "38ed5bb1fb7324d939007981f6671d2ac18e8070",
+ "changed_sources": [
+  "NUMGEN"
+ ],
+ "edit_operations": 54,
+ "retired_keys": [
+  "NUMGEN.N-S1",
+  "NUMGEN.N-L3",
+  "NUMGEN.N-L5",
+  "NUMGEN.N-L7",
+  "NUMGEN.N-G1",
+  "NUMGEN.N-T2",
+  "NUMGEN.N-T3"
+ ],
+ "new_keys": [
+  "NUMGEN.N-I1"
+ ],
+ "new_node_rids": [
+  "NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET",
+  "NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT",
+  "NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO",
+  "NUMGEN-RESULT-N5AS1-INF2",
+  "NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE"
+ ],
+ "dispositions": {
+  "retired": 7,
+  "reworded": 16,
+  "new": 1
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 128
+  },
+  "qualifiers": {
+   "PASS": 3
+  },
+  "links": {
+   "PASS": 423,
+   "UNVERIFIED": 5,
+   "DOCUMENTED-UNRESOLVED": 11
+  },
+  "artifacts": {
+   "PASS": 99,
+   "UNVERIFIED": 3
+  },
+  "keys": {
+   "PASS": 91
+  },
+  "process": {},
+  "wording": {
+   "WARN": 16
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 6,
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 130
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d",
+  "evidence/atlas/build/refresh_v0_6.py": "b8cbe56068e81bbfe31fb5ff4a5969af042faffebc5ca5791159d5a321a1ab48"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate rerun; new RIDs checked for presence in the tagged source, not re-proved.",
+  "Impact refresh of one moved source (NUMGEN v1.21); the other 17 domains were not re-extracted; pipe items are cited as filed, their receiver dispositions are not atlas sources.",
+  "NUMGEN v1.21 §6.2/§6.6/§9.1/§9.2 extracted at statement level from the tagged file; proofs live in the owner cells."
+ ]
+}

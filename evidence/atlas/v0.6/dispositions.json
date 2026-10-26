@@ -1,0 +1,170 @@
+[
+ {
+  "key": "NUMGEN.N-S1",
+  "disposition": "retired",
+  "reason": "NUMGEN v1.21 §6.2 [DEF] domain labels U_NG, U_NG,tube, U_D,base, U_D,tube, U_R,base; unlabelled U/U_T means U_NG; L1 coordinate U named as a coordinate (NA-03/I08).",
+  "previous_sha256": "134cf64fe5c0d2a45de46c3a4ef9ad7de9c4604c9b68be907e45e593f1ed6cf7",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-A",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "08932502ccc5b9e7bf995d38502180f50b349c65afb71fc0dd0a5dfe95dcf354",
+  "current_sha256": "92e6c2e43dfccf0ae08cfc3d3ecfd0aabeb318364432aa0f9a86734556534cd5"
+ },
+ {
+  "key": "NUMGEN.N-D",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "dc95b31e120f2ee1a574e9004357f6e1e47dd05904e7b2ba33654ed50236b5bc",
+  "current_sha256": "d2c5b59965b581107d426fa45e0539cd9fb7c743271f38a13d46c5a360f454f4"
+ },
+ {
+  "key": "NUMGEN.N-B",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "4b98d4aadcae4ed183fd187dda7008b74a9ba94e6fbda0a863607d3376afdd1f",
+  "current_sha256": "8718548d0c738a642b7d7201af6effc38b920f42554ef2709eae953bfd5a8c67"
+ },
+ {
+  "key": "NUMGEN.N-E",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "5a52dbb1a6c2617c4d57787bd68523d40989a8046ef42ad3a37b88601d212eb7",
+  "current_sha256": "da3a0a5fe62a3cca2dc528e4d1712cfe8ca60cd54a61f4a0ce3d8637d10a164f"
+ },
+ {
+  "key": "NUMGEN.N-L6",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "adb3cf9b2ee16ed2ebd94d75f4a52ba54f9e0e07ec6dc61703719c58d919418e",
+  "current_sha256": "7b4a65fb3f8a51fdd9b0bfd6d25bd6cc6b31dd14ded6892fe321aa8d875e5ab6"
+ },
+ {
+  "key": "NUMGEN.N-L1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "5c385e34e24b4fc4a9593173fb8e04c5d0cf4044ea8d8f81b49f9b6cdd271c57",
+  "current_sha256": "55390e0c50ee0440e820265abe988aff8e519e00889dc3d54e2c96f3940dd41c"
+ },
+ {
+  "key": "NUMGEN.N-L3",
+  "disposition": "retired",
+  "reason": "NUMGEN v1.21 §9.2 relay row cites DYAD-ALG-Q-INVARIANT-FORM, -TAU-DETB, -CUBIC-PARABOLIC by RID (NC-13).",
+  "previous_sha256": "ee4e3d67bd004421b0651708c2155a4418ad2b68e2a0aff11afc91717e56ae43",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-L4",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "22fc1e7de289120683013b94de03ea48dd14f0daa6447f19ef48663a852b0143",
+  "current_sha256": "ee760a3181081d6744061ff5c6b685e016ec78045a614c1f7704f3049718c5bf"
+ },
+ {
+  "key": "NUMGEN.N-L5",
+  "disposition": "retired",
+  "reason": "NUMGEN v1.21 §9.1 acceptance matrix lists every RECOG explicit-domain theorem as an available comparison, recorded as independent agreement (NA-01).",
+  "previous_sha256": "6f5b3e92fdb6846c2a99006ad512c0474d4c2001396837a59db515c118d86b5a",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-L7",
+  "disposition": "retired",
+  "reason": "NUMGEN v1.21 SG-NG-23 cross-reading names RECOG (S) and the scope difference for e^{π/(3τ)} (NC-12).",
+  "previous_sha256": "d08040bc6f161bdde934b6500b4edc96a52e36b220dc6944b14df772f3fe8805",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-SC1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "1f9caf2cb2e88f9f1a6ea6e927df673aeb69eaa101a83fde39d4e1988c25ac55",
+  "current_sha256": "ec0919615ce7f00f61e5cfc5f8e2d75bfc4801bc4561a46ec434942a8788f2ca"
+ },
+ {
+  "key": "NUMGEN.N-R1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "549a924a2c8be5dd6b68d8f715572403d8a04ef6af7b0a2746d9a5077c390321",
+  "current_sha256": "c196c2b28c308973e94558a698dba1c04926c701d0e591c20a4462753242a16e"
+ },
+ {
+  "key": "NUMGEN.N-R2",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "b1039fc4f84ff876c1569313adff79a6e8abaf67433e33d88a1dd668dfc4b8ab",
+  "current_sha256": "d37f4034232bdabb397a953c88304975b9626e7d489c1a2a826b7fa6029d21c2"
+ },
+ {
+  "key": "NUMGEN.N-F",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "96bd2e0e327deeaee692a3376681e6fc584193140cc196d4ea9f22fd61874011",
+  "current_sha256": "599190ef5ac99b5911766719acc87407da12397ea9290dc7297fcdd8fdaec8a7"
+ },
+ {
+  "key": "NUMGEN.N-C1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "6d03f6763889d39e47aa31b32a67cce4380ea1eb83225531e859feaf879689f2",
+  "current_sha256": "ec2ffecba5baa8ea406462d43392eccd7c60433bd1aec792048317b3efd5de2b"
+ },
+ {
+  "key": "NUMGEN.N-D1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "3745e4f7ca262477f4085e2d7b6ba2704f2af09d41cc74d50efc009c5e6c2958",
+  "current_sha256": "97994e1ee962ece8ed17da61dcef399707aab54d3da3e7fd34aed48e0f25c802"
+ },
+ {
+  "key": "NUMGEN.N-G1",
+  "disposition": "retired",
+  "reason": "NUMGEN v1.21 §9.2 RECOG row (v0.3.24) names the §7 HEUR cross-reference tag, the ALG use in RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE and the A1b route; no grade asserted (NC-16). The atlas row itself overstated: RECOG §7 does tag HEUR.",
+  "previous_sha256": "09760c3b8761de327ea8f2fc8b83eb287c565a628b5602959feec11528ac8c7b",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-T1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "29090e415cebef5cc1757c5643bbddc3f4b58a660567d0b6dab7301e0474ff45",
+  "current_sha256": "942e7eb64279e3a7ee9c55f09bfb702baf0b7ff1641ceb15eb9858cc4a6c1856"
+ },
+ {
+  "key": "NUMGEN.N-T2",
+  "disposition": "retired",
+  "reason": "NUMGEN v1.21: scope words at the N-1 tree and the N-1A0/N-1A1 status lines (\"closed on U_NG by L1; abstract question open\") (NA-05).",
+  "previous_sha256": "860d879dc1459940e3b42b4ce9017be253e6bd9ec34799cce4083a18c3cbf993",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-T3",
+  "disposition": "retired",
+  "reason": "NUMGEN v1.21: the sampled L-PHASE range is live at §6.6 as [NUM] with evidence pointers; the other changelog-only facts are at tag numgen-v1.20.8 (NB-11).",
+  "previous_sha256": "07f3dba59da42138fc57b2e635318b7cca8ad0f0ac926fd69a3fc1494fd3db8c",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-Q*",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "1edb618941b4c40e5568ba1d1b342249cc306db7f7a998efdb16d7ea03c86c12",
+  "current_sha256": "1d287fc58ddc7561b0d36b8320818270bbb35177009b02238d342c36646f7e92"
+ },
+ {
+  "key": "D5.X1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "59730bae6897bd511b28d9fd37f8e91fbf52d73ea8443d553ec60b33029f9b95",
+  "current_sha256": "bd206468e30c01f14ee82ddfaa20e67fda5beea1d0c1e7dc899aa24fe0f89861"
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "new",
+  "reason": "five v1.21 notices await receiver dispositions (pipes)",
+  "previous_sha256": null,
+  "current_sha256": "0d7ff10f1feb15c4bc5e73bed742cf8569f6689a4ef750c2030b0f2e6c93f7e4"
+ }
+]
