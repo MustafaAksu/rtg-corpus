@@ -1,0 +1,18 @@
+    k=0: 0 mismatches / 331776
+    k=1: 0 mismatches / 331776
+    k=2: 0 mismatches / 331776
+    k=3: 0 mismatches / 331776
+[PASS] S1 reproduced core is ONE-STEP IDENTICAL to v18 over all 331776 reduced states for every k in {0,1,2,3} (0 total mismatches)
+[PASS] S2 independent v18 recount of all 22 DISC-1D passing seeds at four k, via v18's own single_edge_swaps / path_interactions counters: 0 mismatches
+    [0,20)               simple  36/  80   complex   0/ 146
+    [20,60)              simple  16/ 148   complex   0/ 565
+    [60,150)             simple  12/  40   complex   0/ 578
+    period 54 exactly    simple  12/  32   complex   0/  58
+[PASS] S3 class simplicity predicts survival within every short-period band and at exactly period 54, where both class types coexist — residual period distribution inside the <150 window does not rescue the 'just short cycles' explanation
+
+  transport archetypes among the 22 passes (k=1,2,3 event counts):
+    ((18, 9), (16, 8), (84, 120))  x12
+    ((18, 6), (12, 4), (120, 72))  x10
+[PASS] S4 the 22 passing seeds reduce to 2 event-count transport archetypes, one per admitted class — prevalence, not 22 independent mechanisms
+----------------------------------------------------------------------
+RESULT: ALL SAFEGUARDS PASS.

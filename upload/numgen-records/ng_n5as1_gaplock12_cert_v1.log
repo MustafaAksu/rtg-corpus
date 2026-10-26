@@ -1,0 +1,9 @@
+[PASS] G1.1 every-basepoint 6-window law: Lambda_6 < 2pi at ALL 3582 sampled basepoints (block-aligned and not), with sup|r|/Q^1.5 = 1.41861 — the no-5 leg of Lemma 1
+[PASS] G1.2 every-basepoint 7-window law: min(Lambda_7 - 2pi) = 1.04363 > 0 (near pi/3 = 1.0472) — the no->=8 leg of Lemma 1
+[PASS] G1.3 Lemma 1 structural argument: 5-gap forces a 6-consecutive-step sum > 2pi (contradicts G1.1); >=8-gap forces a 7-consecutive-step sum < 2pi (contradicts G1.2); both after shrinking so tau Q > C Q^(3/2) and c sqrt(Q) < pi/3. Hence alphabet subset of {6,7}; combined with the closed infinitely-many-non-6 theorem, there are infinitely many 7-gaps exactly.
+[PASS] G1.4 small-regime alphabet audits: {6: 666661, 7: 4} and {6: 333327, 7: 5} — only 6 and 7
+[PASS] G1.5 scope necessity: outside the smallness hypothesis the alphabet breaks ({11: 1, 7: 8, 6: 822} contains 11) — the local hypothesis is load-bearing, not decorative
+[PASS] G2.1 Lemma 2 bookkeeping: |E_B(M) - s(M)| <= 5 <= 20 at eight checkpoints across two seeds — boundary partial gaps only
+[PASS] G2.2 physical 7-gap count law restored to theorem grade: s(M) = (3 tau/pi) log M + O(1); at the four physical slips the predicted counts are [0.387, 1.385, 2.384, 3.384] vs 1,2,3,4 (consecutive differences [0.997, 0.999, 1.0])
+----------------------------------------------------------------------
+RESULT: ALL PASS — GAP-LOCK Lemmas 1 and 2 CLOSED; Lemma 3 (within-cell locking / consecutive-ratio limit) remains OPEN with the fractional-part obstruction precisely identified.

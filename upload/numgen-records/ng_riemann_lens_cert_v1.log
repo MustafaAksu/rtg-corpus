@@ -1,0 +1,10 @@
+[PASS] R1 J has order 6 with eigenvalues exp(+-i pi/3)
+[PASS] R2 Q_true is exactly J-invariant
+[PASS] R3 Q_euclid is NOT J-invariant (defect rho(rho-2eta)) -> SG-1 primacy is forced, not conventional
+[PASS] R4 the invariant quadratic forms are a 1-parameter family -> Q_true unique up to scale
+[PASS] R5 tau = 1/sqrt(det g) exactly (det g = 3/4)
+[PASS] R6 closed form: exp(pi/(3 tau)) = exp(sqrt(3) pi/6) = 2.476632271...
+[PASS] R7 F = T^6 is tangent to the identity
+[PASS] R8 F - id has leading total degree 3 in both components [3, 3] -> cubic parabolic class, |z_n| ~ n^(-1/2), matching Q_m ~ 1/m
+------------------------------------------------------------
+RESULT: ALL PASS — Riemann-lens identifications certified.

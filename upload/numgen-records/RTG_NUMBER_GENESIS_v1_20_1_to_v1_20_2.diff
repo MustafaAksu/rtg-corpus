@@ -1,0 +1,47 @@
+--- base.md	2026-09-25 16:04:46.772849887 +0000
++++ RTG_NUMBER_GENESIS_DSN_v1_20_2.md	2026-09-25 20:55:29.676795813 +0000
+@@ -1,8 +1,8 @@
+-# RTG Number Genesis DSN v1.20.1
++# RTG Number Genesis DSN v1.20.2
+ 
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+ **Date:** September 25, 2026  
+-**Document status:** ACTIVE owner ledger; scientific-sync patch. **Supersedes:** v1.20 (`f5ed40f5…3b636`), which superseded v1.19 (`a58d1507…09343e`).  
++**Document status:** ACTIVE owner ledger; scientific-sync patch. **Supersedes:** v1.20.1 (`00174c3a…c927b`), which superseded v1.20 (`f5ed40f5…3b636`).  
+ **DSN Methodology:** v1.3 (touched-block compliance in this release; full structural migration deferred to a methodology-only pass).  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+ **Document class:** Foundational/technical bridge ledger. It does **not** modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics.  
+@@ -2490,7 +2490,7 @@
+ - Track B: finite physically distinguishable object/state/arrow multiplicity at the declared scope;
+ - Track C: character/cyclic invariants of the appropriate completion/representation.
+ 
+-The common home is the certified relational-category architecture `C_NG`; a new hypothetical universal set of numerals is not required as an ontological primitive. What remains to prove is compatibility of the distinct invariants/representations.
++The common home is the certified typed relational architecture with partial physical composition `C_NG`; a new hypothetical universal set of numerals is not required as an ontological primitive. What remains to prove is compatibility of the distinct invariants/representations.
+ 
+ ### §6.10 External benefit boundary
+ 
+@@ -2551,7 +2551,7 @@
+ 4. `[CLOSED]` faithful abstract character isomorphism `G_T ~= widehat(S^1)`;
+ 5. `[CLOSED]` exact primitive character pullback and proof of non-translational label dynamics;
+ 6. `[CLOSED]` finite-character restriction with kernel `N G_T` and explicit no-dynamics-transfer guard;
+-7. `[CLOSED by import]` the specific `q=4,(0,3)` nonlinear cascade item is closed by Dyadic v6.4.9 `DYAD-THM-Q403-PHASELAW`; ownership remains Dyadic;
++7. `[CLOSED by import]` the specific `q=4,(0,3)` nonlinear cascade item is closed by Dyadic v6.4.10 `DYAD-THM-Q403-PHASELAW`; ownership remains Dyadic;
+ 8. `[ROUTED]` reachable-basis/universal missing-slot projector work is an Arithmetic-Dynamics/Dyadic OPEN-9 interface target, not a Number Genesis foundation blocker;
+ 9. `[OPEN]` establish, if desired, any separate physical observability theorem for harmonic coefficients beyond their role as mathematical function-space coordinates.
+ 
+@@ -2765,6 +2765,15 @@
+ ---
+ 
+ ## Changelog
++### v1.20.2 — September 25, 2026
++
++**Scientific-sync patch: STOP-02 and STOP-03 only.** No other scientific edit.
++
++- **STOP-02 `[COR]`.** §6.9 still called the common home "the certified relational-category architecture `C_NG`", contradicting the v1.20 S5 correction. Now: "the certified typed relational architecture with partial physical composition `C_NG`".
++- **STOP-03 `[COR]`.** The §7 proof package still pinned the `q=4,(0,3)` cascade closure to Dyadic **v6.4.9**, which v1.20 G1 ("all live current-pointer references refreshed") had missed. Now Dyadic **v6.4.10** `DYAD-THM-Q403-PHASELAW`. The mathematics and ownership are unchanged; only the live source version is corrected.
++- **Why both survived earlier scans.** The reverse-inventory generator (built for the planned migration, now v1.20.3) ran its stale-wording regex only inside §2 `RESULT/THM/ALG` blocks, so a §6 `[OPEN]` sentence and a §7 proof-package list item were structurally invisible to it. A new whole-document check, **INV-LIVE**, now scans all live text (changelog, Appendix A historical narrative, Appendix B rejected formulations, and `[COR]` quotations excluded) for withdrawn wording and superseded source pins.
++- Found in the co-owner review of the v1.20.2 inventory. The planned methodology-only migration is renumbered **v1.20.3**.
++
+ ### v1.20.1 — September 25, 2026
+ 
+ **Scientific-sync patch: STOP-01 only.** No scientific claim changes beyond the STOP-01 sync repair.

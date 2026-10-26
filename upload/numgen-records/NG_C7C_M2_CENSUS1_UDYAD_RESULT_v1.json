@@ -1,0 +1,92 @@
+{
+ "doc_id": "NG_C7C_M2_CENSUS1_UDYAD_RESULT_v1",
+ "protocol": "NG_C7C_M2_CENSUS_PROTOCOL_v1.md @f2a4a9a4",
+ "universe": "NG_C7C_M2_CENSUS1_UDYAD_UNIVERSE_v1.json @a1b60b59 (2 records; unchanged)",
+ "records": [
+  {
+   "record_id": "U-DYAD-1",
+   "pair": "(B_+, B_-)",
+   "family": "continuous dyad",
+   "F1": {
+    "result": "PASS",
+    "evidence": "RTG_NUMBER_GENESIS_DSN_v1_20_6.md @2a51c4b1; blocks §6.6 N5-PHYS-1 L1791–L1825 (DEF L1793, RESULTs L1799/L1801/L1810/L1817); analytic certificate, no witness ID"
+   },
+   "F2": {
+    "result": "PASS",
+    "evidence": {
+     "schema_key": "M2-SCHEMA-DYAD-BPLUS / M2-SCHEMA-DYAD-BMINUS — defining text RTG_NUMBER_GENESIS_DSN_v1_20_6.md @2a51c4b1 §6.6 N5-PHYS-1 [DEF] L1793–L1796",
+     "owner_version_hash": "RTG_NUMBER_GENESIS_DSN_v1_20_6.md @2a51c4b1",
+     "sector_class_key": "DYAD-THM-PRIM-CTR tube U_T (registry) — applied under the frozen freeze-manifest interpretation: the key classifies event type; the record's own domain provenance is checked separately (see census note N-1)",
+     "gauge_policy": "one-chart gauge-reduced (rho, eta) — L1799 gauge audit",
+     "orientation_event_semantics": "sign of rho separates B_+ / B_- — L1795–L1796, L1799",
+     "common_order_semantics": "strictly increasing lifted phase over primitive transitions; admissible common-order prefixes under extension — L1805, L1815, L1817; N5-C1 L1630"
+    }
+   },
+   "F3": {
+    "result": "PASS",
+    "evidence": "both ends: B_± defined (L1793–L1796); P = directed set of finite admissible common-order prefixes under extension (N5-C1 L1630); iota = N_(B_±)(H) (N5-C1 L1632). Defined per instance (orbit) of the certified domain; no label, ratio, bounded class or fate used."
+   },
+   "F4": {
+    "result": "PASS",
+    "evidence": "order structure and count functions are specified analytically by owner results: strict alternation (L1805–L1807), per-prefix bound (L1819), prefix-cofinal repeatability (L1810–L1815). No phi constructed, none asserted to exist, no discrepancy bound computed."
+   },
+   "F5": {
+    "result": "PASS",
+    "evidence": "endpoint-level provenance: both streams are crossings of one orbit (co-realized, one instance); common order = that orbit's primitive-transition order; prefix-cofinal repeatability L1810–L1815. No R_pair membership of any outer pair adjudicated."
+   },
+   "F6": {
+    "result": "N/A",
+    "evidence": "continuous-dyad family; G-P2 applies to TDR-G only (counts as PASS for F7)"
+   },
+   "F7": "ADMISSIBLE_FOR_M2_ANALYSIS"
+  },
+  {
+   "record_id": "U-DYAD-2",
+   "pair": "(B_-, B_+)",
+   "family": "continuous dyad",
+   "F1": {
+    "result": "PASS",
+    "evidence": "RTG_NUMBER_GENESIS_DSN_v1_20_6.md @2a51c4b1; C7C-0 L1980 + NG_C7C0_RECIPROCAL_CERT_v2.md @5abd130d… (matches owner registry pin 5abd130d…); applied to U-DYAD-1"
+   },
+   "F2": {
+    "result": "PASS",
+    "evidence": {
+     "schema_key": "M2-SCHEMA-DYAD-BPLUS / M2-SCHEMA-DYAD-BMINUS — defining text RTG_NUMBER_GENESIS_DSN_v1_20_6.md @2a51c4b1 §6.6 N5-PHYS-1 [DEF] L1793–L1796",
+     "owner_version_hash": "RTG_NUMBER_GENESIS_DSN_v1_20_6.md @2a51c4b1",
+     "sector_class_key": "DYAD-THM-PRIM-CTR tube U_T (registry) — applied under the frozen freeze-manifest interpretation: the key classifies event type; the record's own domain provenance is checked separately (see census note N-1)",
+     "gauge_policy": "one-chart gauge-reduced (rho, eta) — L1799 gauge audit",
+     "orientation_event_semantics": "sign of rho separates B_+ / B_- — L1795–L1796, L1799",
+     "common_order_semantics": "strictly increasing lifted phase over primitive transitions; admissible common-order prefixes under extension — L1805, L1815, L1817; N5-C1 L1630"
+    }
+   },
+   "F3": {
+    "result": "PASS",
+    "evidence": "both ends: B_± defined (L1793–L1796); P = directed set of finite admissible common-order prefixes under extension (N5-C1 L1630); iota = N_(B_±)(H) (N5-C1 L1632). Defined per instance (orbit) of the certified domain; no label, ratio, bounded class or fate used. Unchanged by the swap per C7C-0 (L1980)."
+   },
+   "F4": {
+    "result": "PASS",
+    "evidence": "order structure and count functions are specified analytically by owner results: strict alternation (L1805–L1807), per-prefix bound (L1819), prefix-cofinal repeatability (L1810–L1815). No phi constructed, none asserted to exist, no discrepancy bound computed. Unchanged by the swap per C7C-0."
+   },
+   "F5": {
+    "result": "PASS",
+    "evidence": "endpoint-level provenance: both streams are crossings of one orbit (co-realized, one instance); common order = that orbit's primitive-transition order; prefix-cofinal repeatability L1810–L1815. No R_pair membership of any outer pair adjudicated. C7C-0 (L1980): swap leaves streams, domain, co-realization, common-order sector, repeatability and provenance unchanged."
+   },
+   "F6": {
+    "result": "N/A",
+    "evidence": "continuous-dyad family; G-P2 applies to TDR-G only (counts as PASS for F7)"
+   },
+   "F7": "ADMISSIBLE_FOR_M2_ANALYSIS"
+  }
+ ],
+ "summary": {
+  "continuous dyad": {
+   "ADMISSIBLE_FOR_M2_ANALYSIS": 2,
+   "NOT_ADMISSIBLE_FOR_M2_ANALYSIS": 0
+  }
+ },
+ "census_notes": {
+  "N-1 domain explicitness (evidence observation, not an admissibility verdict)": "N5-PHYS-1 is certified on 'a sufficiently small tube … after local shrinking' (L1565, L1793, L1801). Unlike N-1 / N-2-ORD (L2102), it has NOT been placed on the named explicit tube U_T. F2 was scored under the frozen freeze-manifest interpretation (the sector key classifies event type; the broad key admits no uncertified realization). Under a strict reading of F2 ('the sector key must be read off the record's own provenance'), the sector-class component would fail with R2-KEY and both records would be NOT_ADMISSIBLE. Flagged for co-owner confirmation.",
+  "N-2 evidence mode for analysis": "the continuous-dyad records carry analytic certificates only; no frozen numerical orbit data exist. Generating orbit data would be new data (G-search), so any later M2 analysis of these records must be analytic."
+ },
+ "forbidden_columns_check": "no N1, N2, Pi value, ≈_L, ~_a/~_b verdicts, phi existence, discrepancy bound, WD-DOM or PASS/FAIL of M2 appears in this record"
+}

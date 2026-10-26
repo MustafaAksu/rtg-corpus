@@ -1,0 +1,344 @@
+--- b1205.md	2026-09-30 05:48:04.591613023 +0000
++++ RTG_NUMBER_GENESIS_DSN_v1_20_6.md	2026-09-30 06:29:54.446848517 +0000
+@@ -1,16 +1,16 @@
+-# RTG Number Genesis DSN v1.20.5
++# RTG Number Genesis DSN v1.20.6
+ 
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+ **Date:** September 25, 2026  
+-**Document status:** ACTIVE owner ledger; **consumer-sync patch.** **Supersedes:** v1.20.4 (`5559169a…7eed8b`).  
++**Document status:** ACTIVE owner ledger; **grade-normalization patch.** **Supersedes:** v1.20.5 (`351384dc…d3f34c`).  
+ **DSN Methodology:** v1.3; §2/§6 structural migration completed in v1.20.3.  
+-**Methodology note:** the §2/§6 structural migration is complete. Full DSN Methodology v1.3 truth-grade normalization is not complete; 19 independent live scientific grade-decision rows are frozen for a separate owner ruling. Four additional combined `[from:]` occurrences in §9.2 are provenance-registry mirrors of those scientific grades and do not constitute independent grade decisions. None is changed through v1.20.5; the grade-decision pass is v1.20.6.  
++**Methodology note:** the §2/§6 structural migration is complete (v1.20.3). The normalization of the ruled combined-grade inventory is complete (v1.20.6): the 19 raw combined `[from: X/Y]` rows resolve into 11 owner grade decisions and 8 mirror synchronizations; the §9.2 provenance mirrors are synchronized; two latent substantive definitions were extracted into DEF blocks. **Carried forward, unchanged:** one live combined truth-status tag DEF/INTERP (§8, paradigm-synchronization note), written without `from:` and therefore outside the ruled inventory, found during v1.20.6 verification; and 12 bare RESULT tags without a paired `[from:]` (Methodology v1.3 §3.4). §9.2 artifact-role labels (e.g. `ENG/ALG audit`, `NUM/ENG provenance`) classify artifacts, not claims, and are out of scope.  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+ **Document class:** Foundational/technical bridge ledger. It does **not** modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics.  
+ **Companion documents (current verified pointer targets):** `RTG_PROGRAMME_OVERVIEW_v1.2` · `RTG_ONTOLOGICAL_FOUNDATIONS_v0.8` · `RTG_DYADIC_OSCILLATOR_DSN_v6.4.10` · `RTG_DISCRETE_GENESIS_DSN_v2.12.13` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.4`  
+ **Pointer-validation note:** the current source files listed above were revalidated during the v1.3 state-synchronization pass and retained unchanged through v1.19 (no fresh external owner-source revalidation was performed in v1.19). Section/guard pointers used below were checked in v1.17 against the live owner sources, the GAP-LOCK Lemma-3 closure record, and the ratified DISC-1 / DISC-2 artifact bundles. `DZT v0.17` is reported as the frozen current DZT state by `RTG_NG_PROGRAMME_REVIEW_AUDIT_v1.md`, but the v0.17 owner DSN is not present in the current project corpus; this Number Genesis DSN therefore does **not** use audit-reported DZT theorem status as an owner-source import.  
+ **Methodology:** DSN Methodology v1.3. This ledger does **not** itself constitute an OPEN-P1 physical bridge (Programme v1.2 SG-PROG-4: document location and representation theorems create no bridge authority).  
+-**Status summary (scientific state fixed at v1.20; carried unchanged through v1.20.5):** Local Track-A/Track-B number-like representations are certified on an explicit Dyadic-certified tube; the canonical section stream is a non-fixed re-blocking with theorem-grade logarithmic defect and physical slip-ratio limit (GAP-LOCK 1–3 closed); bounded commensurability yields unique rational labels (C7A) with a ratified ten-label dynamic lower bound `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} ⊆ Q_RTG^dyn`; C7C-0 reciprocal is closed and C7C-M is partially resolved (exact chain identity and conditional carrier closure `[ALG]`; interface-typed WD-DOM OPEN). C7B global breadth, C7C-A, N-4, N-6, NG-7B and full NG-8 remain OPEN. The full v0.4→v1.19 status narrative is preserved in Appendix A history.  
++**Status summary (scientific state fixed at v1.20; carried unchanged through v1.20.6, which normalizes grade notation only):** Local Track-A/Track-B number-like representations are certified on an explicit Dyadic-certified tube; the canonical section stream is a non-fixed re-blocking with theorem-grade logarithmic defect and physical slip-ratio limit (GAP-LOCK 1–3 closed); bounded commensurability yields unique rational labels (C7A) with a ratified ten-label dynamic lower bound `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} ⊆ Q_RTG^dyn`; C7C-0 reciprocal is closed and C7C-M is partially resolved (exact chain identity and conditional carrier closure `[ALG]`; interface-typed WD-DOM OPEN). C7B global breadth, C7C-A, N-4, N-6, NG-7B and full NG-8 remain OPEN. The full v0.4→v1.19 status narrative is preserved in Appendix A history.  
+ 
+ ---
+ 
+@@ -65,7 +65,9 @@
+ 
+ `[RESULT]` `[from: THM]` `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.10 §6.1, §6.4 | RID unavailable]` **Continuous phase/winding support.** The primitive dyad has order-6 elliptic linearization `lambda = exp(± i pi/3)` and uses a lifted angle with winding index `ell`; quantities entering only through `sin eta` or `cos eta` are insensitive to `ell`.
+ 
+-`[RESULT]` `[from: DEF/THM]` `[source: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1–§6.2]` **Finite phase support.** The discrete branch is defined on `Z_N` (N even), physical states are quotiented by global phase shift, relational phase differences are primary, and capped deterministic dynamics are eventually periodic.
++`[DEF]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1 | RID unavailable]` **Finite phase support — state space.** The discrete branch is defined on `Z_N` (N even), physical states are quotiented by global phase shift, and relational phase differences are primary.
++
++`[THM]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.2 | RID unavailable]` `[scope: deterministic system under a fixed node-count cap]` **Finite phase support — recurrence.** Capped deterministic dynamics are eventually periodic.
+ 
+ `[RESULT]` `[from: DEF]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 SG-10; RTG_DYADIC_OSCILLATOR_DSN_v6.4.10 SG-14; RTG_PROGRAMME_OVERVIEW_v1.2 SG-PROG-1 | RID unavailable]` **Cross-branch firewall.** No continuous dynamical law/coefficient may be imported into TDR-G and no discrete coefficient may be imported into the continuous branch without an explicit bridge theorem.
+ 
+@@ -140,7 +142,7 @@
+ 
+ `[RESULT] [from: ALG]` **N-5A-S1 CLOSED at v1.11.** The canonical phase-coincidence stream is independently typed, indefinitely repeatable, co-realized with Track A, ordered by N-2-ORD reachability, and not any fixed re-blocking `T^m`. **N-5 is therefore unblocked**; SG-NG-23 still forbids treating this closure itself as a nontrivial Q-like commensurability theorem.
+ 
+-`[RESULT] [from: ALG/MATH]` **N-5 structural spine advanced at v1.15.** Bounded synchronization discrepancy is now a certified presentation-independent commensurability relation on indefinitely repeatable common-order event streams (C1–C4); the synthetic `13:2` periodic language is a positive mathematical control (C5); the canonical dyadic A/B pair fails every positive rational bounded class (C6); and the opposite phase-coincidence streams `B_+`,`B_-` furnish the first physical bounded class at `1:1` (N5-PHYS-1). Consequently C7A supplies a well-defined unique positive-rational invariant on every certified bounded physical pair. Under the spectrum split, N5-PHYS-1 gives `1 in Q_RTG^bd`; the ratified DISC-1 and DISC-2 campaigns give `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn subseteq Q_RTG^bd`. Full realization of `Q_(>0)` and physical rational arithmetic remain OPEN.
++`[RESULT] [from: ALG]` **N-5 structural spine advanced at v1.15.** Bounded synchronization discrepancy is now a certified presentation-independent commensurability relation on indefinitely repeatable common-order event streams (C1–C4); the synthetic `13:2` periodic language is a positive mathematical control (C5); the canonical dyadic A/B pair fails every positive rational bounded class (C6); and the opposite phase-coincidence streams `B_+`,`B_-` furnish the first physical bounded class at `1:1` (N5-PHYS-1). Consequently C7A supplies a well-defined unique positive-rational invariant on every certified bounded physical pair. Under the spectrum split, N5-PHYS-1 gives `1 in Q_RTG^bd`; the ratified DISC-1 and DISC-2 campaigns give `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn subseteq Q_RTG^bd`. Full realization of `Q_(>0)` and physical rational arithmetic remain OPEN.
+ 
+ `[OPEN]` **Parallel robustness target:** N-1B-GROWTH — first derive an abstract history-preserving growth law; any Genesis/TDR-G realization remains separately gated by branch/realization scope.
+ 
+@@ -327,7 +329,7 @@
+ | signed history gives `Z` | `[RESULT][from: ALG]` scoped N-2 signed-history completion; inverse = comparison-orientation swap; sign physically realized as reachability orientation (N-2-ORD T4) | physical time reversal |
+ | winding and harmonics both give `Z` | `[MATH]` standard structures | proof they are the same RTG history representation |
+ | `Z_N` phase vs `S^1` | exact candidate character restriction `[MATH]`; RTG bridge `[OPEN]` | discrete/continuous dynamical equivalence |
+-| bounded synchronization class gives unique rational invariant | `[RESULT][from: ALG/MATH]` C1–C4 + N5-PHYS-1 + C7A; `1 in Q_RTG^bd` | claim that boundedness alone is dynamic admission, that all `Q_(>0)` is physically realized, or that rational arithmetic is already derived |
++| bounded synchronization class gives unique rational invariant | `[RESULT][from: ALG]` C1–C4 + N5-PHYS-1 + C7A; `1 in Q_RTG^bd` | claim that boundedness alone is dynamic admission, that all `Q_(>0)` is physically realized, or that rational arithmetic is already derived |
+ | strong dynamic rational admission | `[RESULT]` frozen DISC-1 + DISC-2 establish ten labels `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn` | equality with that set or with `Q_(>0)`, post-data gate retuning, or arithmetic from a label list |
+ | owner implementation agreement ⟹ presentation covariance | `[REJECTED]` — exhaustive equality to the pinned v18 implementation certifies implementation agreement, not node-relabeling covariance; P2 post-hoc audit finds 40/136 DISC-2 witness records convention-exposed while the ten-label projection remains robust | treating sorted-node tie-breaking as a physical invariant without an owner policy/theorem |
+ | equal `rho_Q` labels ⟹ interchangeable/composable physical inputs | `[REJECTED]` — `==_Q` is representation equivalence only; WD-DOM must be proved per operation (`1` already spans two disjoint realization families) | any operation defined on labels rather than realizations |
+@@ -1292,7 +1294,7 @@
+ 
+ `[RESULT] [from: ALG]` **N-3A:** the natural lifted primitive dynamics has zero deck index on a sufficiently small forward-invariant one-chart tube, so the induced `eta`-winding homomorphism `G_T -> Deck` is trivial and maximally non-faithful.
+ 
+-`[RESULT] [from: MATH/ALG]` **N-3B:** the already-constructed infinite cyclic history group admits the faithful abstract generator-to-generator isomorphism `G_T ~= widehat(S^1)`.
++`[RESULT] [from: THM]` **N-3B:** the already-constructed infinite cyclic history group admits the faithful abstract generator-to-generator isomorphism `G_T ~= widehat(S^1)`.
+ 
+ `[RESULT] [from: ALG]` **N-3C:** the actual primitive pullback of a phase character is
+ 
+@@ -1302,7 +1304,9 @@
+ 
+ so primitive dynamics is not a constant translation of harmonic labels. Fourier expansion of the sinusoidal factor mixes character sectors.
+ 
+-`[RESULT] [from: MATH/ALG]` **N-3D:** restriction to the finite subgroup `C_N` yields the quotient `G_T/(N G_T) ~= widehat(C_N) ~= Z_N`. For TDR-G this is admissible only as a representation bridge; all dynamical transfer remains forbidden.
++`[RESULT] [from: THM]` **N-3D:** restriction to the finite subgroup `C_N` yields the quotient `G_T/(N G_T) ~= widehat(C_N) ~= Z_N`.
++
++`[GUARD]` **Cross-branch representation/dynamics boundary.** For TDR-G this is admissible only as a representation bridge; all dynamical transfer remains forbidden.
+ 
+ `[INTERP]` Track-A history, local eta-winding, and harmonic representation are now explicitly separated: local eta-winding is dynamically trivial, while the character representation is faithful only at the abstract algebraic level.
+ 
+@@ -1346,7 +1350,8 @@
+ #### CLOSED N-3B — Abstract circle-character representation
+ 
+ **RID:** `NUMGEN-N3B-CHAR-ISO`
+-**Status:** CLOSED `[RESULT][from: MATH/ALG]` `[scope: abstract representation of the local Track-A group]`
++**Status:** CLOSED `[THM]` `[scope: abstract representation of the local Track-A group]`
++Depends on: N-2. The proof uses the standard theorem `widehat(S^1) ~= Z`.
+ 
+ Let
+ 
+@@ -1361,7 +1366,7 @@
+ rho_char(g^k)=chi_k.
+ ```
+ 
+-`[RESULT] [from: MATH/ALG]` This is the unique group homomorphism sending `g` to `chi_1`; it is surjective and has trivial kernel. Thus
++`[THM]` This is the unique group homomorphism sending `g` to `chi_1`; it is surjective and has trivial kernel. Thus
+ 
+ ```text
+ G_T ~= widehat(S^1).
+@@ -1402,7 +1407,7 @@
+    sum_n J_n(-m) chi_(m+n)(eta).
+ ```
+ 
+-`[RESULT] [from: MATH/ALG]` Primitive `T` therefore mixes phase-character sectors with `rho`-dependent amplitudes rather than translating the harmonic index by a fixed history unit.
++`[RESULT] [from: ALG]` Primitive `T` therefore mixes phase-character sectors with `rho`-dependent amplitudes rather than translating the harmonic index by a fixed history unit.
+ 
+ `[OPEN]` **N-3C+ / OPEN-9 connection.** Determine how this exact pullback reorganizes under the order-6 resonant block and whether roots-of-unity projectors give a useful character-sector proof of the dyadic p-resonance missing-slot/cancellation rules.
+ 
+@@ -1411,7 +1416,7 @@
+ #### CLOSED N-3D — Finite-character quotient / representation bridge
+ 
+ **RID:** `NUMGEN-N3D-FINITE-CHAR`
+-**Status:** CLOSED as pure representation theory `[RESULT][from: MATH/ALG]`; discrete dynamical realization remains OPEN
++**Status:** CLOSED as pure representation theory `[THM]`; discrete dynamical realization remains OPEN
+ 
+ For any `N>=1`, let
+ 
+@@ -1426,7 +1431,7 @@
+ res_N(chi_k)=psi_[k]_N.
+ ```
+ 
+-`[RESULT] [from: MATH/ALG]` The restriction is surjective with kernel `{chi_(qN):q in Z}`. Composing with N-3B gives
++`[THM]` `[scope: pure finite-character representation theory]` The restriction is surjective with kernel `{chi_(qN):q in Z}`. Composing with N-3B gives
+ 
+ ```text
+ rho_N := res_N o rho_char : G_T -> widehat(C_N),
+@@ -1436,6 +1441,7 @@
+ ```
+ 
+ For the TDR-G bridge application, `N` is the already-specified even phase size of the discrete branch.
++Depends on: N-3B.
+ 
+ `[GUARD]` This is a representation-theoretic quotient only. It transfers no continuous primitive map, coefficient, threshold, normal-form datum, observable, or dynamical law into TDR-G; it does not assert that the continuous dyad is a continuum limit of the discrete theory or that the discrete theory dynamically realizes the Track-A history generator.
+ 
+@@ -1447,7 +1453,7 @@
+ 
+ #### CLOSED N-3C+ — Roots-of-unity projectors / OPEN-9 kinematic boundary
+ 
+-**Status:** CLOSED at representation-kinematic level `[RESULT][from: ALG/MATH]`; the formerly OPEN `q=4,(0,3)` nonlinear cascade item is CLOSED-by-import from the Dyadic owner; universal missing-slot/reachable-basis work remains an Arithmetic-Dynamics interface target, not an NG foundational OPEN.
++**Status:** CLOSED at representation-kinematic level `[ALG]` `[assuming: ord(lambda)=p]` `[scope: formal complex vector-map monomials]`; the formerly OPEN `q=4,(0,3)` nonlinear cascade item is CLOSED-by-import from the Dyadic owner (pointer to the separate `DYAD-THM-Q403-PHASELAW` import; not graded here); universal missing-slot/reachable-basis work remains an Arithmetic-Dynamics interface target, not an NG foundational OPEN.
+ 
+ Let `R(Z)=lambda Z`, with **`ord(lambda)=p`** (hence `lambda^p=1`), and let the cyclic action on a complex vector-map component be conjugation
+ \[
+@@ -1550,7 +1556,9 @@
+ ```
+ is relationally defined (C1), invariant in boundedness under finite prefix-origin changes (C2), invariant under positive common rescaling `(p,q)->(kp,kq)` (C3), and has a unique reduced positive class for indefinitely repeatable streams (C4). Prefix-cofinal repeatability supplies directed unbounded event count without external metric time (SG-NG-25).
+ 
+-`[RESULT] [from: MATH/ALG]` **C5 controls CLOSED.** The abstract periodic language `A^6 B A^7 B` realizes a bounded synthetic `13:2` class; the neighboring `A^6 B A^8 B` fails linearly. This validates the discrimination power of the definition without constituting a physical RTG witness.
++`[RESULT] [from: ALG]` **C5 controls CLOSED.** The abstract periodic language `A^6 B A^7 B` realizes a bounded synthetic `13:2` class; the neighboring `A^6 B A^8 B` fails linearly. This validates the discrimination power of the definition.
++
++`[GUARD]` **Synthetic control ≠ physical witness.** The C5 controls do not constitute a physical RTG witness.
+ 
+ `[RESULT] [from: ALG]` **C6 canonical falsifier CLOSED.** The original canonical primitive/section pair is density-resonant at `6` but boundedly commensurate at no positive rational pair because the `6:1` residual grows logarithmically and every off-resonant candidate grows linearly.
+ 
+@@ -1560,7 +1568,9 @@
+ ```
+ Thus the first genuine physical bounded class is `1:1`.
+ 
+-`[RESULT] [from: ALG/MATH]` **C7A bounded rational-label theorem CLOSED.** Every certified bounded physical pair has a unique positive-rational invariant `rho_Q`; `1 in Q_RTG^bd`. Bounded realization and dynamic admission are distinct.
++`[RESULT] [from: ALG]` **C7A bounded rational-label theorem CLOSED.** Every certified bounded physical pair has a unique positive-rational invariant `rho_Q`; `1 in Q_RTG^bd`.
++
++`[GUARD]` **Bounded realization ≠ dynamic admission.** Bounded realization and dynamic admission are distinct.
+ 
+ `[RESULT]` **C7B-DISC-1 CLOSED.** Frozen DISC-1B PASS and DISC-1D PASS-INT establish `2,3 in Q_RTG^dyn subseteq Q_RTG^bd`.
+ 
+@@ -1702,11 +1712,13 @@
+ 
+ `[RESULT] [from: ALG]` **One-stream reblocking zero-control.** If `B=T^m` is merely a derived blocking of one Track-A stream, then at primitive prefix length `n` the `m:1` defect is `Delta_(m:1)(n)=n-m floor(n/m)`, hence `0 <= Delta < m`; it vanishes at complete block endpoints and is uniformly bounded on arbitrary primitive prefixes. `[COR v1.19]` The prior wording "vanishes identically" was too strong. SG-NG-20 remains decisive: this is a control only and cannot substitute for two independently certified event types.
+ 
+-`[RESULT] [from: MATH/ALG]` **C5-SYN-13 positive synthetic control.** Define the finite period
++`[DEF]` **C5-SYN-13 synthetic control language.** Define the finite period
+ ```text
+ W_(13:2) := A^6 B A^7 B
+ ```
+-and let `P_(13:2)` contain exactly the finite prefixes of `W^m` for finite `m>=1`. Then
++and let `P_(13:2)` contain exactly the finite prefixes of `W^m` for finite `m>=1`.
++
++`[RESULT] [from: ALG]` **C5-SYN-13 positive synthetic control.** On this language,
+ ```text
+ N_A(W)=13,
+ N_B(W)=2,
+@@ -1725,8 +1737,9 @@
+ |Delta_(13:2)(H)| <= 13
+ ```
+ for every synthetic admissible prefix. `gcd(13,2)=1`, and C3/C4 identify `13:2` as the unique reduced synthetic class.
++Depends on: the C5-SYN-13 DEF, N5-C3, N5-C4.
+ 
+-`[RESULT] [from: MATH/ALG]` **Nearby negative control.**
++`[RESULT] [from: ALG]` **Nearby negative control.**
+ ```text
+ W_fail := A^6 B A^8 B
+ ```
+@@ -1813,7 +1826,9 @@
+ 
+ ##### N5-C7A — bounded realized rational-label theorem — CLOSED
+ 
+-`[COR] [scope: v1.15 spectrum notation]` v1.15 used `Q_RTG^real` for every physically realized bounded rational label. v1.16 separates bounded realization from strong dynamic admission so boundedness is not silently promoted to genesis-grade dynamics:
++`[COR] [scope: v1.15 spectrum notation]` v1.15 used `Q_RTG^real` for every physically realized bounded rational label. v1.16 separates bounded realization from strong dynamic admission so boundedness is not silently promoted to genesis-grade dynamics. If the legacy symbol `Q_RTG^real` is retained in historical material, it is not to be silently repointed. In current live statements prefer `Q_RTG^bd` and `Q_RTG^dyn` explicitly.
++
++`[DEF]` **Bounded and dynamically admitted spectra.**
+ ```text
+ Q_RTG^bd :=
+ { p/q in Q_(>0) :
+@@ -1825,22 +1840,24 @@
+   exists at least one certified realization of r
+   passing the frozen same-realization stability+contingency discrimination gate }.
+ ```
+-If the legacy symbol `Q_RTG^real` is retained in historical material, it is not to be silently repointed. In current live statements prefer `Q_RTG^bd` and `Q_RTG^dyn` explicitly.
+ 
+-For every certified bounded physical pair define
++`[DEF]` **Rational-label representation map.** For every certified bounded physical pair define
+ ```text
+ rho_Q(A,B) := p/q,
+ ```
+ where `(p,q)` is any positive pair with bounded synchronization defect.
+ 
+-`[RESULT] [from: ALG/MATH]` C2 makes boundedness independent of finite origin convention; C3 identifies positive common rescalings; C4 proves any two admissible labels satisfy `p q'=p' q`. Therefore `rho_Q` is a well-defined **unique positive-rational invariant** of every certified bounded physical pair.
++`[RESULT] [from: ALG]` C2 makes boundedness independent of finite origin convention; C3 identifies positive common rescalings; C4 proves any two admissible labels satisfy `p q'=p' q`. Therefore `rho_Q` is a well-defined **unique positive-rational invariant** of every certified bounded physical pair.
++Depends on: N5-C2, N5-C3, N5-C4, and the rational-label representation map DEF.
+ 
+-From N5-PHYS-1,
++`[RESULT] [from: ALG]` From N5-PHYS-1,
+ ```text
+ rho_Q(B_+,B_-)=1,
+ 1 in Q_RTG^bd.
+ ```
+-This witness is bounded and is a positive control; it is not itself a dynamic realization. `1 in Q_RTG^dyn` is established **separately** by C7B-DISC-2 (26 witnesses) and must not be conflated with this bounded control.
++Depends on: the preceding well-definedness result and N5-PHYS-1.
++
++`[GUARD]` This witness is bounded and is a positive control; it is not itself a dynamic realization. `1 in Q_RTG^dyn` is established **separately** by C7B-DISC-2 (26 witnesses) and must not be conflated with this bounded control.
+ 
+ `[GUARD]` This is a directional representation theorem:
+ ```text
+@@ -1852,14 +1869,13 @@
+ 
+ `[OPEN]` Determine the breadth of `Q_RTG^bd` and `Q_RTG^dyn`; in particular, no current theorem establishes either spectrum to equal all `Q_(>0)`.
+ 
+-`[RESULT] [from: NUM/ALG under frozen protocol]` **C7B-DISC-1 CLOSED — DISC-1B PASS · DISC-1D PASS-INT.** The frozen `N=24` TDR-G retrigger-entry panel used the same 3456 raw seeds at `k in {0,1,2,3}`. The reproduced core was one-step identical to owner `genesis_mode_b_mc_v18.py` over all `24^4=331776` reduced states for each `k` (0 mismatches), and all 22 passing seeds were independently recounted through the owner counters (0 mismatches).
++`[ALG]` `[scope: exact exhaustive verification on the registered finite DISC-1 panel under the frozen C7B protocol]` `[conv: pinned TDR-G v18 signed_centered boundary and declared SWAP/P3 event semantics]` **C7B-DISC-1 CLOSED — DISC-1B PASS · DISC-1D PASS-INT — finite certificate.** The frozen `N=24` TDR-G retrigger-entry panel used the same 3456 raw seeds at `k in {0,1,2,3}`. The reproduced core was one-step identical to owner `genesis_mode_b_mc_v18.py` over all `24^4=331776` reduced states for each `k` (0 mismatches), and all 22 passing seeds were independently recounted through the owner counters (0 mismatches).
+ 
+ Base `k=1` census:
+ ```text
+ 3253 / 3456 dual-active;
+ all 3253 carry non-1 reduced classes.
+ ```
+-Thus the original non-`1` falsifier does not fire and bounded physical breadth extends beyond the N5-PHYS-1 `1:1` control.
+ 
+ Frozen dynamic discrimination:
+ ```text
+@@ -1872,14 +1888,20 @@
+ 2:1 x 12,
+ 3:1 x 10,
+ ```
+-so
++Evidence: owner transition `genesis_mode_b_mc_v18.py` and sealed harness `disc1_analysis_harness_v1.py` (hashes in §9.2 and the DISC-1 freeze manifest). Post-hoc robustness record (v1.20.6; not an admission result): P2 antipodal-endpoint exposure — 0/22 witnesses exposed; label projection `{2:1, 3:1}` unchanged under the tested reverse and inert alternative policies.
++
++`[RESULT] [from: ALG]` **C7B-DISC-1 breadth (DISC-1B PASS).** Thus the original non-`1` falsifier does not fire and bounded physical breadth extends beyond the N5-PHYS-1 `1:1` control.
++Depends on: the DISC-1 finite certificate (base census), the `Q_RTG^bd` DEF, C7B-ALG-T2, C7B-ALG-T3.
++
++`[RESULT] [from: ALG]` **C7B-DISC-1 dynamic admission (DISC-1D PASS-INT).** From the admitted classes,
+ ```text
+ 2 in Q_RTG^dyn,
+ 3 in Q_RTG^dyn,
+ {2,3} subseteq Q_RTG^dyn,
+ Q_RTG^dyn != empty.
+ ```
+-`[RESULT] [from: NUM/ALG under frozen protocol]` **C7B-DISC-2 CLOSED — B-check PASS · D-check PASS.** Protocol `NG_C7B_DISC2_PREREG_v1.md` (frozen `db87b455...919da9`) applied the already-certified `k`-axis (`K={0,1,2,3}`, `k_0=1`, `K_stab={2}`, `K_cont={0,3}`, same-realization guard, sealed harness `57a15421...`) to the **fresh owner-registered supplementary one-pass family** `|d|_c=3,4,5`, 10368 seeds, whose trajectories had never been inspected. Reported through legacy harness keys `disc1b`/`disc1d`; DISC-1 was not rerun. `[REPRO] [v1.18; P2 provenance qualified at v1.19]` Reproduction contract for both DISC campaigns (full hash manifest in `NG_C7B_DISC2_RESULT_v1.md`; owner-side reproduction gap recorded in `NG_TO_TDRG_REPRODUCIBILITY_GAP_v2.md`): owner source `genesis_mode_b_mc_v18.py` pinned at `9d787b43...675e`; the load-bearing unstated convention was `signed_centered` returning the representative in `(-N/2, N/2]` (differs from `[-N/2, N/2)` only at the antipode `N/2`); the IC-stage sign pairing is `d_AB^IC = -d` (post-swap member of the dyad cycle) — the wrong sign reproduces the exact IC cardinalities with the wrong IC set; cycle detection in the gauge-reduced 4-tuple `(Delta_AB, Delta_AC, d_AB, d_AC)` (a derived no-birth symmetry, not SG-2 gauge); the enumerator's transition core was certified one-step identical to v18 on `(next state, dn_swap, dn_P3)` over all `24^4` reduced states at every `k` before either panel was inspected.
++Depends on: the DISC-1 finite certificate (discrimination verdicts), the `Q_RTG^dyn` DEF, C7B-ALG-T4.
++`[ALG]` `[scope: exact exhaustive verification on the registered finite DISC-2 panel under the frozen C7B protocol]` `[conv: pinned TDR-G v18 signed_centered boundary and declared SWAP/P3 event semantics]` **C7B-DISC-2 CLOSED — B-check PASS · D-check PASS — finite certificate.** Protocol `NG_C7B_DISC2_PREREG_v1.md` (frozen `db87b455...919da9`) applied the already-certified `k`-axis (`K={0,1,2,3}`, `k_0=1`, `K_stab={2}`, `K_cont={0,3}`, same-realization guard, sealed harness `57a15421...`) to the **fresh owner-registered supplementary one-pass family** `|d|_c=3,4,5`, 10368 seeds, whose trajectories had never been inspected. Reported through legacy harness keys `disc1b`/`disc1d`; DISC-1 was not rerun. `[REPRO] [v1.18; P2 provenance qualified at v1.19]` Reproduction contract for both DISC campaigns (full hash manifest in `NG_C7B_DISC2_RESULT_v1.md`; owner-side reproduction gap recorded in `NG_TO_TDRG_REPRODUCIBILITY_GAP_v2.md`): owner source `genesis_mode_b_mc_v18.py` pinned at `9d787b43...675e`; the load-bearing unstated convention was `signed_centered` returning the representative in `(-N/2, N/2]` (differs from `[-N/2, N/2)` only at the antipode `N/2`); the IC-stage sign pairing is `d_AB^IC = -d` (post-swap member of the dyad cycle) — the wrong sign reproduces the exact IC cardinalities with the wrong IC set; cycle detection in the gauge-reduced 4-tuple `(Delta_AB, Delta_AC, d_AB, d_AC)` (a derived no-birth symmetry, not SG-2 gauge); the enumerator's transition core was certified one-step identical to v18 on `(next state, dn_swap, dn_P3)` over all `24^4` reduced states at every `k` before either panel was inspected.
+ 
+ ```text
+ base dual-active 7468 / 10368 ; non-1 base classes 7336        -> B-check PASS
+@@ -1888,11 +1910,18 @@
+ A1 owner recount 544/544 exact ; A2 fixed-old-class defect certificates (C7B-ALG-T4) 136/136 ; A3 domain 136/136
+ ```
+ 
+-Admitted classes (witness counts): `1:1` 26, `2:1` 4, `3:1` 28, `3:2` 12, `4:1` 14, `4:3` 14, `5:1` 6, `5:2` 10, `7:2` 6, `9:4` 16. Hence
++Admitted classes (witness counts): `1:1` 26, `2:1` 4, `3:1` 28, `3:2` 12, `4:1` 14, `4:3` 14, `5:1` 6, `5:2` 10, `7:2` 6, `9:4` 16.
++Evidence: owner transition, sealed harness, owner recount and certificates as recorded above and in §9.2. Robustness record: P2 antipodal-endpoint exposure — 40/136 witnesses convention-exposed, 96 unexposed, every admitted label with at least one unexposed witness; label set unchanged under the tested reverse and inert alternative policies.
++
++`[RESULT] [from: ALG]` **C7B-DISC-2 breadth (B-check PASS).** On the registered supplementary panel, 7336 of the 7468 dual-active base seeds carry non-`1` reduced bounded classes.
++Depends on: the DISC-2 finite certificate (base census), the `Q_RTG^bd` DEF, C7B-ALG-T2, C7B-ALG-T3.
++
++`[RESULT] [from: ALG]` **C7B-DISC-2 dynamic admission (D-check PASS).** From the admitted classes,
+ 
+ ```text
+ {1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn.
+ ```
++Depends on: the DISC-2 finite certificate (discrimination verdicts), the `Q_RTG^dyn` DEF, C7B-ALG-T4.
+ 
+ `[RESULT]` **`1 in Q_RTG^dyn`.** Established independently of the N5-PHYS-1 bounded control by 26 dynamically discriminating SWAP/P3 realizations (24 interior, 2 boundary). `1 in Q_RTG^bd` and `1 in Q_RTG^dyn` are **separate** statements of different epistemic status; the label-neutrality ruling makes the second admissible, since membership is existential through a certified realization and not a property of the numeral.
+ 
+@@ -2373,7 +2402,7 @@
+ 
+ `[RESULT] [from: ALG]` **Separation instances.** Flat data realize `(beta > 0, r_hol = 0)`. For the field-general full-content direction, because `C` has full row rank `beta`, choose any right inverse `R in F^(E x beta)` satisfying `C R = I_beta`; then `A=R` gives `r_hol=beta`. In the executable `Q` test suite, the simpler concrete Gram witness `A=C^T` also realizes `r_hol=beta`. Thus cycle capacity and holonomy content are certified as independent axes — the operator half of the Foundations diagnostic.
+ 
+-`[RESULT] [from: NUM/ALG]` **TDR-G `Z_N` zero-control.** Integer cycle vectors annihilate node-difference `Z_N` phase data mod `N` (rings `N = 6, 8, 12`; random graphs). `[COR v1.19]` A unit defect is detected when it has nonzero projection onto the declared cycle/cohomology sector; a defect on a bridge/pendant edge may be exact node-potential data and therefore invisible to cycle holonomy.
++`[RESULT] [from: ALG]` **TDR-G `Z_N` zero-control.** Integer cycle vectors annihilate node-difference `Z_N` phase data mod `N`. Depends on: the NG-7A integer null identity `C D^T = 0`. Provenance: finite exact checks on rings `N = 6, 8, 12` and sampled random graphs. `[COR v1.19]` A unit defect is detected when it has nonzero projection onto the declared cycle/cohomology sector; a defect on a bridge/pendant edge may be exact node-potential data and therefore invisible to cycle holonomy.
+ 
+ `[RESULT] [from: ALG] [v1.19]` **Fundamental-cycle completeness over abelian coefficient groups.** Fix a spanning forest and its fundamental **integral** cycle basis. For an edge cochain with values in any abelian coefficient group (including `Z_N`), vanishing sums on all fundamental cycles imply exact node-potential data: integrate the cochain along each tree to define vertex potentials; tree-edge residuals vanish by construction, and every non-tree residual equals its fundamental-cycle sum and therefore vanishes. No division or field-rank argument is used. `[GUARD]` The integral-basis qualification is load-bearing: arbitrary nonprimitive integer rescaling of cycle rows need not preserve completeness modulo `N`.
+ 
+@@ -2672,7 +2701,7 @@
+ | `disc2_supplementary_enumerator_v3_1.py` + `disc2_enumeration_sup_d345.json` + `disc2_transport_sup_d345.json` | registered supplementary-family enumeration; pinned owner triple-equivalence; 10368 seeds / 41472 records / witness transport provenance | `[NUM/ENG provenance]` |
+ | `disc2_witness_report_v2.py` + `disc2_harness_result.json` + `disc2_witness_report.json` | sealed-harness cross-check, six-verdict reporting, blindness / label-projection record | `[RESULT/NUM provenance]` |
+ | `disc2_ratification_audit_v1.py` + `disc2_ratification_certs.json` | A1 exhaustive owner recount; A2 fixed-old-class defect certificates (C7B-ALG-T4); A3 membership; A4 boundary block; A5 descriptive concentration | `[RATIFICATION audit]`; cert JSON canonical **LF** |
+-| `NG_C7B_DISC2_RESULT_v1.md` | PI-ratified DISC-2 result and complete artifact/hash manifest; ten-label dynamic lower bound | `[RESULT] [NUM/ALG under frozen protocol]` |
++| `NG_C7B_DISC2_RESULT_v1.md` | PI-ratified DISC-2 result and complete artifact/hash manifest; ten-label dynamic lower bound | `[RESULT] [from: ALG]` — finite exact `[ALG]` certificate on the registered panel |
+ | `NG_EXTERNAL_REVIEW_v118_RESPONSE_v1.md` | reconciliation of the independent v1.18 external review against the current owner; verifies I1–I7/P1–P3/5.1/5.2 and routes P2 to a dedicated post-hoc audit | `[AUDIT/RESPONSE]`, `3d12d9ae...7b3` |
+ | `disc2_p2_antipodal_exposure_audit_v1.py` + `.log` | post-hoc P2 antipodal-endpoint exposure audit: 40/136 convention-exposed, 96 unexposed; tested reverse/inert diagnostics preserve the ten-label projection | `[POSTHOC-DIAG]`, script `89a1466f...e1c`, log `51cde879...c47` |
+ | `disc2_p2_antipodal_exposure_annotation_v1.json` | per-witness annotation companion preserving the frozen ratified witness report; records `CONVENTION-EXPOSED` status and diagnostic-policy outcomes for all 136 ratified DISC-2 witnesses | `[POSTHOC-DIAG provenance]`, `43d28360...d550` |
+@@ -2688,8 +2717,8 @@
+ | `NG_L1_PRIMITIVE_CONTRACTION_CERT_v1.md` | human-readable L1 theorem/proof certificate | `[RESULT] [from: ALG]` documentation |
+ | `NG_N1_UNIFIED_T_ALIGNMENT_CERT_v1.md` | six-phase tube, primitive event alignment, orbit-level non-collapse, free-monogenic universal property | `[RESULT] [from: ALG]` documentation |
+ | `NG_N2_SIGNED_HISTORY_COMPLETION_CERT_v1.md` | pair-equivalence construction, injective embedding, infinite-cyclic Grothendieck completion, non-reversal interpretation | `[RESULT] [from: ALG]` documentation |
+-| `NG_N3_REPRESENTATION_LAYER_CERT_v1.md` | N-3A one-chart deck triviality, N-3B character isomorphism, N-3C pullback/mixing, N-3D finite-character quotient | `[RESULT] [from: ALG/MATH]` documentation |
+-| `NG_N3C_PLUS_OPEN9_PROJECTOR_CERT_v1.md` | roots-of-unity vector projector, p=6 support audit, q=4 p=8/p=12 representation-vs-cascade boundary | `[RESULT] [from: ALG/MATH]` documentation |
++| `NG_N3_REPRESENTATION_LAYER_CERT_v1.md` | N-3A one-chart deck triviality, N-3B character isomorphism, N-3C pullback/mixing, N-3D finite-character quotient | `[RESULT] [from: ALG]` (N-3A, N-3C) · `[THM]` (N-3B, N-3D) documentation |
++| `NG_N3C_PLUS_OPEN9_PROJECTOR_CERT_v1.md` | roots-of-unity vector projector, p=6 support audit, q=4 p=8/p=12 representation-vs-cascade boundary | `[ALG]` documentation |
+ | `ng_n3c_plus_projector_cert_v1.py` | exact residue/support micro-certificate; deliberately excludes nonlinear OPEN-9 coefficients | `[ENG/ALG audit]` |
+ | `ng_n3c_plus_projector_cert_v1.log` | execution log for the residue/support micro-certificate | `[NUM/ENG audit]` |
+ | `NG_NG8A_ORBIT_CARDINAL_CERT_v1.md` | NG-8A post-event orbit-equinumerosity theorem; fixes event/state off-by-one convention | `[RESULT] [from: ALG]` documentation — relayed to corpus 2026-08-28; cross-checked consistent with the independent re-certification (`NG_NG8AB_CROSSCHECK_v1.md`) |
+@@ -2708,9 +2737,9 @@
+ | `NG_N5C6_CANONICAL_PAIR_FALSIFIER_v1.md` | N5-C6 theorem: canonical A/B pair has unbounded bounded-defect candidate for every positive rational `p:q`; density limit remains 6 | `[RESULT][from: ALG]` conditional on N-5-COMM-BD definition |
+ | `ng_n5c6_canonical_pair_falsifier_v1.py` / `.log` | exit-code-gated algebraic audit of zero-slope uniqueness/reblocking cases | `[ENG/ALG audit]` |
+ | `N5-C1–C4 in-ledger proofs (v1.15)` | relational defect definition, finite-origin invariance, rescaling, reduced-class uniqueness using prefix-cofinal repeatability | `[RESULT][from: ALG]` — no separate external certificate yet |
+-| `C5-SYN-13 in-ledger control (v1.15)` | synthetic periodic `13:2` bounded positive control plus neighboring linear-failure control | `[RESULT][from: MATH/ALG]` — not an RTG physical realization |
++| `C5-SYN-13 in-ledger control (v1.15)` | synthetic periodic `13:2` bounded positive control plus neighboring linear-failure control | `[RESULT][from: ALG]` — not an RTG physical realization |
+ | `N5-PHYS-1 in-ledger proof (v1.15)` | opposite phase-coincidence `B_+ / B_-` strict alternation and uniform `1:1` discrepancy bound | `[RESULT][from: ALG]` — local continuous-dyad physical witness |
+-| `N5-C7A in-ledger theorem (v1.15; notation corrected at v1.16)` | well-defined unique positive-rational invariant on every certified bounded physical pair; current notation `1 in Q_RTG^bd` | `[RESULT][from: ALG/MATH]` |
++| `N5-C7A in-ledger theorem (v1.15; notation corrected at v1.16)` | well-defined unique positive-rational invariant on every certified bounded physical pair; current notation `1 in Q_RTG^bd` | `[RESULT][from: ALG]` |
+ | `C7B-DISC-1 protocol (v1.15)` | frozen pre-data TDR-G SWAP/P3 discrimination architecture; historical pre-registration record | `[CLOSED protocol; superseded status by v1.16 result]` |
+ | `NG_DISC1_RESULT_v4.md` + `disc1_result.json` | ratified DISC-1B PASS / DISC-1D PASS-INT; `2,3 in Q_RTG^dyn`, no exhaustiveness claim | `[RESULT]` |
+ | `disc1_safeguards_v2.py/.log` + `genesis_mode_b_mc_v18.py` | owner differential, independent recount, fixed-period control, archetype regression; all safeguards pass | `[NUM/ENG provenance]` |
+@@ -2792,6 +2821,18 @@
+ ---
+ 
+ ## Changelog
++### v1.20.6 — September 29, 2026
++
++**Grade-normalization patch.** Applies the co-owner rulings recorded in `NG_V1206_RULING_LEDGER.json` (groups 1–3). No new result; every change re-expresses an existing claim's grade under Methodology v1.3, splits a block whose parts differ in status, domain or evidential basis (K2), or re-types a latent definition.
++
++- `[COR v1.20.6]` The v1.20.4–v1.20.5 header described 19 live combined-grade rows as "independent grade-decision rows". Row-by-row normalization showed that this count included summary/module/provenance mirrors: the 19 raw rows resolve into **11 owner grade decisions** (rows 1, 6, 8, 10, 11, 14, 15, 16, 17, 18, 19) and **8 mirror synchronizations** (rows 2, 3, 4, 5, 7, 9, 12, 13). The §9.2 provenance mirrors are synchronization-only and outside the 19. Two latent substantive definitions were extracted into DEF blocks as a claim-typing correction; they are not grade decisions and are not counted.
++- **§9.2 mirror count: five, not four.** Four §9.2 mirrors use the `[from: X/Y]` syntax; a fifth, the DISC-2 result row, was written `RESULT NUM/ALG under frozen protocol` without `from:` and was missed by the regex behind the earlier "four". It is synchronized under the same approved mirror rule; leaving it would have left the registry contradicting the DISC-2 owner grade.
++- **Criterion K1–K6** (as amended by the co-owner): decompose by assertion (substantive definitions are DEF); split on differing status, domain/assumptions or evidential basis; standard mathematics is recorded in `Depends on:`/proof provenance, and `[scope: standard mathematical input]` is used only for background-standard claims; imports carry the source grade directly; mirrors synchronize without creating authority; THM vs ALG by claim form, not as a strength ladder.
++- **Owner rulings.** Row 1 split into a DEF import (Discrete Genesis §6.1) and a THM import (§6.2, fixed node-count cap). N-3B and N-3D bodies THM (Depends on N-2 / N-3B). N-3C consequence and N-3C+ core ALG/RESULT from ALG; the `q=4,(0,3)` cascade is a pointer to its separate import. C5-SYN-13 split into DEF (control language and admissible prefix set) + RESULT from ALG; negative control RESULT from ALG. C7A split into the well-definedness synthesis, the bounded witness `1 ∈ Q_RTG^bd`, and a GUARD. NG-7A `Z_N` zero-control RESULT from ALG, finite checks as provenance. **DISC-1 and DISC-2** each split (required by K2) into a finite-scope ALG certificate, a RESULT from ALG breadth consequence and a RESULT from ALG dynamic-admission consequence; exact exhaustive integer verification on a registered finite panel is finite exact verification (Methodology v1.3 L716, L556), not NUM; membership in `Q_RTG^dyn` is existential and is fully discharged by exactly verified witnesses. Hashes are recorded as evidence, not in `[conv:]`. P2 exposure is a robustness record, not part of the admission grade; DISC-1: 0/22 witnesses exposed (post-hoc audit, v1.20.6).
++- **Mirrors.** Rows 2, 3, 4, 7, 9 synchronized; rows 5, 12, 13 synchronized with their usage-boundary sentences separated as GUARD blocks.
++- **K1 definition repair.** `Q_RTG^bd`, `Q_RTG^dyn` (one DEF) and the `rho_Q` map (a second DEF) extracted from the C7A COR note, which remains as the historical record of the v1.15 → v1.16 notation split. A definition of a map is kept separate from the proof that it is well-defined.
++- **Carried forward, not changed:** one live combined truth-status tag DEF/INTERP in §8 (written without `from:`, outside the ruled inventory; found by the v1.20.6 verification scan over all slash-combined bracket tags in any syntax); 12 bare RESULT tags without a paired `[from:]` (a pre-patch count of 13 had also counted the §9.2 DISC-2 row, which is a combined mirror and is synchronized here); §9.2 artifact-role labels and the alias-table row `[ENG/NUM]` (not claim grades).
++
+ ### v1.20.5 — September 29, 2026
+ 
+ **Consumer-sync patch.** Records upstream consumer state; no scientific result changes. The 19 grade-decision rows and their four §9.2 mirrors are untouched; grade normalization moves to **v1.20.6**.

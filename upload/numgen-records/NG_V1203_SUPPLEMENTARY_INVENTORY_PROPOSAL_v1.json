@@ -1,0 +1,2342 @@
+{
+ "base_sha256": "35fe1a65e831b620ec1d81819cdd614f07836395870f694dcc2d91a31dde1053",
+ "status": "DRY PROPOSAL \u2014 supplementary to the approved 119-block inventory; NOTHING written; one ruling needed (OPEN/HOLD inside co-moving modules)",
+ "rule": "a non-inventoried \u00a72 block or unanchored line co-moves verbatim, in original relative order, with the module whose theorem blocks MOVE; modules with no theorem blocks are registry-native and stay in \u00a72",
+ "items": [
+  {
+   "kind": "block",
+   "line": 174,
+   "end": 177,
+   "h": "7b3e28a3f009d76968d9d596f75db2aec8c52e48b0cde1ce2e18146c90ce2154",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "Priority ordering",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "anchor": "`[DEF]` **Routing-label guard.** \u201cArithmetic Dynamics\u201d is used in v1.15 only as a descriptive inter-study routing label "
+  },
+  {
+   "kind": "block",
+   "line": 194,
+   "end": 200,
+   "h": "1dc976a4d1471e8b4d737860be8c0b47a990befa84f41975a4e0744099ec93a4",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "CLOSED N-1 \u2014 Relational repetition / natural-number realization",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "N-1B-GROWTH topology-changing successor robustness [OPEN]"
+  },
+  {
+   "kind": "block",
+   "line": 257,
+   "end": 312,
+   "h": "5687d088557cb6eb61b58b3ca1da8e9c31e0c47a650de04a77615e497355685e",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "OPEN N-1A1 \u2014 Counting Equivalence",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "anchor": "**Epistemic target:** `[DEF]` after admissibility conditions on the counting map are fixed"
+  },
+  {
+   "kind": "block",
+   "line": 318,
+   "end": 326,
+   "h": "e05deca655f9edb0ba8c7530c2ef123462150cf7396182489ac869f936d0e5ef",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Minimal event token.** Let"
+  },
+  {
+   "kind": "block",
+   "line": 327,
+   "end": 334,
+   "h": "d857dbe608d8524489028d54b678e59353506edff2ddf7f23e9a95057b149330",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Primitive counting predicate.** For this model,"
+  },
+  {
+   "kind": "block",
+   "line": 379,
+   "end": 386,
+   "h": "f4ae05c77d519ca197667d6e4f37b19a9ca4d1f609633ea6979c048e281a2680",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **State partition.** Write a neighborhood state as"
+  },
+  {
+   "kind": "block",
+   "line": 387,
+   "end": 400,
+   "h": "d06efe72ca682ade23e58f4f150c404c81ddae5098d1545e2b013dda47a1eeb1",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Sufficient causal interface.** A boundary trace `b` is sufficient on domain `U` when there exists a local tran"
+  },
+  {
+   "kind": "block",
+   "line": 401,
+   "end": 408,
+   "h": "aeccd7b7e4975007e3b0b2ea051b797ae930fd8b989bc37e5fda30818749df6f",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Boundary interface object.** Represent the interface as"
+  },
+  {
+   "kind": "block",
+   "line": 409,
+   "end": 416,
+   "h": "3a4321ec862b2dfddce86bc037dc475b0eb11a12194cd5ef49a310dc0d1393b3",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Admissible strict boundary isomorphism.** A support/boundary pair `(phi,psi)` is admissible only if:"
+  },
+  {
+   "kind": "block",
+   "line": 417,
+   "end": 430,
+   "h": "e8e2977db2c68c43c08b26aff0b6e0bf69ecb7de8efc3c3ee6bc342847dcf0e4",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Counting-level context compatibility.** Strict compatibility may fail while the event type remains stable when"
+  },
+  {
+   "kind": "block",
+   "line": 433,
+   "end": 442,
+   "h": "f3a09d729a8ae07cd5e3ada12081d6483d61df9acf2db2d8a5b7bfe3d5c15baf",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` Use support `S={i,j}` and one connected node `k`, with"
+  },
+  {
+   "kind": "block",
+   "line": 443,
+   "end": 455,
+   "h": "ac4f08b27b9f5a61a80246f937891459073ada790fde1936db2c1a88dd6a6178",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Abstract boundary-coupled transition law.** On a local phase chart chosen so that the signed increment does no"
+  },
+  {
+   "kind": "block",
+   "line": 488,
+   "end": 495,
+   "h": "4fcb227dfc56e77d7857cca6f4caa67c87f75e665059513e02ede2f65da45848",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[COR]` **Closure does not by itself prove minimality.** The closure identity proves that, conditional on the retained i"
+  },
+  {
+   "kind": "block",
+   "line": 496,
+   "end": 503,
+   "h": "71e40915124ef7619e239497912e845f63ba3de9efa0c803323779f6e08b1ef1",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Minimal sufficient interface relative to a transition law.** A sufficient interface coordinate `beta` is minim"
+  },
+  {
+   "kind": "block",
+   "line": 530,
+   "end": 531,
+   "h": "335da2e62f278d010a336a8f2fe1ee27d2e1f135d2c01cd28ccbccb3c45fc054",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Why fixed support comes first.** The minimal successor test isolates \u201cone more event of the same type\u201d from ch"
+  },
+  {
+   "kind": "block",
+   "line": 532,
+   "end": 533,
+   "h": "b517a43261c272c22a50cfc3a0672a093f3e3bbbd2eeeb0937a78e90531ada56",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **History as a composable event path.** Let `G_E` be the directed event graph/category whose vertices are admiss"
+  },
+  {
+   "kind": "block",
+   "line": 534,
+   "end": 541,
+   "h": "d732b41ff3f0d68c8d63130233b3ee23421788d07dfd6f16e527d7b927b7dc8d",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Native successor criterion.** Successor extensibility means:"
+  },
+  {
+   "kind": "block",
+   "line": 544,
+   "end": 559,
+   "h": "9249383cf3e990dfeec37547d7d13257d4c2ca78d0a47cf3a18d20716d55d4ea",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` Take the instantaneous relational state space `V=S^1` and the total oriented recurrence"
+  },
+  {
+   "kind": "block",
+   "line": 564,
+   "end": 565,
+   "h": "950758604b348fd4defe124dbaa7d4215d3c52706975693c2fa00d278aef5e3f",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Metalanguage correction.** Natural-number-valued path length may be used to audit the construction, but it is "
+  },
+  {
+   "kind": "block",
+   "line": 566,
+   "end": 567,
+   "h": "eb0ff3385857f3beae9613791cfc35e875604db24a76ae9e4c488fe1be1ad9ed",
+   "tags": [
+    "HYP"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[HYP]` **State-versus-history consequence.** The abstract model demonstrates a mechanism by which a compact/recurrent i"
+  },
+  {
+   "kind": "block",
+   "line": 568,
+   "end": 569,
+   "h": "b54f9251d5702a38a33d0cc5b98d628cec63426602e7c738e716c53442de78e7",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[OPEN]` **Physical history-retention question.** The event-graph proof does not by itself establish that full RTG obser"
+  },
+  {
+   "kind": "block",
+   "line": 570,
+   "end": 574,
+   "h": "e745bcf6618eba773cd54517a1f32822964e19034a5e9158a3a138faad4a2407",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[OPEN]` **N-1B-GROWTH strengthening.** Test a topology-changing realization (birth/network growth). Required target: a "
+  },
+  {
+   "kind": "block",
+   "line": 607,
+   "end": 632,
+   "h": "022b88b0a4631abfe6b4f2db1580f11aec6f8caf0e007c299f8ae3f014dbcd05",
+   "tags": [
+    "HYP"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[HYP]` **Physical Number-Genesis interpretation.** If N-1A supplies a relationally admissible event type and N-1B suppl"
+  },
+  {
+   "kind": "block",
+   "line": 635,
+   "end": 638,
+   "h": "7a3cbbfdcba7470e9da60477498b1d3b2f2ab36ba0fb35b3fd2fdba095ddb2b6",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **Additive-invariant certificate is sufficient, not necessary.** If an additive functional `I` is used to sepa"
+  },
+  {
+   "kind": "block",
+   "line": 639,
+   "end": 641,
+   "h": "51a6c7b1c195f0f3d020de1b3fb08c81a63501128da750bd88ef90e09a863c51",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[OPEN]` `[scope: general branching/topology-changing histories]` **Other memory sources.** Recurrence holonomy (NG-7B),"
+  },
+  {
+   "kind": "block",
+   "line": 647,
+   "end": 661,
+   "h": "e3b4ed8dd32b44d292986b0eefbb5dd38f91fa7f8b8078e240535e8a5f6f9f18",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Scoped block transformation.** Let `F:=T^6` be the exact six-step finite iterate of the primitive dyad map"
+  },
+  {
+   "kind": "block",
+   "line": 662,
+   "end": 663,
+   "h": "4ca573090d56e4cb6c2449801e93249b0f8d82707d835f81e87a3d7402da4161",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Physical memory.** A present-state quantity `m` is a physical memory relative to a reduced state projection `p"
+  },
+  {
+   "kind": "block",
+   "line": 679,
+   "end": 680,
+   "h": "7fb23e5a9c6d3bbe75355f44dd488985a97c0b62de7a2aea2f0288320c2fe49e",
+   "tags": [
+    "NUM"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "A scan on `(0.005,2.0]` with step `0.005` finds exactly one sign-change bracket. This is **uniqueness at the stated scan"
+  },
+  {
+   "kind": "block",
+   "line": 692,
+   "end": 693,
+   "h": "adbfa2c280db96b68a6ed3d6f429e1ccb296e37f2c887ecc227d03a54ccd20c1",
+   "tags": [
+    "NUM"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[NUM] [scope: witness orbit, 3000 blocks]` **Finite-horizon non-collapse.** Independent exact-map iteration gives stric"
+  },
+  {
+   "kind": "block",
+   "line": 694,
+   "end": 701,
+   "h": "5f271f25375b64b53ff590c9922626f9d319817fd819d413eaf1d9bfc8c5e4d7",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[COR]` **F1 primitive/normal-frame correction.** The v0.7 line"
+  },
+  {
+   "kind": "block",
+   "line": 822,
+   "end": 835,
+   "h": "7496bbf4d08b2a1ba45394a395598dc09d5edc8717e9100514b086eceb14b54f",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[DEF]` **Primitive counting type.** For each `x in U_T`, the event token is"
+  },
+  {
+   "kind": "block",
+   "line": 881,
+   "end": 882,
+   "h": "c2449ec60f53d90c44bbdb35af026134f5f748a1bdb7538c8da1124ceb318f5a",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **Scope of N-1 closure.** The theorem is local and existential in the L1 radius: it proves a sufficiently smal"
+  },
+  {
+   "kind": "block",
+   "line": 883,
+   "end": 884,
+   "h": "c4348b0bf52c7c759bb2fb1effc36eec4340f409348562d344cfbd8accb4f648",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **Distinguished generator, not uniqueness theorem.** The exact primitive dyadic map `T` is the distinguished u"
+  },
+  {
+   "kind": "block",
+   "line": 887,
+   "end": 888,
+   "h": "873cf22b57a9a3193841b3146206d2a0259b8c3beeb59f321f0174a98813c278",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **Local existence, not optimized radius.** L1 and the tube argument prove existence of sufficiently small `eps"
+  },
+  {
+   "kind": "block",
+   "line": 889,
+   "end": 890,
+   "h": "10c797072cd68842c0a2e323296e7bc21cf176138b6a43f91372cfa973b66020",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **Six-step block is realization-specific.** `F=T^6` enters because this dyadic realization has the certified o"
+  },
+  {
+   "kind": "block",
+   "line": 891,
+   "end": 892,
+   "h": "fd3de710dba1d746d397d565053072bcfcfa5931ba9b4d1e31e109defa0fd4bf",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **Realization, not universal derivation.** N-1 is a concrete local RTG realization of the free natural-number "
+  },
+  {
+   "kind": "block",
+   "line": 893,
+   "end": 895,
+   "h": "8a30dd0047440bb9a7865ad3dca42129d7e38730e36d9681404363d3f0ff2cc6",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[OPEN]` **General history-quotient semantics.** N-1C is closed here for a deterministic transformation-monoid realizati"
+  },
+  {
+   "kind": "block",
+   "line": 896,
+   "end": 897,
+   "h": "f6920978949e860a4ef2daa431c97c352e7ffd3372580f294e9871ebd835f79f",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **No winding promotion.** What is verified numerically on the witness is no `eta`-winding (`ell=0`) over the a"
+  },
+  {
+   "kind": "block",
+   "line": 898,
+   "end": 905,
+   "h": "c5c7acc4f884e9b6b7b3c71b902af07ce2dc0afbeb2a1adbcbb62652b4c22ac5",
+   "tags": [
+    "COR v1.20",
+    "DEF",
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **Coefficient conflation.** `[COR v1.20]` Upstream provenance is now resolved (Dyadic v6.4.10 \u00a76.5, \u00a76.14, `[D"
+  },
+  {
+   "kind": "block",
+   "line": 908,
+   "end": 909,
+   "h": "0ea25d7ab2119eb944a2f5c6921381f50f8bd89819a790ed95d4f9b4eaf09104",
+   "tags": [
+    "INTERP"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[INTERP]` **Bounded state does not bound history.** The N-1 dyad gives an explicit counterexample to any inference \u201cbou"
+  },
+  {
+   "kind": "block",
+   "line": 910,
+   "end": 913,
+   "h": "774f58974012c5670085255a7e95f2d9ef3d1f5ef1904c6bad022e9e2de1b935",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "anchor": "`[GUARD]` **Continuous-branch realization only.** The N-1/N-2 construction proven here belongs to the continuous primiti"
+  },
+  {
+   "kind": "block",
+   "line": 923,
+   "end": 928,
+   "h": "f88d8b66f0e1c070673238c20b66b4907eb827b8fb40c4b841451060065fb282",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "anchor": "`[DEF]` **Oriented forward-history pair.** Form `M_T x M_T`. A pair `(A,B)` compares two forward histories with an orien"
+  },
+  {
+   "kind": "block",
+   "line": 979,
+   "end": 980,
+   "h": "0bf55dcf67441326acd26a35e411005b3c6e9b105e64456570856081114dccef",
+   "tags": [
+    "INTERP"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "anchor": "`[INTERP]` **RTG signed-history reading.** Positive/negative orientation records comparative excess between two forward "
+  },
+  {
+   "kind": "block",
+   "line": 981,
+   "end": 986,
+   "h": "52399d60df9465915d9ff7658af72b2dc27a167c134e93ed4f2ae40c884920d0",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "anchor": "`[GUARD]` **N-2 scope.** This is a Track-A local signed-history comparison group derived from the N-1 primitive-dyad mon"
+  },
+  {
+   "kind": "block",
+   "line": 998,
+   "end": 1002,
+   "h": "9d4f341c1d3f884c87fcc824955f5b066129ec1b5a7dd916b74a1fd59227c90a",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.3a N-2-ORD physical order representation \u2014 CLOSED at v1.6",
+   "anchor": "`[GUARD]` Primitive-step/cross-residue monotonicity is false in general; the numerical certificate supplies explicit cou"
+  },
+  {
+   "kind": "block",
+   "line": 1035,
+   "end": 1036,
+   "h": "cd266260b11b6596775467167a1b13526558d1207199fa0a368f45a756ae89f0",
+   "tags": [
+    "INTERP"
+   ],
+   "s2_module": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "anchor": "`[INTERP]` Track-A signed history and physical local `eta`-winding are not the same realization. The radial-memory mecha"
+  },
+  {
+   "kind": "block",
+   "line": 1037,
+   "end": 1040,
+   "h": "29df0e3b419744d36e844f90fabb52b2294f229b04a0e219498e09a09873fa43",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "anchor": "`[GUARD]` This is not a theorem about every bounded orbit or bounded six-cycle. It is a local theorem on the sufficientl"
+  },
+  {
+   "kind": "block",
+   "line": 1065,
+   "end": 1068,
+   "h": "2885d98a830c6fd6dccfe595dd107a7b349ab53ecf5cfb1d60f1a3ef700edb1c",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-3B \u2014 Abstract circle-character representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "anchor": "`[GUARD]` This is a faithful **abstract** representation. It does not state that one physical `T` update increments a ha"
+  },
+  {
+   "kind": "block",
+   "line": 1102,
+   "end": 1105,
+   "h": "e1526c0e762cebabf73d3ba597435ebaf18ac33191759f1614d610500f5a39dd",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "anchor": "`[OPEN]` **N-3C+ / OPEN-9 connection.** Determine how this exact pullback reorganizes under the order-6 resonant block a"
+  },
+  {
+   "kind": "block",
+   "line": 1135,
+   "end": 1136,
+   "h": "500d25254386ee0dd62953498db4c9bfc371b66c96b5bddd48cb55b2e5c4cf61",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-3D \u2014 Finite-character quotient / representation bridge",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "anchor": "`[GUARD]` This is a representation-theoretic quotient only. It transfers no continuous primitive map, coefficient, thres"
+  },
+  {
+   "kind": "block",
+   "line": 1137,
+   "end": 1142,
+   "h": "39483ce00c8a2cbb28a69996b67227dc66d1779064abee7b44e48a4395d08ba7",
+   "tags": [
+    "INTERP"
+   ],
+   "s2_module": "CLOSED N-3D \u2014 Finite-character quotient / representation bridge",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "anchor": "`[INTERP]` Finite phase distinguishability identifies abstract character labels modulo `N`; it does not identify Track-A"
+  },
+  {
+   "kind": "block",
+   "line": 1171,
+   "end": 1172,
+   "h": "29a804a3c04ee52f346e482551790d1b1ee9f1376ca72ce881c5b3e377f014f9",
+   "tags": [
+    "COR v1.19"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "anchor": "This is the exact representation-theoretic origin of the one-step p-resonance condition. `[COR v1.19]` The exact-order h"
+  },
+  {
+   "kind": "block",
+   "line": 1205,
+   "end": 1206,
+   "h": "192892b2b2098c0408e7d765ee4f62232ca6a48034ce0c28bc088c80ee011efd",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "anchor": "`[GUARD]` **Representation/dynamics boundary.** Character covariance determines allowed residues and impossible charge r"
+  },
+  {
+   "kind": "block",
+   "line": 1253,
+   "end": 1256,
+   "h": "2bc72d6a4e23e526e3b680c26e1a71ac9af4326bd028477746c4df69c37a7afe",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "CLOSED N-5A \u2014 Second co-realized recurrence / event stream",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` See SG-NG-20. A pair `(T^m,T^n)` generated solely by one certified event type does not close N-5A."
+  },
+  {
+   "kind": "block",
+   "line": 1261,
+   "end": 1264,
+   "h": "d19d4ca865243cbcff8a67c53a45d9968b8cf6eaa3b387eaee95776947f7f9e3",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "OPEN N-5 \u2014 Bounded synchronization commensurability / realized Q-like labels",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "anchor": "**Status:** ACTIVE `[OPEN]` \u2014 C1\u2013C4, C5-SYN-13, C6, N5-PHYS-1 and C7A CLOSED; C7B-DISC-1 and C7B-DISC-2 CLOSED with ten "
+  },
+  {
+   "kind": "block",
+   "line": 1280,
+   "end": 1289,
+   "h": "731ff33c9c04f6c6ec3c10300658af6317318a5fd3efe0c364cf10608f7656b8",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N5-C1 \u2014 relational definability \u2014 CLOSED",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[DEF]` **Bounded synchronization commensurability.**"
+  },
+  {
+   "kind": "block",
+   "line": 1292,
+   "end": 1297,
+   "h": "4db3630196fb14c67c04b25523a3847011bde4d3be02ac433320f447a3995d73",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "Prefix-cofinal indefinite repeatability",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "anchor": "`[DEF]` A certified stream `B` is **prefix-cofinally indefinitely repeatable** on a common-order comparison sector iff"
+  },
+  {
+   "kind": "block",
+   "line": 1298,
+   "end": 1299,
+   "h": "0fe036b63f577fdb888c79fc9ba661c038a6e7717d43b0bdba70d3c8373d461f",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "Prefix-cofinal indefinite repeatability",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "anchor": "`[GUARD]` This is successor extensibility through arbitrarily long **finite** relational histories. It does not assume a"
+  },
+  {
+   "kind": "block",
+   "line": 1312,
+   "end": 1313,
+   "h": "1157ad85d88dea3c2566aee08f8a549c20bd026b6979f4ee1b27203697e3b08a",
+   "tags": [
+    "COR v1.19"
+   ],
+   "s2_module": "N5-C2 \u2014 finite-origin/prefix invariance \u2014 CLOSED",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "The origin change is therefore an additive constant. Bounded/unbounded synchronization status is invariant under finite "
+  },
+  {
+   "kind": "block",
+   "line": 1386,
+   "end": 1387,
+   "h": "f4bca22ebd989c9a5d06ebd4006a8dbda798b018db513af925954d960000d5ef",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N5-C5 \u2014 control package \u2014 CLOSED at mathematical-control level",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` C5-SYN-13 is an abstract two-symbol common-order language. It proves mathematical non-emptiness of the criteri"
+  },
+  {
+   "kind": "block",
+   "line": 1423,
+   "end": 1424,
+   "h": "047e590397f7b3b32ec8de62f451edb330193680cba8a4f6a63d2769cd79b043",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N5-C6 \u2014 canonical A/B falsifier \u2014 CLOSED",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` C6 needs no C2 premise to falsify a class: uniform boundedness over all sufficiently long admissible prefixes "
+  },
+  {
+   "kind": "block",
+   "line": 1427,
+   "end": 1432,
+   "h": "1efacba779b4e8a1dc0b1859474186b7477cfd4f6f56731bbb3ca926c6914645",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N5-PHYS-1 \u2014 opposite phase-coincidence lock \u2014 CLOSED",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[DEF]` On the same sufficiently small certified continuous-dyad tube, define two phase-coincidence event predicates:"
+  },
+  {
+   "kind": "block",
+   "line": 1463,
+   "end": 1482,
+   "h": "0a3ea964acda5ecf47cdff18ca289dcd3917014e591ea2a480bca8e1dbd3d33a",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N5-C7A \u2014 bounded realized rational-label theorem \u2014 CLOSED",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR] [scope: v1.15 spectrum notation]` v1.15 used `Q_RTG^real` for every physically realized bounded rational label. v"
+  },
+  {
+   "kind": "block",
+   "line": 1492,
+   "end": 1497,
+   "h": "8d871fd7e2ae3fd7f1b62e587ab76b4c19ed433a010a656ef6cd977deff9256c",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N5-C7A \u2014 bounded realized rational-label theorem \u2014 CLOSED",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` This is a directional representation theorem:"
+  },
+  {
+   "kind": "block",
+   "line": 1500,
+   "end": 1501,
+   "h": "74fb117a52afcae8261f8cfd4de00b55d40160a1fdaa1278af29d81e8b68c046",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[OPEN]` Determine the breadth of `Q_RTG^bd` and `Q_RTG^dyn`; in particular, no current theorem establishes either spect"
+  },
+  {
+   "kind": "block",
+   "line": 1546,
+   "end": 1547,
+   "h": "65adab857c6440b5ea1f4969c38814ad364525f06c40d44bd20c9ed4346876b0",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR]` **`k=0` retention was load-bearing.** All six `PASS_BDY_ONLY` witnesses hold the base class at `k=1,2,3` and bre"
+  },
+  {
+   "kind": "block",
+   "line": 1548,
+   "end": 1549,
+   "h": "078de50e3414048fcfefc7a1ae315a1454049c048c427c9ffbc86e063089c517",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` Concentration statistics (mirror-symmetric `8,26,34,34,26,8` over signed `d`; `42,52,42` over `D_AB`) are **de"
+  },
+  {
+   "kind": "block",
+   "line": 1550,
+   "end": 1565,
+   "h": "e877880e9fafcdb34793dac2ef86715ef868044c68f628a418df0f70d63826c9",
+   "tags": [
+    "POSTHOC-DIAG"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[POSTHOC-DIAG] [v1.19]` **P2 antipodal-endpoint presentation-covariance exposure.** The external review identified a sp"
+  },
+  {
+   "kind": "block",
+   "line": 1566,
+   "end": 1576,
+   "h": "6eadd6077b7ceb30bdc9819d9825d0b9c5a7e9b9bb965b07e3d45465f3f23eaa",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` This is **post-hoc provenance diagnosis**, not a retroactive admission gate and not a policy replacement. The "
+  },
+  {
+   "kind": "block",
+   "line": 1577,
+   "end": 1578,
+   "h": "99cb787e4d8ae0823a0b246418c1cebff53c844be56070f53cc2ce99743af14f",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[DEF] [v1.18]` The legacy DISC lemma names `T1\u2013T4` are namespaced as **`C7B-ALG-T1..T4`** to avoid collision with N-2-O"
+  },
+  {
+   "kind": "block",
+   "line": 1585,
+   "end": 1586,
+   "h": "59705c6a970c42a56610d2928de25d929ec803e11f0472c8acaf959fbc422343",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` The frozen gate is label-neutral and same-realization. The positive result does not establish rational arithme"
+  },
+  {
+   "kind": "block",
+   "line": 1589,
+   "end": 1597,
+   "h": "0605c46b040f07c83531f45a5c935f85ddc15567264c818821d3e8e0f1dffb73",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N5-C7C \u2014 physical rational arithmetic \u2014 OPEN (C7C-WD ADOPTED; C7C-0 CLOSED)",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[DEF] [v1.18]` **C7C-WD carriers and obligations** (`NG_C7C_WD_C7C0_DESIGN_v1.md`). Let"
+  },
+  {
+   "kind": "block",
+   "line": 1608,
+   "end": 1609,
+   "h": "a44fd14aa48991d44cd18df7d7794205242b09a19c898c7ed6702dfd3576c3d6",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[DEF]` **Chain domain.** `D_chain = { ((A,B),(B,C)) : (A,B),(B,C) in R_bd; the three streams share one certified compar"
+  },
+  {
+   "kind": "block",
+   "line": 1620,
+   "end": 1621,
+   "h": "a95793d6912a08287437511061e9ea05c6f100ad5db0bdab458d7eb9479a791a",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[OPEN]` **Identity / inverse.** Not available on the current chain carrier: the literal unit `(B,B)` and the literal in"
+  },
+  {
+   "kind": "block",
+   "line": 1622,
+   "end": 1623,
+   "h": "7c99e11bd4cb5e82f618e84aa5dc6bff5df7a51c1328173c1beaddf9a29a1f99",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[OPEN]` **Physical commutativity.** The representation-level product commutes, but domain swap-equivariance of the phys"
+  },
+  {
+   "kind": "block",
+   "line": 1624,
+   "end": 1625,
+   "h": "ccd09d58deb4d3ccd1a292081be2c5d8a0184aa30841d63a977116d6c4159bbd",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[OPEN]` **Full-interface typed WD-DOM \u2014 the frontier.** Which relational interface information carries physical composi"
+  },
+  {
+   "kind": "block",
+   "line": 1626,
+   "end": 1627,
+   "h": "9d31186ee987421ef53df111c6e0e273d5922221a03e9e65837fe827bfec5243",
+   "tags": [
+    "HOLD"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[HOLD]` **M-4 realization search** \u2014 pending the Discrete-owner P2 antipodal-endpoint policy ruling. `NG_C7C_M_DESIGN_v"
+  },
+  {
+   "kind": "block",
+   "line": 1628,
+   "end": 1633,
+   "h": "ebc08dda73fdf13cf640fcf2472971d6b3ad7922080d8ddc23b8567f34628f40",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[OPEN]` **C7C-A.** Not opened. Define and certify physical addition on bounded commensurability classes only if the com"
+  },
+  {
+   "kind": "block",
+   "line": 1634,
+   "end": 1635,
+   "h": "4ad81d3bffc205cf02812476b8d88b241d99655e8a6ca2ab693500b9e36d7d06",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` A nonempty realized rational-label spectrum is not yet the field `Q`; a reciprocal-closed bounded spectrum is "
+  },
+  {
+   "kind": "block",
+   "line": 1636,
+   "end": 1646,
+   "h": "57197e1a075a2b56a064904261d37f5b31916cbc1394f1946556ffa356cd51cc",
+   "tags": [
+    "INTERP"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[INTERP]` The current N-5 architecture therefore distinguishes:"
+  },
+  {
+   "kind": "block",
+   "line": 1647,
+   "end": 1650,
+   "h": "a96b0d2fde26a9b42c6ff59cc3139a9452950ebbbaa9549277b611f2eb4dd3d1",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N5-C7C-M \u2014 chain composition: partially resolved (v1.20)",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` Preserve SG-NG-5/6/19/20/22/23/24/25/26. No real-valued fundamental frequency, external clock, chart-derived a"
+  },
+  {
+   "kind": "block",
+   "line": 1752,
+   "end": 1753,
+   "h": "469065c30700914a259990f8615e60a86cfcd1bda0197466e2947203218aebf1",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "anchor": "`[GUARD]` **Declared-domain convention.** Data must be total on the declared edge set; partial data restrict to the supp"
+  },
+  {
+   "kind": "block",
+   "line": 1754,
+   "end": 1755,
+   "h": "4d3cb267d012109aeefad2f29deb46bca512d289cd76d80a0a93a88668cf1fcd",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "anchor": "`[GUARD]` For a single scalar channel (`d=1`), ordinary matrix rank of `H` is at most one; a richer holonomy-rank statis"
+  },
+  {
+   "kind": "block",
+   "line": 1765,
+   "end": 1768,
+   "h": "995bc94cff296177b0c6215035eea424f2ab3f1d8a118942cff1f23c246cca23",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "NG-7B \u2014 RTG-native non-integrable source / non-Abelian extension",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "anchor": "`[GUARD]` Closing NG-7A discharges only the operator/null half of the Foundations diagnostic. It does not prove that RTG"
+  },
+  {
+   "kind": "block",
+   "line": 1771,
+   "end": 1790,
+   "h": "dbc662217c67d19cabe5d7809923e204229f7fd215f8c178dd1d60614eae2e77",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "OPEN NG-8 \u2014 Functorial compatibility / \u201ctwo fives\u201d",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "anchor": "`[OPEN]` **Three-track roadmap after N-1/N-2.** Track A supplies a concrete local endomorphism-history object and its si"
+  },
+  {
+   "kind": "block",
+   "line": 1806,
+   "end": 1807,
+   "h": "3e9b38c84fcbaf9197331da15b4508f476c01af8f3bb3385487d33a29aa19957",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "NG-8A \u2014 Ordinal-to-cardinal orbit-state compatibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "anchor": "`[GUARD]` The older position-set convention `{x,Tx,...,T^(m-1)x}` counts `m` positions but only `m-1` transitions. NG-8A"
+  },
+  {
+   "kind": "block",
+   "line": 1808,
+   "end": 1809,
+   "h": "1d2ab62524100b56529c80e5c347040ccb5576f2ab859c267a6531c8bb6b79e4",
+   "tags": [
+    "COR v1.19",
+    "DEF"
+   ],
+   "s2_module": "NG-8A \u2014 Ordinal-to-cardinal orbit-state compatibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "anchor": "`[DEF]` **State-counting predicate (SG-NG-11 discharge).** The Track-B counting equivalence used in NG-8A is identity of"
+  },
+  {
+   "kind": "block",
+   "line": 1824,
+   "end": 1825,
+   "h": "4e8cb95d4eaba4404a00e2535a03f0f0c966a9a38a7c639096e24b7e13ae91ab",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "NG-8B \u2014 Multiplication by physical re-blocking",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "anchor": "`[GUARD]` `T^m` is a derived block/coarse-graining of the same Track-A stream, not a second independently certified even"
+  },
+  {
+   "kind": "block",
+   "line": 1826,
+   "end": 1827,
+   "h": "7342c84065277ace7529aee3b385f59d8f1679ff73dc5c285e81bf98c926a4e3",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "NG-8B \u2014 Multiplication by physical re-blocking",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "anchor": "`[GUARD]` **No commutativity claim from grouping alone** *(imported from `NG_NG8B_REBLOCK_MULT_CERT_v1` \u00a79.7)*. Within T"
+  },
+  {
+   "kind": "block",
+   "line": 1828,
+   "end": 1831,
+   "h": "27cfd286698229601eb9ec2e24acdd60c7bbc63b6a3d8d8cffca8ce957462e46",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "NG-8B \u2014 Multiplication by physical re-blocking",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "anchor": "`[GUARD]` NG-8A/B close only the local Track-A\u2192finite-state equinumerosity seed and Track-A multiplication/re-blocking s"
+  },
+  {
+   "kind": "block",
+   "line": 1832,
+   "end": 1837,
+   "h": "846d30ac27beb9c2959813b1ecd44337af831a23dc255175ffd6c90a20d857bb",
+   "tags": [
+    "COR: v1.7 verdict"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "### N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11"
+  },
+  {
+   "kind": "block",
+   "line": 1838,
+   "end": 1839,
+   "h": "79481c44df1bd14f6692611966cdaf5855dd403952b3ec59bcd52eeb16a423d7",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR]` **v1.7 gate-5 negative closure retracted.** The original 240-step exact-map run correctly observed the constant "
+  },
+  {
+   "kind": "block",
+   "line": 1840,
+   "end": 1847,
+   "h": "dce9a2198dabb59736d79c57fb7a0f29607411919c67e8b76ab5a35aa3dc516b",
+   "tags": [
+    "COR v1.19",
+    "NUM"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[NUM] [scope: exact primitive map, 60 dps, audited orbit]` **Long-horizon counterexample to fixed re-blocking.** For se"
+  },
+  {
+   "kind": "block",
+   "line": 1852,
+   "end": 1853,
+   "h": "a7f5a325a52eb8bd6b36e8b503ea8c10899efb5161aaa65f320f271eb27f6f38",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR]` **`NUMGEN-ART-ROTNUM-OBSTRUCTION` retracted in its v1.7 form.** A rational limiting rotation number does not imp"
+  },
+  {
+   "kind": "block",
+   "line": 1854,
+   "end": 1860,
+   "h": "8b8079ddb61f1246cd304d5f8033347e4a3f343a283275a6bd4d55b96835f7a6",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR] [historical formulation \u2014 superseded by v1.11/v1.16 closures]` **`NUMGEN-CAND-N5AS1-LOGSLIP` \u2014 nonlinear logarith"
+  },
+  {
+   "kind": "block",
+   "line": 1867,
+   "end": 1876,
+   "h": "790b7f1f88b481dd6fd5bb66834b0d8957abf91ed2cd725de39c01bb790efcde",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR] [historical candidate \u2014 obligations later discharged]` **Predicted asymptotic slip law.** The Dyadic owner suppli"
+  },
+  {
+   "kind": "block",
+   "line": 1877,
+   "end": 1878,
+   "h": "ecf406745645126aa0f2d4cfbade42e0ceb79708b55428082b81c8c27acb23fd",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD] [SG-NG-23]` **Non-fixed substream is not a nontrivial commensurability/incommensurability theorem.** Passing ga"
+  },
+  {
+   "kind": "block",
+   "line": 1879,
+   "end": 1880,
+   "h": "b96441c024a4426cf79f10c8037ced75eb1eeab7d44fd2ae7e40f54020cacd47",
+   "tags": [
+    "OPEN"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE(OPEN/HOLD \u2014 ruling)",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[OPEN] [scope: continuous-dyad representation diagnostic]` The constants `pi/(3 tau)` and `rho=exp(pi/(3 tau))` may be "
+  },
+  {
+   "kind": "block",
+   "line": 1887,
+   "end": 1888,
+   "h": "47e47ba3f1c1fdcf3f47061dc551daba2cfdfb22d0c05c4ee8289ed865c6b637",
+   "tags": [
+    "DEF"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[DEF] [scope: fixed-support local dyad]` **Canonical B-event predicate.** On the sufficiently small one-chart N-1/N-3A "
+  },
+  {
+   "kind": "block",
+   "line": 1895,
+   "end": 1896,
+   "h": "47259f59cfccec5288b86d8123dbac6e6619858ad92c48018703b48e8e065910",
+   "tags": [
+    "NUM"
+   ],
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "close the event-predicate obligation at the local tube scope. SG-NG-11 is satisfied because the coarser counting predica"
+  },
+  {
+   "kind": "block",
+   "line": 1908,
+   "end": 1909,
+   "h": "5434400dd8de6eb68ab6de3467b95803f93af713ae52bed9fbe7d6a00195bfa6",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR] [from: ALG]` **The v1.10 `O(Q^2)` remainder hypothesis is exactly false.** The exact primitive quartic six-step j"
+  },
+  {
+   "kind": "block",
+   "line": 1986,
+   "end": 1991,
+   "h": "a025687a5107fe0ac73cb45268ad033db6f8a3e4c76e6dd3ca07a8665bd229bb",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD] [margin note]` **L-MONO branch determination.** The stated bracket `pi/6 < Delta phi_T < pi/2` gives a six-step"
+  },
+  {
+   "kind": "block",
+   "line": 1992,
+   "end": 1993,
+   "h": "dc6a0cf96260bc182765a32b489e83acfe896ef5af26f83708ca33f290e16e28",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR] [scope: v1.12 corollary only]` **Physical 7-gap count was originally promoted one lemma too early; v1.13 supplies"
+  },
+  {
+   "kind": "block",
+   "line": 2008,
+   "end": 2009,
+   "h": "d5f74ba811a3b23663e3c96ec4cd1eda2eb7035deef6d6f4c5a37bcef93e9448",
+   "tags": [
+    "NUM"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[NUM]` The certificate checks `Lambda_6<2pi` at all 3582 sampled basepoints and finds `min(Lambda_7-2pi)=1.0436`; long "
+  },
+  {
+   "kind": "block",
+   "line": 2069,
+   "end": 2070,
+   "h": "18c000ab08ee9ac1128fdd0aa544669242fb3d77d5bbc62f9c0089299a25379d",
+   "tags": [
+    "COR v1.19"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR v1.19]` If `n_k` is the primitive step of the `k`-th physical slip and `M_k` its six-block index, then `n_k = 6 M_"
+  },
+  {
+   "kind": "block",
+   "line": 2071,
+   "end": 2072,
+   "h": "b0db8856fd72927e738de6ac2461aed5cdb95be59dd38e4072b02c1d98a6b73a",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR]` **v1 bootstrap retracted as proof.** The proposed inference from a per-slip `O(sqrt q)` jump error to bounded ac"
+  },
+  {
+   "kind": "block",
+   "line": 2073,
+   "end": 2074,
+   "h": "edb8356f1c9fdfba339be3fc3960dc3468f398444e63b2029addbbba0b8cb294",
+   "tags": [
+    "COR"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[COR]` **Threshold/physical wording.** The defect-threshold and physical-slip **consecutive-ratio limits now coincide**"
+  },
+  {
+   "kind": "block",
+   "line": 2075,
+   "end": 2079,
+   "h": "ec2e219823a4d87828656dc8ae597bfed76638087204bea6a6c1c2adfb0e6c24",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` SG-NG-23 remains unchanged: N-5A closure and the physical 7-gap count law are **not** a nontrivial Q-like comm"
+  },
+  {
+   "kind": "block",
+   "line": 2082,
+   "end": 2083,
+   "h": "81026f39d58f20e07d1f29731d123e322dc62174bbbf880f82c322b69eb97570",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[GUARD]` The closure is local/existential in radius and conditional on the selected continuous generator `T` under OPEN"
+  },
+  {
+   "kind": "block",
+   "line": 2084,
+   "end": 2088,
+   "h": "441f2f3129aba2b238c9848cdaa6b32c8398cbb9b4b981472d37a04fbe6cfefc",
+   "tags": [
+    "INTERP"
+   ],
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "anchor": "`[INTERP]` **Frontier reshaping.** N-4 remains important for globality, winding, critical-curve and larger-amplitude str"
+  },
+  {
+   "kind": "block",
+   "line": 2098,
+   "end": 2103,
+   "h": "0f3bb4f9bc70ef7b638de54427c8331271d58442133789f91b35ac2cfef7abfa",
+   "tags": [
+    "GUARD"
+   ],
+   "s2_module": "OPEN NG-10 \u2014 Genesis saturation and counting truncation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9a NG-10 \u2014 Genesis saturation and counting truncation",
+   "anchor": "`[GUARD]` **Bounded amplitude does not imply bounded history.** A state variable may converge or cycle while the event h"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 152,
+   "s2_module": "Priority ordering",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**In-branch Number Genesis proof queue**"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 180,
+   "s2_module": "CLOSED N-1 \u2014 Relational repetition / natural-number realization",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**RID:** `NUMGEN-OPEN-N1`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 193,
+   "s2_module": "CLOSED N-1 \u2014 Relational repetition / natural-number realization",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "parallel strengthening after N-1B-MIN:"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 203,
+   "s2_module": "OPEN N-1A0 \u2014 Strict Relational Equivalence",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**RID:** `NUMGEN-OPEN-N1A0`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 204,
+   "s2_module": "OPEN N-1A0 \u2014 Strict Relational Equivalence",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**Status:** ACTIVE  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 255,
+   "s2_module": "OPEN N-1A1 \u2014 Counting Equivalence",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**RID:** `NUMGEN-OPEN-N1A1`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 256,
+   "s2_module": "OPEN N-1A1 \u2014 Counting Equivalence",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Status:** PARTIAL \u2014 closed for N-1A-MIN; general boundary-aware form continues in N-1A2  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 315,
+   "s2_module": "CLOSED N-1A-MIN \u2014 Abstract Oriented Dyadic Phase-Step",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**RID:** `NUMGEN-ALG-N1A-MIN`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 374,
+   "s2_module": "N-1A2 \u2014 Boundary Locality / Context Robustness",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**RID:** `NUMGEN-OPEN-N1A2`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 524,
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**RID:** `NUMGEN-OPEN-N1B`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 574,
+   "s2_module": "N-1B \u2014 Repeatability and Successor Extensibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 585,
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**RID:** `NUMGEN-OPEN-N1C`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 644,
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**RID:** `NUMGEN-N1C-DYAD-RADIAL`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 704,
+   "s2_module": "CLOSED N-1C \u2014 Free-History Monoid / Natural-Number Representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "text": "**RID:** `NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 916,
+   "s2_module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.3 N-2 closed signed-history construction",
+   "text": "**RID:** `NUMGEN-OPEN-N2`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 989,
+   "s2_module": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.3a N-2-ORD physical order representation \u2014 CLOSED at v1.6",
+   "text": "**RID:** `NUMGEN-OPEN-N2-ORDER`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1005,
+   "s2_module": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "text": "**RID:** `NUMGEN-N3A-DECK-TRIVIAL`"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1043,
+   "s2_module": "CLOSED N-3B \u2014 Abstract circle-character representation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "text": "**RID:** `NUMGEN-N3B-CHAR-ISO`"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1071,
+   "s2_module": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "text": "**RID:** `NUMGEN-N3C-PULLBACK`"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1108,
+   "s2_module": "CLOSED N-3D \u2014 Finite-character quotient / representation bridge",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "text": "**RID:** `NUMGEN-N3D-FINITE-CHAR`"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1170,
+   "s2_module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "text": "\\]"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1209,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**RID:** `NUMGEN-OPEN-N4`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1210,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Status:** OPEN \u2014 local primitive realization is already supplied by N-1/N-2/N-3"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1212,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Question:** How far beyond the sufficiently small one-chart primitive tube do the Track-A repetition and signed-histor"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1214,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Certified local input:**"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1216,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1217,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "T(rho,eta) = (rho - sin eta, eta + exp(rho)-1 - sin eta)"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1218,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "N-1: local free primitive repetition monoid"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1219,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "N-2: local signed-history completion"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1220,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "N-3A: local eta-winding map trivial"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1221,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "N-3B/C: abstract character representation vs primitive harmonic mixing"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1222,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1224,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Required:** Extend or falsify the local results on larger invariant domains using the exact primitive map. Normal-form"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1226,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Guard:** The special role of `p=6` is realization-specific; no global history/winding theorem follows from the local o"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1228,
+   "s2_module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "---"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1232,
+   "s2_module": "CLOSED N-5A \u2014 Second co-realized recurrence / event stream",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "text": "**RID:** `NUMGEN-OPEN-N5A`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1259,
+   "s2_module": "OPEN N-5 \u2014 Bounded synchronization commensurability / realized Q-like labels",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**RID:** `NUMGEN-OPEN-N5`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1260,
+   "s2_module": "OPEN N-5 \u2014 Bounded synchronization commensurability / realized Q-like labels",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Active architecture RID:** `NUMGEN-OPEN-N5-COMM-BD`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1311,
+   "s2_module": "N5-C2 \u2014 finite-origin/prefix invariance \u2014 CLOSED",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1528,
+   "s2_module": "N5-C7B \u2014 physical realization breadth / dynamic discrimination \u2014 OPEN globally",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1653,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**RID:** `NUMGEN-OPEN-N6`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1654,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Status:** BLOCKED on N-5; continuous-branch closure is representation/recovery level under SG-NG-19 unless the stronge"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1656,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Question:** Can real-valued relational magnitude arise as a completion of finite recurrence-comparison observations?"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1658,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Candidate route:** build rational approximants from N-5 physical comparison classes; define an RTG-native order/conver"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1660,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "`[OPEN candidate]` **Rotation/Sturmian route.** If N-5A/N-5 produce a pair whose comparison coding is provably a mechani"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1662,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Critical guards:**"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1664,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "- do not assume `R_+`-valued fundamental frequencies in the premises;"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1665,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "- the continuous dyad already lives on an `R^2` chart, so an in-branch recovery of `R` from event order is not by itself"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1666,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "- a genesis-grade continuum claim requires a substrate-independence theorem, a non-continuum realization behind a named "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1668,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Later representation:** only after completion may a positive-ratio group be represented additively by `log : R_+ -> R`"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1670,
+   "s2_module": "OPEN N-6 \u2014 Continuum completion",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "---"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1674,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**RID:** `NUMGEN-OPEN-REC-HOL`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1675,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Status:** SPLIT \u2014 **NG-7A CLOSED at v1.5**; NG-7B OPEN (physical source / non-Abelian)"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1677,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Question:** Can relative recurrence data provide the explicit non-integrability diagnostic requested by `RTG_ONTOLOGIC"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1679,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Candidate multiplicative edge data:** For oriented edge `i->j`, let `R_ij` denote a relational recurrence ratio, with "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1681,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Candidate log edge field:**"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1683,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1684,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "a_ij = log R_ij."
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1685,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1687,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "If node potentials `x_i` exist such that"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1689,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1690,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "a_ij = x_i - x_j,"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1691,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1693,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "then every oriented cycle has zero additive holonomy:"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1695,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1696,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "sum_(ij in gamma) s_ij a_ij = 0,"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1697,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1699,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "or equivalently multiplicative holonomy"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1701,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1702,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "H_gamma = product_(ij in gamma) R_ij^(s_ij) = 1."
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1703,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1705,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "Let `D` be an incidence operator and `C` a cycle-basis operator. For one channel:"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1707,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1708,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "h = C a."
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1709,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1711,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "For `d` recurrence channels assembled as edge matrix `A`:"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1713,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1714,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "H = C A,"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1715,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "r_hol = rank(H)."
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1716,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1718,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "(`r_hol` is defined only for genuinely multi-channel data `d>=2`; for `d=1` the primitive observable is the holonomy vec"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1720,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Required null theorem:**"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1722,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```text"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1723,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "A = D^T X  =>  C A = C D^T X = 0."
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1724,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1726,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Required invariance work:** establish orientation convention, cycle-basis independence of rank, gauge invariance under"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1728,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Scope guard:** `r_hol > 0` is a non-integrability diagnostic, not automatically spacetime curvature. A physical geomet"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1730,
+   "s2_module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Potential programme benefit:** If closed, this module may supply a concrete operator for the Foundations' currently OP"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1734,
+   "s2_module": "NG-7A \u2014 Additive operator / null theorem",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "text": "**Sub-RID:** `NUMGEN-OPEN-REC-HOL-OPERATOR`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1760,
+   "s2_module": "NG-7B \u2014 RTG-native non-integrable source / non-Abelian extension",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Sub-RID:** `NUMGEN-OPEN-REC-HOL-SOURCE`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1761,
+   "s2_module": "NG-7B \u2014 RTG-native non-integrable source / non-Abelian extension",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Status:** OPEN / physical-source layer"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1763,
+   "s2_module": "NG-7B \u2014 RTG-native non-integrable source / non-Abelian extension",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "The live positive-source search is narrowed to non-node-difference content such as continuous frame/connection data, bir"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1793,
+   "s2_module": "NG-8A \u2014 Ordinal-to-cardinal orbit-state compatibility",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "text": "**Sub-RID:** `NUMGEN-OPEN-TWO-FIVES-ORBIT-CARDINAL`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1812,
+   "s2_module": "NG-8B \u2014 Multiplication by physical re-blocking",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9 NG-8 functorial counting compatibility",
+   "text": "**Sub-RID:** `NUMGEN-OPEN-TWO-FIVES-REBLOCK`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1894,
+   "s2_module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1905,
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "text": "**RID:** `NUMGEN-OPEN-N5AS1-INF`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 1906,
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "text": "**Certificate:** `NG_N5AS1_INF_CLOSURE_v1.md` + `ng_n5as1_inf_closure_cert_v1.py` / `.log`"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2032,
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "text": "**RID:** `NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2068,
+   "s2_module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "text": "```"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2091,
+   "s2_module": "OPEN NG-10 \u2014 Genesis saturation and counting truncation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9a NG-10 \u2014 Genesis saturation and counting truncation",
+   "text": "**RID:** `NUMGEN-OPEN-GENESIS-TRUNCATION`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2092,
+   "s2_module": "OPEN NG-10 \u2014 Genesis saturation and counting truncation",
+   "proposed": "CO-MOVE",
+   "destination_module": "\u00a76.9a NG-10 \u2014 Genesis saturation and counting truncation",
+   "text": "**Status:** OPEN / cross-ledger diagnostic"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2106,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**RID:** `NUMGEN-OPEN-EXTERNAL`  "
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2107,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Status:** OPEN / hypothesis registry only"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2109,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "Candidate areas:"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2111,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "- relational time: separation of event order from duration/recurrence measure;"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2112,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "- spectral/recurrence reconstruction of geometry;"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2113,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "- finite distinguishability and harmonic aliasing/quantization;"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2114,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "- number/ratio interpretation of dimensionless physical observables;"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2115,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "- continuum-limit discipline in UV/quantum-gravity contexts."
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2117,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "**Current verdict:** No external open problem is claimed solved. UV divergences, quantum-gravity time, fine-tuning, phys"
+  },
+  {
+   "kind": "unanchored_line",
+   "line": 2119,
+   "s2_module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "proposed": "STAY-\u00a72 (registry-native)",
+   "destination_module": null,
+   "text": "---"
+  }
+ ]
+}

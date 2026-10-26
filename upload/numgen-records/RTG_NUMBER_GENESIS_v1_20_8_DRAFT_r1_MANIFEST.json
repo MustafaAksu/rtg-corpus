@@ -1,0 +1,29 @@
+{
+ "manifest": "RTG_NUMBER_GENESIS_v1_20_8_DRAFT_r1_MANIFEST",
+ "date": "2026-10-20",
+ "status": "DRAFT r1 - not adopted; co-owner GO for drafting (20 Oct 2026)",
+ "base": {
+  "file": "RTG_NUMBER_GENESIS_DSN_v1_20_7.md",
+  "sha256": "c4637e7a5cfaf8eaf001746f172111385f5df2a8cd552e3ab56308ff7abfab28",
+  "role": "frozen canonical owner (unchanged)"
+ },
+ "files": {
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r1.md": "eef001d14ad57db4ce53d27eb90c28e460d03aeafe4e800554d293bad04ac63c",
+  "RTG_NUMBER_GENESIS_v1_20_7_to_v1_20_8_DRAFT_r1.diff": "7342b53b4c92e45fcc8004c682e2e6901617472c374496c3114ebee8d6e52128",
+  "build_v1_20_8_r1.py": "b4c3681ee474a604a666cd5d25ce399b45b30f07159acc63cabd03dc4c95d80d",
+  "v1_20_8_r1_edits.json": "eff47aa9ca082971606f6edc3172dcfb39dcef92959e5017971efbc67e2e45f7",
+  "check_v1_20_8_r1.py": "303c5b230475df30420278514705acddb4613a6ed53b6bc56bde2d8e5ce7889e",
+  "check_v1_20_8_r1_output.txt": "7d3a02b6d8c78eb1013a4d91e1661c170fa8e9963187e210b5a5d50470be22e2",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_7.md": "c4637e7a5cfaf8eaf001746f172111385f5df2a8cd552e3ab56308ff7abfab28",
+  "ng_state_fingerprint_v2_3.py": "1fbeb19de86afbc6b91d45539ff22c5f81120a25bfa88336e480b29b2f323ff6",
+  "ng_inv_live_v1_1.py": "3354621bc60492035a098839d99d5f11c1d4c5940c639a1b5ee4018e11a7f145"
+ },
+ "checker": "python3 check_v1_20_8_r1.py --neg -> gates G1-G9 PASS; negative controls N1-N5 fail as required; exit 0",
+ "inv_live": "ng_inv_live_v1_1.py on draft: 0 live hits -> PASS",
+ "edits": 30,
+ "not_done": [
+  "no constant imported (Dyadic row-A certificate pending owner adoption)",
+  "no theorem-level change",
+  "no adoption; v1.20.7 remains canonical"
+ ]
+}

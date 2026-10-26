@@ -1,0 +1,183 @@
+{
+ "doc_id": "NG_C7C_M2_ANALYSIS_OPENING_MANIFEST_v1",
+ "date": "2026-09-30",
+ "class": "administrative; not a preregistration",
+ "statement": "This manifest fixes the evidence set that existed at the instant C7C-M2 outcome inspection began. No N1, N2, interface equivalence, witness germ, Π value or WD-DOM verdict had been evaluated before it was frozen.",
+ "governing_pins": {
+  "M2 preregistration": {
+   "file": "NG_C7C_M2_PREREG_DRAFT_v4.md",
+   "sha256": "248f128c906de337370915014e618b67c207307114cbedd9a2a4ac764d928987"
+  },
+  "M2 preregistration freeze manifest": {
+   "file": "NG_C7C_M2_PREREG_FREEZE_MANIFEST_v1.md",
+   "sha256": "cefb71803ec53cc2151972fc0fdd5ebf3ce2508884e24d55a6c305f93f3b165b"
+  },
+  "Census Protocol v1": {
+   "file": "NG_C7C_M2_CENSUS_PROTOCOL_v1.md",
+   "sha256": "f2a4a9a4a9453d10688ca98fad049dd0e2f844f986a38db3a6a0ec4477215795"
+  },
+  "U-DYAD census result": {
+   "file": "NG_C7C_M2_CENSUS1_UDYAD_RESULT_v1.json",
+   "sha256": "ed3c72af5c702f7076e7e1fea2ef9a10a4d9aad6306ce06419668fbd94beeae9"
+  },
+  "U-TDRG census result": {
+   "file": "NG_C7C_M2_CENSUS1_UTDRG_RESULT_v1.json",
+   "sha256": "23f298dc6da5633551d7e748ed1e1e5fb1d7a7c1c5525da4797336b3967bd33a"
+  }
+ },
+ "context_pins": {
+  "U-DYAD universe": {
+   "file": "NG_C7C_M2_CENSUS1_UDYAD_UNIVERSE_v1.json",
+   "sha256": "a1b60b59502bf0daddce104f1001220c8f8ebf004abdb335e0e5b4436d7d3ddc"
+  },
+  "U-TDRG universe": {
+   "file": "NG_C7C_M2_CENSUS1_UTDRG_UNIVERSE_v1.json",
+   "sha256": "80b0c3b17349e8746b939c241007b7a0a67c2e69160badc4ebbfa3f1973513e9"
+  },
+  "Owner Number Genesis v1.20.6": {
+   "file": "RTG_NUMBER_GENESIS_DSN_v1_20_6.md",
+   "sha256": "2a51c4b1a8037105d75e68ea7f24c721a970ab5ec32c27e810139020ccb948c5"
+  }
+ },
+ "admissible_set": {
+  "total": 120,
+  "continuous_dyad": [
+   "U-DYAD-1",
+   "U-DYAD-2"
+  ],
+  "tdrg": {
+   "C7B-DISC-1": [
+    "U-TDRG-D1-s_11_0_1_16",
+    "U-TDRG-D1-s_11_11_1_17",
+    "U-TDRG-D1-s_11_12_1_16",
+    "U-TDRG-D1-s_11_19_1_16",
+    "U-TDRG-D1-s_11_3_1_17",
+    "U-TDRG-D1-s_11_7_1_16",
+    "U-TDRG-D1-s_12_11_23_16",
+    "U-TDRG-D1-s_12_16_1_16",
+    "U-TDRG-D1-s_12_16_1_17",
+    "U-TDRG-D1-s_12_16_23_15",
+    "U-TDRG-D1-s_12_20_23_16",
+    "U-TDRG-D1-s_12_23_1_17",
+    "U-TDRG-D1-s_12_4_1_16",
+    "U-TDRG-D1-s_12_4_23_15",
+    "U-TDRG-D1-s_12_4_23_16",
+    "U-TDRG-D1-s_12_8_1_17",
+    "U-TDRG-D1-s_13_0_23_16",
+    "U-TDRG-D1-s_13_13_23_15",
+    "U-TDRG-D1-s_13_16_23_16",
+    "U-TDRG-D1-s_13_1_23_15",
+    "U-TDRG-D1-s_13_20_23_15",
+    "U-TDRG-D1-s_13_8_23_15"
+   ],
+   "C7B-DISC-2": [
+    "U-TDRG-D2-sup_11_0_21_21",
+    "U-TDRG-D2-sup_11_11_3_0",
+    "U-TDRG-D2-sup_11_12_19_15",
+    "U-TDRG-D2-sup_11_12_20_8",
+    "U-TDRG-D2-sup_11_12_21_21",
+    "U-TDRG-D2-sup_11_12_3_0",
+    "U-TDRG-D2-sup_11_12_3_16",
+    "U-TDRG-D2-sup_11_13_21_13",
+    "U-TDRG-D2-sup_11_13_3_16",
+    "U-TDRG-D2-sup_11_15_20_5",
+    "U-TDRG-D2-sup_11_17_21_11",
+    "U-TDRG-D2-sup_11_17_3_16",
+    "U-TDRG-D2-sup_11_18_3_16",
+    "U-TDRG-D2-sup_11_1_21_8",
+    "U-TDRG-D2-sup_11_20_20_5",
+    "U-TDRG-D2-sup_11_22_21_13",
+    "U-TDRG-D2-sup_11_23_19_19",
+    "U-TDRG-D2-sup_11_23_20_20",
+    "U-TDRG-D2-sup_11_23_3_0",
+    "U-TDRG-D2-sup_11_23_3_17",
+    "U-TDRG-D2-sup_11_23_4_9",
+    "U-TDRG-D2-sup_11_3_21_14",
+    "U-TDRG-D2-sup_11_4_21_13",
+    "U-TDRG-D2-sup_11_4_5_7",
+    "U-TDRG-D2-sup_11_5_3_11",
+    "U-TDRG-D2-sup_11_7_21_13",
+    "U-TDRG-D2-sup_11_7_5_7",
+    "U-TDRG-D2-sup_11_8_21_11",
+    "U-TDRG-D2-sup_11_8_21_14",
+    "U-TDRG-D2-sup_12_0_3_22",
+    "U-TDRG-D2-sup_12_0_5_2",
+    "U-TDRG-D2-sup_12_11_20_12",
+    "U-TDRG-D2-sup_12_11_20_8",
+    "U-TDRG-D2-sup_12_11_21_21",
+    "U-TDRG-D2-sup_12_11_4_0",
+    "U-TDRG-D2-sup_12_12_19_21",
+    "U-TDRG-D2-sup_12_12_21_19",
+    "U-TDRG-D2-sup_12_13_21_13",
+    "U-TDRG-D2-sup_12_13_21_21",
+    "U-TDRG-D2-sup_12_13_3_0",
+    "U-TDRG-D2-sup_12_13_4_12",
+    "U-TDRG-D2-sup_12_13_5_20",
+    "U-TDRG-D2-sup_12_15_3_16",
+    "U-TDRG-D2-sup_12_16_19_15",
+    "U-TDRG-D2-sup_12_16_21_13",
+    "U-TDRG-D2-sup_12_16_3_14",
+    "U-TDRG-D2-sup_12_18_21_13",
+    "U-TDRG-D2-sup_12_1_19_15",
+    "U-TDRG-D2-sup_12_1_20_8",
+    "U-TDRG-D2-sup_12_1_21_21",
+    "U-TDRG-D2-sup_12_1_3_0",
+    "U-TDRG-D2-sup_12_1_3_16",
+    "U-TDRG-D2-sup_12_20_19_15",
+    "U-TDRG-D2-sup_12_20_21_13",
+    "U-TDRG-D2-sup_12_21_3_16",
+    "U-TDRG-D2-sup_12_23_20_20",
+    "U-TDRG-D2-sup_12_23_3_0",
+    "U-TDRG-D2-sup_12_23_4_12",
+    "U-TDRG-D2-sup_12_23_4_16",
+    "U-TDRG-D2-sup_12_3_21_13",
+    "U-TDRG-D2-sup_12_4_21_11",
+    "U-TDRG-D2-sup_12_4_3_16",
+    "U-TDRG-D2-sup_12_4_5_20",
+    "U-TDRG-D2-sup_12_6_3_16",
+    "U-TDRG-D2-sup_12_8_3_16",
+    "U-TDRG-D2-sup_12_8_5_20",
+    "U-TDRG-D2-sup_12_9_21_13",
+    "U-TDRG-D2-sup_13_0_21_21",
+    "U-TDRG-D2-sup_13_11_3_16",
+    "U-TDRG-D2-sup_13_12_20_5",
+    "U-TDRG-D2-sup_13_12_21_14",
+    "U-TDRG-D2-sup_13_12_21_21",
+    "U-TDRG-D2-sup_13_12_4_0",
+    "U-TDRG-D2-sup_13_12_5_0",
+    "U-TDRG-D2-sup_13_13_3_0",
+    "U-TDRG-D2-sup_13_14_3_11",
+    "U-TDRG-D2-sup_13_16_3_17",
+    "U-TDRG-D2-sup_13_17_19_2",
+    "U-TDRG-D2-sup_13_17_3_16",
+    "U-TDRG-D2-sup_13_18_21_8",
+    "U-TDRG-D2-sup_13_1_21_13",
+    "U-TDRG-D2-sup_13_1_21_21",
+    "U-TDRG-D2-sup_13_1_3_0",
+    "U-TDRG-D2-sup_13_1_4_12",
+    "U-TDRG-D2-sup_13_1_5_20",
+    "U-TDRG-D2-sup_13_20_19_2",
+    "U-TDRG-D2-sup_13_20_3_16",
+    "U-TDRG-D2-sup_13_21_3_14",
+    "U-TDRG-D2-sup_13_21_3_17",
+    "U-TDRG-D2-sup_13_2_21_13",
+    "U-TDRG-D2-sup_13_2_3_16",
+    "U-TDRG-D2-sup_13_4_4_9",
+    "U-TDRG-D2-sup_13_6_21_13",
+    "U-TDRG-D2-sup_13_6_3_14",
+    "U-TDRG-D2-sup_13_7_21_13",
+    "U-TDRG-D2-sup_13_9_4_9"
+   ]
+  }
+ },
+ "excluded_by_census": {
+  "count": 40,
+  "reason": "F6 / R6-P2 (preregistered P2 quarantine) only; interface-data and provenance reconstruction passed for all 40"
+ },
+ "carried_constraints": [
+  "M-4 remains HOLD (P2 Discrete-owner ruling); no new realization search (G-search)",
+  "continuous-dyad records: analytic evidence only (no frozen orbit data; census note N-2)",
+  "N5-PHYS-1 domain is 'sufficiently small tube' — F2 PASS does not certify it equals U_T (census note N-1)",
+  "Census-1 TDR-G scope: witness records only; no claim of exhaustiveness over R_bd"
+ ]
+}

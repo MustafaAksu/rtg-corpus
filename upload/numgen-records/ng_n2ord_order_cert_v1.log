@@ -1,0 +1,16 @@
+[PASS] ORD-1.1 reachability is reflexive, transitive, antisymmetric (partial order) and total on one orbit
+[PASS] ORD-1.2 antisymmetry mechanism: T^(k+l)y = y forces k+l = 0 under P1 non-collision, hence k = l = 0
+[PASS] ORD-2.1 shift covariance: y < z  =>  T^r y < T^r z for all r (uses P1 only; strictness from non-collision at the shifted point)
+[PASS] ORD-2.2 order reflection: T^r y < T^r z  =>  y < z  (TRUE in the model; in the manifold this direction needs P3 injectivity — flagged, not silently assumed)
+[PASS] ORD-3 positive cone: P+P subset P, P cap -P = {0}, G_T = P union -P; a <=_G b iff b-a in P is a translation-invariant total order
+[PASS] T4.1 sign realization well-defined: the endpoint-reachability verdict is constant on each N-2 equivalence class and matches the class sign
+[PASS] T4.2 trichotomy: for every class exactly one of A(x)=B(x), B(x) < A(x), A(x) < B(x) holds, matching sign > 0 / = 0 / < 0; verdict independent of the admissible base point x
+[PASS] NC-3 non-merging orbits are incomparable: reachability is defined by existence of a connecting history, which does not exist across disjoint orbits — so no global total order is claimed
+[PASS] S3 P3 audit: det J = 1 + (e^rho - 1)cos eta stays bounded away from 0 on all sampled orbit points (min |det J| = 0.981180); consistent with local injectivity, and far from the critical curve C_0 (which requires rho >= ln 2)
+[PASS] ORD-4.1 Q_true strictly decreases along EVERY fixed-residue F-chain {T^j x, T^(6+j) x, ...}, all j = 0..5, all seeds (not merely j = 0)
+[PASS] ORD-4.2 within a residue class Q_true is a strictly antitone complete witness: index order  <=>  reversed Q_true order (order-reflecting, hence a certificate of the reachability order, not merely implied by it)
+[PASS] NC-2 demonstrated (not merely asserted): single primitive steps are NOT monotone in Q_true — 192 decreases vs 168 non-decreases across the sampled orbits
+[PASS] NC-2b explicit counterexample to the tempting cross-residue claim: Q_true(T^3 x) < Q_true(T^2 x) FAILS for at least one admissible seed, so the cross-residue guard is necessary, not merely cautious
+[PASS] S4 sampled orbits remain in the small-amplitude regime (|rho| < 1, wrapped |eta| < pi) — inside the declared tube scope
+----------------------------------------------------------------------
+RESULT: ALL ASSERTIONS PASS — ORD-1..ORD-4 certified; NC-2 and NC-3 demonstrated; P3 injectivity flagged and numerically audited.

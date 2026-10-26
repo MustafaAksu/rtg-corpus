@@ -1,0 +1,25 @@
+--- /mnt/user-data/outputs/RTG_NUMBER_GENESIS_DSN_v1_20_3.md	2026-09-28 05:39:18.307446000 +0000
++++ RTG_NUMBER_GENESIS_DSN_v1_20_3.md	2026-09-28 12:05:26.697442937 +0000
+@@ -3,7 +3,7 @@
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+ **Date:** September 25, 2026  
+ **Document status:** ACTIVE owner ledger; **methodology-only structural migration — scientific state identical to v1.20.2.** **Supersedes:** v1.20.2 (`35fe1a65…dd1053`).  
+-**DSN Methodology:** v1.3 (touched-block compliance in this release; full structural migration deferred to a methodology-only pass).  
++**DSN Methodology:** v1.3; §2/§6 structural migration completed in this methodology-only release; scientific state unchanged from v1.20.2.  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+ **Document class:** Foundational/technical bridge ledger. It does **not** modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics.  
+ **Companion documents (current verified pointer targets):** `RTG_PROGRAMME_OVERVIEW_v1.2` · `RTG_ONTOLOGICAL_FOUNDATIONS_v0.8` · `RTG_DYADIC_OSCILLATOR_DSN_v6.4.10` · `RTG_DISCRETE_GENESIS_DSN_v2.12.13` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.4`  
+@@ -2795,10 +2795,10 @@
+ 
+ **Methodology-only structural migration (option B, module-level). Scientific state identical to v1.20.2.**
+ 
+-- §2 reduced to the section heading, the unchanged Priority-ordering queue, and a module registry of structural pointer rows. All 18 §2 modules relocated verbatim, as whole modules (set-up, definitions, guards, theorems, OPEN/HOLD residuals, unanchored lines), to their §6 homes, in original order, after the existing §6 content; module headings demoted one level (one level-6 heading capped at 6).
++- §2 reduced to the section heading, the unchanged Priority-ordering queue, and a module registry of structural pointer rows. All 18 §2 modules relocated verbatim, as whole modules (set-up, definitions, guards, theorems, OPEN/HOLD residuals, unanchored lines), to their §6 homes, in original order, after the existing §6 content; module headings demoted one level. The single level-6 heading (L1) is capped at level 6 as a Markdown rendering exception only; its semantic parent remains N-1C-DYAD (no re-parenting).
+ - Approved per-block dispositions applied unchanged: 114 MOVE; 4 REGISTRY-ONLY (queue in place; 3 bare status lines relocated verbatim onto registry rows); 1 MIRROR-RECONCILED (§2 ORD-4 copy removed, §6.3a twin retained); 0 STOP.
+-- New structural heading §6.9a NG-10 (approved). OPEN modules N-4, N-6, NG-9 relocated to §6.5, §6.7, §6.10 (hierarchical inventory v1; NG-9 -> §6.10 proposed and reviewable).
+-- Gates: FP-v2.2 no loss / no invention / identifier conservation; INV-S final; INV-P post-write; INV-LIVE; §2 and §8 queues byte-identical to v1.20.2.
++- New structural heading §6.9a NG-10 (approved). Co-owner approved structural mappings: N-4 → §6.5, N-6 → §6.7, NG-9 → §6.10.
++- Gates: FP-v2.3 no loss / no invention / identifier conservation (incl. derived HEADING-DEMOTION for the one heading-anchored block); INV-S final; INV-P post-write; INV-LIVE; §2 and §8 queues byte-identical to v1.20.2.
+ - Textual pointers: a scan of the relocated bodies found no "§2 …" cross-references, so no pointer rewording was needed or performed.
+ 
+ ### v1.20.2 — September 25, 2026

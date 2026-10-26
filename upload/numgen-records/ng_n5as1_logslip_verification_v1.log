@@ -1,0 +1,16 @@
+independent detector, 40000 steps
+ gap histogram: {6: 6664, 7: 1}
+ first non-6 slip: (33229, 7)
+ Q before first slip: 0.000053442757610854161596
+ Q0 = 0.000076
+tau = 1.154701   predicted slip ratio exp(pi/(3 tau)) = 2.4766
+kappa = 1/Q0 = 13157.9 blocks
+
+slips found in 4000000 primitive steps: 4
+ k       step  gap   blocks M    M+kappa    ratio        1/Q
+ 1      33229    7       5538      18696      nan      18643
+ 2     198242    7      33040      46198   2.4710      46165
+ 3     606981    7     101164     114321   2.4746     114319
+ 4    1619416    7     269903     283061   2.4760     283106
+
+observed ratios vs predicted 2.4766

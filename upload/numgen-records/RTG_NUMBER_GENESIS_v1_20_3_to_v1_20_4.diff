@@ -1,0 +1,58 @@
+--- b1203.md	2026-09-28 20:24:18.484667584 +0000
++++ RTG_NUMBER_GENESIS_DSN_v1_20_4.md	2026-09-28 20:50:01.113591046 +0000
+@@ -1,15 +1,16 @@
+-# RTG Number Genesis DSN v1.20.3
++# RTG Number Genesis DSN v1.20.4
+ 
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+ **Date:** September 25, 2026  
+-**Document status:** ACTIVE owner ledger; **methodology-only structural migration — scientific state identical to v1.20.2.** **Supersedes:** v1.20.2 (`35fe1a65…dd1053`).  
+-**DSN Methodology:** v1.3; §2/§6 structural migration completed in this methodology-only release; scientific state unchanged from v1.20.2.  
++**Document status:** ACTIVE owner ledger; **scientific-sync + editorial/governance correction patch.** **Supersedes:** v1.20.3 (`c3265a3a…cfd2df`).  
++**DSN Methodology:** v1.3; §2/§6 structural migration completed in v1.20.3.  
++**Methodology note:** the §2/§6 structural migration is complete. Full DSN Methodology v1.3 truth-grade normalization is not complete; 19 independent live scientific grade-decision rows are frozen for a separate owner ruling. Four additional combined `[from:]` occurrences in §9.2 are provenance-registry mirrors of those scientific grades and do not constitute independent grade decisions. None is changed in v1.20.4.  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+ **Document class:** Foundational/technical bridge ledger. It does **not** modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics.  
+ **Companion documents (current verified pointer targets):** `RTG_PROGRAMME_OVERVIEW_v1.2` · `RTG_ONTOLOGICAL_FOUNDATIONS_v0.8` · `RTG_DYADIC_OSCILLATOR_DSN_v6.4.10` · `RTG_DISCRETE_GENESIS_DSN_v2.12.13` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.4`  
+ **Pointer-validation note:** the current source files listed above were revalidated during the v1.3 state-synchronization pass and retained unchanged through v1.19 (no fresh external owner-source revalidation was performed in v1.19). Section/guard pointers used below were checked in v1.17 against the live owner sources, the GAP-LOCK Lemma-3 closure record, and the ratified DISC-1 / DISC-2 artifact bundles. `DZT v0.17` is reported as the frozen current DZT state by `RTG_NG_PROGRAMME_REVIEW_AUDIT_v1.md`, but the v0.17 owner DSN is not present in the current project corpus; this Number Genesis DSN therefore does **not** use audit-reported DZT theorem status as an owner-source import.  
+ **Methodology:** DSN Methodology v1.3. This ledger does **not** itself constitute an OPEN-P1 physical bridge (Programme v1.2 SG-PROG-4: document location and representation theorems create no bridge authority).  
+-**Status summary (current state, v1.20):** Local Track-A/Track-B number-like representations are certified on an explicit Dyadic-certified tube; the canonical section stream is a non-fixed re-blocking with theorem-grade logarithmic defect and physical slip-ratio limit (GAP-LOCK 1–3 closed); bounded commensurability yields unique rational labels (C7A) with a ratified ten-label dynamic lower bound `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} ⊆ Q_RTG^dyn`; C7C-0 reciprocal is closed and C7C-M is partially resolved (exact chain identity and conditional carrier closure `[ALG]`; interface-typed WD-DOM OPEN). C7B global breadth, C7C-A, N-4, N-6, NG-7B and full NG-8 remain OPEN. The full v0.4→v1.19 status narrative is preserved in Appendix A history.  
++**Status summary (scientific state fixed at v1.20; carried unchanged through v1.20.4):** Local Track-A/Track-B number-like representations are certified on an explicit Dyadic-certified tube; the canonical section stream is a non-fixed re-blocking with theorem-grade logarithmic defect and physical slip-ratio limit (GAP-LOCK 1–3 closed); bounded commensurability yields unique rational labels (C7A) with a ratified ten-label dynamic lower bound `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} ⊆ Q_RTG^dyn`; C7C-0 reciprocal is closed and C7C-M is partially resolved (exact chain identity and conditional carrier closure `[ALG]`; interface-typed WD-DOM OPEN). C7B global breadth, C7C-A, N-4, N-6, NG-7B and full NG-8 remain OPEN. The full v0.4→v1.19 status narrative is preserved in Appendix A history.  
+ 
+ ---
+ 
+@@ -1278,7 +1279,7 @@
+ **RID:** `NUMGEN-OPEN-N2-ORDER`  
+ **Status:** CLOSED at v1.6 `[RESULT][from: ALG]` `[scope: local primitive-dyad Track-A tube/orbits]`
+ 
+-The former OPEN target has been discharged by `NG_N2ORD_PHYSICAL_ORDER_CERT_v1.md`. The canonical theorem statement, guards, P3-dependent refinements, and `Q_true` witness are maintained in **§6.3a** below.
++The former OPEN target has been discharged by `NG_N2ORD_PHYSICAL_ORDER_CERT_v1.md`. The canonical theorem statement, guards, P3-dependent refinements, and `Q_true` witness are maintained in this §6.3a ledger block.
+ 
+ `[RESULT]` The physical order is reachability-first, not `Q_true`-defined. Reachability is a partial order on `U_T`, total on each primitive orbit; the N-2 positive cone gives the ordered signed-history group; signed-history sign is physically realized by endpoint reachability orientation.
+ 
+@@ -2354,7 +2355,7 @@
+ 
+ **Scope guard:** `r_hol > 0` is a non-integrability diagnostic, not automatically spacetime curvature. A physical geometry interpretation requires an explicit RTG bridge to frame/connection/metric data.
+ 
+-**Potential programme benefit:** If closed, this module may supply a concrete operator for the Foundations' currently OPEN distinction between cycle capacity and physical holonomy content.
++**Programme status.** NG-7A already supplies the certified additive operator/null half of the Foundations diagnostic. The remaining programme task is NG-7B: an RTG-native non-integrable source and any non-Abelian / geometry extension.
+ 
+ ##### NG-7A — Additive operator / null theorem
+ 
+@@ -2791,6 +2792,16 @@
+ ---
+ 
+ ## Changelog
++### v1.20.4 — September 28, 2026
++
++**Scientific-sync + editorial/governance correction patch.** One live scientific-state synchronization (STOP-04); the other items change no scientific result. The 19 independent scientific grade-decision rows, and their four §9.2 provenance-registry mirrors, are deliberately untouched.
++
++- **STOP-04 `[COR]` — NG-7 live-state sync.** §6.8 still said "If closed, this module may supply a concrete operator for the Foundations' currently OPEN distinction…", while NG-7A had already discharged the operator/null half and D15 is SYNC COMPLETE. Now: "NG-7A already supplies the certified additive operator/null half of the Foundations diagnostic. The remaining programme task is NG-7B: an RTG-native non-integrable source and any non-Abelian / geometry extension."
++- **Editorial — §6.3a self-reference.** A sentence relocated by v1.20.3 into §6.3a still pointed to "**§6.3a** below"; now "maintained in this §6.3a ledger block". No theorem, status or scope changes.
++- **Metadata.** Status summary relabelled "scientific state fixed at v1.20; carried unchanged through v1.20.4".
++- **Methodology debt recorded.** Structural migration complete ≠ Methodology v1.3 truth-grade normalization complete: 19 independent scientific grade-decision rows remain, frozen for a separate owner grade-decision pass (v1.20.5); four further combined `[from:]` occurrences in §9.2 are provenance-registry mirrors of those grades, not independent decisions. Methodology v1.3 requires one canonical status per assertion and splitting of parts with different status; these are grade decisions, not relabels.
++- **`[COR v1.20.4]`** v1.20.3 reported that no relocated-body pointer rewording was needed. That scan searched for literal `§2` references and missed one forward reference, "§6.3a below", which became self-referential after relocation. A full scan of directional section references inside §6 found this single instance. The pointer is corrected here; no scientific statement changes. The v1.20.3 changelog entry is left as recorded.
++
+ ### v1.20.3 — September 25, 2026
+ 
+ **Methodology-only structural migration (option B, module-level). Scientific state identical to v1.20.2.**
