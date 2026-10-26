@@ -8,6 +8,12 @@ the owner dispositions of 26 Oct 2026 and the PI's "başla" (26 Oct 2026):
   records/numgen/NUMGEN_OWNER_DISPOSITION_RECONCILIATION_v1_20_8.md (PR #73; five form resolutions fixed),
   records/numgen/ATLAS_ADVISORY_NUMGEN_v1_20_8_RECONCILIATION.md §3 (the merged row list).
 
+Round 2 (26 Oct 2026; ChatGPT co-owner review on PR #74, comment 6416152715, ACCEPT WITH CHANGE): R1 the acceptance
+matrix domain column names each side's domain with "comparison only; no inclusion claimed" instead of arrows; R2 the
+evidence-availability clause says that the held records are on the branch upload/numgen-records at the listed paths and
+are reachable at the release commit only if that branch is merged first. Applied in place to E11 and E31. Round-1
+intermediate (superseded, kept on record): 702e3917126edfeeda41e43b6a8ad820695b5feec19a61e724b12849dfb83880.
+
 Groups (labels only; every edit is applied):
   NA02  Dyadic row-A import (DYAD-THM-LPHASE-ROWA-REMAINDER) replacing the §6.6 OPEN sub-item; §9.1 import row; N15 states
   NA01  explicit-domain counterparts (RECOG v0.3.24) recorded as consumer-side confirmations: pointer sentences at the
@@ -46,6 +52,7 @@ import hashlib, json, sys
 BASE_SHA = "835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e"
 BASE_TAG = "numgen-v1.20.8"
 CHG_START = "## Changelog\n"
+ROUND1_SHA = "702e3917126edfeeda41e43b6a8ad820695b5feec19a61e724b12849dfb83880"  # superseded by round 2 (R1, R2)
 NEW_RIDS = ["NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET", "NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT",
             "NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO", "NUMGEN-RESULT-N5AS1-INF2", "NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE"]
 CHECK_SCRIPT = "evidence/numgen/scripts/numgen_v1_21_stage1_checks.py"
@@ -127,16 +134,16 @@ MATRIX = (
 "Relationship ∈ {independent agreement, consumed theorem, not adopted}. Custody of every NUMGEN statement is unchanged; "
 "nothing is imported from RECOG. Error types: (1) per-block reciprocal-amplitude increment; (2) summed tail / backbone "
 "constant; (3) slip-schedule `epsilon_k`. None substitutes for another.\n\n"
-"| NUMGEN statement | Counterpart RID | Event predicate / anchor | Primitive lift | Base / tube | Clock | Estimate scope | Evidence grade | Relationship | Receiving status |\n"
+"| NUMGEN statement | Counterpart RID | Event predicate / anchor | Primitive lift | Domains (no inclusion claimed; `U_R,base = U_D,base` as sets) | Clock | Estimate scope | Evidence grade | Relationship | Receiving status |\n"
 "|---|---|---|---|---|---|---|---|---|---|\n"
-"| L-BACKBONE `NUMGEN-RESULT-N5AS1-L-BACKBONE` | `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | none (amplitude) | — | `U_NG` → starts in `U_R,base` | block `m` | increment `(15/2) sqrt(Q_m)` (type 1) | THM | independent agreement | statement accepted; not imported |\n"
-"| L-MONO `NUMGEN-RESULT-N5AS1-L-MONO` | `RECOG-THM-A1A-LIFT-ALIGNMENT` | — | NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT (principal one-step increments) | `U_NG,tube` → `U_D,tube` | one step | branch bound | THM | independent agreement | statement accepted; not imported |\n"
-"| L-PHASE `NUMGEN-RESULT-N5AS1-L-PHASE` | `DYAD-THM-LPHASE-ROWA-REMAINDER` (Dyadic, not RECOG) | — | same (I1–I5) | `U_NG` → `U_D,base` base points | block `m`; `q_m` ≡ Dyadic `Q_m` | remainder ceiling `403/250` | THM | consumed theorem | adopted use: §6.6 import and the row above |\n"
-"| INF-1 `NUMGEN-RESULT-N5AS1-INF1` | `RECOG-THM-A1A-PHASE-EXISTENCE-U`; `RECOG-RESULT-A1A-CD-AGREEMENT` | none (block defect) | same; `D_N^U` extends NUMGEN-DEF-N5AS1-DEFECT | `U_NG` → `U_R,base`; agreement on `U_R,base ∩ U_NG` | block count | existence and series; tails (type 2) | THM; RESULT | independent agreement | statement accepted; not imported |\n"
-"| INF-2 `NUMGEN-RESULT-N5AS1-INF2` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (A), (B) | canonical B predicate | same | `U_NG` → `U_R,base` | steps / blocks | `O(1)` | THM | independent agreement | statement accepted; not imported |\n"
-"| GAP-LOCK 1 `NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (B), (C′) | NUMGEN: token `x -> T(x)` with `w(x) < 0 <= w(Tx)`, positive `rho`; RECOG: same predicate, anchor `n+1`; gaps coincide | same | `U_NG,tube` → starts `U_R,base`, estimates `U_D,tube` | primitive steps | deficit `0.927 tau Q < Delta < tau Q + 1.82 Q^(3/2)` | THM | independent agreement | statement accepted; not imported |\n"
-"| GAP-LOCK 2 `NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (B) | as above | same | `U_NG` → `U_R,base` | `6M` primitive steps | `O(1)` | THM | independent agreement | statement accepted; not imported |\n"
-"| GAP-LOCK 3 and slip rate `NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (S) | as above; `M_k` = block index of the `k`-th 7-gap anchor | same | `U_NG` → `U_R,base` | blocks | a-priori `epsilon_k` (type 3) | THM | independent agreement for the ratio limit; digamma schedule not adopted | statement accepted; not imported |")
+"| L-BACKBONE `NUMGEN-RESULT-N5AS1-L-BACKBONE` | `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | none (amplitude) | — | NUMGEN: `U_NG`; RECOG: starts in `U_R,base` (comparison only; no inclusion claimed) | block `m` | increment `(15/2) sqrt(Q_m)` (type 1) | THM | independent agreement | statement accepted; not imported |\n"
+"| L-MONO `NUMGEN-RESULT-N5AS1-L-MONO` | `RECOG-THM-A1A-LIFT-ALIGNMENT` | — | NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT (principal one-step increments) | NUMGEN: `U_NG,tube`; RECOG: `U_D,tube` (comparison only; no inclusion claimed) | one step | branch bound | THM | independent agreement | statement accepted; not imported |\n"
+"| L-PHASE `NUMGEN-RESULT-N5AS1-L-PHASE` | `DYAD-THM-LPHASE-ROWA-REMAINDER` (Dyadic, not RECOG) | — | same (I1–I5) | NUMGEN: `U_NG`; imported Dyadic theorem: `U_D,base` base points (no inclusion claimed) | block `m`; `q_m` ≡ Dyadic `Q_m` | remainder ceiling `403/250` | THM | consumed theorem | adopted use: §6.6 import and the row above |\n"
+"| INF-1 `NUMGEN-RESULT-N5AS1-INF1` | `RECOG-THM-A1A-PHASE-EXISTENCE-U`; `RECOG-RESULT-A1A-CD-AGREEMENT` | none (block defect) | same; `D_N^U` extends NUMGEN-DEF-N5AS1-DEFECT | NUMGEN: `U_NG`; RECOG: `U_R,base` (comparison only; no inclusion claimed); RECOG's agreement result holds on `U_R,base ∩ U_NG` | block count | existence and series; tails (type 2) | THM; RESULT | independent agreement | statement accepted; not imported |\n"
+"| INF-2 `NUMGEN-RESULT-N5AS1-INF2` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (A), (B) | canonical B predicate | same | NUMGEN: `U_NG`; RECOG: `U_R,base` (comparison only; no inclusion claimed) | steps / blocks | `O(1)` | THM | independent agreement | statement accepted; not imported |\n"
+"| GAP-LOCK 1 `NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (B), (C′) | NUMGEN: token `x -> T(x)` with `w(x) < 0 <= w(Tx)`, positive `rho`; RECOG: same predicate, anchor `n+1`; gaps coincide | same | NUMGEN: `U_NG,tube`; RECOG: starts in `U_R,base`, estimates on `U_D,tube` (comparison only; no inclusion claimed) | primitive steps | deficit `0.927 tau Q < Delta < tau Q + 1.82 Q^(3/2)` | THM | independent agreement | statement accepted; not imported |\n"
+"| GAP-LOCK 2 `NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (B) | as above | same | NUMGEN: `U_NG`; RECOG: `U_R,base` (comparison only; no inclusion claimed) | `6M` primitive steps | `O(1)` | THM | independent agreement | statement accepted; not imported |\n"
+"| GAP-LOCK 3 and slip rate `NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO` | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (S) | as above; `M_k` = block index of the `k`-th 7-gap anchor | same | NUMGEN: `U_NG`; RECOG: `U_R,base` (comparison only; no inclusion claimed) | blocks | a-priori `epsilon_k` (type 3) | THM | independent agreement for the ratio limit; digamma schedule not adopted | statement accepted; not imported |")
 
 CONSUMERS = (
 "**Consumers and pins.** Owner record of the interfaces; the Programme interface register (IF rows) is the Programme's. "
@@ -156,9 +163,11 @@ CONSUMERS = (
 EVID_CLAUSE = (
 "**Evidence states and availability.** Rows keyed `[in-ledger]` are complete written proofs in this DSN with no separate "
 "certificate (Methodology §12.1; `EV-SRC-READ`), not a lower grade. The files held by the Number Genesis co-owner "
-"session are in the repository at `upload/numgen-records/` (hash check `records/numgen/NUMGEN_UPLOAD_HASH_CHECK_20261026.md`); "
-"a file cited below and not there is not in the repository, and its cited state is `EV-SRC-REPORTED`. No certificate "
-"was rerun for this edition (`EV-NOT-RERUN`).\n")
+"session were uploaded unchanged on the branch `upload/numgen-records` (PR #69), at the paths `upload/numgen-records/<file>` "
+"listed in that branch's `SHA256SUMS.txt` (hash check `records/numgen/NUMGEN_UPLOAD_HASH_CHECK_20261026.md`). A cited file "
+"among them is reachable at the release commit only if that branch is merged before the release; the release record states "
+"which is the case. A file cited below that is not among them, or not reachable at the release commit, is not in the "
+"repository, and its cited state is `EV-SRC-REPORTED`. No certificate was rerun for this edition (`EV-NOT-RERUN`).\n")
 
 STAGE1_CHG = (
 "### v1.21 — stage 1 intermediate (build stage, not adopted)\n\n"
@@ -394,6 +403,7 @@ def main(argv):
     data = text.encode("utf-8")
     open(out, "wb").write(data)
     json.dump({"base_sha256": BASE_SHA, "base_tag": BASE_TAG, "intermediate_sha256": hashlib.sha256(data).hexdigest(),
+               "round": 2, "round1_intermediate_sha256": ROUND1_SHA,
                "declared_new_numgen_rids": NEW_RIDS, "evidence_script": CHECK_SCRIPT,
                "edit_count": len(record), "edits": record},
               open(log, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -29,6 +29,9 @@ Gates (exit 0 iff all PASS):
  C11 EVIDENCE    every repository path introduced by an edit exists (on this tree, or until merged on the record
                  branches of PR #69 / PR #73); the four cited held-record hashes match the held-records SHA256SUMS
  C12 LABELS      the alias table defines the five labels once; every labelled domain used in edited text is defined there
+ C13 REVIEW-R1R2 (round 2) no arrow between domains in the acceptance matrix, each row says "comparison only" or "no
+                 inclusion claimed"; the availability clause names the branch upload/numgen-records and the release-commit
+                 condition; the log records the round-1 hash 702e3917...3880 as superseded
 """
 import hashlib, importlib.util, json, os, re, subprocess, sys
 
@@ -159,7 +162,7 @@ def check(base, inter, log, root, verbose=True):
     def exists(p):
         if os.path.exists(os.path.join(root, p)): return True
         return any(git(root, "cat-file", "-e", f"{ref}:{p.rstrip('/')}").returncode == 0 for ref in PENDING_REFS)
-    nopath = [p for p in sorted(paths) if not exists(p)]
+    nopath = [p for p in sorted(paths) if "<" not in p and not exists(p)]   # "<file>" is a path pattern, not a path
     sums = None
     for ref in ("HEAD", "origin/upload/numgen-records"):
         sums = show(root, ref, "upload/numgen-records/SHA256SUMS.txt")
@@ -171,6 +174,13 @@ def check(base, inter, log, root, verbose=True):
     defined = [re.match(r"\| `([^`]+)`", l).group(1) for l in tbl]
     used = set(re.findall(r"U_(?:NG|D|R)(?:,(?:tube|base))?", new_texts))
     gate("C12 LABELS", sorted(defined) == sorted(LABELS) and used <= set(LABELS), f"used={sorted(used)}")
+    # C13 (round 2)
+    mrows = [l for l in inter.split("\n") if l.startswith("| ") and "`NUMGEN-RESULT-N5AS1-" in l and "statement accepted" in l or l.startswith("| L-PHASE `NUMGEN-RESULT-N5AS1-L-PHASE`")]
+    r1 = len(mrows) == 8 and all(" → " not in l and "no inclusion claimed" in l for l in mrows)
+    r2 = ("on the branch `upload/numgen-records`" in inter and "reachable at the release commit only if that branch is merged" in inter
+          and "are in the repository at `upload/numgen-records/`" not in inter)
+    gate("C13 REVIEW-R1R2", r1 and r2 and log.get("round1_intermediate_sha256") == "702e3917126edfeeda41e43b6a8ad820695b5feec19a61e724b12849dfb83880",
+         f"matrix_rows={len(mrows)}")
     return res
 
 def controls(base, inter, log, root):
@@ -201,6 +211,7 @@ def controls(base, inter, log, root):
     ok.append(mutate("NC9 another OPEN removed", lambda t: t.replace("`[OPEN]` **NG-7B.**", "**NG-7B.**", 1)))
     ok.append(mutate("NC10 changelog history edited", lambda t: t.replace("### v1.20.7 — October 1, 2026", "### v1.20.7 — October 2, 2026", 1)))
     f, g = both("`ng_n5as1_inf_reduction_cert_v1.py` / `.log`, `41917710…ee36`", "`ng_n5as1_inf_reduction_cert_v1.py` / `.log`, `41917710…ee36` (`evidence/numgen/missing_file.py`)"); ok.append(mutate("NC11 nonexistent evidence path", f, g))
+    f, g = both("| NUMGEN: `U_NG,tube`; RECOG: `U_D,tube` (comparison only; no inclusion claimed) |", "| `U_NG,tube` → `U_D,tube` |"); ok.append(mutate("NC12 domain arrow reintroduced (R1)", f, g))
     print("RESULT:", "PASS (all controls caught)" if all(ok) else "FAIL")
     return 0 if all(ok) else 1
 

@@ -1,8 +1,8 @@
 file: dsn/RTG_NUMBER_GENESIS_DSN.md
-bytes: 353219
+bytes: 354024
 lines: 3471
 header_chars: 5366
-live_body_chars: 329285
+live_body_chars: 330106
 appendix_a_chars: 17013
 section1_words: 1755
 orientation_core: {"chars": 36545, "lines": 271, "words": 4821, "core_end_marker_present": false}
@@ -13,8 +13,8 @@ history_phrases_live: {"relocated": 5, "historical": 17, "superseded": 11, "form
 near_duplicate_paragraphs: 0
 rids_total: 67
 previous: {"file": "/tmp/claude-0/ng1208.md", "bytes": 339003}
-growth_bytes: 14216
-growth_percent: 4.2
+growth_bytes: 15021
+growth_percent: 4.4
 new_rids: 18
-growth_per_new_rid: 789.8
+growth_per_new_rid: 834.5
 (informational report; no gate)
