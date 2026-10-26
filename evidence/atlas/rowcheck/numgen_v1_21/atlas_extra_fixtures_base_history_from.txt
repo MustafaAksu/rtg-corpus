@@ -1,0 +1,8 @@
+# Atlas extra fixtures for the check_compaction.py profile key base_history_from (26 Oct 2026)
+# Run through tools/check_compaction.py alone (no owner guards), on the rebuilt NUMGEN (stage1, stage2, map) triple.
+X0_unchanged: exit=0  RESULT: PASS
+X1_delete_appB_block_key_changelog: exit=1  FAIL  mechanical scope (re-derivation)  — first difference at line 2926 (an Appendix B record deleted from the candidate while the map's S2-T text keeps it: caught by re-derivation, not by the tail check)
+X2_key_appB_unchanged (key pointed at "## Appendix B. Rejected / Guarded Formulations"): exit=1  FAIL  base history region  — the declared history heading survives in the candidate
+X3_key_appB_delete_appB_block: exit=1  FAIL  mechanical scope (re-derivation); FAIL  base history region
+X4_key_legacy_note_unchanged (key pointed at "## v0.3 Change Note", later than the real history start): exit=1  FAIL  RID set preserved in live text — missing: NUMGEN-FAIL-N5AS1-SECTION, RECOG-ALG-LATTICE-CLOCK, TDRG-…; FAIL source hashes preserved; FAIL qualifier tags preserved  (pointing the key later only makes the check stricter)
+X5_heading_in_candidate ("## Changelog" surviving as a phrase in the candidate body): exit=1  FAIL  mechanical scope; FAIL  base history region
