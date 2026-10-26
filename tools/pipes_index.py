@@ -12,7 +12,9 @@ STREAMS = ['METH', 'PROG', 'OFN', 'RRF', 'LEGACY', 'PREL', 'NUMGEN', 'DYAD', 'TR
 KINDS = ['request', 'offer', 'finding', 'question', 'notice']
 STATES = ['open', 'acknowledged', 'dispositioned', 'closed']
 REQUIRED = ['from', 'to', 'date', 'kind', 'object', 'tags', 'state']
-OPTIONAL = ['blocks', 'disposition']
+OPTIONAL = ['blocks', 'disposition', 'filed_by']
+VERDICTS = ['accept', 'accept with change', 'reject', 'defer', 'no action']
+DISP_RE = re.compile(r'^(\d{4}-\d{2}-\d{2}) · (accept with change|accept|reject|defer|no action) · (.+)$')
 NAME_RE = re.compile(r'^\d{8}-([A-Z0-9]+)-[a-z0-9][a-z0-9-]*\.md$')
 
 def parse(text):
@@ -30,8 +32,10 @@ def parse(text):
     return data, body
 
 def git_tags(root):
-    try: return set(subprocess.check_output(['git', '-C', root, 'tag', '-l']).decode().split())
-    except Exception: return set()
+    """Repository tags; raises if the list cannot be read or is empty (validation must not pass by accident)."""
+    out = subprocess.check_output(['git', '-C', root, 'tag', '-l']).decode().split()
+    if not out: raise RuntimeError('repository tag list is empty — cannot validate tags')
+    return set(out)
 
 def validate_item(path, text, tags):
     errors = []
@@ -46,6 +50,8 @@ def validate_item(path, text, tags):
     if data.get('from') not in STREAMS: errors.append(f"{name}: from={data.get('from')!r} not a stream key")
     if data.get('to') not in STREAMS: errors.append(f"{name}: to={data.get('to')!r} not a stream key")
     if m and data.get('from') and m.group(1) != data['from']: errors.append(f'{name}: filename FROM differs from front matter')
+    if m and data.get('date') and name[:8] != data['date'].replace('-', ''): errors.append(f'{name}: filename date differs from date field')
+    if data.get('filed_by') and data['filed_by'] not in STREAMS: errors.append(f"{name}: filed_by={data['filed_by']!r} not a stream key")
     stream_dir = os.path.basename(os.path.dirname(path))
     if data.get('to') and stream_dir != data['to']: errors.append(f'{name}: filed under {stream_dir}/ but to={data["to"]}')
     if data.get('kind') not in KINDS: errors.append(f"{name}: kind={data.get('kind')!r}")
@@ -54,9 +60,17 @@ def validate_item(path, text, tags):
     tl = data.get('tags', '')
     if not (tl.startswith('[') and tl.endswith(']')): errors.append(f'{name}: tags must be [a, b]')
     else:
-        for t in [x.strip() for x in tl[1:-1].split(',') if x.strip()]:
-            if tags and t not in tags: errors.append(f'{name}: tag {t} does not exist in the repository')
-    if data.get('state') in ('dispositioned', 'closed') and not data.get('disposition'): errors.append(f'{name}: state {data["state"]} needs a disposition')
+        tag_items = [x.strip() for x in tl[1:-1].split(',') if x.strip()]
+        if not tag_items: errors.append(f'{name}: tags must name at least one repository tag')
+        for t in tag_items:
+            if t not in tags: errors.append(f'{name}: tag {t} does not exist in the repository')
+    disp = data.get('disposition', '')
+    if data.get('state') in ('dispositioned', 'closed') and not disp: errors.append(f'{name}: state {data["state"]} needs a disposition')
+    if disp:
+        dm = DISP_RE.match(disp)
+        if not dm: errors.append(f'{name}: disposition must read "YYYY-MM-DD · <verdict> · <pointer>" with verdict in {VERDICTS}')
+        elif not re.search(r'(records/|dsn/|pipes/|[A-Z]{2,}-[A-Z0-9-]{3,})', dm.group(3)): errors.append(f'{name}: disposition pointer must name a records/dsn path or a RID')
+        if data.get('state') in ('open', 'acknowledged'): errors.append(f'{name}: a disposition is present but state is {data["state"]}')
     if not body.strip(): errors.append(f'{name}: empty body')
     if len(body.split('\n')) > 40: errors.append(f'{name}: body longer than 40 lines — science belongs in the DSN/records')
     return errors
@@ -108,26 +122,34 @@ Body line.
 
 def selftest(root):
     tags = git_tags(root)
-    cases = [
-        ('control: valid item accepted', 'TDRG/20261026-NUMGEN-x.md', GOOD, False),
-        ('unknown stream key', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('to: TDRG', 'to: FOO'), True),
-        ('invalid state', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: sent'), True),
-        ('dispositioned without disposition', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: dispositioned'), True),
-        ('tag not in repository', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('tdrg-v2.12.13', 'tdrg-v9.9'), True),
-        ('filed under wrong inbox', 'DYAD/20261026-NUMGEN-x.md', GOOD, True),
-        ('filename FROM mismatch', 'TDRG/20261026-RECOG-x.md', GOOD, True),
-        ('unknown field', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: open\nnotice_status: sent'), True),
-        ('empty body', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('Body line.\n', ''), True),
-    ]
+    positive = [('valid open item', 'TDRG/20261026-NUMGEN-x.md', GOOD),
+                ('valid closed item with verdict and pointer', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: closed\ndisposition: 2026-11-02 · reject · records/tdrg/TDRG_OWNER_DISPOSITION_20261102.md'))]
+    negative = [('unknown stream key', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('to: TDRG', 'to: FOO')),
+                ('invalid state (notice vocabulary)', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: sent')),
+                ('dispositioned without disposition', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: dispositioned')),
+                ('disposition without verdict/pointer', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: closed\ndisposition: done')),
+                ('disposition pointer missing', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: closed\ndisposition: 2026-11-02 · accept · ok')),
+                ('disposition present while open', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: open\ndisposition: 2026-11-02 · accept · records/x.md')),
+                ('tag not in repository', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('tdrg-v2.12.13', 'tdrg-v9.9')),
+                ('empty tag list', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('[tdrg-v2.12.13]', '[]')),
+                ('filed under wrong inbox', 'DYAD/20261026-NUMGEN-x.md', GOOD),
+                ('filename FROM mismatch', 'TDRG/20261026-RECOG-x.md', GOOD),
+                ('filename date mismatch', 'TDRG/20261027-NUMGEN-x.md', GOOD),
+                ('unknown field (second status axis)', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: open\nnotice_status: sent')),
+                ('filed_by not a stream key', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('to: TDRG', 'filed_by: Claude\nto: TDRG')),
+                ('empty body', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('Body line.\n', ''))]
     ok = True
-    for what, rel, text, must_fail in cases:
-        errs = validate_item(os.path.join('/tmp/pipes', rel), text, tags)
-        caught = bool(errs)
-        good = caught == must_fail
-        ok &= good
-        print(('ok  ' if good else 'MISS'), what, '—', errs[0] if errs else 'no error')
-    # hand-edited INDEX is detected by regeneration difference
-    print('RESULT:', 'PASS' if ok else 'FAIL'); return ok
+    for what, rel, text in positive:
+        errs = validate_item(os.path.join('/tmp/pipes', rel), text, tags); good = not errs; ok &= good
+        print(('ok  ' if good else 'MISS'), 'positive:', what, '—', errs[0] if errs else 'accepted')
+    for what, rel, text in negative:
+        errs = validate_item(os.path.join('/tmp/pipes', rel), text, tags); good = bool(errs); ok &= good
+        print(('ok  ' if good else 'MISS'), 'negative:', what, '—', errs[0] if errs else 'NOT caught')
+    # empty tag list must abort validation, not pass it
+    try:
+        git_tags(tempfile.mkdtemp()); print('MISS negative: empty repository tag list accepted'); ok = False
+    except Exception: print('ok   negative: empty repository tag list refused')
+    print(f'RESULT: {"PASS" if ok else "FAIL"} ({len(positive)} positive, {len(negative)+1} negative)'); return ok
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--check', action='store_true'); ap.add_argument('--selftest', action='store_true'); ap.add_argument('--root', default=os.getcwd())
