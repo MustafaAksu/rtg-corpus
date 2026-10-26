@@ -1,0 +1,20 @@
+file: dsn/RTG_NUMBER_GENESIS_DSN.md
+bytes: 353219
+lines: 3471
+header_chars: 5366
+live_body_chars: 329285
+appendix_a_chars: 17013
+section1_words: 1755
+orientation_core: {"chars": 36545, "lines": 271, "words": 4821, "core_end_marker_present": false}
+header_fields: {"Title": 117, "Date": 72, "Document status": 637, "DSN Methodology": 77, "Methodology note": 831, "Scope": 494, "Document class": 144, "Companion documents (current verified pointer targets)": 785, "Pointer-validation note": 691, "Methodology": 212, "Status summary (scientific state fixed at v1.20; theorem-level state carried through v1.20.6; v1.20.7 adopts the M2-1 transported chain identity at ALG grade and records the C7C-M2 Census-1 outcome INCONCLUSIVE / INCONCLUSIVE)": 1256}
+appendix_a_words_per_edition: 0 editions, max 0 words
+footer_lines: 0
+history_phrases_live: {"relocated": 5, "historical": 17, "superseded": 11, "former": 7, "retained as": 8, "no longer": 7}
+near_duplicate_paragraphs: 0
+rids_total: 67
+previous: {"file": "/tmp/claude-0/ng1208.md", "bytes": 339003}
+growth_bytes: 14216
+growth_percent: 4.2
+new_rids: 18
+growth_per_new_rid: 789.8
+(informational report; no gate)
