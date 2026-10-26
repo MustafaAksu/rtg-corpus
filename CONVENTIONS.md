@@ -54,4 +54,6 @@ Order: decision → release record → merge → tag. A merge, a tag or a passin
 
 ## 7. Notices
 
-A notice records four separate states per recipient: sent, received, statement accepted, adopted use. Pending consumer decisions do not block the sender's release (§13.5). Notices are routed through the PI.
+A notice records four separate states per recipient: sent, received, statement accepted, adopted use. Pending consumer decisions do not block the sender's release (§13.5).
+
+**Pipes (pilot v0.1, PI decision 26 Oct 2026).** Cross-stream requests, offers, findings, questions and notices are filed as items in the receiving stream's inbox, `pipes/<STREAM>/` (schema, states and checkpoints: `pipes/README.md`; validation and index: `tools/pipes_index.py --check`). Nothing is routed through the PI: the receiving stream's co-owners read their inbox at the stated checkpoints (start of an owner pass, before a stage-1 freeze or release record, when their own work is blocked on an item) and decide autonomously. An item is only a request or offer; it carries no scientific authority — the producer stays owner, and adopted use is asserted solely by the receiver's Import Ledger row (by RID, at the producer edition) or release record. Filing an item is not "sending" a notice; the four states above are read off the item's `state` and the receiver's ledgers. A release record lists "what would be notified" by pointing at the items it filed.
