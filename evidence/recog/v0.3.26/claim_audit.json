@@ -1,0 +1,75 @@
+{
+ "sources": {
+  "dyad-v6.4.22:dsn/RTG_DYADIC_OSCILLATOR_DSN.md": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+  "recog-v0.3.25:dsn/RTG_RELATIONAL_RECOGNITION_DSN.md": "86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db",
+  "recog-v0.3.25:evidence/recog/scripts/recog_a1c_tail_averaging_cert.py": "2d446dd753d293bff8e5d1e5c2ecf4fc85c7a3a8645a4967f2b5e1bb54e53cf0",
+  "recog-v0.3.25:evidence/recog/scripts/recog_a1c_combined_tail_cert.py": "25308adf18c03e3bdb5d5d5dab84a75dd0d2c2226dfcad7a6dd0f73ca6a37e7c"
+ },
+ "checks": [
+  {
+   "source": "Dyadic",
+   "tag": "dyad-v6.4.22",
+   "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+   "label": "DYAD-ALG-NF6: the chart coefficients mu, a_32, a_05 whose exact combination 1-|mu|^2-2 Re a_32 = -29/216 and sixth harmonic a_05 enter RECOG-ALG-A1C-RECIPROCAL-DRIFT (i)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "Dyadic",
+   "tag": "dyad-v6.4.22",
+   "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+   "label": "DYAD-THM-NF-REM: C_7=100 on |z|<=1/20 (the dominant part of gamma_2 and K_eps) and the one-orbit contraction (sum_j q_j^2)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "Dyadic",
+   "tag": "dyad-v6.4.22",
+   "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+   "label": "(D5) row-A bridge proof constants c_Q, c'_Q in the LPHASE row-A proof, certified by DYAD-ART-LPHASE-ROWA (ENV [assuming:], through E^(4) and Delta_a)",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "RECOG",
+   "tag": "recog-v0.3.25",
+   "path": "dsn/RTG_RELATIONAL_RECOGNITION_DSN.md",
+   "label": "RECOG-ALG-A1C-TAIL-HARMONICS (i), (iii): the limit sentences being corrected (CORR-1) and the untouched items",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "RECOG",
+   "tag": "recog-v0.3.25",
+   "path": "dsn/RTG_RELATIONAL_RECOGNITION_DSN.md",
+   "label": "RECOG-THM-A1C-SHARPENED-SCHEDULE: the order sentence being corrected (CORR-1, CORR-2); the display unchanged by the package",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "RECOG",
+   "tag": "recog-v0.3.25",
+   "path": "dsn/RTG_RELATIONAL_RECOGNITION_DSN.md",
+   "label": "RECOG-ALG-A1C-START-OFFSET and the centred form E^(4) that ENV extends; Appendix B present with the RETRACTED entry format",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "RECOG",
+   "tag": "recog-v0.3.25",
+   "path": "evidence/recog/scripts/recog_a1c_tail_averaging_cert.py",
+   "label": "CORR-1 in the adopted part-1b certificate: Lg carries the M-independent first term b'^{-p}",
+   "present": true,
+   "missing": []
+  },
+  {
+   "source": "RECOG",
+   "tag": "recog-v0.3.25",
+   "path": "evidence/recog/scripts/recog_a1c_combined_tail_cert.py",
+   "label": "CORR-2 in the adopted combined-tail certificate: ref_d uses q_plus with the uniform kappa",
+   "present": true,
+   "missing": []
+  }
+ ],
+ "ALL_PRESENT": true
+}

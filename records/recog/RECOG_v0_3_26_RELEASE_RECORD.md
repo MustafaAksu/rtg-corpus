@@ -1,0 +1,92 @@
+# RECOG v0.3.26 — Release record (DRAFT; candidate, not adopted)
+
+**Study:** RECOG · **Base (governing edition):** `recog-v0.3.25`, DSN SHA-256 `86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db` (331,038 bytes). `recog-v0.3.25` remains the governing edition until the PI adopts and tags.
+**Stage-1 intermediate:** `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on `claude/recog-v0.3.26-stage1`, SHA-256 `e360606c3f30fb43165877856528682b94a1e9380e86688a383b9b3a69f13f22` (347,449 bytes). A build stage, not an edition: header identity lines, status summary and footer are untouched; the Appendix A entry is a DRAFT line.
+**Date:** 28 October 2026 · **Builder:** RECOG co-owner (Claude). **Method:** DSN Methodology v1.4 (§3.6 corrections: `[COR]` inline, Appendix B entry; §13.1, §13.6, §13.7); CONVENTIONS.md §4.
+**Decision basis:** PI decision of 28 Oct 2026, 01:17 +03:00 — option (b) for the correction finding of the drift-centering cell (PR #93, record v0.2, co-owner review #5674661826): `PREPARE RECOG ASYMPTOTIC CORRECTION + DRIFT-CENTERING SUCCESSOR` in **one maintenance round**, no long orbit rerun; the new candidate must record the rationale of the correction in Appendix B, define the corrected `Lg_corr` and the $M$-dependent amplitude bounds, replace the false order sentences, and present Lemma 21–22, Prop. 23 and the conditional Cor. 24 as **separate** scientific acceptances. **Three acceptance decisions** (CORR, DRIFT, ENV), each separate; ENV requires DRIFT; CORR is independent of both.
+
+## 0. What is corrected and why (summary of the Appendix B rationale)
+
+The v0.3.25 statements RECOG-ALG-A1C-TAIL-HARMONICS (i), (iii) and RECOG-THM-A1C-SHARPENED-SCHEDULE contain asymptotic-order sentences about **closed-form majorants** ($\bar S'$, $\bar R'$, $E'$, $E'''$) — "$\bar S'\sqrt{a+M}\to0.74850$", "$\bar R'\sqrt{a+M}\to1.0753$", "$E'\sqrt{a+M}\to5.4646$", "$E'''=O_a((1+\log(a+M_k))/(a+M_k))=o((a+M_k)^{-1/2})$". For the majorants **as defined in v0.3.25** these sentences are false:
+
+- **CORR-1.** The part-1b log-majorant `Lg(p,b',M)` bounds $\sum_{m\ge M}\log(1+m/2b')(b'+m)^{-p}$ by an expression that carries the $M$-independent slack $b'^{-p}$. Hence the majorant $\bar A_1$ of $|A_1|$ and everything built on it ($\bar S'$, $\bar R'$, $E'$, $E'''$, $E^{(4)}$) has a constant floor ($\approx\tau\cdot2\gamma_0b'^{-2}\approx1.1\times10^{-6}$ in $E'''$ at $a=625$); $\bar S'\sqrt{a+M}$ is $4.0$ at $M=10^{13}$ and unbounded. The floor belongs to the upper majorant $\bar A_1$, not to the signed sum $A_1$ (reviewer's terminology, #5674661826).
+- **CORR-2.** The reference term ${\rm ref}_d$ of the sharpened schedule uses $q^+_M=((1-\kappa)(b'+M))^{-1}$ with the uniform slack $\kappa=\sup_m\bar\epsilon_m/(b'+m)\approx1.3\times10^{-3}$, an order-$(a+M)^{-1/2}$ piece $1.45\times10^{-4}(a+M)^{-1/2}$; hence $E'''\sqrt{a+M}\to\infty$ for the v0.3.25 forms.
+
+What is **not** affected: every inequality ($|\varepsilon'''_k|\le E'''$ and the harmonic-tail bounds (i)–(iii) — a valid majorant stays valid), every grade and RID, the universal ceiling $E'\le0.31$, the grid values at $M\le10^5$ (changed by $<0.5$ %); at $M=10^6,10^7$ the corrected $E'''$ is $2$ % and $19$ % smaller. The theorem display $c'''_k(a)$ and the A1b/R9 statements are byte-identical (checker C13).
+
+**Repair (defined in the drift-centering cell, certified by `recog_a1c_drift_centering_cert.py` G3b, evaluated on the full grid by `recog_v0_3_26_corrected_grid.py`):** `Lg_corr(p,b',M)` = first term + the integral of the decreasing integrand in the regime $M\ge b'$ (antiderivative $\log(1+M/2b')n^{-p}+\log(1+M/2b')n^{1-p}/(p-1)+n^{1-p}/(p-1)^2$ form, proven decreasing for $p\ge2$, $x\ge b'$), and an explicit finite interval sum up to $\lceil b'\rceil$ for $M<b'$; certified below `Lg` and above brute-force sums at five $M$ (including $M<b'$), three $p$, two $a$. The $M$-dependent bracket $q_M^{-1}\in[b'+M-\bar\epsilon_M,\,a+\Delta_a+M+\bar\epsilon_M]$ (part-1b Lemma 2) replaces the uniform $\kappa$ in ${\rm ref}_d$. With the corrected forms the limits hold ($0.74850$, $1.0753$, $5.4646$ to $10^{-4}$ at $M=10^{13}$, all three $a$), $E'''\sqrt{a+M}\to0$, and $E'''(a+M)/(1+\log(a+M))$ decreases ($2.2\to1.7$ from $10^9$ to $10^{13}$ at $a=625$); the corrected majorants are below the v0.3.25 ones at every grid point (`corrected_grid.json`, `all_below: true`).
+
+The three affected cell records (part 1b `RECOG_A1C_TAIL_AVERAGING_SESSION_v0_1.md` v0.2.1, combined tail `RECOG_A1C_COMBINED_TAIL_SESSION_v0_1.md` v0.2, start offset `RECOG_A1C_START_OFFSET_SESSION_v0_1.md` v0.2) are **left unchanged**: their hashes are cited by the adopted §8 rows and checked by C16, and a record is history. The erratum lives in the drift-centering record §4 (the correction table) and in Appendix B of the DSN; the DSN §8 rows of v0.3.25 are untouched, the new rows carry the corrected evidence.
+
+## 1. Groups and their acceptance decisions
+
+| Group | Kind | Content | New RIDs | Source cells and reviews | Decision (PI) |
+|---|---|---|---|---|---|
+| **CORR** | scientific correction (Methodology §3.6) | Appendix B: two `[RETRACTED]` entries (reason CORR-1/CORR-2, replacement, version); §6.13b `[COR]` notes in RECOG-ALG-A1C-TAIL-HARMONICS (i), (iii) and RECOG-THM-A1C-SHARPENED-SCHEDULE restating the limits and the order for the **corrected** closed forms (`Lg_corr`, the $M$-dependent bracket), with the v0.3.25 failure named; `[NUM]` grid values at $M=10^6,10^7$ updated and the $M\le10^7$ / $(1+\log)$ scaling stated; §1 clause; §8 row of the corrected grid | RECOG-ART-A1C-CORRECTED-GRID; Appendix B: RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325, RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325 (retracted-statement identifiers, not live RIDs) | PR #93 record v0.2 §4 (`13bfc30d…5c5f`; review #5674661826: CORR-1/CORR-2 accepted as a correction finding; option (b) chosen by the PI) | pending |
+| **DRIFT** | scientific (new; Lemma 21–22, Prop. 23) | §6.13b RECOG-ALG-A1C-RECIPROCAL-DRIFT `[ALG]`: (i) exact first order of the chart reciprocal law, $\delta_m=-\tfrac{29}{216}q_m-2\operatorname{Re}(a_{05}e^{-6i\Theta_m})q_m+R_m$, $|R_m|\le\gamma_2q_m^2$, $\gamma_2=212.6$ ($2C_7=200$); (ii) the log-free drift constant $K_\epsilon(a)$ with $\sup_m|q_m^{-1}-\tilde b_m|\le K_\epsilon$, $K_\epsilon=0.7203/0.4513/0.1860$ ($98$ % from $C_7$); (iii) the exact centring identity $A_1=\Lambda^{\log}_M(b)+A_1'$, $|A_1'|\le K_\epsilon P_2'$ (dependency-free interval form, two-sided closed-form tails); `[NUM]` jet-model illustration with NC1–NC2; adopted rows only, no `[assuming:]`; §1 clause; §7 NF6 and NF-REM uses | RECOG-ALG-A1C-RECIPROCAL-DRIFT; RECOG-ART-A1C-DRIFT-CENTERING | PR #93 record v0.2 §§1–3 (review #5674661826: exact algebra ✓; Lemma 22 / Prop. 23 a certified bound candidate — the analytic justification of the general upper bound and the all-$M$ scope to be explicit at publication review) | pending |
+| **ENV** | scientific (new; conditional Cor. 24; requires DRIFT) | §6.13b RECOG-ALG-A1C-LOGFREE-ENVELOPE `[ALG]` `[assuming: (D5)]`: the centred envelope $E^{(5)}$ with the log-free bracket in ${\rm ref}_d^{\rm new}$; **every term $\le c(a)/(a+M)$ for all $M\ge1$ by its closed form** — the bound is term by term; the grid value $E^{(5)}(a+M)\to19.15$ is an observation, not the proof; `[NUM]` 73-slip containment (73/73, ratio $0.79$ with $L_{\rm tol}$, $10.7$ without — tolerance caveat stated), gains $1.02$–$1.87$; §1 clause | RECOG-ALG-A1C-LOGFREE-ENVELOPE | PR #93 record v0.2 §3 and §5 (same review: conditional candidate; the three distinctions kept in the block wording) | pending |
+
+No RID renamed or regraded; no OPEN status word changed (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED). The (D5) proof constants and the $C_7$ ceilings remain `[assuming:]`; nothing becomes unconditional; Q1′ stays `[OPEN]`. Not in this package: a sharper $K_\epsilon$ (needs a Dyadic bound on $\operatorname{Re}(\rho_7/z)$ along an orbit or the B1-L2 ceiling $C_7\le85.1$); any sharpening of the in-block residual or the start-offset slack (the dominant terms of $E^{(5)}$); layout compaction.
+
+## 2. Build
+
+- Builder: `evidence/recog/scripts/build_recog_v0_3_26_stage1.py` (`234618ed…d284`; assertion-gated; modes `str`, `line`; Appendix A masked for live edits; `--only GROUP` builds a decoupling variant; ENV cannot be built without DRIFT). Base kept as `evidence/recog/v0.3.26/base_v0_3_25.md` (= `git show recog-v0.3.25:dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`, `86cae8ff…d7db`).
+- Edit log: `evidence/recog/v0.3.26/stage1_edit_log.json` (15 edits, old and new text with hashes).
+- Decoupling variants (`evidence/recog/v0.3.26/variants/`): CORR alone `c871844b…41a0` (8 edits); DRIFT alone `d3da4343…92ca` (6); DRIFT+ENV `0f8430e1…d12b` (8). Each carries exactly its own new RIDs (checker C18); every variant passes the checker (`variants/check_only_*.txt`). If the PI adopts a subset, the matching variant is the candidate (release transform §7).
+
+| Key | Group | Location | Mode |
+|---|---|---|---|
+| S1-CORR | CORR | §1 sharpened-schedule sentence: the order holds for the corrected closed forms (`[COR]`, Appendix B) | str |
+| S1-DRIFT | DRIFT | §1: reciprocal-drift sentence (new `[ALG]`) | str |
+| S1-ENV | ENV | §1: log-free envelope clause (`[assuming: (D5)]`) | str |
+| S613b-COR-TAIL-I | CORR | RECOG-ALG-A1C-TAIL-HARMONICS (i): `[COR]` note — limits for the corrected forms; v0.3.25 failure named; inequalities unchanged | str |
+| S613b-COR-TAIL-III | CORR | RECOG-ALG-A1C-TAIL-HARMONICS (iii): `[COR]` qualifier on the $E'$ limit | str |
+| S613b-COR-SCHED | CORR | RECOG-THM-A1C-SHARPENED-SCHEDULE: the order sentence restated for the corrected forms (`Lg_corr`, $M$-dependent bracket); the v0.3.25 floor and $\kappa$ piece named; inequality unchanged | str |
+| S613b-COR-NUM | CORR | the `[NUM]` grid line: corrected values at $10^6,10^7$ (v0.3.25 values kept in brackets); $(1+\log)$ scaling | str |
+| S613b-DRIFT | DRIFT | §6.13b: drift-centring block (`[ALG]`, `[NUM]`, "Not supplied") before §6.14 | str |
+| S613b-ENV | ENV | §6.13b: log-free envelope block (`[ALG]` `[assuming:]`, `[NUM]`, "Not supplied") after the drift block | str |
+| S7-NF6-DRIFT, S7-NFREM-DRIFT | DRIFT | §7 DYAD-ALG-NF6 and DYAD-THM-NF-REM rows: new uses appended | line |
+| S8-DRIFT, S8-CORR | DRIFT, CORR | §8 artifact rows after RECOG-ART-A1C-Q1PRIME-FIBER (file order: drift certificate, corrected grid) | line |
+| B-CORR | CORR | Appendix B: two `[RETRACTED]` entries after RECOG-FAIL-K-FROM-SADDLE (Methodology §3.6 format: statement, reason, replacement, version) | str |
+| A-1 | all | Appendix A: v0.3.26 DRAFT entry (per variant) | str |
+
+In-place edits inside adopted blocks (for the review's attention): the three `[COR]` sentences and the `[NUM]` grid line of §6.13b. The theorem display $c'''_k(a)$, the inequality clauses, item (ii) and the universal ceiling of TAIL-HARMONICS, the R9 and A1b statements are unchanged (checker C13). No `[RESULT]` block is added.
+
+## 3. Checks
+
+- `evidence/recog/scripts/check_recog_v0_3_26_stage1.py` (`a7d7e35d…a142`) — 26 gates C0–C25 **all PASS**; 32 negative controls each caught by its target gate (`evidence/recog/v0.3.26/stage1_check_output.txt`). Gates of note: C6 every OPEN-registry `Status:` line byte-identical; C13 the R9 and A1b statements, the schedule display line and the untouched TAIL-HARMONICS items unchanged; C16 every file named in §8 exists and every quoted SHA-256 in the new rows is the hash of the named file (6 hashes); C17 A1c-Q1′ stays `[OPEN]`; C19 the displayed constants agree with `a1c_drift_centering_cert.json` and `corrected_grid.json` (CORR: the corrected and v0.3.25 grid values, the scaled limits at $10^{13}$ to $2\times10^{-4}$, `all_below`, `Lg_corr` below `Lg` and above brute force, the floor $4.0$ and the $\kappa$ piece $1.45\times10^{-4}$; DRIFT: $\gamma_2$, its $C_7$ share, $K_\epsilon$ and the $98$ % share, the jet-model range and NC1–NC2; ENV: the $E^{(5)}(a+M)$ and $E^{(4)}(a+M)$ rows, non-increase from $10^4$, 73/73, gains, both ratios); C22 the envelope carries a backticked `[assuming:]` naming DYAD-THM-LPHASE-ROWA-REMAINDER and the drift block carries none; C24 the v0.3.25 R83-1 wording persists; C25 the two Appendix B entries exist only in the intermediate with reason / replacement / version, the retracted count rises by exactly two, and the corrected blocks carry their `[COR]` notes pointing to Appendix B.
+- Certificates (not rerun for this build): `recog_a1c_drift_centering_cert.py` (`307b3100…482e`; G1–G5, NC1–NC2, ALL PASS; outputs `evidence/recog/a1c_drift/`); `recog_v0_3_26_corrected_grid.py` (`61b8370d…1864`; closed-form evaluation only, no orbit; `evidence/recog/v0.3.26/corrected_grid.json` `569b018e…e141`). The 73-slip containment uses the stored orbit slips of the start-offset cell — no long orbit rerun (PI instruction).
+- Claim audit `evidence/recog/scripts/recog_v0_3_26_claim_audit.py` → `evidence/recog/v0.3.26/claim_audit.json`: the owner statements the new blocks rely on are present in the current sources at their tags — Dyadic `dyad-v6.4.22`: DYAD-ALG-NF6 with $\mu=-\tfrac12-\tfrac{2i\sqrt3}3$, $a_{32}=-\tfrac{97}{432}+\tfrac{197i\sqrt3}{324}$, $a_{05}=-\tfrac{49}{8640}-\tfrac{307i\sqrt3}{25920}$ (so $1-|\mu|^2-2\operatorname{Re}a_{32}=1-\tfrac{19}{12}+\tfrac{97}{216}=-\tfrac{29}{216}$); DYAD-THM-NF-REM with $C_7=100$ and the one-orbit contraction; the (D5) constants $0.79246$, $0.36915$ and DYAD-ART-LPHASE-ROWA; RECOG `recog-v0.3.25`: the exact limit and order sentences being corrected, the untouched items ((ii), the universal ceiling, the display), the v0.3.25 grid values, the Appendix B format; and the two defects themselves in the adopted certificate scripts (`Lg` with the first term `b_**(-p)`; `ref_d` on `q_plus = 1/((1 - kap_)*(bp + M))`). ALL PRESENT (8/8; presence at the cited RID or line, not a proof check).
+- `tools/dsn_lint.py` informational report: `evidence/recog/v0.3.26/dsn_lint_stage1.txt` (growth $16{,}411$ bytes, $5.0$ %; 6 new RIDs counted by the lint: the 4 live RECOG RIDs and the 2 Appendix B identifiers; no new near-duplicate paragraph; history-phrase counts unchanged). No READ/WRITE/DECODE vocabulary (C11).
+- Publication transform `evidence/recog/scripts/release_recog_v0_3_26.py` (`778cdf7d…b7b8`): 8 metadata edits only; `--preview` run — live text byte-identical outside the eight header/Appendix-A/footer lines (diffed). Not to be run before adoption.
+
+## 4. Notices (prepared; none sent)
+
+No new request. Informational items for the PI to route after adoption: Dyadic — $K_\epsilon$ is $98$ % the $C_7=100$ ceiling of DYAD-THM-NF-REM (a published bound on $\operatorname{Re}(\rho_7/z)$ along an orbit, or the B1-L2 ceiling, would lower it); the correction of v0.3.25 majorant order sentences does not touch any Dyadic statement. Consumers OFN/RRF/RER and Atlas: the Appendix B retractions concern RECOG-internal majorant asymptotics; no consumed inequality changes. The §7.2 outbound-notices paragraph is unchanged (checker C20); no notice state is recorded before a real dispatch.
+
+## 5. Stage 2
+
+Not built. No passage removed or relocated.
+
+## 6. Reviews and adoption
+
+| Stage | Reviewer / decision | Outcome |
+|---|---|---|
+| Cell (session level) | co-owner (ChatGPT), review #5674661826 on PR #93 (record v0.2) | correction finding CORR-1/CORR-2 accepted; drift results as conditional candidates; three distinctions (exact algebra / certified bound candidate / numerical observation) and the majorant-floor terminology — all carried into the block wording |
+| PI | 28 Oct 2026, 01:17 +03:00 | option (b): prepare the v0.3.26 candidate in one maintenance round (this record §0) |
+| Stage 1 — group CORR | co-owner (ChatGPT) | pending |
+| Stage 1 — group DRIFT | same | pending — requested: the analytic justification of the general upper bound $K_\epsilon$ (record v0.2 §2, Lemma 22) and its all-$M$ scope made explicit in the block (ii) |
+| Stage 1 — group ENV | same | pending — requested: the term-by-term bound (Cor. 24) against the record §3; the tolerance caveat of the 73-slip test |
+| Adoption | PI — three separate decisions | pending |
+
+Requested of the stage-1 review: (i) the Appendix B entries against the record §4 (nothing stronger than the finding; the inequalities explicitly unaffected); (ii) the three `[COR]` sentences: do they state exactly the corrected claim and name the v0.3.25 failure without rewriting history (RIDs kept; Methodology §3.6); (iii) each science block against its accepted cell (no strengthening in transit: `[assuming: (D5)]` on ENV only; the jet-model and grid lines marked illustration / observation); (iv) the variant hashes.
+
+## 7. Records and evidence of this release
+
+- Cell record (unchanged): `records/recog/RECOG_A1C_DRIFT_CENTERING_SESSION_v0_1.md` v0.2 (`13bfc30dda00d3e620c2bd75f732746ad27bce2888585367361167e2e3375c5f`); certificate and outputs under `evidence/recog/a1c_drift/`.
+- Stage-1 build and checks: `evidence/recog/scripts/build_recog_v0_3_26_stage1.py`, `check_recog_v0_3_26_stage1.py`, `recog_v0_3_26_corrected_grid.py`, `release_recog_v0_3_26.py` (not yet run); `evidence/recog/v0.3.26/` (base, edit log, corrected grid, variants with their check outputs, check output, lint).
+- The branch `claude/recog-v0.3.26-stage1` contains the drift-centering cell branch (PR #93), which closes with it.
+
+## 8. Adoption
+
+Pending. On adoption the PI's decisions (per group, verbatim, with date and time) are recorded here; the publication transform is run on the reviewed intermediate (or on the matching variant for a subset) with the date, the review number and the PI's scope wording; the adopted hash goes into the `BASELINE.md` RECOG row; the PI merges with a merge commit and creates the annotated tag `recog-v0.3.26`. Until then `recog-v0.3.25` governs.

@@ -1,0 +1,104 @@
+{
+ "base_sha256": "86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db",
+ "base_tag": "recog-v0.3.25",
+ "groups": [
+  "CORR"
+ ],
+ "intermediate_sha256": "c871844b0a0b63f6fea73b79218286a76687289eb9a042a4d874b69e72ea41a0",
+ "declared_new_recog_rids": [
+  "RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325",
+  "RECOG-ART-A1C-CORRECTED-GRID",
+  "RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325"
+ ],
+ "edit_count": 8,
+ "edits": [
+  {
+   "key": "S1-CORR",
+   "group": "CORR",
+   "location": "§1 sharpened-schedule sentence: corrected closed forms",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "c8c8693c5d06b4792494d65f08235e1120955a6b7f1519ad404686ba113aefe5",
+   "new_sha256": "5b6dfbcf8baf748f70dcb014b909cfa8a2e4f5dd37652fcc216ec0602db2e66d",
+   "old": "computable from the same declared data, $E'''=O_a((1+\\log(a+M_k))/(a+M_k))$; the record-only operation",
+   "new": "computable from the same declared data, $E'''=O_a((1+\\log(a+M_k))/(a+M_k))$ for the corrected closed forms of v0.3.26 (`[COR]`, Appendix B); the record-only operation"
+  },
+  {
+   "key": "S613b-COR-TAIL-I",
+   "group": "CORR",
+   "location": "§6.13b RECOG-ALG-A1C-TAIL-HARMONICS (i): [COR] note, corrected closed forms",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "b2d9dc02cbaeb194cb4511aa8fd9622eb87a64d34a41b1db4f80eaeebf7f88f4",
+   "new_sha256": "253845b320a493738ae3f0d9d7731ccd81ad70c48fd1910f1a55e4a723808292",
+   "old": "$\\bar S'\\sqrt{a+M}\\to|\\phi_1|/|\\tfrac12+i\\tau|+|\\phi_3|/|\\tfrac12+3i\\tau|=0.74850$ and $\\bar R'\\sqrt{a+M}\\to1.0753$ (part 1: $\\approx150$ and $9.12$; the order $M^{-1/2}$ is not removed);",
+   "new": "$\\bar S'\\sqrt{a+M}\\to|\\phi_1|/|\\tfrac12+i\\tau|+|\\phi_3|/|\\tfrac12+3i\\tau|=0.74850$ and $\\bar R'\\sqrt{a+M}\\to1.0753$ (part 1: $\\approx150$ and $9.12$; the order $M^{-1/2}$ is not removed) — `[COR]` (v0.3.26) these limits hold for the **corrected** closed forms, in which the log-majorant $\\sum_{m\\ge M}\\log(1+m/2b')(b'+m)^{-p}$ is bounded by its first term plus the integral in the decreasing regime $M\\ge b'$ and by the explicit finite sum below (`Lg_corr`, certified in RECOG-ART-A1C-DRIFT-CENTERING, G3b); the v0.3.25 forms carried the $M$-independent slack $b'^{-p}$ and had constant floors ($\\bar S'\\sqrt{a+M}\\to\\infty$), so the limits were false for them (Appendix B, RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325); the corrected forms are below the v0.3.25 ones at every grid point (RECOG-ART-A1C-CORRECTED-GRID), so the inequalities (i)–(iii) and the universal ceiling are unchanged;"
+  },
+  {
+   "key": "S613b-COR-TAIL-III",
+   "group": "CORR",
+   "location": "§6.13b RECOG-ALG-A1C-TAIL-HARMONICS (iii): corrected closed forms",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "6a97ba26a09d789b4339c7d3a77790165319d6ebdeee4683f4f2d73a55f4da6d",
+   "new_sha256": "d3e97129033cac0ca1d87dddd756a5bf9aed653c21225e626db14169f7108d5d",
+   "old": "with $E'\\sqrt{a+M}\\to5.4646$ (part 1: $187.31$);",
+   "new": "with $E'\\sqrt{a+M}\\to5.4646$ (part 1: $187.31$) for the corrected closed forms (`[COR]` v0.3.26, as in (i));"
+  },
+  {
+   "key": "S613b-COR-SCHED",
+   "group": "CORR",
+   "location": "§6.13b RECOG-THM-A1C-SHARPENED-SCHEDULE: [COR] order sentence",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "6735651351b52751bab48330cf3d9d0788375cbc66c4f11ae16ec15a149f735e",
+   "new_sha256": "da9af982c6ff64fccd7df4203a85e8b47890535b7c20ce955cf95ca5a19ee80f",
+   "old": "and $E'''(a,M_k,r_k)=O_a\\bigl((1+\\log(a+M_k))/(a+M_k)\\bigr)=o((a+M_k)^{-1/2})$; a pure $O((a+M_k)^{-1})$ is not claimed (the logarithmic term is $\\tau A_1$).",
+   "new": "and, for the **corrected** closed forms (`[COR]` v0.3.26: `Lg_corr` in the majorant $\\bar A_1$ of $|A_1|$ and the $M$-dependent bracket $q_M^{-1}\\in[b'+M-\\bar\\epsilon_M,\\,a+\\Delta_a+M+\\bar\\epsilon_M]$ in the reference term ${\\rm ref}_d$), $E'''(a,M_k,r_k)=O_a\\bigl((1+\\log(a+M_k))/(a+M_k)\\bigr)=o((a+M_k)^{-1/2})$; a pure $O((a+M_k)^{-1})$ is not claimed for this envelope (the logarithmic term is $\\tau\\bar A_1$; the log-free successor is RECOG-ALG-A1C-LOGFREE-ENVELOPE). The v0.3.25 forms had a constant floor $\\approx\\tau\\cdot2\\gamma_0b'^{-2}$ ($1.1\\times10^{-6}$ at $a=625$) from the slack $b'^{-2}$ of `Lg` and an order-$(a+M)^{-1/2}$ piece $\\tfrac{\\sqrt3}8\\tfrac\\kappa2(a+M)^{-1/2}$ from the uniform slack $\\kappa$ in $q^+_M$, so these order sentences were false for them (Appendix B, RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325); the inequality is unchanged and the corrected $E'''$ is below the v0.3.25 one at every grid point (RECOG-ART-A1C-CORRECTED-GRID)."
+  },
+  {
+   "key": "S613b-COR-NUM",
+   "group": "CORR",
+   "location": "§6.13b [NUM] grid sentence: corrected values",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "bd4bfd630a0f38f7bfdf151dfef64c7cbefa964eb5c59d2c67027e783e663ddb",
+   "new_sha256": "531f35008098a4cd9345d40ce6e8aa7e8d828eea40c7c506073b1144c95fda14",
+   "old": "At $a=625$ (worst $r$): $E'''=0.029$ at $M=10^3$ ($E''$ of the in-block cell $0.078$; $E'$ $0.166$; part 1's $E$ $2.92$), $4.3\\times10^{-3}$ at $10^4$, $4.5\\times10^{-4}$ at $10^5$, $4.7\\times10^{-5}$ at $10^6$, $5.8\\times10^{-6}$ at $10^7$; $E'''(a+M)\\to$ about $45$, $52$, $69$ for $a=625,1000,2500$ on the grid.",
+   "new": "At $a=625$ (worst $r$; corrected closed forms, v0.3.26): $E'''=0.029$ at $M=10^3$ ($E''$ of the in-block cell $0.078$; $E'$ $0.166$; part 1's $E$ $2.92$), $4.3\\times10^{-3}$ at $10^4$, $4.5\\times10^{-4}$ at $10^5$, $4.6\\times10^{-5}$ at $10^6$, $4.7\\times10^{-6}$ at $10^7$ (v0.3.25 forms: $4.7\\times10^{-5}$, $5.8\\times10^{-6}$); $E'''(a+M)$ is about $45$, $52$, $69$ for $a=625,1000,2500$ on the grid $M\\le10^7$ and $E'''(a+M)/(1+\\log(a+M))$ decreases from $2.2$ to $1.7$ ($a=625$) between $M=10^9$ and $10^{13}$."
+  },
+  {
+   "key": "S8-CORR",
+   "group": "CORR",
+   "location": "§8 artifact row RECOG-ART-A1C-CORRECTED-GRID",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "b25bed7649dce2baee618be0b24c0254208dd7b47471c2e6fd58a47430645374",
+   "new_sha256": "c4a03d202a853411ae5e86517c45c0304ae2d98fd10162ee9785128a2d9747ac",
+   "old": "- [RID: RECOG-ART-A1C-Q1PRIME-FIBER] `[v0.3.25]` :: `recog_a1c_q1prime_fiber_cert.py` (sha256 `953f32e4832a6fb742ecf66a67976a502d922cc2bed0c5bde568d9ec9cebf4e0`) + `evidence/recog/a1c_3/` (`46c15227…a7c9`, `b0d3ae03…a112`) :: exact sympy ($(1-2i\\tau)\\mu=-\\tfrac{19}6$; the polar Jacobian), interval derivative ceilings ($c_\\Psi=11.13$, $\\Xi=0.027$), `[NUM]` finite differences of $\\Psi_{W,\\infty}$ and level-curve partner pairs with the first differing return, negative control (unmatched pair separates at the first slip). Record: `RECOG_A1C_Q1PRIME_FIBER_SESSION_v0_1.md` v0.2 (`ac996a51…86ad`) :: `[ALG]` proof input (certificate) and `[NUM]` illustration; the margin criterion is `[SESSION/HEUR]` in the record",
+   "new": "- [RID: RECOG-ART-A1C-Q1PRIME-FIBER] `[v0.3.25]` :: `recog_a1c_q1prime_fiber_cert.py` (sha256 `953f32e4832a6fb742ecf66a67976a502d922cc2bed0c5bde568d9ec9cebf4e0`) + `evidence/recog/a1c_3/` (`46c15227…a7c9`, `b0d3ae03…a112`) :: exact sympy ($(1-2i\\tau)\\mu=-\\tfrac{19}6$; the polar Jacobian), interval derivative ceilings ($c_\\Psi=11.13$, $\\Xi=0.027$), `[NUM]` finite differences of $\\Psi_{W,\\infty}$ and level-curve partner pairs with the first differing return, negative control (unmatched pair separates at the first slip). Record: `RECOG_A1C_Q1PRIME_FIBER_SESSION_v0_1.md` v0.2 (`ac996a51…86ad`) :: `[ALG]` proof input (certificate) and `[NUM]` illustration; the margin criterion is `[SESSION/HEUR]` in the record\n- [RID: RECOG-ART-A1C-CORRECTED-GRID] `[v0.3.26]` :: `recog_v0_3_26_corrected_grid.py` (sha256 `61b8370d11b7a90936216874f835af864bb3af3b842e9aed3e6c08e25df01864`) + `evidence/recog/v0.3.26/corrected_grid.json` (`569b018e…e141`) :: the A1c envelope grids ($a\\in\\{625,1000,2500\\}$, $M=10^3\\ldots10^7$, all $r$) with the corrected closed forms (`Lg_corr` of RECOG-ART-A1C-DRIFT-CENTERING in $\\bar A_1$, $\\bar S'$, $\\bar R'$, $E'$, $E'''$; the $M$-dependent bracket in ${\\rm ref}_d$) next to the v0.3.25 values, and the scaled values at $M=10^9,10^{11},10^{13}$ ($\\bar S'\\sqrt{a+M}$, $\\bar R'\\sqrt{a+M}$, $E'\\sqrt{a+M}$ at their stated limits to $10^{-4}$; $E'''\\sqrt{a+M}\\to0$); the corrected majorants are below the adopted ones at every grid point; no orbit rerun :: `[COR]` evidence (closed-form evaluation)"
+  },
+  {
+   "key": "B-CORR",
+   "group": "CORR",
+   "location": "Appendix B: two RETRACTED entries (order sentences of the v0.3.25 majorants)",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "bfa5e58fadab9730d4eb3778333e72a46d818cd832e33623f1e9b1d3f4858756",
+   "new_sha256": "4b4f54acf3edbc34e58dd27dabc2c2b451f78ad2ccba4e5e8c15517230e2f640",
+   "old": "**[FAIL | RID: RECOG-FAIL-K-FROM-SADDLE]** Derive the antipodal band width $k$ from the $P_2$ saddle spectrum alone. Reason: eigenvalues fix width–lifetime scaling, not width; invariant under local rescaling. Closed: v0.1.",
+   "new": "**[FAIL | RID: RECOG-FAIL-K-FROM-SADDLE]** Derive the antipodal band width $k$ from the $P_2$ saddle spectrum alone. Reason: eigenvalues fix width–lifetime scaling, not width; invariant under local rescaling. Closed: v0.1.\n\n**[RETRACTED | RID: RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325]** The limit sentences of RECOG-ALG-A1C-TAIL-HARMONICS (v0.3.25) for the closed-form majorants as then defined: $\\bar S'\\sqrt{a+M}\\to0.74850$, $\\bar R'\\sqrt{a+M}\\to1.0753$, $E'\\sqrt{a+M}\\to5.4646$. Reason (CORR-1, drift-centering cell `records/recog/RECOG_A1C_DRIFT_CENTERING_SESSION_v0_1.md` §4): the log-majorant `Lg(p,b',M)` of part 1b bounds $\\sum_{m\\ge M}\\log(1+m/2b')(b'+m)^{-p}$ by an expression containing the $M$-independent slack $b'^{-p}$, so the majorants $\\bar A_1$, $\\bar S'$, $\\bar R'$, $E'$ have constant floors and the scaled quantities grow without bound ($\\bar S'\\sqrt{a+M}=4.0$ at $M=10^{13}$, $a=625$); the true tails decay, the majorants did not. The inequalities, the grid values ($M\\le10^7$, changed by $<0.5$ % at $M\\le10^5$) and the universal ceiling $E'\\le0.31$ are unaffected. Replaced by: the same limits for the corrected closed forms (`Lg_corr`: first term + integral in the decreasing regime, explicit finite sum below $b'$; certified below `Lg` and above brute-force sums, RECOG-ART-A1C-DRIFT-CENTERING G3b; the limits reached to $10^{-4}$ at $M=10^{13}$, RECOG-ART-A1C-CORRECTED-GRID), stated in §6.13b with `[COR]`. Version: v0.3.26.\n\n**[RETRACTED | RID: RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325]** The order sentence of RECOG-THM-A1C-SHARPENED-SCHEDULE (v0.3.25) for the envelope as then defined: $E'''=O_a((1+\\log(a+M_k))/(a+M_k))=o((a+M_k)^{-1/2})$ (and $E'''\\sqrt{a+M}\\to0$ in the combined-tail cell). Reason (CORR-1, CORR-2): the envelope's term $\\tau\\bar A_1$ inherited the constant floor $\\approx\\tau\\cdot2\\gamma_0b'^{-2}$ of `Lg`, and its reference term ${\\rm ref}_d$ used $q^+_M=((1-\\kappa)(b'+M))^{-1}$ with the uniform slack $\\kappa=\\sup_m\\bar\\epsilon_m/(b'+m)\\approx1.3\\times10^{-3}$, an order-$(a+M)^{-1/2}$ piece $1.45\\times10^{-4}(a+M)^{-1/2}$; hence $E'''\\sqrt{a+M}\\to\\infty$ for the v0.3.25 forms. The inequality $|\\varepsilon'''_k|\\le E'''$ is unaffected (a valid majorant remains valid), as are the grid values at $M\\le10^5$ ($<0.5$ %); at $M=10^6$, $10^7$ the corrected values are $2$ % and $19$ % smaller. Replaced by: the same order sentence for the corrected closed forms (`Lg_corr`; the $M$-dependent bracket of part 1b Lemma 2 in ${\\rm ref}_d$), stated in §6.13b with `[COR]`; and the log-free successor RECOG-ALG-A1C-LOGFREE-ENVELOPE ($E^{(5)}=O_a(1/(a+M))$). Version: v0.3.26."
+  },
+  {
+   "key": "A-1",
+   "group": "ALL",
+   "location": "Appendix A: v0.3.26 draft entry (per variant)",
+   "mode": "str",
+   "region": "appA",
+   "old_sha256": "42eab3a9d9e66a41f87bcadbe7f360abc387551175ade99ca6b1200868ab4a1a",
+   "new_sha256": "d8f032bc7e00640bd1bc048fa4119a4796f88dd1c963dba027fab0539adcf6a4",
+   "old": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.25 — 27 October 2026 — Adopted",
+   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.26 — DRAFT, stage 1 (corrected intermediate; not adopted)\n- **Basis:** PI decision of 28 Oct 2026 (option (b) for the correction finding of the drift-centering cell, PR #93, reviews #5674661826: `PREPARE RECOG ASYMPTOTIC CORRECTION + DRIFT-CENTERING SUCCESSOR` — one maintenance round; no long orbit rerun; the Appendix B rationale, the corrected closed forms, the corrected order sentences, and Lemma 21–22, Prop. 23 and the conditional Cor. 24 as separate acceptances). Each group below carries its own acceptance decision.\n- **Scientific correction (separately accepted; Appendix B):** the asymptotic-order sentences of RECOG-ALG-A1C-TAIL-HARMONICS (i), (iii) and RECOG-THM-A1C-SHARPENED-SCHEDULE were false for the closed-form majorants as defined in v0.3.25 — CORR-1: the $M$-independent slack $b'^{-p}$ of the log-majorant `Lg` gave $\\bar A_1$, $\\bar S'$, $\\bar R'$, $E'$, $E'''$ constant floors; CORR-2: the uniform slack $\\kappa$ in the reference term gave an order-$(a+M)^{-1/2}$ piece. The statements are corrected in place with `[COR]` (RIDs kept) for the corrected closed forms (`Lg_corr`; the $M$-dependent bracket), under which the limits and orders hold; the inequalities, grades and RIDs are unchanged; the corrected majorants are below the v0.3.25 ones at every grid point (RECOG-ART-A1C-CORRECTED-GRID, §8); the `[NUM]` grid values at $M=10^6,10^7$ updated. Appendix B: RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325, RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325. Found by the drift-centering cell (PR #93) while checking the order of the remaining terms.\n- **Unchanged:** every existing RID's statement and grade (the two `[COR]` sentences correct order claims for stated majorants; the inequalities stand); every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED).\n- **Records:** release record `records/recog/RECOG_v0_3_26_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.25` (SHA-256 `86cae8ff…d7db`).\n\n### v0.3.25 — 27 October 2026 — Adopted"
+  }
+ ]
+}

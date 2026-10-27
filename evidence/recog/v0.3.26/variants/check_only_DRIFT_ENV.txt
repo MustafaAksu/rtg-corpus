@@ -1,0 +1,30 @@
+base 86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db
+intermediate 0f8430e1aab9b685896ae02bcc87da90c7222c7074597a0e860b644e98f5d12b (groups DRIFT,ENV, 8 edits)
+GATES:
+  C0   PASS BASE
+  C1   PASS BUILD
+  C2   PASS REVERSE
+  C3   PASS APPENDIX A
+  C4   PASS SPAN TAGS 
+  C5   PASS SPAN RIDS []
+  C6   PASS STATUS (byte-identical)
+  C7   PASS RID SET
+  C8   PASS RID ATTACH
+  C9   PASS RESULT
+  C10  PASS QUALIFIERS
+  C11  PASS VOCAB
+  C12  PASS IMPORTS
+  C13  PASS R9/A1B statements, the schedule display and the untouched TAIL-HARMONICS items unchanged
+  C14  PASS HEADER
+  C15  PASS HEADINGS
+  C16  PASS §8 FILES (4 hashes checked)
+  C17  PASS LIVE
+  C18  PASS DECOUPLE
+  C19  PASS VALUES
+  C20  PASS NOTICES
+  C21  PASS TAG CENSUS
+  C22  PASS ASSUMING (source-conditioned blocks carry the qualifier; unconditional ones do not)
+  C24  PASS R83-1 (known-a centre never called record-only; decoder closure scoped)
+  C23  PASS RECORDS (paths exist; §8 record versions match the records' status lines)
+
+RESULT: PASS
