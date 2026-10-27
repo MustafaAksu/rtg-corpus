@@ -16,7 +16,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Owner dispositions | `records/tdrg/TDRG_OWNER_DISPOSITION_ADVISORY_v2_12_13_claude01SKePJ_20261027.md` (PR #89), `…_chatgpt_20261027.md` (PR #88, with its post-peer addendum) | merged (`78c2fef`, `ed5f85b`) |
 | Disposition reconciliation | `records/tdrg/TDRG_OWNER_DISPOSITION_RECONCILIATION_v2_12_13.md` (atlas owner; PR #91) | open PR; read at `c359e21` |
 | PI fixation | "başla" on the fixed dispositions of the reconciliation §3 (relayed in the session, 27 Oct 2026, 23:46) | given |
-| Change-focused review | ChatGPT co-owner session | *(to be filled)* |
+| Change-focused review | ChatGPT co-owner session: `records/tdrg/TDRG_v2_12_14_CHATGPT_CHANGE_FOCUSED_REVIEW_20261028.md` (PR #94, commit `728f959`); acceptance criteria in PR #92 comment 6454252077 | **CONDITIONAL PASS** — two bounded changes, applied in round 2 (§3a) |
 | Row check and rerun | atlas owner (`records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_12_14.md`) | *(to be filled)* |
 | Adoption, merge commit, tag `tdrg-v2.12.14` | PI | *(to be filled)* |
 
@@ -25,19 +25,20 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v2.12.13) | `git show tdrg-v2.12.13:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f` |
-| **Candidate v2.12.14** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `b8317a75e5fb335075828f706f42f14708538fc15ff958b6acd4ef5402295a61` |
-| Builder | `evidence/tdrg/scripts/build_tdrg_v2_12_14.py` | `7558f3a431567513441623095e94ee5411ea1ef3db887cb028a295a9643b3996` |
-| Checker | `evidence/tdrg/scripts/check_tdrg_v2_12_14.py` | `1332dc0e5597e21df8f56d3b7f801cdd7110f3518e5fccff6fa928026dbfa159` |
+| **Candidate v2.12.14** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392` |
+| Builder | `evidence/tdrg/scripts/build_tdrg_v2_12_14.py` | `71d990b3579adaa2cecaa4308064af0a5e5c8ff127636609c757c4f0921f286e` |
+| Checker | `evidence/tdrg/scripts/check_tdrg_v2_12_14.py` | `d27b946bd1e0ed2a40edf26da2c83d35401dae7f7e887eb4cdd9f53c762af847` |
 | Reference implementation of TDRG-DEF-ORIENT | `evidence/tdrg/scripts/tdrg_orient_v2_12_14.py` | `ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c` |
-| Edit log (105 edits, old/new text and hashes) | `evidence/tdrg/v2.12.14/edit_log.json` | `9ddd2f890de5e04bd587fec5c8f1dd572e802a93c80c08bebbd436e10fb8f479` |
-| Checker output (gates) | `evidence/tdrg/v2.12.14/check_output.txt` | `0510f58e24bb2a77154872dc415555d12d603b82ee0e6a06a89d3da518c016a8` |
-| Checker output (negative controls) | `evidence/tdrg/v2.12.14/controls_output.txt` | `72ea764f2d858c452b5d8dc21a7437fef73d81e0790c3659ebea077f7026b511` |
-| Checker output (`--exhaustive`) | `evidence/tdrg/v2.12.14/check_exhaustive_output.txt` | `65b482ddd2f240ede394c041a3bd5ea283c353c6ae419d0aed8e29131bc018b9` |
+| Edit log (105 edits, old/new text and hashes) | `evidence/tdrg/v2.12.14/edit_log.json` | `c94ff966ffe1f707c0e25cba3df83d6daad38c16074ab1ee7348224541c2edcb` |
+| Checker output (gates) | `evidence/tdrg/v2.12.14/check_output.txt` | `df8579ac057132a08d346c37d76909770f46f9afc72f2b7dc2392cc7157874d9` |
+| Checker output (negative controls) | `evidence/tdrg/v2.12.14/controls_output.txt` | `61473bc3e07c4ed9f7632bd0354b17a4cb4ce43e714dd4fc7aade4c1e151910f` |
+| Checker output (C8 with the branch refs deleted locally) | `evidence/tdrg/v2.12.14/check_output_no_branch_refs.txt` | `0346ada7fab3bff9c9c8545ebc8aa2c77aefa5d177e9d30b558ebc5f798d6470` |
+| Checker output (`--exhaustive`) | `evidence/tdrg/v2.12.14/check_exhaustive_output.txt` | `cd612a5e131fbe13e65d93702e39a6d3a9f9390611d80dd15552483e96b24c0f` |
 | Pinned engine (v18) used by the checker | `upload/tdrg-records/genesis_mode_b_mc_v18.py` | `9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e` |
 | Disposition evidence | `evidence/tdrg/disposition/SHA256SUMS.txt` | `dc0661ea922cefad1cd66c6f5ab73528613831332be2f07849ff90fcc774d385` |
 | Session-held scripts (TB-11) | branch `upload/tdrg-session-scripts`, commit `386e9d44f1f819d89b5b0e0ce4f6cb18c6e08c8b`, `upload/tdrg-session-scripts/SHA256SUMS.txt` | `00ce64d9b9fc8039e81eb5cc2489248f3b71f5e0de33740f85bb0cb3696ac6e3` |
 
-**Reproduce.** `git show tdrg-v2.12.13:dsn/RTG_DISCRETE_GENESIS_DSN.md > base.md`; `python3 -I evidence/tdrg/scripts/build_tdrg_v2_12_14.py base.md OUT.md LOG.json` writes the candidate (`b8317a75…5a61`) and the log; `python3 -I evidence/tdrg/scripts/check_tdrg_v2_12_14.py base.md dsn/RTG_DISCRETE_GENESIS_DSN.md evidence/tdrg/v2.12.14/edit_log.json` runs the gates (add `--controls` for the negative controls, `--exhaustive` for the full three-node census). The checker reads tags and the branches `origin/upload/tdrg-session-scripts` and `origin/claude/tdrg-disposition-reconciliation` (fetch them first). No publication transform is planned: the candidate carries no DRAFT marker, so the adopted file can be the candidate byte for byte.
+**Reproduce.** `git show tdrg-v2.12.13:dsn/RTG_DISCRETE_GENESIS_DSN.md > base.md`; `python3 -I evidence/tdrg/scripts/build_tdrg_v2_12_14.py base.md OUT.md LOG.json` writes the candidate (`3be72923…2392`) and the log; `python3 -I evidence/tdrg/scripts/check_tdrg_v2_12_14.py base.md dsn/RTG_DISCRETE_GENESIS_DSN.md evidence/tdrg/v2.12.14/edit_log.json` runs the gates (add `--controls` for the negative controls, `--exhaustive` for the full three-node census). The checker reads tags and two commit objects, `386e9d44…` (session scripts) and `c359e21…` (PR #91), until their content is merged; no branch name is needed. No publication transform is planned: the candidate carries no DRAFT marker, so the adopted file can be the candidate byte for byte.
 
 ## 3. Edits by disposition
 
@@ -67,11 +68,18 @@ All 105 edits are exact-once (`str`, `line` or one `block`), logged with old and
 | N2 (owner finding) | accept (both records) | E84, E90 | TDRG-ALG-MIRROR-NOT-STEP-SYMMETRY |
 | XFER-O08-01 / REQ-O09-05 | statement accepted; custody deferred; answered | E91 | §7 import of `RTG-OFN-ALG-STAR-TOKEN-SHIFT`; custody to v2.13 |
 
+## 3a. Round 2 (review changes, 28 Oct 2026)
+
+The round-1 candidate `b8317a75e5fb335075828f706f42f14708538fc15ff958b6acd4ef5402295a61` is superseded by the round-2 candidate in §2. Only the two requested changes were made, and no other edit text changed:
+
+- **R1 — SG-14 scope (edit E32).** The first sentence now binds SG-14 to the canonical branch `bound_symmetric`; any other policy branch is covered only once its covariance is separately established. Equality is stated **modulo a relabelling of freshly born nodes** (one-to-one matching of newborn nodes, as the checks compare them). The branch-scope sentence says the finite checks support SG-14 on their tested scope and are not a theorem for all $N$ or all policies. `largest_center` is stated as not satisfying SG-14. A Violation clause is added for citing SG-14 on a branch whose covariance is not established. Gate C6 now asserts these three phrases.
+- **R2 — checker C8 without branch dependence.** The session-held scripts are verified through the manifest `SHA256SUMS.txt`, whose own SHA-256 (`00ce64d9…`) is pinned in the checker. The manifest and members are read from the placed tree `upload/tdrg-session-scripts/` if present, else from the immutable upload commit `386e9d44…`. The pending-path fallback likewise uses commit SHAs (`c359e21` for PR #91, `386e9d44`), not branch names. New control K8 (altered manifest hash) must fail C8. A run with the remote-tracking refs `origin/upload/tdrg-session-scripts` and `origin/claude/tdrg-disposition-reconciliation` deleted locally passes C8 (`check_output_no_branch_refs.txt`).
+
 ## 4. Checks
 
 **Gates** (`check_output.txt`, EV-RUN): RESULT: PASS (11/11 gates) — C0 BASE; C1 BUILD; C2 REVERSE; C3 HISTORY; C4 RIDS; C5 TAGS; C6 ORIENT; C7 NUMBERS; C8 EVIDENCE; C9 SOURCES; C10 DYNAMICS.
 
-**Negative controls** (`controls_output.txt`): every control is caught.
+**Negative controls** (`controls_output.txt`): every control is caught, including K8 (round 2).
 
 ```
 [CAUGHT] K1 old orientation text restored: failing gates ['C1 BUILD', 'C2 REVERSE', 'C4 RIDS', 'C6 ORIENT']
@@ -81,6 +89,7 @@ All 105 edits are exact-once (`str`, `line` or one `block`), logged with old and
 [CAUGHT] K5 compound tag reintroduced: failing gates ['C1 BUILD', 'C2 REVERSE', 'C5 TAGS']
 [CAUGHT] K6 edited Appendix A history: failing gates ['C1 BUILD', 'C2 REVERSE', 'C3 HISTORY']
 [CAUGHT] K7 v18 rule substituted for the reference rule: C10 FAIL
+[CAUGHT] K8 session manifest hash altered: failing gates ['C8 EVIDENCE']
 CONTROLS: PASS (all caught)
 ```
 
@@ -142,9 +151,9 @@ One `kind: notice` item per consumer, filed by the TDR-G co-owner after `tdrg-v2
 | File | Bytes | Lines |
 |---|---|---|
 | v2.12.13 (adopted) | 148,073 | 1,288 |
-| v2.12.14 candidate | 178,301 | 1,387 |
+| v2.12.14 candidate | 178,909 | 1,387 |
 
-Net change: +30,228 bytes (+20.4 %). Corrections only: the orientation definitions and no-go remark, SG-14, the §6.12 orientation-covariance block, the §7 register and RID map, the §8 custody register and the Appendix A entry account for the growth; compaction is v2.13.
+Net change: +30,836 bytes (+20.8 %). Corrections only: the orientation definitions and no-go remark, SG-14, the §6.12 orientation-covariance block, the §7 register and RID map, the §8 custody register and the Appendix A entry account for the growth; compaction is v2.13.
 
 ## 11. Not done (by instruction)
 
@@ -159,7 +168,7 @@ Net change: +30,228 bytes (+20.4 %). Corrections only: the orientation definitio
 
 | # | Step | Who | State |
 |---|---|---|---|
-| 1 | Change-focused review of this branch | ChatGPT co-owner | *(to be filled)* |
+| 1 | Change-focused review of this branch | ChatGPT co-owner | CONDITIONAL PASS (PR #94); round-2 changes applied (§3a) — confirmation *(to be filled)* |
 | 2 | Row check, builder/checker rerun, `ATLAS_ROW_CHECK_TDRG_v2_12_14.md` | atlas owner | *(to be filled)* |
 | 3 | Adoption decision entered here (§13) | PI | *(to be filled)* |
 | 4 | Merge commits (not squash), in order: #87, #91, this PR; the `upload/tdrg-session-scripts` branch after its atlas hash check | PI | *(to be filled)* |

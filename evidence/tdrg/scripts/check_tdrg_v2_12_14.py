@@ -27,9 +27,10 @@ Gates (exit 0 iff all PASS):
  C7  NUMBERS      every number of the v2.12.14 orientation statements equals its evidence file: owner equivariance JSON
                   (72/72, 168/168, 112, zeros), atlas JSON (40 exposed; 10/20/12; census 9,800/77/16,322/331,776;
                   inert 9,789/66), mirror output (2,661 of 2,703), multistar output, antipodal fixture text
- C8  EVIDENCE     every hash prefix cited in edited text matches its file (on this tree, or for the session scripts on
-                  origin/upload/tdrg-session-scripts at 386e9d4); every repository path cited in edited text exists
-                  (on this tree, or until merged on the PR #91 / upload branches)
+ C8  EVIDENCE     every hash prefix cited in edited text matches its file; the session-held scripts match the manifest
+                  SHA256SUMS.txt whose own hash is pinned here (00ce64d9…), read from the placed tree if present, else
+                  from the immutable upload commit 386e9d44 — no branch name is consulted; every repository path cited
+                  in edited text exists (on this tree, or at the commits c359e21 (PR #91) / 386e9d44 until merged)
  C9  SOURCES      the cited tags exist (programme-v1.2/1.3, ofn-v0.10, methodology-v1.4, az-v0.6, triad-v1.6.1,
                   numgen-v1.21); the cited facts are at those tags (RTG-OFN-ALG-STAR-TOKEN-SHIFT and 2c=0 in OFN;
                   AZ-ALG-ANTIPODAL-LOWORDER and Lk<N/2 in AZ; CN-05, 96:1 and the x_* root in TRIAD; "the antipodal
@@ -48,9 +49,13 @@ BASE_SHA = "aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f"
 ENGINE_V18 = ("upload/tdrg-records/genesis_mode_b_mc_v18.py",
               "9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e")
 COLLISION_REF = "ed5f85b367d8390b08aa8241abbc220548e52110"
-SESSION_REF = "origin/upload/tdrg-session-scripts"
+# Session-held scripts (TDRG-ART-SESSION-SCRIPTS): verified through the immutable upload commit and the preserved manifest
+# hash, or through the placed tree once merged — never through a branch name (review round 2, PR #94).
+SESSION_DIR = "upload/tdrg-session-scripts"
 SESSION_COMMIT = "386e9d44f1f819d89b5b0e0ce4f6cb18c6e08c8b"
-PENDING_REFS = ["origin/claude/tdrg-disposition-reconciliation", SESSION_REF]
+SESSION_SUMS_SHA = "00ce64d9b9fc8039e81eb5cc2489248f3b71f5e0de33740f85bb0cb3696ac6e3"   # SHA256SUMS.txt at that commit
+RECON_COMMIT = "c359e21f8f6d3fc1bd2dfd2d4644d0474cecabe1"   # PR #91 head (reconciliation record) until merged
+PENDING_REFS = [RECON_COMMIT, SESSION_COMMIT]
 APPA, APPB = "## Appendix A — Version History {#appendix-a}\n\n", "## Appendix B"
 ALIAS_SENTENCE_START = "Canonical tags follow `DSN_METHODOLOGY`"
 COMPOUND = ["[ALG/NUM", "[ALG / NUM", "[ENG/ALG]", "[BRANCH/NUM", "[NUM / ", "[HEUR/NUM]", "[NUM strong / ALG",
@@ -173,6 +178,8 @@ def gates(root, base, cand, log, exhaustive=False, builder=None, out=print):
     ok = (all(n in od for n in need) and "If $S = E = 0$" not in cand
           and "in the half-open interval $(-N/2,\\,N/2]$" in cand
           and "\\mathrm{Sym}(V)\\times\\mathbb{Z}_N^{\\rm phase}" in sg and "common token shift" in sg
+          and sg.startswith("**[SG-14]** *(v2.12.14)* **Relabelling covariance.** On the canonical branch `bound_symmetric`")
+          and "**modulo a relabelling of freshly born nodes**" in sg and "not a theorem for all $N$ or all policies" in sg
           and "the mirror" in sg and "TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK" in sg
           and "Path-orientation completion by node-ID listing" in cand
           and "**Recorded alternative (not adopted):**" in cand)
@@ -223,13 +230,21 @@ def gates(root, base, cand, log, exhaustive=False, builder=None, out=print):
             path, where = HASHES[pre]
             data = open(os.path.join(root, path), "rb").read() if where == "tree" else show(root, where, path)
             if not sha(data).endswith(short.split("…")[1]): bad.append((short, path))
-    # session-scripts hashes on the upload branch
-    sums = show(root, SESSION_REF, "upload/tdrg-session-scripts/SHA256SUMS.txt")
-    sess_ok = sums is not None and git(root, "rev-parse", SESSION_REF).stdout.decode().strip() == SESSION_COMMIT
-    if sess_ok:
-        for line in sums.decode().splitlines():
-            h, p = line.split(None, 1); p = p.strip().lstrip("./")
-            d = show(root, SESSION_REF, "upload/tdrg-session-scripts/" + p)
+    # session-scripts: placed tree first, else the immutable upload commit; manifest hash pinned in this checker
+    sess_src, sess_ok = None, False
+    tree_sums = os.path.join(root, SESSION_DIR, "SHA256SUMS.txt")
+    if os.path.exists(tree_sums):
+        sess_src = "tree"
+        rd = lambda q: open(os.path.join(root, SESSION_DIR, q), "rb").read() if os.path.exists(os.path.join(root, SESSION_DIR, q)) else None
+    elif show(root, SESSION_COMMIT, SESSION_DIR + "/SHA256SUMS.txt") is not None:
+        sess_src = "commit " + SESSION_COMMIT[:7]
+        rd = lambda q: show(root, SESSION_COMMIT, SESSION_DIR + "/" + q)
+    if sess_src:
+        sums = rd("SHA256SUMS.txt")
+        sess_ok = sums is not None and sha(sums) == SESSION_SUMS_SHA
+        for line in (sums or b"").decode().splitlines():
+            h, q = line.split(None, 1); q = q.strip().lstrip("./")
+            d = rd(q)
             sess_ok &= d is not None and sha(d) == h
     paths = set(re.findall(r"`((?:evidence|records|upload|pipes|dsn)/[A-Za-z0-9_./-]+)`", et))
     nopath = []
@@ -238,7 +253,7 @@ def gates(root, base, cand, log, exhaustive=False, builder=None, out=print):
         if any(show(root, r, p) is not None for r in PENDING_REFS): continue
         nopath.append(p)
     g("C8 EVIDENCE", not bad and sess_ok and not nopath,
-      f"hash mismatches {bad}; session-scripts branch ok {sess_ok}; missing paths {nopath}")
+      f"hash mismatches {bad}; session scripts ok {sess_ok} (source: {sess_src}); missing paths {nopath}")
     # C9
     tags = git(root, "tag", "-l").stdout.decode().split()
     need_tags = ["programme-v1.2", "programme-v1.3", "ofn-v0.10", "methodology-v1.4", "az-v0.6", "triad-v1.6.1",
@@ -375,6 +390,16 @@ def controls(root, base, cand, log, out=print):
     caught["K7 v18 rule substituted for the reference rule"] = not r
     out(f"[{'CAUGHT' if not r else 'MISSED'}] K7 v18 rule substituted for the reference rule: C10 "
         f"{'FAIL' if not r else 'PASS'}")
+    # K8 manifest control: a different pinned manifest hash must fail C8 (the session evidence is hash-bound)
+    global SESSION_SUMS_SHA
+    keep, SESSION_SUMS_SHA = SESSION_SUMS_SHA, "0" * 64
+    try:
+        r = gates(root, base, cand, log, out=quiet)
+    finally:
+        SESSION_SUMS_SHA = keep
+    caught["K8 session manifest hash altered"] = not r["C8 EVIDENCE"]
+    out(f"[{'CAUGHT' if not r['C8 EVIDENCE'] else 'MISSED'}] K8 session manifest hash altered: failing gates "
+        f"{[k for k, v in r.items() if not v]}")
     return all(caught.values())
 
 

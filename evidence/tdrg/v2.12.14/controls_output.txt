@@ -5,4 +5,5 @@
 [CAUGHT] K5 compound tag reintroduced: failing gates ['C1 BUILD', 'C2 REVERSE', 'C5 TAGS']
 [CAUGHT] K6 edited Appendix A history: failing gates ['C1 BUILD', 'C2 REVERSE', 'C3 HISTORY']
 [CAUGHT] K7 v18 rule substituted for the reference rule: C10 FAIL
+[CAUGHT] K8 session manifest hash altered: failing gates ['C8 EVIDENCE']
 CONTROLS: PASS (all caught)
