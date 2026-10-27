@@ -1,0 +1,1 @@
+mirror (theta,delta)->(-theta,-delta), N=24 k=1, 3 nodes, 60000 random states: step-equivariance failures 2661; states with a P3 event 2703; failures among them 2661

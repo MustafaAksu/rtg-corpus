@@ -1,0 +1,62 @@
+{
+ "n3_G_a_k1": {
+  "fail_gen01": 0,
+  "fail_gen12": 0,
+  "phase_shift_fail_sampled": 0,
+  "states": 331776
+ },
+ "n3_G_a_k3": {
+  "fail_gen01": 0,
+  "fail_gen12": 0,
+  "phase_shift_fail_sampled": 0,
+  "states": 331776
+ },
+ "n3_tie_b_k1": {
+  "fail_gen01": 0,
+  "fail_gen12": 0,
+  "phase_shift_fail_sampled": 0,
+  "states": 331776
+ },
+ "n3_tie_b_k3": {
+  "fail_gen01": 0,
+  "fail_gen12": 0,
+  "phase_shift_fail_sampled": 0,
+  "states": 331776
+ },
+ "n3_v18_k1": {
+  "fail_gen01": 72,
+  "fail_gen12": 72,
+  "phase_shift_fail_sampled": 0,
+  "states": 331776
+ },
+ "n3_v18_k3": {
+  "fail_gen01": 168,
+  "fail_gen12": 168,
+  "phase_shift_fail_sampled": 0,
+  "states": 331776
+ },
+ "n4_G_a_bound_symmetric": {
+  "fail": 0,
+  "samples": 100000
+ },
+ "n4_G_a_largest_center": {
+  "fail": 0,
+  "samples": 100000
+ },
+ "n4_tie_b_bound_symmetric": {
+  "fail": 0,
+  "samples": 100000
+ },
+ "n4_tie_b_largest_center": {
+  "fail": 0,
+  "samples": 100000
+ },
+ "n4_v18_bound_symmetric": {
+  "fail": 112,
+  "samples": 100000
+ },
+ "n4_v18_largest_center": {
+  "fail": 112,
+  "samples": 100000
+ }
+}

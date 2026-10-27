@@ -1,0 +1,3 @@
+largest_center births 1 centre tokens after 23 2 | swap centres (0 1) equivariant: False
+all_centers births 2 centre tokens after 23 22 | swap centres (0 1) equivariant: True
+bound_symmetric births 0 centre tokens after 1 2 | swap centres (0 1) equivariant: True
