@@ -1,0 +1,82 @@
+{
+ "base_sha256": "8c64bea231b3691b737f4143f6f4105030ee183fcc90d7f604ec83a4c869e7c1",
+ "base_tag": "recog-v0.3.24",
+ "groups": [
+  "A1CQ"
+ ],
+ "intermediate_sha256": "8d3ebfd0eb6850260b1f570b75a41ac523256bebd29b6d85289861d1ea215086",
+ "declared_new_recog_rids": [
+  "RECOG-ALG-A1C-PHASE-C1-FIBER",
+  "RECOG-ALG-A1C-THRESHOLD-CODING",
+  "RECOG-ART-A1C-Q1PRIME-FIBER"
+ ],
+ "edit_count": 6,
+ "edits": [
+  {
+   "key": "S1-A1CQ",
+   "group": "A1CQ",
+   "location": "§1: record fibers",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "77e6c9d3dd3937f7077ab039852d28efe9e7df46a534d0912c284a778c4c24d2",
+   "new_sha256": "217f6fedfbbd7906c01e70ced38e0fc3792a8d80354f83f8c901c046d1624ac9",
+   "old": "Quantitative per-row form, scope and imports: §6.13b.",
+   "new": "`[ALG]` (v0.3.25) Record fibers lie on one $C^1$ level curve of $\\Psi_\\infty$ in the chart row — empty interior; connectedness and injectivity (A1c-Q1′) open (RECOG-ALG-A1C-PHASE-C1-FIBER, §6.16e). Quantitative per-row form, scope and imports: §6.13b."
+  },
+  {
+   "key": "S2-R6-Q1P",
+   "group": "A1CQ",
+   "location": "§2 OPEN R6 sub-item A1c-Q1′ reworded (stays OPEN)",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "70bacfa8235dc9697f03c1d91561ab9789c3d9c54d7c7bd540f61045243fa811",
+   "new_sha256": "5aaeef4410920fa43382c0853aea59b50a9d448a6a99e7d0697a9077ac714b17",
+   "old": "- A1c-Q1′: is $x_0\\mapsto\\mathcal R(x_0)$ (start state to complete token record) injective on $U$? Neither answer is established (the session cell's local-nonconstancy argument for empty-interior level sets is `[SESSION]` conjectural and carries an open proof obligation on all of $U$; it is not an owner result and does not resolve injectivity). Either answer leaves the $R_{\\rm ind}$ classification of R9's carrier unchanged (retrospective reconstruction is not write-through) :: `[OPEN]`",
+   "new": "- A1c-Q1′: is $x_0\\mapsto\\mathcal R(x_0)$ (start state to complete token record) injective on $U$? Neither answer is established. Known (v0.3.25, RECOG-ALG-A1C-PHASE-C1-FIBER, §6.16e): record fibers lie on one $C^1$ level curve of $\\Psi_\\infty$ in the chart row, hence have empty interior (the former `[SESSION]` conjectural statement is proved, conditional on the Dyadic normal-form rows); their connectedness is not established, and record equality on the curve is equality of threshold codings (RECOG-ALG-A1C-THRESHOLD-CODING); the cell's slip-margin criterion is `[SESSION/HEUR]`, not a theorem. Either answer leaves the $R_{\\rm ind}$ classification of R9's carrier unchanged (retrospective reconstruction is not write-through) :: `[OPEN]`"
+  },
+  {
+   "key": "S616e-A1CQ",
+   "group": "A1CQ",
+   "location": "§6.16e: record-fiber block before §6.16f",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "dc5779f7bceeb2630b87efefc6f7f7f3442f602d307a001547e1ceb0232c194a",
+   "new_sha256": "1159ee03fe6f00b40bf8f4f2e03de063aea79038006333ee5a604aeb1aee80cd",
+   "old": "\n\n#### §6.16f CELL-F3",
+   "new": "\n\n**Record fibers (A1c-Q1′ bounded study, v0.3.25; new science, separately reviewed; Q1′ itself stays OPEN).**\n\n`[ALG]` [RID: RECOG-ALG-A1C-THRESHOLD-CODING] [scope: $x_0\\in U$; F2(b) conventions] [proof: immediate from Lemmas A and B of the A1b cell; `records/recog/RECOG_A1C_Q1PRIME_FIBER_SESSION_v0_1.md` v0.2 (Prop. 6)] With the overshoot $o_j=\\hat\\varphi_{n_j}-2\\pi\\ell_j\\in[0,\\tfrac\\pi2)$ and the six-step deficit $\\Delta_j=2\\pi-\\Lambda_6(x_{n_j})$ at the $j$-th anchor, the record is the threshold coding $g_{j+1}=7\\iff o_j<\\Delta_j$ of the sawtooth $o_{j+1}=o_j-\\Delta_j$ (gap $6$), $o_{j+1}=o_j-\\Delta_j+\\delta_T(x_{n_j+6})$ (gap $7$); two starts have the same record iff $n_0=n_0'$ and $[o_j<\\Delta_j]=[o'_j<\\Delta'_j]$ for every $j$. Depends on: RECOG-THM-A1B-SLIP-SCHEDULE-U.\n\n`[ALG]` [RID: RECOG-ALG-A1C-PHASE-C1-FIBER] [scope: chart row A, $0<q_0\\le q^*=\\tfrac{256}{140625}$ (every start in $U$); conditional on DYAD-THM-NF-REM ($C_7$, $C_D$), DYAD-THM-NF-INV, DYAD-ALG-NF6 only — no R9 row and no (D5) constant] [proof: cell v0.2 §2 (Prop. 7, Cor. 8, Prop. 9); certificate RECOG-ART-A1C-Q1PRIME-FIBER] (i) $\\Psi_\\infty=\\lim_m(\\Theta_m-\\tau\\log q_m)$ is $C^1$ in $(\\lambda_0,\\Theta_0)=(\\log q_0,\\Theta_0)$ on the punctured row disk, with $|\\partial_{\\Theta_0}\\Psi_\\infty-1|\\le c_\\Psi q_0$, $c_\\Psi=11.13$ (so $\\le0.0203$ on the row), and $\\partial_{\\lambda_0}\\Psi_\\infty=-\\tau+O(q_0)$: $\\Psi_\\infty=\\Psi(z_0)+\\sum_m\\sigma(z_m)$ with $\\sigma=\\operatorname{Im}[(1-2i\\tau)\\operatorname{Log}(1+u)]$, where $(1-2i\\tau)\\mu=-\\tfrac{19}6$ is real (the normal-form coefficient is exactly the log-spiral direction), so $\\sigma=O(q^2)$ with explicit derivative ceilings, the polar Jacobian of $\\widehat F$ is $\\begin{pmatrix}1-q&0\\\\-\\tau q&1\\end{pmatrix}+O(q^2)$ and the derivative series converges uniformly (Grönwall constant $\\Xi=0.027$). (ii) Every level set $\\{\\Psi_\\infty\\equiv\\psi\\pmod{2\\pi}\\}$ in the row is one $C^1$ graph curve $\\Theta_0=\\theta_\\psi(q_0)$ (one point per circle $q_0={\\rm const}$); since the record determines $L=\\tfrac\\pi3n_0-2\\pi\\ell_0+\\Psi_{W,\\infty}$ (RECOG-RESULT-A1C-RECORD-PHASE-READOUT) and $\\Psi_{z,\\infty}=\\Psi_{W,\\infty}$, the record fiber $\\mathcal R^{-1}(\\mathcal R(x_0))\\cap U$ is contained in the single curve $\\mathcal C_\\psi$, $\\psi=L-\\tfrac\\pi3n_0$, parametrized injectively by $q_0$ — in particular it has empty interior. The fiber is a subset of the curve, not necessarily a segment: a disconnected fiber is not excluded. (iii) On $\\mathcal C_\\psi$ record equality is equality of the threshold codings of RECOG-ALG-A1C-THRESHOLD-CODING (exact reduction of Q1′ to a one-dimensional coding question). Depends on: RECOG-RESULT-A1C-RECORD-PHASE-READOUT; RECOG-THM-A1A-PHASE-EXISTENCE-ALT; the three Dyadic rows named in the scope.\n**Not supplied:** injectivity or non-injectivity of the record map (A1c-Q1′, OPEN R6); connectedness of fibers; the cell's slip-margin criterion (partners flip at the first return whose normalized margin ${\\rm crit}_j=|o_j-\\Delta_j|(a+M_j)/\\tau$ is exceeded; sign-dependent) is `[SESSION/HEUR]` in the cell and is not registered here — its `[NUM]` level-curve pairs (six partners of a base orbit; first differing return as predicted in 6/6) illustrate a mechanism and do not bear on the infinite record; any event or write statement (SG-R6).\n\n#### §6.16f CELL-F3"
+  },
+  {
+   "key": "S7-NFINV-A1CQ",
+   "group": "A1CQ",
+   "location": "§7 DYAD-THM-NF-INV row: fiber use",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "df573bf3136313988dc4808f1700fb53e2efea8a898eee668f7c714e91dae6b2",
+   "new_sha256": "26daf43856fd7e3f7a803f7fdd8111377c65fc6ea212fb2a47d3c35073d4f8c8",
+   "old": "- [RID: DYAD-THM-NF-INV] :: inverse chart, $\\|Dh^{-1}\\|<\\tfrac87$, $\\tfrac{225}{256}|z|^2\\le Q_{\\rm prim}\\le\\tfrac{289}{256}|z|^2$, comparator transport $\\overline{h(z_a)}h(z_b)$ :: Dyadic v6.4.10 §6.14 :: §6.14 :: accepted; $q\\ne Q_{\\rm prim}$",
+   "new": "- [RID: DYAD-THM-NF-INV] :: inverse chart, $\\|Dh^{-1}\\|<\\tfrac87$, $\\tfrac{225}{256}|z|^2\\le Q_{\\rm prim}\\le\\tfrac{289}{256}|z|^2$, comparator transport $\\overline{h(z_a)}h(z_b)$ :: Dyadic v6.4.10 §6.14 :: §6.14 :: accepted; $q\\ne Q_{\\rm prim}$; §6.16e RECOG-ALG-A1C-PHASE-C1-FIBER (v0.3.25): row bound $q_0\\le\\tfrac{256}{140625}$ on $U$ (with NF-REM's $C_7$, $C_D$ and the NF6 chart)"
+  },
+  {
+   "key": "S8-A1CQ",
+   "group": "A1CQ",
+   "location": "§8 artifact row RECOG-ART-A1C-Q1PRIME-FIBER",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "1521a033ee886fabe7e2c42a557115cd4bac1952c5620ba295914367a1bd617f",
+   "new_sha256": "62eb2f82aa320ed1bc3bbc53da863b5305db5a6a2f1cf9817a95f752044bafd0",
+   "old": "- [RID: RECOG-ART-A3-QUADRATURE-TYPING] `[v0.3.24]` :: `recog_a3_quadrature_typing.py` (sha256 `936d4c97950b53085b019411616324450a79b3c762b19a5688c06e53acb93e6b`) + output `evidence/recog/a3_quadrature/a3_quadrature_typing.json` (`65475ba57b48e17055b810dace404aaf964e194d79c2a63626fccd5965291e70`) :: exact sympy gates Q1–Q6 (Jacobian identities; unipotent shear on the quadrature; the three comparator-geometric identities and $S^*\\Omega=\\Omega$; the retyping charts $\\varphi_A$, $\\varphi_B$; the two-step trace on the quadrature; the pole-stratum inventory with symbolic $m,k$) and controls NC1 (constant linear chart preserves tr, det), NC2 ($\\varepsilon=0$ reproduces the primitive unipotent); `[NUM]` Newton probe for periodic orbits ($n\\le8$, $|L|\\le2$, $\\rho\\in[-2.5,2.5]$): 18 orbits, of which $P_1$, $P_2$, the winding fixed points $k=1,2$ and the $m=1$ period-2 orbit are the exact ones, 11 further orbits uncertified; no sampled orbit has a point on the quadrature (no nonexistence claim). Session record `records/recog/RECOG_A3_QUADRATURE_TYPING_SESSION_v0_1.md` v0.2 (`262e2529a9288ddf56e1842f074a12bcaf66f43e96cc53f3cd12b939c1cd1d17`) :: `[ALG]` certificate (exact) and `[NUM]` sampled list",
+   "new": "- [RID: RECOG-ART-A3-QUADRATURE-TYPING] `[v0.3.24]` :: `recog_a3_quadrature_typing.py` (sha256 `936d4c97950b53085b019411616324450a79b3c762b19a5688c06e53acb93e6b`) + output `evidence/recog/a3_quadrature/a3_quadrature_typing.json` (`65475ba57b48e17055b810dace404aaf964e194d79c2a63626fccd5965291e70`) :: exact sympy gates Q1–Q6 (Jacobian identities; unipotent shear on the quadrature; the three comparator-geometric identities and $S^*\\Omega=\\Omega$; the retyping charts $\\varphi_A$, $\\varphi_B$; the two-step trace on the quadrature; the pole-stratum inventory with symbolic $m,k$) and controls NC1 (constant linear chart preserves tr, det), NC2 ($\\varepsilon=0$ reproduces the primitive unipotent); `[NUM]` Newton probe for periodic orbits ($n\\le8$, $|L|\\le2$, $\\rho\\in[-2.5,2.5]$): 18 orbits, of which $P_1$, $P_2$, the winding fixed points $k=1,2$ and the $m=1$ period-2 orbit are the exact ones, 11 further orbits uncertified; no sampled orbit has a point on the quadrature (no nonexistence claim). Session record `records/recog/RECOG_A3_QUADRATURE_TYPING_SESSION_v0_1.md` v0.2 (`262e2529a9288ddf56e1842f074a12bcaf66f43e96cc53f3cd12b939c1cd1d17`) :: `[ALG]` certificate (exact) and `[NUM]` sampled list\n- [RID: RECOG-ART-A1C-Q1PRIME-FIBER] `[v0.3.25]` :: `recog_a1c_q1prime_fiber_cert.py` (sha256 `953f32e4832a6fb742ecf66a67976a502d922cc2bed0c5bde568d9ec9cebf4e0`) + `evidence/recog/a1c_3/` (`46c15227…a7c9`, `b0d3ae03…a112`) :: exact sympy ($(1-2i\\tau)\\mu=-\\tfrac{19}6$; the polar Jacobian), interval derivative ceilings ($c_\\Psi=11.13$, $\\Xi=0.027$), `[NUM]` finite differences of $\\Psi_{W,\\infty}$ and level-curve partner pairs with the first differing return, negative control (unmatched pair separates at the first slip). Record: `RECOG_A1C_Q1PRIME_FIBER_SESSION_v0_1.md` v0.2 (`ac996a51…86ad`) :: `[ALG]` proof input (certificate) and `[NUM]` illustration; the margin criterion is `[SESSION/HEUR]` in the record"
+  },
+  {
+   "key": "A-1",
+   "group": "ALL",
+   "location": "Appendix A: v0.3.25 draft entry (per variant)",
+   "mode": "str",
+   "region": "appA",
+   "old_sha256": "47218f3ac1344035a5c4925ab61be52c91b66b3ee9502c824939e3fd292be88d",
+   "new_sha256": "1552e42ee005e127357b09fc8ea6c4a408b6c618228f5e198019a9b18081cd9e",
+   "old": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.24 — 24 October 2026 — Adopted",
+   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.25 — DRAFT, stage 1 (corrected intermediate; not adopted)\n- **Basis:** PI decision of 26 Oct 2026 (one consolidated maintenance and adoption-candidate package for the open cell PRs #48, #49, #51, #53, #54, #59, #61, #63, #64, #71, #75, each reviewed and accepted at session level by the co-owner (ChatGPT); classification by the PI: B1 L1 `[ALG]`, B1 L2 `[THM]` `[assuming: Dyadic $C_7$ ceilings]`, A1c known-$a$ envelopes and combined-tail identity adoptable with their source conditions, start-offset centring and unknown-$a$ enclosure as conditional theorems and computational results, the Q1′ $C^1$ fiber structure as a scope-limited `[ALG]`, Q1′ injectivity and the slip-margin heuristic to stay `[OPEN]` / `[SESSION/HEUR]`). Each group below carries its own acceptance decision; the (D5) and $C_7$ dependencies stay `[assuming:]` until Dyadic registers them.\n- **New science, group A1c-Q (separately reviewed; Q1′ stays OPEN):** RECOG-ALG-A1C-THRESHOLD-CODING (the record is the threshold coding of the overshoot sawtooth) and RECOG-ALG-A1C-PHASE-C1-FIBER (§6.16e) — $\\Psi_\\infty\\in C^1$ with $|\\partial_{\\Theta_0}\\Psi_\\infty-1|\\le11.13q_0$; record fibers lie on one $C^1$ level curve (empty interior; connectedness open); exact reduction of Q1′ to a 1-D coding question; the slip-margin criterion stays `[SESSION/HEUR]` in the cell; OPEN R6 sub-item A1c-Q1′ reworded; RECOG-ART-A1C-Q1PRIME-FIBER (§8); §7 NF-INV row records the use.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); the R6 sub-item A1c-Q1′ stays `[OPEN]`.\n- **Records:** release record `records/recog/RECOG_v0_3_25_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.24` (SHA-256 `8c64bea2…e7c1`).\n\n### v0.3.24 — 24 October 2026 — Adopted"
+  }
+ ]
+}

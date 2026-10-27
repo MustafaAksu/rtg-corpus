@@ -1,0 +1,15 @@
+large |z|<=1/20: K_Phi=258.48 C2=516.97 window=1.480e-05 | e1=257.63 [C7 251.66 (97.4% of K), cross 4.27, log3 1.69] e2=0.86 [gmaxD1 0.58, tau g1 0.05, g1B2 0.04, g2 0.18]
+    L1_sum_lemma {'C2': 259.131, 'window_q0': 0.0, 'gain_factor': 1.995}
+    L2_cert_values {'C7': 85.07, 'K_Phi': 220.7713, 'C2': 441.5426, 'window_q0': 0.0, 'gain_factor': 1.1708}
+    L1+L2 {'C2': 221.3232, 'window_q0': 0.0}
+    L3_C7_zero_floor {'K_Phi': 5.8829, 'C2': 11.7657, 'C2_with_L1': 5.8976, 'window_q0_with_L1': 0.0013, 'reaches_target': False}
+small |z|<=1/40: K_Phi=81.43 C2=162.87 window=4.698e-05 | e1=80.71 [C7 75.50 (92.7% of K), cross 3.54, log3 1.68] e2=0.72 [gmaxD1 0.46, tau g1 0.05, g1B2 0.03, g2 0.18]
+    L1_sum_lemma {'C2': 81.4837, 'window_q0': 0.0001, 'gain_factor': 1.9988}
+    L2_cert_values {'C7': 27.6, 'K_Phi': 75.3873, 'C2': 150.7746, 'window_q0': 0.0001, 'gain_factor': 1.0802}
+    L1+L2 {'C2': 75.4344, 'window_q0': 0.0001}
+    L3_C7_zero_floor {'K_Phi': 5.8642, 'C2': 11.7284, 'C2_with_L1': 5.8679, 'window_q0_with_L1': 0.0013, 'reaches_target': True}
+targets: {'C2_for_whole_small_row': 12.24317486556991, 'C2_for_whole_large_row': 3.0607937163924777}
+L4: [(100, 0, 0.00675, True, True), (100, 20, 0.0065, True, True), (300, 0, 0.0039, True, True), (300, 20, 0.00385, True, True), (1000, 0, 0.00214, False, True), (1000, 20, 0.00213, False, True), (3000, 0, 0.00123, False, True), (3000, 20, 0.00123, False, True), (10000, 0, 0.00068, False, True), (10000, 20, 0.00068, False, True)]
+sum lemma: {'0.0025': (True, 0.997), '0.000625': (True, 0.998), '0.0001': (True, 0.998)}
+NUM jet model (mp, first 3000 steps): {'0.0025': {'max_per_step_|dPhi|/q^3_jet_model_first3000': 1.979872540476816, 'sum_q^3/q0^2_first3000': 0.4944522463957311}, '0.000625': {'max_per_step_|dPhi|/q^3_jet_model_first3000': 1.9782077612933704, 'sum_q^3/q0^2_first3000': 0.43983422122431215}}
+NUM jet model (float64, full): {'0.0025': {'max_|M-q0 g|/q0^2': 0.9370463253039613, 'q_end': 2.4975083409480446e-06, 'note': 'float64; per-step ratios not reported here (late-time noise)'}, '0.000625': {'max_|M-q0 g|/q0^2': 0.9345413728814589, 'q_end': 2.490044458965316e-06, 'note': 'float64; per-step ratios not reported here (late-time noise)'}}

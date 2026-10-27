@@ -1,0 +1,72 @@
+{
+ "base_sha256": "8c64bea231b3691b737f4143f6f4105030ee183fcc90d7f604ec83a4c869e7c1",
+ "base_tag": "recog-v0.3.24",
+ "groups": [
+  "B1"
+ ],
+ "intermediate_sha256": "ff5e4226c53bb5edf6194639663181889d65f1ff1b7b814bddd763690fef02cb",
+ "declared_new_recog_rids": [
+  "RECOG-ALG-R9-SUM-LEMMA",
+  "RECOG-ART-R9-SHARPENED-ROWS",
+  "RECOG-THM-R9-SHARPENED-ROWS",
+  "RECOG-THM-R9-SHARPENED-ROWS-C7"
+ ],
+ "edit_count": 5,
+ "edits": [
+  {
+   "key": "S1-B1",
+   "group": "B1",
+   "location": "§1 lattice paragraph: sharpened R9 rows",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "7bc8f93c6d8617c21d1bbade49670670fd882d3abb8ca84b262b57dc8d01570c",
+   "new_sha256": "8e6084b89313f47ec9f070420dbe75096252dc6c0938f3823ec1487ad12b7c3c",
+   "old": "for $q_0<|G|/C_2$ (RECOG-THM-R9-COMPARATOR-INCOMPLETENESS, §6.13a).",
+   "new": "for $q_0<|G|/C_2$ (RECOG-THM-R9-COMPARATOR-INCOMPLETENESS, §6.13a); sharpened rows (v0.3.25) $C_2=259.2$ / $81.49$ from the summation lemma RECOG-ALG-R9-SUM-LEMMA, and $221.4$ / $75.69$ `[assuming: Dyadic $C_7$ certificate ceilings]` (RECOG-THM-R9-SHARPENED-ROWS, -C7; the adopted rows stay in force)."
+  },
+  {
+   "key": "S613a-B1",
+   "group": "B1",
+   "location": "§6.13a: sharpened rows block after the row table paragraph",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "0aceedfdbf0e02eb83c8dbd8d7f08bd557b61309751496feef54c991e400d224",
+   "new_sha256": "a122597f55853768678b7503f6edfe19b31d29b3a21a6f750f874b97a5fb894e",
+   "old": "the deferred $C_7$ sharpening would widen it roughly proportionally.",
+   "new": "the deferred $C_7$ sharpening would widen it roughly proportionally.\n\n**Sharpened rows (B1, v0.3.25; new science, separately reviewed; additive — the adopted rows above stay in force, rows not mixed).**\n\n`[ALG]` [RID: RECOG-ALG-R9-SUM-LEMMA] [scope: any sequence with $q_m\\le q_0/(1+\\tfrac12q_0m)$ for all $m\\ge0$ — the DYAD-THM-NF-REM one-orbit bound] [proof: integral comparison of the decreasing majorant; certificate RECOG-ART-R9-SHARPENED-ROWS, gate G1 (exact antiderivative, rigorous bracket)] $\\sum_{m\\ge0}q_m^3\\le(1+q_0)\\,q_0^2$. The adopted $\\sum_mq_m^3\\le2q_0^2$ is this bound with $1+q_0$ replaced by $2$; the exact sum of the majorant sequence is at least $0.9975$ times the bound for $q_0\\le\\tfrac1{400}$, so within the one-orbit bound the lemma is essentially sharp. Depends on: DYAD-THM-NF-REM (one-orbit contraction, §7).\n\n`[THM]` [RID: RECOG-THM-R9-SHARPENED-ROWS] [scope: as RECOG-THM-R9-MEMORY and RECOG-THM-R9-COMPARATOR-INCOMPLETENESS, per row; adopted statements only] [proof: the proof of RECOG-THM-R9-MEMORY with its last step $|R|\\le K_\\Phi\\sum_mq_m^3$ replaced by RECOG-ALG-R9-SUM-LEMMA, so $|R|\\le K_\\Phi(1+q_{\\max})q_0^2$; $C_2'$ is the four-significant-digit ceiling of the interval upper bound of $K_\\Phi(1+q_{\\max})$, with $K_\\Phi$ re-enclosed by interval arithmetic ($258.4848$, $81.4328$; the adopted ceilings $258.49/81.44$ reproduced, gate G2); nothing else in the proof changes] Both theorems hold with $(C_2,q_{\\max})=(259.2,\\tfrac1{400})$ on $|z|\\le\\tfrac1{20}$ and $(81.49,\\tfrac1{1600})$ on $|z|\\le\\tfrac1{40}$; certified incompleteness windows $q_0<|G|/259.2\\approx2.952\\times10^{-5}$, resp. $q_0<|G|/81.49\\approx9.390\\times10^{-5}$ (factors $1.995$ and $2.000$ over the adopted windows). Depends on: RECOG-THM-R9-MEMORY (statement and proof); RECOG-ALG-R9-SUM-LEMMA; DYAD-THM-NF-REM ($C_7=100$, resp. $30$, as adopted).\n\n`[THM]` [RID: RECOG-THM-R9-SHARPENED-ROWS-C7] [scope: as RECOG-THM-R9-SHARPENED-ROWS] `[assuming: $C_7\\le85.1$ on $|z|\\le\\tfrac1{20}$ and $C_7\\le27.7$ on $|z|\\le\\tfrac1{40}$ — Dyadic's published DYAD-THM-NF-REM certificate values $85.07$ / $27.60$ rounded up; these are not Dyadic theorem statements; registration requested (§7)]` With these ceilings in place of the adopted $C_7=100$ / $30$, and the same proof: $(C_2,q_{\\max})=(221.4,\\tfrac1{400})$ and $(75.69,\\tfrac1{1600})$ ($K_\\Phi\\le220.8471$ / $75.6392$); windows $q_0<3.456\\times10^{-5}$, resp. $q_0<1.011\\times10^{-4}$ (factors $2.335$, $2.154$). Depends on: RECOG-THM-R9-SHARPENED-ROWS and the listed assumption (the certificate refuses any ceiling below the published value $+0.005$, control NC2).\n**Not supplied:** any change to the adopted rows; any claim about $C_7$ beyond Dyadic's published values; the B1 study-plan targets ($C_2\\le12.2$, $3.06$ — not reached, as the Stage A budget predicted; Stage C remains the route); second-order memory. Records: `records/recog/RECOG_B1_STAGEA_R9_BUDGET_SESSION_v0_1.md` (Stage A error budget, analysis record v0.2.1) and `records/recog/RECOG_B1_L1L2_PROOF_CELL_v0_1.md` (proof cell v0.1)."
+  },
+  {
+   "key": "S7-NFREM-B1",
+   "group": "B1",
+   "location": "§7 DYAD-THM-NF-REM row: B1 uses",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "15662b0580b899786961375c30f0bcd43e97d039a23c28dbc54b5ff22f6a9ae3",
+   "new_sha256": "328340f9150a7ab203631303b7450301abb6a045c3006c382057ed34e554b0c7",
+   "old": "- [RID: DYAD-THM-NF-REM] :: $C_7/C_D$ profiles $(100,1000)$ on $\\tfrac1{20}$, $(30,250)$ on $\\tfrac1{40}$; $\\widehat U_T\\subset\\{|z|<\\tfrac1{20}\\}$; normalised one-orbit contraction :: Dyadic v6.4.10 §6.14 :: R9 budget, R8 hand-over; §6.13b RECOG-THM-A1B-SLIP-SCHEDULE-U uses the ingredients only — raw-vector tail $|R^{\\rm prim}_{\\ge10,\\rm vec}|\\le332000|W|^{10}$ on $|W|\\le\\tfrac1{16}$ and the degree 7–9 vector ceilings $\\tfrac{2079}{1000},\\tfrac{577}{500},\\tfrac{1763}{1000}$ (present at `dyad-v6.4.22` §6.14; v0.3.24) :: accepted; rows not mixed; certificate values 85.07/27.60",
+   "new": "- [RID: DYAD-THM-NF-REM] :: $C_7/C_D$ profiles $(100,1000)$ on $\\tfrac1{20}$, $(30,250)$ on $\\tfrac1{40}$; $\\widehat U_T\\subset\\{|z|<\\tfrac1{20}\\}$; normalised one-orbit contraction :: Dyadic v6.4.10 §6.14 :: R9 budget, R8 hand-over; §6.13b RECOG-THM-A1B-SLIP-SCHEDULE-U uses the ingredients only — raw-vector tail $|R^{\\rm prim}_{\\ge10,\\rm vec}|\\le332000|W|^{10}$ on $|W|\\le\\tfrac1{16}$ and the degree 7–9 vector ceilings $\\tfrac{2079}{1000},\\tfrac{577}{500},\\tfrac{1763}{1000}$ (present at `dyad-v6.4.22` §6.14; v0.3.24) :: accepted; rows not mixed; certificate values 85.07/27.60; §6.13a sharpened rows (v0.3.25): the one-orbit bound in RECOG-ALG-R9-SUM-LEMMA; the published certificate values $85.07/27.60$ used only as `[assuming:]` ceilings $85.1/27.7$ in RECOG-THM-R9-SHARPENED-ROWS-C7 (registration requested)"
+  },
+  {
+   "key": "S8-B1",
+   "group": "B1",
+   "location": "§8 artifact row RECOG-ART-R9-SHARPENED-ROWS",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "1521a033ee886fabe7e2c42a557115cd4bac1952c5620ba295914367a1bd617f",
+   "new_sha256": "d675d450d00262e9eb56ccf977d19856975918f9fca8ac83fe073a7473d759bd",
+   "old": "- [RID: RECOG-ART-A3-QUADRATURE-TYPING] `[v0.3.24]` :: `recog_a3_quadrature_typing.py` (sha256 `936d4c97950b53085b019411616324450a79b3c762b19a5688c06e53acb93e6b`) + output `evidence/recog/a3_quadrature/a3_quadrature_typing.json` (`65475ba57b48e17055b810dace404aaf964e194d79c2a63626fccd5965291e70`) :: exact sympy gates Q1–Q6 (Jacobian identities; unipotent shear on the quadrature; the three comparator-geometric identities and $S^*\\Omega=\\Omega$; the retyping charts $\\varphi_A$, $\\varphi_B$; the two-step trace on the quadrature; the pole-stratum inventory with symbolic $m,k$) and controls NC1 (constant linear chart preserves tr, det), NC2 ($\\varepsilon=0$ reproduces the primitive unipotent); `[NUM]` Newton probe for periodic orbits ($n\\le8$, $|L|\\le2$, $\\rho\\in[-2.5,2.5]$): 18 orbits, of which $P_1$, $P_2$, the winding fixed points $k=1,2$ and the $m=1$ period-2 orbit are the exact ones, 11 further orbits uncertified; no sampled orbit has a point on the quadrature (no nonexistence claim). Session record `records/recog/RECOG_A3_QUADRATURE_TYPING_SESSION_v0_1.md` v0.2 (`262e2529a9288ddf56e1842f074a12bcaf66f43e96cc53f3cd12b939c1cd1d17`) :: `[ALG]` certificate (exact) and `[NUM]` sampled list",
+   "new": "- [RID: RECOG-ART-A3-QUADRATURE-TYPING] `[v0.3.24]` :: `recog_a3_quadrature_typing.py` (sha256 `936d4c97950b53085b019411616324450a79b3c762b19a5688c06e53acb93e6b`) + output `evidence/recog/a3_quadrature/a3_quadrature_typing.json` (`65475ba57b48e17055b810dace404aaf964e194d79c2a63626fccd5965291e70`) :: exact sympy gates Q1–Q6 (Jacobian identities; unipotent shear on the quadrature; the three comparator-geometric identities and $S^*\\Omega=\\Omega$; the retyping charts $\\varphi_A$, $\\varphi_B$; the two-step trace on the quadrature; the pole-stratum inventory with symbolic $m,k$) and controls NC1 (constant linear chart preserves tr, det), NC2 ($\\varepsilon=0$ reproduces the primitive unipotent); `[NUM]` Newton probe for periodic orbits ($n\\le8$, $|L|\\le2$, $\\rho\\in[-2.5,2.5]$): 18 orbits, of which $P_1$, $P_2$, the winding fixed points $k=1,2$ and the $m=1$ period-2 orbit are the exact ones, 11 further orbits uncertified; no sampled orbit has a point on the quadrature (no nonexistence claim). Session record `records/recog/RECOG_A3_QUADRATURE_TYPING_SESSION_v0_1.md` v0.2 (`262e2529a9288ddf56e1842f074a12bcaf66f43e96cc53f3cd12b939c1cd1d17`) :: `[ALG]` certificate (exact) and `[NUM]` sampled list\n- [RID: RECOG-ART-R9-SHARPENED-ROWS] `[v0.3.25]` :: `recog_b1_l1l2_sharpened_rows_cert.py` (sha256 `92bf1187f5315a7a681c846081167846074cd70e85c78967e70166871a26516e`) + output `evidence/recog/b1_l1l2/b1_l1l2_sharpened_rows_cert.json` (`96b26b29…f476`), `b1_l1l2_sharpened_rows_cert_output.txt` (`edc8accf…accf`) :: mpmath interval arithmetic (60 digits; rigorous enclosures of $K_\\Phi$ and $C_2'$), sympy for the integral identity; gates G1 (lemma: exact antiderivative, rigorous bracket, float sanity), G2 (adopted $K_\\Phi$ reproduced: $258.4848$, $81.4328$), G3 (the four rows, 4-significant-digit ceilings), G4 (every new $C_2'$ smaller, every window wider); controls NC1 (mis-evaluated integral contradicted by the explicit sum), NC2 (a ceiling below the published certificate value refused); not Arb, but the same bound structure as the Arb certificate RECOG-ART-R9-MEMORY and reproducing its values. Stage A budget script `recog_b1_stageA_r9_budget.py` (`1bb3bc1c…80e9`) + `evidence/recog/b1_stageA/` (`a5914d52…0e92`, `4d97db27…8910`), analysis only. Records: `RECOG_B1_STAGEA_R9_BUDGET_SESSION_v0_1.md` v0.2.1 (`c15d1a0d…c4e6`), `RECOG_B1_L1L2_PROOF_CELL_v0_1.md` v0.1 (`8f746e92…6a11`) :: `[THM]` proof input (certificate) for the sharpened rows"
+  },
+  {
+   "key": "A-1",
+   "group": "ALL",
+   "location": "Appendix A: v0.3.25 draft entry (per variant)",
+   "mode": "str",
+   "region": "appA",
+   "old_sha256": "47218f3ac1344035a5c4925ab61be52c91b66b3ee9502c824939e3fd292be88d",
+   "new_sha256": "767f14369b7a551c625ed14e5d301c31b8122d6782ea4471bcf1124e454ddc78",
+   "old": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.24 — 24 October 2026 — Adopted",
+   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.25 — DRAFT, stage 1 (corrected intermediate; not adopted)\n- **Basis:** PI decision of 26 Oct 2026 (one consolidated maintenance and adoption-candidate package for the open cell PRs #48, #49, #51, #53, #54, #59, #61, #63, #64, #71, #75, each reviewed and accepted at session level by the co-owner (ChatGPT); classification by the PI: B1 L1 `[ALG]`, B1 L2 `[THM]` `[assuming: Dyadic $C_7$ ceilings]`, A1c known-$a$ envelopes and combined-tail identity adoptable with their source conditions, start-offset centring and unknown-$a$ enclosure as conditional theorems and computational results, the Q1′ $C^1$ fiber structure as a scope-limited `[ALG]`, Q1′ injectivity and the slip-margin heuristic to stay `[OPEN]` / `[SESSION/HEUR]`). Each group below carries its own acceptance decision; the (D5) and $C_7$ dependencies stay `[assuming:]` until Dyadic registers them.\n- **New science, group B1 (separately reviewed):** RECOG-ALG-R9-SUM-LEMMA (§6.13a) — $\\sum_mq_m^3\\le(1+q_0)q_0^2$ from the NF-REM one-orbit bound; RECOG-THM-R9-SHARPENED-ROWS — $(C_2,q_{\\max})=(259.2,\\tfrac1{400})$, $(81.49,\\tfrac1{1600})$ from adopted statements only (windows ×2); RECOG-THM-R9-SHARPENED-ROWS-C7 `[assuming: Dyadic $C_7$ certificate ceilings 85.1/27.7]` — $(221.4,\\tfrac1{400})$, $(75.69,\\tfrac1{1600})$; the adopted rows stay in force; RECOG-ART-R9-SHARPENED-ROWS (§8); §7 NF-REM row records the uses.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); the R6 sub-item A1c-Q1′ stays `[OPEN]`.\n- **Records:** release record `records/recog/RECOG_v0_3_25_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.24` (SHA-256 `8c64bea2…e7c1`).\n\n### v0.3.24 — 24 October 2026 — Adopted"
+  }
+ ]
+}

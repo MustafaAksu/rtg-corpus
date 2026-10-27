@@ -1,0 +1,13 @@
+G1 PASS
+G2 PASS
+G3 PASS
+G4 PASS
+NC1_wrong_integral_caught PASS
+NC2_unsafe_ceiling_refused PASS
+lemma ratios: {'0.0025': 0.998754, '0.000625': 0.999688, '0.0001': 0.99995}
+K_Phi adopted rows: {'K_Phi_100': [258.48478185860273, 258.48478185860273], 'K_Phi_30': [81.43280001857495, 81.43280001857495]}
+L1 large     C7=100   K_Phi<=258.4848  C2'=259.2 (old 517)  window 2.9522e-05 (old 1.4801e-05, x1.995)  [adopted statements only]
+L1 small     C7=30    K_Phi<=81.4328  C2'=81.49 (old 163)  window 9.3901e-05 (old 4.6945e-05, x2.000)  [adopted statements only]
+L1+L2 large  C7=85.1  K_Phi<=220.8471  C2'=221.4 (old 517)  window 3.4562e-05 (old 1.4801e-05, x2.335)  [conditional on the Dyadic certificate value 85.07 as ceiling 85.1]
+L1+L2 small  C7=27.7  K_Phi<=75.6392  C2'=75.69 (old 163)  window 1.0110e-04 (old 4.6945e-05, x2.154)  [conditional on the Dyadic certificate value 27.60 as ceiling 27.7]
+ALL PASS

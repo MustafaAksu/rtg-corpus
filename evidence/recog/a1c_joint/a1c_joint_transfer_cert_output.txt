@@ -1,0 +1,22 @@
+JT1_sector_width_uniform_lt_2pi PASS
+JT2_circular_hull_controls PASS
+G1_containment_a_L_theta PASS
+G2_narrower_than_combined_tail_cell PASS
+G3_omega_narrower_than_2Delta_a PASS
+NC1_corrupt_record_empty PASS
+NC2_wrong_n0_excludes PASS
+JT1_wide_box_conservative PASS
+JT2_circular_hull_on_data PASS
+a= 625 th=0.3 n0=6 K=7: a-hull [625.00, 629.82] (w=4.82; #64 cell 5.7; comps=1, boxes 79) | L-hull width 1.01e-04 | omega [18.49, 20.18] (w=1.70; 2Da=42.3) | Theta0 width 0.0149 | contains a/L/theta: True/True/True
+a= 625 th=1.7 n0=5 K=7: a-hull [625.00, 629.87] (w=4.87; #64 cell 39.6; comps=1, boxes 119) | L-hull width 1.97e-04 | omega [-14.60, -12.73] (w=1.87; 2Da=42.3) | Theta0 width 0.0144 | contains a/L/theta: True/True/True
+a= 625 th=3.9 n0=3 K=7: a-hull [625.00, 630.75] (w=5.75; #64 cell 43.9; comps=1, boxes 121) | L-hull width 1.36e-04 | omega [-15.35, -13.32] (w=2.03; 2Da=42.3) | Theta0 width 0.0166 | contains a/L/theta: True/True/True
+a= 625 th=5.1 n0=2 K=6: a-hull [625.00, 633.83] (w=8.83; #64 cell 11.5; comps=1, boxes 137) | L-hull width 2.07e-04 | omega [17.13, 18.81] (w=1.68; 2Da=42.3) | Theta0 width 0.0226 | contains a/L/theta: True/True/True
+a=1000 th=0.3 n0=6 K=7: a-hull [996.18, 1004.75] (w=8.58; #64 cell 60.0; comps=1, boxes 171) | L-hull width 7.45e-05 | omega [23.55, 25.28] (w=1.73; 2Da=53.5) | Theta0 width 0.0130 | contains a/L/theta: True/True/True
+a=1000 th=1.7 n0=5 K=6: a-hull [995.11, 1004.27] (w=9.16; #64 cell 63.8; comps=1, boxes 237) | L-hull width 2.80e-04 | omega [-18.37, -16.50] (w=1.87; 2Da=53.5) | Theta0 width 0.0129 | contains a/L/theta: True/True/True
+a=1000 th=3.9 n0=3 K=6: a-hull [992.66, 1005.85] (w=13.19; #64 cell 80.8; comps=1, boxes 299) | L-hull width 1.91e-04 | omega [-19.04, -16.82] (w=2.23; 2Da=53.5) | Theta0 width 0.0184 | contains a/L/theta: True/True/True
+a=1000 th=5.1 n0=2 K=6: a-hull [992.21, 1008.14] (w=15.93; #64 cell 68.4; comps=1, boxes 297) | L-hull width 1.65e-04 | omega [21.89, 23.55] (w=1.66; 2Da=53.5) | Theta0 width 0.0218 | contains a/L/theta: True/True/True
+a=2500 th=0.3 n0=6 K=6: a-hull [2496.55, 2504.17] (w=7.62; #64 cell 91.6; comps=1, boxes 227) | L-hull width 1.70e-04 | omega [37.77, 39.43] (w=1.66; 2Da=84.5) | Theta0 width 0.0044 | contains a/L/theta: True/True/True
+a=2500 th=1.7 n0=5 K=5: a-hull [2495.41, 2504.99] (w=9.58; #64 cell 104.5; comps=1, boxes 229) | L-hull width 2.36e-04 | omega [-28.58, -26.82] (w=1.76; 2Da=84.5) | Theta0 width 0.0051 | contains a/L/theta: True/True/True
+a=2500 th=3.9 n0=3 K=5: a-hull [2488.87, 2510.30] (w=21.42; #64 cell 113.7; comps=1, boxes 353) | L-hull width 2.11e-04 | omega [-29.53, -27.34] (w=2.18; 2Da=84.5) | Theta0 width 0.0108 | contains a/L/theta: True/True/True
+a=2500 th=5.1 n0=2 K=5: a-hull [2493.04, 2508.37] (w=15.33; #64 cell 102.1; comps=1, boxes 245) | L-hull width 1.37e-04 | omega [35.07, 36.70] (w=1.63; 2Da=84.5) | Theta0 width 0.0080 | contains a/L/theta: True/True/True
+ALL PASS
