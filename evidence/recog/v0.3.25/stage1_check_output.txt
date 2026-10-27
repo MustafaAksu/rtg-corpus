@@ -1,5 +1,5 @@
 base 8c64bea231b3691b737f4143f6f4105030ee183fcc90d7f604ec83a4c869e7c1
-intermediate aecffdd109a987ae17078880aa818b107dd2c7851b1552b4ce8a17c93e3b5fa6 (groups A1CD,A1CE,A1CQ,B1, 24 edits)
+intermediate 657cf302052ea2390ad170d9c03924ce6442b93cc85d076484c769bb0de9fe72 (groups A1CD,A1CE,A1CQ,B1, 24 edits)
 GATES:
   C0   PASS BASE
   C1   PASS BUILD
@@ -24,6 +24,7 @@ GATES:
   C20  PASS NOTICES
   C21  PASS TAG CENSUS
   C22  PASS ASSUMING (source-conditioned blocks carry the qualifier; unconditional ones do not)
+  C24  PASS R83-1 (known-a centre never called record-only; decoder closure scoped)
   C23  PASS RECORDS (paths exist; §8 record versions match the records' status lines)
 
 NEGATIVE CONTROLS (each must be caught by its target gate):
@@ -51,6 +52,8 @@ NEGATIVE CONTROLS (each must be caught by its target gate):
   NC22 [assuming:] dropped from the C7 rows      target C22: caught  (failing: C1, C10, C2, C22, C8)
   NC23 [assuming:] added to an unconditional block target C22: caught  (failing: C1, C10, C2, C22, C8)
   NC24 stale state restored (RID unavailable)    target C12: caught  (failing: C1, C12, C2)
+  NC26 record-only centre reintroduced           target C24: caught  (failing: C1, C2, C24)
+  NC27 decoder closure scope dropped             target C24: caught  (failing: C1, C2, C24)
   NC25 record version misstated in §8            target C23: caught  (failing: C1, C2, C23)
 
 RESULT: PASS

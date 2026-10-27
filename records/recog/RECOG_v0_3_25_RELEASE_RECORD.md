@@ -1,7 +1,7 @@
 # RECOG v0.3.25 — Release record (DRAFT; stage 1 built, not adopted)
 
 **Study:** RECOG · **Base (governing edition):** `recog-v0.3.24`, DSN SHA-256 `8c64bea231b3691b737f4143f6f4105030ee183fcc90d7f604ec83a4c869e7c1` (295,325 bytes).
-**Stage-1 intermediate:** `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on `claude/recog-v0.3.25-stage1`, SHA-256 `aecffdd109a987ae17078880aa818b107dd2c7851b1552b4ce8a17c93e3b5fa6` (330,024 bytes). A build stage, not an edition: header identity lines, status summary and footer are untouched; the Appendix A entry is a DRAFT line.
+**Stage-1 intermediate (round 2):** `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` on `claude/recog-v0.3.25-stage1`, SHA-256 `657cf302052ea2390ad170d9c03924ce6442b93cc85d076484c769bb0de9fe72` (331,077 bytes). Round 1 (commit `e9988b9`): `aecffdd109a987ae17078880aa818b107dd2c7851b1552b4ce8a17c93e3b5fa6` (330,024 bytes), reviewed in #5664297178; round 2 applies that review's two required corrections in place (§2a). A build stage, not an edition: header identity lines, status summary and footer are untouched; the Appendix A entry is a DRAFT line.
 **Date:** 27 October 2026 · **Builder:** RECOG co-owner (Claude). **Method:** DSN Methodology v1.4 (§13.1, §13.6, §13.7); CONVENTIONS.md §4.
 **Decision basis:** PI decision of 26 Oct 2026 — one consolidated maintenance and adoption-candidate package for the open cell PRs (#48, #49, #51, #53, #54, #59, #61, #63, #64, #71, #75), with the PI's grade classification (consolidated record §0); the co-owner (ChatGPT) session reviews of each PR (§6). **Four scientific acceptance decisions** (B1, A1c-E, A1c-D, A1c-Q), each separate; no structural-maintenance group in this release.
 
@@ -21,7 +21,7 @@ No RID renamed or regraded; no OPEN status word changed (R1, R3 PARTIAL; R4, R5,
 
 - Builder: `evidence/recog/scripts/build_recog_v0_3_25_stage1.py` (assertion-gated; modes `str`, `line`; Appendix A masked for live edits; `--only GROUP` builds a decoupling variant; A1CD cannot be built without A1CE). Base kept as `evidence/recog/v0.3.25/base_v0_3_24.md` (= `git show recog-v0.3.24:dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`).
 - Edit log: `evidence/recog/v0.3.25/stage1_edit_log.json` (24 edits, old and new text with hashes).
-- Decoupling variants (`evidence/recog/v0.3.25/variants/`): B1 alone `ff5e4226…02cb` (5 edits); A1CE alone `877fba99…a7f5` (7); A1CQ alone `8d3ebfd0…5086` (6); A1CE+A1CD `f6bdb132…adac` (15). Each carries exactly its own new RIDs (checker C18); every variant passes the checker (`variants/check_only_*.txt`).
+- Decoupling variants (`evidence/recog/v0.3.25/variants/`, round 2): B1 alone `ff5e4226…02cb` (5 edits); A1CE alone `dcc2f31a…4c84` (7); A1CQ alone `8d3ebfd0…5086` (6); A1CE+A1CD `edcc01c7…f1c1` (15). Round-1 values: A1CE `877fba99…a7f5`, A1CE+A1CD `f6bdb132…adac` (B1 and A1CQ unchanged). Each carries exactly its own new RIDs (checker C18); every variant passes the checker (`variants/check_only_*.txt`).
 
 | Key | Group | Location | Mode |
 |---|---|---|---|
@@ -48,12 +48,22 @@ No RID renamed or regraded; no OPEN status word changed (R1, R3 PARTIAL; R4, R5,
 
 In-place status edits inside adopted blocks (for the review's attention; the theorem statements themselves are unchanged, checker C13): the A1b "Not supplied" items (two clauses), the A1c RESULT's "no window with $a$ unknown" clause, the §5 guard, the two OPEN R6 sub-items. No `[RESULT]` block is added; the four `[THM]`/`[ALG]` families are paired to their cells by `[proof:]` and `Depends on:` lines.
 
+## 2a. Round 2 — corrections from the stage-1 review (#5664297178 on `e9988b9`: `CONDITIONAL ACCEPTANCE — TARGETED CORRECTION`; B1 ACCEPTABLE, A1c-E ACCEPTABLE WITH TARGETED WORDING FIX, A1c-D ACCEPTABLE AS A CONDITIONAL OUTER DECODER, A1c-Q ACCEPTABLE at its scope)
+
+| Item | Correction | Edits |
+|---|---|---|
+| R83-1 | the sharpened schedule's centre $c'''_k(a)=\tau\psi(a+M_k)-(k-1)\tfrac\pi3+\tfrac{\sqrt3}8(a+M_k)^{-1/2}+\tfrac\tau2(a+M_k)^{-1}$ needs the known $a$; it was called "record-only centre" in §1 and Appendix A. Now "known-$a$ / declared-data centre" (computed from the known $a$ and the record's $(M_k,r_k)$), with the explicit statement that nothing in RECOG-THM-A1C-SHARPENED-SCHEDULE is record-only and that the record-only operation with $a$ unknown is RECOG-ALG-A1C-JOINT-CONTRACTOR (A1c-D); the §6.13b theorem now displays $c'''_k(a)$ by name; the R6 A1c-decoder line says "not record-only" for the known-$a$ majorant and "record-only interval contractor" for the unknown-$a$ enclosure | S1-A1CE, S613b-A1CE, S2-R6-DEC, A-1 |
+| R83-2 | the (D5) dependence is spelled out at every consequential use: the decoder blocks' `[assuming:]` now read "the Dyadic (D5) row-A bridge proof constants, as RECOG-THM-A1C-SHARPENED-SCHEDULE" (previously "as RECOG-THM-A1C-SHARPENED-SCHEDULE"); the A1c-decoder closure is explicitly limited to certified **outer** admissibility windows on the stated $U$, for records with at least two usable slips ($M_k\ge1$), under the (D5) `[assuming:]` — no identification, no uniqueness, no write mechanism, no Q1′ conclusion (§2 line and Appendix A) | S616e-A1CD (two qualifiers), S2-R6-DEC, A-1 |
+| checker | gate C24 (R83-1: the centre is never called record-only in §1 or §6.13b; the decoder closure line carries the scope words) and controls NC26 ("record-only centre" reintroduced), NC27 (closure scope dropped) added | — |
+
+No theorem statement, grade or RID changed between the rounds; B1 and A1c-Q texts and variants are byte-identical to round 1. Certificates not rerun.
+
 ## 3. Checks
 
-- `evidence/recog/scripts/check_recog_v0_3_25_stage1.py` — 24 gates C0–C23 **all PASS**; 25 negative controls each caught by its target gate (`evidence/recog/v0.3.25/stage1_check_output.txt`). Gates of note: C6 every OPEN-registry `Status:` line byte-identical; C13 the RECOG-THM-R9-MEMORY statement line, its row table, the (c) row table and the whole RECOG-THM-A1B-SLIP-SCHEDULE-U statement (tag line through proof sketch) unchanged; C16 every file named in §8 exists and every quoted SHA-256 (full or abbreviated) is the hash of the named file (37 hashes); C17 the R6 sub-item A1c-Q1′ ends in `[OPEN]`; C19 the displayed constants agree with the certificate JSONs (B1: $259.2/81.49/221.4/75.69$, windows, $K_\Phi$; A1c-E: $0.74850$, $1.0753$, $E'\le0.31$ with box maximum $0.3095$, $c_\delta=0.793$, $1.9396$, $c_J^R=0.5008$, $c_7^R=100.23$, $0.3720$, the $E'''$ grid values; A1c-D: $\beta(625)=0.799$, the 12-record widths, boxes and containment flags; A1c-Q: $c_\Psi=11.13$, $\Xi=0.027$, $q^*$); C22 every source-conditioned new block carries a backticked `[assuming:]` naming the Dyadic source and no unconditional block carries one; C23 record paths exist and §8 record versions match the records' status lines.
+- `evidence/recog/scripts/check_recog_v0_3_25_stage1.py` — 25 gates C0–C24 **all PASS**; 27 negative controls each caught by its target gate (`evidence/recog/v0.3.25/stage1_check_output.txt`). Gates of note: C6 every OPEN-registry `Status:` line byte-identical; C13 the RECOG-THM-R9-MEMORY statement line, its row table, the (c) row table and the whole RECOG-THM-A1B-SLIP-SCHEDULE-U statement (tag line through proof sketch) unchanged; C16 every file named in §8 exists and every quoted SHA-256 (full or abbreviated) is the hash of the named file (37 hashes); C17 the R6 sub-item A1c-Q1′ ends in `[OPEN]`; C19 the displayed constants agree with the certificate JSONs (B1: $259.2/81.49/221.4/75.69$, windows, $K_\Phi$; A1c-E: $0.74850$, $1.0753$, $E'\le0.31$ with box maximum $0.3095$, $c_\delta=0.793$, $1.9396$, $c_J^R=0.5008$, $c_7^R=100.23$, $0.3720$, the $E'''$ grid values; A1c-D: $\beta(625)=0.799$, the 12-record widths, boxes and containment flags; A1c-Q: $c_\Psi=11.13$, $\Xi=0.027$, $q^*$); C22 every source-conditioned new block carries a backticked `[assuming:]` naming the Dyadic source and no unconditional block carries one; C23 record paths exist and §8 record versions match the records' status lines; C24 (round 2) the known-$a$ centre is never called record-only and the decoder closure is scoped.
 - Claim audit `evidence/recog/scripts/recog_v0_3_25_claim_audit.py` → `evidence/recog/v0.3.25/claim_audit.json`: the owner statements the new blocks rely on are present in the current sources at their tags — Dyadic `dyad-v6.4.22` (`2363ca40…8c29`): NF-REM rows, one-orbit contraction and certificate values $85.07/27.60$; the (D5) constants $0.79246$, $0.36915$ in the LPHASE row-A proof and DYAD-ART-LPHASE-ROWA; branch (B) $0.04654$ and $\tfrac{403}{250}$; PRIM-CTR with $2209$; NF-INV $\tfrac{256}{225}$ and NF6; RECOG `recog-v0.3.24`: the R9 rows, the A1b statement, the A1c readout and the two R6 sub-items. ALL PRESENT (presence at the cited RID; not a comparison with earlier editions).
 - Certificates (not rerun for this build; unchanged since their cells, hashes in §8 of the intermediate): `recog_b1_l1l2_sharpened_rows_cert.py` (G1–G4, NC1–NC2), `recog_a1c_tail_averaging_cert.py` (G1–G6, NC1–NC2), `recog_a1c_inblock_angular_cert.py` (G1–G5, NC1–NC2), `recog_a1c_combined_tail_cert.py` (G1–G5, G4b, NC1–NC2), `recog_a1c_unknown_a_interval_cert.py` (G1–G4, NC1–NC3), `recog_a1c_start_offset_cert.py` (G1–G5, NC1–NC2), `recog_a1c_joint_transfer_cert.py` (G1–G3, JT1–JT2, NC1–NC2), `recog_a1c_q1prime_fiber_cert.py` (G1–G4, NC1–NC2).
-- Vocabulary: no READ/WRITE/DECODE in the DSN (C11); the new blocks speak of records, enclosures, windows and readout. `tools/dsn_lint.py` informational report: `evidence/recog/v0.3.25/dsn_lint_stage1.txt` (growth $34{,}699$ bytes, $11.7$ %, 17 new RIDs counted by the lint: the 16 RECOG RIDs plus the cited Dyadic artifact RID).
+- Vocabulary: no READ/WRITE/DECODE in the DSN (C11); the new blocks speak of records, enclosures, windows and readout. `tools/dsn_lint.py` informational report: `evidence/recog/v0.3.25/dsn_lint_stage1.txt` (growth $35{,}752$ bytes, $12.1$ %, 17 new RIDs counted by the lint: the 16 RECOG RIDs plus the cited Dyadic artifact RID).
 
 ## 4. Notices (prepared; separate states; none sent)
 
@@ -68,10 +78,11 @@ Not built. No passage is removed or relocated; the growth is new science and reg
 | Stage | Reviewer / decision | Outcome |
 |---|---|---|
 | Cells (session level) | co-owner (ChatGPT): #48 5640354759; #49 5640168643; #51 5640354476; #53 5640350431; #54 5643704955; #59 5645113197; #61 5645113367; #63 5649337542; #64 5651241407; #71 5653208909; #75 5658493941 | all ACCEPTED at session level with their stated conditions (consolidated record §3) |
-| Stage 1 — group B1 | receiving review requested | pending |
-| Stage 1 — group A1c-E | receiving review requested | pending |
-| Stage 1 — group A1c-D | receiving review requested | pending |
-| Stage 1 — group A1c-Q | receiving review requested | pending |
+| Stage 1 — group B1 | co-owner (ChatGPT), review #5664297178 on `e9988b9` | ACCEPTABLE (L1 unconditional; L2 conditional on the owner-validated $C_7$ ceilings) |
+| Stage 1 — group A1c-E | same | ACCEPTABLE WITH TARGETED WORDING FIX (R83-1, applied in round 2) — (D5) assumptions retained |
+| Stage 1 — group A1c-D | same | ACCEPTABLE AS A CONDITIONAL OUTER DECODER, not identification (R83-2 scope wording applied in round 2) |
+| Stage 1 — group A1c-Q | same | ACCEPTABLE at the $C^1$ phase-fiber / threshold-coding scope; Q1′ injectivity OPEN |
+| Stage 1 overall | review #5664297178: `CONDITIONAL ACCEPTANCE — TARGETED CORRECTION`; round 2 (this build) applies R83-1 and R83-2; targeted re-check of the changed text requested | round 2 pending review |
 | Stage 1 — atlas row check | atlas owner | pending (PI may defer, as for v0.3.24) |
 | Adoption | PI — four separate decisions | pending |
 

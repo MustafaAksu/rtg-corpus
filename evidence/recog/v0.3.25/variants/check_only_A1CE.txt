@@ -1,5 +1,5 @@
 base 8c64bea231b3691b737f4143f6f4105030ee183fcc90d7f604ec83a4c869e7c1
-intermediate 877fba998c4fe1a0dad1132ec6cedcc3797a18b7ea69b9191581c2a8d886a7f5 (groups A1CE, 7 edits)
+intermediate dcc2f31a638c5dc288f6b72647b7c4b121efb2b1c5e2c175ca3e8a8bb8834c84 (groups A1CE, 7 edits)
 GATES:
   C0   PASS BASE
   C1   PASS BUILD
@@ -24,6 +24,7 @@ GATES:
   C20  PASS NOTICES
   C21  PASS TAG CENSUS
   C22  PASS ASSUMING (source-conditioned blocks carry the qualifier; unconditional ones do not)
+  C24  PASS R83-1 (known-a centre never called record-only; decoder closure scoped)
   C23  PASS RECORDS (paths exist; §8 record versions match the records' status lines)
 
 RESULT: PASS

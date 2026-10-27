@@ -7,7 +7,7 @@ usage (from the repository root):
   (any group variant: the gates read the declared groups from the log).
 exit 0 = every gate PASS (and, with --controls, every negative control caught by its target gate).
 
-Gates (as v0.3.24 stage 1; no history moves in this release, so the MNT exceptions of C5/C10/C22 are gone):
+Gates (as v0.3.24 stage 1; no history moves in this release, so the MNT exceptions of C5/C10/C22 are gone; C24 added in round 2):
   C0  BASE       base SHA-256 is the adopted v0.3.24 identity (tag recog-v0.3.24)
   C1  BUILD      intermediate == exact-once application of the logged edits (Appendix A masked for "live")
   C2  REVERSE    undoing every edit recovers the base byte-exactly
@@ -39,6 +39,9 @@ Gates (as v0.3.24 stage 1; no history moves in this release, so the MNT exceptio
                  are not tagged [THM] without it
   C23 RECORDS    every records/recog path named in the new text exists; the review-accepted record versions named in §8 match
                  the records' own status lines
+  C24 R83-1      (round 2) the known-a sharpened-schedule centre is never called "record-only" (§1 and §6.13b); the R6 decoder
+                 closure line says "not record-only" for the majorant and is scoped to U, two usable slips, outer windows,
+                 the (D5) [assuming:], no Q1′ conclusion
 """
 import hashlib, importlib.util, json, os, re, subprocess, sys, zipfile
 from collections import Counter
@@ -62,7 +65,7 @@ ATTACH = {
  "RECOG-ALG-A1C-COMBINED-TAIL": " [scope: $x_0\\in U$, chart row A, branch (B)]",
  "RECOG-THM-A1C-SHARPENED-SCHEDULE": " [scope: as RECOG-THM-A1B-SLIP-SCHEDULE-U; $a$ known] `[assuming: Dyadic row-A bridge constants",
  "RECOG-ART-A1C-SHARPENED-SCHEDULE": " `[v0.3.25]` :: part 1b `recog_a1c_tail_averaging_cert.py`",
- "RECOG-ALG-A1C-ADMISSIBLE-REGION": " [scope: as RECOG-THM-A1C-SHARPENED-SCHEDULE, $a$ unknown] `[assuming: as RECOG-THM-A1C-SHARPENED-SCHEDULE]`",
+ "RECOG-ALG-A1C-ADMISSIBLE-REGION": " [scope: as RECOG-THM-A1C-SHARPENED-SCHEDULE, $a$ unknown] `[assuming: the Dyadic (D5)",
  "RECOG-ALG-A1C-START-OFFSET": " [scope: $x_0\\in U$; first anchor $1\\le n_0\\le7$",
  "RECOG-ALG-A1C-JOINT-CONTRACTOR": " [scope: as above; $a$ unknown; the true $a$ is never an input",
  "RECOG-ART-A1C-DECODER": " `[v0.3.25]` :: part 2 `recog_a1c_unknown_a_interval_cert.py`",
@@ -305,8 +308,8 @@ def check(base, inter, log, root, verbose=True, files=None):
     gate("C21", +glob == +loc and -glob == -loc, "TAG CENSUS")
     ok = True
     for rid, need in (("RECOG-THM-R9-SHARPENED-ROWS-C7", "C_7\\le85.1"), ("RECOG-ALG-A1C-TAIL-HARMONICS", "DYAD-THM-LPHASE-ROWA-REMAINDER"),
-                      ("RECOG-THM-A1C-SHARPENED-SCHEDULE", "DYAD-THM-LPHASE-ROWA-REMAINDER"), ("RECOG-ALG-A1C-ADMISSIBLE-REGION", "as RECOG-THM-A1C-SHARPENED-SCHEDULE"),
-                      ("RECOG-ALG-A1C-JOINT-CONTRACTOR", "as RECOG-THM-A1C-SHARPENED-SCHEDULE"), ("RECOG-ALG-A1C-START-OFFSET", "DYAD-THM-LPHASE-ROWA-REMAINDER")):
+                      ("RECOG-THM-A1C-SHARPENED-SCHEDULE", "DYAD-THM-LPHASE-ROWA-REMAINDER"), ("RECOG-ALG-A1C-ADMISSIBLE-REGION", "(D5)"),
+                      ("RECOG-ALG-A1C-JOINT-CONTRACTOR", "(D5)"), ("RECOG-ALG-A1C-START-OFFSET", "DYAD-THM-LPHASE-ROWA-REMAINDER")):
         if rid in new_rids:
             i = L.find(f"[RID: {rid}]", L.index("## §6.")); blk = L[i:L.find("\n", i)]
             m = re.search(r"`\[assuming: [^`]*\]`", blk)
@@ -316,6 +319,16 @@ def check(base, inter, log, root, verbose=True, files=None):
             i = L.find(f"[RID: {rid}]", L.index("## §6.")); blk = L[i:L.find("\n", i)]
             ok &= "`[assuming:" not in blk
     gate("C22", ok, "ASSUMING (source-conditioned blocks carry the qualifier; unconditional ones do not)")
+    if "A1CE" in groups:
+        s1 = section(inter, "## §1. Current Canonical State", "## §2. Active Frontier")
+        i = s1.find("[RID: RECOG-THM-A1C-SHARPENED-SCHEDULE]"); sent = s1[i:s1.find("$C_D$ depends", i)]
+        j = L.find("[RID: RECOG-THM-A1C-SHARPENED-SCHEDULE]", L.index("## §6.")); blk = L[j:L.find("\n`[NUM]`", j)]
+        ok = i >= 0 and j >= 0 and "record-only centre" not in sent and "record-only centre" not in blk and "known-$a$ / declared-data centre" in sent and "known-$a$ / declared-data centre" in blk
+        ok &= "nothing in this theorem is record-only" in blk
+        if "A1CD" in groups:
+            dec = [l for l in L.splitlines() if l.startswith("- A1c-decoder")]
+            ok &= len(dec) == 1 and "not record-only" in dec[0] and "at least two usable slips" in dec[0] and "no Q1′ conclusion" in dec[0] and "`[assuming:]`" in dec[0]
+        gate("C24", ok, "R83-1 (known-a centre never called record-only; decoder closure scoped)")
     ok = True
     newtext = "\n".join(e["new"] for e in edits)
     for p in set(RECPATH.findall(newtext)):
@@ -365,6 +378,8 @@ def controls(base, inter, log, root):
      ("NC22 [assuming:] dropped from the C7 rows", "C22", once(L, "[scope: as RECOG-THM-R9-SHARPENED-ROWS] `[assuming: $C_7\\le85.1$ on $|z|\\le\\tfrac1{20}$ and $C_7\\le27.7$ on $|z|\\le\\tfrac1{40}$ — Dyadic's published DYAD-THM-NF-REM certificate values $85.07$ / $27.60$ rounded up; these are not Dyadic theorem statements; registration requested (§7)]`", "[scope: as RECOG-THM-R9-SHARPENED-ROWS]")),
      ("NC23 [assuming:] added to an unconditional block", "C22", once(L, "[RID: RECOG-ALG-A1C-INBLOCK-ANGLE] [scope:", "[RID: RECOG-ALG-A1C-INBLOCK-ANGLE] `[assuming: (D5)]` [scope:")),
      ("NC24 stale state restored (RID unavailable)", "C12", once(L, "[import: RTG_NUMBER_GENESIS_DSN_v1.20.8 §6.6 | NUMGEN-RESULT-N5AS1-INF1]", "[import: RTG_NUMBER_GENESIS_DSN_v1.20.7 §6.6, INF-1 | RID unavailable]")),
+     ("NC26 record-only centre reintroduced", "C24", once(L, "known-$a$ / declared-data centre $c" + "'" * 3 + "_k(a)=", "record-only centre $c" + "'" * 3 + "_k(a)=")),
+     ("NC27 decoder closure scope dropped", "C24", once(L, "for records with at least two usable slips ($M_k\\ge1$), under the (D5) `[assuming:]` of the envelope;", "under the (D5) `[assuming:]` of the envelope;")),
      ("NC25 record version misstated in §8", "C23", once(L, "`RECOG_A1C_TAIL_AVERAGING_SESSION_v0_1.md` v0.2.1", "`RECOG_A1C_TAIL_AVERAGING_SESSION_v0_1.md` v0.3")),
     ]
     allok = True
