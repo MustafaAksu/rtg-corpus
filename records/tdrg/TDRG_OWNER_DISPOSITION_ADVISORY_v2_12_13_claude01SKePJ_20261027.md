@@ -94,7 +94,7 @@ NUMGEN re-annotates under TDRG-ORIENT at `tdrg-v2.12.14` and decides its C7C-M4 
 
 ## 4. Held-file questions
 
-**Q1 — which engine produced the v17 corpus?** `upload/tdrg-records/genesis_mode_b_mc.py`, SHA-256 `4c94d874…a608` (header label "v15.3"). "v17" is the data-campaign label (motif-log schema), not the engine's version string. Evidence:
+**Q1 — which engine produced the v17 corpus?** `upload/tdrg-records/genesis_mode_b_mc.py`, SHA-256 `4c94d874…a608` (header label "v15.3"); "v17" is the data-campaign label (motif-log schema), not the engine's version string. **Scope of the evidence:** producer identity is *replay-verified* for the two files below (an engine that reproduces a file byte-for-byte from its recorded parameters is its producer up to byte-equivalent code); for the other placed v17 files it is *schema-consistent, not replayed*; the ten held files cannot be replayed here. §8 records exactly these three states per file; it does not claim more. Evidence:
 - **Schema (EV-CODE):** every `*_v17.csv` header in the upload equals the 258-field `MOTIF_FIELDS` of `4c94d874`; every `*_v16.csv` header equals the 48-field schema of `genesis_mode_b_mc_graph_export.py` (`5256c479…`, "v16.0").
 - **Byte-exact replays (EV-RUN):** `python genesis_mode_b_mc.py --policy bound_symmetric --N 120 --k 8 --T 1200 --batch 3 --max-nodes 1000 --seed 42 --motif-log … --motif-stride 1` reproduces `motif_TEST_N120_k8_T1200_b3_v17.csv` (`de0f3e42…`) byte-identically; the same command with `--T 5000 --batch 20` (wall time 8 m 21 s) reproduces byte-identically (`7ef343b0…9b51`) `motif_N120_k08_T5000_b20_v17.csv`, a member of the canonical scan (§6.8).
 - **v18 relation (EV-CODE):** `genesis_mode_b_mc_v18.py` (`9d787b43…675e`) is `4c94d874` plus logging only — the `motif_dense_birth_window` parameter, `first_birth_step` tracking, dense-window collection and its CLI flag (diff after CRLF normalisation). `step_universe`, `orient_path` and every event rule are identical, so "v17" and "v18" results share one dynamics and one orientation exposure. This session built the v18 patch on 13 Oct 2026 and holds a byte-identical copy (`9d787b43…`).
@@ -113,6 +113,16 @@ All under `evidence/tdrg/disposition/`; hashes in `SHA256SUMS.txt` there.
 - **(vi) Multistar fixture.** `multistar_fixture.py` → `multistar_fixture_output.txt` (N1).
 - Hashes of the scripts and outputs (EV-HASH): `owner_relabel_equivariance_check.py` `2f54e0fc…382b4c`, its output `a0b33690…411c` — full list in `SHA256SUMS.txt`; the engine input is `upload/tdrg-records/genesis_mode_b_mc_v18.py` `9d787b43…675e`.
 
-## 6. Where the other co-owner may differ
+## 6. Differences with the other co-owner record (PR #88, `…_chatgpt_20261027.md`, read at `c326f14`)
 
-Expected points of difference, stated so the reconciliation is quick: the (a)/(b) choice (this session: (b), with (a) kept as a named alternative for the sensitivity campaign); the custody transfer of XFER-O08-01 (this session: statement accepted now, custody in v2.13); adopting the consumer names `TDRG-ORIENT` and `TDRG-ZN-STATE` as RIDs; deferring the footer chain and Appendix A order to v2.13.
+Rows TA-02, TA-06, I07, TA-07, TB-09 (order), TB-11, TB-10/I09/I10, TB-12, TC-17, I12 agree in substance. Differences for the atlas owner and the PI:
+
+| Point | PR #88 (ChatGPT) | This record | Note for the reconciliation |
+|---|---|---|---|
+| Orientation (TA-01) | (a): G for P_3 on the stratum; "invariant palindromic tie" for other lengths | (b): tie on S=0 ∧ 2E≡0 for all n; G recorded as unadopted alternative | Both are covariant: the equivariance check here (§5 (ii)) implements (a) exactly as PR #88 states it (G for P_3, tie for n ≥ 4 on the stratum) and finds 0 failures, as for (b). The choice is scientific, not a correctness question. If (a) is fixed, its n ≥ 4 clause must be written as an exact condition (PR #88 leaves "whenever the data do not distinguish direction" open); as implemented here it is the (b) tie for n ≥ 4, i.e. (a) = G on P_3 + (b) elsewhere. |
+| XFER-O08-01 | custody deferred; statement not imported | statement accepted (one-line algebra, §3), custody deferred to v2.13 | Both defer custody; they differ only on recording the verified statement now. |
+| Q1 engine identity | "unresolved" | `4c94d874`, replay-verified for two files, schema-consistent for the rest (§4) | PR #88 had no replay; the byte-exact replays (`engine_replay_log.txt`) are the per-run attestation it asks for, scoped per file. |
+| TA-04 restricted exponent | cites ≈ −0.730 on 480–1440 | cites it only with an owner source; none is in the repository | Neither the DSN nor any placed record contains −0.730; it is atlas-reported. |
+| TB-13 | Appendix A ordering and one footer in v2.12.14 | deferred to v2.13 (layout) | PI decision: no layout compaction in v2.12.14. |
+| TC-16 RID name | replace the phantom `TDRG-ZN-STATE` after issuing a new RID | issue `TDRG-ZN-STATE` itself | Same end state; adopting the consumer's name saves AZ a repoint. |
+| Pipe item states | request `dispositioned · accept with change` now | request `acknowledged`; disposition written after the PI fixes it | The hand-over has the PI fix the dispositions first; and PR #88's `pipes/TDRG/INDEX.md` is stale (`tools/pipes_index.py --check` fails on its branch). PRs #88 and #89 edit the same two items and conflict; whichever merges second must rebase and rebuild the index. |
