@@ -1,0 +1,17 @@
+[PASS] C0 BASE 
+[PASS] C1 BUILD 105 edits, candidate 3be72923cd40
+[PASS] C2 REVERSE 
+[PASS] C3 HISTORY 
+[PASS] C4 RIDS base ids kept: True; new declarations 39/39; form True; collisions []; RID-only edits clean True
+[PASS] C5 TAGS compound left {}; bare RESULT 0; census (base→cand) [DEF] 27→29, [ALG] 21→42, [ENG] 7→12, [NUM] 34→54, [NUM strong] 34→39, [HEUR] 3→9, [HEUR strong] 15→8, [OPEN] 10→11, [FAIL] 31→32, [COR] 7→15, [INTERP] 3→4
+[PASS] C6 ORIENT 
+[PASS] C7 NUMBERS text missing []
+[PASS] C8 EVIDENCE hash mismatches []; session scripts ok True (source: commit 386e9d4); missing paths []
+[PASS] C9 SOURCES 
+  antipodal fixture: v18 equivariant=False (control expects False); v2.12.14 equivariant+tie=True
+  K23 fixture: largest_center equivariant=False (control expects False); bound_symmetric equivariant=True
+  mirror probe: 97 failures in 2000 states (control expects > 0)
+  random three-node states: v2.12.14 equivariance failures 0 (expect 0); rule disagreements 0/9000 (expect 0)
+  exhaustive k=1: v18 [72, 72] (expect [72, 72]); v2.12.14 [0, 0] (expect [0, 0])
+[PASS] C10 DYNAMICS 
+RESULT: PASS (11/11 gates)

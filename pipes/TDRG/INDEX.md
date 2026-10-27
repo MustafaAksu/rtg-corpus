@@ -4,5 +4,5 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| 2026-10-26 | NUMGEN | request | acknowledged | TDRG-ORIENT (TDRG §6 path-orientation rule); NUMGEN v1.20.8 §2 item 1 (C7C-M), §6.6 N5-C7B/C7C P2 audit, Appendix B rejected formulation "owner implementation agreement ⟹ presentation covariance" | NUMGEN C7C-M4 realization campaign (NUMGEN §2 item 1; NUMGEN-OPEN-N5 module) | `20261026-NUMGEN-orientation-policy-s0-e-half-n.md` |
+| 2026-10-26 | NUMGEN | request | dispositioned | TDRG-ORIENT (TDRG §6 path-orientation rule); NUMGEN v1.20.8 §2 item 1 (C7C-M), §6.6 N5-C7B/C7C P2 audit, Appendix B rejected formulation "owner implementation agreement ⟹ presentation covariance" | NUMGEN C7C-M4 realization campaign (NUMGEN §2 item 1; NUMGEN-OPEN-N5 module) | `20261026-NUMGEN-orientation-policy-s0-e-half-n.md` |
 | 2026-10-26 | NUMGEN | notice | dispositioned | NUMGEN v1.21 §2 item 1 (C7C-M4 HOLD); TDRG-ORIENT request | — | `20261026-NUMGEN-v1-21-adopted.md` |
