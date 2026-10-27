@@ -47,3 +47,26 @@ The choice (b) changes the model on its degenerate stratum, not merely prose. Hi
 ## 5. Review verdict
 
 **[SESSION] CONDITIONAL PASS; two localized pre-adoption fixes R1/R2.** No objection to option (b), no objection to the typed-RID aliases, no need for a new scientific proof, coefficient optimization, BIND3 rerun or scaling refit. Once the two corrections and relevant targeted negative controls pass, the atlas row check and the PI adoption can follow. This review does not adopt the edition, approve the scientific results beyond their pre-existing scopes or authorize any merge/tag.
+
+
+## 6. Round-2 disposition — 28 October 2026
+
+**Reviewed target:** PR #92 commit `e3f55c70c51bce4787ddd450b39e0e2ed58a14cb` (round-2 owner reply to reviewer comment 6454252077). **[SESSION] Both R1 and R2 are CLOSED at their prescribed acceptance criteria. The change-focused co-owner review is now PASS at this candidate identity, subject to the separately required atlas row check and PI adoption.**
+
+**R1 SG-14: CLOSED.** The revised guard explicitly binds the covariance requirement to `bound_symmetric` and separately qualified policies; compares birth-containing outputs modulo a one-to-one relabelling of newly born nodes (the checked multiset of `(theta, delta)`); restricts finite N=24 controls to their tested scope; and states the `largest_center` noncovariance and applicable policy-specific violation clause. This corrects the former universal wording without strengthening the scientific claim.
+
+**R2 C8: CLOSED.** The checker uses immutable upload commit `386e9d44f1f819d89b5b0e0ce4f6cb18c6e08c8b` and pins the session-script `SHA256SUMS.txt` hash `00ce64d9b9fc8039e81eb5cc2489248f3b71f5e0de33740f85bb0cb3696ac6e3`. It checks each manifest member against the hash list. If the file set is placed in the working tree, it instead checks that tree against the same pinned manifest. Pending cited paths resolve through immutable `c359e21…`/`386e9d44…` commits rather than transient remote refs. K8 injects a false manifest hash and the owner-run log reports C8 rejecting it.
+
+**Independent source/identity inspection:** The source files were fetched directly from GitHub at commit `e3f55c7`; their SHA-256 values were recomputed in this review from the fetched text and **match exactly**:
+- candidate `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392`;
+- builder `71d990b3579adaa2cecaa4308064af0a5e5c8ff127636609c757c4f0921f286e`;
+- checker `d27b946bd1e0ed2a40edf26da2c83d35401dae7f7e887eb4cdd9f53c762af847`;
+- edit log `c94ff966ffe1f707c0e25cba3df83d6daad38c16074ab1ee7348224541c2edcb`.
+
+Comparing round-1 and round-2 edit log objects: 105 edits retained, **only edit E32 (group TA03, SG-14)** changes its replacement text and replacement hash; no source-match key, old text, other replacement, group or declared RID was changed. The candidate global hash changes as expected; builder/checker and logs were updated accordingly.
+
+**Execution provenance:** The owner's round-2 logs, read at `e3f55c7`, report 11/11 gates, 8/8 caught negative controls, `--exhaustive` at N=24,k=1 (v18 failures [72,72], amended rule [0,0]) and a distinct 11/11 run without the two local remote-tracking branch refs. The `check_output_no_branch_refs.txt` log is proof of the source session's run, **not** an independently repeated Git checkout and full local execution by this reviewer. These logs and source logic meet the original requested bounded checks; no BIND3/NKSCAN/scaling campaigns were rerun.
+
+**Publication-only dependency:** An immutable Git commit hash is stable *while the object is retained*. Once the atlas has hash-checked the session files, their authorized placement on a reachable merged history is preferable for a fresh-clone reproduction; the release should not rely on deleting the last ref to an unmerged upload commit before it is preserved. This is an evidence-custody/publication requirement, **not a new R2 code defect**.
+
+**Final scoped review verdict:** **PASS / REVIEW-CLOSED for candidate SHA-256 `3be72923…2392`.** Atlas independent row check/replay, PI adoption, merge order and annotated tag remain separate. No adoption, tag, merge, or release-status change is made by this review.
