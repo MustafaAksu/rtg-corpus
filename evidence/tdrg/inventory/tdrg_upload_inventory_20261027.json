@@ -1,0 +1,102 @@
+{
+ "upload_branch": "origin/missing-files",
+ "upload_commit": "07df334df081a4f8ae81cc1fd6f04e179996525d",
+ "files": 49,
+ "manifest_entries": 60,
+ "uploaded_files": 48,
+ "manifest_match_all": true,
+ "mismatch": [],
+ "not_in_manifest": [],
+ "zip_members": {
+  "motif_N718_k48_T5000_b100_v17.zip": {
+   "motif_N718_k48_T5000_b100_v17.csv": "ea4444867f97690d758c59430a67947f5ee7aaa7f233fe2f2f2fdb617ed99941"
+  },
+  "motif_N840_k56_bound_symmetric_b100_v17.zip": {
+   "motif_N840_k56_bound_symmetric_b100_v17.csv": "0b7fd828918c529bfe0adab2dfb82fb77c0fa30d4c352a1c6ee4a5b5a689e2b4"
+  }
+ },
+ "present_as_zip_member": {
+  "motif_N718_k48_T5000_b100_v17.csv": {
+   "zip": "motif_N718_k48_T5000_b100_v17.zip",
+   "member_hash_matches": true
+  },
+  "motif_N840_k56_bound_symmetric_b100_v17.csv": {
+   "zip": "motif_N840_k56_bound_symmetric_b100_v17.zip",
+   "member_hash_matches": true
+  }
+ },
+ "held_not_uploaded": [
+  "motif_N1200_k80_T5000_b50_v17.csv",
+  "motif_N1440_k96_T5000_b50_v17.csv",
+  "motif_N720_k48_T5000_b100_seed777_v16.csv",
+  "motif_N720_k48_T5000_b100_v16.csv",
+  "motif_N720_k48_T5000_b100_v17.csv",
+  "motif_N720_k48_T5000_b500_v18.csv",
+  "motif_N722_k48_T5000_b100_v17.csv",
+  "motif_N840_k56_T5000_b100_v17.csv",
+  "motif_N960_k64_T5000_b100_v16.csv",
+  "motif_N960_k64_T5000_b100_v17.csv"
+ ],
+ "tdrg_sec8_registry": {
+  "TDRG-ART-GENESIS-MC": "genesis_mode_b_mc.py",
+  "TDRG-ART-MOTIF-V6": "tdr_motif_bootstrap_v6.py",
+  "TDRG-ART-MOTIF-V4": "tdr_motif_bootstrap_v4.py",
+  "TDRG-ART-MOTIF-V17-DATA": "v17 motif log corpus / per-run CSVs",
+  "TDRG-ART-MOTIF-V16-DATA": "v16 motif log corpus",
+  "TDRG-ART-GENESIS-MC-V18": "genesis_mode_b_mc_v18.py",
+  "TDRG-ART-KINEMATIC-CERTS": "genesis-layer lemma certificates",
+  "TDRG-ART-SPECCONS": "LEM-SPECCONS verification",
+  "TDRG-ART-BIND3-N24K1": "BIND3-CYCLE-N24K1 exact enumeration",
+  "TDRG-ART-BIND3-SUITE": "NKSCAN falsification suite"
+ },
+ "file_hashes": {
+  "genesis_mode_b_mc - Copy.py": "0600727848786c7316269a21f03cfd783716cffd5d48ebb22621271be785f8eb",
+  "genesis_mode_b_mc.py": "4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608",
+  "genesis_mode_b_mc_graph_export.py": "5256c479bebd3b9654f1a0d73dd82fa03f7e980cf731427446697c079fd65041",
+  "genesis_mode_b_mc_telemetry.py": "ba99e307d8a92518aa5da74a1e0d03241670940c409a80294cd5735c2f795fc8",
+  "genesis_mode_b_mc_v18.py": "9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e",
+  "motif_N1080_k72_T5000_b20_v17.csv": "78410a22c82a00afe0e64074a2d4754b3916e4c35f9b7bd31faafefb45c6fa80",
+  "motif_N1080_k72_T5000_v16.csv": "61a83314f341d1068bbabe7e3894dfc93dc348e2bbb3e41da7dffbb050520589",
+  "motif_N120_k08_T5000_b20_v17.csv": "7ef343b0c2f933151e76a8fcc88815414de3b1beb4527eeb4cdbf72725429b51",
+  "motif_N120_k08_T5000_v16.csv": "9649c551b837884263a3a9e6793dadfe8c89549e134e50e2ada454b5d058c9cf",
+  "motif_N120_k8_v16.csv": "1eec964c41aeea205b95c827fa4d93489bdf9546a299c2d3537b3a7641372271",
+  "motif_N240_k16.csv": "37db0f01feaf806b4b1ddf79fbf98bf65ddc8e9d07716a0e6f21f943d7f8eae9",
+  "motif_N240_k16_T5000_b20_v17.csv": "c06557416275988d00e138d13b3785adeca847460e4439a69496d6ef702c8d18",
+  "motif_N240_k16_T5000_v16.csv": "f8922b780a00e4afc71dc2ccae3e753f13015653bbda8c487ae6aad2a59f3309",
+  "motif_N240_k16_stride1.csv": "3951d9de673051f4ef23158892b127568beb96c53855c4345e7cf217c2584445",
+  "motif_N240_k16_v15.csv": "242803d37988241c7096b2e93c090ff9ca2d008c6fbe8f2da48e929a6e253e54",
+  "motif_N240_k16_v16.csv": "1a83be2ed3812941dbb7807325b4ff19df27b0fa675e3fd1e32bbb35ebe0b954",
+  "motif_N480_k32_T5000_b20_v17.csv": "fff5f54fd158d769133aa97c7617a62a6bb2f1caaece7f5d6b09854506bb8e34",
+  "motif_N480_k32_T5000_v16.csv": "6c3624d19cbf519c864454fe1909c5015e38abc37e230aef495ad210652cd49d",
+  "motif_N480_k32_v16.csv": "aa6888bee954df10c5f47375152f5e66774dc688de940162e49a76c823072b75",
+  "motif_N718_k48_T5000_b100_v17.zip": "0a3fd046b918e0d9ea9139b373d36dd2e7e7d15a8414af50aaac26806828c4e1",
+  "motif_N718_k48_T5000_v16.csv": "062584a3df23857ad9e0f30859db1ffeeeb5ac661f42d78c07067ff0e2b47c5c",
+  "motif_N719_k48_T5000_v16.csv": "63a7750cf366eb848f372d2e3cb869bbe6de6cf2d09c2ed77d780fae1a35a29f",
+  "motif_N720_k48_T5000_v16.csv": "a60b6ff6d90b6d2e985cd4c49176909cdbde0757588f4a196b14b0d93fa2b9df",
+  "motif_N720_k48_v16.csv": "2074410bc10a7a621f693a8cbfb2a4f597acfc20183bd9eae74df25faad2a1aa",
+  "motif_N722_k48_T5000_v16.csv": "4719f82f54335fdc2e6c7913815595c351f7baa5b3d3b30a1459254a60ccfaa7",
+  "motif_N840_k56_bound_symmetric_b100_v17.zip": "b5bfbe3a475b8028ac4bcb75c59d37842dd06bb85f34d9b1382e2371bd4f6483",
+  "motif_N840_k56_largest_center_b100_v17.csv": "37ac8cf017eee73793a96f4a3b1330b5b6c07c856e837f5c342b1423ed7f04fa",
+  "motif_N840_sweep_b100_v17.csv": "8c2d038db29ec8fb41ba94912c1fa8d88cf723e00d6fb5f1e735a572c2828bf4",
+  "motif_N960_k64_T5000_v16.csv": "e2f21f1fe9ecef7881c7dbd895f5c5c83c69dc5ca7e011aa450dbfa6d85163fd",
+  "motif_PG_N840_k56_largest_center_b100_telemetry1.csv": "60c9da399d0f9d37d8d3ff71ac27c50b0727ea75fed61ae9d3c922dcb0abf9b3",
+  "motif_PG_N840_k56_largest_center_b100_telemetry1.csv.manifest.jsonl": "7e2864c6511703bff964fe47fc2fbd1f9ee0f9b620d76f51dc2c58f42964c486",
+  "motif_TESTGRID_N1080_k72_T5000_b5_v17.csv": "9d3f26e637ebbabc5ab17ab59251c4435ed369899cd2d7f6cc26742ccb898ae5",
+  "motif_TESTGRID_N120_k08_T5000_b5_v17.csv": "587e33e405a2df136f103a2f492ade0675b344ff1d6fd09742cbefb4ea218ee1",
+  "motif_TESTGRID_N240_k16_T5000_b5_v17.csv": "925f48334e79f00e91f1602a7dade02ae572e05f6a233e5a0216245ff5b69a45",
+  "motif_TESTGRID_N480_k32_T5000_b5_v17.csv": "38e79858816b1e8673bda5db4691951bf9f4990251612a4349ae3801257ca71a",
+  "motif_TESTGRID_N720_k48_T5000_b5_v17.csv": "e68994cf2d25dc89dbe01af728c9986b0cbbebdc2eed6ef6ebe84a46bf0adc4b",
+  "motif_TESTGRID_N960_k64_T5000_b5_v17.csv": "d9b4a044acb4dd3ceaabf16e5275de78c37c45a9b57ae3cd768bee7577044e3c",
+  "motif_TEST_N120_k8_T1200_b3_v17.csv": "de0f3e42eaeacd7655d4b29e8065ad800911f246639c454bf70c676b7ced36d9",
+  "motif_TEST_N720_k48_T5000_b5_v17.csv": "e68994cf2d25dc89dbe01af728c9986b0cbbebdc2eed6ef6ebe84a46bf0adc4b",
+  "tdr_motif_analysis.py": "60a5beee61727b213c502ca3911289815c8ec0e41b00e9deb10309574a823f18",
+  "tdr_motif_analysis_v2.py": "18204ddbe26e66d97b5da6bb6c4d2def6ca05c8b38e39111b10350acd6fada99",
+  "tdr_motif_analysis_v3.py": "c55392ace72547aeda3036a4f8d996cc9a86048f93be79509034aaae7b2517d8",
+  "tdr_motif_bootstrap_v1.py": "63eb29e0e9da3a9cf6a9fd44760eae35e41c3fe4349d2275c17b4be0e7aac1da",
+  "tdr_motif_bootstrap_v2.py": "f26b8e791df67c6d7a4358e56d0c6337c5c51da931ebead567bfade25858b62e",
+  "tdr_motif_bootstrap_v3.py": "f9208fd16796c533dcfe80ecf9fd7b9916af460c472e96124e691ff8ab1504e6",
+  "tdr_motif_bootstrap_v4.py": "86e77511865603e67e82fe4ccec1c8ae3f54ac3fafafe8021810a311fa6dddc5",
+  "tdr_motif_bootstrap_v5.py": "faa3cb2e803a172b01b68ebad522d5343a8f5bb5142160d6f22bd0f73f65d746",
+  "tdr_motif_bootstrap_v6.py": "3ebf064d9d073b3cc5372603010199fce695539236d1dd3f5e99ec684bc34ac6"
+ }
+}
