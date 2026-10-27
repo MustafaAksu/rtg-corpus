@@ -1,0 +1,89 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.4",
+ "base_sha256": "b63eaf8b85dbb1f4a8fbee61cb82f2af089276797c387e6a8a0b13922805c35b",
+ "atlas_sha256": "cf250c9140e6ee26c65b2497a2a61dc1e326a69574d590132f0cea9646a2b0e5",
+ "atlas_bytes": 477266,
+ "atlas_lines": 1550,
+ "source_snapshot": "75f8dc95520aaceac6a36614016902b408a8b52e",
+ "changed_sources": [
+  "GEN",
+  "RECOG"
+ ],
+ "edit_operations": 68,
+ "retired_keys": [
+  "GEN.D1",
+  "GEN.D2",
+  "GEN.D4",
+  "GEN.D14",
+  "F9",
+  "F10",
+  "F15",
+  "F16",
+  "F17",
+  "F19",
+  "RECOG.R-P3",
+  "RECOG.R-T1"
+ ],
+ "new_keys": [
+  "PROG.G8",
+  "GEN.D17"
+ ],
+ "new_nodes": [
+  "RECOG-THM-A1B-SLIP-SCHEDULE-U",
+  "RECOG-RESULT-A1C-RECORD-PHASE-READOUT",
+  "RECOG-ALG-QUADRATURE-TYPING",
+  "RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY",
+  "GEN-THM-QH-NOGO",
+  "GEN-THM-SINGLE-FACE-METRIC",
+  "GEN-THM-SOURCED-JUNCTION"
+ ],
+ "dispositions": {
+  "retired": 12,
+  "reworded": 11,
+  "new": 2
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 128
+  },
+  "qualifiers": {
+   "PASS": 3
+  },
+  "links": {
+   "PASS": 419,
+   "UNVERIFIED": 4,
+   "DOCUMENTED-UNRESOLVED": 11
+  },
+  "artifacts": {
+   "PASS": 99,
+   "UNVERIFIED": 3
+  },
+  "keys": {
+   "PASS": 77
+  },
+  "process": {},
+  "wording": {
+   "WARN": 16
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 6,
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 127
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d",
+  "evidence/atlas/build/refresh_v0_5.py": "b08fafa347a0a316dae21749b801482338949e9ad70a1696eae70201d1fa212e"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate rerun; new-node RIDs checked for presence in the tagged sources, not re-proved.",
+  "Impact refresh of two moved sources (GEN v2.9, RECOG v0.3.24); the other 16 domains were not re-extracted; Dyadic records (OPEN 20 LH2012 assessments) change no owner edition.",
+  "RECOG v0.3.24 §6.13b/§6.16e/§6.3/§6.5 extracted at statement level from the tagged file; proofs live in the owner cells."
+ ]
+}

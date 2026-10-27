@@ -1,0 +1,518 @@
+{
+ "upload_branch": "origin/upload/numgen-records",
+ "upload_commit": "925a39195c101a9b07690246a5e0e406404956de",
+ "source_tag": "numgen-v1.20.8",
+ "source_sha256": "835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e",
+ "files": 280,
+ "sha256sums_entries": 278,
+ "sha256sums_all_ok": true,
+ "listed_mismatch": [],
+ "listed_but_absent": [],
+ "unlisted_files": [],
+ "zip_members": 48,
+ "bannered_files": [
+  "NG_C7B_DISC2_PREREG_v1_DRAFT.md",
+  "NG_C7C0_RECIPROCAL_CERT_v1.md",
+  "NG_C7C_M2_CENSUS_PROTOCOL_DRAFT_v1.md",
+  "NG_C7C_M2_PREREG_DRAFT_v1.md",
+  "NG_C7C_M2_PREREG_DRAFT_v2.md",
+  "NG_C7C_M2_PREREG_DRAFT_v3.md",
+  "NG_DISC1_DIAG3_RESULT_v1.md",
+  "NG_DISC1_DIAG3_RESULT_v2.md",
+  "NG_TO_TDRG_REPRODUCIBILITY_GAP_v1.md",
+  "NG_V1201_MIGRATION_SPEC_v1.md",
+  "NG_V1201_RECONCILIATION_REVIEW_v1.md",
+  "NUMGEN_REPLY_TO_RECOG_A1A_C4_20261020_v0_1.md",
+  "NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_1.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_2.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_3.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_4.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_5.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_6.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r1.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r2.md",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r3.md"
+ ],
+ "cited_identities_in_numgen": 31,
+ "cited_and_present": [
+  {
+   "sha256": "117484ae1a2509b6f6065d395840bfdfe2b0c977af0505f9fe6de68c13959cdb",
+   "where": [
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/replay_inputs_dyad/dyad_numgen_lphase_rowA_cert.py",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/replay_inputs_dyad/dyad_numgen_lphase_rowA_cert.py"
+   ]
+  },
+  {
+   "sha256": "19e929aa2c2284091e0a7877d177a9464294c722f9c3fba1c3769e006ec2a30a",
+   "where": [
+    "census1_tdrg_replay/census1_tdrg_replay_manifest.json"
+   ]
+  },
+  {
+   "sha256": "23f298dc6da5633551d7e748ed1e1e5fb1d7a7c1c5525da4797336b3967bd33a",
+   "where": [
+    "NG_C7C_M2_CENSUS1_UTDRG_RESULT_v1.json"
+   ]
+  },
+  {
+   "sha256": "248f128c906de337370915014e618b67c207307114cbedd9a2a4ac764d928987",
+   "where": [
+    "NG_C7C_M2_PREREG_DRAFT_v4.md"
+   ]
+  },
+  {
+   "sha256": "2a064eb9b82391cc863755741f40949010159102874d6debea4f7da2c5c2f148",
+   "where": [
+    "ng_rf06_token_shift_spotcheck_v1.py"
+   ]
+  },
+  {
+   "sha256": "2a51c4b1a8037105d75e68ea7f24c721a970ab5ec32c27e810139020ccb948c5",
+   "where": [
+    "RTG_NUMBER_GENESIS_DSN_v1_20_6.md::payload"
+   ]
+  },
+  {
+   "sha256": "3a913062c1cdc6d151a2fb5b2f76d5354a367d1fa55df43f1f31d06e1b94cce8",
+   "where": [
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/replay_inputs_dyad/qw.py",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/replay_inputs_dyad/qw.py"
+   ]
+  },
+  {
+   "sha256": "423cd7198c75ab7f39d3e1608c5e3bb85c0230dee795d13e03915dc0d4857b78",
+   "where": [
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r2.md",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r2.md",
+    "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r2.md::payload"
+   ]
+  },
+  {
+   "sha256": "71bfc4c597b4be502129a6d0da0b1c987723979eec1701b9c1b4187140c4b66f",
+   "where": [
+    "NUMGEN_RECEIPT_REPLAY_LPHASE_ROWA_20261020_v0_1.md",
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/NUMGEN_RECEIPT_REPLAY_LPHASE_ROWA_20261020_v0_1.md",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/NUMGEN_RECEIPT_REPLAY_LPHASE_ROWA_20261020_v0_1.md"
+   ]
+  },
+  {
+   "sha256": "73cfa2e31cbb98a1c493c9e6e500c9a8a9edd53089615648c9ea8ddd95048188",
+   "where": [
+    "census1_tdrg_replay_v1.py"
+   ]
+  },
+  {
+   "sha256": "7a91c223691b3705c2560fca452e671442939452e11cf98820512b182f46f78f",
+   "where": [
+    "NUMGEN_INTERFACE_CONFIRMATION_LPHASE_ROWA_20261020_v0_1.md",
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/NUMGEN_INTERFACE_CONFIRMATION_LPHASE_ROWA_20261020_v0_1.md",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/NUMGEN_INTERFACE_CONFIRMATION_LPHASE_ROWA_20261020_v0_1.md"
+   ]
+  },
+  {
+   "sha256": "7b7dc4510a6d80a396172237f17e5740ff2a54535289ff8ff90096673d5977c8",
+   "where": [
+    "census1_tdrg_replay/census1_tdrg_replay_records.jsonl"
+   ]
+  },
+  {
+   "sha256": "8697c6970bd908327c66ef2ce3b2d38386947899033ef7f720bc096c4c3ad4fa",
+   "where": [
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/replay_inputs_dyad/lphase_rowA_certificate.json",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/replay_inputs_dyad/lphase_rowA_certificate.json"
+   ]
+  },
+  {
+   "sha256": "9d59cfa1edf15c4e263494c9fbc615dc915ed3b84e556df8ade61fd1fa7de7b3",
+   "where": [
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r3.md",
+    "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r3.md::payload"
+   ]
+  },
+  {
+   "sha256": "b39de45ce4a5e8aba741a4e84a90ceeeaafd7e037923378d5d63bc089e5cded4",
+   "where": [
+    "NG_SELFCHECK_REFERENCE_TRANSPORT_v1.md"
+   ]
+  },
+  {
+   "sha256": "c4637e7a5cfaf8eaf001746f172111385f5df2a8cd552e3ab56308ff7abfab28",
+   "where": [
+    "RTG_NUMBER_GENESIS_DSN_v1_20_7.md",
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/RTG_NUMBER_GENESIS_DSN_v1_20_7.md",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/RTG_NUMBER_GENESIS_DSN_v1_20_7.md"
+   ]
+  },
+  {
+   "sha256": "c67342a96e3e10a24e3b0a4086485bd2b648b2f7c2c90b62faa61f76f83c6fa8",
+   "where": [
+    "NG_C7C_M2_E4_TDRG_DENSITY_v1.json"
+   ]
+  },
+  {
+   "sha256": "cefb71803ec53cc2151972fc0fdd5ebf3ce2508884e24d55a6c305f93f3b165b",
+   "where": [
+    "NG_C7C_M2_PREREG_FREEZE_MANIFEST_v1.md"
+   ]
+  },
+  {
+   "sha256": "d170efb5d48dd222acf85c353ce9b136b08ab0ff42946df56a26dca19fcb5d73",
+   "where": [
+    "NG_C7C_M2_ANALYSIS_OPENING_MANIFEST_v1.json"
+   ]
+  },
+  {
+   "sha256": "d9d89bae20a376a3e5992dacdb4263f4b6948af4a739ce3ab4c91c37e1e57ccf",
+   "where": [
+    "ng_lphase_rm_indep_check_v0_1.py",
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/ng_lphase_rm_indep_check_v0_1.py",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/ng_lphase_rm_indep_check_v0_1.py"
+   ]
+  },
+  {
+   "sha256": "e2a0d15a94676348d03ca74b4272b4a940b90d692dc03390cc49fd7e622cf661",
+   "where": [
+    "ng_lphase_rm_indep_check_v0_1.log",
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/ng_lphase_rm_indep_check_v0_1.log",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/ng_lphase_rm_indep_check_v0_1.log"
+   ]
+  },
+  {
+   "sha256": "e7b85fd248ab86e7bb8bda907cb10cf8e6fd32d6702d33f8e58f7ab513c70139",
+   "where": [
+    "NG_C7C_M2_ANALYSIS_LOG.md"
+   ]
+  },
+  {
+   "sha256": "ed3c72af5c702f7076e7e1fea2ef9a10a4d9aad6306ce06419668fbd94beeae9",
+   "where": [
+    "NG_C7C_M2_CENSUS1_UDYAD_RESULT_v1.json"
+   ]
+  },
+  {
+   "sha256": "eef001d14ad57db4ce53d27eb90c28e460d03aeafe4e800554d293bad04ac63c",
+   "where": [
+    "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r1.md::payload"
+   ]
+  },
+  {
+   "sha256": "f007d42cde36d2a70115b9db25f47b107c446735fa31c66664f620c3247a5609",
+   "where": [
+    "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r2_REVIEW/replay_inputs_dyad/tzw.py",
+    "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip::NUMGEN_v1_20_8_DRAFT_r3_REVIEW/replay_inputs_dyad/tzw.py"
+   ]
+  },
+  {
+   "sha256": "f2a4a9a4a9453d10688ca98fad049dd0e2f844f986a38db3a6a0ec4477215795",
+   "where": [
+    "NG_C7C_M2_CENSUS_PROTOCOL_v1.md"
+   ]
+  }
+ ],
+ "cited_not_in_upload": [
+  {
+   "prefix": "0dcce9e4…bcd9",
+   "context": "| known consumer (v1.20.8): `RECOG v0.3.22` (adopted 20 Oct 2026, `0dcce9e4…bcd9`; project copy hashed; p"
+  },
+  {
+   "prefix": "2fb0a0fe…afce",
+   "context": "20.8) | `RTG_RRF_REPRESENTATION_REGISTRY_v0.8.4` (adopted working standard, 20 Oct 2026, `2fb0a0fe…afce`; predecessor v0.8.3 `b3"
+  },
+  {
+   "prefix": "40c9e63f…6ec9",
+   "context": "y imported statement (§9.1). The current Dyadic edition is v6.4.19 (adopted 20 Oct 2026, `40c9e63f…6ec9`); it adds the §6.14 L-P"
+  },
+  {
+   "prefix": "a3459522…0ae3",
+   "context": "v0.3.22` (adopted 20 Oct 2026, `0dcce9e4…bcd9`; project copy hashed; predecessor v0.3.21 `a3459522…0ae3`) | claim-level synchron"
+  },
+  {
+   "prefix": "b393657e…a187",
+   "context": "STRY_v0.8.4` (adopted working standard, 20 Oct 2026, `2fb0a0fe…afce`; predecessor v0.8.3 `b393657e…a187`) supersedes the RRF v0."
+  }
+ ],
+ "file_hashes": {
+  "NG_BIND3_REPRO_STATUS_v1.md": "8ebfcb14e1b48ec489bf2a2f8f3330515545a9f6e3e00ce04f330c8996ef7638",
+  "NG_BIND3_REPRO_STATUS_v2.md": "5c48c00cded2591b839f3471051a88344a13293b2a0d59e7f3e3ef53977ad0ca",
+  "NG_BIND3_REPRO_STATUS_v3.md": "12d8917ac14b3ad018a1f8a20209f8e66052ce840f0393a29f8e86909247ec62",
+  "NG_C7B_DISC2_PREREG_v1.md": "db87b45565f6c5e59ef4797abde8514d89586c1b56bfe303d29ec6fb33919da9",
+  "NG_C7B_DISC2_PREREG_v1_DRAFT.md": "191b1293002267cc1bca6007c7832d6b9589c232b5a3a403cdb4b711992eef4c",
+  "NG_C7B_DISC2_RESULT_v1.md": "55965d7d9b70796cb4041364c50ebea5348477ff4d191d59d5de399f7cf0e23b",
+  "NG_C7C0_RECIPROCAL_CERT_v1.md": "7097108574380d913c3abbf68656a41d230bced821f5738e0415fc178fa3313b",
+  "NG_C7C0_RECIPROCAL_CERT_v2.md": "5abd130d0008fa6210cf39c3e5fb00d024a3753c7620f4fdf8d06cb6585c723e",
+  "NG_C7C_M2_ANALYSIS_LOG.md": "e7b85fd248ab86e7bb8bda907cb10cf8e6fd32d6702d33f8e58f7ab513c70139",
+  "NG_C7C_M2_ANALYSIS_OPENING_MANIFEST_v1.json": "d170efb5d48dd222acf85c353ce9b136b08ab0ff42946df56a26dca19fcb5d73",
+  "NG_C7C_M2_CENSUS1_UDYAD_RESULT_v1.json": "ed3c72af5c702f7076e7e1fea2ef9a10a4d9aad6306ce06419668fbd94beeae9",
+  "NG_C7C_M2_CENSUS1_UDYAD_UNIVERSE_v1.json": "a1b60b59502bf0daddce104f1001220c8f8ebf004abdb335e0e5b4436d7d3ddc",
+  "NG_C7C_M2_CENSUS1_UTDRG_F1F2_v1.json": "1bc2b178ed88fb321111323c0262ddf96e9d6ae89405cf3433d847b92940dbdc",
+  "NG_C7C_M2_CENSUS1_UTDRG_RESULT_v1.json": "23f298dc6da5633551d7e748ed1e1e5fb1d7a7c1c5525da4797336b3967bd33a",
+  "NG_C7C_M2_CENSUS1_UTDRG_UNIVERSE_v1.json": "80b0c3b17349e8746b939c241007b7a0a67c2e69160badc4ebbfa3f1973513e9",
+  "NG_C7C_M2_CENSUS_PROTOCOL_DRAFT_v1.md": "e163477a7916b3e7ce054f85b95d1bc1e2345d2b92fe1b13f4743db9e1f3d6cc",
+  "NG_C7C_M2_CENSUS_PROTOCOL_v1.md": "f2a4a9a4a9453d10688ca98fad049dd0e2f844f986a38db3a6a0ec4477215795",
+  "NG_C7C_M2_E4_TDRG_DENSITY_v1.json": "c67342a96e3e10a24e3b0a4086485bd2b648b2f7c2c90b62faa61f76f83c6fa8",
+  "NG_C7C_M2_PREREG_DRAFT_v1.md": "8a558725f7d3d85b205de7ced87270255b7e13ea9e2bfc7b2bffffe03a9f3218",
+  "NG_C7C_M2_PREREG_DRAFT_v2.md": "6461d22185fb594459542b11e7d8d680074788e1e10a3cefe79c5eaabea94c77",
+  "NG_C7C_M2_PREREG_DRAFT_v3.md": "7a34698e1467af517ea637645a96439bd872a60e6296348c23e6943d6af8074f",
+  "NG_C7C_M2_PREREG_DRAFT_v4.md": "248f128c906de337370915014e618b67c207307114cbedd9a2a4ac764d928987",
+  "NG_C7C_M2_PREREG_FREEZE_MANIFEST_v1.md": "cefb71803ec53cc2151972fc0fdd5ebf3ce2508884e24d55a6c305f93f3b165b",
+  "NG_C7C_M_DESIGN_v1.md": "2fb4ed9dd1cfaf846e5da108cc336f07847635ff1180989ac9bf9e064d0dbb9d",
+  "NG_C7C_WD_C7C0_DESIGN_v1.md": "2ca016d4af3c9715f63aab30de00195551db47ff504f794fb7b0d5a87e33b782",
+  "NG_CORPUS_UPDATE_IMPACT_20261005_v1.md": "cd65f617292038baf0e416640e890549e041f4e599ef0f49022e9a69e8f2626d",
+  "NG_CORPUS_UPDATE_IMPACT_20261020_v1.md": "5781c109bccebafa76c4435b81427e8a1a8619278ce044696035110c8d20e3f5",
+  "NG_DISC1_AUDIT_ITEM3_v1.md": "1e2d4d7f5939e7b54818d846219c7cdb1553a457eef6e1355d4f02a45d932db8",
+  "NG_DISC1_DIAG2_FEATURE_FREEZE_v1.md": "a683639e7defade5f945d3c79f3275f40ccb078d90d9b4a2ae9de0e2a7f63e21",
+  "NG_DISC1_DIAG2_RESULT_v1.md": "9ba6aedc59d4bd0f6681ec72e0da3d5c83838712e0e406c1399c4dcd2fe630da",
+  "NG_DISC1_DIAG3_RESULT_v1.md": "64109281bfda339be5cf3ac09176470dd956cdfd2373a8a0dfe04dd7f4e8a289",
+  "NG_DISC1_DIAG3_RESULT_v2.md": "c85c4b6859d650210600e9b2e5ccf08e4912a8b3d09a5a8a87451002776beb4a",
+  "NG_DISC1_DIAG3_RESULT_v3.md": "50972b58831ba9acab271335e1ea4c67aa8241cef08da1529c3409b47fcb3c72",
+  "NG_DISC1_FREEZE_MANIFEST_v1.md": "7d73d85fbced962fa60cb172f146cce7f93aac68262387bd97a7c94eadf1a580",
+  "NG_DISC1_FROZEN_PREREGISTRATION_v1.md": "dee081f5cf04a20212ea6294030d891145a25d1e00ef00b5d1c7e8396ec00c38",
+  "NG_DISC1_MECHANISM_DIAG_v1.md": "7a5e6d93b807f0866812ea63486a7cb48f117f634d51e322f1c9a634552375f2",
+  "NG_DISC1_MECHANISM_DIAG_v2.md": "bdb2c0065911ba96c77ed7128424d8ea20af4a21c11de3cc338c39de43f6e55f",
+  "NG_DISC1_RESULT_v1.md": "1a1980e0d0542c4e24fcb507247a5ed68552baaf4db6e7222be8e37e694e9948",
+  "NG_DISC1_RESULT_v2.md": "d1b880bd98c3beed000864808a4b08e3fbb6ad024edf68c5b2fb98a1c293497b",
+  "NG_DISC1_RESULT_v3.md": "d7ece9f9f9506a0b4ce3bf6b12f88f42f2a52684e01e2b3585f558817103d85f",
+  "NG_DISC1_RESULT_v4.md": "d73b097d1b2c2fc9aa97f4427cfadb62f1ecb9b96eee56d5c132bf791bf163de",
+  "NG_EXTERNAL_REVIEW_v118_RESPONSE_v1.md": "3d12d9ae24c8164d4099b7605eb0774c1ed44093f3f01988233fe3ff4bbdf7b3",
+  "NG_GAPLOCK_LEMMA3_CLOSURE_v1.md": "8ff19938fe247a9d3eae0738a1b11228f03a033e0d28c385cac8e28044de4743",
+  "NG_GAPLOCK_LEMMA3_CLOSURE_v2.md": "154dd2a12e1d6575a82a92629be6594a0bca6f04bfde6332e864e542e3dcb320",
+  "NG_N2ORD_PHYSICAL_ORDER_CERT_v1.md": "85df13603738c9ca97bb11f0b4b60b4e90cfa0e3f474764ef85f38542ff96ba1",
+  "NG_N5AS1_CLOSURE_VERIFICATION_v1.md": "e2d55a0358e81a0eff7236650570ed2048c3b8844e545c57b72701fac2f41143",
+  "NG_N5AS1_GAPLOCK_PARTIAL_v1.md": "04d0eabb8d307522fba211aed65aaa667365e69cbbc2f7cb21826a3b0acbb20e",
+  "NG_N5AS1_GATES134_CERT_v1.md": "4be8dd697c56b5d8e048ff97be02364ff62bb1a0cb3aff81eaf2470e00438a06",
+  "NG_N5AS1_INF_EXTERNAL_BRIEF_v1.md": "a5acd515d8f4c2bd82d75c0ed11468aeb74c28dd89c54c8d8150e14292fa9380",
+  "NG_N5AS1_INF_REDUCTION_v1.md": "90eb665851c183eedc9f5739a39233fb68b25e718a3da32f6aa372037f3b6e0b",
+  "NG_N5AS1_LOGSLIP_VERIFICATION_v1.md": "0037884ff3806f3b5882ffe4bacd1af750b4dbd49d88c16ad27ff9123958586f",
+  "NG_N5AS1_SECTION_SEARCH_v1.md": "77b35decedf2be50f00d6fc4aef0e80cd3c8f21f78ccf64dcf08503075cb6cf9",
+  "NG_N5PHYS1_DISCRIMINATION_AUDIT_v1.md": "bf978f0dc448d5e99a3184ea264af0464823171dc13d5ba9e60c7cc986196189",
+  "NG_N5_DISCRIMINATION_CRITERION_v1.md": "53ff351298b068307cbaadff184dfd798e25dd8c0fa5cec3786d65a6c928c130",
+  "NG_N5_DISCRIMINATION_CRITERION_v2.md": "0a4a41ac05b1a58464f4dfff3effc5a1dcee028f37c4efad07cc9a41dce8eb60",
+  "NG_N5_DISCRIMINATION_CRITERION_v3.md": "8180afedc96c231fad10f55d169e709808282425ebe9c60c748f3e35d06cff66",
+  "NG_N5_DISCRIMINATION_CRITERION_v4.md": "224b946474d4b1110309d147698965b5520509920a0854d6cf12b24d8687ccea",
+  "NG_N5_DISCRIMINATION_CRITERION_v5.md": "712816ad0cfc095a77fcb0bd33b15ca36774d7235868628e2cf00c1f5eeb7c61",
+  "NG_N5_DISCRIMINATION_CRITERION_v6.md": "e3a3af434b49ee08d8cc01a5e808cce4bff427baa40245b255416661fbf67793",
+  "NG_N5_DISCRIMINATION_CRITERION_v6_1.md": "78af40b265fe2b2c4dfddb48803f1ff6bfb49f801551b47f9f82e9ae90ebc536",
+  "NG_N5_DISCRIMINATION_CRITERION_v6_2.md": "e8e5b6a7063f36a21778257e09b872d44d94563dbe7cdf7f23d97f8e27fe8fca",
+  "NG_NG7A_HOLONOMY_NULL_CERT_v1.md": "b7cb64261905626458ec6e5b919055e5b49a2f3078d47f4d47282359d02ffeda",
+  "NG_NG8AB_CROSSCHECK_v1.md": "06af654186116cedf12edaf58937b64c465e7934c7e9c2cd7213e5c122189b35",
+  "NG_NG8AB_INDEPENDENT_RECERT_v1.md": "fd90f8d749bef8301764d4d852a99012d26c5087a516740f71d54b36e7df6ca9",
+  "NG_NG8A_ORBIT_CARDINAL_CERT_v1.md": "941640be65797227622242558c4389f749679be285a57ebe48c91086cabb7934",
+  "NG_NG8B_REBLOCK_MULT_CERT_v1.md": "e6bb23bfa1b53630c5c54b28378aa3b7d85798d96719184e4d356b8cda0cb417",
+  "NG_SELFCHECK_REFERENCE_TRANSPORT_v1.md": "b39de45ce4a5e8aba741a4e84a90ceeeaafd7e037923378d5d63bc089e5cded4",
+  "NG_TO_DISCRETE_GENESIS_HANDOFF_v1.md": "3283fcca9de2115c90d8d31177d98f7b0dfad5206526d7339ba337c4cf3bb562",
+  "NG_TO_DYAD_RELAY_RIEMANN_LENS_v1.md": "6a03cce25cbf51203cc4c8104814a38bf8c389871756bf0948fe2b47961f6b92",
+  "NG_TO_TDRG_REPRODUCIBILITY_GAP_v1.md": "51c65c80cd7388af6ac1077f42cd87d9787561b333b4a7d127a6cf463ee27618",
+  "NG_TO_TDRG_REPRODUCIBILITY_GAP_v2.md": "6c7865c20f982abe4c83c40648093f8acbd0e890a13a821cad225bc45bde2fe3",
+  "NG_V1201_FREEZE_MANIFEST_v1.md": "e8cb5abaf24f021abaee544ad35dceffd9081d3929c18c5457be778dcc5d87bf",
+  "NG_V1201_MIGRATION_SPEC_v1.md": "bbfa75cb0145a7397f3acad57c072862b117448aa87088c72e5fcb311ce16acd",
+  "NG_V1201_MIGRATION_SPEC_v1_1.md": "b1305efbca43980520573ab21a18d3d7fd917922d9c14b1e028601fa0ced0e2d",
+  "NG_V1201_RECONCILIATION_LEDGER_SKELETON.json": "a460d732e758147bdfe4f535994112c3b580e9c9d5558b71f0945e558c028f12",
+  "NG_V1201_RECONCILIATION_REVIEW_v1.json": "58d64bd0efdb781ae163023b5c7f20954cc8407b9aa253825b0e67e5d5fcc295",
+  "NG_V1201_RECONCILIATION_REVIEW_v1.md": "cddccd0fc2b11f0acf54ea53fb1f363f92f09948a7de685808509006bfacbdd5",
+  "NG_V1201_RECONCILIATION_REVIEW_v1_1.json": "9666c89c2b6136733a645168cfcb63a9d061d999300017a46d9262d6f987bc7b",
+  "NG_V1201_RECONCILIATION_REVIEW_v1_1.md": "036c36de6be340b6fdc9375cdc8f66f366cc5d0bb75bbc124567b79995cf51d1",
+  "NG_V1202_INVENTORY_REPORT_v1.md": "e6debf8519eb3952649fa472869c64adafec8a63c9dd08962a3c50d580b9cf21",
+  "NG_V1202_RELEASE_REPORT_v1.md": "5f569f31e7a928a5845b5501363cc4799095e31009c266a63c42147210dfa4c4",
+  "NG_V1202_REVERSE_INVENTORY_v1.json": "4b9eec2aaa40c15ba444430e1306c80ae108a472fd8029181ad9595c6820dc37",
+  "NG_V1203_FREEZE_MANIFEST_v1.md": "8478a837b98efc62965a39bc123c5901d6ff62e6803f3cab8a8053496f4ac894",
+  "NG_V1203_HIER_INVENTORY_v1.json": "f4097fb20d96d2beaff35da9d4f1d4cb54d4650c86c222f3a685a06139bfa592",
+  "NG_V1203_METADATA_PATCH.diff": "1363033200e8274b7a3f0bf4552f4fc4f504c4707df5ba94774fa8a308be71d2",
+  "NG_V1203_MIGRATION_LEDGER_v1.json": "f05042d8defe442d9036bcb4b3d1070dce2adb4b14ec46778adccc2bddcecfc7",
+  "NG_V1203_MIGRATION_REPORT_v1.md": "e8b6f05bdd05ab8ffd0158f9772ff5178265af5d25fa77bec989a04e100f7a24",
+  "NG_V1203_REVERSE_INVENTORY_v2.json": "f9654659c05104b11543818e705d26399e836ed07c6cc91d379f37545ee0a94b",
+  "NG_V1203_SCOPE_FINDING_v1.md": "0f8127e62f37669d324802d61682964bca77ac7a35dc4e2f404cd7df68510dab",
+  "NG_V1203_SUPPLEMENTARY_INVENTORY_PROPOSAL_v1.json": "0c3e7fde4b7601bfae33060a5fc74f8aaafa42b9dff8e37e4683d365330590e7",
+  "NG_V1204_FREEZE_MANIFEST_v1.md": "2a8e4a70fcb1083b841ad0335255ee1f8cec17538c5e39bcdc15b0b9a71d66af",
+  "NG_V1205_FREEZE_MANIFEST_v1.md": "4b28d1694a49651c60c641c0026950f3342272aa6a59b9ccc32ba5d3a3b9542a",
+  "NG_V1205_GRADE_NORMALIZATION_TABLE_DRAFT_v1.md": "36ae5b3dbafff934533eb45584d032359c872ad4e28a30244c4d2de67a6087a2",
+  "NG_V1206_FREEZE_MANIFEST_v1.md": "0911f6ca8a98aedb3e9ecc71f793f588df7057a2bb4eebd5a47d4d3654d6184c",
+  "NG_V1206_REVIEW_G1_v1.md": "4a2af7fd2ebb81f019f76ffcda0fe5ce4abc06df61394d203dee28eeb0077113",
+  "NG_V1206_REVIEW_G2_v1.md": "cfdd1bf1447a98f3b8c880007730e5d59e85d68a4df037a64ee8182754b99699",
+  "NG_V1206_REVIEW_G3_v1.md": "aa51722d6971073a7f87728c0b9a238aab12926a7532254bb952c6a2bbff39ae",
+  "NG_V1206_RULING_LEDGER.json": "b510aa62488a85110a2da102db0fd6f70f7dfa632b31495783ee89feee79a131",
+  "NG_V1207_FREEZE_MANIFEST_v1.md": "b06fd02bc47f6a8b6c14c866b13f14a25d71160518427771e2004d885d7bdbef",
+  "NG_V1207_REMAINING_GRADE_RULINGS_v1.md": "d645cce8392157ebaaa54aca2ac142bcbc8aa87bd0d1b46edcf7a9ed69db2cea",
+  "NG_V1207_REMAINING_GRADE_TABLE_DRAFT_v1.md": "08e1b90309c61cfd2aea85fd9c03ba1edd60f5526c4a2608343dc76ccda54519",
+  "NG_V120_CHANGE_SPEC_v1.md": "3c6621b8d8c784e090cd644fc7ae24a8f413d7dc3f803896d8842f65ae0ef1f4",
+  "NG_V120_CHANGE_SPEC_v1_1.md": "13c4756b79c8164178bca289652720b7693e401d365cf06fcadc0c59faeb8120",
+  "NG_V120_FREEZE_MANIFEST_v1.md": "be826b253763ae64449944e153c4143d03c3863955623dace65515cf93f4d320",
+  "NUMGEN_DAILY_SUMMARY_20261020_FOR_COOWNER.md": "4f142b8bd2eb6e71c304e6fc79459a276f165f98001736d10bd5139dee39e07c",
+  "NUMGEN_INTERFACE_CONFIRMATION_LPHASE_ROWA_20261020_v0_1.md": "7a91c223691b3705c2560fca452e671442939452e11cf98820512b182f46f78f",
+  "NUMGEN_NOTICE_TO_FMS_R8_ATTRIBUTION_20261020_v0_1.md": "e6141e5549df6bb92565a300c0a4d68463c4da8eb4e952d96c97ae961193ebd7",
+  "NUMGEN_RECEIPT_REPLAY_LPHASE_ROWA_20261020_v0_1.md": "71bfc4c597b4be502129a6d0da0b1c987723979eec1701b9c1b4187140c4b66f",
+  "NUMGEN_RECEIVING_REVIEW_LPHASE_SCOPE_v0_1_20261020.md": "25646824a349d4d777f01449d00b64d9279c74783ab179dcc1225a2d385b6f37",
+  "NUMGEN_REPLY_TO_DYAD_LPHASE_ENCLOSURE_20261020_v0_1.md": "1d0b4dce6bfb2476d16ab5f8a6a89dac6ca0a8e65724c72d76a263310f02e5a3",
+  "NUMGEN_REPLY_TO_RECOG_A1A_C4_20261020_v0_1.md": "8ccf13d4c42aadad71c2deaa2fdbfb4b34dfb496b34ed393a98ee6fe9d17ecf5",
+  "NUMGEN_REPLY_TO_RECOG_A1A_C4_20261020_v0_1_1.md": "23273f860fa222a066f505cfce43145ff42fdfc891143c172e9986c949f695b6",
+  "NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1.md": "3b02575dcdbcd3f81dfe612fb2e8ce09c7ea234ef012604378e3b3332df1f255",
+  "NUMGEN_REPLY_TO_RECOG_A1A_RID_REQUEST_20261020_v0_1_1.md": "a2e7bf98fe08d2d64a883b8996c285ba4b67c94f73bb53548abe206f228b1902",
+  "NUMGEN_REQUESTS_TO_DYAD_20261020_v0_1.md": "a2c49d2eac2f7554c056a595b7211b2b33850c32397b2a79c2fac484e640776a",
+  "NUMGEN_v1_20_8_DRAFT_r2_REVIEW.zip": "4722809bacc2462b155b44a26fba3db9720389f122502202c02933b0092be602",
+  "NUMGEN_v1_20_8_DRAFT_r3_DELTA_NOTE_20261021.md": "8bf76d7db1f0449e3cb89a9f232767b9d4bd333efb71426dbec4c3b4528af341",
+  "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip": "a7fc9ed63113e7f6f48296b9593b92467b94314d71f5117e106cf9dcdbe1ee84",
+  "NUMGEN_v1_20_8_RELEASE_RECORD.md": "fb699967bbacc3eee5e8772a9b08d0cca2331ce8bf304fe96020ab776b4d1f97",
+  "README_UPLOAD.md": "483bfaf086e6eee1bd931e76d1487e3b7256694dfc6fe26ae699a7f7fafc6b63",
+  "RTG_NG_PROGRAMME_REVIEW_AUDIT_v1.md": "45d418b782d87a10e8c59b64e5e2c62b1524c84083b9db4280d210d265b2c91c",
+  "RTG_NG_V1_4_IMPORT_AUDIT_v1.md": "b4039974068eaede5cace556269aa1d28e093deff25f0fff5885265021d217a1",
+  "RTG_NUMBER_GENESIS_DSN_v1_10.md": "44d6196bfca66eaf4a6d227974e9a9cfa31735dc0e655425b1eee48c3f0b9b85",
+  "RTG_NUMBER_GENESIS_DSN_v1_12.md": "31b4181067cd99a8c95dadcb26e4153f9b7e949d3f806aa0675f49938a2d5801",
+  "RTG_NUMBER_GENESIS_DSN_v1_13.md": "7dcb542a71692b8f020e894c6190d2cc19a5d82074972354e1b0933c8bfccf80",
+  "RTG_NUMBER_GENESIS_DSN_v1_17.md": "46ca8283a160e11cfb81e6ecb72bb46f5f1d35557a606628c649cc8f6d4e647a",
+  "RTG_NUMBER_GENESIS_DSN_v1_18.md": "908786bb6316f10a6de47c4e0004c6849aab2388095871d3c64e03217625fcad",
+  "RTG_NUMBER_GENESIS_DSN_v1_20.md": "07dc5d88697a5feb1518b0b952fc9bc5b5b13ca993c0b49556d7a2550d9d8a38",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_1.md": "5ccf5624dbcc6f79e184701663499a6d9a07da395817cd82c82fdce9a1cf0820",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_1_fingerprint_v2.json": "c4b51f454abac32f708019c704b5aa26be8ba3446c4f42e6ba46083fa809fdd3",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_2.md": "66029898d9e4b2a0dd421c80034bb30ecf3bd29b719289cfee2e51f2c4186f26",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_2_fingerprint_v2.json": "96344ddbdb9c0abf8439fcb7be5f5a9f10a15121d7d9483f02eb4c3739cdd279",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_3.md": "eeb6f8dfd1d15a4ae22b0f3454f6a1757614b1af0db77452bca131fa29561fdb",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_3_fingerprint_v2.json": "d310ad4957b57c1ad940c95a18081c3c8cc5456dc6f93726d1481e5311b4d4a7",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_4.md": "0c04da16145c9cf5a47e477b75de66deb842319db63763a6495cababc0eeb380",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_4_fingerprint_v2.json": "c19f11968b976cbedc0eadd5384ed2ff28e3bf6acd50238635d95ccb72a7b4d8",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_5.md": "a7ce343ddf3b30dbb6179af2643f1ee8694676f70664696f61e21f1fa1f9617a",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_5_fingerprint_v2.json": "73e331aac7e4d5c2dd82779a065b983145d8992804ccf7dc71d78bd70c2d8ec3",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_6.md": "65798c9c1ca232598c5b08e6b7b2f6eb9f3c82fdfe3d193acea009630d58a9af",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_6_fingerprint_v2.json": "1ee7e0f0fa3c1522993666fb9d7aa982a0e3c3a26c7993ccea3dbfdac184a5b9",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_7.md": "c4637e7a5cfaf8eaf001746f172111385f5df2a8cd552e3ab56308ff7abfab28",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_7_fingerprint_v2.json": "0fa3d95c7c5401314fa25fbf555dbc9185e3cc83fab21369e6b525b4feafd490",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8.md": "835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r1.md": "84ad10387f601182f4c0299cc23a96e140e52bf07e4a66dd6dfffba6b5109ea7",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r2.md": "35f4a8ea7a622782eb3d71710bdee3bdade0a8a36d62e430d977c9fc360ec1d1",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r3.md": "c5d37511faec760c521aeed203e8ad9d67c25c9968bd0594d97064d03e1b769b",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_fingerprint.json": "ce05e71938afd81ec8aa36cbdbd0f4bf90cd35db34d055b3e1b178ec59ef650b",
+  "RTG_NUMBER_GENESIS_DSN_v1_20_fingerprint_v2.json": "35da6ec80274af5f115ee667315443e775b2daaf583e88d4b6dc930a18cd17ff",
+  "RTG_NUMBER_GENESIS_DSN_v1_4_1.md": "a6b1ab276585decc41159a9655e0b4b82731d431e2859d774475c0bdd14ddd2f",
+  "RTG_NUMBER_GENESIS_DSN_v1_5.md": "b8119fbaa33d1f61bc0159b10aeaeeaea13ce3d0de19de5b1731a89f79668370",
+  "RTG_NUMBER_GENESIS_DSN_v1_6.md": "ccb25d6adf5b5b299ef9b1eeddd9ff7709eb186e949f1dadafab4047e9eff2c0",
+  "RTG_NUMBER_GENESIS_DSN_v1_7.md": "4009612e7530a919058835df8f26289b3467d719343e4495d4fc39790ae70f55",
+  "RTG_NUMBER_GENESIS_DSN_v1_8.md": "48c8c7ef707c30bf0755ad63e88e77b2f7fa9b9d8da2c884b6ee7d05dfd11d94",
+  "RTG_NUMBER_GENESIS_DSN_v1_9.md": "9877f1b93e21f62a9fadbb3b4cd2ce0ea79390761242187e1e02694b40cc7260",
+  "RTG_NUMBER_GENESIS_v1_19_to_v1_20.diff": "f55ffcfeeb146e6b35488d07857ce7665e5bdd36a11be1ce0dd11c90ae611a0a",
+  "RTG_NUMBER_GENESIS_v1_20_1_to_v1_20_2.diff": "0f09ae741743b68d8f3df35822ccdfe44604c5a673385ca350d3525c613aa6a5",
+  "RTG_NUMBER_GENESIS_v1_20_2_to_v1_20_3.diff": "1b2b19beee7235a92452c7362a1f3810d0da4fe013659e81607453d02b8167dd",
+  "RTG_NUMBER_GENESIS_v1_20_3_to_v1_20_4.diff": "bfd654e204bb19a7821cd07a20a1f4e3cdca891ed00bc1e7fe953894b308329c",
+  "RTG_NUMBER_GENESIS_v1_20_4_to_v1_20_5.diff": "46a741cceca2c36d011f6702f55ecc16f0da2cea093cdbeaf59bda01325c7100",
+  "RTG_NUMBER_GENESIS_v1_20_5_to_v1_20_6.diff": "79f92c90d5ac3cd6a9312e7db32ba67191a24903a904c8b65740702ee1d88c05",
+  "RTG_NUMBER_GENESIS_v1_20_6_to_v1_20_7.diff": "0aa91fa4c5243af6fd99c00ca10211fe13c48a3e17db907c74ee0b70fc528f26",
+  "RTG_NUMBER_GENESIS_v1_20_7_to_v1_20_8.diff": "65c548549c4a309465cb61faf24c0feecfe4fbff8a985b17cb39a5cae27eb468",
+  "RTG_NUMBER_GENESIS_v1_20_7_to_v1_20_8_DRAFT_r1.diff": "7342b53b4c92e45fcc8004c682e2e6901617472c374496c3114ebee8d6e52128",
+  "RTG_NUMBER_GENESIS_v1_20_7_to_v1_20_8_DRAFT_r2.diff": "df3fb1dc11f7f643a6e194989228cadc71f2f723475fa34a7b639ba3c92ae379",
+  "RTG_NUMBER_GENESIS_v1_20_7_to_v1_20_8_DRAFT_r3.diff": "5c3daf0c644540a7827f1659b0edb2531a9f8d85f00341ad80e7e6d7e5e735ff",
+  "RTG_NUMBER_GENESIS_v1_20_8_DRAFT_r1_MANIFEST.json": "c9ab07bf6ded5c57d57effeecc0cf0e06be3d5573b4544b90098bf3f6ce4dfac",
+  "RTG_NUMBER_GENESIS_v1_20_8_DRAFT_r1_to_r2.diff": "e5b26384bbbc213b492071f0ce1ce174168e35df8205fce8c524235ddfb4aac7",
+  "RTG_NUMBER_GENESIS_v1_20_8_DRAFT_r2_to_r3.diff": "acb15cbea723fa7f1caded7cc4efde52aec1671e75b7eab3a04b5339350396f6",
+  "RTG_NUMBER_GENESIS_v1_20_8_INSTALL_MANIFEST.json": "2e469ef1888c4275768cee362fc44d9ff4f634d05d0a6d7254931d9f8bbb4a3b",
+  "RTG_NUMBER_GENESIS_v1_20_to_v1_20_1.diff": "668ff285a397d9b143ca4386f7c1c42834f8e906f90e8a6078613a17ea92c232",
+  "SHA256SUMS.txt": "15ae0b4ec949941ef33a46f8d29b33dc01a7839bf12c312b02916dedad42a02d",
+  "bind3_disc1_enumeration_k0123.json": "dab769a075400d55fbadfb0aa3324286244a614a6e802f465e4e520a53efc83d",
+  "bind3_enumerate_k0123_v1.py": "41a86011c6ad7ccb378097aa62106bf2dfbf5acf9a4b56792a690379a6eae929",
+  "bind3_repro_v1.py": "6c39ae99916bcfe79d78c9beeb9bf8f818d33af7dc7326b66051a08f69431b53",
+  "bind3_repro_v2.log": "71071c8be8287776d8ef5ca6768595724947a7e9cd88d08161c2db686b915187",
+  "bind3_repro_v2.py": "6ef6856f6a9e825230d0a8cebfe4f6d024cbad07129dd0407f69de38cbaa88cf",
+  "bind3_repro_v3.log": "ba2a6664fce58e0e6367397762820a87fc7a23cfd45d8d01f49cbadb23b4f3c1",
+  "bind3_repro_v3.py": "11967572393af6422ae2b8077f1adc029b67ce2d28c576fc1619d3152d04cd2c",
+  "bind3_repro_v5.log": "cef0ebb8d5168fb620fc360ba94d9d652448a15f96ee484be7d9d2f00033d31e",
+  "bind3_repro_v5.py": "8466b52fbd8f690c8c920745d1dc6b68f2a6cb24aaaf8a14ea1b4d924150c493",
+  "build_inventory.py": "6eb4045779488590241e25ecddbb35882497dbd1e0ff221dbd50f57885fc7fec",
+  "build_v1_20_8_r1.py": "b4c3681ee474a604a666cd5d25ce399b45b30f07159acc63cabd03dc4c95d80d",
+  "build_v1_20_8_r2.py": "a35cd3655d32f047b6121a07f77e7b7933cc3c0870638ad76aa7615593facb9b",
+  "build_v1_20_8_r3.py": "10a451a4d234695bb5cf732993f4f19a06f1fdfdf80ed9223d3504ca2142d732",
+  "census1_tdrg_replay/census1_tdrg_replay_manifest.json": "19e929aa2c2284091e0a7877d177a9464294c722f9c3fba1c3769e006ec2a30a",
+  "census1_tdrg_replay/census1_tdrg_replay_records.jsonl": "7b7dc4510a6d80a396172237f17e5740ff2a54535289ff8ff90096673d5977c8",
+  "census1_tdrg_replay_v1.py": "73cfa2e31cbb98a1c493c9e6e500c9a8a9edd53089615648c9ea8ddd95048188",
+  "check_release_v1_20_8.py": "1f97081e330e2c3d18eaa3aac6366727527fbbac71185911ded9dbfd96fa092d",
+  "check_release_v1_20_8_output.txt": "1d04c1aed566da409982d11c784abd28a254398b76b86c20263f5ee895ca4c38",
+  "check_v1_20_8_r1.py": "303c5b230475df30420278514705acddb4613a6ed53b6bc56bde2d8e5ce7889e",
+  "check_v1_20_8_r1_output.txt": "7d3a02b6d8c78eb1013a4d91e1661c170fa8e9963187e210b5a5d50470be22e2",
+  "check_v1_20_8_r2.py": "0b13127e551b0cfcf1d1eecafb13d92534088b6e489a1ab3decac52ee0ab1995",
+  "check_v1_20_8_r2_output.txt": "0ebb302266a473cae05ddda943c16193a89394b1f825f4cab5a1b4dfcbf678e6",
+  "check_v1_20_8_r3.py": "534cb12437083767e3c5ea11c8cfd5ea8092eb330108e967ebaec166f907dd81",
+  "check_v1_20_8_r3_output.txt": "223ffb45eda5ce84cc2c34d61d9c2420f779402eb609e005498fefad29c35961",
+  "disc1_analysis_harness_v1.log": "db578103982250b471bf442416eaca37baaf8db7437a45cde4044b4eb299a4cb",
+  "disc1_analysis_harness_v1.py": "57a15421b352f8fbe58d7642d78a6ebb936b78aae90d91b9e39034b738510d9d",
+  "disc1_labelneutral_regression_v1.log": "afdd21e6f2596d1a6c6826243320045b8f828a8649b03b197ca51f90d2c383fc",
+  "disc1_labelneutral_regression_v1.py": "28010e60cfe1425af11f342d040a7bcfa0eeb3191842e66f0f6e0e56f84c04e2",
+  "disc1_labelneutral_regression_v2.log": "677ef356f8218f8752f9573f8a01652f046eceb324de1306649ed03a5a8c50d8",
+  "disc1_labelneutral_regression_v2.py": "76f1b571b951b174eaeadf88ce9b39eb550e39fbf841274e0f48131d14fd7603",
+  "disc1_result.json": "92593b8cfdc7b9d37af49af32952652b7d4555dec4e13c4a1571c81388cb6f70",
+  "disc1_safeguards_v1.log": "aa37579d7c882ac7c8d9d6c88dd2ff95c70a6ab8c70b1770ef0d5187e47b1e56",
+  "disc1_safeguards_v1.py": "3e0ba3c86f2e684d636d772303dc05d364bea9ae9e709b95f224d7c3651138ee",
+  "disc1_safeguards_v2.log": "f389bc7d231bdde17d9b53c73b4a73a4df050bcdeb5643a670a71aeaf45fa4ed",
+  "disc1_safeguards_v2.py": "363e870cd27a466e1515820a358bc3d7e61c17a57204986d315dca62d96cf82a",
+  "disc2_harness_result.json": "7b6d0b5983a42216d50f4110a5b33dd19f8b3c2f8e6b7930258aaf475222c0b4",
+  "disc2_p2_antipodal_exposure_audit_v1.log": "51cde87943dca61e36be726881e79af08f669b0f8a8df07875b9fb011a848c47",
+  "disc2_p2_antipodal_exposure_audit_v1.py": "89a1466ff8922fb17ed21b0fbff9f719b752abb5ad3fe9cf76545259ebe5fe1c",
+  "disc2_ratification_audit_v1.py": "3dc8317b1bf0136295e55aa6c43cc00c44006cbfae34d2ae00984acf040398f9",
+  "disc2_ratification_certs.json": "1ad96df282fbb396f24b8ef8a4763c861279a0787df353703d7c139e781393d3",
+  "disc2_supplementary_enumerator_v1.py": "abbfb168998952d4d521ff1f11b5c08c068471fa351b397cbcc9ab05d7c0d582",
+  "disc2_supplementary_enumerator_v2.py": "803c365f679f52b53043d65af7a73a03d52d24fabe4c9657789b6da3623f926b",
+  "disc2_supplementary_enumerator_v3.py": "585d4b4969b55bed95f841a18f3b0f18f907cc73da8b77654e018c99420d4b19",
+  "disc2_supplementary_enumerator_v3_1.py": "b7cee9220f73252af3b7322b50a67ecff4227424b6b1309f241d5e24babb35df",
+  "disc2_witness_report.json": "ccc8457086b01193bdec598a7db44508be8486659ae07feb4df15a66401faa7d",
+  "disc2_witness_report_v1.py": "4013a0b47dcbd109cf8a0d6a9572bd25a5c55278cb25059b2659012be5b5f541",
+  "disc2_witness_report_v2.py": "baadcdad3b048713329d30fddb3c34bd47c198db82157a6978063c59ef017760",
+  "genesis_mode_b_mc_v18.py": "9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e",
+  "ng7a_holonomy_null_cert_v1.log": "7e1eff30682083e51c3488c1e8b785c9e9667c5251c6c06ca0b1d89cb2128d19",
+  "ng7a_holonomy_null_cert_v1.py": "3571e0554832b5bd5ac215b1c5b5a1e3b5b56ff0d0281b268ae18ca54cb846e8",
+  "ng8ab_independent_recert_v1.log": "426fe64395973c743439482810a7150acfd5bb5231a7835047bc8fac6a76ecd8",
+  "ng8ab_independent_recert_v1.py": "a4358d7558320f638f1357551e7a6333741260e6506a10fb686960e4a60d944c",
+  "ng_gaplock_lemma3_cert_v1.log": "728b944ea68b1a61e3bc5b6b209821caf34160031c5133e1967697f21c93d36e",
+  "ng_gaplock_lemma3_cert_v1.py": "1c40485dda540404e2a16e78df145121a0a1135d4fa75a3c92d1d09ff144f4df",
+  "ng_gaplock_lemma3_cert_v2.log": "291676c6265c83c1c90ff883b9702b942c01eab38aa6f0f6623692ad7a79b129",
+  "ng_gaplock_lemma3_cert_v2.py": "7515b68cf630276e6d3f95ed2b7ac8c1f186a87c6563e821c34108a1afe06447",
+  "ng_inv_live_v1.py": "5580a7cb329c0d788238ab8b215b6bb6d58ebb4a3de77182b2e359a5a26c3099",
+  "ng_inv_live_v1_1.py": "3354621bc60492035a098839d99d5f11c1d4c5940c639a1b5ee4018e11a7f145",
+  "ng_lphase_rm_indep_check_v0_1.log": "e2a0d15a94676348d03ca74b4272b4a940b90d692dc03390cc49fd7e622cf661",
+  "ng_lphase_rm_indep_check_v0_1.py": "d9d89bae20a376a3e5992dacdb4263f4b6948af4a739ce3ab4c91c37e1e57ccf",
+  "ng_migration_checks_v1.py": "693c1b07815134d77da6a1766109ddf473d1ae70d9227287a1a8bcf8664ab3f8",
+  "ng_migration_checks_v2.py": "97a9ce81d70e50c0a3e474aa333e0d0ee9b52e2ff13bcdbe175b448cb5d4e55d",
+  "ng_migration_checks_v2_1.py": "0342d4c126549fe201ffe55fea655a4d88c5579e93911b9822a6195ad7058e5a",
+  "ng_migration_engine_v1.py": "bce7b4c11f262ad11cf3d52b9fa67a1ea5775ba0d5357afc706a2f06d7839e10",
+  "ng_n2ord_order_cert_v1.log": "37f143054d7ba738d16f2d85228f579d1cd219e1ad7f2f1af05fe57ccb8582f2",
+  "ng_n2ord_order_cert_v1.py": "caa45a0b8ca948ca4bf6cb6ff30262e36b5a00ff9c13ecea6e5a5ac54b0c6678",
+  "ng_n5_discrimination_criterion_cert_v1.log": "5a2c14b19faa7baa4e49b0253e4f48db787db778e0f702c0fbe460bd64f2017e",
+  "ng_n5_discrimination_criterion_cert_v1.py": "40969a178db1086ac54aefcdc0c9ca7e69d96b07da2b3c5440f90e852d0ed8c4",
+  "ng_n5_discrimination_criterion_cert_v2.log": "217ce04ae19274d117b7d52a0dd39503aab909bd2302608d8a635a12055afaa3",
+  "ng_n5_discrimination_criterion_cert_v2.py": "4e6d7abf9f2c06ddeacdb97599c3e7c7c6d81560199e0d815310d3b4a171b5f2",
+  "ng_n5_discrimination_identity_cert_v3.log": "0d7987174106fcf11d31db1d943bcc73475b7300d1812da49afc47cf7433404e",
+  "ng_n5_discrimination_identity_cert_v3.py": "60d9e982044b6be4cef5b0b2d2e5e1fa6b76e5bd4d86dc71143f8a6ca2c795a6",
+  "ng_n5_discrimination_identity_cert_v4.log": "b1b48dfcc652c8da0569f2f9f28feaf7f21b5c18b78b3e20c4a6db82f2fdb455",
+  "ng_n5_discrimination_identity_cert_v4.py": "68034b86fc1f05634f837ec7813905a3a48833e1e2bc474585dbfcedcdec53d2",
+  "ng_n5_discrimination_identity_cert_v5.log": "78526dd713711428e00c363f62961c68d4b88fa5b0fd5684a8b004fade0c02f5",
+  "ng_n5_discrimination_identity_cert_v5.py": "f3fbc05318c46120f466eac0c22f442bcc3561853ce4f56573cb7a287afd8a86",
+  "ng_n5a_s1_rotation_obstruction_v1.log": "d90556a7c676f42bff940a091ada4083f2267df3010473952d8fa33974b95616",
+  "ng_n5a_s1_rotation_obstruction_v1.py": "145a438b9242accb5be006a07e98f6cefff988979350cb9f8a0b00076810ba09",
+  "ng_n5a_s1_section_search_v1.log": "2e31af5f859d26529ae0c751638d35ec0c68435769b95bb2b887c69cde158b25",
+  "ng_n5a_s1_section_search_v1.py": "86b7d79dc840526670dd65408475d54b1a6f6bd06c817446c5d5c137e56685bd",
+  "ng_n5as1_closure_verification_v1.log": "82d8d2ae1938f5505123ae78acf508004571bf24017500d9dc0cb264142bdd00",
+  "ng_n5as1_closure_verification_v1.py": "d01cf71a02b75e8c91c84ff16e0820ccefb30b6ac41b0c1823d92e64cf8b5687",
+  "ng_n5as1_gaplock12_cert_v1.log": "2761ce3f2f8761c926ccb59a9f28037c85316c0f122a9c6a68a2d128db949cdc",
+  "ng_n5as1_gaplock12_cert_v1.py": "a215a92e18d28705a8047060cc0aceef21cb1aa42568eb5c7e280dfe88e1fcf0",
+  "ng_n5as1_gates134_cert_v1.log": "f7807c964ecec31bfb4af2d27b6d5e8ec8dd10af52641e311ea90f41273db1a9",
+  "ng_n5as1_gates134_cert_v1.py": "7765376f4e179eda977621aedf8dd4ce2ee44036ada331bbeabf571f15cac472",
+  "ng_n5as1_inf_reduction_cert_v1.log": "4100e3a50ff10ef4df001b16ec71b59d256de5d74a76815082a7a3e5dab0f755",
+  "ng_n5as1_inf_reduction_cert_v1.py": "419177101db4ef13e6c74726dae9e18313ed4ccb40b69b0fa939792f009bee36",
+  "ng_n5as1_logslip_verification_v1.log": "38a329acf488b3a367021e1e84af79176d8bb862c566651993cdf287c41cdc42",
+  "ng_n5as1_logslip_verification_v1.py": "ab858f2364adc8bd308c7414cb4adbad47ce3eea076d1c8de55a085d3a9e8b7d",
+  "ng_n5phys1_discrimination_audit_v1.log": "b44a7af15ad000e0c68a3d8da1d78dc6e03558ac140d48e51ccce40ef19c5106",
+  "ng_n5phys1_discrimination_audit_v1.py": "c10043fd0c9084b1b7a28a41584a46e8b39953f481681c30491b540d35def4bf",
+  "ng_review_dzt_independent_audit_v1.py": "17f8415bb0524fcdfcb3e7e2b6a6ad43157f51ac139017a8c4d5b788cc54cad8",
+  "ng_rf06_token_shift_spotcheck_v1.py": "2a064eb9b82391cc863755741f40949010159102874d6debea4f7da2c5c2f148",
+  "ng_riemann_lens_cert_v1.log": "e543d93fbb706e3d2fc3477505b30e1c8497c624646f8a4c264347f122f4a048",
+  "ng_riemann_lens_cert_v1.py": "323eab23f36594f1b56d93a5af4008d5b0f4f22c033c780d404a7c51ca2893f6",
+  "ng_state_fingerprint_v1.py": "9141613081ca1d1147c54d5599a25c77fd2856e105b3d69859c5d88187d66808",
+  "ng_state_fingerprint_v2.py": "dd13fe4fc54c1597fcb1be4ecf021cd08f79e8183a2fe68ed2c49f6651047b5a",
+  "ng_state_fingerprint_v2_1.py": "574d331998775fe58e6a318d312878eb609916a4c42668f6c8124fd146c2f2e0",
+  "ng_state_fingerprint_v2_2.py": "294c93137bad29874c7fe284473b69fdfe3991c4b3bdde2ecb6a44c98b6e8bcd",
+  "ng_state_fingerprint_v2_3.py": "1fbeb19de86afbc6b91d45539ff22c5f81120a25bfa88336e480b29b2f323ff6",
+  "release_v1_20_8.py": "5f219ee949776db1741ccf8e6bc9ec0c15ee06d785adc5d46d65b25209c738f3",
+  "release_v1_20_8_edits.json": "c9148e8dbcba76222c07daed7f7677478ca590e89e5e158dcba971f3b2da9414",
+  "run_batches.py": "9ed19eab14994f251920b4e4ca40d0ce740dd65895ab4d21fbcaac93be3d92f8",
+  "v1_20_8_r1_edits.json": "eff47aa9ca082971606f6edc3172dcfb39dcef92959e5017971efbc67e2e45f7",
+  "v1_20_8_r2_edits.json": "fd8d6012e2e195d23a4d2e044364c0d570e0fd977d4c0882ebaabbd6d5a2e7f5",
+  "v1_20_8_r3_edits.json": "f1dfdc6076aa1814bf3e22d7cf4699e57f1931a5078d707f2bea280d918eedf1",
+  "v1_20_8_r3_to_release.diff": "2e24ad5846c744a1e83b02d9bb551fdbb2a6b2a0f8b1d301c9bfe7c9f12b741f",
+  "verify_v1203_freeze.py": "34241347d48ef950bb1b2c99036c8df56cc263cee10dd2f102f6d50279106677"
+ }
+}

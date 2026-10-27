@@ -1,0 +1,203 @@
+{
+ "base_file": "RTG_NUMBER_GENESIS_DSN_v1_20_2.md",
+ "base_sha256": "35fe1a65e831b620ec1d81819cdd614f07836395870f694dcc2d91a31dde1053",
+ "status": "HIERARCHICAL INVENTORY v1 \u2014 module-level (option B). Co-owner APPROVED 2026-09-25, including structural mappings N-4 \u2192 \u00a76.5, N-6 \u2192 \u00a76.7, NG-9 \u2192 \u00a76.10 and the L1 depth cap as a documented rendering exception. Approved per-block dispositions (114/4/1/0) authoritative and unchanged.",
+ "rules": {
+  "unit": "level-3 \u00a72 module moves as a whole: heading, set-up, DEF/GUARD/COR, theorems, OPEN/HOLD residuals, unanchored lines \u2014 verbatim, original order",
+  "placement": "appended after the existing \u00a76.x content (summary first, then bodies), modules in original \u00a72 order",
+  "demotion": "module headings demoted one level under \u00a76.x; the single ###### heading (L1) is capped at level 6. The H6 cap on L1 is a Markdown rendering exception only; semantic parentage remains N-1C-DYAD \u2192 L1.",
+  "stays_in_\u00a72": "section heading, Priority ordering queue (REGISTRY-ONLY in place), new registry section",
+  "registry_only": "approved: 3 bare status lines become <!-- REGISTRY --> rows; queue stays in place",
+  "mirror": "approved: \u00a72 ORD-4 copy removed; \u00a76.3a twin retained",
+  "new_heading": "### \u00a76.9a NG-10 \u2014 Genesis saturation and counting truncation (approved)"
+ },
+ "batch_order": [
+  "\u00a76.2",
+  "\u00a76.3",
+  "\u00a76.3a",
+  "\u00a76.4",
+  "\u00a76.6",
+  "\u00a76.8",
+  "\u00a76.9",
+  "\u00a76.9a",
+  "\u00a76.5",
+  "\u00a76.7",
+  "\u00a76.10"
+ ],
+ "modules": [
+  {
+   "module": "Priority ordering",
+   "start": 150,
+   "end": 178,
+   "destination": null,
+   "batch": null,
+   "lines": 28,
+   "note": null
+  },
+  {
+   "module": "CLOSED N-1 \u2014 Relational repetition / natural-number realization",
+   "start": 178,
+   "end": 914,
+   "destination": "\u00a76.2 N-1A/N-1B/N-1C formal target",
+   "batch": "\u00a76.2",
+   "lines": 736,
+   "note": null
+  },
+  {
+   "module": "CLOSED N-2 \u2014 Signed-history group completion",
+   "start": 914,
+   "end": 987,
+   "destination": "\u00a76.3 N-2 closed signed-history construction",
+   "batch": "\u00a76.3",
+   "lines": 73,
+   "note": null
+  },
+  {
+   "module": "CLOSED N-2-ORD \u2014 Physical order representation",
+   "start": 987,
+   "end": 1003,
+   "destination": "\u00a76.3a N-2-ORD physical order representation \u2014 CLOSED at v1.6",
+   "batch": "\u00a76.3a",
+   "lines": 16,
+   "note": null
+  },
+  {
+   "module": "CLOSED N-3A \u2014 Local deck inducibility / eta-winding",
+   "start": 1003,
+   "end": 1041,
+   "destination": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "batch": "\u00a76.4",
+   "lines": 38,
+   "note": null
+  },
+  {
+   "module": "CLOSED N-3B \u2014 Abstract circle-character representation",
+   "start": 1041,
+   "end": 1069,
+   "destination": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "batch": "\u00a76.4",
+   "lines": 28,
+   "note": null
+  },
+  {
+   "module": "CLOSED N-3C \u2014 Primitive dynamical character activity (first exact result)",
+   "start": 1069,
+   "end": 1106,
+   "destination": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "batch": "\u00a76.4",
+   "lines": 37,
+   "note": null
+  },
+  {
+   "module": "CLOSED N-3D \u2014 Finite-character quotient / representation bridge",
+   "start": 1106,
+   "end": 1143,
+   "destination": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "batch": "\u00a76.4",
+   "lines": 37,
+   "note": null
+  },
+  {
+   "module": "CLOSED N-3C+ \u2014 Roots-of-unity projectors / OPEN-9 kinematic boundary",
+   "start": 1143,
+   "end": 1207,
+   "destination": "\u00a76.4 N-3 representation layer \u2014 closed local/abstract results",
+   "batch": "\u00a76.4",
+   "lines": 64,
+   "note": null
+  },
+  {
+   "module": "OPEN N-4 \u2014 Global/nonlocal dyadic history representations",
+   "start": 1207,
+   "end": 1230,
+   "destination": "\u00a76.5 N-4 global/nonlocal extension target",
+   "batch": "\u00a76.5",
+   "lines": 23,
+   "note": "co-owner APPROVED structural mapping (OPEN module, no theorem blocks)"
+  },
+  {
+   "module": "CLOSED N-5A \u2014 Second co-realized recurrence / event stream",
+   "start": 1230,
+   "end": 1257,
+   "destination": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "batch": "\u00a76.6",
+   "lines": 27,
+   "note": null
+  },
+  {
+   "module": "OPEN N-5 \u2014 Bounded synchronization commensurability / realized Q-like labels",
+   "start": 1257,
+   "end": 1651,
+   "destination": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "batch": "\u00a76.6",
+   "lines": 394,
+   "note": null
+  },
+  {
+   "module": "OPEN N-6 \u2014 Continuum completion",
+   "start": 1651,
+   "end": 1672,
+   "destination": "\u00a76.7 N-6 real completion target",
+   "batch": "\u00a76.7",
+   "lines": 21,
+   "note": "co-owner APPROVED structural mapping (OPEN module, no theorem blocks)"
+  },
+  {
+   "module": "NG-7 \u2014 Recurrence holonomy / holonomy content",
+   "start": 1672,
+   "end": 1769,
+   "destination": "\u00a76.8 NG-7 recurrence holonomy \u2014 NG-7A closed / NG-7B open",
+   "batch": "\u00a76.8",
+   "lines": 97,
+   "note": null
+  },
+  {
+   "module": "OPEN NG-8 \u2014 Functorial compatibility / \u201ctwo fives\u201d",
+   "start": 1769,
+   "end": 1832,
+   "destination": "\u00a76.9 NG-8 functorial counting compatibility",
+   "batch": "\u00a76.9",
+   "lines": 63,
+   "note": null
+  },
+  {
+   "module": "N-5A-S1 \u2014 Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11",
+   "start": 1832,
+   "end": 1903,
+   "destination": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "batch": "\u00a76.6",
+   "lines": 71,
+   "note": null
+  },
+  {
+   "module": "N-5A-S1-INF \u2014 CLOSED at v1.11",
+   "start": 1903,
+   "end": 2089,
+   "destination": "\u00a76.6 N-5A / N-5 rational recurrence target",
+   "batch": "\u00a76.6",
+   "lines": 186,
+   "note": null
+  },
+  {
+   "module": "OPEN NG-10 \u2014 Genesis saturation and counting truncation",
+   "start": 2089,
+   "end": 2104,
+   "destination": "\u00a76.9a NG-10 \u2014 Genesis saturation and counting truncation",
+   "batch": "\u00a76.9a",
+   "lines": 15,
+   "note": "APPROVED new structural heading (co-owner 2026-09-25)"
+  },
+  {
+   "module": "OPEN NG-9 \u2014 External mathematics/physics consequences",
+   "start": 2104,
+   "end": 2121,
+   "destination": "\u00a76.10 External benefit boundary",
+   "batch": "\u00a76.10",
+   "lines": 17,
+   "note": "co-owner APPROVED structural mapping NG-9 \u2192 \u00a76.10 External benefit boundary"
+  }
+ ],
+ "consistency_with_approved_inventory": {
+  "mismatches": []
+ }
+}

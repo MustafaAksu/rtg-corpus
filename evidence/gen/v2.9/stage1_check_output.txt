@@ -1,0 +1,19 @@
+[PASS] C0 BASE
+[PASS] C1 BUILD
+[PASS] C2 REVERSE
+[PASS] C3 APPENDIX
+[PASS] C4 PROTECTED
+[PASS] C5 RID SET [] collisions=[]
+[PASS] C6 KAPPA (face-lift bare κ left: 0)
+[PASS] C7 TAGS [] removed=[]
+[PASS] C8 SIGN
+[PASS] C9 GA-01
+[PASS] C10 HEADER
+[PASS] C11 HEADINGS
+[PASS] C12 EVIDENCE missing=[]
+[PASS] C13 GB13
+[PASS] C14 SOURCES
+[PASS] C15 LIVE (standard-clause definitions {'custody-A': 1, 'indep-AC': 1}; custody rows 9)
+[PASS] C16 MIGRATION (29 of 32 [RESULT] occurrences without [from:], recorded)
+
+17/17 gates PASS; base d143673e…, intermediate 5677d706d5ccca0e3b822f484e1de7641e771e8ec3e83c51b50daf336833cd98

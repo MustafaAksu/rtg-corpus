@@ -1,0 +1,17 @@
+[PASS] P2a reviewer state theta=(0,12,0) delta=(0,1,12) k=1: E_listed=12, E_reversed=12 — both positive, so the successor shift is listing-dependent
+[PASS] P2b exposure: 40 of 136 ratified witnesses touch the antipodal condition somewhere in k in {0,1,2,3}; 96 never do
+   verdict/class changes: reverse-policy 10, inert-policy 20  (witness records ARE policy-sensitive)
+[PASS] P2c the ten-label set is identical under v18, reverse and inert policies
+   1:1   unexposed  10  exposed  16
+   2:1   unexposed   4  exposed   0
+   3:1   unexposed  28  exposed   0
+   3:2   unexposed   6  exposed   6
+   4:1   unexposed  14  exposed   0
+   4:3   unexposed   2  exposed  12
+   5:1   unexposed   6  exposed   0
+   5:2   unexposed   4  exposed   6
+   7:2   unexposed   6  exposed   0
+   9:4   unexposed  16  exposed   0
+[PASS] P2d ROBUSTNESS: every ratified label has >=1 witness that never touches the condition (labels lacking one: [])
+----------------------------------------------------------------------
+RESULT: label-level admission {1,3/2,2,3,4,4/3,5,5/2,7/2,9/4} subseteq Q^dyn is robust to the P2 antipodal-endpoint defect; 40 individual witness records are convention-exposed and must be annotated. Discrete owner policy ruling still required.

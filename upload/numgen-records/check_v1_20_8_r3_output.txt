@@ -1,0 +1,60 @@
+{
+ "draft_sha256": "9d59cfa1edf15c4e263494c9fbc615dc915ed3b84e556df8ade61fd1fa7de7b3",
+ "gates": {
+  "G1": true,
+  "G10": true,
+  "G11": true,
+  "G12": true,
+  "G13": true,
+  "G2": true,
+  "G3": true,
+  "G4": true,
+  "G5": true,
+  "G6": true,
+  "G7": true,
+  "G8": true,
+  "G9": true
+ },
+ "info": {
+  "added_rids": [
+   "NUMGEN-DEF-N5AS1-DEFECT",
+   "NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT",
+   "NUMGEN-RESULT-N5AS1-INF1",
+   "NUMGEN-RESULT-N5AS1-L-BACKBONE",
+   "NUMGEN-RESULT-N5AS1-L-MONO",
+   "NUMGEN-RESULT-N5AS1-L-PHASE",
+   "RTG-OFN-DEF-BACKGROUND-TIME",
+   "RTG-OFN-DEF-PHASE-GAUGE",
+   "RTG-OFN-DEF-RELATIONAL-CONTENT"
+  ],
+  "explicit_rids": [
+   38,
+   47
+  ],
+  "lost_blocks": 18,
+  "new_blocks": 26,
+  "tag_delta": {
+   "COR v1.20.8": 1,
+   "DEF": 6,
+   "GUARD": 1,
+   "NUM": 1,
+   "OPEN": 1,
+   "RESULT": -2
+  }
+ }
+}
+{
+ "negative_controls_pass_should_be_false": {
+  "N1 unaccounted edit": false,
+  "N2 RID dropped": false,
+  "N3 constant imported": false,
+  "N4 extra RID": false,
+  "N5 regrade": false,
+  "N6 merged import": false,
+  "N7 helper pin missing": false,
+  "N8 undeclared r2 edit changed": false,
+  "N9 stale L-PHASE sub-item": false,
+  "N10 N15 receipt missing": false
+ }
+}
+RESULT: PASS

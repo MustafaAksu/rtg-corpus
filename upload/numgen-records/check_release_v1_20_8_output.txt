@@ -1,0 +1,26 @@
+{
+ "final_sha256": "835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e",
+ "gates": {
+  "P0": true,
+  "P1": true,
+  "P2": true,
+  "P3": true,
+  "P4": true,
+  "P5": true,
+  "P6": true,
+  "P7": true,
+  "P8": true,
+  "P9": true
+ }
+}
+{
+ "negative_controls_pass_should_be_false": {
+  "M1 body edit outside release spans": false,
+  "M2 regrade": false,
+  "M3 RID dropped": false,
+  "M4 constant entered": false,
+  "M5 OPEN sub-item closed": false,
+  "M6 stale title": false
+ }
+}
+RESULT: PASS

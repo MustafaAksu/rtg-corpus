@@ -1,0 +1,21 @@
+[PASS] A1 primary retrigger-entry family = 3456 ICs with per-d counts {-2: 576, -1: 1152, 1: 1152, 2: 576} (DSN: 3456; 1152 at d=+-1, 576 at d=+-2)
+[PASS] A2 the six published supplementary rows are reproduced exactly at 1728 ICs each (d=+-3,+-4,+-5), totalling the owner's 10368. Extending the same generator beyond the owner-tabulated range to all |d|_c>2k yields 32832 ICs; that larger set is an UNREGISTERED EXTRAPOLATION of the generation rule and is used in no owner comparison.
+[PASS] A3-ID/NUM: for all 331776 reduced states, the three DECLARED lifts (c,b) = (0,0), (5,7), (17,3) give the same next reduced state (0 mismatches). This row decides those three lifts only; the all-lift statement is the memo [ALG] theorem (a common (c,b) shift moves every advanced phase by c+b, leaving the defect graph fixed, and commutes with swap and the P3 successor shift) and is NOT asserted here. The quotient is a derived no-birth dynamical symmetry, not SG-2 gauge.
+
+--- (b) convention sweep (now executable, was memo-only in v1) ---
+sde     tie      medP  maxP  nDist  maxPre   ties  dominant
+offset  inert     138  1638     79     830     68  [15, 48, 357, 396, 228, 1638]
+offset  fwd       138  1638     78     830      0  [15, 48, 357, 396, 228, 1638]
+offset  rev       138  1638     78     830      0  [15, 48, 357, 396, 228, 1638]
+neg     inert     108  1008     79    1198    280  [264, 15, 54, 702, 1008, 72]
+neg     fwd       108  1008     78    1198      0  [54, 264, 15, 702, 1008, 72]
+neg     rev       108  1008     78    1198      0  [54, 264, 15, 702, 1008, 72]
+raw     inert     126  1872    122    1332    256  [3, 36, 132, 822, 108, 720]
+raw     fwd       122  1872    120    1332      0  [3, 36, 132, 822, 108, 720]
+raw     rev       122  1872    120    1332      0  [3, 33, 36, 132, 822, 108]
+DSN target        138  1638     79     830      -  [15, 48, 357, 396, 228, 1638]
+[PASS] A4 EXACT REPRODUCTION of BIND3-CYCLE-N24K1 cycle statistics: median period 138=138, max period 1638=1638, distinct lengths 79=79, median preperiod 0=0, max preperiod 830=830, K3 events in cycles 0=0, and all six published dominant periods recovered [15, 48, 228, 357, 396, 1638]. Every clause is decided by the expression.
+[PASS] A5 EXACT REPRODUCTION of the BIND3 class taxonomy: pure AB-bound 124=124 (3.6%=3.6%), multi-pair scattering 3332=3332 (96.4%=96.4%), free/single-pair-partial 0.
+  [REPORT, not asserted] bond transfer is definition-sensitive and the DSN does not define the classifier. Reading A ('a non-AB pair becomes bonded'): 2879 = 83.3%. Reading B ('the bonded pair identity changes'): 2826 = 81.8%. Published: 81.8%. Both computed; neither selected.
+----------------------------------------------------------------------
+RESULT: BIND3-CYCLE-N24K1 REPRODUCED EXACTLY. Published IC cardinalities and d-resolved multiplicities reproduced (pairing supported, not owner-verified); three-lift quotient regression checked exhaustively over all reduced states (all-lift well-definedness is the companion memo [ALG] theorem); cycle statistics (median 138, max 1638, 79 distinct, median preperiod 0, max preperiod 830, K3 0, all six dominant periods) and class taxonomy (124 / 3332) reproduced exactly. Bond-transfer classifier is definition-sensitive and left unselected. GATE PASSED: k in {0,2,3} enumeration may proceed, then the frozen DISC-1B / DISC-1D harness.

@@ -1,0 +1,119 @@
+{
+ "convention": "Every HEADLINE line cites L5 row ids only (many-to-one allowed). High L5 rows cited by no H are listed here and dispositioned in the release record.",
+ "rows": [
+  {
+   "h": "H1",
+   "l5_keys": [
+    "DYAD.X1",
+    "F5",
+    "OFN.O1"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H2",
+   "l5_keys": [
+    "AZ.A1",
+    "DYAD.X8",
+    "OPENM.U2"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H3",
+   "l5_keys": [
+    "AZ.A7",
+    "DZT.Q1"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H4",
+   "l5_keys": [
+    "F6",
+    "METH.M2",
+    "NUMGEN.N-R1",
+    "OFN.O5",
+    "PREL.P5",
+    "TDRG.G2"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H5",
+   "l5_keys": [
+    "NUMGEN.N-A",
+    "NUMGEN.N-B",
+    "NUMGEN.N-D",
+    "NUMGEN.N-E",
+    "RECOG.R-L1b",
+    "RECOG.R-L2"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H6",
+   "l5_keys": [
+    "GEN.D3",
+    "GEN.D6",
+    "RECOG.R-L6"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H7",
+   "l5_keys": [
+    "F2",
+    "F3"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H8",
+   "l5_keys": [
+    "F1",
+    "OFN.O8",
+    "RRF.F6"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H9",
+   "l5_keys": [
+    "D5.X1",
+    "TDRG.G1"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H10",
+   "l5_keys": [
+    "OPENM.U1",
+    "PREL.P1",
+    "PROG.G6"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H11",
+   "l5_keys": [
+    "LEGACY.Y2",
+    "LEGACY.Y3",
+    "OPENM.U9",
+    "PREL.P4"
+   ],
+   "missing": []
+  },
+  {
+   "h": "H12",
+   "l5_keys": [
+    "RECOG.R-L5",
+    "RRF.F7"
+   ],
+   "missing": []
+  }
+ ],
+ "dangling": [],
+ "high_l5_without_h": [],
+ "l5_rows": 130
+}

@@ -1,0 +1,215 @@
+{
+ "base_sha256": "f5ed40f5adcf2835c6aceee7025a1daa299d97c679e895efb4fc84f54773b636",
+ "status": "MANUAL REVIEW COMPLETE for 24 HIGH+AMBIGUOUS pairs; NO text moved; structural rewrite HOLD",
+ "reviewed": [
+  {
+   "pair": "P01",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2272,
+   "s6_h": "547651b35f0aaa1a3eba2b3681727a61b93501121b93812665472d01a6ea66ba",
+   "classification": "S6-ONLY",
+   "rationale": "NG-0R status; auto-pair false positive (\u00a72 L181/L316 are N-1)"
+  },
+  {
+   "pair": "P02",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2301,
+   "s6_h": "4bd2b954b240ff4685dbe9ef40ad2b852ea09cca2b88151c945a4b9353f91b7e",
+   "classification": "S6-ONLY",
+   "rationale": "NG-0R scope guard; no \u00a72 twin"
+  },
+  {
+   "pair": "P03",
+   "auto_confidence": "HIGH",
+   "s6_line": 2343,
+   "s6_h": "d5a4efd9c05c88b50582a8644d12f09674a6dfdcefcb10c942dba1ef2fbf1188",
+   "classification": "S6-ONLY",
+   "rationale": "reachability-first order [DEF]; no \u00a72 twin; auto-pair to ORD-4 (L996) false positive"
+  },
+  {
+   "pair": "P04",
+   "auto_confidence": "HIGH",
+   "s6_line": 2351,
+   "s6_h": "a406641d433150d76842e82014ee10b972e6ca5945289c7321db67be01f00342",
+   "classification": "PARTIAL-OVERLAP",
+   "rationale": "\u00a72 L998 shares the reflection/P3 content but ALSO carries a distinct guard (primitive-step/cross-residue monotonicity false in general) absent from \u00a76 L2351 -> both MOVE; nothing discarded"
+  },
+  {
+   "pair": "P05",
+   "auto_confidence": "HIGH",
+   "s6_line": 2357,
+   "s6_h": "f3b014514021502b8391d3945252bd69244f97589e681b19f0c20164b421eb09",
+   "classification": "MIRROR-CONSISTENT",
+   "rationale": "ORD-4 \u00a76 L2357 == \u00a72 L996 in content and status ([RESULT][from: ALG], full tube) -> retain one"
+  },
+  {
+   "pair": "P06",
+   "auto_confidence": "HIGH",
+   "s6_line": 2377,
+   "s6_h": "ec603030e35f8f90de668f30daa26fa1944df634220d69b68039544c48bbc7f1",
+   "classification": "PARTIAL-OVERLAP",
+   "rationale": "\u00a76 L2377 P3 continuation overlaps \u00a72 L998; 'existential tube' wording is not contradicted by v1.20 (explicit tube corollary adds) -> both MOVE"
+  },
+  {
+   "pair": "P07",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2381,
+   "s6_h": "2d6aab3a5d157a32a484ec2c95166d7770e36da0e4c16bd095a91b92a647c027",
+   "classification": "S6-ONLY",
+   "rationale": "Q_true-witness ownership guard; related to but distinct from \u00a72 SG-NG-20 guards"
+  },
+  {
+   "pair": "P08",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2397,
+   "s6_h": "448282444ebafba55eba8da53a3b4f275995450d0b74bfc11148c9dba3fa60ae",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "N-3D summary over \u00a72 CLOSED N-3D (L1106-1124); both [from: MATH/ALG] -> combined grade = TAG-NORM candidate / G3 debt, NOT a STOP"
+  },
+  {
+   "pair": "P09",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2413,
+   "s6_h": "865f290ae6df2f6207da60135b3a2345c9541a585e2b08cdc939fec21602504e",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "C1-C4 closure summary over \u00a72 C1-C4 blocks (L1280 [DEF] + result blocks)"
+  },
+  {
+   "pair": "P10",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2423,
+   "s6_h": "f4f8faa64bef9eab3cfdd32c971248314f98fc86c1c1bf5debb018eaea19c0ae",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "N5-PHYS-1 summary over \u00a72 L1425-1440; |N+ - N-|<=1 and 1:1 consistent"
+  },
+  {
+   "pair": "P11",
+   "auto_confidence": "HIGH",
+   "s6_line": 2431,
+   "s6_h": "6800f76d409c9210cd6019702cb5c2c1ea86e4c32163e26cd91b8f391e034939",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "DISC-1 summary over \u00a72 L1502; 2,3 in Q^dyn consistent"
+  },
+  {
+   "pair": "P12",
+   "auto_confidence": "HIGH",
+   "s6_line": 2433,
+   "s6_h": "b0c5b26b8b399e5dc6e9515765fe68fc0d319ffcd4d3bae74baaf82096083484",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "DISC-2 summary over \u00a72 L1529; ten-label lower bound consistent"
+  },
+  {
+   "pair": "P13",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2439,
+   "s6_h": "477ed99296dbb40c131c5ced3f720550df84a706112643bbba2d1196d3605b3a",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "P2 diagnostic summary over \u00a72 L1550/L1566; 40/136 exposed, 96 unexposed consistent"
+  },
+  {
+   "pair": "P14",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2443,
+   "s6_h": "88bde5ad4099593677a902d239f5bdbd68af124495b8f4df41af948d68286109",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "C7C-WD/C7C-0 summary over \u00a72 L1589 + C7C-0 block; consistent"
+  },
+  {
+   "pair": "P15",
+   "auto_confidence": "HIGH",
+   "s6_line": 2445,
+   "s6_h": "dfa0eda94cbfdc928131afbf23fea9442783b27c700b19b9a888e105de0968f6",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "C7C-M summary over \u00a72 N5-C7C-M block (written together at v1.20); consistent"
+  },
+  {
+   "pair": "P16",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2455,
+   "s6_h": "6bf5b1fd2a4bd3a0d13fe1fabe6cf42a7772ab464fd06e4aeba2683403d8e410",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "N-6 guard over \u00a72 OPEN N-6 (L1651, BLOCKED on N-5, SG-NG-19); consistent"
+  },
+  {
+   "pair": "P17",
+   "auto_confidence": "HIGH",
+   "s6_line": 2459,
+   "s6_h": "1698d1d77d9331e7ad3a4ed253fd2f77ecbb8e44ad18b540eee7a1773441c44d",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "NG-7A summary over \u00a72 NG-7A blocks incl. field completeness L1740; Z_N scope consistent"
+  },
+  {
+   "pair": "P18",
+   "auto_confidence": "HIGH",
+   "s6_line": 2461,
+   "s6_h": "bad7525042afd2bdc15c4d8e5ac653563868580380207ad72772071e8c7463fc",
+   "classification": "STOP",
+   "rationale": "\u00a76 L2461 'the OFN-side DSN synchronization is a separate governance edit (decision D15)' contradicts v1.20 S8 D15 SYNC COMPLETE (\u00a79.1 L2631, changelog L2778). Live content drift missed by the v1.20 acceptance grep, which searched 'pending (D15)'. No \u00a72 twin. Route to a v1.20.x scientific/sync patch; the migration may not fix it."
+  },
+  {
+   "pair": "P19",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2463,
+   "s6_h": "d9976a1781ec20759d30cf16076b45e9779def4306d5e4abd6fecb462af9a417",
+   "classification": "RELATED-CONSISTENT",
+   "rationale": "Z_N completeness guard vs \u00a72 L1740 field completeness; consistent"
+  },
+  {
+   "pair": "P20",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2465,
+   "s6_h": "9ffe70ce53b7415de3deff190643badad2c5cd494ed6c3b569eaa128c1766c7a",
+   "classification": "RELATED-CONSISTENT",
+   "rationale": "NG-7B OPEN vs \u00a72 L1765 guard; consistent"
+  },
+  {
+   "pair": "P21",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2471,
+   "s6_h": "a45a97ea3af7e36b1d765fd4efc63ce9b9486553cd5e7bad0f3f9860ec72c190",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "NG-8A summary over \u00a72 L1794 block; consistent"
+  },
+  {
+   "pair": "P22",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2479,
+   "s6_h": "3d371991737fe2523a03b37d2599fb41159955bb3267a172d4b6f2487bccf8ce",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "NG-8B summary over \u00a72 L1813 block; consistent"
+  },
+  {
+   "pair": "P23",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2485,
+   "s6_h": "c68d6675d91b4d204a611e32bf43f4bb8499fe0225a22484bfd5aa6d4758f4ae",
+   "classification": "MIRROR-CONSISTENT",
+   "rationale": "NG-8B guard \u00a76 L2485 == \u00a72 L1824 in content; \u00a72 wording more complete -> retain \u00a72 L1824 (moved into \u00a76), discard \u00a76 L2485 with quote"
+  },
+  {
+   "pair": "P24",
+   "auto_confidence": "AMBIGUOUS",
+   "s6_line": 2487,
+   "s6_h": "fc9129721a92a7e622f8c38920ba128405fd3ff3056b2dc86c6bd20247eeea90",
+   "classification": "SUMMARY-OF-MANY",
+   "rationale": "Full NG-8 target over \u00a72 L1774 status + L1771 roadmap; OPEN consistent"
+  }
+ ],
+ "none_spotcheck": {
+  "sampled": 10,
+  "confirmed_no_twin": 9,
+  "false_negative": [
+   "\u00a76 L2385 N-3A: \u00a72 carries a CLOSED N-3A section; keyword heuristic undercounts twins"
+  ],
+  "consequence": "NONE cannot be trusted by heuristic; the 119-block reverse relocation inventory is required, as ruled"
+ },
+ "stop": [
+  {
+   "id": "STOP-01",
+   "s6_line": 2461,
+   "summary": "\u00a76 L2461 'the OFN-side DSN synchronization is a separate governance edit (decision D15)' contradicts v1.20 S8 D15 SYNC COMPLETE (\u00a79.1 L2631, changelog L2778). Live content drift missed by the v1.20 acceptance grep, which searched 'pending (D15)'. No \u00a72 twin. Route to a v1.20.x scientific/sync patch; the migration may not fix it."
+  }
+ ],
+ "reconciled": [],
+ "tag_norm": []
+}

@@ -1,0 +1,17 @@
+tools/check_compaction.py — base_history_from extension (NUMGEN v1.21 stage 2): regression record, 26 Oct 2026
+main = origin/main version of tools/check_compaction.py and tools/test_check_compaction.py; branch = this branch.
+
+DYAD v6.4.21 triple (base 6622dcd f2b20419…9119, candidate 6f4a667 277e6408…7510, map + reviewed regions):
+  tools/test_check_compaction.py, branch: PASS, 16/16 controls rejected (dyad_regression_test_check_compaction.txt)
+  same harness with the main checker: byte-identical output
+RECOG v0.3.23 triple (base 97b0425 0b2d5109…c76, candidate 4e7efd9 771f87f2…f9c):
+  evidence/recog/scripts/test_check_compaction_recog.py, branch: PASS, 17/17 (recog_v0_3_23_regression_test_check_compaction.txt)
+RECOG v0.3.24 triple (base stage1_intermediate_round2.md 881be125…3be, candidate a164704 63f36a9e…c35):
+  evidence/recog/scripts/test_check_compaction_move.py, branch: PASS, 12/12 (recog_v0_3_24_regression_test_check_compaction_move.txt)
+GEN v2.9 triple (base evidence/gen/v2.9/stage1_intermediate.md 5677d706…98, candidate 4438250 89cef171…61a):
+  tools/check_compaction.py, branch: PASS; main: byte-identical output (gen_v2_9_regression_check_compaction.txt)
+  evidence/gen/scripts/check_gen_v2_9_stage2.py --fixtures, branch: all fixtures caught (gen_v2_9_regression_stage2_fixtures.txt)
+
+None of these maps sets base_history_from; the key changes nothing when absent. No existing check removed or relaxed.
+Controls of the new key: NUMGEN stage-2 fixtures F2 (key pointed at a live section), F3 (key names an absent heading),
+F8 (archive does not hold the region) — stage2_negative_controls_output.txt.

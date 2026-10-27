@@ -1,0 +1,92 @@
+--- RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r1.md	2026-10-20 19:08:44.692137000 +0300
++++ RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r2.md	2026-10-20 19:24:06.597508288 +0300
+@@ -1,8 +1,8 @@
+-# RTG Number Genesis DSN v1.20.8 — DRAFT r1
++# RTG Number Genesis DSN v1.20.8 — DRAFT r2
+ 
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+-**Date:** October 20, 2026 (DRAFT r1; v1.20.7 dated September 25, 2026)  
+-**Document status:** DRAFT r1 — not adopted. **Maintenance release: consumer synchronization + RID allocation + interface definition.** No theorem-level change. **Supersedes on adoption:** v1.20.7 (`c4637e7a…ab28`, frozen 2026-10-01), which remains the canonical owner until adoption. Predecessor document status (v1.20.7): ACTIVE owner ledger; owner synchronization + scoped algebra adoption + governance repair; supersedes v1.20.6 (`2a51c4b1…48c5`).  
++**Date:** October 20, 2026 (DRAFT r2; v1.20.7 dated September 25, 2026)  
++**Document status:** DRAFT r2 — not adopted. **Maintenance release: consumer synchronization + RID allocation + interface definition.** No theorem-level change. **Supersedes on adoption:** v1.20.7 (`c4637e7a…ab28`, frozen 2026-10-01), which remains the canonical owner until adoption. Predecessor document status (v1.20.7): ACTIVE owner ledger; owner synchronization + scoped algebra adoption + governance repair; supersedes v1.20.6 (`2a51c4b1…48c5`).  
+ **DSN Methodology:** v1.3; §2/§6 structural migration completed in v1.20.3.  
+ **Methodology note:** the §2/§6 structural migration is complete (v1.20.3). The normalization of the ruled combined-grade inventory is complete (v1.20.6): the 19 raw combined `[from: X/Y]` rows resolve into 11 owner grade decisions and 8 mirror synchronizations; the §9.2 provenance mirrors are synchronized; two latent substantive definitions were extracted into DEF blocks. **Remaining inventory resolved in v1.20.7 before freeze:** all 12 bare RESULT tags and the one DEF/INTERP tag are normalized — 10 by K5 mirror pairing with from: ALG, and the rest by co-owner-ruled K1/K2 splits (C7C-WD / C7C-0; the §8 N-5 summary; the §8 paradigm note). No live bare RESULT or combined truth-status tag remains. §9.2 artifact-role labels (e.g. `ENG/ALG audit`, `NUM/ENG provenance`) classify artifacts, not claims, and are out of scope.  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+@@ -59,7 +59,9 @@
+ 
+ ### §1.1 Imported RTG foundations
+ 
+-`[DEF]` `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.1 | RTG-OFN-DEF-RELATIONAL-CONTENT; RTG-OFN-DEF-PHASE-GAUGE]` **Relational primacy.** Physical content is relational; an isolated node has no independently specified physical state. A common shift of all node phases leaves physical content unchanged in the declared phase models (global phase is gauge); this concerns absolute phase only and does not make phase differences a complete state (OFN SG-OFN-STATE).
++`[DEF]` `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.1 | RTG-OFN-DEF-RELATIONAL-CONTENT]` **Relational primacy.** Physical content is relational; an isolated node has no independently specified physical state.
++
++`[DEF]` `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.1 | RTG-OFN-DEF-PHASE-GAUGE]` **Global phase is gauge.** A common shift of all node phases leaves physical content unchanged in the declared phase models. This concerns absolute phase only and does not make phase differences a complete state (OFN SG-OFN-STATE).
+ 
+ `[DEF]` `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.2 | RTG-OFN-DEF-BACKGROUND-TIME]` **No pre-given physical time.** Physical time is not an independent primitive background. Formal step/block indices are permitted bookkeeping; interpreting them as physical time requires a separate construction. Relational events are candidate time-bearing structure; the event rule and duration calibration remain open (OFN OPEN-OFN-7).
+ 
+@@ -2191,7 +2193,7 @@
+ ```
+ This is an exact-primitive finite-iterate theorem, not an import from the continuous cubic-vector truncation.
+ 
+-`[OPEN]` `[target: THM]` `[v1.20.8]` **L-PHASE explicit constant — Dyadic row-A certificate, owner adoption pending.** An explicit rational `C` on the Dyadic tube `U = {0 < Q_true <= 1/625}` (block base points), with the one-step branch certified on `U_T`, is under Dyadic owner adoption (`DYAD_NUMGEN_LPHASE_ROWA_CERTIFICATE_SESSION_v0_1.md`, `775c6715…f233d`; reviewed at SESSION level). NUMGEN-side interface confirmation I1–I5 and a byte-identical receipt replay are recorded (§9.1 dispositions). No constant is entered here: the `C` of L-PHASE stays existential until Dyadic adopts the theorem and NUMGEN imports it by RID. An explicit-tube INF-1 would additionally need an explicit L-BACKBONE constant (NUMGEN-side; not started).
++`[OPEN]` `[target: THM]` `[v1.20.8]` **L-PHASE explicit constant — Dyadic row-A certificate, owner adoption pending.** An explicit rational `C` on the Dyadic tube `U = {0 < Q_true <= 1/625}` (block base points), with the one-step branch certified on `U_T`, is under Dyadic owner adoption (`DYAD_NUMGEN_LPHASE_ROWA_CERTIFICATE_SESSION_v0_1.md`, `775c6715…f233d`; reviewed at SESSION level). NUMGEN-side interface confirmation I1–I5 and a byte-identical receipt replay are recorded (§9.1 dispositions; execution pins in §9.2). No constant is entered here: the `C` of L-PHASE stays existential until Dyadic adopts the theorem and NUMGEN imports it by RID. An explicit-tube INF-1 would additionally need an explicit L-BACKBONE constant (NUMGEN-side; not started).
+ 
+ `[DEF]` [RID: NUMGEN-DEF-N5AS1-DEFECT] `[v1.20.8]` **Accumulated block defect.** For `M >= 0`, `D_M := 2 pi M - (phi_hat_(6M) - phi_hat_0)`, with `phi_hat` as in NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT and the block counter taken from the start `x`; no B-event anchor enters. The INF-1 block below restates this definition verbatim.
+ 
+@@ -2727,7 +2729,7 @@
+ | Imported object | Current pointer target | Use in this DSN | Validation state carried into v1.19 |
+ |---|---|---|---|
+ | programme generator-selection ceiling | `[import: RTG_PROGRAMME_OVERVIEW_v1.2 SG-PROG-2 | RTG-OPEN-GENERATOR-SELECTION]` | scope of all continuous-`T` Number Genesis results | verified against live source; no status promotion |
+-| relational primacy / no pre-given physical time | `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.1–§1.2 | RTG-OFN-DEF-RELATIONAL-CONTENT; RTG-OFN-DEF-PHASE-GAUGE; RTG-OFN-DEF-BACKGROUND-TIME]` | NG0, history/time interpretation | `[v1.20.8]` narrowed to the OFN definition RIDs and wording at source grade DEF (OFN v0.10 §12.3 consumer register); definition bodies unchanged since OFN v0.9 |
++| relational primacy / global-phase gauge / no pre-given physical time | `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.1 | RTG-OFN-DEF-RELATIONAL-CONTENT]` · `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.1 | RTG-OFN-DEF-PHASE-GAUGE]` · `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §1.2 | RTG-OFN-DEF-BACKGROUND-TIME]` | NG0, history/time interpretation | `[v1.20.8]` narrowed to the OFN definition RIDs and wording at source grade DEF (OFN v0.10 §12.3 consumer register); definition bodies unchanged since OFN v0.9 |
+ | holonomy-rank diagnostic / discrete-flat narrowing | `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §4.4, §9 | RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC]` | NG-7A/NG-7B | **D15 SYNC COMPLETE (v1.20):** OFN v0.8 RF-O08-10 inspected NUMGEN v1.19 NG-7A/NG-7B and records the additive result and the fundamental-integral-cycle extension; OFN whole target remains ACTIVE (physical source / non-Abelian / curvature). Alignment note: OFN v0.8 quotient/presentation guards agree with C7C-WD and the P2 finding — a quotient is not the full state unless transitions descend; presentation convention is not physical invariance. `[v1.20.8]` OFN v0.10: §4.4 typing and the OPEN record unchanged; status ACTIVE; NUMGEN §6.8 still cited by OFN as the inspected operator source |
+ | primitive dyad map, `Q_true`, order-6 structure / winding | `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.1, §6.4 | RID unavailable]` | N-1C-DYAD / N-4 | verified; `[v1.20.8]` §6.1/§6.4 statements unchanged in v6.4.18 (map definition now carries `DYAD-DEF-PRIMITIVE-MAP`, provisional; not imported here); N-1 L1 remains independently certified by NG artifacts |
+ | explicit primitive contraction / six-phase invariant tube | `[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.18 §6.14 | DYAD-THM-PRIM-CTR]` | N-1 / N-2-ORD explicit-domain closure; canonical seed in `U` | verified (v1.20); `[v1.20.8]` statement unchanged in v6.4.18 (§6.14 passage byte-identical v6.4.17→v6.4.18 per the Dyadic owner); Dyadic §7 consumer row records the NUMGEN acceptance; NUMGEN-side consumer acceptance recorded; upstream consumer-row sync left to the Dyadic stream's own owner pass |
+@@ -2744,9 +2746,9 @@
+ | N3 — `DYAD-CAND-PHISTAR-ENTRY-PHASE` | Dyadic (v6.4.11) | ANSWERED: the pin names no Dyadic RID and is removed from §6.1; `[CAND]` cap kept; historical source not identified |
+ | N10–N13 — OPEN 3 / OPEN 3b / OPEN 3 lifecycle / OPEN 21 | Dyadic (v6.4.14–v6.4.17) | RECEIVED, no use. SG-19 accepted: no chart coefficient is read as an L1 or ISP-angle coefficient. N13 is conditional on RECOG R9; NUMGEN takes no R9-conditional input |
+ | N14 — smooth embedding | Dyadic (v6.4.18) | not addressed to NUMGEN; seen only |
+-| L-PHASE row-A certificate | Dyadic (SESSION, 20 Oct 2026) | interface I1–I5 CONFIRMED (`NUMGEN_INTERFACE_CONFIRMATION_LPHASE_ROWA_20261020_v0_1.md`, `7a91c223…f78f`); receipt replay byte-identical (`NUMGEN_RECEIPT_REPLAY_LPHASE_ROWA_20261020_v0_1.md`); no constant imported (§6.6 OPEN sub-item) |
++| L-PHASE row-A certificate | Dyadic (SESSION, 20 Oct 2026) | interface I1–I5 CONFIRMED (`NUMGEN_INTERFACE_CONFIRMATION_LPHASE_ROWA_20261020_v0_1.md`, `7a91c223…f78f`); receipt replay byte-identical (`NUMGEN_RECEIPT_REPLAY_LPHASE_ROWA_20261020_v0_1.md`, `71bfc4c5…b66f`; execution pins in §9.2); no constant imported (§6.6 OPEN sub-item) |
+ | REQ-O09-03 — L-BACKBONE RID and `q_m` typing | OFN (v0.9) | ANSWERED: `NUMGEN-RESULT-N5AS1-L-BACKBONE`; `q_m` typed in §6.6 as block-sampled primitive `Q_true` |
+-| §1.1 opening-import scope | OFN v0.10 §12.3 | ANSWERED: §1.1 narrowed to `RTG-OFN-DEF-RELATIONAL-CONTENT`, `RTG-OFN-DEF-PHASE-GAUGE`, `RTG-OFN-DEF-BACKGROUND-TIME` at source grade |
++| §1.1 opening-import scope | OFN v0.10 §12.3 | ANSWERED: §1.1 narrowed to three DEF imports, one per OFN RID (`RTG-OFN-DEF-RELATIONAL-CONTENT`, `RTG-OFN-DEF-PHASE-GAUGE`, `RTG-OFN-DEF-BACKGROUND-TIME`) at source grade |
+ | A1a RID request (INF-1, D_M) | RECOG (20 Oct 2026) | ANSWERED (option 1): `NUMGEN-RESULT-N5AS1-INF1`, `NUMGEN-DEF-N5AS1-DEFECT`; canonical on adoption of this edition |
+ | FMS v0.6.4 R8 provenance label | FMS (session ledger) | Outbound notice prepared (`NUMGEN_NOTICE_TO_FMS_R8_ATTRIBUTION_20261020_v0_1.md`): no such statement in v1.20.7; correction is FMS's |
+ 
+@@ -2837,6 +2839,9 @@
+ | `NG_C7C_M2_ANALYSIS_OPENING_MANIFEST_v1.json` (`d170efb5…5d73`) + `NG_C7C_M2_ANALYSIS_LOG.md` (`e7b85fd2…0139`) | evidence set fixed at the start of outcome inspection; append-only analysis E0–E6 | analysis record — outcome INCONCLUSIVE / INCONCLUSIVE |
+ | `NG_C7C_M2_E4_TDRG_DENSITY_v1.json` (`c67342a9…6fa8`) | exact ordered TDR-G event densities; 15 classes | supporting analysis record |
+ | `NG_SELFCHECK_REFERENCE_TRANSPORT_v1.md` (`b39de45c…ded4`) + `ng_rf06_token_shift_spotcheck_v1.py` (`2a064eb9…f148`) | RF-06 self-check; token-shift equivariance on the no-birth SWAP/P3 route | review record; finite spot check plus code reading |
++| `NUMGEN_INTERFACE_CONFIRMATION_LPHASE_ROWA_20261020_v0_1.md` (`7a91c223691b3705c2560fca452e671442939452e11cf98820512b182f46f78f`) | v1.20.8: interface confirmation I1–I5 of the Dyadic L-PHASE row-A certificate (lift, frame, observable, sign, domain) | `[SESSION]` interface record; no import |
++| `NUMGEN_RECEIPT_REPLAY_LPHASE_ROWA_20261020_v0_1.md` (`71bfc4c597b4be502129a6d0da0b1c987723979eec1701b9c1b4187140c4b66f`) | v1.20.8: receipt replay of the Dyadic row-A certificate in a clean folder; inputs `dyad_numgen_lphase_rowA_cert.py` (`117484ae1a2509b6f6065d395840bfdfe2b0c977af0505f9fe6de68c13959cdb`), `qw.py` (`3a913062c1cdc6d151a2fb5b2f76d5354a367d1fa55df43f1f31d06e1b94cce8`), `tzw.py` (`f007d42cde36d2a70115b9db25f47b107c446735fa31c66664f620c3247a5609`), all matching the Dyadic `SHA256SUMS.txt`; exit 0, 10/10 gates, 6/6 negative controls failing; regenerated `lphase_rowA_certificate.json` byte-identical to the Dyadic copy (`8697c6970bd908327c66ef2ce3b2d38386947899033ef7f720bc096c4c3ad4fa`) | `[SESSION]` execution record of the same algorithm, not an independent engine; no constant imported |
++| `ng_lphase_rm_indep_check_v0_1.py` (`d9d89bae20a376a3e5992dacdb4263f4b6948af4a739ce3ab4c91c37e1e57ccf`) + `.log` (`e2a0d15a94676348d03ca74b4272b4a940b90d692dc03390cc49fd7e622cf661`) | v1.20.8: NUMGEN-side primitive-map sampling of `sup|r|/Q^(3/2)` and of the one-step ratio, independent of Dyadic code | `[NUM]` acceptance-gate support; not a proof input |
+ 
+ ---
+ 
+@@ -2887,13 +2892,13 @@
+ ---
+ 
+ ## Changelog
+-### v1.20.8 — DRAFT r1 — October 20, 2026 (not adopted)
++### v1.20.8 — DRAFT r2 — October 20, 2026 (not adopted)
+ 
+ **Maintenance release: consumer synchronization + RID allocation + interface definition** (co-owner GO, 20 Oct 2026). No result, proof, domain or grade changes; no constant is imported.
+ 
+ **1. Pointer synchronization.** OFN v0.8 → v0.10, Dyadic v6.4.10 → v6.4.18, Genesis v2.8.4 → v2.8.9 on the live import blocks and §9.1 rows, after a claim-level check of each imported statement (all unchanged). Inline citations that record where a statement was checked (the RF-06 guard's OFN v0.8 guards; the D15 sync record; the v1.20 provenance sentences naming Dyadic v6.4.10) are kept as verified-at-version history. RRF v0.6 pointer superseded by v0.8.3 (adopted working standard); RECOG v0.3.21 recorded as consumer.
+ 
+-**2. OFN §1.1 import narrowing (OFN v0.10 §12.3).** The two opening OFN imports become DEF imports of `RTG-OFN-DEF-RELATIONAL-CONTENT`, `RTG-OFN-DEF-PHASE-GAUGE` and `RTG-OFN-DEF-BACKGROUND-TIME` with OFN's wording (K4), replacing RESULT-from-DEF with `RID unavailable` and the broader paraphrases. A COR v1.20.8 note in §1.1 records the change.
++**2. OFN §1.1 import narrowing (OFN v0.10 §12.3).** The two opening OFN imports become three DEF imports, one per OFN RID (`RTG-OFN-DEF-RELATIONAL-CONTENT`, `RTG-OFN-DEF-PHASE-GAUGE`, `RTG-OFN-DEF-BACKGROUND-TIME`), with OFN's wording (K4), replacing RESULT-from-DEF with `RID unavailable` and the broader paraphrases. A COR v1.20.8 note in §1.1 records the change.
+ 
+ **3. RID allocation (co-owner ruling, 20 Oct 2026; RECOG A1a request; OFN REQ-O09-03).** `NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT`, `NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-L-BACKBONE`, `NUMGEN-RESULT-N5AS1-L-MONO`, `NUMGEN-RESULT-N5AS1-L-PHASE`, `NUMGEN-RESULT-N5AS1-INF1`. They become canonical owner RIDs on adoption of this edition. `NUMGEN-OPEN-N5AS1-INF` stays the module lifecycle RID; `NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO` stays its own theorem (§6.6 GUARD).
+ 
+@@ -2901,7 +2906,9 @@
+ 
+ **5. L-PHASE explicit constant registered as an OPEN sub-item** pending Dyadic owner adoption of the row-A certificate; no constant entered (co-owner constraint).
+ 
+-**6. Dispositions (§9.1).** Dyadic N3 answered (pin removed, `[CAND]` cap kept); N10–N13 received, no use; N14 seen; OFN REQ-O09-03 and §1.1 scope answered; RECOG A1a RID request answered; FMS R8 attribution notice prepared.
++**6. Dispositions (§9.1).** Dyadic N3 answered (pin removed, `[CAND]` cap kept); N10–N13 received, no use; N14 seen; OFN REQ-O09-03 and §1.1 scope answered; RECOG A1a RID request answered; FMS R8 attribution notice prepared. The L-PHASE interface confirmation, receipt replay and NUMGEN-side sampling are pinned in §9.2.
++
++**Draft history.** r1 (`eef001d1…c63c`): co-owner review of 20 Oct 2026 — SCIENTIFIC SCOPE ACCEPTED, two repairs required. r2 applies exactly those: the §1.1 relational-primacy import is split into one DEF import per OFN RID; the receipt replay is pinned in §9.2 with record, certificate, helper and JSON hashes. No other change.
+ 
+ ### v1.20.7 — October 1, 2026
+ 

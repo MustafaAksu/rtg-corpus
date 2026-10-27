@@ -1,0 +1,15 @@
+[PASS] G1.1 canonical section identity: Theta = 0  <=>  eta_wrap = 0 and rho > 0 — the section is exactly relational-phase coincidence with positive rho, not an arbitrary coordinate level set
+[PASS] G1.2 lift-free detector reproduces the lift-based event sequence exactly (6666 events, first 6, last 39997) — the B-event is a PRESENT-state relational condition, so SG-NG-16 / N-3A lifted-winding objections do not apply
+[PASS] G1.3 the event predicate is invariant under eta -> eta + 2 pi k, i.e. it is a function of the gauge-reduced relational state alone (SG-NG-13 spectator/gauge admissibility at this scope)
+[PASS] G1.4 well-defined on the declared domain: Q_true > 0 at every sampled point (min = 5.0399965e-5), so the section angle is nonsingular; matches N-1 punctured-sector scope
+[PASS] G1.5 orientation retention: the oriented predicate admits 6666 positive crossings and 0 negative crossings of the SAME oriented section, so orientation is a genuine retained distinction (NG-1A orientation policy), not a symmetry
+[PASS] G1.6 SG-NG-11 discharge: the declared counting predicate P_B ('oriented crossing of relational-phase coincidence with rho > 0') identifies all B-events, while their transition neighbourhoods are pairwise distinct (all crossing Q_true values distinct) — the coarser counting predicate is declared, not silently assumed
+[PASS] G3.1 co-realization: every B-event is anchored to a primitive T-transition of the same orbit on the same declared domain (no second domain, no external construction)
+[PASS] G3.2 anchor map is injective and strictly increasing, so A-events and B-events are realized in one common history rather than two separately parameterized processes
+[PASS] G3.3 both streams are indefinitely extensible on the sampled window (40000 A-events, 6666 B-events); neither terminates before the other
+[PASS] G4.1 N-2-ORD supplies the common order: successive B-anchors are related by forward reachability (b = T^k a, k >= 1) and never in reverse, so the interleaving is fixed by <=_T alone
+[PASS] G4.2 the interleaving word is the sequence of counts of intervening A-events between consecutive B-events — an RTG-native quantity (reachability distance), not a clock reading. Observed alphabet [6, 7] over 6665 letters
+[PASS] G4.3 consistency with the gate-5 evidence: the reachability-derived interleaving word contains the documented slip at primitive step 33229
+[PASS] G4.4 the order induced on B-events by <=_T coincides with their realization order; the two streams therefore share a single certified order structure (no external synchronization used)
+----------------------------------------------------------------------
+RESULT: ALL ASSERTIONS PASS — Gates 1, 3, 4 certified for the canonical section Theta_0 = 0 on the audited domain. Gate 2 (infinite repeatability) and the ALG form of Gate 5 remain the N-5A-S1-INF target.

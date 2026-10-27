@@ -1,0 +1,488 @@
+[
+ {
+  "id": "AR06-001",
+  "finding": "identity",
+  "where": "title",
+  "old_sha256": "dd0d740f89e0bf0206912cd2d4ddbffc7580bd1e0d562ba90b83d6ef622d0969",
+  "new_sha256": "9008a972a82b6e392454cfb118f58140270321445a4c0377b9fd2740c8d3c6a5",
+  "old": "# RTG STATE ATLAS v0.5\n",
+  "new": "# RTG STATE ATLAS v0.6\n"
+ },
+ {
+  "id": "AR06-002",
+  "finding": "identity",
+  "where": "SOURCES header",
+  "old_sha256": "206c4e708b11f30268eaa9ad591aa3f0105a2dc46b7ed0f03294756757e3655c",
+  "new_sha256": "a4dcf48f38c32c3e4ef1b6f525450e7dd34c09248de0a2b59ae44bcb88d6b331",
+  "old": "full identities in evidence/atlas/v0.5/source_manifest.json",
+  "new": "full identities in evidence/atlas/v0.6/source_manifest.json"
+ },
+ {
+  "id": "AR06-003",
+  "finding": "NUMGEN move",
+  "where": "SOURCES NUMGEN row",
+  "old_sha256": "7ec2beb613f6b3fa15750d163a39e20d091a4149de58780dc2ebafaaa01f4b48",
+  "new_sha256": "f47bef32edac960e03dff86151ff598067bec041bfd2549aeb99013bcca91f96",
+  "old": "| NUMGEN | RTG_NUMBER_GENESIS_DSN | v1.20.8 | `numgen-v1.20.8` | canonical Tier 2 common home |",
+  "new": "| NUMGEN | RTG_NUMBER_GENESIS_DSN | v1.21 | `numgen-v1.21` | canonical Tier 2 common home |"
+ },
+ {
+  "id": "AR06-004",
+  "finding": "identity",
+  "where": "footer",
+  "old_sha256": "109b69e6c2a108b6faccc19b75373bd83d69a0452f50c9b1e25df23d785d37df",
+  "new_sha256": "2f7f48a8d5139f1bdd5784123e445d2212222521b7631e832b980e782453f841",
+  "old": "*END — RTG STATE ATLAS v0.5. Noncanonical; owner DSNs govern.*",
+  "new": "*END — RTG STATE ATLAS v0.6. Noncanonical; owner DSNs govern.*"
+ },
+ {
+  "id": "AR06-005",
+  "finding": "NUMGEN move",
+  "where": "D2 header",
+  "old_sha256": "bb97c04466bd76a32c4b6b8e098a8f4a22f5ab26c663954a0869f7f9ef1ab150",
+  "new_sha256": "75ba43965983e8f98bce0bca44eda60ffa10286beac765802c708b23ed31399f",
+  "old": "(sources: DYAD v6.4.22 · NUMGEN v1.20.8 (continuous + abstract modules; DISC realizations → D5) ·",
+  "new": "(sources: DYAD v6.4.22 · NUMGEN v1.21 (Methodology v1.4 declared, every [RESULT] paired; continuous + abstract modules; DISC realizations → D5) ·"
+ },
+ {
+  "id": "AR06-006",
+  "finding": "NUMGEN NB-07",
+  "where": "H4",
+  "old_sha256": "74759d6ca07018a2ddb8fabbdb92867898d208bc2a2abe6dae99551432993d4e",
+  "new_sha256": "eb1f12e39b6411a27fe57d587e24ffc42c9ded439b7cb7ef65da0e4dbcf765a5",
+  "old": "PREL has one RID in total (PREL.P5); NUMGEN GAP-LOCK lemmas unnumbered; FMS R4′",
+  "new": "PREL has one RID in total (PREL.P5); NUMGEN v1.21 registered GAP-LOCK 1–3, INF-2 and the cyclic-average theorem, its C7C/DISC/ten-label results stay under module RIDs (NUMGEN.N-R1); FMS R4′"
+ },
+ {
+  "id": "AR06-007",
+  "finding": "NUMGEN NA-01/NA-02",
+  "where": "H5",
+  "old_sha256": "2013dd650e56a6f3be592af728afb0168df9916e08d5e6982c87fd013dfc04aa",
+  "new_sha256": "ab76010be1cf8993911a2089390f76f7e2e030203bc6079ab17aec2f5b01ebbb",
+  "old": "Remaining interfaces: NUMGEN has not imported this explicit-domain result; 15/2 bounds reciprocal-amplitude increments and is an ingredient, not a complete L-BACKBONE error constant (NUMGEN.N-B).",
+  "new": "NUMGEN v1.21 records these theorems statement by statement as consumer-side confirmations in its §9.1 acceptance matrix (nothing imported, custody of GAP-LOCK 1–3 and INF-1 unchanged; 15/2 typed as the per-block increment, not an L-BACKBONE constant — NUMGEN.N-B) and imports the explicit L-PHASE constant from DYAD-THM-LPHASE-ROWA-REMAINDER at §6.6 while its own L-PHASE keeps the existential tube (NUMGEN.N-A)."
+ },
+ {
+  "id": "AR06-008",
+  "finding": "NUMGEN NC-15",
+  "where": "H5",
+  "old_sha256": "dc522455b1a6a3f4da1c63b695261ef266095f7fba9efb7b4495cfcb85e338c3",
+  "new_sha256": "ba84a0461bbfc04494ea03135c66bd6e6b898768547358f02f447ca3c5f5f60e",
+  "old": "GEN chrono-protection G₂=0 has candidate proof routes through the NUMGEN cyclic average and RECOG-ALG-LEADING-RETURN-EQUIVARIANCE (RECOG.R-L2);",
+  "new": "GEN chrono-protection G₂=0 has candidate proof routes through NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE (offered to Genesis in pipes/GEN/, undecided by the receiver) and RECOG-ALG-LEADING-RETURN-EQUIVARIANCE (RECOG.R-L2);"
+ },
+ {
+  "id": "AR06-009",
+  "finding": "NUMGEN NA-03",
+  "where": "H8",
+  "old_sha256": "3707c95d6a1f71aef8c95adafe9f28536b291e63e3497da06427f97f9fddb631",
+  "new_sha256": "3b4e65a404191c0fe5bb74540d257edeebacff7addcaa3d507e237496ba62e11",
+  "old": "and κ=1 vs κ=2 treated differently across the sites listed at OFN.O8 + RRF.F6 and F1; U/U_T denote both NUMGEN's existential tube and DYAD's explicit PRIM-CTR tube (NUMGEN.N-S1). The owner corpus carries a cross-stream κ table (Programme v1.3 §8.2, navigation only; the collisions themselves remain). Advice: rename NUMGEN tube.",
+  "new": "and κ=1 vs κ=2 treated differently across the sites listed at OFN.O8 + RRF.F6 and F1. The owner corpus carries a cross-stream κ table (Programme v1.3 §8.2, navigation only; the collisions themselves remain). The U/U_T collision is settled on the NUMGEN side: v1.21 §6.2 labels U_NG, U_NG,tube, U_D,base, U_D,tube, U_R,base (U_NG ≡ RECOG's U_NUMGEN) and asserts no inclusion between U_NG and U_D,base."
+ },
+ {
+  "id": "AR06-010",
+  "finding": "NUMGEN I06",
+  "where": "H9",
+  "old_sha256": "69a213ea33a2904826b5fe4875eba706bb83bf75d8ddc03aeb0190ba6f1c24f0",
+  "new_sha256": "33facd8157c4224a428a35218c09be9bd6ad48037f681dd44294e502414568e6",
+  "old": "and blocks NUMGEN C7C M-4 — needs a TDR-G scientific ruling (D5.X1).",
+  "new": "and blocks NUMGEN C7C M-4 (v1.21 §2 item 1: HOLD; request filed as pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md) — needs a TDR-G scientific ruling (D5.X1)."
+ },
+ {
+  "id": "AR06-011",
+  "finding": "NUMGEN NA-03",
+  "where": "index PRIM-CTR line",
+  "old_sha256": "f9fa2544718078d19be0d25b75074b523e965b1a6f895957ef77dd2885abe877",
+  "new_sha256": "0683c1845d5b3fc7f19ae7d78baac7768763997698926c42c85381cfc94c1244",
+  "old": "⊥ NUMGEN existential U/U_T (cited as §6.12 by ER2B.Z4)",
+  "new": "⊥ NUMGEN existential U_NG/U_NG,tube (v1.21 §6.2 alias table; cited as §6.12 by ER2B.Z4)"
+ },
+ {
+  "id": "AR06-012",
+  "finding": "NUMGEN NA-01",
+  "where": "index memory line",
+  "old_sha256": "4fee3d89ae4c1413efcde0da11998da362134c2c438c31d0bd8d3f190d8dbb70",
+  "new_sha256": "c820893f0acef3d0ebf8f5f144339373343710c197e155514e039ce020294207",
+  "old": "~ NUMGEN explicit-domain and φ* comparison interfaces (not automatic repins)",
+  "new": "~ NUMGEN explicit-domain confirmations (v1.21 §9.1 matrix) and φ* comparison interfaces (not automatic repins)"
+ },
+ {
+  "id": "AR06-013",
+  "finding": "NUMGEN NA-02",
+  "where": "L-PHASE node",
+  "old_sha256": "b0eb9ce7789216ae4f9106ca23ef7238344b24e3f63bf078666bbdb5d06b8670",
+  "new_sha256": "d4079120f8d65994beb6f76d46abfea0380a97981aa519b1fd7e4f169b9a0663",
+  "old": "| explicit row-A C = DYAD-THM-LPHASE-ROWA-REMAINDER (NUMGEN OPEN [target THM], import deferred; L5 NUMGEN.N-A) | ≡ *DYAD:six-step-cubic-jet | @NUMGEN§6.6",
+  "new": "| explicit row-A C = DYAD-THM-LPHASE-ROWA-REMAINDER, imported by NUMGEN v1.21 at §6.6 as a distinct [THM] block (pin dyad-v6.4.22 §6.14, producer v6.4.19; base points in U_D,base, branch on U_D,tube; the explicit-constant OPEN sub-item closed by the import; L5 NUMGEN.N-A) | ≡ *DYAD:six-step-cubic-jet | @NUMGEN§6.6"
+ },
+ {
+  "id": "AR06-014",
+  "finding": "NUMGEN NB-11",
+  "where": "LPHASE-exponent-NUM node",
+  "old_sha256": "9ba6c504a91b55b34a1d9182d754f161a03cc862ccfe64971b546891d7d33d0e",
+  "new_sha256": "a7f4403ec3034c2eb45cc63e316d3bb456f545814242fc2019841436a8293f34",
+  "old": "orbit sampling (below DYAD angular sup 1.42849, no conflict); lives only in NUMGEN Changelog v1.10 (L5 NUMGEN.N-T3) | @NUMGEN changelog",
+  "new": "orbit sampling (below DYAD angular sup 1.42849 and the imported ceiling 403/250, no conflict); live at v1.21 §6.6 as [NUM] with evidence pointers (seed-family sampling on U_NG; not a proof input) | @NUMGEN§6.6"
+ },
+ {
+  "id": "AR06-015",
+  "finding": "NUMGEN NA-01",
+  "where": "INF1 node",
+  "old_sha256": "94db871f1eca843f0eaeb5ef44cafbf05ce9696e6f9e477ea1886a2815ae1217",
+  "new_sha256": "570df69ea07044c419f772dd366538f0c29a75ba7854f941ccb49203e1a9ae89",
+  "old": "NUMGEN-RESULT-N5AS1-INF1 RES[ALG] | sc: existential tube | D_M=τΣq_m−Σr_m=τ log M+C_D+o(1)→∞ | <L-BACKBONE, L-PHASE | >RECOG-RESULT-A1A-PHASE-EXISTENCE-NG, RECOG-RESULT-A1A-CD-AGREEMENT; separate explicit-U existence of C_D^ext by RECOG-THM-A1A-PHASE-EXISTENCE-U (not an extension of NUMGEN INF-1; NUMGEN.N-B) | ¬ explicit radius | @NUMGEN§6.6",
+  "new": "NUMGEN-RESULT-N5AS1-INF1 RES[ALG] | sc: existential tube | D_M=τΣq_m−Σr_m=τ log M+C_D+o(1)→∞ | <L-BACKBONE, L-PHASE | >RECOG-RESULT-A1A-PHASE-EXISTENCE-NG, RECOG-RESULT-A1A-CD-AGREEMENT; separate explicit-U existence of C_D^ext by RECOG-THM-A1A-PHASE-EXISTENCE-U (not an extension of NUMGEN INF-1; recorded by NUMGEN v1.21 §9.1 as independent agreement, not imported; NUMGEN.N-B) | ¬ explicit radius | @NUMGEN§6.6"
+ },
+ {
+  "id": "AR06-016",
+  "finding": "NUMGEN NB-07",
+  "where": "INF-2 node RID",
+  "old_sha256": "ae339dcd96e6f4095a3d8327d10e9310811553f93dee9ebff689953cdd2d0fab",
+  "new_sha256": "10457951b04216c302e38b1e775b304053e6a0396a6e3272eb393585606c6b29",
+  "old": "*NUMGEN:INF-2 RES[ALG] | L-MONO ⇒ B count = lap count: N_B(M)=M−D_M/(2π)+O(1)=M−(τ/(2π))log M+O(1) ⇒ N_B→∞ (gate 2); finitely many non-6 gaps ⇒ M−N_B=O(1), contradiction; eventual fixed T^{m₀} ⇒ N_B=6M/m₀+O(1) forces m₀=6, contradicts log deficit ⇒ gate 5 | @NUMGEN§6.6",
+  "new": "NUMGEN-RESULT-N5AS1-INF2 RES[ALG] | L-MONO ⇒ B count = lap count: N_B(M)=M−D_M/(2π)+O(1)=M−(τ/(2π))log M+O(1) ⇒ N_B→∞ (gate 2); finitely many non-6 gaps ⇒ M−N_B=O(1), contradiction; eventual fixed T^{m₀} ⇒ N_B=6M/m₀+O(1) forces m₀=6, contradicts log deficit ⇒ gate 5 | @NUMGEN§6.6"
+ },
+ {
+  "id": "AR06-017",
+  "finding": "NUMGEN NB-07",
+  "where": "GAPLOCK-1 node RID",
+  "old_sha256": "8a6dcf13744e5e070ebee738bd901fd52dc57d336499de058eec2a4a42d7933a",
+  "new_sha256": "56422302f98d3fb119c30cc32b4037061429239fc0ff70d3f57a738df80c195e",
+  "old": "*NUMGEN:GAPLOCK-1 RES[ALG] | sc: sufficiently small basepoints | Λ_6(x)=2π−τQ(x)+O(Q^{3/2}) ⇒ Λ_6<2π after shrinking; δ_T=π/3+O(Q^{1/2})>0; gap ≤5 needs six-step sum >2π, gap ≥8 a seven-step sum <2π while Λ_7>2π ⇒ every complete local B-return gap ∈{6,7}; infinitely many non-6 gaps ⇒ infinitely many 7-gaps | NUM: Λ_6<2π at 3582 basepoints, min(Λ_7−2π)=1.0436; large-amplitude control yields an 11-gap (smallness load-bearing) | ~ explicit on U via row A: τQ−(403/250)Q^{3/2}>0 since √Q≤1/25<τ/1.612=0.716 (L5 NUMGEN.N-E) | cert ng_n5as1_gaplock12_cert_v1.py (7 families) | @NUMGEN§6.6",
+  "new": "NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET RES[ALG] | sc: sufficiently small basepoints | Λ_6(x)=2π−τQ(x)+O(Q^{3/2}) ⇒ Λ_6<2π after shrinking; δ_T=π/3+O(Q^{1/2})>0; gap ≤5 needs six-step sum >2π, gap ≥8 a seven-step sum <2π while Λ_7>2π ⇒ every complete local B-return gap ∈{6,7}; infinitely many non-6 gaps ⇒ infinitely many 7-gaps | NUM: Λ_6<2π at 3582 basepoints, min(Λ_7−2π)=1.0436; large-amplitude control yields an 11-gap (smallness load-bearing) | ~ explicit on U via row A: τQ−(403/250)Q^{3/2}>0 since √Q≤1/25<τ/1.612=0.716 (L5 NUMGEN.N-E) | cert ng_n5as1_gaplock12_cert_v1.py (7 families) | @NUMGEN§6.6"
+ },
+ {
+  "id": "AR06-018",
+  "finding": "NUMGEN NB-07",
+  "where": "GAPLOCK-2 node RID",
+  "old_sha256": "ae4df3b2ab614f6e574de8434ed70e326a628f94434d2611d31dd13e7c1f6e1d",
+  "new_sha256": "304d671144328d5f3f8256837ad28c9ece44cf0cba09ba217392356eb9002505",
+  "old": "*NUMGEN:GAPLOCK-2 RES[ALG] | 6M=6N_B(M)+s(M)+O(1), E_B(M)=s(M)+O(1); with E_B(M)=(3τ/π)log M+O(1): s(M)=(3τ/π)log M+O(1) (3τ/π=1.10266=6τ/(2π)); (1/k)log M_k^(phys)→π/(3τ) (mean exponential sense) | @NUMGEN§6.6",
+  "new": "NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT RES[ALG] | 6M=6N_B(M)+s(M)+O(1), E_B(M)=s(M)+O(1); with E_B(M)=(3τ/π)log M+O(1): s(M)=(3τ/π)log M+O(1) (3τ/π=1.10266=6τ/(2π)); (1/k)log M_k^(phys)→π/(3τ) (mean exponential sense) | @NUMGEN§6.6"
+ },
+ {
+  "id": "AR06-019",
+  "finding": "NUMGEN NB-07",
+  "where": "GAPLOCK-3 node RID",
+  "old_sha256": "837cae8cbe7c77fd088332479e73df4a6934e837775f0e35a46d56467c807ad3",
+  "new_sha256": "aaaecaba7055e65bfc86ace6356d6c5a58950f8f963f3e166f232b12226329cb",
+  "old": "*NUMGEN:GAPLOCK-3 RES[ALG] | alphabet {6,7} ⇒ n_j=n₀+6j+s_j ⇒ G_{n_j}=C+(π/3)s_j−o_j; Δ_j→0 and g_{j+1}=7⇔0≤o_j<Δ_j ⇒ overshoot at k-th 7-gap →0 (no per-slip error summation); D_{M_k}=C+(k−1)π/3+o(1); with INF-1: M_{k+1}^(phys)/M_k^(phys)→e^{π/(3τ)}; n_k=6M_k+O(1), same limit for primitive slip steps | defect-threshold and physical sequences agree only in the limit; Fatou/C_D normalization optional | <GAPLOCK-1, INF-1, L-MONO | >RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE (ALG), RECOG F2b1 | cert NG_GAPLOCK_LEMMA3_CLOSURE_v3, ng_gaplock_lemma3_cert_v2.py | RET: v1 bootstrap circular | @NUMGEN§6.6",
+  "new": "NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO RES[ALG] | alphabet {6,7} ⇒ n_j=n₀+6j+s_j ⇒ G_{n_j}=C+(π/3)s_j−o_j; Δ_j→0 and g_{j+1}=7⇔0≤o_j<Δ_j ⇒ overshoot at k-th 7-gap →0 (no per-slip error summation); D_{M_k}=C+(k−1)π/3+o(1); with INF-1: M_{k+1}^(phys)/M_k^(phys)→e^{π/(3τ)}; n_k=6M_k+O(1), same limit for primitive slip steps | defect-threshold and physical sequences agree only in the limit; Fatou/C_D normalization optional | <GAPLOCK-1, INF-1, L-MONO | >RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE (ALG), RECOG F2b1 | cert NG_GAPLOCK_LEMMA3_CLOSURE_v3, ng_gaplock_lemma3_cert_v2.py | RET: v1 bootstrap circular | @NUMGEN§6.6"
+ },
+ {
+  "id": "AR06-020",
+  "finding": "NUMGEN NB-07",
+  "where": "cyclic-average node RID",
+  "old_sha256": "a154f6d10cb9f6dcde74623fe13141605398574c455380f1d795829a49f7cf87",
+  "new_sha256": "4dad3d2ee9dd0af452429d3b7e08930e36a8718da0bb97d4b11d41a38914b37a",
+  "old": "*NUMGEN:first-nonlinear-average RES[ALG] | f=R+h_d+O(d+1), h_d lowest nonlinear degree ⇒ [f^p−id]_d=pR⁻¹Π₀h_d: non-resonant first-degree slots vanish kinematically | ~ GEN chrono-protection G₂=0 route (L5 NUMGEN.N-L6) | @NUMGEN§6.4",
+  "new": "NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE RES[ALG] | f=R+h_d+O(d+1), h_d lowest nonlinear degree ⇒ [f^p−id]_d=pR⁻¹Π₀h_d: non-resonant first-degree slots vanish kinematically | ~ GEN chrono-protection G₂=0 route (L5 NUMGEN.N-L6) | @NUMGEN§6.4"
+ },
+ {
+  "id": "AR06-021",
+  "finding": "NUMGEN NB-07",
+  "where": "CUBIC-PARABOLIC node alias",
+  "old_sha256": "d71011c3d1ffdf076c4fd48efa2ccf64f5311d31204b74eacc38bdf515f2803b",
+  "new_sha256": "683f1258c4db4a143b19cfe018a22ef6917a07bc626807071371c15d10e55cb1",
+  "old": "DYAD-ALG-CUBIC-PARABOLIC ALG | F=T⁶ tangent to id, no quadratic return, μ≠0: cubic parabolic germ (raw quartic part nonzero) | ≡ NUMGEN first-nonlinear-average consequence [T⁶−id]₂=0 | >NUMGEN relay | @DYAD§6.3",
+  "new": "DYAD-ALG-CUBIC-PARABOLIC ALG | F=T⁶ tangent to id, no quadratic return, μ≠0: cubic parabolic germ (raw quartic part nonzero) | ≡ NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE consequence [T⁶−id]₂=0 | >NUMGEN relay | @DYAD§6.3"
+ },
+ {
+  "id": "AR06-022",
+  "finding": "NUMGEN NC-14",
+  "where": "NG0R-COV node",
+  "old_sha256": "a282881bce30beb2979876fbb5da139de86b27c85bd25a0723057ac0d758e3ef",
+  "new_sha256": "24b7b68ffd1761819913d7ec9a7b7157e4adb5be0a0126fb74f73844df6b76fc",
+  "old": "NUMGEN-OPEN-NG0R-COV OPEN→ALG/NUM | HYP-NG-0R-COV: audit certified primitive-dyad laws under declared sector transformations; first candidate Q→λQ; predicted: naive form-invariance of ΔQ_true=−Q²+O(Q^{5/2}) FAILs (intrinsic scale); tested covariance = flow translation in ln Q (Q₀→λQ₀ acts on gauge-reduced entry data only via entry-phase shift τ ln λ of the φ* law); falsifier: certified gauge-reduced law with independent additive-Q symmetry or breaking flow-translation form; phase quotient/difference identity excluded; secondary transformations only by prior ledger entry | if: φ* entry-phase law CAND — no owner anywhere (DYAD-CAND-PHISTAR-ENTRY-PHASE does not exist; pin removed v1.20.8) ⇒ conclusions via φ* capped at CAND | ¬ blocks NG-7A/N-2-ORD/N-5A | ~ replacement candidate RECOG-THM-A1A-CD-IDENTIFICATION (L5 NUMGEN.N-L4) | @NUMGEN§6.1a",
+  "new": "NUMGEN-OPEN-NG0R-COV OPEN→ALG/NUM | HYP-NG-0R-COV: audit certified primitive-dyad laws under declared sector transformations; first candidate Q→λQ; predicted: naive form-invariance of ΔQ_true=−Q²+O(Q^{5/2}) FAILs (intrinsic scale); tested covariance = flow translation in ln Q (Q₀→λQ₀ acts on gauge-reduced entry data only via entry-phase shift τ ln λ of the φ* law); falsifier: certified gauge-reduced law with independent additive-Q symmetry or breaking flow-translation form; phase quotient/difference identity excluded; secondary transformations only by prior ledger entry | if: φ* entry-phase law CAND — no owner anywhere (DYAD-CAND-PHISTAR-ENTRY-PHASE does not exist; pin removed v1.20.8) ⇒ conclusions via φ* capped at CAND | ¬ blocks NG-7A/N-2-ORD/N-5A | ~ replacement candidate RECOG-THM-A1A-CD-IDENTIFICATION; v1.21 pins the comparison conventions (chart, lift, readout, clock, start state, overlap U_R,base ∩ U_NG) and keeps φ* ≟ C_D^ext OPEN (L5 NUMGEN.N-L4) | @NUMGEN§6.1a"
+ },
+ {
+  "id": "AR06-023",
+  "finding": "NUMGEN NC-13",
+  "where": "D2 exports line",
+  "old_sha256": "8ce3ba90fbfa16e2a640f8f6d4ed49033400a0db776c2f50a1df5b847805185c",
+  "new_sha256": "612ff754ee45997437be8b9ab36b3d1964128daebab12fa61f4c8cf1882a3dfe",
+  "old": "GAP-LOCK Lemma 3 (no RID) → RECOG; relay identities (Q-INVARIANT-FORM, TAU-DETB, CUBIC-PARABOLIC) → DYAD (NG_TO_DYAD_RELAY_RIEMANN_LENS_v1, registered DYAD v6.4.11 as definition-ledger identities).",
+  "new": "GAP-LOCK Lemma 3 (NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO since v1.21) → RECOG; relay identities → DYAD (NG_TO_DYAD_RELAY_RIEMANN_LENS_v1; registered DYAD v6.4.11 as DYAD-ALG-Q-INVARIANT-FORM, -TAU-DETB, -CUBIC-PARABOLIC, cited by RID in NUMGEN v1.21 §9.2)."
+ },
+ {
+  "id": "AR06-024",
+  "finding": "NUMGEN NA-02",
+  "where": "DYAD row-A node consumer edge",
+  "old_sha256": "48db810214c79480cc19280d1ac2384da44b2df4f9edde40b81d2f42d8ee3d4c",
+  "new_sha256": "9d1c2099b96728a8de4802789d7080e0f12b192172079b64465b5743aa4164d5",
+  "old": "DYAD-THM-LPHASE-ROWA-REMAINDER THM | x∈U: (B) ∀y∈U_T |W(Ty)/(λW(y))−1|≤ε≤0.04654 ⇒ |δ_T−π/3|≤arcsin ε (=0.046557<π/6), six-step lifted increment=2π+Arg(F_W(W)/W); (R) φ̂_{6(m+1)}−φ̂_{6m}=2π−τQ_m+r_m, |r_m|≤403/250·Q_m^{3/2}, Q_m primitive; identity r=Λ₃+[S_Θ−L_Θ]+τ[D_Q−D₃]+[Arg(J/z)+τq]+Arg(F̂/J), Λ₃=L_Θ+τD₃, Λ₃/r³=−49√3/72cosΘ+1/24sinΘ+23√3/144cos3Θ−19/48sin3Θ; Im(F₄(W)W̄)=Λ₃(W)|W|² exactly; |r|≤1.51632q^{3/2}, bridge factor ≤1.06252 ⇒ 1.61112 | sc: row A; majorant (NUM sup 1.42849 at Q=1/625, Λ*≈1.4003); ¬ row B, optimality, higher order, GAP-LOCK, φ*; ¬ starts in U_T∖U | >NUMGEN L-PHASE (offered; NUMGEN v1.20.8 records receipt, interface I1–I5 confirmed, import deferred: NUMGEN OPEN sub-item) | evidence: combined checker 16/16 (G14 certificate, G15 provenance) owner-run; combined G14–G15 reviewer replay not completed  | >RECOG-THM-A1A-PHASE-EXISTENCE-U [RECOG v0.3.23 imports DYAD v6.4.22, row A] | @DYAD§6.14,§7.0a",
+  "new": "DYAD-THM-LPHASE-ROWA-REMAINDER THM | x∈U: (B) ∀y∈U_T |W(Ty)/(λW(y))−1|≤ε≤0.04654 ⇒ |δ_T−π/3|≤arcsin ε (=0.046557<π/6), six-step lifted increment=2π+Arg(F_W(W)/W); (R) φ̂_{6(m+1)}−φ̂_{6m}=2π−τQ_m+r_m, |r_m|≤403/250·Q_m^{3/2}, Q_m primitive; identity r=Λ₃+[S_Θ−L_Θ]+τ[D_Q−D₃]+[Arg(J/z)+τq]+Arg(F̂/J), Λ₃=L_Θ+τD₃, Λ₃/r³=−49√3/72cosΘ+1/24sinΘ+23√3/144cos3Θ−19/48sin3Θ; Im(F₄(W)W̄)=Λ₃(W)|W|² exactly; |r|≤1.51632q^{3/2}, bridge factor ≤1.06252 ⇒ 1.61112 | sc: row A; majorant (NUM sup 1.42849 at Q=1/625, Λ*≈1.4003); ¬ row B, optimality, higher order, GAP-LOCK, φ*; ¬ starts in U_T∖U | >NUMGEN L-PHASE (imported by NUMGEN v1.21 §6.6 at pin dyad-v6.4.22, producer v6.4.19; interface I1–I5 confirmed at receipt; states received / statement accepted / adopted use recorded in NUMGEN §9.1) | evidence: combined checker 16/16 (G14 certificate, G15 provenance) owner-run; combined G14–G15 reviewer replay not completed  | >RECOG-THM-A1A-PHASE-EXISTENCE-U [RECOG v0.3.23 imports DYAD v6.4.22, row A] | @DYAD§6.14,§7.0a"
+ },
+ {
+  "id": "AR06-025",
+  "finding": "NUMGEN NA-02",
+  "where": "D2.L3 phase constants",
+  "old_sha256": "17ea44cb3d5fda63ed356bd23e6d6decf0d02a8305f74fe7fba9334177ca31b3",
+  "new_sha256": "863c44a651491e3d978581dad86115ddb6a6103efcd2eb472c02c14b92cae710",
+  "old": "· NUMGEN L-PHASE explicit constant (OPEN [target THM]): row A available upstream (DYAD-THM-LPHASE-ROWA-REMAINDER), not imported by NUMGEN v1.20.8; explicit-tube INF-1 also needs an explicit L-BACKBONE, which NUMGEN does not state (available via RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, L5 NUMGEN.N-B);",
+  "new": "· NUMGEN L-PHASE explicit constant: row A imported by NUMGEN v1.21 (DYAD-THM-LPHASE-ROWA-REMAINDER at §6.6; the OPEN sub-item closed); an explicit-tube INF-1 of NUMGEN's own would also need an explicit L-BACKBONE, which NUMGEN does not state and does not import (RECOG-THM-A1A-RECIPROCAL-AMPLITUDE recorded as independent agreement, L5 NUMGEN.N-B);"
+ },
+ {
+  "id": "AR06-026",
+  "finding": "NUMGEN move",
+  "where": "D3 imports line",
+  "old_sha256": "cbde2226e4962e1e8741dc10c80268930866473dceb4b7565940e0390bb094d9",
+  "new_sha256": "7e0b5f8cd9239b7c590b303ff4a4742c2031c623e96511c2d03f963b458caea5",
+  "old": "NG objects (current counterpart NUMGEN v1.20.8; valid v1.15 producer pins retained where stated; GAP-LOCK v2)",
+  "new": "NG objects (RECOG pins NUMGEN v1.20.8; governing counterpart v1.21, whose GAP-LOCK/INF-2 RIDs RECOG may cite at its next edition; valid v1.15 producer pins retained where stated; GAP-LOCK v2)"
+ },
+ {
+  "id": "AR06-027",
+  "finding": "NUMGEN NA-03",
+  "where": "D2.L1 domains heading",
+  "old_sha256": "b3f0dcd9bf429954ff6c26a29b7267ff931eed6610f3a8b69e25bce77e8257a0",
+  "new_sha256": "6061bc47b3f99ae3840cff5c9fa6fe3ebe25519d6fb975c5c323bd9ccf196bd1",
+  "old": "**domains** (⊥ D2.L5 NUMGEN.N-S1)",
+  "new": "**domains** (labels per NUMGEN v1.21 §6.2: U_NG, U_NG,tube, U_D,base, U_D,tube, U_R,base; no inclusion asserted between U_NG and U_D,base)"
+ },
+ {
+  "id": "AR06-028",
+  "finding": "NUMGEN NC-13",
+  "where": "Q-INVARIANT-FORM node",
+  "old_sha256": "d843b9698d2697823de4daee04caee697dc0cf3042645a7fa8cefcf468fe4f8f",
+  "new_sha256": "4e11983495d79e0c1749154f6b6058dca52a6163c46c91bf49086bdc05e28f64",
+  "old": "| >NUMGEN relay (L5 NUMGEN.N-L3) | @DYAD§6.3",
+  "new": "| >NUMGEN relay (cited by RID in NUMGEN v1.21 §9.2) | @DYAD§6.3"
+ },
+ {
+  "id": "AR06-029",
+  "finding": "NUMGEN NA-01",
+  "where": "LIFT-ALIGNMENT node",
+  "old_sha256": "fb805ef80a8d204052bf9b318340312e637ccee358312f43535e91277560ed9a",
+  "new_sha256": "c0fafe5fd5ef19001f994eefdde66b4b45fb59ec9645f972d40b57cf5883a6a5",
+  "old": "| ~ explicit counterpart of NUMGEN L-MONO requires consumer scope comparison (NUMGEN.N-L5) | cert RECOG-ART-A1A-C1-CHECK |",
+  "new": "| ~ explicit counterpart of NUMGEN L-MONO; NUMGEN v1.21 §9.1 records it as independent agreement on U_D,tube vs U_NG,tube (comparison only, no inclusion) | cert RECOG-ART-A1A-C1-CHECK |"
+ },
+ {
+  "id": "AR06-030",
+  "finding": "NUMGEN NA-03",
+  "where": "NUMGEN.N-S1 retired",
+  "old_sha256": "d033644a79710ca926c3f87a6b9911515e1648495d41d76feeb5ab75559961ef",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "NUMGEN.N-S1 ⊥ D-SYM | \"U\", \"U_T\" = NUMGEN existential tube (§6.2–6.9: N-1, N-2-ORD, NG-8A/B) and DYAD explicit U={0<Q≤1/625} (§6.6, L-PHASE item) in one document; RECOG needed U_NUMGEN; \"U\" also L1 coordinate √3ρ/2. Theorems scoped \"U_T\" ambiguous without section.\n",
+  "new": ""
+ },
+ {
+  "id": "AR06-031",
+  "finding": "NUMGEN NA-02",
+  "where": "NUMGEN.N-A reworded",
+  "old_sha256": "08932502ccc5b9e7bf995d38502180f50b349c65afb71fc0dd0a5dfe95dcf354",
+  "new_sha256": "92e6c2e43dfccf0ae08cfc3d3ecfd0aabeb318364432aa0f9a86734556534cd5",
+  "old": "NUMGEN.N-A + DYAD.X10 D-LINK | L-PHASE ↔ DYAD row A consistent, import not executed: NUMGEN holds RES[ALG] with existential C and OPEN [target THM]; DYAD offers DYAD-THM-LPHASE-ROWA-REMAINDER, NUMGEN defers the import (OPEN sub-item). Interface I1–I5: W ≡ 𝓛 (η_wrap=η, |η|<0.0665); lift ≡ PRIMITIVE-LIFT; q_m ≡ Q_m; sign (lag) identical; domain block base points in U — all five match. Scope gap: NUMGEN lift allows starts anywhere on its tube, DYAD (R) needs x∈U (U_T∖U uncovered until the orbit enters U). atlas-checked: 403/250=1.612≥1.61112.",
+  "new": "NUMGEN.N-A + DYAD.X10 ~ D-LINK | L-PHASE ↔ DYAD row A: NUMGEN v1.21 imports DYAD-THM-LPHASE-ROWA-REMAINDER at §6.6 as a distinct [THM] block (pin dyad-v6.4.22 §6.14, producer v6.4.19; typed interface I1–I5: W ≡ 𝓛, lift ≡ PRIMITIVE-LIFT, q_m ≡ Q_m, lag sign, base points in U_D,base) and keeps NUMGEN-RESULT-N5AS1-L-PHASE existential on U_NG; 403/250 appears only in the import block and the matrix row. Scope gap stated by both owners: (R) needs x∈U_D,base, so U_D,tube∖U_D,base is covered only once the orbit enters the base. atlas-checked: 403/250=1.612≥1.61112."
+ },
+ {
+  "id": "AR06-032",
+  "finding": "NUMGEN NC-14",
+  "where": "NUMGEN.N-D reworded",
+  "old_sha256": "dc95b31e120f2ee1a574e9004357f6e1e47dd05904e7b2ba33654ed50236b5bc",
+  "new_sha256": "d2c5b59965b581107d426fa45e0539cd9fb7c743271f38a13d46c5a360f454f4",
+  "old": "NUMGEN.N-D D-LINK | NUMGEN's φ* comparison remains open. DYAD-CAND-PHISTAR-ENTRY-PHASE is not an owner RID (DYAD classification); C_D^ext, provided by RECOG-THM-A1A-CD-IDENTIFICATION and RECOG-THM-A1A-PHASE-EXISTENCE-U at their distinct scopes, is a candidate comparison source only. A separate NUMGEN proof must identify the observable, gauge, starting-state dependence and overlap domain; no φ* ownership transfer or identity is asserted.",
+  "new": "NUMGEN.N-D D-LINK | NUMGEN's φ* comparison stays open by owner decision: v1.21 enters RECOG-THM-A1A-CD-IDENTIFICATION / -PHASE-EXISTENCE-U as available comparisons under NUMGEN-OPEN-NG0R-COV with the conventions pinned (chart, lift, readout, clock, start state, overlap U_R,base ∩ U_NG) and asserts no identity φ* ≡ C_D^ext; A1c recovers neither a nor an R_ind downgrade. DYAD-CAND-PHISTAR-ENTRY-PHASE is not an owner RID."
+ },
+ {
+  "id": "AR06-033",
+  "finding": "NUMGEN NA-01",
+  "where": "NUMGEN.N-B reworded",
+  "old_sha256": "4b98d4aadcae4ed183fd187dda7008b74a9ba94e6fbda0a863607d3376afdd1f",
+  "new_sha256": "8718548d0c738a642b7d7201af6effc38b920f42554ef2709eae953bfd5a8c67",
+  "old": "NUMGEN.N-B D-LINK | RECOG-THM-A1A-RECIPROCAL-AMPLITUDE bounds |Q_{m+1}^{−1}−Q_m^{−1}−1|<(15/2)√Q_m on U; 15/2 is an increment-bound ingredient, not the whole L-BACKBONE error constant. RECOG-THM-A1A-PHASE-EXISTENCE-U supplies R9/INF-1-independent C_D^ext existence on explicit U using DYAD-THM-LPHASE-ROWA-REMAINDER. NUMGEN v1.20.8 retains its existential domain and explicit-constant import obligation. A NUMGEN adoption requires its own same-lift/clock/domain comparison and error-budget statement; no automatic domain extension.",
+  "new": "NUMGEN.N-B D-LINK | explicit-domain counterparts recorded by the producer: NUMGEN v1.21 §9.1 acceptance matrix (8 rows; columns event predicate/anchor, lift, base/tube, clock, estimate scope, grade, relationship, receiving status) types RECOG-THM-A1A-RECIPROCAL-AMPLITUDE's 15/2 as the per-block increment (type 1), the series tails as type 2 and the slip-schedule ε_k as type 3, and records each RECOG theorem as independent agreement, not imported (custody of GAP-LOCK 1–3 and INF-1 unchanged, as RECOG states). NUMGEN's statements keep their existential domain; no inclusion U_NG vs U_D,base is asserted."
+ },
+ {
+  "id": "AR06-034",
+  "finding": "NUMGEN NA-01",
+  "where": "NUMGEN.N-E reworded",
+  "old_sha256": "5a52dbb1a6c2617c4d57787bd68523d40989a8046ef42ad3a37b88601d212eb7",
+  "new_sha256": "da3a0a5fe62a3cca2dc528e4d1712cfe8ca60cd54a61f4a0ce3d8637d10a164f",
+  "old": "NUMGEN.N-E ~ D-LINK | GAP-LOCK upstream coverage: DYAD (B) explicit L-MONO on U_T (|δ_T−π/3|≤0.04656); DYAD (R) explicit L-PHASE at base points in U; RECOG LIFT-ALIGNMENT π/6<δ_T<π/2 on U_T; RECOG RECIPROCAL-AMPLITUDE L-BACKBONE on U; RECOG A1a C_D on U. Atlas: on U τQ−(403/250)Q^{3/2}>0 (√Q≤1/25<0.716) ⇒ Λ_6<2π and Λ_7>2π explicitly at every point of U ⇒ Lemma 1 explicit for B-event points in U (seed-orbit tail); U_T∖U not covered. DYAD: \"GAP-LOCK angular hypotheses: relation not asserted\"; NUMGEN keeps them as own obligations; neither records partial coverage. Lemmas 1–3 have no RIDs (→NUMGEN.N-R1).",
+  "new": "NUMGEN.N-E ~ D-LINK | GAP-LOCK upstream coverage, per statement in NUMGEN v1.21 §9.1: DYAD (B) explicit L-MONO on U_D,tube; DYAD (R) explicit L-PHASE at base points in U_D,base (imported); RECOG LIFT-ALIGNMENT π/6<δ_T<π/2 on U_D,tube; RECOG RECIPROCAL-AMPLITUDE on U_R,base; RECOG (B),(C′) deficit 0.927τQ<Δ<τQ+1.82Q^{3/2} on U_D,tube — all independent agreement, none consumed. Atlas reading (not adopted by either owner): on U_D,base τQ−(403/250)Q^{3/2}>0 ⇒ Λ_6<2π and Λ_7>2π explicitly ⇒ Lemma 1 explicit for B-event points in U_D,base; U_D,tube∖U_D,base not covered."
+ },
+ {
+  "id": "AR06-035",
+  "finding": "NUMGEN NC-15",
+  "where": "NUMGEN.N-L6 reworded",
+  "old_sha256": "adb3cf9b2ee16ed2ebd94d75f4a52ba54f9e0e07ec6dc61703719c58d919418e",
+  "new_sha256": "7b4a65fb3f8a51fdd9b0bfd6d25bd6cc6b31dd14ded6892fe321aa8d875e5ab6",
+  "old": "NUMGEN.N-L6 ~ D-LINK (→ GEN D3) | first-nonlinear cyclic-average theorem with vector charge a−b−1 mod 6 gives six-step quadratic vanishing for L=diag(A,A,A): degree-2 vector monomial charges ∈{1,−1,−3}≢0 mod 6 ⇒ G₂=0 = GEN chrono-protection whose proof source GEN-ART-G2-CHRONO is missing; RECOG R-L2 gives same route via leading-return equivariance; one-to-three-variable extension atlas-derived (charge rule per output component).",
+  "new": "NUMGEN.N-L6 ~ D-LINK (→ GEN D3) | NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE (RID since v1.21; stated for f=R+h_d, applied to the primitive dyad) with vector charge a−b−1 mod 6 gives six-step quadratic vanishing for L=diag(A,A,A): degree-2 vector monomial charges ∈{1,−1,−3}≢0 mod 6 ⇒ G₂=0 = GEN chrono-protection whose proof source GEN-ART-G2-CHRONO is custody (a) missing; RECOG R-L2 gives the same route via leading-return equivariance; the diag(A,A,A) application is atlas-derived (charge rule per output component), offered to Genesis as an independent route in pipes/GEN/20261026-NUMGEN-cyclic-average-route-to-g2-zero.md (receiver undecided)."
+ },
+ {
+  "id": "AR06-036",
+  "finding": "NUMGEN NC-13",
+  "where": "NUMGEN.N-L1 reworded",
+  "old_sha256": "5c385e34e24b4fc4a9593173fb8e04c5d0cf4044ea8d8f81b49f9b6cdd271c57",
+  "new_sha256": "55390e0c50ee0440e820265abe988aff8e519e00889dc3d54e2c96f3940dd41c",
+  "old": "NUMGEN.N-L1 ~ D-LINK | L1 is the existential form of PRIM-CTR; ΔQ₅≡P₅ exactly (atlas-checked, sympy); DYAD ceiling 1.6931 tighter than C5=2.14998; true sup|A|=1.63878; NUMGEN records PRIM-CTR as \"independent upstream strengthening\" but not the degree-5 identity nor explicit ε_L1 (Q≤1/400).",
+  "new": "NUMGEN.N-L1 ~ D-LINK | L1 is the existential form of PRIM-CTR; ΔQ₅≡P₅ exactly — NUMGEN v1.21 names DYAD-ALG-P5-RADIAL as the Dyadic owner name at L1 (exact sympy gate A1, evidence/numgen/scripts/numgen_v1_21_stage1_checks.py); DYAD ceiling 1.6931 tighter than C5=2.14998; true sup|A|=1.63878; explicit ε_L1 (Q≤1/400) still not stated on the NUMGEN side."
+ },
+ {
+  "id": "AR06-037",
+  "finding": "NUMGEN NC-13",
+  "where": "NUMGEN.N-L3 retired",
+  "old_sha256": "8bb0c902aed9db86c75577c0f9b620d7dfc9c25db16def924900b5f93fa6b56e",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "NUMGEN.N-L3 D-LINK | relay identities = DYAD-ALG-Q-INVARIANT-FORM, -TAU-DETB, -CUBIC-PARABOLIC; recorded on DYAD side only; NUMGEN §9.2 says \"not claimed in NG\" without RIDs.\n",
+  "new": ""
+ },
+ {
+  "id": "AR06-038",
+  "finding": "NUMGEN NC-14",
+  "where": "NUMGEN.N-L4 reworded",
+  "old_sha256": "22fc1e7de289120683013b94de03ea48dd14f0daa6447f19ef48663a852b0143",
+  "new_sha256": "ee760a3181081d6744061ff5c6b685e016ec78045a614c1f7704f3049718c5bf",
+  "old": "NUMGEN.N-L4 ~ D-LINK | φ* replacement candidate: RECOG-THM-A1A-CD-IDENTIFICATION C_D^ext(x₀)=τ log Q₀−M_W(x₀) on U, M_W=O(√Q₀) (DYAD OPEN3-PHASE-OFFSET-BOUNDS/OPEN21) ⇒ Q₀→λQ₀ at fixed Θ₀ shifts C_D by τ ln λ+O(√Q₀) = NG-0R-COV target; needs NUMGEN's \"separate comparison proof\"; atlas reading of C_D as gauge-reduced entry datum unverified.",
+  "new": "NUMGEN.N-L4 ~ D-LINK | φ* replacement candidate: RECOG-THM-A1A-CD-IDENTIFICATION C_D^ext(x₀)=τ log Q₀−M_W(x₀) on U, M_W=O(√Q₀) (DYAD OPEN3-PHASE-OFFSET-BOUNDS/OPEN21) ⇒ Q₀→λQ₀ at fixed Θ₀ shifts C_D by τ ln λ+O(√Q₀) = NG-0R-COV target; NUMGEN v1.21 pins the comparison conventions and still requires its own comparison proof; atlas reading of C_D as gauge-reduced entry datum unverified."
+ },
+ {
+  "id": "AR06-039",
+  "finding": "NUMGEN NA-01",
+  "where": "NUMGEN.N-L5 retired",
+  "old_sha256": "e8300cba8e3d2bf61f04ae4e1dfa4e34010180257335bd33a6a4aa8e0e374c6f",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "NUMGEN.N-L5 D-LINK | DEFECT ≡ RECOG D_M^U; L-MONO ≡ RECOG-THM-A1A-LIFT-ALIGNMENT on explicit U_T; NUMGEN §9.1 answers RECOG's RID request but does not list RECOG explicit-domain theorems as available inputs.\n",
+  "new": ""
+ },
+ {
+  "id": "AR06-040",
+  "finding": "NUMGEN NC-12",
+  "where": "NUMGEN.N-L7 retired",
+  "old_sha256": "6fcabd9f3d868cc14f6902ea275a4f7063e82be639260e61a614da4810f89f44",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "NUMGEN.N-L7 D-LINK | e^{π/(3τ)}=2.476632… ≡ λ_DSI^{1/6} ≡ RECOG clock ratio; NUMGEN SG-NG-23 types it representation-level diagnostic, RECOG exports a universal clock ratio (SG-R10 scope) — same number, different scope readings, cross-citation missing.\n",
+  "new": ""
+ },
+ {
+  "id": "AR06-041",
+  "finding": "NUMGEN NA-01",
+  "where": "NUMGEN.N-SC1 reworded",
+  "old_sha256": "1f9caf2cb2e88f9f1a6ea6e927df673aeb69eaa101a83fde39d4e1988c25ac55",
+  "new_sha256": "ec0919615ce7f00f61e5cfc5f8e2d75bfc4801bc4561a46ec434942a8788f2ca",
+  "old": "NUMGEN.N-SC1 D-SCOPE | after explicit-domain corollary, N-1, N-2-ORD, N-3A, NG-8A/B, gates 1/3/4 hold on DYAD explicit U_T (PRIM-CTR Q≤1/400⊃U_T, P3 box ⊃U_T, |η|<0.0665<π/2 one-chart); NUMGEN states only N-1/N-2-ORD; L-BACKBONE, L-MONO, L-PHASE, INF-1, GAP-LOCK, N5-PHYS-1 stay existential in text though explicit upstream versions exist.",
+  "new": "NUMGEN.N-SC1 ~ D-SCOPE | explicit upstream versions exist for N-1, N-2-ORD, N-3A, NG-8A/B, gates 1/3/4 (DYAD explicit U_D,tube: PRIM-CTR Q≤1/400⊃U_D,tube, P3 box ⊃U_D,tube, |η|<0.0665<π/2 one-chart) and for L-BACKBONE, L-MONO, INF-1, GAP-LOCK (RECOG, §9.1 matrix); NUMGEN v1.21 keeps every statement on U_NG by owner decision and adds explicit-domain pointers at the points of use (comparison only, no inclusion). Not a staleness; an owner-declared scope."
+ },
+ {
+  "id": "AR06-042",
+  "finding": "NUMGEN NB-07",
+  "where": "NUMGEN.N-R1 reworded",
+  "old_sha256": "549a924a2c8be5dd6b68d8f715572403d8a04ef6af7b0a2746d9a5077c390321",
+  "new_sha256": "c196c2b28c308973e94558a698dba1c04926c701d0e591c20a4462753242a16e",
+  "old": "NUMGEN.N-R1 D-RID | no RID: N-3C+ module (projector, first-nonlinear average, support, reachable-charge, OPEN-9 boundary, Bessel); GAP-LOCK 1–3 (RECOG cites \"no RID\"); INF-2; gates 1/3/4, section identity; N5-C1–C6, N5-PHYS-1, C7A, C7B-T1..T4, DISC-1/2, ten-label bound, C7C-0, M-1A, M-1B, M2-1, C7C-M FAILs, Census-1 (module RIDs only); P3 injectivity; ORD-1..4, T4; explicit-domain corollaries; q* witness; NG-7A abelian extension. RECOG consumes GAP-LOCK 3, B predicate, G_n, o_j.",
+  "new": "NUMGEN.N-R1 D-RID | registered in v1.21: NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET, -GAPLOCK-COUNT, -GAPLOCK-SLIP-RATIO, NUMGEN-RESULT-N5AS1-INF2, NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE (RECOG can cite GAP-LOCK 3 by RID). Still no RID (owner tier 2, next edition): N-3C+ projector/support/reachable-charge/OPEN-9 boundary/Bessel; gates 1/3/4, section identity; N5-C1–C6, N5-PHYS-1, C7A, C7B-T1..T4, DISC-1/2, ten-label bound, C7C-0, M-1A, M-1B, M2-1, C7C-M FAILs, Census-1 (module RIDs only); P3 injectivity; ORD-1..4, T4; explicit-domain corollaries; q* witness; NG-7A abelian extension."
+ },
+ {
+  "id": "AR06-043",
+  "finding": "NUMGEN NB-08",
+  "where": "NUMGEN.N-R2 reworded",
+  "old_sha256": "b1039fc4f84ff876c1569313adff79a6e8abaf67433e33d88a1dd668dfc4b8ab",
+  "new_sha256": "d37f4034232bdabb397a953c88304975b9626e7d489c1a2a826b7fa6029d21c2",
+  "old": "NUMGEN.N-R2 D-RID | RID type ≠ status: CLOSED results under OPEN RIDs (N1, N2, N2-ORDER, N1A2, N5A, N5AS1-SECTION, N5AS1-INF (documented lifecycle), REC-HOL-OPERATOR, TWO-FIVES-ORBIT-CARDINAL, TWO-FIVES-REBLOCK); THM-type RID DEFECT-THRESHOLD-RATIO graded RES[ALG]; N1A2 heads ALG closure; N1C-DYAD-RADIAL and OPEN-N1C both head N-1C closure.",
+  "new": "NUMGEN.N-R2 D-RID | RID type ≠ status: CLOSED results under OPEN RIDs (N1, N2, N2-ORDER, N1A2, N5A, N5AS1-SECTION, N5AS1-INF, REC-HOL-OPERATOR, TWO-FIVES-ORBIT-CARDINAL, TWO-FIVES-REBLOCK); v1.21 §6.6 guard: the module record points to its result RIDs and the category word is not a grade (DEFECT-THRESHOLD-RATIO graded RES[ALG] as tagged). Residual: N1A2 heads an ALG closure; N1C-DYAD-RADIAL and OPEN-N1C both head the N-1C closure (owner tier 2)."
+ },
+ {
+  "id": "AR06-044",
+  "finding": "NUMGEN NA-04",
+  "where": "NUMGEN.N-F reworded",
+  "old_sha256": "96bd2e0e327deeaee692a3376681e6fc584193140cc196d4ea9f22fd61874011",
+  "new_sha256": "599190ef5ac99b5911766719acc87407da12397ea9290dc7297fcdd8fdaec8a7",
+  "old": "NUMGEN.N-F D-STALE | internal residue in adopted NUMGEN: §7 N-3 item 7 Q403 cited as \"Dyadic v6.4.10\" while body uses v6.4.18 and App. A v6.4.9; NG-7 \"OFN v0.7 / live v0.8 §9\"; §9.1 header \"carried into v1.19\"; §6.1a \"asymptotic-phase objects of v6.4.15\".",
+  "new": "NUMGEN.N-F D-STALE (low residue) | v1.21 fixes §7 N-3 item 7 (Q403 at v6.4.18), the Programme v1.3 and Genesis v2.9 pins, the DZT provenance and the §9.1 header; remaining dated wording is in historical COR/guard notes (Dyadic v6.4.10 provenance at the coefficient-conflation guard; §6.1a pre-registration pin \"v6.4.15\") and in ten `[v1.20.x]` markers of untouched rows, all declared in the release record §6."
+ },
+ {
+  "id": "AR06-045",
+  "finding": "NUMGEN NC-18",
+  "where": "NUMGEN.N-C1 reworded",
+  "old_sha256": "6d03f6763889d39e47aa31b32a67cce4380ea1eb83225531e859feaf879689f2",
+  "new_sha256": "ec2ffecba5baa8ea406462d43392eccd7c60433bd1aec792048317b3efd5de2b",
+  "old": "NUMGEN.N-C1 D-CONV | q_m (NUMGEN) ≡ Q_m (DYAD) with q also |z|² in DYAD/RECOG; atlas convention: NUMGEN q_m ≡ DYAD Q_m.",
+  "new": "NUMGEN.N-C1 D-CONV | q_m (NUMGEN) ≡ Q_m (DYAD) with q also |z|² in DYAD/RECOG; owner-stated in NUMGEN v1.21 §6.2 (\"q_m is the primitive Q_true at block base points, not the chart variable q=|z|²\")."
+ },
+ {
+  "id": "AR06-046",
+  "finding": "NUMGEN NB-09",
+  "where": "NUMGEN.N-D1 reworded",
+  "old_sha256": "3745e4f7ca262477f4085e2d7b6ba2704f2af09d41cc74d50efc009c5e6c2958",
+  "new_sha256": "97994e1ee962ece8ed17da61dcef399707aab54d3da3e7fd34aed48e0f25c802",
+  "old": "NUMGEN.N-D1 D-PROOF (b) | in-ledger proofs without separate certificate: N5-C1–C4, C5, N5-PHYS-1, C7A (§9.2 \"no separate external certificate yet\"), P3 injectivity, NG-7A abelian, explicit-domain corollaries, N-1A2.",
+  "new": "NUMGEN.N-D1 D-PROOF (b, declared) | in-ledger proofs without separate certificate: N5-C1–C4, C5, N5-PHYS-1, C7A, P3 injectivity, NG-7A abelian, explicit-domain corollaries, N-1A2 — NUMGEN v1.21 §9.2 declares the evidence state at each (\"written proof in ledger; no separate certificate\", v1.4 §12 keys) and the availability of the held records on upload/numgen-records."
+ },
+ {
+  "id": "AR06-047",
+  "finding": "NUMGEN NC-16",
+  "where": "NUMGEN.N-G1 retired",
+  "old_sha256": "99647684c3777e091da912927d05a1abdbcdcdc689898b9baeef79bdc12ed31e",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "NUMGEN.N-G1 D-GRADE/D-STALE | §9.2 says RECOG uses GAP-LOCK 3 \"at HEUR\"; RECOG v0.3.23 uses it at ALG (BTOKEN-LOG-EQUIVALENCE); row from RECOG v0.3.5.\n",
+  "new": ""
+ },
+ {
+  "id": "AR06-048",
+  "finding": "NUMGEN NA-06",
+  "where": "NUMGEN.N-T1 reworded",
+  "old_sha256": "29090e415cebef5cc1757c5643bbddc3f4b58a660567d0b6dab7301e0474ff45",
+  "new_sha256": "942e7eb64279e3a7ee9c55f09bfb702baf0b7ff1641ceb15eb9858cc4a6c1856",
+  "old": "NUMGEN.N-T1 D-STALE | §2 registry mixed lifecycle wording; §6.6 retains superseded LOGSLIP and \"predicted asymptotic slip law\" blocks; §9.2 NG_C7C_M_DESIGN_v1 statements (\"typed by B suffices\", \"associativity free\") historical; N-5A-S1 header \"[COR: v1.7 verdict]\" (flagged history in source; excluded).",
+  "new": "NUMGEN.N-T1 D-STALE (declared exception) | §6.6 keeps the superseded LOGSLIP block (NUMGEN-CAND-N5AS1-LOGSLIP, [COR] historical) in place by owner decision (release record §6: moving it would move claim blocks; a reviewed later edit); that RID carries no `[RID:]` declaration in the live text — its registration line sits in the changelog at tag numgen-v1.20.8 (checker: link UNVERIFIED, documented here); §9.2 NG_C7C_M_DESIGN_v1 statements (\"typed by B suffices\", \"associativity free\") historical; N-5A-S1 header \"[COR: v1.7 verdict]\" (flagged history in source; excluded)."
+ },
+ {
+  "id": "AR06-049",
+  "finding": "NUMGEN NA-05",
+  "where": "NUMGEN.N-T2 retired",
+  "old_sha256": "1f91708261ce65125b23def19338b6cb5a5c0326e24682208760559c1037148f",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "NUMGEN.N-T2 D-STALE/D-SCOPE | §6.2 N-1 tree \"[CLOSED local dyad by L1]\" while N-1A0 ACTIVE, N-1A1 PARTIAL — true only abstract-vs-tube; scope label missing at N1A0/N1A1 headers.\n",
+  "new": ""
+ },
+ {
+  "id": "AR06-050",
+  "finding": "NUMGEN NB-11",
+  "where": "NUMGEN.N-T3 retired",
+  "old_sha256": "96482f4d2b39990d9a4f83a302a25873df2ec44d5b3d7d20c7b317b05f9ab9fc",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "NUMGEN.N-T3 D-STALE | changelog-only facts: sup|r|/Q^{3/2}∈[1.3449,1.3565] (v1.10), first-slip pre-transition amplitude 5.3443×10⁻⁵, Δη_future digits.\n",
+  "new": ""
+ },
+ {
+  "id": "AR06-051",
+  "finding": "NUMGEN NC-17",
+  "where": "NUMGEN.N-Q* reworded",
+  "old_sha256": "1edb618941b4c40e5568ba1d1b342249cc306db7f7a998efdb16d7ea03c86c12",
+  "new_sha256": "1d287fc58ddc7561b0d36b8320818270bbb35177009b02238d342c36646f7e92",
+  "old": "NUMGEN.N-Q* ~ D-LINK | DYAD-THM-OPEN18 \"q=q_* branch split\" and NUMGEN q*≈0.3156258836 on the same canonical family (0,q): plausibly the same q*; neither cites the other — verify.",
+  "new": "NUMGEN.N-Q* ~ D-LINK | DYAD-THM-OPEN18 \"q=q_* branch split\" and NUMGEN q*≈0.3156258836 on the same canonical family (0,q): plausibly the same q*; NUMGEN's q* is a [NUM] root candidate of η₆(q)−q=0 (same wrapped phase after one block), not stated as a branch split; question filed as pipes/DYAD/20261026-NUMGEN-q-star-branch-split.md (receiver undecided); NUMGEN defers the cross-citation (v1.21 NC-17)."
+ },
+ {
+  "id": "AR06-052",
+  "finding": "NUMGEN notices",
+  "where": "NUMGEN.N-I1 new",
+  "old_sha256": "48b5baf0f158123bcd9731d36d6fe92dcdada9d2e5e93cb9b5fc5167c980b445",
+  "new_sha256": "29c8792e0f18da9e4859e2d59198d47685592f978783c9dd83490b79209c912a",
+  "old": "NUMGEN.N-Q* ~ D-LINK | DYAD-THM-OPEN18 \"q=q_* branch split\" and NUMGEN q*≈0.3156258836 on the same canonical family (0,q): plausibly the same q*; NUMGEN's q* is a [NUM] root candidate of η₆(q)−q=0 (same wrapped phase after one block), not stated as a branch split; question filed as pipes/DYAD/20261026-NUMGEN-q-star-branch-split.md (receiver undecided); NUMGEN defers the cross-citation (v1.21 NC-17).\n",
+  "new": "NUMGEN.N-Q* ~ D-LINK | DYAD-THM-OPEN18 \"q=q_* branch split\" and NUMGEN q*≈0.3156258836 on the same canonical family (0,q): plausibly the same q*; NUMGEN's q* is a [NUM] root candidate of η₆(q)−q=0 (same wrapped phase after one block), not stated as a branch split; question filed as pipes/DYAD/20261026-NUMGEN-q-star-branch-split.md (receiver undecided); NUMGEN defers the cross-citation (v1.21 NC-17).\nNUMGEN.N-I1 D-LINK (receiver side) | five v1.21 `kind: notice` items filed by NUMGEN after the tag (pipes/RECOG, pipes/DYAD, pipes/TDRG, pipes/GEN, pipes/OFN; each `state: open`): acceptance matrix and GAP-LOCK/INF-2 RIDs (RECOG), row-A import and DYAD-ALG-P5-RADIAL alias (Dyadic), C7C-M4 HOLD (TDR-G), Genesis v2.9 pin and the cyclic-average RID (Genesis), §6.8 OFN v0.10 pointer (OFN). A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7).\n"
+ },
+ {
+  "id": "AR06-053",
+  "finding": "NUMGEN I06",
+  "where": "D5.X1",
+  "old_sha256": "3f2f7b77968088084f5d690a45dae8c87a04bcfcdb47e0260b79cd3d86adef9f",
+  "new_sha256": "eb733618975caf86bc1d2c49cecd26ec3d81fdc22e73d3837b1799b9a7ca74f9",
+  "old": "PROG §6.4 lists \"antipodal path tie\" as an owner-review task; NUMGEN blocks C7C M-4 on it. Fix (TDR-G, scientific): rule on endpoint antipode (affects any policy using path orientation).",
+  "new": "PROG §6.4 lists \"antipodal path tie\" as an owner-review task; NUMGEN v1.21 §2 item 1 holds C7C M-4 on it (HOLD, with a sensitivity audit of affected witnesses before any status change) and the request is filed as pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md (blocks C7C-M4; receiver undecided). The 216 antipodal events lie inside the audited eventual cycles; every admitted label keeps at least one unexposed witness, so the ten-label lower bound is unaffected (NUMGEN §6.6). Fix (TDR-G, scientific): rule on endpoint antipode (affects any policy using path orientation)."
+ },
+ {
+  "id": "AR06-054",
+  "finding": "NUMGEN NB-07",
+  "where": "D5 NUMGEN.N-R1",
+  "old_sha256": "25a6b63d8387954189966fe3bc0084e38b023005d2ed11a1c84c7c20e62b3db1",
+  "new_sha256": "7b4f0d5e8f905317bc803daf8a8d3140d563c00dc9fb84f8a7efa14c42dd9adc",
+  "old": "NUMGEN.N-R1 (DISC part) D-RID: DISC-1/DISC-2 results, ten-label bound, C7B-ALG-T1..T4, Census-1 sit under module RIDs NUMGEN-OPEN-N5 / -N5-COMM-BD only.",
+  "new": "NUMGEN.N-R1 (DISC part) D-RID: DISC-1/DISC-2 results, ten-label bound, C7B-ALG-T1..T4, Census-1 sit under module RIDs NUMGEN-OPEN-N5 / -N5-COMM-BD only (owner tier 2 after v1.21)."
+ }
+]

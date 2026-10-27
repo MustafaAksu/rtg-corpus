@@ -1,0 +1,10 @@
+# Atlas independent rerun — NUMGEN v1.21 (26 Oct 2026), worktree at origin/claude/numgen-v1.21-stage2 19432b9
+base (numgen-v1.20.8): 835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e
+stage1 rebuilt:        ab25c162a727b0826adfb0b8fd5f3898969ed78260fc00e8bbcaa9e1e3b899d2  (byte-identical to evidence/numgen/v1.21/stage1_intermediate.md)
+stage1 edit log:       d31eaee0e75ad7b256039fd4dbcd5e3590cd617767dfc55947abfdba9956813d
+stage2 rebuilt:        05b3315fe74ec006b5610b1823522f843f55d677c01f1ec39b42144dd4be4258  (byte-identical to dsn/RTG_NUMBER_GENESIS_DSN.md on the branch)
+movement map:          fb93b2a95ba561516c736462c2b396db5991212300acbbaa3b59ba6cb31dbfa9
+tools/check_compaction.py branch: 2ba2a4093391d069b38325783823ea48217a3a4637c252a2c9a517d89f087306 ; main: 6ed877986d47b485ca3dfcacbfb1493e93270af73a70bdb80533f58e5453b603
+stage1 checker C0–C13 PASS; NC1–NC12 caught; gate A1 PASS, --neg exit 1
+check_compaction PASS (output byte-identical to evidence/numgen/v1.21/check_compaction_output.txt); guards G0–G6 PASS; fixtures F1–F11 caught
+pipes_index --check on the stage-2 tree: OK 7 items / 19 inboxes

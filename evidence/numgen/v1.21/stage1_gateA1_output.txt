@@ -1,0 +1,12 @@
+A1 deg1-3 vanish: PASS
+A1 deg4 = -Q^2: PASS
+A1 deg5 = NUMGEN Delta Q_5 = DYAD P_5: PASS
+degree-5 part: (eta**2 - eta*rho + rho**2)*(5*eta**3 - 43*eta**2*rho + 4*eta*rho**2 - 5*rho**3)/24
+RESULT: PASS
+exit 0
+A1 deg1-3 vanish: PASS
+A1 deg4 = -Q^2: PASS
+A1 deg5 = NUMGEN Delta Q_5 = DYAD P_5: FAIL
+degree-5 part: (eta**2 - eta*rho + rho**2)*(5*eta**3 - 43*eta**2*rho + 4*eta*rho**2 - 5*rho**3)/24
+RESULT: FAIL
+exit 1 (negative control: perturbed reference, must be 1)

@@ -1,0 +1,1469 @@
+--- RTG_NUMBER_GENESIS_DSN_v1_20_2.md	2026-09-25 20:55:29.676795813 +0000
++++ RTG_NUMBER_GENESIS_DSN_v1_20_3.md	2026-09-28 12:05:26.697442937 +0000
+@@ -1,9 +1,9 @@
+-# RTG Number Genesis DSN v1.20.2
++# RTG Number Genesis DSN v1.20.3
+ 
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+ **Date:** September 25, 2026  
+-**Document status:** ACTIVE owner ledger; scientific-sync patch. **Supersedes:** v1.20.1 (`00174c3a…c927b`), which superseded v1.20 (`f5ed40f5…3b636`).  
+-**DSN Methodology:** v1.3 (touched-block compliance in this release; full structural migration deferred to a methodology-only pass).  
++**Document status:** ACTIVE owner ledger; **methodology-only structural migration — scientific state identical to v1.20.2.** **Supersedes:** v1.20.2 (`35fe1a65…dd1053`).  
++**DSN Methodology:** v1.3; §2/§6 structural migration completed in this methodology-only release; scientific state unchanged from v1.20.2.  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+ **Document class:** Foundational/technical bridge ledger. It does **not** modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics.  
+ **Companion documents (current verified pointer targets):** `RTG_PROGRAMME_OVERVIEW_v1.2` · `RTG_ONTOLOGICAL_FOUNDATIONS_v0.8` · `RTG_DYADIC_OSCILLATOR_DSN_v6.4.10` · `RTG_DISCRETE_GENESIS_DSN_v2.12.13` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.4`  
+@@ -175,7 +175,244 @@
+ 
+ ---
+ 
+-### CLOSED N-1 — Relational repetition / natural-number realization
++### Module registry (v1.20.3 structural migration)
++
++<!-- REGISTRY --> Structural pointer rows. The authoritative scientific bodies of these modules live in §6; statuses below are verbatim relocations.
++
++<!-- REGISTRY --> - **CLOSED N-1 — Relational repetition / natural-number realization** → §6: §6.2 N-1A/N-1B/N-1C formal target
++<!-- REGISTRY --> - **CLOSED N-2 — Signed-history group completion** → §6: §6.3 N-2 closed signed-history construction
++<!-- REGISTRY --> - **CLOSED N-2-ORD — Physical order representation** → §6: §6.3a N-2-ORD physical order representation — CLOSED at v1.6
++<!-- REGISTRY --> - **CLOSED N-3A — Local deck inducibility / eta-winding** → §6: §6.4 N-3 representation layer — closed local/abstract results
++<!-- REGISTRY --> - **CLOSED N-3B — Abstract circle-character representation** → §6: §6.4 N-3 representation layer — closed local/abstract results
++<!-- REGISTRY --> - **CLOSED N-3C — Primitive dynamical character activity (first exact result)** → §6: §6.4 N-3 representation layer — closed local/abstract results
++<!-- REGISTRY --> - **CLOSED N-3D — Finite-character quotient / representation bridge** → §6: §6.4 N-3 representation layer — closed local/abstract results
++<!-- REGISTRY --> - **CLOSED N-3C+ — Roots-of-unity projectors / OPEN-9 kinematic boundary** → §6: §6.4 N-3 representation layer — closed local/abstract results
++<!-- REGISTRY --> - **OPEN N-4 — Global/nonlocal dyadic history representations** → §6: §6.5 N-4 global/nonlocal extension target
++<!-- REGISTRY --> - **CLOSED N-5A — Second co-realized recurrence / event stream** → §6: §6.6 N-5A / N-5 rational recurrence target
++<!-- REGISTRY --> - **OPEN N-5 — Bounded synchronization commensurability / realized Q-like labels** → §6: §6.6 N-5A / N-5 rational recurrence target
++<!-- REGISTRY --> - **OPEN N-6 — Continuum completion** → §6: §6.7 N-6 real completion target
++<!-- REGISTRY --> - **NG-7 — Recurrence holonomy / holonomy content** → §6: §6.8 NG-7 recurrence holonomy — NG-7A closed / NG-7B open
++<!-- REGISTRY --> - **OPEN NG-8 — Functorial compatibility / “two fives”** → §6: §6.9 NG-8 functorial counting compatibility
++<!-- REGISTRY --> - **N-5A-S1 — Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11** → §6: §6.6 N-5A / N-5 rational recurrence target
++<!-- REGISTRY --> - **N-5A-S1-INF — CLOSED at v1.11** → §6: §6.6 N-5A / N-5 rational recurrence target
++<!-- REGISTRY --> - **OPEN NG-10 — Genesis saturation and counting truncation** → §6: §6.9a NG-10 — Genesis saturation and counting truncation
++<!-- REGISTRY --> - **OPEN NG-9 — External mathematics/physics consequences** → §6: §6.10 External benefit boundary
++<!-- REGISTRY --> - sub-module status — **CLOSED N-1A-MIN — Abstract Oriented Dyadic Phase-Step**:
++<!-- REGISTRY --> **Status:** CLOSED `[ALG]` `[scope: isolated abstract oriented dyadic phase-step]`
++<!-- REGISTRY --> - sub-module status — **L1 — Primitive-frame phase-uniform contraction**:
++<!-- REGISTRY --> **Status:** CLOSED `[RESULT] [from: ALG] [scope: sufficiently small punctured p=6 primitive dyad sector]`
++<!-- REGISTRY --> - sub-module status — **CLOSED N-3A — Local deck inducibility / eta-winding**:
++<!-- REGISTRY --> **Status:** CLOSED `[RESULT][from: ALG]` `[scope: sufficiently small one-chart N-1 tube]`
++
++## §3. Scope Guards
++
++**[SG-NG-1] Metalanguage ≠ ontology.** Mathematical use of `N,Z,Q,R` in a proof does not mean RTG assumes them as primitive physical quantities. Conversely, writing an isomorphism to `N` does not by itself prove physical emergence.
++
++**[SG-NG-2] No time-reversal inference.** Group completion to `Z` does not imply that physical RTG histories are reversible. Negative elements may encode formal/oriented history differences.
++
++**[SG-NG-3] No cross-branch dynamics transfer.** Character restriction between `S^1` and `Z_N` is a representation bridge only; it does not transfer continuous sine coupling, normal-form coefficients, TDR-G policies, birth rates, or other dynamical content.
++
++**[SG-NG-4] Finite quotient ≠ continuum-limit theorem.** `Z -> Z/NZ` and roots-of-unity embeddings do not establish that TDR-G converges dynamically to the continuous dyad as `N->infinity`.
++
++**[SG-NG-5] Do not assume the continuum before N-6.** Fundamental recurrence data must not be postulated as arbitrary real numbers if the stated goal is to derive the real continuum.
++
++**[SG-NG-6] Frequency is not primitive absolute time.** Any physical frequency notion must be relational or recurrence-based; cycles per external second cannot be used as the foundational definition.
++
++**[SG-NG-7] Holonomy ≠ curvature without bridge.** Nonzero recurrence holonomy certifies non-integrability of recurrence data, not geometric curvature by itself.
++
++**[SG-NG-8] `p=6` is a realization, not number ontology.** The dyadic order-6 resonance is an exact property of the selected continuous generator; the Number Genesis framework must not derive arithmetic from the special value six alone.
++
++**[SG-NG-9] Standard mathematics is not novel RTG mathematics.** Free monoids, group completion, `pi_1(S^1)`, Pontryagin duality, cyclic characters, and graph cohomology are established inputs. Novelty must lie in RTG-specific identification, bridge theorems, or consequences.
++
++**[SG-NG-10] No external-problem overclaim.** The framework currently reformulates and may constrain problems; it has not yet solved quantum gravity, UV divergence, fine tuning, foundations of set theory, or any named external open problem.
++
++**[SG-NG-11] Strict equivalence ≠ counting equivalence.** Gauge-orbit/isomorphism equivalence is generally finer than the event-type equivalence used for counting. A coarser counting predicate must be declared and justified; it may not silently erase physical distinctions.
++
++**[SG-NG-12] Formal free monoid ≠ physical unbounded repetition.** Standard mathematics permits formal words `E^n` once a symbol `E` is given. RTG realizes an unbounded natural-number sector only if successor extensibility is established in the physical dynamics or explicitly assumed.
++
++**[SG-NG-13] Spectator independence is an admissibility condition.** Inert external context may be quotiented out only when it neither influences nor is changed by the event under the declared boundary semantics.
++
++**[SG-NG-14] Connected context is not automatically spectator.** If closure relations couple an external node to the support, incident relational variables may be constrained and may change when the internal state changes. Such data belong to the boundary interface unless causal irrelevance is proved.
++
++**[SG-NG-15] History record is not automatically physical memory.** Treating the full past relational trajectory as part of the physical present state would make non-collapse trivial. N-1C must instead identify a present/future relational distinction, or explicitly adopt history-as-state as a physical postulate and tag that choice.
++
++**[SG-NG-16] Winding label is not yet a certified physical counter.** The dyadic winding index may label lifted histories, but its certified invisibility to periodic trigonometric observables prevents using it as an N-1C separator without an additional bridge showing physical accessibility or future dynamical effect.
++
++**[SG-NG-17] Boundary isomorphism requires dynamical equivariance.** Matching boundary cardinality, graph shape, or raw phase values is insufficient for strict compatibility. The attachment map, gauge-reduced constraints, orientation policy, and local transition must commute under the proposed isomorphism.
++
++**[SG-NG-18] Typed-object non-conflation for radial coefficients.** `[COR v1.20]` Primitive ray burst (`37/40`, carrying the `-(5/24)Q^(5/2)` half-power term) ≠ raw fixed-radius angular mean (`47/54`) ≠ normalized-chart observable ≠ long-orbit backbone. Only the leading `-Q^2` transfers without an explicit representation/observable bridge. Source: Dyadic v6.4.10 `[DEF]` (distinct objects) and `[COR v6.4.10]` (half-power term; averaging operator). The former "provenance unresolved upstream" wording is withdrawn.
++
++**[SG-NG-19] Continuum substrate ceiling.** A closure of N-6 obtained solely inside the continuous dyad is a representation/recovery theorem relative to a substrate already modeled on a continuum chart. It may not be called genesis of the continuum substrate unless (i) a theorem proves the construction is substrate-independent in the required sense, (ii) a non-continuum realization is connected by a named bridge theorem, or (iii) the continuum assumption is explicitly retained as a tagged postulate.
++
++**[SG-NG-20] Single-generator ratio / co-realization guard.** Ratios of powers or blockings of the one certified generator `T` are standard localization/re-indexing of Track A and do not close N-5. N-5 requires two independently certified event/recurrence types **co-realized in one admissible physical sector** together with a declared RTG-native causal/order relation for comparing their occurrences. External clock synchronization or pre-existing real-valued frequencies are inadmissible foundational substitutes.
++
++**[SG-NG-21] Reserved.** Number reserved for the pending substrate-arity / derived-cardinal non-identity guard (programme-review decision D10: the two-relata structure of the primitive dyad is arity/bookkeeping data and must not be silently identified with a derived Track-B cardinal). Reservation prevents future numbering collision; content activates only on PI ruling.
++
++**[SG-NG-22] Relational-arrow / representation primitivity guard.** No claim that additive/difference structure is physically prior to ratio/proportion structure, or vice versa, is admissible from notation alone. A primitivity claim requires both (i) a certified physical mechanism and (ii) a certified sector gauge/covariance. Admissible examples of representation mechanisms include the free-exponent map of a certified endomorphism monoid, a genuine logarithmic group isomorphism for an independently certified positive multiplicative sector, and cover/character constructions for compact phase. An admissible relational arrow may not be silently replaced by a primitive numerical ratio, difference, logarithm, or coordinate label. In particular, quotient and angle-difference descriptions of the same `U(1)` invariant do not constitute evidence of ontological priority.
++
++**[SG-NG-23] Non-relabeling ≠ nontrivial commensurability.** Showing that a recurrence/event stream is not a fixed blocking `T^m` is necessary for N-5A independence but does not by itself establish incommensurability, a nontrivial Q-like commensurability class, or an R-like invariant. Density limits, subleading discrepancy laws, and asymptotic slip constants must be separately typed. In particular, continuous-dyad constants built from `pi`, `exp`, `tau`, or other already-real-valued chart/normal-form data are representation-level diagnostics under SG-NG-19 and OPEN-P0 unless a substrate-independence or named bridge theorem licenses stronger foundational use.
++
++**[SG-NG-24] Rational density ≠ physical commensurability.** A rational limiting event-density, or even a sublinear relative synchronization defect, is insufficient by itself for a genesis-grade Q-like commensurability claim. The active N-5 candidate requires a certified common-order integer synchronization defect to remain bounded, or a separately proved stronger common-measure criterion. Any weaker quotient that discards an **unbounded certified relational discrepancy** must state and physically justify that information loss explicitly. The canonical A/B pair motivates this guard: its leading event-density tends to `6`, while its certified physical 7-gap count / synchronization discrepancy grows like `log M`.
++
++**[SG-NG-25] Prefix divergence ≠ external time.** Statements such as `N_B(H) -> infinity` in N-5 mean directed/cofinal unboundedness of **finite event counts** under certified common-order prefix extension. They do not introduce, imply, or require an external clock, global duration parameter, completed physical infinity, real-valued time coordinate, or actually completed infinite trajectory. The primitive statement is successor extensibility: every finite admissible prefix can be extended to contain further certified events.
++
++**[SG-NG-26] Common-source finite-multiplicity triviality.** `[v1.18: definition supplied; the guard was invoked in DISC material from v1.16 onward without a section-3 entry]` If two certified streams `A, B` are fixed finite refinements/coarsenings of a common prefix-cofinal parent stream `L`, with `N_A = m_A L + O(1)` and `N_B = m_B L + O(1)` for reasons independent of the active dynamics, then their bounded class `red(m_A, m_B)` is forced by predicate multiplicity (`C7B-ALG-T1`) and is a **physical positive control**. It certifies operation of the C1–C4 bounded-defect machinery but does not by itself populate the dynamically realized spectrum `Q_RTG^dyn`. A discrimination certificate discharges this guard either by proving structurally that no such common-parent multiplicity factorization exists, or by a matched null/control dynamics under which the same predicates change class. The frozen DISC same-realization gate discharges it for admitted witnesses: a deformation-invariant factorization would force the same class at every `k` (`C7B-ALG-T1`), contradicting observed contingency; letting `m_A, m_B` vary with `k` is merely `C7B-ALG-T2` periodicity triviality and does not rescue the objection.
++
++
++
++`[GUARD]` **Proof order ≠ ontology order.** The N-1→N-2→N-5→N-6 certificate dependencies do not imply that the represented numerical structures are ontologically generated in the same sequence.
++
++---
++
++## §4. Layer Routing
++
++```text
++NG0   RTG relational ontology / programme ceiling
++  -> NG1   repeatable event/history composition
++  -> NG2   unsigned/signed repetition algebra
++       -> N-2-ORD   physical order representation [CLOSED v1.6]
++  -> NG3   phase/winding/character representations
++  -> NG3B  finite phase quotient / distinguishability
++
++N-4   domain-extension module orthogonal to NG1/NG3:
++      tests how far Track-A freeness and cyclic representations survive beyond the local tube
++
++N-5A  second co-realized recurrence/event stream
++  -> NG5   commensurability / rational structure
++  -> NG6   continuum/order completion
++
++NG8A/B seed ordinal-cardinal/re-blocking compatibility;
++NG8 full cross-track counting compatibility remains downstream.
++
++NG7A additive holonomy operator/null theorem
++  -> NG7B RTG-native non-integrable source / geometry interface
++```
++
++| Question | Layer | Canonical object/tool |
++|---|---|---|
++| What is physically primitive? | NG0 | RTG ontology / OPEN-P0 programme ceiling |
++| How does counting arise? | NG1 | finite histories, primitive `T` transformation monoid |
++| How do signed counts arise? | NG2 | group completion / oriented history differences |
++| How is order represented physically? | N-2-ORD `[CLOSED v1.6]` | reachability order `<=_T` + N-2 positive cone; `Q_true` as residue-chain witness |
++| How is count represented in phase? | NG3 | winding, deck action, circle characters |
++| What does finite distinguishability do? | NG3B | `Z -> Z/NZ`, character restriction |
++| How far do local results extend? | N-4 | larger exact-map invariant domains / recurrence sectors |
++| Where does a second recurrence come from? | N-5A | two co-realized certified event streams + common order |
++| How do ratios arise? | NG5 | bounded synchronization classes -> unique rational invariant (C7A); `Q_RTG^bd`/`Q_RTG^dyn` separate bounded realization from strong dynamic admission; ten dynamic labels established by DISC-1/DISC-2; `Q_RTG^bd` reciprocal-closed (C7C-0); global breadth and full arithmetic remain OPEN |
++| How does continuum/order completion arise? | NG6 | completion of N-5 classes; representation-level ceiling in continuous branch |
++| How can cycle data detect non-integrability? | NG7A | edge cochains, cycle matrix, null theorem |
++| What supplies nonzero physical holonomy? | NG7B | non-node-difference RTG source + geometry bridge |
++| Why do numeral labels agree across tracks? | NG8 | physical comparison maps / universal counting compatibility |
++
++Routing rules:
++
++- NG0/NG1 claims may not be certified from a downstream normal form alone.
++- NG3B may connect representation spaces across branches but never bypass cross-branch dynamical scope guards.
++- N-3C+ nonlinear coefficient ownership remains Dyadic; NG exports representation reachability only.
++- N-4 is a domain-extension module, not merely a representation module; it can affect both Track-A and Track-C validity.
++- N-5A is closed locally; GAP-LOCK Lemmas 1–3 are closed; N-5-COMM-BD structural gates C1–C4, C5 control, C6 falsifier, N5-PHYS-1 and C7A are closed. C7B-DISC-1 and C7B-DISC-2 are CLOSED, establishing `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn`; C7B global breadth and C7C physical arithmetic remain OPEN. Single-generator ratios remain controls only.
++- NG5/NG6 must not be used retroactively as premises of N-1/N-2.
++- In the continuous branch, NG6 is representation/recovery level unless SG-NG-19's stronger substrate condition is discharged.
++- NG-7A is CLOSED (v1.5); nonzero holonomy/curvature claims still require the NG-7B physical-source and geometry bridges.
++
++---
++
++## §5. High-Risk Claims Ledger
++
++| Claim | Valid form now | Forbidden overclaim |
++|---|---|---|
++| “Number is relational repetition” | `[HYP]` central programme thesis | theorem / completed derivation |
++| `H_E ≅ (N,+)` | `[RESULT][from: ALG]` for the scoped local dyadic transformation monoid after L1; general RTG identification `[OPEN]` | universal physical RTG counting already proved |
++| signed history gives `Z` | `[RESULT][from: ALG]` scoped N-2 signed-history completion; inverse = comparison-orientation swap; sign physically realized as reachability orientation (N-2-ORD T4) | physical time reversal |
++| winding and harmonics both give `Z` | `[MATH]` standard structures | proof they are the same RTG history representation |
++| `Z_N` phase vs `S^1` | exact candidate character restriction `[MATH]`; RTG bridge `[OPEN]` | discrete/continuous dynamical equivalence |
++| bounded synchronization class gives unique rational invariant | `[RESULT][from: ALG/MATH]` C1–C4 + N5-PHYS-1 + C7A; `1 in Q_RTG^bd` | claim that boundedness alone is dynamic admission, that all `Q_(>0)` is physically realized, or that rational arithmetic is already derived |
++| strong dynamic rational admission | `[RESULT]` frozen DISC-1 + DISC-2 establish ten labels `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn` | equality with that set or with `Q_(>0)`, post-data gate retuning, or arithmetic from a label list |
++| owner implementation agreement ⟹ presentation covariance | `[REJECTED]` — exhaustive equality to the pinned v18 implementation certifies implementation agreement, not node-relabeling covariance; P2 post-hoc audit finds 40/136 DISC-2 witness records convention-exposed while the ten-label projection remains robust | treating sorted-node tie-breaking as a physical invariant without an owner policy/theorem |
++| equal `rho_Q` labels ⟹ interchangeable/composable physical inputs | `[REJECTED]` — `==_Q` is representation equivalence only; WD-DOM must be proved per operation (`1` already spans two disjoint realization families) | any operation defined on labels rather than realizations |
++| `Q_RTG^bd` reciprocal closure | `[RESULT][from: ALG]` C7C-0 involution `S`; WD-DOM trivial for this **total** unary map (`D_S = R_bd`), not for unary maps in general | multiplication, addition, field structure, or `Q_RTG^dyn` reciprocal closure |
++| completion gives `R` | `[OPEN]` | continuum already derived |
++| `log R_+` gives additive line | `[MATH]` after positive real ratio object exists | use as derivation premise for `R` |
++| recurrence holonomy `CA` | `[RESULT][from: ALG]` operator/null layer (NG-7A); physical source `[OPEN]` (NG-7B) | spacetime curvature theorem |
++| external physics benefit | research motivation `[HYP]` | solved quantum gravity/UV/fine tuning |
++
++---
++
++## §6. Main Scientific Ledger
++
++### §6.1 Thesis: relational structure before numerical container
++
++`[HYP]` The classical number line may be understood inside RTG as a late representation of more primitive relational arrows/transitions, their certified composition, repeatable histories, orientation-sensitive comparisons, and finite/cyclic invariants. The thesis does not deny standard mathematical number systems; it changes their proposed **physical semantics** in RTG.
++
++`[DEF]` Three notions must remain distinct:
++
++- **relational structure:** arrows/transitions, composition, orientation/inversion where certified, and physically distinguishable collections;
++- **certificate structure:** the proof-dependency order in which N-like, Z-like, Q-like, and R-like representations are established;
++- **numerical representation:** additive/difference, ratio/proportion, exponent, character, winding, or completion coordinates/labels introduced only after the relevant relational structure is certified.
++
++`[GUARD]` No numerical representation is promoted to ontological priority merely because it is convenient or because another representation can be transformed into it. In particular, proof-dependency order is not ontology order, and ratio/proportion is not assumed to be generated “later” than additive count nor vice versa.
++
++### §6.1a NG-0R — relational-composition clarification and sector-covariance audit
++
++**RID:** `NUMGEN-OPEN-NG0R-COV`  
++**Status:** documentation layer `[DEF]/[INTERP]` + one pre-registered `[OPEN][target: ALG/NUM]` covariance audit  
++**Role:** clarify the physical semantics of “ratio-relational” versus additive/difference representations without changing already-certified N-1/N-2/N-3 theorem ownership.
++
++`[DEF]` **Arrow before numerical label.** The primitive candidate is an admissible relational arrow/comparison, not a pre-existing scalar ratio. Where a sector admits composition,
++\[
++R_{AB}\circ R_{BC}=R_{AC}
++\]
++is the structural statement. Numerical quotient, difference, logarithm, exponent, character, or winding labels may be introduced only through a certified representation.
++
++`[DEF]` **Identity and inverse are typed.** Admissible presentation/gauge equivalences live in the groupoid `G_adm` and therefore have inverses. Physical dynamical transitions such as `T` need not be invertible. An orientation-reversal/inverse interpretation may be asserted only for the structure where it has actually been constructed (for example N-2 signed comparison).
++
++`[RESULT] [from: MATH]` **Phase quotient/difference non-test.** For `z_A=e^{i theta_A}` and `z_B=e^{i theta_B}`,
++\[
++z_A z_B^{-1}=e^{i(\theta_A-\theta_B)}
++\]
++is one `U(1)` invariant written in multiplicative and angular notation. Verifying this identity cannot decide ontological priority.
++
++`[RESULT] [from: MATH]` **No global additive logarithm on `U(1)`.** There is no nontrivial continuous homomorphism `U(1)->(R,+)`. A local/lifted `arg` is a section of the covering `R->U(1)`, not a global additive homomorphism. Number Genesis therefore keeps three additive-representation mechanisms distinct:
++
++1. **Track A exponent representation:** freeness gives `T^n -> n` after the endomorphism monoid is constructed;
++2. **positive multiplicative sectors:** a genuine logarithmic isomorphism may be used only if a physically instantiated `(R_+,x)`-type structure is independently certified;
++3. **compact phase:** cover-lift/winding and global character-lattice representations are distinct and are already separated by N-3A/N-3B/N-3C/N-3D.
++
++`[INTERP]` **No universal additive-or-ratio priority.** In a non-compact amplitude sector, “ratio-primitive versus difference-primitive” is equivalent to asking which physical gauge/covariance is actually certified (scaling, shift, or neither). That is a sector-level empirical/algebraic question, not an ontology axiom.
++
++`[OPEN] [target: ALG/NUM]` **HYP-NG-0R-COV — covariance audit.** Before any amplitude-sector ratio-primitivity claim is promoted, audit the certified primitive-dyad laws under the candidate sector transformations. A positive result requires one declared transformation law to act covariantly on the gauge-reduced observables with no independent contradictory additive symmetry. A falsifier is any certified law whose gauge-reduced form breaks the proposed covariance. The phase-sector quotient/difference identity is excluded from the audit because it is representation-equivalent and non-falsifiable.
++
++`[DEF]` **Declared primary transformation (pre-registration pin).** The first audited candidate is amplitude scaling `Q -> lambda Q` on the certified primitive-dyad sector. Predicted covariance form: naive form-invariance of `Delta Q_true = -Q_true^2 + O(Q_true^(5/2))` under pure scaling is expected to FAIL (the law carries an intrinsic scale); the covariance to be tested is translation along the flow in `ln Q` — equivalently, `Q_0 -> lambda Q_0` acting on gauge-reduced entry data only through the entry-phase shift `tau ln lambda` of the `[CAND]` phi* law (`DYAD-CAND-PHISTAR-ENTRY-PHASE`). Falsifier: a certified gauge-reduced law on the sector that admits an independent additive-`Q` symmetry or breaks the flow-translation form. Any conclusion inheriting the phi* leg is capped at `[CAND]` until that law is promoted. Secondary transformations may be declared only by ledger entry before their audit runs.
++
++`[GUARD]` NG-0R is not a new foundational branch and does not block NG-7A, N-2-ORD, or N-5A. It is a semantics/covariance layer under the existing Number Genesis programme.
++
++### §6.2 N-1A/N-1B/N-1C formal target
++
++`[HYP]` **Foundational ordering:**
++
++```text
++distinction
++  -> relationally admissible predicate
++  -> equivalence class / event type
++  -> repeatability
++  -> successor extensibility
++  -> free repetition representation
++  -> N-like physical counting sector
++```
++
++This is an RTG construction claim, not a theorem that all mathematics requires physical equivalence or repetition.
++
++`[DEF candidate]` The primitive event object is a finite transition neighborhood `N_e=(S_e,dS_e,X_e^- -> X_e^+)`. Strict equivalence is isomorphism in an admissible relational groupoid. Counting equivalence is induced by a declared relational map `P` and may be coarser than strict physical indistinguishability.
++
++`[DEF candidate]` Spectator-invariance requires `P(N_e disjoint_union C)=P(N_e)` for inert `C`. The primitive Number Genesis predicate preserves physical orientation when available.
++
++`[MATH]` Once an abstract event type `E` exists, a formal free monoid on `E` is standard mathematics. The open RTG content is whether physical event histories instantiate that formal structure and whether extension by another `E` remains admissible without a terminal bound.
++
++`[HYP]` **Successor principle:** physical realization of unbounded natural-number structure corresponds to indefinite extensibility of finite relational history, not to a completed infinite collection present at once.
++
++`[RESULT] [from: ALG] [scope: local primitive p=6 dyad transformation sector]` **History non-collapse after L1.** For `F=T^6`, exact primitive-map algebra gives `Delta Q_true=-Q_true^2+O(Q_true^(5/2))` uniformly in phase, hence strict positive radial contraction on a sufficiently small punctured sector. Distinct finite block powers are therefore separated by the present relational observable `Q_true`. This closes the N-1C memory obstruction in that scoped realization.
++
++#### CLOSED N-1 — Relational repetition / natural-number realization
+ 
+ **RID:** `NUMGEN-OPEN-N1`  
+ **Status:** CLOSED `[RESULT][from: ALG]` `[scope: sufficiently small punctured primitive dyad tube]` — N-1A event identity, N-1B successor, and N-1C non-collapse are aligned on the same exact primitive generator `T`
+@@ -198,7 +435,7 @@
+ 
+ ---
+ 
+-#### OPEN N-1A0 — Strict Relational Equivalence
++##### OPEN N-1A0 — Strict Relational Equivalence
+ 
+ **RID:** `NUMGEN-OPEN-N1A0`  
+ **Status:** ACTIVE  
+@@ -250,7 +487,7 @@
+ 
+ ---
+ 
+-#### OPEN N-1A1 — Counting Equivalence
++##### OPEN N-1A1 — Counting Equivalence
+ 
+ **RID:** `NUMGEN-OPEN-N1A1`  
+ **Status:** PARTIAL — closed for N-1A-MIN; general boundary-aware form continues in N-1A2  
+@@ -310,10 +547,9 @@
+ **Closure criterion for N-1A:** Specify `G_adm` and one primitive Number-Genesis counting map `P_NG`; prove `~_str` and `~_P` are equivalence relations; verify gauge invariance, spectator invariance, and the declared orientation policy on at least one explicit RTG-compatible event model.
+ 
+ 
+-#### CLOSED N-1A-MIN — Abstract Oriented Dyadic Phase-Step
++##### CLOSED N-1A-MIN — Abstract Oriented Dyadic Phase-Step
+ 
+ **RID:** `NUMGEN-ALG-N1A-MIN`  
+-**Status:** CLOSED `[ALG]` `[scope: isolated abstract oriented dyadic phase-step]`
+ 
+ `[DEF]` **Minimal event token.** Let
+ 
+@@ -369,7 +605,7 @@
+ 
+ ---
+ 
+-#### N-1A2 — Boundary Locality / Context Robustness
++##### N-1A2 — Boundary Locality / Context Robustness
+ 
+ **RID:** `NUMGEN-OPEN-N1A2`  
+ **Status:** CLOSED `[ALG]` `[scope: abstract three-node boundary-aware oriented phase-step; specified local law]`
+@@ -428,7 +664,7 @@
+ | boundary context | varying `b` changes `F_S`, but not `P` | realization changes; event type stable |
+ | causal participant | varying boundary data changes `P` | must be retained in event-type classification |
+ 
+-##### Scoped three-node model
++###### Scoped three-node model
+ 
+ `[DEF]` Use support `S={i,j}` and one connected node `k`, with
+ 
+@@ -483,7 +719,7 @@
+ 
+ The boundary has changed the counting type. It is therefore causally type-relevant and cannot be discarded from the event-type analysis.
+ 
+-##### Boundary minimality correction and theorem
++###### Boundary minimality correction and theorem
+ 
+ `[COR]` **Closure does not by itself prove minimality.** The closure identity proves that, conditional on the retained internal state `x`, the admissible incident-edge boundary fiber has one independent degree of freedom. The map
+ 
+@@ -519,7 +755,7 @@
+ 
+ ---
+ 
+-#### N-1B — Repeatability and Successor Extensibility
++##### N-1B — Repeatability and Successor Extensibility
+ 
+ **RID:** `NUMGEN-OPEN-N1B`  
+ **Status:** PARTIAL — N-1B-MIN CLOSED `[ALG]`; N-1B-GROWTH ACTIVE  
+@@ -539,7 +775,7 @@
+ 
+ Equivalently, the reachable `E`-generated event graph has no terminal vertex.
+ 
+-##### N-1B-MIN — Fixed-support oriented recurrence
++###### N-1B-MIN — Fixed-support oriented recurrence
+ 
+ `[DEF]` Take the instantaneous relational state space `V=S^1` and the total oriented recurrence
+ 
+@@ -580,7 +816,7 @@
+ 
+ ---
+ 
+-#### CLOSED N-1C — Free-History Monoid / Natural-Number Representation
++##### CLOSED N-1C — Free-History Monoid / Natural-Number Representation
+ 
+ **RID:** `NUMGEN-OPEN-N1C`  
+ **Status:** CLOSED locally `[RESULT][from: ALG]` `[scope: sufficiently small punctured primitive-dyad tube]`; general branching/nondeterministic/topology-changing history-quotient semantics remain OPEN
+@@ -639,7 +875,7 @@
+ `[OPEN]` `[scope: general branching/topology-changing histories]` **Other memory sources.** Recurrence holonomy (NG-7B), boundary-context memory, birth/topology records, frame/connection variables, or OPEN-M spin/metric data may become necessary outside the deterministic local tube. Each requires its own non-collapse proof and does not affect the local N-1 closure.
+ 
+ 
+-##### N-1C-DYAD — Radial Memory Test
++###### N-1C-DYAD — Radial Memory Test
+ 
+ **RID:** `NUMGEN-N1C-DYAD-RADIAL`  
+ **Status:** CLOSED locally `[RESULT] [from: ALG] [scope: sufficiently small punctured p=6 primitive dyad sector]`. Primitive event-type/domain alignment is closed by the unified v0.9 six-phase `T`-tube construction; only general branching/topology-changing history semantics remain OPEN.
+@@ -702,7 +938,6 @@
+ ###### L1 — Primitive-frame phase-uniform contraction
+ 
+ **RID:** `NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION`  
+-**Status:** CLOSED `[RESULT] [from: ALG] [scope: sufficiently small punctured p=6 primitive dyad sector]`
+ 
+ `[ALG]` Exact symbolic composition of the primitive map through quartic coordinate order reproduces the certified cubic six-step jet and gives
+ 
+@@ -911,7 +1146,19 @@
+ 
+ ---
+ 
+-### CLOSED N-2 — Signed-history group completion
++### §6.3 N-2 closed signed-history construction
++
++`[RESULT] [from: ALG] [scope: local primitive-dyad Track-A monoid]` Let `M_T` be the N-1 free monogenic monoid. Define oriented pair equivalence by
++
++```text
++(A,B) ~ (C,D)  iff  A o D = B o C.
++```
++
++Cancellativity makes this an equivalence relation; componentwise composition gives a well-defined abelian group law; `[A,B] -> [B,A]` is the group inverse; and `iota(A)=[A,id]` embeds `M_T` injectively. The class `g=[T,id]` has infinite order, so the completion is infinite cyclic. Only after construction is the coordinate map `Psi([T^m,T^n])=m-n` introduced, yielding the standard representation `G_T ~= (Z,+,0)`.
++
++`[INTERP]` Signed history is oriented comparison between two forward repetition histories. The inverse class swaps comparison order and does not assert physical `T^{-1}` or reverse evolution.
++
++#### CLOSED N-2 — Signed-history group completion
+ 
+ **RID:** `NUMGEN-OPEN-N2`  
+ **Status:** CLOSED `[RESULT][from: ALG]` `[scope: local primitive-dyad Track-A monoid]`
+@@ -984,7 +1231,49 @@
+ 
+ ---
+ 
+-### CLOSED N-2-ORD — Physical order representation
++### §6.3a N-2-ORD physical order representation — CLOSED at v1.6
++
++`[DEF]` **Reachability-first order.** For admissible `y, z` in the tube,
++```text
++y <=_T z   iff   there exists K in M_T with z = K(y).
++```
++Order is defined by existence of a connecting certified history, not by any numerical observable. `Q_true` enters only as a witness (ORD-4).
++
++`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **ORD-1 — reachability order.** `<=_T` is reflexive (`id`), transitive (composition), and antisymmetric on `U_T`, and is **total on each primitive orbit**. Antisymmetry is exactly N-1 non-collision: `z=T^k y` and `y=T^l z` give `T^(k+l) y = y`, hence `k=l=0`. Globally `<=_T` is a **partial** order; totality is orbit-local.
++
++`[RESULT] [from: ALG]` **ORD-2 — shift covariance.** `y <_T z` implies `T^r y <_T T^r z` for every `r`; strictness follows from non-collision at the shifted point. `[COR v1.20]` The **reflection** direction (`T^r y <_T T^r z ⟹ y <_T z`) requires P3 injectivity; P3 is closed `[ALG]` on the shrunken tube (v1.19) and on the explicit Dyadic-certified tube (v1.20), so reflection is `[RESULT] [from: ALG]` at that scope. The former `[NUM-audited]` tag here contradicted the v1.19 P3 closure and is withdrawn.
++
++`[RESULT] [from: ALG]` **ORD-3 — ordered signed-history group.** With `P := iota(M_T) ⊆ G_T`: `P+P ⊆ P`, `P ∩ (−P) = {0}`, `G_T = P ∪ (−P)`. Hence `a <=_G b iff b − a ∈ P` is a translation-invariant total order on the infinite cyclic signed-history group.
++
++`[RESULT] [from: ALG]` **T4 — physical sign realization.** For `[A,B] ∈ G_T` and any admissible `x`, exactly one of `A(x)=B(x)`, `B(x) <_T A(x)`, `A(x) <_T B(x)` holds, matching `[A,B] = 0`, `> 0`, `< 0`. The verdict is constant on each N-2 equivalence class and independent of the base point (both endpoints lie on the common orbit `O_x`). The sign of a signed history is therefore **the orientation of forward reachability between its realized endpoints**, not merely the metalanguage integer `m−n`.
++
++`[RESULT] [from: ALG] [scope: full certified local tube U_T]` **ORD-4 — `Q_true` order witness.** For every residue `j = 0..5`, put `y=T^j x`. Since `U_T` is `T`-invariant, `y in U_T`; L1 therefore gives `Q_true(Fy)<Q_true(y)` for `F=T^6`, and iteration yields
++```text
++r < s  =>  Q_true(T^(6s+j) x) < Q_true(T^(6r+j) x).
++```
++Hence `Q_true` is strictly antitone and therefore **order-reflecting** on each fixed-residue `F`-chain: reachability order on that chain is equivalent to reversed `Q_true` order. The dps=60 executable reproduces all six chains numerically, but the theorem status comes from the exact L1 result, not from sampling.
++
++`[RESULT] [from: ALG] [v1.19]` **P3 — injectivity of `T` on a sufficiently shrunken tube.** N-1 non-collision alone does not imply injectivity across distinct orbits, but a direct derivative bound does. Let
++```text
++A = DT(0) = [[1,-1],[1,0]].
++```
++On the convex box `|rho|,|eta| <= 1/10`,
++```text
++DT-A = [[0, 1-cos eta], [exp(rho)-1, 1-cos eta]],
++||DT-A||_2^2 <= ||DT-A||_F^2 <= 1/81 + 1/20000 < 1/4,
++sigma_min(A) = (sqrt(5)-1)/2 > 1/2.
++```
++Integrating the derivative remainder along the segment from `x` to `y` gives
++```text
++||T(x)-T(y)|| >= (sigma_min(A) - sup||DT-A||_2) ||x-y|| > 0.
++```
++Thus `T` is injective on this box. Because the N-1 tube is existential and may be shrunk while retaining the local closure, choose the certified tube inside the box. On that shrunken tube, the ORD-2 reflection direction and the cross-orbit refinement are `[ALG]`: two primitive orbits are disjoint or one contains a tail of the other, and cross-orbit comparability holds exactly when the orbits merge. `[GUARD]` This is not an explicit maximal-radius or numerical-seed inclusion certificate.
++
++`[GUARD]` **Non-claims and provenance.** (i) No external physical time: the order is defined by existence of a connecting history; indices are metalanguage (SG-NG-1). (ii) **No per-primitive-step `Q_true` monotonicity** — the executable supplies genuine numerical counterexamples: sampled single steps split 192 decreases vs 168 non-decreases, and `Q_true(T^3 x) < Q_true(T^2 x)` fails on at least one admissible seed. (iii) No total order between non-merging orbits is a structural consequence of the reachability definition; the executable's NC-3 line is bookkeeping, not independent computational evidence.
++
++`[GUARD]` `Q_true` is a witness and may never be inverted into the definition of order; `Q_true` ownership remains Dyadic. N-2-ORD orders one certified stream and therefore cannot supply a second recurrence or touch N-5A/SG-NG-20.
++
++#### CLOSED N-2-ORD — Physical order representation
+ 
+ **RID:** `NUMGEN-OPEN-N2-ORDER`  
+ **Status:** CLOSED at v1.6 `[RESULT][from: ALG]` `[scope: local primitive-dyad Track-A tube/orbits]`
+@@ -993,17 +1282,32 @@
+ 
+ `[RESULT]` The physical order is reachability-first, not `Q_true`-defined. Reachability is a partial order on `U_T`, total on each primitive orbit; the N-2 positive cone gives the ordered signed-history group; signed-history sign is physically realized by endpoint reachability orientation.
+ 
+-`[RESULT][from: ALG]` The fixed-residue `F=T^6` witness is exact on the full certified tube: for every `j=0,...,5`, put `y=T^j x in U_T`. L1 gives `Q_true(Fy)<Q_true(y)` for every `y in U_T`, and iteration yields strict antitonicity on `{T^(6r+j)x}_r`. Thus ORD-4 is theorem-level `[ALG]`; the numerical certificate remains an independent regression/counterexample audit.
+-
+ `[GUARD]` Primitive-step/cross-residue monotonicity is false in general; the numerical certificate supplies explicit counterexamples. `[v1.19]` P3 injectivity is now discharged algebraically on a sufficiently shrunken tube, so the ORD-2 reflection/cross-orbit merge refinements are theorem-level on that shrunken scope.
+ 
+ 
+ ---
+ 
+-### CLOSED N-3A — Local deck inducibility / eta-winding
++### §6.4 N-3 representation layer — closed local/abstract results
++
++`[RESULT] [from: ALG]` **N-3A:** the natural lifted primitive dynamics has zero deck index on a sufficiently small forward-invariant one-chart tube, so the induced `eta`-winding homomorphism `G_T -> Deck` is trivial and maximally non-faithful.
++
++`[RESULT] [from: MATH/ALG]` **N-3B:** the already-constructed infinite cyclic history group admits the faithful abstract generator-to-generator isomorphism `G_T ~= widehat(S^1)`.
++
++`[RESULT] [from: ALG]` **N-3C:** the actual primitive pullback of a phase character is
++
++```text
++T^* chi_m = exp(i m(exp(rho)-1)) exp(-i m sin eta) chi_m,
++```
++
++so primitive dynamics is not a constant translation of harmonic labels. Fourier expansion of the sinusoidal factor mixes character sectors.
++
++`[RESULT] [from: MATH/ALG]` **N-3D:** restriction to the finite subgroup `C_N` yields the quotient `G_T/(N G_T) ~= widehat(C_N) ~= Z_N`. For TDR-G this is admissible only as a representation bridge; all dynamical transfer remains forbidden.
++
++`[INTERP]` Track-A history, local eta-winding, and harmonic representation are now explicitly separated: local eta-winding is dynamically trivial, while the character representation is faithful only at the abstract algebraic level.
++
++#### CLOSED N-3A — Local deck inducibility / eta-winding
+ 
+ **RID:** `NUMGEN-N3A-DECK-TRIVIAL`
+-**Status:** CLOSED `[RESULT][from: ALG]` `[scope: sufficiently small one-chart N-1 tube]`
+ 
+ `[RESULT] [from: ALG]` **Natural lifted primitive map.** On
+ 
+@@ -1038,7 +1342,7 @@
+ 
+ ---
+ 
+-### CLOSED N-3B — Abstract circle-character representation
++#### CLOSED N-3B — Abstract circle-character representation
+ 
+ **RID:** `NUMGEN-N3B-CHAR-ISO`
+ **Status:** CLOSED `[RESULT][from: MATH/ALG]` `[scope: abstract representation of the local Track-A group]`
+@@ -1066,7 +1370,7 @@
+ 
+ ---
+ 
+-### CLOSED N-3C — Primitive dynamical character activity (first exact result)
++#### CLOSED N-3C — Primitive dynamical character activity (first exact result)
+ 
+ **RID:** `NUMGEN-N3C-PULLBACK`
+ **Status:** CLOSED at structural level `[RESULT][from: ALG]`; detailed resonance-sector decomposition remains OPEN
+@@ -1103,7 +1407,7 @@
+ 
+ ---
+ 
+-### CLOSED N-3D — Finite-character quotient / representation bridge
++#### CLOSED N-3D — Finite-character quotient / representation bridge
+ 
+ **RID:** `NUMGEN-N3D-FINITE-CHAR`
+ **Status:** CLOSED as pure representation theory `[RESULT][from: MATH/ALG]`; discrete dynamical realization remains OPEN
+@@ -1140,7 +1444,7 @@
+ 
+ ---
+ 
+-### CLOSED N-3C+ — Roots-of-unity projectors / OPEN-9 kinematic boundary
++#### CLOSED N-3C+ — Roots-of-unity projectors / OPEN-9 kinematic boundary
+ 
+ **Status:** CLOSED at representation-kinematic level `[RESULT][from: ALG/MATH]`; the formerly OPEN `q=4,(0,3)` nonlinear cascade item is CLOSED-by-import from the Dyadic owner; universal missing-slot/reachable-basis work remains an Arithmetic-Dynamics interface target, not an NG foundational OPEN.
+ 
+@@ -1204,7 +1508,15 @@
+ 
+ `[GUARD]` **Representation/dynamics boundary.** Character covariance determines allowed residues and impossible charge routes. It does not determine coefficient values or cancellations among multiple allowed routes. In particular, it does not by itself prove the universal low-degree raw anti-holomorphic vanishing pattern or the OPEN-9 missing-slot multiplicities.
+ 
+-### OPEN N-4 — Global/nonlocal dyadic history representations
++### §6.5 N-4 global/nonlocal extension target
++
++`[RESULT] [from: ALG]` The local exact primitive realization is already complete at N-1/N-2, while N-3A proves that its dynamically induced `eta`-winding map is trivial on the one-chart tube.
++
++`[OPEN]` N-4 now asks what survives on larger exact-map invariant domains where genuine `eta`-winding, critical-curve effects, or other recurrence structures may occur. Any nontrivial winding representation must be derived there rather than imported from the abstract isomorphism `G_T ~= Z`.
++
++`[GUARD]` Six-step block count, internal elliptic rotation, lifted eta-winding, and signed history remain distinct objects unless an explicit map is proved.
++
++#### OPEN N-4 — Global/nonlocal dyadic history representations
+ 
+ **RID:** `NUMGEN-OPEN-N4`  
+ **Status:** OPEN — local primitive realization is already supplied by N-1/N-2/N-3
+@@ -1227,7 +1539,47 @@
+ 
+ ---
+ 
+-### CLOSED N-5A — Second co-realized recurrence / event stream
++### §6.6 N-5A / N-5 rational recurrence target
++
++`[RESULT] [from: ALG]` **N-5A CLOSED locally.** Track A is the primitive `T` stream; Track B/S1 is the canonical positive phase-coincidence crossing stream. It is independently event-typed, indefinitely repeatable, co-realized on the same local orbit/tube, ordered by N-2-ORD reachability, and not any fixed blocking `T^m`.
++
++`[RESULT] [from: ALG]` **Bounded synchronization commensurability structure CLOSED.** On a common-order prefix poset, the integer defect
++```text
++Delta_(p:q)=q N_A-p N_B
++```
++is relationally defined (C1), invariant in boundedness under finite prefix-origin changes (C2), invariant under positive common rescaling `(p,q)->(kp,kq)` (C3), and has a unique reduced positive class for indefinitely repeatable streams (C4). Prefix-cofinal repeatability supplies directed unbounded event count without external metric time (SG-NG-25).
++
++`[RESULT] [from: MATH/ALG]` **C5 controls CLOSED.** The abstract periodic language `A^6 B A^7 B` realizes a bounded synthetic `13:2` class; the neighboring `A^6 B A^8 B` fails linearly. This validates the discrimination power of the definition without constituting a physical RTG witness.
++
++`[RESULT] [from: ALG]` **C6 canonical falsifier CLOSED.** The original canonical primitive/section pair is density-resonant at `6` but boundedly commensurate at no positive rational pair because the `6:1` residual grows logarithmically and every off-resonant candidate grows linearly.
++
++`[RESULT] [from: ALG]` **N5-PHYS-1 CLOSED.** The positive and negative phase-coincidence branches `B_+`,`B_-` are physically distinct event predicates and strictly alternate on a sufficiently small tube, giving
++```text
++|N_(B_+)-N_(B_-)| <= 1.
++```
++Thus the first genuine physical bounded class is `1:1`.
++
++`[RESULT] [from: ALG/MATH]` **C7A bounded rational-label theorem CLOSED.** Every certified bounded physical pair has a unique positive-rational invariant `rho_Q`; `1 in Q_RTG^bd`. Bounded realization and dynamic admission are distinct.
++
++`[RESULT]` **C7B-DISC-1 CLOSED.** Frozen DISC-1B PASS and DISC-1D PASS-INT establish `2,3 in Q_RTG^dyn subseteq Q_RTG^bd`.
++
++`[RESULT]` **C7B-DISC-2 CLOSED.** Frozen B-check PASS and D-check PASS on the registered supplementary family establish eight additional labels and add further witnesses for `2` and `3`. The currently established dynamic lower bound is therefore
++
++```text
++{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn.
++```
++
++`[POSTHOC-DIAG] [v1.19]` DISC-2 antipodal-endpoint audit marks 40/136 witness records `CONVENTION-EXPOSED`, with 96 unexposed. Every admitted label retains at least one unexposed witness, so the ten-label existential lower bound is unchanged. Discrete-owner policy action is pending; DISC-1 requires the same audit.
++
++`[OPEN]` **C7B global breadth.** Determine which additional positive rationals occur; no exhaustiveness theorem is claimed.
++
++`[RESULT]` **C7C-WD ADOPTED; C7C-0 CLOSED.** The well-definedness framework (WD-PHYS/CLOSE/DOM/VAL/DESCENT, arithmetic compatibility WD-REP only afterward) is adopted; the orientation swap descends to a representative-independent involution on bounded classes, so `Q_RTG^bd` is closed under `r -> r^(-1)`. No `Q_RTG^dyn` reciprocal closure is claimed.
++
++`[RESULT]` **C7C-M partially resolved (v1.20):** M-1A exact chain identity and M-1B conditional carrier closure on `D_chain` are CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL; WD-VAL on admitted chains PASS; associativity only for admitted bracketings. `[OPEN]` full-interface typed WD-DOM (the frontier), admissibility transfer, carrier identity/inverse, physical commutativity; C7C-A not opened; M-4 HOLD (P2).
++
++`[GUARD]` N-5 therefore has a certified physical rational-label mechanism but is **not yet a derivation of the full field `Q`**. Full realization spectrum and arithmetic remain explicit open obligations.
++
++#### CLOSED N-5A — Second co-realized recurrence / event stream
+ 
+ **RID:** `NUMGEN-OPEN-N5A`  
+ **Status:** CLOSED locally at v1.11 `[RESULT][from: ALG]` `[scope: sufficiently small certified primitive-dyad tube]` — prerequisite discharged for N-5
+@@ -1254,7 +1606,7 @@
+ 
+ ---
+ 
+-### OPEN N-5 — Bounded synchronization commensurability / realized Q-like labels
++#### OPEN N-5 — Bounded synchronization commensurability / realized Q-like labels
+ 
+ **RID:** `NUMGEN-OPEN-N5`  
+ **Active architecture RID:** `NUMGEN-OPEN-N5-COMM-BD`  
+@@ -1262,7 +1614,7 @@
+ 
+ **Question:** Can rational magnitude be represented by equivalence classes of **physically bounded synchronization discrepancy** between two independently certified, co-realized event streams, rather than by a primitive scalar ratio or limiting density?
+ 
+-#### N5-C1 — relational definability — CLOSED
++##### N5-C1 — relational definability — CLOSED
+ 
+ `[RESULT] [from: ALG]` Let `P` be the directed set/poset of finite admissible common-order prefixes under extension. For certified event predicates `A,B`, define
+ ```text
+@@ -1287,7 +1639,7 @@
+ ```
+ for all sufficiently long admissible common-order prefixes in the declared comparison sector. The physical object is the bounded synchronization relation; the rational label is downstream representation.
+ 
+-#### Prefix-cofinal indefinite repeatability
++##### Prefix-cofinal indefinite repeatability
+ 
+ `[DEF]` A certified stream `B` is **prefix-cofinally indefinitely repeatable** on a common-order comparison sector iff
+ ```text
+@@ -1297,7 +1649,7 @@
+ 
+ `[GUARD]` This is successor extensibility through arbitrarily long **finite** relational histories. It does not assume a completed infinite trajectory.
+ 
+-#### N5-C2 — finite-origin/prefix invariance — CLOSED
++##### N5-C2 — finite-origin/prefix invariance — CLOSED
+ 
+ `[RESULT] [from: ALG]` For a fixed finite initial prefix `H_0` and any extension decomposed as `H=H_0 o H_>0`,
+ ```text
+@@ -1311,7 +1663,7 @@
+ ```
+ The origin change is therefore an additive constant. Bounded/unbounded synchronization status is invariant under finite origin shifts **within the same comparison sector**, equivalently on an extension cone/cofinal tail for which deleting `H_0` does not select a different branch. `[COR v1.19]` Branch selection in a genuinely branching prefix structure is not an origin shift and is not covered by C2.
+ 
+-#### N5-C3 — positive integer rescaling invariance — CLOSED
++##### N5-C3 — positive integer rescaling invariance — CLOSED
+ 
+ `[RESULT] [from: ALG]` For every positive integer `k`,
+ ```text
+@@ -1323,7 +1675,7 @@
+ ```
+ The bounded physical relation depends on the proportion, not on a chosen common integer multiple.
+ 
+-#### N5-C4 — uniqueness of reduced positive class — CLOSED
++##### N5-C4 — uniqueness of reduced positive class — CLOSED
+ 
+ `[RESULT] [from: ALG]` Suppose the same indefinitely repeatable pair is bounded for two positive pairs `(p,q)` and `(p',q')`:
+ ```text
+@@ -1345,7 +1697,7 @@
+ ```
+ Thus every boundedly commensurate indefinitely repeatable pair carries a **unique reduced positive integer proportion**.
+ 
+-#### N5-C5 — control package — CLOSED at mathematical-control level
++##### N5-C5 — control package — CLOSED at mathematical-control level
+ 
+ `[RESULT] [from: ALG]` **One-stream reblocking zero-control.** If `B=T^m` is merely a derived blocking of one Track-A stream, then at primitive prefix length `n` the `m:1` defect is `Delta_(m:1)(n)=n-m floor(n/m)`, hence `0 <= Delta < m`; it vanishes at complete block endpoints and is uniformly bounded on arbitrary primitive prefixes. `[COR v1.19]` The prior wording "vanishes identically" was too strong. SG-NG-20 remains decisive: this is a control only and cannot substitute for two independently certified event types.
+ 
+@@ -1385,7 +1737,7 @@
+ 
+ `[GUARD]` C5-SYN-13 is an abstract two-symbol common-order language. It proves mathematical non-emptiness of the criterion and a noninteger reduced class; it is **not** an RTG physical realization and places `13/2` in neither `Q_RTG^bd` nor `Q_RTG^dyn`.
+ 
+-#### N5-C6 — canonical A/B falsifier — CLOSED
++##### N5-C6 — canonical A/B falsifier — CLOSED
+ 
+ `[RESULT] [from: ALG]` Certificate: `NG_N5C6_CANONICAL_PAIR_FALSIFIER_v1.md` + executable audit. For the admissible canonical prefixes `H_M`,
+ ```text
+@@ -1422,7 +1774,7 @@
+ 
+ `[GUARD]` C6 needs no C2 premise to falsify a class: uniform boundedness over all sufficiently long admissible prefixes is defeated by one admissible cofinal/subsequence family with unbounded defect.
+ 
+-#### N5-PHYS-1 — opposite phase-coincidence lock — CLOSED
++##### N5-PHYS-1 — opposite phase-coincidence lock — CLOSED
+ 
+ `[DEF]` On the same sufficiently small certified continuous-dyad tube, define two phase-coincidence event predicates:
+ ```text
+@@ -1458,7 +1810,7 @@
+ ```
+ This is the first genuine RTG positive realization of N-5-COMM-BD.
+ 
+-#### N5-C7A — bounded realized rational-label theorem — CLOSED
++##### N5-C7A — bounded realized rational-label theorem — CLOSED
+ 
+ `[COR] [scope: v1.15 spectrum notation]` v1.15 used `Q_RTG^real` for every physically realized bounded rational label. v1.16 separates bounded realization from strong dynamic admission so boundedness is not silently promoted to genesis-grade dynamics:
+ ```text
+@@ -1495,7 +1847,7 @@
+ ```
+ It does **not** prove that two physically different pairs carrying the same rational invariant are physically identical. Any quotient of physical realizations by equality of `rho_Q` must be explicitly declared.
+ 
+-#### N5-C7B — physical realization breadth / dynamic discrimination — OPEN globally
++##### N5-C7B — physical realization breadth / dynamic discrimination — OPEN globally
+ 
+ `[OPEN]` Determine the breadth of `Q_RTG^bd` and `Q_RTG^dyn`; in particular, no current theorem establishes either spectrum to equal all `Q_(>0)`.
+ 
+@@ -1584,7 +1936,7 @@
+ 
+ `[GUARD]` The frozen gate is label-neutral and same-realization. The positive result does not establish rational arithmetic, does not exhaust either spectrum, and does not allow post-data retuning of deformation axes or thresholds. Further breadth requires a new pre-registration.
+ 
+-#### N5-C7C — physical rational arithmetic — OPEN (C7C-WD ADOPTED; C7C-0 CLOSED)
++##### N5-C7C — physical rational arithmetic — OPEN (C7C-WD ADOPTED; C7C-0 CLOSED)
+ 
+ `[DEF] [v1.18]` **C7C-WD carriers and obligations** (`NG_C7C_WD_C7C0_DESIGN_v1.md`). Let
+ ```text
+@@ -1597,7 +1949,7 @@
+ 
+ `[RESULT] [from: ALG] [v1.18]` **C7C-0 CLOSED — reciprocal.** (`NG_C7C0_RECIPROCAL_CERT_v2.md`.) For `x=(A,B) in R_bd` define `S(A,B):=(B,A)`. Orientation swap leaves the certified streams, domain, co-realization, common-order sector, prefix-cofinal repeatability and provenance unchanged, so `Sx in R_pair` (WD-PHYS; **no boundedness claim at this step**). With `x` at reduced class `p:q`, exactly `Delta^{Sx}_{q:p}(H) = p N_B(H) - q N_A(H) = -Delta^x_{p:q}(H)`, so boundedness is preserved and **only here** `Sx in R_bd`, i.e. `S : R_bd -> R_bd` (WD-CLOSE). `S^2 = id`. By C7A uniqueness `rho_Q(Sx) = q/p = rho_Q(x)^(-1)`. WD-DOM is **trivial for this total unary map** because `D_S = R_bd` — not because `S` is unary; a partial unary operation could still have representative-dependent admissibility. This is precisely why `S` was the correct first test: it isolates WD-VAL and does not exercise the load-bearing binary obligation. WD-VAL and WD-DESCENT follow; `S` descends to an involution `S-bar` on `R_bd/==_Q` represented by `r -> r^(-1)`. **Hence `r in Q_RTG^bd  =>  r^(-1) in Q_RTG^bd`.** `[GUARD]` **No `Q_RTG^dyn` reciprocal-closure theorem is claimed:** that requires `A <-> B` equivariance of the same-realization stability+contingency gate, which `S` does not address. Apart from the self-reciprocal label `1`, the established dynamic spectrum contains no distinct reciprocal partners. `[COR]` v1 of the certificate let `R_bd` membership of `Sx` be concluded at the carrier-preservation step, before the sign identity had decided boundedness; repaired in v2 by the `R_pair`/`R_bd` split.
+ 
+-#### N5-C7C-M — chain composition: partially resolved (v1.20)
++##### N5-C7C-M — chain composition: partially resolved (v1.20)
+ 
+ `[RESULT] [from: ALG]` **M-1A — exact chain identity. CLOSED.** For `x=(A,B)` at class `p:q` and `y=(B,C)` at class `u:v` with `Delta^{AB}_{p:q} = q N_A - p N_B`, `Delta^{BC}_{u:v} = v N_B - u N_C`, identically
+ ```text
+@@ -1648,188 +2000,7 @@
+ 
+ ---
+ 
+-### OPEN N-6 — Continuum completion
+-
+-**RID:** `NUMGEN-OPEN-N6`  
+-**Status:** BLOCKED on N-5; continuous-branch closure is representation/recovery level under SG-NG-19 unless the stronger substrate condition is discharged
+-
+-**Question:** Can real-valued relational magnitude arise as a completion of finite recurrence-comparison observations?
+-
+-**Candidate route:** build rational approximants from N-5 physical comparison classes; define an RTG-native order/convergence criterion; construct a Cauchy-, Dedekind-, or rotation-order completion; then identify the completed object with `R` only after the physical completion object exists.
+-
+-`[OPEN candidate]` **Rotation/Sturmian route.** If N-5A/N-5 produce a pair whose comparison coding is provably a mechanical/Sturmian word (or another class with an equivalent rotation-number theorem), use its asymptotic slope/order cuts as the completion object. Incommensurability alone does **not** imply Sturmian coding or existence of a rotation number; those properties require their own theorem.
+-
+-**Critical guards:**
+-
+-- do not assume `R_+`-valued fundamental frequencies in the premises;
+-- the continuous dyad already lives on an `R^2` chart, so an in-branch recovery of `R` from event order is not by itself a genesis of the continuum substrate (SG-NG-19);
+-- a genesis-grade continuum claim requires a substrate-independence theorem, a non-continuum realization behind a named bridge, or an explicitly tagged postulate.
+-
+-**Later representation:** only after completion may a positive-ratio group be represented additively by `log : R_+ -> R`.
+-
+----
+-
+-### NG-7 — Recurrence holonomy / holonomy content
+-
+-**RID:** `NUMGEN-OPEN-REC-HOL`  
+-**Status:** SPLIT — **NG-7A CLOSED at v1.5**; NG-7B OPEN (physical source / non-Abelian)
+-
+-**Question:** Can relative recurrence data provide the explicit non-integrability diagnostic requested by `RTG_ONTOLOGICAL_FOUNDATIONS` (originally v0.7; live pointer v0.8 §9), RID `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`?
+-
+-**Candidate multiplicative edge data:** For oriented edge `i->j`, let `R_ij` denote a relational recurrence ratio, with reciprocal reversal `R_ji = R_ij^{-1}` where defined.
+-
+-**Candidate log edge field:**
+-
+-```text
+-a_ij = log R_ij.
+-```
+-
+-If node potentials `x_i` exist such that
+-
+-```text
+-a_ij = x_i - x_j,
+-```
+-
+-then every oriented cycle has zero additive holonomy:
+-
+-```text
+-sum_(ij in gamma) s_ij a_ij = 0,
+-```
+-
+-or equivalently multiplicative holonomy
+-
+-```text
+-H_gamma = product_(ij in gamma) R_ij^(s_ij) = 1.
+-```
+-
+-Let `D` be an incidence operator and `C` a cycle-basis operator. For one channel:
+-
+-```text
+-h = C a.
+-```
+-
+-For `d` recurrence channels assembled as edge matrix `A`:
+-
+-```text
+-H = C A,
+-r_hol = rank(H).
+-```
+-
+-(`r_hol` is defined only for genuinely multi-channel data `d>=2`; for `d=1` the primitive observable is the holonomy vector `h` / class `[a]`, never a rank — PI terminology ruling 2026-08-28.)
+-
+-**Required null theorem:**
+-
+-```text
+-A = D^T X  =>  C A = C D^T X = 0.
+-```
+-
+-**Required invariance work:** establish orientation convention, cycle-basis independence of rank, gauge invariance under node-potential shifts, treatment of missing/zero ratios, and relation to graph cohomology.
+-
+-**Scope guard:** `r_hol > 0` is a non-integrability diagnostic, not automatically spacetime curvature. A physical geometry interpretation requires an explicit RTG bridge to frame/connection/metric data.
+-
+-**Potential programme benefit:** If closed, this module may supply a concrete operator for the Foundations' currently OPEN distinction between cycle capacity and physical holonomy content.
+-
+-#### NG-7A — Additive operator / null theorem
+-
+-**Sub-RID:** `NUMGEN-OPEN-REC-HOL-OPERATOR`  
+-**Status:** CLOSED `[RESULT][from: ALG]` `[scope: finite directed multigraph operator layer, field coefficients; Z_N zero-control certified]`  
+-**Certificate:** `NG_NG7A_HOLONOMY_NULL_CERT_v1.md` + `ng7a_holonomy_null_cert_v1.py` / `.log` (12 assertion families, all pass, exit 0)
+-
+-`[RESULT] [from: ALG]` **Null theorem.** `C D^T = 0` as an operator identity; hence `A = D^T X ⟹ C A = 0`. Loops and parallel edges included; a self-loop has zero incidence column and is itself a cycle.
+-
+-`[RESULT] [from: ALG]` **Completeness over field coefficients.** `im D^T = ker(C·)` by the exact dimension count `m − beta = n − c = rank D^T` plus the null theorem, so `h(a) = 0 ⟺ a = D^T x` solvable. `h` therefore descends to an isomorphism `H^1(G;F) := F^E / im D^T ~= F^beta`: the holonomy vector and the cohomology class `[a]` are equivalent **complete** obstructions. On an abstract graph the closure operator to 2-cochains is zero; declaring a 2-complex later restricts its kernel (NG-7B/geometry territory).
+-
+-`[RESULT] [from: ALG]` **Invariance package.** Orientation: simultaneous edge reorientation `(DS, CS, Sa)` leaves `h` fixed; reversing one basis cycle negates only that component; invariant statistics are the zero-set, ranks, and `[a]`. Gauge: `h(a + D^T g) = h(a)`; per-component constant potential shifts are exact gauge (`D^T 1_comp = 0`). Basis: `C -> M C` gives `h -> M h` with the zero-set, `r_hol`, and `[a]` invariant.
+-
+-`[RESULT] [from: ALG]` **Typed statistic and bounds.** `rank(C a) ∈ {0,1}` for every scalar cochain (both values realized in the certificate). For `d>=2`: `r_hol = rank(C A)` is invariant under channel recombination `A -> A R` (`R ∈ GL(d)`), satisfies `r_hol <= min(beta, d)`, and `r_hol = 0 ⟺ A = D^T X`.
+-
+-`[RESULT] [from: ALG]` **Separation instances.** Flat data realize `(beta > 0, r_hol = 0)`. For the field-general full-content direction, because `C` has full row rank `beta`, choose any right inverse `R in F^(E x beta)` satisfying `C R = I_beta`; then `A=R` gives `r_hol=beta`. In the executable `Q` test suite, the simpler concrete Gram witness `A=C^T` also realizes `r_hol=beta`. Thus cycle capacity and holonomy content are certified as independent axes — the operator half of the Foundations diagnostic.
+-
+-`[RESULT] [from: NUM/ALG]` **TDR-G `Z_N` zero-control.** Integer cycle vectors annihilate node-difference `Z_N` phase data mod `N` (rings `N = 6, 8, 12`; random graphs). `[COR v1.19]` A unit defect is detected when it has nonzero projection onto the declared cycle/cohomology sector; a defect on a bridge/pendant edge may be exact node-potential data and therefore invisible to cycle holonomy.
+-
+-`[RESULT] [from: ALG] [v1.19]` **Fundamental-cycle completeness over abelian coefficient groups.** Fix a spanning forest and its fundamental **integral** cycle basis. For an edge cochain with values in any abelian coefficient group (including `Z_N`), vanishing sums on all fundamental cycles imply exact node-potential data: integrate the cochain along each tree to define vertex potentials; tree-edge residuals vanish by construction, and every non-tree residual equals its fundamental-cycle sum and therefore vanishes. No division or field-rank argument is used. `[GUARD]` The integral-basis qualification is load-bearing: arbitrary nonprimitive integer rescaling of cycle rows need not preserve completeness modulo `N`.
+-
+-`[GUARD]` **Declared-domain convention.** Data must be total on the declared edge set; partial data restrict to the support subgraph, on which `(D, C, beta)` are recomputed. Missing ratios are excluded, never imputed.
+-
+-`[GUARD]` For a single scalar channel (`d=1`), ordinary matrix rank of `H` is at most one; a richer holonomy-rank statistic requires multiple independent channels or a separately defined non-Abelian invariant. The word *rank* must therefore be typed by codomain/data structure.
+-
+-`[RESULT] [from: ALG]` `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.8 §9 | RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC]` **Source narrowing already known:** the discrete TDR-G phase sector is node-difference-flat by construction, so it is a required zero-control rather than the first positive-source target.
+-
+-#### NG-7B — RTG-native non-integrable source / non-Abelian extension
+-
+-**Sub-RID:** `NUMGEN-OPEN-REC-HOL-SOURCE`  
+-**Status:** OPEN / physical-source layer
+-
+-The live positive-source search is narrowed to non-node-difference content such as continuous frame/connection data, birth/history data, spin/quaternionic structure, or OPEN-M content. A non-Abelian version may later use loop holonomies in `SU(2)` modulo gauge/conjugation, but no "non-Abelian holonomy rank" is defined until a precise invariant is adopted and certified.
+-
+-`[GUARD]` Closing NG-7A discharges only the operator/null half of the Foundations diagnostic. It does not prove that RTG supplies nonzero physical holonomy or curvature; that is NG-7B plus the relevant geometry bridge.
+-
+----
+-
+-### OPEN NG-8 — Functorial compatibility / “two fives”
+-
+-`[OPEN]` **Three-track roadmap after N-1/N-2.** Track A supplies a concrete local endomorphism-history object and its signed completion. Track B constructs physically distinguishable finite multiplicity invariants at declared scopes. Track C constructs cyclic/character invariants. These are treated as different invariants/representations of the certified relational architecture `C_NG`, not as three objects that must be mapped into a hypothetical primitive numeral container.
+-
+-**RID:** `NUMGEN-OPEN-TWO-FIVES`  
+-**Status:** ACTIVE conceptually; NG-8A and NG-8B CLOSED, full cross-track theorem OPEN
+-
+-**Question:** Why do distinct relational invariants such as five nodes/states, five event repetitions, five windings, and the fifth harmonic admit compatible arithmetic labels and operations?
+-
+-**Guard:** These physical structures are not identical. `5 in N` must not be conflated with the cyclic group `Z_5`, where `[5]=[0]`.
+-
+-**Candidate theorem strategy:** construct physically implemented comparison maps/functors between the relevant invariants and prove compatibility with their native compositions. Examples of arithmetic images to test include:
+-
+-```text
+-E^m E^n = E^(m+n)
+-chi_m chi_n = chi_(m+n)
+-(E^m)^n = E^(mn)
+-(chi_m)^n = chi_(mn).
+-```
+-
+-**Open issue:** finite object/state multiplicity and recurrence/harmonic exponent arise from different constructions. Their compatibility must be proved through the shared relational architecture and declared maps; reuse of the same numeral is not evidence by itself.
+-
+-#### NG-8A — Ordinal-to-cardinal orbit-state compatibility
+-
+-**Sub-RID:** `NUMGEN-OPEN-TWO-FIVES-ORBIT-CARDINAL`  
+-**Status:** CLOSED `[RESULT][from: ALG]` `[scope: local primitive-dyad tube U_T]`  
+-**Certificate:** `NG_NG8A_ORBIT_CARDINAL_CERT_v1.md`
+-
+-For an admissible initial state `x` and finite event count `m`, define the post-event state collection
+-
+-```text
+-S_m^+(x) = {T x, T^2 x, ..., T^m x},
+-S_0^+(x) = emptyset.
+-```
+-
+-The orbit-evaluation map from the `m` event occurrences to their post-event states is injective by N-1 primitive-orbit non-collision and surjective by construction. Therefore the event history and post-event state collection are physically equinumerous; ordinary cardinality `m` is the mathematical representation, not the premise.
+-
+-`[GUARD]` The older position-set convention `{x,Tx,...,T^(m-1)x}` counts `m` positions but only `m-1` transitions. NG-8A uses the post-event convention when speaking of `m` primitive events.
+-
+-`[DEF]` **State-counting predicate (SG-NG-11 discharge).** The Track-B counting equivalence used in NG-8A is identity of the gauge-reduced present state on `U_T`. Distinct tube states are distinct points of the gauge-reduced chart `(rho,eta)` and are therefore physically distinguishable at this scope by the declared full reduced present state. `[COR v1.19]` The earlier shorthand "`Q_true` and/or relational phase" was not a separating family: `(a,0)` and `(-a,0)` have the same `Q_true` and `eta`. The theorem uses identity of the full reduced state, not that insufficient shorthand. "Physically equinumerous" is asserted relative to this declared predicate.
+-
+-#### NG-8B — Multiplication by physical re-blocking
+-
+-**Sub-RID:** `NUMGEN-OPEN-TWO-FIVES-REBLOCK`  
+-**Status:** CLOSED `[RESULT][from: ALG]` `[scope: local primitive-dyad tube U_T]`  
+-**Certificate:** `NG_NG8B_REBLOCK_MULT_CERT_v1.md`
+-
+-For each positive block size `m`, `B_m=T^m` generates the free submonoid `<T^m>`. For every `k>=0`,
+-
+-```text
+-(T^m)^k = T^(mk).
+-```
+-
+-The equality is identity of the same ordered primitive event history under two groupings, not merely equality of endpoints. The RTG-native operation is repeated block concatenation; `mk` is the standard mathematical representation of the resulting repeated-addition count.
+-
+-`[GUARD]` `T^m` is a derived block/coarse-graining of the same Track-A stream, not a second independently certified event type. NG-8B therefore does not close N-5A or produce a physical rational ratio from one generator.
+-
+-`[GUARD]` **No commutativity claim from grouping alone** *(imported from `NG_NG8B_REBLOCK_MULT_CERT_v1` §9.7)*. Within Track A the two groupings `(T^m)^k` and `(T^k)^m` flatten to the same primitive history (both are `T^(mk)`); this inherits metalanguage integer commutativity and is not a separate physical law. Any claim that a physical binary multiplication is independently commutative **across distinct counting realizations/tracks** belongs to later NG-8 compatibility work.
+-
+-`[GUARD]` NG-8A/B close only the local Track-A→finite-state equinumerosity seed and Track-A multiplication/re-blocking seed. Full network/cardinal and Track-C compatibility remains OPEN.
+-
+----
+-
+-### N-5A-S1 — Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11
++#### N-5A-S1 — Second-stream section-crossing search `[COR: v1.7 verdict]` / CLOSED v1.11
+ 
+ **RID:** `NUMGEN-OPEN-N5AS1-SECTION`  
+ **Correction memo:** `NG_N5AS1_LONG_HORIZON_CORRECTION_v1.md`  
+@@ -1900,7 +2071,7 @@
+ 
+ `[RESULT] [from: THM] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.10 §6.14 | DYAD-THM-PRIM-CTR]` **Explicit-domain boundary CLOSED (v1.20).** The Dyadic owner certifies an explicit primitive contraction and six-phase invariant tube: `0 < Q - (3/2)Q^2 <= Q(T^6 x) <= Q - (1/2)Q^2 < Q` for `Q <= 1/400`, with `U = {0 < Q <= 1/625}` and `U_T = U_{j<6} T^j(U)`. **Corollary `[ALG]`:** the canonical long-horizon seed `(rho,eta) = (1/100, 1/250)` has `Q_0 = 19/250000 < 1/625`, so it lies in `U`; the N-1 / N-2-ORD tube-membership premise for that seed is now theorem-grade, not `[NUM]`. **Corollary `[ALG]`:** with the owner's enclosure `U_T ⊂ {Q < 2209/10^6}` and `Q >= (1/2)(rho^2 + eta^2)`, every point of the explicit tube satisfies `|rho|,|eta| < 0.0665 < 1/10`, so the whole explicit tube sits inside the v1.19 P3 injectivity box; N-1 / N-2-ORD may be exhibited on a **named explicit tube**, not only a shrunken existential one. **Ownership unchanged:** L1 remains a Number Genesis theorem; `DYAD-THM-PRIM-CTR` is an independent upstream strengthening. **NUMGEN-side consumer acceptance recorded**; upstream Dyadic consumer-row synchronization (v6.4.10 "acceptance pending") is deferred to the consumer-sync pass. `[GUARD]` seed ∈ certified tube ⇏ all GAP-LOCK angular hypotheses certified by Dyadic; those remain Number Genesis obligations discharged by L-MONO / L-PHASE.
+ 
+-### N-5A-S1-INF — CLOSED at v1.11
++#### N-5A-S1-INF — CLOSED at v1.11
+ 
+ **RID:** `NUMGEN-OPEN-N5AS1-INF`  
+ **Certificate:** `NG_N5AS1_INF_CLOSURE_v1.md` + `ng_n5as1_inf_closure_cert_v1.py` / `.log`
+@@ -2086,415 +2257,270 @@
+ 
+ ---
+ 
+-### OPEN NG-10 — Genesis saturation and counting truncation
++### §6.7 N-6 real completion target
+ 
+-**RID:** `NUMGEN-OPEN-GENESIS-TRUNCATION`  
+-**Status:** OPEN / cross-ledger diagnostic
++`[HYP]` **Classification-first real representation.** Incommensurable relational comparison should receive an R-like label only after the comparison structure itself is physically certified. Candidate representations remain Cauchy completion, Dedekind/order cuts, or a rotation-number construction **if** the physical comparison stream is first proved to have the required mechanical/Sturmian/ergodic structure. Incommensurability by itself does not imply a Sturmian coding or an existing rotation number.
+ 
+-`[RESULT]` `[from: NUM]` `[scope: reduced birth-race model]` `[source: RTG_GENESIS_GEOMETRY_DSN_v2.8.4 §6.6; RID: GEN-ART-SATURATION]` Genesis contains an artifact-certified saturation ceiling `Q_d* ~ 1.13e-2` in the reduced `P4` birth-race sector.
++`[INTERP]` The programme therefore need not claim that irrational relations are ontologically manufactured by completing already-primitive rationals. Completion is a mathematical representation route for a certified order/comparison structure.
+ 
+-**Question:** Does a bounded dynamical amplitude imply a finite bound on distinguishable event repetition in that sector?
++`[GUARD]` Because the current realization already uses a continuous state chart, an in-branch N-6 theorem is a recovery/representation theorem unless SG-NG-19 is discharged. The stronger claim "RTG generates the continuum substrate" remains unavailable.
+ 
+-`[GUARD]` **Bounded amplitude does not imply bounded history.** A state variable may converge or cycle while the event history remains indefinitely extensible. A finite repetition cap follows only with an additional theorem such as a uniform positive lower bound on a monotone per-event increment, a finite-state recurrence quotient that collapses histories, or a terminal-event condition. The heuristic estimate `N_max ~ Q_d*/delta Q_d` is admissible only if a strictly positive lower bound `delta Q_d` is proved over the relevant pre-saturation sector.
++#### OPEN N-6 — Continuum completion
+ 
+-**Potential benefit:** NG-10 is a direct stress test of the distinction between bounded state and unbounded history established by N-1B/N-1C.
++**RID:** `NUMGEN-OPEN-N6`  
++**Status:** BLOCKED on N-5; continuous-branch closure is representation/recovery level under SG-NG-19 unless the stronger substrate condition is discharged
+ 
+----
++**Question:** Can real-valued relational magnitude arise as a completion of finite recurrence-comparison observations?
+ 
+-### OPEN NG-9 — External mathematics/physics consequences
++**Candidate route:** build rational approximants from N-5 physical comparison classes; define an RTG-native order/convergence criterion; construct a Cauchy-, Dedekind-, or rotation-order completion; then identify the completed object with `R` only after the physical completion object exists.
+ 
+-**RID:** `NUMGEN-OPEN-EXTERNAL`  
+-**Status:** OPEN / hypothesis registry only
++`[OPEN candidate]` **Rotation/Sturmian route.** If N-5A/N-5 produce a pair whose comparison coding is provably a mechanical/Sturmian word (or another class with an equivalent rotation-number theorem), use its asymptotic slope/order cuts as the completion object. Incommensurability alone does **not** imply Sturmian coding or existence of a rotation number; those properties require their own theorem.
+ 
+-Candidate areas:
++**Critical guards:**
+ 
+-- relational time: separation of event order from duration/recurrence measure;
+-- spectral/recurrence reconstruction of geometry;
+-- finite distinguishability and harmonic aliasing/quantization;
+-- number/ratio interpretation of dimensionless physical observables;
+-- continuum-limit discipline in UV/quantum-gravity contexts.
++- do not assume `R_+`-valued fundamental frequencies in the premises;
++- the continuous dyad already lives on an `R^2` chart, so an in-branch recovery of `R` from event order is not by itself a genesis of the continuum substrate (SG-NG-19);
++- a genesis-grade continuum claim requires a substrate-independence theorem, a non-continuum realization behind a named bridge, or an explicitly tagged postulate.
+ 
+-**Current verdict:** No external open problem is claimed solved. UV divergences, quantum-gravity time, fine-tuning, physical constants, or set-theoretic foundations must not be advertised as resolved by the Number Genesis framework without a new theorem or empirical prediction.
++**Later representation:** only after completion may a positive-ratio group be represented additively by `log : R_+ -> R`.
+ 
+ ---
+ 
+-## §3. Scope Guards
++### §6.8 NG-7 recurrence holonomy — NG-7A closed / NG-7B open
+ 
+-**[SG-NG-1] Metalanguage ≠ ontology.** Mathematical use of `N,Z,Q,R` in a proof does not mean RTG assumes them as primitive physical quantities. Conversely, writing an isomorphism to `N` does not by itself prove physical emergence.
++`[RESULT] [from: ALG] [scope: finite directed multigraph operator layer; field coefficients plus fundamental-integral-cycle completeness over abelian coefficient groups]` **NG-7A CLOSED.** Null theorem `C D^T = 0`; completeness `im D^T = ker(C·)` over field coefficients making `h = Ca` and `[a] ∈ H^1(G;F) ~= F^beta` equivalent complete obstructions; orientation, gauge, and cycle-basis invariance with the invariant statistics identified; the PI-typed statistic (scalar observable is `h`/`[a]`, never a rank; `r_hol = rank(CA)` reserved for `d>=2`, channel-GL invariant, `<= min(beta,d)`, zero iff flat); separation instances certifying **cycle capacity ≠ holonomy content** in both directions (field-general full-rank witness by a right inverse of `C`; executable `Q` witness `A=C^T`); the mandatory TDR-G `Z_N` zero-control with **cycle-sensitive** unit-defect detection; and `[v1.19]` fundamental-integral-cycle completeness over arbitrary abelian coefficient groups by spanning-forest integration. Certificate: `NG_NG7A_HOLONOMY_NULL_CERT_v1.md` (original NG-7A package) plus the v1.19 in-ledger extension.
+ 
+-**[SG-NG-2] No time-reversal inference.** Group completion to `Z` does not imply that physical RTG histories are reversible. Negative elements may encode formal/oriented history differences.
++`[RESULT] [from: ALG]` **Foundations export.** T1–T7 discharge the operator half of `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`. D15 OFN-side synchronization is complete in OFN v0.8 (RF-O08-10); the OFN whole target remains ACTIVE for physical source, non-Abelian extension, and curvature.
+ 
+-**[SG-NG-3] No cross-branch dynamics transfer.** Character restriction between `S^1` and `Z_N` is a representation bridge only; it does not transfer continuous sine coupling, normal-form coefficients, TDR-G policies, birth rates, or other dynamical content.
++`[GUARD]` Fundamental-integral-cycle completeness over `Z_N` is now certified, but completeness for an arbitrary nonprimitive/rescaled integer cycle-row presentation is not implied. SG-NG-7 (holonomy ≠ curvature) is unchanged; the ring `Z_N` defect residue is not identified with Track-C winding/character labels absent a proved map; no non-Abelian rank exists until NG-7B defines and certifies its invariant (Case E2 additionally requires its flatness and topology guards).
+ 
+-**[SG-NG-4] Finite quotient ≠ continuum-limit theorem.** `Z -> Z/NZ` and roots-of-unity embeddings do not establish that TDR-G converges dynamically to the continuous dyad as `N->infinity`.
++`[OPEN]` **NG-7B.** Positive-source candidates are continuous frame/connection data, birth/history data, spin/quaternionic structure, or OPEN-M content. No positive holonomy or curvature claim follows from NG-7A alone.
+ 
+-**[SG-NG-5] Do not assume the continuum before N-6.** Fundamental recurrence data must not be postulated as arbitrary real numbers if the stated goal is to derive the real continuum.
++#### NG-7 — Recurrence holonomy / holonomy content
+ 
+-**[SG-NG-6] Frequency is not primitive absolute time.** Any physical frequency notion must be relational or recurrence-based; cycles per external second cannot be used as the foundational definition.
++**RID:** `NUMGEN-OPEN-REC-HOL`  
++**Status:** SPLIT — **NG-7A CLOSED at v1.5**; NG-7B OPEN (physical source / non-Abelian)
+ 
+-**[SG-NG-7] Holonomy ≠ curvature without bridge.** Nonzero recurrence holonomy certifies non-integrability of recurrence data, not geometric curvature by itself.
++**Question:** Can relative recurrence data provide the explicit non-integrability diagnostic requested by `RTG_ONTOLOGICAL_FOUNDATIONS` (originally v0.7; live pointer v0.8 §9), RID `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`?
+ 
+-**[SG-NG-8] `p=6` is a realization, not number ontology.** The dyadic order-6 resonance is an exact property of the selected continuous generator; the Number Genesis framework must not derive arithmetic from the special value six alone.
++**Candidate multiplicative edge data:** For oriented edge `i->j`, let `R_ij` denote a relational recurrence ratio, with reciprocal reversal `R_ji = R_ij^{-1}` where defined.
+ 
+-**[SG-NG-9] Standard mathematics is not novel RTG mathematics.** Free monoids, group completion, `pi_1(S^1)`, Pontryagin duality, cyclic characters, and graph cohomology are established inputs. Novelty must lie in RTG-specific identification, bridge theorems, or consequences.
++**Candidate log edge field:**
+ 
+-**[SG-NG-10] No external-problem overclaim.** The framework currently reformulates and may constrain problems; it has not yet solved quantum gravity, UV divergence, fine tuning, foundations of set theory, or any named external open problem.
++```text
++a_ij = log R_ij.
++```
+ 
+-**[SG-NG-11] Strict equivalence ≠ counting equivalence.** Gauge-orbit/isomorphism equivalence is generally finer than the event-type equivalence used for counting. A coarser counting predicate must be declared and justified; it may not silently erase physical distinctions.
++If node potentials `x_i` exist such that
+ 
+-**[SG-NG-12] Formal free monoid ≠ physical unbounded repetition.** Standard mathematics permits formal words `E^n` once a symbol `E` is given. RTG realizes an unbounded natural-number sector only if successor extensibility is established in the physical dynamics or explicitly assumed.
++```text
++a_ij = x_i - x_j,
++```
+ 
+-**[SG-NG-13] Spectator independence is an admissibility condition.** Inert external context may be quotiented out only when it neither influences nor is changed by the event under the declared boundary semantics.
++then every oriented cycle has zero additive holonomy:
+ 
+-**[SG-NG-14] Connected context is not automatically spectator.** If closure relations couple an external node to the support, incident relational variables may be constrained and may change when the internal state changes. Such data belong to the boundary interface unless causal irrelevance is proved.
++```text
++sum_(ij in gamma) s_ij a_ij = 0,
++```
+ 
+-**[SG-NG-15] History record is not automatically physical memory.** Treating the full past relational trajectory as part of the physical present state would make non-collapse trivial. N-1C must instead identify a present/future relational distinction, or explicitly adopt history-as-state as a physical postulate and tag that choice.
++or equivalently multiplicative holonomy
+ 
+-**[SG-NG-16] Winding label is not yet a certified physical counter.** The dyadic winding index may label lifted histories, but its certified invisibility to periodic trigonometric observables prevents using it as an N-1C separator without an additional bridge showing physical accessibility or future dynamical effect.
++```text
++H_gamma = product_(ij in gamma) R_ij^(s_ij) = 1.
++```
+ 
+-**[SG-NG-17] Boundary isomorphism requires dynamical equivariance.** Matching boundary cardinality, graph shape, or raw phase values is insufficient for strict compatibility. The attachment map, gauge-reduced constraints, orientation policy, and local transition must commute under the proposed isomorphism.
++Let `D` be an incidence operator and `C` a cycle-basis operator. For one channel:
+ 
+-**[SG-NG-18] Typed-object non-conflation for radial coefficients.** `[COR v1.20]` Primitive ray burst (`37/40`, carrying the `-(5/24)Q^(5/2)` half-power term) ≠ raw fixed-radius angular mean (`47/54`) ≠ normalized-chart observable ≠ long-orbit backbone. Only the leading `-Q^2` transfers without an explicit representation/observable bridge. Source: Dyadic v6.4.10 `[DEF]` (distinct objects) and `[COR v6.4.10]` (half-power term; averaging operator). The former "provenance unresolved upstream" wording is withdrawn.
++```text
++h = C a.
++```
+ 
+-**[SG-NG-19] Continuum substrate ceiling.** A closure of N-6 obtained solely inside the continuous dyad is a representation/recovery theorem relative to a substrate already modeled on a continuum chart. It may not be called genesis of the continuum substrate unless (i) a theorem proves the construction is substrate-independent in the required sense, (ii) a non-continuum realization is connected by a named bridge theorem, or (iii) the continuum assumption is explicitly retained as a tagged postulate.
++For `d` recurrence channels assembled as edge matrix `A`:
+ 
+-**[SG-NG-20] Single-generator ratio / co-realization guard.** Ratios of powers or blockings of the one certified generator `T` are standard localization/re-indexing of Track A and do not close N-5. N-5 requires two independently certified event/recurrence types **co-realized in one admissible physical sector** together with a declared RTG-native causal/order relation for comparing their occurrences. External clock synchronization or pre-existing real-valued frequencies are inadmissible foundational substitutes.
++```text
++H = C A,
++r_hol = rank(H).
++```
+ 
+-**[SG-NG-21] Reserved.** Number reserved for the pending substrate-arity / derived-cardinal non-identity guard (programme-review decision D10: the two-relata structure of the primitive dyad is arity/bookkeeping data and must not be silently identified with a derived Track-B cardinal). Reservation prevents future numbering collision; content activates only on PI ruling.
++(`r_hol` is defined only for genuinely multi-channel data `d>=2`; for `d=1` the primitive observable is the holonomy vector `h` / class `[a]`, never a rank — PI terminology ruling 2026-08-28.)
+ 
+-**[SG-NG-22] Relational-arrow / representation primitivity guard.** No claim that additive/difference structure is physically prior to ratio/proportion structure, or vice versa, is admissible from notation alone. A primitivity claim requires both (i) a certified physical mechanism and (ii) a certified sector gauge/covariance. Admissible examples of representation mechanisms include the free-exponent map of a certified endomorphism monoid, a genuine logarithmic group isomorphism for an independently certified positive multiplicative sector, and cover/character constructions for compact phase. An admissible relational arrow may not be silently replaced by a primitive numerical ratio, difference, logarithm, or coordinate label. In particular, quotient and angle-difference descriptions of the same `U(1)` invariant do not constitute evidence of ontological priority.
++**Required null theorem:**
+ 
+-**[SG-NG-23] Non-relabeling ≠ nontrivial commensurability.** Showing that a recurrence/event stream is not a fixed blocking `T^m` is necessary for N-5A independence but does not by itself establish incommensurability, a nontrivial Q-like commensurability class, or an R-like invariant. Density limits, subleading discrepancy laws, and asymptotic slip constants must be separately typed. In particular, continuous-dyad constants built from `pi`, `exp`, `tau`, or other already-real-valued chart/normal-form data are representation-level diagnostics under SG-NG-19 and OPEN-P0 unless a substrate-independence or named bridge theorem licenses stronger foundational use.
++```text
++A = D^T X  =>  C A = C D^T X = 0.
++```
+ 
+-**[SG-NG-24] Rational density ≠ physical commensurability.** A rational limiting event-density, or even a sublinear relative synchronization defect, is insufficient by itself for a genesis-grade Q-like commensurability claim. The active N-5 candidate requires a certified common-order integer synchronization defect to remain bounded, or a separately proved stronger common-measure criterion. Any weaker quotient that discards an **unbounded certified relational discrepancy** must state and physically justify that information loss explicitly. The canonical A/B pair motivates this guard: its leading event-density tends to `6`, while its certified physical 7-gap count / synchronization discrepancy grows like `log M`.
++**Required invariance work:** establish orientation convention, cycle-basis independence of rank, gauge invariance under node-potential shifts, treatment of missing/zero ratios, and relation to graph cohomology.
+ 
+-**[SG-NG-25] Prefix divergence ≠ external time.** Statements such as `N_B(H) -> infinity` in N-5 mean directed/cofinal unboundedness of **finite event counts** under certified common-order prefix extension. They do not introduce, imply, or require an external clock, global duration parameter, completed physical infinity, real-valued time coordinate, or actually completed infinite trajectory. The primitive statement is successor extensibility: every finite admissible prefix can be extended to contain further certified events.
++**Scope guard:** `r_hol > 0` is a non-integrability diagnostic, not automatically spacetime curvature. A physical geometry interpretation requires an explicit RTG bridge to frame/connection/metric data.
+ 
+-**[SG-NG-26] Common-source finite-multiplicity triviality.** `[v1.18: definition supplied; the guard was invoked in DISC material from v1.16 onward without a section-3 entry]` If two certified streams `A, B` are fixed finite refinements/coarsenings of a common prefix-cofinal parent stream `L`, with `N_A = m_A L + O(1)` and `N_B = m_B L + O(1)` for reasons independent of the active dynamics, then their bounded class `red(m_A, m_B)` is forced by predicate multiplicity (`C7B-ALG-T1`) and is a **physical positive control**. It certifies operation of the C1–C4 bounded-defect machinery but does not by itself populate the dynamically realized spectrum `Q_RTG^dyn`. A discrimination certificate discharges this guard either by proving structurally that no such common-parent multiplicity factorization exists, or by a matched null/control dynamics under which the same predicates change class. The frozen DISC same-realization gate discharges it for admitted witnesses: a deformation-invariant factorization would force the same class at every `k` (`C7B-ALG-T1`), contradicting observed contingency; letting `m_A, m_B` vary with `k` is merely `C7B-ALG-T2` periodicity triviality and does not rescue the objection.
++**Potential programme benefit:** If closed, this module may supply a concrete operator for the Foundations' currently OPEN distinction between cycle capacity and physical holonomy content.
+ 
++##### NG-7A — Additive operator / null theorem
+ 
++**Sub-RID:** `NUMGEN-OPEN-REC-HOL-OPERATOR`  
++**Status:** CLOSED `[RESULT][from: ALG]` `[scope: finite directed multigraph operator layer, field coefficients; Z_N zero-control certified]`  
++**Certificate:** `NG_NG7A_HOLONOMY_NULL_CERT_v1.md` + `ng7a_holonomy_null_cert_v1.py` / `.log` (12 assertion families, all pass, exit 0)
+ 
+-`[GUARD]` **Proof order ≠ ontology order.** The N-1→N-2→N-5→N-6 certificate dependencies do not imply that the represented numerical structures are ontologically generated in the same sequence.
++`[RESULT] [from: ALG]` **Null theorem.** `C D^T = 0` as an operator identity; hence `A = D^T X ⟹ C A = 0`. Loops and parallel edges included; a self-loop has zero incidence column and is itself a cycle.
+ 
+----
++`[RESULT] [from: ALG]` **Completeness over field coefficients.** `im D^T = ker(C·)` by the exact dimension count `m − beta = n − c = rank D^T` plus the null theorem, so `h(a) = 0 ⟺ a = D^T x` solvable. `h` therefore descends to an isomorphism `H^1(G;F) := F^E / im D^T ~= F^beta`: the holonomy vector and the cohomology class `[a]` are equivalent **complete** obstructions. On an abstract graph the closure operator to 2-cochains is zero; declaring a 2-complex later restricts its kernel (NG-7B/geometry territory).
+ 
+-## §4. Layer Routing
++`[RESULT] [from: ALG]` **Invariance package.** Orientation: simultaneous edge reorientation `(DS, CS, Sa)` leaves `h` fixed; reversing one basis cycle negates only that component; invariant statistics are the zero-set, ranks, and `[a]`. Gauge: `h(a + D^T g) = h(a)`; per-component constant potential shifts are exact gauge (`D^T 1_comp = 0`). Basis: `C -> M C` gives `h -> M h` with the zero-set, `r_hol`, and `[a]` invariant.
+ 
+-```text
+-NG0   RTG relational ontology / programme ceiling
+-  -> NG1   repeatable event/history composition
+-  -> NG2   unsigned/signed repetition algebra
+-       -> N-2-ORD   physical order representation [CLOSED v1.6]
+-  -> NG3   phase/winding/character representations
+-  -> NG3B  finite phase quotient / distinguishability
++`[RESULT] [from: ALG]` **Typed statistic and bounds.** `rank(C a) ∈ {0,1}` for every scalar cochain (both values realized in the certificate). For `d>=2`: `r_hol = rank(C A)` is invariant under channel recombination `A -> A R` (`R ∈ GL(d)`), satisfies `r_hol <= min(beta, d)`, and `r_hol = 0 ⟺ A = D^T X`.
+ 
+-N-4   domain-extension module orthogonal to NG1/NG3:
+-      tests how far Track-A freeness and cyclic representations survive beyond the local tube
++`[RESULT] [from: ALG]` **Separation instances.** Flat data realize `(beta > 0, r_hol = 0)`. For the field-general full-content direction, because `C` has full row rank `beta`, choose any right inverse `R in F^(E x beta)` satisfying `C R = I_beta`; then `A=R` gives `r_hol=beta`. In the executable `Q` test suite, the simpler concrete Gram witness `A=C^T` also realizes `r_hol=beta`. Thus cycle capacity and holonomy content are certified as independent axes — the operator half of the Foundations diagnostic.
+ 
+-N-5A  second co-realized recurrence/event stream
+-  -> NG5   commensurability / rational structure
+-  -> NG6   continuum/order completion
++`[RESULT] [from: NUM/ALG]` **TDR-G `Z_N` zero-control.** Integer cycle vectors annihilate node-difference `Z_N` phase data mod `N` (rings `N = 6, 8, 12`; random graphs). `[COR v1.19]` A unit defect is detected when it has nonzero projection onto the declared cycle/cohomology sector; a defect on a bridge/pendant edge may be exact node-potential data and therefore invisible to cycle holonomy.
+ 
+-NG8A/B seed ordinal-cardinal/re-blocking compatibility;
+-NG8 full cross-track counting compatibility remains downstream.
++`[RESULT] [from: ALG] [v1.19]` **Fundamental-cycle completeness over abelian coefficient groups.** Fix a spanning forest and its fundamental **integral** cycle basis. For an edge cochain with values in any abelian coefficient group (including `Z_N`), vanishing sums on all fundamental cycles imply exact node-potential data: integrate the cochain along each tree to define vertex potentials; tree-edge residuals vanish by construction, and every non-tree residual equals its fundamental-cycle sum and therefore vanishes. No division or field-rank argument is used. `[GUARD]` The integral-basis qualification is load-bearing: arbitrary nonprimitive integer rescaling of cycle rows need not preserve completeness modulo `N`.
+ 
+-NG7A additive holonomy operator/null theorem
+-  -> NG7B RTG-native non-integrable source / geometry interface
+-```
++`[GUARD]` **Declared-domain convention.** Data must be total on the declared edge set; partial data restrict to the support subgraph, on which `(D, C, beta)` are recomputed. Missing ratios are excluded, never imputed.
+ 
+-| Question | Layer | Canonical object/tool |
+-|---|---|---|
+-| What is physically primitive? | NG0 | RTG ontology / OPEN-P0 programme ceiling |
+-| How does counting arise? | NG1 | finite histories, primitive `T` transformation monoid |
+-| How do signed counts arise? | NG2 | group completion / oriented history differences |
+-| How is order represented physically? | N-2-ORD `[CLOSED v1.6]` | reachability order `<=_T` + N-2 positive cone; `Q_true` as residue-chain witness |
+-| How is count represented in phase? | NG3 | winding, deck action, circle characters |
+-| What does finite distinguishability do? | NG3B | `Z -> Z/NZ`, character restriction |
+-| How far do local results extend? | N-4 | larger exact-map invariant domains / recurrence sectors |
+-| Where does a second recurrence come from? | N-5A | two co-realized certified event streams + common order |
+-| How do ratios arise? | NG5 | bounded synchronization classes -> unique rational invariant (C7A); `Q_RTG^bd`/`Q_RTG^dyn` separate bounded realization from strong dynamic admission; ten dynamic labels established by DISC-1/DISC-2; `Q_RTG^bd` reciprocal-closed (C7C-0); global breadth and full arithmetic remain OPEN |
+-| How does continuum/order completion arise? | NG6 | completion of N-5 classes; representation-level ceiling in continuous branch |
+-| How can cycle data detect non-integrability? | NG7A | edge cochains, cycle matrix, null theorem |
+-| What supplies nonzero physical holonomy? | NG7B | non-node-difference RTG source + geometry bridge |
+-| Why do numeral labels agree across tracks? | NG8 | physical comparison maps / universal counting compatibility |
++`[GUARD]` For a single scalar channel (`d=1`), ordinary matrix rank of `H` is at most one; a richer holonomy-rank statistic requires multiple independent channels or a separately defined non-Abelian invariant. The word *rank* must therefore be typed by codomain/data structure.
+ 
+-Routing rules:
++`[RESULT] [from: ALG]` `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.8 §9 | RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC]` **Source narrowing already known:** the discrete TDR-G phase sector is node-difference-flat by construction, so it is a required zero-control rather than the first positive-source target.
+ 
+-- NG0/NG1 claims may not be certified from a downstream normal form alone.
+-- NG3B may connect representation spaces across branches but never bypass cross-branch dynamical scope guards.
+-- N-3C+ nonlinear coefficient ownership remains Dyadic; NG exports representation reachability only.
+-- N-4 is a domain-extension module, not merely a representation module; it can affect both Track-A and Track-C validity.
+-- N-5A is closed locally; GAP-LOCK Lemmas 1–3 are closed; N-5-COMM-BD structural gates C1–C4, C5 control, C6 falsifier, N5-PHYS-1 and C7A are closed. C7B-DISC-1 and C7B-DISC-2 are CLOSED, establishing `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn`; C7B global breadth and C7C physical arithmetic remain OPEN. Single-generator ratios remain controls only.
+-- NG5/NG6 must not be used retroactively as premises of N-1/N-2.
+-- In the continuous branch, NG6 is representation/recovery level unless SG-NG-19's stronger substrate condition is discharged.
+-- NG-7A is CLOSED (v1.5); nonzero holonomy/curvature claims still require the NG-7B physical-source and geometry bridges.
++##### NG-7B — RTG-native non-integrable source / non-Abelian extension
+ 
+----
++**Sub-RID:** `NUMGEN-OPEN-REC-HOL-SOURCE`  
++**Status:** OPEN / physical-source layer
+ 
+-## §5. High-Risk Claims Ledger
++The live positive-source search is narrowed to non-node-difference content such as continuous frame/connection data, birth/history data, spin/quaternionic structure, or OPEN-M content. A non-Abelian version may later use loop holonomies in `SU(2)` modulo gauge/conjugation, but no "non-Abelian holonomy rank" is defined until a precise invariant is adopted and certified.
+ 
+-| Claim | Valid form now | Forbidden overclaim |
+-|---|---|---|
+-| “Number is relational repetition” | `[HYP]` central programme thesis | theorem / completed derivation |
+-| `H_E ≅ (N,+)` | `[RESULT][from: ALG]` for the scoped local dyadic transformation monoid after L1; general RTG identification `[OPEN]` | universal physical RTG counting already proved |
+-| signed history gives `Z` | `[RESULT][from: ALG]` scoped N-2 signed-history completion; inverse = comparison-orientation swap; sign physically realized as reachability orientation (N-2-ORD T4) | physical time reversal |
+-| winding and harmonics both give `Z` | `[MATH]` standard structures | proof they are the same RTG history representation |
+-| `Z_N` phase vs `S^1` | exact candidate character restriction `[MATH]`; RTG bridge `[OPEN]` | discrete/continuous dynamical equivalence |
+-| bounded synchronization class gives unique rational invariant | `[RESULT][from: ALG/MATH]` C1–C4 + N5-PHYS-1 + C7A; `1 in Q_RTG^bd` | claim that boundedness alone is dynamic admission, that all `Q_(>0)` is physically realized, or that rational arithmetic is already derived |
+-| strong dynamic rational admission | `[RESULT]` frozen DISC-1 + DISC-2 establish ten labels `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn` | equality with that set or with `Q_(>0)`, post-data gate retuning, or arithmetic from a label list |
+-| owner implementation agreement ⟹ presentation covariance | `[REJECTED]` — exhaustive equality to the pinned v18 implementation certifies implementation agreement, not node-relabeling covariance; P2 post-hoc audit finds 40/136 DISC-2 witness records convention-exposed while the ten-label projection remains robust | treating sorted-node tie-breaking as a physical invariant without an owner policy/theorem |
+-| equal `rho_Q` labels ⟹ interchangeable/composable physical inputs | `[REJECTED]` — `==_Q` is representation equivalence only; WD-DOM must be proved per operation (`1` already spans two disjoint realization families) | any operation defined on labels rather than realizations |
+-| `Q_RTG^bd` reciprocal closure | `[RESULT][from: ALG]` C7C-0 involution `S`; WD-DOM trivial for this **total** unary map (`D_S = R_bd`), not for unary maps in general | multiplication, addition, field structure, or `Q_RTG^dyn` reciprocal closure |
+-| completion gives `R` | `[OPEN]` | continuum already derived |
+-| `log R_+` gives additive line | `[MATH]` after positive real ratio object exists | use as derivation premise for `R` |
+-| recurrence holonomy `CA` | `[RESULT][from: ALG]` operator/null layer (NG-7A); physical source `[OPEN]` (NG-7B) | spacetime curvature theorem |
+-| external physics benefit | research motivation `[HYP]` | solved quantum gravity/UV/fine tuning |
++`[GUARD]` Closing NG-7A discharges only the operator/null half of the Foundations diagnostic. It does not prove that RTG supplies nonzero physical holonomy or curvature; that is NG-7B plus the relevant geometry bridge.
+ 
+ ---
+ 
+-## §6. Main Scientific Ledger
+-
+-### §6.1 Thesis: relational structure before numerical container
+-
+-`[HYP]` The classical number line may be understood inside RTG as a late representation of more primitive relational arrows/transitions, their certified composition, repeatable histories, orientation-sensitive comparisons, and finite/cyclic invariants. The thesis does not deny standard mathematical number systems; it changes their proposed **physical semantics** in RTG.
+-
+-`[DEF]` Three notions must remain distinct:
+-
+-- **relational structure:** arrows/transitions, composition, orientation/inversion where certified, and physically distinguishable collections;
+-- **certificate structure:** the proof-dependency order in which N-like, Z-like, Q-like, and R-like representations are established;
+-- **numerical representation:** additive/difference, ratio/proportion, exponent, character, winding, or completion coordinates/labels introduced only after the relevant relational structure is certified.
+-
+-`[GUARD]` No numerical representation is promoted to ontological priority merely because it is convenient or because another representation can be transformed into it. In particular, proof-dependency order is not ontology order, and ratio/proportion is not assumed to be generated “later” than additive count nor vice versa.
+-
+-### §6.1a NG-0R — relational-composition clarification and sector-covariance audit
++### §6.9 NG-8 functorial counting compatibility
+ 
+-**RID:** `NUMGEN-OPEN-NG0R-COV`  
+-**Status:** documentation layer `[DEF]/[INTERP]` + one pre-registered `[OPEN][target: ALG/NUM]` covariance audit  
+-**Role:** clarify the physical semantics of “ratio-relational” versus additive/difference representations without changing already-certified N-1/N-2/N-3 theorem ownership.
++`[HYP]` “Five nodes,” “five repeats,” “five windings,” and “fifth harmonic” are distinct relational invariants/representations. Their common numeral should arise through physically implemented compatibility maps on the certified relational architecture, not bare abstract isomorphisms.
+ 
+-`[DEF]` **Arrow before numerical label.** The primitive candidate is an admissible relational arrow/comparison, not a pre-existing scalar ratio. Where a sector admits composition,
++`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **NG-8A CLOSED — ordinal-to-cardinal orbit-state compatibility.** For every admissible `x in U_T` and finite `m>=0`, define the post-event visited-state collection
+ \[
+-R_{AB}\circ R_{BC}=R_{AC}
++S_m^+(x)=\{T^k x:1\le k\le m\},\qquad S_0^+(x)=\varnothing.
+ \]
+-is the structural statement. Numerical quotient, difference, logarithm, exponent, character, or winding labels may be introduced only through a certified representation.
++N-1 primitive-orbit non-collision makes the orbit-evaluation map `k -> T^k x` injective; surjectivity is by construction. Thus the `m` primitive event occurrences are physically equinumerous with the `m` newly visited post-event relational states. In ordinary mathematical representation, `|S_m^+(x)|=m`.
+ 
+-`[DEF]` **Identity and inverse are typed.** Admissible presentation/gauge equivalences live in the groupoid `G_adm` and therefore have inverses. Physical dynamical transitions such as `T` need not be invertible. An orientation-reversal/inverse interpretation may be asserted only for the structure where it has actually been constructed (for example N-2 signed comparison).
++`[GUARD]` If one instead counts orbit positions including the initial state, `{x,Tx,...,T^(m-1)x}` contains `m` positions but only `m-1` transitions between them. Event-count and state-position conventions must not be mixed.
+ 
+-`[RESULT] [from: MATH]` **Phase quotient/difference non-test.** For `z_A=e^{i theta_A}` and `z_B=e^{i theta_B}`,
++`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **NG-8B CLOSED — multiplication by physical re-blocking.** For every positive block size `m`, define `B_m=T^m`. N-1 non-collision implies `<B_m>` is free. For every `k>=0`,
+ \[
+-z_A z_B^{-1}=e^{i(\theta_A-\theta_B)}
++(T^m)^k=T^{mk}.
+ \]
+-is one `U(1)` invariant written in multiplicative and angular notation. Verifying this identity cannot decide ontological priority.
+-
+-`[RESULT] [from: MATH]` **No global additive logarithm on `U(1)`.** There is no nontrivial continuous homomorphism `U(1)->(R,+)`. A local/lifted `arg` is a section of the covering `R->U(1)`, not a global additive homomorphism. Number Genesis therefore keeps three additive-representation mechanisms distinct:
+-
+-1. **Track A exponent representation:** freeness gives `T^n -> n` after the endomorphism monoid is constructed;
+-2. **positive multiplicative sectors:** a genuine logarithmic isomorphism may be used only if a physically instantiated `(R_+,x)`-type structure is independently certified;
+-3. **compact phase:** cover-lift/winding and global character-lattice representations are distinct and are already separated by N-3A/N-3B/N-3C/N-3D.
+-
+-`[INTERP]` **No universal additive-or-ratio priority.** In a non-compact amplitude sector, “ratio-primitive versus difference-primitive” is equivalent to asking which physical gauge/covariance is actually certified (scaling, shift, or neither). That is a sector-level empirical/algebraic question, not an ontology axiom.
+-
+-`[OPEN] [target: ALG/NUM]` **HYP-NG-0R-COV — covariance audit.** Before any amplitude-sector ratio-primitivity claim is promoted, audit the certified primitive-dyad laws under the candidate sector transformations. A positive result requires one declared transformation law to act covariantly on the gauge-reduced observables with no independent contradictory additive symmetry. A falsifier is any certified law whose gauge-reduced form breaks the proposed covariance. The phase-sector quotient/difference identity is excluded from the audit because it is representation-equivalent and non-falsifiable.
+-
+-`[DEF]` **Declared primary transformation (pre-registration pin).** The first audited candidate is amplitude scaling `Q -> lambda Q` on the certified primitive-dyad sector. Predicted covariance form: naive form-invariance of `Delta Q_true = -Q_true^2 + O(Q_true^(5/2))` under pure scaling is expected to FAIL (the law carries an intrinsic scale); the covariance to be tested is translation along the flow in `ln Q` — equivalently, `Q_0 -> lambda Q_0` acting on gauge-reduced entry data only through the entry-phase shift `tau ln lambda` of the `[CAND]` phi* law (`DYAD-CAND-PHISTAR-ENTRY-PHASE`). Falsifier: a certified gauge-reduced law on the sector that admits an independent additive-`Q` symmetry or breaks the flow-translation form. Any conclusion inheriting the phi* leg is capped at `[CAND]` until that law is promoted. Secondary transformations may be declared only by ledger entry before their audit runs.
+-
+-`[GUARD]` NG-0R is not a new foundational branch and does not block NG-7A, N-2-ORD, or N-5A. It is a semantics/covariance layer under the existing Number Genesis programme.
+-
+-### §6.2 N-1A/N-1B/N-1C formal target
+-
+-`[HYP]` **Foundational ordering:**
+-
+-```text
+-distinction
+-  -> relationally admissible predicate
+-  -> equivalence class / event type
+-  -> repeatability
+-  -> successor extensibility
+-  -> free repetition representation
+-  -> N-like physical counting sector
+-```
+-
+-This is an RTG construction claim, not a theorem that all mathematics requires physical equivalence or repetition.
+-
+-`[DEF candidate]` The primitive event object is a finite transition neighborhood `N_e=(S_e,dS_e,X_e^- -> X_e^+)`. Strict equivalence is isomorphism in an admissible relational groupoid. Counting equivalence is induced by a declared relational map `P` and may be coarser than strict physical indistinguishability.
+-
+-`[DEF candidate]` Spectator-invariance requires `P(N_e disjoint_union C)=P(N_e)` for inert `C`. The primitive Number Genesis predicate preserves physical orientation when available.
+-
+-`[MATH]` Once an abstract event type `E` exists, a formal free monoid on `E` is standard mathematics. The open RTG content is whether physical event histories instantiate that formal structure and whether extension by another `E` remains admissible without a terminal bound.
+-
+-`[HYP]` **Successor principle:** physical realization of unbounded natural-number structure corresponds to indefinite extensibility of finite relational history, not to a completed infinite collection present at once.
+-
+-`[RESULT] [from: ALG] [scope: local primitive p=6 dyad transformation sector]` **History non-collapse after L1.** For `F=T^6`, exact primitive-map algebra gives `Delta Q_true=-Q_true^2+O(Q_true^(5/2))` uniformly in phase, hence strict positive radial contraction on a sufficiently small punctured sector. Distinct finite block powers are therefore separated by the present relational observable `Q_true`. This closes the N-1C memory obstruction in that scoped realization.
+-
+-### §6.3 N-2 closed signed-history construction
+-
+-`[RESULT] [from: ALG] [scope: local primitive-dyad Track-A monoid]` Let `M_T` be the N-1 free monogenic monoid. Define oriented pair equivalence by
+-
+-```text
+-(A,B) ~ (C,D)  iff  A o D = B o C.
+-```
+-
+-Cancellativity makes this an equivalence relation; componentwise composition gives a well-defined abelian group law; `[A,B] -> [B,A]` is the group inverse; and `iota(A)=[A,id]` embeds `M_T` injectively. The class `g=[T,id]` has infinite order, so the completion is infinite cyclic. Only after construction is the coordinate map `Psi([T^m,T^n])=m-n` introduced, yielding the standard representation `G_T ~= (Z,+,0)`.
+-
+-`[INTERP]` Signed history is oriented comparison between two forward repetition histories. The inverse class swaps comparison order and does not assert physical `T^{-1}` or reverse evolution.
+-
+-### §6.3a N-2-ORD physical order representation — CLOSED at v1.6
+-
+-`[DEF]` **Reachability-first order.** For admissible `y, z` in the tube,
+-```text
+-y <=_T z   iff   there exists K in M_T with z = K(y).
+-```
+-Order is defined by existence of a connecting certified history, not by any numerical observable. `Q_true` enters only as a witness (ORD-4).
+-
+-`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **ORD-1 — reachability order.** `<=_T` is reflexive (`id`), transitive (composition), and antisymmetric on `U_T`, and is **total on each primitive orbit**. Antisymmetry is exactly N-1 non-collision: `z=T^k y` and `y=T^l z` give `T^(k+l) y = y`, hence `k=l=0`. Globally `<=_T` is a **partial** order; totality is orbit-local.
+-
+-`[RESULT] [from: ALG]` **ORD-2 — shift covariance.** `y <_T z` implies `T^r y <_T T^r z` for every `r`; strictness follows from non-collision at the shifted point. `[COR v1.20]` The **reflection** direction (`T^r y <_T T^r z ⟹ y <_T z`) requires P3 injectivity; P3 is closed `[ALG]` on the shrunken tube (v1.19) and on the explicit Dyadic-certified tube (v1.20), so reflection is `[RESULT] [from: ALG]` at that scope. The former `[NUM-audited]` tag here contradicted the v1.19 P3 closure and is withdrawn.
++The two sides are the same ordered primitive event history with different grouping. Re-blocking therefore realizes multiplication compatibility as repeated concatenation of an `m`-event block; it does not introduce a second independent event type.
+ 
+-`[RESULT] [from: ALG]` **ORD-3 — ordered signed-history group.** With `P := iota(M_T) ⊆ G_T`: `P+P ⊆ P`, `P ∩ (−P) = {0}`, `G_T = P ∪ (−P)`. Hence `a <=_G b iff b − a ∈ P` is a translation-invariant total order on the infinite cyclic signed-history group.
++`[GUARD]` NG-8B cannot discharge N-5A/SG-NG-20. A pair `(T^m,T^n)` remains one certified stream under two blockings.
+ 
+-`[RESULT] [from: ALG]` **T4 — physical sign realization.** For `[A,B] ∈ G_T` and any admissible `x`, exactly one of `A(x)=B(x)`, `B(x) <_T A(x)`, `A(x) <_T B(x)` holds, matching `[A,B] = 0`, `> 0`, `< 0`. The verdict is constant on each N-2 equivalence class and independent of the base point (both endpoints lie on the common orbit `O_x`). The sign of a signed history is therefore **the orientation of forward reachability between its realized endpoints**, not merely the metalanguage integer `m−n`.
++`[OPEN]` **Full NG-8 target — compatibility of invariants on the common relational architecture.** Prove physically implemented structure-preserving maps among:
+ 
+-`[RESULT] [from: ALG] [scope: full certified local tube U_T]` **ORD-4 — `Q_true` order witness.** For every residue `j = 0..5`, put `y=T^j x`. Since `U_T` is `T`-invariant, `y in U_T`; L1 therefore gives `Q_true(Fy)<Q_true(y)` for `F=T^6`, and iteration yields
+-```text
+-r < s  =>  Q_true(T^(6s+j) x) < Q_true(T^(6r+j) x).
+-```
+-Hence `Q_true` is strictly antitone and therefore **order-reflecting** on each fixed-residue `F`-chain: reachability order on that chain is equivalent to reversed `Q_true` order. The dps=60 executable reproduces all six chains numerically, but the theorem status comes from the exact L1 result, not from sampling.
++- Track A: repeatable endomorphism-history exponent/count;
++- Track B: finite physically distinguishable object/state/arrow multiplicity at the declared scope;
++- Track C: character/cyclic invariants of the appropriate completion/representation.
+ 
+-`[RESULT] [from: ALG] [v1.19]` **P3 — injectivity of `T` on a sufficiently shrunken tube.** N-1 non-collision alone does not imply injectivity across distinct orbits, but a direct derivative bound does. Let
+-```text
+-A = DT(0) = [[1,-1],[1,0]].
+-```
+-On the convex box `|rho|,|eta| <= 1/10`,
+-```text
+-DT-A = [[0, 1-cos eta], [exp(rho)-1, 1-cos eta]],
+-||DT-A||_2^2 <= ||DT-A||_F^2 <= 1/81 + 1/20000 < 1/4,
+-sigma_min(A) = (sqrt(5)-1)/2 > 1/2.
+-```
+-Integrating the derivative remainder along the segment from `x` to `y` gives
+-```text
+-||T(x)-T(y)|| >= (sigma_min(A) - sup||DT-A||_2) ||x-y|| > 0.
+-```
+-Thus `T` is injective on this box. Because the N-1 tube is existential and may be shrunk while retaining the local closure, choose the certified tube inside the box. On that shrunken tube, the ORD-2 reflection direction and the cross-orbit refinement are `[ALG]`: two primitive orbits are disjoint or one contains a tail of the other, and cross-orbit comparability holds exactly when the orbits merge. `[GUARD]` This is not an explicit maximal-radius or numerical-seed inclusion certificate.
++The common home is the certified typed relational architecture with partial physical composition `C_NG`; a new hypothetical universal set of numerals is not required as an ontological primitive. What remains to prove is compatibility of the distinct invariants/representations.
+ 
+-`[GUARD]` **Non-claims and provenance.** (i) No external physical time: the order is defined by existence of a connecting history; indices are metalanguage (SG-NG-1). (ii) **No per-primitive-step `Q_true` monotonicity** — the executable supplies genuine numerical counterexamples: sampled single steps split 192 decreases vs 168 non-decreases, and `Q_true(T^3 x) < Q_true(T^2 x)` fails on at least one admissible seed. (iii) No total order between non-merging orbits is a structural consequence of the reachability definition; the executable's NC-3 line is bookkeeping, not independent computational evidence.
++#### OPEN NG-8 — Functorial compatibility / “two fives”
+ 
+-`[GUARD]` `Q_true` is a witness and may never be inverted into the definition of order; `Q_true` ownership remains Dyadic. N-2-ORD orders one certified stream and therefore cannot supply a second recurrence or touch N-5A/SG-NG-20.
++`[OPEN]` **Three-track roadmap after N-1/N-2.** Track A supplies a concrete local endomorphism-history object and its signed completion. Track B constructs physically distinguishable finite multiplicity invariants at declared scopes. Track C constructs cyclic/character invariants. These are treated as different invariants/representations of the certified relational architecture `C_NG`, not as three objects that must be mapped into a hypothetical primitive numeral container.
+ 
+-### §6.4 N-3 representation layer — closed local/abstract results
++**RID:** `NUMGEN-OPEN-TWO-FIVES`  
++**Status:** ACTIVE conceptually; NG-8A and NG-8B CLOSED, full cross-track theorem OPEN
+ 
+-`[RESULT] [from: ALG]` **N-3A:** the natural lifted primitive dynamics has zero deck index on a sufficiently small forward-invariant one-chart tube, so the induced `eta`-winding homomorphism `G_T -> Deck` is trivial and maximally non-faithful.
++**Question:** Why do distinct relational invariants such as five nodes/states, five event repetitions, five windings, and the fifth harmonic admit compatible arithmetic labels and operations?
+ 
+-`[RESULT] [from: MATH/ALG]` **N-3B:** the already-constructed infinite cyclic history group admits the faithful abstract generator-to-generator isomorphism `G_T ~= widehat(S^1)`.
++**Guard:** These physical structures are not identical. `5 in N` must not be conflated with the cyclic group `Z_5`, where `[5]=[0]`.
+ 
+-`[RESULT] [from: ALG]` **N-3C:** the actual primitive pullback of a phase character is
++**Candidate theorem strategy:** construct physically implemented comparison maps/functors between the relevant invariants and prove compatibility with their native compositions. Examples of arithmetic images to test include:
+ 
+ ```text
+-T^* chi_m = exp(i m(exp(rho)-1)) exp(-i m sin eta) chi_m,
++E^m E^n = E^(m+n)
++chi_m chi_n = chi_(m+n)
++(E^m)^n = E^(mn)
++(chi_m)^n = chi_(mn).
+ ```
+ 
+-so primitive dynamics is not a constant translation of harmonic labels. Fourier expansion of the sinusoidal factor mixes character sectors.
+-
+-`[RESULT] [from: MATH/ALG]` **N-3D:** restriction to the finite subgroup `C_N` yields the quotient `G_T/(N G_T) ~= widehat(C_N) ~= Z_N`. For TDR-G this is admissible only as a representation bridge; all dynamical transfer remains forbidden.
+-
+-`[INTERP]` Track-A history, local eta-winding, and harmonic representation are now explicitly separated: local eta-winding is dynamically trivial, while the character representation is faithful only at the abstract algebraic level.
+-
+-### §6.5 N-4 global/nonlocal extension target
+-
+-`[RESULT] [from: ALG]` The local exact primitive realization is already complete at N-1/N-2, while N-3A proves that its dynamically induced `eta`-winding map is trivial on the one-chart tube.
+-
+-`[OPEN]` N-4 now asks what survives on larger exact-map invariant domains where genuine `eta`-winding, critical-curve effects, or other recurrence structures may occur. Any nontrivial winding representation must be derived there rather than imported from the abstract isomorphism `G_T ~= Z`.
++**Open issue:** finite object/state multiplicity and recurrence/harmonic exponent arise from different constructions. Their compatibility must be proved through the shared relational architecture and declared maps; reuse of the same numeral is not evidence by itself.
+ 
+-`[GUARD]` Six-step block count, internal elliptic rotation, lifted eta-winding, and signed history remain distinct objects unless an explicit map is proved.
++##### NG-8A — Ordinal-to-cardinal orbit-state compatibility
+ 
+-### §6.6 N-5A / N-5 rational recurrence target
++**Sub-RID:** `NUMGEN-OPEN-TWO-FIVES-ORBIT-CARDINAL`  
++**Status:** CLOSED `[RESULT][from: ALG]` `[scope: local primitive-dyad tube U_T]`  
++**Certificate:** `NG_NG8A_ORBIT_CARDINAL_CERT_v1.md`
+ 
+-`[RESULT] [from: ALG]` **N-5A CLOSED locally.** Track A is the primitive `T` stream; Track B/S1 is the canonical positive phase-coincidence crossing stream. It is independently event-typed, indefinitely repeatable, co-realized on the same local orbit/tube, ordered by N-2-ORD reachability, and not any fixed blocking `T^m`.
++For an admissible initial state `x` and finite event count `m`, define the post-event state collection
+ 
+-`[RESULT] [from: ALG]` **Bounded synchronization commensurability structure CLOSED.** On a common-order prefix poset, the integer defect
+ ```text
+-Delta_(p:q)=q N_A-p N_B
++S_m^+(x) = {T x, T^2 x, ..., T^m x},
++S_0^+(x) = emptyset.
+ ```
+-is relationally defined (C1), invariant in boundedness under finite prefix-origin changes (C2), invariant under positive common rescaling `(p,q)->(kp,kq)` (C3), and has a unique reduced positive class for indefinitely repeatable streams (C4). Prefix-cofinal repeatability supplies directed unbounded event count without external metric time (SG-NG-25).
+ 
+-`[RESULT] [from: MATH/ALG]` **C5 controls CLOSED.** The abstract periodic language `A^6 B A^7 B` realizes a bounded synthetic `13:2` class; the neighboring `A^6 B A^8 B` fails linearly. This validates the discrimination power of the definition without constituting a physical RTG witness.
++The orbit-evaluation map from the `m` event occurrences to their post-event states is injective by N-1 primitive-orbit non-collision and surjective by construction. Therefore the event history and post-event state collection are physically equinumerous; ordinary cardinality `m` is the mathematical representation, not the premise.
+ 
+-`[RESULT] [from: ALG]` **C6 canonical falsifier CLOSED.** The original canonical primitive/section pair is density-resonant at `6` but boundedly commensurate at no positive rational pair because the `6:1` residual grows logarithmically and every off-resonant candidate grows linearly.
++`[GUARD]` The older position-set convention `{x,Tx,...,T^(m-1)x}` counts `m` positions but only `m-1` transitions. NG-8A uses the post-event convention when speaking of `m` primitive events.
+ 
+-`[RESULT] [from: ALG]` **N5-PHYS-1 CLOSED.** The positive and negative phase-coincidence branches `B_+`,`B_-` are physically distinct event predicates and strictly alternate on a sufficiently small tube, giving
+-```text
+-|N_(B_+)-N_(B_-)| <= 1.
+-```
+-Thus the first genuine physical bounded class is `1:1`.
++`[DEF]` **State-counting predicate (SG-NG-11 discharge).** The Track-B counting equivalence used in NG-8A is identity of the gauge-reduced present state on `U_T`. Distinct tube states are distinct points of the gauge-reduced chart `(rho,eta)` and are therefore physically distinguishable at this scope by the declared full reduced present state. `[COR v1.19]` The earlier shorthand "`Q_true` and/or relational phase" was not a separating family: `(a,0)` and `(-a,0)` have the same `Q_true` and `eta`. The theorem uses identity of the full reduced state, not that insufficient shorthand. "Physically equinumerous" is asserted relative to this declared predicate.
+ 
+-`[RESULT] [from: ALG/MATH]` **C7A bounded rational-label theorem CLOSED.** Every certified bounded physical pair has a unique positive-rational invariant `rho_Q`; `1 in Q_RTG^bd`. Bounded realization and dynamic admission are distinct.
++##### NG-8B — Multiplication by physical re-blocking
+ 
+-`[RESULT]` **C7B-DISC-1 CLOSED.** Frozen DISC-1B PASS and DISC-1D PASS-INT establish `2,3 in Q_RTG^dyn subseteq Q_RTG^bd`.
++**Sub-RID:** `NUMGEN-OPEN-TWO-FIVES-REBLOCK`  
++**Status:** CLOSED `[RESULT][from: ALG]` `[scope: local primitive-dyad tube U_T]`  
++**Certificate:** `NG_NG8B_REBLOCK_MULT_CERT_v1.md`
+ 
+-`[RESULT]` **C7B-DISC-2 CLOSED.** Frozen B-check PASS and D-check PASS on the registered supplementary family establish eight additional labels and add further witnesses for `2` and `3`. The currently established dynamic lower bound is therefore
++For each positive block size `m`, `B_m=T^m` generates the free submonoid `<T^m>`. For every `k>=0`,
+ 
+ ```text
+-{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} subseteq Q_RTG^dyn.
++(T^m)^k = T^(mk).
+ ```
+ 
+-`[POSTHOC-DIAG] [v1.19]` DISC-2 antipodal-endpoint audit marks 40/136 witness records `CONVENTION-EXPOSED`, with 96 unexposed. Every admitted label retains at least one unexposed witness, so the ten-label existential lower bound is unchanged. Discrete-owner policy action is pending; DISC-1 requires the same audit.
+-
+-`[OPEN]` **C7B global breadth.** Determine which additional positive rationals occur; no exhaustiveness theorem is claimed.
+-
+-`[RESULT]` **C7C-WD ADOPTED; C7C-0 CLOSED.** The well-definedness framework (WD-PHYS/CLOSE/DOM/VAL/DESCENT, arithmetic compatibility WD-REP only afterward) is adopted; the orientation swap descends to a representative-independent involution on bounded classes, so `Q_RTG^bd` is closed under `r -> r^(-1)`. No `Q_RTG^dyn` reciprocal closure is claimed.
+-
+-`[RESULT]` **C7C-M partially resolved (v1.20):** M-1A exact chain identity and M-1B conditional carrier closure on `D_chain` are CLOSED `[ALG]`; unrestricted WD-CLOSE and naive label-only WD-DOM FAIL; WD-VAL on admitted chains PASS; associativity only for admitted bracketings. `[OPEN]` full-interface typed WD-DOM (the frontier), admissibility transfer, carrier identity/inverse, physical commutativity; C7C-A not opened; M-4 HOLD (P2).
+-
+-`[GUARD]` N-5 therefore has a certified physical rational-label mechanism but is **not yet a derivation of the full field `Q`**. Full realization spectrum and arithmetic remain explicit open obligations.
++The equality is identity of the same ordered primitive event history under two groupings, not merely equality of endpoints. The RTG-native operation is repeated block concatenation; `mk` is the standard mathematical representation of the resulting repeated-addition count.
+ 
+-### §6.7 N-6 real completion target
++`[GUARD]` `T^m` is a derived block/coarse-graining of the same Track-A stream, not a second independently certified event type. NG-8B therefore does not close N-5A or produce a physical rational ratio from one generator.
+ 
+-`[HYP]` **Classification-first real representation.** Incommensurable relational comparison should receive an R-like label only after the comparison structure itself is physically certified. Candidate representations remain Cauchy completion, Dedekind/order cuts, or a rotation-number construction **if** the physical comparison stream is first proved to have the required mechanical/Sturmian/ergodic structure. Incommensurability by itself does not imply a Sturmian coding or an existing rotation number.
++`[GUARD]` **No commutativity claim from grouping alone** *(imported from `NG_NG8B_REBLOCK_MULT_CERT_v1` §9.7)*. Within Track A the two groupings `(T^m)^k` and `(T^k)^m` flatten to the same primitive history (both are `T^(mk)`); this inherits metalanguage integer commutativity and is not a separate physical law. Any claim that a physical binary multiplication is independently commutative **across distinct counting realizations/tracks** belongs to later NG-8 compatibility work.
+ 
+-`[INTERP]` The programme therefore need not claim that irrational relations are ontologically manufactured by completing already-primitive rationals. Completion is a mathematical representation route for a certified order/comparison structure.
++`[GUARD]` NG-8A/B close only the local Track-A→finite-state equinumerosity seed and Track-A multiplication/re-blocking seed. Full network/cardinal and Track-C compatibility remains OPEN.
+ 
+-`[GUARD]` Because the current realization already uses a continuous state chart, an in-branch N-6 theorem is a recovery/representation theorem unless SG-NG-19 is discharged. The stronger claim "RTG generates the continuum substrate" remains unavailable.
++---
+ 
+-### §6.8 NG-7 recurrence holonomy — NG-7A closed / NG-7B open
++### §6.9a NG-10 — Genesis saturation and counting truncation
+ 
+-`[RESULT] [from: ALG] [scope: finite directed multigraph operator layer; field coefficients plus fundamental-integral-cycle completeness over abelian coefficient groups]` **NG-7A CLOSED.** Null theorem `C D^T = 0`; completeness `im D^T = ker(C·)` over field coefficients making `h = Ca` and `[a] ∈ H^1(G;F) ~= F^beta` equivalent complete obstructions; orientation, gauge, and cycle-basis invariance with the invariant statistics identified; the PI-typed statistic (scalar observable is `h`/`[a]`, never a rank; `r_hol = rank(CA)` reserved for `d>=2`, channel-GL invariant, `<= min(beta,d)`, zero iff flat); separation instances certifying **cycle capacity ≠ holonomy content** in both directions (field-general full-rank witness by a right inverse of `C`; executable `Q` witness `A=C^T`); the mandatory TDR-G `Z_N` zero-control with **cycle-sensitive** unit-defect detection; and `[v1.19]` fundamental-integral-cycle completeness over arbitrary abelian coefficient groups by spanning-forest integration. Certificate: `NG_NG7A_HOLONOMY_NULL_CERT_v1.md` (original NG-7A package) plus the v1.19 in-ledger extension.
++#### OPEN NG-10 — Genesis saturation and counting truncation
+ 
+-`[RESULT] [from: ALG]` **Foundations export.** T1–T7 discharge the operator half of `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`. D15 OFN-side synchronization is complete in OFN v0.8 (RF-O08-10); the OFN whole target remains ACTIVE for physical source, non-Abelian extension, and curvature.
++**RID:** `NUMGEN-OPEN-GENESIS-TRUNCATION`  
++**Status:** OPEN / cross-ledger diagnostic
+ 
+-`[GUARD]` Fundamental-integral-cycle completeness over `Z_N` is now certified, but completeness for an arbitrary nonprimitive/rescaled integer cycle-row presentation is not implied. SG-NG-7 (holonomy ≠ curvature) is unchanged; the ring `Z_N` defect residue is not identified with Track-C winding/character labels absent a proved map; no non-Abelian rank exists until NG-7B defines and certifies its invariant (Case E2 additionally requires its flatness and topology guards).
++`[RESULT]` `[from: NUM]` `[scope: reduced birth-race model]` `[source: RTG_GENESIS_GEOMETRY_DSN_v2.8.4 §6.6; RID: GEN-ART-SATURATION]` Genesis contains an artifact-certified saturation ceiling `Q_d* ~ 1.13e-2` in the reduced `P4` birth-race sector.
+ 
+-`[OPEN]` **NG-7B.** Positive-source candidates are continuous frame/connection data, birth/history data, spin/quaternionic structure, or OPEN-M content. No positive holonomy or curvature claim follows from NG-7A alone.
++**Question:** Does a bounded dynamical amplitude imply a finite bound on distinguishable event repetition in that sector?
+ 
+-### §6.9 NG-8 functorial counting compatibility
++`[GUARD]` **Bounded amplitude does not imply bounded history.** A state variable may converge or cycle while the event history remains indefinitely extensible. A finite repetition cap follows only with an additional theorem such as a uniform positive lower bound on a monotone per-event increment, a finite-state recurrence quotient that collapses histories, or a terminal-event condition. The heuristic estimate `N_max ~ Q_d*/delta Q_d` is admissible only if a strictly positive lower bound `delta Q_d` is proved over the relevant pre-saturation sector.
+ 
+-`[HYP]` “Five nodes,” “five repeats,” “five windings,” and “fifth harmonic” are distinct relational invariants/representations. Their common numeral should arise through physically implemented compatibility maps on the certified relational architecture, not bare abstract isomorphisms.
++**Potential benefit:** NG-10 is a direct stress test of the distinction between bounded state and unbounded history established by N-1B/N-1C.
+ 
+-`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **NG-8A CLOSED — ordinal-to-cardinal orbit-state compatibility.** For every admissible `x in U_T` and finite `m>=0`, define the post-event visited-state collection
+-\[
+-S_m^+(x)=\{T^k x:1\le k\le m\},\qquad S_0^+(x)=\varnothing.
+-\]
+-N-1 primitive-orbit non-collision makes the orbit-evaluation map `k -> T^k x` injective; surjectivity is by construction. Thus the `m` primitive event occurrences are physically equinumerous with the `m` newly visited post-event relational states. In ordinary mathematical representation, `|S_m^+(x)|=m`.
++---
+ 
+-`[GUARD]` If one instead counts orbit positions including the initial state, `{x,Tx,...,T^(m-1)x}` contains `m` positions but only `m-1` transitions between them. Event-count and state-position conventions must not be mixed.
++### §6.10 External benefit boundary
+ 
+-`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **NG-8B CLOSED — multiplication by physical re-blocking.** For every positive block size `m`, define `B_m=T^m`. N-1 non-collision implies `<B_m>` is free. For every `k>=0`,
+-\[
+-(T^m)^k=T^{mk}.
+-\]
+-The two sides are the same ordered primitive event history with different grouping. Re-blocking therefore realizes multiplication compatibility as repeated concatenation of an `m`-event block; it does not introduce a second independent event type.
++The Number Genesis programme may eventually contribute to relational time, spectral/recurrence geometry, quantization from finite distinguishability, or continuum-limit discipline. At v0.1 these are motivations only. A publishable contribution requires at least one nontrivial RTG-specific theorem, obstruction, new invariant, or empirical consequence beyond standard algebra/topology.
+ 
+-`[GUARD]` NG-8B cannot discharge N-5A/SG-NG-20. A pair `(T^m,T^n)` remains one certified stream under two blockings.
++---
+ 
+-`[OPEN]` **Full NG-8 target — compatibility of invariants on the common relational architecture.** Prove physically implemented structure-preserving maps among:
++#### OPEN NG-9 — External mathematics/physics consequences
+ 
+-- Track A: repeatable endomorphism-history exponent/count;
+-- Track B: finite physically distinguishable object/state/arrow multiplicity at the declared scope;
+-- Track C: character/cyclic invariants of the appropriate completion/representation.
++**RID:** `NUMGEN-OPEN-EXTERNAL`  
++**Status:** OPEN / hypothesis registry only
+ 
+-The common home is the certified typed relational architecture with partial physical composition `C_NG`; a new hypothetical universal set of numerals is not required as an ontological primitive. What remains to prove is compatibility of the distinct invariants/representations.
++Candidate areas:
+ 
+-### §6.10 External benefit boundary
++- relational time: separation of event order from duration/recurrence measure;
++- spectral/recurrence reconstruction of geometry;
++- finite distinguishability and harmonic aliasing/quantization;
++- number/ratio interpretation of dimensionless physical observables;
++- continuum-limit discipline in UV/quantum-gravity contexts.
+ 
+-The Number Genesis programme may eventually contribute to relational time, spectral/recurrence geometry, quantization from finite distinguishability, or continuum-limit discipline. At v0.1 these are motivations only. A publishable contribution requires at least one nontrivial RTG-specific theorem, obstruction, new invariant, or empirical consequence beyond standard algebra/topology.
++**Current verdict:** No external open problem is claimed solved. UV divergences, quantum-gravity time, fine-tuning, physical constants, or set-theoretic foundations must not be advertised as resolved by the Number Genesis framework without a new theorem or empirical prediction.
+ 
+ ---
+ 
+@@ -2765,6 +2791,16 @@
+ ---
+ 
+ ## Changelog
++### v1.20.3 — September 25, 2026
++
++**Methodology-only structural migration (option B, module-level). Scientific state identical to v1.20.2.**
++
++- §2 reduced to the section heading, the unchanged Priority-ordering queue, and a module registry of structural pointer rows. All 18 §2 modules relocated verbatim, as whole modules (set-up, definitions, guards, theorems, OPEN/HOLD residuals, unanchored lines), to their §6 homes, in original order, after the existing §6 content; module headings demoted one level. The single level-6 heading (L1) is capped at level 6 as a Markdown rendering exception only; its semantic parent remains N-1C-DYAD (no re-parenting).
++- Approved per-block dispositions applied unchanged: 114 MOVE; 4 REGISTRY-ONLY (queue in place; 3 bare status lines relocated verbatim onto registry rows); 1 MIRROR-RECONCILED (§2 ORD-4 copy removed, §6.3a twin retained); 0 STOP.
++- New structural heading §6.9a NG-10 (approved). Co-owner approved structural mappings: N-4 → §6.5, N-6 → §6.7, NG-9 → §6.10.
++- Gates: FP-v2.3 no loss / no invention / identifier conservation (incl. derived HEADING-DEMOTION for the one heading-anchored block); INV-S final; INV-P post-write; INV-LIVE; §2 and §8 queues byte-identical to v1.20.2.
++- Textual pointers: a scan of the relocated bodies found no "§2 …" cross-references, so no pointer rewording was needed or performed.
++
+ ### v1.20.2 — September 25, 2026
+ 
+ **Scientific-sync patch: STOP-02 and STOP-03 only.** No other scientific edit.

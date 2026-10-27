@@ -1,0 +1,35 @@
+ok  P0   expect PASS got PASS           unmutated inputs
+ok  N1   expect FAIL got FAIL           word changed inside the moved block (candidate)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 281: derived 'eigenframe $W=\\rho+\\omega\\eta$ does not descend to the phase cylin
+         FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate
+ok  N2   expect FAIL got FAIL           word changed inside the block, declared block changed to match
+         FAIL  mechanical scope (re-derivation)  — M01: block occurs 0 times in base
+         FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate
+ok  N3   expect FAIL got FAIL           block moved into another section (declared)
+         FAIL  operation M01 (reorder)  — moved block changes section ('## §3. Scope Guards {#sec-3-guards}' -> '## §4. Layer Routing {#sec-4-routing}'); a reo
+ok  N4   expect FAIL got FAIL           block moved into the header (declared)
+         FAIL  mechanical scope (re-derivation)  — M01: anchor does not start a block
+         FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate
+ok  N5   expect FAIL got FAIL           block duplicated instead of moved
+         FAIL  mechanical scope (re-derivation)  — first difference at line 292: derived '---\n\n## §4. Layer Routing {#sec-4-routing}\n\n| Layer | Canonical o
+         FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate
+ok  N6   expect FAIL got FAIL           block deleted, move declared
+         FAIL  mechanical scope (re-derivation)  — first difference at line 281: derived '2]** The linear eigenframe $W=\\rho+\\omega\\eta$ does not descend to
+         FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate
+ok  N7   expect FAIL got FAIL           anchor splits a paragraph (declared)
+         FAIL  mechanical scope (re-derivation)  — M01: anchor does not start a block
+         FAIL  operation M01 (reorder)  — block multiset of the live text changed
+ok  N8   expect FAIL got FAIL           anchor occurs more than once
+         FAIL  mechanical scope (re-derivation)  — M01: anchor occurs 13 times after removal
+ok  N9   expect FAIL got FAIL           declared block is not the base block (one byte)
+         FAIL  mechanical scope (re-derivation)  — M01: block occurs 0 times in base
+         FAIL  operation M01 (reorder)  — moved block must occur exactly once in the live text of base and candidate
+ok  N10  expect FAIL got FAIL           second reorder not declared
+         FAIL  mechanical scope (re-derivation)  — first difference at line 257: derived '4]** Shear twins $T_s$, $T_{\\log}$, $T_{\\tanh}$ and the $(a,b)$-fam
+ok  N11  expect FAIL got FAIL           move declared with class history-section
+         FAIL  operation M01 (history-section)  — a move must be of class reorder
+ok  N12  expect FAIL got FAIL           grade changed outside the move
+         FAIL  mechanical scope (re-derivation)  — first difference at line 442: derived 'ALG]` [RID: RECOG-ALG-QUADRATURE-TYPING] [scope: conditional on postu
+         FAIL  operation M01 (reorder)  — block multiset of the live text changed
+         FAIL  qualified claim blocks  — 456 claim blocks in base live text: 455 byte-identical, 0 changed by declared operations, 1 unexplained
+RESULT: PASS (12/12 controls rejected)

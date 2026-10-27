@@ -1,0 +1,65 @@
+{
+ "edition": "RTG_NUMBER_GENESIS_DSN v1.20.8",
+ "adopted": "2026-10-21",
+ "adopted_by": "PI (Mustafa)",
+ "source_draft": "DRAFT r3",
+ "predecessor": "v1.20.7",
+ "files": {
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8.md": {
+   "sha256": "835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e",
+   "bytes": 339003
+  },
+  "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r3.md": {
+   "sha256": "9d59cfa1edf15c4e263494c9fbc615dc915ed3b84e556df8ade61fd1fa7de7b3",
+   "bytes": 338391
+  },
+  "RTG_NUMBER_GENESIS_DSN_v1_20_7.md": {
+   "sha256": "c4637e7a5cfaf8eaf001746f172111385f5df2a8cd552e3ab56308ff7abfab28",
+   "bytes": 324155
+  },
+  "release_v1_20_8.py": {
+   "sha256": "5f219ee949776db1741ccf8e6bc9ec0c15ee06d785adc5d46d65b25209c738f3",
+   "bytes": 3175
+  },
+  "release_v1_20_8_edits.json": {
+   "sha256": "c9148e8dbcba76222c07daed7f7677478ca590e89e5e158dcba971f3b2da9414",
+   "bytes": 1980
+  },
+  "check_release_v1_20_8.py": {
+   "sha256": "1f97081e330e2c3d18eaa3aac6366727527fbbac71185911ded9dbfd96fa092d",
+   "bytes": 4697
+  },
+  "check_release_v1_20_8_output.txt": {
+   "sha256": "1d04c1aed566da409982d11c784abd28a254398b76b86c20263f5ee895ca4c38",
+   "bytes": 499
+  },
+  "v1_20_8_r3_to_release.diff": {
+   "sha256": "2e24ad5846c744a1e83b02d9bb551fdbb2a6b2a0f8b1d301c9bfe7c9f12b741f",
+   "bytes": 5171
+  },
+  "RTG_NUMBER_GENESIS_v1_20_7_to_v1_20_8.diff": {
+   "sha256": "65c548549c4a309465cb61faf24c0feecfe4fbff8a985b17cb39a5cae27eb468",
+   "bytes": 45202
+  },
+  "ng_state_fingerprint_v2_3.py": {
+   "sha256": "1fbeb19de86afbc6b91d45539ff22c5f81120a25bfa88336e480b29b2f323ff6",
+   "bytes": 8751
+  },
+  "ng_inv_live_v1_1.py": {
+   "sha256": "3354621bc60492035a098839d99d5f11c1d4c5940c639a1b5ee4018e11a7f145",
+   "bytes": 2950
+  },
+  "NUMGEN_v1_20_8_RELEASE_RECORD.md": {
+   "sha256": "fb699967bbacc3eee5e8772a9b08d0cca2331ce8bf304fe96020ab776b4d1f97",
+   "bytes": 6233
+  }
+ },
+ "review_package": {
+  "NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip": "a7fc9ed63113e7f6f48296b9593b92467b94314d71f5117e106cf9dcdbe1ee84"
+ },
+ "roles": {
+  "canonical": "RTG_NUMBER_GENESIS_DSN_v1_20_8.md",
+  "prior_adopted": "RTG_NUMBER_GENESIS_DSN_v1_20_7.md",
+  "reviewed_draft": "RTG_NUMBER_GENESIS_DSN_v1_20_8_DRAFT_r3.md (bannered SUPERSEDED in outputs; payload hash as listed)"
+ }
+}

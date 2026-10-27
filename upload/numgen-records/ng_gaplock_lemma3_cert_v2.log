@@ -1,0 +1,13 @@
+  3333330 B-events with a realized gap; 7-gaps: 6
+[PASS] C1 the local event identity G(n_j) = C + (pi/3) s_j - o_j holds with a single constant C = 0.4086378551 across all 3333330 events: observed spread 4.387e-09 against the float64 noise floor 4.650e-09 of the accumulated lift (ratio 0.94). The identity is EXACT; the residual is arithmetic, not structural. [v1 note: an earlier version of this row compared at 9 decimals on a quantity of magnitude ~1e7, past float64 resolution, and reported a spurious failure.]
+[PASS] C2 the criterion 'g_(j+1) = 7 iff o_j < Delta_j' with the ACTUAL Delta_j = 2pi - Lambda_6(x_j) (not the tau*q surrogate used in v1) reproduces the realized gap at all 3333330 events (0 mismatches)
+[PASS] C2b [regression only] the v1 surrogate criterion o_j < tau q_j happens to agree on this horizon (0 mismatches), but it is NOT the theorem — Delta_j = tau q_j + O(q^(3/2)) and agreement on a finite classification does not promote a surrogate to an identity
+[PASS] C3 the auxiliary defect agrees with the owner's D at block boundaries by construction: (pi/3)(6M) = 2pi M, so G_(6M) = D_M identically. v1 wrongly reused the symbol D for the accumulated sum of tau*q over laps, which is a different object.
+[PASS] C4 at each realized 7-gap the overshoot satisfies 0 <= o_j < Delta_j, with (step, o_j, Delta_j) = [(33222, '5.836e-05', '6.207e-05'), (198235, '3.982e-06', '2.505e-05'), (606974, '8.977e-06', '1.011e-05'), (1619409, '9.150e-07', '4.081e-06'), (4127020, '1.352e-06', '1.648e-06'), (10337777, '2.328e-07', '6.633e-07')]
+[PASS] C5 the block remainders r_k = n_(j_k) mod 6 at the realized slips are [0, 1, 2, 3, 4, 5], all <= 5 as required by the return-to-block-time step
+  raw physical slip-step ratios      : [5.967, 3.0619, 2.668, 2.5485, 2.5049]
+  backbone-shifted DIAGNOSTIC ratios : [2.471106, 2.474621, 2.476022, 2.476493, 2.476654]
+  target exp(sqrt3 pi/6)             : 2.476632271
+[PASS] C6 [regression only] both sequences are reported. The RAW physical ratios are the observable; the (n+kappa)-shifted sequence is a backbone-shifted DIAGNOSTIC that converges faster and was mislabelled in v1 as the observed physical ratio. Neither is asserted here to converge — that is the memo's [ALG] conclusion.
+----------------------------------------------------------------------
+RESULT: ALL ROWS PASS. Finite identities and regressions only: the exact local event identity C1, the exact gap criterion C2 with the true Delta, the block-boundary reduction C3, the slip-time overshoot bracket C4, and the r_k <= 5 bound C5. NO convergence, summability or infinite implication is asserted by this exit code; the closure argument lives entirely in the companion memo.

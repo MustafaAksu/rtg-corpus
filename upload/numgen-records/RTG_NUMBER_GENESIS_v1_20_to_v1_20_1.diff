@@ -1,0 +1,37 @@
+--- RTG_NUMBER_GENESIS_DSN_v1_20.md	2026-09-25 10:32:47.010204000 +0000
++++ RTG_NUMBER_GENESIS_DSN_v1_20_1.md	2026-09-25 15:57:51.668768967 +0000
+@@ -1,8 +1,8 @@
+-# RTG Number Genesis DSN v1.20
++# RTG Number Genesis DSN v1.20.1
+ 
+ **Title:** RTG Number Genesis — Relational Composition, Repetition, Number Representations, and Recurrence Holonomy  
+ **Date:** September 25, 2026  
+-**Document status:** ACTIVE owner ledger; scientific/source synchronization release. **Supersedes:** v1.19 (`a58d1507…09343e`).  
++**Document status:** ACTIVE owner ledger; scientific-sync patch. **Supersedes:** v1.20 (`f5ed40f5…3b636`), which superseded v1.19 (`a58d1507…09343e`).  
+ **DSN Methodology:** v1.3 (touched-block compliance in this release; full structural migration deferred to a methodology-only pass).  
+ **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
+ **Document class:** Foundational/technical bridge ledger. It does **not** modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics.  
+@@ -2458,7 +2458,7 @@
+ 
+ `[RESULT] [from: ALG] [scope: finite directed multigraph operator layer; field coefficients plus fundamental-integral-cycle completeness over abelian coefficient groups]` **NG-7A CLOSED.** Null theorem `C D^T = 0`; completeness `im D^T = ker(C·)` over field coefficients making `h = Ca` and `[a] ∈ H^1(G;F) ~= F^beta` equivalent complete obstructions; orientation, gauge, and cycle-basis invariance with the invariant statistics identified; the PI-typed statistic (scalar observable is `h`/`[a]`, never a rank; `r_hol = rank(CA)` reserved for `d>=2`, channel-GL invariant, `<= min(beta,d)`, zero iff flat); separation instances certifying **cycle capacity ≠ holonomy content** in both directions (field-general full-rank witness by a right inverse of `C`; executable `Q` witness `A=C^T`); the mandatory TDR-G `Z_N` zero-control with **cycle-sensitive** unit-defect detection; and `[v1.19]` fundamental-integral-cycle completeness over arbitrary abelian coefficient groups by spanning-forest integration. Certificate: `NG_NG7A_HOLONOMY_NULL_CERT_v1.md` (original NG-7A package) plus the v1.19 in-ledger extension.
+ 
+-`[RESULT] [from: ALG]` **Foundations export.** T1–T7 discharge the operator half of `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`; the OFN-side DSN synchronization is a separate governance edit (decision D15).
++`[RESULT] [from: ALG]` **Foundations export.** T1–T7 discharge the operator half of `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`. D15 OFN-side synchronization is complete in OFN v0.8 (RF-O08-10); the OFN whole target remains ACTIVE for physical source, non-Abelian extension, and curvature.
+ 
+ `[GUARD]` Fundamental-integral-cycle completeness over `Z_N` is now certified, but completeness for an arbitrary nonprimitive/rescaled integer cycle-row presentation is not implied. SG-NG-7 (holonomy ≠ curvature) is unchanged; the ring `Z_N` defect residue is not identified with Track-C winding/character labels absent a proved map; no non-Abelian rank exists until NG-7B defines and certifies its invariant (Case E2 additionally requires its flatness and topology guards).
+ 
+@@ -2765,6 +2765,14 @@
+ ---
+ 
+ ## Changelog
++### v1.20.1 — September 25, 2026
++
++**Scientific-sync patch: STOP-01 only.** No scientific claim changes beyond the STOP-01 sync repair.
++
++- **STOP-01 `[COR]`.** The live §6 Foundations-export sentence still described D15 as "a separate governance edit", while v1.20 S8 had already recorded **D15 SYNC COMPLETE** in §9.1 and Appendix A. Corrected to: D15 OFN-side synchronization is complete in OFN v0.8 (RF-O08-10); the OFN whole target remains ACTIVE for physical source, non-Abelian extension, and curvature. The sentence survived the v1.20 acceptance grep because that grep searched only for `pending (D15)`. A broader live-text scan (`D15|OFN-side DSN synchronization|OFN.{0,40}synchroniz|separate governance edit|pending decision`) found no other live occurrence; §9.1 and Appendix A already read SYNC COMPLETE.
++- Found by the v1.20.1 migration reconciliation review (`NG_V1201_RECONCILIATION_REVIEW_v1`, pair P18). Per migration rule 2, a content drift cannot be repaired inside the methodology-only migration, so it is repaired here first, giving the migration a consistent base.
++- Historical changelog entries (including the v1.5-era "OFN-side synchronization registered as pending decision" line) are untouched.
++
+ ### v1.20 — September 25, 2026
+ 
+ **Scientific/source synchronization release; Methodology v1.3 compliance on touched blocks only.** Structural §2/§6 migration deferred to a methodology-only pass. P2: no scientific change.

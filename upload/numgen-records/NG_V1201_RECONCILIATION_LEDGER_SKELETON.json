@@ -1,0 +1,1293 @@
+{
+ "base_sha256": "f5ed40f5adcf2835c6aceee7025a1daa299d97c679e895efb4fc84f54773b636",
+ "status": "SKELETON \u2014 no decisions made; structural rewrite HOLD",
+ "rule": "retain exactly one per pair; quote discarded wording; status/scope/content mismatch => STOP",
+ "pairs": [
+  {
+   "s6_line": 2259,
+   "s6_h": "db40b17c6cbfb832a72c6f5ac6388db5f386afd0ebb1c3448d39e2bc9e97ae43",
+   "s6_tags": [
+    "HYP"
+   ],
+   "s6_anchor": "`[HYP]` The classical number line may be understood inside RTG as a late representation of more primitive relational arrows/transitions, their certified composi",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2261,
+   "s6_h": "7a7795e1b9f8e3be90f2081090403af17ae8261cee93ebb7674317e4f5d7f72a",
+   "s6_tags": [
+    "DEF"
+   ],
+   "s6_anchor": "`[DEF]` Three notions must remain distinct:",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2267,
+   "s6_h": "75e8abeab70c172a4cf56e7e5144efe7ac148d70998e6d7d649f2a231165629e",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` No numerical representation is promoted to ontological priority merely because it is convenient or because another representation can be transformed i",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2272,
+   "s6_h": "547651b35f0aaa1a3eba2b3681727a61b93501121b93812665472d01a6ea66ba",
+   "s6_tags": [
+    "DEF",
+    "INTERP",
+    "OPEN"
+   ],
+   "s6_anchor": "**Status:** documentation layer `[DEF]/[INTERP]` + one pre-registered `[OPEN][target: ALG/NUM]` covariance audit",
+   "s2_candidates": [
+    {
+     "line": 181,
+     "h": "ee93f1ad10880dcf35abf167dc3de1b7909eb52e7d1df217fc1f734ea36b36c9",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 2,
+     "anchor": "**Status:** CLOSED `[RESULT][from: ALG]` `[scope: sufficiently small punctured primitive dyad tube]` \u2014 N-1A event identity, N-1B successor, and N-1C non-collaps"
+    },
+    {
+     "line": 316,
+     "h": "e1f4cfdb1d2cafdb4831cc537040402da1f3f2cd93296875d190b6f551fc2e98",
+     "tags": [
+      "ALG"
+     ],
+     "score": 2,
+     "anchor": "**Status:** CLOSED `[ALG]` `[scope: isolated abstract oriented dyadic phase-step]`"
+    },
+    {
+     "line": 375,
+     "h": "5520ea1de854290cb8c2d9930b01341c1f8734f401743a16059ddfb6c7d55359",
+     "tags": [
+      "ALG"
+     ],
+     "score": 2,
+     "anchor": "**Status:** CLOSED `[ALG]` `[scope: abstract three-node boundary-aware oriented phase-step; specified local law]`"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2275,
+   "s6_h": "8370e174a755d1aa5963625712ade10336a53a05f36c6da98eda370466ebd2fe",
+   "s6_tags": [
+    "DEF"
+   ],
+   "s6_anchor": "`[DEF]` **Arrow before numerical label.** The primitive candidate is an admissible relational arrow/comparison, not a pre-existing scalar ratio. Where a sector ",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2281,
+   "s6_h": "24f7e5d77e24f2c834d7c9db94d6b5ca9ebd1ac338d28d176122f82dfef12ec7",
+   "s6_tags": [
+    "DEF"
+   ],
+   "s6_anchor": "`[DEF]` **Identity and inverse are typed.** Admissible presentation/gauge equivalences live in the groupoid `G_adm` and therefore have inverses. Physical dynami",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2283,
+   "s6_h": "cecf15a697f98bd2a0f712fe60fb838bd805303ea7df7ff59a5e306244835b23",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: MATH]` **Phase quotient/difference non-test.** For `z_A=e^{i theta_A}` and `z_B=e^{i theta_B}`,",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2289,
+   "s6_h": "ae9809d6e0ef7a7f3c035c7c96ec23e9d46655465dad375c2909d220d3f3be45",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: MATH]` **No global additive logarithm on `U(1)`.** There is no nontrivial continuous homomorphism `U(1)->(R,+)`. A local/lifted `arg` is a sect",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2295,
+   "s6_h": "678c84d437602af2f9136b295ccc8a9f1221984e22e5216e0f519301f9ed8529",
+   "s6_tags": [
+    "INTERP"
+   ],
+   "s6_anchor": "`[INTERP]` **No universal additive-or-ratio priority.** In a non-compact amplitude sector, \u201cratio-primitive versus difference-primitive\u201d is equivalent to asking",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2297,
+   "s6_h": "6991fca3023ef65c1bd07d42f117cfd9f761eb9ad93daf7b0fe737d093e26b3a",
+   "s6_tags": [
+    "OPEN"
+   ],
+   "s6_anchor": "`[OPEN] [target: ALG/NUM]` **HYP-NG-0R-COV \u2014 covariance audit.** Before any amplitude-sector ratio-primitivity claim is promoted, audit the certified primitive-",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2299,
+   "s6_h": "486a1c44752fed7eda0c3748b041e123e08d80b0f608db47edabd24e3605fe03",
+   "s6_tags": [
+    "DEF"
+   ],
+   "s6_anchor": "`[DEF]` **Declared primary transformation (pre-registration pin).** The first audited candidate is amplitude scaling `Q -> lambda Q` on the certified primitive-",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2301,
+   "s6_h": "4bd2b954b240ff4685dbe9ef40ad2b852ea09cca2b88151c945a4b9353f91b7e",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` NG-0R is not a new foundational branch and does not block NG-7A, N-2-ORD, or N-5A. It is a semantics/covariance layer under the existing Number Genesi",
+   "s2_candidates": [
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 3,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 1765,
+     "h": "995bc94cff296177b0c6215035eea424f2ab3f1d8a118942cff1f23c246cca23",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` Closing NG-7A discharges only the operator/null half of the Foundations diagnostic. It does not prove that RTG supplies nonzero physical holonomy or c"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2305,
+   "s6_h": "e1b283f052f6764c605f6934a7d8727482212620324a1b8151838b20d01b0579",
+   "s6_tags": [
+    "HYP"
+   ],
+   "s6_anchor": "`[HYP]` **Foundational ordering:**",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2325,
+   "s6_h": "9712e0493f910be6b8f268b2e1749796f90516a7b87a641f3b042fba5ebdace0",
+   "s6_tags": [
+    "HYP"
+   ],
+   "s6_anchor": "`[HYP]` **Successor principle:** physical realization of unbounded natural-number structure corresponds to indefinite extensibility of finite relational history",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2327,
+   "s6_h": "2fde4f43105126c62de545b0b90dc536ad355158c0801c85c6eea8193c9250bd",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG] [scope: local primitive p=6 dyad transformation sector]` **History non-collapse after L1.** For `F=T^6`, exact primitive-map algebra gives",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2331,
+   "s6_h": "9fbba9036689c5a9fc49102b2e42c5aedadb292c57faca3eead48b4f2e8f0d81",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG] [scope: local primitive-dyad Track-A monoid]` Let `M_T` be the N-1 free monogenic monoid. Define oriented pair equivalence by",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2339,
+   "s6_h": "4067cc9a07c250b6b31399820fb68b4ab45d58f7d895badddb0e1c5a5af92702",
+   "s6_tags": [
+    "INTERP"
+   ],
+   "s6_anchor": "`[INTERP]` Signed history is oriented comparison between two forward repetition histories. The inverse class swaps comparison order and does not assert physical",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2343,
+   "s6_h": "d5a4efd9c05c88b50582a8644d12f09674a6dfdcefcb10c942dba1ef2fbf1188",
+   "s6_tags": [
+    "DEF"
+   ],
+   "s6_anchor": "`[DEF]` **Reachability-first order.** For admissible `y, z` in the tube,",
+   "s2_candidates": [
+    {
+     "line": 996,
+     "h": "1907080a56d6c48fe837a6eed1de0b7afd52c02a1b83ffc7ee5bb16895eba154",
+     "tags": [
+      "ALG",
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT][from: ALG]` The fixed-residue `F=T^6` witness is exact on the full certified tube: for every `j=0,...,5`, put `y=T^j x in U_T`. L1 gives `Q_true(Fy)<Q"
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2349,
+   "s6_h": "12c8bcef8d95e744e685bb8ed4b8665173de574f861a7a7bd6cae18b153f116c",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **ORD-1 \u2014 reachability order.** `<=_T` is reflexive (`id`), transitive (composition), and antisymm",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2351,
+   "s6_h": "a406641d433150d76842e82014ee10b972e6ca5945289c7321db67be01f00342",
+   "s6_tags": [
+    "ALG",
+    "COR v1.20",
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **ORD-2 \u2014 shift covariance.** `y <_T z` implies `T^r y <_T T^r z` for every `r`; strictness follows from non-collision at the shifted poi",
+   "s2_candidates": [
+    {
+     "line": 998,
+     "h": "9d4f341c1d3f884c87fcc824955f5b066129ec1b5a7dd916b74a1fd59227c90a",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` Primitive-step/cross-residue monotonicity is false in general; the numerical certificate supplies explicit counterexamples. `[v1.19]` P3 injectivity i"
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2353,
+   "s6_h": "e83647bac521108e0e01dd1a0674421bb5858863e3f965643081cb5864f6708e",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **ORD-3 \u2014 ordered signed-history group.** With `P := iota(M_T) \u2286 G_T`: `P+P \u2286 P`, `P \u2229 (\u2212P) = {0}`, `G_T = P \u222a (\u2212P)`. Hence `a <=_G b iff",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2355,
+   "s6_h": "06270f264c55aa1ce7735a05a002701eeabd37c2b7a1d906b8f6eb6c0e98b6b4",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **T4 \u2014 physical sign realization.** For `[A,B] \u2208 G_T` and any admissible `x`, exactly one of `A(x)=B(x)`, `B(x) <_T A(x)`, `A(x) <_T B(x)",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2357,
+   "s6_h": "f3b014514021502b8391d3945252bd69244f97589e681b19f0c20164b421eb09",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG] [scope: full certified local tube U_T]` **ORD-4 \u2014 `Q_true` order witness.** For every residue `j = 0..5`, put `y=T^j x`. Since `U_T` is `T",
+   "s2_candidates": [
+    {
+     "line": 996,
+     "h": "1907080a56d6c48fe837a6eed1de0b7afd52c02a1b83ffc7ee5bb16895eba154",
+     "tags": [
+      "ALG",
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT][from: ALG]` The fixed-residue `F=T^6` witness is exact on the full certified tube: for every `j=0,...,5`, put `y=T^j x in U_T`. L1 gives `Q_true(Fy)<Q"
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2363,
+   "s6_h": "e8fc399b4baa928f48e547a4f9a04c58e8d58212d1c3d96b85f96f193790f36e",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG] [v1.19]` **P3 \u2014 injectivity of `T` on a sufficiently shrunken tube.** N-1 non-collision alone does not imply injectivity across distinct o",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2377,
+   "s6_h": "ec603030e35f8f90de668f30daa26fa1944df634220d69b68039544c48bbc7f1",
+   "s6_tags": [
+    "ALG",
+    "GUARD"
+   ],
+   "s6_anchor": "Thus `T` is injective on this box. Because the N-1 tube is existential and may be shrunk while retaining the local closure, choose the certified tube inside the",
+   "s2_candidates": [
+    {
+     "line": 998,
+     "h": "9d4f341c1d3f884c87fcc824955f5b066129ec1b5a7dd916b74a1fd59227c90a",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` Primitive-step/cross-residue monotonicity is false in general; the numerical certificate supplies explicit counterexamples. `[v1.19]` P3 injectivity i"
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2379,
+   "s6_h": "99cd72d2017f9a124824dcf2374fcb87efc4d0ec9efde3a5adb9215428148b7e",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` **Non-claims and provenance.** (i) No external physical time: the order is defined by existence of a connecting history; indices are metalanguage (SG-",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2381,
+   "s6_h": "2d6aab3a5d157a32a484ec2c95166d7770e36da0e4c16bd095a91b92a647c027",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` `Q_true` is a witness and may never be inverted into the definition of order; `Q_true` ownership remains Dyadic. N-2-ORD orders one certified stream a",
+   "s2_candidates": [
+    {
+     "line": 1253,
+     "h": "2bc72d6a4e23e526e3b680c26e1a71ac9af4326bd028477746c4df69c37a7afe",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` See SG-NG-20. A pair `(T^m,T^n)` generated solely by one certified event type does not close N-5A."
+    },
+    {
+     "line": 1350,
+     "h": "46cf617ce4baa1c9eb3023113531d8886882be4dbb102bab36166353a2d4736b",
+     "tags": [
+      "COR v1.19",
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG]` **One-stream reblocking zero-control.** If `B=T^m` is merely a derived blocking of one Track-A stream, then at primitive prefix length `n"
+    },
+    {
+     "line": 1612,
+     "h": "a1744277697bd26c1dda3116063ad475f44a81318c6c4ca9c29a0de233d7b163",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG]` **Unrestricted WD-CLOSE: FAIL on the current carrier.** For any `x=(A,B) in R_bd`, C7C-0 gives `Sx=(B,A) in R_bd`, but the chain output `"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2385,
+   "s6_h": "466a095480df6fc2f5f148e5a49ffc4e260889b0db8f78ed1fe9d6859496fbd6",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **N-3A:** the natural lifted primitive dynamics has zero deck index on a sufficiently small forward-invariant one-chart tube, so the indu",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2387,
+   "s6_h": "9b1a54a0dfc6a758d05ab5743dfb13a6bd072b9e6a69fb9668d6121218642a67",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: MATH/ALG]` **N-3B:** the already-constructed infinite cyclic history group admits the faithful abstract generator-to-generator isomorphism `G_T",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2389,
+   "s6_h": "7a9eb1839bcb74b481ca53b230ca15082b955086136ca78332105ddda5adc4d7",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **N-3C:** the actual primitive pullback of a phase character is",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2397,
+   "s6_h": "448282444ebafba55eba8da53a3b4f275995450d0b74bfc11148c9dba3fa60ae",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: MATH/ALG]` **N-3D:** restriction to the finite subgroup `C_N` yields the quotient `G_T/(N G_T) ~= widehat(C_N) ~= Z_N`. For TDR-G this is admis",
+   "s2_candidates": [
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 3,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 866,
+     "h": "c2f97759c9b7b0a7126885000aa4e55a4978c1c7fc6a8bb1e03e0b8184f1d30c",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG]` **Free-monogenic universal property.** `M_T` is generated by the distinguished element `T` and has no relation between distinct finite po"
+    },
+    {
+     "line": 910,
+     "h": "774f58974012c5670085255a7e95f2d9ef3d1f5ef1904c6bad022e9e2de1b935",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` **Continuous-branch realization only.** The N-1/N-2 construction proven here belongs to the continuous primitive dyad. Finite TDR-G phase dynamics may"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2399,
+   "s6_h": "2f5d15801715e37850a0d7e6c50e5fb1f93b622f1349aa82944e2019b56dd367",
+   "s6_tags": [
+    "INTERP"
+   ],
+   "s6_anchor": "`[INTERP]` Track-A history, local eta-winding, and harmonic representation are now explicitly separated: local eta-winding is dynamically trivial, while the cha",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2403,
+   "s6_h": "310e1f5cadcb2c31bab474d0a632fdc852de8208c64f5153b189776b58055d7d",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` The local exact primitive realization is already complete at N-1/N-2, while N-3A proves that its dynamically induced `eta`-winding map is",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2405,
+   "s6_h": "d61955f037bd3ac414ec0fa65c8ace4c6e017aa4e2a8f70deb4856aff8c4c6b5",
+   "s6_tags": [
+    "OPEN"
+   ],
+   "s6_anchor": "`[OPEN]` N-4 now asks what survives on larger exact-map invariant domains where genuine `eta`-winding, critical-curve effects, or other recurrence structures ma",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2407,
+   "s6_h": "32ff773030d22921c5d665edab1bdccb86b0424d468dead99cc42067728b650f",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` Six-step block count, internal elliptic rotation, lifted eta-winding, and signed history remain distinct objects unless an explicit map is proved.",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2411,
+   "s6_h": "90663e478f172bcafef4a96bb828ccd95f7afb4d48e8beef381a68bfda358e78",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **N-5A CLOSED locally.** Track A is the primitive `T` stream; Track B/S1 is the canonical positive phase-coincidence crossing stream. It ",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2413,
+   "s6_h": "865f290ae6df2f6207da60135b3a2345c9541a585e2b08cdc939fec21602504e",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **Bounded synchronization commensurability structure CLOSED.** On a common-order prefix poset, the integer defect",
+   "s2_candidates": [
+    {
+     "line": 1280,
+     "h": "731ff33c9c04f6c6ec3c10300658af6317318a5fd3efe0c364cf10608f7656b8",
+     "tags": [
+      "DEF"
+     ],
+     "score": 2,
+     "anchor": "`[DEF]` **Bounded synchronization commensurability.**"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2419,
+   "s6_h": "fd31b74fa2cc736597ccbf7ad5dac4277c796084c5daae1430321fefdaf904ac",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: MATH/ALG]` **C5 controls CLOSED.** The abstract periodic language `A^6 B A^7 B` realizes a bounded synthetic `13:2` class; the neighboring `A^6",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2421,
+   "s6_h": "dc4f44013a2fe1b8e6909cf67bd4400818d3bb07fb4f85a09b25e01be4b240a7",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **C6 canonical falsifier CLOSED.** The original canonical primitive/section pair is density-resonant at `6` but boundedly commensurate at",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2423,
+   "s6_h": "f4f8faa64bef9eab3cfdd32c971248314f98fc86c1c1bf5debb018eaea19c0ae",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **N5-PHYS-1 CLOSED.** The positive and negative phase-coincidence branches `B_+`,`B_-` are physically distinct event predicates and stric",
+   "s2_candidates": [
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 3,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 1261,
+     "h": "d19d4ca865243cbcff8a67c53a45d9968b8cf6eaa3b387eaee95776947f7f9e3",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 3,
+     "anchor": "**Status:** ACTIVE `[OPEN]` \u2014 C1\u2013C4, C5-SYN-13, C6, N5-PHYS-1 and C7A CLOSED; C7B-DISC-1 and C7B-DISC-2 CLOSED with ten established dynamic labels; C7B global b"
+    },
+    {
+     "line": 1483,
+     "h": "b8687deda12c1cc25cf918f06b54e9db06fdc69b026c24b18e7ef64a988b3bcf",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG/MATH]` C2 makes boundedness independent of finite origin convention; C3 identifies positive common rescalings; C4 proves any two admissible"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2429,
+   "s6_h": "7f763fe9259b5be14683fac47c0b6796140711d4f77d533ef1aa2eddb8586a65",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG/MATH]` **C7A bounded rational-label theorem CLOSED.** Every certified bounded physical pair has a unique positive-rational invariant `rho_Q",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2431,
+   "s6_h": "6800f76d409c9210cd6019702cb5c2c1ea86e4c32163e26cd91b8f391e034939",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT]` **C7B-DISC-1 CLOSED.** Frozen DISC-1B PASS and DISC-1D PASS-INT establish `2,3 in Q_RTG^dyn subseteq Q_RTG^bd`.",
+   "s2_candidates": [
+    {
+     "line": 1502,
+     "h": "786663a5900c8e533016f8854555a4cb6ec6f4a0bcebdbb776c03e617b49df4f",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 14,
+     "anchor": "`[RESULT] [from: NUM/ALG under frozen protocol]` **C7B-DISC-1 CLOSED \u2014 DISC-1B PASS \u00b7 DISC-1D PASS-INT.** The frozen `N=24` TDR-G retrigger-entry panel used the"
+    },
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 3,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 1261,
+     "h": "d19d4ca865243cbcff8a67c53a45d9968b8cf6eaa3b387eaee95776947f7f9e3",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 3,
+     "anchor": "**Status:** ACTIVE `[OPEN]` \u2014 C1\u2013C4, C5-SYN-13, C6, N5-PHYS-1 and C7A CLOSED; C7B-DISC-1 and C7B-DISC-2 CLOSED with ten established dynamic labels; C7B global b"
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2433,
+   "s6_h": "b0c5b26b8b399e5dc6e9515765fe68fc0d319ffcd4d3bae74baaf82096083484",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT]` **C7B-DISC-2 CLOSED.** Frozen B-check PASS and D-check PASS on the registered supplementary family establish eight additional labels and add further ",
+   "s2_candidates": [
+    {
+     "line": 1529,
+     "h": "19be1d314b5a4f623166ba8cd8eb607cbe1bb527459ef9110b19d8718ebdaf4c",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 5,
+     "anchor": "`[RESULT] [from: NUM/ALG under frozen protocol]` **C7B-DISC-2 CLOSED \u2014 B-check PASS \u00b7 D-check PASS.** Protocol `NG_C7B_DISC2_PREREG_v1.md` (frozen `db87b455...9"
+    },
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 3,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 1261,
+     "h": "d19d4ca865243cbcff8a67c53a45d9968b8cf6eaa3b387eaee95776947f7f9e3",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 3,
+     "anchor": "**Status:** ACTIVE `[OPEN]` \u2014 C1\u2013C4, C5-SYN-13, C6, N5-PHYS-1 and C7A CLOSED; C7B-DISC-1 and C7B-DISC-2 CLOSED with ten established dynamic labels; C7B global b"
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2439,
+   "s6_h": "477ed99296dbb40c131c5ced3f720550df84a706112643bbba2d1196d3605b3a",
+   "s6_tags": [
+    "POSTHOC-DIAG"
+   ],
+   "s6_anchor": "`[POSTHOC-DIAG] [v1.19]` DISC-2 antipodal-endpoint audit marks 40/136 witness records `CONVENTION-EXPOSED`, with 96 unexposed. Every admitted label retains at l",
+   "s2_candidates": [
+    {
+     "line": 1550,
+     "h": "e877880e9fafcdb34793dac2ef86715ef868044c68f628a418df0f70d63826c9",
+     "tags": [
+      "POSTHOC-DIAG"
+     ],
+     "score": 6,
+     "anchor": "`[POSTHOC-DIAG] [v1.19]` **P2 antipodal-endpoint presentation-covariance exposure.** The external review identified a specification-level degeneracy in the TDR-"
+    },
+    {
+     "line": 1566,
+     "h": "6eadd6077b7ceb30bdc9819d9825d0b9c5a7e9b9bb965b07e3d45465f3f23eaa",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 6,
+     "anchor": "`[GUARD]` This is **post-hoc provenance diagnosis**, not a retroactive admission gate and not a policy replacement. The 40 affected witness records are annotate"
+    },
+    {
+     "line": 1636,
+     "h": "57197e1a075a2b56a064904261d37f5b31916cbc1394f1946556ffa356cd51cc",
+     "tags": [
+      "INTERP"
+     ],
+     "score": 6,
+     "anchor": "`[INTERP]` The current N-5 architecture therefore distinguishes:"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2441,
+   "s6_h": "a4621174d1d5e91f27d95bbcdc9c27d57c04e753acb16069dfc21eb197c8cf80",
+   "s6_tags": [
+    "OPEN"
+   ],
+   "s6_anchor": "`[OPEN]` **C7B global breadth.** Determine which additional positive rationals occur; no exhaustiveness theorem is claimed.",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2443,
+   "s6_h": "88bde5ad4099593677a902d239f5bdbd68af124495b8f4df41af948d68286109",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT]` **C7C-WD ADOPTED; C7C-0 CLOSED.** The well-definedness framework (WD-PHYS/CLOSE/DOM/VAL/DESCENT, arithmetic compatibility WD-REP only afterward) is a",
+   "s2_candidates": [
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 9,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 1589,
+     "h": "0605c46b040f07c83531f45a5c935f85ddc15567264c818821d3e8e0f1dffb73",
+     "tags": [
+      "DEF"
+     ],
+     "score": 9,
+     "anchor": "`[DEF] [v1.18]` **C7C-WD carriers and obligations** (`NG_C7C_WD_C7C0_DESIGN_v1.md`). Let"
+    },
+    {
+     "line": 1261,
+     "h": "d19d4ca865243cbcff8a67c53a45d9968b8cf6eaa3b387eaee95776947f7f9e3",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 6,
+     "anchor": "**Status:** ACTIVE `[OPEN]` \u2014 C1\u2013C4, C5-SYN-13, C6, N5-PHYS-1 and C7A CLOSED; C7B-DISC-1 and C7B-DISC-2 CLOSED with ten established dynamic labels; C7B global b"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2445,
+   "s6_h": "dfa0eda94cbfdc928131afbf23fea9442783b27c700b19b9a888e105de0968f6",
+   "s6_tags": [
+    "ALG",
+    "OPEN",
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT]` **C7C-M partially resolved (v1.20):** M-1A exact chain identity and M-1B conditional carrier closure on `D_chain` are CLOSED `[ALG]`; unrestricted WD",
+   "s2_candidates": [
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 15,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 1589,
+     "h": "0605c46b040f07c83531f45a5c935f85ddc15567264c818821d3e8e0f1dffb73",
+     "tags": [
+      "DEF"
+     ],
+     "score": 9,
+     "anchor": "`[DEF] [v1.18]` **C7C-WD carriers and obligations** (`NG_C7C_WD_C7C0_DESIGN_v1.md`). Let"
+    },
+    {
+     "line": 1598,
+     "h": "09d23493c8d864d12e2bdaa2451335a61266704b74b28c5cc0d0dfeb37f31c1f",
+     "tags": [
+      "COR",
+      "GUARD",
+      "RESULT"
+     ],
+     "score": 9,
+     "anchor": "`[RESULT] [from: ALG] [v1.18]` **C7C-0 CLOSED \u2014 reciprocal.** (`NG_C7C0_RECIPROCAL_CERT_v2.md`.) For `x=(A,B) in R_bd` define `S(A,B):=(B,A)`. Orientation swap "
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2447,
+   "s6_h": "6ff9c5e6dce8d6d01e1a630ceaba6aa921792bbac6e4e648f36cf4bdbbecee6c",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` N-5 therefore has a certified physical rational-label mechanism but is **not yet a derivation of the full field `Q`**. Full realization spectrum and a",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2451,
+   "s6_h": "28505d34ac69e64cd3c666a9abe8b70d7994e8a5d9417cfb8378fc73fd5d19ca",
+   "s6_tags": [
+    "HYP"
+   ],
+   "s6_anchor": "`[HYP]` **Classification-first real representation.** Incommensurable relational comparison should receive an R-like label only after the comparison structure i",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2453,
+   "s6_h": "81d565bfbd3b5900fdb031869dd98a24c6d5c654aa5d4113b026a971cac124ac",
+   "s6_tags": [
+    "INTERP"
+   ],
+   "s6_anchor": "`[INTERP]` The programme therefore need not claim that irrational relations are ontologically manufactured by completing already-primitive rationals. Completion",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2455,
+   "s6_h": "6bf5b1fd2a4bd3a0d13fe1fabe6cf42a7772ab464fd06e4aeba2683403d8e410",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` Because the current realization already uses a continuous state chart, an in-branch N-6 theorem is a recovery/representation theorem unless SG-NG-19 i",
+   "s2_candidates": [
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 3,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 1879,
+     "h": "b96441c024a4426cf79f10c8037ced75eb1eeab7d44fd2ae7e40f54020cacd47",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 3,
+     "anchor": "`[OPEN] [scope: continuous-dyad representation diagnostic]` The constants `pi/(3 tau)` and `rho=exp(pi/(3 tau))` may be studied as generator-dependent asymptoti"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2459,
+   "s6_h": "1698d1d77d9331e7ad3a4ed253fd2f77ecbb8e44ad18b540eee7a1773441c44d",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG] [scope: finite directed multigraph operator layer; field coefficients plus fundamental-integral-cycle completeness over abelian coefficien",
+   "s2_candidates": [
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 6,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 866,
+     "h": "c2f97759c9b7b0a7126885000aa4e55a4978c1c7fc6a8bb1e03e0b8184f1d30c",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG]` **Free-monogenic universal property.** `M_T` is generated by the distinguished element `T` and has no relation between distinct finite po"
+    },
+    {
+     "line": 910,
+     "h": "774f58974012c5670085255a7e95f2d9ef3d1f5ef1904c6bad022e9e2de1b935",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` **Continuous-branch realization only.** The N-1/N-2 construction proven here belongs to the continuous primitive dyad. Finite TDR-G phase dynamics may"
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2461,
+   "s6_h": "bad7525042afd2bdc15c4d8e5ac653563868580380207ad72772071e8c7463fc",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG]` **Foundations export.** T1\u2013T7 discharge the operator half of `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC`; the OFN-side DSN synchronization is",
+   "s2_candidates": [
+    {
+     "line": 1756,
+     "h": "6dc49143e87d83be4a837e89357363c71ab54b02f2cefce9d9a0449987d389b1",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG]` `[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.8 \u00a79 | RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC]` **Source narrowing already known:** the discrete "
+    }
+   ],
+   "confidence": "HIGH",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2463,
+   "s6_h": "d9976a1781ec20759d30cf16076b45e9779def4306d5e4abd6fecb462af9a417",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` Fundamental-integral-cycle completeness over `Z_N` is now certified, but completeness for an arbitrary nonprimitive/rescaled integer cycle-row present",
+   "s2_candidates": [
+    {
+     "line": 639,
+     "h": "51a6c7b1c195f0f3d020de1b3fb08c81a63501128da750bd88ef90e09a863c51",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 3,
+     "anchor": "`[OPEN]` `[scope: general branching/topology-changing histories]` **Other memory sources.** Recurrence holonomy (NG-7B), boundary-context memory, birth/topology"
+    },
+    {
+     "line": 1740,
+     "h": "6cce9c6df22cd52591bfbaac8c9bc748672c73924b71765e55694edf467e5e1c",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG]` **Completeness over field coefficients.** `im D^T = ker(C\u00b7)` by the exact dimension count `m \u2212 beta = n \u2212 c = rank D^T` plus the null the"
+    },
+    {
+     "line": 1765,
+     "h": "995bc94cff296177b0c6215035eea424f2ab3f1d8a118942cff1f23c246cca23",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` Closing NG-7A discharges only the operator/null half of the Foundations diagnostic. It does not prove that RTG supplies nonzero physical holonomy or c"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2465,
+   "s6_h": "9ffe70ce53b7415de3deff190643badad2c5cd494ed6c3b569eaa128c1766c7a",
+   "s6_tags": [
+    "OPEN"
+   ],
+   "s6_anchor": "`[OPEN]` **NG-7B.** Positive-source candidates are continuous frame/connection data, birth/history data, spin/quaternionic structure, or OPEN-M content. No posi",
+   "s2_candidates": [
+    {
+     "line": 639,
+     "h": "51a6c7b1c195f0f3d020de1b3fb08c81a63501128da750bd88ef90e09a863c51",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 6,
+     "anchor": "`[OPEN]` `[scope: general branching/topology-changing histories]` **Other memory sources.** Recurrence holonomy (NG-7B), boundary-context memory, birth/topology"
+    },
+    {
+     "line": 1765,
+     "h": "995bc94cff296177b0c6215035eea424f2ab3f1d8a118942cff1f23c246cca23",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 6,
+     "anchor": "`[GUARD]` Closing NG-7A discharges only the operator/null half of the Foundations diagnostic. It does not prove that RTG supplies nonzero physical holonomy or c"
+    },
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 3,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2469,
+   "s6_h": "3068bc717e8096fe8378f5cd64e519a5aea87755b73c90925864b4b4bde37d56",
+   "s6_tags": [
+    "HYP"
+   ],
+   "s6_anchor": "`[HYP]` \u201cFive nodes,\u201d \u201cfive repeats,\u201d \u201cfive windings,\u201d and \u201cfifth harmonic\u201d are distinct relational invariants/representations. Their common numeral should aris",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2471,
+   "s6_h": "a45a97ea3af7e36b1d765fd4efc63ce9b9486553cd5e7bad0f3f9860ec72c190",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **NG-8A CLOSED \u2014 ordinal-to-cardinal orbit-state compatibility.** For every admissible `x in U_T` ",
+   "s2_candidates": [
+    {
+     "line": 1771,
+     "h": "dbc662217c67d19cabe5d7809923e204229f7fd215f8c178dd1d60614eae2e77",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 3,
+     "anchor": "`[OPEN]` **Three-track roadmap after N-1/N-2.** Track A supplies a concrete local endomorphism-history object and its signed completion. Track B constructs phys"
+    },
+    {
+     "line": 1806,
+     "h": "3e9b38c84fcbaf9197331da15b4508f476c01af8f3bb3385487d33a29aa19957",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` The older position-set convention `{x,Tx,...,T^(m-1)x}` counts `m` positions but only `m-1` transitions. NG-8A uses the post-event convention when spe"
+    },
+    {
+     "line": 1808,
+     "h": "1d2ab62524100b56529c80e5c347040ccb5576f2ab859c267a6531c8bb6b79e4",
+     "tags": [
+      "COR v1.19",
+      "DEF"
+     ],
+     "score": 3,
+     "anchor": "`[DEF]` **State-counting predicate (SG-NG-11 discharge).** The Track-B counting equivalence used in NG-8A is identity of the gauge-reduced present state on `U_T"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2477,
+   "s6_h": "9d27f66b6f1ea452fd9689b0d31ab8de5aeb47aa2534661b5181aba621dacb2f",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` If one instead counts orbit positions including the initial state, `{x,Tx,...,T^(m-1)x}` contains `m` positions but only `m-1` transitions between the",
+   "s2_candidates": [],
+   "confidence": "NONE",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2479,
+   "s6_h": "3d371991737fe2523a03b37d2599fb41159955bb3267a172d4b6f2487bccf8ce",
+   "s6_tags": [
+    "RESULT"
+   ],
+   "s6_anchor": "`[RESULT] [from: ALG] [scope: local primitive-dyad tube U_T]` **NG-8B CLOSED \u2014 multiplication by physical re-blocking.** For every positive block size `m`, defi",
+   "s2_candidates": [
+    {
+     "line": 1771,
+     "h": "dbc662217c67d19cabe5d7809923e204229f7fd215f8c178dd1d60614eae2e77",
+     "tags": [
+      "OPEN"
+     ],
+     "score": 3,
+     "anchor": "`[OPEN]` **Three-track roadmap after N-1/N-2.** Track A supplies a concrete local endomorphism-history object and its signed completion. Track B constructs phys"
+    },
+    {
+     "line": 1824,
+     "h": "4e8cb95d4eaba4404a00e2535a03f0f0c966a9a38a7c639096e24b7e13ae91ab",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` `T^m` is a derived block/coarse-graining of the same Track-A stream, not a second independently certified event type. NG-8B therefore does not close N"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2485,
+   "s6_h": "c68d6675d91b4d204a611e32bf43f4bb8499fe0225a22484bfd5aa6d4758f4ae",
+   "s6_tags": [
+    "GUARD"
+   ],
+   "s6_anchor": "`[GUARD]` NG-8B cannot discharge N-5A/SG-NG-20. A pair `(T^m,T^n)` remains one certified stream under two blockings.",
+   "s2_candidates": [
+    {
+     "line": 1253,
+     "h": "2bc72d6a4e23e526e3b680c26e1a71ac9af4326bd028477746c4df69c37a7afe",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` See SG-NG-20. A pair `(T^m,T^n)` generated solely by one certified event type does not close N-5A."
+    },
+    {
+     "line": 1350,
+     "h": "46cf617ce4baa1c9eb3023113531d8886882be4dbb102bab36166353a2d4736b",
+     "tags": [
+      "COR v1.19",
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG]` **One-stream reblocking zero-control.** If `B=T^m` is merely a derived blocking of one Track-A stream, then at primitive prefix length `n"
+    },
+    {
+     "line": 1612,
+     "h": "a1744277697bd26c1dda3116063ad475f44a81318c6c4ca9c29a0de233d7b163",
+     "tags": [
+      "RESULT"
+     ],
+     "score": 3,
+     "anchor": "`[RESULT] [from: ALG]` **Unrestricted WD-CLOSE: FAIL on the current carrier.** For any `x=(A,B) in R_bd`, C7C-0 gives `Sx=(B,A) in R_bd`, but the chain output `"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  },
+  {
+   "s6_line": 2487,
+   "s6_h": "fc9129721a92a7e622f8c38920ba128405fd3ff3056b2dc86c6bd20247eeea90",
+   "s6_tags": [
+    "OPEN"
+   ],
+   "s6_anchor": "`[OPEN]` **Full NG-8 target \u2014 compatibility of invariants on the common relational architecture.** Prove physically implemented structure-preserving maps among:",
+   "s2_candidates": [
+    {
+     "line": 154,
+     "h": "871b2bc5bd9d931a8ff56f3e0f547ed0d68d1b5a726eb6e11d0e1eb81d844c99",
+     "tags": [
+      "ALG"
+     ],
+     "score": 3,
+     "anchor": "1. **C7C-M \u2014 interface-typed WD-DOM / partial-composition closure (next active target).** `[v1.20]` M-1A exact chain identity and M-1B conditional carrier closu"
+    },
+    {
+     "line": 881,
+     "h": "c2449ec60f53d90c44bbdb35af026134f5f748a1bdb7538c8da1124ceb318f5a",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` **Scope of N-1 closure.** The theorem is local and existential in the L1 radius: it proves a sufficiently small punctured primitive-dyad tube exists. "
+    },
+    {
+     "line": 981,
+     "h": "52399d60df9465915d9ff7658af72b2dc27a167c134e93ed4f2ae40c884920d0",
+     "tags": [
+      "GUARD"
+     ],
+     "score": 3,
+     "anchor": "`[GUARD]` **N-2 scope.** This is a Track-A local signed-history comparison group derived from the N-1 primitive-dyad monoid. It does not yet identify signed his"
+    }
+   ],
+   "confidence": "AMBIGUOUS",
+   "decision": null,
+   "tag_or_scope_mismatch": null
+  }
+ ],
+ "reconciled": [],
+ "tag_norm": [],
+ "stop": []
+}

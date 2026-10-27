@@ -1,0 +1,141 @@
+{
+ "base": "RTG_NUMBER_GENESIS_DSN_v1_20_5.md",
+ "base_sha256": "351384dc99001f476f1da8a9ce781fee6d1faffd14ba953e280d393795f3d34c",
+ "status": "APPLIED in RTG_NUMBER_GENESIS_DSN_v1_20_6.md (candidate, pending freeze)",
+ "criterion": {
+  "K1": "Decompose by assertion. DEF, proposition, exact identity, numerical result, guard, pointer are separated. Pure notation/navigation is not a claim; a substantive definition IS a [DEF] claim-block.",
+  "K2": "Split iff two assertions carry different canonical status, domain/assumptions, or evidential basis.",
+  "K3": "Standard mathematics is not a second grade. [scope: standard mathematical input] only for claims that ARE background standard mathematics; an RTG-owned theorem that uses standard mathematics records it in Depends on / proof provenance.",
+  "K4": "Load-bearing imports carry the source grade directly: [GRADE] [import: SOURCE_vX.Y § | RID]. [RESULT][from: ...] only for genuine local synthesis/consequence.",
+  "K5": "Mirrors synchronize to their owner row; they create no authority.",
+  "K6": "THM vs ALG by claim form: complete proposition proof -> [THM]; exact symbolic identity/derivation -> [ALG]. 'All p' does not by itself make an identity [THM]."
+ },
+ "group1": {
+  "status": "CLOSED at ruling level (co-owner 2026-09-29)",
+  "rows": {
+   "1": {
+    "ruling": "SPLIT",
+    "1a": "[DEF] [import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1 | RID unavailable]",
+    "1b": "[THM] [import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.2 | RID unavailable] [scope: deterministic system under a fixed node-count cap]",
+    "note": "1b is a direct theorem import, not [RESULT][from: THM]; legacy [source:] -> [import:]"
+   },
+   "6": {
+    "ruling": "[THM] [scope: abstract representation of the local Track-A group]",
+    "depends": "N-2",
+    "provenance": "proof uses the standard theorem S^1-hat ≅ Z",
+    "note": "no [scope: standard mathematical input]: RTG-owned local representation theorem"
+   },
+   "4": {
+    "ruling": "MIRROR of 6",
+    "note": "summary may read [RESULT][from: THM]"
+   },
+   "10": {
+    "ruling": "[THM] [scope: pure finite-character representation theory]",
+    "depends": "N-3B"
+   },
+   "9": {
+    "ruling": "module-status sync to 10"
+   },
+   "5": {
+    "ruling": "MIRROR of 10 + separate block [GUARD] Cross-branch representation/dynamics boundary",
+    "note": "two separate blocks, not one compound status"
+   },
+   "11": {
+    "ruling": "[ALG] [assuming: ord(lambda)=p] [scope: formal complex vector-map monomials]",
+    "note": "q=4,(0,3) cascade = pointer to the existing separate import, not a second grade; missing-slot work stays an [OPEN] pointer"
+   }
+  }
+ },
+ "count_correction": "[COR v1.20.6] The v1.20.4–v1.20.5 header described 19 live combined-grade rows as 'independent grade-decision rows'. Row-by-row normalization showed that this count included summary/module/provenance mirrors. The 19-row list is retained as the raw normalization inventory; the number of independent owner grade decisions is determined by the completed normalization ledger. (Final number filled in after the last ruling.)",
+ "group2": {
+  "status": "CLOSED at ruling level (co-owner 2026-09-29)",
+  "rows": {
+   "8": {
+    "ruling": "[RESULT] [from: ALG]",
+    "note": "genuine local consequence of the exact non-translation result (L1388); Jacobi–Anger / character theory is standard-math proof input (K3)"
+   },
+   "14": {
+    "ruling": "SPLIT",
+    "14a": "[DEF] synthetic control language W_(13:2) and admissible prefix set P_(13:2)",
+    "14b": "[RESULT] [from: ALG] bounded synthetic 13:2 class, |Delta|<=13 for all admissible prefixes; unique reduced class",
+    "depends": "14a, N5-C3, N5-C4"
+   },
+   "15": {
+    "ruling": "[RESULT] [from: ALG]",
+    "note": "W_fail is notation for one explicit word; 'discriminating rather than automatic' is the logical conclusion of the same exact argument"
+   },
+   "16": {
+    "ruling": "SPLIT",
+    "16a": "[RESULT] [from: ALG] well-defined unique positive-rational invariant rho_Q; Depends on: N5-C2, N5-C3, N5-C4",
+    "16b": "[RESULT] [from: ALG] rho_Q(B_+,B_-)=1, 1 in Q_RTG^bd; Depends on: 16a, N5-PHYS-1",
+    "16c": "[GUARD] bounded positive control != strong dynamic admission; 1 in Q_RTG^dyn established separately by C7B-DISC-2",
+    "16a_note": "Selected [RESULT][from: ALG] because the current block is an explicit local synthesis of C2–C4, not because ALG premises impose an upper bound on the grade of a derived proposition.",
+    "cor": "The group-2 review memo (NG_V1206_REVIEW_G2_v1) justified 16a by 'grading the synthesis above its basis would be inconsistent'. That reasoning is withdrawn: Methodology v1.3 distinguishes THM and ALG by claim form and evidence type, not as a strength ladder."
+   },
+   "19": {
+    "ruling": "[RESULT] [from: ALG] TDR-G Z_N zero-control: integer cycle vectors annihilate node-difference Z_N phase data mod N (C D^T = 0 => C(D^T theta) = 0 mod N)",
+    "note": "finite exact checks on rings N=6,8,12 and sampled random graphs recorded as provenance only; not a second authority; [COR v1.19] note unchanged"
+   },
+   "7": {
+    "ruling": "MIRROR/SYNC -> row 6 [THM]"
+   },
+   "12": {
+    "ruling": "MIRROR/SYNC -> rows 14b, 15; 'without constituting a physical RTG witness' -> separate [GUARD]"
+   },
+   "13": {
+    "ruling": "MIRROR/SYNC -> rows 16a, 16b; 'Bounded realization and dynamic admission are distinct' -> separate [GUARD]"
+   },
+   "3": {
+    "ruling": "MIRROR/SYNC -> C7A ruling; physical-overclaim guard stays in the forbidden-overclaim column"
+   },
+   "2": {
+    "ruling": "MIRROR — resolved in group 3: [RESULT] [from: ALG]",
+    "history": "DEFERRED in group 2 until the DISC rulings; resolved by group 3"
+   }
+  }
+ },
+ "group3": {
+  "status": "CLOSED at ruling level (co-owner 2026-09-29)",
+  "rows": {
+   "17": {
+    "ruling": "SPLIT (required by K2)",
+    "A": "[ALG] [scope: exact exhaustive verification on the registered finite DISC-1 panel under the frozen C7B protocol] [conv: pinned TDR-G v18 signed_centered boundary and declared SWAP/P3 event semantics]; hashes in Evidence:, not in [conv:]",
+    "B": "[RESULT] [from: ALG] breadth consequence (DISC-1B); Depends on: A (base census), Q_RTG^bd [DEF], C7B-ALG-T2, C7B-ALG-T3",
+    "C": "[RESULT] [from: ALG] dynamic admission {2,3} ⊆ Q^dyn, Q^dyn ≠ ∅; Depends on: A (discrimination verdicts), Q_RTG^dyn [DEF], C7B-ALG-T4",
+    "P2": "robustness/provenance only, not part of admission grade; tested alternative policies only",
+    "P2_evidence": "post-hoc: 0/22 witnesses exposed; {2:1,3:1} unchanged under reverse and inert"
+   },
+   "18": {
+    "ruling": "SPLIT (required by K2)",
+    "A": "[ALG] [scope: exact exhaustive verification on the registered finite DISC-2 panel under the frozen C7B protocol] [conv: pinned TDR-G v18 signed_centered boundary and declared SWAP/P3 event semantics]; hashes in Evidence:, not in [conv:]",
+    "B": "[RESULT] [from: ALG] breadth consequence (B-check); Depends on: A (base census), Q_RTG^bd [DEF], C7B-ALG-T2, C7B-ALG-T3",
+    "C": "[RESULT] [from: ALG] dynamic admission {1,3/2,2,3,4,4/3,5,5/2,7/2,9/4} ⊆ Q^dyn; Depends on: A (discrimination verdicts), Q_RTG^dyn [DEF], C7B-ALG-T4",
+    "P2": "robustness/provenance only, not part of admission grade; tested alternative policies only",
+    "P2_evidence": "40/136 exposed, 96 unexposed, every label ≥1 unexposed; label set unchanged under reverse and inert"
+   },
+   "2": {
+    "ruling": "MIRROR: [RESULT] [from: ALG] (all spine components ALG-based)"
+   }
+  },
+  "k1_definition_repair": {
+   "not_counted_as_grade_decisions": true,
+   "DEF_1": "[DEF] Bounded and dynamically admitted spectra: Q_RTG^bd := ..., Q_RTG^dyn := ...",
+   "DEF_2": "[DEF] Rational-label representation map: rho_Q(A,B) := p/q for any positive pair with bounded synchronization defect",
+   "note": "definition of a map != proof that it is well-defined; 16a follows and depends on DEF_2; the [COR] note stays as the historical record of the v1.15->v1.16 split"
+  }
+ },
+ "final_count": {
+  "raw_rows": 19,
+  "owner_decisions": 11,
+  "raw_row_mirrors": 8,
+  "s92_provenance_mirrors": 5,
+  "new_DEF_blocks": 2,
+  "cor_text": "[COR v1.20.6] The v1.20.4–v1.20.5 header described 19 live combined-grade rows as 'independent grade-decision rows'. Row-by-row normalization showed that this count included summary/module/provenance mirrors: the 19 raw rows resolve into 11 owner grade decisions and 8 mirror synchronizations; the five §9.2 provenance mirrors (four [from: X/Y] forms plus the DISC-2 non-from combined-grade row) are synchronization-only and outside the 19. Two latent substantive definitions (the Q_RTG^bd/Q_RTG^dyn spectra and the rho_Q map) were extracted into [DEF] blocks as a claim-typing correction; they are not grade decisions and are not counted.",
+  "s92_note": "four in [from: X/Y] syntax + the DISC-2 result row written [RESULT] [NUM/ALG under frozen protocol], missed by the original regex; synchronized under the approved mirror rule"
+ },
+ "carried_forward": {
+  "combined_truth_tag": "[DEF/INTERP] in §8 (paradigm-synchronization note), outside the ruled inventory",
+  "bare_RESULT": 12,
+  "note": "a pre-patch count of 13 double-counted the §9.2 DISC-2 row"
+ }
+}

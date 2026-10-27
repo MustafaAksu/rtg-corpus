@@ -21,6 +21,14 @@ Operations: edit (classes ref-subst, history-removal), replace-section (history-
 history-appendix; tag_examples/navigation with a registered region), replace-header,
 replace-footer, and move (class reorder: a whole block reinserted byte-identical before a
 unique anchor inside the same section; added for RECOG v0.3.24 stage 2).
+
+Profile key base_history_from (added for NUMGEN v1.21 stage 2): a study whose base keeps its version
+history after the appendices under its own heading (e.g. "## Changelog", followed by legacy notes)
+instead of in "## Appendix A" may declare that heading. The base's live text then ends at that
+heading, as a base Appendix A region would. The heading must occur exactly once in the base as a
+whole line, no live section heading ("## §") or appendix heading may follow it, and the whole
+region must be removed by declared operations and found in a named archive (checked as
+"base history region"). The key changes nothing when absent.
 """
 import argparse, hashlib, json, re, sys
 
@@ -73,11 +81,23 @@ def split_regions(s):
     return {"header": (0, first_rule), "appA": (a, b) if a >= 0 and b > a else None}
 
 
+def base_history_start(s):
+    """Offset of the declared base history heading (profile key base_history_from), or -1."""
+    h = PROFILE.get("base_history_from")
+    if not h or s is not BASE_TEXT:
+        return -1
+    i = s.find("\n" + h + "\n")
+    return i
+
+
 def live_text(s):
     r = split_regions(s)
     h_end = r["header"][1]
+    cut = base_history_start(s)
+    if cut >= 0:
+        s = s[:cut + 1]
     t = s[h_end:]
-    if r["appA"]:
+    if r["appA"] and r["appA"][1] <= len(s):
         a, b = r["appA"]
         t = s[h_end:a] + s[b:]
     return "\n".join(l for l in t.split("\n") if not FOOTER.match(l))
@@ -241,7 +261,10 @@ def main():
     rep["operations"] = ops_report
 
     # 3. qualified claim preservation (block level, live text)
-    lb, lc = live_text(base), live_text(cand)
+    if PROFILE.get("base_history_from"):
+        ok, why = check_base_history(base, cand, mp, arch)
+        C.add("base history region", ok, why)
+    lb, lc = live_text(BASE_TEXT), live_text(cand)
     bb, cb = blocks(lb), set(blocks(lc))
     edited_old = {}
     for op in mp["operations"]:
@@ -451,6 +474,28 @@ def check_op(op, arch, cand):
 
 
 REGIONS = {}
+
+
+def check_base_history(base, cand, mp, arch):
+    """Validate a declared base history region (profile key base_history_from)."""
+    h = PROFILE["base_history_from"]
+    if not h.startswith("## ") or base.count("\n" + h + "\n") != 1:
+        return False, f"declared base history heading {h!r} is not a unique '## ' line of the base"
+    i = base.index("\n" + h + "\n") + 1
+    region = base[i:]
+    later = [l for l in region.split("\n")[1:] if l.startswith("## ")]
+    bad = [l for l in later if l.startswith("## §") or l.startswith("## Appendix")]
+    if bad:
+        return False, f"live or appendix headings follow the declared history heading: {bad[:3]}"
+    if h in cand:
+        return False, "the declared history heading survives in the candidate"
+    covered = any(op["op"] == "replace-section" and region in op.get("_removed", "") for op in mp["operations"])
+    if not covered:
+        return False, "the base history region is not removed by a declared replace-section"
+    names = [n for op in mp["operations"] if op["op"] == "replace-section" for n in (op.get("archive") or [])]
+    if not in_archive(region, arch, names):
+        return False, "the base history region is not found byte-identical in a named archive"
+    return True, f"base live text ends at {h!r}; region of {len(region)} chars relocated and archived"
 
 # Study profile (map key "profile"; Methodology v1.4 §13.6 calibration). Defaults reproduce the DYAD pilot.
 #   history_words  extra markers that identify a removed span as history (history-removal)

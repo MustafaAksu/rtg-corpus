@@ -1,0 +1,13 @@
+[PASS] L1 DISC-1B FAILS when every dual-active base cycle reduces to 1:1 (original v1.15 falsifier intact)
+[PASS] L2 DISC-1D still RUNS on 1:1 base candidates and is not halted by the DISC-1B failure
+[PASS] L3 DISC-1D PASSES at 1:1 for the same realization (stable at k=2, destroyed at k=3) -> admits 1 in Q^dyn
+[PASS] L4 the admitted class is recorded as 1:1, so a label-1 admission is visible in the report rather than hidden
+[PASS] L5 the DISC-1D pass does NOT repair DISC-1B: its verdict is untouched and still records the non-1 breadth failure
+[PASS] L6 converse verdict is representable: DISC-1B PASSES on non-1 breadth while DISC-1D FAILS (a bounded periodic control that does not meet the discrimination criterion)
+[PASS] L7 that DISC-1D failure is diagnosed observationally, not causally
+[PASS] L8 admission is mechanism-determined, not numeral-determined: the same transport pattern passes identically whether the base class is 1:1 or 3:2
+[PASS] L9 PASS/PASS state representable: DISC-1B PASSES on non-1 breadth and DISC-1D PASSES for the same realization
+[PASS] L10 FAIL/FAIL state representable: neither breadth nor dynamic admission achieved on the tested route
+[PASS] L11 all four logically distinct states are therefore reachable through the frozen harness without conflation: (FAIL,PASS), (PASS,FAIL), (PASS,PASS), (FAIL,FAIL)
+----------------------------------------------------------------------
+RESULT: ALL PASS — label-neutrality ruling enforced mechanically; all four verdict states exercised; DISC-1B and DISC-1D verdicts are independent.

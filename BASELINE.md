@@ -15,10 +15,10 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 | Programme | `RTG_PROGRAMME_OVERVIEW.md` | v1.3 | `1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06` | OWNER: release record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`; predecessor v1.2 `4207da05…9359` (`programme-v1.2`) | `programme-v1.3` |
 | DYAD | `RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.22 | `2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29` | OWNER: release record `records/dyad/RTG_DYADIC_v6_4_22_RELEASE_RECORD.md`; change-focused review (PR #9) | `dyad-v6.4.22` (v6.4.21: `a412f34d…dc7d`, `dyad-v6.4.21`; v6.4.20: `0b2d5a44…4852`, `dyad-v6.4.20`; v6.4.19: `dyad-v6.4.19`) |
 | TRIAD | `RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.6.1 | `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f` | XREF: RER v0.2 §7 (`TRIAD161`, byte-verified there) | `triad-v1.6.1` |
-| GEN | `RTG_GENESIS_GEOMETRY_DSN.md` | v2.8.9 | `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc` | XREF: OFN v0.10 IMP-O10-01 (`d143673e…c6fc`) | `gen-v2.8.9` |
+| GEN | `RTG_GENESIS_GEOMETRY_DSN.md` | v2.9 | `9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac` | OWNER: release record `records/gen/GEN_v2_9_RELEASE_RECORD.md`; predecessor v2.8.9 `d143673e…c6fc` (`gen-v2.8.9`) | `gen-v2.9` |
 | TDRG | `RTG_DISCRETE_GENESIS_DSN.md` | v2.12.13 | `aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f` | XREF: RER v0.2 §7 | `tdrg-v2.12.13` |
 | RECOG | `RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.25 | `86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db` | OWNER: release record `records/recog/RECOG_v0_3_25_RELEASE_RECORD.md`; per-group reviews (PR #83; cells PR #48, #49, #51, #53, #54, #59, #61, #63, #64, #71, #75) | `recog-v0.3.25` (tag to be created by the PI; v0.3.24: `8c64bea2…e7c1`, `recog-v0.3.24`; v0.3.23: `0d583400…a31a`; v0.3.22: `0dcce9e4…bcd9`; XREF RER v0.2 G9) |
-| NUMGEN | `RTG_NUMBER_GENESIS_DSN.md` | v1.20.8 | `835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e` | XREF: DYAD v6.4.20 §7 (project copy hashed by DYAD) | `numgen-v1.20.8` |
+| NUMGEN | `RTG_NUMBER_GENESIS_DSN.md` | v1.21 | `4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701` | OWNER: release record `records/numgen/NUMGEN_v1_21_RELEASE_RECORD.md`; atlas row checks (PR #77); predecessor v1.20.8 `835a56f8…817e` (`numgen-v1.20.8`) | `numgen-v1.21` |
 | OFN | `RTG_ONTOLOGICAL_FOUNDATIONS.md` | v0.10 | `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa` | XREF: RECOG v0.3.22 header (`acb70a8c…5dfa`) | `ofn-v0.10` |
 | UVM (OPEN-M) | `RTG_OPEN_M_DSN.md` | v0.7.1 | `0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e` | XREF: RER v0.2 §7 | `uvm-v0.7.1` |
 | RRF | `RTG_RRF_REPRESENTATION_REGISTRY.md` | v0.8.4 | `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce` | XREF: RER v0.2 §7 (byte-verified, Phase A r19) | `rrf-v0.8.4` |
@@ -39,7 +39,7 @@ The table lists the **governing adopted editions**. Predecessor: Methodology v1.
 
 ## Not yet in the repository
 
-Release/adoption records of the streams other than DYAD v6.4.20–v6.4.22 and RECOG v0.3.21–v0.3.25 (to `records/<study>/` when supplied), and the DYAD v6.4.19 disposition record.
+Release/adoption records of the streams other than DYAD v6.4.20–v6.4.22, RECOG v0.3.21–v0.3.24 and NUMGEN v1.21 (to `records/<study>/` when supplied), and the DYAD v6.4.19 disposition record.
 
 ## Records recovered after the project cleanup (22 October 2026)
 
@@ -90,3 +90,16 @@ Received from the RECOG co-owner sessions via the PI on `upload/recog-record-rec
 | `e2c_prod.zip` (PI production run) | `evidence/recog/packages/` | `4f171da6…b22d` | 29/29 chunk hashes of `e2c_production_certificate_v2.json` |
 
 Full per-hash inventory, placement map and the items still missing: `records/recog/RECOG_SOURCE_RECOVERY_LIST.md`.
+
+## Genesis records recovered (24–25 October 2026)
+
+Held Genesis records for editions v2.8.6–v2.8.9 were received from the Genesis co-owner session on `upload/gen-records` and merged unchanged (PR #40). Their **permanent home is `upload/gen-records/`** by PI decision V2 of 25 October 2026; they are not moved, renamed or re-encoded.
+
+| Item | Location | SHA-256 |
+|---|---|---|
+| 36 held files (release records, manifests, dispositions, kit notes, session records, 7 zip packages) | `upload/gen-records/` | per `upload/gen-records/SHA256SUMS.txt` (`beb32a22…f8ca`; 36/36 OK) |
+| Upload README (what was not held) | `upload/gen-records/README_UPLOAD.md` | `ecab0818…34e5` |
+| Atlas hash check and placement record | `records/gen/GEN_UPLOAD_HASH_CHECK_20261024.md` | — |
+| Inventory (files, zip members, cited identities present or missing) | `evidence/gen/inventory/gen_upload_inventory_20261024.json` | `5b97dfa0…10be` |
+
+Among them: the Genesis release records of v2.8.6 (`b6137587…3fec`), v2.8.7 (`d3fcc38e…9223`), v2.8.8 (`03deb7cb…c049`) and v2.8.9 (`f6df5d11…4181`). The 11 cited identities not held are listed in the hash-check record and stay missing; nothing was reconstructed.

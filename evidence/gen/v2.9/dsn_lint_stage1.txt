@@ -1,0 +1,20 @@
+file: evidence/gen/v2.9/stage1_intermediate.md
+bytes: 211284
+lines: 1697
+header_chars: 6261
+live_body_chars: 154179
+appendix_a_chars: 47949
+section1_words: 1006
+orientation_core: {"chars": 62426, "lines": 580, "words": 7633, "core_end_marker_present": true}
+header_fields: {"Title": 69, "Date": 27, "Document status": 117, "Scope": 306, "Supersedes": 938, "Companion documents": 230, "DSN Methodology": 43, "Programme tier": 237, "Status summary": 4250}
+appendix_a_words_per_edition: 27 editions, max 504 words
+footer_lines: 1
+history_phrases_live: {"historical": 24, "former": 5, "retained as": 1, "no longer": 4}
+near_duplicate_paragraphs: 0
+rids_total: 86
+previous: {"file": "/tmp/claude-0/-home-claude/f2095d3e-6910-56fc-ba56-4b428e1f7242/scratchpad/base_v2_8_9.md", "bytes": 198348}
+growth_bytes: 12936
+growth_percent: 6.5
+new_rids: 6
+growth_per_new_rid: 2156.0
+(informational report; no gate)

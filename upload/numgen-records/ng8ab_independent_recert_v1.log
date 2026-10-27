@@ -1,0 +1,17 @@
+[PASS] S0.1 identity word is empty tuple
+[PASS] S0.2 composition = concatenation, lengths add
+[PASS] S0.3 word-model freeness: word(j)==word(k) iff j==k (j,k<=400)
+[PASS] A1 |S_m^+| = m for all m in test range (incl. m=0 empty set)
+[PASS] A2 orbit-evaluation injectivity at word level (distinct k give distinct words), m<=60
+[PASS] A3 surjectivity by construction: image of {1..m} equals S_m^+
+[PASS] A4 position-set convention: |{x,...,T^(m-1)x}| = m positions, transitions inside = m-1 (m>=1)
+[PASS] A5 conventions differ exactly by the initial state: position_set(m) = S_(m-1)^+ union {id}
+[PASS] B1 grouping identity (T^m)^k == T^(mk) as literal word equality (exhaustive m<=20,k<=20 + large spot checks)
+[PASS] B2 <B_m> freeness: block_power(m,j)==block_power(m,k) iff j==k (m in 1..12, j,k in 0..30)
+[PASS] B3 length homomorphism argument: len((B_m)^j)=mj, and mj==mk => j==k for m>=1 (integer cancellation, checked m<=200, j,k<=200 sampled)
+[PASS] B4 'same ordered history, different grouping': flatten of k m-blocks == primitive word T^(mk); grouping metadata differs (k parts vs mk tokens) whenever m>=2,k>=1
+[PASS] B5 no second event type: every <B_m> word uses only the primitive token 'T' (m,k <= 20)
+[PASS] B6 edge cases: (T^m)^0 = id = T^0; (T^1)^k = T^k
+[PASS] C1 (T^m,T^n) generate words inside the single primitive alphabet (no new generator appears)
+----------------------------------------------------------------------
+RESULT: ALL ASSERTIONS PASS — NG-8A and NG-8B are independently re-certified at the word-algebra layer, conditional on PREMISE-1 (N-1 non-collision/free monogenic tube) and with PREMISE-2 recorded as the explicit physical-distinguishability counting predicate.
