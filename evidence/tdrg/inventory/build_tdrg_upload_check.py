@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hash-check of upload/tdrg-records (branch missing-files, commit 9df0319 "TDRG files") against the PI's held-file manifest
+"""Hash-check of upload/tdrg-records (branch missing-files, commit 07df334 after the 27 Oct clean-up of 12 stray files; first checked at 9df0319) against the PI's held-file manifest
 SHA256SUMS_tdrg_held.txt and the artifact registry of tdrg-v2.12.13 §8.
 Run from the repository root with the branch fetched: python3 -I evidence/tdrg/inventory/build_tdrg_upload_check.py
 Writes evidence/tdrg/inventory/tdrg_upload_inventory_20261027.json. Reads only; places nothing."""

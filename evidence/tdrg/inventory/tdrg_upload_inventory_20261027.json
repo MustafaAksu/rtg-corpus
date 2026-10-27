@@ -1,33 +1,17 @@
 {
  "upload_branch": "origin/missing-files",
- "upload_commit": "9df0319354be4b94b33c499667d0f91837b69a74",
- "files": 61,
+ "upload_commit": "07df334df081a4f8ae81cc1fd6f04e179996525d",
+ "files": 49,
  "manifest_entries": 60,
- "uploaded_files": 60,
+ "uploaded_files": 48,
  "manifest_match_all": true,
  "mismatch": [],
- "not_in_manifest": [
-  "AZ_PHASE2_N120_CORE_NULL1_v1.json",
-  "AZ_PHASE2_N120_NULL1_smoke.json",
-  "AZ_PHASE2_N120_bound_symmetric_NULL1_v1.json",
-  "AZ_PHASE2_N120_bound_symmetric_T300_NULL20_v1.json",
-  "AZ_PHASE2_N180_CORE_NULL1_v1.json",
-  "RTG_DSN_v4_4_2_patch_FINAL.md",
-  "SMOKE_telemetry_N120_k8.csv",
-  "SMOKE_telemetry_N120_k8.csv.manifest.jsonl",
-  "spectral_radius_patch.py",
-  "test_N840.zip",
-  "tetrahedral_six_step_cross_phase_t6c2_patched.py",
-  "triad_analytic_phase_steering_t6l_patched.py"
- ],
+ "not_in_manifest": [],
  "zip_members": {
   "motif_N718_k48_T5000_b100_v17.zip": {
    "motif_N718_k48_T5000_b100_v17.csv": "ea4444867f97690d758c59430a67947f5ee7aaa7f233fe2f2f2fdb617ed99941"
   },
   "motif_N840_k56_bound_symmetric_b100_v17.zip": {
-   "motif_N840_k56_bound_symmetric_b100_v17.csv": "0b7fd828918c529bfe0adab2dfb82fb77c0fa30d4c352a1c6ee4a5b5a689e2b4"
-  },
-  "test_N840.zip": {
    "motif_N840_k56_bound_symmetric_b100_v17.csv": "0b7fd828918c529bfe0adab2dfb82fb77c0fa30d4c352a1c6ee4a5b5a689e2b4"
   }
  },
@@ -37,7 +21,7 @@
    "member_hash_matches": true
   },
   "motif_N840_k56_bound_symmetric_b100_v17.csv": {
-   "zip": "test_N840.zip",
+   "zip": "motif_N840_k56_bound_symmetric_b100_v17.zip",
    "member_hash_matches": true
   }
  },
@@ -66,14 +50,6 @@
   "TDRG-ART-BIND3-SUITE": "NKSCAN falsification suite"
  },
  "file_hashes": {
-  "AZ_PHASE2_N120_CORE_NULL1_v1.json": "4414564523d2893aa917ef6ecabaae687ab3898068c8daf0fa183bbdaf9246c2",
-  "AZ_PHASE2_N120_NULL1_smoke.json": "561c66ac8e5d359d5806d9aa058e988b682412ddb4a84e71371e754e89e22284",
-  "AZ_PHASE2_N120_bound_symmetric_NULL1_v1.json": "3091dac57b952751a3e83649680f197a78c106a1ba63b104ec42010b29eafe16",
-  "AZ_PHASE2_N120_bound_symmetric_T300_NULL20_v1.json": "fe76bbd8bb7f15838a020dd063a73254bbeda49fceb84017f9780a40a997c627",
-  "AZ_PHASE2_N180_CORE_NULL1_v1.json": "76f864ab48599e3f98eca76e02634867d38632976acd9815512ed7f7b4859b4f",
-  "RTG_DSN_v4_4_2_patch_FINAL.md": "c66e4ff583903ea7303800e231790e793a4074bbd4f97cd94e2f7bd23218b3fb",
-  "SMOKE_telemetry_N120_k8.csv": "8349814c930110fabc6d60f83b7951ec3f79d901639af78aee0d03d409f3c1df",
-  "SMOKE_telemetry_N120_k8.csv.manifest.jsonl": "5edfc09544b3bed1325a59e372dff1a837e5ee501f5fb6aa54d66c91f4d58377",
   "genesis_mode_b_mc - Copy.py": "0600727848786c7316269a21f03cfd783716cffd5d48ebb22621271be785f8eb",
   "genesis_mode_b_mc.py": "4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608",
   "genesis_mode_b_mc_graph_export.py": "5256c479bebd3b9654f1a0d73dd82fa03f7e980cf731427446697c079fd65041",
@@ -113,7 +89,6 @@
   "motif_TESTGRID_N960_k64_T5000_b5_v17.csv": "d9b4a044acb4dd3ceaabf16e5275de78c37c45a9b57ae3cd768bee7577044e3c",
   "motif_TEST_N120_k8_T1200_b3_v17.csv": "de0f3e42eaeacd7655d4b29e8065ad800911f246639c454bf70c676b7ced36d9",
   "motif_TEST_N720_k48_T5000_b5_v17.csv": "e68994cf2d25dc89dbe01af728c9986b0cbbebdc2eed6ef6ebe84a46bf0adc4b",
-  "spectral_radius_patch.py": "459166855e163ab9238a16439f0206ecba85fdab779f57b53fd5d604a97e95ef",
   "tdr_motif_analysis.py": "60a5beee61727b213c502ca3911289815c8ec0e41b00e9deb10309574a823f18",
   "tdr_motif_analysis_v2.py": "18204ddbe26e66d97b5da6bb6c4d2def6ca05c8b38e39111b10350acd6fada99",
   "tdr_motif_analysis_v3.py": "c55392ace72547aeda3036a4f8d996cc9a86048f93be79509034aaae7b2517d8",
@@ -122,9 +97,6 @@
   "tdr_motif_bootstrap_v3.py": "f9208fd16796c533dcfe80ecf9fd7b9916af460c472e96124e691ff8ab1504e6",
   "tdr_motif_bootstrap_v4.py": "86e77511865603e67e82fe4ccec1c8ae3f54ac3fafafe8021810a311fa6dddc5",
   "tdr_motif_bootstrap_v5.py": "faa3cb2e803a172b01b68ebad522d5343a8f5bb5142160d6f22bd0f73f65d746",
-  "tdr_motif_bootstrap_v6.py": "3ebf064d9d073b3cc5372603010199fce695539236d1dd3f5e99ec684bc34ac6",
-  "test_N840.zip": "bca72490a859e1290335df290baba4a6914a461a1eb6db662a2ca89c6139c62f",
-  "tetrahedral_six_step_cross_phase_t6c2_patched.py": "afb4525ccc2f459964fc3e9acade004f2aa61c03be2366f125cef63fc466d80e",
-  "triad_analytic_phase_steering_t6l_patched.py": "2e0317bf90332d1fe0ab7489710a3c8c67b772e3031dd7ef95b3163f7d7a11cd"
+  "tdr_motif_bootstrap_v6.py": "3ebf064d9d073b3cc5372603010199fce695539236d1dd3f5e99ec684bc34ac6"
  }
 }
