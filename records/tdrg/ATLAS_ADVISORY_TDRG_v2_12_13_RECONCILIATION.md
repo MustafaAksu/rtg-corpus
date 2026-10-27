@@ -73,6 +73,13 @@
 
 Unchanged from pass 1 §5 and consistent with pass 2 §2: **Q1** edition — v2.13 with the Methodology v1.4 migration in two stages, or v2.12.14 corrections-only first; **Q2** the TDR-G co-owner sessions build (disposition records, then stage 1/2), atlas owner row-checks, ChatGPT reviews change-focused; **Q3** scope of reruns — BIND3-CYCLE-N24K1 sensitivity and DISC annotations inside this edition under the amended rule, or `EV-NOT-RERUN` with the census bound and a later campaign; **Q4** whether the TDR-G sessions hold the session-certified scripts and motif logs for an `upload/tdrg-records` branch. The orientation choice (a)/(b) is the owner's scientific decision, not a PI question.
 
-## 5. Hand-over
+## 5. PI decisions (27 October 2026)
+
+- **Q1 — staged.** TDR-G has gone unmaintained for long; it is updated in stages: a corrections-only edition first (**v2.12.14**: the merged list §3 — orientation ruling, definitions, guard, wording, grades, RIDs, pins, consumers — under Methodology v1.2 as declared, with the v1.4 rule that an edition keeps its declared methodology until migrated), then the Methodology v1.4 migration with stage-2 compaction as **v2.13** in a later cycle.
+- **Q2 — roles as proposed.** The TDR-G co-owner sessions write the disposition records and build; the atlas owner row-checks and reruns; ChatGPT reviews change-focused; the PI adopts, merges and tags.
+- **Q3 — reruns deferred.** No BIND3 sensitivity rerun or DISC re-annotation inside v2.12.14; the touched certificates are recorded `EV-NOT-RERUN` with the census bound (4.9 % of k=1 states, 77 of 9,800 eventual cycles) and the rerun is a later campaign.
+- **Q4 — held files.** The PI holds the motif logs (and the session scripts, if present) on his machine; they go to an `upload/tdrg-records` branch unchanged, assembled with the atlas owner, and are hash-checked there.
+
+## 6. Hand-over
 
 `records/tdrg/TDRG_COOWNER_ENTRY_NOTE.md` (same branch) brings the TDR-G co-owners to the current state and lists what is asked of them.
