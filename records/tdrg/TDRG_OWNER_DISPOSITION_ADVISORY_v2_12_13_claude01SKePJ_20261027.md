@@ -115,6 +115,8 @@ All under `evidence/tdrg/disposition/`; hashes in `SHA256SUMS.txt` there.
 
 ## 6. Differences with the other co-owner record (PR #88, `…_chatgpt_20261027.md`, read at `c326f14`)
 
+**Update (PR #88 at `6a588d8`, its post-peer addendum, verified on the branch):** the other co-owner now recommends **option (b)** for v2.12.14, keeping (a) as a covariant alternative for the sensitivity campaign. It accepts N1 (SG-14 scoped to the canonical branch and the policies that pass the controls, with the `largest_center` exception recorded) and N2. It scopes Q1 per file exactly as §4 here does. It records the accepted OFN token-shift *statement* separately from the deferred custody. It keeps the footer and Appendix A cleanup, and the v1.4 migration, in v2.13. It maps `TDRG-ORIENT` and `TDRG-ZN-STATE` after collision checking. PR #88 has also restored both `pipes/TDRG/` items byte-for-byte to `main`, so #88 and #89 no longer conflict. **Remaining open difference:** the source of the −0.730 restricted exponent (TA-04). The table below is the comparison against the initial PR #88 record (`c326f14`), kept for the reconciliation.
+
 Rows TA-02, TA-06, I07, TA-07, TB-09 (order), TB-11, TB-10/I09/I10, TB-12, TC-17, I12 agree in substance. Differences for the atlas owner and the PI:
 
 | Point | PR #88 (ChatGPT) | This record | Note for the reconciliation |
