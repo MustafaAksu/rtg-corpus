@@ -1,6 +1,6 @@
 # Discrete Genesis (TDR-G) v2.12.14 — Release Record
 
-**Status:** DRAFT — candidate built and checked; awaiting the ChatGPT co-owner's change-focused review, the atlas owner's row check and the PI's adoption.
+**Status:** ADOPTED by the PI, 28 October 2026 (§13): the bytes `3be72923…2392` are adopted as they are. Merge and tag `tdrg-v2.12.14` are pending (§12); until the tag exists, `tdrg-v2.12.13` remains the governing edition.
 **Date:** 28 October 2026
 **Prepared by:** Claude, TDR-G co-owner session `claude01SKePJ` (branch `claude/tdrg-v2-12-14-stage1`).
 **Edition:** v2.12.14, corrections only, one stage, under DSN Methodology v1.2 as declared (PI decision of 27 Oct 2026; the Methodology v1.4 migration and any layout compaction are v2.13).
@@ -17,8 +17,9 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Disposition reconciliation | `records/tdrg/TDRG_OWNER_DISPOSITION_RECONCILIATION_v2_12_13.md` (atlas owner; PR #91) | open PR; read at `c359e21` |
 | PI fixation | "başla" on the fixed dispositions of the reconciliation §3 (relayed in the session, 27 Oct 2026, 23:46) | given |
 | Change-focused review | ChatGPT co-owner session: `records/tdrg/TDRG_v2_12_14_CHATGPT_CHANGE_FOCUSED_REVIEW_20261028.md` (PR #94, commit `728f959`); acceptance criteria in PR #92 comment 6454252077 | **CONDITIONAL PASS** — two bounded changes, applied in round 2 (§3a) |
-| Row check and rerun | atlas owner (`records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_12_14.md`) | *(to be filled)* |
-| Adoption, merge commit, tag `tdrg-v2.12.14` | PI | *(to be filled)* |
+| Row check and rerun | atlas owner: `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_12_14.md`, rerun outputs `evidence/atlas/rowcheck/tdrg_v2_12_14/` (PR #95) | **ACCEPT FOR ADOPTION** (atlas side) — candidate and edit log rebuilt byte-identically from the tag; checker 11/11; K1–K8 caught; exhaustive k=1 [72,72] / [0,0]; session scripts 17/17; one publication condition: merge the upload PR (#97) before #92 |
+| Adoption | PI, 28 Oct 2026 (§13) | adopted |
+| Merge commits, tag `tdrg-v2.12.14` | PI | *(to be filled)* |
 
 ## 2. Identities
 
@@ -168,18 +169,24 @@ Net change: +30,836 bytes (+20.8 %). Corrections only: the orientation definitio
 
 | # | Step | Who | State |
 |---|---|---|---|
-| 1 | Change-focused review of this branch | ChatGPT co-owner | CONDITIONAL PASS (PR #94); round-2 changes applied (§3a) — confirmation *(to be filled)* |
-| 2 | Row check, builder/checker rerun, `ATLAS_ROW_CHECK_TDRG_v2_12_14.md` | atlas owner | *(to be filled)* |
-| 3 | Adoption decision entered here (§13) | PI | *(to be filled)* |
-| 4 | Merge commits (not squash), in order: #87, #91, this PR; the `upload/tdrg-session-scripts` branch after its atlas hash check | PI | *(to be filled)* |
-| 5 | Annotated tag `tdrg-v2.12.14` on the merge commit that carries the candidate hash, with the hash in the tag message | PI | *(to be filled)* |
+| 1 | Change-focused review of this branch | ChatGPT co-owner | CONDITIONAL PASS (PR #94); round-2 changes applied (§3a); the atlas row check confirms both conditions met |
+| 2 | Row check, builder/checker rerun, `ATLAS_ROW_CHECK_TDRG_v2_12_14.md` | atlas owner | done: ACCEPT FOR ADOPTION (PR #95) |
+| 3 | Adoption decision entered here (§13) | PI | done, 28 Oct 2026 |
+| 4 | Merge commits (not squash), in order: #87 → #91 → #97 (`upload/tdrg-session-scripts`, keeps commit `386e9d4` reachable) → #94 → #95 → #92 | PI | *(to be filled)* |
+| 5 | Annotated tag `tdrg-v2.12.14` on the merge commit of #92, with `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392` in the tag message | PI | *(to be filled)* |
 | 6 | `BASELINE.md` TDRG row (entered on this branch: v2.12.14, candidate hash, tag `tdrg-v2.12.14`) | row: this session; tag: PI | row entered |
 | 7 | Notices to NUMGEN, OFN and AZ (§9); close both `pipes/TDRG/` items | TDR-G co-owner, after the tag | *(to be filled)* |
 | 8 | Tag verification; atlas refresh (D5 TDRG rows, D5.X1, H4, H9, the N1 row, the TC-17 fix) | atlas owner | *(to be filled)* |
 
 ## 13. Adoption decision
 
-*(to be filled by the PI)*
+**Decision (PI, 28 October 2026, verbatim):** "`3be72923…2392` baytlarını benimsiyorum" ("I adopt the bytes `3be72923…2392`").
+
+- **Adopted object:** `dsn/RTG_DISCRETE_GENESIS_DSN.md`, SHA-256 `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392` — the round-2 candidate of §2, byte for byte. No publication transform is applied (the candidate carries no DRAFT marker; Methodology v1.2 as declared).
+- **Basis:** the fixed dispositions (reconciliation PR #91); the ChatGPT change-focused review, CONDITIONAL PASS with both conditions applied in round 2 (§3a); the atlas row check, ACCEPT FOR ADOPTION (PR #95).
+- **Publication condition (atlas, confirmed by the review):** §8 and checker C8 cite commits `c359e21` (PR #91) and `386e9d4` (session scripts), so #91 and #97 are merged before #92, by merge commit.
+- **Non-blocking notes (atlas):** the RIDs are declared in Methodology §4.2 form (`TDRG-DEF-ORIENT`, `TDRG-DEF-ZN-STATE`) with the consumer names as §7 aliases — agreed; the `BASELINE.md` row names v2.12.14 before the tag, acceptable because adoption precedes merge; the atlas verifies it after the tag.
+- **Not yet done:** merge commits and the annotated tag (PI); tag verification (atlas); notices and inbox closure (TDR-G co-owner, after the tag).
 
 ## 14. Open items carried forward
 
