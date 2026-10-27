@@ -1,0 +1,16 @@
+TDR-G owner session claude01SKePJ, 27 Oct 2026 — held-file question 1: which engine produced the v17 motif corpus.
+Engine: upload/tdrg-records/genesis_mode_b_mc.py  sha256 4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608 (header "v15.3"), copied unchanged to a scratch folder; Python 3.13.16, Linux.
+Replay 1:
+  python3 genesis_mode_b_mc.py --policy bound_symmetric --N 120 --k 8 --T 1200 --batch 3 --max-nodes 1000 --seed 42 --motif-log rep_42.csv --motif-stride 1
+  output sha256 de0f3e42eaeacd7655d4b29e8065ad800911f246639c454bf70c676b7ced36d9
+  target upload/tdrg-records/motif_TEST_N120_k8_T1200_b3_v17.csv sha256 de0f3e42eaeacd7655d4b29e8065ad800911f246639c454bf70c676b7ced36d9
+  cmp: BYTE-IDENTICAL
+Replay 2 (canonical-scan member, §6.8):
+  python3 genesis_mode_b_mc.py --policy bound_symmetric --N 120 --k 8 --T 5000 --batch 20 --max-nodes 1000 --seed 42 --motif-log rep_N120_b20.csv --motif-stride 1
+  wall time 8m21s
+  output sha256 7ef343b0c2f933151e76a8fcc88815414de3b1beb4527eeb4cdbf72725429b51 (66,021,686 bytes)
+  target upload/tdrg-records/motif_N120_k08_T5000_b20_v17.csv sha256 7ef343b0c2f933151e76a8fcc88815414de3b1beb4527eeb4cdbf72725429b51
+  cmp: BYTE-IDENTICAL
+Schema check: every *_v17.csv header in upload/tdrg-records equals the 258-field MOTIF_FIELDS of 4c94d874; every *_v16.csv header equals the 48-field schema of genesis_mode_b_mc_graph_export.py (5256c479…, "v16.0").
+v18 relation: genesis_mode_b_mc_v18.py (9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e) differs from 4c94d874 (after CRLF normalisation) only by the dense-birth-window logging patch: motif_dense_birth_window parameter, first_birth_step tracking, dense-window collection, --motif-dense-birth-window CLI flag. step_universe, orient_path and all event rules are identical.
+Replay outputs are not committed (size); they are reproducible with the commands above.

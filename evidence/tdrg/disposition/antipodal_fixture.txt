@@ -1,0 +1,4 @@
+Antipodal permutation fixture: N=24, k=1, bound_symmetric, theta_pre=(0,11,12), delta=(0,1,12); post-advance theta=(0,12,0); defect path 0-1-2; S=0; E=+12 under both listings; test = endpoint transposition (0 2)
+v18    delta after [1, 12, 0]  path ties 0  equivariant under (0 2): False
+tie_b  delta after [0, 1, 12]  path ties 1  equivariant under (0 2): True
+G_a    delta after [12, 0, 1]  path ties 0  equivariant under (0 2): True
