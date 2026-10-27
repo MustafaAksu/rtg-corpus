@@ -17,7 +17,7 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 | TRIAD | `RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.6.1 | `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f` | XREF: RER v0.2 §7 (`TRIAD161`, byte-verified there) | `triad-v1.6.1` |
 | GEN | `RTG_GENESIS_GEOMETRY_DSN.md` | v2.8.9 | `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc` | XREF: OFN v0.10 IMP-O10-01 (`d143673e…c6fc`) | `gen-v2.8.9` |
 | TDRG | `RTG_DISCRETE_GENESIS_DSN.md` | v2.12.13 | `aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f` | XREF: RER v0.2 §7 | `tdrg-v2.12.13` |
-| RECOG | `RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.24 | `8c64bea231b3691b737f4143f6f4105030ee183fcc90d7f604ec83a4c869e7c1` | OWNER: release record `records/recog/RECOG_v0_3_24_RELEASE_RECORD.md`; per-group reviews (PR #35; cells PR #23, #28, #30) | `recog-v0.3.24` (v0.3.23: `0d583400…a31a`, `recog-v0.3.23`; v0.3.22: `0dcce9e4…bcd9`; XREF RER v0.2 G9) |
+| RECOG | `RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.25 | `86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db` | OWNER: release record `records/recog/RECOG_v0_3_25_RELEASE_RECORD.md`; per-group reviews (PR #83; cells PR #48, #49, #51, #53, #54, #59, #61, #63, #64, #71, #75) | `recog-v0.3.25` (tag to be created by the PI; v0.3.24: `8c64bea2…e7c1`, `recog-v0.3.24`; v0.3.23: `0d583400…a31a`; v0.3.22: `0dcce9e4…bcd9`; XREF RER v0.2 G9) |
 | NUMGEN | `RTG_NUMBER_GENESIS_DSN.md` | v1.20.8 | `835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e` | XREF: DYAD v6.4.20 §7 (project copy hashed by DYAD) | `numgen-v1.20.8` |
 | OFN | `RTG_ONTOLOGICAL_FOUNDATIONS.md` | v0.10 | `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa` | XREF: RECOG v0.3.22 header (`acb70a8c…5dfa`) | `ofn-v0.10` |
 | UVM (OPEN-M) | `RTG_OPEN_M_DSN.md` | v0.7.1 | `0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e` | XREF: RER v0.2 §7 | `uvm-v0.7.1` |
@@ -39,7 +39,7 @@ The table lists the **governing adopted editions**. Predecessor: Methodology v1.
 
 ## Not yet in the repository
 
-Release/adoption records of the streams other than DYAD v6.4.20–v6.4.22 and RECOG v0.3.21–v0.3.24 (to `records/<study>/` when supplied), and the DYAD v6.4.19 disposition record.
+Release/adoption records of the streams other than DYAD v6.4.20–v6.4.22 and RECOG v0.3.21–v0.3.25 (to `records/<study>/` when supplied), and the DYAD v6.4.19 disposition record.
 
 ## Records recovered after the project cleanup (22 October 2026)
 
