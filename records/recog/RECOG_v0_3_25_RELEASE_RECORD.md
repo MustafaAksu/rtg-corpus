@@ -82,7 +82,7 @@ Not built. No passage is removed or relocated; the growth is new science and reg
 | Stage 1 — group A1c-E | same | ACCEPTABLE WITH TARGETED WORDING FIX (R83-1, applied in round 2) — (D5) assumptions retained |
 | Stage 1 — group A1c-D | same | ACCEPTABLE AS A CONDITIONAL OUTER DECODER, not identification (R83-2 scope wording applied in round 2) |
 | Stage 1 — group A1c-Q | same | ACCEPTABLE at the $C^1$ phase-fiber / threshold-coding scope; Q1′ injectivity OPEN |
-| Stage 1 overall | review #5664297178: `CONDITIONAL ACCEPTANCE — TARGETED CORRECTION`; round 2 (this build) applies R83-1 and R83-2; targeted re-check of the changed text requested | round 2 pending review |
+| Stage 1 overall | review #5664297178: `CONDITIONAL ACCEPTANCE — TARGETED CORRECTION`; round 2 (`92b3333`, intermediate `657cf302…fe72`) applies R83-1 and R83-2 | round 2 reviewed: #5664522727 `ACCEPT — STAGE-1 SCIENTIFIC REVIEW COMPLETE` (R83-1 CLOSED, R83-2 CLOSED; C0–C24 25/25 PASS and 27/27 controls confirmed; no theorem statement, grade or RID changed between the rounds); per group: B1 ACCEPT; A1c-E ACCEPT with the (D5) conditions retained; A1c-D ACCEPT, dependent on A1c-E, outer decoder only; A1c-Q ACCEPT, Q1′ injectivity open |
 | Stage 1 — atlas row check | atlas owner | pending (PI may defer, as for v0.3.24) |
 | Adoption | PI — four separate decisions | pending |
 
@@ -92,9 +92,19 @@ Requested of the stage-1 review: (i) each science block against its accepted cel
 
 - `records/recog/RECOG_v0_3_25_CONSOLIDATED_CANDIDATE.md` — frame, results chain, decision matrix, notices.
 - Cell records (unchanged, merged into the candidate tree): the eleven records of §1 with the hashes given there.
-- Stage-1 build and checks: `evidence/recog/scripts/build_recog_v0_3_25_stage1.py`, `check_recog_v0_3_25_stage1.py`, `recog_v0_3_25_claim_audit.py`; `evidence/recog/v0.3.25/` (base, edit log, variants with their check outputs, check output, claim audit, lint).
+- Stage-1 build and checks: `evidence/recog/scripts/build_recog_v0_3_25_stage1.py`, `check_recog_v0_3_25_stage1.py`, `recog_v0_3_25_claim_audit.py`, `release_recog_v0_3_25.py` (publication transform, not yet run); `evidence/recog/v0.3.25/` (base, edit log, variants with their check outputs, check output, claim audit, lint).
 - The branch `claude/recog-v0.3.25-stage1` contains the merged cell branches of PRs #48, #49, #51, #53, #54, #59, #61, #63, #64, #71 and #75 (their files are cited by §8 of the intermediate and checked by C16).
 
 ## 8. Adoption
 
-Pending. The PI's decisions per group, the adopted file's publication-metadata hash, the merge (merge commit, not squash; the branch carries the merged cell branches) and the annotated tag `recog-v0.3.25` are recorded here when they happen. Until then `recog-v0.3.24` is the governing edition.
+**Pending the PI's four separate decisions** (the receiving review of 27 Oct 2026 is advisory; it is not an adoption). To be recorded here verbatim, with date and time, when given:
+
+| Group | Decision (PI) | Date |
+|---|---|---|
+| B1 — RECOG-ALG-R9-SUM-LEMMA `[ALG]`; RECOG-THM-R9-SHARPENED-ROWS `[THM]`; RECOG-THM-R9-SHARPENED-ROWS-C7 `[THM]` `[assuming: Dyadic $C_7$ ceilings]`; RECOG-ART-R9-SHARPENED-ROWS | — | — |
+| A1c-E — RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE, -COMBINED-TAIL `[ALG]`; RECOG-THM-A1C-SHARPENED-SCHEDULE `[THM]` `[assuming: (D5)]`; RECOG-ART-A1C-SHARPENED-SCHEDULE; A1b "Not supplied" status in place | — | — |
+| A1c-D (requires A1c-E) — RECOG-ALG-A1C-ADMISSIBLE-REGION, -START-OFFSET, -JOINT-CONTRACTOR `[ALG]`; RECOG-ART-A1C-DECODER; OPEN R6 A1c-decoder ✓ (outer windows on $U$, two usable slips, (D5) `[assuming:]`; no uniqueness/write/Q1′); §5 guard; RESULT clause in place | — | — |
+| A1c-Q — RECOG-ALG-A1C-THRESHOLD-CODING, RECOG-ALG-A1C-PHASE-C1-FIBER `[ALG]`; RECOG-ART-A1C-Q1PRIME-FIBER; OPEN R6 A1c-Q1′ reworded, stays `[OPEN]` | — | — |
+| (#49 A2 editorial) — record only | — | — |
+
+**Publication steps prepared (none executed):** (i) after the decisions, `evidence/recog/scripts/release_recog_v0_3_25.py CANDIDATE OUT "<date>" "<adoption clause>"` applies the 8 publication-metadata edits to the reviewed intermediate `657cf302…fe72` (title line, date, document status, supersedes, release-record field, Appendix A heading and records line, footer; the live text is byte-identical otherwise — a placeholder preview was diffed to confirm) and prints the final hash, which is then entered here together with the decisions; (ii) a status-lines-only publication commit on `claude/recog-v0.3.25-stage1`; (iii) the PI merges PR #83 into `main` with a merge commit (not squash; the branch carries the merged cell branches of the eleven PRs, which close with it) and creates the annotated tag `recog-v0.3.25` on the server with the final hash in its message; (iv) `BASELINE.md` lists v0.3.25 as the governing edition; "Sync now" in the Claude project; (v) the notices of §4 are routed through the PI after the tag, with the release hash, and their states recorded only on real dispatch. Until (iii) `recog-v0.3.24` is the governing edition.
