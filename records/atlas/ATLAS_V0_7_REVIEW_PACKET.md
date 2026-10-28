@@ -1,6 +1,6 @@
 # RTG State Atlas v0.7 — change-focused review packet
 
-**Date:** 28 October 2026. **Prepared by:** Claude, Atlas owner.
+**Date:** 28 October 2026 (rev. 2, 28 Oct 23:30: the stray "( change)" at the end of the A1b node — a builder slip reported by the receiving review, PR #101 — removed; candidate hash re-pinned; everything else unchanged). **Prepared by:** Claude, Atlas owner.
 **Status:** DRAFT / NONCANONICAL — candidate for receiving review (ChatGPT, Atlas co-owner); no PI acceptance or owner-science adoption. `atlas-v0.6` governs until acceptance.
 
 ## 1. Inputs and identities
@@ -16,12 +16,12 @@ The other 16 sources are byte-equal to their v0.6 inputs (manifest `v0_6_input_e
 
 | Object | SHA-256 |
 |---|---|
-| `atlas/RTG_STATE_ATLAS.md` (candidate) | `3655d4043e5eee046e93811d37b1fbe7bc863146dceed8b95c4e9d031ca53078` (492,007 bytes, 1,545 lines) |
+| `atlas/RTG_STATE_ATLAS.md` (candidate) | `8ebfbd1008ce96e167ec90931468d166c568294a66453824667fba88e3f49c6c` (492,059 bytes, 1,545 lines; rev. 1 was `3655d404…3078`, 492,007 bytes) |
 | `atlas/RTG_STATE_ATLAS_METHOD.md` (unchanged) | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` |
 | `evidence/atlas/v0.7/source_manifest.json` | `e88e5b15037261eb0c694d908e0330b951e0b006c095cdd0a1e445419d43865d` |
 | `tools/atlas_check.py` (unchanged) | `0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d` |
-| `evidence/atlas/build/refresh_v0_7.py` | `5ff22bf19e5d49cce64f5a6736b04231450cd399a313aba1ec2028d6521226c3` |
-| `evidence/atlas/v0.7/edit_log.json` | `a390d9b48bfef886397cf8f6db6aa81322c98ac77a20afc641201a89ae0abdd7` |
+| `evidence/atlas/build/refresh_v0_7.py` | `519c57e580c8cd22fcb42ecbdf3d00592cd2fe06334da7eb84f2005987ed70ed` |
+| `evidence/atlas/v0.7/edit_log.json` | `b95f29c2b17750b1ce5ec138388f6e5c8a13711d71aa59a6eeb90cc8254f7015` |
 
 Decision basis. TDR-G: `records/tdrg/ATLAS_ADVISORY_TDRG_v2_12_13_RECONCILIATION.md` (§3 merged list, §5 PI decisions), `TDRG_OWNER_DISPOSITION_RECONCILIATION_v2_12_13.md` (§2.2 fixed resolutions, §2.3 N1/N2), `ATLAS_ROW_CHECK_TDRG_v2_12_14.md` (§2 edit-by-disposition table), `TDRG_v2_12_14_RELEASE_RECORD.md` (§§3, 7, 8, 13) with `TDRG_v2_12_14_POST_TAG_ADDENDUM_20261028.md`, `TDRG_UPLOAD_HASH_CHECK_20261027.md`; the owner text at `tdrg-v2.12.14` §§1, 2, 6.3, 6.5, 6.6, 6.12, 7, 8, Appendix B. RECOG: `records/recog/RECOG_v0_3_25_RELEASE_RECORD.md` and the owner text at `recog-v0.3.25` §§1 (A1a/A1b/A1c summary), 6.13a (R9 rows), 6.13b (sharpened schedule), 6.16e (decoder, fibers), 7 (requests to Dyadic).
 
@@ -66,4 +66,4 @@ Fidelity checks done by hand against the tagged owner files (not by the checker)
 
 ## 5. Publication boundary
 
-Not accepted by this build. Acceptance needs the receiving review, then PI acceptance identifying the bytes `3655d404…3078`, a merge commit (not squash) of `claude/atlas-v0-7` into `main`, and an annotated `atlas-v0.7` tag naming the hash. No owner DSN, grade, source tag, Method edition or consumer adoption is changed. `atlas-v0.6` remains the accepted Atlas until that decision.
+Not accepted by this build. Acceptance needs the receiving review, then PI acceptance identifying the bytes `8ebfbd10…9c6c`, a merge commit (not squash) of `claude/atlas-v0-7` into `main`, and an annotated `atlas-v0.7` tag naming the hash. No owner DSN, grade, source tag, Method edition or consumer adoption is changed. `atlas-v0.6` remains the accepted Atlas until that decision.

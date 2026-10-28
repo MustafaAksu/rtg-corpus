@@ -1,6 +1,6 @@
 # Atlas check report
 
-atlas: `atlas/RTG_STATE_ATLAS.md` sha256 `3655d4043e5eee046e93811d37b1fbe7bc863146dceed8b95c4e9d031ca53078`; manifest `evidence/atlas/v0.7/source_manifest.json`
+atlas: `atlas/RTG_STATE_ATLAS.md` sha256 `8ebfbd1008ce96e167ec90931468d166c568294a66453824667fba88e3f49c6c`; manifest `evidence/atlas/v0.7/source_manifest.json`
 
 | check | PASS | FAIL | UNVERIFIED | other |
 |---|---|---|---|---|

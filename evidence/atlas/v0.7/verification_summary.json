@@ -2,8 +2,8 @@
  "status": "DRAFT_REVIEW_READY",
  "base_atlas": "atlas-v0.6",
  "base_sha256": "35ebee6d61f4db93211f2ed6f2de2bb973aa2fc6f2ea3cdf670656b1e961bd8a",
- "atlas_sha256": "3655d4043e5eee046e93811d37b1fbe7bc863146dceed8b95c4e9d031ca53078",
- "atlas_bytes": 492007,
+ "atlas_sha256": "8ebfbd1008ce96e167ec90931468d166c568294a66453824667fba88e3f49c6c",
+ "atlas_bytes": 492059,
  "atlas_lines": 1545,
  "source_snapshot": "53b56e4445a8c2869e41198e30bc66aa0fb93073",
  "changed_sources": [
@@ -112,7 +112,7 @@
  },
  "tool_sha256": {
   "tools/atlas_check.py": "0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d",
-  "evidence/atlas/build/refresh_v0_7.py": "5ff22bf19e5d49cce64f5a6736b04231450cd399a313aba1ec2028d6521226c3"
+  "evidence/atlas/build/refresh_v0_7.py": "519c57e580c8cd22fcb42ecbdf3d00592cd2fe06334da7eb84f2005987ed70ed"
  },
  "limitations": [
   "Structural checks only; no owner certificate rerun; new RIDs checked for presence in the tagged sources, not re-proved.",
