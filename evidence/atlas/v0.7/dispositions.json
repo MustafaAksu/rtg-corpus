@@ -1,0 +1,128 @@
+[
+ {
+  "key": "TDRG.G1",
+  "disposition": "retired",
+  "reason": "TDR-G v2.12.14 (TA-04/I06): headline exponent range-tagged [NUM] with window dependence citing its own Exp-0 line; the χ=0.836 consistency sentence withdrawn as [COR]; crystallization [HEUR].",
+  "previous_sha256": "5c2726522cbcf1e6d6f8403567140a69d65df75487fa7a6e4189e10c6b79107f",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G2",
+  "disposition": "retired",
+  "reason": "TDR-G v2.12.14 (TB-09/I08): 36 claim RIDs registered with a §7 owner RID map; OFN/AZ repins are theirs (OFN.O5, AZ.A7 reworded).",
+  "previous_sha256": "283834b311504988ff0fb197b81e2710360676088686ccb9d3f79f1ba8c2aa40",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G3",
+  "disposition": "retired",
+  "reason": "TDR-G v2.12.14 §7 (TC-15/I11): OFN Finding A statement accepted (one-line algebra, EV-CODE), custody transfer XFER-O08-01 deferred to v2.13; REQ-O09-05 answered by TDRG-DEF-ORIENT and that entry.",
+  "previous_sha256": "a2145f8c047ad4cc200f84eb4cc7e2c9fd204ca1d6c6ade0812b77eec8e16cd9",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G4",
+  "disposition": "retired",
+  "reason": "TDR-G v2.12.14 (TA-05/I04): LEM-RETRIG least-period wording at d=0 corrected in §1, §6.5 and the regime table.",
+  "previous_sha256": "aae4edefa4fd60c92949a64af50129840f77d8030b748169fe48e64053459ad6",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G5",
+  "disposition": "retired",
+  "reason": "TDR-G v2.12.14 (TA-06/I05): \"equivalently\" → \"therefore, in particular\" with the N=24 counterexample; AZ.A6 stays as AZ's own wording item.",
+  "previous_sha256": "8210e766e628f9390e64e3b42b8e2aee29dd5148ce4d5d0fd897120602a4098b",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G6",
+  "disposition": "retired",
+  "reason": "TDR-G v2.12.14 (TA-07): K₃ 96:1 and the T-6 wedge / x* references marked historical continuous references (TRIAD v1.6.1, CN-05).",
+  "previous_sha256": "46963c045f7b93808d90efa2bf2a0af7dc1910420b8cc3023ea8e6ea3c02203c",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G7",
+  "disposition": "retired",
+  "reason": "TDR-G v2.12.14 (TC-16): narrow-band exclusion cites AZ-ALG-ANTIPODAL-LOWORDER as AZ's strict generalisation; AZ.A4 stays as AZ's side.",
+  "previous_sha256": "fc709f8285942ca8cdace5722a6020da1abcbb5830e3dcf033e3feed08772240",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G8",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "2d066a0861c44da99eb3d325f7aa5045ec4aeb0d3d84135e2c1880f07603a2af",
+  "current_sha256": "d477cd5dd9fb7af668bc3f9c203cbe339826c057489bff3a5c84761ddc1020b2"
+ },
+ {
+  "key": "D5.X1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "bd206468e30c01f14ee82ddfaa20e67fda5beea1d0c1e7dc899aa24fe0f89861",
+  "current_sha256": "aeee8778953fd3e22a02b9667f09d93ccfc655cc73b617b39e8a9f1405b85b98"
+ },
+ {
+  "key": "AZ.A7",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "dc459bfb12d5d7d3ec72b422a4809c984ac33478c0c82c628b9d3fc74620576e",
+  "current_sha256": "6a5e4456373b267abd204795faa06c0f3651869737dbeda02e2735649ff3b92f"
+ },
+ {
+  "key": "OFN.O5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "d46d8cdefc10d6cfdf8e89d4649722508f6d080850ee52ca8abea86e00d94cd4",
+  "current_sha256": "105af16f77f078b4891169e2d5521ddaef32e9600fe43b1ee01ea7cb9b46da91"
+ },
+ {
+  "key": "OFN.O7",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "d6d2e3117f0633d73bd258704af618e8c45003e3cc050dcb1049f80352460cf4",
+  "current_sha256": "9655535d9341b5bc1e6a7293a3b452d38d8aa69fe6b8e60c4246150fc88c6946"
+ },
+ {
+  "key": "METH.M2",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "001cb62f3eebbee9718e514924d45220d55a838281ccedaeed61aa963d70d282",
+  "current_sha256": "1b47077ae93fec28f79507fb3d4ae5b1bba027ffb56f73c2918abc01c2a28a71"
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "0d7ff10f1feb15c4bc5e73bed742cf8569f6689a4ef750c2030b0f2e6c93f7e4",
+  "current_sha256": "e93f5d9db8e3abe18cdfed17db8e248e52313c7d792aeb85d9e8c1d761ad0ccf"
+ },
+ {
+  "key": "RECOG.R-D1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "0056b18e58d564112e5198a5912fcb8e4a4fa2578a4ab54e59b0e39d4053785a",
+  "current_sha256": "e0fb566aa0257df85f8e4a1013e0c8615ea9f4c2c3b837e721d460bc139fb1f9"
+ },
+ {
+  "key": "TDRG.G10",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "7dd47b2cdda6515852d1d7e87e5bc1dd9d3b1d770d1b232f94efa5444a955243"
+ },
+ {
+  "key": "TDRG.G11",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "e087c6567031780e98d69f1d2626f8cf8c63a2b9c5dc217bf36806830f41ef01"
+ },
+ {
+  "key": "RECOG.R-A1",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "762ac567547fbbf896abd9ec62a98f4048b12f3476fb06560ce93d159d21269e"
+ }
+]
