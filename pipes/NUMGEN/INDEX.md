@@ -5,3 +5,4 @@
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
 | 2026-10-26 | RECOG | notice | closed | RECOG-THM-A1B-SLIP-SCHEDULE-U (RECOG §6.13b, "Scope and custody" paragraph: "GAP-LOCK Lemmas 1–3 and INF-1 remain NUMGEN's … NUMGEN is informed; no custody changes"); RECOG-THM-A1A-PHASE-EXISTENCE-U (§6.13b); NUMGEN v1.20.8 §6.6 slip rate [RESULT][from: ALG], §9.1 rows A1a | — | `20261026-RECOG-a1b-slip-schedule-informed.md` |
+| 2026-10-28 | TDRG | notice | open | TDRG-DEF-ORIENT (TDR-G v2.12.14 §6.3), TDRG-ALG-ORIENT-NOGO, §6.12 orientation-covariance block, §7 owner RID map; answer to pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md | — | `20261028-TDRG-v2-12-14-adopted.md` |

@@ -5,3 +5,4 @@
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
 | 2026-10-26 | NUMGEN | notice | open | NUMGEN v1.21 §6.8 Foundations export (OFN v0.10 consumer pointer, additive-rank scope); §1.1 OFN imports | — | `20261026-NUMGEN-v1-21-adopted.md` |
+| 2026-10-28 | TDRG | notice | open | XFER-O08-01 / RTG-OFN-ALG-STAR-TOKEN-SHIFT (TDR-G v2.12.14 §7 import), REQ-O09-05, SG-14, §7 owner RID map for IMP-O08-02…16 | — | `20261028-TDRG-v2-12-14-adopted.md` |
