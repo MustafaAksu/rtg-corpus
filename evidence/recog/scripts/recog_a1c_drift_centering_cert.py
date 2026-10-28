@@ -55,6 +55,15 @@ Negative controls: NC1 the drift without the centre (coefficient 0) exceeds K_ep
 Dependencies: DYAD-ALG-NF6, DYAD-THM-NF-REM (C_7, one-orbit contraction), part 1b (gamma0, c_theta, closed forms), combined tail
            and start offset (E^(4), the b-enclosure; (D5) through Delta_a and the amplitude brackets). Lemma 21-22 and Prop. 23
            need no (D5) constant.
+Revision 2 (PR #96 review #5675460082, DRIFT-1 / ENV-1; record v0.3): the Lambda^log enclosure over a b-interval uses the
+           monotonicity of Lambda^log_M(b) in b (decreasing: H_m(b) and 1/((b+m) b~_m) both decrease) -- endpoints evaluated at
+           b- and b+ with the psi bracket only, no interval dependency in b; the closed-form tail replaces the uniform factor
+           1/(1-kappa2) by the explicit second-order term C^2 H^2/(n^2 (n - C H)) (its tail integral is O(log^2 n / n^2)), so
+           that the enclosure half-width is <= c(a)/(a+M) for every M (the former 1/(1-kappa2) slack carried an
+           O(kappa2 log n / n) piece, ~1e-4 of E^(5) -- found by the ENV-1 term-by-term check); G1 gains the antiderivatives
+           of L/x^3 and L^2/x^3 (L = log(x/b) + 1/b), log(1+t) <= sqrt t, and the three monotonicity thresholds used by the
+           first-term-plus-integral tails.  The all-M proof table (Lemma 22 components; Cor. 24 term-by-term constants) is
+           the separate certificate recog_a1c_drift_proof_table_cert.py (imports this module).
 usage: python -I recog_a1c_drift_centering_cert.py [OUT_JSON] [N_STEPS]
 """
 import hashlib, json, math, os, sys
@@ -90,8 +99,19 @@ g1c = sp.simplify(sp.diff(F2, xs) - sp.log(1 + xs/(2*bs))/(bs + xs)**2) == 0 and
 Fp = -sp.log(1 + xs/(2*bs))*(bs + xs)**(1 - ps)/(ps - 1)                                 # by parts: d/dx Fp = log(.)(b+x)^{-p} - (b+x)^{1-p}/((p-1)(2b+x))
 g1p = sp.simplify(sp.diff(Fp, xs) - (sp.log(1 + xs/(2*bs))*(bs + xs)**(-ps) - (bs + xs)**(1 - ps)/((ps - 1)*(2*bs + xs)))) == 0
 g1d = all(sp.simplify(sp.expand_func(sp.digamma(sp.Rational(7, 3) + m)) - sp.expand_func(sp.digamma(sp.Rational(7, 3))) - sum(1/(sp.Rational(7, 3) + j) for j in range(m))) == 0 for m in (1, 2, 5))
-res["gates"]["G1_exact"] = bool(g1a and g1a2 and g1b and g1c and g1p and g1d)
-res["G1"] = {"first_order_coefficient": g1a, "order_q0_vanishes": g1a2, "antiderivative_log_b": g1b, "antiderivative_log_2b_and_log2_over_b": g1c, "by_parts_general_p": g1p, "H_m_is_digamma_difference": g1d}
+Lx = sp.log(xs/bs) + 1/bs                                                                 # L(x) = log(x/b) + 1/b, dL/dx = 1/x
+F3 = -(Lx + sp.Rational(1, 2))/(2*xs**2)                                                  # antiderivative of L/x^3; -> 0
+F4 = -(Lx**2 + Lx + sp.Rational(1, 2))/(2*xs**2)                                          # antiderivative of L^2/x^3; -> 0
+g1e = sp.simplify(sp.diff(F3, xs) - Lx/xs**3) == 0 and sp.simplify(sp.diff(F4, xs) - Lx**2/xs**3) == 0 and sp.limit(F3, xs, sp.oo) == 0 and sp.limit(F4, xs, sp.oo) == 0
+ts, ys = sp.symbols('t y', positive=True)
+g1f = sp.simplify(sp.diff(sp.sqrt(ts) - sp.log(1 + ts), ts) - (1 - 2*sp.sqrt(ts) + ts)/(2*sp.sqrt(ts)*(1 + ts))) == 0      # = (1-sqrt t)^2/(2 sqrt t (1+t)) >= 0, value 0 at t = 0: log(1+t) <= sqrt t
+# monotonicity thresholds (x = b y): log(1+x/2b)/(b+x)^2 decreasing for x >= b; (log(x/b)+1/b)/x^2 and L^2/x^3 decreasing for x >= 2b
+N1 = (1 + ys)/(2 + ys) - 2*sp.log(1 + ys/2)                                               # sign of d/dx [log(1+x/2b)/(b+x)^2] (times a positive factor)
+g1g = sp.simplify(sp.diff(N1, ys) - (-(3 + 2*ys)/(2 + ys)**2)) == 0 and float(N1.subs(ys, 1)) < 0                          # dN1/dy = 1/(2+y)^2 - 2/(2+y) = -(3+2y)/(2+y)^2 < 0 and N1(1) < 0: N1 < 0 for y >= 1
+g1h = float(sp.log(2) - sp.Rational(1, 2)) > 0 and float(sp.log(2) - sp.Rational(2, 3)) > 0                              # x^2 (log(x/b)+1/b)/x^2 derivative sign 1 - 2L < 0 and L^2/x^3 sign 2 - 3L < 0 once L >= log 2
+res["gates"]["G1_exact"] = bool(g1a and g1a2 and g1b and g1c and g1p and g1d and g1e and g1f and g1g and g1h)
+res["G1"] = {"first_order_coefficient": g1a, "order_q0_vanishes": g1a2, "antiderivative_log_b": g1b, "antiderivative_log_2b_and_log2_over_b": g1c, "by_parts_general_p": g1p, "H_m_is_digamma_difference": g1d,
+             "antiderivatives_L_over_x3_and_L2_over_x3": g1e, "log1p_le_sqrt": g1f, "threshold_log_summand_decreasing_x_ge_b": g1g, "thresholds_L_and_L2_summands_x_ge_2b": g1h}
 # ---------------- G2: constants ----------------
 qq = qstar
 v = A5*qq**2 + C7*qq**3                                   # |u - mu q|
@@ -152,8 +172,11 @@ def H_bracket(b_, m):
     if m == 0: return I(0)
     n = b_ + m
     return iv.mpf([lo(iv.log(n/b_) - 1/n + 1/(2*b_)), up(iv.log(n/b_) - 1/(2*n) + 1/b_)])
-def Lambda_log(b_, M, J=None):
-    """sum_{m>=M} (1/b~_m - 1/(b+m)) = sum C H_m/(n b~_m): explicit terms for m < M+J (dependency-free form), two-sided closed-form tail"""
+def Lambda_log_point(b_, M, J=None):
+    """Lambda^log_M(b) at a point b (interval only through the psi bracket of H_m): explicit terms for m < M+J, two-sided closed-form tail.
+       Upper tail (n0 = b+M+J >= 3b): C H/(n(n-CH)) = C H/n^2 + C^2 H^2/(n^2 (n-CH)) <= C H_up/n^2 + C^2 H_up^2/((1-kappa2) n^3), both summands
+       decreasing for n >= 2b (G1h), each bounded by first term + integral (antiderivatives G1b, G1e).  Lower tail: summand >= C(log(n/b) - 1/n)/n^2,
+       decreasing for n >= 2b, bounded below by its integral (G1b)."""
     b_ = I(b_) if not hasattr(b_, "_mpi_") else b_
     J = J or max(2000, 2*int(up(b_)) + 2)
     assert M + J >= 2*up(b_), "tail start must be beyond 2b for the monotone tail bounds"
@@ -162,10 +185,17 @@ def Lambda_log(b_, M, J=None):
         n = b_ + m; H = H_bracket(b_, m)
         tot += C_ISO*H/(n*(n - C_ISO*H))
     Mt = M + J; n0 = b_ + Mt
-    Hup = iv.log(n0/b_) + 1/b_; kappa2 = C_ISO*(iv.exp(I(-1)) + 1/b_)/b_               # sup_m C(log(n/b)+1/b)/n <= C(1/e + 1/b)/b
-    tail_up = C_ISO/(1 - kappa2)*(Hup/n0**2 + (iv.log(n0/b_) + 1 + 1/b_)/n0)            # first term + int (G1b); summand decreasing for n > e^{1/2} b
-    tail_lo = C_ISO*((iv.log(n0/b_) + 1)/n0 - 1/(2*n0**2))                             # int_{Mt}^inf (log(x/b) - 1/x)/x^2 (G1b); summand decreasing for n >= 2b
+    L0 = iv.log(n0/b_) + 1/b_; kappa2 = C_ISO*(iv.exp(I(-1)) + 1/b_)/b_                 # H_up(n0) = L0; sup_m C(log(n/b)+1/b)/n <= C(1/e + 1/b)/b
+    tail_up = C_ISO*(L0/n0**2 + (iv.log(n0/b_) + 1 + 1/b_)/n0) + C_ISO**2/(1 - kappa2)*(L0**2/n0**3 + (L0**2 + L0 + I(1)/2)/(2*n0**2))
+    tail_lo = C_ISO*((iv.log(n0/b_) + 1)/n0 - 1/(2*n0**2))
     return iv.mpf([lo(tot + tail_lo), up(tot + tail_up)])
+def Lambda_log(b_, M, J=None):
+    """enclosure of Lambda^log_M(b) over b in the interval b_: Lambda^log_M is decreasing in b (H_m(b) decreases, 1/((b+m) b~_m) decreases),
+       so the range is [Lambda(b+), Lambda(b-)], each endpoint enclosed by Lambda_log_point (revision 2; dependency-free in b)"""
+    b_ = I(b_) if not hasattr(b_, "_mpi_") else b_
+    if lo(b_) == up(b_): return Lambda_log_point(b_, M, J)
+    hi = Lambda_log_point(I(lo(b_)), M, J); lo_ = Lambda_log_point(I(up(b_)), M, J)
+    return iv.mpf([lo(lo_), up(hi)])
 def q_bracket(a, bw, M):
     """log-free bracket of q_M^{-1} from Lemma 22: b~_M(b) - K <= q_M^{-1} <= b~_M(b) + K over b in [b-, b+]"""
     K = K_eps(a)["K"]; b_ = iv.mpf([bw[0], bw[1]]); n = b_ + M

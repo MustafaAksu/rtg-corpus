@@ -1,5 +1,5 @@
 base 86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db
-intermediate 0f8430e1aab9b685896ae02bcc87da90c7222c7074597a0e860b644e98f5d12b (groups DRIFT,ENV, 8 edits)
+intermediate 9432248e4ba1dc35c463855b5e5e25aa61c46853d1a19200091d977fdfdf0d18 (groups DRIFT,ENV, 8 edits)
 GATES:
   C0   PASS BASE
   C1   PASS BUILD
@@ -17,7 +17,7 @@ GATES:
   C13  PASS R9/A1B statements, the schedule display and the untouched TAIL-HARMONICS items unchanged
   C14  PASS HEADER
   C15  PASS HEADINGS
-  C16  PASS §8 FILES (4 hashes checked)
+  C16  PASS §8 FILES (7 hashes checked)
   C17  PASS LIVE
   C18  PASS DECOUPLE
   C19  PASS VALUES

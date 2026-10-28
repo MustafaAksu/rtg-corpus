@@ -264,7 +264,9 @@ def check(base, inter, log, root, verbose=True, files=None):
             ok &= len(jet) == 12 and near(min(sd), 0.0066, 3e-2) and near(max(sd), 0.0113, 3e-2) and max(v["ratio"] for v in jet.values()) <= 0.061 and all(v["ok"] for v in jet.values())
             ok &= near(max(v["old_epsbar_at_N"] for v in jet.values()), 2.6, 5e-2)
             ok &= dd["NC1"]["uncentred_drift_exceeds_K"] is True and dd["NC2"]["wrong_sign_drift_exceeds_K"] is True
-            ok &= all(x in L for x in ("$\\gamma_2=212.6$", "$K_\\epsilon=0.7203$, $0.4513$, $0.1860$", "\\tilde b_m|=0.0066$–$0.0113$", "-\\tfrac{29}{216}q_m-2\\operatorname{Re}(a_{05}e^{-6i\\Theta_m})q_m+R_m$"))
+            ok &= all(x in L for x in ("$\\gamma_2=212.6$", "$K_\\epsilon=0.7203$, $0.4513$, $0.1860$", "\\tilde b_m|=0.0066$–$0.0113$", "-\\tfrac{29}{216}q_m-2\\operatorname{Re}(a_{05}e^{-6i\\Theta_m})q_m+R_m$", "every $m\\ge0$ and every admissible $b\\in[b'", "rows D1–D8"))
+            pt = J("evidence/recog/a1c_drift/a1c_drift_proof_table_cert.json"); ok &= pt["ALL_PASS"] and all(pt["gates"].values()) and pt["imports"]["recog_a1c_drift_centering_cert.py"] == hashlib.sha256(open(os.path.join(root, "evidence/recog/scripts/recog_a1c_drift_centering_cert.py"), "rb").read()).hexdigest()
+            ok &= all(abs(pt["PT1"][a]["K_from_rows"] - pt["PT1"][a]["K_cert"]) <= 1e-12 for a in ("625", "2500"))
         if "ENV" in groups:
             A = dd["G3c_asymptotics"]
             vals = [A["625"][M]["E5*n"] for M in ("10000", "100000", "1000000", "10000000", "1000000000", "100000000000", "10000000000000")]
@@ -274,7 +276,9 @@ def check(base, inter, log, root, verbose=True, files=None):
             g5 = dd["G5"]; ok &= g5["n_slips"] == 73 and g5["slips_with_gain_gt_1"] == 73 and g5["N_steps"] == 1800000 and len(g5["orbits"]) == 12
             ok &= near(g5["min_gain"], 1.02, 1e-2) and near(g5["max_gain"], 1.87, 1e-2) and near(g5["max_ratio5_with_tol"], 0.79, 2e-2) and near(g5["max_ratio5"], 10.7, 2e-2)
             ok &= all(sl["ok"] for o in g5["orbits"] for sl in o["slips"])
-            ok &= all(x in L for x in ("$E^{(5)}(a+M)=20.6,19.6,19.3,19.2,19.15,19.15,19.15$", "$18.53$ at $a=2500$", "$E^{(4)}(a+M)=21.9,21.9,23.7,34.9,1153,1.1\\times10^5,1.1\\times10^7$", "$73/73$", "ratio $10.7$ without it", "gains $E^{(4)}/E^{(5)}=1.02$–$1.87$ ($73/73>1$)"))
+            ok &= all(x in L for x in ("$E^{(5)}(a+M)=20.6,19.6,19.3,19.2,19.15,19.15,19.15$", "$18.53$ at $a=2500$", "$E^{(4)}(a+M)=21.9,21.9,23.7,34.9,1153,1.1\\times10^5,1.1\\times10^7$", "$73/73$", "ratio $10.7$ without it", "gains $E^{(4)}/E^{(5)}=1.02$–$1.87$ ($73/73>1$)", "$C(a,r)=\\sum_ic_i=58.0$, $61.0$, $75.1$ at $r=5$", "ten non-negative terms"))
+            pt = J("evidence/recog/a1c_drift/a1c_drift_proof_table_cert.json"); ok &= pt["ALL_PASS"] and len(pt["PT3_M_sample"]) == 28 and pt["PT3_M_sample"][0] == 1 and pt["PT3_M_sample"][-1] == 10**13
+            ok &= all(near(pt["PT3"][f"a={a},r=5"]["C_total"], t, 2e-3) for a, t in (("625", 58.0), ("1000", 61.0), ("2500", 75.1))) and all(v["worst_E5n_over_C"] <= 1 for v in pt["PT3"].values())
     except Exception as ex:
         ok = False
         if verbose: print("    C19 exception:", repr(ex))
@@ -354,24 +358,25 @@ def controls(base, inter, log, root):
      ("NC06 header identity altered", "C14", once(L, "# RTG_RELATIONAL_RECOGNITION_DSN_v0.3.25", "# RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26")),
      ("NC07 READ/DECODE vocabulary inserted", "C11", once(L, "Owner editions that consume RECOG RIDs", "Owner editions that DECODE RECOG RIDs")),
      ("NC08 Appendix A history edited", "C3", once(L, "### v0.3.25 — 27 October 2026 — Adopted", "### v0.3.25 — 28 October 2026 — Adopted")),
-     ("NC09 §8 quoted hash altered (full)", "C16", once(L, "`307b310034bf477ef4b49f194d08c4fa42d44b8bbedf7da42e125003a090482e`", "`307b310034bf477ef4b49f194d08c4fa42d44b8bbedf7da42e125003a090482f`")),
-     ("NC10 §8 quoted hash altered (abbreviated)", "C16", once(L, "(`dbc232ba…5974`, `c9e2b2f0…6058`)", "(`dbc232ba…5975`, `c9e2b2f0…6058`)")),
+     ("NC09 §8 quoted hash altered (full)", "C16", once(L, "`69edfebd9f4ca981ac012e4906de6ed677f9e2acf77927ee58e1ed87f49ca0b8`", "`69edfebd9f4ca981ac012e4906de6ed677f9e2acf77927ee58e1ed87f49ca0b9`")),
+     ("NC10 §8 quoted hash altered (abbreviated)", "C16", once(L, "(`cbf0e806…fc80`, `c9e2b2f0…6058`)", "(`cbf0e806…fc81`, `c9e2b2f0…6058`)")),
      ("NC11 §8 evidence file renamed", "C16", once(L, "`recog_v0_3_26_corrected_grid.py` (sha256", "`recog_v0_3_26_corrected_grid_v2.py` (sha256")),
      ("NC12 must-stay-live item deleted", "C17", L.replace("F2(a3)", "F2(a)")),
      ("NC13 Q1′ sub-item closed", "C17", once(L, "(retrospective reconstruction is not write-through) :: `[OPEN]`\n- A1c-decoder", "(retrospective reconstruction is not write-through) :: `[ALG]` ✓\n- A1c-decoder")),
      ("NC14 notice state changed", "C20", once(L, "G3 to OFN and G3 to RRF: prepared", "G3 to OFN and G3 to RRF: sent")),
      ("NC15 wrong value display (corrected grid)", "C19", once(L, "$4.6\\times10^{-5}$ at $10^6$, $4.7\\times10^{-6}$ at $10^7$", "$4.6\\times10^{-5}$ at $10^6$, $5.8\\times10^{-6}$ at $10^7$")),
      ("NC16 wrong value display (K_eps)", "C19", once(L, "$K_\\epsilon=0.7203$, $0.4513$, $0.1860$", "$K_\\epsilon=0.7023$, $0.4513$, $0.1860$")),
+     ("NC33 wrong value display (all-M constants)", "C19", once(L, "$C(a,r)=\\sum_ic_i=58.0$, $61.0$, $75.1$ at $r=5$", "$C(a,r)=\\sum_ic_i=58.0$, $61.0$, $57.1$ at $r=5$")),
      ("NC17 heading changed", "C15", once(L, "### §6.12 Leading-Return Equivariance and Comparator Closure", "### §6.12 Leading-Return Equivariance")),
      ("NC18 grade changed outside the spans", "C21", outside(L, "`[ALG]`", "`[THM]`")),
      ("NC19 extra undeclared RECOG RID", "C7", once(L, "[RID: RECOG-THM-A1A-RECIPROCAL-AMPLITUDE]", "[RID: RECOG-THM-A1A-RECIPROCAL-AMPLITUDE-X]")),
      ("NC20 adopted R9 row altered", "C13", outside(L, "$(C_2,q_{\\max})=(517,\\tfrac1{400})$", "$(C_2,q_{\\max})=(163,\\tfrac1{400})$", anchor="#### §6.13a")),
      ("NC21 schedule display altered", "C13", once(L, "$$c" + "'" * 3 + "_k(a):=\\tau\\,\\psi(a+M_k)-(k-1)\\tfrac\\pi3+\\tfrac{\\sqrt3}8(a+M_k)^{-1/2}", "$$c" + "'" * 3 + "_k(a):=\\tau\\,\\psi(a+M_k)-(k-1)\\tfrac\\pi3+\\tfrac{\\sqrt3}4(a+M_k)^{-1/2}")),
      ("NC22 universal ceiling altered in TAIL-HARMONICS", "C13", once(L, "`[ALG via IA]` $E'(a,M)\\le0.31$ for every $a\\ge625$, $M\\ge1$", "`[ALG via IA]` $E'(a,M)\\le0.30$ for every $a\\ge625$, $M\\ge1$")),
-     ("NC23 [assuming:] dropped from the envelope", "C22", once(L, "$a$ known] `[assuming: Dyadic row-A bridge constants $c_Q=0.79246$, $c'_Q=0.36915$ ($|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$) and the remainder decomposition $r=\\Lambda_3+{\\rm rest}$ with its constants, as published in the proof of DYAD-THM-LPHASE-ROWA-REMAINDER (certified by DYAD-ART-LPHASE-ROWA); proof constants, not theorem rows; registration requested (§7)]` [proof: cell v0.2 §3 (Cor. 24)", "$a$ known] [proof: cell v0.2 §3 (Cor. 24)")),
+     ("NC23 [assuming:] dropped from the envelope", "C22", once(L, "$a$ known] `[assuming: Dyadic row-A bridge constants $c_Q=0.79246$, $c'_Q=0.36915$ ($|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$) and the remainder decomposition $r=\\Lambda_3+{\\rm rest}$ with its constants, as published in the proof of DYAD-THM-LPHASE-ROWA-REMAINDER (certified by DYAD-ART-LPHASE-ROWA); proof constants, not theorem rows; registration requested (§7)]` [proof: cell v0.3 §3 (Cor. 24)", "$a$ known] [proof: cell v0.3 §3 (Cor. 24)")),
      ("NC24 [assuming:] added to the unconditional drift block", "C22", once(L, "[RID: RECOG-ALG-A1C-RECIPROCAL-DRIFT] [scope:", "[RID: RECOG-ALG-A1C-RECIPROCAL-DRIFT] `[assuming: (D5)]` [scope:")),
      ("NC25 stale state restored (RID unavailable)", "C12", once(L, "[import: RTG_NUMBER_GENESIS_DSN_v1.20.8 §6.6 | NUMGEN-RESULT-N5AS1-INF1]", "[import: RTG_NUMBER_GENESIS_DSN_v1.20.7 §6.6, INF-1 | RID unavailable]")),
-     ("NC26 record version misstated in §8", "C23", once(L, "`RECOG_A1C_DRIFT_CENTERING_SESSION_v0_1.md` v0.2", "`RECOG_A1C_DRIFT_CENTERING_SESSION_v0_1.md` v0.3")),
+     ("NC26 record version misstated in §8", "C23", once(L, "`RECOG_A1C_DRIFT_CENTERING_SESSION_v0_1.md` v0.3", "`RECOG_A1C_DRIFT_CENTERING_SESSION_v0_1.md` v0.4")),
      ("NC27 record-only centre reintroduced", "C24", once(L, "known-$a$ / declared-data centre $c" + "'" * 3 + "_k(a)=", "record-only centre $c" + "'" * 3 + "_k(a)=")),
      ("NC28 Appendix B entry without its reason", "C25", once(L, "Reason (CORR-1, CORR-2): the envelope's term", "Note: the envelope's term")),
      ("NC29 Appendix B entry without its version", "C25", once(L, "stated in §6.13b with `[COR]`. Version: v0.3.26.\n\n**[RETRACTED | RID: RECOG-THM", "stated in §6.13b with `[COR]`.\n\n**[RETRACTED | RID: RECOG-THM")),

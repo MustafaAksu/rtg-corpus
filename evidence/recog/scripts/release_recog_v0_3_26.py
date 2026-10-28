@@ -9,13 +9,13 @@ is the candidate instead and CAND must be set to its hash in a reviewed follow-u
 the would-be file from placeholder arguments for hash inspection only (never to dsn/).
 
 usage: release_recog_v0_3_26.py CANDIDATE OUT "DD Month YYYY" "<review number>" "<adoption clause>"
-  CANDIDATE = the reviewed stage-1 intermediate (SHA-256 e360606c…3f22)
+  CANDIDATE = the reviewed stage-1 round-2 intermediate (SHA-256 a15acc08…71aa; round 1 e360606c…3f22, review #5675460082)
   <adoption clause> = the PI's scope wording, e.g. "three groups adopted: CORR asymptotic correction of the
   v0.3.25 majorant order sentences (Appendix B), DRIFT chart reciprocal drift centring, ENV log-free centred envelope"
 """
 import hashlib, sys
 
-CAND = "e360606c3f30fb43165877856528682b94a1e9380e86688a383b9b3a69f13f22"
+CAND = "a15acc08699399380aedbccf06093a81320c234c0e46f6a0c45f8cc8c37071aa"
 PREV = "86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db"
 
 def transform(s, date, review, clause):

@@ -1,5 +1,5 @@
 base 86cae8ff094d63d077ec5c0887451775ec3a26485cfad95833d8390bda4bd7db
-intermediate e360606c3f30fb43165877856528682b94a1e9380e86688a383b9b3a69f13f22 (groups CORR,DRIFT,ENV, 15 edits)
+intermediate a15acc08699399380aedbccf06093a81320c234c0e46f6a0c45f8cc8c37071aa (groups CORR,DRIFT,ENV, 15 edits)
 GATES:
   C0   PASS BASE
   C1   PASS BUILD
@@ -17,7 +17,7 @@ GATES:
   C13  PASS R9/A1B statements, the schedule display and the untouched TAIL-HARMONICS items unchanged
   C14  PASS HEADER
   C15  PASS HEADINGS
-  C16  PASS §8 FILES (6 hashes checked)
+  C16  PASS §8 FILES (9 hashes checked)
   C17  PASS LIVE
   C18  PASS DECOUPLE
   C19  PASS VALUES
@@ -45,6 +45,7 @@ NEGATIVE CONTROLS (each must be caught by its target gate):
   NC14 notice state changed                      target C20: caught  (failing: C1, C2, C20)
   NC15 wrong value display (corrected grid)      target C19: caught  (failing: C1, C19, C2)
   NC16 wrong value display (K_eps)               target C19: caught  (failing: C1, C19, C2)
+  NC33 wrong value display (all-M constants)     target C19: caught  (failing: C1, C19, C2)
   NC17 heading changed                           target C15: caught  (failing: C1, C15, C2)
   NC18 grade changed outside the spans           target C21: caught  (failing: C1, C2, C21)
   NC19 extra undeclared RECOG RID                target C7: caught  (failing: C1, C2, C7, C8)
