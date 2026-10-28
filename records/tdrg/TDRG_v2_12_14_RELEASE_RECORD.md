@@ -1,6 +1,6 @@
 # Discrete Genesis (TDR-G) v2.12.14 — Release Record
 
-**Status:** ADOPTED by the PI, 28 October 2026 (§13), and published: merged into `main` and tagged `tdrg-v2.12.14` (annotated, on merge commit `05c7e78acf63dd1dc5bcbc7bb8364e152e9f0659`). `tdrg-v2.12.14` is the governing edition (§15). *(The copy of this record inside the tag predates the merge and still lists merge and tag as pending; §15 records the publication.)*
+**Status:** ADOPTED by the PI, 28 October 2026 (§13): the bytes `3be72923…2392` are adopted as they are. Merge and tag `tdrg-v2.12.14` are pending (§12); until the tag exists, `tdrg-v2.12.13` remains the governing edition.
 **Date:** 28 October 2026
 **Prepared by:** Claude, TDR-G co-owner session `claude01SKePJ` (branch `claude/tdrg-v2-12-14-stage1`).
 **Edition:** v2.12.14, corrections only, one stage, under DSN Methodology v1.2 as declared (PI decision of 27 Oct 2026; the Methodology v1.4 migration and any layout compaction are v2.13).
@@ -19,7 +19,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Change-focused review | ChatGPT co-owner session: `records/tdrg/TDRG_v2_12_14_CHATGPT_CHANGE_FOCUSED_REVIEW_20261028.md` (PR #94, commit `728f959`); acceptance criteria in PR #92 comment 6454252077 | **CONDITIONAL PASS** — two bounded changes, applied in round 2 (§3a) |
 | Row check and rerun | atlas owner: `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_12_14.md`, rerun outputs `evidence/atlas/rowcheck/tdrg_v2_12_14/` (PR #95) | **ACCEPT FOR ADOPTION** (atlas side) — candidate and edit log rebuilt byte-identically from the tag; checker 11/11; K1–K8 caught; exhaustive k=1 [72,72] / [0,0]; session scripts 17/17; one publication condition: merge the upload PR (#97) before #92 |
 | Adoption | PI, 28 Oct 2026 (§13) | adopted |
-| Merge commits, tag `tdrg-v2.12.14` | PI | done: tag on `05c7e78` (§15) |
+| Merge commits, tag `tdrg-v2.12.14` | PI | *(to be filled)* |
 
 ## 2. Identities
 
@@ -172,10 +172,10 @@ Net change: +30,836 bytes (+20.8 %). Corrections only: the orientation definitio
 | 1 | Change-focused review of this branch | ChatGPT co-owner | CONDITIONAL PASS (PR #94); round-2 changes applied (§3a); the atlas row check confirms both conditions met |
 | 2 | Row check, builder/checker rerun, `ATLAS_ROW_CHECK_TDRG_v2_12_14.md` | atlas owner | done: ACCEPT FOR ADOPTION (PR #95) |
 | 3 | Adoption decision entered here (§13) | PI | done, 28 Oct 2026 |
-| 4 | Merge commits (not squash), in order: #87 → #91 → #97 (`upload/tdrg-session-scripts`, keeps commit `386e9d4` reachable) → #94 → #95 → #92 | PI | done: #87 `6d2d95b`, #91 `0a25c06`, #97 `6c0365f`, #94 `750e00c`, #95 `3f40c2e`, #92 `05c7e78` |
-| 5 | Annotated tag `tdrg-v2.12.14` on the merge commit of #92, with `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392` in the tag message | PI | done: on `05c7e78` |
+| 4 | Merge commits (not squash), in order: #87 → #91 → #97 (`upload/tdrg-session-scripts`, keeps commit `386e9d4` reachable) → #94 → #95 → #92 | PI | *(to be filled)* |
+| 5 | Annotated tag `tdrg-v2.12.14` on the merge commit of #92, with `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392` in the tag message | PI | *(to be filled)* |
 | 6 | `BASELINE.md` TDRG row (entered on this branch: v2.12.14, candidate hash, tag `tdrg-v2.12.14`) | row: this session; tag: PI | row entered |
-| 7 | Notices to NUMGEN, OFN and AZ (§9); close both `pipes/TDRG/` items | TDR-G co-owner, after the tag | done on branch `claude/tdrg-v2-12-14-notices` (§15) |
+| 7 | Notices to NUMGEN, OFN and AZ (§9); close both `pipes/TDRG/` items | TDR-G co-owner, after the tag | *(to be filled)* |
 | 8 | Tag verification; atlas refresh (D5 TDRG rows, D5.X1, H4, H9, the N1 row, the TC-17 fix) | atlas owner | *(to be filled)* |
 
 ## 13. Adoption decision
@@ -195,18 +195,3 @@ Net change: +30,836 bytes (+20.8 %). Corrections only: the orientation definitio
 - v2.13: Methodology v1.4 migration and stage-2 compaction (Appendix A, footer, TDR-24B overlays); XFER-O08-01 custody; the policy-selection question for `largest_center`'s ID tie-break, with TDR-19.
 - Custody: zip upload of the ten held motif logs; placement of `upload/tdrg-session-scripts` after the atlas hash check; the four certificate suites stay missing unless found.
 - Owner-review tasks (3) counting observables and (4) statistical/rank interpretation stay open (§2).
-
-## 15. Post-tag verification and notices (28 October 2026)
-
-**Tag.** `tdrg-v2.12.14` is an annotated tag on the merge commit of #92, `05c7e78acf63dd1dc5bcbc7bb8364e152e9f0659`, which was `main` HEAD at verification. Its message carries the DSN SHA-256. `git show tdrg-v2.12.14:dsn/RTG_DISCRETE_GENESIS_DSN.md` hashes to `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392`, which is the adopted bytes (EV-RUN; also verified independently by the ChatGPT co-owner session). The commits cited by §8 and gate C8, `c359e21` (PR #91) and `386e9d4` (session scripts, PR #97), are ancestors of `main`.
-
-**Checker on the published tree** (`check_output_posttag.txt`): 11/11 PASS. The only line that differs from the pre-merge `check_output.txt` is C8. There the session scripts are now read from the placed tree (`source: tree`) instead of commit `386e9d4`, which is the branch-free path of round 2.
-
-**Notices filed** (kind `notice`, state `open`; filing is a queue event, not evidence of receipt or adoption):
-- `pipes/NUMGEN/20261028-TDRG-v2-12-14-adopted.md`: the TDRG-DEF-ORIENT ruling, the reference implementation, the DISC-2 effect (20 of 136), and the RIDs for the "RID unavailable" imports;
-- `pipes/OFN/20261028-TDRG-v2-12-14-adopted.md`: Finding A accepted as a statement with custody deferred; REQ-O09-05 answered; the RID map for IMP-O08-*;
-- `pipes/AZ/20261028-TDRG-v2-12-14-adopted.md`: `TDRG-ZN-STATE` resolves; the LEM-* map; the §6.2 citation and its scope.
-
-**Inbox.** Both `pipes/TDRG/` items are now `closed`: the orientation request with `accept`, the NUMGEN v1.21 notice with `no action`.
-
-**Remaining.** The atlas owner's tag-verification record and atlas v0.7 (D5 TDRG rows, D5.X1, H4, H9, N1 row, TC-17 fix). Consumer actions are each consumer's own: NUMGEN re-annotation and the C7C-M4 release, OFN repin, AZ repin. The items carried forward in §14 are unchanged.
