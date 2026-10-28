@@ -1,0 +1,32 @@
+[
+ {
+  "id": "U1",
+  "what": "H cites a retired L5 row",
+  "detected": true
+ },
+ {
+  "id": "U2",
+  "what": "retired key reused",
+  "detected": true
+ },
+ {
+  "id": "U3",
+  "what": "SOURCES row older than manifest",
+  "detected": true
+ },
+ {
+  "id": "U4",
+  "what": "new node RID misspelled against the source",
+  "detected": true
+ },
+ {
+  "id": "U5",
+  "what": "stale \"needs a ruling\" wording reintroduced",
+  "detected": true
+ },
+ {
+  "id": "U6",
+  "what": "RECOG RID misspelled against the source",
+  "detected": true
+ }
+]

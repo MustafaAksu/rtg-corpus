@@ -1,0 +1,122 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.6",
+ "base_sha256": "35ebee6d61f4db93211f2ed6f2de2bb973aa2fc6f2ea3cdf670656b1e961bd8a",
+ "atlas_sha256": "3655d4043e5eee046e93811d37b1fbe7bc863146dceed8b95c4e9d031ca53078",
+ "atlas_bytes": 492007,
+ "atlas_lines": 1545,
+ "source_snapshot": "53b56e4445a8c2869e41198e30bc66aa0fb93073",
+ "changed_sources": [
+  "TDRG",
+  "RECOG"
+ ],
+ "edit_operations": 68,
+ "retired_keys": [
+  "TDRG.G1",
+  "TDRG.G2",
+  "TDRG.G3",
+  "TDRG.G4",
+  "TDRG.G5",
+  "TDRG.G6",
+  "TDRG.G7"
+ ],
+ "new_keys": [
+  "TDRG.G10",
+  "TDRG.G11",
+  "RECOG.R-A1"
+ ],
+ "new_node_rids": [
+  "TDRG-DEF-ZN-STATE",
+  "TDRG-DEF-BAND",
+  "TDRG-DEF-CONV-TICK",
+  "TDRG-DEF-SWAP",
+  "TDRG-DEF-CONV-P3CYC",
+  "TDRG-DEF-ORIENT",
+  "TDRG-DEF-CYCLE-BOUND",
+  "TDRG-DEF-STAR",
+  "TDRG-DEF-MULTISTAR",
+  "TDRG-THM-HOLONOMY",
+  "TDRG-THM-NARROW-BAND-EXCLUSION",
+  "TDRG-THM-RECURRENCE",
+  "TDRG-THM-REACHABILITY-K0",
+  "TDRG-ALG-LEM-REACH",
+  "TDRG-ALG-LEM-NOANNIHIL",
+  "TDRG-ALG-LEM-RETRIG",
+  "TDRG-ALG-LEM-SPECCONS",
+  "TDRG-ALG-BIND3-CYCLE-N24K1",
+  "TDRG-NUM-BIND3-PARITY",
+  "TDRG-NUM-BIND3-SPECTRAL-GATE",
+  "TDRG-NUM-BIND3-MEMORY-PARITY",
+  "TDRG-NUM-BIND3-XFER",
+  "TDRG-NUM-BIND3-REGEN",
+  "TDRG-ALG-ORIENT-NOGO",
+  "TDRG-ALG-ORIENT-ANTIPODAL-FIXTURE",
+  "TDRG-NUM-ORIENT-EQUIVARIANCE-N24",
+  "TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK",
+  "TDRG-ALG-MIRROR-NOT-STEP-SYMMETRY",
+  "TDRG-DEF-SIGNED-CENTERED",
+  "TDRG-DEF-SIGNED-DEFECT-ERROR",
+  "RECOG-ALG-R9-SUM-LEMMA",
+  "RECOG-THM-R9-SHARPENED-ROWS",
+  "RECOG-THM-R9-SHARPENED-ROWS-C7",
+  "RECOG-THM-A1C-SHARPENED-SCHEDULE",
+  "RECOG-ALG-A1C-COMBINED-TAIL",
+  "RECOG-ALG-A1C-ADMISSIBLE-REGION",
+  "RECOG-ALG-A1C-START-OFFSET",
+  "RECOG-ALG-A1C-JOINT-CONTRACTOR",
+  "RECOG-ALG-A1C-THRESHOLD-CODING",
+  "RECOG-ALG-A1C-PHASE-C1-FIBER",
+  "RECOG-ART-R9-SHARPENED-ROWS",
+  "RECOG-ART-A1C-SHARPENED-SCHEDULE",
+  "RECOG-ART-A1C-DECODER",
+  "RECOG-ART-A1C-Q1PRIME-FIBER"
+ ],
+ "dispositions": {
+  "retired": 7,
+  "reworded": 8,
+  "new": 3
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 128
+  },
+  "qualifiers": {
+   "PASS": 3
+  },
+  "links": {
+   "PASS": 473,
+   "UNVERIFIED": 5,
+   "DOCUMENTED-UNRESOLVED": 11
+  },
+  "artifacts": {
+   "PASS": 99,
+   "UNVERIFIED": 3
+  },
+  "keys": {
+   "PASS": 105
+  },
+  "process": {},
+  "wording": {
+   "WARN": 16
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 6,
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 126
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d",
+  "evidence/atlas/build/refresh_v0_7.py": "5ff22bf19e5d49cce64f5a6736b04231450cd399a313aba1ec2028d6521226c3"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate rerun; new RIDs checked for presence in the tagged sources, not re-proved.",
+  "Impact refresh of two moved sources (TDRG v2.12.14, RECOG v0.3.25); the other 16 domains were not re-extracted; pipe items cited as filed, receiver dispositions are not atlas sources.",
+  "RECOG v0.3.25 §6.13a/§6.13b/§6.16e and TDRG v2.12.14 §6.3/§6.12/§7/§8 extracted at statement level from the tagged files; proofs live in the owner cells."
+ ]
+}
