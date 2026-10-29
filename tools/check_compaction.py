@@ -29,6 +29,16 @@ heading, as a base Appendix A region would. The heading must occur exactly once 
 whole line, no live section heading ("## §") or appendix heading may follow it, and the whole
 region must be removed by declared operations and found in a named archive (checked as
 "base history region"). The key changes nothing when absent.
+
+Profile key history_appendix (added for OFN v0.11 stage 2): the letter of the appendix that holds the
+version history, when it is not Appendix A (OFN: "C"; its Appendix A holds historical scenarios). The
+history region then runs from "## Appendix <letter>" to the next "## " heading or the footer, in base and
+candidate alike; it is excluded from the live text, and a history-appendix operation must replace exactly
+that appendix. Without the key the region is Appendix A, bounded by Appendix B, as before.
+
+RID pattern (OFN v0.11 stage 2): the programme namespaces `RTG-…` and `RTG-OFN-…` (Methodology v1.4 §4.2)
+are tracked when an identifier has at least a category and a description (`RTG-OFN-DEF-X`, `RTG-OPEN-X-Y`);
+the bare namespace word `RTG-OFN` is not an identifier.
 """
 import argparse, hashlib, json, re, sys
 
@@ -36,7 +46,7 @@ import argparse, hashlib, json, re, sys
 STATUS = r"THM|ALG|DEF|NUM|CAND|HYP|HEUR|SPEC|INTERP|OPEN|FAIL|RETRACTED|COR|ENG|OBS|RESULT|SESSION|THM-ALG via IA|ALG via IA"
 RE_STATUS = re.compile(r"`\[(?:%s)\]`" % STATUS)
 RE_QUAL = re.compile(r"`\[(?:scope|assuming|conv|family|import|proof|target|from|provenance|cert):[^`]*\]`")
-RE_RID = re.compile(r"(?<![A-Z]-)\b(?:DYAD|RECOG|GEN|TRIAD|NUMGEN|OFN|UVM|RRF|DZT|AZ|TDRG|LEG|PRE|FMS|RER|ERB|PROG|OPENM)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b")
+RE_RID = re.compile(r"(?<![A-Z]-)\b(?:RTG-[A-Z0-9]+-[A-Z0-9][A-Z0-9-]*[A-Z0-9]|(?:DYAD|RECOG|GEN|TRIAD|NUMGEN|OFN|UVM|RRF|DZT|AZ|TDRG|LEG|PRE|FMS|RER|ERB|PROG|OPENM)-[A-Z0-9][A-Z0-9-]*[A-Z0-9])\b")
 RE_MATH = re.compile(r"\$\$.+?\$\$|\$[^$\n]+\$", re.S)
 RE_HASH = re.compile(r"\b[0-9a-f]{64}\b|\b[0-9a-f]{8}…[0-9a-f]{4}\b")
 RE_ANCHOR = re.compile(r"\{#[A-Za-z0-9_-]+\}")
@@ -74,11 +84,22 @@ def features(t):
 
 
 def split_regions(s):
-    """header | body (live) | appendix A (history). Returns dict of (start, end) offsets."""
+    """header | body (live) | history appendix. Returns dict of (start, end) offsets.
+    The history appendix is Appendix A bounded by Appendix B (default), or the appendix named by the
+    profile key history_appendix, bounded by the next '## ' heading or the footer line."""
     first_rule = s.index("\n## ")
-    a = s.find("\n## Appendix A")
-    b = s.find("\n## Appendix B")
-    return {"header": (0, first_rule), "appA": (a, b) if a >= 0 and b > a else None}
+    x = PROFILE.get("history_appendix")
+    if not x:
+        a = s.find("\n## Appendix A")
+        b = s.find("\n## Appendix B")
+        return {"header": (0, first_rule), "appA": (a, b) if a >= 0 and b > a else None}
+    a = s.find("\n## Appendix %s" % x)
+    if a < 0:
+        return {"header": (0, first_rule), "appA": None}
+    nxt = s.find("\n## ", a + 1)
+    m = re.search(r"^\*END OF DOCUMENT", s[a + 1:], re.M)
+    ends = [e for e in (nxt, (a + 1 + m.start() - 1) if m else -1) if e >= 0]
+    return {"header": (0, first_rule), "appA": (a, min(ends) if ends else len(s))}
 
 
 def base_history_start(s):
@@ -290,7 +311,12 @@ def main():
     ab, ac = heading_anchors(base), heading_anchors(cand)
     C.add("heading anchors preserved", ab <= ac, f"missing: {sorted(ab - ac)}")
     hb, hc = set(RE_HASH.findall(lb)), set(RE_HASH.findall(lc))
-    C.add("source hashes preserved in live text", hb <= hc, f"missing: {sorted(hb - hc)}")
+    # a hash that leaves the live text may only be relocated into the candidate's history region
+    r = split_regions(cand)["appA"]
+    hist = set(RE_HASH.findall(cand[r[0]:r[1]])) if r else set()
+    relocated = sorted((hb - hc) & hist)
+    C.add("source hashes preserved in live text", not (hb - hc - hist),
+          f"missing: {sorted(hb - hc - hist)}" + (f"; relocated to the history appendix: {relocated}" if relocated else ""))
     qb, qc = sorted(RE_QUAL.findall(lb)), sorted(RE_QUAL.findall(lc))
     lost_q = multiset_minus(qb, qc)
     allowed_q = []
@@ -312,7 +338,8 @@ def main():
     rep["limitations"] = [
         "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
         "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",
-        "RID pattern covers the registered namespace prefixes listed in the script; other identifiers are not tracked.",
+        "RID pattern covers the registered namespace prefixes listed in the script (RTG-… and RTG-OFN-… with category and description; DYAD, RECOG, GEN, TRIAD, NUMGEN, UVM, RRF, DZT, AZ, TDRG and the other listed prefixes); other identifiers (e.g. PL, L0L1, L2) are not tracked.",
+        "History region: Appendix A bounded by Appendix B, or the appendix named by profile key history_appendix up to the next '## ' heading or the footer; it is excluded from the live text.",
         "Reference resolution: in the sentence of each tagged-edition pointer, H-labels (as '**H-n** —' definitions), 'Appendix X' headings, 'Local Tag Aliases' and version entries ('### vX') are looked up in the pinned archive; section numbers (§n.m) are not resolved.",
         "Reference substitutions may change only reference vocabulary (REF_WORDS, labels, versions, tags, punctuation); any other changed word fails.",
         "tag_examples/navigation relocations need a registered region (hash, kind) and a reviewer confirmation; unconfirmed regions give PENDING. In a tag_examples region an identifier may occur only inside a tag spelling in a table row (and must survive in the live text); a navigation region may carry no identifier and only [DEF] tags.",
@@ -422,6 +449,9 @@ def check_op(op, arch, cand):
         if cls == "history-section" and RE_STATUS.search(removed) and not (op.get("tag_examples") or op.get("navigation")):
             return False, "section carries claim tags; a live result cannot be relocated"
         if cls == "history-appendix":
+            x = PROFILE.get("history_appendix")
+            if x and not op.get("start", "").startswith("## Appendix %s" % x):
+                return False, f"history-appendix operation does not replace the declared history appendix {x}"
             # identifiers named in the new history text must exist in the live text
             missing = sorted(r for r in set(RE_RID.findall(new)) if r not in live_text(cand))
             if missing:
@@ -648,7 +678,7 @@ def check_links(cand, arch):
                 continue
             resolved += 1
             if not re.search(r"^### v%s\b" % re.escape(v), at, re.M):
-                bad.append(f"v{v} has no Appendix A entry in {t}")
+                bad.append(f"v{v} has no Appendix {PROFILE.get('history_appendix', 'A')} entry in {t}")
     return (not bad), ("; ".join(bad[:6]) if bad else f"Appendix references, H-labels and tags resolve; {resolved} archive targets found in the pinned archive")
 
 
