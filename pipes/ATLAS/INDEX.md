@@ -4,4 +4,4 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| 2026-10-29 | RECOG | notice | open | RECOG v0.3.26 adopted (recog-v0.3.26, DSN SHA-256 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34); atlas-v0.7 carries RECOG v0.3.25; new RIDs RECOG-ALG-A1C-RECIPROCAL-DRIFT, RECOG-ALG-A1C-LOGFREE-ENVELOPE, RECOG-ART-A1C-DRIFT-CENTERING, RECOG-ART-A1C-CORRECTED-GRID (§6.13b, §8); Appendix B two [RETRACTED] entries; §7 NF6 and NF-REM rows; OPEN registry unchanged | — | `20261029-RECOG-v0-3-26-adopted.md` |
+| 2026-10-29 | RECOG | notice | dispositioned | RECOG v0.3.26 adopted (recog-v0.3.26, DSN SHA-256 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34); atlas-v0.7 carries RECOG v0.3.25; new RIDs RECOG-ALG-A1C-RECIPROCAL-DRIFT, RECOG-ALG-A1C-LOGFREE-ENVELOPE, RECOG-ART-A1C-DRIFT-CENTERING, RECOG-ART-A1C-CORRECTED-GRID (§6.13b, §8); Appendix B two [RETRACTED] entries; §7 NF6 and NF-REM rows; OPEN registry unchanged | — | `20261029-RECOG-v0-3-26-adopted.md` |
