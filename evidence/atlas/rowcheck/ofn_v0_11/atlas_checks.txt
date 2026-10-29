@@ -1,0 +1,63 @@
+# 1. owner RIDs cited in the candidate (live text), resolution at the governing tags
+  NUMGEN-OPEN-REC-HOL-OPERATOR: PRESENT in NUMGEN
+  NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO: PRESENT in NUMGEN
+  RRF-CND-01: PRESENT in RRF
+  RRF-DYAD-W: PRESENT in RRF
+  RRF-NET-W-RAW: PRESENT in RRF
+  TDRG-ALG-LEM: PRESENT in TDRG
+  TDRG-DEF-CONV: PRESENT in TDRG
+  summary: {'DECLARED': 63, 'PRESENT': 7} of 70
+
+# 2. OFN RIDs: declared in candidate vs v0.10
+  declared candidate 43 distinct 43 | v0.10 37 37
+  new: ['RTG-OFN-DEF-CONTINUOUS-REPRESENTATION', 'RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY', 'RTG-OFN-DEF-DIST-ZN', 'RTG-OFN-DEF-FINITE-DESCRIPTION', 'RTG-OFN-DEF-REDUCTION-TARGET', 'RTG-OFN-DEF-ZERO-ORIGIN'] | dropped: []
+  duplicates: []
+  mentioned but not declared: []
+
+# 3. OPEN status lines
+  v0.10 Counter({'ACTIVE': 20, 'PARTIAL': 1})
+  cand Counter({'ACTIVE': 20, 'PARTIAL': 1})
+
+# 4. residue in the live text (cand)
+  'RID unavailable': 2 live lines [995, 1003]
+  'freeze candidate': 1 live lines [1353]
+  'freeze-candidate': 1 live lines [1521]
+  'conditional on DYAD OPEN 20': 0 live lines []
+  'existence is not asserted': 0 live lines []
+  'real only once': 0 live lines []
+  'v2.12.13': 0 live lines []
+  'v0.3.20': 5 live lines [38, 1128, 1353, 1407, 1521]
+  'v6.4.10': 1 live lines [1519]
+  'v1.20.7': 1 live lines [1519]
+  'LEM-REACH': 5 live lines [355, 849, 945, 1028, 1030]
+  'CONV-TICK': 5 live lines [615, 617, 1039, 1077, 1079]
+  'CUST-O09-01': 5 live lines [270, 1067, 1073, 1394, 1409]
+  'Draft 1': 2 live lines [307, 1513]
+  'Until then': 0 live lines []
+  'this draft': 1 live lines [1286]
+  'adoption pending': 4 live lines [7, 52, 1377, 1529]
+
+# 5. [RESULT] pairing and tag census (candidate)
+  [RESULT] without [from: on the same line: [414]
+  {'DEF': 37, 'ALG': 21, 'HYP': 16, 'HEUR': 15, 'COR': 14, 'OPEN': 10, 'THM': 9, 'INTERP': 7, 'MATH': 7, 'RESULT': 7, 'RETRACTED': 3, 'DEF-axiom': 1, 'DELETED-AXIOM': 1}
+  dash-compound tags: []
+
+# 6. version strings in the candidate live text
+  {'`dyad-v6.4.22`': 8, '`er2b-v0.3`': 2, '`gen-v2.9`': 10, '`methodology-v1.4`': 3, '`numgen-v1.21`': 4, '`ofn-v0.10`': 7, '`programme-v1.3`': 2, '`recog-v0.3.26`': 7, '`rrf-v0.8.4`': 5, '`tdrg-v2.12.14`': 11, '`triad-v1.6.1`': 1}
+  {'AZ v0.6': 1, 'DYAD v6.4.12': 2, 'DYAD v6.4.13': 1, 'DYAD v6.4.16': 1, 'DZT v0.17': 1, 'DZT v0.8': 1, 'Dyadic v6.4.10': 1, 'Dyadic v6.4.22': 6, 'FMS v0.6.4': 1, 'Genesis v1.21': 1, 'Genesis v2.12.14': 1, 'Genesis v2.8.5': 4, 'Genesis v2.8.9': 4, 'Genesis v2.9': 3, 'Legacy v0.7': 3, 'Methodology v1.4': 13, 'NUMGEN v1.20.7': 1, 'NUMGEN v1.21': 11, 'OPEN M v0.7.1': 2, 'Pre-Legacy v0.8': 1, 'Programme v1.3': 7, 'RECOG v0.3.20': 3, 'RECOG v0.3.26': 10, 'RRF v0.8.3': 1, 'RRF v0.8.4': 12, 'TDR-G v2.12.14': 7, 'TDR-G v2.13': 3, 'Triadic v1.6.1': 9, 'Triadic v1.6.1.': 1}
+
+# 7. header
+**Title:** Relational Time Geometry — Ontological Foundations and Model-Selection Layer  
+**Date:** 29 October 2026  
+**Scope:** Foundational commitments, primitive-object hypotheses and model-selection criteria of RTG, including the genuine relational-triad model-selection contract for the FMS interface (§5.5); no physical generator, c
+**Document class:** Foundational ontology / model-selection ledger (Methodology v1.4 §0.5); nonstandard profile with the section map in §0.4.  
+**Document status:** DRAFT — v0.11 candidate: layout-only compaction (stage 2) of the frozen stage-1 intermediate; adoption pending (`records/ofn/OFN_v0_11_RELEASE_RECORD.md`). `ofn-v0.10` remains the governing edition u
+**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.10` (tag `ofn-v0.10`, SHA-256 `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa`), on adoption.  
+**Companion documents:** governing editions read for this edition — Programme Overview v1.3 (`programme-v1.3`), DSN Methodology v1.4 (`methodology-v1.4`), Dyadic Oscillator v6.4.22 (`dyad-v6.4.22`), Genesis Geometry v2.9
+**DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
+**Status summary:** OFN holds seventeen registered definitions, the hypothesis FSP-U, four OFN local results and twenty-one foundational OPENs (twenty ACTIVE, one PARTIAL); no physical generator, carrier, primitive objec
+**Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok — inherited attribution; separate approval by every listed contributor is not inferred.  
+**Revision editor:** Claude (OFN co-owner session `claude012ZC8x`, builder); change-focused review by the second OFN co-owner (ChatGPT).  
+**Programme document / placement:** Programme Overview v1.3; Tier 2, namespace `RTG-OFN`; criteria home for OPEN-P0 and OPEN-P2B (Programme v1.3 §5).  
+**Governing inputs:** owner disposition records `records/ofn/OFN_OWNER_DISPOSITION_ADVISORY_v0_10_claude012ZC8x_20261029.md`, `…_chatgpt_20261029.md` and their joint reconciliation `records/ofn/OFN_OWNER_DISPOSITION_RECO
+**Evidence boundary:** owner statements were read at the governing tags named above; no owner certificate is rerun. FMS SESSION results are reference-only (RF-O10-02); the universal finite-$a$ statement keeps its FMS P4 

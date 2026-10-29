@@ -1,0 +1,3 @@
+# v0.10 chain replay from upload/ofn-records (c6fd574)
+Draft1 -> build_ofn_v0_10_draft2.py -> 58e2dec54ad600dec189119adc16c8ca89872e74419f78ae317f33558a913610
+Draft2 -> release_ofn_v0_10.py -> acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa (= ofn-v0.10 file; the script's post-check then needs RTG_ONTOLOGICAL_FOUNDATIONS_v0_9.md, not held: FileNotFoundError after writing the output)

@@ -1,0 +1,28 @@
+K1 PASS base is ofn-v0.10
+K2 PASS rebuild identical; 165 logged edits; chain intact
+K3 PASS v0.10 RIDs 37 and anchors 95 kept
+K4 PASS OPEN status lines 21: 20 ACTIVE / 1 PARTIAL
+K5 PASS new OFN RIDs: ['RTG-OFN-DEF-CONTINUOUS-REPRESENTATION', 'RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY', 'RTG-OFN-DEF-DIST-ZN', 'RTG-OFN-DEF-FINITE-DESCRIPTION', 'RTG-OFN-DEF-REDUCTION-TARGET', 'RTG-OFN-DEF-ZERO-ORIGIN']
+K6 PASS owner RIDs resolve at governing tags; unresolved: []
+K7 PASS stale phrases in live text: []
+K8 PASS required statements missing: []
+K9 PASS Appendix A, Appendix B (to v0.10 records) and inherited Appendix C entries byte-identical
+GATES PASS
+C1 stale OPEN-20 conditional: caught
+C2 freeze candidate reintroduced: caught
+C3 Standard C singleton wording: caught
+C4 false custody transfer: caught
+C5 smooth-to-analytic promotion: caught
+C6 missing H_spec: caught
+C7 finite-chart bounds transported: caught
+C8 narrow-Q6 compound status: caught
+C9 OPEN status changed: caught
+C10 v0.10 RID dropped: caught
+C11 extra OFN RID: caught
+C12 unresolved owner RID: caught
+C13 history edited: caught
+C15 stale map-custody sentence (R112-C1): caught
+C16 handoff as sole current input (R112-C2): caught
+C17 unqualified algebraic sufficiency (R112-N1): caught
+C14 compound tag: caught
+CONTROLS PASS
