@@ -1,24 +1,27 @@
-# RTG_DISCRETE_GENESIS_DSN_v2.12.13
+# RTG_DISCRETE_GENESIS_DSN_v2.12.14
 
 **Title:** RTG Discrete Relational Genesis — Canonical Study Ledger  
-**Date:** June 2026  
+**Date:** October 2026 (v2.12.14, corrections only; the scientific content of the v2.12 line is dated June 2026)  
 **Scope:** Fully discrete pre-metric relational universe on $\mathbb{Z}_N$. Interaction from relational distinguishability; no continuous coordinates; no imported continuous coefficients.  
-**Supersedes:** `RTG_DISCRETE_GENESIS_DSN_v2.11.1` · `TDR_G_DISCRETE_RELATIONAL_GENESIS_DSN_v1.5`; canonical-freeze errata applied over `RTG_DISCRETE_GENESIS_DSN_v2.0`  
-**Companion documents:** `RTG_PROGRAMME_OVERVIEW_v1.1` · `RTG_ONTOLOGICAL_FOUNDATIONS_v0.6` (v0.7 candidate imports from this revision) · `DSN_METHODOLOGY_v1.2`  
-**DSN Methodology:** DSN_METHODOLOGY_v1.2  
+**Supersedes:** `RTG_DISCRETE_GENESIS_DSN_v2.12.13` (tag `tdrg-v2.12.13`, SHA-256 `aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f`); the earlier lineage is in the footer and Appendix A (compaction is v2.13 work)  
+**Companion documents (governing editions, October 2026):** Programme Overview v1.3 (`programme-v1.3`) · Ontological Foundations v0.10 (`ofn-v0.10`) · DSN Methodology v1.4 (`methodology-v1.4`). Claim-specific historical pins (Programme v1.1, OFN v0.6/v0.7) stay where a statement cites them.  
+**DSN Methodology:** DSN_METHODOLOGY_v1.2 (declared; kept for this corrections edition by PI decision of 27 Oct 2026 — the v1.4 migration is v2.13)  
 **Programme tier:** Tier 4 — Discrete Programme (see Programme Overview §6)  
-**Status summary:** TDR-G is a working finite-state relational universe with three certified simulation branches. $k/N$ controls entry into the growth regime; the multistar interaction axiom controls growth character. The canonical clean branch (`bound_symmetric`) shows bulk-conditioned birth rate $B_{\rm bulk}/\text{step} \sim N^{-0.869}$ (v17/v6 canonical scan, $N=120$–$1440$), strongly supporting thermodynamic crystallization in the $N\to\infty$ limit. The immediate frontier is the TDR-24 derivation chain (slot-volume identity, topological filtering, geometric compression), which must close before discrete triadic dynamics can be studied. **v2.12 adds the genesis-layer kinematics and three-node (BIND3) certification arc:** two conventions pinned to script truth (CONV-TICK `[ENG PASS v18]`, CONV-P3CYC successor-shift `[DEF, script-certified]`); four certified lemmas — band-form reachability (LEM-REACH), no-free-annihilation (LEM-NOANNIHIL, replacing the trap axiom upstream in OFN), two-node retrigger/binding threshold (LEM-RETRIG), and conservation of the relational advance spectrum (LEM-SPECCONS, three-node no-birth scope); exact cycle enumeration BIND3-CYCLE-N24K1 `[ALG/NUM strong]` establishing that the isolated period-2 bound dyad is not a persistent primitive in the three-node universe (generic exact orbits are multi-pair recurrent scattering cycles with bond transfer); and the NKSCAN falsification suite certifying BIND3-PARITY (survival controlled by advance parity, not binding marginality; BIND3-KNIFE `[FAIL]`/`[REPLACED]`), BIND3-SPECTRAL-GATE (the conserved spectrum is a hard gate on autonomous retrigger), and BIND3-MEMORY-PARITY (binding-history memory is an even-advance sector effect; the odd-sector claim is a composition artifact, `[COR]`). New scope guards SG-11–SG-13; new §6.12.
+**Status summary:** TDR-G is a working finite-state relational universe with three certified simulation branches. $k/N$ controls entry into the growth regime; the multistar interaction axiom controls growth character. The canonical clean branch (`bound_symmetric`) shows bulk-conditioned birth rate $B_{\rm bulk}/\text{step} \sim N^{-0.869}$ (v17/v6 canonical scan, full-range fit $N=120$–$1440$; the exponent is window-dependent, §1); thermodynamic crystallization in the $N\to\infty$ limit is a `[HEUR]` extrapolation. TDR-24D and TDR-24F are closed at the mechanism level with their analytic constants OPEN; the gate before discrete triadic dynamics is TDR-24A → TDR-24B → TDR-24C. **v2.12 adds the genesis-layer kinematics and three-node (BIND3) certification arc:** two conventions pinned to script truth (CONV-TICK `[ENG PASS v18]`, CONV-P3CYC successor-shift `[DEF, script-certified]`); four certified lemmas — band-form reachability (LEM-REACH), no-free-annihilation (LEM-NOANNIHIL, replacing the trap axiom upstream in OFN), two-node retrigger/binding threshold (LEM-RETRIG), and conservation of the relational advance spectrum (LEM-SPECCONS, three-node no-birth scope); exact cycle enumeration BIND3-CYCLE-N24K1 (`[ALG]`, finite exact enumeration) establishing that the isolated period-2 bound dyad is not a persistent primitive in the three-node universe (generic exact orbits are multi-pair recurrent scattering cycles with bond transfer); and the NKSCAN falsification suite certifying BIND3-PARITY (survival controlled by advance parity, not binding marginality; BIND3-KNIFE `[FAIL]`/`[REPLACED]`), BIND3-SPECTRAL-GATE (the conserved spectrum is a hard gate on autonomous retrigger), and BIND3-MEMORY-PARITY (binding-history memory is an even-advance sector effect; the odd-sector claim is a composition artifact, `[COR]`). New scope guards SG-11–SG-13; new §6.12. **v2.12.14 (corrections only):** the path orientation rule TDRG-DEF-ORIENT is made node-relabelling covariant by extending the balanced path-tie to $S=0\wedge 2E\equiv0 \pmod N$, with the covariance group named in SG-14; `signed_centered` and `signed_defect_error` are defined; claim RIDs are registered (§7 owner RID map); results computed with the superseded completion keep `[conv: v18 path orientation]` and `EV-NOT-RERUN` (census bound, §6.12).
 
 ## Local Tag Aliases
 
 | Local alias | Expands to | Used for |
 |---|---|---|
-| `[ALG/NUM]` | `[ALG]` co-certified with `[NUM]` | exact identity cross-verified numerically |
-| `[ENG/ALG]` | `[ENG]` with `[ALG]`-grade audit | implementation verified against exact reference |
-| `[NUM-strong]` | `[NUM strong]` | legacy alias; replace on next edit |
-| `[HEUR-strong]` | `[HEUR strong]` | legacy alias; replace on next edit |
+| `[INTERP]` | `[HEUR]` [scope: interpretation] | interpretive reading of a stated result |
+| `[REVISED]` | `[COR]`; the revised assertion carries its own tag | in-place revision notes |
+| `[REJ]` | `[FAIL]` [scope: the item as stated] | rejected candidate inside an OPEN record |
+| `[REPLACED]` | `[SUPERSEDED]` with the replacement pointer | BIND3-KNIFE |
+| `[ENG audit: PASS]` | `[ENG]` [scope: the named conformance audit] | CONV-TICK |
+| `[NUM exhaustive: …]` | evidence note: exhaustive finite verification over the stated range | lemma certificates |
+| `[SCOPE …]`, `[ADMIN …]`, `[METHOD]`, `[BRANCH …]` | prose labels (scope, administrative or tooling, method, exploratory-branch notes); not truth tags | §2 |
 
-`[DEF]` New ledger entries must use canonical forms from `DSN_METHODOLOGY_v1.2`. Legacy aliases are accepted only during migration.
+Canonical tags follow `DSN_METHODOLOGY` (declared v1.2; the spellings are unchanged in v1.4 §8.1). *(v2.12.14: the legacy rows `[ALG/NUM]`, `[ENG/ALG]`, `[NUM-strong]`, `[HEUR-strong]` are removed and the live compound tags are unpacked; Appendix A history keeps its original spellings.)*
 
 ---
 
@@ -36,21 +39,21 @@ where $M_n$ increases at each star blow-up, and all physics is in relational pha
 
 `[THM]` **Reachability / superselection.** For $k=0$, interaction between two nodes occurs iff $\gcd(d,N) \mid (N/2 - \Delta_0)$. Unreachable pairs are superselection sectors. **(v2.12)** Band-form extension (LEM-REACH): $\mathcal{D}_k$ reachable $\iff \mathcal{D}_k\cap(\Delta_0+g\mathbb{Z}_N)\neq\varnothing$; superselection persists at $k>0$ in the two-node universe. See §6.5.
 
-`[ALG]` **(v2.12) Genesis-layer kinematic lemmas.** No free annihilation: $F^t(\Delta_0,d_0)=(0,0)\iff(\Delta_0,d_0)=(0,0)$ (LEM-NOANNIHIL). Two-node binding threshold: exact period-2 retrigger iff $\varepsilon\in B_k\cap(B_k+d)$, possible iff $|d|_c\le2k$ (LEM-RETRIG). Three-node advance-spectrum conservation: $\{|d_{ij}|_c\}$ is an exact invariant under swap/$P_3$/tie events, no-birth scope (LEM-SPECCONS). See §6.5, §6.12.
+`[ALG]` **(v2.12) Genesis-layer kinematic lemmas.** No free annihilation: $F^t(\Delta_0,d_0)=(0,0)\iff(\Delta_0,d_0)=(0,0)$ (LEM-NOANNIHIL). Two-node binding threshold: retrigger on every tick — period dividing 2, least period 2 for $d\neq0$, a fixed point at $d=0$ — iff $\varepsilon\in B_k\cap(B_k+d)$, possible iff $|d|_c\le2k$ (LEM-RETRIG). Three-node advance-spectrum conservation: $\{|d_{ij}|_c\}$ is an exact invariant under swap/$P_3$/tie events, no-birth scope (LEM-SPECCONS). See §6.5, §6.12.
 
-`[ALG/NUM strong]` **(v2.12) BIND3 headline.** In the three-node universe ($N=24$, $k=1$, exact cycle enumeration), the isolated period-2 bound dyad is not a persistent primitive: 96.4% of bound-entry ICs yield multi-pair recurrent scattering cycles with bond transfer in 81.8%; pure-bound survival (3.6%) is confined to even-advance parity sectors (BIND3-PARITY); the conserved spectrum gates autonomous retrigger (BIND3-SPECTRAL-GATE). See §6.12.
+`[NUM strong]` `[conv: v18 path orientation]` **(v2.12) BIND3 headline.** In the three-node universe ($N=24$, $k=1$, exact cycle enumeration), the isolated period-2 bound dyad is not a persistent primitive: 96.4% of bound-entry ICs yield multi-pair recurrent scattering cycles with bond transfer in 81.8%; pure-bound survival (3.6%) is confined to even-advance parity sectors (BIND3-PARITY); the conserved spectrum gates autonomous retrigger (BIND3-SPECTRAL-GATE). See §6.12.
 
 `[ALG]` **Birth-rate invariant.** $rN_{\rm err} = 0$ in all valid v16 motif logs. The identity $rN_T = \text{birth\_steps} \cdot b/\text{step}$ holds to machine precision.
 
-`[ALG/NUM]` **TDR-24 factorization.** $C_{\rm birth} = C_{\rm component} / \chi$, and $B/\text{step} = O/\text{step} \cdot C_{\rm birth}$. All identities verified to $<10^{-18}$ in every valid v16 motif log.
+`[ALG]` [assuming: the microscopic birth law, `[NUM]`, for the first identity] **TDR-24 factorization.** $C_{\rm birth} = C_{\rm component} / \chi$, and $B/\text{step} = O/\text{step} \cdot C_{\rm birth}$. Numerically corroborated: all identities verified to $<10^{-18}$ in every valid v16 motif log.
 
 `[NUM]` **Microscopic birth law** (under `bound_symmetric`). `births_step` $=$ `clean_star_components` for all steps with nonzero births. Every birth is generated by exactly one clean single-center star component.
 
-`[NUM strong]` **N-scaling** (v17/v6 canonical scan). At fixed $k/N = 1/15$, $T=5000$, bulk-conditioned (excluding tail runs $M>500$):
+`[NUM]` `[scope: full-range composite fit, N=120–1440]` `[conv: v18 path orientation]` **N-scaling** (v17/v6 canonical scan). At fixed $k/N = 1/15$, $T=5000$, bulk-conditioned (excluding tail runs $M>500$):
 $$B_{\rm bulk}/\text{step} \sim 1.041 \cdot N^{-0.869}, \quad R^2 = 0.973.$$
-Exponent consistency: $1.593 \approx 0.757 + 0.836$; $0.869 \approx 1.593 - 0.723$. Scaling data spans $N = 120$–$1440$. (Supersedes the v4 6-point fit $N^{-0.876}$, $N=120$–$1080$.)
+The exponent is window-dependent: read on the high-N window $N=480$–$1440$ with run-level bulk filtering, the same scan gives $B/\text{step}\sim N^{-0.730}$ (Experiment-0 readout, §2 OPEN-POLICY-GEOMETRY). $-0.869$ is the full-range convenience value, not a structural constant (the failure class of $\chi$, $C_{\rm component}$ and $q_{\rm proj}$, §2 TDR-24A/B); no refit is made here. (Supersedes the v4 6-point fit $N^{-0.876}$, $N=120$–$1080$.)
 
-`[HEUR strong]` **Thermodynamic crystallization.** Extrapolating the fitted N-scaling gives $B_{\rm bulk}/\text{step} \to 0$ as $N \to \infty$. No plateau through $N = 1080$. Not yet theorem-grade.
+`[HEUR]` **Thermodynamic crystallization.** Extrapolating the fitted N-scaling gives $B_{\rm bulk}/\text{step} \to 0$ as $N \to \infty$. No plateau through $N = 1080$. Not yet theorem-grade.
 
 `[NUM strong]` **Three-policy characterization.** `bound_symmetric` → crystallization; `largest_center` → continuous inflation ($rN_T \approx 0.76$–$0.80$ at $k/N \approx 0.0667$); `all_centers` → avalanche inflation ($b/\text{step} \approx 16$–$25$, often cap-limited). Policy choice is physically real, not an implementation detail.
 
@@ -58,9 +61,9 @@ Exponent consistency: $1.593 \approx 0.757 + 0.836$; $0.869 \approx 1.593 - 0.72
 
 `[HEUR strong]` **Multistar locking mechanism.** In the late-window bulk under `bound_symmetric`, $f_{\rm ms} \approx 1$: large multistar bound states dominate, suppressing clean single-center star births and producing the slow-accretion regime.
 
-`[ALG / NUM strong]` **Slot-volume model (verified).** $O_t = (2k+1) M_t \psi_t$ holds by construction in the v6 extractor. Across the canonical $k/N=1/15$ scan, $\psi_{\rm slot}^{\rm bulk} \approx 0.00204 \cdot N^{+0.014}$ ($R^2 = 0.015$) — effectively intensive (scale-invariant). The positive scaling $O_{\rm bulk}/\text{step} \sim N^{+0.723}$ is therefore explained by slot-volume growth ($O_{\rm slot}^{\rm bulk}/\text{step} \approx 53.69 \cdot N^{+0.709}$, $R^2=0.976$), not by the rejected $M^2$ pair model. The N-independence of $\psi_{\rm slot}^{\rm bulk}$ is explained (TDR-24F resolved `[NUM strong]`): a bounded structural reservoir $\bar{c}_{\rm struct}\approx5$ with projection efficiency $q_{\rm proj}\sim(2k+1)$ exactly offsetting the band, giving $\psi\sim N^0$. (The earlier $q_{\rm proj}\sim N^{1.371}$ was a fit artifact; corrected to $N^{1.06}$.)
+**Slot-volume model (verified).** `[ALG]` $O_t = (2k+1) M_t \psi_t$ holds by construction in the v6 extractor. `[NUM strong]` Across the canonical $k/N=1/15$ scan, $\psi_{\rm slot}^{\rm bulk} \approx 0.00204 \cdot N^{+0.014}$ ($R^2 = 0.015$) — effectively intensive (scale-invariant). The positive scaling $O_{\rm bulk}/\text{step} \sim N^{+0.723}$ is therefore explained by slot-volume growth ($O_{\rm slot}^{\rm bulk}/\text{step} \approx 53.69 \cdot N^{+0.709}$, $R^2=0.976$), not by the rejected $M^2$ pair model. The N-independence of $\psi_{\rm slot}^{\rm bulk}$ is explained (TDR-24F resolved `[NUM strong]`): a bounded structural reservoir $\bar{c}_{\rm struct}\approx5$ with projection efficiency $q_{\rm proj}\sim(2k+1)$ exactly offsetting the band, giving $\psi\sim N^0$. (The earlier $q_{\rm proj}\sim N^{1.371}$ was a fit artifact; corrected to $N^{1.06}$.)
 
-`[DEF]` **Immediate frontier gate:** TDR-24D (slot-volume identity) and TDR-24F (structural-to-slot projection mechanism) are both closed `[NUM strong]`. The remaining gate before discrete triadic dynamics (TDR-T) is TDR-24A → TDR-24B → TDR-24C.
+`[DEF]` **Immediate frontier gate:** TDR-24D (slot-volume identity: `[ALG]` identity, `[NUM strong]` intensiveness) and TDR-24F (structural-to-slot projection mechanism, `[NUM strong]`) are closed at the mechanism level; their analytic constants ($\bar{c}_{\rm struct}\approx5$, $q_{\rm proj}\sim(2k+1)$) remain OPEN. The remaining gate before discrete triadic dynamics (TDR-T) is TDR-24A → TDR-24B → TDR-24C.
 
 ---
 
@@ -69,7 +72,7 @@ Exponent consistency: $1.593 \approx 0.757 + 0.836$; $0.869 \approx 1.593 - 0.72
 ### Priority ordering
 
 **Immediate derivation chain** (blocks TDR-T):
-1. ~~**TDR-24D**~~ — slot-volume identity **CLOSED** `[ALG / NUM strong]`; see Settled items and §6.8.
+1. ~~**TDR-24D**~~ — slot-volume identity **CLOSED** (`[ALG]` identity; `[NUM strong]` intensiveness); see Settled items and §6.8.
 2. ~~**TDR-24F**~~ — structural-to-slot projection **RESOLVED** `[NUM strong]` ($q_{\rm proj}\sim N^{1.06}$, $\bar{c}_{\rm struct}\approx5$ bounded); analytic constants still open.
 3. **TDR-24A** — topological filtering / multistar embedding statistics.
 4. **TDR-24B** — pair-to-component compression / $\chi$-scaling.
@@ -88,6 +91,8 @@ Exponent consistency: $1.593 \approx 0.757 + 0.836$; $0.869 \approx 1.593 - 0.72
 10. **OPEN-BIND3-REGEN** — $P_3$ lattice-action theorem on the conserved spectrum.
 11. **OPEN-BIND3-NKSCAN** — remaining stratified $(N,k)$ scan; three of its pre-registered targets are already executed (see §6.12).
 12. **OPEN-SPECCONS-STAR** — advance-spectrum behavior across star blow-up (SG-12).
+
+**Owner-review tasks** *(v2.12.14; recorded for TDR-G by Programme v1.2 §6, not carried by Programme v1.3)*: (1) state/gauge conventions — advanced in v2.12.14 (state and gauge definitions registered as TDRG-DEF-ZN-STATE and TDRG-DEF-PHYSICAL-STATE; covariance group named in SG-14; the common token shift recorded as not a gauge, §7); otherwise open; (2) the antipodal path tie — **discharged** by TDRG-DEF-ORIENT (v2.12.14); (3) counting observables (§6.11) — open; (4) statistical/rank interpretation of the growth fits (§2 TDR-24B rank analysis, §6.8) — open.
 
 ---
 
@@ -139,7 +144,7 @@ Current state: $N=120, k=8$ shows $rN_{\rm late} \approx 0.02$ through $T=10000$
 
 Status: ACTIVE  
 Question: Does $\lim_{N\to\infty} rN_{\rm late}(N, k/N) = 0$?  
-Current state: `[HEUR strong]` $B_{\rm bulk}/\text{step} \sim N^{-0.869}$ (v17/v6 extended fit, $N=120$–$1440$, $R^2=0.973$) — strongly supported; stable across the extension to $N=1440$. Analytic derivation still open.
+Current state: `[NUM]` full-range fit $B_{\rm bulk}/\text{step} \sim N^{-0.869}$ (v17/v6, $N=120$–$1440$, $R^2=0.973$; window-dependent — $N^{-0.730}$ on $480$–$1440$, §1); the $N\to\infty$ limit is `[HEUR]`. Analytic derivation still open.
 
 ---
 
@@ -155,7 +160,7 @@ Current state: At $N=120, k=8$: ratio $= 0.473, 0.600, 0.801, 0.894$ at $T = 100
 
 Status: ACTIVE  
 Question: Confirm $B_{\rm bulk}/\text{step} \sim N^{-\alpha}$ for $N > 1440$; identify whether $\alpha \approx 0.869$ is stable or changes regime.  
-Current state: `[HEUR strong]` from v17/v6 extended fit ($N=120$–$1440$): $\alpha = 0.869$, $R^2=0.973$. Aggregate $\alpha \approx 1$ is tail-inflated and superseded. Stable across the extension from $N=1080$ to $N=1440$.
+Current state: `[NUM]` full-range fit ($N=120$–$1440$): $\alpha = 0.869$, $R^2=0.973$; window-dependent ($\alpha\approx0.730$ on $480$–$1440$, §1). Aggregate $\alpha \approx 1$ is tail-inflated and superseded. Stable across the extension from $N=1080$ to $N=1440$.
 
 ---
 
@@ -211,7 +216,7 @@ $$\psi_{\rm slot}^{\rm bulk} = q_{\rm proj} \cdot \frac{\bar{c}_{\rm struct}}{2k
 **Mechanism (now self-consistent):** the multistar vacuum holds a *bounded* structural leaf reservoir ($\bar{c}_{\rm struct}\approx 4.5$–$5.0$ leaves per component, independent of $N$) while the projection efficiency $q_{\rm proj}\sim(2k+1)\sim N$ scales linearly to exactly offset the widening defect band. The two cancel, leaving $\psi_{\rm slot}^{\rm bulk}=q_{\rm proj}\bar{c}_{\rm struct}/(2k+1)\sim N^{0}$ — the intensive slot density that closes TDR-24D. This is the anatomy of the crystallized vacuum: a fixed-size structural motif tiled at a density that the band-expansion cannot dilute.
 
 **Scope guards (load-bearing):**
-- `[HEUR/NUM]` $\bar{c}_{\rm struct}$ is bounded **only at high N**: $\approx4.5$–$5.8$ for $N\ge480$. The low-N cells N=120 ($\bar{c}_{\rm struct}\approx12.6$) and N=240 ($\approx7.5$) are finite-size transients and **must not** be used to infer the asymptotic reservoir or to fit projection exponents. Including them is what inflates the ratio-of-aggregates $q_{\rm proj}$ toward 1.3–1.4.
+- `[NUM]` (finite-N values; boundedness as $N\to\infty$ is `[HEUR]`) $\bar{c}_{\rm struct}$ is bounded **only at high N**: $\approx4.5$–$5.8$ for $N\ge480$. The low-N cells N=120 ($\bar{c}_{\rm struct}\approx12.6$) and N=240 ($\approx7.5$) are finite-size transients and **must not** be used to infer the asymptotic reservoir or to fit projection exponents. Including them is what inflates the ratio-of-aggregates $q_{\rm proj}$ toward 1.3–1.4.
 - `[ADMIN]` Raw-motif TDR-24F recomputation must use **run-level** bulk filtering (bulk run $\Leftrightarrow$ final\_M $\le$ tail\_threshold), then aggregate rows. Row-level $M_{\rm pre}\le$ threshold filtering is **not** equivalent: a tail run's early low-$M$ rows leak into the bulk pool. (At clean cells with zero tail runs the two agree; they diverge precisely at N=720-type cells where a locking-failure run exists.)
 
 Remaining `[OPEN]`: an *analytic* derivation of the bound $\bar{c}_{\rm struct}\approx 5$ from $\mathbb{Z}_N$ defect combinatorics (why ~5 and not another constant), and of $q_{\rm proj}\sim(2k+1)$ exactly. The empirical mechanism is settled `[NUM strong]`; the first-principles constants are not.
@@ -269,10 +274,12 @@ Artifacts: `tdr24a_decomposition.py`, `tdr24a_provenance.py`, `tdr24a_ratelaw.py
 Status: ACTIVE | **BLOCKS TDR-T** | Builds on TDR-24D (closed), TDR-24A  
 Question (revised v2.12.1): derive the clean-star-count collapse $\texttt{clean\_star\_components}/\text{row}\sim N^{-0.73}$ — *not* the composite $\chi$ exponent, which is not a power law (see below).
 
+**Current status (v2.12.14):** the derivation target is the clean-star-count collapse $\texttt{clean\_star\_components}/\text{row}\sim N^{-0.73}$ ($480$–$1440$ window), which is the per-row form of TDR-24A's clean-star supply cap; $\chi$ is a composite ratio, not an independent scaling field; field count and policy separability are not identifiable on the single-lever corpus and are compute-gated on OPEN-POLICY-GEOMETRY (four new runs). The dated paragraphs below (v2.12.1–v2.12.9) are the supporting record; moving them to Appendix A is v2.13 layout work.
+
 **`[COR]` (v2.12.1) $\chi$ re-fit on v17 corpus (run-level bulk filtering), superseding the v4-era $\chi^{\rm bulk}\sim N^{+0.836}$:**
 - $\chi := \texttt{occ\_in\_clean\_star}/\texttt{clean\_star\_components}$ is **not a clean power law** — its apparent exponent is window-dependent: $+0.697$ ($R^2\,0.86$) over $480$–$1440$, $+0.512$ over $720$–$1440$, $+0.866$ over $840$–$1440$. The v4 $+0.836$ is one window's reading of a composite ratio (same failure class as $C_{\rm component}$ and $q_{\rm proj}$).
 - **Decomposition `[NUM strong]`:** numerator $\texttt{occ\_in\_clean\_star}/\text{row}\sim N^{-0.03}$ (FLAT, $R^2\,0.00$); denominator $\texttt{clean\_star\_components}/\text{row}\sim N^{-0.73}$ ($R^2\,0.86$). The entire $\chi$ rise comes from the **collapse of the clean-star count per step**, not from per-star occupancy growth (which is flat).
-- **Internal consistency `[NUM strong / ALG exact]`:** the certified factorization $C_{\rm birth}=C_{\rm component}/\chi$ holds **value-wise to machine precision at every $N$** (not as a fit): $C_{\rm component}/\chi = (\texttt{occ\_in\_cs}/\texttt{occ\_clean})\div(\texttt{occ\_in\_cs}/\texttt{clean\_stars}) = \texttt{clean\_stars}/\texttt{occ\_clean}$, which equals $\texttt{births}/\texttt{occ\_clean}=C_{\rm birth}$ exactly because the microscopic birth law $\texttt{births\_step}\!=\!\texttt{clean\_star\_components}$ is certified `[NUM]`. Taking logs, the exponents satisfy $\exp(C_{\rm birth})=\exp(C_{\rm component})-\exp(\chi)=-0.936-(+0.697)=-1.633$, matching the directly-measured $C_{\rm birth}\sim N^{-1.633}$ ($R^2\,0.976$). *(This is a log-space exponent relation of a ratio; it is not a subtraction of the observables themselves.)*
+- **Internal consistency — `[ALG]` value-wise identity (given the microscopic birth law) and `[NUM strong]` log-exponent agreement:** the certified factorization $C_{\rm birth}=C_{\rm component}/\chi$ holds **value-wise to machine precision at every $N$** (not as a fit): $C_{\rm component}/\chi = (\texttt{occ\_in\_cs}/\texttt{occ\_clean})\div(\texttt{occ\_in\_cs}/\texttt{clean\_stars}) = \texttt{clean\_stars}/\texttt{occ\_clean}$, which equals $\texttt{births}/\texttt{occ\_clean}=C_{\rm birth}$ exactly because the microscopic birth law $\texttt{births\_step}\!=\!\texttt{clean\_star\_components}$ is certified `[NUM]`. Taking logs, the exponents satisfy $\exp(C_{\rm birth})=\exp(C_{\rm component})-\exp(\chi)=-0.936-(+0.697)=-1.633$, matching the directly-measured $C_{\rm birth}\sim N^{-1.633}$ ($R^2\,0.976$). *(This is a log-space exponent relation of a ratio; it is not a subtraction of the observables themselves.)*
 - **Consequence (structural reduction):** $\chi$ is **not an independent scaling field**. With a flat numerator, $\chi$ inherits all scaling from $1/\texttt{clean\_star\_components}$ — it is an amplified inverse of the clean-star-count collapse that TDR-24A already governs. TDR-24B therefore introduces **no new scaling degree of freedom**; its derivation target reduces to the clean-star-count collapse $\texttt{clean\_star\_components}/\text{row}\sim N^{-0.73}$, the per-row form of TDR-24A's clean-star supply cap. The flat numerator is a range-dependent diagnostic, not promoted.
 
 - **`[NUM]` Field-structure test (proposed 3-field basis ρ·σ·κ, tested and rejected):** a review proposed factoring the system into node-availability $\rho\sim N^{-\alpha}$, binding-suppression $\sigma\sim N^{-\beta}$, and geometric fan-out $\kappa\sim N^{+1}$, with the separability test $\chi\cdot\sigma\approx\kappa\sim N^{+1}$. **Tested on v17 bulk: the test fails** — the implied $\kappa=\chi\cdot\sigma$ scales as $N^{-1.03}$, off from $+1$ by two powers. The posited suppression field is also absent: the multistar absorption fraction is **flat** ($N^{-0.02}$), and all three occupancy channels (clean-star, multistar, other) scale identically at $N^{+0.90}$, so the channel split is $N$-independent. **The review's intuition that the clean-star collapse is composite is correct, but the mechanism is the *existing* TDR-24A decomposition, not a new latent:** $\texttt{clean\_star\_components}/\text{row}\equiv$ cs\_rate (clean stars are births, $\le 1$/step), already decomposed in TDR-24A as flat burst-hazard $\times\,P(\text{cs}\,|\,\text{burst})\sim N^{-0.6}$. On this corpus, $\chi$, $C_{\rm component}$, $C_{\rm birth}$ are all quotients of occupancy/row ($\sim N^{+0.90}$) and the clean-star birth rate ($\sim N^{-0.73}$, = TDR-24A residual). Artifact: `tdr24b_field_structure.py`.
@@ -281,14 +288,14 @@ Question (revised v2.12.1): derive the clean-star-count collapse $\texttt{clean\
 - **`[NUM]` Formal rank test (review-directed, executed).** The observable map's resolvable scaling directions $=\min(\text{obs\_rank},\text{control\_rank})$. On the v17 corpus: control manifold **rank 1** (only $\log N$ varies; $\log(k/N)$ constant), so resolvable directions $=1$ **regardless of the true field count** — the design is *rank-deficient*, not merely the inference uncertain (the reviewer's sharper framing, adopted). The centered log-observable matrix itself has apparent rank 3 (singular values $2.18, 0.67, 0.17, \approx0$), but this reflects finite-$N$ scatter and one near-pure-noise channel (occ\_in\_cs/row, residual/total $0.998$), **not** physical structure: with control rank 1 the tool correctly caps resolvable directions at 1 and refuses to read observable scatter as fields. Artifact: `tdr24_observable_rank.py` (returns rank-1 here; ready to report rank $\ge2$ the moment a multi-$k/N$ corpus exists). **Restated frontier:** the meaningful question is not "how many fields" but "does adding the $k/N$ lever raise the observable-Jacobian rank above 1?".
 - **`[NUM]` Intrinsic vs apparent dimensionality (review-directed quantification).** Regressing all seven centered log-observables jointly on the single $\log N$ axis explains **88.7%** of total centered variance; the residual $11.3\%$ is finite-$N$ scatter (dominated by $N=840$ and the near-noise occ\_in\_cs/row channel). So the observable cloud is an **overcomplete embedding of a rank-1 ($\log N$) flow**: apparent SVD dimensionality (3) exceeds intrinsic dimensionality (1). This is the precise structural cause of the thread's recurring symptoms — sliding exponents, "composite ratios", and the $\kappa$ sign-flip are all **chart-dependent slopes / non-invariant rescalings of one 1-D trajectory**, not separate fields. **Framing discipline `[SCOPE]`:** these are *identifiability/geometric* statements (one resolvable scaling direction under the current design), **not ontological** ones — "one latent generator" remains unjustified as physics; observable rank $\neq$ latent field count. The $\chi$, $C_{\rm component}$, $C_{\rm birth}$ family is best read as coordinate charts of one flow tangent, i.e. **overparameterized**, not multi-field.
 - **`[ADMIN]` Note:** the "thermodynamic crystallization" `[HEUR strong]` claim (§2 TDR-22b, status summary) is a separate, pre-existing $B_{\rm bulk}/\text{step}\to0$ extrapolation and is *not* affected by this rank analysis; the rank-1 finding concerns the scaling-layer observable geometry, not the crystallization limit. The two are independent and neither is upgraded here.
-- **`[NUM / COR]` k/N is a continuous control, not a phase boundary (review claim tested against §6.7, rejected).** A review proposed that k/N is a *regime-switch / phase-boundary* parameter, making the full design "a foliation of rank-1 manifolds" rather than a smooth rank-2 manifold. The DSN data contradicts this: §6.7 shows $rN_T(k/N)$ is **non-monotone with a smooth peak near $k/N\approx0.05$–$0.0667$**, and the sparse→transition→dense structure is a *continuous* crossover ($p_{\rm frz}\to0$, $p_{\rm strong}\to1$ gradually across the band), not a discontinuity. The genuinely *discrete* selector in TDR-G is the **multistar interaction policy** (`bound_symmetric` / `largest_center` / `all_centers` — crystallization / continuous-inflation / avalanche), which is categorical and which the DSN already separates from k/N: *"k/N selects entry into the growth branch; the multistar interaction axiom selects growth rate and character."* So the correct two-axis picture is **(smooth k/N) × (discrete policy)**, and a k/N sweep at fixed `bound_symmetric` policy *does* probe a smooth rank-2 manifold — exactly the rank-test extension already specified. The review's foliation framing mislocates the discreteness onto the wrong axis; adopted only in the corrected form here.
+- **`[COR]` (`[NUM]` support from §6.7) k/N is a continuous control, not a phase boundary (review claim tested against §6.7, rejected).** A review proposed that k/N is a *regime-switch / phase-boundary* parameter, making the full design "a foliation of rank-1 manifolds" rather than a smooth rank-2 manifold. The DSN data contradicts this: §6.7 shows $rN_T(k/N)$ is **non-monotone with a smooth peak near $k/N\approx0.05$–$0.0667$**, and the sparse→transition→dense structure is a *continuous* crossover ($p_{\rm frz}\to0$, $p_{\rm strong}\to1$ gradually across the band), not a discontinuity. The genuinely *discrete* selector in TDR-G is the **multistar interaction policy** (`bound_symmetric` / `largest_center` / `all_centers` — crystallization / continuous-inflation / avalanche), which is categorical and which the DSN already separates from k/N: *"k/N selects entry into the growth branch; the multistar interaction axiom selects growth rate and character."* So the correct two-axis picture is **(smooth k/N) × (discrete policy)**, and a k/N sweep at fixed `bound_symmetric` policy *does* probe a smooth rank-2 manifold — exactly the rank-test extension already specified. The review's foliation framing mislocates the discreteness onto the wrong axis; adopted only in the corrected form here.
 - **`[SCOPE]` Two-layer reading (adopted, corrected):** Layer A (intra-(N,policy)-slice) — the rank-1 observable geometry of this thread, valid as established. Layer B (across control) — *two* further axes, smooth k/N and discrete policy, neither sampled in the k/N=1/15, `bound_symmetric` corpus. Field-count and regime-classification are Layer-B questions, both blocked on the same unsampled controls.
 
 - **`[DEF]` OPEN-POLICY-GEOMETRY — minimal experimental design specified.** A 10-run matrix separates Layer A (continuous N, k/N) from Layer B (discrete policy): (1) policy-slice at fixed (N=840, k/N=1/15) across `bound_symmetric`/`largest_center`/`all_centers` (amplitude-gap test → DISCRETE-CLEAN vs ENTANGLED); (2) k/N sweep {1/30…1/8} at fixed `bound_symmetric`, repeated at two N (480, 840), giving a 2-D (N,k/N) control so the observable-Jacobian rank becomes meaningful. Pre-registered decision thresholds: Case 1 pure-smooth (k/N-exponents constant ±0.05), Case 2 structural-bending (drift >0.10), Case 3 regime-crossover (piecewise beats power-law). Rank readout: control_rank=2 ⇒ resolvable directions 1 (single latent) or 2 (independent fields) — this is the experiment that finally makes field-count identifiable. Artifacts: `EXPERIMENT_DESIGN.md`, `tdr24_policy_geometry_classify.py` (auto-classifier), reusing `tdr24_observable_rank.py`. **Refinements (review):** (i) goal reframed as a *factorization* test $\mathcal{O}(N,k/N,\pi)\stackrel{?}{=}f(N,k/N)g(\pi)$ under an operator formulation (permits policy↔geometry coupling) rather than a presupposed Layer-A/B independence; Experiment 1 now tests multiplicativity (Case A separable / B partial / C full entanglement), not "independence". (ii) Cross-N normalization anchor (Experiment 0) added — and it is the **existing canonical scan** (N=480–1440 at k/N=1/15, bound\_symmetric), so it adds **zero** new runs; the classifier reports its N-exponents live (C\_birth $N^{-1.633}$, χ $N^{+0.697}$, B/step $N^{-0.730}$, O/step $N^{+0.903}$). **New runs reduced 10→4** (2 policy + 2 k/N-sweep). **Compute-gated** on those 4. Scope guard: no further fitting/basis-reduction/rank-tests on the existing single-slice corpus (information-saturated).
 
-- **`[BRANCH — TDRG-RESPONSE-TENSOR]` Response-tensor formalism (exploratory, firewalled).** Per PI directive, an isolated branch tests whether TDR-G observables are projections of one response tensor whose intrinsic dimension is *read from data*, never imposed. **Governing axiom:** intrinsic dimension = rank of the *unnormalized* response tensor over the full control manifold; normalizations/factorizations/quotients are post-hoc diagnostics only, never the primary rank test (the premature-quotienting guard — a baseline division assumes reducibility and forces rank collapse). **Two-sided discipline:** do not impose dimensions, but do not suppress dimensions the math requires; a rising count is allowed *if* it clears a null-model ceiling (so genuine structure is distinguished from finite-sample noise), and merges are tracked as consolidations, not deletions. **Build status:** module `response_tensor.py` with a null-gated SVD dimension reader, validated on synthetic data. **Calibration (honest limitation):** reliable for dim ≤ 1 at any cell count; dim ≥ 2 is *under-counted* (returns a lower bound) below ~40 control cells; pure noise is not inflated (conservative failure direction). On the current single-lever corpus it reports **intrinsic dimension = 1, HIGH confidence, upper-bounded by control rank** — consistent with the v2.12.5–.7 rank-1 finding (charter consistency criterion (b) met). Resolving dimension > 1, if present, requires the multi-cell (N × k/N × policy) grid. **Firewall:** all outputs `[BRANCH/NUM diagnostic]`; nothing promotes to canonical TDR-G without PI approval against the charter success criteria. Artifacts: `tdrg_response_tensor/BRANCH_CHARTER.md`, `response_tensor.py`.
-- **`[BRANCH/NUM]` Dynamical signal layer added (Zeta geometry-saturation response).** Motivated by the Zeta finding that the static angular spectrum is geometry-saturated, `dynamical_extractor.py` adds a SEPARATE trajectory-level layer (autocorrelation times, Fano burstiness, inter-birth-interval CV, birth↔occupancy lagged cross-correlation), kept strictly out of the static exponent pipeline (no recompression). **Key test — does dynamical rank exceed static rank?** On the single-lever corpus: static dim = 1, dynamical dim = 1 — **no extra temporal degree of freedom surfaces.** Caveats keeping this from being a resolution: (i) both control-rank-capped at 1 lever (lower-bound check, not resolution; F3 observable-collapse neither confirmed nor refuted); (ii) the dynamical leading direction is weak and nearly single-feature — dominated by inter-birth-interval CV (slope +0.39, R²0.81), other features flat-to-weak, leading singular value (0.449) barely above null ceiling (0.432). **`[COR]` Inference corrected (review):** the earlier "dynamical summaries also near-saturated / weakly argues against F3" was an inference error and is retracted. On a rank-1 control manifold BOTH layers are forced to rank ≤ 1 *regardless of true dimension*, so static-dim = dynamical-dim = 1 is guaranteed by the geometry and concludes nothing about F3 or about hidden structure. Correct statement: both layers collapse to a rank-1 response under a rank-1 control manifold — an **excitation-insufficiency** result, not a structural one. Second limitation: these features (CV, Fano, autocorr) are compressed many-to-one statistics of path space, not trajectory embeddings, so the layer tests rank(feature_summary), not rank(trajectory_manifold); feature-map injectivity is unverified. The one finding that **does** survive (not a dimension claim): inter-birth-interval CV carries genuine N-dependence (slope +0.39, R²0.81) while autocorrelation times are flat — a statement about which trajectory features respond to N under the applied excitation. CV is the highest-value dynamical observable for the grid.
-- **`[BRANCH/NUM]` Feature-map injectivity tested on existing data (review-directed; no grid).** The review held that scalar summaries are compressive and a richer trajectory embedding might extract lost structure — an intra-run question, testable now. Tested three embeddings (N=840): cross-channel increment covariance = rank 1 (all runs); cross-channel level covariance = rank 1 (all runs); single-channel delay embedding gave a spurious "rank 8" on births that was a sparse-series artifact (births rare: median 11 events/4000 steps), **caught by a shuffle null**. Proper null-tested memory on the occupancy channel: real effective rank 7.63 vs shuffled 7.99, gap 0.37 (below 0.5 threshold) — only marginal memory beyond marginals. **Conclusion:** feature non-injectivity is real in principle but hides no extractable structure here; richer embeddings recover no temporal DOF the scalar summaries miss. This removes "improve feature injectivity" from the no-grid lever list — tried, corpus does not reward it. The trajectory process is genuinely low-complexity on this slice (one shared cross-channel mode, near-white residual memory). Artifact: `dynamical_extractor.py`.
+- **`[BRANCH — TDRG-RESPONSE-TENSOR]` Response-tensor formalism (exploratory, firewalled).** Per PI directive, an isolated branch tests whether TDR-G observables are projections of one response tensor whose intrinsic dimension is *read from data*, never imposed. **Governing axiom:** intrinsic dimension = rank of the *unnormalized* response tensor over the full control manifold; normalizations/factorizations/quotients are post-hoc diagnostics only, never the primary rank test (the premature-quotienting guard — a baseline division assumes reducibility and forces rank collapse). **Two-sided discipline:** do not impose dimensions, but do not suppress dimensions the math requires; a rising count is allowed *if* it clears a null-model ceiling (so genuine structure is distinguished from finite-sample noise), and merges are tracked as consolidations, not deletions. **Build status:** module `response_tensor.py` with a null-gated SVD dimension reader, validated on synthetic data. **Calibration (honest limitation):** reliable for dim ≤ 1 at any cell count; dim ≥ 2 is *under-counted* (returns a lower bound) below ~40 control cells; pure noise is not inflated (conservative failure direction). On the current single-lever corpus it reports **intrinsic dimension = 1, HIGH confidence, upper-bounded by control rank** — consistent with the v2.12.5–.7 rank-1 finding (charter consistency criterion (b) met). Resolving dimension > 1, if present, requires the multi-cell (N × k/N × policy) grid. **Firewall:** all outputs `[NUM]` `[scope: branch diagnostic]`; nothing promotes to canonical TDR-G without PI approval against the charter success criteria. Artifacts: `tdrg_response_tensor/BRANCH_CHARTER.md`, `response_tensor.py`.
+- **`[NUM]` `[scope: exploratory branch TDRG-RESPONSE-TENSOR; diagnostic]` Dynamical signal layer added (Zeta geometry-saturation response).** Motivated by the Zeta finding that the static angular spectrum is geometry-saturated, `dynamical_extractor.py` adds a SEPARATE trajectory-level layer (autocorrelation times, Fano burstiness, inter-birth-interval CV, birth↔occupancy lagged cross-correlation), kept strictly out of the static exponent pipeline (no recompression). **Key test — does dynamical rank exceed static rank?** On the single-lever corpus: static dim = 1, dynamical dim = 1 — **no extra temporal degree of freedom surfaces.** Caveats keeping this from being a resolution: (i) both control-rank-capped at 1 lever (lower-bound check, not resolution; F3 observable-collapse neither confirmed nor refuted); (ii) the dynamical leading direction is weak and nearly single-feature — dominated by inter-birth-interval CV (slope +0.39, R²0.81), other features flat-to-weak, leading singular value (0.449) barely above null ceiling (0.432). **`[COR]` Inference corrected (review):** the earlier "dynamical summaries also near-saturated / weakly argues against F3" was an inference error and is retracted. On a rank-1 control manifold BOTH layers are forced to rank ≤ 1 *regardless of true dimension*, so static-dim = dynamical-dim = 1 is guaranteed by the geometry and concludes nothing about F3 or about hidden structure. Correct statement: both layers collapse to a rank-1 response under a rank-1 control manifold — an **excitation-insufficiency** result, not a structural one. Second limitation: these features (CV, Fano, autocorr) are compressed many-to-one statistics of path space, not trajectory embeddings, so the layer tests rank(feature_summary), not rank(trajectory_manifold); feature-map injectivity is unverified. The one finding that **does** survive (not a dimension claim): inter-birth-interval CV carries genuine N-dependence (slope +0.39, R²0.81) while autocorrelation times are flat — a statement about which trajectory features respond to N under the applied excitation. CV is the highest-value dynamical observable for the grid.
+- **`[NUM]` `[scope: exploratory branch TDRG-RESPONSE-TENSOR; diagnostic]` Feature-map injectivity tested on existing data (review-directed; no grid).** The review held that scalar summaries are compressive and a richer trajectory embedding might extract lost structure — an intra-run question, testable now. Tested three embeddings (N=840): cross-channel increment covariance = rank 1 (all runs); cross-channel level covariance = rank 1 (all runs); single-channel delay embedding gave a spurious "rank 8" on births that was a sparse-series artifact (births rare: median 11 events/4000 steps), **caught by a shuffle null**. Proper null-tested memory on the occupancy channel: real effective rank 7.63 vs shuffled 7.99, gap 0.37 (below 0.5 threshold) — only marginal memory beyond marginals. **Conclusion:** feature non-injectivity is real in principle but hides no extractable structure here; richer embeddings recover no temporal DOF the scalar summaries miss. This removes "improve feature injectivity" from the no-grid lever list — tried, corpus does not reward it. The trajectory process is genuinely low-complexity on this slice (one shared cross-channel mode, near-white residual memory). Artifact: `dynamical_extractor.py`.
 - **`[METHOD]` Standing note (adopted from review):** recurring exponent drift (χ, $C_{\rm component}$, $q_{\rm proj}$) arises because most reported exponents are quotients of a few underlying fields; before promoting any exponent, test whether it is a primitive or a ratio of primitives.
 - Artifact: `tdr24b_chi_refit.py`. N=840 (7-divisible control) is mildly off-trend but not the source of the window dependence (excluding it: $+0.693$ vs $+0.697$).
 
@@ -378,11 +385,11 @@ Settled / routed items (one-line):
 - **Narrow-band exclusion closed** :: `[THM]` ✓ — $k<N/6 \Rightarrow |E_{\rm def}\cap K_3|\le2$. See §6.2.
 - **Finite-state recurrence closed** :: `[THM]` ✓ — Every orbit of $G_{\rm perm}^{(M)}$ is eventually periodic. See §6.2.
 - **Birth-rate invariant closed** :: `[ALG]` ✓ — $rN_{\rm err}=0$ in all clean runs. See §6.3.
-- **TDR-24 factorization closed** :: `[ALG/NUM]` ✓ — $C_{\rm birth}=C_{\rm component}/\chi$. See §6.4.
+- **TDR-24 factorization closed** :: `[ALG]` (given the microscopic birth law; numerically corroborated) ✓ — $C_{\rm birth}=C_{\rm component}/\chi$. See §6.4.
 - **Microscopic birth law closed** :: `[NUM]` ✓ — `births_step` $=$ `clean_star_components`. See §6.4.
-- **Slot-volume identity closed (TDR-24D)** :: `[ALG / NUM strong]` ✓ — $O_t = (2k+1) M_t \psi_t$ verified by v6 extractor; $\psi_{\rm slot}^{\rm bulk} \approx 0.00204 \cdot N^{+0.014}$ is scale-invariant. Analytic derivation of the intensiveness routed to TDR-24F. See §6.8.
+- **Slot-volume identity closed (TDR-24D)** :: `[ALG]` identity; `[NUM strong]` intensiveness ✓ — $O_t = (2k+1) M_t \psi_t$ verified by v6 extractor; $\psi_{\rm slot}^{\rm bulk} \approx 0.00204 \cdot N^{+0.014}$ is scale-invariant. Analytic derivation of the intensiveness routed to TDR-24F. See §6.8.
 - **(v2.12) LEM-REACH / LEM-NOANNIHIL / LEM-RETRIG / LEM-SPECCONS closed** :: `[ALG]` ✓ — band reachability, no free annihilation, two-node binding threshold, advance-spectrum conservation. See §6.5, §6.12.
-- **(v2.12) BIND3-CYCLE-N24K1 certified** :: `[ALG/NUM strong]` ✓ — exact taxonomy {scatter 96.4%, pure-bound 3.6%, transfer 81.8%}. See §6.12.
+- **(v2.12) BIND3-CYCLE-N24K1 certified** :: `[ALG]` (finite exact enumeration; `[conv: v18 path orientation]`) ✓ — exact taxonomy {scatter 96.4%, pure-bound 3.6%, transfer 81.8%}. See §6.12.
 
 ---
 
@@ -468,6 +475,9 @@ Violation: Extrapolating advance-spectrum conservation across birth events witho
 **[SG-13]** *(v2.12)* **Spectral-gate scope.** BIND3-SPECTRAL-GATE forbids autonomous two-node period-2 retrigger, **not** transient in-band occupancy (any pair can be swept through the band by LEM-REACH regardless of $|d|_c$). It is scoped to no-birth three-node dynamics.  
 Violation: Reading the gate as a ban on band entry, or applying it across births.
 
+**[SG-14]** *(v2.12.14)* **Relabelling covariance.** On the canonical branch `bound_symmetric` — and on any other policy branch only once its covariance is separately established — the TDR-G step must commute with $G_{\rm cov}=\mathrm{Sym}(V)\times\mathbb{Z}_N^{\rm phase}$: every permutation of node labels (path-listing reversal included) together with the global phase shift $\theta_i\mapsto\theta_i+c$ (SG-2). Equality of the two sides is understood **modulo a relabelling of freshly born nodes**: a newborn node has no prior label, so the outputs are compared after a one-to-one matching of the newborn nodes (as a multiset of $(\theta,\delta)$), as the checks of §6.12 do. Tie conditions are declared on $G_{\rm cov}$-invariant data only; a rule that consults node IDs, listing order or creation order is an implementation presentation, not a law (Appendix B). **Not in $G_{\rm cov}$:** (i) the common token shift $\delta_i\mapsto\delta_i+c$ — it commutes with swaps, path successor shifts and ties and is broken by star blow-up unless $2c\equiv0$ (imported OFN statement, §7); it is a symmetry of the birth-free sector only, not a gauge; (ii) the mirror $(\theta,\delta)\mapsto(-\theta,-\delta)$ — the step is not mirror-equivariant at $P_3$ events (TDRG-ALG-MIRROR-NOT-STEP-SYMMETRY, §6.12). **Branch scope and evidence:** for `bound_symmetric` the finite checks of §6.12 (TDRG-NUM-ORIENT-EQUIVARIANCE-N24) support SG-14 on their tested scope; they are not a theorem for all $N$ or all policies. `trap`, `bound_multistar` and `bound_path_tie` differ from `bound_symmetric` only in bookkeeping on ties and multistars (§6.3, dynamic equivalence). In `largest_center` the choice between equal-degree multistar centres is by node ID (TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK, §6.6), so that branch does not satisfy SG-14 — a recorded non-covariance of a non-canonical branch, to be resolved with TDR-19. `all_centers` is equivariant modulo the relabelling of newborn nodes on the tested fixture (§6.6).  
+Violation: an event rule or tie-break that depends on node labels; reading the common token shift or the mirror as a gauge; citing SG-14 for a policy branch whose covariance has not been established.
+
 ---
 
 ## §4. Layer Routing {#sec-4-layer-routing}
@@ -497,18 +507,18 @@ Routing rules:
 
 | Claim | Valid form | Forbidden overclaim | Section |
 |---|---|---|---|
-| N-scaling exponent | $B_{\rm bulk}/\text{step} \sim N^{-0.869}$ [HEUR strong], bulk-conditioned, $k/N=1/15$, $T=5000$, $N=120$–$1440$ | Aggregate exponent $\alpha \approx 1$ as primary; tail-contaminated | §6.8 |
-| Thermodynamic crystallization | Strongly supported `[HEUR strong]`; requires $N\to\infty$ limit | Established theorem | §2 TDR-22b |
+| N-scaling exponent | $B_{\rm bulk}/\text{step} \sim N^{-0.869}$ `[NUM]`, full-range composite fit, bulk-conditioned, $k/N=1/15$, $T=5000$, $N=120$–$1440$; window-dependent ($N^{-0.730}$ on $480$–$1440$) | Aggregate exponent $\alpha \approx 1$ as primary (tail-contaminated); $0.869$ as a structural or $N\to\infty$ exponent | §1, §6.8 |
+| Thermodynamic crystallization | `[HEUR]` extrapolation of finite-$N$ fits; requires the $N\to\infty$ limit | Established theorem | §2 TDR-22b |
 | `bound_symmetric` as canonical | Clean background-independent certified branch | Uniquely derived from first principles | §3 SG-8 |
-| TDR-24 factorization | Pool-level identity verified to machine precision `[ALG/NUM]` | Individual-run per-step factorization (not tested) | §6.4 |
+| TDR-24 factorization | Pool-level identity `[ALG]` (given the microscopic birth law), verified to machine precision | Individual-run per-step factorization (not tested) | §6.4 |
 | Microscopic birth law | `births_step = clean_star_components` under `bound_symmetric` `[NUM]` | Any other policy | §6.4 |
-| Slot-volume model | Identity verified `[ALG / NUM strong]`; $\psi_{\rm slot}^{\rm bulk}$ N-independent (numerical) | Analytic derivation of $\psi_t$ intensiveness (that is TDR-24F, OPEN) | §6.8 |
+| Slot-volume model | Identity `[ALG]` (by construction); $\psi_{\rm slot}^{\rm bulk}$ N-independent `[NUM strong]` | Analytic derivation of $\psi_t$ intensiveness (the TDR-24F mechanism is closed numerically; its analytic constants are OPEN) | §6.8 |
 | $V_{\rm pair\_load}$ | Load/multiplicity diagnostic; may exceed 1 `[NUM]` | Interpreting it as a probability or fraction | §6.10 |
 | TDR-24F projection $q_{\rm proj}$ | $q_{\rm proj}\sim N^{1.06}$, $\bar{c}_{\rm struct}\approx5$ bounded, $\psi$ intensive `[NUM strong]` | Citing $q_{\rm proj}\sim N^{1.371}$ (fit artifact, refuted by two methods) | §2 TDR-24F |
 | Policy ordering | `largest_center` > `all_centers` > `bound_symmetric` at $k/N \approx 0.0667$ under cap protocol `[NUM]` | Universal ordering at all $(N, k)$ | §6.6 |
 | N=720 tail mechanism | Topological filtering failure (one event in 200 runs) `[NUM]` | Deterministic instability | §6.9 |
-| $K_3$ global explosiveness | Cross-branch caution: `[FAIL]` in continuous Triadic DSN — only a quartic pump channel exists; full return has dominant healing (96:1 ratio) | Importing continuous $K_3$ explosiveness language into TDR-G | Appendix B |
-| Two-node retrigger | Exact isolated period-2 result under LEM-RETRIG | Persistent pairwise bond in $N\ge3$ | §6.5, SG-11 |
+| $K_3$ global explosiveness | Historical continuous reference only: TRIAD v1.6.1 keeps the 96:1 healing/pump ratio as coefficient bookkeeping with the same-object correspondence `[OPEN]`; not a current fact about either branch | Importing continuous $K_3$ explosiveness or 96:1 language into TDR-G | Appendix B |
+| Two-node retrigger | Exact isolated retrigger result under LEM-RETRIG (period dividing 2; fixed point at $d=0$) | Persistent pairwise bond in $N\ge3$ | §6.5, SG-11 |
 | Spectral gate | Gates autonomous two-node retrigger in no-birth three-node dynamics | Forbids transient in-band occupancy or applies across births | §6.12, SG-13 |
 | Advance-spectrum conservation | Exact for three-node no-birth swap/$P_3$/tie dynamics | Conserved across star blow-up | §6.12, SG-12 |
 
@@ -518,39 +528,39 @@ Routing rules:
 
 ### §6.1 Primitive State and Relational Structure `[DEF]` {#sec-6-1-state}
 
-`[DEF]` **Phase universe.** $\mathbb{Z}_N$ with $N$ even. State is variable-size: $X_n \in \bigsqcup_{M\ge2}\mathbb{Z}_N^{2M}$, with nodes carrying phases $\theta_i \in \mathbb{Z}_N$ and velocity tokens $\delta_i \in \mathbb{Z}_N$. $M_n$ increases at each star blow-up.
+`[DEF]` [RID: TDRG-DEF-ZN-STATE] **Phase universe.** $\mathbb{Z}_N$ with $N$ even. State is variable-size: $X_n \in \bigsqcup_{M\ge2}\mathbb{Z}_N^{2M}$, with nodes carrying phases $\theta_i \in \mathbb{Z}_N$ and velocity tokens $\delta_i \in \mathbb{Z}_N$. $M_n$ increases at each star blow-up.
 
-`[DEF]` **Physical state** is the quotient by global phase shift: $\theta_i \mapsto \theta_i + c$. Only $\Delta_{ij} = (\theta_i - \theta_j) \bmod N$ are physical.
+`[DEF]` [RID: TDRG-DEF-PHYSICAL-STATE] **Physical state** is the quotient by global phase shift: $\theta_i \mapsto \theta_i + c$. Only $\Delta_{ij} = (\theta_i - \theta_j) \bmod N$ are physical.
 
-`[DEF]` **Relative advance:** $d_{ij} = (\delta_i - \delta_j) \bmod N$.
+`[DEF]` [RID: TDRG-DEF-REL-ADVANCE] **Relative advance:** $d_{ij} = (\delta_i - \delta_j) \bmod N$.
 
-`[DEF]` **Kinematic evolution:** $\Delta_{ij,n+1} = (\Delta_{ij,n} + d_{ij,n}) \bmod N$.
+`[DEF]` [RID: TDRG-DEF-KINEMATICS] **Kinematic evolution:** $\Delta_{ij,n+1} = (\Delta_{ij,n} + d_{ij,n}) \bmod N$.
 
-`[DEF]` **Defect band:** $\mathcal{D}_k = \{\Delta \in \mathbb{Z}_N : \operatorname{dist}_{\mathbb{Z}_N}(\Delta, N/2) \leq k\}$.
+`[DEF]` [RID: TDRG-DEF-BAND] **Defect band:** $\mathcal{D}_k = \{\Delta \in \mathbb{Z}_N : \operatorname{dist}_{\mathbb{Z}_N}(\Delta, N/2) \leq k\}$.
 
-`[DEF]` **Defect edge set:** $E_{\rm def} = \{(i,j) : \Delta_{ij} \in \mathcal{D}_k\}$.
+`[DEF]` [RID: TDRG-DEF-EDGE-SET] **Defect edge set:** $E_{\rm def} = \{(i,j) : \Delta_{ij} \in \mathcal{D}_k\}$.
 
-`[DEF]` **Narrow-band condition:** $k < N/6$. Required for holonomy exclusion.
+`[DEF]` [RID: TDRG-DEF-NARROW-BAND] **Narrow-band condition:** $k < N/6$. Required for holonomy exclusion.
 
 ### §6.2 Holonomy and Narrow-Band Exclusion `[THM]` {#sec-6-2-holonomy}
 
-`[THM]` **Holonomy identity.** For any three nodes $A, B, C$:
+`[THM]` [RID: TDRG-THM-HOLONOMY] **Holonomy identity.** For any three nodes $A, B, C$:
 $$\Delta_{AB} + \Delta_{BC} + \Delta_{CA} \equiv 0 \pmod{N}.$$
 Consequence: the relational phases are holonomy-constrained; the defect graph inherits this constraint through $E_{\rm def}$.
 
-`[THM]` **Narrow-band exclusion.** Under $k < N/6$, no three nodes can all be mutually defect-related:
+`[THM]` [RID: TDRG-THM-NARROW-BAND-EXCLUSION] **Narrow-band exclusion.** Under $k < N/6$, no three nodes can all be mutually defect-related:
 $$k < N/6 \;\Rightarrow\; |E_{\rm def} \cap K_3| \leq 2.$$
 Proof: three antipodal defects require the holonomy sum to lie within $3k$ of $3N/2$, but holonomy forces the sum to $0, N,$ or $2N$; nearest distance $N/2 > 3k$. Contradiction.
 
-Physical consequence: fully defective $K_3$ triangles are forbidden. Physical discrete triadic objects are partial-defect (path) or star-supported structures.
+Physical consequence: fully defective $K_3$ triangles are forbidden. Physical discrete triadic objects are partial-defect (path) or star-supported structures. *(v2.12.14, cross-citation; AZ-owned)* `AZ-ALG-ANTIPODAL-LOWORDER` (`az-v0.6`) is the same antipodal-band arithmetic extended to closed non-backtracking walks: none of length 2 or 3 under $k<N/6$, and none of odd length $L$ while $Lk<N/2$. It is a static $\mathbb{Z}_N$ graph statement — not TDR-G dynamics and not a bridge (SG-10); TDR-19 stays OPEN, and AZ's angular-spectrum results do not confirm TDR-G's N-scaling.
 
-`[THM]` **Finite-state recurrence.** The state space $\bigsqcup_{M}\mathbb{Z}_N^{2M}$ is finite under any fixed node-count cap, and the update rule is deterministic. Therefore every orbit of $G_{\rm perm}^{(M)}$ is eventually periodic. No true chaos exists in the capped system; only long-period recurrence.
+`[THM]` [RID: TDRG-THM-RECURRENCE] **Finite-state recurrence.** The state space $\bigsqcup_{M}\mathbb{Z}_N^{2M}$ is finite under any fixed node-count cap, and the update rule is deterministic. Therefore every orbit of $G_{\rm perm}^{(M)}$ is eventually periodic. No true chaos exists in the capped system; only long-period recurrence.
 
 ### §6.3 Interaction Laws and Policy Definitions `[DEF]` {#sec-6-3-interaction}
 
 > **[Local guard SG-10 applies]** No rule in this section may import from the continuous RTG programme.
 
-`[DEF]` **Canonical step semantics (CONV-TICK).** Each simulation step executes in this order:
+`[DEF]` [RID: TDRG-DEF-CONV-TICK] **Canonical step semantics (CONV-TICK).** Each simulation step executes in this order:
 1. Advance phases by current velocity tokens: $\theta_i \mapsto (\theta_i + \delta_i) \bmod N$.
 2. Construct $E_{\rm def}$ from the post-advance relational phases $\Delta_{ij}$.
 3. Decompose $E_{\rm def}$ into connected components.
@@ -563,23 +573,29 @@ Physical consequence: fully defective $K_3$ triangles are forbidden. Physical di
 
 `[DEF]` Unless explicitly stated otherwise, motif quantities using `M_pre` or component counts are pre-birth, pre-policy-application quantities for that step.
 
-`[DEF]` **Antipodal swap** (single defect edge $\{A,B\}$): $(\delta_A, \delta_B) \mapsto (\delta_B, \delta_A)$.
+`[DEF]` [RID: TDRG-DEF-SWAP] **Antipodal swap** (single defect edge $\{A,B\}$): $(\delta_A, \delta_B) \mapsto (\delta_B, \delta_A)$.
 
-`[DEF]` **Path-cycle interaction (CONV-P3CYC)** (two-edge path $P_3$, nodes $[v_1, v_2, v_3]$): oriented 3-cycle along the path direction. **(v2.12, `[script-certified v18]`)** The permutation is the **successor shift**: each node receives its forward neighbor's token along the oriented path,
+`[DEF]` [RID: TDRG-DEF-CONV-P3CYC] **Path-cycle interaction (CONV-P3CYC)** (two-edge path $P_3$, nodes $[v_1, v_2, v_3]$): oriented 3-cycle along the path direction. **(v2.12, `[script-certified v18]`)** The permutation is the **successor shift**: each node receives its forward neighbor's token along the oriented path,
 $$(\delta_{v_1},\delta_{v_2},\delta_{v_3}) \mapsto (\delta_{v_2},\delta_{v_3},\delta_{v_1}),$$
 implemented in v18 as `delta[v] = old[path[(i+1) % len]]` (general $P_n$: same successor shift along the oriented path). The prior wording "oriented 3-cycle along the path direction" under-determined the rotation direction; the choice flips $\sim20\%$ of three-body trajectory fates at finite horizon, so trajectory-level reproducibility requires this convention. The coarse BIND3 class taxonomy is convention-robust `[NUM]` `[scope: N=24, k=1 exact enumeration]` (§6.12).
 
-`[DEF]` **Path orientation rule.** For path $P_n$ ($n \geq 3$): compute signed phase-gradient score $S = \sum_i \operatorname{signed\_defect\_error}(\theta_{v_i}, \theta_{v_{i+1}}, N)$. Orient forward if $S > 0$, reversed if $S < 0$. If $S = 0$, use endpoint advance $E = \operatorname{signed\_centered}(\delta_{v_n} - \delta_{v_1}, N)$. If $S = E = 0$: balanced path-tie (no gauge-invariant orientation exists under current axiom set).
+`[DEF]` [RID: TDRG-DEF-SIGNED-CENTERED] **Centered representative.** For even $N$ and $x\in\mathbb{Z}$, $\operatorname{signed\_centered}(x,N)$ is the representative of $x \bmod N$ in the half-open interval $(-N/2,\,N/2]$. The half-open choice is a convention; it gives $\operatorname{signed\_centered}(N/2)=\operatorname{signed\_centered}(-N/2)=+N/2$, which is the source of the reversal-invariant stratum in the orientation rule below. *(v2.12.14: previously used here but defined only in the engine, function `signed_centered`.)*
 
-`[DEF]` **Cycle bound states.** All cycle components $C_n$, $n \geq 4$, are inert bound vortices: no birth, no momentum transfer.
+`[DEF]` [RID: TDRG-DEF-SIGNED-DEFECT-ERROR] **Signed defect error.** $\operatorname{signed\_defect\_error}(\theta_i,\theta_j,N)=\operatorname{signed\_centered}\big((\theta_i-\theta_j) \bmod N - N/2,\;N\big)$, the signed distance of $\Delta_{ij}$ from the antipode. A pair is a defect edge iff $|\operatorname{signed\_defect\_error}|\le k$ (TDRG-DEF-EDGE-SET). On a defect edge $|\operatorname{signed\_defect\_error}|\le k<N/6$, so the value never reaches $\pm N/2$ and it changes sign exactly when the pair is listed in the opposite order. *(Engine: function `signed_defect_error`.)*
 
-`[DEF]` **Star blow-up** ($K_{1,3}$ with center $A$, leaves $L_1, L_2, L_3$): new node $E$ created at $\theta_E = (\theta_A + N/2) \bmod N$, $\delta_E = \delta_A$; center inverts: $\delta_A \mapsto -\delta_A \bmod N$.
+`[DEF]` [RID: TDRG-DEF-ORIENT] **Path orientation rule.** *(v2.12.14 `[COR]`; owner dispositions of 27 Oct 2026, option (b).)* For a path $P_n$ ($n \geq 3$) listed as $[v_1,\ldots,v_n]$: $S = \sum_i \operatorname{signed\_defect\_error}(\theta_{v_i}, \theta_{v_{i+1}}, N)$. Orient forward if $S > 0$, reversed if $S < 0$. If $S = 0$, let $E = \operatorname{signed\_centered}(\delta_{v_n} - \delta_{v_1}, N)$: forward if $0<E<N/2$, reversed if $-N/2<E<0$. If $S=0$ and $2E\equiv0 \pmod N$ — that is, $E\in\{0,\,N/2\}$ — **balanced path-tie**: no orientation can be read from the declared invariants (TDRG-ALG-ORIENT-NOGO below; SG-14). The policies treat the tie as before (`bound_path_tie`, `bound_symmetric`: inert bound state; `trap`, `bound_multistar`: ambiguous). Reference implementation: `evidence/tdrg/scripts/tdrg_orient_v2_12_14.py` (drop-in `orient_path`). **Superseded completion:** v2.12.13 stated the tie only for $S=E=0$; at $S=0\wedge E\equiv N/2$ the pinned engine (the v17 engine `genesis_mode_b_mc.py` and v18 share one `orient_path`) oriented "forward" relative to the node-ID listing of `raw_ordered_path` — a label-dependent completion (Appendix B). Every motif-log and BIND3 result of this document was computed under that completion and is kept with `[conv: v18 path orientation]`, not rerun (`EV-NOT-RERUN`; three-node census bound in §6.12).
+
+`[ALG]` [RID: TDRG-ALG-ORIENT-NOGO] **No orientation from $(S,E)$ on the antipodal-endpoint stratum.** Reversing the listing maps $S\mapsto-S$ always (each defect-edge term is reversal-odd, TDRG-DEF-SIGNED-DEFECT-ERROR), and maps $E\mapsto-E$ except when $\delta_{v_n}-\delta_{v_1}\equiv N/2$, where $\operatorname{signed\_centered}$ returns $+N/2$ for both listings. Hence on $S=0\wedge E\equiv N/2$ the pair $(S,E)$ is reversal-invariant, and any selector that is a function of $(S,E)$ alone is either the tie or depends on the listing. The extended tie is the declared rule's covariant completion; it adds no new input. **Recorded alternative (not adopted):** for $P_3$ with centre $c$, $G=\operatorname{signed\_centered}(\delta_{v_1}-\delta_c)-\operatorname{signed\_centered}(\delta_{v_3}-\delta_c)$ is reversal-odd and never $0$ on the stratum (because $\delta_{v_3}-\delta_{v_1}\equiv N/2\neq0$; atlas check C2, exhaustive at $N=24$), so admitting the centre token as an orientation input would give a covariant non-tie rule for $P_3$; for longer paths a tie would still be needed on reversal-symmetric (palindromic) configurations. Choosing it is a law choice of the TDR-19 kind; it is kept for comparison with the adopted rule on the same universes in the later sensitivity campaign (`make_orient_g_alternative` in the reference implementation).
+
+`[DEF]` [RID: TDRG-DEF-CYCLE-BOUND] **Cycle bound states.** All cycle components $C_n$, $n \geq 4$, are inert bound vortices: no birth, no momentum transfer.
+
+`[DEF]` [RID: TDRG-DEF-STAR] **Star blow-up** ($K_{1,3}$ with center $A$, leaves $L_1, L_2, L_3$): new node $E$ created at $\theta_E = (\theta_A + N/2) \bmod N$, $\delta_E = \delta_A$; center inverts: $\delta_A \mapsto -\delta_A \bmod N$.
 
 > **[Local guard SG-10 applies]** Star blow-up births a node. "Relational accounting preserved" means the birth event is exact and accountable — it does not mean node count is conserved.
 
-`[DEF]` **Multistar** ($K_{m,c}$-like, $m \geq 2$ valid star centers): component with multiple equally valid blow-up centers. Policy fork required.
+`[DEF]` [RID: TDRG-DEF-MULTISTAR] **Multistar** ($K_{m,c}$-like, $m \geq 2$ valid star centers): component with multiple equally valid blow-up centers. Policy fork required.
 
-| Policy | Multistar treatment | Path double-tie | Character |
+| Policy | Multistar treatment | Path tie ($S=0$, $2E\equiv0$) | Character |
 |---|---|---|---|
 | `trap` | ambiguous (no birth) | ambiguous | strict unresolved |
 | `bound_multistar` | inert bound state | ambiguous | semantic crystallization |
@@ -590,7 +606,7 @@ implemented in v18 as `delta[v] = old[path[(i+1) % len]]` (general $P_n$: same s
 
 `[ALG]` **Dynamic equivalence.** On state evolution, `trap`, `bound_multistar`, and `bound_path_tie` are dynamically equivalent whenever multistars/path-ties generate no births and no momentum transfer. They may differ in bookkeeping, ambiguity counters, and run-status semantics.
 
-`[DEF]` **Canonical clean branch:** `bound_symmetric` = multistar bound states + balanced path-tie bound states.
+`[DEF]` [RID: TDRG-DEF-CANONICAL-BRANCH] **Canonical clean branch:** `bound_symmetric` = multistar bound states + balanced path-tie bound states.
 
 ### §6.4 Accounting Invariants `[ALG]` {#sec-6-4-invariants}
 
@@ -605,7 +621,7 @@ implemented in v18 as `delta[v] = old[path[(i+1) % len]]` (general $P_n$: same s
 $$rN_T = \text{birth\_steps} \cdot b/\text{step}, \qquad rN_{\rm err} = 0.$$
 All reported clean runs satisfy this to machine precision.
 
-`[ALG/NUM]` **TDR-24 pool-level factorization:**
+`[ALG]` [assuming: the microscopic birth law (`[NUM]`, below) for the first identity] **TDR-24 pool-level factorization:**
 $$\boxed{C_{\rm birth} = \frac{C_{\rm component}}{\chi}}, \qquad \boxed{B/\text{step} = O/\text{step} \cdot C_{\rm birth}}$$
 where:
 $$C_{\rm birth} = \frac{\sum_t \texttt{births\_step}}{\sum_t \texttt{occ\_clean\_pairs}}, \quad C_{\rm component} = \frac{\sum_t \texttt{occ\_clean\_pairs\_in\_clean\_star}}{\sum_t \texttt{occ\_clean\_pairs}}, \quad \chi = \frac{\sum_t \texttt{occ\_clean\_pairs\_in\_clean\_star}}{\sum_t \texttt{clean\_star\_components}}.$$
@@ -615,21 +631,21 @@ Verified to $< 10^{-18}$ in all valid v16 motif logs.
 $$\boxed{\texttt{births\_step} = \texttt{clean\_star\_components}}$$
 for all steps with nonzero births. Verified 100% in all valid v16 motif logs. Under `bound_symmetric`, every birth is generated by exactly one clean single-center star component.
 
-`[ENG/ALG]` **Edge-builder audit.** The $O(n \log n + E)$ bisect-based defect edge builder matches the $O(n^2)$ brute-force reference on 500 random inputs across $N \in \{30, 60, 90, 120\}$ (random $k$, $M \in \{4..60\}$), 0 mismatches. Certified at every run start: `graph_edges_for audit: PASS (500 trials)`.
+`[ENG]` `[scope: 500 random inputs against the $O(n^2)$ reference]` **Edge-builder audit.** The $O(n \log n + E)$ bisect-based defect edge builder matches the $O(n^2)$ brute-force reference on 500 random inputs across $N \in \{30, 60, 90, 120\}$ (random $k$, $M \in \{4..60\}$), 0 mismatches. Certified at every run start: `graph_edges_for audit: PASS (500 trials)`.
 
 ### §6.5 Two-Node Universe `[ALG structure]` {#sec-6-5-twonode}
 
 `[DEF]` Two-node state: $X_n = (\Delta_n, \delta_{A,n}, \delta_{B,n}) \in \mathbb{Z}_N^3$.
 
-`[THM]` **Reachability condition** ($k=0$): interaction occurs iff $\gcd(d, N) \mid (N/2 - \Delta_0)$.
+`[THM]` [RID: TDRG-THM-REACHABILITY-K0] **Reachability condition** ($k=0$): interaction occurs iff $\gcd(d, N) \mid (N/2 - \Delta_0)$.
 
-`[ALG]` `[NUM exhaustive: all even $N\le40$, all $(d,\Delta_0)$, $k$ through the narrow-band regime]` **(v2.12) LEM-REACH — band-form reachability.** The free orbit $\Delta_t=\Delta_0+td \bmod N$ equals the coset $\Delta_0+g\mathbb{Z}_N$, $g=\gcd(d,N)$. Hence: exact antipode reachable $\iff g\mid(N/2-\Delta_0)$ (the $k=0$ theorem above), and band reachable $\iff \mathcal{D}_k\cap(\Delta_0+g\mathbb{Z}_N)\neq\varnothing \iff \operatorname{dist}_N(N/2-\Delta_0,\,g\mathbb{Z}_N)\le k$. Geometric reading (`[INTERP]`, OFN-DIST-ZN scope): a uniformly winding relation visits a regular orbit-lattice of spacing $g$ on $C_N$; reachability is lattice–arc intersection. Supersedes any "every nontrivial orbit sweeps the band" reading — orbits confined to non-intersecting cosets are permanent superselection sectors at $k>0$ as well.
+`[ALG]` `[NUM exhaustive: all even $N\le40$, all $(d,\Delta_0)$, $k$ through the narrow-band regime]` [RID: TDRG-ALG-LEM-REACH] **(v2.12) LEM-REACH — band-form reachability.** The free orbit $\Delta_t=\Delta_0+td \bmod N$ equals the coset $\Delta_0+g\mathbb{Z}_N$, $g=\gcd(d,N)$. Hence: exact antipode reachable $\iff g\mid(N/2-\Delta_0)$ (the $k=0$ theorem above), and band reachable $\iff \mathcal{D}_k\cap(\Delta_0+g\mathbb{Z}_N)\neq\varnothing \iff \operatorname{dist}_N(N/2-\Delta_0,\,g\mathbb{Z}_N)\le k$. Geometric reading (`[INTERP]`, OFN-DIST-ZN scope): a uniformly winding relation visits a regular orbit-lattice of spacing $g$ on $C_N$; reachability is lattice–arc intersection. Supersedes any "every nontrivial orbit sweeps the band" reading — orbits confined to non-intersecting cosets are permanent superselection sectors at $k>0$ as well.
 
-`[ALG]` `[NUM exhaustive: $N=2$–$40$, all $(\Delta_0,d_0)$]` `[scope: free inertia between events]` **(v2.12) LEM-NOANNIHIL — no free annihilation.** With the relational dyad state $(\Delta,d)$ and free evolution $F(\Delta,d)=(\Delta+d,\,d)$, the $d$-component is invariant; therefore $F^t(\Delta_0,d_0)=(0,0)\iff(\Delta_0,d_0)=(0,0)$. Every non-null dyad is non-annihilating under free evolution; annihilation, if it exists at all, is event-mediated only. Annihilation is *defined* as return to the null state $(0,0)$, not merely $\Delta=0$: phase coincidence with nonzero relative advance is a distinct relational state. This lemma replaces the former "trap / obstruction to annihilation" axiom at the ontology layer (exported to `RTG_ONTOLOGICAL_FOUNDATIONS` v0.7 as `[RESULT]` `[from: ALG]`).
+`[ALG]` `[NUM exhaustive: $N=2$–$40$, all $(\Delta_0,d_0)$]` `[scope: free inertia between events]` [RID: TDRG-ALG-LEM-NOANNIHIL] **(v2.12) LEM-NOANNIHIL — no free annihilation.** With the relational dyad state $(\Delta,d)$ and free evolution $F(\Delta,d)=(\Delta+d,\,d)$, the $d$-component is invariant; therefore $F^t(\Delta_0,d_0)=(0,0)\iff(\Delta_0,d_0)=(0,0)$. Every non-null dyad is non-annihilating under free evolution; annihilation, if it exists at all, is event-mediated only. Annihilation is *defined* as return to the null state $(0,0)$, not merely $\Delta=0$: phase coincidence with nonzero relative advance is a distinct relational state. This lemma replaces the former "trap / obstruction to annihilation" axiom at the ontology layer (exported to `RTG_ONTOLOGICAL_FOUNDATIONS` v0.7 as `[RESULT]` `[from: ALG]`).
 
-`[ALG]` `[NUM exhaustive: even $N\le40$, $k\le N/6$]` `[scope: isolated dyad, CONV-TICK semantics]` **(v2.12) LEM-RETRIG — two-node retrigger / binding threshold.** For band offset $\varepsilon=\Delta-N/2\in B_k=[-k,k]$, a swap maps $d\mapsto-d$ and the next offset is $\varepsilon'=\varepsilon-d$. Retrigger condition: $\varepsilon\in B_k\cap(B_k+d)$; a retrigger offset exists iff $|d|_c\le2k$; all offsets retrigger iff $d=0$. If the realized impact offset lies in the overlap, the isolated dyad forms an **exact period-2 bound state** $(\varepsilon,d)\leftrightarrow(\varepsilon-d,-d)$ (exact because CONV-TICK applies the swap against the snapshot with no same-tick re-advance). $k$ acts as a binding threshold; binding is impact-phase dependent. `[scope: isolated two-node dynamics — see SG-11]`.
+`[ALG]` `[NUM exhaustive: even $N\le40$, $k\le N/6$]` `[scope: isolated dyad, CONV-TICK semantics]` [RID: TDRG-ALG-LEM-RETRIG] **(v2.12) LEM-RETRIG — two-node retrigger / binding threshold.** For band offset $\varepsilon=\Delta-N/2\in B_k=[-k,k]$, a swap maps $d\mapsto-d$ and the next offset is $\varepsilon'=\varepsilon-d$. Retrigger condition: $\varepsilon\in B_k\cap(B_k+d)$; a retrigger offset exists iff $|d|_c\le2k$; all offsets retrigger iff $d=0$. If the realized impact offset lies in the overlap, the isolated dyad forms an **exact bound state of period dividing 2**, $(\varepsilon,d)\leftrightarrow(\varepsilon-d,-d)$ (exact because CONV-TICK applies the swap against the snapshot with no same-tick re-advance); its least period is 2 for $d\neq0$, and $d=0$ is a fixed point $(\varepsilon,0)$ at which the swap fires on every tick *(v2.12.14 `[COR]`)*. The retrigger band $|d|_c\le2k<N/3$ never reaches $d\equiv N/2$, so no other degenerate case occurs. $k$ acts as a binding threshold; binding is impact-phase dependent. `[scope: isolated two-node dynamics — see SG-11]`.
 
-`[RESULT]` Noninteracting two-node sectors are superselection sectors. **(v2.12 note:** strict superselection is a two-node statement; in $N\ge3$ universes events change individual $\delta$ tokens and births add relational channels, so pairwise sectors are not invariant — see LEM-SPECCONS §6.12 for the exact three-node conservation law that replaces it.)
+`[RESULT]` `[from: THM]` Noninteracting two-node sectors are superselection sectors. **(v2.12 note:** strict superselection is a two-node statement; in $N\ge3$ universes events change individual $\delta$ tokens and births add relational channels, so pairwise sectors are not invariant — see LEM-SPECCONS §6.12 for the exact three-node conservation law that replaces it.)
 
 `[ALG structure]` Two-node regimes:
 
@@ -638,15 +654,17 @@ for all steps with nonzero births. Verified 100% in all valid v16 motif logs. Un
 | Superselection | antipode unreachable | no interaction |
 | Global bounce | antipode hit exactly | reversible bounce |
 | Boundary jitter | $k>0$, band hit | localized two-step trap |
-| Period-2 bound state (v2.12) | $\varepsilon\in B_k\cap(B_k+d)$, $|d|_c\le2k$ | exact retrigger 2-cycle (LEM-RETRIG) |
+| Retrigger bound state (v2.12; period dividing 2) | $\varepsilon\in B_k\cap(B_k+d)$, $|d|_c\le2k$ | exact retrigger: a 2-cycle for $d\neq0$, a fixed point for $d=0$ (LEM-RETRIG) |
 
 ### §6.6 Policy Results `[NUM]` {#sec-6-6-policy}
 
-> **[Local guard SG-7 applies]** Policy results are branch-specific.
+> **[Local guard SG-7 applies]** Policy results are branch-specific. **(v2.12.14)** All motif-log results of §§6.6–6.10 come from the pinned engine (`upload/tdrg-records/genesis_mode_b_mc.py`, SHA-256 `4c94d874…a608`, and its logging-only extension `genesis_mode_b_mc_v18.py`, `9d787b43…675e`; one `orient_path`) and carry `[conv: v18 path orientation]`: they were computed with the label-dependent completion at $S=0\wedge E\equiv N/2$ that TDRG-DEF-ORIENT replaces. They are not rerun (`EV-NOT-RERUN`, PI decision 27 Oct 2026); the exposure is bounded only for the three-node universe (§6.12) — the many-node exposure rate is not measured.
 
 `[NUM]` **Crystallization branch** (`bound_symmetric`): $p_{\rm ambig} = 0$; multistars inert; path ties inert; slow / suppressed growth.
 
 `[NUM]` [conv: `largest_center`] **Continuous inflation branch:** Many multistar events, one birth per event, persistent expansion. Typical at $k/N \approx 0.0667$: $rN_T \approx 0.76$–$0.80$.
+
+`[ALG]` [RID: TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK] `[scope: engine function choose_largest_center, pinned v17/v18 engines]` *(v2.12.14, owner finding N1)* **`largest_center` breaks equal-degree ties by node ID.** The centre that fires is the first under the key $(-\deg,\ \text{node id})$, so when two or more valid centres have the same degree the choice depends on node labels and the branch is not relabelling-covariant there (SG-14). Fixture: $K_{2,3}$ at $N=24$, $k=1$, centres of equal degree 3 with tokens 1 and 2 — exchanging the two centre labels changes which centre fires under `largest_center`, while `all_centers` and `bound_symmetric` are equivariant (`evidence/tdrg/disposition/multistar_fixture.py`, output `fe3928a4…`). The `largest_center` results of §§6.6–6.7 and §1 are kept with this scope note, not rerun (`EV-NOT-RERUN`); the canonical branch is unaffected (`bound_symmetric` binds multistars).
 
 `[HEUR strong]` **Avalanche branch** (`all_centers`): Few birth steps, many births per event, cap-limited in many runs. Typical $b/\text{step} \approx 16$–$25$.
 
@@ -658,7 +676,7 @@ Caveat: `all_centers` often cap-limited; ordering is cap-protocol dependent.
 
 `[NUM]` **largest_center inflation.** Under `largest_center` at high $k/N$, the late-window birth fraction approaches unity: $rN_{\rm late\_birth} = 0.9995$ at $N=90, k=8$. This is the first certified continuous-inflation signature in the campaign — almost every late step produces a birth.
 
-`[ALG/NUM]` **Multistar expansion character (ms_bpe).**
+**Multistar expansion character (ms_bpe)** (`[ALG]` for `largest_center`, definitional; `[NUM]` for `all_centers`).
 - `largest_center`: $ms_{\rm bpe} = 1.00$ exactly — one birth per multistar event (definitional).
 - `all_centers`: $ms_{\rm bpe} \approx 33.91$ at $N=60, k=4$ — all valid centers fire simultaneously on the frozen pre-update snapshot.
 
@@ -683,7 +701,7 @@ Summary: $k/N$ selects entry into the growth branch; the multistar interaction a
 
 ### §6.8 N-Scaling Results `[NUM strong]` {#sec-6-8-nscaling}
 
-> **[Local guard SG-6 applies]** All claims are finite-horizon (canonical scan currently N = 120–1440, T=5000, with high-N asymptotic claims separately guarded).
+> **[Local guard SG-6 applies]** All claims are finite-horizon (canonical scan currently N = 120–1440, T=5000, with high-N asymptotic claims separately guarded; the v18-orientation scope of §6.6 applies).
 
 `[NUM strong]` **Full N-scaling table** (fixed $k/N = 0.0667$, $T=5000$):
 
@@ -705,7 +723,7 @@ Summary: $k/N$ selects entry into the growth branch; the multistar interaction a
 
 `[NUM strong]` **Tail suppression with rare locking failure.** High-growth tails are strongly suppressed with increasing $N$. The pooled $N=720$ campaign (batch=200) shows $p_{>100}=0.035$ and $p_{>500}=0.005$ driven by one locking-failure run (r43). The correct reading is bulk suppression plus rare locking-failure events; $N=720$ does not have zero tail probability. Legacy batch-20 controls at N=718 and N=722 showed no >500 tails but were weakly constrained (binomial CI upper 0.168). The v17 batch-100 campaign supersedes this: N=722 has one matching locking-failure tail (1/100), while N=718 remains clean (0/100). N=722 is therefore no longer a clean arithmetic control; it is a stochastic-neighborhood tail witness. N=718 and N=840 remain the clean controls.
 
-`[HEUR strong]` **Bulk-conditioned N-scaling** (v4 motif analysis, $k/N=1/15$, $T=5000$, $t \geq 4001$, $M \leq 500$):
+`[NUM]` `[scope: full-range fits; composite exponents are window-dependent — §1, §2 TDR-24A/B]` **Bulk-conditioned N-scaling** (v4 motif analysis, $k/N=1/15$, $T=5000$, $t \geq 4001$, $M \leq 500$):
 
 | Observable | Fit (v17/v6 canonical) | $R^2$ |
 |---|---|---:|
@@ -720,11 +738,11 @@ Summary: $k/N$ selects entry into the growth branch; the multistar interaction a
 
 (Supersedes the v4 6-point fit, $N=120$–$1080$. The v17/v6 scan spans $N=120$–$1440$. The low $R^2$ on $\psi_{\rm slot}^{\rm bulk}$ reflects that it is nearly N-flat — there is little variance for the power law to explain, which is the point: $\psi$ is intensive.)
 
-`[NUM strong]` [scope: fitted exponent consistency] $1.593 \approx 0.757 + 0.836$; $0.869 \approx 1.593 - 0.723$. These are consistency checks on independently fitted exponents, **not** algebraic identities: they would be exact only if the power-law ansatz were perfect. The agreement to three decimals confirms the power-law form fits all observables simultaneously; residuals are consistent with fit uncertainty.
+`[NUM]` [scope: full-range fits] $0.869 \approx 1.593 - 0.723$ reflects the exact factorization $B/\text{step}=O/\text{step}\cdot C_{\rm birth}$ (§6.4) read on fitted exponents; it does not confirm a power-law form, and the composite exponents drift with the fit window. `[COR]` *(v2.12.14)* The former companion check $1.593\approx0.757+0.836$ used the $\chi$ exponent $+0.836$ superseded in v2.12.1 (§2 TDR-24B) and is withdrawn; no replacement sum is promoted.
 
-`[ALG / NUM strong]` **Slot-volume model (verified).** $O_t = (2k+1) M_t \psi_t$ holds by construction. The v6 extractor confirms across the canonical scan:
+**Slot-volume model (verified).** `[ALG]` $O_t = (2k+1) M_t \psi_t$ holds by construction. `[NUM strong]` The v6 extractor confirms across the canonical scan:
 $$O_{\rm slot}^{\rm bulk}/\text{step} \approx 53.69 \cdot N^{+0.709}\ (R^2=0.976), \qquad \psi_{\rm slot}^{\rm bulk} \approx 0.00204 \cdot N^{+0.014}\ (R^2=0.015).$$
-$\psi_{\rm slot}^{\rm bulk}$ is effectively intensive (scale-invariant $\approx 0.002$). Therefore the positive scaling $O_{\rm bulk}/\text{step} \sim N^{+0.723}$ is explained by slot-volume growth, not by the rejected $M^2$ pair model. The identity residual $\epsilon_{\rm slot}$ is machine-small in all valid v17 logs. **OPEN TDR-24D is structurally closed** `[ALG / NUM strong]`; the analytic reason $\psi$ is intensive is routed to OPEN TDR-24F.
+$\psi_{\rm slot}^{\rm bulk}$ is effectively intensive (scale-invariant $\approx 0.002$). Therefore the positive scaling $O_{\rm bulk}/\text{step} \sim N^{+0.723}$ is explained by slot-volume growth, not by the rejected $M^2$ pair model. The identity residual $\epsilon_{\rm slot}$ is machine-small in all valid v17 logs. **OPEN TDR-24D is structurally closed** (`[ALG]` identity; `[NUM strong]` intensiveness); the analytic reason $\psi$ is intensive is routed to OPEN TDR-24F.
 
 Consistency: $O_{\rm slot}$ exponent $0.709 + \psi$ exponent $0.014 = 0.723 = O_{\rm bulk}/\text{step}$ exponent ✓.
 
@@ -747,9 +765,9 @@ Rejected arithmetic explanations (all `[FAIL]`):
 - 7-divisibility: $N=840$ ($7 \mid N$) is clean.
 - Deterministic instability: bulk phase is stable; matching tails at both N=720 and N=722 are rare stochastic events.
 
-### §6.10 Multistar Locking Mechanism `[NUM / mixed]` {#sec-6-10-mechanism}
+### §6.10 Multistar Locking Mechanism `[NUM]` — mixed content {#sec-6-10-mechanism}
 
-`[NUM / ALG structure]` In long-horizon `bound_symmetric` runs:
+`[NUM]` In long-horizon `bound_symmetric` runs:
 - $ms_{\rm seen} \approx T$ — roughly one multistar bound state per step.
 - Top components at $T=10000$ are large multistars ($20$–$50$ centers); no clean single-center stars in top 5.
 
@@ -797,17 +815,17 @@ Rejected arithmetic explanations (all `[FAIL]`):
 - `leaf_model_err` :: residual for the structural-to-slot closure model (TDR-24F)
 - `V_pair_load` :: multistar embedding/load diagnostic ($\texttt{occ\_multistar\_pairs}/\texttt{occ\_clean\_pairs}$); may exceed 1, **not a fraction**
 
-### §6.12 Three-Node Universe and BIND3 Certification `[ALG / NUM strong]` {#sec-6-12-threenode} *(new in v2.12)*
+### §6.12 Three-Node Universe and BIND3 Certification `[ALG]` — mixed content (exact lemma and enumerations; numerical suites) {#sec-6-12-threenode} *(new in v2.12)*
 
-> **[SG-11, SG-12, SG-13 apply.]** All results in this section are scoped to the three-node, no-birth universe under `bound_symmetric` with canonical v18 conventions (CONV-TICK, CONV-P3CYC) unless stated otherwise.
+> **[SG-11, SG-12, SG-13 apply.]** All results in this section are scoped to the three-node, no-birth universe under `bound_symmetric` with canonical v18 conventions (CONV-TICK, CONV-P3CYC) unless stated otherwise. **(v2.12.14)** The enumerations and suites were run with the v18 path orientation (label-dependent at $S=0\wedge E\equiv N/2$; replaced by TDRG-DEF-ORIENT): their numbers carry `[conv: v18 path orientation]` and are not rerun (`EV-NOT-RERUN`; census bound in the orientation-covariance block at the end of this section). LEM-SPECCONS is unaffected (ties act as identity).
 
-`[ALG]` `[NUM: 3000 random ICs × 500 steps, zero violations]` `[scope: 3 nodes, no star blow-up]` **LEM-SPECCONS — conservation of the relational advance spectrum.** Define pairwise advances $d_{AB}=\delta_A-\delta_B$, $d_{BC}=\delta_B-\delta_C$, $d_{CA}=\delta_C-\delta_A$, with $d_{AB}+d_{BC}+d_{CA}\equiv0\pmod N$. Free advance leaves $\delta$ unchanged; the antipodal swap acts on the difference triple as a signed transposition; the $P_3$ successor-shift acts as a cyclic permutation; balanced ties act as identity. Every event is therefore a signed permutation of the difference triple, and the multiset
+`[ALG]` `[NUM: 3000 random ICs × 500 steps, zero violations]` `[scope: 3 nodes, no star blow-up]` [RID: TDRG-ALG-LEM-SPECCONS] **LEM-SPECCONS — conservation of the relational advance spectrum.** Define pairwise advances $d_{AB}=\delta_A-\delta_B$, $d_{BC}=\delta_B-\delta_C$, $d_{CA}=\delta_C-\delta_A$, with $d_{AB}+d_{BC}+d_{CA}\equiv0\pmod N$. Free advance leaves $\delta$ unchanged; the antipodal swap acts on the difference triple as a signed transposition; the $P_3$ successor-shift acts as a cyclic permutation; balanced ties act as identity. Every event is therefore a signed permutation of the difference triple, and the multiset
 $$\{|d_{AB}|_c,\ |d_{BC}|_c,\ |d_{CA}|_c\}$$
-is **exactly conserved** — equivalently, the multiset of orbit-lattice spacings $\{\gcd(d_{ij},N)\}$ is conserved. Geometric reading (`[INTERP]`): the three-node universe has a conserved stock of pairwise orbit-lattice spacings on $C_N$; events reassign lattices to pairs, never create, destroy, or rescale them. **Generalization:** $n$-node signed-permutation invariance is conjectured for swap/path-cycle sectors; **star blow-up creates a new node and new pairwise advances and is `[OPEN]` (SG-12)**.
+is **exactly conserved** — therefore, in particular, the multiset of orbit-lattice spacings $\{\gcd(d_{ij},N)\}$ is conserved *(v2.12.14 `[COR]`: the converse fails — at $N=24$, $|d|_c=1$ and $|d|_c=5$ share $\gcd=1$)*. Under TDRG-DEF-ORIENT (v2.12.14) the extended balanced tie also acts as identity, so the lemma holds unchanged. Geometric reading (`[INTERP]`): the three-node universe has a conserved stock of pairwise orbit-lattice spacings on $C_N$; events reassign lattices to pairs, never create, destroy, or rescale them. **Generalization:** $n$-node signed-permutation invariance is conjectured for swap/path-cycle sectors; **star blow-up creates a new node and new pairwise advances and is `[OPEN]` (SG-12)**.
 
-`[ALG/NUM strong]` `[scope: $N=24$, $k=1$, post-advance BIND3 ICs, exact cycle enumeration, 3456 ICs, both $P_3$ conventions]` **BIND3-CYCLE-N24K1 — exact certification.** Exact finite-state cycle enumeration replaces all prior horizon-based BIND3 classifications (which are superseded as windowing-contaminated). A two-node period-2 dyad is **not a persistent primitive** in the three-node universe. Exact class taxonomy: multi-pair recurrent scattering cycles **96.4%**; pure AB-bound cycles **3.6%**; free and single-pair-partial cycles **0%**. Bond transfer occurs inside the exact cycle of **81.8%** of ICs. Cycle structure: median preperiod 0 (max 830); median period 138, max 1638, 79 distinct lengths (dominant: 15, 48, 357, 396, 228, 1638). $K_3$ fully defective components: **0** across all periods, consistent with narrow-band exclusion ($k<N/6$). The coarse class taxonomy is identical under both $P_3$ rotation conventions (3332/124 in each); trajectory-level outcomes are convention-sensitive, hence CONV-P3CYC.
+`[ALG]` `[scope: $N=24$, $k=1$, post-advance BIND3 ICs, exact cycle enumeration, 3456 ICs, both $P_3$ conventions]` `[conv: v18 path orientation]` [RID: TDRG-ALG-BIND3-CYCLE-N24K1] **BIND3-CYCLE-N24K1 — exact certification.** Exact finite-state cycle enumeration replaces all prior horizon-based BIND3 classifications (which are superseded as windowing-contaminated). A two-node period-2 dyad is **not a persistent primitive** in the three-node universe. Exact class taxonomy: multi-pair recurrent scattering cycles **96.4%**; pure AB-bound cycles **3.6%**; free and single-pair-partial cycles **0%**. Bond transfer occurs inside the exact cycle of **81.8%** of ICs. Cycle structure: median preperiod 0 (max 830); median period 138, max 1638, 79 distinct lengths (dominant: 15, 48, 357, 396, 228, 1638). $K_3$ fully defective components: **0** across all periods, consistent with narrow-band exclusion ($k<N/6$). The coarse class taxonomy is identical under both $P_3$ rotation conventions (3332/124 in each); trajectory-level outcomes are convention-sensitive, hence CONV-P3CYC.
 
-`[ALG/NUM strong]` `[scope: $N=24$, $k=1$]` **d-resolved anatomy — primary retrigger-entry family plus supplementary one-pass family.**
+`[ALG]` `[scope: $N=24$, $k=1$]` `[conv: v18 path orientation]` **d-resolved anatomy — primary retrigger-entry family plus supplementary one-pass family.**
 
 | $d$ | $\gcd(d,N)$ | $|d|_c$ | ICs | pure AB % | scatter % | transfer % | $\langle f_{AB}\rangle$ | $\langle f_{AC/BC}\rangle$ |
 |---|---|---|---|---|---|---|---|---|
@@ -817,32 +835,90 @@ is **exactly conserved** — equivalently, the multiset of orbit-lattice spacing
 | ±4 | 4 | 4 | 1728×2 | 0.0 | 100.0 | 90.0 | 0.155 | 0.130 |
 | ±5 | 1 | 5 | 1728×2 | 0.0 | 100.0 | 97.6 | 0.139 | 0.131 |
 
-Rows $|d|_c\le2$ are retrigger-entry ICs (totaling the 3456 of the headline certification); $|d|_c\ge3$ are one-pass supplementary ICs (10368). **The 96.4% / 3.6% BIND3-CYCLE headline percentages refer only to the $|d|_c\le2$ retrigger-entry family. Rows $|d|_c\ge3$ are the supplementary regeneration-control family and must not be pooled into the headline taxonomy.** Exact $\pm d$ mirror symmetry holds in both families (relabeling-covariance check: PASS).
+Rows $|d|_c\le2$ are retrigger-entry ICs (totaling the 3456 of the headline certification); $|d|_c\ge3$ are one-pass supplementary ICs (10368). **The 96.4% / 3.6% BIND3-CYCLE headline percentages refer only to the $|d|_c\le2$ retrigger-entry family. Rows $|d|_c\ge3$ are the supplementary regeneration-control family and must not be pooled into the headline taxonomy.** Exact $\pm d$ mirror symmetry of the class inventory holds in both families (mirror-inventory check: PASS). *(v2.12.14 `[COR]`: this is not node-relabelling covariance (SG-14), and the step itself is not mirror-equivariant at $P_3$ events — TDRG-ALG-MIRROR-NOT-STEP-SYMMETRY, below.)*
 
-`[NUM strong]` `[scope: $N=24$, $k\in\{1,2\}$, exhaustive over retrigger ICs]` **BIND3-PARITY** *(replaces BIND3-KNIFE, which is `[FAIL]` `[REPLACED]` — see Appendix B)*. Pure-bound survival is controlled by **even/odd parity of the relative advance $d$, not by marginality** of the two-node retrigger band. At $k=2$: odd classes $d=\pm1,\pm3$ have **zero** survivors (0/6912); even classes $d=\pm2$ (deep, 4.3%) and $d=\pm4$ (marginal, 5.2%) both survive. Mechanism (`[ALG]` necessity, $N=24$): while the dyad executes its period-2 cycle, a spectator's relative phase advances by $2\delta_C-d$ per two ticks; for odd $d$ this step is odd, so $\gcd(2\delta_C-d,24)\in\{1,3\}$ and no coset can avoid a $(2k+1)$-point antipodal arc — spectator avoidance is arithmetically impossible. For even $d$, co-moving ($\delta_C=d/2$, exactly or antipodally shifted — the largest survivor classes) and wide-sublattice (spacing $\ge4$) spectator frames exist; all observed survivor token classes satisfy the coset-avoidance condition (zero inconsistencies). Full $(N,k,d)$ sufficiency characterization: OPEN-BIND3-PARITY-GEN.
+`[NUM strong]` `[scope: $N=24$, $k\in\{1,2\}$, exhaustive over retrigger ICs]` [RID: TDRG-NUM-BIND3-PARITY] **BIND3-PARITY** *(replaces BIND3-KNIFE, which is `[FAIL]` `[REPLACED]` — see Appendix B)*. Pure-bound survival is controlled by **even/odd parity of the relative advance $d$, not by marginality** of the two-node retrigger band. At $k=2$: odd classes $d=\pm1,\pm3$ have **zero** survivors (0/6912); even classes $d=\pm2$ (deep, 4.3%) and $d=\pm4$ (marginal, 5.2%) both survive. Mechanism (`[ALG]` necessity, $N=24$): while the dyad executes its period-2 cycle, a spectator's relative phase advances by $2\delta_C-d$ per two ticks; for odd $d$ this step is odd, so $\gcd(2\delta_C-d,24)\in\{1,3\}$ and no coset can avoid a $(2k+1)$-point antipodal arc — spectator avoidance is arithmetically impossible. For even $d$, co-moving ($\delta_C=d/2$, exactly or antipodally shifted — the largest survivor classes) and wide-sublattice (spacing $\ge4$) spectator frames exist; all observed survivor token classes satisfy the coset-avoidance condition (zero inconsistencies). Full $(N,k,d)$ sufficiency characterization: OPEN-BIND3-PARITY-GEN.
 
-`[NUM strong]` `[scope: $N=24$, $k=1$, 9216 ICs, no-birth]` **BIND3-SPECTRAL-GATE.** If every spacing in the conserved advance spectrum satisfies $|d_{ij}|_c>2k$, then **no pair exhibits autonomous two-node retrigger episodes at any time** (0 violations across 4352 all-above-threshold ICs in 27 spectrum classes; detector sanity: 1906 retrigger episodes observed in below-threshold ICs). Confirms the LEM-SPECCONS consequence: no-birth three-node dynamics can reassign but not create autonomous-retrigger-compatible spacings. The gate forbids autonomous period-2 retrigger only, **not transient in-band occupancy** (SG-13).
+`[NUM strong]` `[scope: $N=24$, $k=1$, 9216 ICs, no-birth]` [RID: TDRG-NUM-BIND3-SPECTRAL-GATE] **BIND3-SPECTRAL-GATE.** If every spacing in the conserved advance spectrum satisfies $|d_{ij}|_c>2k$, then **no pair exhibits autonomous two-node retrigger episodes at any time** (0 violations across 4352 all-above-threshold ICs in 27 spectrum classes; detector sanity: 1906 retrigger episodes observed in below-threshold ICs). Confirms the LEM-SPECCONS consequence: no-birth three-node dynamics can reassign but not create autonomous-retrigger-compatible spacings. The gate forbids autonomous period-2 retrigger only, **not transient in-band occupancy** (SG-13).
 
-`[COR]` **BIND3-MEMORY correction + `[NUM strong]` BIND3-MEMORY-PARITY** `[scope: $N=24$, $k=1$, even-advance initial bonds]`. The prior unstratified claim (initially bound families retain memory-biased occupancy, $\langle f_{AB}\rangle\approx0.30$ vs $\approx0.15$) was **composition-mixed**. Stratified by conserved-spectrum class: odd-advance initial bonds show **no** genuine bias (e.g. class $(1,2,3)$: $f_{AB}=0.154$ vs $f_{\rm other}=0.154$; matches non-binding-entry control) — the odd-sector memory claim is a composition artifact. Even-advance initial bonds retain a **strong, genuine** residence-time bias within fixed spectrum classes (e.g. $(2,2,4)$: 0.306 vs control 0.183; $(2,3,5)$: 0.382 vs 0.134; $(2,5,7)$: 0.425 vs 0.126). Binding-history memory is an even-advance parity-sector effect — the same parity that controls pure-bound survival (BIND3-PARITY) confers partial occupancy protection on the non-surviving even-$d$ majority. Control: non-binding-entry ICs relax toward near-equipartition ($f_{AB}\approx f_{AC/BC}\approx0.13$–$0.15$). *(The earlier equipartition candidate BIND3-EQUIP is `[FAIL]` — Appendix B.)*
+`[COR]` **BIND3-MEMORY correction + `[NUM strong]` BIND3-MEMORY-PARITY** [RID: TDRG-NUM-BIND3-MEMORY-PARITY] `[scope: $N=24$, $k=1$, even-advance initial bonds]`. The prior unstratified claim (initially bound families retain memory-biased occupancy, $\langle f_{AB}\rangle\approx0.30$ vs $\approx0.15$) was **composition-mixed**. Stratified by conserved-spectrum class: odd-advance initial bonds show **no** genuine bias (e.g. class $(1,2,3)$: $f_{AB}=0.154$ vs $f_{\rm other}=0.154$; matches non-binding-entry control) — the odd-sector memory claim is a composition artifact. Even-advance initial bonds retain a **strong, genuine** residence-time bias within fixed spectrum classes (e.g. $(2,2,4)$: 0.306 vs control 0.183; $(2,3,5)$: 0.382 vs 0.134; $(2,5,7)$: 0.425 vs 0.126). Binding-history memory is an even-advance parity-sector effect — the same parity that controls pure-bound survival (BIND3-PARITY) confers partial occupancy protection on the non-surviving even-$d$ majority. Control: non-binding-entry ICs relax toward near-equipartition ($f_{AB}\approx f_{AC/BC}\approx0.13$–$0.15$). *(The earlier equipartition candidate BIND3-EQUIP is `[FAIL]` — Appendix B.)*
 
-`[NUM strong]` `[scope: $N=24$, $k=1$]` **BIND3-XFER — bond transfer.** Transfer of the bonded pair appears inside the exact cycle of 81.8% of retrigger-entry ICs (and 90–98% of one-pass ICs): a third node inherits the resonant token relation through $P_3$ component dynamics. Transfer is the generic mechanism of the recurrent class, not a rare side channel. Under LEM-SPECCONS this is **spectrum reassignment**, never spacing creation. Structural ($P_3$-action-level) explanation: OPEN-BIND3-REGEN.
+`[NUM strong]` `[scope: $N=24$, $k=1$]` [RID: TDRG-NUM-BIND3-XFER] **BIND3-XFER — bond transfer.** Transfer of the bonded pair appears inside the exact cycle of 81.8% of retrigger-entry ICs (and 90–98% of one-pass ICs): a third node inherits the resonant token relation through $P_3$ component dynamics. Transfer is the generic mechanism of the recurrent class, not a rare side channel. Under LEM-SPECCONS this is **spectrum reassignment**, never spacing creation. Structural ($P_3$-action-level) explanation: OPEN-BIND3-REGEN.
 
-`[NUM strong]` `[scope: $N=24$, $k=1$]` **BIND3-REGEN — regeneration beyond the two-node threshold.** Initial pairs with $|d_{AB}|_c>2k$ cannot bind autonomously (LEM-RETRIG), yet three-node dynamics give pure-AB cycles 0.0%, transfer 95.2%, $\langle f_{AB}\rangle=0.146$: third-node $P_3$ token rotation regenerates band-reaching and retrigger-compatible pairs by reassigning the conserved spectrum. The LEM-RETRIG threshold bounds only pairwise-autonomous binding, not binding or in-band occupancy in $N\ge3$ systems (SG-11).
+`[NUM strong]` `[scope: $N=24$, $k=1$]` [RID: TDRG-NUM-BIND3-REGEN] **BIND3-REGEN — regeneration beyond the two-node threshold.** Initial pairs with $|d_{AB}|_c>2k$ cannot bind autonomously (LEM-RETRIG), yet three-node dynamics give pure-AB cycles 0.0%, transfer 95.2%, $\langle f_{AB}\rangle=0.146$: third-node $P_3$ token rotation regenerates band-reaching and retrigger-compatible pairs by reassigning the conserved spectrum. The LEM-RETRIG threshold bounds only pairwise-autonomous binding, not binding or in-band occupancy in $N\ge3$ systems (SG-11).
 
 **Synthesis** `[INTERP]`: The BIND3 layer is not governed by "bound survival versus dissolution." It is governed by a **conserved advance spectrum** whose **parity/lattice-avoidance structure** controls which pairs can autonomously retrigger (SPECTRAL-GATE), which spectators can avoid disruption (PARITY), and which initial bonds leave residence-time memory (MEMORY-PARITY).
+
+#### Orientation covariance at the antipodal-endpoint stratum *(v2.12.14)*
+
+`[ALG]` [RID: TDRG-ALG-ORIENT-ANTIPODAL-FIXTURE] `[scope: one explicit state; pinned v18 engine]` **The v2.12.13/v18 orientation is not relabelling-covariant.** $N=24$, $k=1$, $\theta_{\rm pre}=(0,11,12)$, $\delta=(0,1,12)$: after the advance $\theta=(0,12,0)$; the defect graph is the path $0$–$1$–$2$ with $S=0$ and $E=+12=N/2$ under both listings. Exchanging the endpoint labels changes the v18 outcome (it gives $\delta'=(1,12,0)$, which is not the relabelled image of the outcome in the other labelling); under TDRG-DEF-ORIENT the event is a balanced tie and the step is equivariant (the recorded G-alternative gives $\delta'=(12,0,1)$, also equivariant). Evidence: `evidence/tdrg/disposition/antipodal_fixture.txt` (`c47d78b9…`); checker `evidence/tdrg/scripts/check_tdrg_v2_12_14.py`, gate C10 (negative control).
+
+`[NUM]` [RID: TDRG-NUM-ORIENT-EQUIVARIANCE-N24] `[scope: N=24; three nodes exhaustive over the 331,776 gauge-reduced states (θ₀=δ₀=0) at k=1 and k=3, generators (01) and (12) of S₃; four nodes, 100,000 random (state, k∈{1,2,3}, permutation∈S₄) samples; bound_symmetric, and largest_center at four nodes; the pinned engine's own step_universe with only orient_path exchanged]` **Relabelling equivariance of the step.** Failures per generator: v18 72 / 72 at $k=1$ and 168 / 168 at $k=3$; TDRG-DEF-ORIENT 0; the G-alternative 0. Four nodes: v18 112 failures; TDRG-DEF-ORIENT and the G-alternative 0. Global phase shift: 0 failures in every variant (1/97 sample). Evidence: `evidence/tdrg/disposition/owner_relabel_equivariance_check.py` (`2f54e0fc…`), output `owner_relabel_equivariance_check_output.txt` (`a0b33690…`). A finite check, not a theorem for all $N$ or all policies.
+
+`[NUM]` `[scope: N=24, k=1, three nodes, the whole gauge-reduced state space; atlas independent check]` **Census bound for results computed under v18.** Under the v18 completion, 77 of 9,800 eventual cycles contain a listing-dependent event and 16,322 of 331,776 states (4.9 %) flow into such a cycle; under the extended tie the same universe has 9,789 eventual cycles, 66 of which contain a tie event on the stratum. Whether any of the 3,456 retrigger-entry or 10,368 one-pass BIND3 ICs reaches the stratum is not determined (the IC construction script is missing, §8). Source: `evidence/atlas/tdrg/atlas_tdrg_orientation_covariance_check.py` (`5684da96…`), results `atlas_tdrg_orientation_covariance_check.json` (`2d15b12f…`), rerun byte-identically by the owner session (owner disposition record claude01SKePJ, §5 (i)).
+
+`[NUM]` `[scope: NUMGEN DISC-2 ratified panel, 136 witnesses; atlas rerun of NUMGEN's audit verdict logic]` **DISC-2 witness effect.** 40 witnesses touch the stratum; under TDRG-DEF-ORIENT **20 of 136** records change verdict or class (for comparison: reverse completion 10, G-alternative 12); the ten admitted labels are unchanged; the 96 unexposed witnesses are unchanged by construction. DISC-1 and other panels are not covered; re-annotation is NUMGEN's.
+
+`[ALG]` [RID: TDRG-ALG-MIRROR-NOT-STEP-SYMMETRY] *(owner finding N2)* **The mirror is not a step symmetry.** Under $(\theta,\delta)\mapsto(-\theta,-\delta)$ every $\operatorname{signed\_defect\_error}$ on a defect edge changes sign, so away from ties the path orientation reverses; the successor shift along the reversed path sends $(-\delta_{v_1},-\delta_{v_2},-\delta_{v_3})\mapsto(-\delta_{v_3},-\delta_{v_1},-\delta_{v_2})$, which differs from the mirror image $(-\delta_{v_2},-\delta_{v_3},-\delta_{v_1})$ of the original update unless the three tokens are equal. `[NUM]` check: 2,661 failures among the 2,703 states with a $P_3$ event in 60,000 random three-node states ($N=24$, $k=1$; `evidence/tdrg/disposition/mirror_probe.py`, output `9f8bdf59…`). The $\pm d$ mirror identity of the BIND3 class inventories (above) is therefore an inventory statement, not equivariance of the dynamics.
 
 ---
 
 ## §7. Import Ledger {#sec-7-imports}
 
-TDR-G imports no scientific coefficients, tensors, interaction laws, or continuous-branch results under the cross-branch firewall (SG-10). All scientific claims in this document are native $\mathbb{Z}_N$ definitions, derivations, simulations, or diagnostics.
+TDR-G imports no scientific coefficients, tensors, interaction laws or continuous-branch results under the cross-branch firewall (SG-10). All scientific claims in this document are native $\mathbb{Z}_N$ definitions, derivations, simulations or diagnostics, with the one scoped import below. *(v2.12.14: four-way register — imports, consumers, pins, exports — with the states received / statement accepted / adopted use read from records, not from queue states.)*
 
-The following are referenced as context only, not imported as scientific claims:
+**Imports.**
 
-- `RTG_PROGRAMME_OVERVIEW_v1.1` — programme-level scope guards SG-PROG-1 through SG-PROG-4.
-- `RTG_ONTOLOGICAL_FOUNDATIONS_v0.6` — O0–O3 motivational layer. Motivates but does not derive TDR-G interaction laws.
+- `[ALG]` [import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §4.1 | RTG-OFN-ALG-STAR-TOKEN-SHIFT] **Common token shift and the star rule.** Under $B_c:\delta_i\mapsto\delta_i+c$, antipodal swaps, path successor shifts and ties commute with $B_c$ (they permute tokens); star blow-up (TDRG-DEF-STAR) commutes with $B_c$ iff $2c\equiv0 \pmod N$, because the centre goes to $-\delta_A-c$ instead of $-\delta_A+c$. State: **statement accepted** (owner dispositions, 27 Oct 2026; checked as one-line algebra on TDRG-DEF-STAR and against the engine function `blow_up_star_with_snapshot`, `EV-CODE`). Use: SG-14 (the token shift lies outside $G_{\rm cov}$). Custody transfer XFER-O08-01: **deferred** to v2.13 (the RID stays OFN's). OFN REQ-O09-05 is answered by TDRG-DEF-ORIENT (endpoint policy) and this entry.
+- Context only (not imported): Programme Overview v1.3 SG-PROG-1–SG-PROG-4; OFN v0.10 O0–O3 motivational layer (motivates, does not derive, TDR-G interaction laws). If a bridge theorem with the continuous programme is established (OPEN-P1), the imported claims are registered here at that time.
 
-If a bridge theorem between TDR-G and the continuous programme is ever established (OPEN-P1), the relevant imported claims must be registered here at that time.
+**Consumers** (from the consumers' own records; adopted use is read only from a consumer's Import Ledger or release record):
+
+| Consumer (edition) | What it uses | State at v2.12.14 | Effect of v2.12.14 |
+|---|---|---|---|
+| NUMGEN v1.21 (`numgen-v1.21`) | state, recurrence and v18 event conventions for DISC-1/DISC-2 ("RID unavailable" imports); request `pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md` | received; request dispositioned (accept) | TDRG-DEF-ORIENT ruling; DISC-2 effect 20 of 136 records (§6.12); RIDs available; the C7C-M4 release is NUMGEN's |
+| OFN v0.10 (`ofn-v0.10`) | IMP-O08-02 to IMP-O08-16 (state, band, holonomy, narrow-band exclusion, recurrence, star, CONV-TICK, CONV-P3CYC, four lemmas); Finding A offered under XFER-O08-01; REQ-O09-05 | Finding A: statement accepted, custody deferred | owner RIDs below replace "RID unavailable"; REQ-O09-05 answered |
+| AZ v0.6 (`az-v0.6`) | Threads B/C: state (`TDRG-ZN-STATE`), LEM-REACH, LEM-RETRIG, LEM-SPECCONS | reference | `TDRG-ZN-STATE` resolves (map below); narrow-band exclusion cites `AZ-ALG-ANTIPODAL-LOWORDER` (§6.2) |
+| Genesis (Programme IF25) | `TDRG-EXPORT-POLICY-PHASE` | blocked (below) | none |
+
+Notices to NUMGEN, OFN and AZ are filed in their inboxes after the tag.
+
+**Pins.** Governing editions at this release: Programme Overview v1.3, OFN v0.10, DSN Methodology v1.4 (this edition still declares v1.2; the migration is v2.13). Claim-specific historical pins (OFN v0.6/v0.7 at §2 TDR-1/TDR-19 and LEM-NOANNIHIL; Programme v1.1 in earlier entries) stay as written: they record what the claim was stated against.
+
+**Owner RID map** (v2.12.14). RID names carry the category of the statement at registration (Methodology v1.4 §4.2); the names in the last column were used by consumers or the atlas before registration, resolve to the owner RID, and are not separate claims.
+
+| Owner RID | Statement | Location | Names in use elsewhere |
+|---|---|---|---|
+| TDRG-DEF-ZN-STATE | phase universe; variable-size state | §6.1 | `TDRG-ZN-STATE` (AZ); OFN IMP-O08-02 |
+| TDRG-DEF-PHYSICAL-STATE | quotient by global phase; $\Delta_{ij}$ | §6.1 | OFN IMP-O08-02 |
+| TDRG-DEF-REL-ADVANCE | relative advance $d_{ij}$ | §6.1 | OFN IMP-O08-02 |
+| TDRG-DEF-KINEMATICS | free kinematic evolution | §6.1 | — |
+| TDRG-DEF-BAND | defect band $\mathcal D_k$ | §6.1 | OFN IMP-O08-03 |
+| TDRG-DEF-EDGE-SET | defect edge set $E_{\rm def}$ | §6.1 | — |
+| TDRG-DEF-NARROW-BAND | narrow-band condition $k<N/6$ | §6.1 | — |
+| TDRG-THM-HOLONOMY | holonomy identity | §6.2 | OFN IMP-O08-04 |
+| TDRG-THM-NARROW-BAND-EXCLUSION | no fully defective $K_3$ under $k<N/6$ | §6.2 | OFN IMP-O08-04B |
+| TDRG-THM-RECURRENCE | finite-state recurrence | §6.2 | OFN IMP-O08-08; NUMGEN DISC |
+| TDRG-DEF-CONV-TICK | step semantics | §6.3 | `CONV-TICK` (OFN IMP-O08-14) |
+| TDRG-DEF-SWAP | antipodal swap | §6.3 | atlas `TDRG-SWAP` |
+| TDRG-DEF-CONV-P3CYC | path successor shift | §6.3 | `CONV-P3CYC` (OFN IMP-O08-15) |
+| TDRG-DEF-SIGNED-CENTERED, TDRG-DEF-SIGNED-DEFECT-ERROR | conventions of the orientation rule | §6.3 | — |
+| TDRG-DEF-ORIENT | path orientation rule (v2.12.14) | §6.3 | `TDRG-ORIENT` (NUMGEN request; atlas) |
+| TDRG-ALG-ORIENT-NOGO | no orientation from $(S,E)$ on the stratum | §6.3 | — |
+| TDRG-DEF-CYCLE-BOUND | cycle bound states | §6.3 | atlas `TDRG-CYCLE` |
+| TDRG-DEF-STAR | star blow-up | §6.3 | OFN IMP-O08-09 |
+| TDRG-DEF-MULTISTAR | multistar and the policy fork | §6.3 | atlas `TDRG-MULTISTAR` |
+| TDRG-DEF-CANONICAL-BRANCH | `bound_symmetric` | §6.3 | — |
+| TDRG-THM-REACHABILITY-K0 | reachability at $k=0$ | §6.5 | — |
+| TDRG-ALG-LEM-REACH, TDRG-ALG-LEM-NOANNIHIL, TDRG-ALG-LEM-RETRIG | two-node lemmas | §6.5 | `LEM-REACH`, `LEM-NOANNIHIL`, `LEM-RETRIG` (OFN IMP-O08-05/06/07; AZ) |
+| TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK | `largest_center` ID tie-break (N1) | §6.6 | — |
+| TDRG-ALG-LEM-SPECCONS | advance-spectrum conservation | §6.12 | `LEM-SPECCONS` (OFN IMP-O08-16; AZ) |
+| TDRG-ALG-BIND3-CYCLE-N24K1 | exact cycle enumeration | §6.12 | `BIND3-CYCLE-N24K1` |
+| TDRG-NUM-BIND3-PARITY, -SPECTRAL-GATE, -MEMORY-PARITY, -XFER, -REGEN | BIND3 results | §6.12 | `BIND3-*` |
+| TDRG-ALG-ORIENT-ANTIPODAL-FIXTURE, TDRG-NUM-ORIENT-EQUIVARIANCE-N24, TDRG-ALG-MIRROR-NOT-STEP-SYMMETRY | orientation covariance | §6.12 | — |
+| TDRG-ART-SESSION-SCRIPTS, TDRG-ART-ORIENT-V2-12-14, TDRG-ART-ORIENT-COVARIANCE-CHECKS | artifacts | §8 | — |
+
+**Exports.**
 
 ### Bridge-required export candidates
 
@@ -855,16 +931,22 @@ These are not active exports. All are blocked until a named bridge theorem exist
 
 ## §8. Artifact and Script Registry {#sec-8-artifacts}
 
-- [RID: TDRG-ART-GENESIS-MC] :: `genesis_mode_b_mc.py` :: Three-policy Monte Carlo engine; CLI support via `argparse`; supports `--policy`, `--N`, `--k`, `--grid-N`, `--ratios`, `--T`, `--batch`, `--max-nodes`, `--seed`, `--audit-trials`, `--motif-log`, `--motif-stride` :: `[ENG]` canonical v17+
-- [RID: TDRG-ART-MOTIF-V6] :: `tdr_motif_bootstrap_v6.py` :: **Current canonical** motif analysis script; bulk/tail split, multi-threshold $p_{\rm tail}$, slot-volume extraction ($O_{\rm slot}$, $\psi_{\rm slot}$, $\epsilon_{\rm slot}$), structural metrics ($\bar{c}_{\rm struct}$, $q_{\rm proj}$), per-run CSV, DSN patch output :: `[ENG]` current canonical
-- [RID: TDRG-ART-MOTIF-V4] :: `tdr_motif_bootstrap_v4.py` :: Superseded by v6; produced the 6-point $N^{-0.876}$ fit :: `[ENG]` archived
-- [RID: TDRG-ART-MOTIF-V17-DATA] :: v17 motif log corpus / per-run CSVs :: **Current canonical** source data for TDR-24D/F, extended N-scaling ($N=120$–$1440$), and N=720/722 tail diagnosis :: `[ENG]` archive-manifest required
-- [RID: TDRG-ART-MOTIF-V16-DATA] :: v16 motif log corpus :: Archive-valid for TDR-24 factorization and earlier v4 scaling; superseded for canonical v17/v6 scaling :: `[ENG]` archived
-- [RID: TDRG-ART-GENESIS-MC-V18] :: `genesis_mode_b_mc_v18.py` :: **Convention ground truth for v2.12** — CONV-TICK conformance audit (PASS) and CONV-P3CYC successor-shift identification read directly from source :: `[ENG]` canonical v18
-- [RID: TDRG-ART-KINEMATIC-CERTS] :: genesis-layer lemma certificates :: exhaustive finite verification of LEM-REACH (orbit=coset; antipode-gcd; band form; 77{,}552 band cases, even $N\le40$), LEM-NOANNIHIL ($N=2$–$40$, all states), LEM-RETRIG (retrigger set identity, $|d|_c\le2k$ threshold, all-bind-iff-$d{=}0$), first-return period $t^*=N/\gcd(d,N)$ — all zero failures :: `[ALG/NUM]` session-certified; consolidate into `tdrg_kinematic_certs.py` for repository
-- [RID: TDRG-ART-SPECCONS] :: LEM-SPECCONS verification :: signed-permutation argument + 3000 random ICs × 500 steps, zero violations for both the gcd-spacing and $|d|_c$ multisets :: `[ALG/NUM]` session-certified; consolidate with kinematic certs
-- [RID: TDRG-ART-BIND3-N24K1] :: BIND3-CYCLE-N24K1 exact enumeration :: 3456 post-advance ICs, full cycle resolution, both $P_3$ conventions; class taxonomy, d-resolved anatomy, transfer prevalence, period spectrum, $K_3=0$ consistency :: `[ALG/NUM strong]` session-certified; consolidate into `bind3_cycle_n24k1.py`
-- [RID: TDRG-ART-BIND3-SUITE] :: NKSCAN falsification suite :: $k=2$ parity test (exhaustive retrigger ICs, $d=\pm1..\pm4$), spectral-gate test (9216 ICs, spectrum-stratified, detector-sane), memory stratification (Family-1 vs Family-2 within fixed spectrum classes) :: `[NUM strong]` session-certified; consolidate into `bind3_nkscan_suite.py`
+Custody states (Methodology v1.4 §12): **placed** — in the repository, path and SHA-256; **replayed** — an output reproduced byte-for-byte from a placed input; **held** — outside the repository with SHA-256 recorded; **missing** — no original located. Held files are never reconstructed; a re-derivation is an independent contribution, not a recovery. *(v2.12.14 register; hash check `records/tdrg/TDRG_UPLOAD_HASH_CHECK_20261027.md`.)*
+
+- [RID: TDRG-ART-GENESIS-MC] :: `genesis_mode_b_mc.py` — the engine that produced the v17 motif corpus (header label "v15.3"; "v17" is the data-campaign label of the 258-field motif schema) :: three-policy Monte Carlo engine; `argparse` CLI (`--policy`, `--N`, `--k`, `--grid-N`, `--ratios`, `--T`, `--batch`, `--max-nodes`, `--seed`, `--audit-trials`, `--motif-log`, `--motif-stride`) :: `[ENG]` **placed** `upload/tdrg-records/genesis_mode_b_mc.py`, SHA-256 `4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608`; **replayed** for two v17 files (`motif_TEST_N120_k8_T1200_b3_v17.csv`, `de0f3e42…`; canonical-scan `motif_N120_k08_T5000_b20_v17.csv`, `7ef343b0…`; `evidence/tdrg/disposition/engine_replay_log.txt`); schema-consistent, not replayed, for the other placed v17 files; the held v17 files cannot be replayed here.
+- [RID: TDRG-ART-GENESIS-MC-V18] :: `genesis_mode_b_mc_v18.py` :: convention ground truth for v2.12 (CONV-TICK audit, CONV-P3CYC); differs from TDRG-ART-GENESIS-MC only by dense-birth-window logging (same `step_universe`, `orient_path` and event rules) :: `[ENG]` **placed** `upload/tdrg-records/genesis_mode_b_mc_v18.py`, SHA-256 `9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e` (byte-equal to the copy on `upload/numgen-records`). Its `orient_path` is the superseded completion (§6.3); the engine is not patched in v2.12.14 — the amended rule's reference implementation is TDRG-ART-ORIENT-V2-12-14.
+- [RID: TDRG-ART-MOTIF-V6] :: `tdr_motif_bootstrap_v6.py` :: current canonical motif analysis script (bulk/tail split, multi-threshold $p_{\rm tail}$, slot-volume and structural metrics, per-run CSV, DSN patch output) :: `[ENG]` **placed** `upload/tdrg-records/tdr_motif_bootstrap_v6.py`, `3ebf064d…`; its per-run CSV and DSN-patch outputs are **missing** (not identified in any upload).
+- [RID: TDRG-ART-MOTIF-V4] :: `tdr_motif_bootstrap_v4.py` :: superseded by v6; produced the 6-point $N^{-0.876}$ fit :: `[ENG]` archived; **placed** `upload/tdrg-records/tdr_motif_bootstrap_v4.py`, `86e77511…` (v1–v3, v5 and `tdr_motif_analysis*.py` are placed beside it).
+- [RID: TDRG-ART-MOTIF-V17-DATA] :: v17 motif log corpus :: current canonical source data for TDR-24D/F, the extended N-scaling ($N=120$–$1440$) and the N=720/722 tail diagnosis :: `[ENG]` partly **placed** (`upload/tdrg-records/`: N=120, 240, 480, 1080 at b20; N=718 and N=840 `bound_symmetric` as zip archives; TESTGRID and TEST files), partly **held** with SHA-256 in `upload/tdrg-records/SHA256SUMS_tdrg_held.txt`: N=1200 and 1440 (b50); N=720, 722, 840 and 960 (b100, T5000).
+- [RID: TDRG-ART-MOTIF-V16-DATA] :: v16 motif log corpus :: archive-valid for the TDR-24 factorization and the earlier v4 scaling; superseded for v17/v6 scaling :: `[ENG]` archived; partly **placed** (`upload/tdrg-records/*_v16.csv`), partly **held** (N=720 b100, two seeds; N=960 b100; hashes in the same manifest).
+- [RID: TDRG-ART-KINEMATIC-CERTS] :: genesis-layer lemma certificates (LEM-REACH, LEM-NOANNIHIL, LEM-RETRIG, first-return period) :: finite exhaustive verification as reported in v2.12 (77,552 band cases, even $N\le40$; zero failures) :: **missing** — session-certified in an earlier session; no original located. The lemmas keep their algebraic arguments in §6.5; the finite verification is `EV-SRC-REPORTED`.
+- [RID: TDRG-ART-SPECCONS] :: LEM-SPECCONS verification (signed-permutation argument; 3000 random ICs × 500 steps) :: **missing**; the algebraic argument stands in §6.12; the sampled verification is `EV-SRC-REPORTED`.
+- [RID: TDRG-ART-BIND3-N24K1] :: BIND3-CYCLE-N24K1 exact enumeration (3456 post-advance ICs, both $P_3$ conventions; taxonomy, d-resolved anatomy, transfer, period spectrum) :: **missing**; the numbers are `EV-SRC-REPORTED` and carry `[conv: v18 path orientation]`.
+- [RID: TDRG-ART-BIND3-SUITE] :: NKSCAN falsification suite ($k=2$ parity, spectral gate, memory stratification) :: **missing**; the numbers are `EV-SRC-REPORTED` and carry `[conv: v18 path orientation]`.
+- [RID: TDRG-ART-SESSION-SCRIPTS] :: scripts of the TDR-24A/B/F, TDR-25/26, OPEN-POLICY-GEOMETRY and TDRG-RESPONSE-TENSOR entries of §2 (`tdr24a_decomposition.py`, `tdr24a_provenance.py`, `tdr24a_ratelaw.py`, `tdr24b_chi_refit.py`, `tdr24b_field_structure.py`, `tdr24f_consistency_audit.py`, `tdr24f_data_recompute.py`, `tdr24_observable_rank.py`, `tdr25_burst_bridge.py`, `tdr26_early_basin_classifier.py` with its two CSV outputs, `tdr24_policy_geometry/EXPERIMENT_DESIGN.md`, `tdr24_policy_geometry_classify.py`, `tdrg_response_tensor/BRANCH_CHARTER.md`, `response_tensor.py`, `dynamical_extractor.py`) :: `[ENG]` **held** by co-owner session claude01SKePJ as its final copies and uploaded unchanged to branch `upload/tdrg-session-scripts` (commit `386e9d4`, `SHA256SUMS.txt` there); placed on `main` after the atlas hash check. They are final copies, not shown to be the exact versions that produced each historical number.
+- [RID: TDRG-ART-ORIENT-V2-12-14] :: `evidence/tdrg/scripts/tdrg_orient_v2_12_14.py` :: reference implementation of TDRG-DEF-ORIENT (drop-in `orient_path`) and of the recorded G-alternative :: `[ENG]` **placed**; exercised by the v2.12.14 checker.
+- [RID: TDRG-ART-ORIENT-COVARIANCE-CHECKS] :: `evidence/tdrg/disposition/` (equivariance check, antipodal and multistar fixtures, mirror probe, engine replay log; `SHA256SUMS.txt`) and the v2.12.14 builder and checker (`evidence/tdrg/scripts/build_tdrg_v2_12_14.py`, `check_tdrg_v2_12_14.py`) :: evidence for the v2.12.14 entries of §6.3, §6.6 and §6.12 :: `[ENG]` **placed**.
+- Post-edition data, not cited by any claim here: `motif_N720_k48_T5000_b500_v18.csv` (held), `motif_N840_k56_largest_center_b100_v17.csv`, `motif_N840_sweep_b100_v17.csv`, `motif_PG_N840_k56_largest_center_b100_telemetry1.csv` with its manifest, `genesis_mode_b_mc_telemetry.py` (`ba99e307…`) — placed or held as received, for the OPEN-POLICY-GEOMETRY record that will use them.
 
 ---
 
@@ -873,7 +955,7 @@ These are not active exports. All are blocked until a named bridge theorem exist
 **Principal investigator:** Mustafa  
 **AI / collaborator roles:** Claude · ChatGPT · Gemini · Grok  
 **Archive:** rtgtheory.org · Zenodo DOI 10.5281/zenodo.17568897  
-**Repository:** `rtg-resonance-2025`
+**Repository:** `MustafaAksu/rtg-corpus` (governing edition = the latest `tdrg-v…` tag with its release record); earlier archive label `rtg-resonance-2025`
 
 Key contributed insights:
 
@@ -883,12 +965,28 @@ Key contributed insights:
 | Multistar hidden-referee critique | `[ALG]` | collaborator review; $K_{2,3}$ example |
 | Metric-normalization bug in `all_centers` | `[ALG]` | collaborator review; fixed by `rN_T`/`rN_s` |
 | `bound_multistar` semantic split | `[ALG]` | collaborator review; multistar as bound state |
-| `bound_path_tie` / `bound_symmetric` cleanup | `[ALG/NUM]` | in-session policy evolution |
-| Optimized edge-builder audit | `[ENG/ALG]` | brute-force comparison, 500 random trials |
+| `bound_path_tie` / `bound_symmetric` cleanup | `[DEF]` (policies), exercised `[NUM]` | in-session policy evolution |
+| Optimized edge-builder audit | `[ENG]` | brute-force comparison, 500 random trials |
 
 ---
 
 ## Appendix A — Version History {#appendix-a}
+
+### v2.12.14 — October 2026
+
+Corrections-only edition: the owner pass after the v2.12.13 advisories (Methodology v1.2 kept as declared; no layout change; no rerun). Predecessor `tdrg-v2.12.13` (SHA-256 `aa232643…053f`). Release record `records/tdrg/TDRG_v2_12_14_RELEASE_RECORD.md`; fixed dispositions `records/tdrg/TDRG_OWNER_DISPOSITION_RECONCILIATION_v2_12_13.md`; edit log `evidence/tdrg/v2.12.14/edit_log.json`.
+- **§6.3 [COR/DEF]:** TDRG-DEF-ORIENT — balanced tie extended to $S=0\wedge2E\equiv0$ (relabelling-covariant; replaces the node-ID completion at $E\equiv N/2$); TDRG-ALG-ORIENT-NOGO; `signed_centered` and `signed_defect_error` defined; the G-rule recorded, not adopted.
+- **§3 [NEW]:** SG-14 relabelling covariance ($\mathrm{Sym}(V)\times\mathbb{Z}_N^{\rm phase}$; token shift and mirror outside; `largest_center` exception).
+- **§6.12 [NEW/COR]:** orientation-covariance block (fixture, equivariance check, census bound, DISC-2 effect, mirror not a step symmetry); the "relabeling-covariance check" renamed mirror-inventory check; LEM-SPECCONS "equivalently" → "therefore, in particular"; BIND3 results `[conv: v18 path orientation]`, `EV-NOT-RERUN`.
+- **§6.5 [COR]:** LEM-RETRIG least period (period dividing 2; fixed point at $d=0$).
+- **§6.6 [NEW]:** TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK; v18-orientation guard on §§6.6–6.10.
+- **§1, §2, §5, §6.8 [COR]:** N-scaling range-tagged and graded `[NUM]` (window-dependent; $-0.730$ on 480–1440); the $\chi=0.836$ consistency check withdrawn; crystallization `[HEUR]`; current state of TDR-24 D/F versus A/B/C aligned; TDR-24B current-status line; the Programme v1.2 owner-review tasks recorded.
+- **Tags [COR]:** live compound tags unpacked; the local alias table replaced.
+- **RIDs [NEW]:** 39 definition, claim and artifact RIDs (§7 owner RID map; consumer names `TDRG-ORIENT`, `TDRG-ZN-STATE`, `CONV-*`, `LEM-*` mapped); no OPEN-module RID renamed.
+- **§7 [COR]:** imports, consumers, pins and RID map; OFN Finding A statement accepted (custody deferred).
+- **§8 [COR]:** custody register (placed / replayed / held / missing) with hashes; engine identity of the v17 corpus.
+- **Header, §9, Appendices B and C [COR]:** governing editions; repository named; Appendix B row for the node-ID completion; K₃ 96:1 and the T-6 wedge marked historical; TDR-T gate aligned with §1.
+- **Not changed:** every scientific number; Appendix A history; the footer chain and the Appendix A order (v2.13).
 
 ### v2.12 — June 2026
 
@@ -1222,6 +1320,7 @@ Errata and additions applied before canonical freeze:
 - [FAIL] $\sum \delta_i^2$ conserved under birth — increases by $\delta_A^2$.
 - [FAIL] All three triad edges can simultaneously defect under narrow band — holonomy exclusion theorem.
 - [FAIL] Arbitrary path label fallback as tie-breaking — background-independence violation.
+- [FAIL] *(v2.12.14)* Path-orientation completion by node-ID listing at $S=0\wedge E\equiv N/2$ (the v17/v18 engine's `orient_path` with `raw_ordered_path`, standing in for the v2.12.13 rule there) — not relabelling-covariant (TDRG-ALG-ORIENT-ANTIPODAL-FIXTURE): an unintended instance of the arbitrary-label fallback above. Replaced by the extended balanced tie (TDRG-DEF-ORIENT). Results computed under it are kept with `[conv: v18 path orientation]`.
 - [FAIL] First valid star center as multistar resolution — hidden label/referee bias.
 - [FAIL] v7 runaway inflation was universal — multistar bias artifact.
 - [FAIL] *(v2.12)* "Any nontrivial dyad orbit sweeps the antipodal band" — false; orbits are cosets $\Delta_0+g\mathbb{Z}_N$ and non-intersecting cosets never reach the band. Superseded by LEM-REACH (§6.5).
@@ -1239,34 +1338,34 @@ Errata and additions applied before canonical freeze:
 - [FAIL] 15-commensurability fraction alone explains tails.
 - [FAIL] $N=720$ is deterministically unstable.
 - [FAIL] $O \sim M^2 \cdot (2k/N)$ as occupancy model — wrong structural dependence; predicts negative N-scaling.
-- [FAIL] $K_3$ globally explosive — only a quartic pump *channel* exists; the full six-step return has dominant healing terms (96:1 healing/pump ratio). See Triadic DSN.
+- [FAIL] $K_3$ globally explosive — only a quartic pump *channel* exists; the full six-step return has dominant healing terms (96:1 healing/pump ratio). See Triadic DSN. *(v2.12.14: historical continuous reference — TRIAD v1.6.1 keeps 96:1 as coefficient bookkeeping with the same-object correspondence OPEN; not a current fact about either branch.)*
 
 ---
 
 ## Appendix C — Discrete Triadic Requirements Ledger (TDR-T) {#appendix-c}
 
-> **Gate condition:** Do not begin full discrete triadic dynamics until OPEN TDR-24D, TDR-24A, TDR-24B are all closed.
+> **Gate condition:** Do not begin full discrete triadic dynamics until TDR-24A → TDR-24B → TDR-24C close (TDR-24D and TDR-24F are closed at the mechanism level, §1). *(v2.12.14 `[COR]`; aligned with §1 and §2.)*
 
 ### Module Ladder
 
 | ID | Module | Purpose | Prerequisite |
 |---|---|---|---|
-| TDR-24D | Slot-volume identity | Derive candidate-pool scaling | Immediate |
+| TDR-24D | Slot-volume identity | Derive candidate-pool scaling | closed (mechanism level) |
 | TDR-24A | Topological filtering | Derive multistar suppression | Immediate |
 | TDR-24B | Geometric compression | Derive component compression | Immediate |
 | TDR-T0 | Discrete triad definition | Classify clean/embedded/degenerate | TDR-24 closed |
 | TDR-T1 | Discrete chirality | Derive $\theta_{\rm disc}$ analog | TDR-T0 |
 | TDR-T2 | Birth-policy orientation | Compute $\theta_{\rm birth}^{\rm TDR}$ | TDR-T1 |
-| TDR-T3 | Safe-wedge reachability | Determine if safe orientation reachable | TDR-T2 |
+| TDR-T3 | Safe-wedge reachability *(historical continuous reference: the sector/wedge imports were withdrawn by TRIAD v1.6.1 CN-05; to be restated natively before use)* | Determine if safe orientation reachable | TDR-T2 |
 | TDR-T4 | Triad survival scaling | Large-N survival laws | TDR-T3 |
 
 ### Structural Requirements
 
-**R0** `[ALG structure]` Continuous tensors and coefficients ($1/3$, $3/4$, $x_*$, $-32r^4$, Plücker constants) cannot be used in TDR-G unless reproduced by a native $\mathbb{Z}_N$ derivation.
+**R0** `[ALG structure]` Continuous tensors and coefficients ($1/3$, $3/4$, $x_*$, $-32r^4$, Plücker constants) cannot be used in TDR-G unless reproduced by a native $\mathbb{Z}_N$ derivation. *(v2.12.14: $x_*$ is a historical root of the continuous T-6 chain, and TRIAD v1.6.1 withdraws its safe-wedge reading (CN-05); it is listed here only as a historical example.)*
 
 **R1** `[DEF]` Native state space: $\mathbb{Z}_N$, $k$, $\mathcal{D}_k$, $E_{\rm def}$, component map. Discrete closure: $\Delta_{AB}+\Delta_{BC}+\Delta_{CA}\equiv0\pmod{N}$ already certified `[THM]`.
 
-**R2** `[OPEN]` Multistar vacuum prerequisite: TDR-24D → TDR-24A → TDR-24B must be closed before discrete triadic dynamics.
+**R2** `[OPEN]` Multistar vacuum prerequisite: TDR-24A → TDR-24B → TDR-24C must close before discrete triadic dynamics (TDR-24D and TDR-24F are closed at the mechanism level).
 
 **R3–R10** `[OPEN reserved]` Reserved for the future `RTG_DISCRETE_BIRTH_DSN` / TDR-T document. Do not cite as active OPEN Registry entries until TDR-T0 is opened.
 
@@ -1284,5 +1383,5 @@ Native discrete triad classes (under $k < N/6$):
 
 ---
 
-*END OF DOCUMENT — RTG_DISCRETE_GENESIS_DSN_v2.12.13*  
-*Supersedes RTG_DISCRETE_GENESIS_DSN_v2.12.12, RTG_DISCRETE_GENESIS_DSN_v2.12.11, RTG_DISCRETE_GENESIS_DSN_v2.12.10, RTG_DISCRETE_GENESIS_DSN_v2.12.9, RTG_DISCRETE_GENESIS_DSN_v2.12.8, RTG_DISCRETE_GENESIS_DSN_v2.12.7, RTG_DISCRETE_GENESIS_DSN_v2.12.6, RTG_DISCRETE_GENESIS_DSN_v2.12.5, RTG_DISCRETE_GENESIS_DSN_v2.12.4, RTG_DISCRETE_GENESIS_DSN_v2.12.3, RTG_DISCRETE_GENESIS_DSN_v2.12.2, RTG_DISCRETE_GENESIS_DSN_v2.12.1, RTG_DISCRETE_GENESIS_DSN_v2.12, RTG_DISCRETE_GENESIS_DSN_v2.11.1, RTG_DISCRETE_GENESIS_DSN_v2.0 (errata/gap-closure lineage), and TDR_G_DISCRETE_RELATIONAL_GENESIS_DSN_v1.5. v2.12 adds the genesis-kinematics and BIND3 certification arc: CONV-TICK/CONV-P3CYC pinned to script truth (v18); LEM-REACH, LEM-NOANNIHIL, LEM-RETRIG, LEM-SPECCONS certified; BIND3-CYCLE-N24K1 exact enumeration; BIND3-PARITY / SPECTRAL-GATE / MEMORY-PARITY certified by the pre-registered falsification suite; SG-11–SG-13; five new OPENs. Active TDR-G scientific ledger content is preserved or routed; structure conforms to DSN_METHODOLOGY_v1.2.*
+*END OF DOCUMENT — RTG_DISCRETE_GENESIS_DSN_v2.12.14*  
+*Supersedes RTG_DISCRETE_GENESIS_DSN_v2.12.13 (tag `tdrg-v2.12.13`), RTG_DISCRETE_GENESIS_DSN_v2.12.12, RTG_DISCRETE_GENESIS_DSN_v2.12.11, RTG_DISCRETE_GENESIS_DSN_v2.12.10, RTG_DISCRETE_GENESIS_DSN_v2.12.9, RTG_DISCRETE_GENESIS_DSN_v2.12.8, RTG_DISCRETE_GENESIS_DSN_v2.12.7, RTG_DISCRETE_GENESIS_DSN_v2.12.6, RTG_DISCRETE_GENESIS_DSN_v2.12.5, RTG_DISCRETE_GENESIS_DSN_v2.12.4, RTG_DISCRETE_GENESIS_DSN_v2.12.3, RTG_DISCRETE_GENESIS_DSN_v2.12.2, RTG_DISCRETE_GENESIS_DSN_v2.12.1, RTG_DISCRETE_GENESIS_DSN_v2.12, RTG_DISCRETE_GENESIS_DSN_v2.11.1, RTG_DISCRETE_GENESIS_DSN_v2.0 (errata/gap-closure lineage), and TDR_G_DISCRETE_RELATIONAL_GENESIS_DSN_v1.5. v2.12 adds the genesis-kinematics and BIND3 certification arc: CONV-TICK/CONV-P3CYC pinned to script truth (v18); LEM-REACH, LEM-NOANNIHIL, LEM-RETRIG, LEM-SPECCONS certified; BIND3-CYCLE-N24K1 exact enumeration; BIND3-PARITY / SPECTRAL-GATE / MEMORY-PARITY certified by the pre-registered falsification suite; SG-11–SG-13; five new OPENs. Active TDR-G scientific ledger content is preserved or routed; structure conforms to DSN_METHODOLOGY_v1.2.*

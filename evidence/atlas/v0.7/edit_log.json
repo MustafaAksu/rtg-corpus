@@ -1,0 +1,614 @@
+[
+ {
+  "id": "AR07-001",
+  "finding": "identity",
+  "where": "title",
+  "old_sha256": "9008a972a82b6e392454cfb118f58140270321445a4c0377b9fd2740c8d3c6a5",
+  "new_sha256": "5a4ce9a451ddb0be877f9cc8ce5f6eebc73f58c75cdc62608bcc80ad6b46762b",
+  "old": "# RTG STATE ATLAS v0.6\n",
+  "new": "# RTG STATE ATLAS v0.7\n"
+ },
+ {
+  "id": "AR07-002",
+  "finding": "identity",
+  "where": "SOURCES header",
+  "old_sha256": "a4dcf48f38c32c3e4ef1b6f525450e7dd34c09248de0a2b59ae44bcb88d6b331",
+  "new_sha256": "e90b9fecb15976c5bd0c957cd6d52a50eec6fb962741a930bfdb6430e2ae36bd",
+  "old": "full identities in evidence/atlas/v0.6/source_manifest.json",
+  "new": "full identities in evidence/atlas/v0.7/source_manifest.json"
+ },
+ {
+  "id": "AR07-003",
+  "finding": "RECOG move",
+  "where": "SOURCES RECOG row",
+  "old_sha256": "8ef87a72f8f44fe1487bed88a285e8e3f9f4cd68deba58127e6bb046f9dd077f",
+  "new_sha256": "cb7cf596db997c916a9ff18c1d34dacd0fa51d9f87fc7f570d5e2cdbd0fa3e69",
+  "old": "| RECOG | RTG_RELATIONAL_RECOGNITION_DSN | v0.3.24 | `recog-v0.3.24` | canonical Tier 3 |",
+  "new": "| RECOG | RTG_RELATIONAL_RECOGNITION_DSN | v0.3.25 | `recog-v0.3.25` | canonical Tier 3 |"
+ },
+ {
+  "id": "AR07-004",
+  "finding": "TDRG move",
+  "where": "SOURCES TDRG row",
+  "old_sha256": "6e905f6033ed87bdffc2ee8f63977e59195e8aafa4314647c493643fbc1d7e44",
+  "new_sha256": "8f036713d8442f2897b3a5abae4da68996fa2b9b002daf3a552db45a5961fd4a",
+  "old": "| TDRG | RTG_DISCRETE_GENESIS_DSN | v2.12.13 | `tdrg-v2.12.13` |",
+  "new": "| TDRG | RTG_DISCRETE_GENESIS_DSN | v2.12.14 | `tdrg-v2.12.14` |"
+ },
+ {
+  "id": "AR07-005",
+  "finding": "identity",
+  "where": "footer",
+  "old_sha256": "2f7f48a8d5139f1bdd5784123e445d2212222521b7631e832b980e782453f841",
+  "new_sha256": "75096ac3ba0a6f0cff14902ca908de0e885cc1843ba4496bafa8b5f7bdc390e1",
+  "old": "*END — RTG STATE ATLAS v0.6. Noncanonical; owner DSNs govern.*",
+  "new": "*END — RTG STATE ATLAS v0.7. Noncanonical; owner DSNs govern.*"
+ },
+ {
+  "id": "AR07-006",
+  "finding": "RECOG move",
+  "where": "D3 header",
+  "old_sha256": "32a3e07465901cb12f5ce3ac29a8949d647864099c45ccd84e26fc84376259df",
+  "new_sha256": "95b9d6384dd92e5c7b90d7d2c93c2dd4c1feadbb2243d26510962618987631e5",
+  "old": "(owner RECOG = RTG_RELATIONAL_RECOGNITION_DSN v0.3.24;",
+  "new": "(owner RECOG = RTG_RELATIONAL_RECOGNITION_DSN v0.3.25;"
+ },
+ {
+  "id": "AR07-007",
+  "finding": "TDRG move",
+  "where": "D5 header",
+  "old_sha256": "80fc0ff5a0e9a7fef23636c08754b757745efea93743e0b9bc36f81e3d0b65ab",
+  "new_sha256": "f26431e7b4add13b684b19fc36e45a485e7df0bf6eca6efbdec1ff4a9af2a686",
+  "old": "(sources: TDRG = RTG_DISCRETE_GENESIS_DSN v2.12.13 (June 2026, Tier 4, maturity record B); AZ = RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN v0.6 (June 2026, Tier 5, Level A retained); NUMGEN v1.20.8 DISC/C7B modules.",
+  "new": "(sources: TDRG = RTG_DISCRETE_GENESIS_DSN v2.12.14 (October 2026 corrections edition of the June 2026 v2.12 line; Methodology v1.2 declared by PI decision, the v1.4 migration is v2.13; Tier 4, maturity record B); AZ = RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN v0.6 (June 2026, Tier 5, Level A retained); NUMGEN v1.21 DISC/C7B modules."
+ },
+ {
+  "id": "AR07-008",
+  "finding": "TDRG TB-12",
+  "where": "D5 header aliases",
+  "old_sha256": "339bd0e5c6c45584c33bbef1ea752a5b4c145711b3160f36fc37f9177b1f9443",
+  "new_sha256": "d67d08b69f4bcdcb5c50c3a05e33221404ba60ab829b99daff9a38738347bb6a",
+  "old": "Local aliases: TDRG [ALG/NUM] = ALG co-certified by NUM, [ENG/ALG], legacy [NUM-strong]/[HEUR-strong]; AZ [ENG PASS]",
+  "new": "Local aliases: TDRG compound tags unpacked in v2.12.14 (one grade per claim; node heads below carry the v2.12.14 owner RIDs, former atlas labels in parentheses); AZ [ENG PASS]"
+ },
+ {
+  "id": "AR07-009",
+  "finding": "TDRG TB-09",
+  "where": "H4",
+  "old_sha256": "15c617aa92ff3f79521454fde8c1d4cbd071497f5e4614fc6d0b34fd49e1207b",
+  "new_sha256": "bb57bbde8ab4502e348e69421fa82afef86a4d2281f72d8eaad3450e55879731",
+  "old": "H4 D-RID high — discrete and historical RID vacuum: TDR-G core theorems/definitions carry no RIDs; seven OFN imports are \"RID unavailable\" (TDRG.G2 ≡ OFN.O5 ≡ METH.M2); PREL has one RID in total (PREL.P5);",
+  "new": "H4 D-RID high — historical RID vacuum, narrowed: TDR-G v2.12.14 registered 36 claim RIDs (the consumed definitions, the three §6.2 theorems, the four lemmas, the BIND3 results) with a §7 owner RID map for the consumer names — OFN's \"RID unavailable\" imports from TDR-G resolve once OFN repins (OFN.O5 ≡ METH.M2); PREL has one RID in total (PREL.P5);"
+ },
+ {
+  "id": "AR07-010",
+  "finding": "TDRG TA-01/TA-04",
+  "where": "H9",
+  "old_sha256": "be962a5d47d21d3e5aa9d1972ac1c9eaa1f177b5170ef698a91ae1d1db6da5eb",
+  "new_sha256": "9acc4e4b6d7fa4b81c4f1c5b7ac9a32e61f778bc797fe1105d224936eb1a4f1c",
+  "old": "H9 D-SCOPE/D-LINK high (discrete) — TDR-G headline α=0.869 is a full-range composite; on 480–1440 B/step ~ N^−0.730, and the §1 consistency check uses the superseded χ exponent 0.836 (TDRG.G1); undeclared second path-orientation degeneracy at S=0, |E|=N/2 touches 40 of 136 DISC-2 witnesses and blocks NUMGEN C7C M-4 (v1.21 §2 item 1: HOLD; request filed as pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md) — needs a TDR-G scientific ruling (D5.X1).",
+  "new": "H9 D-CONV/D-LINK med (discrete) — the path-orientation degeneracy at S=0, |E|=N/2 is ruled in TDR-G v2.12.14: TDRG-DEF-ORIENT declares the balanced tie on S=0 ∧ 2E≡0 (no orientation from the declared invariants, TDRG-ALG-ORIENT-NOGO), SG-14 names the covariance group, and every v18-computed result is kept with [conv: v18 path orientation] EV-NOT-RERUN under the three-node census bound (4.9 % of k=1 states); 20 of 136 DISC-2 records change under the rule, the ten labels do not; NUMGEN re-annotates and decides its C7C-M4 release itself (D5.X1). Residual non-covariance in a non-canonical branch: largest_center chooses between equal-degree centres by node ID (TDRG.G10; TDR-19 open). The headline exponent is range-tagged by the owner ([NUM] full range −0.869; 480–1440 ≈ −0.730 from its own Exp-0 line); the superseded χ=0.836 check is withdrawn."
+ },
+ {
+  "id": "AR07-011",
+  "finding": "RECOG v0.3.25",
+  "where": "H5",
+  "old_sha256": "0ea198a671fffe9020991665b15a12325559b18a33add50a07071edb8f435320",
+  "new_sha256": "7ec3c2946e4c43aabafc0c2d88a3f8f0630d7f43afcc15a2bb2a5692040d5c89",
+  "old": "and the infinite-record readout RECOG-RESULT-A1C-RECORD-PHASE-READOUT (D3; NUMGEN informed, no custody change).",
+  "new": "and the infinite-record readout RECOG-RESULT-A1C-RECORD-PHASE-READOUT (D3; NUMGEN informed, no custody change); RECOG v0.3.25 adds the known-a sharpened schedule RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A proof constants], a record-only outer enclosure of (a, L, a−b, Θ₀) by an interval contractor (RECOG-ALG-A1C-JOINT-CONTRACTOR; windows, not identification, no uniqueness) and the record-fiber result (fibers on one C¹ level curve of Ψ_∞; A1c-Q1′ stays OPEN), plus the sharpened R9 rows (259.2, 1/400), (81.49, 1/1600) — the (D5) constants and the C₇ ceilings remain [assuming:] until Dyadic registers them (RECOG.R-A1)."
+ },
+ {
+  "id": "AR07-012",
+  "finding": "TDRG TB-09",
+  "where": "METH.M2",
+  "old_sha256": "001cb62f3eebbee9718e514924d45220d55a838281ccedaeed61aa963d70d282",
+  "new_sha256": "1b47077ae93fec28f79507fb3d4ae5b1bba027ffb56f73c2918abc01c2a28a71",
+  "old": "METH.M2 D-RID (programme pattern): \"RID unavailable\" imports / unnumbered theorems recur in TDRG (theorems without RIDs, 7 OFN imports), PREL (one RID total), NUMGEN (GAP-LOCK lemmas), AZ, Legacy imports; only owners register RIDs (METH v1.4 §4.4).",
+  "new": "METH.M2 D-RID (programme pattern): \"RID unavailable\" imports / unnumbered theorems recur in PREL (one RID total), NUMGEN tier 2 (C7C, DISC, ten-label results under module RIDs), AZ, Legacy imports; TDR-G registered its claim RIDs in v2.12.14 and NUMGEN its tier 1 in v1.21; only owners register RIDs (METH v1.4 §4.4)."
+ },
+ {
+  "id": "AR07-013",
+  "finding": "TDRG TB-09",
+  "where": "OFN.O5",
+  "old_sha256": "d46d8cdefc10d6cfdf8e89d4649722508f6d080850ee52ca8abea86e00d94cd4",
+  "new_sha256": "105af16f77f078b4891169e2d5521ddaef32e9600fe43b1ee01ea7cb9b46da91",
+  "old": "OFN.O5 D-RID (to TDRG): seven load-bearing imports \"RID unavailable\" (IMP-O08-02 state, -03 band, -04 holonomy, -04B narrow-band, -08 finite recurrence, -09 star rule) + legacy LEM-*/CONV-* labels; GEN zero-origin (IMP-O08-01); open since v0.8.",
+  "new": "OFN.O5 D-RID (to TDRG, owner side done): the load-bearing imports IMP-O08-02 state, -03 band, -04 holonomy, -04B narrow-band, -08 finite recurrence, -09 star rule and the legacy LEM-*/CONV-* labels are \"RID unavailable\" in OFN v0.10; TDR-G v2.12.14 registered TDRG-DEF-ZN-STATE, -BAND, -CONV-TICK, -CONV-P3CYC, -STAR, TDRG-THM-HOLONOMY, -NARROW-BAND-EXCLUSION, -RECURRENCE and the four lemma RIDs TDRG-ALG-LEM-REACH, -NOANNIHIL, -RETRIG, -SPECCONS with a §7 alias map; the repin is OFN's (notice filed in pipes/OFN/). GEN zero-origin (IMP-O08-01) still without RID."
+ },
+ {
+  "id": "AR07-014",
+  "finding": "TDRG TA-05",
+  "where": "OFN.O7 (D-WRONG list)",
+  "old_sha256": "d6d2e3117f0633d73bd258704af618e8c45003e3cc050dcb1049f80352460cf4",
+  "new_sha256": "9655535d9341b5bc1e6a7293a3b452d38d8aa69fe6b8e60c4246150fc88c6946",
+  "old": "OFN.O7 ≡ TDRG.G4 | TDR-G LEM-RETRIG prose \"exact period-2 bound state even at d=0\" | displayed map gives a fixed state at d=0 (OFN08-C12 correction requested); atlas uses OFN-corrected reading",
+  "new": "OFN.O7 | TDR-G LEM-RETRIG prose \"exact period-2 bound state even at d=0\" | corrected in TDR-G v2.12.14 (period dividing 2; least period 2 for d≠0; d=0 a fixed point); OFN08-C12 correction on the OFN side still to be recorded"
+ },
+ {
+  "id": "AR07-015",
+  "finding": "pipes",
+  "where": "NUMGEN.N-I1",
+  "old_sha256": "0d7ff10f1feb15c4bc5e73bed742cf8569f6689a4ef750c2030b0f2e6c93f7e4",
+  "new_sha256": "e93f5d9db8e3abe18cdfed17db8e248e52313c7d792aeb85d9e8c1d761ad0ccf",
+  "old": "NUMGEN.N-I1 D-LINK (receiver side) | five v1.21 `kind: notice` items filed by NUMGEN after the tag (pipes/RECOG, pipes/DYAD, pipes/TDRG, pipes/GEN, pipes/OFN; each `state: open`): acceptance matrix and GAP-LOCK/INF-2 RIDs (RECOG), row-A import and DYAD-ALG-P5-RADIAL alias (Dyadic), C7C-M4 HOLD (TDR-G), Genesis v2.9 pin and the cyclic-average RID (Genesis), §6.8 OFN v0.10 pointer (OFN). A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7).",
+  "new": "NUMGEN.N-I1 D-LINK (receiver side) | five v1.21 `kind: notice` items filed by NUMGEN after its tag (pipes/RECOG, pipes/DYAD, pipes/TDRG, pipes/GEN, pipes/OFN): acceptance matrix and GAP-LOCK/INF-2 RIDs (RECOG), row-A import and DYAD-ALG-P5-RADIAL alias (Dyadic), C7C-M4 HOLD (TDR-G), Genesis v2.9 pin and the cyclic-average RID (Genesis), §6.8 OFN v0.10 pointer (OFN). TDR-G closed its two inbox items after v2.12.14 (request: accept · release record; notice: no action) and filed three notices of its own (pipes/NUMGEN, pipes/OFN, pipes/AZ, `20261028-TDRG-v2-12-14-adopted.md`: TDRG-DEF-ORIENT ruling with the witness-effect table and RIDs; owner RIDs replacing \"RID unavailable\"; TDRG-ZN-STATE alias and the AZ cross-citation). The other receivers (RECOG, DYAD, GEN, OFN, AZ) have not dispositioned their items. A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7)."
+ },
+ {
+  "id": "AR07-016",
+  "finding": "RECOG B1",
+  "where": "R9-MEMORY node",
+  "old_sha256": "0bb870cc48a2b5d0e099489d93c747e741816a0658623e6ce399c4e32be34a50",
+  "new_sha256": "9d249e8a0158590bee7e27a76a683e55672ba1f71cbccb4d8981818d72df2af3",
+  "old": "RECOG-THM-R9-MEMORY THM | sc: postulated T; exact F̂ in DYAD-ALG-NF6 chart; track C_z | 0<q₀≤q_max: M(z₀)=q₀[c_iso+Λ₁(Θ₀)]+R, |R|≤C₂q₀²; rows (never mixed): (C₂,q_max)=(517,1/400) on |z|≤1/20 (C₇=100); (163,1/1600) on |z|≤1/40 (C₇=30) | method: averaging function, g+τg′ cancels q²-increment [c_iso+Im((1−2iτ)a₀₅e^{−6iΘ})]q², |ΔΦ|≤K_Φq³ (K_Φ≤258.49 / 81.44, Arb), Σq_m³≤2q₀², C₂=2K_Φ; no Euler–Maclaurin, no fitted backbone | <DYAD-ALG-NF6, DYAD-THM-NF-REM | >DYAD-THM-OPEN3-ASYMPTOTIC-PHASE, DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER, RECOG-THM-A1A-CD-IDENTIFICATION, OFN RF-O09-01/02, RRF §2.4/§4.1a | ¬ Λ₁q₀ as whole memory; ¬ direct use in C_W^(h) track; ¬ physical event | cert recog_cell_r9_memory_cert.py (200-bit, 7 checks) | @§1,§6.13a",
+  "new": "RECOG-THM-R9-MEMORY THM | sc: postulated T; exact F̂ in DYAD-ALG-NF6 chart; track C_z | 0<q₀≤q_max: M(z₀)=q₀[c_iso+Λ₁(Θ₀)]+R, |R|≤C₂q₀²; rows (never mixed): (C₂,q_max)=(517,1/400) on |z|≤1/20 (C₇=100); (163,1/1600) on |z|≤1/40 (C₇=30) | method: averaging function, g+τg′ cancels q²-increment [c_iso+Im((1−2iτ)a₀₅e^{−6iΘ})]q², |ΔΦ|≤K_Φq³ (K_Φ≤258.49 / 81.44, Arb), Σq_m³≤2q₀², C₂=2K_Φ; no Euler–Maclaurin, no fitted backbone | <DYAD-ALG-NF6, DYAD-THM-NF-REM | >DYAD-THM-OPEN3-ASYMPTOTIC-PHASE, DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER, RECOG-THM-A1A-CD-IDENTIFICATION, OFN RF-O09-01/02, RRF §2.4/§4.1a | ¬ Λ₁q₀ as whole memory; ¬ direct use in C_W^(h) track; ¬ physical event | cert recog_cell_r9_memory_cert.py (200-bit, 7 checks) | v0.3.25 sharpened rows (adopted rows stay in force): RECOG-ALG-R9-SUM-LEMMA Σq_m³≤(1+q₀)q₀² (within the one-orbit bound essentially sharp) ⇒ RECOG-THM-R9-SHARPENED-ROWS (C₂,q_max)=(259.2,1/400), (81.49,1/1600), incompleteness windows ×2 (K_Φ re-enclosed 258.4848 / 81.4328); RECOG-THM-R9-SHARPENED-ROWS-C7 [assuming: C₇≤85.1 / 27.7 — Dyadic's published NF-REM certificate values 85.07 / 27.60, not Dyadic theorem statements, registration requested] (221.4, 1/400), (75.69, 1/1600); cert RECOG-ART-R9-SHARPENED-ROWS | @§1,§6.13a"
+ },
+ {
+  "id": "AR07-017",
+  "finding": "RECOG A1c-E",
+  "where": "A1b node",
+  "old_sha256": "880161669ef29ab743aa7c1bd2737620adab8592ea6bbbd976587daebc513039",
+  "new_sha256": "60e24dd8a7934eb2b17ea69706333825bb04833cd7b56ae0bfed95a6b27adc62",
+  "old": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b",
+  "new": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change; recorded by NUMGEN v1.21 as independent agreement) | v0.3.25: RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A bridge proof constants] — same schedule with the known-a / declared-data centre c'''_k(a)=τψ(a+M_k)−(k−1)π/3+(√3/8)(a+M_k)^{−1/2}+(τ/2)(a+M_k)^{−1} and an error E'''=O_a((1+log(a+M_k))/(a+M_k)) computable from (a, M_k, r_k) — not from the record alone; harmonic tails with the universal ceiling E'≤0.31 (RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE), the two tails combine exactly into one boundary term (RECOG-ALG-A1C-COMBINED-TAIL); cert RECOG-ART-A1C-SHARPENED-SCHEDULE; the A1b \"Not supplied\" status for a computable envelope is supplied in place (known-a only; the unknown-a windows are at the readout node) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b"
+ },
+ {
+  "id": "AR07-018",
+  "finding": "RECOG A1c-D",
+  "where": "A1c readout node",
+  "old_sha256": "8696cfd752c89175cd9069eb2cf69118e17668b380a0c255f02e31e982a7ea61",
+  "new_sha256": "cafc4ac9f5aa13064bc3bf8b789067b8dfe7e3b5ff7273168d9c6997908d1441",
+  "old": "RECOG-RESULT-A1C-RECORD-PHASE-READOUT RES[from THM] | sc: x₀∈U; the complete infinite token record ℛ(x₀)=(n₀;g₁g₂…) in F2(b) conventions; v0.3.24 | the record determines L(x₀)=lim_k[τlog M_k−(k−1)π/3] and hence Ψ_{W,∞}=Ψ_{z,∞} mod 2π, with no state datum and without the value of a | ¬ reconstruction of a, M_W or M(z₀) from L (statement about the method, not a non-recoverability theorem); finite prefix with a known: window of width 2|ε_k| (a-priori envelope, →0), with a unknown no window (NUM least-squares (â,L̂) ≤3.5% on illustration runs, no guarantee); ¬ R_ind downgrade of R9's carrier M (retrospective reconstruction is not write-through, SG-R6); ¬ carrier downgrade | <RECOG-THM-A1B-SLIP-SCHEDULE-U | >R6 sub-items A1c-Q1′ (injectivity of x₀↦ℛ(x₀) on U, open), A1c-decoder | @§6.16e",
+  "new": "RECOG-RESULT-A1C-RECORD-PHASE-READOUT RES[from THM] | sc: x₀∈U; the complete infinite token record ℛ(x₀)=(n₀;g₁g₂…) in F2(b) conventions; v0.3.24 | the record determines L(x₀)=lim_k[τlog M_k−(k−1)π/3] and hence Ψ_{W,∞}=Ψ_{z,∞} mod 2π, with no state datum and without the value of a | ¬ reconstruction of a, M_W or M(z₀) from L (statement about the method, not a non-recoverability theorem); finite prefix with a known: window of width 2|ε_k| (a-priori envelope, →0), with a unknown: v0.3.25 supplies a certified outer enclosure from a finite record alone — admissible region ℛ_K={(a,L): a≥625, |c_k(a)−L|≤E_k(a) ∀k≤K} and its first finite interval from two slips (RECOG-ALG-A1C-ADMISSIBLE-REGION), start sector n₀≤7 and signed start offset (RECOG-ALG-A1C-START-OFFSET), interval contractor on (a, L, a−b, Θ₀) with the true a never an input (RECOG-ALG-A1C-JOINT-CONTRACTOR; [assuming: (D5)]; ≥2 usable slips; windows, not identification; no uniqueness, no write mechanism, no Q1′ conclusion; cert RECOG-ART-A1C-DECODER; NUM least-squares (â,L̂) ≤3.5 % on illustration runs stays an illustration); ¬ R_ind downgrade of R9's carrier M (retrospective reconstruction is not write-through, SG-R6); ¬ carrier downgrade | <RECOG-THM-A1B-SLIP-SCHEDULE-U | >R6 sub-items A1c-Q1′ (injectivity of x₀↦ℛ(x₀) on U, open), A1c-decoder | @§6.16e"
+ },
+ {
+  "id": "AR07-019",
+  "finding": "RECOG A1c-Q",
+  "where": "A1c readout node sub-items",
+  "old_sha256": "cafc4ac9f5aa13064bc3bf8b789067b8dfe7e3b5ff7273168d9c6997908d1441",
+  "new_sha256": "e4e6b7cdd9cf715756827182dfed934a5ccb34cda78348ef3c5d5aff2e9254cb",
+  "old": "RECOG-RESULT-A1C-RECORD-PHASE-READOUT RES[from THM] | sc: x₀∈U; the complete infinite token record ℛ(x₀)=(n₀;g₁g₂…) in F2(b) conventions; v0.3.24 | the record determines L(x₀)=lim_k[τlog M_k−(k−1)π/3] and hence Ψ_{W,∞}=Ψ_{z,∞} mod 2π, with no state datum and without the value of a | ¬ reconstruction of a, M_W or M(z₀) from L (statement about the method, not a non-recoverability theorem); finite prefix with a known: window of width 2|ε_k| (a-priori envelope, →0), with a unknown: v0.3.25 supplies a certified outer enclosure from a finite record alone — admissible region ℛ_K={(a,L): a≥625, |c_k(a)−L|≤E_k(a) ∀k≤K} and its first finite interval from two slips (RECOG-ALG-A1C-ADMISSIBLE-REGION), start sector n₀≤7 and signed start offset (RECOG-ALG-A1C-START-OFFSET), interval contractor on (a, L, a−b, Θ₀) with the true a never an input (RECOG-ALG-A1C-JOINT-CONTRACTOR; [assuming: (D5)]; ≥2 usable slips; windows, not identification; no uniqueness, no write mechanism, no Q1′ conclusion; cert RECOG-ART-A1C-DECODER; NUM least-squares (â,L̂) ≤3.5 % on illustration runs stays an illustration); ¬ R_ind downgrade of R9's carrier M (retrospective reconstruction is not write-through, SG-R6); ¬ carrier downgrade | <RECOG-THM-A1B-SLIP-SCHEDULE-U | >R6 sub-items A1c-Q1′ (injectivity of x₀↦ℛ(x₀) on U, open), A1c-decoder | @§6.16e",
+  "new": "RECOG-RESULT-A1C-RECORD-PHASE-READOUT RES[from THM] | sc: x₀∈U; the complete infinite token record ℛ(x₀)=(n₀;g₁g₂…) in F2(b) conventions; v0.3.24 | the record determines L(x₀)=lim_k[τlog M_k−(k−1)π/3] and hence Ψ_{W,∞}=Ψ_{z,∞} mod 2π, with no state datum and without the value of a | ¬ reconstruction of a, M_W or M(z₀) from L (statement about the method, not a non-recoverability theorem); finite prefix with a known: window of width 2|ε_k| (a-priori envelope, →0), with a unknown: v0.3.25 supplies a certified outer enclosure from a finite record alone — admissible region ℛ_K={(a,L): a≥625, |c_k(a)−L|≤E_k(a) ∀k≤K} and its first finite interval from two slips (RECOG-ALG-A1C-ADMISSIBLE-REGION), start sector n₀≤7 and signed start offset (RECOG-ALG-A1C-START-OFFSET), interval contractor on (a, L, a−b, Θ₀) with the true a never an input (RECOG-ALG-A1C-JOINT-CONTRACTOR; [assuming: (D5)]; ≥2 usable slips; windows, not identification; no uniqueness, no write mechanism, no Q1′ conclusion; cert RECOG-ART-A1C-DECODER; NUM least-squares (â,L̂) ≤3.5 % on illustration runs stays an illustration); ¬ R_ind downgrade of R9's carrier M (retrospective reconstruction is not write-through, SG-R6); ¬ carrier downgrade | <RECOG-THM-A1B-SLIP-SCHEDULE-U | v0.3.25 record fibers: the record is the threshold coding g_{j+1}=7 ⟺ o_j<Δ_j of the overshoot sawtooth (RECOG-ALG-A1C-THRESHOLD-CODING); Ψ_∞ is C¹ in (log q₀, Θ₀) on the punctured row disk with |∂_{Θ₀}Ψ_∞−1|≤11.13 q₀ and ∂_{log q₀}Ψ_∞=−τ+O(q₀), so record fibers lie on one C¹ level curve — empty interior; connectedness and injectivity open (RECOG-ALG-A1C-PHASE-C1-FIBER; conditional on DYAD NF-REM/NF-INV/NF6 only; cert RECOG-ART-A1C-Q1PRIME-FIBER) | >R6 sub-items A1c-Q1′ (injectivity of x₀↦ℛ(x₀) on U, open; reworded v0.3.25), A1c-decoder (answered in bounded form, v0.3.25) | @§6.16e"
+ },
+ {
+  "id": "AR07-020",
+  "finding": "RECOG R6",
+  "where": "R6 node",
+  "old_sha256": "f49b1e57ba2f9242fdda235d29c8e1e53d2b147f8a928fd53f7a72e77ce2cd2d",
+  "new_sha256": "64d4a09abdd6fac467224c296a5a5822a7bf78e6625158f83df86f391426ce17",
+  "old": "RECOG-OPEN-EVENT-RULE (R6) ACTIVE | missing representation-safe tokenisation/selection principle and a token → R_ind coupling; routes: (1) new event-gated non-counting single-dyad carrier; (2) carrier enlargement — blocked by SG-R5 (continuous↔discrete bridge), RRF OPEN-B → OPEN-E1 → OPEN-E2, bridge RRF-DYAD-W → RRF-NET-W-RAW, W1–W5; intersects NG-7B \"birth/history\" candidate; sub-question F2(a3): why Σ_B, why B₊ not B₋; HYPs: memory-version event reading, RECOG-OPEN-INTERSECTION · OPEN sub-items (v0.3.24): A1c-Q1′ — is x₀↦ℛ(x₀) (start state → complete token record) injective on U? neither answer established (the cell's local-nonconstancy argument is SESSION, conjectural); A1c-decoder — finite-prefix window for (a,L) with a unknown, and a record-only majorant for the known-a window via Q_m≤Q₀/(1+½Q₀m) and the A1a tail estimates",
+  "new": "RECOG-OPEN-EVENT-RULE (R6) ACTIVE | missing representation-safe tokenisation/selection principle and a token → R_ind coupling; routes: (1) new event-gated non-counting single-dyad carrier; (2) carrier enlargement — blocked by SG-R5 (continuous↔discrete bridge), RRF OPEN-B → OPEN-E1 → OPEN-E2, bridge RRF-DYAD-W → RRF-NET-W-RAW, W1–W5; intersects NG-7B \"birth/history\" candidate; sub-question F2(a3): why Σ_B, why B₊ not B₋; HYPs: memory-version event reading, RECOG-OPEN-INTERSECTION · OPEN sub-items (v0.3.25): A1c-Q1′ — is x₀↦ℛ(x₀) (start state → complete token record) injective on U? neither answer established; known: record fibers lie on one C¹ level curve of Ψ_∞ in the chart row, hence have empty interior (RECOG-ALG-A1C-PHASE-C1-FIBER; the former SESSION conjecture proved, conditional on the Dyadic normal-form rows); connectedness open; record equality on the curve is equality of threshold codings; A1c-decoder — answered in bounded form ✓: certified outer admissibility windows on U for records with ≥2 usable slips under the (D5) [assuming:] (RECOG-ALG-A1C-JOINT-CONTRACTOR) — no identification, no uniqueness, no write mechanism, no Q1′ conclusion"
+ },
+ {
+  "id": "AR07-021",
+  "finding": "RECOG v0.3.25",
+  "where": "RECOG.R-D1",
+  "old_sha256": "0056b18e58d564112e5198a5912fcb8e4a4fa2578a4ab54e59b0e39d4053785a",
+  "new_sha256": "e0fb566aa0257df85f8e4a1013e0c8615ea9f4c2c3b837e721d460bc139fb1f9",
+  "old": "RECOG.R-D1 D-PROOF (c)/(b) | evidence custody and execution are separate: repository inventory recovers the named RECOG §8 scripts/packages except the Dyadic-side dyad_referee_p2b_v2.py; 24 hash-cited historical or unavailable items remain listed by the owner recovery inventory, not claimed here to have been executed. Arb/R9/B3/E2C proof runs retain their original execution provenance; no fresh scientific certificate replay is supplied by this Atlas. CHART-SHADOW has its written derivation and numerical script; absence of an additional symbolic certificate is not refutation. The reciprocal-amplitude and explicit-U existence theorems have in-ledger written proofs; the v0.3.24 artifacts RECOG-ART-A1B-SIXSTEP-DEFICIT and RECOG-ART-A3-QUADRATURE-TYPING are in evidence/recog/ with hashes (naming checked, not rerun here).",
+  "new": "RECOG.R-D1 D-PROOF (c)/(b) | evidence custody and execution are separate: repository inventory recovers the named RECOG §8 scripts/packages except the Dyadic-side dyad_referee_p2b_v2.py; 24 hash-cited historical or unavailable items remain listed by the owner recovery inventory, not claimed here to have been executed. Arb/R9/B3/E2C proof runs retain their original execution provenance; no fresh scientific certificate replay is supplied by this Atlas. CHART-SHADOW has its written derivation and numerical script; absence of an additional symbolic certificate is not refutation. The reciprocal-amplitude and explicit-U existence theorems have in-ledger written proofs; the v0.3.24 artifacts RECOG-ART-A1B-SIXSTEP-DEFICIT and RECOG-ART-A3-QUADRATURE-TYPING and the v0.3.25 artifacts RECOG-ART-R9-SHARPENED-ROWS, RECOG-ART-A1C-SHARPENED-SCHEDULE, RECOG-ART-A1C-DECODER, RECOG-ART-A1C-Q1PRIME-FIBER are in evidence/recog/ with hashes (naming checked, not rerun here; the v0.3.25 certificates were not rerun for the owner build either, release record §3)."
+ },
+ {
+  "id": "AR07-022",
+  "finding": "RECOG v0.3.25",
+  "where": "RECOG.R-A1 new",
+  "old_sha256": "a6a14e1c0a69f52b62a8b51396cfbcc35f719b6e9eba9725257aebb8f58488ae",
+  "new_sha256": "9ff8d2a0f48e3ebafac155b141f6ece0e631ad114be95ff41f457123a5d8e4da",
+  "old": "RECOG.R-D1 D-PROOF (c)/(b) | evidence custody and execution are separate: repository inventory recovers the named RECOG §8 scripts/packages except the Dyadic-side dyad_referee_p2b_v2.py; 24 hash-cited historical or unavailable items remain listed by the owner recovery inventory, not claimed here to have been executed. Arb/R9/B3/E2C proof runs retain their original execution provenance; no fresh scientific certificate replay is supplied by this Atlas. CHART-SHADOW has its written derivation and numerical script; absence of an additional symbolic certificate is not refutation. The reciprocal-amplitude and explicit-U existence theorems have in-ledger written proofs; the v0.3.24 artifacts RECOG-ART-A1B-SIXSTEP-DEFICIT and RECOG-ART-A3-QUADRATURE-TYPING and the v0.3.25 artifacts RECOG-ART-R9-SHARPENED-ROWS, RECOG-ART-A1C-SHARPENED-SCHEDULE, RECOG-ART-A1C-DECODER, RECOG-ART-A1C-Q1PRIME-FIBER are in evidence/recog/ with hashes (naming checked, not rerun here; the v0.3.25 certificates were not rerun for the owner build either, release record §3).\n",
+  "new": "RECOG.R-D1 D-PROOF (c)/(b) | evidence custody and execution are separate: repository inventory recovers the named RECOG §8 scripts/packages except the Dyadic-side dyad_referee_p2b_v2.py; 24 hash-cited historical or unavailable items remain listed by the owner recovery inventory, not claimed here to have been executed. Arb/R9/B3/E2C proof runs retain their original execution provenance; no fresh scientific certificate replay is supplied by this Atlas. CHART-SHADOW has its written derivation and numerical script; absence of an additional symbolic certificate is not refutation. The reciprocal-amplitude and explicit-U existence theorems have in-ledger written proofs; the v0.3.24 artifacts RECOG-ART-A1B-SIXSTEP-DEFICIT and RECOG-ART-A3-QUADRATURE-TYPING and the v0.3.25 artifacts RECOG-ART-R9-SHARPENED-ROWS, RECOG-ART-A1C-SHARPENED-SCHEDULE, RECOG-ART-A1C-DECODER, RECOG-ART-A1C-Q1PRIME-FIBER are in evidence/recog/ with hashes (naming checked, not rerun here; the v0.3.25 certificates were not rerun for the owner build either, release record §3).\nRECOG.R-A1 D-LINK (cross-owner dependency) | RECOG v0.3.25 proves RECOG-THM-A1C-SHARPENED-SCHEDULE and the A1c decoder blocks [assuming: the Dyadic (D5) row-A bridge proof constants 0.79246, 0.36915 of the LPHASE row-A proof] and RECOG-THM-R9-SHARPENED-ROWS-C7 [assuming: C₇≤85.1 / 27.7, Dyadic's published NF-REM certificate values rounded up]; neither is a Dyadic theorem statement, so nothing in v0.3.25 is unconditional on them; RECOG's two requests to Dyadic (register (D5) and the C₇ ceilings as owner statements) are prepared in its release record §4, not filed as pipe items. The claim audit of the build found the constants present in dyad-v6.4.22 at statement level. RECOG still pins NUMGEN v1.20.8 (repin to v1.21 is RECOG's separate maintenance).\n"
+ },
+ {
+  "id": "AR07-023",
+  "finding": "TDRG TB-09",
+  "where": "state node",
+  "old_sha256": "bb1ab2f75bc11c96f55ec0ffc400b547f984e8a043acc5f21885d6977d2f9061",
+  "new_sha256": "09aecd263c15098c8672e9084c909eba7573443cd9a416083f2fd2ea590b20fb",
+  "old": "*TDRG:state DEF | ℤ_N, N even (SG-4, unique antipode); X_n=(θ₁..θ_M, δ₁..δ_M)∈⊔_{M≥2}ℤ_N^{2M}; M grows at star blow-up; physical state = quotient by global phase θ_i↦θ_i+c; Δ_ij=(θ_i−θ_j) mod N; relative advance d_ij=δ_i−δ_j; kinematics Δ_{ij,n+1}=Δ_{ij,n}+d_{ij,n} | ≡ OFN IMP-O08-02 | ! OFN Finding A: common token shift NOT a full-model gauge (D5.L5 TDRG.G3) | AZ cites as phantom \"TDRG-ZN-STATE\" | >NUMGEN imp-DISC (RID unavailable) @TDRG§6.1",
+  "new": "TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) | ℤ_N, N even (SG-4, unique antipode); X_n=(θ₁..θ_M, δ₁..δ_M)∈⊔_{M≥2}ℤ_N^{2M}; M grows at star blow-up; physical state = quotient by global phase θ_i↦θ_i+c; relabelling covariance declared (SG-14, v2.12.14); Δ_ij=(θ_i−θ_j) mod N; relative advance d_ij=δ_i−δ_j; kinematics Δ_{ij,n+1}=Δ_{ij,n}+d_{ij,n} (TDRG-DEF-PHYSICAL-STATE, -REL-ADVANCE, -KINEMATICS) | ≡ OFN IMP-O08-02 | ! OFN Finding A: common token shift NOT a full-model gauge — statement accepted by TDR-G v2.12.14 §7, outside SG-14's group | AZ's \"TDRG-ZN-STATE\" resolves through the v2.12.14 §7 alias map | >NUMGEN imp-DISC (RID available since v2.12.14; NUMGEN repin is NUMGEN's) @TDRG§6.1"
+ },
+ {
+  "id": "AR07-024",
+  "finding": "TDRG TB-09",
+  "where": "band node",
+  "old_sha256": "70fc3e99be6ca9b490fa7962d0f8872d5389046dc9314a00f6a9569de663a260",
+  "new_sha256": "3a47cb0811dc4769ef34ea28f09d4540452e4e4b293b32276a03d80506b9e9e2",
+  "old": "*TDRG:band DEF | 𝒟_k={Δ: dist(Δ,N/2)≤k}; E_def={(i,j): Δ_ij∈𝒟_k}; canonical narrow band k<N/6 (SG-5) | ≡ OFN IMP-O08-03 @TDRG§6.1",
+  "new": "TDRG-DEF-BAND DEF (with TDRG-DEF-EDGE-SET, -NARROW-BAND; v2.12.14) | 𝒟_k={Δ: dist(Δ,N/2)≤k}; E_def={(i,j): Δ_ij∈𝒟_k}; canonical narrow band k<N/6 (SG-5) | ≡ OFN IMP-O08-03 @TDRG§6.1"
+ },
+ {
+  "id": "AR07-025",
+  "finding": "TDRG TB-09",
+  "where": "CONV-TICK node",
+  "old_sha256": "00896a4654e5e3803f7e62c922a2f9184b2d6cda1040193e80a305b7dc61b757",
+  "new_sha256": "57150d38ed74a4bbe287053587fd288d19c2aa3d2017a899ec945932b9ec44c9",
+  "old": "CONV-TICK DEF·ENG PASS v18 | (1) θ_i+=δ_i; (2) build E_def post-advance; (3) components; (4) classify isolated edge/path/cycle/clean star/multistar/tie; (5) policy on pre-update classification; (6) apply swaps/cycles/bound decisions/births synchronously against snapshot, no same-tick re-advance; (7) record observables (motif quantities pre-birth, pre-policy) | ≡ OFN IMP-O08-14 @TDRG",
+  "new": "TDRG-DEF-CONV-TICK DEF·ENG PASS v18 (alias CONV-TICK) | (1) θ_i+=δ_i; (2) build E_def post-advance; (3) components; (4) classify isolated edge/path/cycle/clean star/multistar/tie; (5) policy on pre-update classification; (6) apply swaps/cycles/bound decisions/births synchronously against snapshot, no same-tick re-advance; (7) record observables (motif quantities pre-birth, pre-policy) | ≡ OFN IMP-O08-14 @TDRG"
+ },
+ {
+  "id": "AR07-026",
+  "finding": "TDRG TB-09",
+  "where": "swap node",
+  "old_sha256": "17f6183def5e698067eee4eb5499db486c732b66dc0d859de8408e356a661f55",
+  "new_sha256": "a0ff13c3ea883d9cf52f70cb766e700ce88c59fcbb9ee31341598775a953e3eb",
+  "old": "TDRG-SWAP DEF | single defect edge {A,B}: (δ_A,δ_B)↦(δ_B,δ_A) @TDRG",
+  "new": "TDRG-DEF-SWAP DEF | single defect edge {A,B}: (δ_A,δ_B)↦(δ_B,δ_A) @TDRG"
+ },
+ {
+  "id": "AR07-027",
+  "finding": "TDRG TB-09",
+  "where": "P3CYC node",
+  "old_sha256": "8e2160d3bd04895959cf1ccbd28a35ec7e64d45f0adf938da0343d21e82be69f",
+  "new_sha256": "68b0c8645bc681c80e26ebf3e4d2201bf2b593dc09f7d56f56c3d52bf666317e",
+  "old": "CONV-P3CYC DEF·script-certified v18 | path [v₁,v₂,v₃] (and general P_n): successor shift (δ_{v1},δ_{v2},δ_{v3})↦(δ_{v2},δ_{v3},δ_{v1}), delta[v]=old[path[(i+1)%len]]; convention flips ~20% of three-body finite-horizon fates; coarse BIND3 taxonomy convention-robust | ≡ OFN IMP-O08-15 @TDRG",
+  "new": "TDRG-DEF-CONV-P3CYC DEF·script-certified v18 (alias CONV-P3CYC) | path [v₁,v₂,v₃] (and general P_n): successor shift (δ_{v1},δ_{v2},δ_{v3})↦(δ_{v2},δ_{v3},δ_{v1}), delta[v]=old[path[(i+1)%len]]; convention flips ~20% of three-body finite-horizon fates; coarse BIND3 taxonomy convention-robust | ≡ OFN IMP-O08-15 @TDRG"
+ },
+ {
+  "id": "AR07-028",
+  "finding": "TDRG TA-01",
+  "where": "orient node",
+  "old_sha256": "e1a2497ad5b47913da07f9bd4d9018e8dc044405d066b48e1895fda481ef1539",
+  "new_sha256": "6fdfac06a2eae5252c317618a2de77cdfb30b751c15989902446ffac00e1a6e4",
+  "old": "TDRG-ORIENT DEF | P_n: S=Σ signed_defect_error(θ_{v_i},θ_{v_{i+1}},N); S>0 forward, S<0 reversed; S=0 ⇒ endpoint advance E=signed_centered(δ_{v_n}−δ_{v_1}); S=E=0 ⇒ balanced path-tie (no gauge-invariant orientation) | ! NUMGEN P2 exposure: S=0 ∧ |E|=N/2 also degenerate (D5.L5 X1) @TDRG",
+  "new": "TDRG-DEF-ORIENT DEF [COR v2.12.14] (alias TDRG-ORIENT) | P_n listed [v₁..v_n]: S=Σ signed_defect_error(θ_{v_i},θ_{v_{i+1}},N) (TDRG-DEF-SIGNED-DEFECT-ERROR; reversal-odd on defect edges since |·|≤k<N/6); S>0 forward, S<0 reversed; S=0 ⇒ E=signed_centered(δ_{v_n}−δ_{v_1},N) (TDRG-DEF-SIGNED-CENTERED, representative in (−N/2,N/2] — the half-open choice makes signed_centered(±N/2)=+N/2): 0<E<N/2 forward, −N/2<E<0 reversed; S=0 ∧ 2E≡0 (E∈{0,N/2}) ⇒ balanced path-tie (no orientation from the declared invariants; policies treat it as before: bound_path_tie/bound_symmetric inert, trap/bound_multistar ambiguous) | superseded completion: v2.12.13 declared the tie only at S=E=0, and at S=0 ∧ E≡N/2 the v17/v18 engine oriented \"forward\" relative to the node-ID listing (raw_ordered_path) — the arbitrary-label fallback Appendix B rejects; every motif-log and BIND3 result stems from it and is kept [conv: v18 path orientation] EV-NOT-RERUN | reference implementation evidence/tdrg/scripts/tdrg_orient_v2_12_14.py (TDRG-ART-ORIENT-V2-12-14) | >NUMGEN DISC-1/DISC-2 (re-annotation NUMGEN's), OFN REQ-O09-05 (answered) @TDRG§6.3"
+ },
+ {
+  "id": "AR07-029",
+  "finding": "TDRG TA-01/TA-08/N1/N2",
+  "where": "new orientation nodes",
+  "old_sha256": "0b256ef63323fe761885b123368fefea0be3864890257792ebe022d7e3d8a194",
+  "new_sha256": "b27fd36e399b4d9683f084a037ad265ce9c0ac527e6cfd28c6b390c50a553156",
+  "old": "TDRG-DEF-ORIENT DEF [COR v2.12.14] (alias TDRG-ORIENT) | P_n listed [v₁..v_n]: S=Σ signed_defect_error(θ_{v_i},θ_{v_{i+1}},N) (TDRG-DEF-SIGNED-DEFECT-ERROR; reversal-odd on defect edges since |·|≤k<N/6); S>0 forward, S<0 reversed; S=0 ⇒ E=signed_centered(δ_{v_n}−δ_{v_1},N) (TDRG-DEF-SIGNED-CENTERED, representative in (−N/2,N/2] — the half-open choice makes signed_centered(±N/2)=+N/2): 0<E<N/2 forward, −N/2<E<0 reversed; S=0 ∧ 2E≡0 (E∈{0,N/2}) ⇒ balanced path-tie (no orientation from the declared invariants; policies treat it as before: bound_path_tie/bound_symmetric inert, trap/bound_multistar ambiguous) | superseded completion: v2.12.13 declared the tie only at S=E=0, and at S=0 ∧ E≡N/2 the v17/v18 engine oriented \"forward\" relative to the node-ID listing (raw_ordered_path) — the arbitrary-label fallback Appendix B rejects; every motif-log and BIND3 result stems from it and is kept [conv: v18 path orientation] EV-NOT-RERUN | reference implementation evidence/tdrg/scripts/tdrg_orient_v2_12_14.py (TDRG-ART-ORIENT-V2-12-14) | >NUMGEN DISC-1/DISC-2 (re-annotation NUMGEN's), OFN REQ-O09-05 (answered) @TDRG§6.3\n",
+  "new": "TDRG-DEF-ORIENT DEF [COR v2.12.14] (alias TDRG-ORIENT) | P_n listed [v₁..v_n]: S=Σ signed_defect_error(θ_{v_i},θ_{v_{i+1}},N) (TDRG-DEF-SIGNED-DEFECT-ERROR; reversal-odd on defect edges since |·|≤k<N/6); S>0 forward, S<0 reversed; S=0 ⇒ E=signed_centered(δ_{v_n}−δ_{v_1},N) (TDRG-DEF-SIGNED-CENTERED, representative in (−N/2,N/2] — the half-open choice makes signed_centered(±N/2)=+N/2): 0<E<N/2 forward, −N/2<E<0 reversed; S=0 ∧ 2E≡0 (E∈{0,N/2}) ⇒ balanced path-tie (no orientation from the declared invariants; policies treat it as before: bound_path_tie/bound_symmetric inert, trap/bound_multistar ambiguous) | superseded completion: v2.12.13 declared the tie only at S=E=0, and at S=0 ∧ E≡N/2 the v17/v18 engine oriented \"forward\" relative to the node-ID listing (raw_ordered_path) — the arbitrary-label fallback Appendix B rejects; every motif-log and BIND3 result stems from it and is kept [conv: v18 path orientation] EV-NOT-RERUN | reference implementation evidence/tdrg/scripts/tdrg_orient_v2_12_14.py (TDRG-ART-ORIENT-V2-12-14) | >NUMGEN DISC-1/DISC-2 (re-annotation NUMGEN's), OFN REQ-O09-05 (answered) @TDRG§6.3\nTDRG-ALG-ORIENT-NOGO ALG (v2.12.14) | reversal maps S↦−S always and E↦−E except when δ_{v_n}−δ_{v_1}≡N/2, where signed_centered gives +N/2 for both listings ⇒ on S=0 ∧ E≡N/2 the pair (S,E) is reversal-invariant: any selector that is a function of (S,E) alone is the tie or depends on the listing; the extended tie is the declared rule's covariant completion and adds no input | recorded alternative, not adopted: for P₃ with centre c, G=sc(δ_{v₁}−δ_c)−sc(δ_{v₃}−δ_c) is reversal-odd and never 0 on the stratum (δ_{v₃}−δ_{v₁}≡N/2≠0; atlas check C2, exhaustive N=24) — admitting the centre token would give a covariant non-tie rule for P₃ (palindromic ties for longer paths), a law choice of the TDR-19 kind kept for the later sensitivity campaign (make_orient_g_alternative) @TDRG§6.3\nTDRG-ALG-ORIENT-ANTIPODAL-FIXTURE ALG | sc: one explicit state; pinned v18 engine | N=24, k=1, θ_pre=(0,11,12), δ=(0,1,12) → θ=(0,12,0), defect path 0–1–2, S=0, E=+12=N/2 under both listings; exchanging the endpoint labels changes the v18 outcome (δ′=(1,12,0), not the relabelled image); under TDRG-DEF-ORIENT the event is a tie and the step equivariant (G-alternative δ′=(12,0,1), also equivariant) | negative control of the v2.12.14 checker (gate C10) | ev evidence/tdrg/disposition/antipodal_fixture.txt @TDRG§6.12\nTDRG-NUM-ORIENT-EQUIVARIANCE-N24 NUM | sc: N=24; three nodes exhaustive over the 331,776 gauge-reduced states at k=1 and k=3, generators (01),(12) of S₃; four nodes 100,000 random (state, k∈{1,2,3}, π∈S₄) samples; bound_symmetric (and largest_center at four nodes); the pinned engine's own step_universe with only orient_path exchanged | failures per generator: v18 72/72 (k=1), 168/168 (k=3); TDRG-DEF-ORIENT 0; G-alternative 0; four nodes v18 112, both covariant rules 0; global phase shift 0 everywhere | a finite check, not a theorem for all N or all policies | ev evidence/tdrg/disposition/owner_relabel_equivariance_check.py (2f54e0fc…) | atlas census (independent, three nodes, k=1): under v18 77 of 9,800 eventual cycles contain a listing-dependent event, 16,322 of 331,776 states (4.9 %) flow into one; under the extended tie 9,789 cycles, 66 with a tie on the stratum; whether any of the 3,456 retrigger-entry or 10,368 one-pass BIND3 ICs reaches the stratum is undetermined (IC script missing) | ev evidence/atlas/tdrg/atlas_tdrg_orientation_covariance_check.py (5684da96…) @TDRG§6.12\nTDRG-ALG-MIRROR-NOT-STEP-SYMMETRY ALG (v2.12.14) | the mirror (θ,δ)↦(−θ,−δ) is not a step symmetry at P₃ events: the mirrored state orients reversed, so the successor shift becomes a predecessor shift ((δ₁,δ₂,δ₃)↦(δ₂,δ₃,δ₁) vs (−δ₃,−δ₁,−δ₂)≠−(δ₂,δ₃,δ₁) unless the three tokens are equal); 60,000 random three-node states, N=24, k=1: 2,661 equivariance failures, all among the 2,703 states with a P₃ event; the §6.12 \"±d mirror symmetry\" is an identity of class inventories (mirror-inventory check), not equivariance | ev evidence/tdrg/disposition/mirror_probe.py @TDRG§6.12\nTDRG-ALG-LARGEST-CENTER-ID-TIEBREAK ALG (v2.12.14; owner finding N1) | sc: non-canonical branch largest_center | choose_largest_center sorts centres by (−degree, node id): between equal-degree multistar centres the one with the smaller ID fires — not relabelling-covariant (K_{2,3} fixture, N=24, k=1, two centres of equal degree 3 with tokens 1 and 2: exchanging the centre labels changes which fires); bound_symmetric (binds) and all_centers (all fire, modulo newborn labels) are equivariant | recorded exception to SG-14; the largest_center policy-fate results carry it as a scope note EV-NOT-RERUN; resolution belongs with TDR-19 (TDRG.G10) | ev evidence/tdrg/disposition/multistar_fixture.py @TDRG§6.6\n"
+ },
+ {
+  "id": "AR07-030",
+  "finding": "TDRG TB-09",
+  "where": "cycle node",
+  "old_sha256": "6ceea8817602882c82376718575bc0e8fa126d3f2c03b3fa8ee5f7f996ecfac8",
+  "new_sha256": "dec392860cc86c1ec032e0eed01f39aa7e9eb67e292eb471ddd0253c50525c61",
+  "old": "TDRG-CYCLE DEF | all C_n, n≥4: inert bound vortices (no birth, no momentum transfer) @TDRG",
+  "new": "TDRG-DEF-CYCLE-BOUND DEF | all C_n, n≥4: inert bound vortices (no birth, no momentum transfer) @TDRG"
+ },
+ {
+  "id": "AR07-031",
+  "finding": "TDRG TB-09",
+  "where": "star node",
+  "old_sha256": "eef7b38fa827ae7cdc9c82f71b5f8753441d2be2714425b403c1579e2d13f305",
+  "new_sha256": "344bcc0143c7f46e4215cb313bc07fcfa2db1b2c6e35db457b7a3861ef7c06fb",
+  "old": "*TDRG:star DEF | K_{1,3} center A: new node E, θ_E=θ_A+N/2, δ_E=δ_A; center δ_A↦−δ_A; node count not conserved | ≡ OFN IMP-O08-09 | < RTG-OFN-ALG-STAR-TOKEN-SHIFT (equivariant under common token shift c iff 2c=0) @TDRG",
+  "new": "TDRG-DEF-STAR DEF | K_{1,3} center A: new node E, θ_E=θ_A+N/2, δ_E=δ_A; center δ_A↦−δ_A; node count not conserved | ≡ OFN IMP-O08-09 | < RTG-OFN-ALG-STAR-TOKEN-SHIFT (equivariant under common token shift c iff 2c=0) @TDRG"
+ },
+ {
+  "id": "AR07-032",
+  "finding": "TDRG TC-15",
+  "where": "star node OFN edge",
+  "old_sha256": "344bcc0143c7f46e4215cb313bc07fcfa2db1b2c6e35db457b7a3861ef7c06fb",
+  "new_sha256": "386029f808a2d24edba6796c256ccb2d46f12e59a145e8b41065f62eb5ee7506",
+  "old": "TDRG-DEF-STAR DEF | K_{1,3} center A: new node E, θ_E=θ_A+N/2, δ_E=δ_A; center δ_A↦−δ_A; node count not conserved | ≡ OFN IMP-O08-09 | < RTG-OFN-ALG-STAR-TOKEN-SHIFT (equivariant under common token shift c iff 2c=0) @TDRG",
+  "new": "TDRG-DEF-STAR DEF | K_{1,3} center A: new node E, θ_E=θ_A+N/2, δ_E=δ_A; center δ_A↦−δ_A; node count not conserved | ≡ OFN IMP-O08-09 | < RTG-OFN-ALG-STAR-TOKEN-SHIFT (equivariant under common token shift c iff 2c≡0; statement accepted by TDR-G v2.12.14 §7, custody transfer XFER-O08-01 deferred to v2.13) @TDRG"
+ },
+ {
+  "id": "AR07-033",
+  "finding": "TDRG TB-09",
+  "where": "multistar node",
+  "old_sha256": "20fa223df62f8363463b427f2e46b4080ceb0345fea0e8cf6b2d20cc9506e9ec",
+  "new_sha256": "93a084b748f7e076d550b7cf192941d16cc65bdc59ce83050bbeeb365dd40553",
+  "old": "TDRG-MULTISTAR DEF | ≥2 valid centers ⇒ policy fork: trap (ambiguous, no birth) · bound_multistar (inert; path tie ambiguous) · bound_path_tie (both inert) · bound_symmetric (canonical clean branch = multistar + balanced path-tie bound) · largest_center (one fires) · all_centers (all fire) @TDRG",
+  "new": "TDRG-DEF-MULTISTAR DEF (with TDRG-DEF-CANONICAL-BRANCH) | ≥2 valid centers ⇒ policy fork: trap (ambiguous, no birth) · bound_multistar (inert; path tie ambiguous) · bound_path_tie (both inert) · bound_symmetric (canonical clean branch = multistar + balanced path-tie bound) · largest_center (one fires) · all_centers (all fire) @TDRG"
+ },
+ {
+  "id": "AR07-034",
+  "finding": "TDRG TA-01",
+  "where": "multistar node tie",
+  "old_sha256": "93a084b748f7e076d550b7cf192941d16cc65bdc59ce83050bbeeb365dd40553",
+  "new_sha256": "31b6550ed379832e778b0f11f606cc8b44c22f3f55533bd7d027ce0de46c92f4",
+  "old": "TDRG-DEF-MULTISTAR DEF (with TDRG-DEF-CANONICAL-BRANCH) | ≥2 valid centers ⇒ policy fork: trap (ambiguous, no birth) · bound_multistar (inert; path tie ambiguous) · bound_path_tie (both inert) · bound_symmetric (canonical clean branch = multistar + balanced path-tie bound) · largest_center (one fires) · all_centers (all fire) @TDRG",
+  "new": "TDRG-DEF-MULTISTAR DEF (with TDRG-DEF-CANONICAL-BRANCH) | ≥2 valid centers ⇒ policy fork: trap (ambiguous, no birth) · bound_multistar (inert; path tie ambiguous) · bound_path_tie (both inert) · bound_symmetric (canonical clean branch = multistar + balanced path-tie bound; the tie includes S=0 ∧ E≡N/2 since v2.12.14) · largest_center (one fires) · all_centers (all fire) @TDRG"
+ },
+ {
+  "id": "AR07-035",
+  "finding": "TDRG TB-09",
+  "where": "holonomy node",
+  "old_sha256": "9eb5f75b26123defde0d8b5f24d65201bbb612835c6f549b8e0c6c012c5eccbe",
+  "new_sha256": "ad99cfea3798ac29510fb10e0ac13c25fad14e5f80618e6193403d533386a6f1",
+  "old": "*TDRG:holonomy THM | Δ_AB+Δ_BC+Δ_CA≡0 mod N | ≡ OFN IMP-O08-04 (flat) @TDRG",
+  "new": "TDRG-THM-HOLONOMY THM | Δ_AB+Δ_BC+Δ_CA≡0 mod N | ≡ OFN IMP-O08-04 (flat) @TDRG"
+ },
+ {
+  "id": "AR07-036",
+  "finding": "TDRG TC-16",
+  "where": "narrow-band node",
+  "old_sha256": "6d0b2cc03fb5e90bf7175284acd16cd0618fe477ae5802dc0d166d4cc1d69cf1",
+  "new_sha256": "0999992805917b3cec26b9ffa7c40c5906ccce4f83dea191153fff90d7d067c3",
+  "old": "*TDRG:narrow-band THM | k<N/6 ⇒ |E_def∩K₃|≤2 (no fully defective K₃) | ≡ OFN IMP-O08-04B | ≡~ AZ-ALG-ANTIPODAL-LOWORDER(1) at L=3; AZ odd-L clause strictly generalizes (AZ.A4, TDRG.G7) @TDRG",
+  "new": "TDRG-THM-NARROW-BAND-EXCLUSION THM | k<N/6 ⇒ |E_def∩K₃|≤2 (no fully defective K₃) | ≡ OFN IMP-O08-04B | v2.12.14 cites AZ-ALG-ANTIPODAL-LOWORDER as AZ's strict generalisation (odd L impossible for Lk<N/2); the same arithmetic in two homes, cross-cited since v2.12.14 @TDRG"
+ },
+ {
+  "id": "AR07-037",
+  "finding": "TDRG TB-09",
+  "where": "recurrence node",
+  "old_sha256": "d8f2b7cf3c50fdcf5df8afc5aa6d346e23a5e35f0efa3dbd0e13295d308ff843",
+  "new_sha256": "83744dca0e3a81dea3473d7793ad97b9392c095550995c4adf6d95d1f1924234",
+  "old": "*TDRG:recurrence THM | finite state set under fixed node cap + deterministic rule ⇒ every orbit of G_perm^(M) eventually periodic; no chaos in capped system | ≡ OFN IMP-O08-08 | >NUMGEN imp-DISC @TDRG",
+  "new": "TDRG-THM-RECURRENCE THM | finite state set under fixed node cap + deterministic rule ⇒ every orbit of G_perm^(M) eventually periodic; no chaos in capped system | ≡ OFN IMP-O08-08 | >NUMGEN imp-DISC @TDRG"
+ },
+ {
+  "id": "AR07-038",
+  "finding": "TDRG TB-09",
+  "where": "reach node",
+  "old_sha256": "52715dc278c5523c37bf6116e67d9f9c886caf4f52a147dead444f0bde15bae8",
+  "new_sha256": "39ced49d314c24ceac208bf4d63a21e307d6b4adde7aa35bf961e9eba60c3561",
+  "old": "*TDRG:reach-k0 THM | k=0 two-node: interaction iff gcd(d,N)|(N/2−Δ₀); unreachable pairs = superselection sectors @TDRG",
+  "new": "TDRG-THM-REACHABILITY-K0 THM | k=0 two-node: interaction iff gcd(d,N)|(N/2−Δ₀); unreachable pairs = superselection sectors @TDRG"
+ },
+ {
+  "id": "AR07-039",
+  "finding": "TDRG TB-09",
+  "where": "LEM-REACH node",
+  "old_sha256": "b6e6bb727919fd303cd822ab6f1b4209153912022d31f0fb646f072b51800dd4",
+  "new_sha256": "cebfb60bfa42d506742b03dc799a7b48b15e5a882e38d842395b24f03c14c3c5",
+  "old": "LEM-REACH ALG (NUM exhaustive even N≤40, 77,552 band cases) | free orbit Δ_t=Δ₀+td = coset Δ₀+gℤ_N, g=gcd(d,N); band reachable ⟺ 𝒟_k∩(Δ₀+gℤ_N)≠∅ ⟺ dist_N(N/2−Δ₀,gℤ_N)≤k; superselection persists for k>0 (two nodes); first return t*=N/g | supersedes \"every orbit sweeps the band\" | >OFN IMP-O08-05, AZ-B @TDRG",
+  "new": "TDRG-ALG-LEM-REACH ALG (alias LEM-REACH; NUM exhaustive even N≤40, 77,552 band cases) | free orbit Δ_t=Δ₀+td = coset Δ₀+gℤ_N, g=gcd(d,N); band reachable ⟺ 𝒟_k∩(Δ₀+gℤ_N)≠∅ ⟺ dist_N(N/2−Δ₀,gℤ_N)≤k; superselection persists for k>0 (two nodes); first return t*=N/g | supersedes \"every orbit sweeps the band\" | >OFN IMP-O08-05, AZ-B @TDRG"
+ },
+ {
+  "id": "AR07-040",
+  "finding": "TDRG TB-09",
+  "where": "LEM-NOANNIHIL node",
+  "old_sha256": "07d18144b9b176ca8ca1d4eb8dc3b3dc5aa854137460b69f511e032a3bb9a3eb",
+  "new_sha256": "59177fe0966be4163a3098e88bc710b79e9771b211250b7591d048c573563ceb",
+  "old": "LEM-NOANNIHIL ALG (NUM N=2–40 all states) | F(Δ,d)=(Δ+d,d) ⇒ F^t(Δ₀,d₀)=(0,0) ⟺ (Δ₀,d₀)=(0,0); annihilation := return to (0,0), not Δ=0 | replaces OFN \"trap\" axiom | >OFN IMP-O08-06 @TDRG",
+  "new": "TDRG-ALG-LEM-NOANNIHIL ALG (alias LEM-NOANNIHIL; NUM N=2–40 all states) | F(Δ,d)=(Δ+d,d) ⇒ F^t(Δ₀,d₀)=(0,0) ⟺ (Δ₀,d₀)=(0,0); annihilation := return to (0,0), not Δ=0 | replaces OFN \"trap\" axiom | >OFN IMP-O08-06 @TDRG"
+ },
+ {
+  "id": "AR07-041",
+  "finding": "TDRG TA-05",
+  "where": "LEM-RETRIG node",
+  "old_sha256": "bfcd1cc28be501d6e0dc54dad5250457668cd0a81050db591e625b3ef8863d88",
+  "new_sha256": "0606e5a1c8cdde7ff51c304bc73ce42e60fe5fdf17724c34211138f8eebec45b",
+  "old": "LEM-RETRIG ALG (NUM even N≤40, k≤N/6) | sc: isolated dyad, CONV-TICK | ε=Δ−N/2∈B_k=[−k,k]; swap d↦−d, ε′=ε−d; retrigger iff ε∈B_k∩(B_k+d); exists iff |d|_c≤2k; all offsets retrigger iff d=0; realized overlap = period-2 bound state (ε,d)↔(ε−d,−d) — at d=0 a fixed point (TDRG.G4) | >OFN IMP-O08-07, AZ-B @TDRG",
+  "new": "TDRG-ALG-LEM-RETRIG ALG (alias LEM-RETRIG; NUM even N≤40, k≤N/6) | sc: isolated dyad, CONV-TICK | ε=Δ−N/2∈B_k=[−k,k]; swap d↦−d, ε′=ε−d; retrigger iff ε∈B_k∩(B_k+d); exists iff |d|_c≤2k; all offsets retrigger iff d=0; realized overlap: retrigger on every tick, map period dividing 2 — least period 2 for d≠0, (ε,0) a fixed point at d=0 (v2.12.14 wording; the band |d|_c≤2k<N/3 never reaches N/2, so d=0 is the only degenerate case) | >OFN IMP-O08-07, AZ-B @TDRG"
+ },
+ {
+  "id": "AR07-042",
+  "finding": "TDRG TA-06",
+  "where": "LEM-SPECCONS node",
+  "old_sha256": "10064ccf01ddcb04aae8cf9389d0d2948047872253e025f3cfb78af1d523f450",
+  "new_sha256": "98f27ea26cac7e66d5a5824817beb967d61392084f72175972d0ced960588b4e",
+  "old": "LEM-SPECCONS ALG (NUM 3000 ICs × 500 steps, 0 violations) | sc: 3 nodes, no star | free advance fixes δ; swap = signed transposition of (d_AB,d_BC,d_CA) (Σ≡0); P₃ shift = cyclic permutation; ties = identity ⇒ multiset {|d_AB|_c,|d_BC|_c,|d_CA|_c} exactly conserved, which implies (not equivalent to) gcd-spacing multiset conservation (TDRG.G5 ≡ AZ.A6) | n-node signed-permutation invariance CAND for swap/path sectors; across star OPEN (SG-12) | >OFN IMP-O08-16, AZ-B, NUMGEN DISC @TDRG",
+  "new": "TDRG-ALG-LEM-SPECCONS ALG (alias LEM-SPECCONS; NUM 3000 ICs × 500 steps, 0 violations) | sc: 3 nodes, no star | free advance fixes δ; swap = signed transposition of (d_AB,d_BC,d_CA) (Σ≡0); P₃ shift = cyclic permutation; ties = identity ⇒ multiset {|d_AB|_c,|d_BC|_c,|d_CA|_c} exactly conserved; therefore, in particular, the gcd-spacing multiset is conserved (v2.12.14 wording; converse fails: N=24, |d|_c=1 and 5 share gcd 1); the extended balanced tie of TDRG-DEF-ORIENT is identity too, so the lemma is unchanged by the ruling | n-node signed-permutation invariance CAND for swap/path sectors; across star OPEN (SG-12) | >OFN IMP-O08-16, AZ-B, NUMGEN DISC @TDRG"
+ },
+ {
+  "id": "AR07-043",
+  "finding": "TDRG TA-04",
+  "where": "bulk-fits node",
+  "old_sha256": "f5655a47e156cb08f0526c37c69b9bf7ca16b8cfc75d43868a245dd2fc6157a4",
+  "new_sha256": "26012240bf81bc9271f95151e51508dfbdec05b42a4aaf72dc28dcf89c893048",
+  "old": "*TDRG:bulk-fits NUM strong (fits) / HEUR strong (exponent reading) | sc-range tagged (TDRG.G1). FULL range N=120–1440, t≥4001, M≤500: C_birth 9.514N^{−1.593} (R² 0.993); C_component 0.7366N^{−0.757} (0.939); χ composite (cs/row ~N^{−0.73}); B_bulk/step 1.041N^{−0.869} (0.973) [headline α=0.869 = full-range composite]; O_bulk/step 0.1094N^{+0.723} (0.972); M_bulk 419.5N^{−0.295} (0.881); O_slot/step 53.69N^{+0.709} (0.976); ψ_slot 0.00204N^{+0.014} (0.015, intensive); consistency 0.709+0.014=0.723, 0.869≈1.593−0.723. HIGH-N window 480–1440 (v2.12.1+, Exp-0): C_component N^{−0.936}, χ N^{+0.697}, C_birth N^{−1.633} (R² 0.976), O/step N^{+0.903}, B/step N^{−0.730}. Superseded: owner §1 check \"1.593≈0.757+0.836\" uses the superseded χ exponent 0.836 | >AZ-B (quotes 0.869) @TDRG§1,§5",
+  "new": "*TDRG:bulk-fits NUM (fits; one grade since v2.12.14) / HEUR (exponent reading beyond the scan) | range-tagged by the owner (v2.12.14 §1, §5, §6.8). FULL range N=120–1440, t≥4001, M≤500, k/N=1/15, T=5000, bound_symmetric: C_birth 9.514N^{−1.593} (R² 0.993); C_component 0.7366N^{−0.757} (0.939); χ composite (cs/row ~N^{−0.73}); B_bulk/step 1.041N^{−0.869} (0.973) [headline α=0.869 = full-range composite, window-dependent]; O_bulk/step 0.1094N^{+0.723} (0.972); M_bulk 419.5N^{−0.295} (0.881); O_slot/step 53.69N^{+0.709} (0.976); ψ_slot 0.00204N^{+0.014} (0.015, intensive); consistency 0.709+0.014=0.723, 0.869≈1.593−0.723. HIGH-N window 480–1440 (owner §2 OPEN-POLICY-GEOMETRY Exp-0 line): C_component N^{−0.936}, χ N^{+0.697}, C_birth N^{−1.633} (R² 0.976), O/step N^{+0.903}, B/step N^{−0.730}. The former §1 check \"1.593≈0.757+0.836\" (superseded χ exponent) is withdrawn as [COR] in v2.12.14 | >AZ-B (quotes 0.869) @TDRG§1,§5"
+ },
+ {
+  "id": "AR07-044",
+  "finding": "TDRG TA-04",
+  "where": "crystallization node",
+  "old_sha256": "b3c793ad45d749db412d73b0b68cb5d1491c5e7fb27b085b3a9053ba4d9824ad",
+  "new_sha256": "1d61af28f15cc63db04a2326a5df6dbba691be30b7de28b17f0a5e3cc0944442",
+  "old": "*TDRG:crystallization HEUR strong | B_bulk/step→0 as N→∞ by extrapolation; no plateau through N=1080; sign unaffected by range choice; not theorem-grade (SG-6) | >TDR-22b, TDR-24C @TDRG",
+  "new": "*TDRG:crystallization HEUR (v2.12.14: extrapolation grade) | B_bulk/step→0 as N→∞ by extrapolation; no plateau through N=1080; sign unaffected by range choice; not theorem-grade (SG-6) | >TDR-22b, TDR-24C @TDRG"
+ },
+ {
+  "id": "AR07-045",
+  "finding": "TDRG TB-09/TA-08",
+  "where": "BIND3-CYCLE node",
+  "old_sha256": "4b1b58f6ba6bbefe12f468c51650a182ed855de806ab2900012e41bc73f87f44",
+  "new_sha256": "6922d23611daa0ffcea030156c3bfbd17a28181e6bd2a027aca7673e887c5bb5",
+  "old": "BIND3-CYCLE-N24K1 ALG/NUM strong | N=24, k=1, 3456 post-advance retrigger-entry ICs (|d|_c≤2), exact cycle enumeration, both P₃ conventions (3332/124 each): multi-pair recurrent scattering 96.4%, pure AB-bound 3.6%, free/single-pair 0%; bond transfer in-cycle 81.8%; preperiod median 0 (max 830); period median 138, max 1638, 79 lengths (dominant 15, 48, 357, 396, 228, 1638); fully defective K₃=0 | isolated period-2 dyad not a persistent primitive | horizon-based percentages RETRACTED | >NUMGEN DISC-1 (same 3456-seed panel) @TDRG",
+  "new": "TDRG-ALG-BIND3-CYCLE-N24K1 ALG + NUM strong (alias BIND3-CYCLE-N24K1; [conv: v18 path orientation], EV-NOT-RERUN, census bound in TDRG-NUM-ORIENT-EQUIVARIANCE-N24) | N=24, k=1, 3456 post-advance retrigger-entry ICs (|d|_c≤2), exact cycle enumeration, both P₃ conventions (3332/124 each): multi-pair recurrent scattering 96.4%, pure AB-bound 3.6%, free/single-pair 0%; bond transfer in-cycle 81.8%; preperiod median 0 (max 830); period median 138, max 1638, 79 lengths (dominant 15, 48, 357, 396, 228, 1638); fully defective K₃=0 | isolated period-2 dyad not a persistent primitive | horizon-based percentages RETRACTED | >NUMGEN DISC-1 (same 3456-seed panel) @TDRG"
+ },
+ {
+  "id": "AR07-046",
+  "finding": "TDRG TA-08",
+  "where": "BIND3-CYCLE wording",
+  "old_sha256": "6922d23611daa0ffcea030156c3bfbd17a28181e6bd2a027aca7673e887c5bb5",
+  "new_sha256": "592083a49105b86a35fa1ad1717ad83c2e62ee19f812e33c44bfdfd6357ccf8d",
+  "old": "TDRG-ALG-BIND3-CYCLE-N24K1 ALG + NUM strong (alias BIND3-CYCLE-N24K1; [conv: v18 path orientation], EV-NOT-RERUN, census bound in TDRG-NUM-ORIENT-EQUIVARIANCE-N24) | N=24, k=1, 3456 post-advance retrigger-entry ICs (|d|_c≤2), exact cycle enumeration, both P₃ conventions (3332/124 each): multi-pair recurrent scattering 96.4%, pure AB-bound 3.6%, free/single-pair 0%; bond transfer in-cycle 81.8%; preperiod median 0 (max 830); period median 138, max 1638, 79 lengths (dominant 15, 48, 357, 396, 228, 1638); fully defective K₃=0 | isolated period-2 dyad not a persistent primitive | horizon-based percentages RETRACTED | >NUMGEN DISC-1 (same 3456-seed panel) @TDRG",
+  "new": "TDRG-ALG-BIND3-CYCLE-N24K1 ALG + NUM strong (alias BIND3-CYCLE-N24K1; [conv: v18 path orientation], EV-NOT-RERUN, census bound in TDRG-NUM-ORIENT-EQUIVARIANCE-N24) | N=24, k=1, 3456 post-advance retrigger-entry ICs (|d|_c≤2), exact cycle enumeration, both P₃ rotation conventions (3332/124 each — an inventory statement, not trajectory covariance; the \"relabeling-covariance check\" of v2.12.13 is the ±d mirror-inventory check, v2.12.14): multi-pair recurrent scattering 96.4%, pure AB-bound 3.6%, free/single-pair 0%; bond transfer in-cycle 81.8%; preperiod median 0 (max 830); period median 138, max 1638, 79 lengths (dominant 15, 48, 357, 396, 228, 1638); fully defective K₃=0 | isolated period-2 dyad not a persistent primitive | horizon-based percentages RETRACTED | >NUMGEN DISC-1 (same 3456-seed panel) @TDRG"
+ },
+ {
+  "id": "AR07-047",
+  "finding": "TDRG TB-09",
+  "where": "BIND3-PARITY node",
+  "old_sha256": "0f8ef9fe3de4ea211e32c716e7c00fef25ccb4a03cd5974f636e85a0907ffa38",
+  "new_sha256": "73f8d83c335368bb486cc17903ba5f726a137c9b755ecd5912c58be8b3f1ab83",
+  "old": "BIND3-PARITY NUM strong (+ALG necessity at N=24) | N=24, k∈{1,2}: pure-bound survival controlled by parity of d, not marginality; k=2 odd d=±1,±3: 0/6912; even ±2 (deep) 4.3%, ±4 (marginal) 5.2% | mechanism: spectator relative phase steps 2δ_C−d per two ticks; odd d ⇒ gcd(step,24)∈{1,3} ⇒ cannot avoid (2k+1)-point arc; even survivors co-moving δ_C=d/2 (or antipodal shift), sublattice spacing ≥4; zero inconsistencies | replaces BIND3-KNIFE (FAIL) @TDRG",
+  "new": "TDRG-NUM-BIND3-PARITY NUM strong (alias BIND3-PARITY; +ALG necessity at N=24; [conv: v18 path orientation]) | N=24, k∈{1,2}: pure-bound survival controlled by parity of d, not marginality; k=2 odd d=±1,±3: 0/6912; even ±2 (deep) 4.3%, ±4 (marginal) 5.2% | mechanism: spectator relative phase steps 2δ_C−d per two ticks; odd d ⇒ gcd(step,24)∈{1,3} ⇒ cannot avoid (2k+1)-point arc; even survivors co-moving δ_C=d/2 (or antipodal shift), sublattice spacing ≥4; zero inconsistencies | replaces BIND3-KNIFE (FAIL) @TDRG"
+ },
+ {
+  "id": "AR07-048",
+  "finding": "TDRG TB-09",
+  "where": "SPECTRAL-GATE node",
+  "old_sha256": "fbf809ee1660a1324f6e91d93f7cc05045717feb0dc6061940fe27039c4736d9",
+  "new_sha256": "90e5ca9a03700e8073bb5e73f42267e96cd0da91254fde7100e03a03a8b01662",
+  "old": "BIND3-SPECTRAL-GATE NUM strong | N=24, k=1, 9216 ICs: all |d_ij|_c>2k ⇒ no autonomous two-node retrigger (0 violations over 4352 ICs in 27 spectrum classes; 1906 episodes in below-threshold controls) | forbids autonomous period-2 retrigger only, not transient band occupancy (SG-13) @TDRG",
+  "new": "TDRG-NUM-BIND3-SPECTRAL-GATE NUM strong (alias BIND3-SPECTRAL-GATE; [conv: v18 path orientation]) | N=24, k=1, 9216 ICs: all |d_ij|_c>2k ⇒ no autonomous two-node retrigger (0 violations over 4352 ICs in 27 spectrum classes; 1906 episodes in below-threshold controls) | forbids autonomous period-2 retrigger only, not transient band occupancy (SG-13) @TDRG"
+ },
+ {
+  "id": "AR07-049",
+  "finding": "TDRG TB-09",
+  "where": "MEMORY-PARITY node",
+  "old_sha256": "d4b473f6e8a3cf4cf6d2a9311b0f796a7da9c08aed0af6c1175f5a19ae2d9b6d",
+  "new_sha256": "33e2f1627b74b544c85788a76a835ff446bfbfa4b3edabbed984a69de3f161d9",
+  "old": "BIND3-MEMORY-PARITY NUM strong (+COR) | unstratified f_AB≈0.30 vs 0.15 claim composition-mixed; odd-advance bonds no bias (class (1,2,3): 0.154 vs 0.154); even-advance genuine: (2,2,4) 0.306 vs control 0.183; (2,3,5) 0.382 vs 0.134; (2,5,7) 0.425 vs 0.126; non-binding-entry controls f≈0.13–0.15 | FAIL BIND3-EQUIP @TDRG",
+  "new": "TDRG-NUM-BIND3-MEMORY-PARITY NUM strong (alias BIND3-MEMORY-PARITY; +COR; [conv: v18 path orientation]) | unstratified f_AB≈0.30 vs 0.15 claim composition-mixed; odd-advance bonds no bias (class (1,2,3): 0.154 vs 0.154); even-advance genuine: (2,2,4) 0.306 vs control 0.183; (2,3,5) 0.382 vs 0.134; (2,5,7) 0.425 vs 0.126; non-binding-entry controls f≈0.13–0.15 | FAIL BIND3-EQUIP @TDRG"
+ },
+ {
+  "id": "AR07-050",
+  "finding": "TDRG TB-09",
+  "where": "XFER node",
+  "old_sha256": "38159db7d738a60d849ade1bd7492bd6f7b9c2abeb45777c0aeccdd820a762ee",
+  "new_sha256": "e5ca8cfc7ec815df6dd7b457bf71a9950105220e02eba92443a22344cd67d29d",
+  "old": "BIND3-XFER NUM strong | transfer 81.8% (retrigger-entry), 90–98% (one-pass); = spectrum reassignment, never spacing creation @TDRG",
+  "new": "TDRG-NUM-BIND3-XFER NUM strong (alias BIND3-XFER; [conv: v18 path orientation]) | transfer 81.8% (retrigger-entry), 90–98% (one-pass); = spectrum reassignment, never spacing creation @TDRG"
+ },
+ {
+  "id": "AR07-051",
+  "finding": "TDRG TB-09",
+  "where": "REGEN node",
+  "old_sha256": "942037a00f0fc63cb5f240fdc5b47dec4244d0dfcbd6f3f597552a945a0e4372",
+  "new_sha256": "9f0835c8b5338beafacaccbc452493f9bfc5da8ebc48393033e2c2a5bc4c9c69",
+  "old": "BIND3-REGEN NUM strong | |d_AB|_c>2k initial pairs: pure-AB 0.0%, transfer 95.2%, ⟨f_AB⟩=0.146; P₃ rotation regenerates band-reaching pairs | LEM-RETRIG bounds only pairwise-autonomous binding (SG-11) @TDRG",
+  "new": "TDRG-NUM-BIND3-REGEN NUM strong (alias BIND3-REGEN; [conv: v18 path orientation]) | |d_AB|_c>2k initial pairs: pure-AB 0.0%, transfer 95.2%, ⟨f_AB⟩=0.146; P₃ rotation regenerates band-reaching pairs | LEM-RETRIG bounds only pairwise-autonomous binding (SG-11) @TDRG"
+ },
+ {
+  "id": "AR07-052",
+  "finding": "TDRG TC-14",
+  "where": "DISC-1 node",
+  "old_sha256": "bf6de44982752e01c893bbfd8b638317436341804896ca63ac640ec2a1648f44",
+  "new_sha256": "5d7f08296bf18af671d0bc7e0452164e21fedda249d85fbc9743be4feac10a41",
+  "old": "*NUMGEN:DISC-1 ALG | sc: registered finite DISC-1 panel, frozen C7B protocol; conv: pinned TDR-G v18 signed_centered∈(−N/2,N/2], declared SWAP/P3 | N=24 retrigger-entry panel (≡ BIND3-CYCLE-N24K1 3456 seeds), k∈{0,1,2,3}; core one-step identical to genesis_mode_b_mc_v18.py on all 24⁴=331776 reduced states per k (0 mismatches); k=1: 3253/3456 dual-active, all non-1 classes; 64 survive k=1→2 fence, 22 pass by interior k=3 contingency, 0 by boundary-only k=0; all 22 DISC-1D-PASS-INT: 2:1×12, 3:1×10; archetypes 2:1 (18,9)→(16,8)→(84,120), 3:1 (18,6)→(12,4)→(120,72); T4 coefficients 84−2·120=−156, 120−3·72=−96 (raw −1404=9·(−156), −576=6·(−96)) ⇒ deformation-invariant SG-NG-26 factorization excluded ⇒ DISC-1B PASS (breadth beyond 1:1), DISC-1D PASS-INT: {2,3}⊆Q_RTG^dyn | NUM·dx: P2 exposure 0/22; projection {2:1,3:1} unchanged under reverse/inert policies @NUMGEN§6.6",
+  "new": "*NUMGEN:DISC-1 ALG | sc: registered finite DISC-1 panel, frozen C7B protocol; conv: pinned TDR-G v18 signed_centered∈(−N/2,N/2], declared SWAP/P3 | N=24 retrigger-entry panel (≡ BIND3-CYCLE-N24K1 3456 seeds), k∈{0,1,2,3}; core one-step identical to genesis_mode_b_mc_v18.py on all 24⁴=331776 reduced states per k (0 mismatches); k=1: 3253/3456 dual-active, all non-1 classes; 64 survive k=1→2 fence, 22 pass by interior k=3 contingency, 0 by boundary-only k=0; all 22 DISC-1D-PASS-INT: 2:1×12, 3:1×10; archetypes 2:1 (18,9)→(16,8)→(84,120), 3:1 (18,6)→(12,4)→(120,72); T4 coefficients 84−2·120=−156, 120−3·72=−96 (raw −1404=9·(−156), −576=6·(−96)) ⇒ deformation-invariant SG-NG-26 factorization excluded ⇒ DISC-1B PASS (breadth beyond 1:1), DISC-1D PASS-INT: {2,3}⊆Q_RTG^dyn | NUM·dx: P2 exposure 0/22; projection {2:1,3:1} unchanged under reverse/inert policies; TDR-G ruled the stratum a tie (TDRG-DEF-ORIENT, v2.12.14), NUMGEN's DISC-1 re-annotation is its own @NUMGEN§6.6"
+ },
+ {
+  "id": "AR07-053",
+  "finding": "TDRG TC-14",
+  "where": "P2-exposure node",
+  "old_sha256": "d94a7e4ecaec7f51f8b684854835e6a26043db2926d7015d39fc0a6f0d59a649",
+  "new_sha256": "f291853960c2d594675beede5448e6d02014a8a32c21d33796197464434a11ae",
+  "old": "*NUMGEN:P2-exposure NUM·dx | TDR-G path orientation degenerate when S=0 and |E|=N/2=12 (endpoint reversal gives the same tie value under (−N/2,N/2]); v18 deterministic via sorted node IDs, not relabeling-covariant; audit disc2_p2_antipodal_exposure_audit_v1.py: 40/136 witnesses touch it, 96 never; 216 antipodal events in audited cycles; reverse-at-antipode changes 10, inert-at-antipode 20 witness records; unexposed/exposed by class 1:1 10/16, 2:1 4/0, 3:1 28/0, 3:2 6/6, 4:1 14/0, 4:3 2/12, 5:1 6/0, 5:2 4/6, 7:2 6/0, 9:4 16/0 ⇒ every label keeps an unexposed witness, ten-label bound unchanged | post-hoc, not gate/policy; 40 records CONVENTION-EXPOSED; DISC-1 audit 0/22 recorded; Discrete-owner ruling required before future campaigns | ! TDRG-ORIENT (X1) @NUMGEN§6.6",
+  "new": "*NUMGEN:P2-exposure NUM·dx | TDR-G path orientation degenerate when S=0 and |E|=N/2=12 (endpoint reversal gives the same tie value under (−N/2,N/2]); v18 deterministic via sorted node IDs, not relabeling-covariant; audit disc2_p2_antipodal_exposure_audit_v1.py: 40/136 witnesses touch it, 96 never; 216 antipodal events in audited cycles; reverse-at-antipode changes 10, inert-at-antipode 20 witness records; unexposed/exposed by class 1:1 10/16, 2:1 4/0, 3:1 28/0, 3:2 6/6, 4:1 14/0, 4:3 2/12, 5:1 6/0, 5:2 4/6, 7:2 6/0, 9:4 16/0 ⇒ every label keeps an unexposed witness, ten-label bound unchanged | post-hoc, not gate/policy; 40 records CONVENTION-EXPOSED; DISC-1 audit 0/22 recorded; TDR-G ruling given in v2.12.14 (TDRG-DEF-ORIENT: balanced tie on the stratum; under it 20 of 136 records change, ten labels unchanged, 96 unexposed unchanged by construction; notice filed in pipes/NUMGEN/); NUMGEN's re-annotation and its C7C-M4 release decision are NUMGEN's (D5.X1) @NUMGEN§6.6"
+ },
+ {
+  "id": "AR07-054",
+  "finding": "TDRG TA-03",
+  "where": "D5.L4 SG line",
+  "old_sha256": "7232976508dcd4c2189a72ac81d7a242160f82fcd43f1e9747e0a40c5b081bdb",
+  "new_sha256": "fe94155e85dc7e78be1edcb46bd52b7cf7d8949215ccd098e6f0d2d09b53a0a3",
+  "old": "TDRG SG-1 no continuous space/time · SG-2 absolute phase gauge · SG-3 total P not physical · SG-4 N even · SG-5 k<N/6 canonical · SG-6 finite-horizon claims only · SG-7 policy is physically real (distinct universes) · SG-8 bound_symmetric canonical by convention, not derivation · SG-9 pre-v13 CLI runs invalid for N-scaling · SG-10 cross-branch firewall both directions (sine coupling, continuous coordinates, P_floor, fixed K₃/K₄ motifs FAIL as primitives) ≡ SG-PROG-1 · SG-11 pairwise bound-state scope (two-node only) · SG-12 spectrum conservation not across star · SG-13 spectral gate ≠ ban on band entry",
+  "new": "TDRG SG-14 (v2.12.14) relabelling covariance: on bound_symmetric (and on other branches only once separately established) the step commutes with Sym(V)×ℤ_N^phase, equality modulo relabelling of newborn nodes; ties declared on invariant data only; the common token shift and the mirror are outside the group; largest_center's ID tie-break is a recorded exception · SG-1 no continuous space/time · SG-2 absolute phase gauge · SG-3 total P not physical · SG-4 N even · SG-5 k<N/6 canonical · SG-6 finite-horizon claims only · SG-7 policy is physically real (distinct universes) · SG-8 bound_symmetric canonical by convention, not derivation · SG-9 pre-v13 CLI runs invalid for N-scaling · SG-10 cross-branch firewall both directions (sine coupling, continuous coordinates, P_floor, fixed K₃/K₄ motifs FAIL as primitives) ≡ SG-PROG-1 · SG-11 pairwise bound-state scope (two-node only) · SG-12 spectrum conservation not across star · SG-13 spectral gate ≠ ban on band entry"
+ },
+ {
+  "id": "AR07-055",
+  "finding": "TDRG TA-07",
+  "where": "TDR-T ladder line",
+  "old_sha256": "f0a4dd2f462dc66a18c418c08efc36271735e62773bcd38d37cf628ad963b4db",
+  "new_sha256": "9e845955f750de9dd6bae4beb623c73334a0a66fc275be4a30a54b714f778067",
+  "old": "TDR-T ladder (App C, gated): T0 discrete triad definition → T1 discrete chirality → T2 birth-policy orientation → T3 \"safe-wedge reachability\" (stale referent, TDRG.G6) → T4 survival scaling; native triad classes under k<N/6: fully defective K₃ forbidden (null class), active P₃, clean P₃, embedded P₃, star-supported germ (K_{1,3} in K₄), degenerate orientation, multistar-shell triad; R0 continuous coefficients (1/3, 3/4, x*, −32r⁴, Plücker) need native ℤ_N derivation",
+  "new": "TDR-T ladder (App C, gated): T0 discrete triad definition → T1 discrete chirality → T2 birth-policy orientation → T3 \"safe-wedge reachability\" (historical continuous reference since v2.12.14: TRIAD v1.6.1 wedge / x*, CN-05) → T4 survival scaling; native triad classes under k<N/6: fully defective K₃ forbidden (null class), active P₃, clean P₃, embedded P₃, star-supported germ (K_{1,3} in K₄), degenerate orientation, multistar-shell triad; R0 continuous coefficients (1/3, 3/4, x*, −32r⁴, Plücker) need native ℤ_N derivation"
+ },
+ {
+  "id": "AR07-056",
+  "finding": "TDRG TA-07",
+  "where": "retired FAIL line 96:1",
+  "old_sha256": "dc38648391f8a3d9f87773512058917bea06846d37693bb4c96f067a62410268",
+  "new_sha256": "fe8ac2805dddb7bb9c2ed809f2d8dfe7a7fc1c47904048da0fdc81e1172c16fa",
+  "old": "*TDRG:retired FAIL | sine coupling primitive; P conserved; Σδ² conserved; fully defective triad; arbitrary path label tie-break; first-valid-star-center resolution (hidden referee); v7 universal runaway; \"any orbit sweeps the band\"; BIND3-KNIFE; BIND3-EQUIP; T=500 mf≈30–52 equilibrium; N=120,k=8 freeze; logarithmic growth; aggregate N^{−1}; final M~N^{−0.416} (bulk ≈N^{−0.26}); divisor/3²/15-commensurability/deterministic tail explanations; O~M²(2k/N); \"K₃ globally explosive (96:1 healing/pump)\" (stale referent, TDRG.G6); COR unstratified BIND3-MEMORY | invalid runs: v1–v2 k13_star bug silenced births; v7.2 hidden referee removed; v8–v10 metric bug fixed via rN_T/rN_s; pre-v13 CLI | RES: policy/bookkeeping bugs can invert the cosmological interpretation",
+  "new": "*TDRG:retired FAIL | sine coupling primitive; P conserved; Σδ² conserved; fully defective triad; arbitrary path label tie-break; first-valid-star-center resolution (hidden referee); v7 universal runaway; \"any orbit sweeps the band\"; BIND3-KNIFE; BIND3-EQUIP; T=500 mf≈30–52 equilibrium; N=120,k=8 freeze; logarithmic growth; aggregate N^{−1}; final M~N^{−0.416} (bulk ≈N^{−0.26}); divisor/3²/15-commensurability/deterministic tail explanations; O~M²(2k/N); \"K₃ globally explosive (96:1 healing/pump)\" (marked a historical continuous reference in v2.12.14); COR unstratified BIND3-MEMORY | invalid runs: v1–v2 k13_star bug silenced births; v7.2 hidden referee removed; v8–v10 metric bug fixed via rN_T/rN_s; pre-v13 CLI | RES: policy/bookkeeping bugs can invert the cosmological interpretation"
+ },
+ {
+  "id": "AR07-057",
+  "finding": "TDRG TA-01",
+  "where": "retired FAIL line",
+  "old_sha256": "fe8ac2805dddb7bb9c2ed809f2d8dfe7a7fc1c47904048da0fdc81e1172c16fa",
+  "new_sha256": "5b8eb394537bd88fdee391cab029051b546862ab9ce900dfcc6ae5f50469c2db",
+  "old": "*TDRG:retired FAIL | sine coupling primitive; P conserved; Σδ² conserved; fully defective triad; arbitrary path label tie-break; first-valid-star-center resolution (hidden referee); v7 universal runaway; \"any orbit sweeps the band\"; BIND3-KNIFE; BIND3-EQUIP; T=500 mf≈30–52 equilibrium; N=120,k=8 freeze; logarithmic growth; aggregate N^{−1}; final M~N^{−0.416} (bulk ≈N^{−0.26}); divisor/3²/15-commensurability/deterministic tail explanations; O~M²(2k/N); \"K₃ globally explosive (96:1 healing/pump)\" (marked a historical continuous reference in v2.12.14); COR unstratified BIND3-MEMORY | invalid runs: v1–v2 k13_star bug silenced births; v7.2 hidden referee removed; v8–v10 metric bug fixed via rN_T/rN_s; pre-v13 CLI | RES: policy/bookkeeping bugs can invert the cosmological interpretation",
+  "new": "*TDRG:retired FAIL | sine coupling primitive; P conserved; Σδ² conserved; fully defective triad; arbitrary path label tie-break; the node-ID completion of the orientation rule at S=0 ∧ E≡N/2 (v2.12.14, an instance of it); first-valid-star-center resolution (hidden referee); v7 universal runaway; \"any orbit sweeps the band\"; BIND3-KNIFE; BIND3-EQUIP; T=500 mf≈30–52 equilibrium; N=120,k=8 freeze; logarithmic growth; aggregate N^{−1}; final M~N^{−0.416} (bulk ≈N^{−0.26}); divisor/3²/15-commensurability/deterministic tail explanations; O~M²(2k/N); \"K₃ globally explosive (96:1 healing/pump)\" (marked a historical continuous reference in v2.12.14); COR unstratified BIND3-MEMORY | invalid runs: v1–v2 k13_star bug silenced births; v7.2 hidden referee removed; v8–v10 metric bug fixed via rN_T/rN_s; pre-v13 CLI | RES: policy/bookkeeping bugs can invert the cosmological interpretation"
+ },
+ {
+  "id": "AR07-058",
+  "finding": "TDRG TA-04",
+  "where": "TDRG.G1 retired",
+  "old_sha256": "26dbb53f17543c1cb6121e5aa4970e5d194bfb4a0fd0d46c17f7d1defb0c9100",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "TDRG.G1 D-SCOPE/D-CONV (high): headline B_bulk/step~N^{−0.869} (TDRG §1, §5, TDR-22b, TDR-23, status summary; quoted by AZ Thread B) is a full-range (N=120–1440) fit of a composite; TDR-G's own v2.12.1–v2.12.9 work shows composite exponents drift with window (C_component −0.757 vs −0.936; χ +0.836 vs +0.697), and Exp-0 gives B/step~N^{−0.730}, O/step~N^{+0.903} on 480–1440 (consistent with C_birth N^{−1.633}). §1 \"1.593≈0.757+0.836\" uses the superseded χ exponent. The owner's METHOD note (\"test primitive vs ratio before promoting any exponent\") is not applied to α. Fix: range-tag α (0.869 full / 0.73 high-N) or replace by cs-rate decomposition; crystallization sign unaffected.\n",
+  "new": ""
+ },
+ {
+  "id": "AR07-059",
+  "finding": "TDRG TB-09",
+  "where": "TDRG.G2 retired",
+  "old_sha256": "e3b6a580630c06c73e012eed534833482a48536969452ee92ece72f0a50985b3",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "TDRG.G2 D-RID (≡ OFN.O5, AZ.A7, METH.M2): load-bearing theorems (holonomy, narrow-band exclusion, finite-state recurrence) and state/band/star definitions have no RIDs (only OPENs, artifacts, LEM-/CONV- legacy labels); OFN carries seven \"RID unavailable\" imports since v0.8; NUMGEN imp-DISC also RID unavailable; AZ cites phantom TDRG-ZN-STATE and AZ-side labels BIND3-*, TDR-24/N-SCALING, TDR-26-BIRTH-ANCHOR (actual owner IDs: BIND3-* exist; TDR-24/26 exist only as OPEN module RIDs).\n",
+  "new": ""
+ },
+ {
+  "id": "AR07-060",
+  "finding": "TDRG TC-15",
+  "where": "TDRG.G3 retired",
+  "old_sha256": "deb5ea04120e1e143b0e70eaa48e8a46974187c136d623e11957cd8955cce62c",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "TDRG.G3 D-LINK: OFN Finding A (RTG-OFN-ALG-STAR-TOKEN-SHIFT, 2c=0; proposed TDR-G custody XFER-O08-01) and REQ-O09-05 (endpoint-policy ruling) are not recorded in TDR-G; TDR-G never states the token-origin status OFN shows is load-bearing for the birth-capable model (NUMGEN RF-06 does state it).\n",
+  "new": ""
+ },
+ {
+  "id": "AR07-061",
+  "finding": "TDRG TA-05",
+  "where": "TDRG.G4 retired",
+  "old_sha256": "a6e2d9c6db39c8ebfedaed1403f22d24c6d1d08d3c2521102cfb1fedbf586796",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "TDRG.G4 D-WRONG (minor; ≡ OFN.O7, OFN08-C12): LEM-RETRIG prose \"exact period-2 bound state (ε,d)↔(ε−d,−d)\" together with \"all offsets retrigger iff d=0\": at d=0 the map is the identity (fixed state, period 1). Atlas node states the fixed point.\n",
+  "new": ""
+ },
+ {
+  "id": "AR07-062",
+  "finding": "TDRG TA-06",
+  "where": "TDRG.G5 retired",
+  "old_sha256": "bd2a945bc935be03184df0a965e92c0c41f542349b8ae1f6c91ff7ff39fc645a",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "TDRG.G5 ≡ AZ.A6 D-SCOPE: LEM-SPECCONS \"equivalently, the multiset of gcd(d_ij,N) is conserved\" — |d|_c multiset determines gcd multiset, not conversely (OFN RF-O08-04 forbids substitution). Fix: \"equivalently\" → \"consequently/implies\" in both TDRG and AZ Thread B.\n",
+  "new": ""
+ },
+ {
+  "id": "AR07-063",
+  "finding": "TDRG TA-07",
+  "where": "TDRG.G6 retired",
+  "old_sha256": "649814ef2238bf61c02f5376d18ae3f9a2eee54d5aec2a7a7c28d7d77a9fbb1a",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "TDRG.G6 D-STALE (cross-stream): App B \"[FAIL] K₃ globally explosive — 96:1 healing/pump ratio\" and §5 row treat 96:1 as settled; TRIAD v1.6.1 keeps 96:1 as coefficient bookkeeping with same-object correspondence OPEN (OFN RF-O08-02 same). App C TDR-T3 \"safe-wedge reachability\" and R0's x*, −32r⁴ refer to the T-6 wedge chain withdrawn by TRIAD CN-05. Continuous facts quoted across SG-10 in stale form.\n",
+  "new": ""
+ },
+ {
+  "id": "AR07-064",
+  "finding": "TDRG TC-16",
+  "where": "TDRG.G7 retired",
+  "old_sha256": "bbdcf99e167ba9a40eeb039a2084c69f8b60bb34d9f34b2025676f26d9296e50",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "TDRG.G7 ≡ AZ.A4 D-LINK (atlas-checked): TDR-G narrow-band exclusion (k<N/6, no fully defective K₃; OFN IMP-O08-04B) and AZ-ALG-ANTIPODAL-LOWORDER (no non-backtracking closure of length 2,3 for k<N/6; odd L impossible for Lk<N/2) are the same arithmetic in two homes, neither cites the other; AZ odd-L strictly extends. Fix (TDR-G): register the theorem with a RID and cite AZ's generalization (App C \"fully defective K₃ forbidden\").\n",
+  "new": ""
+ },
+ {
+  "id": "AR07-065",
+  "finding": "TDRG TB-13",
+  "where": "TDRG.G8 reworded",
+  "old_sha256": "2d066a0861c44da99eb3d325f7aa5045ec4aeb0d3d84135e2c1880f07603a2af",
+  "new_sha256": "d477cd5dd9fb7af668bc3f9c203cbe339826c057489bff3a5c84761ddc1020b2",
+  "old": "TDRG.G8 D-STALE (internal): header \"June 2026\", companion \"OFN v0.6 (v0.7 candidate imports)\", footer supersession chain 13 point releases, version-history order v2.12 before v2.12.13…v2.12.1; TDR-24B live status mixes v2.12.1–v2.12.9 overlays in one block.",
+  "new": "TDRG.G8 D-STALE (internal, residual after v2.12.14): the footer supersession chain of fourteen point releases and the Appendix A ordering (v2.12 before v2.12.14…v2.12.1) are layout items deferred to v2.13 together with the Methodology v1.4 migration (PI decision 27 Oct 2026); the header date, the companion editions, the TDR-24B live status and the Appendix C gate were corrected in v2.12.14. The edition still declares Methodology v1.2."
+ },
+ {
+  "id": "AR07-066",
+  "finding": "TDRG N1/TB-11",
+  "where": "TDRG.G10, G11 new",
+  "old_sha256": "db8dc2ab49440e271f57499190e7ef999902e05520a4aaa906de3e0889450999",
+  "new_sha256": "ad3eac4e1757264413bbc4dd1e5ebb856789d19985f3aca604c5936a9f68bd15",
+  "old": "TDRG.G9 ~ D-LINK (D-RID duplicate): TDR-6 sub-item \"pairwise difference multiset across star blow-up OPEN\" = TDRG-OPEN-SPECCONS-STAR; one question, two RIDs; OFN OPEN-OFN-SECTOR cites SPECCONS-STAR only. Atlas: one frontier node.\n",
+  "new": "TDRG.G9 ~ D-LINK (D-RID duplicate): TDR-6 sub-item \"pairwise difference multiset across star blow-up OPEN\" = TDRG-OPEN-SPECCONS-STAR; one question, two RIDs; OFN OPEN-OFN-SECTOR cites SPECCONS-STAR only. Atlas: one frontier node.\nTDRG.G10 D-CONV (non-canonical branch; owner finding N1, v2.12.14): largest_center chooses between equal-degree multistar centres by node ID (TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK), outside SG-14; the branch's policy-fate results (§§6.6–6.7, OPEN-POLICY-GEOMETRY slice) carry a scope note, EV-NOT-RERUN; canonical results unaffected (bound_symmetric binds multistars). Resolution belongs with TDR-19 (policy selection), v2.13 or later.\nTDRG.G11 D-PROOF (b)/(a) (evidence custody, v2.12.14 §8): placed — genesis_mode_b_mc.py 4c94d874… (engine label \"v15.3\"; \"v17\" is the data-campaign label; replay-verified producer for two v17 files, schema-consistent for the other placed ones), genesis_mode_b_mc_v18.py 9d787b43… (byte-equal to NUMGEN's copy; same orient_path), tdr_motif_bootstrap v1–v6, analysis scripts, the TDR-24/25/26 session scripts (upload/tdrg-session-scripts, 17 files); partly placed / held with hashes — the v17 and v16 motif corpora (ten files >100 MB on the PI's machine, SHA-256 in SHA256SUMS_tdrg_held.txt); missing — the four session-certified suites TDRG-ART-KINEMATIC-CERTS, -SPECCONS, -BIND3-N24K1, -BIND3-SUITE and the v6 per-run CSV / DSN-patch outputs (custody (a); a re-derivation would be an independent contribution). Hash check records/tdrg/TDRG_UPLOAD_HASH_CHECK_20261027.md.\n"
+ },
+ {
+  "id": "AR07-067",
+  "finding": "TDRG TC-16",
+  "where": "AZ.A7 reworded",
+  "old_sha256": "dc459bfb12d5d7d3ec72b422a4809c984ac33478c0c82c628b9d3fc74620576e",
+  "new_sha256": "6a5e4456373b267abd204795faa06c0f3651869737dbeda02e2735649ff3b92f",
+  "old": "AZ.A7 D-RID: see TDRG.G2 (phantom TDRG-ZN-STATE and AZ-side labels).",
+  "new": "AZ.A7 D-RID: AZ's \"TDRG-ZN-STATE\" is an alias of TDRG-DEF-ZN-STATE in the TDR-G v2.12.14 §7 map (notice filed in pipes/AZ/); the AZ-side labels BIND3-*, TDR-24/N-SCALING, TDR-26-BIRTH-ANCHOR remain AZ's to repin (actual owner IDs: TDRG-ALG/NUM-BIND3-*; TDR-24/26 exist only as OPEN module RIDs)."
+ },
+ {
+  "id": "AR07-068",
+  "finding": "TDRG TA-01/TC-17",
+  "where": "D5.X1 reworded",
+  "old_sha256": "bd206468e30c01f14ee82ddfaa20e67fda5beea1d0c1e7dc899aa24fe0f89861",
+  "new_sha256": "aeee8778953fd3e22a02b9667f09d93ccfc655cc73b617b39e8a9f1405b85b98",
+  "old": "D5.X1 ~ D-LINK / D-CONV: TDRG-ORIENT declares a balanced path-tie only at S=E=0; NUMGEN P2 audit shows a second degenerate case S=0 ∧ |E|=N/2 (antipodal endpoint advance) where endpoint reversal is invisible under signed_centered (−N/2,N/2] and v18 resolves it by sorted node IDs (not relabeling-covariant) — 40/136 DISC-2 witnesses, 216 events. TDR-G definition and SG-2 covariance are silent on it; PROG §6.4 lists \"antipodal path tie\" as an owner-review task; NUMGEN v1.21 §2 item 1 holds C7C M-4 on it (HOLD, with a sensitivity audit of affected witnesses before any status change) and the request is filed as pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md (blocks C7C-M4; receiver undecided). The 216 antipodal events lie inside the audited eventual cycles; every admitted label keeps at least one unexposed witness, so the ten-label lower bound is unaffected (NUMGEN §6.6). Fix (TDR-G, scientific): rule on endpoint antipode (affects any policy using path orientation).",
+  "new": "D5.X1 D-LINK (ruled on the TDR-G side, v2.12.14): the second degenerate case S=0 ∧ |E|=N/2 of the path orientation rule — endpoint reversal invisible under signed_centered (−N/2,N/2], v18 resolving it by sorted node IDs — is declared a balanced path-tie (TDRG-DEF-ORIENT; TDRG-ALG-ORIENT-NOGO; SG-14); the v2.12.13 text and the v18 engine stand as the superseded completion; TDR-G's request disposition and notice to NUMGEN carry the witness-effect table (40 of 136 exposed; 20 change under the rule; ten labels unchanged; 96 unexposed unchanged; DISC-1 not covered). Residual, on the NUMGEN side: re-annotation of DISC-1/DISC-2 under TDRG-DEF-ORIENT at tdrg-v2.12.14 and the C7C-M4 release decision (NUMGEN v1.21 §2 item 1 HOLD). The owner-review tasks Programme v1.2 §6 listed for TDR-G (state/gauge conventions, antipodal path tie, counting observables, rank interpretation) are recorded in TDR-G §2 since v2.12.14 (the antipodal tie discharged); Programme v1.3 §6.4 does not list them (v1.2 §6 did)."
+ }
+]

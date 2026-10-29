@@ -4,4 +4,4 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| — | — | — | — | (empty) | — | — |
+| 2026-10-28 | TDRG | notice | open | TDRG-DEF-ZN-STATE (alias of AZ's TDRG-ZN-STATE), TDRG-ALG-LEM-REACH / -RETRIG / -SPECCONS, TDR-G v2.12.14 §6.2 citation of AZ-ALG-ANTIPODAL-LOWORDER | — | `20261028-TDRG-v2-12-14-adopted.md` |

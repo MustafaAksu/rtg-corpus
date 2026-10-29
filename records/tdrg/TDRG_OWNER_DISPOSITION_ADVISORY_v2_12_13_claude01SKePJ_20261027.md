@@ -128,3 +128,7 @@ Rows TA-02, TA-06, I07, TA-07, TB-09 (order), TB-11, TB-10/I09/I10, TB-12, TC-17
 | TB-13 | Appendix A ordering and one footer in v2.12.14 | deferred to v2.13 (layout) | PI decision: no layout compaction in v2.12.14. |
 | TC-16 RID name | replace the phantom `TDRG-ZN-STATE` after issuing a new RID | issue `TDRG-ZN-STATE` itself | Same end state; adopting the consumer's name saves AZ a repoint. |
 | Pipe item states | request `dispositioned · accept with change` now | request `acknowledged`; disposition written after the PI fixes it | The hand-over has the PI fix the dispositions first; and PR #88's `pipes/TDRG/INDEX.md` is stale (`tools/pipes_index.py --check` fails on its branch). PRs #88 and #89 edit the same two items and conflict; whichever merges second must rebase and rebuild the index. |
+
+## 7. Correction (28 October 2026)
+
+Row 8 (TA-04), the §6 update paragraph and the §6 table row "TA-04 restricted exponent" say that ≈ −0.730 is "not in the owner text" and "none is in the repository". **That is wrong.** The owner text has it at `tdrg-v2.12.13` line 287 (§2, OPEN-POLICY-GEOMETRY entry). Experiment 0 there is the existing canonical scan on N=480–1440, and its classifier readout includes "B/step $N^{-0.730}$". My search printed line 287 truncated, and I misread the result. The atlas reconciliation (PR #91, §2.2) caught this. v2.12.14 therefore cites the owner's own line as the window reading (`[NUM]`, no refit, no new headline). The other co-owner's record was right on this point. Nothing else in this record changes.

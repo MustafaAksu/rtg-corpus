@@ -1,0 +1,7 @@
+# Atlas independent rerun — TDR-G v2.12.14 (28 Oct 2026), worktree at origin/claude/tdrg-v2-12-14-stage1 e3f55c7
+base (tdrg-v2.12.13): aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f
+candidate rebuilt:   3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392  (byte-identical to dsn/RTG_DISCRETE_GENESIS_DSN.md on the branch)
+edit log rebuilt:    c94ff966ffe1f707c0e25cba3df83d6daad38c16074ab1ee7348224541c2edcb  (byte-identical)
+checker: 11/11 PASS (output identical to evidence/tdrg/v2.12.14/check_output.txt); --controls K1–K8 all caught; --exhaustive k=1 v18 [72,72], v2.12.14 [0,0]
+session scripts upload commit 386e9d4: SHA256SUMS.txt 17/17 OK (SHA256SUMS.txt 00ce64d9…); no PR/merge yet — commit reachable only via the branch upload/tdrg-session-scripts
+upload/tdrg-records on main: 48/48 manifest matches recomputed (27 Oct)
