@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Self-contained controls for two tools/check_compaction.py rules added after OFN v0.11 stage 2:
 (1) the RID pattern tracks the programme namespaces `RTG-…` / `RTG-OFN-…` (Methodology v1.4 §4.2);
-(2) profile key history_appendix: the version history may sit in an appendix other than A (OFN: C).
+(2) profile key history_appendix: the version history may sit in an appendix other than A (OFN: C);
+(3) revision after the PR #113 receiving review (PR #114): the history region is unique and replaced
+exactly by one operation; hashes leave the live text only by declared relocation (relocate_hashes).
 
     python3 -I tools/test_check_compaction_profile.py
 
@@ -53,9 +55,12 @@ def new_appendix(extra=""):
             "### v0.1 — first.\n\n---\n\n*END OF DOCUMENT — RTG_TEST_DSN_v0.2*\n")
 
 
-def ops(base_path, appendix_new, removals):
+def ops(base_path, appendix_new, removals, relocate=True):
     o = [{"id": f"E{i+1}", "op": "edit", "class": "history-removal", "archive": ["base"], "old": r, "new": ""}
          for i, r in enumerate(removals)]
+    for op in o:
+        if relocate and DRAFT in op["old"]:
+            op["relocate_hashes"] = [DRAFT]
     o.append({"id": "T", "op": "replace-section", "class": "history-appendix", "archive": ["base"],
               "start": "## Appendix C — Version History\n", "end": None, "new": appendix_new})
     return o
@@ -69,15 +74,16 @@ def derive(base, op_list):
             s = s.replace(op["old"], op["new"])
         else:
             i = s.index(op["start"])
-            s = s[:i] + op["new"]
+            j = s.index(op["end"], i + len(op["start"])) if op.get("end") else len(s)
+            s = s[:i] + op["new"] + s[j:]
     return s
 
 
-def run(tmp, name, profile, appendix_new, removals):
-    base = base_text()
+def run(tmp, name, profile, appendix_new, removals, base=None, relocate=True, op_list=None):
+    base = base or base_text()
     bp = os.path.join(tmp, "base.md")
     open(bp, "w", encoding="utf-8").write(base)
-    op_list = ops(bp, appendix_new, removals)
+    op_list = op_list or ops(bp, appendix_new, removals, relocate)
     cand = derive(base, op_list)
     cp = os.path.join(tmp, name + ".md")
     open(cp, "w", encoding="utf-8").write(cand)
@@ -105,10 +111,25 @@ def main():
         ("N5", "FAIL", "an RTG-OFN identifier removed as history (default profile)", D, new_appendix(), [DRAFTP, BETA]),
         ("N6", "FAIL", "an RTG-OFN identifier removed as history (history_appendix C)", C, new_appendix(), [DRAFTP, BETA]),
     ]
+    # cases carried over from the PR #113 receiving review (PR #114, ChatGPT), with the same intent
+    H64PARA = f"The proof source uses `{H64}`; historical provenance is audited.\n\n"
+    dup_base = base_text().replace(DRAFTP, DRAFTP + H64PARA).replace("an old scenario", f"an old scenario\n\nhistorical duplicate `{H64}`")
+    ext_base = base_text().replace("\n---\n\n*END", "\n## Appendix D — Live theorem\n\n`[THM]` [RID: DYAD-THM-PRIM-CTR] A live theorem.\n\n---\n\n*END")
+    extra = [
+        ("N7", "FAIL", "candidate renames the history appendix (C -> D); phantom in it", C, new_appendix(" `DYAD-THM-PHANTOM`.").replace("## Appendix C —", "## Appendix D —"), [DRAFTP], {}),
+        ("N8", "FAIL", "history replacement injects a new live section with a theorem", C, new_appendix().replace("\n---\n\n*END", "\n## 9. Added\n\n`[THM]` [RID: DYAD-THM-PHANTOM] New.\n\n---\n\n*END"), [DRAFTP], {}),
+        ("N9", "FAIL", "history replacement to end of file deletes a following live appendix", C, new_appendix(), [DRAFTP], {"base": ext_base}),
+        ("N10", "FAIL", "a second Appendix C heading in the candidate", C, new_appendix().replace("\n---\n\n*END", "\n## Appendix C — Second history\n\n`DYAD-THM-PHANTOM`.\n\n---\n\n*END"), [DRAFTP], {}),
+        ("N11", "FAIL", "single-character programme RID description in the history entry", C, new_appendix(" `RTG-OPEN-X`."), [DRAFTP], {}),
+        ("N12", "FAIL", "default profile: a live source hash deleted; a copy already in history must not mask it", D, None, None,
+         {"base": dup_base, "op_list": [{"id": "DROP", "op": "edit", "class": "history-removal", "archive": ["base"], "old": H64PARA, "new": ""}]}),
+        ("N13", "FAIL", "history_appendix C: hash relocated without a declaration", C, new_appendix(), [DRAFTP], {"relocate": False}),
+        ("N14", "FAIL", "history_appendix C: a declared relocation whose hash is not in the history text", C, new_appendix().replace(f"; draft `{DRAFT}`", ""), [DRAFTP], {}),
+    ]
     bad = 0
     with tempfile.TemporaryDirectory() as tmp:
-        for cid, want, what, prof, app, rem in cases:
-            code, fails, out = run(tmp, cid, prof, app, rem)
+        for cid, want, what, prof, app, rem, *kw in cases + extra:
+            code, fails, out = run(tmp, cid, prof, app, rem, **(kw[0] if kw else {}))
             got = {0: "PASS", 1: "FAIL"}.get(code, f"EXIT{code}")
             ok = got == want
             bad += not ok
