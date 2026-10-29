@@ -1,6 +1,6 @@
 # Ontological Foundations (OFN) v0.11 — Release Record
 
-**Status:** DRAFT. Stage 1 is frozen; stage 2 (layout only) is built and checked; the stage-2 file is the adoption candidate. Nothing here is adopted. Until the PI adopts and the tag exists, `ofn-v0.10` remains the governing edition.
+**Status:** ADOPTED by the PI on 30 October 2026 (§8). Published file `38a2f444…e9e4` = the accepted candidate `df3c465f…00eb` plus the adoption-state lines only. The edition governs once the PI has merged PR #112 and created the tag `ofn-v0.11`; until then `ofn-v0.10` is the tagged edition.
 **Date:** 29 October 2026
 **Prepared by:** Claude, OFN co-owner session `claude012ZC8x` (builder), on branch `claude/ofn-v0.11`.
 **Record update:** 30 October 2026 — ChatGPT, OFN co-owner: Atlas receipt, prerequisite-record merges and nonblocking dispositions; candidate bytes unchanged.
@@ -21,8 +21,9 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Change-focused review | `records/ofn/OFN_v0_11_CHATGPT_REVIEW.md` (ChatGPT, commit `5a7ed089`; PR #112 review `5704664058`), on head `b408cef`: ACCEPT SCOPED for the scientific/contract delta; R112-C1 and R112-C2 required, R112-N1 recommended | given |
 | Round-2 correction and receiving review | R112-C1, R112-C2 and R112-N1 applied in the stage-1 content build; stage 2 rebuilt unchanged against the new intermediate (§3a). ChatGPT PR #112 review `5704839026`, anchored to `e9b7e2a91aaa6c7a05233b0e114f69eb3adb1b1c` (29 October 2026) | ACCEPT SCOPED; all three findings CLOSED; no further co-owner correction requested in that round; Atlas receipt now recorded in §3b; PI adoption pending |
 | Atlas row check and build replay | `records/ofn/ATLAS_ROW_CHECK_OFN_v0_11.md`, PR #115 head `8621e565f4454073d0a832af392895da5752ebc5`, reviewing PR #112 head `ba61f5195a21e31d9c7fe5b047d55c400f95683a` | ACCEPT FOR ADOPTION (Atlas side); independently replayed by Atlas; record and evidence merged in #115; received by ChatGPT without claiming another replay (§3b) |
-| Adoption | PI | *(to be filled)* |
-| Publication merge of PR #112; tag `ofn-v0.11` | PI | *(to be filled)* |
+| Adoption | PI, in the OFN session, 30 October 2026, 00:22 +03:00: "ontology DSN'i bu şekliyle benimsiyorum" — on candidate `df3c465f…00eb` as presented with the co-owner and Atlas acceptances | **adopted** (§8) |
+| Publication finalization | `evidence/ofn/scripts/release_ofn_v0_11.py`, adoption-state lines only; gates P1–P6 PASS, controls X1–X5 caught | done; published SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4` |
+| Publication merge of PR #112; tag `ofn-v0.11` | PI (merge commit; annotated tag with the published hash in the message) | pending |
 
 **Prerequisite merge receipt — 30 October 2026.** On the PI's current request, ChatGPT executed the following server-side merge commits in the stated order, with each PR head pinned by the merge request. No squash, rebase, force-push or branch deletion was used. These are record/intake merges, not adoption of v0.11.
 
@@ -48,7 +49,10 @@ The Atlas §4.1 publication condition is therefore met: the disposition, reconci
 | Stage-1 checker | `evidence/ofn/scripts/check_ofn_v0_11_stage1.py` | `fb31276e41a9ddc036ccbf92f723dafac9bcd88ce5eb5dd57196be74853d0499` |
 | Stage-1 edit log (165 edits; old and new text with hashes; document hash chain) | `evidence/ofn/v0.11/stage1_edit_log.json` | `9dda88f1dc1bf51d3a11592909ed4e781642fa0147334ac9fab3e867a0adbea5` |
 | Stage-1 checker output (gates and controls) | `evidence/ofn/v0.11/stage1_check_output.txt` | `e5e7450fc7acb6729adfcc65aa5264a0ad0d4c2f76d9c2e295a039aba726eef9` |
-| **Stage-2 candidate (v0.11 adoption candidate)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb` |
+| **Stage-2 candidate (accepted and adopted object)** | output of the stage-2 builder (was `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` at `8ec6338`) | `df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb` |
+| **Published v0.11 (adopted; final)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4` |
+| Publication transform and checker | `evidence/ofn/scripts/release_ofn_v0_11.py` | `8300fa2d9499a9fc7886abc9fa0bbfdd1d6b113144686dde36a6d20fdd402cd8` |
+| Publication check output (P1–P6, X1–X5) | `evidence/ofn/v0.11/release_check_output.txt` | `625778e9bf4d96c9c939c1f3c3dbf30c2de23164e746898520873edb3f28bb9b` |
 | Stage-2 builder | `evidence/ofn/scripts/build_ofn_v0_11_stage2.py` | `15991efcfbda9f27469830bde691456857f73f20d110d5758832cb8fddbec420` |
 | Stage-2 owner guards and fixtures | `evidence/ofn/scripts/check_ofn_v0_11_stage2.py` | `518fb68b5b2dc4baa0ca29671cf82878dd8c6d7c76592fb2d5c5f3eb88282ecb` |
 | Movement map (16 operations) | `evidence/ofn/v0.11/movement_map.json` | `2e9ea570f56fef4f72907a92bb7a925fe9966e7aaae51dc67fbffa9ec17e3fd4` |
@@ -273,24 +277,48 @@ No claim, RID, grade, status or OPEN changes in stage 2.
 
 **Reproduce stage 2.** Run from the repository root:
 1. `python3 -I evidence/ofn/scripts/build_ofn_v0_11_stage2.py evidence/ofn/v0.11/stage1_intermediate.md OUT.md MAP.json` writes `df3c465f…00eb` and the map.
-2. `python3 -I tools/check_compaction.py evidence/ofn/v0.11/stage1_intermediate.md dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md evidence/ofn/v0.11/movement_map.json`
-3. `python3 -I evidence/ofn/scripts/check_ofn_v0_11_stage2.py evidence/ofn/v0.11/stage1_intermediate.md dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md evidence/ofn/v0.11/movement_map.json --fixtures`
+2. `python3 -I tools/check_compaction.py evidence/ofn/v0.11/stage1_intermediate.md OUT.md evidence/ofn/v0.11/movement_map.json`
+3. `python3 -I evidence/ofn/scripts/check_ofn_v0_11_stage2.py evidence/ofn/v0.11/stage1_intermediate.md OUT.md evidence/ofn/v0.11/movement_map.json --fixtures`
 
-## 8. Adoption *(to be filled)*
+## 8. Adoption
 
-**Approval object:** `df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb`. Co-owner acceptance, Atlas acceptance and the prerequisite merge authorization are not a recorded PI adoption decision. No publication finalization or `ofn-v0.11` tag is asserted by this record update.
+**Decision.** Mustafa (PI), in the OFN session, 30 October 2026, 00:22 +03:00: "ontology DSN'i bu şekliyle benimsiyorum" ("I adopt the ontology DSN in this form").
 
-The PI adopts the stage-2 candidate, or a candidate revised after review. A finalization step then changes the adoption-state wording only, and a checker confirms that nothing else differs. It touches:
-- the Document status line and Supersedes ("on adoption");
-- the §0.3 "*v0.11 (adoption pending):*" label;
-- the §12.3 six-DEF row;
-- the Appendix B "(adoption pending)" heading;
-- the Appendix C v0.11 heading;
+The decision was given after the PI had received:
+- the co-owner disposition "accept / adoption-ready";
+- the Atlas verdict ACCEPT FOR ADOPTION;
+- the prerequisite merges (§1).
+
+All three name the candidate `df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb`. The adopted object is that candidate, together with its row dispositions (§3), round-2 corrections (§3a) and dispositions (§3b).
+
+**Finalization.** The transform is `python3 -I evidence/ofn/scripts/release_ofn_v0_11.py CANDIDATE OUT "30 October 2026"`. It changes exactly eight lines:
+- the header Date, Document status and Supersedes lines ("on adoption" dropped);
+- the §0.3 label "*v0.11 (adoption pending):*" → "*v0.11:*";
+- the §12.3 six-DEF row → "Registered v0.11 … Registered 30 Oct 2026";
+- the Appendix B heading → "Adopted v0.11 records — 30 October 2026";
+- the Appendix C v0.11 heading → "ADOPTED";
 - the footer.
 
-At publication, update BASELINE's OFN row to the final published SHA-256, tag `ofn-v0.11` and authority `records/ofn/OFN_v0_11_RELEASE_RECORD.md`. The reviewed candidate hash and final published hash remain separate identities. The retained IMP-O10-05 wording exception in §3b is not an extra finalization edit.
+The header Date line follows the NUMGEN v1.21 publication precedent; the other seven are the lines listed in this section before adoption. The IMP-O10-05 wording exception (§3b) is not touched.
 
-After that step:
-1. The PI merges and tags `ofn-v0.11`.
-2. The three `pipes/OFN/` items are closed.
-3. The §6 notices are filed.
+The `--check --controls` run gives:
+- P1: candidate hash;
+- P2: rebuild identical;
+- P3: exactly the 8 declared lines differ;
+- P4: the reverse transform recovers the candidate;
+- P5: no draft or pending marker remains;
+- P6: every other line is byte-identical, and the claim-tag, RID and math census is unchanged.
+
+All six gates pass, and the five controls (an extra live change, a status-summary edit, a draft footer, a changed claim tag, an added RID) are all caught.
+
+**Published file:** `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md`, SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4`. The candidate hash `df3c465f…00eb` and the published hash are separate identities.
+
+**BASELINE.** The OFN row names v0.11, the published hash, this record and the tag `ofn-v0.11`, which the PI creates. The previous row is kept as the predecessor (`acb70a8c…5dfa`, `ofn-v0.10`).
+
+**After this record:**
+1. The PI merges PR #112 with a merge commit and creates the annotated tag `ofn-v0.11` on that merge commit. The tag message carries `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4`.
+2. The co-owners close the three `pipes/OFN/` items (§5).
+3. They file the §6 notices as `pipes/` items. The Genesis, RRF and FMS/ER-2B notices name OFN11-C01 and OFN11-C02 (§3b).
+4. "Sync now" is run in the Claude project.
+
+This record is frozen at adoption, except for the merge-commit and tag fields in §1, which the PI may fill in.

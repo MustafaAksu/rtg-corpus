@@ -1,11 +1,11 @@
 # RTG_ONTOLOGICAL_FOUNDATIONS_v0.11
 
 **Title:** Relational Time Geometry — Ontological Foundations and Model-Selection Layer  
-**Date:** 29 October 2026  
+**Date:** 30 October 2026  
 **Scope:** Foundational commitments, primitive-object hypotheses and model-selection criteria of RTG, including the genuine relational-triad model-selection contract for the FMS interface (§5.5); no physical generator, carrier or primitive object is selected.  
 **Document class:** Foundational ontology / model-selection ledger (Methodology v1.4 §0.5); nonstandard profile with the section map in §0.4.  
-**Document status:** DRAFT — v0.11 candidate: layout-only compaction (stage 2) of the frozen stage-1 intermediate; adoption pending (`records/ofn/OFN_v0_11_RELEASE_RECORD.md`). `ofn-v0.10` remains the governing edition until adoption and tag.  
-**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.10` (tag `ofn-v0.10`, SHA-256 `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa`), on adoption.  
+**Document status:** ADOPTED — PI, 30 October 2026 (owner synchronization, smooth class-C realization and two §5.5 contract corrections; stage 1 and stage 2 reviewed). Release record: `records/ofn/OFN_v0_11_RELEASE_RECORD.md`.  
+**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.10` (tag `ofn-v0.10`, SHA-256 `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa`).  
 **Companion documents:** governing editions read for this edition — Programme Overview v1.3 (`programme-v1.3`), DSN Methodology v1.4 (`methodology-v1.4`), Dyadic Oscillator v6.4.22 (`dyad-v6.4.22`), Genesis Geometry v2.9 (`gen-v2.9`), RRF v0.8.4 (`rrf-v0.8.4`), Discrete Genesis v2.12.14 (`tdrg-v2.12.14`), Number Genesis v1.21 (`numgen-v1.21`), RECOG v0.3.26 (`recog-v0.3.26`), Triadic v1.6.1 (`triad-v1.6.1`); claim-level pins are stated at each use and in §11.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Status summary:** OFN holds seventeen registered definitions, the hypothesis FSP-U, four OFN local results and twenty-one foundational OPENs (twenty ACTIVE, one PARTIAL); no physical generator, carrier, primitive object, chirality or isolation regime is selected. In the genuine relational-triad contract the transported class C is the primary realized smooth mathematical candidate family: a real $C^\infty$ realization exists through two imported Dyadic theorems, while analytic realization (DYAD B-an/B-6) and physical selection remain open. Standard C is a positive-dimensional local $C^3$ invariant-manifold test, and the admitted FMS mathematical test class is real $C^\infty$ with analytic laws as a distinguished subclass.  
@@ -49,7 +49,7 @@ OFN owns the programme's foundational commitments, hypotheses about primitive re
 
 Definitions use `[DEF]`, hypotheses `[HYP]`, interpretation `[HEUR]` and research targets `[OPEN]`. A load-bearing import opens with the source truth tag and `[import:]`; `[RESULT] [from: TAG]` is reserved for a genuinely local synthesis. Standard mathematics may be stated under `[MATH]`; its physical application is separate.
 
-*v0.11 (adoption pending):* registers six further definition RIDs for unchanged bodies, corrects two §5.5 definitions by recorded `[COR]` (Appendix B) and adds no OPEN record.
+*v0.11:* registers six further definition RIDs for unchanged bodies, corrects two §5.5 definitions by recorded `[COR]` (Appendix B) and adds no OPEN record.
 
 ### 0.4 Layer Boundary and Profile Map
 
@@ -1374,7 +1374,7 @@ IMP/RF/CUST/REQ labels are administrative records, not newly assigned scientific
 | `RTG-OFN-ALG-RAW-STANDARD-C-NOGO` | Registered v0.10, OFN RESULT from ALG | Registered 19 Oct 2026 (O10-P4); OPEN-C19-L gap recorded |
 | `RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT` | Registered v0.10, OFN RESULT; single status `[from: ALG]` in v0.11 (OFN11-C03) | Registered 19 Oct 2026 (O10-P4); Genesis erratum concurs |
 | `RTG-OFN-OPEN-TRIAD-CLASS` | Registered v0.10, OFN OPEN | Registered 19 Oct 2026 (O10-P6) |
-| `RTG-OFN-DEF-ZERO-ORIGIN`, `RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY`, `RTG-OFN-DEF-CONTINUOUS-REPRESENTATION`, `RTG-OFN-DEF-FINITE-DESCRIPTION`, `RTG-OFN-DEF-DIST-ZN`, `RTG-OFN-DEF-REDUCTION-TARGET` | v0.11 (adoption pending), OFN definitions; bodies unchanged from v0.10 §§1.3, 4.1, 4.6, 8 | Registered on adoption of v0.11 (seventeen definition RIDs in total) |
+| `RTG-OFN-DEF-ZERO-ORIGIN`, `RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY`, `RTG-OFN-DEF-CONTINUOUS-REPRESENTATION`, `RTG-OFN-DEF-FINITE-DESCRIPTION`, `RTG-OFN-DEF-DIST-ZN`, `RTG-OFN-DEF-REDUCTION-TARGET` | Registered v0.11, OFN definitions; bodies unchanged from v0.10 §§1.3, 4.1, 4.6, 8 | Registered 30 Oct 2026 (seventeen definition RIDs in total) |
 
 **Actual consumer register — observed use, not newly completed synchronization:**
 
@@ -1526,7 +1526,7 @@ The inherited Appendix B records remain unchanged. Both v0.9 reconciliation entr
 
 **OFN10-C01 — FMS model-selection interface (adopted 19 October 2026).** Original: v0.9 §12.4 records FMS-01 as covered by existing requirements and says any later definition expansion needs a separate proposal. Proposed: §5.5 adds the genuine relational-triad contract (Q1–Q6, Standard C, Q6-REG, class-C model contract), two local results, the scoped FMS disposition and one OPEN record, from the co-owner-accepted handoff v0.8.2. Withdrawn working-record claims stay withdrawn and are not imported: "normalizer changes affect only fifth and higher order"; "the remaining class members are not conjugate" (replaced by RF-O10-02); "|u|/|v| drifts monotonically in every run"; "|c| reads m given κ". No inherited record is changed.
 
-### Adopted v0.11 records (adoption pending)
+### Adopted v0.11 records — 30 October 2026
 
 **OFN11-C01 — `RTG-OFN-DEF-STANDARD-C` quantifier `[COR]`.** Old (`ofn-v0.10` §5.5.2): "Standard C holds if there is a nonempty $F$-invariant regime $\mathcal R$ on which $I_e=O(|r|^4)$ for every edge $e$". Reason: the singleton $\{0\}$ ($T(0)=0$, $F_\kappa(0)=0$, $I_e(0)=0$) and any invariant set bounded away from 0 satisfied the wording vacuously; the intended content is local at 0 and is what `RTG-OFN-ALG-RAW-STANDARD-C-NOGO` excludes. New: the positive-dimensional local $C^3$ invariant-manifold-germ test of §5.5.2 (uniform punctured-domain bound; declared carrier, readout, norm and clock; singleton, finite records and isolated trajectories excluded; not all edges need be nonzero). RID kept. Effect: the raw no-go and the FMS disposition are unchanged; non-manifold and finite-amplitude regimes are outside the test and need their own contract. Sources: owner disposition records and reconciliation of 29 October 2026.
 
@@ -1541,7 +1541,7 @@ The inherited Appendix B records remain unchanged. Both v0.9 reconciliation entr
 
 One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier, with their draft-stage entries, are preserved verbatim in Appendix C at tag `ofn-v0.10`; the v0.1–v0.6 entries are in `ARCHIVED_OFN_HISTORY_v0_7.md`, which is not supplied to the corpus.
 
-### v0.11 — 29 October 2026 — DRAFT (adoption pending)
+### v0.11 — 30 October 2026 — ADOPTED / smooth class-C realization and owner synchronization release
 - **§5.5 [scientific/contract]:** class C consumes `DYAD-THM-SMOOTH-EMBEDDING` and `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (IMP-O10-06/07): one five-row regularity table; real $C^\infty$ lock surfaces; class C "primary realized smooth mathematical candidate family"; analytic and physical realization open. `RTG-OFN-DEF-STANDARD-C` corrected (OFN11-C01); test class real $C^\infty$ (OFN11-C02); one κ table; narrow-Q6 `[from: ALG]`.
 - **§§9–12 [receipts/pins]:** TDR-G v2.12.14 (Finding A statement accepted, custody deferred; REQ-O09-05 endpoint answered; owner RID map), NUMGEN v1.21 (REQ-O09-03), RECOG freeze record (REQ-O09-02), Dyadic map custody (REQ-O09-04), RRF §6.2a (O10-P3), Triadic v1.6.1 pass two; governing-editions line; Methodology v1.4 tag spellings.
 - **RIDs:** six DEF RIDs registered for unchanged bodies (`RTG-OFN-DEF-ZERO-ORIGIN`, `-DISCRETE-REDUCTION-BOUNDARY`, `-CONTINUOUS-REPRESENTATION`, `-FINITE-DESCRIPTION`, `-DIST-ZN`, `-REDUCTION-TARGET`). No OPEN status changes.
@@ -1578,4 +1578,4 @@ One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier
 
 ---
 
-*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.11 — DRAFT, adoption pending; `ofn-v0.10` governs until adoption and tag.*
+*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.11*
