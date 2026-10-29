@@ -3,6 +3,7 @@
 **Status:** DRAFT. Stage 1 is frozen; stage 2 (layout only) is built and checked; the stage-2 file is the adoption candidate. Nothing here is adopted. Until the PI adopts and the tag exists, `ofn-v0.10` remains the governing edition.
 **Date:** 29 October 2026
 **Prepared by:** Claude, OFN co-owner session `claude012ZC8x` (builder), on branch `claude/ofn-v0.11`.
+**Record update:** 30 October 2026 — ChatGPT, OFN co-owner: Atlas receipt, prerequisite-record merges and nonblocking dispositions; candidate bytes unchanged.
 **Edition:** v0.11, one successor built in two stages, under DSN Methodology v1.4. Stage 1 carries content and contract changes; stage 2 is layout only, checked by `tools/check_compaction.py` against the stage-1 hash.
 **Predecessor:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.10`, tag `ofn-v0.10`, SHA-256 `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa`.
 
@@ -13,17 +14,28 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Step | Source | State |
 |---|---|---|
 | Advisories | `records/ofn/ATLAS_ADVISORY_OFN_v0_10.md`, `…_INDEPENDENT_CHATGPT.md`, `…_RECONCILIATION.md` (§3 is the 29-row list; §5 is the correction) | merged (#103, #106, #107) |
-| Owner dispositions | `records/ofn/OFN_OWNER_DISPOSITION_ADVISORY_v0_10_claude012ZC8x_20261029.md` (PR #108); `…_chatgpt_20261029.md` (PR #109) | open PRs |
-| Joint reconciliation | `records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md` (PR #110; both co-owners confirmed; receiving review `records/ofn/OFN_RECONCILIATION_CHATGPT_REVIEW_20261029.md`) | open PR; read at `5e23fc4` |
+| Owner dispositions | `records/ofn/OFN_OWNER_DISPOSITION_ADVISORY_v0_10_claude012ZC8x_20261029.md` (PR #108); `…_chatgpt_20261029.md` (PR #109) | merged; exact heads and merge commits below |
+| Joint reconciliation | `records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md` (PR #110; both co-owners confirmed; receiving review `records/ofn/OFN_RECONCILIATION_CHATGPT_REVIEW_20261029.md`) | merged; confirmed reconciliation read at `5e23fc4`, final reviewed PR head `6a0b898` |
 | PI start | "başla" (29 Oct 2026), given in the OFN session on the reconciliation plan; the PI also authorized the custody intake `upload/ofn-records/` | given |
-| Custody intake | branch `upload/ofn-records`, commit `c6fd574`; `upload/ofn-records/SHA256SUMS.txt` lists 20 files (verified 20/20 with `sha256sum -c`) | pushed; atlas hash check and merge pending |
+| Custody intake | branch `upload/ofn-records`, commit `c6fd574`; `upload/ofn-records/SHA256SUMS.txt` lists 20 files; Atlas hash check `records/ofn/OFN_UPLOAD_HASH_CHECK_20261030.md` | 20/20 verified by Atlas; PR #116 merged; originals remain unchanged under `upload/ofn-records/` |
 | Change-focused review | `records/ofn/OFN_v0_11_CHATGPT_REVIEW.md` (ChatGPT, commit `5a7ed089`; PR #112 review `5704664058`), on head `b408cef`: ACCEPT SCOPED for the scientific/contract delta; R112-C1 and R112-C2 required, R112-N1 recommended | given |
-| Round-2 correction and receiving review | R112-C1, R112-C2 and R112-N1 applied in the stage-1 content build; stage 2 rebuilt unchanged against the new intermediate (§3a). ChatGPT PR #112 review `5704839026`, anchored to `e9b7e2a91aaa6c7a05233b0e114f69eb3adb1b1c` (29 October 2026) | ACCEPT SCOPED; all three findings CLOSED; no further co-owner correction requested in this round; Atlas replay and PI adoption remain pending |
-| Atlas row check and build replay | `records/ofn/ATLAS_ROW_CHECK_OFN_v0_11.md` | *(to be filled)* |
+| Round-2 correction and receiving review | R112-C1, R112-C2 and R112-N1 applied in the stage-1 content build; stage 2 rebuilt unchanged against the new intermediate (§3a). ChatGPT PR #112 review `5704839026`, anchored to `e9b7e2a91aaa6c7a05233b0e114f69eb3adb1b1c` (29 October 2026) | ACCEPT SCOPED; all three findings CLOSED; no further co-owner correction requested in that round; Atlas receipt now recorded in §3b; PI adoption pending |
+| Atlas row check and build replay | `records/ofn/ATLAS_ROW_CHECK_OFN_v0_11.md`, PR #115 head `8621e565f4454073d0a832af392895da5752ebc5`, reviewing PR #112 head `ba61f5195a21e31d9c7fe5b047d55c400f95683a` | ACCEPT FOR ADOPTION (Atlas side); independently replayed by Atlas; record and evidence merged in #115; received by ChatGPT without claiming another replay (§3b) |
 | Adoption | PI | *(to be filled)* |
-| Merge commits; tag `ofn-v0.11` | PI | *(to be filled)* |
+| Publication merge of PR #112; tag `ofn-v0.11` | PI | *(to be filled)* |
 
-The PI will merge PRs #108–#111 before adoption, so that the records this edition cites are on `main` (PI, 29 Oct 2026).
+**Prerequisite merge receipt — 30 October 2026.** On the PI's current request, ChatGPT executed the following server-side merge commits in the stated order, with each PR head pinned by the merge request. No squash, rebase, force-push or branch deletion was used. These are record/intake merges, not adoption of v0.11.
+
+| PR | Pinned head | Merge commit on `main` |
+|---|---|---|
+| #108 | `e11aa3a3e45f92ef9b0589c55a932ca17eb830fa` | `2861b16b92e0d79c44e6b254036126d79895ab26` |
+| #109 | `14bf27be7809d8203c56bbbb3c28b2696b7572f5` | `d2fecb79d9a34f84dc75e4fe4a65b7903e990307` |
+| #110 | `6a0b89826ee53114b28585ea1cefda0bde915576` | `c82c606c0642fc2a1407e4e6276582036cc548a2` |
+| #111 | `71f708916bebba012a3ab45509ffe22b9fd8ce48` | `e1e88514daef4b4ddfb86bc2f0d2a7d0f978d42e` |
+| #116 | `c6fd5743dea3e5e2b6162d1242d03cad2bba1078` | `d906cd217e71e89ea8bfa74f6d6569b2030849bc` |
+| #115 (Atlas review/evidence) | `8621e565f4454073d0a832af392895da5752ebc5` | `520abadab996981ca2e2edf56c48efdf194fdba1` |
+
+The Atlas §4.1 publication condition is therefore met: the disposition, reconciliation, finding and intake records are on `main` before PR #112. The review evidence is on `main` as well. PR #112 remains unmerged and unadopted; the separate tool PR #113 is not merged or required by this release.
 
 ## 2. Identities
 
@@ -149,44 +161,59 @@ All three are applied in the stage-1 content build, not in the layout stage or i
 
 This receipt changes neither the candidate nor the movement map, and does not add `history_appendix: "C"` in anticipation of PR #113. It makes no adoption, merge, tag or inbox-state change. The prerequisite-record merges, custody intake and PI adoption remain separate gates.
 
+## 3b. Atlas receipt and bounded dispositions — 30 October 2026
+
+**Received:** `records/ofn/ATLAS_ROW_CHECK_OFN_v0_11.md` and `records/ofn/OFN_UPLOAD_HASH_CHECK_20261030.md`, read in full by ChatGPT at PR #115 head `8621e565f4454073d0a832af392895da5752ebc5`, then merged as recorded in §1. Atlas's verdict is **ACCEPT FOR ADOPTION** for exactly `df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb`. This receipt supersedes the pending-Atlas state of the dated §3a receipt; it does not rewrite that earlier review.
+
+**Evidence attribution:** Atlas independently rebuilt both stages and their logs/map byte-identically, reran K1–K9/C1–C17 and G0–G10/F1–F14, checked the shared tool, and recomputed the 13 artifact hashes in §2. The execution records are under `evidence/atlas/rowcheck/ofn_v0_11/`. ChatGPT receives those inspected records as Atlas execution, not as a second execution by ChatGPT. No historical owner campaign is reopened. The upload audit also preserves its exact limit: Draft 1 → Draft 2 → v0.10 output bytes were reproduced, but the v0.10 release script's later predecessor-file post-check stopped because v0.9 bytes were unavailable; the v0.9 → Draft 1 leg was not replayed.
+
+**Disposition of Atlas §4.2–4.5:**
+
+1. **RID retention, OFN11-C02:** `RTG-OFN-DEF-TRIAD-MODEL-CONTRACT` retains its identity because the amendment revises the admitted-regularity field of the same versioned genuine-triad model-selection contract, preserving its referent, Q1–Q6 and custody; it is explicitly recorded as a contract amendment, not as equivalence of the old analytic and new smooth test domains or as a new theorem. The old field remains recoverable at `ofn-v0.10`. Consumers must assess the versioned amendment rather than infer unchanged scope from the retained RID (Methodology v1.4 §4.4). Both OFN11-C01 and OFN11-C02 are named in the planned Genesis, RRF and FMS/ER-2B notices in §6.
+2. **Retained live-file exception:** IMP-O10-05's phrase "not re-verified line by line for this draft" is deliberately retained as the evidence-access qualification for this reviewed candidate; it is not a claim of a new proof replay or a remaining scientific gate. No extra canonical-text edit is inserted into the status-only finalization. A later source-maintenance pass may update that wording together with its actual verification scope.
+3. **Optional tool profile:** do not add `history_appendix: "C"` for this release. The committed map, shared-tool baseline and owner guards remain the accepted check package. Atlas's passing PR #113 run is not approval of that tool: the independent receiving review in PR #114 requests two fixes to PR #113 (`CCP113-R1`, history boundaries; `CCP113-R2`, hash-relocation regression). PR #113 remains separate and unmerged; neither this tool review nor the optional profile changes the OFN candidate.
+4. **Adoption object and finalization:** keep candidate `df3c465f…00eb`; only the §8 adoption-state lines may change after a distinct PI adoption decision. At publication, BASELINE must name the final published SHA-256, `ofn-v0.11` and this release record. These operations have not been performed by this receipt.
+
+**Co-owner disposition:** retain ACCEPT SCOPED / adoption-ready for the reviewed candidate. No further scientific correction or build round is requested. The record-only dispositions above do not adopt the candidate, alter its contract decisions, send the future notices, close inbox items or authorize a publication tag.
+
 ## 4. Custody (row 24)
 
 | Artifact | SHA-256 | State |
 |---|---|---|
-| v0.10 release record (with N-O10-1–4) | `10a1ec6b…0844` | uploaded to `upload/ofn-records/` (not yet merged) |
-| `build_ofn_v0_10_draft1.py`, `build_ofn_v0_10_draft2.py`, `release_ofn_v0_10.py` | `6a4fe7af…58ff`, `930b0aef…5c82`, `2aca119f…4f5f` | uploaded |
-| Draft 1, Draft 2 | `d94e1e39…8c36`, `58e2dec5…3610` | uploaded |
-| SESSION scripts: `iso_check.py`, `iso_quadratic_nogo.py`, `transported_pq.py`, `transported_sim.py`, `basin_test.py`, `OFN_PSI_KAPPA_EXTENSION_v0_1.py`, `OFN_PSI_KAPPA_ALL_MINOR_CHECK_v0_1.py`, `OFN_PSI_INVARIANT_C_CHECK_v0_1.py`, `OFN_PSI_INVARIANT_C_GAUGE_CHECK_v0_1.py`, `OFN_PSI_REFLECTION_AUDIT_v0_1.py`, `OFN_STAB_F3_CHECK_v0_1.py` (11 of 12), plus `k3_six_step_factor_check.py` | as listed in `SHA256SUMS.txt`, equal to the prefixes printed in OFN | uploaded |
-| v0.8 input reviews `OFN_SOURCE_REVIEW_ER2B_GEN288_OPEN3_v0_1_1.md`, `…_ADDENDUM_…_v0_1.md` | `8d18640f…0944`, `f86cd483…c5b8` | uploaded |
+| v0.10 release record (with N-O10-1–4) | `10a1ec6b…0844` | unchanged intake merged in PR #116 under `upload/ofn-records/` |
+| `build_ofn_v0_10_draft1.py`, `build_ofn_v0_10_draft2.py`, `release_ofn_v0_10.py` | `6a4fe7af…58ff`, `930b0aef…5c82`, `2aca119f…4f5f` | unchanged intake merged in PR #116 |
+| Draft 1, Draft 2 | `d94e1e39…8c36`, `58e2dec5…3610` | unchanged intake merged in PR #116 |
+| SESSION scripts: `iso_check.py`, `iso_quadratic_nogo.py`, `transported_pq.py`, `transported_sim.py`, `basin_test.py`, `OFN_PSI_KAPPA_EXTENSION_v0_1.py`, `OFN_PSI_KAPPA_ALL_MINOR_CHECK_v0_1.py`, `OFN_PSI_INVARIANT_C_CHECK_v0_1.py`, `OFN_PSI_INVARIANT_C_GAUGE_CHECK_v0_1.py`, `OFN_PSI_REFLECTION_AUDIT_v0_1.py`, `OFN_STAB_F3_CHECK_v0_1.py` (11 of 12), plus `k3_six_step_factor_check.py` | as listed in `SHA256SUMS.txt`, equal to the prefixes printed in OFN | unchanged intake merged in PR #116 |
+| v0.8 input reviews `OFN_SOURCE_REVIEW_ER2B_GEN288_OPEN3_v0_1_1.md`, `…_ADDENDUM_…_v0_1.md` | `8d18640f…0944`, `f86cd483…c5b8` | unchanged intake merged in PR #116 |
 | `RTG_ONTOLOGICAL_FOUNDATIONS_v0_8_RELEASE_RECORD.md` | `0015347c…0848` | held by the ChatGPT session; not uploaded |
 | `transported_chiral_pq.py` (`09129ffc…73ac`) | — | **missing** (neither OFN session holds it) |
 | FMS ψ scripts (`ad44f66a…`, `5af23da9…`); ER-2B v0.3.1 (`711e427a…81b4`, reported) | — | missing from both OFN sessions; to be asked of FMS and the PI |
 | `REVIEW_FINDINGS.md`, `OFN_TDRG_FINDING_A_HANDOFF.md`, `OFN_v0_9_PROGRAMME_AND_OWNER_SYNC_REQUEST.md`, v0.9 release record and validation files | — | missing from both OFN sessions |
 | RECOG v0.3.20 freeze record | `5c00f66d…9b55` | placed (`records/recog/`) |
 
-No historical record is reconstructed. Once the v0.10 release record is placed, BASELINE's authority row for OFN can point to it.
+No historical record is reconstructed. The unchanged v0.10 release record is now available on `main` at `upload/ofn-records/RTG_ONTOLOGICAL_FOUNDATIONS_v0_10_RELEASE_RECORD.md`; this is intake placement, not a silent move to `records/ofn/`. BASELINE's authority row can cite it, or this v0.11 release record after the successor is adopted and tagged. Unrecovered items retain the earlier custody limitations.
 
 ## 5. Inbox `pipes/OFN/`
 
 | Item | Disposition | State |
 |---|---|---|
-| `20261026-NUMGEN-v1-21-adopted.md` | `2026-10-29 · accept · records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md` (rows 12, 13) | dispositioned (PR #110); closed after the tag |
+| `20261026-NUMGEN-v1-21-adopted.md` | `2026-10-29 · accept · records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md` (rows 12, 13) | dispositioned (PR #110 merged); closed after the tag |
 | `20261028-TDRG-v2-12-14-adopted.md` | the same (rows 7–11) | dispositioned; closed after the tag |
 | `20261029-RECOG-v0-3-26-adopted.md` | the same (rows 14, 15, 23) | dispositioned; closed after the tag |
 
-Filed by OFN: `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md` (`kind: finding`; PR #111).
+Filed by OFN: `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md` (`kind: finding`; PR #111 merged). Filing is not TDR-G acceptance.
 
 ## 6. Affected consumers (what would be notified after the tag)
 
 | Consumer | Notice content |
 |---|---|
 | DYAD | Receipts of N4, N6 and N14. Adopted use of `DYAD-THM-SMOOTH-EMBEDDING`, `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` and `DYAD-DEF-PRIMITIVE-MAP` (IMP-O10-06/07, IMP-O08-12) |
-| GEN | G-20 existence note received; C2 used through the DYAD chart; imports repinned to `gen-v2.9` |
-| RRF | §6.2a received. The phrase "OFN has not separately adopted" is now stale, because OFN adopts the $C^\infty$ class-C reading at §5.5.4 scope. The readout entry is accepted as the representation-level readout contract |
+| GEN | G-20 existence note received; C2 used through the DYAD chart; imports repinned to `gen-v2.9`. Explicitly notify OFN11-C01 (`RTG-OFN-DEF-STANDARD-C` quantifier correction) and OFN11-C02 (`RTG-OFN-DEF-TRIAD-MODEL-CONTRACT` regularity amendment), since IF32 consumes §5.5; no silent consumer adoption |
+| RRF | §6.2a received. Upon OFN v0.11 adoption, "OFN has not separately adopted" needs synchronization at §5.5.4 scope; the readout entry is accepted as the representation-level readout contract. Explicitly notify OFN11-C01 and OFN11-C02 and the retained, version-qualified contract RIDs; RRF decides its own consumer update |
 | TDR-G | Finding A receipt state recorded. Owner RIDs used. REQ-O09-05 endpoint component closed. The label finding is filed separately (PR #111) |
 | NUMGEN | REQ-O09-03 closed; consumer rows moved to v1.21 |
 | RECOG | REQ-O09-02 closed through the freeze record; imports at `recog-v0.3.26`; A1c witnesses recorded by claim |
-| FMS / ER-2B | Class C now has a real $C^\infty$ mathematical realization; analytic realization and physical selection stay open. Standard C has been corrected and the test class widened; their co-owners update their own wording (row 27) |
+| FMS / ER-2B | Class C now has a real $C^\infty$ mathematical realization; analytic realization and physical selection stay open. Standard C is corrected by OFN11-C01 and the test class widened by OFN11-C02; their co-owners update their own wording (row 27) |
 | Programme | OFN v0.11 is the criteria home for P0 and P2B; repin at the Programme's next edition |
 
 ## 7. Stage 2 (layout only)
@@ -235,7 +262,7 @@ Filed by OFN: `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md` (`kind: finding
 1. The tool's RID pattern does not track `RTG-OFN-*`, because it skips a prefix preceded by "RTG-". G2 and G6 carry that check (fixtures F11 and F12).
 2. OFN's history appendix is Appendix C, and the tool counts Appendix C as live text. Its history-appendix identifier test therefore finds each identifier in the new entry itself and cannot fail. G9 carries that check (fixture F5).
 
-These limits are worth a note to the tool owner; no tool change is made here.
+These limits are tracked by tool PR #113. Its separate receiving review (PR #114, `records/atlas/TOOL_CHECK_COMPACTION_PR113_RECEIVING_REVIEW_CHATGPT.md`, reviewed head `740496b9d6d1f605ad9f8e125c41efd598338d3b`) requests two required fixes; a PASS on this genuine OFN candidate does not resolve those synthetic negative-control failures. No tool change or optional profile-key addition is made here (§3b).
 
 **Size (`dsn_lint`, informational):**
 - 192,142 bytes and 1,581 lines.
@@ -251,6 +278,8 @@ No claim, RID, grade, status or OPEN changes in stage 2.
 
 ## 8. Adoption *(to be filled)*
 
+**Approval object:** `df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb`. Co-owner acceptance, Atlas acceptance and the prerequisite merge authorization are not a recorded PI adoption decision. No publication finalization or `ofn-v0.11` tag is asserted by this record update.
+
 The PI adopts the stage-2 candidate, or a candidate revised after review. A finalization step then changes the adoption-state wording only, and a checker confirms that nothing else differs. It touches:
 - the Document status line and Supersedes ("on adoption");
 - the §0.3 "*v0.11 (adoption pending):*" label;
@@ -258,6 +287,8 @@ The PI adopts the stage-2 candidate, or a candidate revised after review. A fina
 - the Appendix B "(adoption pending)" heading;
 - the Appendix C v0.11 heading;
 - the footer.
+
+At publication, update BASELINE's OFN row to the final published SHA-256, tag `ofn-v0.11` and authority `records/ofn/OFN_v0_11_RELEASE_RECORD.md`. The reviewed candidate hash and final published hash remain separate identities. The retained IMP-O10-05 wording exception in §3b is not an extra finalization edit.
 
 After that step:
 1. The PI merges and tags `ofn-v0.11`.
