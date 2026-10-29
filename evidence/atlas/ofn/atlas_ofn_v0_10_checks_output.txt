@@ -1,0 +1,201 @@
+# RID resolution (OFN-cited owner RIDs vs governing tags)
+DYAD-ALG-NF6: DECLARED in DYAD
+DYAD-ALG-OPEN3-LEADING: DECLARED in DYAD
+DYAD-CAND-FLAT-CENTRALIZER: DECLARED in DYAD
+DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES: DECLARED in DYAD
+DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER: DECLARED in DYAD
+DYAD-THM-FORMAL-CENTRALIZER: DECLARED in DYAD
+DYAD-THM-FORMAL-Z6-GENERATOR: DECLARED in DYAD
+DYAD-THM-OPEN3-ASYMPTOTIC-PHASE: DECLARED in DYAD
+DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS: DECLARED in DYAD
+DYAD-THM-OPEN3-SPIRAL-REM: DECLARED in DYAD
+DYAD-THM-PRIM-CTR: DECLARED in DYAD
+GEN-DEF-PRIMITIVE-MAP: DECLARED in GEN
+GEN-DEF-PRIMITIVE-METRIC: DECLARED in GEN
+GEN-OPEN-REGGE: DECLARED in GEN
+GEN-OPEN-UV-LIFT: DECLARED in GEN
+GEN-THM-K3-PLANAR-FACTOR-NOGO: DECLARED in GEN
+GEN-THM-K3-SIXSTEP-FACTOR-NOGO: DECLARED in GEN
+GEN-THM-LIN-ORDER6: DECLARED in GEN
+GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO: DECLARED in GEN
+GEN-THM-PRIMITIVE-METRIC-INVARIANCE: DECLARED in GEN
+GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO: DECLARED in GEN
+NUMGEN-OPEN-REC-HOL-OPERATOR: PRESENT-UNDECLARED in NUMGEN
+NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO: PRESENT-UNDECLARED in NUMGEN
+RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE: DECLARED in RECOG
+RECOG-ALG-SELECTION-SIN: DECLARED in RECOG
+RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION: DECLARED in RECOG
+RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY: DECLARED in RECOG
+RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION: DECLARED in RECOG
+RECOG-ALG-SWAP-SPLIT: DECLARED in RECOG
+RECOG-DEF-POLE-COMPARATOR: DECLARED in RECOG
+RECOG-DEF-STATE-COMPARATOR: DECLARED in RECOG
+RECOG-OPEN-EVENT-RULE: DECLARED in RECOG
+RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS: DECLARED in RECOG
+RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH: DECLARED in RECOG
+RECOG-THM-R9-MEMORY: DECLARED in RECOG
+RRF-DYAD-W: PRESENT-UNDECLARED in RRF
+RRF-NET-W-RAW: PRESENT-UNDECLARED in RRF
+TDRG-OPEN-INTERACTION-ONSET: DECLARED in TDRG
+TDRG-OPEN-MULTISTAR-AXIOM: DECLARED in TDRG
+UVM-OPEN-OPA-LINK: owner source not loaded
+
+# legacy labels in OFN: {'LEM-REACH': 8, 'LEM-NOANNIHIL': 5, 'LEM-RETRIG': 4, 'LEM-SPECCONS': 5, 'CONV-TICK': 5, 'CONV-P3CYC': 4}
+# RID unavailable count: 17
+   160 `[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.2 #sec-6-2-holonomy | RID unavailable] For node-difference phases, $\Delta_{AB}+\Delta_{BC}+\Del
+   203 `[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1 #sec-6-1-state | RID unavailable] TDR-G uses even $N$ and the defect band $\mathcal D_k=\{\Del
+   224 `[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.3 #sec-6-3-interaction | RID unavailable] The star rule creates a node at the center's antipodal
+   241 `[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1 #sec-6-1-state | RID unavailable] TDR-G stores $X=(\theta_1,\ldots,\theta_M,\delta_1,\ldots,\d
+   269 `[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.2 #sec-6-2-holonomy | RID unavailable] A specified deterministic update on the fixed-cap finite 
+   642 `[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.2 #sec-6-2-holonomy | RID unavailable] For $k<N/6$, a triangle cannot have all three pairs defec
+   999 The `IMP-O08-*` keys identify this consumer's administrative entries. They are not invented source RIDs. Unnumbered source blocks use `RID unavailable
+   1007   Source identity: `RID unavailable`. Source status: `DEF`. Depends on: The formal definitions O0=0 and 0→(A,B), A+B=0; no physical creation/conservat
+   1012 - **IMP-O08-02** [RID: RID unavailable] :: Full discrete phase/token state and global-phase gauge :: `RTG_DISCRETE_GENESIS_DSN_v2.12.13` §6.1 #sec-6-1
+   1017 - **IMP-O08-03** [RID: RID unavailable] :: Even-N cyclic defect band :: `RTG_DISCRETE_GENESIS_DSN_v2.12.13` §6.1 #sec-6-1-state :: §§3.2/7.3 :: source
+   1022 - **IMP-O08-04** [RID: RID unavailable] :: Node-difference triangle holonomy :: `RTG_DISCRETE_GENESIS_DSN_v2.12.13` §6.2 #sec-6-2-holonomy :: flat clo
+   1027 - **IMP-O08-04B** [RID: RID unavailable] :: Strict narrow-band exclusion :: `RTG_DISCRETE_GENESIS_DSN_v2.12.13` §6.2 #sec-6-2-holonomy :: §7.3 :: stat
+   1047 - **IMP-O08-08** [RID: RID unavailable] :: Deterministic fixed-cap finite-state recurrence :: `RTG_DISCRETE_GENESIS_DSN_v2.12.13` §6.2 #sec-6-2-holono
+   1052 - **IMP-O08-09** [RID: RID unavailable] :: Star creates antipodal-shadow node/copies token and inverts center :: `RTG_DISCRETE_GENESIS_DSN_v2.12.13` §
+   1070   Source identity: `RID unavailable`. Source status: `DEF`. Depends on: Selected K=1 model and local/lifted coordinate convention; no all-p or global 
+   1387 | RRF v0.7 §2.3 guard | OFN non-spatial interpretation of Re W / Im W, presently cited with `RID unavailable` | Actual reference consumer, not yet an 
+   1390 **CUST-O09-01 — primitive-map identity.** IMP-O08-12 keeps its Dyadic source lineage and an exact version/section with `RID unavailable`. Genesis v2.8
+
+# version strings cited in OFN
+    1  AZ v0.6
+    2  DYAD v6.4.12
+    2  DYAD v6.4.13
+    1  DYAD v6.4.16
+    1  DZT v0.17
+    1  DZT v0.8
+    6  Dyadic v6.4.10
+    1  Genesis v1.18
+    7  Genesis v2.8.5
+    5  Genesis v2.8.9
+    3  Legacy v0.7
+    6  Methodology v1.3
+    3  NUMGEN v1.19
+   10  NUMGEN v1.20.7
+    2  OPEN M v0.7.1
+    1  Pre-Legacy v0.8
+    9  Programme v1.2
+    2  Programme v1.3
+    1  RECOG v0.3
+    3  RECOG v0.3.1
+   10  RECOG v0.3.20
+    6  RRF v0.7
+    7  RRF v0.8.3
+    3  RTG_DISCRETE_GENESIS_DSN_v2.12
+   23  RTG_DISCRETE_GENESIS_DSN_v2.12.13
+    3  RTG_DYADIC_OSCILLATOR_DSN_v6.4.10
+    2  RTG_DYADIC_OSCILLATOR_DSN_v6.4.13
+    1  RTG_DYADIC_OSCILLATOR_DSN_v6.4.14
+    1  RTG_DYADIC_OSCILLATOR_DSN_v6.4.16
+    7  RTG_GENESIS_GEOMETRY_DSN_v2.8.5
+    3  RTG_GENESIS_GEOMETRY_DSN_v2.8.9
+    7  RTG_ONTOLOGICAL_FOUNDATIONS_v0
+    2  RTG_ONTOLOGICAL_FOUNDATIONS_v0.10
+    1  RTG_ONTOLOGICAL_FOUNDATIONS_v0.9
+    1  RTG_PROGRAMME_OVERVIEW_v1.2
+   13  RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20
+    1  RTG_RRF_REPRESENTATION_REGISTRY_v0.8.3
+    5  TDR-G v2.12.13
+    5  Triadic v1.6
+
+# [RESULT] without [from:]: [(423, '**Source and status.** Governing input: `OFN_REPLY_TO_FMS_MODEL_SELECTION_v0_8_2.md` (SHA-256 `6e4fc3c3…564b1d`), accept')]
+
+# tag census
+   40  [DEF]
+   19  [HYP]
+   15  [HEUR]
+   13  [OPEN]
+   13  [ALG]
+   12  [COR]
+    8  [INTERP]
+    8  [RESULT]
+    7  [MATH]
+    7  [THM]
+    5  [from: ALG]
+    4  [RETRACTED]
+    3  [DEF-axiom]
+    2  [ALG — SESSION; RF-O10-02]
+    2  [ALG — SESSION]
+    2  [DELETED-AXIOM]
+    1  [from: THM + ALG]
+    1  [ALG — formal; OFN co-owner SESSION, recorded, not registered]
+    1  [ALG — leading order; SESSION]
+    1  [ALG — SESSION; two independent exact computations]
+    1  [Source: TDR-G DSN …]
+    1  [from: FAIL]
+    1  [from: ALG + NUM strong]
+
+# draft-tense residue
+   45 **v0.10 Draft 1 revision boundary:** this draft is the separate definition proposal anticipated above, limited to the FMS model-selection interface. It adds §5.5 and its 
+   59 OFN v0.8 was adopted on September 21, 2026, with O08-P1–P6, nine definition IDs, FSP-U as HYP, and the two local-result IDs. Those registrations, statements and custody a
+   61 *v0.10:* adopted on 19 October 2026 by the PI, approving O10-P1–P7 on Draft 2 (SHA-256 `58e2dec5…3610`). The v0.9 registrations, statements and custody are retained; v0.1
+   1122   Verification: source block directly inspected; theorem/source custody remains RECOG. The live source declares freeze-candidate status; no final freeze record or certifi
+   1127   Verification: source block directly inspected; theorem/source custody remains RECOG. The live source declares freeze-candidate status; no final freeze record or certifi
+   1132   Verification: source block directly inspected; theorem/source custody remains RECOG. The live source declares freeze-candidate status; no final freeze record or certifi
+   1142 Action: TDR-G retains the endpoint-policy/full-selector ruling and prospective custody decision. XFER-O08-01 remains proposed; NUMGEN acknowledgment is not transfer accep
+   1172 Action: record positive retained-memory evidence without defining a physical event, transporting the theorem to another comparator by renaming, or selecting a new carrier
+   1265 These entries support §5.5 only. Inherited §11.2 entries keep their v0.9 pins: the Genesis v2.8.5 and Dyadic v6.4.10 imports there are **not** re-pinned to v2.8.9 / v6.4.
+   1289   Source identity: `DYAD-ALG-OPEN3-LEADING` (`ALG`, v6.4.14); `DYAD-THM-OPEN3-SPIRAL-REM` (`THM`, per-row constants are suprema of majorants, v6.4.14); `DYAD-THM-OPEN3-PH
+   1324 Action: notice N9 is answered at owner level when v0.10 is adopted; until then the session-level answer stands. N12 was not read for this draft.
+   1346 | RECOG v0.3.20 | Mathematical statement text supplied; live header says freeze candidate | External final freeze/adoption record not supplied; REQ-O09-02 remains a relea
+   1369 | `RTG-OFN-ALG-STAR-TOKEN-SHIFT` | Registered OFN RESULT from ALG | XFER-O08-01 remains proposed to TDR-G; acknowledgment by another consumer is not custody acceptance |
+   1387 | RRF v0.7 §2.3 guard | OFN non-spatial interpretation of Re W / Im W, presently cited with `RID unavailable` | Actual reference consumer, not yet an exact named-rank-RID
+   1423 **Assembly.** Draft 1 is generated by `build_ofn_v0_10_draft1.py` from the adopted v0.9 bytes (SHA-256 `5ae8fdab…9795`, matching its release record). The script applies a
+   1529 **OFN09-C02 — current feedback versus historical blockers.** Original: OFN v0.8 RF-O08-05/06 and its earlier source-update requests. Replacement: current RECOG R8/R9/R10/
+   1549 ### v0.10 — 19 October 2026 — Draft 2 / release candidate, adoption pending (not adopted)
+   1555 ### v0.10 — 19 October 2026 — Draft 1 / adoption pending (not adopted)
+   1583 - Source/RID reconciliation against the supplied owner editions; RECOG freeze-candidate and RRF work-local adoption scope retained.
+   1590 - Original v0.8 bytes/release package are not mounted in this drafting pass: this distributed file is an amendment-form draft; whole-file assembly and preservation compar
+
+# anchors cited
+   2 RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1 #sec-6-1-state: anchor present at governing tag
+   3 RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.2 #sec-6-2-holonomy: anchor present at governing tag
+   3 RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.3 #sec-6-3-interaction: anchor present at governing tag
+   3 RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.5 #sec-6-5-twonode: anchor present at governing tag
+   1 RTG_GENESIS_GEOMETRY_DSN_v2.8.5 §1 and §6.1 #sec-6-1-primitive: anchor present at governing tag
+   2 RTG_GENESIS_GEOMETRY_DSN_v2.8.5 §6.1 #sec-6-1-primitive: anchor present at governing tag
+   2 RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20 §6.1 #sec-6-1-comparators: anchor present at governing tag
+   1 RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20 §6.4 #sec-6-4-selection: anchor present at governing tag
+   1 RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20 §6.6 #sec-6-6-swap-projection: anchor present at governing tag
+   3 RTG_RELATIONAL_RECOGNITION_DSN_v0.3.20 §6.6a #sec-6-6a-composition: anchor present at governing tag
+
+# OFN own RIDs declared: 37
+['RTG-OFN-ALG-FREE-ANTIPODAL-CONTINUATION', 'RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT', 'RTG-OFN-ALG-RAW-STANDARD-C-NOGO', 'RTG-OFN-ALG-STAR-TOKEN-SHIFT', 'RTG-OFN-DEF-BACKGROUND-TIME', 'RTG-OFN-DEF-COMPARATOR-TYPING', 'RTG-OFN-DEF-FEEDBACK', 'RTG-OFN-DEF-INERTIA-A8', 'RTG-OFN-DEF-PHASE-GAUGE', 'RTG-OFN-DEF-PRESENTATION-COVARIANCE', 'RTG-OFN-DEF-RANK-TYPING', 'RTG-OFN-DEF-RELATIONAL-CONTENT', 'RTG-OFN-DEF-STANDARD-C', 'RTG-OFN-DEF-STATE-COMPLETENESS', 'RTG-OFN-DEF-TRIAD-MODEL-CONTRACT', 'RTG-OFN-HYP-FSP-U', 'RTG-OFN-OPEN-ANTIPODAL', 'RTG-OFN-OPEN-BANDWIDTH', 'RTG-OFN-OPEN-DISC-INTERACTION', 'RTG-OFN-OPEN-EVENT', 'RTG-OFN-OPEN-FRUSTRATION', 'RTG-OFN-OPEN-FSP', 'RTG-OFN-OPEN-GEN-CONSTRAINTS', 'RTG-OFN-OPEN-GEN-SELECTION', 'RTG-OFN-OPEN-GRAM-CAP', 'RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC', 'RTG-OFN-OPEN-IQP', 'RTG-OFN-OPEN-OPA', 'RTG-OFN-OPEN-PRIMACY', 'RTG-OFN-OPEN-PRIMACY-3A', 'RTG-OFN-OPEN-PRIMACY-3B', 'RTG-OFN-OPEN-PRIMACY-3C', 'RTG-OFN-OPEN-REF-CLOSURE', 'RTG-OFN-OPEN-SECTOR', 'RTG-OFN-OPEN-SIXSTEP', 'RTG-OFN-OPEN-TIME-INDEX', 'RTG-OFN-OPEN-TRIAD-CLASS']
+# DEF blocks without RID (line starts with `[DEF]` and no [RID: on line):
+   41 `[DEF]` O0–O3 denotes conceptual commitments; O4 specified models; O5 their consequences. This is neither hist
+   131 `[DEF]` **Zero-origin.** $\mathcal O_0=0$ records the programme's null-origin convention. The first-dyad expre
+   135 `[DEF]` The current requirements exclude externally imposed physical reference structure and label-dependent o
+   152 `[DEF]` In the adopted distinct-pole, simple-graph representation, $K_2$ is the minimal nonempty binary relati
+   184 `[DEF]` **Orientation and comparison vocabulary.** Distinguish endpoint ordering, the linear tangent operation
+   197 `[DEF]` The words *update*, *interaction event*, *birth*, *section crossing*, *comparison* and *retained memor
+   245 `[DEF]` **Discrete reduction boundary.** $(\Delta,d)$ is the free-dyad state, not automatically the full birth
+   256 `[DEF]` **Continuous representation.** The selected dyad uses $(\rho,\eta)$; a lifted phase chart, a wrapped p
+   267 `[DEF]` **Finite description and finite domain.** A finite current node list, a finite alphabet per node, a un
+   362 `[DEF]` **OFN-DIST-ZN.** Separate (i) arithmetic on $\mathbb Z_N$, (ii) the specified cycle graph $C_N$ with c
+   427 `[DEF]` [part of RID: RTG-OFN-DEF-TRIAD-MODEL-CONTRACT] For the FMS interface the triad model is declared by:
+   469 `[DEF]` [part of RID: RTG-OFN-DEF-TRIAD-MODEL-CONTRACT] The transported family
+   637 `[DEF]` The present $\mathcal D_k$ is a wrapped graph-distance half-width around the discrete antipode (IMP-O0
+   657 `[DEF]` **Reduction target, not established construction.** Specify spaces, gauges, an independently motivated
+# OPEN/HYP blocks without RID:
+   158 `[HYP]` $K_3$ may be the minimal physically complete relational object. It is the first cycle in the simple un
+   168 `[HYP]` A minimal network may be the relevant primitive, with dyads and triads as subsystems. OPEN-OFN-3C asks
+   186 `[HYP]` **Reference-consumption reading.** The reduction “three node-difference edges minus one closure relati
+   273 `[OPEN]` **Continuous closure and nonintegrability.** Continuous node-difference closure is already used in Tr
+   281 `[HYP]` A relational selection principle, effective limit or universality argument might justify this model or
+   287 `[OPEN]` Derive or delimit the rule/policy from explicit relational principles. The old reference to “six stru
+   314 `[HYP]` **Physical application.** This may constrain a growth model only if that model actually produces the s
+   318 `[HYP]` **Nonintegrable-content route.** Incompatible closure targets or additional connection/history variabl
+   326 `[HYP]` **IQP-E — event-level information quantization.** One event creates or resolves one primitive relation
+   328 `[HYP]` **FSP — pointwise finite specifiability.** Each admissible relational state has a finite description i
+   344 `[OPEN]` **OPA — orientation physicality.** Specify the oriented variable, gauge action, observables and conse
+   356 `[OPEN]` **Null-ledger conservation reading.** Determine the actual quantity/account preserved exactly, statis
+   544 `[OPEN]` A selection proposal must state which features are premises, outputs, or empirical/model criteria. Re
+   576 `[HYP]` A relational symmetry/minimality principle could select that resonance. The existing Dyadic $p$-progra
+   606 `[OPEN]` The physical interpretation of the family conjugacy remains with OPEN-OPA. Under a passive interpreta
+   608 `[HYP]` The memo's proposed readings “existence as recognisability” and “event as change of an equivalence cla
+   631 `[HYP]` A relational information, closure or variational principle might select a policy. OPEN-OFN-2 and TDR-G
+   635 `[HYP]` In the adopted even cycle, opposition at $N/2$ is a candidate maximal-distinction convention. The loca
+   646 `[OPEN]` Jointly select or explicitly postulate $(N,k,\Sigma_\delta)$ and the applicable locality/growth rules
