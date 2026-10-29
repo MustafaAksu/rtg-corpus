@@ -1,0 +1,75 @@
+# OFN v0.10 — reconciliation of the two atlas advisory passes
+
+**Date:** 29 October 2026. **By:** Claude, atlas owner (advises; does not decide). **To:** the PI; the OFN co-owner sessions.
+**Status:** record. The merged list (§3) is what the OFN co-owners disposition — first separately, then jointly (PI decision, 29 Oct); the PI fixes the differences in §2 that the owners do not settle.
+**Inputs.** Pass 1: `records/ofn/ATLAS_ADVISORY_OFN_v0_10.md` (PR #103, this branch; items OA-01…09, OB-10…15, OC-16…19; mechanical checks in `evidence/atlas/ofn/`). Pass 2, blind: `records/ofn/ATLAS_ADVISORY_OFN_v0_10_INDEPENDENT_CHATGPT.md` (PR #106, branch `chatgpt/ofn-advisory-v0.10`, commit `54fb63df…`, file SHA-256 `edcb942c75e27a56a1da0fda7b4c7c91b1aac5addc27a8abd6a23c7128dd8f19`; items OF10-I01…I16). Both read in full against `ofn-v0.10` (`acb70a8c…5dfa`) and the governing tags named in each record. Pass 2 did not read pass 1 (its header; the PR history confirms the order).
+
+## 1. Verdict
+
+**The two passes agree on every scientific point they share and on the process; pass 2 adds three findings pass 1 did not have, and pass 1 adds four bounded items pass 2 did not list. One difference of treatment (REQ-O09-02) is resolved below; one factual error in pass 1 (the ER-2B edition) is corrected on the pass-1 branch.** Neither pass regrades an OFN claim or proposes withdrawing one; both read the class-C realization under separate mathematical / analytic / physical headings, both say availability of an owner result is not adopted use, both leave staging to need.
+
+The **new findings of pass 2**, all accepted into the merged list:
+- **I02** — OFN §5.5.1 (L435) admits *real-analytic* laws as the continuous FMS test class; a C^∞ transported C2 realization is therefore not automatically inside the admitted class. Consuming the DYAD results (I01 / OA-01) settles existence, not admissibility; the owners must either keep analytic admissibility (C^∞ C2 recorded as a mathematical comparison outside the test category) or widen the class — a model-contract decision, not a repin.
+- **I03** — `RTG-OFN-DEF-STANDARD-C` (L453) asks for a *nonempty* F-invariant regime with I_e = O(|r|⁴); the singleton {0} satisfies it vacuously (T(0)=0, F_κ(0)=0, I_e(0)=0; pass 2's exact SymPy check), while the no-go (L459) excludes *positive-dimensional* C³ submanifolds. Not a counterexample; a missing quantifier between the definition and the exclusion it supports. The owners say where "physically admissible / nonempty" excludes the singleton.
+- **I12** — OFN RF-O10-03 cites **ER-2B v0.3.1**; the repository holds **v0.3** (`er2b-v0.3`, `80669c69…a134`); FMS v0.6.4 carries the v0.3.1 hash `711e427a…81b4` as *reported*. The v0.3.1 bytes are not in the repository — a source-identity dependency, to be supplied unchanged by upload or replaced by an explicit choice. (Pass 1 had read the v0.3 file under the v0.3.1 name; corrected, §2 D4.)
+
+## 2. Differences and fixed resolution
+
+| # | Point | Pass 1 (Claude) | Pass 2 (ChatGPT) | Fixed resolution |
+|---|---|---|---|---|
+| D1 | REQ-O09-02 (RECOG v0.3.20 final freeze/adoption record) | fulfilled by the repository tags: RECOG is adopted and tagged from `recog-v0.3.22`; all nine RECOG RIDs OFN cites are declared at `recog-v0.3.25` (`EV-RUN`); the "freeze candidate" qualification (×6) is stale | a newer tag/header does not authenticate the *old* freeze document; treat as evidence custody — locate the original or keep it explicitly unresolved | **Both, by separating the two objects.** (a) The live request is discharged by **repinning the RECOG imports to `recog-v0.3.25`**, an adopted, tagged edition whose statements for the nine cited RIDs are unchanged (verified) — the freeze qualification then leaves the live text. (b) The v0.3.20 freeze record itself is a historical document that is not in the repository; it goes on the custody list (OB-14 / I14) as *missing*, not as a live request. If the owners prefer to keep the v0.3.20 pins, (b) stays unresolved and the qualification stays, as pass 2 says. |
+| D2 | Scope of the realization item | OA-01 lists the nine OFN sites and the SG-19 radius caveat inside one item | I01 (existence) + I02 (test-class admissibility) + I05 (no transport of finite-chart bounds, R9 stays) as three items | **Three items** (I01 ≡ OA-01 sites; I02 new; I05 ≡ pass-1 caveat, now its own row). The owners' regularity table carries five rows (formal; real polynomial C1 representatives; exact transported C^∞ C2; analytic; physical), as pass 2 proposes — pass 1's three headings are the last three. |
+| D3 | Staging | proposal: v0.10.1 corrections-only (Methodology v1.3 kept), v0.11 migration; split further if items mix | not mandatory; decide after the dispositions; if I02/I03 are deferred, name the limitation at point of use | **Pass 2's rule governs**, as the PI already decided (by need). Pass 1's proposal stands as one admissible layout, with the addition: I02 and I03 are contract decisions — in a corrections-only edition they appear as a point-of-use limitation note, their resolution in the migration edition or whichever the owners choose. |
+| D4 | ER-2B edition | cited "ER-2B v0.3.1" with line references taken from the repository file | repository file and tag are v0.3; v0.3.1 bytes unavailable | **Pass 2 is right.** Pass 1 corrected on its branch (header, OC-16): the lines quoted are at `er2b-v0.3`; the v0.3.1 identity is I12. |
+| D5 | NG-7A (NUMGEN §6.8) | no item; touched only as a pin refresh (OA-02f) | I09 (P2): completed input, nothing to reopen; navigation only | **I09 as stated**; no OFN change beyond the pin/navigation. |
+| D6 | RECOG's new results (A1c decoder, record fibers) in OFN's event inventory | not raised (pass 1 read RECOG only for the freeze and the RID resolution) | I10 (P1): record the witnesses by exact claim; no event principle, no R9/(D5) removal | **I10 accepted**; optional for a corrections-only edition (it adds reference content, RF-O09-02 rows), mandatory in the migration edition. |
+| D7 | Items only in pass 1 | OA-02e (§10 token-sum row now decidable), OA-05 (one κ-value table), OA-07 (Q3b ↔ RRF-CND-01 cross-reference), OA-08 (symbol reuse), OB-12 (pin census), OC-19 (proposed pipe states) | — (I06 touches the token gauge: "no unrestricted token gauge inferred") | **Kept** in the merged list at their priorities; none conflicts with pass 2. OC-19: the owners set the states (pass 2: "this advisory does not close it"). |
+| D8 | L674 "All twenty entries" (registry has twenty-one) and L463 `[from: THM + ALG]` | not listed | I15: stale count; v1.4 §3.4 single conclusion status for the plus-combination | **Accepted** into OB-10 / I15. |
+| D9 | L1392 "next authorized Programme v1.3 inventory refresh" | not listed | I13: Programme v1.3 is adopted; navigation stale | **Accepted** into OA-03b / I13. |
+
+Atlas-side observations after reading pass 2:
+1. Pass 2's I03 is the one item that touches a registered OFN definition's wording. Under v1.4 §7 a clarified quantifier is a `[COR]` with old/new text if the owners judge the current wording defective, or a scope note if they judge "physically admissible" already excludes the singleton; either way it is their decision and a recorded one, not a formatting edit (pass 2's acceptance line says the same).
+2. Pass 2's I02 interacts with the FMS disposition table (§5.5.5): the class C row "primary formal candidate class" is unchanged by I01 only if the test class stays analytic; if the owners widen the class, the row's basis changes and FMS/ER-2B (OC-16) follow.
+3. Pass 2 hash-verified OFN, RRF, TRIAD and FMS at their tags (`EV-HASH`, Git blob and SHA-256); pass 1 hash-verified OFN and the v0.8.2 handoff. Together the four governing files OFN leans on most are byte-identified; DYAD, GEN, TDR-G, NUMGEN, RECOG were read at their tags by both (`EV-SRC-READ`), their hashes being in BASELINE and the atlas manifest.
+
+## 3. Merged list — what the OFN co-owners disposition
+
+Priority P0/P1/P2 as in the two records; the owners disposition each row accept / accept with change / reject with reason / defer. "Edition" is the pass-1 proposal under the D3 rule (C = corrections-only edition; M = migration edition; owners decide).
+
+| # | Pass 1 | Pass 2 | P | Item (one line) | Edition |
+|---|---|---|---|---|---|
+| 1 | OA-01 | I01 | P0 | Class-C realization: import `DYAD-THM-SMOOTH-EMBEDDING` and `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` at `dyad-v6.4.22`; one regularity table (formal / polynomial C1 / exact transported C^∞ C2 / analytic OPEN / physical OPEN); re-scope the nine sites (§5.5.3 (ii), §5.5.4 ×2, §5.5.5, §5.5.6, §5.5.8, IMP-O10-04, OPEN-3B, OPEN-TRIAD-CLASS, OPEN-OPA); N14 receipt; notices to DYAD, GEN, RRF, FMS | C |
+| 2 | — | I02 | P1 | Test-class admissibility: §5.5.1 real-analytic class vs C^∞ C2 — keep analytic (record C^∞ as mathematical comparison) or widen the class (contract decision) | C: limitation at point of use · M: decision |
+| 3 | — | I03 | P1 | Standard C "nonempty" quantifier: singleton {0} vacuous; say where the nontrivial isolation regime (positive-dimensional, nonzero dyadic states) is required; no silent strengthening | C: scope note · M: `[COR]` if defective |
+| 4 | OA-01 note | I05 | P1 | No transport of §6.14 finite-chart bounds into Φ (SG-19); IMP-O10-05 quantitative statements edgewise in the dyad chart, qualitative in Φ unless stated; R9 stays in T1/T2/OPEN21; no off-surface basin | C |
+| 5 | OA-04 | I04 | P1 | RRF v0.8.4 §6.2a model-contract row and ψ-readout entry received; update §5.5.4 Registration row, RF-O10-01, OPEN-TRIAD-CLASS "next artifact"; γ≡κ convention is not raw/transported identity | C |
+| 6 | OA-05 | — | P1 | One κ-value table (0, 1, 2, 0<κ<2 κ≠1, κ∉{0,1,2}) at one site in §5.5; the others point to it | C |
+| 7 | OA-02a | I06 | P1 | Finding A: statement accepted by TDR-G (§7, `EV-CODE`), custody XFER-O08-01 deferred to v2.13, RID stays OFN's; record at the six sites; proposal stays open | C |
+| 8 | OA-02b | I06 | P1 | REQ-O09-05 endpoint policy answered (`TDRG-DEF-ORIENT`, SG-14, `largest_center` exception, finite equivariance check); update IMP-O08-15, §7.1, §10 L983, OPEN-OFN-2 "next artifact", OPEN-5A; the six-constraint list still not recovered; 2c=0 is not a covariance theorem for all policies | C |
+| 9 | OA-02c | I07 | P1 | Owner RID map for the twelve "RID unavailable" / legacy TDR-G imports; repin to `tdrg-v2.12.14` (corrections-only, statements unchanged); numerical uses carry `[conv: v18]` EV-NOT-RERUN | C |
+| 10 | OA-02d | I07 | P1 | OFN08-C12 fulfilled (LEM-RETRIG d=0); OFN text already correct; close the request, keep the archive entry | C |
+| 11 | OA-02e | (I06) | P1 | §10 token-sum row: owner rule/action/observable now named (token shift not a gauge; birth-free-sector symmetry); OFN decides the row | C |
+| 12 | OA-02f | I08 | P1 | NUMGEN v1.21: REQ-O09-03 answered (`NUMGEN-RESULT-N5AS1-L-BACKBONE`, q_m = block-sampled Q_true); §1.1 narrowed; consumer rows to v1.21; no domain inclusion inferred | C |
+| 13 | — | I09 | P2 | NG-7A: completed input; navigation only; FRUSTRATION PARTIAL, HOLONOMY-RANK ACTIVE unchanged | C (pin) |
+| 14 | OA-03a | I10 | P1 | REQ-O09-02 per D1: repin RECOG imports to `recog-v0.3.25` (statements unchanged), remove the freeze qualification; the v0.3.20 freeze record → custody list (missing) | C |
+| 15 | — | I10 | P1 | RECOG v0.3.25 witnesses (record-only decoder, record fibers) in the event/selection inventory by exact claim; no event principle | M (optional in C) |
+| 16 | OA-03b | I13 | P1 | CUST-O09-01 / REQ-O09-04 answered: IMP-O08-12 gets `DYAD-DEF-PRIMITIVE-MAP` (GEN alias); close at §4.2, §6.3, §12.3; N4/N6 receipts; L1392 Programme navigation current | C |
+| 17 | OA-03c | — | P2 | REQ-O09-06 (FMS closeout), REQ-O08-01 (OPA task): unchanged | — |
+| 18 | OA-07 | — | P2 | Q3b route C-a ↔ RRF-CND-01 cross-reference | C or M |
+| 19 | OA-08 | — | P2 | Symbol reuse ρ, N in §5.5.4 | owners |
+| 20 | OA-09 | I11 | P1 | Triadic v1.6.1 repin; §7.4 "pass two" receipt; no Triadic release precondition; §8 reading unchanged | C |
+| 21 | OB-10 | I15 | P1 | Methodology v1.4 migration: current-only cleanup (listed sites), tag spellings (`[ALG — SESSION]` etc.), `[from: THM + ALG]` single status, L674 count, Appendix A compaction, header per v1.4 §0; profile map kept (§0.4) | M |
+| 22 | OB-11 | I16 | P2 | RIDs for externally consumable DEFs (zero-origin, discrete reduction boundary, continuous representation, finite description, OFN-DIST-ZN, reduction target); two homeless OPENs; no OPEN-module IDs borrowed | M |
+| 23 | OB-12 | I13/I15 | P1 | Pins: governing-editions line; repin where the statement moved (rows 1, 9, 12, 14, 16, 20, 5); unchanged-statement pins labelled per v1.4 §1.1 rule 4 | C |
+| 24 | OB-14 | I14 | P1 | Custody table: release record, three build/release scripts, twelve SESSION scripts, FMS ψ scripts, `REVIEW_FINDINGS.md`, Finding A handoff, v0.9 validation files, v0.8/v0.9 release records, RECOG v0.3.20 freeze record — placed / held / missing; originals unchanged via `upload/ofn-records/`, atlas hash check; BASELINE authority becomes the OFN release record once placed; the 13 Oct narrowing package stays *not integrated* | C |
+| 25 | — | I12 | P1 | ER-2B v0.3.1 identity: supply the exact file unchanged by upload or choose v0.3 explicitly; no ER-2B-dependent stronger use meanwhile; SESSION/P4 qualifications kept | C (custody) |
+| 26 | OB-15 | I15 | P2 | Appendix lettering vs v1.4 §1: one sentence in §0.4 naming the map; relettering is layout | M |
+| 27 | OC-16 | I12 | P1 | FMS v0.6.4 / ER-2B class-C status wording (stale realization status): notice after row 1; their co-owners' edits | after C |
+| 28 | OC-17 | I13 | P1 | Receipts: DYAD N4/N6/N14; GEN G-20 note; RRF §6.2a ("OFN has not separately adopted" becomes stale) — `kind: notice` items after the tag | after C |
+| 29 | OC-19 | I06 | P1 | Inbox states are the owners' (proposed: TDR-G notice `accept with change`, NUMGEN notice `accept`), closed after the tag; `tools/pipes_index.py --check` | C |
+
+Not in either list, by design: no change to Q1–Q6 or the FMS ranking except through row 2; no new numerical campaign; no reconstruction of absent artifacts.
+
+## 4. After the dispositions
+
+The two owner disposition records (`records/ofn/OFN_OWNER_DISPOSITION_ADVISORY_v0_10_<session>_<date>.md`), then the joint reconciliation by the owners; the PI's "start" on the fixed rows and the staging; the build by the owners (branch, assertion-gated script under `evidence/ofn/scripts/`, checker with negative controls, DRAFT release record with the custody table and the inbox dispositions); change-focused review by the other co-owner; atlas row check and build replay (`records/ofn/ATLAS_ROW_CHECK_OFN_<edition>.md`); PI adoption; merge commit; annotated tag; tag verification; notices; atlas refresh (H1, OFN.O1–O13, DYAD.X1, GEN.D15).
