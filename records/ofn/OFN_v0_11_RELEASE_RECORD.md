@@ -18,7 +18,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | PI start | "başla" (29 Oct 2026), given in the OFN session on the reconciliation plan; the PI also authorized the custody intake `upload/ofn-records/` | given |
 | Custody intake | branch `upload/ofn-records`, commit `c6fd574`; `upload/ofn-records/SHA256SUMS.txt` lists 20 files (verified 20/20 with `sha256sum -c`) | pushed; atlas hash check and merge pending |
 | Change-focused review | `records/ofn/OFN_v0_11_CHATGPT_REVIEW.md` (ChatGPT, commit `5a7ed089`; PR #112 review `5704664058`), on head `b408cef`: ACCEPT SCOPED for the scientific/contract delta; R112-C1 and R112-C2 required, R112-N1 recommended | given |
-| Round-2 correction | R112-C1, R112-C2 and R112-N1 applied in the stage-1 content build; stage 2 rebuilt unchanged against the new intermediate (§3a) | done; delta check by the reviewer pending |
+| Round-2 correction and receiving review | R112-C1, R112-C2 and R112-N1 applied in the stage-1 content build; stage 2 rebuilt unchanged against the new intermediate (§3a). ChatGPT PR #112 review `5704839026`, anchored to `e9b7e2a91aaa6c7a05233b0e114f69eb3adb1b1c` (29 October 2026) | ACCEPT SCOPED; all three findings CLOSED; no further co-owner correction requested in this round; Atlas replay and PI adoption remain pending |
 | Atlas row check and build replay | `records/ofn/ATLAS_ROW_CHECK_OFN_v0_11.md` | *(to be filled)* |
 | Adoption | PI | *(to be filled)* |
 | Merge commits; tag `ofn-v0.11` | PI | *(to be filled)* |
@@ -142,6 +142,12 @@ All three are applied in the stage-1 content build, not in the layout stage or i
 - K7 and K8 carry the new phrases.
 - Controls C15–C17 are added; the stage-1 checker now reports K1–K9 PASS and 17/17 controls caught.
 - The stage-2 builder is unchanged apart from its base-hash constant, and it reruns cleanly on round 2.
+
+**Receiving delta review — ChatGPT, 29 October 2026:** **ACCEPT SCOPED; R112-C1, R112-C2 and R112-N1 CLOSED.** PR #112 review `5704839026` is anchored to `e9b7e2a91aaa6c7a05233b0e114f69eb3adb1b1c`, compared with the preceding reviewed head `5a7ed0892d0ff5b77dbba2f4572f0d0ec976966a`. The reviewer read all four candidate replacement hunks, the corresponding builder/checker delta and this release record. GitHub's comparison reports four replaced lines in each of the stage-1 intermediate and stage-2 candidate. The original review file remains the round-1 snapshot; this receipt closes its findings without rewriting that history. The scientific/contract acceptance is retained; no further correction is requested by this co-owner in this round.
+
+**Verification boundary for this receipt:** `EV-SRC-READ` / `EV-CODE`, not a complete build replay. The PR, this record and the movement-map header were checked to agree on stage 1 `9f31badfa0e7a70a037c3ede3e7f55f852d09f2288508ef38edf343a5172a822` and candidate `df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb`; these are builder-computed SHA-256 values, not independently rehashed by the receiving reviewer in this round. C15–C17 and their K7/K8 coverage were inspected. The full builders, gates and fixtures were not rerun by this reviewer; their PASS counts above remain builder-reported. Atlas's separate row check and build/hash replay remain pending.
+
+This receipt changes neither the candidate nor the movement map, and does not add `history_appendix: "C"` in anticipation of PR #113. It makes no adoption, merge, tag or inbox-state change. The prerequisite-record merges, custody intake and PI adoption remain separate gates.
 
 ## 4. Custody (row 24)
 
