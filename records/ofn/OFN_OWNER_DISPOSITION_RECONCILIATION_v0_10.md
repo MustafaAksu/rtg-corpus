@@ -107,7 +107,7 @@ The algebra is checked in `ofn_v0_10_owner_disposition_checks.py` (PR #108).
 
 - Authentication of ER-2B v0.3.1 is **deferred** until its exact bytes are placed unchanged. Its hash `711e427a…81b4` stays "reported (FMS v0.6.4)".
 - RF-O10-03 cites `er2b-v0.3` (`80669c69ada042230c36883f5f1de7a0738e637793a4d1cf4b590990da57a134`, recomputed from the tag; `EV-HASH`) **only** for its three uses, each checked at that tag:
-  - **C11 and C15B, with C20 at $\sigma=1$** (L472–496, L591–600, L628–661): the transported-cubic comparison on the closure plane. The algebraic identity $\sum_e\lvert w_e\rvert^4=\tfrac12N^2-2S^2$ is exact for closed triples; $\Delta_4S=-\tfrac13NS$ is the **degree-four part** of the six-step observable increment, not an exact all-order finite-step law. The historical "A.4" locator is not a section of `er2b-v0.3` and is not carried into this citation. Claude reported both exact checks; ChatGPT independently checked the two identities during the receiving review (SymPy, exact residuals 0).
+  - **C11 and C15B, with C20 at $\sigma=1$** (L472–496, L591–600, L628–661): the transported-cubic comparison on the closure plane. The algebraic identity $\sum_e\lvert w_e\rvert^4=\tfrac12N^2-2S^2$ is exact for closed triples; $\Delta_4S=-\tfrac13NS$ is the **degree-four part** of the six-step observable increment, not an exact all-order finite-step law. *(Locator correction, Claude, after the receiving review: `er2b-v0.3` **does** contain "## A.4 New cross-check: the C20 endpoint equals the FMS transported cubic `[ALG]`" at L74–97 — `git show er2b-v0.3:noncanonical/RTG_ER2B_CONSOLIDATED_STUDY.md`, SHA-256 `80669c69…a134`, tag commit `d7d661c0`. The review statement that v0.3 has no A.4 section is therefore withdrawn; the citation carries both locators, A.4 (L74–97, which itself writes $\Delta_4N$, $\Delta_4S$) and C11/C15B/C20. The degree-four reading above stands and agrees with A.4's own notation.)* Claude reported both exact checks; ChatGPT independently checked the two identities during the receiving review (SymPy, exact residuals 0).
   - **The C20 "attenuating" regime row** (L659): absolute $\lvert S\rvert$, consistent with relative attraction. `EV-SRC-READ`.
   - **The C19 family statement** (L616): `EV-SRC-READ`. The OPEN-C19-L hand derivation is OFN's own and is unchanged.
 - No whole-file equivalence between v0.3 and v0.3.1 is claimed. Nothing stronger that depends on ER-2B is used meanwhile.
@@ -219,7 +219,7 @@ Both records gave **`accept`** to all three notices after R6. This PR sets each 
 Following co-owner confirmation, one new item is to be filed: `pipes/TDRG/` — `kind: finding` (R3). It is not filed by this confirmation record.
 - `tdrg-v2.12.14` SG-3 (L445–446) calls $P=\Sigma\delta_i$ "not a physical observable" and "gauge-like"; §2 (L114) calls it a "gauge artifact". These are distinct source wordings, not an exact quotation of the same phrase at every site.
 - SG-14 (L478) says the common token shift is not a gauge of the full model.
-- The operative fact is nonconservation at star events.
+- The owner already states nonconservation (SG-3 violation line: "$P$ changes under birth"); OFN agrees (§3.4). The finding is therefore narrowed to the **label**: "gauge-like" (SG-3) and "gauge artifact" (§2 L114, Appendix B L1319) versus SG-14's statement that the common token shift is not a gauge.
 - TDR-G decides; OFN asks for nothing beyond a decision.
 
 ## 7. For the PI
