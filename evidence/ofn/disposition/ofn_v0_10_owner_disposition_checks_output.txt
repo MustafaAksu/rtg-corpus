@@ -1,0 +1,76 @@
+HASH ofn-v0.10      dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa PASS
+HASH dyad-v6.4.22   dsn/RTG_DYADIC_OSCILLATOR_DSN.md 2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29 PASS
+HASH gen-v2.9       dsn/RTG_GENESIS_GEOMETRY_DSN.md 9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac PASS
+HASH rrf-v0.8.4     dsn/RTG_RRF_REPRESENTATION_REGISTRY.md 2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce PASS
+HASH tdrg-v2.12.14  dsn/RTG_DISCRETE_GENESIS_DSN.md 3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392 PASS
+HASH numgen-v1.21   dsn/RTG_NUMBER_GENESIS_DSN.md 4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701 PASS
+HASH recog-v0.3.26  dsn/RTG_RELATIONAL_RECOGNITION_DSN.md 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34 PASS
+HASH triad-v1.6.1   dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md 95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f PASS
+FIND dyad-v6.4.22   x1 PASS :: [RID: DYAD-THM-SMOOTH-EMBEDDING]
+FIND dyad-v6.4.22   x1 PASS :: [RID: DYAD-THM-SMOOTH-EQUIVARIANT-CHART]
+FIND dyad-v6.4.22   x1 PASS :: B-∞ existence **CLOSED (v6.4.18)**
+FIND dyad-v6.4.22   x1 PASS :: B-an and B-6 ACTIVE
+FIND dyad-v6.4.22   x1 PASS :: inherits none of the finite-chart bounds of §6.14 (SG-19)
+FIND dyad-v6.4.22   x1 PASS :: Whether Genesis C2 or OFN class C uses it is their owners' decision
+FIND dyad-v6.4.22   x1 PASS :: [RID: DYAD-DEF-PRIMITIVE-MAP]
+FIND dyad-v6.4.22   x1 PASS :: | N14 | v6.4.18 | OFN | same | NOT RECORDED |
+FIND dyad-v6.4.22   x2 PASS :: INFORMATIONAL — no OFN receipt recorded
+FIND gen-v2.9       x1 PASS :: `[RID: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO]` `[scope: real C^3 germs
+FIND gen-v2.9       x1 PASS :: so (C2) is non-vacuous at \(C^\infty\)
+FIND gen-v2.9       x1 PASS :: `[RID: GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO]` `[scope:
+FIND gen-v2.9       x1 PASS :: `[RID: GEN-THM-K3-SIXSTEP-FACTOR-NOGO]` `[scope:
+FIND rrf-v0.8.4     x1 PASS :: ### 6.2a OFN class-C model contract
+FIND rrf-v0.8.4     x1 PASS :: OFN/Genesis have **not** separately adopted the resulting class-C family
+FIND rrf-v0.8.4     x1 PASS :: determines `m` **only up to** the reflection
+FIND rrf-v0.8.4     x1 PASS :: A $C^\infty$ carrier may be studied as a **candidate**
+FIND tdrg-v2.12.14  x1 PASS :: State: **statement accepted**
+FIND tdrg-v2.12.14  x1 PASS :: Custody transfer XFER-O08-01: **deferred** to v2.13 (the RID stays OFN's)
+FIND tdrg-v2.12.14  x1 PASS :: OFN REQ-O09-05 is answered by TDRG-DEF-ORIENT
+FIND tdrg-v2.12.14  x1 PASS :: it is a symmetry of the birth-free sector only, not a gauge
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-DEF-STAR] **Star blow-up**
+FIND tdrg-v2.12.14  x1 PASS :: $\delta_E = \delta_A$; center inverts: $\delta_A \mapsto -\delta_A \bmod N$
+FIND tdrg-v2.12.14  x1 PASS :: **[SG-3]** Total additive momentum $P = \sum \delta_i$ is not a physical observable.
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-DEF-PHYSICAL-STATE] **Physical state** is the quotient by global phase shift
+FIND tdrg-v2.12.14  x1 PASS :: a 2-cycle for $d\neq0$, a fixed point for $d=0$ (LEM-RETRIG)
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-DEF-ZN-STATE]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-DEF-REL-ADVANCE]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-DEF-BAND]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-THM-HOLONOMY]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-THM-NARROW-BAND-EXCLUSION]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-THM-RECURRENCE]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-DEF-CONV-TICK]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-DEF-CONV-P3CYC]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-DEF-ORIENT]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-ALG-LEM-REACH]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-ALG-LEM-NOANNIHIL]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-ALG-LEM-RETRIG]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-ALG-LEM-SPECCONS]
+FIND tdrg-v2.12.14  x1 PASS :: [RID: TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK]
+FIND numgen-v1.21   x1 PASS :: [RID: NUMGEN-RESULT-N5AS1-L-BACKBONE]
+FIND numgen-v1.21   x1 PASS :: answers OFN REQ-O09-03
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-DEF-POLE-COMPARATOR]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-DEF-STATE-COMPARATOR]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-ALG-SELECTION-SIN]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-ALG-SWAP-SPLIT]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-THM-R9-MEMORY]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS]
+FIND recog-v0.3.26  x1 PASS :: [RID: RECOG-THM-R9-SHARPENED-ROWS]
+FIND recog-v0.3.26  x1 PASS :: | large | $|z|\le\tfrac1{20}$, $C_7=100$ | $\tfrac1{400}$ | $517$ |
+FIND triad-v1.6.1   x3 PASS :: Programme/OFN pass two
+FIND ofn-v0.10      x1 PASS :: `[DEF]` [RID: RTG-OFN-DEF-STANDARD-C] [scope: as above] **Standard C at cubic order.**
+FIND ofn-v0.10      x1 PASS :: Standard C holds if there is a nonempty $F$-invariant regime $\mathcal R$
+FIND ofn-v0.10      x1 PASS :: | Regularity | Real-analytic laws form the admitted continuous FMS test class; this is not
+FIND ofn-v0.10      x1 PASS :: | Total additive token sum as a physical conserved quantity |
+HASH records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md 5c00f66dae7d4de6ccd4a04d642a23edfc861bbd6bd55e432513747fbd679b55 + "Fulfils REQ-O09-02" PASS
+ALG  star token-sum change = -delta_A (mod 24), all delta_A: PASS
+ALG  A^3 = -I for the order-6 rotation (so A-commuting maps are odd): PASS
+NEG  dyad-v6.4.22   absent as required: PASS :: B-∞ existence open
+NEG  rrf-v0.8.4     absent as required: PASS :: OFN has adopted the C^\infty class-C family
+NEG  tdrg-v2.12.14  absent as required: PASS :: Custody transfer XFER-O08-01: **accepted**
+NEG  ofn-v0.10      absent as required: PASS :: positive-dimensional $F$-invariant regime $\mathcal R$
+ALL PASS
