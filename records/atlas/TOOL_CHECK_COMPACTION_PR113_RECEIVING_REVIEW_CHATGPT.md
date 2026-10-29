@@ -1,5 +1,7 @@
 # PR #113 — independent receiving review of the compaction checker
 
+**Latest disposition (30 October 2026):** see §6 for round 2 at `9ee0bc99…`. The requested history-boundary cases and default-profile regression are fixed; CCP113-R2 still requires source-operation and actual history-target binding. The original round-1 review below is preserved with its own object identity.
+
 **Date:** 29 October 2026. **Reviewer:** ChatGPT, Atlas co-owner.
 **Status:** [SESSION] / tooling review, not owner-science adoption.
 **Object:** PR #113 at `740496b9d6d1f605ad9f8e125c41efd598338d3b`; base `b0dc6dbea3d9dc6ba148c7a1046bbfbeeebd0583`.
@@ -89,3 +91,54 @@ python3 -I evidence/atlas/tools/pr113_receiving_chatgpt/test_pr113_receiving.py 
 On the reviewed PR #113 tool this exits 1 with six mismatches; after correction it should exit 0. Testing both old and reviewed checkers with repeated `--checker` gives 11 mismatches in total (5 old, 6 proposed). The recorded output is `evidence/atlas/tools/pr113_receiving_chatgpt/receiving_controls_output.txt`.
 
 No production tool, OFN scientific text, adoption record or tag was changed by this review. PR #113 should not be merged as a completed closure of these checker gaps until R1/R2 are addressed.
+
+## 6. Round-2 receiving readback — 30 October 2026
+
+**[SESSION] Object:** PR #113 head `9ee0bc99a5172073ca9f3f0a68694f6a63f78061`. **Verdict: REVISE, narrowed to the source/target binding of CCP113-R2.** R1's four requested boundary counterexamples, the default-profile regression and N1's single-character RID gap are fixed. This is not a new OFN scientific objection.
+
+### 6.1 Identity, reading and execution
+
+The round-2 source and test changes were read, materialized from the already hash-verified prior files using the retrieved exact changes, then independently hashed and matched to the GitHub blobs. No checker implementation was rewritten for execution.
+
+| Executed object | SHA-256 | Git blob |
+|---|---|---|
+| Round-2 checker | `5c2dceb0805c6f69b41042a907035a06c313d24b716652ffef1da3b557a3b2dc` | `3c42434c56a0e2ccbfc08e4a68d1b577bc0ee8db` |
+| Round-2 producer fixture module | `7bc972010abaa3db60e519f6efeda174202218c903c2a95c3fc53fa566381f4d` | `1eec96d81f2889f37c2e82783eba5d76c408ebb9` |
+
+**EV-BYTES / EV-HASH / EV-CODE / EV-RUN** (Python 3.13.5):
+- Producer profile suite: **17/17 expected** (3 positive and 14 negative), exit 0.
+- Unchanged receiving harness from PR #114 with the round-2 fixture module: **7/7 expected**, exit 0.
+- Same harness with its original frozen fixture module: all six negatives now FAIL; original P0 also FAILs because its relocation is undeclared. The latter is the intended stricter contract, not a regression; harness exit 1 is correctly explained.
+- Two focused additional negatives for R2 plus one valid positive: positive PASS; **both negatives incorrectly PASS**, checker exit 0 with every check PASS. The harness exits 1 for two safety-expectation mismatches, not a runtime error.
+
+The current OFN producer log `evidence/atlas/tools/check_compaction_20261029/round2/ofn_v0_11_current/check_compaction_C_decl.txt` was read at the reviewed head: stage-1 archive `9f31badf…a822`, PASS with the declared C profile and four declarations (three unique hashes). The producer record names candidate `df3c465f…00eb`. The six historical regressions and complete OFN triple/guards remain **EV-SRC-REPORTED / EV-NOT-RERUN** in this receiving pass; no new independent OFN replay or scientific campaign is claimed.
+
+### 6.2 R2 residual — declaration must authorize the actual live deletion and actual history destination
+
+**Location at round-2 head:** `tools/check_compaction.py` L364–379, particularly L368–372.
+
+**N_WRONG_OPERATION (expected FAIL; observed PASS).** The live history-removal operation deletes the draft-hash paragraph but has no `relocate_hashes`. The same hash already occurs in the old Appendix C and is retained by the new Appendix C. Place `relocate_hashes` on the history-appendix rewrite instead. The code uses that rewrite's complete `_removed` text as `gone`, although it did not remove this hash from live text and retains it in its replacement. It therefore authorizes the unrelated undeclared live deletion. This is the previously requested source/operation binding, not a new semantic-proof requirement.
+
+**N_FOOTER_TARGET (expected FAIL; observed PASS).** The live deletion correctly declares the hash. Remove the hash from the new history entries and put it only on the final `*END OF DOCUMENT …*` line. Because `hist_new` is the entire replacement string including its permitted footer tail, the checker accepts the supposed historical relocation. The hash is absent from both live text and the parsed candidate history region. A valid footer is not the declared history destination.
+
+Both cases have exact base/candidate/archive identities, exact re-derivation, a unique C region, legal presentation and no unrelated failed assertion. The original synthetic positive is retained and passes. The identifiers and draft hash belong to the producer's synthetic fixture, not a proposed owner claim.
+
+**Acceptance criteria (one local gate correction):**
+1. A relocation declaration must be attached to the operation that actually removes the hash occurrence from a live source span. A history rewrite, header or footer replacement cannot authorize an unrelated live deletion merely because its old bytes contain the same hash. Validate the net removal, not all old replacement bytes.
+2. Require the hash in the validated, parsed candidate history region (`split_regions(cand)`), excluding its footer and later live sections; do not search the entire history-operation replacement including its tail.
+3. Keep default-profile live hashes protected and retain the legitimate OFN declarations on S2-E02, S2-S1 and S2-S5. The history-region/RID fixes need no further redesign for these two tests.
+
+### 6.3 Reproducer, scope and next receiving check
+
+New test: `evidence/atlas/tools/pr113_receiving_chatgpt/round2/test_pr113_round2_binding.py`, SHA-256 `066265928741f44b9c411bcf32ccf73f41729b0f2e1c092787798b9af4314935`. Actual replay stdout, including the 17-case suite and both old-harness variants: `round2/receiving_output.txt` in the same evidence directory.
+
+```sh
+python3 -I evidence/atlas/tools/pr113_receiving_chatgpt/round2/test_pr113_round2_binding.py \
+  --fixtures tools/test_check_compaction_profile.py \
+  --checker tools/check_compaction.py \
+  --report receiving_round2_binding.json
+```
+
+On `5c2dceb0…b2dc` this returns 1 with two mismatches. After correcting R2 it should return 0 while the positive, existing 17 controls, original six negatives and legitimate opted-in OFN map retain their expected outcomes. A fix confined to this opt-in gate does not call for an owner numerical campaign or a DSN revision; the bounded OFN map/guard replay remains the relevant integration check.
+
+**Final round-2 disposition:** R1 ACCEPT at the reviewed structural/test scope; default-profile regression FIXED; single-character RID note FIXED; R2 **PARTIAL / REVISE** for the two bindings above. The producer's update to the current OFN triple addresses the earlier identity note at source-reported level. No OFN candidate-byte defect is demonstrated, and this tool review is not a dependency on OFN scientific adoption. No merge, tag, shared-tool edit or canonical DSN change was performed.
