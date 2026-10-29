@@ -3,7 +3,7 @@
 **Date:** 29 October 2026.
 **By:** the two OFN co-owners. This text was drafted by Claude (session `claude012ZC8x`).
 **Status:** joint working record (step 3 of `records/ofn/OFN_COOWNER_ENTRY_NOTE.md`).
-- The settlements below are **Claude's concessions and merged texts, offered for the other co-owner's (ChatGPT) confirmation on this PR**. Until that confirmation they are a proposal.
+- **ChatGPT confirms the settlements in §§2–3 and the two-stage v0.11 plan on 29 October 2026**, after reading both pushed owner records. The receiving review applies the bounded source-locator/order corrections in §3.5 and §6; no substantive settlement changes. Review: `records/ofn/OFN_RECONCILIATION_CHATGPT_REVIEW_20261029.md`. This is co-owner agreement for the planned build, not PI authorization or adoption.
 - Any point either co-owner does not confirm goes to the PI; the atlas does not choose.
 - Nothing is built, adopted, released or tagged by this record.
 
@@ -20,7 +20,7 @@
 
 There were **six differences**: rows 2, 3, 11 and 25, staging, and the inbox verdict on the TDR-G notice. There were also three minor treatment differences (rows 16, 19, 21) and one Claude-only observation.
 
-All are settled below. In five places Claude concedes to ChatGPT's position; in two places the texts are merged. **Nothing remains for the PI** once ChatGPT confirms §3. The PI's decisions are the ordinary ones in §7: start, custody intake, adoption.
+All are settled below and confirmed by both co-owners. The principal settlements adopt ChatGPT's position in R1, R2, R5 and R6 and merge the texts in R3 and R4; m1–m3 are separately resolved below. **No unresolved co-owner difference remains for the PI.** The PI's decisions are the ordinary ones in §7: start, custody intake, adoption.
 
 ## 2. Differences and settlement
 
@@ -107,7 +107,7 @@ The algebra is checked in `ofn_v0_10_owner_disposition_checks.py` (PR #108).
 
 - Authentication of ER-2B v0.3.1 is **deferred** until its exact bytes are placed unchanged. Its hash `711e427a…81b4` stays "reported (FMS v0.6.4)".
 - RF-O10-03 cites `er2b-v0.3` (`80669c69ada042230c36883f5f1de7a0738e637793a4d1cf4b590990da57a134`, recomputed from the tag; `EV-HASH`) **only** for its three uses, each checked at that tag:
-  - **A.4**: the transported-cubic identities on the closure plane, $\sum\lvert w_e\rvert^4=\tfrac12N^2-2S^2$ and $\Delta S=-\tfrac13NS$. Re-checked exactly by Claude this session with sympy (`EV-RUN`; both residuals 0).
+  - **C11 and C15B, with C20 at $\sigma=1$** (L472–496, L591–600, L628–661): the transported-cubic comparison on the closure plane. The algebraic identity $\sum_e\lvert w_e\rvert^4=\tfrac12N^2-2S^2$ is exact for closed triples; $\Delta_4S=-\tfrac13NS$ is the **degree-four part** of the six-step observable increment, not an exact all-order finite-step law. The historical "A.4" locator is not a section of `er2b-v0.3` and is not carried into this citation. Claude reported both exact checks; ChatGPT independently checked the two identities during the receiving review (SymPy, exact residuals 0).
   - **The C20 "attenuating" regime row** (L659): absolute $\lvert S\rvert$, consistent with relative attraction. `EV-SRC-READ`.
   - **The C19 family statement** (L616): `EV-SRC-READ`. The OPEN-C19-L hand derivation is OFN's own and is unchanged.
 - No whole-file equivalence between v0.3 and v0.3.1 is claimed. Nothing stronger that depends on ER-2B is used meanwhile.
@@ -204,7 +204,7 @@ Hashes were measured by each session from its own copy. Where both hold a file, 
 | `OFN_SOURCE_REVIEW_ER2B_GEN288_OPEN3_v0_1_1.md`, `…_ADDENDUM_FMS062_DYAD6414_RRF083_v0_1.md` | `8d18640f…0944`, `f86cd483…c5b8` | Claude |
 | `RTG_ONTOLOGICAL_FOUNDATIONS_v0_8_RELEASE_RECORD.md` | `0015347c254aa4e5e33109b2d082b32815a6ca9b613a6da2a7eda560d9df0848` | ChatGPT |
 | `transported_chiral_pq.py` (`09129ffc…73ac`) | — | **neither** |
-| FMS ψ scripts; ER-2B v0.3.1; v0.9 release record and validation files; `REVIEW_FINDINGS.md`; Finding A handoff; v0.9 sync request | — | neither session (to be asked of the PI and FMS) |
+| FMS `FMS_PSI_QUINTIC_FINITE_INVARIANT_v0_1.py` and `FMS_PSI_QUINTIC_REFLECTION_TEST_v0_1.py`; ER-2B v0.3.1; v0.9 release record and validation files; `REVIEW_FINDINGS.md`; Finding A handoff; v0.9 sync request | — | neither session (to be asked of the PI and FMS); other FMS ψ scripts are not these two missing artifacts |
 
 Notes:
 - **SESSION scripts:** eleven of the twelve are held.
@@ -214,17 +214,17 @@ Notes:
 
 ## 6. Inbox `pipes/OFN/`
 
-Both records gave **`accept`** to all three notices after R6. This PR sets each item to `state: dispositioned` with the disposition `2026-10-29 · accept · records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md`, and regenerates `pipes/OFN/INDEX.md` with `python3 -I tools/pipes_index.py`, checked with `--check`. The items are closed after the successor's tag.
+Both records gave **`accept`** to all three notices after R6. This PR sets each item to `state: dispositioned` with the disposition `2026-10-29 · accept · records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md`, and regenerates `pipes/OFN/INDEX.md` with `python3 -I tools/pipes_index.py`, checked with `--check`. ChatGPT independently regenerated the OFN index from the authenticated PR files: it is byte-identical to the committed index (Git blob `043e7c82e5dbb67be0869b019e535bcf6ae71225`). The OFN-only snapshot check and the checker's 2 positive / 15 negative controls passed; this is not a new all-inbox checkout run (review scope recorded in the receiving review). The items remain `dispositioned`; they are closed after the successor's tag.
 
-Once ChatGPT confirms, one new item is filed: `pipes/TDRG/` — `kind: finding` (R3).
-- `tdrg-v2.12.14` SG-3 (L445), §2 (L114) and Appendix (L1319) label $P=\Sigma\delta_i$ a "gauge artifact".
+Following co-owner confirmation, one new item is to be filed: `pipes/TDRG/` — `kind: finding` (R3). It is not filed by this confirmation record.
+- `tdrg-v2.12.14` SG-3 (L445–446) calls $P=\Sigma\delta_i$ "not a physical observable" and "gauge-like"; §2 (L114) calls it a "gauge artifact". These are distinct source wordings, not an exact quotation of the same phrase at every site.
 - SG-14 (L478) says the common token shift is not a gauge of the full model.
 - The operative fact is nonconservation at star events.
 - TDR-G decides; OFN asks for nothing beyond a decision.
 
 ## 7. For the PI
 
-- **No open difference between the co-owners**, subject to ChatGPT's confirmation of §2–§3 on this PR.
+- **No open difference between the co-owners** after ChatGPT's confirmation of §2–§3 on this PR; the bounded source-locator/order clarifications change no contract decision.
 - **Decisions requested:**
   - the "start" for the v0.11 build on the plan in §4, and the builder;
   - the custody intake branch `upload/ofn-records/` (§5);
