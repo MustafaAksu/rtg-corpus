@@ -4,7 +4,7 @@
 usage: check_ofn_v0_11_stage2.py STAGE1 CANDIDATE MAP [--fixtures]
   run from the repository root (tools/check_compaction.py, the builder and the archive path in the map are read from it).
 
-Owner guards (stage 2 is layout only; base = cf38b61b...7ce3; no claim, RID, grade or OPEN change):
+Owner guards (stage 2 is layout only; base = 9f31badf...a822, stage-1 round 2; no claim, RID, grade or OPEN change):
  G0 BASE        STAGE1 is the frozen stage-1 intermediate and the map and its archive name it
  G1 REBUILD     build_ofn_v0_11_stage2.py reproduces CANDIDATE and MAP byte-for-byte
  G2 OFN RIDS    the RTG-OFN RID set is unchanged (none lost, none added), each declaration is kept, and every RTG-OFN
@@ -30,7 +30,7 @@ import copy, hashlib, importlib.util, json, os, re, subprocess, sys, tempfile
 
 TOOL = "tools/check_compaction.py"
 BUILDER = "evidence/ofn/scripts/build_ofn_v0_11_stage2.py"
-STAGE1_SHA = "cf38b61b5cd3e268e412dbd10b28a2117f86f1c7423fd2dd33f466a8e5437ce3"
+STAGE1_SHA = "9f31badfa0e7a70a037c3ede3e7f55f852d09f2288508ef38edf343a5172a822"
 RE_STATUS = re.compile(r"`\[(?:THM|ALG|DEF|NUM|CAND|HYP|HEUR|SPEC|INTERP|OPEN|FAIL|RETRACTED|COR|ENG|OBS|RESULT|SESSION|MATH)[^`]*\]`")
 RE_QUAL = re.compile(r"`\[(?:scope|assuming|conv|family|import|proof|target|from|provenance|cert):[^`]*\]`")
 RE_MATH = re.compile(r"\$\$.+?\$\$|\$[^$\n]+\$", re.S)

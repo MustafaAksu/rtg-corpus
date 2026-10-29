@@ -8,7 +8,8 @@ usage: check_ofn_v0_11_stage1.py BASE CANDIDATE EDITLOG_JSON [--controls]
   K3 every v0.10 OFN RID and anchor kept; K4 the 21 OPEN status lines unchanged in order;
   K5 new OFN RIDs are exactly the six registered DEF RIDs, each declared once;
   K6 every owner RID the candidate cites for DYAD/GEN/TDRG/RECOG/NUMGEN is declared at the governing tag;
-  K7 stale phrases absent from the live text (before Appendix A); K8 required statements present;
+  K7 stale phrases absent from the live text (before Appendix A); K8 required statements present (round 2 adds the
+  R112-C1/C2/N1 phrases to K7 and K8, with controls C15-C17);
   K9 Appendix A, Appendix B (B.1, B.2, v0.9 and v0.10 records) and the inherited Appendix C entries unchanged.
 --controls applies negative-control mutations to the candidate; each must fail at least one gate.
 A passing run authorizes nothing.
@@ -24,7 +25,9 @@ NEW_RIDS = {"RTG-OFN-DEF-ZERO-ORIGIN", "RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY"
 STALE = ["conditional on DYAD OPEN 20", "existence is not asserted", "real only once $J$", "conditional on the real surfaces",
          "freeze-candidate", "live header says freeze candidate", "nonempty $F$-invariant", "[ALG —", "[from: THM + ALG]",
          "request IMP-O08", "XFER-O08-01 remains proposed", "transfer proposed]", "B-an, B-6 and B-∞ existence open",
-         "analytic realization exists", "XFER-O08-01 is accepted", "custody transfer accepted", "Loopholes: non-manifold", "Real-analytic laws form the admitted continuous FMS test class"]
+         "analytic realization exists", "XFER-O08-01 is accepted", "custody transfer accepted", "Loopholes: non-manifold", "Real-analytic laws form the admitted continuous FMS test class",
+         "separate map-definition custody remains unresolved", "Single input for §5.5", "Governing input: `OFN_REPLY_TO_FMS_MODEL_SELECTION",
+         "interaction vanishes algebraically satisfies the mathematical contract"]
 REQUIRED = [
     "Standard C at cubic order requires a positive-dimensional embedded $C^3$ manifold germ $M$ through the null state",
     "A singleton, a finite null-state record, or an isolated trajectory is not this local smooth isolation regime.",
@@ -40,6 +43,10 @@ REQUIRED = [
     "**OFN11-C01 — `RTG-OFN-DEF-STANDARD-C` quantifier `[COR]`.**", "**OFN11-C02 — test-class regularity amendment.**",
     "| **REQ-O09-02 — FULFILLED** |", "| **REQ-O09-03 — FULFILLED** |", "| **REQ-O09-04 — FULFILLED** |",
     "The single κ table of §5.5", "Status: PARTIAL | Layer: O1/O4→geometry",
+    "Primitive-map custody is resolved separately: `DYAD-DEF-PRIMITIVE-MAP` (Dyadic custody)",
+    "Historical integration input for v0.10: `OFN_REPLY_TO_FMS_MODEL_SELECTION_v0_8_2.md`",
+    "Historical single integration input for v0.10 §5.5",
+    "Algebraic cancellation alone establishes neither those regime requirements nor physical removal of the surroundings.",
 ]
 
 def sha(b): return hashlib.sha256(b if isinstance(b, bytes) else b.encode("utf-8")).hexdigest()
@@ -103,6 +110,9 @@ CONTROLS = [
     ("C11 extra OFN RID", lambda t: t.replace("`[DEF]` [RID: RTG-OFN-DEF-ZERO-ORIGIN]", "`[DEF]` [RID: RTG-OFN-DEF-ZERO-ORIGIN] [RID: RTG-OFN-DEF-INVENTED]", 1)),
     ("C12 unresolved owner RID", lambda t: t.replace("`DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (v6.4.20)", "`DYAD-THM-SMOOTH-EQUIVARIANT-CHART-X` (v6.4.20)", 1)),
     ("C13 history edited", lambda t: t.replace("**OFN08-C02 — scope/typing", "**OFN08-C02 — scope / typing", 1)),
+    ("C15 stale map-custody sentence (R112-C1)", lambda t: t.replace("Dedicated result ID located. Primitive-map custody is resolved separately:", "Dedicated result ID located; separate map-definition custody remains unresolved. Primitive-map custody:", 1)),
+    ("C16 handoff as sole current input (R112-C2)", lambda t: t.replace("| Historical single integration input for v0.10 §5.5;", "| Single input for §5.5;", 1)),
+    ("C17 unqualified algebraic sufficiency (R112-N1)", lambda t: t.replace("on a regime that meets the manifold, nontriviality, domain and clock requirements above, $I_e\\equiv0$ for every edge satisfies the order-four bound. Algebraic cancellation alone establishes neither those regime requirements nor physical removal of the surroundings.", "an invariant regime on which the interaction vanishes algebraically satisfies the mathematical contract.", 1)),
     ("C14 compound tag", lambda t: t.replace("- `[ALG]` [scope: leading order] [provenance: SESSION]", "- `[ALG — leading order; SESSION]`", 1)),
 ]
 

@@ -1,6 +1,6 @@
 PASS  base identity  — map base_sha256 vs file
 PASS  candidate identity  — map candidate_sha256 vs file
-PASS  archive identity stage1-intermediate  — cf38b61b5cd3e268e412dbd10b28a2117f86f1c7423fd2dd33f466a8e5437ce3
+PASS  archive identity stage1-intermediate  — 9f31badfa0e7a70a037c3ede3e7f55f852d09f2288508ef38edf343a5172a822
 PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
 PASS  operation S2-H (replace-header)  — header replaced; status-summary sentences are a subset of the base summary (header)
 PASS  operation S2-E01 (history-removal)  — history span removed (538 chars), found in ['stage1-intermediate']
@@ -14,7 +14,7 @@ PASS  operation S2-E08 (history-removal)  — history span removed (258 chars), 
 PASS  operation S2-E09 (history-removal)  — history span removed (152 chars), found in ['stage1-intermediate']
 PASS  operation S2-E10 (history-removal)  — history span removed (71 chars), found in ['stage1-intermediate']
 PASS  operation S2-E11 (history-removal)  — history span removed (79 chars), found in ['stage1-intermediate']
-PASS  operation S2-S1 (history-section)  — section relocated (4628 chars), found in ['stage1-intermediate']
+PASS  operation S2-S1 (history-section)  — section relocated (4757 chars), found in ['stage1-intermediate']
 PASS  operation S2-S2 (history-section)  — section relocated (1088 chars), found in ['stage1-intermediate']
 PASS  operation S2-S5 (history-section)  — section relocated (2773 chars), found in ['stage1-intermediate']
 PASS  operation S2-T (history-appendix)  — section relocated (18968 chars), found in ['stage1-intermediate']

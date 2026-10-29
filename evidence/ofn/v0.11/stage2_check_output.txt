@@ -3,7 +3,7 @@
 [PASS] G2 OFN RIDS 43 RTG-OFN RIDs; 43 declarations
 [PASS] G3 ANCHORS 100 anchors kept
 [PASS] G4 OPEN 20 ACTIVE / 1 PARTIAL
-[PASS] G5 CLAIM TEXT 134 claim tags, 13 qualifiers, 470 math spans
+[PASS] G5 CLAIM TEXT 134 claim tags, 13 qualifiers, 471 math spans
 [PASS] G6 REGISTERS 31 register rows
 [PASS] G7 APPENDICES
 [PASS] G8 HEADER

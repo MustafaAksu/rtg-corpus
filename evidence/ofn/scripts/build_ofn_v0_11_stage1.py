@@ -4,13 +4,17 @@ r"""OFN v0.11 — stage-1 build (content and contract corrections; no layout cha
 Input: the adopted v0.10 file (tag ofn-v0.10, SHA-256 acb70a8c...5dfa).
 Fixed by: the two owner disposition records (PR #108 claude012ZC8x, PR #109 chatgpt), the joint reconciliation
 records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md (PR #110, both co-owners confirmed) and the PI's
-"başla" of 29 Oct 2026 (22:53 TRT). Rows are the 29 rows of records/ofn/ATLAS_ADVISORY_OFN_v0_10_RECONCILIATION.md §3.
+"başla" of 29 Oct 2026. Rows are the 29 rows of records/ofn/ATLAS_ADVISORY_OFN_v0_10_RECONCILIATION.md §3.
 
 Stage 1 carries every semantic change: the class-C realization (row 1), the test-class amendment (row 2), the Standard C
 [COR] (row 3), receipts and repins (rows 4-20, 23, 25, 27-28), six DEF RID registrations and two OPEN pointers (row 22),
 the canonical tag spellings and the narrow-Q6 status (row 21, content part) and the Appendix B / C records. Stage 2 is
 layout only (current-only removal of history, Appendix C compaction) and is built by a separate script against the
 frozen stage-1 hash.
+
+Round 2 (29 Oct 2026): R16i, R21l, R21m and R03e apply the bounded current-state corrections R112-C1, R112-C2 and the
+clarification R112-N1 of the co-owner review records/ofn/OFN_v0_11_CHATGPT_REVIEW.md (PR #112). The round-1
+intermediate (cf38b61b...7ce3, commit 762d273) stays in Git history.
 
 Edit modes:
   str   : `old` occurs exactly once in the whole document; replaced by `new`;
@@ -403,6 +407,15 @@ ed("R12g", "12", "| NUMGEN v1.20.7 §9.1, NG-7 reference |", "| NUMGEN v1.21 §6
 
 ed("R07g", "7", "XFER-O08-01 remains proposed; the twenty inherited research records", "XFER-O08-01 then remained proposed; the twenty inherited research records")
 ed("R21k", "21", "C2-B (visible `[ALG — SESSION]` grade in §5.5.7)", "C2-B (visible SESSION grade in §5.5.7)")
+# ----------------------------------------------------------------------------------------------- round 2 (PR #112 review)
+ed("R16i", "16", "  Reconciliation: Dedicated result ID located; separate map-definition custody remains unresolved.",
+   "  Reconciliation: Dedicated result ID located. Primitive-map custody is resolved separately: `DYAD-DEF-PRIMITIVE-MAP` (Dyadic custody), with `GEN-DEF-PRIMITIVE-MAP` as the Genesis alias (IMP-O08-12; CUST-O09-01 answered, REQ-O09-04 fulfilled). The linear order-six result is distinct from map custody and from generator selection.")
+ed("R21l", "21", "**Source and status.** Governing input: `OFN_REPLY_TO_FMS_MODEL_SELECTION_v0_8_2.md` (SHA-256 `6e4fc3c3…564b1d`), accepted by both OFN co-owners on 19 October 2026. The `[DEF]` and `[RESULT]` records in this section are registered by the v0.10 adoption (O10-P2–P5, 19 October 2026).",
+   "**Source and status.** Historical integration input for v0.10: `OFN_REPLY_TO_FMS_MODEL_SELECTION_v0_8_2.md` (SHA-256 `6e4fc3c3…564b1d`), accepted by both OFN co-owners on 19 October 2026. The `[DEF]` and `[RESULT]` records in this section were registered by the v0.10 adoption (O10-P2–P5, 19 October 2026). The v0.11 changes to this section are governed by the joint owner reconciliation (`records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md`) and the v0.11 release record: the Standard C and test-class amendments are OFN11-C01/C02 (Appendix B) and the smooth-realization imports are IMP-O10-06/07.")
+ed("R21m", "21", "| Single input for §5.5; co-owner handoff acceptance, not adoption |",
+   "| Historical single integration input for v0.10 §5.5; retained evidence baseline, amended in v0.11 by the joint owner reconciliation and current imports; co-owner handoff acceptance, not adoption |")
+ed("R03e", "3", "Physical-isolation scope: an invariant regime on which the interaction vanishes algebraically satisfies the mathematical contract; it does not by itself show that the surroundings are physically removed.",
+   "Physical-isolation scope: on a regime that meets the manifold, nontriviality, domain and clock requirements above, $I_e\\equiv0$ for every edge satisfies the order-four bound. Algebraic cancellation alone establishes neither those regime requirements nor physical removal of the surroundings.")
 # ----------------------------------------------------------------------------------------------- footer
 ed("F01", "21", None, None, "footer")
 

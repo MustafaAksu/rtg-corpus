@@ -17,7 +17,8 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Joint reconciliation | `records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md` (PR #110; both co-owners confirmed; receiving review `records/ofn/OFN_RECONCILIATION_CHATGPT_REVIEW_20261029.md`) | open PR; read at `5e23fc4` |
 | PI start | "başla" (29 Oct 2026), given in the OFN session on the reconciliation plan; the PI also authorized the custody intake `upload/ofn-records/` | given |
 | Custody intake | branch `upload/ofn-records`, commit `c6fd574`; `upload/ofn-records/SHA256SUMS.txt` lists 20 files (verified 20/20 with `sha256sum -c`) | pushed; atlas hash check and merge pending |
-| Change-focused review | the second OFN co-owner (ChatGPT) | *(to be filled)* |
+| Change-focused review | `records/ofn/OFN_v0_11_CHATGPT_REVIEW.md` (ChatGPT, commit `5a7ed089`; PR #112 review `5704664058`), on head `b408cef`: ACCEPT SCOPED for the scientific/contract delta; R112-C1 and R112-C2 required, R112-N1 recommended | given |
+| Round-2 correction | R112-C1, R112-C2 and R112-N1 applied in the stage-1 content build; stage 2 rebuilt unchanged against the new intermediate (§3a) | done; delta check by the reviewer pending |
 | Atlas row check and build replay | `records/ofn/ATLAS_ROW_CHECK_OFN_v0_11.md` | *(to be filled)* |
 | Adoption | PI | *(to be filled)* |
 | Merge commits; tag `ofn-v0.11` | PI | *(to be filled)* |
@@ -29,22 +30,23 @@ The PI will merge PRs #108–#111 before adoption, so that the records this edit
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v0.10) | `git show ofn-v0.10:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa` |
-| **Stage-1 intermediate (frozen)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` at commit `762d273`; archived byte-exact as `evidence/ofn/v0.11/stage1_intermediate.md` | `cf38b61b5cd3e268e412dbd10b28a2117f86f1c7423fd2dd33f466a8e5437ce3` |
-| Stage-1 builder | `evidence/ofn/scripts/build_ofn_v0_11_stage1.py` | `342c0d77dd2805293839eeb2d950b554ade6233ca2d4398f570418a6fd3030f9` |
-| Stage-1 checker | `evidence/ofn/scripts/check_ofn_v0_11_stage1.py` | `17fd56ce1ce3f3c5887d6b89cb1d0bf92f706cefef9c7c42fb28f6e2bad0f966` |
-| Stage-1 edit log (161 edits; old and new text with hashes; document hash chain) | `evidence/ofn/v0.11/stage1_edit_log.json` | `ed210967a6cc76f20be8df90bcdc62473651449bc499a0464c47ecbc1f0ee90b` |
-| Stage-1 checker output (gates and controls) | `evidence/ofn/v0.11/stage1_check_output.txt` | `9ee9fb70f394e04ae3e138d78526c5fb09417ae71eb0fb0c89a963e251fea0b1` |
-| **Stage-2 candidate (v0.11 adoption candidate)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `709d613eb2f8608813a105d95c36b3b3564ac4064c384336996649d9c15a4887` |
-| Stage-2 builder | `evidence/ofn/scripts/build_ofn_v0_11_stage2.py` | `147e2ce4bfc60cd261702ddfad7cd5d0989cd78cdc787f9dce5276aebaead3c8` |
-| Stage-2 owner guards and fixtures | `evidence/ofn/scripts/check_ofn_v0_11_stage2.py` | `235c5e665e17a967b7ed55f8c8ac600be3ce84f3af9bcb31de4103dfb5719ced` |
-| Movement map (16 operations) | `evidence/ofn/v0.11/movement_map.json` | `9cff13b59f5f5b4fa974f7ca22da8ca453de007d105b7ae0991db2bfc8bafa2c` |
-| `tools/check_compaction.py` output and report | `evidence/ofn/v0.11/check_compaction_output.txt`, `…/check_compaction_report.json` | `d50ca811ee24da7ead099e76b348b7012c9956c46fdc43b910cc642b02e0a94f`, `a2a1c99bbceb4ba102220f81ae8a86e146708b55153f5dfba6867664a95f9a87` |
-| Stage-2 guard and fixture output | `evidence/ofn/v0.11/stage2_check_output.txt` | `5f5e89e70d5f561ffc2e96daa55a7ed4588eb698eec04578e046c9e898cf1c6a` |
-| `dsn_lint` stage-2 report (informational) | `evidence/ofn/v0.11/dsn_lint_stage2.txt` | `203cf940e98a358c97d409d59128fa01701b0e5d983e771dd688cddc28e51773` |
+| Stage-1 intermediate, round 1 (superseded by round 2; kept in Git history) | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` at commit `762d273` | `cf38b61b5cd3e268e412dbd10b28a2117f86f1c7423fd2dd33f466a8e5437ce3` |
+| **Stage-1 intermediate, round 2 (frozen)** | `evidence/ofn/v0.11/stage1_intermediate.md` (archived byte-exact; the stage-2 base) | `9f31badfa0e7a70a037c3ede3e7f55f852d09f2288508ef38edf343a5172a822` |
+| Stage-1 builder | `evidence/ofn/scripts/build_ofn_v0_11_stage1.py` | `b72ebf3c8e50d8bcc88dbb4487f278b33b0e6e4a8b22de37848b5f1f10123361` |
+| Stage-1 checker | `evidence/ofn/scripts/check_ofn_v0_11_stage1.py` | `fb31276e41a9ddc036ccbf92f723dafac9bcd88ce5eb5dd57196be74853d0499` |
+| Stage-1 edit log (165 edits; old and new text with hashes; document hash chain) | `evidence/ofn/v0.11/stage1_edit_log.json` | `9dda88f1dc1bf51d3a11592909ed4e781642fa0147334ac9fab3e867a0adbea5` |
+| Stage-1 checker output (gates and controls) | `evidence/ofn/v0.11/stage1_check_output.txt` | `e5e7450fc7acb6729adfcc65aa5264a0ad0d4c2f76d9c2e295a039aba726eef9` |
+| **Stage-2 candidate (v0.11 adoption candidate)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb` |
+| Stage-2 builder | `evidence/ofn/scripts/build_ofn_v0_11_stage2.py` | `15991efcfbda9f27469830bde691456857f73f20d110d5758832cb8fddbec420` |
+| Stage-2 owner guards and fixtures | `evidence/ofn/scripts/check_ofn_v0_11_stage2.py` | `518fb68b5b2dc4baa0ca29671cf82878dd8c6d7c76592fb2d5c5f3eb88282ecb` |
+| Movement map (16 operations) | `evidence/ofn/v0.11/movement_map.json` | `2e9ea570f56fef4f72907a92bb7a925fe9966e7aaae51dc67fbffa9ec17e3fd4` |
+| `tools/check_compaction.py` output and report | `evidence/ofn/v0.11/check_compaction_output.txt`, `…/check_compaction_report.json` | `269a303c871ca705a2f8956117fcb564a30c4556624e2ab9e267a54d067505b0`, `b58ac755ce77157fb5281671a63ee48a064ac09f2b69f78dbf882606b3ee3adf` |
+| Stage-2 guard and fixture output | `evidence/ofn/v0.11/stage2_check_output.txt` | `a9737f0aaf1f54376d29c38fba68c8615603c74e17084fb24c2f6f889401d93d` |
+| `dsn_lint` stage-2 report (informational) | `evidence/ofn/v0.11/dsn_lint_stage2.txt` | `01970e6ac75051a80922a2ab01673db98b725b73847236668ad6700eb75bb20c` |
 
 **Reproduce stage 1.**
 1. `git show ofn-v0.10:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md > base.md`
-2. `python3 -I evidence/ofn/scripts/build_ofn_v0_11_stage1.py base.md OUT.md LOG.json` writes `cf38b61b…7ce3` and the log.
+2. `python3 -I evidence/ofn/scripts/build_ofn_v0_11_stage1.py base.md OUT.md LOG.json` writes `9f31badf…a822` and the log.
 3. `python3 -I evidence/ofn/scripts/check_ofn_v0_11_stage1.py base.md OUT.md LOG.json --controls`, run from the repository root.
 
 **Stage-1 gates (all PASS):**
@@ -58,7 +60,7 @@ The PI will merge PRs #108–#111 before adoption, so that the records this edit
 - K8: the required statements are present.
 - K9: Appendix A, Appendix B up to the v0.10 records, and the inherited Appendix C entries are byte-identical.
 
-**Negative controls (14/14 caught).** Each reintroduces a defect, and the gates must catch it:
+**Negative controls (17/17 caught).** Each reintroduces a defect, and the gates must catch it:
 - C1 a stale "conditional on DYAD OPEN 20";
 - C2 "freeze-candidate";
 - C3 the singleton-satisfiable Standard C wording;
@@ -73,6 +75,9 @@ The PI will merge PRs #108–#111 before adoption, so that the records this edit
 - C12 an unresolved owner RID;
 - C13 an edited history record;
 - C14 a compound dash tag.
+- C15 the stale map-custody sentence (R112-C1);
+- C16 the v0.8.2 handoff as the sole current input (R112-C2);
+- C17 the unqualified algebraic-sufficiency sentence (R112-N1).
 
 `tools/dsn_lint.py` was run for information only: +17,695 bytes (+9.1 %) and 26 new RID mentions; it applies no gate.
 
@@ -118,6 +123,26 @@ Row numbers are those of the reconciliation's §3. The fixed dispositions are in
 - the v0.9 release narrative and the v0.10 assembly text in §§12.1, 12.2 and 12.5;
 - the Draft entries in Appendix C.
 
+## 3a. Round 2: corrections from the change-focused review
+
+The review (`records/ofn/OFN_v0_11_CHATGPT_REVIEW.md`) accepted the scientific and contract delta and found two current-state inconsistencies plus one clarification. Each was checked against the round-1 intermediate before it was applied.
+
+All three are applied in the stage-1 content build, not in the layout stage or in finalization. The round-1 intermediate `cf38b61b…7ce3` stays in Git history (commit `762d273`).
+
+| Finding | Edit | Site | Change |
+|---|---|---|---|
+| R112-C1 (required) | R16i (row 16) | §11.2 IMP-O08-13 | "separate map-definition custody remains unresolved" is replaced. Custody is now resolved separately: `DYAD-DEF-PRIMITIVE-MAP`, with the `GEN-DEF-PRIMITIVE-MAP` alias, via IMP-O08-12, CUST-O09-01 and REQ-O09-04. The order-six result stays distinct from map custody and generator selection |
+| R112-C2 (required) | R21l (row 21) | §5.5 "Source and status" | v0.8.2 becomes "historical integration input for v0.10", keeping its hash and the v0.10 registration. The v0.11 changes are governed by the joint reconciliation and this record (OFN11-C01/C02; IMP-O10-06/07) |
+| R112-C2 (required) | R21m (row 21) | §12.1 handoff row | The Consequence cell becomes "historical single integration input for v0.10 §5.5", amended in v0.11; it keeps "co-owner handoff acceptance, not adoption" |
+| R112-N1 (recommended) | R03e (row 3) | §5.5.2 physical-isolation scope | $I_e\equiv0$ satisfies the order-four bound only on a regime that meets the manifold, nontriviality, domain and clock requirements. Algebraic cancellation alone establishes neither those requirements nor physical isolation |
+
+**Effect on the file:** four lines change between round 1 and round 2. No RID, status, grade, OPEN or contract decision changes.
+
+**Checks:**
+- K7 and K8 carry the new phrases.
+- Controls C15–C17 are added; the stage-1 checker now reports K1–K9 PASS and 17/17 controls caught.
+- The stage-2 builder is unchanged apart from its base-hash constant, and it reruns cleanly on round 2.
+
 ## 4. Custody (row 24)
 
 | Artifact | SHA-256 | State |
@@ -160,7 +185,7 @@ Filed by OFN: `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md` (`kind: finding
 
 ## 7. Stage 2 (layout only)
 
-**Base:** the frozen stage-1 intermediate `cf38b61b…7ce3`. It is also the only archive, committed byte-exact; every removed byte is in it. The tag `ofn-v0.10` holds the v0.10 and earlier history verbatim, and the live pointers name that tag.
+**Base:** the frozen stage-1 intermediate, round 2, `9f31badf…a822`. It is also the only archive, committed byte-exact; every removed byte is in it. The tag `ofn-v0.10` holds the v0.10 and earlier history verbatim, and the live pointers name that tag.
 
 **Operations** (`evidence/ofn/v0.11/movement_map.json`):
 
@@ -192,7 +217,7 @@ Filed by OFN: `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md` (`kind: finding
 - G2: 43 RTG-OFN RIDs and 43 declarations kept, and every §§0–11 mention kept.
 - G3: 100 anchors kept.
 - G4: 21 OPEN status lines unchanged.
-- G5: in §§0–11, 134 claim tags, 13 qualifiers and 470 math spans unchanged.
+- G5: in §§0–11, 134 claim tags, 13 qualifiers and 471 math spans unchanged.
 - G6: 31 register rows of §§12.3–12.4 kept.
 - G7: Appendices A and B byte-identical.
 - G8: only the Document status line differs in the header.
@@ -207,14 +232,14 @@ Filed by OFN: `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md` (`kind: finding
 These limits are worth a note to the tool owner; no tool change is made here.
 
 **Size (`dsn_lint`, informational):**
-- 191,370 bytes and 1,581 lines.
+- 192,142 bytes and 1,581 lines.
 - Against stage 1: −21,785 bytes (−10.2 %).
-- Against `ofn-v0.10`: −4,090 bytes (−2.1 %).
+- Against `ofn-v0.10`: −3,318 bytes (−1.7 %).
 
 No claim, RID, grade, status or OPEN changes in stage 2.
 
 **Reproduce stage 2.** Run from the repository root:
-1. `python3 -I evidence/ofn/scripts/build_ofn_v0_11_stage2.py evidence/ofn/v0.11/stage1_intermediate.md OUT.md MAP.json` writes `709d613e…4887` and the map.
+1. `python3 -I evidence/ofn/scripts/build_ofn_v0_11_stage2.py evidence/ofn/v0.11/stage1_intermediate.md OUT.md MAP.json` writes `df3c465f…00eb` and the map.
 2. `python3 -I tools/check_compaction.py evidence/ofn/v0.11/stage1_intermediate.md dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md evidence/ofn/v0.11/movement_map.json`
 3. `python3 -I evidence/ofn/scripts/check_ofn_v0_11_stage2.py evidence/ofn/v0.11/stage1_intermediate.md dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md evidence/ofn/v0.11/movement_map.json --fixtures`
 

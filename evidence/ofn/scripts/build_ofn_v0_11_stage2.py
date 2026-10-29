@@ -2,7 +2,7 @@
 """OFN v0.11 stage 2: layout-only compaction of the frozen stage-1 intermediate.
 
 usage: build_ofn_v0_11_stage2.py STAGE1 OUT MAP
-  STAGE1 = evidence/ofn/v0.11/stage1_intermediate.md (SHA-256 cf38b61b...7ce3)
+  STAGE1 = evidence/ofn/v0.11/stage1_intermediate.md (SHA-256 9f31badf...a822, round 2; round 1 cf38b61b...7ce3 is in Git history)
   OUT    = the stage-2 candidate
   MAP    = the movement map read by tools/check_compaction.py
 
@@ -26,7 +26,7 @@ Every removed byte is in the archive (the stage-1 intermediate, committed byte-e
 """
 import hashlib, json, sys
 
-STAGE1_SHA = "cf38b61b5cd3e268e412dbd10b28a2117f86f1c7423fd2dd33f466a8e5437ce3"
+STAGE1_SHA = "9f31badfa0e7a70a037c3ede3e7f55f852d09f2288508ef38edf343a5172a822"
 ARCHIVE = "evidence/ofn/v0.11/stage1_intermediate.md"
 CTX = 48
 
@@ -71,7 +71,7 @@ def apply(s, op):
 def main(stage1, out, mpath):
     s1 = open(stage1, encoding="utf-8").read()
     if sha(s1.encode("utf-8")) != STAGE1_SHA:
-        raise SystemExit("stage-1 input is not cf38b61b...7ce3")
+        raise SystemExit("stage-1 input is not 9f31badf...a822")
     s = s1
     ops = []
 
