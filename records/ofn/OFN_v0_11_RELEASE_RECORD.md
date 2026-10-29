@@ -1,6 +1,6 @@
 # Ontological Foundations (OFN) v0.11 — Release Record
 
-**Status:** DRAFT. Stage 1 is frozen; stage 2 (layout only) is pending. Nothing here is adopted. Until the PI adopts and the tag exists, `ofn-v0.10` remains the governing edition.
+**Status:** DRAFT. Stage 1 is frozen; stage 2 (layout only) is built and checked; the stage-2 file is the adoption candidate. Nothing here is adopted. Until the PI adopts and the tag exists, `ofn-v0.10` remains the governing edition.
 **Date:** 29 October 2026
 **Prepared by:** Claude, OFN co-owner session `claude012ZC8x` (builder), on branch `claude/ofn-v0.11`.
 **Edition:** v0.11, one successor built in two stages, under DSN Methodology v1.4. Stage 1 carries content and contract changes; stage 2 is layout only, checked by `tools/check_compaction.py` against the stage-1 hash.
@@ -29,12 +29,18 @@ The PI will merge PRs #108–#111 before adoption, so that the records this edit
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v0.10) | `git show ofn-v0.10:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa` |
-| **Stage-1 intermediate (frozen)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` at commit `762d273` | `cf38b61b5cd3e268e412dbd10b28a2117f86f1c7423fd2dd33f466a8e5437ce3` |
+| **Stage-1 intermediate (frozen)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` at commit `762d273`; archived byte-exact as `evidence/ofn/v0.11/stage1_intermediate.md` | `cf38b61b5cd3e268e412dbd10b28a2117f86f1c7423fd2dd33f466a8e5437ce3` |
 | Stage-1 builder | `evidence/ofn/scripts/build_ofn_v0_11_stage1.py` | `342c0d77dd2805293839eeb2d950b554ade6233ca2d4398f570418a6fd3030f9` |
 | Stage-1 checker | `evidence/ofn/scripts/check_ofn_v0_11_stage1.py` | `17fd56ce1ce3f3c5887d6b89cb1d0bf92f706cefef9c7c42fb28f6e2bad0f966` |
 | Stage-1 edit log (161 edits; old and new text with hashes; document hash chain) | `evidence/ofn/v0.11/stage1_edit_log.json` | `ed210967a6cc76f20be8df90bcdc62473651449bc499a0464c47ecbc1f0ee90b` |
 | Stage-1 checker output (gates and controls) | `evidence/ofn/v0.11/stage1_check_output.txt` | `9ee9fb70f394e04ae3e138d78526c5fb09417ae71eb0fb0c89a963e251fea0b1` |
-| Stage-2 candidate, movement map, compaction report | — | *(to be filled)* |
+| **Stage-2 candidate (v0.11 adoption candidate)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `709d613eb2f8608813a105d95c36b3b3564ac4064c384336996649d9c15a4887` |
+| Stage-2 builder | `evidence/ofn/scripts/build_ofn_v0_11_stage2.py` | `147e2ce4bfc60cd261702ddfad7cd5d0989cd78cdc787f9dce5276aebaead3c8` |
+| Stage-2 owner guards and fixtures | `evidence/ofn/scripts/check_ofn_v0_11_stage2.py` | `235c5e665e17a967b7ed55f8c8ac600be3ce84f3af9bcb31de4103dfb5719ced` |
+| Movement map (16 operations) | `evidence/ofn/v0.11/movement_map.json` | `9cff13b59f5f5b4fa974f7ca22da8ca453de007d105b7ae0991db2bfc8bafa2c` |
+| `tools/check_compaction.py` output and report | `evidence/ofn/v0.11/check_compaction_output.txt`, `…/check_compaction_report.json` | `d50ca811ee24da7ead099e76b348b7012c9956c46fdc43b910cc642b02e0a94f`, `a2a1c99bbceb4ba102220f81ae8a86e146708b55153f5dfba6867664a95f9a87` |
+| Stage-2 guard and fixture output | `evidence/ofn/v0.11/stage2_check_output.txt` | `5f5e89e70d5f561ffc2e96daa55a7ed4588eb698eec04578e046c9e898cf1c6a` |
+| `dsn_lint` stage-2 report (informational) | `evidence/ofn/v0.11/dsn_lint_stage2.txt` | `203cf940e98a358c97d409d59128fa01701b0e5d983e771dd688cddc28e51773` |
 
 **Reproduce stage 1.**
 1. `git show ofn-v0.10:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md > base.md`
@@ -104,7 +110,7 @@ Row numbers are those of the reconciliation's §3. The fixed dispositions are in
 | 27, 28 | accept | R28a–R28d, R07e | Receipts of DYAD N4, N6 and N14, Genesis IF32 and RRF §6.2a recorded in §11 and §12.3; notices follow after the tag (§6) |
 | 29 | accept | (PR #110) | The three `pipes/OFN/` notices are dispositioned `accept`; they are closed after the tag |
 
-**Live-file exceptions kept on purpose in stage 1, for stage 2 to remove as layout:**
+**Live-file exceptions kept on purpose in stage 1 and removed as layout in stage 2 (§7):**
 - the v0.9 boundary paragraph in §0.1;
 - the v0.8, v0.9 and v0.10 adoption paragraphs in §0.3;
 - the "*v0.10:*" paragraph in §9;
@@ -152,13 +158,77 @@ Filed by OFN: `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md` (`kind: finding
 | FMS / ER-2B | Class C now has a real $C^\infty$ mathematical realization; analytic realization and physical selection stay open. Standard C has been corrected and the test class widened; their co-owners update their own wording (row 27) |
 | Programme | OFN v0.11 is the criteria home for P0 and P2B; repin at the Programme's next edition |
 
-## 7. Stage 2 *(to be filled)*
+## 7. Stage 2 (layout only)
 
-Layout only:
-- current-only removal of the history listed at the end of §3;
-- Appendix C compacted to one entry per adopted edition;
-- the movement map checked by `tools/check_compaction.py` against `cf38b61b…7ce3`, with negative controls.
+**Base:** the frozen stage-1 intermediate `cf38b61b…7ce3`. It is also the only archive, committed byte-exact; every removed byte is in it. The tag `ofn-v0.10` holds the v0.10 and earlier history verbatim, and the live pointers name that tag.
 
-No claim enters stage 2.
+**Operations** (`evidence/ofn/v0.11/movement_map.json`):
+
+| Op | Class | What moves |
+|---|---|---|
+| S2-H | replace-header | The Document status line only (stage-1 wording becomes stage-2 wording). The status summary and the other fields are unchanged |
+| S2-E01 | history-removal | §0.1 v0.9 revision-boundary paragraph |
+| S2-E02 | history-removal | §0.3 v0.8/v0.9 and v0.10 adoption paragraphs; the Draft-2 hash moves to the Appendix C v0.10 entry |
+| S2-E03 | history-removal | §6.4 closing history sentence |
+| S2-E04 | history-removal | §9 "*v0.10:*" paragraph. The current count (twenty-one; twenty ACTIVE, one PARTIAL) stays in the paragraph above it |
+| S2-E05–E07 | history-removal | " (v0.10)" in the three "Reconciliation input" labels |
+| S2-E08, E09 | history-removal | §12.3 sentence on the adopted v0.9 release; resolved RECOG/NUMGEN mismatch sentence |
+| S2-E10, E11 | history-removal | §12.4 REQ-O08-07 history sentence; the clause naming the v0.9 reconciliation |
+| S2-S1 | history-section | §12.1: the v0.9 register becomes a pointer. The RECOG row and the four evidence rows still cited are kept byte-identical apart from the removed "*v0.10:* " labels; the v0.8 baseline hash moves to the Appendix C v0.9 entry |
+| S2-S2 | history-section | §12.2: v0.9 adoption narrative becomes a pointer |
+| S2-S5 | history-section | §12.5: v0.10 decision table and assembly record become a pointer (heading "Edition Decisions") |
+| S2-T | history-appendix | Appendix C keeps its letter and becomes "Compact Version History": one entry per edition (the v0.11 bullets unchanged plus a layout line; v0.10, v0.9, v0.8 and v0.7 compact; v0.1–v0.6 one line); the footer becomes one line. Profile key `base_history_from: "## Appendix C — Version History"` |
+
+**`tools/check_compaction.py`: PASS.**
+- Re-derivation is exact.
+- All 16 operations pass their class rules.
+- 188/188 claim blocks are byte-identical.
+- RIDs, heading anchors, source hashes and qualifiers are preserved.
+- References resolve.
+- Header and footer pass.
+
+**Owner guards (`check_ofn_v0_11_stage2.py`): G0–G10 PASS.**
+- G1: rebuild identical.
+- G2: 43 RTG-OFN RIDs and 43 declarations kept, and every §§0–11 mention kept.
+- G3: 100 anchors kept.
+- G4: 21 OPEN status lines unchanged.
+- G5: in §§0–11, 134 claim tags, 13 qualifiers and 470 math spans unchanged.
+- G6: 31 register rows of §§12.3–12.4 kept.
+- G7: Appendices A and B byte-identical.
+- G8: only the Document status line differs in the header.
+- G9: the history region is relocated, and every identifier in the new Appendix C occurs outside it.
+
+**Fixtures:** 14 of 14 caught (F1–F14).
+
+**Two tool limits, covered by owner guards:**
+1. The tool's RID pattern does not track `RTG-OFN-*`, because it skips a prefix preceded by "RTG-". G2 and G6 carry that check (fixtures F11 and F12).
+2. OFN's history appendix is Appendix C, and the tool counts Appendix C as live text. Its history-appendix identifier test therefore finds each identifier in the new entry itself and cannot fail. G9 carries that check (fixture F5).
+
+These limits are worth a note to the tool owner; no tool change is made here.
+
+**Size (`dsn_lint`, informational):**
+- 191,370 bytes and 1,581 lines.
+- Against stage 1: −21,785 bytes (−10.2 %).
+- Against `ofn-v0.10`: −4,090 bytes (−2.1 %).
+
+No claim, RID, grade, status or OPEN changes in stage 2.
+
+**Reproduce stage 2.** Run from the repository root:
+1. `python3 -I evidence/ofn/scripts/build_ofn_v0_11_stage2.py evidence/ofn/v0.11/stage1_intermediate.md OUT.md MAP.json` writes `709d613e…4887` and the map.
+2. `python3 -I tools/check_compaction.py evidence/ofn/v0.11/stage1_intermediate.md dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md evidence/ofn/v0.11/movement_map.json`
+3. `python3 -I evidence/ofn/scripts/check_ofn_v0_11_stage2.py evidence/ofn/v0.11/stage1_intermediate.md dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md evidence/ofn/v0.11/movement_map.json --fixtures`
 
 ## 8. Adoption *(to be filled)*
+
+The PI adopts the stage-2 candidate, or a candidate revised after review. A finalization step then changes the adoption-state wording only, and a checker confirms that nothing else differs. It touches:
+- the Document status line and Supersedes ("on adoption");
+- the §0.3 "*v0.11 (adoption pending):*" label;
+- the §12.3 six-DEF row;
+- the Appendix B "(adoption pending)" heading;
+- the Appendix C v0.11 heading;
+- the footer.
+
+After that step:
+1. The PI merges and tags `ofn-v0.11`.
+2. The three `pipes/OFN/` items are closed.
+3. The §6 notices are filed.

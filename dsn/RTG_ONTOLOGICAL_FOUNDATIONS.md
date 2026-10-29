@@ -4,7 +4,7 @@
 **Date:** 29 October 2026  
 **Scope:** Foundational commitments, primitive-object hypotheses and model-selection criteria of RTG, including the genuine relational-triad model-selection contract for the FMS interface (§5.5); no physical generator, carrier or primitive object is selected.  
 **Document class:** Foundational ontology / model-selection ledger (Methodology v1.4 §0.5); nonstandard profile with the section map in §0.4.  
-**Document status:** DRAFT — stage-1 intermediate of v0.11; adoption pending (`records/ofn/OFN_v0_11_RELEASE_RECORD.md`). `ofn-v0.10` remains the governing edition until adoption and tag.  
+**Document status:** DRAFT — v0.11 candidate: layout-only compaction (stage 2) of the frozen stage-1 intermediate; adoption pending (`records/ofn/OFN_v0_11_RELEASE_RECORD.md`). `ofn-v0.10` remains the governing edition until adoption and tag.  
 **Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.10` (tag `ofn-v0.10`, SHA-256 `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa`), on adoption.  
 **Companion documents:** governing editions read for this edition — Programme Overview v1.3 (`programme-v1.3`), DSN Methodology v1.4 (`methodology-v1.4`), Dyadic Oscillator v6.4.22 (`dyad-v6.4.22`), Genesis Geometry v2.9 (`gen-v2.9`), RRF v0.8.4 (`rrf-v0.8.4`), Discrete Genesis v2.12.14 (`tdrg-v2.12.14`), Number Genesis v1.21 (`numgen-v1.21`), RECOG v0.3.26 (`recog-v0.3.26`), Triadic v1.6.1 (`triad-v1.6.1`); claim-level pins are stated at each use and in §11.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
@@ -35,8 +35,6 @@ OFN owns the programme's foundational commitments, hypotheses about primitive re
 
 `[DEF]` O0–O3 denotes conceptual commitments; O4 specified models; O5 their consequences. This is neither historical chronology nor the Legacy L0/L1/L2 or Programme-tier classification.
 
-**Revision boundary:** v0.9 is reconciliation plus sharpening of existing OPEN questions. OFN-owned definition bodies, the statement/status of FSP-U, and the two registered local consequences are unchanged. Reference text does not introduce a mandatory retention criterion, new carrier/operation fields, or a pre/post-complex typing rule. The FMS handoff reports existing OFN/RRF requirements sufficient; physical identification remains with the named owners. Pilot closeout and any later definition proposal require separate decisions.
-
 **v0.11 revision boundary:** owner synchronization with the editions released after v0.10 (Dyadic smooth realization, RRF class-C row, TDR-G Finding A acceptance and RID map, NUMGEN L-BACKBONE, the RECOG v0.3.20 freeze record, Triadic v1.6.1), two recorded definition corrections in the §5.5 contract (Standard C, Appendix B OFN11-C01; test-class regularity, OFN11-C02), six RID registrations for existing definition bodies (§§1.3, 4.1, 4.6, 8), and Methodology v1.4 tag spellings. No OPEN status changes and no physical selection is made. The §5.5 contract binds a *named model class* and is not a universal axiom, a primacy verdict or a physical selection (SG-OFN-SELECTION, SG-OFN-PRIMACY).
 
 ### 0.2 The Constraint Lattice, Not a Linear Pipeline
@@ -50,10 +48,6 @@ OFN owns the programme's foundational commitments, hypotheses about primitive re
 ### 0.3 Tag Usage and Adoption
 
 Definitions use `[DEF]`, hypotheses `[HYP]`, interpretation `[HEUR]` and research targets `[OPEN]`. A load-bearing import opens with the source truth tag and `[import:]`; `[RESULT] [from: TAG]` is reserved for a genuinely local synthesis. Standard mathematics may be stated under `[MATH]`; its physical application is separate.
-
-OFN v0.8 was adopted on September 21, 2026, with O08-P1–P6, nine definition IDs, FSP-U as HYP, and the two local-result IDs. Those registrations, statements and custody are retained. On 13 October 2026, the PI's release instructions authorize adoption of the reviewed consolidated v0.9 and O09-P1–P4. XFER-O08-01 then remained proposed; the twenty inherited research records retain nineteen ACTIVE statuses and one PARTIAL status. This reconciliation release does not close scientific OPENs, accept another owner's custody, or adopt the FMS pilot closeout.
-
-*v0.10:* adopted on 19 October 2026 by the PI, approving O10-P1–P7 on Draft 2 (SHA-256 `58e2dec5…3610`). The v0.9 registrations, statements and custody are retained; v0.10 adds two definitions, two local results and one OPEN record, and closes no scientific OPEN.
 
 *v0.11 (adoption pending):* registers six further definition RIDs for unchanged bodies, corrects two §5.5 definitions by recorded `[COR]` (Appendix B) and adds no OPEN record.
 
@@ -609,7 +603,7 @@ Depends on: the same diagnostic family and coordinate action; $g_0(r)=\log r$ is
 
 `[HYP]` The memo's proposed readings “existence as recognisability” and “event as change of an equivalence class” are retained as candidate contributions to OPEN-OFN-4, not adopted definitions of existence or event. The equivalence relation, physical observability, response and memory mechanism must be defined. The phrase “closure is arithmetic, closure defect geometric, recognition comparison” remains an organizing interpretation, not a physical bridge.
 
-Current owner results relevant to those questions are referenced in RF-O08-06 and RF-O09-02/03. A comparator-fiber distinction is not incompleteness of the full state, and an owner-retained observable is not automatically a physical event consequence. Existing OFN08-C17/C22 history remains unchanged; the v0.9 source update is recorded separately.
+Current owner results relevant to those questions are referenced in RF-O08-06 and RF-O09-02/03. A comparator-fiber distinction is not incompleteness of the full state, and an owner-retained observable is not automatically a physical event consequence.
 
 ---
 
@@ -670,8 +664,6 @@ Reference-only source report (RF-O08-08): Triadic v1.6.1 and Genesis v2.8.5 (cla
 ## 9. Foundational OPEN Problems
 
 This registry holds twenty-one OFN research identities (twenty ACTIVE, one PARTIAL). No general scientific target is newly closed. OPEN-FRUSTRATION retains its already recorded pure-node-difference null sector as partial progress; the remaining physical-source target stays open. A source reporting a closed additive operator or local history theorem does not automatically close OFN's broader physical question.
-
-*v0.10:* the twenty identities and statuses above are unchanged. One new record, OPEN-OFN-TRIAD-CLASS, is registered (O10-P6) at the end of this registry; the registry now holds twenty-one records. Reconciliation inputs from §5.5 are added to OPEN-OFN-3B, OPEN-OFN-FRUSTRATION and OPEN-OFN-OPA without status change.
 
 All twenty-one entries belong to OFN for the foundational question; technical results retain their owners. Criteria remain proposed. Dependencies are route-specific unless stated necessary. **Notify** names affected/proposed consumers, not completed imports. Administrative requests are in §12 and the change record.
 
@@ -748,7 +740,7 @@ Dependencies: §8; Programme RTG-OPEN-TRIAD-REDUCTION; local source definitions.
 Notify: DYAD, TRIAD, GEN; Programme P2B.  
 Next required artifact or decision: Technical-owner assignment and an admissible construction, not a trivial inserted factor.
 
-Reconciliation input (v0.10): class C (§5.5.4) has exact invariant lock surfaces on which every edge evolves by the transported isolated-dyad map. This is a real $C^\infty$ invariant-subsystem witness for a specified coupled triad law (§5.5.4; DYAD IMP-O10-06/07), not closure. Whether that law counts as an *independently specified admissible* $T_3$ in the sense of §8 is not decided here, since it is built from the chosen dyad map in a transported chart. In the raw carrier, RTG-OFN-ALG-RAW-STANDARD-C-NOGO excludes smooth invariant isolation regimes through 0 for every κ ≠ 0. Status remains ACTIVE; neither outcome selects ontology.
+Reconciliation input: class C (§5.5.4) has exact invariant lock surfaces on which every edge evolves by the transported isolated-dyad map. This is a real $C^\infty$ invariant-subsystem witness for a specified coupled triad law (§5.5.4; DYAD IMP-O10-06/07), not closure. Whether that law counts as an *independently specified admissible* $T_3$ in the sense of §8 is not decided here, since it is built from the chosen dyad map in a transported chart. In the raw carrier, RTG-OFN-ALG-RAW-STANDARD-C-NOGO excludes smooth invariant isolation regimes through 0 for every κ ≠ 0. Status remains ACTIVE; neither outcome selects ontology.
 
 ---
 
@@ -793,7 +785,7 @@ Next required artifact or decision: A nonintegrable source model and null contro
 
 Existing scoped result: source node-potential phase/advance differences are integrable; adding nodes with only node attributes does not itself add independent edge connection data. This is the source-model null case, not a claim that every possible discrete extension is flat. Its physical/general extension remains open.
 
-Reconciliation input (v0.10): §5.5.2 Q4 requires the genuine-triad class to *permit* nonintegrable cycle content and treats the raw additive defect as a candidate observable only. Class C has defect capacity for κ ≠ 1 (§5.5.4). Capacity, a nonzero value and a curvature reading remain distinct; status remains PARTIAL.
+Reconciliation input: §5.5.2 Q4 requires the genuine-triad class to *permit* nonintegrable cycle content and treats the raw additive defect as a candidate observable only. Class C has defect capacity for κ ≠ 1 (§5.5.4). Capacity, a nonzero value and a curvature reading remain distinct; status remains PARTIAL.
 
 ---
 
@@ -920,7 +912,7 @@ Additional source dependency: `RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY` (IMP-O09-0
 
 This passive-relabeling/distinct-role dichotomy is exhaustive only for the isolated-dyad question in the registered family; G1-P1's composition question remains routed to RRF and OFN/OPEN-P0, so passive dyad relabeling does not close orientation for a composed system.
 
-Reconciliation input (v0.10): Q5 (§5.5.2) requires complete-state relabeling covariance in the genuine-triad class and does not require active dynamical reversal on a fixed raw-edge model. Whether physical pole-role exchange is the same operation as bookkeeping relabeling stays here. For class C, radial contraction removes flat ambiguity among admissible smooth commuting realizations (DYAD Lemma F / F3, IMP-O10-04); a real $C^\infty$ realization exists (IMP-O10-06/07), analytic existence remains open, and identifying any realization with pole exchange needs a separate ontological and representation contract (this OPEN; RRF OPEN-A). Status unchanged.
+Reconciliation input: Q5 (§5.5.2) requires complete-state relabeling covariance in the genuine-triad class and does not require active dynamical reversal on a fixed raw-edge model. Whether physical pole-role exchange is the same operation as bookkeeping relabeling stays here. For class C, radial contraction removes flat ambiguity among admissible smooth commuting realizations (DYAD Lemma F / F3, IMP-O10-04); a real $C^\infty$ realization exists (IMP-O10-06/07), analytic existence remains open, and identifying any realization with pole exchange needs a separate ontological and representation contract (this OPEN; RRF OPEN-A). Status unchanged.
 
 As an OPEN-question cross-reference only, Finding A (§4.1; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`) has the analogous distinction between transporting a rule family and preserving a fixed adopted member, with the token-origin convention fixed modulo $N/2$ (residual $2c=0$); its discrete statement and the continuous $k\leftrightarrow-k$ conjugacy remain separately scoped and owned, and no physical discrete–continuous bridge is asserted.
 
@@ -1354,33 +1346,23 @@ Action: received. The corollary is OFN-derived and registered under OFN custody 
 
 ### 12.1 Evidence and Release-State Register
 
-This section records the adopted v0.9 release. The original OFN v0.8 file and its release record are supplied, and their recorded baseline hash agrees with the computed file identity. The accepted consolidated Draft 2 is also supplied and hash-verified against the reviewed identity. Both files remain unchanged under `sources/`. The older `ARCHIVED_OFN_HISTORY_v0_7.md`, the original v0.8 release ZIP and its historical certificate artifacts are not supplied; their past validation claims remain historical, not regenerated. Current release checks, preservation results, exact diffs and deterministic replay are in `records/validation_report.json`, `records/quality_checks.json` and the release record. Original Draft-2 assembly evidence remains in its unchanged review ZIP.
+Evidence of earlier editions is listed in their release records and Appendix C entries; the v0.9 register (the adopted v0.8 baseline, the v0.9 source editions and release checks) is preserved in §12.1 at tag `ofn-v0.10`. The rows below are the evidence this edition still cites.
 
 | Source/record | Evidence access and stage | Consequence |
 |---|---|---|
-| OFN v0.8 | Original adopted Markdown and release record supplied; computed SHA-256 `56bc991d28c4a6f3e841eec5ac8c4550528fbaac91bcfc23ab0dc2540bd2a514` matches | Exact baseline used for consolidated assembly and full-file diff; protected definitions, existing guards, local findings, FSP-U, OPEN statuses and inherited in-file history are compared directly |
-| Methodology v1.3 / Programme v1.2 | Indexed adopted text at the governing rules/interfaces | Normative references; no local original-byte hash or new adoption claimed |
-| DYAD 6.4.10; NUMGEN 1.20.7; RECOG 0.3.20; TRIAD 1.6; GEN 2.8.5; UVM 0.7.1; Legacy 0.7 | Mounted sources; relevant passages inspected and source hashes recorded | Source statements/owner grades, not rerun certificates; owner release metadata carried at its actual scope |
 | RECOG v0.3.20 | Mathematical statement text supplied; the DSN header's "freeze candidate" defers the hash to an external record | That record is `records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md` (`5c00f66d…9b55`); REQ-O09-02 fulfilled. v0.11 cites the RECOG RIDs at `recog-v0.3.26` |
-| RRF v0.7 | Mounted, work-local adopted representation reference | No corpus-wide standard adoption or scientific-proof custody is inferred |
-| TDR-G 2.12.13; DZT 0.8; AZ 0.6; Pre-Legacy 0.8 | Mounted unchanged source editions | Their older review issues are not corrected by this OFN release |
-| FMS handoff / OFN-side response v0.1 | Complete mounted working documents inspected | Noncanonical scope/routing evidence; primary closeout, evidence notes and ER-2B v0.2 not supplied |
-| Release source/integrity manifest | Current byte-identity record; original Draft-2 inspection records preserved separately | Records source identity and prior inspection scope; not mathematical certification |
-| Accepted Draft-2 assembly and release checks | Original assembly evidence retained; the supplied Draft-2 validator is rerun, then recorded publication edits generate the final file | Direct baseline/candidate/final preservation, both exact diffs, deterministic replay and selected negative controls; no original physics code is executed |
-| *v0.10:* governing handoff v0.8.2 | SHA-256 `6e4fc3c3…564b1d`, computed by both co-owners | Single input for §5.5; co-owner handoff acceptance, not adoption |
-| *v0.10:* OFN co-owner SESSION scripts | `iso_check.py` (`b92f6659…0d75e`), `iso_quadratic_nogo.py` (`91fd63f4…5308`), `transported_pq.py` (`2dcd4331…20bf6`), `transported_chiral_pq.py` (`09129ffc…73ac`), `transported_sim.py`, `basin_test.py`, `OFN_PSI_KAPPA_EXTENSION_v0_1.py` (`6566009c…5f88`), `OFN_PSI_KAPPA_ALL_MINOR_CHECK_v0_1.py` (`c56a01ac…a9e3`), `OFN_PSI_INVARIANT_C_CHECK_v0_1.py` (`18f10aa4…b114`), `OFN_PSI_INVARIANT_C_GAUGE_CHECK_v0_1.py` (`d3e5cedf…9781`), `OFN_PSI_REFLECTION_AUDIT_v0_1.py` (`e6d9b089…235a`), `OFN_STAB_F3_CHECK_v0_1.py` (`8b415461…e5ea9`) | Session evidence for §5.5 and RF-O10-02. The last six were executed by both co-owners. *v0.11:* eleven of the twelve, with the v0.10 release record, both draft builders, `release_ofn_v0_10.py` and Drafts 1–2, are on `upload/ofn-records/` (commit `c6fd574`, `SHA256SUMS.txt`, hashes equal to those printed here); `transported_chiral_pq.py` is held by neither OFN session (custody table in the v0.11 release record) |
-| *v0.10:* FMS ψ scripts and notes | Notes read; `FMS_PSI_QUINTIC_FINITE_INVARIANT_v0_1.py` (`ad44f66a…445f4c`) and `FMS_PSI_QUINTIC_REFLECTION_TEST_v0_1.py` (`5af23da9…f409`) not rerun by OFN | Reference-only (RF-O10-02) |
-| *v0.10:* Genesis v2.8.9; DYAD v6.4.13–v6.4.16; RRF v0.8.3 | Genesis SHA computed by OFN; DYAD v6.4.16 and RRF hashes per their records; cited sections read | Source statements at owner grade; no certificate rerun |
+| governing handoff v0.8.2 | SHA-256 `6e4fc3c3…564b1d`, computed by both co-owners | Single input for §5.5; co-owner handoff acceptance, not adoption |
+| OFN co-owner SESSION scripts | `iso_check.py` (`b92f6659…0d75e`), `iso_quadratic_nogo.py` (`91fd63f4…5308`), `transported_pq.py` (`2dcd4331…20bf6`), `transported_chiral_pq.py` (`09129ffc…73ac`), `transported_sim.py`, `basin_test.py`, `OFN_PSI_KAPPA_EXTENSION_v0_1.py` (`6566009c…5f88`), `OFN_PSI_KAPPA_ALL_MINOR_CHECK_v0_1.py` (`c56a01ac…a9e3`), `OFN_PSI_INVARIANT_C_CHECK_v0_1.py` (`18f10aa4…b114`), `OFN_PSI_INVARIANT_C_GAUGE_CHECK_v0_1.py` (`d3e5cedf…9781`), `OFN_PSI_REFLECTION_AUDIT_v0_1.py` (`e6d9b089…235a`), `OFN_STAB_F3_CHECK_v0_1.py` (`8b415461…e5ea9`) | Session evidence for §5.5 and RF-O10-02. The last six were executed by both co-owners. *v0.11:* eleven of the twelve, with the v0.10 release record, both draft builders, `release_ofn_v0_10.py` and Drafts 1–2, are on `upload/ofn-records/` (commit `c6fd574`, `SHA256SUMS.txt`, hashes equal to those printed here); `transported_chiral_pq.py` is held by neither OFN session (custody table in the v0.11 release record) |
+| FMS ψ scripts and notes | Notes read; `FMS_PSI_QUINTIC_FINITE_INVARIANT_v0_1.py` (`ad44f66a…445f4c`) and `FMS_PSI_QUINTIC_REFLECTION_TEST_v0_1.py` (`5af23da9…f409`) not rerun by OFN | Reference-only (RF-O10-02) |
+| Genesis v2.8.9; DYAD v6.4.13–v6.4.16; RRF v0.8.3 | Genesis SHA computed by OFN; DYAD v6.4.16 and RRF hashes per their records; cited sections read | Source statements at owner grade; no certificate rerun |
 
 ### 12.2 Contributions and Adoption Boundary
 
-The PI's release instructions of 13 October 2026 adopt consolidated Draft 2 and decisions O09-P1–P4, including the scoped FMS A1/A4 references. The supplied final reviewer message recommends adoption after reported direct comparisons against the adopted v0.8 file; this testimony is preserved under `records/SUPPLIED_FINAL_REVIEW.md`. The release editor independently rechecks the actual file identities and the stated preservation properties. No separate reviewer-account authentication or approval by every inherited author is inferred.
-
-V0.9 supersedes v0.8 as the active OFN reference. The nine definition bodies, FSP-U as a hypothesis, the two registered local consequences, existing guards and twenty foundational OPEN statuses remain unchanged. The optional §5.3 high-risk-row rewording is not made. Only publication metadata, administrative acceptance/evidence wording and the new release-history entry differ from accepted Draft 2. Scientific-owner custody, pending physical decisions and FMS closeout remain outside this adoption.
+Each edition's adoption act, approved object and finalization boundary are recorded in its Appendix C entry and release record; the v0.9 adoption boundary is preserved in §12.2 at tag `ofn-v0.10`. Contributions follow the header attribution; no separate reviewer-account authentication or approval by every inherited author is inferred.
 
 ### 12.3 Local Identities, Actual Consumers and Handoffs
 
-The twenty inherited OPEN identities/statuses, nine definition identities and bodies, two local ALG consequences, FSP-U hypothesis and existing anchors are preserved in the adopted release; the exact comparison scope is recorded with the validation results. IMP/RF/CUST/REQ labels are administrative records, not newly assigned scientific RIDs.
+IMP/RF/CUST/REQ labels are administrative records, not newly assigned scientific RIDs.
 
 | OFN record | Current custody/status | Current action |
 |---|---|---|
@@ -1411,7 +1393,7 @@ The twenty inherited OPEN identities/statuses, nine definition identities and bo
 
 **CUST-O09-01 — primitive-map identity: answered.** Dyadic owns `DYAD-DEF-PRIMITIVE-MAP` (`dyad-v6.4.22` §1, §6.1); Genesis records `GEN-DEF-PRIMITIVE-MAP` as its alias (`gen-v2.9` §1); both resolve to the same formula. IMP-O08-12 carries the Dyadic RID; REQ-O09-04 is fulfilled.
 
-Programme v1.3 (adopted) lists OFN v0.10 and names OFN §§5, 9 as the criteria home for OPEN-P0 and OPEN-P2B; the NUMGEN opening-import scope correction and the RRF citation request of `OFN_v0_9_PROGRAMME_AND_OWNER_SYNC_REQUEST.md` are answered (NUMGEN v1.21 §1.1; RRF v0.8.4 §2.3). The earlier RECOG v0.3.1→NUMGEN threshold-RID mismatch has been resolved in current RECOG §7.1; it remains historical, not an outstanding live request.
+Programme v1.3 (adopted) lists OFN v0.10 and names OFN §§5, 9 as the criteria home for OPEN-P0 and OPEN-P2B; the NUMGEN opening-import scope correction and the RRF citation request of `OFN_v0_9_PROGRAMME_AND_OWNER_SYNC_REQUEST.md` are answered (NUMGEN v1.21 §1.1; RRF v0.8.4 §2.3).
 
 ### 12.4 FMS Handoff Disposition and Outstanding Requests
 
@@ -1428,23 +1410,11 @@ The supplied noncanonical handoff reports FMS-01 COVERED by existing OFN/RRF req
 | **REQ-O09-05 — endpoint component FULFILLED; custody component deferred by the owner** | TDR-G endpoint-policy and XFER-O08-01 disposition | `TDRG-DEF-ORIENT` and SG-14 (`tdrg-v2.12.14`); XFER-O08-01 deferred to TDR-G v2.13, RID stays OFN's; the six-constraint list is not recovered (OPEN-OFN-2) |
 | **REQ-O09-06** | Primary FMS closeout/adoption record and evidence notes, if stronger claims are requested | Needed for independent verification of pilot history or declaring its final closure; scoped dependency references remain reviewable |
 
-The earlier REQ-O08-01 OPA definition/proof task and other unfulfilled owner requests remain at their existing scopes. REQ-O08-07's historical fulfillment for v1.19 receipt is not reopened. Any later definition expansion needs a separate justified proposal and approval; neither stopping FMS nor this v0.9 reconciliation automatically authorizes it.
+The earlier REQ-O08-01 OPA definition/proof task and other unfulfilled owner requests remain at their existing scopes. Any later definition expansion needs a separate justified proposal and approval.
 
-### 12.5 v0.10 Decisions and Assembly Record
+### 12.5 Edition Decisions
 
-| Key | Decision (adopted 19 Oct 2026) | Effect |
-|---|---|---|
-| **O10-P1** | Source synchronization limited to the new material: Genesis v2.8.9, DYAD v6.4.13–v6.4.16 (v6.4.16 lifecycle-only), RRF v0.8.3; inherited pins unchanged | §11.4–§11.5 pins become active OFN references |
-| **O10-P2** | Register `RTG-OFN-DEF-TRIAD-MODEL-CONTRACT` (§5.5.1, §5.5.2, §5.5.4) and `RTG-OFN-DEF-STANDARD-C` | Two new OFN definitions (eleven in total) |
-| **O10-P3** | Declare class C a different conditional model under RRF v0.8.3 §0.3 and send the RRF model-contract-row request | Interface request issued; registration remains RRF's decision |
-| **O10-P4** | Register the two local results of §5.5.3 under OFN custody | Four registered OFN local results in total |
-| **O10-P5** | Adopt the scoped FMS disposition (§5.5.5) and the canonicity/modulus wording (§5.5.6–§5.5.7) with RF-O10-02 as reference-only | FMS receiving interface answered at owner level |
-| **O10-P6** | Register OPEN-OFN-TRIAD-CLASS; add the reconciliation inputs to OPEN-OFN-3B, FRUSTRATION and OPA without status change | 21 OPEN records: twenty inherited statuses unchanged, one new ACTIVE |
-| **O10-P7** | Interface actions: DYAD N9 answered at owner level; Genesis notice erratum received; RRF request (O10-P3) | Outbound notices to DYAD, Genesis, RRF, FMS |
-
-**Assembly.** Draft 1 is generated by `build_ofn_v0_10_draft1.py` from the adopted v0.9 bytes (SHA-256 `5ae8fdab…9795`, matching its release record). The script applies anchored unique-match edits only; its checker confirms that every v0.9 line outside the replaced header block occurs unchanged and in order in this draft, and that all v0.9 RIDs, anchors and the twenty OPEN status lines are preserved. Edit log: E01 header; E02 title; E03 §0.1 boundary; E04 §0.3; E05 §0.4 row; E06 §5.5; E07 §9 intro; E08 OPEN-3B input; E09 FRUSTRATION input; E10 OPA input; E11 new OPEN; E12 §11.4–§11.5; E13 §12.1 rows; E14 §12.3 rows; E15 this section; E16 Appendix B record; E17 Appendix C entry; E18 footer.
-
-**Review status (Draft 2):** second co-owner review of Draft 1 completed on 19 October 2026 (REVIEW ACCEPTED, two nonblocking editorial corrections; O10-P7 notices to be issued only after adoption). Draft 2 = Draft 1 + C2-A (import count in the status summary) + C2-B (visible SESSION grade in §5.5.7) + status metadata, generated by `build_ofn_v0_10_draft2.py`. Second co-owner final disposition on Draft 2: ACCEPT — OWNER ADOPTION READY. **PI adoption, 19 October 2026: O10-P1–P7 approved in full on Draft 2 (SHA-256 `58e2dec5…3610`).** The final file differs from Draft 2 only by the publication edits listed in the release record. The OPEN-narrowing package of 13 October 2026 is a separate input.
+Decisions O10-P1–P7 (adopted 19 October 2026) are summarized in the Appendix C v0.10 entry; the decision table and the v0.10 assembly record are preserved in §12.5 at tag `ofn-v0.10`. The v0.11 dispositions, by row of the joint owner reconciliation, are in `records/ofn/OFN_v0_11_RELEASE_RECORD.md`.
 
 ---
 
@@ -1567,130 +1537,45 @@ The inherited Appendix B records remain unchanged. Both v0.9 reconciliation entr
 ---
 
 <a id="ofn-version-history"></a>
-## Appendix C — Version History
+## Appendix C — Compact Version History {#appendix-c}
 
-### v0.11 — 29 October 2026 — DRAFT (stage-1 intermediate; adoption pending)
+One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier, with their draft-stage entries, are preserved verbatim in Appendix C at tag `ofn-v0.10`; the v0.1–v0.6 entries are in `ARCHIVED_OFN_HISTORY_v0_7.md`, which is not supplied to the corpus.
+
+### v0.11 — 29 October 2026 — DRAFT (adoption pending)
 - **§5.5 [scientific/contract]:** class C consumes `DYAD-THM-SMOOTH-EMBEDDING` and `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (IMP-O10-06/07): one five-row regularity table; real $C^\infty$ lock surfaces; class C "primary realized smooth mathematical candidate family"; analytic and physical realization open. `RTG-OFN-DEF-STANDARD-C` corrected (OFN11-C01); test class real $C^\infty$ (OFN11-C02); one κ table; narrow-Q6 `[from: ALG]`.
 - **§§9–12 [receipts/pins]:** TDR-G v2.12.14 (Finding A statement accepted, custody deferred; REQ-O09-05 endpoint answered; owner RID map), NUMGEN v1.21 (REQ-O09-03), RECOG freeze record (REQ-O09-02), Dyadic map custody (REQ-O09-04), RRF §6.2a (O10-P3), Triadic v1.6.1 pass two; governing-editions line; Methodology v1.4 tag spellings.
 - **RIDs:** six DEF RIDs registered for unchanged bodies (`RTG-OFN-DEF-ZERO-ORIGIN`, `-DISCRETE-REDUCTION-BOUNDARY`, `-CONTINUOUS-REPRESENTATION`, `-FINITE-DESCRIPTION`, `-DIST-ZN`, `-REDUCTION-TARGET`). No OPEN status changes.
 - **Record:** `records/ofn/OFN_v0_11_RELEASE_RECORD.md`; predecessor tag `ofn-v0.10`.
+- **Layout (stage 2):** current-only compaction of §§0.1, 0.3, 6.4, 9 and 12 and of this appendix; no claim, RID, status or OPEN change (`evidence/ofn/v0.11/movement_map.json`).
 
 ### v0.10 — 19 October 2026 — ADOPTED / FMS model-selection interface release
 
-- **Authority and approved object:** adopted by Mustafa (PI) on 19 October 2026, approving O10-P1–P7 in full, on Draft 2 (SHA-256 `58e2dec54ad600dec189119adc16c8ca89872e74419f78ae317f33558a913610`) after both OFN co-owners accepted it; v0.10 supersedes v0.9 as the active OFN reference.
-- **Finalization boundary:** header/adoption metadata, proposed→registered wording, this entry and the footer only (`release_ofn_v0_10.py`; list in the release record). No scientific statement, grade, scope or OPEN status differs from Draft 2.
-- **Registered:** `RTG-OFN-DEF-TRIAD-MODEL-CONTRACT`, `RTG-OFN-DEF-STANDARD-C`, `RTG-OFN-ALG-RAW-STANDARD-C-NOGO`, `RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT`, `RTG-OFN-OPEN-TRIAD-CLASS`.
-- **Unchanged open items:** OPEN-OFN-3B ACTIVE; DYAD OPEN 20 (existence of $J$); independent all-κ audit of FMS P4; physical carrier and ψ selection (OPEN-OFN-TRIAD-CLASS). O10-P7 notices N-O10-1–4 are issued with the release record.
-
-### v0.10 — 19 October 2026 — Draft 2 / release candidate, adoption pending (not adopted)
-
-- **Input:** Draft 1 (SHA-256 `d94e1e39…8c36`), preserved unchanged with `build_ofn_v0_10_draft1.py` (`6a4fe7af…58ff`).
-- **Review:** second OFN co-owner, 19 October 2026: rebuild reproduced; scientific scope, the two local results, imports, FMS dispositions and OPEN layout accepted; O10-P1–P7 fit for PI decision; O10-P7 to be applied only after adoption.
-- **Changes:** C2-A status-summary count corrected to five imports and five reference records; C2-B §5.5.7 cites `[ALG — SESSION; RF-O10-02]` and the FMS P4 qualification. Status metadata only otherwise. No new claim, RID or status.
-
-### v0.10 — 19 October 2026 — Draft 1 / adoption pending (not adopted)
-
-- **Base and input:** adopted v0.9 (SHA-256 `5ae8fdab…9795`, verified against its release record) plus the co-owner-accepted handoff v0.8.2 (SHA-256 `6e4fc3c3…564b1d`).
-- **Proposed content:** §5.5 genuine relational-triad model-selection contract; IMP-O10-01–05; RF-O10-01–05; OPEN-OFN-TRIAD-CLASS; reconciliation inputs to OPEN-OFN-3B, FRUSTRATION and OPA; O10-P1–P7.
-- **Preserved:** every v0.9 line outside the header block, the nine definitions, FSP-U, the two local results, all guards and the twenty OPEN statuses. Inherited import pins are not re-pinned.
-- **Not done:** no adoption, no owner-file change, no custody transfer, no physical selection. The 13 October OPEN-narrowing package is not integrated.
-- **Editor:** Claude (OFN co-owner). Second co-owner review pending.
+- **Authority:** adopted by Mustafa (PI), approving O10-P1–P7 in full on Draft 2 (`58e2dec5…3610`) after both OFN co-owners accepted it; v0.10 superseded v0.9.
+- **Assembly:** Draft 1 (`d94e1e39…8c36`) built by `build_ofn_v0_10_draft1.py` from the adopted v0.9 bytes (`5ae8fdab…9795`) and the co-owner-accepted handoff v0.8.2 (`6e4fc3c3…564b1d`); Draft 2 added the editorial corrections C2-A and C2-B; finalization by `release_ofn_v0_10.py` changed metadata, proposed→registered wording, the history entry and the footer only.
+- **Decisions:** O10-P1 source synchronization (Genesis v2.8.9, DYAD v6.4.13–v6.4.16, RRF v0.8.3); O10-P2 the triad model contract and Standard C definitions; O10-P3 class C declared a different conditional model under RRF v0.8.3 §0.3, with the model-contract-row request; O10-P4 the two §5.5.3 local results; O10-P5 the scoped FMS disposition, RF-O10-02 reference-only; O10-P6 OPEN-OFN-TRIAD-CLASS and the reconciliation inputs to OPEN-OFN-3B, FRUSTRATION and OPA without status change; O10-P7 notices N-O10-1–4.
+- **Registered:** `RTG-OFN-DEF-TRIAD-MODEL-CONTRACT`, `RTG-OFN-DEF-STANDARD-C`, `RTG-OFN-ALG-RAW-STANDARD-C-NOGO`, `RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT`, `RTG-OFN-OPEN-TRIAD-CLASS`. No scientific OPEN closed.
 
 ### v0.9 — 13 October 2026 — ADOPTED / second-pass reconciliation release
 
-- **Authority and approved object:** finalized at the PI's release instruction after the supplied final review recommends adoption of consolidated Draft 2, SHA-256 `770d533feb26beb5a1e4d11ccb8544d0625414fec0b3037d110024177d66090a`. Decisions O09-P1–P4 are accepted for their reviewed scope; v0.9 supersedes v0.8 as the active OFN reference.
-- **Finalization boundary:** publication metadata, administrative acceptance/evidence wording, the release record and this history entry only. The optional §5.3 risk-row edit is deliberately not made. No new definition, axiom, physical model, scientific result grade, research closure or technical-owner transfer is introduced.
-- **Preservation:** adopted v0.8, accepted Draft 2, its change record and review package remain byte-identical. All inherited mathematical expressions, local definition/result/guard bodies, research OPEN records and prior in-file histories are preserved at the recorded scope.
-- **Outstanding owners:** RECOG final freeze/adoption record; Dyadic/Genesis map-RID custody; NUMGEN L-BACKBONE RID with observable/frame/index/domain confirmation; TDR-G endpoint/XFER disposition remain queued. None blocks this scoped release.
-- **FMS and consumers:** OFN-side ACCEPT SCOPED is recorded; FMS pilot closeout remains a separate owner act. Programme v1.2 and other owner files are untouched. The next consumer action is the separately authorized Programme v1.3 inventory/source reconciliation.
-- **Evidence:** release validation and exact reconstruction records accompany `RTG_ONTOLOGICAL_FOUNDATIONS_v0_9_RELEASE_RECORD.md`. No original owner scientific certificate or simulation campaign is rerun; no project-file installation or remote deposit is claimed.
+- **Authority:** finalized at the PI's release instruction on consolidated Draft 2 (SHA-256 `770d533feb26beb5a1e4d11ccb8544d0625414fec0b3037d110024177d66090a`) after the supplied final review recommended adoption; decisions O09-P1–P4; v0.9 superseded v0.8.
+- **Assembly:** 34 reviewed amendments applied to the adopted v0.8 baseline (SHA-256 `56bc991d28c4a6f3e841eec5ac8c4550528fbaac91bcfc23ab0dc2540bd2a514`, matching its release record); REQ-O09-01 fulfilled.
+- **Scope:** reconciliation and sharpening of existing OPEN questions; no new definition, axiom, physical model, grade, research closure or custody transfer; the twenty OPEN statuses (nineteen ACTIVE, one PARTIAL) unchanged; OFN-side ACCEPT SCOPED for the FMS handoff (O09-P3), pilot closeout not adopted.
+- **Record:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0_9_RELEASE_RECORD.md` and its validation records; not supplied to the corpus.
 
-### v0.9 — 13 October 2026 — Draft 2 / consolidated release candidate (not adopted)
+### v0.8 — 21 September 2026 — ADOPTED / final definition and model-selection release
 
-- **Assembly:** apply the 34 reviewed amendments to the exact adopted v0.8 baseline, SHA-256 `56bc991d28c4a6f3e841eec5ac8c4550528fbaac91bcfc23ab0dc2540bd2a514`; REQ-O09-01 is fulfilled. The complete DSN and full baseline diff replace the amendment-only delivery.
-- **Review receipt:** O09-P1–P4 are reviewer-accepted subject to the consolidated file; the supplied review settles the prior P3 handoff-reading condition. PI adoption and FMS pilot closeout remain separate and unrecorded.
-- **Agreed corrections:** both isolated-dyad/composed-system and discrete/continuous E13 sentences retained; DISC-1 0/22, the SG-19 owner example, exact RECOG anchor and qualified L-BACKBONE identity/typing request retained. The same L-BACKBONE qualification is propagated to its inline and correction-history mirrors.
-- **Scope:** no new definition, retention requirement, physical carrier, rule, proof grade or custody transfer. The twenty foundational OPEN statuses remain nineteen ACTIVE and one PARTIAL; REF-CLOSURE is unchanged.
-- **Evidence:** byte-level preservation and replay checks are packaged separately from source-scoped scientific statements. No original owner certificate or simulation is rerun. The older external history supplement remains referenced but unreceived; no history is reconstructed from snippets.
-- **Administrative alignment:** current draft/provenance labels, selected-source cross-references and Markdown table delimiters are synchronized in an explicit assembly-adjustment record; historical version pins remain history. The FMS charter is not a pending input.
-
-### v0.9 — 12 October 2026 — Draft 1 / reconciliation proposal
-
-- Source/RID reconciliation against the supplied owner editions; RECOG freeze-candidate and RRF work-local adoption scope retained.
-- Existing phase-shear question split into composition premise, weight magnitude and orientation; exact sign-conjugacy recorded without restoring fixed-map covariance or selecting physical roles.
-- Current comparator-track, event/retention, inheritance and partial-composition results recorded as source-scoped references. No OFN definition, retention axiom or new carrier field is adopted.
-- IMP-O08-20 explicitly replaced by the identified primitive-contraction bound; NUMGEN L-BACKBONE remains separately located at ALG with dedicated-RID request. Same-sector FSP-U incompatibility stated as standard mathematics under the existing OPEN.
-- Triadic/Genesis withdrawals and OPEN-M target/calibration qualifications received. No certified numerical deficit or successful cascade asserted.
-- Two FMS dependency links proposed; settled null/operator part retained and curvature-source necessity routed to Programme OPEN-P3. No adopted FMS closeout or permanent parallel study inferred.
-- Actual consumers, map-RID custody issue and outgoing synchronization recorded. All twenty foundational OPEN statuses and registered local definitions/hypotheses/consequences remain unchanged.
-- Original v0.8 bytes/release package are not mounted in this drafting pass: this distributed file is an amendment-form draft; whole-file assembly and preservation comparison require REQ-O09-01. No source file, adoption pointer or owner result is changed.
-
-
-
-### v0.8 — September 21, 2026 — ADOPTED / final definition and model-selection release
-
-- **Approval:** Mustafa (PI) accepts the current Draft 3 as canonical, including O08-P1–P6 as amended and its registration/custody choices. Claude's final confirmation is recorded as reported by the PI; no separate final reviewer transcript was inspected.
-- **Adoption and preservation:** v0.8 supersedes v0.7 as the current OFN reference. Finalization updates adoption/custody metadata, accepted correction status, evidence paths and release records only; the reviewed mathematical statements, imports and physical OPEN criteria are retained.
-- **Local records:** register nine definition IDs, RTG-OFN-HYP-FSP-U as a hypothesis, and RTG-OFN-ALG-STAR-TOKEN-SHIFT / RTG-OFN-ALG-FREE-ANTIPODAL-CONTINUATION under OFN custody. FSP-U is not a physical axiom; XFER-O08-01 remains a proposed TDRG handoff.
-- **Source and scope boundary:** retain the verified NUMGEN v1.19 and RECOG v0.3.1 pins. All twenty research OPENs remain open (nineteen ACTIVE and one PARTIAL); their prior statuses are preserved. Programme/owner synchronization and unresolved proof/archive requests retain their separate scope; no companion file or rule is changed.
-- **Release evidence:** approved Draft 3, prior versions, source excerpts, diffs, scoped validators and integrity manifests are retained in `RTG_ONTOLOGICAL_FOUNDATIONS_v0_8_RELEASE_PACKAGE.zip`. Detailed adoption and executed-check outcomes are in `RTG_ONTOLOGICAL_FOUNDATIONS_v0_8_RELEASE_RECORD.md`.
-
-### v0.8 — September 20, 2026 — Review Draft 3 / release candidate (not adopted)
-
-- **Source synchronization:** inspect and pin NUMGEN v1.19 (reviewer-supplied hash matched) and RECOG v0.3.1; update RF-O08-01/05/06/09/10 and IMP-O08-17–19 without altering the three imported statements. REQ-O08-07 fulfilled; RECOG R11 and the remaining owner-to-owner RID mismatch are explicitly queued.
-- **Local identities/custody:** assign provisional RTG-OFN-ALG-STAR-TOKEN-SHIFT and RTG-OFN-ALG-FREE-ANTIPODAL-CONTINUATION; offer A to TDRG under XFER-O08-01, retain B in OFN. No technical-owner acceptance or Programme interface assignment is inferred.
-- **Policy recommendation:** accept O08-P1–P6 as amended; include RTG-OFN-HYP-FSP-U in the candidate as a hypothesis, not an axiom. Align MATH to THM with standard-mathematics scope. PI release approval remains separate.
-- **Preservation:** prior draft/history and adopted Programme remain unchanged. The source-refresh and transfer records carry the detailed verification scope; no original physics certificate is rerun.
-
-### v0.8 — September 20, 2026 — Review Draft 2 (not adopted)
-- **Grammar/layout:** direct imports use source truth tags; governance prose is untagged. Common metadata is stated once; body corrections point to Appendix B. Older history is summarized here with the complete verbatim record preserved in a versioned supplement.
-- **Positive content:** standard Gram obstruction/congruence restored; FSP-U proposed with explicit coding, distinguishability and sector scope.
-- **Review findings:** common-token-shift obstruction and residual half-period symmetry; free-continuation countermodel and coincidence/opposition distinction; all attributed and unadopted.
-- **Provenance:** A8/FSP originals described fairly; OPA proof no longer presumed recoverable. RECOG v0.3 availability confirmed. NUMGEN v1.19 reported assignment/extension retained pending owner-file inspection; Programme v1.2 left immutable.
-- **No adoption:** nine definition proposals, twenty inherited OPENs and one new hypothesis proposal; no owner theorem transferred or scientific module closed.
-
-### v0.8 — September 20, 2026 — Review Draft 1 (not adopted)
-
-- **§§0/11/12 [governance]:** Apply adopted Methodology v1.3 and Programme v1.2; retain the foundational profile and original section/appendix roles; add source-level imports, evidence, proposed definition IDs and consumer tracking.
-- **§§1/4/5 [scope/typing]:** Separate phase gauge from complete state; retain advances; distinguish mathematical proto-geometry and finite coding from physical metric/capacity. A8 now says phase changes while free advance is fixed.
-- **§§2/6/8/9 [scope/typing]:** Keep primitive-object alternatives open, require invariant reductions and separate effective-model adoption from physical selection. Receive RECOG comparator and conditional radial input without adopting full pole-swap covariance.
-- **§§4.4/4.5/9 [scientific/scope]:** Propose removal of the equal-norm escape and pointwise-FSP finiteness inference; preserve the OPA independence/trigger claim as an evidence-dependent OPEN rather than a supplied theorem. Review calculations remain separate artifacts.
-- **§§9/11 [evidence]:** Record Number Genesis v1.18 operator/history feedback and explicit unresolved technical-owner interfaces; do not close OFN's broader physical questions or transfer any proof ownership.
-- **Appendices A/B/C [provenance]:** Preserve all v0.7 historical scenarios, retired entries and version history verbatim; place historical addenda in their preserved source/history context. No input owner file is edited.
-- **Decision:** O08-P1–O08-P6 and the OFN08-C* changes remain proposed. No PI approval of this OFN revision is claimed.
-
-The v0.7 entry remains verbatim below; the full v0.1–v0.7 history is preserved in the archive supplement. Historical status language does not override the adopted current state.
+- **Authority:** Mustafa (PI) accepted Review Draft 3 as canonical, with O08-P1–P6 as amended; v0.8 superseded v0.7.
+- **Registered:** nine definition IDs; `RTG-OFN-HYP-FSP-U` as a hypothesis, not a physical axiom; `RTG-OFN-ALG-STAR-TOKEN-SHIFT` and `RTG-OFN-ALG-FREE-ANTIPODAL-CONTINUATION` under OFN custody; XFER-O08-01 offered to TDR-G. Twenty research OPENs (nineteen ACTIVE, one PARTIAL).
+- **Record:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0_8_RELEASE_RECORD.md` and the v0.8 release package; neither is in the corpus.
 
 ### v0.7 — June 2026
 
-Genesis axiom-base revision + proto-geometry distinction. The foundation moves from an overderived axiom set to a finite, typed postulate/OPEN structure: one axiom deleted (promoted to theorem), three silent commitments surfaced and registered, four foundational OPENs added, one constitutional distinction installed. All additions are `[DEF]`/`[DEF-axiom]`/`[HYP]`/`[OPEN]`/`[INTERP]` or canonical imports per §0.4.
+- Genesis axiom-base revision and proto-geometry distinction: the trap/obstruction-to-annihilation axiom deleted as an axiom and replaced by the imported theorem LEM-NOANNIHIL; A8, IQP-E and FSP surfaced, with OPA as an OPEN; OPEN-OFN-IQP, -OPA, -FSP and -SECTOR added; the OFN-DIST-ZN three-level distinction installed (§4.6).
 
-- **Header [COR]:** Title v0.7; v0.7 addendum added; status-summary example citation updated to v2.12.
-- **§3.3 [NEW]:** the trap/obstruction-to-annihilation axiom is **deleted as an axiom** and replaced by the theorem-grade import LEM-NOANNIHIL (`[RESULT]` `[from: ALG]` `[source: RTG_DISCRETE_GENESIS_DSN_v2.12 §6.5]`): no free annihilation is a consequence of relational state typing $(\Delta,d)$ plus inertia. Axiom count −1; explanatory load reassigned to A8.
-- **§4.5 [NEW SECTION]:** surfaced kinematic postulates — A8 inertia/locality `[DEF-axiom]`; IQP-E `[HYP]` with the event/stored-token split; FSP `[HYP]`; OPA `[OPEN]` (explicitly not absorbed into the null ledger; independence note); null-ledger exact-vs-statistical reading `[OPEN]`; joint parameter problem $(N,k,\Sigma_\delta)$ `[DEF]` with the LEM-RETRIG binding-threshold import.
-- **§4.6 [NEW SECTION]:** OFN-DIST-ZN — arithmetic representation / cycle-graph proto-geometry / metric geometry three-level distinction `[DEF]`; scope guard **SG-ZN-GEOM**; LEM-REACH imported as worked level-2 illustration; LEM-SPECCONS / BIND3-MEMORY-PARITY cited as **scoped existence examples only** (conserved relational spectrum and statistical binding memory below the metric layer), with all phenomenology and guards remaining in the Discrete DSN.
-- **§7.3 [COR]:** RTG-OFN-OPEN-BANDWIDTH updated — k has certified dynamical meaning as the two-node binding threshold; derivation target reframed as the joint $(N,k,\Sigma_\delta)$ selection problem.
-- **§9 [NEW]:** OPEN-OFN-IQP (with the conservation-reading companion audit), OPEN-OFN-OPA (with the gauge-continuation independence no-go), OPEN-OFN-FSP, OPEN-OFN-SECTOR (forced trichotomy from LEM-REACH; many-node fate open; LEM-SPECCONS cited as the certified three-node reassignment law).
-- **§11 [NEW]:** five v0.7 feedback imports (LEM-NOANNIHIL; LEM-REACH; CONV-TICK/CONV-P3CYC as a constitutional-hygiene lesson; the §6.12 results as scoped existence examples; Genesis Geometry citation refreshed to v2.7.6).
-- **Appendix B [NEW]:** `[DELETED-AXIOM]` entry for the trap postulate (promoted, not falsified); `[RETRACTED]` entry for the "derived necessities of information theory alone" framing, with the audit's failure-mode summary (circularity / missing IQP-E–OPA–covariance conditions / Nyquist category slip).
-- **Live citations [COR]:** all body-level source references updated to current canonical versions (Discrete DSN v2.12, Genesis Geometry v2.7.6); Appendix C historical entries preserved verbatim.
-- **Freeze edits (pre-stamp review):** §2.4 tetrad-row placeholder replaced with canonical §6.4/§6.7 citations; §1.4 legacy `[Source: TDR-G DSN …]` labels converted to canonical `[RESULT]` `[from: FAIL]` `[source: RTG_DISCRETE_GENESIS_DSN_v2.12 Appendix B]` imports; §7.3 odd-$N$ wording corrected to keep TDR-G scoped to even $N$ (odd-$N$ as a future model-selection question, not a stealth branch extension); §11/§4.6 mixed-provenance import tags written as `[from: ALG + NUM strong]` to avoid minting an "ALG/NUM" truth class.
-- **Method note:** the v0.7 cycle began as an attempt to harden four Genesis axioms into derived necessities and ended by *reducing* the claimed-derived set to honest postulates with conditional derivations — the audit's value was making the unproved foundation finite, named, and testable, not proving it.
+### v0.1–v0.6
 
-### Earlier versions — full record preserved
-
-The complete v0.1–v0.7 entries are retained verbatim in `ARCHIVED_OFN_HISTORY_v0_7.md` and the immutable v0.7 source. This navigation summary does not replace their claims, corrections or dates. Draft 1 also remains intact.
-
-| Version | Historical role |
-|---|---|
-| v0.6 | Prior consolidated foundation and technical-feedback record |
-| v0.5 | Prior foundational revision; exact entry in archive |
-| v0.4 | Rank typing and interpretive build-sequence additions |
-| v0.3 | Prior ontology/selection revision; exact entry in archive |
-| v0.2 | Prior model-selection and scope revision; exact entry in archive |
-| v0.1 | Initial foundation ledger |
+- Earlier foundation-ledger editions, including rank typing and the interpretive build sequence (v0.4).
 
 ---
 
-*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.11*  
-*DRAFT — stage-1 intermediate of v0.11, adoption pending; `ofn-v0.10` governs until adoption and tag.*
+*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.11 — DRAFT, adoption pending; `ofn-v0.10` governs until adoption and tag.*
