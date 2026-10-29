@@ -1,0 +1,12 @@
+# Atlas independent rerun — OFN v0.11 (30 Oct 2026), worktree at origin/claude/ofn-v0.11 ba61f51
+base (ofn-v0.10):            acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa
+stage1 rebuilt:              9f31badfa0e7a70a037c3ede3e7f55f852d09f2288508ef38edf343a5172a822  (byte-identical to evidence/ofn/v0.11/stage1_intermediate.md)
+stage1 edit log rebuilt:     9dda88f1dc1bf51d3a11592909ed4e781642fa0147334ac9fab3e867a0adbea5  (byte-identical; 165 edits)
+stage1 checker K1-K9 PASS; controls C1-C17 caught; output identical to evidence/ofn/v0.11/stage1_check_output.txt
+stage2 rebuilt:              df3c465fb79f049f686f07635d889613e8ab112895cdbcd5af7af029e97400eb  (byte-identical to dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md on the branch)
+movement map rebuilt:        2e9ea570f56fef4f72907a92bb7a925fe9966e7aaae51dc67fbffa9ec17e3fd4  (byte-identical)
+tools/check_compaction.py main (2ba2a409...7306): PASS; output identical to evidence/ofn/v0.11/check_compaction_output.txt
+tools/check_compaction.py PR #113 (a93cec00...6971): PASS (committed map); PASS with profile history_appendix "C" (3 history hashes reported relocated)
+owner guards G0-G10 PASS; fixtures F1-F14 caught; output identical to evidence/ofn/v0.11/stage2_check_output.txt
+artifact hashes in release record §2: all 13 recomputed and equal
+upload/ofn-records c6fd574: SHA256SUMS 20/20 OK; v0.10 chain Draft1 -> Draft2 -> v0.10 replayed byte-exact
