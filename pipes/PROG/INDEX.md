@@ -6,3 +6,4 @@
 |---|---|---|---|---|---|---|
 | 2026-10-26 | GEN | finding | open | Programme v1.3 §8.2 cross-stream κ table (11 rows); GEN v2.9 §6.8 κ_f; OFN v0.10 §11.4 and RRF v0.8.4 §6.2a (γ≡κ parameter convention); records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_POST_RELEASE_NOTE.md (E-P13-1) | — | `20261026-GEN-kappa-table-kappa-f-row-and-e-p13-1.md` |
 | 2026-10-30 | OFN | notice | open | OFN v0.11 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9); Programme v1.3 lists OFN v0.10 | — | `20261030-OFN-v0-11-adopted.md` |
+| 2026-10-30 | OFN | notice | open | OFN v0.12 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9) | — | `20261030-OFN-v0-12-adopted.md` |
