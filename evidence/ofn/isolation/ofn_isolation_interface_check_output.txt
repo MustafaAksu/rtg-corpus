@@ -3,6 +3,6 @@ PASS  I2 L_kappa(z_e, b) - L_kappa(z_e, b') = -(kappa/3)(b - b')  — for kappa 
 PASS  I3 lock surfaces S_0, S_+, S_- invariant with exact edge law N (generic equivariant jet)  — 7 monomials up to degree 7; supporting check of the general argument
 PASS  I5 b_1 = 0 gives F_1 = (1 - kappa/3) N(z_1), also for nonzero neighbours (w, -w)
 PASS  I5b (z,0,0) is not invariant for kappa != 0: F_2 = F_3 = -(kappa/3) N(z)  — d F_2/dx at 0 = kappa*(-I*Ni1_0 - Nr1_0)/3, i.e. -(kappa/3) x (linear coefficient of N), = -(kappa/3) lam in the model
-PASS  I6 (z_1, b_1) is a one-step interface, not a closed multi-step state  — next b_1 differs by 133137/1000000000 + 4219*sqrt(3)*I/20000000
+PASS  I6 diagnostic (N_test, not C2): one-step sufficiency does not give closed reduced dynamics  — next b_1 differs by 133137/1000000000 + 4219*sqrt(3)*I/20000000
 PASS  I7 control kappa = 0: F_e = N(z_e) for every state
 RESULT: PASS

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """OFN isolation working note — exact checks (SESSION evidence; not an owner certificate).
 
-usage: python3 -I evidence/ofn/scripts/ofn_isolation_interface_check.py
+usage: python3 -I evidence/ofn/scripts/ofn_isolation_interface_check.py [--force-fail]
+  exit 0 iff all seven checks pass; --force-fail marks I1 as failed to show that a failure gives exit 1.
 
 Model (OFN v0.11 §5.5.4, class C, fixed three-edge carrier, primitive clock, transported chart):
     F_e(z) = N(z_e) - (kappa/3) * sum_j N(z_j),   e = 1, 2, 3.
@@ -11,7 +12,10 @@ Proof status of each item (see the working note):
   I1, I2  general identities over arbitrary edge outputs N(z_j) (abstract symbols): these ARE the proofs.
   I3      lock invariance: general two-line argument in the note; here a supporting check with a generic jet.
   I5      zero total interface: exact consequence of I1; supporting jet check.
-  I6      one-step sufficiency only: an explicit pair of states with equal (z_1, b_1) and different next b_1.
+  I6      diagnostic only: for the test polynomial N_test(z) = lam z + z^2 zbar, kappa = 1/2 (NOT the selected C2 map
+          N_Phi; its six-step cubic coefficient differs from the dyad's mu), two states with equal (z_1, b_1) have
+          different next b_1. It shows that one-step sufficiency does not by itself give closed reduced dynamics; it does
+          not prove the same for the selected C2 map.
   I7      kappa = 0 control.
 Generic jets: all monomials z^a zbar^b of degree <= 7 allowed by the stated symmetry, with independent symbolic
 coefficients; conjugation is handled with z = x + i y, x, y real. A finite jet is supporting evidence, not a proof.
@@ -88,7 +92,7 @@ report("I5 b_1 = 0 gives F_1 = (1 - kappa/3) N(z_1), also for nonzero neighbours
 report("I5b (z,0,0) is not invariant for kappa != 0: F_2 = F_3 = -(kappa/3) N(z)", s1 and sp.simplify(lin) != 0,
        f"d F_2/dx at 0 = {sp.simplify(lin)}, i.e. -(kappa/3) x (linear coefficient of N), = -(kappa/3) lam in the model")
 
-# ---- I6 one-step only: equal (z_1, b_1), different next b_1  (concrete N = lam z + z^2 zbar, kappa = 1/2)
+# ---- I6 diagnostic: equal (z_1, b_1), different next b_1, for the test polynomial N_test = lam z + z^2 zbar, kappa = 1/2
 Nc = lambda t: sp.expand(lam * t + t**2 * sp.conjugate(t))
 kc = sp.Rational(1, 2)
 def step(Z):
@@ -100,11 +104,17 @@ B_ = [z0, sp.Rational(1, 5) * sp.I, -sp.Rational(1, 5) * sp.I]
 bA = sum(Nc(t) for t in A_[1:]); bB = sum(Nc(t) for t in B_[1:])
 nA, nB = step(A_), step(B_)
 nbA = sum(Nc(t) for t in nA[1:]); nbB = sum(Nc(t) for t in nB[1:])
-report("I6 (z_1, b_1) is a one-step interface, not a closed multi-step state", zero(bA - bB) and zero(nA[0] - nB[0]) and not zero(nbA - nbB),
+report("I6 diagnostic (N_test, not C2): one-step sufficiency does not give closed reduced dynamics", zero(bA - bB) and zero(nA[0] - nB[0]) and not zero(nbA - nbB),
        f"next b_1 differs by {sp.nsimplify(sp.simplify(nbA - nbB))}")
 
 # ---- I7 kappa = 0 control: decoupled, residual vanishes, zero interface recovers N
 f00 = F(N, [z, w, -w], kap=0)
 report("I7 control kappa = 0: F_e = N(z_e) for every state", zero(f00[0] - N(z)) and zero(f00[1] - N(w)))
 
-print("RESULT:", "PASS" if all(OK) else "FAIL")
+import sys
+if "--force-fail" in sys.argv:
+    OK[0] = False
+    print("FORCED FAIL of I1 (--force-fail)")
+ok = len(OK) == 7 and all(OK)
+print("RESULT:", "PASS" if ok else "FAIL")
+raise SystemExit(0 if ok else 1)

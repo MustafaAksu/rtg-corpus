@@ -2,9 +2,12 @@
 
 **Status:** Noncanonical working note of the OFN co-owners. SESSION level. It changes no DSN text, no RID, no definition (Q1–Q6, Standard C) and no OPEN status. Its purpose is to give the physical-isolation obligation of OPEN-OFN-TRIAD-CLASS, and the word "completeness" in OPEN-OFN-3A, a testable form.
 **Date:** 30 October 2026.
-**Authors:** Claude (OFN co-owner session `claude012ZC8x`), drafting. ChatGPT (OFN co-owner) proposed the topic, accepted the I-comp / I-quiet distinction as a working topic and fixed the scope boundaries in §4; change-focused review pending.
+**Authors:** Claude (OFN co-owner session `claude012ZC8x`), drafting. ChatGPT (OFN co-owner) proposed the topic, accepted the I-comp / I-quiet distinction as a working topic and fixed the scope boundaries in §4.
+**Review:** `records/ofn/OFN_ISOLATION_INTERFACE_CHATGPT_REVIEW.md` (PR #120 review `5709727864`): ACCEPT SCOPED for R1–R4 and the I-comp / I-quiet / I-remove distinction. Its two findings are applied in this revision: R120-S1 (the I6 scope is limited to $N_{\rm test}$) and R120-E1 (an exit-code gate plus a forced-failure control).
 **Governing sources:** `ofn-v0.11` §§5.5.2–5.5.4 (class C, Standard C), §9 OPEN-OFN-TRIAD-CLASS, OPEN-OFN-3A, OPEN-OFN-3B. The vocabulary in §2 ("sufficient causal interface", state partition) comes from `numgen-v1.21` §6.2, N-1A2. It is used as vocabulary only: NUMGEN's N-1A2 closure belongs to its own abstract three-node model and is not imported.
-**Evidence:** `evidence/ofn/scripts/ofn_isolation_interface_check.py` (SHA-256 `efe1ced783023eb7f267f61ea0a4d5aa1df34bc4d8ecea7869cb139ecb8af479`). Output: `evidence/ofn/isolation/ofn_isolation_interface_check_output.txt` (`0e2e8c5916302c48edf79957b9db10c1fb4c3f488e077566fc12cbd8ccb5ab61`), from Python 3.13, SymPy 1.14.0. Command: `python3 -I evidence/ofn/scripts/ofn_isolation_interface_check.py`.
+**Evidence:** `evidence/ofn/scripts/ofn_isolation_interface_check.py` (SHA-256 `17e91906c9ec829263ba53595a8dbd2ec020015642740603789d61ecc6bab8ef`). Command: `python3 -I evidence/ofn/scripts/ofn_isolation_interface_check.py`; it exits 0 only if all seven checks pass. Outputs, from Python 3.13 and SymPy 1.14.0:
+- positive run: `evidence/ofn/isolation/ofn_isolation_interface_check_output.txt` (`7b31bf015054d71b016fdcb3cad6ae20ff30db3168bab209813ec4cca6683fec`);
+- forced-failure control (`--force-fail`, exit 1): `evidence/ofn/isolation/ofn_isolation_interface_check_forced_fail_output.txt` (`1c8598558cf8632c0871cd91602b41eebc92c319e0c1a89a8807f3b89ccca217`).
 
 ## 1. Question
 
@@ -37,7 +40,7 @@ No oddness, equivariance or truncation is used. In the language of N-1A2, $b_e$ 
 *Scope:*
 - This is minimality in the quotient sense, for the declared domain and readout.
 - It does not show a physically minimal environment or a unique representation of the interface.
-- It is one-step sufficiency only: $(z_e,b_e)$ is not a closed multi-step state. Script I6 gives two states with equal $(z_1,b_1)$ whose next $b_1$ differ.
+- Only one-step sufficiency is established here; it does not give closed reduced dynamics. Script I6 shows that this inference fails for the diagnostic polynomial $N_{\rm test}(z)=\lambda z+z^2\bar z$ with $\kappa=\tfrac12$. That polynomial is not the selected C2 map $N_\Phi$: its six-step cubic coefficient differs from the dyad's $\mu$. So I6 does not by itself prove the same for C2.
 
 **R3 — recovery requires a compensating interface** `[ALG]` (exact, from R1). For $\kappa\ne0$:
 $$F_e=N(z_e)\iff b_e=-N(z_e).$$
@@ -65,7 +68,7 @@ Two further points:
 | "Quiet environment" | $b_e=0$, i.e. the total interface vanishes; individual neighbours need not be zero |
 | "Zero edge is chart-independent" | True under the declared edgewise, zero-preserving local diffeomorphisms ($\Phi(0)=0$). Not derivable for general network maps that mix edges. A zero edge value is not physical deletion of an incidence or of the environment |
 | Standard C and I-comp | The exact I-comp witness of class C satisfies Standard C. Standard C asks only $I_e=O(\lVert r\rVert^4)$ on the manifold germ and is not equivalent to $I_e\equiv0$ |
-| Sufficiency | One-step sufficiency for the full edge output (R1–R2); no closed reduced dynamics |
+| Sufficiency | One-step sufficiency for the full edge output (R1–R2). Closed reduced dynamics does not follow; I6 is a counterexample for $N_{\rm test}$ only, not for C2 |
 
 **Conclusion.** In the declared fixed three-edge model, class C gives exact dyad recovery on balanced invariant regimes (I-comp). Under zero total interface (I-quiet) it does not give the same primitive dyad law, for any $\kappa\ne0$.
 
@@ -100,4 +103,5 @@ Then the separate question of which class-C members, if any, meet each contract.
 - It does not change Standard C, Q1–Q6, the class-C contract or any OPEN status.
 - It does not import NUMGEN's N-1A2 closure.
 - It does not treat a finite-jet computation as a proof. Script I3 is supporting; R1–R4 rest on the stated identities.
+- It does not claim that $(z_e,b_e)$ fails to be closed for the selected C2 map; that question is not studied here.
 - The related questions of OPEN-OFN-REF-CLOSURE and OPEN-OFN-3B are left to separate notes.
