@@ -126,6 +126,15 @@ def main():
         ("N13", "FAIL", "history_appendix C: hash relocated without a declaration", C, new_appendix(), [DRAFTP], {"relocate": False}),
         ("N14", "FAIL", "history_appendix C: a declared relocation whose hash is not in the history text", C, new_appendix().replace(f"; draft `{DRAFT}`", ""), [DRAFTP], {}),
     ]
+    # round-2 receiving review (PR #114, ChatGPT): source and target binding of relocate_hashes
+    hist_base = base_text().replace("Many words of history.", f"Many words of history; draft `{DRAFT}`.")
+    t_decl = ops(None, new_appendix(), [DRAFTP], relocate=False)
+    t_decl[-1]["relocate_hashes"] = [DRAFT]
+    foot = new_appendix().replace(f"; draft `{DRAFT}`", "").replace("*END OF DOCUMENT — RTG_TEST_DSN_v0.2*", f"*END OF DOCUMENT — RTG_TEST_DSN_v0.2 (draft `{DRAFT}`)*")
+    extra += [
+        ("N15", "FAIL", "relocation declared on the history-appendix operation (old and new both carry the hash) authorizes an undeclared live deletion", C, None, None, {"base": hist_base, "op_list": t_decl}),
+        ("N16", "FAIL", "a declared relocation whose only target is the footer line", C, foot, [DRAFTP], {}),
+    ]
     bad = 0
     with tempfile.TemporaryDirectory() as tmp:
         for cid, want, what, prof, app, rem, *kw in cases + extra:

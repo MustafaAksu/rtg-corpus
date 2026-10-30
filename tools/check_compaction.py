@@ -39,8 +39,9 @@ With the key (revision after the PR #113 receiving review): the heading "## Appe
 exactly once in base and candidate; exactly one history-appendix operation must remove exactly the base
 region (plus, at most, the trailing rule and footer lines) and insert exactly the candidate region (plus
 the same kind of tail), with no other "## " heading in its new text. A source hash that leaves the live
-text passes only when the key is set and an operation that removes it declares it in "relocate_hashes"
-and the history-appendix text carries it; without the key, hashes are protected as before.
+text passes only when the key is set, the operation that removes it from the live text (never the
+history-appendix operation) declares it in "relocate_hashes" as a net removal, and the parsed candidate
+history region (not the footer) carries it; without the key, hashes are protected as before.
 
 RID pattern (OFN v0.11 stage 2): the programme namespaces `RTG-…` and `RTG-OFN-…` (Methodology v1.4 §4.2)
 are tracked when an identifier has at least a category and a description (`RTG-OFN-DEF-X`, `RTG-OPEN-X-Y`);
@@ -365,14 +366,29 @@ def main():
     # ("relocate_hashes") and the history-appendix text carries it
     relocated, bad_decl = [], []
     if PROFILE.get("history_appendix"):
-        hist_new = "".join(op.get("new", "") for op in mp["operations"] if op.get("class") == "history-appendix")
+        # destination: the parsed candidate history region only (not the footer tail, not later sections)
+        rc = split_regions(cand)["appA"]
+        hist_c = cand[rc[0] + 1:rc[1]] if rc else ""
+        rb = split_regions(BASE_TEXT)["appA"]
         for op in mp["operations"]:
-            gone = op.get("_removed", "") if op["op"].startswith("replace") else (removed_part(op.get("old", ""), op.get("new", "")) or "")
-            for h in op.get("relocate_hashes", []):
-                if h in gone and h in hist_new and h in hb - hc:
-                    relocated.append(h)
-                else:
-                    bad_decl.append(f"{op['id']}:{h}")
+            decl = op.get("relocate_hashes", [])
+            if not decl:
+                continue
+            # source: an operation on the live text (never the history-appendix operation itself) whose
+            # declared hash is a net removal: more occurrences in what it removes than in what it inserts
+            if op.get("class") == "history-appendix":
+                bad_decl += [f"{op['id']}:{h} (declared on the history-appendix operation)" for h in decl]
+                continue
+            if op["op"].startswith("replace"):
+                gone, put = op.get("_removed", ""), op.get("new", "")
+            else:
+                gone, put = op.get("old", ""), op.get("new", "")
+            at = BASE_TEXT.find(gone) if gone else -1
+            in_hist = rb is not None and at >= 0 and rb[0] <= at < rb[1]
+            for h in decl:
+                ok = (at >= 0 and not in_hist and gone.count(h) > put.count(h)
+                      and h in hist_c and h in hb - hc)
+                (relocated if ok else bad_decl).append(h if ok else f"{op['id']}:{h}")
     lost = sorted(hb - hc - set(relocated))
     C.add("source hashes preserved in live text", not lost and not bad_decl,
           f"missing: {lost}" + (f"; declared relocations to the history appendix: {sorted(relocated)}" if relocated else "")

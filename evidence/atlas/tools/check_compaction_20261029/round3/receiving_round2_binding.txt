@@ -1,0 +1,12 @@
+CHECKER afcfe064a178d90a3557629c530b60a41c376990b01a4b9451c0bd83e1f3e3ae
+FIXTURES 45c3cbb5d28d550f2ddae00620b4c759c6aefa51384588c87b6977f951f78ec7
+P_DECLARED expected PASS observed PASS MATCH
+  PASS history appendix region — Appendix C is the unique history region in base and candidate; operation T replaces exactly it
+  PASS source hashes preserved in live text — missing: []; declared relocations to the history appendix: ['58e2dec5…3610']
+N_WRONG_OPERATION expected FAIL observed FAIL MATCH
+  PASS history appendix region — Appendix C is the unique history region in base and candidate; operation T replaces exactly it
+  FAIL source hashes preserved in live text — missing: ['58e2dec5…3610']; invalid relocation declarations: ['T:58e2dec5…3610 (declared on the history-appendix operation)']
+N_FOOTER_TARGET expected FAIL observed FAIL MATCH
+  PASS history appendix region — Appendix C is the unique history region in base and candidate; operation T replaces exactly it
+  FAIL source hashes preserved in live text — missing: ['58e2dec5…3610']; invalid relocation declarations: ['E1:58e2dec5…3610']
+MISMATCHES 0

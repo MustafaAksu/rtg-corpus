@@ -1,0 +1,120 @@
+{
+  "fixture_sha256": "45c3cbb5d28d550f2ddae00620b4c759c6aefa51384588c87b6977f951f78ec7",
+  "checkers": [
+    {
+      "checker_sha256": "afcfe064a178d90a3557629c530b60a41c376990b01a4b9451c0bd83e1f3e3ae",
+      "cases": [
+        {
+          "id": "P0",
+          "description": "positive upstream fixture",
+          "expected": "PASS",
+          "observed": "PASS",
+          "exit_code": 0,
+          "matched": true,
+          "failed_checks": []
+        },
+        {
+          "id": "N1",
+          "description": "declared history appendix missing in candidate",
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "exit_code": 1,
+          "matched": true,
+          "failed_checks": [
+            {
+              "check": "history appendix region",
+              "result": "FAIL",
+              "detail": "heading '## Appendix C' occurs 1 times in the base and 0 times in the candidate (exactly once each required)"
+            },
+            {
+              "check": "source hashes preserved in live text",
+              "result": "FAIL",
+              "detail": "missing: []; invalid relocation declarations: ['E1:58e2dec5…3610']"
+            }
+          ]
+        },
+        {
+          "id": "N2",
+          "description": "history replacement injects a new live theorem",
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "exit_code": 1,
+          "matched": true,
+          "failed_checks": [
+            {
+              "check": "history appendix region",
+              "result": "FAIL",
+              "detail": "the history-appendix operation does not insert exactly the candidate history region"
+            }
+          ]
+        },
+        {
+          "id": "N3",
+          "description": "history replacement deletes following live appendix; RID reference survives",
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "exit_code": 1,
+          "matched": true,
+          "failed_checks": [
+            {
+              "check": "history appendix region",
+              "result": "FAIL",
+              "detail": "the history-appendix operation does not remove exactly the base history region (beyond it only rule and footer lines may go)"
+            }
+          ]
+        },
+        {
+          "id": "N4",
+          "description": "duplicate history appendix makes phantom self-resolve",
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "exit_code": 1,
+          "matched": true,
+          "failed_checks": [
+            {
+              "check": "history appendix region",
+              "result": "FAIL",
+              "detail": "heading '## Appendix C' occurs 1 times in the base and 2 times in the candidate (exactly once each required)"
+            },
+            {
+              "check": "source hashes preserved in live text",
+              "result": "FAIL",
+              "detail": "missing: []; invalid relocation declarations: ['E1:58e2dec5…3610']"
+            }
+          ]
+        },
+        {
+          "id": "N5",
+          "description": "single-character programme RID description",
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "exit_code": 1,
+          "matched": true,
+          "failed_checks": [
+            {
+              "check": "operation T (history-appendix)",
+              "result": "FAIL",
+              "detail": "history entry names identifiers absent from the live text: ['RTG-OPEN-X']"
+            }
+          ]
+        },
+        {
+          "id": "N6",
+          "description": "default profile loses live source hash; pre-existing history copy masks deletion",
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "exit_code": 1,
+          "matched": true,
+          "failed_checks": [
+            {
+              "check": "source hashes preserved in live text",
+              "result": "FAIL",
+              "detail": "missing: ['aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa']"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mismatches": 0
+}
