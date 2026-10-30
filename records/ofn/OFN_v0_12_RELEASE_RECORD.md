@@ -17,7 +17,8 @@ This record invents no hash, approval or review identifier. Fields marked *(to b
 | Working note: 3B independence | `records/ofn/OFN_3B_INDEPENDENCE_WORKING_NOTE.md`; review `OFN_3B_INDEPENDENCE_CHATGPT_REVIEW.md` | ACCEPT SCOPED; merged in PR #124 (`040da0e9…`) |
 | PI start | "BAşla, RID yarat, henüz seçim yapılmasın" (start; create the RID; no selection yet), OFN session, 30 October 2026 | given |
 | Inbox checkpoint | `pipes/OFN/` holds no open item (three closed notices) | nothing to receive |
-| Change-focused review | the second OFN co-owner (ChatGPT) | *(to be filled)* |
+| Change-focused review | `records/ofn/OFN_v0_12_CHATGPT_REVIEW.md` (ChatGPT, commit `7368ab29…`; PR #126 review `5711097535`), on round 1 `8230b169…3bae`. Verdict: ACCEPT SCOPED. R126-S1 and R126-S2 required; R126-N1 recommended | given |
+| Round-2 correction | R126-S1, R126-S2 and R126-N1 applied in the builder (§3a); round 1 `8230b169…3bae` kept in Git history (commit `c8db47b`) | done; delta check pending |
 | Adoption | PI | *(to be filled)* |
 | Merge commit; tag `ofn-v0.12` | PI | *(to be filled)* |
 
@@ -31,16 +32,17 @@ This record invents no hash, approval or review identifier. Fields marked *(to b
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v0.11) | `git show ofn-v0.11:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4` |
-| **Candidate** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `8230b1694bf7933d4a6cf944d28487b767aa094151ae117933d072abdca33bae` |
-| Builder | `evidence/ofn/scripts/build_ofn_v0_12.py` | `dd6385914a105f1a6e0ca733b598032f0cb1d7299baa290309233728ce0ef37f` |
-| Checker | `evidence/ofn/scripts/check_ofn_v0_12.py` | `78ed4c92971f9f4dd0e65e5b817ddd6d396fb14a18b29b55dc5c9a8abdde980f` |
-| Edit log (23 edits; old and new text with hashes; document hash chain) | `evidence/ofn/v0.12/edit_log.json` | `ea3040d98c0256f048714e2fc8913a6681898d1b62f9cc6e8eb91889362f4960` |
-| Checker output (gates and controls) | `evidence/ofn/v0.12/check_output.txt` | `b4039f4efb0fdeb54d7842e87d00cea412a904d683579c53e27f41b598505c00` |
-| `dsn_lint` (informational) | `evidence/ofn/v0.12/dsn_lint.txt` | `b54955e24635de63745d6a86255d0b7962802b6f5b148ec562b01371f441589a` |
+| Candidate, round 1 (superseded) | commit `c8db47b` | `8230b1694bf7933d4a6cf944d28487b767aa094151ae117933d072abdca33bae` |
+| **Candidate, round 2** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `5e1da260f944c40ebdcab29f57bdd37600f04e47a797b768ab5e0126a0e76a42` |
+| Builder | `evidence/ofn/scripts/build_ofn_v0_12.py` | `90bc6540716f7732f90c2bf798dcd99fdbdc0c623f8ece0f39005021e86ed50b` |
+| Checker | `evidence/ofn/scripts/check_ofn_v0_12.py` | `8e408a747b19a4853c2c010da22334f51b23dc1d8198fc8584d89b35027f54f5` |
+| Edit log (23 edits; old and new text with hashes; document hash chain) | `evidence/ofn/v0.12/edit_log.json` | `420a7a8cafa3f4701eaa8b26c073658ac2d5bf91fd699a8fae0a572dcc4e342b` |
+| Checker output (gates and controls) | `evidence/ofn/v0.12/check_output.txt` | `5cd5bed15338638cac69b38cf381d28635aa9a026a1255e1113d343aae2db679` |
+| `dsn_lint` (informational) | `evidence/ofn/v0.12/dsn_lint.txt` | `f456b7b125ed55aed119f1449d9b9bd19bb20531a622a50e203d47f896eec2fd` |
 
 **Reproduce:**
 1. `git show ofn-v0.11:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md > base.md`
-2. `python3 -I evidence/ofn/scripts/build_ofn_v0_12.py base.md OUT.md LOG.json` — writes `8230b169…3bae`.
+2. `python3 -I evidence/ofn/scripts/build_ofn_v0_12.py base.md OUT.md LOG.json` — writes `5e1da260…6a42`.
 3. `python3 -I evidence/ofn/scripts/check_ofn_v0_12.py base.md OUT.md LOG.json --controls` — run from the repository root.
 
 **Gates: K1–K11 PASS.**
@@ -59,7 +61,7 @@ This record invents no hash, approval or review identifier. Fields marked *(to b
 | K10 | 40 protected lines unchanged: every `[DEF]` line, the Q1–Q6 rows and the Standard C declaration |
 | K11 | no selection language |
 
-**Negative controls: 14/14 caught.**
+**Negative controls: 16/16 caught.**
 - C1: stale v0.11 boundary.
 - C2: old REF-CLOSURE question restored.
 - C3: an isolation contract declared selected.
@@ -74,8 +76,10 @@ This record invents no hash, approval or review identifier. Fields marked *(to b
 - C12: stale local-result count.
 - C13: the edge-dependent-isomorphism caveat dropped.
 - C14: NUMGEN N-1A2 closure declared imported.
+- C15: the literal-identity wording of R126-S1 restored.
+- C16: raw oddness given as the basis of C0 (R126-S2).
 
-**`dsn_lint`** (informational, no gate): 200,529 bytes, 1,598 lines; +8,477 bytes (+4.4 %); 1 new RID; 1 footer line.
+**`dsn_lint`** (informational, no gate): 201,031 bytes, 1,598 lines; +8,979 bytes (+4.7 %); 1 new RID; 1 footer line.
 
 ## 3. Edits
 
@@ -130,6 +134,20 @@ No physical selection is made, and no primacy conclusion is drawn.
 **Live-file exceptions:**
 - The "Reconciliation input:" paragraphs (OPEN-3B, FRUSTRATION, OPA) and the §12.3 rows dated 19 October 2026 are inherited current text; they are left as they are.
 - No Appendix B record is needed: the edition makes no `[COR]` to a definition.
+
+## 3a. Round 2: corrections from the change-focused review
+
+The review (`records/ofn/OFN_v0_12_CHATGPT_REVIEW.md`) accepted the scientific content and found two wording defects plus one recommended precision. Each was checked against the round-1 text before being applied, and each is applied in the builder.
+
+| Finding | Edits | Change |
+|---|---|---|
+| R126-S1 (required) | A01, A02, H12 | "Closure reduction is removal of the common node origin" becomes the canonical isomorphism $Q_{\rm node}\cong C_0$. The two constructions are isomorphic, not literally the same operation. §2.4 and Appendix C now say the same |
+| R126-S2 (required) | B06 | In the 3B frame, C0's failure rests on the owner no-go `RTG-OFN-ALG-RAW-STANDARD-C-NOGO` (smooth $C^3$ germs through 0, every $\kappa\ne0$, within its scope). The raw map's non-oddness is given separately: by itself it excludes only the named embedding $\iota_0$ |
+| R126-N1 (recommended) | A03, B07 | "Active interface" on the lock surfaces is limited to nonzero edges; the zero edge of $\mathcal S_0$ has $b_3=0$ |
+
+**Scope.** Six lines differ between round 1 and round 2, all inside these edits. No RID, status, definition or OPEN scope decision changes.
+
+**Checks.** K7 and K8 now carry the new wording, and controls C15–C16 are added. The checker passes K1–K11, with 16/16 controls caught.
 
 ## 4. Affected consumers (notices after the tag)
 

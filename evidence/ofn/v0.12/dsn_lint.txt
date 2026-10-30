@@ -1,8 +1,8 @@
 file: dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md
-bytes: 200529
+bytes: 201031
 lines: 1598
 header_chars: 3624
-live_body_chars: 193805
+live_body_chars: 194307
 appendix_a_chars: 1682
 section1_words: -4
 orientation_core: {"chars": 0, "lines": 0, "words": 0, "core_end_marker_present": false}
@@ -13,8 +13,8 @@ history_phrases_live: {"historical": 19, "superseded": 5, "former": 3, "retained
 near_duplicate_paragraphs: 0
 rids_total: 71
 previous: {"file": "../base011.md", "bytes": 192052}
-growth_bytes: 8477
-growth_percent: 4.4
+growth_bytes: 8979
+growth_percent: 4.7
 new_rids: 1
-growth_per_new_rid: 8477.0
+growth_per_new_rid: 8979.0
 (informational report; no gate)

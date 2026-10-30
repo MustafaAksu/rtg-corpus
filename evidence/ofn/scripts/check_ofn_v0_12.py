@@ -9,7 +9,8 @@ Gates:
   K5 the only new OFN RID is RTG-OFN-ALG-REF-CLOSURE-COMPARISON, declared once, with a single conclusion status [from: ALG];
   K6 every DYAD/GEN/TDRG/RECOG/NUMGEN RID cited resolves at the governing tag;
   K7 stale v0.11 edition phrases and the superseded REF-CLOSURE question absent from the live text;
-  K8 required statements present (result parts, frames, "none selected" / "no standard selected" boundaries);
+  K8 required statements present (result parts, frames, "none selected" / "no standard selected" boundaries; round 2 adds
+     the R126-S1/S2/N1 wording to K7/K8, with controls C15-C16);
   K9 Appendix A, Appendix B and the Appendix C entries for v0.11 and earlier byte-identical;
   K10 every `[DEF]` line, the Q1-Q6 contract rows and the Standard C declaration of v0.11 unchanged;
   K11 no selection language: no isolation contract, independence standard or physical reading is declared selected.
@@ -25,10 +26,16 @@ TAGS = {"DYAD": ("dyad-v6.4.22", "dsn/RTG_DYADIC_OSCILLATOR_DSN.md"), "GEN": ("g
 STALE = ["**v0.11 revision boundary:**", "*v0.11:* registers", "four OFN local results",
          "Question: Are edge-closure reduction and removal of one relational reference the same construction?",
          "Next required artifact or decision: An explicit comparison construction.",
-         "The equality of those constructions is not assumed;"]
+         "The equality of those constructions is not assumed;", "closure reduction is removal of the common node origin",
+         "the reduction equals removal of the common node origin", "closure = removal of the common node origin",
+         "under Standard C, since the raw map is not odd", "the interface is active and compensating ($b_1"]
 REQUIRED = [
     "`[RESULT]` `[from: ALG]` [RID: RTG-OFN-ALG-REF-CLOSURE-COMPARISON]",
-    "(i) $d$ induces an isomorphism $Q_{\\rm node}\\cong C_0$",
+    "(i) $d$ induces a canonical isomorphism $Q_{\\rm node}\\cong C_0$",
+    "(the two constructions are isomorphic, not literally the same operation)",
+    "by the owner no-go `RTG-OFN-ALG-RAW-STANDARD-C-NOGO` (smooth $C^3$ invariant manifold germs through 0",
+    "which by itself excludes only the named embedding $\\iota_0$ for the raw recipe",
+    "whose zero edge has $b_3=0$",
     "has $\\ker\\kappa_n\\cong H[n]$ and $\\operatorname{coker}\\kappa_n\\cong H/nH$",
     "Edge-dependent isomorphisms $C_0\\cong Q_{\\rm edge}$ exist for every abelian $H$ and are a different comparison.",
     "Equal cardinalities of $Q_{\\rm node}$, $C_0$ and $Q_{\\rm edge}$ do not decide (iii).",
@@ -118,6 +125,8 @@ CONTROLS = [
     ("C11 unresolved owner RID", lambda t: t.replace("`DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (v6.4.20)", "`DYAD-THM-SMOOTH-EQUIVARIANT-CHART-X` (v6.4.20)", 1)),
     ("C12 stale local-result count", lambda t: t.replace("five OFN local results and twenty-one", "four OFN local results and twenty-one", 1)),
     ("C13 edge-dependent isomorphism caveat dropped", lambda t: t.replace(" Edge-dependent isomorphisms $C_0\\cong Q_{\\rm edge}$ exist for every abelian $H$ and are a different comparison.", "", 1)),
+    ("C15 literal-identity wording restored (R126-S1)", lambda t: t.replace("the closure sector is canonically identified with node assignments modulo the common origin (the two constructions are isomorphic, not literally the same operation)", "edge-closure reduction is removal of the common node origin", 1)),
+    ("C16 raw oddness as the basis of C0 (R126-S2)", lambda t: t.replace("C0 fails for the named raw mean-feedback family under Standard C by the owner no-go", "C0 fails for the named raw mean-feedback family under Standard C, since the raw map is not odd, by the owner no-go", 1)),
     ("C14 N-1A2 closure imported", lambda t: t.replace("its closure is not imported.", "its closure is imported.", 1)),
 ]
 

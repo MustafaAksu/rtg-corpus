@@ -23,5 +23,7 @@ C10 Appendix B edited: caught
 C11 unresolved owner RID: caught
 C12 stale local-result count: caught
 C13 edge-dependent isomorphism caveat dropped: caught
+C15 literal-identity wording restored (R126-S1): caught
+C16 raw oddness as the basis of C0 (R126-S2): caught
 C14 N-1A2 closure imported: caught
 CONTROLS PASS
