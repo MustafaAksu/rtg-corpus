@@ -1,0 +1,85 @@
+╔══════════════════════════════════════════════════════════╗
+║  RTG F1/T1 BULK IA CERTIFIER — Sub-branches (4,11)(5,11)(5,12)  ║
+║  Engine: validated (4,10) architecture                   ║
+║  Fix 1: Arb slice boundaries                             ║
+║  Fix 2: Orbit structure certified per slice              ║
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+║  Sub-branch (4,11)  |  PC exits at steps {4, 11}
+╚══════════════════════════════════════════════════════════╝
+  Zone 1 [0.9015, 1.0] x3000000 | width: [3.283333333e-8 +/- 3.34e-18]
+    ... 1M slices done in zone 1
+    ... 2M slices done in zone 1
+    ... 3M slices done in zone 1
+  Zone 2 [1.0, 1.13] x3000000 | width: [4.333333333e-8 +/- 3.34e-18]
+    ... 1M slices done in zone 2
+    ... 2M slices done in zone 2
+    ... 3M slices done in zone 2
+  Zone 3 [1.13, 1.26] x3000000 | width: [4.333333333e-8 +/- 3.34e-18]
+    ... 1M slices done in zone 3
+    ... 2M slices done in zone 3
+    ... 3M slices done in zone 3
+
+╔══════════════════════════════════════════════════════════╗
+║  Sub-branch (5,11)  |  PC exits at steps {5, 11}
+╚══════════════════════════════════════════════════════════╝
+  Zone 1 [1.261, 1.38] x3000000 | width: [3.966666667e-8 +/- 3.34e-18]
+    ... 1M slices done in zone 1
+    ... 2M slices done in zone 1
+    ... 3M slices done in zone 1
+  Zone 2 [1.38, 1.50] x3000000 | width: [4.000000000e-8 +/- 3e-22]
+    ... 1M slices done in zone 2
+    ... 2M slices done in zone 2
+    ... 3M slices done in zone 2
+  Zone 3 [1.50, 1.628] x3000000 | width: [4.266666667e-8 +/- 3.34e-18]
+    ... 1M slices done in zone 3
+    ... 2M slices done in zone 3
+    ... 3M slices done in zone 3
+
+╔══════════════════════════════════════════════════════════╗
+║  Sub-branch (5,12)  |  PC exits at steps {5, 12}
+╚══════════════════════════════════════════════════════════╝
+  Zone 1 [1.629, 1.753] x3000000 | width: [4.133333333e-8 +/- 3.34e-18]
+    ... 1M slices done in zone 1
+    ... 2M slices done in zone 1
+    ... 3M slices done in zone 1
+  Zone 2 [1.753, 1.876] x3000000 | width: [4.100000000e-8 +/- 3e-22]
+    ... 1M slices done in zone 2
+    ... 2M slices done in zone 2
+    ... 3M slices done in zone 2
+  Zone 3 [1.876, 2.0] x3000000 | width: [4.133333333e-8 +/- 3.34e-18]
+    ... 1M slices done in zone 3
+    ... 2M slices done in zone 3
+    ... 3M slices done in zone 3
+
+╔══════════════════════════════════════════════════════════╗
+║  BULK CERTIFICATION REPORT                               ║
+╚══════════════════════════════════════════════════════════╝
+
+  (4,11):  [ALG via IA] CERTIFIED  |  min dQ lower bound: [0.099 +/- 4.95e-4]
+  (5,11):  [ALG via IA] CERTIFIED  |  min dQ lower bound: [0.062 +/- 2.86e-4]
+  (5,12):  [ALG via IA] CERTIFIED  |  min dQ lower bound: [0.05 +/- 4.52e-3]
+
+  Structure failures (all branches): 0
+  Positivity failures (all branches): 0
+
+========================================================
+[RESULT] ALL THREE SUB-BRANCHES CERTIFIED.
+
+  [ALG via IA]  (4,11): Q^(2)(q) strictly increasing on [0.9015, 1.260]
+  [ALG via IA]  (5,11): Q^(2)(q) strictly increasing on [1.261,  1.628]
+  [ALG via IA]  (5,12): Q^(2)(q) strictly increasing on [1.629,  2.000]
+
+  Combined global min dQ lower bound (Arb): [0.05 +/- 4.52e-3]
+
+  DSN LEDGER UPDATE:
+  [ALG via IA] T1 sub-branch (4,10) on [0.001, 0.9]    (prior run)
+  [ALG via IA] T1 sub-branch (4,11) on [0.9015, 1.260] (this run)
+  [ALG via IA] T1 sub-branch (5,11) on [1.261, 1.628]  (this run)
+  [ALG via IA] T1 sub-branch (5,12) on [1.629, 2.000]  (this run)
+  [NUM strong] Near-zero gap (0, 0.001): dQ/dq ~ 2q > 0
+
+  NET STATUS: T1 = [ALG via IA + NUM strong] on (0, 2.0]
+  REMAINING:  prove dQ^(2)/dq ~ 2q > 0 near q=0 [algebraic]
+========================================================
