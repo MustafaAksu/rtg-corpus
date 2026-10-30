@@ -122,3 +122,17 @@ After the two corrections, my owner preference is to record the settled mathemat
 Apply R122-S1/S2 together in the existing note and align the PR summary; include N1 in that pass. These are bounded proof-scope and counting corrections, not a request to rerun unchanged owner campaigns or to open a new dynamics calculation. The unchanged checker can retain its authenticated hashes; any newly added checks must have matching updated outputs. A delta reread is sufficient after the text repair.
 
 This commit adds only this receiving-review record. The submitted note, script and outputs remain unchanged. Canonical OFN, Q1–Q6, Standard C, REF-CLOSURE's ACTIVE status, the §2.4 HYP and all other owner documents are untouched. No merge or tag is performed.
+
+
+## 7. Round-2 closure — 30 October 2026
+
+**Reviewed revision:** `5b54b580a638032b9fae3278d772a0386c83dc81`.
+**Final verdict:** ACCEPT SCOPED at noncanonical SESSION working-note scope. R122-S1, R122-S2 and the associated scope clean-ups are CLOSED. No additional correction is requested.
+
+Change-focused reread confirms:
+- R3 is now explicitly a theorem about the specified global inclusion-then-quotient map \(\kappa_n\), not a non-isomorphism theorem for the abstract groups. The edge-marked isomorphism \(\alpha\) and local invertibility of \(\kappa_3\) on \(U(1)\) are both preserved as scope guards.
+- The \(SO(d)\) discussion now uses orbit dimension \(\dim SO(d)-\dim\operatorname{Stab}\); for a non-collinear translation-reduced triangle this is \(2d-3\). The scalar edge-index determinant 3 is correctly separated from the full \(\mathbb R^d\) determinant \(3^d\).
+- R1 retains arbitrary connected-graph scope; the one-edge/holonomy statement is restricted to \(C_n\), and multi-cycle graphs retain their other cycle data.
+- The evidence script and stored outputs are unchanged, so the previously verified hashes and 9/9 positive plus forced-failure replay remain applicable; they were not rerun in this round.
+
+The mathematical subproblem requested by OPEN-OFN-REF-CLOSURE is therefore sufficiently resolved at the stated abelian-model scope for a later owner edition to narrow the remaining obligation to physical reference/action identification. This review does **not** itself change the ACTIVE status, adopt R1–R4 into the DSN, decide the §2.4 HYP, select a carrier, or authorize any physical interpretation.
