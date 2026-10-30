@@ -1,6 +1,6 @@
 # Ontological Foundations (OFN) v0.12 — Release Record
 
-**Status:** DRAFT. The candidate is built and checked; review is pending. Nothing here is adopted. Until the PI adopts and the tag exists, `ofn-v0.11` remains the governing edition.
+**Status:** DRAFT. Round 2 is built and checked after the change-focused review (§3a); the delta check is pending. Nothing here is adopted. Until the PI adopts and the tag exists, `ofn-v0.11` remains the governing edition.
 **Date:** 30 October 2026
 **Prepared by:** Claude, OFN co-owner session `claude012ZC8x` (builder), on branch `claude/ofn-v0.12`.
 **Edition:** v0.12 under DSN Methodology v1.4. It is one content stage with no layout stage: no compaction is needed. The live file changes in place, and the v0.11 delta paragraphs are replaced by v0.12 ones; their content already sits in the Appendix C v0.11 entry.
