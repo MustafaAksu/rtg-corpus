@@ -1,0 +1,10 @@
+PASS  R1 d induces a bijection Q_node -> C_0 (K_3, C_4, K_4; Z_N, N=2..7)  — image = closure sector, injective on the gauge section
+PASS  R2 on C_n forgetting one edge is a bijection on C_0 (a parametrization) but not injective on all of H^E  — n=3,4; N=2..7; the lost datum on H^E is the cycle sum (holonomy)
+PASS  R3a kappa_n: |ker| = |H[n]| = gcd(n,N) and |coker| = |H/nH| = gcd(n,N) (n=3,4; Z_N, N=2..12)  — n=3 kernel sizes N=2:1 N=3:3 N=4:1 N=5:1 N=6:3 N=7:1 N=8:1 N=9:3 N=10:1 N=11:1 N=12:3
+PASS  R3b over R: kappa_3 in coordinates is I + J, det = 3  — bijective over R^d (det != 0)
+PASS  R3b over R: kappa_4 in coordinates is I + J, det = 4  — bijective over R^d (det != 0)
+PASS  R3b over R: kappa_5 in coordinates is I + J, det = 5  — bijective over R^d (det != 0)
+PASS  R3c over U(1) = R/Z: ker kappa_3 = {(0,0), (1/3,1/3), (2/3,2/3)} (3-to-1), surjective (U(1) divisible)  — kernel [(0, 0), (1/3, 1/3), (2/3, 2/3)]; (I+J)^-1 Z^2 is contained in (1/3) Z^2
+PASS  R4 diagonal edge shift by c preserves C_0 iff n c = 0; diagonal node shift fixes every edge  — n=3,4; N=2..9 (for U(1), n=3: only cube roots of unity)
+PASS  R5 control: |Q_node| = |C_0| = |Q_edge| = N^2 on K_3 for every N, yet kappa_3 is not bijective for N in [3, 6, 9, 12]  — matching counts do not decide the identification
+RESULT: PASS
