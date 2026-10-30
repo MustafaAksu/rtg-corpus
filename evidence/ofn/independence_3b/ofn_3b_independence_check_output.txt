@@ -1,0 +1,8 @@
+PASS  K1 A^3 = -I, A^6 = I, I + A^2 + A^4 = 0
+PASS  K2 iota_0 intertwines for every odd G (generic jet, degree <= 5)  — class G_odd makes no reference to T
+PASS  K3 iota_+ and iota_- intertwine for every G in G_omega (generic jet, degree <= 4)  — the jet is A^2-equivariant and not odd, so oddness is not used; G_omega uses omega = A^2, linear T-data
+PASS  K4 falsifier for q = (rho*eta, rho^2): G = x + q breaks iota_0 and iota_+  — specific q only; A^2-equivariant quadratics preserve iota_+
+PASS  K5 [G, A] = 0 implies G odd and G(A^2 x) = A^2 G(x) (A-averaged generic jet)  — premise for C2 is the owner commutation of N_Phi with A (IMP-O10-07); even-degree terms average to zero
+PASS  K6 raw T (lifted chart at P_1): T(-x)+T(x) = (0, 2(cosh rho - 1)); not A-commuting, not A^2-equivariant  — exact identity checked; order 2: [0, rho**2]; DT(0) = A
+PASS  K7 in the raw chart, iota_0 is not invariant under T3[T] for kappa != 0  — third edge after one step = (0, -(2 kappa/3)(cosh rho - 1)) exactly; it would be 0 on an invariant iota_0
+RESULT: PASS
