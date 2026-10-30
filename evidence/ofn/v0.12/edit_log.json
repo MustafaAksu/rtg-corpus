@@ -1,0 +1,259 @@
+{
+ "base_sha256": "38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4",
+ "candidate_sha256": "5e1da260f944c40ebdcab29f57bdd37600f04e47a797b768ab5e0126a0e76a42",
+ "edits": [
+  {
+   "id": "H01",
+   "group": "H",
+   "mode": "str",
+   "old": "# RTG_ONTOLOGICAL_FOUNDATIONS_v0.11\n",
+   "new": "# RTG_ONTOLOGICAL_FOUNDATIONS_v0.12\n",
+   "old_sha256": "477b8b439170df74ddc48f11a55d6e3addcb9bebba526be93d2335c08835f322",
+   "new_sha256": "7dc1e0dfeba32fcaa6aa9ae6587bc3439aa250b406058dd805d7ab9569eee796",
+   "doc_sha256_before": "38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4",
+   "doc_sha256_after": "c40ee3d7aef517c72617fe02381012722e9e233e72f417b2c682e715755a41f1"
+  },
+  {
+   "id": "H02",
+   "group": "H",
+   "mode": "str",
+   "old": "**Document status:** ADOPTED — PI, 30 October 2026 (owner synchronization, smooth class-C realization and two §5.5 contract corrections; stage 1 and stage 2 reviewed). Release record: `records/ofn/OFN_v0_11_RELEASE_RECORD.md`.  ",
+   "new": "**Document status:** DRAFT — v0.12 candidate (one content stage; no layout stage); adoption pending (`records/ofn/OFN_v0_12_RELEASE_RECORD.md`). `ofn-v0.11` remains the governing edition until adoption and tag.  ",
+   "old_sha256": "0665baf617579a9ec5aec22d23bd08753fa5d100794be2e9d91c81134f698ca5",
+   "new_sha256": "dd12fb487ce5492339d4533c38f879a7227e8641c0250abbacf8e060bff36e94",
+   "doc_sha256_before": "c40ee3d7aef517c72617fe02381012722e9e233e72f417b2c682e715755a41f1",
+   "doc_sha256_after": "f0c421a15b196fa9e826488e7ffbc3516b825aea2bd5138fa998a24bc5521c4c"
+  },
+  {
+   "id": "H03",
+   "group": "H",
+   "mode": "str",
+   "old": "**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.10` (tag `ofn-v0.10`, SHA-256 `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa`).  ",
+   "new": "**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.11` (tag `ofn-v0.11`, SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4`), on adoption.  ",
+   "old_sha256": "0b634615af18a768f79ded83c3201b415025bf0aabaeda6da3cc35727355dc4d",
+   "new_sha256": "5f693bc4f9163b66cdc2f9b889be5bfb8d9aeeb5b3e5e666a5d418beae355e41",
+   "doc_sha256_before": "f0c421a15b196fa9e826488e7ffbc3516b825aea2bd5138fa998a24bc5521c4c",
+   "doc_sha256_after": "f1c7eefd2316c188aa89a3870174178593e383e2eb59a9c1b9b90ebf29faf47f"
+  },
+  {
+   "id": "H04",
+   "group": "H",
+   "mode": "str",
+   "old": "the hypothesis FSP-U, four OFN local results and twenty-one foundational OPENs",
+   "new": "the hypothesis FSP-U, five OFN local results and twenty-one foundational OPENs",
+   "old_sha256": "8e8e50b6d9e4746a1f7bef6b7fa906b4c205a5fec1f915c9898b2e06cc69fbe8",
+   "new_sha256": "27a7f50efc4f6bba95c8f5409a86446f5ca2724cdb6bc27df029025539ea4da7",
+   "doc_sha256_before": "f1c7eefd2316c188aa89a3870174178593e383e2eb59a9c1b9b90ebf29faf47f",
+   "doc_sha256_after": "b3d5074fdb5ac42cc682695c3e96eff8aaa73492b4e07809dd94e09c1662a4ab"
+  },
+  {
+   "id": "H05",
+   "group": "H",
+   "mode": "str",
+   "old": "and the admitted FMS mathematical test class is real $C^\\infty$ with analytic laws as a distinguished subclass.  ",
+   "new": "and the admitted FMS mathematical test class is real $C^\\infty$ with analytic laws as a distinguished subclass. The closure-versus-reference comparison is recorded as the OFN local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; its physical reading, the physical-isolation contract and the standard of triadic independence remain open.  ",
+   "old_sha256": "730686679bc568f106f05e78b69bff4ec48ebe8a711d7527756819a920fe059f",
+   "new_sha256": "2209c9dc6a06255cdb7b858dbd96eaea88525b21a6269c4ffb84a5a022cc8691",
+   "doc_sha256_before": "b3d5074fdb5ac42cc682695c3e96eff8aaa73492b4e07809dd94e09c1662a4ab",
+   "doc_sha256_after": "0536aeef9290180f82a86928d6b0a603319cc77921ca04ffb22be0e8ec11d6de"
+  },
+  {
+   "id": "H06",
+   "group": "H",
+   "mode": "str",
+   "old": "**Governing inputs:** owner disposition records `records/ofn/OFN_OWNER_DISPOSITION_ADVISORY_v0_10_claude012ZC8x_20261029.md`, `…_chatgpt_20261029.md` and their joint reconciliation `records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md` (both co-owners confirmed, 29 October 2026); PI start, 29 October 2026.  ",
+   "new": "**Governing inputs:** the OFN co-owner working notes `records/ofn/OFN_ISOLATION_INTERFACE_WORKING_NOTE.md`, `records/ofn/OFN_REF_CLOSURE_WORKING_NOTE.md` and `records/ofn/OFN_3B_INDEPENDENCE_WORKING_NOTE.md` with their receiving reviews (PRs #120, #122, #124; ACCEPT SCOPED); PI start, 30 October 2026 (one new local-result RID authorized; no isolation contract or independence standard selected).  ",
+   "old_sha256": "e5ebca31ad7df58d21ca1ee3f63ac756a202282d5baba4a00fe8695c93d96b28",
+   "new_sha256": "480956e6327b1a96c29ef06d7ce022aa8417959b83317562d019143b9755fd78",
+   "doc_sha256_before": "0536aeef9290180f82a86928d6b0a603319cc77921ca04ffb22be0e8ec11d6de",
+   "doc_sha256_after": "99ee27f6a2b0bc2c2c8075ac58c674ca89f3171ad503c6a07301ad4f7cb42416"
+  },
+  {
+   "id": "H07",
+   "group": "H",
+   "mode": "str",
+   "old": "Evidence states follow Methodology v1.4 §12.  ",
+   "new": "Evidence states follow Methodology v1.4 §12. OFN SESSION scripts for §2.4, §5.5.4 and §9 are under `evidence/ofn/scripts/` (§12.1).  ",
+   "old_sha256": "10f8ef618f61c129e9e190be119f9a1f55260afdc2df35e76c63f404a2d82213",
+   "new_sha256": "80974fb8748f15130596e7bc048aa107178346d647fb36c8be5cdeeabe8dccaa",
+   "doc_sha256_before": "99ee27f6a2b0bc2c2c8075ac58c674ca89f3171ad503c6a07301ad4f7cb42416",
+   "doc_sha256_after": "6e4057ebad12d947fd83afa52ed14721db7cd832a4892cb1cbc08493b345d09f"
+  },
+  {
+   "id": "H08",
+   "group": "H",
+   "mode": "str",
+   "old": "**v0.11 revision boundary:** owner synchronization with the editions released after v0.10 (Dyadic smooth realization, RRF class-C row, TDR-G Finding A acceptance and RID map, NUMGEN L-BACKBONE, the RECOG v0.3.20 freeze record, Triadic v1.6.1), two recorded definition corrections in the §5.5 contract (Standard C, Appendix B OFN11-C01; test-class regularity, OFN11-C02), six RID registrations for existing definition bodies (§§1.3, 4.1, 4.6, 8), and Methodology v1.4 tag spellings. No OPEN status changes and no physical selection is made.",
+   "new": "**v0.12 revision boundary:** the three OFN co-owner working notes of 30 October 2026 enter the live text. The closure/reference comparison is registered as the OFN local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` (§2.4) and OPEN-OFN-REF-CLOSURE is narrowed to its physical reading. The class-C causal-interface identity is recorded (§5.5.4), and the physical-isolation obligation of OPEN-OFN-TRIAD-CLASS is split into the contracts I-comp, I-quiet and I-remove, none selected. OPEN-OFN-3B receives an evaluation frame (U-form, U-class, C0, C1, J) with the position of class C; no standard of independence is selected. No definition or OPEN status changes and no physical selection is made.",
+   "old_sha256": "baf44672b72bdc513185f7c79e4152627a9f22852e361cd0250faf1ad31fec9f",
+   "new_sha256": "66ae4c4e958df52ba7c37985b88593ca4bf9b8f5fe82dece9bbe663425db2ba6",
+   "doc_sha256_before": "6e4057ebad12d947fd83afa52ed14721db7cd832a4892cb1cbc08493b345d09f",
+   "doc_sha256_after": "c2ca10609a94946e05f984a994c63a99aa2d52971e0e48b96c182603b032138f"
+  },
+  {
+   "id": "H09",
+   "group": "H",
+   "mode": "str",
+   "old": "*v0.11:* registers six further definition RIDs for unchanged bodies, corrects two §5.5 definitions by recorded `[COR]` (Appendix B) and adds no OPEN record.",
+   "new": "*v0.12:* registers one OFN local result (`RTG-OFN-ALG-REF-CLOSURE-COMPARISON`), changes no definition and adds no OPEN record.",
+   "old_sha256": "a4a8eb2faddb9c0f4f6da3737685a582d52ac01ad01236dc45a9c5caa070c803",
+   "new_sha256": "7f85be0b409acc1155f7f49941d433f37419508c7455cfff45ae0a6a7a2dcb5d",
+   "doc_sha256_before": "c2ca10609a94946e05f984a994c63a99aa2d52971e0e48b96c182603b032138f",
+   "doc_sha256_after": "a0caada8dafc398766fa932e429cbbcb2a7b46c54ba3c63d12af763c3ae5f092"
+  },
+  {
+   "id": "A01",
+   "group": "A",
+   "mode": "str",
+   "old": "The equality of those constructions is not assumed; `RTG-OFN-OPEN-REF-CLOSURE` preserves the original question.",
+   "new": "The mathematical comparison is the local result below: the closure sector is canonically isomorphic to node assignments modulo the common origin ($Q_{\\rm node}\\cong C_0$), and the global comparison map with the use of one relation as reference is an isomorphism only on carriers where multiplication by 3 is bijective. Whether either is the physical reference consumption meant here is not decided; `RTG-OFN-OPEN-REF-CLOSURE` keeps that question.",
+   "old_sha256": "b8aaf049f6335ed3b712c21343ab6d43d378af81fb21dca955a09b037a012e50",
+   "new_sha256": "63b648beb461aa5ea72326fe5f3d9d47d5a33b31cc418c3d8b0aabbae41c73e8",
+   "doc_sha256_before": "a0caada8dafc398766fa932e429cbbcb2a7b46c54ba3c63d12af763c3ae5f092",
+   "doc_sha256_after": "cc50c3cc3254991196c3902733a934a0ee12488cb8da767f3ac89c5f3d29c2a8"
+  },
+  {
+   "id": "A02",
+   "group": "A",
+   "mode": "after",
+   "old": "`[HYP]` **Reference-consumption reading.** The reduction “three node-difference edges minus one closure relation” may admit an interpretation in terms of an internal reference. The mathematical comparison is the local result below: the closure sector is canonically isomorphic to node assignments modulo the common origin ($Q_{\\rm node}\\cong C_0$), and the global comparison map with the use of one relation as reference is an isomorphism only on carriers where multiplication by 3 is bijective. Whether either is the physical reference consumption meant here is not decided; `RTG-OFN-OPEN-REF-CLOSURE` keeps that question.",
+   "new": "`[HYP]` **Reference-consumption reading.** The reduction “three node-difference edges minus one closure relation” may admit an interpretation in terms of an internal reference. The mathematical comparison is the local result below: the closure sector is canonically isomorphic to node assignments modulo the common origin ($Q_{\\rm node}\\cong C_0$), and the global comparison map with the use of one relation as reference is an isomorphism only on carriers where multiplication by 3 is bijective. Whether either is the physical reference consumption meant here is not decided; `RTG-OFN-OPEN-REF-CLOSURE` keeps that question.\n\n`[RESULT]` `[from: ALG]` [RID: RTG-OFN-ALG-REF-CLOSURE-COMPARISON] [scope: abelian carrier group $H$; connected graph $G$ for (i); cycle graph $C_n$ with coherent orientation for (ii)–(iv); the maps as stated; OFN custody] **Closure versus reference removal.** Let $d:H^V\\to H^E$, $(ds)_{ij}=s_i-s_j$; $Q_{\\rm node}=H^V/H_{\\rm diag}$; $C_0\\subseteq H^E$ the closure sector (zero oriented sum around every cycle); $Q_{\\rm edge}=H^E/H^E_{\\rm diag}$ (edges measured relative to one another). (i) $d$ induces a canonical isomorphism $Q_{\\rm node}\\cong C_0$: the closure sector is canonically identified with node assignments modulo the common origin (the two constructions are isomorphic, not literally the same operation). (ii) Forgetting one edge is a bijection $C_0\\to H^{E\\setminus\\{e_0\\}}$, a lossless parametrization rather than a reduction; on all of $H^E$ it loses exactly the holonomy. (iii) The composite $\\kappa_n:C_0\\hookrightarrow H^E\\twoheadrightarrow Q_{\\rm edge}$ has $\\ker\\kappa_n\\cong H[n]$ and $\\operatorname{coker}\\kappa_n\\cong H/nH$, so it is an isomorphism iff multiplication by $n$ is bijective on $H$. For $K_3$: yes over $\\mathbb R^d$; no over $U(1)$ (globally 3-to-1, locally a diffeomorphism), over $\\mathbb Z_N$ with $3\\mid N$, or over $\\mathbb Z$. Edge-dependent isomorphisms $C_0\\cong Q_{\\rm edge}$ exist for every abelian $H$ and are a different comparison. (iv) The diagonal node action fixes every edge; the diagonal edge action by $c$ preserves $C_0$ iff $nc=0$. Equal cardinalities of $Q_{\\rm node}$, $C_0$ and $Q_{\\rm edge}$ do not decide (iii).\nDepends on: abelian-group algebra; (i)–(ii) are standard, (iii)–(iv) elementary and exact. Evidence: `evidence/ofn/scripts/ofn_ref_closure_check.py` (`4c469b41…0402`, checks R1–R5; EV-RUN by both co-owners, same CAS); working note `records/ofn/OFN_REF_CLOSURE_WORKING_NOTE.md`. Not covered: non-abelian carriers; graphs with cycles of different lengths or orientations for (iii)–(iv); a geometric $SO(d)$ reference, whose orbit dimension depends on the configuration; any physical reading of reference consumption, which stays with the `[HYP]` above and OPEN-OFN-REF-CLOSURE.",
+   "old_sha256": "115b4f00f632b186352ab5c066246babdb70e43e624d1c7dca879bdae89fce35",
+   "new_sha256": "25c9b3b68c9c020f8e03ba9f76a6f9274660c49825a6c8c11e283c49d1508f0b",
+   "doc_sha256_before": "cc50c3cc3254991196c3902733a934a0ee12488cb8da767f3ac89c5f3d29c2a8",
+   "doc_sha256_after": "c4c4dfc0ca4298374eb24e629720940d288573510cd86e150965bf1dafca93ec"
+  },
+  {
+   "id": "A03",
+   "group": "A",
+   "mode": "after",
+   "old": "- **Six-step cubic.** On the centre manifold, $f_e=\\mu\\bigl(w_e|w_e|^2-\\tfrac13\\sum_jw_j|w_j|^2\\bigr)$, independent of κ, with chiral coefficients $p=\\mu/3$, $q=2\\mu/3$ (`transported_pq.py`, exact).",
+   "new": "- **Six-step cubic.** On the centre manifold, $f_e=\\mu\\bigl(w_e|w_e|^2-\\tfrac13\\sum_jw_j|w_j|^2\\bigr)$, independent of κ, with chiral coefficients $p=\\mu/3$, $q=2\\mu/3$ (`transported_pq.py`, exact).\n- **Causal interface.** With $b_e=\\sum_{j\\ne e}N(z_j)$, exactly $F_e-N(z_e)=-\\tfrac{\\kappa}{3}\\bigl(N(z_e)+b_e\\bigr)$; no symmetry or truncation is used. For $\\kappa\\ne0$, $b_e$ is a one-step sufficient interface for edge $e$, minimal in the quotient sense, and the dyad law holds on edge $e$ iff $b_e=-N(z_e)$: on the lock surfaces the interface of every nonzero edge is active and compensating ($b_1=-N(z)$ on $\\mathcal S_0$, whose zero edge has $b_3=0$), while under zero total interface $b_e=0$ the edge obeys $(1-\\tfrac{\\kappa}{3})N$, not the dyad law. One-step sufficiency does not by itself give closed reduced dynamics (shown to fail for a diagnostic polynomial, not shown for C2). The interface vocabulary is that of `numgen-v1.21` §6.2 N-1A2; its closure is not imported. Evidence: `ofn_isolation_interface_check.py` (`17e91906…b8ef`); working note `records/ofn/OFN_ISOLATION_INTERFACE_WORKING_NOTE.md`.",
+   "old_sha256": "cee95d23be106c30c77c4d2bb5bcbf0af33358b78d7afd3cc02446caaca0caa2",
+   "new_sha256": "d86968e1c79ff52b6cb7cb8cba54bbc8d14b3b95cd11acd8633f8fa6ca565caf",
+   "doc_sha256_before": "c4c4dfc0ca4298374eb24e629720940d288573510cd86e150965bf1dafca93ec",
+   "doc_sha256_after": "461faf0a60a0ccd3539c988e6322888d001ecf6c1f1a5e1d39ecff4ec12fd580"
+  },
+  {
+   "id": "B01",
+   "group": "B",
+   "mode": "str",
+   "old": "Question: Are edge-closure reduction and removal of one relational reference the same construction?  ",
+   "new": "Question: Which reference operation, if any, is the physical (rotational) reference consumption of the §2.4 `[HYP]`?  ",
+   "old_sha256": "67924c1b6c05eeb91bbdd0a7e5fe8d6f65eeb072b5da94facdfece15382d8e8e",
+   "new_sha256": "a11c460cdfb4bde388c5733a67bae1b5c032db51439961361990a500c0d41373",
+   "doc_sha256_before": "461faf0a60a0ccd3539c988e6322888d001ecf6c1f1a5e1d39ecff4ec12fd580",
+   "doc_sha256_after": "c7f7a06359dca705825e982f861a52e970ceb7fe46ea8ccc3bc8cbd1e30d3108"
+  },
+  {
+   "id": "B02",
+   "group": "B",
+   "mode": "str",
+   "old": "Closure criterion: Define both spaces, equivalence relations and maps, then prove or disprove the claimed identification in a stated model; matching counts alone are insufficient.  ",
+   "new": "Closure criterion: A stated physical reading of the reference, with its action (on nodes, on edges, or geometric) in a declared carrier and encoding, shown to coincide with one of the constructions compared in `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`, or with none. The mathematical comparison is settled at the scope of that result; matching counts alone remain insufficient.  ",
+   "old_sha256": "c1aeb23431838e90bb8e728ef4fe519eef669123b41a5a236dfec8d4498d1591",
+   "new_sha256": "42af8defaaef564938a46b535bf2f16e560f8611d40ed18b8b251864f1b4399b",
+   "doc_sha256_before": "c7f7a06359dca705825e982f861a52e970ceb7fe46ea8ccc3bc8cbd1e30d3108",
+   "doc_sha256_after": "aecf113e3ad003b099047ab403475618ae86a0857289bbbefbba8effdfcbccc0"
+  },
+  {
+   "id": "B03",
+   "group": "B",
+   "mode": "str",
+   "old": "Dependencies: §2.4; branch-local edge/mode conventions.  ",
+   "new": "Dependencies: §2.4; `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; branch-local carrier and edge/mode conventions.  ",
+   "old_sha256": "de996a0e9e3dcdb912c290afd14cdaa842af486e60c569870a873cb050dea655",
+   "new_sha256": "156d2b762510ef0e750304e884c65d60a1132ffd6f12468a86c3f7b7340b6605",
+   "doc_sha256_before": "aecf113e3ad003b099047ab403475618ae86a0857289bbbefbba8effdfcbccc0",
+   "doc_sha256_after": "df839585df51b62d129eb5e8707837c221f56c4ed86991339fb17e6c70397630"
+  },
+  {
+   "id": "B04",
+   "group": "B",
+   "mode": "str",
+   "old": "Next required artifact or decision: An explicit comparison construction.",
+   "new": "Next required artifact or decision: A physical reading of the reference operation, and the carrier declaration of each branch that uses the counting argument.",
+   "old_sha256": "774dca8433cbba3c62b673f5dcfed35f9309c286fa0229cbeed23a9cac2f9dae",
+   "new_sha256": "bb04b300a4541904e0f3b53282cc5224d973fbb215f8c1a8f2e5ff8dcc36435f",
+   "doc_sha256_before": "df839585df51b62d129eb5e8707837c221f56c4ed86991339fb17e6c70397630",
+   "doc_sha256_after": "df1cff6adb64235f1cc8cb3d3ef63136f1f420988aab10342d6e101f3d2c39eb"
+  },
+  {
+   "id": "B05",
+   "group": "B",
+   "mode": "str",
+   "old": "Next required artifact or decision: An explicit completeness/observability criterion.",
+   "new": "Next required artifact or decision: An explicit completeness/observability criterion. One operational ingredient is available: a sufficient causal interface (vocabulary of `numgen-v1.21` §6.2), which for class C separates recovery under a compensating interface from recovery under a quiet or removed environment (§5.5.4; OPEN-OFN-TRIAD-CLASS). Completeness is not thereby defined, and full edge autonomy everywhere would be a stronger demand than Q3a.",
+   "old_sha256": "852fe7242adbe8cd93c81aa53772b1dbf9884a6c6f50ce15c889509b2b3fa28b",
+   "new_sha256": "f89982fbee65494bd115bfdab20df5f8e1913df6ab01711297534976bdd9aaae",
+   "doc_sha256_before": "df1cff6adb64235f1cc8cb3d3ef63136f1f420988aab10342d6e101f3d2c39eb",
+   "doc_sha256_after": "9cf7497c1f239ba6e3b1d6bef4d7565e281314e85979ea0b5ff39b5a71ead77f"
+  },
+  {
+   "id": "B06",
+   "group": "B",
+   "mode": "after",
+   "old": "Reconciliation input: class C (§5.5.4) has exact invariant lock surfaces on which every edge evolves by the transported isolated-dyad map. This is a real $C^\\infty$ invariant-subsystem witness for a specified coupled triad law (§5.5.4; DYAD IMP-O10-06/07), not closure. Whether that law counts as an *independently specified admissible* $T_3$ in the sense of §8 is not decided here, since it is built from the chosen dyad map in a transported chart. In the raw carrier, RTG-OFN-ALG-RAW-STANDARD-C-NOGO excludes smooth invariant isolation regimes through 0 for every κ ≠ 0. Status remains ACTIVE; neither outcome selects ontology.",
+   "new": "Reconciliation input: class C (§5.5.4) has exact invariant lock surfaces on which every edge evolves by the transported isolated-dyad map. This is a real $C^\\infty$ invariant-subsystem witness for a specified coupled triad law (§5.5.4; DYAD IMP-O10-06/07), not closure. Whether that law counts as an *independently specified admissible* $T_3$ in the sense of §8 is not decided here, since it is built from the chosen dyad map in a transported chart. In the raw carrier, RTG-OFN-ALG-RAW-STANDARD-C-NOGO excludes smooth invariant isolation regimes through 0 for every κ ≠ 0. Status remains ACTIVE; neither outcome selects ontology.\n\nEvaluation frame (recorded; no standard selected). An independently specified $T_3$ is assessed on five axes: **U-form** (the recipe $G\\mapsto T_3[G]$ is fixed on a declared class of single-edge laws), **U-class** (that class uses no nonlinear $T$-data), **C0** (an embedding exists in the declared carrier without a $T$-derived rechart), **C1** (an embedding exists with $T$-derived structure) and **J** (the coupling form is justified without presupposing recovery of $T$). Class C: U-form passes — $T_3[G]=P_\\kappa\\circ G^{\\times3}$ intertwines $\\iota_0$ for every odd $G$ and $\\iota_\\pm$ for every $G$ with $G(0)=0$, $G(A^2x)=A^2G(x)$; U-class is $T$-free for $\\iota_0$ and relative to the linear data $\\omega=A^2$, $A=DT(0)$, for the chiral pair; C0 fails for the named raw mean-feedback family under Standard C by the owner no-go `RTG-OFN-ALG-RAW-STANDARD-C-NOGO` (smooth $C^3$ invariant manifold germs through 0, every $\\kappa\\ne0$; within its scope only, so other carriers and laws are not excluded); separately, the raw map is not odd, $T(-x)+T(x)=\\bigl(0,2(\\cosh\\rho-1)\\bigr)$, which by itself excludes only the named embedding $\\iota_0$ for the raw recipe; C1 passes, $T$-relative ($\\Phi$ is built from $J=T\\circ K_6^{-1}$); J is open. Which combination of axes the phrase \"independently motivated model class\" of §8 requires is not selected; candidate standards are (a) U-form, C1 and the reduction witness; (b) in addition U-class without nonlinear $T$-data and C0; (c) in addition J. Class C meets (a), meets (b) only in part, and (c) is not shown. Working note `records/ofn/OFN_3B_INDEPENDENCE_WORKING_NOTE.md`; evidence `ofn_3b_independence_check.py` (`139f7934…cc70`). No primacy conclusion follows.",
+   "old_sha256": "38e44590d292a8fec4dc933998dab7009bee260af98549af3aedf0e7e7614268",
+   "new_sha256": "95d1bce7b534fe437653e3c58b28a82d4397f1c96091b9b04fcaa7c194350038",
+   "doc_sha256_before": "9cf7497c1f239ba6e3b1d6bef4d7565e281314e85979ea0b5ff39b5a71ead77f",
+   "doc_sha256_after": "cd2d5e3cc022e32ccf46543b789c093ac78dd3866d20d0130df1bd9aa3f9b1cd"
+  },
+  {
+   "id": "B07",
+   "group": "B",
+   "mode": "after",
+   "old": "Next required artifact or decision: the physical selection, isolation and chirality obligations above. RRF `rrf-v0.8.4` §6.2a supplies the representation-level readout contract (primitive clock and transported chart declared; $|c|$ reads $m$ only up to reflection; \"Im c = 0\" is no selection principle); no sign-reading scalar for $m-m_*$ is mandatory.",
+   "new": "Next required artifact or decision: the physical selection, isolation and chirality obligations above. RRF `rrf-v0.8.4` §6.2a supplies the representation-level readout contract (primitive clock and transported chart declared; $|c|$ reads $m$ only up to reflection; \"Im c = 0\" is no selection principle); no sign-reading scalar for $m-m_*$ is mandatory.\n\nIsolation frame (recorded; none selected). The class-C interface identity (§5.5.4) separates three contracts: **I-comp**, the dyad law on a balanced invariant regime with a compensating interface (active for every nonzero edge), which class C meets exactly; **I-quiet**, the dyad law under zero total interface, which class C fails for $\\kappa\\ne0$; and **I-remove**, the dyad law after the environment is removed from the model, which needs a declared size-indexed family of laws that class C does not supply (its normalization $\\kappa/3$ presupposes three edges). The exact I-comp witness satisfies Standard C, which is not equivalent to $I_e\\equiv0$. The next isolation artifact is a contract declaring the intervention class, the preserved observables, the retained boundary data and, for I-remove, the size-indexed law (working note `records/ofn/OFN_ISOLATION_INTERFACE_WORKING_NOTE.md`).",
+   "old_sha256": "7c5c728596368fad4031434bdd9ea0d2edbfaa565939ac89547f019e39ab8e31",
+   "new_sha256": "31e13631b5f37e667bcb38db95692039f6607c49ddbbc6511543ea40d369b6fe",
+   "doc_sha256_before": "cd2d5e3cc022e32ccf46543b789c093ac78dd3866d20d0130df1bd9aa3f9b1cd",
+   "doc_sha256_after": "d2a741ecaf0e78e228f8d0c091d618b82d7fce129b139d5baf4834a861c9eeb6"
+  },
+  {
+   "id": "H10",
+   "group": "H",
+   "mode": "after",
+   "old": "| Genesis v2.8.9; DYAD v6.4.13–v6.4.16; RRF v0.8.3 | Genesis SHA computed by OFN; DYAD v6.4.16 and RRF hashes per their records; cited sections read | Source statements at owner grade; no certificate rerun |",
+   "new": "| Genesis v2.8.9; DYAD v6.4.13–v6.4.16; RRF v0.8.3 | Genesis SHA computed by OFN; DYAD v6.4.16 and RRF hashes per their records; cited sections read | Source statements at owner grade; no certificate rerun |\n| OFN co-owner working notes and scripts (30 Oct 2026) | `ofn_isolation_interface_check.py` (`17e91906…b8ef`), `ofn_ref_closure_check.py` (`4c469b41…0402`) and `ofn_3b_independence_check.py` (`139f7934…cc70`) under `evidence/ofn/scripts/`, each with positive and forced-failure outputs; notes and receiving reviews under `records/ofn/` | Evidence for §2.4, §5.5.4 and §9 (OPEN-OFN-3A, -3B, -TRIAD-CLASS, -REF-CLOSURE); EV-CODE, EV-RUN (rerun by the second co-owner, same CAS) |",
+   "old_sha256": "283d6533e4811abfed23f9bedd1242a9996a0eb9b06f8d28c72d4c1ab75c882a",
+   "new_sha256": "61e13604dbe139a181dd6141cd5e6671cdf3852a519af623bd84a02a66037013",
+   "doc_sha256_before": "d2a741ecaf0e78e228f8d0c091d618b82d7fce129b139d5baf4834a861c9eeb6",
+   "doc_sha256_after": "e9c27e7a0f8235f914f8ce3d05dc82d3fa67b52e726a9657a12e8aed55caa49d"
+  },
+  {
+   "id": "H11",
+   "group": "H",
+   "mode": "after",
+   "old": "| `RTG-OFN-DEF-ZERO-ORIGIN`, `RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY`, `RTG-OFN-DEF-CONTINUOUS-REPRESENTATION`, `RTG-OFN-DEF-FINITE-DESCRIPTION`, `RTG-OFN-DEF-DIST-ZN`, `RTG-OFN-DEF-REDUCTION-TARGET` | Registered v0.11, OFN definitions; bodies unchanged from v0.10 §§1.3, 4.1, 4.6, 8 | Registered 30 Oct 2026 (seventeen definition RIDs in total) |",
+   "new": "| `RTG-OFN-DEF-ZERO-ORIGIN`, `RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY`, `RTG-OFN-DEF-CONTINUOUS-REPRESENTATION`, `RTG-OFN-DEF-FINITE-DESCRIPTION`, `RTG-OFN-DEF-DIST-ZN`, `RTG-OFN-DEF-REDUCTION-TARGET` | Registered v0.11, OFN definitions; bodies unchanged from v0.10 §§1.3, 4.1, 4.6, 8 | Registered 30 Oct 2026 (seventeen definition RIDs in total) |\n| `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` | v0.12 (adoption pending), OFN RESULT from ALG | Registered on adoption of v0.12 (five OFN local results in total) |",
+   "old_sha256": "9e8195ea8b238d6041ad5e083f4df7b62b0d21c094aa90db6a56d84693b302d2",
+   "new_sha256": "5003b2ac81dfa1398410ee9c8cfec7bc37b7d1a65d84271817ea3b7c603dd1a1",
+   "doc_sha256_before": "e9c27e7a0f8235f914f8ce3d05dc82d3fa67b52e726a9657a12e8aed55caa49d",
+   "doc_sha256_after": "ef48939560f6ab70843f91da3122d20c2fa185353ffbf032676efb2d93c73106"
+  },
+  {
+   "id": "H12",
+   "group": "H",
+   "mode": "str",
+   "old": "### v0.11 — 30 October 2026 — ADOPTED / smooth class-C realization and owner synchronization release\n",
+   "new": "### v0.12 — 30 October 2026 — DRAFT (adoption pending)\n- **§2.4 / §9 [result/scope]:** `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` registered (closure sector canonically isomorphic to node data modulo the common origin, $Q_{\\rm node}\\cong C_0$; the global comparison with one relation as reference is an isomorphism iff multiplication by $n$ is bijective; node and edge actions differ); OPEN-OFN-REF-CLOSURE narrowed to the physical reading.\n- **§5.5.4 / §9 [isolation]:** class-C causal-interface identity recorded; OPEN-OFN-TRIAD-CLASS isolation obligation split into I-comp, I-quiet and I-remove (none selected); OPEN-OFN-3A pointer.\n- **§9 [3B]:** evaluation frame U-form, U-class, C0, C1, J with the position of class C; no standard of independence selected.\n- **Unchanged:** definitions, Q1–Q6, Standard C and OPEN statuses (twenty ACTIVE, one PARTIAL); no physical selection; no primacy conclusion.\n- **Record:** `records/ofn/OFN_v0_12_RELEASE_RECORD.md`; predecessor tag `ofn-v0.11`.\n\n### v0.11 — 30 October 2026 — ADOPTED / smooth class-C realization and owner synchronization release\n",
+   "old_sha256": "2c8eb0b75acfded596c1256592decc46b800b297a6858d8a858daa2631177741",
+   "new_sha256": "259400b13b48d5700e7754f93cb0b76bf400126c1fdb1ce59a8a1a2a09404eec",
+   "doc_sha256_before": "ef48939560f6ab70843f91da3122d20c2fa185353ffbf032676efb2d93c73106",
+   "doc_sha256_after": "8ac686b78eab71cb6d80cbfe8726f519481f766bf26137b111d973f0601bea39"
+  },
+  {
+   "id": "H13",
+   "group": "H",
+   "mode": "str",
+   "old": "*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.11*",
+   "new": "*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.12 — DRAFT, adoption pending; `ofn-v0.11` governs until adoption and tag.*",
+   "old_sha256": "43bae9b640aa95aaad45b61c13b5a02f71c2d993d2ecda624b9ee831d5ea220c",
+   "new_sha256": "22e50a387c4fb7326b11fbdd588d897f2c9fead1b71b45627d50cfd70f8464fb",
+   "doc_sha256_before": "8ac686b78eab71cb6d80cbfe8726f519481f766bf26137b111d973f0601bea39",
+   "doc_sha256_after": "5e1da260f944c40ebdcab29f57bdd37600f04e47a797b768ab5e0126a0e76a42"
+  }
+ ]
+}

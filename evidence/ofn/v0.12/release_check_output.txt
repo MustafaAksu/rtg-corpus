@@ -1,0 +1,14 @@
+P1 PASS candidate is 5e1da260…6a42
+P2 PASS OUT equals the transform of the candidate
+P3 PASS 5 lines differ; 5 declared
+P4 PASS reverse transform recovers the candidate
+P5 PASS no DRAFT/pending/candidate marker in the changed lines or header
+P6 PASS all other lines byte-identical; claim-tag, RID and math census unchanged
+RESULT: PASS
+X1 extra live change: caught
+X2 status summary edited: caught
+X3 footer left as draft: caught
+X4 claim tag changed: caught
+X5 RID added in a changed line: caught
+X6 isolation contract selected: caught
+CONTROLS PASS

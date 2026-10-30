@@ -1,0 +1,20 @@
+file: dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md
+bytes: 201031
+lines: 1598
+header_chars: 3624
+live_body_chars: 194307
+appendix_a_chars: 1682
+section1_words: -4
+orientation_core: {"chars": 0, "lines": 0, "words": 0, "core_end_marker_present": false}
+header_fields: {"Title": 89, "Date": 27, "Scope": 261, "Document class": 143, "Document status": 212, "Supersedes": 161, "Companion documents": 465, "DSN Methodology": 53, "Status summary": 956, "Authors": 150, "Revision editor": 138, "Programme document / placement": 151, "Governing inputs": 399, "Evidence boundary": 368}
+appendix_a_words_per_edition: 0 editions, max 0 words
+footer_lines: 1
+history_phrases_live: {"historical": 19, "superseded": 5, "former": 3, "retained as": 5, "no longer": 1}
+near_duplicate_paragraphs: 0
+rids_total: 71
+previous: {"file": "../base011.md", "bytes": 192052}
+growth_bytes: 8979
+growth_percent: 4.7
+new_rids: 1
+growth_per_new_rid: 8979.0
+(informational report; no gate)
