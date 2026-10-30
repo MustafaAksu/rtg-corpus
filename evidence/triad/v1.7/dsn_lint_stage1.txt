@@ -1,0 +1,20 @@
+file: dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md
+bytes: 177155
+lines: 1265
+header_chars: 7839
+live_body_chars: 143120
+appendix_a_chars: 24507
+section1_words: 489
+orientation_core: {"chars": 27907, "lines": 271, "words": 3546, "core_end_marker_present": true}
+header_fields: {"Title": 61, "Date": 87, "Scope": 222, "Document class": 49, "Document status": 248, "Status of the governing edition (history)": 990, "Supersedes": 316, "Companion documents (governing editions read for v1.7)": 528, "DSN Methodology": 329, "Status summary": 794, "Base (v1.7)": 390, "Release base (v1.6.1, history)": 597, "Co-owners": 563, "Adoption records": 595, "Evidence location": 559, "Programme tier": 112, "Change boundary (v1.7 stage 1)": 506, "Preservation boundary (v1.6.1, history)": 840}
+appendix_a_words_per_edition: 18 editions, max 436 words
+footer_lines: 2
+history_phrases_live: {"historical": 166, "superseded": 6, "former": 9, "retained as": 6, "no longer": 9}
+near_duplicate_paragraphs: 0
+rids_total: 71
+previous: {"file": "/tmp/claude-0/-home-claude/08b30b17-322e-5f2b-9314-756a53a6b667/scratchpad/stage1/base.md", "bytes": 159762}
+growth_bytes: 17393
+growth_percent: 10.9
+new_rids: 1
+growth_per_new_rid: 17393.0
+(informational report; no gate)
