@@ -7,3 +7,4 @@
 | 2026-10-26 | NUMGEN | notice | closed | NUMGEN v1.21 §6.8 Foundations export (OFN v0.10 consumer pointer, additive-rank scope); §1.1 OFN imports | — | `20261026-NUMGEN-v1-21-adopted.md` |
 | 2026-10-28 | TDRG | notice | closed | XFER-O08-01 / RTG-OFN-ALG-STAR-TOKEN-SHIFT (TDR-G v2.12.14 §7 import), REQ-O09-05, SG-14, §7 owner RID map for IMP-O08-02…16 | — | `20261028-TDRG-v2-12-14-adopted.md` |
 | 2026-10-29 | RECOG | notice | closed | RECOG v0.3.23–v0.3.26 adopted (recog-v0.3.26, DSN SHA-256 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34); 30 new RECOG RIDs since recog-v0.3.22 (§6.3, §6.4, §6.5, §6.13a, §6.13b, §6.16e, §8); Appendix B RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325, RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325; OPEN registry unchanged | — | `20261029-RECOG-v0-3-26-adopted.md` |
+| 2026-10-30 | DYAD | notice | open | receipt of the OFN v0.11 and v0.12 notices; DYAD v6.4.23 consumer register | — | `20261030-DYAD-v6-4-23-adopted.md` |
