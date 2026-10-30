@@ -22,7 +22,7 @@ This record invents no hash, approval or review identifier. Fields marked *(to b
 | Delta check of round 2 | `records/ofn/OFN_v0_12_CHATGPT_REVIEW.md` §7 (commit `0ef4ff78…`; PR #126 review `5711501720`): ACCEPT SCOPED — OWNER ADOPTION READY; R126-S1, S2 and N1 CLOSED | given |
 | Adoption | PI, OFN session, 30 October 2026, 14:26 +03:00: "PI olarak, bende OFN v0.12 ikinci tur adayını benimsiyorum" | **adopted** (§5) |
 | Publication finalization | `evidence/ofn/scripts/release_ofn_v0_12.py`; P1–P6 PASS, X1–X6 caught | done; published SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa` |
-| Merge commit; tag `ofn-v0.12` | PI (merge commit; annotated tag naming the published hash) | pending |
+| Merge commit; tag `ofn-v0.12` | PI: merge commit `2b2573f59244851455cba16a2baa79c76cc8ec66` (30 Oct 2026, 14:32 +03:00); annotated tag `ofn-v0.12` (tag object `b313064f…`) on that commit (11:34 UTC), message naming `55ff8ba8…76aa`; the file at the tag hash-checked | done |
 
 **PI decisions applied:**
 1. One new local-result RID, `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`.

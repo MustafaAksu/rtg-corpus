@@ -5,3 +5,4 @@
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
 | 2026-10-30 | OFN | notice | open | OFN v0.11 §5.5 genuine relational-triad contract (class C realization; OFN11-C01, OFN11-C02); RF-O10-02 | — | `20261030-OFN-v0-11-adopted.md` |
+| 2026-10-30 | OFN | notice | open | OPEN-OFN-TRIAD-CLASS isolation frame (OFN v0.12 §9); class-C causal-interface identity (§5.5.4) | — | `20261030-OFN-v0-12-adopted.md` |
