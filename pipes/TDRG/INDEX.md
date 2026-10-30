@@ -7,3 +7,4 @@
 | 2026-10-26 | NUMGEN | request | closed | TDRG-ORIENT (TDRG §6 path-orientation rule); NUMGEN v1.20.8 §2 item 1 (C7C-M), §6.6 N5-C7B/C7C P2 audit, Appendix B rejected formulation "owner implementation agreement ⟹ presentation covariance" | NUMGEN C7C-M4 realization campaign (NUMGEN §2 item 1; NUMGEN-OPEN-N5 module) | `20261026-NUMGEN-orientation-policy-s0-e-half-n.md` |
 | 2026-10-26 | NUMGEN | notice | closed | NUMGEN v1.21 §2 item 1 (C7C-M4 HOLD); TDRG-ORIENT request | — | `20261026-NUMGEN-v1-21-adopted.md` |
 | 2026-10-29 | OFN | finding | open | tdrg-v2.12.14 SG-3 (L445–446), §2 total-momentum row (L114), Appendix B (L1319) versus SG-14 (L478); OFN v0.10 §10 token-sum row | — | `20261029-OFN-token-sum-gauge-label.md` |
+| 2026-10-30 | OFN | notice | open | `RTG-OFN-ALG-STAR-TOKEN-SHIFT` (Finding A; XFER-O08-01), REQ-O09-05, IMP-O08-02…16 owner RIDs (OFN v0.11 §11.2, §12.3–§12.4) | — | `20261030-OFN-v0-11-adopted.md` |

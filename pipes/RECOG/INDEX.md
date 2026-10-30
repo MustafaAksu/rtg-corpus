@@ -6,3 +6,4 @@
 |---|---|---|---|---|---|---|
 | 2026-10-26 | NUMGEN | finding | dispositioned | RECOG §7 import row "GAP-LOCK Lemma 3" (tagged [HEUR cross-reference]); RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE (§6.16, uses Lemma 3 in an ALG identity); NUMGEN v1.20.8 §9.2 consumer row | — | `20261026-NUMGEN-gap-lock-3-grade-of-import.md` |
 | 2026-10-26 | NUMGEN | notice | dispositioned | NUMGEN v1.21 §9.1 acceptance matrix and RECOG v0.3.24 notice row; §6.2 domain labels; §6.6 NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET, -GAPLOCK-COUNT, -GAPLOCK-SLIP-RATIO, NUMGEN-RESULT-N5AS1-INF2; §9.2 RECOG consumer row | — | `20261026-NUMGEN-v1-21-adopted.md` |
+| 2026-10-30 | OFN | notice | open | REQ-O09-02 (RECOG v0.3.20 freeze record `5c00f66d…9b55`); RECOG imports repinned to `recog-v0.3.26`; A1c witnesses (OFN v0.11 §6.4, §11, §12.4) | — | `20261030-OFN-v0-11-adopted.md` |
