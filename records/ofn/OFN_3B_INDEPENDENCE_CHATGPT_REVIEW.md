@@ -85,15 +85,15 @@ No DSN, Q1–Q6, OPEN-3B status, model/physical selection, source theorem or cro
 
 ## 6. Round-2 closure — 30 October 2026
 
-**Reviewed author revision:** \`2204f9520f303908b1b7ef5b76527f323cc4c863\`.
+**Reviewed author revision:** `2204f9520f303908b1b7ef5b76527f323cc4c863`.
 **Final verdict:** **ACCEPT SCOPED** at noncanonical SESSION working-note scope. R124-C1, R124-C2, R124-C3 and R124-N1 are CLOSED; no further textual or computational changes are required for this package.
 
 ### Changed-content verification
 
-- **R124-C1 — CLOSED.** The note §3 C1 row now distinguishes the tangent-to-identity smooth sixth root \`K_6=F^{1/6}\` of \`F=T^6\` from \`J=T K_6^{-1}\`, the smooth order-six generator with \`DJ(0)=A\` and \`J^6=id\`. This matches the adopted \`dyad-v6.4.22\` §6.17 E3/E4 and its finite-group-averaging chart.
-- **R124-C2 — CLOSED.** §2 K4 and the checker now name precisely \`q(rho,eta)=(rho*eta,rho**2)\` as the falsifier. The note separately gives the nonzero even \`A^2\`-equivariant quadratic \`q_omega=(rho**2-2*rho*eta, eta**2-2*rho*eta)\`, which preserves the chiral embeddings. Independent exact verification of \`q_omega(A^2*x)=A^2*q_omega(x)\` returned zero.
-- **R124-C3 — CLOSED.** The information table now restricts narrow-Q6 to the real \`C^3\` C1/C2 instances under the named Genesis owner hypotheses, \`kappa not in {0,2}\`, with the exclusions (formal-as-such, sub-\`C^3\`, nonplanar and closure-only factors) made explicit. No blanket no-factor theorem is stated.
-- **R124-N1 — CLOSED.** The §4 technical-owner obligation for candidate (b) explicitly demands **both** U-class without nonlinear \`T\` input and direct-carrier C0 realization; its table's “partly meets” is read as **full (b) not established**, not as a verified pass. Candidate (c) says “not shown (J OPEN),” not an impossibility theorem.
+- **R124-C1 — CLOSED.** The note §3 C1 row now distinguishes the tangent-to-identity smooth sixth root `K_6=F^{1/6}` of `F=T^6` from `J=T K_6^{-1}`, the smooth order-six generator with `DJ(0)=A` and `J^6=id`. This matches the adopted `dyad-v6.4.22` §6.17 E3/E4 and its finite-group-averaging chart.
+- **R124-C2 — CLOSED.** §2 K4 and the checker now name precisely `q(rho,eta)=(rho*eta,rho**2)` as the falsifier. The note separately gives the nonzero even `A^2`-equivariant quadratic `q_omega=(rho**2-2*rho*eta, eta**2-2*rho*eta)`, which preserves the chiral embeddings. Independent exact verification of `q_omega(A^2*x)=A^2*q_omega(x)` returned zero.
+- **R124-C3 — CLOSED.** The information table now restricts narrow-Q6 to the real `C^3` C1/C2 instances under the named Genesis owner hypotheses, `kappa not in {0,2}`, with the exclusions (formal-as-such, sub-`C^3`, nonplanar and closure-only factors) made explicit. No blanket no-factor theorem is stated.
+- **R124-N1 — CLOSED.** The §4 technical-owner obligation for candidate (b) explicitly demands **both** U-class without nonlinear `T` input and direct-carrier C0 realization; its table's “partly meets” is read as **full (b) not established**, not as a verified pass. Candidate (c) says “not shown (J OPEN),” not an impossibility theorem.
 
 The exact raw-map identity and its invariant-embedding consequence are now recorded in the note, in place of a weaker jet-only assertion:
 
@@ -104,19 +104,19 @@ T(-x)+T(x)=(0,2(\cosh\rho-1)),
 =\left(0,-\frac{2\kappa}{3}(\cosh\rho-1)\right).
 \]
 
-These are exact identities for the specified raw lifted chart and fixed three-edge model; the named raw \`iota_0\` fails for \`kappa != 0\` and \`rho != 0\`. The owner Standard-C no-go has broader hypotheses and is not re-proved or generalized here.
+These are exact identities for the specified raw lifted chart and fixed three-edge model; the named raw `iota_0` fails for `kappa != 0` and `rho != 0`. The owner Standard-C no-go has broader hypotheses and is not re-proved or generalized here.
 
 ### Replay and identity
 
-The revised checker was reconstructed locally by applying the author's exact changed-code patch to the previously SHA-256-authenticated script, then checked **byte-for-byte against the revised SHA-256** before execution. Commands were \`python3 -I ofn_3b_independence_check.py\` and the same command with \`--force-fail\`, using Python 3.13.5 / SymPy 1.14.0.
+The revised checker was reconstructed locally by applying the author's exact changed-code patch to the previously SHA-256-authenticated script, then checked **byte-for-byte against the revised SHA-256** before execution. Commands were `python3 -I ofn_3b_independence_check.py` and the same command with `--force-fail`, using Python 3.13.5 / SymPy 1.14.0.
 
 | Object / run | Independently verified |
 |---|---|
-| Revised checker | SHA-256 \`139f7934fe749b6b144811d0b6d9c6ebc2b6ce9a60ec21049f2c1c15d929cc70\` (matches note and committed script) |
-| Normal output | **7/7 PASS**, \`RESULT: PASS\`, exit 0; SHA-256 \`bbdb5511c6d35d5da315774cc25a9a5d30c5564cde1139c260326aa5d6d60a00\` (matches stored positive output) |
-| Forced-failure transcript | \`RESULT: FAIL\`, exit 1; stdout with the explicitly recorded \`exit code: 1\` line has SHA-256 \`88b8e9c69bd3d89750f6e2b5bcdca962750223556ddca7a1a7072eea51d078d8\` (matches stored negative output) |
-| Separate algebra | The \`A^2\`-equivariance of the proposed \`q_omega\` and the two exact \`T\` / third-edge identities were checked without importing the submitted checker |
+| Revised checker | SHA-256 `139f7934fe749b6b144811d0b6d9c6ebc2b6ce9a60ec21049f2c1c15d929cc70` (matches note and committed script) |
+| Normal output | **7/7 PASS**, `RESULT: PASS`, exit 0; SHA-256 `bbdb5511c6d35d5da315774cc25a9a5d30c5564cde1139c260326aa5d6d60a00` (matches stored positive output) |
+| Forced-failure transcript | `RESULT: FAIL`, exit 1; stdout with the explicitly recorded `exit code: 1` line has SHA-256 `88b8e9c69bd3d89750f6e2b5bcdca962750223556ddca7a1a7072eea51d078d8` (matches stored negative output) |
+| Separate algebra | The `A^2`-equivariance of the proposed `q_omega` and the two exact `T` / third-edge identities were checked without importing the submitted checker |
 
 This is an **independent execution of the same submitted symbolic code on the same CAS**, not an independent-engine verification. Unchanged DYAD existence proofs, Genesis no-go certificates and the earlier finite-jet checks were not re-audited beyond the submitted script's normal replay. The reviewed PR modifies only its working note, checker, stored outputs and this review record.
 
-**Consequences:** The U-form/U-class/C0/C1/J framework is ready as a **proposed input** to the next OFN stage-1 content pass, alongside the already reviewed isolation and REF-CLOSURE notes. No PI adoption or OFN definition choice is inferred. This review does not change \`ofn-v0.11\`, Q1–Q6, OPEN-OFN-3B, physical selection, or primacy. No new OFN tag is requested.
+**Consequences:** The U-form/U-class/C0/C1/J framework is ready as a **proposed input** to the next OFN stage-1 content pass, alongside the already reviewed isolation and REF-CLOSURE notes. No PI adoption or OFN definition choice is inferred. This review does not change `ofn-v0.11`, Q1–Q6, OPEN-OFN-3B, physical selection, or primacy. No new OFN tag is requested.
