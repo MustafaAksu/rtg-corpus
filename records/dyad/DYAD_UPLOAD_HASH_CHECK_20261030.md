@@ -27,7 +27,7 @@
 | `certify_branch_4_10.cpp` (`41b5aa13…6970`) | DYAD-ART-IA-CERT-FIXED `rtg_ia_cert_fixed.cpp` ("Arb ball certification on (4,10) branch") | **candidate only**. The content matches the description (the IA-BULK header calls it "the validated (4,10) engine"), but the name differs and no hash is recorded. Not identified |
 | `rtg_core.hpp` (`5336f207…de93`) | — (header used by five sources) | needed to build |
 | `certify_g_monotonic.cpp`, `certify_s_max.cpp`, `test_arb/jet/map/state.cpp` | not cited in the DSN | engine checks and tests; `test_map.cpp` and `test_state.cpp` are byte-identical |
-| `triad_t3a_arb_enclosure_v4g.cpp` (`430015bb…fd32`) | not Dyadic: a Triadic T-3a Arb enclosure | for the Triadic migration (separate) |
+| `triad_t3a_arb_enclosure_v4g.cpp` (`430015bb…fd32`) | not Dyadic: labelled a Triadic T-3a Arb enclosure | **not a certificate as written** (ChatGPT, PR #125 comment `6521277354`, confirmed by the Atlas owner). L91–96 set the forcing `dz` to a placeholder 0; L125–130 advance Q_c by a dummy `+1` step; L135 still prints `[CERTIFIED / z(t) >= z0]`. Classified as an incomplete computational scaffold. No Triadic result may cite it as a certificate; it goes to the Triadic custody review |
 
 The recovery list is updated accordingly:
 - five files are placed (OPEN18, STRIP2, STRIP1, IA-BULK, QMAX);
@@ -81,8 +81,8 @@ The PI pushed two zips to `upload/dyad-sources/` on a branch named `missing-file
   - The DSN's "certificate values 85.07 / 27.60" are therefore nearest-rounded, not ceilings. RECOG's outward values 85.1 / 27.7 are valid ceilings of the certified bounds.
 - **L-PHASE row A.** The certificate runs PASS (10 gates; N1–N6 false), and the regenerated JSON is byte-identical.
   - The certified constants are exact rationals: c_Q = 0.79245761523303… and c′_Q = 0.36915230466066….
-  - The published c_Q = 0.79246 is an outward ceiling. The published **c′_Q = 0.36915 is not**: it lies 2.3 × 10⁻⁶ below the certified value (exact-arithmetic check: c′_Q > 0.36915, c′_Q ≤ 0.36916).
-  - The theorem's published constant 403/250 is unaffected, because the certificate uses the exact c′_Q internally (FIN: 1.61112… ≤ 1.612).
+  - The published c_Q = 0.79246 is an outward ceiling of the certified value. The published **c′_Q = 0.36915 is not supported by the certificate as a ceiling**: it lies 2.3 × 10⁻⁶ below the certified majorant (exact-arithmetic check: certified c′_Q > 0.36915, ≤ 0.36916). This does not show that the true supremum exceeds 0.36915.
+  - The theorem's published constant 403/250 is not affected by the decimal: the certificate's FIN gate uses the exact c′_Q (`EV-CODE`, `EV-RUN`: 1.61112… ≤ 1.612). The Dyadic owner confirms this in the exact computation.
   - The decimal "c′_Q = 0.36915" in the DSN proof outline (L902), and RECOG's `[assuming:]` copy of it, are not certified ceilings.
 
 Still missing for DYAD-ART-LPHASE-ROWA:
