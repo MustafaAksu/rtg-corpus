@@ -1,0 +1,96 @@
+{
+ "all_pass": false,
+ "control": "A",
+ "gates": {
+  "O1_derivative_nonzero_on_gap": true,
+  "O1_eta4_negative_on_gap": true,
+  "O1_sign_change": false,
+  "O2_eta6_minus_q_nonzero": true,
+  "O3_n3": true,
+  "O3_n4": true,
+  "O5_displayed_values_not_ceilings": true,
+  "O5_row_1/20_le_ceiling": true,
+  "O5_row_1/40_le_277/10": true,
+  "O6_cQ_exact_le_0.79246": true,
+  "O6_cQprime_exact_gt_0.36915": true,
+  "O6_cQprime_exact_le_ceiling": true,
+  "O6_certificate_gates_pass": true,
+  "O6_input_hashes": true,
+  "O7_FIN_with_published_ceilings_le_403/250": true,
+  "O7_certificate_FIN_published_is_403/250": true
+ },
+ "info": {
+  "D1": {
+   "O1": {
+    "drho4_dq_on_gap": "[-0.6849 +/- 2.57e-5]",
+    "enclosure_half_width": "1e-30",
+    "eta4_on_gap": "[-0.5639 +/- 4.50e-5]",
+    "q_star_36_digits": "1.26021420256347711487243856095650439",
+    "rho4_at_q*+1e-30": "[-6.84884e-21 +/- 4.8e-29]",
+    "rho4_at_q*-1e-30": "[-6.84884e-21 +/- 5.0e-29]"
+   },
+   "O2": {
+    "eta6(q*)-q*": "[-0.5536956463 +/- 2.49e-11]",
+    "numgen_q*_prefix": "0.3156258836595616"
+   },
+   "O3": {
+    "n=3": {
+     "N_Theta": "[-0.4761 +/- 3.07e-5]",
+     "dQ_dq": "[0.7901 +/- 4.30e-5]",
+     "denominator": "[2.0739 +/- 6.12e-5]"
+    },
+    "n=4": {
+     "N_Theta": "[-0.3862 +/- 3.42e-5]",
+     "dQ_dq": "[0.2134 +/- 9.00e-5]",
+     "denominator": "[1.2718 +/- 8.70e-5]"
+    }
+   },
+   "O4_NUM": {
+    "Q_3=Q_c_at_q": "1.34159703299155",
+    "Q_4=Q_c_at_q": "1.97865695123502",
+    "Q_c": "0.586520394118865",
+    "Theta_3=-2pi/3_at_q": "1.3671304521669",
+    "first_window_step_matches_split": 189308,
+    "grid_points": 200000,
+    "last_window_step_matches_split": 200000,
+    "status": "NUM reading only; not a certificate of branch legality",
+    "window_step_sets": {
+     "[3, 4]": 10692,
+     "[3]": 126021,
+     "[4]": 63287
+    }
+   }
+  },
+  "D2": {
+   "C7_upper_row_1/20": "85.0731933471080",
+   "C7_upper_row_1/40": "27.6022209836211",
+   "adopted_constants_unchanged": [
+    "100",
+    "30"
+   ],
+   "ceilings_tested": [
+    "851/10",
+    "277/10"
+   ],
+   "certificate_json_sha256": "d59b0ff68b4341debf5e8a7542bf3865b63dd63e36546952db95298c2bd5c6ce"
+  },
+  "D3": {
+   "C_star_exact": "1.611120962854",
+   "C_star_with_published_ceilings": "1.611121734973",
+   "cQ_exact": "0.792457615233033",
+   "cQprime_exact": "0.369152304660669",
+   "ceilings_tested": [
+    "39623/50000",
+    "9229/25000"
+   ],
+   "imported_row_A_C7": "100",
+   "input_sha256": {
+    "dyad_numgen_lphase_rowA_cert.py": "117484ae1a2509b6f6065d395840bfdfe2b0c977af0505f9fe6de68c13959cdb",
+    "qw.py": "3a913062c1cdc6d151a2fb5b2f76d5354a367d1fa55df43f1f31d06e1b94cce8",
+    "tzw.py": "f007d42cde36d2a70115b9db25f47b107c446735fa31c66664f620c3247a5609"
+   },
+   "margin_403/250_minus_that": "8.782650e-04"
+  }
+ },
+ "script": "dyad_inbox_20261030_owner_checks.py"
+}
