@@ -2,15 +2,15 @@
  "status": "DRAFT_REVIEW_READY",
  "base_atlas": "atlas-v0.7",
  "base_sha256": "8ebfbd1008ce96e167ec90931468d166c568294a66453824667fba88e3f49c6c",
- "atlas_sha256": "450d8e7127beef06d07f4b2315b23233085b5766ffd2cb4894418780bd198e46",
- "atlas_bytes": 502219,
+ "atlas_sha256": "47320ca55f25955ff0d5e73be690465c7f9e6ebad9fa6bbc09692d4cf86371b7",
+ "atlas_bytes": 502700,
  "atlas_lines": 1540,
  "source_snapshot": "f8f3b5b172649c69236e327af1f12f93e2307b1d",
  "changed_sources": [
   "OFN",
   "RECOG"
  ],
- "edit_operations": 94,
+ "edit_operations": 95,
  "retired_keys": [
   "OFN.O1",
   "OFN.O3",
@@ -111,7 +111,7 @@
  },
  "tool_sha256": {
   "tools/atlas_check.py": "0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d",
-  "evidence/atlas/build/refresh_v0_8.py": "6d6c77feacd40e11829d8fefba16f34bf6368991feaf49e5efaa939b2fd5c926"
+  "evidence/atlas/build/refresh_v0_8.py": "944c94c34c26acafc98ef8e08310b90afd75cc9ed5ad0e9bc3c4c043fd790683"
  },
  "limitations": [
   "Structural checks only; no owner certificate rerun; new RIDs checked for presence in the tagged sources, not re-proved.",

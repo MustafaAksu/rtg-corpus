@@ -82,6 +82,15 @@
  },
  {
   "id": "AR08-010",
+  "finding": "AV08-R1",
+  "where": "H5 NUMGEN acceptance scope",
+  "old_sha256": "b56ff0def83edd020584b69d08d48029e0122060a83b42cf7de8f4f01ca575b2",
+  "new_sha256": "91ede3adabf994bc0ef0f19ecea016c436d3fc53569ffb7ac1c4e876054911fb",
+  "old": "H5 D-LINK high — explicit-domain phase existence is owner science: RECOG-THM-A1A-PHASE-EXISTENCE-U proves C_D^ext on U without R9 or INF-1, and RECOG v0.3.24 adds on the same U the slip-schedule theorem RECOG-THM-A1B-SLIP-SCHEDULE-U (events = lift crossings; gaps {6,7}; digamma schedule) and the infinite-record readout RECOG-RESULT-A1C-RECORD-PHASE-READOUT (D3; NUMGEN informed, no custody change); RECOG v0.3.25 adds the known-a sharpened schedule RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A proof constants], a record-only outer enclosure of (a, L, a−b, Θ₀) by an interval contractor (RECOG-ALG-A1C-JOINT-CONTRACTOR; windows, not identification, no uniqueness) and the record-fiber result (fibers on one C¹ level curve of Ψ_∞; A1c-Q1′ stays OPEN), plus the sharpened R9 rows (259.2, 1/400), (81.49, 1/1600) — the (D5) constants and the C₇ ceilings remain [assuming:] until Dyadic registers them (RECOG.R-A1). RECOG v0.3.26 corrects the v0.3.25 asymptotic-order sentences about the closed-form majorants ([COR]; two Appendix B retractions — they hold for the corrected forms Lg_corr with the M-dependent bracket; every inequality, E'≤0.31, grade, RID and OPEN status unchanged) and adds the chart reciprocal drift RECOG-ALG-A1C-RECIPROCAL-DRIFT (adopted Dyadic rows only; log-free K_ε) and the log-free envelope RECOG-ALG-A1C-LOGFREE-ENVELOPE [assuming: (D5)] (E^(5)≤C(a,r)/(a+M) term by term). NUMGEN v1.21 records these theorems statement by statement as consumer-side confirmations in its §9.1 acceptance matrix (nothing imported, custody of GAP-LOCK 1–3 and INF-1 unchanged; 15/2 typed as the per-block increment, not an L-BACKBONE constant — NUMGEN.N-B) and imports the explicit L-PHASE constant from DYAD-THM-LPHASE-ROWA-REMAINDER at §6.6 while its own L-PHASE keeps the existential tube (NUMGEN.N-A). C_D^ext is a candidate comparison source for φ*, not its owner or an established identification (NUMGEN.N-D, RECOG.R-L1b). GEN chrono-protection G₂=0 has candidate proof routes through NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE (offered to Genesis in pipes/GEN/, undecided by the receiver) and RECOG-ALG-LEADING-RETURN-EQUIVARIANCE (RECOG.R-L2); explicit GAP-LOCK inequality is NUMGEN.N-E. These remaining cross-owner identifications are ~ and require their own scope checks.",
+  "new": "H5 D-LINK high — explicit-domain phase existence is owner science: RECOG-THM-A1A-PHASE-EXISTENCE-U proves C_D^ext on U without R9 or INF-1, and RECOG v0.3.24 adds on the same U the slip-schedule theorem RECOG-THM-A1B-SLIP-SCHEDULE-U (events = lift crossings; gaps {6,7}; digamma schedule) and the infinite-record readout RECOG-RESULT-A1C-RECORD-PHASE-READOUT (D3; NUMGEN informed, no custody change); RECOG v0.3.25 adds the known-a sharpened schedule RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A proof constants], a record-only outer enclosure of (a, L, a−b, Θ₀) by an interval contractor (RECOG-ALG-A1C-JOINT-CONTRACTOR; windows, not identification, no uniqueness) and the record-fiber result (fibers on one C¹ level curve of Ψ_∞; A1c-Q1′ stays OPEN), plus the sharpened R9 rows (259.2, 1/400), (81.49, 1/1600) — the (D5) constants and the C₇ ceilings remain [assuming:] until Dyadic registers them (RECOG.R-A1). RECOG v0.3.26 corrects the v0.3.25 asymptotic-order sentences about the closed-form majorants ([COR]; two Appendix B retractions — they hold for the corrected forms Lg_corr with the M-dependent bracket; every inequality, E'≤0.31, grade, RID and OPEN status unchanged) and adds the chart reciprocal drift RECOG-ALG-A1C-RECIPROCAL-DRIFT (adopted Dyadic rows only; log-free K_ε) and the log-free envelope RECOG-ALG-A1C-LOGFREE-ENVELOPE [assuming: (D5)] (E^(5)≤C(a,r)/(a+M) term by term). NUMGEN v1.21 §9.1 records the RECOG v0.3.24 A1a/A1b comparisons (RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-PHASE-EXISTENCE-U with RECOG-RESULT-A1A-CD-AGREEMENT, RECOG-THM-A1B-SLIP-SCHEDULE-U) statement by statement as consumer-side confirmations in its acceptance matrix — independent agreement, nothing imported, custody of GAP-LOCK 1–3 and INF-1 unchanged; for GAP-LOCK 3 the agreement covers the ratio limit and the digamma schedule is not adopted; the matrix carries no consumer acceptance of the v0.3.25/v0.3.26 additions (sharpened R9 rows, decoder and fiber results, DRIFT, ENV) (15/2 typed as the per-block increment, not an L-BACKBONE constant — NUMGEN.N-B) and imports the explicit L-PHASE constant from DYAD-THM-LPHASE-ROWA-REMAINDER at §6.6 while its own L-PHASE keeps the existential tube (NUMGEN.N-A). C_D^ext is a candidate comparison source for φ*, not its owner or an established identification (NUMGEN.N-D, RECOG.R-L1b). GEN chrono-protection G₂=0 has candidate proof routes through NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE (offered to Genesis in pipes/GEN/, undecided by the receiver) and RECOG-ALG-LEADING-RETURN-EQUIVARIANCE (RECOG.R-L2); explicit GAP-LOCK inequality is NUMGEN.N-E. These remaining cross-owner identifications are ~ and require their own scope checks."
+ },
+ {
+  "id": "AR08-011",
   "finding": "OFN v0.11",
   "where": "H8 convention",
   "old_sha256": "a9552120d0c0719b471b44a5a6e615dac175dd93b817c4125584d443d9157916",
@@ -90,7 +99,7 @@
   "new": "H8 D-SYM high — κ collision programme-wide (class-C coupling κ, ≡GEN γ by the OFN §5.5.4 / §11.4 and RRF §6.2a parameter convention · Triadic/GEN birth κ · DYAD backbone κ · GEN face-lift κ_f (owner notation, GEN v2.9 §6.8) · RRF-CN05 κ · κ_RTG=𝒢_e/J_e · PREL κ=2πc, κ_grav, κ_top, κ₃, κ′, κ_B) and κ=1 vs κ=2 treated differently across the sites listed at OFN.O8 + RRF.F6 and F1. The owner corpus carries a cross-stream κ table (Programme v1.3 §8.2, navigation only; the collisions themselves remain). The U/U_T collision is settled on the NUMGEN side: v1.21 §6.2 labels U_NG, U_NG,tube, U_D,base, U_D,tube, U_R,base (U_NG ≡ RECOG's U_NUMGEN) and asserts no inclusion between U_NG and U_D,base."
  },
  {
-  "id": "AR08-011",
+  "id": "AR08-012",
   "finding": "OFN v0.11",
   "where": "H8 κ table",
   "old_sha256": "040d8152da42f012c898e42b1eb2bd80e1757cb1cc98f775c31d167c4fee8b30",
@@ -99,7 +108,7 @@
   "new": "H8 D-SYM high — κ collision programme-wide (class-C coupling κ, ≡GEN γ by the OFN §5.5.4 / §11.4 and RRF §6.2a parameter convention · Triadic/GEN birth κ · DYAD backbone κ · GEN face-lift κ_f (owner notation, GEN v2.9 §6.8) · RRF-CN05 κ · κ_RTG=𝒢_e/J_e · PREL κ=2πc, κ_grav, κ_top, κ₃, κ′, κ_B) and κ=1 vs κ=2 treatment: OFN v0.11 states one κ table (§5.5.4; κ=0 decoupled reference, κ=1 flat, κ=2 not a proved Q6 failure, 0<κ<2 κ≠1 closure-mode attraction, κ∉{0,1,2} the formal contract) to which its other sites point; the cross-family collision is F1, the convention attribution OFN.O14. The owner corpus carries a cross-stream κ table (Programme v1.3 §8.2, navigation only; the collisions themselves remain). The U/U_T collision is settled on the NUMGEN side: v1.21 §6.2 labels U_NG, U_NG,tube, U_D,base, U_D,tube, U_R,base (U_NG ≡ RECOG's U_NUMGEN) and asserts no inclusion between U_NG and U_D,base."
  },
  {
-  "id": "AR08-012",
+  "id": "AR08-013",
   "finding": "OFN v0.11",
   "where": "D-WRONG OFN.O7 (both sides corrected)",
   "old_sha256": "fcff9a3f9b50886278cfe9bbc9b994894ea6f27c1c8a10e9754510d0300f034a",
@@ -108,7 +117,7 @@
   "new": ""
  },
  {
-  "id": "AR08-013",
+  "id": "AR08-014",
   "finding": "OFN v0.11",
   "where": "D1 header edition",
   "old_sha256": "32a02ce3d3f7aab398bf2cdb6a91edf611a0565a3a5a681044552d198041b42a",
@@ -117,7 +126,7 @@
   "new": "(owners: OFN v0.11 adopted 2026-10-30 canonical, ns RTG-OFN, layers O0 commitments · O1 primitives · O2 events · O3 postulates · O4 models · O5 consequences (≠ Legacy L0/L1/L2, ≠ Programme tiers); owner counts 11 DEF RIDs, 1 HYP RID, 4 local RESULT RIDs, 21 OPEN (19 ACTIVE + 1 PARTIAL + TRIAD-CLASS) · Programme Overview v1.3 adopted 2026-10-24, Tier 0 navigation, no physical theorem by appearance · RRF Representation Registry v0.8.4 adopted 2026-10-20, working representation standard, registry not theorem ledger (formula excerpts owned by cited source) · Methodology v1.4 semantics → L0.M)"
  },
  {
-  "id": "AR08-014",
+  "id": "AR08-015",
   "finding": "OFN v0.11",
   "where": "D1 header counts",
   "old_sha256": "a9cedca3dceeb0f0fa4be3bf24e03d177192447fd1b00f977f68e84724d8875b",
@@ -126,7 +135,7 @@
   "new": "(owners: OFN v0.11 adopted 2026-10-30 canonical, ns RTG-OFN, layers O0 commitments · O1 primitives · O2 events · O3 postulates · O4 models · O5 consequences (≠ Legacy L0/L1/L2, ≠ Programme tiers); owner counts 17 DEF RIDs, 1 HYP RID, 4 local RESULT RIDs, 21 OPEN (20 ACTIVE + 1 PARTIAL), 43 OFN RIDs; Methodology v1.4 qualifier spellings · Programme Overview v1.3 adopted 2026-10-24, Tier 0 navigation, no physical theorem by appearance · RRF Representation Registry v0.8.4 adopted 2026-10-20, working representation standard, registry not theorem ledger (formula excerpts owned by cited source) · Methodology v1.4 semantics → L0.M)"
  },
  {
-  "id": "AR08-015",
+  "id": "AR08-016",
   "finding": "OFN v0.11",
   "where": "zero-origin node",
   "old_sha256": "89d2de2b1d6ea9af66c7f2a687d92e69b529c1effa37150cc17625f0e2b1b7b2",
@@ -135,7 +144,7 @@
   "new": "RTG-OFN-DEF-ZERO-ORIGIN DEF (atlas label O-ZERO; RID registered v0.11) | 𝒪₀=0; first dyad 0→(A,B), A+B=0 | <GEN zero-origin condition (IMP-O08-01, gen-v2.9 §6.1 cited by section; the Genesis [DEF] carries no RID, METH.M2) | ¬ creation mechanism, binary-event inevitability, exact conservation @OFN§1.3"
  },
  {
-  "id": "AR08-016",
+  "id": "AR08-017",
   "finding": "OFN v0.11",
   "where": "DIST-ZN node",
   "old_sha256": "33eb748afadab62a370b7745f47b047152988c0ff95fa133edcbf7b7d8e0becd",
@@ -144,7 +153,7 @@
   "new": "RTG-OFN-DEF-DIST-ZN DEF (atlas label O-DIST-ZN; RID registered v0.11) | (i) arithmetic ℤ_N · (ii) cycle graph C_N (order, arcs, graph distance = mathematical metric, \"proto-geometry\") · (iii) physical length/metric/curvature; SG-ZN-GEOM @OFN"
  },
  {
-  "id": "AR08-017",
+  "id": "AR08-018",
   "finding": "OFN v0.11",
   "where": "discrete state node",
   "old_sha256": "ed75b13b694ac5fb86437e41594d98cc4c5b53d46a75705a8a85efd9ac565551",
@@ -153,7 +162,7 @@
   "new": "O-DISC-STATE DEF(import, D5 owner) | X=(θ₁..θ_M, δ₁..δ_M)∈ℤ_N, θ_i↦θ_i+c gauge, d_ij=δ_i−δ_j (IMP-O08-02 <TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE, TDRG-DEF-REL-ADVANCE; OFN keeps its caveat on the owner phrase \"only Δ_ij are physical\": no token deletion); band 𝒟_k={Δ: dist_{C_N}(Δ,N/2)≤k}, even N (IMP-O08-03 <TDRG-DEF-BAND); star rule: new node at centre's antipodal shadow, copied token, centre token inverted (IMP-O08-09 <TDRG-DEF-STAR); advance → snapshot/classify → synchronous events (IMP-O08-14 <TDRG-DEF-CONV-TICK); successor-token path shift (IMP-O08-15 <TDRG-DEF-CONV-P3CYC); pinned tdrg-v2.12.14 with the owner §7 RID map, legacy names (CONV-*, LEM-*) as aliases; [conv: v18] and EV-NOT-RERUN kept @OFN<TDRG"
  },
  {
-  "id": "AR08-018",
+  "id": "AR08-019",
   "finding": "OFN v0.11",
   "where": "reduction-boundary node",
   "old_sha256": "2ee7f749aae388b709b4d05123bae24df8f1f06082717efb122580127f6707fe",
@@ -162,7 +171,7 @@
   "new": "RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY DEF (atlas label O-DISC-REDUCTION; RID registered v0.11) | (Δ,d) = free-dyad state, not birth-capable quotient; a candidate gauge must preserve observables AND transition law @OFN"
  },
  {
-  "id": "AR08-019",
+  "id": "AR08-020",
   "finding": "OFN v0.11",
   "where": "continuous-representation node",
   "old_sha256": "2eed1a30a2e19b9059f9fd7eef340b171a91450a7e96f46b63bb379a734fdf89",
@@ -171,7 +180,7 @@
   "new": "RTG-OFN-DEF-CONTINUOUS-REPRESENTATION DEF (atlas label O-CONT-REP; RID registered v0.11) | dyad state (ρ,η); lifted chart ≠ wrapped representative ≠ linear eigenframe ≠ NF chart; scalar Q is an observable, not a state replacement @OFN"
  },
  {
-  "id": "AR08-020",
+  "id": "AR08-021",
   "finding": "OFN v0.11",
   "where": "B-Q pin",
   "old_sha256": "4e5130218e7363d83098cf91847423fa2715e37ba39b9201a78408fd7fa6369f",
@@ -180,7 +189,7 @@
   "new": "O-B-Q DEF(import) | B=[[1,−½],[−½,1]], Q=ρ²−ρη+η²; AᵀBA=B | <GEN-DEF-PRIMITIVE-METRIC, <GEN-THM-PRIMITIVE-METRIC-INVARIANCE (gen-v2.9 §6.1) | ¬ generator-independent physical metric, ¬ nonlinear Q conservation @OFN"
  },
  {
-  "id": "AR08-021",
+  "id": "AR08-022",
   "finding": "OFN v0.11",
   "where": "finite-description node new",
   "old_sha256": "3c73895305b2b4f45ce71a3f1ac09b33b687e31dd18b96df8af0d2d4ecf753ea",
@@ -189,7 +198,7 @@
   "new": "RTG-OFN-DEF-CONTINUOUS-REPRESENTATION DEF (atlas label O-CONT-REP; RID registered v0.11) | dyad state (ρ,η); lifted chart ≠ wrapped representative ≠ linear eigenframe ≠ NF chart; scalar Q is an observable, not a state replacement @OFN\nRTG-OFN-DEF-FINITE-DESCRIPTION DEF (RID registered v0.11) | finite current node list ≠ finite alphabet per node ≠ uniform node-count cap ≠ finite global state set; exact finite arithmetic is the adopted discrete-model practice; a continuous approximation is not substituted into its primitive update without changing that model and passing the programme firewall | >*OFN:finite-recurrence, SG-OFN-INFORMATION @OFN§4.1\n"
  },
  {
-  "id": "AR08-022",
+  "id": "AR08-023",
   "finding": "OFN v0.11",
   "where": "primitive-map node",
   "old_sha256": "d396c452a7bf424685c0ce106eea2569e4dc548e00b8eca638ce6f659a17e1cd",
@@ -198,7 +207,7 @@
   "new": "O-T ≡ PROG-P0-MAP DEF(adopted effective model, not derived) | T(ρ,η)=(ρ−sinη, η+e^ρ−1−sinη) | <DYAD-DEF-PRIMITIVE-MAP (≡ GEN-DEF-PRIMITIVE-MAP alias; OFN IMP-O08-12 at dyad-v6.4.22 §6.1; CUST-O09-01 answered, REQ-O09-04 fulfilled) | selection = OPEN-OFN-1 / RTG-OPEN-GENERATOR-SELECTION @OFN,PROG§5"
  },
  {
-  "id": "AR08-023",
+  "id": "AR08-024",
   "finding": "OFN v0.11",
   "where": "comparator pin",
   "old_sha256": "2cca0512177f517e4f29417b9d43ff7e5143a17fb52974210cf3ff0388158553",
@@ -207,7 +216,7 @@
   "new": "O-COMP DEF(import) | C_pole=e^{iη} <RECOG-DEF-POLE-COMPARATOR; C_→(a,b)=W̄_aW_b in lifted linear p=6 eigenframe, normalization needs Q_aQ_b>0 <RECOG-DEF-STATE-COMPARATOR (recog-v0.3.26, IMP-O08-17); NF chart needs transport @OFN"
  },
  {
-  "id": "AR08-024",
+  "id": "AR08-025",
   "finding": "OFN v0.11",
   "where": "lock node",
   "old_sha256": "8eb0d548a79a9e0ebc0611febb479b3530212105895cd92da808944a3a874e11",
@@ -216,7 +225,7 @@
   "new": "O-LOCK DEF/ALG (formal family; real C^∞ for 𝓕_{κ,Φ}; SESSION provenance, recorded, not registered) | 𝒮₀={(z,−z,0)}, 𝒮_±={(z,ω^{±1}z,ω^{±2}z)}, ω=λ²; invariant with I≡0; edge dynamics N≅T; cyclic relabel preserves 𝒮_±, transposition+edge reversal swaps them (= chirality datum); raw generators J=T∘F^{−1/6}, R₀=J³, G=J² (formal uniqueness IMP-O10-03; real C^∞ germ IMP-O10-06); C^∞ member: [N_Φ,A]=0 with A³=−I, A²=ω makes N_Φ odd and ω-equivariant ⇒ its lock surfaces are real C^∞ invariant submanifolds with exact isolated-dyad evolution (OFN-local ALG on IMP-O10-06/07, not a new Dyadic existence proof) @OFN§5.5.4"
  },
  {
-  "id": "AR08-025",
+  "id": "AR08-026",
   "finding": "OFN v0.11",
   "where": "chiral convention",
   "old_sha256": "8caca4e5f54873c9a4ca48eb15ff21db161f2c760c3947a43a8f25eb952e7cdd",
@@ -225,7 +234,7 @@
   "new": "O-CHIRAL-CONV DEF | <GEN §6.3a: u=w₁+λw₂, v=w₁+λ̄w₂, N_ch=|u|²+|v|², S=Im(w₁w̄₂)=(|u|²−|v|²)/√12, χ=S/N_ch (v0.11 symbols; v0.10 wrote ρ, N; formulas unchanged); any chirality sign names its convention @OFN"
  },
  {
-  "id": "AR08-026",
+  "id": "AR08-027",
   "finding": "OFN v0.11",
   "where": "class-C regularity",
   "old_sha256": "a4d8be50e700ff8f9a7d6b18ae702537ec99119d0a4602347ea01204638411b2",
@@ -234,7 +243,7 @@
   "new": "CLASS-C DEF (RTG-OFN-DEF-TRIAD-MODEL-CONTRACT part) ≡ GEN G^N_γ (§6.3c; same declared operation, γ≡κ parameter convention) ≡ FMS \"model C\" ≡ *RRF:class-C-contract; ≠ GEN raw F_γ (§6.3b; GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO covers the raw family only, OFN IMP-O10-01 \"does not cover class C\") | F^N_κ(z)_e=N(z_e)−(κ/3)Σ_jN(z_j), N = λ-equivariant normal form (or 𝓕_{κ,Φ} in Bochner chart) | = different conditional model (reimposed additive mean feedback in transported carrier; RRF §0.3), not passive transport of the raw κ-family, not a native RRF profile, not RRF-NET-W-RAW | contract fields — regularity, one table used at every §5.5 site: all-order formal family (formal algebra and lock geometry; a formal series is not a real germ or a basin theorem) · real polynomial instance C1 (exists independently of smooth J; \"C1\" is the Genesis instance label, not differentiability) · exactly transported C^∞ instance C2, 𝓕_{κ,Φ}=(Φ⁻¹)^{×3}∘P_κ∘N_Φ^{×3}∘Φ^{×3}, exists and is used (IMP-O10-06/07 <DYAD-THM-SMOOTH-EMBEDDING, DYAD-THM-SMOOTH-EQUIVARIANT-CHART; local C^∞ hence C³; qualitative radius; no finite-chart bounds, SG-19; chart-family freedom remains) · exactly transported analytic realization OPEN (DYAD OPEN 20 B-an/B-6) · physical realization or selection OPEN (TRIAD-CLASS); clock primitive T (T⁶ derived sampling); domain local nbhd of 0; readout transported (z or Φ), raw-W readouts carry static offsets; κ∉{0,1,2} formal, stability only 0<κ<2, κ≠1; κ=2 closure multiplier on unit circle, excluded from centre reduction (not a Q6 failure); Q6 factor exclusion only via GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO under (H_spec), μ≠0, γ∉{0,2} and RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT; registration request to RRF as model-contract row | >D4a families node @OFN§5.5.4,RRF§6.2a"
  },
  {
-  "id": "AR08-027",
+  "id": "AR08-028",
   "finding": "OFN v0.11",
   "where": "class-C κ table",
   "old_sha256": "833622a9b749b87c44b536adae98b99b45de226dd9ba313423458dfa624d7bbf",
@@ -243,7 +252,7 @@
   "new": "CLASS-C DEF (RTG-OFN-DEF-TRIAD-MODEL-CONTRACT part) ≡ GEN G^N_γ (§6.3c; same declared operation, γ≡κ parameter convention) ≡ FMS \"model C\" ≡ *RRF:class-C-contract; ≠ GEN raw F_γ (§6.3b; GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO covers the raw family only, OFN IMP-O10-01 \"does not cover class C\") | F^N_κ(z)_e=N(z_e)−(κ/3)Σ_jN(z_j), N = λ-equivariant normal form (or 𝓕_{κ,Φ} in Bochner chart) | = different conditional model (reimposed additive mean feedback in transported carrier; RRF §0.3), not passive transport of the raw κ-family, not a native RRF profile, not RRF-NET-W-RAW | contract fields — regularity, one table used at every §5.5 site: all-order formal family (formal algebra and lock geometry; a formal series is not a real germ or a basin theorem) · real polynomial instance C1 (exists independently of smooth J; \"C1\" is the Genesis instance label, not differentiability) · exactly transported C^∞ instance C2, 𝓕_{κ,Φ}=(Φ⁻¹)^{×3}∘P_κ∘N_Φ^{×3}∘Φ^{×3}, exists and is used (IMP-O10-06/07 <DYAD-THM-SMOOTH-EMBEDDING, DYAD-THM-SMOOTH-EQUIVARIANT-CHART; local C^∞ hence C³; qualitative radius; no finite-chart bounds, SG-19; chart-family freedom remains) · exactly transported analytic realization OPEN (DYAD OPEN 20 B-an/B-6) · physical realization or selection OPEN (TRIAD-CLASS); clock primitive T (T⁶ derived sampling); domain local nbhd of 0; readout transported (z or Φ), raw-W readouts carry static offsets; κ values, one OFN table (§5.5.4): κ=0 decoupled reference (raw B), excluded by Q6 · κ=1 flat (raw A1 fails Q4; class C flat; narrow-Q6 (i) via GEN-THM-K3-SIXSTEP-FACTOR-NOGO) · κ=2 closure multiplier −λ on the unit circle, hyperbolic centre reduction does not apply, not a proved Q6 failure (Genesis γ∈{0,2} OPEN) · 0<κ<2, κ≠1 linear closure-mode attraction |1−κ|, the range of the stability statements, not a basin theorem · κ∉{0,1,2} the formal contract; Q6 factor exclusion only via GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO under (H_spec), μ≠0, γ∉{0,2} and RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT; registration request to RRF as model-contract row | >D4a families node @OFN§5.5.4,RRF§6.2a"
  },
  {
-  "id": "AR08-028",
+  "id": "AR08-029",
   "finding": "OFN v0.11",
   "where": "class-C registration",
   "old_sha256": "6b64d42707e23cfc69006b823331507f8c7464fb8503b0082063d4522b2c6e49",
@@ -252,7 +261,7 @@
   "new": "CLASS-C DEF (RTG-OFN-DEF-TRIAD-MODEL-CONTRACT part) ≡ GEN G^N_γ (§6.3c; same declared operation, γ≡κ parameter convention) ≡ FMS \"model C\" ≡ *RRF:class-C-contract; ≠ GEN raw F_γ (§6.3b; GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO covers the raw family only, OFN IMP-O10-01 \"does not cover class C\") | F^N_κ(z)_e=N(z_e)−(κ/3)Σ_jN(z_j), N = λ-equivariant normal form (or 𝓕_{κ,Φ} in Bochner chart) | = different conditional model (reimposed additive mean feedback in transported carrier; RRF §0.3), not passive transport of the raw κ-family, not a native RRF profile, not RRF-NET-W-RAW | contract fields — regularity, one table used at every §5.5 site: all-order formal family (formal algebra and lock geometry; a formal series is not a real germ or a basin theorem) · real polynomial instance C1 (exists independently of smooth J; \"C1\" is the Genesis instance label, not differentiability) · exactly transported C^∞ instance C2, 𝓕_{κ,Φ}=(Φ⁻¹)^{×3}∘P_κ∘N_Φ^{×3}∘Φ^{×3}, exists and is used (IMP-O10-06/07 <DYAD-THM-SMOOTH-EMBEDDING, DYAD-THM-SMOOTH-EQUIVARIANT-CHART; local C^∞ hence C³; qualitative radius; no finite-chart bounds, SG-19; chart-family freedom remains) · exactly transported analytic realization OPEN (DYAD OPEN 20 B-an/B-6) · physical realization or selection OPEN (TRIAD-CLASS); clock primitive T (T⁶ derived sampling); domain local nbhd of 0; readout transported (z or Φ), raw-W readouts carry static offsets; κ values, one OFN table (§5.5.4): κ=0 decoupled reference (raw B), excluded by Q6 · κ=1 flat (raw A1 fails Q4; class C flat; narrow-Q6 (i) via GEN-THM-K3-SIXSTEP-FACTOR-NOGO) · κ=2 closure multiplier −λ on the unit circle, hyperbolic centre reduction does not apply, not a proved Q6 failure (Genesis γ∈{0,2} OPEN) · 0<κ<2, κ≠1 linear closure-mode attraction |1−κ|, the range of the stability statements, not a basin theorem · κ∉{0,1,2} the formal contract; Q6 factor exclusion only via GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO under (H_spec), μ≠0, γ∉{0,2} and RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT; registered by RRF as a reference-only model-contract row with a representation-level ψ-readout entry (rrf-v0.8.4 §6.2a, recorded by OFN v0.11; OPEN-B/E1 stays locked) | >D4a families node @OFN§5.5.4,RRF§6.2a"
  },
  {
-  "id": "AR08-029",
+  "id": "AR08-030",
   "finding": "OFN v0.11",
   "where": "⊥ ρ/N",
   "old_sha256": "8aaa8ad901b07144b43c8ed26bfb5abeab7caa53b631f8a1dd89dfad9c5da360",
@@ -261,7 +270,7 @@
   "new": "⊥ ρ: dyad radial ≠ chiral ratio S/N (OFN v0.11 writes χ=S/N_ch) · ⊥ N: chiral norm (OFN v0.11 N_ch; D4a chiral coords still N) ≠ normal-form map ≠ node count (TDRG) · ⊥ S: chirality ≠ S_h/S_o/S_lift relabels · ⊥ μ: DYAD c₂₁=−½−i2√3/3 ≠ Legacy frustration μ_i · ⊥ M: RECOG memory ℳ ≠ majorant M(s)"
  },
  {
-  "id": "AR08-030",
+  "id": "AR08-031",
   "finding": "OFN v0.11",
   "where": "A8-noannihil",
   "old_sha256": "667778df57ba5eab9356dae5ba100f0a13db7686527ab835eb01e634857917c3",
@@ -270,7 +279,7 @@
   "new": "*OFN:A8-noannihil ALG | F^t(Δ₀,d₀)=(0,0) ⟺ (Δ₀,d₀)=(0,0) <TDRG-ALG-LEM-NOANNIHIL (IMP-O08-06, tdrg-v2.12.14 §6.5) | ¬ universal no-erasure/birth @OFN§3.3"
  },
  {
-  "id": "AR08-031",
+  "id": "AR08-032",
   "finding": "OFN v0.11",
   "where": "reach",
   "old_sha256": "d9c0ff71fa39788b4fa4eb5ae18b45d6dfdc6031f3cb0dc1b1cbe4626d872d1f",
@@ -279,7 +288,7 @@
   "new": "*OFN:reach ALG | free orbit = coset Δ₀+gℤ_N, g=gcd(d,N); band reachable iff 𝒟_k∩(Δ₀+gℤ_N)≠∅ <TDRG-ALG-LEM-REACH (IMP-O08-05) @OFN§4.6"
  },
  {
-  "id": "AR08-032",
+  "id": "AR08-033",
   "finding": "OFN v0.11",
   "where": "retrig",
   "old_sha256": "dda7ae7afe9b92e4239d7591386f9562e644d4932ef2ee0b68c402f08b11700b",
@@ -288,7 +297,7 @@
   "new": "*OFN:retrig ALG | impact offset retriggers iff ε∈B_k∩(B_k+d); exists iff |d|_c≤2k (narrow band); alternation period divides 2; d=0 is a fixed state (OFN08-C12 fulfilled: TDR-G v2.12.14 states the same) <TDRG-ALG-LEM-RETRIG (IMP-O08-07) @OFN§7.3"
  },
  {
-  "id": "AR08-033",
+  "id": "AR08-034",
   "finding": "OFN v0.11",
   "where": "narrow-band",
   "old_sha256": "4d19cc3e0924df02c02e5a9494df980f2b38b7355027c102eb3c002379e4e502",
@@ -297,7 +306,7 @@
   "new": "*OFN:narrow-band THM | k<N/6 ⇒ no triangle with all three pairs defect-related <TDRG-THM-NARROW-BAND-EXCLUSION (IMP-O08-04B) | ~≡ D5 TDR-G narrow-band theorem, AZ low-order obstruction @OFN§7.3"
  },
  {
-  "id": "AR08-034",
+  "id": "AR08-035",
   "finding": "OFN v0.11",
   "where": "flat-closure",
   "old_sha256": "6849c59caab0dd2465f0eb79bbb2873eb37a2dba586f20eb5341eec1b208bdb0",
@@ -306,7 +315,7 @@
   "new": "*OFN:flat-closure THM | Δ_AB+Δ_BC+Δ_CA≡0 mod N for node-difference phases — flat, not curvature <TDRG-THM-HOLONOMY (IMP-O08-04) @OFN§2.2"
  },
  {
-  "id": "AR08-035",
+  "id": "AR08-036",
   "finding": "OFN v0.11",
   "where": "finite-recurrence",
   "old_sha256": "e2560105f24fd1b54d031fe2d69fbd092d12278fa6e5aaf540c1845d45c599e0",
@@ -315,7 +324,7 @@
   "new": "*OFN:finite-recurrence THM | deterministic update on fixed-cap finite state set eventually periodic <TDRG-THM-RECURRENCE (IMP-O08-08) | ¬ uncapped growth @OFN§4.1"
  },
  {
-  "id": "AR08-036",
+  "id": "AR08-037",
   "finding": "OFN v0.11",
   "where": "specs",
   "old_sha256": "a86545a5a27cc48f1e92c0596081a13af809a07102ceaec33a826753d5db937a",
@@ -324,7 +333,7 @@
   "new": "*OFN:specs ALG | three-node no-birth: pairwise |advance| multiset conserved under token permutations <TDRG-ALG-LEM-SPECCONS (IMP-O08-16) | gcd spacings coarser; BIND3 statistics separate @OFN§4.6"
  },
  {
-  "id": "AR08-037",
+  "id": "AR08-038",
   "finding": "OFN v0.11",
   "where": "Finding A",
   "old_sha256": "c296519f6bf76b0eab332f846d31f1cd65b053521b23a7cc40bba8ca176ac422",
@@ -333,7 +342,7 @@
   "new": "RTG-OFN-ALG-STAR-TOKEN-SHIFT RES(from ALG) | B_c:δ_i↦δ_i+c; swap/path commute with B_c; star gives d′_AE=−2δ_A ⇒ d′_AE(B_cX)−d′_AE(X)=−2c ⇒ equivariance iff 2c=0 (c∈{0,N/2}, even N); free-history boost (θ_i(n)+nc, δ_i+c) survives permutation stages, star only for residual subgroup | if: fixed covariantly selected component | ¬ unique rest frame, ¬ removes phase gauge | statement accepted by TDR-G and used in SG-14 (tdrg-v2.12.14 §7); custody transfer XFER-O08-01 deferred by TDR-G to v2.13, the RID stays OFN's; >NUMGEN RF-06 @OFN§4.1"
  },
  {
-  "id": "AR08-038",
+  "id": "AR08-039",
   "finding": "OFN v0.11",
   "where": "links PRIM-CTR pin",
   "old_sha256": "c84bfab829849e41d0c6344517884e617321cbceeee29aea7229b81ca3942e51",
@@ -342,7 +351,7 @@
   "new": "links (edges only): <RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION (g(rs)=g(r)+r^kg(s), g′(1)=1 ⇒ g_k=(r^k−1)/k, log r at k=0) · <RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION (μ₆(k)=−k²/2−i(√3/3)(1+k²) = primitive μ iff |k|=1; inverse identification) · <RECOG-ALG-SELECTION-SIN (swap-odd radial + covariance + 2π-periodicity + endpoint stationarity + lowest harmonic ⇒ a₁ sinη; a₁=−1 and shear not selected) · <RECOG-ALG-SWAP-SPLIT (≡ RRF-DYAD-LIFT guard) · <RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY (S∘T_k∘S=T_{−k} ∀k∈ℝ; ⇏ S T₁=T₁ S; family conjugacy, not S_h, not 𝒪_e; also RRF §4.2a) · <RECOG-THM-TWIN-RADIAL-ACCESS (RRF §4.2: T_s=(ρ−sinη, η+sinhρ−sinη): every 0<Q<7/200 reaches |ρ|≥arccosh 2; no exclusion of odd healing (tanh counterexample); Re μ₆=3b−4a² for g=ρ+aρ²+bρ³) · <GEN-THM-LIN-ORDER6 (λ=e^{±iπ/3}, A³=−I, A⁶=I; linear only, ≠ T⁶=id) · <DYAD-THM-PRIM-CTR (0<Q−3/2Q²≤Q(T⁶x)≤Q−½Q²<Q on 0<Q≤1/400; tube U_T=⋃_{j≤5}T^j{0<Q≤1/625}; Q_m≤Q₀/(1+½Q₀m); ¬ exact clock; ≠ q=|z|²; >OPEN-OFN-7; OFN pins dyad-v6.4.22 §6.14, IMP-O08-20) · NUMGEN L-BACKBONE (q_M=1/M+O(M^{−3/2}), Σ_{m<M}q_m=log M+C_Q+o(1); no dedicated RID, REQ-O09-03; primitive-orbit reading OFN's) · <RECOG-THM-R9-MEMORY (C_z track, fixed DYAD-ALG-NF6 chart: rows |z|≤1/20 (0<q₀≤1/400, C₂=517, window q₀<|G|/517) and |z|≤1/40 (q₀≤1/1600, C₂=163, q₀<|G|/163), G=−(43+5611i√3)/1270080; rows not mixable; C_z ≠ C_W^(h) at cubic order; Q_prim=|h(z)|² ≠ q=|z|²)"
  },
  {
-  "id": "AR08-039",
+  "id": "AR08-040",
   "finding": "OFN v0.11",
   "where": "links L-BACKBONE",
   "old_sha256": "fe6a5550bb2a43b6205ab1e29d437cf30860764fdd9f10d6140bcd0110a79b00",
@@ -351,7 +360,7 @@
   "new": "links (edges only): <RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION (g(rs)=g(r)+r^kg(s), g′(1)=1 ⇒ g_k=(r^k−1)/k, log r at k=0) · <RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION (μ₆(k)=−k²/2−i(√3/3)(1+k²) = primitive μ iff |k|=1; inverse identification) · <RECOG-ALG-SELECTION-SIN (swap-odd radial + covariance + 2π-periodicity + endpoint stationarity + lowest harmonic ⇒ a₁ sinη; a₁=−1 and shear not selected) · <RECOG-ALG-SWAP-SPLIT (≡ RRF-DYAD-LIFT guard) · <RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY (S∘T_k∘S=T_{−k} ∀k∈ℝ; ⇏ S T₁=T₁ S; family conjugacy, not S_h, not 𝒪_e; also RRF §4.2a) · <RECOG-THM-TWIN-RADIAL-ACCESS (RRF §4.2: T_s=(ρ−sinη, η+sinhρ−sinη): every 0<Q<7/200 reaches |ρ|≥arccosh 2; no exclusion of odd healing (tanh counterexample); Re μ₆=3b−4a² for g=ρ+aρ²+bρ³) · <GEN-THM-LIN-ORDER6 (λ=e^{±iπ/3}, A³=−I, A⁶=I; linear only, ≠ T⁶=id) · <DYAD-THM-PRIM-CTR (0<Q−3/2Q²≤Q(T⁶x)≤Q−½Q²<Q on 0<Q≤1/400; tube U_T=⋃_{j≤5}T^j{0<Q≤1/625}; Q_m≤Q₀/(1+½Q₀m); ¬ exact clock; ≠ q=|z|²; >OPEN-OFN-7; OFN pins dyad-v6.4.22 §6.14, IMP-O08-20) · <NUMGEN-RESULT-N5AS1-L-BACKBONE (RES[from ALG]; q_M=1/M+O(M^{−3/2}), Σ_{m<M}q_m=log M+C_Q+o(1); owner types q_m:=Q_true(T^{6m}x), the block-sampled primitive; REQ-O09-03 fulfilled; no domain inclusion inferred) · <RECOG-THM-R9-MEMORY (C_z track, fixed DYAD-ALG-NF6 chart: rows |z|≤1/20 (0<q₀≤1/400, C₂=517, window q₀<|G|/517) and |z|≤1/40 (q₀≤1/1600, C₂=163, q₀<|G|/163), G=−(43+5611i√3)/1270080; rows not mixable; C_z ≠ C_W^(h) at cubic order; Q_prim=|h(z)|² ≠ q=|z|²)"
  },
  {
-  "id": "AR08-040",
+  "id": "AR08-041",
   "finding": "OFN v0.11",
   "where": "Q3a",
   "old_sha256": "0b7eefce3499ff07e6315ea39fecf44e3996e7f6b8bea4829736801342d6b162",
@@ -360,7 +369,7 @@
   "new": "RTG-OFN-DEF-TRIAD-MODEL-CONTRACT DEF | sc: genuine interacting relational-triad class | Q1 exact closure not universal (admissible flat node-mediated sector) · Q2 asymptotic closure admissible if dynamically derived · Q3a full primitive edge autonomy not required; minimum = Standard C in its corrected local form, with an explicitly defined, physically admissible, dynamically consistent isolation regime; Standard B alternative; linear-order recovery insufficient · Q3b asymmetric partial autonomy (designated slaved edge) unacceptable unless designation is declared state data (route C-a); two-factor + slaved edge = math witness only · Q4 class must permit nonintegrable cycle content; flat sectors admissible; raw defect = candidate observable (not curvature) · Q5 complete-state relabel covariance F_{π·m}(πX)=πF_m(X); clock primitive T; ¬ active reversal on fixed raw-edge model; pole-role exchange vs relabel stays OPEN-OPA · Q6 genuine coupling not removable by passive transformation; Q6-REG passive = local C³ diffeos fixing base point; governing narrow reading: no local C³ conjugacy to a product of three planar edge maps and no neutral planar C³ factor | FMS model part: state = oriented edge relations + incidence + chirality (nodes = endpoint classes, model choice); encoding raw W edge values (identity on fixed incidence/chirality sector); closure not imposed, h=Σ_e r_e tracked as raw additive cycle defect; clock primitive update, T⁶ derived sampling; regularity real-analytic admitted test class | carried distinctions r_BC=0 ≠ node identity B=C ≠ reduction 𝒳₃→𝒳₂; holonomy capacity ≠ nonzero value ≠ dynamical independence ≠ curvature | ¬ universal axiom, primacy, physical selection; sub-C³ decouplings OPEN; d≥4 non-planar decompositions need separate proof @OFN§5.5.1–2,4"
  },
  {
-  "id": "AR08-041",
+  "id": "AR08-042",
   "finding": "OFN v0.11",
   "where": "Q3b ↔ RRF-CND-01",
   "old_sha256": "7d4af6fd5a2868776ce7df70711ce84082e1328290609daac6888c6d3c358a69",
@@ -369,7 +378,7 @@
   "new": "RTG-OFN-DEF-TRIAD-MODEL-CONTRACT DEF | sc: genuine interacting relational-triad class | Q1 exact closure not universal (admissible flat node-mediated sector) · Q2 asymptotic closure admissible if dynamically derived · Q3a full primitive edge autonomy not required; minimum = Standard C in its corrected local form, with an explicitly defined, physically admissible, dynamically consistent isolation regime; Standard B alternative; linear-order recovery insufficient · Q3b asymmetric partial autonomy (designated slaved edge) unacceptable unless designation is declared state data (route C-a; necessary, not sufficient for full-state covariance; representation gate RRF-CND-01 Identity/Action, rrf-v0.8.4 §6.2, slot symmetry not identified with node exchange); two-factor + slaved edge = math witness only · Q4 class must permit nonintegrable cycle content; flat sectors admissible; raw defect = candidate observable (not curvature) · Q5 complete-state relabel covariance F_{π·m}(πX)=πF_m(X); clock primitive T; ¬ active reversal on fixed raw-edge model; pole-role exchange vs relabel stays OPEN-OPA · Q6 genuine coupling not removable by passive transformation; Q6-REG passive = local C³ diffeos fixing base point; governing narrow reading: no local C³ conjugacy to a product of three planar edge maps and no neutral planar C³ factor | FMS model part: state = oriented edge relations + incidence + chirality (nodes = endpoint classes, model choice); encoding raw W edge values (identity on fixed incidence/chirality sector); closure not imposed, h=Σ_e r_e tracked as raw additive cycle defect; clock primitive update, T⁶ derived sampling; regularity real-analytic admitted test class | carried distinctions r_BC=0 ≠ node identity B=C ≠ reduction 𝒳₃→𝒳₂; holonomy capacity ≠ nonzero value ≠ dynamical independence ≠ curvature | ¬ universal axiom, primacy, physical selection; sub-C³ decouplings OPEN; d≥4 non-planar decompositions need separate proof @OFN§5.5.1–2,4"
  },
  {
-  "id": "AR08-042",
+  "id": "AR08-043",
   "finding": "OFN v0.11",
   "where": "test-class regularity",
   "old_sha256": "94aec69420376a850af7e8792143b0c081575ebd22d7d2e80d6816366d6bc042",
@@ -378,7 +387,7 @@
   "new": "RTG-OFN-DEF-TRIAD-MODEL-CONTRACT DEF | sc: genuine interacting relational-triad class | Q1 exact closure not universal (admissible flat node-mediated sector) · Q2 asymptotic closure admissible if dynamically derived · Q3a full primitive edge autonomy not required; minimum = Standard C in its corrected local form, with an explicitly defined, physically admissible, dynamically consistent isolation regime; Standard B alternative; linear-order recovery insufficient · Q3b asymmetric partial autonomy (designated slaved edge) unacceptable unless designation is declared state data (route C-a; necessary, not sufficient for full-state covariance; representation gate RRF-CND-01 Identity/Action, rrf-v0.8.4 §6.2, slot symmetry not identified with node exchange); two-factor + slaved edge = math witness only · Q4 class must permit nonintegrable cycle content; flat sectors admissible; raw defect = candidate observable (not curvature) · Q5 complete-state relabel covariance F_{π·m}(πX)=πF_m(X); clock primitive T; ¬ active reversal on fixed raw-edge model; pole-role exchange vs relabel stays OPEN-OPA · Q6 genuine coupling not removable by passive transformation; Q6-REG passive = local C³ diffeos fixing base point; governing narrow reading: no local C³ conjugacy to a product of three planar edge maps and no neutral planar C³ factor | FMS model part: state = oriented edge relations + incidence + chirality (nodes = endpoint classes, model choice); encoding raw W edge values (identity on fixed incidence/chirality sector); closure not imposed, h=Σ_e r_e tracked as raw additive cycle defect; clock primitive update, T⁶ derived sampling; regularity: real C^∞ update germs admitted, real-analytic laws a distinguished subclass, each candidate states its realized regularity, formal series stay formal candidates; C³ remains Q6-REG and the Standard C manifold minimum (contract amendment OFN11-C02, v0.11; RID retained as the same versioned contract — consumers assess the amendment, METH v1.4 §4.4) | carried distinctions r_BC=0 ≠ node identity B=C ≠ reduction 𝒳₃→𝒳₂; holonomy capacity ≠ nonzero value ≠ dynamical independence ≠ curvature | ¬ universal axiom, primacy, physical selection; sub-C³ decouplings OPEN; d≥4 non-planar decompositions need separate proof @OFN§5.5.1–2,4"
  },
  {
-  "id": "AR08-043",
+  "id": "AR08-044",
   "finding": "OFN v0.11",
   "where": "Standard C",
   "old_sha256": "f624630b70f63e5b40847bf61e868d3bc640c559bff696f575a38d2248306f15",
@@ -387,7 +396,7 @@
   "new": "RTG-OFN-DEF-STANDARD-C DEF [COR v0.11, OFN11-C01] | F_e(r)=T(r_e)+I_e(r); Standard C at cubic order ⟺ a positive-dimensional embedded C³ manifold germ M through the null state, invariant under the declared update as a germ, carrying nonzero edge states arbitrarily near 0, with one common punctured domain on which ‖I_e(r)‖≤C‖r‖⁴ for all edges and 0<‖r‖<ε; carrier, edge readout, norm (complete local network-state norm) and primitive clock declared; a singleton, a finite null-state record or an isolated trajectory does not qualify; not all edges need be nonzero (coincidence embedding admitted); recovers the isolated dyad through the μ-carrying order and the six-step return, linear order alone insufficient; quantifiers match RTG-OFN-ALG-RAW-STANDARD-C-NOGO; order fixed by PI 2026-10-18 | physical-isolation scope: I_e≡0 meets the order-four bound only on a regime satisfying the manifold, nontriviality, domain and clock requirements; algebraic cancellation establishes neither those requirements nor physical isolation; physical-isolation reading OPEN (TRIAD-CLASS) | RID retained: correction of the same proposition (old text at ofn-v0.10, Appendix B OFN11-C01) @OFN§5.5.2"
  },
  {
-  "id": "AR08-044",
+  "id": "AR08-045",
   "finding": "OFN v0.11",
   "where": "covariance node",
   "old_sha256": "a692980c88a69bbf732c5b3a871988ac17220404c015e0a20bf8b6fbe4fcac2e",
@@ -396,7 +405,7 @@
   "new": "COVARIANCE-DISCIPLINE node (~ one discipline, three sites: OFN Q5/Q3b route C-a · RRF-CND-01 · GEN G-7) | RRF-CND-01 DEF(proposed interface): distinguish equal node coordinates / zero edge relation / exchange-fixed complete configuration / node merge; contracts Identity/Action (full state 𝒳, node-exchange σ_BC equivariance at selected update; slot exchange ≠ node permutation), Carrier/Encoding (E:𝒳→𝒞, Eσ=RE, witness must lie in E(Fix σ)), Clock/Model (EF_phys=KE; primitive vs six-step not interchangeable; EF=TE ≠ EF=T⁶E even when a C^∞ involution commutes with both), Merge (separate commuting reduction); declare regularity and clock in every realization contract | conditional ER-2B outcome: raw projected 3-edge map with reprojection after each primitive step has exact noninvariance witnesses at degree 2 (primitive) and degree 4 (six-step) — not a physical exclusion | OFN v0.11 Q3b route C-a names RRF-CND-01 Identity/Action as its representation gate (necessary, not sufficient); Q5 states the complete-state covariance requirement @RRF§6.2,OFN§5.5"
  },
  {
-  "id": "AR08-045",
+  "id": "AR08-046",
   "finding": "OFN v0.11",
   "where": "narrow-Q6 status",
   "old_sha256": "ec700035759cb175317889cd73994ef5150b44fa81c621f0e3ce460af1f139a3",
@@ -405,7 +414,7 @@
   "new": "RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT RES(from ALG) (single conclusion status since v0.11, OFN11-C03, METH v1.4 §3.4; Genesis THM premises in Depends on, no promotion) | F not locally C³-conjugate to a product of three planar maps for (i) raw F_κ, κ∈ℝ∖{0,2}; (ii) real C³ class-C germ under GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO hypotheses (C1 real polynomial reps; C2 𝓕_{κ,Φ} conditional on C³ Φ with ΦTΦ⁻¹ commuting with A) | key: spec DF(0)={λ,λ̄}^{×2}∪{(1−κ)λ,(1−κ)λ̄}; closure pair off unit circle for κ∉{0,2} ⇒ two neutral planar factors ⇒ (H_spec) as (1−κ)⁶≠1 ⇒ contradiction with <GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO (κ≠1) / <GEN-THM-K3-SIXSTEP-FACTOR-NOGO (κ=1) / TRANSPORTED-CHIRAL (ii) (IMP-O10-01/02) | ¬ formal series as such (G-JET), sub-C³, non-planar, closure-mode-only; ¬ distinguishes class C from third-jet equivalents (G-SEL); ¬ realizes J; GEN v2.8.9 erratum concurs @OFN§5.5.3"
  },
  {
-  "id": "AR08-046",
+  "id": "AR08-047",
   "finding": "OFN v0.11",
   "where": "narrow-Q6 C2",
   "old_sha256": "f4784983bab125b54b04f1989f68e82fae787a9b76ca9bb264b096954bd8833f",
@@ -414,7 +423,7 @@
   "new": "RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT RES(from ALG) (single conclusion status since v0.11, OFN11-C03, METH v1.4 §3.4; Genesis THM premises in Depends on, no promotion) | F not locally C³-conjugate to a product of three planar maps for (i) raw F_κ, κ∈ℝ∖{0,2}; (ii) real C³ class-C germ under GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO hypotheses (C1 real polynomial reps; C2 the exactly transported 𝓕_{κ,Φ} in the real C^∞, hence C³, chart Φ of DYAD-THM-SMOOTH-EQUIVARIANT-CHART, IMP-O10-07) | key: spec DF(0)={λ,λ̄}^{×2}∪{(1−κ)λ,(1−κ)λ̄}; closure pair off unit circle for κ∉{0,2} ⇒ two neutral planar factors ⇒ (H_spec) as (1−κ)⁶≠1 ⇒ contradiction with <GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO (κ≠1) / <GEN-THM-K3-SIXSTEP-FACTOR-NOGO (κ=1) / TRANSPORTED-CHIRAL (ii) (IMP-O10-01/02) | ¬ formal series as such (G-JET), sub-C³, non-planar, closure-mode-only; ¬ distinguishes class C from third-jet equivalents (G-SEL); ¬ realizes J; GEN v2.8.9 erratum concurs @OFN§5.5.3"
  },
  {
-  "id": "AR08-047",
+  "id": "AR08-048",
   "finding": "OFN v0.11",
   "where": "narrow-Q6 non-claim",
   "old_sha256": "e3096dc4e8c89ebf95702d7574418c370ea7f95fee9024ade2c7c8988c61cbab",
@@ -423,7 +432,7 @@
   "new": "RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT RES(from ALG) (single conclusion status since v0.11, OFN11-C03, METH v1.4 §3.4; Genesis THM premises in Depends on, no promotion) | F not locally C³-conjugate to a product of three planar maps for (i) raw F_κ, κ∈ℝ∖{0,2}; (ii) real C³ class-C germ under GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO hypotheses (C1 real polynomial reps; C2 the exactly transported 𝓕_{κ,Φ} in the real C^∞, hence C³, chart Φ of DYAD-THM-SMOOTH-EQUIVARIANT-CHART, IMP-O10-07) | key: spec DF(0)={λ,λ̄}^{×2}∪{(1−κ)λ,(1−κ)λ̄}; closure pair off unit circle for κ∉{0,2} ⇒ two neutral planar factors ⇒ (H_spec) as (1−κ)⁶≠1 ⇒ contradiction with <GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO (κ≠1) / <GEN-THM-K3-SIXSTEP-FACTOR-NOGO (κ=1) / TRANSPORTED-CHIRAL (ii) (IMP-O10-01/02) | ¬ formal series as such (G-JET), sub-C³, non-planar, closure-mode-only; ¬ distinguishes class C from third-jet equivalents (G-SEL); ¬ analytic or physical realization; GEN v2.8.9 erratum concurs @OFN§5.5.3"
  },
  {
-  "id": "AR08-048",
+  "id": "AR08-049",
   "finding": "OFN v0.11",
   "where": "defect node",
   "old_sha256": "384a630cb745655f26d0e177e075dc7663a7d907fd8f8b64db808621c7958b71",
@@ -432,7 +441,7 @@
   "new": "*OFN:class-C-defect ALG (formal family; real C^∞ for 𝓕_{κ,Φ}; SESSION provenance, unregistered) | κ≠1: transported defect evolves by (1−κ)ΣN off lock surfaces (Q4 capacity); κ=1 flat @OFN§5.5.4"
  },
  {
-  "id": "AR08-049",
+  "id": "AR08-050",
   "finding": "OFN v0.11",
   "where": "realization node",
   "old_sha256": "8d07923beb041e56a0e1e2e816d958fce1a28447c8bf333172ed0c4ebf625ce6",
@@ -441,7 +450,7 @@
   "new": "*OFN:class-C-realization ALG | a real carrier for all of class C follows from one identity-tangent sixth root of F=T⁶ (≡ real J) via Bochner Φ=⅙Σ_{k=0}^5A^{−k}J^k; convergent normalizer unnecessary | in C^∞ the object exists (<DYAD-THM-SMOOTH-EMBEDDING, IMP-O10-06) and Φ is the owner's chart (<DYAD-THM-SMOOTH-EQUIVARIANT-CHART, IMP-O10-07); uniqueness of J, K_m, R in the DYAD F2/F3 sense, E2 only among generators with DX′(0)=0; analytic existence DYAD OPEN 20 B-an/B-6 (IMP-O10-04) @OFN§5.5.4"
  },
  {
-  "id": "AR08-050",
+  "id": "AR08-051",
   "finding": "OFN v0.11",
   "where": "FMS disposition",
   "old_sha256": "957875aa9f060a23a86b3e3884b3e21d0a601cf767e0be9ad6ed24176fa6ddce",
@@ -450,7 +459,7 @@
   "new": "*OFN:FMS-disposition DEF(model policy) | A1 raw κ=1 excluded (Q4 flat; NOGO), kept as flat-sector model · B raw κ=0 excluded (Q6), decoupled reference · A2 raw 0<κ<2, κ≠1 excluded under Standard C cubic (NOGO; narrow-Q6 (i)); Q6 and Q4 capacity hold; non-manifold invariant sets and finite-amplitude regimes lie outside this test and the no-go (a proposal using them supplies its own recovery contract); other carriers OPEN-C19-L · C transported κ-family = primary realized smooth mathematical candidate family (Standard C exactly on 𝒮₀, 𝒮_±, real C^∞ for the C^∞ member; Q4 capacity; Q5 with active covariance; Q6 by IMP-O10-02 and narrow-Q6 (ii), C2 included); analytic exact realization and physical selection open; a family with an in-class modulus, not one model; other C routes open | ¬ physical selection | ~ D4a: RER modal map = GEN F₁ = OFN raw κ=1 = A1 @OFN§5.5.5"
  },
  {
-  "id": "AR08-051",
+  "id": "AR08-052",
   "finding": "OFN v0.11",
   "where": "chiral attraction",
   "old_sha256": "b579dcd4d468c6d1c3949db366f7e4f0ad458d4d27c8f315f51ec66e0e6c223f",
@@ -459,7 +468,7 @@
   "new": "*OFN:chiral-attraction ALG(leading order, SESSION) | per six-step block Δlog(|u|²/|v|²)=⅓(|u|²−|v|²)+O(4): 𝒮_+={u=0}, 𝒮_−={v=0} relatively attracting; Δχ=S(1/6−2χ²)+O(5) ⇒ |χ|→1/√12 while |S| decays with N_ch; cubic-truncation rate |u_m|/|v_m|≍m^{−1/2} on u→0 | equal-amplitude set |u|=|v| separates only at cubic order, full invariance not shown; coincidence surfaces invariant, transversally repelling; basin-boundary claim conditional on two disjoint chiral basins | numerics degree-5 truncated N, 48/48 runs (cubic separator only) @OFN§5.5.6"
  },
  {
-  "id": "AR08-052",
+  "id": "AR08-053",
   "finding": "OFN v0.11",
   "where": "lock imports",
   "old_sha256": "2d40ea90d9454c486d49101181ab167125a9517df869c8b623dd4eb654bb1b0e",
@@ -468,7 +477,7 @@
   "new": "*OFN:lock-imports DEF | DYAD OPEN 3 single-dyad results (IMP-O10-05) apply edgewise only on 𝒮₀, 𝒮_±, the surfaces exist as real C^∞ submanifolds for the C^∞ member; constants hold edgewise in the dyad chart and domain where proved, qualitatively in the Φ chart unless an explicit estimate is supplied (SG-19); R9-conditional statements keep their assumption; nothing off-surface, no separator/basin @OFN§5.5.6"
  },
  {
-  "id": "AR08-053",
+  "id": "AR08-054",
   "finding": "OFN v0.11",
   "where": "OPA inputs",
   "old_sha256": "09c05f51395a78827332f91e7a1ff1a8d86da2c4b8c74e987d72ab5477fe0a39",
@@ -477,7 +486,7 @@
   "new": "  ← RTG-OFN-OPEN-OPA which oriented variable is physical/conserved/observable/gauge; inputs IMP-O09-03 family conjugacy, Q5, DYAD Lemma F/F3 (removes flat ambiguity among smooth commuting realizations; a real C^∞ realization exists, IMP-O10-06/07, analytic open; identifying any realization with pole exchange needs a separate ontological and representation contract), RRF OPEN-A S_h; passive/distinct-role dichotomy exhaustive only for isolated dyad; REQ-O08-01 (no completed June-19 construction found) ≡~ RRF OPEN-A"
  },
  {
-  "id": "AR08-054",
+  "id": "AR08-055",
   "finding": "OFN v0.11",
   "where": "BANDWIDTH deps",
   "old_sha256": "3d552051a71d6f92257881616333d35d3a417cc0aea46835bc8e5a8954e209e4",
@@ -486,7 +495,7 @@
   "new": "  ← RTG-OFN-OPEN-BANDWIDTH (5A) joint (N,k,Σ_δ) + narrow-band regime <TDRG-ALG-LEM-REACH, TDRG-ALG-LEM-RETRIG, FSP, SECTOR"
  },
  {
-  "id": "AR08-055",
+  "id": "AR08-056",
   "finding": "OFN v0.11",
   "where": "SECTOR deps",
   "old_sha256": "8b8c4fc7d1b355373de0699e20c661d3c7c8051a172054215fff666c767f127e",
@@ -495,7 +504,7 @@
   "new": "  ← RTG-OFN-OPEN-SECTOR free cosets missing the band; many-node reassignment <TDRG-ALG-LEM-REACH, TDRG-ALG-LEM-SPECCONS, TDRG OPEN-SPECCONS-STAR"
  },
  {
-  "id": "AR08-056",
+  "id": "AR08-057",
   "finding": "OFN v0.11",
   "where": "TIME-INDEX deps",
   "old_sha256": "d7eb27c720588dd657bc6d45dbd96bb4fd1cb11b3024f8105c72f8b8a3bd1924",
@@ -504,7 +513,7 @@
   "new": "RTG-OFN-OPEN-TIME-INDEX (7) | relational order + duration without external clock <DYAD-THM-PRIM-CTR (IMP-O08-20), NUMGEN history/order/slip, NUMGEN-RESULT-N5AS1-L-BACKBONE, RECOG event rule"
  },
  {
-  "id": "AR08-057",
+  "id": "AR08-058",
   "finding": "OFN v0.11",
   "where": "P2B inputs",
   "old_sha256": "ab93d08e3350302a3be111723c33d7f9cbead4eaad57629a0654ac1e73b6b514",
@@ -513,7 +522,7 @@
   "new": "P2B-CRITERION node (one criterion, three citers: RTG-OPEN-TRIAD-REDUCTION (P2B) · RTG-OFN-OPEN-PRIMACY-3B · O-REDUCTION-TARGET) | admissible independently specified triadic dynamics with invariant dyad subsystem: state source/target spaces, admissible class, embedding ι, gauges, equivalence; T₃∘ι=ι∘T on an invariant submanifold, coordinate/gauge equivalence explicit; longitudinal c=0 match without transverse invariance insufficient (row-agreement T₃(s,c)|_{c=0}=T(s) insufficient, OFN §8); trivial extension inserting T as factor excluded unless that is the stated target; closure = construction + proof or nonexistence in named class; positive/negative result ≠ ontology verdict; P0 = physical-selection condition, not blocker of a conditional reduction | OFN v0.11 inputs: class-C lock surfaces = a real C^∞ invariant-subsystem witness for a specified coupled triad law (IMP-O10-06/07), not closure (built from T in a transported chart ⇒ \"independently specified admissible T₃\"? undecided); RAW-STANDARD-C-NOGO excludes smooth isolation through 0 ∀κ≠0 | no technical owner assigned | ~ D4a RER, ER-2B; D6 PREL quotes old row-agreement form @PROG§5,OFN§8"
  },
  {
-  "id": "AR08-058",
+  "id": "AR08-059",
   "finding": "OFN v0.11",
   "where": "P2B citers",
   "old_sha256": "8d1704b4a06bbb27db3f4df683bc21511b8a83623573c004c3bc76035cbbb581",
@@ -522,7 +531,7 @@
   "new": "P2B-CRITERION node (one criterion, three citers: RTG-OPEN-TRIAD-REDUCTION (P2B) · RTG-OFN-OPEN-PRIMACY-3B · RTG-OFN-DEF-REDUCTION-TARGET (atlas label O-REDUCTION-TARGET; RID registered v0.11)) | admissible independently specified triadic dynamics with invariant dyad subsystem: state source/target spaces, admissible class, embedding ι, gauges, equivalence; T₃∘ι=ι∘T on an invariant submanifold, coordinate/gauge equivalence explicit; longitudinal c=0 match without transverse invariance insufficient (row-agreement T₃(s,c)|_{c=0}=T(s) insufficient, OFN §8); trivial extension inserting T as factor excluded unless that is the stated target; closure = construction + proof or nonexistence in named class; positive/negative result ≠ ontology verdict; P0 = physical-selection condition, not blocker of a conditional reduction | OFN v0.11 inputs: class-C lock surfaces = a real C^∞ invariant-subsystem witness for a specified coupled triad law (IMP-O10-06/07), not closure (built from T in a transported chart ⇒ \"independently specified admissible T₃\"? undecided); RAW-STANDARD-C-NOGO excludes smooth isolation through 0 ∀κ≠0 | no technical owner assigned | ~ D4a RER, ER-2B; D6 PREL quotes old row-agreement form @PROG§5,OFN§8"
  },
  {
-  "id": "AR08-059",
+  "id": "AR08-060",
   "finding": "OFN v0.11",
   "where": "TRIAD-CLASS",
   "old_sha256": "a5598fe739159947a2febf414a90fee3ca33e4c656c631e98c4e838562dec985",
@@ -531,7 +540,7 @@
   "new": "RTG-OFN-OPEN-TRIAD-CLASS (registered at the v0.10 adoption) | physical criterion selecting class-C member (ψ-modulus) + physical-isolation reading of Standard C + chirality dictionary <DYAD OPEN 20 B-an/B-6 (only if an analytic model is wanted), RF-O10-02, RRF §6.2a model-contract row and representation-level readout entry, FMS basin work, sub-C³ (Q6-REG), OPEN-C19-L, OPA | ¬ closed by formal invariant, \"Im c=0\", basin preference | next: the physical selection, isolation and chirality obligations; rrf-v0.8.4 §6.2a supplies the representation-level readout contract (primitive clock and transported chart declared; |c| reads m only up to reflection; \"Im c=0\" no selection principle); no sign-reading scalar for m−m* mandatory"
  },
  {
-  "id": "AR08-060",
+  "id": "AR08-061",
   "finding": "OFN v0.11",
   "where": "continuous closure",
   "old_sha256": "8cb40990366a5b0d4c6fe92a533cd763029b538f0c8151de624f2679671aa309",
@@ -540,7 +549,7 @@
   "new": "*OFN:continuous-closure OPEN (no own RID; registry home OPEN-OFN-FRUSTRATION and OPEN-OFN-HOLONOMY-RANK since v0.11) | broader physical closure / nonintegrable connection; continuous node-difference closure already used by TRIAD (RF-O08-02)"
  },
  {
-  "id": "AR08-061",
+  "id": "AR08-062",
   "finding": "OFN v0.11",
   "where": "admin queue",
   "old_sha256": "4be1aaa03167a3bd82b1378f9c66f2e2c49c11d5d0e4a739c10b018f50601ba9",
@@ -549,7 +558,7 @@
   "new": "admin queue (OFN, v0.11 §12.3–§12.4) | XFER-O08-01 Finding A: statement accepted by TDR-G, custody deferred to TDR-G v2.13, RID stays OFN's · CUST-O09-01 answered, REQ-O09-04 fulfilled (DYAD-DEF-PRIMITIVE-MAP, Genesis alias) · REQ-O09-02 fulfilled (records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md, 5c00f66d…9b55, with its evidence qualification) · REQ-O09-03 fulfilled (NUMGEN-RESULT-N5AS1-L-BACKBONE) · REQ-O09-05 endpoint component fulfilled (TDRG-DEF-ORIENT, SG-14 on the canonical branch, largest_center exception), custody component deferred, six-constraint list not recovered (OPEN-OFN-2) · REQ-O09-06 primary FMS closeout record (open) · REQ-O08-01 OPA definition/proof task (open) · IMP-O08-01 zero-origin cited by Genesis section (no Genesis RID) · custody: v0.10 release record and builders placed unchanged under upload/ofn-records/ (20/20 hash-checked); transported_chiral_pq.py, the FMS ψ scripts, ER-2B v0.3.1 and the v0.9 records missing"
  },
  {
-  "id": "AR08-062",
+  "id": "AR08-063",
   "finding": "OFN v0.11",
   "where": "token-sum row",
   "old_sha256": "8f2076a5c23ea49a9065c54417108dc77963854c20ac1bce9a87659ab94a9a2c",
@@ -558,7 +567,7 @@
   "new": "*OFN:rejections (live, scoped) | background spacetime primitive — excluded from starting ontology (charts/proto-geometry allowed) · external physical time — excluded (formal parameters allowed) · bare formal index as clock — unsupported without construction · isolated nodes with independent attributes — excluded (node storage allowed; effective token origin needs relational role) · absolute phase observable — no · primitive external force ontology — not RTG aim · unbridged smooth coupling inserted into TDR-G — not native · arbitrary path label / first-listed star centre as outcome selector — excluded · total additive token sum as a physical conserved quantity — exact conservation fails on the birth-capable model: Σδ changes by −δ_A (mod N) at a star event (TDRG-DEF-STAR) and is preserved by swap, path shift and ties; the common token shift is not a full-model gauge (TDR-G SG-14); nonconservation ≠ gauge dependence; TDR-G's \"gauge-like\"/\"gauge artifact\" labels referred to TDR-G (pipes/TDRG/20261029-OFN-token-sum-gauge-label.md, open)"
  },
  {
-  "id": "AR08-063",
+  "id": "AR08-064",
   "finding": "OFN v0.11",
   "where": "retired trap axiom",
   "old_sha256": "0114f4a9eb50dd8045ce9d3dd6142acd7b4c9ad609ed21946852e371c7f7be89",
@@ -567,7 +576,7 @@
   "new": "*OFN:retired | RET \"interaction onset requires variational principle\" · \"dyadic map unique generator\" → HYP · trap axiom deleted (= TDRG-ALG-LEM-NOANNIHIL scope) · RET \"fracture/trigger/swap derived from information theory alone\" (circular/incomplete) · withdrawn v0.10 working claims not imported: \"normalizer changes affect only ≥5th order\", \"remaining class members not conjugate\", \"|u|/|v| drifts monotonically in every run\", \"|c| reads m given κ\""
  },
  {
-  "id": "AR08-064",
+  "id": "AR08-065",
   "finding": "OFN v0.11",
   "where": "OFN.O1 retired",
   "old_sha256": "1d88bec7d3ebebe19c645acbde35342d1340f6211c13bb7d97835d7a6f678081",
@@ -576,7 +585,7 @@
   "new": ""
  },
  {
-  "id": "AR08-065",
+  "id": "AR08-066",
   "finding": "OFN v0.11",
   "where": "OFN.O3 retired",
   "old_sha256": "cd4c61b4dc999c2e30473fb85b59f0911b184e5fe8c264c2f8ce6bff41eef0bc",
@@ -585,7 +594,7 @@
   "new": ""
  },
  {
-  "id": "AR08-066",
+  "id": "AR08-067",
   "finding": "OFN v0.11",
   "where": "OFN.O4 retired",
   "old_sha256": "c629933ba72f36f8d26c250be5da43a02909a9f8249586cb5ad863840c76d4d6",
@@ -594,7 +603,7 @@
   "new": ""
  },
  {
-  "id": "AR08-067",
+  "id": "AR08-068",
   "finding": "OFN v0.11",
   "where": "OFN.O5 retired",
   "old_sha256": "d40d4feb598a0f176800875765395c1a1f941a018e3489c74f1b94658bb13ad3",
@@ -603,7 +612,7 @@
   "new": ""
  },
  {
-  "id": "AR08-068",
+  "id": "AR08-069",
   "finding": "OFN v0.11",
   "where": "OFN.O7 retired",
   "old_sha256": "f5d85ad262311b883254c25a3ac14619a1af69cefa21baa3c42652b6e138cffb",
@@ -612,7 +621,7 @@
   "new": ""
  },
  {
-  "id": "AR08-069",
+  "id": "AR08-070",
   "finding": "OFN v0.11",
   "where": "OFN.O8 retired",
   "old_sha256": "865db14220203baa5f49a5d4368e7ec413dce23089a2c369b741b06571377422",
@@ -621,7 +630,7 @@
   "new": ""
  },
  {
-  "id": "AR08-070",
+  "id": "AR08-071",
   "finding": "OFN v0.11",
   "where": "OFN.O12 retired",
   "old_sha256": "607ac81ab31f2d2dd8e6825c89c8856bdef92f8fc0c821964fe6655d96591506",
@@ -630,7 +639,7 @@
   "new": ""
  },
  {
-  "id": "AR08-071",
+  "id": "AR08-072",
   "finding": "OFN v0.11",
   "where": "OFN.O13 retired",
   "old_sha256": "7d0c5e55f830bb4e50bc200bc64baaa9d7d48c45320996f62126c922f58bafca",
@@ -639,7 +648,7 @@
   "new": ""
  },
  {
-  "id": "AR08-072",
+  "id": "AR08-073",
   "finding": "OFN v0.11",
   "where": "OFN.O6 reworded",
   "old_sha256": "41d18162a5d1a954cd3766ab7ff7230fcfa75a0210af2271c29fdfa1523b77a1",
@@ -648,7 +657,7 @@
   "new": "OFN.O6 D-RID (OFN-internal, residual after v0.11): v0.11 registered six DEF RIDs for unchanged bodies (RTG-OFN-DEF-ZERO-ORIGIN, -DIST-ZN, -DISCRETE-REDUCTION-BOUNDARY, -CONTINUOUS-REPRESENTATION, -FINITE-DESCRIPTION, -REDUCTION-TARGET) and gave the continuous-closure block (§4.1) the registry home OPEN-OFN-FRUSTRATION / -HOLONOMY-RANK and the null-ledger block (§4.5) OPEN-OFN-IQP; still without identity: the orientation vocabulary (O-ORIENT-VOCAB), the §7.3 joint-selection item (≈ OPEN-OFN-5A); OPEN-C19-L stays a session label by owner decision."
  },
  {
-  "id": "AR08-073",
+  "id": "AR08-074",
   "finding": "OFN v0.11",
   "where": "OFN.O9 reworded",
   "old_sha256": "54acde02061c97fca7f2675b613a04b6fe2000069403ec9c4c4fe4da796c76cf",
@@ -657,7 +666,7 @@
   "new": "OFN.O9 D-STALE (low; owner-kept exception): IMP-O10-05 (§11.4) keeps \"not re-verified line by line for this draft\" as the evidence-access qualification of the reviewed candidate, deliberately retained at the release (v0.11 release record §3b item 2) for a later source-maintenance pass; the other v0.10 draft-tense residues (header companion line, §0.1 boundary, §0.3 \"until then\", RF-O10-04 \"for this draft\") are absent from v0.11."
  },
  {
-  "id": "AR08-074",
+  "id": "AR08-075",
   "finding": "OFN v0.11",
   "where": "OFN.O11 reworded",
   "old_sha256": "223c6634a79fb920c0ef7250c54a8e06b380f3fdf8e3bea6326941061d0caf4a",
@@ -666,7 +675,7 @@
   "new": "OFN.O11 ~ D-LINK | OFN v0.11 IMP-O10-05 uses the DYAD OPEN 3 phase package at its recorded R9-conditional scope, edgewise on the lock surfaces only (constants in the dyad chart; qualitative in Φ, SG-19). RECOG-THM-A1A-PHASE-EXISTENCE-U supplies a separate R9-free existence route on U, not an automatic removal of the R9 premise from T1/T2 or OPEN21. Any OFN lock-surface import change requires a claim/domain/observable comparison and an owner decision; no physical consequence follows from phase existence alone."
  },
  {
-  "id": "AR08-075",
+  "id": "AR08-076",
   "finding": "OFN v0.11",
   "where": "OFN.O14 new",
   "old_sha256": "240a2106373d71789820982246938bbb8a729075cbae27d33e627d3c08ebaca8",
@@ -675,7 +684,7 @@
   "new": "OFN.O11 ~ D-LINK | OFN v0.11 IMP-O10-05 uses the DYAD OPEN 3 phase package at its recorded R9-conditional scope, edgewise on the lock surfaces only (constants in the dyad chart; qualitative in Φ, SG-19). RECOG-THM-A1A-PHASE-EXISTENCE-U supplies a separate R9-free existence route on U, not an automatic removal of the R9 premise from T1/T2 or OPEN21. Any OFN lock-surface import change requires a claim/domain/observable comparison and an owner decision; no physical consequence follows from phase existence alone.\nOFN.O14 D-LINK (low; wording, new): the v0.11 κ table (§5.5.4) calls γ≡κ \"the declared parameter convention of Genesis §6.3c and RRF §6.2a\"; GEN v2.9 §6.3b–c writes γ only and states no κ identification (atlas-checked: gen-v2.9 §6.3b–c, L814–906, carry no κ symbol apart from the script name kappa_pq_symbolic.py; §6.8 keeps κ_f distinct from that γ and makes no parameter identification). The declaration is OFN's and RRF's, applied to the Genesis family parameter; for the next OFN edition, no scientific effect (RRF.F5).\n"
  },
  {
-  "id": "AR08-076",
+  "id": "AR08-077",
   "finding": "OFN v0.11",
   "where": "RRF.F5 reworded",
   "old_sha256": "c8347d1dc4472234875a97a78a854bc3b0115807e73d13c901ff7bf14d904790",
@@ -684,7 +693,7 @@
   "new": "RRF.F5 D-LINK (owner-stated convention): class-C κ ≡ GEN γ is OFN's and RRF's parameter convention — OFN v0.11 §11.4 (claim-level import of GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO: γ ≡ κ ∈ ℝ∖{0,2}, under (H_spec)) and its §5.5.4 κ table (\"not a raw/transported model identity\"; attribution wording OFN.O14) and RRF v0.8.4 §6.2a (γ≡κ in the OFN class-C parameter convention); the §11.4 row is the raw-family dictionary and says it does not cover class C; GEN writes γ and states no identification of its own; no owner asserts a model identity raw F_γ ↔ class-C F^N_κ (different conditional model, OFN §5.5.4); FMS model C ≡ class C (CLASS-C node). κ still collides with GEN birth κ, GEN face-lift κ_f (owner notation, GEN v2.9 §6.8), DYAD backbone κ (F1)."
  },
  {
-  "id": "AR08-077",
+  "id": "AR08-078",
   "finding": "OFN v0.11",
   "where": "METH.M2 zero-origin",
   "old_sha256": "1b47077ae93fec28f79507fb3d4ae5b1bba027ffb56f73c2918abc01c2a28a71",
@@ -693,7 +702,7 @@
   "new": "METH.M2 D-RID (programme pattern): \"RID unavailable\" imports / unnumbered theorems recur in PREL (one RID total), NUMGEN tier 2 (C7C, DISC, ten-label results under module RIDs), AZ, Legacy imports, the Genesis zero-origin [DEF] (gen-v2.9 §6.1, cited by OFN IMP-O08-01 by section); TDR-G registered its claim RIDs in v2.12.14 and NUMGEN its tier 1 in v1.21; only owners register RIDs (METH v1.4 §4.4)."
  },
  {
-  "id": "AR08-078",
+  "id": "AR08-079",
   "finding": "OFN v0.11",
   "where": "METH.M2 OFN",
   "old_sha256": "b08c63b6eb8d9f730816775adea5c8d52adc28f10518ce7c4fb0d57bad411fef",
@@ -702,7 +711,7 @@
   "new": "METH.M2 D-RID (programme pattern): \"RID unavailable\" imports / unnumbered theorems recur in PREL (one RID total), NUMGEN tier 2 (C7C, DISC, ten-label results under module RIDs), AZ, Legacy imports, the Genesis zero-origin [DEF] (gen-v2.9 §6.1, cited by OFN IMP-O08-01 by section); TDR-G registered its claim RIDs in v2.12.14 (OFN v0.11 repinned to them), NUMGEN its tier 1 in v1.21 and OFN six DEF RIDs in v0.11; only owners register RIDs (METH v1.4 §4.4)."
  },
  {
-  "id": "AR08-079",
+  "id": "AR08-080",
   "finding": "OFN v0.11",
   "where": "chart node consumer",
   "old_sha256": "d5a77423576caf624ebef4a7cb7013bc49176fe032313bc9b6e158d728896794",
@@ -711,7 +720,7 @@
   "new": "DYAD-THM-SMOOTH-EQUIVARIANT-CHART THM | corollary of SMOOTH-EMBEDDING E3–E4 (finite-group averaging): Φ:=⅙Σ_{k=0}^5A^{−k}J^k is a C^∞ local diffeomorphism, Φ(0)=0, DΦ(0)=I, Φ∘J=A∘Φ, N_Φ=ΦTΦ⁻¹ commutes with A | sc: radius qualitative; Φ inherits none of the §6.14 finite-chart bounds (SG-19); no analyticity (B-an, B-6 OPEN) | interface: real C^∞ (hence C³) chart meeting the hypothesis of GEN §6.3c instance C2 (Φ(0)=0, DΦ(0)=I, ΦTΦ⁻¹ commuting with A); GEN v2.9 imports it for the G-20 existence note (scoped, C^∞ local germs); OFN v0.11 class C uses it (IMP-O10-07: C2 exists and is used; narrow-Q6 (ii)); no physical model, carrier, closure condition or γ selected (SG-14/15) | >GEN C2, OFN class C, FMS, RRF (L5 DYAD.X1) | @DYAD§6.17"
  },
  {
-  "id": "AR08-080",
+  "id": "AR08-081",
   "finding": "OFN v0.11",
   "where": "DYAD.X1 OFN",
   "old_sha256": "aab4341feeaa00f93da20c5908f03ea7b10acf443c281fdbfe8d11e25755d298",
@@ -720,7 +729,7 @@
   "new": "DYAD.X1 D-LINK | DYAD-THM-SMOOTH-EQUIVARIANT-CHART (C^∞ Φ with ΦJ=AΦ, ΦTΦ⁻¹ commuting with A) is exactly GEN §6.3c instance C2's hypothesis; C2 is non-vacuous in C^∞. GEN v2.9 §6.3c records it (G-20 existence note; scoped DYAD v6.4.22 import of this RID and DYAD-THM-SMOOTH-EMBEDDING); OFN v0.11 §5.5.4 consumes it (IMP-O10-06/07; C2 in the regularity table and in narrow-Q6 (ii)); RRF v0.8.4 §6.2a records the λ-equivariant C^∞ chart as a conditional reading. Affects GEN G-20, OFN Q6, FMS \"model C\"; physical selection open, analytic version is B-6. (≡ OFN.O1/FMS.M1/ER2B.Z2 class-C staleness, D1/D4a)"
  },
  {
-  "id": "AR08-081",
+  "id": "AR08-082",
   "finding": "OFN v0.11",
   "where": "DYAD.X1 residual",
   "old_sha256": "ae1793bf369cfd1340ab7f7a1da55e9d1879a2b568f0bff5623d0fc65d3d11ff",
@@ -729,7 +738,7 @@
   "new": "DYAD.X1 D-LINK | DYAD-THM-SMOOTH-EQUIVARIANT-CHART (C^∞ Φ with ΦJ=AΦ, ΦTΦ⁻¹ commuting with A) is exactly GEN §6.3c instance C2's hypothesis; C2 is non-vacuous in C^∞. GEN v2.9 §6.3c records it (G-20 existence note; scoped DYAD v6.4.22 import of this RID and DYAD-THM-SMOOTH-EMBEDDING); OFN v0.11 §5.5.4 consumes it (IMP-O10-06/07; C2 in the regularity table and in narrow-Q6 (ii)); RRF v0.8.4 §6.2a records the λ-equivariant C^∞ chart as a conditional reading. Affects GEN G-20, OFN Q6, FMS \"model C\"; physical selection open, analytic version is B-6. (residual class-C staleness at FMS.M1/ER2B.Z2, F5)"
  },
  {
-  "id": "AR08-082",
+  "id": "AR08-083",
   "finding": "OFN v0.11",
   "where": "comparator consumer",
   "old_sha256": "461b9d5bb339c5838ccdf6a327a12a79596af1a9fca30dbbc536f2014ac0f529",
@@ -738,25 +747,25 @@
   "new": "RECOG-DEF-POLE-COMPARATOR, RECOG-DEF-STATE-COMPARATOR DEF | (L1) | >OFN v0.11 §6.4 (IMP-O08-17, recog-v0.3.26) | @§6.1"
  },
  {
-  "id": "AR08-083",
+  "id": "AR08-084",
   "finding": "RECOG v0.3.26",
   "where": "A1b node COR",
   "old_sha256": "60e24dd8a7934eb2b17ea69706333825bb04833cd7b56ae0bfed95a6b27adc62",
-  "new_sha256": "9904622ed35cbfb6add9e73760616099459a323f445148e2c4f2cade0ea5ce6c",
+  "new_sha256": "bddb1b4ea0f935fd58d9c91be1c906c185418ed44192f27306c77af1f2abf82e",
   "old": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change; recorded by NUMGEN v1.21 as independent agreement) | v0.3.25: RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A bridge proof constants] — same schedule with the known-a / declared-data centre c'''_k(a)=τψ(a+M_k)−(k−1)π/3+(√3/8)(a+M_k)^{−1/2}+(τ/2)(a+M_k)^{−1} and an error E'''=O_a((1+log(a+M_k))/(a+M_k)) computable from (a, M_k, r_k) — not from the record alone; harmonic tails with the universal ceiling E'≤0.31 (RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE), the two tails combine exactly into one boundary term (RECOG-ALG-A1C-COMBINED-TAIL); cert RECOG-ART-A1C-SHARPENED-SCHEDULE; the A1b \"Not supplied\" status for a computable envelope is supplied in place (known-a only; the unknown-a windows are at the readout node) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b",
-  "new": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change; recorded by NUMGEN v1.21 as independent agreement) | v0.3.25: RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A bridge proof constants] — same schedule with the known-a / declared-data centre c'''_k(a)=τψ(a+M_k)−(k−1)π/3+(√3/8)(a+M_k)^{−1/2}+(τ/2)(a+M_k)^{−1} and an error bound E''' (|ε'''_k|≤E''') computable from (a, M_k, r_k) — not from the record alone; [COR v0.3.26] the order E'''=O_a((1+log(a+M_k))/(a+M_k))=o((a+M_k)^{−1/2}) holds for the corrected closed forms (Lg_corr, M-dependent bracket for q_M⁻¹; a pure O((a+M_k)⁻¹) not claimed); the v0.3.25 sentence for the majorants as then defined is retracted (Appendix B RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325: constant floor of Lg, uniform κ slack), the inequality and the grid values at M≤10⁵ unaffected; harmonic tails with the universal ceiling E'≤0.31 (RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE; limit sentences restated for the corrected forms, the v0.3.25 ones retracted as RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325; cert RECOG-ART-A1C-CORRECTED-GRID), the two tails combine exactly into one boundary term (RECOG-ALG-A1C-COMBINED-TAIL); cert RECOG-ART-A1C-SHARPENED-SCHEDULE; the A1b \"Not supplied\" status for a computable envelope is supplied in place (known-a only; the unknown-a windows are at the readout node) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b"
- },
- {
-  "id": "AR08-084",
-  "finding": "RECOG v0.3.26",
-  "where": "DRIFT, ENV nodes new",
-  "old_sha256": "17d206dc8a90c2e9605d83660e00bd39945fc920984db502f3ac936f1fbf6ba1",
-  "new_sha256": "a4622d997d31e2ec4a49426be19a16b0e52d3ec2a1407ef484d74c1623099256",
-  "old": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change; recorded by NUMGEN v1.21 as independent agreement) | v0.3.25: RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A bridge proof constants] — same schedule with the known-a / declared-data centre c'''_k(a)=τψ(a+M_k)−(k−1)π/3+(√3/8)(a+M_k)^{−1/2}+(τ/2)(a+M_k)^{−1} and an error bound E''' (|ε'''_k|≤E''') computable from (a, M_k, r_k) — not from the record alone; [COR v0.3.26] the order E'''=O_a((1+log(a+M_k))/(a+M_k))=o((a+M_k)^{−1/2}) holds for the corrected closed forms (Lg_corr, M-dependent bracket for q_M⁻¹; a pure O((a+M_k)⁻¹) not claimed); the v0.3.25 sentence for the majorants as then defined is retracted (Appendix B RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325: constant floor of Lg, uniform κ slack), the inequality and the grid values at M≤10⁵ unaffected; harmonic tails with the universal ceiling E'≤0.31 (RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE; limit sentences restated for the corrected forms, the v0.3.25 ones retracted as RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325; cert RECOG-ART-A1C-CORRECTED-GRID), the two tails combine exactly into one boundary term (RECOG-ALG-A1C-COMBINED-TAIL); cert RECOG-ART-A1C-SHARPENED-SCHEDULE; the A1b \"Not supplied\" status for a computable envelope is supplied in place (known-a only; the unknown-a windows are at the readout node) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b\n",
-  "new": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change; recorded by NUMGEN v1.21 as independent agreement) | v0.3.25: RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A bridge proof constants] — same schedule with the known-a / declared-data centre c'''_k(a)=τψ(a+M_k)−(k−1)π/3+(√3/8)(a+M_k)^{−1/2}+(τ/2)(a+M_k)^{−1} and an error bound E''' (|ε'''_k|≤E''') computable from (a, M_k, r_k) — not from the record alone; [COR v0.3.26] the order E'''=O_a((1+log(a+M_k))/(a+M_k))=o((a+M_k)^{−1/2}) holds for the corrected closed forms (Lg_corr, M-dependent bracket for q_M⁻¹; a pure O((a+M_k)⁻¹) not claimed); the v0.3.25 sentence for the majorants as then defined is retracted (Appendix B RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325: constant floor of Lg, uniform κ slack), the inequality and the grid values at M≤10⁵ unaffected; harmonic tails with the universal ceiling E'≤0.31 (RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE; limit sentences restated for the corrected forms, the v0.3.25 ones retracted as RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325; cert RECOG-ART-A1C-CORRECTED-GRID), the two tails combine exactly into one boundary term (RECOG-ALG-A1C-COMBINED-TAIL); cert RECOG-ART-A1C-SHARPENED-SCHEDULE; the A1b \"Not supplied\" status for a computable envelope is supplied in place (known-a only; the unknown-a windows are at the readout node) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b\nRECOG-ALG-A1C-RECIPROCAL-DRIFT ALG (v0.3.26) | sc: x₀∈U, chart row A, block base points; adopted rows only (DYAD-ALG-NF6 μ, a₃₂, a₀₅; DYAD-THM-NF-REM C₇=100, one-orbit contraction; part-1b closed forms), no Dyadic proof constant | (i) exact first order δ_m:=q_{m+1}⁻¹−q_m⁻¹−1=−(29/216)q_m−2Re(a₀₅e^{−6iΘ_m})q_m+R_m, |R_m|≤γ₂q_m², γ₂=212.6 (2C₇=200 of it); the isotropic coefficient 1−|μ|²−2Re a₃₂=−29/216 is exact, the sixth harmonic has zero mean · (ii) centred drift sup_m|q_m⁻¹−b̃_m|≤K_ε(a), log-free, K_ε=0.7203/0.4513/0.1860 at a=625/1000/2500 (98 % from the C₇ term), for every m≥0 and every admissible b (proof table D1–D8) · (iii) exact centring identity A₁=Λ^log_M(b)+A₁′, |A₁′|≤K_εP₂′ | NUM jet-model illustration separate (NC1–NC2) | ¬ a sharper exact-map drift (needs a Dyadic bound on Re(ρ₇/z) along an orbit, or the B1-L2 ceiling C₇≤85.1); ¬ event, carrier or Q1′ statement | cert RECOG-ART-A1C-DRIFT-CENTERING | >RECOG-ALG-A1C-LOGFREE-ENVELOPE | @§6.13b\nRECOG-ALG-A1C-LOGFREE-ENVELOPE ALG·c (v0.3.26) | if: [assuming: Dyadic row-A bridge proof constants c_Q=0.79246, c′_Q=0.36915 and the remainder decomposition of the DYAD-THM-LPHASE-ROWA-REMAINDER proof — proof constants, not theorem rows; registration requested] | sc: as RECOG-THM-A1C-SHARPENED-SCHEDULE with the start offset enclosed (RECOG-ALG-A1C-START-OFFSET); a known | centred envelope E^(5)_k with the log-free bracket q_M⁻¹∈[b̃_M(b⁻)−K_ε, b̃_M(b⁺)+K_ε], |ε^(5)_k|≤E^(5)_k; E^(5) is the sum of ten non-negative terms, each ≤c_i(a,r)/(a+M) for every M≥1 by its closed form ⇒ E^(5)(a,M,r)≤C(a,r)/(a+M), no floor, no logarithm (C=58.0/61.0/75.1 at r=5, a=625/1000/2500) | <RECOG-ALG-A1C-RECIPROCAL-DRIFT, RECOG-THM-A1C-SHARPENED-SCHEDULE (corrected forms), RECOG-ALG-A1C-START-OFFSET | the grid limit E^(5)(a+M)→19.15 and the 73/73 slip containment (tolerance-dominated at the latest slips) are observations, not the proof | cert RECOG-ART-A1C-DRIFT-CENTERING (G3c, G5, PT2–PT4) | @§6.13b\n"
+  "new": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change; recorded by NUMGEN v1.21 as independent agreement) | v0.3.25: RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A bridge proof constants] — same schedule with the known-a / declared-data centre c'''_k(a)=τψ(a+M_k)−(k−1)π/3+(√3/8)(a+M_k)^{−1/2}+(τ/2)(a+M_k)^{−1} and an error bound E''' (|ε'''_k|≤E''') computable from (a, M_k, r_k) — not from the record alone; [COR v0.3.26] the order E'''=O_a((1+log(a+M_k))/(a+M_k))=o((a+M_k)^{−1/2}) holds for the corrected closed forms (Lg_corr, M-dependent bracket for q_M⁻¹; a pure O((a+M_k)⁻¹) not claimed); the v0.3.25 sentence for the majorants as then defined is retracted (Appendix B RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325: constant floor of Lg, uniform κ slack), the inequality remains valid and the reported grid values at M≤10⁵ change by less than 0.5 %; harmonic tails with the universal ceiling E'≤0.31 (RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE; limit sentences restated for the corrected forms, the v0.3.25 ones retracted as RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325; cert RECOG-ART-A1C-CORRECTED-GRID), the two tails combine exactly into one boundary term (RECOG-ALG-A1C-COMBINED-TAIL); cert RECOG-ART-A1C-SHARPENED-SCHEDULE; the A1b \"Not supplied\" status for a computable envelope is supplied in place (known-a only; the unknown-a windows are at the readout node) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b"
  },
  {
   "id": "AR08-085",
+  "finding": "RECOG v0.3.26",
+  "where": "DRIFT, ENV nodes new",
+  "old_sha256": "c4a591d33b821969381eda0267d7b387d021f20c07f6a014ee94bf57a521d428",
+  "new_sha256": "a0b5b5c4d51ad2c3d9854b243fdb9a8b7eb74aeded9b682fc5d3ebff3aa6cca5",
+  "old": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change; recorded by NUMGEN v1.21 as independent agreement) | v0.3.25: RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A bridge proof constants] — same schedule with the known-a / declared-data centre c'''_k(a)=τψ(a+M_k)−(k−1)π/3+(√3/8)(a+M_k)^{−1/2}+(τ/2)(a+M_k)^{−1} and an error bound E''' (|ε'''_k|≤E''') computable from (a, M_k, r_k) — not from the record alone; [COR v0.3.26] the order E'''=O_a((1+log(a+M_k))/(a+M_k))=o((a+M_k)^{−1/2}) holds for the corrected closed forms (Lg_corr, M-dependent bracket for q_M⁻¹; a pure O((a+M_k)⁻¹) not claimed); the v0.3.25 sentence for the majorants as then defined is retracted (Appendix B RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325: constant floor of Lg, uniform κ slack), the inequality remains valid and the reported grid values at M≤10⁵ change by less than 0.5 %; harmonic tails with the universal ceiling E'≤0.31 (RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE; limit sentences restated for the corrected forms, the v0.3.25 ones retracted as RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325; cert RECOG-ART-A1C-CORRECTED-GRID), the two tails combine exactly into one boundary term (RECOG-ALG-A1C-COMBINED-TAIL); cert RECOG-ART-A1C-SHARPENED-SCHEDULE; the A1b \"Not supplied\" status for a computable envelope is supplied in place (known-a only; the unknown-a windows are at the readout node) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b\n",
+  "new": "RECOG-THM-A1B-SLIP-SCHEDULE-U THM | sc: postulated T; x₀∈U={0<Q₀≤1/625}; lifted primitive chart, frame W=ρ+ωη, increasing lift φ̂ with principal one-step increments δ_T; token conventions §6.16a (F2(b)); block count M, a=Q₀⁻¹; v0.3.24 | (A) events are lift crossings: x_n→x_{n+1} is a canonical B-event iff ⌊φ̂_{n+1}/2π⌋=⌊φ̂_n/2π⌋+1 · (C′) six-step deficit: ∀y∈U_T, Δ(y):=2π−Λ₆(y) satisfies Δ>0.927τQ(y)>0 and |Δ−τQ|<1.82Q^{3/2} · (B) alphabet: every gap is 6 or 7; s(M)=(3τ/π)log M+O(1)→∞ sevens among the first 6M steps · (S) schedule: τψ(a+M_k)−(k−1)π/3=L+ε_k, L(x₀)=(π/3)n₀−2πℓ₀+Ψ_{W,∞}(x₀), |ε_k|≤τQ+1.82Q^{3/2}+5arcsin(0.705√Q+0.257Q)+τ|S^tail_{M_k}|+|R^tail_{M_k}|=O((a+M_k)^{−1/2}), Q the largest primitive amplitude among the points of the k-th slip block, S^tail/R^tail the tails of the A1a series (a-priori quantities, not record data); hence τlog M_k−(k−1)π/3→L and M_{k+1}/M_k→e^{π/(3τ)} (no computable finite-record decoder guarantee follows from this ceiling) | <RECOG-THM-A1A-PHASE-EXISTENCE-U (Ψ_{W,∞}, series tails), RECOG-THM-A1A-PHASE-EXISTENCE-ALT, RECOG-THM-A1A-LIFT-ALIGNMENT, RECOG-THM-A1A-RECIPROCAL-AMPLITUDE, DYAD-THM-C21 (cubic coefficient of the deficit, reproduced exactly), DYAD-THM-PRIM-CTR, DYAD-THM-NF-REM (ingredients only), DYAD-THM-LPHASE-ROWA-REMAINDER | ¬ anything outside U; ¬ ε_k computable from (a,k,M_k) alone (tails and block maximum are a-priori quantities); ¬ decoding of a from a finite record; ¬ statements about M_W, M(z₀) or an event mechanism; ¬ Dyadic domain widened; GAP-LOCK/INF-1 remain NUMGEN's (NUMGEN informed, no custody change; recorded by NUMGEN v1.21 as independent agreement) | v0.3.25: RECOG-THM-A1C-SHARPENED-SCHEDULE [assuming: Dyadic (D5) row-A bridge proof constants] — same schedule with the known-a / declared-data centre c'''_k(a)=τψ(a+M_k)−(k−1)π/3+(√3/8)(a+M_k)^{−1/2}+(τ/2)(a+M_k)^{−1} and an error bound E''' (|ε'''_k|≤E''') computable from (a, M_k, r_k) — not from the record alone; [COR v0.3.26] the order E'''=O_a((1+log(a+M_k))/(a+M_k))=o((a+M_k)^{−1/2}) holds for the corrected closed forms (Lg_corr, M-dependent bracket for q_M⁻¹; a pure O((a+M_k)⁻¹) not claimed); the v0.3.25 sentence for the majorants as then defined is retracted (Appendix B RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325: constant floor of Lg, uniform κ slack), the inequality remains valid and the reported grid values at M≤10⁵ change by less than 0.5 %; harmonic tails with the universal ceiling E'≤0.31 (RECOG-ALG-A1C-TAIL-HARMONICS, -INBLOCK-ANGLE; limit sentences restated for the corrected forms, the v0.3.25 ones retracted as RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325; cert RECOG-ART-A1C-CORRECTED-GRID), the two tails combine exactly into one boundary term (RECOG-ALG-A1C-COMBINED-TAIL); cert RECOG-ART-A1C-SHARPENED-SCHEDULE; the A1b \"Not supplied\" status for a computable envelope is supplied in place (known-a only; the unknown-a windows are at the readout node) | cert RECOG-ART-A1B-SIXSTEP-DEFICIT (exact six-step jet in ℚ(i√3); NUM illustration separate) | >RECOG-RESULT-A1C-RECORD-PHASE-READOUT | @§6.13b\nRECOG-ALG-A1C-RECIPROCAL-DRIFT ALG (v0.3.26) | sc: x₀∈U, chart row A, block base points; adopted rows only (DYAD-ALG-NF6 μ, a₃₂, a₀₅; DYAD-THM-NF-REM C₇=100, one-orbit contraction; part-1b closed forms), no Dyadic proof constant | (i) exact first order δ_m:=q_{m+1}⁻¹−q_m⁻¹−1=−(29/216)q_m−2Re(a₀₅e^{−6iΘ_m})q_m+R_m, |R_m|≤γ₂q_m², γ₂=212.6 (2C₇=200 of it); the isotropic coefficient 1−|μ|²−2Re a₃₂=−29/216 is exact, the sixth harmonic has zero mean · (ii) centred drift sup_m|q_m⁻¹−b̃_m|≤K_ε(a), log-free, K_ε=0.7203/0.4513/0.1860 at a=625/1000/2500 (98 % from the C₇ term), for every m≥0 and every admissible b (proof table D1–D8) · (iii) exact centring identity A₁=Λ^log_M(b)+A₁′, |A₁′|≤K_εP₂′ | NUM jet-model illustration separate (NC1–NC2) | ¬ a sharper exact-map drift (needs a Dyadic bound on Re(ρ₇/z) along an orbit, or the B1-L2 ceiling C₇≤85.1); ¬ event, carrier or Q1′ statement | cert RECOG-ART-A1C-DRIFT-CENTERING | >RECOG-ALG-A1C-LOGFREE-ENVELOPE | @§6.13b\nRECOG-ALG-A1C-LOGFREE-ENVELOPE ALG·c (v0.3.26) | if: [assuming: Dyadic row-A bridge proof constants c_Q=0.79246, c′_Q=0.36915 and the remainder decomposition of the DYAD-THM-LPHASE-ROWA-REMAINDER proof — proof constants, not theorem rows; registration requested] | sc: as RECOG-THM-A1C-SHARPENED-SCHEDULE with the start offset enclosed (RECOG-ALG-A1C-START-OFFSET); a known | centred envelope E^(5)_k with the log-free bracket q_M⁻¹∈[b̃_M(b⁻)−K_ε, b̃_M(b⁺)+K_ε], |ε^(5)_k|≤E^(5)_k; E^(5) is the sum of ten non-negative terms, each ≤c_i(a,r)/(a+M) for every M≥1 by its closed form ⇒ E^(5)(a,M,r)≤C(a,r)/(a+M), no floor, no logarithm (C=58.0/61.0/75.1 at r=5, a=625/1000/2500) | <RECOG-ALG-A1C-RECIPROCAL-DRIFT, RECOG-THM-A1C-SHARPENED-SCHEDULE (corrected forms), RECOG-ALG-A1C-START-OFFSET | the grid limit E^(5)(a+M)→19.15 and the 73/73 slip containment (tolerance-dominated at the latest slips) are observations, not the proof | cert RECOG-ART-A1C-DRIFT-CENTERING (G3c, G5, PT2–PT4) | @§6.13b\n"
+ },
+ {
+  "id": "AR08-086",
   "finding": "RECOG v0.3.26",
   "where": "RECOG FAIL line",
   "old_sha256": "aba285f480e226fd01234a48a83e0e05bedb96d0c93bc4c80fae561a7d100a70",
@@ -765,7 +774,7 @@
   "new": "FAIL | RECOG-FAIL-K-FROM-SADDLE · R7 Stage-2 universal entry (refuted by RECOG-THM-TWIN-STAGE2-NONUNIVERSAL) · lattice thresholds as representation-safe tokens (criterion 1) · termwise lattice/7-gap identity · RET v0.3.26 (Appendix B, retracted-statement identifiers, not live RIDs): RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325 (limits of S̄′, R̄′, E′ scaled by √(a+M) for the majorants as then defined) and RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325 (the E''' order sentence as then defined); inequalities unaffected"
  },
  {
-  "id": "AR08-086",
+  "id": "AR08-087",
   "finding": "RECOG v0.3.26",
   "where": "RECOG.R-D1",
   "old_sha256": "e0fb566aa0257df85f8e4a1013e0c8615ea9f4c2c3b837e721d460bc139fb1f9",
@@ -774,7 +783,7 @@
   "new": "RECOG.R-D1 D-PROOF (c)/(b) | evidence custody and execution are separate: repository inventory recovers the named RECOG §8 scripts/packages except the Dyadic-side dyad_referee_p2b_v2.py; 24 hash-cited historical or unavailable items remain listed by the owner recovery inventory, not claimed here to have been executed. Arb/R9/B3/E2C proof runs retain their original execution provenance; no fresh scientific certificate replay is supplied by this Atlas. CHART-SHADOW has its written derivation and numerical script; absence of an additional symbolic certificate is not refutation. The reciprocal-amplitude and explicit-U existence theorems have in-ledger written proofs; the v0.3.24 artifacts RECOG-ART-A1B-SIXSTEP-DEFICIT and RECOG-ART-A3-QUADRATURE-TYPING and the v0.3.25 artifacts RECOG-ART-R9-SHARPENED-ROWS, RECOG-ART-A1C-SHARPENED-SCHEDULE, RECOG-ART-A1C-DECODER, RECOG-ART-A1C-Q1PRIME-FIBER and the v0.3.26 artifacts RECOG-ART-A1C-DRIFT-CENTERING, RECOG-ART-A1C-CORRECTED-GRID are in evidence/recog/ with hashes (naming checked, not rerun here; the v0.3.25 certificates were not rerun for the owner build; the v0.3.26 drift certificate and proof-table certificate were run by the owner, release record §3)."
  },
  {
-  "id": "AR08-087",
+  "id": "AR08-088",
   "finding": "RECOG v0.3.26",
   "where": "RECOG.R-A1 reworded",
   "old_sha256": "762ac567547fbbf896abd9ec62a98f4048b12f3476fb06560ce93d159d21269e",
@@ -783,7 +792,7 @@
   "new": "RECOG.R-A1 D-LINK (cross-owner dependency) | RECOG v0.3.25/v0.3.26 prove RECOG-THM-A1C-SHARPENED-SCHEDULE, the A1c decoder blocks and RECOG-ALG-A1C-LOGFREE-ENVELOPE [assuming: the Dyadic (D5) row-A bridge proof constants 0.79246, 0.36915 of the LPHASE row-A proof] and RECOG-THM-R9-SHARPENED-ROWS-C7 [assuming: C₇≤85.1 / 27.7, Dyadic's published NF-REM certificate values rounded up]; neither is a Dyadic theorem statement, so nothing in them is unconditional on these constants. RECOG-ALG-A1C-RECIPROCAL-DRIFT uses adopted Dyadic rows only (DYAD-ALG-NF6, DYAD-THM-NF-REM); its K_ε is 98 % the C₇=100 ceiling, so a Dyadic orbit bound on Re(ρ₇/z) would lower it (informational, pipes/DYAD/20261029-RECOG-v0-3-26-adopted.md). RECOG's two registration requests are filed as pipe items (pipes/DYAD/20261029-RECOG-d5-bridge-constants-registration.md, …-c7-ceilings-registration.md; open, the receiver decides). The claim audits of the builds found the constants present in dyad-v6.4.22 at statement level. RECOG still pins NUMGEN v1.20.8 (repin to v1.21 is RECOG's separate maintenance)."
  },
  {
-  "id": "AR08-088",
+  "id": "AR08-089",
   "finding": "pipes",
   "where": "NUMGEN.N-I1",
   "old_sha256": "e93f5d9db8e3abe18cdfed17db8e248e52313c7d792aeb85d9e8c1d761ad0ccf",
@@ -792,7 +801,7 @@
   "new": "NUMGEN.N-I1 D-LINK (pipe states, receiver side) | at the snapshot pipes_index --check passes with 33 items in 19 inboxes — 6 closed, 3 dispositioned, 24 open. closed: NUMGEN's request and notice to TDR-G (after v2.12.14), RECOG's A1b notice to NUMGEN, OFN's three inbox items (NUMGEN v1.21, TDR-G v2.12.14, RECOG v0.3.26 notices; closed after ofn-v0.11, PR #117) · dispositioned: NUMGEN's finding and notice to RECOG; RECOG's v0.3.26 notice to ATLAS (accept; carried by this edition, closed by the atlas owner after its tag) · open: NUMGEN v1.21 notices to DYAD and GEN, the q* question to DYAD, the cyclic-average offer to GEN; TDR-G v2.12.14 notices to NUMGEN and AZ; RECOG v0.3.26 notices to DYAD, NUMGEN, RER and RRF and its two registration requests to DYAD ((D5) bridge constants, C₇ ceilings); OFN v0.11 notices to DYAD, ER2B, FMS, GEN, NUMGEN, PROG, RECOG, RRF, TDRG (OFN11-C01/C02 named to the consumers of §5.5) and OFN's token-sum label finding to TDR-G; GEN's κ_f items to PROG and UVM. A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7)."
  },
  {
-  "id": "AR08-089",
+  "id": "AR08-090",
   "finding": "OFN v0.11",
   "where": "D4a chiral coords",
   "old_sha256": "b793016e27d33b61ae1ab7905e31f4490fdbcce03104d48d031e4fece09e0d22",
@@ -801,7 +810,7 @@
   "new": "chiral coords | u=w₁+λw₂, v=w₁+λ̄w₂ (1↔2 transposition: u↦λv); A_c=|u|², B_c=|v|²; N=|u|²+|v|², S=(|u|²−|v|²)/√12 (OFN chiral convention; OFN v0.11 writes N_ch and χ=S/N_ch)"
  },
  {
-  "id": "AR08-090",
+  "id": "AR08-091",
   "finding": "OFN v0.11",
   "where": "F2 pin",
   "old_sha256": "384449feb0ce864bee700f4e18c1f40aecba75032cbad2c481595e5286ced3b8",
@@ -810,7 +819,7 @@
   "new": "F2 ~ D-LINK (RER.E1; high): RER-E-CONJ ⇒ RER 𝒩 = GEN F₁ = raw γ=1 (OFN A1), excluded by OFN §5.5.5 (RTG-OFN-ALG-RAW-STANDARD-C-NOGO; v0.11 wording unchanged in substance). RER records that its model is the γ=1 member of the mean-feedback family, but not that this member is outside the genuine-triad class; the RER Triadic records built on 𝒩 (atlas list: C01–C09, age family, 3-fold, N7/N8, triad involution, birth graph) read as flat-sector reference results in OFN terms — a per-record scope reading; the transfer to each record's own hypotheses (conditional age sheets, transported contracts, blocked ER-2B interfaces) is not verified. Not a contradiction; relevance to the selected class undeclared. Fix: one scope sentence in RER citing OFN v0.10."
  },
  {
-  "id": "AR08-091",
+  "id": "AR08-092",
   "finding": "OFN v0.11",
   "where": "F2 fix",
   "old_sha256": "ffee5c352de53295ee4cc47128e2e88bd6872f0fff63b4503fada3c9796953fb",
@@ -819,7 +828,7 @@
   "new": "F2 ~ D-LINK (RER.E1; high): RER-E-CONJ ⇒ RER 𝒩 = GEN F₁ = raw γ=1 (OFN A1), excluded by OFN §5.5.5 (RTG-OFN-ALG-RAW-STANDARD-C-NOGO; v0.11 wording unchanged in substance). RER records that its model is the γ=1 member of the mean-feedback family, but not that this member is outside the genuine-triad class; the RER Triadic records built on 𝒩 (atlas list: C01–C09, age family, 3-fold, N7/N8, triad involution, birth graph) read as flat-sector reference results in OFN terms — a per-record scope reading; the transfer to each record's own hypotheses (conditional age sheets, transported contracts, blocked ER-2B interfaces) is not verified. Not a contradiction; relevance to the selected class undeclared. Fix: one scope sentence in RER citing OFN §5.5.5."
  },
  {
-  "id": "AR08-092",
+  "id": "AR08-093",
   "finding": "OFN v0.11",
   "where": "F5 head",
   "old_sha256": "238d7c1e16e32a4393ef5851d325c5ce813750d8eb0d9714e2653c88f7634dd9",
@@ -828,7 +837,7 @@
   "new": "F5 D-STALE (ER2B.Z2, FMS.M1; ≡ DYAD.X1; high; the OFN side is fixed in v0.11, IMP-O10-06/07): \"C^∞ odd carrier existence OPEN 20 / B-∞ open / class C formal until J realized / real carrier once B-6/B-∞ answered\" contradicts DYAD-THM-SMOOTH-EMBEDDING (B-∞ existence closed) and DYAD-THM-SMOOTH-EQUIVARIANT-CHART. Correct reading: class C real in C^∞ (FMS-10B layer 3 with smooth root, Lemma F/F3), analytic (B-6) OPEN. Also makes GEN transported instance C2 non-vacuous in C^∞ — recorded by GEN v2.9 §6.3c (G-20 existence note)."
  },
  {
-  "id": "AR08-093",
+  "id": "AR08-094",
   "finding": "OFN v0.11",
   "where": "F8 (i)",
   "old_sha256": "77de9789390a3532f72517a5c29eb477cfbed241ec7d3c455415169e554fd9b7",
@@ -837,7 +846,7 @@
   "new": "F8 D-PIN/D-STALE (RER.E3, ER2B.Z5, FMS.M3): (i) FMS cites \"ER-2B v0.3.1 §A.4\" (hash 711e427a…81b4) but the corpus file is v0.3 — version identity unresolved; OFN v0.11 RF-O10-03 cites er2b-v0.3 for its three checked uses and keeps v0.3.1 source-reported, authentication deferred; (ii) RER v0.2 header companion line and §1 [DEF] state \"adopted RRF v0.8.3 … governs\" while RER G10 states that RRF v0.8.4 governs (12 current v0.8.4 reference lines) — internal contradiction; RER's OFN import pin stays v0.9 (§8/§12.4)."
  },
  {
-  "id": "AR08-094",
+  "id": "AR08-095",
   "finding": "OFN v0.11",
   "where": "OPENM.U7 pin",
   "old_sha256": "4882c259ff0c42c4395fbf30131af3be1919aabf6199c6f9efc64aad957b54a8",

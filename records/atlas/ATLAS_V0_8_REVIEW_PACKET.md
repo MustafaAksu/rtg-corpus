@@ -1,6 +1,6 @@
 # RTG State Atlas v0.8 — change-focused review packet
 
-**Date:** 30 October 2026. **Prepared by:** Claude, Atlas owner.
+**Date:** 30 October 2026 (rev. 2, same day: AV08-R1 and AV08-N1 of the receiving review applied — two passages, see §6; candidate hash re-pinned; everything else unchanged). **Prepared by:** Claude, Atlas owner.
 **Status:** DRAFT / NONCANONICAL — candidate for receiving review (ChatGPT, Atlas co-owner). It has no PI acceptance, and it adopts no owner science. `atlas-v0.7` governs until acceptance.
 **Scope decision:** PI and ChatGPT, 30 October 2026: one change-focused refresh carrying OFN v0.11 and RECOG v0.3.26. There is no general compaction and no Methodology migration of the atlas. Tool maintenance (PR #113) runs separately and does not block this edition.
 
@@ -21,12 +21,12 @@ The other 16 sources are byte-equal to their v0.7 inputs. The builder asserts th
 
 | Object | SHA-256 |
 |---|---|
-| `atlas/RTG_STATE_ATLAS.md` (candidate) | `450d8e7127beef06d07f4b2315b23233085b5766ffd2cb4894418780bd198e46` (502,219 bytes, 1,540 lines) |
+| `atlas/RTG_STATE_ATLAS.md` (candidate) | `47320ca55f25955ff0d5e73be690465c7f9e6ebad9fa6bbc09692d4cf86371b7` (502,700 bytes, 1,540 lines; rev. 1 was `450d8e71…8e46`, 502,219 bytes) |
 | `atlas/RTG_STATE_ATLAS_METHOD.md` (unchanged) | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` |
 | `evidence/atlas/v0.8/source_manifest.json` | `1e698a08bf47a3648caa27c29c4e1329b71a44c26dde0987ca158fe420c83c6e` |
 | `tools/atlas_check.py` (unchanged) | `0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d` |
-| `evidence/atlas/build/refresh_v0_8.py` | `6d6c77feacd40e11829d8fefba16f34bf6368991feaf49e5efaa939b2fd5c926` |
-| `evidence/atlas/v0.8/edit_log.json` (94 operations) | `cc93022be0e3ba7cedf5611336cb5330705f49a10084c15058117592f48f1faa` |
+| `evidence/atlas/build/refresh_v0_8.py` | `944c94c34c26acafc98ef8e08310b90afd75cc9ed5ad0e9bc3c4c043fd790683` |
+| `evidence/atlas/v0.8/edit_log.json` (95 operations) | `debc21e6b5a9dc585799154030047e4aee49fbc7cfc885edc1da6112267d8307` |
 | `evidence/atlas/v0.8/dispositions.json` | `cb04c326dddadeba522693b82618ca57deb68ad81567c44efd77f66177d12e6a` |
 
 **Decision basis — OFN:**
@@ -42,7 +42,7 @@ The other 16 sources are byte-equal to their v0.7 inputs. The builder asserts th
 
 ## 2. Review scope
 
-This is an impact refresh of two domains: 94 exact-once operations, listed in `evidence/atlas/v0.8/edit_log.json`. No other domain was re-extracted. The diff against the base is 73 insertions and 78 deletions. In net terms:
+This is an impact refresh of two domains: 95 exact-once operations (rev. 2 adds one, AV08-R1), listed in `evidence/atlas/v0.8/edit_log.json`. No other domain was re-extracted. The diff against the base is 73 insertions and 78 deletions. In net terms:
 - removed: 8 OFN L5 rows and one D-WRONG line;
 - added: OFN.O14, one new OFN definition node, and two RECOG nodes.
 
@@ -123,7 +123,7 @@ This is an impact refresh of two domains: 94 exact-once operations, listed in `e
 - **A1b node.** The atlas v0.7 node quoted the order sentence "E‴ = O_a((1+log(a+M_k))/(a+M_k))" for the v0.3.25 forms — the sentence RECOG retracted. It now reads:
   - |ε‴_k| ≤ E‴;
   - `[COR v0.3.26]`: the order holds for the corrected closed forms (Lg_corr, M-dependent bracket), and a pure O((a+M)⁻¹) is not claimed;
-  - the v0.3.25 sentence is retracted (`RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325`), and the inequality and the grid values at M ≤ 10⁵ are unaffected;
+  - the v0.3.25 sentence is retracted (`RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325`), the inequality remains valid, and the reported grid values at M ≤ 10⁵ change by less than 0.5 % (rev. 2, AV08-N1);
   - the tail-harmonics limits were restated, and the v0.3.25 limits retracted (`RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325`);
   - it cites `RECOG-ART-A1C-CORRECTED-GRID`.
 - **New nodes:**
@@ -237,7 +237,7 @@ Carried unchanged from v0.7:
 
 This build accepts nothing. Acceptance needs, in order:
 1. the receiving review;
-2. PI acceptance identifying the bytes `450d8e71…8e46`;
+2. PI acceptance identifying the bytes `47320ca5…71b7`;
 3. a merge commit (not squash) of `claude/atlas-v0.8` into `main`;
 4. an annotated `atlas-v0.8` tag naming the hash.
 
@@ -247,3 +247,28 @@ After the tag:
 - closing `pipes/ATLAS/20261029-RECOG-v0-3-26-adopted.md`.
 
 This build changes no owner DSN, grade, source tag, Method edition or consumer adoption. PR #118 (OFN tag verification) and PR #113 (tool) are independent of this candidate. `atlas-v0.7` remains the accepted Atlas until the acceptance decision.
+
+## 6. Revision 2 — receiving review AV08-R1 and AV08-N1
+
+**Review:** `records/atlas/ATLAS_V0_8_RECEIVING_REVIEW.md` (ChatGPT, Atlas co-owner; PR #121, commit `ea959e41`; PR #119 comment `6517704790`). Verdict: REVISE, with one narrow attribution fix and one numerical-wording note. Everything else is accepted as reviewed.
+
+| Item | Site | Change |
+|---|---|---|
+| AV08-R1 (required) | H5 | "NUMGEN v1.21 records these theorems …" named no scope, so it could be read as covering the later RECOG results. It now names the RECOG v0.3.24 A1a/A1b comparisons of the `numgen-v1.21` §9.1 acceptance matrix: `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE`, `-LIFT-ALIGNMENT`, `-PHASE-EXISTENCE-U` with `RECOG-RESULT-A1A-CD-AGREEMENT`, and `RECOG-THM-A1B-SLIP-SCHEDULE-U`. It also states the GAP-LOCK 3 limit (agreement on the ratio limit; digamma schedule not adopted) and that the matrix carries no consumer acceptance of the v0.3.25/v0.3.26 additions. Checked at `numgen-v1.21` L2777–L2791 (`EV-SRC-READ`). |
+| AV08-N1 (recommended) | A1b node | "the grid values at M≤10⁵ unaffected" becomes "the inequality remains valid and the reported grid values at M≤10⁵ change by less than 0.5 %", as in RECOG release record §0 and Appendix B. |
+
+**Effect:** two lines of the atlas change (H5 and the A1b node); one builder operation is added and one is reworded. Unchanged:
+- every other edit;
+- the source manifest (`1e698a08…3c6e`) and `dispositions.json` (`cb04c326…2e6a`);
+- the L5 rows and the guards.
+
+**Re-run:**
+- Two builds are byte-identical.
+- The shared checker reports 0 FAIL, with the same counts as rev. 1 (links PASS 486, keys 123, coverage 129; wording WARN 14).
+- Controls: shared 18/18, focused 8/8.
+- H→L5: no dangling key; 118 rows.
+
+**Targeted read-back of the two passages (rev. 2 text):**
+- H5: "… NUMGEN v1.21 §9.1 records the RECOG v0.3.24 A1a/A1b comparisons (…) statement by statement as consumer-side confirmations in its acceptance matrix — independent agreement, nothing imported, custody of GAP-LOCK 1–3 and INF-1 unchanged; for GAP-LOCK 3 the agreement covers the ratio limit and the digamma schedule is not adopted; the matrix carries no consumer acceptance of the v0.3.25/v0.3.26 additions (sharpened R9 rows, decoder and fiber results, DRIFT, ENV) (15/2 typed as the per-block increment, not an L-BACKBONE constant — NUMGEN.N-B) …"
+- A1b node: "… the inequality remains valid and the reported grid values at M≤10⁵ change by less than 0.5 %; …"
+
