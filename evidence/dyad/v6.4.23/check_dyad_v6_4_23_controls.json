@@ -1,0 +1,96 @@
+{
+ "all_as_expected": true,
+ "controls": {
+  "Q1": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C5",
+   "failing_gates": [
+    "C2",
+    "C5"
+   ],
+   "what": "scope note of DYAD-THM-OPEN18 dropped"
+  },
+  "Q2": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C2",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "403/250 changed in the L-PHASE theorem"
+  },
+  "Q3": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "an existing RID tag removed"
+  },
+  "Q4": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C4",
+   "failing_gates": [
+    "C2",
+    "C4"
+   ],
+   "what": "old c'_Q display restored in the proof outline"
+  },
+  "Q5": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C2",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "unlogged change outside the edits (OPEN 11 range)"
+  },
+  "Q6": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C7",
+   "failing_gates": [
+    "C2",
+    "C7"
+   ],
+   "what": "a section 2 Status line changed"
+  },
+  "Q7": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C6",
+   "failing_gates": [
+    "C2",
+    "C6"
+   ],
+   "what": "footer marked ADOPTED"
+  },
+  "Q8": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C5",
+   "failing_gates": [
+    "C2",
+    "C3",
+    "C5"
+   ],
+   "what": "successor interval widened to a non-outward value"
+  },
+  "Q9": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "a fifth RID added"
+  }
+ }
+}

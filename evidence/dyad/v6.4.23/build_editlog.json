@@ -1,0 +1,301 @@
+{
+ "base_sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+ "edits": [
+  {
+   "id": "ED-1",
+   "new_sha256": "7b62ebe1438c277eb5e96bc4a6e07a2538f3d90af352f3a71f5d60ff1e0abdac",
+   "old_sha256": "e2dd8ca4b9af9d75001186b0dd575cd110e746255f6b305888efd2a0428cda45",
+   "what": "title"
+  },
+  {
+   "id": "ED-2",
+   "new_sha256": "139404a5b2353d550d3e63a8b85a2198bfe423905b5e68a246ce6562ed8aeec2",
+   "old_sha256": "826dad5d97dd6791f0d91eaeb54fb2d97b51291031ca6ccdc594c05d57ac46c9",
+   "what": "header date"
+  },
+  {
+   "id": "ED-3",
+   "new_sha256": "cd44cab6d848e2f3970712eb1f02a397edf132549d2f718fc67cd9de2305ad4a",
+   "old_sha256": "30ed2608a5da8b29f6769f992b1f8cc81e239b5405a2b4affc304ea5ac91023b",
+   "what": "header status"
+  },
+  {
+   "id": "ED-4",
+   "new_sha256": "54b8de75ff558d99438267fb1132238685518a9358e02caabcda79838bad4d0d",
+   "old_sha256": "75117cb1899e021ca9ccd34c872cb3f75a0a360b6b36051503f05949b18d986c",
+   "what": "header supersedes"
+  },
+  {
+   "id": "ED-5",
+   "new_sha256": "bfd0e82408dececfe14f643b438f0819c8ea0641a13a561d5a5622b4897d8df0",
+   "old_sha256": "d3cede27cf7bbcc158a7bad55495470ce546add1f7617fb4334ccb3b07140544",
+   "what": "header release record"
+  },
+  {
+   "id": "ED-6",
+   "new_sha256": "d85ed5cbf67b0b92ddd2f766528b866f67e2284a23f4e7bce1eca62e18742299",
+   "old_sha256": "dc4b2c5aa43e3909ab136467264569793613b5b7dc7beb1a86cf63192c0e1715",
+   "what": "Appendix G note"
+  },
+  {
+   "id": "ED-7",
+   "new_sha256": "43b73062871bfbf2cc379aecb5bb344ba5c86d95508d0303ea909781f31c8c5c",
+   "old_sha256": "b6636ea59c8eee2e1724633a97e35bb53518a88c05d9174310c74b2b973f8e26",
+   "what": "footer"
+  },
+  {
+   "id": "ED-8",
+   "new_sha256": "ecffe031b81c77a11d24824f3550fba029f4797f63a08afc51ce5c38c548ca04",
+   "old_sha256": "7af64ab4f82d4c117dbf842faa85c36a77c46bb7f330bae0c77a947cbb01474e",
+   "what": "Appendix A entry"
+  },
+  {
+   "id": "D1-a",
+   "new_sha256": "bceaaa7875a23da9740f30f973942ac5b747e8cce70b646ba4dec2c74ecaf585",
+   "old_sha256": "672e2f0db5b53d0b2954882c35aaf45f40ba4dfe92fbc57ccd89df4c05c71c35",
+   "what": "status summary"
+  },
+  {
+   "id": "D1-b",
+   "new_sha256": "2fda1b6469babc36d806dd68be6777c64d287951572dc32e3ca010f9ea4d8220",
+   "old_sha256": "e0d71bded4c04d7cb1e4ed90348f3e79d4dc79a3bec3110dd0e3a4a1fc2d1f91",
+   "what": "\u00a71 OPEN 18 line"
+  },
+  {
+   "id": "D1-c",
+   "new_sha256": "5cdaeb9a347156f4ed1708576f532e02275dffb4fff142f197d38189ac6002c4",
+   "old_sha256": "1c556629b7b2a3fb8201615889a644237d67f73cca17a223de771fe080f516f5",
+   "what": "\u00a72 closed-OPEN line"
+  },
+  {
+   "id": "D1-d",
+   "new_sha256": "ec0d25a7c350762799e91998de9a491a4446a83ac8594b1e94ef4c83e829ac37",
+   "old_sha256": "3b6a45a78513b0fa50f53f6ba0d73711045ba927c3faec1aa6a51cdac7ac5a30",
+   "what": "\u00a76.8 old entry + successor"
+  },
+  {
+   "id": "D1-e",
+   "new_sha256": "722b5f7518f21577feeef720a0fd3ce8a9f6e33cc4fa62b78bc29deb5afd1290",
+   "old_sha256": "d9319b868159f04ab44c17912d24120c3730bd237dd55e2252c27b71e7b5d5d5",
+   "what": "\u00a78 DYAD-ART-OPEN18"
+  },
+  {
+   "id": "D1-f",
+   "new_sha256": "42af4a2de8a9e234bbee94b3d99a7ff32114144f43e42548f27c149db827d042",
+   "old_sha256": "12ebb82d155a05159e891835cae91c8ffea7393e79dfdcbadec1962e2216c000",
+   "what": "Appendix E.1 OPEN18 row"
+  },
+  {
+   "id": "D1-g",
+   "new_sha256": "6d5be420d6bef18b6513d689622643e3f4b20843d100a4c88add83d458c002e7",
+   "old_sha256": "ea62647ea1af11308b01201a9ea7bb86c91e5f2209b429cb6dc1265d4b020f31",
+   "what": "Appendix E.2 OPEN18 row"
+  },
+  {
+   "id": "D2-a",
+   "new_sha256": "8561460e74f9f07804a39e976fb553534d101982763ba1635f4bf33bdbda7106",
+   "old_sha256": "ee21c0bfab39d79f3fab93f5580375ce238aa1eb9a7bb187e11cdccf908a8a45",
+   "what": "NF-REM table row 1/20"
+  },
+  {
+   "id": "D2-b",
+   "new_sha256": "3e0607fc75eeb9fee9b453db2f4e79a03daf780f272aed4568d7170110cddb0e",
+   "old_sha256": "73fcbd203f8196b00969bd8583df72ec712ccaafa7ab60c2c51d7c73fb6eec64",
+   "what": "NF-REM table row 1/40"
+  },
+  {
+   "id": "D2-c",
+   "new_sha256": "5779777ededba027639f573a639f03bf03546990ade562450e25383b671a55fd",
+   "old_sha256": "fbb3ec568db6538ae353e1db6ac548f585df1de2c215176ce6f0ffbb7405dbb9",
+   "what": "new RID after NF-REM"
+  },
+  {
+   "id": "D2-d",
+   "new_sha256": "fb5f6df9013696894ec47a35e4753b4dca9fdd0f8c5cd5dee3989683823e9988",
+   "old_sha256": "f255b4031e9fb803962c8d0ca206f51e2a78113980110ee670f65279e0e7ef2d",
+   "what": "insert C7-SHARP before NF6-DEG10"
+  },
+  {
+   "id": "D2-e",
+   "new_sha256": "0111fa4026b0959c4959c7fcdb171b3db128cb25fdb6c5b98540e06004126bfd",
+   "old_sha256": "f1f9e9dc1e073a27ee3906e642926f682c49d6f373b82507b1d9f4d3229959c8",
+   "what": "Appendix E.1 NF-REM row"
+  },
+  {
+   "id": "D2-f",
+   "new_sha256": "424306f875fff23d8c516f9205d495c231c2307eacd6baf0f6b0ad4d869e329e",
+   "old_sha256": "e2eef1fe4a0c3a77d47660b885a166944c00c8044af2b94a7033eeedfa3c7654",
+   "what": "Appendix E.2 NF-REM row"
+  },
+  {
+   "id": "D3-a",
+   "new_sha256": "44943908903ba1d923b6b3288fd793efed7e53d68638f6efca0a88af41a9e2a3",
+   "old_sha256": "a2cdf8b8767aaa12167f9d1cf6c7cfc7bfd0e8d7903d182f6e020a05b7581d96",
+   "what": "L902 c'_Q"
+  },
+  {
+   "id": "D3-b",
+   "new_sha256": "fddf0578880da417d60019b3b472246c69e0af3269a64cced918884194c17a78",
+   "old_sha256": "a01e3bbaba37a6e4f23c7d7ac6db947b162e424a8fe04ec6e37cacf55f882deb",
+   "what": "L902 inner constant"
+  },
+  {
+   "id": "D3-c",
+   "new_sha256": "12059034b3ea2ea739e50e7f012584f9faa14063cf5cd82c5c86021109ef0fca",
+   "old_sha256": "ee4ed4140cd4ccd7c3338edc8d40af79d607b09344fd82e2d49dad3cd9ce2968",
+   "what": "L902 bridge factor"
+  },
+  {
+   "id": "D3-d",
+   "new_sha256": "0e165d0f7899af7295db85a6d9888824eb603d124a3d13349030f594e4abb2fe",
+   "old_sha256": "31269059217bed7dd7338b3a7ae26d2e225efa41853ca45804867316b399d081",
+   "what": "L902 product"
+  },
+  {
+   "id": "D3-e",
+   "new_sha256": "0042c952a9deff1caea6fc3dff25b9e0fb2b4eeb49d83836a55254197d411e84",
+   "old_sha256": "142bedabb62b05d5a365a02087f2b523c14647231c1759c85f8265b5c6a59a85",
+   "what": "COR line + BRIDGE RID before Recorded distinctions"
+  },
+  {
+   "id": "D3-f",
+   "new_sha256": "6fc128741e9fa0b6a9f1ebaaf2631cb65a42a4d2e07c70b48875245f567c35b4",
+   "old_sha256": "617628195de3313e96e04faf0048372279760b8a5554e1b1976a15d9dd8bfbb9",
+   "what": "\u00a72 table certificate value"
+  },
+  {
+   "id": "D3-g",
+   "new_sha256": "8f46b7b3ceaab77f30a8406a838b7b2632db6bc1cc0035429c5c0ba73fe35d7d",
+   "old_sha256": "5ab0a5bb59a0dfbbdd7c77cdd7c49d038b5b1e922be1a925a05924992cf170e0",
+   "what": "\u00a77.0a upper bound bullet"
+  },
+  {
+   "id": "D3-h",
+   "new_sha256": "d2b0b2e17c702fa23a282b189ad3d5b52ccb6841bca5e98a359075550cd555eb",
+   "old_sha256": "d65aef08e7458b071f9c604e701da1c9f5af4b755417ee99a3b1599afdaecd9d",
+   "what": "Appendix E.1 LPHASE row: insert BRIDGE before REMAINDER"
+  },
+  {
+   "id": "D3-i",
+   "new_sha256": "163f3e430ad6df2e985b7a6f55a57b55ef1940495052fb42c249a4beba26af0f",
+   "old_sha256": "fae311adf0dcd0207be37240d42471a24d62e9bbf4546f05eef9789f025bca81",
+   "what": "Appendix E.2 LPHASE row: insert BRIDGE before REMAINDER"
+  },
+  {
+   "id": "R-1",
+   "new_sha256": "36bc05101a713623a4056eae6f4f150ceda46d510249f30eb8b16d8104af17d7",
+   "old_sha256": "2b66e609a68381b3e72fa7276e5b6915179eb6fa9a1ea1b6ca03e19b89c6c14c",
+   "what": "\u00a77.0 Dyadic row"
+  },
+  {
+   "id": "R-2",
+   "new_sha256": "9e920da37a64efcc1861ba4752c697b0e3a21059afbabd6e05170af75d941cfb",
+   "old_sha256": "8d1a6a981eaecd286c6ee96723cf77de48212f9db6a134a0b8c0a9afa6e7b990",
+   "what": "\u00a77.0 RECOG current row"
+  },
+  {
+   "id": "R-3",
+   "new_sha256": "c20db330adcffd1b2f6a507a052865198e910253ea4152c9c0e74b36755788dc",
+   "old_sha256": "d789f0b8d7581659d0239d1accee2178b8e0013eb0d0339d8595ad66eb5dc81c",
+   "what": "\u00a77.0 NUMGEN row"
+  },
+  {
+   "id": "R-4",
+   "new_sha256": "22a509a110d8494098d9a5e1743960a5a9aee22249f143b64ad0d3c377ed4e1a",
+   "old_sha256": "75e777452da8d15841761c6966c21d7a8d73185c6a8f3ec2e3ec5786c07c296f",
+   "what": "\u00a77.0 OFN row"
+  },
+  {
+   "id": "R-5",
+   "new_sha256": "0a97c8b7a1256c2a15cd1b3b2bc068ee0a60c3b62d6ec9c3b683e761174beb38",
+   "old_sha256": "79956731485952bce6c9cc37e573b8ab24b4836d145e22ff5689289ab075fab0",
+   "what": "\u00a77.0 Genesis row"
+  },
+  {
+   "id": "R-6",
+   "new_sha256": "c9247bd2b1369445a3749e6fc290f50e59617bace79dc9fbde0982365dc73104",
+   "old_sha256": "3122836a487e2cd47a37af2e27521407221bec6d2585fe65b7d75cee695dbf3e",
+   "what": "\u00a77.0 Programme row"
+  },
+  {
+   "id": "R-7",
+   "new_sha256": "7dcc36cfaf13e2673d5844112249024734952a825092bc4053b312091442de65",
+   "old_sha256": "2a8366b929dab010a38ae36e202e2034e64cbdf4b3dacec87891b22cbcfed11c",
+   "what": "\u00a77.0 Methodology row"
+  },
+  {
+   "id": "R-8",
+   "new_sha256": "b1915eacfe1032c13cc473fed5a043701aea7227116a8b009503a5ce7fcd92c1",
+   "old_sha256": "855859a899801e47a4b754dc070da60d5ad1b80a967e75b2a4bb7f0f88667170",
+   "what": "\u00a77 Programme context"
+  },
+  {
+   "id": "R-9",
+   "new_sha256": "4ab9ac331420076729a3548ca8a6575bdb3540559cb64aad2495391b69b988c9",
+   "old_sha256": "4a55fde05c6a77141ace70d3af265ed30938c2f3316e7f1aee54e2e57e5b602a",
+   "what": "\u00a77 OFN context"
+  },
+  {
+   "id": "R-10",
+   "new_sha256": "e7de17d608492795a9c16a26c8b5da2c11d2495d79b89b78a776fc03eee9b4b2",
+   "old_sha256": "c6e111a8b824f92d7df3589e12a63f60a3c7d73ea0992133703440c7953e297d",
+   "what": "\u00a77 RECOG context"
+  },
+  {
+   "id": "R-11",
+   "new_sha256": "26a605624c825447f5105eba94e4cdec27662c9503e079314558b91007b12b8a",
+   "old_sha256": "3f8c4f7481a192a710656c787bb9264f090440c46147fbfc4bd7ac705d5ebf0f",
+   "what": "\u00a77 Genesis export"
+  },
+  {
+   "id": "R-12",
+   "new_sha256": "fcda8f374724025c773ee050bd716be38a8e047177666898cbbd4575551d49ef",
+   "old_sha256": "f16dfd222691027457588b8635e03cb3d531af904b60a8bd1db8c22eed1a2f6e",
+   "what": "\u00a77 Genesis export tail"
+  },
+  {
+   "id": "R-13",
+   "new_sha256": "5239aa68a25b38ab8323b9eb7ac4b4a055b2b6889e4fdaccab2152a78a5cbf4e",
+   "old_sha256": "78bde9c653fea50ea4cbdb8b5e8a63daa7403040dc0063419215c649bc7534f0",
+   "what": "\u00a77 RECOG consumer"
+  },
+  {
+   "id": "R-14",
+   "new_sha256": "53f0ce6d8bec9b918a325e837d2218f4414506ceb04b2fa5b13ca9ce6b0fb9de",
+   "old_sha256": "12a338f52b7d1bd30860aecf705f2010c916cb21b4c720104c3dffc2314c36b3",
+   "what": "\u00a77 NUMGEN consumer"
+  },
+  {
+   "id": "R-15",
+   "new_sha256": "089574b6597815504274842be88d0bd84e9c1e9acb8f0ed18a9344cd4630a465",
+   "old_sha256": "61aa73d952d380c5490bbef8d3567829006d90e3ddb283a33f537cad0cafe43f",
+   "what": "\u00a77 NUMGEN offered import"
+  },
+  {
+   "id": "N-4",
+   "new_sha256": "b94232630ef83b3a2a7f933083301be272a69b224a24d24110a06e9202653249",
+   "old_sha256": "101c75586d956dc9c865cd3bfe796009a618a13c507776d4751ff74db43ffe1b",
+   "what": "notice row N4 OFN"
+  },
+  {
+   "id": "N-6",
+   "new_sha256": "e9263948c41e2f459c6a6b305365e54a6fa3c9b177c4011a2bf271da5535bb3d",
+   "old_sha256": "38299465405d224bd89c6110fbddf337933c104efac78ba9e6da111c2ff12cb6",
+   "what": "notice row N6 OFN"
+  },
+  {
+   "id": "N-14",
+   "new_sha256": "9b61bebef745a9d260003bc49a431a72667d79d3513e2ca5cb79f47f45c42ed6",
+   "old_sha256": "629de3cce7eaaca8758e82eaa2c926c8e47362eb7f538b1b376914c2abbf62a3",
+   "what": "notice row N14 OFN"
+  },
+  {
+   "id": "N-15",
+   "new_sha256": "20439593790c988f01b792d59d903a0e2944b8adb572ae191d24e1465a232f11",
+   "old_sha256": "c11ec57bb9382d8d12d99c59862ac77a49bdf8f7496aac58ccf31024d0c4c54d",
+   "what": "notice row N15 NUMGEN"
+  }
+ ],
+ "n_edits": 49,
+ "out_sha256": "3de022a7fb76d65473776cd759abd90f47b7a0b9a0f1924be0ea56830663dd2b"
+}
