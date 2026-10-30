@@ -1,0 +1,17 @@
+O1_derivative_nonzero_on_gap PASS
+O1_eta4_negative_on_gap PASS
+O1_sign_change FAIL
+O2_eta6_minus_q_nonzero PASS
+O3_n3 PASS
+O3_n4 PASS
+O5_displayed_values_not_ceilings PASS
+O5_row_1/20_le_ceiling PASS
+O5_row_1/40_le_277/10 PASS
+O6_cQ_exact_le_0.79246 PASS
+O6_cQprime_exact_gt_0.36915 PASS
+O6_cQprime_exact_le_ceiling PASS
+O6_certificate_gates_pass PASS
+O6_input_hashes PASS
+O7_FIN_with_published_ceilings_le_403/250 PASS
+O7_certificate_FIN_published_is_403/250 PASS
+RESULT FAIL
