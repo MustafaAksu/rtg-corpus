@@ -23,7 +23,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Atlas row check and build replay | `records/ofn/ATLAS_ROW_CHECK_OFN_v0_11.md`, PR #115 head `8621e565f4454073d0a832af392895da5752ebc5`, reviewing PR #112 head `ba61f5195a21e31d9c7fe5b047d55c400f95683a` | ACCEPT FOR ADOPTION (Atlas side); independently replayed by Atlas; record and evidence merged in #115; received by ChatGPT without claiming another replay (§3b) |
 | Adoption | PI, in the OFN session, 30 October 2026, 00:22 +03:00: "ontology DSN'i bu şekliyle benimsiyorum" — on candidate `df3c465f…00eb` as presented with the co-owner and Atlas acceptances | **adopted** (§8) |
 | Publication finalization | `evidence/ofn/scripts/release_ofn_v0_11.py`, adoption-state lines only; gates P1–P6 PASS, controls X1–X5 caught | done; published SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4` |
-| Publication merge of PR #112; tag `ofn-v0.11` | PI (merge commit; annotated tag with the published hash in the message) | pending |
+| Publication merge of PR #112; tag `ofn-v0.11` | PI: merge commit `886afc64573579165170bff682de21d5acf60978` (30 Oct 2026, 06:06 UTC); annotated tag `ofn-v0.11` on that commit (06:12 UTC), message naming `38a2f444…e9e4`; the file at the tag was hash-checked before tagging | done |
 
 **Prerequisite merge receipt — 30 October 2026.** On the PI's current request, ChatGPT executed the following server-side merge commits in the stated order, with each PR head pinned by the merge request. No squash, rebase, force-push or branch deletion was used. These are record/intake merges, not adoption of v0.11.
 

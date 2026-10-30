@@ -4,4 +4,4 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| — | — | — | — | (empty) | — | — |
+| 2026-10-30 | OFN | notice | open | OFN v0.11 §5.5 (OFN11-C01, OFN11-C02); RF-O10-03 citing `er2b-v0.3` (A.4, C11/C15B/C20) | — | `20261030-OFN-v0-11-adopted.md` |

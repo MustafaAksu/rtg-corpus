@@ -4,4 +4,4 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| — | — | — | — | (empty) | — | — |
+| 2026-10-30 | OFN | notice | open | OFN v0.11 §5.5 genuine relational-triad contract (class C realization; OFN11-C01, OFN11-C02); RF-O10-02 | — | `20261030-OFN-v0-11-adopted.md` |
