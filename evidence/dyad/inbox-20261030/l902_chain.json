@@ -1,0 +1,24 @@
+{
+ "all_pass": true,
+ "control": null,
+ "gates": {
+  "L1_1.51633_ceiling_with_0.36916": true,
+  "L1_displayed_1.51632_not_ceiling": true,
+  "L2_bridge_ceiling_claimed": true,
+  "L2_displayed_1.06252_not_ceiling": true,
+  "L3_corrected_chain": true,
+  "L3_displayed_1.61112_below_product": true,
+  "tau_ceiling": true
+ },
+ "info": {
+  "bridge_with_0.79246_exact_float": "1.0625206372",
+  "certificate_exact_C_star_reported": "1.6111209628541905 (DYAD-ART-LPHASE-ROWA FIN data; owner_checks.json O7)",
+  "inner_with_0.36915": "1.5163222210",
+  "inner_with_0.36916": "1.5163227984",
+  "product_1.51633x1.06253": "1.6111461149",
+  "product_displayed_ceilings": "1.6111384630",
+  "proposed_chain": "|r| <= 1.51633 q^{3/2}; factor <= 1.06253; |r_m| <= 1.61115 Q^{3/2} <= 403/250",
+  "tau_ceiling": "2887/2500"
+ },
+ "script": "dyad_inbox_20261030_l902_chain.py"
+}

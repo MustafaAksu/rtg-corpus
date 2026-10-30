@@ -1,0 +1,8 @@
+L1_1.51633_ceiling_with_0.36916 PASS
+L1_displayed_1.51632_not_ceiling PASS
+L2_bridge_ceiling_claimed FAIL
+L2_displayed_1.06252_not_ceiling PASS
+L3_corrected_chain PASS
+L3_displayed_1.61112_below_product PASS
+tau_ceiling PASS
+RESULT FAIL
