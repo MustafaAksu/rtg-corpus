@@ -2,8 +2,9 @@
 
 **Date:** 30 October 2026.
 **By:** the two Triadic co-owners. Drafted by Claude (Triadic owner session).
-**Status:** joint working record, step 1 of `records/triad/TRIAD_COOWNER_ENTRY_NOTE_20261030.md` §4 ("…then they reconcile into one fixed list").
-- **Awaiting ChatGPT confirmation.** Each settlement below binds only once ChatGPT confirms it in a receiving review. Any point ChatGPT does not confirm goes to the PI; the Atlas does not choose.
+**Status:** joint working record, confirmed by both co-owners; step 1 of `records/triad/TRIAD_COOWNER_ENTRY_NOTE_20261030.md` §4 ("…then they reconcile into one fixed list").
+- **ChatGPT confirmed all settlements on 30 October 2026** ("CONFIRMED / ACCEPT SCOPED for all 29 reconciliation rows"), in PR #139 review `5714190994` on commit `5275223d`. GitHub state is COMMENTED, because the connected account also authored the PR; the co-owner confirmation is in the review text. The review adds three wording precisions, folded into §3.1 and §3.5 below (marked *[review]*). No unresolved co-owner difference remains for the PI. This is co-owner agreement for the stage-1 build, not adoption.
+- On 30 October 2026 the PI started the v1.7 stage-1 build ("Stage 1'i hazırlayalım").
 - Nothing is built, adopted, released or tagged by this record. It changes no Triadic text, grade, RID or pipe state.
 
 **Inputs** (both read in full; `EV-SRC-READ`):
@@ -43,7 +44,7 @@ Rows 6–12, 14–20, 22–28 are otherwise identical in substance. The verdict 
 
 Point of use: §6.18 "Corrected diagnostic consequences". Proposed content (wording is the stage-1 editor's):
 
-1. **Domain and clock.** Q_s > 0, Q_c > 0; the clock is the six-step return count of the §6.4 coefficient ODE.
+1. **Domain and clock.** Q_s > 0, Q_c > 0; the clock is the continuous time of the §6.4 coefficient ODE, measured in units of one six-step block. It is not identified with the exact discrete six-step map *[review]*.
 2. **The extension is not unique.** The five-variable field is any extension of the root model with Q_c independent. Two root-equivalent extensions of the displayed §6.4 coefficients are:
    - **(a) literal:** ΔQ_c⁽¹⁾ = Q_c·q₁ with the independent Q_c, q₁ = 6(5√14 Ω − √42 I_{sc})/(7√Q_s);
    - **(b) Q_c-free:** the same coefficient with Q_c replaced by Q̂_c = (I_{sc}² + Ω²)/Q_s.
@@ -54,7 +55,7 @@ Point of use: §6.18 "Corrected diagnostic consequences". Proposed content (word
    - (a): f_s = Q̇_s + rQ_s q₁, f_c = Q̇_c − rQ_c q₁.
 
    So K = 1 tangency and invariance hold in both, at all retained orders.
-4. **D = 𝒢/Q_s = Q_c(1 − K).** In (b), Ḋ = 0. In (a), Ḋ = r q₁ D: D is constant only on the r¹-free field, and in general only the sign of D (equivalently the sets K < 1, K = 1, K > 1) is preserved.
+4. **D = 𝒢/Q_s = Q_c(1 − K).** In (b), Ḋ = 0. In (a), Ḋ = r q₁ D: D is not constant in general; it is constant on the r¹-free field, and on special solutions such as D ≡ 0 (K = 1) *[review]*. In general only the sign of D (equivalently the sets K < 1, K = 1, K > 1) is preserved.
 5. **Registration.** A remark at ODE scope, `[ALG]`, no exported RID, with ChatGPT's scope sentence: a diagnostic property of the truncated coefficient field, not a conserved physical mode, and not a finite-step statement of the exact six-step map.
 6. **Which extension the historical downstream code used** cannot be checked from the repository and is said so. The choice for any future corrected-field work belongs to T-6r C3 (row 4).
 
@@ -78,7 +79,7 @@ No corrected-field trajectory campaign is treated as scientifically decisive bef
 
 ### 3.5 Row 5 — T-6q sign table
 
-ChatGPT's text (kinematic bookkeeping, explicitly not a physical action; complete-state action and intertwining required; T-6n naive-flip failure and OPEN continuation preserved), plus R5's σ line.
+ChatGPT's text (kinematic bookkeeping, explicitly not a physical action; complete-state action and intertwining required; T-6n naive-flip failure and OPEN continuation preserved), plus R5's σ line, extended: σ flips under the exchange and under a single sign flip (−s, c), and is unchanged under (−s, −c) *[review]*.
 
 ### 3.6 Other rows
 
@@ -99,5 +100,6 @@ One edition, v1.7, in two stages, as in the entry note §4 and both records:
 
 ## 6. For the PI
 
-- **No decision is asked of the PI yet.** If ChatGPT confirms §§2–5, the remaining PI decisions are the ordinary ones: authorize the v1.7 stage-1 build, and later adoption.
-- **If ChatGPT does not confirm R1,** the question for the PI is narrow: whether v1.7 should state both extensions and leave the choice to T-6r (this record), or select one now.
+- ChatGPT confirmed §§2–5, including R1, so no co-owner difference goes to the PI. R1 needs no PI choice now: the extension is chosen in T-6r C3.
+- The stage-1 build was started by the PI on 30 October 2026. The remaining PI decision is adoption, after stage 2 and the Atlas row check.
+- ChatGPT's review notes that no new independent certificate exists for the H₁, H₂ producer bytes; they remain missing.
