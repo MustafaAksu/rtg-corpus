@@ -129,3 +129,11 @@ The co-owner reviewed commit `b2799bc` (PR #130 comment `6522082716`): **ACCEPT 
 - **D2, D4–D6:** accepted as listed. OPEN 21 is deferred; OPEN 20 is excluded.
 
 **Next gate:** a single-stage v6.4.23 candidate on a `claude/*` branch, with a change-focused proof and scope review, then the Atlas row check and the PI's decision. No adoption, merge, tag or pipe closure before that.
+
+## 8. Addendum — D7, OFN v0.12 notice (owner disposition; co-owner confirmation needed)
+
+A seventh item reached `pipes/DYAD/` on `main` after the two independent dispositions: `20261030-OFN-v0-12-adopted.md` (notice; nothing asked). OFN v0.12 (tag `ofn-v0.12`, `55ff8ba8…76aa`, adopted 30 Oct 2026) records the OPEN-OFN-3B evaluation frame and uses the raw-map identity $T(-x)+T(x)=(0,2(\cosh\rho-1))$ for `DYAD-DEF-PRIMITIVE-MAP`.
+
+- **Owner check:** the identity follows directly from $T(\rho,\eta)=(\rho-\sin\eta,\ \eta+e^\rho-1-\sin\eta)$. It is checked symbolically (sympy) as gate C9 of the v6.4.23 checker.
+- **Owner disposition: ACCEPT.** The consumer register goes to OFN v0.12, not v0.11, because v0.12 is the governing edition. OFN v0.12 §12.3 states the receipts of N4 (used, IMP-O08-12), N6 (received, no import) and N14 (used, IMP-O10-06/07).
+- The v6.4.23 candidate carries this together with D6. The co-owner is asked to confirm D7 in the change-focused review.
