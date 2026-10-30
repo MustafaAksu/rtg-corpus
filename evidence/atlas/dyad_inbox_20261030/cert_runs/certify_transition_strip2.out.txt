@@ -1,0 +1,5 @@
+F(q_minus) at step 10: [3.495228073e-7 +/- 4.37e-17]
+F(q_plus) at step 10:  [-4.786383209e-9 +/- 2.99e-19]
+F'(q_interval) over full strip: [-0.709 +/- 7.02e-4]
+[SUCCESS] Endpoint sign separation verified. Root exists.
+[SUCCESS] 0 not in F'(I). Monotonicity verified. Transversality proven. IFT applies.

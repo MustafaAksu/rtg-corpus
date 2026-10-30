@@ -1,0 +1,14 @@
+========================================================================
+OPEN 18 Arb/C++ Independent Certification (Adaptive Bisection)
+========================================================================
+
+--- Micro Certificate: q in (0, 0.001] ---
+d^2Q_3/dq^2 interval:   [2.0 +/- 0.0473]
+d^2N_Th,3/dq^2 int.:    [-1.0 +/- 0.0242]
+[SUCCESS] Micro-strip bounds strictly verified via Arb MVT.
+
+--- Macro Sweeps (Adaptive Bounds) ---
+Gamma_3 macro sweep (n=3): [SUCCESS] Certified strictly using 11701 adaptively refined boxes.
+Gamma_4 macro sweep (n=4): [SUCCESS] Certified strictly using 81 adaptively refined boxes.
+
+[THM-READY] All interval phase pieces natively closed in FLINT/Arb!

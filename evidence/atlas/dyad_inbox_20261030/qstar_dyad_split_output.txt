@@ -1,0 +1,6 @@
+rho_4          changes sign in the gap; root q = 1.26021420256347711487243856095650439
+Theta_4+pi/3   changes sign in the gap; root q = 1.26021420256347711487243856095650439
+gap centre 1.26021420256 vs root: |diff| = 3.48e-12
+q_*-1e-6 Theta_2=-2.63495322 Theta_3=-2.01142397 Theta_4=-1.0471965 Theta_5=-0.0463423498  (-pi/3 = -1.04719755 )
+q_*+1e-6 Theta_2=-2.63495392 Theta_3=-2.01142556 Theta_4=-1.0471986 Theta_5=-0.0463447394  (-pi/3 = -1.04719755 )
+NUMGEN q* (numgen-v1.21 L909) = 0.3156258836..., root of eta_6(q)-q: a different number
