@@ -126,3 +126,34 @@ No new calculation is needed: retain the source-reported scope. This does not ch
 Make R1 and, preferably, N1 in one builder patch; regenerate the candidate and its identity/report records. A receiving readback can be restricted to H5 and the A1b tail plus the resulting candidate identity. Retain the other accepted conclusions above. The ordinary bounded Atlas builder/checker run is sufficient; do not repeat unchanged owner scientific campaigns or reopen OFN v0.11.
 
 Until then, the receiving verdict for the named candidate is **REVISE (narrow)**. PI acceptance must identify the eventual candidate bytes; the receiving review is not adoption. No merge, tag, canonical owner edit, pipe disposition or tool-PR decision was performed in this review. PR #118 and shared-tool PR #113 remain separate.
+
+## 5. Revision 2 receiving readback — 30 October 2026
+
+**Current verdict: ACCEPT SCOPED / READY FOR PI ACCEPTANCE. AV08-R1 CLOSED; AV08-N1 CLOSED.** This verdict applies only to the revision-2 object below. It supersedes the revision-1 REVISE disposition for the successor, without rewriting the historical review above. The other acceptances and evidence limitations in §§1–2 remain in force. No further candidate edit or scientific campaign is requested by this reviewer.
+
+**Reviewed object:** PR #119 head `fe0d4b9385192aad2360cb85dc1da4c234d6d6f3`, compared with revision 1 at `f656c2010b59b6505406b346d313d7006170c663`.
+**Candidate:** `atlas/RTG_STATE_ATLAS.md`; GitHub blob `75107d0661132b2651b7fcc5bb0e115f059c76b9`; reported SHA-256 `47320ca55f25955ff0d5e73be690465c7f9e6ebad9fa6bbc09692d4cf86371b7`, 502,700 bytes / 1,540 lines.
+**Identity check:** the revision-2 review packet §1 and `evidence/atlas/v0.8/verification_summary.json` agree on that SHA-256 and size. The connector identified both inspected passages with the same blob at the pinned head. The SHA-256 was not independently recomputed in this readback.
+
+### 5.1 Targeted source reading and dispositions
+
+| Finding | Candidate actually read | Owner actually reread | Disposition |
+|---|---|---|---|
+| AV08-R1 | Entire H5 line, `atlas/RTG_STATE_ATLAS.md` L48 at the revision-2 head | `numgen-v1.21:dsn/RTG_NUMBER_GENESIS_DSN.md`, §9.1 L2777–2791, the notice disposition and complete acceptance matrix | CLOSED |
+| AV08-N1 | Entire A1b node, the same file L734 at the revision-2 head | `recog-v0.3.26:records/recog/RECOG_v0_3_26_RELEASE_RECORD.md`, §0 L8–20 | CLOSED |
+
+[SESSION; EV-SRC-READ] **R1.** H5 now explicitly names the v0.3.24 A1a/A1b comparisons, restricts GAP-LOCK 3 agreement to the ratio limit, states that the digamma schedule was not adopted, and states that the matrix carries no consumer acceptance of the v0.3.25/v0.3.26 additions. The custody, no-import, 15/2 increment typing and separate Dyadic row-A import statements remain. This satisfies §3's acceptance criterion; no later recipient acceptance is inferred.
+
+[SESSION; EV-SRC-READ] **N1.** The A1b node now states that the inequality remains valid and the reported grid values at M<=10^5 change by less than 0.5%. This faithfully retains the source-reported numerical qualifier without claiming exact numerical identity. The corrected-form qualification, retraction identifiers and D5 assumption remain.
+
+### 5.2 Delta and execution boundaries
+
+[SESSION] GitHub's comparison of the two full commit IDs reports one successor commit and exactly two inserted / two deleted Atlas lines. Its seven changed paths are the Atlas, builder, two checker reports, edit log, verification summary and review packet. The source manifest, diagnostic dispositions, retired-key file, H-to-L5 map and control-output files are not changed. This is consistent with the scoped correction; no owner DSN changed. The reading in this round is targeted, not a full Atlas reread or a new proof review.
+
+The review packet's new §6 was read in full; its §1 identity block, the full revision-2 verification summary and `CONVENTIONS.md` at the frozen snapshot were also read. The producer reports two byte-identical builds, zero shared-checker FAILs, unchanged counts, shared controls 18/18 and focused controls 8/8. These remain `EV-SRC-REPORTED` / `EV-NOT-RERUN`: this reviewer did not execute the builder, checker, controls or owner campaigns. No claim of independent computational replay or semantic-equivalence certification is added.
+
+### 5.3 Remaining publication actions
+
+No scientific or textual review finding remains open for this candidate. PI acceptance of the revision-2 object is still required. Under `CONVENTIONS.md` §4, record the acceptance and candidate identity in the release record before merge/tag; post-tag verification and the RECOG-to-ATLAS queue closure follow publication. This is the existing publication procedure, not another candidate revision request. `atlas-v0.7` remains the governing accepted, tagged Atlas until the successor's adoption/publication gates are met.
+
+This readback performs no adoption, merge, tag, canonical owner edit or pipe-state change. PR #118 and PR #113 remain independent; unchanged owner scientific campaigns are not reopened.
