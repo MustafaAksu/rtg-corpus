@@ -1,0 +1,71 @@
+PASS degree-nine primitive return: identity linear part
+PASS degree-nine primitive return: no quadratic part
+PASS degree-nine primitive return: cubic mu
+PASS one-step homological identity through degree 2
+PASS one-step homological identity through degree 3
+PASS one-step homological identity through degree 4
+PASS one-step homological identity through degree 5
+PASS one-step homological identity through degree 6
+PASS exact equality with verified baseline: raw low jet
+PASS exact equality with verified baseline: same fixed h
+PASS exact equality with verified baseline: same fixed J
+PASS h is not extended or changed at degrees 7--9
+PASS all nonresonant J terms absent through degree six
+PASS finite conjugacy defect has no degree <=6 terms
+PASS finite defect (0,7) coefficient retained
+PASS a=7/6 majorizes inverse coordinate row sums
+PASS raw vector degree 3 coefficient modulus ceiling
+PASS raw vector degree 4 coefficient modulus ceiling
+PASS raw vector degree 5 coefficient modulus ceiling
+PASS raw vector degree 6 coefficient modulus ceiling
+PASS raw vector degree 7 coefficient modulus ceiling
+PASS raw vector degree 8 coefficient modulus ceiling
+PASS raw vector degree 9 coefficient modulus ceiling
+PASS S6 coefficients through 7 match verified baseline
+PASS analytic degree >=10 raw vector tail <332000
+PASS h2 exact modulus (2, 0)
+PASS h2 exact modulus (1, 1)
+PASS h2 exact modulus (0, 2)
+PASS fixed h degree 3 rational modulus ceiling
+PASS fixed h degree 4 rational modulus ceiling
+PASS fixed h degree 5 rational modulus ceiling
+PASS fixed h degree 6 rational modulus ceiling
+PASS J quintic modulus ceiling
+PASS same inverse derivative bound kappa<1/8
+PASS same inverse target disk radius 9/100
+PASS same co-Lipschitz bound
+PASS same relative coordinate bound 15/16..17/16
+PASS finite polynomial defect majorant unchanged
+PASS enlarged: h evaluation inside raw radius
+PASS enlarged: derivative tail radius ratio <=10/11
+PASS enlarged: F_W(h(z)) inside inverse target
+PASS enlarged: J(z) inside injectivity disk
+PASS enlarged: h(J(z)) inside inverse target
+PASS enlarged: normalized C7<100
+PASS enlarged: normalized derivative C6<1000
+PASS enlarged: normalized disk radial contraction margin <1/2
+PASS enlarged: normalized lower radial bound positive
+DISPLAY enlarged C7= 85.07319334710797 CD= 812.8936249483279 radial margin= 0.010724591655223959
+PASS small: h evaluation inside raw radius
+PASS small: derivative tail radius ratio <=10/11
+PASS small: F_W(h(z)) inside inverse target
+PASS small: J(z) inside injectivity disk
+PASS small: h(J(z)) inside inverse target
+PASS small: normalized C7<30
+PASS small: normalized derivative C6<250
+PASS small: normalized disk radial contraction margin <1/2
+PASS small: normalized lower radial bound positive
+DISPLAY small C7= 27.602220983621145 CD= 216.76641142802197 radial margin= 0.002387870550268163
+PASS full P2-A tube raw image bound 47/1000
+PASS full P2-A tube inverse fits enlarged NF disk
+PASS exact seed inside original full primitive base disk
+PASS exact seed admission ratio 400/19
+PASS P2-A v2 radial coefficient ceiling 5
+PASS P2-A v2 radial coefficient ceiling 6
+PASS P2-A v2 radial coefficient ceiling 7
+PASS P2-A v2 complete degree-seven radial polynomial matches
+PASS P2-A v2 radial analytic K8<42355
+PASS P2-A v2 C6prim108 retained
+PASS P2-A v2 exact full margin retained
+DISPLAY K10= 331449.87164192495 full normalized tube radius= 0.04941454622137977
+CERTIFICATE PASS 67 checks

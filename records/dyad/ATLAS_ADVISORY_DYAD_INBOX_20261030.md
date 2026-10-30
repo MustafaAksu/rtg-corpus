@@ -15,8 +15,8 @@
 | # | Item | Kind | Proposed disposition | Needs first |
 |---|---|---|---|---|
 | D1 | `20261026-NUMGEN-q-star-branch-split.md` | question | **answer: no — two different numbers** (§1a, after the upload). Dyadic's q* ≈ 1.2602142026 (ρ₄ = 0 on (0,q), Θ₄ at the funnel edge −π/3); NUMGEN's ≈ 0.3156258837 (η₆ = q). Rename one symbol and state the footprint definition in the OPEN 18 entry | owner confirmation of the Atlas reading of the recovered certificate |
-| D2 | `20261029-RECOG-c7-ceilings-registration.md` | request | **accept, conditional on evidence.** Register the certified C₇ ceilings as a stated sub-result, under its own RID, without replacing the adopted 100 / 30 | the NF-REM certificate (`DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip`, `e4e2bab0…dbe4`) or an owner reading of its upper bounds |
-| D3 | `20261029-RECOG-d5-bridge-constants-registration.md` | request | **accept, conditional on evidence.** Register the row-A bridge lemma (two bounds and the exact decomposition) under its own RID | the L-PHASE row-A certificate files (`117484ae…9cdb`, `8697c697…d4fa`, `qw.py`, `tzw.py`) |
+| D2 | `20261029-RECOG-c7-ceilings-registration.md` | request | **accept; evidence now in hand** (§2.3). Register C₇ ≤ 85.1 (|z| ≤ 1/20) and C₇ ≤ 27.7 (|z| ≤ 1/40) — outward ceilings of the certified rational bounds 85.0731… / 27.6022… — as a stated sub-result under its own RID, keeping the adopted 100 / 30 | owner decision only |
+| D3 | `20261029-RECOG-d5-bridge-constants-registration.md` | request | **accept with change; evidence now in hand** (§2.3). Register the row-A bridge lemma under its own RID with **outward** ceilings: c_Q ≤ 0.79246 is one, but c′_Q must be ≥ 0.3691523… (for example 0.36916), not the published 0.36915. Tell RECOG to re-cite | owner decision; RECOG re-checks its `[assuming:]` blocks with the corrected c′_Q |
 | D4 | `20261026-NUMGEN-v1-21-adopted.md` | notice | **accept; update the consumer register** (NUMGEN v1.21 imports DYAD-THM-LPHASE-ROWA-REMAINDER) | — |
 | D5 | `20261029-RECOG-v0-3-26-adopted.md` | notice | **accept; update the consumer register.** Optional: re-base OPEN 21 on the sharpened R9 rows | — |
 | D6 | `20261030-OFN-v0-11-adopted.md` | notice | **accept; update the consumer register** (OFN v0.11 imports the two smooth theorems and the map RID) | — |
@@ -139,6 +139,20 @@ RECOG asked for "the domain (U_T / the row-A region)". The proof states the boun
 The certificate files were placed in a Claude project folder, `claude/lphase_rowA/` (NUMGEN receipt §1), not in the repository.
 
 **Gain:** RECOG-THM-A1C-SHARPENED-SCHEDULE, RECOG-ALG-A1C-LOGFREE-ENVELOPE and the A1c decoder blocks lose the (D5) qualifier at RECOG's next release.
+
+### 2.3 After the second upload (same day)
+
+The PI pushed `DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip` and a NUMGEN review package that contains the four L-PHASE row-A files. All five hashes equal the DSN's recorded values. Both certificates rerun here, and both regenerate byte-identical outputs (`records/dyad/DYAD_UPLOAD_HASH_CHECK_20261030.md` §4a).
+
+- **D2.** The certified exact rational bounds are C₇ ≤ 85.0731933471… (row |z| ≤ 1/20) and ≤ 27.6022209836… (row |z| ≤ 1/40). The DSN's "certificate values 85.07 / 27.60" are nearest-rounded. RECOG's 85.1 / 27.7 are valid outward ceilings, so the registration RECOG asked for is supported as worded.
+- **D3.** The certificate computes c_Q = 0.79245761523… and c′_Q = 0.36915230466… exactly.
+  - The published c_Q = 0.79246 is an outward ceiling.
+  - The published **c′_Q = 0.36915 is 2.3 × 10⁻⁶ below the certified value**, so it is not a ceiling. The theorem's own constant 403/250 is unaffected, because the certificate uses the exact c′_Q.
+  - Proposed: register the lemma with an outward c′_Q, for example 0.36916. At v6.4.23, correct the decimal in the proof outline (L902) as a `[COR]` of a displayed constant.
+  - Ask RECOG to re-check the blocks that carry `[assuming: c′_Q = 0.36915]` — the sharpened schedule, the decoder blocks and the log-free envelope. The effect is presumably negligible, but a certified chain needs the outward value. For example, `evidence/recog/scripts/recog_a1c_tail_averaging_cert.py` L55 enters c′_Q as the point `I("0.36915")`. The other row-A constants on that line are proper ceilings of the certified values: c_J 0.50220 ≥ 0.50219804…, c₇ 157.58 ≥ 157.57641….
+  - The decomposition identity for r stays as stated (an exact `[ALG]` identity under (B)).
+
+With D1–D3 answerable, step 0 of §5 is complete except for the optional files listed in the hash check. Step 2 (the owners' disposition record) can start.
 
 ## 3. Evidence prerequisite and recovery-list correction
 

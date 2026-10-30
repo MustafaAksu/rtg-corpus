@@ -1,0 +1,44 @@
+[
+  {
+    "name": "certify",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "pass": true
+  },
+  {
+    "name": "independent",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "pass": true
+  },
+  {
+    "name": "numerical_sanity",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "pass": true
+  },
+  {
+    "name": "negative_tail10",
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "pass": true
+  },
+  {
+    "name": "negative_C7",
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "pass": true
+  },
+  {
+    "name": "negative_derivative",
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "pass": true
+  },
+  {
+    "name": "negative_raw_lattice",
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "pass": true
+  }
+]

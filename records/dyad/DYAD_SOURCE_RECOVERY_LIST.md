@@ -2,7 +2,7 @@
 
 **Date:** 22 October 2026. **Prepared by:** Claude (atlas owner). **Status:** working record at a fixed path; updated as files arrive. **Collection deferred by the PI (22 Oct 2026):** most files are on the PI's machine; they will be gathered later. Until then the DSN's availability notes stand.
 **Source of the list:** every file name cited in `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` v6.4.21 (tag `dyad-v6.4.21`), mostly from the §8 artifact registry, checked against the repository tree and the members of the ZIP packages in it.
-**Result:** 155 distinct files cited; 11 present (`normalize_p6_liegauge_exact.py`, `dyad_h4_archival_exact_check.py`, `qw.py` inside the OPEN 20 packages, three records, and the five C++ certificates of the placed table below); **144 missing** (plus one closeout record not cited in the DSN): Tier 1 64, Tier 2 43, Tier 3 28, Tier 4 10.
+**Result:** 155 distinct files cited; 15 present (`normalize_p6_liegauge_exact.py`, `dyad_h4_archival_exact_check.py`, `qw.py` inside the OPEN 20 packages, three records, and the nine files of the placed table below); **140 missing** (plus one closeout record not cited in the DSN): Tier 1 60, Tier 2 43, Tier 3 28, Tier 4 10.
 **Correction (30 October 2026, atlas owner):** the first extraction missed the six C++ (FLINT/Arb) certificate sources cited in the §8 registry (`DYAD-ART-OPEN18`, `-STRIP2`, `-STRIP1`, `-IA-BULK`, `-QMAX`, `-IA-CERT-FIXED`); they are added below (Tier 1: the two cited by closed theorems; Tier 2: the four `[ENG]` entries). A full re-check of every backticked file name of `dyad-v6.4.21` and `dyad-v6.4.22` against this list and the repository finds no other omission. Found while preparing `records/dyad/ATLAS_ADVISORY_DYAD_INBOX_20261030.md`.
 
 **Goal.** Anyone using the repository can test every DYAD claim from the repository alone. A missing file here does not mean the work was not done; it means its evidence is not independently inspectable from the repository.
@@ -19,7 +19,7 @@ Closeout C-2 items are included in Tier 3 (`OPEN9_arithmetic_horizon_definitions
 
 ## Placed (30 October 2026)
 
-PI-supplied from `ailab:/root/rtg-engine` on `upload/dyad-sources` (commit `59b3f87`), hash-checked in `records/dyad/DYAD_UPLOAD_HASH_CHECK_20261030.md`; kept unchanged under `upload/dyad-sources/rtg-engine/`. The DSN records no hash for these, so identification is by name or content.
+PI-supplied on `upload/dyad-sources` — the C++ sources from `ailab:/root/rtg-engine` (commit `59b3f87`, kept under `upload/dyad-sources/rtg-engine/`; the DSN records no hash for them, so identification is by name or content) and two zips (branch `missing-files`, commit `3e62f1a`; the DSN's recorded hashes match). Hash-checked in `records/dyad/DYAD_UPLOAD_HASH_CHECK_20261030.md`; files kept unchanged.
 
 | Cited file | §8 RID | Placed as | SHA-256 |
 |---|---|---|---|
@@ -28,8 +28,12 @@ PI-supplied from `ailab:/root/rtg-engine` on `upload/dyad-sources` (commit `59b3
 | `certify_transition_strip.cpp` | DYAD-ART-STRIP1 | same name | `69fe019d5b27653a973f3725ce6aaf4962cb2447b32e3fb78269d96de0d3a32c` |
 | `rtg_ia_bulk_cert.cpp` | DYAD-ART-IA-BULK | same name (+ run record `bulk_cert_results.txt`) | `acbff177b0a799fd779bd17478db474e2dc3479621383b7cb239a6476130e81f` |
 | `certify_q_max.cpp` | DYAD-ART-QMAX | same name | `af2f5cc57300230d683616e9e19c3243a1ba7c6667be9a4094f3f24b9b1299a9` |
+| `DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip` | DYAD-ART-RE-P2B2 | same name, `upload/dyad-sources/` (branch `missing-files`, `3e62f1a`); recorded hash matches | `e4e2bab004d4e39b76920e486607acc34749037ae2638809a9c2117d548fdbe4` |
+| `dyad_numgen_lphase_rowA_cert.py` | DYAD-ART-LPHASE-ROWA | member `replay_inputs_dyad/` of `upload/dyad-sources/NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip` (`3e62f1a`); recorded hash matches | `117484ae1a2509b6f6065d395840bfdfe2b0c977af0505f9fe6de68c13959cdb` |
+| `lphase_rowA_certificate.json` | DYAD-ART-LPHASE-ROWA | same zip member folder; recorded hash matches | `8697c6970bd908327c66ef2ce3b2d38386947899033ef7f720bc096c4c3ad4fa` |
+| `tzw.py` | DYAD-ART-LPHASE-ROWA | same zip member folder; recorded hash matches | `f007d42cde36d2a70115b9db25f47b107c446735fa31c66664f620c3247a5609` |
 
-## Tier 1 — certificates and exact/theorem evidence (scripts, their outputs, evidence packages) — 64 files
+## Tier 1 — certificates and exact/theorem evidence (scripts, their outputs, evidence packages) — 60 files
 
 | File | §8 RID | Grade of the registry entry | Recorded SHA-256 |
 |---|---|---|---|
@@ -46,13 +50,10 @@ PI-supplied from `ailab:/root/rtg-engine` on `upload/dyad-sources` (commit `59b3
 | `dyad_lphase_p2b_provenance_gate_v0_1_1.py` | DYAD-ART-LPHASE-P2B-PROV | ALG | `343a3631f41e41741f3c0b6e99b6431fe2e0635b7821f9f71674b5f1878a27a5` |
 | `lphase_p2b_provenance_control_exits.json` | DYAD-ART-LPHASE-P2B-PROV | ALG | `e2ffa46bced46fff76044a1a651281557b93a70fa7ab96dc13cb1e8f859c1a1e` |
 | `lphase_p2b_provenance_gate.json` | DYAD-ART-LPHASE-P2B-PROV | ALG | `58cfafd359da64ef8b20f12b656fe3e8ab8b69e559cd46574767c8629692fc89` |
-| `dyad_numgen_lphase_rowA_cert.py` | DYAD-ART-LPHASE-ROWA | NUM/THM | `117484ae1a2509b6f6065d395840bfdfe2b0c977af0505f9fe6de68c13959cdb`, `117484ae…9cdb` |
-| `lphase_rowA_certificate.json` | DYAD-ART-LPHASE-ROWA | NUM/THM | `8697c6970bd908327c66ef2ce3b2d38386947899033ef7f720bc096c4c3ad4fa` |
 | `lphase_rowA_numeric.json` | DYAD-ART-LPHASE-ROWA | NUM/THM | `2291db4e1404654427b567bdba338ea1ce0ddd0b7f4e8bad1bd8b03b16d1b9c4` |
 | `lphase_rowA_numeric.py` | DYAD-ART-LPHASE-ROWA | NUM/THM | `95b891f8f62b42342c0307e77b0f8c13e68cc7f5a3b9d368b18a1a3e4c3a4647` |
 | `lphase_scope_checks.json` | DYAD-ART-LPHASE-ROWA | NUM/THM | `9b31c7107a9d1e44cb19b213e1060f5aead30dddc7b79a49b6ca42372d1c3f25` |
 | `lphase_scope_checks.py` | DYAD-ART-LPHASE-ROWA | NUM/THM | `570078dbfc2c8a881c47c4a468370452e0a5d76e8c73055857196e99e49cd8b6` |
-| `tzw.py` | DYAD-ART-LPHASE-ROWA | NUM/THM | `f007d42cde36d2a70115b9db25f47b107c446735fa31c66664f620c3247a5609` |
 | `dyad_m2c_nu5_p5_exact.py` | DYAD-ART-NU5-P5 | ALG | `5fcccb9d38a7dcafe317044ca341cbead38047e24041da92e6fe891faa5cd464`, `5fcccb9d…d464` |
 | `open16_alias_phase.py` | DYAD-ART-OPEN16 | ALG | not recorded |
 | `open17_a2.py` | DYAD-ART-OPEN17 | ALG | not recorded |
@@ -88,7 +89,6 @@ PI-supplied from `ailab:/root/rtg-engine` on `upload/dyad-sources` (commit `59b3
 | `q4_03_R_identity_certificate.py` | DYAD-ART-Q403-CERT | ALG | not recorded |
 | `q4_03_cascade_extract.py` | DYAD-ART-Q403-EXTRACT | ALG | not recorded |
 | `DYAD_RETURN_ENCLOSURE_P0_P1_evidence.zip` | DYAD-ART-RE-P0P1 | ALG | not recorded |
-| `DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip` | DYAD-ART-RE-P2B2 | THM | `e4e2bab004d4e39b76920e486607acc34749037ae2638809a9c2117d548fdbe4` |
 | `P2A_v1_certificate_preserved.json` | DYAD-ART-RE-P2B2 | THM | not recorded |
 | `rtg_betagraded_vanishing.py` | DYAD-ART-VANISH-BGRADED | ENG/ALG | `dec08174…d774` |
 | `degree_b_vanishing_cert_v2.py` | DYAD-ART-VANISH-CERT | ALG | not recorded |

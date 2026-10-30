@@ -66,9 +66,35 @@ The OPEN 11 bulk record shows the same split between the (4,11) and (5,11) sub-b
 
 This is an Atlas reading of a recovered PI-supplied certificate, not a Dyadic owner statement. The Dyadic owner confirms or corrects it and states the footprint definition, which lives in the unrecovered audits.
 
+## 4a. Second upload — branch `missing-files`, commit `3e62f1a`
+
+The PI pushed two zips to `upload/dyad-sources/` on a branch named `missing-files`. Its base `07df334` is an older `main` commit, an ancestor of the current `main`, so a merge adds exactly these two files; it was merged unchanged into the advisory branch.
+
+| File | SHA-256 | Identification |
+|---|---|---|
+| `DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip` | `e4e2bab004d4e39b76920e486607acc34749037ae2638809a9c2117d548fdbe4` | **equal to the hash recorded** for DYAD-ART-RE-P2B2 (L1177; recovery list Tier 1) |
+| `NUMGEN_v1_20_8_DRAFT_r3_REVIEW.zip` | `a7fc9ed63113e7f6f48296b9593b92467b94314d71f5117e106cf9dcdbe1ee84` | a NUMGEN review package. Its folder `replay_inputs_dyad/` holds four DYAD-ART-LPHASE-ROWA files, each **equal to its recorded hash**: `dyad_numgen_lphase_rowA_cert.py` `117484ae…9cdb`, `qw.py` `3a913062…cce8`, `tzw.py` `f007d42c…5609` and `lphase_rowA_certificate.json` `8697c697…d4fa`. It also holds `lphase_rowA_perf.json`, a timing file, not cited |
+
+**Reruns** (`EV-RUN`; `evidence/atlas/dyad_inbox_20261030/rerun_notes.md`, logs and hashes alongside):
+- **P2-B v2.** `run_all.py` on an extracted copy runs 7/7 jobs as expected: three positive and four negative controls. The regenerated `certificate.json` is byte-identical.
+  - The certificate's exact rational upper bounds are C₇ ≤ 85.0731933471… (|z| ≤ 1/20) and C₇ ≤ 27.6022209836… (|z| ≤ 1/40).
+  - The DSN's "certificate values 85.07 / 27.60" are therefore nearest-rounded, not ceilings. RECOG's outward values 85.1 / 27.7 are valid ceilings of the certified bounds.
+- **L-PHASE row A.** The certificate runs PASS (10 gates; N1–N6 false), and the regenerated JSON is byte-identical.
+  - The certified constants are exact rationals: c_Q = 0.79245761523303… and c′_Q = 0.36915230466066….
+  - The published c_Q = 0.79246 is an outward ceiling. The published **c′_Q = 0.36915 is not**: it lies 2.3 × 10⁻⁶ below the certified value (exact-arithmetic check: c′_Q > 0.36915, c′_Q ≤ 0.36916).
+  - The theorem's published constant 403/250 is unaffected, because the certificate uses the exact c′_Q internally (FIN: 1.61112… ≤ 1.612).
+  - The decimal "c′_Q = 0.36915" in the DSN proof outline (L902), and RECOG's `[assuming:]` copy of it, are not certified ceilings.
+
+Still missing for DYAD-ART-LPHASE-ROWA:
+- the illustration and scope files (`lphase_rowA_numeric.*`, `lphase_scope_checks.*`);
+- the provenance gate (`dyad_lphase_p2b_provenance_gate*.py`, its two JSONs);
+- the three Dyadic session records.
+
+None is needed for items D2 and D3.
+
 ## 5. Not claimed
 
 - No Dyadic grade, statement or registry entry is changed.
 - The reruns confirm that the recovered sources reproduce their printed success lines on this toolchain. They do not re-audit the arguments: for example, the micro strip's use of the second derivative, or branch legality.
 - `certify_branch_4_10.cpp` is not identified as `rtg_ia_cert_fixed.cpp`.
-- P2-B v2 (`e4e2bab0…dbe4`) and the L-PHASE row-A files are still missing, so items D2 and D3 still wait.
+- The second upload supplies the evidence for D2 and D3 (§4a). Whether to register the constants, and with which outward values, is the Dyadic owners' decision.
