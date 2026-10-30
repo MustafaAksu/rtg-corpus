@@ -151,6 +151,11 @@ The PI pushed `DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip` and a NUMGEN review pa
   - Proposed: register the lemma with an outward c′_Q, for example 0.36916. At v6.4.23, correct the decimal in the proof outline (L902) as a `[COR]` of a displayed constant.
   - Ask RECOG to re-check the blocks that carry `[assuming: c′_Q = 0.36915]` — the sharpened schedule, the decoder blocks and the log-free envelope. The effect is presumably negligible, but a certified chain needs the outward value. For example, `evidence/recog/scripts/recog_a1c_tail_averaging_cert.py` L55 enters c′_Q as the point `I("0.36915")`. The other row-A constants on that line are proper ceilings of the certified values: c_J 0.50220 ≥ 0.50219804…, c₇ 157.58 ≥ 157.57641….
   - The decomposition identity for r stays as stated (an exact `[ALG]` identity under (B)).
+  - **Two further display roundings in the same proof outline (L902).** The ChatGPT co-owner found them in PR #128 / PR #125 comment `6521673747`, and the Atlas checked them in floating point:
+    - (1−c_Q/20)^{−3/2} with c_Q = 0.79246 is 1.0625206…, above the displayed 1.06252. Even the certified exact c_Q gives 1.0625204…, also above it.
+    - The displayed ceilings 1401/1000, 123/125, τ̄·0.36915, 0.50220 and 157.58 combine to 1.5163204…, above the displayed 1.51632.
+    - The final ceiling 403/250 = 1.612 still holds with outward values: 1.61112… with the published ceilings and c′_Q = 0.36916; ChatGPT's more conservative 1.611372.
+    - The v6.4.23 `[COR]` should therefore restate the whole decimal chain of L902 with outward values, not only c′_Q.
 
 With D1–D3 answerable, step 0 of §5 is complete except for the optional files listed in the hash check. Step 2 (the owners' disposition record) can start.
 
