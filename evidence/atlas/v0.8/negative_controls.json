@@ -1,0 +1,42 @@
+[
+ {
+  "id": "U1",
+  "what": "H cites a retired L5 row",
+  "detected": true
+ },
+ {
+  "id": "U2",
+  "what": "retired key reused",
+  "detected": true
+ },
+ {
+  "id": "U3",
+  "what": "SOURCES row older than manifest",
+  "detected": true
+ },
+ {
+  "id": "U4",
+  "what": "new OFN RID misspelled against the source (shared checker links FAIL)",
+  "detected": true
+ },
+ {
+  "id": "U5",
+  "what": "retracted RECOG order sentence left unqualified",
+  "detected": true
+ },
+ {
+  "id": "U6",
+  "what": "stale class-C wording reintroduced",
+  "detected": true
+ },
+ {
+  "id": "U7",
+  "what": "new RECOG RID misspelled against the source (shared checker links FAIL)",
+  "detected": true
+ },
+ {
+  "id": "U8",
+  "what": "compound narrow-Q6 status reintroduced",
+  "detected": true
+ }
+]

@@ -1,0 +1,121 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.7",
+ "base_sha256": "8ebfbd1008ce96e167ec90931468d166c568294a66453824667fba88e3f49c6c",
+ "atlas_sha256": "450d8e7127beef06d07f4b2315b23233085b5766ffd2cb4894418780bd198e46",
+ "atlas_bytes": 502219,
+ "atlas_lines": 1540,
+ "source_snapshot": "f8f3b5b172649c69236e327af1f12f93e2307b1d",
+ "changed_sources": [
+  "OFN",
+  "RECOG"
+ ],
+ "edit_operations": 94,
+ "retired_keys": [
+  "OFN.O1",
+  "OFN.O3",
+  "OFN.O4",
+  "OFN.O5",
+  "OFN.O7",
+  "OFN.O8",
+  "RRF.F6",
+  "OFN.O12",
+  "OFN.O13"
+ ],
+ "new_keys": [
+  "OFN.O14"
+ ],
+ "new_node_rids": {
+  "OFN": [
+   "RTG-OFN-DEF-ZERO-ORIGIN",
+   "RTG-OFN-DEF-DIST-ZN",
+   "RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY",
+   "RTG-OFN-DEF-CONTINUOUS-REPRESENTATION",
+   "RTG-OFN-DEF-FINITE-DESCRIPTION",
+   "RTG-OFN-DEF-REDUCTION-TARGET"
+  ],
+  "RECOG": [
+   "RECOG-ALG-A1C-RECIPROCAL-DRIFT",
+   "RECOG-ALG-A1C-LOGFREE-ENVELOPE",
+   "RECOG-ART-A1C-DRIFT-CENTERING",
+   "RECOG-ART-A1C-CORRECTED-GRID",
+   "RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325",
+   "RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325"
+  ],
+  "TDRG": [
+   "TDRG-DEF-ZN-STATE",
+   "TDRG-DEF-PHYSICAL-STATE",
+   "TDRG-DEF-REL-ADVANCE",
+   "TDRG-DEF-BAND",
+   "TDRG-DEF-STAR",
+   "TDRG-DEF-CONV-TICK",
+   "TDRG-DEF-CONV-P3CYC",
+   "TDRG-THM-HOLONOMY",
+   "TDRG-THM-NARROW-BAND-EXCLUSION",
+   "TDRG-THM-RECURRENCE",
+   "TDRG-ALG-LEM-REACH",
+   "TDRG-ALG-LEM-NOANNIHIL",
+   "TDRG-ALG-LEM-RETRIG",
+   "TDRG-ALG-LEM-SPECCONS"
+  ],
+  "NUMGEN": [
+   "NUMGEN-RESULT-N5AS1-L-BACKBONE"
+  ]
+ },
+ "ofn_rids_at_tag": 43,
+ "pipes": {
+  "items": 33,
+  "dispositioned": 3,
+  "open": 24,
+  "closed": 6
+ },
+ "dispositions": {
+  "retired": 9,
+  "reworded": 13,
+  "retained": 2,
+  "new": 1
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 129
+  },
+  "qualifiers": {
+   "PASS": 3
+  },
+  "links": {
+   "PASS": 486,
+   "UNVERIFIED": 5,
+   "DOCUMENTED-UNRESOLVED": 11
+  },
+  "artifacts": {
+   "PASS": 101,
+   "UNVERIFIED": 3
+  },
+  "keys": {
+   "PASS": 123
+  },
+  "process": {},
+  "wording": {
+   "WARN": 14
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 8,
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 118
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "0db3a23b9cb78bc87f4b9393baf417c7329421f719f7acbaec2f4ca36626004d",
+  "evidence/atlas/build/refresh_v0_8.py": "6d6c77feacd40e11829d8fefba16f34bf6368991feaf49e5efaa939b2fd5c926"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate rerun; new RIDs checked for presence in the tagged sources, not re-proved.",
+  "Impact refresh of two moved sources (OFN v0.11, RECOG v0.3.26); the other 16 domains were not re-extracted; pipe items cited as filed, receiver dispositions are not atlas sources.",
+  "OFN v0.11 §§1.3, 4.1, 4.5, 5.5, 9, 10, 11, 12.3–12.4 and RECOG v0.3.26 §6.13b and Appendix B extracted at statement level from the tagged files; proofs live in the owner cells."
+ ]
+}

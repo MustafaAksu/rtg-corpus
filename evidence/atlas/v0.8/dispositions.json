@@ -1,0 +1,177 @@
+[
+ {
+  "key": "OFN.O1",
+  "disposition": "retired",
+  "reason": "OFN v0.11 (row 1, IMP-O10-06/07): class C consumes DYAD-THM-SMOOTH-EMBEDDING and DYAD-THM-SMOOTH-EQUIVARIANT-CHART; five-row regularity table; C2 exists and is used; analytic and physical OPEN. FMS/ER-2B residue stays at F5 and DYAD.X1.",
+  "previous_sha256": "0c680f270fe50be0b0643f7f58364ad46b1488f155be6c26c04b7bd9f4bcab13",
+  "current_sha256": null
+ },
+ {
+  "key": "OFN.O3",
+  "disposition": "retired",
+  "reason": "OFN v0.11 (row 16): IMP-O08-12 cites DYAD-DEF-PRIMITIVE-MAP (dyad-v6.4.22), GEN-DEF-PRIMITIVE-MAP alias; CUST-O09-01 answered, REQ-O09-04 fulfilled.",
+  "previous_sha256": "11ecdd02ee162330c1c42e89186b2b9f195233d396d5815cf03375ee8bb78713",
+  "current_sha256": null
+ },
+ {
+  "key": "OFN.O4",
+  "disposition": "retired",
+  "reason": "OFN v0.11 (row 5): TRIAD-CLASS next artifact and closure criterion point to the RRF v0.8.4 §6.2a readout contract; the model-contract row is recorded.",
+  "previous_sha256": "727e72b83689b7ee8ebfe0e6c6c99928fc4c78d273a16ed155868f1b961112b3",
+  "current_sha256": null
+ },
+ {
+  "key": "OFN.O5",
+  "disposition": "retired",
+  "reason": "OFN v0.11 (row 9): the twelve TDR-G imports carry the v2.12.14 owner RIDs; the remaining Genesis zero-origin [DEF] without RID is a Genesis-side item under METH.M2.",
+  "previous_sha256": "105af16f77f078b4891169e2d5521ddaef32e9600fe43b1ee01ea7cb9b46da91",
+  "current_sha256": null
+ },
+ {
+  "key": "OFN.O6",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "41d18162a5d1a954cd3766ab7ff7230fcfa75a0210af2271c29fdfa1523b77a1",
+  "current_sha256": "7cf9b20fe32a729f56e78c37093d4f379b464fc83bbc647735ad0b62eb2e0843"
+ },
+ {
+  "key": "OFN.O7",
+  "disposition": "retired",
+  "reason": "OFN v0.11 (row 10): OFN08-C12 fulfilled (owner LEM-RETRIG wording at tdrg-v2.12.14 matches); D-WRONG line dropped, both sides corrected.",
+  "previous_sha256": "9655535d9341b5bc1e6a7293a3b452d38d8aa69fe6b8e60c4246150fc88c6946",
+  "current_sha256": null
+ },
+ {
+  "key": "OFN.O8",
+  "disposition": "retired",
+  "reason": "OFN v0.11 (row 6): one κ table in §5.5.4 to which the other sites point, with the reconciliation's boundaries; the convention attribution is OFN.O14.",
+  "previous_sha256": "849ea05fb6f1d327a1830006a21c9e62be1f0495607aedac74561f6e2e265d6c",
+  "current_sha256": null
+ },
+ {
+  "key": "RRF.F6",
+  "disposition": "retired",
+  "reason": "Co-key of OFN.O8: the RRF §6.2a κ=2 wording (\"excluded from centre reduction\") agrees with the single OFN v0.11 κ table; no cross-site conflict remains.",
+  "previous_sha256": "849ea05fb6f1d327a1830006a21c9e62be1f0495607aedac74561f6e2e265d6c",
+  "current_sha256": null
+ },
+ {
+  "key": "OFN.O9",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "54acde02061c97fca7f2675b613a04b6fe2000069403ec9c4c4fe4da796c76cf",
+  "current_sha256": "65d2a0b03e00b9636701eb6c7b57c81d1e47ac7d8a2b13823ede7a814a360080"
+ },
+ {
+  "key": "OFN.O10",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged in OFN v0.11",
+  "previous_sha256": "461d3eb5e0e4e432cd47b63278b5f16b876907284bea2006944f89d1f522c24a",
+  "current_sha256": "461d3eb5e0e4e432cd47b63278b5f16b876907284bea2006944f89d1f522c24a"
+ },
+ {
+  "key": "OFN.O11",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "223c6634a79fb920c0ef7250c54a8e06b380f3fdf8e3bea6326941061d0caf4a",
+  "current_sha256": "404db54e89e68b7c21e9001e1744acd94f22ac3c71fecab96ecdd27987de57cc"
+ },
+ {
+  "key": "OFN.O12",
+  "disposition": "retired",
+  "reason": "OFN v0.11 (row 18): Q3b route C-a names RRF-CND-01 Identity/Action as its representation gate (necessary, not sufficient).",
+  "previous_sha256": "701a7a063636cd24641e554abbe8c96aca700ff1302dac84662dda22901057fb",
+  "current_sha256": null
+ },
+ {
+  "key": "OFN.O13",
+  "disposition": "retired",
+  "reason": "OFN v0.11 (row 19): χ=S/N_ch and N_ch replace ρ and N in the chiral paragraph; formulas unchanged. The general ⊥ ρ/N line in D1.L1 stays.",
+  "previous_sha256": "b2d1b72a016919f9f3a1296f05007cd9545d60be328c6593116dcc08be148767",
+  "current_sha256": null
+ },
+ {
+  "key": "RRF.F5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "c8347d1dc4472234875a97a78a854bc3b0115807e73d13c901ff7bf14d904790",
+  "current_sha256": "2a178820ed5e7faff42c4054bc401e59f7f6139cb5d070c45bf00d1f21b2de6c"
+ },
+ {
+  "key": "DYAD.X1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "aab4341feeaa00f93da20c5908f03ea7b10acf443c281fdbfe8d11e25755d298",
+  "current_sha256": "e7e8bcf513f28e9abe4d3fd0e32c972b1c5655fbe70d0f0c035e9814de77dd9f"
+ },
+ {
+  "key": "F2",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "384449feb0ce864bee700f4e18c1f40aecba75032cbad2c481595e5286ced3b8",
+  "current_sha256": "6bc207ea1a3334190cbcbd730e23369182acee0d6621e7739aee780505adfdd0"
+ },
+ {
+  "key": "F5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "238d7c1e16e32a4393ef5851d325c5ce813750d8eb0d9714e2653c88f7634dd9",
+  "current_sha256": "a96d746d6f4a385b5b8a4156067932af034338948756d53df3e8bac8b5fb84bd"
+ },
+ {
+  "key": "F8",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "77de9789390a3532f72517a5c29eb477cfbed241ec7d3c455415169e554fd9b7",
+  "current_sha256": "0ed8a3ed8f4d14419c305778e3b0df87220fef46925a4d7dc257a753a24eb2be"
+ },
+ {
+  "key": "METH.M2",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "1b47077ae93fec28f79507fb3d4ae5b1bba027ffb56f73c2918abc01c2a28a71",
+  "current_sha256": "8d0ed4e162183fb609e1ff56f6740e79e4b6c3c7137034c4e0ffdc7d375db790"
+ },
+ {
+  "key": "OPENM.U7",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "4882c259ff0c42c4395fbf30131af3be1919aabf6199c6f9efc64aad957b54a8",
+  "current_sha256": "1abe5196818ee6b47fb00c88f04371aea5d58f338c12b3272a70f437dad10c00"
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "e93f5d9db8e3abe18cdfed17db8e248e52313c7d792aeb85d9e8c1d761ad0ccf",
+  "current_sha256": "155ae8ab8afa5144eba0037cc2098e234c9e399960bc4723c3c51a3fc20bfc83"
+ },
+ {
+  "key": "RECOG.R-D1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "e0fb566aa0257df85f8e4a1013e0c8615ea9f4c2c3b837e721d460bc139fb1f9",
+  "current_sha256": "21b8eaf8d0e6f39f08820be7047e77fb0b409d4e471fdba37f6668237ed14415"
+ },
+ {
+  "key": "RECOG.R-A1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "762ac567547fbbf896abd9ec62a98f4048b12f3476fb06560ce93d159d21269e",
+  "current_sha256": "82a50f995d0498a75eebab2c51e59d0f0fb84419ed1172239ecd8182ea8b5342"
+ },
+ {
+  "key": "PROG.G8",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged in OFN v0.11",
+  "previous_sha256": "3e50a18c0d73927092e7df8bf75e6b0d3faa9422c32b84932f4dbb7dec82c4a4",
+  "current_sha256": "3e50a18c0d73927092e7df8bf75e6b0d3faa9422c32b84932f4dbb7dec82c4a4"
+ },
+ {
+  "key": "OFN.O14",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "622ac5d6638027429b070060208c0ba992a2a8560a87bf580187ab1eaad12b5f"
+ }
+]
