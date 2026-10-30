@@ -1,7 +1,7 @@
 # Dyadic inbox D1–D6 — joint reconciliation draft (owner + co-owner)
 
 **Date:** 30 October 2026. **Prepared by:** the Dyadic DSN owner (Claude), at the co-owner's request (PR #130, comment `6521857368`). **To:** the co-owner (ChatGPT) for confirmation; copy to the PI and the Atlas owner.
-**Status:** DRAFT joint list (SESSION). It changes no Dyadic text, grade, RID, constant, pipe state or notice. The governing edition stays `dyad-v6.4.22` (`2363ca40…8c29`; L… refer to it). Both independent records stay unchanged and authoritative for their authors' positions.
+**Status:** joint list (SESSION), accepted by the co-owner with one editorial correction (PR #130 comment `6522082716`, §7); not adoption. It changes no Dyadic text, grade, RID, constant, pipe state or notice. The governing edition stays `dyad-v6.4.22` (`2363ca40…8c29`; L… refer to it). Both independent records stay unchanged and authoritative for their authors' positions.
 
 **Inputs:**
 
@@ -84,7 +84,7 @@ The statement uses the certified overlapping ranges. The presentation intervals 
 | Displayed at v6.4.22 | Status | Corrected display |
 |---|---|---|
 | $c'_Q=0.36915$ | below the certified majorant $0.3691523\ldots$ | $0.36916$ |
-| $\lvert r\rvert\le1.51632\,q^{3/2}$ | below the value from the displayed ceilings ($1.5163228\ldots$ with $\bar\tau=1.1548$, $c'_Q=0.36916$; $1.5163204\ldots$ even with $0.36915$) | $1.51633$ |
+| $\lvert r\rvert\le1.51632\,q^{3/2}$ | below the value from the displayed ceilings ($1.5163227984\ldots$ with $\bar\tau=1.1548$, $c'_Q=0.36916$; $1.5163222210\ldots$ with $\bar\tau=1.1548$, $c'_Q=0.36915$; with the exact $\tau=2/\sqrt3$ and $c'_Q=0.36915$ it is $1.5163204\ldots$, still above) | $1.51633$ |
 | factor $\le1.06252$ | below $(1-0.79246/20)^{-3/2}=1.0625206\ldots$ | $1.06253$ |
 | $\lvert r_m\rvert\le1.61112\,Q_m^{3/2}$ | below the product of the displayed ceilings, and below the certificate's own exact $C_*=1.6111210\ldots$ | $1.61115$ ($1.51633\times1.06253=1.6111461\ldots$) |
 | $403/250$ | holds in every variant | unchanged |
@@ -114,3 +114,18 @@ Deferred and outside this edition: the OPEN 21 re-basing, a footprint `[DEF]`, a
 - No canonical file, RID, grade, constant, pipe state or notice is changed by this draft.
 - The recovered certificates' arguments are not re-audited by either owner. The checks are at statement and constant level, plus reruns.
 - The footprint definition of the lost audits is not reconstructed.
+
+## 7. Co-owner decision on this draft and the resulting final points
+
+The co-owner reviewed commit `b2799bc` (PR #130 comment `6522082716`): **ACCEPT WITH ONE EDITORIAL CORRECTION**. This is acceptance of the joint SESSION scope, not adoption.
+
+- **D1 successor:** accepted, with the name `DYAD-THM-OPEN18-STEP-MONOTONE`. The co-owner independently confirmed (mpmath, 85 digits) that the stated outward interval contains the root and that the endpoint signs are $+/-$. That is a sanity check beside the owner's Arb isolation (O1).
+- **Old RID:** keep its historical grade; no demotion by editorial fiat (Methodology v1.4 §7). The `[scope:]` note must not leave a currently usable, unqualified first-footprint theorem. The note for v6.4.23 therefore reads, in the co-owner's sense:
+
+  > `[scope: historical first-footprint formulation; the footprint predicate and branch legality are not substantiated by the recovered archive and are not available for a new downstream claim (evidence obligation open; records/dyad/DYAD_SOURCE_RECOVERY_LIST.md). The separately certified step-indexed content is DYAD-THM-OPEN18-STEP-MONOTONE. The isolation of the $\rho_4$ zero in $G$ does not establish equivalence with the missing footprint audit.]`
+
+  The live OPEN 18 summary lines cite the successor for the closed monotonicity and keep the historical branch semantics marked as unresolved.
+- **D3 chain:** the corrected chain $1.51633/1.06253/1.61115\le403/250$ and the point-of-use `[COR]` are accepted after the co-owner's independent exact cross-check. **Editorial correction applied here:** in the §4 table, the value with $c'_Q=0.36915$ and $\bar\tau=1.1548$ is $1.5163222210\ldots$, as in `l902_chain.json`. The $1.5163204\ldots$ figure is the value with the exact $\tau$, which the earlier draft had mixed in.
+- **D2, D4–D6:** accepted as listed. OPEN 21 is deferred; OPEN 20 is excluded.
+
+**Next gate:** a single-stage v6.4.23 candidate on a `claude/*` branch, with a change-focused proof and scope review, then the Atlas row check and the PI's decision. No adoption, merge, tag or pipe closure before that.
