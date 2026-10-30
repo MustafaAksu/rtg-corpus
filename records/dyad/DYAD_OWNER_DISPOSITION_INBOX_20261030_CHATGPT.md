@@ -77,7 +77,7 @@ Thus $c_Q\le0.79246$ is a certified outward statement; $c'_Q\le0.36915$ **is not
 1. The displayed bridge-factor $\bigl(1-c_Q/20\bigr)^{-3/2}\le1.06252$ is **false for the displayed $c_Q=0.79246$**: the left side is $1.0625206372426\ldots>1.06252$. It is also $1.06252043936\ldots>1.06252$ for Atlas's reported exact $c_Q^{\mathrm{cert}}$. Choose an outward value such as $1.06253$, or give the exact algebraic expression rather than a rounded ceiling.
 2. Combining $1401/1000,\;123/125,\;c'_Q=0.36916,\;c_J=0.50220,\;c_7=157.58$ using the exact $\tau=2\sqrt3/3$ yields the displayed-term sum $1.51632096\ldots>1.51632$. This means the *stated constituent bounds* do not themselves imply the displayed $1.51632$ upper ceiling (although the actual sharper true bound may still satisfy it). Use an outward intermediate bound, e.g. $1.51633$.
 
-**[SESSION: ALG, full elementary rational implication; conditional on the other stated bound premises.]** A margin check using **only outward rational bounds** proves the final published $403/250$ without relying on the suspect intermediate roundings. Since (\tau=2\sqrt3/3<231/200) and $c'_Q\le36916/100000$,
+**[SESSION: ALG, full elementary rational implication; conditional on the other stated bound premises.]** A margin check using **only outward rational bounds** proves the final published $403/250$ without relying on the suspect intermediate roundings. Since $\tau=2\sqrt3/3<231/200$ and $c'_Q\le36916/100000$,
 \[
 \begin{aligned}
 |r|/q^{3/2}
