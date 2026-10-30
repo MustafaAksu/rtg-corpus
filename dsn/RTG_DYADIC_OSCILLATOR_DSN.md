@@ -4,7 +4,7 @@
 **Date:** 30 October 2026  
 **Scope:** The primitive 2D non-symplectic dyad map, its six-step resonant dynamics, ISP crossing geometry, normalized $p$-step structure, and $p$-resonance generalization program.  
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,500 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).  
-**Document status:** DRAFT — v6.4.23 candidate (inbox round D1–D7: OPEN 18 step-indexed successor RID, two registrations for RECOG, displayed-decimal corrections, consumer register); not adopted.  
+**Document status:** ADOPTED — PI, 30 October 2026 (inbox round D1–D7: OPEN 18 step-indexed successor RID, two registrations for RECOG, displayed-decimal corrections, consumer register). Adoption record: `records/dyad/RTG_DYADIC_v6_4_23_RELEASE_RECORD.md`.  
 **Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22` (SHA-256 `2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29`; tag `dyad-v6.4.22`).  
 **Companion documents:** one current-edition table, §7.0.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
@@ -1260,7 +1260,7 @@ Exports to (via Import Ledger entries in those documents):
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, replaced lines and every `[COR]` entry — are in Appendix A of v6.4.20 (tag `dyad-v6.4.20`, SHA-256 `0b2d5a44…4852`). Scientific corrections, retractions and regrades are also recorded in Appendix B.
 
-### v6.4.23 — 30 October 2026 — Draft candidate
+### v6.4.23 — 30 October 2026 — Adopted
 
 - **OPEN 18 [scope] (D1):** successor `DYAD-THM-OPEN18-STEP-MONOTONE` (step-indexed monotonicity; $q_{3/4}$ isolated in $G$); `DYAD-THM-OPEN18` keeps its text and grade with a historical-formulation `[scope:]` note; summary lines cite the successor (§1, §2, §6.8, §8, Appendix E). NUMGEN's $q_*$ is a different number.
 - **Registrations (D2, D3):** `DYAD-THM-NF-REM-C7-SHARP` ($C_7\le85.1$ / $27.7$) and `DYAD-THM-LPHASE-ROWA-BRIDGE` ($c_Q=0.79246$, $c'_Q=0.36916$), §6.14.
@@ -1591,4 +1591,4 @@ The v6.4.19→v6.4.20 section map is Appendix G of v6.4.20 (tag `dyad-v6.4.20`).
 
 ---
 
-*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 (DRAFT candidate, 30 October 2026).*
+*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 (ADOPTED, 30 October 2026).*

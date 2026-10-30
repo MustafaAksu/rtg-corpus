@@ -1,6 +1,6 @@
 # RTG Dyadic v6.4.23 — release record
 
-**Status:** CANDIDATE — awaiting the change-focused co-owner review, the Atlas row check and the PI's decision. Not adopted. This record is completed at adoption; until then it states what the candidate is and how it was built and checked.
+**Status:** ADOPTED — PI, 30 October 2026. Final SHA-256 `9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb` (after the status-lines-only publication transform of the reviewed r2 candidate). Tag `dyad-v6.4.23` to be created by the PI after the merge.
 
 ## 1. Candidate
 
@@ -52,13 +52,47 @@ Outputs are in `evidence/dyad/v6.4.23/`: the edit log, the check and control JSO
 
 Evidence cited by the candidate: `evidence/dyad/inbox-20261030/` (owner checks O1–O7, L1–L3, OPEN 18 C++ owner rerun).
 
-## 4. Decisions (to be completed)
+## 4. Reviews and decision
 
-- Change-focused co-owner review of r1 (PR #132 review `5712270269`): scientific scope ACCEPT, D7 ACCEPT; editorial corrections E1–E3 required, applied in r2:
-  - E1: the NUMGEN import state is now current at §6.14 (iii), the §6.14 boundary list and §7.0a GAP-LOCK;
-  - E2: the NF-REM `[COR]` names $27.60$ as well;
-  - E3: Q8 is a real non-enclosing interval, and the checker tests the interval numerically.
-- Delta-only read-back of r2 by the co-owner: pending.
-- Atlas row check: pending.
-- PI decision: pending.
-- After adoption: a status-lines-only publication commit (header, Appendix A heading, footer) gives the final hash; then merge (merge commit) and the annotated tag `dyad-v6.4.23` by the PI; then the pipe items are closed and the notices to RECOG, NUMGEN and OFN are prepared.
+| Step | Record | Verdict |
+|---|---|---|
+| Co-owner change-focused review of r1 (`4d2ae89`, `3de022a7…dd2b`) | PR #132 review `5712270269` | scientific scope ACCEPT (D1–D7); editorial corrections E1–E3 required |
+| D7 co-owner disposition | PR #130 comment `6522906761` | ACCEPT |
+| r2 (`5894fae`, `5e55602f…d7fb`): E1–E3 applied | this record §3 | — |
+| Co-owner delta-only read-back of r2 | PR #132 review `5712364282` | ACCEPT — E1–E3 closed |
+| Atlas row check of r2 against `atlas-v0.8` | PR #134, `records/atlas/ATLAS_DYAD_v6_4_23_R2_ROW_CHECK_CHATGPT.md`; PR #132 comment `6523451445` | PASS SCOPED — no Atlas-row blocker; follow-ups for Atlas and RECOG (below) |
+| **PI decision** | relayed in the owner session, 30 October 2026, 16:18 (UTC+3): "ben de bu sonuçları benimsiyorum." | **ADOPTED** |
+
+The reviews checked file hashes, the RID inventory and arithmetic independently. The builder, checker, controls and certificate runs are OWNER-RUN; no reviewer reran them.
+
+**Follow-ups noted by the Atlas check (not blockers for this edition):**
+- RECOG.R-A1 stays open. RECOG v0.3.26 uses $c'_Q=0.36915$ in conditional computations, and it may drop `[assuming:]` only after its own re-check with $0.36916$.
+- The Atlas diagnosis `NUMGEN.N-Q*` (possible identity of the two $q_*$) is to be removed or reclassified at the next Atlas refresh: the two roots differ.
+
+## 5. Publication
+
+**Transform.** `evidence/dyad/scripts/release_dyad_v6_4_23.py` (SHA-256 `3b92d4c3aab5299056b9cea76300d8f35a432986a3b93ca973381a3ea0f28dc6`):
+- it asserts the reviewed candidate hash `5e55602f…d7fb`;
+- it changes exactly three lines: the header status, the Appendix A heading and the footer;
+- the output is deterministic over two runs.
+
+| | SHA-256 |
+|---|---|
+| Reviewed candidate (r2) | `5e55602fd858c81cdd7400f1d244be1c712e770745c55decd60c28d33b45d7fb` |
+| **Adopted v6.4.23** | **`9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb`** (268 947 bytes) |
+| Predecessor v6.4.22 | `2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29` (`dyad-v6.4.22`) |
+
+`BASELINE.md`: the DYAD row names v6.4.23 with the final hash.
+
+**Order of the remaining steps (PI), as in CONVENTIONS §4:**
+1. Merge the evidence and record PRs that this edition cites (merge commits, not squash):
+   - PR #125: uploads, Atlas advisory and reruns;
+   - PR #127: co-owner disposition;
+   - PR #130: owner disposition, owner checks, reconciliation;
+   - PR #134: Atlas row check.
+2. Merge PR #132.
+3. Create the annotated tag `dyad-v6.4.23` on the merge commit, with the final hash in the tag message.
+4. Owner read-back of the tag (hash at the tag equals the value above).
+5. After the tag:
+   - close the seven `pipes/DYAD/` items and regenerate `INDEX.md`;
+   - prepare notices to RECOG (the two RIDs, $c'_Q=0.36916$, the chain correction, the re-check request), NUMGEN (the "no", $q_{3/4}$, the successor RID) and OFN (receipt of v0.11 and v0.12). Notices are routed through the PI.
