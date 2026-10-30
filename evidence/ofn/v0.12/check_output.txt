@@ -1,0 +1,27 @@
+K1 PASS base is ofn-v0.11
+K2 PASS rebuild identical; 23 logged edits; chain intact
+K3 PASS v0.11 RIDs 43 and anchors 101 kept
+K4 PASS OPEN status lines 21: 20 ACTIVE / 1 PARTIAL
+K5 PASS new OFN RIDs: ['RTG-OFN-ALG-REF-CLOSURE-COMPARISON']
+K6 PASS owner RIDs resolve at governing tags; unresolved: []
+K7 PASS stale phrases in live text: []
+K8 PASS required statements missing: []
+K9 PASS Appendix A, Appendix B and Appendix C entries for v0.11 and earlier byte-identical
+K10 PASS 40 [DEF] lines, Q1–Q6 rows and the Standard C declaration unchanged
+K11 PASS selection language: []
+GATES PASS
+C1 stale v0.11 boundary: caught
+C2 old REF-CLOSURE question restored: caught
+C3 isolation contract selected: caught
+C4 independence standard selected: caught
+C5 OPEN status changed: caught
+C6 v0.11 RID dropped: caught
+C7 extra OFN RID: caught
+C8 compound status on the new result: caught
+C9 definition line edited: caught
+C10 Appendix B edited: caught
+C11 unresolved owner RID: caught
+C12 stale local-result count: caught
+C13 edge-dependent isomorphism caveat dropped: caught
+C14 N-1A2 closure imported: caught
+CONTROLS PASS

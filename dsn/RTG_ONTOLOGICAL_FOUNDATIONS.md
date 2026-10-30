@@ -1,19 +1,19 @@
-# RTG_ONTOLOGICAL_FOUNDATIONS_v0.11
+# RTG_ONTOLOGICAL_FOUNDATIONS_v0.12
 
 **Title:** Relational Time Geometry — Ontological Foundations and Model-Selection Layer  
 **Date:** 30 October 2026  
 **Scope:** Foundational commitments, primitive-object hypotheses and model-selection criteria of RTG, including the genuine relational-triad model-selection contract for the FMS interface (§5.5); no physical generator, carrier or primitive object is selected.  
 **Document class:** Foundational ontology / model-selection ledger (Methodology v1.4 §0.5); nonstandard profile with the section map in §0.4.  
-**Document status:** ADOPTED — PI, 30 October 2026 (owner synchronization, smooth class-C realization and two §5.5 contract corrections; stage 1 and stage 2 reviewed). Release record: `records/ofn/OFN_v0_11_RELEASE_RECORD.md`.  
-**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.10` (tag `ofn-v0.10`, SHA-256 `acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa`).  
+**Document status:** DRAFT — v0.12 candidate (one content stage; no layout stage); adoption pending (`records/ofn/OFN_v0_12_RELEASE_RECORD.md`). `ofn-v0.11` remains the governing edition until adoption and tag.  
+**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.11` (tag `ofn-v0.11`, SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4`), on adoption.  
 **Companion documents:** governing editions read for this edition — Programme Overview v1.3 (`programme-v1.3`), DSN Methodology v1.4 (`methodology-v1.4`), Dyadic Oscillator v6.4.22 (`dyad-v6.4.22`), Genesis Geometry v2.9 (`gen-v2.9`), RRF v0.8.4 (`rrf-v0.8.4`), Discrete Genesis v2.12.14 (`tdrg-v2.12.14`), Number Genesis v1.21 (`numgen-v1.21`), RECOG v0.3.26 (`recog-v0.3.26`), Triadic v1.6.1 (`triad-v1.6.1`); claim-level pins are stated at each use and in §11.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
-**Status summary:** OFN holds seventeen registered definitions, the hypothesis FSP-U, four OFN local results and twenty-one foundational OPENs (twenty ACTIVE, one PARTIAL); no physical generator, carrier, primitive object, chirality or isolation regime is selected. In the genuine relational-triad contract the transported class C is the primary realized smooth mathematical candidate family: a real $C^\infty$ realization exists through two imported Dyadic theorems, while analytic realization (DYAD B-an/B-6) and physical selection remain open. Standard C is a positive-dimensional local $C^3$ invariant-manifold test, and the admitted FMS mathematical test class is real $C^\infty$ with analytic laws as a distinguished subclass.  
+**Status summary:** OFN holds seventeen registered definitions, the hypothesis FSP-U, five OFN local results and twenty-one foundational OPENs (twenty ACTIVE, one PARTIAL); no physical generator, carrier, primitive object, chirality or isolation regime is selected. In the genuine relational-triad contract the transported class C is the primary realized smooth mathematical candidate family: a real $C^\infty$ realization exists through two imported Dyadic theorems, while analytic realization (DYAD B-an/B-6) and physical selection remain open. Standard C is a positive-dimensional local $C^3$ invariant-manifold test, and the admitted FMS mathematical test class is real $C^\infty$ with analytic laws as a distinguished subclass. The closure-versus-reference comparison is recorded as the OFN local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; its physical reading, the physical-isolation contract and the standard of triadic independence remain open.  
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok — inherited attribution; separate approval by every listed contributor is not inferred.  
 **Revision editor:** Claude (OFN co-owner session `claude012ZC8x`, builder); change-focused review by the second OFN co-owner (ChatGPT).  
 **Programme document / placement:** Programme Overview v1.3; Tier 2, namespace `RTG-OFN`; criteria home for OPEN-P0 and OPEN-P2B (Programme v1.3 §5).  
-**Governing inputs:** owner disposition records `records/ofn/OFN_OWNER_DISPOSITION_ADVISORY_v0_10_claude012ZC8x_20261029.md`, `…_chatgpt_20261029.md` and their joint reconciliation `records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md` (both co-owners confirmed, 29 October 2026); PI start, 29 October 2026.  
-**Evidence boundary:** owner statements were read at the governing tags named above; no owner certificate is rerun. FMS SESSION results are reference-only (RF-O10-02); the universal finite-$a$ statement keeps its FMS P4 qualification. Evidence states follow Methodology v1.4 §12.  
+**Governing inputs:** the OFN co-owner working notes `records/ofn/OFN_ISOLATION_INTERFACE_WORKING_NOTE.md`, `records/ofn/OFN_REF_CLOSURE_WORKING_NOTE.md` and `records/ofn/OFN_3B_INDEPENDENCE_WORKING_NOTE.md` with their receiving reviews (PRs #120, #122, #124; ACCEPT SCOPED); PI start, 30 October 2026 (one new local-result RID authorized; no isolation contract or independence standard selected).  
+**Evidence boundary:** owner statements were read at the governing tags named above; no owner certificate is rerun. FMS SESSION results are reference-only (RF-O10-02); the universal finite-$a$ statement keeps its FMS P4 qualification. Evidence states follow Methodology v1.4 §12. OFN SESSION scripts for §2.4, §5.5.4 and §9 are under `evidence/ofn/scripts/` (§12.1).  
 
 ## Local Tag Aliases
 
@@ -35,7 +35,7 @@ OFN owns the programme's foundational commitments, hypotheses about primitive re
 
 `[DEF]` O0–O3 denotes conceptual commitments; O4 specified models; O5 their consequences. This is neither historical chronology nor the Legacy L0/L1/L2 or Programme-tier classification.
 
-**v0.11 revision boundary:** owner synchronization with the editions released after v0.10 (Dyadic smooth realization, RRF class-C row, TDR-G Finding A acceptance and RID map, NUMGEN L-BACKBONE, the RECOG v0.3.20 freeze record, Triadic v1.6.1), two recorded definition corrections in the §5.5 contract (Standard C, Appendix B OFN11-C01; test-class regularity, OFN11-C02), six RID registrations for existing definition bodies (§§1.3, 4.1, 4.6, 8), and Methodology v1.4 tag spellings. No OPEN status changes and no physical selection is made. The §5.5 contract binds a *named model class* and is not a universal axiom, a primacy verdict or a physical selection (SG-OFN-SELECTION, SG-OFN-PRIMACY).
+**v0.12 revision boundary:** the three OFN co-owner working notes of 30 October 2026 enter the live text. The closure/reference comparison is registered as the OFN local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` (§2.4) and OPEN-OFN-REF-CLOSURE is narrowed to its physical reading. The class-C causal-interface identity is recorded (§5.5.4), and the physical-isolation obligation of OPEN-OFN-TRIAD-CLASS is split into the contracts I-comp, I-quiet and I-remove, none selected. OPEN-OFN-3B receives an evaluation frame (U-form, U-class, C0, C1, J) with the position of class C; no standard of independence is selected. No definition or OPEN status changes and no physical selection is made. The §5.5 contract binds a *named model class* and is not a universal axiom, a primacy verdict or a physical selection (SG-OFN-SELECTION, SG-OFN-PRIMACY).
 
 ### 0.2 The Constraint Lattice, Not a Linear Pipeline
 
@@ -49,7 +49,7 @@ OFN owns the programme's foundational commitments, hypotheses about primitive re
 
 Definitions use `[DEF]`, hypotheses `[HYP]`, interpretation `[HEUR]` and research targets `[OPEN]`. A load-bearing import opens with the source truth tag and `[import:]`; `[RESULT] [from: TAG]` is reserved for a genuinely local synthesis. Standard mathematics may be stated under `[MATH]`; its physical application is separate.
 
-*v0.11:* registers six further definition RIDs for unchanged bodies, corrects two §5.5 definitions by recorded `[COR]` (Appendix B) and adds no OPEN record.
+*v0.12:* registers one OFN local result (`RTG-OFN-ALG-REF-CLOSURE-COMPARISON`), changes no definition and adds no OPEN record.
 
 ### 0.4 Layer Boundary and Profile Map
 
@@ -174,7 +174,10 @@ Depends on: $\Delta_{ij}=\theta_i-\theta_j$ in the same discrete phase assignmen
 
 `[DEF]` **Orientation and comparison vocabulary.** Distinguish endpoint ordering, the linear tangent operation $A^3=-I$, pole-comparison inversion, a putative physical lead/lag variable, and rotation of one state relative to another or to its retained history. They are not interchangeable merely because a sign or angle appears. An isolated dyad may possess mathematical self-comparison; whether it supplies a physical rotational reference is open.
 
-`[HYP]` **Reference-consumption reading.** The reduction “three node-difference edges minus one closure relation” may admit an interpretation in terms of an internal reference. The equality of those constructions is not assumed; `RTG-OFN-OPEN-REF-CLOSURE` preserves the original question.
+`[HYP]` **Reference-consumption reading.** The reduction “three node-difference edges minus one closure relation” may admit an interpretation in terms of an internal reference. The mathematical comparison is the local result below: the reduction equals removal of the common node origin, and equals the use of one relation as reference, by the global comparison map, only on carriers where multiplication by 3 is bijective. Whether either is the physical reference consumption meant here is not decided; `RTG-OFN-OPEN-REF-CLOSURE` keeps that question.
+
+`[RESULT]` `[from: ALG]` [RID: RTG-OFN-ALG-REF-CLOSURE-COMPARISON] [scope: abelian carrier group $H$; connected graph $G$ for (i); cycle graph $C_n$ with coherent orientation for (ii)–(iv); the maps as stated; OFN custody] **Closure versus reference removal.** Let $d:H^V\to H^E$, $(ds)_{ij}=s_i-s_j$; $Q_{\rm node}=H^V/H_{\rm diag}$; $C_0\subseteq H^E$ the closure sector (zero oriented sum around every cycle); $Q_{\rm edge}=H^E/H^E_{\rm diag}$ (edges measured relative to one another). (i) $d$ induces an isomorphism $Q_{\rm node}\cong C_0$: edge-closure reduction is removal of the common node origin. (ii) Forgetting one edge is a bijection $C_0\to H^{E\setminus\{e_0\}}$, a lossless parametrization rather than a reduction; on all of $H^E$ it loses exactly the holonomy. (iii) The composite $\kappa_n:C_0\hookrightarrow H^E\twoheadrightarrow Q_{\rm edge}$ has $\ker\kappa_n\cong H[n]$ and $\operatorname{coker}\kappa_n\cong H/nH$, so it is an isomorphism iff multiplication by $n$ is bijective on $H$. For $K_3$: yes over $\mathbb R^d$; no over $U(1)$ (globally 3-to-1, locally a diffeomorphism), over $\mathbb Z_N$ with $3\mid N$, or over $\mathbb Z$. Edge-dependent isomorphisms $C_0\cong Q_{\rm edge}$ exist for every abelian $H$ and are a different comparison. (iv) The diagonal node action fixes every edge; the diagonal edge action by $c$ preserves $C_0$ iff $nc=0$. Equal cardinalities of $Q_{\rm node}$, $C_0$ and $Q_{\rm edge}$ do not decide (iii).
+Depends on: abelian-group algebra; (i)–(ii) are standard, (iii)–(iv) elementary and exact. Evidence: `evidence/ofn/scripts/ofn_ref_closure_check.py` (`4c469b41…0402`, checks R1–R5; EV-RUN by both co-owners, same CAS); working note `records/ofn/OFN_REF_CLOSURE_WORKING_NOTE.md`. Not covered: non-abelian carriers; graphs with cycles of different lengths or orientations for (iii)–(iv); a geometric $SO(d)$ reference, whose orbit dimension depends on the configuration; any physical reading of reference consumption, which stays with the `[HYP]` above and OPEN-OFN-REF-CLOSURE.
 
 ---
 
@@ -479,6 +482,7 @@ Formal properties `[ALG]` [scope: formal family; for $\mathcal F_{\kappa,\Phi}$ 
 - **Lock surfaces.** $\mathcal S_0=\{(z,-z,0)\}$ and $\mathcal S_\pm=\{(z,\omega^{\pm1}z,\omega^{\pm2}z)\}$, $\omega=\lambda^2$, are invariant with $I\equiv0$ exactly; each edge evolves by $N\cong T$. Cyclic relabeling preserves $\mathcal S_\pm$ and a transposition with edge reversal exchanges them, so the pair carries exactly the chirality datum. In raw coordinates they are generated by the canonical $J=T\circ F^{-1/6}$ ($R_0=J^3$, $G=J^2$), whose formal uniqueness is owner-grade (IMP-O10-03) and which exists as a real $C^\infty$ germ (IMP-O10-06). For the $C^\infty$ member: $[N_\Phi,A]=0$ with $A^3=-I$ and $A^2=\omega$ makes $N_\Phi$ odd and $\omega$-equivariant, so the same two-line computation shows that its lock surfaces are real $C^\infty$ invariant submanifolds with exact isolated-dyad evolution on them `[ALG]` (Depends on: IMP-O10-06/07; an application of the imported chart, not a new Dyadic existence proof).
 - **Cycle-defect capacity.** For $\kappa\ne1$ the transported defect evolves by $(1-\kappa)\sum N$ off the surfaces (Q4 capacity); at $\kappa=1$ the model is flat.
 - **Six-step cubic.** On the centre manifold, $f_e=\mu\bigl(w_e|w_e|^2-\tfrac13\sum_jw_j|w_j|^2\bigr)$, independent of κ, with chiral coefficients $p=\mu/3$, $q=2\mu/3$ (`transported_pq.py`, exact).
+- **Causal interface.** With $b_e=\sum_{j\ne e}N(z_j)$, exactly $F_e-N(z_e)=-\tfrac{\kappa}{3}\bigl(N(z_e)+b_e\bigr)$; no symmetry or truncation is used. For $\kappa\ne0$, $b_e$ is a one-step sufficient interface for edge $e$, minimal in the quotient sense, and the dyad law holds on edge $e$ iff $b_e=-N(z_e)$: on the lock surfaces the interface is active and compensating ($b_1=-N(z)$ on $\mathcal S_0$), while under zero total interface $b_e=0$ the edge obeys $(1-\tfrac{\kappa}{3})N$, not the dyad law. One-step sufficiency does not by itself give closed reduced dynamics (shown to fail for a diagnostic polynomial, not shown for C2). The interface vocabulary is that of `numgen-v1.21` §6.2 N-1A2; its closure is not imported. Evidence: `ofn_isolation_interface_check.py` (`17e91906…b8ef`); working note `records/ofn/OFN_ISOLATION_INTERFACE_WORKING_NOTE.md`.
 - **Realization.** A real carrier for the whole class follows from one object, an identity-tangent sixth root of $F=T^6$ (equivalently a real $J$), via Bochner averaging $\Phi=\tfrac16\sum_{k=0}^5A^{-k}J^k$; a convergent normalizer is not needed. In $C^\infty$ this object exists (`DYAD-THM-SMOOTH-EMBEDDING`, IMP-O10-06) and $\Phi$ is the owner's chart (`DYAD-THM-SMOOTH-EQUIVARIANT-CHART`, IMP-O10-07); uniqueness of $J$, $K_m$ and $R$ holds in the DYAD F2/F3 sense, and E2 only among generators with $DX'(0)=0$. Analytic existence is DYAD OPEN 20 B-an/B-6 (IMP-O10-04).
 
 Chiral convention for sign statements (Genesis §6.3a): $u=w_1+\lambda w_2$, $v=w_1+\bar\lambda w_2$, $N_{\rm ch}=|u|^2+|v|^2$, $S=\operatorname{Im}(w_1\bar w_2)=(|u|^2-|v|^2)/\sqrt{12}$, $\chi=S/N_{\rm ch}$. A sign of chirality must name its convention. Notation (v0.11): $\chi$ and $N_{\rm ch}$ replace the v0.10 symbols $\rho$ and $N$ of this paragraph, which clashed with the dyad coordinate $\rho$ and the normal-form map $N$; formulas and normalizations are unchanged.
@@ -726,7 +730,7 @@ Question: Does physical completeness require more than the minimal distinct-pole
 Closure criterion: Give an operational or justified ontological criterion and compare dyad/triad/network alternatives without changing directedness or closure convention mid-argument.  
 Dependencies: §2; Programme RTG-OPEN-TRIAD-PRIMACY-ONTO; no technical reduction is a sole sufficient premise.  
 Notify: Programme P2A; foundational users.  
-Next required artifact or decision: An explicit completeness/observability criterion.
+Next required artifact or decision: An explicit completeness/observability criterion. One operational ingredient is available: a sufficient causal interface (vocabulary of `numgen-v1.21` §6.2), which for class C separates recovery under a compensating interface from recovery under a quiet or removed environment (§5.5.4; OPEN-OFN-TRIAD-CLASS). Completeness is not thereby defined, and full edge autonomy everywhere would be a stronger demand than Q3a.
 
 ---
 
@@ -741,6 +745,8 @@ Notify: DYAD, TRIAD, GEN; Programme P2B.
 Next required artifact or decision: Technical-owner assignment and an admissible construction, not a trivial inserted factor.
 
 Reconciliation input: class C (§5.5.4) has exact invariant lock surfaces on which every edge evolves by the transported isolated-dyad map. This is a real $C^\infty$ invariant-subsystem witness for a specified coupled triad law (§5.5.4; DYAD IMP-O10-06/07), not closure. Whether that law counts as an *independently specified admissible* $T_3$ in the sense of §8 is not decided here, since it is built from the chosen dyad map in a transported chart. In the raw carrier, RTG-OFN-ALG-RAW-STANDARD-C-NOGO excludes smooth invariant isolation regimes through 0 for every κ ≠ 0. Status remains ACTIVE; neither outcome selects ontology.
+
+Evaluation frame (recorded; no standard selected). An independently specified $T_3$ is assessed on five axes: **U-form** (the recipe $G\mapsto T_3[G]$ is fixed on a declared class of single-edge laws), **U-class** (that class uses no nonlinear $T$-data), **C0** (an embedding exists in the declared carrier without a $T$-derived rechart), **C1** (an embedding exists with $T$-derived structure) and **J** (the coupling form is justified without presupposing recovery of $T$). Class C: U-form passes — $T_3[G]=P_\kappa\circ G^{\times3}$ intertwines $\iota_0$ for every odd $G$ and $\iota_\pm$ for every $G$ with $G(0)=0$, $G(A^2x)=A^2G(x)$; U-class is $T$-free for $\iota_0$ and relative to the linear data $\omega=A^2$, $A=DT(0)$, for the chiral pair; C0 fails for the named raw mean-feedback family under Standard C, since the raw map is not odd, $T(-x)+T(x)=\bigl(0,2(\cosh\rho-1)\bigr)$ (scope of `RTG-OFN-ALG-RAW-STANDARD-C-NOGO` only; other carriers and laws are not excluded); C1 passes, $T$-relative ($\Phi$ is built from $J=T\circ K_6^{-1}$); J is open. Which combination of axes the phrase "independently motivated model class" of §8 requires is not selected; candidate standards are (a) U-form, C1 and the reduction witness; (b) in addition U-class without nonlinear $T$-data and C0; (c) in addition J. Class C meets (a), meets (b) only in part, and (c) is not shown. Working note `records/ofn/OFN_3B_INDEPENDENCE_WORKING_NOTE.md`; evidence `ofn_3b_independence_check.py` (`139f7934…cc70`). No primacy conclusion follows.
 
 ---
 
@@ -793,11 +799,11 @@ Reconciliation input: §5.5.2 Q4 requires the genuine-triad class to *permit* no
 **OPEN-OFN-REF-CLOSURE — Closure constraint versus reference consumption** [RID: RTG-OFN-OPEN-REF-CLOSURE]
 
 Status: ACTIVE | Layer: O1  
-Question: Are edge-closure reduction and removal of one relational reference the same construction?  
-Closure criterion: Define both spaces, equivalence relations and maps, then prove or disprove the claimed identification in a stated model; matching counts alone are insufficient.  
-Dependencies: §2.4; branch-local edge/mode conventions.  
+Question: Which reference operation, if any, is the physical (rotational) reference consumption of the §2.4 `[HYP]`?  
+Closure criterion: A stated physical reading of the reference, with its action (on nodes, on edges, or geometric) in a declared carrier and encoding, shown to coincide with one of the constructions compared in `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`, or with none. The mathematical comparison is settled at the scope of that result; matching counts alone remain insufficient.  
+Dependencies: §2.4; `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; branch-local carrier and edge/mode conventions.  
 Notify: TRIAD, GEN; OPEN-OFN-3C.  
-Next required artifact or decision: An explicit comparison construction.
+Next required artifact or decision: A physical reading of the reference operation, and the carrier declaration of each branch that uses the counting argument.
 
 ---
 
@@ -957,6 +963,8 @@ Closure criterion: A stated principle or effective-limit argument fixing the mod
 Dependencies: §5.5; DYAD OPEN 20 B-an/B-6, only if an analytic model is wanted; RF-O10-02 (modulus and its reflection-limited readout); RRF §6.2a model-contract row and its representation-level readout entry; FMS basin-boundary work; sub-$C^3$ decouplings (Q6-REG); OPEN-C19-L; OPEN-OFN-OPA for exchange.  
 Notify: FMS, RRF, DYAD, GEN, TRIAD.  
 Next required artifact or decision: the physical selection, isolation and chirality obligations above. RRF `rrf-v0.8.4` §6.2a supplies the representation-level readout contract (primitive clock and transported chart declared; $|c|$ reads $m$ only up to reflection; "Im c = 0" is no selection principle); no sign-reading scalar for $m-m_*$ is mandatory.
+
+Isolation frame (recorded; none selected). The class-C interface identity (§5.5.4) separates three contracts: **I-comp**, the dyad law on a balanced invariant regime with an active, compensating interface, which class C meets exactly; **I-quiet**, the dyad law under zero total interface, which class C fails for $\kappa\ne0$; and **I-remove**, the dyad law after the environment is removed from the model, which needs a declared size-indexed family of laws that class C does not supply (its normalization $\kappa/3$ presupposes three edges). The exact I-comp witness satisfies Standard C, which is not equivalent to $I_e\equiv0$. The next isolation artifact is a contract declaring the intervention class, the preserved observables, the retained boundary data and, for I-remove, the size-indexed law (working note `records/ofn/OFN_ISOLATION_INTERFACE_WORKING_NOTE.md`).
 
 ---
 
@@ -1355,6 +1363,7 @@ Evidence of earlier editions is listed in their release records and Appendix C e
 | OFN co-owner SESSION scripts | `iso_check.py` (`b92f6659…0d75e`), `iso_quadratic_nogo.py` (`91fd63f4…5308`), `transported_pq.py` (`2dcd4331…20bf6`), `transported_chiral_pq.py` (`09129ffc…73ac`), `transported_sim.py`, `basin_test.py`, `OFN_PSI_KAPPA_EXTENSION_v0_1.py` (`6566009c…5f88`), `OFN_PSI_KAPPA_ALL_MINOR_CHECK_v0_1.py` (`c56a01ac…a9e3`), `OFN_PSI_INVARIANT_C_CHECK_v0_1.py` (`18f10aa4…b114`), `OFN_PSI_INVARIANT_C_GAUGE_CHECK_v0_1.py` (`d3e5cedf…9781`), `OFN_PSI_REFLECTION_AUDIT_v0_1.py` (`e6d9b089…235a`), `OFN_STAB_F3_CHECK_v0_1.py` (`8b415461…e5ea9`) | Session evidence for §5.5 and RF-O10-02. The last six were executed by both co-owners. *v0.11:* eleven of the twelve, with the v0.10 release record, both draft builders, `release_ofn_v0_10.py` and Drafts 1–2, are on `upload/ofn-records/` (commit `c6fd574`, `SHA256SUMS.txt`, hashes equal to those printed here); `transported_chiral_pq.py` is held by neither OFN session (custody table in the v0.11 release record) |
 | FMS ψ scripts and notes | Notes read; `FMS_PSI_QUINTIC_FINITE_INVARIANT_v0_1.py` (`ad44f66a…445f4c`) and `FMS_PSI_QUINTIC_REFLECTION_TEST_v0_1.py` (`5af23da9…f409`) not rerun by OFN | Reference-only (RF-O10-02) |
 | Genesis v2.8.9; DYAD v6.4.13–v6.4.16; RRF v0.8.3 | Genesis SHA computed by OFN; DYAD v6.4.16 and RRF hashes per their records; cited sections read | Source statements at owner grade; no certificate rerun |
+| OFN co-owner working notes and scripts (30 Oct 2026) | `ofn_isolation_interface_check.py` (`17e91906…b8ef`), `ofn_ref_closure_check.py` (`4c469b41…0402`) and `ofn_3b_independence_check.py` (`139f7934…cc70`) under `evidence/ofn/scripts/`, each with positive and forced-failure outputs; notes and receiving reviews under `records/ofn/` | Evidence for §2.4, §5.5.4 and §9 (OPEN-OFN-3A, -3B, -TRIAD-CLASS, -REF-CLOSURE); EV-CODE, EV-RUN (rerun by the second co-owner, same CAS) |
 
 ### 12.2 Contributions and Adoption Boundary
 
@@ -1375,6 +1384,7 @@ IMP/RF/CUST/REQ labels are administrative records, not newly assigned scientific
 | `RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT` | Registered v0.10, OFN RESULT; single status `[from: ALG]` in v0.11 (OFN11-C03) | Registered 19 Oct 2026 (O10-P4); Genesis erratum concurs |
 | `RTG-OFN-OPEN-TRIAD-CLASS` | Registered v0.10, OFN OPEN | Registered 19 Oct 2026 (O10-P6) |
 | `RTG-OFN-DEF-ZERO-ORIGIN`, `RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY`, `RTG-OFN-DEF-CONTINUOUS-REPRESENTATION`, `RTG-OFN-DEF-FINITE-DESCRIPTION`, `RTG-OFN-DEF-DIST-ZN`, `RTG-OFN-DEF-REDUCTION-TARGET` | Registered v0.11, OFN definitions; bodies unchanged from v0.10 §§1.3, 4.1, 4.6, 8 | Registered 30 Oct 2026 (seventeen definition RIDs in total) |
+| `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` | v0.12 (adoption pending), OFN RESULT from ALG | Registered on adoption of v0.12 (five OFN local results in total) |
 
 **Actual consumer register — observed use, not newly completed synchronization:**
 
@@ -1541,6 +1551,13 @@ The inherited Appendix B records remain unchanged. Both v0.9 reconciliation entr
 
 One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier, with their draft-stage entries, are preserved verbatim in Appendix C at tag `ofn-v0.10`; the v0.1–v0.6 entries are in `ARCHIVED_OFN_HISTORY_v0_7.md`, which is not supplied to the corpus.
 
+### v0.12 — 30 October 2026 — DRAFT (adoption pending)
+- **§2.4 / §9 [result/scope]:** `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` registered (closure = removal of the common node origin; the global comparison with one relation as reference is an isomorphism iff multiplication by $n$ is bijective; node and edge actions differ); OPEN-OFN-REF-CLOSURE narrowed to the physical reading.
+- **§5.5.4 / §9 [isolation]:** class-C causal-interface identity recorded; OPEN-OFN-TRIAD-CLASS isolation obligation split into I-comp, I-quiet and I-remove (none selected); OPEN-OFN-3A pointer.
+- **§9 [3B]:** evaluation frame U-form, U-class, C0, C1, J with the position of class C; no standard of independence selected.
+- **Unchanged:** definitions, Q1–Q6, Standard C and OPEN statuses (twenty ACTIVE, one PARTIAL); no physical selection; no primacy conclusion.
+- **Record:** `records/ofn/OFN_v0_12_RELEASE_RECORD.md`; predecessor tag `ofn-v0.11`.
+
 ### v0.11 — 30 October 2026 — ADOPTED / smooth class-C realization and owner synchronization release
 - **§5.5 [scientific/contract]:** class C consumes `DYAD-THM-SMOOTH-EMBEDDING` and `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (IMP-O10-06/07): one five-row regularity table; real $C^\infty$ lock surfaces; class C "primary realized smooth mathematical candidate family"; analytic and physical realization open. `RTG-OFN-DEF-STANDARD-C` corrected (OFN11-C01); test class real $C^\infty$ (OFN11-C02); one κ table; narrow-Q6 `[from: ALG]`.
 - **§§9–12 [receipts/pins]:** TDR-G v2.12.14 (Finding A statement accepted, custody deferred; REQ-O09-05 endpoint answered; owner RID map), NUMGEN v1.21 (REQ-O09-03), RECOG freeze record (REQ-O09-02), Dyadic map custody (REQ-O09-04), RRF §6.2a (O10-P3), Triadic v1.6.1 pass two; governing-editions line; Methodology v1.4 tag spellings.
@@ -1578,4 +1595,4 @@ One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier
 
 ---
 
-*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.11*
+*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.12 — DRAFT, adoption pending; `ofn-v0.11` governs until adoption and tag.*
