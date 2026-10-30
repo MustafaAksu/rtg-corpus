@@ -1,0 +1,18 @@
+[ENG] Initializing IA Certifier: Sub-branch (4,10)
+[ENG] FIX 1: Arb slice boundaries (no double accumulation)
+[ENG] FIX 2: Orbit structure certified (pre-crossing at steps 4,10 only)
+[ENG] FIX 3: 5-Zone Fibonacci Grid (Mathematically bounded Signal-to-Noise)
+
+[ENG] ----------------------------------------------------
+[ENG] Processing Zone 1: [0.001, 0.002]
+[ENG] Slices: 10000000 | Width: [1.00000000000e-10 +/- 3e-26]
+  ... 5M slices certified in Zone 1.
+  ... 10M slices certified in Zone 1.
+[ENG] ----------------------------------------------------
+[ENG] Processing Zone 2: [0.002, 0.005]
+[ENG] Slices: 10000000 | Width: [3.00000000000e-10 +/- 3e-26]
+  ... 5M slices certified in Zone 2.
+  ... 10M slices certified in Zone 2.
+[ENG] ----------------------------------------------------
+[ENG] Processing Zone 3: [0.005, 0.02]
+[ENG] Slices: 10000000 | Width: [1.50000000000e-9 +/- 3e-25]

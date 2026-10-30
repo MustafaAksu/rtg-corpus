@@ -1,0 +1,9 @@
+[ENG] Initializing s_max^{F1} Constant Enclosure...
+
+[NUM] Evaluating g(rho) strictly at rho:
+  0.500000000000000
+
+========================================================
+[RESULT] CERTIFIED ENCLOSURE: s_max^{F1}
+  [0.5237212707001281468486508 +/- 1.22e-26]
+========================================================

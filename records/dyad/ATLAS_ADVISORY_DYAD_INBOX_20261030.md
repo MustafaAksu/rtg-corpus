@@ -14,7 +14,7 @@
 
 | # | Item | Kind | Proposed disposition | Needs first |
 |---|---|---|---|---|
-| D1 | `20261026-NUMGEN-q-star-branch-split.md` | question | **answer: cannot confirm from the current record.** Define q*, Γ₃, Γ₄ in the OPEN 18 entry when the certificate is recovered | `open18_arb_cert_final.cpp` (not in the repository; not on the recovery list until today) |
+| D1 | `20261026-NUMGEN-q-star-branch-split.md` | question | **answer: no — two different numbers** (§1a, after the upload). Dyadic's q* ≈ 1.2602142026 (ρ₄ = 0 on (0,q), Θ₄ at the funnel edge −π/3); NUMGEN's ≈ 0.3156258837 (η₆ = q). Rename one symbol and state the footprint definition in the OPEN 18 entry | owner confirmation of the Atlas reading of the recovered certificate |
 | D2 | `20261029-RECOG-c7-ceilings-registration.md` | request | **accept, conditional on evidence.** Register the certified C₇ ceilings as a stated sub-result, under its own RID, without replacing the adopted 100 / 30 | the NF-REM certificate (`DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip`, `e4e2bab0…dbe4`) or an owner reading of its upper bounds |
 | D3 | `20261029-RECOG-d5-bridge-constants-registration.md` | request | **accept, conditional on evidence.** Register the row-A bridge lemma (two bounds and the exact decomposition) under its own RID | the L-PHASE row-A certificate files (`117484ae…9cdb`, `8697c697…d4fa`, `qw.py`, `tzw.py`) |
 | D4 | `20261026-NUMGEN-v1-21-adopted.md` | notice | **accept; update the consumer register** (NUMGEN v1.21 imports DYAD-THM-LPHASE-ROWA-REMAINDER) | — |
@@ -60,6 +60,30 @@ Then, once `open18_arb_cert_final.cpp` (and its run output, if any) is recovered
 - the one-line yes/no NUMGEN asked for.
 
 This is a definition and scope repair at an unchanged grade. NUMGEN's NC-17 cross-citation waits for that line.
+
+### 1a. After the upload (same day)
+
+The PI uploaded the lab-server C++ sources (`upload/dyad-sources`, `59b3f87`; hash check `records/dyad/DYAD_UPLOAD_HASH_CHECK_20261030.md`). Among them, `open18_arb_cert3.cpp` names itself `open18_arb_cert_final.cpp` in its first line. It reran here unchanged with FLINT 3.0.1: micro strip, Γ₃ in 11 701 boxes and Γ₄ in 81 boxes, all SUCCESS.
+
+What the certificate shows:
+- It defines the branches by footprint step: **Γ₃ ↔ step 3** on q ∈ [0.001, 1.26021320256] and **Γ₄ ↔ step 4** on [1.26021520256, 2].
+- It leaves out a gap of half-width 10⁻⁶ around 1.26021420256.
+- It states that the root isolation of q* and branch legality come from separate footprint audits, which are not recovered.
+
+The Atlas reading (`evidence/atlas/dyad_inbox_20261030/qstar_dyad_split.py`) finds that inside the gap only ρ₄ — equivalently Θ₄ + π/3 — changes sign, at
+
+  **q_*^DYAD = 1.26021420256347711487243856095650439…**
+
+There the fourth iterate meets the ISP-funnel edge Θ = −π/3 (§6.8). The OPEN 11 bulk record splits its sub-branches (4,11) | (5,11) at the same place (1.260 | 1.261).
+
+NUMGEN's q* is 0.3156258836…, so **the answer to the question is no.** The two documents use one symbol for two different objects on the same canonical family (a D-SYM item).
+
+**Revised proposed disposition for D1:**
+- Answer "no", citing the recovered certificate.
+- At v6.4.23, state in the OPEN 18 entry the footprint definition (which step counts as the footprint, from the audits or a fresh one-line definition), Γ₃/Γ₄, and q*'s defining equation and value.
+- Suggest that NUMGEN rename its witness value (or that both sides add a subscript), so the cross-citation NUMGEN NC-17 wanted becomes a disambiguation instead.
+
+The Dyadic owner confirms or corrects the reading; it is not an owner statement.
 
 ## 2. D2, D3 — the two RECOG registration requests
 
@@ -122,7 +146,7 @@ The registrations in D2 and D3 and the definitions in D1 should rest on evidence
 
 | Set | Files | Recorded hash | Serves |
 |---|---|---|---|
-| OPEN 18 | `open18_arb_cert_final.cpp` (+ output, if kept) | not recorded | D1 |
+| OPEN 18 | `open18_arb_cert_final.cpp` (+ output, if kept) | not recorded | D1 — **recovered 30 Oct** as `upload/dyad-sources/rtg-engine/open18_arb_cert3.cpp`, together with STRIP1, STRIP2, IA-BULK and QMAX (§1a; hash check record) |
 | NF-REM / PRIM-CTR / NF-INV | `DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip` | `e4e2bab004d4e39b76920e486607acc34749037ae2638809a9c2117d548fdbe4` | D2, and the §6.14 base generally |
 | L-PHASE row A | `dyad_numgen_lphase_rowA_cert.py`, `qw.py`, `tzw.py`, `lphase_rowA_certificate.json` (+ `lphase_rowA_numeric.*`, `lphase_scope_checks.*`) | `117484ae…9cdb`, `3a913062…cce8`, `f007d42c…5609`, `8697c697…d4fa` (full hashes in the recovery list) | D3 |
 

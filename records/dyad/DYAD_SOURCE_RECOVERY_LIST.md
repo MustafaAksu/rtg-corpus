@@ -2,7 +2,7 @@
 
 **Date:** 22 October 2026. **Prepared by:** Claude (atlas owner). **Status:** working record at a fixed path; updated as files arrive. **Collection deferred by the PI (22 Oct 2026):** most files are on the PI's machine; they will be gathered later. Until then the DSN's availability notes stand.
 **Source of the list:** every file name cited in `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` v6.4.21 (tag `dyad-v6.4.21`), mostly from the §8 artifact registry, checked against the repository tree and the members of the ZIP packages in it.
-**Result:** 155 distinct files cited; 6 present (`normalize_p6_liegauge_exact.py`, `dyad_h4_archival_exact_check.py`, `qw.py` inside the OPEN 20 packages, and three records); **149 missing** (plus one closeout record not cited in the DSN): Tier 1 66, Tier 2 46, Tier 3 28, Tier 4 10.
+**Result:** 155 distinct files cited; 11 present (`normalize_p6_liegauge_exact.py`, `dyad_h4_archival_exact_check.py`, `qw.py` inside the OPEN 20 packages, three records, and the five C++ certificates of the placed table below); **144 missing** (plus one closeout record not cited in the DSN): Tier 1 64, Tier 2 43, Tier 3 28, Tier 4 10.
 **Correction (30 October 2026, atlas owner):** the first extraction missed the six C++ (FLINT/Arb) certificate sources cited in the §8 registry (`DYAD-ART-OPEN18`, `-STRIP2`, `-STRIP1`, `-IA-BULK`, `-QMAX`, `-IA-CERT-FIXED`); they are added below (Tier 1: the two cited by closed theorems; Tier 2: the four `[ENG]` entries). A full re-check of every backticked file name of `dyad-v6.4.21` and `dyad-v6.4.22` against this list and the repository finds no other omission. Found while preparing `records/dyad/ATLAS_ADVISORY_DYAD_INBOX_20261030.md`.
 
 **Goal.** Anyone using the repository can test every DYAD claim from the repository alone. A missing file here does not mean the work was not done; it means its evidence is not independently inspectable from the repository.
@@ -17,7 +17,19 @@ A file whose content differs from its recorded hash is still useful; it is recor
 
 Closeout C-2 items are included in Tier 3 (`OPEN9_arithmetic_horizon_definitions.md`, `DYAD_RESPONSE_TO_DZT_REQ-002.md`, `OPEN9_full_onestep_normalization_table_v2.md`, the P1/P2 session records) plus `DYAD_v6_4_17_v6_4_18_RELEASE_RECORD_ADDENDA_v0_1_1.md`, which the closeout names but the DSN does not cite. Hashes shown with an ellipsis are recorded only in short form in the DSN.
 
-## Tier 1 — certificates and exact/theorem evidence (scripts, their outputs, evidence packages) — 66 files
+## Placed (30 October 2026)
+
+PI-supplied from `ailab:/root/rtg-engine` on `upload/dyad-sources` (commit `59b3f87`), hash-checked in `records/dyad/DYAD_UPLOAD_HASH_CHECK_20261030.md`; kept unchanged under `upload/dyad-sources/rtg-engine/`. The DSN records no hash for these, so identification is by name or content.
+
+| Cited file | §8 RID | Placed as | SHA-256 |
+|---|---|---|---|
+| `open18_arb_cert_final.cpp` | DYAD-ART-OPEN18 | `open18_arb_cert3.cpp` (first line names itself `open18_arb_cert_final.cpp`) | `a9acb69f532a8535c6e18a1da3658a33587737874436ff7020734fba01d36ae4` |
+| `certify_transition_strip2.cpp` | DYAD-ART-STRIP2 | same name | `f1baf4221481c52fec1875560c80896c381c074017374ee24e7eb47a3722e275` |
+| `certify_transition_strip.cpp` | DYAD-ART-STRIP1 | same name | `69fe019d5b27653a973f3725ce6aaf4962cb2447b32e3fb78269d96de0d3a32c` |
+| `rtg_ia_bulk_cert.cpp` | DYAD-ART-IA-BULK | same name (+ run record `bulk_cert_results.txt`) | `acbff177b0a799fd779bd17478db474e2dc3479621383b7cb239a6476130e81f` |
+| `certify_q_max.cpp` | DYAD-ART-QMAX | same name | `af2f5cc57300230d683616e9e19c3243a1ba7c6667be9a4094f3f24b9b1299a9` |
+
+## Tier 1 — certificates and exact/theorem evidence (scripts, their outputs, evidence packages) — 64 files
 
 | File | §8 RID | Grade of the registry entry | Recorded SHA-256 |
 |---|---|---|---|
@@ -85,10 +97,8 @@ Closeout C-2 items are included in Tier 3 (`OPEN9_arithmetic_horizon_definitions
 | `normalized_onestep_deg6.json` | — | — | not recorded |
 | `normalized_sixstep_deg6.json` | — | — | not recorded |
 | `recog_cell_a2_nu3_closed_form_cert.py` | — | — | not recorded |
-| `open18_arb_cert_final.cpp` | DYAD-ART-OPEN18 | THM-ALG via IA | not recorded |
-| `certify_transition_strip2.cpp` | DYAD-ART-STRIP2 | ALG via IA | not recorded |
 
-## Tier 2 — engineering and numerical tools and outputs — 46 files
+## Tier 2 — engineering and numerical tools and outputs — 43 files
 
 | File | §8 RID | Grade of the registry entry | Recorded SHA-256 |
 |---|---|---|---|
@@ -134,10 +144,7 @@ Closeout C-2 items are included in Tier 3 (`OPEN9_arithmetic_horizon_definitions
 | `cent.py` | — | — | not recorded |
 | `degree_b_vanishing_cert.py` | — | — | `c9a369e6…0dc6`, `dec08174…d774` |
 | `rtg_dyad_audit.py` | — | — | not recorded |
-| `rtg_ia_cert_fixed.cpp` | DYAD-ART-IA-CERT-FIXED | ENG | not recorded |
-| `rtg_ia_bulk_cert.cpp` | DYAD-ART-IA-BULK | ENG | not recorded |
-| `certify_transition_strip.cpp` | DYAD-ART-STRIP1 | ENG | not recorded |
-| `certify_q_max.cpp` | DYAD-ART-QMAX | ENG | not recorded |
+| `rtg_ia_cert_fixed.cpp` | DYAD-ART-IA-CERT-FIXED | ENG | not recorded (candidate by content: `upload/dyad-sources/rtg-engine/certify_branch_4_10.cpp`, not identified) |
 
 ## Tier 3 — proof, session and source records — 28 files
 
