@@ -3,8 +3,9 @@
 **Date:** 30 October 2026.
 **Reviewer:** ChatGPT, OFN co-owner.
 **Reviewed PR:** #120, `claude/ofn-isolation-interface-note`.
-**Reviewed head:** `22f60feaba88a7ed3e5a9de531b7ae4d0016822d`.
-**Disposition:** ACCEPT SCOPED for R1–R4, the one-step quotient-minimality result, and the I-comp / I-quiet / I-remove distinction. Two bounded corrections, R120-S1 and R120-E1 below, are required before final acceptance of the submitted package. No new physical criterion, owner adoption, DSN amendment, OPEN-status change, merge or tag is authorized by this review.
+**Current disposition:** ACCEPT SCOPED — final acceptance of the noncanonical SESSION working-note package at `8ead654d95b90b66056a570bea774511c7507245`. R120-S1 and R120-E1 are CLOSED; the round-2 verification is recorded in §6. This is not canonical scientific adoption or selection of a physical isolation criterion. The PI's request to merge is separate from this scientific review.
+**Initial reviewed head:** `22f60feaba88a7ed3e5a9de531b7ae4d0016822d`.
+**Initial disposition (historical; §§1–5 below):** ACCEPT SCOPED for R1–R4, the one-step quotient-minimality result, and the I-comp / I-quiet / I-remove distinction. Two bounded corrections, R120-S1 and R120-E1 below, are required before final acceptance of the submitted package. No new physical criterion, owner adoption, DSN amendment, OPEN-status change, merge or tag is authorized by this review.
 
 The finding keys below are review-local labels, not scientific RIDs.
 
@@ -110,3 +111,31 @@ Apply R120-S1 and R120-E1 together in the existing PR. A change-focused reread a
 The central finding is accepted at SESSION working-note scope: compensation on invariant locks and recovery under zero total interface are different tests of the fixed three-edge law. REF-CLOSURE may be prepared independently with the previously agreed node-action/edge-action distinction; this review supplies no closure decision for that OPEN.
 
 This commit adds only this receiving-review record. The author's note, checker and stored output are preserved as submitted, and their correction remains with the preparer. Canonical OFN, Q1–Q6, Standard C, all OPEN statuses and external owner files are unchanged.
+
+## 6. Round-2 closure — 30 October 2026
+
+**Reviewed revision:** `8ead654d95b90b66056a570bea774511c7507245`.
+**Final verdict:** ACCEPT SCOPED at noncanonical SESSION working-note scope. Both required findings are CLOSED. No additional correction is requested.
+
+Read the revision diff, the complete updated working note and checker, the recorded outputs and the updated PR description. The review remains change-focused: unchanged owner theorems and source campaigns were not rerun. Repository-root `CONVENTIONS.md` was reread. The PR file list contains only the working note, this review, the checker and two output records; no canonical DSN or pipe is changed.
+
+| Finding | Disposition | Verification |
+|---|---|---|
+| R120-S1 | CLOSED | Working-note R2, the sufficiency table, non-claims, checker docstring/I6 label and PR summary consistently restrict the counterexample to the diagnostic polynomial. No multi-step nonclosure theorem for the exact C2 map is claimed. |
+| R120-E1 | CLOSED | The final gate requires exactly seven successful checks. Independent execution of the corrected script gives exit 0 normally and exit 1 with `--force-fail`; the latter explicitly sets the I1 result false before the gate. |
+
+### Round-2 identities and replay
+
+| Object / execution | Independently checked value |
+|---|---|
+| Updated working note | Read at the pinned head; Git blob `9ce71da88f70b4c73be91fadeb45c049fdfdd7e1`. No separate note SHA-256 recomputation claimed. |
+| Corrected checker | 6,125 bytes; SHA-256 `17e91906c9ec829263ba53595a8dbd2ec020015642740603789d61ecc6bab8ef`; Git blob `0a6156805b6f0c76be2fcc64ae4767052bf37f78`. The local execution copy matches both. |
+| Normal replay | 7/7 PASS; `RESULT: PASS`; exit 0. Output SHA-256 `7b31bf015054d71b016fdcb3cad6ae20ff30db3168bab209813ec4cca6683fec`; Git blob `e55f57f1d92a022d2419be83874025d94ef857ca`; both match the committed positive output. |
+| Forced-failure replay | `FORCED FAIL of I1 (--force-fail)`; `RESULT: FAIL`; exit 1. Stdout followed by the observed `exit code: 1` line reproduces the committed transcript: SHA-256 `1c8598558cf8632c0871cd91602b41eebc92c319e0c1a89a8807f3b89ccca217`; Git blob `6add46fb79a3379127fbd9b056c154e1eb9f7066`. |
+| Runtime and commands | Python 3.13.5, SymPy 1.14.0; `python3 -I ofn_isolation_interface_check.py` and the same command with `--force-fail`. |
+
+This is independent execution of the supplied code using the same CAS, not an independent engine or a new proof of the selected C2 dynamics. The negative transcript first reports the underlying algebra checks and then the deliberately forced failure; the failure is in the final stored result and is correctly propagated to the process status.
+
+R1–R4, quotient-minimal one-step sufficiency and the three-way isolation distinction retain the accepted scope. Physical selection of I-comp, I-quiet or I-remove remains open. Standard C, Q1–Q6 and all DSN OPEN statuses are unchanged. The REF-CLOSURE note may proceed separately with node-origin gauge, lossless edge parametrization and node/edge rotation actions kept distinct.
+
+This round updates only this review record. Merge is requested by the PI in the current conversation; that operational authorization does not promote the working note to adopted canonical science, amend a DSN or authorize a release tag.
