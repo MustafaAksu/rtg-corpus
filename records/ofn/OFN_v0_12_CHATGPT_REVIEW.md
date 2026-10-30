@@ -67,3 +67,37 @@ The “active and compensating interface on the lock surfaces” wording in §5.
 **Decision:** **ACCEPT SCOPED, REVISION REQUIRED (R126-S1/S2)**. Apply both in one content revision of this draft PR. Because they change the *live candidate bytes*, revise the builder entries, rebuild `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` and `edit_log.json`, rerun the lightweight K1–K11/negative controls, refresh hashes in the release record and PR body, and retain the source-only history and adopted tag unchanged. The `R126-N1` clarification may be incorporated in the same pass. A change-focused re-review of the delta will suffice: **do not repeat unchanged DYAD, Genesis or prior OFN science campaigns**.
 
 The candidate is **not yet adoption-ready**. The PR must stay **DRAFT / unmerged** until a PI adoption decision and the subsequent publication/meta-only step. This review does not declare a new owner theorem proved beyond its stated mathematical assumptions, and changes no canonical adopted content or OPEN status.
+
+
+## 7. Round-2 delta review — 30 October 2026
+
+**Reviewed author revision:** `2dca9f16515adaef9a0da0b53941f67b830e4f19` (PR #126, still DRAFT).
+**Frozen round-2 candidate SHA-256:** `5e1da260f944c40ebdcab29f57bdd37600f04e47a797b768ab5e0126a0e76a42`.
+
+**Final receiving verdict: ACCEPT SCOPED — OWNER ADOPTION READY.** R126-S1 and R126-S2 are **CLOSED**; R126-N1 was accepted and is **CLOSED**. No additional changes are requested for this scientific-content candidate. This is co-owner review acceptance at the stated mathematical / foundational-evaluation scopes, not a PI adoption or a physical-selection decision.
+
+### A. Exact six-line scientific/editorial delta
+
+The content diff between round-1 commit `c8db47be33a1415826add6d57956b59d6abd5bac` (SHA-256 `8230b169…3bae`) and the round-2 candidate consists of exactly **six changed DSN lines**, with unchanged line count and all remaining lines identical:
+
+| Finding | Site(s) | Second-review disposition |
+|---|---|---|
+| **R126-S1** | §2.4 `[HYP]` and new `[RESULT]`, lines 177 and 179; Appendix C v0.12 entry, line 1555 (builder edits A01, A02, H12) | **CLOSED.** The difference map \(d\) is stated to induce a **canonical isomorphism** \(Q_{\rm node}\cong C_0\); a parenthetical sentence explicitly says the constructions are isomorphic, **not literally the same operation**. The \(\kappa_3\) statement stays with the specified global map and its invertibility condition. No physical reference-consumption interpretation is declared established. |
+| **R126-S2** | §9 OPEN-OFN-3B, line 749 (builder B06) | **CLOSED.** The whole named-family C0 exclusion is attributed to owner `RTG-OFN-ALG-RAW-STANDARD-C-NOGO` for local invariant \(C^3\) manifold germs through the origin and \(\kappa\ne0\). Raw \(T\)'s non-oddness is **separately** identified as excluding only the named raw \(\iota_0\) embedding. Neither result is generalized to other carriers or laws. |
+| **R126-N1** | §5.5.4 interface bullet, line 485 (builder A03); §9 TRIAD-CLASS, line 967 (builder B07) | **CLOSED.** Compensation is active on every nonzero edge of the declared lock surfaces; the zero edge of \(\mathcal S_0\) has \(b_3=0\). Zero-interface and I-remove contracts remain distinct; no physical-isolation standard is selected. |
+
+No registered definition, Q1–Q6 requirement, Standard C statement, §8 primacy contract, OPEN status, physical interpretation, or named technical-owner claim is changed in this delta.
+
+### B. Receiving verification and limits
+
+- **EV-SRC-READ / EV-BYTES:** the six changed full lines were independently compared against round 1 and their scopes reviewed at the points of use; the submitted round-2 builder, checker, edit log, checker transcript and release record §3a were inspected at the affected passages. Governing science and provenance remain the targeted `ofn-v0.11` §§2.4, 5.5, 8, 9; the original round-1 manifest in §1 remains the scope of the initial scientific review.
+- **EV-HASH / independent deterministic reconstruction:** SHA-256 was independently computed from GitHub-returned UTF-8 bytes using a self-tested JavaScript SHA-256 implementation. The round-1 candidate is `8230b1694bf7933d4a6cf944d28487b767aa094151ae117933d072abdca33bae`; round 2 is `5e1da260f944c40ebdcab29f57bdd37600f04e47a797b768ab5e0126a0e76a42`. From the tagged adopted `ofn-v0.11` source (SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4`), an independent implementation of all 23 logged replacements/unique-line insertions generated the **exact round-2 candidate** byte-for-byte; all edit-payload and whole-document hash-chain links matched. This repeats only the lightweight identity/rebuild check, not scientific campaigns.
+- **Independent structural reread:** all **43** prior OFN RIDs, **101** anchors and **40** protected definition/Q1–Q6/Standard-C lines remain unchanged; exactly one new RID is present, `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`. All **21** OPEN statuses retain their order (**20 ACTIVE / 1 PARTIAL**); inherited historical appendices remain unchanged.
+- **EV-SRC-REPORTED; not EV-RUN by reviewer:** the checked-in Python output reports K1–K11 PASS, **16/16** negative controls caught, and a PASS result. The reviewer inspected the C15/C16 mutation definitions and their corresponding K7/K8 phrases, but **did not run the submitted Python checker or its full negative-control suite** in this round. Therefore no independent Python-execution or second symbolic-engine claim is made.
+- `records/ofn/OFN_v0_12_RELEASE_RECORD.md` correctly names the round-2 SHA-256, preserves the round-1 historical hash and states that adoption, publication, merge and tag are pending.
+
+### C. Decision boundary / next permitted step
+
+**Owner-adoption-ready** means that this scoped scientific candidate has no open co-owner review correction. The PI may decide whether to adopt the **identified round-2 scientific content**. If adopted, publication is a separate, assertion-gated **adoption-state-lines-only** transition followed by an exact byte/diff/hash audit, the recorded PI authorization, merge-commit publication and annotated `ofn-v0.12` tag, according to `CONVENTIONS.md` and the current Methodology. The published hash will differ from the accepted draft if adoption metadata changes. The release record should record the PI disposition and the exact accepted draft identity before release.
+
+No 3B independence standard (a)/(b)/(c), I-comp/I-quiet/I-remove physical-isolation contract, physical reference-consumption meaning, physical carrier, or dyad/triad primacy is chosen here. `ofn-v0.11` remains governing until the adopted/tagged publication procedure is completed. PR #126 is to remain unmerged until that authorization. No tag or branch deletion is requested.
