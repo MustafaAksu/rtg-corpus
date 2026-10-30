@@ -1,0 +1,20 @@
+file: dsn/RTG_DYADIC_OSCILLATOR_DSN.md
+bytes: 268902
+lines: 1594
+header_chars: 2329
+live_body_chars: 258586
+appendix_a_chars: 6198
+section1_words: 1530
+orientation_core: {"chars": 42571, "lines": 351, "words": 5109, "core_end_marker_present": true}
+header_fields: {"Title": 70, "Date": 27, "Scope": 182, "Document class": 293, "Document status": 197, "Supersedes": 151, "Companion documents": 59, "DSN Methodology": 53, "Programme tier": 93, "Status summary": 1055, "Release record": 101}
+appendix_a_words_per_edition: 4 editions, max 297 words
+footer_lines: 1
+history_phrases_live: {"overlay": 1, "historical": 57, "superseded": 8, "former": 6, "retained as": 3, "no longer": 2}
+near_duplicate_paragraphs: 0
+rids_total: 187
+previous: {"file": "/tmp/claude-0/-home-claude/e3965833-f9c7-57c5-9a1d-478bc677ca20/scratchpad/v623/base.md", "bytes": 258972}
+growth_bytes: 9930
+growth_percent: 3.8
+new_rids: 4
+growth_per_new_rid: 2482.5
+(informational report; no gate)

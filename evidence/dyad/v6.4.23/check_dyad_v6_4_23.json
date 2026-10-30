@@ -1,0 +1,89 @@
+{
+ "all_pass": true,
+ "base_sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
+ "candidate_sha256": "5e55602fd858c81cdd7400f1d244be1c712e770745c55decd60c28d33b45d7fb",
+ "gates": {
+  "C0": true,
+  "C1": true,
+  "C2": true,
+  "C3": true,
+  "C4": true,
+  "C5": true,
+  "C6": true,
+  "C7": true,
+  "C8": true,
+  "C9": true
+ },
+ "info": {
+  "C2": {
+   "appendix_a_kept": true,
+   "edits": 52,
+   "reverse_equals_base": true,
+   "reverse_failures": []
+  },
+  "C3": {
+   "dyad_strings_added": [
+    "DYAD-ART-INBOX-20261030",
+    "DYAD-THM-LPHASE-ROWA-BRIDGE",
+    "DYAD-THM-NF-REM-C7-SHARP",
+    "DYAD-THM-OPEN18-STEP-MONOTONE"
+   ],
+   "grades_added": {
+    "`[ALG]`": 1,
+    "`[COR]`": 2,
+    "`[THM-ALG via IA]`": 1,
+    "`[THM]`": 2
+   },
+   "math_added_undeclared": [],
+   "math_removed_undeclared": [],
+   "rid_tags_added": [
+    "DYAD-ART-INBOX-20261030",
+    "DYAD-THM-LPHASE-ROWA-BRIDGE",
+    "DYAD-THM-NF-REM-C7-SHARP",
+    "DYAD-THM-OPEN18-STEP-MONOTONE"
+   ],
+   "rid_tags_removed": []
+  },
+  "C4": {
+   "cor_lines": 3,
+   "counts_base_cand": {
+    "C_7=100": [
+     3,
+     5
+    ],
+    "C_7=30": [
+     1,
+     1
+    ],
+    "C_D=1000": [
+     1,
+     2
+    ],
+    "C_D=250": [
+     1,
+     1
+    ],
+    "\\tfrac{403}{250}": [
+     6,
+     8
+    ],
+    "c_Q=0.79246": [
+     1,
+     3
+    ]
+   },
+   "stale_left_outside_COR": []
+  },
+  "C5": {
+   "contains_O1_enclosure": true,
+   "interval": [
+    "1.260214202563477114872438560955",
+    "1.260214202563477114872438560958"
+   ]
+  },
+  "C8": {
+   "dyad_inbox_20261030_l902_chain.py": "aac9996fed172a0784244a1233b0f0b946a6440afb1329a00c09f6f34e477553",
+   "dyad_inbox_20261030_owner_checks.py": "21aec87c555b8b68e0ea2e84833b13fae0f1a1a63f3b1c66959805e2791649e1"
+  }
+ }
+}
