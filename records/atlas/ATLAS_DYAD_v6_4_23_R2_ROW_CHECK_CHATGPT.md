@@ -4,7 +4,7 @@
 **Verdict:** **PASS SCOPED / NO ATLAS-ROW BLOCKER** for the named Dyadic r2 candidate. The Atlas-v0.8 entries are correct for their *frozen source snapshot* and MUST NOT be rewritten as if the unadopted successor already governed. The matrix below is the exact post-adoption Atlas delta that must be carried at the next checked Atlas refresh. Pending receiver acceptance is not closed by a producer registration.
 
 **Object:** PR #132, head `5894fae04b8b650604a7c864ae38d1245c256048`, `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` candidate SHA-256 `5e55602fd858c81cdd7400f1d244be1c712e770745c55decd60c28d33b45d7fb`, 268,902 bytes / 1,594 physical lines, Git blob `0ca676a8fc84d62a1d394a018bfbed239fb0d055`. **Source:** adopted `dyad-v6.4.22` (SHA-256 `2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29`).  
-**Comparison Atlas:** adopted `atlas-v0.8`, SHA-256 `47320ca55f25955ff0d5e73be690465c7f9e6ebad9fa6bbc09692d4cf86371b7`, 502,700 bytes / 1,539 physical lines, Git blob `75107d0661132b2651b7fcc5bb0e115f059c76b9`. The Atlas source table at L11 still legitimately pins `DYAD v6.4.22`; Atlas v0.8 also pins OFN v0.11, prior to OFN v0.12's subsequent tag.
+**Comparison Atlas:** adopted `atlas-v0.8`, SHA-256 `47320ca55f25955ff0d5e73be690465c7f9e6ebad9fa6bbc09692d4cf86371b7`, 502,700 bytes / 1,540 split-line entries (including the final newline; 1,539 lines of content), Git blob `75107d0661132b2651b7fcc5bb0e115f059c76b9`. The Atlas source table at L11 still legitimately pins `DYAD v6.4.22`; Atlas v0.8 also pins OFN v0.11, prior to OFN v0.12's subsequent tag.
 
 ## 1. Inspected sources and independent checks
 
