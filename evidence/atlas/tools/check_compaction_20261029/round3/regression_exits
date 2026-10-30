@@ -1,0 +1,8 @@
+dyad exit 0
+r23 exit 0
+r24 exit 0
+gen_tool exit 0
+gen_guard exit 0
+ng_tool exit 0
+ng_guard exit 0
+prog exit 0

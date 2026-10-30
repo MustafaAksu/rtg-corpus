@@ -1,0 +1,27 @@
+[PASS] G0 BASE
+[PASS] G1 REBUILD
+[PASS] G2 OFN RIDS 43 RTG-OFN RIDs; 43 declarations
+[PASS] G3 ANCHORS 100 anchors kept
+[PASS] G4 OPEN 20 ACTIVE / 1 PARTIAL
+[PASS] G5 CLAIM TEXT 134 claim tags, 13 qualifiers, 470 math spans
+[PASS] G6 REGISTERS 31 register rows
+[PASS] G7 APPENDICES
+[PASS] G8 HEADER
+[PASS] G9 HISTORY
+[PASS] G10 COMPACTION tools/check_compaction.py exit 0
+RESULT: PASS
+F1: live §5.5 wording changed (undeclared) -> caught: FAIL  mechanical scope (re-derivation)
+F2: history-removal deletes a DYAD RID -> caught: FAIL  operation FX-2 (history-removal)
+F3: history-removal deletes the qualifying word 'conditional' -> caught: FAIL  operation FX-3 (history-removal)
+F4: the relocated v0.8 baseline hash dropped from Appendix C -> caught: FAIL  source hashes preserved in live text
+F5: Appendix C names an identifier absent from the live text -> caught: owner guard G9 HISTORY
+F6: status summary gains a sentence not in the base summary -> caught: FAIL  operation S2-H (replace-header) | owner guard G8 HEADER
+F7: two footer lines -> caught: FAIL  presentation (header, footer) | owner guard G9 HISTORY
+F8: archive replaced by unrelated bytes -> caught: FAIL  archive identity stage1-intermediate; FAIL  operation S2-H (replace-header); FAIL  operation S2-E01 (history-removal); FAIL  operation S2-E02 (history-removal); FAIL  operation S2-E03 (history-removal); FAIL  operation S2-E04 (history-removal); FAIL  operation S2-E05 (history-removal); FAIL  operation S2-E06 (history-removal); FAIL  operation S2-E07 (history-removal); FAIL  operation S2-E08 (history-removal); FAIL  operation S2-E09 (history-removal); FAIL  operation S2-E10 (history-removal); FAIL  operation S2-E11 (history-removal); FAIL  operation S2-S1 (history-section); FAIL  operation S2-S2 (history-section); FAIL  operation S2-S5 (history-section); FAIL  operation S2-T (history-appendix); FAIL  base history region | owner guard G0 BASE, G9 HISTORY
+F9: base_history_from pointed at a live section (§9) -> caught: FAIL  base history region
+F10: pointer text in §12.2 carries a claim tag -> caught: FAIL  operation S2-S2 (history-section)
+F11: §12.3 custody row for OPEN-TRIAD-CLASS removed as 'v0.10' history (RTG-OFN RID not tracked by the tool) -> caught: owner guard G6 REGISTERS
+F12: an RTG-OFN mention in §§5.5–11 removed under a widened history-word profile -> caught: owner guard G2 OFN RIDS
+F13: OPEN status line changed (undeclared) -> caught: FAIL  mechanical scope (re-derivation); FAIL  qualified claim blocks | owner guard G4 OPEN
+F14: Appendix B record changed (undeclared) -> caught: FAIL  mechanical scope (re-derivation); FAIL  qualified claim blocks | owner guard G7 APPENDICES
+RESULT: PASS (all fixtures caught)

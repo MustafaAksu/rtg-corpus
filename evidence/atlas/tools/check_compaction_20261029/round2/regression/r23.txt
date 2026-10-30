@@ -1,0 +1,48 @@
+ok  P0   expect PASS got PASS           unmutated inputs
+ok  N1   expect FAIL got FAIL           silent deletion of an [assuming:] qualifier (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 692: derived '`[assuming: RECOG-THM-R9-MEMORY]` [import: RTG_DYADIC_OSCILLATOR_DSN_
+         FAIL  qualified claim blocks  — 461 claim blocks in base live text: 459 byte-identical, 1 changed by declared operations, 1 unexplained
+         FAIL  qualifier tags preserved  — lost: ['`[assuming: RECOG-THM-R9-MEMORY]`']
+ok  N2   expect FAIL got FAIL           deletion of an [assuming:] qualifier declared as history removal
+         FAIL  operation X (history-removal)  — removed span carries a claim tag, qualifier, RID or math: '`[assuming: RECOG-THM-R9-MEMORY]` '
+         FAIL  qualifier tags preserved  — lost: ['`[assuming: RECOG-THM-R9-MEMORY]`']
+ok  N3   expect FAIL got FAIL           scope widening ($p\ge5$ → $p\ge3$) declared as a reference substitution
+         FAIL  operation X (ref-subst)  — changed text is not reference text: 'ge5$).** `[ALG]` [RID: RECOG-ALG-LEADING-RETURN-EQUIVARIANCE] If $F^p=\\mathrm{i
+ok  N4   expect FAIL got FAIL           result re-attributed to another RID, declared as a reference substitution
+         FAIL  operation X (ref-subst)  — changed text is not reference text: 'COMPARATOR-INCOMPLETENESS, §6.13a' (offending: ['COMPARATOR', 'INCOMPLETENESS', 
+ok  N4b  expect FAIL got FAIL           RID declaration moved to another statement (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 659: derived 'COMPARATOR-INCOMPLETENESS] [scope: as RECOG-THM-R9-MEMORY, per row; w
+         FAIL  qualified claim blocks  — 461 claim blocks in base live text: 459 byte-identical, 1 changed by declared operations, 1 unexplained
+ok  N5   expect FAIL got FAIL           pointer repointed to a nonexistent tagged edition
+         FAIL  references resolve  — unknown tag recog-v0.3.99
+ok  N5b  expect FAIL got FAIL           pointer to a nonexistent appendix
+         FAIL  references resolve  — Appendix Q (no such appendix): 'OG consumer acceptance recorded in §7. The v0.3.2 template (Appendix Q) is now instantiate
+ok  N6   expect FAIL got FAIL           removed passages not present in the named archive
+         FAIL  operation M01 (presentation)  — old header not found in archive
+         FAIL  operation M04 (history-section)  — removed section not found byte-identical in the named archive
+         FAIL  operation M06 (history-appendix)  — removed section not found byte-identical in the named archive
+ok  N7   expect FAIL got FAIL           live results (§6.13a, R9) relocated as a history section
+         FAIL  operation X7 (history-section)  — removed section not found byte-identical in the named archive
+         FAIL  heading anchors preserved  — missing: ['{#sec-6-13a-r9}']
+ok  N8   expect FAIL got FAIL           two footer lines
+         FAIL  mechanical scope (re-derivation)  — first difference at line 1391: derived 'RTG_RELATIONAL_RECOGNITION_DSN_v0.3.23 (DRAFT candidate, 23 October 
+         FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line
+ok  N9   expect FAIL got FAIL           source hash pin altered (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 694: derived 'f70308f19f5955c0597c03a27b572abfd4c8746aef6922c959675eb0d56e458d` in 
+         FAIL  qualified claim blocks  — 461 claim blocks in base live text: 459 byte-identical, 1 changed by declared operations, 1 unexplained
+         FAIL  source hashes preserved in live text  — missing: ['f70308f19f5955c0597c03a27b572abfd4c8746aef6922c959675eb0d56e458d']
+ok  N10  expect FAIL got FAIL           a theorem paragraph deleted (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 732: derived '`[THM]` [RID: RECOG-THM-A1A-PHASE-EXISTENCE-U] [scope: conditional on
+         FAIL  qualified claim blocks  — 461 claim blocks in base live text: 459 byte-identical, 1 changed by declared operations, 1 unexplained
+ok  N11  expect FAIL got FAIL           evidence pointer deleted, declared as history removal
+         FAIL  operation X (history-removal)  — removed span is not marked as history: '[cert: check 8] '
+ok  N12  expect FAIL got FAIL           stale state restored (R10 wording), declared as a reference substitution
+         FAIL  operation X (ref-subst)  — changed text is not reference text: 'CLOSED (v0.3.2) — delivered and accepted**' (offending: ['CLOSED', '—', 'deliver
+         FAIL  references resolve  — v6.4.10 has no Appendix A entry in recog-v0.3.22
+ok  N13  expect FAIL got FAIL           status summary adds a sentence absent from the base
+         FAIL  operation M01 (presentation)  — status summary adds text not in the base summary (header/section1): ['R9 is unconditional.']
+ok  N14  expect FAIL got FAIL           OPEN status altered (R6, undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 159: derived 'ACTIVE (sharpened v0.3; identifiability audited v0.3.7)\n\nClosed sub
+ok  N15  expect FAIL got FAIL           tagged history ([OPEN] sub-items of former R11) relocated as a history section
+         FAIL  operation X15 (history-section)  — section carries claim tags; a live result cannot be relocated
+RESULT: PASS (17/17 controls rejected)
