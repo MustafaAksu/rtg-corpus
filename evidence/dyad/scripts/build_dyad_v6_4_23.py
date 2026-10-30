@@ -93,7 +93,7 @@ EDITS = [
  "- **OPEN 18 [scope] (D1):** successor `DYAD-THM-OPEN18-STEP-MONOTONE` (step-indexed monotonicity; $q_{3/4}$ isolated in $G$); `DYAD-THM-OPEN18` keeps its text and grade with a historical-formulation `[scope:]` note; summary lines cite the successor (§1, §2, §6.8, §8, Appendix E). NUMGEN's $q_*$ is a different number.\n"
  "- **Registrations (D2, D3):** `DYAD-THM-NF-REM-C7-SHARP` ($C_7\\le85.1$ / $27.7$) and `DYAD-THM-LPHASE-ROWA-BRIDGE` ($c_Q=0.79246$, $c'_Q=0.36916$), §6.14.\n"
  "- **[COR] displayed decimals:** NF-REM table certificate values; L-PHASE proof outline $0.36915/1.51632/1.06252/1.61112\\to0.36916/1.51633/1.06253/1.61115$; $\\tfrac{403}{250}$ and all adopted constants unchanged.\n"
- "- **Consumer register (D4–D7):** §7.0 and §7 to NUMGEN v1.21, RECOG v0.3.26, OFN v0.12, Genesis v2.9, Programme v1.3, Methodology v1.4; receipts N4/N6/N14 (OFN), N15 (NUMGEN).\n"
+ "- **Consumer register (D4–D7):** §7.0, §7 and the NUMGEN import state in §6.14 and §7.0a to NUMGEN v1.21, RECOG v0.3.26, OFN v0.12, Genesis v2.9, Programme v1.3, Methodology v1.4; receipts N4/N6/N14 (OFN), N15 (NUMGEN).\n"
  "- No existing RID, grade or OPEN status changed; three result RIDs and one artifact RID (DYAD-ART-INBOX-20261030) added. Evidence: " + OWN + ", " + CHAIN + " (DYAD-ART-INBOX-20261030). Reconciliation " + RECON + "; release record `" + REC + "`; predecessor tag `dyad-v6.4.22`.\n\n"
  "### v6.4.22 — 23 October 2026 — Adopted\n"),
 # ---- D1 ----
@@ -129,7 +129,7 @@ EDITS = [
  "| $\\tfrac1{40}$ | $C_7=30$ (certified bound $27.6023$, rounded up) | $C_D=250$ (certified bound $216.77$, rounded up) |"),
 ("D2-c", "new RID after NF-REM",
  "Constants travel with their radius and this chart; profiles are not to be mixed.",
- "`[COR]` `[v6.4.23]` The bracketed values in the table are the certificate's exact upper bounds rounded up; the earlier displays $85.07$ and $812.89$ were nearest-rounded and below the bounds. Constants travel with their radius and this chart; profiles are not to be mixed."),
+ "`[COR]` `[v6.4.23]` The bracketed values in the table are the certificate's exact upper bounds rounded up; the earlier displays $85.07$, $27.60$ and $812.89$ were nearest-rounded and below the bounds ($216.77$ was already an outward value). Constants travel with their radius and this chart; profiles are not to be mixed."),
 ("D2-d", "insert C7-SHARP before NF6-DEG10",
  "`[ALG]` [RID: DYAD-ALG-NF6-DEG10] `[v6.4.11]`",
  C7SHARP + "\n\n`[ALG]` [RID: DYAD-ALG-NF6-DEG10] `[v6.4.11]`"),
@@ -210,6 +210,15 @@ EDITS = [
  "- **Offered import: `RTG_NUMBER_GENESIS_DSN`** — `DYAD-THM-LPHASE-ROWA-REMAINDER` (`[THM]`): constant and branch certificate for NUMGEN L-PHASE on row A. NUMGEN v1.20.8 records N15 RECEIVED and defers the import to a later edition (OPEN sub-item \"L-PHASE explicit constant\"). No coefficient transfer (SG-19).",
  "- **NUMGEN L-PHASE import:** `DYAD-THM-LPHASE-ROWA-REMAINDER` (`[THM]`), constant and branch certificate on row A, imported by NUMGEN v1.21 (N15: received, statement accepted, adopted use). No coefficient transfer (SG-19)."),
 # ---- notice-receipt rows ----
+("E1-a", "§6.14 distinctions (iii) ownership",
+ "NUMGEN v1.20.8 keeps an `[OPEN]` sub-item without a value; a later NUMGEN edition may import this RID after DYAD adoption.",
+ "NUMGEN v1.21 imports this RID (§6.6, §9.1, at `dyad-v6.4.22`); the NUMGEN v1.20.8 `[OPEN]` sub-item without a value is closed there."),
+("E1-b", "§6.14 not-established boundary",
+ "whose import NUMGEN defers (§7 L-PHASE interface)",
+ "imported by NUMGEN v1.21 (§7 L-PHASE interface)"),
+("E1-c", "§7.0a GAP-LOCK bullet",
+ "its only input is the explicit row-A constant above, whose import NUMGEN has deferred.",
+ "its only input is the explicit row-A constant above, which NUMGEN v1.21 imports."),
 ("N-4", "notice row N4 OFN",
  "| N4 | v6.4.11 | OFN | CUST-O09-01 answered by DYAD-DEF-PRIMITIVE-MAP | INFORMATIONAL — no OFN receipt recorded | OFN v0.10 §12.3 retains the inherited v0.9 CUST-O09-01 paragraph |",
  "| N4 | v6.4.11 | OFN | CUST-O09-01 answered by DYAD-DEF-PRIMITIVE-MAP | RECEIVED — used (IMP-O08-12) | OFN v0.12 IMP-O08-12, §12.3 |"),

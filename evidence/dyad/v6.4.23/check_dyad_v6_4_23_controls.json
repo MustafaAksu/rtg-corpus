@@ -11,6 +11,26 @@
    ],
    "what": "scope note of DYAD-THM-OPEN18 dropped"
   },
+  "Q10": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C2",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "unlogged widening of the recorded interval (still outward; caught as an alteration, not as invalid)"
+  },
+  "Q11": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C4",
+   "failing_gates": [
+    "C2",
+    "C4"
+   ],
+   "what": "superseded NUMGEN deferral wording restored (E1)"
+  },
   "Q2": {
    "as_expected": true,
    "exit": 1,
@@ -80,7 +100,7 @@
     "C3",
     "C5"
    ],
-   "what": "successor interval widened to a non-outward value"
+   "what": "successor interval narrowed so that it no longer contains the root (upper endpoint ...958 -> ...956)"
   },
   "Q9": {
    "as_expected": true,

@@ -10,9 +10,10 @@ C3  science invariants: every RID tag and Dyadic RID string of the base is kept;
     text of a logged edit and every added one to its new text
 C4  constants: 403/250, C_7 = 100 / 30, C_D = 1000 / 250, c_Q = 0.79246 occur at least as often as in the base; the corrected
     displays 0.36915, 1.51632, 1.06252, 1.61112, 85.07, 27.60, 812.89 remain only inside the [COR] lines and the
-    Appendix A entry
+    Appendix A entry; the superseded NUMGEN deferral wordings are absent (E1)
 C5  D1: the adopted DYAD-THM-OPEN18 sentence is kept verbatim with the scope note; the successor states the certified
-    ranges and the outward interval of q_{3/4}; section 1 and section 2 cite the successor
+    ranges and an interval for q_{3/4} that contains the O1 enclosure (owner_checks.json midpoint +- 1e-30); section 1 and
+    section 2 cite the successor
 C6  edition lines: title, DRAFT status, Supersedes v6.4.22 with hash, release record path, Appendix A heading, one footer
 C7  OPEN state: section 2 "Status:" lines identical to the base
 C8  cited evidence: the two owner scripts are present with the SHA-256 cited in the candidate; owner_checks.json reports
@@ -103,7 +104,7 @@ def main():
     same = {k: (B.count(k), C.count(k)) for k in keep}
     cor_lines = [l for l in C.split("\n") if l.startswith("`[COR]` `[v6.4.23]`") or l.startswith("- **[COR] displayed decimals:**")]
     rest = "\n".join(l for l in C.split("\n") if l not in cor_lines)
-    stale = ["0.36915", "1.51632", "1.06252", "1.61112\\,", "certificate value $1.61112$", "certificate value $85.07$", "certificate value $27.60$", "certificate value $812.89$"]
+    stale = ["whose import NUMGEN defers", "whose import NUMGEN has deferred", "a later NUMGEN edition may import this RID", "0.36915", "1.51632", "1.06252", "1.61112\\,", "certificate value $1.61112$", "certificate value $85.07$", "certificate value $27.60$", "certificate value $812.89$"]
     left = [x for x in stale if re.search(re.escape(x) + r"(?![0-9])", rest)]
     G["C4"] = all(b <= c for b, c in same.values()) and not left   # existing occurrences are kept by C2; new text may cite them
     info["C4"] = {"counts_base_cand": same, "stale_left_outside_COR": left, "cor_lines": len(cor_lines)}
@@ -112,8 +113,16 @@ def main():
     succ_i = C.find("[RID: DYAD-THM-OPEN18-STEP-MONOTONE]"); succ = C[succ_i:C.find("\n", succ_i)]
     G["C5"] = (C.count(old18) == 1 and C.count(old18 + " `[scope: historical first-footprint formulation;") == 1
                and "$q\\in(0,\\,1.26021520256]$" in succ and "$q\\in[1.26021320256,\\,2]$" in succ
-               and "[1.260214202563477114872438560955,\\ 1.260214202563477114872438560958]" in succ and "Uniqueness is stated in $G$ only" in succ
+               and "Uniqueness is stated in $G$ only" in succ
                and "**OPEN 18 closed (step-indexed).**" in C and "- **OPEN 18** `DYAD-THM-OPEN18-STEP-MONOTONE`" in C)
+    # numerical validity of the stated interval: it must contain the O1 enclosure (midpoint +- 1e-30, owner_checks.json)
+    from decimal import Decimal as Dm, getcontext; getcontext().prec = 60
+    mi = re.search(r"q_\{3/4\}\\in\[([0-9.]+),\\ ([0-9.]+)\]", succ)
+    oc5 = json.load(open(os.path.join(ROOT, "evidence", "dyad", "inbox-20261030", "owner_checks.json"), encoding="utf-8"))
+    m5 = Dm(oc5["info"]["D1"]["O1"]["q_star_36_digits"]); e5 = Dm(oc5["info"]["D1"]["O1"]["enclosure_half_width"])
+    encl_ok = bool(mi) and Dm(mi.group(1)) <= m5 - e5 and Dm(mi.group(2)) >= m5 + e5
+    G["C5"] = G["C5"] and encl_ok
+    info["C5"] = {"interval": mi.groups() if mi else None, "contains_O1_enclosure": encl_ok}
     # C6
     head = C[:C.index("## Local Tag Aliases")]
     G["C6"] = (C.startswith("# RTG_DYADIC_OSCILLATOR_DSN_v6.4.23\n") and "**Document status:** DRAFT — v6.4.23 candidate" in head

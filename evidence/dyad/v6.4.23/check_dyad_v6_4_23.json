@@ -1,7 +1,7 @@
 {
  "all_pass": true,
  "base_sha256": "2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c29",
- "candidate_sha256": "3de022a7fb76d65473776cd759abd90f47b7a0b9a0f1924be0ea56830663dd2b",
+ "candidate_sha256": "5e55602fd858c81cdd7400f1d244be1c712e770745c55decd60c28d33b45d7fb",
  "gates": {
   "C0": true,
   "C1": true,
@@ -17,7 +17,7 @@
  "info": {
   "C2": {
    "appendix_a_kept": true,
-   "edits": 49,
+   "edits": 52,
    "reverse_equals_base": true,
    "reverse_failures": []
   },
@@ -73,6 +73,13 @@
     ]
    },
    "stale_left_outside_COR": []
+  },
+  "C5": {
+   "contains_O1_enclosure": true,
+   "interval": [
+    "1.260214202563477114872438560955",
+    "1.260214202563477114872438560958"
+   ]
   },
   "C8": {
    "dyad_inbox_20261030_l902_chain.py": "aac9996fed172a0784244a1233b0f0b946a6440afb1329a00c09f6f34e477553",

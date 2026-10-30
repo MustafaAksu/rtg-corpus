@@ -22,7 +22,9 @@ CONTROLS = [
  ("Q5", "C2", "unlogged change outside the edits (OPEN 11 range)", lambda s: one(s, "Chirality closure on scoped canonical family $(\\rho_0,\\eta_0)=(0,q)$, $q\\in(0,2]$", "Chirality closure on scoped canonical family $(\\rho_0,\\eta_0)=(0,q)$, $q\\in(0,3]$")),
  ("Q6", "C7", "a section 2 Status line changed", lambda s: one(s, "Status: ", "Status:  ")),
  ("Q7", "C6", "footer marked ADOPTED", lambda s: one(s, "(DRAFT candidate, 30 October 2026).*", "(ADOPTED, 30 October 2026).*")),
- ("Q8", "C5", "successor interval widened to a non-outward value", lambda s: one(s, "1.260214202563477114872438560958]", "1.26021420256347711487243856096]")),
+ ("Q8", "C5", "successor interval narrowed so that it no longer contains the root (upper endpoint ...958 -> ...956)", lambda s: one(s, "1.260214202563477114872438560958]", "1.260214202563477114872438560956]")),
+ ("Q10", "C2", "unlogged widening of the recorded interval (still outward; caught as an alteration, not as invalid)", lambda s: one(s, "1.260214202563477114872438560958]", "1.260214202563477114872438560960]")),
+ ("Q11", "C4", "superseded NUMGEN deferral wording restored (E1)", lambda s: one(s, "its only input is the explicit row-A constant above, which NUMGEN v1.21 imports.", "its only input is the explicit row-A constant above, whose import NUMGEN has deferred.")),
  ("Q9", "C3", "a fifth RID added", lambda s: one(s, "**Sharper $C_7$ rows.**", "[RID: DYAD-THM-EXTRA] **Sharper $C_7$ rows.**")),
 ]
 

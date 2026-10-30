@@ -45,7 +45,7 @@
   },
   {
    "id": "ED-8",
-   "new_sha256": "ecffe031b81c77a11d24824f3550fba029f4797f63a08afc51ce5c38c548ca04",
+   "new_sha256": "8b958631938bc9849205f119e7676ec0eb068514922b8068663843a200e45cc0",
    "old_sha256": "7af64ab4f82d4c117dbf842faa85c36a77c46bb7f330bae0c77a947cbb01474e",
    "what": "Appendix A entry"
   },
@@ -105,7 +105,7 @@
   },
   {
    "id": "D2-c",
-   "new_sha256": "5779777ededba027639f573a639f03bf03546990ade562450e25383b671a55fd",
+   "new_sha256": "6e9a0ec7503c72f7116fbb7480242a86d20f76507d89dbd586162312b0c5aac1",
    "old_sha256": "fbb3ec568db6538ae353e1db6ac548f585df1de2c215176ce6f0ffbb7405dbb9",
    "what": "new RID after NF-REM"
   },
@@ -272,6 +272,24 @@
    "what": "\u00a77 NUMGEN offered import"
   },
   {
+   "id": "E1-a",
+   "new_sha256": "70988073360a3a3c885c2a5d2d581074bc297d08f1b6b0ff6f0f86e5786f2585",
+   "old_sha256": "5fc910bb0c5116a9042faad1cc8b302cdc198e2ed92fff2432879735e219c85b",
+   "what": "\u00a76.14 distinctions (iii) ownership"
+  },
+  {
+   "id": "E1-b",
+   "new_sha256": "6cd8dda1722b6b1b3e593c58e648ae569e85309d77a1a04f9fe63d57f7befcf5",
+   "old_sha256": "32763e08b3b919e880df70a49894cf64a12a05a792e315f1fefb33a6938aa00f",
+   "what": "\u00a76.14 not-established boundary"
+  },
+  {
+   "id": "E1-c",
+   "new_sha256": "d3fb73cec30e8b0bf2ad7bf2eabd2bbc0fc6fa80ba17b2df7ae61c8363266238",
+   "old_sha256": "80fac20e611c1a8b7657950cbbe16994de834b61763ddc9c15c3fbdd92457a8c",
+   "what": "\u00a77.0a GAP-LOCK bullet"
+  },
+  {
    "id": "N-4",
    "new_sha256": "b94232630ef83b3a2a7f933083301be272a69b224a24d24110a06e9202653249",
    "old_sha256": "101c75586d956dc9c865cd3bfe796009a618a13c507776d4751ff74db43ffe1b",
@@ -296,6 +314,6 @@
    "what": "notice row N15 NUMGEN"
   }
  ],
- "n_edits": 49,
- "out_sha256": "3de022a7fb76d65473776cd759abd90f47b7a0b9a0f1924be0ea56830663dd2b"
+ "n_edits": 52,
+ "out_sha256": "5e55602fd858c81cdd7400f1d244be1c712e770745c55decd60c28d33b45d7fb"
 }
