@@ -1,6 +1,6 @@
 # Ontological Foundations (OFN) v0.12 — Release Record
 
-**Status:** DRAFT. Round 2 is built and checked after the change-focused review (§3a); the delta check is pending. Nothing here is adopted. Until the PI adopts and the tag exists, `ofn-v0.11` remains the governing edition.
+**Status:** ADOPTED by the PI on 30 October 2026 (§5). The published file `55ff8ba8…76aa` is the accepted round-2 candidate `5e1da260…6a42` plus the adoption-state lines only. The edition governs once the PI has merged PR #126 and created the tag `ofn-v0.12`; until then `ofn-v0.11` is the tagged edition.
 **Date:** 30 October 2026
 **Prepared by:** Claude, OFN co-owner session `claude012ZC8x` (builder), on branch `claude/ofn-v0.12`.
 **Edition:** v0.12 under DSN Methodology v1.4. It is one content stage with no layout stage: no compaction is needed. The live file changes in place, and the v0.11 delta paragraphs are replaced by v0.12 ones; their content already sits in the Appendix C v0.11 entry.
@@ -19,8 +19,10 @@ This record invents no hash, approval or review identifier. Fields marked *(to b
 | Inbox checkpoint | `pipes/OFN/` holds no open item (three closed notices) | nothing to receive |
 | Change-focused review | `records/ofn/OFN_v0_12_CHATGPT_REVIEW.md` (ChatGPT, commit `7368ab29…`; PR #126 review `5711097535`), on round 1 `8230b169…3bae`. Verdict: ACCEPT SCOPED. R126-S1 and R126-S2 required; R126-N1 recommended | given |
 | Round-2 correction | R126-S1, R126-S2 and R126-N1 applied in the builder (§3a); round 1 `8230b169…3bae` kept in Git history (commit `c8db47b`) | done; delta check pending |
-| Adoption | PI | *(to be filled)* |
-| Merge commit; tag `ofn-v0.12` | PI | *(to be filled)* |
+| Delta check of round 2 | `records/ofn/OFN_v0_12_CHATGPT_REVIEW.md` §7 (commit `0ef4ff78…`; PR #126 review `5711501720`): ACCEPT SCOPED — OWNER ADOPTION READY; R126-S1, S2 and N1 CLOSED | given |
+| Adoption | PI, OFN session, 30 October 2026, 14:26 +03:00: "PI olarak, bende OFN v0.12 ikinci tur adayını benimsiyorum" | **adopted** (§5) |
+| Publication finalization | `evidence/ofn/scripts/release_ofn_v0_12.py`; P1–P6 PASS, X1–X6 caught | done; published SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa` |
+| Merge commit; tag `ofn-v0.12` | PI (merge commit; annotated tag naming the published hash) | pending |
 
 **PI decisions applied:**
 1. One new local-result RID, `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`.
@@ -33,7 +35,9 @@ This record invents no hash, approval or review identifier. Fields marked *(to b
 |---|---|---|
 | Base (adopted v0.11) | `git show ofn-v0.11:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4` |
 | Candidate, round 1 (superseded) | commit `c8db47b` | `8230b1694bf7933d4a6cf944d28487b767aa094151ae117933d072abdca33bae` |
-| **Candidate, round 2** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `5e1da260f944c40ebdcab29f57bdd37600f04e47a797b768ab5e0126a0e76a42` |
+| **Candidate, round 2 (adopted object)** | builder output (was `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` at `0ef4ff78`) | `5e1da260f944c40ebdcab29f57bdd37600f04e47a797b768ab5e0126a0e76a42` |
+| **Published v0.12 (final)** | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa` |
+| Publication transform; check output | `evidence/ofn/scripts/release_ofn_v0_12.py`; `evidence/ofn/v0.12/release_check_output.txt` | `d961cc97b04a2aff729bfc896afe83f1732d772fc623ddb270040cb3d93f606b`; `14b60d8768abd4047820ba5b7043e2c8cc4f2daced5d2a449d850f8eb80de714` |
 | Builder | `evidence/ofn/scripts/build_ofn_v0_12.py` | `90bc6540716f7732f90c2bf798dcd99fdbdc0c623f8ece0f39005021e86ed50b` |
 | Checker | `evidence/ofn/scripts/check_ofn_v0_12.py` | `8e408a747b19a4853c2c010da22334f51b23dc1d8198fc8584d89b35027f54f5` |
 | Edit log (23 edits; old and new text with hashes; document hash chain) | `evidence/ofn/v0.12/edit_log.json` | `420a7a8cafa3f4701eaa8b26c073658ac2d5bf91fd699a8fae0a572dcc4e342b` |
@@ -159,12 +163,36 @@ The review (`records/ofn/OFN_v0_12_CHATGPT_REVIEW.md`) accepted the scientific c
 | NUMGEN | Vocabulary use of §6.2 N-1A2 in OFN §5.5.4 and OPEN-OFN-3A; no import of the N-1A2 closure; nothing asked |
 | Programme | OFN v0.12 remains the criteria home for P0 and P2B; no OPEN status changes |
 
-## 5. Adoption *(to be filled)*
+## 5. Adoption
 
-After the change-focused review and the PI's adoption, a publication transform changes the adoption-state lines only, and a checker confirms that nothing else differs. The lines are:
-- the header Date, Document status and Supersedes lines;
-- the §12.3 new-RID row;
-- the Appendix C v0.12 heading;
+**Decision.** Mustafa (PI), OFN session, 30 October 2026, 14:26 +03:00: "PI olarak, bende OFN v0.12 ikinci tur adayını benimsiyorum" ("As PI, I too adopt the OFN v0.12 round-2 candidate").
+
+The decision follows the second co-owner's final verdict, ACCEPT SCOPED — OWNER ADOPTION READY. That verdict is recorded in `records/ofn/OFN_v0_12_CHATGPT_REVIEW.md` §7 (commit `0ef4ff78…`; PR #126 review `5711501720`), on the round-2 candidate.
+
+**Adopted object:** `5e1da260f944c40ebdcab29f57bdd37600f04e47a797b768ab5e0126a0e76a42`, with the edits of §3 and the corrections of §3a.
+
+**Finalization.** Transform: `python3 -I evidence/ofn/scripts/release_ofn_v0_12.py CANDIDATE OUT "30 October 2026"`. It changes exactly five lines:
+- the header Document status line;
+- the header Supersedes line ("on adoption" dropped);
+- the §12.3 new-RID row (now "Registered v0.12 … Registered 30 Oct 2026");
+- the Appendix C v0.12 heading (now ADOPTED);
 - the footer.
 
-Then BASELINE is updated, and the PI merges and tags `ofn-v0.12`.
+The header Date line already carries the decision date, so it is not touched.
+
+**Checks** (`--check --controls`):
+- Gates P1–P6 PASS: candidate hash; rebuild identical; exactly the 5 declared lines differ; the reverse transform recovers the candidate; no draft marker remains; every other line is byte-identical, and the claim-tag, RID and math census is unchanged.
+- Controls X1–X6: all caught. They are an extra live change, a status-summary edit, a draft footer, a changed claim tag, an added RID, and an isolation contract declared selected.
+- Output: `evidence/ofn/v0.12/release_check_output.txt` (`14b60d8768abd4047820ba5b7043e2c8cc4f2daced5d2a449d850f8eb80de714`).
+- Transform script: `evidence/ofn/scripts/release_ofn_v0_12.py` (`d961cc97b04a2aff729bfc896afe83f1732d772fc623ddb270040cb3d93f606b`).
+
+**Published file:** `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md`, SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa`. The candidate hash and the published hash are separate identities.
+
+**BASELINE.** The OFN row now names v0.12, the published hash, this record and the tag `ofn-v0.12`, which the PI creates. The predecessor is kept as v0.11 `38a2f444…e9e4` (`ofn-v0.11`).
+
+**After this record:**
+1. The PI merges PR #126 with a merge commit and creates the annotated tag `ofn-v0.12` on that merge commit, with `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa` in the message.
+2. The §4 notices are filed as `pipes/` items.
+3. "Sync now" is run in the Claude project.
+
+This record is frozen at adoption, except for the merge-commit and tag fields in §1.

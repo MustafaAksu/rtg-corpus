@@ -4,8 +4,8 @@
 **Date:** 30 October 2026  
 **Scope:** Foundational commitments, primitive-object hypotheses and model-selection criteria of RTG, including the genuine relational-triad model-selection contract for the FMS interface (§5.5); no physical generator, carrier or primitive object is selected.  
 **Document class:** Foundational ontology / model-selection ledger (Methodology v1.4 §0.5); nonstandard profile with the section map in §0.4.  
-**Document status:** DRAFT — v0.12 candidate (one content stage; no layout stage); adoption pending (`records/ofn/OFN_v0_12_RELEASE_RECORD.md`). `ofn-v0.11` remains the governing edition until adoption and tag.  
-**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.11` (tag `ofn-v0.11`, SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4`), on adoption.  
+**Document status:** ADOPTED — PI, 30 October 2026 (closure-versus-reference result; isolation and triadic-independence frames recorded, none selected; reviewed in two rounds). Release record: `records/ofn/OFN_v0_12_RELEASE_RECORD.md`.  
+**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.11` (tag `ofn-v0.11`, SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4`).  
 **Companion documents:** governing editions read for this edition — Programme Overview v1.3 (`programme-v1.3`), DSN Methodology v1.4 (`methodology-v1.4`), Dyadic Oscillator v6.4.22 (`dyad-v6.4.22`), Genesis Geometry v2.9 (`gen-v2.9`), RRF v0.8.4 (`rrf-v0.8.4`), Discrete Genesis v2.12.14 (`tdrg-v2.12.14`), Number Genesis v1.21 (`numgen-v1.21`), RECOG v0.3.26 (`recog-v0.3.26`), Triadic v1.6.1 (`triad-v1.6.1`); claim-level pins are stated at each use and in §11.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Status summary:** OFN holds seventeen registered definitions, the hypothesis FSP-U, five OFN local results and twenty-one foundational OPENs (twenty ACTIVE, one PARTIAL); no physical generator, carrier, primitive object, chirality or isolation regime is selected. In the genuine relational-triad contract the transported class C is the primary realized smooth mathematical candidate family: a real $C^\infty$ realization exists through two imported Dyadic theorems, while analytic realization (DYAD B-an/B-6) and physical selection remain open. Standard C is a positive-dimensional local $C^3$ invariant-manifold test, and the admitted FMS mathematical test class is real $C^\infty$ with analytic laws as a distinguished subclass. The closure-versus-reference comparison is recorded as the OFN local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; its physical reading, the physical-isolation contract and the standard of triadic independence remain open.  
@@ -1384,7 +1384,7 @@ IMP/RF/CUST/REQ labels are administrative records, not newly assigned scientific
 | `RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT` | Registered v0.10, OFN RESULT; single status `[from: ALG]` in v0.11 (OFN11-C03) | Registered 19 Oct 2026 (O10-P4); Genesis erratum concurs |
 | `RTG-OFN-OPEN-TRIAD-CLASS` | Registered v0.10, OFN OPEN | Registered 19 Oct 2026 (O10-P6) |
 | `RTG-OFN-DEF-ZERO-ORIGIN`, `RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY`, `RTG-OFN-DEF-CONTINUOUS-REPRESENTATION`, `RTG-OFN-DEF-FINITE-DESCRIPTION`, `RTG-OFN-DEF-DIST-ZN`, `RTG-OFN-DEF-REDUCTION-TARGET` | Registered v0.11, OFN definitions; bodies unchanged from v0.10 §§1.3, 4.1, 4.6, 8 | Registered 30 Oct 2026 (seventeen definition RIDs in total) |
-| `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` | v0.12 (adoption pending), OFN RESULT from ALG | Registered on adoption of v0.12 (five OFN local results in total) |
+| `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` | Registered v0.12, OFN RESULT from ALG | Registered 30 Oct 2026 (five OFN local results in total) |
 
 **Actual consumer register — observed use, not newly completed synchronization:**
 
@@ -1551,7 +1551,7 @@ The inherited Appendix B records remain unchanged. Both v0.9 reconciliation entr
 
 One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier, with their draft-stage entries, are preserved verbatim in Appendix C at tag `ofn-v0.10`; the v0.1–v0.6 entries are in `ARCHIVED_OFN_HISTORY_v0_7.md`, which is not supplied to the corpus.
 
-### v0.12 — 30 October 2026 — DRAFT (adoption pending)
+### v0.12 — 30 October 2026 — ADOPTED / closure-versus-reference result; isolation and independence frames
 - **§2.4 / §9 [result/scope]:** `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` registered (closure sector canonically isomorphic to node data modulo the common origin, $Q_{\rm node}\cong C_0$; the global comparison with one relation as reference is an isomorphism iff multiplication by $n$ is bijective; node and edge actions differ); OPEN-OFN-REF-CLOSURE narrowed to the physical reading.
 - **§5.5.4 / §9 [isolation]:** class-C causal-interface identity recorded; OPEN-OFN-TRIAD-CLASS isolation obligation split into I-comp, I-quiet and I-remove (none selected); OPEN-OFN-3A pointer.
 - **§9 [3B]:** evaluation frame U-form, U-class, C0, C1, J with the position of class C; no standard of independence selected.
@@ -1595,4 +1595,4 @@ One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier
 
 ---
 
-*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.12 — DRAFT, adoption pending; `ofn-v0.11` governs until adoption and tag.*
+*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.12*
