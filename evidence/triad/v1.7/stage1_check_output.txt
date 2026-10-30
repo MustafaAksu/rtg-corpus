@@ -1,0 +1,24 @@
+K1: PASS
+K2: PASS
+K3: PASS
+K4: PASS
+K5: PASS
+K6: PASS
+K7: PASS
+K8: PASS
+S1: PASS
+S5: PASS
+S6: PASS
+edits: 86; candidate sha256: 19af7ee3b87ef8ff228c76c90632b9cf1ee15f2d09995d82cf9a30019ef46163; GATES: ALL PASS
+control 'drop C3': gate K8 fails as required
+control 'restore send queue': gate K7 fails as required
+control 'rename an RID': gate K3 fails as required
+control 'edit Appendix A': gate K6 fails as required
+control 'claim D constant in (a)': gate K8 fails as required
+control 'wrong sigma in single flip': gate S5 fails as required
+control 'wrong I under exchange': gate S5 fails as required
+control 'change a Status line': gate K5 fails as required
+control 'drop an anchor': gate K4 fails as required
+control 'reintroduce release-label qualifier': gate K7 fails as required
+control 'claim custody package present': gate K7 fails as required
+CONTROLS: ALL CAUGHT
