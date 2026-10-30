@@ -14,10 +14,12 @@ Checks:
   K1  linear identities A^3 = -I, A^6 = I, I + A^2 + A^4 = 0 (exact)
   K2  iota_0 intertwining T3[G] o iota_0 = iota_0 o G for a generic odd jet (degree <= 5)
   K3  iota_+ and iota_- intertwining for a generic G_omega jet (degree <= 4; includes even-degree terms)
-  K4  falsifier: G(x) = x + q(x), q a nonzero quadratic, breaks iota_0 and iota_+
+  K4  falsifier for the specific quadratic q(rho, eta) = (rho*eta, rho^2): G = x + q breaks iota_0 and iota_+
+      (not every quadratic breaks iota_+: an A^2-equivariant quadratic preserves it, cf. K3)
   K5  premise -> implication: every G_A jet (built by A-averaging a generic jet) is odd and in G_omega (owner premise
       for C2: [N_Phi, A] = 0, IMP-O10-07; the theorem itself is not re-proved here)
-  K6  raw T in the raw chart: not odd, not A-commuting, not A^2-equivariant (order-2 Taylor residuals)
+  K6  raw T in the raw chart: T(-x) + T(x) = (0, 2(cosh rho - 1)) exactly (not odd); not A-commuting and not
+      A^2-equivariant (order-2 Taylor residuals)
   K7  consequence: in the raw chart the named embedding iota_0 is not invariant under T3[T] for kappa != 0
       (only this embedding is tested; the general raw no-go is the owner result RTG-OFN-ALG-RAW-STANDARD-C-NOGO)
 """
@@ -88,7 +90,8 @@ report("K3 iota_+ and iota_- intertwine for every G in G_omega (generic jet, deg
 
 # K4 falsifier
 Gq = lambda v: sp.Matrix([v[0] + v[0] * v[1], v[1] + v[0]**2])
-report("K4 falsifier G(x) = x + q(x), q quadratic: iota_0 and iota_+ both fail", not intertwines(Gq, i0) and not intertwines(Gq, ip))
+report("K4 falsifier for q = (rho*eta, rho^2): G = x + q breaks iota_0 and iota_+", not intertwines(Gq, i0) and not intertwines(Gq, ip),
+       "specific q only; A^2-equivariant quadratics preserve iota_+")
 
 # K5 premise [G, A] = 0  ->  odd and A^2-equivariant
 Q = jet(4, lambda d: True, "q")
@@ -106,19 +109,21 @@ def taylor2(expr):
     t = sp.Symbol("t")
     s = sp.series(expr.subs({r: t * r, e: t * e}), t, 0, 3).removeO()
     return sp.expand(s.subs(t, 1))
+odd_exact = [sp.simplify((c - d).rewrite(sp.exp)) == 0 for c, d in zip(Tm(-x) + Tm(x), [0, 2 * (sp.cosh(r) - 1)])]
 odd_res = [taylor2(c) for c in (Tm(-x) + Tm(x))]
 comm_res = [taylor2(c) for c in (Tm(A * x) - A * Tm(x))]
 om_res = [taylor2(c) for c in (Tm(A2 * x) - A2 * Tm(x))]
 lin_ok = sp.Matrix([[sp.diff(c, v).subs({r: 0, e: 0}) for v in (r, e)] for c in Tm(x)]) == A
-report("K6 raw T (lifted chart at P_1): not odd, not A-commuting, not A^2-equivariant", lin_ok and
+report("K6 raw T (lifted chart at P_1): T(-x)+T(x) = (0, 2(cosh rho - 1)); not A-commuting, not A^2-equivariant", lin_ok and all(odd_exact) and
        any(c != 0 for c in odd_res) and any(c != 0 for c in comm_res) and any(c != 0 for c in om_res),
-       f"T(-x)+T(x) = {odd_res} + O(|x|^3); DT(0) = A")
+       f"exact identity checked; order 2: {odd_res}; DT(0) = A")
 
 # K7 raw embedding iota_0 not invariant under T3[T]
 out = T3(Tm, i0(x))
 third = [taylor2(c) for c in out[2]]
-report("K7 in the raw chart, iota_0 is not invariant under T3[T] for kappa != 0", any(c != 0 for c in third),
-       f"third edge after one step = {third} + O(|x|^3) (it would be 0 on an invariant iota_0)")
+third_exact = all(sp.simplify((c - d).rewrite(sp.exp)) == 0 for c, d in zip(out[2], [0, -2 * k * (sp.cosh(r) - 1) / 3]))
+report("K7 in the raw chart, iota_0 is not invariant under T3[T] for kappa != 0", third_exact and any(c != 0 for c in third),
+       "third edge after one step = (0, -(2 kappa/3)(cosh rho - 1)) exactly; it would be 0 on an invariant iota_0")
 
 if "--force-fail" in sys.argv:
     OK[0] = False
