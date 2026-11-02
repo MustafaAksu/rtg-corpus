@@ -3,7 +3,7 @@ r"""Triadic v1.7 — stage-1 checker (gates + negative controls).
 
 usage: check_triad_v1_7_stage1.py BASE CANDIDATE EDITLOG_JSON [--controls]
   BASE = `git show triad-v1.6.1:dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md`; run from the repository root.
-Gates (round 2, 2 Nov 2026: K7/K8 lists and two controls extended for R140-F1):
+Gates (round 2, 2 Nov 2026: K7/K8 lists and two controls extended for R140-F1; round 3: row-19 heading phrases and one control):
   K1 base identity (triad-v1.6.1);
   K2 deterministic rebuild (builder output == candidate) and edit-log hash chain ending at the candidate;
   K3 the set of TRIAD-* identifiers is unchanged and the declared count is 46 (the RER record name excluded);
@@ -32,6 +32,9 @@ STALE = [
     "`[COR v1.6.1", "`[v1.6.1 r2 —", "`[ALG+NUM diagnostic]`", "OPEN-B-E1", "`[ALG/NUM synthesis]`",
     "is preserved under `evidence/accepted_r4_2/`", "**Two-pass handoff.**", "No new numerical sweep is required for this r4",
     "**Adoption record (v1.6.1):** `records/OWNER_ADOPTION_v1_6_1.json`", "**Document status:** ADOPTED",
+    "| v1.3 is the pass-two synchronization edition |",                         # round 2 (R140-F1)
+    " / mixed]`", "`[ALG/NUM diagnostic", "`[NUM / PARTIAL]`", "`[COR / ALG]`",  # round 3 (row 19)
+    "rtg-resonance-2025", "**v1.6.1 consumer receipt",                                  # round 3 (rows 23, 18)
 ]
 REQUIRED = [
     # row 1
@@ -71,7 +74,6 @@ REQUIRED = [
     "| CN-05 | Programme (`programme-v1.3`) | CN-05 (§7.4) Programme/OFN note, as above; v1.6 notice | v1.6 (interface register IF07, IF11 only) | not recorded | not recorded | none |",
     "**Programme:** v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition; it records no CN-05 disposition",
     "none certified: no RID-keyed receiver import and no physical adopted use",
-    "Programme v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition (notes under the matrix above)",
     "**Consumer interface.** The per-recipient state of CN-01–CN-05 is in §7.4.",
     "A v1.6 receipt is not acceptance of a v1.6.1 or v1.7 delta.",
     # row 13
@@ -85,6 +87,10 @@ REQUIRED = [
     "`records/triad/OWNER_ADOPTION_v1_6_1.json` (SHA-256 `33bcd3cea83b467d0bc4d8cc4a37c10771cd81151831caec87c55873937cd5dd`)",
     "`records/triad/RELEASE_RECORD_v1_6_1.md` (SHA-256 `aa3d8d773a2083908f2e576bc59f9c6d3c110c1caadbc70782c72b07e95eb45d`)",
     "in the repository at `evidence/triad/scripts/` (recovered from commit `9df0319`; hash equal",
+    # row 19 (round 3)
+    "### §6.18 T-6 Orientation-Normalization Correction `[COR]` — mixed content {#sec-6-18-orientation-correction}",
+    "### §6.13 T-6j2 — Historical Root-Closed Torsional Excursion `[NUM]` — PARTIAL module {#sec-6-13-t6j2}",
+    "**Repository:** `rtg-corpus`",
     # status
     "**Document status:** DRAFT — stage-1 intermediate of v1.7",
 ]
@@ -182,7 +188,10 @@ CONTROLS = [  # (name, gate that must fail, mutation)
     ("drop an anchor", "K4", lambda t: t.replace(" {#sec-6-18-orientation-correction}", "")),
     ("reintroduce release-label qualifier", "K7", lambda t: t.replace("`[COR]` If the selected complete child functional", "`[COR v1.6.1 — D3]` If the selected complete child functional", 1)),
     ("drop the producer-pin column", "K8", lambda t: t.replace("| Triadic claim-level pin (producer) |", "|")),
+    ("restore the Programme queue wording", "K7", lambda t: t.replace("| v1.6 (interface register IF07, IF11 only) | not recorded |", "| v1.6 (interface register IF07, IF11 only) | v1.3 is the pass-two synchronization edition |")),
     ("manufacture a Programme CN-05 receipt", "K8", lambda t: t.replace("| v1.6 (interface register IF07, IF11 only) | not recorded | not recorded |", "| v1.6 (interface register IF07, IF11 only) | received | yes |")),
+    ("restore a compound heading grade", "K7", lambda t: t.replace("`[ALG]` — mixed content {#sec-6-1-birth}", "`[ALG / mixed]` {#sec-6-1-birth}")),
+    ("restore the v1.6.1 receipt paragraph", "K7", lambda t: t.replace("**CN-01 — Genesis apex-slot identification.**", "**v1.6.1 consumer receipt (history):** x\n\n**CN-01 — Genesis apex-slot identification.**")),
     ("claim custody package present", "K7", lambda t: t.replace("is held by the PI and is **not in the repository**", "is preserved under `evidence/accepted_r4_2/`")),
 ]
 

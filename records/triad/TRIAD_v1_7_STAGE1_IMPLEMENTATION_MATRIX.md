@@ -3,6 +3,7 @@
 **Date:** 30 October 2026. **Prepared by:** Claude (Triadic co-owner); for the change-focused review by ChatGPT.
 **Status:** working record. Builds nothing beyond the stage-1 intermediate; adopts nothing.
 **Round 2 (2 November 2026):** applies R140-F1 of ChatGPT's change-focused review (PR #140 review `5738872551`, ACCEPT WITH CHANGE) to the §7.4 consumer matrix, and R140-F2 (PR comment `6580920857`) to the merge chain. The round-1 intermediate `19af7ee3…6163` (commit `b5f1488`) stays in Git history.
+**Round 3 (2 November 2026):** applies the heading part of row 19 (edits G01–G11; Methodology v1.4 §3.5), the §7.4 history-paragraph removal of row 18 (V16) and the repository locator of row 23 (R04). They are moved from stage 2 to stage 1 because `tools/check_compaction.py` has no layout operation that may change tag text (CONVENTIONS §4.2: anything touching tags is stage 1). The round-2 intermediate `a89c5768…1a62` (commit `f39b60f`, accepted in review `5739033005`) stays in Git history. V16 removes a paragraph carrying a status tag and math, and R04's old locator contains digits outside the checker's reference grammar, so neither is expressible as a stage-2 operation either. Needs the co-owner's change-focused check of these thirteen edits only. Round 3 also completes two stale-phrase checks that round 2 meant to add to gate K7 but did not (the insertion missed its anchor); a negative control now covers each.
 **Authority:** the confirmed co-owner reconciliation `records/triad/TRIAD_OWNER_DISPOSITION_RECONCILIATION_v1_6_1.md` (PR #139; ChatGPT review `5714190994`, CONFIRMED / ACCEPT SCOPED) and the PI's stage-1 start of 30 October 2026.
 
 ## Identities
@@ -10,10 +11,10 @@
 | Object | Identity |
 |---|---|
 | Base | `triad-v1.6.1`, `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md`, SHA-256 `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f` |
-| Builder | `evidence/triad/scripts/build_triad_v1_7_stage1.py` (86 assertion-gated edits; modes `str`, `live`, `line`) |
-| Stage-1 intermediate | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md` on this branch = `evidence/triad/v1.7/stage1_intermediate.md`, SHA-256 `a89c5768aeecf7c3e32667a04ab7aa2290f2a8830c22560bf5f66e791fdd1a62` (round 2; 1,265 lines; also in the edit log and `stage1_check_output.txt`). Stage 2 is checked against this hash |
+| Builder | `evidence/triad/scripts/build_triad_v1_7_stage1.py` (99 assertion-gated edits; modes `str`, `live`, `line`, `dropline`) |
+| Stage-1 intermediate | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md` on this branch = `evidence/triad/v1.7/stage1_intermediate.md`, SHA-256 `b47d294d9dc82b78f05e02c99e04100177c78480c453438d5d4fca86e14ba66a` (round 3; 1,263 lines; also in the edit log and `stage1_check_output.txt`). Stage 2 is checked against this hash |
 | Edit log | `evidence/triad/v1.7/stage1_edit_log.json` (old/new text and hash chain for every edit) |
-| Checker | `evidence/triad/scripts/check_triad_v1_7_stage1.py`: gates K1–K8, S1, S5, S6 ALL PASS; 13 negative controls ALL CAUGHT (round 2 adds two for R140-F1) (`evidence/triad/v1.7/stage1_check_output.txt`) |
+| Checker | `evidence/triad/scripts/check_triad_v1_7_stage1.py`: gates K1–K8, S1, S5, S6 ALL PASS; 16 negative controls ALL CAUGHT (round 2 adds two for R140-F1; round 3 adds three) (`evidence/triad/v1.7/stage1_check_output.txt`) |
 | Lint | `tools/dsn_lint.py --prev` (informational, no gate): `evidence/triad/v1.7/dsn_lint_stage1.txt`. Its `new_rids: 1` counts the two new cross-references `DYAD-ALG-KP-FRAME-SCALE` and `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; the Triadic RID set is unchanged (K3) |
 
 Commands, from the repository root:
@@ -46,9 +47,11 @@ python -I -B evidence/triad/scripts/check_triad_v1_7_stage1.py base.md cand.md l
 | 24 | v1.6.1 records placed byte-unchanged under `records/triad/` (separate commit) and cited there | H09 | header adoption records |
 | 25 | Repository paths of the two recovered scripts; the T-6l rerun cited (no regrade) | R01 R02 | §8 |
 | custody §0(a) | Evidence package stated as held by the PI, not in the repository; recovery list created | H10 | header; `records/triad/TRIAD_SOURCE_RECOVERY_LIST.md` |
+| 19 (headings) | Eleven section headings with slash or compound grades rewritten as one primary status plus a prose suffix ("— mixed content", "— PARTIAL module"); anchors unchanged. The qualifier-syntax part of row 19 is **not applied**: Methodology v1.4 §3.2 puts qualifiers in plain brackets, but `tools/check_compaction.py` tracks only backticked qualifiers and the companion DSNs use both forms (Dyadic and Genesis mostly backticks, OFN mostly plain). Converting 67 qualifiers is a corpus-level choice for the Atlas/Methodology owner, not a Triadic edit | G01–G11 (round 3) | §6 headings |
+| 18 (part), 23 | §7.4 "v1.6.1 consumer receipt (history …)" paragraph dropped (superseded by the matrix; text in `triad-v1.6.1` §7.4); repository locator `rtg-corpus` | V16 R04 (round 3) | §7.4; §9 |
 | header truth | Title, date, DRAFT status, supersedes, base, co-owners, change boundary, §9 edition line and footer made true for a v1.7 draft; their v1.4 layout is stage 2 (row 17) | H01–H08 H11 W01 F01 | header; §9; footer |
 
-Rows 16–20, 22, 23 and the movement part of row 21 are stage 2. Row 29 is DEFER: PR #113 is still open (checked 30 Oct 2026).
+Rows 16–18, 20, 22 and the movement part of row 21 are stage 2; rows 18, 19 and 23 are split as above. Row 29 is DEFER: PR #113 is still open (checked 30 Oct 2026).
 
 ## Not done in stage 1, and why
 

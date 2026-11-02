@@ -326,7 +326,7 @@ Routing rules:
 
 ## §6. Main Scientific Ledger {#sec-6-ledger}
 
-### §6.1 Birth Kinematics and $K_3$ Order Separation `[ALG / mixed]` {#sec-6-1-birth}
+### §6.1 Birth Kinematics and $K_3$ Order Separation `[ALG]` — mixed content {#sec-6-1-birth}
 
 `[DEF]` **Birth map.** $\Phi_{2\to3}$ denotes the declared continuous birth family; the complete physical event remains OPEN.
 
@@ -353,7 +353,7 @@ Its source/embedding interpretation remains separate from T-6t/CN-01.
 
 `[NUM]` **T-4h — Finite-$Q_d$ escape threshold.** $Q_{s,*}^{\rm escape}\approx0.6594477844$ in the reduced Race-A model.
 
-### §6.2 Vertical and Diagonal Apex Back-Reaction `[ALG diagnostic / mixed]` {#sec-6-2-backreaction}
+### §6.2 Vertical and Diagonal Apex Back-Reaction `[ALG diagnostic]` — mixed content {#sec-6-2-backreaction}
 
 `[ALG diagnostic]` **Vertical apex checksum** (under $d_\rho=d_\eta=0$, $d_z=z$):
 $$\Delta Q_s^{(d^2)} = -Q_s Q_d, \qquad \Delta Q_c^{(d^2)} = -Q_c Q_d.$$
@@ -366,7 +366,7 @@ $$\Delta Q_s^{(d^2)} = -Q_s Q_d(1+2\cos^2\Phi_{ds}), \qquad \Delta Q_c^{(d^2)} =
 
 `[NUM diagnostic]` **Hybrid C4 dominance threshold.** $K_3$ pump $+$ C3 phase-mapped fracture sinks: $Q_{s,\rm dom}^{C4} \approx 0.767427063$. Diagnostic of the stitched hybrid model; not a final $K_4$ theorem.
 
-### §6.3 Six-Step $K_4$ Return Map `[ALG diagnostic / mixed]` {#sec-6-3-return}
+### §6.3 Six-Step $K_4$ Return Map `[ALG diagnostic]` — mixed content {#sec-6-3-return}
 
 `[ALG diagnostic]` **T-6a1 — Six-step diagonal return.** Planar returns decompose as
 $$\Delta Q_i=\Delta Q_i^{(0)}+r\Delta Q_i^{(1)}+r^2\Delta Q_i^{(2)}.$$
@@ -386,7 +386,7 @@ $$\Delta Q_d=-\frac87(4Q_c+17Q_s)r^2+\frac2{21}(15\sqrt{14}\sqrt{Q_c}-31\sqrt{42
 
 `[NUM diagnostic]` **T-6b — Orthogonal-axis ODE.** Historical tested trajectories decayed toward the near-origin boundary; no positive finite fixed point was found in this slice. This does not resolve the orientation-normalization correction downstream.
 
-### §6.4 Generalized T-6d Root-Model Ledger `[ALG diagnostic / mixed]` {#sec-6-4-ode}
+### §6.4 Generalized T-6d Root-Model Ledger `[ALG diagnostic]` — mixed content {#sec-6-4-ode}
 
 > **[SG-3 applies]** **[SG-9 applies]** **[SG-12 applies]**
 
@@ -452,7 +452,7 @@ Supplement, but do not replace, high-$Q_c$ stress tests. The prior chiral-heavy 
 
 `[COR]` The Class labels are historical loading labels. Any interpretation involving $K<1$ orientation-disk traversal belongs to an independently specified orientation model, not $M_{\rm root}$ merely by using the same $(Q_s,Q_c,I,r)$ amplitudes.
 
-### §6.7 Root Contact, T-6e Raw Orientation Extraction, and Historical Downstream Runs `[ALG/NUM diagnostic / mixed]` {#sec-6-7-plucker}
+### §6.7 Root Contact, T-6e Raw Orientation Extraction, and Historical Downstream Runs `[ALG diagnostic]` — mixed content {#sec-6-7-plucker}
 
 `[NUM diagnostic]` **T-6d root-model record.** Historical fixed-branch $M_{\rm root}$ runs reached the radicand guard with positive amplitudes. This is a record of the root-reclosed model, not an independent-orientation sector result.
 
@@ -470,7 +470,7 @@ The extraction itself is retained; the historical downstream identification of $
 
 `[OPEN]` No corrected finite-$u/r$ numerical trajectory campaign is installed by this correction.
 
-### §6.8 Dimensionless Identities and Historical Independent-Orientation Flow `[ALG/NUM diagnostic / mixed]` {#sec-6-8-dimensionless}
+### §6.8 Dimensionless Identities and Historical Independent-Orientation Flow `[ALG diagnostic]` — mixed content {#sec-6-8-dimensionless}
 
 `[DEF]` For an independent-orientation description define
 $$u=\frac{Q_c}{Q_s},\quad \mu=\frac{I_{sc}}{\sqrt{Q_sQ_c}},\quad \nu=\frac{\Omega}{\sqrt{Q_sQ_c}},\quad \varrho=\frac r{\sqrt{Q_s}},\quad K=\mu^2+\nu^2.$$
@@ -482,7 +482,7 @@ These identities are retained. No conclusion is drawn here about their role insi
 
 `[NUM]` `[scope: historical executed mis-scaled model]` **T-6h_v2.** The recorded near-boundary flow is retained only as a historical run of the former orientation-rate model. It is not a corrected-model trajectory or a proxy for $M_{\rm root}$.
 
-### §6.9 Historical Phase-Steering Algebra and Corrected Leading Torsion `[ALG/NUM diagnostic / mixed]` {#sec-6-9-steering}
+### §6.9 Historical Phase-Steering Algebra and Corrected Leading Torsion `[ALG]` — mixed content {#sec-6-9-steering}
 
 `[NUM]` `[scope: historical executed mis-scaled model]` **T-6k/T-6k2.** The reported positive-rotation percentages are preserved as outputs of the model that used $\Delta\omega_{\rm raw}$ as $\Delta\Omega$. They are not current corrected-model phase-steering results.
 
@@ -513,7 +513,7 @@ Evidence: `evidence/triad/scripts/triad_coowner_row1_row3_check.py`, check C4 (e
 
 `[DEF]` Historical solver tolerances, seeds and output files remain provenance of the executed models. They are not silently reused as corrected-model evidence.
 
-### §6.11 Current Continuous-Branch Status `[COR / mixed]` {#sec-6-11-verdict}
+### §6.11 Current Continuous-Branch Status `[COR]` — mixed content {#sec-6-11-verdict}
 
 `[COR]` **Historical phase-steering verdict withdrawn as current evidence.** The prior synthesis—dominant steering into fatal Plücker sectors, a $22^\circ$ radial arc, a $5.5^\circ$ necessary wedge, and no-safe-basin support—depended on the downstream use of the raw determinant increment as the normalized orientation rate. Those outputs remain historical records of the executed model but are not evidence about the corrected orientation dynamics.
 
@@ -527,7 +527,7 @@ Revoked current-use overclaims:
 - Continuous-route closure by phase steering.
 - Global stability or escape inferred from $K=1$ tangency.
 
-### §6.12 T-6m — Fixed-Direction Reference Birth Audit `[ALG diagnostic / mixed]` {#sec-6-12-birth-angle}
+### §6.12 T-6m — Fixed-Direction Reference Birth Audit `[ALG diagnostic]` — mixed content {#sec-6-12-birth-angle}
 
 `[ALG]` [RID: TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN] `[scope: declared reference initialization]` **Reference quarter-turn.** The diagnostic assumes
 $$\Phi_{sc}(0)=-\frac\pi2,$$
@@ -543,7 +543,7 @@ This algebra is retained in its producer-frame convention. The alternative $0.61
 
 `[OPEN]` T-6m2 may still test the apex correction to the producer-frame turn polynomial, but it no longer gates a validated safety-wedge obstruction. Physical residual, retention, event and model correspondence remain open.
 
-### §6.13 T-6j2 — Historical Root-Closed Torsional Excursion `[NUM / PARTIAL]` {#sec-6-13-t6j2}
+### §6.13 T-6j2 — Historical Root-Closed Torsional Excursion `[NUM]` — PARTIAL module {#sec-6-13-t6j2}
 
 `[NUM]` [RID: TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION] `[scope: author-reported historical root-closed session; normalization-conditional]` The original operator reports that the T-6j2 session recomputed the root orientation each step, so $K\equiv1$ by construction. Across the tested initial wedge, the surviving historical observation is torsional excursion to
 $$\theta_{\max}\approx99^\circ\text{--}101^\circ.$$
@@ -743,7 +743,7 @@ The distinction includes the input/output mismatch, but goes beyond it: state/in
 
 `[OPEN]` Physical event/residual selection, the state/torque-to-HINDEX source map, the enlarged-carrier embedding, finite-amplitude control and the non-$\mathcal P_4$ source remain outside this result. T-6u does not close OPEN M and does not license a global no-cascade verdict. Programme and OFN synchronization follow technical consumer review of this adopted release.
 
-### §6.18 T-6 Orientation-Normalization Correction `[COR / ALG]` {#sec-6-18-orientation-correction}
+### §6.18 T-6 Orientation-Normalization Correction `[COR]` — mixed content {#sec-6-18-orientation-correction}
 
 [RID: TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION]  
 Evidence artifact: [RID: TRIAD-ART-T6-ORIENTATION-NORMALIZATION-V16]
@@ -882,8 +882,6 @@ Historical export RIDs `TRIAD-ALG-SAFETY-WEDGE`, `TRIAD-ALG-VERDICT`, `TRIAD-ALG
 
 Notes. **Programme:** v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition; it records no CN-05 disposition, so no CN-05 receipt is inferred from it. **Deltas:** A v1.6 receipt is not acceptance of a v1.6.1 or v1.7 delta. Every receipt above except OFN's is a receipt of the v1.6 notices; no receiver records acceptance of the v1.6.1 delta (the D3/D3-R1 child-remainder typing) as a Triadic delta — Genesis and OPEN-M state the GCL-06 dependence from the Genesis side — and none has yet seen the v1.7 delta. Receivers also record notices not addressed to them (OPEN-M: CN-01, CN-03; OFN: CN-01–CN-04, reference-only). No receiver records the Triadic source hash asked for in CN-05's acknowledgment fields. Genesis imports T-6s, T-6t and T-6u at `[CAND]`, below the Triadic `[ALG]` (`gen-v2.9` §2); that is the receiver's grading of its own use. These receipts close no physical OPEN (CN-01 transverse carrier, CN-04 HYP-M-PREFRACTURE falsifier, child-functional selection). Post-release notices are filed as pipe items (§2).
 
-**v1.6.1 consumer receipt (history, as recorded at v1.6.1; superseded by the matrix above):** Genesis v2.8.5 (adopted 5 Oct 2026; retained in v2.8.6/v2.8.7) records dispositions for CN-01 (apex–UV slot identity retracted as `[RESULT]`, GCL-05), CN-02 (WPHASE child ratio/sign/symbol corrected, subject to GCL-06 remainder typing), CN-03 (positive GSPLIT consistency at $I_{sc}=0$, no reverse proof dependency) and CN-05 (historical wedge/no-basin/phase-steering exports withdrawn from live Genesis use; SG-12/SG-12b), and routes CN-04 to OPEN-M as a downstream notification. RRF v0.8.2 §3.1 records the CN-05 planar metric convention as convention-only. Scoped receipts, each separate from any still-open physical selection: adopted OPEN-M v0.7.1 imports CN-01–CN-05 in its §7 ledger (including CN-04, the withdrawal of T-6t support for HYP-M-PREFRACTURE), records R-CHIRALITY-RECONCILIATION in §6, and states in §1.3 that full face-phase remainder statements depend on the admitted child/residual order (GCL-06); adopted OFN v0.9 (second-pass reconciliation release, 13 Oct 2026) records Triadic v1.6 CN-01–CN-05 and the child-remainder/apex-carrier qualifications at reference grade in §11.3 RF-O08-02 and RF-O08-03; Programme v1.2 was then an inventory/architecture first-pass source; Programme v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition (notes under the matrix above). These receipts close no physical OPEN (CN-01 transverse carrier, CN-04 HYP-M-PREFRACTURE falsifier, child-functional selection).
-
 **CN-01 — Genesis apex-slot identification.** Target: Genesis v2.8.4 §2 / §8 `GEN-OPEN-APEX-SLOT`, its summary and the inference that the residual source deficit is localized to that transverse slot. Each of $s,c,d$ takes values in the same two-dimensional $B$-carrier $V\cong\mathbb R^2$, while the three Jacobi mode blocks form $V^3\cong(\mathbb R^2)^3$ (§6.4). For $s\ne0$, $s,J_Qs$ span one copy of $V$, not the six-dimensional product state. No nonzero vector in that single carrier is $B$-orthogonal to both. Jacobi coefficient-row orthogonality is in node-label space and cannot by itself establish a third geometric direction in $V$. The distinct $d$-mode block and its certified primitive seed remain intact. Identifying that block with a physical transverse/out-of-plane SG-7/UV direction requires an explicit enlarged embedding, metric and source map. Review withdrawal/narrowing of the unsupported slot identity and dependent localization claims, not removal of the $d$ block. This is reference-only notification: no `GEN-OPEN-APEX-SLOT` claim is imported as proof. **Consumer state:** matrix above.
 
 **CN-02 — Genesis WPHASE and dependent OPEN-M uses.** Targets: Genesis v2.8.4 §2 / §8 `GEN-OPEN-WPHASE` and `GEN-ART-WPHASE` (§8, source line 907); OPEN M v0.6 AUDIT-1-DIMENSIONAL/R-CHIRALITY-CLOSURE and summaries using the old unit ratio as a physical child ratio. Let $\mu_6=-1/2-2i\sqrt3/3$ as in the inherited cubic record (§7.1), and distinguish the face-phase diagnostic $F_{\rm face}$ below from the return map also denoted $F_W$ in other studies:
@@ -991,7 +989,7 @@ $$\left.P_c\right|_{I_{sc}=0}
 **Evidence history:** The three original T-6s/T-6t/T-6u scripts were recovered in the supplied review and rerun unchanged: 11/13/8 checks. Their full hashes and historic interpretation limits are in §8. The r1 availability claim is corrected as a former local-access limitation, not a claim that those artifacts never existed. `apex_ratio_setup.py` and the microscopic route census remain unavailable in this package. The new v1.6 code is separately identified; no historical output sentence is silently adopted as the revised theorem. The peer explicitly accepted responsibility for the former unit/child, label/carrier and mixed-channel overstatements and the 13-to-14 count error; the received review is preserved in the evidence packet.
 **Identifier set (v1.7).** This ledger declares 46 `TRIAD-*` RIDs (13 ALG, 22 ART, 2 EXPORT, 2 NUM, 7 OPEN); none is added, removed or renamed in v1.7. Current: `TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION`, `TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN`, `TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN`, `TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY`, `TRIAD-ALG-T6T-JACOBI-MODE-SIGNS`, `TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC`, `TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION`, `TRIAD-EXPORT-PROTOCOL-2`, `TRIAD-OPEN-T6M2`, `TRIAD-OPEN-T6N`, `TRIAD-OPEN-T6O`, `TRIAD-OPEN-T6Q`, `TRIAD-OPEN-T6R`, and the 22 artifact RIDs of §8. Historical or replaced, retained for traceability (Appendix B, §7.3): `TRIAD-ALG-ISC-ATTRACTOR`, `TRIAD-ALG-SAFETY-WEDGE`, `TRIAD-ALG-T6M-BIRTH-OBSTRUCTION`, `TRIAD-ALG-T6S-INPLANE-CHIRALITY`, `TRIAD-ALG-T6T-CHIRALITY-COUNT`, `TRIAD-ALG-T6U-APEX-SOURCE`, `TRIAD-ALG-VERDICT`, `TRIAD-NUM-T6J2-NO-BASIN`, `TRIAD-EXPORT-PROTOCOL-1`, `TRIAD-OPEN-T6J2`, `TRIAD-OPEN-T6M`. The string `RER-TRIAD-BIRTH-GRAPH-INVOLUTION` (§7.2) is a noncanonical RER record name, not a Triadic RID. The v1.6 phrase "all 49 RIDs" (Appendix A) cannot be reproduced from the repository, because the v1.5 and v1.6 files are not in it.  
 **Archive:** Historical project pointer inherited from v1.5: Zenodo DOI 10.5281/zenodo.17568897. No new archive deposit for this release is claimed.  
-**Repository:** `rtg-resonance-2025`
+**Repository:** `rtg-corpus`
 
 ---
 

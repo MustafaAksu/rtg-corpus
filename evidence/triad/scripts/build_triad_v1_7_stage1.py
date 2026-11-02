@@ -16,7 +16,8 @@ co-owners, records, evidence location, change boundary) are corrected here; thei
 Edit modes:
   str   : `old` occurs exactly once in the whole document; replaced by `new`;
   live  : `old` occurs exactly `count` times in the live region (before Appendix A); all are replaced;
-  after : `new` is inserted immediately after the unique anchor `old` (anchor kept).
+  line  : the unique line starting with `old` is replaced by `new`;
+  dropline: the unique line starting with `old`, and the blank line after it, are removed.
 Every edit is logged with old/new text and SHA-256. The token <BR> in an edit text stands for the two-space Markdown
 line break at end of line.
 
@@ -24,6 +25,16 @@ Round 2 (2 Nov 2026): the §7.4 consumer matrix (edit V05) and the V13 wording a
 change-focused review (PR #140 review 5738872551): a producer claim-level pin column, Programme CN-05 queue "not
 recorded" with the v1.3 pass-two fact recorded separately, and the RRF row typed as convention-only. The round-1
 intermediate (19af7ee3...6163, commit b5f1488) stays in Git history.
+
+Round 3 (2 Nov 2026): G01-G11 apply the heading part of row 19 (Methodology v1.4 §3.5: one primary status, a
+mixed-content suffix in prose). They change tag text, which tools/check_compaction.py cannot express as a layout
+operation, so they belong to stage 1 (CONVENTIONS §4.2). The round-2 intermediate (a89c5768...1a62, commit f39b60f,
+accepted by the co-owner review 5739033005) stays in Git history. The qualifier-syntax part of row 19 is not applied:
+Methodology v1.4 §3.2 puts qualifiers in plain brackets, while the corpus checker tracks backticked qualifiers and the
+companion DSNs use both forms; converting 67 qualifiers is a corpus-level choice, left to the Atlas/Methodology owner.
+V16 (row 18) drops the §7.4 "v1.6.1 consumer receipt (history ...)" paragraph, superseded by the matrix (its text is in
+triad-v1.6.1 §7.4), and R04 (row 23) sets the repository locator: both are layout items that the checker cannot
+express (the paragraph carries a status tag and math; the old locator contains digits outside the reference grammar).
 
 usage: build_triad_v1_7_stage1.py BASE OUT EDITLOG_JSON
   BASE = `git show triad-v1.6.1:dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md`
@@ -275,6 +286,20 @@ ed("F01", "hdr",
    "*END OF DOCUMENT — RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6.1 — ADOPTED OWNER RELEASE (19 October 2026); scientific body identical to co-owner-accepted DRAFT r2 (`dd67907fc21e457e413c3d6ee924617bc7818c1c200a9bde04fb67649d79b3e7`). The v1.6 footer below is history.*<BR>\n",
    "*END OF DOCUMENT — RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 — DRAFT, stage-1 intermediate; adoption pending; `triad-v1.6.1` governs until adoption and tag. The v1.6 footer below is history (single footer: stage 2).*<BR>\n")
 
+# =============================================================================================== round 3 — row 19 heading grades (Methodology v1.4 §3.5)
+ed("G01", "19", '### §6.1 Birth Kinematics and $K_3$ Order Separation `[ALG / mixed]` {#sec-6-1-birth}', '### §6.1 Birth Kinematics and $K_3$ Order Separation `[ALG]` — mixed content {#sec-6-1-birth}')
+ed("G02", "19", '### §6.2 Vertical and Diagonal Apex Back-Reaction `[ALG diagnostic / mixed]` {#sec-6-2-backreaction}', '### §6.2 Vertical and Diagonal Apex Back-Reaction `[ALG diagnostic]` — mixed content {#sec-6-2-backreaction}')
+ed("G03", "19", '### §6.3 Six-Step $K_4$ Return Map `[ALG diagnostic / mixed]` {#sec-6-3-return}', '### §6.3 Six-Step $K_4$ Return Map `[ALG diagnostic]` — mixed content {#sec-6-3-return}')
+ed("G04", "19", '### §6.4 Generalized T-6d Root-Model Ledger `[ALG diagnostic / mixed]` {#sec-6-4-ode}', '### §6.4 Generalized T-6d Root-Model Ledger `[ALG diagnostic]` — mixed content {#sec-6-4-ode}')
+ed("G05", "19", '### §6.7 Root Contact, T-6e Raw Orientation Extraction, and Historical Downstream Runs `[ALG/NUM diagnostic / mixed]` {#sec-6-7-plucker}', '### §6.7 Root Contact, T-6e Raw Orientation Extraction, and Historical Downstream Runs `[ALG diagnostic]` — mixed content {#sec-6-7-plucker}')
+ed("G06", "19", '### §6.8 Dimensionless Identities and Historical Independent-Orientation Flow `[ALG/NUM diagnostic / mixed]` {#sec-6-8-dimensionless}', '### §6.8 Dimensionless Identities and Historical Independent-Orientation Flow `[ALG diagnostic]` — mixed content {#sec-6-8-dimensionless}')
+ed("G07", "19", '### §6.9 Historical Phase-Steering Algebra and Corrected Leading Torsion `[ALG/NUM diagnostic / mixed]` {#sec-6-9-steering}', '### §6.9 Historical Phase-Steering Algebra and Corrected Leading Torsion `[ALG]` — mixed content {#sec-6-9-steering}')
+ed("G08", "19", '### §6.11 Current Continuous-Branch Status `[COR / mixed]` {#sec-6-11-verdict}', '### §6.11 Current Continuous-Branch Status `[COR]` — mixed content {#sec-6-11-verdict}')
+ed("G09", "19", '### §6.12 T-6m — Fixed-Direction Reference Birth Audit `[ALG diagnostic / mixed]` {#sec-6-12-birth-angle}', '### §6.12 T-6m — Fixed-Direction Reference Birth Audit `[ALG diagnostic]` — mixed content {#sec-6-12-birth-angle}')
+ed("G10", "19", '### §6.13 T-6j2 — Historical Root-Closed Torsional Excursion `[NUM / PARTIAL]` {#sec-6-13-t6j2}', '### §6.13 T-6j2 — Historical Root-Closed Torsional Excursion `[NUM]` — PARTIAL module {#sec-6-13-t6j2}')
+ed("G11", "19", '### §6.18 T-6 Orientation-Normalization Correction `[COR / ALG]` {#sec-6-18-orientation-correction}', '### §6.18 T-6 Orientation-Normalization Correction `[COR]` — mixed content {#sec-6-18-orientation-correction}')
+ed("V16", "18", "**v1.6.1 consumer receipt (history,", "", "dropline")   # superseded by the §7.4 matrix; text kept in triad-v1.6.1 §7.4
+ed("R04", "23", "**Repository:** `rtg-resonance-2025`", "**Repository:** `rtg-corpus`")
 # =============================================================================================== ROW 8 — claim-level repins
 # Re-read at the governing tags on 30 Oct 2026 (EV-SRC-READ). REPIN where statement, value and grade are unchanged;
 # HOLD (keep the historical claim-level pin, with the reason) for the radial-polynomial premise and the Programme §6.3 text.
@@ -355,6 +380,15 @@ def apply(base):
             if not lines[k].startswith(old): raise SystemExit(f"{i}: prefix is not at line start")
             old = lines[k] + "\n"
             s = s.replace(old, new, 1)
+        elif mode == "dropline":
+            lines = s.split("\n")
+            hits = [k for k, ln in enumerate(lines) if ln.startswith(old)]
+            if len(hits) != 1: raise SystemExit(f"{i}: expected 1 line starting with prefix, found {len(hits)}")
+            k = hits[0]
+            if k + 1 >= len(lines) or lines[k + 1] != "": raise SystemExit(f"{i}: line is not followed by a blank line")
+            old = lines[k] + "\n\n"
+            if s.count(old) != 1: raise SystemExit(f"{i}: dropped block not unique")
+            s = s.replace(old, new, 1)
         else:
             raise SystemExit(f"{i}: unknown mode {mode}")
         log.append({"id": i, "row": row, "mode": mode, "count": count if mode == "live" else 1,
@@ -367,7 +401,12 @@ def main(argv):
     base = open(argv[1], "rb").read()
     if hashlib.sha256(base).hexdigest() != BASE_SHA: raise SystemExit("input is not the adopted triad-v1.6.1 file")
     out, log = apply(base.decode("utf-8"))
+    # V05 (history label), V06 and V13 edit the v1.6.1 receipt paragraph that V16 later drops by design; for V05 the
+    # matrix part must still be present.
+    CONSUMED_BY_LATER = {"V05": "V16", "V06": "V16", "V13": "V16"}
+    if out.count(MATRIX) != 1: raise SystemExit("V05: matrix not present in candidate")
     for e in log:
+        if e["id"] in CONSUMED_BY_LATER: continue
         if e["new"] and out.count(e["new"]) < 1:
             raise SystemExit(f"{e['id']}: new text not present in candidate")
     open(argv[2], "w", encoding="utf-8", newline="\n").write(out)
