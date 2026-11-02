@@ -1,6 +1,6 @@
 {
  "base_sha256": "95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f",
- "candidate_sha256": "19af7ee3b87ef8ff228c76c90632b9cf1ee15f2d09995d82cf9a30019ef46163",
+ "candidate_sha256": "a89c5768aeecf7c3e32667a04ab7aa2290f2a8830c22560bf5f66e791fdd1a62",
  "edits": [
   {
    "id": "H01",
@@ -476,11 +476,11 @@
    "mode": "str",
    "count": 1,
    "old": "**v1.6.1 consumer receipt (recorded, not a Triadic acceptance):**",
-   "new": "**Consumer state (current).** \"Received\" means the receiver's DSN records the notice; \"statement accepted\" is the receiver's recorded verdict; \"adopted use\" is read only from the receiver's Import Ledger row or release record (CONVENTIONS §7).\n\n| CN | Recipient (governing tag) | Triadic edition the receiver cites | Queue | Statement accepted (receiver record) | Adopted use | Remaining gate |\n|---|---|---|---|---|---|---|\n| CN-01 | Genesis (`gen-v2.9`) | v1.6 | received | yes — `GEN-OPEN-APEX-SLOT` retracted as `[RESULT]`; $d$-mode label and seed retained (§8) | Import Ledger row CN-01 (§7) | physical transverse/UV embedding OPEN |\n| CN-02 | Genesis (`gen-v2.9`) | v1.6 | received | yes — live text uses $F_{\\rm face}$; the free $F_W(\\eta_*)$ target withdrawn as a live parametrization | Import Ledger row CN-02 | full-phase remainder depends on the child functional (GCL-06) |\n| CN-02 | OPEN-M (`uvm-v0.7.1`) | v1.6 | received | yes — v0.6 unit-child / fixed-$F_W$ corroboration superseded | Import Ledger (§7) | face-phase remainder depends on the child/residual order (GCL-06) |\n| CN-03 | Genesis (`gen-v2.9`) | v1.6 | received | yes, as a consistency check; proof direction stays Genesis → Triadic | Import Ledger row CN-03 | none beyond the exact $I_{sc}=0$ scope |\n| CN-04 | OPEN-M (`uvm-v0.7.1`) | v1.6 | received | yes — HYP-M-PREFRACTURE's premise \"T-6t apex independent\" withdrawn | Import Ledger (§7) | HYP-M-PREFRACTURE falsifier (OPEN-M) |\n| CN-05 | Genesis (`gen-v2.9`) | v1.6 | received | yes — historical wedge, $x_*$, no-basin, phase-steering and route-obstruction exports withdrawn from current Genesis use (OPEN 1T, SG-12) | Import Ledger row CN-05 | corrected finite-$u/r$ orientation flow (T-6r, T-6q) |\n| CN-05 | OPEN-M (`uvm-v0.7.1`) | v1.6 | received | yes — continuous phase/source route settled neither for nor against | Import Ledger (§7) | continuous phase/source route unresolved; CN-01 review separate |\n| CN-05 | RRF (`rrf-v0.8.4`) | v1.6 | received | recorded as convention only (§3.1, \"proposed consumer receipt\") | §3.1 `[DEF]` with in-text import tag; no RID-keyed row; $Q_c^T$ conversion not applied | same-vector Genesis–Triadic birth bridge OPEN |\n| CN-05 | OFN (`ofn-v0.12`) | v1.6.1 | received | reference-only — OFN half of pass two recorded (RF-O08-02, RF-O08-08) | none (reference rows, not imports) | 96:1 correspondence (§1) |\n| CN-05 | Programme (`programme-v1.3`) | v1.6 (interface register IF07, IF11) | v1.3 is the pass-two synchronization edition | no CN-05 disposition recorded | none | Programme record of CN-05 |\n\nNotes. Receivers also record notices not addressed to them (OPEN-M: CN-01, CN-03; OFN: CN-01–CN-04, reference-only). No receiver records the Triadic source hash asked for in CN-05's acknowledgment fields. A v1.6 receipt is not acceptance of a v1.6.1 or v1.7 delta. Genesis imports T-6s, T-6t and T-6u at `[CAND]`, below the Triadic `[ALG]` (`gen-v2.9` §2); that is the receiver's grading of its own use. These receipts close no physical OPEN (CN-01 transverse carrier, CN-04 HYP-M-PREFRACTURE falsifier, child-functional selection). Post-release notices are filed as pipe items (§2).\n\n**v1.6.1 consumer receipt (history, as recorded at v1.6.1; superseded by the matrix above):**",
+   "new": "**Consumer state (current).** \"Received\" means the receiver's DSN records the notice; \"statement accepted\" is the receiver's recorded verdict; \"adopted use\" is read only from the receiver's Import Ledger row or release record (CONVENTIONS §7). The producer pin names the Triadic statement each notice carries: its RID, or its section when no RID is assigned, at the Triadic edition the notice was issued from (v1.6).\n\n| CN | Recipient (governing tag) | Triadic claim-level pin (producer) | Triadic edition the receiver cites | Queue | Statement accepted (receiver record) | Adopted use | Remaining gate |\n|---|---|---|---|---|---|---|---|\n| CN-01 | Genesis (`gen-v2.9`) | CN-01 (§7.4): carrier statement $V\\cong\\mathbb R^2$ versus mode product $V^3$, with `TRIAD-ALG-T6T-JACOBI-MODE-SIGNS` (§6.16); v1.6 | v1.6 | received | yes — `GEN-OPEN-APEX-SLOT` retracted as `[RESULT]`; $d$-mode label and seed retained (§8) | Import Ledger row CN-01 (§7); T-6t imported at `[CAND]` | physical transverse/UV embedding OPEN |\n| CN-02 | Genesis (`gen-v2.9`) | CN-02 (§7.4): leading signed-child face phase $F_{\\rm face}^{(0)}$, §6.15 leading ratio $i\\kappa Q_s$; RID unavailable; v1.6 | v1.6 | received | yes — live text uses $F_{\\rm face}$; the free $F_W(\\eta_*)$ target withdrawn as a live parametrization | Import Ledger row CN-02 | full-phase remainder depends on the child functional (GCL-06) |\n| CN-02 | OPEN-M (`uvm-v0.7.1`) | CN-02 (§7.4), as above; RID unavailable; v1.6 | v1.6 | received | yes — v0.6 unit-child / fixed-$F_W$ corroboration superseded | Import Ledger (§7) | face-phase remainder depends on the child/residual order (GCL-06) |\n| CN-03 | Genesis (`gen-v2.9`) | CN-03 (§7.4): `[ALG]` specialization of `GEN-THM-DELTA-QC` at $I_{sc}=0$; Triadic RID unavailable; v1.6 | v1.6 | received | yes, as a consistency check; proof direction stays Genesis → Triadic | Import Ledger row CN-03 | none beyond the exact $I_{sc}=0$ scope |\n| CN-04 | OPEN-M (`uvm-v0.7.1`) | CN-04 (§7.4) with `TRIAD-ALG-T6T-JACOBI-MODE-SIGNS`, `TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY`, `TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC`; v1.6 | v1.6 | received | yes — HYP-M-PREFRACTURE's premise \"T-6t apex independent\" withdrawn | Import Ledger (§7) | HYP-M-PREFRACTURE falsifier (OPEN-M) |\n| CN-05 | Genesis (`gen-v2.9`) | CN-05 (§7.4) with `TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION`, `TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN`, `TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN`, `TRIAD-EXPORT-PROTOCOL-2`; v1.6 | v1.6 | received | yes — historical wedge, $x_*$, no-basin, phase-steering and route-obstruction exports withdrawn from current Genesis use (OPEN 1T, SG-12) | Import Ledger row CN-05 | corrected finite-$u/r$ orientation flow (T-6r, T-6q) |\n| CN-05 | OPEN-M (`uvm-v0.7.1`) | CN-05 (§7.4), same RIDs; v1.6 | v1.6 | received | yes — continuous phase/source route settled neither for nor against | Import Ledger (§7) | continuous phase/source route unresolved; CN-01 review separate |\n| CN-05 | RRF (`rrf-v0.8.4`) | CN-05 (§7.4) RRF note: planar metric convention $B_T^{\\rm plane}=2B_G$ (§6.18 metric-unit block); RID unavailable; v1.6 | v1.6 | received | convention only: §3.1 is a convention-only, in-text imported working-standard entry (`[DEF]`, \"proposed consumer receipt\") | none certified: no RID-keyed receiver import and no physical adopted use; the $Q_c^T$ conversion is not applied | same-vector Genesis–Triadic birth bridge OPEN |\n| CN-05 | OFN (`ofn-v0.12`) | CN-05 (§7.4) Programme/OFN note: no programme-level cascade verdict, source deficit or ontology selection; v1.6 notice | v1.6.1 | received | reference-only — OFN half of pass two recorded (RF-O08-02, RF-O08-08) | none (reference rows, not imports) | 96:1 correspondence (§1) |\n| CN-05 | Programme (`programme-v1.3`) | CN-05 (§7.4) Programme/OFN note, as above; v1.6 notice | v1.6 (interface register IF07, IF11 only) | not recorded | not recorded | none | Programme record of CN-05 |\n\nNotes. **Programme:** v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition; it records no CN-05 disposition, so no CN-05 receipt is inferred from it. **Deltas:** A v1.6 receipt is not acceptance of a v1.6.1 or v1.7 delta. Every receipt above except OFN's is a receipt of the v1.6 notices; no receiver records acceptance of the v1.6.1 delta (the D3/D3-R1 child-remainder typing) as a Triadic delta — Genesis and OPEN-M state the GCL-06 dependence from the Genesis side — and none has yet seen the v1.7 delta. Receivers also record notices not addressed to them (OPEN-M: CN-01, CN-03; OFN: CN-01–CN-04, reference-only). No receiver records the Triadic source hash asked for in CN-05's acknowledgment fields. Genesis imports T-6s, T-6t and T-6u at `[CAND]`, below the Triadic `[ALG]` (`gen-v2.9` §2); that is the receiver's grading of its own use. These receipts close no physical OPEN (CN-01 transverse carrier, CN-04 HYP-M-PREFRACTURE falsifier, child-functional selection). Post-release notices are filed as pipe items (§2).\n\n**v1.6.1 consumer receipt (history, as recorded at v1.6.1; superseded by the matrix above):**",
    "old_sha256": "46033c6861071b07e474f0d6da541105bf784531d1c11ba38f7246b59911b41d",
-   "new_sha256": "e93a9993014d3e6f6b74d9a811846cbf6ef546bcb7c28446fd5062e672afb832",
+   "new_sha256": "3ba40c67058df3846cf9e9356129c688250ab8ad4572354ca872584fc108c2a0",
    "doc_sha256_before": "9cc7fa326cbcc0d2703e42018b4b13b8a9d91f9397276465ee14758e3d366843",
-   "doc_sha256_after": "8790cf82b5dc6c78414fde63935e3383a36404c7a4dccbb509e12754b824c039"
+   "doc_sha256_after": "fd8809d827b4eb668d7db332659c6f1cdf3fa151d9b367986d9b8f39193d8aaa"
   },
   {
    "id": "V06",
@@ -491,8 +491,8 @@
    "new": "Scoped receipts,",
    "old_sha256": "baa533f8fd4c4a48cc95caba21f17194500de1227607c07a9ca1742d43c6f94b",
    "new_sha256": "a06581b8e518e248c08a5298b9022bff9f046cdb9918b025e2e899cddccb32fe",
-   "doc_sha256_before": "8790cf82b5dc6c78414fde63935e3383a36404c7a4dccbb509e12754b824c039",
-   "doc_sha256_after": "b657be7ecafb790ddfba28eb71733d0b53a710c84ece5b92f0010325a3760a37"
+   "doc_sha256_before": "fd8809d827b4eb668d7db332659c6f1cdf3fa151d9b367986d9b8f39193d8aaa",
+   "doc_sha256_after": "646e0299a7a0a0139a6e9d0f28c654b8815f32421fc5efc36ac72ea890c628a2"
   },
   {
    "id": "V14",
@@ -503,8 +503,8 @@
    "new": "Consumer state: §7.4.",
    "old_sha256": "bc119ab7239e59997d9821f8c916560dc4c4ea8de7db428527d4c50a2f8787b4",
    "new_sha256": "c37d93e830342bdb1df8bb036eddf31f8b7fbb1a49f2db1503a89ec4c3d89375",
-   "doc_sha256_before": "b657be7ecafb790ddfba28eb71733d0b53a710c84ece5b92f0010325a3760a37",
-   "doc_sha256_after": "c650c05a31a1ee59b17fff80999d8c62d82061df4123932d98cd3361bc9ff809"
+   "doc_sha256_before": "646e0299a7a0a0139a6e9d0f28c654b8815f32421fc5efc36ac72ea890c628a2",
+   "doc_sha256_after": "979d25013206b80a0a740ec8bbbb5269ba9044d0b890fd3c4d7abea3b85144c6"
   },
   {
    "id": "V15",
@@ -515,8 +515,8 @@
    "new": "; consumer state: §7.4.",
    "old_sha256": "de6c2b44ffda9405ea2a62064c33d2b107adcd7988b0908901919c7d9c81a203",
    "new_sha256": "e3557368f731985fe1e14dc5f11e84a26fed821c64a56483f6c9ebf48d2307f7",
-   "doc_sha256_before": "c650c05a31a1ee59b17fff80999d8c62d82061df4123932d98cd3361bc9ff809",
-   "doc_sha256_after": "005a3000238a186392679eabece148af5a1ca339533d9867d8e227d511a5112d"
+   "doc_sha256_before": "979d25013206b80a0a740ec8bbbb5269ba9044d0b890fd3c4d7abea3b85144c6",
+   "doc_sha256_after": "bc3c1a3f1c473960d1783c807576d7349aa08a12b6cc49450c51c3ec28b92421"
   },
   {
    "id": "V13",
@@ -524,11 +524,11 @@
    "mode": "str",
    "count": 1,
    "old": "Programme v1.2 remains an inventory/architecture first-pass source and its pass-two synchronization is still pending.",
-   "new": "Programme v1.2 was then an inventory/architecture first-pass source; Programme v1.3 (`programme-v1.3`) is the pass-two synchronization edition (matrix above).",
+   "new": "Programme v1.2 was then an inventory/architecture first-pass source; Programme v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition (notes under the matrix above).",
    "old_sha256": "2a528e5afb7c7b12dc4a18d84812a63b13fe13c7d38fc098ef85960f1a904148",
-   "new_sha256": "62b02b74fde9f9eb9ce16141417eb219c9f6fbdfc05ee195e6f79a2fe4fb86e5",
-   "doc_sha256_before": "005a3000238a186392679eabece148af5a1ca339533d9867d8e227d511a5112d",
-   "doc_sha256_after": "1e4e6e47cfed3383649916a49f46730ae9bcae4b7458d42dc74a768f463e2969"
+   "new_sha256": "1a01d1c7287acd3e533113243d7be5b0dcf6b857a87f649817064904733e55c0",
+   "doc_sha256_before": "bc3c1a3f1c473960d1783c807576d7349aa08a12b6cc49450c51c3ec28b92421",
+   "doc_sha256_after": "a15be824268bf55e6621d3c984df941c391caadfa6c75063147b535b16098520"
   },
   {
    "id": "V07",
@@ -539,8 +539,8 @@
    "new": "**Consumer state:** matrix above.",
    "old_sha256": "5afa60b7603f08a4a095f029f5e8dfa12c6f6493429099166ee5b3ffd42378ec",
    "new_sha256": "071521956228ce59a64b9c57dd7ed9a2e9f9ce0ac8ac47f39ecd0e02db6adc64",
-   "doc_sha256_before": "1e4e6e47cfed3383649916a49f46730ae9bcae4b7458d42dc74a768f463e2969",
-   "doc_sha256_after": "c9874aa49356cea49d1fdde9ead51a084d739794dccf954cb2a74f7416529f1d"
+   "doc_sha256_before": "a15be824268bf55e6621d3c984df941c391caadfa6c75063147b535b16098520",
+   "doc_sha256_after": "98b8f979cd520be02a78636aaf36e9d69ae6c70554af3aae07b38ec8cf20a7e7"
   },
   {
    "id": "V08",
@@ -551,8 +551,8 @@
    "new": "**Requested action:** update sign, extent, symbol and artifact interpretation at each use. **Consumer state:** matrix above.",
    "old_sha256": "1ec005b9b16e5c635be2e1cbcbac98ae143981b28aa2a2ff4659302b2c87ed90",
    "new_sha256": "9cff903ecd298cd132e754a2dab30e720aa633639f92d8eb7b704efc6a03766d",
-   "doc_sha256_before": "c9874aa49356cea49d1fdde9ead51a084d739794dccf954cb2a74f7416529f1d",
-   "doc_sha256_after": "b16915464673e5bc3661970ef2a3b50ab9cb3a8ce931517559745fe1994c10e2"
+   "doc_sha256_before": "98b8f979cd520be02a78636aaf36e9d69ae6c70554af3aae07b38ec8cf20a7e7",
+   "doc_sha256_after": "e97928b8827eaa2d7c3894cd35d5721bbb25c5ecfa94a3f53936e1be13e7aa7e"
   },
   {
    "id": "V09",
@@ -563,8 +563,8 @@
    "new": "**Consumer state:** matrix above (positive consistency notice; no Genesis record altered).",
    "old_sha256": "537567b992e8c5bcffc521950f49526f933b4ace63aeb2b499ab5f2c257bfe90",
    "new_sha256": "e66cf1cd0afcbe9c378b8c151a5a929e450701f163f4a1751b6a01c5385a9f2a",
-   "doc_sha256_before": "b16915464673e5bc3661970ef2a3b50ab9cb3a8ce931517559745fe1994c10e2",
-   "doc_sha256_after": "498c8a8b1cfab9ba4d763d789d8b2b3de1256ee3ec09a4bf50535fa1e656eca4"
+   "doc_sha256_before": "e97928b8827eaa2d7c3894cd35d5721bbb25c5ecfa94a3f53936e1be13e7aa7e",
+   "doc_sha256_after": "595ab09405e30247e6b0f9f4aad7aa83d16adeab1aa359aa1f67b8e5b723d2fe"
   },
   {
    "id": "V10",
@@ -575,8 +575,8 @@
    "new": "**Consumer state:** matrix above.",
    "old_sha256": "1a7ec496b55dec870e9a7cc5087f13462165808cdbcaacca6885e66658cf5bc4",
    "new_sha256": "071521956228ce59a64b9c57dd7ed9a2e9f9ce0ac8ac47f39ecd0e02db6adc64",
-   "doc_sha256_before": "498c8a8b1cfab9ba4d763d789d8b2b3de1256ee3ec09a4bf50535fa1e656eca4",
-   "doc_sha256_after": "d57334254e0354da5b8150b33def6128af9020aff9d74cfd77ace1668581b9bf"
+   "doc_sha256_before": "595ab09405e30247e6b0f9f4aad7aa83d16adeab1aa359aa1f67b8e5b723d2fe",
+   "doc_sha256_after": "5477ffebb24f7a0e338a7024a1671a9f1d4614e8473115137468ea9135a27700"
   },
   {
    "id": "V11",
@@ -587,8 +587,8 @@
    "new": "`[DEF]` **Notices.** After an adopted release, claim-specific notices are filed as items in the receivers' inboxes (`pipes/<STREAM>/`, CONVENTIONS §7). Filing is a queue event; statement acceptance and adopted use are the receivers' records (§7.4). No consumer file or RRF profile is changed by a Triadic release.",
    "old_sha256": "12fd362ed0bb7e42f3f156f3517adc1f974ade32b7c9737d62cae4e38fbb0522",
    "new_sha256": "4a8f2567292ee09067a9dafb0213edf13e56e99ecda0c9ae653ca70e11e4ed6d",
-   "doc_sha256_before": "d57334254e0354da5b8150b33def6128af9020aff9d74cfd77ace1668581b9bf",
-   "doc_sha256_after": "e9829b5042db2a76d77d7a72b1e8ec45f4fef051637fcf9ec1d230545d9e76f6"
+   "doc_sha256_before": "5477ffebb24f7a0e338a7024a1671a9f1d4614e8473115137468ea9135a27700",
+   "doc_sha256_after": "dd1d7bf9aab1e13db3092443ae7462732e7e726097f9f093b517ead0d19ec754"
   },
   {
    "id": "V12",
@@ -599,8 +599,8 @@
    "new": "Historical safety-wedge/no-basin/phase-steering obstruction exports are withdrawn from current use; Genesis records the withdrawal (CN-05, §7.4).",
    "old_sha256": "b992aeba14c2b24b6909110f91f78ecd7fdedd24a720bf55579f0723a7c863db",
    "new_sha256": "be525cb0a7932d0ae08c14eb82efd4520df3ea99dae794d9a9fb4ea341574a0d",
-   "doc_sha256_before": "e9829b5042db2a76d77d7a72b1e8ec45f4fef051637fcf9ec1d230545d9e76f6",
-   "doc_sha256_after": "0fa3fd864a108c512e839d6b612da26176e94ff77a3a0c230d79135cfc888986"
+   "doc_sha256_before": "dd1d7bf9aab1e13db3092443ae7462732e7e726097f9f093b517ead0d19ec754",
+   "doc_sha256_after": "f632bc856a1e95d560a4dd0d61c365a707c364a3e3c4d9b63901edbb0e6c0dff"
   },
   {
    "id": "R01",
@@ -611,8 +611,8 @@
    "new": "- [RID: TRIAD-ART-T6C-CROSSPHASE] :: `tetrahedral_six_step_cross_phase_t6c2_patched.py` :: recovered bytes SHA-256 `afb4525ccc2f459964fc3e9acade004f2aa61c03be2366f125cef63fc466d80e`; in the repository at `evidence/triad/scripts/` (recovered from commit `9df0319`; hash equal; not rerun in v1.7);",
    "old_sha256": "21ca271a49b439d6782b26d65ead38c19dd16492f0753a1d2fecca357fa96690",
    "new_sha256": "755324a3fab657460d21a1b25fe273230f2561b970d4e1a5bd6291ea255bc3ca",
-   "doc_sha256_before": "0fa3fd864a108c512e839d6b612da26176e94ff77a3a0c230d79135cfc888986",
-   "doc_sha256_after": "fcf5ec99a8e51b73b2cb1806c05212722466ee11d372f1d823560febd001a85d"
+   "doc_sha256_before": "f632bc856a1e95d560a4dd0d61c365a707c364a3e3c4d9b63901edbb0e6c0dff",
+   "doc_sha256_after": "d2501c06522d79183351fedb7751066f75ffeae2f8233790a033dd78205ea5a1"
   },
   {
    "id": "R02",
@@ -623,8 +623,8 @@
    "new": "- [RID: TRIAD-ART-T6L-TORSION] :: `triad_analytic_phase_steering_t6l_patched.py` :: recovered historical algebra, SHA-256 `2e0317bf90332d1fe0ab7489710a3c8c67b772e3031dd7ef95b3163f7d7a11cd`; in the repository at `evidence/triad/scripts/` (recovered from commit `9df0319`; hash equal); rerun unchanged 30 Oct 2026, output `evidence/triad/v1.7/t6l_patched_rerun_output_20261030.json` reproduces the historical ratio polynomial and $x_*$ (historical algebra only; no regrade);",
    "old_sha256": "ac8c06a8ae1d139a0d7fd22414ebd719ca03df70a1ecf6fdda0a0fb6b1a2a8db",
    "new_sha256": "aba31cbc74c4b4349b63e3febddf6dc889dd7c8eb3f121a1924ee795942624a0",
-   "doc_sha256_before": "fcf5ec99a8e51b73b2cb1806c05212722466ee11d372f1d823560febd001a85d",
-   "doc_sha256_after": "21e5eb7d97cc8bb23d221d63ce14c8c28d22a3cde1d73f10b965beb28ad31efb"
+   "doc_sha256_before": "d2501c06522d79183351fedb7751066f75ffeae2f8233790a033dd78205ea5a1",
+   "doc_sha256_after": "ea42b6b2c3526ad0cbe2a8454b60245cee99cb3f254c53815f57c7891f7ff063"
   },
   {
    "id": "R03",
@@ -635,8 +635,8 @@
    "new": ":: Birth angle, branch assignment, finite-$u$ torsion turn; T-6m :: `[ALG]` `[scope: diagnostic]` for the exact reference angle and the producer-frame turn polynomial/root; numerical session values are `[NUM]` `[scope: diagnostic]` corroboration only; session log not archived",
    "old_sha256": "de88f7601ebd2f465ceae00d95c8f5fffc473205f5b3457f656ebafbcfb0d001",
    "new_sha256": "519ab11f277327dff0bef3aa8f30e3adcb95f05fe4d4f2b470622cedcf2a4643",
-   "doc_sha256_before": "21e5eb7d97cc8bb23d221d63ce14c8c28d22a3cde1d73f10b965beb28ad31efb",
-   "doc_sha256_after": "6b1821ea9e2948f809bf4859159eb10bce4f0c47b0c443aeec5963995886b260"
+   "doc_sha256_before": "ea42b6b2c3526ad0cbe2a8454b60245cee99cb3f254c53815f57c7891f7ff063",
+   "doc_sha256_after": "2686677b4b1994fd5cc5eaf8ea144a86e426bf091015303a4448da2ae81acde9"
   },
   {
    "id": "W01",
@@ -647,8 +647,8 @@
    "new": "**This edition (v1.7, stage 1):** prepared by Claude from the confirmed co-owner reconciliation; change-focused review by ChatGPT; PI adoption pending. **History — v1.6.1 release:** owner release of the co-owner-accepted DRAFT r2",
    "old_sha256": "cfd5ba0f7a15ecce45960a837998f881a7f37a3423b818424c4f9e3d54ee9faa",
    "new_sha256": "81944e59e75a85fa8e7265611432f5eeb4151a8b148d4243ae60d324281ed3ee",
-   "doc_sha256_before": "6b1821ea9e2948f809bf4859159eb10bce4f0c47b0c443aeec5963995886b260",
-   "doc_sha256_after": "9bc4409e78815d6cd9383f9a6d095d4a4113191a3eaa9d525b2f7b30f9a36958"
+   "doc_sha256_before": "2686677b4b1994fd5cc5eaf8ea144a86e426bf091015303a4448da2ae81acde9",
+   "doc_sha256_after": "88c521caf7f5509d6603846cf41ef54981bab060972a6cb730e40cd843df7b24"
   },
   {
    "id": "W02",
@@ -659,8 +659,8 @@
    "new": "**Identifier set (v1.7).** This ledger declares 46 `TRIAD-*` RIDs (13 ALG, 22 ART, 2 EXPORT, 2 NUM, 7 OPEN); none is added, removed or renamed in v1.7. Current: `TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION`, `TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN`, `TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN`, `TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY`, `TRIAD-ALG-T6T-JACOBI-MODE-SIGNS`, `TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC`, `TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION`, `TRIAD-EXPORT-PROTOCOL-2`, `TRIAD-OPEN-T6M2`, `TRIAD-OPEN-T6N`, `TRIAD-OPEN-T6O`, `TRIAD-OPEN-T6Q`, `TRIAD-OPEN-T6R`, and the 22 artifact RIDs of §8. Historical or replaced, retained for traceability (Appendix B, §7.3): `TRIAD-ALG-ISC-ATTRACTOR`, `TRIAD-ALG-SAFETY-WEDGE`, `TRIAD-ALG-T6M-BIRTH-OBSTRUCTION`, `TRIAD-ALG-T6S-INPLANE-CHIRALITY`, `TRIAD-ALG-T6T-CHIRALITY-COUNT`, `TRIAD-ALG-T6U-APEX-SOURCE`, `TRIAD-ALG-VERDICT`, `TRIAD-NUM-T6J2-NO-BASIN`, `TRIAD-EXPORT-PROTOCOL-1`, `TRIAD-OPEN-T6J2`, `TRIAD-OPEN-T6M`. The string `RER-TRIAD-BIRTH-GRAPH-INVOLUTION` (§7.2) is a noncanonical RER record name, not a Triadic RID. The v1.6 phrase \"all 49 RIDs\" (Appendix A) cannot be reproduced from the repository, because the v1.5 and v1.6 files are not in it.  \n**Archive:** Historical project pointer inherited from v1.5:",
    "old_sha256": "2a7669ffbfa377002d84a67540df1e42487a79c449786be095be45f2a2196a1f",
    "new_sha256": "661dcbc621938cbcf4945259e302f84f0b31b6acdca3295f1445a4218a04042a",
-   "doc_sha256_before": "9bc4409e78815d6cd9383f9a6d095d4a4113191a3eaa9d525b2f7b30f9a36958",
-   "doc_sha256_after": "ccaeabbd954d56b0f0e861feeb3f9eeab6d2dd853ed6cb9e6082ba4603d119bb"
+   "doc_sha256_before": "88c521caf7f5509d6603846cf41ef54981bab060972a6cb730e40cd843df7b24",
+   "doc_sha256_after": "ce0545d615ec00b1cc1d936bb7b71faffee7fd47aa399f33126de8e789eda7e4"
   },
   {
    "id": "B01",
@@ -671,8 +671,8 @@
    "new": "| [RID: TRIAD-NUM-T6J2-NO-BASIN] | `TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION` `[NUM]` `[scope: historical root-closed session]` |",
    "old_sha256": "a875a3d232822b32f37964fe4d5010f8199a9f49362672ea3de4dafda905c56f",
    "new_sha256": "ae97f17c1c30bfe4ff913fa3f6799f81c2b4d647cbbed1d58e514dba3bdc41eb",
-   "doc_sha256_before": "ccaeabbd954d56b0f0e861feeb3f9eeab6d2dd853ed6cb9e6082ba4603d119bb",
-   "doc_sha256_after": "045593700f3f65bcb4212629247f46a570bb6a8701bcc5c1c998cf51da094990"
+   "doc_sha256_before": "ce0545d615ec00b1cc1d936bb7b71faffee7fd47aa399f33126de8e789eda7e4",
+   "doc_sha256_after": "a4371dbbc01dbfb28580bc79830922543156c3de1adf14b2d92cb5dca6553c21"
   },
   {
    "id": "B02",
@@ -683,8 +683,8 @@
    "new": "- `[FAIL]` Wider radial arc ($\\theta \\lesssim 22°$) as sufficient escape criterion — torsional safety binds at $5.5°$; sufficiency of even the $5.5°$ window is unproven.\n\n`[COR]` **Current reading of the negative records above (v1.7).** The v1.5 reasons that cite the torsion-safe wedge, $x_*$, the $22^\\circ$ arc or phase steering into fatal sectors belong to the executed mis-scaled model (§6.18, SG-4, SG-7) and are not current reasons. A retraction need not be a proof of falsity (Methodology v1.4). Classification:\n\n| Record | Current class | Basis |\n|---|---|---|\n| `[RETRACTED]` global $K_3$ explosiveness | retraction stands (claim not established); v1.5 reason historical | 96:1 correspondence OPEN (§1) |\n| `[RETRACTED]` universal smooth $K_4$ explosion | retraction stands (claim not established); its phase-steering reason is withdrawn | T-6g square identities retained only as fixed-expression identities (§6.8) |\n| `[RETRACTED]` stable smooth $K_4$ self-limitation | retraction stands (does not follow from $A_2\\le0$ alone); the torsional-dynamics reason is historical | §6.8, §6.11 |\n| `[RETRACTED]` annihilation from Plücker contact alone | valid current negative | contact is not annihilation (SG-5, SG-11; T-6n OPEN) |\n| `[RETRACTED]` theorem-grade completion from the constrained T-6f chart | valid, at chart scope | $Q_c$ is algebraically enslaved in that chart; T-6f is itself a historical executed-model record |\n| `[FAIL]` orthogonal slice $I_{sc}=0$ invariant | valid current failure in $M_{\\rm root}$ | $\\Delta I_{sc}^{(2)}\\ne0$ at $I_{sc}=0$ (§6.5) |\n| `[FAIL]` $I_{sc}^*$ as full-system stable attractor | not a current failure: its reason (the historical wedge) is withdrawn | §6.5, SG-6; the stability question is open again (T-6o) |\n| `[FAIL]` naive $\\sigma=+1\\to-1$ flip at contact | valid current failure of the tested naive flip | T-6d2, $\\dot W^2<0$ ($M_{\\rm root}$; SG-5) |\n| `[FAIL]` T-6f runaway as free-$Q_c$ theorem | valid, at chart scope | $Q_c$ enslaved in that chart |\n| `[FAIL]` neutral ray $\\theta=30^\\circ$ as safety criterion | not a current failure: its reason (the historical wedge) is withdrawn | SG-7 |\n| `[FAIL]` wider radial arc $\\theta\\lesssim22^\\circ$ as escape criterion | not a current failure: arc and wedge are properties of the executed mis-scaled model | SG-7, §6.11 |\n\n\"Not a current failure\" means the record stays as history and supports no current negative result; it does not assert the opposite claim.\n",
    "old_sha256": "27d8383584a8a538188b0792cd7515738271b4f32a95ed030b9c39566fb7d651",
    "new_sha256": "9be3e1fbb1cd17413dadc338bd4d2b56217edb0be7749e16efabf75b8cb38fc5",
-   "doc_sha256_before": "045593700f3f65bcb4212629247f46a570bb6a8701bcc5c1c998cf51da094990",
-   "doc_sha256_after": "1b50af33ee0bd848024e04181abc0b66343a0e899f9d55ab661b5b7c39accb35"
+   "doc_sha256_before": "a4371dbbc01dbfb28580bc79830922543156c3de1adf14b2d92cb5dca6553c21",
+   "doc_sha256_after": "250b3a6c2fe502a57f669c3c1e4adb5c071e97b76291ffd8a7769a3f911ae75d"
   },
   {
    "id": "F01",
@@ -695,8 +695,8 @@
    "new": "*END OF DOCUMENT — RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 — DRAFT, stage-1 intermediate; adoption pending; `triad-v1.6.1` governs until adoption and tag. The v1.6 footer below is history (single footer: stage 2).*  \n",
    "old_sha256": "ef2d8bdff1439088bd8ee5792a326824b3312157b7b89de4c15bdb4ea330e676",
    "new_sha256": "cc0b55796d5ee638d354d2348e813164efd8ef121645c6f6f84b4ce93cc16c88",
-   "doc_sha256_before": "1b50af33ee0bd848024e04181abc0b66343a0e899f9d55ab661b5b7c39accb35",
-   "doc_sha256_after": "60ac30fda961accc12793fd6681897076816fc868b2f39cd68f8614c5d2e5c32"
+   "doc_sha256_before": "250b3a6c2fe502a57f669c3c1e4adb5c071e97b76291ffd8a7769a3f911ae75d",
+   "doc_sha256_after": "4e47e3f4f69eb32176f4f12ec6794a3d9193c4b466a923de198e5743e4bf742f"
   },
   {
    "id": "M01",
@@ -707,8 +707,8 @@
    "new": "**Companion documents (governing editions read for v1.7):** Programme Overview v1.3 (`programme-v1.3`); DSN Methodology v1.4 (`methodology-v1.4`); OFN v0.12 (`ofn-v0.12`); Dyadic Oscillator v6.4.23 (`dyad-v6.4.23`); Genesis Geometry v2.9 (`gen-v2.9`); OPEN-M v0.7.1 (`uvm-v0.7.1`); RRF v0.8.4 (`rrf-v0.8.4`); TDR-G v2.12.14 (`tdrg-v2.12.14`). Proof imports keep claim-level pins: an import is repinned only where its statement was re-read at the governing tag (§7.1–§7.2 say which); the others keep their historical proof pin.  \n",
    "old_sha256": "153484a50a7800d46233f3e1063d9bb2bca742cc64aa424f7acd249c0aca4d1d",
    "new_sha256": "cb9ee16d97fdd1c03c510d7ed798df1bf62621b6d04f04810f95a9527aa514e6",
-   "doc_sha256_before": "60ac30fda961accc12793fd6681897076816fc868b2f39cd68f8614c5d2e5c32",
-   "doc_sha256_after": "bc6e92f980e9569501689a4036b27ffbbc2f71275f9621486e72d9e15f34c10a"
+   "doc_sha256_before": "4e47e3f4f69eb32176f4f12ec6794a3d9193c4b466a923de198e5743e4bf742f",
+   "doc_sha256_after": "f6d607f9d043396d31c46bc33cfe0eaad2f4238cc7d4e5a5159f0571a3d3c69d"
   },
   {
    "id": "M02",
@@ -719,8 +719,8 @@
    "new": "These import records were pinned in v1.5/v1.6 to `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` via `dyad_triad_antisymmetric_bridge_v1_1.md`, and in v1.6.1 to v6.4.13 (SHA-256 `5958f7fe8a3e0ec94546cb7e915c5f690d09827a3d680d13a17c9d880b968542`). **v1.7 claim-level re-read (`EV-SRC-READ`, 30 Oct 2026):** each RID below is present at `dyad-v6.4.23` with the same statement, value and grade, and is repinned to Dyadic v6.4.23. `DYAD-DEF-PRIMITIVE-MAP` is still provisional there; `DYAD-DEF-BRIDGE-EXPORT-CONTRACT` item 1 and the six-item export contract are unchanged; the frame qualifier `DYAD-ALG-KP-FRAME-SCALE` (v6.4.20) is a separate RID and is not imported. Dyadic additions that concern the isolated dyad (for example `DYAD-THM-FORMAL-Z6-GENERATOR`, Lemma F and F1–F3, the OPEN 20 restructuring) are not imported. The frame/protection-matrix row no longer carries the Lie-gauge RID: Dyadic v6.4.11 `DYAD-DEF-BRIDGE-EXPORT-CONTRACT` states that none of the bridge exports depends on the Lie strict-kernel gauge. The intermediary bridge note is still not in this package. Current Dyadic SG-19 is a source of normalization discipline, not permission to identify raw, archival, projected and conjugate objects.\n",
    "old_sha256": "127d1215241868c68cf55ecb46a4712e57c82af35422c4aad92cccded1e47b3f",
    "new_sha256": "dd52ebe617ed6fbe5ae059524ca57879959a70b77a63564f630e8d2ad781686d",
-   "doc_sha256_before": "bc6e92f980e9569501689a4036b27ffbbc2f71275f9621486e72d9e15f34c10a",
-   "doc_sha256_after": "dd21b3c1a1f8c296df4cdc00846b45ba0b8fac07c3673c944941aabd2b42f481"
+   "doc_sha256_before": "f6d607f9d043396d31c46bc33cfe0eaad2f4238cc7d4e5a5159f0571a3d3c69d",
+   "doc_sha256_after": "da991716227d9fc58251b645bba4b89175c60858b9ed970851a1dac1ae7372de"
   },
   {
    "id": "M03",
@@ -731,8 +731,8 @@
    "new": "(Dyadic v6.4.23 §",
    "old_sha256": "416795b95977d206a8b0dc0436a6a09c43ad6de91b9219f447625698f31aa3ba",
    "new_sha256": "7ef84b7f6a162d96456bc3e149bfcb39ff086386058f1b03901c1e2965c0381b",
-   "doc_sha256_before": "dd21b3c1a1f8c296df4cdc00846b45ba0b8fac07c3673c944941aabd2b42f481",
-   "doc_sha256_after": "fce6e2d0a8679cbcdd55469b2f8ce6b58c364307ad210bcd18fd0b1c73ff8c59"
+   "doc_sha256_before": "da991716227d9fc58251b645bba4b89175c60858b9ed970851a1dac1ae7372de",
+   "doc_sha256_after": "eedaf1f6f6f2b7b3a6bedade45cc2320f18815cbd7ad27813f0d71f858fb8cde"
   },
   {
    "id": "M04",
@@ -743,8 +743,8 @@
    "new": "- Programme Overview v1.3 (`programme-v1.3`, re-read) §6.3 TRIAD entry and SG-PROG-1 (§8) — cross-branch firewall: no physical law, coefficient or observable identification passes between the discrete and continuous branches without a named bridge in the importing owner's Import Ledger. The v1.2 §6.3 owner-review wording cited by v1.6.1 is not in v1.3; this reference implies no global no-cascade conclusion.\n",
    "old_sha256": "45f1cb98c9bfcb983fe9d9d1cc73bf2e4c13e0d85cbe1cda41ae6d749ff8801b",
    "new_sha256": "84744dbdc89ec1daf5f0cb3890c995522e79a8e733c2b3da7067641ff35efc25",
-   "doc_sha256_before": "fce6e2d0a8679cbcdd55469b2f8ce6b58c364307ad210bcd18fd0b1c73ff8c59",
-   "doc_sha256_after": "37223787e6c1681d0654d6a1cf375b41ad0a0d0f3cce0a655436a220399bbe4a"
+   "doc_sha256_before": "eedaf1f6f6f2b7b3a6bedade45cc2320f18815cbd7ad27813f0d71f858fb8cde",
+   "doc_sha256_after": "0f3442e71077449d8d0785ee7d6e263502d19c7ffe25c5ac15998f74098434c2"
   },
   {
    "id": "M05",
@@ -755,8 +755,8 @@
    "new": "- OFN v0.12 (`ofn-v0.12`; pointer refresh from v0.9) — relational event interpretation; not proof of this birth law, added independent substance, or added physical dimension. Its local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` enters T-6r C1 (§2) as an interface constraint.\n",
    "old_sha256": "0c6d68def0a87575956c817babef9044916bd3caf5bf32529b82a773663a8f60",
    "new_sha256": "a7e370c26192a0822a66376825e1b9d3193f0849c79aa00db08f69a8f4083683",
-   "doc_sha256_before": "37223787e6c1681d0654d6a1cf375b41ad0a0d0f3cce0a655436a220399bbe4a",
-   "doc_sha256_after": "09cc9f7ab8a040660f8791690cb1cad9e86740216d0ebead635836de5d0a9b69"
+   "doc_sha256_before": "0f3442e71077449d8d0785ee7d6e263502d19c7ffe25c5ac15998f74098434c2",
+   "doc_sha256_after": "d910bfdf43f509df22ba64605f1d294187331f2bd820813e188302135773916a"
   },
   {
    "id": "M06",
@@ -767,8 +767,8 @@
    "new": "- RRF v0.8.4 (`rrf-v0.8.4`, re-read; pointer refresh from v0.8.2; its §3.1 records CN-05's planar metric convention $B_T^{\\rm plane}=2B_G$ as convention-only, with the conditional $Q_c^T=\\tfrac{\\kappa^2}{4}(Q_s^T)^3$ conversion recorded as an obligation and not applied) — convention/transport reference only. This ledger's $s,c,d$ are explicitly primitive $B$-mode coordinates; no $z_{\\rm NF}$ is substituted into network closure. A reference does not register a missing profile or close OPEN-A/OPEN-B/E1.\n",
    "old_sha256": "f3ece874626f9159017085505e0a0bdb3a9387de2c60bb8d2d50fc7db7bf5444",
    "new_sha256": "d41d276d3426710386e6bcfed0b356c6ff52287320049be92d5655a8a9edee55",
-   "doc_sha256_before": "09cc9f7ab8a040660f8791690cb1cad9e86740216d0ebead635836de5d0a9b69",
-   "doc_sha256_after": "982f025f78ce54a917726300526e0f8db73206049c0dbd0888bb8748d6a1ed56"
+   "doc_sha256_before": "d910bfdf43f509df22ba64605f1d294187331f2bd820813e188302135773916a",
+   "doc_sha256_after": "a9b6ae700042bf511092695bfe1fa35742dd873f34e37b89b2badb62740ddfd9"
   },
   {
    "id": "M07",
@@ -779,8 +779,8 @@
    "new": "(retained unchanged through v2.9; re-read at `gen-v2.9`: `[RETRACTED]` as `[RESULT]` with the RID preserved, physical embedding `[OPEN]`)",
    "old_sha256": "ff153ee7e8a59511c53315a4e6d3b4a4179a3673e5de23721f75dc7282759afa",
    "new_sha256": "24f6531c3f35f355f84f4c7bc9ce49a461c5f946f6b1a16b492f87befac8e437",
-   "doc_sha256_before": "982f025f78ce54a917726300526e0f8db73206049c0dbd0888bb8748d6a1ed56",
-   "doc_sha256_after": "1ede0ad10c5abe4e0a3e11c708d5a51069f9a48cd6915a98380852548f9f53cc"
+   "doc_sha256_before": "a9b6ae700042bf511092695bfe1fa35742dd873f34e37b89b2badb62740ddfd9",
+   "doc_sha256_after": "f3832a23916121235ef3d9dc45f9056630e1598b4e83d4487bb46aa985ae0aec"
   },
   {
    "id": "M08",
@@ -791,8 +791,8 @@
    "new": "- Genesis v2.9 (`gen-v2.9`, re-read; both `[THM]`, unchanged) `GEN-THM-K3-PLANAR-FACTOR-NOGO`",
    "old_sha256": "746ab93c4b80f48de81dce9aff44ce094a24cdb0b5248242f917159ae72bf799",
    "new_sha256": "b4461573e72b8ccca258f12a7314d1421fee6b15d19f93fb87184945189bc87f",
-   "doc_sha256_before": "1ede0ad10c5abe4e0a3e11c708d5a51069f9a48cd6915a98380852548f9f53cc",
-   "doc_sha256_after": "6ec76a10b7fd593c213360656feb8bc6abc8d8a19e13dfb402dbdca632cd1dd5"
+   "doc_sha256_before": "f3832a23916121235ef3d9dc45f9056630e1598b4e83d4487bb46aa985ae0aec",
+   "doc_sha256_after": "e39ce89d618d51fa24ea24bdcde209bfc0d48788d73fd4a0ddf6a29ee7166772"
   },
   {
    "id": "M09",
@@ -803,8 +803,8 @@
    "new": "- TDR-G v2.12.14 (`tdrg-v2.12.14`, re-read) §2 `TDRG-OPEN-CHI-SCALING` — reference-only.",
    "old_sha256": "b4910550272ae7225648f68c0af0127112f60477f17e4baef5d9c949dc684035",
    "new_sha256": "bb7cbdba1685d1af07dd1a885f2925eeb5bc3aa92aba55052be3fac5daf3d8a2",
-   "doc_sha256_before": "6ec76a10b7fd593c213360656feb8bc6abc8d8a19e13dfb402dbdca632cd1dd5",
-   "doc_sha256_after": "7ebff338a9ea99a27818e82c1ec79be11f380e1500cced4f05263dd819a6b0b7"
+   "doc_sha256_before": "e39ce89d618d51fa24ea24bdcde209bfc0d48788d73fd4a0ddf6a29ee7166772",
+   "doc_sha256_after": "04b5908dd8649768b8e83c06dab17db471d15c2b28a905e5e634d83ed17aaa02"
   },
   {
    "id": "M10",
@@ -815,8 +815,8 @@
    "new": "All uses remain conditional on the source model; this consumer does not promote its physical premises. **v1.7 claim-level pins:** the imports below were re-read at `gen-v2.9` (`EV-SRC-READ`, 30 Oct 2026) and are repinned to Genesis v2.9 where statement, value and grade are unchanged. None of the nine \"RID unavailable\" statements has a result RID at `gen-v2.9` (artifact locators only), and Genesis records no response to the REQ-T16 requests. The radial-polynomial import keeps its v2.8.7 pin (see that entry). Other point-of-use Genesis pins (the GCL-06 remainder guard and the GSPLIT reference note in §6.15, the §6.1 history sentence) keep their v2.8.7 claim-level pins.",
    "old_sha256": "f72b108d2df93cafa119f3127d6438cc9045dbecfd276b0fc0b0215a8c502799",
    "new_sha256": "2f52473500cc10474d538a98e99e5d8c0405eb57128273ecaf131cc32dc8bcd0",
-   "doc_sha256_before": "7ebff338a9ea99a27818e82c1ec79be11f380e1500cced4f05263dd819a6b0b7",
-   "doc_sha256_after": "c23b614ea437fe6f56315e14032624e7250084742b510a36a6c5875ac275bc48"
+   "doc_sha256_before": "04b5908dd8649768b8e83c06dab17db471d15c2b28a905e5e634d83ed17aaa02",
+   "doc_sha256_after": "f8a47de2dd5926d453c8b9690853c75716bd0e1fa150bfe1c2fbb40ea1bbcb59"
   },
   {
    "id": "M11",
@@ -827,8 +827,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.1 #sec-6-1-primitive, Quadratic form (re-read at `gen-v2.9`) |",
    "old_sha256": "07439e691acaae0e5213cd3ce026a43aa3f7ee970342ff37c34147cab0781557",
    "new_sha256": "ce717e186837edab32ffc8fc01d29f32853cff2a13a2e8df8f0058079abda7a7",
-   "doc_sha256_before": "c23b614ea437fe6f56315e14032624e7250084742b510a36a6c5875ac275bc48",
-   "doc_sha256_after": "d0f7ede0d8d77fed86515f20eacd2dba7a9faf26ecb55816ce435f7e09e3c447"
+   "doc_sha256_before": "f8a47de2dd5926d453c8b9690853c75716bd0e1fa150bfe1c2fbb40ea1bbcb59",
+   "doc_sha256_after": "0256234f5d628379ff9bf0ddabcc624b2b7ee4625a78f5be1918d088f633a030"
   },
   {
    "id": "M12",
@@ -839,8 +839,8 @@
    "new": "owner RIDs assigned by Genesis v2.8.5 §6.1 and retained through v2.9.",
    "old_sha256": "3e17fe20304cfc8187301a5ab0d8c6185a606465d636ea0134d8189d1452b777",
    "new_sha256": "36c068f55573982fa6d79ecd68dd0c7b996a27a3e090fe783c4bb59c3ff30683",
-   "doc_sha256_before": "d0f7ede0d8d77fed86515f20eacd2dba7a9faf26ecb55816ce435f7e09e3c447",
-   "doc_sha256_after": "4dcb09ce79a1710edd8808312fb931f8c4988acc94dd8f2c770d8d8ad6926dc5"
+   "doc_sha256_before": "0256234f5d628379ff9bf0ddabcc624b2b7ee4625a78f5be1918d088f633a030",
+   "doc_sha256_after": "b4bc68493c91d3ee2c9417243edfe28bed680152d4f2b136867e3dd12ef61533"
   },
   {
    "id": "M13",
@@ -851,8 +851,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.6 #sec-6-6-phase, Symplectic phase-drift operator | RID unavailable; artifact locator `GEN-ART-JQ-PHASEDRIFT`; re-read at `gen-v2.9`, value unchanged]",
    "old_sha256": "25e3dec264749c9f54ef8d398bd90c8428c78553f5ca7a57f0f55c4d4382c35d",
    "new_sha256": "c99940d0027673f516fafa99afd3efee684f0a869b9fa3cccfdcbbba2c8ad0be",
-   "doc_sha256_before": "4dcb09ce79a1710edd8808312fb931f8c4988acc94dd8f2c770d8d8ad6926dc5",
-   "doc_sha256_after": "a7cc13ebe96a572679853741e5e32b07ea586a95969e61196a1d8864b00ca43a"
+   "doc_sha256_before": "b4bc68493c91d3ee2c9417243edfe28bed680152d4f2b136867e3dd12ef61533",
+   "doc_sha256_after": "7957cca3c1a36bbeb1e74b02f79cd755811b9140313a6ad9814442cbfb949379"
   },
   {
    "id": "M14",
@@ -863,8 +863,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.3 #sec-6-3-triad, one-dimensional birth theorem | RID unavailable; re-read at `gen-v2.9`, statement unchanged]",
    "old_sha256": "a62e789ca06e7a291b1349abf85c315efdb59e925f8cdcda8f03525b63035d17",
    "new_sha256": "075162cae3adb4f5e58f34ccf1560c168f6e853dd615fd15337f5c0c8ace783e",
-   "doc_sha256_before": "a7cc13ebe96a572679853741e5e32b07ea586a95969e61196a1d8864b00ca43a",
-   "doc_sha256_after": "9109dfef7ffbc710d3a56331b1d96233314730ec172cb6ffd68dc1f0579b4fa6"
+   "doc_sha256_before": "7957cca3c1a36bbeb1e74b02f79cd755811b9140313a6ad9814442cbfb949379",
+   "doc_sha256_after": "4d4898fe0ec82cd5aef624b778e1657aecab92cac6c862315625b7bf6a715e49"
   },
   {
    "id": "M15",
@@ -875,8 +875,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.3 #sec-6-3-triad, one-dimensional birth theorem | RID unavailable; artifact locator `GEN-ART-PHI-2TO3`; re-read at `gen-v2.9`, statement unchanged]",
    "old_sha256": "c601aec9d9c5dc5f9fdb9ae38336c9d6772a498099a134134e2bdb03e7d12541",
    "new_sha256": "6ddbd8710d0e058c6be4c93c7088ae340ab623bf1227423b8d63426e3d79aebf",
-   "doc_sha256_before": "9109dfef7ffbc710d3a56331b1d96233314730ec172cb6ffd68dc1f0579b4fa6",
-   "doc_sha256_after": "0a4e06b5a708138f031c65ce5743561b23ad422c30c8039c730d30d7fa1cb4b3"
+   "doc_sha256_before": "4d4898fe0ec82cd5aef624b778e1657aecab92cac6c862315625b7bf6a715e49",
+   "doc_sha256_after": "415df32274847e4c06b9c2061f3ea14b824ea8d471ac5540ed30dd357263ab7f"
   },
   {
    "id": "M16",
@@ -887,8 +887,8 @@
    "new": "Verification: source-read against adopted v2.8.7 and re-read at `gen-v2.9` (§1 and §6.3 wording retained from v2.8.5 GCL-06);",
    "old_sha256": "7529dfe3fe60784dc3c66208fe45e9b35fe65df75689a1e38d2bc5d3b2252571",
    "new_sha256": "94fa1d772e058efb76ded993c3e128e39288e7fdd7f67653b471f67281c2a346",
-   "doc_sha256_before": "0a4e06b5a708138f031c65ce5743561b23ad422c30c8039c730d30d7fa1cb4b3",
-   "doc_sha256_after": "e894fc005b5ab8f80eb94a0d8fc33a11d6f26497a8455f798564e0966a419ea2"
+   "doc_sha256_before": "415df32274847e4c06b9c2061f3ea14b824ea8d471ac5540ed30dd357263ab7f",
+   "doc_sha256_after": "787fa47a7dadee788bf9b3149cfb485ac16e407a482312224182d4978b3df398"
   },
   {
    "id": "M17",
@@ -899,8 +899,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §1 and §6.3, remainder clause | RID unavailable; re-read at `gen-v2.9`: GCL-06 still OPEN, the clause still conditional]",
    "old_sha256": "54696a8920838276a4a3135dbc312359cf93045d9a2a9cba1d6f5534954fec8a",
    "new_sha256": "f5b6f041ca1e40abd1be23effbf8f9a8699c3070adbdbb5062b996bf0d75740f",
-   "doc_sha256_before": "e894fc005b5ab8f80eb94a0d8fc33a11d6f26497a8455f798564e0966a419ea2",
-   "doc_sha256_after": "e08b5d7d54658e972833b02aed9dfba31ae5fbab138966f5f823f34522b681c9"
+   "doc_sha256_before": "787fa47a7dadee788bf9b3149cfb485ac16e407a482312224182d4978b3df398",
+   "doc_sha256_after": "e9082099759c5f17302f19a1210674b0fc62e43f3e6f1dc0a4408401e4bb4314"
   },
   {
    "id": "M18",
@@ -911,8 +911,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.3 #sec-6-3-triad, Shear policy | RID unavailable; re-read at `gen-v2.9`, value unchanged]",
    "old_sha256": "4e183b2df463328b03a88b8fc234fcd791f874bea858b84978338b30cde5bb01",
    "new_sha256": "354c58fbdd139ec99b9a500a33b64a32bcbdf146f3d99e7e9e7c4b5fa5dd6676",
-   "doc_sha256_before": "e08b5d7d54658e972833b02aed9dfba31ae5fbab138966f5f823f34522b681c9",
-   "doc_sha256_after": "8cc0becfe92ebd39b2c67959f54d5bfad52cffb43e80a9d4406f9158f53b6f62"
+   "doc_sha256_before": "e9082099759c5f17302f19a1210674b0fc62e43f3e6f1dc0a4408401e4bb4314",
+   "doc_sha256_after": "8deed7c5c75fa0bac96eb19a22f786d147aa599af325a6a6c2d59c411d4ac6d3"
   },
   {
    "id": "M19",
@@ -923,8 +923,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.3 #sec-6-3-triad, Recoil policy | RID unavailable; re-read at `gen-v2.9`, value unchanged]",
    "old_sha256": "3394cb412de6c869a949e8aa1318acb2f3d39e7605c580d97a21cdd249d81345",
    "new_sha256": "b96e47acceadb1b1860d0f1d5fb749f402c0441cb45923ce508f2bbed00f6131",
-   "doc_sha256_before": "8cc0becfe92ebd39b2c67959f54d5bfad52cffb43e80a9d4406f9158f53b6f62",
-   "doc_sha256_after": "b4e5d50b8e2d59ab319af6f777f6851c64fa6514b5cd5a1f4dd96038d51a8d1e"
+   "doc_sha256_before": "8deed7c5c75fa0bac96eb19a22f786d147aa599af325a6a6c2d59c411d4ac6d3",
+   "doc_sha256_after": "14ceef9825532933e908b11398dfcd71cc01bb872dce374456bb9f88c4105e4b"
   },
   {
    "id": "M20",
@@ -935,8 +935,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.4 #sec-6-4-tetrahedral, Tetrahedral chronological protection | RID unavailable; re-read at `gen-v2.9`, statement unchanged]",
    "old_sha256": "9af43bf2f94d95a263e51e5882c7095c3bf1bbc86914e4c01f20eba944a3c2db",
    "new_sha256": "cb2b00524e7055af2823551f7ca90d5fb0560eb433e7ffc239ff9b055ff609cf",
-   "doc_sha256_before": "b4e5d50b8e2d59ab319af6f777f6851c64fa6514b5cd5a1f4dd96038d51a8d1e",
-   "doc_sha256_after": "ca9233d093f243b88a9a4e63b3abb9af0f6aefdfe06025ad2d494f58b2111cae"
+   "doc_sha256_before": "14ceef9825532933e908b11398dfcd71cc01bb872dce374456bb9f88c4105e4b",
+   "doc_sha256_after": "fd9ebdbedb03ae04283da9298523e956a3999717130d1b2281e5c7232fb9c111"
   },
   {
    "id": "M21",
@@ -947,8 +947,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.8.7 §6.5 #sec-6-5-quartic, Full primitive quartic drift | RID unavailable; claim-level historical pin kept: at `gen-v2.9` the polynomial is printed unchanged as $\\Delta Q_d^{(4)}$ (§6.5, `[THM]`), but the identity $\\mathcal P_4=2d^TBG_{3,d}$ used with it here is not printed there (only the $c$-mode analogue $\\Delta Q_c^{(4)}=2c^\\top BG_{3,c}$); query to the Genesis owner]",
    "old_sha256": "6ea16b55a9a1fbf35be5f811b74d15a905e5919ab537a2d06c0e4b475e2d17fe",
    "new_sha256": "57db22fea4240d805577094b6f924c3f849fa93cac5a7ef231a9d82a3200c2ff",
-   "doc_sha256_before": "ca9233d093f243b88a9a4e63b3abb9af0f6aefdfe06025ad2d494f58b2111cae",
-   "doc_sha256_after": "1411346b75243bb873b9787c75dc2a257f6905cde2aacc47176819e2e3679b84"
+   "doc_sha256_before": "fd9ebdbedb03ae04283da9298523e956a3999717130d1b2281e5c7232fb9c111",
+   "doc_sha256_after": "ea57a822fb5cf3e6ddc52ccf7b33c5d40310e09fe6ffedf571cc8cbf58932145"
   },
   {
    "id": "M22",
@@ -959,8 +959,8 @@
    "new": "| RID unavailable; claim-level historical pin: seed norms re-read at `gen-v2.9` unchanged, the $\\mathcal P_4=2d^TBG_{3,d}$ premise not printed there (§7.2)]",
    "old_sha256": "8f20be90ab8b1502f2372fe4aac365c7571a12bec597512e8697d8943cc75925",
    "new_sha256": "936842550d5470543d50de32caecf780ed3efbaee460de08973470af789fce8c",
-   "doc_sha256_before": "1411346b75243bb873b9787c75dc2a257f6905cde2aacc47176819e2e3679b84",
-   "doc_sha256_after": "7571054c06ea9f174c27125afc2651658101d114a78aac0e6b35a6b6d66d4b22"
+   "doc_sha256_before": "ea57a822fb5cf3e6ddc52ccf7b33c5d40310e09fe6ffedf571cc8cbf58932145",
+   "doc_sha256_after": "340228b6968eaf585406f9e2a5564a02a22880e41b1ec640de95f84946f39d91"
   },
   {
    "id": "M23",
@@ -971,8 +971,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.5 #sec-6-5-quartic, Vector apex seeding | RID unavailable; artifact locator `GEN-ART-G3D-SEED`; re-read at `gen-v2.9`, values unchanged; source symbols $Q_{d,1}^{[s^3]}$, $Q_{d,1}^{[c^3]}$]",
    "old_sha256": "4c01b02c8ef51cab97d4919b8a6f04f09bc0cff88680991199f9c30868182702",
    "new_sha256": "8c97c32ff802a0c384bccb3b7d156cde80daa73605e7288e8daab1bf88d05845",
-   "doc_sha256_before": "7571054c06ea9f174c27125afc2651658101d114a78aac0e6b35a6b6d66d4b22",
-   "doc_sha256_after": "dc88cfd892e57428e6cc95a24411609dcb7a8c5174fda6b1c24695e4c3b09d48"
+   "doc_sha256_before": "340228b6968eaf585406f9e2a5564a02a22880e41b1ec640de95f84946f39d91",
+   "doc_sha256_after": "c2bc737f64ec3fd7dffc32ba7968cd09b11e51e05a26c2377c2faecf3b0bfc53"
   },
   {
    "id": "M24",
@@ -983,8 +983,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.6 #sec-6-6-phase, Birth symmetry theorem | RID unavailable; re-read at `gen-v2.9`, values unchanged; source symbols $I_{ds}^{(1)}$, $\\omega_{ds}^{(1)}$; the source states it as `[THM]` in its §6.6 and as `[ALG]` in its §1 summary and §8 artifact row — query to the Genesis owner]",
    "old_sha256": "adc3469ccca616e46c9e11bdac752fe950df63c77d20c9673b40bd85f68f41b6",
    "new_sha256": "7437e29094d6732cb1c6745f253794b87f1799a6b10553b98e5192bf7bf7dbf4",
-   "doc_sha256_before": "dc88cfd892e57428e6cc95a24411609dcb7a8c5174fda6b1c24695e4c3b09d48",
-   "doc_sha256_after": "ab196ee7c9e2ae7ccb67ebcd95e09d23c3677bc9cd9d41ddc9f03a6cbb2c0cca"
+   "doc_sha256_before": "c2bc737f64ec3fd7dffc32ba7968cd09b11e51e05a26c2377c2faecf3b0bfc53",
+   "doc_sha256_after": "64452a0f41826e941974255b80c9d3f2d62b72d871611bd82e22adcfc2dfea96"
   },
   {
    "id": "M25",
@@ -995,8 +995,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.6 #sec-6-6-phase, Birth symmetry theorem | RID unavailable; re-read at `gen-v2.9`, values unchanged (§7.2)]",
    "old_sha256": "1cc6620716940138f9fe844d56052a0c96cb6253d69d7e8c6f8576927a6736fd",
    "new_sha256": "385d9c4d3838c3c415093474f443476a975c8cd5e7d80276e9391aef75ceffd8",
-   "doc_sha256_before": "ab196ee7c9e2ae7ccb67ebcd95e09d23c3677bc9cd9d41ddc9f03a6cbb2c0cca",
-   "doc_sha256_after": "9a564eb4c7814ed1cf1385272d32428f18da9def928019eadf12ab832f9f1ff6"
+   "doc_sha256_before": "64452a0f41826e941974255b80c9d3f2d62b72d871611bd82e22adcfc2dfea96",
+   "doc_sha256_after": "3fed9b58d3753bbcaf95634a85104b8a606260285bbc45a3d2f5d6e58076bd73"
   },
   {
    "id": "M26",
@@ -1007,8 +1007,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §2 OPEN-GEN-II-HINDEX, displayed norm and status-table definition row | module locator `GEN-OPEN-HINDEX`; re-read at `gen-v2.9`, definition unchanged;",
    "old_sha256": "8d1a939c6650a2ba840970bb495a39bd8e5d3d203575a7a1fb14d66084a23220",
    "new_sha256": "b0887fa3033f8d36b5806b7fb900340c4dcfee74b2496c48b65604e6018b12cd",
-   "doc_sha256_before": "9a564eb4c7814ed1cf1385272d32428f18da9def928019eadf12ab832f9f1ff6",
-   "doc_sha256_after": "47c668eabcdb23d74c8307b1c19a7ff458b9e00b32fcd7e50a6e4dcc23dd225a"
+   "doc_sha256_before": "3fed9b58d3753bbcaf95634a85104b8a606260285bbc45a3d2f5d6e58076bd73",
+   "doc_sha256_after": "2a194475eade81e73cf200b9454163ffc9e6a64218e3fc53e9364403ce715b2c"
   },
   {
    "id": "M27",
@@ -1019,8 +1019,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §2 OPEN-GEN-II-HINDEX, displayed source-amplitude norm and status-table row | RID unavailable; re-read at `gen-v2.9`, definition unchanged (§7.2)]",
    "old_sha256": "0711a100a82df876044ae45539dc6bc7930d9e8bb3ac3ac41a3b7f3e862e1f4b",
    "new_sha256": "345c5cce5bb918652b88229bd796824f1ee5f62be27b063a7270c244b5cb5773",
-   "doc_sha256_before": "47c668eabcdb23d74c8307b1c19a7ff458b9e00b32fcd7e50a6e4dcc23dd225a",
-   "doc_sha256_after": "700a6540159affd76ad75875aa33ef5edd1dfb7a17cadc6aa27e09b00babbd34"
+   "doc_sha256_before": "2a194475eade81e73cf200b9454163ffc9e6a64218e3fc53e9364403ce715b2c",
+   "doc_sha256_after": "e2e30aa423dd192647c893a4d593681e72c1e109045fa45fa1eb3f91462b3a71"
   },
   {
    "id": "M28",
@@ -1031,8 +1031,8 @@
    "new": "[import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.5 #sec-6-5-quartic, standalone chiral admissibility polynomial | GEN-THM-DELTA-QC; re-read at `gen-v2.9`, polynomial unchanged]",
    "old_sha256": "697c04c098e554903ed8d9288a9bc6f6c5f3b77d4f465e6d6f1d89c590bd6935",
    "new_sha256": "6fae735ce4b139fc5e9eed949cb78ff75bfa01fcad54c2804e78053e27c9ecd1",
-   "doc_sha256_before": "700a6540159affd76ad75875aa33ef5edd1dfb7a17cadc6aa27e09b00babbd34",
-   "doc_sha256_after": "19af7ee3b87ef8ff228c76c90632b9cf1ee15f2d09995d82cf9a30019ef46163"
+   "doc_sha256_before": "e2e30aa423dd192647c893a4d593681e72c1e109045fa45fa1eb3f91462b3a71",
+   "doc_sha256_after": "a89c5768aeecf7c3e32667a04ab7aa2290f2a8830c22560bf5f66e791fdd1a62"
   }
  ]
 }

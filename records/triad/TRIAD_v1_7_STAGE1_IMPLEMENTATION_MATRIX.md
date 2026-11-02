@@ -2,6 +2,7 @@
 
 **Date:** 30 October 2026. **Prepared by:** Claude (Triadic co-owner); for the change-focused review by ChatGPT.
 **Status:** working record. Builds nothing beyond the stage-1 intermediate; adopts nothing.
+**Round 2 (2 November 2026):** applies R140-F1 of ChatGPT's change-focused review (PR #140 review `5738872551`, ACCEPT WITH CHANGE) to the §7.4 consumer matrix, and R140-F2 (PR comment `6580920857`) to the merge chain. The round-1 intermediate `19af7ee3…6163` (commit `b5f1488`) stays in Git history.
 **Authority:** the confirmed co-owner reconciliation `records/triad/TRIAD_OWNER_DISPOSITION_RECONCILIATION_v1_6_1.md` (PR #139; ChatGPT review `5714190994`, CONFIRMED / ACCEPT SCOPED) and the PI's stage-1 start of 30 October 2026.
 
 ## Identities
@@ -10,9 +11,9 @@
 |---|---|
 | Base | `triad-v1.6.1`, `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md`, SHA-256 `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f` |
 | Builder | `evidence/triad/scripts/build_triad_v1_7_stage1.py` (86 assertion-gated edits; modes `str`, `live`, `line`) |
-| Stage-1 intermediate | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md` on this branch = `evidence/triad/v1.7/stage1_intermediate.md`, SHA-256 `19af7ee3b87ef8ff228c76c90632b9cf1ee15f2d09995d82cf9a30019ef46163` (1,265 lines; also in the edit log and `stage1_check_output.txt`). Stage 2 is checked against this hash |
+| Stage-1 intermediate | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md` on this branch = `evidence/triad/v1.7/stage1_intermediate.md`, SHA-256 `a89c5768aeecf7c3e32667a04ab7aa2290f2a8830c22560bf5f66e791fdd1a62` (round 2; 1,265 lines; also in the edit log and `stage1_check_output.txt`). Stage 2 is checked against this hash |
 | Edit log | `evidence/triad/v1.7/stage1_edit_log.json` (old/new text and hash chain for every edit) |
-| Checker | `evidence/triad/scripts/check_triad_v1_7_stage1.py`: gates K1–K8, S1, S5, S6 ALL PASS; 11 negative controls ALL CAUGHT (`evidence/triad/v1.7/stage1_check_output.txt`) |
+| Checker | `evidence/triad/scripts/check_triad_v1_7_stage1.py`: gates K1–K8, S1, S5, S6 ALL PASS; 13 negative controls ALL CAUGHT (round 2 adds two for R140-F1) (`evidence/triad/v1.7/stage1_check_output.txt`) |
 | Lint | `tools/dsn_lint.py --prev` (informational, no gate): `evidence/triad/v1.7/dsn_lint_stage1.txt`. Its `new_rids: 1` counts the two new cross-references `DYAD-ALG-KP-FRAME-SCALE` and `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; the Triadic RID set is unchanged (K3) |
 
 Commands, from the repository root:
@@ -34,7 +35,7 @@ python -I -B evidence/triad/scripts/check_triad_v1_7_stage1.py base.md cand.md l
 | 6 | No change (T-6s/t/u) | — | — |
 | 7 | 96:1 OPEN, stated once in §1 with the hypothetical 192 metric caveat; pointers elsewhere | S01 N01 X05 | §1; §6.1; §6.18 |
 | 8 | Claim-level repins: Dyadic RIDs → v6.4.23; 11 Genesis imports → v2.9; pointers → Programme v1.3, OFN v0.12, RRF v0.8.4, TDR-G v2.12.14; **held**: radial-polynomial premise (𝒫₄ = 2dᵀBG₃,d not printed at `gen-v2.9`) and the Programme v1.2 §6.3 wording; other point-of-use Genesis pins labelled historical | M01–M28 | header companion line; §6.1, §6.15, §6.17 point-of-use brackets; §7.1; §7.2 |
-| 9 | Consumer matrix (10 rows: CN × recipient, receiver tag, cited edition, queue, statement accepted, adopted use, gate); stale "pending" lines replaced by pointers | S03 L01 X07 X08 V01–V05 V07–V12 V14 V15 | §1, §4, §6.14, §7.3, §7.4, §8 |
+| 9 | Consumer matrix (10 rows: CN × recipient, receiver tag, **producer claim-level pin** (Triadic RID, or section when no RID is assigned, at v1.6), cited edition, queue, statement accepted, adopted use, gate); Programme CN-05 queue "not recorded" with the v1.3 pass-two fact in the notes; RRF row typed convention-only with no RID-keyed import or physical adopted use; v1.6 receipts distinguished from the v1.6.1 and v1.7 deltas (round 2, R140-F1); stale "pending" lines replaced by pointers | S03 L01 X07 X08 V01–V05 V07–V12 V14 V15 | §1, §4, §6.14, §7.3, §7.4, §8 |
 | 10 | Programme v1.3 is the pass-two edition | V05 V13 | §7.4 matrix row and history paragraph |
 | 11 | §2 send queue removed; consumer-interface pointer | P03 V11 | §2; §7 export protocol |
 | 12 | After the tag | — | notices filed as pipe items after `triad-v1.7` |
@@ -61,3 +62,7 @@ Rows 16–20, 22, 23 and the movement part of row 21 are stage 2. Row 29 is DEFE
 - `EV-SRC-READ`: the governing tags of the companion studies were re-read on 30 October 2026 for every repinned import and every matrix cell. The per-item line numbers are in the reading notes `evidence/triad/v1.7/row8_repin_reading_notes.md` and `evidence/triad/v1.7/row9_consumer_reading_notes.md`. These notes were prepared in this session by read-only helper passes; the preparer spot-checked the two held items, the Dyadic RID locations, four Genesis values and nine matrix cells against the tags. Every line can be re-derived with `git show <tag>:dsn/<FILE>.md | grep -n`.
 - `EV-RUN` (preparer): the stage-1 checker and its gate S1, which reruns the two row-1–3 evidence scripts. No owner certificate, producer campaign or trajectory is rerun; the H₁, H₂ producer bytes remain missing.
 - Nothing here is adoption, a merge or a tag.
+
+## Merge chain (R140-F2)
+
+PR #139 cites the ChatGPT disposition of PR #137, so #137 is part of the chain. The reconciliation branch (#139) now contains #137 (merge commit `1e064d6`), and this branch contains both. Merge order for the PI: **#137 and #138 (either order) → #139 → #140.** A merge is not adoption.

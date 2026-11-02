@@ -1,8 +1,8 @@
 file: dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md
-bytes: 177155
+bytes: 179004
 lines: 1265
 header_chars: 7839
-live_body_chars: 143120
+live_body_chars: 144953
 appendix_a_chars: 24507
 section1_words: 489
 orientation_core: {"chars": 27907, "lines": 271, "words": 3546, "core_end_marker_present": true}
@@ -13,8 +13,8 @@ history_phrases_live: {"historical": 166, "superseded": 6, "former": 9, "retaine
 near_duplicate_paragraphs: 0
 rids_total: 71
 previous: {"file": "/tmp/claude-0/-home-claude/08b30b17-322e-5f2b-9314-756a53a6b667/scratchpad/stage1/base.md", "bytes": 159762}
-growth_bytes: 17393
-growth_percent: 10.9
+growth_bytes: 19242
+growth_percent: 12.0
 new_rids: 1
-growth_per_new_rid: 17393.0
+growth_per_new_rid: 19242.0
 (informational report; no gate)

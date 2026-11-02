@@ -3,7 +3,7 @@ r"""Triadic v1.7 — stage-1 checker (gates + negative controls).
 
 usage: check_triad_v1_7_stage1.py BASE CANDIDATE EDITLOG_JSON [--controls]
   BASE = `git show triad-v1.6.1:dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md`; run from the repository root.
-Gates:
+Gates (round 2, 2 Nov 2026: K7/K8 lists and two controls extended for R140-F1):
   K1 base identity (triad-v1.6.1);
   K2 deterministic rebuild (builder output == candidate) and edit-log hash chain ending at the candidate;
   K3 the set of TRIAD-* identifiers is unchanged and the declared count is 46 (the RER record name excluded);
@@ -67,8 +67,11 @@ REQUIRED = [
     "claim-level historical pin kept",
     # row 9, 10, 11
     "**Consumer state (current).**",
-    "| CN-05 | Programme (`programme-v1.3`) |",
-    "Programme v1.3 (`programme-v1.3`) is the pass-two synchronization edition",
+    "| CN | Recipient (governing tag) | Triadic claim-level pin (producer) | Triadic edition the receiver cites | Queue | Statement accepted (receiver record) | Adopted use | Remaining gate |",
+    "| CN-05 | Programme (`programme-v1.3`) | CN-05 (§7.4) Programme/OFN note, as above; v1.6 notice | v1.6 (interface register IF07, IF11 only) | not recorded | not recorded | none |",
+    "**Programme:** v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition; it records no CN-05 disposition",
+    "none certified: no RID-keyed receiver import and no physical adopted use",
+    "Programme v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition (notes under the matrix above)",
     "**Consumer interface.** The per-recipient state of CN-01–CN-05 is in §7.4.",
     "A v1.6 receipt is not acceptance of a v1.6.1 or v1.7 delta.",
     # row 13
@@ -178,6 +181,8 @@ CONTROLS = [  # (name, gate that must fail, mutation)
     ("change a Status line", "K5", lambda t: t.replace("Status: ACTIVE after r4 correction", "Status: CLOSED after r4 correction")),
     ("drop an anchor", "K4", lambda t: t.replace(" {#sec-6-18-orientation-correction}", "")),
     ("reintroduce release-label qualifier", "K7", lambda t: t.replace("`[COR]` If the selected complete child functional", "`[COR v1.6.1 — D3]` If the selected complete child functional", 1)),
+    ("drop the producer-pin column", "K8", lambda t: t.replace("| Triadic claim-level pin (producer) |", "|")),
+    ("manufacture a Programme CN-05 receipt", "K8", lambda t: t.replace("| v1.6 (interface register IF07, IF11 only) | not recorded | not recorded |", "| v1.6 (interface register IF07, IF11 only) | received | yes |")),
     ("claim custody package present", "K7", lambda t: t.replace("is held by the PI and is **not in the repository**", "is preserved under `evidence/accepted_r4_2/`")),
 ]
 

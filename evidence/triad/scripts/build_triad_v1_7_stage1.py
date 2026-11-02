@@ -20,6 +20,11 @@ Edit modes:
 Every edit is logged with old/new text and SHA-256. The token <BR> in an edit text stands for the two-space Markdown
 line break at end of line.
 
+Round 2 (2 Nov 2026): the §7.4 consumer matrix (edit V05) and the V13 wording apply R140-F1 of the co-owner
+change-focused review (PR #140 review 5738872551): a producer claim-level pin column, Programme CN-05 queue "not
+recorded" with the v1.3 pass-two fact recorded separately, and the RRF row typed as convention-only. The round-1
+intermediate (19af7ee3...6163, commit b5f1488) stays in Git history.
+
 usage: build_triad_v1_7_stage1.py BASE OUT EDITLOG_JSON
   BASE = `git show triad-v1.6.1:dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md`
 """
@@ -185,20 +190,20 @@ ed("V04", "9",
    "`[DEF]` These notices are outbound review obligations, not amendments of another owner's records. Each receiver's disposition is its own record; the matrix below states what each receiver has recorded at its governing tag (`EV-SRC-READ`, 30 October 2026).\n")
 
 MATRIX = (
-    "**Consumer state (current).** \"Received\" means the receiver's DSN records the notice; \"statement accepted\" is the receiver's recorded verdict; \"adopted use\" is read only from the receiver's Import Ledger row or release record (CONVENTIONS §7).\n\n"
-    "| CN | Recipient (governing tag) | Triadic edition the receiver cites | Queue | Statement accepted (receiver record) | Adopted use | Remaining gate |\n"
-    "|---|---|---|---|---|---|---|\n"
-    "| CN-01 | Genesis (`gen-v2.9`) | v1.6 | received | yes — `GEN-OPEN-APEX-SLOT` retracted as `[RESULT]`; $d$-mode label and seed retained (§8) | Import Ledger row CN-01 (§7) | physical transverse/UV embedding OPEN |\n"
-    "| CN-02 | Genesis (`gen-v2.9`) | v1.6 | received | yes — live text uses $F_{\\rm face}$; the free $F_W(\\eta_*)$ target withdrawn as a live parametrization | Import Ledger row CN-02 | full-phase remainder depends on the child functional (GCL-06) |\n"
-    "| CN-02 | OPEN-M (`uvm-v0.7.1`) | v1.6 | received | yes — v0.6 unit-child / fixed-$F_W$ corroboration superseded | Import Ledger (§7) | face-phase remainder depends on the child/residual order (GCL-06) |\n"
-    "| CN-03 | Genesis (`gen-v2.9`) | v1.6 | received | yes, as a consistency check; proof direction stays Genesis → Triadic | Import Ledger row CN-03 | none beyond the exact $I_{sc}=0$ scope |\n"
-    "| CN-04 | OPEN-M (`uvm-v0.7.1`) | v1.6 | received | yes — HYP-M-PREFRACTURE's premise \"T-6t apex independent\" withdrawn | Import Ledger (§7) | HYP-M-PREFRACTURE falsifier (OPEN-M) |\n"
-    "| CN-05 | Genesis (`gen-v2.9`) | v1.6 | received | yes — historical wedge, $x_*$, no-basin, phase-steering and route-obstruction exports withdrawn from current Genesis use (OPEN 1T, SG-12) | Import Ledger row CN-05 | corrected finite-$u/r$ orientation flow (T-6r, T-6q) |\n"
-    "| CN-05 | OPEN-M (`uvm-v0.7.1`) | v1.6 | received | yes — continuous phase/source route settled neither for nor against | Import Ledger (§7) | continuous phase/source route unresolved; CN-01 review separate |\n"
-    "| CN-05 | RRF (`rrf-v0.8.4`) | v1.6 | received | recorded as convention only (§3.1, \"proposed consumer receipt\") | §3.1 `[DEF]` with in-text import tag; no RID-keyed row; $Q_c^T$ conversion not applied | same-vector Genesis–Triadic birth bridge OPEN |\n"
-    "| CN-05 | OFN (`ofn-v0.12`) | v1.6.1 | received | reference-only — OFN half of pass two recorded (RF-O08-02, RF-O08-08) | none (reference rows, not imports) | 96:1 correspondence (§1) |\n"
-    "| CN-05 | Programme (`programme-v1.3`) | v1.6 (interface register IF07, IF11) | v1.3 is the pass-two synchronization edition | no CN-05 disposition recorded | none | Programme record of CN-05 |\n\n"
-    "Notes. Receivers also record notices not addressed to them (OPEN-M: CN-01, CN-03; OFN: CN-01–CN-04, reference-only). No receiver records the Triadic source hash asked for in CN-05's acknowledgment fields. A v1.6 receipt is not acceptance of a v1.6.1 or v1.7 delta. Genesis imports T-6s, T-6t and T-6u at `[CAND]`, below the Triadic `[ALG]` (`gen-v2.9` §2); that is the receiver's grading of its own use. These receipts close no physical OPEN (CN-01 transverse carrier, CN-04 HYP-M-PREFRACTURE falsifier, child-functional selection). Post-release notices are filed as pipe items (§2).\n")
+    "**Consumer state (current).** \"Received\" means the receiver's DSN records the notice; \"statement accepted\" is the receiver's recorded verdict; \"adopted use\" is read only from the receiver's Import Ledger row or release record (CONVENTIONS §7). The producer pin names the Triadic statement each notice carries: its RID, or its section when no RID is assigned, at the Triadic edition the notice was issued from (v1.6).\n\n"
+    "| CN | Recipient (governing tag) | Triadic claim-level pin (producer) | Triadic edition the receiver cites | Queue | Statement accepted (receiver record) | Adopted use | Remaining gate |\n"
+    "|---|---|---|---|---|---|---|---|\n"
+    "| CN-01 | Genesis (`gen-v2.9`) | CN-01 (§7.4): carrier statement $V\\cong\\mathbb R^2$ versus mode product $V^3$, with `TRIAD-ALG-T6T-JACOBI-MODE-SIGNS` (§6.16); v1.6 | v1.6 | received | yes — `GEN-OPEN-APEX-SLOT` retracted as `[RESULT]`; $d$-mode label and seed retained (§8) | Import Ledger row CN-01 (§7); T-6t imported at `[CAND]` | physical transverse/UV embedding OPEN |\n"
+    "| CN-02 | Genesis (`gen-v2.9`) | CN-02 (§7.4): leading signed-child face phase $F_{\\rm face}^{(0)}$, §6.15 leading ratio $i\\kappa Q_s$; RID unavailable; v1.6 | v1.6 | received | yes — live text uses $F_{\\rm face}$; the free $F_W(\\eta_*)$ target withdrawn as a live parametrization | Import Ledger row CN-02 | full-phase remainder depends on the child functional (GCL-06) |\n"
+    "| CN-02 | OPEN-M (`uvm-v0.7.1`) | CN-02 (§7.4), as above; RID unavailable; v1.6 | v1.6 | received | yes — v0.6 unit-child / fixed-$F_W$ corroboration superseded | Import Ledger (§7) | face-phase remainder depends on the child/residual order (GCL-06) |\n"
+    "| CN-03 | Genesis (`gen-v2.9`) | CN-03 (§7.4): `[ALG]` specialization of `GEN-THM-DELTA-QC` at $I_{sc}=0$; Triadic RID unavailable; v1.6 | v1.6 | received | yes, as a consistency check; proof direction stays Genesis → Triadic | Import Ledger row CN-03 | none beyond the exact $I_{sc}=0$ scope |\n"
+    "| CN-04 | OPEN-M (`uvm-v0.7.1`) | CN-04 (§7.4) with `TRIAD-ALG-T6T-JACOBI-MODE-SIGNS`, `TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY`, `TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC`; v1.6 | v1.6 | received | yes — HYP-M-PREFRACTURE's premise \"T-6t apex independent\" withdrawn | Import Ledger (§7) | HYP-M-PREFRACTURE falsifier (OPEN-M) |\n"
+    "| CN-05 | Genesis (`gen-v2.9`) | CN-05 (§7.4) with `TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION`, `TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN`, `TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN`, `TRIAD-EXPORT-PROTOCOL-2`; v1.6 | v1.6 | received | yes — historical wedge, $x_*$, no-basin, phase-steering and route-obstruction exports withdrawn from current Genesis use (OPEN 1T, SG-12) | Import Ledger row CN-05 | corrected finite-$u/r$ orientation flow (T-6r, T-6q) |\n"
+    "| CN-05 | OPEN-M (`uvm-v0.7.1`) | CN-05 (§7.4), same RIDs; v1.6 | v1.6 | received | yes — continuous phase/source route settled neither for nor against | Import Ledger (§7) | continuous phase/source route unresolved; CN-01 review separate |\n"
+    "| CN-05 | RRF (`rrf-v0.8.4`) | CN-05 (§7.4) RRF note: planar metric convention $B_T^{\\rm plane}=2B_G$ (§6.18 metric-unit block); RID unavailable; v1.6 | v1.6 | received | convention only: §3.1 is a convention-only, in-text imported working-standard entry (`[DEF]`, \"proposed consumer receipt\") | none certified: no RID-keyed receiver import and no physical adopted use; the $Q_c^T$ conversion is not applied | same-vector Genesis–Triadic birth bridge OPEN |\n"
+    "| CN-05 | OFN (`ofn-v0.12`) | CN-05 (§7.4) Programme/OFN note: no programme-level cascade verdict, source deficit or ontology selection; v1.6 notice | v1.6.1 | received | reference-only — OFN half of pass two recorded (RF-O08-02, RF-O08-08) | none (reference rows, not imports) | 96:1 correspondence (§1) |\n"
+    "| CN-05 | Programme (`programme-v1.3`) | CN-05 (§7.4) Programme/OFN note, as above; v1.6 notice | v1.6 (interface register IF07, IF11 only) | not recorded | not recorded | none | Programme record of CN-05 |\n\n"
+    "Notes. **Programme:** v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition; it records no CN-05 disposition, so no CN-05 receipt is inferred from it. **Deltas:** A v1.6 receipt is not acceptance of a v1.6.1 or v1.7 delta. Every receipt above except OFN's is a receipt of the v1.6 notices; no receiver records acceptance of the v1.6.1 delta (the D3/D3-R1 child-remainder typing) as a Triadic delta — Genesis and OPEN-M state the GCL-06 dependence from the Genesis side — and none has yet seen the v1.7 delta. Receivers also record notices not addressed to them (OPEN-M: CN-01, CN-03; OFN: CN-01–CN-04, reference-only). No receiver records the Triadic source hash asked for in CN-05's acknowledgment fields. Genesis imports T-6s, T-6t and T-6u at `[CAND]`, below the Triadic `[ALG]` (`gen-v2.9` §2); that is the receiver's grading of its own use. These receipts close no physical OPEN (CN-01 transverse carrier, CN-04 HYP-M-PREFRACTURE falsifier, child-functional selection). Post-release notices are filed as pipe items (§2).\n")
 ed("V05", "9/10/15",
    "**v1.6.1 consumer receipt (recorded, not a Triadic acceptance):**",
    MATRIX + "\n**v1.6.1 consumer receipt (history, as recorded at v1.6.1; superseded by the matrix above):**")
@@ -207,7 +212,7 @@ ed("V14", "9", "Consumer acceptance remains pending.", "Consumer state: §7.4.",
 ed("V15", "9", "; consumer acceptance remains pending.", "; consumer state: §7.4.", "live", 1)
 ed("V13", "10",
    "Programme v1.2 remains an inventory/architecture first-pass source and its pass-two synchronization is still pending.",
-   "Programme v1.2 was then an inventory/architecture first-pass source; Programme v1.3 (`programme-v1.3`) is the pass-two synchronization edition (matrix above).")
+   "Programme v1.2 was then an inventory/architecture first-pass source; Programme v1.3 (`programme-v1.3`) is the Programme pass-two synchronization edition (notes under the matrix above).")
 ed("V07", "9", "**Consumer status: OPEN; scientific review, not a pointer-only update.**", "**Consumer state:** matrix above.")
 ed("V08", "9", "**Consumer status: OPEN; update sign, extent, symbol and artifact interpretation at each use.**", "**Requested action:** update sign, extent, symbol and artifact interpretation at each use. **Consumer state:** matrix above.")
 ed("V09", "9", "**Consumer status: positive consistency notice; no Genesis record altered.**", "**Consumer state:** matrix above (positive consistency notice; no Genesis record altered).")
