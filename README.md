@@ -14,6 +14,7 @@ Earlier archive: Zenodo DOI 10.5281/zenodo.17568897.
 | `records/<study>/` | Release records, advisory/disposition/closeout notes, notices. |
 | `evidence/<study>/` | Scripts and certificates (`scripts/`), small per-release outputs (`<version>/`), frozen evidence packages. |
 | `atlas/` | RTG State Atlas (AI-oriented relational map of all DSNs) and its method. |
+| `pipes/<STREAM>/` | Cross-stream inboxes (`pipes/README.md`), including `pipes/LIT/` for requests to the literature corpus (`CONVENTIONS.md` §8). |
 | `tools/` | Lint and release/compaction checkers. |
 | `BASELINE.md` | Which files are in the repository, their verified hashes, and which are still pending. |
 
