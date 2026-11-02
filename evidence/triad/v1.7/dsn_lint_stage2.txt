@@ -1,0 +1,20 @@
+file: dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md
+bytes: 148596
+lines: 1117
+header_chars: 3425
+live_body_chars: 141290
+appendix_a_chars: 3038
+section1_words: 489
+orientation_core: {"chars": 27907, "lines": 271, "words": 3546, "core_end_marker_present": true}
+header_fields: {"Title": 61, "Date": 27, "Scope": 361, "Document class": 49, "Document status": 216, "Supersedes": 164, "Companion documents": 393, "DSN Methodology": 53, "Status summary": 986, "Programme tier": 112, "Co-owners": 125, "Records": 420, "Evidence location": 381, "Repository": 28}
+appendix_a_words_per_edition: 11 editions, max 211 words
+footer_lines: 1
+history_phrases_live: {"historical": 165, "superseded": 13, "former": 9, "retained as": 5, "no longer": 9}
+near_duplicate_paragraphs: 0
+rids_total: 71
+previous: {"file": "evidence/triad/v1.7/stage1_intermediate.md", "bytes": 177539}
+growth_bytes: -28943
+growth_percent: -16.3
+new_rids: 0
+growth_per_new_rid: N/A
+(informational report; no gate)

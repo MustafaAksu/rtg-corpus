@@ -1,0 +1,197 @@
+{
+ "study": "TRIAD",
+ "target": "v1.7",
+ "stage": 2,
+ "base": "evidence/triad/v1.7/stage1_intermediate.md",
+ "base_sha256": "b47d294d9dc82b78f05e02c99e04100177c78480c453438d5d4fca86e14ba66a",
+ "candidate_sha256": "2573961a82ce10a348f76f10feece6fefb3831f3c4dd60de5dcae78acb745c0d",
+ "archives": [
+  {
+   "name": "stage1-intermediate",
+   "path": "evidence/triad/v1.7/stage1_intermediate.md",
+   "sha256": "b47d294d9dc82b78f05e02c99e04100177c78480c453438d5d4fca86e14ba66a"
+  },
+  {
+   "name": "triad-v1.6.1",
+   "git": "triad-v1.6.1:dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md",
+   "sha256": "95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f"
+  }
+ ],
+ "archives_note": "the stage-1 intermediate, committed byte-exact, holds every removed byte; the predecessor tag holds the v1.6.1 and earlier history verbatim.",
+ "profile": {
+  "study": "TRIAD",
+  "ref_words": [],
+  "history_words": [
+   "History —",
+   "stage 1",
+   "stage 2"
+  ],
+  "checked_tag_prefixes": [
+   "triad-",
+   "gen-",
+   "rrf-",
+   "ofn-",
+   "programme-",
+   "methodology-",
+   "uvm-",
+   "tdrg-",
+   "dyad-"
+  ],
+  "known_tags": [
+   "triad-v1.6.1",
+   "gen-v2.9",
+   "rrf-v0.8.4",
+   "ofn-v0.12",
+   "programme-v1.3",
+   "methodology-v1.4",
+   "uvm-v0.7.1",
+   "tdrg-v2.12.14",
+   "dyad-v6.4.23"
+  ],
+  "summary_from": [
+   "header",
+   "section1"
+  ]
+ },
+ "verbatim_cells": {
+  "S2-B1": [
+   "[RID: TRIAD-ALG-T6S-INPLANE-CHIRALITY]",
+   "CLOSED, `[ALG]` with historical exact/conjugate-family wording; unit $+i$ described as the child and unrestricted no-gain inferred",
+   "`TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY`, `[ALG]`, adopted",
+   "Physical child scaling/sign and coherent-weight domain materially narrow the assertion; conjugate-pair algebra survives.",
+   "[RID: TRIAD-ALG-T6T-CHIRALITY-COUNT]",
+   "CLOSED, `[ALG]` with historical 3D chirality/apex-independence wording",
+   "`TRIAD-ALG-T6T-JACOBI-MODE-SIGNS`, `[ALG]`, adopted",
+   "Three label-sign choices do not establish an independent physical transverse source direction.",
+   "[RID: TRIAD-ALG-T6U-APEX-SOURCE]",
+   "CLOSED, `[ALG]` diagnostic; shear/vector $\\sqrt{21}/64$ used as certified apex source ratio",
+   "`TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC`, `[ALG]`, adopted",
+   "Four typed leading diagnostics replace the single-source/deficit interpretation; no HINDEX identity."
+  ],
+  "S2-B2": [
+   "[RID: TRIAD-ALG-T6M-BIRTH-OBSTRUCTION]",
+   "`TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN` `[ALG diagnostic]`",
+   "Wedge/route obstruction depended on corrected orientation chain; exact reference angle and producer-frame polynomial survive.",
+   "[RID: TRIAD-NUM-T6J2-NO-BASIN]",
+   "`TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION` `[NUM]` `[scope: historical root-closed session]`",
+   "Safe/fatal/no-basin proposition withdrawn; only normalization-conditional excursion remains, terminal event unresolved.",
+   "historical T-6l current use (no result RID)",
+   "`TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN` `[ALG]`",
+   "Corrected rate removes the old real root and gives sign-definite leading torsion.",
+   "[RID: TRIAD-EXPORT-PROTOCOL-1]",
+   "`TRIAD-EXPORT-PROTOCOL-2` `[DEF]`",
+   "Historical obstruction/no-basin exports removed; current correction/reference items replace them.",
+   "T-6e downstream interpretation",
+   "`TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION` `[ALG diagnostic]`",
+   "Raw determinant extraction retained; normalized-rate identification corrected."
+  ]
+ },
+ "operations": [
+  {
+   "id": "S2-H",
+   "op": "replace-header",
+   "class": "presentation",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "new": "# RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7\n\n**Title:** RTG Triadic Birth-Lift Study — Scientific Ledger  \n**Date:** 2 November 2026  \n**Scope:** The continuous $2\\to3$ birth family, the scoped $K_3/K_4$ return models and the typed diagnostic phase and orientation models (root-closed model, historical executed models, corrected coefficient extensions), with their consumer exports. No complete physical birth law, independent-orientation physical carrier or discrete TDR-G bridge is selected.  \n**Document class:** Technical scientific ledger  \n**Document status:** DRAFT — v1.7 stage-2 candidate (layout only, over the stage-1 intermediate `b47d294d…a66a`); adoption pending. `triad-v1.6.1` governs until adoption and tag. Consumer acceptance is not implied.  \n**Supersedes:** `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6.1` (tag `triad-v1.6.1`, SHA-256 `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f`), on adoption.  \n**Companion documents:** governing editions read for v1.7 — Programme Overview v1.3 (`programme-v1.3`); DSN Methodology v1.4 (`methodology-v1.4`); OFN v0.12 (`ofn-v0.12`); Dyadic Oscillator v6.4.23 (`dyad-v6.4.23`); Genesis Geometry v2.9 (`gen-v2.9`); OPEN-M v0.7.1 (`uvm-v0.7.1`); RRF v0.8.4 (`rrf-v0.8.4`); TDR-G v2.12.14 (`tdrg-v2.12.14`). Proof imports keep claim-level pins (§7.1–§7.2).  \n**DSN Methodology:** v1.4 (tag `methodology-v1.4`).  \n**Status summary:** This release does not select a complete physical birth law, an independent-orientation physical carrier, or a discrete TDR-G bridge. The recovered T-6c2/T-6e producers establish an orientation-output normalization correction: T-6d's root variable is retained, T-6e's raw-determinant extraction is retained, and downstream uses that treated the raw increment as the normalized orientation rate are narrowed to historical executed-model records. The former safety-wedge/no-basin/phase-steering obstruction chain is not a current corrected-model result. T-6j2 is PARTIAL with only its historical root-closed torsional excursion retained; T-6m retains its exact reference quarter-turn and producer-frame forcing polynomial, not the wedge obstruction. The 96:1 coefficient comparison is bookkeeping until source/model correspondence is proved. No corrected-field trajectory campaign is treated as scientifically decisive before the T-6r acceptance contract (§2) is met.  \n**Programme tier:** Tier 3 — Continuous Programme, conditional on the selected generator; no maturity regrade.  \n**Co-owners:** Claude and ChatGPT (PI designation, 18 Oct 2026); v1.7 prepared by Claude, change-focused review by ChatGPT.  \n**Records:** v1.7 release record `records/triad/TRIAD_v1_7_RELEASE_RECORD.md` (written at adoption); stage-1 build `evidence/triad/scripts/build_triad_v1_7_stage1.py` with `records/triad/TRIAD_v1_7_STAGE1_IMPLEMENTATION_MATRIX.md`; stage-2 movement map `evidence/triad/v1.7/movement_map.json`; v1.6.1 adoption and release records `records/triad/OWNER_ADOPTION_v1_6_1.json` and `records/triad/RELEASE_RECORD_v1_6_1.md`.  \n**Evidence location:** the v1.6 accepted evidence package `evidence/accepted_r4_2/` is held by the PI and is **not in the repository**. Relative script, input and evidence paths in §8 refer to that package root unless a repository path is given; the hashes printed there remain the identities. Repository holdings and missing items: `records/triad/TRIAD_SOURCE_RECOVERY_LIST.md`.  \n**Repository:** `rtg-corpus`\n",
+   "note": "row 17: v1.4 header; removed header text (stage-1 status lines, v1.6.1/v1.6 history, draft hashes) is in the stage-1 intermediate and in triad-v1.6.1"
+  },
+  {
+   "id": "S2-M",
+   "op": "replace-section",
+   "class": "history-section",
+   "archive": [
+    "stage1-intermediate",
+    "triad-v1.6.1"
+   ],
+   "start": "### Per-module dispositions (summary; point-of-use text in §§6.4–6.14)",
+   "end": "---\n\n## §7. Import Ledger",
+   "new": "### Per-module dispositions\n\nThe v1.6 per-module disposition table (accepted r4.2 scope) is history and is not repeated here; see §6.18 of `triad-v1.6.1`. Current module status is stated at each point of use (§§6.4–6.14) and in the §2 module records.\n\n",
+   "note": "row 18: v1.6 per-module disposition table (history) relocated; identical bytes in triad-v1.6.1 §6.18"
+  },
+  {
+   "id": "S2-E01",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "· ChatGPT · Gemini · Grok  \n**This edition (v1.7, stage 1):** prepared by Claude from the confirmed co-ow",
+   "new": "· ChatGPT · Gemini · Grok  \n**This edition (v1.7):** prepared by Claude from the confirmed co-ow",
+   "note": "row 18: stage label in the §9 edition line"
+  },
+  {
+   "id": "S2-E02",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate",
+    "triad-v1.6.1"
+   ],
+   "old": "-focused review by ChatGPT; PI adoption pending. **History — v1.6.1 release:** owner release of the co-owner-accepted DRAFT r2 on the PI's authorization of 19 Oct 2026; prepared by Claude, receiving review by ChatGPT; no consumer decision is inferred. **History — v1.6 release:** ChatGPT maintains the adopted v1.6 owner ledger and its evidence package. The accepted r4.2 scientific body is retained; only the metadata/lifecycle changes in `records/METADATA_EDITS.json` and the new release-history entry distinguish this file from the reviewed candidate. The user's immediate-update instruction is the release authorization recorded separately; no additional reviewer signature or consumer decision is inferred.  \n**Source custody:** Triadic owns T-6u's diagn",
+   "new": "-focused review by ChatGPT; PI adoption pending.  \n**Source custody:** Triadic owns T-6u's diagn",
+   "note": "row 18: §9 v1.6.1 and v1.6 release-history spans (in triad-v1.6.1 §9)"
+  },
+  {
+   "id": "S2-E03",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "exact assertion and its numerical corroboration. Section-heading grade suffixes are migrated in stage 2.\n`[DEF]` `[COR]` records a correction, not its r",
+   "new": "exact assertion and its numerical corroboration.\n`[DEF]` `[COR]` records a correction, not its r",
+   "note": "row 19 follow-up: process note made obsolete by stage-1 round 3 (headings done there)"
+  },
+  {
+   "id": "S2-B1",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "archive": [
+    "stage1-intermediate",
+    "triad-v1.6.1"
+   ],
+   "start": "| Historical RID | Original recorded verdict / proposition | Adopted successor and status | Reason |",
+   "end": "`[COR]` **Thread-4 evidence count:**",
+   "new": "`[SUPERSEDED]` [RID: TRIAD-ALG-T6S-INPLANE-CHIRALITY] Original: CLOSED, `[ALG]` with historical exact/conjugate-family wording; unit $+i$ described as the child and unrestricted no-gain inferred.  \nReason: Physical child scaling/sign and coherent-weight domain materially narrow the assertion; conjugate-pair algebra survives. Replacement: `TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY`, `[ALG]`, adopted. Recorded in: v1.6.\n\n`[SUPERSEDED]` [RID: TRIAD-ALG-T6T-CHIRALITY-COUNT] Original: CLOSED, `[ALG]` with historical 3D chirality/apex-independence wording.  \nReason: Three label-sign choices do not establish an independent physical transverse source direction. Replacement: `TRIAD-ALG-T6T-JACOBI-MODE-SIGNS`, `[ALG]`, adopted. Recorded in: v1.6.\n\n`[SUPERSEDED]` [RID: TRIAD-ALG-T6U-APEX-SOURCE] Original: CLOSED, `[ALG]` diagnostic; shear/vector $\\sqrt{21}/64$ used as certified apex source ratio.  \nReason: Four typed leading diagnostics replace the single-source/deficit interpretation; no HINDEX identity. Replacement: `TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC`, `[ALG]`, adopted. Recorded in: v1.6.\n\n",
+   "note": "row 20: v1.6 successor table restated as [SUPERSEDED] template entries; every cell kept verbatim"
+  },
+  {
+   "id": "S2-B2",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "archive": [
+    "stage1-intermediate",
+    "triad-v1.6.1"
+   ],
+   "start": "| Historical/current-use RID | Adopted successor / disposition | Reason |",
+   "end": "`[DEF]` **Historical r3 identities retained for traceability.**",
+   "new": "`[SUPERSEDED]` [RID: TRIAD-ALG-T6M-BIRTH-OBSTRUCTION] Original: current use of the historical proposition under this RID (proposition text in the v1.5 file, not in the repository).  \nReason: Wedge/route obstruction depended on corrected orientation chain; exact reference angle and producer-frame polynomial survive. Replacement: `TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN` `[ALG diagnostic]`. Recorded in: v1.6.\n\n`[SUPERSEDED]` [RID: TRIAD-NUM-T6J2-NO-BASIN] Original: current use of the historical proposition under this RID (proposition text in the v1.5 file, not in the repository).  \nReason: Safe/fatal/no-basin proposition withdrawn; only normalization-conditional excursion remains, terminal event unresolved. Replacement: `TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION` `[NUM]` `[scope: historical root-closed session]`. Recorded in: v1.6.\n\n`[SUPERSEDED]` [RID: none] Original: historical T-6l current use (no result RID).  \nReason: Corrected rate removes the old real root and gives sign-definite leading torsion. Replacement: `TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN` `[ALG]`. Recorded in: v1.6.\n\n`[SUPERSEDED]` [RID: TRIAD-EXPORT-PROTOCOL-1] Original: current use of the historical proposition under this RID (proposition text in the v1.5 file, not in the repository).  \nReason: Historical obstruction/no-basin exports removed; current correction/reference items replace them. Replacement: `TRIAD-EXPORT-PROTOCOL-2` `[DEF]`. Recorded in: v1.6.\n\n`[SUPERSEDED]` [RID: none] Original: T-6e downstream interpretation.  \nReason: Raw determinant extraction retained; normalized-rate identification corrected. Replacement: `TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION` `[ALG diagnostic]`. Recorded in: v1.6.\n\n",
+   "note": "row 20: v1.6 orientation-chain table restated as [SUPERSEDED] template entries; every cell kept verbatim"
+  },
+  {
+   "id": "S2-A",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "archive": [
+    "stage1-intermediate",
+    "triad-v1.6.1"
+   ],
+   "start": "## Appendix A — Version History {#appendix-a}",
+   "end": "## Appendix B — Retired and Rejected Claims {#appendix-b}",
+   "new": "## Appendix A — Version History {#appendix-a}\n\n### v1.7 — 2 November 2026 — DRAFT (adoption pending)\n- **§6.18, §6.4, §1 [COR, scope]:** the off-root extension of the §6.4 coefficients is not unique; $f_s$, $f_c$ are stated for both root-equivalent extensions; $D=\\mathcal G/Q_s$ is a first integral in the $Q_c$-free extension and has $\\dot D=r\\,q_1D$ in the literal one (ODE-scope remark, no RID); domain and the six-step-block ODE clock stated. Reason: the displayed $\\Delta Q_c^{(1)}$ carries $Q_c$.\n- **§6.18 [scope]:** `TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION` typed as the first-variation (degree-3) coefficient of $\\Delta\\mathcal G\\equiv0$; RID kept.\n- **§6.9 [corollary, no RID]:** coercive bound $6(\\sqrt3-1)K\\le A_\\theta^{\\rm corr}\\le6(\\sqrt3+1)K$ inside `TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN`.\n- **§2 [scope]:** `TRIAD-OPEN-T6R` acceptance contract C1–C6; `TRIAD-OPEN-T6Q` coordinate sign table, labelled bookkeeping.\n- **§1 [scope]:** the 96:1 status stated once, with the metric-dictionary caveat.\n- **§7 [currency]:** claim-level repins (Dyadic v6.4.23, Genesis v2.9, Programme v1.3, OFN v0.12, RRF v0.8.4, TDR-G v2.12.14; two pins held); per-recipient consumer matrix; stale handoff queue and receipt paragraph removed.\n- **§9, §6 headings, Appendix B [form, scope]:** identifier set stated (46 RIDs); compound tags unpacked; release labels removed from qualifiers; heading grades normalized; current classification of the v1.5 negative records; two Appendix B tables restated in the v1.4 template.\n- **Header, Appendix A, footer [layout]:** Methodology v1.4 header; one entry per edition; single footer; the v1.6 per-module disposition table relocated.\n- Release record: `records/triad/TRIAD_v1_7_RELEASE_RECORD.md` (at adoption). Predecessor: `triad-v1.6.1`.\n\n### v1.6.1 — 19 October 2026 — ADOPTED\n- Birth-remainder scope correction (D3, D3-R1), receiving-review corrections (H-R1, H-R2), source sync (E1), consumer synchronization notices. Release record: `records/triad/RELEASE_RECORD_v1_6_1.md`. Full entry and draft rounds: Appendix A of `triad-v1.6.1`.\n\n### v1.6 — 5 October 2026 — ADOPTED\n- T-6s/t/u successor identities; recovered-producer orientation-normalization correction and model-contract separation; historical phase chain narrowed. Drafts r1–r4.2: Appendix A of `triad-v1.6.1`.\n\n### v1.5 — June 2026\n- T-6u apex source ratio added; isometric apex-lift model rejected as a physical source estimate.\n\n### v1.4 — June 2026\n- T-6s and T-6t certificates added.\n\n### v1.3 — June 2026\n- T-6j2 and T-6p closed; SG-14 added.\n\n### v1.2 — June 2026\n- T-6m convention annotation; exact torsion-turn root.\n\n### v1.1 — June 2026\n- T-6m birth-policy phase-angle audit incorporated.\n\n### v1.0 — June 2026\n- Safety-wedge renaming and sufficiency caveat.\n\n### v0.15 — May 2026\n- T-6d through T-6l incorporated.\n\n### v0.14 and earlier\n- T-6a through T-6k incorporated progressively; the global $K_3$ explosiveness overclaim introduced and revoked.\n\nThe full text of every entry above is in Appendix A of `triad-v1.6.1`.\n\n",
+   "note": "row 20: one compact entry per edition; full v1.6.1-and-earlier text in triad-v1.6.1 Appendix A"
+  },
+  {
+   "id": "S2-F",
+   "op": "replace-footer",
+   "class": "presentation",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "new": "*END OF DOCUMENT — RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 — DRAFT, stage-2 candidate; adoption pending; `triad-v1.6.1` governs until adoption and tag.*\n",
+   "note": "row 22: single footer"
+  }
+ ]
+}

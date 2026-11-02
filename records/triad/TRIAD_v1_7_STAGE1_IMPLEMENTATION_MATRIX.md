@@ -69,3 +69,27 @@ Rows 16–18, 20, 22 and the movement part of row 21 are stage 2; rows 18, 19 an
 ## Merge chain (R140-F2)
 
 PR #139 cites the ChatGPT disposition of PR #137, so #137 is part of the chain. The reconciliation branch (#139) now contains #137 (merge commit `1e064d6`), and this branch contains both. Merge order for the PI: **#137 and #138 (either order) → #139 → #140.** A merge is not adoption.
+
+## Stage 2 (layout only), 2 November 2026
+
+| Object | Identity |
+|---|---|
+| Base | stage-1 intermediate `evidence/triad/v1.7/stage1_intermediate.md`, SHA-256 `b47d294d9dc82b78f05e02c99e04100177c78480c453438d5d4fca86e14ba66a` (round 3) |
+| Builder | `evidence/triad/scripts/build_triad_v1_7_stage2.py` (9 operations) |
+| Movement map | `evidence/triad/v1.7/movement_map.json`; archives: the stage-1 intermediate and `triad-v1.6.1` |
+| Candidate | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md`, SHA-256 `2573961a82ce10a348f76f10feece6fefb3831f3c4dd60de5dcae78acb745c0d` (1,117 lines; −28,943 bytes, −16.3 %) |
+| `tools/check_compaction.py` | PASS: re-derivation exact; 256 claim blocks, 241 byte-identical, 15 changed by declared operations, 0 unexplained; RIDs, anchors, source hashes and qualifiers preserved; references resolve; one predecessor, one footer (`check_compaction_output.txt`, `check_compaction_report.json`) |
+| Owner guards | `evidence/triad/scripts/check_triad_v1_7_stage2.py`: G0–G9 ALL PASS; 11 fixtures ALL CAUGHT (`stage2_check_output.txt`) |
+| Generic harness | `tools/test_check_compaction.py` reports 5/16 rejected and 11 NOT APPLICABLE: its controls are written against Dyadic text patterns that do not occur in Triadic. As in OFN v0.11, the study-specific fixtures above replace it; output kept in `tool_harness_generic_output.txt` |
+
+| Row | Operation | What moves | Where the bytes are |
+|---|---|---|---|
+| 17 | S2-H replace-header | v1.4 header: one field per line, scientific Scope, one predecessor and hash, Records line, Repository; status summary drawn only from base header-summary and §1 sentences (profile `summary_from: header, section1`) | stage-1 intermediate; `triad-v1.6.1` |
+| 18 | S2-M history-section | §6.18 "Per-module dispositions" v1.6 table → pointer to `triad-v1.6.1` §6.18 | both archives |
+| 18 | S2-E01, S2-E02 history-removal | §9 ", stage 1" label; §9 "History — v1.6.1 release" and "History — v1.6 release" spans | stage-1 intermediate (and `triad-v1.6.1` for S2-E02) |
+| 19 | S2-E03 history-removal | aliases note "heading grade suffixes are migrated in stage 2" (headings were done in stage-1 round 3) | stage-1 intermediate |
+| 20 | S2-B1, S2-B2 history-appendix | the two Appendix B tables restated as `[SUPERSEDED]` template entries; every cell verbatim (guard G6); rows without an RID marked `[RID: none]` | both archives |
+| 20 | S2-A history-appendix | Appendix A: one compact entry per edition; v1.7 entry added; full v1.6.1-and-earlier text by pointer to `triad-v1.6.1` | both archives |
+| 22 | S2-F replace-footer | one footer line | stage-1 intermediate |
+
+Profile calibration declared in the map: `history_words` = "History —", "stage 1", "stage 2"; no extra reference words. Not done in stage 2: the `[DEF]`-tagged R3 and R4.2 addenda in §8 and the "Evidence history" paragraph in §9 stay (they carry claim tags or provenance, and Methodology §9 asks for provenance); the qualifier-syntax half of row 19 (above); row 29 (DEFER, PR #113 open).
