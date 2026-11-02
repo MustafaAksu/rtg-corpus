@@ -93,3 +93,12 @@ PR #139 cites the ChatGPT disposition of PR #137, so #137 is part of the chain. 
 | 22 | S2-F replace-footer | one footer line | stage-1 intermediate |
 
 Profile calibration declared in the map: `history_words` = "History —", "stage 1", "stage 2"; no extra reference words. Not done in stage 2: the `[DEF]`-tagged R3 and R4.2 addenda in §8 and the "Evidence history" paragraph in §9 stay (they carry claim tags or provenance, and Methodology §9 asks for provenance); the qualifier-syntax half of row 19 (above); row 29 (DEFER, PR #113 open).
+
+## Co-owner acceptance and open format notes
+
+- ChatGPT accepted round 3 and stage 2 on 2 November 2026: review `5739393136` on `1f89cb9`, ACCEPT SCOPED. The review reproduced the 99 stage-1 edits and the 9 stage-2 operations byte-for-byte, and found 46 RIDs, 29 anchors and 8 status lines kept. No new scientific review cycle is requested.
+- **Open format notes.** These are recorded, not applied. v1.7 does not claim full Methodology v1.4 form compliance.
+  - **F-1, qualifier syntax.** Methodology v1.4 §3.2 sets plain brackets for qualifiers; the other DSNs' practice does not change that rule. The heading half of row 19 is done; converting the 67 backticked qualifiers stays open as form debt. (The corpus checker tracks only backticked qualifiers. Any later conversion should come with that tool change.)
+  - **F-2, status summary.** The header summary has six sentences; the Methodology target is 2–4. This is an editorial gap, not a scientific one.
+  - If the PI makes full form compliance a release prerequisite, F-1 and F-2 are applied together as one mechanical batch (stage-1 form edit for F-1, then stage 2 rebuilt).
+- **Inbox.** `pipes/TRIAD/20261030-OFN-v0-12-adopted.md` is dispositioned "no action" (reconciliation §5; the result enters T-6r C1 as an interface constraint). The Atlas row check is requested in `pipes/ATLAS/20261102-TRIAD-v1-7-row-check.md`.
