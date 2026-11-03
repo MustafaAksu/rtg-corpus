@@ -1,0 +1,8 @@
+[PASS] T0 transcription anchors present in the given Genesis file
+[PASS] CONV B offdiag=-1/2; J_Q^2=-I; a^T B J_Q b = (√3/2)ω_ab
+[PASS] G1 Σ_j L^(5-j) F2(L^j Z) = 0 for generic quadratic F2 (126 coefficients); A^6=I: True
+[PASS] G7a cubic part 2d^T B G2,d; quartic part 2d^T B G3,d + Q(G2,d); with G2=0 quartic = 2d^T B G3,d
+[PASS] G7b ½B⁻¹∇_d𝒫₄|_{d=0}: Q(V^[s³]) = 7/1024 Q_s³, Q(V^[c³]) = 61/34992 Q_c³ (printed seeds)
+[PASS] G8 I_ds^(1) = ω_ds^(1) = -Q_s²/16; D_birth^[s³] = 2Q(V_s) = 7/512 Q_s³
+
+6/6 gates PASS
