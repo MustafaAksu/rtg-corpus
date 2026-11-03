@@ -4,4 +4,4 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| 2026-11-03 | DYAD | notice | open | report of use — LIT finding on the LH2012 summability chain (INF-005 to INF-008 at rtg-lit 44bad61d81af2f970b13368a8b7da87b9721442d) | — | `20261103-DYAD-lh2012-use-report.md` |
+| 2026-11-03 | DYAD | notice | closed | report of use — LIT finding on the LH2012 summability chain (INF-005 to INF-008 at rtg-lit 44bad61d81af2f970b13368a8b7da87b9721442d) | — | `20261103-DYAD-lh2012-use-report.md` |
