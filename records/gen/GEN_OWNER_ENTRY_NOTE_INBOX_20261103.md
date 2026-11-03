@@ -36,8 +36,8 @@ The details, line references and the Atlas's derivation for G7 are in `records/g
 
 ## 4. Points that need the owners' own judgement
 
-- **G7.** Confirm the derivation. Then choose the grade (`[ALG]` derivation or `[THM]` with the §6.4 premises) and the form: a separate RID, or a line within the `GEN-THM-DELTA-QC` family. The Atlas checked the premises' consistency, not the census computation (whose source is `[custody-A]`, F14).
-- **G8.** Which grade governs, `[THM]` (§6.6 L987) or `[ALG]` (§1 L80, §2 L419, §8 L1246)? It depends on whether the s³-seed evaluation is regarded as a proof under explicit assumptions or as an exact derivation. Give the result a RID and let the §8 artifact row point to it.
+- **G7.** Confirm the derivation. Write it with the general cubic term 2dᵀBG₂,d shown before setting G₂ = 0 (advisory §6, as revised). Then choose the grade (`[ALG]` derivation or `[THM]` with the §6.4 premises) and the form: a separate RID, or a line within the `GEN-THM-DELTA-QC` family. The Atlas checked the premises' consistency, not the census computation (whose source is `[custody-A]`, F14).
+- **G8.** Which grade governs, `[THM]` (§6.6 L987) or `[ALG]` (§1 L80, §2 L419, §8 L1246)? It depends on whether the s³-seed evaluation is regarded as a proof under explicit assumptions or as an exact derivation. Give the result a RID. The §8 artifact row bundles three statements and does not inherit the claim's grade; it points to the result RIDs it supports.
 - **G6, the import grade.** Genesis writes owner `[ALG]` imports as `[CAND]`. Methodology v1.4 §3.3 has the import line carry the source grade, with any local reinterpretation as a separate claim. Choose one of:
   - **(a)** import at `[ALG]` with Genesis's scope qualifiers;
   - **(b)** a separate Genesis `[CAND]` interface statement over an `[ALG]` import line.

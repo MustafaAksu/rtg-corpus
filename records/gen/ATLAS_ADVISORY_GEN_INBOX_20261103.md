@@ -81,9 +81,15 @@ No compaction is needed.
 - B-isometric A (`GEN-THM-PRIMITIVE-METRIC-INVARIANCE`);
 - G₂=0 (§6.4 [THM], L915).
 
-Then
+Then, writing d′ = d + G₂,d(Z) + G₃,d(Z) + O(‖Z‖⁴), in general
 
-  Q_d(d′) − Q_d(d) = 2dᵀB·G₃,d(Z) + Q(G₂,d) + O(‖Z‖⁵) = 2dᵀB·G₃,d(Z) + O(‖Z‖⁵).
+  Q_d(d′) − Q_d(d) = 2dᵀB·G₂,d(Z) + [2dᵀB·G₃,d(Z) + Q(G₂,d(Z))] + O(‖Z‖⁵),
+
+with the cubic term first and the quartic bracket second. With G₂ = 0, the cubic term and Q(G₂,d) both vanish:
+
+  Q_d(d′) − Q_d(d) = 2dᵀB·G₃,d(Z) + O(‖Z‖⁵).
+
+(Rev. of 3 Nov 2026: the general cubic term 2dᵀBG₂,d was missing from the first expansion. ChatGPT, Atlas co-owner, PR #152 comment `6598961683`. The result under G₂ = 0 is unchanged.)
 
 So the quartic six-step drift **is** 2dᵀBG₃,d, by the same derivation as the printed c-mode identity. This is also how Genesis uses it. GEN-ART-G3D-SEED (L1244) and the T-6u block (L364: V_s:=G₃,d^[s³](s,0,0)) take the apex seed as G₃,d(s,c,0). That equals ½B⁻¹∇_d𝒫₄ at d=0 under the identity, which is Triadic's V_d.
 
@@ -110,7 +116,7 @@ The result has no own RID (Atlas F13 lists it among the unnumbered Genesis THMs)
 - The §1 and §2 lines record the v2.2 promotion step. The §8 row grades one artifact that bundles three statements.
 - Under Methodology v1.4, `[THM]` is a complete proof under explicit assumptions and `[ALG]` an exact derivation. The §6.6 values are an exact evaluation from the certified s³ seed. Either grade can be defended, depending on whether Genesis regards the seed derivation as a proof.
 
-**Proposal.** One grade at all four sites, and a RID for the result. The §8 artifact row then names the result RID it supports, instead of grading the bundle.
+**Proposal.** Decide the grade of the birth-symmetry claim first, and use it at §6.6, §1 and §2. Give the result a RID. The §8 artifact row `GEN-ART-JQ-PHASEDRIFT` bundles three statements (corrected J_Q, birth symmetry, phase-drift law), so it does not inherit the claim's grade automatically. The row keeps its own artifact typing and names the result RIDs it supports (PR #152 comment `6598961683`).
 
 Triadic imports it at the §6.6 grade and records the discrepancy (v1.7 §7.2). It follows whatever Genesis fixes.
 
