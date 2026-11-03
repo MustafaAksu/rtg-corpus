@@ -13,6 +13,9 @@ Commands (run from repository root; Windows PowerShell):
   python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --self-test
   python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --out prep.json
   python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --control wrong-alpha
+  python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --control wrong-root
+  python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --control wrong-tail
+  python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --control degree2
 
 Requires: python -m pip install mpmath
 """
@@ -155,10 +158,48 @@ def weighted_tail(q, n):
                        2 * (n + 1) * q / (1 - q) ** 3))
 
 
+def verify_exact_quadratic_return(inject=False):
+    """Exact degree <=2 composition of the primitive T six times, over Q.
+
+    T(x) = A x + (0, rho^2/2) + O(3), with
+    A = [[1,-1],[1,0]]. Linear/quadratic composition uses
+    Q_{n+1} = A Q_n + (0,(L_n,rho)^2/2), L_{n+1}=A L_n.
+    Every quadratic coefficient in F=T^6 is zero in the real
+    (rho,eta) frame and hence in the linear (z,w) frame.
+
+    The negative 'degree2' control introduces a nonzero quadratic
+    coefficient into the supposed return-jet input to this gate.
+    """
+    lr, le = (1, 0), (0, 1)
+    qr, qe = [Fraction(0)] * 3, [Fraction(0)] * 3
+    for _ in range(6):
+        a, b = lr
+        quadratic = [Fraction(a*a,2), Fraction(a*b), Fraction(b*b,2)]
+        qr, qe = ([qr[i]-qe[i] for i in range(3)],
+                  [qr[i]+quadratic[i] for i in range(3)])
+        lr, le = (lr[0]-le[0], lr[1]-le[1]), lr
+    if inject:
+        qr[0] += Fraction(1,7)
+    if lr != (1,0) or le != (0,1) or any(qr) or any(qe):
+        raise ValueError('G_F2: exact six-step quadratic return is not zero')
+    return True
+
+
+def validate_alpha(alpha):
+    """Check the normalized alpha against the pinned Stage-1 algebraic value."""
+    expected = -cf(102)/19 - cf(16)/19*iv.j*iv.sqrt(3)
+    if not certain_lt(abs(alpha-expected), cf('1e-45')):
+        raise ValueError('G_ALPHA: normalized alpha differs from Stage-1')
+    return True
+
+
 def jet_majorants(d, z, v, raw_R, sup_diff, njet=7):
     """Absolute analytic bound for J_d(z,v)=(F_component(z,z^2*v)-linear)/z^d,
-    and the partial derivatives in (z,v). The exact Stage-1 S3 zero gates
-    prove that every excluded monomial (p+2q<d) has coefficient zero.
+    and the partial derivatives in (z,v). Stage-1 S3 establishes weighted
+    leading-order divisibility; the separately checked exact Q-coefficient
+    recurrence verify_exact_quadratic_return() certifies absence of *all*
+    degree-2 return terms. Together these justify starting at n=3.
+    Source: primitive T, with A and the quadratic term given above.
 
     The global Cauchy estimate is |c_pq| <= sup_diff/raw_R**(p+q).
     No Taylor polynomial is substituted for the actual analytic function.
@@ -198,7 +239,7 @@ def inverse_branch_bounds(raw_R, inverse_R, sup_diff):
             'warning': 'Target radius rounded downward from a validated interval; normalized inverse bounds not established.'}
 
 
-def interval_constants():
+def interval_constants(root_choice='pilot'):
     """Enclose a_pil, c, b1, alpha via exact algebraic defining relations."""
     I = iv.j
     root3 = iv.sqrt(3)
@@ -213,15 +254,18 @@ def interval_constants():
     dr, di = discr.real, discr.imag
     dabs = iv.sqrt(dr * dr + di * di)
     dsqrt = iv.mpc(iv.sqrt((dabs + dr) / 2), iv.sqrt((dabs - dr) / 2))
-    a = (-B - dsqrt) / (2 * A)
+    if root_choice not in ('pilot','other'):
+        raise ValueError('unknown exact-root choice')
+    a = (-B - dsqrt) / (2 * A) if root_choice == 'pilot' else (-B + dsqrt) / (2 * A)
     ell = C40 + MU * a
     c = iv.exp(iv.log(-ell) / 3)  # principal cube root, |arg(-ell)| < pi
     b1 = (1 - I * root3) * (cf(1) / 108 - a / 6)
     alpha = -cf(102) / 19 - cf(16) / 19 * I * root3
     if not certain_gt(a.imag, cf(0)):
-        raise ValueError('selected root does not have positive imaginary part')
+        raise ValueError('G_ROOT: selected root does not have positive imaginary part')
     if not certain_gt(abs(c), cf(0)):
         raise ValueError('horizontal rescaling not invertible')
+    validate_alpha(alpha)
     return a, b1, c, alpha
 
 
@@ -292,7 +336,7 @@ def derive_bounds(params):
     return result, (K1,K2,K3,K4,Psi), (a,b1,c,alpha)
 
 
-def forward_analytic_gates(Ks, alpha, inner_x, inner_y, tail_N=10000):
+def forward_analytic_gates(Ks, alpha, inner_x, inner_y, tail_N=10000, legacy_tail=False):
     """Sufficient E3/E4 template inequalities, forward map only.
 
     Deliberately returns NOT_CERTIFIED: these conservative constants still
@@ -357,8 +401,19 @@ def forward_analytic_gates(Ks, alpha, inner_x, inner_y, tail_N=10000):
                 raise ValueError('tail N must be >=2')
             D1=u(factor*h(cf(1))*C**(s/k)/(s-k))
             D2=u(factor*h(cf(2))*C**(s/k)/(s-k))
+            # INF-010 Claim 5: the exponent on the base is (s-k)/k,
+            # not s/k. Independently evaluate the optimizing t* of
+            # t^(1/k) (1+k(N-1)t)^(1-s/k); an underestimated tail
+            # must fail the numeric gate (control 'wrong-tail').
+            base = u((s-k-1)/(s-k))
+            exponent_tail = s/k if legacy_tail else (s-k)/k
             tail_shape=u((k*(tail_N-1)*(s-k-1))**(-cf(1)/k) *
-                         ((s-k-1)/(s-k))**(s/k))
+                         base**exponent_tail)
+            ct = cf(k*(tail_N-1))
+            tstar = u(1/(ct*(s-k-1)))
+            actual_max = u(tstar**(cf(1)/k)*(1+ct*tstar)**(1-s/k))
+            if certain_lt(tail_shape*(1+cf('1e-25')), actual_max):
+                raise ValueError('G_E5: computed uniform-tail bound is non-conservative')
             return {
               'forward_inequalities_satisfied':True,
               'rho_lower':lower_decimal(rho), 'delta_lower':lower_decimal(delta),
@@ -369,8 +424,8 @@ def forward_analytic_gates(Ks, alpha, inner_x, inner_y, tail_N=10000):
               'E5_uniform_tail_N':tail_N,
               'E5_uniform_tail_coefficient_D1_upper':upper_decimal(D1),
               'E5_uniform_tail_coefficient_D2_upper':upper_decimal(D2),
-              'E5_uniform_tail_U1_upper':upper_decimal(D1*tail_shape),
-              'E5_uniform_tail_U2_upper':upper_decimal(D2*tail_shape),
+              'E5_uniform_tail_U1_upper':upper_decimal(D1*tail_shape, 15),
+              'E5_uniform_tail_U2_upper':upper_decimal(D2*tail_shape, 15),
               'radius_shrink_power10':iteration,
               'qualification':'Conservative forward-template bounds only. This computation is not owner-reviewed; inverse-normalized petals not included.',
             }
@@ -401,6 +456,7 @@ def self_test():
     t=geometric_tail(cf('0.1'),8)
     assert t > cf('0.00000008')
     first=local_sanity()
+    verify_exact_quadratic_return()
     a,b1,c,alpha=interval_constants()
     assert certain_gt(a.imag,cf(0))
     assert certain_lt(abs(a),cf('0.2'))
@@ -409,30 +465,39 @@ def self_test():
     return dict(first,positive_branch=True, interval_tail=True)
 
 
-def negative_control(name):
-    """Each negative control MUTATES an input and verifies the associated gate fails."""
-    a,b1,c,alpha=interval_constants()
-    if name=='wrong-root':
-        # The second root has Im(a)<0; the selection gate must reject it.
-        other = iv.mpc(cf('0.0576581109782093668110'),cf('-0.00415587935301355719'))
-        failed = not certain_gt(other.imag, cf(0))
-    elif name=='wrong-alpha':
-        mutated=alpha+cf(1)/7
-        failed=certain_gt(abs(mutated-alpha),cf(0))
-    elif name=='wrong-log':
-        x=mp.mpf('0.0001')*mp.exp(2*mp.pi*mp.j/3)
-        fx=x*(1-x**3) # exact model, remains in the j=1 petal
-        correct=(mp.log(x)+2*mp.pi*mp.j)-(mp.log(fx)+2*mp.pi*mp.j)
-        wrong=(mp.log(x)+2*mp.pi*mp.j)-mp.log(fx)
-        intended=mp.log(1-x**3)
-        failed=(abs(correct+intended)<mp.mpf('1e-65') and abs(wrong+intended)>1)
-    elif name=='jet-only':
-        # Guard a mutated substitution engine: no truncated jet may stand for F.
-        candidate_source='degree7_jet'
-        failed=candidate_source != 'full_T6'
-    else: raise ValueError('unknown control')
-    if not failed: raise AssertionError('negative control failed to detect mutation')
-    return {'control':name,'gate':'FAIL_EXPECTED','Stage3':'NOT_CERTIFIED'}
+def negative_control(name, stage1_path, params, tail_N):
+    """Perturb actual preflight inputs and require the matching check to fail.
+
+    This is an expected rejection, NOT a tautological control return.
+    The full positive path also checks the same source/root/alpha/F2/E5
+    invariants. A mutation not detected by its assigned gate raises an
+    exception and exits 3, so it cannot masquerade as a passed control.
+    """
+    stage1_source(stage1_path)    # real evidence identity check
+    expected = {
+      'wrong-root': 'G_ROOT', 'wrong-alpha': 'G_ALPHA',
+      'wrong-tail': 'G_E5', 'degree2': 'G_F2'
+    }[name]
+    try:
+        if name == 'wrong-root':
+            interval_constants(root_choice='other')
+        elif name == 'wrong-alpha':
+            a,b1,c,alpha=interval_constants()
+            validate_alpha(alpha+cf(1)/7)
+        elif name == 'degree2':
+            verify_exact_quadratic_return(inject=True)
+        elif name == 'wrong-tail':
+            verify_exact_quadratic_return()
+            bounds, Ks, alg = derive_bounds(params)
+            forward_analytic_gates(
+                Ks,alg[3],cf(params['inner_xi_radius']),
+                cf(params['inner_Y_radius']),tail_N,legacy_tail=True)
+    except ValueError as exc:
+        if not str(exc).startswith(expected+':'):
+            raise
+        return {'control':name,'gate':expected,'result':'FAIL_EXPECTED',
+                'Stage3':'NOT_CERTIFIED'}
+    raise AssertionError('negative control did not trigger '+expected)
 
 
 def main():
@@ -440,7 +505,7 @@ def main():
     ap.add_argument('--self-test',action='store_true', help='bounded structural smoke checks; no certification campaign')
     ap.add_argument('--stage1',default='evidence/dyad/open20-an/stage1_prep.json')
     ap.add_argument('--out',default='dyad_open20_an_bounds_preflight.json')
-    ap.add_argument('--control',choices=['wrong-alpha','wrong-root','wrong-log','jet-only'])
+    ap.add_argument('--control',choices=['wrong-alpha','wrong-root','wrong-tail','degree2'])
     ap.add_argument('--tail-N',type=int,default=10000)
     ap.add_argument('--raw-cauchy-radius',default='0.002')
     ap.add_argument('--raw-inverse-radius',default='0.000000001')
@@ -449,14 +514,15 @@ def main():
     ap.add_argument('--inner-xi-radius',default='0.000000001')
     ap.add_argument('--inner-Y-radius',default='0.0001')
     opt=ap.parse_args()
+    config={k:getattr(opt,k) for k in ['raw_cauchy_radius','raw_inverse_radius','outer_xi_radius','outer_Y_radius','inner_xi_radius','inner_Y_radius']}
     if opt.control is not None:
-        print(json.dumps(negative_control(opt.control),sort_keys=True))
+        print(json.dumps(negative_control(opt.control,opt.stage1,config,opt.tail_N),sort_keys=True))
         return 1
     if opt.self_test:
         print(json.dumps({'self_test':'PASS','checks':self_test(),'Stage3':'NOT_CERTIFIED'},sort_keys=True))
         return 0
     sourcehash=stage1_source(opt.stage1)
-    config={k:getattr(opt,k) for k in ['raw_cauchy_radius','raw_inverse_radius','outer_xi_radius','outer_Y_radius','inner_xi_radius','inner_Y_radius']}
+    verify_exact_quadratic_return()   # exact gate: every degree-2 monomial of F=T^6 vanishes
     bounds, Ks, alg = derive_bounds(config)
     forward = forward_analytic_gates(Ks, alg[3], cf(config['inner_xi_radius']), cf(config['inner_Y_radius']), opt.tail_N)
     result={
@@ -465,6 +531,7 @@ def main():
       'E3_E4':'NOT_CERTIFIED','E5_E6_E7':'NOT_CERTIFIED',
       'stage1_sha256':sourcehash,'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
       'parameters':config,'bounds':bounds,
+       'exact_quadratic_return_zero_checked':True,
       'forward_template':forward,
       'limitations':[
          'Requires review of conservative Cauchy envelopes before scientific use',
