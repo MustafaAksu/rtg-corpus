@@ -62,7 +62,11 @@ A notice records four separate states per recipient: sent, received, statement a
 
 *In force from the merge of the pull request that introduced it.*
 
-**What it is.** External literature used by RTG is kept in the private repository `MustafaAksu/rtg-lit` ("LIT"; access: PI, Claude, ChatGPT). Its rules are in `rtg-lit/CONVENTIONS.md`. For each source it holds a bibliographic record with a hash, a checked transcription, a claim index with per-claim validation events, and cross-source inference records (`INF-…`). It also holds screening notes, a backlog and prior-art records. Everything in LIT is `[SESSION]`-level and noncanonical. A source's "Theorem" is the source's claim, and a LIT event (`rederived`, `external_checked`, …) is not an RTG grade.
+**What it is.** External literature used by RTG is kept in the private repository `MustafaAksu/rtg-lit` ("LIT"; access: PI, Claude, ChatGPT). Its rules are in `rtg-lit/CONVENTIONS.md`. For each source it holds a bibliographic record with a hash, a transcription of the taken parts, a claim index with per-claim validation events, and cross-source inference records (`INF-…`). It also holds screening notes, a backlog and prior-art records.
+- A transcription is co-owner-checked only where the source record says so. A `candidate` or `partial` source does not imply a checked transcription of the whole work.
+- LIT's assessments, inferences and validation events are `[SESSION]`-level and noncanonical.
+- A source's own statements keep their own status as the source's claims: a source's "Theorem" is the source's claim.
+- A LIT event (`rederived`, `external_checked`, …) is not an RTG grade.
 
 **Channel.** LIT and the streams exchange pipe items (`pipes/README.md`, service key `LIT`):
 - LIT files `finding`/`offer`/`notice` items into `pipes/<STREAM>/`;
@@ -73,7 +77,7 @@ The receiver decides, as for any item. Before presenting a mathematical statemen
 **Disclosure.** `rtg-corpus` is public. A pipe item or DSN may name a source only if its LIT record says `disclosure: citable`. It never reproduces a source's full text or substantial excerpts, whatever the source's `copy` status. For any other source nothing is filed here, not even its LIT-ID: the notice stays in `rtg-lit/notices/<STREAM>/` and the PI relays it once disclosure is cleared.
 
 **Citing a LIT-supplied result in a DSN.**
-- **The DSN cites the published work.** It cites the author, title, venue, DOI and the source's own label, never a LIT file.
+- **The DSN cites the work itself.** That is the published article, or a citable preprint (e.g. arXiv with version), by author, title, venue or repository identifier, DOI where one exists, and the source's own label. Never a LIT file.
 - **Grade.** The importing stream grades the result itself, e.g. `[MATH]` for established background (Methodology §8.4 local alias) or source-reported if its proof was not checked.
 - **Import Ledger.** The row uses the §4.3 format with the published citation in place of a source DSN:
   - `Source status:` the source's own claim status;
@@ -81,7 +85,7 @@ The receiver decides, as for any item. Before presenting a mathematical statemen
 
   The rtg-lit commit is for traceability only. LIT's checks inform the stream's grading; they do not replace it.
 
-**Release records.** A release that uses a LIT-supplied result adds one line: `LIT dependencies: <LIT-ID>@<version>:<label> (disclosure: citable | confidential | unknown), …` or `LIT dependencies: none`. A dependency that is not `citable` holds the dependent part until the PI clears disclosure (`rtg-lit/CONVENTIONS.md` §9).
+**Release records.** A release that uses a LIT-supplied result adds one line, `LIT dependencies: <LIT-ID>@<version>:<label>, …`, or `LIT dependencies: none`. The line lists **only** `citable` dependencies. A dependency that is `confidential` or `unknown` is never named in `rtg-corpus`, not even by its LIT-ID: it is recorded only in LIT's private records. The part of the release that depends on it is held back until the PI clears disclosure (`rtg-lit/CONVENTIONS.md` §9).
 
 **Feedback.** When a stream uses, verifies or refutes a LIT result, it says so in a `to: LIT` item pointing to its record. LIT then records the corresponding event (`stream_used`, `stream_verified`, `issue`) on the source claim.
 
