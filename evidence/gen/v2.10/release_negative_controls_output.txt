@@ -1,0 +1,25 @@
+RC1 wrong input (one byte prepended to the candidate): must be refused
+AssertionError: input is not the reviewed candidate b1666ef0…8c1f
+exit=1
+
+RC2 footer date tampered in the published file: P2, P3, P4 must fail
+[FAIL] P2 TRANSFORM
+[FAIL] P3 DECLARED LINES (3 changed: status, appA, footer; Date line = 3 November 2026)
+[FAIL] P4 REVERSE
+3/6 gates PASS; published 2b4fc0b4def5a8ab92037e5aa5d059a1724228f34b5b4e2796ed9ea50bc0ae1c
+exit=1
+
+RC3 undeclared header edit (Scope line): P2, P3, P4 must fail
+[FAIL] P2 TRANSFORM
+[FAIL] P3 DECLARED LINES (4 changed: status, appA, footer; Date line = 3 November 2026)
+[FAIL] P4 REVERSE
+3/6 gates PASS; published d190c8f7fe06b968675d6b6b39b656a1358b5d1bbfc2d058d0a90ccecd4f9231
+exit=1
+
+RC4 Appendix A heading left as candidate: P2, P3, P5 must fail
+[FAIL] P2 TRANSFORM
+[FAIL] P3 DECLARED LINES (2 changed: status, appA, footer; Date line = 3 November 2026)
+[FAIL] P4 REVERSE
+[FAIL] P5 NO CANDIDATE MARKER
+2/6 gates PASS; published a0db3a4049d3d303ce24d556b0ec75572ffd11c2b4bfd7d33acb2fc0b776e181
+exit=1

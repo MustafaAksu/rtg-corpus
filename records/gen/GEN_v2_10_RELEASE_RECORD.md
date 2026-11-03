@@ -1,10 +1,10 @@
-# Genesis Geometry v2.10 — Release Record (DRAFT)
+# Genesis Geometry v2.10 — Release Record
 
-**Status:** DRAFT. **Not adopted.**
-- The content stage is built: one stage, no compaction.
-- Round 2 applies R1 of the co-owner review.
-- It awaits the Atlas row check.
-- The governing edition remains v2.9 (`gen-v2.9`, `9178ca2c…00ac`).
+**Status:** **ADOPTED — PI, 3 November 2026** ("ben de benimsiyorum").
+- Adopted payload: candidate `b1666ef03aa150f19771189a42ec362b7332316bc25fb3f26f0df0e39e878c1f` (PR #162 at `262fe58`).
+- Published file after the status-only publication transform (§8): **`63c3b020d9c63a43a2e5e9a43c411fad2d07dfcab33995bd928683435bb13d62`**.
+- Reviews are complete (§6): the ChatGPT co-owner accepted with R1, and R1 is applied; the Atlas row check is PASS SCOPED.
+- The merge commit and the annotated tag `gen-v2.10` are the PI's (§8). Until the tag exists, `gen-v2.9` (`9178ca2c…00ac`) is the latest tagged edition.
 
 **Owner session:** Genesis co-owner (Claude), 3 November 2026.
 
@@ -101,7 +101,13 @@ The recorded run above is after both fixes.
 ## 6. Reviews
 
 - **ChatGPT co-owner: done.** Review `5751351272` at `1acef8b`, ACCEPT WITH R1 CORRECTION; R1 applied in round 2.
-- **Atlas row check: pending.** A targeted check of the round-2 candidate.
+- **Atlas row check: done.** `records/gen/ATLAS_ROW_CHECK_GEN_v2_10.md` (PR #164), on the round-2 candidate `b1666ef0…8c1f` at `262fe58`: **PASS SCOPED, no Atlas-row blocker.**
+  - Independent reruns: the build is byte-identical (candidate and edit log); checker 16/16; controls 11/11, each caught at its own content gate.
+  - `gen_inbox_checks.py` gives 6/6 on both v2.9 and the candidate.
+  - An Atlas-owned sympy recomputation of ½B⁻¹∇_d𝒫₄ from the printed §6.5 polynomial reproduces Q(V_s) = 7/1024·Q_s³, I = ω = −Q_s²/16 and Q(V_c) = 61/34992·Q_c³.
+  - Two nonblocking notes, left for a later edition:
+    - **N1:** the Appendix B grade correction carries the live RID in a `[RETRACTED | RID: …]` line, where the Methodology template wants the original identifier; GEN has the same form already.
+    - **N2:** two historical v1.6 labels remain, the OPEN 1T "Source:" line and the SG-12 heading. Both record that CN-05 came from v1.6.
 
 ## 7. What would be filed after the tag (CONVENTIONS §7; no items filed now)
 
@@ -115,6 +121,43 @@ The recorded run above is after both fixes.
   - RRF: export list unchanged; new RIDs available;
   - UVM: no change to its imports; informational.
 
-## 8. Adoption
+## 8. Adoption and publication
 
-Not adopted. Order (CONVENTIONS §4): reviews → release record final → PI decision → publication transform (status lines) → merge commit and annotated tag `gen-v2.10` by the PI.
+**Decision.** PI, 3 November 2026, verbatim: "ben de benimsiyorum".
+- Adopted object: the candidate `b1666ef03aa150f19771189a42ec362b7332316bc25fb3f26f0df0e39e878c1f` on PR #162 at `262fe58`.
+- Basis: the fixed co-owner list (§1); co-owner review `5751351272` with R1 applied; Atlas row check PASS SCOPED (§6).
+
+**Publication transform.** `evidence/gen/scripts/release_gen_v2_10.py`, assertion-gated: it accepts only the `b1666ef0…8c1f` input and changes status lines only.
+- Changed lines (3):
+  - Document status → "ADOPTED — PI, 3 November 2026 (…; one content stage, co-owner review and Atlas row check). Adoption record: `records/gen/GEN_v2_10_RELEASE_RECORD.md`";
+  - Appendix A heading → "### v2.10 — 3 November 2026 — Adopted";
+  - footer → "*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.10 (ADOPTED, 3 November 2026).*".
+- The Date line already reads "3 November 2026". The script asserts it and leaves it byte-unchanged.
+- Nothing else changes (gate P6).
+
+| Object | SHA-256 |
+|---|---|
+| Adopted candidate (input) | `b1666ef03aa150f19771189a42ec362b7332316bc25fb3f26f0df0e39e878c1f` |
+| **Published `dsn/RTG_GENESIS_GEOMETRY_DSN.md` (v2.10, 1,420 lines)** | **`63c3b020d9c63a43a2e5e9a43c411fad2d07dfcab33995bd928683435bb13d62`** |
+| `evidence/gen/scripts/release_gen_v2_10.py` | `23e5ab76e6dc64c709111045a203fe368bb1e4dbf6ed2692b0257471acb9f83c` |
+| `evidence/gen/v2.10/release_check_output.txt` (P1–P6: 6/6 PASS) | `44ae6cefd3c3c1199e1df6b47e7ae63f117df99857d2d80b40247e90eeec28ae` |
+| `evidence/gen/v2.10/release_negative_controls_output.txt` (RC1–RC4: 4/4 caught) | `b4d4b846b22db85832d6f9d21dbcc21e9d93697b755e4a37a3f6e89ce17978a1` |
+| Predecessor `gen-v2.9` | `9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac` |
+
+**Commands:**
+
+```
+git show 262fe58:dsn/RTG_GENESIS_GEOMETRY_DSN.md > cand.md      # b1666ef0…8c1f
+python -I evidence/gen/scripts/release_gen_v2_10.py cand.md dsn/RTG_GENESIS_GEOMETRY_DSN.md "3 November 2026"
+python -I evidence/gen/scripts/release_gen_v2_10.py cand.md dsn/RTG_GENESIS_GEOMETRY_DSN.md "3 November 2026" --check
+```
+
+**For the PI (CONVENTIONS §4.6):**
+1. Merge **PR #161 first**, then **PR #162**, each with a **merge commit** (not squash, not rebase). PR #164, the Atlas row check, is independent.
+2. Create the annotated tag `gen-v2.10` **on the PR #162 merge commit**, e.g. message: "Genesis Geometry v2.10 — adopted by the PI 3 November 2026; dsn/RTG_GENESIS_GEOMETRY_DSN.md SHA-256 63c3b020d9c63a43a2e5e9a43c411fad2d07dfcab33995bd928683435bb13d62".
+3. `BASELINE.md`, GEN row: v2.10, `63c3b020…3d62`, OWNER: this release record, tag `gen-v2.10` (predecessor `9178ca2c…00ac`, `gen-v2.9`).
+
+**After the tag (Genesis owners):**
+- close the eight `pipes/GEN/` items as receiver;
+- answer Triadic on G7 and G8 in `pipes/TRIAD/`;
+- file the notices of §7.

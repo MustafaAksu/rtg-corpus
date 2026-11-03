@@ -2,7 +2,7 @@
 
 **Title:** RTG Genesis Geometry Study — Canonical Scientific Ledger  
 **Date:** 3 November 2026  
-**Document status:** CANDIDATE — not adopted (inbox round after v2.9: G1–G8 and producer/consumer pins; one content stage). Release record: `records/gen/GEN_v2_10_RELEASE_RECORD.md`.  
+**Document status:** ADOPTED — PI, 3 November 2026 (inbox round after v2.9: G1–G8 and producer/consumer pins; one content stage, co-owner review and Atlas row check). Adoption record: `records/gen/GEN_v2_10_RELEASE_RECORD.md`.  
 **Scope:** Primitive dyadic/triadic/tetrahedral Genesis algebra, quaternionic metric lift, UV completion, foam network structure, and Regge bridge. Imports settled continuous-branch results from Dyadic and Triadic with inherited scope; routes TDR-G dependencies through explicit bridge requirements only.  
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives statement-level readouts of the theorem-grade results with their hypotheses and scope qualifications (about 1,000 words); a pointer-only list would drop those qualifications.  
 **Supersedes:** `RTG_GENESIS_GEOMETRY_DSN_v2.9` (SHA-256 `9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac`; tag `gen-v2.9`).  
@@ -1313,7 +1313,7 @@ Consumer-declared pins are the consumers' state and are not repinned here. Statu
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the inherited footer chain — are in Appendix A, the header and the footer of v2.8.9 (tag `gen-v2.8.9`, SHA-256 `d143673e…c6fc`), and in the release records named below.
 
-### v2.10 — 3 November 2026 — candidate (not adopted)
+### v2.10 — 3 November 2026 — Adopted
 
 - **Basis:** the Genesis inbox after v2.9 (eight `pipes/GEN/` items), the Atlas advisory `records/gen/ATLAS_ADVISORY_GEN_INBOX_20261103.md`, the two owner disposition records and the fixed co-owner list `records/gen/GEN_OWNER_RECONCILIATION_INBOX_20261103.md`; PI decision of 3 November 2026.
 - **New RIDs:** `GEN-ALG-P4-DRIFT-IDENTITY` (§6.5, the d-mode identity $\mathcal P_4=2d^\top BG_{3,d}$ under the §6.4 premises; G7); `GEN-ALG-BIRTH-SYMMETRY-SEED` (§6.6; G8).
@@ -1417,4 +1417,4 @@ One compact entry per edition (Methodology v1.4 §1). Full records of earlier ed
 
 ---
 
-*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.10 (candidate; not adopted).*
+*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.10 (ADOPTED, 3 November 2026).*
