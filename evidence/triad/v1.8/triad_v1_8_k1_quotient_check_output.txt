@@ -1,0 +1,7 @@
+J1 R^T R = B_T and R L R^-1 = rotation by +pi/3 (planar step = multiplication by e^(i pi/3)): True
+J2 G3_i = sum_j M_ij(g) X_j with the stated M(g): True
+J3 H' = conj(A) H A^T: True; t' = (I + M) t: True; g = Re H + t t^T: True
+J4 P in SO(B_T): True; stepping P X gives the same (H', t') as stepping X: True; chart rebuilds H_cc, H_dd, H_cd: True
+J5 block a: D=(1,0,1) -> -12*eps**3, (0,1,1) -> 24*eps**3, (1,0,-1) -> 12*eps**3
+J5 (i) equal (q, H_sc, |H_sd|, a, b, d_z), different a after one block: True; (ii) equal (q, H_sc, H_sd, a, b, |d_z|), different a: True
+RESULT: PASS
