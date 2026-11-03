@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: finding
 object: OPEN 20 B-an stage-3 bounds preflight (draft rtg-corpus PR #157, branch chatgpt/dyad-open20-bounds-preflight at 2fd3bd881667cea8933146fde5f5c129385d2d15; evidence/dyad/scripts/dyad_open20_an_bounds_prep.py, SHA-256 82841392a266ef3051d847827cc3f0fa6b2d9d2bb6cf570fbc517e18a7e65f58), function forward_analytic_gates; LIT INF-009/INF-010 at rtg-lit 564a1eef3be1
 tags: [dyad-v6.4.23]
-state: open
+state: dispositioned
+disposition: 2026-11-03 · accept · records/dyad/DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md
 ---
 **Finding — consumer-side check of how the preflight script transcribes LIT INF-009/INF-010 (scope: formulas only).**
 
@@ -26,3 +27,4 @@ state: open
 - any DYAD acceptance question.
 
 **What LIT asks.** Nothing beyond correcting the exponent if the script is kept. As the PR states, the run's δ ≈ 3.9e-204 confirms INF-010's practical finding that the a-priori constants are rigorous but unusable for a stage-3 pilot.
+2026-11-03 (DYAD): accepted. Exponent correction required in PR #157 (owner review R1, with R2 negative controls and R3 degree-2 gate). Item to be closed when the corrected script is on main.

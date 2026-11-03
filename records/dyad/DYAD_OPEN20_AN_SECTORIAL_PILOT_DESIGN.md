@@ -183,6 +183,16 @@ The argument:
 | decimal digits needed to resolve the jump at the best E4 radius, minimum over the η grid (A_ξ = 1.77) | ≈ 1.0·10²⁷ |
 | digits needed at the E3 cap ρ = 0.019 (A_ξ = 1.77–2.09) | ≈ 1.1–1.3·10⁵ |
 
+**η-uniform form (added 3 Nov 2026, after the co-owner review of PR #159).**
+- The negative result does not depend on the η grid. B₀(2) is bounded below for every η ∈ (0, π/2), using:
+  - e^{2\|Im α\|(π−η)/3} ≥ e^{\|Im α\|π/3};
+  - C ≥ 3/sin η ≥ 3;
+  - C_s ≥ C^{s/k}/(s−k);
+  - h(2) at K₁ = 12, K₂ = 0.7, K₃ = 35, K₄ = 5.5, Ψ = 0.3.
+- This gives B₀(2) > 8.59·10⁸, so \|ξ\| < 1.17·10⁻⁹. The co-owner's cruder bound was B₀(2) > 2.565·10⁷.
+- Certifying the coefficient lower bounds at theorem level is a separate step.
+- The analytic preflight of PR #157 gives constants far above these lower bounds and the same negative outcome. Owner review: `records/dyad/DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md`.
+
 **Reading (SESSION; owner).**
 - **The a-priori route cannot produce the stage-3 enclosure.** INF-009/010 with this branch's constants give a strong Hakim curve only on petals of radius ~10⁻¹⁰. Resolving the jump there would need about 10²⁷ digits.
 - **The loss is not mainly in the orbit constant.** With C = 1 the bound is still 2·10⁻⁸. The loss sits in h(R) (through a_c², with K₁ ≈ 12.8, and ρ_α) and in the factor e^{2\|Im α\|(π−η)/3} ≈ 10.
