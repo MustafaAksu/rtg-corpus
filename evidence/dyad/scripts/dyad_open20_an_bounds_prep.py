@@ -313,7 +313,7 @@ def forward_analytic_gates(Ks, alpha, inner_x, inner_y, tail_N=10000):
     rk = u(cf(k*(k+1))/2 * 2**(k+2)*acrit**2)
     e1 = u((k+1)*kappa+rk+2*acrit*(k+kappa)+
            (k+k*kappa+rk)*(k+kappa+2*acrit*(k+kappa)))
-    s = u(k+m-re)
+    s = k+m-re  # keep the entire interval: s occurs in both exponents and denominators
     def h(R):
         ac=u(1+K1*R+K2)
         return u(absa*R*(K1*R+K2)+K3*R**2+K4*R+Psi+
