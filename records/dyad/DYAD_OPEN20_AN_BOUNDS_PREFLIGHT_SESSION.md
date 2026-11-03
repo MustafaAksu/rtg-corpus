@@ -2,6 +2,8 @@
 
 **Date:** 2026-11-03. **Status:** PREPARED / NONCANONICAL; R1–R3 code corrections committed, revised full replay outstanding. **Stage 3:** NOT AUTHORIZED and NOT CERTIFIED. No scientific owner adoption, canonical DSN, release, tag, RID or pipe-state change.
 
+**Read-back (3 Nov 2026, DYAD owner):** the complete corrected preflight (self-test, positive run, four controls) was replayed together on script `708049c9…39eb`, all as expected. The JSON is now the script's own output. See `records/dyad/DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md` §5 and `evidence/dyad/open20-an/bounds_preflight_replay_20261103.txt`. The "pending" statements below record the state before that read-back.
+
 ## Sources and reading extent
 
 - Governing DYAD v6.4.23 at the verified tag dyad-v6.4.23: targeted owner sections; not a whole-document rereading.

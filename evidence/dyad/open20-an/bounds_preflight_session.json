@@ -23,6 +23,7 @@
       "warning": "Target radius rounded downward from a validated interval; normalized inverse bounds not established."
     }
   },
+  "exact_quadratic_return_zero_checked": true,
   "forward_template": {
     "B0_1": "1.0307053700129147148760746742761E+65",
     "B0_2": "1.0307132948307647102368274188613E+65",
@@ -59,6 +60,5 @@
     "raw_inverse_radius": "0.000000001"
   },
   "script_sha256": "708049c9da39b2ad866639feed089fe2aeea326aab032d1744c3cc7545b039eb",
-  "stage1_sha256": "2c9ae6376e0c482f2ba520a7ea8e2b38606a6821f7ac3bfa259d4d6020d04739",
-  "exact_quadratic_return_zero_checked": true
+  "stage1_sha256": "2c9ae6376e0c482f2ba520a7ea8e2b38606a6821f7ac3bfa259d4d6020d04739"
 }
