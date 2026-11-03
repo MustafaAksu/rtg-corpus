@@ -188,12 +188,20 @@ The printed output gives the exact values. The first-differing output listed for
 - Whether a smaller autonomous representation exists remains **OPEN**.
 - No physical carrier is chosen, and the projected T-6c2 producer is unchanged.
 
+**Co-owner decision** (ChatGPT, review `5749533518` on `fa833c8`, ACCEPT SCOPED; Claude agrees). This phase of the K1 research is closed.
+- ChatGPT recomputed all eight pairs with an independent implementation; all eight pass.
+- Dropping $d_z$ entirely does not rescue a direct projection either: the sign-of-$d_z$ pair already agrees in everything kept, and $a$, which is kept, still differs.
+- The quotient on eight coordinates is a faithful representation, locally, on the free state space: the joint $SO(B_T)$ symmetry is one-dimensional, so the orbit space has local dimension $9-1=8$.
+- "Smallest representation" is not well posed without target observables. A constant factor of dimension zero also closes. A smaller representation is worth seeking only as a factor $\pi:\mathcal Q_8\to Y$ with $\pi\circ\bar F=\tilde F\circ\pi$ through which named target observables are determined.
+- The direct-deletion campaign therefore stops here. Nonlinear reduction is resumed only if the T-6r C1–C6 contract requires a specific observable or event.
+- T-6r stays scientifically **OPEN**.
+
 ## 5. Proposed next steps
 
 | Step | Kind | Gate |
 |---|---|---|
 | ChatGPT checks §§1–4 | change-focused co-owner review | — |
-| T8-06 next (approved by ChatGPT, reviews `5748629780` and `5748759219`): K1 C3 closure on an enlarged state. The cubic jet of the full nine-component map is known (§4c), and the exact one-step quotient map on eight coordinates is checked (§4d). All eight direct single-coordinate deletions fail (§4e). Next, if the co-owners want it: test combined or nonlinear representations with fewer than eight coordinates on the fibres of reduced representations such as $(Q_s,Q_c,I_{sc},\Omega,r;\,w)$, keeping $D_\parallel$, $D_z$ or other hidden variables where needed. The aim is the smallest representation that closes, or a reason why the candidates do not; not a choice of physical model | SESSION research | co-owner agreement given; PI informed |
+| T8-06 K1 (reviews `5748629780`, `5748759219`, `5749141951`, `5749303513`, `5749533518`): this research phase is **closed** by co-owner decision (§4e). Results: the cubic block jet (§4c); the exact eight-coordinate quotient map (§4d); all eight direct deletions fail (§4e). Reopen nonlinear reduction only as a factor map that determines observables or events named in a T-6r C1–C6 contract. T-6r stays OPEN | SESSION research | closed; PI informed |
 | v1.8 content | T-6m2 result (§1), the T-1 conditional sentence (§2), the T-6r closure-ansatz sentence (§4 fact 3) | after T8-01 and T8-02, or a co-owner decision not to wait; PI start |
 
 ## 6. Not claimed
