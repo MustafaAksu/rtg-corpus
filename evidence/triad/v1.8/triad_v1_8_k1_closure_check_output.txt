@@ -1,0 +1,4 @@
+G1 after one block a = (lam+6) a1, b = (lam+6) b1: True  [273.8s]
+G2 (Q_s, Q_c, I_sc, Omega, r) and 1-K equal at lam = +6 and lam = -6: True
+G3 after one block: 1-K(lam=+6) = 4 x planar-start value: True; 1-K(lam=-6) = 0: True; so no closure on (Q_s,Q_c,I,Omega,r,K): True
+RESULT: PASS

@@ -1,0 +1,133 @@
+{
+ "all_pass": false,
+ "control": "ROOT",
+ "gates": {
+  "G0_stage1_all_pass": true,
+  "G0_stage1_hash": true,
+  "G1_P_a_zero": true,
+  "G1_alpha_from_stage1": true,
+  "G1_c_cubed_minus_ell": true,
+  "G1_parse_alpha": true,
+  "G1_pilot_root_Im_a_positive": false,
+  "L_B0_1": true,
+  "L_B0_2": true,
+  "L_C": true,
+  "L_delta_prime": true,
+  "L_e1": true,
+  "L_h_d": true,
+  "L_kappa": true,
+  "L_r_k": true,
+  "L_rho": true,
+  "M_monotone_in_each_constant": true,
+  "V_apriori_route_needs_more_than_1e6_digits": true
+ },
+ "info": {
+  "A_xi_range": [
+   "1.77018",
+   "2.0944"
+  ],
+  "L_reproduced": {
+   "B0_1": "9.6819117e+8",
+   "B0_2": "3.0201202e+9",
+   "C": "22.278008",
+   "delta_prime": "0.000453656338605",
+   "e1": "86160.46484375",
+   "h_d": "495716.0787",
+   "kappa": "17.6875",
+   "r_k": "768.0",
+   "rho": "0.0968097264579"
+  },
+  "a_pil": "(0.0576581109782094 - 0.00415587935301356j)",
+  "c": "(0.460193440523375 - 0.0310497099747173j)",
+  "design_eta_ideal_C1_radius_bound": "2.09338e-8",
+  "design_eta_pi_over_4": {
+   "at_rho": "1.50605e-10",
+   "best_radius_E4": "1.41791e-10",
+   "best_radius_with_claim6": "1.98725e-12",
+   "rho_admissible_max": "0.01896"
+  },
+  "ell": "(-0.0961278516154687 + 0.0196970021448582j)",
+  "eta_grid": {
+   "0.0982": {
+    "digits_needed": "1.583e+39",
+    "radius": "7.8602e-14"
+   },
+   "0.1963": {
+    "digits_needed": "9.455e+35",
+    "radius": "9.3336e-13"
+   },
+   "0.2945": {
+    "digits_needed": "1.153e+34",
+    "radius": "4.0551e-12"
+   },
+   "0.3927": {
+    "digits_needed": "4.932e+32",
+    "radius": "1.1594e-11"
+   },
+   "0.4909": {
+    "digits_needed": "4.264e+31",
+    "radius": "2.6221e-11"
+   },
+   "0.5890": {
+    "digits_needed": "5.83e+30",
+    "radius": "5.0899e-11"
+   },
+   "0.6872": {
+    "digits_needed": "1.106e+30",
+    "radius": "8.8576e-11"
+   },
+   "0.7854": {
+    "digits_needed": "2.697e+29",
+    "radius": "1.4179e-10"
+   },
+   "0.8836": {
+    "digits_needed": "8.039e+28",
+    "radius": "2.1226e-10"
+   },
+   "0.9817": {
+    "digits_needed": "2.835e+28",
+    "radius": "3.0043e-10"
+   },
+   "1.0799": {
+    "digits_needed": "1.156e+28",
+    "radius": "4.0516e-10"
+   },
+   "1.1781": {
+    "digits_needed": "5.361e+27",
+    "radius": "5.2342e-10"
+   },
+   "1.2763": {
+    "digits_needed": "2.796e+27",
+    "radius": "6.5025e-10"
+   },
+   "1.3744": {
+    "digits_needed": "1.627e+27",
+    "radius": "7.789e-10"
+   },
+   "1.4726": {
+    "digits_needed": "1.05e+27",
+    "radius": "9.0119e-10"
+   }
+  },
+  "lower_bounds_from_stage1_jets": {
+   "K1": "12.823484578",
+   "K2": "0.722689986796",
+   "K3": "35.668752533",
+   "K4": "5.54117445562",
+   "Psi": "0.39147734104"
+  },
+  "min_digits_needed_over_grid": "1.0504e+27",
+  "monotonicity": {
+   "K1": "1.41791e-10 -> 3.7802e-11",
+   "K2": "1.41791e-10 -> 1.34592e-10",
+   "K3": "1.41791e-10 -> 7.65222e-11",
+   "K4": "1.41791e-10 -> 1.32981e-10",
+   "Psi": "1.41791e-10 -> 1.4146e-10"
+  },
+  "radius_for_jump_1e-1000_model": "0.0968905",
+  "radius_for_jump_1e-100_model": "0.208744"
+ },
+ "lit_sources": "rtg-lit 564a1ee: inferences/INF-009, inferences/INF-010 (incl. Addendum)",
+ "mpmath_dps": 50,
+ "script": "dyad_open20_an_stage3_apriori_route_check.py"
+}

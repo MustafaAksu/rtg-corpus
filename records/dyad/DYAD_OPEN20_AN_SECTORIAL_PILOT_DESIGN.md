@@ -1,6 +1,6 @@
 # DYAD OPEN 20 (analytic branch) — written design of a sectorial pilot for one formal branch
 
-**Date:** 23 October 2026 (revised the same day after the receiving review `records/dyad/DYAD_LH2012_PILOT_RECEIVING_REVIEW.md`: P-R3 domains, P-R4 inverse branch and full-map quotients, the §6 bookkeeping guards). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It is a written design; stage 1 (exact preparation, §7) is complete and stage 2 (limited `[NUM]` scouting, §5 item 2) has been run. No sectorial sum, jump or Stokes quantity has been computed.
+**Date:** 23 October 2026 (revised the same day after the receiving review `records/dyad/DYAD_LH2012_PILOT_RECEIVING_REVIEW.md`: P-R3 domains, P-R4 inverse branch and full-map quotients, the §6 bookkeeping guards). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It is a written design; stage 1 (exact preparation, §7) is complete and stage 2 (limited `[NUM]` scouting, §5 item 2) has been run. No sectorial sum, jump or Stokes quantity has been computed. §8 (3 Nov 2026) records the a-priori route check for stage 3 after the LIT constants (INF-009/010); stage 3 itself is not authorized.
 
 **Authority:** receiving review `records/dyad/DYAD_LH2012_RECEIVING_REVIEW.md` §6 ("WRITTEN PILOT DESIGN SUPPORTED"), on `records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md`.
 
@@ -147,3 +147,65 @@ Exact: $b_1=(1-i\sqrt3)(\tfrac1{108}-\tfrac a6)$; $b_2=\tfrac{199}{19845}+\tfrac
 
 What stage 1 does **not** do: no domain, contraction, tail or inverse-branch bound (E1–E6); no sectorial sum; no jump. Stage 2 was cleared and run separately (§5 item 2, §6); stage 3 waits for a separate decision.
 
+
+## 8. Stage 3 route after the LIT constants (3 November 2026; owner design calculation, OWNER-RUN)
+
+**Working rule (PI, 3 Nov 2026).**
+- Dyadic work on this pilot is done in rtg-corpus, and its outputs are recorded in the Dyadic DSN (v6.4.24 backlog item S3).
+- LIT works in its own repository. DYAD uses it only through `pipes/LIT/` requests: literature search, alignment of literature steps, testing and validation.
+- Nothing LIT files is a DYAD result.
+
+**What LIT supplied** (rtg-lit `564a1ee`; SESSION; checked by LIT's co-owner):
+- **INF-009** (E3). Explicit Leau–Fatou constants δ′, C, C* for f = x − x^{k+1} + g, |g| ≤ K|x|^{k+2}, uniformly over the f_u family. It also corrects the phase of the orbit asymptotics on non-principal components (F1). The log branch of D8 is already petal-continuous, with value jπ/3 on the bisector, so this design needs no change.
+- **INF-010 claims 1–5** (E4 on the ball U₁, E5). Explicit B₀(R), B′ = B₀(2), L and a tail bound. The constants are expressed in the Cauchy constants K₁…K₄, Ψ of the normalized map on a polydisc.
+- **INF-010 Addendum, claim 6.** T(𝓗_Δ) ⊂ 𝓗_Δ, which is E4 in the form of D8. It holds under extra polydisc hypotheses, which E1 must verify for this map.
+- **Not supplied.** LIT computed no DYAD constant. Its practical finding is that, for a test germ, the a-priori bounds are crude by about nine orders of magnitude.
+
+**Owner calculation.**
+- Script `evidence/dyad/scripts/dyad_open20_an_stage3_apriori_route_check.py`; run `evidence/dyad/open20-an/stage3-route/run.sh`, with outputs and `SHA256SUMS.txt`.
+- No map value is computed. The only inputs are the exact normalized-jet coefficients of `stage1_prep.json` (§7) and the stage-2 Borel-scale range.
+
+The argument:
+1. Any admissible constant is at least the modulus of the corresponding Taylor coefficient. Let Y → 0 and then ξ → 0 in the INF-010 bounds. This gives K₁ ≥ \|[ξ⁴Y]F₁\| ≈ 12.82, K₂ ≥ \|[ξ⁵]F₁\| ≈ 0.723, K₃ ≥ \|[ξ³Y²]F₂\| ≈ 35.67, K₄ ≥ \|[ξ⁴Y]F₂\| ≈ 5.54 and Ψ ≥ \|ψ(0)\| ≈ 0.306. The coefficients are large because of the scaling ξ = c₊x, with \|c₊\| ≈ 0.461.
+2. Every INF-009/010 constant is nondecreasing in these constants (gate M checks this). So the radius obtained with the lower bounds is the largest the INF-009/010 route can give for this branch, whatever the true constants are.
+3. The formulas were transcribed independently of LIT's scripts. They reproduce the values printed in INF-010 for LIT's test germ (gate L: ρ, δ′, C, B₀(1), B₀(2), κ, r_k, e₁, h_d). LIT is asked to validate the transcription and steps 1–2 (`pipes/LIT/20261103-DYAD-inf009-inf010-use-validation.md`).
+
+**Result** (mpmath, 50 digits; gates G0, G1, L, M, V all PASS; the controls NOFAC, ROOT and TAMPER each exit 1):
+
+| Quantity | Value |
+|---|---|
+| best petal radius for E4 (self-map and L < 1), η = π/4 | \|ξ\| < 1.42·10⁻¹⁰ |
+| same, with claim 6 (derivative condition) | \|ξ\| < 1.99·10⁻¹² |
+| same, with the orbit constant set to C = 1 (no INF-009 loss), η = π/4 | \|ξ\| < 2.1·10⁻⁸ |
+| best E4 radius over η ∈ (0, π/2) (grid of 15) | ≤ 9.0·10⁻¹⁰ (at η ≈ 0.94·π/2) |
+| INF-009 admissibility cap on ρ alone (E3), η = π/4 | ρ ≤ 0.019 |
+| radius at which the expected jump exp(−A_ξ/\|ξ\|³) is 10⁻¹⁰⁰ / 10⁻¹⁰⁰⁰ (model A_ξ = 2π/3) | 0.209 / 0.097 |
+| decimal digits needed to resolve the jump at the best E4 radius, minimum over the η grid (A_ξ = 1.77) | ≈ 1.0·10²⁷ |
+| digits needed at the E3 cap ρ = 0.019 (A_ξ = 1.77–2.09) | ≈ 1.1–1.3·10⁵ |
+
+**η-uniform form (added 3 Nov 2026, after the co-owner review of PR #159).**
+- The negative result does not depend on the η grid. B₀(2) is bounded below for every η ∈ (0, π/2), using:
+  - e^{2\|Im α\|(π−η)/3} ≥ e^{\|Im α\|π/3};
+  - C ≥ 3/sin η ≥ 3;
+  - C_s ≥ C^{s/k}/(s−k);
+  - h(2) at K₁ = 12, K₂ = 0.7, K₃ = 35, K₄ = 5.5, Ψ = 0.3.
+- This gives B₀(2) > 8.59·10⁸, so \|ξ\| < 1.17·10⁻⁹. The co-owner's cruder bound was B₀(2) > 2.565·10⁷.
+- Certifying the coefficient lower bounds at theorem level is a separate step.
+- The analytic preflight of PR #157 gives constants far above these lower bounds and the same negative outcome. Owner review: `records/dyad/DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md`.
+
+**Reading (SESSION; owner).**
+- **The a-priori route cannot produce the stage-3 enclosure.** INF-009/010 with this branch's constants give a strong Hakim curve only on petals of radius ~10⁻¹⁰. Resolving the jump there would need about 10²⁷ digits.
+- **The loss is not mainly in the orbit constant.** With C = 1 the bound is still 2·10⁻⁸. The loss sits in h(R) (through a_c², with K₁ ≈ 12.8, and ρ_α) and in the factor e^{2\|Im α\|(π−η)/3} ≈ 10.
+- **What INF-009/010 still give the pilot is structure:** the branch handling; the closedness of 𝓗_Δ; the contraction through a Cauchy estimate in u; the form of the tail bound; and the a-posteriori inequality of scope S2.
+- **The orbit control is a second limit.** INF-009 admits a petal only up to ρ ≈ 0.019 with these constants. Even a sharper operator bound on such a petal would need about 10⁵ digits. That is far beyond the stage-2 precision, though not absurd. The rest of the error budget is not included in that estimate.
+
+**Consequence for the stages** (replaces the plan of §5 item 3 for the route, not for its deliverables):
+- **3a. A-priori route check.** Done here; negative.
+- **3b. Revised stage-3 design.** Not yet written; not authorized. It must choose between two routes:
+  - (i) a validated operator route on a petal limited by validated orbit control of the actual map, with the fixed point enclosed a posteriori (E6, INF-010 S2) and not through a-priori L;
+  - (ii) a validated Borel–Laplace route from the formal series of stage 2.
+  - Either route needs E1–E2 for the actual map: polydisc bounds, and the inverse branch for odd sectors. These are computed only once the route is chosen.
+  - LIT is asked for the literature on (ii) and on validated parabolic-curve numerics (`pipes/LIT/20261103-DYAD-validated-stokes-numerics-search.md`), and on sharper subpetal orbit constants (`pipes/LIT/20261103-DYAD-subpetal-orbit-constant-search.md`).
+- **3c. Certification run.** Only after 3b is reviewed and the PI authorizes it.
+
+Guards (§6) unchanged: no change to the DSN, RIDs or OPEN statuses from this record. B-an and B-6 stay ACTIVE. The recording of this state in the DSN is proposed for v6.4.24 (backlog S3).

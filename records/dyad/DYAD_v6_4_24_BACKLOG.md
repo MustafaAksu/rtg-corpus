@@ -48,6 +48,18 @@ Owner decision needed per row: register (name, scope) or record "no RID; cite th
   - Plan: design note → exact-rational certificate with negative controls → co-owner review → candidate for v6.4.24.
   - **Status (3 Nov 2026):** done through review. `records/dyad/DYAD_S1_OPEN21_SHARP_ROWS_DESIGN.md`; RID `DYAD-THM-OPEN21-SHARP-ROWS` accepted by the co-owner (PR #150 reviews `5748327144`, `5748500129`); $S_A=19.680$, $S_B=6.357$.
 
+- **S3 — OPEN 20 analytic branch: record the sectorial pilot's current state in the DSN** (PI instruction, 3 Nov 2026: Dyadic work on the pilot is done in rtg-corpus and its outputs are recorded in the Dyadic DSN; LIT is used only through `pipes/LIT/` requests).
+  - The DSN at `dyad-v6.4.23` does not mention the pilot. Its stages so far live only in records:
+    - stage 1, exact preparation (OWNER-RUN);
+    - stage 2, `[NUM]` scouting, Borel scale INCONCLUSIVE;
+    - the LH2012 literature basis at SESSION scope (LIT INF-005 to INF-008; assessment §5);
+    - the stage-3 a-priori route check of 3 Nov 2026 (design record §8).
+  - Proposal for v6.4.24:
+    - one `[SESSION]` progress paragraph under OPEN 20 B-an, stating what each stage established and what it did not;
+    - §8 artifact entries for the stage scripts and outputs, with hashes.
+  - B-an and B-6 stay ACTIVE. No statement is regraded. No LIT result is imported as an RTG result; LIT sources are cited by LIT-ID@version:label where they are used.
+  - **Status (3 Nov 2026):** route check done (`evidence/dyad/open20-an/stage3-route/`). The a-priori route of INF-009/010 cannot reach the radius the jump needs. Stage 3 itself stays not authorized; a revised stage-3 design comes first.
+
 ## C2. Schedule
 
 Checkpoint **10 November 2026** (co-owner proposal, 3 Nov). If RECOG and NUMGEN have answered the v6.4.23 notices by then, their answers are included. Otherwise they are recorded as open dependencies and the v6.4.24 candidate is prepared. Until then: the X4 decisions and the v6.4.24 change matrix. This is a maintenance schedule, not a scientific requirement.
