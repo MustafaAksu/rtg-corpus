@@ -16,6 +16,7 @@
 | `RELEASE_RECORD_v1_6_1.md` | `records/triad/` (same) | `aa3d8d773a2083908f2e576bc59f9c6d3c110c1caadbc70782c72b07e95eb45d` | header |
 | `tetrahedral_six_step_cross_phase_t6c2_patched.py` | `evidence/triad/scripts/` (from commit `9df0319`) | `afb4525ccc2f459964fc3e9acade004f2aa61c03be2366f125cef63fc466d80e` | TRIAD-ART-T6C-CROSSPHASE |
 | `triad_analytic_phase_steering_t6l_patched.py` | `evidence/triad/scripts/` (same) | `2e0317bf90332d1fe0ab7489710a3c8c67b772e3031dd7ef95b3163f7d7a11cd` | TRIAD-ART-T6L-TORSION (rerun 30 Oct 2026; output in `evidence/triad/v1.7/`) |
+| `dyad_triad_antisymmetric_bridge_v1_1.md` | `upload/dyad-bridge-note/` (PI upload, branch `miss1`, `47f807c`; was S) | `5ddebfe46b5572761a5154a05712fbcfe4e675f912430ee7d6bfcf0d93f4e875` | §7.1 Dyadic import records. No hash is recorded in either DSN: PI-supplied, identified by content; exact replay in `records/dyad/DYAD_UPLOAD_HASH_CHECK_20261103_BRIDGE_NOTE.md` |
 
 ## H — held by the PI, not in the repository
 
@@ -56,7 +57,6 @@ Without the v1.5 and v1.6 files the v1.6 phrase "all 49 RIDs" cannot be checked;
 - **T-6j2 session script and event log** (TRIAD-ART-T6J2-PROXY): never archived; the terminal event cannot be reconstructed (DSN §6.13).
 - **T-6m session computation** (TRIAD-ART-T6M-BIRTH): no standalone script; canonical computation in a session log.
 - **`apex_ratio_setup.py`** (consumer-side verification) and **`genesis_k4_route_census.py`** (Genesis-owned): stated unavailable in the package.
-- **`dyad_triad_antisymmetric_bridge_v1_1.md`** (Dyadic intermediary bridge note): stated not in the package.
 - **Review records named in Appendix A** (`TRIAD_D3_RECEIVING_REVIEW_20261019.md`, `TRIAD_RER_R2_R41_RECEIVING_REVIEW_20261019.md`): not in the repository; location not stated.
 
 ## F — scaffold or placeholder

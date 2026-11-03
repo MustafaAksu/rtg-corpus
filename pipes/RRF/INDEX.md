@@ -7,4 +7,5 @@
 | 2026-10-29 | RECOG | notice | open | RECOG v0.3.23–v0.3.26 adopted (recog-v0.3.26, DSN SHA-256 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34); 30 new RECOG RIDs since recog-v0.3.22 (§6.3, §6.4, §6.5, §6.13a, §6.13b, §6.16e, §8); Appendix B RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325, RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325; OPEN registry unchanged | — | `20261029-RECOG-v0-3-26-adopted.md` |
 | 2026-10-30 | OFN | notice | open | OFN v0.11 §5.5.4 class-C reading; RRF v0.8.4 §6.2a model-contract row and readout entry; OFN11-C01, OFN11-C02 | — | `20261030-OFN-v0-11-adopted.md` |
 | 2026-10-30 | OFN | notice | open | OPEN-OFN-TRIAD-CLASS isolation frame (OFN v0.12 §9); class-C causal-interface identity (§5.5.4) | — | `20261030-OFN-v0-12-adopted.md` |
+| 2026-11-03 | DYAD | notice | open | R9-conditional Dyadic rows; $S_h$ routing (§6.15); DYAD-ALG-KP-FRAME-SCALE; R11 owner labels (Appendix C) | — | `20261103-DYAD-notices-n16-n21.md` |
 | 2026-11-03 | TRIAD | notice | open | Triadic v1.7 adopted; CN-05 planar metric convention (Triadic §6.18 metric-unit block; RRF v0.8.4 §3.1) | — | `20261103-TRIAD-v1-7-adopted.md` |

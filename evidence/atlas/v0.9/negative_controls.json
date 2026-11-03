@@ -1,0 +1,72 @@
+[
+ {
+  "id": "U1",
+  "what": "H cites a retired L5 row",
+  "detected": true
+ },
+ {
+  "id": "U2",
+  "what": "retired key reused",
+  "detected": true
+ },
+ {
+  "id": "U3",
+  "what": "SOURCES row older than manifest",
+  "detected": true
+ },
+ {
+  "id": "U4",
+  "what": "new DYAD RID misspelled against the source (shared checker links FAIL)",
+  "detected": true
+ },
+ {
+  "id": "U5",
+  "what": "nearest-rounded L-PHASE decimal reintroduced",
+  "detected": true
+ },
+ {
+  "id": "U6",
+  "what": "below-majorant c′_Q shown as the registered Dyadic constant",
+  "detected": true
+ },
+ {
+  "id": "U7",
+  "what": "D claimed constant in the literal extension",
+  "detected": true
+ },
+ {
+  "id": "U8",
+  "what": "Gram relation typed as an exact six-step law",
+  "detected": true
+ },
+ {
+  "id": "U9",
+  "what": "new OFN RID misspelled against the source (shared checker links FAIL)",
+  "detected": true
+ },
+ {
+  "id": "U10",
+  "what": "T-6r contract item dropped",
+  "detected": true
+ },
+ {
+  "id": "U11",
+  "what": "stale consumer-status wording reintroduced",
+  "detected": true
+ },
+ {
+  "id": "U12",
+  "what": "isolation contract shown as selected",
+  "detected": true
+ },
+ {
+  "id": "U13",
+  "what": "stale GEN edition pointer reintroduced",
+  "detected": true
+ },
+ {
+  "id": "U14",
+  "what": "stale TRIAD consumer pin on the export contract",
+  "detected": true
+ }
+]

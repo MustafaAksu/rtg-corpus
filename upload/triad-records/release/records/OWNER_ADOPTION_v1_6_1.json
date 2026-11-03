@@ -1,0 +1,52 @@
+{
+  "document": "RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6.1",
+  "decision": "ADOPTED — owner release",
+  "date": "2026-10-19",
+  "authorization": {
+    "by": "PI (Mustafa)",
+    "instruction": "Triadic v1.6.1 yayınını yetkilendiriyorum",
+    "time": "2026-10-19T12:21+03:00",
+    "note": "New authorization; the v1.6 approval of 2026-10-05 is not reused for the v1.6.1 corrections."
+  },
+  "scientific_review": {
+    "object": "RTG_TRIADIC_BIRTH_LIFT_DSN_v1_6_1_DRAFT_r2.md",
+    "sha256": "dd67907fc21e457e413c3d6ee924617bc7818c1c200a9bde04fb67649d79b3e7",
+    "reviewer": "ChatGPT (receiving co-owner)",
+    "record": "TRIAD_RER_R2_R41_RECEIVING_REVIEW_20261019.md",
+    "verdict": "SCIENTIFIC REVIEW ACCEPTED — PI RELEASE DECISION PENDING (scope D3-R1/H-R1/H-R2/E1)",
+    "preparer": "Claude (co-owner); did not accept his own draft"
+  },
+  "release": {
+    "file": "RTG_TRIADIC_BIRTH_LIFT_DSN_v1_6_1.md",
+    "sha256": "95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f",
+    "lines": 1202,
+    "transform": "release_v1_6_1.py (12 metadata-only exact-once edits)",
+    "edits_sha256": "d64adc3f676d11dfac225f733538276fea0f1c54f1a9ae705755d4f171548e17",
+    "checker": "check_release_v1_6_1.py",
+    "checker_result": "10/10 PASS; 4/4 negative controls fail as required"
+  },
+  "supersedes": {
+    "file": "RTG_TRIADIC_BIRTH_LIFT_DSN_v1_6.md",
+    "sha256": "c768687cec6d52ffd358dc362cee4348f076160943564adaa461e6c7c4595b36",
+    "preserved": true
+  },
+  "draft_chain": {
+    "r1": "31b87c3edc90a2ec54f97d5b63ac043ab0d2b3bcd495ddb35b05f3a9cb4630ea",
+    "r2": "dd67907fc21e457e413c3d6ee924617bc7818c1c200a9bde04fb67649d79b3e7"
+  },
+  "pins_retained": {
+    "Dyadic": "v6.4.13 (5958f7fe…8542)",
+    "Genesis": "v2.8.7 (d5d1e57c…e361)",
+    "RRF": "v0.8.2 §3.1"
+  },
+  "newer_sources_owner_reported_unchanged_for_cited_items": {
+    "Genesis v2.8.8": "9abd36169a4bf6056318605c0399ff1f91c53f157b9181bdbfdb9faed3000f37",
+    "Dyadic v6.4.14": "7fb8510563af17701dce7815c0a0f10771f0ff69490d22d1ea3d1af120b56bdd",
+    "RRF v0.8.3": "b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187"
+  },
+  "pending": [
+    "Receiving co-owner release verification (rebuild, reversal, gates).",
+    "Outbound: Dyadic N2 (Triadic part) answered; notify Genesis / OPEN-M / RRF / OFN of the D3 scope correction."
+  ],
+  "not_implied": ["consumer acceptance", "physical child-functional selection", "RER adoption or freeze"]
+}

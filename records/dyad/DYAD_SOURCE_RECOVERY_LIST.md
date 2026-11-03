@@ -33,6 +33,14 @@ PI-supplied on `upload/dyad-sources` — the C++ sources from `ailab:/root/rtg-e
 | `lphase_rowA_certificate.json` | DYAD-ART-LPHASE-ROWA | same zip member folder; recorded hash matches | `8697c6970bd908327c66ef2ce3b2d38386947899033ef7f720bc096c4c3ad4fa` |
 | `tzw.py` | DYAD-ART-LPHASE-ROWA | same zip member folder; recorded hash matches | `f007d42cde36d2a70115b9db25f47b107c446735fa31c66664f620c3247a5609` |
 
+## Placed (3 November 2026)
+
+PI-supplied on branch `miss1`, commit `47f807c`, folder `upload/dyad-bridge-note/`. The DSN records no hash, so the note is identified by name and content. Hash check, identification and exact replay are in `records/dyad/DYAD_UPLOAD_HASH_CHECK_20261103_BRIDGE_NOTE.md`. The file is kept unchanged.
+
+| Cited file | §8 RID | Placed as | SHA-256 |
+|---|---|---|---|
+| `dyad_triad_antisymmetric_bridge_v1_1.md` | DYAD-ART-BRIDGE-NOTE | same name, `upload/dyad-bridge-note/` (was Tier 3) | `5ddebfe46b5572761a5154a05712fbcfe4e675f912430ee7d6bfcf0d93f4e875` |
+
 ## Tier 1 — certificates and exact/theorem evidence (scripts, their outputs, evidence packages) — 60 files
 
 | File | §8 RID | Grade of the registry entry | Recorded SHA-256 |
@@ -146,7 +154,7 @@ PI-supplied on `upload/dyad-sources` — the C++ sources from `ailab:/root/rtg-e
 | `rtg_dyad_audit.py` | — | — | not recorded |
 | `rtg_ia_cert_fixed.cpp` | DYAD-ART-IA-CERT-FIXED | ENG | not recorded (candidate by content: `upload/dyad-sources/rtg-engine/certify_branch_4_10.cpp`, not identified) |
 
-## Tier 3 — proof, session and source records — 28 files
+## Tier 3 — proof, session and source records — 27 files (28 listed on 22 October; the bridge note was placed on 3 November)
 
 | File | §8 RID | Grade of the registry entry | Recorded SHA-256 |
 |---|---|---|---|
@@ -154,7 +162,6 @@ PI-supplied on `upload/dyad-sources` — the C++ sources from `ailab:/root/rtg-e
 | `DYAD_ATLAS_P1_SCIENTIFIC_CORRECTION_SESSION_v0_1.md` | DYAD-ART-ATLAS-P1 | ENG | not recorded |
 | `DYAD_FC32_HNG_R9FREE_SESSION_v0_1.md` | DYAD-ART-ATLAS-P1 | ENG | not recorded |
 | `DYAD_ATLAS_P2_EDITORIAL_INTERFACE_SESSION_v0_1.md` | DYAD-ART-ATLAS-P2 | ENG | not recorded |
-| `dyad_triad_antisymmetric_bridge_v1_1.md` | DYAD-ART-BRIDGE-NOTE | ALG | not recorded |
 | `DYAD_LEMMA_F_FLAT_CENTRALIZER_PROOF_RECORD_v0_3.md` | DYAD-ART-LEMMA-F-RECORD | SESSION/THM | `2e6c5c59a1fdfe6baa1702df8873b0d89664796d4f317313f239969b406a8ece`, `2e6c5c59…8ece` |
 | `DYAD_LPHASE_ROWA_P2B_PROVENANCE_GATE_SESSION_v0_1_1.md` | DYAD-ART-LPHASE-ROWA-RECORDS | SESSION | `5e9f324e444a8c48bc226cd159af0195c84f4f10c3a103d49035c971480a8a7f` |
 | `DYAD_NUMGEN_LPHASE_ANGULAR_ENCLOSURE_SCOPE_v0_1.md` | DYAD-ART-LPHASE-ROWA-RECORDS | SESSION | `1eae1d1a204673969ea0a69f0ecd32624a734e9e96a7f855985c360882c01f74` |

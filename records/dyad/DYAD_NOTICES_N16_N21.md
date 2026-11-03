@@ -89,3 +89,33 @@ v6.4.22 (SHA-256 `2363ca409c08bc571378125771f27239b6426d3e7cdbe75e0306a2a728778c
 | Recipient | Content |
 |---|---|
 | OPEN-M (UVM); RECOG | Dyadic now names the owner of every "R11" it uses: "OPEN-M R11" for the OPEN-M-2B assembly formulas (cascade-gate conversion, $\theta_f=2\pi/3$) and "RECOG R11" for RECOG's final-chart ledger (CLOSED). New Appendix C row. Nothing is asked of either owner. |
+
+## Disposition, 3 November 2026 (owner; batch clearance agreed with the co-owner)
+
+**Why now.** N16–N21 were prepared under the rule "all notices go through the PI" and were never sent. Since the PI decision of 26 Oct 2026, cross-stream notices go as pipe items (`pipes/README.md`), and nothing is routed through the PI. Each recipient row was checked against the recipient's current governing edition: Genesis v2.9, OFN v0.12, NUMGEN v1.21, RECOG v0.3.26, Triadic v1.7, RRF v0.8.4, RER v0.2, ER-2B v0.3, DZT v0.8, AZ v0.6, OPEN-M v0.7.1. Content that is still unmet goes as one pipe notice per recipient, restated at `dyad-v6.4.23`. Content already met, superseded or moot is closed here with the reason.
+
+**State fields.** The tables above are unchanged: every N16–N21 row stays *prepared, not sent*. A pipe notice filed today is a new transmission of the restated content, not a retroactive sending of N16–N21. No *received*, *statement accepted* or *adopted use* is assigned to any recipient. Those states come only from the recipients' own records.
+
+| Notice | Recipient | Check against the current edition | Disposition |
+|---|---|---|---|
+| N16 | Genesis | v2.9 imports SMOOTH-EQUIVARIANT-CHART (scoped, §6.3c) and records the chart vs archival $c_\theta$ distinction; the $\nu_5^{(5)}$ field label is not recorded | **send the remainder** → `pipes/GEN/20261103-DYAD-notices-n16-n21.md` |
+| N16 | OFN | v0.12 imports SMOOTH-EQUIVARIANT-CHART (IMP-O10-07); the other N16 items do not bear on OFN | **close** — met by OFN's own import |
+| N17 | DZT | v0.8, no newer edition; crosswalk, $Q_{12}$ sign, VANISH-B2 and RAW-CUBIC status not received | **send** → `pipes/DZT/20261103-DYAD-notices-n16-n21.md` (with N21's RAW-CUBIC line) |
+| N17 | AZ | v0.6, no newer edition; AZ §8 imports RAW-CUBIC as `[import-ref]` `[THM]` without the caveat | **send** → `pipes/AZ/20261103-DYAD-notices-n16-n21.md` (with N21's RAW-CUBIC line) |
+| N18 | NUMGEN | the I1–I5 export is confirmed and imported (v1.21 §6.6, §9.1); the $\phi^*$ status is recorded (N3, v1.20.8) | **close** — met |
+| N18 | NUMGEN | FC-DYAD-33 lag-sign corollary: a SESSION candidate (ATLAS disposition of v6.4.19), never registered in the Dyadic DSN; NUMGEN closed GAP-LOCK at its own grades | **retire the request.** Dyadic does not ask a consumer to check an unregistered candidate. FC-DYAD-33 stays a SESSION candidate and can be re-filed if it is ever registered |
+| N18, N19 | NUMGEN, RECOG | FC-DYAD-32 (R9-free existence on $U$, offered for RECOG's H-NG decision): RECOG proves `RECOG-THM-A1A-PHASE-EXISTENCE-U` on $U$ without R9 (owner science) | **retire the offer** — superseded by RECOG's theorem. FC-DYAD-32 itself stays a Dyadic SESSION research item |
+| N19 | RECOG | v0.3.26 records the R9-conditional rows and OPEN 21, the $S_h$ distinction (§6.14), N11 as adopted use since v0.3.22 (§7.2, so the mirror is reconciled) and uses DYAD-ALG-KP-FRAME-SCALE | **close** — met |
+| N19 | RRF | v0.8.4 (20 Oct) predates v6.4.20; KP-FRAME-SCALE not recorded | **send** → `pipes/RRF/20261103-DYAD-notices-n16-n21.md` |
+| N20 | Triadic | v1.7 repins its Dyadic imports to v6.4.23 and cites KP-FRAME-SCALE; the smooth chart was informational ("no transfer to the triad") | **close** — met or moot |
+| N20 | RER | v0.2 records SMOOTH-EMBEDDING (v6.4.18) only | **send** → `pipes/RER/20261103-DYAD-notices-n16-n21.md` |
+| N20 | ER-2B | v0.3 still describes B-6/B-∞ as pending | **send** → `pipes/ER2B/20261103-DYAD-notices-n16-n21.md` (adds the B-∞ existence status) |
+| N21 | RECOG | R11 CLOSED pointer and N11 adopted use: met (above). $h_4$ field label: RECOG does not carry the archival $h_4$ | **close** — met or not applicable |
+| N21 | DZT, AZ | RAW-CUBIC caveat and range $p\ge3$ | **merged** into the N17 sends |
+| N21 | Genesis | FC-DYAD-34 cross-reference; $h_4$ field label (archival object; Genesis cites $c_\theta^{(6)}$ as archival reference) | **merged** into the N16 send |
+| N21 | Triadic | FC-DYAD-34 (bookkeeping) | **close** — informational; it is in v6.4.23 §6.12, which Triadic pins |
+| N21 | all consumers | v6.4.21 layout-only compaction | **close** — moot; superseded by later editions |
+| v6.4.22 line | OPEN-M (UVM) | R11 owner labels not received | **send** → `pipes/UVM/20261103-DYAD-notices-n16-n21.md` |
+| v6.4.22 line | RECOG | R11 labels: informational | **close** — nothing asked |
+
+Seven pipe notices filed (GEN, DZT, AZ, RRF, RER, ER2B, UVM). Each says "nothing is asked"; repins and qualifiers are the receivers' decisions. Checked with `tools/pipes_index.py --check`. With this disposition N16–N21 are cleared on the Dyadic side; this record stays as their custody record.
