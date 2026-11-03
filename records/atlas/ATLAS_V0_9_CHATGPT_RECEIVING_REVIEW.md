@@ -47,3 +47,37 @@
 No owner-independent science was created or adopted. The new DYAD step-indexed theorem is not equated to the historical footprint theorem; the NF-REM sharper C7 bounds do not replace C_D proof inputs; RECOG premises remain conditional. OFN's canonical group comparison is not promoted to physical reference consumption. TRIAD's Gram law remains first variation rather than an exact six-step finite-increment identity; the two off-root extensions have different D evolution; the coercivity bound is leading-order only. Historical wedge/no-basin/phase-steering claims remain unavailable for corrected-model export.
 
 **Verdict:** ACCEPT SCOPED — no blocking scientific, provenance, source-identity or interface issue found for the exact candidate identified above. F32 and PROG.G9 are recorded limitations, not requests for a repeated scientific campaign. The PI alone may accept, merge, tag, and publish Atlas v0.9 after the owner has prepared its release record. Until then atlas-v0.8 governs.
+
+## 6. Revision 2 addendum — delta-only receiving review (3 November 2026)
+
+**Target:** Atlas PR #147 head `e18cfb21d8eab260ab2ee43acd7c232cd2d1e7af`, superseding the rev.-1 head `e2543cb159431d07be6869c5d69b0f6f464e36d7`. This addendum preserves the rev.-1 review above as historical evidence; it assesses only the three changed operations and five additional operations requested by the owner.
+
+**REV2 VERDICT: ACCEPT SCOPED — NO BLOCKER.** The revision implements the two previously recorded review notes without a scientific scope or grade change.
+
+### Identity, replay and change extent
+
+- Independently recomputed from GitHub UTF-8 content: candidate `atlas/RTG_STATE_ATLAS.md`, **517,999 bytes**, SHA-256 **`b48343f5a4d4c066eb37a325ff87d1dadf686fc6c616b67e7a0ad418dcec3b70`** — matches the rev.-2 review packet and verification summary.
+- Independently recomputed edit log: **85,887 bytes**, SHA-256 **`c9bfab2ef43a523d307c1633c419c78411ef3a03184a90b5f0015cdb343effb6`** — matches the packet.
+- Independently replayed **all 49 sequential exact-once old/new replacements** on the tagged Atlas v0.8 base, using an implementation separate from the Python builder. Every old payload occurred exactly once at application and the final text equalled the revision-2 candidate in full. This is an edit-fidelity test, not re-certification of the scientific content.
+- Compared rev.-1 and rev.-2 candidate files line for line: exactly **7 physical lines** differ (D1 L252; D2 L471, L597, L607; D4a L1113; D5 L1395; D6 L1533). These correspond to **3 changed logged operations** (AR09-015, 030, 044) plus **5 appended operations** (AR09-045–049); the two D6 substitutions occur on one line. No other Atlas line changed.
+- Shared checker zero FAIL, 18/18 self-tests, and focused controls 14/14 (U13/U14 added) are **producer-reported EV-NOT-RERUN** in this review; the new control specifications were inspected, not independently run.
+
+### Decision on the three changed operations
+
+| Operation | Decision | Scope check |
+|---|---|---|
+| AR09-015 — `PROG.G9` | **PASS** | `D-LINK` consumer-refresh obligation replaces `D-STALE`. Programme v1.3 IF07/IF11 intentionally cite TRIAD v1.6; a pending v1.7 notice does not make an old valid pin erroneous. No CN-05 receipt or acceptance invented. |
+| AR09-030 — `NUMGEN.N-I1` | **PASS** | Pipe counts expressly belong to frozen `f20f080` **plus the three Atlas-side pipe state edits**, not to a dynamically changing `main`. Later PR #148 material is deferred. The 53-item count remains provenance of the builder snapshot, not a claim about latest repository state. |
+| AR09-044 — `F32` | **PASS** | Live `D-STALE` restricted to TRIAD §2 A-1's v1.6-era wording. F-1, F-2 and row-29 process debt is recorded solely as an owner-release-record pointer, not as additional live scientific diagnoses. |
+
+### Decision on the five new operations
+
+| Operation | Decision | Owner verification |
+|---|---|---|
+| AR09-045 — DYAD bridge-export consumer edge | **PASS** | `triad-v1.7` §7.1 item 1 imports `DYAD-DEF-BRIDGE-EXPORT-CONTRACT` at `dyad-v6.4.23`; `gen-v2.9` §7 item 1 retains its older Dyadic v6.4.13 source block. The two consumer editions and pins are intentionally distinct. |
+| AR09-046 — AZ.A2 in D2 | **PASS** | Parenthetical current Genesis edition v2.9 is correct; the quoted AZ historical v2.8.4 use remains historical. |
+| AR09-047 — AZ.A2 in D5 | **PASS** | Same corrected current-edition pointer, without changing AZ's inherited scientific claim or its open discrepancy. |
+| AR09-048 — PREL/Legacy verification pointer | **PASS** | `verify against GEN v2.9` is appropriate as a current next-check target; no claim that this owner-side verification was performed. |
+| AR09-049 — PREL/Legacy recheck pointer | **PASS** | `recheck REQ-L07-06 against GEN v2.9` is a task locator, not a completed consumer acceptance. |
+
+**Final disposition:** No further v0.9 scientific round is needed on these eight logical edits. The changed source, PIN and process boundaries remain correctly separated. The scientific scope and all qualifications of the rev.-1 review remain in force. The PI alone decides Atlas v0.9 acceptance, release record, merge and tag; no canonical file is modified by this review.
