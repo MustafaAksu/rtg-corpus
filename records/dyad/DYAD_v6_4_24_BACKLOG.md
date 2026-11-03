@@ -26,6 +26,14 @@ Governing edition: `dyad-v6.4.23` (`9f874ccc…25cb`). Line numbers refer to it.
 
 Owner decision needed per row: register (name, scope) or record "no RID; cite the section". A new RID is a registration only; it changes no statement.
 
+**Tentative decisions (3 Nov 2026; co-owner proposal, owner agrees; final at the v6.4.24 candidate review):** DYAD RIDs for the first three rows (names to be proposed with the candidate). For the cubic radial rate across $p$: no new DYAD RID. The entry stays a statement-level import of `RECOG-ALG-NU3-CLOSED-FORM`, evaluated in the declared $K_p$ family, unless an independent Dyadic proposition and proof are separated out.
+
+## B2. Items from the Triadic v1.7 reading (3 Nov 2026)
+
+- **`DYAD-DEF-PRIMITIVE-MAP` "provisional" label (§1 L47).** Triadic v1.7 §7.1 records that the definition "is still provisional" at `dyad-v6.4.23`. Map custody is settled: OFN CUST-O09-01 is answered, the Genesis alias is recorded, and the Programme adopts $T$ as the effective model (PROG-P0-MAP; selection is OPEN-P0). Owner question for v6.4.24: replace the bare "provisional" with what it means, e.g. `[scope: adopted effective model; selection open (OPEN-P0)]`. The definition itself, the RID and all consumer imports are unchanged. If the wording changes, Triadic, Genesis and OFN get one informational notice.
+- **Shared missing source.** `dyad_triad_antisymmetric_bridge_v1_1.md` (DYAD-ART-BRIDGE-NOTE) is cited by Dyadic §2 (downstream handoff) and by Triadic §7.1 (historical pin route). It is missing in both recovery lists (Dyadic Tier 3, "not recorded"). It is a priority item for the PI's search.
+- **Triadic v1.7 import scope** (for the §7 consumer row): five RIDs repinned to v6.4.23 after a claim-level re-read; `DYAD-ALG-KP-FRAME-SCALE` and the isolated-dyad results (Z₆ generator, Lemma F, OPEN 20) are explicitly not imported. This is consistent with the N20 closure.
+
 ## C. Science feeding v6.4.24
 
 - **S1 — OPEN 21 with the unconditional sharpened R9 rows** (selected; work item).
@@ -34,6 +42,10 @@ Owner decision needed per row: register (name, scope) or record "no RID; cite th
   - The new result keeps the R9 dependency on the sharpened rows, the chart/primitive separation and every hypothesis. It never uses the -C7 rows.
   - Plan: design note → exact-rational certificate with negative controls → co-owner review → candidate for v6.4.24.
   - **Status (3 Nov 2026):** done through review. `records/dyad/DYAD_S1_OPEN21_SHARP_ROWS_DESIGN.md`; RID `DYAD-THM-OPEN21-SHARP-ROWS` accepted by the co-owner (PR #150 reviews `5748327144`, `5748500129`); $S_A=19.680$, $S_B=6.357$.
+
+## C2. Schedule
+
+Checkpoint **10 November 2026** (co-owner proposal, 3 Nov). If RECOG and NUMGEN have answered the v6.4.23 notices by then, their answers are included. Otherwise they are recorded as open dependencies and the v6.4.24 candidate is prepared. Until then: the X4 decisions and the v6.4.24 change matrix. This is a maintenance schedule, not a scientific requirement.
 
 ## D. Not in v6.4.24
 
