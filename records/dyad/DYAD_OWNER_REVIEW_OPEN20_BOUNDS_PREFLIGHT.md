@@ -61,3 +61,27 @@ Also dispositioned here: the LIT finding `pipes/DYAD/20261103-LIT-preflight-tail
 ## 4. What this changes
 
 Nothing in the DSN, the RIDs or the OPEN statuses. B-an and B-6 stay ACTIVE. Stage 3 stays not authorized. PR #157 can be merged as a SESSION preflight once R1–R3 are done. Its record should add a pointer to design record §8 and to this review.
+
+## 5. Read-back of the corrections (3 November 2026, r2)
+
+- **Object:** PR #157 head `97c2920`. The script is `evidence/dyad/scripts/dyad_open20_an_bounds_prep.py`, SHA-256 `708049c9da39b2ad866639feed089fe2aeea326aab032d1744c3cc7545b039eb`.
+- **Evidence level:** `EV-SRC-READ` of the diff from `2fd3bd8`, plus a **REVIEWER-REPLAYED** run of the complete corrected preflight: self-test, positive run and the four controls, in one session.
+  - Environment: Linux, Python 3.13.16, mpmath 1.3.0, from the repository root.
+  - Log: `evidence/dyad/open20-an/bounds_preflight_replay_20261103.txt`.
+  - The PowerShell runner `bounds_preflight_run.ps1` was not executed. Its assertions were checked one by one against the replay output:
+    - script hash;
+    - `Stage3 = NOT_CERTIFIED`;
+    - `exact_quadratic_return_zero_checked`;
+    - the two E5 strings;
+    - the output's `script_sha256`;
+    - exit codes 0 and 0, then exactly 1 for each of the four controls.
+
+| Item | Read-back |
+|---|---|
+| R1 — E5 exponent | **Done.** The exponent is (s−k)/k. A new gate G_E5 compares the coded tail factor with an independent evaluation of max_t t^{1/k}(1+ct)^{1−s/k} at t* = 1/(c(s−k−1)). Replayed: U₁ = 1.25079517787224·10⁶³ and U₂ = 1.25080479490175·10⁶³, equal to the values the co-owner derived from the factor 140/121 = (s−k)/(s−k−1). The control `wrong-tail` restores the old exponent; it runs the real `derive_bounds` and the forward template and fails at G_E5, exit 1 |
+| R2 — negative controls | **Done.** Each control now calls the real check with a mutated input. A mutation the gate misses raises an exception and exits 3, so it cannot pass as a control. `wrong-root` uses the other root of P and fails at G_ROOT in `interval_constants`. `degree2` injects a nonzero quadratic coefficient and fails at G_F2. `wrong-tail` is described in R1. **Remark:** `wrong-alpha` mutates the value handed to `validate_alpha`, and that function checks it against a second hard-coded copy of α. The source of α in the positive run is still the Stage-1 string check in `stage1_source`. The control is valid but thin; a later version can derive α from the Stage-1 JSON itself |
+| R3 — degree-2 terms | **Done.** `verify_exact_quadratic_return` composes the linear part A = [[1,−1],[1,0]] and the quadratic term (0, ρ²/2) of T six times over ℚ. It confirms that A⁶ = I and that every quadratic coefficient of F = T⁶ vanishes. Checked by hand against T: η′ = ρ + ρ²/2 + O(3), ρ′ = ρ − η + O(3). The result agrees with the exact recomputation of §2. The gate runs in the positive path and in `--self-test` |
+| Output JSON | The committed `bounds_preflight_session.json` was not the script's own output: its keys were in a different order (commit `4ff7b06`, "expected … pending full replay"), although its content matched. It is replaced here by the replayed output, SHA-256 `820bbb24…e59d` with LF line endings. The content is unchanged. On Windows, `Path.write_text` writes CRLF, so a PI run reproduces the content but not these bytes |
+
+**Verdict (r2): ACCEPT** as a SESSION preflight. PR #157 can be merged. It is not stage-3 evidence and not an E1 certificate. The advisory R4 of §2 still applies before any reuse in a 3b design. The LIT finding is closed (§3).
+
