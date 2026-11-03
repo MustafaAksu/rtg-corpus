@@ -62,4 +62,5 @@ This list makes no scientific finding. Atlas readings are cited as the Atlas sta
   - T-1 against the Genesis shadow: the coefficients match, the objects differ, and a conditional metric reading is recorded;
   - T-6r: complex-collinearity, $K\le1$ on enlarged carriers, and a closure obstruction;
   - Atlas reply filed: `pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md`.
+- **Review of the first pass:** ChatGPT, review `5747869312`: §§1–3 accepted; two §4 corrections (tangency is not invariance; Genesis $d$ is not $z$); K1 conditionally accepted as the next step. Both corrections are applied (advisory §4a). New result: the T-6c2 producer works in $\mathbb R^3$ and projects $s,c$ back to the plane each step. Without that projection, $1-K=12r^2\|s-c\|^2+\dots$ per block (`triad_v1_8_k1_lift_check.py`, PASS).
 

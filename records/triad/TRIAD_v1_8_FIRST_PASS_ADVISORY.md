@@ -1,6 +1,7 @@
 # Triadic v1.8 cycle — first-pass scientific advisory (T8-08, T8-09, T8-13, T8-14, T8-06)
 
-**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Status:** SESSION working record, NONCANONICAL. It changes no Triadic text, grade, RID or pipe state of another stream. No v1.8 build is started.
+**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation.
+**Status:** SESSION working record, NONCANONICAL. It changes no Triadic text, grade, RID or pipe state of another stream. No v1.8 build is started.
 **Scope:** the first-pass set agreed by both co-owners. ChatGPT's PR #146 review `5747764214` (ACCEPT SCOPED, with a reordered priority) proposed T8-08, T8-09, T8-13, T8-14 and a T-6r design note, merged into one advisory.
 **Governing edition:** `triad-v1.7` (`506f3403…e64a`). Line references (L…) are to that file unless another tag is named.
 **Evidence:** `evidence/triad/scripts/triad_v1_8_session_checks.py` (SHA-256 `52dfb731…07a0`; exact SymPy, checks A–E). Output: `evidence/triad/v1.8/triad_v1_8_session_checks_output.txt` (`3ec27360…ffd7`). Run with `python -I -B …`; exit 0, RESULT PASS. `EV-RUN` (preparer). Check A also independently reproduces ChatGPT's calculation, so A has two independent runs.
@@ -57,7 +58,7 @@ Filed as `pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md` (finding). The At
    - the $\mathbb R^3$ apex lift with metric $\mathrm{diag}(B_T,\beta)$, $\beta>0$, taking $\Omega$ as the planar oriented area: $Q_sQ_c-I^2-\Omega^2=\beta[(x_1c_z-y_1s_z)^2+(x_2c_z-y_2s_z)^2]$, which vanishes iff $s\wedge c$ lies in the plane.
 
    In both kinds, $K<1$ measures decoherence across blocks, or out-of-plane content. The K = 1 boundary $\mathcal B_K$ is the collinear (planar) locus.
-3. **Closure obstruction (E).** Take two blocks evolving independently by the §6.4 $r^0$ coefficient $\Delta Q_s^{(0)}$. Configurations with the same aggregate $(Q_s,Q_c,I,\Omega)=(2,2,2,0)$ have aggregate $\Delta Q_s^{(0)}=-48$ and $-48-48t^2$. So on such a carrier the aggregate five-variable field is not autonomous, not even on $K=1$. The five-variable coefficient extension of §6.18, in either form (a) or (b), is therefore a **closure ansatz** that no carrier examined here supplies.
+3. **Closure obstruction (E).** Take two blocks evolving independently by the §6.4 $r^0$ coefficient $\Delta Q_s^{(0)}$. Configurations with the same aggregate $(Q_s,Q_c,I,\Omega)=(2,2,2,0)$ have aggregate $\Delta Q_s^{(0)}=-48$ and $-48-48t^2$. So on such a carrier the aggregate five-variable field is not autonomous, not even on $K=1$. The five-variable coefficient extension of §6.18, in either form (a) or (b), is therefore a **closure ansatz**. *[review]* This is shown only for independent blockwise evolution. It does not exclude other carriers, coupled dynamics, or a closure that a carrier's own dynamics might supply.
 
 **Candidates against the contract:**
 
@@ -65,22 +66,43 @@ Filed as `pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md` (finding). The At
 |---|---|---|---|
 | C1 carrier, metric, group | real $\mathbb R^3$, $\mathrm{diag}(B_T,\beta)$; $\beta$ unknown (§6.18: the metric map "does not cover the lifted apex z-component"); group $\mathbb R^3$ | real $(\mathbb R^2)^m$ or a probability measure on planar pairs; group $\mathbb R^{2m}$ | $\mathbb C$; $K\equiv1$, so $K<1$ needs $\mathbb C^m$, which reduces to K2 |
 | C2 encoding | $Q,I$ from the full metric; $\Omega$ = planar area; T-2b gives one $d_z$ normalization ($d_z=r/\sqrt3$) to test | block sums or ensemble means | — |
-| C3 evolution and closure | needs the lifted generator's $z$ dynamics (Genesis $G_{3,d}$ apex channel is the natural source); closure on $(Q_s,Q_c,I,\Omega,r)$ not implied | fact 3: no autonomous closure; carry the block state, or state a closure (for example mean-field) as an explicit model choice | — |
+| C3 evolution and closure | supplied by the T-6c2 producer's own graph forces, when the $z$-components of $s,c$ are kept (§4a). *[review]* Genesis $G_{3,d}$ is a planar Jacobi mode and gives no $z$ equation; closure on $(Q_s,Q_c,I,\Omega,r)$ is not implied | fact 3: no autonomous closure; carry the block state, or state a closure (for example mean-field) as an explicit model choice | — |
 | C4 clock | six-step block (inherits §6.4) | same | — |
 | C5 events | $K=1$ iff planar bivector; Plücker contact as in $M_{\rm root}$ | $K=1$ iff complex-collinear | — |
-| C6 covariance | exchange and sign flips act on $\mathbb R^3$; the T-6q table extends by $z\mapsto\pm z$ | blockwise action plus block permutations | — |
+| C6 covariance | the plane is part of the carrier data: $\Omega$ is the oriented area in that plane and is not invariant under general $SO(3)$ rotations *[review]*; group $O(B_T)\times\{z\mapsto\pm z\}$ with exchanges and sign flips; the T-6q table extends by $z\mapsto\pm z$ | blockwise action plus block permutations | — |
 
 **Design conclusion (proposal).**
-- K1 is the candidate tied to existing Triadic and Genesis objects: the apex $d$-mode, T-2b $d_z$, and Genesis $G_{3,d}$. A first bounded task would be to derive, from Genesis's printed apex channel, how out-of-plane content enters $\Delta(Q_sQ_c-I^2-\Omega^2)$ at the first non-trivial order.
+- K1 is the candidate tied to existing Triadic objects. The T-6c2 producer already works on $\mathbb R^3$ with $B_3=\mathrm{diag}(B_T,1)$ and an apex $D_z=r/\sqrt3$ (the T-2b gauge); see §4a. *[review]* This is not Genesis's $d$, which is a two-component Jacobi mode block in $(\mathbb R^2)^3$; no identity between the two is assumed.
 - K2 shows that "relaxing" the Gram identity by averaging does not by itself give a five-variable flow.
 - Nothing here selects a carrier or restores any sector, wedge or basin statement. The T-6r OPEN is unchanged, and T8-07 waits for a carrier.
+
+## 4a. Revision after review `5747869312`: tangency versus invariance, and the producer's own lift
+
+**(i) Tangency is not invariance.**
+- *In the five-variable extension of §6.18:* $\dot{\mathcal G}=(f_s/Q_s)\mathcal G$ is linear in $\mathcal G$ with a smooth coefficient, so $\mathcal G(t)=\mathcal G(0)\exp\int f_s/Q_s$. The set $\mathcal G=0$ is therefore invariant (uniqueness), and §6.18 stands.
+- *In K1:* $\mathcal G=\beta\|w\|^2_{B_T}$ with $w=bu-av$ is quadratic, so $\dot{\mathcal G}=0$ at $\mathcal G=0$ holds automatically and proves nothing. Invariance needs $w=0$ to be preserved. For an independent pair this means the planar subspace must be preserved, that is $\dot a=\dot b=0$ on $a=b=0$. A sufficient condition is that the dynamics commute with the reflection through the plane and fix the rest of the state.
+- ChatGPT's example (check F4): $K(t)=1/(1+\beta t^2)$ has $K(0)=1$ and $\dot K(0)=0$, yet $K<1$ for $t\ne0$.
+
+**(ii) The producer's own lift** (`evidence/triad/scripts/triad_v1_8_k1_lift_check.py`, SHA-256 `c58476b6…5324`, checks F1–F4, PASS; output `evidence/triad/v1.8/triad_v1_8_k1_lift_check_output.txt`).
+
+*How the producer works.* The recovered T-6c2 producer (`afb4525c…d80e`) computes its graph forces on 3-vectors with $B_3=\mathrm{diag}(B_T,1)$, so $\beta=1$. The apex starts at $D_0=(-r/\sqrt{21},\,2r/\sqrt{21},\,r/\sqrt3)$. **After every step it sets the $z$-components of $s$ and $c$ to zero** and keeps $D_z$. That is a planar projection, of the kind SG-18 asks to be named.
+
+*What the check does.* It keeps $S_z$ and $C_z$, and uses the producer's forces, step rule ($z$ advanced by the force, as the producer does for $D_z$), truncation and axis representative. Results:
+- F1: the forces commute with $z\mapsto-z$; the projected run keeps $K\equiv1$.
+- F2: after one step, $a=\tfrac{r}{21}(7\sqrt3Q_s+4\sqrt{14}\sqrt{Q_s}\,r)\ne0$, and the leading term of $1-K$ is $\tfrac{r^2}{3}(Q_s+Q_c-2I_{sc})=D_z^2\|s-c\|^2_{B_T}$.
+- F3: over one six-step block, $a$ and $b$ grow six-fold and $1-K$ thirty-six-fold, exactly at this truncation. The leading term becomes $1-K=12\,r^2\|s-c\|^2_{B_T}$.
+
+*Reading* (SESSION, at the producer's truncation; the unprojected lift is a model choice, not shown to be the physical model):
+- In the producer's own $\mathbb R^3$ model, $K\equiv1$ is enforced by the planar projection, not by the dynamics. With the apex lifted ($D_z\ne0$), the all-planar set is not preserved, and $1-K$ grows from 0 at a rate $\propto r^2\|s-c\|^2\ge0$.
+- The deficit enters $\mathcal G$ at degree 4. That is the order of the terms discarded by the first-variation identity (row 2, §6.18), so the retained §6.4 ledger is unaffected. Any $K<1$ dynamics in K1 is a next-order effect, sourced by the apex lift.
+- C1 and C2 of K1 are now fixed by the producer: $\beta=1$, the producer plane and the normal $z$. C6 is $O(B_T)\times\{z\mapsto\pm z\}$. The leading generation term is a function of the five variables, but $a$ and $b$ themselves must be carried beyond one block; that is the C3 closure question.
 
 ## 5. Proposed next steps
 
 | Step | Kind | Gate |
 |---|---|---|
 | ChatGPT checks §§1–4 | change-focused co-owner review | — |
-| T8-06 next: the K1 first-order out-of-plane term from Genesis $G_{3,d}$ | SESSION research; source-read of `gen-v2.9` §6.5 apex seeding | co-owner agreement on K1 |
+| T8-06 next: K1 C3 in the producer's unprojected lift. Write the next-order $(a,b)$ dynamics; test whether $1-K$ closes on $(Q_s,Q_c,I,\Omega,r)$ over several blocks, or needs $(a,b)$ as state | SESSION research, producer bytes in the repository | co-owner agreement |
 | v1.8 content | T-6m2 result (§1), the T-1 conditional sentence (§2), the T-6r closure-ansatz sentence (§4 fact 3) | after T8-01 and T8-02, or a co-owner decision not to wait; PI start |
 
 ## 6. Not claimed
@@ -89,4 +111,5 @@ Filed as `pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md` (finding). The At
 - The T-6m2 number is ansatz-relative.
 - T-1 and the Genesis shadow term are not shown to be the same object.
 - The closure obstruction is shown for blockwise copies only, not for coupled dynamics.
+- The unprojected-lift result holds at the producer's truncation and leading order. It does not say that the projected T-6 ledgers are wrong at their retained order, nor that the unprojected lift is the physical model.
 - No Triadic grade, RID or text changes.
