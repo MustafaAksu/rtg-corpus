@@ -1,17 +1,17 @@
 # RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7
 
 **Title:** RTG Triadic Birth-Lift Study — Scientific Ledger  
-**Date:** 2 November 2026  
+**Date:** 3 November 2026  
 **Scope:** The continuous $2\to3$ birth family, the scoped $K_3/K_4$ return models and the typed diagnostic phase and orientation models (root-closed model, historical executed models, corrected coefficient extensions), with their consumer exports. No complete physical birth law, independent-orientation physical carrier or discrete TDR-G bridge is selected.  
 **Document class:** Technical scientific ledger  
-**Document status:** DRAFT — v1.7 stage-2 candidate (layout only, over the stage-1 intermediate `b47d294d…a66a`); adoption pending. `triad-v1.6.1` governs until adoption and tag. Consumer acceptance is not implied.  
-**Supersedes:** `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6.1` (tag `triad-v1.6.1`, SHA-256 `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f`), on adoption.  
+**Document status:** ADOPTED — PI, 3 November 2026 (orientation-extension typing, T-6r acceptance contract, claim-level repins, consumer matrix and Methodology v1.4 layout; stage 1 and stage 2 reviewed). Release record: `records/triad/TRIAD_v1_7_RELEASE_RECORD.md`. Consumer acceptance is not implied.  
+**Supersedes:** `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6.1` (tag `triad-v1.6.1`, SHA-256 `95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f`).  
 **Companion documents:** governing editions read for v1.7 — Programme Overview v1.3 (`programme-v1.3`); DSN Methodology v1.4 (`methodology-v1.4`); OFN v0.12 (`ofn-v0.12`); Dyadic Oscillator v6.4.23 (`dyad-v6.4.23`); Genesis Geometry v2.9 (`gen-v2.9`); OPEN-M v0.7.1 (`uvm-v0.7.1`); RRF v0.8.4 (`rrf-v0.8.4`); TDR-G v2.12.14 (`tdrg-v2.12.14`). Proof imports keep claim-level pins (§7.1–§7.2).  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Status summary:** This release does not select a complete physical birth law, an independent-orientation physical carrier, or a discrete TDR-G bridge. The recovered T-6c2/T-6e producers establish an orientation-output normalization correction: T-6d's root variable is retained, T-6e's raw-determinant extraction is retained, and downstream uses that treated the raw increment as the normalized orientation rate are narrowed to historical executed-model records. The former safety-wedge/no-basin/phase-steering obstruction chain is not a current corrected-model result. T-6j2 is PARTIAL with only its historical root-closed torsional excursion retained; T-6m retains its exact reference quarter-turn and producer-frame forcing polynomial, not the wedge obstruction. The 96:1 coefficient comparison is bookkeeping until source/model correspondence is proved. No corrected-field trajectory campaign is treated as scientifically decisive before the T-6r acceptance contract (§2) is met.  
 **Programme tier:** Tier 3 — Continuous Programme, conditional on the selected generator; no maturity regrade.  
 **Co-owners:** Claude and ChatGPT (PI designation, 18 Oct 2026); v1.7 prepared by Claude, change-focused review by ChatGPT.  
-**Records:** v1.7 release record `records/triad/TRIAD_v1_7_RELEASE_RECORD.md` (written at adoption); stage-1 build `evidence/triad/scripts/build_triad_v1_7_stage1.py` with `records/triad/TRIAD_v1_7_STAGE1_IMPLEMENTATION_MATRIX.md`; stage-2 movement map `evidence/triad/v1.7/movement_map.json`; v1.6.1 adoption and release records `records/triad/OWNER_ADOPTION_v1_6_1.json` and `records/triad/RELEASE_RECORD_v1_6_1.md`.  
+**Records:** v1.7 release record `records/triad/TRIAD_v1_7_RELEASE_RECORD.md`; stage-1 build `evidence/triad/scripts/build_triad_v1_7_stage1.py` with `records/triad/TRIAD_v1_7_STAGE1_IMPLEMENTATION_MATRIX.md`; stage-2 movement map `evidence/triad/v1.7/movement_map.json`; v1.6.1 adoption and release records `records/triad/OWNER_ADOPTION_v1_6_1.json` and `records/triad/RELEASE_RECORD_v1_6_1.md`.  
 **Evidence location:** the v1.6 accepted evidence package `evidence/accepted_r4_2/` is held by the PI and is **not in the repository**. Relative script, input and evidence paths in §8 refer to that package root unless a repository path is given; the hashes printed there remain the identities. Repository holdings and missing items: `records/triad/TRIAD_SOURCE_RECOVERY_LIST.md`.  
 **Repository:** `rtg-corpus`
 
@@ -962,7 +962,7 @@ $$\left.P_c\right|_{I_{sc}=0}
 
 **Principal investigator:** Mustafa  
 **AI / collaborator roles:** Claude · ChatGPT · Gemini · Grok  
-**This edition (v1.7):** prepared by Claude from the confirmed co-owner reconciliation; change-focused review by ChatGPT; PI adoption pending.  
+**This edition (v1.7):** prepared by Claude from the confirmed co-owner reconciliation; change-focused review by ChatGPT; adopted by the PI on 3 November 2026.  
 **Source custody:** Triadic owns T-6u's diagnostic; Genesis owns its raw polynomial/seeding inputs and may verify the ratio as a consumer. OPEN M consumes only the adopted scoped diagnostic. References to the Genesis frame-map and RRF are not new proof imports.  
 **Evidence history:** The three original T-6s/T-6t/T-6u scripts were recovered in the supplied review and rerun unchanged: 11/13/8 checks. Their full hashes and historic interpretation limits are in §8. The r1 availability claim is corrected as a former local-access limitation, not a claim that those artifacts never existed. `apex_ratio_setup.py` and the microscopic route census remain unavailable in this package. The new v1.6 code is separately identified; no historical output sentence is silently adopted as the revised theorem. The peer explicitly accepted responsibility for the former unit/child, label/carrier and mixed-channel overstatements and the 13-to-14 count error; the received review is preserved in the evidence packet.
 **Identifier set (v1.7).** This ledger declares 46 `TRIAD-*` RIDs (13 ALG, 22 ART, 2 EXPORT, 2 NUM, 7 OPEN); none is added, removed or renamed in v1.7. Current: `TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION`, `TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN`, `TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN`, `TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY`, `TRIAD-ALG-T6T-JACOBI-MODE-SIGNS`, `TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC`, `TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION`, `TRIAD-EXPORT-PROTOCOL-2`, `TRIAD-OPEN-T6M2`, `TRIAD-OPEN-T6N`, `TRIAD-OPEN-T6O`, `TRIAD-OPEN-T6Q`, `TRIAD-OPEN-T6R`, and the 22 artifact RIDs of §8. Historical or replaced, retained for traceability (Appendix B, §7.3): `TRIAD-ALG-ISC-ATTRACTOR`, `TRIAD-ALG-SAFETY-WEDGE`, `TRIAD-ALG-T6M-BIRTH-OBSTRUCTION`, `TRIAD-ALG-T6S-INPLANE-CHIRALITY`, `TRIAD-ALG-T6T-CHIRALITY-COUNT`, `TRIAD-ALG-T6U-APEX-SOURCE`, `TRIAD-ALG-VERDICT`, `TRIAD-NUM-T6J2-NO-BASIN`, `TRIAD-EXPORT-PROTOCOL-1`, `TRIAD-OPEN-T6J2`, `TRIAD-OPEN-T6M`. The string `RER-TRIAD-BIRTH-GRAPH-INVOLUTION` (§7.2) is a noncanonical RER record name, not a Triadic RID. The v1.6 phrase "all 49 RIDs" (Appendix A) cannot be reproduced from the repository, because the v1.5 and v1.6 files are not in it.  
@@ -975,7 +975,7 @@ $$\left.P_c\right|_{I_{sc}=0}
 
 ## Appendix A — Version History {#appendix-a}
 
-### v1.7 — 2 November 2026 — DRAFT (adoption pending)
+### v1.7 — 3 November 2026 — ADOPTED
 - **§6.18, §6.4, §1 [COR, scope]:** the off-root extension of the §6.4 coefficients is not unique; $f_s$, $f_c$ are stated for both root-equivalent extensions; $D=\mathcal G/Q_s$ is a first integral in the $Q_c$-free extension and has $\dot D=r\,q_1D$ in the literal one (ODE-scope remark, no RID); domain and the six-step-block ODE clock stated. Reason: the displayed $\Delta Q_c^{(1)}$ carries $Q_c$.
 - **§6.18 [scope]:** `TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION` typed as the first-variation (degree-3) coefficient of $\Delta\mathcal G\equiv0$; RID kept.
 - **§6.9 [corollary, no RID]:** coercive bound $6(\sqrt3-1)K\le A_\theta^{\rm corr}\le6(\sqrt3+1)K$ inside `TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN`.
@@ -1114,4 +1114,4 @@ Reason: Raw determinant extraction retained; normalized-rate identification corr
 
 ---
 
-*END OF DOCUMENT — RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 — DRAFT, stage-2 candidate; adoption pending; `triad-v1.6.1` governs until adoption and tag.*
+*END OF DOCUMENT — RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7*
