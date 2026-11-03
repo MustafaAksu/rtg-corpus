@@ -5,4 +5,5 @@
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
 | 2026-10-26 | GEN | notice | open | GEN v2.9 §6.8 κ_f := |m||w| (renamed from κ; new [DEF]); B_* declared undefined with unknown sign; GEN-THM-SOURCED-JUNCTION (w=0 algebraic statement, minimizer clause retracted to Appendix B); UVM §0.3/§7 pin v2.8.5 (Programme IF08), UVM R2 uses m=2Q_sB_* | — | `20261026-GEN-kappa-f-b-star-sourced-junction.md` |
+| 2026-11-03 | DYAD | notice | open | R11 owner labels in Dyadic (Appendix C) | — | `20261103-DYAD-notices-n16-n21.md` |
 | 2026-11-03 | TRIAD | notice | open | Triadic v1.7 adopted; CN-02, CN-04, CN-05 (§7.4) and exports TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY, TRIAD-ALG-T6T-JACOBI-MODE-SIGNS, TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC | — | `20261103-TRIAD-v1-7-adopted.md` |

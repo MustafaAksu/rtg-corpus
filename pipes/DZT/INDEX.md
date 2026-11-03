@@ -4,4 +4,4 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| — | — | — | — | (empty) | — | — |
+| 2026-11-03 | DYAD | notice | open | Appendix F crosswalk; OPEN 9 $p=12$ cascade value; DYAD-ALG-VANISH-B2; DYAD-THM-RAW-CUBIC caveat and range | — | `20261103-DYAD-notices-n16-n21.md` |

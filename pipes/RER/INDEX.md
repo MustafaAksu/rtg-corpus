@@ -5,3 +5,4 @@
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
 | 2026-10-29 | RECOG | notice | open | RECOG v0.3.23–v0.3.26 adopted (recog-v0.3.26, DSN SHA-256 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34); 30 new RECOG RIDs since recog-v0.3.22 (§6.3, §6.4, §6.5, §6.13a, §6.13b, §6.16e, §8); Appendix B RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325, RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325; OPEN registry unchanged | — | `20261029-RECOG-v0-3-26-adopted.md` |
+| 2026-11-03 | DYAD | notice | open | DYAD-ALG-KP-FRAME-SCALE; DYAD-THM-SMOOTH-EQUIVARIANT-CHART (v6.4.20 content) | — | `20261103-DYAD-notices-n16-n21.md` |

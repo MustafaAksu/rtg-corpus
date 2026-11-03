@@ -88,3 +88,37 @@ independent of the root and of $C$, through the polynomial identity $P'(a)=\tfra
    - A certified enclosure of an actual jump that excludes 0 would prove that the branch diverges. That would then give divergence of $\log F$, though not B-an.
    - Floating-point agreement or an interval containing 0 proves nothing either way.
    - Convergence needs an analytic gluing identity.
+
+## 5. Addendum — LIT literature validation (3 November 2026, SESSION)
+
+**Source.** Pipe item `pipes/DYAD/20261103-LIT-lh2012-summability-chain.md` (LIT finding, tag `dyad-v6.4.23`). It cites LIT inferences INF-005 to INF-008 at `rtg-lit` commit `44bad61d81af2f970b13368a8b7da87b9721442d`. The DYAD owner has no access to the private `rtg-lit` repository. What follows records LIT's statement as filed, not an owner re-check of the cited works.
+
+**What LIT reports.** Every link of the [L12] route used in §1 has a deduction that both LIT co-owners checked:
+
+| Link | Published support | LIT ID |
+|---|---|---|
+| [L12] Prop. 5.3 ⇒ Thm 5.1 (sectorial $1/k$-Gevrey) | Jiménez-Garrido–Sanz–Schindl, *J. Geom. Anal.* 30 (2020), Thm 5.2, with $M_p=\Gamma(1+p/k)$ | INF-005 |
+| Thm 5.1 ⇒ Cor. 5.2 (Ramis $k$-summability, at most $2k$ excluded directions, sums = strong Hakim curves of $F$ or $F^{-1}$) | Malgrange–Ramis, *Ann. Inst. Fourier* 42 (1992), 1.4 and Def. 1.5 | INF-008 |
+| Cor. 5.2 ⇒ the polynomial blow-down in the chart $z=x$ (step 5 of §1) | Malgrange–Ramis 1992, Prop. 2.3 | INF-008 §5 |
+| [L12] Lemma 5.4 ($\hat\gamma$ is $1/k$-Gevrey), both steps | Brochero Martínez–López-Hernanz, *Astérisque* 323 (2009), Thm 1.1; written Gevrey Briot–Bouquet proof | INF-006, INF-007 |
+
+**Scope of LIT's check, as LIT states it:**
+- Watson's lemma, Borel–Ritt–Gevrey, Phragmén–Lindelöf and the Ramis–Sibuya theorem are cited classical inputs; they are not re-proved.
+- [L12]'s own proofs of Prop. 5.3 and Thm 4.2 were read, not re-proved.
+- Malgrange–Ramis 1992 is accepted at its checked parts (§1, and §2 up to 2.3). It stands in for Ramis 1980, which LIT did not obtain.
+- LIT BL-014 (Lagrange inversion and composition, [L12] Thm 6.1) is open. It does not block this route, which bypasses Thm 6.1.
+
+**Effect on this record.**
+- The literature basis of the §1 verdict is stronger. LIT states that its earlier limitation (the Fruchard–Zhang proof being only sketched) does not apply to this cited route. The DYAD records did not carry that limitation themselves.
+- The grade stays **SESSION** (§3), and the verdict is unchanged.
+- B-an and B-6 stay ACTIVE: $k$-summability decides nothing about convergence.
+- No statement about the real model or a physical carrier follows.
+- **Stage-3 constants.** The explicit Leau–Fatou and Hakim constants that the sectorial pilot needs for E3/E4 remain open (LIT BL-004/BL-005). Stage 3 stays not authorized.
+
+**Citation rule for a later import.** If the OPEN 20 analytic result ever enters the DSN (§3), its Import Ledger `Verification:` line cites the works above with LIT-ID@version:label and the `rtg-lit` commit (CONVENTIONS §8):
+- `jimenezgarrido2020-phragmen@arxiv-v1:Theorem 5.2`
+- `malgrange1992-multisommables@vor:1.5`
+- `brochero2009-gevrey@vor:Theorem 1.1`
+- `lopezhernanz2012-summable-curves@vor`
+
+Nothing is imported now.
