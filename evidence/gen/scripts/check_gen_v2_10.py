@@ -11,12 +11,13 @@ Gates (exit 0 iff all PASS):
  C3  PROTECTED   §6.3a–§6.3c byte-identical; §8 rows of the K3/6S/D-4 RIDs identical
  C4  RID SET     GEN RIDs = base + {GEN-ALG-P4-DRIFT-IDENTITY, GEN-ALG-BIRTH-SYMMETRY-SEED}; each attached once at an `[ALG]`
                  statement; no collision in other dsn/ files; GEN-CAND-APEX-T6U kept
- C5  TAGS        per-tag census: base + Σ(new−old) = candidate; the only decreases are [THM] −1 (G8) and [CAND] −2 (G6 T-6s/T-6t)
+ C5  TAGS        per-tag census: base + Σ(new−old) = candidate; the only decreases are [THM] −1 (G8) and [CAND] −1 (G6: T-6s/T-6t
+                 lose their line tags; R1 adds an inline `[CAND]` for the proposed OPEN-M use of T-6s)
  C6  G7          the identity line shows the cubic term 2dᵀB G₂,d, names L⁶=I (GEN-THM-LIN-ORDER6) and G₂=0 (§6.4), states the
                  boxed identity, the custody of the 𝒫₄ census, and is not filed under GEN-THM-DELTA-QC
  C7  G8          no `[THM]` birth-symmetry statement remains; the RID is cited at §6.6, §1 and §2; the §8 artifact row keeps its
                  typing and points to the RID; the Appendix B correction entry exists
- C8  G6          T-6s/T-6t lines are `[ALG]` imports at v1.7; T-6u has an `[ALG]` import line at v1.7 and the Genesis `[CAND]`
+ C8  G6          T-6s/T-6t lines are `[ALG]` imports at v1.7 (R1: the T-6s interface use is stated separately as `[CAND]`); T-6u has an `[ALG]` import line at v1.7 and the Genesis `[CAND]`
                  GEN-CAND-APEX-T6U reading; no v1.6 §6.15–§6.17 import remains
  C9  PINS        every tag named in the live text exists in the repository; no `ofn-v0.10` and no Discrete Genesis v2.12.13 remains live
  C10 G5          the DYAD-ALG-NU5-P5 row carries the ℚ(ζ₅) label and the dyad-v6.4.23 pin in the same row; the value line in §6.2 is unchanged
@@ -33,7 +34,7 @@ NEW = {"GEN-ALG-P4-DRIFT-IDENTITY", "GEN-ALG-BIRTH-SYMMETRY-SEED"}
 PROT = ["GEN-THM-K3-PLANAR-FACTOR-NOGO", "GEN-THM-CHIRAL-CUBIC-FACTOR-LEMMA", "GEN-THM-K3-SIXSTEP-FACTOR-NOGO",
         "GEN-DEF-MEANFEEDBACK-FAMILY", "GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO", "GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO"]
 TAGS = ["[THM]", "[ALG]", "[OPEN]", "[DEF]", "[RESULT]", "[COR]", "[HYP]", "[FAIL]", "[CAND]", "[RETRACTED]", "[ALG structure]", "[CONVENTION]"]
-ALLOWED_DROP = {"[THM]": -1, "[CAND]": -2}
+ALLOWED_DROP = {"[THM]": -1, "[CAND]": -1}
 APPA = "## Appendix A — Version History {#appendix-a}"
 APPB = "## Appendix B — Retired and Rejected Claims {#appendix-b}"
 SCRIPT = ("evidence/gen/scripts/gen_inbox_checks.py", "4b9f0a3c", "5415")
@@ -107,7 +108,9 @@ def check(base, cand, log, root, verbose=True):
            and L.count("`[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.16 | TRIAD-ALG-T6T-JACOBI-MODE-SIGNS]`") == 1
            and L.count("`[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]`") == 1
            and L.count("**[CAND]** `[scope: primitive seed diagnostic]` [RID: GEN-CAND-APEX-T6U]") == 1
-           and not re.search(r"RTG_TRIADIC_BIRTH_LIFT_DSN_v1\.6 §6\.1[5-7]", L))
+           and not re.search(r"RTG_TRIADIC_BIRTH_LIFT_DSN_v1\.6 §6\.1[5-7]", L)
+           and "This remains a candidate interface statement" not in L
+           and L.count("The imported coherent-family identity is `[ALG]`; its proposed use as an OPEN-M interface remains `[CAND]` and is not a source realization.") == 1)
     g("C8", ok6, "G6")
     named = set(re.findall(r"`((?:gen|dyad|triad|numgen|ofn|tdrg|programme|methodology|rrf|recog)-v[0-9.]+)`", L))
     missing = sorted(t for t in named if subprocess.run(["git", "-C", root, "rev-parse", "-q", "--verify", f"{t}^{{commit}}"],
@@ -163,6 +166,8 @@ CONTROLS = [
  ("NC7 birth-symmetry grade left [THM]", ("`[ALG]` [RID: GEN-ALG-BIRTH-SYMMETRY-SEED] **Birth-symmetry", "`[THM]` [RID: GEN-ALG-BIRTH-SYMMETRY-SEED] **Birth-symmetry"), {"C1", "C4", "C7"}),
  ("NC8 byte change in §6.3c", ("**G-SEL.** No physical model", "**G-SEL.** No physical models"), {"C1", "C3"}),
  ("NC9 identity filed under GEN-THM-DELTA-QC", ("It is the $d$-mode analogue of `GEN-THM-DELTA-QC` and distinct from it.", "It is part of `GEN-THM-DELTA-QC`."), {"C1", "C6"}),
+ ("NC11 R1 reverted", ("The imported coherent-family identity is `[ALG]`; its proposed use as an OPEN-M interface remains `[CAND]` and is not a source realization.",
+                       "This remains a candidate interface statement, not an OPEN-M source realization."), {"C1", "C8"}),
  ("NC10 printed 𝒫₄ coefficient altered", (r"&-\tfrac{1}{8}Q_sI_{ds} - \tfrac{3}{32}Q_s\omega_{ds} \\", r"&-\tfrac{1}{8}Q_sI_{ds} - \tfrac{3}{16}Q_s\omega_{ds} \\"), {"C1", "C13"}),
 ]
 

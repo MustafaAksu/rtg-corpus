@@ -5,6 +5,9 @@ Scope: the fixed co-owner list `records/gen/GEN_OWNER_RECONCILIATION_INBOX_20261
 PR #161 comment 6602196670). PI decision, 3 Nov 2026, verbatim: "Sürüm 2.10 uygun, kapsam böyle uygun, RID'lein adları
 uygun" (edition v2.10; that list as scope; RIDs GEN-ALG-P4-DRIFT-IDENTITY and GEN-ALG-BIRTH-SYMMETRY-SEED).
 
+Round 2 (3 Nov 2026): R1 of the ChatGPT co-owner review (PR #162, review 5751351272) — edit G6m separates the imported
+T-6s identity ([ALG]) from its proposed OPEN-M interface use ([CAND]).
+
 Rules:
 - input must be the adopted v2.9 bytes (tag gen-v2.9, SHA-256 9178ca2c…00ac);
 - every edit is assertion-gated: mode "str" = exact substring occurring exactly once; mode "line" = one whole line occurring
@@ -109,6 +112,10 @@ ed("G6k", "G6", "line", "- TRIAD (IF06) :: Triadic §7, pin v2.8.7 :: primitive 
 ed("G6l", "G6", "str",
    "`[CAND]` `[scope: primitive seed comparison]` — [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]",
    "`[CAND]` `[scope: primitive seed comparison]` (Genesis reading; the import line beneath it in §2 carries `[ALG]`) — [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]")
+
+ed("G6m", "G6/R1", "str",
+   "This remains a candidate interface statement, not an OPEN-M source realization.",
+   "The imported coherent-family identity is `[ALG]`; its proposed use as an OPEN-M interface remains `[CAND]` and is not a source realization.")
 
 # ---------------- G7: the d-mode quartic identity ----------------
 ed("G7a", "G7", "str",

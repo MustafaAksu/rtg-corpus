@@ -7,6 +7,7 @@
 [CAUGHT] NC7 birth-symmetry grade left [THM]: must fail ['C1', 'C4', 'C7']; failed ['C1', 'C2', 'C4', 'C5', 'C7']
 [CAUGHT] NC8 byte change in §6.3c: must fail ['C1', 'C3']; failed ['C1', 'C2', 'C3']
 [CAUGHT] NC9 identity filed under GEN-THM-DELTA-QC: must fail ['C1', 'C6']; failed ['C1', 'C2', 'C6']
+[CAUGHT] NC11 R1 reverted: must fail ['C1', 'C8']; failed ['C1', 'C2', 'C5', 'C8']
 [CAUGHT] NC10 printed 𝒫₄ coefficient altered: must fail ['C1', 'C13']; failed ['C1', 'C13', 'C2']
 
 all controls caught

@@ -238,7 +238,7 @@ and
 \[
 \|H_{\rm total}\|_B\le1\iff0\le g_2\le2.
 \]
-The older unconditional “any coherent source cannot raise the norm” reading is withdrawn. Neither physical selection of \(0\le g_2\le2\) nor a source-lowering identification follows from the identity. This remains a candidate interface statement, not an OPEN-M source realization.
+The older unconditional “any coherent source cannot raise the norm” reading is withdrawn. Neither physical selection of \(0\le g_2\le2\) nor a source-lowering identification follows from the identity. The imported coherent-family identity is `[ALG]`; its proposed use as an OPEN-M interface remains `[CAND]` and is not a source realization.
 
 `[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.16 | TRIAD-ALG-T6T-JACOBI-MODE-SIGNS]` **Mode-sign count, not physical source-direction independence.** Adopted Triadic v1.7 retains independently signable Jacobi mode labels within the stated node-mediated incidence reduction. It does **not** establish that the \(d\)-mode is a separate physical transverse/out-of-plane source carrier. Any physical apex-source realization requires an explicit enlarged carrier, embedding, metric and source map (CN-01 / GCL-05).
 

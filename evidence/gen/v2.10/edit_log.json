@@ -1,12 +1,12 @@
 {
  "base_sha256": "9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac",
  "base_tag": "gen-v2.9",
- "candidate_sha256": "4ac899be382e968d83b238ae9a33daa5df059dfcf5d177a23525de603b1e14e0",
+ "candidate_sha256": "b1666ef03aa150f19771189a42ec362b7332316bc25fb3f26f0df0e39e878c1f",
  "declared_new_gen_rids": [
   "GEN-ALG-P4-DRIFT-IDENTITY",
   "GEN-ALG-BIRTH-SYMMETRY-SEED"
  ],
- "edit_count": 37,
+ "edit_count": 38,
  "edits": [
   {
    "key": "H1",
@@ -250,6 +250,15 @@
    "new": "`[CAND]` `[scope: primitive seed comparison]` (Genesis reading; the import line beneath it in §2 carries `[ALG]`) — [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]",
    "old_sha256": "4ece1b7c19dc1b017e3f0377aafd71fbea6c5b4c1168c5b1ed486ea9d7e1a1a7",
    "new_sha256": "8f95e13b7f60bd3429ab9d6e8d6067647df0a65b45f179bddce8dae3427330cb"
+  },
+  {
+   "key": "G6m",
+   "item": "G6/R1",
+   "mode": "str",
+   "old": "This remains a candidate interface statement, not an OPEN-M source realization.",
+   "new": "The imported coherent-family identity is `[ALG]`; its proposed use as an OPEN-M interface remains `[CAND]` and is not a source realization.",
+   "old_sha256": "81d1efd0cd2f1d0c4aaa88daac50948e8d53ddce5af5b7183f35957f2431d828",
+   "new_sha256": "3f1ddacb62eee06df3ccc78f3bea7a1f92b37d56ff412d34334f65fe267a177f"
   },
   {
    "key": "G7a",
