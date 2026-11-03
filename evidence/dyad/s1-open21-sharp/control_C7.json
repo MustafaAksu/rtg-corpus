@@ -1,0 +1,41 @@
+{
+ "all_pass": false,
+ "control": "C7",
+ "gates": {
+  "G0_input_text": true,
+  "G1_adopted_table_reproduced": true,
+  "G2_windows_match_rows": true,
+  "G3_primary_constants_exact": false,
+  "G4_published_ceilings_outward_minimal": false,
+  "G5_improvement_unconditional_rows": false
+ },
+ "info": {
+  "inputs_sha256": {
+   "dsn": "9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb",
+   "recog": "45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34"
+  }
+ },
+ "rows": {
+  "A": {
+   "C2_sharp": "1296/5",
+   "adopted_K_j": "8831/250",
+   "adopted_secondary_exact_float": "35.3233259259",
+   "primary_C2_sharp_times_factor": "2686976/9375",
+   "primary_float": "286.6107733333",
+   "secondary_exact": "434647/25000",
+   "secondary_float": "17.3858800000",
+   "secondary_published": "492/25"
+  },
+  "B": {
+   "C2_sharp": "8149/100",
+   "adopted_K_j": "883/100",
+   "adopted_secondary_exact_float": "8.8295407407",
+   "primary_C2_sharp_times_factor": "13778944/140625",
+   "primary_float": "97.9836017778",
+   "secondary_exact": "579421/93750",
+   "secondary_float": "6.1804906667",
+   "secondary_published": "6357/1000"
+  }
+ },
+ "script": "dyad_s1_open21_sharp_rows_cert.py"
+}
