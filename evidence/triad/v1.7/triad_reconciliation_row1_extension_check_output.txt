@@ -1,0 +1,5 @@
+(a LITERAL) D-dot = 6*r*(sqrt(42)*I_sc - 5*sqrt(14)*Omega)*(I_sc**2 + Omega**2 - Q_c*Q_s)/(7*Q_s**(3/2)) | expected form: True | L742 with stated f_s,f_c: True | K-dot=0 on K=1: True
+(b Q_c-FREE) D-dot = 0 | expected form: True | L742 with stated f_s,f_c: True | K-dot=0 on K=1: True
+(a) and (b) agree on the root Q_c = Qhat_c: True
+Row 2: all retained increments homogeneous of degree 2 under (Q,I,Omega) weight 1, r weight 1/2: True
+RESULT: PASS
