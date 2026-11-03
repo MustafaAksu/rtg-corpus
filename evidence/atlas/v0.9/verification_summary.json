@@ -1,0 +1,101 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.8",
+ "base_sha256": "47320ca55f25955ff0d5e73be690465c7f9e6ebad9fa6bbc09692d4cf86371b7",
+ "atlas_sha256": "c7f678edb5f2ea6c0ab58651ce3f6f97f5e2f816bcc3b07c6411d43f4429ae3a",
+ "atlas_bytes": 517717,
+ "atlas_lines": 1547,
+ "source_snapshot": "f20f08071d7585d1d79b833ec0e55f8f0f937b93",
+ "changed_sources": [
+  "DYAD",
+  "OFN",
+  "TRIAD"
+ ],
+ "edit_operations": 44,
+ "retired_keys": [
+  "NUMGEN.N-Q*",
+  "F20",
+  "TRIAD.T9"
+ ],
+ "new_keys": [
+  "PROG.G9",
+  "F30",
+  "F31",
+  "F32"
+ ],
+ "new_node_rids": {
+  "DYAD": [
+   "DYAD-THM-OPEN18-STEP-MONOTONE",
+   "DYAD-THM-NF-REM-C7-SHARP",
+   "DYAD-THM-LPHASE-ROWA-BRIDGE",
+   "DYAD-ART-INBOX-20261030"
+  ],
+  "OFN": [
+   "RTG-OFN-ALG-REF-CLOSURE-COMPARISON"
+  ]
+ },
+ "ofn_rids_at_tag": 44,
+ "triad_rids_at_tag": 46,
+ "pipes": {
+  "items": 53,
+  "snapshot": {
+   "closed": 14,
+   "open": 36,
+   "dispositioned": 3
+  },
+  "branch": {
+   "closed": 15,
+   "dispositioned": 5,
+   "open": 33
+  }
+ },
+ "dispositions": {
+  "retired": 3,
+  "reworded": 6,
+  "retained": 9,
+  "new": 4
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 132
+  },
+  "qualifiers": {
+   "PASS": 3
+  },
+  "links": {
+   "PASS": 495,
+   "UNVERIFIED": 5,
+   "DOCUMENTED-UNRESOLVED": 11
+  },
+  "artifacts": {
+   "PASS": 109,
+   "UNVERIFIED": 3
+  },
+  "keys": {
+   "PASS": 128
+  },
+  "process": {},
+  "wording": {
+   "WARN": 13
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 12,
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 120
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373",
+  "evidence/atlas/build/refresh_v0_9.py": "fdbf8d206f565c1ea0c98ba5c7ce8f535780cf157cd8cdad0e3e511a5e854a23"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate rerun for this edition; new RIDs checked for presence in the tagged sources, not re-proved. The TRIAD row-1 algebra was checked by hand and the owner row-1–3 scripts rerun in the Atlas row check of 2 Nov 2026 (records/atlas/ATLAS_TRIAD_v1_7_29_ROW_CHECK_OWNER.md).",
+  "Impact refresh of three moved sources (DYAD v6.4.23, OFN v0.12, TRIAD v1.7); the other 15 domains were not re-extracted; pipe items cited as filed, receiver dispositions are not atlas sources.",
+  "DYAD v6.4.23 §§6.8, 6.14, 8; OFN v0.12 §§2.4, 5.5.4, 9; TRIAD v1.7 §§1, 2, 6.4, 6.9, 6.18, 7.2, 7.4, 8 and the release records extracted at statement level from the tagged files; proofs live in the owner cells."
+ ]
+}

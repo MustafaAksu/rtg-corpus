@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: notice
 object: Triadic v1.7 adopted (triad-v1.7, DSN SHA-256 506f3403628ca01d5a904f885df055d9bfbdf1ef5e474e24e83d4797c122e64a); atlas rows for TRIAD; open notes F-1, F-2, A-1, row 29
 tags: [triad-v1.7]
-state: open
+state: dispositioned
+disposition: 2026-11-03 · accept · records/atlas/ATLAS_V0_9_REVIEW_PACKET.md (carried by the atlas-v0.9 candidate; F20 retired, F30–F32 and PROG.G9 new)
 ---
 Triadic v1.7 was adopted by the PI on 3 Nov 2026 and tagged `triad-v1.7` on the PR #140 merge commit `7568941`. The release record is `records/triad/TRIAD_v1_7_RELEASE_RECORD.md`; the post-tag read-back is `records/triad/TRIAD_v1_7_POST_TAG.md`.
 

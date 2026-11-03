@@ -1,0 +1,156 @@
+[
+ {
+  "key": "NUMGEN.N-Q*",
+  "disposition": "retired",
+  "reason": "DYAD v6.4.23 (D1; pipes/DYAD/20261026-NUMGEN-q-star-branch-split.md closed, accept with change): DYAD-THM-OPEN18-STEP-MONOTONE isolates q_{3/4}≈1.2602142026 (ρ₄=0, Θ₄=−π/3); NUMGEN q*≈0.3156258837 is the root of η₆(q)−q; η₆(q_{3/4})−q_{3/4}≈−0.5537 — different numbers under one symbol. The NUMGEN-side note stays at *NUMGEN:qstar-witness.",
+  "previous_sha256": "1d287fc58ddc7561b0d36b8320818270bbb35177009b02238d342c36646f7e92",
+  "current_sha256": null
+ },
+ {
+  "key": "F20",
+  "disposition": "retired",
+  "reason": "TRIAD v1.7 (rows 9–11): the §1 \"consumer acceptance pending\" wording and the §2 send queue are gone; §7.4 carries a per-recipient consumer matrix, recorded at the TRIAD-EXPORT-PROTOCOL-2 node with PROG.G9 and F31.",
+  "previous_sha256": "d6bcf49ab9a0f58ac8a945c7d487aed4efe758c6cd7239934f0cebbe5358cd73",
+  "current_sha256": null
+ },
+ {
+  "key": "TRIAD.T9",
+  "disposition": "retired",
+  "reason": "Co-key of F20; retired with it.",
+  "previous_sha256": "d6bcf49ab9a0f58ac8a945c7d487aed4efe758c6cd7239934f0cebbe5358cd73",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-A",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "92e6c2e43dfccf0ae08cfc3d3ecfd0aabeb318364432aa0f9a86734556534cd5",
+  "current_sha256": "554a1c59f95e6733cde6b91d96a4e36b16cedc075df9c47169da2ca090ac6470"
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "155ae8ab8afa5144eba0037cc2098e234c9e399960bc4723c3c51a3fc20bfc83",
+  "current_sha256": "15923c7d981932fac57bffcfca9df8b981b3c78208b62bbc28e6e12e599184d2"
+ },
+ {
+  "key": "RECOG.R-A1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "82a50f995d0498a75eebab2c51e59d0f0fb84419ed1172239ecd8182ea8b5342",
+  "current_sha256": "e6d77b389d758de21f1d85e3239a4bb6ad33f02284c821e049c4109bcf56cdb9"
+ },
+ {
+  "key": "F11",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "62dbab43bfff2ef2b3a417d58eed21b730bbba0ce463d34628290b036cd8585c",
+  "current_sha256": "dbd512aa220df890eb0706059355b12c2468a558ee4381e7ff704a141f3efa30"
+ },
+ {
+  "key": "F13",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "0bec50abef66325a121786b82830afbf91d5c0ddd905035841121a9d2a9881a3",
+  "current_sha256": "d1a3cfd0e5e2ad8a98ca4ee9d894583bcd107471ea79412f10613f618adde61e"
+ },
+ {
+  "key": "F14",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "c7ff171726bd58810ef58b93674617a5df77649cb4adc771ab6e87a2c2124bd5",
+  "current_sha256": "e6663a2b97719b07fc36a059371dddd0ef388bd9dfcaa0777699f2a414e87c7b"
+ },
+ {
+  "key": "F18",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "f30aaa4fd870a46c2f041ad3d52dc31f647169643348a695481dad2e6bde8639",
+  "current_sha256": "f30aaa4fd870a46c2f041ad3d52dc31f647169643348a695481dad2e6bde8639"
+ },
+ {
+  "key": "OFN.O6",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "7cf9b20fe32a729f56e78c37093d4f379b464fc83bbc647735ad0b62eb2e0843",
+  "current_sha256": "7cf9b20fe32a729f56e78c37093d4f379b464fc83bbc647735ad0b62eb2e0843"
+ },
+ {
+  "key": "OFN.O9",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "65d2a0b03e00b9636701eb6c7b57c81d1e47ac7d8a2b13823ede7a814a360080",
+  "current_sha256": "65d2a0b03e00b9636701eb6c7b57c81d1e47ac7d8a2b13823ede7a814a360080"
+ },
+ {
+  "key": "OFN.O10",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "461d3eb5e0e4e432cd47b63278b5f16b876907284bea2006944f89d1f522c24a",
+  "current_sha256": "461d3eb5e0e4e432cd47b63278b5f16b876907284bea2006944f89d1f522c24a"
+ },
+ {
+  "key": "OFN.O11",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "404db54e89e68b7c21e9001e1744acd94f22ac3c71fecab96ecdd27987de57cc",
+  "current_sha256": "404db54e89e68b7c21e9001e1744acd94f22ac3c71fecab96ecdd27987de57cc"
+ },
+ {
+  "key": "OFN.O14",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "622ac5d6638027429b070060208c0ba992a2a8560a87bf580187ab1eaad12b5f",
+  "current_sha256": "622ac5d6638027429b070060208c0ba992a2a8560a87bf580187ab1eaad12b5f"
+ },
+ {
+  "key": "PROG.G5",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "56f59fe9bb41136b96e17f32be0ff117ef4a43c746c6441951f411fd0d3da90f",
+  "current_sha256": "56f59fe9bb41136b96e17f32be0ff117ef4a43c746c6441951f411fd0d3da90f"
+ },
+ {
+  "key": "PROG.G6",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "8cd253834f5f6d4dac9ad2930c819d92ac3e1283dc70747b7125c3e56ac95596",
+  "current_sha256": "8cd253834f5f6d4dac9ad2930c819d92ac3e1283dc70747b7125c3e56ac95596"
+ },
+ {
+  "key": "PROG.G8",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.9 sources",
+  "previous_sha256": "3e50a18c0d73927092e7df8bf75e6b0d3faa9422c32b84932f4dbb7dec82c4a4",
+  "current_sha256": "3e50a18c0d73927092e7df8bf75e6b0d3faa9422c32b84932f4dbb7dec82c4a4"
+ },
+ {
+  "key": "PROG.G9",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "5886bea791c7ac97137fe032ac33c1a51ed7c095ef97226673632417bc31b645"
+ },
+ {
+  "key": "F30",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "7a6121a007114176c75482c3c23b35961d8dd8beef17800ee970dab7a61fb3c9"
+ },
+ {
+  "key": "F31",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "77c73610d44f7c9341b3b26ca93b3cf4ae57c0cfcbe67855fe74910158f4578d"
+ },
+ {
+  "key": "F32",
+  "disposition": "new",
+  "reason": "see edit_log.json",
+  "previous_sha256": null,
+  "current_sha256": "311e2eb0d4437321eb5284b9ceee94fd3034513e5f3a5b1d4c475b8ff1dcdc33"
+ }
+]
