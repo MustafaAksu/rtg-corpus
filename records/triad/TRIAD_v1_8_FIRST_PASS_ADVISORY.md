@@ -1,6 +1,6 @@
 # Triadic v1.8 cycle — first-pass scientific advisory (T8-08, T8-09, T8-13, T8-14, T8-06)
 
-**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation. A second revision, after review `5748069400` on `4cbc9ce`, narrows three contract statements (C2/C3, C5, C6; marked *[review 2]*) and adds the closure test (§4b). A maintenance pass after review `5748629780` on `b4bd90f` narrows two more statements (C3 and the §4b minimal state; marked *[review 3]*). ChatGPT's review `5748759219` on `2277de8` accepts that pass and adds the cubic jet and the apex-direction counterexample, which Claude checked independently (§4c).
+**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation. A second revision, after review `5748069400` on `4cbc9ce`, narrows three contract statements (C2/C3, C5, C6; marked *[review 2]*) and adds the closure test (§4b). A maintenance pass after review `5748629780` on `b4bd90f` narrows two more statements (C3 and the §4b minimal state; marked *[review 3]*). ChatGPT's review `5748759219` on `2277de8` accepts that pass and adds the cubic jet and the apex-direction counterexample, which Claude checked independently (§4c). Review `5749141951` on `6e4ce70` adds the eight-coordinate quotient map, also checked independently (§4d).
 **Status:** SESSION working record, NONCANONICAL. It changes no Triadic text, grade, RID or pipe state of another stream. No v1.8 build is started.
 **Scope:** the first-pass set agreed by both co-owners. ChatGPT's PR #146 review `5747764214` (ACCEPT SCOPED, with a reordered priority) proposed T8-08, T8-09, T8-13, T8-14 and a T-6r design note, merged into one advisory.
 **Governing edition:** `triad-v1.7` (`506f3403…e64a`). Line references (L…) are to that file unless another tag is named.
@@ -125,12 +125,44 @@ Source: ChatGPT, review `5748759219` on `2277de8` (ACCEPT SCOPED). Claude's rece
 
 **Reading** (SESSION): adding $w$ to the five invariants does not close the map in general; the apex's direction is hidden state too. The search is now bounded above by an 8-coordinate representation that closes.
 
+## 4d. The $SO(B_T)$ quotient map in eight coordinates
+
+Source: ChatGPT, review `5749141951` on `6e4ce70` (ACCEPT SCOPED). Claude's receiving check: `evidence/triad/scripts/triad_v1_8_k1_quotient_check.py` (SHA-256 `a30f3f4c…236d`; checks J1–J5, PASS; output `evidence/triad/v1.8/triad_v1_8_k1_quotient_check_output.txt`). The model is again the unprojected SESSION extension. In J1–J4 the one-step map $F(X)=\mathcal LX+G_3(X)$ is used exactly; no truncation is applied.
+
+**Coordinates.** Write each planar part as a complex number $\zeta=x+iy$, with $(x,y)=Ru$ and $R$ the Cholesky factor of $B_T$. Then $B_T(u,v)=\operatorname{Re}(\bar\zeta_u\zeta_v)$, and $\operatorname{Im}(\bar\zeta_s\zeta_c)=\Omega$. Collect the vertical parts in $t=(a,b,d_z)$, and set
+$$H_{ij}=\bar\zeta_i\zeta_j,\qquad g_{ij}=\operatorname{Re}H_{ij}+t_it_j .$$
+$H$ is rank-one Hermitian, so it has five real degrees of freedom; with $t$ that makes eight.
+
+**Checks.**
+- **J1.** The planar step is multiplication by $\lambda=e^{i\pi/3}$.
+- **J2.** $G_{3,i}=\sum_jM_{ij}(g)X_j$, with
+  - $M_{ii}=-2g_{ii}-\sum_{k\ne i}n_{ik}$;
+  - $M_{ij}=n_{ij}-g_{jj}$ for $i\ne j$;
+  - $n_{ij}=g_{ii}-2g_{ij}+g_{jj}$.
+
+  This form is derived from the force definition.
+- **J3.** With $A=\lambda I_3+M(g)$ (*[THM: conditional]* on this model, exact for the one-step polynomial map):
+  $$H'=\bar A\,H\,A^\top,\qquad t'=(I_3+M(g))\,t .$$
+  This was checked symbolically against the directly stepped nine-component state. The map keeps $H$ rank-one.
+- **J4.** Stepping a rotated state $PX$, with $P\in SO(B_T)$, gives the same $(H',t')$ as stepping $X$. On $q=H_{ss}>0$, the chart $(q,H_{sc},H_{sd};a,b,d_z)$ rebuilds the rest of $H$:
+  $$H_{cc}=\frac{|H_{sc}|^2}{q},\qquad H_{dd}=\frac{|H_{sd}|^2}{q},\qquad H_{cd}=\frac{\bar H_{sc}H_{sd}}{q}.$$
+  The set $q=0$ needs another chart.
+- **J5.** Two smaller representations fail to close. These are first tests on the free state space, at leading order of the block map from §4c, using the starts of H5:
+  - **(i)** Drop the phase of $H_{sd}$. The apexes $D/\varepsilon=(1,0,1)$ and $(0,1,1)$ agree in $(q,H_{sc},|H_{sd}|,a,b,d_z)$, but after one block $a=-12\varepsilon^3$ and $+24\varepsilon^3$. So the phase of $H_{sd}$ is needed.
+  - **(ii)** Drop the sign of $d_z$. The apexes $(1,0,1)$ and $(1,0,-1)$ agree in $(q,H_{sc},H_{sd},a,b,|d_z|)$, but after one block $a=-12\varepsilon^3$ and $+12\varepsilon^3$. So the sign of $d_z$ is needed.
+
+**Reading** (SESSION):
+- The chosen unprojected model has an exact one-step quotient map on eight real coordinates. The chart is local and excludes $q=0$.
+- Neither the phase of $H_{sd}$ nor the sign of $d_z$ can be dropped.
+- Whether some other representation with fewer than eight coordinates closes (for example, one that drops $a$, $b$ or the modulus of $H_{sd}$) is **OPEN**.
+- No physical carrier is chosen, and the projected T-6c2 producer is unchanged.
+
 ## 5. Proposed next steps
 
 | Step | Kind | Gate |
 |---|---|---|
 | ChatGPT checks §§1–4 | change-focused co-owner review | — |
-| T8-06 next (approved by ChatGPT, reviews `5748629780` and `5748759219`): K1 C3 closure on an enlarged state. The cubic jet of the full nine-component map is now known (§4c). Next: write it in the 8 coordinates of the $SO(B_T)$ quotient; then test closure on the fibres of reduced representations such as $(Q_s,Q_c,I_{sc},\Omega,r;\,w)$, keeping $D_\parallel$, $D_z$ or other hidden variables where needed. The aim is the smallest representation that closes, or a reason why the candidates do not; not a choice of physical model | SESSION research | co-owner agreement given; PI informed |
+| T8-06 next (approved by ChatGPT, reviews `5748629780` and `5748759219`): K1 C3 closure on an enlarged state. The cubic jet of the full nine-component map is known (§4c), and the exact one-step quotient map on eight coordinates is checked (§4d). Next: test the remaining representations with fewer than eight coordinates for closure on the fibres of reduced representations such as $(Q_s,Q_c,I_{sc},\Omega,r;\,w)$, keeping $D_\parallel$, $D_z$ or other hidden variables where needed. The aim is the smallest representation that closes, or a reason why the candidates do not; not a choice of physical model | SESSION research | co-owner agreement given; PI informed |
 | v1.8 content | T-6m2 result (§1), the T-1 conditional sentence (§2), the T-6r closure-ansatz sentence (§4 fact 3) | after T8-01 and T8-02, or a co-owner decision not to wait; PI start |
 
 ## 6. Not claimed

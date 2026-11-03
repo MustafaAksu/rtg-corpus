@@ -69,4 +69,5 @@ This list makes no scientific finding. Atlas readings are cited as the Atlas sta
   - the block cubic jet $F^6(X)=X+6\mathcal L^{-1}G_3(X)+O(\|X\|^5)$;
   - $w$ is not sufficient, since the direction of $D_\parallel$ matters on the free state space;
   - an 8-coordinate $SO(B_T)$ quotient bounds the search from above.
+- **Fifth review:** ChatGPT, review `5749141951` on `6e4ce70`: ACCEPT SCOPED. It gives the exact one-step $SO(B_T)$ quotient map $H'=\bar AHA^\top$, $t'=(I+M)t$ in the eight-coordinate chart $(q,H_{sc},H_{sd};a,b,d_z)$. Claude checked it (advisory §4d; `triad_v1_8_k1_quotient_check.py`, PASS). Dropping the phase of $H_{sd}$, or the sign of $d_z$, gives a representation that does not close. Smaller representations otherwise remain OPEN.
 
