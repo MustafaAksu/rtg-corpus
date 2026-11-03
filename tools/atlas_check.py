@@ -487,7 +487,7 @@ def self_test(manifest, src, covmap, idmap, retired, base_text):
     M[ni] += f' | <{fake}'
     res.append(('NC6b fabricated RID in a node fails', fake, any(x[0] == 'links' and x[2] == fake for x in new_fails('\n'.join(M)))))
     # NC7 source table mismatch
-    M = [l.replace('| v6.4.22 | `dyad-v6.4.22`', '| v6.4.21 | `dyad-v6.4.21`') for l in L]
+    M = [re.sub(r'^(\| DYAD \| [^|]+\| )v[0-9.]+ \| `dyad-v[0-9.]+`', r'\1v0.0.0 | `dyad-v0.0.0`', l) for l in L]   # any edition (was pinned to v6.4.22)
     r = run('\n'.join(M), manifest, src, covmap, idmap, retired, with_sources=True)
     res.append(('NC7 source table mismatch', 'DYAD', any(x[0] == 'sources' and x[2] == 'DYAD' for x in r.fails())))
     # NC8 retired key referenced; NC9 advisory key in a node

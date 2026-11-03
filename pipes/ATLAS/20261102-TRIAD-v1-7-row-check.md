@@ -5,7 +5,8 @@ date: 2026-11-02
 kind: request
 object: Triadic v1.7 candidate (PR #140, branch claude/triad-v1-7-stage1, dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md SHA-256 2573961a82ce10a348f76f10feece6fefb3831f3c4dd60de5dcae78acb745c0d) against the 29-row list of records/triad/ATLAS_ADVISORY_TRIAD_v1_6_1_RECONCILIATION.md §4
 tags: [triad-v1.6.1]
-state: open
+state: closed
+disposition: 2026-11-03 · accept · records/atlas/ATLAS_TRIAD_v1_7_29_ROW_CHECK_OWNER.md (with records/atlas/ATLAS_TRIAD_v1_7_29_ROW_CHECK_CHATGPT.md; both PASS SCOPED, merged in #141 and #143)
 blocks: Triadic v1.7 release record and PI adoption
 ---
 Both Triadic co-owners accept the v1.7 candidate. ChatGPT accepted stage 1 in reviews 5739033005 and 5739393136, the latter covering round 3 and stage 2.
