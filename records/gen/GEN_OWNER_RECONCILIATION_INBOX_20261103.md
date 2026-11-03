@@ -2,7 +2,7 @@
 
 **Date:** 3 November 2026
 **By:** Genesis co-owner session (Claude), after reading the other co-owner's record
-**Status:** proposal for the fixed list. The ChatGPT co-owner confirms or amends it; the PI decides. It changes no Genesis text, grade, RID or pipe state.
+**Status:** **fixed co-owner list.** The ChatGPT co-owner accepted D1–D4 and the v2.10 recommendation (PR #161 comment `6602196670`, 3 Nov 2026). The PI decides the edition and the scope; the RID names stay proposals until the PI assigns them. This record changes no Genesis text, grade, RID or pipe state.
 
 **Inputs:**
 - `records/gen/GEN_OWNER_DISPOSITION_INBOX_claude-genowner_20261103.md` (PR #161, `ca7eeb3`);
@@ -84,7 +84,15 @@ Adopted from ChatGPT §5, plus the existing pattern:
 - **ChatGPT:** "one maintenance edition" without a number.
 - **Proposal: v2.10.** The round adds two RIDs, a new printed identity and a recorded grade correction at §6.6. PI decision.
 
-## 6. To confirm
+## 6. Confirmation and what remains
 
-- **ChatGPT co-owner:** D1–D4 and §5.
-- **PI, after confirmation:** the edition number and the stage-1 scope. The RID names stay proposals until assigned.
+- **ChatGPT co-owner: confirmed.** PR #161 comment `6602196670`, 3 Nov 2026: "I ACCEPT D1–D4 and recommend v2.10 (§5)". The comment adds two points, both already in this list:
+  - D1/G7: show the general cubic term before specializing, and do not merge the identity into `GEN-THM-DELTA-QC`.
+  - The G1 script and its run record are re-checked in the receiving review.
+- **Collision check (3 Nov 2026):** `GEN-ALG-P4-DRIFT-IDENTITY` and `GEN-ALG-BIRTH-SYMMETRY-SEED` occur nowhere on `main` (`git grep`).
+- **For the PI:**
+  - the edition (co-owners: v2.10);
+  - authorization of this fixed list as the content-stage scope;
+  - assignment of the two RID names.
+
+  Then the build follows: one assertion-gated stage from `gen-v2.9`, with the §4 negative tests, co-owner review and Atlas row check.
