@@ -11,7 +11,7 @@
 | PI decision | Atlas v0.9 rev. 2 accepted on 3 November 2026; acceptance adopts a derived NONCANONICAL knowledge map, no owner science | Release record §3; OWNER decision previously recorded |
 | PR #149 | MERGED; merge commit `64ab2be41157fc3eed20a0a790c58f8887b172c8` | GitHub PR metadata (`EV-SRC-READ`) |
 | PR #147 | MERGED; merge commit `04cd5e0eda4be80002574b49b58139863c7b3e77`, head `3c6259e72daf70d843ad05428059dc0690f75313` | GitHub PR metadata and commit record (`EV-SRC-READ`) |
-| Tag | `atlas-v0.9` resolves to the accepted Atlas file and the file at PR #147's merge commit | GitHub `fetch_file` at tag and merge commit (`EV-BYTES`) |
+| Tag target | GitHub commit lookup for ref `atlas-v0.9` resolves to **`04cd5e0eda4be80002574b49b58139863c7b3e77`**, the PR #147 merge commit | GitHub `fetch_commit` on tag ref (`EV-SRC-READ`) |
 | Annotated tag metadata | The PI's `git show --no-patch atlas-v0.9` reports an annotated tag with message naming the expected SHA-256 and target commit `04cd5e0e...` | PI-provided Git command/output, `EV-SRC-REPORTED`; tag-object type not independently fetched through an API |
 | Git blob at tag | `5ee7e1683d0e8a8f548afec82053c02bb5ca2513` | GitHub `fetch_file` |
 | Git blob at merge, head and main | Same `5ee7e1683d0e8a8f548afec82053c02bb5ca2513` (content equality checked) | GitHub `fetch_file` at merge, candidate head and `main` |
