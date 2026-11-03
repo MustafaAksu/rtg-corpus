@@ -1,4 +1,4 @@
-G0_input_text PASS
+G0_input_identity_and_text PASS
 G1_adopted_table_reproduced FAIL
 G2_windows_match_rows PASS
 G3_primary_constants_exact PASS

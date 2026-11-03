@@ -12,15 +12,16 @@ Premise (statement level, checked as text in the governing editions passed on th
     on |z|<=1/20 and (81.49, 1/1600) on |z|<=1/40, same scope and windows; it uses the adopted DYAD-THM-NF-REM C_7 = 100/30.
     The -C7 rows (221.4 / 75.69, RECOG-THM-R9-SHARPENED-ROWS-C7) are NOT used.
 Gates:
-  G0  input text: the OPEN 21 table rows and the sharpened-rows statement occur verbatim in the files given
+  G0  input identity and text: the SHA-256 of the two files equal the tag files (dyad-v6.4.23 9f874ccc..., recog-v0.3.26
+      45e307f8...), and the OPEN 21 table rows and the sharpened-rows statement occur verbatim in them
   G1  reproduction: the adopted C_{2,j}(256/225)^2 (33882112/50625, 10682368/50625) and K_j (8831/250, 883/100) are
       recomputed from K'_j, C_{2,j}, w_j (K_j is an outward ceiling, and below it by less than one unit of its last digit)
   G2  windows: q_max of each sharpened row equals the squared chart radius of the NF-REM row (1/400, 1/1600)
   G3  new primary constants C'_{2,j}(256/225)^2, exact
   G4  new secondary constants: S_j = K'_j + C'_{2,j}(256/225)^2 w_j exact; published 3-decimal ceilings 19.680 (A) and
       6.357 (B) are outward and minimal at 3 decimals
-  G5  improvement: S_j < K_j for both rows; the -C7 values are not inputs
-Negative controls (each exit 1): --control C7 (-C7 rows used), MIX (rows swapped), FLOOR (published value rounded down),
+  G5  improvement: S_j < K_j for both rows (a wrong R9 constant, e.g. the -C7 rows, is caught by G3 and G4)
+Negative controls (each exit 1): --control C7 (-C7 rows used; fails G3/G4), MIX (rows swapped), FLOOR (published value rounded down),
 NOFACTOR ((256/225)^2 dropped), W2 (w_j^2 in place of w_j).
 usage: python -I -B dyad_s1_open21_sharp_rows_cert.py --dsn <dyad-v6.4.23 DSN> --recog <recog-v0.3.26 DSN> --out s1.json
 Exit 0 all gates pass; 1 otherwise. Output JSON byte-deterministic.
@@ -33,6 +34,8 @@ ROW_A = "| A | $\\lvert z\\rvert\\le\\tfrac1{20}$ | $\\tfrac3{64}$ | $\\tfrac{39
 ROW_B = "| B | $\\lvert z\\rvert\\le\\tfrac1{40}$ | $\\tfrac3{128}$ | $\\tfrac{971}{250}$ | $163$ | $\\tfrac{10682368}{50625}$ | $\\tfrac{883}{100}$ |"
 SHARP = "Both theorems hold with $(C_2,q_{\\max})=(259.2,\\tfrac1{400})$ on $|z|\\le\\tfrac1{20}$ and $(81.49,\\tfrac1{1600})$ on $|z|\\le\\tfrac1{40}$"
 PUB = {"A": F(19680, 1000), "B": F(6357, 1000)}
+SHA = {"dsn": "9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb",    # dyad-v6.4.23
+       "recog": "45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34"}  # recog-v0.3.26
 
 
 def ceil_dec(x, d):
@@ -46,8 +49,9 @@ def main():
     o = ap.parse_args()
     D = open(o.dsn, encoding="utf-8").read(); R = open(o.recog, encoding="utf-8").read()
     G, info = {}, {}
-    G["G0_input_text"] = D.count(ROW_A) == 1 and D.count(ROW_B) == 1 and R.count(SHARP) == 1
-    info["inputs_sha256"] = {"dsn": hashlib.sha256(D.encode()).hexdigest(), "recog": hashlib.sha256(R.encode()).hexdigest()}
+    hs = {"dsn": hashlib.sha256(open(o.dsn, "rb").read()).hexdigest(), "recog": hashlib.sha256(open(o.recog, "rb").read()).hexdigest()}
+    G["G0_input_identity_and_text"] = hs == SHA and D.count(ROW_A) == 1 and D.count(ROW_B) == 1 and R.count(SHARP) == 1
+    info["inputs_sha256"] = hs; info["inputs_sha256_expected"] = SHA
     fac = F(1) if o.control == "NOFACTOR" else F(256, 225) ** 2
     rows = {"A": {"Kp": F(3951, 1000), "w": F(3, 64), "C2": F(517), "Kj": F(8831, 250), "C2f": F(33882112, 50625), "r": F(1, 20),
                   "C2s": F(2592, 10), "qmax": F(1, 400), "C2_C7": F(2214, 10)},
@@ -68,11 +72,13 @@ def main():
         s_exact = x["Kp"] + c2s * wf(x["w"])
         pub = PUB[j] - (F(1, 1000) if o.control == "FLOOR" else 0)
         g4 &= s_exact <= pub and pub - s_exact < F(1, 1000)
-        g5 &= s_exact < x["Kj"] and o.control != "C7"
-        out[j] = {"C2_sharp": str(y["C2s"]), "primary_C2_sharp_times_factor": str(c2s), "primary_float": "%.10f" % float(c2s),
+        g5 &= s_exact < x["Kj"]
+        out[j] = {"C2_used": str(c2s / fac), "primary_C2_sharp_times_factor": str(c2s), "primary_float": "%.10f" % float(c2s),
                   "secondary_exact": str(s_exact), "secondary_float": "%.10f" % float(s_exact), "secondary_published": str(pub),
                   "adopted_K_j": str(x["Kj"]), "adopted_secondary_exact_float": "%.10f" % float(kj_exact)}
     G["G1_adopted_table_reproduced"] = g1; G["G2_windows_match_rows"] = g2
+    # G3 compares the constant actually used with the sharpened-row values of RECOG-THM-R9-SHARPENED-ROWS (G0 text), so a
+    # wrong constant (e.g. the -C7 rows) fails here, independently of any control flag
     G["G3_primary_constants_exact"] = all(F(out[j]["primary_C2_sharp_times_factor"]) == rows[j]["C2s"] * F(256, 225) ** 2 for j in rows)
     G["G4_published_ceilings_outward_minimal"] = g4; G["G5_improvement_unconditional_rows"] = g5
     G = {k: bool(v) for k, v in G.items()}; ok = all(G.values())

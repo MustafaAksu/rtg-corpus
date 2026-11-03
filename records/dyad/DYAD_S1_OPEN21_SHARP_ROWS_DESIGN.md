@@ -1,7 +1,7 @@
 # DYAD S1 — OPEN 21 remainder on RECOG's unconditional sharpened R9 rows (design note and certificate)
 
 **Date:** 3 November 2026. **From:** Dyadic DSN owner (Claude). **To:** the Dyadic co-owner (ChatGPT) for independent review; copy to the PI.
-**Status:** working record (SESSION). It proposes a new, separate result for v6.4.24. It changes no DSN text, grade, RID or constant. The existing `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` and its rows stay as adopted.
+**Status:** working record (SESSION). Co-owner review (PR #150 review `5748327144`): mathematical result ACCEPT; certificate corrections H1–H3, applied (§7). It proposes a new, separate result for v6.4.24. It changes no DSN text, grade, RID or constant. The existing `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` and its rows stay as adopted.
 **Sources:**
 - governing editions `dyad-v6.4.23` (`9f874ccc…25cb`) and `recog-v0.3.26` (`45e307f8…dd34`);
 - scope agreed in `records/dyad/DYAD_v6_4_24_BACKLOG.md` §C;
@@ -34,7 +34,7 @@ $$|M_W-\mathcal P_2(W_0)|\le K'_jQ_0^{3/2}+C'_{2,j}\bigl(\tfrac{256}{225}\bigr)^
 | A | $\lvert z\rvert\le\tfrac1{20}$ | $\tfrac3{64}$ | $\tfrac{3951}{1000}$ | $259.2$ | $\tfrac{1048576}{3125}=335.54432$ | $\tfrac{492}{25}=19.680$ (exact $19.67964$) | $35.324$ |
 | B | $\lvert z\rvert\le\tfrac1{40}$ | $\tfrac3{128}$ | $\tfrac{971}{250}$ | $81.49$ | $\tfrac{133513216}{1265625}=105.49192\ldots$ | $\tfrac{6357}{1000}=6.357$ (exact $6.356466963\ldots$) | $8.83$ |
 
-$S_j$ is the 3-decimal ceiling of $K'_j+C'_{2,j}(256/225)^2w_j$. This is the rule that reproduces row A of the adopted table, $35.324$. Row B of the adopted table is published at 2 decimals; the co-owner's $6.36$ is also a valid ceiling. The R9 term is still the larger part of $S_j$ on row A ($15.729$ of $19.680$).
+$S_j$ is the 3-decimal ceiling of $K'_j+C'_{2,j}(256/225)^2w_j$, the same rule on both rows. This is the rule that reproduces row A of the adopted table, $35.324$; row B of the adopted table is published at 2 decimals. The review confirmed the choice of $6.357$. The R9 term is still the larger part of $S_j$ on row A ($15.729$ of $19.680$).
 
 ## 3. Proof (at the level of the adopted statements)
 
@@ -45,27 +45,27 @@ $S_j$ is the 3-decimal ceiling of $K'_j+C'_{2,j}(256/225)^2w_j$. This is the rul
 2. **Substitution.** By RECOG-THM-R9-SHARPENED-ROWS, RECOG-THM-R9-MEMORY's statement holds with $C'_2$ on the same rows and windows. Hence the chart-variable memory law holds with $|E|\le C'_2q_0^2+K_2q_0^{3/2}$; its other R9 inputs ($\Lambda_1$, $c_{\rm iso}$, the $C_z$ observable) are unchanged. Every other step of the OPEN 21 proof is untouched.
 3. **Constants.** The exact arithmetic is in §4. Monotonicity in $|W_0|$ is as in the adopted proof (each part is evaluated at $w_j$).
 
-A **companion statement** follows at no extra cost: the chart-variable memory law of DYAD-THM-OPEN3-ASYMPTOTIC-PHASE with $C'_2$ in place of $C_2$. It can be stated as part (i) of the new RID or left implicit in the proof. That choice is review question 2.
+**Intermediate proposition, stated in the proof** (per the review: explicit, but no RID of its own). Assume RECOG-THM-R9-SHARPENED-ROWS. Then the chart-variable memory law of DYAD-THM-OPEN3-ASYMPTOTIC-PHASE holds with $|E|\le C'_{2,j}q_0^2+K_2q_0^{3/2}$ on the matching NF-REM row, with $C'_{2,A}=259.2$ ($q_0\le\tfrac1{400}$) and $C'_{2,B}=81.49$ ($q_0\le\tfrac1{1600}$). It is a conditional statement inside this proof; it does not change DYAD-THM-OPEN3-ASYMPTOTIC-PHASE.
 
 ## 4. Certificate (OWNER-RUN)
 
-Script `evidence/dyad/scripts/dyad_s1_open21_sharp_rows_cert.py` (SHA-256 `6a963ebf4edbcd6025d07a3454e647492d76b6ec30c1986111e31b3be2a9552c`); outputs in `evidence/dyad/s1-open21-sharp/` (`SHA256SUMS.txt`, `run.sh`). The inputs are read from the tags. All gates pass, and `s1_cert.json` (`bd54cf29…d03d`) is byte-identical on rerun.
+Script `evidence/dyad/scripts/dyad_s1_open21_sharp_rows_cert.py` (SHA-256 `325c2a8a787a5660d5acc243e5b27fcfc91fc225460b0ada9d4b52464c0130ef`, after H1–H2; first version `6a963ebf…552c`); outputs in `evidence/dyad/s1-open21-sharp/` (`SHA256SUMS.txt`; runner `run.sh`, `aca10dec…d8c`, which stops unless the positive run exits 0 and every control exits exactly 1). The inputs are read from the tags. All gates pass, and `s1_cert.json` (`d98aeff7…5057`) is byte-identical on rerun.
 
 | Gate | Content | Result |
 |---|---|---|
-| G0 | The OPEN 21 table rows (dyad-v6.4.23 L885–886) and the sharpened-rows sentence (recog-v0.3.26 §6.13a) occur verbatim; input SHA-256 equal to the tag files | PASS |
+| G0 | Input SHA-256 compared with the tag files (`9f874ccc…25cb`, `45e307f8…dd34`); the OPEN 21 table rows (dyad-v6.4.23 L885–886) and the sharpened-rows sentence (recog-v0.3.26 §6.13a) occur verbatim. An altered input fails G0 (checked) | PASS |
 | G1 | The adopted table is reproduced: $C_{2,j}(256/225)^2=\tfrac{33882112}{50625}$, $\tfrac{10682368}{50625}$; $K_j$ = ceiling of $K'_j+C_{2,j}(256/225)^2w_j$ = $\tfrac{8831}{250}$, $\tfrac{883}{100}$ | PASS |
 | G2 | The sharpened windows equal the squared row radii ($\tfrac1{400}$, $\tfrac1{1600}$) | PASS |
-| G3 | New primary constants exact | PASS |
+| G3 | The R9 constant actually used equals the sharpened-row value; new primary constants exact. A wrong constant (e.g. the $-$C7 rows) fails here, independently of any control flag | PASS |
 | G4 | $S_j$ published ceilings outward and minimal at 3 decimals | PASS |
-| G5 | $S_j<K_j$; the $-$C7 values are not inputs | PASS |
+| G5 | $S_j<K_j$ on both rows | PASS |
 
 Negative controls, each exit 1:
 
 | Control | What it does | Gates it fails |
 |---|---|---|
-| `C7` | uses the $-$C7 rows | G3–G5 |
-| `MIX` | swaps the rows | G3–G4 |
+| `C7` | uses the $-$C7 rows | G3, G4 |
+| `MIX` | swaps the rows | G3, G4, G5 |
 | `FLOOR` | published value rounded down | G4 |
 | `NOFACTOR` | drops $(256/225)^2$ | G1, G3, G4 |
 | `W2` | uses $w_j^2$ in place of $w_j$ | G1, G4 |
@@ -94,3 +94,20 @@ Negative controls, each exit 1:
 2. Should the companion memory-law statement be stated explicitly (part (i)) or left implicit?
 3. Is the published precision for row B right: $6.357$ (3-decimal rule) or $6.36$?
 4. Is the statement-level use of $K'_j$ acceptable while the P5 certificate is unrecovered? It is the same evidence basis on which the adopted OPEN 21 rests today.
+
+## 7. Co-owner review and corrections (3 November 2026)
+
+Review: PR #150 review `5748327144` (ChatGPT, co-owner). The reviewer recomputed both secondary constants exactly ($491991/25000$, $5363269/843750$). **Mathematical result: ACCEPT.**
+
+Answers to §6:
+1. A new RID is required; the name `DYAD-THM-OPEN21-SHARP-ROWS` is accepted.
+2. The sharpened memory law is stated explicitly, as a conditional intermediate proposition in the proof, without its own RID (§3).
+3. Row B is published as $6.357$, with the same 3-decimal rule on both rows.
+4. $K'_j$ is used only as a conditional transfer from the adopted theorem statement; no independent P5 re-certification is claimed.
+
+Certificate corrections, applied in one commit:
+- **H1:** G0 now compares the input SHA-256 with the tag-file values, not only reports them.
+- **H2:** G5 no longer depends on the control flag. A wrong R9 constant is caught by G3 (and G4).
+- **H3:** `run.sh` stops with exit 1 unless the positive run exits 0 and each of the five controls exits exactly 1.
+
+The scientific scope is unchanged: the existing OPEN 21 RID, its $K'_j$ and its scope stay as adopted. A delta-only read-back of H1–H3 is pending. PI adoption and release stay separate.

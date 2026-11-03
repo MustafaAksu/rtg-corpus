@@ -2,7 +2,7 @@
  "all_pass": false,
  "control": "MIX",
  "gates": {
-  "G0_input_text": true,
+  "G0_input_identity_and_text": true,
   "G1_adopted_table_reproduced": true,
   "G2_windows_match_rows": true,
   "G3_primary_constants_exact": false,
@@ -13,11 +13,15 @@
   "inputs_sha256": {
    "dsn": "9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb",
    "recog": "45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34"
+  },
+  "inputs_sha256_expected": {
+   "dsn": "9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb",
+   "recog": "45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34"
   }
  },
  "rows": {
   "A": {
-   "C2_sharp": "8149/100",
+   "C2_used": "8149/100",
    "adopted_K_j": "8831/250",
    "adopted_secondary_exact_float": "35.3233259259",
    "primary_C2_sharp_times_factor": "133513216/1265625",
@@ -27,7 +31,7 @@
    "secondary_published": "492/25"
   },
   "B": {
-   "C2_sharp": "1296/5",
+   "C2_used": "1296/5",
    "adopted_K_j": "883/100",
    "adopted_secondary_exact_float": "8.8295407407",
    "primary_C2_sharp_times_factor": "1048576/3125",
