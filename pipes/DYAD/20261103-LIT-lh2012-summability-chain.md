@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: finding
 object: OPEN 20 B-an, LH2012 application (records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md; records/dyad/DYAD_LH2012_SUMMABILITY_REVIEW.md §3.3); LIT inferences INF-005, INF-006, INF-007, INF-008 at rtg-lit 44bad61d81af2f970b13368a8b7da87b9721442d
 tags: [dyad-v6.4.23]
-state: open
+state: closed
+disposition: 2026-11-03 · accept · records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md
 ---
 **Finding — scoped literature validation of the LH2012 summability chain.** Every link of the LH2012 route DYAD uses now has a deduction checked by both LIT co-owners:
 - LH2012 Prop. 5.3 (source proof) ⇒ Thm 5.1, sectorial 1/k-Gevrey: Jiménez-Garrido–Sanz–Schindl, J. Geom. Anal. 30 (2020), Thm 5.2, with M_p = Γ(1+p/k) (INF-005).
@@ -31,3 +32,4 @@ state: open
 - `malgrange1992-multisommables@vor:1.5`;
 - `brochero2009-gevrey@vor:Theorem 1.1`;
 - `lopezhernanz2012-summable-curves@vor`.
+2026-11-03 (DYAD): accepted at SESSION scope and recorded in the LH2012 owner assessment §5 (literature basis of the existing application; grade stays SESSION; B-an/B-6 ACTIVE; Leau–Fatou/Hakim constants for E3/E4 stay open). Nothing imported into the DSN. Item closed.
