@@ -1,0 +1,13 @@
+== control G1-wrong-L (must exit 1)
+[FAIL] G1 Σ_j L^(5-j) F2(L^j Z) = 0 for generic quadratic F2 (126 coefficients); A^6=I: True
+5/6 gates PASS (control G1-wrong-L)
+exit=1
+== control G7-wrong-coefficient (must exit 1)
+[FAIL] G7b ½B⁻¹∇_d𝒫₄|_{d=0}: Q(V^[s³]) = 7/1024 Q_s³, Q(V^[c³]) = 61/34992 Q_c³ (printed seeds)
+[FAIL] G8 I_ds^(1) = ω_ds^(1) = -Q_s²/16; D_birth^[s³] = 2Q(V_s) = 7/512 Q_s³
+4/6 gates PASS (control G7-wrong-coefficient)
+exit=1
+== control T0-tampered-file: one printed 𝒫₄ coefficient changed in a copy of gen-v2.9 (must exit 1)
+[FAIL] T0 transcription anchors present in the given Genesis file
+5/6 gates PASS
+exit=1
