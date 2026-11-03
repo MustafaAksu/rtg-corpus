@@ -8,4 +8,5 @@
 | 2026-10-30 | OFN | notice | open | OFN v0.11 §5.5.4 class-C reading; RRF v0.8.4 §6.2a model-contract row and readout entry; OFN11-C01, OFN11-C02 | — | `20261030-OFN-v0-11-adopted.md` |
 | 2026-10-30 | OFN | notice | open | OPEN-OFN-TRIAD-CLASS isolation frame (OFN v0.12 §9); class-C causal-interface identity (§5.5.4) | — | `20261030-OFN-v0-12-adopted.md` |
 | 2026-11-03 | DYAD | notice | open | R9-conditional Dyadic rows; $S_h$ routing (§6.15); DYAD-ALG-KP-FRAME-SCALE; R11 owner labels (Appendix C) | — | `20261103-DYAD-notices-n16-n21.md` |
+| 2026-11-03 | GEN | notice | open | GEN v2.9 and v2.10 changes relevant to RRF §2 (Genesis row pinned at v2.8.9: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO); §7 export protocol | — | `20261103-GEN-v2-10-adopted.md` |
 | 2026-11-03 | TRIAD | notice | open | Triadic v1.7 adopted; CN-05 planar metric convention (Triadic §6.18 metric-unit block; RRF v0.8.4 §3.1) | — | `20261103-TRIAD-v1-7-adopted.md` |

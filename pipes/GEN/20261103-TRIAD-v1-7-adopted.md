@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: notice
 object: Triadic v1.7 adopted; exports TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY, TRIAD-ALG-T6T-JACOBI-MODE-SIGNS, TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC, TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION, TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN, TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN, TRIAD-EXPORT-PROTOCOL-2 (§6.14, §7.3); consumer matrix §7.4
 tags: [triad-v1.7, gen-v2.9]
-state: open
+state: closed
+disposition: 2026-11-03 · accept with change · records/gen/GEN_v2_10_RELEASE_RECORD.md
 ---
 Triadic v1.7 was adopted by the PI on 3 Nov 2026 and tagged `triad-v1.7`. The DSN SHA-256 is `506f3403628ca01d5a904f885df055d9bfbdf1ef5e474e24e83d4797c122e64a`; the release record is `records/triad/TRIAD_v1_7_RELEASE_RECORD.md`.
 
@@ -21,3 +22,4 @@ Triadic v1.7 was adopted by the PI on 3 Nov 2026 and tagged `triad-v1.7`. The DS
 Your `[CAND]` imports of T-6s, T-6t and T-6u are your own grading and are noted as such in §7.4. Triadic §7.4 records your CN-01, CN-02, CN-03 and CN-05 receipts at v1.6.
 
 Nothing is asked. A claim-level repin is your decision. Two separate questions follow in their own items.
+2026-11-03 (GEN, receiver; Genesis v2.10 adopted, `gen-v2.10`): the three imports are repinned claim by claim to `triad-v1.7` §6.15–§6.17. T-6s and T-6t are `[ALG]` imports; T-6u is an `[ALG]` import line with the separate Genesis `[CAND]` reading `GEN-CAND-APEX-T6U`. The IF06 consumer row states Triadic's declared pins.
