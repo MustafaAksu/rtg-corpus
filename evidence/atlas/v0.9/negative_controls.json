@@ -58,5 +58,15 @@
   "id": "U12",
   "what": "isolation contract shown as selected",
   "detected": true
+ },
+ {
+  "id": "U13",
+  "what": "stale GEN edition pointer reintroduced",
+  "detected": true
+ },
+ {
+  "id": "U14",
+  "what": "stale TRIAD consumer pin on the export contract",
+  "detected": true
  }
 ]

@@ -32,7 +32,7 @@
   "disposition": "reworded",
   "reason": "reworded; see edit_log.json",
   "previous_sha256": "155ae8ab8afa5144eba0037cc2098e234c9e399960bc4723c3c51a3fc20bfc83",
-  "current_sha256": "15923c7d981932fac57bffcfca9df8b981b3c78208b62bbc28e6e12e599184d2"
+  "current_sha256": "8655eb1c8327b6bb0d6db5a5f1b220544aebe370a626092bdcf3d2d85a2db42e"
  },
  {
   "key": "RECOG.R-A1",
@@ -126,11 +126,25 @@
   "current_sha256": "3e50a18c0d73927092e7df8bf75e6b0d3faa9422c32b84932f4dbb7dec82c4a4"
  },
  {
+  "key": "AZ.A2",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "fc24a34678b1754cabd45fb1428ac3aa5f1639420b7d79c8ccba28b93d28e471",
+  "current_sha256": "51fa3b01d8aef9ad204df7ba5b00ba28b45d33aec2de1d38ff46e1cb007d73fe"
+ },
+ {
+  "key": "PREL.P1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "6a864ea19de22c8fc6ab02a16306b60bceeb3b476a6a8648b632f63853cd1649",
+  "current_sha256": "e06735f92b4f2e27dbce21b8d841eacfe6dbfd83500e59d6eac3b8165ca459de"
+ },
+ {
   "key": "PROG.G9",
   "disposition": "new",
   "reason": "see edit_log.json",
   "previous_sha256": null,
-  "current_sha256": "5886bea791c7ac97137fe032ac33c1a51ed7c095ef97226673632417bc31b645"
+  "current_sha256": "a2517c8c05d081256e7cf5869d2c694b4b58068f80b064a4bd99bfc8e6cf86a1"
  },
  {
   "key": "F30",
@@ -151,6 +165,6 @@
   "disposition": "new",
   "reason": "see edit_log.json",
   "previous_sha256": null,
-  "current_sha256": "311e2eb0d4437321eb5284b9ceee94fd3034513e5f3a5b1d4c475b8ff1dcdc33"
+  "current_sha256": "bf5908653141c36671d4ab61bdae862fc30e6bc89e6ba57b9c9d39fa61416522"
  }
 ]

@@ -1,6 +1,6 @@
 # RTG State Atlas v0.9 — change-focused review packet
 
-**Date:** 3 November 2026. **Prepared by:** Claude, Atlas owner.
+**Date:** 3 November 2026 (rev. 2, same day: receiving-review notes A09-N1 and A09-N2 applied, plus a final-review currency sweep — see §6; candidate hash re-pinned). **Prepared by:** Claude, Atlas owner.
 **Status:** DRAFT / NONCANONICAL. This is a candidate for receiving review by ChatGPT (Atlas co-owner). It has no PI acceptance and adopts no owner science. `atlas-v0.8` governs until acceptance.
 **Scope decision:** PI, 3 November 2026 ("Evet başlayalım"). The edition is one change-focused refresh carrying the three sources that moved since `atlas-v0.8`. It follows the ChatGPT TRIAD v1.7 preparation note and the Atlas owner's additions to it. There is no general compaction and no Methodology migration of the atlas.
 
@@ -24,12 +24,12 @@ The other 15 sources are byte-equal to their v0.8 inputs. The manifest field `v0
 
 | Object | SHA-256 |
 |---|---|
-| `atlas/RTG_STATE_ATLAS.md` (candidate) | `c7f678edb5f2ea6c0ab58651ce3f6f97f5e2f816bcc3b07c6411d43f4429ae3a` (517,717 bytes, 1,547 lines, counted as in v0.8) |
+| `atlas/RTG_STATE_ATLAS.md` (candidate, rev. 2) | `b48343f5a4d4c066eb37a325ff87d1dadf686fc6c616b67e7a0ad418dcec3b70` (517,999 bytes, 1,547 lines, counted as in v0.8; rev. 1 was `c7f678ed…ae3a`, 517,717 bytes) |
 | `atlas/RTG_STATE_ATLAS_METHOD.md` (unchanged) | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` |
-| `evidence/atlas/build/refresh_v0_9.py` | `fdbf8d206f565c1ea0c98ba5c7ce8f535780cf157cd8cdad0e3e511a5e854a23` |
+| `evidence/atlas/build/refresh_v0_9.py` (rev. 2) | `e3f86aa990f97ccdaa2aa6e1f43d281c84e985321484f9b8d0a9c23a410034b2` (rev. 1 `fdbf8d20…a854a23`) |
 | `evidence/atlas/v0.9/source_manifest.json` | `d9e84879deb2f34b63f6f4812b770e5e263aa110238397231bf8ec6d2f6009c3` |
-| `evidence/atlas/v0.9/edit_log.json` (44 operations) | `904ca0f0be1090ad219ec957f83e357e03c0964789967d0a3910678337f81a3d` |
-| `evidence/atlas/v0.9/dispositions.json` | `5245a4f342e47627b5863742db10a0fdf6297ac1d97965093671e57dca08716a` |
+| `evidence/atlas/v0.9/edit_log.json` (49 operations) | `c9bfab2ef43a523d307c1633c419c78411ef3a03184a90b5f0015cdb343effb6` |
+| `evidence/atlas/v0.9/dispositions.json` | `128120c9cc95791d4983fefb3a0bca763947456944f11afd6b24599c8c77cc65` |
 | `tools/atlas_check.py` (one self-test line changed, §3) | `2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373` (was `0db3a23b…004d`) |
 
 **Decision basis:**
@@ -43,7 +43,7 @@ The other 15 sources are byte-equal to their v0.8 inputs. The manifest field `v0
 
 ## 2. Review scope
 
-This is an impact refresh of three domains: 44 exact-once operations, listed in `evidence/atlas/v0.9/edit_log.json`. No other domain was re-extracted. The diff against the base is 44 insertions and 37 deletions.
+This is an impact refresh of three domains: 49 exact-once operations (rev. 2 adds five pointer-currency operations, §6), listed in `evidence/atlas/v0.9/edit_log.json`. No other domain was re-extracted. The diff against the base is 48 insertions and 41 deletions.
 
 **DYAD v6.4.23 (D2, H5, D3 cross-notes).**
 - **Source row and D2 header.**
@@ -87,13 +87,13 @@ This is an impact refresh of three domains: 44 exact-once operations, listed in 
 - **L5:**
   - F11, F13 and F14 are reworded: the metric caveat, the RID state at gen-v2.9, and custody (`accepted_r4_2/` held by the PI; H₁, H₂ missing; T-6c2 and T-6l recovered).
   - F20 (+ TRIAD.T9) is retired.
-  - New: F30 (the two Genesis questions, pipes open), F31 (GEN imports T-6s/t/u at `[CAND]`), F32 (owner-recorded form debt F-1, F-2, A-1, row 29) and PROG.G9 (Programme IF07/IF11 at v1.6, no CN-05 record).
+  - New: F30 (the two Genesis questions, pipes open), F31 (GEN imports T-6s/t/u at `[CAND]`), F32 (D-STALE, the A-1 wording only; rev. 2) and PROG.G9 (D-LINK, consumer refresh of Programme IF07/IF11 and no CN-05 record; rev. 2).
 
 **Pipes (NUMGEN.N-I1).** The atlas owner sets its own three inbox items on this branch:
 - the TRIAD row-check request is `closed` (accept; the two 29-row checks);
 - the DYAD and TRIAD notices are `dispositioned` (accept; this packet). They are closed after the tag.
 
-The row then states 53 items in 20 inboxes: 15 closed, 5 dispositioned, 33 open. The builder asserts both the snapshot counts (14/3/36) and the branch counts (15/5/33). `tools/pipes_index.py --check` passes, and `pipes/ATLAS/INDEX.md` is regenerated.
+The row then states, at the source snapshot `f20f080`, 53 items in 20 inboxes: 15 closed, 5 dispositioned, 33 open; items filed after the snapshot (PR #148) enter the next refresh (rev. 2 wording). The builder asserts both the snapshot counts (14/3/36) and the branch counts (15/5/33). `tools/pipes_index.py --check` passes, and `pipes/ATLAS/INDEX.md` is regenerated.
 
 **Not changed on purpose:**
 - **Consumer pins.** Consumers' own pins to `dyad-v6.4.22` stay as they are, because they are the consumers' records: OFN IMP-O08-12/20; RECOG; NUMGEN §6.6; GEN G-20; IF16.
@@ -128,9 +128,9 @@ The UNVERIFIED and DOCUMENTED-UNRESOLVED rows are the same items as in v0.8, wit
 
 **Retired keys:** NUMGEN.N-Q\*, F20 and TRIAD.T9 (and their space-written forms). The builder asserts that none occurs in the candidate. The reasons are in `retired_l5_keys.json` and `dispositions.json`.
 
-**Dispositions:** 3 retired, 6 reworded, 9 retained, 4 new.
+**Dispositions:** 3 retired, 8 reworded (rev. 2 adds AZ.A2 and PREL.P1), 9 retained, 4 new.
 
-**Negative controls:** shared 18/18 and focused 12/12.
+**Negative controls:** shared 18/18 and focused 14/14 (rev. 2 adds U13, U14).
 
 | ID | Mutation | Caught by |
 |---|---|---|
@@ -146,6 +146,8 @@ The UNVERIFIED and DOCUMENTED-UNRESOLVED rows are the same items as in v0.8, wit
 | U10 | T-6r C3 dropped | scope guard |
 | U11 | "consumer acceptance pending" reintroduced | stale guard |
 | U12 | isolation contract shown as selected | scope guard |
+| U13 | "(current GEN v2.8.9)" reintroduced | stale guard |
+| U14 | TRIAD v1.6.1 §7.1 reintroduced as the export-contract consumer pin | stale guard |
 
 **Fidelity checks** were done by hand against the tagged files, not by the checker. Each is `EV-SRC-READ`.
 - **DYAD:**
@@ -193,3 +195,44 @@ The order after review is:
 5. Annotated tag `atlas-v0.9`.
 6. Tag verification.
 7. Closing the two dispositioned ATLAS inbox items.
+
+## 6. Revision 2 — receiving review A09-N1, A09-N2 and final-review sweep
+
+**Review:** `records/atlas/ATLAS_V0_9_CHATGPT_RECEIVING_REVIEW.md` (ChatGPT, Atlas co-owner; PR #149, head `f61fdbd`), on rev. 1 `e2543cb` / `c7f678ed…ae3a`. Verdict: ACCEPT SCOPED, no blocking finding. It reproduced the 44 rev.-1 operations independently, byte for byte. The five questions of §4 were answered ACCEPT (1–3), KEEP (4) and ADVISORY (5). Two nonblocking notes were made:
+- **A09-N1 (F32).** Only the A-1 wording is a genuine live staleness. F-1, F-2 and row 29 are editorial or process debt, and they belong to the TRIAD release and review records.
+- **A09-N2 (PROG.G9).** An older intentional IF07/IF11 pin is not a D-STALE defect by age alone; D-LINK, or an explicit consumer-refresh obligation, is more precise.
+
+**PI decision (3 November 2026):** a second round ("Evet bir ikinci tur yapalım"), together with a last review of the other documents ("diğer dokümanları da son bir kez gözden geçirelim").
+
+**Changes in rev. 2:**
+
+*Builder operations changed (no count change):*
+- **F32** is narrowed to the A-1 wording, which it quotes. The other form notes are pointed at the TRIAD release record as process debt, not atlas diagnostics (A09-N1).
+- **PROG.G9** is typed D-LINK, as a consumer-synchronization item: the pin is not a defect by age, and the open item is the consumer refresh (A09-N2).
+- **NUMGEN.N-I1** states its counts at the source snapshot `f20f080`. PR #148 merged after the snapshot (seven DYAD notices and the LIT items), and the "at this edition" wording would read as a claim about `main` at merge time.
+
+*New operations (final-review sweep of the whole atlas for stale edition pointers):*
+- **`DYAD-DEF-BRIDGE-EXPORT-CONTRACT`.** The consumer edge read ">TRIAD v1.6.1 §7.1 and GEN v2.8.9 (both pin DYAD v6.4.13)". It now reads ">TRIAD v1.7 §7.1 (item 1, claim-level repin to DYAD v6.4.23) and GEN v2.9 §7 (item 1, historical pin DYAD v6.4.13)". Sources: `triad-v1.7` L790 and `gen-v2.9` §7 L1142–1148. The GEN part was already stale in v0.8, because the atlas has carried GEN v2.9 since v0.8.
+- **AZ.A2**, both its D2 row and its D5 row: "(current v2.8.9)" and "(current GEN v2.8.9)" become "(current GEN v2.9)".
+- **PREL.P1 + LEGACY.Y1 + PROG.G6**: the two "against GEN v2.8.9" become "against GEN v2.9".
+
+*Guards:*
+- Seven new stale patterns, covering the replaced pointers and the rev.-1 F32 and PROG.G9 heads.
+- Two focused controls, U13 and U14.
+
+**Sweep method and what it found.**
+- **Pointer scan.** Every `current|governing|latest <owner> vX` pointer was scanned against the manifest. The only stale ones were the AZ.A2 pair.
+- **Edition pins of the three moved sources.** Every remaining mention of the three moved sources' former editions was read in context:
+  - DYAD v6.4.22 pins are consumers' own pins: OFN, RECOG, NUMGEN, GEN G-20 and IF16.
+  - "OFN v0.11" sentences describe statements unchanged at v0.12.
+  - "TRIAD v1.6.1" is left only in TDR-G's own T3-ladder reference and in the dated `*ATLAS:checked-*` records.
+- **Other documents in this PR.** These were reread:
+  - the three ATLAS pipe items — dispositions and pointers still accurate, `tools/pipes_index.py --check` OK;
+  - the manifest, unchanged by rev. 2;
+  - `retired_l5_keys.json`, unchanged;
+  - the one-line `tools/atlas_check.py` change, with the standalone self-test 18/18;
+  - this packet, with identities and counts re-pinned above.
+
+**Re-run:** two builds in separate processes are byte-identical. The shared checker gives zero FAIL, with the same counts as rev. 1. Shared controls are 18/18 and focused controls 14/14. The H→L5 map has no dangling key and 120 L5 rows.
+
+Needed from the receiving reviewer: a delta-only check of the three changed passages (F32, PROG.G9, N-I1) and the five new operations (export-contract edge, the two AZ.A2 rows, the two Legacy-row pointers). No other passage changes from rev. 1.
