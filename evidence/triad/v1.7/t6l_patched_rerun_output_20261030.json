@@ -1,0 +1,24 @@
+{
+  "software_environment": {
+    "python_version": "3.13.16",
+    "sympy_version": "1.14.0",
+    "script_git_hash": "rtg_t6l_analytic_phase_steering"
+  },
+  "algebraic_simplification": "Amplitude feedback loops (Delta Qs, Delta Qc) exactly cancel in numerator",
+  "scale_free_angular_velocity": {
+    "theta_dot_over_Qs_leading_orders": {
+      "u^1": "(-3*mu**4 + 5*sqrt(3)*mu**3*nu + 21*mu**3*nu - 3*mu**2*nu**2 + 9*sqrt(3)*mu**2*nu**2 + 5*sqrt(3)*mu*nu**3 + 21*mu*nu**3 + 9*sqrt(3)*nu**4)/K",
+      "u^1/2": "2*nu*(-9*mu**2 - 2*sqrt(3)*mu**2 - 3*nu**2)/K",
+      "u^0": "(3*mu**2 + 5*sqrt(3)*mu*nu + 21*mu*nu - 9*sqrt(3)*nu**2)/K"
+    }
+  },
+  "wedge_boundary_analysis": {
+    "leading_u1_coefficient_K_general": "(-3*mu**4 + 5*sqrt(3)*mu**3*nu + 21*mu**3*nu - 3*mu**2*nu**2 + 9*sqrt(3)*mu**2*nu**2 + 5*sqrt(3)*mu*nu**3 + 21*mu*nu**3 + 9*sqrt(3)*nu**4)/K",
+    "leading_u1_coefficient_K_physical": "-3*mu**2 + 5*sqrt(3)*mu*nu + 21*mu*nu + 9*sqrt(3)*nu**2",
+    "ratio_polynomial_x": "9*sqrt(3)*x**2 + 5*sqrt(3)*x + 21*x - 3",
+    "positive_ratio_threshold_nu_over_mu": 0.09627412959178268
+  },
+  "verification_status": {
+    "status": "ALG target / Analytic torsion wedge extracted"
+  }
+}

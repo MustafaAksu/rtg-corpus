@@ -1,0 +1,11 @@
+C1 Gram identity at r^0 with producer H_0: factor -sqrt3 holds: True | factor 1 fails: True
+   implied Q_c-free dOmega_1 = (21*sqrt(14)*I_sc**2 - 10*sqrt(42)*I_sc*Omega - 21*sqrt(14)*I_sc*Q_s + 15*sqrt(14)*Omega**2 - 3*sqrt(42)*Omega*Q_s)/(7*sqrt(Q_s))
+   implied Q_c-free dOmega_2 = -10*Omega
+C2 G-dot - (Qdot_s/Q_s) G = 6*r*(sqrt(42)*I_sc - 5*sqrt(14)*Omega)*(I_sc**2 + Omega**2 - Q_c*Q_s)/(7*sqrt(Q_s))
+   G-dot - ((Qdot_s + r Q_s q1)/Q_s) G = 0   with q1 = dQc^(1)/Q_c = 6*(-sqrt(42)*I_sc + 5*sqrt(14)*Omega)/(7*sqrt(Q_s))
+   D-dot (D = G/Q_s) = 6*r*(sqrt(42)*I_sc - 5*sqrt(14)*Omega)*(I_sc**2 + Omega**2 - Q_c*Q_s)/(7*Q_s**(3/2))
+C3 K-dot = (1-K) f_c/Q_c with f_c = Qdot_c - r dQc^(1) (Q_c-free part): True | K-dot = 0 on K = 1: True
+   K-dot = (1-K) Qdot_c/Q_c holds only if r dQc^(1) = 0: True
+C4 eigenvalues of A_theta^corr form: [-6 + 6*sqrt(3), 6 + 6*sqrt(3)] -> True
+C5 corrected leading torsion numerator [u^1] = 3*(mu**2 + nu**2)*(sqrt(3)*mu**2 + 2*mu*nu + 3*sqrt(3)*nu**2) -> True
+RESULT: PASS
