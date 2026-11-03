@@ -1,0 +1,30 @@
+ok  P0   expect PASS got PASS           unmutated inputs
+BAD N1   expect FAIL got NOT APPLICABLE silent deletion of an [assuming:] qualifier (undeclared)
+BAD N2   expect FAIL got NOT APPLICABLE deletion of an [assuming:] qualifier declared as history removal
+BAD N3   expect FAIL got NOT APPLICABLE scope widening ($p\ge5$ → $p\ge3$) declared as a reference substitution
+BAD N4   expect FAIL got NOT APPLICABLE result re-attributed to another RID, declared as a reference substitution
+BAD N4b  expect FAIL got NOT APPLICABLE result re-attributed to another RID (undeclared)
+BAD N5   expect FAIL got NOT APPLICABLE pointer repointed to a nonexistent tagged edition
+BAD N5b  expect FAIL got NOT APPLICABLE pointer to a nonexistent appendix
+ok  N6   expect FAIL got FAIL           removed passages not present in the named archive
+         FAIL  operation S2-H (presentation)  — old header not found in archive
+         FAIL  operation S2-M (history-section)  — removed section not found byte-identical in the named archive
+         FAIL  operation S2-E01 (history-removal)  — removed span not found byte-identical in the named archive
+ok  N7   expect FAIL got FAIL           live results (§6.17) relocated as a history section
+         FAIL  mechanical scope (re-derivation)  — S2-M: section bounds not found uniquely
+         FAIL  operation X7 (history-section)  — removed section not found byte-identical in the named archive
+         FAIL  operation S2-M (history-section)  — section bounds not resolved
+ok  N8   expect FAIL got FAIL           two footer lines
+         FAIL  mechanical scope (re-derivation)  — first difference at line 1117: derived 'RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 — DRAFT, stage-2 candidate; adoption
+         FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line
+ok  N9   expect FAIL got FAIL           source hash pin altered (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 766: derived 'b6c02ae56a73de55a97f0805f321453bc2035cab322df0fcaea978c09f30589f`; ex
+         FAIL  qualified claim blocks  — 256 claim blocks in base live text: 240 byte-identical, 15 changed by declared operations, 1 unexplained
+         FAIL  source hashes preserved in live text  — missing: ['b6c02ae56a73de55a97f0805f321453bc2035cab322df0fcaea978c09f30589f']
+BAD N10  expect FAIL got NOT APPLICABLE a result paragraph deleted (undeclared)
+BAD REVIEW-N1 expect FAIL got NOT APPLICABLE 'with zero linear part' removed, declared as ref-subst with a valid tag
+BAD REVIEW-N2 expect FAIL got NOT APPLICABLE archive pointer to nonexistent H-999 with the valid tag kept
+ok  REVIEW-N3 expect FAIL got FAIL           live §6.7 result body replaced by a pointer, declared tag_examples
+         FAIL  operation XR3 (history-section)  — removed section not found byte-identical in the named archive
+BAD REVIEW-N3b expect FAIL got NOT APPLICABLE registered-region variant
+RESULT: FAIL (5/16 controls rejected)

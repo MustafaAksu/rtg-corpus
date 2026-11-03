@@ -1,0 +1,232 @@
+{
+ "base_sha256": "b47d294d9dc82b78f05e02c99e04100177c78480c453438d5d4fca86e14ba66a",
+ "candidate_sha256": "2573961a82ce10a348f76f10feece6fefb3831f3c4dd60de5dcae78acb745c0d",
+ "map_sha256": "44e0e6b6cf03afc5e589b7d467cb20625a0c7ad5f7d0f6e5f1d67971c9595ebb",
+ "operations": [
+  {
+   "id": "S2-H",
+   "op": "replace-header",
+   "class": "presentation",
+   "result": "PASS",
+   "detail": "header replaced; status-summary sentences are a subset of the base summary (header/section1)"
+  },
+  {
+   "id": "S2-M",
+   "op": "replace-section",
+   "class": "history-section",
+   "result": "PASS",
+   "detail": "section relocated (2364 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "id": "S2-E01",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (9 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-E02",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (663 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "id": "S2-E03",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (56 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-B1",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "result": "PASS",
+   "detail": "section relocated (1037 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "id": "S2-B2",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "result": "PASS",
+   "detail": "section relocated (1100 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "id": "S2-A",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "result": "PASS",
+   "detail": "section relocated (24507 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "id": "S2-F",
+   "op": "replace-footer",
+   "class": "presentation",
+   "result": "PASS",
+   "detail": "footer replaced"
+  }
+ ],
+ "claim_blocks": {
+  "base": 256,
+  "identical": 241,
+  "declared_change": 15,
+  "unexplained": []
+ },
+ "profile": {
+  "study": "TRIAD",
+  "ref_words": [],
+  "history_words": [
+   "History —",
+   "stage 1",
+   "stage 2"
+  ],
+  "checked_tag_prefixes": [
+   "triad-",
+   "gen-",
+   "rrf-",
+   "ofn-",
+   "programme-",
+   "methodology-",
+   "uvm-",
+   "tdrg-",
+   "dyad-"
+  ],
+  "known_tags": [
+   "triad-v1.6.1",
+   "gen-v2.9",
+   "rrf-v0.8.4",
+   "ofn-v0.12",
+   "programme-v1.3",
+   "methodology-v1.4",
+   "uvm-v0.7.1",
+   "tdrg-v2.12.14",
+   "dyad-v6.4.23"
+  ],
+  "summary_from": [
+   "header",
+   "section1"
+  ]
+ },
+ "checks": [
+  {
+   "check": "base identity",
+   "result": "PASS",
+   "detail": "map base_sha256 vs file"
+  },
+  {
+   "check": "candidate identity",
+   "result": "PASS",
+   "detail": "map candidate_sha256 vs file"
+  },
+  {
+   "check": "archive identity stage1-intermediate",
+   "result": "PASS",
+   "detail": "b47d294d9dc82b78f05e02c99e04100177c78480c453438d5d4fca86e14ba66a"
+  },
+  {
+   "check": "archive identity triad-v1.6.1",
+   "result": "PASS",
+   "detail": "95340abe57e999ed48681502152113d8fdb3102f74f45a25aa66c2d0092d451f"
+  },
+  {
+   "check": "mechanical scope (re-derivation)",
+   "result": "PASS",
+   "detail": "candidate equals base + declared operations"
+  },
+  {
+   "check": "operation S2-H (presentation)",
+   "result": "PASS",
+   "detail": "header replaced; status-summary sentences are a subset of the base summary (header/section1)"
+  },
+  {
+   "check": "operation S2-M (history-section)",
+   "result": "PASS",
+   "detail": "section relocated (2364 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "check": "operation S2-E01 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (9 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-E02 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (663 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "check": "operation S2-E03 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (56 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-B1 (history-appendix)",
+   "result": "PASS",
+   "detail": "section relocated (1037 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "check": "operation S2-B2 (history-appendix)",
+   "result": "PASS",
+   "detail": "section relocated (1100 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "check": "operation S2-A (history-appendix)",
+   "result": "PASS",
+   "detail": "section relocated (24507 chars), found in ['stage1-intermediate', 'triad-v1.6.1']"
+  },
+  {
+   "check": "operation S2-F (presentation)",
+   "result": "PASS",
+   "detail": "footer replaced"
+  },
+  {
+   "check": "qualified claim blocks",
+   "result": "PASS",
+   "detail": "256 claim blocks in base live text: 241 byte-identical, 15 changed by declared operations, 0 unexplained"
+  },
+  {
+   "check": "RID set preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "heading anchors preserved",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "source hashes preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "qualifier tags preserved",
+   "result": "PASS",
+   "detail": "lost: []"
+  },
+  {
+   "check": "references resolve",
+   "result": "PASS",
+   "detail": "Appendix references, H-labels and tags resolve; 1 archive targets found in the pinned archive"
+  },
+  {
+   "check": "presentation (header, footer)",
+   "result": "PASS",
+   "detail": "required fields present; one predecessor; one footer"
+  }
+ ],
+ "warnings": [],
+ "result": "PASS",
+ "limitations": [
+  "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
+  "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",
+  "RID pattern covers the registered namespace prefixes listed in the script; other identifiers are not tracked.",
+  "Reference resolution: in the sentence of each tagged-edition pointer, H-labels (as '**H-n** —' definitions), 'Appendix X' headings, 'Local Tag Aliases' and version entries ('### vX') are looked up in the pinned archive; section numbers (§n.m) are not resolved.",
+  "Reference substitutions may change only reference vocabulary (REF_WORDS, labels, versions, tags, punctuation); any other changed word fails.",
+  "tag_examples/navigation relocations need a registered region (hash, kind) and a reviewer confirmation; unconfirmed regions give PENDING. In a tag_examples region an identifier may occur only inside a tag spelling in a table row (and must survive in the live text); a navigation region may carry no identifier and only [DEF] tags.",
+  "An H-label resolves if the archive defines it ('**H-n** —') or defines its lettered group ('**H-na** —').",
+  "Archive membership is a byte-substring test against the named archive files.",
+  "Study profile (map key 'profile'): extra history words, extra reference words and the status-summary source (base header summary, optionally base §1) are calibration inputs declared in the map and printed in the report.",
+  "A 'move' (class reorder) cuts one whole blank-line-delimited block and reinserts it byte-identical before a unique block-starting anchor inside the same section of the live text; it can change no text, tag, RID, math or hash (re-derivation and the block-multiset test)."
+ ]
+}

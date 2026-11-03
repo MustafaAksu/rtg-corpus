@@ -1,0 +1,23 @@
+G0: PASS
+G1: PASS
+G2: PASS
+G3: PASS
+G4: PASS
+G5: PASS
+G6: PASS
+G7: PASS
+G8: PASS
+G9: PASS
+candidate sha256: 2573961a82ce10a348f76f10feece6fefb3831f3c4dd60de5dcae78acb745c0d; GUARDS: ALL PASS
+F1 undeclared live edit in §6.18 -> caught: FAIL  mechanical scope (re-derivation)  — first difference at line 763: derived 'both. Which extension the historical downstream code used cannot be checked from' / candidate '(b). Which extension the historical downstream code used cannot be checked from '
+F2 restated Appendix B cell altered -> caught:  | owner guard G6
+F3 status summary gains a sentence -> caught: FAIL  operation S2-H (presentation)  — status summary adds text not in the base summary (header/section1): ['The physical carrier is selected.']
+F4 two footer lines -> caught: FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line | owner guard G8
+F5 restated row drops its RID -> caught:  | owner guard G6
+F6 pointer text carries a claim tag -> caught: FAIL  operation S2-M (history-section)  — pointer text carries claim tags or math | owner guard G5
+F7 history text in the header -> caught: FAIL  presentation (header, footer)  — history text in header | owner guard G7
+F8 archive identity wrong -> caught: FAIL  archive identity stage1-intermediate  — b47d294d9dc82b78f05e02c99e04100177c78480c453438d5d4fca86e14ba66a | owner guard G0
+F9 Appendix A names an identifier absent from the live text -> caught: FAIL  operation S2-A (history-appendix)  — history entry names identifiers absent from the live text: ['TRIAD-ALG-NONEXISTENT'] | owner guard G2, G8
+F10 OPEN status line changed (undeclared) -> caught: FAIL  mechanical scope (re-derivation)  — first difference at line 131: derived 'ACTIVE after r4 correction  \nRetained: the isolated $r^2$ equilibrium exists alg' / candidate 'CLOSED after r4 correction  \nRetained: the isolated $r^2$ equilibrium exists alg'; FAIL  qualified claim blocks  — 256 claim blocks in base live text: 240 byte-identical, 15 changed by declared operations, 1 unexplained | owner guard G4
+F11 history-removal also deletes the qualifying word 'pending' -> caught: FAIL  operation S2-E02 (history-removal)  — removed span carries a qualifying word: "pending. **History — v1.6.1 release:** owner release of the co-owner-accepted DRAFT r2 on the PI's authorization of 19 O"
+RESULT: PASS (all fixtures caught)
