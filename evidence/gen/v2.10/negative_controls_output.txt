@@ -1,0 +1,12 @@
+[CAUGHT] NC1 G7 without the G2=0 premise: must fail ['C1', 'C6']; failed ['C1', 'C2', 'C6']
+[CAUGHT] NC2 independent clause rewritten as an original rerun: must fail ['C1']; failed ['C1', 'C2']
+[CAUGHT] NC3 NUMGEN application relabelled as the original proof: must fail ['C1', 'C11']; failed ['C1', 'C11', 'C2']
+[CAUGHT] NC4 T-6u CAND/ALG collapse: must fail ['C1', 'C8']; failed ['C1', 'C2', 'C5', 'C8']
+[CAUGHT] NC5 ν5 label changed without the matching pin: must fail ['C1', 'C10']; failed ['C1', 'C10', 'C2']
+[CAUGHT] NC6 wrong Triadic tag: must fail ['C1', 'C9']; failed ['C1', 'C2', 'C9']
+[CAUGHT] NC7 birth-symmetry grade left [THM]: must fail ['C1', 'C4', 'C7']; failed ['C1', 'C2', 'C4', 'C5', 'C7']
+[CAUGHT] NC8 byte change in §6.3c: must fail ['C1', 'C3']; failed ['C1', 'C2', 'C3']
+[CAUGHT] NC9 identity filed under GEN-THM-DELTA-QC: must fail ['C1', 'C6']; failed ['C1', 'C2', 'C6']
+[CAUGHT] NC10 printed 𝒫₄ coefficient altered: must fail ['C1', 'C13']; failed ['C1', 'C13', 'C2']
+
+all controls caught

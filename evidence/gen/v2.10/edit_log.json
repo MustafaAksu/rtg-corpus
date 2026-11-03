@@ -1,0 +1,345 @@
+{
+ "base_sha256": "9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac",
+ "base_tag": "gen-v2.9",
+ "candidate_sha256": "4ac899be382e968d83b238ae9a33daa5df059dfcf5d177a23525de603b1e14e0",
+ "declared_new_gen_rids": [
+  "GEN-ALG-P4-DRIFT-IDENTITY",
+  "GEN-ALG-BIRTH-SYMMETRY-SEED"
+ ],
+ "edit_count": 37,
+ "edits": [
+  {
+   "key": "H1",
+   "item": "header",
+   "mode": "line",
+   "old": "# RTG_GENESIS_GEOMETRY_DSN_v2.9",
+   "new": "# RTG_GENESIS_GEOMETRY_DSN_v2.10",
+   "old_sha256": "02b92fa461bfbe4816ce4896b766c2396060b29be65dd522b71794bd3aebf4d7",
+   "new_sha256": "04e94fdee922e5a74dbaf629f7ea2667eb4a957d78ca0ed3cbeae2d2731453bd"
+  },
+  {
+   "key": "H2",
+   "item": "header",
+   "mode": "line",
+   "old": "**Date:** 25 October 2026  ",
+   "new": "**Date:** 3 November 2026  ",
+   "old_sha256": "fa8f877b0af7ba01059dba46f57b5a337062b92847d1f0312bcec55515470ce4",
+   "new_sha256": "d01502db4b869d5035ea7552ff389ae60b27eace6c357f3042d815264088708f"
+  },
+  {
+   "key": "H3",
+   "item": "header",
+   "mode": "line",
+   "old": "**Document status:** ADOPTED — PI, 25 October 2026 (corrections of the reconciled v2.8.9 advisory and Methodology v1.4 compaction; stage 1 and stage 2 reviewed). Adoption record: `records/gen/GEN_v2_9_RELEASE_RECORD.md`.  ",
+   "new": "**Document status:** CANDIDATE — not adopted (inbox round after v2.9: G1–G8 and producer/consumer pins; one content stage). Release record: `records/gen/GEN_v2_10_RELEASE_RECORD.md`.  ",
+   "old_sha256": "3281c38540a47d209e426008dd2dbfa6fdc61253c074b357e0362c8a4192da9b",
+   "new_sha256": "c76979d113f4da4aa6a8b6b1b46c204a0c1f911f372405a2a7b169bc39bc41ec"
+  },
+  {
+   "key": "H4",
+   "item": "header",
+   "mode": "line",
+   "old": "**Supersedes:** `RTG_GENESIS_GEOMETRY_DSN_v2.8.9` (SHA-256 `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc`; tag `gen-v2.8.9`).  ",
+   "new": "**Supersedes:** `RTG_GENESIS_GEOMETRY_DSN_v2.9` (SHA-256 `9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac`; tag `gen-v2.9`).  ",
+   "old_sha256": "ba5bd7a657cd32db45d91e06844a1eeca10d1b3d67bbfc9f3517d9de70e3c2f0",
+   "new_sha256": "4ce5ba44d252836dc468588e11248f3875d3a227ed2e00bfa97c370c30877035"
+  },
+  {
+   "key": "H5",
+   "item": "header",
+   "mode": "str",
+   "old": "**Release record:** `records/gen/GEN_v2_9_RELEASE_RECORD.md`. Version history: Appendix A.",
+   "new": "**Release record:** `records/gen/GEN_v2_10_RELEASE_RECORD.md`. Version history: Appendix A.",
+   "old_sha256": "d9aac5d6ac9577c8002173213ca2713df7f9e8e22758dc5eb4ebb4782bd12556",
+   "new_sha256": "62fcc6bdad82f6c4dc46c908e10f1b06de5c0fa36935077157c753c03db711c3"
+  },
+  {
+   "key": "G1a",
+   "item": "G1",
+   "mode": "str",
+   "old": "All one-step quadratic forcing cancels over one 6-step block.\n",
+   "new": "All one-step quadratic forcing cancels over one 6-step block.\n\n`[ALG]` **Independent route (application of `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE`, §7).** For $L=\\operatorname{diag}(A,A,A)$ with $A=DT(0)$, $A^6=I$, the first nonlinear degree is quadratic and the degree-2 vector charges $a-b-1\\in\\{1,-1,-3\\}$ are nonzero mod 6, so the resonant projection of $F_2$ vanishes and $G_2=0$; this holds for every quadratic $F_2:\\mathbb R^6\\to\\mathbb R^6$, cross-component terms included. Exact check: `[indep-INB]` gate G1. This is a new proof of the §6.4 statement, not a recovery of its original source (`GEN-ART-G2-CHRONO`, `[custody-A]`).\n",
+   "old_sha256": "d239caf5d356e42e2100343c3772f3985cb675d4e6e5e28574877e3e34ee31b9",
+   "new_sha256": "43466d2b64d3c7df9d89884e58444934a126c82e6c0299af743a0045ed7fed2f"
+  },
+  {
+   "key": "G1b",
+   "item": "G1",
+   "mode": "str",
+   "old": "a possible independent route via `RECOG-ALG-LEADING-RETURN-EQUIVARIANCE` is noted in the owner disposition record and is not used here",
+   "new": "independent route: `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE` (§7) with the §6.4 `[ALG]` application, `[indep-INB]` gate G1 (a new proof, not a recovery); `RECOG-ALG-LEADING-RETURN-EQUIVARIANCE` is a second route, noted only",
+   "old_sha256": "d99687d78099a6681eb878aaf17a201c14f238de7ae1060a6911e56cc3daa722",
+   "new_sha256": "63f339b2094a81f3baaef84a94a6bfc0efe31fb6166fe55ab4171b96c77bb6b7"
+  },
+  {
+   "key": "G1c",
+   "item": "G1",
+   "mode": "str",
+   "old": "### From `RTG_DISCRETE_GENESIS_DSN_v2.12.13`",
+   "new": "### From `RTG_NUMBER_GENESIS_DSN_v1.21`\n\nClaim-level import for the §6.4 independent route only (`numgen-v1.21`).\n\n- [RID: NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE] :: `[RESULT][from: ALG]` first-nonlinear cyclic-average theorem: if $f=R+h_d+O(d+1)$, then $[f^p-\\mathrm{id}]_d=pR^{-1}\\Pi_0h_d$ (NUMGEN §6.4) :: §6.4 independent route to $G_2=0$; the diag(A,A,A) application is the Genesis `[ALG]` line there\n\n### From `RTG_DISCRETE_GENESIS_DSN_v2.12.14`",
+   "old_sha256": "4742eff9c9d7979ff84671726ef39c460b67ecec06f894e7e64d2e73039a33d2",
+   "new_sha256": "7a2a454a2178957f3989f1351d13854d75f77185e166ff086422c82021b82cc9"
+  },
+  {
+   "key": "G3a",
+   "item": "G3/G4",
+   "mode": "str",
+   "old": "- `RTG_ONTOLOGICAL_FOUNDATIONS` v0.10 (`ofn-v0.10`) — foundational context;",
+   "new": "- `RTG_ONTOLOGICAL_FOUNDATIONS` v0.12 (`ofn-v0.12`) — foundational context;",
+   "old_sha256": "22dc5da8fd5d69764d7114f847110088be1bd3b2e6a85888d57200cc736993cc",
+   "new_sha256": "7407213f088ffd3b4a1e76f76653f1fb29a28d7a3591996a4b3ea757ac33d76a"
+  },
+  {
+   "key": "G3b",
+   "item": "G3/G4",
+   "mode": "str",
+   "old": "OFN §5.5 and IMP-O10-01 import §6.3a–§6.3c (Programme IF32);",
+   "new": "OFN §5.5 and its §11 import rows take §6.3a–§6.3c (Programme IF32); OFN v0.11 amended two OFN contract fields (OFN11-C01, OFN11-C02) that Genesis does not use;",
+   "old_sha256": "2a62089824691f4b5f48581fdac348b8c3d29f42a9303bc830ca320c13ae2aea",
+   "new_sha256": "a7b9835f62c56c273c89c78e089229899ef46b2ece5f84996cc126e6c2aafad7"
+  },
+  {
+   "key": "G3c",
+   "item": "G3/G4",
+   "mode": "line",
+   "old": "- OFN (IF32) :: OFN §11 rows IMP-O10-*, §5.5 :: §6.3a–§6.3c",
+   "new": "- OFN (IF32) :: OFN §11 import rows and §5.5, at OFN v0.12 :: §6.3a–§6.3c",
+   "old_sha256": "85c9c4b77233011a42d31971d4ee97c7022893ecc71fffc85197eb7f7262a501",
+   "new_sha256": "82eb66c7ff76ea359f8ccab4013364754fbdb9c27fe40088e401a75d0c439e9e"
+  },
+  {
+   "key": "P1",
+   "item": "pins",
+   "mode": "line",
+   "old": "- Programme v1.3 and OFN v0.10: companion references above, not scientific imports.",
+   "new": "- NUMGEN: v1.21 (`numgen-v1.21`) for the §6.4 route row only.\n- Programme v1.3 and OFN v0.12: companion references above, not scientific imports.",
+   "old_sha256": "226b7af338847832a4306f1f6405d101f1669e06a09cc5cbcc73cc37fea3bde9",
+   "new_sha256": "c9560f66ae00359b08f9a60d53acc516c72316e8a957da219218d97cd26a49dc"
+  },
+  {
+   "key": "P2",
+   "item": "pins",
+   "mode": "line",
+   "old": "- Discrete Genesis: v2.12.13, blocked interface (Programme IF25); no import.",
+   "new": "- Discrete Genesis: v2.12.14 (`tdrg-v2.12.14`), blocked interface (Programme IF25); no import.",
+   "old_sha256": "2a4773b093a89bc89447b685aea5ce0fe1aa3e8ffdfcea702765941d334b0253",
+   "new_sha256": "f3731c66a45b9a8977e2af225d576fd1710290978175002f923df058dede912f"
+  },
+  {
+   "key": "G5a",
+   "item": "G5",
+   "mode": "str",
+   "old": "- [RID: DYAD-ALG-NU5-P5] :: $\\nu_5^{(5)}$ closed form, exact over $\\mathbb{Q}(\\sqrt5,\\sqrt{10+2\\sqrt5})$ `[conv: one-step NF, declared K_5 family, frame W_p, resonant h=0]` (exact certificate `dyad_m2c_nu5_p5_exact.py`, Dyadic owner; v2.8.8) :: §6.2 OPEN 9 imports",
+   "new": "- [RID: DYAD-ALG-NU5-P5] :: $\\nu_5^{(5)}$ closed form, exact in $\\mathbb{Q}(\\zeta_5)$, $\\zeta_5=e^{2\\pi i/5}$, with real and imaginary parts in $\\mathbb{Q}(\\sqrt5,\\sqrt{10+2\\sqrt5})$ `[conv: one-step NF, declared K_5 family, frame W_p, resonant h=0]` (exact certificate `dyad_m2c_nu5_p5_exact.py`, Dyadic owner; claim-level pin `dyad-v6.4.23` §6.11, where the field label is corrected; value unchanged) :: §6.2 OPEN 9 imports",
+   "old_sha256": "44e9e36d2b9ef1328ba77875f5878751db07cb77a7224ee9d7f84a30cbe6e907",
+   "new_sha256": "374fa1e7d795038dc9aa81a09f9ec94f6ce1f5eda0a55cfc701ce5fd86c0a789"
+  },
+  {
+   "key": "P3",
+   "item": "pins",
+   "mode": "line",
+   "old": "- Dyadic: v6.4.13 for the historical rows above (proof pins); v6.4.22 (`dyad-v6.4.22`) for the two §6.3c (C2) rows only.",
+   "new": "- Dyadic: v6.4.13 for the historical rows above (proof pins), except `DYAD-ALG-NU5-P5` at v6.4.23 (`dyad-v6.4.23`, field label); v6.4.22 (`dyad-v6.4.22`) for the two §6.3c (C2) rows only.",
+   "old_sha256": "360933a81bda216030a946ec28e4d9fc3e32aab2eb5edeb87796c8136481da8b",
+   "new_sha256": "ccaef12f409ea6ab9d578d8dc8cd9d5f0e5700b19a36fa64cd13c7d907d828a0"
+  },
+  {
+   "key": "G6a",
+   "item": "G6",
+   "mode": "str",
+   "old": "`[CAND]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.15 | TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY]` **In-plane coherent-source identity (Triadic v1.6 scope).**",
+   "new": "`[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.15 | TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY]` **In-plane coherent-source identity (Triadic v1.7 scope).**",
+   "old_sha256": "98d302c16ca57e5cb5fa696f8aa2bb1163129d8788de098a61c4f6b291858301",
+   "new_sha256": "86196115fcf9a31df641bda31420cbb4b584c36a73c7666f4ee4b198e142bf68"
+  },
+  {
+   "key": "G6b",
+   "item": "G6",
+   "mode": "str",
+   "old": "`[CAND]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.16 | TRIAD-ALG-T6T-JACOBI-MODE-SIGNS]` **Mode-sign count, not physical source-direction independence.** Adopted Triadic v1.6 retains",
+   "new": "`[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.16 | TRIAD-ALG-T6T-JACOBI-MODE-SIGNS]` **Mode-sign count, not physical source-direction independence.** Adopted Triadic v1.7 retains",
+   "old_sha256": "77eddd7db1386513999263ac34dfaa8afc4816c0deda5e5eb031cd33f0bb4fbd",
+   "new_sha256": "afea0565dbc995c6790a1fb138b6e4cf64b948b8faf479b6c2e2f2bfe2445fdb"
+  },
+  {
+   "key": "G6c",
+   "item": "G6",
+   "mode": "line",
+   "old": "**[CAND]** `[scope: primitive seed diagnostic]` [RID: GEN-CAND-APEX-T6U] [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]",
+   "new": "`[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]` Triadic's primitive apex seed diagnostics, restricted to the parent-seed and increment-channel values used below. Depends on: Triadic §6.17 at v1.7; see §7.\n\n**[CAND]** `[scope: primitive seed diagnostic]` [RID: GEN-CAND-APEX-T6U] Genesis interface reading of the import above:",
+   "old_sha256": "4a3e91132080225ed1037f33fcc499ade61f615ebb0b042a45b8279014291280",
+   "new_sha256": "4964fb25712d0822c3bf2fbdb55d8d176170555a1f27caa99c0161b01f87f920"
+  },
+  {
+   "key": "G6d",
+   "item": "G6",
+   "mode": "str",
+   "old": "and not a bound on an independent UV source. Triadic v1.6 separately types",
+   "new": "and not a bound on an independent UV source. Triadic v1.7 separately types",
+   "old_sha256": "4f41ca2e03341cc297c05e64dd5a21743196061e08c7c1a8c85c887a004fbc74",
+   "new_sha256": "5cd605e9a264243138eaa1cc6118b5a9f4a462cd0dda42b1ae265218bb3f3e43"
+  },
+  {
+   "key": "G6e",
+   "item": "G6",
+   "mode": "line",
+   "old": "### From `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6`",
+   "new": "### From `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7`",
+   "old_sha256": "8940224343fb22abf89faced9ffdbc1efce99f927a337fa898604cf6bba0d565",
+   "new_sha256": "75ce7efdc49c15bb46a04f1be8824174369511dddbf9091b7724a29c135dd37a"
+  },
+  {
+   "key": "G6f",
+   "item": "G6",
+   "mode": "str",
+   "old": "Consumer reconciliation against adopted v1.6 is applied in this release.",
+   "new": "The three imports are pinned claim by claim at v1.7 (`triad-v1.7`; statements, values and grades unchanged since v1.6, Triadic §7). The CN-01–CN-05 rows below are the v1.6 consumer notices as received.",
+   "old_sha256": "40de3e175ac9edba1199c0ad623cf3ea9acc2d3e55d5d26cbde4b539c8aff9c2",
+   "new_sha256": "b2e0b21cd01154c406628a130a4c6d1c09a2ff9b4d7ed4459114d93294139985"
+  },
+  {
+   "key": "G6g",
+   "item": "G6",
+   "mode": "line",
+   "old": "- Triadic: v1.6 for the imports above; the §6.17 table is read at `triad-v1.6.1` for the T-6u case label (§8), a companion reading.",
+   "new": "- Triadic: v1.7 (`triad-v1.7`) for the three imports above, claim by claim; CN-01–CN-05 as received at v1.6; the §6.17 table is read at `triad-v1.6.1` for the T-6u case label (§8), a companion reading.",
+   "old_sha256": "a26b06c645a586f40e6f7645b865938fc595f6db34f00bfefddf168756a9a9b2",
+   "new_sha256": "58364a49bdc95efa2fcaa694f2b4583e1c873c6f22f010c4f040dee766147a0d"
+  },
+  {
+   "key": "G6h",
+   "item": "G6",
+   "mode": "str",
+   "old": "- **OPEN 1T — Triadic v1.6 phase/interface import protocol.** CLOSED (v2.8.5):",
+   "new": "- **OPEN 1T — Triadic phase/interface import protocol.** CLOSED (v2.8.5):",
+   "old_sha256": "a751dbcda356f7461412cc4fbe7286e0354a87f19c1e166d0a8b5279c87a66f9",
+   "new_sha256": "f2392fd9286fe8bdb1a26bd427a881fab94de4228fff99b535f7daff20ff2eac"
+  },
+  {
+   "key": "G6i",
+   "item": "G6",
+   "mode": "str",
+   "old": "retained imports are limited to adopted, explicitly scoped Triadic v1.6 statements;",
+   "new": "retained imports are limited to adopted, explicitly scoped Triadic statements at the pinned edition (§7);",
+   "old_sha256": "35439f4bf74f98f4390bd6595d4d314f27f0ad9335a4e2a691e8883c9f680472",
+   "new_sha256": "912b4db068bd001350f673586be1ec1239e5e8e1586c51a10f1052e28f64bc13"
+  },
+  {
+   "key": "G6j",
+   "item": "G6",
+   "mode": "line",
+   "old": "**OPEN 1T — Triadic v1.6 phase/interface import protocol** [RID: GEN-OPEN-TRIAD-PHASE-IMPORT]",
+   "new": "**OPEN 1T — Triadic phase/interface import protocol** [RID: GEN-OPEN-TRIAD-PHASE-IMPORT]",
+   "old_sha256": "a4cf5d475b30b51486cb479f35b89abaca35aed9b30e7c38e72a552c8d24c31c",
+   "new_sha256": "b6256d50f7cfe5c8136e140a005609d18c14531493759d0687c792337b5ebd8d"
+  },
+  {
+   "key": "G6k",
+   "item": "G6",
+   "mode": "line",
+   "old": "- TRIAD (IF06) :: Triadic §7, pin v2.8.7 :: primitive tetrahedral seed and metric conventions",
+   "new": "- TRIAD (IF06) :: Triadic §7.2: `gen-v2.9` claim by claim; the radial-polynomial import held at v2.8.7 pending the d-mode identity (`GEN-ALG-P4-DRIFT-IDENTITY`, §6.5) :: primitive tetrahedral seed and metric conventions",
+   "old_sha256": "2cb2b703c7fd784326ffc9bfeffdf6f5bb945ded52511bcaab0b135def2993ff",
+   "new_sha256": "c90c58cc50992734d2c010b60c7108c67f19dcbf7e4f7e4d6aec627f47bac6bc"
+  },
+  {
+   "key": "G6l",
+   "item": "G6",
+   "mode": "str",
+   "old": "`[CAND]` `[scope: primitive seed comparison]` — [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]",
+   "new": "`[CAND]` `[scope: primitive seed comparison]` (Genesis reading; the import line beneath it in §2 carries `[ALG]`) — [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]",
+   "old_sha256": "4ece1b7c19dc1b017e3f0377aafd71fbea6c5b4c1168c5b1ed486ea9d7e1a1a7",
+   "new_sha256": "8f95e13b7f60bd3429ab9d6e8d6067647df0a65b45f179bddce8dae3427330cb"
+  },
+  {
+   "key": "G7a",
+   "item": "G7",
+   "mode": "str",
+   "old": "`[THM]` Vanishing channels: $d^2s$, $d^2c$, $scd$ — by direct incidence cancellation and quadratic route sparsity.\n",
+   "new": "`[THM]` Vanishing channels: $d^2s$, $d^2c$, $scd$ — by direct incidence cancellation and quadratic route sparsity.\n\n`[ALG]` [RID: GEN-ALG-P4-DRIFT-IDENTITY] **Quartic drift identity (d-mode).** For the six-step block map $Z\\mapsto L^6Z+G_2(Z)+G_3(Z)+O(\\|Z\\|^4)$ of §6.4 and $Q_d=d^\\top Bd$, with $d'$ the $d$-component of the image, $Q_d(d')-Q_d(d)=2d^\\top B\\,G_{2,d}(Z)+\\bigl[2d^\\top B\\,G_{3,d}(Z)+Q_d(G_{2,d}(Z))\\bigr]+O(\\|Z\\|^5)$, the cubic term first and the quartic bracket second. With $L^6=I$ (`GEN-THM-LIN-ORDER6`) and $G_2=0$ (§6.4) the cubic term and $Q_d(G_{2,d})$ vanish, so\n$$\\mathcal P_4(s,c,d)=\\Delta Q_d^{(4)}=2d^\\top B\\,G_{3,d}(s,c,d),\\qquad G_{3,d}(s,c,0)=\\tfrac12B^{-1}\\nabla_d\\mathcal P_4\\big|_{d=0}.$$\nThrough this identity the printed $\\Delta Q_d^{(4)}$ above reproduces the printed seed values $Q_{d,1}^{[s^3]}=\\tfrac{7}{1024}Q_s^3$ and $Q_{d,1}^{[c^3]}=\\tfrac{61}{34992}Q_c^3$ below (exact: `[indep-INB]` gates G7a, G7b). Depends on: `GEN-THM-LIN-ORDER6`; §6.4 $G_2=0$ (original source `GEN-ART-G2-CHRONO`, `[custody-A]`; independent route in §6.4); $Q_u=u^\\top Bu$. It is the $d$-mode analogue of `GEN-THM-DELTA-QC` and distinct from it. Not supplied: an independent certificate of the $\\Delta Q_d^{(4)}$ coefficients (`GEN-ART-P4-PRIMITIVE`, `[custody-A]`).\n",
+   "old_sha256": "3c269ef39bfd15e2f8a8f7e18e40424215a25edf4f801cbb6ff2a890ed2274ef",
+   "new_sha256": "f0b20a75c961e3756e8e5e054c66475255cccca3a90220b8805930575b7ed4d6"
+  },
+  {
+   "key": "G8a",
+   "item": "G8",
+   "mode": "str",
+   "old": "`[THM]` **Birth-symmetry (corrected v2.2).** For the certified $s^3$-seeded apex at $d_0=0$:",
+   "new": "`[ALG]` [RID: GEN-ALG-BIRTH-SYMMETRY-SEED] **Birth-symmetry (corrected v2.2).** Exact evaluation, for the certified $s^3$-seeded apex at $d_0=0$:",
+   "old_sha256": "f113941634e02d464105b6c19006f134db16b3dd18e04c567e78aa3389ab52eb",
+   "new_sha256": "529bdbc87c251f69ca89d7c7a7051533c90115c00b9204b53039aa65844ed2f1"
+  },
+  {
+   "key": "G8b",
+   "item": "G8",
+   "mode": "str",
+   "old": "corrected $J_Q$, birth-symmetry sign, and phase-drift law promoted to `[ALG]`;",
+   "new": "corrected $J_Q$, birth-symmetry sign (`GEN-ALG-BIRTH-SYMMETRY-SEED`, §6.6), and phase-drift law promoted to `[ALG]`;",
+   "old_sha256": "203adf6f9aa306996843568cc741d9e68df156ab3216201d3b067b91af84f03a",
+   "new_sha256": "ccaa4be75b71967ee314d099bc5b038272a7dffdd57811e91998ee5b8123ad4d"
+  },
+  {
+   "key": "G8c",
+   "item": "G8",
+   "mode": "line",
+   "old": "- Corrected $J_Q$, birth-symmetry sign, phase-drift law: `[ALG]` (§6.6).",
+   "new": "- Corrected $J_Q$, birth-symmetry sign (`GEN-ALG-BIRTH-SYMMETRY-SEED`), phase-drift law: `[ALG]` (§6.6).",
+   "old_sha256": "433ee5fd7aa82eeef7c4e5e42dea36d5352536fd72dcbdba23e1f165d5866ca1",
+   "new_sha256": "2ddfa5c1d29a706af3b4ea70f23eeb2268d156b6b66aea44ceb5603d541a2e52"
+  },
+  {
+   "key": "G8d",
+   "item": "G8",
+   "mode": "str",
+   "old": "- [RID: GEN-ART-JQ-PHASEDRIFT] :: corrected $J_Q$, birth-symmetry, and phase-drift law $\\Delta\\phi_{ds}$ :: `[ALG]` — symbolic; sign flip at $Q_s^*\\approx0.603$",
+   "new": "- [RID: GEN-ART-JQ-PHASEDRIFT] :: corrected $J_Q$, birth-symmetry, and phase-drift law $\\Delta\\phi_{ds}$ :: `[ALG]` (artifact typing; supports `GEN-ALG-BIRTH-SYMMETRY-SEED`, §6.6) — symbolic; sign flip at $Q_s^*\\approx0.603$",
+   "old_sha256": "b1c2820ac24b9df8c52c4a9ae694ea7f73b852f60aa4df515863b86604e2cb57",
+   "new_sha256": "f806dcad17c570c8f6e39ded7fd9244250990a9402c4b503d4b7c121796d0ab9"
+  },
+  {
+   "key": "S8a",
+   "item": "evidence",
+   "mode": "str",
+   "old": "exact sympy gates K1–K4 and S1–S3 (S4 is numerical and supports no live text) — `EV-CODE`, `EV-RUN`, `EV-INDEP`.\n",
+   "new": "exact sympy gates K1–K4 and S1–S3 (S4 is numerical and supports no live text) — `EV-CODE`, `EV-RUN`, `EV-INDEP`.\n- `[indep-INB]` :: independent contribution, not a rerun of missing original code and not a recovery of the original source (Methodology §12.3): `evidence/gen/scripts/gen_inbox_checks.py` (`4b9f0a3c…5415`), exact sympy gates T0, CONV, G1, G7a, G7b, G8 on the printed Genesis data — `EV-CODE`, `EV-RUN`, `EV-INDEP`.\n",
+   "old_sha256": "c7cf04fbf88c75519b3d2d01eb1c5b17bec01ca7fde63e7133d2315499bbd956",
+   "new_sha256": "76127b22e3e3bb7858264b6b957c19427c87014b2013b8b78e2bfba37353434b"
+  },
+  {
+   "key": "S8b",
+   "item": "G7/G8",
+   "mode": "str",
+   "old": "\n\n---\n\n## §9. Collaboration and Provenance",
+   "new": "\n- [RID: GEN-ALG-P4-DRIFT-IDENTITY] :: d-mode quartic drift identity $\\mathcal P_4=2d^\\top BG_{3,d}$ :: `[ALG]` `[scope: §6.5; §6.4 premises]` — proof: §6.5 (expansion), `[indep-INB]` gates G7a, G7b\n- [RID: GEN-ALG-BIRTH-SYMMETRY-SEED] :: birth-symmetry values at the certified $s^3$ seed :: `[ALG]` `[scope: §6.6]` — exact evaluation; seed `GEN-ART-G3D-SEED`; also from the printed $\\mathcal P_4$ through `GEN-ALG-P4-DRIFT-IDENTITY`, `[indep-INB]` gate G8\n\n---\n\n## §9. Collaboration and Provenance",
+   "old_sha256": "4436c80129e4473debc9e4608ad1088fc8ba2d33605561a6df6198d681574c6e",
+   "new_sha256": "b8b9c3938b6f48ade1fdb86647319ab6b826b4b96c0b63ac40e2ce48d82de4a1"
+  },
+  {
+   "key": "APPA",
+   "item": "appendix",
+   "mode": "insert",
+   "old": "### v2.9 — 25 October 2026 — Adopted\n",
+   "new": "### v2.10 — 3 November 2026 — candidate (not adopted)\n\n- **Basis:** the Genesis inbox after v2.9 (eight `pipes/GEN/` items), the Atlas advisory `records/gen/ATLAS_ADVISORY_GEN_INBOX_20261103.md`, the two owner disposition records and the fixed co-owner list `records/gen/GEN_OWNER_RECONCILIATION_INBOX_20261103.md`; PI decision of 3 November 2026.\n- **New RIDs:** `GEN-ALG-P4-DRIFT-IDENTITY` (§6.5, the d-mode identity $\\mathcal P_4=2d^\\top BG_{3,d}$ under the §6.4 premises; G7); `GEN-ALG-BIRTH-SYMMETRY-SEED` (§6.6; G8).\n- **Grade correction:** §6.6 birth symmetry `[THM]` → `[ALG]`, values unchanged (Appendix B; G8).\n- **Independent route:** §6.4 $G_2=0$ via `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE` and a Genesis `[ALG]` application line; `GEN-ART-G2-CHRONO` stays `[custody-A]` (G1).\n- **Imports and pins:** NUMGEN v1.21 route row (G1, G2); Triadic imports repinned claim by claim to v1.7, T-6s/T-6t as `[ALG]` imports, T-6u as an `[ALG]` import with the separate Genesis `[CAND]` reading `GEN-CAND-APEX-T6U` (G6); `DYAD-ALG-NU5-P5` field label corrected and that row repinned to v6.4.23 (G5); OFN companion and IF32 row at v0.12 (G3, G4); Discrete Genesis blocked-interface pointer at v2.12.14; TRIAD consumer row at its declared state.\n- **Unchanged:** §6.3a–§6.3c; every other RID's statement and grade; every OPEN status.\n- **Records:** release record `records/gen/GEN_v2_10_RELEASE_RECORD.md`; predecessor tag `gen-v2.9` (SHA-256 `9178ca2c…00ac`).\n\n### v2.9 — 25 October 2026 — Adopted\n",
+   "old_sha256": "4d2490ba7390c7ffcc5ade0400d95154fad1fff9571ae2fb4766bacf5166781a",
+   "new_sha256": "717d1a67473f3546f73d294e3971d093a6e2c9d2fc7053ea576e03ec4a774980"
+  },
+  {
+   "key": "APPB",
+   "item": "appendix",
+   "mode": "insert",
+   "old": "## Appendix B — Retired and Rejected Claims {#appendix-b}\n\n",
+   "new": "## Appendix B — Retired and Rejected Claims {#appendix-b}\n\n### Corrected claims (inbox round after v2.9)\n\n**[RETRACTED | RID: GEN-ALG-BIRTH-SYMMETRY-SEED]** Grade `[THM]` of the §6.6 birth-symmetry statement (v2.2–v2.9). Reason: the values $I_{ds}^{(1)}=\\omega_{ds}^{(1)}=-Q_s^2/16$, $\\phi_{ds}^{(1)}$ and $D_{\\rm birth}^{[s^3]}=\\tfrac{7}{512}Q_s^3$ are an exact evaluation at the certified $s^3$ seed, whose artifact `GEN-ART-G3D-SEED` is `[ALG verified]`; §1, §2 and §8 already graded it `[ALG]`. Corrected grade `[ALG]`, values unchanged. Record: Appendix A, v2.10 entry; co-owner list item G8.\n\n",
+   "old_sha256": "819f0aa41f9f81d5309e43f3dd1132e6d1fc3ef2c431dfc9c3c1dc48c7b1bcbe",
+   "new_sha256": "e9a15df1221dfc1dd6260b1158bbbcbd9a5536aa3e5e63052e483abb0884a4a7"
+  },
+  {
+   "key": "F1",
+   "item": "footer",
+   "mode": "line",
+   "old": "*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.9 (ADOPTED, 25 October 2026).*",
+   "new": "*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.10 (candidate; not adopted).*",
+   "old_sha256": "3b30690b0aea12f2fd8800c1a32a3301076f35b5c043b53e023cac6cb08b46d5",
+   "new_sha256": "757531b609185f6997b0e5be438c250ac15d4eb240bb87cce7eff9ec67734802"
+  }
+ ]
+}

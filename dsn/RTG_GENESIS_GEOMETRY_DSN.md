@@ -1,16 +1,16 @@
-# RTG_GENESIS_GEOMETRY_DSN_v2.9
+# RTG_GENESIS_GEOMETRY_DSN_v2.10
 
 **Title:** RTG Genesis Geometry Study — Canonical Scientific Ledger  
-**Date:** 25 October 2026  
-**Document status:** ADOPTED — PI, 25 October 2026 (corrections of the reconciled v2.8.9 advisory and Methodology v1.4 compaction; stage 1 and stage 2 reviewed). Adoption record: `records/gen/GEN_v2_9_RELEASE_RECORD.md`.  
+**Date:** 3 November 2026  
+**Document status:** CANDIDATE — not adopted (inbox round after v2.9: G1–G8 and producer/consumer pins; one content stage). Release record: `records/gen/GEN_v2_10_RELEASE_RECORD.md`.  
 **Scope:** Primitive dyadic/triadic/tetrahedral Genesis algebra, quaternionic metric lift, UV completion, foam network structure, and Regge bridge. Imports settled continuous-branch results from Dyadic and Triadic with inherited scope; routes TDR-G dependencies through explicit bridge requirements only.  
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives statement-level readouts of the theorem-grade results with their hypotheses and scope qualifications (about 1,000 words); a pointer-only list would drop those qualifications.  
-**Supersedes:** `RTG_GENESIS_GEOMETRY_DSN_v2.8.9` (SHA-256 `d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc`; tag `gen-v2.8.9`).  
+**Supersedes:** `RTG_GENESIS_GEOMETRY_DSN_v2.9` (SHA-256 `9178ca2cd38bea8d55deada78b6adbd8022533c4baad7af101583b1179d300ac`; tag `gen-v2.9`).  
 **Companion documents:** current editions, producer pins and companion references in §7 (Pins; Programme-context references).  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Programme tier:** Tier 3 — integrating study (placement recorded in Programme v1.3 §6.1); imports scoped continuous-branch results from Dyadic and Triadic; routes Discrete/TDR-G dependencies through explicit bridge requirements only.  
 **Status summary:** **Local sourced-junction theorem** (§6.9, `GEN-THM-SOURCED-JUNCTION`). If $w=0$, $\sigma_f\neq0$ and $\Delta_3>0$: vacuum gluing fails ($S_f = 0$ is impossible), and the constrained birth equation, which at $w=0$ reads $\tau d_\perp+S_f=0$ on $|d_\perp|^2=\Delta_3$, has exactly two antipodal solutions; selection of the physical branch is OPEN (GCL-02, §6.8). Primitive Genesis algebra through the certified tetrahedral quartic polynomials is retained. The standalone triad is a **universal chiral pump**: no quartic safe surface exists except $c=0$. `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` (§6.3c) excludes local \(C^3\) submersive six-step factors for every real \(C^3\) network germ with the stated linear structure, zero quadratic part and chiral cubic invariant \(\mu\neq0\), under \((H_{\rm spec})\); a primitive-clock companion is recorded at the same grade as the §6.3b primitive statement. The 9B physical lowering bridge, the 9B-tau physical sign/energy selection, and physical realization of the 9C raw-array premise remain open. Internal typing/model questions therefore remain OPEN alongside OPEN M and OPEN 0-Regge.  
-**Release record:** `records/gen/GEN_v2_9_RELEASE_RECORD.md`. Version history: Appendix A.
+**Release record:** `records/gen/GEN_v2_10_RELEASE_RECORD.md`. Version history: Appendix A.
 
 ## Local Tag Aliases
 
@@ -77,7 +77,7 @@ $$Q_s>0,\quad \beta\neq0,\quad \Delta_3>0,\quad \sigma_f\neq0,\quad w\neq0 \;\Ri
 
 `[OPEN]` **UV data.** $\alpha_f$ and $w = \mu_1 + i\mu_2$ remain distinct UV data until OPEN M is resolved.
 
-`[RESULT]` **Genesis II archival recovery (promoted in v2.2).** The May 22 Genesis II audit items are now certified following attachment of `genesis_k4_route_census.py` (all PASS) and `genesis_birth_race_model.py`: OPEN 1C closed `[THM]`; vector apex seeding $G_{3,d}(s,c,0)$, $Q_{d,1}^{[s^3]}=\tfrac{7}{1024}Q_s^3$, and $\Delta Q_s^{(4)}$ shadow all `[ALG verified]`; corrected $J_Q$, birth-symmetry sign, and phase-drift law promoted to `[ALG]`; rejected mechanisms (HYP-A, HYP-C, incoherent seeding, smooth-$\chi$) promoted to established `[FAIL]`. The cascade threshold $|\alpha_f|\ge 0.012$ remains `[HYP]` (model-dependent). See OPEN-GEN-II-7B and §6.5–§6.6.
+`[RESULT]` **Genesis II archival recovery (promoted in v2.2).** The May 22 Genesis II audit items are now certified following attachment of `genesis_k4_route_census.py` (all PASS) and `genesis_birth_race_model.py`: OPEN 1C closed `[THM]`; vector apex seeding $G_{3,d}(s,c,0)$, $Q_{d,1}^{[s^3]}=\tfrac{7}{1024}Q_s^3$, and $\Delta Q_s^{(4)}$ shadow all `[ALG verified]`; corrected $J_Q$, birth-symmetry sign (`GEN-ALG-BIRTH-SYMMETRY-SEED`, §6.6), and phase-drift law promoted to `[ALG]`; rejected mechanisms (HYP-A, HYP-C, incoherent seeding, smooth-$\chi$) promoted to established `[FAIL]`. The cascade threshold $|\alpha_f|\ge 0.012$ remains `[HYP]` (model-dependent). See OPEN-GEN-II-7B and §6.5–§6.6.
 
 `[ALG]` `[scope: scalar-M ansatz M=gI]` **Scalar-M resolvent** (Genesis II UV patch). Under the scalar-M ansatz:
 $$((\tau-g)I - \Delta M_f)^{-1} = \frac{(\tau-g)I + \Delta M_f}{(\tau-g)^2 - \kappa_f^2}.$$
@@ -100,7 +100,7 @@ Algebraic poles occur at $\tau-g=\pm\kappa_f$. The physically relevant soft bran
 4. **OPEN M — Quaternionic metric lift.** Derive UV blocks $H(x)$, $M_{\rm spin2}(x)$.
 
 **Recently closed:**
-- **OPEN 1T — Triadic v1.6 phase/interface import protocol.** CLOSED (v2.8.5): the historical $x_*$, $[0^\circ,5.5^\circ]$ safety wedge, no-safe-basin and phase-steering route-obstruction chain are withdrawn from current Genesis use under CN-05; retained imports are limited to adopted, explicitly scoped Triadic v1.6 statements; no replacement global phase/basin theorem is imported. Record: OPEN 1T below.
+- **OPEN 1T — Triadic phase/interface import protocol.** CLOSED (v2.8.5): the historical $x_*$, $[0^\circ,5.5^\circ]$ safety wedge, no-safe-basin and phase-steering route-obstruction chain are withdrawn from current Genesis use under CN-05; retained imports are limited to adopted, explicitly scoped Triadic statements at the pinned edition (§7); no replacement global phase/basin theorem is imported. Record: OPEN 1T below.
 - **OPEN 1C — Triad chiral admissibility surface.** `[THM CLOSED]` in v2.2. $\Delta Q_c^{(4)} \geq 0$ (universal chiral pump); no $Q_s^3$ safe surface. See §6.5.
 - **OPEN-GEN-II-9A — Scalar-$M$ soft-pole residue.** Sub-steps 1–4 closed under scalar-M ansatz in v2.3. Soft pole generically excited; residue PSD under either Euclidean or lowered-covector source convention. See §6.9.
 - **OPEN-GEN-II-9B — Source index type / lowering bridge.** PARTIAL after GCL-03: covector type is closed, but \(B\) is not uniquely forced as the physical vector→covector lowering map. Conditional on \(S_f=Bc_f\), the residue is PSD. 9B-tau reconstructs the printed secular equation exactly for \(K=\tau I-\Delta M_f\); physical \(\pm\Delta M_f\) sign/energy selection is OPEN under GCL-02. See §6.9.
@@ -229,7 +229,7 @@ Import (under SG-15 / no-unaudited-import guard — recorded, not certified by G
 
 Cross-reference: OPEN 5/2B-a and the adopted-scope T-6s/T-6t candidate notes constrain the same interface without selecting a physical source. T-6s supplies a conditional coherent-family norm identity; T-6t supplies mode-label/sign information only. Neither establishes apex source independence or supplies the missing energy→amplitude constitutive bridge.
 
-`[CAND]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.15 | TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY]` **In-plane coherent-source identity (Triadic v1.6 scope).** For the declared coherent source family with real \(g_2\),
+`[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.15 | TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY]` **In-plane coherent-source identity (Triadic v1.7 scope).** For the declared coherent source family with real \(g_2\),
 \[
 H_{\rm total}=(1-g_2)BJ_Q,\qquad
 \|H_{\rm total}\|_B=|1-g_2|,
@@ -240,7 +240,7 @@ and
 \]
 The older unconditional “any coherent source cannot raise the norm” reading is withdrawn. Neither physical selection of \(0\le g_2\le2\) nor a source-lowering identification follows from the identity. This remains a candidate interface statement, not an OPEN-M source realization.
 
-`[CAND]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.16 | TRIAD-ALG-T6T-JACOBI-MODE-SIGNS]` **Mode-sign count, not physical source-direction independence.** Adopted Triadic v1.6 retains independently signable Jacobi mode labels within the stated node-mediated incidence reduction. It does **not** establish that the \(d\)-mode is a separate physical transverse/out-of-plane source carrier. Any physical apex-source realization requires an explicit enlarged carrier, embedding, metric and source map (CN-01 / GCL-05).
+`[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.16 | TRIAD-ALG-T6T-JACOBI-MODE-SIGNS]` **Mode-sign count, not physical source-direction independence.** Adopted Triadic v1.7 retains independently signable Jacobi mode labels within the stated node-mediated incidence reduction. It does **not** establish that the \(d\)-mode is a separate physical transverse/out-of-plane source carrier. Any physical apex-source realization requires an explicit enlarged carrier, embedding, metric and source map (CN-01 / GCL-05).
 
 ---
 
@@ -255,7 +255,7 @@ Verdict: **No quartic safe surface** — $Q_{c,\rm safe}(s^+) = C_{\rm triad}Q_s
 
 ---
 
-**OPEN 1T — Triadic v1.6 phase/interface import protocol** [RID: GEN-OPEN-TRIAD-PHASE-IMPORT]
+**OPEN 1T — Triadic phase/interface import protocol** [RID: GEN-OPEN-TRIAD-PHASE-IMPORT]
 
 Status: **CLOSED / current import protocol (v2.8.5 adopted reconciliation)** | Source: adopted `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6`
 
@@ -357,7 +357,9 @@ on the large-positive-\(g\) branch, with limit \(\{2g/3,\,2g\}\), hence \(\|M\|_
 
 ---
 
-**[CAND]** `[scope: primitive seed diagnostic]` [RID: GEN-CAND-APEX-T6U] [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]
+`[ALG]` `[import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]` Triadic's primitive apex seed diagnostics, restricted to the parent-seed and increment-channel values used below. Depends on: Triadic §6.17 at v1.7; see §7.
+
+**[CAND]** `[scope: primitive seed diagnostic]` [RID: GEN-CAND-APEX-T6U] Genesis interface reading of the import above:
 
 The primitive census contains distinct apex channels that must not be conflated. For the parent-seeding channel
 \[
@@ -369,7 +371,7 @@ R_{\rm apex}^{\rm cert}
 =\sqrt{\frac{Q(V_s)}{Q_c^{\rm seed}}}
 =\frac{\sqrt{21}}{64}\approx0.0716.
 \]
-This is a **primitive seeded-state amplitude diagnostic**, not an HINDEX/OPEN-M source-norm ratio and not a bound on an independent UV source. Triadic v1.6 separately types
+This is a **primitive seeded-state amplitude diagnostic**, not an HINDEX/OPEN-M source-norm ratio and not a bound on an independent UV source. Triadic v1.7 separately types
 \[
 D_{\rm birth}^{[s^3]}=\frac7{512}Q_s^3=2Q(V_s)
 \]
@@ -416,7 +418,7 @@ Status: **RESOLVED (v2.2)** | Archival/provenance patch complete
 Resolution: The May 22 Genesis II results are now artifact-attached (`genesis_k4_route_census.py` all PASS; `genesis_birth_race_model.py`) and migrated into the live ledger:
 - OPEN 1C closed `[THM]` (§1, §2, §6.5).
 - Vector apex seeding $G_{3,d}(s,c,0)$, $Q_{d,1}^{[s^3]}=\tfrac{7}{1024}Q_s^3$, $\Delta Q_s^{(4)}$ shadow: `[ALG verified]` (§6.5).
-- Corrected $J_Q$, birth-symmetry sign, phase-drift law: `[ALG]` (§6.6).
+- Corrected $J_Q$, birth-symmetry sign (`GEN-ALG-BIRTH-SYMMETRY-SEED`), phase-drift law: `[ALG]` (§6.6).
 - HYP-A, HYP-C, incoherent seeding, smooth-$\chi$: established `[FAIL]` (Appendix B).
 - Saturation ceiling $Q_d^*\approx1.13\times10^{-2}$ and control value $Q_d(n_{\rm ctrl})\approx5.6\times10^{-3}$: `[RESULT]` `[scope: reduced birth-race model]` (§6.6).
 - Cascade threshold $|\alpha_f|\ge0.012$: routed to OPEN-GEN-II-7B as `[HYP]`.
@@ -914,6 +916,8 @@ The argument is the direct primitive-clock argument of §6.3b: (i) \(DG(0)|_{\ma
 
 `[THM]` **Tetrahedral chronological protection.** Let $L = \operatorname{diag}(A,A,A)$; $G_2(Z) = \sum_{j=0}^5 L^{5-j}F_2(L^j Z) = 0$. All one-step quadratic forcing cancels over one 6-step block.
 
+`[ALG]` **Independent route (application of `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE`, §7).** For $L=\operatorname{diag}(A,A,A)$ with $A=DT(0)$, $A^6=I$, the first nonlinear degree is quadratic and the degree-2 vector charges $a-b-1\in\{1,-1,-3\}$ are nonzero mod 6, so the resonant projection of $F_2$ vanishes and $G_2=0$; this holds for every quadratic $F_2:\mathbb R^6\to\mathbb R^6$, cross-component terms included. Exact check: `[indep-INB]` gate G1. This is a new proof of the §6.4 statement, not a recovery of its original source (`GEN-ART-G2-CHRONO`, `[custody-A]`).
+
 `[THM]` Amplitude drift begins at quartic order: $\Delta Q_u = O(\|Z\|^4)$, $u \in \{s,c,d\}$.
 
 `[ALG]` Six-step cubic vector drift $G_3(Z)$ survives the parity filter (odd composition channel). Its magnitude requires explicit hexagonal-orbit evaluation.
@@ -941,6 +945,10 @@ $$\boxed{
 \end{aligned}}$$
 
 `[THM]` Vanishing channels: $d^2s$, $d^2c$, $scd$ — by direct incidence cancellation and quadratic route sparsity.
+
+`[ALG]` [RID: GEN-ALG-P4-DRIFT-IDENTITY] **Quartic drift identity (d-mode).** For the six-step block map $Z\mapsto L^6Z+G_2(Z)+G_3(Z)+O(\|Z\|^4)$ of §6.4 and $Q_d=d^\top Bd$, with $d'$ the $d$-component of the image, $Q_d(d')-Q_d(d)=2d^\top B\,G_{2,d}(Z)+\bigl[2d^\top B\,G_{3,d}(Z)+Q_d(G_{2,d}(Z))\bigr]+O(\|Z\|^5)$, the cubic term first and the quartic bracket second. With $L^6=I$ (`GEN-THM-LIN-ORDER6`) and $G_2=0$ (§6.4) the cubic term and $Q_d(G_{2,d})$ vanish, so
+$$\mathcal P_4(s,c,d)=\Delta Q_d^{(4)}=2d^\top B\,G_{3,d}(s,c,d),\qquad G_{3,d}(s,c,0)=\tfrac12B^{-1}\nabla_d\mathcal P_4\big|_{d=0}.$$
+Through this identity the printed $\Delta Q_d^{(4)}$ above reproduces the printed seed values $Q_{d,1}^{[s^3]}=\tfrac{7}{1024}Q_s^3$ and $Q_{d,1}^{[c^3]}=\tfrac{61}{34992}Q_c^3$ below (exact: `[indep-INB]` gates G7a, G7b). Depends on: `GEN-THM-LIN-ORDER6`; §6.4 $G_2=0$ (original source `GEN-ART-G2-CHRONO`, `[custody-A]`; independent route in §6.4); $Q_u=u^\top Bu$. It is the $d$-mode analogue of `GEN-THM-DELTA-QC` and distinct from it. Not supplied: an independent certificate of the $\Delta Q_d^{(4)}$ coefficients (`GEN-ART-P4-PRIMITIVE`, `[custody-A]`).
 
 `[ALG]` Torque-channel consistency: $\frac{5/12}{1/8} = \frac{5/9}{1/6} = \frac{10}{3}$; incidence ratio: $\frac{1/6}{1/8} = \frac{4}{3}$.
 
@@ -984,7 +992,7 @@ This $J_Q$ is the birth-direction/phase-drift rotation operator. The Euclidean f
 
 `[CONVENTION]` (v2.7.3) The identity \(a^\top B J_Q b=\tfrac{\sqrt3}{2}\omega_{ab}\) uses the index order \(\omega_{ab}=a_2b_1-a_1b_2\) for the stated \(J_Q\). The independent re-derivation confirmed that \(\{J_Q^\top BJ_Q=B,\ J_Q^2=-I\}\) has exactly two solutions \(\pm J_Q\); the documented \(+\tfrac{\sqrt3}{2}\) sign fixes the branch/index-order pairing. **For calculations in which the orientation convention is transported consistently**, the metric identities are branch-independent and the 9-series amplitude \(Q_c=c_f^\top Bc_f\) is unchanged. This does **not** erase sign-sensitive fixed-policy statements such as GCL-01's leading child/face phase, which must retain their declared orientation and \(\kappa\)-sign conventions. The separate GEN-ART-REDERIV certificate scope is recorded in §8.
 
-`[THM]` **Birth-symmetry (corrected v2.2).** For the certified $s^3$-seeded apex at $d_0=0$: $I_{ds}^{(1)} = \omega_{ds}^{(1)} = -Q_s^2/16$, hence $\omega_{ds}^{(1)} = +I_{ds}^{(1)} < 0$ and $\phi_{ds}^{(1)} = \pi + \arctan(\sqrt{3}/2) \approx 3.8553$ rad (3rd quadrant). The selected seeded-vector radial channel evaluates to $D_{\rm birth}^{[s^3]}=\tfrac{7}{512}Q_s^3=2Q(V_s)$. This is distinct from the seeded-state squared amplitude $Q(V_s)=Q_{d,1}^{[s^3]}=\tfrac{7}{1024}Q_s^3$ and is not by itself a demonstrated complete next-block increment. The prior $\omega_{ds}^{(1)}=-I_{ds}^{(1)}$ and second-quadrant branch are `[FAIL]` (Appendix B).
+`[ALG]` [RID: GEN-ALG-BIRTH-SYMMETRY-SEED] **Birth-symmetry (corrected v2.2).** Exact evaluation, for the certified $s^3$-seeded apex at $d_0=0$: $I_{ds}^{(1)} = \omega_{ds}^{(1)} = -Q_s^2/16$, hence $\omega_{ds}^{(1)} = +I_{ds}^{(1)} < 0$ and $\phi_{ds}^{(1)} = \pi + \arctan(\sqrt{3}/2) \approx 3.8553$ rad (3rd quadrant). The selected seeded-vector radial channel evaluates to $D_{\rm birth}^{[s^3]}=\tfrac{7}{512}Q_s^3=2Q(V_s)$. This is distinct from the seeded-state squared amplitude $Q(V_s)=Q_{d,1}^{[s^3]}=\tfrac{7}{1024}Q_s^3$ and is not by itself a demonstrated complete next-block increment. The prior $\omega_{ds}^{(1)}=-I_{ds}^{(1)}$ and second-quadrant branch are `[FAIL]` (Appendix B).
 
 `[ALG]` **Phase-drift law (corrected v2.2).** At birth gauge, to leading order in $Q_s$:
 $$\Delta\theta_s = -\tfrac{19\sqrt{3}}{2592}Q_s(16Q_s^2+27), \quad \Delta\theta_d = -\tfrac{\sqrt{3}}{4536}Q_s(848Q_s^2+783),$$
@@ -1150,7 +1158,7 @@ All imports carry `[scope: conditional on postulated continuous generator T]` an
 - [RID: DYAD-ALG-NF6] :: adopted isolated-dyad normalizing chart \(h\) :: §6.2–§6.3 \(E_{\rm NF}\)
 - *(v2.8.6 repin, Dyadic notice N2: these items were previously routed through `DYAD-ALG-LIEGAUGE-NORM` with `[conv: Lie strict-kernel gauge]`; that RID is now the archival Lie-gauge normalization only and is not imported here. The antisymmetric-channel theorem of §6.2 is Genesis-native and not an import.)*
 - [RID: DYAD-ALG-P567-LEDGER] :: $p=5,6,7$ finite one-step ledger exact coefficients :: §6.2 OPEN 9 imports
-- [RID: DYAD-ALG-NU5-P5] :: $\nu_5^{(5)}$ closed form, exact over $\mathbb{Q}(\sqrt5,\sqrt{10+2\sqrt5})$ `[conv: one-step NF, declared K_5 family, frame W_p, resonant h=0]` (exact certificate `dyad_m2c_nu5_p5_exact.py`, Dyadic owner; v2.8.8) :: §6.2 OPEN 9 imports
+- [RID: DYAD-ALG-NU5-P5] :: $\nu_5^{(5)}$ closed form, exact in $\mathbb{Q}(\zeta_5)$, $\zeta_5=e^{2\pi i/5}$, with real and imaginary parts in $\mathbb{Q}(\sqrt5,\sqrt{10+2\sqrt5})$ `[conv: one-step NF, declared K_5 family, frame W_p, resonant h=0]` (exact certificate `dyad_m2c_nu5_p5_exact.py`, Dyadic owner; claim-level pin `dyad-v6.4.23` §6.11, where the field label is corrected; value unchanged) :: §6.2 OPEN 9 imports
 - [RID: DYAD-ALG-GLATTICE5] :: $G_{\rm lattice}(5)=0$ — unique non-trivial degree-4 lattice bridge cancellation :: §6.2 OPEN 9
 - [RID: DYAD-ALG-ALIAS-PHASE] :: Alias phase $G_-(\pi/\tau)=1/(1-i\tau)$, $\arg G_-=\arctan(2\sqrt{3}/3)$ :: §6.2 projection warning
 - [RID: DYAD-ALG-A1A2-LIEGAUGE] :: $a_1=559\sqrt{15}/4860$, $a_2=86775991\sqrt{15}/755827200$ `[conv: Lie gauge]` :: §2 OPEN 17 (programme continuity only)
@@ -1162,9 +1170,9 @@ Scoped import for the §6.3c (C2) note only (`dyad-v6.4.22`). The rows above rem
 - [RID: DYAD-THM-SMOOTH-EMBEDDING] :: $C^\infty$ flow embedding at $P_1$ (OPEN 20 B-∞ existence) supplying the $C^\infty$ germ $J$ ($J^6=\mathrm{id}$, $DJ(0)=A$, $JT=TJ$) `[scope: C^\infty local germs at P_1]` :: §6.3c G-20 note
 - [RID: DYAD-THM-SMOOTH-EQUIVARIANT-CHART] :: $C^\infty$ local diffeomorphism $\Phi$ with $\Phi(0)=0$, $D\Phi(0)=I$, $\Phi\circ J=A\circ\Phi$ and $\Phi T\Phi^{-1}$ commuting with $A$ `[scope: C^\infty local germs at P_1]`. Frame note: Genesis uses it through the linear frame $W=\mathcal L(\rho,\eta)$ of `DYAD-DEF-BRIDGE-EXPORT-CONTRACT`; a linear conjugation preserves $\Phi(0)=0$, $D\Phi(0)=I$ and the commutation. The analytic case (Dyadic OPEN 20 B-an/B-6) is not imported :: §6.3c G-20 note
 
-### From `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6`
+### From `RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7`
 
-All imports carry `[scope: conditional on postulated continuous generator T]`. Consumer reconciliation against adopted v1.6 is applied in this release.
+All imports carry `[scope: conditional on postulated continuous generator T]`. The three imports are pinned claim by claim at v1.7 (`triad-v1.7`; statements, values and grades unchanged since v1.6, Triadic §7). The CN-01–CN-05 rows below are the v1.6 consumer notices as received.
 
 - [RID: TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY] :: coherent in-plane source identity \(\|H_{\rm total}\|_B=|1-g_2|\); no-gain inequality only for real \(0\le g_2\le2\) in the declared coherent family. No physical selection of that interval or source-lowering bridge is imported.
 - [RID: TRIAD-ALG-T6T-JACOBI-MODE-SIGNS] :: independently signable Jacobi mode labels in the stated node-mediated incidence reduction; **not** a theorem of physical transverse source independence or added carrier dimension.
@@ -1180,7 +1188,13 @@ Inherited scope:
 - no Triadic result supplies a physical residual, \(\kappa_{\rm phys}\), UV source, apex embedding, or global cascade verdict.
 
 
-### From `RTG_DISCRETE_GENESIS_DSN_v2.12.13`
+### From `RTG_NUMBER_GENESIS_DSN_v1.21`
+
+Claim-level import for the §6.4 independent route only (`numgen-v1.21`).
+
+- [RID: NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE] :: `[RESULT][from: ALG]` first-nonlinear cyclic-average theorem: if $f=R+h_d+O(d+1)$, then $[f^p-\mathrm{id}]_d=pR^{-1}\Pi_0h_d$ (NUMGEN §6.4) :: §6.4 independent route to $G_2=0$; the diag(A,A,A) application is the Genesis `[ALG]` line there
+
+### From `RTG_DISCRETE_GENESIS_DSN_v2.12.14`
 
 Under cross-branch firewall SG-PROG-1. No discrete results may be directly imported without a named bridge theorem.
 
@@ -1189,7 +1203,7 @@ Under cross-branch firewall SG-PROG-1. No discrete results may be directly impor
 ### Programme-context references (not scientific imports)
 
 - `RTG_PROGRAMME_OVERVIEW` v1.3 (`programme-v1.3`) — programme inventory, guards and interface register (§7.2); not a re-certification of Genesis claims.
-- `RTG_ONTOLOGICAL_FOUNDATIONS` v0.10 (`ofn-v0.10`) — foundational context; not proof of Genesis birth laws or UV embeddings. OFN §5.5 and IMP-O10-01 import §6.3a–§6.3c (Programme IF32); no OFN claim is imported into Genesis. *(The v2.8.6 note on OFN v0.9 and CUST-O09-01 is history at `gen-v2.8.9`; the §1 alias answering CUST-O09-01 is unchanged.)*
+- `RTG_ONTOLOGICAL_FOUNDATIONS` v0.12 (`ofn-v0.12`) — foundational context; not proof of Genesis birth laws or UV embeddings. OFN §5.5 and its §11 import rows take §6.3a–§6.3c (Programme IF32); OFN v0.11 amended two OFN contract fields (OFN11-C01, OFN11-C02) that Genesis does not use; no OFN claim is imported into Genesis. *(The v2.8.6 note on OFN v0.9 and CUST-O09-01 is history at `gen-v2.8.9`; the §1 alias answering CUST-O09-01 is unchanged.)*
 
 ### Programme continuity references
 
@@ -1216,19 +1230,20 @@ Under cross-branch firewall SG-PROG-1. No discrete results may be directly impor
 
 Consumer-declared pins are the consumers' state and are not repinned here. Status of each row: declared use; no notice has been sent for the current corrections (PI decision); the release record lists what would be notified.
 
-- TRIAD (IF06) :: Triadic §7, pin v2.8.7 :: primitive tetrahedral seed and metric conventions
+- TRIAD (IF06) :: Triadic §7.2: `gen-v2.9` claim by claim; the radial-polynomial import held at v2.8.7 pending the d-mode identity (`GEN-ALG-P4-DRIFT-IDENTITY`, §6.5) :: primitive tetrahedral seed and metric conventions
 - UVM / OPEN M (IF08) :: OPEN M §0.3, §7, pin v2.8.5 :: secular frame, norms, cascade test and geometry requirements; imports the 9B-tau secular numerator and uses $|mw|$ and $m=2Q_sB_*$ — affected by the renaming $\kappa_f=|m||w|$ (same quantity), the $B_*$ status (§6.8) and the sourced-junction rescoping (to be notified)
 - RECOG (IF15) :: RECOG §7, as declared there :: $B$, $J_Q$, pairings and phase-memory context
 - RRF (IF30) :: RRF §2 table, pin v2.8.9 :: registry imports with RID; §6.2a cites §6.3c
-- OFN (IF32) :: OFN §11 rows IMP-O10-*, §5.5 :: §6.3a–§6.3c
+- OFN (IF32) :: OFN §11 import rows and §5.5, at OFN v0.12 :: §6.3a–§6.3c
 - RER, FMS, ER-2B (IF33–IF35) :: noncanonical records, as declared in each
 
 ### Pins
 
-- Dyadic: v6.4.13 for the historical rows above (proof pins); v6.4.22 (`dyad-v6.4.22`) for the two §6.3c (C2) rows only.
-- Triadic: v1.6 for the imports above; the §6.17 table is read at `triad-v1.6.1` for the T-6u case label (§8), a companion reading.
-- Discrete Genesis: v2.12.13, blocked interface (Programme IF25); no import.
-- Programme v1.3 and OFN v0.10: companion references above, not scientific imports.
+- Dyadic: v6.4.13 for the historical rows above (proof pins), except `DYAD-ALG-NU5-P5` at v6.4.23 (`dyad-v6.4.23`, field label); v6.4.22 (`dyad-v6.4.22`) for the two §6.3c (C2) rows only.
+- Triadic: v1.7 (`triad-v1.7`) for the three imports above, claim by claim; CN-01–CN-05 as received at v1.6; the §6.17 table is read at `triad-v1.6.1` for the T-6u case label (§8), a companion reading.
+- Discrete Genesis: v2.12.14 (`tdrg-v2.12.14`), blocked interface (Programme IF25); no import.
+- NUMGEN: v1.21 (`numgen-v1.21`) for the §6.4 route row only.
+- Programme v1.3 and OFN v0.12: companion references above, not scientific imports.
 
 ---
 
@@ -1238,12 +1253,13 @@ Consumer-declared pins are the consumers' state and are not repinned here. Statu
 
 - `[custody-A]` :: proof source not in the repository; custody (a) missing — held by neither Genesis co-owner session and not among the held records placed at `upload/gen-records/` (hash check `records/gen/GEN_UPLOAD_HASH_CHECK_20261024.md`; owner disposition records of 24 Oct 2026) — `EV-NOT-RERUN`.
 - `[indep-AC]` :: independent contribution, not a rerun of missing original code and not a recovery of the original source (Methodology §12.3): `evidence/gen/scripts/gen_owner_advisory_checks.py` (`0ba256be…bf99`), exact sympy gates K1–K4 and S1–S3 (S4 is numerical and supports no live text) — `EV-CODE`, `EV-RUN`, `EV-INDEP`.
+- `[indep-INB]` :: independent contribution, not a rerun of missing original code and not a recovery of the original source (Methodology §12.3): `evidence/gen/scripts/gen_inbox_checks.py` (`4b9f0a3c…5415`), exact sympy gates T0, CONV, G1, G7a, G7b, G8 on the printed Genesis data — `EV-CODE`, `EV-RUN`, `EV-INDEP`.
 
 - [RID: GEN-ALG-SCALARM-RESOLVENT] :: scalar-M ansatz resolvent computation (Genesis II UV patch) :: `[ALG]` `[scope: scalar-M ansatz M=gI]` — closed algebraic result; algebraic poles at $\tau-g=\pm\kappa$
 - [RID: GEN-THM-DELTA-QC] :: $\Delta Q_c^{(4)} = 2c^\top B G_{3,c}(s,c,0)$ (OPEN 1C) :: `[THM]` **CLOSED v2.2** — standalone + K4-shadow pump forms; certified `genesis_k4_route_census.py` (PASS) + two-route re-derivation
 - [RID: GEN-ART-G3D-SEED] :: vector apex seeding $G_{3,d}(s,c,0)$ four-channel closed form; $Q_{d,1}^{[s^3]}=\tfrac{7}{1024}Q_s^3$ :: `[ALG verified]` — `genesis_k4_route_census.py`
 - [RID: GEN-ART-DELTA-QS-SHADOW] :: shadow longitudinal drift $\Delta Q_s^{(4)}$ :: `[ALG verified]` — `genesis_k4_route_census.py`
-- [RID: GEN-ART-JQ-PHASEDRIFT] :: corrected $J_Q$, birth-symmetry, and phase-drift law $\Delta\phi_{ds}$ :: `[ALG]` — symbolic; sign flip at $Q_s^*\approx0.603$
+- [RID: GEN-ART-JQ-PHASEDRIFT] :: corrected $J_Q$, birth-symmetry, and phase-drift law $\Delta\phi_{ds}$ :: `[ALG]` (artifact typing; supports `GEN-ALG-BIRTH-SYMMETRY-SEED`, §6.6) — symbolic; sign flip at $Q_s^*\approx0.603$
 - [RID: GEN-ART-SATURATION] :: isolated-$K_4$ fixed-point ceiling $Q_d^*\approx1.13\times10^{-2}$ :: `[RESULT]` `[scope: reduced birth-race model]` — `genesis_birth_race_model.py`, checksum `checksum_v272.py`; recorded control-loss values are window-dependent (≈5.6×10⁻³ over the lower window, 2.3×10⁻³ at $Q_{s,0}=5×10^{-2}$). Source location resolved; campaign validation is not re-performed by v2.8.5.
 - [RID: GEN-THM-SCALARM-EIGEN] :: scalar-M eigendecomposition + soft-pole residues $R^{(E)}_+,R^{(B)}_+$ + susceptibilities $\chi_E,\chi_B$ (OPEN-GEN-II-9A) :: `[THM]`/`[ALG]` `[scope: scalar-M ansatz]` — `resolvent_soft_mode.py`, `chi_susceptibility.py` (verified)
 - [RID: GEN-OPEN-UVJET-SCOPE] :: OPEN M constraint scoping — reduction to two UV scalars \(\{\|H\|,g\}\) is conditional on the additional 9C raw-array \(B\)-self-adjointness modelling premise plus the single-jet hypothesis; norm convention remains \(B\)-native and the 0.024 target retains reduced-wrapper scope :: `[RESULT]` `[scope: conditional on the listed 9C + single-jet premises]` — `open_m_constraint_scope.py` (historical verification retained)
@@ -1251,7 +1267,7 @@ Consumer-declared pins are the consumers' state and are not repinned here. Statu
 - [RID: GEN-OPEN-PHASE-MOMENT-C2] :: OPEN 1A candidate #2 — archival-chart $h_3=0$ phase bound retained only at that chart scope; general lever gauge-class invariance withdrawn; full map + observable retest OPEN :: `[NUM]` `[scope: supporting only]` / `[OPEN]` — historical artifacts preserved
 - [RID: GEN-OPEN-WPHASE] :: corrected typing — unit identity $W(J_Qs)/W(s)=i$ retained; physical leading child ratio $W(c_0^{[3]})/W(s)=i\kappa Q_s$; leading face phase $F_{\rm face}^{(0)}=-\pi/2+\arg\mu_6$ for retained negative policies; full-phase remainder conditional on GCL-06 :: `[ALG]` `[scope: exact leading identity]` + `[OPEN]` `[scope: remainder / interpretation]`; historical certificates preserved
 - [RID: GEN-OPEN-WPHASE-GSPLIT] :: OPEN 5/2B-a gap-functional mode-split audit — $\Delta\mathcal{E}_c^{\rm birth}=\frac13Q_c^2+\frac34Q_sQ_c$, not scalar $G(F_W)$ :: `[ALG diagnostic]` `[scope: certified in-plane birth gap; not UV energy sufficiency]`
-- [RID: GEN-CAND-APEX-T6U] :: adopted Triadic T-6u primitive seed diagnostic — $Q(V_s)=7Q_s^3/1024$ and reference seed ratio $R_{\rm apex}=\sqrt{21}/64$ — the shear reference policy with the vector-seed reading; the four-case maximum over the two reference policies and two typed readings is $\sqrt{14}/16$ (Triadic §6.17 table, as read at `triad-v1.6.1`; companion reading, not an import); **not** an HINDEX/UV source-norm ratio. Distinguish the $7/512$ seeded-vector increment-channel diagnostic :: `[CAND]` `[scope: primitive seed comparison]` — [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]
+- [RID: GEN-CAND-APEX-T6U] :: adopted Triadic T-6u primitive seed diagnostic — $Q(V_s)=7Q_s^3/1024$ and reference seed ratio $R_{\rm apex}=\sqrt{21}/64$ — the shear reference policy with the vector-seed reading; the four-case maximum over the two reference policies and two typed readings is $\sqrt{14}/16$ (Triadic §6.17 table, as read at `triad-v1.6.1`; companion reading, not an import); **not** an HINDEX/UV source-norm ratio. Distinguish the $7/512$ seeded-vector increment-channel diagnostic :: `[CAND]` `[scope: primitive seed comparison]` (Genesis reading; the import line beneath it in §2 carries `[ALG]`) — [import: RTG_TRIADIC_BIRTH_LIFT_DSN_v1.7 §6.17 | TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC]
 - [RID: GEN-OPEN-APEX-SLOT] :: **RETRACTED as `[RESULT]`** — former apex–UV slot identity conflated node-label Jacobi orthogonality with state-carrier geometry. Retain \(d\)-mode label/seed; physical transverse/UV embedding remains `[OPEN]` and requires explicit enlarged carrier/metric/source map. Historical `apex_uv_frame_map.py` retained as provenance.
 - [RID: GEN-IMPORT-P0-DYADIC] :: RESULT-P0-DYADIC import + conditional ×2 amplitude verdict — requires both the source/HINDEX bridge and an explicit \(E\propto\) amplitude² constitutive relation; the numerical “~2× short” conclusion is not unconditional :: `[CAND]` `[scope: conditional representation lift]` / `[RESULT]` `[scope: conditional calibration]` — imported from Dyadic DSN v6.4.13 (`DYAD-CAND-P0-DYADIC`, conditional only; previous pins: v6.4.11 from v2.8.6, v6.4.10 before that)
 - [RID: GEN-ART-REDERIV] :: independent clean-room **reproducibility certificate for the 9-series claims as stated** — rebuilt objects reproduce the declared formulas; this was **not** a typing audit or an audit of the §6.8 sign display and did not detect GCL-02–04 :: `[CERT]` `[scope: reproducibility of claims as stated; not typing/§6.8 sign audit]` — `independent_rederivation.py`, `INDEPENDENT_REDERIVATION_REPORT.md`
@@ -1261,7 +1277,7 @@ Consumer-declared pins are the consumers' state and are not repinned here. Statu
 - [RID: GEN-OPEN-HINDEX] :: source-block index trace for $H:\Pi_\parallel\to\Pi_\perp$ — CLOSED (v2.7.7): covector-valued; $\|H\|_B^2=\lambda_{\max}(B^{-1}H^\top B^{-1}H)$; $H=\sigma B$ checksum double root $\sigma^2$; vector-reading `[FAIL]` ($\{9/4,1/4\}\sigma^2$ fork); norm unified with $\|M\|_B$ on admissible family :: `[THM]`/`[DEF/ALG]`/`[CERT]` `[scope: scalar-M / face-gauge source equation]` — `independent_hindex_trace.py` (PI), `hindex_verification.py` (independent re-verification, all PASS)
 - [RID: GEN-ART-PURE-CHIRAL] :: pure chiral protection and mixed-longitudinal survival audit :: `[THM]` — `[custody-A]`
 - [RID: GEN-ART-PHI-2TO3] :: $\Phi_{2\to3}$ one-dimensional transverse birth theorem and $Q_c \sim Q_s^3$ derivation :: `[THM]` — `[custody-A]`
-- [RID: GEN-ART-G2-CHRONO] :: tetrahedral chronological protection $G_2(Z)=0$ over six-step block :: `[THM]` — `[custody-A]`; a possible independent route via `RECOG-ALG-LEADING-RETURN-EQUIVARIANCE` is noted in the owner disposition record and is not used here
+- [RID: GEN-ART-G2-CHRONO] :: tetrahedral chronological protection $G_2(Z)=0$ over six-step block :: `[THM]` — `[custody-A]`; independent route: `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE` (§7) with the §6.4 `[ALG]` application, `[indep-INB]` gate G1 (a new proof, not a recovery); `RECOG-ALG-LEADING-RETURN-EQUIVARIANCE` is a second route, noted only
 - [RID: GEN-ART-P4-PRIMITIVE] :: primitive tetrahedral $\mathcal{P}_4(s,c,d)$ derivation / certificate :: `[THM]` — `[custody-A]`; certifying script `genesis_k4_route_census.py` not in the repository
 - [RID: GEN-ART-PHASE-AVG] :: uniform independent phase-average reduction of $\mathcal{P}_4$ :: `[ALG]` — `[custody-A]`
 - [RID: GEN-ART-PHASE-CLOSURE] :: phase-moment closure and plateau shear bridge derivation :: `[ALG structure]` — `[custody-A]`
@@ -1279,6 +1295,8 @@ Consumer-declared pins are the consumers' state and are not repinned here. Statu
 - [RID: GEN-THM-QH-NOGO] :: block-diagonal quaternionic no-go (statement as before; RID newly assigned) :: `[THM]` `[scope: §6.7]` — proof source GEN-ART-QH-NOGO, not in the repository
 - [RID: GEN-THM-SINGLE-FACE-METRIC] :: smooth single-face metric criterion (statement as before; RID newly assigned) :: `[THM]` `[scope: §6.9]` — proof source not identified in the owner text; not in the repository
 - [RID: GEN-THM-SOURCED-JUNCTION] :: local sourced-junction theorem, algebraic statement at $w=0$, $\Delta_3>0$ (minimizer clause withdrawn, Appendix B) :: `[THM]` `[scope: §6.9]` — proof: `[indep-AC]` gates S1–S2; original source GEN-ART-SOURCED-JUNCTION not in the repository
+- [RID: GEN-ALG-P4-DRIFT-IDENTITY] :: d-mode quartic drift identity $\mathcal P_4=2d^\top BG_{3,d}$ :: `[ALG]` `[scope: §6.5; §6.4 premises]` — proof: §6.5 (expansion), `[indep-INB]` gates G7a, G7b
+- [RID: GEN-ALG-BIRTH-SYMMETRY-SEED] :: birth-symmetry values at the certified $s^3$ seed :: `[ALG]` `[scope: §6.6]` — exact evaluation; seed `GEN-ART-G3D-SEED`; also from the printed $\mathcal P_4$ through `GEN-ALG-P4-DRIFT-IDENTITY`, `[indep-INB]` gate G8
 
 ---
 
@@ -1294,6 +1312,16 @@ Consumer-declared pins are the consumers' state and are not repinned here. Statu
 ## Appendix A — Version History {#appendix-a}
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the inherited footer chain — are in Appendix A, the header and the footer of v2.8.9 (tag `gen-v2.8.9`, SHA-256 `d143673e…c6fc`), and in the release records named below.
+
+### v2.10 — 3 November 2026 — candidate (not adopted)
+
+- **Basis:** the Genesis inbox after v2.9 (eight `pipes/GEN/` items), the Atlas advisory `records/gen/ATLAS_ADVISORY_GEN_INBOX_20261103.md`, the two owner disposition records and the fixed co-owner list `records/gen/GEN_OWNER_RECONCILIATION_INBOX_20261103.md`; PI decision of 3 November 2026.
+- **New RIDs:** `GEN-ALG-P4-DRIFT-IDENTITY` (§6.5, the d-mode identity $\mathcal P_4=2d^\top BG_{3,d}$ under the §6.4 premises; G7); `GEN-ALG-BIRTH-SYMMETRY-SEED` (§6.6; G8).
+- **Grade correction:** §6.6 birth symmetry `[THM]` → `[ALG]`, values unchanged (Appendix B; G8).
+- **Independent route:** §6.4 $G_2=0$ via `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE` and a Genesis `[ALG]` application line; `GEN-ART-G2-CHRONO` stays `[custody-A]` (G1).
+- **Imports and pins:** NUMGEN v1.21 route row (G1, G2); Triadic imports repinned claim by claim to v1.7, T-6s/T-6t as `[ALG]` imports, T-6u as an `[ALG]` import with the separate Genesis `[CAND]` reading `GEN-CAND-APEX-T6U` (G6); `DYAD-ALG-NU5-P5` field label corrected and that row repinned to v6.4.23 (G5); OFN companion and IF32 row at v0.12 (G3, G4); Discrete Genesis blocked-interface pointer at v2.12.14; TRIAD consumer row at its declared state.
+- **Unchanged:** §6.3a–§6.3c; every other RID's statement and grade; every OPEN status.
+- **Records:** release record `records/gen/GEN_v2_10_RELEASE_RECORD.md`; predecessor tag `gen-v2.9` (SHA-256 `9178ca2c…00ac`).
 
 ### v2.9 — 25 October 2026 — Adopted
 
@@ -1338,6 +1366,10 @@ One compact entry per edition (Methodology v1.4 §1). Full records of earlier ed
 ---
 
 ## Appendix B — Retired and Rejected Claims {#appendix-b}
+
+### Corrected claims (inbox round after v2.9)
+
+**[RETRACTED | RID: GEN-ALG-BIRTH-SYMMETRY-SEED]** Grade `[THM]` of the §6.6 birth-symmetry statement (v2.2–v2.9). Reason: the values $I_{ds}^{(1)}=\omega_{ds}^{(1)}=-Q_s^2/16$, $\phi_{ds}^{(1)}$ and $D_{\rm birth}^{[s^3]}=\tfrac{7}{512}Q_s^3$ are an exact evaluation at the certified $s^3$ seed, whose artifact `GEN-ART-G3D-SEED` is `[ALG verified]`; §1, §2 and §8 already graded it `[ALG]`. Corrected grade `[ALG]`, values unchanged. Record: Appendix A, v2.10 entry; co-owner list item G8.
 
 ### Corrected claims (stage-1 corrections of the v2.8.9 advisory)
 
@@ -1385,4 +1417,4 @@ One compact entry per edition (Methodology v1.4 §1). Full records of earlier ed
 
 ---
 
-*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.9 (ADOPTED, 25 October 2026).*
+*END OF DOCUMENT — RTG_GENESIS_GEOMETRY_DSN_v2.10 (candidate; not adopted).*

@@ -1,0 +1,18 @@
+[PASS] C0 BASE
+[PASS] C1 BUILD
+[PASS] C2 REVERSE
+[PASS] C3 PROTECTED
+[PASS] C4 RID SET []
+[PASS] C5 TAGS census_bad=[] live drops={'[THM]': -1, '[CAND]': -2}
+[PASS] C6 G7
+[PASS] C7 G8
+[PASS] C8 G6
+[PASS] C9 PINS missing tags=[]
+[PASS] C10 G5
+[PASS] C11 G1
+[PASS] C12 SOURCES
+[PASS] C13 EVIDENCE (definitions=1; script run on candidate=PASS)
+[PASS] C14 HEADER
+[PASS] C15 APPENDICES
+
+16/16 gates PASS; base 9178ca2c…, candidate 4ac899be382e968d83b238ae9a33daa5df059dfcf5d177a23525de603b1e14e0
