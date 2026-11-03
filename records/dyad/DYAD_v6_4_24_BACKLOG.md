@@ -33,6 +33,7 @@ Owner decision needed per row: register (name, scope) or record "no RID; cite th
   - Form: a **new, separate result** (new RID). `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` keeps its rows and its `[assuming: RECOG-THM-R9-MEMORY]`.
   - The new result keeps the R9 dependency on the sharpened rows, the chart/primitive separation and every hypothesis. It never uses the -C7 rows.
   - Plan: design note → exact-rational certificate with negative controls → co-owner review → candidate for v6.4.24.
+  - **Status (3 Nov 2026):** done through review. `records/dyad/DYAD_S1_OPEN21_SHARP_ROWS_DESIGN.md`; RID `DYAD-THM-OPEN21-SHARP-ROWS` accepted by the co-owner (PR #150 reviews `5748327144`, `5748500129`); $S_A=19.680$, $S_B=6.357$.
 
 ## D. Not in v6.4.24
 

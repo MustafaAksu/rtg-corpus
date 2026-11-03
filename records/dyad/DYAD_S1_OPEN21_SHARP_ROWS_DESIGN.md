@@ -110,4 +110,6 @@ Certificate corrections, applied in one commit:
 - **H2:** G5 no longer depends on the control flag. A wrong R9 constant is caught by G3 (and G4).
 - **H3:** `run.sh` stops with exit 1 unless the positive run exits 0 and each of the five controls exits exactly 1.
 
-The scientific scope is unchanged: the existing OPEN 21 RID, its $K'_j$ and its scope stay as adopted. A delta-only read-back of H1–H3 is pending. PI adoption and release stay separate.
+The scientific scope is unchanged: the existing OPEN 21 RID, its $K'_j$ and its scope stay as adopted.
+
+**Read-back of r2** (`bbcdd83`): PR #150 review `5748500129`, **ACCEPT — H1–H3 CLOSED**; G0–G5 PASS (owner-run), 5/5 controls fail as designed, constants unchanged; no further requests. S1 is a reviewed SESSION result, ready to be carried into the v6.4.24 candidate. Canonical registration of the RID and the v6.4.24 release are separate PI decisions.
