@@ -1,6 +1,6 @@
 # Triadic v1.8 cycle — first-pass scientific advisory (T8-08, T8-09, T8-13, T8-14, T8-06)
 
-**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation. A second revision, after review `5748069400` on `4cbc9ce`, narrows three contract statements (C2/C3, C5, C6; marked *[review 2]*) and adds the closure test (§4b). A maintenance pass after review `5748629780` on `b4bd90f` narrows two more statements (C3 and the §4b minimal state; marked *[review 3]*).
+**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation. A second revision, after review `5748069400` on `4cbc9ce`, narrows three contract statements (C2/C3, C5, C6; marked *[review 2]*) and adds the closure test (§4b). A maintenance pass after review `5748629780` on `b4bd90f` narrows two more statements (C3 and the §4b minimal state; marked *[review 3]*). ChatGPT's review `5748759219` on `2277de8` accepts that pass and adds the cubic jet and the apex-direction counterexample, which Claude checked independently (§4c).
 **Status:** SESSION working record, NONCANONICAL. It changes no Triadic text, grade, RID or pipe state of another stream. No v1.8 build is started.
 **Scope:** the first-pass set agreed by both co-owners. ChatGPT's PR #146 review `5747764214` (ACCEPT SCOPED, with a reordered priority) proposed T8-08, T8-09, T8-13, T8-14 and a T-6r design note, merged into one advisory.
 **Governing edition:** `triad-v1.7` (`506f3403…e64a`). Line references (L…) are to that file unless another tag is named.
@@ -111,12 +111,26 @@ In closed form (ChatGPT's independent check, review `5748629780`): with $A_s,A_c
 - Whether further components of $D$ enter at the next order is not tested.
 - The run at $\lambda=-6$ returns from $K<1$ to $K=1$ in this truncated session map only. *[review 3]* It is not evidence for a return or healing mechanism in the full or physical dynamics.
 
+## 4c. Cubic jet of the unprojected six-step map, and apex direction
+
+Source: ChatGPT, review `5748759219` on `2277de8` (ACCEPT SCOPED). Claude's receiving check: `evidence/triad/scripts/triad_v1_8_k1_cubic_jet_check.py` (SHA-256 `481f6511…c9c1`; checks H1–H5, PASS; output `evidence/triad/v1.8/triad_v1_8_k1_cubic_jet_check_output.txt`). The model is the unprojected SESSION extension, not the projected T-6c2 producer. The state is all nine components $X=(S,C,D)\in(\mathbb R^3)^3$. The step is $F(X)=\mathcal L X+G_3(X)$ with $\mathcal L=\operatorname{diag}(L_3,L_3,L_3)$, where $L_3$ is the producer's planar step with the $z$ row kept, and $G_3$ is the producer's cubic graph force.
+- **H1–H2.** $L_3^\top B_3L_3=B_3$ and $L_3^6=I$; so $G_3(\mathcal LX)=\mathcal LG_3(X)$, because the forces are built from $B_3$.
+- **H4.** It follows that $F^6(X)=X+6\,\mathcal L^{-1}G_3(X)+O(\|X\|^5)$ (*[THM: conditional]* on this model). Checked symbolically by degree, and by direct six-step truncated iteration at three seeded rational starts. This gives the cubic jet of the full nine-component block map without composing six polynomial steps. It agrees with the factor $(\lambda+6)$ in §4b.
+- **H5.** $w$ is **not** enough by itself. Take $S=\varepsilon(1,0,0)$, $C=\varepsilon(0,1,0)$ and the apexes $D/\varepsilon=(1,0,1)$, $(1,0,-1)$, $(0,1,1)$. All three starts have equal $Q_s$, $Q_c$, $I_{sc}$, $\Omega$ and $r=\|D\|_{B_3}$, and $w=0$. After one block the leading $w$ is $(24,12)\varepsilon^4$, $(-24,-12)\varepsilon^4$ and $(-12,-24)\varepsilon^4$.
+  - The first pair differ only in the sign of $D_z$.
+  - The first and third have equal $D_z$ and equal $\|D\|$, but $D_\parallel$ points in different directions relative to $(s,c)$.
+
+  So, on the free $(S,C,D)$ state space, the direction of $D_\parallel$ is also needed. This is a counterexample on the free state space. It is not a no-go on the fixed T-2b initial gauge, where the apex is fixed by $D_0$.
+- **H3.** A joint $SO(B_T)$ rotation of all planar parts commutes with $L$, and $G_3$ is equivariant under it. So the block map descends to the quotient by this one-dimensional symmetry: 9 − 1 = 8 real coordinates locally, for example on $S_\parallel\neq0$. That 8-coordinate representation closes, because it is the full state up to symmetry. It is an **upper bound**, not shown to be minimal.
+
+**Reading** (SESSION): adding $w$ to the five invariants does not close the map in general; the apex's direction is hidden state too. The search is now bounded above by an 8-coordinate representation that closes.
+
 ## 5. Proposed next steps
 
 | Step | Kind | Gate |
 |---|---|---|
 | ChatGPT checks §§1–4 | change-focused co-owner review | — |
-| T8-06 next (approved by ChatGPT, review `5748629780`): K1 C3 closure on an enlarged state. First define the unprojected six-step map of the full state $(S,C,D)$. Then test closure on the fibres of reduced representations such as $(Q_s,Q_c,I_{sc},\Omega,r;\,w)$, keeping $D_\parallel$, $D_z$ or other hidden variables where needed. The aim is the smallest representation that closes, or a reason why the candidates do not; not a choice of physical model | SESSION research | co-owner agreement given; PI informed |
+| T8-06 next (approved by ChatGPT, reviews `5748629780` and `5748759219`): K1 C3 closure on an enlarged state. The cubic jet of the full nine-component map is now known (§4c). Next: write it in the 8 coordinates of the $SO(B_T)$ quotient; then test closure on the fibres of reduced representations such as $(Q_s,Q_c,I_{sc},\Omega,r;\,w)$, keeping $D_\parallel$, $D_z$ or other hidden variables where needed. The aim is the smallest representation that closes, or a reason why the candidates do not; not a choice of physical model | SESSION research | co-owner agreement given; PI informed |
 | v1.8 content | T-6m2 result (§1), the T-1 conditional sentence (§2), the T-6r closure-ansatz sentence (§4 fact 3) | after T8-01 and T8-02, or a co-owner decision not to wait; PI start |
 
 ## 6. Not claimed

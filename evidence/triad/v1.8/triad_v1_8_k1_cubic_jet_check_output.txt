@@ -1,0 +1,9 @@
+H1 L3^T B_3 L3 = B_3: True; L3^6 = I: True
+H2 G3(Lc X) = Lc G3(X): True
+H3 R in SO(B_T): True; R L = L R: True; G3 equivariant under joint planar rotation: True
+H4 cubic jet F^6(X) = X + 6 Lc^-1 G3(X) + O(|X|^5): symbolic by degree: True; direct truncated iteration at three rational starts: True
+H5 D/eps = (1, 0, 1): leading w = (24, 12) eps^4 (expected (24, 12)): True
+H5 D/eps = (1, 0, -1): leading w = (-24, -12) eps^4 (expected (-24, -12)): True
+H5 D/eps = (0, 1, 1): leading w = (-12, -24) eps^4 (expected (-12, -24)): True
+H5 equal (Q_s, Q_c, I_sc, Omega, |D|^2) across the three starts: True; w = 0 at start: True
+RESULT: PASS
