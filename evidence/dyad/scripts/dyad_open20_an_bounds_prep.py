@@ -255,3 +255,126 @@ def derive_bounds(params):
     M = raw_sup(Rraw)
     raw_diff = u(M + Rraw)
     inverse = inverse_branch_bounds(Rraw, ri, raw_diff)
+    abs_c = abs(c)
+    z = u(Rx / abs_c)
+    U = u(abs(a) + abs(b1) * z + Ry)
+    w = u(z * z * U)
+    if not (certain_lt(z, Rraw) and certain_lt(w, Rraw)):
+        raise ValueError('lifted inputs escape raw Cauchy bidisc')
+    G, Gz, Gu = jet_majorants(4, z, U, Rraw, raw_diff)
+    H, _, _ = jet_majorants(5, z, U, Rraw, raw_diff)
+    den = u(z ** 3 * G)
+    if not certain_lt(den, cf(1)):
+        raise ValueError('cannot certify 1+z^3 G != 0 on enlarged lift domain')
+    # F1=xi+(xi^4/c^3)G; g(0,a)=ell=-c^3, so the following
+    # analytic derivative bound controls the entire R1 without cancellation.
+    K1 = u(Gu / abs_c ** 3)
+    K2 = u((Gz + abs(b1) * Gu) / abs_c ** 4)
+    # F2=Y+xi^3 Q(xi,Y), with exact Q(0,0)=Q_xi(0,0)=0,
+    # Q_Y(0,0)=-alpha from Stage-1 S4/S6/S7.
+    Q = u(((H + U * (2 * G + z ** 3 * G ** 2)) / (1 - den) ** 2 +
+           abs(b1) * z * G) / abs_c ** 3)
+    tx, ty = u(rx / Rx), u(ry / Ry)
+    # Cauchy coefficient bounds for q>=2, or (p>=1,q=1), or (p>=2,q=0).
+    K3 = u(Q / (Ry ** 2 * (1 - tx) * (1 - ty)))
+    K4 = u(Q / (Rx * Ry * (1 - tx)))
+    Psi = u(Q / (Rx ** 2 * (1 - tx)))
+    result = {
+        'raw_full_map_sup_upper':upper_decimal(M),
+        'lifted_G_upper':upper_decimal(G), 'lifted_H_upper':upper_decimal(H),
+        'horizontal_denominator_perturbation_upper':upper_decimal(den),
+        'K1':upper_decimal(K1), 'K2':upper_decimal(K2),
+        'K3':upper_decimal(K3), 'K4':upper_decimal(K4),
+        'Psi':upper_decimal(Psi), 'raw_inverse':inverse,
+        'branch_im_a_positive':True,
+        'algebraic_source': 'Stage-1 S1--S7 exact gates; scalar mpmath.iv bounds are outward enclosing',
+    }
+    return result, (K1,K2,K3,K4,Psi), (a,b1,c,alpha)
+
+
+def forward_analytic_gates(Ks, alpha, inner_x, inner_y, tail_N=10000):
+    """Sufficient E3/E4 template inequalities, forward map only.
+
+    Deliberately returns NOT_CERTIFIED: these conservative constants still
+    require independent consumer review; the odd-petal inverse and E5/E6/E7
+    are not covered. No actual orbit or fixed-point iteration is run here.
+    """
+    K1,K2,K3,K4,Psi = Ks
+    k,m = 3,2
+    eta = iv.pi/4  # D6 of the owner pilot
+    sin_eta, cos_eta = iv.sin(eta),iv.cos(eta)
+    K = u(2*K1+K2)
+    absa = u(abs(alpha))
+    re, im = alpha.real, u(abs(alpha.imag))
+    ralpha = u(absa * abs(alpha+1) / 2 * 2 ** u(abs(re+2)) * iv.exp(im * iv.pi/6))
+    factor = u(iv.exp(2*im*(iv.pi-eta)/k))
+    acrit = u(1+K1+K2)
+    kappa = u(2*(cf(3)/2)**(k+2)*(K1+K2)+2*K1+K2+K1+K2)
+    rk = u(cf(k*(k+1))/2 * 2**(k+2)*acrit**2)
+    e1 = u((k+1)*kappa+rk+2*acrit*(k+kappa)+
+           (k+k*kappa+rk)*(k+kappa+2*acrit*(k+kappa)))
+    s = u(k+m-re)
+    def h(R):
+        ac=u(1+K1*R+K2)
+        return u(absa*R*(K1*R+K2)+K3*R**2+K4*R+Psi+
+                 absa*ac*(absa*R+K3*R**2+K4*R+Psi)+
+                 ralpha*ac**2*(R*(1+absa+K3*R+K4)+Psi))
+    hd = u(2*(cf(3)/2)**(k+m)*h(cf(2)**(m-1))+h(cf(2)))
+    rho = u(inner_x/4)
+    for iteration in range(220):
+        A = u(rho**k+K*rho**(k+1))
+        if not certain_lt(A,cf('0.5')) or not certain_lt(A,iv.sin(2*eta/k)):
+            rho=u(rho/10); continue
+        E = u(K*rho+(k+1)/2*rho**k*(1+K*rho)**2 / (1-A)**(k+2))
+        if not certain_lt(E,sin_eta) or not certain_lt(E,cos_eta/(cos_eta+sin_eta)):
+            rho=u(rho/10); continue
+        if not certain_lt(cf(2)*(cf(3)*rho/2)**(m-1)+rho,inner_y):
+            rho=u(rho/10);continue
+        if not certain_lt(cf(2)*rho**(m-1), inner_y):
+            rho=u(rho/10);continue
+        if not certain_lt(cf(3)*rho/2,inner_x):
+            rho=u(rho/10);continue
+        if not certain_lt(cf(3)*rho/2,cf(1)):
+            rho=u(rho/10);continue
+        if not certain_lt((1+2*K1+K2)*(cf(3)*rho/2)**k, cf('0.5')):
+            rho=u(rho/10);continue
+        delta=u(rho**k/4)  # 0<delta<delta'_INF009
+        C=u((3+2*E)/(sin_eta-E))
+        cs=u(C**(s/k)*(2*delta+1/(s-k)))
+        cs1=u(C**(cf(k+1)/k)*(2*delta+1))
+        exponent=u(e1*cs1*(2*delta)**(cf(1)/k))
+        # Avoid exp(astronomical); the following is an extra sufficient guard.
+        if not certain_lt(exponent,cf(1)):
+            rho=u(rho/10);continue
+        P=u(iv.exp(exponent))
+        b01=u(factor*h(cf(1))*cs)
+        b02=u(factor*h(cf(2))*cs)
+        b1=u(factor*cs*(absa*(1+P*C)*h(cf(1))+P*C*hd))
+        gate=u((2*delta)**(cf(1)/k))
+        ok = certain_lt(b01*gate,cf(1)) and certain_lt(b1*gate,cf(1)) and certain_lt(b02*gate,cf(1))
+        if ok:
+            if tail_N < 2:
+                raise ValueError('tail N must be >=2')
+            D1=u(factor*h(cf(1))*C**(s/k)/(s-k))
+            D2=u(factor*h(cf(2))*C**(s/k)/(s-k))
+            tail_shape=u((k*(tail_N-1)*(s-k-1))**(-cf(1)/k) *
+                         ((s-k-1)/(s-k))**(s/k))
+            return {
+              'forward_inequalities_satisfied':True,
+              'rho_lower':lower_decimal(rho), 'delta_lower':lower_decimal(delta),
+              'C':upper_decimal(C), 'C_star': upper_decimal(
+                  (sin_eta+cos_eta)/(cos_eta-E*(sin_eta+cos_eta))),
+              'B0_1':upper_decimal(b01),'B0_2':upper_decimal(b02),
+              'B1':upper_decimal(b1),'L_upper':upper_decimal(b02*gate),
+              'E5_uniform_tail_N':tail_N,
+              'E5_uniform_tail_coefficient_D1_upper':upper_decimal(D1),
+              'E5_uniform_tail_coefficient_D2_upper':upper_decimal(D2),
+              'E5_uniform_tail_U1_upper':upper_decimal(D1*tail_shape),
+              'E5_uniform_tail_U2_upper':upper_decimal(D2*tail_shape),
+              'radius_shrink_power10':iteration,
+              'qualification':'Conservative forward-template bounds only. This computation is not owner-reviewed; inverse-normalized petals not included.',
+            }
+        rho=u(rho/10)
+    return {'forward_inequalities_satisfied':False,'reason':'no sufficient radius within 220 decimal shrinks'}
+
+
