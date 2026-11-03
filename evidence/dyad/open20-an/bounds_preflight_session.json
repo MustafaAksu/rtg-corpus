@@ -30,8 +30,8 @@
     "C": "4.2426406871192851464050661726291E+0",
     "C_star": "2.0000000000000000000000000000001E+0",
     "E5_uniform_tail_N": 10000,
-    "E5_uniform_tail_U1_upper": "1.0810444037324355981240971744962E+63",
-    "E5_uniform_tail_U2_upper": "1.0810527155936488845666642168858E+63",
+    "E5_uniform_tail_U1_upper": "1.25079517787224E+63",
+    "E5_uniform_tail_U2_upper": "1.25080479490175E+63",
     "E5_uniform_tail_coefficient_D1_upper": "1.0307053700129147148760746742761E+65",
     "E5_uniform_tail_coefficient_D2_upper": "1.0307132948307647102368274188613E+65",
     "L_upper": "2.0451942106149560485479957640903E-3",
@@ -58,6 +58,7 @@
     "raw_cauchy_radius": "0.002",
     "raw_inverse_radius": "0.000000001"
   },
-  "script_sha256": "82841392a266ef3051d847827cc3f0fa6b2d9d2bb6cf570fbc517e18a7e65f58",
-  "stage1_sha256": "2c9ae6376e0c482f2ba520a7ea8e2b38606a6821f7ac3bfa259d4d6020d04739"
+  "script_sha256": "708049c9da39b2ad866639feed089fe2aeea326aab032d1744c3cc7545b039eb",
+  "stage1_sha256": "2c9ae6376e0c482f2ba520a7ea8e2b38606a6821f7ac3bfa259d4d6020d04739",
+  "exact_quadratic_return_zero_checked": true
 }
