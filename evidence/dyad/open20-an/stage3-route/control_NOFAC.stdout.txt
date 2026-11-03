@@ -1,0 +1,20 @@
+G0_stage1_all_pass PASS
+G0_stage1_hash PASS
+G1_P_a_zero PASS
+G1_alpha_from_stage1 PASS
+G1_c_cubed_minus_ell PASS
+G1_parse_alpha PASS
+G1_pilot_root_Im_a_positive PASS
+L_B0_1 FAIL
+L_B0_2 FAIL
+L_C PASS
+L_delta_prime PASS
+L_e1 PASS
+L_h_d PASS
+L_kappa PASS
+L_r_k PASS
+L_rho PASS
+M_monotone_in_each_constant PASS
+V_apriori_route_needs_more_than_1e6_digits PASS
+design eta=pi/4: best E4 radius 1.40246e-9 | with claim 6 1.89642e-11 | min digits needed over eta grid 8.0587e+24
+RESULT FAIL (control NOFAC)
