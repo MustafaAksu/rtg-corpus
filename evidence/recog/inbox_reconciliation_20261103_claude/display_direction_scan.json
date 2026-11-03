@@ -1,0 +1,256 @@
+{
+ "object": "recog-v0.3.26 dsn/RTG_RELATIONAL_RECOGNITION_DSN.md",
+ "rows": [
+  {
+   "constant": "gamma_2 (RECIPROCAL-DRIFT)",
+   "kind": "ceiling",
+   "display": "\\gamma_2=212.6",
+   "in_dsn": true,
+   "displayed": 212.6,
+   "certified": 212.5795501222376,
+   "source": "a1c_drift G2",
+   "direction_ok": true
+  },
+  {
+   "constant": "K_eps(625)",
+   "kind": "ceiling",
+   "display": "K_\\epsilon=0.7203",
+   "in_dsn": true,
+   "displayed": 0.7203,
+   "certified": 0.7203040725444981,
+   "source": "a1c_drift G2",
+   "direction_ok": false
+  },
+  {
+   "constant": "K_eps(1000)",
+   "kind": "ceiling",
+   "display": "$0.4513$",
+   "in_dsn": true,
+   "displayed": 0.4513,
+   "certified": 0.4513129069652678,
+   "source": "a1c_drift G2",
+   "direction_ok": false
+  },
+  {
+   "constant": "K_eps(2500)",
+   "kind": "ceiling",
+   "display": "$0.1860$",
+   "in_dsn": true,
+   "displayed": 0.186,
+   "certified": 0.1860397576204085,
+   "source": "a1c_drift G2",
+   "direction_ok": false
+  },
+  {
+   "constant": "c_J^R (COMBINED-TAIL)",
+   "kind": "ceiling",
+   "display": "c_J^R=0.5008",
+   "in_dsn": true,
+   "displayed": 0.5008,
+   "certified": 0.5007984057015733,
+   "source": "a1c_comb G2",
+   "direction_ok": true
+  },
+  {
+   "constant": "c_7^R (COMBINED-TAIL)",
+   "kind": "ceiling",
+   "display": "c_7^R=100.23",
+   "in_dsn": true,
+   "displayed": 100.23,
+   "certified": 100.23001968258188,
+   "source": "a1c_comb G2",
+   "direction_ok": false
+  },
+  {
+   "constant": "sup|d| (COMBINED-TAIL)",
+   "kind": "ceiling",
+   "display": "0.2955",
+   "in_dsn": true,
+   "displayed": 0.2955,
+   "certified": 0.2954754701645363,
+   "source": "a1c_comb G2",
+   "direction_ok": true
+  },
+  {
+   "constant": "gamma_0 (TAIL-HARMONICS)",
+   "kind": "ceiling",
+   "display": "\\gamma_0=0.17715",
+   "in_dsn": true,
+   "displayed": 0.17715,
+   "certified": 0.17715092407882868,
+   "source": "a1c_1b G2",
+   "direction_ok": false
+  },
+  {
+   "constant": "gamma_1 (TAIL-HARMONICS)",
+   "kind": "ceiling",
+   "display": "\\gamma_1=205.15",
+   "in_dsn": true,
+   "displayed": 205.15,
+   "certified": 205.1458651300618,
+   "source": "a1c_1b G2",
+   "direction_ok": true
+  },
+  {
+   "constant": "c_delta (INBLOCK-ANGLE)",
+   "kind": "ceiling",
+   "display": "c_\\delta=0.793",
+   "in_dsn": true,
+   "displayed": 0.793,
+   "certified": 0.7926954230699744,
+   "source": "a1c_inblock G2",
+   "direction_ok": true
+  },
+  {
+   "constant": "beta(625) (START-OFFSET)",
+   "kind": "ceiling",
+   "display": "\\beta(625)=0.799",
+   "in_dsn": true,
+   "displayed": 0.799,
+   "certified": 0.7992975662034241,
+   "source": "a1c_so G1",
+   "direction_ok": false
+  },
+  {
+   "constant": "c_Psi (PHASE-C1-FIBER)",
+   "kind": "ceiling",
+   "display": "c_\\Psi=11.13",
+   "in_dsn": true,
+   "displayed": 11.13,
+   "certified": 11.125488206405777,
+   "source": "a1c_3 G2",
+   "direction_ok": true
+  },
+  {
+   "constant": "Xi (PHASE-C1-FIBER)",
+   "kind": "ceiling",
+   "display": "\\Xi=0.027",
+   "in_dsn": true,
+   "displayed": 0.027,
+   "certified": 0.026688388006186302,
+   "source": "a1c_3 G2",
+   "direction_ok": true
+  },
+  {
+   "constant": "K_Phi L1 large (reported enclosure, not stated with <=)",
+   "kind": "value",
+   "display": "258.4848",
+   "in_dsn": true,
+   "displayed": 258.4848,
+   "certified": 258.48478185860273,
+   "source": "b1 G3",
+   "direction_ok": true
+  },
+  {
+   "constant": "K_Phi L1 small (reported enclosure, not stated with <=)",
+   "kind": "value",
+   "display": "81.4328",
+   "in_dsn": true,
+   "displayed": 81.4328,
+   "certified": 81.43280001857495,
+   "source": "b1 G3",
+   "direction_ok": true
+  },
+  {
+   "constant": "K_Phi L1+L2 large",
+   "kind": "ceiling",
+   "display": "220.8471",
+   "in_dsn": true,
+   "displayed": 220.8471,
+   "certified": 220.84707215293315,
+   "source": "b1 G3",
+   "direction_ok": true
+  },
+  {
+   "constant": "K_Phi L1+L2 small",
+   "kind": "ceiling",
+   "display": "75.6392",
+   "in_dsn": true,
+   "displayed": 75.6392,
+   "certified": 75.63920819270386,
+   "source": "b1 G3",
+   "direction_ok": false
+  },
+  {
+   "constant": "window L1 large",
+   "kind": "window",
+   "display": "2.952\\times10^{-5}",
+   "in_dsn": true,
+   "displayed": 2.952e-05,
+   "certified": 2.9521544332489176e-05,
+   "source": "b1 G3",
+   "direction_ok": true
+  },
+  {
+   "constant": "window L1 small",
+   "kind": "window",
+   "display": "9.390\\times10^{-5}",
+   "in_dsn": true,
+   "displayed": 9.39e-05,
+   "certified": 9.3900899386197e-05,
+   "source": "b1 G3",
+   "direction_ok": true
+  },
+  {
+   "constant": "window L1+L2 large",
+   "kind": "window",
+   "display": "3.456\\times10^{-5}",
+   "in_dsn": true,
+   "displayed": 3.456e-05,
+   "certified": 3.4561807999011716e-05,
+   "source": "b1 G3",
+   "direction_ok": true
+  },
+  {
+   "constant": "window L1+L2 small",
+   "kind": "window",
+   "display": "1.011\\times10^{-4}",
+   "in_dsn": true,
+   "displayed": 0.0001011,
+   "certified": 0.0001010963706035301,
+   "source": "b1 G3",
+   "direction_ok": false
+  },
+  {
+   "constant": "C(625,5) (LOGFREE-ENVELOPE)",
+   "kind": "ceiling",
+   "display": "58.0",
+   "in_dsn": true,
+   "displayed": 58.0,
+   "certified": 57.95243975229175,
+   "source": "a1c_drift PT3",
+   "direction_ok": true
+  },
+  {
+   "constant": "C(1000,5) (LOGFREE-ENVELOPE)",
+   "kind": "ceiling",
+   "display": "61.0",
+   "in_dsn": true,
+   "displayed": 61.0,
+   "certified": 60.95436592319874,
+   "source": "a1c_drift PT3",
+   "direction_ok": true
+  },
+  {
+   "constant": "C(2500,5) (LOGFREE-ENVELOPE)",
+   "kind": "ceiling",
+   "display": "75.1",
+   "in_dsn": true,
+   "displayed": 75.1,
+   "certified": 75.07562028381754,
+   "source": "a1c_drift PT3",
+   "direction_ok": true
+  }
+ ],
+ "wrong_direction": [
+  "K_eps(625)",
+  "K_eps(1000)",
+  "K_eps(2500)",
+  "c_7^R (COMBINED-TAIL)",
+  "gamma_0 (TAIL-HARMONICS)",
+  "beta(625) (START-OFFSET)",
+  "K_Phi L1+L2 small",
+  "window L1+L2 small"
+ ],
+ "all_displays_found": true
+}
