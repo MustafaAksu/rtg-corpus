@@ -38,13 +38,15 @@ with v=a+b_1 z+Y and xi=c z. The preflight derives explicit but crude K1..K4 and
 
     python -m pip install "mpmath==1.3.0"
     python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --self-test
-    python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --out dyad_open20_an_bounds_preflight.json
+    python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --out evidence/dyad/open20-an/bounds_preflight_session.json
     foreach ($c in @("wrong-alpha","wrong-root","wrong-tail","degree2")) {
         python -I -B evidence/dyad/scripts/dyad_open20_an_bounds_prep.py --control $c
         if ($LASTEXITCODE -ne 1) { throw "Negative control did not reject: $c" }
     }
 
 **Pre-correction historic run (initial PR #157, script SHA `82841392…e65f58`):** self-test PASS and four reported negative-control exit codes 1; owner review R2 found these controls tautological and they are **not evidence** of failure detection. The Stage-1 file's pinned identity and earlier preflight outputs were recorded. **Current revised script:** mutations are `wrong-alpha` (G_ALPHA), `wrong-root` (G_ROOT), `wrong-tail` (G_E5), and `degree2` (G_F2); these invoke actual calculation checks and must each exit exactly 1. Their branches were statically inspected and the exact F2/alpha/root/E5 mini-gates checked separately by the co-owner, but the **complete corrected preflight and all four controls have not yet been rerun together**. Their exit status and corrected JSON byte identity are pending; no test PASS is claimed here. This is not a replay of LIT's test suite.
+
+**R1–R3 bounded replay runner (not yet owner-run on the corrected commit):** from the repository root, run `powershell -ExecutionPolicy Bypass -File evidence/dyad/open20-an/bounds_preflight_run.ps1` (Windows PowerShell) or `pwsh -File evidence/dyad/open20-an/bounds_preflight_run.ps1` (PowerShell 7). It asserts the script hash, positive and self-test exit 0, four controls exit exactly 1, the exact F² gate, and the two outward E5 fields. It writes the representative JSON on success; archive its stdout/exit codes at the next change-focused read-back.
 
 ## Indicative preflight output (not a scientific certificate)
 
