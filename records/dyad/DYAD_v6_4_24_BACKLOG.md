@@ -19,12 +19,25 @@ Governing edition: `dyad-v6.4.23` (`9f874ccc…25cb`). Line numbers refer to it.
 
 | Statement | Location (v6.4.23) | Grade | Note |
 |---|---|---|---|
-| The map is not globally area-preserving ($\det DT=1+(e^\rho-1)\cos\eta$) | §1 L63, §6.1 L447 | `[THM]` | cited by OFN (non-symplecticity) |
+| The map is not globally area-preserving ($\det DT=1+(e^\rho-1)\cos\eta$) | §1 L63, §6.1 L447 | `[THM]` | cited by OFN (non-symplecticity). **Grade question (3 Nov 2026):** the recovered bridge note grades the same statement `[ALG]` (§1, §8 ledger). It is a direct Jacobian computation, replayed in gate B2 of the bridge-note check. Owner proposal: register the RID as `[ALG]`, with the bridge note and the replay as its sources. This is a regrade of the displayed tag only, with no change of content, and is recorded as such in the v6.4.24 change matrix |
 | $p=6$ linear order ($\lambda=e^{i\pi/3}$ has order exactly six) | §6.6 L543 | `[ALG]` | regraded from THM at v6.4.20 |
 | Homological resonance condition ($a-b-1\equiv0\pmod6$) | §6.6 L545 | `[ALG]` | |
 | Cubic radial rate across $p$ ($\Re\mu^Z_p=-p\sin^2(\pi/p)$) | §6.6 L549 | `[ALG]` `[import: RECOG-ALG-NU3-CLOSED-FORM]` | custody question: a Dyadic RID for an evaluation of a RECOG result, or a pointer to RECOG's RID only |
 
 Owner decision needed per row: register (name, scope) or record "no RID; cite the section". A new RID is a registration only; it changes no statement.
+
+**Tentative decisions (3 Nov 2026; co-owner proposal, owner agrees; final at the v6.4.24 candidate review):** DYAD RIDs for the first three rows (names to be proposed with the candidate). For the cubic radial rate across $p$: no new DYAD RID. The entry stays a statement-level import of `RECOG-ALG-NU3-CLOSED-FORM`, evaluated in the declared $K_p$ family, unless an independent Dyadic proposition and proof are separated out.
+
+## B2. Items from the Triadic v1.7 reading (3 Nov 2026)
+
+- **`DYAD-DEF-PRIMITIVE-MAP` "provisional" label (§1 L47).** Triadic v1.7 §7.1 records that the definition "is still provisional" at `dyad-v6.4.23`. Map custody is settled: OFN CUST-O09-01 is answered, the Genesis alias is recorded, and the Programme adopts $T$ as the effective model (PROG-P0-MAP; selection is OPEN-P0). Owner question for v6.4.24: replace the bare "provisional" with what it means, e.g. `[scope: adopted effective model; selection open (OPEN-P0)]`. The definition itself, the RID and all consumer imports are unchanged. If the wording changes, Triadic, Genesis and OFN get one informational notice.
+- **Shared source, recovered 3 Nov 2026.** `dyad_triad_antisymmetric_bridge_v1_1.md` (DYAD-ART-BRIDGE-NOTE) is cited by Dyadic §2 (downstream handoff) and by Triadic §7.1 (historical pin route).
+  - The PI uploaded it unchanged: `upload/dyad-bridge-note/`, branch `miss1`, commit `47f807c`, SHA-256 `5ddebfe46b5572761a5154a05712fbcfe4e675f912430ee7d6bfcf0d93f4e875`.
+  - Hash check, identification and exact replay are in `records/dyad/DYAD_UPLOAD_HASH_CHECK_20261103_BRIDGE_NOTE.md` (branch `claude/dyad-bridge-note-intake`). Both recovery lists are updated there.
+  - For v6.4.24:
+    - §8 `DYAD-ART-BRIDGE-NOTE`: add the path and hash, with the availability note "PI-supplied 3 Nov 2026, identified by content" (finding F3).
+    - Any DSN text that quotes the component formula Δ_cT_η uses the general-K form, 2cb + 2K e^ρ sinh(ca) − 2K cos η sin(cb). The note prints the K = 1 form (finding F1). The odd-channel statement is unaffected.
+- **Triadic v1.7 import scope** (for the §7 consumer row): five RIDs repinned to v6.4.23 after a claim-level re-read; `DYAD-ALG-KP-FRAME-SCALE` and the isolated-dyad results (Z₆ generator, Lemma F, OPEN 20) are explicitly not imported. This is consistent with the N20 closure.
 
 ## C. Science feeding v6.4.24
 
@@ -34,6 +47,10 @@ Owner decision needed per row: register (name, scope) or record "no RID; cite th
   - The new result keeps the R9 dependency on the sharpened rows, the chart/primitive separation and every hypothesis. It never uses the -C7 rows.
   - Plan: design note → exact-rational certificate with negative controls → co-owner review → candidate for v6.4.24.
   - **Status (3 Nov 2026):** done through review. `records/dyad/DYAD_S1_OPEN21_SHARP_ROWS_DESIGN.md`; RID `DYAD-THM-OPEN21-SHARP-ROWS` accepted by the co-owner (PR #150 reviews `5748327144`, `5748500129`); $S_A=19.680$, $S_B=6.357$.
+
+## C2. Schedule
+
+Checkpoint **10 November 2026** (co-owner proposal, 3 Nov). If RECOG and NUMGEN have answered the v6.4.23 notices by then, their answers are included. Otherwise they are recorded as open dependencies and the v6.4.24 candidate is prepared. Until then: the X4 decisions and the v6.4.24 change matrix. This is a maintenance schedule, not a scientific requirement.
 
 ## D. Not in v6.4.24
 
