@@ -1,0 +1,20 @@
+file: dsn/RTG_GENESIS_GEOMETRY_DSN.md
+bytes: 169170
+lines: 1420
+header_chars: 2715
+live_body_chars: 159001
+appendix_a_chars: 6402
+section1_words: 1008
+orientation_core: {"chars": 62781, "lines": 582, "words": 7678, "core_end_marker_present": true}
+header_fields: {"Title": 69, "Date": 27, "Document status": 184, "Scope": 306, "Document class": 280, "Supersedes": 143, "Companion documents": 127, "DSN Methodology": 53, "Programme tier": 237, "Status summary": 1153, "Release record": 91}
+appendix_a_words_per_edition: 7 editions, max 324 words
+footer_lines: 1
+history_phrases_live: {"historical": 24, "former": 5, "retained as": 1, "no longer": 4}
+near_duplicate_paragraphs: 0
+rids_total: 86
+previous: {"file": "/tmp/claude-0/-home-claude/f2095d3e-6910-56fc-ba56-4b428e1f7242/scratchpad/g29.md", "bytes": 162870}
+growth_bytes: 6300
+growth_percent: 3.9
+new_rids: 3
+growth_per_new_rid: 2100.0
+(informational report; no gate)
