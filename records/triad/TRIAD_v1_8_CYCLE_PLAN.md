@@ -63,4 +63,5 @@ This list makes no scientific finding. Atlas readings are cited as the Atlas sta
   - T-6r: complex-collinearity, $K\le1$ on enlarged carriers, and a closure obstruction;
   - Atlas reply filed: `pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md`.
 - **Review of the first pass:** ChatGPT, review `5747869312`: §§1–3 accepted; two §4 corrections (tangency is not invariance; Genesis $d$ is not $z$); K1 conditionally accepted as the next step. Both corrections are applied (advisory §4a). New result: the T-6c2 producer works in $\mathbb R^3$ and projects $s,c$ back to the plane each step. Without that projection, $1-K=12r^2\|s-c\|^2+\dots$ per block (`triad_v1_8_k1_lift_check.py`, PASS).
+- **Second review:** ChatGPT, review `5748069400` on `4cbc9ce`: ACCEPT WITH CHANGE. C2/C3, C5 and C6 are narrowed (advisory *[review 2]*). Closure test (advisory §4b; `triad_v1_8_k1_closure_check.py`, PASS): the unprojected lift has no autonomous closure on $(Q_s,Q_c,I_{sc},\Omega,r,K)$; the direction of $w$ relative to the apex kick is extra state.
 

@@ -1,6 +1,6 @@
 # Triadic v1.8 cycle — first-pass scientific advisory (T8-08, T8-09, T8-13, T8-14, T8-06)
 
-**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation.
+**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation. A second revision, after review `5748069400` on `4cbc9ce`, narrows three contract statements (C2/C3, C5, C6; marked *[review 2]*) and adds the closure test (§4b).
 **Status:** SESSION working record, NONCANONICAL. It changes no Triadic text, grade, RID or pipe state of another stream. No v1.8 build is started.
 **Scope:** the first-pass set agreed by both co-owners. ChatGPT's PR #146 review `5747764214` (ACCEPT SCOPED, with a reordered priority) proposed T8-08, T8-09, T8-13, T8-14 and a T-6r design note, merged into one advisory.
 **Governing edition:** `triad-v1.7` (`506f3403…e64a`). Line references (L…) are to that file unless another tag is named.
@@ -68,8 +68,8 @@ Filed as `pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md` (finding). The At
 | C2 encoding | $Q,I$ from the full metric; $\Omega$ = planar area; T-2b gives one $d_z$ normalization ($d_z=r/\sqrt3$) to test | block sums or ensemble means | — |
 | C3 evolution and closure | supplied by the T-6c2 producer's own graph forces, when the $z$-components of $s,c$ are kept (§4a). *[review]* Genesis $G_{3,d}$ is a planar Jacobi mode and gives no $z$ equation; closure on $(Q_s,Q_c,I,\Omega,r)$ is not implied | fact 3: no autonomous closure; carry the block state, or state a closure (for example mean-field) as an explicit model choice | — |
 | C4 clock | six-step block (inherits §6.4) | same | — |
-| C5 events | $K=1$ iff planar bivector; Plücker contact as in $M_{\rm root}$ | $K=1$ iff complex-collinear | — |
-| C6 covariance | the plane is part of the carrier data: $\Omega$ is the oriented area in that plane and is not invariant under general $SO(3)$ rotations *[review]*; group $O(B_T)\times\{z\mapsto\pm z\}$ with exchanges and sign flips; the T-6q table extends by $z\mapsto\pm z$ | blockwise action plus block permutations | — |
+| C5 events | the $K=1$ set is $w=bu-av=0$. It contains the planar pairs and also the collinear 3-D pairs ($s\parallel c$, vertical parts allowed); for an independent pair it means both are planar. It is **not** the root-model Plücker contact $\mathcal B_{\rm root}$ ($Q_sQ_c-I^2=0$, that is $\Omega=0$) *[review 2]* | $K=1$ iff complex-collinear | — |
+| C6 covariance | the plane is part of the carrier data: $\Omega$ is the oriented area in that plane and is not invariant under general $SO(3)$ rotations *[review]*. *[review 2]* Two things must be kept apart: the graph forces are $O(B_T)$-covariant, but the fixed linear step $L$ does not commute with all of $O(B_T)$ (for the swap $P$: $P^\top B_TP=B_T$ while $PL\ne LP$). So a state symmetry is not the same as a coordinate change. The reflection $z\mapsto-z$ also reverses the sign of the initial $D_z$, so it relates two initial conditions and is not a symmetry of one run. The T-6q table extends by $z\mapsto\pm z$ only with that sign change stated | blockwise action plus block permutations | — |
 
 **Design conclusion (proposal).**
 - K1 is the candidate tied to existing Triadic objects. The T-6c2 producer already works on $\mathbb R^3$ with $B_3=\mathrm{diag}(B_T,1)$ and an apex $D_z=r/\sqrt3$ (the T-2b gauge); see §4a. *[review]* This is not Genesis's $d$, which is a two-component Jacobi mode block in $(\mathbb R^2)^3$; no identity between the two is assumed.
@@ -95,14 +95,26 @@ Filed as `pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md` (finding). The At
 *Reading* (SESSION, at the producer's truncation; the unprojected lift is a model choice, not shown to be the physical model):
 - In the producer's own $\mathbb R^3$ model, $K\equiv1$ is enforced by the planar projection, not by the dynamics. With the apex lifted ($D_z\ne0$), the all-planar set is not preserved, and $1-K$ grows from 0 at a rate $\propto r^2\|s-c\|^2\ge0$.
 - The deficit enters $\mathcal G$ at degree 4. That is the order of the terms discarded by the first-variation identity (row 2, §6.18), so the retained §6.4 ledger is unaffected. Any $K<1$ dynamics in K1 is a next-order effect, sourced by the apex lift.
-- C1 and C2 of K1 are now fixed by the producer: $\beta=1$, the producer plane and the normal $z$. C6 is $O(B_T)\times\{z\mapsto\pm z\}$. The leading generation term is a function of the five variables, but $a$ and $b$ themselves must be carried beyond one block; that is the C3 closure question.
+- From the producer, K1 takes its metric and plane: $\beta=1$, the producer plane and the normal $z$ (C1). *[review 2]* The unprojected model is a session extension, not the producer's own model. C2 (the state and its encoding) is **not** complete: besides $(a,b)$, the components of $D$ may be hidden state. C6 is as in the table above. The 36 is an equality between leading terms of the truncated polynomial model, not an identity at all orders of the full discrete map.
+
+## 4b. Closure test (C3) in the unprojected lift
+
+Evidence: `evidence/triad/scripts/triad_v1_8_k1_closure_check.py` (SHA-256 `d2406ebb…21f2`; checks G1–G3, PASS; output `evidence/triad/v1.8/triad_v1_8_k1_closure_check_output.txt`). The model is the same session extension, truncation and apex. Start $s$ and $c$ with vertical parts $(a_0,b_0)=\lambda(a_1,b_1)$, where $(a_1,b_1)$ are the one-step kicks from the planar start.
+- **G1.** After one block, $(a,b)=(\lambda+6)(a_1,b_1)$.
+- **G2.** The map $(a,b)\mapsto(-a,-b)$ leaves $Q_s$, $Q_c$, $I_{sc}$ (vertical parts included), $\Omega$, $r$ and $K$ unchanged. So the starts at $\lambda=+6$ and $\lambda=-6$ agree in all six quantities.
+- **G3.** After one block, $1-K$ is 4 times the planar-start value at $\lambda=+6$, and $0$ at $\lambda=-6$.
+
+**Result** (SESSION, truncated model, leading order): there is **no autonomous closure** on $(Q_s,Q_c,I_{sc},\Omega,r)$, even with $K$ added. The direction of $w=bu-av$ relative to the apex-driven kick (equivalently, the sign of $(a,b)$ relative to $D_z$) is extra state.
+- The minimal addition at this order is the planar vector $w$, or $(a,b)$, together with the sign of $D_z$.
+- Whether further components of $D$ enter at the next order is not tested.
+- The run at $\lambda=-6$ also shows that $K=1$ can be re-entered from $K<1$ in this model.
 
 ## 5. Proposed next steps
 
 | Step | Kind | Gate |
 |---|---|---|
 | ChatGPT checks §§1–4 | change-focused co-owner review | — |
-| T8-06 next: K1 C3 in the producer's unprojected lift. Write the next-order $(a,b)$ dynamics; test whether $1-K$ closes on $(Q_s,Q_c,I,\Omega,r)$ over several blocks, or needs $(a,b)$ as state | SESSION research, producer bytes in the repository | co-owner agreement |
+| T8-06 next: K1 with the enlarged state $(Q_s,Q_c,I_{sc},\Omega,r;\,w)$ or $(a,b)$, and $D$. Write the block map at leading order and test whether it closes on that state; check whether the planar components of $D$ enter at the next order | SESSION research | co-owner agreement |
 | v1.8 content | T-6m2 result (§1), the T-1 conditional sentence (§2), the T-6r closure-ansatz sentence (§4 fact 3) | after T8-01 and T8-02, or a co-owner decision not to wait; PI start |
 
 ## 6. Not claimed
