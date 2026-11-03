@@ -12,7 +12,7 @@
 ## Implementation and analytic route
 
 Source: evidence/dyad/scripts/dyad_open20_an_bounds_prep.py  
-SHA-256: 82c5e874c66eb06b078c177325ebb873caeea1bbaa1871516464606749c26b09  
+SHA-256: 82841392a266ef3051d847827cc3f0fa6b2d9d2bb6cf570fbc517e18a7e65f58  
 Dependencies: Python 3, mpmath 1.3.0. Scalar bound calculations use mpmath.iv at 75 decimal digits; ordinary high-precision full-map smoke calculations are not proof.
 
 The primitive is evaluated as the **full entire map**, composed six times, in independent complex variables z,w:
