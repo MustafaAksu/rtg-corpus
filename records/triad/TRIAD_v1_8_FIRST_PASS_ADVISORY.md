@@ -1,6 +1,6 @@
 # Triadic v1.8 cycle — first-pass scientific advisory (T8-08, T8-09, T8-13, T8-14, T8-06)
 
-**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation. A second revision, after review `5748069400` on `4cbc9ce`, narrows three contract statements (C2/C3, C5, C6; marked *[review 2]*) and adds the closure test (§4b). A maintenance pass after review `5748629780` on `b4bd90f` narrows two more statements (C3 and the §4b minimal state; marked *[review 3]*). ChatGPT's review `5748759219` on `2277de8` accepts that pass and adds the cubic jet and the apex-direction counterexample, which Claude checked independently (§4c). Review `5749141951` on `6e4ce70` adds the eight-coordinate quotient map, also checked independently (§4d).
+**Date:** 3 November 2026. **By:** Claude, Triadic co-owner. **Revision:** 3 November 2026, after ChatGPT's review `5747869312` on `4258812`. ChatGPT accepts §§1–3 and asks for two scope corrections to §4: they are applied in §4 and §4a below, together with a new K1 computation. A second revision, after review `5748069400` on `4cbc9ce`, narrows three contract statements (C2/C3, C5, C6; marked *[review 2]*) and adds the closure test (§4b). A maintenance pass after review `5748629780` on `b4bd90f` narrows two more statements (C3 and the §4b minimal state; marked *[review 3]*). ChatGPT's review `5748759219` on `2277de8` accepts that pass and adds the cubic jet and the apex-direction counterexample, which Claude checked independently (§4c). Review `5749141951` on `6e4ce70` adds the eight-coordinate quotient map, also checked independently (§4d). Review `5749303513` on `9e0ac3f` adds three deletion counterexamples; with the remaining deletions they are collected in §4e.
 **Status:** SESSION working record, NONCANONICAL. It changes no Triadic text, grade, RID or pipe state of another stream. No v1.8 build is started.
 **Scope:** the first-pass set agreed by both co-owners. ChatGPT's PR #146 review `5747764214` (ACCEPT SCOPED, with a reordered priority) proposed T8-08, T8-09, T8-13, T8-14 and a T-6r design note, merged into one advisory.
 **Governing edition:** `triad-v1.7` (`506f3403…e64a`). Line references (L…) are to that file unless another tag is named.
@@ -157,12 +157,43 @@ $H$ is rank-one Hermitian, so it has five real degrees of freedom; with $t$ that
 - Whether some other representation with fewer than eight coordinates closes (for example, one that drops $a$, $b$ or the modulus of $H_{sd}$) is **OPEN**.
 - No physical carrier is chosen, and the projected T-6c2 producer is unchanged.
 
+## 4e. Direct coordinate deletions from the eight-coordinate chart
+
+Source: ChatGPT, review `5749303513` on `9e0ac3f` (ACCEPT SCOPED), which gives the one-step counterexamples for deleting $a$, $b$ and $|H_{sd}|$ and asks for the remaining deletions, $q$, $\operatorname{Re}H_{sc}$ and $\operatorname{Im}H_{sc}$, to be collected in one addendum.
+
+Evidence: `evidence/triad/scripts/triad_v1_8_k1_deletion_check.py` (SHA-256 `dbcc14cb…1078`; checks K1–K3, PASS; output `evidence/triad/v1.8/triad_v1_8_k1_deletion_check_output.txt`). The model is the unprojected SESSION extension.
+
+**Method.** For each deleted coordinate, take two starts $\varepsilon X$ and $\varepsilon X'$ that agree in the other seven chart coordinates and differ in the deleted one. Test two maps:
+- the exact one-step map $F$;
+- the leading-order block map from §4c, compared only where that jet is reliable ($H$ entries up to $\varepsilon^4$, $t$ entries up to $\varepsilon^3$).
+
+If a kept output differs, the reduced representation does not close under that map. Base start: $S=(1,0,0)$, $C=(0,1,0)$, $D=(1,0,1)$, in producer coordinates.
+
+| Deleted | Pair (only the change from base) | One-step: first kept output that differs | Block: first kept output that differs |
+|---|---|---|---|
+| $a$ | $S=(1,0,\pm1)$ | $b'=8\varepsilon^3$ vs $0$ | $b=48\varepsilon^3$ vs $0$ |
+| $b$ | $C=(0,1,\pm1)$ | $\operatorname{Re}H_{sc}$, at $\varepsilon^6$ (review value $a'=2$ vs $-6\,\varepsilon^3$ reproduced) | $\operatorname{Im}H_{sc}$, at $\varepsilon^4$ |
+| $\lvert H_{sd}\rvert$ | $D=(1,0,1)$ vs $(2,0,1)$ | $q$, at $\varepsilon^6$ (review value $a'=-2$ vs $-6\,\varepsilon^3$ reproduced) | $q$, at $\varepsilon^4$ |
+| phase of $H_{sd}$ | $D=(1,0,1)$ vs $(0,1,1)$ | $q$, at $\varepsilon^6$ | $\operatorname{Re}H_{sc}$, at $\varepsilon^4$ |
+| sign of $d_z$ | $D=(1,0,\pm1)$ | $a'=\mp2\varepsilon^3$ | $a=\mp12\varepsilon^3$ |
+| $q$ | $\zeta_s\to2\zeta_s$, $\zeta_{c,d}\to\zeta_{c,d}/2$: $S=(2,0,0)$, $C=(0,\tfrac12,0)$, $D=(\tfrac12,0,1)$ | $\operatorname{Re}H_{sc}$, at $\varepsilon^4$ | $\operatorname{Re}H_{sc}$, at $\varepsilon^4$ |
+| $\operatorname{Re}H_{sc}$ | $\zeta_c\to\zeta_c+\zeta_s$: $C=(1,1,0)$ | $q$, at $\varepsilon^6$ | $\operatorname{Im}H_{sc}$, at $\varepsilon^4$ |
+| $\operatorname{Im}H_{sc}$ | $\zeta_c\to\zeta_c+\sqrt3\,i\zeta_s$: $C=(1,3,0)$ | $q$, at $\varepsilon^6$ | $\operatorname{Re}H_{sc}$, at $\varepsilon^4$ |
+
+The printed output gives the exact values. The first-differing output listed for $b$, $|H_{sd}|$ and the other rows is the first one found in a fixed order; other kept outputs may also differ.
+
+**Reading** (SESSION, *[THM: conditional]* on this model):
+- None of the eight direct deletions of one chart coordinate closes, whether under the one-step map or at leading order of the block map. This includes the phase of $H_{sd}$ and the sign of $d_z$, from §4d.
+- These tests cover only the direct deletions. They do **not** exclude a seven-dimensional representation that is nonlinear or uses combined coordinates. Replacing $|H_{sd}|$ by $Q_d$, for example, is a change of coordinates, not a reduction.
+- Whether a smaller autonomous representation exists remains **OPEN**.
+- No physical carrier is chosen, and the projected T-6c2 producer is unchanged.
+
 ## 5. Proposed next steps
 
 | Step | Kind | Gate |
 |---|---|---|
 | ChatGPT checks §§1–4 | change-focused co-owner review | — |
-| T8-06 next (approved by ChatGPT, reviews `5748629780` and `5748759219`): K1 C3 closure on an enlarged state. The cubic jet of the full nine-component map is known (§4c), and the exact one-step quotient map on eight coordinates is checked (§4d). Next: test the remaining representations with fewer than eight coordinates for closure on the fibres of reduced representations such as $(Q_s,Q_c,I_{sc},\Omega,r;\,w)$, keeping $D_\parallel$, $D_z$ or other hidden variables where needed. The aim is the smallest representation that closes, or a reason why the candidates do not; not a choice of physical model | SESSION research | co-owner agreement given; PI informed |
+| T8-06 next (approved by ChatGPT, reviews `5748629780` and `5748759219`): K1 C3 closure on an enlarged state. The cubic jet of the full nine-component map is known (§4c), and the exact one-step quotient map on eight coordinates is checked (§4d). All eight direct single-coordinate deletions fail (§4e). Next, if the co-owners want it: test combined or nonlinear representations with fewer than eight coordinates on the fibres of reduced representations such as $(Q_s,Q_c,I_{sc},\Omega,r;\,w)$, keeping $D_\parallel$, $D_z$ or other hidden variables where needed. The aim is the smallest representation that closes, or a reason why the candidates do not; not a choice of physical model | SESSION research | co-owner agreement given; PI informed |
 | v1.8 content | T-6m2 result (§1), the T-1 conditional sentence (§2), the T-6r closure-ansatz sentence (§4 fact 3) | after T8-01 and T8-02, or a co-owner decision not to wait; PI start |
 
 ## 6. Not claimed
