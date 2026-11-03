@@ -5,3 +5,4 @@
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
 | 2026-10-30 | OFN | notice | dispositioned | `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` (OFN v0.12 §2.4); OPEN-OFN-REF-CLOSURE (§9), Notify: TRIAD | — | `20261030-OFN-v0-12-adopted.md` |
+| 2026-11-03 | DYAD | notice | open | DYAD-ART-BRIDGE-NOTE (`dyad_triad_antisymmetric_bridge_v1_1.md`); Triadic §7.1 availability sentence | — | `20261103-DYAD-bridge-note-recovered.md` |
