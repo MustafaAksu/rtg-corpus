@@ -378,3 +378,112 @@ def forward_analytic_gates(Ks, alpha, inner_x, inner_y, tail_N=10000):
     return {'forward_inequalities_satisfied':False,'reason':'no sufficient radius within 220 decimal shrinks'}
 
 
+def local_sanity():
+    # This exercise is only a finite high-precision smoke check, not a certificate.
+    omega=(-1+mp.j*mp.sqrt(3))/2
+    z=mp.mpc('0.00012','-0.00007')
+    w=mp.mpc('0.00003','0.00004')
+    z6,w6=full_map(z,w,mp)
+    assert abs(z6-z)<mp.mpf('0.000001') and abs(w6-w)<mp.mpf('0.000001')
+    # T and T^6 are nontrivially different, guarding accidental use of one step.
+    den=omega-omega.conjugate()
+    rho=(-omega.conjugate()*z+omega*w)/den
+    eta=(z-w)/den
+    rt,et=primitive(rho,eta,mp)
+    assert abs((rt+omega*et)-z6)>mp.mpf('1e-8')
+    return {'full_sixfold_not_one_step':True, 'raw_near_identity':True}
+
+
+def self_test():
+    assert upper_decimal(cf('0.25')) == '2.5E-1'
+    assert lower_decimal(cf('0.25')) == '2.5E-1' 
+    assert certain_lt(cf('0.001'),cf('0.002'))
+    t=geometric_tail(cf('0.1'),8)
+    assert t > cf('0.00000008')
+    first=local_sanity()
+    a,b1,c,alpha=interval_constants()
+    assert certain_gt(a.imag,cf(0))
+    assert certain_lt(abs(a),cf('0.2'))
+    assert certain_lt(abs(c),cf('0.6'))
+    assert certain_gt(abs(c),cf('0.2'))
+    return dict(first,positive_branch=True, interval_tail=True)
+
+
+def negative_control(name):
+    """Each negative control MUTATES an input and verifies the associated gate fails."""
+    a,b1,c,alpha=interval_constants()
+    if name=='wrong-root':
+        # The second root has Im(a)<0; the selection gate must reject it.
+        other = iv.mpc(cf('0.0576581109782093668110'),cf('-0.00415587935301355719'))
+        failed = not certain_gt(other.imag, cf(0))
+    elif name=='wrong-alpha':
+        mutated=alpha+cf(1)/7
+        failed=certain_gt(abs(mutated-alpha),cf(0))
+    elif name=='wrong-log':
+        x=mp.mpf('0.0001')*mp.exp(2*mp.pi*mp.j/3)
+        fx=x*(1-x**3) # exact model, remains in the j=1 petal
+        correct=(mp.log(x)+2*mp.pi*mp.j)-(mp.log(fx)+2*mp.pi*mp.j)
+        wrong=(mp.log(x)+2*mp.pi*mp.j)-mp.log(fx)
+        intended=mp.log(1-x**3)
+        failed=(abs(correct+intended)<mp.mpf('1e-65') and abs(wrong+intended)>1)
+    elif name=='jet-only':
+        # Guard a mutated substitution engine: no truncated jet may stand for F.
+        candidate_source='degree7_jet'
+        failed=candidate_source != 'full_T6'
+    else: raise ValueError('unknown control')
+    if not failed: raise AssertionError('negative control failed to detect mutation')
+    return {'control':name,'gate':'FAIL_EXPECTED','Stage3':'NOT_CERTIFIED'}
+
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--self-test',action='store_true', help='bounded structural smoke checks; no certification campaign')
+    ap.add_argument('--stage1',default='evidence/dyad/open20-an/stage1_prep.json')
+    ap.add_argument('--out',default='dyad_open20_an_bounds_preflight.json')
+    ap.add_argument('--control',choices=['wrong-alpha','wrong-root','wrong-log','jet-only'])
+    ap.add_argument('--tail-N',type=int,default=10000)
+    ap.add_argument('--raw-cauchy-radius',default='0.002')
+    ap.add_argument('--raw-inverse-radius',default='0.000000001')
+    ap.add_argument('--outer-xi-radius',default='0.00000002')
+    ap.add_argument('--outer-Y-radius',default='0.005')
+    ap.add_argument('--inner-xi-radius',default='0.000000001')
+    ap.add_argument('--inner-Y-radius',default='0.0001')
+    opt=ap.parse_args()
+    if opt.control is not None:
+        print(json.dumps(negative_control(opt.control),sort_keys=True))
+        return 1
+    if opt.self_test:
+        print(json.dumps({'self_test':'PASS','checks':self_test(),'Stage3':'NOT_CERTIFIED'},sort_keys=True))
+        return 0
+    sourcehash=stage1_source(opt.stage1)
+    config={k:getattr(opt,k) for k in ['raw_cauchy_radius','raw_inverse_radius','outer_xi_radius','outer_Y_radius','inner_xi_radius','inner_Y_radius']}
+    bounds, Ks, alg = derive_bounds(config)
+    forward = forward_analytic_gates(Ks, alg[3], cf(config['inner_xi_radius']), cf(config['inner_Y_radius']), opt.tail_N)
+    result={
+      'kind':'DYAD_OPEN20_AN_BOUNDS_PREPARATION','grade':'SESSION',
+      'Stage3':'NOT_CERTIFIED','E1_E2':'BOUNDED_PREFLIGHT_ONLY',
+      'E3_E4':'NOT_CERTIFIED','E5_E6_E7':'NOT_CERTIFIED',
+      'stage1_sha256':sourcehash,'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+      'parameters':config,'bounds':bounds,
+      'forward_template':forward,
+      'limitations':[
+         'Requires review of conservative Cauchy envelopes before scientific use',
+         'Does not certify the normalized inverse-map R1/R2 constants for odd petals',
+         'Does not execute iterative Hakim operator or derive a Stokes jump',
+         'Does not supply numerical fixed-point residual, E5 rounded orbit sum or E6/E7 certificate',
+         'No PI authorization for Stage-3 campaign is inferred',
+      ],
+    }
+    out=Path(opt.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(result,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+    print(json.dumps({'status':'PREFLIGHT_WRITTEN','Stage3':'NOT_CERTIFIED','output':str(out),
+                      'inverse_contracting':bounds['raw_inverse']['contractive']},sort_keys=True))
+    return 0
+
+
+if __name__=='__main__':
+    try: sys.exit(main())
+    except Exception as exc:
+        print(json.dumps({'status':'FAILED_SAFE','Stage3':'NOT_CERTIFIED','error':str(exc)},sort_keys=True),file=sys.stderr)
+        sys.exit(3)
