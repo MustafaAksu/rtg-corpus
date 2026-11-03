@@ -1,0 +1,5 @@
+F1 z -> -z equivariance of the forces: True; projected run keeps S_z = C_z = 0: True
+F2 one step: a_1 = r*(4*sqrt(14)*sqrt(Q_s)*r + 7*sqrt(3)*Q_s)/21 (True); leading 1-K = r^2 * (I_sc**2 - 2*I_sc*Q_s + Omega**2 + Q_s**2)/(3*Q_s); equals (r^2/3)(Q_s+Q_c-2I): True  [1.3s]
+F3 six steps: a_6 = 6 a_1 and b_6 = 6 b_1: True; 1-K(six) = 36 (1-K)(one): True; leading 1-K(six) = 12 r^2 (Q_s+Q_c-2I)  [178.9s]
+F4 K(t) = 1/(1+beta t^2): K(0) = 1, K'(0) = 0, K < 1 for t != 0: True
+RESULT: PASS
