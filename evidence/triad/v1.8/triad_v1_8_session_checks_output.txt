@@ -1,0 +1,9 @@
+A  r=0 polynomial reproduces q^3(24q^2+8q-18): True; r^1+r^2 polynomial as stated: True
+   root r=0 = (2 sqrt7 - 1)/6 = 0.7152504370 (True); positive root with r^1+r^2 = 0.7251628388; shift +0.0099124018 (+1.3859 %)
+B  Genesis shadow at I=0, Q_c=4/3 Q_s^3 (shear): 20*Q_s**4/27 + Q_s**2/4; leading coefficient 1/4
+B  Genesis shadow at I=0, Q_c=1/4 Q_s^3 (recoil): 5*Q_s**4/36 + Q_s**2/4; leading coefficient 1/4
+C  J_Q^2=-1, J_Q B_G-orthogonal, Genesis identity: True; h(s,c) = I + i Omega: True; |h|^2 = Q_s Q_c: True
+D  m=2 example: Q_sQ_c-I^2-Omega^2 = 4 > 0, K = 3/4 < 1: True; complex-collinear blocks give 0: True
+   R^3 lift: Q_sQ_c-I^2-Omega^2 = beta[(x1 c_z - y1 s_z)^2 + (x2 c_z - y2 s_z)^2] in B_T-orthonormal plane coordinates: True
+E  same aggregate (Q_s,Q_c,I,Omega) = [2, 2, 2, 0] for all t: True; aggregate Delta Q_s^(0): P = -48, R(t) = -48*t**2 - 48; differ for t != 0: True
+RESULT: PASS

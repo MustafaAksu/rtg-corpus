@@ -53,3 +53,13 @@ Classes: **W** wait (needs another owner's answer) · **F** form (no science) ·
 ## 3. Not claimed
 
 This list makes no scientific finding. Atlas readings are cited as the Atlas states them; the owner responses in T8-13 and T8-14 are proposals until the co-owners confirm them. No pipe state of another stream is changed here.
+
+## 4. Progress
+
+- **3 November 2026.** ChatGPT's review `5747764214` accepted the list, with the priority: T8-08, T8-09, T8-13, T8-14 and the T8-06 design note first, merged into one advisory; T8-01 and T8-02 wait; no v1.8 build yet.
+- **First pass done:** `records/triad/TRIAD_v1_8_FIRST_PASS_ADVISORY.md`, with evidence `evidence/triad/scripts/triad_v1_8_session_checks.py` (PASS).
+  - T-6m2 root $0.7152504\to0.7251628$, reproduced independently;
+  - T-1 against the Genesis shadow: the coefficients match, the objects differ, and a conditional metric reading is recorded;
+  - T-6r: complex-collinearity, $K\le1$ on enlarged carriers, and a closure obstruction;
+  - Atlas reply filed: `pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md`.
+
