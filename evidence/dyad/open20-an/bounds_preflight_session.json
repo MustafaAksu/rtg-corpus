@@ -1,0 +1,63 @@
+{
+  "E1_E2": "BOUNDED_PREFLIGHT_ONLY",
+  "E3_E4": "NOT_CERTIFIED",
+  "E5_E6_E7": "NOT_CERTIFIED",
+  "Stage3": "NOT_CERTIFIED",
+  "bounds": {
+    "K1": "2.1154100108592878726933685894463E+9",
+    "K2": "1.1469714595250711900346893098257E+15",
+    "K3": "2.2743144714556234377553965939427E+19",
+    "K4": "5.5720704550662774225007216551595E+24",
+    "Psi": "1.3930176137665693556251804137899E+30",
+    "algebraic_source": "Stage-1 S1--S7 exact gates; scalar mpmath.iv bounds are outward enclosing",
+    "branch_im_a_positive": true,
+    "horizontal_denominator_perturbation_upper": "8.4642748294891359670935079715868E-12",
+    "lifted_G_upper": "1.0381972945284349303370814313409E+11",
+    "lifted_H_upper": "5.1909869758239721024371436064659E+13",
+    "raw_full_map_sup_upper": "1.6585625685813751246927199372554E+0",
+    "raw_inverse": {
+      "contractive": true,
+      "displacement_upper": "8.3028180321680159968931957766237E-19",
+      "jacobian_row_sum_upper": "1.2454235870001567035481325193977E-15",
+      "target_bidisc_radius_lower": "9.9999999916971819678319840031068E-10",
+      "warning": "Target radius rounded downward from a validated interval; normalized inverse bounds not established."
+    }
+  },
+  "forward_template": {
+    "B0_1": "1.0307053700129147148760746742761E+65",
+    "B0_2": "1.0307132948307647102368274188613E+65",
+    "B1": "1.0099576448342247412258827748967E+67",
+    "C": "4.2426406871192851464050661726291E+0",
+    "C_star": "2.0000000000000000000000000000001E+0",
+    "E5_uniform_tail_N": 10000,
+    "E5_uniform_tail_U1_upper": "1.0810444037324355981240971744962E+63",
+    "E5_uniform_tail_U2_upper": "1.0810527155936488845666642168858E+63",
+    "E5_uniform_tail_coefficient_D1_upper": "1.0307053700129147148760746742761E+65",
+    "E5_uniform_tail_coefficient_D2_upper": "1.0307132948307647102368274188613E+65",
+    "L_upper": "2.0451942106149560485479957640903E-3",
+    "delta_lower": "3.90625E-204",
+    "forward_inequalities_satisfied": true,
+    "qualification": "Conservative forward-template bounds only. This computation is not owner-reviewed; inverse-normalized petals not included.",
+    "radius_shrink_power10": 58,
+    "rho_lower": "2.5E-68"
+  },
+  "grade": "SESSION",
+  "kind": "DYAD_OPEN20_AN_BOUNDS_PREPARATION",
+  "limitations": [
+    "Requires review of conservative Cauchy envelopes before scientific use",
+    "Does not certify the normalized inverse-map R1/R2 constants for odd petals",
+    "Does not execute iterative Hakim operator or derive a Stokes jump",
+    "Does not supply numerical fixed-point residual, E5 rounded orbit sum or E6/E7 certificate",
+    "No PI authorization for Stage-3 campaign is inferred"
+  ],
+  "parameters": {
+    "inner_Y_radius": "0.0001",
+    "inner_xi_radius": "0.000000001",
+    "outer_Y_radius": "0.005",
+    "outer_xi_radius": "0.00000002",
+    "raw_cauchy_radius": "0.002",
+    "raw_inverse_radius": "0.000000001"
+  },
+  "script_sha256": "82c5e874c66eb06b078c177325ebb873caeea1bbaa1871516464606749c26b09",
+  "stage1_sha256": "2c9ae6376e0c482f2ba520a7ea8e2b38606a6821f7ac3bfa259d4d6020d04739"
+}
