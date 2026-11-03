@@ -1,0 +1,7 @@
+G0_input_identity_and_text PASS
+G1_adopted_table_reproduced PASS
+G2_windows_match_rows PASS
+G3_primary_constants_exact FAIL
+G4_published_ceilings_outward_minimal FAIL
+G5_improvement_unconditional_rows PASS
+RESULT FAIL
