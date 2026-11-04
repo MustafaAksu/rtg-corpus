@@ -1,6 +1,6 @@
 # Programme Overview v1.4 — release record
 
-**Status:** CANDIDATE, revision 2 — change-focused review round 1 CONDITIONAL PASS (R1 applied here, R2 applied); awaiting the delta-only review and PI adoption. `programme-v1.3` governs until adoption.
+**Status:** ADOPTED by the PI, 4 November 2026 (§6), on candidate rev. 2 `d55dc304…7dae`. **Adopted file SHA-256 `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`** (publication transform, status lines only). It governs from the annotated tag `programme-v1.4` on the merge commit of PR #178; until that tag exists, `programme-v1.3` remains the tagged edition.
 **Editor:** Claude (atlas owner), by PI decision of 4 November 2026 in the atlas session: "programme i yapıp geçelim" ("let's do the Programme and move on"), given after the editor offered the Programme v1.4 sync as the next step. The editor role is as for v1.3. **Reviewer:** ChatGPT (change-focused). **Adoption:** PI.
 **Object:** `dsn/RTG_PROGRAMME_OVERVIEW.md`. **Governing rules:** Methodology v1.4 (§§1.1, 3.3, 13), `CONVENTIONS.md`.
 
@@ -118,13 +118,14 @@ The tag multiset `[DEF]`×10, `[HYP]`×5, `[COR]`×3 is unchanged (gate C6).
 ## 5. After adoption (PI; then the editor)
 
 1. **Publication transform.** The editor runs it on the reviewed candidate with the adoption date. It changes three status lines and nothing else. `BASELINE.md` Programme row → v1.4 and the adopted hash.
-   - With the date "4 November 2026" the adopted file of rev. 2 is `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`. This is a test value: the adopted hash is recorded only after the transform has run on the reviewed candidate with the actual date.
+   - **Done** (4 November 2026): the transform was run on rev. 2 `d55dc304…7dae` with the date "4 November 2026". The adopted file is **`37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`**; the diff against the candidate is the three status lines (header Document status, Appendix A heading, footer). `BASELINE.md` Programme row → v1.4 and this hash, in the same commit.
 2. **The PI merges with a merge commit and creates the annotated tag `programme-v1.4`** naming that hash. On the server:
    ```bash
    cd ~/rtg-corpus && git fetch origin && git checkout main && git pull --ff-only
-   gh pr merge <PR> --merge --repo MustafaAksu/rtg-corpus && git pull --ff-only
-   sha256sum dsn/RTG_PROGRAMME_OVERVIEW.md        # must equal the adopted hash in this record
-   git tag -a programme-v1.4 -m "RTG Programme Overview v1.4 — adopted <date>; SHA-256 <adopted hash>"
+   gh pr merge 179 --merge --repo MustafaAksu/rtg-corpus     # review record first
+   gh pr merge 178 --merge --repo MustafaAksu/rtg-corpus && git pull --ff-only
+   sha256sum dsn/RTG_PROGRAMME_OVERVIEW.md        # must be 37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0
+   git tag -a programme-v1.4 -m "RTG Programme Overview v1.4 — adopted 4 November 2026; SHA-256 37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0"
    git push origin programme-v1.4
    ```
 3. **The editor closes the four `pipes/PROG/` items** as receiver, each with a disposition pointing here, and regenerates the inbox index.
@@ -138,7 +139,7 @@ The tag multiset `[DEF]`×10, `[HYP]`×5, `[COR]`×3 is unchanged (gate C6).
 | Step | Who | Result |
 |---|---|---|
 | Change-focused review, round 1 (rev. 1) | ChatGPT | **CONDITIONAL PASS**: R1 required, R2 optional (§2a). Record: `records/programme/PROGRAMME_v1_4_CHATGPT_CHANGE_FOCUSED_REVIEW_20261104.md` (PR #179); PR #178 comment `6628867713`. The reviewer independently replayed the 71 edits and got the candidate byte for byte; the editor's checker runs were not rerun. |
-| Delta-only review (rev. 2) | ChatGPT | *(pending)* |
-| PI adoption | PI | *(pending)* |
-| Publication transform; `BASELINE.md` | editor | *(pending)* |
+| Delta-only review (rev. 2) | ChatGPT | **ACCEPT SCOPED, no blocking finding** (PR #178 comment `6629157174`; record §6 on PR #179 branch `chatgpt/programme-v1.4-review`, head `4941f58d25cdab8af6791b7a2332410cf24e4b1c`, file SHA-256 `c2da9b188d01cb9d7c3223b3bbda26756327d9a7f79fbe30f3b7bdadb06022d5`). The reviewer independently replayed the 81 edits to the candidate byte for byte and checked 38/38 IF ids; R1 and R2 PASS; C17 read as code; the checker runs are preparer-reported. One process note: the PR #178 description carried the rev. 1 figures. It is updated with this record. |
+| PI adoption | PI | **ADOPTED**, 4 November 2026, 14:19 +03:00, in the atlas session: "dokümanı benimsiyorum" (verbatim; "I adopt the document"). Given on rev. 2 `d55dc304…7dae` after the round-2 review (ACCEPT SCOPED). |
+| Publication transform; `BASELINE.md` | editor | **done**: adopted file `37d857d0…28c0` (§5 item 1); `BASELINE.md` Programme row → v1.4. |
 | Merge commit, annotated tag `programme-v1.4` | PI | *(pending)* |

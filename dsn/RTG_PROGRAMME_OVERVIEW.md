@@ -4,7 +4,7 @@
 **Date:** 4 November 2026
 **Scope:** Inventory, ownership, branch/layer architecture, programme OPENs and scope guards, synchronized to the governing editions of the corpus; maintenance synchronization of the adopted v1.3 (inventory, interface register, pointers, κ table, receiver items).
 **Document class:** Programme overview, under DSN Methodology v1.4 §0.5.
-**Document status:** DRAFT — v1.4 candidate (one content stage; no compaction); not adopted. `programme-v1.3` governs until adoption.
+**Document status:** ADOPTED — PI, 4 November 2026 (maintenance synchronization of the adopted v1.3 under Methodology v1.4; adoption record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`). Supersedes `programme-v1.3`.
 **Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.3` (tag `programme-v1.3`, SHA-256 `1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06`, adopted 24 October 2026).
 **Repository:** `MustafaAksu/rtg-corpus`, `main`. A study's governing edition is its latest adopted tag with its release record (Methodology v1.4 §13.9); `BASELINE.md` lists the governing editions with their SHA-256; `CONVENTIONS.md` gives the working rules. Project copies mirror `main`.
 **Companion documents:** the governing editions in §6.1 (by tag). The list is not a substitute for claim-level imports; each consumer's own pins are in its Import Ledger (§7.2 records them where they differ).
@@ -563,7 +563,7 @@ Adoption is the PI's decision, recorded in the release record; publication is a 
 
 One compact entry per edition (Methodology v1.4 §1.1). Full entries of v1.0–v1.2, the Draft 1 history of v1.2 and the adopted replacement ledger's provenance are in Appendix A of v1.2 (tag `programme-v1.2`); the full stage-1 draft entry of v1.3 is at the stage-1 commit named in the release record.
 
-### v1.4 — 4 November 2026 — DRAFT (candidate; not adopted)
+### v1.4 — 4 November 2026 — Adopted
 
 - **Basis:** PI decision of 4 November 2026 (Programme sync by the atlas owner as editor); the four receiver items of `pipes/PROG/` and the v1.3 post-release note (E-P13-1); Methodology v1.4.
 - **Inventory and interfaces:** eight §6.1 rows to their governing editions (OFN v0.12, NUMGEN v1.21, DYAD v6.4.23, TRIAD v1.7, GEN v2.10, RECOG v0.3.27, TDR-G v2.12.14, Atlas v0.9); the PROG row and §6.2 entry worded for candidate and adopted state alike; §6.2–6.5 entries re-read against the owners' Import Ledgers; §7.2 consumer pins re-read at the governing tags; IF37 (GEN → NUMGEN, an import that predates v1.3) and IF38 (NUMGEN → GEN) added.
@@ -629,4 +629,4 @@ These administrative keys are not fabricated historical theorem RIDs. Each entry
 
 ---
 
-*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.4 (DRAFT candidate, 4 November 2026; maintenance synchronization of the adopted v1.3 under DSN Methodology v1.4).*
+*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.4 (ADOPTED, 4 November 2026; maintenance synchronization of the adopted v1.3 under DSN Methodology v1.4).*
