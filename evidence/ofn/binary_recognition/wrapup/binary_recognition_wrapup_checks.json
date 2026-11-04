@@ -1,0 +1,1686 @@
+{
+ "checks": [
+  {
+   "name": "C1 recognition alternation alone selects f = 1-p",
+   "pass": true
+  },
+  {
+   "name": "C1 reversible + no fixed state selects the same f",
+   "pass": true
+  },
+  {
+   "name": "C1 four reversible laws, exactly two C-covariant",
+   "pass": true
+  },
+  {
+   "name": "C2 Z(FX) = i Z(X)",
+   "pass": true
+  },
+  {
+   "name": "C2 |Z| = 1",
+   "pass": true
+  },
+  {
+   "name": "C2 Z^2 = (-1)^d",
+   "pass": true
+  },
+  {
+   "name": "C2 F^2 = C, F^4 = id",
+   "pass": true
+  },
+  {
+   "name": "C2 R F R = F^-1 (role reversal)",
+   "pass": true
+  },
+  {
+   "name": "C2 Z(RX) = conj Z(X)",
+   "pass": true
+  },
+  {
+   "name": "C3 n=1: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=1: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=1: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=1: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=2: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=2: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=2: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=2: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=3: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=3: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=3: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=3: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=4: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=4: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=4: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=4: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=5: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=5: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=5: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=5: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=6: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=6: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=6: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=6: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=7: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=7: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=7: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=7: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=8: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=8: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=8: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=8: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=9: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=9: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=9: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=9: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=10: F^n = C",
+   "pass": true
+  },
+  {
+   "name": "C3 n=10: parity alternates",
+   "pass": true
+  },
+  {
+   "name": "C3 n=10: parity(CX) = parity(X) + n mod 2",
+   "pass": true
+  },
+  {
+   "name": "C3 n=10: affine alternating readouts = parity and complement",
+   "pass": true
+  },
+  {
+   "name": "C3 n=1: every alternating Boolean readout has C-type n mod 2 (exhaustive)",
+   "pass": true
+  },
+  {
+   "name": "C3 n=2: every alternating Boolean readout has C-type n mod 2 (exhaustive)",
+   "pass": true
+  },
+  {
+   "name": "C3 n=3: every alternating Boolean readout has C-type n mod 2 (exhaustive)",
+   "pass": true
+  },
+  {
+   "name": "C3 n=4: every alternating Boolean readout has C-type n mod 2 (exhaustive)",
+   "pass": true
+  },
+  {
+   "name": "C4 n=3 orbits: one 6-cycle and one 2-cycle",
+   "pass": true
+  },
+  {
+   "name": "C4 B F3 = A B on all eight states",
+   "pass": true
+  },
+  {
+   "name": "C4 six-cycle maps to unit-Q hexagon, two-cycle to origin",
+   "pass": true
+  },
+  {
+   "name": "C4 B loses parity on the zero fibre",
+   "pass": true
+  },
+  {
+   "name": "C5 n=1: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=1: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=2: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=2: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=3: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=3: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=4: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=4: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=5: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=5: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=6: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=6: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=7: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=7: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=8: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=8: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=9: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=9: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=10: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=10: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=11: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=11: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=12: parity descends on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 n=12: Z_n injective on full cube iff n power of two",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=3, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=5, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=6, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=7, p=7: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=9, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=10, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=11, p=11: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=12, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=13, p=13: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=14, p=7: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=15, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=15, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=17, p=17: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=18, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=19, p=19: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=20, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=21, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=21, p=7: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=22, p=11: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=23, p=23: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=24, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=25, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=26, p=13: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=27, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=28, p=7: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=29, p=29: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=30, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=30, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=31, p=31: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=33, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=33, p=11: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=34, p=17: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=35, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=35, p=7: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=36, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=37, p=37: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=38, p=19: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=39, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=39, p=13: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=40, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=41, p=41: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=42, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=42, p=7: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=43, p=43: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=44, p=11: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=45, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=45, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=46, p=23: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=47, p=47: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=48, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=49, p=7: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=50, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=51, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=51, p=17: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=52, p=13: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=53, p=53: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=54, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=55, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=55, p=11: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=56, p=7: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=57, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=57, p=19: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=58, p=29: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=59, p=59: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=60, p=3: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C5 K-witness n=60, p=5: equal image, opposite parity, nonzero iff d>1",
+   "pass": true
+  },
+  {
+   "name": "C6 n=1: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=1: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=2: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=2: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=3: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=3: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=4: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=4: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=5: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=5: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=6: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=6: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=7: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=7: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=8: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=8: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=9: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=9: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=10: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=10: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=11: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=11: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=12: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=12: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=13: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=13: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=14: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=14: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=15: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=15: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=16: Short subset of Zero",
+   "pass": true
+  },
+  {
+   "name": "C6 n=16: Zero = Short iff n in classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 witness n=30: Z_n = 0 with full period 2n",
+   "pass": true
+  },
+  {
+   "name": "C6 witness n=45: Z_n = 0 with full period 2n",
+   "pass": true
+  },
+  {
+   "name": "C6 n=30 and n=45 are outside the classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=15, 21 inside the classified set",
+   "pass": true
+  },
+  {
+   "name": "C6 n=1: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=2: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=3: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=4: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=5: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=6: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=7: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=8: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=9: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=10: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=11: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=12: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=13: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=14: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=15: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C6 n=16: |Zero(n)| = |Zero(M)|^(n/M)",
+   "pass": true
+  },
+  {
+   "name": "C7 n=1: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=1: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=1: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=2: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=2: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=2: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=3: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=3: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=3: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=4: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=4: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=4: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=5: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=5: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=5: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=6: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=6: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=6: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=7: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=7: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=7: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=8: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=8: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=8: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=9: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=9: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=9: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=10: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=10: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=10: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=11: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=11: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=11: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=12: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=12: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=12: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=13: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=13: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=13: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C7 n=14: sector injective iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=14: sector parity descent iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C7 n=14: every nonzero state has period 2n",
+   "pass": true
+  },
+  {
+   "name": "C8 n=2: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=3: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=4: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=5: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=6: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=7: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=8: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=9: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=10: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=11: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=12: parity descends through retained components D iff 2h in D",
+   "pass": true
+  },
+  {
+   "name": "C8 n=1: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=2: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=3: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=4: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=5: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=6: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=7: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=8: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=9: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=10: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=11: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=12: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=13: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=14: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=15: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=16: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=17: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=18: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=19: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=20: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=21: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=22: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=23: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=24: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=25: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=26: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=27: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=28: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=29: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=30: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=31: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=32: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=33: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=34: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=35: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=36: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=37: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=38: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=39: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=40: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=41: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=42: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=43: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=44: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=45: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=46: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=47: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=48: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=49: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=50: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=51: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=52: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=53: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=54: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=55: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=56: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=57: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=58: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=59: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=60: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=61: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=62: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=63: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C8 n=64: Phi_2h is the only component vanishing at t=1 mod 2",
+   "pass": true
+  },
+  {
+   "name": "C9 n=1: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=1: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=1: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=1: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=2: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=2: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=2: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=2: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=3: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=3: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=3: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=3: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=4: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=4: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=4: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=4: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=5: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=5: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=5: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=5: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=6: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=6: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=6: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=6: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=7: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=7: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=7: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=7: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=8: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=8: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=8: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=8: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=9: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=9: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=9: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=9: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=10: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=10: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=10: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=10: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=11: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=11: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=11: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=11: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=12: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=12: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=12: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=12: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=13: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=13: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=13: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=13: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=14: folding is F-, C-equivariant, parity-preserving, onto; c-update exact; |c|=(m+1)^h",
+   "pass": true
+  },
+  {
+   "name": "C9 n=14: 2h | period(X) | 2n",
+   "pass": true
+  },
+  {
+   "name": "C9 n=14: folding descends through Z_n on full cube iff 2^a",
+   "pass": true
+  },
+  {
+   "name": "C9 n=14: folding descends on nonzero sector iff 2^a or odd prime",
+   "pass": true
+  },
+  {
+   "name": "C9 n=6 state (0,1,1,0,0,1) has period 4",
+   "pass": true
+  },
+  {
+   "name": "C10 n=1, k=1: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=1, k=2: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=1, k=3: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=1, k=4: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=1, k=5: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=2, k=1: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=2, k=2: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=2, k=3: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=2, k=4: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=2, k=5: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=3, k=1: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=3, k=2: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=3, k=3: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=3, k=4: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=3, k=5: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=4, k=1: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=4, k=2: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=4, k=3: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=4, k=4: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=4, k=5: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=5, k=1: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=5, k=2: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=5, k=3: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=5, k=4: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=5, k=5: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=6, k=1: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=6, k=2: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=6, k=3: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=6, k=4: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  },
+  {
+   "name": "C10 n=6, k=5: replication intertwines F, C, Z; parity pulls back as k mod 2",
+   "pass": true
+  }
+ ],
+ "count": 403,
+ "failed": [],
+ "script": "binary_recognition_wrapup_checks.py",
+ "status": "PASS",
+ "zero_short_census_n1_16": {
+  "1": {
+   "short": 0,
+   "zero": 0
+  },
+  "2": {
+   "short": 0,
+   "zero": 0
+  },
+  "3": {
+   "short": 2,
+   "zero": 2
+  },
+  "4": {
+   "short": 0,
+   "zero": 0
+  },
+  "5": {
+   "short": 2,
+   "zero": 2
+  },
+  "6": {
+   "short": 4,
+   "zero": 4
+  },
+  "7": {
+   "short": 2,
+   "zero": 2
+  },
+  "8": {
+   "short": 0,
+   "zero": 0
+  },
+  "9": {
+   "short": 8,
+   "zero": 8
+  },
+  "10": {
+   "short": 4,
+   "zero": 4
+  },
+  "11": {
+   "short": 2,
+   "zero": 2
+  },
+  "12": {
+   "short": 16,
+   "zero": 16
+  },
+  "13": {
+   "short": 2,
+   "zero": 2
+  },
+  "14": {
+   "short": 4,
+   "zero": 4
+  },
+  "15": {
+   "short": 38,
+   "zero": 38
+  },
+  "16": {
+   "short": 0,
+   "zero": 0
+  }
+ }
+}
