@@ -9,3 +9,4 @@
 | 2026-11-03 | GEN | notice | open | answer to `pipes/GEN/20261103-TRIAD-birth-symmetry-grade-question.md`: GEN-ALG-BIRTH-SYMMETRY-SEED (GEN v2.10 §6.6); Triadic v1.7 §6.17.1 and §7.2 birth-symmetry import | — | `20261103-GEN-birth-symmetry-grade-answer.md` |
 | 2026-11-03 | GEN | notice | open | answer to `pipes/GEN/20261103-TRIAD-p4-identity-question.md`: GEN-ALG-P4-DRIFT-IDENTITY (GEN v2.10 §6.5); Triadic v1.7 §7.2 radial-polynomial import (held at Genesis v2.8.7) | — | `20261103-GEN-p4-identity-answer.md` |
 | 2026-11-03 | GEN | notice | open | GEN v2.10 §2 and §7 Triadic import rows (TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY, TRIAD-ALG-T6T-JACOBI-MODE-SIGNS, TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC); §7 Consumers row IF06 | — | `20261103-GEN-v2-10-adopted.md` |
+| 2026-11-04 | PROG | notice | open | Programme v1.4 §6.1 (TRIAD row at `triad-v1.7`), §6.3 TRIAD entry, §7.2 IF04, IF06, IF07, IF11, IF29, §7.3 CN-05 | — | `20261104-PROG-v1-4-adopted.md` |
