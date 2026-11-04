@@ -1,7 +1,7 @@
 {
  "base_sha256": "1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06",
- "candidate_sha256": "d109c78b9924b325e590159796b01223b82959211809106eea3dce009f6673bd",
- "n_edits": 71,
+ "candidate_sha256": "d55dc3042fdcafca435fe78ce6c034ef75f699def901df015527f6497be07dae",
+ "n_edits": 81,
  "edits": [
   {
    "key": "H-1",
@@ -138,6 +138,14 @@
    "new_sha256": "4280e528bda6808ee5907c8170cad9f599aecb9d74c17195bf37109e6ca897db"
   },
   {
+   "key": "R2",
+   "op": "rep",
+   "old": "`BASELINE.md` carries the SHA-256 values and is the authority if this table and it ever disagree.",
+   "new": "`BASELINE.md` carries the SHA-256 values; if this table and `BASELINE.md` ever disagree, the adopted tag with its release record governs (Methodology v1.4 §13.9).",
+   "old_sha256": "8db5f6f5e5ea50bc621227aa7883a60b55cea67e8c2ae66bca2a309478cf589e",
+   "new_sha256": "99930a022e7d441f21c8b0eb69294f313ae5101fed602d3394ece8830d1628b3"
+  },
+  {
    "key": "S6-1-PROG",
    "op": "line",
    "old": "| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.3 (this edition; v1.2 governs until adoption) | programme-v1.3, created on adoption | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |",
@@ -244,6 +252,14 @@
    "new_sha256": "ce22afd3e64218ce592d7e3d14b5fbe69b4506ea46313e7bbcbe90beadaf9eb3"
   },
   {
+   "key": "R1-OFN",
+   "op": "rep",
+   "old": "Receives scoped technical feedback from DYAD, RECOG, GEN, TRIAD, OPEN M, NUMGEN and TDR-G as imports (OFN §11); it does not acquire the proofs it cites.",
+   "new": "Imports claim-level statements from DYAD, RECOG, GEN and TDR-G (OFN §11.2, §11.4) and records TRIAD, OPEN M and NUMGEN feedback as reference-only (OFN §11.3, §11.5); it does not acquire the proofs it cites, and a TDR-G import into this foundational document is not a cross-branch physical bridge.",
+   "old_sha256": "33e13ef317c14be1c1b74e82fe476468d6aedc39d295359de74d87daf4209d67",
+   "new_sha256": "5f5e94c3ce6b5d8fb01f395a1b215bf7e9e56943d699683e4143d4ffde09f8fd"
+  },
+  {
    "key": "S6-2-NUMGEN",
    "op": "line",
    "old": "**NUMGEN — Number Genesis** (v1.20.8, `numgen-v1.20.8`). Owns relational composition, representation and realization modules; its continuous local-history modules and its discrete DISC modules remain separately typed. Imports OFN, DYAD, GEN and TDR-G (DISC) at the editions in its §9.1; exports to RECOG by RID (N5AS1 definitions and results) and records RECOG as a consumer (its §9.1 row). Its foundational/technical profile is not evidence for OPEN-P1.",
@@ -289,6 +305,14 @@
    "prefix": "**RECOG — Relational Recognition** "
   },
   {
+   "key": "R1-UVM",
+   "op": "rep",
+   "old": "Imports Genesis, Dyadic, Triadic, OFN, Programme and Pre-Legacy priors.",
+   "new": "Imports Genesis, Dyadic and Triadic (its §7); OFN (model-selection interface, OPEN-M-7 only) and the Programme are governance and interface references, and Pre-Legacy supplies historical priors (IF23).",
+   "old_sha256": "e6f259cf4d7a46897904d0714defe3a23f0f07eb82f3e426332057659288072a",
+   "new_sha256": "950a24cfa4b04a915a467551d372f0de8c995e10723e1831188f0a5ef9da305d"
+  },
+  {
    "key": "S6-4-TDRG",
    "op": "line",
    "old": "**TDRG — Discrete Genesis** (v2.12.13, `tdrg-v2.12.13`). Owns native cyclic-state/event definitions, policy branches, kinematic/BIND3 modules and the growth/suppression programme; imports OFN and Programme (its §7 pins v0.6 and v1.1). Exports to Number Genesis (DISC) and AZ (Threads B/C). Its owner pass has not been executed since v1.2.",
@@ -330,6 +354,38 @@
    "new_sha256": "427ed33c4a303a9972eb7004950cca0757baea3efe2cf43d7be77ff2c7eb88e5"
   },
   {
+   "key": "R1-G-OFN",
+   "op": "rep",
+   "old": "  OFN <-- DYAD, RECOG, GEN, TRIAD, UVM, NUMGEN, TDRG   (scoped technical feedback, OFN §11)",
+   "new": "  OFN <-- DYAD, RECOG, GEN                             (claim-level imports, OFN §11.2, §11.4)",
+   "old_sha256": "7b2f1cfd5e7fb78f7977dfdc03a843e5d05b1ce385ebdd305e0765d448378f8a",
+   "new_sha256": "4959a5c763e0fe382df5e59ecbfe01462bc30ae147ce244a4af16ef1b7ac2f07"
+  },
+  {
+   "key": "R1-G-REQ",
+   "op": "rep",
+   "old": "  NUMGEN -?-> OFN                      technical feedback synchronization (recorded by OFN as import; open items remain)",
+   "new": "  NUMGEN -?-> OFN                      technical feedback synchronization (recorded by OFN as reference-only or deferred feedback, §11.3)",
+   "old_sha256": "9f1b68d2a155d18b72ee3a362e93a689468fc356cc36087a6f2c844f240e956f",
+   "new_sha256": "b3f7e3bb795595e615e8851a54749dfa1225f3d3874d35a39407259dec3fb02f"
+  },
+  {
+   "key": "R1-G-DISC",
+   "op": "rep",
+   "old": "  TDRG --> AZ[Thread B/C]",
+   "new": "  TDRG --> AZ[Thread B/C]\n  TDRG --> OFN; OFN --> TDRG          discrete definitions and lemmas into OFN (§11.2); one OFN lemma into TDR-G (SG-14);\n                                       foundational uses, not a cross-branch physical bridge",
+   "old_sha256": "8038fd15d0f3c0b861b7d546166b9e5b42453b77d6d385e56f3c6a5b6f6100a8",
+   "new_sha256": "3488e6ed3492e5b0c1317a5fddc67da1c6b70107ac016ae6c42812266daa5d1d"
+  },
+  {
+   "key": "R1-G-REF",
+   "op": "rep",
+   "old": "  PREL -- hypothesis/provenance only --> UVM",
+   "new": "  PREL -- hypothesis/provenance only --> UVM\n  TRIAD, UVM, NUMGEN -- reference-only feedback --> OFN (OFN §11.3)",
+   "old_sha256": "34575273966d540c9aba7d570e3f11dbd6abd493255a03b9f0f2d86894503770",
+   "new_sha256": "bb296f62132949147ae234157537ca20ce1274b279412524d272bc2f86508bcf"
+  },
+  {
    "key": "S7-2-0",
    "op": "rep",
    "old": "Rows IF01–IF25 keep their v1.2 identifiers; IF26–IF36 are new in v1.3; a retired row says so.",
@@ -350,9 +406,9 @@
    "key": "S7-2-IF03",
    "op": "line",
    "old": "| IF03 | OFN → TDRG | constraint | relational commitments; discrete interaction-selection questions | TDRG §7 | v0.6 (historical pin) |",
-   "new": "| IF03 | OFN → TDRG | constraint | relational commitments; discrete interaction-selection questions | TDRG §7 | v0.10 (claim pin; v0.6/v0.7 historical at its §2) |",
+   "new": "| IF03 | OFN → TDRG | constraint; declared-import | relational commitments; discrete interaction-selection questions; `RTG-OFN-ALG-STAR-TOKEN-SHIFT` imported for SG-14 | TDRG §7 | v0.10 (claim pin; v0.6/v0.7 historical at its §2) |",
    "old_sha256": "ae82dc4d8264bbfa4ae966a24bd57fc4c91454d12e1178f595a79e8489af862c",
-   "new_sha256": "522ef09c3a18905cad183360915f2a7ae58cea68cc037417a9d4fcb61905db77",
+   "new_sha256": "a510e0cc8ca553b4182b7c0faf164a42ecde1cb016535e2dba7e5d8ac0420570",
    "prefix": "| IF03 |"
   },
   {
@@ -390,6 +446,33 @@
    "old_sha256": "477df209d235d1173b4c254a2bee790f9c8c2431ccf7904634488581dcfc8493",
    "new_sha256": "69bb8e13275f15c4e508b993ad2c9f4ddc5ef6436e718276914203fcc38b2de8",
    "prefix": "| IF07 |"
+  },
+  {
+   "key": "S7-2-IF24",
+   "op": "line",
+   "old": "| IF24 | NUMGEN → OFN | feedback (recorded import) | holonomy operator and representation results | OFN §11 | as declared in OFN §11 |",
+   "new": "| IF24 | NUMGEN → OFN | reference-only feedback | holonomy operator and representation results (RF-O08-09, RF-O08-10, RF-O09-04) | OFN §11.3 | v1.21 |",
+   "old_sha256": "1aee031f6ded24216df86d7c697bd2b825b0bafd8dfb91e3f47336aeb65597ef",
+   "new_sha256": "48459766b2285bf4441dfbe597995ed8f5c0de7c24159ecaa4364bef2a515429",
+   "prefix": "| IF24 |"
+  },
+  {
+   "key": "S7-2-IF28",
+   "op": "line",
+   "old": "| IF28 | RECOG → OFN | declared-import | comparator definitions and recognition feedback (IMP rows) | OFN §11 | as declared in OFN §11 |",
+   "new": "| IF28 | RECOG → OFN | declared-import | claim-level imports IMP-O08-17–19 and IMP-O09-01–03; further RECOG feedback as reference-only rows (RF-O08-05, -06; RF-O09-01–03) | OFN §11.2, §11.3 | as declared in OFN §11 |",
+   "old_sha256": "9e8f6d4cdd35d8887f6b665b80a426f7414a6e2d7792c2186a388248be0f6e7a",
+   "new_sha256": "141cb8a38d4ad8c94c45b454efc56ce6858a92706db3192e621968b71bb1acfe",
+   "prefix": "| IF28 |"
+  },
+  {
+   "key": "S7-2-IF32",
+   "op": "line",
+   "old": "| IF32 | DYAD, GEN, TRIAD, UVM, TDRG → OFN | declared-import (scoped feedback) | technical feedback rows IMP-O10-* | OFN §11 | as declared in OFN §11 |",
+   "new": "| IF32 | DYAD, GEN, TDRG, TRIAD, UVM → OFN | declared-import (DYAD, GEN, TDRG); reference-only (TRIAD, UVM) | claim-level imports IMP-O08-01–16, IMP-O08-20 and IMP-O10-01–07; Triadic and OPEN M feedback as reference-only rows (RF-O08-02, -08, -11) | OFN §11.2–11.5 | as declared in OFN §11 |",
+   "old_sha256": "a96160982463259c92faf23f6f9963aab35ec50312e8a022dcf3d93e902e2090",
+   "new_sha256": "5cd3d83f09844add19a3a4bb95536edc5e0c00050fa4746758919671e9426652",
+   "prefix": "| IF32 |"
   },
   {
    "key": "S7-2-IF12",
@@ -610,9 +693,9 @@
    "key": "A-1",
    "op": "rep",
    "old": "### v1.3 — 24 October 2026 — Adopted",
-   "new": "### v1.4 — 4 November 2026 — DRAFT (candidate; not adopted)\n\n- **Basis:** PI decision of 4 November 2026 (Programme sync by the atlas owner as editor); the four receiver items of `pipes/PROG/` and the v1.3 post-release note (E-P13-1); Methodology v1.4.\n- **Inventory and interfaces:** eight §6.1 rows to their governing editions (OFN v0.12, NUMGEN v1.21, DYAD v6.4.23, TRIAD v1.7, GEN v2.10, RECOG v0.3.27, TDR-G v2.12.14, Atlas v0.9); the PROG row and §6.2 entry worded for candidate and adopted state alike; §6.2–6.5 entries re-read against the owners' Import Ledgers; §7.2 consumer pins re-read at the governing tags; IF37 (GEN → NUMGEN, an import that predates v1.3) and IF38 (NUMGEN → GEN) added.\n- **Pointers and receipts:** OFN v0.12 as criterion home for P0 and P2B; TDR-G launch-gate record at v2.12.14 (Appendix C aligned by the owner); Triadic CN-05 received and accepted, no action (§7.3); §8.2 class-C row corrected (E-P13-1), κ_f row added, two section pointers corrected; §9.2 state at 4 November 2026.\n- **Unchanged:** architecture, maturity semantics and records, the five programme OPEN RIDs (all ACTIVE), SG-PROG-1–4, the restructuring queue, Appendix B.\n- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`.\n\n### v1.3 — 24 October 2026 — Adopted",
+   "new": "### v1.4 — 4 November 2026 — DRAFT (candidate; not adopted)\n\n- **Basis:** PI decision of 4 November 2026 (Programme sync by the atlas owner as editor); the four receiver items of `pipes/PROG/` and the v1.3 post-release note (E-P13-1); Methodology v1.4.\n- **Inventory and interfaces:** eight §6.1 rows to their governing editions (OFN v0.12, NUMGEN v1.21, DYAD v6.4.23, TRIAD v1.7, GEN v2.10, RECOG v0.3.27, TDR-G v2.12.14, Atlas v0.9); the PROG row and §6.2 entry worded for candidate and adopted state alike; §6.2–6.5 entries re-read against the owners' Import Ledgers; §7.2 consumer pins re-read at the governing tags; IF37 (GEN → NUMGEN, an import that predates v1.3) and IF38 (NUMGEN → GEN) added.\n- **Pointers and receipts:** OFN v0.12 as criterion home for P0 and P2B; TDR-G launch-gate record at v2.12.14 (Appendix C aligned by the owner); Triadic CN-05 received and accepted, no action (§7.3); §8.2 class-C row corrected (E-P13-1), κ_f row added, two section pointers corrected; §9.2 state at 4 November 2026.\n- **Source typing (review round 2):** OFN's claim-level imports (DYAD, RECOG, GEN, TDR-G) separated from its reference-only feedback (TRIAD, OPEN M, NUMGEN) in §6.2, §7.1 and IF24/IF28/IF32; OPEN M's imports separated from its references and priors; IF03 records TDR-G's OFN import; tag and release record govern over `BASELINE.md`.\n- **Unchanged:** architecture, maturity semantics and records, the five programme OPEN RIDs (all ACTIVE), SG-PROG-1–4, the restructuring queue, Appendix B.\n- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`.\n\n### v1.3 — 24 October 2026 — Adopted",
    "old_sha256": "c4552d88ddc5a7eb1b810fe9b978e9eaf6f4f45302baf8beaf675fcfcf7ecd49",
-   "new_sha256": "c1c2f2e357070166d71690329c9171d2463288d6fb7c569e6ffe6244d5730daf"
+   "new_sha256": "1ff65bb41907a67a09b27100cb4c33ef347acad3092cabde38b0f5c0a8235921"
   },
   {
    "key": "F-1",

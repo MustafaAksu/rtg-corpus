@@ -6,6 +6,10 @@ move on), with Claude (atlas owner) as revision editor as for v1.3. Inputs: the 
 (GEN kappa-table finding with E-P13-1; OFN v0.11 and v0.12 notices; Triadic v1.7 notice with CN-05), the v1.3
 post-release note (E-P13-1), and the governing editions of 4 November 2026 (BASELINE.md and the tags).
 
+Round 2 (review PR #179, ChatGPT, CONDITIONAL PASS): R1 source-typing corrections (OFN claim-level imports vs
+reference-only feedback, OPEN M import typing, IF03/IF24/IF28/IF32, §7.1) and the optional R2 (tag + release record
+govern over BASELINE.md) are edits keyed R1-* / R2 and rows IF03/IF24/IF28/IF32.
+
 Rules
 - every edit is exact-once: `rep` (a string occurring once in the current text) or `line` (the unique line starting with
   a given prefix, replaced whole); the old text is taken from the text at run time and logged with its hash, so the log
@@ -160,11 +164,14 @@ R72_INTRO_NEW = ("Rows IF01–IF25 keep their v1.2 identifiers; IF26–IF36 are 
                  "records an import that predates v1.3 and was not listed there); a retired row says so.")
 IF = {
  "IF02": "| IF02 | OFN → DYAD | constraint | model-selection commitments, not a derivation of $T$ | DYAD §7 | v0.12 (programme context, §7.0) |",
- "IF03": "| IF03 | OFN → TDRG | constraint | relational commitments; discrete interaction-selection questions | TDRG §7 | v0.10 (claim pin; v0.6/v0.7 historical at its §2) |",
+ "IF03": "| IF03 | OFN → TDRG | constraint; declared-import | relational commitments; discrete interaction-selection questions; `RTG-OFN-ALG-STAR-TOKEN-SHIFT` imported for SG-14 | TDRG §7 | v0.10 (claim pin; v0.6/v0.7 historical at its §2) |",
  "IF04": "| IF04 | DYAD → TRIAD | declared-import | fracture state, local return, frame data | TRIAD §7.1 | v6.4.23 claim by claim (v6.4.8.1 and v6.4.13 historical) |",
  "IF05": "| IF05 | DYAD → GEN | declared-import | direct dyadic input | GEN §7 | v6.4.13 (historical proof pins); v6.4.22 for the §6.3c (C2) rows; v6.4.23 for `DYAD-ALG-NU5-P5` |",
  "IF06": "| IF06 | GEN → TRIAD | declared-import | primitive tetrahedral seed and metric conventions | TRIAD §7.2 | v2.9 claim by claim (the radial-polynomial import held at v2.8.7) |",
  "IF07": "| IF07 | TRIAD → GEN | declared-import | scoped diagnostic exports under the T-6 protocol | GEN §7 | v1.7 claim by claim (CN-01–CN-05 received at v1.6) |",
+ "IF24": "| IF24 | NUMGEN → OFN | reference-only feedback | holonomy operator and representation results (RF-O08-09, RF-O08-10, RF-O09-04) | OFN §11.3 | v1.21 |",
+ "IF28": "| IF28 | RECOG → OFN | declared-import | claim-level imports IMP-O08-17–19 and IMP-O09-01–03; further RECOG feedback as reference-only rows (RF-O08-05, -06; RF-O09-01–03) | OFN §11.2, §11.3 | as declared in OFN §11 |",
+ "IF32": "| IF32 | DYAD, GEN, TDRG, TRIAD, UVM → OFN | declared-import (DYAD, GEN, TDRG); reference-only (TRIAD, UVM) | claim-level imports IMP-O08-01–16, IMP-O08-20 and IMP-O10-01–07; Triadic and OPEN M feedback as reference-only rows (RF-O08-02, -08, -11) | OFN §11.2–11.5 | as declared in OFN §11 |",
  "IF12": "| IF12 | DYAD → NUMGEN | declared-import | selected-map support for continuous history constructions; the L-PHASE row-A remainder | NUMGEN §9.1 | v6.4.18 (map, PRIM-CTR, Q403); v6.4.22 (`DYAD-THM-LPHASE-ROWA-REMAINDER`) |",
  "IF14": "| IF14 | NUMGEN → RECOG | declared-import | contraction, defect and INF-1 results by RID (`NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, L1, N1C, GAP-LOCK Lemma 3 by `NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO`) | RECOG §6.13b, §7 | v1.21 (v1.15 producer pins retained where load-bearing) |",
  "IF16": "| IF16 | DYAD → RECOG | declared-import | map, return coefficients, resonance and normal-form inputs; chart laws; row-A bridge and $C_7$ rows | RECOG §7 | v6.4.23 by RID and section (producer editions named per row) |",
@@ -225,6 +232,7 @@ APPA_NEW = """### v1.4 — 4 November 2026 — DRAFT (candidate; not adopted)
 - **Basis:** PI decision of 4 November 2026 (Programme sync by the atlas owner as editor); the four receiver items of `pipes/PROG/` and the v1.3 post-release note (E-P13-1); Methodology v1.4.
 - **Inventory and interfaces:** eight §6.1 rows to their governing editions (OFN v0.12, NUMGEN v1.21, DYAD v6.4.23, TRIAD v1.7, GEN v2.10, RECOG v0.3.27, TDR-G v2.12.14, Atlas v0.9); the PROG row and §6.2 entry worded for candidate and adopted state alike; §6.2–6.5 entries re-read against the owners' Import Ledgers; §7.2 consumer pins re-read at the governing tags; IF37 (GEN → NUMGEN, an import that predates v1.3) and IF38 (NUMGEN → GEN) added.
 - **Pointers and receipts:** OFN v0.12 as criterion home for P0 and P2B; TDR-G launch-gate record at v2.12.14 (Appendix C aligned by the owner); Triadic CN-05 received and accepted, no action (§7.3); §8.2 class-C row corrected (E-P13-1), κ_f row added, two section pointers corrected; §9.2 state at 4 November 2026.
+- **Source typing (review round 2):** OFN's claim-level imports (DYAD, RECOG, GEN, TDR-G) separated from its reference-only feedback (TRIAD, OPEN M, NUMGEN) in §6.2, §7.1 and IF24/IF28/IF32; OPEN M's imports separated from its references and priors; IF03 records TDR-G's OFN import; tag and release record govern over `BASELINE.md`.
 - **Unchanged:** architecture, maturity semantics and records, the five programme OPEN RIDs (all ACTIVE), SG-PROG-1–4, the restructuring queue, Appendix B.
 - **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`.
 
@@ -232,6 +240,27 @@ APPA_NEW = """### v1.4 — 4 November 2026 — DRAFT (candidate; not adopted)
 
 FOOT_OLD = "*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.3 (ADOPTED, 24 October 2026; pass-two synchronization of the adopted v1.2 architecture under DSN Methodology v1.4).*"
 FOOT_NEW = "*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.4 (DRAFT candidate, 4 November 2026; maintenance synchronization of the adopted v1.3 under DSN Methodology v1.4).*"
+
+R1_OFN_OLD = "Receives scoped technical feedback from DYAD, RECOG, GEN, TRIAD, OPEN M, NUMGEN and TDR-G as imports (OFN §11); it does not acquire the proofs it cites."
+R1_OFN_NEW = ("Imports claim-level statements from DYAD, RECOG, GEN and TDR-G (OFN §11.2, §11.4) and records TRIAD, OPEN M and "
+              "NUMGEN feedback as reference-only (OFN §11.3, §11.5); it does not acquire the proofs it cites, and a TDR-G import "
+              "into this foundational document is not a cross-branch physical bridge.")
+R1_UVM_OLD = "Imports Genesis, Dyadic, Triadic, OFN, Programme and Pre-Legacy priors."
+R1_UVM_NEW = ("Imports Genesis, Dyadic and Triadic (its §7); OFN (model-selection interface, OPEN-M-7 only) and the Programme are "
+              "governance and interface references, and Pre-Legacy supplies historical priors (IF23).")
+R1_G_OFN_OLD = "  OFN <-- DYAD, RECOG, GEN, TRIAD, UVM, NUMGEN, TDRG   (scoped technical feedback, OFN §11)"
+R1_G_OFN_NEW = "  OFN <-- DYAD, RECOG, GEN                             (claim-level imports, OFN §11.2, §11.4)"
+R1_G_REQ_OLD = "  NUMGEN -?-> OFN                      technical feedback synchronization (recorded by OFN as import; open items remain)"
+R1_G_REQ_NEW = "  NUMGEN -?-> OFN                      technical feedback synchronization (recorded by OFN as reference-only or deferred feedback, §11.3)"
+R1_G_DISC_OLD = "  TDRG --> AZ[Thread B/C]"
+R1_G_DISC_NEW = ("  TDRG --> AZ[Thread B/C]\n"
+                 "  TDRG --> OFN; OFN --> TDRG          discrete definitions and lemmas into OFN (§11.2); one OFN lemma into TDR-G (SG-14);\n"
+                 "                                       foundational uses, not a cross-branch physical bridge")
+R1_G_REF_OLD = "  PREL -- hypothesis/provenance only --> UVM"
+R1_G_REF_NEW = "  PREL -- hypothesis/provenance only --> UVM\n  TRIAD, UVM, NUMGEN -- reference-only feedback --> OFN (OFN §11.3)"
+R2_OLD = "`BASELINE.md` carries the SHA-256 values and is the authority if this table and it ever disagree."
+R2_NEW = ("`BASELINE.md` carries the SHA-256 values; if this table and `BASELINE.md` ever disagree, the adopted tag with its "
+          "release record governs (Methodology v1.4 §13.9).")
 
 # ---------------------------------------------------------------------------------------------------------------
 def build(base):
@@ -252,21 +281,28 @@ def build(base):
     b.line("S5-1", "**Owner study:** Programme Overview for coordination; OFN", S5_P0)
     b.line("S5-2", "**Next required decision:** the criterion home is OFN", S5_P2B)
     b.rep("S6-0", S61_INTRO_OLD, S61_INTRO_NEW)
+    b.rep("R2", R2_OLD, R2_NEW)
     for k in ("PROG", "OFN", "NUMGEN", "DYAD", "TRIAD", "GEN", "RECOG", "TDRG", "ATLAS"):
         b.line(f"S6-1-{k}", f"| {k} | `", INV[k])
     b.rep("S6-2-METH", S62_METH_OLD, S62_METH_NEW)
     b.line("S6-2-PROG", "**PROG — Programme Overview** ", S62_PROG)
     b.rep("S6-2-OFN", S62_OFN_OLD, S62_OFN_NEW)
+    b.rep("R1-OFN", R1_OFN_OLD, R1_OFN_NEW)
     b.line("S6-2-NUMGEN", "**NUMGEN — Number Genesis** ", S62_NUMGEN)
     b.line("S6-3-DYAD", "**DYAD — Dyadic Oscillator** ", S63_DYAD)
     b.line("S6-3-TRIAD", "**TRIAD — Triadic Birth–Lift** ", S63_TRIAD)
     b.line("S6-3-GEN", "**GEN — Genesis Geometry** ", S63_GEN)
     b.line("S6-3-RECOG", "**RECOG — Relational Recognition** ", S63_RECOG)
+    b.rep("R1-UVM", R1_UVM_OLD, R1_UVM_NEW)
     b.line("S6-4-TDRG", "**TDRG — Discrete Genesis** ", S64_TDRG)
     b.rep("S6-4-GATE-1", S64_GATE_OLD_HEAD, S64_GATE_NEW_HEAD)
     b.rep("S6-4-GATE-2", S64_GATE_OLD_TAIL, S64_GATE_NEW_TAIL)
     b.rep("S6-5-ATLAS", S65_ATLAS_OLD, S65_ATLAS_NEW)
     b.rep("S7-1", G71_OLD, G71_NEW)
+    b.rep("R1-G-OFN", R1_G_OFN_OLD, R1_G_OFN_NEW)
+    b.rep("R1-G-REQ", R1_G_REQ_OLD, R1_G_REQ_NEW)
+    b.rep("R1-G-DISC", R1_G_DISC_OLD, R1_G_DISC_NEW)
+    b.rep("R1-G-REF", R1_G_REF_OLD, R1_G_REF_NEW)
     b.rep("S7-2-0", R72_INTRO_OLD, R72_INTRO_NEW)
     for k, v in IF.items():
         b.line(f"S7-2-{k}", f"| {k} |", v)

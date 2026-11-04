@@ -26,6 +26,10 @@ Gates
   C15 RECEIVERS   the four pipes/PROG items are answered in the text: OFN v0.12 at the two §5 criterion pointers;
                   κ_f row; class-C row without "atlas reading"; CN-05 receipt line; IF07 at v1.7
   C16 IF IDS      §7.2 rows are IF01..IF38, each once, in order
+  C17 SOURCE TYPE OFN's claim-level import sources are read from OFN §11.2 and §11.4 at its governing tag (the
+                  owner files named in its IMP entries). Every owner the Programme calls an import into OFN (the
+                  §6.2 OFN entry, the §7.1 "OFN <--" line, the declared-import part of each "→ OFN" row of §7.2) is in
+                  that set; every owner it calls reference-only is not (review PR #179, R1)
 """
 import hashlib, json, re, subprocess, sys, io, contextlib
 from collections import Counter
@@ -154,7 +158,52 @@ def run(base, cand, log):
     c.add("C15 RECEIVERS", ok, f"P0 {bool(p0)} P2B {p2b} κ_f {bool(kf)} class-C {bool(classc) and 'atlas reading' not in classc[0]} CN-05 {cn05} IF07 {bool(if07)}")
     ids = re.findall(r"^\| (IF\d\d) \|", reg, re.M)
     c.add("C16 IF IDS", ids == [f"IF{i:02d}" for i in range(1, 39)], f"{len(ids)} rows")
+    imp, probs = source_types(cand)
+    c.add("C17 SOURCE TYPE", not probs, probs or f"OFN imports from {sorted(imp)}; Programme typing agrees")
     return c
+
+FILE_KEY = {"RTG_GENESIS_GEOMETRY_DSN": "GEN", "RTG_DISCRETE_GENESIS_DSN": "TDRG", "RTG_DYADIC_OSCILLATOR_DSN": "DYAD",
+            "RTG_RELATIONAL_RECOGNITION_DSN": "RECOG", "RTG_TRIADIC_BIRTH_LIFT_DSN": "TRIAD", "RTG_NUMBER_GENESIS_DSN": "NUMGEN",
+            "RTG_OPEN_M_DSN": "UVM"}
+NAME_KEY = {"DYAD": "DYAD", "RECOG": "RECOG", "GEN": "GEN", "TDR-G": "TDRG", "TDRG": "TDRG", "TRIAD": "TRIAD",
+            "OPEN M": "UVM", "UVM": "UVM", "NUMGEN": "NUMGEN"}
+def ofn_import_sources():
+    t = at_tag(latest("ofn"), CONSUMERS["OFN"]).decode("utf-8")
+    a = t.find("### 11.2"); b = t.find("### 11.3"); c2 = t.find("### 11.4"); d = t.find("### 11.5")
+    seg = t[a:b] + t[c2:d]
+    keys = set()
+    for line in seg.split("\n"):
+        if re.match(r"^- \*\*IMP-", line):
+            for f, k in FILE_KEY.items():
+                if f"`{f}_v" in line: keys.add(k)
+    return keys
+def names(s): return {NAME_KEY[n] for n in re.findall(r"TDR-G|OPEN M|DYAD|RECOG|GEN|TDRG|TRIAD|UVM|NUMGEN", s)}
+def source_types(cand):
+    imp = ofn_import_sources(); probs = []
+    e = [l for l in cand.split("\n") if l.startswith("**OFN — Ontological Foundations**")]
+    m = re.search(r"Imports claim-level statements from ([^(]+)\(", e[0]) if len(e) == 1 else None
+    r = re.search(r"records ([^.;]+?) feedback as reference-only", e[0]) if len(e) == 1 else None
+    if not (m and r): probs.append("§6.2 OFN entry: import/reference-only sentence missing")
+    else:
+        if not names(m.group(1)) <= imp: probs.append(f"§6.2 OFN: imports {sorted(names(m.group(1)) - imp)} not in OFN §11.2/11.4")
+        if names(r.group(1)) & imp: probs.append(f"§6.2 OFN: reference-only {sorted(names(r.group(1)) & imp)} are imports")
+    g = [l for l in cand.split("\n") if l.startswith("  OFN <-- ")]
+    for l in g:
+        if not names(l.split("(")[0]) <= imp: probs.append(f"§7.1: {sorted(names(l.split('(')[0]) - imp)} drawn as imports into OFN")
+    reg = section(cand, "### 7.2", "### 7.3")
+    for line in reg.split("\n"):
+        cells = [x.strip() for x in line.strip().strip("|").split("|")]
+        if not line.startswith("| IF") or len(cells) != 6 or not cells[1].endswith("→ OFN"): continue
+        src, typ = names(cells[1].split("→")[0]), cells[2]
+        if "reference-only (" in typ or "declared-import (" in typ:
+            dec = names(re.search(r"declared-import \(([^)]*)\)", typ).group(1)) if "declared-import (" in typ else set()
+            ref = names(re.search(r"reference-only \(([^)]*)\)", typ).group(1)) if "reference-only (" in typ else set()
+        elif "import" in typ: dec, ref = src, set()
+        else: dec, ref = set(), src
+        if not dec <= imp: probs.append(f"{cells[0]}: {sorted(dec - imp)} typed as imports into OFN")
+        if ref & imp: probs.append(f"{cells[0]}: {sorted(ref & imp)} typed reference-only but imported by OFN")
+        if dec | ref != src: probs.append(f"{cells[0]}: type split does not cover {sorted(src - dec - ref)}")
+    return imp, probs
 
 def addlog(L, old, new):
     L2 = json.loads(json.dumps(L)); L2["edits"].append(dict(key="X", old=old, new=new)); return L2
@@ -182,6 +231,10 @@ CONTROLS = [
  ("K15 E-P13-1 wording restored (logged)", mut("OFN §11.4 and RRF §6.2a record γ ≡ κ as the class-C parameter convention (Genesis writes γ)", "its relation to Genesis's γ is an atlas reading, not an owner statement"), "C15 RECEIVERS"),
  ("K16 CN-05 receipt dropped (logged)", mut("**Consumer notices received.** Triadic CN-05", "Triadic CN-05"), "C15 RECEIVERS"),
  ("K17 IF row duplicated (logged)", mut("| IF38 | NUMGEN → GEN |", "| IF37 | NUMGEN → GEN |"), "C16 IF IDS"),
+ ("K19 IF24 typed as import again (logged)", mut("| IF24 | NUMGEN → OFN | reference-only feedback |", "| IF24 | NUMGEN → OFN | feedback (recorded import) |"), "C17 SOURCE TYPE"),
+ ("K20 TRIAD drawn as import into OFN (logged)", mut("  OFN <-- DYAD, RECOG, GEN  ", "  OFN <-- DYAD, RECOG, GEN, TRIAD"), "C17 SOURCE TYPE"),
+ ("K21 OFN entry lists NUMGEN as import (logged)", mut("Imports claim-level statements from DYAD, RECOG, GEN and TDR-G (", "Imports claim-level statements from DYAD, RECOG, GEN, NUMGEN and TDR-G ("), "C17 SOURCE TYPE"),
+ ("K22 IF32 split drops TDRG (logged)", mut("declared-import (DYAD, GEN, TDRG); reference-only (TRIAD, UVM)", "declared-import (DYAD, GEN); reference-only (TRIAD, UVM)"), "C17 SOURCE TYPE"),
  ("K18 heading renamed (logged)", mut("### 8.2 Cross-stream symbol table — κ\n", "### 8.2 Symbol table\n"), "C9 SECTIONS"),
 ]
 
