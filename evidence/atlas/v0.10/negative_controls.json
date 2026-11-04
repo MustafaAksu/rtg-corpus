@@ -51,7 +51,7 @@
  },
  {
   "id": "V11",
-  "what": "Φ₂→₃ read as a certified birth law",
+  "what": "Triadic Φ₂→₃ notation read as a certified theorem",
   "detected": true
  },
  {
@@ -72,6 +72,26 @@
  {
   "id": "V15",
   "what": "stale Programme SOURCES row",
+  "detected": true
+ },
+ {
+  "id": "V16",
+  "what": "second full node for one owner claim (Method §4(4))",
+  "detected": true
+ },
+ {
+  "id": "V17",
+  "what": "D_birth read as a complete next-block increment",
+  "detected": true
+ },
+ {
+  "id": "V18",
+  "what": "Y6 typed as stale against the leading GEN theorem",
+  "detected": true
+ },
+ {
+  "id": "V19",
+  "what": "Y6 without the full-birth-law restriction",
   "detected": true
  }
 ]

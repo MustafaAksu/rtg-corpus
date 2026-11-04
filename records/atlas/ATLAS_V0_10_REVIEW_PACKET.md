@@ -1,9 +1,9 @@
 # Atlas v0.10 — review packet
 
 **Date:** 4 November 2026. **By:** Claude, Atlas owner. The Atlas advises; it does not decide. The PI adopts.
-**Status:** DRAFT candidate for review. `atlas-v0.9` governs until adoption.
-**Object:** `atlas/RTG_STATE_ATLAS.md` on branch `claude/atlas-v0.10`, SHA-256 `ea7faa79d16228985f2b8e52e40db66b5dbb04a1f679f8d39360cecd7ab9d1bc` (520,786 bytes, 1,543 lines). Base: `atlas-v0.9`, `b48343f5a4d4c066eb37a325ff87d1dadf686fc6c616b67e7a0ad418dcec3b70` (1,546 lines).
-**Builder:** `evidence/atlas/build/refresh_v0_10.py` (SHA-256 `5505cf00d7fff9106aa785c6b3bed005ee2ad0ad399e4b329300dfc468f25f5c`), run from the repository root with `python3 -I evidence/atlas/build/refresh_v0_10.py`. Two runs gave byte-identical outputs (atlas and all of `evidence/atlas/v0.10/`).
+**Status:** DRAFT candidate for review, revision 2 (after the ChatGPT receiving review, CONDITIONAL PASS; §8). `atlas-v0.9` governs until adoption.
+**Object:** `atlas/RTG_STATE_ATLAS.md` on branch `claude/atlas-v0.10`, SHA-256 `443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7` (521,243 bytes, 1,543 lines; revision 1 was `ea7faa79…d1bc`). Base: `atlas-v0.9`, `b48343f5a4d4c066eb37a325ff87d1dadf686fc6c616b67e7a0ad418dcec3b70` (1,546 lines).
+**Builder:** `evidence/atlas/build/refresh_v0_10.py` (SHA-256 `9405436c738f9c3dd079975ce21d5a4a73d45181a2831634b43c6c7512f2e01c`), run from the repository root with `python3 -I evidence/atlas/build/refresh_v0_10.py`. Two runs gave byte-identical outputs (atlas and all of `evidence/atlas/v0.10/`).
 **Shared checker:** `tools/atlas_check.py` (SHA-256 `2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373`; unchanged since v0.9), with the coverage and identifier maps of `atlas-v0.2`.
 
 ## 1. Scope
@@ -26,10 +26,10 @@ The source snapshot is `main` `fa3db80a935a20b1eff64b0e14c6d0436f861852` (after 
 
 | Group | Edits | Content |
 |---|---|---|
-| GEN v2.10 | 44 | New node `GEN-ALG-P4-DRIFT-IDENTITY` (after `GEN-THM-DELTA-QC`): the general cubic term is stated first, then the premises L⁶=I and G₂=0. The coefficients have no independent certificate (`GEN-ART-P4-PRIMITIVE` [custody-A]). The two `*GEN:birth-symmetry THM` records become `GEN-ALG-BIRTH-SYMMETRY-SEED` `[ALG]`, values unchanged. Chrono-protection gains the independent `[ALG]` route through `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE`; it is "a new proof, not a recovery", and `GEN-ART-G2-CHRONO` stays [custody-A]. T-6s/t/u are imported at `[ALG]`; T-6u has the separate Genesis `[CAND]` reading. The NU5-P5 label is now pinned to `dyad-v6.4.23`. Section pointers are repinned. |
+| GEN v2.10 | 44 | New node `GEN-ALG-P4-DRIFT-IDENTITY` (after `GEN-THM-DELTA-QC`): the general cubic term is stated first, then the premises L⁶=I and G₂=0. The coefficients have no independent certificate (`GEN-ART-P4-PRIMITIVE` [custody-A]). The D4a `*GEN:birth-symmetry THM` record becomes the one home node `GEN-ALG-BIRTH-SYMMETRY-SEED` `[ALG]`, values unchanged, with GEN's caution that D_birth^[s³]=2Q(V_s) is not by itself a complete next-block increment; the D4b record becomes a cross-reference to it. Chrono-protection gains the independent `[ALG]` route through `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE`; it is "a new proof, not a recovery", and `GEN-ART-G2-CHRONO` stays [custody-A]. T-6s/t/u are imported at `[ALG]`; T-6u has the separate Genesis `[CAND]` reading. The NU5-P5 label is now pinned to `dyad-v6.4.23`. Section pointers are repinned. |
 | PROG v1.4 | 15 | SOURCES row. Full IF register at v1.4: IF37 and IF38, plus the OFN import/reference typing of IF24, IF28 and IF32. TDR-G launch-gate record (App. C aligned in v2.12.14; one §7 export row still names the old gate). Maintenance state at v1.4 §9.2. H8, H10, D1 and F1 κ-table pointers (12 rows, κ_f included). PROG.G5, PROG.G6 and D5.X1 pointers. |
 | RECOG v0.3.27 | 13 | SOURCES row and D3 header. New node `RECOG-ALG-A1C-JET-REMAINDER-BOUNDS` (after `RECIPROCAL-DRIFT`). It uses adopted Dyadic rows only, with c_J≤0.500819 and c₇≤100.231 on q≤q\*, and it is not a Dyadic registration. The (D5) `[assuming:]` is removed at H5, at the log-free envelope (ALG·c → ALG, grade unchanged) and at the two Dyadic consumer edges. The R9 C₇ rows import `DYAD-THM-NF-REM-C7-SHARP`. K_ε is shown outward (0.7204/0.4514/0.1861). The drift "not supplied" note now names the registered C₇ ceiling as not applied. |
-| TRIAD finding | 3 | LEGACY.Y6 carries the owner reading. Φ₂→₃ is Triadic `[DEF]` notation (§6.1). Genesis states the leading transverse birth `[THM]` under that name (§1; `GEN-ART-PHI-2TO3` [custody-A]; no RID), and the remainder depends on the child functional (GCL-06). No owner states a certified birth law. The RER citation is typed reference-only and not load-bearing. |
+| TRIAD finding | 3 | LEGACY.Y6 is retyped D-STALE → D-SCOPE and carries the owner readings. Genesis states the leading one-dimensional transverse birth `[THM]` under the name Φ₂→₃ (§1; `GEN-ART-PHI-2TO3` [custody-A]; no RID); the fifth-order remainder is conditional on the child functional, which is OPEN (GCL-06). Triadic uses Φ₂→₃ as `[DEF]` family notation (§6.1). The Legacy phrase matches the leading theorem and overstates only if read as a certified complete birth or event law, which no owner states. The RER citation is typed reference-only and not load-bearing. |
 | identity, currency, pipes | 8 | Title, manifest path, footer. Four "verify/recheck against GEN v2.10" and AZ.A2 pointers. NUMGEN.N-I1 pipe census. |
 
 **GEN pointer rule.** A `GEN v2.9 §X` pointer is repinned to v2.10 only when one of these holds:
@@ -55,7 +55,7 @@ The builder asserts each case; `gen_repin_evidence.json` lists nine entries. The
 - **GEN.D7**: birth symmetry has a RID.
 - **GEN.D6, GEN.D17, F1, OFN.O14, DYAD.X1, PROG.G5, PROG.G6, AZ.A2, PREL.P1**: pointers only.
 - **RECOG.R-L2**: the RECOG route is a second route, noted only.
-- **LEGACY.Y6**: carries the owner reading.
+- **LEGACY.Y6**: retyped D-SCOPE; carries the owner readings.
 - **NUMGEN.N-I1**: census updated.
 
 **Retained unchanged (2): GEN.D3, F11.**
@@ -66,13 +66,13 @@ The builder asserts each case; `gen_repin_evidence.json` lists nine entries. The
 
 | Check | Result |
 |---|---|
-| Shared checker (`atlas_check_report.md`) | sources 72 PASS · coverage 132 PASS · qualifiers 3 PASS · links 499 PASS / 5 UNVERIFIED / 11 DOCUMENTED-UNRESOLVED · artifacts 110 PASS / 3 UNVERIFIED · keys 142 PASS · wording 13 WARN · **0 FAIL** |
+| Shared checker (`atlas_check_report.md`) | sources 72 PASS · coverage 132 PASS · qualifiers 3 PASS · links 499 PASS / 5 UNVERIFIED / 11 DOCUMENTED-UNRESOLVED · artifacts 110 PASS / 3 UNVERIFIED · keys 142 PASS · wording 12 WARN · **0 FAIL** |
 | v0.9 for comparison | links 495/5/11 · artifacts 109/3 · keys 128 · wording 13 WARN |
 | Shared self-test controls | 18/18 as expected |
-| Focused negative controls V1–V15 (`negative_controls.json`) | 15/15 detected |
+| Focused negative controls V1–V19 (`negative_controls.json`) | 19/19 detected |
 | Stale-edition guard | 0 hits outside `*ATLAS:checked-*` lines (dated evidence records, left as recorded) |
-| Scope guards | 12 statement-level checks hold |
-| New RIDs | All four present in the tagged sources. RID set difference: GEN v2.9→v2.10 adds exactly the two GEN RIDs and RECOG v0.3.26→v0.3.27 adds exactly the two RECOG RIDs; none removed. |
+| Scope guards | 14 statement-level checks hold (one home line for the birth-symmetry RID among them) |
+| New RIDs | All four present in the tagged sources (three scientific RIDs with atlas nodes, one artifact RID cited in a `cert` field). RID set difference: GEN v2.9→v2.10 adds exactly the two GEN RIDs and RECOG v0.3.26→v0.3.27 adds exactly the two RECOG RIDs; none removed. |
 | Retired keys | None of the 8 appears in the text |
 | Pipes (`tools/pipes_index.py --check`) | 87 items, 20 inboxes. Snapshot: 38 closed / 1 dispositioned / 48 open. Branch: 38 / 4 / 45 (the three ATLAS items dispositioned). |
 | Reproducibility | Two builds byte-identical |
@@ -87,14 +87,16 @@ The focused controls cover:
 - the jet lemma shown as a Dyadic registration;
 - the 0.36915 constant restored;
 - a consumer repin implied by the producer answer;
-- Φ₂→₃ read as a certified law;
+- Triadic Φ₂→₃ notation read as a certified theorem;
 - NUMGEN→OFN typed as an import;
 - the unsafe K_ε display;
-- birth symmetry back as an unnumbered THM.
+- birth symmetry back as an unnumbered THM;
+- a second full node for the birth-symmetry RID (Method §4(4));
+- D_birth read as a complete next-block increment;
+- Y6 typed D-STALE again;
+- Y6 without the full-birth-law restriction.
 
-The 13 wording WARNs are the v0.9 set, with two changes:
-- the old TDR-G gate WARN is gone;
-- one new "was [THM]" grade-history WARN in D4b.
+The 12 wording WARNs are the v0.9 set less the old TDR-G gate WARN, which is gone.
 
 ## 5. Evidence limits
 
@@ -126,3 +128,16 @@ The atlas owner closes them after the `atlas-v0.10` tag, in the post-release ste
 2. Then the PI's adoption decision. After adoption, the atlas owner:
    - writes the release record (the atlas carries no status line, so the adopted file is this candidate byte for byte);
    - gives one CLI block for merge and tag.
+
+## 8. Revision 2 (after the ChatGPT receiving review)
+
+The review (PR #186, `records/atlas/ATLAS_V0_10_CHATGPT_RECEIVING_REVIEW_20261104.md`; PR #185 comment 6634539731) is a CONDITIONAL PASS. It replayed all 83 edits independently and recomputed the hashes. It asked for two corrections and noted two metadata items. All four are applied in one assertion-gated pass. Three atlas lines change: D4a L1051, D4b L1204 and LEGACY.Y6 L1537. The edit count stays 83, and no source, pipe state or other line changes.
+
+| Item | Change | Gate |
+|---|---|---|
+| R1a — one home per owner claim | D4a L1051 is the one node `GEN-ALG-BIRTH-SYMMETRY-SEED ALG`. It carries GEN §6.6's caution that D_birth^[s³]=7/512Q_s³=2Q(V_s) is the selected seeded-vector radial channel, distinct from Q(V_s)=7/1024Q_s³ and not by itself a demonstrated complete next-block increment, and the FAIL branch `GEN-FAIL-OLD-BIRTH-SIGN-PHASEDRIFT`. D4b L1204 becomes a typed cross-reference (`→ … (cross-domain reference, not a node; the one node is in D4a) \| <GEN-ALG-BIRTH-SYMMETRY-SEED (D4a)`). The chronology wording ("v2.10; was [THM]") is replaced by the current-state record "the former §6.6 [THM] grade is a corrected claim (GEN App. B), values unchanged". | scope guard: exactly one line starts with the RID; controls V16, V17 |
+| R1b — Y6 at scope | `LEGACY.Y6 D-STALE` → `LEGACY.Y6 D-SCOPE`. The line now says the certified part is the leading one: Genesis's `[THM]` c₀^[3]=κQ_sJ_Qs_* under the name Φ₂→₃. The fifth-order remainder holds only if the complete child functional preserves and inherits it (GCL-06, OPEN); Triadic §6.1 is `[DEF]` family notation. The Legacy phrase overstates only if read as a certified complete birth or event law. | scope guard; controls V11 (reworded), V18, V19 |
+| Metadata: repin count | `verification_summary.json` reported 18 GEN repin records because the reproducibility rebuild appended a second copy. `refresh()` now clears the list, so file and summary both give 9. | — |
+| Metadata: RID types | `new_node_rids` now lists the three scientific RIDs only. The artifact `RECOG-ART-A1C-JET-REMAINDER-BOUNDS` is under `new_artifact_rids`; the full set is under `new_rids_at_tag`. | — |
+
+A delta-only re-review of these three lines and the metadata is requested.

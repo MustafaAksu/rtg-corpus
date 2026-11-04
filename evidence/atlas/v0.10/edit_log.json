@@ -506,11 +506,11 @@
  {
   "id": "AR10-057",
   "finding": "GEN v2.10",
-  "where": "birth symmetry RID (D4a)",
+  "where": "birth symmetry RID (D4a home node)",
   "old_sha256": "0fc00151653392edad494ac6282da9a62601520b6585474e3f75985fb1b6e09d",
-  "new_sha256": "980b7c6c1e8e252f01f1c9bfe331777aa6e559e1f2d5d686eec624c47eff0511",
+  "new_sha256": "3c89c43800503e22c3b44a4e3ccc89f50fb4ca202fc9c8eb8fe4a0485d7a7faa",
   "old": "*GEN:birth-symmetry THM | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (3rd quadrant); D_birth^[s³]=7/512Q_s³=2Q(V_s) | old ω=−I branch FAIL | ≡ TRIAD T6U I_{V_s,s} | @§6.6",
-  "new": "GEN-ALG-BIRTH-SYMMETRY-SEED ALG (v2.10; grade [THM]→[ALG] with RID, Appendix B corrected-claim entry; values unchanged) | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (3rd quadrant); D_birth^[s³]=7/512Q_s³=2Q(V_s) | old ω=−I branch FAIL | ≡ TRIAD T6U I_{V_s,s} (TRIAD v1.7 imports it as [THM]; F30) | exact evaluation at seed GEN-ART-G3D-SEED; also from the printed 𝒫₄ through GEN-ALG-P4-DRIFT-IDENTITY ([indep-INB] gate G8) | @§6.6"
+  "new": "GEN-ALG-BIRTH-SYMMETRY-SEED ALG | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (3rd quadrant); D_birth^[s³]=7/512Q_s³=2Q(V_s), the selected seeded-vector radial channel — distinct from the seeded-state amplitude Q(V_s)=Q_{d,1}^[s³]=7/1024Q_s³ and not by itself a demonstrated complete next-block increment | old ω=−I and second-quadrant branch FAIL (GEN-FAIL-OLD-BIRTH-SIGN-PHASEDRIFT) | the former §6.6 [THM] grade is a corrected claim (GEN App. B), values unchanged | ≡ TRIAD T6U I_{V_s,s} (TRIAD v1.7 imports it as [THM]; F30) | exact evaluation at seed GEN-ART-G3D-SEED; also from the printed 𝒫₄ through GEN-ALG-P4-DRIFT-IDENTITY ([indep-INB] gate G8) | >D4b phase-bridge harness (cross-reference there) | @§6.6"
  },
  {
   "id": "AR10-058",
@@ -668,11 +668,11 @@
  {
   "id": "AR10-075",
   "finding": "GEN v2.10",
-  "where": "birth symmetry RID (D4b)",
+  "where": "birth symmetry (D4b cross-reference)",
   "old_sha256": "b63d5816bb3164c784e3b54addea81a22a93226c499949080bfd1f45d6b0412c",
-  "new_sha256": "f5dfa70a7ef5eae3c7439bc93c2b7c30ca650b4c023fe41c2e6fbc740092675c",
+  "new_sha256": "b7429212ebc0f89b81e8742848419457d49f8f0d2d455df908df30ddfcbd4113",
   "old": "*GEN:birth-symmetry THM | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (third quadrant); D_birth^[s³]=7/512Q_s³=2Q(V_s) (an increment-channel diagnostic ≠ the seeded-state amplitude Q(V_s)=7/1024Q_s³) | old ω=−I branch FAIL (GEN-FAIL-OLD-BIRTH-SIGN-PHASEDRIFT) | @GEN§6.6",
-  "new": "GEN-ALG-BIRTH-SYMMETRY-SEED ALG (v2.10; was [THM] at §6.6) | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (third quadrant); D_birth^[s³]=7/512Q_s³=2Q(V_s) (an increment-channel diagnostic ≠ the seeded-state amplitude Q(V_s)=7/1024Q_s³) | old ω=−I branch FAIL (GEN-FAIL-OLD-BIRTH-SIGN-PHASEDRIFT) | @GEN§6.6"
+  "new": "→ GEN-ALG-BIRTH-SYMMETRY-SEED (cross-domain reference, not a node; the one node is in D4a) | the birth phase φ_ds^(1)≈3.8553 of the s³-seeded apex, stated in GEN §6.6 beside this harness; values, scope, the FAIL branch and the not-a-complete-increment caution at the D4a node | <GEN-ALG-BIRTH-SYMMETRY-SEED (D4a) | @GEN§6.6"
  },
  {
   "id": "AR10-076",
@@ -740,10 +740,10 @@
  {
   "id": "AR10-083",
   "finding": "TRIAD finding",
-  "where": "LEGACY.Y6 owner reading",
+  "where": "LEGACY.Y6 owner reading (D-SCOPE)",
   "old_sha256": "7cf9acb97fb50b2eedef04fdb268eeb436dbb15f31e6736850ed8ff9b3de8ca7",
-  "new_sha256": "4e109407feda0a0d0e85d97d81c77b4f9cc2d60493a35647c8d55924421f5494",
+  "new_sha256": "fc04c185778e904c0790a93ba443f45566353420ccff2a1ccd49b3d07585fd5f",
   "old": "LEGACY.Y6 D-STALE (minor): SG-L0L1-10 calls Φ_{2→3} \"the current certified birth theorem in the continuous branch\"; no Φ_{2→3} RID in current GEN/TRIAD (GEN uses c₀^[3], GCL-06, OPEN 5/2B) — terminology to recheck with D4a owners.",
-  "new": "LEGACY.Y6 D-STALE (minor; owner reading, TRIAD v1.7): SG-L0L1-10 calls Φ_{2→3} \"the current certified birth theorem in the continuous branch\". In the owners Φ_{2→3} is notation: Triadic §6.1 `[DEF]` for the declared continuous birth family (the complete physical event OPEN; no RID); Genesis states the leading one-dimensional transverse birth as `[THM]` under that name (§1; proof source GEN-ART-PHI-2TO3 [custody-A]; no result RID), the fifth-order remainder conditional on the selected child functional, the physical residual/child functional OPEN (GCL-06). No owner states a certified birth law or event law; the Legacy wording overstates the current owner state (pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md)."
+  "new": "LEGACY.Y6 D-SCOPE (minor; owner readings, GEN v2.10 and TRIAD v1.7): SG-L0L1-10 calls Φ_{2→3} \"the current certified birth theorem in the continuous branch\". At current owner scope the certified part is the leading one: Genesis states the leading one-dimensional transverse birth, c₀^[3]=κQ_sJ_Qs_*, as `[THM]` under that name (§1; proof source GEN-ART-PHI-2TO3 [custody-A]; no result RID); the fifth-order remainder c₀=κQ_sJ_Qs_*+O(|s_*|⁵) holds only if the selected complete child functional preserves the cubic term and inherits it, and the physical residual/child functional is OPEN (GCL-06). Triadic §6.1 uses Φ_{2→3} as `[DEF]` notation for the declared continuous birth family, the complete physical event OPEN. The Legacy phrase matches the leading Genesis theorem; it overstates only if read as a certified complete birth or event law, which no owner states (pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md)."
  }
 ]

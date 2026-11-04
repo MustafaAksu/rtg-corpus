@@ -5,7 +5,7 @@
 RECOG v0.3.27 notices). Change-focused; no compaction, no Methodology migration of the atlas itself.
 
 GEN (D4a, D4b, D2/D3 edges, H5): new nodes GEN-ALG-P4-DRIFT-IDENTITY (d-mode identity, general cubic term first) and
-GEN-ALG-BIRTH-SYMMETRY-SEED (the two *GEN:birth-symmetry THM records renamed; grade [THM] -> [ALG], values unchanged);
+GEN-ALG-BIRTH-SYMMETRY-SEED (one home node in D4a, grade [ALG], values unchanged; the D4b record becomes a cross-reference — review R1a);
 chrono-protection with the independent [ALG] route (a new proof, not a recovery; GEN-ART-G2-CHRONO stays [custody-A]);
 T-6s/t/u imported at [ALG] (T-6u with the separate Genesis [CAND] reading); section pointers repinned to v2.10 only where
 the cited section is byte-identical at v2.10 or the quoted words are present there. L5: F13, F14, F30, GEN.D7, GEN.D17
@@ -15,7 +15,7 @@ bounded by the new RECOG-ALG-A1C-JET-REMAINDER-BOUNDS); C7 rows import DYAD-THM-
 RECOG.R-A1 retired.
 PROG (D1, H10): IF register at v1.4 (IF37, IF38; OFN import/reference typing); TDR-G launch-gate record; maintenance
 state; PROG.G8 and PROG.G9 retired (answered in v1.4).
-TRIAD finding (pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md): LEGACY.Y6 reworded to the owner reading (Phi_{2->3} is
+TRIAD finding (pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md): LEGACY.Y6 retyped D-STALE -> D-SCOPE (review R1b) and reworded to the owner readings (Phi_{2->3} is
 Triadic [DEF] notation; Genesis states the leading transverse birth [THM] under that name, without a RID); F18 (+ TRIAD.T10)
 retired (the RER citation is reference-only; the p=4 remainder bounds are stated conditionally in Triadic).
 Pipes: NUMGEN.N-I1 states the census at the snapshot and after this edition's three ATLAS state changes.
@@ -89,6 +89,7 @@ def gen_has(sec, quote):
     REPIN_EVIDENCE.append(dict(section=sec, basis=f'quote present at gen-v2.10: {quote}'))
 
 def refresh(a: Edit):
+    REPIN_EVIDENCE.clear()   # one record per pointer per build (the reproducibility rebuild reruns refresh)
     G, R, P, T = 'GEN v2.10', 'RECOG v0.3.27', 'PROG v1.4', 'TRIAD finding'
     # ---- identity ----
     a.rep('# RTG STATE ATLAS v0.9\n', '# RTG STATE ATLAS v0.10\n', 'identity', 'title')
@@ -160,7 +161,7 @@ def refresh(a: Edit):
     a.sub_in_line('GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO THM·c |', 'GEN v2.9 §6.3c G-20 note', 'GEN v2.10 §6.3c G-20 note', G, 'factor no-go pointer')
     a.line('*GEN:chrono-protection THM |', '*GEN:chrono-protection THM | L=diag(A,A,A): G₂(Z)=Σ_{j=0}^5L^{5−j}F₂(L^jZ)=0; ΔQ_u=O(‖Z‖⁴), u∈{s,c,d}; G₃ survives parity filter (ALG; magnitude needs hexagonal-orbit evaluation) | art GEN-ART-G2-CHRONO [custody-A] | independent route (GEN v2.10 §6.4, ALG): application of NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE — first nonlinear degree quadratic, degree-2 vector charges a−b−1∈{1,−1,−3}≢0 mod 6 ⇒ resonant projection of F₂ vanishes ⇒ G₂=0, for every quadratic F₂:ℝ⁶→ℝ⁶, cross-component terms included; exact check [indep-INB] gate G1; a new proof, not a recovery of the original source; RECOG-ALG-LEADING-RETURN-EQUIVARIANCE a second route, noted only (RECOG.R-L2) | >TRIAD (T-6u premise G₂=0), GEN-ALG-P4-DRIFT-IDENTITY | @§6.4', G, 'chrono-protection independent route')
     a.after_line('GEN-THM-DELTA-QC THM |', ['GEN-ALG-P4-DRIFT-IDENTITY ALG (v2.10) | sc: six-step block map Z↦L⁶Z+G₂(Z)+G₃(Z)+O(‖Z‖⁴) of §6.4, Q_d=dᵀBd, d′ the d-component of the image | Q_d(d′)−Q_d(d)=2dᵀBG_{2,d}(Z)+[2dᵀBG_{3,d}(Z)+Q_d(G_{2,d}(Z))]+O(‖Z‖⁵) (cubic term first, quartic bracket second); with L⁶=I (GEN-THM-LIN-ORDER6) and G₂=0 (§6.4) ⇒ 𝒫₄=ΔQ_d^(4)=2dᵀBG_{3,d}, and G_{3,d}(s,c,0)=½B⁻¹∇_d𝒫₄|_{d=0}; the printed ΔQ_d^(4) reproduces the printed seeds Q_{d,1}^[s³]=7/1024Q_s³, Q_{d,1}^[c³]=61/34992Q_c³ ([indep-INB] gates G7a, G7b) | d-mode analogue of GEN-THM-DELTA-QC, distinct from it | ¬ an independent certificate of the ΔQ_d^(4) coefficients (GEN-ART-P4-PRIMITIVE [custody-A]); G₂=0 rests on §6.4 (original source [custody-A], independent route there) | >TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC premise (TRIAD v1.7 still holds the import at gen-v2.8.7; F30) | atlas-checked (3 Nov 2026, by hand; records/gen/ATLAS_ADVISORY_GEN_INBOX_20261103.md §6) | @§6.5'], G, 'new P4 drift identity node')
-    a.line('*GEN:birth-symmetry THM | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (3rd', 'GEN-ALG-BIRTH-SYMMETRY-SEED ALG (v2.10; grade [THM]→[ALG] with RID, Appendix B corrected-claim entry; values unchanged) | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (3rd quadrant); D_birth^[s³]=7/512Q_s³=2Q(V_s) | old ω=−I branch FAIL | ≡ TRIAD T6U I_{V_s,s} (TRIAD v1.7 imports it as [THM]; F30) | exact evaluation at seed GEN-ART-G3D-SEED; also from the printed 𝒫₄ through GEN-ALG-P4-DRIFT-IDENTITY ([indep-INB] gate G8) | @§6.6', G, 'birth symmetry RID (D4a)')
+    a.line('*GEN:birth-symmetry THM | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (3rd', 'GEN-ALG-BIRTH-SYMMETRY-SEED ALG | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (3rd quadrant); D_birth^[s³]=7/512Q_s³=2Q(V_s), the selected seeded-vector radial channel — distinct from the seeded-state amplitude Q(V_s)=Q_{d,1}^[s³]=7/1024Q_s³ and not by itself a demonstrated complete next-block increment | old ω=−I and second-quadrant branch FAIL (GEN-FAIL-OLD-BIRTH-SIGN-PHASEDRIFT) | the former §6.6 [THM] grade is a corrected claim (GEN App. B), values unchanged | ≡ TRIAD T6U I_{V_s,s} (TRIAD v1.7 imports it as [THM]; F30) | exact evaluation at seed GEN-ART-G3D-SEED; also from the printed 𝒫₄ through GEN-ALG-P4-DRIFT-IDENTITY ([indep-INB] gate G8) | >D4b phase-bridge harness (cross-reference there) | @§6.6', G, 'birth symmetry RID (D4a home node)')
     gen_has('6.6', 'This six-member set is a coarse closure ansatz'); a.sub_in_line('*GEN:moment-closure ALG·s |', '| GEN v2.9: coarse closure ansatz', '| GEN v2.10 §6.6: coarse closure ansatz', G, 'moment closure pointer')
     a.sub_in_line('TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC ALG |', '(from V_d=½B⁻¹∇_d𝒫₄, premises G₂=0, 𝒫₄=2dᵀBG_{3,d}; the 𝒫₄ identity keeps its gen-v2.8.7 claim-level pin in TRIAD v1.7 §7.2, not printed at gen-v2.9, F30)',
                   '(from V_d=½B⁻¹∇_d𝒫₄, premises G₂=0, 𝒫₄=2dᵀBG_{3,d}; GEN v2.10 prints the identity as GEN-ALG-P4-DRIFT-IDENTITY; TRIAD v1.7 §7.2 still holds its gen-v2.8.7 claim-level pin — the consumer\'s decision, F30)', G, 'T-6u premise')
@@ -185,7 +186,7 @@ def refresh(a: Edit):
     a.sub_in_line('⊥ (domain-local): c₀', '(GEN v2.9 §6.8; 9A uses sgn(m)κ_f)', '(GEN v2.10 §6.8; 9A uses sgn(m)κ_f)', G, 'D4b κ pointer')
     a.sub_in_line('*GEN:secular-K− ALG·c |', 'GEN v2.9 §6.8)', 'GEN v2.10 §6.8)', G, 'secular pointer')
     a.line('GEN-CAND-APEX-T6U CAND |', 'GEN-CAND-APEX-T6U CAND | V_s=G_{3,d}^[s³](s,0,0), Q(V_s)=7/1024Q_s³; versus Q_c^seed=4/3Q_s³: R_apex=√21/64≈0.0716 (a primitive seed diagnostic; Genesis\'s own [CAND] reading, beneath the [ALG] import of TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC at triad-v1.7 §6.17, GEN v2.10) | ¬ HINDEX/UV source ratio; [d³], [s³] and the UV apex source are distinct | <TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC, GEN-ART-G3D-SEED (D4a) | @GEN§2', G, 'T6U CAND reading')
-    a.line('*GEN:birth-symmetry THM | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (third', 'GEN-ALG-BIRTH-SYMMETRY-SEED ALG (v2.10; was [THM] at §6.6) | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (third quadrant); D_birth^[s³]=7/512Q_s³=2Q(V_s) (an increment-channel diagnostic ≠ the seeded-state amplitude Q(V_s)=7/1024Q_s³) | old ω=−I branch FAIL (GEN-FAIL-OLD-BIRTH-SIGN-PHASEDRIFT) | @GEN§6.6', G, 'birth symmetry RID (D4b)')
+    a.line('*GEN:birth-symmetry THM | s³-seeded apex, d₀=0: I_ds^(1)=ω_ds^(1)=−Q_s²/16 ⇒ φ_ds^(1)=π+arctan(√3/2)≈3.8553 (third', '→ GEN-ALG-BIRTH-SYMMETRY-SEED (cross-domain reference, not a node; the one node is in D4a) | the birth phase φ_ds^(1)≈3.8553 of the s³-seeded apex, stated in GEN §6.6 beside this harness; values, scope, the FAIL branch and the not-a-complete-increment caution at the D4a node | <GEN-ALG-BIRTH-SYMMETRY-SEED (D4a) | @GEN§6.6', G, 'birth symmetry (D4b cross-reference)')
     a.sub_in_line('exports: allowed from this domain —', 'GEN v2.9 §7 lists its consumers', 'GEN v2.10 §7 lists its consumers', G, 'exports pointer')
     a.sub_in_line('GEN.D6 D-SYM (owner-declared):', 'in GEN v2.9 §6.8', 'in GEN v2.10 §6.8', G, 'GEN.D6 pointer')
     a.sub_in_line('GEN.D7 D-RID (D4b part, narrowed v2.9):', 'still RID-less: birth symmetry here, pure chiral protection and tetrahedral chronological protection in D4a',
@@ -195,7 +196,7 @@ def refresh(a: Edit):
     a.sub_in_line('AZ.A2 D-STALE: §4.1.2', '(current GEN v2.9)', '(current GEN v2.10)', 'currency', 'AZ.A2 (D5) pointer')
     a.rep('— verify against GEN v2.9; routing', '— verify against GEN v2.10; routing', 'currency', 'PREL/Legacy row (verify)')
     a.rep('recheck REQ-L07-06 against GEN v2.9.', 'recheck REQ-L07-06 against GEN v2.10.', 'currency', 'Legacy row (recheck)')
-    a.line('LEGACY.Y6 D-STALE (minor):', 'LEGACY.Y6 D-STALE (minor; owner reading, TRIAD v1.7): SG-L0L1-10 calls Φ_{2→3} "the current certified birth theorem in the continuous branch". In the owners Φ_{2→3} is notation: Triadic §6.1 `[DEF]` for the declared continuous birth family (the complete physical event OPEN; no RID); Genesis states the leading one-dimensional transverse birth as `[THM]` under that name (§1; proof source GEN-ART-PHI-2TO3 [custody-A]; no result RID), the fifth-order remainder conditional on the selected child functional, the physical residual/child functional OPEN (GCL-06). No owner states a certified birth law or event law; the Legacy wording overstates the current owner state (pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md).', T, 'LEGACY.Y6 owner reading')
+    a.line('LEGACY.Y6 D-STALE (minor):', 'LEGACY.Y6 D-SCOPE (minor; owner readings, GEN v2.10 and TRIAD v1.7): SG-L0L1-10 calls Φ_{2→3} "the current certified birth theorem in the continuous branch". At current owner scope the certified part is the leading one: Genesis states the leading one-dimensional transverse birth, c₀^[3]=κQ_sJ_Qs_*, as `[THM]` under that name (§1; proof source GEN-ART-PHI-2TO3 [custody-A]; no result RID); the fifth-order remainder c₀=κQ_sJ_Qs_*+O(|s_*|⁵) holds only if the selected complete child functional preserves the cubic term and inherits it, and the physical residual/child functional is OPEN (GCL-06). Triadic §6.1 uses Φ_{2→3} as `[DEF]` notation for the declared continuous birth family, the complete physical event OPEN. The Legacy phrase matches the leading Genesis theorem; it overstates only if read as a certified complete birth or event law, which no owner states (pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md).', T, 'LEGACY.Y6 owner reading (D-SCOPE)')
 
 KEY = re.compile(r'(?<![A-Za-z0-9_.-])((?:[A-Z0-9]+\.[A-Z]+-?[A-Z]?\d+[a-z]?|NUMGEN\.N-Q\*|NUMGEN\.N-[A-Z]+\d*|RECOG\.R-[A-Z]+\d+[a-z]?)|F\d+)(?![A-Za-z0-9_-])')
 ROW = re.compile(r'^((?:[A-Z0-9]+\.[A-Z]+-?[A-Z]?\d+[a-z]?|NUMGEN\.N-Q\*|NUMGEN\.N-[A-Z]+\d*|RECOG\.R-[A-Z]+\d+[a-z]?)|F\d+)(?: \+ ((?:[A-Z0-9]+\.[A-Z]+-?[A-Z]?\d+[a-z]?)))?(?![A-Za-z0-9_-])')
@@ -242,8 +243,11 @@ def scope_guards(text):
     if '¬ an independent certificate of the ΔQ_d^(4) coefficients' not in p4: bad.append('P4 identity: coefficient custody')
     ch = node(text, '*GEN:chrono-protection THM')
     if 'a new proof, not a recovery' not in ch or '[custody-A]' not in ch: bad.append('chrono route not a recovery')
-    for pre in ('GEN-ALG-BIRTH-SYMMETRY-SEED ALG (v2.10; grade', 'GEN-ALG-BIRTH-SYMMETRY-SEED ALG (v2.10; was'):
-        if 'values unchanged' not in node(text, pre) and 'was [THM]' not in node(text, pre): bad.append(f'{pre}: grade history')
+    homes = [l for l in text.split('\n') if l.startswith('GEN-ALG-BIRTH-SYMMETRY-SEED')]
+    if len(homes) != 1: bad.append(f'birth symmetry: {len(homes)} node lines (one home required)')
+    bs = node(text, 'GEN-ALG-BIRTH-SYMMETRY-SEED ALG |')
+    if 'values unchanged' not in bs or 'not by itself a demonstrated complete next-block increment' not in bs: bad.append('birth symmetry: grade record / increment caution')
+    if '<GEN-ALG-BIRTH-SYMMETRY-SEED (D4a)' not in node(text, '→ GEN-ALG-BIRTH-SYMMETRY-SEED (cross-domain reference'): bad.append('birth symmetry: D4b cross-reference')
     j = node(text, 'RECOG-ALG-A1C-JET-REMAINDER-BOUNDS ALG')
     if 'adopted rows only, no RECOG A1c result' not in j or '¬ a Dyadic registration of c_J, c₇' not in j: bad.append('jet bounds: scope / not a Dyadic registration')
     if 'c_J≤0.500819, c₇≤100.231' not in j: bad.append('jet bounds: certified ceilings')
@@ -251,8 +255,8 @@ def scope_guards(text):
     if 'grade unchanged' not in e or 'c′_Q=0.36916' not in e or '0.36915' in e: bad.append('envelope: source condition')
     f30 = node(text, 'F30 D-PIN/D-GRADE')
     if "consumer's decision" not in f30 or 'no Triadic grade changes' not in f30: bad.append('F30: consumer decision')
-    y6 = node(text, 'LEGACY.Y6 D-STALE')
-    if '`[DEF]`' not in y6 or 'No owner states a certified birth law or event law' not in y6: bad.append('Y6: owner reading')
+    y6 = node(text, 'LEGACY.Y6 D-SCOPE')
+    if '`[DEF]`' not in y6 or 'leading one-dimensional transverse birth' not in y6 or 'which no owner states' not in y6 or 'OPEN (GCL-06)' not in y6: bad.append('Y6: owner reading at scope')
     rer = node(text, 'RER-TRIAD-BIRTH-GRAPH-INVOLUTION')
     if 'not load-bearing' not in rer: bad.append('RER citation typing')
     ifr = node(text, '*PROG:IF-register')
@@ -369,18 +373,22 @@ def main():
     t = text.replace(' | ¬ a Dyadic registration of c_J, c₇ (Dyadic\'s decision)', '', 1); ctl('V8', 'RECOG lemma shown as a Dyadic registration', bool(scope_guards(t)))
     t = text.replace('c′_Q=0.36916, K_Θ=123/125', 'c′_Q=0.36915, K_Θ=123/125', 1); ctl('V9', 'below-majorant c′_Q in the envelope source condition', bool(scope_guards(t)))
     t = text.replace('the repin and the import grade are the consumer\'s decision at its next edition', 'the repin follows automatically', 1); ctl('V10', 'consumer repin implied by the producer answer', bool(scope_guards(t)))
-    t = text.replace('No owner states a certified birth law or event law', 'Genesis certifies the birth law', 1); ctl('V11', 'Φ₂→₃ read as a certified birth law', bool(scope_guards(t)))
+    t = text.replace('uses Φ_{2→3} as `[DEF]` notation', 'states Φ_{2→3} as a certified theorem', 1); ctl('V11', 'Triadic Φ₂→₃ notation read as a certified theorem', bool(scope_guards(t)))
     t = text.replace('IF24 NUMGEN→OFN reference-only feedback', 'IF24 NUMGEN→OFN feedback (recorded import)', 1); ctl('V12', 'NUMGEN→OFN typed as an import again', bool(scope_guards(t)))
     t = text.replace('K_ε=0.7204/0.4514/0.1861', 'K_ε=0.7203/0.4513/0.1860', 1); ctl('V13', 'unsafe-direction K_ε display reintroduced', bool(stale_editions(t)))
-    t = text.replace('GEN-ALG-BIRTH-SYMMETRY-SEED ALG (v2.10; was [THM] at §6.6)', '*GEN:birth-symmetry THM', 1); ctl('V14', 'birth symmetry back as an unnumbered THM', bool(stale_editions(t)) or bool(scope_guards(t)))
+    t = text.replace('GEN-ALG-BIRTH-SYMMETRY-SEED ALG |', '*GEN:birth-symmetry THM |', 1); ctl('V14', 'birth symmetry back as an unnumbered THM', bool(stale_editions(t)) or bool(scope_guards(t)))
     t = text.replace('| v1.4 | `programme-v1.4` |', '| v1.3 | `programme-v1.3` |', 1); ctl('V15', 'stale Programme SOURCES row', bool(stale_editions(t)))
+    t = text.replace('→ GEN-ALG-BIRTH-SYMMETRY-SEED (cross-domain reference, not a node; the one node is in D4a)', 'GEN-ALG-BIRTH-SYMMETRY-SEED ALG (D4b copy)', 1); ctl('V16', 'second full node for one owner claim (Method §4(4))', bool(scope_guards(t)))
+    t = text.replace(' and not by itself a demonstrated complete next-block increment', '', 1); ctl('V17', 'D_birth read as a complete next-block increment', bool(scope_guards(t)))
+    t = text.replace('LEGACY.Y6 D-SCOPE (minor;', 'LEGACY.Y6 D-STALE (minor;', 1); ctl('V18', 'Y6 typed as stale against the leading GEN theorem', bool(scope_guards(t)))
+    t = text.replace(', which no owner states (pipes/', ' (pipes/', 1); ctl('V19', 'Y6 without the full-birth-law restriction', bool(scope_guards(t)))
     wjson(OUT / 'negative_controls.json', controls); assert all(x['detected'] for x in controls), controls
     wjson(OUT / 'edit_log.json', a.log)
     r = Edit(base); refresh(r); assert r.text == text
     (ROOT / ATLAS).write_text(text, encoding='utf-8')
     summary = dict(status='DRAFT_REVIEW_READY', base_atlas=BASE_TAG, base_sha256=BASE_SHA, atlas_sha256=sha(text), atlas_bytes=len(text.encode()), atlas_lines=text.count('\n') + 1,
                    source_snapshot=SNAPSHOT, changed_sources=list(MOVED), edit_operations=len(a.log), retired_keys=list(newret), new_keys=[],
-                   new_node_rids=NEW_RIDS, gen_rids_at_tag=len(gen_new), recog_rids_at_tag=len(rec_new), gen_repin_evidence=len(REPIN_EVIDENCE),
+                   new_rids_at_tag=NEW_RIDS, new_node_rids=[r for rs in NEW_RIDS.values() for r in rs if '-ART-' not in r], new_artifact_rids=[r for rs in NEW_RIDS.values() for r in rs if '-ART-' in r], gen_rids_at_tag=len(gen_new), recog_rids_at_tag=len(rec_new), gen_repin_evidence=len(REPIN_EVIDENCE),
                    pipes=dict(items=n_items, snapshot=st_snap, branch=states), dispositions=dict(Counter(d['disposition'] for d in disp)),
                    shared_counts={ch: dict(report.count(ch)) for ch in c.CHECKS}, shared_controls=len(shared), focused_controls=len(controls),
                    h_l5=dict(dangling=hm['dangling'], high_without_h=hm['high_l5_without_h'], l5_rows=hm['l5_rows']),

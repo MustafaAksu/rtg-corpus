@@ -1,7 +1,7 @@
 {
  "meta": {
   "atlas": "atlas/RTG_STATE_ATLAS.md",
-  "atlas_sha": "ea7faa79d16228985f2b8e52e40db66b5dbb04a1f679f8d39360cecd7ab9d1bc",
+  "atlas_sha": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
   "manifest": "evidence/atlas/v0.10/source_manifest.json"
  },
  "rows": [
@@ -5914,12 +5914,6 @@
    "WARN",
    "line 1148",
    "\"was\": …t THM); projection nontriviality: OPEN (was RES) | RET (no RID): soft mode governs …"
-  ],
-  [
-   "wording",
-   "WARN",
-   "line 1204",
-   "\"was\": …GEN-ALG-BIRTH-SYMMETRY-SEED ALG (v2.10; was [THM] at §6.6) | s³-seeded apex, d₀=0: …"
   ],
   [
    "wording",
