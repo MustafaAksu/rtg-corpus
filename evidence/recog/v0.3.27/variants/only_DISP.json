@@ -1,0 +1,89 @@
+{
+ "base_sha256": "45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34",
+ "base_tag": "recog-v0.3.26",
+ "groups": [
+  "DISP"
+ ],
+ "intermediate_sha256": "51a2f8d48db87c53b8b5520a57cf235296bee8a1542d6bcf34f0fb37cbdb0ab9",
+ "declared_new_recog_rids": [],
+ "edit_count": 7,
+ "edits": [
+  {
+   "key": "DISP-KEPS",
+   "group": "DISP",
+   "location": "display: DISP-KEPS",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "01ea5fdae452d1996007b12f072210b8167345e8488390fa0cb91c8a91c355d7",
+   "new_sha256": "2ec0eb248c72eb68f2d207166d8c6db5950465a79ebadfb3874444f97bdd7abc",
+   "old": "$K_\\epsilon=0.7203$, $0.4513$, $0.1860$ at $a=625,1000,2500$",
+   "new": "$K_\\epsilon\\le0.7204$, $0.4514$, $0.1861$ at $a=625,1000,2500$ (certified $0.72030407\\ldots$, $0.45131291\\ldots$, $0.18603976\\ldots$; `[COR]` v0.3.27: outward display of the certified value; the earlier display was nearest-rounded in the unsafe direction, the certificate works with the exact interval)"
+  },
+  {
+   "key": "DISP-C7R",
+   "group": "DISP",
+   "location": "display: DISP-C7R",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "ff9f217539a9266e3c73ffc7aa388f4f58983d2c281a24940ad155b86e3b0f70",
+   "new_sha256": "2358c757b94fed1b9241134cc55ebcf347400f8bc167345a8cfc6f1fcd682eeb",
+   "old": "$c_J^R=0.5008$, $c_7^R=100.23$",
+   "new": "$c_J^R\\le0.5008$, $c_7^R\\le100.231$ (certified $0.50079841\\ldots$, $100.23001968\\ldots$; `[COR]` v0.3.27: outward display of the certified value; the earlier display was nearest-rounded in the unsafe direction, the certificate works with the exact interval)"
+  },
+  {
+   "key": "DISP-G0",
+   "group": "DISP",
+   "location": "display: DISP-G0",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "df4927b4534e1ebe04d16a90b0b6d5d25e2d61aebd5903a1c0f781791952a58c",
+   "new_sha256": "3bbeecb8b3c88648e785a4a59264697b68fecfca3537cd735fb74811239204b8",
+   "old": "$\\gamma_0=0.17715$, $\\gamma_1=205.15$",
+   "new": "$\\gamma_0\\le0.17716$, $\\gamma_1\\le205.15$ (certified $0.17715092\\ldots$, $205.1458651\\ldots$; `[COR]` v0.3.27: outward display of the certified value; the earlier display was nearest-rounded in the unsafe direction, the certificate works with the exact interval)"
+  },
+  {
+   "key": "DISP-BETA",
+   "group": "DISP",
+   "location": "display: DISP-BETA",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "fd4451907bd47182d9bcc64babbc3d017f1f297e19688da08d00a460efd05144",
+   "new_sha256": "ad6fadcf898c05180fae7d18b0dc322d0fe312afc5bb1dd8f6d711856c4f5ff2",
+   "old": "($\\beta(625)=0.799$, $\\beta\\to0.792$)",
+   "new": "($\\beta(625)\\le0.800$, $\\beta\\to0.792$; certified $\\beta(625)=0.7993089\\ldots$ with $c'_Q=0.36916$; `[COR]` v0.3.27: outward display of the certified value; the earlier display was nearest-rounded in the unsafe direction, the certificate works with the exact interval)"
+  },
+  {
+   "key": "DISP-KPHI",
+   "group": "DISP",
+   "location": "display: DISP-KPHI",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "695519a76fe1a6d8cf8ecde41a77d5dde8ce559ee1eda951d6814e8f63ade672",
+   "new_sha256": "b496fb653e3414447dbb00c9ba564d70623b86e05c3b798696086a14444bf29a",
+   "old": "($K_\\Phi\\le220.8471$ / $75.6392$)",
+   "new": "($K_\\Phi\\le220.8471$ / $75.6393$; certified $75.63920819\\ldots$; `[COR]` v0.3.27: outward display of the certified value; the earlier display was nearest-rounded in the unsafe direction, the certificate works with the exact interval)"
+  },
+  {
+   "key": "DISP-WIN",
+   "group": "DISP",
+   "location": "display: DISP-WIN",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "5c2700294d0e17850236526945787c7b7fa14e2cf73e8f164852f2a8be596ba7",
+   "new_sha256": "5a8017895a5f9823defe85f7e7c3a46f5db22f87bec161ef12f6438ce5d08656",
+   "old": "resp. $q_0<1.011\\times10^{-4}$",
+   "new": "resp. $q_0<1.010\\times10^{-4}$ (certified window $q_0<|G|/75.69=1.0109637\\ldots\\times10^{-4}$; `[COR]` v0.3.27: the earlier display $1.011\\times10^{-4}$ lay above the certified window; the theorem's formula and its $C_2$ row are unchanged)"
+  },
+  {
+   "key": "A-1",
+   "group": "ALL",
+   "location": "Appendix A: v0.3.27 draft entry (per variant)",
+   "mode": "str",
+   "region": "appA",
+   "old_sha256": "557b87b3d7b0f0c8f717642598da9e903f6efff58247b53bc2b80f10b6d8ab1c",
+   "new_sha256": "816981f9c8e92458b7bb96bfdee69eba1bcb73b5de08f9d963410cde06f82635",
+   "old": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.26 — 28 October 2026 — Adopted",
+   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.27 — DRAFT, stage 1 (maintenance intermediate; not adopted)\n- **Basis:** the RECOG inbox round after v0.3.26 — Dyadic v6.4.23 notice (registrations DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-NF-REM-C7-SHARP; $c'_Q=0.36916$) and OFN v0.11 notice; Atlas advisory and owner entry note (PR #168); independent co-owner dispositions (PR #169, PR #170); two-co-owner reconciliation of 3 Nov 2026 (PR #172 proposal, PR #173 reply, ChatGPT acceptance record). Each group below carries its own acceptance decision.\n- **Item 7 — display direction (separate decision):** eight displays printed in the safe direction with `[COR]` at the point of use — $K_\\epsilon\\le0.7204$, $0.4514$, $0.1861$ (were $0.7203$, $0.4513$, $0.1860$); $c_7^R\\le100.231$ (was $100.23$); $\\gamma_0\\le0.17716$ (was $0.17715$); $\\beta(625)\\le0.800$ (was $0.799$); $K_\\Phi\\le75.6393$ (was $75.6392$); the B1 window $q_0<1.010\\times10^{-4}$ (was $1.011\\times10^{-4}$, above the certified window). Display corrections only: every certificate works with the exact intervals; no inequality, formula, grade or RID changes.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B.\n- **Records:** release record `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.26` (SHA-256 `45e307f8…dd34`).\n\n### v0.3.26 — 28 October 2026 — Adopted"
+  }
+ ]
+}

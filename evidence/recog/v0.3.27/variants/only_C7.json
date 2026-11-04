@@ -1,0 +1,89 @@
+{
+ "base_sha256": "45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34",
+ "base_tag": "recog-v0.3.26",
+ "groups": [
+  "C7"
+ ],
+ "intermediate_sha256": "20284e9f53c57230579739773ded9217840a6e9e48bf4d5a6cdeba66393bd528",
+ "declared_new_recog_rids": [],
+ "edit_count": 7,
+ "edits": [
+  {
+   "key": "C7-Q",
+   "group": "C7",
+   "location": "§6.13a SHARPENED-ROWS-C7 qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "f787ae2a805b5b139991eb0c2f3e01bee9840656b95d13ae2fbab18eda9da165",
+   "new_sha256": "08e11001f203787f61a373e3f46a19d4432d6564f9d137e84058a1c91c53b262",
+   "old": "`[assuming: $C_7\\le85.1$ on $|z|\\le\\tfrac1{20}$ and $C_7\\le27.7$ on $|z|\\le\\tfrac1{40}$ — Dyadic's published DYAD-THM-NF-REM certificate values $85.07$ / $27.60$ rounded up; these are not Dyadic theorem statements; registration requested (§7)]`",
+   "new": "[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 | DYAD-THM-NF-REM-C7-SHARP] ($C_7\\le85.1$ on $|z|\\le\\tfrac1{20}$ and $C_7\\le27.7$ on $|z|\\le\\tfrac1{40}$, chart and norm of DYAD-THM-NF-REM, rows not mixed; registered at v6.4.23 — the same ceilings RECOG assumed in v0.3.25–v0.3.26; v0.3.27)"
+  },
+  {
+   "key": "C7-DEP",
+   "group": "C7",
+   "location": "§6.13a SHARPENED-ROWS-C7 Depends on",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "0cd1d5aafc4403e4207570563225b987f2b8150cc5507fe5c5329e5f4bb113cb",
+   "new_sha256": "c6236b14234c8d4d3551d42f37ed5365444da503c56ddf5319b0f6f7886db534",
+   "old": "Depends on: RECOG-THM-R9-SHARPENED-ROWS and the listed assumption (the certificate refuses any ceiling below the published value $+0.005$, control NC2).",
+   "new": "Depends on: RECOG-THM-R9-SHARPENED-ROWS and DYAD-THM-NF-REM-C7-SHARP (the certificate's control NC2, written against the earlier displays $85.07$ / $27.60$ $+0.005$, remains conservative against the exact bounds $85.0732\\ldots$ / $27.6022\\ldots$)."
+  },
+  {
+   "key": "C7-NS",
+   "group": "C7",
+   "location": "§6.13a Not supplied",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "8bf7017b5d30d94e813dabae1f0e3bc43d0c8da1323b178e58961b8b4ae78d98",
+   "new_sha256": "3450fea86cdd691e63629f68a25a00c31bc226c7551f0fe4a9ec98806913a83b",
+   "old": "any claim about $C_7$ beyond Dyadic's published values;",
+   "new": "any claim about $C_7$ beyond DYAD-THM-NF-REM and DYAD-THM-NF-REM-C7-SHARP;"
+  },
+  {
+   "key": "C7-KE",
+   "group": "C7",
+   "location": "§6.13b RECIPROCAL-DRIFT Not supplied",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "49f36fb4f38b21ab4e3bd2eee9fe6127674a990c0dd10991f285c0cb0f55b7c2",
+   "new_sha256": "f3997fdcea8ba95759647a24764d0f301ed703028c2bf203cd54aaf3a4f47139",
+   "old": "(a Dyadic bound on $\\operatorname{Re}(\\rho_7/z)$ along an orbit, or the B1-L2 ceiling $C_7\\le85.1$, would lower it)",
+   "new": "(a Dyadic bound on $\\operatorname{Re}(\\rho_7/z)$ along an orbit would lower it, and so would the registered ceiling $C_7\\le85.1$ of DYAD-THM-NF-REM-C7-SHARP — not applied in this edition)"
+  },
+  {
+   "key": "C7-NFREM",
+   "group": "C7",
+   "location": "§7 NF-REM row",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "9b04f645cf03b171a3403225307c712f0dfce1f2b2fce8830fde8816b05ebe65",
+   "new_sha256": "4d15fe2bf7cfdc177c8342f832b8c5fd736d57f00c14a2713639975ba25653e3",
+   "old": "accepted; rows not mixed; certificate values 85.07/27.60; §6.13a sharpened rows (v0.3.25): the one-orbit bound in RECOG-ALG-R9-SUM-LEMMA; the published certificate values $85.07/27.60$ used only as `[assuming:]` ceilings $85.1/27.7$ in RECOG-THM-R9-SHARPENED-ROWS-C7 (registration requested);",
+   "new": "accepted; rows not mixed; certified bounds $85.0732/27.6023$ rounded up (displays corrected at v6.4.23 from $85.07/27.60$); §6.13a sharpened rows (v0.3.25): the one-orbit bound in RECOG-ALG-R9-SUM-LEMMA; the ceilings $85.1/27.7$ of RECOG-THM-R9-SHARPENED-ROWS-C7 imported from DYAD-THM-NF-REM-C7-SHARP since v0.3.27 (row below);"
+  },
+  {
+   "key": "C7-S7-NEW",
+   "group": "C7",
+   "location": "§7 row C7-SHARP after NF-REM",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "5544b279cfd1486afee73e2cd23314976994997843d1d4bff0b77cc351bbc2ce",
+   "new_sha256": "26c34069042c47d84573ddb74ecfd6dd82374500ed3f674f4291d2e50f7c899c",
+   "old": "- [RID: DYAD-THM-NF-REM] :: $C_7/C_D$ profiles $(100,1000)$ on $\\tfrac1{20}$, $(30,250)$ on $\\tfrac1{40}$; $\\widehat U_T\\subset\\{|z|<\\tfrac1{20}\\}$; normalised one-orbit contraction :: Dyadic v6.4.10 §6.14 :: R9 budget, R8 hand-over; §6.13b RECOG-THM-A1B-SLIP-SCHEDULE-U uses the ingredients only — raw-vector tail $|R^{\\rm prim}_{\\ge10,\\rm vec}|\\le332000|W|^{10}$ on $|W|\\le\\tfrac1{16}$ and the degree 7–9 vector ceilings $\\tfrac{2079}{1000},\\tfrac{577}{500},\\tfrac{1763}{1000}$ (present at `dyad-v6.4.22` §6.14; v0.3.24) :: accepted; rows not mixed; certified bounds $85.0732/27.6023$ rounded up (displays corrected at v6.4.23 from $85.07/27.60$); §6.13a sharpened rows (v0.3.25): the one-orbit bound in RECOG-ALG-R9-SUM-LEMMA; the ceilings $85.1/27.7$ of RECOG-THM-R9-SHARPENED-ROWS-C7 imported from DYAD-THM-NF-REM-C7-SHARP since v0.3.27 (row below); §6.13b A1c sharpened schedule (v0.3.25): $C_7$ and the one-orbit contraction in the amplitude brackets and in $c_7^R$; §6.13b RECOG-ALG-A1C-RECIPROCAL-DRIFT (v0.3.26): $C_7$ in $\\gamma_2$ (the dominant part of $K_\\epsilon$) and the one-orbit contraction in $\\sum_jq_j^2$",
+   "new": "- [RID: DYAD-THM-NF-REM] :: $C_7/C_D$ profiles $(100,1000)$ on $\\tfrac1{20}$, $(30,250)$ on $\\tfrac1{40}$; $\\widehat U_T\\subset\\{|z|<\\tfrac1{20}\\}$; normalised one-orbit contraction :: Dyadic v6.4.10 §6.14 :: R9 budget, R8 hand-over; §6.13b RECOG-THM-A1B-SLIP-SCHEDULE-U uses the ingredients only — raw-vector tail $|R^{\\rm prim}_{\\ge10,\\rm vec}|\\le332000|W|^{10}$ on $|W|\\le\\tfrac1{16}$ and the degree 7–9 vector ceilings $\\tfrac{2079}{1000},\\tfrac{577}{500},\\tfrac{1763}{1000}$ (present at `dyad-v6.4.22` §6.14; v0.3.24) :: accepted; rows not mixed; certified bounds $85.0732/27.6023$ rounded up (displays corrected at v6.4.23 from $85.07/27.60$); §6.13a sharpened rows (v0.3.25): the one-orbit bound in RECOG-ALG-R9-SUM-LEMMA; the ceilings $85.1/27.7$ of RECOG-THM-R9-SHARPENED-ROWS-C7 imported from DYAD-THM-NF-REM-C7-SHARP since v0.3.27 (row below); §6.13b A1c sharpened schedule (v0.3.25): $C_7$ and the one-orbit contraction in the amplitude brackets and in $c_7^R$; §6.13b RECOG-ALG-A1C-RECIPROCAL-DRIFT (v0.3.26): $C_7$ in $\\gamma_2$ (the dominant part of $K_\\epsilon$) and the one-orbit contraction in $\\sum_jq_j^2$\n- [RID: DYAD-THM-NF-REM-C7-SHARP] :: $|\\widehat F(z)-J(z)|\\le C_7|z|^7$ with $C_7=85.1$ on $|z|\\le\\tfrac1{20}$ and $C_7=27.7$ on $|z|\\le\\tfrac1{40}$ (exact bounds $85.0731933471\\ldots$, $27.6022209836\\ldots$); the NF-REM constants $100/30$ and $C_D=1000/250$ unchanged :: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 (first published v6.4.23) :: §6.13a RECOG-THM-R9-SHARPENED-ROWS-C7 (v0.3.27; previously the same ceilings under `[assuming:]`) :: chart and norm of DYAD-THM-NF-REM; rows not mixed; $C_D$ not used by RECOG's B1 certificate"
+  },
+  {
+   "key": "A-1",
+   "group": "ALL",
+   "location": "Appendix A: v0.3.27 draft entry (per variant)",
+   "mode": "str",
+   "region": "appA",
+   "old_sha256": "557b87b3d7b0f0c8f717642598da9e903f6efff58247b53bc2b80f10b6d8ab1c",
+   "new_sha256": "35c4f08ba8a964a19f591edaa4c13a4a23f065cccf54bf0947300581d76e2df2",
+   "old": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.26 — 28 October 2026 — Adopted",
+   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.27 — DRAFT, stage 1 (maintenance intermediate; not adopted)\n- **Basis:** the RECOG inbox round after v0.3.26 — Dyadic v6.4.23 notice (registrations DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-NF-REM-C7-SHARP; $c'_Q=0.36916$) and OFN v0.11 notice; Atlas advisory and owner entry note (PR #168); independent co-owner dispositions (PR #169, PR #170); two-co-owner reconciliation of 3 Nov 2026 (PR #172 proposal, PR #173 reply, ChatGPT acceptance record). Each group below carries its own acceptance decision.\n- **R3 — $C_7$ rows (separate decision):** RECOG-THM-R9-SHARPENED-ROWS-C7 imports DYAD-THM-NF-REM-C7-SHARP (the same ceilings $85.1/27.7$, registered at `dyad-v6.4.23`) instead of assuming them; stale wording updated (§6.13a, §6.13b K_ε *Not supplied*, §7 NF-REM row and new C7-SHARP row); the B1 certificate and its NC2 unchanged.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B.\n- **Records:** release record `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.26` (SHA-256 `45e307f8…dd34`).\n\n### v0.3.26 — 28 October 2026 — Adopted"
+  }
+ ]
+}

@@ -1,0 +1,280 @@
+{
+ "base_sha256": "45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34",
+ "base_tag": "recog-v0.3.26",
+ "groups": [
+  "D5B",
+  "R1"
+ ],
+ "intermediate_sha256": "527af7596bd3ce9ebd1171474dd38e150ad872e9533e8ef85da6f8646729b1b6",
+ "declared_new_recog_rids": [
+  "RECOG-ALG-A1C-JET-REMAINDER-BOUNDS",
+  "RECOG-ART-A1C-JET-REMAINDER-BOUNDS"
+ ],
+ "edit_count": 24,
+ "edits": [
+  {
+   "key": "D5B-TAIL",
+   "group": "D5B",
+   "location": "§6.13b TAIL-HARMONICS qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "9637a1fdad932967a8906e31583890e0e791d1d2a79edcd0ea5c4be8c5541722",
+   "new_sha256": "005a85627e4d487f4b22142cf8526c4c08d1d8776bc6dde4500470855bbbc95e",
+   "old": "[RID: RECOG-ALG-A1C-TAIL-HARMONICS] [scope: $x_0\\in U$; every $M\\ge1$] `[assuming: Dyadic row-A bridge constants $c_Q=0.79246$, $c'_Q=0.36915$ ($|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$) and the remainder decomposition $r=\\Lambda_3+{\\rm rest}$ with its constants, as published in the proof of DYAD-THM-LPHASE-ROWA-REMAINDER (certified by DYAD-ART-LPHASE-ROWA); proof constants, not theorem rows; registration requested (§7)]`",
+   "new": "[RID: RECOG-ALG-A1C-TAIL-HARMONICS] [scope: $x_0\\in U$; every $M\\ge1$] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 | DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM] (row-A bridge and remainder constants: the exact decomposition $r=\\Lambda_3+[S_\\Theta-L_\\Theta]+\\tau[D_Q-D_3]+[\\operatorname{Arg}(J/z)+\\tau q]+\\operatorname{Arg}(\\widehat F/J)$ under branch (B), $|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$ with $c_Q=0.79246$, $c'_Q=0.36916$ (`[COR]` v0.3.27: copied before as $0.36915$, a nearest-rounded display below the certified majorant $0.3691523\\ldots$), $K_\\Theta=\\tfrac{123}{125}$ on $|z|\\le\\tfrac1{20}$; $c_J\\le0.50220$, $c_7\\le157.58$ on $q\\le q^*$ by RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; the former (D5) qualifier is discharged, v0.3.27)"
+  },
+  {
+   "key": "D5B-TAIL-DEP",
+   "group": "D5B",
+   "location": "§6.13b TAIL-HARMONICS Depends on",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "3ae3bbf75fe8d3ec7c89aecb01f3df3acdb89c253e0cf5046e3a48d2ba4bb604",
+   "new_sha256": "23450005df8d07b24e4c17d13fdac75bf80480a901c5d597b7105e789a269e3e",
+   "old": "DYAD-ALG-NF6 ($h_2$); the listed assumption.",
+   "new": "DYAD-ALG-NF6 ($h_2$); DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM and RECOG-ALG-A1C-JET-REMAINDER-BOUNDS (the row-A remainder constants; v0.3.27)."
+  },
+  {
+   "key": "D5B-SCHED",
+   "group": "D5B",
+   "location": "§6.13b SHARPENED-SCHEDULE qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "1d6cc641d54d2088a17fc3c1527b7be5d5d7c140f8e1538454922a7208ec18bf",
+   "new_sha256": "2baa43735df4d7e42f9341b677deee2460538c2d928815f32e33a2ebe5f67793",
+   "old": "[RID: RECOG-THM-A1C-SHARPENED-SCHEDULE] [scope: as RECOG-THM-A1B-SLIP-SCHEDULE-U; $a$ known] `[assuming: Dyadic row-A bridge constants $c_Q=0.79246$, $c'_Q=0.36915$ ($|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$) and the remainder decomposition $r=\\Lambda_3+{\\rm rest}$ with its constants, as published in the proof of DYAD-THM-LPHASE-ROWA-REMAINDER (certified by DYAD-ART-LPHASE-ROWA); proof constants, not theorem rows; registration requested (§7)]`",
+   "new": "[RID: RECOG-THM-A1C-SHARPENED-SCHEDULE] [scope: as RECOG-THM-A1B-SLIP-SCHEDULE-U; $a$ known] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 | DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM] (row-A bridge and remainder constants: the exact decomposition $r=\\Lambda_3+[S_\\Theta-L_\\Theta]+\\tau[D_Q-D_3]+[\\operatorname{Arg}(J/z)+\\tau q]+\\operatorname{Arg}(\\widehat F/J)$ under branch (B), $|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$ with $c_Q=0.79246$, $c'_Q=0.36916$ (`[COR]` v0.3.27: copied before as $0.36915$, a nearest-rounded display below the certified majorant $0.3691523\\ldots$), $K_\\Theta=\\tfrac{123}{125}$ on $|z|\\le\\tfrac1{20}$; $c_J\\le0.50220$, $c_7\\le157.58$ on $q\\le q^*$ by RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; the former (D5) qualifier is discharged, v0.3.27)"
+  },
+  {
+   "key": "D5B-SCHED-DEP",
+   "group": "D5B",
+   "location": "§6.13b SHARPENED-SCHEDULE Depends on",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "3989862e3b083696e4b20d4df1b4348c64344e7ecfe45c93950d19dc944a7c5c",
+   "new_sha256": "12710e1a23a72d92e9e6f8bcb413474a67bb3b6348d4aab2a5f01456774363cc",
+   "old": "RECOG-ALG-A1C-COMBINED-TAIL; the listed assumption.",
+   "new": "RECOG-ALG-A1C-COMBINED-TAIL; DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM and RECOG-ALG-A1C-JET-REMAINDER-BOUNDS (the row-A remainder constants; v0.3.27)."
+  },
+  {
+   "key": "D5B-ENV",
+   "group": "D5B",
+   "location": "§6.13b LOGFREE-ENVELOPE qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "d4ecca0e07ab48bda1895dadc390518f2dfe55311ed8aae154f5c92e4529879c",
+   "new_sha256": "f660505e336f3c976c4d683d773cdd8fcefb719540801cb3f00375dfaf468e54",
+   "old": "enclosed (RECOG-ALG-A1C-START-OFFSET); $a$ known] `[assuming: Dyadic row-A bridge constants $c_Q=0.79246$, $c'_Q=0.36915$ ($|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$) and the remainder decomposition $r=\\Lambda_3+{\\rm rest}$ with its constants, as published in the proof of DYAD-THM-LPHASE-ROWA-REMAINDER (certified by DYAD-ART-LPHASE-ROWA); proof constants, not theorem rows; registration requested (§7)]`",
+   "new": "enclosed (RECOG-ALG-A1C-START-OFFSET); $a$ known] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 | DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM] (row-A bridge and remainder constants: the exact decomposition $r=\\Lambda_3+[S_\\Theta-L_\\Theta]+\\tau[D_Q-D_3]+[\\operatorname{Arg}(J/z)+\\tau q]+\\operatorname{Arg}(\\widehat F/J)$ under branch (B), $|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$ with $c_Q=0.79246$, $c'_Q=0.36916$ (`[COR]` v0.3.27: copied before as $0.36915$, a nearest-rounded display below the certified majorant $0.3691523\\ldots$), $K_\\Theta=\\tfrac{123}{125}$ on $|z|\\le\\tfrac1{20}$; $c_J\\le0.50220$, $c_7\\le157.58$ on $q\\le q^*$ by RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; the former (D5) qualifier is discharged, v0.3.27)"
+  },
+  {
+   "key": "D5B-ENV-DEP",
+   "group": "D5B",
+   "location": "§6.13b LOGFREE-ENVELOPE Depends on",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "ca58c70787348958000cad5e9b82a59d22836593f954b23a474057a505bb7b5f",
+   "new_sha256": "bf3e1ff49e3bf00e449692dfaa863c6f57bfe39832465f74ae26af70cfb1c205",
+   "old": "the listed assumption (through $E^{(4)}$ and $\\Delta_a$).",
+   "new": "DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM and RECOG-ALG-A1C-JET-REMAINDER-BOUNDS (the row-A remainder constants; v0.3.27) (through $E^{(4)}$ and $\\Delta_a$)."
+  },
+  {
+   "key": "D5B-SO",
+   "group": "D5B",
+   "location": "§6.16e START-OFFSET (ii) qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "954eb97304b7ec5a56543f9adc4501d3791c0091e973c0218855abefbc8bfe31",
+   "new_sha256": "eed66ec3107584b4d041e8b0148e3fb02363e1e25672624854fbbe01784ddfd5",
+   "old": "(ii) *Signed start offset* `[assuming: Dyadic row-A bridge constants $c_Q=0.79246$, $c'_Q=0.36915$ ($|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$) and the remainder decomposition $r=\\Lambda_3+{\\rm rest}$ with its constants, as published in the proof of DYAD-THM-LPHASE-ROWA-REMAINDER (certified by DYAD-ART-LPHASE-ROWA); proof constants, not theorem rows; registration requested (§7)]`",
+   "new": "(ii) *Signed start offset* [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 | DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM] (row-A bridge and remainder constants: the exact decomposition $r=\\Lambda_3+[S_\\Theta-L_\\Theta]+\\tau[D_Q-D_3]+[\\operatorname{Arg}(J/z)+\\tau q]+\\operatorname{Arg}(\\widehat F/J)$ under branch (B), $|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$ with $c_Q=0.79246$, $c'_Q=0.36916$ (`[COR]` v0.3.27: copied before as $0.36915$, a nearest-rounded display below the certified majorant $0.3691523\\ldots$), $K_\\Theta=\\tfrac{123}{125}$ on $|z|\\le\\tfrac1{20}$; $c_J\\le0.50220$, $c_7\\le157.58$ on $q\\le q^*$ by RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; the former (D5) qualifier is discharged, v0.3.27)"
+  },
+  {
+   "key": "D5B-SO-DEP",
+   "group": "D5B",
+   "location": "§6.16e START-OFFSET Depends on",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "f117ec5e9cbe14f49dd5ec0bfaa9a05fbe440212ab60b1d14aaa36d6333e054f",
+   "new_sha256": "16412030be6777bc925777a2ec41a6f44c9e31940ce384a1ac03dcc3b6092d67",
+   "old": "RECOG-RESULT-A1C-RECORD-PHASE-READOUT ($L$); the listed assumption in (ii) only.",
+   "new": "RECOG-RESULT-A1C-RECORD-PHASE-READOUT ($L$); in (ii) DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM and RECOG-ALG-A1C-JET-REMAINDER-BOUNDS (the row-A remainder constants; v0.3.27)."
+  },
+  {
+   "key": "D5B-ADM",
+   "group": "D5B",
+   "location": "§6.16e ADMISSIBLE-REGION qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "3fa77560fa2b25b3ec8ae4f318da80dbde95bdc3b52c0589e597d50a34014793",
+   "new_sha256": "463a581fae412defc24ffbbf41ed7e57fed95aac9e5b29c27a8a7b71bdc032a1",
+   "old": "[RID: RECOG-ALG-A1C-ADMISSIBLE-REGION] [scope: as RECOG-THM-A1C-SHARPENED-SCHEDULE, $a$ unknown] `[assuming: the Dyadic (D5) row-A bridge proof constants, as RECOG-THM-A1C-SHARPENED-SCHEDULE]`",
+   "new": "[RID: RECOG-ALG-A1C-ADMISSIBLE-REGION] [scope: as RECOG-THM-A1C-SHARPENED-SCHEDULE, $a$ unknown] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 | DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM] (the row-A remainder constants as RECOG-THM-A1C-SHARPENED-SCHEDULE, with RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; the former (D5) qualifier is discharged, v0.3.27)"
+  },
+  {
+   "key": "D5B-JC",
+   "group": "D5B",
+   "location": "§6.16e JOINT-CONTRACTOR qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "f84b1593566fa4fcebafb3dfc28c82bdb9f5489b6b1d3fb475d11684e8ec115b",
+   "new_sha256": "4d0dcbc2f2da2def7df673fc14f185579d8c5b493a93f51fa2a805fe30cc9d05",
+   "old": "the true $a$ is never an input — in every box $a$, $L$, $b$, $\\Theta_0$ and $\\omega=a-b$ are interval variables] `[assuming: the Dyadic (D5) row-A bridge proof constants, as RECOG-THM-A1C-SHARPENED-SCHEDULE]`",
+   "new": "the true $a$ is never an input — in every box $a$, $L$, $b$, $\\Theta_0$ and $\\omega=a-b$ are interval variables] [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 | DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM] (the row-A remainder constants as RECOG-THM-A1C-SHARPENED-SCHEDULE, with RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; the former (D5) qualifier is discharged, v0.3.27)"
+  },
+  {
+   "key": "D5B-S7-LPH",
+   "group": "D5B",
+   "location": "§7 LPHASE row",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "ee251e88b4d873d9cf24e00e7d7d4dec30269196c317d3aa2c0d759d6db160eb",
+   "new_sha256": "4872c4dcf573e5ad30df77b44bf7c6b7c3a440def3f1f2deaf31d2adeb4fe875",
+   "old": "§6.13b A1c sharpened schedule and §6.16e decoder (v0.3.25): the proof constants $c_Q=0.79246$, $c'_Q=0.36915$ of the row-A bridge ($|D_Q|\\le c_Qq^{3/2}$, $|D_Q-D_3|\\le c'_Qq^2$) and the decomposition $r=\\Lambda_3+{\\rm rest}$ of the owner's proof (certified by DYAD-ART-LPHASE-ROWA) are used under `[assuming:]` — proof constants, not theorem rows; registration as owner statements requested; the exact decomposition of $r$ under branch (B) is used in RECOG-ALG-A1C-COMBINED-TAIL",
+   "new": "§6.13b A1c sharpened schedule and §6.16e decoder (v0.3.25): the row-A bridge constants and the exact decomposition of $r$ are imported from DYAD-THM-LPHASE-ROWA-BRIDGE since v0.3.27 (row below; `[COR]` $c'_Q=0.36916$, the earlier copy $0.36915$ being a nearest-rounded display below the certified majorant $0.3691523\\ldots$; the A1c chain rerun with it, release record v0.3.27); $K_\\Theta=\\tfrac{123}{125}$ from DYAD-THM-OPEN3-SPIRAL-REM (row below); the proof-outline constants $c_J=0.50220$, $c_7=157.58$ are bounded RECOG-side by RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; no `[assuming:]` remains on these uses"
+  },
+  {
+   "key": "D5B-S7-NEW",
+   "group": "D5B",
+   "location": "§7 rows BRIDGE, SPIRAL-REM",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "e266a5aaaabe3f323fd74fcb5ca17347261887714857653ed35b1fd085b27d8f",
+   "new_sha256": "724502cdf791f054f52660e60c9ebde50c3685088ebc070597cf759b2b2b7977",
+   "old": "- [RID: DYAD-THM-LPHASE-ROWA-REMAINDER] :: block law $\\hat\\varphi_{6(m+1)}-\\hat\\varphi_{6m}=2\\pi-\\tau Q_m+r_m$, $\\lvert r_m\\rvert\\le\\tfrac{403}{250}Q_m^{3/2}$; branch $\\varepsilon\\le0.04654$ on $U_T$; owner form `[THM]`, not conditional on R9 :: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14 (first published v6.4.19) :: §6.13b RECOG-THM-A1A-PHASE-EXISTENCE-U; §6.13b RECOG-THM-A1B-SLIP-SCHEDULE-U (branch (B) for the $8$-gap exclusion; row A through the series tails; v0.3.24) :: row A only; block base points in $U$, intermediate steps in $U_T$; primitive $Q_m$, not the chart $q$; §6.13b A1c sharpened schedule and §6.16e decoder (v0.3.25): the row-A bridge constants and the exact decomposition of $r$ are imported from DYAD-THM-LPHASE-ROWA-BRIDGE since v0.3.27 (row below; `[COR]` $c'_Q=0.36916$, the earlier copy $0.36915$ being a nearest-rounded display below the certified majorant $0.3691523\\ldots$; the A1c chain rerun with it, release record v0.3.27); $K_\\Theta=\\tfrac{123}{125}$ from DYAD-THM-OPEN3-SPIRAL-REM (row below); the proof-outline constants $c_J=0.50220$, $c_7=157.58$ are bounded RECOG-side by RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; no `[assuming:]` remains on these uses",
+   "new": "- [RID: DYAD-THM-LPHASE-ROWA-REMAINDER] :: block law $\\hat\\varphi_{6(m+1)}-\\hat\\varphi_{6m}=2\\pi-\\tau Q_m+r_m$, $\\lvert r_m\\rvert\\le\\tfrac{403}{250}Q_m^{3/2}$; branch $\\varepsilon\\le0.04654$ on $U_T$; owner form `[THM]`, not conditional on R9 :: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14 (first published v6.4.19) :: §6.13b RECOG-THM-A1A-PHASE-EXISTENCE-U; §6.13b RECOG-THM-A1B-SLIP-SCHEDULE-U (branch (B) for the $8$-gap exclusion; row A through the series tails; v0.3.24) :: row A only; block base points in $U$, intermediate steps in $U_T$; primitive $Q_m$, not the chart $q$; §6.13b A1c sharpened schedule and §6.16e decoder (v0.3.25): the row-A bridge constants and the exact decomposition of $r$ are imported from DYAD-THM-LPHASE-ROWA-BRIDGE since v0.3.27 (row below; `[COR]` $c'_Q=0.36916$, the earlier copy $0.36915$ being a nearest-rounded display below the certified majorant $0.3691523\\ldots$; the A1c chain rerun with it, release record v0.3.27); $K_\\Theta=\\tfrac{123}{125}$ from DYAD-THM-OPEN3-SPIRAL-REM (row below); the proof-outline constants $c_J=0.50220$, $c_7=157.58$ are bounded RECOG-side by RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; no `[assuming:]` remains on these uses\n- [RID: DYAD-THM-LPHASE-ROWA-BRIDGE] :: (i) under branch (B), $r=\\Lambda_3(z)+[S_\\Theta-L_\\Theta]+\\tau[D_Q-D_3]+[\\operatorname{Arg}(J/z)+\\tau q]+\\operatorname{Arg}(\\widehat F/J)$ exactly; (ii) $|D_Q|\\le0.79246\\,q^{3/2}$, $|D_Q-D_3|\\le0.36916\\,q^2$ (certified $0.7924576\\ldots$, $0.3691523\\ldots$) :: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 (first published v6.4.23) :: §6.13b A1c (TAIL-HARMONICS, SHARPENED-SCHEDULE, COMBINED-TAIL, LOGFREE-ENVELOPE), §6.16e (START-OFFSET (ii), decoder) (v0.3.27) :: row-A disk $|z|\\le\\tfrac1{20}$ of the DYAD-THM-NF-INV chart, block base points in $U$, branch (B) on $U_T$\n- [RID: DYAD-THM-OPEN3-SPIRAL-REM] :: $|S_\\Theta-L_\\Theta|\\le K_\\Theta q^2$ with $K_\\Theta=\\tfrac{123}{125}$ on $|z|\\le\\tfrac1{20}$ ($\\tfrac{909}{1000}$ on $\\tfrac1{40}$), rows not mixed :: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 (first published v6.4.14) :: §6.13b A1c, the constant $K_\\Theta$ of the row-A remainder (v0.3.27) :: chart of DYAD-ALG-NF6; NF-REM rows, not mixed"
+  },
+  {
+   "key": "D5B-CT-DEP",
+   "group": "D5B",
+   "location": "§6.13b COMBINED-TAIL Depends on",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "3ce5f633769b7392608a2400476061bc3967eef0572561470f5f065313245408",
+   "new_sha256": "82e5fbcb786d6d397e0435ba4b3ee3d7cd3a99b2b539ba93e4a5e6f2be94b79b",
+   "old": "Depends on: RECOG-ALG-A1C-TAIL-HARMONICS (amplitude brackets), RECOG-ALG-A1C-INBLOCK-ANGLE; DYAD-THM-LPHASE-ROWA-REMAINDER (the decomposition of $r$ under branch (B)); DYAD-THM-NF-REM ($C_7$, $c_1$ row).",
+   "new": "Depends on: RECOG-ALG-A1C-TAIL-HARMONICS (amplitude brackets), RECOG-ALG-A1C-INBLOCK-ANGLE; DYAD-THM-LPHASE-ROWA-BRIDGE (the exact decomposition of $r$ under branch (B), registered at v6.4.23; before, DYAD-THM-LPHASE-ROWA-REMAINDER's proof); DYAD-THM-NF-REM ($C_7$, $c_1$ row); RECOG-ALG-A1C-JET-REMAINDER-BOUNDS ($c_J^R$, $c_7^R$; v0.3.27)."
+  },
+  {
+   "key": "D5B-S1-SCHED",
+   "group": "D5B",
+   "location": "§1 sharpened-schedule qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "46e95a9d66dfc39889d052a027a5f609eb15ba232064d7b0997f3962e02423ef",
+   "new_sha256": "2c097df6e1fbe3814b8e443454ea77756b9300375ef6bcc3c7dfc18b80b4f128",
+   "old": "[RID: RECOG-THM-A1C-SHARPENED-SCHEDULE] `[assuming: Dyadic row-A bridge proof constants (D5)]` (v0.3.25)",
+   "new": "[RID: RECOG-THM-A1C-SHARPENED-SCHEDULE] (v0.3.25; its row-A remainder constants are owner theorem rows or RECOG-certified since v0.3.27 — DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM, RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; the former (D5) qualifier is discharged)"
+  },
+  {
+   "key": "D5B-S1-ENV",
+   "group": "D5B",
+   "location": "§1 envelope qualifier",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "0eb700123f270db89e865ade6e5735374d86135e5f26467744ea64641fceaf69",
+   "new_sha256": "2d2be44cdbef4b9a57338e35fc718956b34552234631b0e075d0926778c76705",
+   "old": "(RECOG-ALG-A1C-LOGFREE-ENVELOPE `[assuming: (D5)]`, §6.13b)",
+   "new": "(RECOG-ALG-A1C-LOGFREE-ENVELOPE, §6.13b; (D5) discharged v0.3.27)"
+  },
+  {
+   "key": "D5B-R6-DEC",
+   "group": "D5B",
+   "location": "§2 R6 decoder sub-item",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "460540e24d0b06437be0b905077f64d2d89bbf17d31132fe9a3d88fa3a239f99",
+   "new_sha256": "0012cc43d26d739e8c19c2eedb08a93e232725d10766ff49ed88669c1f149183",
+   "old": "under the (D5) `[assuming:]` of the envelope;",
+   "new": "with the row-A remainder constants of the envelope (DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM, RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; the former (D5) qualifier discharged at v0.3.27);"
+  },
+  {
+   "key": "D5B-CT-SRC",
+   "group": "D5B",
+   "location": "§6.13b COMBINED-TAIL constants source",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "e599de5900bb30fc4fe47cfa57d5efe554bc2b1cf5d1ee8ed2e901f606b188b9",
+   "new_sha256": "4fbb8a66550500301d38261981bbbce52f2af0ba873b3ebbab4ba31283bfc296",
+   "old": "(RECOG-derived from the explicit jet and $C_7$)",
+   "new": "(RECOG-ALG-A1C-JET-REMAINDER-BOUNDS, from the explicit jet and $C_7$)"
+  },
+  {
+   "key": "D5B-JET",
+   "group": "D5B",
+   "location": "§6.13b JET-REMAINDER-BOUNDS block before COMBINED-TAIL",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "05791343fd5660c61c0707da68fac9bd5b917bde2af616db66c66216fbc5080a",
+   "new_sha256": "f3e8acd0329b1d54c4fea4de7fa65c80958b78d640dda0b3ef3efc6cb801a626",
+   "old": "`[ALG]` [RID: RECOG-ALG-A1C-COMBINED-TAIL] [scope:",
+   "new": "`[ALG]` [RID: RECOG-ALG-A1C-JET-REMAINDER-BOUNDS] [scope: chart of DYAD-ALG-NF6 and DYAD-THM-NF-REM, $0<q=|z|^2\\le q^*=\\tfrac{256}{140625}$ ($<\\tfrac1{400}$: row A); adopted rows only, no RECOG A1c result] [proof: certificate RECOG-ART-A1C-JET-REMAINDER-BOUNDS (exact rationals, interval check); the majorants are those computed for RECOG-ALG-A1C-COMBINED-TAIL (v0.3.25), stated source-independently in v0.3.27 (co-owner reconciliation of 3 Nov 2026)] **Jet and seventh-order remainder bounds.** With $J(z)/z=1+u$, $u=\\mu q+(a_{32}+a_{05}e^{-6i\\Theta})q^2$, $\\bar u=|\\mu|q+A_5q^2$, $A_5=|a_{32}|+|a_{05}|$ (DYAD-ALG-NF6; $\\operatorname{Im}\\mu=-\\tau$): $|\\operatorname{Arg}(J/z)+\\tau q|\\le c_J(q)\\,q^2$, $c_J(q)=\\tfrac{89\\sqrt3}{324}+|a_{05}|+|\\mu|A_5q+\\tfrac12A_5^2q^2+\\bar u^3/(3(1-\\bar u)q^2)$ ($\\tfrac{89\\sqrt3}{324}=\\operatorname{Im}a_{32}-\\tfrac12\\operatorname{Im}\\mu^2$; the logarithm series), and $|\\operatorname{Arg}(\\widehat F/J)|\\le c_7(q)\\,q^3$, $c_7(q)=C_7/((1-\\bar u)(1-w))$, $w=C_7q^3/(1-\\bar u)$, $C_7=100$ (DYAD-THM-NF-REM, $|z|\\le\\tfrac1{20}$). Both majorants increase with $q$, so on $q\\le q^*$: $c_J\\le0.500819$ and $c_7\\le100.231$. Hence the two remainder constants of the proof outline of DYAD-THM-LPHASE-ROWA-REMAINDER that RECOG's closed forms use, $c_J=0.50220$ and $c_7=157.58$, are valid ceilings on RECOG's domain. Depends on: DYAD-ALG-NF6 ($\\mu$, $a_{32}$, $a_{05}$); DYAD-THM-NF-REM ($C_7=100$).\n**Not supplied:** the smaller $c_7$ that $C_7\\le85.1$ (DYAD-THM-NF-REM-C7-SHARP) would give; any bound outside $q\\le q^*$.\n\n`[ALG]` [RID: RECOG-ALG-A1C-COMBINED-TAIL] [scope:"
+  },
+  {
+   "key": "D5B-S8-JET",
+   "group": "D5B",
+   "location": "§8 JET artifact row after CORRECTED-GRID",
+   "mode": "line",
+   "region": "live",
+   "old_sha256": "ffa7e05fe846860dd664d965fc4f79d6946a48a9ba4dcbe0a42b1e424f4a1bb6",
+   "new_sha256": "05493684ba410d656fcfefa9d9a6162887b09f65062cd82ede87e0238ed7e623",
+   "old": "- [RID: RECOG-ART-A1C-CORRECTED-GRID] `[v0.3.26]` :: `recog_v0_3_26_corrected_grid.py` (sha256 `61b8370d11b7a90936216874f835af864bb3af3b842e9aed3e6c08e25df01864`) + `evidence/recog/v0.3.26/corrected_grid.json` (`569b018e…e141`) :: the A1c envelope grids ($a\\in\\{625,1000,2500\\}$, $M=10^3\\ldots10^7$, all $r$) with the corrected closed forms (`Lg_corr` of RECOG-ART-A1C-DRIFT-CENTERING in $\\bar A_1$, $\\bar S'$, $\\bar R'$, $E'$, $E'''$; the $M$-dependent bracket in ${\\rm ref}_d$) next to the v0.3.25 values, and the scaled values at $M=10^9,10^{11},10^{13}$ ($\\bar S'\\sqrt{a+M}$, $\\bar R'\\sqrt{a+M}$, $E'\\sqrt{a+M}$ at their stated limits to $10^{-4}$; $E'''\\sqrt{a+M}\\to0$); the corrected majorants are below the adopted ones at every grid point; no orbit rerun :: `[COR]` evidence (closed-form evaluation)",
+   "new": "- [RID: RECOG-ART-A1C-CORRECTED-GRID] `[v0.3.26]` :: `recog_v0_3_26_corrected_grid.py` (sha256 `61b8370d11b7a90936216874f835af864bb3af3b842e9aed3e6c08e25df01864`) + `evidence/recog/v0.3.26/corrected_grid.json` (`569b018e…e141`) :: the A1c envelope grids ($a\\in\\{625,1000,2500\\}$, $M=10^3\\ldots10^7$, all $r$) with the corrected closed forms (`Lg_corr` of RECOG-ART-A1C-DRIFT-CENTERING in $\\bar A_1$, $\\bar S'$, $\\bar R'$, $E'$, $E'''$; the $M$-dependent bracket in ${\\rm ref}_d$) next to the v0.3.25 values, and the scaled values at $M=10^9,10^{11},10^{13}$ ($\\bar S'\\sqrt{a+M}$, $\\bar R'\\sqrt{a+M}$, $E'\\sqrt{a+M}$ at their stated limits to $10^{-4}$; $E'''\\sqrt{a+M}\\to0$); the corrected majorants are below the adopted ones at every grid point; no orbit rerun :: `[COR]` evidence (closed-form evaluation)\n- [RID: RECOG-ART-A1C-JET-REMAINDER-BOUNDS] `[v0.3.27]` :: `recog_a1c_jet_remainder_bounds_cert.py` (sha256 `0fa7bb4d4179774b2a1a6b9d8472cf3c7e93f45727c6174c3914657f63f1c0f1`) + `evidence/recog/a1c_jet/` (`62854819…b7ae`, `875dea82…68dc`) :: G1 exact rationals (sufficient enclosures of $\\sqrt3$, $|\\mu|$, $|a_{32}|$, $|a_{05}|$ by squared comparisons; $c_J(q^*)<0.500819<0.50220$, $c_7(q^*)<100.231<157.58$; $u,w<1$, $q^*<\\tfrac1{400}$), G2 interval enclosure inside the rational bounds, G3 monotonicity grid, G4 the identity $\\operatorname{Im}a_{32}-\\tfrac12\\operatorname{Im}\\mu^2=\\tfrac{89\\sqrt3}{324}$ (sympy); NC1 the display $100.23$ refused, NC2 the wrong-sign identity exceeds $0.50220$; ALL PASS. Rational bounds from the co-owner reconciliation script `evidence/recog/inbox_reconciliation_20261103/recog_r2_rational_bounds.py` (PR #172) :: `[ALG]` proof input (certificate)"
+  },
+  {
+   "key": "R1-S8-RECOG-ART-A1C-SHARPENED-SCHEDULE",
+   "group": "R1",
+   "location": "§8 row - [RID: RECOG-ART-A1C-SHARPENED-SCHEDULE] ",
+   "mode": "s8",
+   "region": "live",
+   "old_sha256": "91cec5a8f8e2fa6231a02faacb599a80fa7c186e99b5bbac13b20c09d339a1fc",
+   "new_sha256": "377bdde3376399945503b59fcadca41a7054cd05bfe3bbae1f1b6a5ed0ed20fb",
+   "old": "- [RID: RECOG-ART-A1C-SHARPENED-SCHEDULE] `[v0.3.25]` :: part 1b `recog_a1c_tail_averaging_cert.py` (sha256 `2d446dd753d293bff8e5d1e5c2ecf4fc85c7a3a8645a4967f2b5e1bb54e53cf0`) + `evidence/recog/a1c_1b/` (`deb1d039…b32e`, `a8e3a5b4…b9ef`); in-block `recog_a1c_inblock_angular_cert.py` (sha256 `94e318f6a89bdee611b89f956073afbe01bebbd27ada422331526e1582438cbe`) + `evidence/recog/a1c_inblock/` (`c0b7e7df…4724`, `efe95017…2951`); combined tail `recog_a1c_combined_tail_cert.py` (sha256 `25308adf18c03e3bdb5d5d5dab84a75dd0d2c2226dfcad7a6dd0f73ca6a37e7c`) + `evidence/recog/a1c_comb/` (`1948acab…57a0`, `beabd7cc…6eb1`) :: exact sympy identities (harmonics of $D_3$, $\\Lambda_3=L_\\Theta+\\tau D_3$, $(1-2i\\tau)\\mu=-\\tfrac{19}6$, the spiral-derivative identity of $d$), mpmath interval majorants with directed rounding (chart reciprocal law, Hurwitz-zeta tails, the universal ceiling $E'\\le0.31$ on interval boxes, rigorous $\\arcsin$ enclosure), `[NUM]` orbit checks (12 starts, $10^6$ blocks / $1.8\\times10^6$ steps; 48/48, 73/73) with negative controls; superseded part 1 `recog_a1c_known_a_envelope.py` (`7231d72e…1325`) + `evidence/recog/a1c/` (record only). Records: `RECOG_A1C_KNOWN_A_ENVELOPE_SESSION_v0_1.md` v0.2 (`3e946365…9747`, superseded), `RECOG_A1C_TAIL_AVERAGING_SESSION_v0_1.md` v0.2.1 (`41aa0309…447b`), `RECOG_A1C_INBLOCK_ANGULAR_SESSION_v0_1.md` v0.2 (`614f7602…37d1`), `RECOG_A1C_COMBINED_TAIL_SESSION_v0_1.md` v0.2 (`8c77f541…d0bb`) :: `[ALG]`/`[THM]` proof inputs (certificates) and `[NUM]` illustrations",
+   "new": "- [RID: RECOG-ART-A1C-SHARPENED-SCHEDULE] `[v0.3.25]` :: part 1b `recog_a1c_tail_averaging_cert.py` (sha256 `c731cf1b7105bf70d4e5ce4f1d993f5009bbeb0cdcc9c82144dde7ddc93dff24`) + `evidence/recog/a1c_1b/` (`d7bbe537…5995`, `9afec446…d1bf`); in-block `recog_a1c_inblock_angular_cert.py` (sha256 `94e318f6a89bdee611b89f956073afbe01bebbd27ada422331526e1582438cbe`) + `evidence/recog/a1c_inblock/` (`89d9beff…b3d4`, `88c37eb0…140a`); combined tail `recog_a1c_combined_tail_cert.py` (sha256 `25308adf18c03e3bdb5d5d5dab84a75dd0d2c2226dfcad7a6dd0f73ca6a37e7c`) + `evidence/recog/a1c_comb/` (`0d0b4e5c…a894`, `beabd7cc…6eb1`) :: exact sympy identities (harmonics of $D_3$, $\\Lambda_3=L_\\Theta+\\tau D_3$, $(1-2i\\tau)\\mu=-\\tfrac{19}6$, the spiral-derivative identity of $d$), mpmath interval majorants with directed rounding (chart reciprocal law, Hurwitz-zeta tails, the universal ceiling $E'\\le0.31$ on interval boxes, rigorous $\\arcsin$ enclosure), `[NUM]` orbit checks (12 starts, $10^6$ blocks / $1.8\\times10^6$ steps; 48/48, 73/73) with negative controls; superseded part 1 `recog_a1c_known_a_envelope.py` (`7231d72e…1325`) + `evidence/recog/a1c/` (record only). Records: `RECOG_A1C_KNOWN_A_ENVELOPE_SESSION_v0_1.md` v0.2 (`3e946365…9747`, superseded), `RECOG_A1C_TAIL_AVERAGING_SESSION_v0_1.md` v0.2.1 (`41aa0309…447b`), `RECOG_A1C_INBLOCK_ANGULAR_SESSION_v0_1.md` v0.2 (`614f7602…37d1`), `RECOG_A1C_COMBINED_TAIL_SESSION_v0_1.md` v0.2 (`8c77f541…d0bb`) :: `[ALG]`/`[THM]` proof inputs (certificates) and `[NUM]` illustrations; `[v0.3.27]` outputs regenerated by the owner rerun with $c'_Q=0.36916$ (R1; release record v0.3.27)"
+  },
+  {
+   "key": "R1-S8-RECOG-ART-A1C-DECODER",
+   "group": "R1",
+   "location": "§8 row - [RID: RECOG-ART-A1C-DECODER] ",
+   "mode": "s8",
+   "region": "live",
+   "old_sha256": "a58ebfa14cbd69ce13dc87bf5c82b1087ac261dd8ffadaac5b248799641435e4",
+   "new_sha256": "bcf1e8780ccac3fffb6745aaad35c33eb8ba930c6d511b909b470a8b99d944c6",
+   "old": "- [RID: RECOG-ART-A1C-DECODER] `[v0.3.25]` :: part 2 `recog_a1c_unknown_a_interval_cert.py` (sha256 `746bf4b0bf964bc3dcf86a910b865da9db2bef7978abaf127bc26dd8c1643380`) + `evidence/recog/a1c_2/` (`73720b80…2bfe`, `99e22d1b…324e`); start offset `recog_a1c_start_offset_cert.py` (sha256 `79622f3b2b434d4c6383e89d699760620498aafd8c04d41d380eeb3b7674bbb4`) + `evidence/recog/a1c_so/` (`6a16f295…eff4`, `d0db0bcc…9c1e`); joint transfer `recog_a1c_joint_transfer_cert.py` (`e964ec91cfed63a34a1f01b69bca97ba5d677a090d26d4b54f74432ae87eceff`) + `evidence/recog/a1c_joint/` (`b5f28e5f…e8eb`, `8e8f46f2…237f`) :: rigorous digamma bracket and bisection (Lemma 8), interval box classification with outward/inward rounding and exact-adjacency merging, circle-arc intersection over all $2\\pi$-branches, per-box contractor with the true $a$ used only in the containment tests; gates (containment 12/12, narrower than the previous cell, $\\omega$ narrower than $2\\Delta_a$, uniform sector width $<2\\pi$, circular-hull controls) and controls (corrupted record, wrong $n_0$, wide-box). Records: `RECOG_A1C_UNKNOWN_A_INTERVAL_SESSION_v0_1.md` v0.2.1 (`356299ef…9a1a`), `RECOG_A1C_START_OFFSET_SESSION_v0_1.md` v0.2 (`52343d4d…6ac6`), `RECOG_A1C_JOINT_TRANSFER_SESSION_v0_1.md` v0.2 (`ee790103…861a`) :: `[ALG]` certified computations and `[NUM]` per-record results",
+   "new": "- [RID: RECOG-ART-A1C-DECODER] `[v0.3.25]` :: part 2 `recog_a1c_unknown_a_interval_cert.py` (sha256 `746bf4b0bf964bc3dcf86a910b865da9db2bef7978abaf127bc26dd8c1643380`) + `evidence/recog/a1c_2/` (`dfbd8619…c244`, `99e22d1b…324e`); start offset `recog_a1c_start_offset_cert.py` (sha256 `79622f3b2b434d4c6383e89d699760620498aafd8c04d41d380eeb3b7674bbb4`) + `evidence/recog/a1c_so/` (`deaf180d…bf50`, `35c37c22…4762`); joint transfer `recog_a1c_joint_transfer_cert.py` (`e964ec91cfed63a34a1f01b69bca97ba5d677a090d26d4b54f74432ae87eceff`) + `evidence/recog/a1c_joint/` (`efa66a4a…412b`, `8e8f46f2…237f`) :: rigorous digamma bracket and bisection (Lemma 8), interval box classification with outward/inward rounding and exact-adjacency merging, circle-arc intersection over all $2\\pi$-branches, per-box contractor with the true $a$ used only in the containment tests; gates (containment 12/12, narrower than the previous cell, $\\omega$ narrower than $2\\Delta_a$, uniform sector width $<2\\pi$, circular-hull controls) and controls (corrupted record, wrong $n_0$, wide-box). Records: `RECOG_A1C_UNKNOWN_A_INTERVAL_SESSION_v0_1.md` v0.2.1 (`356299ef…9a1a`), `RECOG_A1C_START_OFFSET_SESSION_v0_1.md` v0.2 (`52343d4d…6ac6`), `RECOG_A1C_JOINT_TRANSFER_SESSION_v0_1.md` v0.2 (`ee790103…861a`) :: `[ALG]` certified computations and `[NUM]` per-record results; `[v0.3.27]` outputs regenerated by the owner rerun with $c'_Q=0.36916$ (R1; release record v0.3.27)"
+  },
+  {
+   "key": "R1-S8-RECOG-ART-A1C-DRIFT-CENTERING",
+   "group": "R1",
+   "location": "§8 row - [RID: RECOG-ART-A1C-DRIFT-CENTERING] ",
+   "mode": "s8",
+   "region": "live",
+   "old_sha256": "2aa23077f0193bff7aa0e3ab5ec990da3c33cdf1e87658fdac36c9824035b83d",
+   "new_sha256": "338a507c58469e7eec13bdf8952bd0c1ca1e79726df6bed08488ce06ec32a9a9",
+   "old": "- [RID: RECOG-ART-A1C-DRIFT-CENTERING] `[v0.3.26]` :: `recog_a1c_drift_centering_cert.py` (sha256 `69edfebd9f4ca981ac012e4906de6ed677f9e2acf77927ee58e1ed87f49ca0b8`) (revision 2) + `recog_a1c_drift_proof_table_cert.py` (sha256 `cbf61921e3ba8d8026e3a934ca20a50a4507ec68c8b1d5b85fbb2ed6ce222e0e`) + `evidence/recog/a1c_drift/` (`cbf0e806…fc80`, `c9e2b2f0…6058`) with `a1c_drift_proof_table_cert.json` (`e7c4731e…063f`), `a1c_drift_proof_table_cert_output.txt` (`5d920631…1102`) :: sympy exact identities (the first-order coefficient of $1/q'-1/q-1$; the antiderivatives of the log integrals; $H_m$ as a digamma difference), interval constants ($\\gamma_2$; the Euler–Maclaurin bound at $\\operatorname{Re}s=1$ against mpmath's Hurwitz zeta; $K_\\epsilon$ and its components), the closed-form $\\Lambda^{\\log}$ against direct summation, `Lg_corr` against brute-force sums (five $M$ including $M<b'$, three $p$, two $a$) and below `Lg`, the asymptotic table to $M=10^{13}$ (floors of the v0.3.25 majorants; corrected limits; $E^{(5)}(a+M)$ bounded and non-increasing from $10^4$), `[NUM]` jet-model orbits and the 12 primitive orbits ($1.8\\times10^6$ steps); gates G1–G5, controls NC1–NC2, ALL PASS; the proof-table certificate: the Lemma 22 rows (brute-force tails, suprema, the Euler–Maclaurin bound on $500$ points, the partial-sum identity, $K_\\epsilon$ from the rows), the sum form of $E^5$, the all-$M$ constants $c_i(a,r)$ against $T_i(a+M)$ at $28$ values of $M$ ($1\\ldots10^13$; three $a$, six $r$), the monotonicity facts; gates PT1–PT4, ALL PASS. Record: `RECOG_A1C_DRIFT_CENTERING_SESSION_v0_1.md` v0.3 (`f741874f…2507`) :: `[ALG]` proof inputs (certificate), `[COR]` evidence (`Lg_corr`), `[NUM]` illustrations",
+   "new": "- [RID: RECOG-ART-A1C-DRIFT-CENTERING] `[v0.3.26]` :: `recog_a1c_drift_centering_cert.py` (sha256 `69edfebd9f4ca981ac012e4906de6ed677f9e2acf77927ee58e1ed87f49ca0b8`) (revision 2) + `recog_a1c_drift_proof_table_cert.py` (sha256 `cbf61921e3ba8d8026e3a934ca20a50a4507ec68c8b1d5b85fbb2ed6ce222e0e`) + `evidence/recog/a1c_drift/` (`bbd3caa7…6b7a`, `c9e2b2f0…6058`) with `a1c_drift_proof_table_cert.json` (`64f7cb69…8635`), `a1c_drift_proof_table_cert_output.txt` (`5d920631…1102`) :: sympy exact identities (the first-order coefficient of $1/q'-1/q-1$; the antiderivatives of the log integrals; $H_m$ as a digamma difference), interval constants ($\\gamma_2$; the Euler–Maclaurin bound at $\\operatorname{Re}s=1$ against mpmath's Hurwitz zeta; $K_\\epsilon$ and its components), the closed-form $\\Lambda^{\\log}$ against direct summation, `Lg_corr` against brute-force sums (five $M$ including $M<b'$, three $p$, two $a$) and below `Lg`, the asymptotic table to $M=10^{13}$ (floors of the v0.3.25 majorants; corrected limits; $E^{(5)}(a+M)$ bounded and non-increasing from $10^4$), `[NUM]` jet-model orbits and the 12 primitive orbits ($1.8\\times10^6$ steps); gates G1–G5, controls NC1–NC2, ALL PASS; the proof-table certificate: the Lemma 22 rows (brute-force tails, suprema, the Euler–Maclaurin bound on $500$ points, the partial-sum identity, $K_\\epsilon$ from the rows), the sum form of $E^5$, the all-$M$ constants $c_i(a,r)$ against $T_i(a+M)$ at $28$ values of $M$ ($1\\ldots10^13$; three $a$, six $r$), the monotonicity facts; gates PT1–PT4, ALL PASS. Record: `RECOG_A1C_DRIFT_CENTERING_SESSION_v0_1.md` v0.3 (`f741874f…2507`) :: `[ALG]` proof inputs (certificate), `[COR]` evidence (`Lg_corr`), `[NUM]` illustrations; `[v0.3.27]` outputs regenerated by the owner rerun with $c'_Q=0.36916$ (R1; release record v0.3.27)"
+  },
+  {
+   "key": "R1-S8-RECOG-ART-A1C-CORRECTED-GRID",
+   "group": "R1",
+   "location": "§8 row - [RID: RECOG-ART-A1C-CORRECTED-GRID] ",
+   "mode": "s8",
+   "region": "live",
+   "old_sha256": "ffa7e05fe846860dd664d965fc4f79d6946a48a9ba4dcbe0a42b1e424f4a1bb6",
+   "new_sha256": "cf9f1526d932f8feeb06f1c927c5fcabaef85a8bd4b9ea7538275336cba8af0d",
+   "old": "- [RID: RECOG-ART-A1C-CORRECTED-GRID] `[v0.3.26]` :: `recog_v0_3_26_corrected_grid.py` (sha256 `61b8370d11b7a90936216874f835af864bb3af3b842e9aed3e6c08e25df01864`) + `evidence/recog/v0.3.26/corrected_grid.json` (`569b018e…e141`) :: the A1c envelope grids ($a\\in\\{625,1000,2500\\}$, $M=10^3\\ldots10^7$, all $r$) with the corrected closed forms (`Lg_corr` of RECOG-ART-A1C-DRIFT-CENTERING in $\\bar A_1$, $\\bar S'$, $\\bar R'$, $E'$, $E'''$; the $M$-dependent bracket in ${\\rm ref}_d$) next to the v0.3.25 values, and the scaled values at $M=10^9,10^{11},10^{13}$ ($\\bar S'\\sqrt{a+M}$, $\\bar R'\\sqrt{a+M}$, $E'\\sqrt{a+M}$ at their stated limits to $10^{-4}$; $E'''\\sqrt{a+M}\\to0$); the corrected majorants are below the adopted ones at every grid point; no orbit rerun :: `[COR]` evidence (closed-form evaluation)",
+   "new": "- [RID: RECOG-ART-A1C-CORRECTED-GRID] `[v0.3.26]` :: `recog_v0_3_26_corrected_grid.py` (sha256 `61b8370d11b7a90936216874f835af864bb3af3b842e9aed3e6c08e25df01864`) + `evidence/recog/v0.3.26/corrected_grid.json` (`7e464519…af06`) :: the A1c envelope grids ($a\\in\\{625,1000,2500\\}$, $M=10^3\\ldots10^7$, all $r$) with the corrected closed forms (`Lg_corr` of RECOG-ART-A1C-DRIFT-CENTERING in $\\bar A_1$, $\\bar S'$, $\\bar R'$, $E'$, $E'''$; the $M$-dependent bracket in ${\\rm ref}_d$) next to the v0.3.25 values, and the scaled values at $M=10^9,10^{11},10^{13}$ ($\\bar S'\\sqrt{a+M}$, $\\bar R'\\sqrt{a+M}$, $E'\\sqrt{a+M}$ at their stated limits to $10^{-4}$; $E'''\\sqrt{a+M}\\to0$); the corrected majorants are below the adopted ones at every grid point; no orbit rerun :: `[COR]` evidence (closed-form evaluation); `[v0.3.27]` outputs regenerated by the owner rerun with $c'_Q=0.36916$ (R1; release record v0.3.27)"
+  },
+  {
+   "key": "A-1",
+   "group": "ALL",
+   "location": "Appendix A: v0.3.27 draft entry (per variant)",
+   "mode": "str",
+   "region": "appA",
+   "old_sha256": "557b87b3d7b0f0c8f717642598da9e903f6efff58247b53bc2b80f10b6d8ab1c",
+   "new_sha256": "717c79027e51a2e22632d4bc5a68ba9dd2e2edac96629d62452968d593db5462",
+   "old": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.26 — 28 October 2026 — Adopted",
+   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.27 — DRAFT, stage 1 (maintenance intermediate; not adopted)\n- **Basis:** the RECOG inbox round after v0.3.26 — Dyadic v6.4.23 notice (registrations DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-NF-REM-C7-SHARP; $c'_Q=0.36916$) and OFN v0.11 notice; Atlas advisory and owner entry note (PR #168); independent co-owner dispositions (PR #169, PR #170); two-co-owner reconciliation of 3 Nov 2026 (PR #172 proposal, PR #173 reply, ChatGPT acceptance record). Each group below carries its own acceptance decision.\n- **R1 — $c'_Q$ (correction of an assumed constant, separate decision):** RECOG copied the row-A bridge constant as $c'_Q=0.36915$, a nearest-rounded display below the certified majorant $0.3691523\\ldots$; Dyadic registered $c'_Q=0.36916$ in DYAD-THM-LPHASE-ROWA-BRIDGE (`dyad-v6.4.23`). The part-1b literal is changed, the eight A1c certificates and the corrected grid were rerun by the owner (every gate passes; no printed decimal changes except $\\beta(625)$, now $0.7993089\\ldots$, printed $\\le0.800$), and the four affected §8 rows are re-registered. `[COR]` at the points of use; no Appendix B entry (no claim withdrawn).\n- **R2 — (D5) discharged, option (b) (separate decision):** new RECOG-ALG-A1C-JET-REMAINDER-BOUNDS `[ALG]` (§6.13b; $c_J\\le0.500819$, $c_7\\le100.231$ on $q\\le q^*$, from DYAD-ALG-NF6 and DYAD-THM-NF-REM only; RECOG-ART-A1C-JET-REMAINDER-BOUNDS, §8); with DYAD-THM-LPHASE-ROWA-BRIDGE and DYAD-THM-OPEN3-SPIRAL-REM imported, every row-A remainder constant of the known-$a$ chain is an owner theorem row or RECOG-certified, and the `[assuming:]` is removed at TAIL-HARMONICS, SHARPENED-SCHEDULE, LOGFREE-ENVELOPE, START-OFFSET (ii), ADMISSIBLE-REGION, JOINT-CONTRACTOR (§1, §2 R6 decoder line, §7 rows aligned). No grade changes; no statement other than the source condition changes.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B.\n- **Records:** release record `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.26` (SHA-256 `45e307f8…dd34`).\n\n### v0.3.26 — 28 October 2026 — Adopted"
+  }
+ ]
+}

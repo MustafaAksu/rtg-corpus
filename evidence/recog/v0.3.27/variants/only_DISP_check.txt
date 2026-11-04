@@ -1,0 +1,32 @@
+base 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34
+intermediate 51a2f8d48db87c53b8b5520a57cf235296bee8a1542d6bcf34f0fb37cbdb0ab9 (groups DISP, 7 edits)
+GATES:
+  C0   PASS BASE
+  C1   PASS BUILD
+  C2   PASS REVERSE
+  C3   PASS APPENDIX A
+  C4   PASS SPAN TAGS 
+  C5   PASS SPAN RIDS []
+  C6   PASS STATUS (byte-identical)
+  C7   PASS RID SET
+  C8   PASS RID ATTACH
+  C9   PASS RESULT
+  C10  PASS QUALIFIERS
+  C11  PASS VOCAB
+  C12  PASS IMPORTS
+  C13  PASS UNCHANGED (R9, A1B, schedule display, TAIL-HARMONICS items, Q1′, B1 formula)
+  C14  PASS HEADER
+  C15  PASS HEADINGS
+  C16  PASS §8 FILES (0 rows, 0 hashes checked)
+  C17  PASS LIVE
+  C18  PASS DECOUPLE
+  C19  PASS VALUES
+  C20  PASS NOTICES
+  C21  PASS TAG CENSUS
+  C22  PASS ASSUMING
+  C24  PASS R83-1 (known-a centre never called record-only; decoder closure scoped)
+  C23  PASS RECORDS
+  C25  PASS APPENDIX B (byte-identical)
+  C26  PASS DIRECTION (22 displays)
+
+RESULT: PASS

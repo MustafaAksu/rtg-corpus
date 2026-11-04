@@ -10,7 +10,7 @@
   "recog_a1c_start_offset_cert.py": "79622f3b2b434d4c6383e89d699760620498aafd8c04d41d380eeb3b7674bbb4",
   "recog_a1c_combined_tail_cert.py": "25308adf18c03e3bdb5d5d5dab84a75dd0d2c2226dfcad7a6dd0f73ca6a37e7c",
   "recog_a1c_inblock_angular_cert.py": "94e318f6a89bdee611b89f956073afbe01bebbd27ada422331526e1582438cbe",
-  "recog_a1c_tail_averaging_cert.py": "2d446dd753d293bff8e5d1e5c2ecf4fc85c7a3a8645a4967f2b5e1bb54e53cf0",
+  "recog_a1c_tail_averaging_cert.py": "c731cf1b7105bf70d4e5ce4f1d993f5009bbeb0cdcc9c82144dde7ddc93dff24",
   "recog_a1c_unknown_a_interval_cert.py": "746bf4b0bf964bc3dcf86a910b865da9db2bef7978abaf127bc26dd8c1643380"
  },
  "PT1": {

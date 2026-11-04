@@ -52,7 +52,7 @@ a05_re, a05_im = I(-49)/8640, -307*s3/25920
 abs_mu = iv.sqrt(mu_re**2 + mu_im**2); abs_a32 = iv.sqrt(a32_re**2 + a32_im**2); abs_a05 = iv.sqrt(a05_re**2 + a05_im**2)
 A5 = abs_a32 + abs_a05
 C7 = I(100)
-cQ, cQp, cJ, c7, K_Theta = I("0.79246"), I("0.36915"), I("0.50220"), I("157.58"), I(123)/125     # (D5) published row-A constants
+cQ, cQp, cJ, c7, K_Theta = I("0.79246"), I("0.36916"), I("0.50220"), I("157.58"), I(123)/125     # (D5) published row-A constants
 taubar = I(11548)/10000                                                                            # rational ceiling of tau used by Dyadic (1.1548 > 1.15470)
 c_r2 = K_Theta + taubar*cQp + cJ; c_r3 = c7
 # harmonic amplitudes
