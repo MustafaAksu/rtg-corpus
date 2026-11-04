@@ -71,3 +71,35 @@ Atlas Method v0.2 **§4 rule 4** says *one node per object and per claim*; §5 u
 **CONDITIONAL PASS** — the frozen source identities and most scientific transfers are sound, and all eight L5 retirements are supported at their stated scope. R1a/R1b are localized **derived-map accuracy and scope-typing** defects; apply both in one editor pass, optionally including M1/M2. A change-focused read-back of these updated lines and a rebuilt candidate/hash/control report is enough. The PI's scientific/governance adoption, merge and tag remain separate. `atlas-v0.9` continues as the governing accepted NONCANONICAL Atlas until the PI authorizes publication of the corrected v0.10 candidate.
 
 No canonical Atlas, source DSN, adoption record, release tag or pipe item is modified by this review.
+
+
+## 7. Revision 2 — delta-only receiving review (4 November 2026)
+
+**Object:** PR #185 head `f90d74e19c5d5b7ddaee8f2c50ec80efbbdc62b6`; `atlas/RTG_STATE_ATLAS.md` SHA-256 **`443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7`**, **521,243 UTF-8 bytes**, 1,543 lines. The source snapshot remains `fa3db80a935a20b1eff64b0e14c6d0436f861852`.
+
+**REVISED VERDICT: ACCEPT SCOPED — NO BLOCKER.** This §7 addendum supersedes the initial CONDITIONAL PASS for PR #185 revision 1; the previous review §§1–6 are retained as review history. R1a/R1b and both metadata observations are resolved. This is an Atlas receiving review, not PI scientific/governance adoption or a new owner certification.
+
+### 7.1 Independently checked delta and identities
+
+- **Exactly three physical Atlas lines differ** from the previous candidate `20878fbd41a17ac00e2ce0e17c0521ff252581ba` (`ea7faa79…d1bc`): **D4a L1051**, **D4b L1204**, **D6 L1537 (LEGACY.Y6)**. The document still has 1,543 lines.
+- **Exactly three prior edit-log operations changed their replacement payloads:** `AR10-057` (D4a birth symmetry), `AR10-075` (D4b birth symmetry) and `AR10-083` (Y6). All other logged operation payloads are unchanged; the log still has **83** operations.
+- **[EV-INDEP]** Replayed all **83/83** revision-2 edits from adopted `atlas-v0.9`; at each step the old payload matched exactly once. Reconstructed output equals the entire revision-2 candidate character for character.
+- **[EV-INDEP / EV-HASH]** Recomputed SHA-256 from the fetched revision-2 UTF-8 text with an independent SHA-256 implementation, self-tested against the standard `abc` vector. Obtained **`443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7`**, **521,243 bytes**, exactly the revised manifest value. Independently checked **all 166 logged `old_sha256`/`new_sha256` values**, with **0 mismatches**. The edit log itself is 148,195 bytes, SHA-256 `9c5b191897c0440bfdf89929925dfab1f16f6ee06bdb2046de16276fb26ee5c5`.
+- The revised review packet §8 and its header both identify the revised candidate hash and size. Source identity (18 sources, 3 changed/15 unchanged) and all unmodified owner claims remain under the prior review.
+
+### 7.2 R1 and metadata disposition
+
+| Item | Decision | Revised candidate and source reconciliation |
+|---|---|---|
+| **R1a — one birth-symmetry node** | **PASS** | Only D4a.L2 begins with the scientific RID `GEN-ALG-BIRTH-SYMMETRY-SEED` (line 1051). The full `[ALG]` node now explicitly distinguishes `D_birth^[s³]=7Q_s³/512=2Q(V_s)` (selected seeded-vector radial channel) from `Q(V_s)=7Q_s³/1024`; neither establishes a complete next-block increment alone. The former wrong-sign/second-quadrant branch is correctly marked FAIL, with its owner FAIL RID. D4b L1204 is a line beginning with a cross-reference marker (`→`), containing a typed edge `<GEN-ALG-BIRTH-SYMMETRY-SEED (D4a)`, **not** a second claim node. [OWNER: GEN v2.10 §6.6 and §8; Atlas Method v0.2 §4 rule 4.] |
+| **R1b — LEGACY.Y6 owner scope** | **PASS** | Y6 L1537 is now `D-SCOPE`, not an unqualified `D-STALE`. It preserves GEN v2.10's legitimate `[THM]` for the leading one-dimensional `Φ₂→₃` cubic `c₀^[3]=κQ_sJ_Qs_*`; the fifth-order remainder is conditional on the selected child functional; GCL-06 and complete physical birth remain OPEN. It distinguishes TRIAD v1.7 §6.1's `[DEF]` birth-family notation and limits any overstatement in Legacy SG-L0L1-10 to the **complete event/law** reading. No owner text or claim grade changed. |
+| **M1 — repin evidence count** | **PASS** | The evidence array now contains **9** entries, and `verification_summary.json` reports `gen_repin_evidence: 9`; the builder writes the same 9-entry evidence set and the old 18-count reproduction append is absent. |
+| **M2 — RID types** | **PASS** | `new_node_rids` now contains exactly the scientific claim identifiers `GEN-ALG-P4-DRIFT-IDENTITY`, `GEN-ALG-BIRTH-SYMMETRY-SEED` and `RECOG-ALG-A1C-JET-REMAINDER-BOUNDS`. The artifact `RECOG-ART-A1C-JET-REMAINDER-BOUNDS` is under `new_artifact_rids`. `new_rids_at_tag` retains all four tagged producer identifiers, correctly distinguishing node and certificate types. |
+
+**Focused guard inspection:** The builder's `scope_guards` explicitly requires one birth-symmetry home, the D4b cross-domain edge, the not-a-full-increment qualifier, and `LEGACY.Y6 D-SCOPE` with its owner qualification. New controls **V16–V19** inject a duplicate node, remove the increment guard, restore the overbroad Y6 type, and erase the Y6 full-physical-event restriction. Each `detected: true` in the preparer's `negative_controls.json`; the mutation source code and guards were independently read, but the Python executions were **not** independently rerun.
+
+### 7.3 Evidence limits and publication boundary
+
+- **[EV-SRC-REPORTED / EV-NOT-RERUN]** The producer's revised shared report records **0 FAIL**, **12 wording WARN**, **18/18 shared self-test controls** and **19/19 focused negative controls**. The full validation commands and two byte-identical builder runs are source-reported. Existing unresolved/unverified checker cases remain explicit: links 5 UNVERIFIED + 11 DOCUMENTED-UNRESOLVED; artifacts 3 UNVERIFIED. None is promoted to PASS.
+- No changed owner DSN, owner scientific certificate campaign, source snapshot, consumer adoption, current Atlas pipe state, or tagged Atlas bytes were modified by this review. The earlier observation of pre-existing duplicate cross-domain identifiers is nonblocking maintenance debt and is not reopened here.
+- **Decision: ACCEPT SCOPED — no further Atlas scientific review loop requested.** The PI can decide adoption of this **exact** revision-2 candidate, after which the Atlas owner prepares the release/adoption record; merge-commit publication, annotated `atlas-v0.10` tag and post-tag pipe closure remain separate authorized actions. Until then `atlas-v0.9` governs.
