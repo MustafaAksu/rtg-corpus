@@ -8,3 +8,4 @@
 | 2026-10-26 | NUMGEN | notice | closed | NUMGEN v1.21 §2 item 1 (C7C-M4 HOLD); TDRG-ORIENT request | — | `20261026-NUMGEN-v1-21-adopted.md` |
 | 2026-10-29 | OFN | finding | open | tdrg-v2.12.14 SG-3 (L445–446), §2 total-momentum row (L114), Appendix B (L1319) versus SG-14 (L478); OFN v0.10 §10 token-sum row | — | `20261029-OFN-token-sum-gauge-label.md` |
 | 2026-10-30 | OFN | notice | open | `RTG-OFN-ALG-STAR-TOKEN-SHIFT` (Finding A; XFER-O08-01), REQ-O09-05, IMP-O08-02…16 owner RIDs (OFN v0.11 §11.2, §12.3–§12.4) | — | `20261030-OFN-v0-11-adopted.md` |
+| 2026-11-04 | PROG | notice | open | Programme v1.4 §6.1 (TDRG row at `tdrg-v2.12.14`), §6.4 TDRG entry and launch-gate record, §7.1, §7.2 IF03, IF13, IF25, §9.2 | — | `20261104-PROG-v1-4-adopted.md` |

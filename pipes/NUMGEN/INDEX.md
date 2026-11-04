@@ -10,4 +10,5 @@
 | 2026-10-30 | DYAD | notice | open | DYAD-THM-OPEN18-STEP-MONOTONE (DYAD v6.4.23 §6.8): answer to the q* question; N15 receipt | — | `20261030-DYAD-v6-4-23-adopted.md` |
 | 2026-10-30 | OFN | notice | open | REQ-O09-03 (`NUMGEN-RESULT-N5AS1-L-BACKBONE`; $q_m$ typing); OFN consumer rows (OFN v0.11 §12.3–§12.4) | — | `20261030-OFN-v0-11-adopted.md` |
 | 2026-10-30 | OFN | notice | open | Vocabulary use of NUMGEN v1.21 §6.2 N-1A2 (sufficient causal interface) in OFN v0.12 §5.5.4 and OPEN-OFN-3A | — | `20261030-OFN-v0-12-adopted.md` |
+| 2026-11-04 | PROG | notice | open | Programme v1.4 §6.1 (NUMGEN row at `numgen-v1.21`), §6.2 NUMGEN entry, §7.2 IF12, IF13, IF14, IF24, IF27, IF37, IF38 | — | `20261104-PROG-v1-4-adopted.md` |
 | 2026-11-04 | RECOG | notice | open | RECOG v0.3.27 adopted 4 Nov 2026 (recog-v0.3.27, DSN SHA-256 19556f913f51b98599faa6ad88c363dda0a278345677f3bd69f3b892d810e1f1); §2 R6 GAP-LOCK Lemma 3 row (NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO, two consumption grades); §7 NUMGEN rows repinned to numgen-v1.21; A1c rows (§6.13b, §6.16e) without (D5) | — | `20261104-RECOG-v0-3-27-adopted.md` |
