@@ -1,0 +1,48 @@
+PASS C21 entry 
+PASS NF6 entry 
+PASS NF6-OBS entry 
+PASS PRIM-CTR entry 
+PASS NF-INV entry 
+PASS NF-REM entry 
+PASS BRIDGE entry 
+PASS KP-FRAME entry 
+PASS FACEFLUX entry 
+PASS PRIMITIVE-MAP entry 
+PASS CRITICAL-CURVE entry 
+PASS QC entry 
+PASS ISP entry 
+PASS SIXSTEP-JET file 
+PASS RAW-MEAN entry 
+PASS LIEGAUGE file 
+PASS ALIAS entry 
+PASS CONSTANTS file 
+PASS H2 file 
+PASS FIXED-POINTS file 
+PASS OFFSET entry 
+PASS OFFSET-BOUNDS entry 
+PASS T1T2 entry 
+PASS OPEN21 entry 
+PASS LPHASE-ROWA section 
+PASS SH-R0 file 
+PASS NF6-DEG10 entry 
+PASS NG-DEFECT section 
+PASS NG-LIFT entry 
+PASS NG-INF1 entry 
+PASS NG-RATIO file 
+PASS NG-L1 file 
+PASS NG-N1C file 
+PASS NG-GAPLOCK3 entry 
+PASS LPHASE-BRIDGE entry 
+PASS LPHASE-OUTLINE theorem-to-bridge 
+PASS SPIRAL-REM entry 
+PASS C7-SHARP entry 
+PASS NF6-JET entry 
+PASS direction c_Q 0.79246 >= 0.7924576152
+PASS direction c'_Q 0.36916 >= 0.3691523046
+PASS direction C_7 (1/20) 85.1 >= 85.0731933471
+PASS direction C_7 (1/40) 27.7 >= 27.6022209836
+PASS NC1_old_NF_REM_needle_absent
+PASS NC2_036915_substring_present_but_not_delimited
+PASS NC3_direction_refuses_036915
+PASS NC4_direction_refuses_window_1011e-4
+ALL PASS (39 rows, 4 direction checks, 4 negative controls)

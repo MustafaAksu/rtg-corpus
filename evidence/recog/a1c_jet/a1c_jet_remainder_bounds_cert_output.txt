@@ -1,0 +1,8 @@
+G1_exact_rational PASS
+G2_interval PASS
+G3_monotone PASS
+G4_identity_89sqrt3_over_324 PASS
+NC1 PASS
+NC2 PASS
+c_J(q*) < 0.5008182253997759  c_7(q*) in [ 100.23001863149192 , 100.23014672291573 ]
+ALL PASS

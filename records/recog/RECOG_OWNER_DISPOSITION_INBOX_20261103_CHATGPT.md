@@ -1,0 +1,48 @@
+# RECOG v0.3.26 inbox round — independent ChatGPT co-owner disposition (R1–R6)
+
+**Date:** 3 November 2026.  
+**Status:** [SESSION] NONCANONICAL independent co-owner **disposition proposal**; no RECOG owner-science edit, adoption, certificate rerun, or pipe-state change. The other RECOG co-owner's independent disposition and joint reconciliation are separate. PI authorization governs a later release.  
+**Input:** PR #168 (`claude/atlas-recog-inbox-advisory` at `c05067ea3ae53d9790a55805db9b869737fb2b79`): `records/recog/RECOG_OWNER_ENTRY_NOTE_INBOX_20261103.md`, `records/recog/ATLAS_ADVISORY_RECOG_INBOX_20261103.md`, and `evidence/recog/atlas_review/ra1/`.  
+**Governing owner:** `recog-v0.3.26`, `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md`, published SHA-256 `45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34`.  
+**Producer:** `dyad-v6.4.23`, `dsn/RTG_DYADIC_OSCILLATOR_DSN.md`, published SHA-256 `9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb`.  
+**Method:** DSN Methodology `methodology-v1.4` §3.3; `CONVENTIONS.md` §§2, 4–7; Atlas v0.9 as NONCANONICAL navigation, not claim authority.
+
+## 1. Reading and verification extent
+
+- **EV-SRC-READ:** PR #168 advisory (full), entry note (full), rerun note and structured summary (full), and the driver (targeted plus run-order/patch logic); adopted RECOG v0.3.26 targeted §§6.13a–b, 7 (especially the R9, A1c, start-offset, decoder, envelope and import rows); adopted DYAD v6.4.23 targeted §6.14 (NF-REM and L-PHASE BRIDGE/REMAINDER statements); the two open RECOG inbox items; Methodology §3.3.
+- **EV-INDEP (bounded data audit, not a certificate run):** parsed the PR #168 `ra1_recheck_summary.json`. Exactly 8 certificates, gate counts `8+7+7+7+8+9+7+4=57`, 57/57 patched gates `true`; the original and patched gate-key/value maps match, and the recorded boolean-flip lists are empty. The reported original JSON and text-output byte matches are `true` for all eight; these are source reports, not independently checked against the binaries. Arithmetic check: `(0.36916-0.36915)/0.36915 ≈ 2.70892591×10^-5`, consistent with the reported maximum relative change.
+- **EV-SRC-REPORTED / EV-NOT-RERUN:** the Atlas owner reports two full A1c certificate trees (original and patched), complete reproduction with the original value and no published-decimal change with the corrected value. This reviewer did **not** execute those eight scientific scripts, recompute their output hashes or independently reproduce the underlying interval arithmetic. In particular, `python3 -I` and the committed 6,000,000-step part-1b orbit must be used for an owner replay; the first 1,800,000-step output is not a reference-match failure.
+
+## 2. Disposition matrix
+
+| Item | Independent co-owner verdict | Acceptance criteria / scoped edit |
+|---|---|---|
+| **R1 — c'_Q correction** | **ACCEPT WITH CHANGE** | Use the outward certified constant **0.36916**, not 0.36915, at all five RECOG live sites named in advisory §1 and in the one part-1b script literal (L55). The RECOG owner must rerun the dependency chain with the same scripts and the committed 6,000,000-step orbit; record the new script/output hashes and reproducible commands under `evidence/recog/`. Do not change published theorems or decimals solely on the Atlas report; if owner rerun diverges, hold adoption and investigate. |
+| **R2 — meaning of [assuming: (D5)]** | **ACCEPT WITH CHANGE; choose option (a) NOW** | Replace the broad condition by claim-level import of `DYAD-THM-LPHASE-ROWA-BRIDGE` (the exact decomposition, `c_Q=0.79246`, `c'_Q=0.36916`) and `DYAD-THM-OPEN3-SPIRAL-REM` (`K_Theta=123/125`), while explicitly **retaining a residual [assuming:]** for `c_J=0.50220` and `c_7=157.58` at the five A1c uses whose proofs require them. The latter bounds appear in the Dyadic published proof outline, but lack distinct RID-level theorem statements; absence of such RIDs is **not** evidence that the inequalities are false or that their certificate does not exist. This is an *export/import proof-constant contract* limitation. Require owner-side consistency with the Dyadic row-A chart, branch (B) and the same norm/clock. Do not remove all [assuming:] or change the A1c grades yet. Option (b), fresh RECOG-side certified inequalities, is a separate research campaign; option (c), Dyadic registration request, is nonblocking and optional after the maintenance edition. |
+| **R3 — sharper C7 rows** | **ACCEPT WITH CHANGE** | Replace the `RECOG-THM-R9-SHARPENED-ROWS-C7` assumption by a correctly scoped import of `DYAD-THM-NF-REM-C7-SHARP`: `C_7=85.1` for `|z|≤1/20`, `C_7=27.7` for `|z|≤1/40`; rows never mixed. Adjust L662–663 and L771's now-stale ‘not a theorem’/‘registration requested’ wording. The derivative bounds `C_D=1000/250` remain at their old proof profile and have not been rederived for sharper C7. The independent `K_epsilon` recalculation is a separate scope, not this import. Keep the historically conservative NC2 of the old certificate unchanged; new audit guards should quote the new theorem row. |
+| **R4 — source-quote audits** | **ACCEPT WITH CHANGE** | Keep old release scripts intact. Build v0.3.27 source checks against the *new* `dyad-v6.4.23` RID/statement context (not old decimals found only in historical [COR] notes); include a negative control proving that the audit detects a mismatched registered majorant. Align the new RECOG-side negative controls with the revised conditional qualifiers. |
+| **R5 — OFN v0.11 notice** | **ACCEPT, RECEIPT ONLY** | Record that the notice was examined. The RECOG imports in OFN §6.2a and §7.3 do not change in their load-bearing content at `ofn-v0.12`; do not claim physical adoption of RECOG A1c event witnesses or add an OFN science import. The receiver may update the companion pin at the stated point of use. |
+| **R6 — source and consumer pins** | **ACCEPT WITH CHANGE** | Claim-level repin only where actual imported use changed: DYAD v6.4.23 for R1–R3, NUMGEN v1.21 for the audited updated statements, GEN v2.10 and OFN v0.12 as companion/context references when verified. Retain intentionally historical pins with explicit source versions. No automatic promotion of a `reference-only` item to an import, and no inference of receiving-stream acceptance from a producer notice. |
+
+## 3. R2 mathematical and documentary boundary
+
+**[OWNER: DYAD v6.4.23 §6.14, `DYAD-THM-LPHASE-ROWA-BRIDGE`]** The theorem states under (B), on the row-A normalized chart at block base points in `U`, the exact remainder decomposition and
+`|D_Q|≤0.79246 q^(3/2)`, `|D_Q-D_3|≤0.36916 q²`.
+
+**[OWNER: DYAD v6.4.23 §6.14, L-PHASE proof outline]** The same section gives the intermediate estimates `c_J=0.50220`, `c_7=157.58` (`C_7=100`); those are not separately stated in `DYAD-THM-LPHASE-ROWA-BRIDGE`. `DYAD-THM-LPHASE-ROWA-REMAINDER` certifies the **final** primitive-Q bound `403/250`, but importing that final bound does not alone yield all of RECOG's sharper term-by-term estimates. A complete proof of the entire RECOG A1c chain therefore requires the two intermediate estimates in the declared row-A/convention. The cautious R2(a) import contract prevents a proof-source promotion without owner-level reconciliation.
+
+**[SESSION — ALG]** The narrow change `c'_Q` enters the A1c chain as an enlarged majorant; its source bound is `0.3691523046…`, so the earlier `0.36915` is too small and must not be retained as a certified upper ceiling. The value `0.36916` itself does not prove every A1c inequality: that conclusion needs the rerun and all remaining source constants. The recorded Atlas rerun summary has 57/57 gates with identical Boolean outcomes, but this is not a replacement for the owner replay or a proof of certificate implementation correctness.
+
+**R2 decision criterion for joint reconciliation:** Option (a) now unless a co-owner produces a *claim-specific, inspected and cited* proof that `c_J,c_7` are independently importable with their required status and norm/clock; any stronger move must state its exact evidence and receiving acceptance. Do not interpret RID absence alone as mathematical falsity.
+
+## 4. Maintenance scope and nonblocking debt
+
+**Proposed v0.3.27 target:** one assertion-gated content stage for R1–R6 and the specified import/pin changes, one paired old/new owner replay with file hashes, negative controls, a change-focused co-owner review and an Atlas row check. No compaction or re-run of unrelated scientific campaigns. Negative or unchanged numerical results are still recorded with their evidence class.
+
+**Not in this round:** the R6 event interpretation, A1c-Q1' injectivity, `K_epsilon` improvement with the sharper C7, F5/F6/in-block residual research questions, and any new physical mechanism or event/clock identity. The Atlas's R5/R6 references do not select the ontology.
+
+**Closure protocol:** The receiving RECOG team can close the two open `pipes/RECOG/` items only after recording its owner disposition and subsequent publication/notice state; closing an item never supplies adopted use to a separate receiver. The other co-owner has independent authority to accept/reject this proposal, and the PI decides the adopted edition. No release, tag, merge, pipe closure, or adopted scientific statement is produced by this record.
+
+## 5. Recommended next action
+
+Reconcile this six-row disposition with the other RECOG co-owner's independent record, **resolve R2 explicitly**, then prepare one v0.3.27 content candidate. Owners may reuse the Atlas's reported rerun as a check target, but the owner release should record its own script hashes, commands and actual outputs; do not mislabel an identical-engine replay as a fully independent proof.

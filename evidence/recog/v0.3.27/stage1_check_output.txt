@@ -1,0 +1,66 @@
+base 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34
+intermediate c8e30dafce1b535ebe3b258b243920401fe99a1d8ce785b0402de7576b7cf0bb (groups C7,D5B,DISP,PIN,R1, 76 edits)
+GATES:
+  C0   PASS BASE
+  C1   PASS BUILD
+  C2   PASS REVERSE
+  C3   PASS APPENDIX A
+  C4   PASS SPAN TAGS 
+  C5   PASS SPAN RIDS []
+  C6   PASS STATUS (byte-identical)
+  C7   PASS RID SET
+  C8   PASS RID ATTACH
+  C9   PASS RESULT
+  C10  PASS QUALIFIERS
+  C11  PASS VOCAB
+  C12  PASS IMPORTS
+  C13  PASS UNCHANGED (R9, A1B, schedule display, TAIL-HARMONICS items, Q1′, B1 formula)
+  C14  PASS HEADER
+  C15  PASS HEADINGS
+  C16  PASS §8 FILES (5 rows, 37 hashes checked)
+  C17  PASS LIVE
+  C18  PASS DECOUPLE
+  C19  PASS VALUES
+  C20  PASS NOTICES
+  C21  PASS TAG CENSUS
+  C22  PASS ASSUMING
+  C24  PASS R83-1 (known-a centre never called record-only; decoder closure scoped)
+  C23  PASS RECORDS
+  C25  PASS APPENDIX B (byte-identical)
+  C26  PASS DIRECTION (22 displays)
+  C27  PASS PINS
+  C28  PASS C7 ROWS
+
+NEGATIVE CONTROLS (each must be caught by its target gate):
+  NC01 new RID removed                                 target C7: caught  (failing: C1, C19, C2, C7, C8)
+  NC02 OPEN status altered (R4 closed)                 target C6: caught  (failing: C1, C17, C2, C6)
+  NC03 header identity altered                         target C14: caught  (failing: C1, C14, C15, C2)
+  NC04 Appendix A history edited                       target C3: caught  (failing: C1, C2, C3)
+  NC05 grade changed outside the spans                 target C21: caught  (failing: C1, C2, C21)
+  NC06 scope qualifier deleted                         target C10: caught  (failing: C1, C10, C2, C8)
+  NC07 (D5) qualifier restored at one site             target C22: caught  (failing: C1, C10, C2, C22)
+  NC08 bridge import dropped at one site               target C12: caught  (failing: C1, C12, C2)
+  NC09 jet ceiling printed below the certificate       target C19: caught  (failing: C1, C19, C2)
+  NC10 §8 regenerated hash altered                     target C16: caught  (failing: C1, C16, C2)
+  NC11 §8 jet artifact hash altered                    target C16: caught  (failing: C1, C16, C2)
+  NC12 notice state changed                            target C20: caught  (failing: C1, C2, C20)
+  NC13 Appendix B edited                               target C25: caught  (failing: C1, C2, C25)
+  NC14 Dyadic current-use pin left at v6.4.22          target C27: caught  (failing: C1, C2, C27)
+  NC15 NUMGEN current-use pin left at v1.20.8          target C27: caught  (failing: C1, C2, C27)
+  NC16 miscopied NUMGEN hash abbreviation reintroduced target C27: caught  (failing: C1, C2, C27)
+  NC17 C_7 [assuming:] ceiling restored                target C28: caught  (failing: C1, C10, C12, C2, C28)
+  NC18 heading changed                                 target C15: caught  (failing: C1, C15, C2)
+  NC19 R1 rerun JSON reported failing                  target C19: caught  (failing: C16, C19)
+  NC21 OPEN R5 export line left at OFN v0.10           target C27: caught  (failing: C1, C2, C27)
+  NC20 decoder line regains [assuming:] under D5B      target C24: caught  (failing: C1, C2, C24)
+  NC-DIR K_eps 0.7203 restored                         target C26: caught  (failing: C1, C2, C26)
+  NC-DIR K_eps 0.4513 restored                         target C26: caught  (failing: C1, C2, C26)
+  NC-DIR K_eps 0.1860 restored                         target C26: caught  (failing: C1, C2, C26)
+  NC-DIR c_7^R 100.23 restored                         target C26: caught  (failing: C1, C2, C26)
+  NC-DIR gamma_0 0.17715 restored                      target C26: caught  (failing: C1, C2, C26)
+  NC-DIR beta(625) 0.799 restored                      target C26: caught  (failing: C1, C2, C26)
+  NC-DIR beta(625) 0.7993 restored                     target C26: caught  (failing: C1, C2, C26)
+  NC-DIR K_Phi 75.6392 restored                        target C26: caught  (failing: C1, C2, C26)
+  NC-DIR window 1.011e-4 restored                      target C26: caught  (failing: C1, C2, C26)
+
+RESULT: PASS

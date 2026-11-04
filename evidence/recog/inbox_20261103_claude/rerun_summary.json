@@ -1,0 +1,79 @@
+{
+ "patched_script": "recog_a1c_tail_averaging_cert.py L55 I(\"0.36915\") -> I(\"0.36916\")",
+ "patched_script_sha256": "c731cf1b7105bf70d4e5ce4f1d993f5009bbeb0cdcc9c82144dde7ddc93dff24",
+ "env": {
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "mpmath": "1.3.0",
+  "sympy": "1.14.0"
+ },
+ "certs": [
+  {
+   "cert": "recog_a1c_tail_averaging_cert.py",
+   "json": "a1c_1b/a1c_tail_averaging_cert.json",
+   "own_patch_json_sha256": "d7bbe537de359305b90532e585abdcc2d3e25a38f7ae7540523cd1830d835995",
+   "atlas_patch_json_sha256": "d7bbe537de359305b90532e585abdcc2d3e25a38f7ae7540523cd1830d835995",
+   "equal": true,
+   "gates_pass": "8/8",
+   "ALL_PASS": true
+  },
+  {
+   "cert": "recog_a1c_start_offset_cert.py",
+   "json": "a1c_so/a1c_start_offset_cert.json",
+   "own_patch_json_sha256": "deaf180d3430298792c3b8e97203cb902445d2ae5b45fc4c012bea14f76fbf50",
+   "atlas_patch_json_sha256": "deaf180d3430298792c3b8e97203cb902445d2ae5b45fc4c012bea14f76fbf50",
+   "equal": true,
+   "gates_pass": "7/7",
+   "ALL_PASS": true
+  },
+  {
+   "cert": "recog_a1c_unknown_a_interval_cert.py",
+   "json": "a1c_2/a1c_unknown_a_interval_cert.json",
+   "own_patch_json_sha256": "dfbd86190e9b6ddbbb659f757f6f778cec80e91aa4a9e3826779ac560e11c244",
+   "atlas_patch_json_sha256": "dfbd86190e9b6ddbbb659f757f6f778cec80e91aa4a9e3826779ac560e11c244",
+   "equal": true,
+   "gates_pass": "7/7",
+   "ALL_PASS": true
+  },
+  {
+   "cert": "recog_a1c_inblock_angular_cert.py",
+   "json": "a1c_inblock/a1c_inblock_angular_cert.json",
+   "own_patch_json_sha256": "89d9beff40da5c7170121b816e52dbbd1a84a50ec20bb9b8a251146255d4b3d4",
+   "atlas_patch_json_sha256": "89d9beff40da5c7170121b816e52dbbd1a84a50ec20bb9b8a251146255d4b3d4",
+   "equal": true,
+   "gates_pass": "7/7",
+   "ALL_PASS": true
+  },
+  {
+   "cert": "recog_a1c_combined_tail_cert.py",
+   "json": "a1c_comb/a1c_combined_tail_cert.json",
+   "own_patch_json_sha256": "0d0b4e5c71fe11b315943fa211efb7fe53abc4edc5894262bd5a29101dc3a894",
+   "atlas_patch_json_sha256": "0d0b4e5c71fe11b315943fa211efb7fe53abc4edc5894262bd5a29101dc3a894",
+   "equal": true,
+   "gates_pass": "8/8",
+   "ALL_PASS": true
+  },
+  {
+   "cert": "recog_a1c_drift_centering_cert.py",
+   "json": "a1c_drift/a1c_drift_centering_cert.json",
+   "own_patch_json_sha256": "bbd3caa77b208eec53dfebb9d9ba3e350c1ed7bc4f23c1442aaf946286d46b7a",
+   "atlas_patch_json_sha256": "bbd3caa77b208eec53dfebb9d9ba3e350c1ed7bc4f23c1442aaf946286d46b7a",
+   "equal": true,
+   "gates_pass": "7/7",
+   "ALL_PASS": true
+  }
+ ],
+ "corrected_grid": {
+  "script": "recog_v0_3_26_corrected_grid.py (not in the Atlas chain; imports the stack through recog_a1c_drift_centering_cert.py)",
+  "committed_sha256": "569b018e890667438f022e810d0ca72e702fb6c4a740190a2538ac7282e4e141",
+  "own_unpatched_sha256": "569b018e890667438f022e810d0ca72e702fb6c4a740190a2538ac7282e4e141",
+  "own_patched_sha256": "7e46451905cad12a018274356dd33cbf687cfb4eabb01373a82287d22d1aaf06",
+  "all_below_patched": true,
+  "numeric_leaves_changed": 606,
+  "max_rel_change": 2.536602687111117e-07,
+  "max_rel_change_key": ".grid.625.1000.rows.0.Rbar_corr",
+  "boolean_flips": [],
+  "E3_corr_worst_r_unchanged_at_625_1e6_1e7": true,
+  "unpatched_reproduces_committed": true
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "q_star": "256/140625",
+ "cJ_R(q*)_upper": 0.5007984057015732,
+ "c7_R(q*)_upper": 100.23001968258187,
+ "cJ_R(1/400)_upper": 0.502198043100399,
+ "c7_R(1/400)_upper": 100.31641702697634,
+ "c7_R(q*)_upper_with_C7_85.1": 85.29573906488004,
+ "monotone_cJ_on_grid": true,
+ "monotone_c7_on_grid": true,
+ "dyad_proof_sketch_cJ": 0.5022,
+ "dyad_proof_sketch_c7": 157.58,
+ "cJ_R(q*) <= 0.50220": true,
+ "c7_R(q*) <= 157.58": true,
+ "ALL_PASS": true
+}
