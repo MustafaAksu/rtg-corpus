@@ -59,6 +59,8 @@ Owner decision needed per row: register (name, scope) or record "no RID; cite th
     - §8 artifact entries for the stage scripts and outputs, with hashes.
   - B-an and B-6 stay ACTIVE. No statement is regraded. No LIT result is imported as an RTG result; LIT sources are cited by LIT-ID@version:label where they are used.
   - **Added 4 Nov 2026:** one `[SESSION]` sentence on the local orbit structure along Γ_σ (LIT INF-014, INF-015; owner check `records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md` §6), with its qualifications. It is not a B-an statement.
+    - The sentence keeps four limits: complexified germ only (on the real slice \|w/z²\| = 1/\|z\| → ∞); FL-Q1 and IMRN-Q1; IMRN read from arXiv v1, not the journal version; and the 3-sum identification as a separate LIT step. With these open, it is not a `[THM]`.
+    - Candidate `[ALG]` line: P′(u) = α(c₄₀ + μu) identically (2A = αμ, B = αc₄₀), with §8 entries for `dyad_open20_lit_inf014_inf015_hypothesis_check.py` and the LIT-ID@version:label citations (co-owner proposal, PR #174 comment `6626218705`).
   - **Status (3 Nov 2026):** route check done (`evidence/dyad/open20-an/stage3-route/`). The a-priori route of INF-009/010 cannot reach the radius the jump needs. Stage 3 itself stays not authorized; a revised stage-3 design comes first.
 
 ## C2. Schedule
