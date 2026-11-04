@@ -137,6 +137,8 @@ SUBS = [
  ("PIN-L677", "`[DEF]` [import: RTG", [("RTG_NUMBER_GENESIS_DSN_v1.20.8", "RTG_NUMBER_GENESIS_DSN_v1.21", 1)]),
  ("PIN-L679", "`[RESULT]` `[from: ALG]` [impo", [("RTG_NUMBER_GENESIS_DSN_v1.20.8", "RTG_NUMBER_GENESIS_DSN_v1.21", 1)]),
 ]
+EXP_OLD = r"Exports to: RTG_ONTOLOGICAL_FOUNDATIONS v0.10 §6.2a (Minimal Constraint List for $T$: radial row and the phase-shear rows P1 composition, P2 weight magnitude, P3 orientation; v0.8 single phase-shear row superseded upstream), OPEN-P0 generator selection"
+EXP_NEW = r"Exports to: RTG_ONTOLOGICAL_FOUNDATIONS v0.12 §6.2a (`ofn-v0.12`; Minimal Constraint List for $T$: radial row and the phase-shear rows P1 composition, P2 weight magnitude, P3 orientation, OFN importing RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION and RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION at v0.3.26 §6.6a; previous citation: v0.10; v0.8 single phase-shear row superseded upstream), OPEN-P0 generator selection"
 GAP_OLD = r"- `[import: RTG_NUMBER_GENESIS_DSN_v1.20.8 §6.6 N-5A-S1-INF / GAP-LOCK Lemma 3]` (pinned at v1.20.7 since v0.3.18; the owner records no theorem-level change in v1.20.8; the Lemma 3 text is present in the current source, claim audit v0.3.23) `[HEUR cross-reference]` Number Genesis proves"
 GAP_NEW = r"- `[import: RTG_NUMBER_GENESIS_DSN_v1.21 §6.6 | NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO]` (GAP-LOCK Lemma 3; RID assigned by the owner at v1.21; pinned at v1.20.7 from v0.3.18; statement present at the cited RID in the current source, " + CA + r"). Consumed at two grades (NUMGEN inbox finding of 26 Oct 2026, dispositioned 29 Oct): (i) its exact bookkeeping identity $G_{n_j}=C+\tfrac\pi3s_j-o_j$ is used at the owner's grade `[ALG]` inside RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE (§6.16e); (ii) `[HEUR cross-reference]` Number Genesis proves"
 GAP2_OLD = r"The parallel defect-threshold theorem is owner-RID `NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO`; no RID is inferred here for GAP-LOCK Lemma 3."
@@ -229,6 +231,7 @@ EDITS += [
 ]
 EDITS += [(k, "DISP", "display: " + k, "str", "live", o, n) for k, o, n in DISP]
 EDITS += [(k, "PIN", "pin: " + k, "str", "live", o, n) for k, o, n in PIN]
+EDITS += [("PIN-EXP", "PIN", "OPEN R5 Exports to (OFN v0.12)", "str", "live", EXP_OLD, EXP_NEW)]
 EDITS += [("PIN-GAP", "PIN", "§2 R6 GAP-LOCK Lemma 3 row", "str", "live", GAP_OLD, GAP_NEW), ("PIN-GAP2", "PIN", "§2 R6 GAP-LOCK Lemma 3 row, last sentence", "str", "live", GAP2_OLD, GAP2_NEW)]
 EDITS += [(k, "PIN", "pin: " + k, "sub", "live", pre, reps) for k, pre, reps in SUBS]
 
@@ -238,9 +241,9 @@ APPA_LINES = {
  "D5A": r"- **R2 — (D5) narrowed, fallback (a) (separate decision):** DYAD-THM-LPHASE-ROWA-BRIDGE and DYAD-THM-OPEN3-SPIRAL-REM imported; the `[assuming:]` narrowed to the two proof-outline constants $c_J=0.50220$, $c_7=157.58$ at the same six sites (§1, §2 R6 decoder line, §7 rows aligned). No grade changes.",
  "C7": r"- **R3 — $C_7$ rows (separate decision):** RECOG-THM-R9-SHARPENED-ROWS-C7 imports DYAD-THM-NF-REM-C7-SHARP (the same ceilings $85.1/27.7$, registered at `dyad-v6.4.23`) instead of assuming them; stale wording updated (§6.13a, §6.13b K_ε *Not supplied*, §7 NF-REM row and new C7-SHARP row); the B1 certificate and its NC2 unchanged.",
  "DISP": r"- **Item 7 — display direction (separate decision):** eight displays printed in the safe direction with `[COR]` at the point of use — $K_\epsilon\le0.7204$, $0.4514$, $0.1861$ (were $0.7203$, $0.4513$, $0.1860$); $c_7^R\le100.231$ (was $100.23$); $\gamma_0\le0.17716$ (was $0.17715$); $\beta(625)\le0.800$ (was $0.799$); $K_\Phi\le75.6393$ (was $75.6392$); the B1 window $q_0<1.010\times10^{-4}$ (was $1.011\times10^{-4}$, above the certified window). Display corrections only: every certificate works with the exact intervals; no inequality, formula, grade or RID changes.",
- "PIN": r"- **R4–R6 — pins and receipts (maintenance):** live current-use Dyadic citations repinned to `dyad-v6.4.23` and NUMGEN citations to `numgen-v1.21` (claim audit v0.3.27, delimiter-anchored); GAP-LOCK Lemma 3 cited by NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO with its two consumption grades; companion pins Genesis `gen-v2.10`, OFN `ofn-v0.12` (OFN v0.11 notice received; the imported statements of §6.2a and §7.3 unchanged), TDR-G v2.12.14 (reference only); a miscopied hash abbreviation of NUMGEN v1.20.8 noted; provenance and historical-audit pins kept.",
+ "PIN": r"- **R4–R6 — pins and receipts (maintenance):** live current-use Dyadic citations repinned to `dyad-v6.4.23` and NUMGEN citations to `numgen-v1.21` (claim audit v0.3.27, delimiter-anchored); GAP-LOCK Lemma 3 cited by NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO with its two consumption grades; companion pins Genesis `gen-v2.10`, OFN `ofn-v0.12` (OFN v0.11 notice received; the imported statements of §6.2a and §7.3 unchanged; the OPEN R5 export line cites OFN v0.12 §6.2a), TDR-G v2.12.14 (reference only); a miscopied hash abbreviation of NUMGEN v1.20.8 noted; provenance and historical-audit pins kept.",
 }
-APPA_TAIL = (r"- **Unchanged:** every existing RID's statement and grade; every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B." "\n"
+APPA_TAIL = (r"- **Unchanged:** every existing RID's result and grade (no result is strengthened); every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B.{SRC}" "\n"
              r"- **Records:** release record `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.26` (SHA-256 `45e307f8…dd34`)." "\n\n")
 NEW_RIDS = {"R1": set(), "D5B": {"RECOG-ALG-A1C-JET-REMAINDER-BOUNDS", "RECOG-ART-A1C-JET-REMAINDER-BOUNDS"}, "D5A": set(), "C7": set(), "DISP": set(), "PIN": set()}
 
@@ -251,7 +254,11 @@ def appa_edit(groups):
     new += r"- **Basis:** the RECOG inbox round after v0.3.26 — Dyadic v6.4.23 notice (registrations DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-NF-REM-C7-SHARP; $c'_Q=0.36916$) and OFN v0.11 notice; Atlas advisory and owner entry note (PR #168); independent co-owner dispositions (PR #169, PR #170); two-co-owner reconciliation of 3 Nov 2026 (PR #172 proposal, PR #173 reply, ChatGPT acceptance record). Each group below carries its own acceptance decision." + "\n"
     for g in GROUPS:
         if g in groups: new += APPA_LINES[g] + "\n"
-    new += APPA_TAIL + "### v0.3.26 — 28 October 2026 — Adopted"
+    src = []
+    if "D5B" in groups: src.append(r"the (D5) `[assuming:]` of six A1c sites replaced by imported owner theorem rows and RECOG-ALG-A1C-JET-REMAINDER-BOUNDS")
+    if "D5A" in groups: src.append(r"the (D5) `[assuming:]` of six A1c sites narrowed to $c_J$, $c_7$, the rest imported")
+    if "C7" in groups: src.append(r"the $C_7$ `[assuming:]` of RECOG-THM-R9-SHARPENED-ROWS-C7 replaced by the imported DYAD-THM-NF-REM-C7-SHARP")
+    new += APPA_TAIL.replace("{SRC}", (" **Source conditions changed** (only these): " + "; ".join(src) + ".") if src else "") + "### v0.3.26 — 28 October 2026 — Adopted"
     return ("A-1", "ALL", "Appendix A: v0.3.27 draft entry (per variant)", "str", "appA", old, new)
 
 def apply(s, edits):

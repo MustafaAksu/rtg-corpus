@@ -4,9 +4,9 @@
  "groups": [
   "PIN"
  ],
- "intermediate_sha256": "2e49b4656a7734fc8b84514ca5de375a0567e18748c5c22b11bcad3d83091a02",
+ "intermediate_sha256": "6198662d85839f87307b67c63a986dae5ea1d829507162fa889ea11f7b0afb13",
  "declared_new_recog_rids": [],
- "edit_count": 40,
+ "edit_count": 41,
  "edits": [
   {
    "key": "PIN-HDR",
@@ -40,6 +40,17 @@
    "new_sha256": "996d04b36399e88a9c88273cafe599c7d2e69ae9eab0215d96c52198fb790172",
    "old": "(claim audit `evidence/recog/v0.3.23/claim_audit.json`; table in the v0.3.23 release record). Genesis, OFN and RRF rows are as audited v0.3.21 (§7.2);",
    "new": "(claim audit `evidence/recog/v0.3.27/claim_audit.json`, delimiter-anchored quotes; v0.3.23: `evidence/recog/v0.3.23/claim_audit.json`). Genesis, OFN and RRF rows are as audited v0.3.21 (§7.2), with the v0.3.27 checks noted at the Genesis and OFN rows;"
+  },
+  {
+   "key": "PIN-EXP",
+   "group": "PIN",
+   "location": "OPEN R5 Exports to (OFN v0.12)",
+   "mode": "str",
+   "region": "live",
+   "old_sha256": "63e918807988580d2251c348d57ae0f72b86dfb55977ba3dbab84e5a8c93426c",
+   "new_sha256": "d40a876b5d115343eff8552b661b66cc89b554f25585236667230a80f7be847e",
+   "old": "Exports to: RTG_ONTOLOGICAL_FOUNDATIONS v0.10 §6.2a (Minimal Constraint List for $T$: radial row and the phase-shear rows P1 composition, P2 weight magnitude, P3 orientation; v0.8 single phase-shear row superseded upstream), OPEN-P0 generator selection",
+   "new": "Exports to: RTG_ONTOLOGICAL_FOUNDATIONS v0.12 §6.2a (`ofn-v0.12`; Minimal Constraint List for $T$: radial row and the phase-shear rows P1 composition, P2 weight magnitude, P3 orientation, OFN importing RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION and RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION at v0.3.26 §6.6a; previous citation: v0.10; v0.8 single phase-shear row superseded upstream), OPEN-P0 generator selection"
   },
   {
    "key": "PIN-GAP",
@@ -444,9 +455,9 @@
    "mode": "str",
    "region": "appA",
    "old_sha256": "557b87b3d7b0f0c8f717642598da9e903f6efff58247b53bc2b80f10b6d8ab1c",
-   "new_sha256": "2b4679bb501313989393e1df4d9156eb46d022e54b409814244c1c59ea5c269f",
+   "new_sha256": "c182dbfb97936680d35116b55c9c60fe7957fedc33375ef711c2c393c6f9b0f8",
    "old": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.26 — 28 October 2026 — Adopted",
-   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.27 — DRAFT, stage 1 (maintenance intermediate; not adopted)\n- **Basis:** the RECOG inbox round after v0.3.26 — Dyadic v6.4.23 notice (registrations DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-NF-REM-C7-SHARP; $c'_Q=0.36916$) and OFN v0.11 notice; Atlas advisory and owner entry note (PR #168); independent co-owner dispositions (PR #169, PR #170); two-co-owner reconciliation of 3 Nov 2026 (PR #172 proposal, PR #173 reply, ChatGPT acceptance record). Each group below carries its own acceptance decision.\n- **R4–R6 — pins and receipts (maintenance):** live current-use Dyadic citations repinned to `dyad-v6.4.23` and NUMGEN citations to `numgen-v1.21` (claim audit v0.3.27, delimiter-anchored); GAP-LOCK Lemma 3 cited by NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO with its two consumption grades; companion pins Genesis `gen-v2.10`, OFN `ofn-v0.12` (OFN v0.11 notice received; the imported statements of §6.2a and §7.3 unchanged), TDR-G v2.12.14 (reference only); a miscopied hash abbreviation of NUMGEN v1.20.8 noted; provenance and historical-audit pins kept.\n- **Unchanged:** every existing RID's statement and grade; every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B.\n- **Records:** release record `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.26` (SHA-256 `45e307f8…dd34`).\n\n### v0.3.26 — 28 October 2026 — Adopted"
+   "new": "## Appendix A — Version History\n\nOne compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, the stacked status summaries and the freeze history — are in Appendix A and the header of v0.3.22 (tag `recog-v0.3.22`, SHA-256 `0dcce9e4…bcd9`). Scientific corrections and retired claims: Appendix B.\n\n### v0.3.27 — DRAFT, stage 1 (maintenance intermediate; not adopted)\n- **Basis:** the RECOG inbox round after v0.3.26 — Dyadic v6.4.23 notice (registrations DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-NF-REM-C7-SHARP; $c'_Q=0.36916$) and OFN v0.11 notice; Atlas advisory and owner entry note (PR #168); independent co-owner dispositions (PR #169, PR #170); two-co-owner reconciliation of 3 Nov 2026 (PR #172 proposal, PR #173 reply, ChatGPT acceptance record). Each group below carries its own acceptance decision.\n- **R4–R6 — pins and receipts (maintenance):** live current-use Dyadic citations repinned to `dyad-v6.4.23` and NUMGEN citations to `numgen-v1.21` (claim audit v0.3.27, delimiter-anchored); GAP-LOCK Lemma 3 cited by NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO with its two consumption grades; companion pins Genesis `gen-v2.10`, OFN `ofn-v0.12` (OFN v0.11 notice received; the imported statements of §6.2a and §7.3 unchanged; the OPEN R5 export line cites OFN v0.12 §6.2a), TDR-G v2.12.14 (reference only); a miscopied hash abbreviation of NUMGEN v1.20.8 noted; provenance and historical-audit pins kept.\n- **Unchanged:** every existing RID's result and grade (no result is strengthened); every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B.\n- **Records:** release record `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.26` (SHA-256 `45e307f8…dd34`).\n\n### v0.3.26 — 28 October 2026 — Adopted"
   }
  ]
 }

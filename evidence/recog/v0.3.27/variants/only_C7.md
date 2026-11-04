@@ -1333,7 +1333,7 @@ One compact entry per edition (Methodology v1.4 §1). Full records of earlier ed
 ### v0.3.27 — DRAFT, stage 1 (maintenance intermediate; not adopted)
 - **Basis:** the RECOG inbox round after v0.3.26 — Dyadic v6.4.23 notice (registrations DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-NF-REM-C7-SHARP; $c'_Q=0.36916$) and OFN v0.11 notice; Atlas advisory and owner entry note (PR #168); independent co-owner dispositions (PR #169, PR #170); two-co-owner reconciliation of 3 Nov 2026 (PR #172 proposal, PR #173 reply, ChatGPT acceptance record). Each group below carries its own acceptance decision.
 - **R3 — $C_7$ rows (separate decision):** RECOG-THM-R9-SHARPENED-ROWS-C7 imports DYAD-THM-NF-REM-C7-SHARP (the same ceilings $85.1/27.7$, registered at `dyad-v6.4.23`) instead of assuming them; stale wording updated (§6.13a, §6.13b K_ε *Not supplied*, §7 NF-REM row and new C7-SHARP row); the B1 certificate and its NC2 unchanged.
-- **Unchanged:** every existing RID's statement and grade; every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B.
+- **Unchanged:** every existing RID's result and grade (no result is strengthened); every OPEN status word (R1, R3 PARTIAL; R4, R5, R6 ACTIVE; R2, R7–R11 CLOSED); A1c-Q1′ `[OPEN]`; Appendix B. **Source conditions changed** (only these): the $C_7$ `[assuming:]` of RECOG-THM-R9-SHARPENED-ROWS-C7 replaced by the imported DYAD-THM-NF-REM-C7-SHARP.
 - **Records:** release record `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md` (candidate); predecessor tag `recog-v0.3.26` (SHA-256 `45e307f8…dd34`).
 
 ### v0.3.26 — 28 October 2026 — Adopted

@@ -13,7 +13,7 @@ usage: release_recog_v0_3_27.py CANDIDATE OUT "DD Month YYYY" "<review number>" 
 """
 import hashlib, sys
 
-CAND = "63acd5fff83cb116115f6eab0688372f9ebf6792bc43191b50274d8319a21df3"
+CAND = "c8e30dafce1b535ebe3b258b243920401fe99a1d8ce785b0402de7576b7cf0bb"
 PREV = "45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34"
 
 def transform(s, date, review, clause):

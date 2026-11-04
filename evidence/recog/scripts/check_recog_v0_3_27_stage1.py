@@ -83,12 +83,12 @@ SITE_ANCHOR = {"TAIL": "[RID: RECOG-ALG-A1C-TAIL-HARMONICS] [scope:", "SCHED": "
                "ENV": "[RID: RECOG-ALG-A1C-LOGFREE-ENVELOPE] [scope:", "SO": "(ii) *Signed start offset* ",
                "ADM": "[RID: RECOG-ALG-A1C-ADMISSIBLE-REGION] [scope:", "JC": "[RID: RECOG-ALG-A1C-JOINT-CONTRACTOR] [scope:"}
 # lines that keep an earlier Dyadic / NUMGEN / companion pin after PIN (provenance, historical audits, receipts, consumer inventory)
-PIN_KEEP = ("  - v0.3.21 (receipt, no import)", "Exports to: RTG_ONTOLOGICAL_FOUNDATIONS v0.10", "- [RID: (none — Genesis §6.1);",
+PIN_KEEP = ("  - v0.3.21 (receipt, no import)", "- [RID: (none — Genesis §6.1);",
             "- [RID: GEN-", "- [RID: NUMGEN-THM-N", "- [RID: OFN §6.2a, §", "- [RID: NUMGEN-DEF-N", "Historical audit", "- G2 (v0.3.21",
             "- [RID: DYAD-THM-OPEN3-ASYMPTOTIC-PHASE", "- RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION", "Owner editions that consume RECOG RIDs",
             "| RECOG-", "| RECOG §§", "- [RID: RECOG-ART-", "- **",
             "- [RID: (none — Genesis §6.6 $J_Q$)]", "| N11 (v6.4.15)", "| N13 (v6.4.17)")
-OLD_PINS = ("6.4.22", "1.20.8", "v2.8.9", "Genesis v2.8", "OFN v0.10", "ofn-v0.10", "2.12.13")
+OLD_PINS = ("6.4.22", "1.20.8", "v2.8.9", "Genesis v2.8", "OFN v0.10", "ofn-v0.10", "FOUNDATIONS v0.10", "2.12.13")
 
 def split_appa(s):
     i, j = s.index(APPA_START), s.index(APPA_END); return s[:i], s[i:j], s[j:]
@@ -389,6 +389,7 @@ def controls(base, inter, log, root):
      ("NC17 C_7 [assuming:] ceiling restored", "C28", once(L, "[import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.23 §6.14 | DYAD-THM-NF-REM-C7-SHARP] ($C_7\\le85.1$", "`[assuming: $C_7\\le85.1$ ...]` ($C_7\\le85.1$")),
      ("NC18 heading changed", "C15", once(L, "### §6.12 Leading-Return Equivariance and Comparator Closure", "### §6.12 Leading-Return Equivariance")),
      ("NC19 R1 rerun JSON reported failing", "C19", None),
+     ("NC21 OPEN R5 export line left at OFN v0.10", "C27", once(L, "Exports to: RTG_ONTOLOGICAL_FOUNDATIONS v0.12 §6.2a (`ofn-v0.12`;", "Exports to: RTG_ONTOLOGICAL_FOUNDATIONS v0.10 §6.2a (`ofn-v0.12`;")),
      ("NC20 decoder line regains [assuming:] under D5B", "C24", once(L, "with the row-A remainder constants of the envelope (", "under the `[assuming:]` row-A remainder constants of the envelope (")),
     ]
     # item 7: one control per old display (restoring the v0.3.26 display must be caught by C26)

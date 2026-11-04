@@ -1,5 +1,5 @@
 base 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34
-intermediate 63acd5fff83cb116115f6eab0688372f9ebf6792bc43191b50274d8319a21df3 (groups C7,D5B,DISP,PIN,R1, 75 edits)
+intermediate c8e30dafce1b535ebe3b258b243920401fe99a1d8ce785b0402de7576b7cf0bb (groups C7,D5B,DISP,PIN,R1, 76 edits)
 GATES:
   C0   PASS BASE
   C1   PASS BUILD
@@ -51,6 +51,7 @@ NEGATIVE CONTROLS (each must be caught by its target gate):
   NC17 C_7 [assuming:] ceiling restored                target C28: caught  (failing: C1, C10, C12, C2, C28)
   NC18 heading changed                                 target C15: caught  (failing: C1, C15, C2)
   NC19 R1 rerun JSON reported failing                  target C19: caught  (failing: C16, C19)
+  NC21 OPEN R5 export line left at OFN v0.10           target C27: caught  (failing: C1, C2, C27)
   NC20 decoder line regains [assuming:] under D5B      target C24: caught  (failing: C1, C2, C24)
   NC-DIR K_eps 0.7203 restored                         target C26: caught  (failing: C1, C2, C26)
   NC-DIR K_eps 0.4513 restored                         target C26: caught  (failing: C1, C2, C26)
