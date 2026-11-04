@@ -57,3 +57,38 @@ Programme §6.1 L253 (inherited from v1.3) says `BASELINE.md` is “the authorit
 **CONDITIONAL PASS — apply R1 before PI adoption.** The candidate is mechanically reproducible, the core scientific OPEN/maturity/guard constraints are preserved, the updated owner versions and principal pin decisions are sound, and TDR-G's partial-pass status is well supported. The required correction is **source-authority typing** at seven existing positions; it changes neither mathematical owner claims nor the programme OPEN states.
 
 No Programme, owner, Atlas, release record or pipe item has been modified by this review. Do not merge, tag or announce adoption based on the checker PASS alone. After an R1 patch, perform a narrow changed-line review, then submit the full publication candidate to the PI; the PI's subsequent acceptance and merge/tag decisions are separate.
+
+
+## 6. Revision 2 — delta-only receiving review (4 November 2026)
+
+**Object and decision.** Programme PR #178 head `db9a701c43a895370699b0eeaae6c4b2ff995d32`, revision 2 of the same candidate. **REVISED VERDICT: ACCEPT SCOPED — NO BLOCKING FINDING.** R1's required source-class corrections and R2's optional source-of-truth correction have been applied. This addendum supersedes the round-1 CONDITIONAL PASS as a review disposition; the original text above remains a historical review record. It does not imply PI adoption, release approval or scientific-owner acceptance.
+
+### 6.1 Independent identities and structural checks
+
+- **[EV-INDEP / EV-HASH]** Fetched the exact revision-2 owner candidate from the PR head and recomputed SHA-256 using a self-checked JavaScript SHA-256 implementation (standard `abc` known-answer check PASS). Result: **`d55dc3042fdcafca435fe78ce6c034ef75f699def901df015527f6497be07dae`**, **74,678 UTF-8 bytes**. This matches PR #178's edit-log manifest and release record §2a.
+- The prior revision 1 remains `d109c78b9924b325e590159796b01223b82959211809106eea3dce009f6673bd` (73,376 bytes). The rev.-2 edit log itself is 54,689 UTF-8 bytes, SHA-256 `c770789cdb86bf22d9c0971a1b798c70747108b8f3460d0601cf1ed2b9b1c808`; the SHA-256 and sizes are computed from fetched GitHub UTF-8 text.
+- **[EV-INDEP / exact replay]** Starting from the adopted `programme-v1.3` text, independently applied **81 sequential old/new replacements** from rev.-2 `evidence/programme/v1.4/edit_log.json` (not the Python builder). Every old payload occurred **exactly once** when applied. The entire resulting document equalled the candidate fetched at the revision-2 head, with no mismatching character. This establishes full edit-log fidelity, not scientific proof.
+- **Delta completeness:** Compared the two logs: exactly **10 newly logged operations** (R2; R1-OFN, R1-UVM, R1-G-OFN, R1-G-REQ, R1-G-DISC, R1-G-REF; and IF24/IF28/IF32) and **2 modified existing operations** (IF03, Appendix A entry). Unchanged first-round operations carry through. IF01–IF38 are sequential with no missing or repeated IDs.
+- **[EV-SRC-REPORTED / EV-NOT-RERUN]** The editor's `evidence/programme/v1.4/check_output.txt` states C0–C17 **18/18 PASS**, negative controls **22/22 detected**, with C8 checking 49 consumer pins. This reviewer inspected C17 and controls K19–K22 but **did not execute** the producer's Python checker, negative controls or publication transform. C17 reads the actual OFN imports and checks consistency but is a structural source-class guard, not a semantic proof of every consumer statement.
+
+### 6.2 R1 and R2 dispositions against owner sources
+
+| Changed subject | Decision | Independent source check |
+|---|---|---|
+| `R1-OFN`, §6.2 | **PASS** | `ofn-v0.12` §§11.2/11.4 explicitly import DYAD, GEN, RECOG and TDR-G. The TRIAD, OPEN M and NUMGEN contributions cited in §§11.3/11.5 are reference-only/feedback. The sentence additionally declines to infer a physical discrete-continuous bridge from OFN's mathematical TDR-G imports. |
+| `R1-UVM`, §6.3 | **PASS** | `uvm-v0.7.1` §7 lists GEN/DYAD/TRIAD technical imports; OFN and Programme governance/reference interfaces and Pre-Legacy historical priors are now separately typed. |
+| `R1-G-OFN`, `R1-G-REQ`, `R1-G-DISC`, `R1-G-REF`, §7.1 | **PASS** | The graph now separates continuous claim-level DYAD/RECOG/GEN → OFN, the discrete TDR-G ↔ OFN mathematical import/feedback relation, and TRIAD/UVM/NUMGEN reference-only feedback. The outstanding NUMGEN → OFN path is no longer called an adopted claim import. Branch firewall remains. |
+| IF03 (modified) | **PASS** | `tdrg-v2.12.14` §7 explicitly imports OFN's `RTG-OFN-ALG-STAR-TOKEN-SHIFT` for SG-14 at the historical **`ofn-v0.10`** claim-level pin; the v0.6/v0.7 references remain historical and are not falsely repinned. |
+| IF24 | **PASS** | `ofn-v0.12` §11.3 RF-O08-09/10 and RF-O09-04 are NUMGEN feedback/reference records, not scientific claim imports; the v1.21 source edition is verified. |
+| IF28 | **PASS** | `ofn-v0.12` §11.2 records RECOG imports IMP-O08-17–19 and IMP-O09-01–03, whereas §11.3 RF-O08-05/06 and RF-O09-01–03 are reference-only. The extra correction is justified and changes no owner claim. |
+| IF32 | **PASS** | The combined row distinguishes DYAD/GEN/TDR-G imports in OFN IMP-O08-01–16, IMP-O08-20, IMP-O10-01–07 from TRIAD/UVM reference-only RF-O08-02/08/11. The row retains all five named sources, without treating TDR-G's foundational import as proof of a physical cross-branch bridge. |
+| R2, §6.1 | **PASS** | `BASELINE.md` remains a reproducible identity manifest; where the table/manifest disagree, actual governing status follows the adopted tag and owner release record (Methodology v1.4 §13.9, `CONVENTIONS.md` §2). |
+| Appendix A round entry | **PASS** | Revision-2 edit/history sentence is a compact maintenance note; no owner scientific result, theorem grade, programme OPEN, or historical Appendix B body is changed. |
+
+**Source-reading extent for this delta:** targeted complete import lists and selected RF rows of OFN v0.12 §§11.2–11.5; TDR-G v2.12.14 §7; OPEN M v0.7.1 §7; and changed Programme v1.4 §§6.1–6.3, 7.1–7.2, Appendix A. The previously checked release-record §4 topics (TDR-G partial pass, CN-05/IF11, κ_f, updated DYAD/GEN/TRIAD source summaries) remain unmodified. Owner certificate campaigns were not rerun.
+
+### 6.3 Final review verdict and minor publication note
+
+**ACCEPT SCOPED — the specific R1 scientific/source-typing blocker is closed; no further Programme review cycle is required on these 12 operation changes.** No claim was promoted, no owner science changed and no branch gate opened. The PI may now decide adoption of the **specific revision-2 candidate** identified by SHA-256 `d55dc304...7dae`, then authorize the normal status-only publication transform, release record completion, `BASELINE.md` update, merge and annotated tag under `CONVENTIONS.md`.
+
+**Nonblocking process note:** At the time of this review, the narrative description of PR #178 still identified the **first-round** candidate `d109c78b...`, 71 edits and 17/18 controls, although the checked revision-2 release record and evidence correctly give `d55dc304...`, 81 edits and 18/22 controls. Update the PR description before final publication to avoid mismatched identities. This is not a request for another scientific review. The reviewed revision-2 file has not been modified by this co-owner.
