@@ -1,0 +1,77 @@
+[
+ {
+  "id": "V1",
+  "what": "H cites a retired L5 row",
+  "detected": true
+ },
+ {
+  "id": "V2",
+  "what": "retired key reused",
+  "detected": true
+ },
+ {
+  "id": "V3",
+  "what": "SOURCES row older than manifest",
+  "detected": true
+ },
+ {
+  "id": "V4",
+  "what": "new GEN RID misspelled against the source (shared checker links FAIL)",
+  "detected": true
+ },
+ {
+  "id": "V5",
+  "what": "new RECOG RID misspelled against the source (shared checker links FAIL)",
+  "detected": true
+ },
+ {
+  "id": "V6",
+  "what": "P4 identity without the general cubic term",
+  "detected": true
+ },
+ {
+  "id": "V7",
+  "what": "independent route shown as a recovery of the missing source",
+  "detected": true
+ },
+ {
+  "id": "V8",
+  "what": "RECOG lemma shown as a Dyadic registration",
+  "detected": true
+ },
+ {
+  "id": "V9",
+  "what": "below-majorant c′_Q in the envelope source condition",
+  "detected": true
+ },
+ {
+  "id": "V10",
+  "what": "consumer repin implied by the producer answer",
+  "detected": true
+ },
+ {
+  "id": "V11",
+  "what": "Φ₂→₃ read as a certified birth law",
+  "detected": true
+ },
+ {
+  "id": "V12",
+  "what": "NUMGEN→OFN typed as an import again",
+  "detected": true
+ },
+ {
+  "id": "V13",
+  "what": "unsafe-direction K_ε display reintroduced",
+  "detected": true
+ },
+ {
+  "id": "V14",
+  "what": "birth symmetry back as an unnumbered THM",
+  "detected": true
+ },
+ {
+  "id": "V15",
+  "what": "stale Programme SOURCES row",
+  "detected": true
+ }
+]
