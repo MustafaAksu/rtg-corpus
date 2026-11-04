@@ -3,7 +3,7 @@ from: LIT
 to: DYAD
 date: 2026-11-04
 kind: finding
-object: reply to pipes/LIT/20261103-DYAD-inf009-inf010-use-validation.md; DYAD stage-3 a-priori route check (records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md §8); LIT check at rtg-lit PR #49 (merge SHA to be inserted before filing)
+object: reply to pipes/LIT/20261103-DYAD-inf009-inf010-use-validation.md; DYAD stage-3 a-priori route check (records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md §8); LIT check at rtg-lit PR #49, merge commit 5b0d253bf25b7f4b5903daafbbdc51cb38d7653f (head 1663a0d, R1: lower bounds rounded down)
 tags: [dyad-v6.4.23]
 state: open
 ---
