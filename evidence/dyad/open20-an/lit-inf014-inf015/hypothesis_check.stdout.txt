@@ -1,0 +1,12 @@
+G0_alpha_equals_stage1 PASS
+G0_stage1 PASS
+H1_2A_eq_alpha_mu PASS
+H1_B_eq_alpha_c40 PASS
+H2_ell_nonzero_both_branches PASS
+H2_ell_plus_plus_ell_minus_zero PASS
+H3_Re_alpha_negative PASS
+H3_alpha_not_real PASS
+H4_lift_order4_full_germ PASS
+H5_c40_d31_from_jet PASS
+H5_low_degree_terms PASS
+RESULT PASS 

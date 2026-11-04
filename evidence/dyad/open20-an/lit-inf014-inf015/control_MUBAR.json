@@ -1,0 +1,38 @@
+{
+ "all_pass": false,
+ "control": "MUBAR",
+ "gates": {
+  "G0_alpha_equals_stage1": true,
+  "G0_stage1": true,
+  "H1_2A_eq_alpha_mu": false,
+  "H1_B_eq_alpha_c40": true,
+  "H2_ell_nonzero_both_branches": true,
+  "H2_ell_plus_plus_ell_minus_zero": true,
+  "H3_Re_alpha_negative": true,
+  "H3_alpha_not_real": true,
+  "H4_lift_order4_full_germ": true,
+  "H5_c40_d31_from_jet": true,
+  "H5_low_degree_terms": true
+ },
+ "info": {
+  "A": "(1/2 + 2*i*sqrt3)",
+  "B": "(11/24 + -5/24*i*sqrt3)",
+  "F_w_low": {
+   "(0, 1)": "1",
+   "(1, 2)": "(-1/2 + 2/3*i*sqrt3)"
+  },
+  "F_z_low": {
+   "(1, 0)": "1",
+   "(2, 1)": "(-1/2 + -2/3*i*sqrt3)"
+  },
+  "H4_offending": {
+   "Fw": {},
+   "Fz": {}
+  },
+  "P(u0)": "(-49/8640 + 307/25920*i*sqrt3)",
+  "alpha_c40": "(11/24 + -5/24*i*sqrt3)",
+  "alpha_mu": "(83/19 + -60/19*i*sqrt3)",
+  "u0": "(1/24 + 1/24*i*sqrt3)"
+ },
+ "script": "dyad_open20_lit_inf014_inf015_hypothesis_check.py"
+}

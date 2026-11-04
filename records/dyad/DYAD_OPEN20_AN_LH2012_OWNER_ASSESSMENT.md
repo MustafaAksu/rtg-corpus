@@ -122,3 +122,48 @@ independent of the root and of $C$, through the polynomial identity $P'(a)=\tfra
 - `lopezhernanz2012-summable-curves@vor`
 
 Nothing is imported now.
+
+## 6. Addendum — LIT findings INF-014 and INF-015: local orbit structure along Γ_σ (4 November 2026, SESSION)
+
+**Items:**
+- `pipes/DYAD/20261103-LIT-flower-thm13-lifted-germs.md`: INF-014, rtg-lit merge `e7b1ad93…`. Source: López-Hernanz–Rosas, ETDS 45 (2025), Theorem 1.3, form (A).
+- `pipes/DYAD/20261104-LIT-imrn2021-asymptotic-orbits.md`: INF-015, rtg-lit merge `d0ebb8c1…`. Source: López-Hernanz–Raissy–Ribón–Sanz, IMRN 2021, Theorems 5.1 and 7.1, read from arXiv:1710.03728v1.
+
+Both items were filed by LIT's co-owner on draft PRs #171 and #174.
+
+**What LIT states** (conditional on DYAD's data; both SESSION, checked by LIT's co-owner):
+- **(a) Flower theorem, INF-014.** At each lifted point p_σ, the germ has form (A) with M = 3, a = ℓ_σ and b = αℓ_σ, so Re(b/a) = Re α < 0. Consequences:
+  - no two-dimensional forward basin exists near p_σ;
+  - every forward orbit of F with z_j → 0 and w_j/z_j² → a_σ eventually lies on one of three attracting parabolic curves.
+- **(b) Stable manifolds, INF-015.** No condition on Re α is needed: k = 3, p = 0, μ = 1, and all three attracting directions are saddle directions. Consequences:
+  - every orbit of F asymptotic to Γ_σ to all orders eventually lies on one of three parabolic curves asymptotic to Γ_σ;
+  - no two-dimensional stable manifold of such orbits exists.
+- **(c) Identification with the 3-sums.** Under (a) the two orbit classes coincide. Near each attracting direction the curves coincide with the blow-downs of LH2012's 3-sum graphs. That identification is a further LIT step (INF-015 Part B; INF-012 B), not a statement of the sources.
+
+**Owner check of the DYAD inputs** (`EV-RUN`, exact; `evidence/dyad/scripts/dyad_open20_lit_inf014_inf015_hypothesis_check.py`, run `evidence/dyad/open20-an/lit-inf014-inf015/run.sh`):
+
+| Gate | Result |
+|---|---|
+| H1 | 2A = αμ = 1 + 4i√3 and B = αc₄₀ = 11/24 − 5i√3/24. Hence P′(u) = α·G(0,u) identically, and b/a = α on both branches |
+| H2 | ℓ_σ ≠ 0 on both branches: the zero u₀ = −c₄₀/μ = (1 + i√3)/24 of u ↦ c₄₀ + μu has P(u₀) ≠ 0. Also ℓ₊ + ℓ₋ = 0 (Vieta) |
+| H3 | Re α = −102/19 < 0; α is not real |
+| H4 | The lift has order 4 as a **full analytic germ**. The conditions involve only raw monomials of total degree ≤ 4, which the exact degree-4 jet of F = T⁶ decides |
+| H5 | Raw terms of degree ≤ 3 are only the identity, μz²w and μ̄zw². The jet gives c₄₀ and d₃₁ as recorded |
+
+The two controls (α + 1/19; μ̄ in place of μ) each fail H1 and exit 1. The input is `stage1_prep.json` at its pin `2c9ae637…4739`.
+
+**Owner reading.**
+- **Accepted at SESSION scope.** The DYAD-side hypotheses of INF-014 and INF-015 are certified exactly here, and the theorems are published. The DYAD owner did not read the sources themselves; LIT did.
+- **Qualifications carried with the statement:**
+  - FL-Q1 (INF-014: the flower paper's §8 sectorial coordinates; DYAD's case is covered by LH2012 Theorem 4.2);
+  - IMRN-Q1 (the reading of "order of F" in the proof of Theorem 7.1);
+  - IMRN 2021 read from arXiv v1, not from the journal version;
+  - the LIT identification step (c).
+  With these open, the statement is not a `[THM]` import.
+- **What it adds.** It gives the formal branches Γ_σ a dynamical meaning: every orbit of the six-step return that converges to 0 through p_σ (z_j → 0, w_j/z_j² → a_σ) ends on one of three parabolic curves per branch. These curves realize Γ_σ on sectors. It supports the selected-sum convention of the pilot (design D8) through an independent uniqueness basis.
+- **What it does not decide.** Nothing about B-an or B-6: it says nothing on the convergence of Γ_σ, log F or F^{1/2}. It gives no Stokes value and no E3/E4 constant; the stage-3 route check of the design record §8 is unaffected. It does not cover the inverse map, other infinitely-near points, the real slice or a physical carrier.
+- **DSN.** Proposed for the v6.4.24 S3 paragraph (backlog) as one `[SESSION]` sentence with the LIT-ID@version:label citations:
+  - `lopezhernanz2025-flower@vor:Theorem 1.3`
+  - `lopezhernanz2021-stable-manifolds@arxiv-v1:Theorem 5.1`
+  - `lopezhernanz2021-stable-manifolds@arxiv-v1:Theorem 7.1`
+  Nothing is imported now.
