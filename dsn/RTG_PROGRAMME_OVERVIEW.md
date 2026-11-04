@@ -1,18 +1,18 @@
-# RTG_PROGRAMME_OVERVIEW_v1.3
+# RTG_PROGRAMME_OVERVIEW_v1.4
 
 **Title:** Relational Time Geometry — Programme Overview and Study Hierarchy
-**Date:** 23 October 2026
-**Scope:** Inventory, ownership, branch/layer architecture, programme OPENs and scope guards, synchronized to the governing editions of the corpus; pass-two revision of the adopted v1.2 architecture.
+**Date:** 4 November 2026
+**Scope:** Inventory, ownership, branch/layer architecture, programme OPENs and scope guards, synchronized to the governing editions of the corpus; maintenance synchronization of the adopted v1.3 (inventory, interface register, pointers, κ table, receiver items).
 **Document class:** Programme overview, under DSN Methodology v1.4 §0.5.
-**Document status:** ADOPTED — PI, 24 October 2026 (pass-two synchronization of the v1.2 architecture under Methodology v1.4; adoption record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`). Supersedes `programme-v1.2`.
-**Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.2` (tag `programme-v1.2`, SHA-256 `4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359`, adopted 20 September 2026).
+**Document status:** ADOPTED — PI, 4 November 2026 (maintenance synchronization of the adopted v1.3 under Methodology v1.4; adoption record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`). Supersedes `programme-v1.3`.
+**Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.3` (tag `programme-v1.3`, SHA-256 `1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06`, adopted 24 October 2026).
 **Repository:** `MustafaAksu/rtg-corpus`, `main`. A study's governing edition is its latest adopted tag with its release record (Methodology v1.4 §13.9); `BASELINE.md` lists the governing editions with their SHA-256; `CONVENTIONS.md` gives the working rules. Project copies mirror `main`.
 **Companion documents:** the governing editions in §6.1 (by tag). The list is not a substitute for claim-level imports; each consumer's own pins are in its Import Ledger (§7.2 records them where they differ).
-**DSN Methodology:** v1.4 (tag `methodology-v1.4`); v1.2 was adopted under v1.3.
+**DSN Methodology:** v1.4 (tag `methodology-v1.4`); v1.2 was adopted under v1.3; v1.3 and v1.4 under v1.4.
 **Status summary:** Two physical research branches, continuous and discrete, with shared foundational, historical and diagnostic documents whose contents remain branch-typed. The inventory (§6.1) records fifteen canonical document homes in `dsn/`, including the RRF representation registry adopted as a working standard, three noncanonical registries and studies in `noncanonical/`, and one derived map (the State Atlas) that is never a source. All five programme-level scientific OPEN records (P0, P1, P2A, P2B, P3) remain ACTIVE; no maturity grade, scope guard or scientific status is changed by this edition. No physical bridge is certified.
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok — inherited authorship; separate approval by other inherited authors is not inferred.
-**Revision editor (v1.3):** Claude (atlas owner), by PI decision of 23 October 2026; change-focused review by ChatGPT.
-**Release record:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`. The v1.2 release and change records are not in the repository (recorded as missing there); v1.2's header records the PI's adoption of 20 September 2026.
+**Revision editor (v1.4):** Claude (atlas owner), by PI decision of 4 November 2026; change-focused review by ChatGPT. v1.3: the same editor, by PI decision of 23 October 2026.
+**Release record:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`; v1.3: `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`. The v1.2 release and change records are not in the repository (recorded as missing there); v1.2's header records the PI's adoption of 20 September 2026.
 **Archive reference:** rtgtheory.org · Zenodo DOI 10.5281/zenodo.17568897 — inherited programme locator, not a claim that this release has been deposited there.
 ---
 
@@ -23,7 +23,7 @@
 
 ### 0.1 Present orientation and revision boundary
 
-The governing Methodology is v1.4 (tag `methodology-v1.4`). Programme v1.3 is the pass-two synchronization of the adopted v1.2 architecture: the inventory, the interface register, the owner pointers and the maintenance record are brought to the governing editions of 23 October 2026; the two-branch architecture, maturity semantics, OPEN-P criteria and scope guards of v1.2 are unchanged. The source of every edition is the repository: a study's governing edition is its latest adopted tag with its release record; `BASELINE.md` is the machine-readable list.
+The governing Methodology is v1.4 (tag `methodology-v1.4`). Programme v1.3 was the pass-two synchronization of the adopted v1.2 architecture. Programme v1.4 is a maintenance synchronization of v1.3: the inventory, the interface register, the owner pointers, the κ table and the maintenance record are brought to the governing editions of 4 November 2026, and the receiver items of `pipes/PROG/` are answered; the two-branch architecture, maturity semantics, OPEN-P criteria and scope guards are unchanged since v1.2. The source of every edition is the repository: a study's governing edition is its latest adopted tag with its release record; `BASELINE.md` is the machine-readable list.
 
 The inventory (§6.1) recognizes fifteen canonical document homes in `dsn/` — Methodology, Programme Overview, Ontological Foundations, the RRF representation registry (adopted working standard), the two historical ledgers, Number Genesis as the foundational/technical common home, six continuous technical studies (Dyadic, Triadic, Genesis, OPEN M, RECOG, DZT), one discrete owner (TDR-G) and AZ as shared diagnostic infrastructure — plus three noncanonical documents (RER, FMS, ER-2B) and one derived map (the State Atlas). These are document homes and classes, not physical branches. Number Genesis keeps its continuous and discrete realization sectors distinct; AZ keeps its continuous references and discrete graph diagnostics distinct. Their shared location supplies no physical identification between substrates. A noncanonical document is a working record that no owner has adopted as science: it may be cited for what it records, never as the source of a claim. The derived map is read, not cited; on any conflict the owner DSN wins.
 
@@ -131,14 +131,14 @@ AZ owns its diagnostic engine and graph mathematics while retaining other studie
 
 **First-pass assignment boundary.** No existing scientific study is promoted or demoted here. The records below preserve the prior Programme labels or owner-declared/requested labels as provenance. Slashed grades are not newly certified combined levels; their scope needs reassessment during the owner updates and pass two.
 
-| Study | Previous or owner-declared maturity record | v1.3 |
+| Study | Previous or owner-declared maturity record | v1.4 |
 |---|---|---|
-| Dyadic | B in Programme v1.1 | Record retained; no owner header at `dyad-v6.4.22` declares an A–D grade; scientific reconciliation of the grade not performed by the Programme |
+| Dyadic | B in Programme v1.1 | Record retained; no owner header at `dyad-v6.4.23` declares an A–D grade; scientific reconciliation of the grade not performed by the Programme |
 | Triadic | B/C locally in Programme v1.1 | Record retained; scope of B versus local bridge support unresolved |
 | Genesis | A/B in Programme v1.1 | Record retained; scope of the mixed assignment unresolved |
 | TDR-G | B in Programme v1.1 | Record retained; policy/limit scope remains visible |
 | DZT | A in owner header (v0.8) | Owner record; no promotion |
-| RECOG | A requested in the v0.3 header and stream memo (September 2026) | Record retained; no grade requested or declared in the v0.3.23 header; no grade issued here |
+| RECOG | A requested in the v0.3 header and stream memo (September 2026) | Record retained; no grade requested or declared in the v0.3.27 header; no grade issued here |
 | OPEN M | B conditionality in the v0.6 summary | Record retained; v0.7.1 declares no A–D grade |
 | AZ | A retained in owner header (v0.6) | Owner record; its own diagnostic gate is not a universal programme maturity rule |
 | Number Genesis | No A–D assignment in the owner | No grade assigned |
@@ -157,7 +157,7 @@ AZ owns its diagnostic engine and graph mathematics while retaining other studie
 
 **RID:** `RTG-OPEN-GENERATOR-SELECTION`  
 **Status:** ACTIVE  
-**Owner study:** Programme Overview for coordination; OFN (admissibility and model-selection criteria, OFN v0.10 §§5, 9) and RRF (representation and interface contracts, RRF v0.8.4) supply the criteria; technical owners supply results.  
+**Owner study:** Programme Overview for coordination; OFN (admissibility and model-selection criteria, OFN v0.12 §§5, 9) and RRF (representation and interface contracts, RRF v0.8.4) supply the criteria; technical owners supply results.  
 **Question:** What, if anything, selects the canonical continuous generator rather than adopting it as an effective model?
 
 `[DEF]` [scope: selected model already stated in Programme v1.1 §5; owner definition `DYAD-DEF-PRIMITIVE-MAP`, Dyadic §6.1 at `dyad-v6.4.22`] The reference map is
@@ -221,7 +221,7 @@ with coordinate/gauge equivalence expressed explicitly where used. A longitudina
 **Closure criterion:** exhibit the admissible construction and prove the reduction, or prove nonexistence in an explicitly named class.  
 **Interpretation boundary:** a positive reduction proves that subsystem relation; a negative result excludes its stated class. Neither automatically establishes triad-first or dyad-first ontology.  
 **Dependencies:** the declared continuous state/model conventions; P0 remains a physical-selection condition, not an automatic blocker of a conditional reduction theorem.  
-**Next required decision:** the criterion home is OFN v0.10, OPEN-OFN-3B (`RTG-OFN-OPEN-PRIMACY-3B`: admissible triad-to-dyad invariant reduction; row agreement on $c=0$ explicitly insufficient). No technical construction owner is assigned; the Programme assigns none.
+**Next required decision:** the criterion home is OFN v0.12, OPEN-OFN-3B (`RTG-OFN-OPEN-PRIMACY-3B`: admissible triad-to-dyad invariant reduction; row agreement on $c=0$ explicitly insufficient). No technical construction owner is assigned; the Programme assigns none.
 
 <a id="prog-open-p3"></a>
 ### OPEN-P3 — RTG-to-Regge / smooth-geometry bridge
@@ -248,31 +248,31 @@ with coordinate/gauge equivalence expressed explicitly where used. A longitudina
 
 ### 6.1 Navigation tiers and source inventory
 
-`[DEF]` Tier numbers are navigation groups, not proof arrows or physical rankings. The labels 0–5 are retained: 0 programme; 1 methodology; 2 foundational/historical/common-home ledgers; 3 continuous technical studies; 4 discrete technical studies; 5 shared infrastructure, standards and separately proposed bridge programmes. Class says what kind of document it is: canonical (adopted owner science or governance), adopted working standard, noncanonical (working record, not owner-adopted science), derived (a map built from the others). The placement additions and clarifications of v1.2 are retained; v1.3 adds the RRF, RER, FMS, ER-2B and Atlas rows and the class column.
+`[DEF]` Tier numbers are navigation groups, not proof arrows or physical rankings. The labels 0–5 are retained: 0 programme; 1 methodology; 2 foundational/historical/common-home ledgers; 3 continuous technical studies; 4 discrete technical studies; 5 shared infrastructure, standards and separately proposed bridge programmes. Class says what kind of document it is: canonical (adopted owner science or governance), adopted working standard, noncanonical (working record, not owner-adopted science), derived (a map built from the others). The placement additions and clarifications of v1.2 are retained; v1.3 added the RRF, RER, FMS, ER-2B and Atlas rows and the class column; v1.4 moves eight rows to their governing editions and adds no home.
 
-**Governing edition, adoption state and ownership are distinct.** The table lists the governing edition of each document by its tag; `BASELINE.md` carries the SHA-256 values and is the authority if this table and it ever disagree. Consumers keep their own import pins; §7.2 records them where they differ from the governing edition. Filenames in `dsn/`, `noncanonical/` and `atlas/` are fixed (CONVENTIONS); versions live in tags, not in names.
+**Governing edition, adoption state and ownership are distinct.** The table lists the governing edition of each document by its tag; `BASELINE.md` carries the SHA-256 values; if this table and `BASELINE.md` ever disagree, the adopted tag with its release record governs (Methodology v1.4 §13.9). Consumers keep their own import pins; §7.2 records them where they differ from the governing edition. Filenames in `dsn/`, `noncanonical/` and `atlas/` are fixed (CONVENTIONS); versions live in tags, not in names.
 
 | Key | Document (fixed path) | Governing edition | Tag | Class | Tier | Role / physical scope |
 |---|---|---|---|---|---:|---|
 | METH | `dsn/DSN_METHODOLOGY.md` | v1.4 | `methodology-v1.4` | canonical governance | 1 | Adopted grammar, profiles, evidence and revision rules |
-| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.3 (this edition; v1.2 governs until adoption) | programme-v1.3, created on adoption | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |
-| OFN | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | v0.10 | `ofn-v0.10` | canonical foundational | 2 | O0–O3 commitments; model selection; class-C model contract; foundational OPENs |
+| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.4 (this document) | `programme-v1.4` on adoption (predecessor `programme-v1.3`) | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |
+| OFN | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | v0.12 | `ofn-v0.12` | canonical foundational | 2 | O0–O3 commitments; model selection; class-C model contract; foundational OPENs |
 | RRF | `dsn/RTG_RRF_REPRESENTATION_REGISTRY.md` | v0.8.4 | `rrf-v0.8.4` | adopted working standard | 5 | Representation conventions, interface contracts and identifiers (`RRF` namespace, Methodology v1.4 §4.2); not an owner of physics |
 | LEGACY | `dsn/RTG_L0_L1_L2_BRIDGE_LEGACY_DSN.md` | v0.7 | `legacy-v0.7` | canonical historical | 2 | L0/L1/L2 revalidation ledger; not a current branch |
 | PREL | `dsn/RTG_PRE_LEGACY_DSN.md` | v0.8 | `prelegacy-v0.8` | canonical historical | 2 | ESM / node-resonance provenance; not a current branch |
-| NUMGEN | `dsn/RTG_NUMBER_GENESIS_DSN.md` | v1.20.8 | `numgen-v1.20.8` | canonical common home | 2 | Relational composition, representation and realization; continuous and discrete sectors separately typed |
-| DYAD | `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.22 | `dyad-v6.4.22` | canonical | 3 | Selected primitive map, local return and normalization, $p$-resonance programme |
-| TRIAD | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.6.1 | `triad-v1.6.1` | canonical | 3 | Birth kinematics and diagnostic lifts |
-| GEN | `dsn/RTG_GENESIS_GEOMETRY_DSN.md` | v2.8.9 | `gen-v2.8.9` | canonical | 3 | Integrating study: $K_3/K_4$ algebra, metric, constrained lift, network, Regge machinery |
+| NUMGEN | `dsn/RTG_NUMBER_GENESIS_DSN.md` | v1.21 | `numgen-v1.21` | canonical common home | 2 | Relational composition, representation and realization; continuous and discrete sectors separately typed |
+| DYAD | `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.23 | `dyad-v6.4.23` | canonical | 3 | Selected primitive map, local return and normalization, $p$-resonance programme |
+| TRIAD | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.7 | `triad-v1.7` | canonical | 3 | Birth kinematics and diagnostic lifts |
+| GEN | `dsn/RTG_GENESIS_GEOMETRY_DSN.md` | v2.10 | `gen-v2.10` | canonical | 3 | Integrating study: $K_3/K_4$ algebra, metric, constrained lift, network, Regge machinery |
 | UVM | `dsn/RTG_OPEN_M_DSN.md` | v0.7.1 | `uvm-v0.7.1` | canonical | 3 | UV-generator model classes and source/restoring blocks; Genesis keeps test and verdict custody |
-| RECOG | `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.23 | `recog-v0.3.23` | canonical | 3 | Comparators, return content, event strata, lattice memory on the dyadic substrate |
+| RECOG | `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.27 | `recog-v0.3.27` | canonical | 3 | Comparators, return content, event strata, lattice memory on the dyadic substrate |
 | DZT | `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md` | v0.8 | `dzt-v0.8` | canonical | 3 | Arithmetic diagnostics of Dyadic-owned coefficients |
-| TDRG | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | v2.12.13 | `tdrg-v2.12.13` | canonical | 4 | Native discrete model, policies, growth/suppression programme |
+| TDRG | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | v2.12.14 | `tdrg-v2.12.14` | canonical | 4 | Native discrete model, policies, growth/suppression programme |
 | AZ | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | v0.6 | `az-v0.6` | canonical infrastructure | 5 | Diagnostic engine and graph mathematics with typed threads |
 | RER | `noncanonical/RTG_RELATIONAL_EMERGENCE_REGISTRY.md` | v0.2 ADOPTED (noncanonical) | `rer-v0.2` | noncanonical registry | — | Emergence records and supplementary contracts with receiver-scoped acceptance |
 | FMS | `noncanonical/FMS_MODEL_SELECTION_LEDGER.md` | v0.6.4 SESSION | `fms-v0.6.4` | noncanonical ledger | — | Model-selection audit; input to OFN's class-C contract |
 | ER2B | `noncanonical/RTG_ER2B_CONSOLIDATED_STUDY.md` | v0.3 | `er2b-v0.3` | noncanonical study | — | Consolidated research source and provenance record; not a handoff |
-| ATLAS | `atlas/RTG_STATE_ATLAS.md` | v0.3 | `atlas-v0.3` | derived map (noncanonical) | — | AI-oriented current-state map with `atlas/RTG_STATE_ATLAS_METHOD.md`; never a source; owner DSN wins |
+| ATLAS | `atlas/RTG_STATE_ATLAS.md` | v0.9 | `atlas-v0.9` | derived map (noncanonical) | — | AI-oriented current-state map with `atlas/RTG_STATE_ATLAS_METHOD.md`; never a source; owner DSN wins |
 
 Genesis's own header tier statement is the owner's; this overview locates the integrating study in Tier 3 and records discrete inputs as blocked interfaces, not dual branch membership. Number Genesis and the historical ledgers receive navigation placement only. No scientific maturity follows from a placement or a class.
 
@@ -280,11 +280,11 @@ Genesis's own header tier statement is the owner's; this overview locates the in
 
 Each entry gives custody and the programme-relevant interfaces. The owner's current state is in its own header status summary and OPEN registry at the tag; this overview does not restate it.
 
-**METH — Methodology** (v1.4, `methodology-v1.4`). Owns the grammar, profiles, evidence and revision rules, the namespace registry (§4.2; `RRF` added in v1.4) and the release discipline (two-stage releases, release records, governing edition = tag + release record, §13). Programme v1.3 is built under it. Existing owner files keep their declared Methodology edition until individually migrated.
+**METH — Methodology** (v1.4, `methodology-v1.4`). Owns the grammar, profiles, evidence and revision rules, the namespace registry (§4.2; `RRF` added in v1.4) and the release discipline (two-stage releases, release records, governing edition = tag + release record, §13). Programme v1.3 and v1.4 are built under it. Existing owner files keep their declared Methodology edition until individually migrated.
 
-**PROG — Programme Overview** (v1.3 candidate). Owns navigation: inventory, programme OPEN coordination, maturity semantics, programme guards. All five programme OPEN records remain ACTIVE (§5).
+**PROG — Programme Overview** (v1.4, this document; edition and tag in §6.1). Owns navigation: inventory, programme OPEN coordination, maturity semantics, programme guards. All five programme OPEN records remain ACTIVE (§5).
 
-**OFN — Ontological Foundations** (v0.10, `ofn-v0.10`). Owns commitments, competing primitive hypotheses, model-selection questions, the class-C model contract and the foundational OPENs (OPEN-OFN-3B, -FRUSTRATION, -OPA among them). Receives scoped technical feedback from DYAD, RECOG, GEN, TRIAD, OPEN M, NUMGEN and TDR-G as imports (OFN §11); it does not acquire the proofs it cites.
+**OFN — Ontological Foundations** (v0.12, `ofn-v0.12`). Owns commitments, competing primitive hypotheses, model-selection questions, the class-C model contract and the foundational OPENs (OPEN-OFN-3B, -FRUSTRATION, -OPA among them). Imports claim-level statements from DYAD, RECOG, GEN and TDR-G (OFN §11.2, §11.4) and records TRIAD, OPEN M and NUMGEN feedback as reference-only (OFN §11.3, §11.5); it does not acquire the proofs it cites, and a TDR-G import into this foundational document is not a cross-branch physical bridge.
 
 **RRF — Representation Registry** (v0.8.4, `rrf-v0.8.4`; adopted working standard). Records representation conventions (CN-xx), interface contracts (RRF-CND-01 and the class-C model contract with OFN), its own OPEN interface items (OPEN-A pole relabeling, OPEN-B/E1/E2 network inheritance) and verbatim owner imports (DYAD, RECOG, OFN, GEN, TRIAD). It owns no physics and adopts no owner claim; consumers cite it for conventions and interface identifiers.
 
@@ -292,32 +292,32 @@ Each entry gives custody and the programme-relevant interfaces. The owner's curr
 
 **PREL — Pre-Legacy** (v0.8, `prelegacy-v0.8`). Owns the historical node-resonance/ESM synthesis and article provenance. Historical claim grades are not current-branch calibrations. Its owner pass in the v1.2 maintenance sequence has not been executed; its pointers into OFN and Genesis content predate the current editions of those owners (§9.2).
 
-**NUMGEN — Number Genesis** (v1.20.8, `numgen-v1.20.8`). Owns relational composition, representation and realization modules; its continuous local-history modules and its discrete DISC modules remain separately typed. Imports OFN, DYAD, GEN and TDR-G (DISC) at the editions in its §9.1; exports to RECOG by RID (N5AS1 definitions and results) and records RECOG as a consumer (its §9.1 row). Its foundational/technical profile is not evidence for OPEN-P1.
+**NUMGEN — Number Genesis** (v1.21, `numgen-v1.21`). Owns relational composition, representation and realization modules; its continuous local-history modules and its discrete DISC modules remain separately typed. Imports OFN, DYAD, GEN and TDR-G (DISC) at the editions in its §9.1; exports to RECOG by RID (N5AS1 definitions and results) and one route row to Genesis (IF38); records RECOG's explicit-domain theorems as independent agreement, not imports (its §9.1 acceptance matrix). Its foundational/technical profile is not evidence for OPEN-P1.
 
 ### 6.3 Continuous technical studies
 
-**DYAD — Dyadic Oscillator** (v6.4.22, `dyad-v6.4.22`). Owns the selected primitive map, local return enclosure and normalization, ISP geometry and the explicitly defined $p$-resonance coefficient programme. Direct consumers: Genesis, Triadic, RECOG, DZT, OPEN M, continuous Number Genesis modules, RRF, OFN; AZ cross-indexes its arithmetic. Imports RECOG results (its §7: RECOG-THM-R9-MEMORY as the stated assumption of its OPEN 3/21 asymptotic-phase theorems; RECOG-THM-A1A-RECIPROCAL-AMPLITUDE), NUMGEN, RRF conventions and OFN commitments.
+**DYAD — Dyadic Oscillator** (v6.4.23, `dyad-v6.4.23`). Owns the selected primitive map, local return enclosure and normalization, ISP geometry and the explicitly defined $p$-resonance coefficient programme. Direct consumers: Genesis, Triadic, RECOG, DZT, OPEN M, continuous Number Genesis modules, RRF, OFN; AZ cross-indexes its arithmetic. Its scientific imports are RECOG results (its §7: RECOG-THM-R9-MEMORY as the stated assumption of its OPEN 3/21 asymptotic-phase theorems; RECOG-THM-A1A-RECIPROCAL-AMPLITUDE); RRF conventions are standard references (IF29), OFN commitments programme context (IF02), and Number Genesis appears as a consumer and in the L-PHASE interface (its §7.0, §7.0a).
 
-**TRIAD — Triadic Birth–Lift** (v1.6.1, `triad-v1.6.1`). Owns its birth/lift and diagnostic-model ledger and the T-6 export protocol. Imports Genesis (primitive seed, metric conventions), Dyadic, RRF (CN-05 planar metric convention), OFN and Programme; exports scoped diagnostics to Genesis and OPEN M.
+**TRIAD — Triadic Birth–Lift** (v1.7, `triad-v1.7`). Owns its birth/lift and diagnostic-model ledger and the T-6 export protocol. Imports Genesis (primitive seed, metric conventions) and Dyadic claim by claim; RRF (CN-05 planar metric convention), OFN, the Programme and TDR-G are reference-only pointers (its §7.1); exports scoped diagnostics to Genesis and OPEN M, with per-recipient consumer state in its §7.4.
 
-**GEN — Genesis Geometry** (v2.8.9, `gen-v2.8.9`). One canonical owner file combining primitive $K_3/K_4$ algebra with quaternionic metric, constrained-lift, network and Regge machinery; retains the test framework and geometry verdict custody for OPEN M. Imports Dyadic, Triadic, OFN; TDR-G input remains a blocked cross-branch interface (IF25). The proposed split of primitive algebra from the geometry framework is still a proposal (§6.7).
+**GEN — Genesis Geometry** (v2.10, `gen-v2.10`). One canonical owner file combining primitive $K_3/K_4$ algebra with quaternionic metric, constrained-lift, network and Regge machinery; retains the test framework and geometry verdict custody for OPEN M. Imports Dyadic, Triadic and one Number Genesis route row (IF38); the Programme and OFN are companion references, not scientific imports (its §7); TDR-G input remains a blocked cross-branch interface (IF25). The proposed split of primitive algebra from the geometry framework is still a proposal (§6.7).
 
-**UVM — OPEN M** (v0.7.1, `uvm-v0.7.1`). Owns UV-generator model classes and the derivation of source/restoring blocks and their physical parameters; Genesis keeps the harness and the cascade/metric verdict. Imports Genesis, Dyadic, Triadic, OFN, Programme and Pre-Legacy priors. No physical UV deliverable to Genesis is complete (IF09).
+**UVM — OPEN M** (v0.7.1, `uvm-v0.7.1`). Owns UV-generator model classes and the derivation of source/restoring blocks and their physical parameters; Genesis keeps the harness and the cascade/metric verdict. Imports Genesis, Dyadic and Triadic (its §7); OFN (model-selection interface, OPEN-M-7 only) and the Programme are governance and interface references, and Pre-Legacy supplies historical priors (IF23). No physical UV deliverable to Genesis is complete (IF09).
 
-**RECOG — Relational Recognition** (v0.3.23, `recog-v0.3.23`). Owns comparators, return-content results, candidate event strata and the lattice-memory theorems on the dyadic substrate. Imports Dyadic, Number Genesis (by RID at v1.20.8), Genesis, OFN and RRF conventions; its results are consumed by Dyadic, OFN, RRF and RER (RECOG §7.3). The general-$p$ return-equivariance proof is RECOG's; the bridge-lemma statement RID is Dyadic's — a settled custody split, not a pending transfer. Its OPEN registry and the live-file exception of its release record are the owner's; see RECOG §2 and `records/recog/RECOG_v0_3_23_RELEASE_RECORD.md` §11.
+**RECOG — Relational Recognition** (v0.3.27, `recog-v0.3.27`). Owns comparators, return-content results, candidate event strata and the lattice-memory theorems on the dyadic substrate. Imports Dyadic and Number Genesis by RID (at `dyad-v6.4.23` and `numgen-v1.21`), Genesis, OFN and RRF conventions; its results are consumed by Dyadic, OFN, RRF and RER (RECOG §7.3). The general-$p$ return-equivariance proof is RECOG's; the bridge-lemma statement RID is Dyadic's — a settled custody split, not a pending transfer. Its OPEN registry and release record are the owner's; see RECOG §2 and `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md`.
 
 **DZT — Dyadic Arithmetic-Resonance Transform** (v0.8, `dzt-v0.8`). Owns channel-state, resultant/norm and transform diagnostics of Dyadic-owned coefficients; imports Dyadic (its §7 pin v6.4.8.1). Not a Riemann-Hypothesis claim or an OPEN-M source calibration. Its owner pass has not been executed since v1.2 (§9.2).
 
 ### 6.4 Discrete technical study and its launch gate
 
-**TDRG — Discrete Genesis** (v2.12.13, `tdrg-v2.12.13`). Owns native cyclic-state/event definitions, policy branches, kinematic/BIND3 modules and the growth/suppression programme; imports OFN and Programme (its §7 pins v0.6 and v1.1). Exports to Number Genesis (DISC) and AZ (Threads B/C). Its owner pass has not been executed since v1.2.
+**TDRG — Discrete Genesis** (v2.12.14, `tdrg-v2.12.14`). Owns native cyclic-state/event definitions, policy branches, kinematic/BIND3 modules and the growth/suppression programme; imports OFN (its §7 claim pin v0.10; historical v0.6/v0.7 pins at its §2) and cites the Programme as context (v1.3). Exports to Number Genesis (DISC) and AZ (Threads B/C). Its owner pass since v1.2 is executed in part: v2.12.14 is a corrections edition under its declared Methodology v1.2, and records the state of the four owner-review tasks of Programme v1.2 §6 in its §2; the Methodology v1.4 migration is planned for its v2.13.
 
-**Launch-gate source record** (unchanged since v1.2; the owner edition is unchanged). The owner's canonical §§1–2 give
+**Launch-gate source record** (owner edition `tdrg-v2.12.14`). The owner's canonical §§1–2 and its Appendix C gate condition give
 ```text
 TDR-24D / TDR-24F: reported closed at the declared scope
 TDR-24A -> TDR-24B -> TDR-24C -> TDR-T: pending launch chain
 ```
-Its Appendix C (`tdrg-v2.12.13`) still carries an older D/A/B gate and reserves R3–R10 for work after TDR-T0 opens. This overview records that unresolved source discrepancy; it does not repair the owner appendix or authorize a launch. BIND3 and already-scoped three-node/no-birth diagnostics are not equated with launch of the full birth programme.
+The owner aligned its Appendix C with §§1–2 in v2.12.14 (a correction line); Appendix C still reserves R3–R10 for work after TDR-T0 opens, and one export row of its §7 (`TDRG-EXPORT-DISCRETE-TRIAD`) still names the earlier D/A/B gate. This overview records the source state; it does not repair the owner text or authorize a launch. BIND3 and already-scoped three-node/no-birth diagnostics are not equated with launch of the full birth programme.
 
 ### 6.5 Shared infrastructure, noncanonical documents and the derived map
 
@@ -329,7 +329,7 @@ Its Appendix C (`tdrg-v2.12.13`) still carries an older D/A/B gate and reserves 
 
 **ER2B — ER-2B Consolidated Study** (v0.3, noncanonical, `er2b-v0.3`). Consolidated research source and provenance record; kept as a reference, not a handoff request.
 
-**ATLAS — RTG State Atlas** (v0.3, `atlas-v0.3`; derived, noncanonical). An AI-oriented map of the current state across all owners, built by its own method (`atlas/RTG_STATE_ATLAS_METHOD.md`) from the tagged editions, with typed diagnostics and declared evidence limits. It advises owners through advisories recorded under `records/`; owners decide. It is never the source of a claim; on any conflict the owner DSN wins.
+**ATLAS — RTG State Atlas** (v0.9, `atlas-v0.9`; derived, noncanonical). An AI-oriented map of the current state across all owners, built by its own method (`atlas/RTG_STATE_ATLAS_METHOD.md`) from the tagged editions, with typed diagnostics and declared evidence limits. It advises owners through advisories recorded under `records/`; owners decide. It is never the source of a claim; on any conflict the owner DSN wins.
 
 ### 6.6 Proposed documents and historical placeholders
 
@@ -376,16 +376,19 @@ Continuous declared imports:
   DYAD --> NUMGEN[continuous]; NUMGEN[continuous] --> RECOG (RECOG recorded by NUMGEN as consumer)
   DYAD --> RECOG; RECOG --> DYAD (R9 memory as stated assumption of OPEN 3/21; reciprocal amplitude)
   GEN --> RECOG; DYAD --> DZT
-  OFN <-- DYAD, RECOG, GEN, TRIAD, UVM, NUMGEN, TDRG   (scoped technical feedback, OFN §11)
+  GEN --> NUMGEN[continuous] (NG-10 only); NUMGEN --> GEN (one route row)
+  OFN <-- DYAD, RECOG, GEN                             (claim-level imports, OFN §11.2, §11.4)
 
 Requests, NOT completed supply:
   UVM -?-> GEN                         physical UV inputs (open)
   DZT -?-> DYAD                        arithmetic diagnostic feedback (open)
-  NUMGEN -?-> OFN                      technical feedback synchronization (recorded by OFN as import; open items remain)
+  NUMGEN -?-> OFN                      technical feedback synchronization (recorded by OFN as reference-only or deferred feedback, §11.3)
 
 Discrete declared uses:
   TDRG --> NUMGEN[discrete/DISC]
   TDRG --> AZ[Thread B/C]
+  TDRG --> OFN; OFN --> TDRG          discrete definitions and lemmas into OFN (§11.2); one OFN lemma into TDR-G (SG-14);
+                                       foundational uses, not a cross-branch physical bridge
 
 Noncanonical records (transfer nothing):
   RER  records RRF, DYAD, GEN, TRIAD, RECOG, OFN, ER-2B
@@ -396,6 +399,7 @@ Shared reference-only indexing:
   DYAD -- reference --> AZ[Thread A]
   LEGACY -- historical scope --> PREL
   PREL -- hypothesis/provenance only --> UVM
+  TRIAD, UVM, NUMGEN -- reference-only feedback --> OFN (OFN §11.3)
 
 Physical cross-branch route:
   TDRG -X-> continuous uses            blocked until a named P1 bridge
@@ -410,26 +414,26 @@ Closed since v1.2: the v1.2 request "RECOG -?-> DYAD general-return adoption/own
 
 ### 7.2 Interface register
 
-Each row names the consumer section that declares the interface and the consumer's own pin where it is not the source's governing edition. A pin older than the governing edition is the consumer's declared state, not a defect; repinning is the consumer's decision. Rows IF01–IF25 keep their v1.2 identifiers; IF26–IF36 are new in v1.3; a retired row says so.
+Each row names the consumer section that declares the interface and the consumer's own pin where it is not the source's governing edition. A pin older than the governing edition is the consumer's declared state, not a defect; repinning is the consumer's decision. Rows IF01–IF25 keep their v1.2 identifiers; IF26–IF36 are new in v1.3; IF37–IF38 are new in v1.4 (IF37 records an import that predates v1.3 and was not listed there); a retired row says so.
 
 | IF | From → To | Type | Content | Declared at (consumer) | Consumer pin |
 |---|---|---|---|---|---|
 | IF01 | METH → PROG | normative | grammar, profiles, evidence and revision rules | this document, header | v1.4 |
-| IF02 | OFN → DYAD | constraint | model-selection commitments, not a derivation of $T$ | DYAD §7 | v0.10 |
-| IF03 | OFN → TDRG | constraint | relational commitments; discrete interaction-selection questions | TDRG §7 | v0.6 (historical pin) |
-| IF04 | DYAD → TRIAD | declared-import | fracture state, local return, frame data | TRIAD §7 | v6.4.13 (and v6.4.8.1 historical) |
-| IF05 | DYAD → GEN | declared-import | direct dyadic input | GEN §7 | v6.4.13 |
-| IF06 | GEN → TRIAD | declared-import | primitive tetrahedral seed and metric conventions | TRIAD §7 | v2.8.7 |
-| IF07 | TRIAD → GEN | declared-import | scoped diagnostic exports under the T-6 protocol | GEN §7 | v1.6 |
+| IF02 | OFN → DYAD | constraint | model-selection commitments, not a derivation of $T$ | DYAD §7 | v0.12 (programme context, §7.0) |
+| IF03 | OFN → TDRG | constraint; declared-import | relational commitments; discrete interaction-selection questions; `RTG-OFN-ALG-STAR-TOKEN-SHIFT` imported for SG-14 | TDRG §7 | v0.10 (claim pin; v0.6/v0.7 historical at its §2) |
+| IF04 | DYAD → TRIAD | declared-import | fracture state, local return, frame data | TRIAD §7.1 | v6.4.23 claim by claim (v6.4.8.1 and v6.4.13 historical) |
+| IF05 | DYAD → GEN | declared-import | direct dyadic input | GEN §7 | v6.4.13 (historical proof pins); v6.4.22 for the §6.3c (C2) rows; v6.4.23 for `DYAD-ALG-NU5-P5` |
+| IF06 | GEN → TRIAD | declared-import | primitive tetrahedral seed and metric conventions | TRIAD §7.2 | v2.9 claim by claim (the radial-polynomial import held at v2.8.7) |
+| IF07 | TRIAD → GEN | declared-import | scoped diagnostic exports under the T-6 protocol | GEN §7 | v1.7 claim by claim (CN-01–CN-05 received at v1.6) |
 | IF08 | GEN → UVM | declared-import | secular frame, norms, cascade test and geometry requirements; Genesis keeps verdict custody | UVM §0.3, §7 | v2.8.5 |
 | IF09 | UVM → GEN | requested-deliverable | UV blocks and physical source/stiffness data | UVM §0.2–§0.3 | open; no cascade implied |
 | IF10 | DYAD → UVM | declared-import | normalization and local inputs, not a UV generator | UVM §7 | v6.4.10 |
 | IF11 | TRIAD → UVM | declared-import | chirality and seed-comparison imports | UVM §7 | v1.6 |
-| IF12 | DYAD → NUMGEN | declared-import | selected-map support for continuous history constructions | NUMGEN §9.1 | v6.4.18 |
+| IF12 | DYAD → NUMGEN | declared-import | selected-map support for continuous history constructions; the L-PHASE row-A remainder | NUMGEN §9.1 | v6.4.18 (map, PRIM-CTR, Q403); v6.4.22 (`DYAD-THM-LPHASE-ROWA-REMAINDER`) |
 | IF13 | TDRG → NUMGEN | declared-import | discrete event rules and harness input for DISC | NUMGEN §9.1 | v2.12.13 |
-| IF14 | NUMGEN → RECOG | declared-import | contraction, defect and INF-1 results by RID (`NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, L1, N1C, GAP-LOCK) | RECOG §6.13b, §7 | v1.20.8 (v1.15 producer pins retained where load-bearing) |
+| IF14 | NUMGEN → RECOG | declared-import | contraction, defect and INF-1 results by RID (`NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, L1, N1C, GAP-LOCK Lemma 3 by `NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO`) | RECOG §6.13b, §7 | v1.21 (v1.15 producer pins retained where load-bearing) |
 | IF15 | GEN → RECOG | declared-import | $B$, $J_Q$, pairings and phase-memory context | RECOG §7 | as declared in RECOG §7 |
-| IF16 | DYAD → RECOG | declared-import | map, return coefficients, resonance and normal-form inputs; chart laws | RECOG §7 | v6.4.22 by RID and section (producer editions named per row) |
+| IF16 | DYAD → RECOG | declared-import | map, return coefficients, resonance and normal-form inputs; chart laws; row-A bridge and $C_7$ rows | RECOG §7 | v6.4.23 by RID and section (producer editions named per row) |
 | IF17 | RECOG ↔ DYAD | mutual citation (retired as transfer-proposal) | `DYAD-ALG-BRIDGE-LEMMA` statement RID is Dyadic's; the general-$p$ proof is `RECOG-ALG-LEADING-RETURN-EQUIVARIANCE` | RECOG §6.10, §7; DYAD §6.9 | settled; nothing pending |
 | IF18 | DYAD → DZT | declared-import | channel coefficients and cascade formula | DZT §7 | v6.4.8.1 |
 | IF19 | DZT → DYAD | feedback-proposal | arithmetic diagnostic feedback | DZT §§1–2 | open |
@@ -437,23 +441,27 @@ Each row names the consumer section that declares the interface and the consumer
 | IF21 | TDRG → AZ | declared-import | Thread B context and Thread C graph exports | AZ §8 | v2.12 |
 | IF22 | LEGACY → PREL | historical-reference | L2 scope underlying condensed summaries | PREL §7 | as declared |
 | IF23 | PREL → UVM | historical-hypothesis | harmonic/log-frustration and dimensional-ladder priors | UVM §7 | v0.8 |
-| IF24 | NUMGEN → OFN | feedback (recorded import) | holonomy operator and representation results | OFN §11 | as declared in OFN §11 |
-| IF25 | TDRG → GEN | blocked-cross-branch | possible native phase moments or selector evidence | GEN §2 OPEN 1, §7 | v2.12.13; blocked pending a named P1 bridge |
-| IF26 | RECOG → DYAD | declared-import | `RECOG-THM-R9-MEMORY` as the stated assumption of Dyadic's OPEN 3/21 asymptotic-phase theorems (`[THM] [assuming: RECOG-THM-R9-MEMORY]`); `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | DYAD §6.14, §7 | v0.3.22 |
-| IF27 | NUMGEN ← RECOG | consumer record | NUMGEN records RECOG as a consumer of its N5AS1 RIDs; RECOG's explicit-domain A1a theorems are not listed by NUMGEN as inputs | NUMGEN §9.1 | v0.3.22 |
-| IF28 | RECOG → OFN | declared-import | comparator definitions and recognition feedback (IMP rows) | OFN §11 | as declared in OFN §11 |
-| IF29 | RRF → DYAD, TRIAD, RECOG, OFN | standard reference | conventions (CN-05 planar metric among them), interface contracts, identifiers | DYAD §7; TRIAD §7; RECOG §7; OFN §11 | DYAD v0.8.4; TRIAD v0.8.2; RECOG v0.8.4 (v0.8.3 rows historical); OFN v0.8.3 |
+| IF24 | NUMGEN → OFN | reference-only feedback | holonomy operator and representation results (RF-O08-09, RF-O08-10, RF-O09-04) | OFN §11.3 | v1.21 |
+| IF25 | TDRG → GEN | blocked-cross-branch | possible native phase moments or selector evidence | GEN §2 OPEN 1, §7 | v2.12.14; blocked pending a named P1 bridge |
+| IF26 | RECOG → DYAD | declared-import | `RECOG-THM-R9-MEMORY` as the stated assumption of Dyadic's OPEN 3/21 asymptotic-phase theorems (`[THM] [assuming: RECOG-THM-R9-MEMORY]`); `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | DYAD §6.14, §7 | v0.3.22 (claim-level; its §7.0 names v0.3.26 as current companion) |
+| IF27 | NUMGEN ← RECOG | consumer record | NUMGEN records RECOG as a consumer of its N5AS1 RIDs and records RECOG's explicit-domain A1a/A1b theorems as independent agreement, not as inputs (its acceptance matrix) | NUMGEN §9.1 | v0.3.24 |
+| IF28 | RECOG → OFN | declared-import | claim-level imports IMP-O08-17–19 and IMP-O09-01–03; further RECOG feedback as reference-only rows (RF-O08-05, -06; RF-O09-01–03) | OFN §11.2, §11.3 | as declared in OFN §11 |
+| IF29 | RRF → DYAD, TRIAD, RECOG, OFN | standard reference | conventions (CN-05 planar metric among them), interface contracts, identifiers | DYAD §7; TRIAD §7.1; RECOG §7; OFN §11 | DYAD v0.8.4; TRIAD v0.8.4; RECOG v0.8.4; OFN v0.8.4 |
 | IF30 | DYAD, RECOG, OFN, GEN, TRIAD, TDRG → RRF | verbatim owner import | registry imports with RID (e.g. RECOG W3, DYAD N14, OFN class-C request) | RRF §2 table | DYAD v6.4.18; RECOG v0.3.21; OFN v0.10; GEN v2.8.9 |
-| IF31 | OFN ↔ RRF | interface contract | class-C model contract (OFN N-O10-3 / RRF §6.2a) | OFN §5.5, §11; RRF §6.2a | v0.10 / v0.8.4 |
-| IF32 | DYAD, GEN, TRIAD, UVM, TDRG → OFN | declared-import (scoped feedback) | technical feedback rows IMP-O10-* | OFN §11 | as declared in OFN §11 |
+| IF31 | OFN ↔ RRF | interface contract | class-C model contract (OFN N-O10-3 / RRF §6.2a) | OFN §5.5, §11; RRF §6.2a | RRF pins OFN v0.10; OFN pins RRF v0.8.4 |
+| IF32 | DYAD, GEN, TDRG, TRIAD, UVM → OFN | declared-import (DYAD, GEN, TDRG); reference-only (TRIAD, UVM) | claim-level imports IMP-O08-01–16, IMP-O08-20 and IMP-O10-01–07; Triadic and OPEN M feedback as reference-only rows (RF-O08-02, -08, -11) | OFN §11.2–11.5 | as declared in OFN §11 |
 | IF33 | RRF, DYAD, GEN, TRIAD, RECOG, OFN, ER2B → RER | noncanonical record | emergence records and contracts with receiver-scoped acceptance | RER §7, source manifest | RRF v0.8.4; TRIAD v1.6.1; RECOG v0.3.20 frozen pin (v0.3.21/22 recorded) |
 | IF34 | OFN, RRF, GEN, DYAD, ER2B → FMS | noncanonical record | model-selection audit inputs | FMS §0 source manifest | as declared |
 | IF35 | OFN, RRF, TRIAD, GEN, LEGACY, PREL, RECOG, DYAD → ER2B | noncanonical record | consolidated study inputs | ER2B Part A | as declared |
 | IF36 | all owners → ATLAS | derived map | typed current-state extraction with declared evidence limits | atlas SOURCES table | the governing tags at the atlas snapshot |
+| IF37 | GEN → NUMGEN | declared-import | reduced-sector saturation ceiling (`GEN-ART-SATURATION`), NG-10 only | NUMGEN §9.1 | v2.9 |
+| IF38 | NUMGEN → GEN | declared-import | cyclic-average theorem (`NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE`) as an independent route in Genesis §6.4 | GEN §7 | v1.21 |
 
 ### 7.3 Read-only reports, normative imports and pending uses
 
-The entries of §6 are **custody and interface records**. No theorem coefficient is imported here for a new derivation, and no owner closure is re-certified or restated; the owner's header status summary at its tag is the current state. The load-bearing governance source is **DSN_METHODOLOGY v1.4** (`methodology-v1.4`), §§0.5–0.7, 1.1, 3.3–3.4, 4.2–4.5, 5.2–5.4 and 13; its rules have section identities, not theorem RIDs. The GEN/UVM custody split is transcribed from **OPEN M v0.7.1 §0.3**; the TDR-T gate report from **Discrete Genesis v2.12.13 §§1–2 and Appendix C** (`tdrg-v2.12.13`), with the discrepancy preserved. Neither report substitutes a module RID for an unnamed theorem.
+The entries of §6 are **custody and interface records**. No theorem coefficient is imported here for a new derivation, and no owner closure is re-certified or restated; the owner's header status summary at its tag is the current state. The load-bearing governance source is **DSN_METHODOLOGY v1.4** (`methodology-v1.4`), §§0.5–0.7, 1.1, 3.3–3.4, 4.2–4.5, 5.2–5.4 and 13; its rules have section identities, not theorem RIDs. The GEN/UVM custody split is transcribed from **OPEN M v0.7.1 §0.3**; the TDR-T gate report from **Discrete Genesis v2.12.14 §§1–2 and Appendix C** (`tdrg-v2.12.14`), with the remaining export-row wording recorded (§6.4). Neither report substitutes a module RID for an unnamed theorem.
+
+**Consumer notices received.** Triadic CN-05 (Programme/OFN note; Triadic v1.7 §7.4): received and accepted, no action. No statement of this overview uses the withdrawn T-6 sector, wedge, basin, phase-steering or route-obstruction exports, and the overview issues no cascade verdict, source deficit or ontology selection (§§5, 8). The IF07 pin is now Genesis's v1.7 pin; IF11 is OPEN M's own pin (v1.6) and moves only when OPEN M repins. OFN v0.11 and v0.12: received; OFN remains the criterion home of OPEN-P0 and OPEN-P2B (§5).
 
 ---
 
@@ -494,17 +502,18 @@ Navigation only. The same letter names different objects in different owners; ea
 
 | Symbol as written | Owner | Where defined | What it names |
 |---|---|---|---|
-| κ (class-C coupling) | OFN, RRF, FMS | OFN §5.5.4; RRF §6.2a; FMS (throughout, §10A) | class-C model coupling of the OFN/RRF model contract; its relation to Genesis's γ is an atlas reading, not an owner statement |
+| κ (class-C coupling) | OFN, RRF, FMS | OFN §5.5.4, §11.4; RRF §6.2a; FMS (throughout, §10A) | class-C model coupling of the OFN/RRF model contract; OFN §11.4 and RRF §6.2a record γ ≡ κ as the class-C parameter convention (Genesis writes γ) |
 | κ (birth coefficient), child ratio $i\kappa Q_s$ | GEN; TRIAD; UVM | GEN §2 priority ordering, §3, §6.3; TRIAD §6.1; UVM §1.3 | Genesis birth coefficient in the leading child W-ratio; its selection is OPEN in Genesis |
-| CN-05 (planar metric convention) | RRF; TRIAD; UVM; OFN | RRF §3.1; TRIAD header and §3; UVM §0.3 | a convention identifier, not a coupling; often appears beside κ |
+| CN-05 (planar metric convention) | RRF; TRIAD; UVM; OFN | RRF §3.1; TRIAD §6.18, §7.4; UVM §0.3 | a convention identifier, not a coupling; often appears beside κ |
 | κ_recoil | GEN | GEN §6.3 (recoil reference policy) | recoil reference value $-\tfrac12$ |
+| κ_f | GEN | GEN §6.8 (definition of the face-lift magnitude) | face-lift magnitude $\kappa_f=\lvert m\rvert\,\lvert w\rvert$ of the canonical face lift; Genesis states it distinct from the birth coefficient, κ_phys, κ_RTG and γ |
 | κ_phys | GEN; UVM | GEN §1; UVM §3 | physical-branch coupling target as Genesis defines it; see GEN §1 for its current status |
 | κ_RTG = 𝒢_e/J_e | PROG; GEN; LEGACY | this document §5 P3; GEN §2 priority ordering; LEGACY §7 | formal intended matching target for the smooth coupling, hypothesis-grade (§5 P3); not a defined physical coupling (SG-PROG-3) |
 | κ_bb, κ_fit | DYAD | DYAD §6.5, §4 | backbone ansatz and DSI-fit parameters (historical fit quantities, not canonical constants) |
 | κ (shear family $g_\kappa$), κ (cusp order 2), κ (fold scalar) | RECOG | RECOG §6.6a; §6.11; §6.16c | three distinct local uses inside RECOG, each defined at its site |
 | κ₃ | LEGACY; PREL; UVM | LEGACY §5 (L2 Type-I), PREL §1.8; UVM §6 | historical L2 curvature coupling; UVM cites it as a historical quantity |
 | κ = 2πc, κ_grav, κ_top, κ′, κ_B | PREL | PREL §1.5, §1.7, quick-retrieval table | historical ESM constants; not current-branch calibrations |
-| κ (3-field basis ρ·σ·κ) | TDRG | TDRG §6 (TDR-24 dependency chain) | a proposed and rejected factorization basis, recorded as such |
+| κ (3-field basis ρ·σ·κ) | TDRG | TDRG §2 (TDR-24B) | a proposed and rejected factorization basis, recorded as such |
 
 ---
 
@@ -519,33 +528,33 @@ The namespace registry is **Methodology v1.4 §4.2** (`RRF` registered there in 
 
 ### 9.2 Two-pass completion and maintenance record
 
-Pass one (owner updates) and pass two (consumer and Programme synchronization) are the Methodology's release passes (v1.4 §13). v1.2 was the pass-one architecture release; v1.3 is the pass-two synchronization of its inventory and interfaces. Under Methodology v1.4 §1.1 and §13.1 a material change to this file is a new tagged edition; history lives in tags and release records, not in the live file.
+Pass one (owner updates) and pass two (consumer and Programme synchronization) are the Methodology's release passes (v1.4 §13). v1.2 was the pass-one architecture release; v1.3 was the pass-two synchronization of its inventory and interfaces; v1.4 is a maintenance synchronization of the same kind. Under Methodology v1.4 §1.1 and §13.1 a material change to this file is a new tagged edition; history lives in tags and release records, not in the live file.
 
-**Maintenance sequence recorded in v1.2** (OFN → Legacy → Pre-Legacy → Dyadic → TDR-G → Number Genesis → DZT → Genesis primitive → Triadic → Genesis geometry → OPEN M → RECOG → AZ) **— state at 23 October 2026:**
+**Maintenance sequence recorded in v1.2** (OFN → Legacy → Pre-Legacy → Dyadic → TDR-G → Number Genesis → DZT → Genesis primitive → Triadic → Genesis geometry → OPEN M → RECOG → AZ) **— state at 4 November 2026:**
 
 | Owner | v1.2 edition | Governing edition | Owner pass since v1.2 |
 |---|---|---|---|
-| OFN | v0.7 | v0.10 | executed (v0.8, v0.9, v0.10) |
+| OFN | v0.7 | v0.12 | executed (v0.8–v0.12) |
 | Legacy | v0.6 | v0.7 | executed |
 | Pre-Legacy | v0.8 | v0.8 | **not executed**; the oldest outstanding item; its pointers into OFN and Genesis content predate those owners' current editions |
-| Dyadic | v6.4.9 | v6.4.22 | executed (v6.4.10–v6.4.22; two-stage release pilot at v6.4.21) |
-| TDR-G | v2.12.13 | v2.12.13 | **not executed** |
-| Number Genesis | v1.18 | v1.20.8 | executed |
+| Dyadic | v6.4.9 | v6.4.23 | executed (v6.4.10–v6.4.23; two-stage release pilot at v6.4.21) |
+| TDR-G | v2.12.13 | v2.12.14 | executed in part (v2.12.14, corrections edition; Methodology v1.4 migration planned for v2.13) |
+| Number Genesis | v1.18 | v1.21 | executed |
 | DZT | v0.8 | v0.8 | **not executed** |
-| Genesis | v2.8.4 | v2.8.9 | executed (one file; the primitive/geometry split remains a proposal, §6.7) |
-| Triadic | v1.5 | v1.6.1 | executed |
+| Genesis | v2.8.4 | v2.10 | executed (one file; the primitive/geometry split remains a proposal, §6.7) |
+| Triadic | v1.5 | v1.7 | executed |
 | OPEN M | v0.6 | v0.7.1 | executed |
-| RECOG | v0.3 | v0.3.23 | executed (v0.3.1–v0.3.23) |
+| RECOG | v0.3 | v0.3.27 | executed (v0.3.1–v0.3.27) |
 | AZ | v0.6 | v0.6 | **not executed** |
 | Methodology | v1.3 | v1.4 | moved (v1.4 adopted 22 October 2026) |
 
-Remaining queue, in the v1.2 order: Pre-Legacy, TDR-G, DZT, AZ. The sequence is administrative, not a mathematical dependency. A corrected source does not update its consumers by implication; intentional historical pins remain pinned (§7.2).
+Remaining queue, in the v1.2 order: Pre-Legacy, TDR-G (Methodology migration), DZT, AZ. The sequence is administrative, not a mathematical dependency. A corrected source does not update its consumers by implication; intentional historical pins remain pinned (§7.2).
 
 ### 9.3 Evidence and adoption
 
 This revision has no physics computation and no scientific certificate. Its evidence is administrative: the build scripts, edit logs, checker outputs and movement map under `evidence/programme/`, and the release record under `records/programme/`. Hashes establish file identity only; the checks establish that the inventory and interface pins agree with `BASELINE.md` and the tags, that the five programme OPEN RIDs, the four scope-guard identifiers and the section anchors are retained, and that no scientific tag is introduced. They do not re-prove owner mathematics or certify the completeness of the corpus dependency graph.
 
-Adoption is the PI's decision, recorded in the release record; publication is a merge commit on `main` and the annotated tag programme-v1.3 naming the adopted file's SHA-256. The v1.2 release record, change record and the three administrative registers of the v1.2 package were searched for and not found (PI, 23 October 2026); they are recorded as missing, not reconstructed. Scientific OPENs remain; unresolved contradictions are not described as reconciled.
+Adoption is the PI's decision, recorded in the release record; publication is a merge commit on `main` and the edition's annotated tag (`programme-v1.4` for this edition) naming the adopted file's SHA-256. The v1.2 release record, change record and the three administrative registers of the v1.2 package were searched for and not found (PI, 23 October 2026); they are recorded as missing, not reconstructed. Scientific OPENs remain; unresolved contradictions are not described as reconciled.
 
 ---
 
@@ -553,6 +562,15 @@ Adoption is the PI's decision, recorded in the release record; publication is a 
 ## Appendix A — Version History
 
 One compact entry per edition (Methodology v1.4 §1.1). Full entries of v1.0–v1.2, the Draft 1 history of v1.2 and the adopted replacement ledger's provenance are in Appendix A of v1.2 (tag `programme-v1.2`); the full stage-1 draft entry of v1.3 is at the stage-1 commit named in the release record.
+
+### v1.4 — 4 November 2026 — Adopted
+
+- **Basis:** PI decision of 4 November 2026 (Programme sync by the atlas owner as editor); the four receiver items of `pipes/PROG/` and the v1.3 post-release note (E-P13-1); Methodology v1.4.
+- **Inventory and interfaces:** eight §6.1 rows to their governing editions (OFN v0.12, NUMGEN v1.21, DYAD v6.4.23, TRIAD v1.7, GEN v2.10, RECOG v0.3.27, TDR-G v2.12.14, Atlas v0.9); the PROG row and §6.2 entry worded for candidate and adopted state alike; §6.2–6.5 entries re-read against the owners' Import Ledgers; §7.2 consumer pins re-read at the governing tags; IF37 (GEN → NUMGEN, an import that predates v1.3) and IF38 (NUMGEN → GEN) added.
+- **Pointers and receipts:** OFN v0.12 as criterion home for P0 and P2B; TDR-G launch-gate record at v2.12.14 (Appendix C aligned by the owner); Triadic CN-05 received and accepted, no action (§7.3); §8.2 class-C row corrected (E-P13-1), κ_f row added, two section pointers corrected; §9.2 state at 4 November 2026.
+- **Source typing (review round 2):** OFN's claim-level imports (DYAD, RECOG, GEN, TDR-G) separated from its reference-only feedback (TRIAD, OPEN M, NUMGEN) in §6.2, §7.1 and IF24/IF28/IF32; OPEN M's imports separated from its references and priors; IF03 records TDR-G's OFN import; tag and release record govern over `BASELINE.md`.
+- **Unchanged:** architecture, maturity semantics and records, the five programme OPEN RIDs (all ACTIVE), SG-PROG-1–4, the restructuring queue, Appendix B.
+- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`.
 
 ### v1.3 — 24 October 2026 — Adopted
 
@@ -611,4 +629,4 @@ These administrative keys are not fabricated historical theorem RIDs. Each entry
 
 ---
 
-*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.3 (ADOPTED, 24 October 2026; pass-two synchronization of the adopted v1.2 architecture under DSN Methodology v1.4).*
+*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.4 (ADOPTED, 4 November 2026; maintenance synchronization of the adopted v1.3 under DSN Methodology v1.4).*
