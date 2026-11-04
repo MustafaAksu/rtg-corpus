@@ -1,0 +1,626 @@
+{
+ "base_sha256": "1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06",
+ "candidate_sha256": "d109c78b9924b325e590159796b01223b82959211809106eea3dce009f6673bd",
+ "n_edits": 71,
+ "edits": [
+  {
+   "key": "H-1",
+   "op": "line",
+   "old": "# RTG_PROGRAMME_OVERVIEW_v1.3",
+   "new": "# RTG_PROGRAMME_OVERVIEW_v1.4",
+   "old_sha256": "039acfebb58a8203594b3b8e95db66c8a1c646c0c0e5820e93278cd8ad8d82fb",
+   "new_sha256": "250dc4816392365f1840ba04d9c8f87bc806f4426dcc03c9855785d5e8c172ad",
+   "prefix": "# RTG_PROGRAMME_OVERVIEW_v1.3"
+  },
+  {
+   "key": "H-2",
+   "op": "line",
+   "old": "**Date:** 23 October 2026",
+   "new": "**Date:** 4 November 2026",
+   "old_sha256": "37fb0a6c4ace9c7a8fba72cef0377847771596f4ad0f0f065741ae599361eb04",
+   "new_sha256": "491b8d576b4f9cece2872477c0fd59f6e4a481838643200d51b3081b4a30f263",
+   "prefix": "**Date:** "
+  },
+  {
+   "key": "H-3",
+   "op": "line",
+   "old": "**Scope:** Inventory, ownership, branch/layer architecture, programme OPENs and scope guards, synchronized to the governing editions of the corpus; pass-two revision of the adopted v1.2 architecture.",
+   "new": "**Scope:** Inventory, ownership, branch/layer architecture, programme OPENs and scope guards, synchronized to the governing editions of the corpus; maintenance synchronization of the adopted v1.3 (inventory, interface register, pointers, κ table, receiver items).",
+   "old_sha256": "cf3b7c0481ae54066ca916d44aec3170fb5ecf2eb4d0ac450c40ebcb7efd0ca9",
+   "new_sha256": "183667cd7237f74ef624068de0348a5ca038b0c053e6e625627548e16d4208c6",
+   "prefix": "**Scope:** "
+  },
+  {
+   "key": "H-4",
+   "op": "line",
+   "old": "**Document status:** ADOPTED — PI, 24 October 2026 (pass-two synchronization of the v1.2 architecture under Methodology v1.4; adoption record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`). Supersedes `programme-v1.2`.",
+   "new": "**Document status:** DRAFT — v1.4 candidate (one content stage; no compaction); not adopted. `programme-v1.3` governs until adoption.",
+   "old_sha256": "097610d496477cc05023de2ea830d07e61186658248ac201bc15e744ccfde946",
+   "new_sha256": "7b94d20458fc27a3d89e07cbcacb556bd8781fb4ac0ad3938bee40281a28ff1e",
+   "prefix": "**Document status:** "
+  },
+  {
+   "key": "H-5",
+   "op": "line",
+   "old": "**Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.2` (tag `programme-v1.2`, SHA-256 `4207da05dca24256e7bc528cb9814f848838bcd98e3d01222fb2a633ec9fd359`, adopted 20 September 2026).",
+   "new": "**Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.3` (tag `programme-v1.3`, SHA-256 `1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06`, adopted 24 October 2026).",
+   "old_sha256": "2f7a197b6448423423448df9c0b0fd71417ed50bf76942bf4a09c1ab7db5bff8",
+   "new_sha256": "25adaf762e68d0880fd35378aba66846543f681ff1d279ef811e01668d45b24c",
+   "prefix": "**Supersedes:** "
+  },
+  {
+   "key": "H-6",
+   "op": "line",
+   "old": "**DSN Methodology:** v1.4 (tag `methodology-v1.4`); v1.2 was adopted under v1.3.",
+   "new": "**DSN Methodology:** v1.4 (tag `methodology-v1.4`); v1.2 was adopted under v1.3; v1.3 and v1.4 under v1.4.",
+   "old_sha256": "684937bde0fdecec86990ed1d1da6d8a5e79784521cf5c59251c39a42b5a6508",
+   "new_sha256": "bdcae0516ea0d2a15d4c5fa272ccbe57ca6ef9ca5dceaa4ce2252a6ba8407987",
+   "prefix": "**DSN Methodology:** "
+  },
+  {
+   "key": "H-7",
+   "op": "line",
+   "old": "**Revision editor (v1.3):** Claude (atlas owner), by PI decision of 23 October 2026; change-focused review by ChatGPT.",
+   "new": "**Revision editor (v1.4):** Claude (atlas owner), by PI decision of 4 November 2026; change-focused review by ChatGPT. v1.3: the same editor, by PI decision of 23 October 2026.",
+   "old_sha256": "f094b8757d354c4d508f991ed0120ca8ee831908197df3e0ce066bad51f47804",
+   "new_sha256": "0e10541643a5687a13c1d902de2178796a23b588c97b776016b60bf1c39cbc59",
+   "prefix": "**Revision editor (v1.3):** "
+  },
+  {
+   "key": "H-8",
+   "op": "line",
+   "old": "**Release record:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`. The v1.2 release and change records are not in the repository (recorded as missing there); v1.2's header records the PI's adoption of 20 September 2026.",
+   "new": "**Release record:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`; v1.3: `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`. The v1.2 release and change records are not in the repository (recorded as missing there); v1.2's header records the PI's adoption of 20 September 2026.",
+   "old_sha256": "e28da6cc1d783e7a74c07a4c4d2ee9044bf11caa8b58049c4384719a8c17a3fd",
+   "new_sha256": "0ced63d96b8343256c2b269b27cf67ffc0a498492e152e59d0b9983934db819a",
+   "prefix": "**Release record:** "
+  },
+  {
+   "key": "S0-1",
+   "op": "line",
+   "old": "The governing Methodology is v1.4 (tag `methodology-v1.4`). Programme v1.3 is the pass-two synchronization of the adopted v1.2 architecture: the inventory, the interface register, the owner pointers and the maintenance record are brought to the governing editions of 23 October 2026; the two-branch architecture, maturity semantics, OPEN-P criteria and scope guards of v1.2 are unchanged. The source of every edition is the repository: a study's governing edition is its latest adopted tag with its release record; `BASELINE.md` is the machine-readable list.",
+   "new": "The governing Methodology is v1.4 (tag `methodology-v1.4`). Programme v1.3 was the pass-two synchronization of the adopted v1.2 architecture. Programme v1.4 is a maintenance synchronization of v1.3: the inventory, the interface register, the owner pointers, the κ table and the maintenance record are brought to the governing editions of 4 November 2026, and the receiver items of `pipes/PROG/` are answered; the two-branch architecture, maturity semantics, OPEN-P criteria and scope guards are unchanged since v1.2. The source of every edition is the repository: a study's governing edition is its latest adopted tag with its release record; `BASELINE.md` is the machine-readable list.",
+   "old_sha256": "909d4cbf034b6cd0606e719348241fb2293d92694bf849cda4de0ac28945250b",
+   "new_sha256": "af4730169d8d5e95f74f5febe5691ea3148f144a834ecf45841d7bacd4de2bd5",
+   "prefix": "The governing Methodology is v1.4 (tag `methodology-v1.4`). Programme v1.3 is"
+  },
+  {
+   "key": "S4-1",
+   "op": "line",
+   "old": "| Study | Previous or owner-declared maturity record | v1.3 |",
+   "new": "| Study | Previous or owner-declared maturity record | v1.4 |",
+   "old_sha256": "d47aa86ec684acfa9d465c66f199a55c89626ae58b08b365cd05b635f379ce07",
+   "new_sha256": "7ea8c33f52d3e057dcfb20b26abbb4cfda51240fe9e2624b0cdf20929e5d309d",
+   "prefix": "| Study | Previous or owner-declared maturity record | v1.3 |"
+  },
+  {
+   "key": "S4-2",
+   "op": "line",
+   "old": "| Dyadic | B in Programme v1.1 | Record retained; no owner header at `dyad-v6.4.22` declares an A–D grade; scientific reconciliation of the grade not performed by the Programme |",
+   "new": "| Dyadic | B in Programme v1.1 | Record retained; no owner header at `dyad-v6.4.23` declares an A–D grade; scientific reconciliation of the grade not performed by the Programme |",
+   "old_sha256": "9b1ce5d7600a5f48708c92d30267a79340d1d4a6a04ca82755fc3a5810308241",
+   "new_sha256": "48f631f04dd1a989e2cb83a2ca00909354a922ece23e8d8c241bebdf4845a7ea",
+   "prefix": "| Dyadic | B in Programme v1.1 |"
+  },
+  {
+   "key": "S4-3",
+   "op": "line",
+   "old": "| RECOG | A requested in the v0.3 header and stream memo (September 2026) | Record retained; no grade requested or declared in the v0.3.23 header; no grade issued here |",
+   "new": "| RECOG | A requested in the v0.3 header and stream memo (September 2026) | Record retained; no grade requested or declared in the v0.3.27 header; no grade issued here |",
+   "old_sha256": "eb3712c776bb5b64acdc9266d8163ceb8f70535b69afe2a0bf0c74ce6be61e1d",
+   "new_sha256": "a685f659b82b9c1af97b457cac37b9369976c03d6b296075878376cb11ef55ea",
+   "prefix": "| RECOG | A requested"
+  },
+  {
+   "key": "S5-1",
+   "op": "line",
+   "old": "**Owner study:** Programme Overview for coordination; OFN (admissibility and model-selection criteria, OFN v0.10 §§5, 9) and RRF (representation and interface contracts, RRF v0.8.4) supply the criteria; technical owners supply results.  ",
+   "new": "**Owner study:** Programme Overview for coordination; OFN (admissibility and model-selection criteria, OFN v0.12 §§5, 9) and RRF (representation and interface contracts, RRF v0.8.4) supply the criteria; technical owners supply results.  ",
+   "old_sha256": "6a431b94479eed4e98ff577769915960fcc4fa466098e6c933c13933e51773ed",
+   "new_sha256": "dba8835668fdc6a8123168d468105e2a434fdb558b9ce4d4efcca5e05ace22af",
+   "prefix": "**Owner study:** Programme Overview for coordination; OFN"
+  },
+  {
+   "key": "S5-2",
+   "op": "line",
+   "old": "**Next required decision:** the criterion home is OFN v0.10, OPEN-OFN-3B (`RTG-OFN-OPEN-PRIMACY-3B`: admissible triad-to-dyad invariant reduction; row agreement on $c=0$ explicitly insufficient). No technical construction owner is assigned; the Programme assigns none.",
+   "new": "**Next required decision:** the criterion home is OFN v0.12, OPEN-OFN-3B (`RTG-OFN-OPEN-PRIMACY-3B`: admissible triad-to-dyad invariant reduction; row agreement on $c=0$ explicitly insufficient). No technical construction owner is assigned; the Programme assigns none.",
+   "old_sha256": "17a395674d9cbaf5e30d7505d8b01fa7328a530332566e7071c101134b49e7e0",
+   "new_sha256": "539fea02b02c1d6e5272b96b38b2c0f2836271f7add5e221a1a6765d46168e60",
+   "prefix": "**Next required decision:** the criterion home is OFN"
+  },
+  {
+   "key": "S6-0",
+   "op": "rep",
+   "old": "The placement additions and clarifications of v1.2 are retained; v1.3 adds the RRF, RER, FMS, ER-2B and Atlas rows and the class column.",
+   "new": "The placement additions and clarifications of v1.2 are retained; v1.3 added the RRF, RER, FMS, ER-2B and Atlas rows and the class column; v1.4 moves eight rows to their governing editions and adds no home.",
+   "old_sha256": "e55f8dc356ddace6b1dd37a590df329c3674f428554f0d2dd89726ba0be40a34",
+   "new_sha256": "4280e528bda6808ee5907c8170cad9f599aecb9d74c17195bf37109e6ca897db"
+  },
+  {
+   "key": "S6-1-PROG",
+   "op": "line",
+   "old": "| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.3 (this edition; v1.2 governs until adoption) | programme-v1.3, created on adoption | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |",
+   "new": "| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.4 (this document) | `programme-v1.4` on adoption (predecessor `programme-v1.3`) | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |",
+   "old_sha256": "f2662cc4244d06a1b2bc4437dff7562b68b9395632d9529e7d87e421f48f61d6",
+   "new_sha256": "723cc9990ea3ae859b611d7b804b68f8c72db14ede0082d682144565ea34e25d",
+   "prefix": "| PROG | `"
+  },
+  {
+   "key": "S6-1-OFN",
+   "op": "line",
+   "old": "| OFN | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | v0.10 | `ofn-v0.10` | canonical foundational | 2 | O0–O3 commitments; model selection; class-C model contract; foundational OPENs |",
+   "new": "| OFN | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | v0.12 | `ofn-v0.12` | canonical foundational | 2 | O0–O3 commitments; model selection; class-C model contract; foundational OPENs |",
+   "old_sha256": "384b740824a3eac96dd1c54b98becfa50d892e938c28f5a1d16d27569a9caf41",
+   "new_sha256": "af3d392058ff353fe15b99f92c9bcba9ecaf7daa3d1ee3875cbf8f2544229841",
+   "prefix": "| OFN | `"
+  },
+  {
+   "key": "S6-1-NUMGEN",
+   "op": "line",
+   "old": "| NUMGEN | `dsn/RTG_NUMBER_GENESIS_DSN.md` | v1.20.8 | `numgen-v1.20.8` | canonical common home | 2 | Relational composition, representation and realization; continuous and discrete sectors separately typed |",
+   "new": "| NUMGEN | `dsn/RTG_NUMBER_GENESIS_DSN.md` | v1.21 | `numgen-v1.21` | canonical common home | 2 | Relational composition, representation and realization; continuous and discrete sectors separately typed |",
+   "old_sha256": "51ee392e0b5bd10d6e5d4f3b938b3a78ab50caee770a7e397f8171f57cfc2631",
+   "new_sha256": "9d9a7948afb6494b93d6f72d5737e1c7742af6ceaaa8d15061a4baea19baac8c",
+   "prefix": "| NUMGEN | `"
+  },
+  {
+   "key": "S6-1-DYAD",
+   "op": "line",
+   "old": "| DYAD | `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.22 | `dyad-v6.4.22` | canonical | 3 | Selected primitive map, local return and normalization, $p$-resonance programme |",
+   "new": "| DYAD | `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.23 | `dyad-v6.4.23` | canonical | 3 | Selected primitive map, local return and normalization, $p$-resonance programme |",
+   "old_sha256": "83e6d2ee4cfa11081698567e171acd300f1ee04e0b6b4c33762a8ca2a22d9c6e",
+   "new_sha256": "602494985bbdf0cfc1d51d9b9b480c503731bbdab9c641d545a066c7aed7320f",
+   "prefix": "| DYAD | `"
+  },
+  {
+   "key": "S6-1-TRIAD",
+   "op": "line",
+   "old": "| TRIAD | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.6.1 | `triad-v1.6.1` | canonical | 3 | Birth kinematics and diagnostic lifts |",
+   "new": "| TRIAD | `dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.7 | `triad-v1.7` | canonical | 3 | Birth kinematics and diagnostic lifts |",
+   "old_sha256": "b1877b3854941c05972ad6f5fd27be3c445ff59d615f3614a112a32cc89e236e",
+   "new_sha256": "e7b333377b0e464e60b494ba89e935180ba689592ac7f40f66c34f03f288d1e7",
+   "prefix": "| TRIAD | `"
+  },
+  {
+   "key": "S6-1-GEN",
+   "op": "line",
+   "old": "| GEN | `dsn/RTG_GENESIS_GEOMETRY_DSN.md` | v2.8.9 | `gen-v2.8.9` | canonical | 3 | Integrating study: $K_3/K_4$ algebra, metric, constrained lift, network, Regge machinery |",
+   "new": "| GEN | `dsn/RTG_GENESIS_GEOMETRY_DSN.md` | v2.10 | `gen-v2.10` | canonical | 3 | Integrating study: $K_3/K_4$ algebra, metric, constrained lift, network, Regge machinery |",
+   "old_sha256": "7cb6b85ca53b56df26832b685be3075ade3cc7738236aaf48815c346597d5419",
+   "new_sha256": "e46897a1904437fe277196e3da503fe78d2e6ba2b09ce3b80f9ffc907c18c98c",
+   "prefix": "| GEN | `"
+  },
+  {
+   "key": "S6-1-RECOG",
+   "op": "line",
+   "old": "| RECOG | `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.23 | `recog-v0.3.23` | canonical | 3 | Comparators, return content, event strata, lattice memory on the dyadic substrate |",
+   "new": "| RECOG | `dsn/RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.27 | `recog-v0.3.27` | canonical | 3 | Comparators, return content, event strata, lattice memory on the dyadic substrate |",
+   "old_sha256": "28f9a34787bf9f7863dd308f4f4e071edb39261d0119b9b0299ee598ae50c547",
+   "new_sha256": "0c7a4200893d99cc3d98a6e875e81050b50e247f85b1776741a407f58ea34b1f",
+   "prefix": "| RECOG | `"
+  },
+  {
+   "key": "S6-1-TDRG",
+   "op": "line",
+   "old": "| TDRG | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | v2.12.13 | `tdrg-v2.12.13` | canonical | 4 | Native discrete model, policies, growth/suppression programme |",
+   "new": "| TDRG | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | v2.12.14 | `tdrg-v2.12.14` | canonical | 4 | Native discrete model, policies, growth/suppression programme |",
+   "old_sha256": "6ccc4bbd28e653620b36a75d9eea3b2319a832327fa6db81761b8b9b91145856",
+   "new_sha256": "2e3f47e78a2d5ab3d7fd201c22e8af73200a31f27f69236366c0c9714c0b5708",
+   "prefix": "| TDRG | `"
+  },
+  {
+   "key": "S6-1-ATLAS",
+   "op": "line",
+   "old": "| ATLAS | `atlas/RTG_STATE_ATLAS.md` | v0.3 | `atlas-v0.3` | derived map (noncanonical) | — | AI-oriented current-state map with `atlas/RTG_STATE_ATLAS_METHOD.md`; never a source; owner DSN wins |",
+   "new": "| ATLAS | `atlas/RTG_STATE_ATLAS.md` | v0.9 | `atlas-v0.9` | derived map (noncanonical) | — | AI-oriented current-state map with `atlas/RTG_STATE_ATLAS_METHOD.md`; never a source; owner DSN wins |",
+   "old_sha256": "6719a34b8e08edfc1299a8676add83f6733db6cc101ff50a501d82184c4413e2",
+   "new_sha256": "b519727043e7dabd7b7962d83d9590d480e21efc66811e792e446d165460f417",
+   "prefix": "| ATLAS | `"
+  },
+  {
+   "key": "S6-2-METH",
+   "op": "rep",
+   "old": "Programme v1.3 is built under it.",
+   "new": "Programme v1.3 and v1.4 are built under it.",
+   "old_sha256": "b0e0cefda819d5e02a9fd84317af0696d5ab8a6d3f50f3ff3e9cba62ace3c2a0",
+   "new_sha256": "22b32ac13b2dbf01cec065a53d0dac71a78d12cb39bd4116138cb066a4b2c8b6"
+  },
+  {
+   "key": "S6-2-PROG",
+   "op": "line",
+   "old": "**PROG — Programme Overview** (v1.3 candidate). Owns navigation: inventory, programme OPEN coordination, maturity semantics, programme guards. All five programme OPEN records remain ACTIVE (§5).",
+   "new": "**PROG — Programme Overview** (v1.4, this document; edition and tag in §6.1). Owns navigation: inventory, programme OPEN coordination, maturity semantics, programme guards. All five programme OPEN records remain ACTIVE (§5).",
+   "old_sha256": "b4b35deaabbe27ffac3e9bc140a00ce1a1702cee3e7cc95750d1a4285688ca3f",
+   "new_sha256": "85875a8f17cdbe7befa047bbc17a7dc9d6414429d3a33811a92665aaebf43974",
+   "prefix": "**PROG — Programme Overview** "
+  },
+  {
+   "key": "S6-2-OFN",
+   "op": "rep",
+   "old": "**OFN — Ontological Foundations** (v0.10, `ofn-v0.10`).",
+   "new": "**OFN — Ontological Foundations** (v0.12, `ofn-v0.12`).",
+   "old_sha256": "ee8e86e7940ec274545e3b4dbdd0a3b3b264c27b1e7344d02b2baf64a4b603b4",
+   "new_sha256": "ce22afd3e64218ce592d7e3d14b5fbe69b4506ea46313e7bbcbe90beadaf9eb3"
+  },
+  {
+   "key": "S6-2-NUMGEN",
+   "op": "line",
+   "old": "**NUMGEN — Number Genesis** (v1.20.8, `numgen-v1.20.8`). Owns relational composition, representation and realization modules; its continuous local-history modules and its discrete DISC modules remain separately typed. Imports OFN, DYAD, GEN and TDR-G (DISC) at the editions in its §9.1; exports to RECOG by RID (N5AS1 definitions and results) and records RECOG as a consumer (its §9.1 row). Its foundational/technical profile is not evidence for OPEN-P1.",
+   "new": "**NUMGEN — Number Genesis** (v1.21, `numgen-v1.21`). Owns relational composition, representation and realization modules; its continuous local-history modules and its discrete DISC modules remain separately typed. Imports OFN, DYAD, GEN and TDR-G (DISC) at the editions in its §9.1; exports to RECOG by RID (N5AS1 definitions and results) and one route row to Genesis (IF38); records RECOG's explicit-domain theorems as independent agreement, not imports (its §9.1 acceptance matrix). Its foundational/technical profile is not evidence for OPEN-P1.",
+   "old_sha256": "2aad2c2642d102f8ed61e53e5dff6a4bc1425521c91c4663f0135790a31cacee",
+   "new_sha256": "a05e55047d808a44b344980c1be50768245e3ff92135bf46237ca96333a62327",
+   "prefix": "**NUMGEN — Number Genesis** "
+  },
+  {
+   "key": "S6-3-DYAD",
+   "op": "line",
+   "old": "**DYAD — Dyadic Oscillator** (v6.4.22, `dyad-v6.4.22`). Owns the selected primitive map, local return enclosure and normalization, ISP geometry and the explicitly defined $p$-resonance coefficient programme. Direct consumers: Genesis, Triadic, RECOG, DZT, OPEN M, continuous Number Genesis modules, RRF, OFN; AZ cross-indexes its arithmetic. Imports RECOG results (its §7: RECOG-THM-R9-MEMORY as the stated assumption of its OPEN 3/21 asymptotic-phase theorems; RECOG-THM-A1A-RECIPROCAL-AMPLITUDE), NUMGEN, RRF conventions and OFN commitments.",
+   "new": "**DYAD — Dyadic Oscillator** (v6.4.23, `dyad-v6.4.23`). Owns the selected primitive map, local return enclosure and normalization, ISP geometry and the explicitly defined $p$-resonance coefficient programme. Direct consumers: Genesis, Triadic, RECOG, DZT, OPEN M, continuous Number Genesis modules, RRF, OFN; AZ cross-indexes its arithmetic. Its scientific imports are RECOG results (its §7: RECOG-THM-R9-MEMORY as the stated assumption of its OPEN 3/21 asymptotic-phase theorems; RECOG-THM-A1A-RECIPROCAL-AMPLITUDE); RRF conventions are standard references (IF29), OFN commitments programme context (IF02), and Number Genesis appears as a consumer and in the L-PHASE interface (its §7.0, §7.0a).",
+   "old_sha256": "78e4fb53c22a47698a83983ba09e28acba191a3b69f504fdf2764c50fe2a4524",
+   "new_sha256": "4f1881b5ef6da2af96e3ba111312b04ffe870632e4caf2e0e9078f866efcbbbe",
+   "prefix": "**DYAD — Dyadic Oscillator** "
+  },
+  {
+   "key": "S6-3-TRIAD",
+   "op": "line",
+   "old": "**TRIAD — Triadic Birth–Lift** (v1.6.1, `triad-v1.6.1`). Owns its birth/lift and diagnostic-model ledger and the T-6 export protocol. Imports Genesis (primitive seed, metric conventions), Dyadic, RRF (CN-05 planar metric convention), OFN and Programme; exports scoped diagnostics to Genesis and OPEN M.",
+   "new": "**TRIAD — Triadic Birth–Lift** (v1.7, `triad-v1.7`). Owns its birth/lift and diagnostic-model ledger and the T-6 export protocol. Imports Genesis (primitive seed, metric conventions) and Dyadic claim by claim; RRF (CN-05 planar metric convention), OFN, the Programme and TDR-G are reference-only pointers (its §7.1); exports scoped diagnostics to Genesis and OPEN M, with per-recipient consumer state in its §7.4.",
+   "old_sha256": "ded8c7a369e751fed2811fc664579f835a6e4854e0831660c6a79abd9d40fc04",
+   "new_sha256": "ddd3837c1bcee2dd85bda308a9117879b134219fd0476f722bfeac44bd3e7f23",
+   "prefix": "**TRIAD — Triadic Birth–Lift** "
+  },
+  {
+   "key": "S6-3-GEN",
+   "op": "line",
+   "old": "**GEN — Genesis Geometry** (v2.8.9, `gen-v2.8.9`). One canonical owner file combining primitive $K_3/K_4$ algebra with quaternionic metric, constrained-lift, network and Regge machinery; retains the test framework and geometry verdict custody for OPEN M. Imports Dyadic, Triadic, OFN; TDR-G input remains a blocked cross-branch interface (IF25). The proposed split of primitive algebra from the geometry framework is still a proposal (§6.7).",
+   "new": "**GEN — Genesis Geometry** (v2.10, `gen-v2.10`). One canonical owner file combining primitive $K_3/K_4$ algebra with quaternionic metric, constrained-lift, network and Regge machinery; retains the test framework and geometry verdict custody for OPEN M. Imports Dyadic, Triadic and one Number Genesis route row (IF38); the Programme and OFN are companion references, not scientific imports (its §7); TDR-G input remains a blocked cross-branch interface (IF25). The proposed split of primitive algebra from the geometry framework is still a proposal (§6.7).",
+   "old_sha256": "9981bf08860919b19de254b62bce23ae47611b7bda008016df5029b0d98e500f",
+   "new_sha256": "551d6dcea008a92f5705947dfc304f581b35e011df5fdb74c79f875e04056d31",
+   "prefix": "**GEN — Genesis Geometry** "
+  },
+  {
+   "key": "S6-3-RECOG",
+   "op": "line",
+   "old": "**RECOG — Relational Recognition** (v0.3.23, `recog-v0.3.23`). Owns comparators, return-content results, candidate event strata and the lattice-memory theorems on the dyadic substrate. Imports Dyadic, Number Genesis (by RID at v1.20.8), Genesis, OFN and RRF conventions; its results are consumed by Dyadic, OFN, RRF and RER (RECOG §7.3). The general-$p$ return-equivariance proof is RECOG's; the bridge-lemma statement RID is Dyadic's — a settled custody split, not a pending transfer. Its OPEN registry and the live-file exception of its release record are the owner's; see RECOG §2 and `records/recog/RECOG_v0_3_23_RELEASE_RECORD.md` §11.",
+   "new": "**RECOG — Relational Recognition** (v0.3.27, `recog-v0.3.27`). Owns comparators, return-content results, candidate event strata and the lattice-memory theorems on the dyadic substrate. Imports Dyadic and Number Genesis by RID (at `dyad-v6.4.23` and `numgen-v1.21`), Genesis, OFN and RRF conventions; its results are consumed by Dyadic, OFN, RRF and RER (RECOG §7.3). The general-$p$ return-equivariance proof is RECOG's; the bridge-lemma statement RID is Dyadic's — a settled custody split, not a pending transfer. Its OPEN registry and release record are the owner's; see RECOG §2 and `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md`.",
+   "old_sha256": "7ed6d998e6db81730d8ee907c705a9801faa5db582703667ce46eed6ad4c8b1e",
+   "new_sha256": "36db740f5d2fcc50fb0f0972540927aca29dc736ec9070b9bc5f167b6bf0116e",
+   "prefix": "**RECOG — Relational Recognition** "
+  },
+  {
+   "key": "S6-4-TDRG",
+   "op": "line",
+   "old": "**TDRG — Discrete Genesis** (v2.12.13, `tdrg-v2.12.13`). Owns native cyclic-state/event definitions, policy branches, kinematic/BIND3 modules and the growth/suppression programme; imports OFN and Programme (its §7 pins v0.6 and v1.1). Exports to Number Genesis (DISC) and AZ (Threads B/C). Its owner pass has not been executed since v1.2.",
+   "new": "**TDRG — Discrete Genesis** (v2.12.14, `tdrg-v2.12.14`). Owns native cyclic-state/event definitions, policy branches, kinematic/BIND3 modules and the growth/suppression programme; imports OFN (its §7 claim pin v0.10; historical v0.6/v0.7 pins at its §2) and cites the Programme as context (v1.3). Exports to Number Genesis (DISC) and AZ (Threads B/C). Its owner pass since v1.2 is executed in part: v2.12.14 is a corrections edition under its declared Methodology v1.2, and records the state of the four owner-review tasks of Programme v1.2 §6 in its §2; the Methodology v1.4 migration is planned for its v2.13.",
+   "old_sha256": "88ab7596a26313f41378cd06dfab1dbd4aaf337db0e6d5a62302980211ecb3f4",
+   "new_sha256": "1a322664a2d23a02d6a40d9822d99dd06210c6df22f54a3b3f0a42ba43dfc94f",
+   "prefix": "**TDRG — Discrete Genesis** "
+  },
+  {
+   "key": "S6-4-GATE-1",
+   "op": "rep",
+   "old": "**Launch-gate source record** (unchanged since v1.2; the owner edition is unchanged). The owner's canonical §§1–2 give",
+   "new": "**Launch-gate source record** (owner edition `tdrg-v2.12.14`). The owner's canonical §§1–2 and its Appendix C gate condition give",
+   "old_sha256": "e1f3159a0dff32d7efac3e455878625f2f5d9d5c28935dffbc66833a304abe9d",
+   "new_sha256": "a95231b21c9576e0cf457a669c7961d8e318dd1ae83fafe650ad7144e58a27a0"
+  },
+  {
+   "key": "S6-4-GATE-2",
+   "op": "rep",
+   "old": "Its Appendix C (`tdrg-v2.12.13`) still carries an older D/A/B gate and reserves R3–R10 for work after TDR-T0 opens. This overview records that unresolved source discrepancy; it does not repair the owner appendix or authorize a launch. BIND3 and already-scoped three-node/no-birth diagnostics are not equated with launch of the full birth programme.",
+   "new": "The owner aligned its Appendix C with §§1–2 in v2.12.14 (a correction line); Appendix C still reserves R3–R10 for work after TDR-T0 opens, and one export row of its §7 (`TDRG-EXPORT-DISCRETE-TRIAD`) still names the earlier D/A/B gate. This overview records the source state; it does not repair the owner text or authorize a launch. BIND3 and already-scoped three-node/no-birth diagnostics are not equated with launch of the full birth programme.",
+   "old_sha256": "53bf3b762f86437789d33c8eebeeb90768cc93ab449c77b7982a5a45cdaa336c",
+   "new_sha256": "efe69b62f4f8c76acd35d9f8ed380adb83a99bd1fc66e472787bc86dc75360e1"
+  },
+  {
+   "key": "S6-5-ATLAS",
+   "op": "rep",
+   "old": "**ATLAS — RTG State Atlas** (v0.3, `atlas-v0.3`; derived, noncanonical).",
+   "new": "**ATLAS — RTG State Atlas** (v0.9, `atlas-v0.9`; derived, noncanonical).",
+   "old_sha256": "0724fd6e56b230c8542fbed04664c7e614cd3c1079e405c530e2377148e02bf2",
+   "new_sha256": "c014c7f0db60ef8dbb4efc60f7eb8af555ae97531b756d88f542dc86f2c338aa"
+  },
+  {
+   "key": "S7-1",
+   "op": "rep",
+   "old": "  GEN --> RECOG; DYAD --> DZT",
+   "new": "  GEN --> RECOG; DYAD --> DZT\n  GEN --> NUMGEN[continuous] (NG-10 only); NUMGEN --> GEN (one route row)",
+   "old_sha256": "477bb72f15b4f797b305fdc5f4820301cf11aa7cd80d58c520a697ad53776c01",
+   "new_sha256": "427ed33c4a303a9972eb7004950cca0757baea3efe2cf43d7be77ff2c7eb88e5"
+  },
+  {
+   "key": "S7-2-0",
+   "op": "rep",
+   "old": "Rows IF01–IF25 keep their v1.2 identifiers; IF26–IF36 are new in v1.3; a retired row says so.",
+   "new": "Rows IF01–IF25 keep their v1.2 identifiers; IF26–IF36 are new in v1.3; IF37–IF38 are new in v1.4 (IF37 records an import that predates v1.3 and was not listed there); a retired row says so.",
+   "old_sha256": "cc81d6ffaa915a9aaa82b61662f3a4e35c9e646f7d44b85c72a92624440b5564",
+   "new_sha256": "dfc079584fbcb295f6933ed628a2f86a699910f006234bb94727759a17ab047a"
+  },
+  {
+   "key": "S7-2-IF02",
+   "op": "line",
+   "old": "| IF02 | OFN → DYAD | constraint | model-selection commitments, not a derivation of $T$ | DYAD §7 | v0.10 |",
+   "new": "| IF02 | OFN → DYAD | constraint | model-selection commitments, not a derivation of $T$ | DYAD §7 | v0.12 (programme context, §7.0) |",
+   "old_sha256": "70855bcc538e5e0777e7a11d9222f5bdd3a6fc5e41f500841e22acdb09dcfbc0",
+   "new_sha256": "a6eeba232a1001239f6ad8a8072bb93fa2a47dfad5de66e555ca0cc8dbe473b8",
+   "prefix": "| IF02 |"
+  },
+  {
+   "key": "S7-2-IF03",
+   "op": "line",
+   "old": "| IF03 | OFN → TDRG | constraint | relational commitments; discrete interaction-selection questions | TDRG §7 | v0.6 (historical pin) |",
+   "new": "| IF03 | OFN → TDRG | constraint | relational commitments; discrete interaction-selection questions | TDRG §7 | v0.10 (claim pin; v0.6/v0.7 historical at its §2) |",
+   "old_sha256": "ae82dc4d8264bbfa4ae966a24bd57fc4c91454d12e1178f595a79e8489af862c",
+   "new_sha256": "522ef09c3a18905cad183360915f2a7ae58cea68cc037417a9d4fcb61905db77",
+   "prefix": "| IF03 |"
+  },
+  {
+   "key": "S7-2-IF04",
+   "op": "line",
+   "old": "| IF04 | DYAD → TRIAD | declared-import | fracture state, local return, frame data | TRIAD §7 | v6.4.13 (and v6.4.8.1 historical) |",
+   "new": "| IF04 | DYAD → TRIAD | declared-import | fracture state, local return, frame data | TRIAD §7.1 | v6.4.23 claim by claim (v6.4.8.1 and v6.4.13 historical) |",
+   "old_sha256": "15137fdbf76039efe8c802bddecffb3caaf396af497f399a9871308aa06e08a5",
+   "new_sha256": "b6aff671d3c2de47978c10834fc66de0be57dd03070801fc66e9dea58d141149",
+   "prefix": "| IF04 |"
+  },
+  {
+   "key": "S7-2-IF05",
+   "op": "line",
+   "old": "| IF05 | DYAD → GEN | declared-import | direct dyadic input | GEN §7 | v6.4.13 |",
+   "new": "| IF05 | DYAD → GEN | declared-import | direct dyadic input | GEN §7 | v6.4.13 (historical proof pins); v6.4.22 for the §6.3c (C2) rows; v6.4.23 for `DYAD-ALG-NU5-P5` |",
+   "old_sha256": "28067f7d4bce3691be4ea2c59d99b53a4a1e4c22369941a61963a30924f3ccff",
+   "new_sha256": "2cb5d0e93df10ddab437858ca798eb647de37e66c8edbdf99340aa175645bb23",
+   "prefix": "| IF05 |"
+  },
+  {
+   "key": "S7-2-IF06",
+   "op": "line",
+   "old": "| IF06 | GEN → TRIAD | declared-import | primitive tetrahedral seed and metric conventions | TRIAD §7 | v2.8.7 |",
+   "new": "| IF06 | GEN → TRIAD | declared-import | primitive tetrahedral seed and metric conventions | TRIAD §7.2 | v2.9 claim by claim (the radial-polynomial import held at v2.8.7) |",
+   "old_sha256": "8c74eb5f180a1586fd98e2a76b10db13999272558ecb7d25562639eb4d57851c",
+   "new_sha256": "e52f6baa27b8af1b0ed40a504138429e3863fbb4e75a0a0c958be5cb1f4dd32c",
+   "prefix": "| IF06 |"
+  },
+  {
+   "key": "S7-2-IF07",
+   "op": "line",
+   "old": "| IF07 | TRIAD → GEN | declared-import | scoped diagnostic exports under the T-6 protocol | GEN §7 | v1.6 |",
+   "new": "| IF07 | TRIAD → GEN | declared-import | scoped diagnostic exports under the T-6 protocol | GEN §7 | v1.7 claim by claim (CN-01–CN-05 received at v1.6) |",
+   "old_sha256": "477df209d235d1173b4c254a2bee790f9c8c2431ccf7904634488581dcfc8493",
+   "new_sha256": "69bb8e13275f15c4e508b993ad2c9f4ddc5ef6436e718276914203fcc38b2de8",
+   "prefix": "| IF07 |"
+  },
+  {
+   "key": "S7-2-IF12",
+   "op": "line",
+   "old": "| IF12 | DYAD → NUMGEN | declared-import | selected-map support for continuous history constructions | NUMGEN §9.1 | v6.4.18 |",
+   "new": "| IF12 | DYAD → NUMGEN | declared-import | selected-map support for continuous history constructions; the L-PHASE row-A remainder | NUMGEN §9.1 | v6.4.18 (map, PRIM-CTR, Q403); v6.4.22 (`DYAD-THM-LPHASE-ROWA-REMAINDER`) |",
+   "old_sha256": "f1186207e9121467366f553fd64f9e8c0a0921e17b7df003abb87b637508b57d",
+   "new_sha256": "dd7a86f8bf46a7402190f41fa8f50f06a28ed8e5efaf6e10ec37c08d45e9687b",
+   "prefix": "| IF12 |"
+  },
+  {
+   "key": "S7-2-IF14",
+   "op": "line",
+   "old": "| IF14 | NUMGEN → RECOG | declared-import | contraction, defect and INF-1 results by RID (`NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, L1, N1C, GAP-LOCK) | RECOG §6.13b, §7 | v1.20.8 (v1.15 producer pins retained where load-bearing) |",
+   "new": "| IF14 | NUMGEN → RECOG | declared-import | contraction, defect and INF-1 results by RID (`NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, L1, N1C, GAP-LOCK Lemma 3 by `NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO`) | RECOG §6.13b, §7 | v1.21 (v1.15 producer pins retained where load-bearing) |",
+   "old_sha256": "c8605e406503e28a6f3fd9945eab7a06752daaff7d1ba0413f066f0933f3f423",
+   "new_sha256": "299bde8e98efa2b21a4c3cd63e9fd210b009435e6e595ffcc5cf688e3b2bd287",
+   "prefix": "| IF14 |"
+  },
+  {
+   "key": "S7-2-IF16",
+   "op": "line",
+   "old": "| IF16 | DYAD → RECOG | declared-import | map, return coefficients, resonance and normal-form inputs; chart laws | RECOG §7 | v6.4.22 by RID and section (producer editions named per row) |",
+   "new": "| IF16 | DYAD → RECOG | declared-import | map, return coefficients, resonance and normal-form inputs; chart laws; row-A bridge and $C_7$ rows | RECOG §7 | v6.4.23 by RID and section (producer editions named per row) |",
+   "old_sha256": "88ffd594c8a7e0c1140618900843a704027aef700c476968c7fe240ec6da18cf",
+   "new_sha256": "1c800f5e3211def117377e840e64cd9c2e046cb04b32a4e4ae040b61db3f184d",
+   "prefix": "| IF16 |"
+  },
+  {
+   "key": "S7-2-IF25",
+   "op": "line",
+   "old": "| IF25 | TDRG → GEN | blocked-cross-branch | possible native phase moments or selector evidence | GEN §2 OPEN 1, §7 | v2.12.13; blocked pending a named P1 bridge |",
+   "new": "| IF25 | TDRG → GEN | blocked-cross-branch | possible native phase moments or selector evidence | GEN §2 OPEN 1, §7 | v2.12.14; blocked pending a named P1 bridge |",
+   "old_sha256": "3a70bccae22f60af5c878d50a53ec126381f9d8043ff50c6aff48729114d96a2",
+   "new_sha256": "e840b2c2fd6f32216b8a9351dec5105e3927fe499e7a20bbf5147e021e84c83e",
+   "prefix": "| IF25 |"
+  },
+  {
+   "key": "S7-2-IF26",
+   "op": "line",
+   "old": "| IF26 | RECOG → DYAD | declared-import | `RECOG-THM-R9-MEMORY` as the stated assumption of Dyadic's OPEN 3/21 asymptotic-phase theorems (`[THM] [assuming: RECOG-THM-R9-MEMORY]`); `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | DYAD §6.14, §7 | v0.3.22 |",
+   "new": "| IF26 | RECOG → DYAD | declared-import | `RECOG-THM-R9-MEMORY` as the stated assumption of Dyadic's OPEN 3/21 asymptotic-phase theorems (`[THM] [assuming: RECOG-THM-R9-MEMORY]`); `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | DYAD §6.14, §7 | v0.3.22 (claim-level; its §7.0 names v0.3.26 as current companion) |",
+   "old_sha256": "982af2439e4db52c5d0ff873d93a8ba097809fdde2260b5d13156d7e07bb909f",
+   "new_sha256": "ce2ebc8decd066c52cc033d67dc57f2da05ebbb8ea740153542e8e58eee9eeed",
+   "prefix": "| IF26 |"
+  },
+  {
+   "key": "S7-2-IF27",
+   "op": "line",
+   "old": "| IF27 | NUMGEN ← RECOG | consumer record | NUMGEN records RECOG as a consumer of its N5AS1 RIDs; RECOG's explicit-domain A1a theorems are not listed by NUMGEN as inputs | NUMGEN §9.1 | v0.3.22 |",
+   "new": "| IF27 | NUMGEN ← RECOG | consumer record | NUMGEN records RECOG as a consumer of its N5AS1 RIDs and records RECOG's explicit-domain A1a/A1b theorems as independent agreement, not as inputs (its acceptance matrix) | NUMGEN §9.1 | v0.3.24 |",
+   "old_sha256": "1f9a11ddfb96de77e863938a123d8ac7df57d85938ed5eb85367ad912f119198",
+   "new_sha256": "eb78a8f9a25529ee832359ab242b7afcd439c9b19c411e4815fee5332054a30d",
+   "prefix": "| IF27 |"
+  },
+  {
+   "key": "S7-2-IF29",
+   "op": "line",
+   "old": "| IF29 | RRF → DYAD, TRIAD, RECOG, OFN | standard reference | conventions (CN-05 planar metric among them), interface contracts, identifiers | DYAD §7; TRIAD §7; RECOG §7; OFN §11 | DYAD v0.8.4; TRIAD v0.8.2; RECOG v0.8.4 (v0.8.3 rows historical); OFN v0.8.3 |",
+   "new": "| IF29 | RRF → DYAD, TRIAD, RECOG, OFN | standard reference | conventions (CN-05 planar metric among them), interface contracts, identifiers | DYAD §7; TRIAD §7.1; RECOG §7; OFN §11 | DYAD v0.8.4; TRIAD v0.8.4; RECOG v0.8.4; OFN v0.8.4 |",
+   "old_sha256": "13b7eb54c661c82672fa9a64c0c784ef514bf1255b0577a8efab6576dcf5549b",
+   "new_sha256": "20a5d92f4adea5930c670d53ad261439610a6da16037aa94ecc0193c2b6a73f3",
+   "prefix": "| IF29 |"
+  },
+  {
+   "key": "S7-2-IF31",
+   "op": "line",
+   "old": "| IF31 | OFN ↔ RRF | interface contract | class-C model contract (OFN N-O10-3 / RRF §6.2a) | OFN §5.5, §11; RRF §6.2a | v0.10 / v0.8.4 |",
+   "new": "| IF31 | OFN ↔ RRF | interface contract | class-C model contract (OFN N-O10-3 / RRF §6.2a) | OFN §5.5, §11; RRF §6.2a | RRF pins OFN v0.10; OFN pins RRF v0.8.4 |",
+   "old_sha256": "7812beb6695a5f4a8bd87bcd54c3c15541082aa93cdc0889c8d2c9d8dcdb1f75",
+   "new_sha256": "17fb9b1d8a7f87cbb220932b21285cbc8aa6bb6310118e77f7acf9a68e8a977a",
+   "prefix": "| IF31 |"
+  },
+  {
+   "key": "S7-2-NEW",
+   "op": "rep",
+   "old": "| IF36 | all owners → ATLAS | derived map | typed current-state extraction with declared evidence limits | atlas SOURCES table | the governing tags at the atlas snapshot |",
+   "new": "| IF36 | all owners → ATLAS | derived map | typed current-state extraction with declared evidence limits | atlas SOURCES table | the governing tags at the atlas snapshot |\n| IF37 | GEN → NUMGEN | declared-import | reduced-sector saturation ceiling (`GEN-ART-SATURATION`), NG-10 only | NUMGEN §9.1 | v2.9 |\n| IF38 | NUMGEN → GEN | declared-import | cyclic-average theorem (`NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE`) as an independent route in Genesis §6.4 | GEN §7 | v1.21 |",
+   "old_sha256": "aeef745ccaf3bcb6e0e8de02c4c748f4feaa91d4a84cd23b9a7be00fbd3ceb96",
+   "new_sha256": "55fd282dcd067d2d65ca3a9cdb40291f793a573fb56bdb08340bf37d51478257"
+  },
+  {
+   "key": "S7-3",
+   "op": "rep",
+   "old": "the TDR-T gate report from **Discrete Genesis v2.12.13 §§1–2 and Appendix C** (`tdrg-v2.12.13`), with the discrepancy preserved. Neither report substitutes a module RID for an unnamed theorem.",
+   "new": "the TDR-T gate report from **Discrete Genesis v2.12.14 §§1–2 and Appendix C** (`tdrg-v2.12.14`), with the remaining export-row wording recorded (§6.4). Neither report substitutes a module RID for an unnamed theorem.\n\n**Consumer notices received.** Triadic CN-05 (Programme/OFN note; Triadic v1.7 §7.4): received and accepted, no action. No statement of this overview uses the withdrawn T-6 sector, wedge, basin, phase-steering or route-obstruction exports, and the overview issues no cascade verdict, source deficit or ontology selection (§§5, 8). The IF07 pin is now Genesis's v1.7 pin; IF11 is OPEN M's own pin (v1.6) and moves only when OPEN M repins. OFN v0.11 and v0.12: received; OFN remains the criterion home of OPEN-P0 and OPEN-P2B (§5).",
+   "old_sha256": "6612e90b63d0a5201e4aa58244efb1b2139c2d1ca3594123bd71f3f000779683",
+   "new_sha256": "65e81338dd672cecd6f044e1d83d0b132ac077e4b2e114dcc2b9251bf00d05e8"
+  },
+  {
+   "key": "S8-2-1",
+   "op": "rep",
+   "old": "| κ (class-C coupling) | OFN, RRF, FMS | OFN §5.5.4; RRF §6.2a; FMS (throughout, §10A) | class-C model coupling of the OFN/RRF model contract; its relation to Genesis's γ is an atlas reading, not an owner statement |",
+   "new": "| κ (class-C coupling) | OFN, RRF, FMS | OFN §5.5.4, §11.4; RRF §6.2a; FMS (throughout, §10A) | class-C model coupling of the OFN/RRF model contract; OFN §11.4 and RRF §6.2a record γ ≡ κ as the class-C parameter convention (Genesis writes γ) |",
+   "old_sha256": "15e5cbc1720cc6572c1cfac3949a9ffaa55d4fc82994b709767260f848430db2",
+   "new_sha256": "521472759bdeafc5baad1b7b7c91e33f3194702f0c649cb42511e430e164ecef"
+  },
+  {
+   "key": "S8-2-2",
+   "op": "rep",
+   "old": "| CN-05 (planar metric convention) | RRF; TRIAD; UVM; OFN | RRF §3.1; TRIAD header and §3; UVM §0.3 | a convention identifier, not a coupling; often appears beside κ |",
+   "new": "| CN-05 (planar metric convention) | RRF; TRIAD; UVM; OFN | RRF §3.1; TRIAD §6.18, §7.4; UVM §0.3 | a convention identifier, not a coupling; often appears beside κ |",
+   "old_sha256": "e10696243a5ab18585ca4687287bd9c4caf71200cc901b081259a4f270f6acbe",
+   "new_sha256": "f9b9c0260516f94da5ae5f29d293a7ff567494c45f23afe4b095f8c16e27e7b6"
+  },
+  {
+   "key": "S8-2-3",
+   "op": "rep",
+   "old": "| κ_recoil | GEN | GEN §6.3 (recoil reference policy) | recoil reference value $-\\tfrac12$ |",
+   "new": "| κ_recoil | GEN | GEN §6.3 (recoil reference policy) | recoil reference value $-\\tfrac12$ |\n| κ_f | GEN | GEN §6.8 (definition of the face-lift magnitude) | face-lift magnitude $\\kappa_f=\\lvert m\\rvert\\,\\lvert w\\rvert$ of the canonical face lift; Genesis states it distinct from the birth coefficient, κ_phys, κ_RTG and γ |",
+   "old_sha256": "f34f86c8d46fbaf64d6b0f59acf3cfc1b7151c35be6441073840e09458413bc5",
+   "new_sha256": "61926f50a9c39b4396d3c0aacca1a0fef3b2b0603f77f1ea3fc69f2438ff1b36"
+  },
+  {
+   "key": "S8-2-4",
+   "op": "rep",
+   "old": "| κ (3-field basis ρ·σ·κ) | TDRG | TDRG §6 (TDR-24 dependency chain) | a proposed and rejected factorization basis, recorded as such |",
+   "new": "| κ (3-field basis ρ·σ·κ) | TDRG | TDRG §2 (TDR-24B) | a proposed and rejected factorization basis, recorded as such |",
+   "old_sha256": "fce08f673f0e9b689ef8fe7e7656907bcdf701603d3c39df9f9aa4d90883bebb",
+   "new_sha256": "7d074e42eeba0036aa8b4b11d12a17c487860b2d12ca6bb5e9acd4ef84351d10"
+  },
+  {
+   "key": "S9-2-1",
+   "op": "rep",
+   "old": "v1.2 was the pass-one architecture release; v1.3 is the pass-two synchronization of its inventory and interfaces.",
+   "new": "v1.2 was the pass-one architecture release; v1.3 was the pass-two synchronization of its inventory and interfaces; v1.4 is a maintenance synchronization of the same kind.",
+   "old_sha256": "b1e299a35ba486b3adedec82b45877fb489cee748e4e9b5118c184502c81c143",
+   "new_sha256": "20eabf60f0cbb48d562c75e8c2f7cf9dbe85795967a23bd5085e12e07777045b"
+  },
+  {
+   "key": "S9-2-2",
+   "op": "rep",
+   "old": "(OFN → Legacy → Pre-Legacy → Dyadic → TDR-G → Number Genesis → DZT → Genesis primitive → Triadic → Genesis geometry → OPEN M → RECOG → AZ) **— state at 23 October 2026:**",
+   "new": "(OFN → Legacy → Pre-Legacy → Dyadic → TDR-G → Number Genesis → DZT → Genesis primitive → Triadic → Genesis geometry → OPEN M → RECOG → AZ) **— state at 4 November 2026:**",
+   "old_sha256": "0e8522223a852c5a46f5126bf18ae9ae0a045a4104316552b9aac4d7d0937374",
+   "new_sha256": "064dd15f09f9699727bafad68e4dbadc2795dd381d745b17ba545664dee67885"
+  },
+  {
+   "key": "S9-2-OFN",
+   "op": "line",
+   "old": "| OFN | v0.7 | v0.10 | executed (v0.8, v0.9, v0.10) |",
+   "new": "| OFN | v0.7 | v0.12 | executed (v0.8–v0.12) |",
+   "old_sha256": "c6843316a79551d478a1a2c65ab8f77e8475d79d8e99be64ed01e6db271963f4",
+   "new_sha256": "b244e6508831d5682e3f6bfb8d108df7e4a9649eddac27a36166a413455db15f",
+   "prefix": "| OFN | v0.7 |"
+  },
+  {
+   "key": "S9-2-Dyadic",
+   "op": "line",
+   "old": "| Dyadic | v6.4.9 | v6.4.22 | executed (v6.4.10–v6.4.22; two-stage release pilot at v6.4.21) |",
+   "new": "| Dyadic | v6.4.9 | v6.4.23 | executed (v6.4.10–v6.4.23; two-stage release pilot at v6.4.21) |",
+   "old_sha256": "a536f54d4dafbe0a87b69d8a9b6d0465737f83feafd900fbb514fb9bbe307026",
+   "new_sha256": "4799615e5a61c55f226a62f57fe3167415bc95b312d66fc42444a274c94f1b2a",
+   "prefix": "| Dyadic | v6.4.9 |"
+  },
+  {
+   "key": "S9-2-TDR-G",
+   "op": "line",
+   "old": "| TDR-G | v2.12.13 | v2.12.13 | **not executed** |",
+   "new": "| TDR-G | v2.12.13 | v2.12.14 | executed in part (v2.12.14, corrections edition; Methodology v1.4 migration planned for v2.13) |",
+   "old_sha256": "af8ae1208524eca2a8ac280fa4c4f02b13dd8412164912c7b045e818772cf751",
+   "new_sha256": "b9a8e6952cda71d9f70d06ef804c529f58b4c8391055c12ebefd4758a0e00c7f",
+   "prefix": "| TDR-G | v2.12.13 |"
+  },
+  {
+   "key": "S9-2-Number Genesis",
+   "op": "line",
+   "old": "| Number Genesis | v1.18 | v1.20.8 | executed |",
+   "new": "| Number Genesis | v1.18 | v1.21 | executed |",
+   "old_sha256": "6dea2cc831a482c7f0bedd33a74c61619865c0ff5bef74923265dbdcb511d423",
+   "new_sha256": "1f88ca174285ffd97284b17e71fddedf9f64989dcaa597c9eece148edf0f2e2f",
+   "prefix": "| Number Genesis | v1.18 |"
+  },
+  {
+   "key": "S9-2-Genesis",
+   "op": "line",
+   "old": "| Genesis | v2.8.4 | v2.8.9 | executed (one file; the primitive/geometry split remains a proposal, §6.7) |",
+   "new": "| Genesis | v2.8.4 | v2.10 | executed (one file; the primitive/geometry split remains a proposal, §6.7) |",
+   "old_sha256": "af92947e7eb8d010219a71cab8c207d59175edb8c7daca82dd4585c9c0927615",
+   "new_sha256": "1f009e2f53e61542857660a7c50a7b0ceee8b5cfd2050fe97ecc6509b5f5b2cf",
+   "prefix": "| Genesis | v2.8.4 |"
+  },
+  {
+   "key": "S9-2-Triadic",
+   "op": "line",
+   "old": "| Triadic | v1.5 | v1.6.1 | executed |",
+   "new": "| Triadic | v1.5 | v1.7 | executed |",
+   "old_sha256": "ff10f65ef2dcb3a62e05a8e259935b18cc4c33e2c32add2935c6ece3728501dc",
+   "new_sha256": "b03a37c1fdfe60123de5981db380a7a10054fb23165cebf5ec8471a940983953",
+   "prefix": "| Triadic | v1.5 |"
+  },
+  {
+   "key": "S9-2-RECOG",
+   "op": "line",
+   "old": "| RECOG | v0.3 | v0.3.23 | executed (v0.3.1–v0.3.23) |",
+   "new": "| RECOG | v0.3 | v0.3.27 | executed (v0.3.1–v0.3.27) |",
+   "old_sha256": "99aedece22defbd89721fd99f994765dd38bd5bf987b94b1f66e6b1052192204",
+   "new_sha256": "7c43bb483d3ded16260973bd1fe4e5fc053670f0de52c993bcb5144deac4c024",
+   "prefix": "| RECOG | v0.3 |"
+  },
+  {
+   "key": "S9-2-Q",
+   "op": "rep",
+   "old": "Remaining queue, in the v1.2 order: Pre-Legacy, TDR-G, DZT, AZ.",
+   "new": "Remaining queue, in the v1.2 order: Pre-Legacy, TDR-G (Methodology migration), DZT, AZ.",
+   "old_sha256": "d581ffa90471b5594a188aad74b417e5185242bf41fbfcbcc70f700ba72ec405",
+   "new_sha256": "daa87e0795f07003184b529b0c5e0c50463976a12bef29b79c2a7177e6302e93"
+  },
+  {
+   "key": "S9-3",
+   "op": "rep",
+   "old": "publication is a merge commit on `main` and the annotated tag programme-v1.3 naming the adopted file's SHA-256.",
+   "new": "publication is a merge commit on `main` and the edition's annotated tag (`programme-v1.4` for this edition) naming the adopted file's SHA-256.",
+   "old_sha256": "08ec9530ac4f618cad50f3697cc54dd51f43bf222143be234588d75f9c50ff4d",
+   "new_sha256": "385dbb29124e512be874e3d6dfb13ab6011b1033cc918dc776d4ba94f99ee772"
+  },
+  {
+   "key": "A-1",
+   "op": "rep",
+   "old": "### v1.3 — 24 October 2026 — Adopted",
+   "new": "### v1.4 — 4 November 2026 — DRAFT (candidate; not adopted)\n\n- **Basis:** PI decision of 4 November 2026 (Programme sync by the atlas owner as editor); the four receiver items of `pipes/PROG/` and the v1.3 post-release note (E-P13-1); Methodology v1.4.\n- **Inventory and interfaces:** eight §6.1 rows to their governing editions (OFN v0.12, NUMGEN v1.21, DYAD v6.4.23, TRIAD v1.7, GEN v2.10, RECOG v0.3.27, TDR-G v2.12.14, Atlas v0.9); the PROG row and §6.2 entry worded for candidate and adopted state alike; §6.2–6.5 entries re-read against the owners' Import Ledgers; §7.2 consumer pins re-read at the governing tags; IF37 (GEN → NUMGEN, an import that predates v1.3) and IF38 (NUMGEN → GEN) added.\n- **Pointers and receipts:** OFN v0.12 as criterion home for P0 and P2B; TDR-G launch-gate record at v2.12.14 (Appendix C aligned by the owner); Triadic CN-05 received and accepted, no action (§7.3); §8.2 class-C row corrected (E-P13-1), κ_f row added, two section pointers corrected; §9.2 state at 4 November 2026.\n- **Unchanged:** architecture, maturity semantics and records, the five programme OPEN RIDs (all ACTIVE), SG-PROG-1–4, the restructuring queue, Appendix B.\n- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`.\n\n### v1.3 — 24 October 2026 — Adopted",
+   "old_sha256": "c4552d88ddc5a7eb1b810fe9b978e9eaf6f4f45302baf8beaf675fcfcf7ecd49",
+   "new_sha256": "c1c2f2e357070166d71690329c9171d2463288d6fb7c569e6ffe6244d5730daf"
+  },
+  {
+   "key": "F-1",
+   "op": "rep",
+   "old": "*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.3 (ADOPTED, 24 October 2026; pass-two synchronization of the adopted v1.2 architecture under DSN Methodology v1.4).*",
+   "new": "*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.4 (DRAFT candidate, 4 November 2026; maintenance synchronization of the adopted v1.3 under DSN Methodology v1.4).*",
+   "old_sha256": "ac3b514d6e14b65cc9fbebd0f0fcab3c2dc07b26f45bbcedd79f88338cf88c1f",
+   "new_sha256": "4e3227056e38fd64758a90ac88cc9ae6bef558a1bb446fec33ed092487121c55"
+  }
+ ]
+}
