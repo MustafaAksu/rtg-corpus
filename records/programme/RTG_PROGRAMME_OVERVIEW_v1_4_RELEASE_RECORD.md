@@ -1,6 +1,6 @@
 # Programme Overview v1.4 — release record
 
-**Status:** ADOPTED by the PI, 4 November 2026 (§6), on candidate rev. 2 `d55dc304…7dae`. **Adopted file SHA-256 `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`** (publication transform, status lines only). It governs from the annotated tag `programme-v1.4` on the merge commit of PR #178; until that tag exists, `programme-v1.3` remains the tagged edition.
+**Status:** ADOPTED by the PI, 4 November 2026 (§6), on candidate rev. 2 `d55dc304…7dae`. **Adopted file SHA-256 `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`** (publication transform, status lines only). Published and verified 4 November 2026 (§7): annotated tag `programme-v1.4` governs; `programme-v1.3` is the predecessor.
 **Editor:** Claude (atlas owner), by PI decision of 4 November 2026 in the atlas session: "programme i yapıp geçelim" ("let's do the Programme and move on"), given after the editor offered the Programme v1.4 sync as the next step. The editor role is as for v1.3. **Reviewer:** ChatGPT (change-focused). **Adoption:** PI.
 **Object:** `dsn/RTG_PROGRAMME_OVERVIEW.md`. **Governing rules:** Methodology v1.4 (§§1.1, 3.3, 13), `CONVENTIONS.md`.
 
@@ -142,4 +142,25 @@ The tag multiset `[DEF]`×10, `[HYP]`×5, `[COR]`×3 is unchanged (gate C6).
 | Delta-only review (rev. 2) | ChatGPT | **ACCEPT SCOPED, no blocking finding** (PR #178 comment `6629157174`; record §6 on PR #179 branch `chatgpt/programme-v1.4-review`, head `4941f58d25cdab8af6791b7a2332410cf24e4b1c`, file SHA-256 `c2da9b188d01cb9d7c3223b3bbda26756327d9a7f79fbe30f3b7bdadb06022d5`). The reviewer independently replayed the 81 edits to the candidate byte for byte and checked 38/38 IF ids; R1 and R2 PASS; C17 read as code; the checker runs are preparer-reported. One process note: the PR #178 description carried the rev. 1 figures. It is updated with this record. |
 | PI adoption | PI | **ADOPTED**, 4 November 2026, 14:19 +03:00, in the atlas session: "dokümanı benimsiyorum" (verbatim; "I adopt the document"). Given on rev. 2 `d55dc304…7dae` after the round-2 review (ACCEPT SCOPED). |
 | Publication transform; `BASELINE.md` | editor | **done**: adopted file `37d857d0…28c0` (§5 item 1); `BASELINE.md` Programme row → v1.4. |
-| Merge commit, annotated tag `programme-v1.4` | PI | *(pending)* |
+| Merge commit, annotated tag `programme-v1.4` | PI | **done**, 4 November 2026: PR #178 merged with a merge commit (`6331ce9d`), then PR #179 (`514e17f3`); tag `programme-v1.4` created and pushed (§7). |
+
+## 7. Publication and tag verification (editor, 4 November 2026)
+
+| Check | Result |
+|---|---|
+| Tag type | `programme-v1.4` is an annotated tag (object `73641f15a14f0cb5e3f7f5f3b1bbff8de1e1857b`); message: "RTG Programme Overview v1.4 — adopted 4 November 2026; SHA-256 37d857d0…28c0" |
+| Tag target | `514e17f3078b2569779bce67b7855d0f668fe316`, the merge commit of PR #179 (parents `6331ce9d…`, `4941f58d…`) |
+| PR #178 merge | `6331ce9d6e25e061b217af614296c80b17e2027a`, a merge commit (parents `fc3190bd…` and the branch head `2bea9126…`); it is an ancestor of the tag target, so the rev. 1 commit `7bf31aa` and rev. 2 commit `db9a701` stay reachable |
+| File at the tag | `dsn/RTG_PROGRAMME_OVERVIEW.md` SHA-256 `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0` = the adopted hash of this record |
+| `BASELINE.md` at the tag | Programme row v1.4, `37d857d0…28c0`, tag `programme-v1.4` |
+
+**One deviation from §5, recorded and not corrected:** §5 named the PR #178 merge commit as the tag target. The PI merged #178 first by hand and then #179, so the tag sits on the #179 merge commit, one commit later. That commit changes only `records/programme/PROGRAMME_v1_4_CHATGPT_CHANGE_FOCUSED_REVIEW_20261104.md`, and the Programme file is byte-identical at both commits. The tag therefore names the adopted bytes; no retagging is needed.
+
+**Post-release (branch `claude/programme-v1.4-post-release`):**
+- **The four `pipes/PROG/` items are closed** as receiver, each with disposition `2026-11-04 · accept · records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md` and a one-line answer:
+  - the GEN κ-table finding;
+  - the OFN v0.11 notice;
+  - the OFN v0.12 notice;
+  - the Triadic v1.7 notice with CN-05.
+- **Notices filed:** `pipes/<KEY>/20261104-PROG-v1-4-adopted.md` to DYAD, GEN, NUMGEN, TRIAD, TDRG, OFN and ATLAS. Each one names that receiver's changed rows and asks nothing.
+- **Indexes:** regenerated; `tools/pipes_index.py --check` passes.
