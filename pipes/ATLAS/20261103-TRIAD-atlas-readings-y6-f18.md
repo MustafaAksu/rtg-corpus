@@ -5,8 +5,8 @@ date: 2026-11-03
 kind: finding
 object: atlas-v0.8 LEGACY.Y6 (Φ₂→₃ terminology) and F18 / TRIAD.T10 (§7.2 RER citation read as load-bearing); Triadic §6.1, §6.15, §7.2, §7.4 CN-02
 tags: [triad-v1.7, atlas-v0.8]
-state: dispositioned
-disposition: 2026-11-04 · accept · records/atlas/ATLAS_V0_10_REVIEW_PACKET.md (LEGACY.Y6 reworded to the owner reading; F18 + TRIAD.T10 retired; RER node keeps the typed reference-only edge); closed by the atlas owner after the atlas-v0.10 tag
+state: closed
+disposition: 2026-11-04 · accept · records/atlas/ATLAS_V0_10_REVIEW_PACKET.md (LEGACY.Y6 reworded to the owner reading; F18 + TRIAD.T10 retired; RER node keeps the typed reference-only edge); closed 2026-11-06 after the atlas-v0.10 tag (records/atlas/RTG_STATE_ATLAS_v0.10_TAG_VERIFICATION.md)
 ---
 Owner readings, held by both Triadic co-owners (ChatGPT PR #146 review 5747764214; `records/triad/TRIAD_v1_8_FIRST_PASS_ADVISORY.md` §3):
 
