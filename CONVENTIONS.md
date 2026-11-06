@@ -89,3 +89,12 @@ The receiver decides, as for any item. Before presenting a mathematical statemen
 
 **Feedback.** When a stream uses, verifies or refutes a LIT result, it says so in a `to: LIT` item pointing to its record. LIT then records the corresponding event (`stream_used`, `stream_verified`, `issue`) on the source claim.
 
+## 9. Co-owner session orientation — Atlas pilot (working protocol)
+
+For the **Atlas pilot only**, maintain one current-state working note at `records/atlas/ATLAS_COOWNER_SESSION_ORIENTATION.md`, shared by the Atlas owner and independent co-owner/reviewer. This is a **SESSION** continuation aid, not the Atlas, a scientific owner source, a release record, a new claim grade, or an amendment to adopted Methodology v1.4. Study-wide expansion requires a separate Methodology review and PI decision.
+
+**On session entry:** read that note, then independently verify the governing adopted tag/release record, `main`, live PRs and the relevant `pipes/ATLAS/` items; inspect the actual owner DSN for any consequential science. Report stale or unverified pointers. A working note never makes a session scientifically review-ready without the cited sources.
+
+**Update checkpoints:** after a material PR/review, owner decision, release/tag, cross-stream blocker or change of next action—and proactively before a long work phase—not on every chat message. Update the fixed working file on a reviewable branch/PR; keep current status and the next 1–3 actions, remove stale history (Git retains it). Do not claim that private, uncommitted session work survived a context limit.
+
+**Generalization proposal:** `records/methodology/METHODOLOGY_COOWNER_ORIENTATION_v1_5_REVIEW_PACKET.md` will specify how this pilot could become Methodology §6.4; until an adopted successor exists, `methodology-v1.4` governs.
