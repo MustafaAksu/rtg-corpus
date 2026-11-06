@@ -97,4 +97,4 @@ For the **Atlas pilot only**, maintain one current-state working note at `record
 
 **Update checkpoints:** after a material PR/review, owner decision, release/tag, cross-stream blocker or change of next action—and proactively before a long work phase—not on every chat message. Update the fixed working file on a reviewable branch/PR; keep current status and the next 1–3 actions, remove stale history (Git retains it). Do not claim that private, uncommitted session work survived a context limit.
 
-**Generalization proposal:** a separate, unadopted Methodology v1.5 draft PR proposes a §6.4 rule based on this pilot. Until that draft is reviewed and adopted by the PI, `methodology-v1.4` governs; no future Methodology file is assumed to be on `main`.
+**Generalization proposal:** the separate, unadopted [Methodology v1.5 draft PR #189](https://github.com/MustafaAksu/rtg-corpus/pull/189) proposes a §6.4 rule based on this pilot. Until that draft is reviewed and adopted by the PI, `methodology-v1.4` governs; no future Methodology file is assumed to be on `main`.
