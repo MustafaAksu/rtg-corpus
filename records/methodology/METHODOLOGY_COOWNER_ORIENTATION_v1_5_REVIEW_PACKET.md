@@ -2,7 +2,7 @@
 
 **Status:** [SESSION] DRAFT CHANGE PROPOSAL — not adopted. The governing Methodology remains `methodology-v1.4` until an explicit PI decision and the ordinary release procedure. This packet is a review request, not the release record.  
 **Date:** 6 November 2026. **Proposer:** ChatGPT, RTG cross-stream documentation review.  
-**Candidate:** `dsn/DSN_METHODOLOGY.md` on `chatgpt/methodology-v1.5-session-orientation`, header `DSN_METHODOLOGY_v1.5`, SHA-256 **`b22bff3173cf1265155614e6597d041f6c54cbc43cecdc98ed70b178c67151fe`**, **91,592 UTF-8 bytes**, 1,012 lines (including final newline).  
+**Candidate:** `dsn/DSN_METHODOLOGY.md` on `chatgpt/methodology-v1.5-session-orientation`, header `DSN_METHODOLOGY_v1.5`, SHA-256 **`4f12daa89b140adc8e88825e5756b664b01181dc270a3a6ffc9599d7f622f559`**, **91,616 UTF-8 bytes**, 1,012 lines (including final newline).  
 **Predecessor:** adopted `methodology-v1.4`, SHA-256 `cdacab5feb79161cd86313086065ca67313ef354e30ceaf205386cf2f3a0f2df`, **86,709 bytes**.  
 **Pilot:** `records/atlas/ATLAS_COOWNER_SESSION_ORIENTATION.md` and Atlas-only `CONVENTIONS.md` §9 on [PR #188](https://github.com/MustafaAksu/rtg-corpus/pull/188). The pilot is a working note and does not amend adopted Methodology.
 
