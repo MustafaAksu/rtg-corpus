@@ -7,7 +7,7 @@ Practical rules for stream owners, co-owners and reviewers. The governing text i
 | What | Where | Rule |
 |---|---|---|
 | Canonical DSNs, Methodology, Programme | `dsn/` | one file per study, fixed filename, no version in the name |
-| Noncanonical registries and studies (RER, ER-2B, FMS) | `noncanonical/` | same |
+| Noncanonical registries and studies (`noncanonical/`) | same | one fixed filename per study |
 | Release records, reviews, advisory/closeout notes, notices, session records | `records/<study>/` | working notes keep one fixed path and change by commit; release records are frozen at adoption |
 | Scripts, certificates, outputs, evidence packages | `evidence/<study>/` (`scripts/` for scripts, `<version>/` for small per-release outputs) | stored once; frozen external packages kept as received |
 | Lint and checkers | `tools/` | `dsn_lint.py`, `check_compaction.py`, `test_check_compaction.py` |
@@ -32,7 +32,7 @@ The governing edition of a study is its latest **adopted, tagged** release (`<st
 
 1. **Branch.** Work on a branch (`claude/<topic>` for Claude sessions). Edit the fixed-name file in place. No versioned copies (`*_v6_4_21.md`, `*_DRAFT_r2.md`).
 2. **Two stages when a release also compacts.** Stage 1: scientific or scope corrections, built by an assertion-gated script; record the intermediate hash. Stage 2: layout only, with a movement map, checked by `tools/check_compaction.py` against the intermediate. New claims never enter in stage 2.
-3. **Checks.** `python tools/dsn_lint.py <file> --prev <previous file>` (informational size report; no gate). For a compaction: `python tools/check_compaction.py <intermediate> <candidate> <map> --regions <registry>` (negative controls). A passing check authorizes nothing.
+3. **Checks.** `python tools/dsn_lint.py <file> --prev <previous file>` (informational size report; no gate). For a compaction: `python tools/check_compaction.py <intermediate> <candidate> <map> --regions <registry>` and `python tools/test_check_compaction.py …` (negative controls). A passing check authorizes nothing.
 4. **Review.** Open a pull request. The receiving review is change-focused: it checks the diff, not unchanged science. Reviews go to `records/<study>/`.
 5. **Adoption.** The PI/owner decision is recorded in `records/<study>/<STUDY>_v<version>_RELEASE_RECORD.md`, then a status-lines-only publication commit (header, Appendix A heading, footer) gives the final hash.
 6. **Publication.** The PI merges with a merge commit (not squash) and creates the annotated tag `<study>-v<version>` on the server, with the hash in the tag message. `BASELINE.md` lists the new governing edition. Then "Sync now" in the Claude project.
