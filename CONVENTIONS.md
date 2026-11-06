@@ -7,7 +7,7 @@ Practical rules for stream owners, co-owners and reviewers. The governing text i
 | What | Where | Rule |
 |---|---|---|
 | Canonical DSNs, Methodology, Programme | `dsn/` | one file per study, fixed filename, no version in the name |
-| Noncanonical registries and studies | `noncanonical/` | same |
+| Noncanonical registries and studies (RER, ER-2B, FMS) | `noncanonical/` | same |
 | Release records, reviews, advisory/closeout notes, notices, session records | `records/<study>/` | working notes keep one fixed path and change by commit; release records are frozen at adoption |
 | Scripts, certificates, outputs, evidence packages | `evidence/<study>/` (`scripts/` for scripts, `<version>/` for small per-release outputs) | stored once; frozen external packages kept as received |
 | Lint and checkers | `tools/` | `dsn_lint.py`, `check_compaction.py`, `test_check_compaction.py` |
