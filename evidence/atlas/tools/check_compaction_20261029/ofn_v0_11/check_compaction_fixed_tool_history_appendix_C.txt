@@ -1,0 +1,29 @@
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  archive identity stage1-intermediate  — cf38b61b5cd3e268e412dbd10b28a2117f86f1c7423fd2dd33f466a8e5437ce3
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation S2-H (replace-header)  — header replaced; status-summary sentences are a subset of the base summary (header)
+PASS  operation S2-E01 (history-removal)  — history span removed (538 chars), found in ['stage1-intermediate']
+PASS  operation S2-E02 (history-removal)  — history span removed (823 chars), found in ['stage1-intermediate']
+PASS  operation S2-E03 (history-removal)  — history span removed (97 chars), found in ['stage1-intermediate']
+PASS  operation S2-E04 (history-removal)  — history span removed (318 chars), found in ['stage1-intermediate']
+PASS  operation S2-E05 (history-removal)  — history span removed (8 chars), found in ['stage1-intermediate']
+PASS  operation S2-E06 (history-removal)  — history span removed (8 chars), found in ['stage1-intermediate']
+PASS  operation S2-E07 (history-removal)  — history span removed (8 chars), found in ['stage1-intermediate']
+PASS  operation S2-E08 (history-removal)  — history span removed (258 chars), found in ['stage1-intermediate']
+PASS  operation S2-E09 (history-removal)  — history span removed (152 chars), found in ['stage1-intermediate']
+PASS  operation S2-E10 (history-removal)  — history span removed (71 chars), found in ['stage1-intermediate']
+PASS  operation S2-E11 (history-removal)  — history span removed (79 chars), found in ['stage1-intermediate']
+PASS  operation S2-S1 (history-section)  — section relocated (4628 chars), found in ['stage1-intermediate']
+PASS  operation S2-S2 (history-section)  — section relocated (1088 chars), found in ['stage1-intermediate']
+PASS  operation S2-S5 (history-section)  — section relocated (2773 chars), found in ['stage1-intermediate']
+PASS  operation S2-T (history-appendix)  — section relocated (18968 chars), found in ['stage1-intermediate']
+PASS  base history region  — base live text ends at '## Appendix C — Version History'; region of 18968 chars relocated and archived
+PASS  qualified claim blocks  — 243 claim blocks in base live text: 241 byte-identical, 2 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []; relocated to the history appendix: ['56bc991d28c4a6f3e841eec5ac8c4550528fbaac91bcfc23ab0dc2540bd2a514', '58e2dec5…3610', '5ae8fdab…9795']
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS
