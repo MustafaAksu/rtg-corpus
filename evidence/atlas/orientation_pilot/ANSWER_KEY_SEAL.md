@@ -4,7 +4,7 @@
 
 | Sealed object | SHA-256 | Bytes |
 |---|---|---|
-| `ANSWER_KEY_FROZEN_20261109.md` | `02ca177053ab4093e594d66d042e3e7143385aba58f12bcd212b63c651a9ea09` | 5,772 |
+| `ANSWER_KEY_FROZEN_20261109.md` | `b1b44898e20abfe7d247c7af4d3b6906ca5c5a73b8b2118f63dca2898c2ef2e4` | 6,023 |
 
 ## Frozen inputs (observable; the expected answers are in the sealed key)
 
@@ -18,4 +18,4 @@
 | Open PRs at the freeze | #113, #114, #160, #180, #183, #188, #189 |
 | `tools/pipes_index.py --check` at the freeze | 88 items in 20 inboxes |
 
-**Validity.** Any merge to `main` or to the pilot branch after the freeze moves the inputs; the owner then re-freezes (new key, new seal) rather than reinterpreting results. The tests are run by one fresh ChatGPT session and one fresh Claude project session that receive only the note's bootstrap message (and, for tests 2 and 3, the fixture branch and path). Scoring is by the PI and the Atlas owner against the key, with the Atlas co-owner free to score independently.
+**Validity.** The merge of this seal (PR #194) is expected before the tests and is the one change to `main` the key allows. Any other merge to `main` or to the pilot branch after the freeze moves the inputs; the owner then re-freezes (new key, new seal) rather than reinterpreting results. The tests are run by one fresh ChatGPT session and one fresh Claude project session that receive only the note's bootstrap message (and, for tests 2 and 3, the fixture branch and path). Scoring is by the PI and the Atlas owner against the key, with the Atlas co-owner free to score independently.
