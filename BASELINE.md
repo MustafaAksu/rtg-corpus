@@ -37,6 +37,13 @@ The table lists the **governing adopted editions**. Predecessor: Methodology v1.
 | ER-2B | `RTG_ER2B_CONSOLIDATED_STUDY.md` | v0.3 | `80669c69ada042230c36883f5f1de7a0738e637793a4d1cf4b590990da57a134` | PI | `er2b-v0.3` |
 | FMS | `FMS_MODEL_SELECTION_LEDGER.md` | v0.6.4 (session) | `d6313b707464da7ae016662e32fc366981cae9cc5335033129acfcce515d3984` | PI | `fms-v0.6.4` |
 
+## Derived maps (`atlas/`) — noncanonical
+
+| Study | File | Version | SHA-256 | Verification | Tag |
+|---|---|---|---|---|---|
+| ATLAS | `RTG_STATE_ATLAS.md` | v0.10 (noncanonical; owner DSNs govern on conflict) | `443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7` | ATLAS OWNER: acceptance record `records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md` (PI accepted 6 Nov 2026); post-tag `records/atlas/RTG_STATE_ATLAS_v0.10_TAG_VERIFICATION.md` | `atlas-v0.10` |
+| ATLAS Method | `RTG_STATE_ATLAS_METHOD.md` | v0.2 | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` | ATLAS OWNER: unchanged since `atlas-v0.2` | `atlas-v0.2` |
+
 ## Not yet in the repository
 
 Release/adoption records of the streams other than DYAD v6.4.20–v6.4.22, RECOG v0.3.21–v0.3.24 and NUMGEN v1.21 (to `records/<study>/` when supplied), and the DYAD v6.4.19 disposition record.
