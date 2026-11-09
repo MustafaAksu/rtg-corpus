@@ -1,83 +1,69 @@
 # Session orientation reporter — ChatGPT receiving review
 
-**Checked:** 9 November 2026, round 2.  
-**Status:** [SESSION] independent tool review; not pilot acceptance, scientific adoption or merge authority.  
-**PR #190 verdict: REVISE, narrowed to residual R1/R2/R4 boundary cases. R3 is discharged.**  
-**PR #191 verdict: ACCEPT SCOPED. Both previous cleanup notes are resolved.**
+**Checked:** 9 November 2026, round 3.  
+**Status:** [SESSION] independent receiving review; not pilot acceptance, scientific adoption or merge authority.  
+**PR #190 verdict: ACCEPT SCOPED — no remaining blocker in O190-R1–R4 for the identified revision.**  
+**PR #191 verdict: ACCEPT SCOPED at `404bfb6`; its two cleanup notes remain resolved.**
 
-This is the current working review. The complete first-round review remains at commit `2ec275bf8e4dfec0198ea351ef37f6e99edbe1d3`, this same path; the original harness and `round1_output.txt` are unchanged. No earlier evidence or producer output was rewritten.
+This is the current working review. Earlier rounds remain at the same path in Git: round 1 at `2ec275bf8e4dfec0198ea351ef37f6e99edbe1d3`, round 2 at `06adf9a7476b3059784556ee7191200c061ba4b6`. Their harnesses and recorded outputs are unchanged. This revision supersedes the prior REVISE decision for the specific reporter bytes below; it does not erase earlier counterexamples.
 
-## 1. Exact objects and review extent
+## 1. Exact object and reading extent
 
-- Reporter: PR #190, `claude/tool-orient`, head `6bb77302c25da830790f9971efaa2a068bf23aac`; `tools/orient.py`, 176 lines / 13,079 bytes; SHA-256 **`3570e1c0ecd73e7b6a602744ef599fda0f87f747d2324a3544c738ae67dc9ac5`**, Git blob **`72c031fd5bd16a543341bcfa1edb3bba65b9dd39`**. Both recomputed independently from the actual transferred source. It is unchanged in execution.
-- Owner lane: PR #191, head `404bfb6da26bea100208b02be2fa07e096001f27`; base `chatgpt/atlas-session-orientation-pilot` at `6a3cc5e5b46a4dca90aded2c72babf4fc94a0ae5`, not `main`.
-- Read the full revised reporter, first-round requirements, the producer's round-2 README, relevant PR metadata, PR #191's complete current diff, and repository `CONVENTIONS.md` §§2–7 before editing this review.
-- Git compare shows reporter revision 1 `029524ac...` is still the merge base/ancestor of revision 2: two additional commits, zero behind. This confirms preserved ancestry in the inspected branch; it is not an audit of every attempted local command.
+- Reporter: PR #190, `claude/tool-orient`, head **`34e55078fcce6041169ee2cab624eef55600b202`**; `tools/orient.py`, **14,135 bytes**; SHA-256 **`dfbcb1da0a7ac4d3ec942cae4a125875caa1030ddebd103821bf5c75b0c5cd0c`**, Git blob **`6848b4f0c15713f6063be797a396f066f4dafa06`**. Both identities were recomputed from the actual source transferred into the test environment and matched GitHub/source identity. The reporter was not modified for execution.
+- Read the full revision-3 reporter, the round-2 receiving requirements and complete executable runner, the producer's revision-3 README, current PR #190/#191/#192 metadata and CONVENTIONS §§2–7. The substantive delta reviewed is the remaining R1/R2/R4 correction batch; R3 was already discharged and its regression cases were retained.
+- PR #191 is still the separately reviewed `404bfb6da26bea100208b02be2fa07e096001f27`, targeting `chatgpt/atlas-session-orientation-pilot`, not `main`. Content acceptance is separate from its current mergeability against a moving pilot base.
 
-## 2. Executed results and test boundaries
+## 2. Executed verification — original contracts unchanged
 
-**[EV-BYTES / EV-HASH / EV-RUN]** Python **3.13.5**, unchanged reporter bytes. Git/GitHub `subprocess.run` responses were deterministic offline fixtures; actual reporter parsing, report rendering and optional JSON output executed. File output was confined to temporary directories. Runtime network access was unavailable, so this is neither a live GitHub replay nor a blind replacement-session test.
+**[EV-BYTES / EV-HASH / EV-RUN] Python 3.13.5.** Executed the unchanged reporter through the existing offline receiving harness. Only Git/GitHub subprocess responses are deterministic fixtures; reporter argument parsing, matching, uncertainty propagation, rendering and JSON output are actual source execution. Filesystem tests use temporary directories. No production source, pipe, ref or tag is touched.
 
-**Original 21 controls: 21/21 PASS, zero FAIL.** The original harness, SHA-256 `f585abf7f23ebcbabcd2621795ffebb3dc7625e62ed636e6ad9af8c970762681`, is reused unchanged; only `EXPECTED` and `BLOB` are set to the reviewed reporter's identities in memory. This independently confirms the producer's 21/21 report.
+**Results: original 21/21 PASS; existing boundary cases 6/6 PASS; zero failures; exit 0.** The previous four failures in the six-case suite are now PASS. No fixture, test predicate, expected PR set or acceptance condition was relaxed or replaced.
 
-**Six bounded follow-up controls: 2 PASS, 4 FAIL.** Four failing cases belong to three already-requested contracts (field-level incomplete data, exact version identity, safe output). The two positive controls retain underscore-form records and report genuinely ambiguous same-version records. These are not new pilot features or a scientific campaign.
+The new thin runner `check_orient_round3.py` first hash-checks the unchanged `check_orient_round2.py`, then changes only `TOOL_SHA` and `TOOL_BLOB` in memory. That round-2 runner in turn hash-checks the original 21-contract harness and repins its two target constants in memory. This is an independently executed replay of the same Python fixtures, not a new implementation of the reporter or a live GitHub test.
 
-The first receiving suite did not cover a patch-version suffix, failure to read an individual enumerated pipe item, or a dangling JSON-output symlink. That coverage gap belongs to this review as well: the 21/21 result is correct but insufficient to discharge the broader R1/R2/R4 conditions already written in round 1. Do not claim that those 21 checks failed or that they prove all response/error paths safe.
+| Durable evidence | SHA-256 |
+|---|---|
+| `evidence/atlas/tools/orient_receiving/test_orient_receiving.py` (unchanged) | `f585abf7f23ebcbabcd2621795ffebb3dc7625e62ed636e6ad9af8c970762681` |
+| `evidence/atlas/tools/orient_receiving/check_orient_round2.py` (unchanged) | `14ca8cb3f32c7d5fb09e926e97187c463c43f947ac85ac09e5f6193029e4cc7e` |
+| `evidence/atlas/tools/orient_receiving/check_orient_round3.py` (pin-only runner) | `1de46f1e5fca925348afd76d939a4e692cbfa34c9a0979384f898659fb629dd6` |
+| `evidence/atlas/tools/orient_receiving/round3_output.txt` (actual stdout) | `5cbdbc2fc2bdd4beaf99213e44d022e4c3872eea33b5d6f60be6dd645b4aff68` |
 
-Evidence:
-- `evidence/atlas/tools/orient_receiving/check_orient_round2.py` — SHA-256 `14ca8cb3f32c7d5fb09e926e97187c463c43f947ac85ac09e5f6193029e4cc7e`; loads the old hash-pinned harness instead of duplicating it.
-- `evidence/atlas/tools/orient_receiving/round2_output.txt` — actual output, SHA-256 `0513ac4eefbe5073582dbf03ca75bdb611a3f5ff921de5829a6feccb07b68219`.
-- The runner also emits baseline stdout, baseline detailed results, and `round2_summary.json` with the concrete observations. Large repeated baseline call lists are regenerated on demand rather than copied into Git.
+Reproduce from the receiving-review branch, or after it is merged:
 
 ```bash
 target=$(mktemp)
 out=$(mktemp -d)
-git show 6bb77302c25da830790f9971efaa2a068bf23aac:tools/orient.py > "$target"
-python3 -I evidence/atlas/tools/orient_receiving/check_orient_round2.py \
+git show 34e55078fcce6041169ee2cab624eef55600b202:tools/orient.py > "$target"
+python3 -I evidence/atlas/tools/orient_receiving/check_orient_round3.py \
   --tool "$target" --out "$out"
-# Current expected output: baseline 21/21 PASS; additional 2/6 PASS, 4 FAIL; exit 1.
-# Actual case observations: "$out/round2_summary.json".
+# Expected: baseline 21/21 PASS; additional 6/6 PASS; exit 0.
+# Reused runner writes concrete observations to "$out/round2_summary.json".
 ```
 
-## 3. Discharged corrections
+The per-case observations and large baseline call lists are reproducible from these pinned scripts; they need not be duplicated in Git for every replay. The producer's live ATLAS/GEN observations remain **EV-SRC-REPORTED / EV-NOT-RERUN** by this reviewer. No fresh ChatGPT or Claude-project blind session has been run here.
 
-The original unreadable-tree case now has null pipe fields and UNVERIFIED text. Missing release Status, missing tag hash, empty remote-main and invalid JSON text become structured partial reports. The original v0.10/v0.100 collision is rejected; mixed `-r1`/patch tag names no longer raise the original comparison exception. Renamed-away paths, same-repository PR URLs and transitive reference discovery in both API orders pass. Default output no longer overwrites an existing ordinary file. These are real improvements.
+## 3. Disposition of R1–R4
 
-**R3: PASS SCOPED.** No further PR-discovery change is requested by this round. No automated adoption inference is requested: source records and human authority remain distinct.
+| Contract | Verdict | Executed/read-back result |
+|---|---|---|
+| **R1 — incomplete observations** | **PASS SCOPED** | The original tree-read failure still yields null pipe collections. An enumerated item that cannot be read is now named in `pipes.unreadable`, with `pipes.complete=false`; the rendered counts are explicitly INCOMPLETE lower bounds rather than `inbox: none`. The overall report remains PARTIAL/UNVERIFIED. Original access, JSON, missing Status/hash and freshness controls also pass. |
+| **R2 — release-version identity** | **PASS SCOPED** | Whole numeric dot/underscore version tokens are normalized and compared for equality. A v0.10 tag does not select v0.100 or v0.10.1; the exact v0.10 record alongside v0.10.1 is unambiguous; v0_10 remains supported; two actual same-version record representations remain ambiguous. Candidate/release sorting does not raise the original mixed-type exception. This is source matching, not an automated adoption decision. |
+| **R3 — PR discovery** | **PASS SCOPED, regression retained** | Renamed-away paths, same-repository PR URLs, paginated discovery and both API orderings of the 201→200→113 graph still pass. The tested relevant PR membership is order-independent. An observed reference remains a discovery relation, not proof of scientific dependency or acceptance. |
+| **R4 — intentional report output** | **PASS SCOPED** | Default output uses exclusive creation, retains the existing-file protection and refuses the tested dangling symlink without creating its target. The link itself remains intact. Source inspection confirms the explicit symlink check and O_NOFOLLOW where available. Optional `--replace-json` is an intentional overwrite mode for a report owned by the caller; it must not be pointed at scientific/evidence source files. Stdout remains the read-only default. |
 
-## 4. Remaining bounded corrections
+The four earlier boundary failures are concretely closed: R2-E1/E2 use only the correct record; R1-E1 has an unreadable-item list and incomplete flag; R4-E1 reports no source-target creation. The two positive boundary controls remain PASS.
 
-### R2 — full release-version identity (L98–100)
+## 4. Scoped limitations, not new blockers
 
-- **R2-E1:** with tag `atlas-v0.10` and only `RTG_STATE_ATLAS_v0.10.1_RELEASE_RECORD.md`, the tool selects that different edition and reports **COMPLETE**. The synthetic record contains the same input hash, so a hash-presence check cannot repair wrong version attribution.
-- **R2-E2:** with both the exact v0.10 record and the v0.10.1 record, the tool incorrectly reports two matches and **PARTIAL / identity ambiguous**. Only the v0.10 record is eligible.
+- This finite suite covers the agreed R1–R4 counterexamples and regressions, not every malformed payload, concurrent GitHub mutation, version naming policy or adversarial filesystem arrangement. It is not a universal security certification.
+- The reporter observes the newest local tag and release-record evidence. Humans still verify the governing adopted edition; a matching hash, Status string or COMPLETE observation is not adoption.
+- JSON output is the explicit write exception. Refusal to write a requested destination and a complete repository observation are distinct outcomes; the stdout must be read. Use fresh temporary report destinations for the pilot. No cross-platform hostile-parent-directory or hard-link security claim was tested.
+- The PR #190 description still includes first-revision examples and the overbroad phrase that the tool never writes. Before merge, align that description with revision 3 and its explicit optional JSON-write exception. This is nonblocking metadata cleanup, not another code-review round.
 
-Cause: `(?![0-9])` permits the `.` or `_` separator followed by another numeric version component. The replacement is still a prefix test for this case.
+## 5. Owner lane, pilot and next step
 
-**Acceptance:** parse/extract the complete version token (normalizing supported dot/underscore spelling) and compare it for equality with the tag version. Keep real duplicate same-version records ambiguous, but do not treat a later patch version as either a match or an ambiguity. The new E1/E2 and the original N04 must pass.
+**PR #191 remains ACCEPT SCOPED** for integration into the #188 pilot branch. Its stale unfilled-lane sentence and fixed-four-PR test criterion were already corrected; the current head is unchanged. If its base has advanced, refresh it through a normal merge/follow-up commit preserving both lanes, not a force-push. Content acceptance is not a claim that GitHub currently reports it mergeable.
 
-### R1 — individual pipe reads are also incomplete observations (L140–151, L168)
+**No additional reporter correction cycle is requested.** The PI may now consider merging #190 and this review/evidence PR #192 into `main`, and #191 into its named pilot base. No merge or tag is performed by this review.
 
-**R1-E1:** enumeration succeeds and lists one item, but `git show origin/main:<item>` fails. The tool records a top-level PARTIAL warning, then emits `inbox: none; outbound not closed: none` and `{}` counters. This repeats the original false-empty problem at the item-read level.
-
-**Acceptance:** track incomplete/unreadable items and propagate incompleteness into affected field(s). Null fields or explicitly marked lower-bound counts with a completeness flag are acceptable. The human-readable output must not state an empty inbox/outbound set when it was not established. An unknown sender also limits outbound completeness. Preserve the working whole-tree failure behavior and the original positive cases.
-
-### R4 — dangling symlink output collision (L170–173)
-
-**R4-E1:** in a temporary directory, `observation.json` is a symbolic link to a nonexistent synthetic `atlas/RTG_STATE_ATLAS.md`. With default `--json observation.json` and **without** `--replace-json`, `os.path.exists` returns false and `open(..., 'w')` follows the link, creating the target with JSON report content. No production file was involved.
-
-**Acceptance:** default creation must refuse an existing directory entry, including a dangling symlink. Exclusive creation (`open(..., 'x')` or equivalent O_EXCL) avoids the check-then-open gap; handle the refusal clearly. An explicit report replacement must reject symlink redirection or have an equally safe stated contract. This is the symlink-collision requirement already present in round-1 R4, not a ban on intentional JSON report creation.
-
-Apply these three small corrections together and rerun the existing 21 controls plus the six follow-up controls. No broad new feature, source migration or certificate campaign is requested. The finite fixtures do not certify every malformed payload, semantic tag-order policy or concurrent GitHub race.
-
-## 5. PR #191 disposition
-
-**ACCEPT SCOPED at `404bfb6...`.** The leftover “deliberately unfilled” sentence is removed. Test expectations now use a PR set frozen with the answer key, with separate fixed-fixture and live-discovery scoring; they no longer require exactly four live PRs. The diff from its current pilot base changes only shared/owner sections and leaves `REVIEWER_LANE` unchanged. The owner incorporated the previous reviewer-lane commit `6a3cc5e` before the update.
-
-That stacked PR can be considered independently for its named pilot branch. It does not authorize the reporter's merge, pilot acceptance or Methodology migration.
-
-## 6. Next action and PI boundary
-
-PR #190 remains **REVISE** only for the residuals in §4; PR #192 records the evidence, not approval of the tool. The owner may prepare the blind-test answer-key schema now, but freeze the final reporter commit and PR-response fixtures after the corrected tool is accepted. Fresh ChatGPT and Claude-project tests remain necessary for #188; this returning session is not a substitute. #189 remains deferred.
-
-No merge, tag, force-push, pipe-state edit, scientific-owner change or reporter-code edit was performed by this review. Only the review/evidence branch is updated; any reviewer-lane checkpoint update is limited to that lane.
+After those integrations, freeze the actual reporter commit/hash, repository refs and captured PR responses for the answer key **before** either blind test. Do not retain a historical count of four or seven relevant PRs as the live expected answer: merges change that set. Keep frozen-fixture scoring separate from live-discovery scoring. Run fresh ChatGPT and Claude-project sessions; this returning reviewer session is not blind. #188 remains gated on that pilot evaluation; #189 stays deferred. No scientific-owner edition, Methodology migration or new release tag is implied.
