@@ -1,55 +1,53 @@
 # ATLAS — Co-owner Session Orientation
 
-**[SESSION] Pilot proposal; no scientific or release authority.**  
-**Maintainer:** Atlas owner (Claude). Shared structure (ENTRY, LIVE_STATE, lane headings, PI_PENDING) approved by the owner on 6 November 2026 with the edits of PR #191. Each co-owner edits only its own lane thereafter; cross-lane corrections are review requests.
+**[SESSION] Operational working memory of the Atlas stream; no scientific or release authority.** Pilot accepted by the PI on 9 November 2026 (PR #188 merge `53e4125`; blind-test record `records/atlas/ATLAS_ORIENTATION_PILOT_BLIND_TESTS_20261109.md`). Generalization to other streams is a separate PI decision (CONVENTIONS §9).
+**Maintainer:** Atlas owner (Claude). Shared sections (header, ENTRY, LIVE_STATE, BOOTSTRAP, PI_PENDING) are the owner's; each co-owner edits only its own lane; cross-lane corrections are review requests.
 
 ## ENTRY — discovery and authority
 
-Read **from GitHub**, repository `MustafaAksu/rtg-corpus`; do not assume project synchronization includes `records/`. Before merge, this note is on PR #188, branch `chatgpt/atlas-session-orientation-pilot`; after merge, use its fixed path on `main`.
+Read **from GitHub**, repository `MustafaAksu/rtg-corpus`, fixed path `records/atlas/ATLAS_COOWNER_SESSION_ORIENTATION.md` on `main`; project synchronization does not include `records/`. Start with `CONVENTIONS.md`, this note, `BASELINE.md` and `pipes/ATLAS/INDEX.md`. Failure to access a source means **UNVERIFIED**, not an empty queue. Atlas refresh policy is **Atlas Method §7**; inherited owner-held obligations are §5 of `records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md`, read together with the post-tag verification. Neither is duplicated here.
 
-Start with `CONVENTIONS.md`, this note, `BASELINE.md` and `pipes/ATLAS/INDEX.md`. Fetch missing files through the GitHub connection or an authenticated clone. Failure to access them means **UNVERIFIED**, not an empty queue. Read relevant owner sections before scientific work; consult Methodology when evidence, editing or publication requires it. Atlas refresh policy is **Atlas Method §7**, not this note.
-
-For inherited owner-held obligations, follow §5 of `records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md`; consult the corresponding post-tag verification for later publication events. Do not duplicate that list here.
+Two supported working modes, chosen after checking the session's own capabilities (details: `records/atlas/COOWNER_EXECUTION_AND_WORKING_MEMORY.md` §§1–2):
+- **Native reporter** — Python, Git, a clone with tags, `gh`: run the reporter below.
+- **Connection-assisted verification** — no shell or no network: obtain the same refs, tags, release records, PRs and pipe states through the GitHub connection; compute hashes locally when exact bytes are available; state what the mode could not cover (pagination, outbound census).
+Temporary files, a temporary clone, local ref refresh and hash computation are permitted within normal permissions. During the entry check: no shared-content change, push, merge, tag, pipe-state change or adoption.
 
 ## LIVE_STATE — generated, never copied here
 
-Reporter: `tools/orient.py` on `main` since 9 November 2026 (PR #190 rev. 3, receiving review PR #192 ACCEPT SCOPED, 27/27 controls). Command: `git fetch origin --tags && python3 -I tools/orient.py ATLAS`. Its only write is an optional `--json` report file it creates itself.
+Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192, 27/27). Command: `git fetch origin --tags && python3 -I tools/orient.py ATLAS`. Its only write is an optional `--json` report it creates itself. It reports the newest tag with its release-record evidence (never adoption by itself), the governing file's hash at tag and `main`, commits after the tag on Atlas paths, open PRs by changed paths and explicit references, inbound/outbound pipe states, query time, ref freshness and an UNVERIFIED list. A PR that only names a closed PR drops out of the match set; decisions about such PRs live in the lanes (example: #189, deferred). Native runs so far: the PI's server, 9 Nov 2026 08:54 and 12:19 UTC (`evidence/atlas/orientation_pilot/native_run_pi_server_20261109.md`); no fresh AI session has yet invoked it natively.
 
-Generate adopted-tag/release identity, target and file hash, observed `main` and local ref/fetch state, open PRs matched by changed paths **and explicit dependencies**, and inbound/outbound queue states. Include Atlas-owned tooling: `evidence/atlas/tools/`, `records/atlas/` and relevant shared tools; title searches alone are insufficient. Inspect #113/#114 as tool/review dependencies, not as automatically ready-to-merge work.
+## BOOTSTRAP — first message for a fresh session
 
-Report query time, input refs and scan coverage. Distinguish a frozen source snapshot from live repository state. Missing permissions, pagination, offline mode or unrecognized adoption records produce **partial/UNVERIFIED**, never “no work”. A newest tag is not necessarily an adopted tag.
+> Act as Atlas co-owner. From GitHub `MustafaAksu/rtg-corpus`, read `CONVENTIONS.md` and `records/atlas/ATLAS_COOWNER_SESSION_ORIENTATION.md`. Verify governing sources and live work; report gaps and next actions. Temporary files/clones, hashes and the reviewed reporter are permitted within normal permissions. Use connector queries when unavailable. During entry, do not modify shared content, push, merge, tag, change pipes or adopt.
 
 ## OWNER_LANE — Claude
 
-**Last checked by owner:** 9 November 2026, 12:05 +03:00. Read: `origin/main` `c8333a4` (PR #190 merge; PR #192 merged before it as `4c1215f`), pilot branch head `feb360d` (PR #191 merged), `tools/orient.py` on `main` SHA-256 `dfbcb1da…cd0c`. Ran the reporter at that `main`: COMPLETE; `atlas-v0.10` with its release record, hash named; 4 matched open PRs (#113, #114, #188, #189); inbox 7/7 closed; no outbound open.
-
-**Intent / decision held:** two-layer design accepted (LIVE_STATE generated, this note holds intent only). The reporter is accepted after three review rounds; no further tool work is planned before the blind tests. #189 is deferred by its proposer. #113/#114 are open Atlas tool work on their own review track. No Atlas refresh is due: no source tag after `fa3db80`, no open Atlas inbox item.
-
-**Resume:** no open owner branch. Reporter command above. Blind-test material: the answer key is written by the owner, held by the PI, and sealed in the repository by its SHA-256 (`evidence/atlas/orientation_pilot/`) before either test; stale-note and fake-claim fixtures for tests 2 and 3 live on the disposable branch `claude/orientation-pilot-fixtures` (no PR, never `main`).
-
-**Next actions / acceptance criteria:**
-1. Freeze: after this lane update reaches the pilot branch, the owner records the input refs (`main`, pilot head, tool hash, open-PR set, pipe census) and the expected answers, sends the key to the PI, and commits only its hash. Any later merge invalidates the frozen set; re-freeze rather than reinterpret.
-2. Blind tests, one fresh ChatGPT session and one fresh Claude project session, from the bootstrap message alone; the Claude session also tests discovery through the project-instruction sentence. Pass = governing tag and record identified with their evidence; the frozen open-PR set found; stale pointers in the fixture detected; the fixture's fake claim rejected against the owner DSN; access failures reported as UNVERIFIED; no inherited private reasoning claimed. Frozen-fixture scoring and live-discovery scoring stay separate.
-3. On pass: PI decision on merging #188; then the CONVENTIONS §9 generalization proposal, each owner choosing one entry path. On fail: the owner amends the note or the reporter and re-freezes.
+**Goal / current question:** keep the Atlas current with owner releases and keep this note usable as the stream's working memory; no scientific question open on the Atlas side.
+**Last durable work:** `claude/atlas-orientation-maintenance`, this PR (F1–F3 of the test record, bootstrap, BASELINE row, native-run evidence). Before it: PR #195 (test record, `d147d41`), PR #194 (seal), PR #193 (lane), PR #190 (reporter).
+**Decisions held:** two-layer design (generated state, intent here) — accepted and tested; #189 deferred by its proposer, no Methodology edition for this; #113/#114 are open Atlas tool work on their own review track (#114's REVISE refers to an older #113 commit, not carried forward automatically); no Atlas refresh due — no source tag after `fa3db80`, no open Atlas inbox item; next refresh counts the pipe items filed after `fa3db80` at its own snapshot.
+**Tried and set aside:** a standalone Methodology v1.5 for session orientation (#189) — set aside as too heavy for an operational rule; reopen if CONVENTIONS §9 generalization needs a Methodology hook. Hand-copied live inventory in the note (pilot rev. 1) — set aside after it went stale within a day; reopen never.
+**Evidence:** reporter run at `main` `53e4125`: COMPLETE, matched #113 and #114, inbox 7/7 closed, no outbound. Blind tests 9 Nov: both platforms 7/7, 5/5, 4/4, access PASS (sealed key `b1b44898…`).
+**Resume:** no unfinished owner computation. Reporter command above.
+**Next 1–3 actions / acceptance:**
+1. #113/#114: change-focused readback of #113's round-3 fixes (`74ca65e`) against #114's two hash-binding counterexamples; acceptance = receiving verdict recorded on #114's branch.
+2. F4: first fresh AI session with native prerequisites runs the reporter and records stdout, status and the tool hash under `evidence/atlas/orientation_pilot/`; connector-mode sessions keep "native NOT RUN".
+3. Next Atlas refresh when a source tag moves or an Atlas inbox item opens (Method §7); also add the BASELINE Atlas row's hash to the next release record's checklist.
+**Reopen trigger:** any owner tag after `fa3db80`; any open item in `pipes/ATLAS/`; a PI decision to generalize CONVENTIONS §9.
 
 ## REVIEWER_LANE — ChatGPT
 
-**Last checked:** 9 November 2026; full reporter PR #190 `34e55078fcce6041169ee2cab624eef55600b202`, prior requirements and pinned runners, current PR #191/#192 metadata and CONVENTIONS. Independently verified reporter SHA-256 `dfbcb1da…cd0c` and Git blob; executed the unchanged 21 + 6 fixture contracts: 27/27 PASS, exit 0. No live reporter or blind-session run.
+Checked 9 November 2026: independently verified #195/#196/#188 merges and main `53e412544ae53e3d657a2ef446493f73fe865c9f`; read merged CONVENTIONS §9 and the entry note. PI supplied a successful live native reporter run; this reviewer did not execute it. Held decisions: Atlas pilot accepted; #189 deferred; #113/#114 remain separate tool work. No active reviewer branch. Prior review/evidence is merged under `records/atlas/ATLAS_ORIENTATION_PILOT_RECEIVING_CHATGPT_20261109.md`; do not reopen completed scoring or reporter correction rounds. Next: one maintenance-diff review; then assess the first fresh-session native invocation when prerequisites exist, with connector mode supported when they do not.
 
-**Intent / decision held:** PR #190 ACCEPT SCOPED; all O190-R1–R4 blockers discharged. PR #191 remains ACCEPT SCOPED at `404bfb6`; base integration is separate. Full current decision: `records/atlas/ORIENT_PR190_RECEIVING_REVIEW_CHATGPT.md` on PR #192. No further reporter correction cycle requested. #188 still needs both blind-platform tests; #189 stays deferred.
-
-**Resume:** `chatgpt/orient-pr190-receiving-review`, PR #192, durable checkpoint `b5f13ea0cfe2453b5c6efb1a190ceab56dfb8bf4`. Command: `python3 -I evidence/atlas/tools/orient_receiving/check_orient_round3.py --tool <pinned-script-file> --out <temporary-output-directory>`; extraction/pins and expected exit 0 are in the review. The runner changes only two target pins in memory; prior tests/outputs remain unchanged. No review code is assumed merged.
-
-**Next:** after PI-approved integrations, verify the actual reporter/ref identities and freeze captured PR-response inputs with the answer key; assess fresh ChatGPT and Claude-project tests without hard-coding the former four/seven PR count. This returning session is not a blind test. Preserve both lanes when refreshing the stacked #191 base.
+*(Text supplied by the reviewer in PR #188 comment 6739968719 and installed unchanged by the owner at the reviewer's request.)*
 
 ## PI_PENDING — maintained by owner
 
-**Open with the PI (9 November 2026):**
-- PR #193 (this owner-lane update) → merge into `chatgpt/atlas-session-orientation-pilot`. No CLI block issued yet.
-- Project instruction: add the two-sentence entry rule (fetch `CONVENTIONS.md` and the study's entry note from GitHub; `records/` is not in project knowledge). Needed before the Claude blind test. Project settings are the PI's.
-- After the freeze: start the two blind sessions with the bootstrap message below, and keep the answer key until both are scored.
-- PR #188 → decision after the tests. #189 → deferred, no action.
+**Open with the PI (9 November 2026, after the pilot acceptance):**
+- This maintenance PR → merge into `main` after the reviewer's maintenance-diff review. CLI block to follow.
+- F4 smoke test: when convenient, start one fresh AI session that has `gh` and a clone, give it the BOOTSTRAP message plus "run the reporter and paste its output"; the owner files the result.
+- #113/#114: no PI action until the readback above is recorded.
+- CONVENTIONS §9 generalization: PI decision, not requested yet; each owner would choose one entry path and redirect older entry notes.
 
 The owner records later PI requests and issued CLI blocks here with their exact source.
 
-Update intent after meaningful decisions or resumable work checkpoints, not each PR-state change. Keep immutable evidence elsewhere; unknown uncommitted work stays unknown. Before wider rollout, each owner selects one entry path and explicitly supersedes or redirects older entry notes.
+Checkpoint triggers: a decision, a counterexample or new result, a rejected approach, a completed long computation, a blocker, or imminent context loss — not message counts and not every PR-state change. A pushed commit on an authorized co-owner branch with a discoverable PR is durable but unadopted. Keep detail in the owner's records; this note links to them.
