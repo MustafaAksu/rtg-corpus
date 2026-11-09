@@ -6,11 +6,15 @@ governing file's hash at the tag and at main, commits after the tag on the study
 paths (matched by changed file paths, plus PRs that name a matched PR), and the study's pipe states. Nothing here is
 an adoption: a tag is reported with its release-record evidence, never as adopted by itself. The tool never writes to
 the repository, never checks out, merges, tags or edits pipe items. Every incomplete observation is reported as
-UNVERIFIED (missing permission, failed query, truncated page), never as "no work".
+UNVERIFIED (missing permission, failed query, truncated page, unreadable tree), never as "no work". The only file the
+tool writes is the optional --json report, and it refuses to replace an existing file unless --replace-json is given.
+Revision 2 (9 Nov 2026) answers the receiving review of PR #190 (records/atlas/ORIENT_PR190_RECEIVING_REVIEW_CHATGPT.md):
+field-level UNVERIFIED, exact version match for release records, safe tag ordering, renamed paths, PR URLs, an
+order-independent dependency closure, and the protected JSON destination.
 
 usage (repository root):
   python3 -I tools/orient.py ATLAS                       # built-in study profile
-  python3 -I tools/orient.py KEY --tag-prefix P --file F --paths a/ b/ [--record-glob G] [--json out.json]
+  python3 -I tools/orient.py KEY --tag-prefix P --file F --paths a/ b/ [--record-glob G] [--json out.json [--replace-json]]
 Run `git fetch origin --tags` first; the report states the fetch freshness it could observe.
 """
 from __future__ import annotations
@@ -37,7 +41,10 @@ def gh_pages(path):
         sep = '&' if '?' in path else '?'
         r = sh('gh', 'api', f'{path}{sep}per_page=100&page={page}', ok=False)
         if r is None: return None
-        batch = json.loads(r); out += batch
+        try: batch = json.loads(r)
+        except ValueError as e: UNV.append(f'{path}: response is not JSON ({e})'); return None
+        if not isinstance(batch, list): UNV.append(f'{path}: unexpected response shape'); return None
+        out += batch
         if len(batch) < 100: return out
         page += 1
         if page > 20: UNV.append(f'pagination stopped at 20 pages for {path}'); return out
@@ -48,11 +55,14 @@ def sha_at(ref, path):
     import hashlib; return hashlib.sha256(data.stdout).hexdigest()
 
 def version_key(tag, prefix):
-    return [int(x) if x.isdigit() else x for x in re.split(r'[.\-]', tag[len(prefix):])]
+    # numeric parts sort before textual ones; mixed release/candidate tags (v0.10.1, v0.10-r1) never raise
+    return [(0, int(x)) if x.isdigit() else (1, x) for x in re.split(r'[.\-]', tag[len(prefix):]) if x]
+
+PR_REF = re.compile(r'(?:(?<![\w/])#|github\.com/' + re.escape(REPO) + r'/pull/)(\d+)\b')
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('key'); ap.add_argument('--tag-prefix'); ap.add_argument('--file')
-    ap.add_argument('--paths', nargs='*'); ap.add_argument('--record-glob'); ap.add_argument('--json')
+    ap.add_argument('--paths', nargs='*'); ap.add_argument('--record-glob'); ap.add_argument('--json'); ap.add_argument('--replace-json', action='store_true')
     a = ap.parse_args(); p = dict(PROFILES.get(a.key, {}))
     for k in ('tag_prefix', 'file', 'paths', 'record_glob'):
         if getattr(a, k) is not None: p[k] = getattr(a, k)
@@ -66,6 +76,8 @@ def main():
     remote_main = remote.split()[0] if remote else None
     rep['refs'] = dict(local_origin_main=local_main, remote_main=remote_main,
                        local_is_current=(local_main == remote_main) if (local_main and remote_main) else None)
+    if not remote_main: UNV.append('remote main ref not observed; freshness UNVERIFIED')
+    if not local_main: UNV.append('local origin/main not readable')
     if remote_main and local_main and remote_main != local_main: UNV.append('local origin/main is behind the remote; run git fetch origin --tags')
 
     # governing tag with its release-record evidence
@@ -84,12 +96,18 @@ def main():
             files = (sh('git', 'ls-tree', '-r', '--name-only', 'origin/main', ok=False) or '').split('\n')
             recs = [f for f in files if fnmatch.fnmatch(f, p['record_glob'])]
             ver = tag[len(p['tag_prefix']):]
-            hits = [f for f in recs if ver.replace('.', '_') in f or f'v{ver}' in f]
+            exact = re.compile(r'(?<![0-9])v?' + r'[._]'.join(re.escape(x) for x in ver.split('.')) + r'(?![0-9])')
+            hits = [f for f in recs if exact.search(f.rsplit('/', 1)[-1])]
             g['release_record'] = hits or None
+            if len(hits) > 1: UNV.append(f'{len(hits)} release records match {tag}; identity ambiguous')
             if hits:
-                txt = sh('git', 'show', f'origin/main:{hits[0]}', ok=False) or ''
-                m = re.search(r'\*\*Status:\*\*\s*([^\n]+)', txt); g['release_record_status_line'] = m.group(1)[:160] if m else 'UNVERIFIED: no Status line'
-                g['release_record_names_tag_hash'] = bool(g['file_sha256_at_tag'] and g['file_sha256_at_tag'] in txt)
+                txt = sh('git', 'show', f'origin/main:{hits[0]}', ok=False)
+                if txt is None: g['release_record_status_line'] = None; g['release_record_names_tag_hash'] = None
+                else:
+                    m = re.search(r'\*\*Status:\*\*\s*([^\n]+)', txt); g['release_record_status_line'] = m.group(1)[:160] if m else None
+                    if not m: UNV.append(f'{hits[0]}: no Status line; adoption state UNVERIFIED')
+                    g['release_record_names_tag_hash'] = bool(g['file_sha256_at_tag'] and g['file_sha256_at_tag'] in txt)
+                    if not g['release_record_names_tag_hash']: UNV.append(f'{hits[0]} does not name the file hash at {tag}; identity UNVERIFIED')
             else: UNV.append(f'no release record matching {p["record_glob"]} for {tag}; adoption UNVERIFIED')
         ahead = sh('git', 'log', '--format=%h %s', f'{g["target"]}..origin/main', '--', *p['paths'], ok=False) if g.get('target') else None
         g['commits_after_tag_on_study_paths'] = ahead.split('\n') if ahead else ([] if ahead == '' else None)
@@ -104,17 +122,25 @@ def main():
         for pr in prs:
             files = gh_pages(f'repos/{REPO}/pulls/{pr["number"]}/files')
             if files is None: UNV.append(f'PR #{pr["number"]} file list unavailable'); continue
-            hit = sorted({f['filename'] for f in files if any(f['filename'].startswith(x) for x in p['paths'])})
+            names = {f.get('filename') for f in files} | {f.get('previous_filename') for f in files}   # renamed-away paths count
+            hit = sorted(n for n in names if n and any(n.startswith(x) for x in p['paths']))
             if hit: matched[pr['number']] = dict(number=pr['number'], branch=pr['head']['ref'], base=pr['base']['ref'], draft=pr['draft'], head=pr['head']['sha'][:12], title=pr['title'], files=hit[:8], files_total=len(hit), via='changed paths')
-        for pr in prs:
-            if pr['number'] in matched: continue
-            refs = {int(n) for n in re.findall(r'#(\d+)', (pr['title'] or '') + ' ' + (pr['body'] or ''))}
-            if refs & set(matched): matched[pr['number']] = dict(number=pr['number'], branch=pr['head']['ref'], base=pr['base']['ref'], draft=pr['draft'], head=pr['head']['sha'][:12], title=pr['title'], via=f'names matched PR(s) {sorted(refs & set(matched))}')
+        refs = {pr['number']: {int(n) for n in PR_REF.findall((pr['title'] or '') + ' ' + (pr['body'] or ''))} - {pr['number']} for pr in prs}
+        changed = True   # transitive closure over explicit references to matched PRs; a fixpoint, so independent of API order
+        while changed:
+            changed = False
+            for pr in prs:
+                if pr['number'] in matched: continue
+                dep = refs[pr['number']] & set(matched)
+                if dep:
+                    matched[pr['number']] = dict(number=pr['number'], branch=pr['head']['ref'], base=pr['base']['ref'], draft=pr['draft'], head=pr['head']['sha'][:12], title=pr['title'], via=f'names matched PR(s) {sorted(dep)}'); changed = True
         rep['open_prs'] = dict(scanned=len(prs), matched=[matched[k] for k in sorted(matched)])
 
     # pipes
-    files = (sh('git', 'ls-tree', '-r', '--name-only', 'origin/main', 'pipes/', ok=False) or '').split('\n')
+    tree = sh('git', 'ls-tree', '-r', '--name-only', 'origin/main', 'pipes/', ok=False)
+    files = tree.split('\n') if tree is not None else []
     inbox, outbound, items = Counter(), Counter(), []
+    if tree is None: UNV.append('pipes/ tree not readable at origin/main; pipe states UNVERIFIED')
     for f in files:
         if not re.match(r'pipes/[A-Z0-9]+/2\d+.*\.md$', f): continue
         t = sh('git', 'show', f'origin/main:{f}', ok=False) or ''
@@ -122,7 +148,7 @@ def main():
         if not (st and frm): UNV.append(f'{f}: front matter unreadable'); continue
         if f.startswith(f'pipes/{a.key}/'): inbox[st.group(1)] += 1; (st.group(1) != 'closed') and items.append(f'{f} [{st.group(1)}]')
         if frm.group(1) == a.key and st.group(1) != 'closed': outbound[f'{f.split("/")[1]}:{st.group(1)}'] += 1; items.append(f'{f} [{st.group(1)}, outbound]')
-    rep['pipes'] = dict(inbox=dict(inbox), outbound_not_closed=dict(outbound), not_closed_items=items)
+    rep['pipes'] = dict(inbox=dict(inbox), outbound_not_closed=dict(outbound), not_closed_items=items) if tree is not None else dict(inbox=None, outbound_not_closed=None, not_closed_items=None)
     rep['status'] = 'PARTIAL/UNVERIFIED' if UNV else 'COMPLETE (observations only; no adoption inferred)'
 
     # report
@@ -138,9 +164,13 @@ def main():
         for m in rep['open_prs']['matched']:
             extra = f" {m['files_total']} files, e.g. {', '.join(m['files'][:3])}" if 'files' in m else ''
             print(f"    #{m['number']} {m['branch']} -> {m['base']} ({'draft' if m['draft'] else 'ready'}, head {m['head']}) via {m['via']}:{extra}")
-    print(f"- pipes/{a.key}/ inbox: {rep['pipes']['inbox'] or 'none'}; outbound not closed: {rep['pipes']['outbound_not_closed'] or 'none'}" + ''.join(f'\n    {x}' for x in items))
+    if tree is None: print(f'- pipes/{a.key}/: UNVERIFIED (tree not readable)')
+    else: print(f"- pipes/{a.key}/ inbox: {rep['pipes']['inbox'] or 'none'}; outbound not closed: {rep['pipes']['outbound_not_closed'] or 'none'}" + ''.join(f'\n    {x}' for x in items))
     if UNV: print('- UNVERIFIED:' + ''.join(f'\n    {u}' for u in UNV))
-    if a.json: open(a.json, 'w', encoding='utf-8').write(json.dumps(rep, ensure_ascii=False, indent=1) + '\n')
+    if a.json:
+        import os
+        if os.path.exists(a.json) and not a.replace_json: print(f'- JSON not written: {a.json} exists (pass --replace-json to replace a report file you own)')
+        else: open(a.json, 'w', encoding='utf-8').write(json.dumps(rep, ensure_ascii=False, indent=1) + '\n')
 
 if __name__ == '__main__':
     main()
