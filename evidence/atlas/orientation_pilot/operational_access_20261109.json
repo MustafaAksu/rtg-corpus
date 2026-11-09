@@ -1,0 +1,38 @@
+{
+  "record_kind": "SESSION operational capability probe, not a blind test or full reporter run",
+  "observed_at_utc": "2026-11-09T12:00:10.917387+00:00",
+  "python_version": "3.13.5",
+  "executables": {
+    "python3": "/opt/pyvenv/bin/python3",
+    "git": "/usr/bin/git",
+    "gh": null
+  },
+  "native_github_read": {
+    "command": ["git", "ls-remote", "https://github.com/MustafaAksu/rtg-corpus.git", "refs/heads/main"],
+    "exit_code": 128,
+    "stdout": "",
+    "stderr": "fatal: unable to access 'https://github.com/MustafaAksu/rtg-corpus.git/': Could not resolve host: github.com\n",
+    "timed_out": false
+  },
+  "connector_github_read": {
+    "result": "SUCCESS",
+    "source_ref": "e6f28b02096fc19e1ebe376730b3b0e963898b69",
+    "source_path": "evidence/atlas/orientation_pilot/ANSWER_KEY_FROZEN_20261109.md",
+    "note": "Via sanctioned GitHub connector, not via this subprocess/Python network"
+  },
+  "connector_to_local_hash": {
+    "method": "Exact UTF-8 content transferred from connector response; Python hashlib recomputation; checked Git blob binds the transferred bytes to the connector object",
+    "bytes": 6023,
+    "sha256": "b1b44898e20abfe7d247c7af4d3b6906ca5c5a73b8b2118f63dca2898c2ef2e4",
+    "git_blob": "e878d9bf433cc89c64d4fe7e7dc48f533f1d9e88",
+    "expected_sha256": "b1b44898e20abfe7d247c7af4d3b6906ca5c5a73b8b2118f63dca2898c2ef2e4",
+    "expected_git_blob": "e878d9bf433cc89c64d4fe7e7dc48f533f1d9e88",
+    "match": true
+  },
+  "execution_mode": "connector-assisted local hashing",
+  "orient_native_run": "NOT_RUN: no gh executable and direct GitHub DNS failed; no claim of native reporter coverage",
+  "permissions_changed": false,
+  "repository_source_changed": false,
+  "platform_memory_enabled": false,
+  "historical_claude_denial": "SOURCE_REPORTED; exact denied command and raw permission error unavailable in submitted transcripts"
+}
