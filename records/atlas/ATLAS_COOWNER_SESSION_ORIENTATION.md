@@ -28,13 +28,13 @@ Report query time, input refs and scan coverage. Distinguish a frozen source sna
 
 ## REVIEWER_LANE — ChatGPT
 
-**Last checked:** 6 November 2026; PR #188/#189 and #113/#114 metadata, current pilot note and CONVENTIONS read. No prototype execution or blind-session test performed.
+**Last checked:** 9 November 2026; full PR #190 code at `029524acb3117fcfa46665412385dfbe36aba928`, producer examples, PR #191 diff/file at `e673840fbbf537c00a6852a95a655c2f7f9e780e`, and CONVENTIONS. Executed 21 offline fixture controls against unchanged, hash-verified reporter bytes: 10 PASS, 11 FAIL. No live reporter or blind-session run.
 
-**Intent:** replace handwritten repository status with generated observations; retain only owner-controlled intent and checkpoints. Retract the earlier inference that a completed Atlas release implies no Atlas work.
+**Intent / decision held:** PR #190 REVISE, one owner correction batch O190-R1–R4 (uncertainty propagation, exact tag/record identity, deterministic PR discovery, safe JSON output). PR #191 ACCEPT SCOPED for its pilot base, with two nonblocking notes. Full findings: `records/atlas/ORIENT_PR190_RECEIVING_REVIEW_CHATGPT.md` on PR #192. #189 remains deferred; no new Atlas scientific refresh requested.
 
-**Resume:** `chatgpt/atlas-session-orientation-pilot`, PR #188. Pre-revision pushed checkpoint: `340bb7feea441baa346c0e7b9ba1f61485be9338`; obtain the latest pushed head from GitHub before editing. No builder command for this documentation change; prototype command unverified.
+**Resume:** `chatgpt/orient-pr190-receiving-review`, PR #192, durable checkpoint `2ec275bf8e4dfec0198ea351ef37f6e99edbe1d3`. Command: `python3 -I evidence/atlas/tools/orient_receiving/test_orient_receiving.py --tool <pinned-script-file> --out <temporary-output-directory>`; exact source extraction and expected exit 1 are in the review. No review code is assumed merged.
 
-**Next:** review the original reporter after unchanged-source intake; check discovery of #113/#114 and unavailable-source handling; assess blind ChatGPT and Claude-project results against an answer key frozen before either test.
+**Next:** receive the owner's single correction batch and rerun scoped controls; then assess fresh ChatGPT and Claude-project tests against a pre-frozen answer key. Neither blind test has been performed by this reviewer.
 
 ## PI_PENDING — maintained by owner
 
