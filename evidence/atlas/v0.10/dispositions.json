@@ -1,0 +1,184 @@
+[
+ {
+  "key": "RECOG.R-A1",
+  "disposition": "retired",
+  "reason": "RECOG v0.3.27 (D5B, R1, C7; release record records/recog/RECOG_v0_3_27_RELEASE_RECORD.md): the (D5) [assuming:] is discharged at the six A1c sites by DYAD-THM-LPHASE-ROWA-BRIDGE and DYAD-THM-OPEN3-SPIRAL-REM (imported at dyad-v6.4.23, c′_Q=0.36916, owner rerun of the eight A1c certificates) and RECOG-ALG-A1C-JET-REMAINDER-BOUNDS; RECOG-THM-R9-SHARPENED-ROWS-C7 imports DYAD-THM-NF-REM-C7-SHARP; grades unchanged. Pipe items closed by the receiver (pipes/RECOG/20261030-DYAD-v6-4-23-adopted.md).",
+  "previous_sha256": "e6d77b389d758de21f1d85e3239a4bb6ad33f02284c821e049c4109bcf56cdb9",
+  "current_sha256": null
+ },
+ {
+  "key": "PROG.G8",
+  "disposition": "retired",
+  "reason": "Programme v1.4 §8.2 (programme-v1.4): κ_f row added (GEN §6.8) and the class-C row corrected per E-P13-1 (OFN §11.4 and RRF §6.2a record γ ≡ κ as the class-C parameter convention); pipes/PROG/20261026-GEN-kappa-table-kappa-f-row-and-e-p13-1.md closed.",
+  "previous_sha256": "3e50a18c0d73927092e7df8bf75e6b0d3faa9422c32b84932f4dbb7dec82c4a4",
+  "current_sha256": null
+ },
+ {
+  "key": "PROG.G9",
+  "disposition": "retired",
+  "reason": "Programme v1.4 §7.2–§7.3: IF07 carries Genesis's pin v1.7, IF11 stays OPEN M's own pin v1.6 (recorded, not set by the Programme), and CN-05 is received and accepted with no action; pipes/PROG/20261103-TRIAD-v1-7-adopted.md closed.",
+  "previous_sha256": "a2517c8c05d081256e7cf5869d2c694b4b58068f80b064a4bd99bfc8e6cf86a1",
+  "current_sha256": null
+ },
+ {
+  "key": "F31",
+  "disposition": "retired",
+  "reason": "GEN v2.10 (G6): T-6s and T-6t imported at [ALG] at triad-v1.7 §§6.15–6.16; T-6u imported at [ALG] at §6.17 with the separate Genesis [CAND] reading GEN-CAND-APEX-T6U; the proposed OPEN-M interface use of T-6s stays [CAND] (round-2 R1). The receiver graded its own use; nothing below the owner grade remains.",
+  "previous_sha256": "77c73610d44f7c9341b3b26ca93b3cf4ae57c0cfcbe67855fe74910158f4578d",
+  "current_sha256": null
+ },
+ {
+  "key": "TRIAD.T12",
+  "disposition": "retired",
+  "reason": "Co-key of F31; retired with it.",
+  "previous_sha256": "77c73610d44f7c9341b3b26ca93b3cf4ae57c0cfcbe67855fe74910158f4578d",
+  "current_sha256": null
+ },
+ {
+  "key": "F18",
+  "disposition": "retired",
+  "reason": "Owner reading, both Triadic co-owners (pipes/ATLAS/20261103-TRIAD-atlas-readings-y6-f18.md; records/triad/TRIAD_v1_8_FIRST_PASS_ADVISORY.md §3): TRIAD v1.7 §7.2 cites RER-TRIAD-BIRTH-GRAPH-INVOLUTION as a reference-only noncanonical formal instance; the p=4 remainder bounds (§6.15; §7.4 CN-02) are stated conditionally in Triadic and not derived from RER — the citation is not load-bearing. The RER node keeps the typed edge.",
+  "previous_sha256": "f30aaa4fd870a46c2f041ad3d52dc31f647169643348a695481dad2e6bde8639",
+  "current_sha256": null
+ },
+ {
+  "key": "TRIAD.T10",
+  "disposition": "retired",
+  "reason": "Co-key of F18; retired with it.",
+  "previous_sha256": "f30aaa4fd870a46c2f041ad3d52dc31f647169643348a695481dad2e6bde8639",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-L6",
+  "disposition": "retired",
+  "reason": "GEN v2.10 (G1): §6.4 states the L=diag(A,A,A) application of NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE as its own [ALG] line (every quadratic F₂, cross-component terms included; [indep-INB] gate G1; a new proof, not a recovery of GEN-ART-G2-CHRONO, which stays [custody-A]); §7 imports the RID at numgen-v1.21; the offer pipes/GEN/20261026-NUMGEN-cyclic-average-route-to-g2-zero.md is closed. The atlas-derived link became owner text.",
+  "previous_sha256": "7b4a65fb3f8a51fdd9b0bfd6d25bd6cc6b31dd14ded6892fe321aa8d875e5ab6",
+  "current_sha256": null
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "8655eb1c8327b6bb0d6db5a5f1b220544aebe370a626092bdcf3d2d85a2db42e",
+  "current_sha256": "0dc93e12f8edbbd2c623e2c4b5cbc390db5fbfc99ca490bd9fb2fd29249fe0db"
+ },
+ {
+  "key": "F13",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "d1a3cfd0e5e2ad8a98ca4ee9d894583bcd107471ea79412f10613f618adde61e",
+  "current_sha256": "b8c7f6dbc34478a4c5155d0dc84cb81bf2e4c6c6a654d011eabf96079be14630"
+ },
+ {
+  "key": "F14",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "e6663a2b97719b07fc36a059371dddd0ef388bd9dfcaa0777699f2a414e87c7b",
+  "current_sha256": "c7cffbb3fb91c7b3d85ef0f578bba0c4f6bef33098fba2802ebb3cc81c4be70b"
+ },
+ {
+  "key": "F30",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "7a6121a007114176c75482c3c23b35961d8dd8beef17800ee970dab7a61fb3c9",
+  "current_sha256": "6affb43b7660d00e3c342ea24f137a80f65f41fedddcff019ce91f7cce06bf3b"
+ },
+ {
+  "key": "GEN.D3",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.10 sources",
+  "previous_sha256": "daeb11c28639bd52f0d1a435444368ba4226997afbf1bd6131269efa1e6ecc99",
+  "current_sha256": "daeb11c28639bd52f0d1a435444368ba4226997afbf1bd6131269efa1e6ecc99"
+ },
+ {
+  "key": "GEN.D6",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "f0b1b7e1c81e31fa50eb49e81d6910869c3920757efade833124aae1bd5d4735",
+  "current_sha256": "0ec86feb535de4d3df48fd565534709c86d92fce54da9d11d8424febd635e9b5"
+ },
+ {
+  "key": "GEN.D7",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "a045a7b985d6189d53d8dcd0468638a5ab9ffb8460c4428447b435f54d551a94",
+  "current_sha256": "4b292bc48f747333f8c380b3ecc8fcd6d3c6e418351f56156fdaa0a69756c313"
+ },
+ {
+  "key": "GEN.D17",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "8528f226a4344bdba736ad40675831326269ea56d54325814f52553c03c91025",
+  "current_sha256": "8f457c939f56c2bd2450c39ba38d133931b011b3a19c6dd2b21ac004b34d1c70"
+ },
+ {
+  "key": "PROG.G5",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "56f59fe9bb41136b96e17f32be0ff117ef4a43c746c6441951f411fd0d3da90f",
+  "current_sha256": "376e74fd8b9a811d5e03758b73a52803e7498fded38f8cf0ba18954259d5bd58"
+ },
+ {
+  "key": "PROG.G6",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "8cd253834f5f6d4dac9ad2930c819d92ac3e1283dc70747b7125c3e56ac95596",
+  "current_sha256": "4c2523eb2a58c80a0ff5a80c8d6bd2616437e265e317b78c7566ca0de3979510"
+ },
+ {
+  "key": "OFN.O14",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "622ac5d6638027429b070060208c0ba992a2a8560a87bf580187ab1eaad12b5f",
+  "current_sha256": "3c502f641b38e76e9636fe327eae9013ae3ca147119306e28b4f34f94a1abedd"
+ },
+ {
+  "key": "DYAD.X1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "e7e8bcf513f28e9abe4d3fd0e32c972b1c5655fbe70d0f0c035e9814de77dd9f",
+  "current_sha256": "e8509af265182badc82a0d48f2d11d862e6021ddabfa2d99d49cf9143141edd2"
+ },
+ {
+  "key": "RECOG.R-L2",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "e0a09cd83e0872fe43c0f71b1d948b061c13f807cbb5e5991dc056e01a30a9ef",
+  "current_sha256": "161879ac6242db53fab4913076a4d8537a75ad36c672113d39b7864d60250f09"
+ },
+ {
+  "key": "AZ.A2",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "51fa3b01d8aef9ad204df7ba5b00ba28b45d33aec2de1d38ff46e1cb007d73fe",
+  "current_sha256": "a938d70a1048b33d774067431cf9ed14ba5a123ef43c28a36a0ae034a306942c"
+ },
+ {
+  "key": "LEGACY.Y6",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "7cf9acb97fb50b2eedef04fdb268eeb436dbb15f31e6736850ed8ff9b3de8ca7",
+  "current_sha256": "fc04c185778e904c0790a93ba443f45566353420ccff2a1ccd49b3d07585fd5f"
+ },
+ {
+  "key": "PREL.P1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "e06735f92b4f2e27dbce21b8d841eacfe6dbfd83500e59d6eac3b8165ca459de",
+  "current_sha256": "9ee7ae5b2659c4327761d9f88dc9ec804142a5fae83eb4838b8395013505b8ad"
+ },
+ {
+  "key": "F1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "9885dcef52993fc829ee14d53d094e6cc0a9ba81f032cceb462cbda8ab363afa",
+  "current_sha256": "cfc478d058d8469c6892630db839b294c13413c39aa767d04c5c7a45fb5e3fb5"
+ },
+ {
+  "key": "F11",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.10 sources",
+  "previous_sha256": "dbd512aa220df890eb0706059355b12c2468a558ee4381e7ff704a141f3efa30",
+  "current_sha256": "dbd512aa220df890eb0706059355b12c2468a558ee4381e7ff704a141f3efa30"
+ }
+]

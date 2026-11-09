@@ -1,0 +1,44 @@
+PASS  C0 BASE        — 1b8358b3e1d3
+PASS  C1 BUILD       — 81 edits; candidate d55dc3042fdc
+PASS  C2 REVERSE     — base recovered
+PASS  C3 OPEN RIDS   — 5 RIDs, 5 ACTIVE
+PASS  C4 GUARDS      — SG-PROG-1..4 byte-identical
+PASS  C5 ANCHORS     — 17 anchors; missing []
+PASS  C6 TAGS        — base {'DEF': 10, 'HYP': 5, 'COR': 3, 'ALG': 1, 'THM': 1, 'HEUR': 1} cand {'DEF': 10, 'HYP': 5, 'COR': 3, 'ALG': 1, 'THM': 1, 'HEUR': 1}
+PASS  C7 INVENTORY   — 19 rows; all at latest tag; hashes = BASELINE
+PASS  C8 IF PINS     — 49 pins; each occurs in the named consumer at its governing tag
+PASS  C9 SECTIONS    — new ['# RTG_PROGRAMME_OVERVIEW_v1.4', '### v1.4 — 4 November 2026 — DRAFT (candidate; not adopted)'] gone ['# RTG_PROGRAMME_OVERVIEW_v1.3']
+PASS  C10 NO SCIENCE — numbers []
+PASS  C11 FILENAMES  — versioned filenames in live text: []
+PASS  C12 METHODOLOGY — no stale methodology pointer
+PASS  C13 APPENDIX B — byte-identical
+PASS  C14 STALE      — no superseded tag in §6.1-6.5; entry headings at latest tags
+PASS  C15 RECEIVERS  — P0 True P2B True κ_f True class-C True CN-05 True IF07 True
+PASS  C16 IF IDS     — 38 rows
+PASS  C17 SOURCE TYPE — OFN imports from ['DYAD', 'GEN', 'RECOG', 'TDRG']; Programme typing agrees
+RESULT: PASS
+
+== negative controls ==
+ok   K1 undeclared edit                             expect FAIL at C1 BUILD; failed: ['C1 BUILD', 'C2 REVERSE']
+ok   K2 OPEN status changed (logged)                expect FAIL at C3 OPEN RIDS; failed: ['C3 OPEN RIDS']
+ok   K3 guard text edited (logged)                  expect FAIL at C4 GUARDS; failed: ['C4 GUARDS']
+ok   K4 anchor removed (logged)                     expect FAIL at C5 ANCHORS; failed: ['C2 REVERSE', 'C5 ANCHORS']
+ok   K5 THM tag introduced (logged)                 expect FAIL at C6 TAGS; failed: ['C6 TAGS']
+ok   K6 inventory edition wrong (logged)            expect FAIL at C7 INVENTORY; failed: ['C7 INVENTORY']
+ok   K7 inventory at superseded tag (logged)        expect FAIL at C7 INVENTORY; failed: ['C14 STALE', 'C7 INVENTORY']
+ok   K8 invented consumer pin (logged)              expect FAIL at C8 IF PINS; failed: ['C8 IF PINS']
+ok   K9 pin read from the wrong consumer (logged)   expect FAIL at C8 IF PINS; failed: ['C8 IF PINS']
+ok   K10 science restated in §6 (logged)            expect FAIL at C10 NO SCIENCE; failed: ['C10 NO SCIENCE']
+ok   K11 versioned filename in live text (logged)   expect FAIL at C11 FILENAMES; failed: ['C11 FILENAMES']
+ok   K12 stale methodology pointer (logged)         expect FAIL at C12 METHODOLOGY; failed: ['C12 METHODOLOGY']
+ok   K13 Appendix B edited (logged)                 expect FAIL at C13 APPENDIX B; failed: ['C13 APPENDIX B']
+ok   K14 stale tag in a §6 entry (logged)           expect FAIL at C14 STALE; failed: ['C14 STALE']
+ok   K15 E-P13-1 wording restored (logged)          expect FAIL at C15 RECEIVERS; failed: ['C15 RECEIVERS']
+ok   K16 CN-05 receipt dropped (logged)             expect FAIL at C15 RECEIVERS; failed: ['C15 RECEIVERS', 'C2 REVERSE']
+ok   K17 IF row duplicated (logged)                 expect FAIL at C16 IF IDS; failed: ['C16 IF IDS']
+ok   K19 IF24 typed as import again (logged)        expect FAIL at C17 SOURCE TYPE; failed: ['C17 SOURCE TYPE']
+ok   K20 TRIAD drawn as import into OFN (logged)    expect FAIL at C17 SOURCE TYPE; failed: ['C17 SOURCE TYPE']
+ok   K21 OFN entry lists NUMGEN as import (logged)  expect FAIL at C17 SOURCE TYPE; failed: ['C17 SOURCE TYPE']
+ok   K22 IF32 split drops TDRG (logged)             expect FAIL at C17 SOURCE TYPE; failed: ['C17 SOURCE TYPE']
+ok   K18 heading renamed (logged)                   expect FAIL at C9 SECTIONS; failed: ['C9 SECTIONS']
+CONTROLS: 22/22 caught

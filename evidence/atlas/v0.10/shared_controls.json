@@ -1,0 +1,92 @@
+[
+ {
+  "name": "NC1 omitted claim, RID kept in L5",
+  "item": "DYAD-ALG-A1A2-LIEGAUGE",
+  "as_expected": true
+ },
+ {
+  "name": "NC1b omitted claim, RID kept as dependency edge",
+  "item": "DYAD-ALG-A1A2-LIEGAUGE",
+  "as_expected": true
+ },
+ {
+  "name": "NC2 wrong owner",
+  "item": "GEN-THM-SMOOTH-EMBEDDING",
+  "as_expected": true
+ },
+ {
+  "name": "NC3 lost qualifier",
+  "item": "DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES",
+  "as_expected": true
+ },
+ {
+  "name": "NC3b \"unconditional\" does not satisfy \"conditional\"",
+  "item": "DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES",
+  "as_expected": true
+ },
+ {
+  "name": "NC4 invalid artifact target",
+  "item": "DYAD-ART-NO-SUCH-CERTIFICATE",
+  "as_expected": true
+ },
+ {
+  "name": "NC5 missing artifact link",
+  "item": "no_such_owner_script_zz9.py",
+  "as_expected": true
+ },
+ {
+  "name": "NC6a fabricated RID only in L5 is not resolved",
+  "item": "DYAD-THM-FAKE-ONLY-ZZ9",
+  "as_expected": true
+ },
+ {
+  "name": "NC6b fabricated RID in a node fails",
+  "item": "DYAD-THM-FAKE-ONLY-ZZ9",
+  "as_expected": true
+ },
+ {
+  "name": "NC7 source table mismatch",
+  "item": "DYAD",
+  "as_expected": true
+ },
+ {
+  "name": "NC8 retired L5 key referenced",
+  "item": "OFN.O2",
+  "as_expected": true
+ },
+ {
+  "name": "NC9 advisory key in a node",
+  "item": "FC-DYAD-99",
+  "as_expected": true
+ },
+ {
+  "name": "RV-N1 owner-denied id, diagnostic use -> DOCUMENTED-UNRESOLVED",
+  "item": "DYAD-CAND-PHISTAR-ENTRY-PHASE",
+  "as_expected": true
+ },
+ {
+  "name": "RV-N1b owner-denied id as a node -> not PASS",
+  "item": "DYAD-CAND-PHISTAR-ENTRY-PHASE",
+  "as_expected": true
+ },
+ {
+  "name": "RV-P1 explicit claim home -> PASS",
+  "item": "DYAD-ALG-RAW-ANGULAR-MEAN",
+  "as_expected": true
+ },
+ {
+  "name": "RV-N2 bare dependency is not coverage",
+  "item": "DYAD-ALG-RAW-ANGULAR-MEAN",
+  "as_expected": true
+ },
+ {
+  "name": "RV-N2b L0 mention is not coverage",
+  "item": "DYAD-ALG-RAW-ANGULAR-MEAN",
+  "as_expected": true
+ },
+ {
+  "name": "RV-N3 \"unconditional\" fails the conditional gate",
+  "item": "DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER",
+  "as_expected": true
+ }
+]

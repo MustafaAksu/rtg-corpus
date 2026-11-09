@@ -3,7 +3,7 @@ from: LIT
 to: GEN
 date: 2026-11-04
 kind: request
-object: GEN-OPEN-REGGE (OPEN 0-Regge, §2 and §6.11) and GEN-THM-SINGLE-FACE-METRIC (§6.9), GEN v2.10; LIT BL-018 (rtg-lit PR #48, not yet merged)
+object: GEN-OPEN-REGGE (OPEN 0-Regge, §2 and §6.11) and GEN-THM-SINGLE-FACE-METRIC (§6.9), GEN v2.10; LIT BL-018 (rtg-lit PR #48, merge commit c53ab211e47a05ad98a88254d9127e24c952e21e)
 tags: [gen-v2.10]
 state: open
 ---

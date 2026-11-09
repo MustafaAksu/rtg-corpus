@@ -1,0 +1,38 @@
+[
+ {
+  "section": "6.3c",
+  "basis": "section byte-identical gen-v2.9 -> gen-v2.10"
+ },
+ {
+  "section": "6.8",
+  "basis": "section byte-identical gen-v2.9 -> gen-v2.10"
+ },
+ {
+  "section": "6.6",
+  "basis": "quote present at gen-v2.10: This six-member set is a coarse closure ansatz"
+ },
+ {
+  "section": "6.3b",
+  "basis": "section byte-identical gen-v2.9 -> gen-v2.10"
+ },
+ {
+  "section": "7",
+  "basis": "quote present at gen-v2.10: v6.4.13 for the historical rows above"
+ },
+ {
+  "section": "6.2",
+  "basis": "section byte-identical gen-v2.9 -> gen-v2.10"
+ },
+ {
+  "section": "2",
+  "basis": "quote present at gen-v2.10: Specialization of `GEN-THM-DELTA-QC`"
+ },
+ {
+  "section": "6.6",
+  "basis": "quote present at gen-v2.10: This six-member set is a coarse closure ansatz"
+ },
+ {
+  "section": "8",
+  "basis": "quote present at gen-v2.10: the four-case maximum over the two reference policies and two typed readings"
+ }
+]

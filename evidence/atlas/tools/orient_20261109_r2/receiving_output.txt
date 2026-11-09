@@ -1,0 +1,22 @@
+P01: PASS — baseline known tag/hash, path matches and reference-only dependency; status=COMPLETE (observations only; no adoption inferred); exception=None
+P02: PASS — GitHub access denied => partial and null PR collection; status=PARTIAL/UNVERIFIED; exception=None
+P03: PASS — stale origin/main => partial; status=PARTIAL/UNVERIFIED; exception=None
+P04: PASS — unfetched remote tag => partial; status=PARTIAL/UNVERIFIED; exception=None
+P05: PASS — PR listing pagination reaches page 2; status=COMPLETE (observations only; no adoption inferred); exception=None
+P06: PASS — PR files pagination reaches matching file on page 2; status=COMPLETE (observations only; no adoption inferred); exception=None
+P07: PASS — pagination limit exposed rather than COMPLETE; status=PARTIAL/UNVERIFIED; exception=None
+P08: PASS — known missing release record => partial; status=PARTIAL/UNVERIFIED; exception=None
+P09: PASS — failed PR file list => partial; status=PARTIAL/UNVERIFIED; exception=None
+N01: PASS — unreadable pipe tree must not render empty/none; status=PARTIAL/UNVERIFIED; exception=None
+N02: PASS — release record without Status must mark result partial; status=PARTIAL/UNVERIFIED; exception=None
+N03: PASS — hash-inconsistent release record must flag uncertainty; status=PARTIAL/UNVERIFIED; exception=None
+N04: PASS — release record version matches exactly, not prefix v0.10 vs v0.100; status=PARTIAL/UNVERIFIED; exception=None
+N05: PASS — malformed successful GitHub JSON => structured partial, not crash; status=PARTIAL/UNVERIFIED; exception=None
+N06: PASS — mixed release and -rN candidate tags do not crash; status=PARTIAL/UNVERIFIED; exception=None
+N07: PASS — missing remote main ref => partial; status=PARTIAL/UNVERIFIED; exception=None
+N08: PASS — renamed-away Atlas file is a relevant changed path; status=COMPLETE (observations only; no adoption inferred); exception=None
+N09: PASS — explicit same-repository PR URL dependency is discovered; status=COMPLETE (observations only; no adoption inferred); exception=None
+N10: PASS — dependency closure independent of reverse order; status=COMPLETE (observations only; no adoption inferred); exception=None
+P10: PASS — dependency closure same graph in favorable order; status=COMPLETE (observations only; no adoption inferred); exception=None
+N11: PASS — JSON output cannot overwrite an existing scientific file; status=None; exception=None
+TOTAL: 21/21 contract checks pass; 0 fail
