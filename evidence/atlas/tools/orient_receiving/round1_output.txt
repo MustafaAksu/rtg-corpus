@@ -1,0 +1,22 @@
+P01: PASS — baseline known tag/hash, path matches and reference-only dependency; status=COMPLETE (observations only; no adoption inferred); exception=None
+P02: PASS — GitHub access denied => partial and null PR collection; status=PARTIAL/UNVERIFIED; exception=None
+P03: PASS — stale origin/main => partial; status=PARTIAL/UNVERIFIED; exception=None
+P04: PASS — unfetched remote tag => partial; status=PARTIAL/UNVERIFIED; exception=None
+P05: PASS — PR listing pagination reaches page 2; status=COMPLETE (observations only; no adoption inferred); exception=None
+P06: PASS — PR files pagination reaches matching file on page 2; status=COMPLETE (observations only; no adoption inferred); exception=None
+P07: PASS — pagination limit exposed rather than COMPLETE; status=PARTIAL/UNVERIFIED; exception=None
+P08: PASS — known missing release record => partial; status=PARTIAL/UNVERIFIED; exception=None
+P09: PASS — failed PR file list => partial; status=PARTIAL/UNVERIFIED; exception=None
+N01: FAIL — unreadable pipe tree must not render empty/none; status=PARTIAL/UNVERIFIED; exception=None
+N02: FAIL — release record without Status must mark result partial; status=COMPLETE (observations only; no adoption inferred); exception=None
+N03: FAIL — hash-inconsistent release record must flag uncertainty; status=COMPLETE (observations only; no adoption inferred); exception=None
+N04: FAIL — release record version matches exactly, not prefix v0.10 vs v0.100; status=COMPLETE (observations only; no adoption inferred); exception=None
+N05: FAIL — malformed successful GitHub JSON => structured partial, not crash; status=None; exception=JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+N06: FAIL — mixed release and -rN candidate tags do not crash; status=None; exception=TypeError: '<' not supported between instances of 'int' and 'str'
+N07: FAIL — missing remote main ref => partial; status=COMPLETE (observations only; no adoption inferred); exception=None
+N08: FAIL — renamed-away Atlas file is a relevant changed path; status=COMPLETE (observations only; no adoption inferred); exception=None
+N09: FAIL — explicit same-repository PR URL dependency is discovered; status=COMPLETE (observations only; no adoption inferred); exception=None
+N10: FAIL — dependency closure independent of reverse order; status=COMPLETE (observations only; no adoption inferred); exception=None
+P10: PASS — dependency closure same graph in favorable order; status=COMPLETE (observations only; no adoption inferred); exception=None
+N11: FAIL — JSON output cannot overwrite an existing scientific file; status=COMPLETE (observations only; no adoption inferred); exception=None
+TOTAL: 10/21 contract checks pass; 11 fail
