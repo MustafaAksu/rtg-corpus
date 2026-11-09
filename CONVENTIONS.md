@@ -81,7 +81,7 @@ The receiver decides, as for any item. Before presenting a mathematical statemen
 - **Grade.** The importing stream grades the result itself, e.g. `[MATH]` for established background (Methodology §8.4 local alias) or source-reported if its proof was not checked.
 - **Import Ledger.** The row uses the §4.3 format with the published citation in place of a source DSN:
   - `Source status:` the source's own claim status;
-  - `Verification:` "LIT `<LIT-ID>@<version>:<label>, rtg-lit `<commit>`: <events and their scope, e.g. external_checked/confirms via INF-008>; cited inputs not re-proved: <list>".
+  - `Verification:` "LIT `<LIT-ID>@<version>:<label>`, rtg-lit `<commit>`: <events and their scope, e.g. external_checked/confirms via INF-008>; cited inputs not re-proved: <list>".
 
   The rtg-lit commit is for traceability only. LIT's checks inform the stream's grading; they do not replace it.
 
