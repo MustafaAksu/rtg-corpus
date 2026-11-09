@@ -28,13 +28,13 @@ Report query time, input refs and scan coverage. Distinguish a frozen source sna
 
 ## REVIEWER_LANE — ChatGPT
 
-**Last checked:** 9 November 2026; complete reporter at PR #190 `6bb77302c25da830790f9971efaa2a068bf23aac`, prior requirements, producer round-2 README, PR #191 diff at `404bfb6`, and CONVENTIONS. Independently hash-verified unchanged reporter; executed original 21 controls: 21 PASS. Six bounded follow-ups: 2 PASS, 4 FAIL. No live reporter or blind-session run.
+**Last checked:** 9 November 2026; full reporter PR #190 `34e55078fcce6041169ee2cab624eef55600b202`, prior requirements and pinned runners, current PR #191/#192 metadata and CONVENTIONS. Independently verified reporter SHA-256 `dfbcb1da…cd0c` and Git blob; executed the unchanged 21 + 6 fixture contracts: 27/27 PASS, exit 0. No live reporter or blind-session run.
 
-**Intent / decision held:** PR #190 remains REVISE only for residual R1/R2/R4 (individual pipe-read completeness, full patch-version matching, dangling JSON symlink); R3 PASS. The old 21-test coverage gap is acknowledged. PR #191 ACCEPT SCOPED; both cleanup notes resolved. Full current findings: `records/atlas/ORIENT_PR190_RECEIVING_REVIEW_CHATGPT.md` on PR #192. #189 deferred; no Atlas science refresh requested.
+**Intent / decision held:** PR #190 ACCEPT SCOPED; all O190-R1–R4 blockers discharged. PR #191 remains ACCEPT SCOPED at `404bfb6`; base integration is separate. Full current decision: `records/atlas/ORIENT_PR190_RECEIVING_REVIEW_CHATGPT.md` on PR #192. No further reporter correction cycle requested. #188 still needs both blind-platform tests; #189 stays deferred.
 
-**Resume:** `chatgpt/orient-pr190-receiving-review`, PR #192, durable checkpoint `06adf9a7476b3059784556ee7191200c061ba4b6`. Command: `python3 -I evidence/atlas/tools/orient_receiving/check_orient_round2.py --tool <pinned-script-file> --out <temporary-output-directory>`; extraction/pins and expected exit 1 are in the review. Original harness and first-round evidence remain unchanged. No review code is assumed merged.
+**Resume:** `chatgpt/orient-pr190-receiving-review`, PR #192, durable checkpoint `b5f13ea0cfe2453b5c6efb1a190ceab56dfb8bf4`. Command: `python3 -I evidence/atlas/tools/orient_receiving/check_orient_round3.py --tool <pinned-script-file> --out <temporary-output-directory>`; extraction/pins and expected exit 0 are in the review. The runner changes only two target pins in memory; prior tests/outputs remain unchanged. No review code is assumed merged.
 
-**Next:** receive one small correction batch for those three residuals and rerun 21 + six controls; freeze final answer-key inputs only after reporter acceptance, then assess fresh ChatGPT and Claude-project tests. Neither blind test has been performed by this reviewer.
+**Next:** after PI-approved integrations, verify the actual reporter/ref identities and freeze captured PR-response inputs with the answer key; assess fresh ChatGPT and Claude-project tests without hard-coding the former four/seven PR count. This returning session is not a blind test. Preserve both lanes when refreshing the stacked #191 base.
 
 ## PI_PENDING — maintained by owner
 
