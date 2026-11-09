@@ -8,7 +8,7 @@ an adoption: a tag is reported with its release-record evidence, never as adopte
 the repository, never checks out, merges, tags or edits pipe items. Every incomplete observation is reported as
 UNVERIFIED (missing permission, failed query, truncated page, unreadable tree), never as "no work". The only file the
 tool writes is the optional --json report, and it refuses to replace an existing file unless --replace-json is given.
-Revision 2 (9 Nov 2026) answers the receiving review of PR #190 (records/atlas/ORIENT_PR190_RECEIVING_REVIEW_CHATGPT.md):
+Revisions 2–3 (9 Nov 2026) answer the receiving review of PR #190 (records/atlas/ORIENT_PR190_RECEIVING_REVIEW_CHATGPT.md):
 field-level UNVERIFIED, exact version match for release records, safe tag ordering, renamed paths, PR URLs, an
 order-independent dependency closure, and the protected JSON destination.
 
@@ -96,8 +96,9 @@ def main():
             files = (sh('git', 'ls-tree', '-r', '--name-only', 'origin/main', ok=False) or '').split('\n')
             recs = [f for f in files if fnmatch.fnmatch(f, p['record_glob'])]
             ver = tag[len(p['tag_prefix']):]
-            exact = re.compile(r'(?<![0-9])v?' + r'[._]'.join(re.escape(x) for x in ver.split('.')) + r'(?![0-9])')
-            hits = [f for f in recs if exact.search(f.rsplit('/', 1)[-1])]
+            # the whole version token of the file name must equal the tag version: v0.10.1 is not v0.10, v0_10 is
+            def tokens(name): return {m.replace('_', '.') for m in re.findall(r'(?<![0-9A-Za-z])v(\d+(?:[._]\d+)*)(?![0-9])', name)}
+            hits = [f for f in recs if ver in tokens(f.rsplit('/', 1)[-1])]
             g['release_record'] = hits or None
             if len(hits) > 1: UNV.append(f'{len(hits)} release records match {tag}; identity ambiguous')
             if hits:
@@ -139,16 +140,17 @@ def main():
     # pipes
     tree = sh('git', 'ls-tree', '-r', '--name-only', 'origin/main', 'pipes/', ok=False)
     files = tree.split('\n') if tree is not None else []
-    inbox, outbound, items = Counter(), Counter(), []
+    inbox, outbound, items, unread = Counter(), Counter(), [], []
     if tree is None: UNV.append('pipes/ tree not readable at origin/main; pipe states UNVERIFIED')
     for f in files:
         if not re.match(r'pipes/[A-Z0-9]+/2\d+.*\.md$', f): continue
-        t = sh('git', 'show', f'origin/main:{f}', ok=False) or ''
-        st = re.search(r'^state:\s*(\S+)', t, re.M); frm = re.search(r'^from:\s*(\S+)', t, re.M)
-        if not (st and frm): UNV.append(f'{f}: front matter unreadable'); continue
+        t = sh('git', 'show', f'origin/main:{f}', ok=False)
+        st = re.search(r'^state:\s*(\S+)', t, re.M) if t is not None else None; frm = re.search(r'^from:\s*(\S+)', t, re.M) if t is not None else None
+        if not (st and frm): unread.append(f); UNV.append(f'{f}: not readable or front matter missing; counts below are incomplete'); continue
         if f.startswith(f'pipes/{a.key}/'): inbox[st.group(1)] += 1; (st.group(1) != 'closed') and items.append(f'{f} [{st.group(1)}]')
         if frm.group(1) == a.key and st.group(1) != 'closed': outbound[f'{f.split("/")[1]}:{st.group(1)}'] += 1; items.append(f'{f} [{st.group(1)}, outbound]')
-    rep['pipes'] = dict(inbox=dict(inbox), outbound_not_closed=dict(outbound), not_closed_items=items) if tree is not None else dict(inbox=None, outbound_not_closed=None, not_closed_items=None)
+    rep['pipes'] = (dict(inbox=dict(inbox), outbound_not_closed=dict(outbound), not_closed_items=items, unreadable=unread, complete=not unread)
+                    if tree is not None else dict(inbox=None, outbound_not_closed=None, not_closed_items=None, unreadable=None, complete=False))
     rep['status'] = 'PARTIAL/UNVERIFIED' if UNV else 'COMPLETE (observations only; no adoption inferred)'
 
     # report
@@ -165,12 +167,19 @@ def main():
             extra = f" {m['files_total']} files, e.g. {', '.join(m['files'][:3])}" if 'files' in m else ''
             print(f"    #{m['number']} {m['branch']} -> {m['base']} ({'draft' if m['draft'] else 'ready'}, head {m['head']}) via {m['via']}:{extra}")
     if tree is None: print(f'- pipes/{a.key}/: UNVERIFIED (tree not readable)')
+    elif unread: print(f"- pipes/{a.key}/: INCOMPLETE — {len(unread)} item(s) unreadable, counts are lower bounds: inbox {dict(inbox)}; outbound not closed {dict(outbound)}" + ''.join(f'\n    {x}' for x in items) + ''.join(f'\n    UNREADABLE {x}' for x in unread))
     else: print(f"- pipes/{a.key}/ inbox: {rep['pipes']['inbox'] or 'none'}; outbound not closed: {rep['pipes']['outbound_not_closed'] or 'none'}" + ''.join(f'\n    {x}' for x in items))
     if UNV: print('- UNVERIFIED:' + ''.join(f'\n    {u}' for u in UNV))
     if a.json:
         import os
-        if os.path.exists(a.json) and not a.replace_json: print(f'- JSON not written: {a.json} exists (pass --replace-json to replace a report file you own)')
-        else: open(a.json, 'w', encoding='utf-8').write(json.dumps(rep, ensure_ascii=False, indent=1) + '\n')
+        payload = (json.dumps(rep, ensure_ascii=False, indent=1) + '\n').encode('utf-8')
+        if os.path.islink(a.json): print(f'- JSON not written: {a.json} is a symbolic link; the reporter writes only a regular file it creates itself')
+        else:
+            flags = os.O_WRONLY | os.O_CREAT | getattr(os, 'O_NOFOLLOW', 0) | (os.O_TRUNC if a.replace_json else os.O_EXCL)
+            try:
+                fd = os.open(a.json, flags, 0o644); os.write(fd, payload); os.close(fd)
+            except FileExistsError: print(f'- JSON not written: {a.json} exists (pass --replace-json to replace a report file you own)')
+            except OSError as e: print(f'- JSON not written: {a.json}: {e.strerror}')
 
 if __name__ == '__main__':
     main()
