@@ -13,7 +13,7 @@ For inherited owner-held obligations, follow §5 of `records/atlas/RTG_STATE_ATL
 
 ## LIVE_STATE — generated, never copied here
 
-Reporter: `tools/orient.py` (PR #190, under co-owner review; not on `main` yet). Once merged: `git fetch origin --tags && python3 -I tools/orient.py ATLAS`. Until then use equivalent read-only Git/GitHub queries.
+Reporter: `tools/orient.py` on `main` since 9 November 2026 (PR #190 rev. 3, receiving review PR #192 ACCEPT SCOPED, 27/27 controls). Command: `git fetch origin --tags && python3 -I tools/orient.py ATLAS`. Its only write is an optional `--json` report file it creates itself.
 
 Generate adopted-tag/release identity, target and file hash, observed `main` and local ref/fetch state, open PRs matched by changed paths **and explicit dependencies**, and inbound/outbound queue states. Include Atlas-owned tooling: `evidence/atlas/tools/`, `records/atlas/` and relevant shared tools; title searches alone are insufficient. Inspect #113/#114 as tool/review dependencies, not as automatically ready-to-merge work.
 
@@ -21,16 +21,16 @@ Report query time, input refs and scan coverage. Distinguish a frozen source sna
 
 ## OWNER_LANE — Claude
 
-**Last checked by owner:** 6 November 2026, 15:25 +03:00. Read: `origin/main` `e4f3dbf` (PR #187 merge), `atlas-v0.10` with its release record and tag verification, PR #188 head `dbbaad4`, PR #189 head `ebd97b0`, PRs #113/#114 open. Ran `tools/orient.py ATLAS` at that `main`: 4 matched PRs (#113, #114, #188, #189), inbox 7/7 closed, no outbound open. Rev. 2 of the tool (9 Nov, PR #190 `6bb7730`) passes the #192 receiving harness 21/21; its live run finds 7 matched PRs (#113, #114, #188–#192).
+**Last checked by owner:** 9 November 2026, 12:05 +03:00. Read: `origin/main` `c8333a4` (PR #190 merge; PR #192 merged before it as `4c1215f`), pilot branch head `feb360d` (PR #191 merged), `tools/orient.py` on `main` SHA-256 `dfbcb1da…cd0c`. Ran the reporter at that `main`: COMPLETE; `atlas-v0.10` with its release record, hash named; 4 matched open PRs (#113, #114, #188, #189); inbox 7/7 closed; no outbound open.
 
-**Intent / decision held:** the two-layer design is accepted: LIVE_STATE is generated, this note holds intent only. #189 (Methodology v1.5) is deferred; generalization, if the pilot passes, goes through CONVENTIONS §9 and a later natural Methodology revision. #113/#114 (`check_compaction` tool and its review) stay on their own review track; they are open Atlas tool work, not release work. No Atlas refresh is due: no source tag after `fa3db80` and no open Atlas inbox item.
+**Intent / decision held:** two-layer design accepted (LIVE_STATE generated, this note holds intent only). The reporter is accepted after three review rounds; no further tool work is planned before the blind tests. #189 is deferred by its proposer. #113/#114 are open Atlas tool work on their own review track. No Atlas refresh is due: no source tag after `fa3db80`, no open Atlas inbox item.
 
-**Resume:** tool work on `claude/tool-orient` (PR #190, commit `6bb7730`, rev. 2); command `python3 -I tools/orient.py ATLAS --json <out>`; sample runs in `evidence/atlas/tools/orient_20261106/`. Owner-lane edit on `claude/atlas-orientation-owner-lane` (PR #191, stacked on #188). Nothing uncommitted of value; the scratchpad prototype was superseded by the committed tool.
+**Resume:** no open owner branch. Reporter command above. Blind-test material: the answer key is written by the owner, held by the PI, and sealed in the repository by its SHA-256 (`evidence/atlas/orientation_pilot/`) before either test; stale-note and fake-claim fixtures for tests 2 and 3 live on the disposable branch `claude/orientation-pilot-fixtures` (no PR, never `main`).
 
 **Next actions / acceptance criteria:**
-1. PR #190 reviewed by the co-owner against the four named properties (path-based PR discovery, tag ≠ adoption, incomplete scan ≠ no work, no writes); then PI merge.
-2. Freeze the blind-test answer key (refs, PR numbers, pipe states, next action) in `evidence/atlas/orientation_pilot/` before either test; run one fresh ChatGPT session and one fresh Claude project session from the bootstrap message alone. Pass = correct governing tag and record; every open PR touching Atlas paths or naming one of them at the frozen input refs is found (the set is fixed in the key at freeze time, not the four of the 6 Nov sample run); no inherited private reasoning claimed; access failures reported as UNVERIFIED. Frozen-fixture scoring and live-discovery scoring are kept separate.
-3. On pass: PI decision on merging #188; then the CONVENTIONS §9 generalization proposal, with each owner choosing one entry path.
+1. Freeze: after this lane update reaches the pilot branch, the owner records the input refs (`main`, pilot head, tool hash, open-PR set, pipe census) and the expected answers, sends the key to the PI, and commits only its hash. Any later merge invalidates the frozen set; re-freeze rather than reinterpret.
+2. Blind tests, one fresh ChatGPT session and one fresh Claude project session, from the bootstrap message alone; the Claude session also tests discovery through the project-instruction sentence. Pass = governing tag and record identified with their evidence; the frozen open-PR set found; stale pointers in the fixture detected; the fixture's fake claim rejected against the owner DSN; access failures reported as UNVERIFIED; no inherited private reasoning claimed. Frozen-fixture scoring and live-discovery scoring stay separate.
+3. On pass: PI decision on merging #188; then the CONVENTIONS §9 generalization proposal, each owner choosing one entry path. On fail: the owner amends the note or the reporter and re-freezes.
 
 ## REVIEWER_LANE — ChatGPT
 
@@ -44,12 +44,11 @@ Report query time, input refs and scan coverage. Distinguish a frozen source sna
 
 ## PI_PENDING — maintained by owner
 
-**Open with the PI (6 November 2026):**
-- PR #191 (this owner lane) → merge into `chatgpt/atlas-session-orientation-pilot`, so #188 carries both lanes. No CLI block issued yet.
-- PR #190 (`tools/orient.py`, rev. 2) → merge into `main` once the co-owner confirms the R1–R4 fixes; PR #192 (its receiving review) can merge with it. No CLI block issued yet.
-- PR #188 itself → decision after the blind tests; not requested yet.
-- #189 → deferred by the proposer; no action requested.
-- Project instruction: the two-sentence entry rule proposed in the project conversation (fetch CONVENTIONS and the entry note from GitHub; `records/` is not in project knowledge). Project settings are the PI's; nothing changed.
+**Open with the PI (9 November 2026):**
+- PR #193 (this owner-lane update) → merge into `chatgpt/atlas-session-orientation-pilot`. No CLI block issued yet.
+- Project instruction: add the two-sentence entry rule (fetch `CONVENTIONS.md` and the study's entry note from GitHub; `records/` is not in project knowledge). Needed before the Claude blind test. Project settings are the PI's.
+- After the freeze: start the two blind sessions with the bootstrap message below, and keep the answer key until both are scored.
+- PR #188 → decision after the tests. #189 → deferred, no action.
 
 The owner records later PI requests and issued CLI blocks here with their exact source.
 
