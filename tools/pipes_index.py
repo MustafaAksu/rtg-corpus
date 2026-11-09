@@ -8,7 +8,7 @@ Front matter rules: see pipes/README.md. INDEX.md files are derived views and ar
 """
 import argparse, json, os, re, subprocess, sys, tempfile
 
-STREAMS = ['METH', 'PROG', 'OFN', 'RRF', 'LEGACY', 'PREL', 'NUMGEN', 'DYAD', 'TRIAD', 'GEN', 'UVM', 'RECOG', 'DZT', 'TDRG', 'AZ', 'RER', 'FMS', 'ER2B', 'ATLAS', 'LIT']
+STREAMS = ['METH', 'PROG', 'OFN', 'RRF', 'LEGACY', 'PREL', 'NUMGEN', 'DYAD', 'TRIAD', 'GEN', 'UVM', 'RECOG', 'DZT', 'TDRG', 'AZ', 'RER', 'FMS', 'ER2B', 'ATLAS', 'LIT', 'SAT']
 KINDS = ['request', 'offer', 'finding', 'question', 'notice']
 STATES = ['open', 'acknowledged', 'dispositioned', 'closed']
 REQUIRED = ['from', 'to', 'date', 'kind', 'object', 'tags', 'state']
@@ -125,7 +125,8 @@ def selftest(root):
     positive = [('valid open item', 'TDRG/20261026-NUMGEN-x.md', GOOD),
                 ('valid closed item with verdict and pointer', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: closed\ndisposition: 2026-11-02 · reject · records/tdrg/TDRG_OWNER_DISPOSITION_20261102.md')),
                 ('valid LIT finding to a stream', 'TDRG/20261026-LIT-x.md', GOOD.replace('from: NUMGEN', 'from: LIT').replace('kind: request', 'kind: finding')),
-                ('valid stream request to LIT', 'LIT/20261026-NUMGEN-x.md', GOOD.replace('to: TDRG', 'to: LIT'))]
+                ('valid stream request to LIT', 'LIT/20261026-NUMGEN-x.md', GOOD.replace('to: TDRG', 'to: LIT')),
+                ('valid SAT request to LIT', 'LIT/20261026-SAT-x.md', GOOD.replace('from: NUMGEN', 'from: SAT').replace('to: TDRG', 'to: LIT'))]
     negative = [('unknown stream key', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('to: TDRG', 'to: FOO')),
                 ('invalid state (notice vocabulary)', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: sent')),
                 ('dispositioned without disposition', 'TDRG/20261026-NUMGEN-x.md', GOOD.replace('state: open', 'state: dispositioned')),

@@ -8,3 +8,4 @@
 | 2026-11-03 | DYAD | notice | closed | report of use — LIT finding on the LH2012 summability chain (INF-005 to INF-008 at rtg-lit 44bad61d81af2f970b13368a8b7da87b9721442d) | — | `20261103-DYAD-lh2012-use-report.md` |
 | 2026-11-03 | DYAD | request | acknowledged | literature search — sharper explicit Leau–Fatou orbit constants on interior subpetals (INF-010 suggestion, Loray minimisation); DYAD OPEN 20 stage 3 | — | `20261103-DYAD-subpetal-orbit-constant-search.md` |
 | 2026-11-03 | DYAD | request | acknowledged | literature search — validated (computer-assisted) enclosures of sectorial jumps / Stokes constants for parabolic or Briot–Bouquet germs; DYAD OPEN 20 stage 3 | — | `20261103-DYAD-validated-stokes-numerics-search.md` |
+| 2026-11-09 | SAT | request | open | admission of rtg-sat satellite studies as LIT consumers (scope, access, channel, disclosure) | — | `20261109-SAT-satellite-consumers.md` |
