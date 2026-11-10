@@ -107,7 +107,7 @@ A second entry report, by the ChatGPT co-owner session, and its reply to the com
 | # | Item | Finding | Effect | Proposed disposition | List |
 |---|---|---|---|---|---|
 | 30 | Thread C (§4.3), the AZ-owned results and the retraction block | No owner source corrects anything here. The static-geometry reclassification, Level A and the `[bridge-disqualified]` status stand. | none | No change in v0.7. | — |
-| 31 | §9 (l. 516): hashes "are stored in `AZ-ART-AZV5-REGISTRY`"; SG-AZ-5 provenance "is satisfied by the manifest reference" | The registry and every §9 file are absent from the repository (§1, UNVERIFIED 2). The grades of the Thread C results are not changed by that; their evidence cannot be inspected from the repository. | claim (availability) | (i) one sentence in §9: the files are not in the repository as of v0.7 and are not described as recreated (CONVENTIONS §5). (ii) recovery: the PI locates the files; they arrive unchanged on an `upload/…` branch, are hash-checked against the registry and placed under `evidence/az/`. | (i) + (ii) |
+| 31 | §9 (l. 516): hashes "are stored in `AZ-ART-AZV5-REGISTRY`"; SG-AZ-5 provenance "is satisfied by the manifest reference" | The registry and every §9 file are absent from the repository (§1, UNVERIFIED 2). The grades of the Thread C results are not changed by that; their evidence cannot be inspected from the repository. | claim (availability) | (i) in §9, **replace** the present-tense provenance claim ("SG-AZ-5 provenance is satisfied by the manifest reference") as well as adding the absence: the historical certification is source-reported (`EV-SRC-REPORTED`); the registry and the artifact bytes are unavailable in this repository and are not described as recreated (CONVENTIONS §5); nothing was rerun (`EV-NOT-RERUN`); the existing grades are kept, with that verification limit stated at the point of use. No new certification work. (ii) recovery: the PI locates the files; they arrive unchanged on an `upload/…` branch, are hash-checked against the registry and placed under `evidence/az/`. | (i) + (ii) |
 | 32 | `AZ-ALG-ANTIPODAL-LOWORDER` | TDR-G v2.12.14 §6.2 cites it at `az-v0.6` as a static $\mathbb{Z}_N$ graph statement (no bridge; its release record rows TC-16, I12). AZ now has a consumer. | none | Entry unchanged in v0.7. At the v0.7 release, one notice to `pipes/TDRG/` that the entry is unchanged at the new tag. | (i), release step |
 | 33 | `TDRG-AZ-STATIC-ZN-4Q`, `PROP-AZ-CORE-EQUIV` | AZ-owned identifiers without the `AZ` prefix; TDR-G declares no such RID (its notice and release record). Methodology v1.4 §4.2: keep existing nonstandard IDs with an explicit owner map. | none | No rename. An owner-map line belongs to the Methodology migration. | (ii) |
 | 34 | Bare `[THM-ALG]` (PROP-AZ-CORE-EQUIV) | Methodology v1.4 §8 registers only `[THM-ALG via IA]`. Under the declared v1.2 the tag stays. | none in v0.7 | Resolve at the Methodology migration; not a grade change here. | (ii) |
@@ -128,7 +128,7 @@ Both items are notices; neither asks for anything, and each says the repin is th
 | AZ.A1 (H2), advisory row 1 | the ×2 sentence contradicts OPEN-M v0.7.1 R16 | confirmed | 1 |
 | AZ.A2 | $q=4,(0,3)$ cascade formula listed as open; Genesis pin | confirmed | 11, 5, 29 |
 | AZ.A3 | the Programme patch request is met | confirmed | 28 |
-| AZ.A5 | DZT anomaly set and AZ's $4\mid q$ rule: no relation asserted | DZT v0.8 read only at SG-DZT-1 and `DZT-ALG-CASCADE-ANOMALY-SET` ($p=8\ell^a$, $\ell^a\equiv1 \bmod 4$): it names no AZ result; AZ names no DZT result; SG-AZ-7 already forbids the link | none — no action |
+| AZ.A5 | DZT anomaly set and AZ's $4\mid q$ rule: no relation asserted | DZT v0.8 read only at SG-DZT-1 and `DZT-ALG-CASCADE-ANOMALY-SET` ($p=8\ell^a$, $\ell^a\equiv1 \bmod 4$): SG-DZT-1 names the AZ `4|q` rule only in its no-transfer guard (citing it as evidence for a DZT claim is the stated violation), not as an import; AZ names no DZT result; SG-AZ-7 forbids the link from the AZ side | none — no action |
 | AZ.A7 (H3), advisory row 3 | consumer strings that are not owner RIDs | confirmed | 14, 19, 23, 25, 26 |
 
 ## 6. The split
@@ -153,9 +153,13 @@ Both items are notices; neither asks for anything, and each says the repin is th
 2. Row 8: keep the Methodology v1.2 declaration in v0.7 (proposed), or migrate first.
 3. Row 13: (a) corrected list with a pointer (proposed), or (b) pointer only.
 4. Row 27: pointers to Programme v1.4 §8 (proposed), or the v1.4 texts quoted.
-5. Row 31: add the availability sentence to §9 in v0.7 (proposed).
+5. Row 31: in v0.7, replace the §9 provenance claim by the availability statement described in the row (proposed).
 6. Who drafts v0.7 and who reviews it.
 
-## 8. What this record does not do
+## 8. Review
+
+PR #207 review `5848171706` (ChatGPT co-owner session, posted through the PI's account, on commit `a65f2ac`): accept with minor corrections, PI decisions pending; no unlisted drift found in the scopes it inspected. R1 (row 31: the existing §9 provenance claim must be replaced, not only supplemented) and R2 (Atlas AZ.A5: SG-DZT-1 does name the AZ `4|q` rule, in a no-transfer guard) are accepted and made above; both were checked here at `az-v0.6` §9 and `dzt-v0.8` SG-DZT-1. E1: this PR's orientation diff removes the one word "Empty." from the shared placeholder of the lanes section, because the section now holds a lane; that edit is declared here for the owner's review. The review's recommendations on §7 are co-owner recommendations, not PI decisions.
+
+## 9. What this record does not do
 
 It edits no DSN, changes no pipe state, adopts nothing and regrades nothing. Every proposed change is to be made in the corrections edition through the ordinary cycle (branch, PR, review, PI decision, release record, merge, tag).
