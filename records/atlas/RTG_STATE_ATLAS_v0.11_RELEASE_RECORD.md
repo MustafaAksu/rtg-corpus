@@ -1,6 +1,6 @@
 # RTG State Atlas v0.11 — acceptance record (draft)
 
-**Status:** CANDIDATE, 10 November 2026. Not accepted. Open before acceptance: the receiving review of stage 2b and of this assembly (§3). `atlas-v0.10` stays the governing tagged Atlas until the PI accepts, the PR is merged and the tag `atlas-v0.11` exists and is verified.
+**Status:** CANDIDATE, 10 November 2026. Receiving review complete (§3); PI acceptance not yet given. `atlas-v0.10` stays the governing tagged Atlas until the PI accepts, the PR is merged and the tag `atlas-v0.11` exists and is verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, on branch `claude/atlas-v0.11-d3-pilot` (PR #204). Under CONVENTIONS §4 this record comes before the merge and the tag.
 
@@ -26,8 +26,8 @@
 | `atlas-v0.10` | `443b5990…dbf7` | 521,243 | base | — |
 | stage 1 | `0f8ba5c0…a6c2` | 521,832 | six scientific identifiers with two record lines: the second home becomes a typed cross-reference (Method §4.4) | PR #204 reviews 5839419629, 5840025491: accepted |
 | stage 2a | `ace0b408…a5d6` | 519,983 | D3: 21 span deletions, owner-edition labels (§4.1) and method detail beyond a pointer (§4.7) | review 5841129271: ACCEPT SCOPED |
-| stage 2b | `66f0b2eb…20da` | 520,271 | D3: three stale `(D5)` `[assuming:]` tags replaced by the import of `recog-v0.3.27` | **pending** |
-| v0.11 | `8d7a43f0…f358` | 520,271 | three self-version edits: title (L1), manifest path (L4), end line (L1542) | **pending** |
+| stage 2b | `66f0b2eb…20da` | 520,271 | D3: three stale `(D5)` `[assuming:]` tags replaced by the import of `recog-v0.3.27` | review 5841306614: accepted |
+| v0.11 | `8d7a43f0…f358` | 520,271 | three self-version edits: title (L1), manifest path (L4), end line (L1542) | review 5841306614: accepted |
 
 **Against v0.10:** 23 lines differ (1, 4, 373, 392, 419, 420, 462, 667, 668, 718, 725, 726, 736, 738, 739, 740, 752, 753, 774, 776, 823, 1351, 1542); the other 1,519 are byte-identical; no line is added or removed. Net −972 bytes.
 
@@ -57,7 +57,7 @@
 
 This closes the compaction work and directs that the pilot's content become v0.11. It is not yet the acceptance of the object in §1, which waits for the review below.
 
-**Receiving review.** ChatGPT, Atlas co-owner: stage 1 and stage 2a accepted (reviews above). **Open:** stage 2b (three pending items) and this assembly (three self-version lines, manifest).
+**Receiving review.** ChatGPT, Atlas co-owner: stage 1 and stage 2a accepted (reviews above). **Final review, PR #204 review 5841306614, on commit `8cd20d1a0ec3af869df050014c9a4bced20d2394`: ACCEPT SCOPED — PI adoption ready.** The reviewer recomputed independently: the candidate hash and size; exactly 23 changed lines against v0.10, none added or removed; stage 2a → 2b only L736, L740, L823; stage 2b → v0.11 only L1, L4, L1542; the manifest hash, with 18/18 source entries byte-equal to v0.10 and only `atlas`, `frozen_at`, `previous_atlas_tag`, `note` changed. The three stage-2b items were read against `recog-v0.3.27` (§2 R6, §6.13b, §6.16e) and accepted; grades, domains and OPEN states unchanged; START-OFFSET (ii) needs no correction. Not rerun by the reviewer: `atlas_check.py`, the builders, owner certificates. The 5 UNVERIFIED links, 3 UNVERIFIED artifacts and 11 documented-unresolved links are those of v0.10 and were not counted as new blockers.
 
 **PI acceptance:** not yet given. It is recorded here verbatim when given, with the object hash it refers to.
 
