@@ -40,7 +40,7 @@ A second home may only become a cross-reference if nothing is lost. Each short l
 
 For each pair: the full node stays byte-identical. The short record line is replaced by a typed cross-reference line that is not a record (it starts with `→`, as the birth-symmetry reference of v0.10 does), in the same place under the same heading, carrying only (i) the pointer to the node and its domain, (ii) any text from §3 that exists nowhere else, verbatim, and (iii) the consumer-domain reason for the pointer where the short line gave one.
 
-Expected mechanical result against the frozen base, with a map that declares each replacement: six declared deletions of record occurrences and six declared insertions of reference lines (12 `DECLARED_PENDING_REVIEW`), everything else `EXACT`, 0 `FAIL`, no context review. The grade invariant holds: each RID keeps its grade on its remaining occurrence. The twelve pending items are exactly what the reviewer is asked to read; none is claimed preserved by the tool.
+*(Prediction written before the build; superseded by the measured result in §7: 12 pending, 7 mapped, 2 context reviews.)* Expected mechanical result against the frozen base, with a map that declares each replacement: six declared deletions of record occurrences and six declared insertions of reference lines (12 `DECLARED_PENDING_REVIEW`), everything else `EXACT`, 0 `FAIL`, no context review. The grade invariant holds: each RID keeps its grade on its remaining occurrence. The twelve pending items are exactly what the reviewer is asked to read; none is claimed preserved by the tool.
 
 The seven other multi-occurrence identifiers (five `*GEN:`/`*NUMGEN:` pseudo records and two `GEN-ART-` artifact rows) are outside D3 and are not touched by the pilot; they stay a recorded, deferred debt (design note §7).
 
@@ -76,3 +76,5 @@ The review (PR #204 review 5839419629) is ACCEPT WITH CHANGE: classification and
 - N3D-FINITE-CHAR: "pure representation theory" stated; the negatives with "(SG-NG-3/4)" kept verbatim.
 
 **Requested:** review of the twelve pending items and the two context reviews. On acceptance, the stage-1 output with this hash is the frozen base of the D3 compaction (stage 2).
+
+**Accepted** as the intermediate base for stage 2: PR #204 review 5840025491 (ACCEPT SCOPED, 10 November 2026; reviewer recomputed both file hashes and the six changed lines). Stage 2 result: `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md`.
