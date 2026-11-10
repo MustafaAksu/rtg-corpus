@@ -22,15 +22,15 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## OWNER_LANE — Claude
 
-**Checked:** 10 November 2026, 11:30 +03:00; `main` `752bb6a` (PR #113/#114 merged), `atlas-v0.10` unchanged, inbox 7/7 closed.
+**Checked:** 10 November 2026, 12:15 +03:00; `main` `7d6eb4c` (PR #202/#203 merged); all 18 source tags unchanged, `atlas-v0.10` unchanged, inbox 7/7 closed.
 **Goal / current question:** Atlas v0.11 as a compaction edition (no source movement, no semantic change): can the file return towards the Method size target under a mechanical preservation contract?
-**Last durable work:** `claude/atlas-v0.11-manifest-design`, PR #202 (draft): `tools/atlas_preservation.py` rev. 3 and `records/atlas/ATLAS_V0_11_PRESERVATION_MANIFEST_DESIGN.md` §§7–9. Receiving review: PR #203.
+**Last durable work:** `claude/atlas-v0.11-d3-pilot`: `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE1_DISPOSITIONS.md` (six scientific identifiers with two record lines; proposal under review). Before it: PR #202 `67dbb79` (`tools/atlas_preservation.py` rev. 3, design note) and PR #203 `7d6eb4c` (receiving review), both on `main`.
 **Decisions held:** order agreed with the PI and the reviewer — tool debt (done: `check_compaction.py` round 4 on `main`) → v0.11 preservation manifest and a D3 pilot → one advisory note to the PI on dormant-owner findings (H2, H11, AZ.A1, H3). Size is an aim, not a gate. `DECLARED` is never `PRESERVED`; grade, qualifier, identifier and diagnostic-class changes are not compaction and need a reviewed stage-1 delta. No up-front normalization of the whole Atlas. #189 deferred. Satellite repository `rtg-sat` is outside the Atlas inputs (Method §3); a one-sentence Method v0.3 delta is planned, separately reviewed.
 **Tried and set aside:** the draft-0 extractor (character offsets, feature-list equality as evidence) — replaced; reopen never. Using `check_compaction.py` for the Atlas — set aside, it reads DSN forms only; reopen if the Atlas adopts DSN record syntax.
 **Evidence:** `atlas-v0.10` extract: 1,543 regions, 560 typed nodes, 117 diagnostics, 615 raw lines; identity compare 1,427 EXACT. Thirteen identifiers occur on more than one line (design note §7), six of them scientific RIDs in or beside D3.
 **Resume:** `python3 -I tools/atlas_preservation.py selftest`; `… extract atlas/RTG_STATE_ATLAS.md OUT.json`; `… compare BASE CAND MAP.json --report R.json`.
 **Next 1–3 actions / acceptance:**
-1. Done: tool rev. 3 ACCEPT SCOPED for the D3 mechanical pilot (PR #202 review 5838875546; the reviewer's rev. 3 runs are source-reported, not rerun). Remaining: PI merge of #202/#203.
+1. Stage 1 of the D3 pilot: reviewer reads the disposition record (classification, no-loss table, `J_NF` point, reference-line form); acceptance = verdict on its PR. Then the owner builds stage 1 and submits its twelve pending items.
 2. D3 pilot: stage-1 dispositions for the duplicate identifiers it touches, compaction with a movement map, comparator report with 0 FAIL, and every pending item and context review listed for the change-focused review. The comparator is not used as an acceptance gate before step 1.
 3. Advisory note to the PI on dormant-owner findings; "accept the recorded state" there means deferring a known debt, not resolving it.
 **Reopen trigger:** any owner tag after `fa3db80` (impact refresh takes precedence over compaction); any open item in `pipes/ATLAS/`.
@@ -44,7 +44,7 @@ Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspec
 ## PI_PENDING — maintained by owner
 
 **Open with the PI (10 November 2026):**
-- PR #202 (tool and design note) and PR #203 (its receiving review) → merge after the reviewer's acceptance of tool rev. 3. No CLI block issued yet.
+- Nothing to merge yet for the D3 pilot: the stage-1 disposition record is with the reviewer. PR #202/#203 are merged (10 Nov).
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
 
