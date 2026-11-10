@@ -30,7 +30,7 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 **Evidence:** chain `443b5990…` → stage 1 `0f8ba5c0…` → 2a `ace0b408…` → 2b `66f0b2eb…` → v0.11 `8d7a43f0…`; each builder asserts its input hash. Known tool limit: `atlas_preservation.py` reports the whole file when the title heading changes (heading context); such a step is shown by a line diff.
 **Resume:** `python3 -I tools/orient.py ATLAS`; `python3 tools/atlas_check.py --manifest evidence/atlas/v0.11/source_manifest.json` (the default manifest is an old one).
 **Next 1–3 actions / acceptance:**
-1. Advisory note to the PI is written (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md`, five rows); waiting for the PI's disposition per row, then record it in the note's §4.
+1. Advisory dispositions are recorded (10 Nov). The Atlas does nothing further on those rows until an owner edition is adopted; then an impact refresh. The AZ entry note was drafted by the Atlas owner and passes to the AZ owner at its first checkpoint.
 2. Method v0.3 delta, separately reviewed: size aim subordinate to completeness and structure; K1/K2 span deletions as a standing rule when a domain is opened for a refresh; satellite repositories out of scope.
 3. Deferred debts: seven other identifiers with more than one record line; a comparator mode for heading renames.
 **Reopen trigger:** any owner tag after `fa3db80` (impact refresh); any open item in `pipes/ATLAS/`.
@@ -46,7 +46,7 @@ Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspec
 **Open with the PI (10 November 2026):**
 - **Decided by the PI, 10 Nov 14:02 +03:00 (project conversation): route A** — "continue with A; we want it smaller and shrink as far as we can, but we do not break the structure to shrink it" (translated; recorded in `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §8). No split, no lossy core.
 - Nothing is waiting on the PI for the Atlas. v0.11 is accepted, merged and tagged (10 Nov; CLI block issued in the project conversation at 15:27 +03:00, output returned 15:29).
-- **Asked of the PI (10 Nov):** one disposition per row (fix now / with the stream's rework / accept the recorded state) for the five rows of `records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md`. Owner's advice: row 1 (AZ §6 "legal ×2") first; rows 2–4 with each stream's rework; row 5 stays recorded.
+- **Decided by the PI, 10 Nov 17:23 +03:00:** the advisory's advice is adopted; AZ is reactivated now, row 1 first (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md` §4). AZ entry note with staged prompts: `records/az/AZ_COOWNER_SESSION_ORIENTATION.md`.
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
 

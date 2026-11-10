@@ -39,8 +39,12 @@ For each row one of: **fix now** (own small edition of the owner DSN, through th
 
 | # | Disposition | Date |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | **Fix now**, as the first correction of the AZ reactivation that starts now | 10 Nov 2026 |
+| 2 | With the stream's rework (DZT) | 10 Nov 2026 |
+| 3 | With the stream's rework (AZ; in practice the same corrections edition as row 1) | 10 Nov 2026 |
+| 4 | With the stream's rework (OPEN-M) | 10 Nov 2026 |
+| 5 | Stays recorded until Pre-Legacy is opened (deferred debt) | 10 Nov 2026 |
+
+**PI decision, project conversation, 10 November 2026, 17:23 +03:00.** Verbatim: "Danışma notundaki tavsiyeni benimsiyorum. AZ için şimdi başlıyoruz. Bu streamler çok uzun zamandır ışık göremedi. Son düzenlerden ve RTG updatelerinden habersiz." ("I adopt the advice in the advisory note. We start on AZ now. These streams have not seen daylight for a long time; they know nothing of the recent arrangements and RTG updates.") The table is the owner's reading of §3 under that decision. The PI also asked for staged prompts that let a returning stream first read the updates and then put its own work in order: `records/az/AZ_COOWNER_SESSION_ORIENTATION.md`, BOOTSTRAP 1–4.
+
+These dispositions decide when each owner stream acts. They adopt no change to any DSN; each fix goes through its own stream's release cycle.
