@@ -121,48 +121,55 @@ def compare(base: bytes, cand: bytes, mp: dict):
         t = cby.get(d['cand'])
         if t is None or id(t) in used: add('FAIL', k, f"declared target {d['cand']} missing or already matched"); continue
         used.add(id(t))
+        # context and anchor are checked for every mapped pair, before and independently of any byte comparison
+        ch = t['context'] != r['context'] or (r['kind'] == 'raw' and t.get('anchor') != r.get('anchor'))
+        if ch: context_reviews.append(dict(item=k, target=d['cand'], base_context=r['context'], candidate_context=t['context'], base_anchor=r.get('anchor'), candidate_anchor=t.get('anchor')))
+        ctxnote = '; CONTEXT CHANGED — inherited scope must be reviewed' if ch else '; same heading context'
         if t['sha256'] == r['sha256']:
-            if r['kind'] in ('node', 'diagnostic') and (t.get('id'), t.get('occurrence')) != (r['id'], r['occurrence']) and t.get('id') != r['id']: add('FAIL', k, 'identical text under another record identifier')
-            else:
-                ch = t['context'] != r['context'] or (r['kind'] == 'raw' and t.get('anchor') != r.get('anchor'))
-                add('MAPPED_EXACT', k, f"moved to {d['cand']}" + ('; CONTEXT CHANGED — inherited scope must be reviewed' if ch else '; same heading context'))
-                if ch: context_reviews.append(dict(item=k, base_context=r['context'], candidate_context=t['context'], base_anchor=r.get('anchor'), candidate_anchor=t.get('anchor')))
+            if r['kind'] in ('node', 'diagnostic') and t.get('id') != r['id']: add('FAIL', k, 'identical text under another record identifier')
+            else: add('MAPPED_EXACT', k, f"moved to {d['cand']}" + ctxnote)
             continue
         if r['kind'] != t['kind']: add('FAIL', k, f"kind changes {r['kind']} -> {t['kind']}"); continue
         if r['kind'] == 'node':
             if t['id'] != r['id']: add('FAIL', k, f"record identifier changes to {t['id']} (not a compaction)"); continue
             if t['grade'] != r['grade']: add('FAIL', k, f"grade/qualifier {r['grade']} -> {t['grade']} (needs a reviewed stage-1 delta)"); continue
             fd = {x['base_sha256']: x for x in d.get('fields', [])}
-            tpool = Counter((f['cls'], f['sha256']) for f in t['fields'])
             tseq = [(f['cls'], f['sha256']) for f in t['fields']]; tfree = [True] * len(tseq); j = 0
+            def take(pred):
+                """One consumption mechanism for exact matches and declared replacements: each target occurrence is used once."""
+                nonlocal j
+                ahead = next((i for i in range(j, len(tseq)) if tfree[i] and pred(tseq[i])), None)
+                i = ahead if ahead is not None else next((i for i in range(len(tseq)) if tfree[i] and pred(tseq[i])), None)
+                if i is None: return None
+                tfree[i] = False
+                if ahead is not None: j = i + 1
+                return 'ordered' if ahead is not None else 'out-of-order'
             for f in r['fields']:
-                key2 = (f['cls'], f['sha256'])
-                ahead = next((i for i in range(j, len(tseq)) if tfree[i] and tseq[i] == key2), None)
-                anyw = next((i for i in range(len(tseq)) if tfree[i] and tseq[i] == key2), None)
-                if ahead is not None: tfree[ahead] = False; j = ahead + 1; tpool[key2] -= 1; add('EXACT', f"{k}:{f['cls']}:{f['sha256'][:8]}")
-                elif anyw is not None:   # same bytes, but its position relative to the other fields changed: the field-to-field relation is not preserved
-                    tfree[anyw] = False; tpool[key2] -= 1
-                    if d.get('reorder'): add('DECLARED_PENDING_REVIEW', f"{k}:{f['cls']}:{f['sha256'][:8]}", 'field order changed (declared reorder): ' + d.get('reason', ''))
-                    else: add('FAIL', f"{k}:{f['cls']}:{f['sha256'][:8]}", 'field order changed without a declared reorder')
+                key2 = (f['cls'], f['sha256']); item = f"{k}:{f['cls']}:{f['sha256'][:8]}"
+                got = take(lambda x: x == key2)
+                if got == 'ordered': add('EXACT', item)
+                elif got == 'out-of-order':   # same bytes, but the position relative to the other fields changed
+                    if d.get('reorder'): add('DECLARED_PENDING_REVIEW', item, 'field order changed (declared reorder): ' + d.get('reason', ''))
+                    else: add('FAIL', item, 'field order changed without a declared reorder')
                 elif f['sha256'] in fd:
                     x = fd[f['sha256']]; cs = x.get('cand_sha256')
-                    hit = next((kk for kk in tpool if kk[1] == cs and tpool[kk] > 0), None) if cs else None
-                    if cs and hit is None: add('FAIL', f"{k}:{f['cls']}", 'declared replacement text not found in the target record')
-                    else:
-                        if hit: tpool[hit] -= 1
-                        add('DECLARED_PENDING_REVIEW', f"{k}:{f['cls']}:{f['sha256'][:8]}", ('edit' if cs else 'deletion') + ': ' + x.get('reason', ''))
-                else: add('FAIL', f"{k}:{f['cls']}:{f['sha256'][:8]}", 'field lost or changed without declaration')
-            for (cls, h), n in tpool.items():
-                for _ in range(n): add('FAIL', f"{d['cand']}:{cls}:{h[:8]}", 'unexplained new field text in the target record')
+                    got = take(lambda y: y[1] == cs) if cs else 'deleted'
+                    if got is None: add('FAIL', item, 'declared replacement has no free target occurrence in the target record')
+                    elif got == 'out-of-order' and not d.get('reorder'): add('FAIL', item, 'declared replacement found only out of order, without a declared reorder')
+                    else: add('DECLARED_PENDING_REVIEW', item, ('edit' if cs else 'deletion') + ': ' + x.get('reason', ''))
+                else: add('FAIL', item, 'field lost or changed without declaration')
+            for i, (cls, h) in enumerate(tseq):
+                if tfree[i]: add('FAIL', f"{d['cand']}:{cls}:{h[:8]}", 'unexplained new field text in the target record')
+            if ch: add('DECLARED_PENDING_REVIEW', k, f"record edited and moved to {d['cand']}" + ctxnote)
         elif r['kind'] == 'diagnostic' and (t['id'] != r['id'] or t['cls'] != r['cls']): add('FAIL', k, 'diagnostic key or class changes (not a compaction)')
-        else: add('DECLARED_PENDING_REVIEW', k, f"line edited -> {d['cand']}: " + d.get('reason', ''))
+        else: add('DECLARED_PENDING_REVIEW', k, f"line edited -> {d['cand']}: " + d.get('reason', '') + ctxnote)
     for r in cl:
         if id(r) in used: continue
         k = okey(r)
         if k in ins: add('DECLARED_PENDING_REVIEW', 'cand ' + k, 'declared insertion: ' + ins[k].get('reason', ''))
         else: add('FAIL', 'cand ' + k, 'candidate text with no base source and no declaration')
     counts = Counter(x['status'] for x in rows)
-    return dict(schema='atlas-preservation-compare/2', obligations=dict(pending_review=counts['DECLARED_PENDING_REVIEW'], context_reviews=context_reviews), base_sha256=B['source_sha256'], candidate_sha256=C['source_sha256'], base_bytes=len(base), candidate_bytes=len(cand),
+    return dict(schema='atlas-preservation-compare/3', obligations=dict(pending_review=counts['DECLARED_PENDING_REVIEW'], context_reviews=context_reviews), base_sha256=B['source_sha256'], candidate_sha256=C['source_sha256'], base_bytes=len(base), candidate_bytes=len(cand),
                 counts=dict(counts), result='FAIL' if counts['FAIL'] else 'MECHANICAL PASS',
                 note='MECHANICAL PASS means no loss or unexplained text; DECLARED_PENDING_REVIEW items are not preserved content until reviewed, and a MAPPED_EXACT move that changes the heading context or anchor certifies bytes only: zero pending items is not proof that inherited scope survived (see obligations.context_reviews).', rows=rows)
 
@@ -209,6 +216,12 @@ def selftest():
     adhoc('N diagnostic class changed through delete + insert', '# D\nF1 D-PROOF | e\n', '# D\nF1 D-LINK | e\n', route('F1#1'), 'FAIL')
     adhoc('P duplicate occurrence deleted by declaration is pending, not a grade failure', '# D\nTEST-ALG-X ALG | a\nTEST-ALG-X ALG | b\n', '# D\nTEST-ALG-X ALG | a\n', {'records': [{'base': 'TEST-ALG-X#2', 'cand': None, 'reason': 'one home'}]}, 'MECHANICAL PASS', lambda r: r['counts'].get('DECLARED_PENDING_REVIEW') == 1)
     adhoc('P declared move across headings is MAPPED_EXACT with a visible context obligation', '# D\n## Only for q>0\nTEST-THM-X THM | P | @T§1\n## All real q\n', '# D\n## Only for q>0\n## All real q\nTEST-THM-X THM | P | @T§1\n', mx | {'records': [{'base': 'TEST-THM-X#1', 'cand': 'TEST-THM-X#1', 'reason': 'regroup'}]}, 'MECHANICAL PASS', lambda r: len(r['obligations']['context_reviews']) == 1)
+    mvb = '# D\n## Only for q>0\nTEST-THM-X THM | P | @T§1\n## All real q\n'; mvc = '# D\n## Only for q>0\n## All real q\nTEST-THM-X THM  | P | @T§1\n'
+    adhoc('P whitespace edit plus a move across headings still carries the context obligation', mvb, mvc, {'records': [{'base': 'TEST-THM-X#1', 'cand': 'TEST-THM-X#1', 'reason': 'regroup'}]}, 'MECHANICAL PASS',
+          lambda r: len(r['obligations']['context_reviews']) == 1 and r['counts'].get('DECLARED_PENDING_REVIEW', 0) >= 1)
+    fb = '# D\nTEST-ALG-X ALG | local | sc: q>0 | sc: q<0 | @T§1\n'; fm = {'records': [{'base': 'TEST-ALG-X#1', 'cand': 'TEST-ALG-X#1', 'fields': [{'base_sha256': sha(b'sc: q>0'), 'cand_sha256': sha(b'sc: q<0'), 'reason': 'edit first scope'}]}]}
+    adhoc('P declared replacement and an unchanged equal field use two target occurrences', fb, fb.replace('sc: q>0', 'sc: q<0'), fm, 'MECHANICAL PASS', lambda r: r['counts'].get('DECLARED_PENDING_REVIEW') == 1)
+    adhoc('N one target occurrence cannot serve both a declared replacement and an unchanged field', fb, fb.replace(' | sc: q>0', ''), fm, 'FAIL')
     hx = extract(b'# D\n### A\nTEST-ALG-X ALG | P\n### B\nTEST-ALG-Y ALG | Q\n'); yy = next(r for r in hx['regions'] if r.get('id') == 'TEST-ALG-Y')
     extra.append((yy['context'] == [sha(b'# D')[:16], sha(b'### B')[:16]], 'P skipped-level sibling headings: context is D/B, not D/A/B'))
     crlf = b'# C\r\nTEST-ALG-X ALG | x=1\r\n'; e = extract(crlf)

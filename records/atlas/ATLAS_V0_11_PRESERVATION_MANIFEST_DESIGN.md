@@ -124,3 +124,12 @@ The review of revision 1 (PR #203 `f80a4e8`; PR #202 review 5837996742) confirme
 **AP-R3 — invariants before mapping.** For every identifier present in base and candidate, the candidate may not carry a grade/qualifier (records) or a class (diagnostics) that the base did not carry for that identifier, whatever the map declares. Delete-plus-insert no longer routes around the rule. Deleting one of several occurrences, or turning a duplicate into a cross-reference, stays possible and is pending review.
 
 **Runs** (`evidence/atlas/v0.11_design/rev2/`): self-test 30 controls as expected; the reviewer's revision-1 harness, unchanged except its two identity pins, 11/11 with its observation reproduced; `atlas-v0.10` identity compare MECHANICAL PASS, 1,427 EXACT, no context review.
+
+## 9. Revision 3 (10 November 2026, after the receiving review of revision 2)
+
+The review of revision 2 (PR #203 `a3e709a`; PR #202 review 5838164468) confirmed the 30 self-tests and its 11 earlier controls and found two defects in compound routes. Both are fixed locally; tool SHA-256 `6a4047b0dd3e10e15feeb9262d8b09816e82fa2f85a6d7ce939cc69d580e1d62`.
+
+- **Context on every mapped pair.** The heading context and the anchor of a mapped base/candidate pair are compared before, and independently of, any byte comparison. A moved record whose line also changed (for example by one space) keeps its entry in `obligations.context_reviews` and gets a pending row "record edited and moved"; equal field bytes cannot remove the obligation.
+- **One consumption mechanism for target fields.** Exact matches and declared replacements take target occurrences through the same routine; each target field occurrence is used once and the order pointer is shared. A candidate with one `sc: q<0` can no longer satisfy both a declared edit of `sc: q>0` and the unchanged `sc: q<0`; a candidate with two can. Leftover target fields are reported from the same free list.
+
+**Runs** (`evidence/atlas/v0.11_design/rev3/`): self-test 33 controls; the reviewer's compound-route harness with only its tool pins moved — producer self-test, the 11 earlier controls and the 4 paired routes all as expected, exit 0; `atlas-v0.10` identity compare 1,427 EXACT, no context review.
