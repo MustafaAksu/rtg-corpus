@@ -1,98 +1,99 @@
 # Atlas v0.11 preservation manifest — ChatGPT receiving review
 
-**Date:** 10 November 2026. **Status:** [SESSION], NONCANONICAL tooling review; no scientific adoption, compaction acceptance or merge authorization.
-**Object:** PR #202, implementation revision 1, head `e71382de2e408c15b781b0dbcc6046df8e06a513`.
-**Decision:** **REVISE — three bounded implementation groups before this comparator is used as the D3 preservation gate.** The original byte-offset and CRLF defects are fixed. The producer's 21/21 result independently reproduces. Remaining issues are order/home binding, heading-context construction, and the documented hard invariants' delete/insert route. D3 planning and source classification may proceed, but a clean report from this revision is not yet sufficient for compaction acceptance.
-**Previous review:** this same path at `134e420a3dc6722992da32487095f91280676260` preserves the complete draft-0 review. Its original probe script/output are unchanged; the current file records the latest inspected object, not an edit to frozen evidence. #113/#114 remain closed and are not reopened.
+**Date:** 10 November 2026. **Status:** [SESSION], NONCANONICAL tool review; no scientific adoption, compaction acceptance or merge authorization.
+**Object:** PR #202 implementation revision 2, head `ccc5c0a35d0c344b84a66993c7612955c2900506`.
+**Decision:** **REVISE, confined to two compound matching routes.** The five preceding receiving mismatches are fixed: the current producer self-test gives 30/30 expected outcomes, and the unchanged preceding receiving suite gives 11/11 plus its separate observation. Two paired route checks expose (i) a changed-line route that drops the context-review obligation and (ii) one candidate field occurrence consumed twice. D3 preparation may continue; this revision is not yet accepted as its preservation gate.
+**History:** the prior review at this fixed path remains in Git at `f80a4e884b2e372cbe25fd00fee1127a550b4f86`; the draft-0 review is at `134e420a3dc6722992da32487095f91280676260`. Their original scripts and outputs are unchanged. #113/#114 stay closed.
 
-## 1. Sources and actual execution
+## 1. Sources, identity and actual execution
 
-Read the complete 205-line `tools/atlas_preservation.py`, including the comparator and all self-tests; design §7 and its 13-identifier classification; `rev1/atlas_v0_10_extract_summary.json`; current CONVENTIONS in full; and Atlas v0.10 lines 1–45 for real source/header/L0 context. Prior design and Methodology/Atlas Method scope remains as recorded in the previous review. No new full reading of the 18 owners, full Atlas extraction replay, owner-certificate campaign, or D3 compaction was performed.
+Read the complete current 246-line tool (including all self-tests), the revised design §8 and adjacent duplicate-classification material, the complete preceding receiving record and 11-control harness, and current CONVENTIONS in full. Compared the changed context, source-binding and field-consumption paths with the revision-1 source already inspected. No new full Atlas/owner read, full-Atlas extraction or owner-certificate campaign was performed.
 
-[EV-BYTES / EV-HASH / EV-RUN] The connector-delivered tool was materialized without changing its source and verified against both its declared SHA-256 and Git blob before execution:
+[EV-BYTES / EV-HASH / EV-RUN] GitHub connector text was materialized locally and matched to its source identity before executing the unchanged tool under Python 3.13.5:
 
-- Commit: `e71382de2e408c15b781b0dbcc6046df8e06a513`.
-- SHA-256: `c78be1f29bae55642704bbeaaeef86c06b17983423a2c819ac8c2fe574a8b75a`.
-- Git blob: `67a16432b19e771d40e8d27f7b16130952929f54`.
-- Size: 17,564 bytes, 205 physical lines; Python 3.13.5.
-- Direct shell retrieval of GitHub failed DNS. Authorized connector retrieval plus local byte-identity verification was used; this is actual execution of the unchanged tool, not an implementation reconstructed from its algorithm.
-
-| Run | Actual result | Meaning |
+| File | SHA-256 | Git blob |
 |---|---|---|
-| Unchanged producer `selftest` | 21/21 expected, exit 0 | Producer's stated result confirmed |
-| Independent bounded receiving controls | 6/11 matched; 5 mismatches, exit 1 | Three groups in §§2–4; not a runtime error |
-| Separate context-move observation | 1/1 reported behavior reproduced | Documented `MAPPED_EXACT` byte movement, not counted as a failing producer contract test (§5) |
+| `tools/atlas_preservation.py`, 23,354 bytes / 246 lines | `c6e6660b4d57c39a81bda9ad5c476db684ee74c962794a58cae2e1a9d5fed0e1` | `dda7d60000267442708e3030911f45223be03c6a` |
+| Preceding `check_rev1_contract.py`, 8,063 bytes | `39b1441121c74f184428fcb302b04beeb87a2a0c4adb7321bd455258681554ea` | `66881e777f2d7ca9e2021d81c720c070c778da4a` |
 
-Positive receiving cases confirm identity comparison, changed-field pending status, rejection of a wrong source hash, rejection of an inline edge-pin swap, an explicit same-context move, and UTF-8/CRLF byte slices. The LF separators omitted from individual spans reconstruct the original bytes exactly when reinserted between regions. That representation is distinguishable from saying the individual spans alone are a disjoint cover of every byte.
+Only the preceding harness's two target identity constants were reassigned **in memory**; neither its source nor its cases/expectations changed. Source materialization was byte-verified, not a rewritten implementation. Direct shell GitHub retrieval failed DNS; connector delivery and local execution remained available.
 
-The producer's full-Atlas counts (1,543 regions; 560 nodes, 117 diagnostics, 615 raw, 135 headings, 116 blank; 340 untyped fields) and identity comparison remain **EV-SRC-READ / EV-NOT-RERUN** here. The 13 classified identifiers are a useful inventory, not proof that each repeated occurrence is interchangeable; one artifact identifier has three occurrences.
+| Completed run | Observed result | Exit |
+|---|---|---:|
+| Current producer self-test, unchanged by reviewer | 30/30 expected outcomes | 0 |
+| Previous receiving controls, cases unchanged | 11/11; separate context observation reproduced | 0 |
+| Two new paired route checks | 2 positive matches; 2 negative mismatches | 1 for combined receiving runner |
 
-## 2. AP-R2 — preserve ordered qualified homes, not bags of equal fragments
+Execution captured at `2026-11-10T07:23:46.949120+00:00`. Suite counts overlap and are not independent scientific results. The producer's full-Atlas identity result (1,427 EXACT) was not rerun here and remains source-reported.
 
-**Required. Locations:** `compare` lines 92–100 (raw exact-match pool) and 119–123 (node field Counter).
+## 2. Discharged preceding cases
 
-**N_FIELD_ORDER_BINDING.** A mapped record, with no declared field edits, changes:
+- **AP-R1 heading construction:** explicit levels give D/B, not D/A/B, for skipped-level siblings. The preceding negative is closed.
+- **AP-R2 original order/home examples:** two scopes swapped across two statements now fail without a reorder declaration; a declared reorder stays pending. The raw continuation cannot silently move from X to Y. The added undeclared record-order control also passes.
+- **AP-R3 original delete/insert examples:** same-identity grade and diagnostic-class changes now fail before map routing. A declared duplicate-occurrence removal still becomes pending rather than a false grade failure.
+- **Exact-byte context move:** the old/new heading contexts are exposed in `obligations.context_reviews`; the ordinary context-move positive passes.
+- The producer changed its own prior moved-record positive to put the record after the raw line, so the raw line retains its anchor. This is consistent with the new rule, not a relaxation of the independent receiving expectations.
+
+These results are accepted; the remaining findings do not reopen the five old counterexamples.
+
+## 3. AP-R2 / context obligation: changed-line routing drops inherited scope
+
+**Location:** `compare`, lines 124–130 versus 131–156. Context comparison is performed only when the entire mapped line has an identical SHA-256. Field comparison of a nonidentical node line does not record its enclosing-context change.
+
+**Paired positive P_EXACT_CONTEXT_QUEUE.** Move `TEST-THM-X THM | P(q) holds | @TEST§1` from `## Only for q>0` to `## All real q`, with an explicit record mapping. The report correctly gives one MAPPED_EXACT and one context obligation with the two different context chains.
+
+**Negative N_WHITESPACE_CONTEXT_BYPASS.** Make the same move and change only the space after `THM` from one to two. All scientific field bytes remain equal. The whole-line hash differs, so the comparison enters the field path and reports:
 
 ```text
-Local family | sc: q>0 | P(q) holds | sc: q<0 | R(q) holds
+MECHANICAL PASS {'EXACT': 5}
+obligations = {'pending_review': 0, 'context_reviews': []}
 ```
 
-to:
+The inherited scope changed exactly as in the paired positive, but the formatting change suppresses its review obligation. This is a false clean preservation signal, not a request that the tool prove the theorem or interpret the heading's mathematics.
+
+**Required correction:** determine changed context/anchor once for every matched source/target region, independently of whether line bytes are equal, fields are exact, or some field edit is pending. A changed inherited context must either fail or retain its explicit old/new review obligation. The byte-status label may stay EXACT at field level; it must not erase the enclosing-context obligation.
+
+## 4. AP-R2 / occurrence accounting: one target field consumed twice
+
+**Location:** `compare` lines 135–156. Exact field matching consumes a position via `tfree`; declared replacement matching decrements only `tpool`. The same candidate position remains free for a later exact match. Its Counter then becomes negative, and the final `range(n)` loop does not report that as a failure.
+
+Source fields inside one record:
 
 ```text
-Local family | sc: q<0 | P(q) holds | sc: q>0 | R(q) holds
+local | sc: q>0 | sc: q<0 | @T§1
 ```
 
-The tool reports `MECHANICAL PASS`, eight `EXACT`, zero pending. Each field's own hash is unchanged, but the typed scopes have changed association with the opaque statements. The Counter forgets field sequence and position. A record declaration alone must not authorize an undeclared rearrangement of qualified content. This is the original correct-home/association requirement, not a request to prove the formulas' truth.
+The map declares **only** an edit of the first scope, `sc: q>0` to `sc: q<0`; it declares no deletion or deduplication.
 
-**N_RAW_OWNER_BINDING.** The raw line `The preceding claim requires q>0.` is moved from immediately after `TEST-ALG-X` to immediately after `TEST-ALG-Y`, under the same heading, with an empty movement map. All bytes and heading hashes remain in the document. The tool reports four `EXACT`, zero pending, `MECHANICAL PASS`. The raw pool keys only text hash and heading context, not its qualified home, neighbors or sequence. Keeping unsupported text byte-identical is safe only if its binding is also preserved or the move is explicitly reviewed.
+**Paired positive P_DISTINCT_REPLACEMENT_OCCURRENCES:** candidate has two separate `sc: q<0` occurrences. The pending edit and the unchanged second scope can legitimately use distinct targets. The current result is MECHANICAL PASS, four EXACT and one pending edit.
 
-**Acceptance:** keep field occurrences/sequence and raw-region home or anchors in the mapping. Unexplained changes to their association fail; explicitly described rearrangements remain pending for review unless an exact, reviewed association-preserving transformation is checked. A fallback need not understand opaque science: conservatively require an unchanged contiguous qualified block or a mapped review obligation. Preserve inline edge bytes and all current positive cases. This does not require normalizing all Atlas records or adding a mathematical parser.
+**Negative N_REPLACEMENT_TARGET_DOUBLE_USE:** candidate has only **one** `sc: q<0` occurrence. It is consumed first as the replacement target and again as the exact unchanged second scope. The tool returns the **same report counts** as the positive: MECHANICAL PASS, four EXACT and one pending edit, with no missing-occurrence failure.
 
-## 3. AP-R1 — the heading chain must follow actual heading levels
+This case is not all-EXACT: the first scope edit is visibly pending. The defect is more specific: the report certifies the second source occurrence as EXACT without a distinct available target. One occurrence was removed without any corresponding removal/deduplication declaration.
 
-**Required. Location:** `extract` line 50.
+**Required correction:** use one occurrence-consumption mechanism for exact matches and declared replacements, including ordered matching. Every selected target position is consumed once; a second use fails. Maintain consistent order bookkeeping and reject negative/inconsistent consumption counts. Legitimate two-target edits and separately declared deletions/deduplications remain reviewable; this does not ban equal field text.
 
-**N_SKIPPED_LEVEL_SIBLING_CONTEXT.** For `# D`, then `### Branch A`, then `### Branch B`, the two level-3 headings are siblings. The current depth-as-list-length calculation gives the B node the chain `[D, A, B]`; the correct enclosing context is `[D, B]`. A Markdown file need not include every intermediate heading level. This is an extractor identity error even though the source bytes remain present.
+## 5. Bounded completion and reproduction
 
-**Acceptance:** track heading levels explicitly, pop all headings at a level greater than or equal to the incoming heading, and then push the new heading. Test skipped levels and siblings. Keep raw bytes as the identity source, and retain the now-passing non-ASCII and CRLF checks. If a heading layout is deliberately unsupported instead, fail it explicitly rather than emit an incorrect context chain.
+Implement the two local corrections together. Preserve the now-passing 30 self-tests and 11 receiving cases. In the four paired controls, both positives must remain accepted within their stated review obligations; the whitespace/context case must fail or queue the correct old/new context, and the missing-target-occurrence case must fail. No global parser rewrite, new owner science, Methodology release or repeated historical compaction campaign is requested.
 
-## 4. AP-R3 — hard invariants must not depend on mapping-route choice
+New evidence (under `evidence/atlas/v0.11_design_receiving/`):
 
-**Required for the documented contract. Locations:** the deletion shortcut at line 107, protected-node checks at 116–118, and insertion handling at 136–139.
+- `check_compound_routes.py`: SHA-256 `b179a06e15e0234e3fa4ad46a62264a5707740cc68656bad4a84fadf8325ee4a`. Replays the unchanged suites and the four paired cases, with hash-pinned inputs.
+- `rev2_receiving_output.txt`: SHA-256 `264c36d258e2993812bc959dc10f45fe7fd2cf06319cdea9e9a79ddc661be6ce`. Actual combined stdout, not an inferred or producer-reported result.
+- Detailed base/candidate text, movement maps and comparator reports are generated into the new output directory. The current receiving exit 1 denotes the two unmet expectations, not a runtime failure.
 
-**N_GRADE_DELETE_INSERT_ROUTE:** the same `TEST-ALG-X#1` changes from grade `ALG` to `THM`. A direct record mapping fails, correctly. However, declaring deletion of the old occurrence and insertion of the new occurrence returns `MECHANICAL PASS` with two `DECLARED_PENDING_REVIEW` rows.
-
-**N_DIAGNOSTIC_DELETE_INSERT_ROUTE:** the same `F1#1` changes from `D-PROOF` to `D-LINK` through the same route, again returning `MECHANICAL PASS` with two pending rows.
-
-These are **not silent EXACT preservation**: the pending status is visible, and must not be misreported as scientific adoption. Nevertheless design §7 and the tool's own contract say a changed grade/qualifier or diagnostic class always FAILs in pure compaction. Enforce that invariant for surviving protected identities before dispatching map operations, including delete+insert. A declaration cannot convert a required stage-1 change into an ordinary compaction review item. Do not ban legitimate explicit deletion or exact-duplicate-to-reference accounting; the two tests concern an identical protected key surviving with a changed grade/class.
-
-## 5. Context-changing byte moves — record a separate review obligation
-
-**O_CONTEXT_CHANGE_IS_ONLY_A_BYTE_MOVE** intentionally reproduces the documented behavior rather than counting it as a failed unit test. Moving an unchanged `TEST-THM-X` from a section `Only for q>0` to `All real q`, with an explicit record move, yields one `MAPPED_EXACT` and no pending fields. That is correct as a byte-movement description but is not an assertion that inherited scope survived.
-
-Before the D3 release workflow treats a zero-pending report as sufficient, changed enclosing contexts must be reviewed separately or appear in a context-review queue. The report should expose the old/new context identities. `MAPPED_EXACT` may remain the byte-status label; no need to redefine every harmless same-context move as a failure. This clarification can be incorporated in the same implementation pass, not a separate policy or Methodology release.
-
-## 6. One correction pass, then D3
-
-Implement AP-R1/R2/R3 together, preserve the current 21 self-test expectations, and replay the attached 11 receiving controls. The independent script also retains the one explicitly classified context-movement observation, not a mathematical-equivalence verdict. Proposed comparator changes may add a review-obligation flag without weakening the safety expectations. No full owner campaign, new Atlas tag or renewed #113/#114 review is needed.
-
-Evidence:
-
-- `evidence/atlas/v0.11_design_receiving/check_rev1_contract.py` (SHA-256 `39b1441121c74f184428fcb302b04beeb87a2a0c4adb7321bd455258681554ea`).
-- `evidence/atlas/v0.11_design_receiving/rev1_receiving_output.txt` (actual combined output and execution identity).
-- Full local JSON report is reproducible with the command below; it records all base/candidate fixture text, exact file hashes, mappings and comparator rows.
-
-```bash
-python3 -I tools/atlas_preservation.py selftest
-python3 -I evidence/atlas/v0.11_design_receiving/check_rev1_contract.py \
-  tools/atlas_preservation.py /tmp/atlas-preservation-receiving.json
+```sh
+python3 -I evidence/atlas/v0.11_design_receiving/check_compound_routes.py \
+  tools/atlas_preservation.py \
+  evidence/atlas/v0.11_design_receiving/check_rev1_contract.py \
+  /tmp/atlas-preservation-rev2-readback
 ```
 
-Use a fresh output path. The receiving script pins this reviewed implementation; on a successor change only the target identity pins after inspecting the code delta, not the fixtures or their meanings. Its current exit 1 is the expected record of five mismatches, not a tool startup failure.
+Use a new output directory. When evaluating a successor, inspect its delta and update only the tool identity pins; retain cases and expectations.
 
-**Continuation:** Atlas owner applies the bounded comparator correction; reviewer checks that delta and the unchanged controls; D3 pilot then supplies its explicit movement map, context-review obligations, and reviewed stage-1 baseline only if needed. Keep Method v0.3 separate and the PI's order 1 → 2 → 3. The 13-identifier classification need not be expanded into a global cleanup before D3.
+**Continuation:** D3 classification and movement-map preparation may continue, but do not treat this comparator as its accepted gate yet. Keep the two residuals in this existing PR/review cycle. Method v0.3 stays separate. Prior accepted working-memory/reporting work and #113/#114 are not reopened.
 
-**Reviewer lane text offered to the Atlas owner (only this reviewer's words):** Checked 10 November 2026, PR #202 head e71382d. Original tool byte identity verified; 21/21 self-tests independently pass. Receiving review on PR #203 identifies order/home binding, skipped-level heading context and delete/insert invariant-route cases (6/11 controls matched; one context-move observation separately recorded). Next: scoped correction/readback, then D3; no owner science or Atlas bytes changed. #113/#114 remain completed.
+**Reviewer checkpoint offered for the owner to install verbatim:** Checked 10 November 2026, #202 ccc5c0a. Tool hash/blob verified; current self-test 30/30 and unchanged prior receiving controls 11/11 independently pass. Five preceding mismatches closed. PR #203 records two residual compound-route cases: context obligations disappear on a whitespace-edited moved node; declared replacement and exact matching reuse one target field. New paired controls: two positives pass, two negatives mismatch. Next: one local correction/readback before D3 gating; preparation may continue. No Atlas or owner science changed.
 
-No producer file, Atlas/Method, owner DSN, pipe state, main, release tag or another co-owner's lane was modified by this review.
+No producer source, Atlas/Method, owner DSN, pipe state, main, release tag or another co-owner's lane was modified by this review.
