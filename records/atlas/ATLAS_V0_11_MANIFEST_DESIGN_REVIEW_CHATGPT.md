@@ -1,94 +1,98 @@
-# Atlas v0.11 preservation manifest — ChatGPT design review
+# Atlas v0.11 preservation manifest — ChatGPT receiving review
 
-**Date:** 10 November 2026. **Status:** [SESSION], NONCANONICAL design/tooling review; no scientific adoption or release approval.
-**Object:** PR #202, `claude/atlas-v0.11-manifest-design`, head `1075cc730cc065addcf29efd4e7fce8e933d252e` (design draft 0).
-**Verdict:** **REVISE DESIGN CONTRACT — three bounded groups below.** The two-tier direction is accepted for continued development; it is not yet a preservation gate. Integrate these groups in the next extractor/comparator implementation pass, then perform one bounded D3 pilot review. The intentionally absent comparator and disclosed incomplete parsing are not themselves defects in a design draft.
+**Date:** 10 November 2026. **Status:** [SESSION], NONCANONICAL tooling review; no scientific adoption, compaction acceptance or merge authorization.
+**Object:** PR #202, implementation revision 1, head `e71382de2e408c15b781b0dbcc6046df8e06a513`.
+**Decision:** **REVISE — three bounded implementation groups before this comparator is used as the D3 preservation gate.** The original byte-offset and CRLF defects are fixed. The producer's 21/21 result independently reproduces. Remaining issues are order/home binding, heading-context construction, and the documented hard invariants' delete/insert route. D3 planning and source classification may proceed, but a clean report from this revision is not yet sufficient for compaction acceptance.
+**Previous review:** this same path at `134e420a3dc6722992da32487095f91280676260` preserves the complete draft-0 review. Its original probe script/output are unchanged; the current file records the latest inspected object, not an edit to frozen evidence. #113/#114 remain closed and are not reopened.
 
-## 1. Sources, reading extent and execution
+## 1. Sources and actual execution
 
-Read the complete design §§1–6, complete 74-line extractor, complete `full_run_summary.json`, targeted entries across the eight-record `sample_manifest.json`, and Atlas v0.10 lines 736–740 as an original D3 sample. Governance: current CONVENTIONS (complete), current Atlas orientation (complete), Atlas Method v0.2 at `atlas-v0.10` (complete; especially §§3–7), and Methodology v1.4 §§13.5–13.7 at `methodology-v1.4` (targeted). This is not a full scientific rereading of the 18 owners or the 1,543-line Atlas.
+Read the complete 205-line `tools/atlas_preservation.py`, including the comparator and all self-tests; design §7 and its 13-identifier classification; `rev1/atlas_v0_10_extract_summary.json`; current CONVENTIONS in full; and Atlas v0.10 lines 1–45 for real source/header/L0 context. Prior design and Methodology/Atlas Method scope remains as recorded in the previous review. No new full reading of the 18 owners, full Atlas extraction replay, owner-certificate campaign, or D3 compaction was performed.
 
-Independently verified #113 merged at `447eb99750bd3ad807e78840e9259ac8c40f35d4` and #114 at `752bb6a4e136c9eccb5424b5c83ce421462f4e28`. That review is closed; this design review does not reopen it. A DSN checker acceptance is not certification of an Atlas comparator.
+[EV-BYTES / EV-HASH / EV-RUN] The connector-delivered tool was materialized without changing its source and verified against both its declared SHA-256 and Git blob before execution:
 
-[EV-BYTES / EV-HASH / EV-RUN] The extractor was obtained through the GitHub connector, materialized locally, and matched to its Git blob before execution, without altering it:
+- Commit: `e71382de2e408c15b781b0dbcc6046df8e06a513`.
+- SHA-256: `c78be1f29bae55642704bbeaaeef86c06b17983423a2c819ac8c2fe574a8b75a`.
+- Git blob: `67a16432b19e771d40e8d27f7b16130952929f54`.
+- Size: 17,564 bytes, 205 physical lines; Python 3.13.5.
+- Direct shell retrieval of GitHub failed DNS. Authorized connector retrieval plus local byte-identity verification was used; this is actual execution of the unchanged tool, not an implementation reconstructed from its algorithm.
 
-- Path: `evidence/atlas/v0.11_design/atlas_manifest_draft.py`.
-- SHA-256: `5809873f739e144e042b51330ce8511d2eaee7f581090cf3db4f078a27b3b9b2`.
-- Git blob: `f98ceec30f6c46e6daa9dffc78d461f2f81344a3`; 5,785 bytes.
-- Python 3.13.5. `check_draft0_contract.py` executes ten small design observations against the unchanged extractor, including a real CLI invocation for newline handling. All ten reported observations reproduced. **This is not ten passing preservation gates or ten failures of a comparator: no comparator exists yet.**
+| Run | Actual result | Meaning |
+|---|---|---|
+| Unchanged producer `selftest` | 21/21 expected, exit 0 | Producer's stated result confirmed |
+| Independent bounded receiving controls | 6/11 matched; 5 mismatches, exit 1 | Three groups in §§2–4; not a runtime error |
+| Separate context-move observation | 1/1 reported behavior reproduced | Documented `MAPPED_EXACT` byte movement, not counted as a failing producer contract test (§5) |
 
-[EV-SRC-REPORTED / EV-NOT-RERUN] Whole-file counts (687 parsed node occurrences, 117 combined diagnostic occurrences, 488 UNPARSED lines, 545 UNVERIFIED fields, 15 duplicate identifier strings) are the preparer's report; the full Atlas extraction was not independently rerun. No owner scientific certificate was rerun. The reviewed schema contains no Atlas byte edit.
+Positive receiving cases confirm identity comparison, changed-field pending status, rejection of a wrong source hash, rejection of an inline edge-pin swap, an explicit same-context move, and UTF-8/CRLF byte slices. The LF separators omitted from individual spans reconstruct the original bytes exactly when reinserted between regions. That representation is distinguishable from saying the individual spans alone are a disjoint cover of every byte.
 
-## 2. Accepted design choices
+The producer's full-Atlas counts (1,543 regions; 560 nodes, 117 diagnostics, 615 raw, 135 headings, 116 blank; 340 untyped fields) and identity comparison remain **EV-SRC-READ / EV-NOT-RERUN** here. The 13 classified identifiers are a useful inventory, not proof that each repeated occurrence is interchangeable; one artifact identifier has three occurrences.
 
-Keep raw-text binding, distinct typed/opaque coverage, the frozen source snapshot, per-field comparison rather than identifier-set equivalence, transparent UNVERIFIED coverage, size as an aim rather than a gate, and Method v0.3 as a separately reviewed delta. Keeping unsupported syntax unchanged is a valid option; no complete mathematical parser is required. Check logs may move out while the current result, scope and evidence limitation remain at the Atlas home.
+## 2. AP-R2 — preserve ordered qualified homes, not bags of equal fragments
 
-## 3. Required contract changes — one implementation batch
+**Required. Locations:** `compare` lines 92–100 (raw exact-match pool) and 119–123 (node field Counter).
 
-### R1 — real byte identity and complete source accounting
+**N_FIELD_ORDER_BINDING.** A mapped record, with no declared field edits, changes:
 
-**Locations:** design §2 and §4.1–2; extractor `fields`, `parse`, `main`.
-
-**Executed facts.** `span` is documented as bytes but computed with Python Unicode string indices. For `TEST-ALG-X ALG | α=1 | sc: q>0 | ¬global`, all three field hashes match character slices and none matches the advertised UTF-8 byte slices. Separately, `open(..., encoding='utf-8').read()` normalizes CRLF: the reported source SHA-256 equals normalized LF text, not the input bytes. These are source-identity defects, not numerical issues.
-
-**Required:** hash `read_bytes()`; define half-open UTF-8 byte ranges explicitly (or label character ranges and also provide a verified byte mapping). Assert `sha256(source_bytes[a:b]) == recorded_hash` for every source and destination span. Bind schema/extractor identity, document identity, occurrence, field position and raw content. Newline transformations, if desired, must be declared rather than hidden in reading.
-
-Account for the complete document in a raw-span ledger, not just parsed content rows. Headings currently become a `section` string and have no independent span/hash. Header/source-table/L0/L4 material, inherited scope, index entries, syntax separators and blank lines need explicit semantic/context/structural classification; structural bytes may change under a declared layout rule. Do not let an ignored heading erase a guard or detach it from its descendants. Coverage is bidirectional: no unexplained source loss and no unexplained candidate insertion. This does not require every raw region to become a scientific node.
-
-### R2 — DECLARED is not PRESERVED; signatures are alarms, not proofs
-
-**Locations:** design §2 tier rule and §4.4–8.
-
-The draft already requires review of every DECLARED edit (§4.8); keep that safeguard and remove any implication elsewhere that equal extracted features prove preservation. The unchanged extractor gives equal RID/pin/marker/number signatures for `q<1` versus `q>1`; numeral multisets also agree for `x=1,y=2` versus `x=2,y=1`. Raw hashes correctly differ. A declaration plus such equality must remain pending review, not become a mechanical PASS.
-
-Use distinct outcomes, for example EXACT, MAPPED_EXACT, DECLARED_PENDING_REVIEW, REVIEWED_CHANGE, UNVERIFIED and FAIL. Parsing status and preservation status are separate: opaque text can be proved byte-preserved without being semantically typed. A reviewed change must cite the particular base/candidate spans and review disposition; it is not an automated proof of free paraphrase.
-
-Tier B's phrase "found verbatim in the candidate" must require the correct mapped home and context, not global substring membership. Executed example: an untyped `only on q>0` segment retains its hash when moved from synthetic node X to unrelated Y, although X has lost its condition. Require an occurrence-specific source-to-destination map. Permitted many-to-one duplicate collapse must be explicit and keep all distinct qualified payload and consumer relations. Disallow unexplained field relocation, weakening, insertion or disappearance.
-
-A grade/qualifier change or substantive diagnostic retirement is not made compaction-only by adding a disposition. Put an independently reviewed correction into a separately hashed stage-1 baseline, then compact against that baseline. Pure presentation/alias deduplication can remain compaction when its preservation map proves the unchanged content and reference roles.
-
-### R3 — preserve occurrences, typed identities and edge associations
-
-**Locations:** schema key definitions, extractor `fields`/`L5`/`HEAD`, criteria §4.3–4.
-
-Keep `scientific_id` separate from an occurrence key such as document identity + source byte span. Two lines with one ID can contain distinct qualified payloads; equal ID sets do not account for both. The prototype retains both rows, which is good, but the proposed set-only acceptance criterion is insufficient.
-
-The implementation uses `sorted(set(...))` for RIDs, pins and markers despite the design's multiset wording. An executed two-mention/one-mention pair produces the same list. Preserve occurrence counts/positions where required, and keep the full field hash authoritative.
-
-A list of RID names and a separate list of pins loses their association. Swapping the two pins between `<DYAD-ALG-X [dyad-v1.0]; GEN-ALG-Y [gen-v2.0]` leaves both extracted lists unchanged. Preserve ordered raw edge fragments or explicit bound tuples containing source/target, edge type, role, actual consumer pin and qualifier context. Unresolved syntax may stay opaque and unchanged; it need not be guessed into tuples.
-
-Distinguish claim RIDs, artifact RIDs, local/RID-less keys, index/cross-reference occurrences, stable L5 keys and HEADLINE display numbers. Atlas Method §4(11)/§5 expressly distinguishes these. The reported duplicate list includes `GEN-ART-*`; fifteen repeated strings are not automatically fifteen duplicated scientific claims. Preserve each origin and classify it before coalescing anything. A syntax flag `conditional:false` must mean only "no recognized explicit marker", not "unconditional": the current extractor returns false for a statement that says "If H holds, P follows." Keep raw grade/qualifier payloads such as `RES[from THM]` bound even where normalized typing is incomplete.
-
-## 4. Answers to the four owner questions
-
-| Question | Recommended decision |
-|---|---|
-| Normalize syntax first or keep large Tier B? | First improve the lossless observational extractor on unchanged v0.10. Recognize only unambiguous secondary segments; preserve unsupported ones opaquely. For D3, optionally add an assertion-gated resegmentation/rendering step with an exact origin map. Do not normalize all 18-source content merely to raise a coverage percentage. |
-| Is the marker list sufficient; freeze `·s`, `·dx`, `nc`? | The list is a useful diagnostic aid, never sufficient semantic evidence. Preserve grade, `·c/·s/·dx/nc`, `from`, all premises, quantifiers, conventions/clocks, polarity and custody at their mapped homes. Forbid semantic qualifier changes in the pure compaction stage; authorized corrections are stage 1. No exhaustive lexicon is required when exact raw binding is retained. |
-| Fix all fifteen duplicate identifiers? | Inventory/classify all fifteen reported cases once; resolve the pilot/touched cases and any ambiguity that blocks a mapping. Exact duplicate-to-pointer replacement is editorial when qualified payloads and edge roles are identical. Conflicting/different-scope cases need scoped review; untouched cases can remain explicitly deferred. Never overwrite one occurrence merely because its ID equals another. |
-| Comparator in `tools/`? | Yes, a separate Atlas-aware tool, e.g. `tools/atlas_preservation.py`, after this draft matures. Keep independent receiving controls under Atlas evidence and reuse source/link checks from `atlas_check.py`; do not weaken or retrofit the DSN checker to claim Atlas semantics. Pin schema/extractor/comparator hashes in the report. |
-
-## 5. Bounded acceptance for the next implementation and D3 pilot
-
-Retain the draft's six proposed mutation controls. Add the demonstrated UTF-8/raw-newline binding cases and controls for wrong-home opaque text, duplicate-occurrence loss, relation/pin association swap, unchanged-number polarity/assignment changes, inherited-context loss and unaccounted candidate insertion. Positive cases must include exact retention, same-context movement, declared byte-preserving resegmentation and qualified duplicate-to-pointer mapping. Require no false preservation verdict; unsupported parsing can remain UNVERIFIED with mapped exact bytes.
-
-Freeze base and candidate byte identities and source-manifest identity; compare raw coverage first and typed payloads second. Review only changed or ambiguous blocks; do not rerun owner certificates. Extractor extensions and the compare stage can be developed together now under these criteria; a separate paperwork-only iteration is not needed before coding.
-
-The design's "about half" coverage is a denominator-specific observation: 314 fully typed nodes / 687 parsed node occurrences is about 45.7%, but 314 / 1,292 reported content lines is about 24.3%. Neither is semantic coverage of all facts. Report typed/opaque bytes and occurrence counts separately. The 117 count combines H/L5 parses; do not compare it directly with a count of stable L5 keys. The 25 conditional-node figure is syntax coverage only.
-
-**Next eligible action:** owner incorporates R1–R3 in one design/implementation batch, extends representative examples (including an explicit conditional qualifier, an opaque field and a context-bound occurrence), and runs the bounded D3 pilot before whole-file compaction. Method v0.3 remains separate. PI priority 1 → 2 → 3 is unchanged; stage 1 tool debt is closed.
-
-## 6. Reproduction and durable checkpoint
-
-Evidence: `evidence/atlas/v0.11_design_receiving/check_draft0_contract.py` and `probe_results.json`. Obtain the extractor at the reviewed commit, then run:
-
-```sh
-python3 -I evidence/atlas/v0.11_design_receiving/check_draft0_contract.py \
-  /path/to/unchanged/atlas_manifest_draft.py /tmp/pr202-draft0-probes.json
+```text
+Local family | sc: q>0 | P(q) holds | sc: q<0 | R(q) holds
 ```
 
-The harness pins the extractor SHA/blob and uses synthetic TEST IDs, not proposed owner science. It demonstrates design limits; it does not implement the compare stage or score whole-Atlas preservation.
+to:
 
-Reviewer continuation: reviewed PR #202 draft 0 at `1075cc73`; keep the ten observations and the three correction groups together. Resume with the revised contract/extractor and comparator controls, not with #113/#114 or the completed orientation pilot. Own work branch: `chatgpt/atlas-v0.11-manifest-design-review`; its actual pushed head and review PR locate this checkpoint. Owner/shared orientation sections remain the owner's; this record does not overwrite another lane.
+```text
+Local family | sc: q<0 | P(q) holds | sc: q>0 | R(q) holds
+```
 
-No Atlas/Method/owner bytes, producer draft files, source tags, pipe state or main branch were modified by this review. No full-corpus or scientific correctness assertion is made.
+The tool reports `MECHANICAL PASS`, eight `EXACT`, zero pending. Each field's own hash is unchanged, but the typed scopes have changed association with the opaque statements. The Counter forgets field sequence and position. A record declaration alone must not authorize an undeclared rearrangement of qualified content. This is the original correct-home/association requirement, not a request to prove the formulas' truth.
+
+**N_RAW_OWNER_BINDING.** The raw line `The preceding claim requires q>0.` is moved from immediately after `TEST-ALG-X` to immediately after `TEST-ALG-Y`, under the same heading, with an empty movement map. All bytes and heading hashes remain in the document. The tool reports four `EXACT`, zero pending, `MECHANICAL PASS`. The raw pool keys only text hash and heading context, not its qualified home, neighbors or sequence. Keeping unsupported text byte-identical is safe only if its binding is also preserved or the move is explicitly reviewed.
+
+**Acceptance:** keep field occurrences/sequence and raw-region home or anchors in the mapping. Unexplained changes to their association fail; explicitly described rearrangements remain pending for review unless an exact, reviewed association-preserving transformation is checked. A fallback need not understand opaque science: conservatively require an unchanged contiguous qualified block or a mapped review obligation. Preserve inline edge bytes and all current positive cases. This does not require normalizing all Atlas records or adding a mathematical parser.
+
+## 3. AP-R1 — the heading chain must follow actual heading levels
+
+**Required. Location:** `extract` line 50.
+
+**N_SKIPPED_LEVEL_SIBLING_CONTEXT.** For `# D`, then `### Branch A`, then `### Branch B`, the two level-3 headings are siblings. The current depth-as-list-length calculation gives the B node the chain `[D, A, B]`; the correct enclosing context is `[D, B]`. A Markdown file need not include every intermediate heading level. This is an extractor identity error even though the source bytes remain present.
+
+**Acceptance:** track heading levels explicitly, pop all headings at a level greater than or equal to the incoming heading, and then push the new heading. Test skipped levels and siblings. Keep raw bytes as the identity source, and retain the now-passing non-ASCII and CRLF checks. If a heading layout is deliberately unsupported instead, fail it explicitly rather than emit an incorrect context chain.
+
+## 4. AP-R3 — hard invariants must not depend on mapping-route choice
+
+**Required for the documented contract. Locations:** the deletion shortcut at line 107, protected-node checks at 116–118, and insertion handling at 136–139.
+
+**N_GRADE_DELETE_INSERT_ROUTE:** the same `TEST-ALG-X#1` changes from grade `ALG` to `THM`. A direct record mapping fails, correctly. However, declaring deletion of the old occurrence and insertion of the new occurrence returns `MECHANICAL PASS` with two `DECLARED_PENDING_REVIEW` rows.
+
+**N_DIAGNOSTIC_DELETE_INSERT_ROUTE:** the same `F1#1` changes from `D-PROOF` to `D-LINK` through the same route, again returning `MECHANICAL PASS` with two pending rows.
+
+These are **not silent EXACT preservation**: the pending status is visible, and must not be misreported as scientific adoption. Nevertheless design §7 and the tool's own contract say a changed grade/qualifier or diagnostic class always FAILs in pure compaction. Enforce that invariant for surviving protected identities before dispatching map operations, including delete+insert. A declaration cannot convert a required stage-1 change into an ordinary compaction review item. Do not ban legitimate explicit deletion or exact-duplicate-to-reference accounting; the two tests concern an identical protected key surviving with a changed grade/class.
+
+## 5. Context-changing byte moves — record a separate review obligation
+
+**O_CONTEXT_CHANGE_IS_ONLY_A_BYTE_MOVE** intentionally reproduces the documented behavior rather than counting it as a failed unit test. Moving an unchanged `TEST-THM-X` from a section `Only for q>0` to `All real q`, with an explicit record move, yields one `MAPPED_EXACT` and no pending fields. That is correct as a byte-movement description but is not an assertion that inherited scope survived.
+
+Before the D3 release workflow treats a zero-pending report as sufficient, changed enclosing contexts must be reviewed separately or appear in a context-review queue. The report should expose the old/new context identities. `MAPPED_EXACT` may remain the byte-status label; no need to redefine every harmless same-context move as a failure. This clarification can be incorporated in the same implementation pass, not a separate policy or Methodology release.
+
+## 6. One correction pass, then D3
+
+Implement AP-R1/R2/R3 together, preserve the current 21 self-test expectations, and replay the attached 11 receiving controls. The independent script also retains the one explicitly classified context-movement observation, not a mathematical-equivalence verdict. Proposed comparator changes may add a review-obligation flag without weakening the safety expectations. No full owner campaign, new Atlas tag or renewed #113/#114 review is needed.
+
+Evidence:
+
+- `evidence/atlas/v0.11_design_receiving/check_rev1_contract.py` (SHA-256 `39b1441121c74f184428fcb302b04beeb87a2a0c4adb7321bd455258681554ea`).
+- `evidence/atlas/v0.11_design_receiving/rev1_receiving_output.txt` (actual combined output and execution identity).
+- Full local JSON report is reproducible with the command below; it records all base/candidate fixture text, exact file hashes, mappings and comparator rows.
+
+```bash
+python3 -I tools/atlas_preservation.py selftest
+python3 -I evidence/atlas/v0.11_design_receiving/check_rev1_contract.py \
+  tools/atlas_preservation.py /tmp/atlas-preservation-receiving.json
+```
+
+Use a fresh output path. The receiving script pins this reviewed implementation; on a successor change only the target identity pins after inspecting the code delta, not the fixtures or their meanings. Its current exit 1 is the expected record of five mismatches, not a tool startup failure.
+
+**Continuation:** Atlas owner applies the bounded comparator correction; reviewer checks that delta and the unchanged controls; D3 pilot then supplies its explicit movement map, context-review obligations, and reviewed stage-1 baseline only if needed. Keep Method v0.3 separate and the PI's order 1 → 2 → 3. The 13-identifier classification need not be expanded into a global cleanup before D3.
+
+**Reviewer lane text offered to the Atlas owner (only this reviewer's words):** Checked 10 November 2026, PR #202 head e71382d. Original tool byte identity verified; 21/21 self-tests independently pass. Receiving review on PR #203 identifies order/home binding, skipped-level heading context and delete/insert invariant-route cases (6/11 controls matched; one context-move observation separately recorded). Next: scoped correction/readback, then D3; no owner science or Atlas bytes changed. #113/#114 remain completed.
+
+No producer file, Atlas/Method, owner DSN, pipe state, main, release tag or another co-owner's lane was modified by this review.
