@@ -1,6 +1,6 @@
-# RTG State Atlas v0.11 — acceptance record (draft)
+# RTG State Atlas v0.11 — acceptance record
 
-**Status:** CANDIDATE, 10 November 2026. Receiving review complete (§3); PI acceptance not yet given. `atlas-v0.10` stays the governing tagged Atlas until the PI accepts, the PR is merged and the tag `atlas-v0.11` exists and is verified.
+**Status:** PI ACCEPTED, 10 November 2026. The merge of PR #204 and the annotated tag `atlas-v0.11` are pending (§4). `atlas-v0.10` stays the tagged Atlas until both exist and are verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, on branch `claude/atlas-v0.11-d3-pilot` (PR #204). Under CONVENTIONS §4 this record comes before the merge and the tag.
 
@@ -59,16 +59,18 @@ This closes the compaction work and directs that the pilot's content become v0.1
 
 **Receiving review.** ChatGPT, Atlas co-owner: stage 1 and stage 2a accepted (reviews above). **Final review, PR #204 review 5841306614, on commit `8cd20d1a0ec3af869df050014c9a4bced20d2394`: ACCEPT SCOPED — PI adoption ready.** The reviewer recomputed independently: the candidate hash and size; exactly 23 changed lines against v0.10, none added or removed; stage 2a → 2b only L736, L740, L823; stage 2b → v0.11 only L1, L4, L1542; the manifest hash, with 18/18 source entries byte-equal to v0.10 and only `atlas`, `frozen_at`, `previous_atlas_tag`, `note` changed. The three stage-2b items were read against `recog-v0.3.27` (§2 R6, §6.13b, §6.16e) and accepted; grades, domains and OPEN states unchanged; START-OFFSET (ii) needs no correction. Not rerun by the reviewer: `atlas_check.py`, the builders, owner certificates. The 5 UNVERIFIED links, 3 UNVERIFIED artifacts and 11 documented-unresolved links are those of v0.10 and were not counted as new blockers.
 
-**PI acceptance:** not yet given. It is recorded here verbatim when given, with the object hash it refers to.
+**PI acceptance: ACCEPTED** in the project conversation, 10 November 2026, 15:25 +03:00. Verbatim: "Atlas v0.11'i benimsiyorum" ("I adopt Atlas v0.11"). The object at that moment is the candidate of §1, `8d7a43f05a42c6a69b50eb97b98dd96ddda7eea327333ae5cc73e03dee46f358`, the one the final review names and the one the owner put to the PI by hash immediately before.
 
-## 4. Publication (after acceptance; the PI executes)
+Acceptance adopts a NONCANONICAL derived map, not owner science. It changes no owner DSN, grade, source tag, Method edition, consumer adoption or pipe state.
 
-1. `BASELINE.md`: the owner sets the ATLAS row to v0.11, the hash of §1 and this record, in PR #204 before the merge.
+## 4. Publication (pending; the PI executes)
+
+1. `BASELINE.md`: ATLAS row set to v0.11 with the hash of §1 and this record (done on the branch with this record).
 2. Merge PR #204 into `main` with a merge commit, not squash.
 3. Create and push the annotated tag `atlas-v0.11` on that merge commit, after checking that the file hash at `main` is `8d7a43f0…f358`.
 4. After the tag the Atlas owner writes the tag-verification record.
 
-The CLI block is issued with the acceptance. A merge, a tag or a passing check is not an adoption.
+**Publication bytes.** They equal the accepted bytes: the Atlas carries no status line that publication would change. A merge, a tag or a passing check is not an adoption.
 
 ## 5. Carried forward
 
