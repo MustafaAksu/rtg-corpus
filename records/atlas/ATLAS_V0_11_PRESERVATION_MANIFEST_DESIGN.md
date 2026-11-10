@@ -33,7 +33,7 @@ Two rules carry the design:
 | Parsed as typed nodes | 687 |
 | Parsed as L5/H diagnostics | 117 |
 | `UNPARSED` | 488 |
-| Typed fields | 1,719 (statement 685, locator 435, negative 128, cert 105, scope 104, consumer 91, dep 75, alias 56, derived 27, premise 8, tension 4, evidence 3, collision 1) |
+| Typed fields | 1,722 (statement 685, locator 435, negative 128, cert 105, scope 104, consumer 91, dep 75, alias 56, derived 27, premise 8, tension 4, evidence 3, collision 1) |
 | `UNVERIFIED` fields | 545, in 373 of the 687 nodes |
 | Nodes with every field typed | 314 |
 
