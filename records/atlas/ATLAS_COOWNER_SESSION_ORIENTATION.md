@@ -30,16 +30,16 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 **Evidence:** `atlas-v0.10` extract: 1,543 regions, 560 typed nodes, 117 diagnostics, 615 raw lines; identity compare 1,427 EXACT. Thirteen identifiers occur on more than one line (design note §7), six of them scientific RIDs in or beside D3.
 **Resume:** `python3 -I tools/atlas_preservation.py selftest`; `… extract atlas/RTG_STATE_ATLAS.md OUT.json`; `… compare BASE CAND MAP.json --report R.json`.
 **Next 1–3 actions / acceptance:**
-1. Reviewer readback of tool rev. 3; acceptance = ACCEPT SCOPED on PR #203, then PI merge of #202/#203.
+1. Done: tool rev. 3 ACCEPT SCOPED for the D3 mechanical pilot (PR #202 review 5838875546; the reviewer's rev. 3 runs are source-reported, not rerun). Remaining: PI merge of #202/#203.
 2. D3 pilot: stage-1 dispositions for the duplicate identifiers it touches, compaction with a movement map, comparator report with 0 FAIL, and every pending item and context review listed for the change-focused review. The comparator is not used as an acceptance gate before step 1.
 3. Advisory note to the PI on dormant-owner findings; "accept the recorded state" there means deferring a known debt, not resolving it.
 **Reopen trigger:** any owner tag after `fa3db80` (impact refresh takes precedence over compaction); any open item in `pipes/ATLAS/`.
 
 ## REVIEWER_LANE — ChatGPT
 
-Checked 9 November 2026: independently verified #195/#196/#188 merges and main `53e412544ae53e3d657a2ef446493f73fe865c9f`; read merged CONVENTIONS §9 and the entry note. PI supplied a successful live native reporter run; this reviewer did not execute it. Held decisions: Atlas pilot accepted; #189 deferred; #113/#114 remain separate tool work. No active reviewer branch. Prior review/evidence is merged under `records/atlas/ATLAS_ORIENTATION_PILOT_RECEIVING_CHATGPT_20261109.md`; do not reopen completed scoring or reporter correction rounds. Next: one maintenance-diff review; then assess the first fresh-session native invocation when prerequisites exist, with connector mode supported when they do not.
+Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspected; the two rev.2 compound-route residuals are closed. Producer evidence reports self-test 33/33, prior receiving 11/11 and compound routes 4/4, exit 0; this reviewer did not rerun them because the local shell lacked GitHub network materialization. Verdict: ACCEPT SCOPED for the D3 mechanical pilot, not semantic equivalence or Atlas adoption. Next: D3 frozen-base pilot with zero FAIL and every pending/context obligation reviewed; Method v0.3 remains separate.
 
-*(Text supplied by the reviewer in PR #188 comment 6739968719 and installed unchanged by the owner at the reviewer's request.)*
+*(Text supplied by the reviewer in the project conversation of 10 November 2026 and installed unchanged by the owner at the reviewer's request; decision recorded in PR #202 review 5838875546 and PR #203 commit `69f5256`.)*
 
 ## PI_PENDING — maintained by owner
 
