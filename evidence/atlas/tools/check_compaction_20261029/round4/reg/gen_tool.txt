@@ -1,0 +1,15 @@
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  archive identity stage1-intermediate  — 5677d706d5ccca0e3b822f484e1de7641e771e8ec3e83c51b50daf336833cd98
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation S2-H (replace-header)  — header replaced; status-summary sentences are a subset of the base summary (header/section1)
+PASS  operation S2-A (history-appendix)  — section relocated (47949 chars), found in ['stage1-intermediate']
+PASS  operation S2-F (replace-footer)  — footer replaced
+PASS  qualified claim blocks  — 360 claim blocks in base live text: 359 byte-identical, 1 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS

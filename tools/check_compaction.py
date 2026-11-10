@@ -40,7 +40,7 @@ exactly once in base and candidate; exactly one history-appendix operation must 
 region (plus, at most, the trailing rule and footer lines) and insert exactly the candidate region (plus
 the same kind of tail), with no other "## " heading in its new text. A source hash that leaves the live
 text passes only when the key is set, the operation that removes it from the live text (never the
-history-appendix operation) declares it in "relocate_hashes" as a net removal, and the parsed candidate
+history-appendix operation) declares it in "relocate_hashes" as a net removal from the live text (never a header or footer operation), and the parsed candidate
 history region (not the footer) carries it; without the key, hashes are protected as before.
 
 RID pattern (OFN v0.11 stage 2): the programme namespaces `RTG-…` and `RTG-OFN-…` (Methodology v1.4 §4.2)
@@ -379,14 +379,32 @@ def main():
             if op.get("class") == "history-appendix":
                 bad_decl += [f"{op['id']}:{h} (declared on the history-appendix operation)" for h in decl]
                 continue
+            # round 4: the source must be live text. Header and footer are metadata regions (live_text excludes
+            # them), so a metadata operation can never authorize a live removal, and only occurrences of the hash
+            # that lie in the live region of the removed span count towards the net removal.
+            if op["op"] in ("replace-header", "replace-footer"):
+                bad_decl += [f"{op['id']}:{h} (declared on a header/footer operation)" for h in decl]
+                continue
             if op["op"].startswith("replace"):
                 gone, put = op.get("_removed", ""), op.get("new", "")
             else:
                 gone, put = op.get("old", ""), op.get("new", "")
             at = BASE_TEXT.find(gone) if gone else -1
             in_hist = rb is not None and at >= 0 and rb[0] <= at < rb[1]
+            h_end = split_regions(BASE_TEXT)["header"][1]
+
+            def live_count(h):
+                n, i = 0, BASE_TEXT.find(h, at)
+                while 0 <= i < at + len(gone):
+                    ls = BASE_TEXT.rfind("\n", 0, i) + 1
+                    le = BASE_TEXT.find("\n", i)
+                    line = BASE_TEXT[ls:le if le >= 0 else len(BASE_TEXT)]
+                    if i >= h_end and not (rb is not None and rb[0] <= i < rb[1]) and not FOOTER.match(line):
+                        n += 1
+                    i = BASE_TEXT.find(h, i + 1)
+                return n
             for h in decl:
-                ok = (at >= 0 and not in_hist and gone.count(h) > put.count(h)
+                ok = (at >= 0 and not in_hist and live_count(h) > put.count(h)
                       and h in hist_c and h in hb - hc)
                 (relocated if ok else bad_decl).append(h if ok else f"{op['id']}:{h}")
     lost = sorted(hb - hc - set(relocated))
