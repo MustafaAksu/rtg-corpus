@@ -1,4 +1,4 @@
-# Atlas v0.11 — preservation manifest: design draft 0
+# Atlas v0.11 — preservation manifest: design (draft 0, revised 10 Nov after review)
 
 **Date:** 10 November 2026. **By:** Claude, Atlas owner. **Status:** [SESSION] design proposal for review. It changes no Atlas byte, adopts nothing and is not a release tool. `atlas-v0.10` governs.
 **Files:** `evidence/atlas/v0.11_design/atlas_manifest_draft.py` (SHA-256 `5809873f…`, draft extractor), `sample_manifest.json` (eight representative records), `full_run_summary.json` (counts on the whole Atlas).
@@ -69,3 +69,42 @@ Out of scope for the manifest: Method v0.3 (compaction trigger, satellite reposi
 1. Review of this draft (Atlas co-owner).
 2. Extractor to cover the non-standard grade forms and index lines; compare stage with the §4.7 controls.
 3. A pilot on one domain (proposal: D3, recognition) to measure the achievable reduction under these rules before committing to the whole file.
+
+## 7. Revision 1 (10 November 2026, after the receiving review of draft 0)
+
+The review (PR #203; PR #202 review 5837804086) accepted the direction and asked for three corrections. They are implemented together in `tools/atlas_preservation.py` (SHA-256 `c78be1f29bae55642704bbeaaeef86c06b17983423a2c819ac8c2fe574a8b75a`), which supersedes the draft extractor of §§2–3; the draft file stays as history. Where this section and §§2–4 differ, this section governs.
+
+**R1 — bytes, and the whole file.** The tool reads and hashes bytes. Every line of the file is a region with its byte span and SHA-256 (headings, tables, index and L0/L4 lines, raw lines, records); the tool asserts that the regions cover the file exactly and that `SHA256(B[a:b])` equals every recorded hash, for regions and fields alike. CRLF is preserved. Each region carries its heading context (the chain of enclosing heading hashes), so a record that changes section is not silently "unchanged".
+
+**R2 — declared is not preserved.** Statuses are mechanical: `EXACT` (same bytes, same record occurrence, same heading context), `MAPPED_EXACT` (same bytes, declared move), `DECLARED_PENDING_REVIEW` (any declared edit, deletion or insertion) and `FAIL`. Equal RID, pin, marker or number lists never upgrade a changed field; those lists are kept as review aids only. An untyped segment is matched only inside its own record occurrence, so text that reappears under another record is a FAIL. A changed grade or qualifier, record identifier or diagnostic class always fails: such a change is not a compaction and needs its own reviewed stage-1 delta, against whose hashed output the compaction is then compared. The result word is `MECHANICAL PASS`, and the report says that pending items are not preserved content.
+
+**R3 — occurrences and bound relations.** Records are keyed by identifier and occurrence (`ID#k`); deleting one of two lines with the same identifier fails. RID, pin and marker lists keep order and multiplicity. An edge field is compared by its exact bytes, which binds target, edge type and the consumer's pin together. Identifier kinds are separated (`scientific`, `artifact`, `pseudo` for `*STREAM:` records, `l5-key`, `headline`). `explicit_condition_marker` replaces `conditional` and means only that a recognised marker was found.
+
+**Answers adopted from the review.** No up-front normalization of the whole Atlas: extraction is lossless on the unchanged v0.10 and unsupported forms are carried byte-identical; a re-segmentation, where a pilot needs it, is its own assertion-gated step. In a pure compaction the semantic qualifiers are fixed (`·c`, `·s`, `·dx`, `nc`, premises, quantifiers, domain, convention, negative limits, custody). The comparator is an Atlas-specific tool in `tools/`; the DSN checker is not relaxed.
+
+**Runs** (`evidence/atlas/v0.11_design/rev1/`):
+- `selftest`: 21 controls as expected — 15 negatives (dropped premise, `q<1`→`q>1`, swapped pins, removed custody marker, merged-away negative, untyped condition moved to another record, deleted second occurrence, removed heading, undeclared section move, grade change, unexplained insertion, diagnostic class change, and three "record mapped but field not declared" cases) and 6 positives (identity; declared edit stays pending; declared move is MAPPED_EXACT; CRLF identity; non-ASCII byte spans; marker flag).
+- `atlas-v0.10` extract: 1,543 regions (135 headings, 560 typed nodes, 117 diagnostics, 615 raw lines, 116 blank), 521,243 bytes fully covered; 340 untyped segments. The stricter record head leaves more lines raw than draft 0 did; raw lines are protected byte for byte.
+- `atlas-v0.10` against itself with an empty map: MECHANICAL PASS, 1,427 EXACT.
+
+**Identifiers on more than one line: 13, classified once** (draft 0 said 15; two were artefacts of its looser head pattern).
+
+| Identifier | Kind | Occurrences (line: grade, bytes) | Same statement text? |
+|---|---|---|---|
+| `*GEN:phase-drift-law` | pseudo | L1059: ALG, 399; L1205: ALG, 375 | no |
+| `*GEN:plateau-bridge` | pseudo | L1057: ALG·s, 201; L1202: ALG·s, 211 | no |
+| `*GEN:rank-obstruction` | pseudo | L1043: THM, 236; L1137: THM, 166 | no |
+| `*GEN:uniform-phase-sink` | pseudo | L1054: ALG, 177; L1201: ALG, 202 | no |
+| `*NUMGEN:C7B-T1..T4` | pseudo | L523: RES[ALG], 550; L1344: ALG, 297 | no |
+| `GEN-ART-JQ-PHASEDRIFT` | artifact | L1058: ALG, 157; L1203: ALG, 164 | no |
+| `GEN-ART-SATURATION` | artifact | L541: NUM, 110; L1060: RES, 505; L1206: RES, 513 | no |
+| `NUMGEN-N3D-FINITE-CHAR` | scientific | L511: THM, 286; L1351: THM, 196 | no |
+| `RECOG-ALG-CHART-LAWS` | scientific | L373: ALG, 323; L744: ALG, 562 | no |
+| `RECOG-ALG-NU3-CLOSED-FORM` | scientific | L462: ALG, 341; L702: ALG, 550 | no |
+| `RECOG-THM-P2-C0-FIRST` | scientific | L420: THM, 142; L753: THM, 829 | no |
+| `RECOG-THM-P2-HET` | scientific | L419: THM, 110; L752: THM, 831 | no |
+| `RECOG-THM-R9-MEMORY` | scientific | L392: THM, 345; L718: THM, 1370 | no |
+
+None of the pairs repeats the same statement text. Reading: the five `*GEN:`/`*NUMGEN:` pseudo records and the two artifact rows are D4a/D4b or D2/D5 double homes of RID-less owner material; the six scientific rows are a short D2 edge record and a full D3 or D5 node. Per the review, only those the pilot touches or that block mapping are resolved in v0.11; the rest are a recorded, deferred debt. The six RECOG/NUMGEN scientific pairs fall inside or beside the D3 pilot and will be decided there (one home plus a typed cross-reference, as for birth symmetry in v0.10).
+
+**Next:** D3 pilot under these rules — stage-1 dispositions if any, then the compaction with its movement map, the comparator report and the list of pending items for review.
