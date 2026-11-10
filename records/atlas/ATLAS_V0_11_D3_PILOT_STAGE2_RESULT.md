@@ -88,3 +88,48 @@ Consequences recorded by the owner (operational reading, not an extension of the
 - No split of the Atlas (B) and no lossy core (C). The L0–L5 / D1–D6 structure and the rule "no fact is dropped for size" stay.
 - Size reduction continues only by removals the Method already prescribes (the K1 and K2 classes of this pilot, and one node per claim as in stage 1), domain by domain, under the same comparator contract. It starts on other domains only after the reviewer's verdict on the stage-2a classes.
 - The token figure in Method §4.6 no longer describes a reachable state. Restating it as an aim subordinate to completeness and structure is a Method v0.3 delta, to be drafted and reviewed separately; nothing in the Method is changed by this record.
+
+## 9. Stage 2a accepted (10 November 2026)
+
+PR #204 review 5841129271 (new reviewer session, entered through the orientation note): ACCEPT SCOPED. K1 accepted; K2 accepted scoped (statements, scopes, negative limits, method names and source pointers kept; no proof is re-verified by this); the two whole `proof:`/`method:` field deletions accepted. The stale `(D5)` tags are confirmed as a source mismatch that must be corrected by a separate stage-1-type change, not inside a compaction. Producer evidence (two builds, `atlas_check`) was not rerun by the reviewer.
+
+## 10. Stage 2b — source correction of the `(D5)` tags (not a compaction)
+
+**Base:** the accepted stage-2a output `ace0b408…a5d6`. **Files:** `evidence/atlas/v0.11_pilot/stage2b/`.
+
+A scan of the whole candidate for `(D5)` found three stale D3 sites, one more than §6 listed (L823, the A1c-decoder sub-item in D3.L3). L560 is NUMGEN's own "(D5)" label and L738 already says "removed"; neither is touched.
+
+| Line | Record | Replaced | By | Owner, `recog-v0.3.27` |
+|---|---|---|---|---|
+| L736 | `RECOG-THM-A1B-SLIP-SCHEDULE-U` (text on SHARPENED-SCHEDULE) | `[assuming: Dyadic (D5) row-A bridge proof constants]` | `[import: DYAD-THM-LPHASE-ROWA-BRIDGE, DYAD-THM-OPEN3-SPIRAL-REM (dyad-v6.4.23) and RECOG-ALG-A1C-JET-REMAINDER-BOUNDS]` | DSN lines 43, 764 |
+| L740 | `RECOG-RESULT-A1C-RECORD-PHASE-READOUT` (text on JOINT-CONTRACTOR) | `[assuming: (D5)]` | the same `[import: …]` | DSN line 1056 |
+| L823 | `RECOG-OPEN-EVENT-RULE` (A1c-decoder) | "under the (D5) [assuming:]" | "with the row-A remainder constants of" the same three RIDs | DSN line 180 |
+
+Owner basis for all three: Appendix A v0.3.27, "Source conditions changed (only these): the (D5) `[assuming:]` of six A1c sites replaced by imported owner theorem rows and RECOG-ALG-A1C-JET-REMAINDER-BOUNDS"; results and grades unchanged. `RECOG-ALG-A1C-START-OFFSET` (ii): owner line 1054 also says discharged, and the Atlas carries no `(D5)` tag on it, so there is nothing to correct there.
+
+| Item | Result |
+|---|---|
+| Candidate | SHA-256 `66f0b2ebdad84a578a7159d727c2d51d3831ebea15f18c07d9b17744173c20da`, 520,271 bytes (+288) |
+| Comparator | MECHANICAL PASS: 1,431 EXACT, 3 DECLARED_PENDING_REVIEW, 0 FAIL, 0 context reviews |
+| Two builds | byte-identical |
+| `atlas_check.py` (v0.10 manifest) | 0 FAIL, counts unchanged |
+
+Old and new spans verbatim: `stage2b_changes.md`. **Requested:** review of the three pending items.
+
+## 11. K1/K2 on the other domains: what a scan shows
+
+Pattern scan of the stage-2b text (labelled `method:`/`proof:` fields; edition-label forms as in K1):
+
+| Domain | Bytes | Labelled method/proof fields (bytes) | Edition-label pattern hits |
+|---|---|---|---|
+| D1 | 68,930 | 0 | 10 |
+| D2 | 111,381 | 2 (261) | 10 |
+| D3 (after 2a) | 96,291 | 5 (374, already reduced to pointers) | 6 |
+| D4a | 96,073 | 1 (100) | 5 |
+| D4b | 38,656 | 2 (202) | 4 |
+| D5 | 50,587 | 0 | 17 |
+| D6 | 36,786 | 0 | 1 |
+
+The hits are an upper bound: many are import pins (`[DYAD v6.4.22]`), which are scope, not chronology, and stay. Outside D3 the labelled material is about 0.6 kB of method text and a few hundred bytes of labels, well under 0.5 % of the file. D3 was the richest domain for this because RECOG's recent editions were absorbed line by line. Method detail that is not labelled can only be found by reading each domain in full, as was done for D3.
+
+**Advice (advisory only).** Under route A the remaining yield does not justify a separate campaign over 400 kB with a review per domain. Proposal: close the pilot as the content of v0.11 (stage 1 + 2a + 2b), and make K1/K2 a standing rule applied whenever a domain is opened for a refresh, with the same span-deletion form. If the PI prefers the full pass now, it is done domain by domain as in §1.

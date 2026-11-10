@@ -22,7 +22,7 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## OWNER_LANE — Claude
 
-**Checked:** 10 November 2026, 14:05 +03:00; `main` `7d6eb4c`; `atlas-v0.10` unchanged; PR #204 open (D3 pilot).
+**Checked:** 10 November 2026, 14:50 +03:00; `main` `7d6eb4c`; `atlas-v0.10` unchanged; PR #204 open (D3 pilot).
 **Goal / current question:** can Atlas v0.11 return towards the Method size aim by compaction? Pilot answer: no (see Evidence). PI decision 10 Nov: route A — keep the structure, shrink only as far as the Method's own removal rules reach.
 **Last durable work:** PR #204, branch `claude/atlas-v0.11-d3-pilot`: stage 1 (six second homes → typed cross-references; accepted as intermediate base, review 5840025491) and stage 2a (`records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md`, files in `evidence/atlas/v0.11_pilot/stage2a/`).
 **Decisions held:** order agreed with the PI and the reviewer — tool debt (done) → v0.11 manifest and D3 pilot → one advisory note to the PI on dormant-owner findings (H2, H11, AZ.A1, H3). Size is an aim, not a gate. `DECLARED` is never `PRESERVED`; grade, qualifier, identifier and diagnostic-class changes need a reviewed stage-1 delta. #189 deferred. `rtg-sat` is outside the Atlas inputs; Method v0.3 delta separate.
@@ -30,8 +30,8 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 **Evidence:** stage 1 `0f8ba5c0…a6c2` (12 pending, 7 mapped, 0 FAIL). Stage 2a `ace0b408…a5d6`: deletion-only under Method §4.1/§4.7, 21 spans, MECHANICAL PASS (15 pending, 0 FAIL), yield −1,849 bytes = 1.9 % of D3. Census: 77 % of D3 is L2 claim text; pointers and certificates ≈5.5 kB. A v0.10 defect found: stale `[assuming: (D5)]` at L736 and L740 against `recog-v0.3.27` (result record §6).
 **Resume:** `python3 -I evidence/atlas/v0.11_pilot/stage2a/build_stage2a.py STAGE1 OUT MAP SPANS`; `python3 -I tools/atlas_preservation.py compare STAGE1 OUT MAP --report R.json`; `python3 tools/atlas_check.py --manifest evidence/atlas/v0.10/source_manifest.json --atlas OUT` (the default manifest is an old one).
 **Next 1–3 actions / acceptance:**
-1. Reviewer: the 15 pending items of stage 2a, the finding (§5) and the defect (§6) of the result record; acceptance = verdict on PR #204.
-2. After that verdict: the accepted removal classes (K1, K2, one node per claim) on the other domains, one domain per build, same comparator contract. Method v0.3 delta (size aim subordinate to completeness and structure; `rtg-sat` out of scope) drafted separately.
+1. Reviewer: the three pending items of stage 2b (`(D5)` source correction, candidate `66f0b2eb…20da`; result record §10). Stage 2a is accepted (review 5841129271).
+2. PI: close the pilot as the content of v0.11 (stage 1 + 2a + 2b) with K1/K2 as a standing rule at refreshes (owner's advice, result record §11), or a full K1/K2 pass over the other domains now. Method v0.3 delta (size aim subordinate to completeness and structure; `rtg-sat` out of scope) drafted separately.
 3. Advisory note to the PI on dormant-owner findings; the (D5) defect joins the list of corrections for the next edition.
 **Reopen trigger:** any owner tag after `fa3db80` (impact refresh takes precedence); any open item in `pipes/ATLAS/`.
 
@@ -45,7 +45,8 @@ Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspec
 
 **Open with the PI (10 November 2026):**
 - **Decided by the PI, 10 Nov 14:02 +03:00 (project conversation): route A** — "continue with A; we want it smaller and shrink as far as we can, but we do not break the structure to shrink it" (translated; recorded in `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §8). No split, no lossy core.
-- PR #204 is not ready to merge: stage 2a is with the reviewer.
+- **Asked of the PI (10 Nov, result record §11):** close the pilot as v0.11 content and apply K1/K2 at refreshes, or run a full K1/K2 pass over D1, D2, D4a, D4b, D5, D6 now (scan: under 0.5 % of the file in labelled material).
+- PR #204 is not ready to merge: stage 2b is with the reviewer.
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
 
