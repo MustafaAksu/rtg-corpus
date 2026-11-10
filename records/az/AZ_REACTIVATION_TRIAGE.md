@@ -128,7 +128,7 @@ Both items are notices; neither asks for anything, and each says the repin is th
 | AZ.A1 (H2), advisory row 1 | the ×2 sentence contradicts OPEN-M v0.7.1 R16 | confirmed | 1 |
 | AZ.A2 | $q=4,(0,3)$ cascade formula listed as open; Genesis pin | confirmed | 11, 5, 29 |
 | AZ.A3 | the Programme patch request is met | confirmed | 28 |
-| AZ.A5 | DZT anomaly set and AZ's $4\mid q$ rule: no relation asserted | DZT v0.8 read only at SG-DZT-1 and `DZT-ALG-CASCADE-ANOMALY-SET` ($p=8\ell^a$, $\ell^a\equiv1 \bmod 4$): SG-DZT-1 names the AZ `4|q` rule only in its no-transfer guard (citing it as evidence for a DZT claim is the stated violation), not as an import; AZ names no DZT result; SG-AZ-7 forbids the link from the AZ side | none — no action |
+| AZ.A5 | DZT anomaly set and AZ's $4\mid q$ rule: no relation asserted | DZT v0.8 read only at SG-DZT-1 and `DZT-ALG-CASCADE-ANOMALY-SET` ($p=8\ell^a$, $\ell^a\equiv1 \bmod 4$): SG-DZT-1 names the AZ $4\mid q$ rule only in its no-transfer guard (citing it as evidence for a DZT claim is the stated violation), not as an import; AZ names no DZT result; SG-AZ-7 forbids the link from the AZ side | none — no action |
 | AZ.A7 (H3), advisory row 3 | consumer strings that are not owner RIDs | confirmed | 14, 19, 23, 25, 26 |
 
 ## 6. The split
