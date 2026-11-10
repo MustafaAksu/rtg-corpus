@@ -108,3 +108,19 @@ The review (PR #203; PR #202 review 5837804086) accepted the direction and asked
 None of the pairs repeats the same statement text. Reading: the five `*GEN:`/`*NUMGEN:` pseudo records and the two artifact rows are D4a/D4b or D2/D5 double homes of RID-less owner material; the six scientific rows are a short D2 edge record and a full D3 or D5 node. Per the review, only those the pilot touches or that block mapping are resolved in v0.11; the rest are a recorded, deferred debt. The six RECOG/NUMGEN scientific pairs fall inside or beside the D3 pilot and will be decided there (one home plus a typed cross-reference, as for birth symmetry in v0.10).
 
 **Next:** D3 pilot under these rules — stage-1 dispositions if any, then the compaction with its movement map, the comparator report and the list of pending items for review.
+
+## 8. Revision 2 (10 November 2026, after the receiving review of the tool)
+
+The review of revision 1 (PR #203 `f80a4e8`; PR #202 review 5837996742) confirmed the byte and CRLF handling and the 21 self-tests, and found three gaps in the comparator. All three are fixed in one pass; tool SHA-256 `c6e6660b4d57c39a81bda9ad5c476db684ee74c962794a58cae2e1a9d5fed0e1`. Where §7 and this section differ, this section governs.
+
+**AP-R1 — heading context.** Headings are kept on a stack with explicit levels; a new heading pops every heading of the same or deeper level. Sibling headings after a skipped level no longer nest (`# D / ### A / ### B` gives `D/B`).
+
+**AP-R2 — relations between preserved pieces.**
+- Inside a mapped record, fields are matched in order. A field whose bytes are unchanged but whose position relative to the other fields changed is a FAIL, or `DECLARED_PENDING_REVIEW` when the record declares `"reorder": true`. Exchanging two scopes between two statements of one record is therefore never all-EXACT.
+- A raw line is bound to its anchor, the record it follows inside its heading. Moving it under another record changes the anchor: undeclared, it fails.
+- Unchanged regions must keep their relative order. An undeclared swap of two unchanged records fails; a declared move is `MAPPED_EXACT`.
+- `MAPPED_EXACT` certifies bytes only. When the heading context or the anchor changes, the row says so and the report lists the move under `obligations.context_reviews`, with old and new context. Zero pending items is not a statement that inherited scope survived.
+
+**AP-R3 — invariants before mapping.** For every identifier present in base and candidate, the candidate may not carry a grade/qualifier (records) or a class (diagnostics) that the base did not carry for that identifier, whatever the map declares. Delete-plus-insert no longer routes around the rule. Deleting one of several occurrences, or turning a duplicate into a cross-reference, stays possible and is pending review.
+
+**Runs** (`evidence/atlas/v0.11_design/rev2/`): self-test 30 controls as expected; the reviewer's revision-1 harness, unchanged except its two identity pins, 11/11 with its observation reproduced; `atlas-v0.10` identity compare MECHANICAL PASS, 1,427 EXACT, no context review.

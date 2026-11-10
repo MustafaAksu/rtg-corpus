@@ -39,7 +39,7 @@ def sha(b): return hashlib.sha256(b).hexdigest()
 
 def extract(raw: bytes):
     """Regions cover the file exactly: region i spans [a,b) without its newline; newlines are implied between regions."""
-    regions, pos, ctx, occ = [], 0, [], Counter()
+    regions, pos, ctx, occ, stack, anchor = [], 0, [], Counter(), [], None
     lines = raw.split(b'\n')
     for n, lb in enumerate(lines, 1):
         a, b = pos, pos + len(lb); pos = b + 1
@@ -47,7 +47,8 @@ def extract(raw: bytes):
         r = dict(line=n, span=[a, b], sha256=sha(lb))
         hm = re.match(r'^(#+) ', core)
         if hm:
-            ctx = ctx[:len(hm.group(1)) - 1] + [sha(lb)[:16]]; r.update(kind='heading', context=list(ctx[:-1]))
+            lvl = len(hm.group(1)); stack = [x for x in stack if x[0] < lvl]   # explicit levels: siblings and skipped levels do not nest
+            r.update(kind='heading', level=lvl, context=[h for _, h in stack]); stack.append((lvl, sha(lb)[:16])); ctx = [h for _, h in stack]; anchor = None
         elif not core.strip(): r.update(kind='blank', context=list(ctx))
         else:
             r['context'] = list(ctx); m = HEAD.match(core); d = L5.match(core)
@@ -65,11 +66,12 @@ def extract(raw: bytes):
                     assert sha(raw[f['span'][0]:f['span'][1]]) == f['sha256'], ('span/hash binding', n)
                     r['fields'].append(f)
                 r['explicit_condition_marker'] = '·c' in r['grade'] or any(COND.match(raw[f['span'][0]:f['span'][1]].decode('utf-8')) for f in r['fields'])
+                anchor = f"{key}#{occ[key]}"
             elif d:
                 key = d.group('id'); occ[key] += 1
                 r.update(kind='diagnostic', id=key, occurrence=occ[key], id_kind='headline' if key.startswith('H') and key[1:].isdigit() else 'l5-key', cls=d.group('cls').strip(),
-                         rids=RID.findall(core), pins=PIN.findall(core), markers=MARK.findall(core))
-            else: r.update(kind='raw', rids=RID.findall(core))
+                         rids=RID.findall(core), pins=PIN.findall(core), markers=MARK.findall(core)); anchor = f"{key}#{occ[key]}"
+            else: r.update(kind='raw', rids=RID.findall(core), anchor=anchor)   # a raw line is bound to the record it follows inside its heading
         assert sha(raw[a:b]) == r['sha256']
         regions.append(r)
     assert pos - 1 == len(raw), 'coverage'
@@ -93,14 +95,25 @@ def compare(base: bytes, cand: bytes, mp: dict):
     decl = {d['base']: d for d in mp.get('records', [])}; ins = {d['cand']: d for d in mp.get('inserts', [])}
     cby = {okey(r): r for r in cl}; used = set()
     # pass 1: exact bytes, same owner occurrence (records) and same heading context
-    pool = {}
-    for r in cl: pool.setdefault((r['sha256'], tuple(r['context']), okey(r) if r['kind'] in ('node', 'diagnostic') else None), []).append(r)
-    pending = []
+    # invariants of surviving identifiers, checked before any mapping: no route (edit or delete+insert) may change a grade or class
+    def grades(regs, kind, key): return {i: Counter(r[key] for r in regs if r['kind'] == kind and r['id'] == i) for i in {r['id'] for r in regs if r['kind'] == kind}}
+    for kind, key, what in (('node', 'grade', 'grade/qualifier'), ('diagnostic', 'cls', 'diagnostic class')):
+        gb, gc = grades(bl, kind, key), grades(cl, kind, key)
+        for i in sorted(set(gb) & set(gc)):
+            new = gc[i] - gb[i]
+            if new: add('FAIL', i, f"{what} {dict(gb[i])} -> {dict(gc[i])}: not a compaction; needs a reviewed stage-1 delta")
+    bind = lambda r: okey(r) if r['kind'] in ('node', 'diagnostic') else (('raw', r.get('anchor')) if r['kind'] == 'raw' else None)
+    pool = {}; cidx = {id(r): i for i, r in enumerate(cl)}
+    for r in cl: pool.setdefault((r['sha256'], tuple(r['context']), bind(r)), []).append(r)
+    pending, last = [], -1
     for r in bl:
-        k = (r['sha256'], tuple(r['context']), okey(r) if r['kind'] in ('node', 'diagnostic') else None)
+        k = (r['sha256'], tuple(r['context']), bind(r))
         if pool.get(k) and okey(r) not in decl:
-            used.add(id(pool[k].pop(0))); add('EXACT', okey(r))
+            t = pool[k].pop(0); used.add(id(t))
+            if cidx[id(t)] < last: add('FAIL', okey(r), 'unchanged text, but its order relative to other unchanged regions changed without declaration')
+            else: last = cidx[id(t)]; add("EXACT", okey(r))
         else: pending.append(r)
+    context_reviews = []
     for r in pending:
         k = okey(r); d = decl.get(k)
         if d is None: add('FAIL', k, 'base region neither found unchanged in place nor declared'); continue
@@ -110,7 +123,10 @@ def compare(base: bytes, cand: bytes, mp: dict):
         used.add(id(t))
         if t['sha256'] == r['sha256']:
             if r['kind'] in ('node', 'diagnostic') and (t.get('id'), t.get('occurrence')) != (r['id'], r['occurrence']) and t.get('id') != r['id']: add('FAIL', k, 'identical text under another record identifier')
-            else: add('MAPPED_EXACT', k, f"moved to {d['cand']}")
+            else:
+                ch = t['context'] != r['context'] or (r['kind'] == 'raw' and t.get('anchor') != r.get('anchor'))
+                add('MAPPED_EXACT', k, f"moved to {d['cand']}" + ('; CONTEXT CHANGED — inherited scope must be reviewed' if ch else '; same heading context'))
+                if ch: context_reviews.append(dict(item=k, base_context=r['context'], candidate_context=t['context'], base_anchor=r.get('anchor'), candidate_anchor=t.get('anchor')))
             continue
         if r['kind'] != t['kind']: add('FAIL', k, f"kind changes {r['kind']} -> {t['kind']}"); continue
         if r['kind'] == 'node':
@@ -118,8 +134,16 @@ def compare(base: bytes, cand: bytes, mp: dict):
             if t['grade'] != r['grade']: add('FAIL', k, f"grade/qualifier {r['grade']} -> {t['grade']} (needs a reviewed stage-1 delta)"); continue
             fd = {x['base_sha256']: x for x in d.get('fields', [])}
             tpool = Counter((f['cls'], f['sha256']) for f in t['fields'])
+            tseq = [(f['cls'], f['sha256']) for f in t['fields']]; tfree = [True] * len(tseq); j = 0
             for f in r['fields']:
-                if tpool[(f['cls'], f['sha256'])] > 0: tpool[(f['cls'], f['sha256'])] -= 1; add('EXACT', f"{k}:{f['cls']}:{f['sha256'][:8]}")
+                key2 = (f['cls'], f['sha256'])
+                ahead = next((i for i in range(j, len(tseq)) if tfree[i] and tseq[i] == key2), None)
+                anyw = next((i for i in range(len(tseq)) if tfree[i] and tseq[i] == key2), None)
+                if ahead is not None: tfree[ahead] = False; j = ahead + 1; tpool[key2] -= 1; add('EXACT', f"{k}:{f['cls']}:{f['sha256'][:8]}")
+                elif anyw is not None:   # same bytes, but its position relative to the other fields changed: the field-to-field relation is not preserved
+                    tfree[anyw] = False; tpool[key2] -= 1
+                    if d.get('reorder'): add('DECLARED_PENDING_REVIEW', f"{k}:{f['cls']}:{f['sha256'][:8]}", 'field order changed (declared reorder): ' + d.get('reason', ''))
+                    else: add('FAIL', f"{k}:{f['cls']}:{f['sha256'][:8]}", 'field order changed without a declared reorder')
                 elif f['sha256'] in fd:
                     x = fd[f['sha256']]; cs = x.get('cand_sha256')
                     hit = next((kk for kk in tpool if kk[1] == cs and tpool[kk] > 0), None) if cs else None
@@ -138,9 +162,9 @@ def compare(base: bytes, cand: bytes, mp: dict):
         if k in ins: add('DECLARED_PENDING_REVIEW', 'cand ' + k, 'declared insertion: ' + ins[k].get('reason', ''))
         else: add('FAIL', 'cand ' + k, 'candidate text with no base source and no declaration')
     counts = Counter(x['status'] for x in rows)
-    return dict(schema='atlas-preservation-compare/1', base_sha256=B['source_sha256'], candidate_sha256=C['source_sha256'], base_bytes=len(base), candidate_bytes=len(cand),
+    return dict(schema='atlas-preservation-compare/2', obligations=dict(pending_review=counts['DECLARED_PENDING_REVIEW'], context_reviews=context_reviews), base_sha256=B['source_sha256'], candidate_sha256=C['source_sha256'], base_bytes=len(base), candidate_bytes=len(cand),
                 counts=dict(counts), result='FAIL' if counts['FAIL'] else 'MECHANICAL PASS',
-                note='MECHANICAL PASS means no loss or unexplained text; DECLARED_PENDING_REVIEW items are not preserved content until reviewed.', rows=rows)
+                note='MECHANICAL PASS means no loss or unexplained text; DECLARED_PENDING_REVIEW items are not preserved content until reviewed, and a MAPPED_EXACT move that changes the heading context or anchor certifies bytes only: zero pending items is not proof that inherited scope survived (see obligations.context_reviews).', rows=rows)
 
 def selftest():
     H = b'# D1\n## L2\n'
@@ -169,8 +193,24 @@ def selftest():
     x = extract(base); stmt = next(f for r in x['regions'] if r.get('id') == 'TEST-ALG-Y' for f in r['fields'] if f['cls'] == 'statement')
     c2 = rep('| second | @T§2', '| 2nd | @T§2'); y = extract(c2); new = next(f for r in y['regions'] if r.get('id') == 'TEST-ALG-Y' for f in r['fields'] if f['cls'] == 'statement')
     cases.append(('P declared field edit is pending review, not preserved', c2, {'records': [{'base': 'TEST-ALG-Y#1', 'cand': 'TEST-ALG-Y#1', 'fields': [{'base_sha256': stmt['sha256'], 'cand_sha256': new['sha256'], 'reason': 'wording'}]}]}, 'MECHANICAL PASS', 1))
-    c3 = rep('TEST-ALG-Y ALG | second | @T§2\n', '').replace(b'raw line\n', 'TEST-ALG-Y ALG | second | @T§2\nraw line\n'.encode())
+    c3 = rep('TEST-ALG-Y ALG | second | @T§2\n', '').replace(b'raw line\n', 'raw line\nTEST-ALG-Y ALG | second | @T§2\n'.encode())   # after the raw line, so the raw line keeps its anchor
     cases.append(('P declared move under another heading is MAPPED_EXACT', c3, {'records': [{'base': 'TEST-ALG-Y#1', 'cand': 'TEST-ALG-Y#1', 'reason': 'regroup'}]}, 'MECHANICAL PASS', 0))
+    def adhoc(name, b, c, m, want, pred=None):
+        r = compare(b.encode(), c.encode(), m); ok = r['result'] == want and (pred is None or pred(r)); extra.append((ok, f"{name}: {r['result']} {r['counts']}"))
+    extra = []
+    sc = '# D\n## L2\nTEST-ALG-X ALG | Local family | sc: q>0 | P(q) holds | sc: q<0 | R(q) holds | @T§1\n'; sw = sc.replace('sc: q>0 | P(q) holds | sc: q<0', 'sc: q<0 | P(q) holds | sc: q>0')
+    mx = {'records': [{'base': 'TEST-ALG-X#1', 'cand': 'TEST-ALG-X#1', 'reason': 'x'}]}
+    adhoc('N scopes exchanged between two statements of one record (field order)', sc, sw, mx, 'FAIL')
+    adhoc('P the same exchange with a declared reorder stays pending', sc, sw, {'records': [dict(mx['records'][0], reorder=True)]}, 'MECHANICAL PASS', lambda r: r['counts'].get('DECLARED_PENDING_REVIEW', 0) >= 1)
+    adhoc('N raw continuation line moved under another record', '# D\nTEST-ALG-X ALG | P\nThe preceding claim requires q>0.\nTEST-ALG-Y ALG | R\n', '# D\nTEST-ALG-X ALG | P\nTEST-ALG-Y ALG | R\nThe preceding claim requires q>0.\n', {}, 'FAIL')
+    adhoc('N two unchanged records swapped without declaration', '# D\nTEST-ALG-X ALG | P\nTEST-ALG-Y ALG | R\n', '# D\nTEST-ALG-Y ALG | R\nTEST-ALG-X ALG | P\n', {}, 'FAIL')
+    route = lambda k: {'records': [{'base': k, 'cand': None, 'reason': 'remove'}], 'inserts': [{'cand': k, 'reason': 'insert'}]}
+    adhoc('N grade changed through delete + insert', '# D\nTEST-ALG-X ALG | r | @T§1\n', '# D\nTEST-ALG-X THM | r | @T§1\n', route('TEST-ALG-X#1'), 'FAIL')
+    adhoc('N diagnostic class changed through delete + insert', '# D\nF1 D-PROOF | e\n', '# D\nF1 D-LINK | e\n', route('F1#1'), 'FAIL')
+    adhoc('P duplicate occurrence deleted by declaration is pending, not a grade failure', '# D\nTEST-ALG-X ALG | a\nTEST-ALG-X ALG | b\n', '# D\nTEST-ALG-X ALG | a\n', {'records': [{'base': 'TEST-ALG-X#2', 'cand': None, 'reason': 'one home'}]}, 'MECHANICAL PASS', lambda r: r['counts'].get('DECLARED_PENDING_REVIEW') == 1)
+    adhoc('P declared move across headings is MAPPED_EXACT with a visible context obligation', '# D\n## Only for q>0\nTEST-THM-X THM | P | @T§1\n## All real q\n', '# D\n## Only for q>0\n## All real q\nTEST-THM-X THM | P | @T§1\n', mx | {'records': [{'base': 'TEST-THM-X#1', 'cand': 'TEST-THM-X#1', 'reason': 'regroup'}]}, 'MECHANICAL PASS', lambda r: len(r['obligations']['context_reviews']) == 1)
+    hx = extract(b'# D\n### A\nTEST-ALG-X ALG | P\n### B\nTEST-ALG-Y ALG | Q\n'); yy = next(r for r in hx['regions'] if r.get('id') == 'TEST-ALG-Y')
+    extra.append((yy['context'] == [sha(b'# D')[:16], sha(b'### B')[:16]], 'P skipped-level sibling headings: context is D/B, not D/A/B'))
     crlf = b'# C\r\nTEST-ALG-X ALG | x=1\r\n'; e = extract(crlf)
     ok_all = True; out = []
     for name, cand, mp, want, pend in cases:
@@ -184,6 +224,7 @@ def selftest():
     out.append(f"{'ok ' if ok else 'BAD'} P non-ASCII field: byte span binds the hash")
     t = extract(b'TEST-THM-X THM | If H holds, P follows.\n')['regions'][0]; ok = t['explicit_condition_marker'] is False; ok_all &= ok
     out.append(f"{'ok ' if ok else 'BAD'} P explicit_condition_marker is a marker flag only (false here although the text is conditional)")
+    for ok, line in extra: ok_all &= ok; out.append(('ok  ' if ok else 'BAD ') + line)
     print('\n'.join(out)); print('SELFTEST', 'PASS' if ok_all else 'FAIL'); return 0 if ok_all else 1
 
 def main():
@@ -195,7 +236,7 @@ def main():
     if a[:1] == ['compare']:
         r = compare(open(a[1], 'rb').read(), open(a[2], 'rb').read(), json.load(open(a[3], encoding='utf-8')))
         if '--report' in a: open(a[a.index('--report') + 1], 'x', encoding='utf-8').write(json.dumps(r, ensure_ascii=False, indent=1) + '\n')
-        print(r['result'], r['counts'])
+        print(r['result'], r['counts'], 'context reviews:', len(r['obligations']['context_reviews']))
         for x in r['rows']:
             if x['status'] in ('FAIL', 'DECLARED_PENDING_REVIEW'): print(' ', x['status'], x['item'], '—', x['detail'])
         return 1 if r['result'] == 'FAIL' else 0
