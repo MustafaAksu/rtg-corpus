@@ -6,7 +6,7 @@
 
 ## 1. Sources, reading extent and execution
 
-Read the complete design §§1–6, complete 83-line extractor, complete `full_run_summary.json`, targeted entries across the eight-record `sample_manifest.json`, and Atlas v0.10 lines 736–740 as an original D3 sample. Governance: current CONVENTIONS (complete), current Atlas orientation (complete), Atlas Method v0.2 at `atlas-v0.10` (complete; especially §§3–7), and Methodology v1.4 §§13.5–13.7 at `methodology-v1.4` (targeted). This is not a full scientific rereading of the 18 owners or the 1,543-line Atlas.
+Read the complete design §§1–6, complete 74-line extractor, complete `full_run_summary.json`, targeted entries across the eight-record `sample_manifest.json`, and Atlas v0.10 lines 736–740 as an original D3 sample. Governance: current CONVENTIONS (complete), current Atlas orientation (complete), Atlas Method v0.2 at `atlas-v0.10` (complete; especially §§3–7), and Methodology v1.4 §§13.5–13.7 at `methodology-v1.4` (targeted). This is not a full scientific rereading of the 18 owners or the 1,543-line Atlas.
 
 Independently verified #113 merged at `447eb99750bd3ad807e78840e9259ac8c40f35d4` and #114 at `752bb6a4e136c9eccb5424b5c83ce421462f4e28`. That review is closed; this design review does not reopen it. A DSN checker acceptance is not certification of an Atlas comparator.
 
