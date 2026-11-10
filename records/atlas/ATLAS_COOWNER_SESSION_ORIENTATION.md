@@ -22,8 +22,8 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## OWNER_LANE — Claude
 
-**Checked:** 10 November 2026, 14:20 +03:00; `main` `7d6eb4c`; `atlas-v0.10` unchanged; PR #204 open (D3 pilot).
-**Goal / current question:** can Atlas v0.11 return towards the Method size aim by compaction? Pilot answer so far: no (see Evidence); the open question is now a Method choice for the PI.
+**Checked:** 10 November 2026, 14:05 +03:00; `main` `7d6eb4c`; `atlas-v0.10` unchanged; PR #204 open (D3 pilot).
+**Goal / current question:** can Atlas v0.11 return towards the Method size aim by compaction? Pilot answer: no (see Evidence). PI decision 10 Nov: route A — keep the structure, shrink only as far as the Method's own removal rules reach.
 **Last durable work:** PR #204, branch `claude/atlas-v0.11-d3-pilot`: stage 1 (six second homes → typed cross-references; accepted as intermediate base, review 5840025491) and stage 2a (`records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md`, files in `evidence/atlas/v0.11_pilot/stage2a/`).
 **Decisions held:** order agreed with the PI and the reviewer — tool debt (done) → v0.11 manifest and D3 pilot → one advisory note to the PI on dormant-owner findings (H2, H11, AZ.A1, H3). Size is an aim, not a gate. `DECLARED` is never `PRESERVED`; grade, qualifier, identifier and diagnostic-class changes need a reviewed stage-1 delta. #189 deferred. `rtg-sat` is outside the Atlas inputs; Method v0.3 delta separate.
 **Tried and set aside:** the draft-0 extractor — replaced; reopen never. `check_compaction.py` for the Atlas — DSN forms only. Rewording D3 for size — not attempted: every reworded field is a pending review item and the text is already telegraphic; reopen only if the PI chooses a route that needs it.
@@ -31,7 +31,7 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 **Resume:** `python3 -I evidence/atlas/v0.11_pilot/stage2a/build_stage2a.py STAGE1 OUT MAP SPANS`; `python3 -I tools/atlas_preservation.py compare STAGE1 OUT MAP --report R.json`; `python3 tools/atlas_check.py --manifest evidence/atlas/v0.10/source_manifest.json --atlas OUT` (the default manifest is an old one).
 **Next 1–3 actions / acceptance:**
 1. Reviewer: the 15 pending items of stage 2a, the finding (§5) and the defect (§6) of the result record; acceptance = verdict on PR #204.
-2. PI: choice among A (accept the size), B (lossless core + annex split) and C (lossy core), or another route. No compaction of other domains before that.
+2. After that verdict: the accepted removal classes (K1, K2, one node per claim) on the other domains, one domain per build, same comparator contract. Method v0.3 delta (size aim subordinate to completeness and structure; `rtg-sat` out of scope) drafted separately.
 3. Advisory note to the PI on dormant-owner findings; the (D5) defect joins the list of corrections for the next edition.
 **Reopen trigger:** any owner tag after `fa3db80` (impact refresh takes precedence); any open item in `pipes/ATLAS/`.
 
@@ -44,7 +44,7 @@ Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspec
 ## PI_PENDING — maintained by owner
 
 **Open with the PI (10 November 2026):**
-- **Decision asked (10 Nov, result record §5):** route for v0.11 after the D3 pilot showed that compaction under Method v0.2 yields about 2 % — A accept the size, B lossless core + annex split, C lossy core. Source: `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md`.
+- **Decided by the PI, 10 Nov 14:02 +03:00 (project conversation): route A** — "continue with A; we want it smaller and shrink as far as we can, but we do not break the structure to shrink it" (translated; recorded in `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §8). No split, no lossy core.
 - PR #204 is not ready to merge: stage 2a is with the reviewer.
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.

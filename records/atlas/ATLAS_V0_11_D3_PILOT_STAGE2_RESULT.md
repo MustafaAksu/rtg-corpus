@@ -79,3 +79,12 @@ The Atlas itself says so two lines away (L738: "the (D5) [assuming:] removed"; L
 1. Review of the 15 pending items of stage 2a (`stage2a_deleted_spans.md`), by class: is an owner-edition label chronology in the sense of §4.1, and is the K2 text method detail in the sense of §4.7?
 2. Review of the finding in §5 and of the defect in §6.
 3. PI: the choice among A, B and C, or another route. Until then no further compaction work is done on other domains.
+
+## 8. PI decision (10 November 2026, 14:02 +03:00, project conversation)
+
+**Route A.** The PI's words, translated: "We continue with A. We do want it smaller and we make it as small as we can, but we do not break the structure in order to shrink it."
+
+Consequences recorded by the owner (operational reading, not an extension of the decision):
+- No split of the Atlas (B) and no lossy core (C). The L0–L5 / D1–D6 structure and the rule "no fact is dropped for size" stay.
+- Size reduction continues only by removals the Method already prescribes (the K1 and K2 classes of this pilot, and one node per claim as in stage 1), domain by domain, under the same comparator contract. It starts on other domains only after the reviewer's verdict on the stage-2a classes.
+- The token figure in Method §4.6 no longer describes a reachable state. Restating it as an aim subordinate to completeness and structure is a Method v0.3 delta, to be drafted and reviewed separately; nothing in the Method is changed by this record.
