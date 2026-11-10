@@ -1,6 +1,6 @@
 # AZ — Reactivation triage
 
-**[SESSION] Working record of the AZ stream (Arithmetic Resonance and Zeta); no scientific or release authority. Nothing in this record is adopted.** It proposes dispositions for the PI to decide; the AZ DSN is not edited by it.
+**[SESSION] Working record of the AZ stream (Arithmetic Resonance and Zeta); no scientific or release authority. Nothing in this record is adopted.** It proposes dispositions; the PI's decisions on its six questions are recorded in §7. The AZ DSN is not edited by it.
 **Date:** 10 November 2026. **By:** Claude, AZ co-owner session (BOOTSTRAP message 2 of `records/az/AZ_COOWNER_SESSION_ORIENTATION.md`; the PI asked this session to write the record, project conversation, 10 Nov 2026, 18:31 +03:00).
 **Subject edition:** `az-v0.6` — `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md`, SHA-256 `dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a` (tag object `d0cc5e7d…13da` → commit `d7d661c`; equal on `main` `ebf1163`). Line numbers below are lines of that file.
 
@@ -147,18 +147,24 @@ Both items are notices; neither asks for anything, and each says the repin is th
 - Restructuring proposed by Programme v1.4 §6.7 (row 13(b)): reduce duplicated owner summaries.
 - AZ's own frontier (AZ-2: a dynamical, non-substrate observable; the analytic completion of the $4\mid q$ mechanism; transfer-zeta poles) — BOOTSTRAP 4, after v0.7.
 
-## 7. Decisions asked of the PI
+## 7. PI decisions
 
-1. Is list (i) the scope of `az-v0.7`? Rows may be struck or moved.
-2. Row 8: keep the Methodology v1.2 declaration in v0.7 (proposed), or migrate first.
-3. Row 13: (a) corrected list with a pointer (proposed), or (b) pointer only.
-4. Row 27: pointers to Programme v1.4 §8 (proposed), or the v1.4 texts quoted.
-5. Row 31: in v0.7, replace the §9 provenance claim by the availability statement described in the row (proposed).
-6. Who drafts v0.7 and who reviews it.
+**Decided by the PI, 10 November 2026, 22:52 +03:00 (project conversation), verbatim:** "6 konuda da co-owner tavsiyelerini kabul ediyorum" ("I accept the co-owner recommendations on all six points"). The recommendations are the proposals of this record, endorsed by the ChatGPT co-owner review (§8).
+
+| # | Question | Decision |
+|---|---|---|
+| 1 | Is list (i) the scope of `az-v0.7`? | Yes — list (i) of §6 as written, with the two review corrections of §8. |
+| 2 | Row 8: Methodology declaration | Keep v1.2 as declared in v0.7; name v1.4 as the governing edition; the migration is a separate edition. |
+| 3 | Row 13: Thread A frontier list | (a) the corrected short list with a pointer to Dyadic §2 OPEN 9; the full reduction waits for the structural maintenance. |
+| 4 | Row 27: SG-PROG quotes | Pointers to Programme v1.4 §8; AZ's own firewall application is kept. |
+| 5 | Row 31: evidence availability | Replace the §9 provenance claim by the availability statement of row 31. |
+| 6 | Drafting and review | Claude drafts v0.7; ChatGPT gives an independent change-focused review. Scientific adoption, merge and tag stay with the PI. |
+
+These decisions fix the scope of the corrections edition. They adopt no text: `az-v0.7` is adopted only by its own release record.
 
 ## 8. Review
 
-PR #207 review `5848171706` (ChatGPT co-owner session, posted through the PI's account, on commit `a65f2ac`): accept with minor corrections, PI decisions pending; no unlisted drift found in the scopes it inspected. R1 (row 31: the existing §9 provenance claim must be replaced, not only supplemented) and R2 (Atlas AZ.A5: SG-DZT-1 does name the AZ `4|q` rule, in a no-transfer guard) are accepted and made above; both were checked here at `az-v0.6` §9 and `dzt-v0.8` SG-DZT-1. E1: this PR's orientation diff removes the one word "Empty." from the shared placeholder of the lanes section, because the section now holds a lane; that edit is declared here for the owner's review. The review's recommendations on §7 are co-owner recommendations, not PI decisions.
+PR #207 review `5848171706` (ChatGPT co-owner session, posted through the PI's account, on commit `a65f2ac`): accept with minor corrections, PI decisions pending; no unlisted drift found in the scopes it inspected. R1 (row 31: the existing §9 provenance claim must be replaced, not only supplemented) and R2 (Atlas AZ.A5: SG-DZT-1 does name the AZ `4|q` rule, in a no-transfer guard) are accepted and made above; both were checked here at `az-v0.6` §9 and `dzt-v0.8` SG-DZT-1. E1: this PR's orientation diff removes the one word "Empty." from the shared placeholder of the lanes section, because the section now holds a lane; that edit is declared here for the owner's review. The review's recommendations on §7 were co-owner recommendations; the PI's decision is in §7. Re-review `5848352191` (on `6172748`): accepted; R1 and R2 closed; E1 accepted as a declared, harmless editorial change; no further correction asked.
 
 ## 9. What this record does not do
 

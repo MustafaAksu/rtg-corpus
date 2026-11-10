@@ -53,16 +53,16 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 ### CO-OWNER LANE — Claude
 
-**Checked:** 10 November 2026, 18:35 +03:00; `main` `ebf1163`; tag `az-v0.6` → `d7d661c`, file `dec78a47…0b8a`, no release record; inbox two items, both `open`; no open PR and no other branch on AZ paths.
+**Checked:** 10 November 2026, 22:55 +03:00; `main` `ebf1163`; tag `az-v0.6` → `d7d661c`, file `dec78a47…0b8a`, no release record; inbox two items, both `open`; open on AZ paths: PR #207 (this record) only.
 **Goal / current question:** bring AZ into line with the current owner editions by a corrections edition `az-v0.7` with no new science, the §6 "legal ×2" sentence first.
-**Last durable work:** entry reading (BOOTSTRAP 1) and the triage record `records/az/AZ_REACTIVATION_TRIAGE.md` (BOOTSTRAP 2; 34 rows, two inbox items, five Atlas findings), branch `claude/az-reactivation-triage`, PR #207. Not adopted.
-**Decisions held:** PI, 10 Nov 17:23: AZ is reactivated and advisory row 1 is fixed first (advisory §4). PI, 10 Nov 18:31: this session writes the triage. No decision yet on any triage row.
+**Last durable work:** entry reading (BOOTSTRAP 1) and the triage record `records/az/AZ_REACTIVATION_TRIAGE.md` (BOOTSTRAP 2; 34 rows, two inbox items, five Atlas findings), branch `claude/az-reactivation-triage`, PR #207; co-owner reviews `5848171706` and `5848352191` (accepted). A session record: it adopts no text.
+**Decisions held:** PI, 10 Nov 17:23: AZ is reactivated and advisory row 1 is fixed first (advisory §4). PI, 10 Nov 18:31: this session writes the triage. PI, 10 Nov 22:52: the co-owner recommendations on all six triage questions are accepted (triage §7): list (i) is the scope of `az-v0.7`; Methodology v1.2 stays declared; corrected Thread A list with a pointer; SG-PROG by pointer; the §9 provenance claim is replaced; Claude drafts, ChatGPT reviews.
 **Tried and set aside:** comparing AZ with the editions it pins (Dyadic v6.4.8.1, TDR-G v2.12, Genesis v2.8.4, Programme v1.1, OPEN-M v0.6, Methodology v1.2) — not possible, they are not in the repository; the triage compares with the current tags. Reopen if those files are supplied. Nothing was computed.
 **Evidence:** sources, tags and hashes in triage §1. The Thread C files of AZ §9 are absent from the repository; PI, 10 Nov: they may exist locally and were not located that day.
 **Resume:** the LIVE_STATE command above, then the PI's decision on the triage PR.
 **Next 1–3 actions / acceptance:**
-1. PI decision on triage §7 (six points), on PR #207. Pending with the PI.
-2. After it: draft `az-v0.7` on a `claude/*` branch, limited to list (i) as decided. Acceptance: every changed line maps to a triage row; no AZ-owned grade changes; co-owner review; release record; dispositions on the two inbox items; a notice to `pipes/TDRG/` (TDR-G cites `AZ-ALG-ANTIPODAL-LOWORDER` at `az-v0.6`).
+1. Merge of PR #207 by the PI (merge commit; no tag — a record only). The CLI block was given in the project conversation of 10 Nov and in the PR.
+2. Draft `az-v0.7` on `claude/az-v0.7`, limited to list (i) as decided. Acceptance: every changed line maps to a triage row; no AZ-owned grade changes; co-owner review; release record; dispositions on the two inbox items; a notice to `pipes/TDRG/` (TDR-G cites `AZ-ALG-ANTIPODAL-LOWORDER` at `az-v0.6`).
 3. When the PI locates the Thread C files: unchanged on an `upload/…` branch, hash check against `AZ-ART-AZV5-REGISTRY`, placement under `evidence/az/`.
 **Reopen trigger:** a new owner tag of Dyadic, TDR-G, Genesis, Programme, OPEN-M or Methodology before v0.7 is frozen (re-read the affected rows); a new item in `pipes/AZ/`.
 
