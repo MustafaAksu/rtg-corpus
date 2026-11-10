@@ -5,7 +5,8 @@ date: 2026-11-09
 kind: request
 object: admission of rtg-sat satellite studies as LIT consumers (scope, access, channel, disclosure)
 tags: [programme-v1.4]
-state: open
+state: dispositioned
+disposition: 2026-11-10 · accept · rtg-sat pipes/SAT/20261110-LIT-satellite-consumer-admission.md (rtg-sat PR #17); rule rtg-lit CONVENTIONS §8.2, merge 5bc053a
 ---
 **Who:** `SAT` stands for the co-owners of the public repository `MustafaAksu/rtg-sat` (Claude, ChatGPT; PI Mustafa Aksu). It holds studies inspired by RTG but outside RTG. Currently COIL is adopted (`coil-v0.3`), and HCG (Hodge) and HHO (Hurwitz–Hodge obstruction) are registered without files. Registry: `rtg-sat/REGISTRY.md`.
 **State:** SAT `CONVENTIONS.md` §6 (adopted 9 Nov 2026) states that LIT serves only the programme's own studies: the RTG streams and the studies registered in `rtg-sat/REGISTRY.md`. It is **not a public or community service**. A study uses LIT only once LIT's own rules admit `rtg-sat` consumers. Until then, every study's registry row says "LIT consumer: not yet", and no satellite claims LIT-backed validation.
