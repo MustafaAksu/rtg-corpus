@@ -1,0 +1,762 @@
+{
+ "schema": "atlas-preservation-manifest/draft-0",
+ "summary": {
+  "source_sha256": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
+  "records": {
+   "UNPARSED": 488,
+   "diagnostic": 117,
+   "node": 687
+  },
+  "node_fields": {
+   "statement": 685,
+   "UNVERIFIED": 545,
+   "negative": 128,
+   "dep": 75,
+   "consumer": 91,
+   "derived": 27,
+   "premise": 8,
+   "scope": 104,
+   "cert": 105,
+   "locator": 435,
+   "alias": 56,
+   "tension": 4,
+   "evidence": 3,
+   "collision": 1
+  },
+  "duplicate_node_ids": [
+   "*GEN:phase-drift-law",
+   "*GEN:plateau-bridge",
+   "*GEN:rank-obstruction",
+   "*GEN:uniform-phase-sink",
+   "*NUMGEN:C7B-T1..T4",
+   "*NUMGEN:Census-1",
+   "*NUMGEN:Qdyn-lower-bound",
+   "GEN-ART-JQ-PHASEDRIFT",
+   "GEN-ART-SATURATION",
+   "NUMGEN-N3D-FINITE-CHAR",
+   "RECOG-ALG-CHART-LAWS",
+   "RECOG-ALG-NU3-CLOSED-FORM",
+   "RECOG-THM-P2-C0-FIRST",
+   "RECOG-THM-P2-HET",
+   "RECOG-THM-R9-MEMORY"
+  ],
+  "nodes_with_unverified_field": 373,
+  "conditional_nodes": 25,
+  "note": "UNPARSED lines and UNVERIFIED fields are not covered by a field-level comparison; they need the line-level hash or review."
+ },
+ "records": [
+  {
+   "kind": "node",
+   "id": "DYAD-THM-LPHASE-ROWA-BRIDGE",
+   "grade": "THM",
+   "line": 386,
+   "section": "return phase: OPEN 3, OPEN 21, L-PHASE, L-MONO, defect growth",
+   "line_sha256": "171a2d49474a95b6e398c46b81f48aaebb3118e6fec4fd04d02868cf03c6f5a3",
+   "fields": [
+    {
+     "cls": "statement",
+     "span": [
+      32,
+      41
+     ],
+     "sha256": "e80ec115231377f49e8a14c9dd69c2d206f9d6145874a9c11315ac403a494f05",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": []
+    },
+    {
+     "cls": "scope",
+     "span": [
+      44,
+      155
+     ],
+     "sha256": "f46d98877f1c5fb7a2634a9a3390aa253f2e47ff831b66510fea9695cda69ded",
+     "rids": [
+      "DYAD-THM-NF-INV"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": [
+      "1/20"
+     ]
+    },
+    {
+     "cls": "UNVERIFIED",
+     "span": [
+      158,
+      448
+     ],
+     "sha256": "8516522b76628e40257108967b71c9d2adfcc0905460c09e2f6a6a0a962ac31c",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "negative",
+     "span": [
+      451,
+      537
+     ],
+     "sha256": "47f8b8279ed69b436c7f6e7bb030a2972fc0d07a09e38469d189c5da9a57533b",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": [
+      "19"
+     ]
+    },
+    {
+     "cls": "consumer",
+     "span": [
+      540,
+      761
+     ],
+     "sha256": "2fdcce7e2d9d458796af5186f8d5464f28f78fae0be07af9d969208144984eea",
+     "rids": [
+      "RECOG-ALG-A1C-LOGFREE-ENVELOPE",
+      "RECOG-ALG-A1C-START-OFFSET",
+      "RECOG-THM-A1C-SHARPENED-SCHEDULE"
+     ],
+     "pins": [
+      "recog-v0.3.27"
+     ],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "cert",
+     "span": [
+      764,
+      836
+     ],
+     "sha256": "473e24dfc4d683faf53681b3cb970f701b0d28e5df585aafabb8662f3a4384c8",
+     "rids": [
+      "DYAD-ART-INBOX-20261030",
+      "DYAD-ART-LPHASE-ROWA"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "locator",
+     "span": [
+      839,
+      849
+     ],
+     "sha256": "c6e52591b227ffc5bc128061f784014dfe90ec0478f4f7c13eb0dd2cdbbb493a",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    }
+   ],
+   "conditional": false
+  },
+  {
+   "kind": "node",
+   "id": "RECOG-ALG-A1C-JET-REMAINDER-BOUNDS",
+   "grade": "ALG",
+   "line": 738,
+   "section": "asymptotic phase and the NUMGEN defect constant (A1a)",
+   "line_sha256": "dfcae6573c18553b9981456b9cacd19494ba23a0371f9174487df3e88efd427b",
+   "fields": [
+    {
+     "cls": "statement",
+     "span": [
+      39,
+      48
+     ],
+     "sha256": "bebac8e89621e9b6198ec27f1e7236e30d26506056022ec744f6e32e6a096a0f",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": []
+    },
+    {
+     "cls": "scope",
+     "span": [
+      51,
+      176
+     ],
+     "sha256": "be9591921b6887fad06ea5113a590252e53968a75da7469571570cba58f4e0dd",
+     "rids": [
+      "DYAD-ALG-NF6",
+      "DYAD-THM-NF-REM"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": [
+      "0",
+      "256/140625",
+      "1/400"
+     ]
+    },
+    {
+     "cls": "UNVERIFIED",
+     "span": [
+      179,
+      624
+     ],
+     "sha256": "e07efe7dd1840a24ade2ebd3afd4f0502594a8cea09d667fcf2b7a66f42ebb72",
+     "rids": [
+      "DYAD-THM-LPHASE-ROWA-REMAINDER"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "dep",
+     "span": [
+      627,
+      657
+     ],
+     "sha256": "1a8da4861a4ad3a48501b9bb0523e7eb62b5a5995cbe2025367839b5ee3c6294",
+     "rids": [
+      "DYAD-ALG-NF6",
+      "DYAD-THM-NF-REM"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "consumer",
+     "span": [
+      660,
+      1071
+     ],
+     "sha256": "32e3ed13b18f091c15e41bafc17fb9c7e1dc94c161a50d56b2d825d7d8427985",
+     "rids": [
+      "DYAD-THM-LPHASE-ROWA-BRIDGE",
+      "DYAD-THM-OPEN3-SPIRAL-REM",
+      "RECOG-ALG-A1C-COMBINED-TAIL"
+     ],
+     "pins": [],
+     "markers": [
+      "[assuming:"
+     ],
+     "numbers": null
+    },
+    {
+     "cls": "negative",
+     "span": [
+      1074,
+      1128
+     ],
+     "sha256": "20f8d3ceea09d2d460a429bfa4b80d9f5ddc85cc800fad642b859a956bea012d",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": []
+    },
+    {
+     "cls": "cert",
+     "span": [
+      1131,
+      1244
+     ],
+     "sha256": "df44e4b3b126487febcd8267ee67ed04a520f8bcff51df89a4d620a8afe186b7",
+     "rids": [
+      "RECOG-ART-A1C-JET-REMAINDER-BOUNDS"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "locator",
+     "span": [
+      1247,
+      1254
+     ],
+     "sha256": "58bb86ea5736b2130e28e80824ae72032fbd59f86d04cd4d9192ed1a75acde73",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    }
+   ],
+   "conditional": false
+  },
+  {
+   "kind": "node",
+   "id": "TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC",
+   "grade": "ALG",
+   "line": 1037,
+   "section": "T-6s / T-6t / T-6u (current successors)",
+   "line_sha256": "c13d8485abec3ba18ee5b689bd7cea4e7f521977183e2893997e3da85456b4f8",
+   "fields": [
+    {
+     "cls": "scope",
+     "span": [
+      41,
+      81
+     ],
+     "sha256": "fbfe4cee733b3389851b53804eb7b76670b60c4413144d0359dcfb179a9c6d18",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": [
+      "0"
+     ]
+    },
+    {
+     "cls": "statement",
+     "span": [
+      84,
+      862
+     ],
+     "sha256": "cf1534eb7a346edb708eaf15b45ab497f591ecd7f70ab900dd4b6ba7396a7dd0",
+     "rids": [
+      "GEN-ALG-P4-DRIFT-IDENTITY"
+     ],
+     "pins": [
+      "GEN v2.10",
+      "TRIAD v1.7",
+      "gen-v2.8.7"
+     ],
+     "markers": [],
+     "numbers": [
+      "7",
+      "61",
+      "0",
+      "3",
+      "7.2",
+      "16",
+      "3",
+      "7",
+      "0",
+      "0",
+      "0",
+      "1",
+      "61",
+      "3",
+      "0",
+      "7",
+      "5",
+      "1728",
+      "7",
+      "32",
+      "21/64",
+      "0.0716027452",
+      "2",
+      "19.751",
+      "42/64",
+      "0.1012615734",
+      "13.966",
+      "7/16",
+      "0.1653594569",
+      "8.552",
+      "14/16",
+      "0.2338535867",
+      "6.047",
+      "14/16",
+      "16",
+      "7",
+      "6",
+      "16",
+      "7",
+      "36",
+      "4/7"
+     ]
+    },
+    {
+     "cls": "negative",
+     "span": [
+      865,
+      1088
+     ],
+     "sha256": "5f58c05bf753b85d3c08bd1832db94dff72e16f755637e961155da4a97deae91",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": [
+      "1.488",
+      "4",
+      "7",
+      "3"
+     ]
+    },
+    {
+     "cls": "cert",
+     "span": [
+      1091,
+      1160
+     ],
+     "sha256": "d81b14e6230e6180103a3a8d1f121cc437b75dee7d9097258c73c36b8ca25037",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "consumer",
+     "span": [
+      1163,
+      1402
+     ],
+     "sha256": "e6f4a53f7072af18982adc1007fa994fc3b205bbbf5603503339655566b071ff",
+     "rids": [
+      "GEN-CAND-APEX-T6U"
+     ],
+     "pins": [
+      "GEN v2.10",
+      "triad-v1.7"
+     ],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "locator",
+     "span": [
+      1405,
+      1411
+     ],
+     "sha256": "b983c358a0d8b2156d20d0b23902dd9b4c7d8d34a22c02662ee0685de87b045f",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    }
+   ],
+   "conditional": false
+  },
+  {
+   "kind": "node",
+   "id": "*GEN:chrono-protection",
+   "grade": "THM",
+   "line": 1044,
+   "section": "tetrahedral K4 primitive algebra (GEN)",
+   "line_sha256": "4d8fdd2045a885919870f488e5b9c536d053fd9d502f44d28cfbde5f41f5ff97",
+   "fields": [
+    {
+     "cls": "statement",
+     "span": [
+      29,
+      178
+     ],
+     "sha256": "224ade33cb4e422a651eb6c7ab264cbab252e35153b218f5e90ef7f788eb6df6",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": [
+      "0",
+      "5",
+      "0"
+     ]
+    },
+    {
+     "cls": "cert",
+     "span": [
+      181,
+      214
+     ],
+     "sha256": "1fbc9a84de220e4c7bab1e6a09933ceeb639db5e2314a7b6c54a696f095cabdc",
+     "rids": [
+      "GEN-ART-G2-CHRONO"
+     ],
+     "pins": [],
+     "markers": [
+      "[custody-A]"
+     ],
+     "numbers": null
+    },
+    {
+     "cls": "UNVERIFIED",
+     "span": [
+      217,
+      660
+     ],
+     "sha256": "3fa084d7b9a8c7aa48bdecb523edc1a8d1aa1ec260e09f19467aeede2ed52ec6",
+     "rids": [
+      "NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE",
+      "RECOG-ALG-LEADING-RETURN-EQUIVARIANCE"
+     ],
+     "pins": [
+      "GEN v2.10"
+     ],
+     "markers": [
+      "[indep-INB]",
+      "not a recovery"
+     ],
+     "numbers": null
+    },
+    {
+     "cls": "consumer",
+     "span": [
+      663,
+      716
+     ],
+     "sha256": "61eb76073972831e3048cc1b1a9f7cb8152f0da08a6a300a7197bd7ca894bf54",
+     "rids": [
+      "GEN-ALG-P4-DRIFT-IDENTITY"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "locator",
+     "span": [
+      719,
+      724
+     ],
+     "sha256": "a209ea8e109b9afdecf452f3c1decb51f19b569af827e1f5ce7e4a3541e9e037",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    }
+   ],
+   "conditional": false
+  },
+  {
+   "kind": "node",
+   "id": "GEN-ALG-P4-DRIFT-IDENTITY",
+   "grade": "ALG",
+   "line": 1047,
+   "section": "tetrahedral K4 primitive algebra (GEN)",
+   "line_sha256": "c38a2f25041d6ff96eccf507f1368e86cddb1445b40601dce2777d01aa08035c",
+   "fields": [
+    {
+     "cls": "statement",
+     "span": [
+      30,
+      37
+     ],
+     "sha256": "913a70164a4d66e86e82f0e781808d9e4e24fa73685d22e431554d65f2b79dbb",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": []
+    },
+    {
+     "cls": "scope",
+     "span": [
+      40,
+      139
+     ],
+     "sha256": "6a6e9ee4da7b57fcd6d5aa632f96fddb6188b2279625b22840413d79576139e5",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": [
+      "6.4"
+     ]
+    },
+    {
+     "cls": "UNVERIFIED",
+     "span": [
+      142,
+      497
+     ],
+     "sha256": "d98e21791ee7cb0cb511ca1e0742126d4b1856b19206f76f64f164c8b69d5c74",
+     "rids": [
+      "GEN-THM-LIN-ORDER6"
+     ],
+     "pins": [],
+     "markers": [
+      "[indep-INB]"
+     ],
+     "numbers": null
+    },
+    {
+     "cls": "UNVERIFIED",
+     "span": [
+      500,
+      553
+     ],
+     "sha256": "7ac9258ad94dc8d299fa58dcd8c2938a6f363b4e6fcb5dfa364dec45400971bd",
+     "rids": [
+      "GEN-THM-DELTA-QC"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "negative",
+     "span": [
+      556,
+      723
+     ],
+     "sha256": "9e07218c1c42c54047971d7faa154ee2db3737a05ba0dac92e09da2fa67767f5",
+     "rids": [
+      "GEN-ART-P4-PRIMITIVE"
+     ],
+     "pins": [],
+     "markers": [
+      "[custody-A]"
+     ],
+     "numbers": [
+      "4",
+      "0",
+      "6.4"
+     ]
+    },
+    {
+     "cls": "consumer",
+     "span": [
+      726,
+      824
+     ],
+     "sha256": "3fd3c1810ba44761ccc48865ee5b90618bca610c2ee3cecfa03e69ec39ce9a04",
+     "rids": [
+      "TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC"
+     ],
+     "pins": [
+      "TRIAD v1.7",
+      "gen-v2.8.7"
+     ],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "evidence",
+     "span": [
+      827,
+      915
+     ],
+     "sha256": "8b9e59c443be0e5c88706df6595c92e6f3cf8481ad32d879faf0138bcafad94b",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "locator",
+     "span": [
+      918,
+      923
+     ],
+     "sha256": "1da43a150029908f667b43a1065e5bcfd6219ee66c7861efaa1492b67a3bdd60",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    }
+   ],
+   "conditional": false
+  },
+  {
+   "kind": "diagnostic",
+   "id": "F14",
+   "cls": "D-PROOF",
+   "line": 1099,
+   "section": "D4a.L5 DIAGNOSTICS",
+   "line_sha256": "c7cffbb3fb91c7b3d85ef0f578bba0c4f6bef33098fba2802ebb3cc81c4be70b",
+   "rids": [
+    "GEN-ALG-P4-DRIFT-IDENTITY"
+   ],
+   "pins": [
+    "GEN v2.10"
+   ],
+   "markers": [
+    "EV-NOT-RERUN",
+    "[custody-A]",
+    "[indep-INB]",
+    "not a recovery"
+   ],
+   "body_sha256": "512c33a43f3f5dfec1582af1501ef15f03b40a918ba30bfe76d6038bba8ed37a"
+  },
+  {
+   "kind": "diagnostic",
+   "id": "F30",
+   "cls": "D-PIN/D-GRADE",
+   "line": 1108,
+   "section": "D4a.L5 DIAGNOSTICS",
+   "line_sha256": "6affb43b7660d00e3c342ea24f137a80f65f41fedddcff019ce91f7cce06bf3b",
+   "rids": [
+    "GEN-ALG-BIRTH-SYMMETRY-SEED",
+    "GEN-ALG-P4-DRIFT-IDENTITY"
+   ],
+   "pins": [
+    "GEN v2.10",
+    "TRIAD v1.7",
+    "gen-v2.8.7"
+   ],
+   "markers": [],
+   "body_sha256": "b354e8372aaa2223c31af2b4fc193eacc2950d3297805178fe03cd87f60b0028"
+  },
+  {
+   "kind": "node",
+   "id": "GEN-CAND-APEX-T6U",
+   "grade": "CAND",
+   "line": 1185,
+   "section": "Triadic and dyadic amplitude interfaces",
+   "line_sha256": "2ae739c937d64e42b4f5488444e3548123a8a6506bcd7e8cc6d36b17c7cb24da",
+   "fields": [
+    {
+     "cls": "statement",
+     "span": [
+      25,
+      269
+     ],
+     "sha256": "f44c3f6b0a6bb473edf62e665c75e9f6c9a22040a7c889a7e8a16dea810d97c6",
+     "rids": [
+      "TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC"
+     ],
+     "pins": [
+      "GEN v2.10",
+      "triad-v1.7"
+     ],
+     "markers": [],
+     "numbers": [
+      "3",
+      "0",
+      "0",
+      "7",
+      "4",
+      "21/64",
+      "0.0716",
+      "6.17"
+     ]
+    },
+    {
+     "cls": "negative",
+     "span": [
+      272,
+      344
+     ],
+     "sha256": "da044870c452709ef5d9bf598853b8f159adf9a3a3b1dbd8b7eb4834b3d5e434",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": []
+    },
+    {
+     "cls": "dep",
+     "span": [
+      347,
+      406
+     ],
+     "sha256": "ebce88e3cc35414229c194909cb3a52dfb0419122796dfdb36141601992a3ea3",
+     "rids": [
+      "GEN-ART-G3D-SEED",
+      "TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC"
+     ],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    },
+    {
+     "cls": "locator",
+     "span": [
+      409,
+      415
+     ],
+     "sha256": "60bee81c78bbb53e046d2e0939519cc3ee36a3422a3c88ada67d3eb1d669fb62",
+     "rids": [],
+     "pins": [],
+     "markers": [],
+     "numbers": null
+    }
+   ],
+   "conditional": false
+  }
+ ]
+}

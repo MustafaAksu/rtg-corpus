@@ -22,31 +22,31 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## OWNER_LANE — Claude
 
-**Goal / current question:** keep the Atlas current with owner releases and keep this note usable as the stream's working memory; no scientific question open on the Atlas side.
-**Last durable work:** `claude/atlas-orientation-maintenance`, this PR (F1–F3 of the test record, bootstrap, BASELINE row, native-run evidence). Before it: PR #195 (test record, `d147d41`), PR #194 (seal), PR #193 (lane), PR #190 (reporter).
-**Decisions held:** two-layer design (generated state, intent here) — accepted and tested; #189 deferred by its proposer, no Methodology edition for this; #113/#114 are open Atlas tool work on their own review track (#114's REVISE refers to an older #113 commit, not carried forward automatically); no Atlas refresh due — no source tag after `fa3db80`, no open Atlas inbox item; next refresh counts the pipe items filed after `fa3db80` at its own snapshot.
-**Tried and set aside:** a standalone Methodology v1.5 for session orientation (#189) — set aside as too heavy for an operational rule; reopen if CONVENTIONS §9 generalization needs a Methodology hook. Hand-copied live inventory in the note (pilot rev. 1) — set aside after it went stale within a day; reopen never.
-**Evidence:** reporter run at `main` `53e4125`: COMPLETE, matched #113 and #114, inbox 7/7 closed, no outbound. Blind tests 9 Nov: both platforms 7/7, 5/5, 4/4, access PASS (sealed key `b1b44898…`).
-**Resume:** no unfinished owner computation. Reporter command above.
+**Checked:** 10 November 2026, 11:30 +03:00; `main` `752bb6a` (PR #113/#114 merged), `atlas-v0.10` unchanged, inbox 7/7 closed.
+**Goal / current question:** Atlas v0.11 as a compaction edition (no source movement, no semantic change): can the file return towards the Method size target under a mechanical preservation contract?
+**Last durable work:** `claude/atlas-v0.11-manifest-design`, PR #202 (draft): `tools/atlas_preservation.py` rev. 3 and `records/atlas/ATLAS_V0_11_PRESERVATION_MANIFEST_DESIGN.md` §§7–9. Receiving review: PR #203.
+**Decisions held:** order agreed with the PI and the reviewer — tool debt (done: `check_compaction.py` round 4 on `main`) → v0.11 preservation manifest and a D3 pilot → one advisory note to the PI on dormant-owner findings (H2, H11, AZ.A1, H3). Size is an aim, not a gate. `DECLARED` is never `PRESERVED`; grade, qualifier, identifier and diagnostic-class changes are not compaction and need a reviewed stage-1 delta. No up-front normalization of the whole Atlas. #189 deferred. Satellite repository `rtg-sat` is outside the Atlas inputs (Method §3); a one-sentence Method v0.3 delta is planned, separately reviewed.
+**Tried and set aside:** the draft-0 extractor (character offsets, feature-list equality as evidence) — replaced; reopen never. Using `check_compaction.py` for the Atlas — set aside, it reads DSN forms only; reopen if the Atlas adopts DSN record syntax.
+**Evidence:** `atlas-v0.10` extract: 1,543 regions, 560 typed nodes, 117 diagnostics, 615 raw lines; identity compare 1,427 EXACT. Thirteen identifiers occur on more than one line (design note §7), six of them scientific RIDs in or beside D3.
+**Resume:** `python3 -I tools/atlas_preservation.py selftest`; `… extract atlas/RTG_STATE_ATLAS.md OUT.json`; `… compare BASE CAND MAP.json --report R.json`.
 **Next 1–3 actions / acceptance:**
-1. #113/#114: change-focused readback of #113's round-3 fixes (`74ca65e`) against #114's two hash-binding counterexamples; acceptance = receiving verdict recorded on #114's branch.
-2. F4: first fresh AI session with native prerequisites runs the reporter and records stdout, status and the tool hash under `evidence/atlas/orientation_pilot/`; connector-mode sessions keep "native NOT RUN".
-3. Next Atlas refresh when a source tag moves or an Atlas inbox item opens (Method §7); also add the BASELINE Atlas row's hash to the next release record's checklist.
-**Reopen trigger:** any owner tag after `fa3db80`; any open item in `pipes/ATLAS/`; a PI decision to generalize CONVENTIONS §9.
+1. Done: tool rev. 3 ACCEPT SCOPED for the D3 mechanical pilot (PR #202 review 5838875546; the reviewer's rev. 3 runs are source-reported, not rerun). Remaining: PI merge of #202/#203.
+2. D3 pilot: stage-1 dispositions for the duplicate identifiers it touches, compaction with a movement map, comparator report with 0 FAIL, and every pending item and context review listed for the change-focused review. The comparator is not used as an acceptance gate before step 1.
+3. Advisory note to the PI on dormant-owner findings; "accept the recorded state" there means deferring a known debt, not resolving it.
+**Reopen trigger:** any owner tag after `fa3db80` (impact refresh takes precedence over compaction); any open item in `pipes/ATLAS/`.
 
 ## REVIEWER_LANE — ChatGPT
 
-Checked 9 November 2026: independently verified #195/#196/#188 merges and main `53e412544ae53e3d657a2ef446493f73fe865c9f`; read merged CONVENTIONS §9 and the entry note. PI supplied a successful live native reporter run; this reviewer did not execute it. Held decisions: Atlas pilot accepted; #189 deferred; #113/#114 remain separate tool work. No active reviewer branch. Prior review/evidence is merged under `records/atlas/ATLAS_ORIENTATION_PILOT_RECEIVING_CHATGPT_20261109.md`; do not reopen completed scoring or reporter correction rounds. Next: one maintenance-diff review; then assess the first fresh-session native invocation when prerequisites exist, with connector mode supported when they do not.
+Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspected; the two rev.2 compound-route residuals are closed. Producer evidence reports self-test 33/33, prior receiving 11/11 and compound routes 4/4, exit 0; this reviewer did not rerun them because the local shell lacked GitHub network materialization. Verdict: ACCEPT SCOPED for the D3 mechanical pilot, not semantic equivalence or Atlas adoption. Next: D3 frozen-base pilot with zero FAIL and every pending/context obligation reviewed; Method v0.3 remains separate.
 
-*(Text supplied by the reviewer in PR #188 comment 6739968719 and installed unchanged by the owner at the reviewer's request.)*
+*(Text supplied by the reviewer in the project conversation of 10 November 2026 and installed unchanged by the owner at the reviewer's request; decision recorded in PR #202 review 5838875546 and PR #203 commit `69f5256`.)*
 
 ## PI_PENDING — maintained by owner
 
-**Open with the PI (9 November 2026, after the pilot acceptance):**
-- This maintenance PR → merge into `main` after the reviewer's maintenance-diff review. CLI block to follow.
-- F4 smoke test: when convenient, start one fresh AI session that has `gh` and a clone, give it the BOOTSTRAP message plus "run the reporter and paste its output"; the owner files the result.
-- #113/#114: no PI action until the readback above is recorded.
-- CONVENTIONS §9 generalization: PI decision, not requested yet; each owner would choose one entry path and redirect older entry notes.
+**Open with the PI (10 November 2026):**
+- PR #202 (tool and design note) and PR #203 (its receiving review) → merge after the reviewer's acceptance of tool rev. 3. No CLI block issued yet.
+- F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
+- CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
 
 The owner records later PI requests and issued CLI blocks here with their exact source.
 
