@@ -51,3 +51,28 @@ Stage 2 is the D3 compaction proper, against the hashed stage-1 output: movement
 ## 6. Requested
 
 Review of §§2–4: the classification, the no-loss table, the `J_NF` point, and the form of the reference line. On acceptance the owner builds stage 1 (builder, map, comparator report) and submits the twelve pending items.
+
+## 7. Stage 1 built (10 November 2026, after the review of §§2–4)
+
+The review (PR #204 review 5839419629) is ACCEPT WITH CHANGE: classification and no-loss table accepted; `J_NF` and `J(z)` are the same defined finite normal-form jet (not F̂, not the raw jet, not the archival Lie-gauge object), so the sixth pair is not deferred; the reference line needs an explicit `<RID` edge and `@OWNER§`; the movement map must remap the five full RECOG nodes from occurrence `#2` to `#1`. All applied.
+
+**Files** (`evidence/atlas/v0.11_pilot/`): `build_stage1.py` (asserts the base hash and each replaced line's hash), `RTG_STATE_ATLAS_stage1.md`, `stage1_movement_map.json`, `stage1_compare_report.json`, `stage1_pending_items.md` (the six before/after pairs, verbatim). The live `atlas/RTG_STATE_ATLAS.md` is not changed.
+
+| Item | Result |
+|---|---|
+| Stage-1 output | SHA-256 `0f8ba5c0e34dcbbaaa11858e2d568a9f5d5ced63aeca8ee69a44c973d7a1a6c2`, 521,832 bytes (base 521,243; +589: the reference lines carry explicit edges and locators) |
+| Comparator (`atlas_preservation.py` rev. 3) | **MECHANICAL PASS**: 1,414 EXACT, 12 DECLARED_PENDING_REVIEW, 7 MAPPED_EXACT, 0 FAIL |
+| Context reviews | 2 (see below) |
+| Two builds | byte-identical |
+| `tools/atlas_check.py` on the stage-1 text | 0 FAIL; counts equal to v0.10 (links 499/5/11, keys 142, wording 12 WARN) |
+
+**Difference from the predicted result.** The prediction was 12 pending, 5 mapped, no context review. The run gave 7 mapped and 2 context reviews. Cause: lines 754 and 755 (`RECOG-NUM-P2-C0-FIRST`, `RECOG-NUM-P2-HET-NEG`, records with a `NUM+` grade form the tool keeps as raw lines) follow the full `RECOG-THM-P2-C0-FIRST` node and are anchored to it. Renumbering that node `#2 → #1` changes their anchor key, so the tool refused them until the map declared them, and then listed both as context reviews. Their bytes, position, heading context and the record they follow are unchanged; only the occurrence number in the anchor key differs. This is the tool behaving conservatively, not a scope change, and it is left visible rather than tuned away.
+
+**Reference-line contents, by pair** (full texts in `stage1_pending_items.md`):
+- R9-MEMORY: the Atlas wording "resonant (0,5) slot carries the comparator-invisible phase" is kept verbatim and labelled "Atlas reading, not owner text"; G is not repeated, the line names `RECOG-ALG-LATTICE-MEMORY` (D3); "¬ physical inheritance; ¬ C_W^(h)" kept verbatim.
+- P2-HET, P2-C0-FIRST: the D2 statement kept verbatim as "D2 use".
+- NU3-CLOSED-FORM: names `*RECOG:radial-identity` and `RECOG-ALG-NU3-NONVANISHING` (D3) for the radial identity and k_ret; negative kept verbatim.
+- CHART-LAWS: `J_NF` identified with `J(z)` as the defined polynomial jet only; "245/216≠47/54 (SG-19)" and the sign remark kept verbatim.
+- N3D-FINITE-CHAR: "pure representation theory" stated; the negatives with "(SG-NG-3/4)" kept verbatim.
+
+**Requested:** review of the twelve pending items and the two context reviews. On acceptance, the stage-1 output with this hash is the frozen base of the D3 compaction (stage 2).
