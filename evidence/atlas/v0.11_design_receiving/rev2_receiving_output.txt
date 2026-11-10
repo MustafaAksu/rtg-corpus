@@ -1,0 +1,62 @@
+[SESSION] PR202 rev2 receiving execution 2026-11-10T07:23:46.949120+00:00
+PYTHON 3.13.5
+TOOL c6e6660b4d57c39a81bda9ad5c476db684ee74c962794a58cae2e1a9d5fed0e1 BLOB dda7d60000267442708e3030911f45223be03c6a BYTES 23354
+PRIOR_HARNESS 39b1441121c74f184428fcb302b04beeb87a2a0c4adb7321bd455258681554ea BLOB 66881e777f2d7ca9e2021d81c720c070c778da4a
+
+=== PRODUCER SELFTEST (UNCHANGED) ===
+ok  P identity: MECHANICAL PASS {'EXACT': 8}
+ok  N dropped premise: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N operator changed q<1 -> q>1: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N pins swapped between two edge targets: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N custody marker removed: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N negative constraint merged away: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N untyped condition moved to another record: FAIL {'EXACT': 6, 'FAIL': 4}
+ok  N second occurrence of an identifier deleted: FAIL {'EXACT': 7, 'FAIL': 1}
+ok  N heading removed: FAIL {'EXACT': 6, 'FAIL': 3}
+ok  N record moved under another heading without declaration: FAIL {'EXACT': 6, 'FAIL': 4}
+ok  N grade changed: FAIL {'FAIL': 2, 'EXACT': 7}
+ok  N unexplained inserted line: FAIL {'EXACT': 8, 'FAIL': 1}
+ok  N diagnostic class changed: FAIL {'FAIL': 2, 'EXACT': 7}
+ok  N record mapped but dropped premise not declared: FAIL {'EXACT': 14, 'FAIL': 1}
+ok  N record mapped but swapped pins not declared: FAIL {'EXACT': 14, 'FAIL': 2}
+ok  N record mapped but untyped condition dropped: FAIL {'EXACT': 14, 'FAIL': 1}
+ok  P declared field edit is pending review, not preserved: MECHANICAL PASS {'EXACT': 8, 'DECLARED_PENDING_REVIEW': 1}
+ok  P declared move under another heading is MAPPED_EXACT: MECHANICAL PASS {'EXACT': 7, 'MAPPED_EXACT': 1}
+ok  P CRLF source identity and byte spans
+ok  P non-ASCII field: byte span binds the hash
+ok  P explicit_condition_marker is a marker flag only (false here although the text is conditional)
+ok  N scopes exchanged between two statements of one record (field order): FAIL {'EXACT': 6, 'FAIL': 2}
+ok  P the same exchange with a declared reorder stays pending: MECHANICAL PASS {'EXACT': 6, 'DECLARED_PENDING_REVIEW': 2}
+ok  N raw continuation line moved under another record: FAIL {'EXACT': 3, 'FAIL': 2}
+ok  N two unchanged records swapped without declaration: FAIL {'EXACT': 2, 'FAIL': 1}
+ok  N grade changed through delete + insert: FAIL {'FAIL': 1, 'EXACT': 1, 'DECLARED_PENDING_REVIEW': 2}
+ok  N diagnostic class changed through delete + insert: FAIL {'FAIL': 1, 'EXACT': 1, 'DECLARED_PENDING_REVIEW': 2}
+ok  P duplicate occurrence deleted by declaration is pending, not a grade failure: MECHANICAL PASS {'EXACT': 2, 'DECLARED_PENDING_REVIEW': 1}
+ok  P declared move across headings is MAPPED_EXACT with a visible context obligation: MECHANICAL PASS {'EXACT': 3, 'MAPPED_EXACT': 1}
+ok  P skipped-level sibling headings: context is D/B, not D/A/B
+SELFTEST PASS
+SELFTEST_EXIT 0
+
+=== PRIOR 11 CONTROLS + OBSERVATION (CASES UNCHANGED) ===
+P_IDENTITY MATCH MECHANICAL PASS {'EXACT': 3}
+P_DECLARED_EDIT_PENDING MATCH MECHANICAL PASS {'EXACT': 4, 'DECLARED_PENDING_REVIEW': 1}
+P_IDENTITY_HASH_MISMATCH_REJECTED MATCH FAIL {'FAIL': 1, 'EXACT': 3}
+P_INLINE_PIN_SWAP_REJECTED MATCH FAIL {'EXACT': 2, 'FAIL': 2}
+N_FIELD_ORDER_BINDING MATCH FAIL {'EXACT': 6, 'FAIL': 2}
+N_RAW_OWNER_BINDING MATCH FAIL {'EXACT': 3, 'FAIL': 2}
+O_CONTEXT_CHANGE_IS_ONLY_A_BYTE_MOVE MATCH MECHANICAL PASS {'EXACT': 3, 'MAPPED_EXACT': 1}
+N_GRADE_DELETE_INSERT_ROUTE MATCH FAIL {'FAIL': 1, 'EXACT': 1, 'DECLARED_PENDING_REVIEW': 2}
+N_DIAGNOSTIC_DELETE_INSERT_ROUTE MATCH FAIL {'FAIL': 1, 'EXACT': 1, 'DECLARED_PENDING_REVIEW': 2}
+P_SAME_CONTEXT_MAPPED_MOVE MATCH MECHANICAL PASS {'EXACT': 3, 'MAPPED_EXACT': 1}
+P_UTF8_CRLF_BINDING MATCH
+N_SKIPPED_LEVEL_SIBLING_CONTEXT MATCH ['bb0de842239a9d34', '1ccce58b13c95ced']
+CONTROLS MATCHED 11 / 11 OBSERVATIONS 1
+PRIOR_EXIT 0
+
+=== PAIRED CONTEXT / FIELD-CONSUMPTION ROUTES ===
+P_EXACT_CONTEXT_QUEUE MATCH MECHANICAL PASS {'EXACT': 3, 'MAPPED_EXACT': 1} context_reviews 1
+N_WHITESPACE_CONTEXT_BYPASS MISMATCH MECHANICAL PASS {'EXACT': 5} context_reviews 0
+P_DISTINCT_REPLACEMENT_OCCURRENCES MATCH MECHANICAL PASS {'EXACT': 4, 'DECLARED_PENDING_REVIEW': 1} context_reviews 0
+N_REPLACEMENT_TARGET_DOUBLE_USE MISMATCH MECHANICAL PASS {'EXACT': 4, 'DECLARED_PENDING_REVIEW': 1} context_reviews 0
+COMPOUND_MATCHED 2 / 4
+RECEIVING_EXIT 1
