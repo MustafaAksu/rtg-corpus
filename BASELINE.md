@@ -41,7 +41,7 @@ The table lists the **governing adopted editions**. Predecessor: Methodology v1.
 
 | Study | File | Version | SHA-256 | Verification | Tag |
 |---|---|---|---|---|---|
-| ATLAS | `RTG_STATE_ATLAS.md` | v0.11 (noncanonical; owner DSNs govern on conflict) | `8d7a43f05a42c6a69b50eb97b98dd96ddda7eea327333ae5cc73e03dee46f358` | ATLAS OWNER: acceptance record `records/atlas/RTG_STATE_ATLAS_v0.11_RELEASE_RECORD.md` (PI accepted 10 Nov 2026) | `atlas-v0.11` (to be created by the PI; until it exists `atlas-v0.10` is the tagged Atlas) |
+| ATLAS | `RTG_STATE_ATLAS.md` | v0.11 (noncanonical; owner DSNs govern on conflict) | `8d7a43f05a42c6a69b50eb97b98dd96ddda7eea327333ae5cc73e03dee46f358` | ATLAS OWNER: acceptance record `records/atlas/RTG_STATE_ATLAS_v0.11_RELEASE_RECORD.md` (PI accepted 10 Nov 2026); post-tag `records/atlas/RTG_STATE_ATLAS_v0.11_TAG_VERIFICATION.md` | `atlas-v0.11` |
 | ATLAS Method | `RTG_STATE_ATLAS_METHOD.md` | v0.2 | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` | ATLAS OWNER: unchanged since `atlas-v0.2` | `atlas-v0.2` |
 
 ## Not yet in the repository
