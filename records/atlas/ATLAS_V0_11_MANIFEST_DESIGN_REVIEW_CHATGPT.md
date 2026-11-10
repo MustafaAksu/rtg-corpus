@@ -1,8 +1,8 @@
 # Atlas v0.11 preservation manifest — ChatGPT receiving review
 
 **Date:** 10 November 2026. **Status:** [SESSION], NONCANONICAL tool review; no scientific adoption, compaction acceptance or merge authorization.
-**Object:** PR #202 implementation revision 2, head `ccc5c0a35d0c344b84a66993c7612955c2900506`.
-**Decision:** **REVISE, confined to two compound matching routes.** The five preceding receiving mismatches are fixed: the current producer self-test gives 30/30 expected outcomes, and the unchanged preceding receiving suite gives 11/11 plus its separate observation. Two paired route checks expose (i) a changed-line route that drops the context-review obligation and (ii) one candidate field occurrence consumed twice. D3 preparation may continue; this revision is not yet accepted as its preservation gate.
+**Object:** PR #202 implementation revision 3, head `1f33166` (successor of rev.2 `ccc5c0a35d0c344b84a66993c7612955c2900506`).
+**Decision:** **ACCEPT SCOPED for D3 mechanical-pilot use.** The two rev.2 compound-route residuals are discharged by source inspection and producer-recorded replay; no new blocking preservation-contract issue was found in the bounded delta. This is not scientific equivalence, Atlas adoption or compaction-release approval. The rev.2 REVISE record remains in Git history. The five preceding receiving mismatches are fixed: the current producer self-test gives 30/30 expected outcomes, and the unchanged preceding receiving suite gives 11/11 plus its separate observation. Two paired route checks expose (i) a changed-line route that drops the context-review obligation and (ii) one candidate field occurrence consumed twice. D3 preparation may continue; this revision is not yet accepted as its preservation gate.
 **History:** the prior review at this fixed path remains in Git at `f80a4e884b2e372cbe25fd00fee1127a550b4f86`; the draft-0 review is at `134e420a3dc6722992da32487095f91280676260`. Their original scripts and outputs are unchanged. #113/#114 stay closed.
 
 ## 1. Sources, identity and actual execution
@@ -97,3 +97,23 @@ Use a new output directory. When evaluating a successor, inspect its delta and u
 **Reviewer checkpoint offered for the owner to install verbatim:** Checked 10 November 2026, #202 ccc5c0a. Tool hash/blob verified; current self-test 30/30 and unchanged prior receiving controls 11/11 independently pass. Five preceding mismatches closed. PR #203 records two residual compound-route cases: context obligations disappear on a whitespace-edited moved node; declared replacement and exact matching reuse one target field. New paired controls: two positives pass, two negatives mismatch. Next: one local correction/readback before D3 gating; preparation may continue. No Atlas or owner science changed.
 
 No producer source, Atlas/Method, owner DSN, pipe state, main, release tag or another co-owner's lane was modified by this review.
+
+
+## 6. Revision-3 bounded readback — 10 November 2026
+
+**[SESSION] Object:** PR #202 head `1f33166`; tool SHA-256 `6a4047b0dd3e10e15feeb9262d8b09816e82fa2f85a6d7ce939cc69d580e1d62`, Git blob `927a1420422a39ebc229e22c4114b58ba05e67aa`.
+
+The inspected delta from `ccc5c0a` is one commit. It changes only `tools/atlas_preservation.py`, the design record, and rev.3 evidence. The two requested routes are corrected directly in the source:
+
+1. **Context/anchor is route-independent.** For every declared base/candidate pair, context and raw-anchor differences are computed before line-byte comparison. The resulting obligation survives both MAPPED_EXACT and edited-record paths; an edited-and-moved node also receives a DECLARED_PENDING_REVIEW row.
+2. **Target-field occurrences are consumed once.** Exact and declared replacement matching now use the same `take()` routine with one free-position array and shared order pointer. A target occurrence selected as a replacement cannot later satisfy an exact source occurrence.
+
+[EV-SRC-READ / EV-SRC-REPORTED] The producer's rev.3 evidence records: self-test **33/33**, unchanged prior receiving controls **11/11**, four compound-route checks **4/4**, combined exit 0, and atlas-v0.10 identity comparison **1,427 EXACT** with no context review. The recorded rev.3 runner changes only the tool identity pins from the reviewer's prior harness.
+
+[EV-NOT-RERUN] In this readback the reviewer did **not** independently execute those Python suites: the local shell could not resolve github.com and the connector does not materialize repository files into the execution environment. The decision therefore rests on inspected source delta plus producer-run evidence; it must not be relabelled EV-RUN by this reviewer.
+
+**Disposition:** **ACCEPT SCOPED** as the mechanical gate for the planned D3 pilot. The tool still proves only byte/accounting properties. Every DECLARED_PENDING_REVIEW item and every `obligations.context_reviews` item remains a mandatory change-focused review obligation; MECHANICAL PASS is not semantic equivalence.
+
+**D3 entry condition:** use a frozen base, explicit movement map, comparator report with zero FAIL, and enumerate all pending/context obligations. Any grade/qualifier/identity/diagnostic-class change belongs to a separately reviewed stage-1 baseline. If the real pilot exposes a new route not covered by this contract, record it as a bounded tool issue rather than weakening an invariant.
+
+**Reviewer checkpoint offered to the owner to install verbatim:** Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspected; the two rev.2 compound-route residuals are closed. Producer evidence reports self-test 33/33, prior receiving 11/11 and compound routes 4/4, exit 0; this reviewer did not rerun them because the local shell lacked GitHub network materialization. Verdict: ACCEPT SCOPED for the D3 mechanical pilot, not semantic equivalence or Atlas adoption. Next: D3 frozen-base pilot with zero FAIL and every pending/context obligation reviewed; Method v0.3 remains separate.
