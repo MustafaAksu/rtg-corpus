@@ -9,3 +9,4 @@
 | 2026-10-30 | OFN | notice | closed | OFN v0.12 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9) | — | `20261030-OFN-v0-12-adopted.md` |
 | 2026-11-03 | TRIAD | notice | closed | Triadic v1.7 adopted; interface register IF07 (TRIAD → GEN) and IF11 (TRIAD → UVM) pin v1.6; CN-05 Programme/OFN note (§7.4) | — | `20261103-TRIAD-v1-7-adopted.md` |
 | 2026-11-09 | SAT | request | open | interface between rtg-corpus and the satellite repository MustafaAksu/rtg-sat (pointer file; pipe keys for satellite items; re-pin notices) | — | `20261109-SAT-satellite-interface.md` |
+| 2026-11-11 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ; §7.2 IF20 and IF21 pins; §9.2 maintenance row; §8 SG-PROG-1/2/4 as cited by AZ §3 | — | `20261111-AZ-v0-7-adopted.md` |
