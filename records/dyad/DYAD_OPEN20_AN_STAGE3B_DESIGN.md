@@ -1,10 +1,10 @@
 # DYAD OPEN 20 (analytic branch) — stage 3b: design of a certificate for one nonzero sectorial jump
 
-**Date:** 11 November 2026. **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). A written design with `[NUM]` feasibility sampling. Nothing is certified, no result is claimed, and no certification run was made.
+**Date:** 11 November 2026. **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). A written design with `[NUM]` feasibility sampling. Nothing is certified, no result is claimed, and no certification run was made. **Accepted by the PI on 11 November 2026 as the basis for the stage-3c certificate design, scoped (§12).** Stage 3c itself is not authorized.
 **Revision:** r2, after the co-owner's review of r1 (PR #218, review `5858511915`, verdict REVISE). The five review items R1–R5 are applied; §11 lists what changed.
 **Authority:** item 2 of the order of work in `records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md` §9 (the "pilot design" below). Target agreed by the co-owner and the owner on 11 November 2026: one jump, first at \|ξ*\| = 0.40. Stage 3c (certification) is not authorized. Scouting of the second overlap class is not authorized.
 **Governing edition:** DYAD v6.4.24 (`dyad-v6.4.24`). OPEN 20 B-an and B-6 are ACTIVE.
-**For:** the co-owner's read-back of the changed parts, then a PI decision (§10).
+**Reviews and decision:** r1 review `5858511915` (REVISE), r2 read-back `5858796744` (ACCEPT, scoped), PI decision of 11 November 2026 (§12).
 
 ## 0. Outcome in one paragraph
 
@@ -116,8 +116,8 @@ The lemma gives the unique extension **of the chosen seed**. It does not say tha
    Then d* ∈ B₀. One step of the construction, all in ball arithmetic:
    - **Inclusion.** An enclosure of the full two-component image F^k(ξ*, B⁽ᵏ⁻¹⁾), obtained from the enclosure at step k − 1 by one validated evaluation of F. It covers every d in the disc, not one orbit.
    - **Derivative.** An interval enclosure A_k of ∂d_k/∂d on B⁽ᵏ⁻¹⁾, as the lower-right entry of the product of the interval Jacobians of F in (ξ, d) along the enclosures. The product carries the effect of the moving base point.
-   - **Exclusion.** For d, c in the disc, \|d_k(d) − d_k(c)\| ≥ m_k\|d − c\| with m_k = \|mid A_k\| − rad A_k (mean-value inequality on a convex set). With c the centre: every d with \|d_k(d)\| ≤ R₀(ξ_k(d)) satisfies \|d − c\| ≤ (sup R₀ + \|d_k(c)\|)/m_k, where the supremum is over the enclosure of ξ_k. This disc is B⁽ᵏ⁾.
-   - **Error sources covered:** the coefficient balls of φ_N, the evaluation of the map, of τ and of R₀, the branch of the logarithms on the enclosures (inside Ω₀ by the inward property), and rounding.
+   - **Exclusion.** For d, c in the disc, \|d_k(d) − d_k(c)\| ≥ m_k\|d − c\| with m_k = \|mid A_k\| − rad A_k. This holds because the disc is convex and the derivative stays in the one complex interval disc A_k along the segment from c to d (integrate the derivative). The certificate must show m_k > 0. With c the centre: every d with \|d_k(d)\| ≤ R₀(ξ_k(d)) satisfies \|d − c\| ≤ (sup R₀ + \|d_k(c)\|)/m_k, where the supremum is over the enclosure of ξ_k. This disc is B⁽ᵏ⁾.
+   - **Error sources covered:** the coefficient balls of φ_N, the evaluation of the map, of τ and of R₀, the branch of the logarithms on the enclosures (inside Ω₀ by the inward property), and rounding. The image, and for the second leg the inverse, must be validated on the whole enclosure, not only along the centre orbit.
    - By (B) each step shrinks the disc by about the factor 1 + (margin of (B)). This is the lemma's own mechanism, carried out along one fibre with validated numbers.
 
 4. **Value of φ₁ at ξ*.** The same with G in place of F and R₁ in place of R₀, with a validated inverse at each step. It gives B₁.
@@ -149,7 +149,7 @@ The enclosure of step 3 is far below the jump because the tube is thin where the
 | P10 | Fibre enclosures B₀, B₁ as in §5 steps 3 and 4: inclusion of the whole fibre image, derivative with moving base, exclusion, all error sources; then the two-disc test of step 5 | computer-checked | estimated only (§7, SEP) |
 | P11 | Negative controls of the certificate: the zero-jump vector-field model must give overlapping discs; wrong branch; wrong log branch; perturbed α (pilot design §5) | computer-checked | the zero-jump harness exists (stage 2b) |
 | L1 | Existence of u_j on Δ_j and asymptotics on closed subsectors (López-Hernanz 2012, Theorems 4.2 and 5.1), for F and for G | literature | SESSION scope; LIT-checked chain |
-| L3 | Uniqueness in the class 𝓗_Δ (Theorem 4.2(3)) applied to a convergent invariant graph, for F and for G in the rotated chart of D5 | literature | the co-owner read the theorem and proposed this use; LIT is asked to validate it (`pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md`) |
+| L3 | Uniqueness in the class 𝓗_Δ (Theorem 4.2(3)) applied to a convergent invariant graph, for F and for G in the rotated chart of D5. To be shown: the graph is a parabolic curve in the theorem's sense (the base dynamics is forward stable on the petal) and the hypotheses hold in the rotated chart | literature | the co-owner read the theorem and proposed this use; LIT is asked to validate it (`pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md`) |
 | L2 | Lemma 5b-1 (P1-c-5), for the step to log F | existing SESSION lemma | unchanged |
 
 The owner has not read the text of López-Hernanz 2012 in this session; it is not in the repository. L1 and L3 rest on LIT's records and on the co-owner's reading.
@@ -276,3 +276,32 @@ Co-owner review `5858511915` on PR #218 (head `3014b93`): REVISE. The conditiona
 | R5 | The D₁ grid stopped at 0.398 below \|ξ*\|; no gate at ξ* | Gate XISTAR at ξ* with 64 directions; radii added up to 0.595; gates GUARD0, GUARD1, STEP. The added radii exposed the outer edge of D₀, where \|E\|/R exceeded the gate; R(ξ*) was raised to 2·10⁻³ (§7, parameter history). The co-owner's independent values at ξ* are reproduced (§7) |
 
 Unchanged: the target (one branch, one overlap, \|ξ*\| = 0.40), the `[NUM]` status of every number, and the absence of any certification.
+
+## 12. Read-back of r2 and PI decision
+
+**Co-owner read-back** (review `5858796744` on PR #218, head `106161b`; changed parts only; no rerun of the sampling): **ACCEPT as a scoped written design for the PI's decision; not a certificate and not an authorization of stage 3c.**
+
+| Item | Verdict | Remaining obligation |
+|---|---|---|
+| R1 local domains | fixed at design level | (G), (A1), (A2) are sampled only; their proof for all points is P3, P7, P8. P9 must prove (Q1) and the continuity of the branches |
+| R2 uniqueness | correct route, conditional | L3. The co-owner read Theorem 4.2(3) in LIT's verified transcription of the published version: the uniqueness is for any parabolic curve in the class 𝓗_Δ on a sufficiently small petal, not only for fixed points of the operator. Still to be shown: the convergent graph is a parabolic curve in that sense, and the hypotheses for G in the rotated chart. The LIT request stays open |
+| R3 common arc | fixed as an obligation | P9: explicit derivative and image estimates; validated compact continuation |
+| R4 transport | fixed as a certificate algorithm | P6, P8, P10: m_k > 0; validated image and inverse on all enclosures (added to §5 step 3) |
+| R5 sampling | gates included, `[NUM]` only | nothing between samples is certified; P7 and P8 must exclude thin violations |
+
+**Provenance note from the read-back.** The recorded values at ξ* are the committed ones: margins 6.5962 (D₀) and 6.0298 (D₁), with R(ξ*) = 2·10⁻³. The values 6.80 and 6.22 that appeared in a session message belong to the comparison run with `--rstar 1e-3` (§7), which is not a recorded output.
+
+**Conditions before a certification run can claim anything** (co-owner; the owner agrees):
+1. LIT's verdict on L3, or an independent proof with the precise parabolicity hypotheses for F and G.
+2. A quantified proof of the seed (Q1, Q2) and the full zone-I bounds.
+3. A certified guard property and interval cover of (A) and (B) on zone II for both chart sectors, including ξ* and the walls.
+4. The certified analytic tail of the common arc and its validated compact continuation.
+5. Rigorous complex-interval transport and inverse with m_k > 0, and disjoint enclosures.
+
+**PI decision, 11 November 2026, 15:52 (UTC+3), in the owner session:** "Stage 3b r2 tüp rotasının, \|ξ*\| = 0.40 hedefli Stage 3c sertifika tasarımının temeli olarak scoped kabulü uygundur." (The r2 tube route is accepted, scoped, as the basis of the stage-3c certificate design aimed at \|ξ*\| = 0.40.)
+
+Scope of the acceptance, as the read-back states it:
+- it does not authorize a stage-3c run;
+- it does not discharge L3 or P1, P3 to P11;
+- it proves no nonzero jump and no divergence;
+- B-an and B-6 stay ACTIVE; no DSN text changes.

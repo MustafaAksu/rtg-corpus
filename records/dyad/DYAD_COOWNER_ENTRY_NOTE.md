@@ -22,15 +22,15 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 |---|---|---|
 | v6.4.24 maintenance edition | `records/dyad/DYAD_v6_4_24_BACKLOG.md`; draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`; branch `claude/dyad-v6.4.24` | ADOPTED by the PI on 11 Nov 2026 (`10fbdacc…bc16`) and tagged; r1 review `5856200509`, r2 read-back `5857204402`; post-tag record `records/dyad/DYAD_v6_4_24_POST_TAG.md`; seven notices filed. Backlog §D carries over |
 | S1, OPEN 21 on the sharpened R9 rows | `records/dyad/DYAD_S1_OPEN21_SHARP_ROWS_DESIGN.md`; `evidence/dyad/s1-open21-sharp/` | in the DSN since v6.4.24 as `DYAD-THM-OPEN21-SHARP-ROWS`; offered to RECOG for A1a |
-| OPEN 20 analytic branch, sectorial pilot | `records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md` (§7 stage 1, §8 stage 3a, §9 inputs to 3b); `…_STAGE2_SCOUTING_NUM.md`; `…_STAGE2B_JUMP_SCOUTING_NUM.md`; `…_LH2012_OWNER_ASSESSMENT.md` (§5, §6); `DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md` | stage 3a done, negative; stage 2b done (`[NUM]`: jump numerically nonzero); both LIT literature replies dispositioned (§9); state recorded in the DSN's OPEN 20 entry (v6.4.24); **3b design note r2** (`DYAD_OPEN20_AN_STAGE3B_DESIGN.md`, sampling in `evidence/dyad/open20-an/stage3b-design/`; PR #218): r1 reviewed REVISE (`5858511915`, R1–R5), r2 applies all five; awaiting the co-owner's read-back and a PI decision; 3c not authorized |
+| OPEN 20 analytic branch, sectorial pilot | `records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md` (§7 stage 1, §8 stage 3a, §9 inputs to 3b); `…_STAGE2_SCOUTING_NUM.md`; `…_STAGE2B_JUMP_SCOUTING_NUM.md`; `…_LH2012_OWNER_ASSESSMENT.md` (§5, §6); `DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md` | stage 3a done, negative; stage 2b done (`[NUM]`: jump numerically nonzero); both LIT literature replies dispositioned (§9); state recorded in the DSN's OPEN 20 entry (v6.4.24); **3b design note r2** (`DYAD_OPEN20_AN_STAGE3B_DESIGN.md`, sampling in `evidence/dyad/open20-an/stage3b-design/`; PR #218): r1 reviewed REVISE (`5858511915`, R1–R5), r2 read back ACCEPT scoped (`5858796744`); **accepted by the PI on 11 Nov 2026 as the basis for the stage-3c certificate design** (note §12); 3c not authorized; L3 and P1, P3–P11 open |
 | Inbox rounds | `DYAD_OWNER_DISPOSITION_INBOX_20261030.md` with its reconciliation; `DYAD_INBOX_20261111_OWNER_DISPOSITION.md`; `DYAD_v6_4_24_POST_TAG.md` §3 | all closed |
 | Source recovery | `records/dyad/DYAD_SOURCE_RECOVERY_LIST.md`; `DYAD_UPLOAD_HASH_CHECK_*.md` | bridge note placed 3 Nov; the rest still missing |
 
 ## OWNER LANE — Claude
 
-**Updated:** 11 November 2026, 15:55 +03:00, with r2 of the 3b design note (branch `claude/dyad-open20-stage3b-design`, PR #218). **Checked:** 11 November 2026, 15:20 +03:00; `main` `5ffec34`; tag `dyad-v6.4.24` → `f0af639`, file hash equal on `main`; `pipes/DYAD/` 17 items, all closed; the seven v6.4.24 notices are open at their receivers; PR #218 open with review `5858511915` (REVISE); open PR #183 adds one OFN finding to the inbox.
+**Updated:** 11 November 2026, 16:05 +03:00, after the PI's acceptance of the 3b design (branch `claude/dyad-open20-stage3b-design`, PR #218). **Checked:** 11 November 2026, 16:00 +03:00; `main` `5ffec34`; tag `dyad-v6.4.24` → `f0af639`, file hash equal on `main`; `pipes/DYAD/` 17 items, all closed; PR #218 open with reviews `5858511915` and `5858796744`; open PR #183 adds one OFN finding to the inbox.
 
-**Goal / current question.** OPEN 20 B-an: the 3b design note (r2) proposes a tube route to a certificate of a nonzero sectorial jump at \|ξ*\| = 0.40. Does r2 close the review items R1–R5 (co-owner read-back), and is the design accepted as the basis for stage 3c (PI)?
+**Goal / current question.** OPEN 20 B-an: the tube route of the 3b design (r2) is the accepted basis for a stage-3c certificate at \|ξ*\| = 0.40. Stage 3c is not authorized. The open question is whether, and in which parts, the PI authorizes it.
 
 **Last durable work.**
 - v6.4.23 adopted 30 Oct 2026 (PR #132; post-tag record).
@@ -45,6 +45,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 - PI, 3 Nov 2026: Dyadic work is done in rtg-corpus and its outputs go into the Dyadic DSN; LIT is used only through requests in `pipes/LIT/`.
 - PI: OPEN 20 stage 3 is not authorized; N = 432 is deferred (stage-2 adoption, SESSION scope).
 - PI, 11 Nov 2026 (in session): start the v6.4.24 candidate now ("başlayalım"); stage 2b authorized ("evet aşama 2b'yi yetkilendiriyorum"). Stage 3c is still not authorized.
+- PI, 11 Nov 2026, 15:52 +03:00: the 3b r2 tube route is accepted, scoped, as the basis of the stage-3c certificate design aimed at \|ξ*\| = 0.40 (design note §12). No run is authorized by it.
 - PI, 11 Nov 2026, 13:26 +03:00: "v6.4.24 r2 'yi benimsiyorum" (adopted bytes after the status transform: `10fbdacc…bc16`).
 - Co-owner and owner, 11 Nov: the 3b design aims at certifying one jump (\|ξ*\| = 0.40 as a first target); scouting of the second overlap class is not needed now and is not authorized.
 - Co-owner and owner, 3 Nov: v6.4.24 carries interface changes and S1; the §1 compaction waits for v6.4.25 or later; S2 (L-PHASE row B) is separate.
@@ -69,7 +70,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read `DYAD_OPEN20_AN_STAGE3B_DESIGN.md` (§4 lemma, §6 obligations, §9 risks). Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **3b design note r2: the co-owner's read-back** of the changed parts (§3, §4, §5 steps 2, 3, 5, 6, §6). Acceptance: R1–R5 closed or corrected. Then the PI decides. No certification run; no scouting of the second overlap class.
+1. **Stage 3c: wait for the PI's authorization.** Proposed split for that decision: (a) proof record (P1, P3, P4, analytic parts of P9) and certificate script, with no claim; (b) the certification run and its receiving review. Until then no stage-3c work. LIT's verdict on L3 is condition 1 of the design note §12.
 2. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
 3. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
 
@@ -81,7 +82,8 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## PI_PENDING
 
-As of 11 November 2026, 15:55 +03:00:
-1. **3b design note r2** (`records/dyad/DYAD_OPEN20_AN_STAGE3B_DESIGN.md` §10; PR #218), after the co-owner's read-back: whether the design is accepted as the basis for stage 3c. Whether to authorize stage 3c is a separate decision.
+As of 11 November 2026, 16:05 +03:00:
+1. **Merge of PR #218** (design note r2 with reviews and decision; sampling package; LIT request).
+2. **Authorization of stage 3c**, whole or in parts (see next action 1). Not requested as urgent; nothing proceeds without it.
 
-Stage 3c and scouting of the second overlap class are not authorized.
+Scouting of the second overlap class is not authorized and not requested.
