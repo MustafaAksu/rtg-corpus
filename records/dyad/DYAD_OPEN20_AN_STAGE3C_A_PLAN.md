@@ -23,7 +23,7 @@ The tube lemma needs the map only on the tube, at points (z, w) = (x, φ_N(x) + 
 
 - ball coefficients, computed by acting with the six steps of T on series (the routine of stage 2);
 - a truncation degree D and a rigorous tail bound from a Cauchy estimate on a larger circle;
-- the dependence on d as a jet in d (first and second order exactly, the rest by a Cauchy bound in d).
+- the dependence on d as a jet in d: first and second order exactly, the rest by a remainder constant (a Taylor model in d on a torus, and the maximum principle; §5, W2b).
 
 The cancellation is then exact: the low coefficients vanish identically. For example Z(x) = F_z(x, φ_N(x)) = x + ℓx⁴ + …, so g(x) = Z(x)/x − 1 is a series that starts at x³.
 
@@ -50,7 +50,11 @@ a₂ … a_N are the exact formal coefficients; the certificate knows them as ba
 
 ### 2.5 The inverse map, the legs and the arc
 
-- **Inverse map (for D₁):** the series of F⁻¹ along the curve by formal inversion, with a validated inverse on a circle for the tail bound.
+- **Inverse map (for D₁): a local inverse from the forward series.** The first plan, the series of F⁻¹ along the curve by formal inversion, was computed and set aside (2.6). The inverse step is now taken from the forward series by a local inverse lemma (`inverse_conditions` in the library, with its proof in the docstring):
+  - for a target set B′ × {\|d′\| ≤ R′} it gives a disc B and a fibre radius ρ such that every target point has exactly one preimage in B × {\|d\| < ρ} (Rouché in d, then Rouché in x);
+  - the quantities of the inverse step on B′ are the forward quantities on B × {\|d\| ≤ ρ}: x/x′ − 1 = −g̃/(1 + g̃) and τ(x) − τ(x′) = −Δτ, both free of cancellation;
+  - the tube lemma of the design is not changed. This is the way obligation P8 ("validated inverse on each box") is met.
+  - *For the proof record (W7):* that the local inverses over the pieces of D₁ are one branch of F⁻¹; and the form in which (B) for G is checked on B (W3 fixes it).
 - **Legs (P10):** the nested fibre discs of the design §5 step 3, with one-step enclosures from the same series and the interval Jacobian in (x, d).
 - **Arc (P9):** validated continuation of τ(γ(t)) = Re τ* − it on the compact part; the tail by the analytic estimate of the proof record.
 
@@ -62,14 +66,19 @@ a₂ … a_N are the exact formal coefficients; the certificate knows them as ba
 - the cause is structural: the quotients are of order \|x\|⁴ and \|x\|⁵ against steps of order 1, so a form of order two cannot be uniform in scale. Order four or more would be needed, in two variables.
 The series of 2.2 replace it. The code of the first engine is not kept.
 
+**Power series of the inverse map along the curve.** Computed by formal inversion (Newton iteration on series for each inverse step of T; in a test at degree 120, F applied to the result gave back the curve to 10⁻¹⁶⁹). Its coefficients grow (`[NUM]`, §5 W2b): the ratio of successive coefficients is 1.13 at degree 240, which points to a radius of convergence of about 0.88 in x (\|ξ\| ≈ 0.41). D₁ needs \|x\| up to 0.91 (\|ξ\| = 0.42), and a Cauchy tail needs a larger circle still.
+- A growing coefficient sequence is an observation, not a proof of the radius. It is enough to drop the route: no tail bound is available where it is needed.
+- A likely reason: T⁻¹ is not entire (the inverse step solves a transcendental equation for η), so the inverse series has singularities at finite distance. F itself is entire, and its series converge on every circle.
+- `inverse_curve` stays in the library only so that the check reproduces the observation. The second-order jets of the inverse were also built and are removed.
+
 ## 3. Work packages
 
 | # | Package | Obligations | State |
 |---|---|---|---|
 | W1 | Engine, first part: constants, coefficient balls, series of the map and of the defect along the curve | P5 | **done as a development check** (§5) |
 | W2a | Jets in d (first order), order-zero series, Cauchy constants and tails, Taylor-shift evaluation on discs, the one-step quantities of 2.2 for F | P6 | **done as a development check** (§5) |
-| W2b | Remainder in d beyond first order (Cauchy bound on a torus); the inverse map along the curve with a validated inverse | P6 | open |
-| W3 | Zone II verification with adaptive boxes, for F on Ω₀ and G on Ω₁, including the guard property | P7, P8 | open |
+| W2b | Second-order jets in d; remainder in d beyond second order; one step on a tube piece; local inverse from the forward series | P6, method for P8 | **done as a development check** (§5) |
+| W3 | Zone II verification with adaptive boxes, for F on Ω₀ and G on Ω₁ (through the local inverse), including the guard property | P7, P8 | open |
 | W4 | Zone I: scale-free verification and its reduction | P3 | open |
 | W5 | Arc: compact continuation; analytic tail | P9 | open |
 | W6 | Legs and the two-disc test; controls (zero-jump model, wrong branch, wrong log branch, perturbed α) | P10, P11 | open |
@@ -84,6 +93,12 @@ LIT's answer on Theorem 4.2(3) (L3; `pipes/LIT/20261111-DYAD-lh2012-thm42-unique
 - **11 Nov 2026, W2a.** Jets in d, order-zero series, tails, disc evaluation and the one-step quantities for F (§5). Two points of the W1 review are built in:
   - *Tails are proved, not read off the coefficients.* The observed coefficient roots (about 0.77) are not used. Each series has a Cauchy constant from a rigorous sup bound on the circle \|x\| = 1.10, and the tail on \|x\| ≤ r is at most M(r/X)^{D+1}/(1 − r/X).
   - *Zeros by structure, not by balls.* A coefficient ball that contains 0 proves nothing. The coefficients that vanish are set to 0 on the strength of four structural facts S1–S4 (module docstring); the containment is reported as a consistency check only. The proofs of S1–S4 belong to the proof record (W7). S4 is the recursion argument: the order-(k+3) coefficient of the defect is affine in a_k with slope ℓ(k* − k) and independent of a_j for j > k.
+
+- **11 Nov 2026, W2a reviewed.** PR #223, co-owner check `6798107781` (ACCEPT as a merged development check), merged as `07fdbd6`. Two obligations for W7 were named there: the full algebraic proofs of S1–S4, and the justification of the circle cover and of the outward rounding of the floating-point upper bounds.
+- **11 Nov 2026, W2b.** Second-order jets, the remainder in d, tube pieces and the inverse (§5). Three points:
+  - *The inverse series is dropped* (2.6) and replaced by the local inverse of 2.5. The 3b design is not changed by this; plan section 2.5 is.
+  - *One more structural fact, S5* (library, W2b header): with weights (1, 2) for (z, w), F_w − w has only monomials of weighted order at least 5 (and F_z − z of order at least 4, which is S1). It makes (Φ − d)/x³ analytic and is what the maximum principle for the remainder rests on. Its proof joins S1–S4 in W7.
+  - *The coupling between fibre and base is not negligible near the outer edge.* ∂x′/∂d = x⁴Q4 with \|Q4(0)\| = \|μ\| ≈ 1.26, against a base step x⁴G0 with \|G0(0)\| = \|ℓ\| ≈ 0.098. At \|x\| = 0.87 a fibre radius of 2·10⁻³ changes the relative step by 2.4% and Δτ by 2.6%; a radius of 5·10⁻³ by 6% and 7% (§5). W3 has to carry this in (A1) and (A2). It is a property of the map: the bounds are attained to within a few per cent.
 
 ## 5. Development runs (not certificates)
 
@@ -103,3 +118,29 @@ Recorded here as the packages are completed. None of them is a certificate.
 - **Accuracy at relative radius 0.5%.** For \|x\| ≤ 0.87 the enclosures of g, Δτ, μ₀ − 1 and ∂x′/∂d have relative radius 4% to 7%. At \|x\| = 1.0, near the outer edge of D₀, Δτ has 13%; smaller discs are needed there.
 - **Cost.** One evaluation of the one-step quantities on a disc takes about 40 ms.
 - **Changes made while testing, recorded here.** The first version of the control passed, because the enclosures at 0.5% were wider than the tampering; the discs of relative radius 10⁻⁶ were added. The first circle bounds were not finite (first-order mean-value forms on arcs); second derivatives are now carried on the arcs. The gate on tails was set to 10⁻⁷ after the M3 constant came out at 1235; D was raised from 320 to 360.
+
+**W2b** (`…_stage3c_lib.py`, `…_stage3c_w2b_check.py`; run `evidence/dyad/open20-an/stage3c-a/run_w2b.sh`; series at 400 digits with D = 360, disc work at 160 bits; about 2.5 minutes per run, 7.5 minutes with the two controls). All gates PASS; the controls SHRINKREM and SHIFTINV exit 1 at REM and INV. A second positive run gave an identical output file. The W1 and W2a runs were repeated with the extended library: outputs identical to the committed ones.
+- **Second-order series.** P4 = Z₂/x⁴ and S2 = (W₂ − φ′(Z₀)Z₂ − ½φ″(Z₀)Z₁²)/x⁵, with Z₂, W₂ the d² coefficients. Leading coefficients: P4(0) = 0, S2(0) = μ̄. The d² coefficient of d′ is c₂ = x³[S2/(1+g)² − 2Q4(1 + x³M3)/(1+g)³] + (terms with the defect). The four series shared with W2a, computed there by another routine, overlap coefficient by coefficient. Cauchy constants on \|x\| = 1.10: 3.84 (P4), 2.86·10⁴ (S2); tails at \|x\| = 1.02: 8·10⁻¹¹ and 5.7·10⁻⁷.
+- **Remainder in d beyond second order.** On the polydisc \|x\| ≤ X, \|d\| ≤ 0.02:
+  \|d′ − E − μ₀d − c₂d²\| ≤ M₃\|x\|³\|d\|³ and \|x′ − (its d-jet of order two)\| ≤ M_Z\|x\|⁴\|d\|³.
+
+  | X | arcs | M₃ | M_Z | sup \|Z/x − 1\| on the torus |
+  |---|---|---|---|---|
+  | 0.90 | 8 000 | 109.4 | 65.4 | 0.130 |
+  | 1.03 | 32 000 | 680.9 | 117.4 | 0.218 |
+
+  Method: a Taylor model in d of order two is carried through the six steps on each arc of the circle (remainder bounds for sin and exp), then through φ_N, 1/Z² and the product; the maximum principle on the polydisc turns the torus bound into the two inequalities. It needs S5 and Z/x ≠ 0 on the polydisc (last column below 1).
+  - The bounds are conservative: at sampled points the true remainder is at most 12% of the bound for d′ (at \|x\| = 0.87) and at most 3% for x′.
+  - Size against the second-order term at \|x\| = 0.87: with \|d\| = 2·10⁻³, M₃\|x\|³\|d\|² = 2.9·10⁻⁴, and \|c₂\|\|d\| ≈ 7·10⁻³.
+- **One step on a tube piece** {\|x − x_c\| ≤ r} × {\|d\| ≤ ρ} (`tube_step`): enclosures of x′/x − 1 and of Δτ for every d of the piece, bounds dev_lo ≤ \|d′\| ≤ dev_hi on \|d\| = ρ, and modulus bounds for the dependence on d (`gt_dev`, `dtau_dev`: the differences from the values at d = 0). Sound on 12 pieces (\|x\| from 0.05 to 1.0, ρ from 10⁻¹² to 5·10⁻³), 6 random points each. The d-dependence of Δτ is separated from the value at d = 0.
+  - Dependence on d at \|x\| = 0.87, relative to the values at d = 0: 2.4% (step) and 2.6% (Δτ) for ρ = 2·10⁻³; 6% and 7% for ρ = 5·10⁻³. At \|x\| = 1.0 and ρ = 5·10⁻³: 6% and 7 to 8%. The true differences reach 80% to 100% of the bounds, so the bounds are sharp. This is the coupling noted in §4.
+  - Cost: about 50 ms per piece.
+- **Local inverse** (`inverse_conditions`, `inverse_step`), targets at arg ξ = 0.26π, \|x′\| from 0.03 to 0.87, R′ from 10⁻¹⁴ to 5·10⁻³, relative radius 0.5% and 10⁻⁶: both conditions verified on all 12 targets; the independent preimages (numerical inverse of the full map, 6 random points each) lie in B × {\|d\| < ρ}, and x/x′ − 1, τ(x) − τ(x′) lie in the enclosures.
+  - At \|x′\| = 0.87 with R′ = 5·10⁻³: ρ/R′ = 1.8 (the inverse step expands the fibre there) and r/r′ = 4.4 for a 0.5% target. The preimage disc is set by the coupling term, not by the size of the target.
+  - Cost: 0.1 to 0.3 s per target.
+- **`[NUM]` inverse series** (reported, not gated; degree 240, 400 digits): k-th roots of the coefficients 1.00, 1.06, 1.08 at k = 60, 120, 180; ratio of successive coefficients 1.130 to 1.132 for k from 198 to 238.
+- **Changes made while testing, recorded here.**
+  - *Remainder.* A first form, one Cauchy estimate in d for Φ − d on the torus \|x\| = 1.10, \|d\| = 0.05, was dropped after sampling: sup \|Φ − d\| ≈ 1.6 there, which gives a constant near 10⁴. The remainder is now bounded directly, on the circles 0.90 and 1.03 with \|d\| ≤ 0.02.
+  - *Δτ on a tube piece.* The first version used x′/x − 1 as one ball in every term (relative radius 62% at \|x\| = 0.87, ρ = 5·10⁻³). The second separated the d-dependence but kept it as a complex box (20%, against a true variation of 6%). The committed version gives modulus bounds.
+  - *`inverse_step`.* The first search did not enlarge the disc enough when the coupling term exceeds the target radius; it now solves condition (ii) for r.
+  - *Precision.* Early scratch samples used coefficients built at 60 digits. The recursion loses its precision there and the sizes were wrong (\|a₄₀\| came out 12 times too large). Everything recorded here uses coefficients built at 400 digits, as the checks do.
