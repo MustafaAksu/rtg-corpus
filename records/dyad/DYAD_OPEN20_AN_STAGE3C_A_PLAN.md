@@ -67,7 +67,8 @@ The series of 2.2 replace it. The code of the first engine is not kept.
 | # | Package | Obligations | State |
 |---|---|---|---|
 | W1 | Engine, first part: constants, coefficient balls, series of the map and of the defect along the curve | P5 | **done as a development check** (§5) |
-| W2 | Jets in d, tail bounds, Taylor-shift evaluation on boxes, the one-step quantities of 2.2, the inverse map | P6 | open |
+| W2a | Jets in d (first order), order-zero series, Cauchy constants and tails, Taylor-shift evaluation on discs, the one-step quantities of 2.2 for F | P6 | **done as a development check** (§5) |
+| W2b | Remainder in d beyond first order (Cauchy bound on a torus); the inverse map along the curve with a validated inverse | P6 | open |
 | W3 | Zone II verification with adaptive boxes, for F on Ω₀ and G on Ω₁, including the guard property | P7, P8 | open |
 | W4 | Zone I: scale-free verification and its reduction | P3 | open |
 | W5 | Arc: compact continuation; analytic tail | P9 | open |
@@ -79,7 +80,10 @@ LIT's answer on Theorem 4.2(3) (L3; `pipes/LIT/20261111-DYAD-lh2012-thm42-unique
 
 ## 4. Progress log
 
-- **11 Nov 2026.** Plan written. A first engine (Taylor forms on boxes) was built, tested and set aside (2.6). The series engine was started; W1 is done as a development check (§5).
+- **11 Nov 2026.** Plan written. A first engine (Taylor forms on boxes) was built, tested and set aside (2.6). The series engine was started; W1 is done as a development check (§5). PR #220, co-owner review `5859686051` (ACCEPT as a development record), merged as `d730738`.
+- **11 Nov 2026, W2a.** Jets in d, order-zero series, tails, disc evaluation and the one-step quantities for F (§5). Two points of the W1 review are built in:
+  - *Tails are proved, not read off the coefficients.* The observed coefficient roots (about 0.77) are not used. Each series has a Cauchy constant from a rigorous sup bound on the circle \|x\| = 1.10, and the tail on \|x\| ≤ r is at most M(r/X)^{D+1}/(1 − r/X).
+  - *Zeros by structure, not by balls.* A coefficient ball that contains 0 proves nothing. The coefficients that vanish are set to 0 on the strength of four structural facts S1–S4 (module docstring); the containment is reported as a consistency check only. The proofs of S1–S4 belong to the proof record (W7). S4 is the recursion argument: the order-(k+3) coefficient of the defect is affine in a_k with slope ℓ(k* − k) and independent of a_j for j > k.
 
 ## 5. Development runs (not certificates)
 
@@ -91,3 +95,11 @@ Recorded here as the packages are completed. None of them is a certificate.
 - **Defect.** The raw defect has coefficients 0 (balls of radius at most 1.3·10⁻²⁷²) through x⁴³ and a nonzero coefficient 3.5·10⁻⁶ at x⁴⁴.
 - **Decay.** The k-th roots of \|Z_k\| and \|W_k\| are 0.771 to 0.776 for k from 100 to 200. So the series converge well beyond \|x\| = 1.02, the outer edge of D₀ (\|ξ\| = 0.47).
 - **Why boxes are still needed for the defect.** The sum of \|defect_k\|X^k is 1.3·10⁻⁶ at X = 0.9 and 1.3·10⁻³ at X = 1.02, orders of magnitude above the defect itself. The terms cancel, so the defect is evaluated by a Taylor shift on boxes near the outer edge.
+
+**W2a** (`…_stage3c_lib.py`, `…_stage3c_w2_check.py`; run `evidence/dyad/open20-an/stage3c-a/run_w2.sh`; series at 400 digits with D = 360, disc work at 160 bits; about 55 seconds with the control). All gates PASS; the control TAMPER exits 1 at SND.
+- **Order-zero series.** With the input point (x, φ_N(x) + x²d): G0 = (Z₀ − x)/x⁴, Q4 = (∂Z/∂d)/x⁴, M3 from the d-derivative of the lifted deviation, ET44 = (raw defect)/x⁴⁴. Leading coefficients: G0(0) = ℓ, Q4(0) = μ, and M3(0) = (2 + α)G0(0), the identity behind the cancellation in the normal multiplier.
+- **Cauchy constants on \|x\| = 1.10** (16 000 arcs; mean-value forms with second derivatives on each arc): 1.63 (G0), 2.11 (Q4), 1235 (M3), 0.705 (ET44). The pieces of each series are bounded separately, so no cancellation is needed on the circle. Tails at \|x\| = 1.02: 3·10⁻¹¹, 4·10⁻¹¹, 2.5·10⁻⁸, 1.4·10⁻¹¹.
+- **Soundness.** On 21 discs (\|x\| from 0.01 to 1.0; relative radius 2%, 0.5% and 10⁻⁶) and 5 random points each, the values of g, Δτ, μ₀ and ∂x′/∂d computed independently (mpmath, 60 digits, the full map of the stage-3b sampling module) lie in the enclosures. For E the test is made for \|x\| ≥ 0.2, where the independent value is resolved. The discs of relative radius 10⁻⁶ have enclosures of relative radius about 10⁻⁵, which makes the test sharp: a change of 10⁻³ in one coefficient of G0 is detected (control).
+- **Accuracy at relative radius 0.5%.** For \|x\| ≤ 0.87 the enclosures of g, Δτ, μ₀ − 1 and ∂x′/∂d have relative radius 4% to 7%. At \|x\| = 1.0, near the outer edge of D₀, Δτ has 13%; smaller discs are needed there.
+- **Cost.** One evaluation of the one-step quantities on a disc takes about 40 ms.
+- **Changes made while testing, recorded here.** The first version of the control passed, because the enclosures at 0.5% were wider than the tampering; the discs of relative radius 10⁻⁶ were added. The first circle bounds were not finite (first-order mean-value forms on arcs); second derivatives are now carried on the arcs. The gate on tails was set to 10⁻⁷ after the M3 constant came out at 1235; D was raised from 320 to 360.
