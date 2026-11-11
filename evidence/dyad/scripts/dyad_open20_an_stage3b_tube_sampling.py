@@ -11,16 +11,22 @@ w = phi_N(z) = sum_{k=2..N} a_k z^k (stage 2).  Normal deviation in the lifted u
   tau(xi)  four-term Fatou coordinate of the restricted map on the series curve:
            tau = A3 z^-3 + A2 z^-2 + A1 z^-1 + kappa log z   (coefficients from the Abel equation, as in stage 2b).
   h0(tau) = Re(e^{i theta0} tau),  h1(tau) = Re(-e^{-i theta0} tau),  theta0 = pi/2 - eta0.
-  Wedges through the common point xi* = 0.40 e^{i pi/6}, tau* = tau(xi*):
-           D0 = { Re tau > Re tau* - ds,  h0(tau) > h0(tau*) - dc }     (forward map F),
-           D1 = { Re tau < Re tau* + ds,  h1(tau) > h1(tau*) - dc }     (inverse map G = F^-1).
+  Local domains through the common point xi* = 0.40 e^{i pi/6}, tau* = tau(xi*).  Each is cut out of a bounded chart
+  sector on which log z and log xi are the principal branches:
+           chart0 = { 0 < |xi| < 0.60, -0.20 pi < arg xi < 0.30 pi },  chart1 = { 0 < |xi| < 0.60, 0.03 pi < arg xi < 0.50 pi },
+           D0 = { xi in chart0:  Re tau > Re tau* - ds,  h0(tau) > h0(tau*) - dc }     (forward map F),
+           D1 = { xi in chart1:  Re tau < Re tau* + ds,  h1(tau) > h1(tau*) - dc }     (inverse map G = F^-1).
+  Guard property: D0 lies in core0 = { |xi| <= 0.47, -0.08 pi <= arg xi <= 0.20 pi } and D1 in
+  core1 = { |xi| <= 0.42, 0.09 pi <= arg xi <= 0.43 pi }; the rest of each chart (the guard zone) has no point that
+  satisfies both wedge conditions.  Without the chart the two conditions hold again for |xi| > 0.7 (co-owner review R1).
   Tube radius  R0(xi) = eps |xi^alpha| (Re tau - s0 + 1)^(-q1/3) h0(tau)^(-q2/3)   on D0, s0 = Re tau* - ds,
                R1(xi) = eps |xi^alpha| (s1 - Re tau + 1)^(-q1/3) h1(tau)^(-q2/3)   on D1, s1 = Re tau* + ds,
            eps fixed by R(xi*) = RSTAR.  xi^alpha = exp(alpha log xi), principal log on the sector used.
 For a base point xi and the map M (F on D0, G on D1), with (xi', d') = M(xi, d):
   E = d'(xi, 0);  mu0 = derivative of d' in d at d = 0;  nl = max over the sampled circle |d| = R of
   |d' - E - mu0 d| / (|mu0| R);  Rsup = max of R(xi') over the circle.
-  (A)  both wedge functionals increase:  the first (Re tau - s0, resp. s1 - Re tau) and the second (h0, resp. h1).
+  (A)  both wedge functionals increase (the first: Re tau - s0, resp. s1 - Re tau; the second: h0, resp. h1), the
+       relative step |xi'/xi - 1| is at most KAPPA = 0.15, and the image base point lies in the same domain.
   (B)  strong form:  |mu0| (1 - nl) R(xi) - |E|  >  Rsup.     margin_B = (|mu0|(1 - nl) R - |E|)/Rsup - 1.
        model gain = (q1/3)/first + (q2/3) sin(eta0)/second  (what the leading-order normal form predicts).
 
@@ -28,7 +34,11 @@ Gates (exit 0 iff all pass):
   G0    input hashes (stage-2 coefficients, stage-2b output); both report all_pass.
   F1    A3 = -1/(3 ell) to 1e-30 (the Fatou coordinate belongs to this branch).
   INV   G(F(p)) = p to 1e-80 at 20 sample points (the numerical inverse is the inverse).
-  A0, A1   (A) on every sample of D0, D1: first functional gains >= 0.5, second >= 0.2.
+  A0, A1   (A) on every sample of D0, D1: first functional gains >= 0.5, second >= 0.2, and every sampled image base
+           point satisfies the wedge conditions and lies in the core.
+  STEP     |xi'/xi - 1| <= 0.15 on every sample (with the guard zones, a step cannot leave the chart).
+  GUARD0, GUARD1   no grid point of the guard zone satisfies the wedge conditions (grid: radii up to 0.595).
+  XISTAR   the common point xi* itself, 64 fibre directions: xi* lies in D0 and D1; (A), (B) and |E|/R <= 0.1 hold.
   B0, B1   (B) strong form on every sample of D0, D1: margin_B > 0, and margin_B >= 0.5 * model gain.
   E0, E1   |E| / R <= 0.1 on every sample (the truncated series is well inside its tube).
   NL    nl <= 0.01 on every sample.
@@ -39,7 +49,7 @@ Gates (exit 0 iff all pass):
         where amp0 is the sampled normal amplification of F^n from xi* to xi_end (|xi_end| about 0.096, n = 334) and
         con1 the sampled normal contraction of F^n from xi_start (|xi_start| about 0.099, on the S_1 side) to xi*.
 Negative controls (each must exit 1 at the named gates):
-  --control SWAP       the two maps exchanged (G on D0, F on D1):  A0, A1, B0 and B1 fail.
+  --control SWAP       the two maps exchanged (G on D0, F on D1):  A0, A1, B0, B1 and XISTAR fail.
   --control SHIFTCOEF  a_5 multiplied by 1 + 1e-6 (the tube is centred on a polynomial that is not the formal curve):
                        E0, E1, B0 and B1 fail.
 Two controls were tried and dropped (design record section 7): a tube with |xi^(-alpha)| in place of |xi^alpha| still
@@ -57,8 +67,14 @@ import dyad_open20_an_stage2b_law as LW
 STAGE2_SHA = '6ca8c663061ce2fa9e062938a1e6046c932da4cbddccc6e3e2c3de4df68c477e'
 STAGE2B_SHA = '610433e549415492a3a5772531a14e596c5d0cee11bed306acd9e6acabd3a268'
 N_TUBE, N_FATOU = 40, 80
-Q1, ETA_DIV, RSTAR, DS, DC = 9, 8, '1e-3', '0.25', '0.15'      # q1 = q2 = Q1
+Q1, ETA_DIV, RSTAR, DS, DC = 9, 8, '2e-3', '0.25', '0.15'      # q1 = q2 = Q1
 R_STAR, ARG_STAR_OVER_PI = '0.40', mp.mpf(1) / 6
+# Local chart domains (arg in units of pi) and their cores; D_j = {xi in chart: wedge conditions}.  KAPPA_STEP bounds |xi'/xi - 1|.
+CHART = {'D0': dict(rmax='0.60', arg=(mp.mpf('-0.20'), mp.mpf('0.30')), core_r='0.47', core_arg=(mp.mpf('-0.08'), mp.mpf('0.20'))),
+         'D1': dict(rmax='0.60', arg=(mp.mpf('0.03'), mp.mpf('0.50')), core_r='0.42', core_arg=(mp.mpf('0.09'), mp.mpf('0.43')))}
+KAPPA_STEP = '0.15'
+EXTRA_RADII = ['0.40', '0.405', '0.41', '0.415', '0.42', '0.44', '0.445', '0.45', '0.455', '0.46', '0.465', '0.47', '0.48',
+               '0.50', '0.53', '0.56', '0.595']
 
 
 def cplx(p):
@@ -191,60 +207,104 @@ def main():
         worst_inv = max(worst_inv, abs(z2 - z) + abs(w2 - w))
     g['INV_G_inverts_F'] = worst_inv < mp.mpf(10) ** (-80); info['INV_max_error'] = mp.nstr(worst_inv, 3)
 
-    # sampling of (A), (B)
+    # sampling of (A), (B) on the local domains
+    def in_box(xi, rmax, arg):
+        a = mp.arg(xi) / mp.pi
+        return 0 < abs(xi) <= mp.mpf(rmax) and arg[0] <= a <= arg[1]
+
+    def sample(side, xi, ndir):
+        """E, mu0, nl, margin_B, model gain, gains of the two functionals, relative step, image-in-domain flag at one base point."""
+        first, second, inD, mapf = sides[side]; R = Rfun[side]; ch = CHART[side]
+        t = tau(xi); Rx = R(xi)
+        _, E = S.dev_step(mapf, xi, mp.mpc(0))
+        hh = Rx * mp.mpf(10) ** (-20)
+        mu0 = (S.dev_step(mapf, xi, hh)[1] - E) / hh
+        nl = mp.mpf(0); Rsup = mp.mpf(0); g1 = mp.inf; g2 = mp.inf; step = mp.mpf(0); image_ok = True
+        for k in range(ndir):
+            d = Rx * mp.expjpi(2 * mp.mpf(k) / ndir)
+            xp, dp = S.dev_step(mapf, xi, d); tp = tau(xp)
+            g1 = min(g1, first(tp) - first(t)); g2 = min(g2, second(tp) - second(t))
+            step = max(step, abs(xp / xi - 1))
+            image_ok = image_ok and inD(tp) and in_box(xp, ch['core_r'], ch['core_arg'])
+            nl = max(nl, abs(dp - E - mu0 * d) / (abs(mu0) * Rx)); Rsup = max(Rsup, R(xp))
+        margin = (abs(mu0) * (1 - nl) * Rx - abs(E)) / Rsup - 1
+        model = (q1 / 3) / first(t) + (q2 / 3) * mp.sin(eta0) / second(t)
+        return dict(margin=margin, model=model, E_over_R=abs(E) / Rx, nl=nl, g1=g1, g2=g2, step=step, image_ok=image_ok)
+
+    radii = [mp.mpf('0.01') * mp.mpf(10) ** (mp.mpf(ir) / 25) for ir in range(o.first_index, 42, o.stride)]
+    radii += [mp.mpf(x) for x in EXTRA_RADII]
+    radii = sorted(set(radii))
     bands = [('0.01', '0.03'), ('0.03', '0.06'), ('0.06', '0.10'), ('0.10', '0.15'), ('0.15', '0.20'), ('0.20', '0.25'),
-             ('0.25', '0.30'), ('0.30', '0.35'), ('0.35', '0.41')]
+             ('0.25', '0.30'), ('0.30', '0.35'), ('0.35', '0.41'), ('0.41', '0.48')]
+    max_step = mp.mpf(0)
     for side, (first, second, inD, mapf) in sides.items():
-        R = Rfun[side]
+        ch = CHART[side]
         tot = dict(points=0, min_first_gain=mp.inf, min_second_gain=mp.inf, min_margin=mp.inf, min_margin_over_model=mp.inf,
-                   max_E_over_R=mp.mpf(0), max_nl=mp.mpf(0), max_abs_xi=mp.mpf(0), worst_at=None)
+                   max_E_over_R=mp.mpf(0), max_nl=mp.mpf(0), max_abs_xi=mp.mpf(0), min_arg_over_pi=mp.inf, max_arg_over_pi=-mp.inf,
+                   max_rel_step=mp.mpf(0), worst_at=None)
+        guard = dict(grid_points_in_chart=0, grid_points_in_guard_zone=0, wedge_points_in_guard_zone=0, images_outside_domain=0)
         per = {b: dict(points=0, min_margin=mp.inf, model_gain_there=None, max_E_over_R=mp.mpf(0)) for b in bands}
-        for ir in range(o.first_index, 42, o.stride):
-            r = mp.mpf('0.01') * mp.mpf(10) ** (mp.mpf(ir) / 25)
-            for ia in range(-16, 49, o.stride):
+        ia_lo = int(mp.ceil(ch['arg'][0] * 96 + mp.mpf('0.001'))); ia_hi = int(mp.floor(ch['arg'][1] * 96 - mp.mpf('0.001')))
+        for r in radii:
+            for ia in range(ia_lo, ia_hi + 1, o.stride):
                 xi = r * mp.expjpi(mp.mpf(ia) / 96); t = tau(xi)
+                guard['grid_points_in_chart'] += 1
+                core = in_box(xi, ch['core_r'], ch['core_arg'])
+                if not core:
+                    guard['grid_points_in_guard_zone'] += 1
                 if not inD(t):
                     continue
-                Rx = R(xi)
-                _, E = S.dev_step(mapf, xi, mp.mpc(0))
-                hh = Rx * mp.mpf(10) ** (-20)
-                mu0 = (S.dev_step(mapf, xi, hh)[1] - E) / hh
-                nl = mp.mpf(0); Rsup = mp.mpf(0)
-                for k in range(8):
-                    d = Rx * mp.expjpi(mp.mpf(k) / 4)
-                    xp, dp = S.dev_step(mapf, xi, d); tp = tau(xp)
-                    tot['min_first_gain'] = min(tot['min_first_gain'], first(tp) - first(t))
-                    tot['min_second_gain'] = min(tot['min_second_gain'], second(tp) - second(t))
-                    nl = max(nl, abs(dp - E - mu0 * d) / (abs(mu0) * Rx)); Rsup = max(Rsup, R(xp))
-                margin = (abs(mu0) * (1 - nl) * Rx - abs(E)) / Rsup - 1
-                model = (q1 / 3) / first(t) + (q2 / 3) * mp.sin(eta0) / second(t)
+                if not core:
+                    guard['wedge_points_in_guard_zone'] += 1
+                    continue
+                m = sample(side, xi, 8)
                 tot['points'] += 1; tot['max_abs_xi'] = max(tot['max_abs_xi'], r)
-                if margin < tot['min_margin']:
-                    tot['min_margin'] = margin; tot['worst_at'] = '|xi|=%s arg=%s pi' % (mp.nstr(r, 4), mp.nstr(mp.mpf(ia) / 96, 4))
-                if model > 0:
-                    tot['min_margin_over_model'] = min(tot['min_margin_over_model'], margin / model)
-                else:
-                    tot['min_margin_over_model'] = min(tot['min_margin_over_model'], mp.mpf(-1) if margin <= 0 else mp.inf)
-                tot['max_E_over_R'] = max(tot['max_E_over_R'], abs(E) / Rx); tot['max_nl'] = max(tot['max_nl'], nl)
+                tot['min_arg_over_pi'] = min(tot['min_arg_over_pi'], mp.mpf(ia) / 96); tot['max_arg_over_pi'] = max(tot['max_arg_over_pi'], mp.mpf(ia) / 96)
+                tot['min_first_gain'] = min(tot['min_first_gain'], m['g1']); tot['min_second_gain'] = min(tot['min_second_gain'], m['g2'])
+                tot['max_rel_step'] = max(tot['max_rel_step'], m['step'])
+                if not m['image_ok']:
+                    guard['images_outside_domain'] += 1
+                if m['margin'] < tot['min_margin']:
+                    tot['min_margin'] = m['margin']; tot['worst_at'] = '|xi|=%s arg=%s pi' % (mp.nstr(r, 4), mp.nstr(mp.mpf(ia) / 96, 4))
+                tot['min_margin_over_model'] = min(tot['min_margin_over_model'], m['margin'] / m['model'])
+                tot['max_E_over_R'] = max(tot['max_E_over_R'], m['E_over_R']); tot['max_nl'] = max(tot['max_nl'], m['nl'])
                 for b in bands:
                     if mp.mpf(b[0]) <= r < mp.mpf(b[1]):
-                        per[b]['points'] += 1; per[b]['max_E_over_R'] = max(per[b]['max_E_over_R'], abs(E) / Rx)
-                        if margin < per[b]['min_margin']:
-                            per[b]['min_margin'] = margin; per[b]['model_gain_there'] = model
-        k = side[-1]
-        g['A%s_wedge_functionals_increase' % k] = tot['points'] > 0 and tot['min_first_gain'] >= 0.5 and tot['min_second_gain'] >= 0.2
+                        per[b]['points'] += 1; per[b]['max_E_over_R'] = max(per[b]['max_E_over_R'], m['E_over_R'])
+                        if m['margin'] < per[b]['min_margin']:
+                            per[b]['min_margin'] = m['margin']; per[b]['model_gain_there'] = m['model']
+        k = side[-1]; max_step = max(max_step, tot['max_rel_step'])
+        g['A%s_base_moves_inward' % k] = (tot['points'] > 0 and tot['min_first_gain'] >= 0.5 and tot['min_second_gain'] >= 0.2
+                                          and guard['images_outside_domain'] == 0)
         g['B%s_strong_exit_inequality' % k] = tot['points'] > 0 and tot['min_margin'] > 0 and tot['min_margin_over_model'] >= 0.5
         g['E%s_series_inside_tube' % k] = tot['points'] > 0 and tot['max_E_over_R'] <= 0.1
+        g['GUARD%s_local_component_inside_core' % k] = guard['grid_points_in_guard_zone'] > 0 and guard['wedge_points_in_guard_zone'] == 0
         g.setdefault('NL_nonlinearity_small', True)
         g['NL_nonlinearity_small'] = g['NL_nonlinearity_small'] and tot['max_nl'] <= 0.01
         info[side] = {a: (mp.nstr(b, 6) if isinstance(b, mp.mpf) else b) for a, b in tot.items()}
+        info[side + '_guard'] = dict(guard, chart=dict(rmax=ch['rmax'], arg_over_pi=[mp.nstr(x, 4) for x in ch['arg']]),
+                                     core=dict(rmax=ch['core_r'], arg_over_pi=[mp.nstr(x, 4) for x in ch['core_arg']]))
         info[side + '_by_radius'] = [dict(band='%s-%s' % b, points=per[b]['points'],
                                           min_margin_B=(mp.nstr(per[b]['min_margin'], 4) if per[b]['points'] else None),
                                           model_gain_there=(mp.nstr(per[b]['model_gain_there'], 4) if per[b]['points'] else None),
                                           max_E_over_R=mp.nstr(per[b]['max_E_over_R'], 3)) for b in bands]
-        print('%s: %d points, min margin_B %s (%s), min margin/model %s, max |E|/R %s, max nl %s, gains >= %s, %s' % (
-            side, tot['points'], mp.nstr(tot['min_margin'], 4), tot['worst_at'], mp.nstr(tot['min_margin_over_model'], 4),
-            mp.nstr(tot['max_E_over_R'], 3), mp.nstr(tot['max_nl'], 3), mp.nstr(tot['min_first_gain'], 3), mp.nstr(tot['min_second_gain'], 3)), flush=True)
+        print('%s: %d points, |xi| <= %s, min margin_B %s (%s), min margin/model %s, max |E|/R %s, max nl %s, gains >= %s, %s, rel step <= %s; guard zone: %d grid points, %d in wedge' % (
+            side, tot['points'], mp.nstr(tot['max_abs_xi'], 4), mp.nstr(tot['min_margin'], 4), tot['worst_at'], mp.nstr(tot['min_margin_over_model'], 4),
+            mp.nstr(tot['max_E_over_R'], 3), mp.nstr(tot['max_nl'], 3), mp.nstr(tot['min_first_gain'], 3), mp.nstr(tot['min_second_gain'], 3),
+            mp.nstr(tot['max_rel_step'], 3), guard['grid_points_in_guard_zone'], guard['wedge_points_in_guard_zone']), flush=True)
+    g['STEP_relative_step_below_kappa'] = max_step <= mp.mpf(KAPPA_STEP)
+    info['STEP'] = dict(max_relative_step=mp.nstr(max_step, 4), kappa=KAPPA_STEP)
+
+    # XISTAR: the common point itself, 64 fibre directions
+    xs = {}; xs_ok = True
+    for side, (first, second, inD, mapf) in sides.items():
+        ch = CHART[side]
+        m = sample(side, xis, 64)
+        member = inD(ts) and in_box(xis, ch['core_r'], ch['core_arg'])
+        xs[side] = dict(in_domain=bool(member), margin_B=mp.nstr(m['margin'], 5), first_gain=mp.nstr(m['g1'], 5), second_gain=mp.nstr(m['g2'], 5),
+                        E_over_R=mp.nstr(m['E_over_R'], 4), nl=mp.nstr(m['nl'], 4), image_in_domain=bool(m['image_ok']))
+        xs_ok = xs_ok and member and m['margin'] > 0 and m['g1'] >= 0.5 and m['g2'] >= 0.2 and m['image_ok'] and m['E_over_R'] <= 0.1
+    g['XISTAR_common_point'] = xs_ok; info['XISTAR'] = xs
 
     # PATH
     path_ok = True; xi = xis; prev = abs(xis) * (1 + mp.mpf(10) ** (-30)); path = []

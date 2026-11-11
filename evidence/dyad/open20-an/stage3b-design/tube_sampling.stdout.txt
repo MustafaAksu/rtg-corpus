@@ -1,15 +1,19 @@
-D0: 770 points, min margin_B 1.478e-5 (|xi|=0.01 arg=0.04167 pi), min margin/model 0.9999, max |E|/R 0.0339, max nl 0.00364, gains >= 0.948, 0.312
-D1: 760 points, min margin_B 1.472e-5 (|xi|=0.01 arg=0.2917 pi), min margin/model 1.0, max |E|/R 2.94e-5, max nl 0.0033, gains >= 0.966, 0.352
-A0_wedge_functionals_increase PASS
-A1_wedge_functionals_increase PASS
+D0: 877 points, |xi| <= 0.46, min margin_B 1.478e-5 (|xi|=0.01 arg=0.04167 pi), min margin/model 0.9999, max |E|/R 0.0824, max nl 0.00729, gains >= 0.935, 0.292, rel step <= 0.137; guard zone: 1376 grid points, 0 in wedge
+D1: 763 points, |xi| <= 0.4, min margin_B 1.472e-5 (|xi|=0.01 arg=0.2917 pi), min margin/model 1.0, max |E|/R 1.47e-5, max nl 0.0072, gains >= 0.948, 0.335, rel step <= 0.0732; guard zone: 1139 grid points, 0 in wedge
+A0_base_moves_inward PASS
+A1_base_moves_inward PASS
 B0_strong_exit_inequality PASS
 B1_strong_exit_inequality PASS
 E0_series_inside_tube PASS
 E1_series_inside_tube PASS
 F1_A3_is_minus_one_over_3ell PASS
 G0_inputs PASS
+GUARD0_local_component_inside_core PASS
+GUARD1_local_component_inside_core PASS
 INV_G_inverts_F PASS
 NL_nonlinearity_small PASS
 PATH_common_curve_reaches_small_xi PASS
 SEP_width_far_below_jump PASS
+STEP_relative_step_below_kappa PASS
+XISTAR_common_point PASS
 RESULT PASS  | [NUM] sampling for a design; not a certificate
