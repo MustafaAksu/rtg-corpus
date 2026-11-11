@@ -1,0 +1,108 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.9",
+ "base_sha256": "b48343f5a4d4c066eb37a325ff87d1dadf686fc6c616b67e7a0ad418dcec3b70",
+ "atlas_sha256": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
+ "atlas_bytes": 521243,
+ "atlas_lines": 1543,
+ "source_snapshot": "fa3db80a935a20b1eff64b0e14c6d0436f861852",
+ "changed_sources": [
+  "PROG",
+  "GEN",
+  "RECOG"
+ ],
+ "edit_operations": 83,
+ "retired_keys": [
+  "RECOG.R-A1",
+  "PROG.G8",
+  "PROG.G9",
+  "F31",
+  "TRIAD.T12",
+  "F18",
+  "TRIAD.T10",
+  "NUMGEN.N-L6"
+ ],
+ "new_keys": [],
+ "new_rids_at_tag": {
+  "GEN": [
+   "GEN-ALG-P4-DRIFT-IDENTITY",
+   "GEN-ALG-BIRTH-SYMMETRY-SEED"
+  ],
+  "RECOG": [
+   "RECOG-ALG-A1C-JET-REMAINDER-BOUNDS",
+   "RECOG-ART-A1C-JET-REMAINDER-BOUNDS"
+  ]
+ },
+ "new_node_rids": [
+  "GEN-ALG-P4-DRIFT-IDENTITY",
+  "GEN-ALG-BIRTH-SYMMETRY-SEED",
+  "RECOG-ALG-A1C-JET-REMAINDER-BOUNDS"
+ ],
+ "new_artifact_rids": [
+  "RECOG-ART-A1C-JET-REMAINDER-BOUNDS"
+ ],
+ "gen_rids_at_tag": 66,
+ "recog_rids_at_tag": 164,
+ "gen_repin_evidence": 9,
+ "pipes": {
+  "items": 87,
+  "snapshot": {
+   "closed": 38,
+   "open": 48,
+   "dispositioned": 1
+  },
+  "branch": {
+   "closed": 38,
+   "dispositioned": 4,
+   "open": 45
+  }
+ },
+ "dispositions": {
+  "retired": 8,
+  "reworded": 16,
+  "retained": 2
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 132
+  },
+  "qualifiers": {
+   "PASS": 3
+  },
+  "links": {
+   "PASS": 499,
+   "UNVERIFIED": 5,
+   "DOCUMENTED-UNRESOLVED": 11
+  },
+  "artifacts": {
+   "PASS": 110,
+   "UNVERIFIED": 3
+  },
+  "keys": {
+   "PASS": 142
+  },
+  "process": {},
+  "wording": {
+   "WARN": 12
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 19,
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 114
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373",
+  "evidence/atlas/build/refresh_v0_10.py": "9405436c738f9c3dd079975ce21d5a4a73d45181a2831634b43c6c7512f2e01c"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate rerun for this edition except the RECOG jet-remainder certificate (byte-identical, 4 Nov 2026) and the A1c chain rerun of the RA1 advisory (evidence/recog/atlas_review/ra1/); new RIDs checked for presence in the tagged sources, not re-proved. The GEN-ALG-P4-DRIFT-IDENTITY algebra was checked by hand in the GEN inbox advisory (records/gen/ATLAS_ADVISORY_GEN_INBOX_20261103.md §6) and the GEN v2.10 Atlas row check (records/gen/ATLAS_ROW_CHECK_GEN_v2_10.md).",
+  "Impact refresh of three moved sources (GEN v2.10, RECOG v0.3.27, Programme v1.4) and the three ATLAS inbox items; the other 15 domains were not re-extracted; GEN section pointers were repinned only where the section is byte-identical at gen-v2.10 or the quoted words are present (gen_repin_evidence.json); pipe items cited as filed, receiver dispositions are not atlas sources.",
+  "GEN v2.10 §§1, 2, 6.4–6.6, 7, 8 and App. B; RECOG v0.3.27 §§1, 6.13a–b, 6.16e, 7, 8; Programme v1.4 §§5, 6, 7, 8.2, 9.2 and the release records extracted at statement level from the tagged files; proofs live in the owner cells."
+ ]
+}

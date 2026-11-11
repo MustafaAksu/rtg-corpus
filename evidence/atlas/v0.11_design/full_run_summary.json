@@ -1,0 +1,44 @@
+{
+ "source_sha256": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
+ "records": {
+  "UNPARSED": 488,
+  "diagnostic": 117,
+  "node": 687
+ },
+ "node_fields": {
+  "statement": 685,
+  "UNVERIFIED": 545,
+  "negative": 128,
+  "dep": 75,
+  "consumer": 91,
+  "derived": 27,
+  "premise": 8,
+  "scope": 104,
+  "cert": 105,
+  "locator": 435,
+  "alias": 56,
+  "tension": 4,
+  "evidence": 3,
+  "collision": 1
+ },
+ "duplicate_node_ids": [
+  "*GEN:phase-drift-law",
+  "*GEN:plateau-bridge",
+  "*GEN:rank-obstruction",
+  "*GEN:uniform-phase-sink",
+  "*NUMGEN:C7B-T1..T4",
+  "*NUMGEN:Census-1",
+  "*NUMGEN:Qdyn-lower-bound",
+  "GEN-ART-JQ-PHASEDRIFT",
+  "GEN-ART-SATURATION",
+  "NUMGEN-N3D-FINITE-CHAR",
+  "RECOG-ALG-CHART-LAWS",
+  "RECOG-ALG-NU3-CLOSED-FORM",
+  "RECOG-THM-P2-C0-FIRST",
+  "RECOG-THM-P2-HET",
+  "RECOG-THM-R9-MEMORY"
+ ],
+ "nodes_with_unverified_field": 373,
+ "conditional_nodes": 25,
+ "note": "UNPARSED lines and UNVERIFIED fields are not covered by a field-level comparison; they need the line-level hash or review."
+}

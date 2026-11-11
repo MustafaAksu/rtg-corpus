@@ -1,0 +1,98 @@
+{
+ "base_sha256": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
+ "candidate_sha256": "0f8ba5c0e34dcbbaaa11858e2d568a9f5d5ced63aeca8ee69a44c973d7a1a6c2",
+ "stage": "v0.11 D3 pilot, stage 1",
+ "records": [
+  {
+   "base": "RECOG-ALG-CHART-LAWS#1",
+   "cand": null,
+   "reason": "stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "base": "RECOG-THM-R9-MEMORY#1",
+   "cand": null,
+   "reason": "stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "base": "RECOG-THM-P2-HET#1",
+   "cand": null,
+   "reason": "stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "base": "RECOG-THM-P2-C0-FIRST#1",
+   "cand": null,
+   "reason": "stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "base": "RECOG-ALG-NU3-CLOSED-FORM#1",
+   "cand": null,
+   "reason": "stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "base": "NUMGEN-N3D-FINITE-CHAR#2",
+   "cand": null,
+   "reason": "stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "base": "RECOG-ALG-CHART-LAWS#2",
+   "cand": "RECOG-ALG-CHART-LAWS#1",
+   "reason": "full node unchanged; it is the only record occurrence after stage 1"
+  },
+  {
+   "base": "RECOG-THM-R9-MEMORY#2",
+   "cand": "RECOG-THM-R9-MEMORY#1",
+   "reason": "full node unchanged; it is the only record occurrence after stage 1"
+  },
+  {
+   "base": "RECOG-THM-P2-HET#2",
+   "cand": "RECOG-THM-P2-HET#1",
+   "reason": "full node unchanged; it is the only record occurrence after stage 1"
+  },
+  {
+   "base": "RECOG-THM-P2-C0-FIRST#2",
+   "cand": "RECOG-THM-P2-C0-FIRST#1",
+   "reason": "full node unchanged; it is the only record occurrence after stage 1"
+  },
+  {
+   "base": "RECOG-ALG-NU3-CLOSED-FORM#2",
+   "cand": "RECOG-ALG-NU3-CLOSED-FORM#1",
+   "reason": "full node unchanged; it is the only record occurrence after stage 1"
+  },
+  {
+   "base": "L754",
+   "cand": "L754",
+   "reason": "raw line unchanged in place; its anchor record RECOG-THM-P2-C0-FIRST is renumbered #2 -> #1 by stage 1"
+  },
+  {
+   "base": "L755",
+   "cand": "L755",
+   "reason": "raw line unchanged in place; its anchor record RECOG-THM-P2-C0-FIRST is renumbered #2 -> #1 by stage 1"
+  }
+ ],
+ "inserts": [
+  {
+   "cand": "L373",
+   "reason": "stage 1: cross-reference line replacing RECOG-ALG-CHART-LAWS#1"
+  },
+  {
+   "cand": "L392",
+   "reason": "stage 1: cross-reference line replacing RECOG-THM-R9-MEMORY#1"
+  },
+  {
+   "cand": "L419",
+   "reason": "stage 1: cross-reference line replacing RECOG-THM-P2-HET#1"
+  },
+  {
+   "cand": "L420",
+   "reason": "stage 1: cross-reference line replacing RECOG-THM-P2-C0-FIRST#1"
+  },
+  {
+   "cand": "L462",
+   "reason": "stage 1: cross-reference line replacing RECOG-ALG-NU3-CLOSED-FORM#1"
+  },
+  {
+   "cand": "L1351",
+   "reason": "stage 1: cross-reference line replacing NUMGEN-N3D-FINITE-CHAR#2"
+  }
+ ]
+}

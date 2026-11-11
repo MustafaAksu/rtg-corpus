@@ -1,0 +1,258 @@
+{
+  "review_date": "2026-10-30",
+  "python": "3.13.16",
+  "checker_sha256": "afcfe064a178d90a3557629c530b60a41c376990b01a4b9451c0bd83e1f3e3ae",
+  "fixture_sha256": "45c3cbb5d28d550f2ddae00620b4c759c6aefa51384588c87b6977f951f78ec7",
+  "cases": [
+    {
+      "id": "P_DECLARED",
+      "description": "Declared live deletion to actual history",
+      "expected": "PASS",
+      "observed": "PASS",
+      "exit_code": 0,
+      "matched": true,
+      "base_sha256": "7d9e1693937a8d9fda1928aace7831b3657f838935e9f1b81a0b3ee736564317",
+      "candidate_sha256": "cbde9c570922a5c33e1dcac2814c7d5b9911630e99e236646ce1e884d22950de",
+      "checks": [
+        {
+          "check": "base identity",
+          "result": "PASS",
+          "detail": "map base_sha256 vs file"
+        },
+        {
+          "check": "candidate identity",
+          "result": "PASS",
+          "detail": "map candidate_sha256 vs file"
+        },
+        {
+          "check": "archive identity base",
+          "result": "PASS",
+          "detail": "7d9e1693937a8d9fda1928aace7831b3657f838935e9f1b81a0b3ee736564317"
+        },
+        {
+          "check": "mechanical scope (re-derivation)",
+          "result": "PASS",
+          "detail": "candidate equals base + declared operations"
+        },
+        {
+          "check": "operation E1 (history-removal)",
+          "result": "PASS",
+          "detail": "history span removed (52 chars), found in ['base']"
+        },
+        {
+          "check": "operation T (history-appendix)",
+          "result": "PASS",
+          "detail": "section relocated (156 chars), found in ['base']"
+        },
+        {
+          "check": "history appendix region",
+          "result": "PASS",
+          "detail": "Appendix C is the unique history region in base and candidate; operation T replaces exactly it"
+        },
+        {
+          "check": "qualified claim blocks",
+          "result": "PASS",
+          "detail": "4 claim blocks in base live text: 4 byte-identical, 0 changed by declared operations, 0 unexplained"
+        },
+        {
+          "check": "RID set preserved in live text",
+          "result": "PASS",
+          "detail": "missing: []"
+        },
+        {
+          "check": "heading anchors preserved",
+          "result": "PASS",
+          "detail": "missing: []"
+        },
+        {
+          "check": "source hashes preserved in live text",
+          "result": "PASS",
+          "detail": "missing: []; declared relocations to the history appendix: ['58e2dec5…3610']"
+        },
+        {
+          "check": "qualifier tags preserved",
+          "result": "PASS",
+          "detail": "lost: []"
+        },
+        {
+          "check": "references resolve",
+          "result": "PASS",
+          "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
+        },
+        {
+          "check": "presentation (header, footer)",
+          "result": "PASS",
+          "detail": "required fields present; one predecessor; one footer"
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "N_WRONG_OPERATION",
+      "description": "Declaration on history rewrite that retains the hash; live deletion has none",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "exit_code": 1,
+      "matched": true,
+      "base_sha256": "7236b24a5eaccea9b6fa83e82d75fce1aedf82b864943364e6ce3d3a27bda75e",
+      "candidate_sha256": "cbde9c570922a5c33e1dcac2814c7d5b9911630e99e236646ce1e884d22950de",
+      "checks": [
+        {
+          "check": "base identity",
+          "result": "PASS",
+          "detail": "map base_sha256 vs file"
+        },
+        {
+          "check": "candidate identity",
+          "result": "PASS",
+          "detail": "map candidate_sha256 vs file"
+        },
+        {
+          "check": "archive identity base",
+          "result": "PASS",
+          "detail": "7236b24a5eaccea9b6fa83e82d75fce1aedf82b864943364e6ce3d3a27bda75e"
+        },
+        {
+          "check": "mechanical scope (re-derivation)",
+          "result": "PASS",
+          "detail": "candidate equals base + declared operations"
+        },
+        {
+          "check": "operation E1 (history-removal)",
+          "result": "PASS",
+          "detail": "history span removed (52 chars), found in ['base']"
+        },
+        {
+          "check": "operation T (history-appendix)",
+          "result": "PASS",
+          "detail": "section relocated (188 chars), found in ['base']"
+        },
+        {
+          "check": "history appendix region",
+          "result": "PASS",
+          "detail": "Appendix C is the unique history region in base and candidate; operation T replaces exactly it"
+        },
+        {
+          "check": "qualified claim blocks",
+          "result": "PASS",
+          "detail": "4 claim blocks in base live text: 4 byte-identical, 0 changed by declared operations, 0 unexplained"
+        },
+        {
+          "check": "RID set preserved in live text",
+          "result": "PASS",
+          "detail": "missing: []"
+        },
+        {
+          "check": "heading anchors preserved",
+          "result": "PASS",
+          "detail": "missing: []"
+        },
+        {
+          "check": "source hashes preserved in live text",
+          "result": "FAIL",
+          "detail": "missing: ['58e2dec5…3610']; invalid relocation declarations: ['T:58e2dec5…3610 (declared on the history-appendix operation)']"
+        },
+        {
+          "check": "qualifier tags preserved",
+          "result": "PASS",
+          "detail": "lost: []"
+        },
+        {
+          "check": "references resolve",
+          "result": "PASS",
+          "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
+        },
+        {
+          "check": "presentation (header, footer)",
+          "result": "PASS",
+          "detail": "required fields present; one predecessor; one footer"
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "N_FOOTER_TARGET",
+      "description": "Hash occurs only in footer, not history region",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "exit_code": 1,
+      "matched": true,
+      "base_sha256": "7d9e1693937a8d9fda1928aace7831b3657f838935e9f1b81a0b3ee736564317",
+      "candidate_sha256": "05912973956fb42aededb9df80b1101eda1f0786a30cf87e489f5e2a7be79118",
+      "checks": [
+        {
+          "check": "base identity",
+          "result": "PASS",
+          "detail": "map base_sha256 vs file"
+        },
+        {
+          "check": "candidate identity",
+          "result": "PASS",
+          "detail": "map candidate_sha256 vs file"
+        },
+        {
+          "check": "archive identity base",
+          "result": "PASS",
+          "detail": "7d9e1693937a8d9fda1928aace7831b3657f838935e9f1b81a0b3ee736564317"
+        },
+        {
+          "check": "mechanical scope (re-derivation)",
+          "result": "PASS",
+          "detail": "candidate equals base + declared operations"
+        },
+        {
+          "check": "operation E1 (history-removal)",
+          "result": "PASS",
+          "detail": "history span removed (52 chars), found in ['base']"
+        },
+        {
+          "check": "operation T (history-appendix)",
+          "result": "PASS",
+          "detail": "section relocated (156 chars), found in ['base']"
+        },
+        {
+          "check": "history appendix region",
+          "result": "PASS",
+          "detail": "Appendix C is the unique history region in base and candidate; operation T replaces exactly it"
+        },
+        {
+          "check": "qualified claim blocks",
+          "result": "PASS",
+          "detail": "4 claim blocks in base live text: 4 byte-identical, 0 changed by declared operations, 0 unexplained"
+        },
+        {
+          "check": "RID set preserved in live text",
+          "result": "PASS",
+          "detail": "missing: []"
+        },
+        {
+          "check": "heading anchors preserved",
+          "result": "PASS",
+          "detail": "missing: []"
+        },
+        {
+          "check": "source hashes preserved in live text",
+          "result": "FAIL",
+          "detail": "missing: ['58e2dec5…3610']; invalid relocation declarations: ['E1:58e2dec5…3610']"
+        },
+        {
+          "check": "qualifier tags preserved",
+          "result": "PASS",
+          "detail": "lost: []"
+        },
+        {
+          "check": "references resolve",
+          "result": "PASS",
+          "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
+        },
+        {
+          "check": "presentation (header, footer)",
+          "result": "PASS",
+          "detail": "required fields present; one predecessor; one footer"
+        }
+      ],
+      "stderr": ""
+    }
+  ],
+  "mismatches": 0
+}

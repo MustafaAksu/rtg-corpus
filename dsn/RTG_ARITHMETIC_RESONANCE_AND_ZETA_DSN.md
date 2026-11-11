@@ -1,16 +1,16 @@
-# RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6
+# RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.7
 
 **Title:** RTG Arithmetic Resonance and Zeta Study — Infrastructure and Diagnostic Ledger  
-**Date:** June 2026  
+**Date:** November 2026 (v0.7, corrections only; the scientific content is that of v0.6, June 2026)  
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok  
-**DSN Methodology:** DSN_METHODOLOGY_v1.2  
+**DSN Methodology:** DSN_METHODOLOGY_v1.2 (declared; kept for this corrections edition by PI decision of 10 Nov 2026 — the governing Methodology is v1.4, `methodology-v1.4`; the v1.4 migration is a separate edition)  
 **Document class:** DSN-compatible infrastructure ledger / not a scientific result ledger  
 **Programme tier:** Tier 5 — Arithmetic-diagnostic infrastructure; serves both continuous and discrete branches without belonging to either  
 **Maturity:** Level A — RETAINED. Defined scope, internal consistency established, exploration begun. Thread C engineering is now certified; the one Phase-2 scientific result is a negative-clarifying diagnostic, not a Level-B-promoting bridge result.  
-**Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.5`  
-**Companion documents:** `RTG_PROGRAMME_OVERVIEW_v1.1` · `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` · `RTG_DISCRETE_GENESIS_DSN_v2.12` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.4` · `DSN_METHODOLOGY_v1.2`  
+**Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6` (tag `az-v0.6`, SHA-256 `dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a`)  
+**Companion documents (governing editions, November 2026):** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.23 (`dyad-v6.4.23`) · Discrete Genesis v2.12.14 (`tdrg-v2.12.14`) · Genesis Geometry v2.10 (`gen-v2.10`) · OPEN-M v0.7.1 (`uvm-v0.7.1`) · DSN Methodology v1.4 (`methodology-v1.4`; this document declares v1.2, see above)  
 
-**Status summary:** This document remains an infrastructure ledger, not an active scientific study, and Maturity remains **Level A**. v0.6 is a **ledger-state update** over v0.5: it records that the five Thread C `[ENG-blocker]` items and the `[ENG-open]` items are now closed (AZ-1A/AZ-1B/AZ-1C `[ENG PASS]`); it registers the AZ-OPEN-EDGE architectural decision as RESOLVED (directed, both orientations); it registers one `[THM-ALG]` (PROP-AZ-CORE-EQUIV) and one `[ALG]` low-order obstruction arising from the Thread C engineering work; and it registers the **first Phase-2 diagnostic result** — the Core(G_T) Hashimoto `4|q` angular rule — together with its reclassification as **static $\mathbb{Z}_N$ antipodal-band geometry, not a TDR-G dynamical signal**. Milestone AZ-2 is recorded as **attempted, negative-clarifying**: the most tempting angular observable was tested and **disqualified** as a bridge-candidate. **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.** A visible correction/retraction block is added (§4.3.4 and Appendix B).
+**Status summary:** This document remains an infrastructure ledger, not an active scientific study, and Maturity remains **Level A**. v0.6 is a **ledger-state update** over v0.5: it records that the five Thread C `[ENG-blocker]` items and the `[ENG-open]` items are now closed (AZ-1A/AZ-1B/AZ-1C `[ENG PASS]`); it registers the AZ-OPEN-EDGE architectural decision as RESOLVED (directed, both orientations); it registers one `[THM-ALG]` (PROP-AZ-CORE-EQUIV) and one `[ALG]` low-order obstruction arising from the Thread C engineering work; and it registers the **first Phase-2 diagnostic result** — the Core(G_T) Hashimoto `4|q` angular rule — together with its reclassification as **static $\mathbb{Z}_N$ antipodal-band geometry, not a TDR-G dynamical signal**. Milestone AZ-2 is recorded as **attempted, negative-clarifying**: the most tempting angular observable was tested and **disqualified** as a bridge-candidate. **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.** A visible correction/retraction block is added (§4.3.4 and Appendix B). **v0.7 is a corrections-only edition:** every owner pin, identifier and imported statement is synchronized with the current adopted owner editions named in the header; the withdrawn OPEN-M "legal ×2" reading is removed (§6, Appendix B); the Thread C evidence files are recorded as not available in the repository (§9). No new scientific claim is made, no grade of an AZ-owned result changes, and Thread C is unchanged.
 
 **Major update (v0.6 at a glance):**
 - AZ-1A / AZ-1B / AZ-1C engineering blockers closed (`[ENG PASS]`, exit-code-gated).
@@ -60,14 +60,14 @@ This document is not a standard scientific DSN. It is an **infrastructure and le
 
 | Content family | Source of truth | Status in this document |
 |---|---|---|
-| Continuous $p$-resonance arithmetic, OPEN 9, low-degree vanishing, subgroup/missing-slot formalism | `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` | `[import-ref]`; ownership remains Dyadic |
-| TDR-G $\mathbb{Z}_N$ state space, reachability, superselection, cyclic memory, advance-spectrum conservation, BIND3 arithmetic/parity diagnostics | `RTG_DISCRETE_GENESIS_DSN_v2.12` | branch-local context / `[bridge-candidate]`; no cross-branch import |
+| Continuous $p$-resonance arithmetic, OPEN 9, low-degree vanishing, subgroup/missing-slot formalism | `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 (`dyad-v6.4.23`) | `[import-ref]`; ownership remains Dyadic |
+| TDR-G $\mathbb{Z}_N$ state space, reachability, superselection, cyclic memory, advance-spectrum conservation, BIND3 arithmetic/parity diagnostics | `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`) | branch-local context / `[bridge-candidate]`; no cross-branch import |
 | Graph/transfer-zeta diagnostic engine, conventions, manifests, null models, certification suite | this DSN, Thread C | internal and **now `[ENG PASS]`** (was `[ENG-blocker]` through v0.5) |
 | Graph-theoretic facts about the diagnostic objects (core equivalence; antipodal-band low-order cycle structure) | this DSN, Thread C | Thread-C-owned `[THM-ALG]` / `[ALG]`; not cross-branch |
 | Phase-2 diagnostics computed on TDR-G defect-graph exports | this DSN, Thread C | `[NUM diagnostic]`, branch-local; reclassified static-geometry; **not** a bridge-candidate |
 | Discrete-continuous comparison between Dyadic $p$-horizons and TDR-G $\mathbb{Z}_N$ horizons | future OPEN-P1 bridge document | `[bridge-candidate]` only |
-| Programme placement and dependency graph | `RTG_PROGRAMME_OVERVIEW` | patch requested; this DSN cannot self-register at Tier 0 |
-| Genesis cascade criterion and OPEN-M amplitude cascade | `RTG_GENESIS_GEOMETRY_DSN_v2.8.4` / `RTG_OPEN_M_DSN_v0.6` | companion/bridge context only; arithmetic-horizon or graph-zeta observables cannot substitute for UV inputs |
+| Programme placement and dependency graph | `RTG_PROGRAMME_OVERVIEW` v1.4 (`programme-v1.4`) | registered there as a Tier 5 infrastructure entry (its §6.1, §6.5) with interfaces IF20 and IF21 (its §7.2); see §7 |
+| Genesis cascade criterion and OPEN-M amplitude cascade | `RTG_GENESIS_GEOMETRY_DSN` v2.10 (`gen-v2.10`) / `RTG_OPEN_M_DSN` v0.7.1 (`uvm-v0.7.1`) | companion/bridge context only; arithmetic-horizon or graph-zeta observables cannot substitute for UV inputs |
 
 `[SG-AZ-0.4]` **Refresh is not promotion.** Updating source versions, importing fresher summaries, or incorporating post-audit import-ref corrections does not promote any imported claim to Zeta-owned `[ALG]`, `[THM]`, `[RESULT]`, or cross-branch evidence. All imported proof tags are inherited from the owner DSN and remain source-scoped. **v0.6 note:** the two internal `[THM-ALG]`/`[ALG]` items registered this version are Thread-C-owned graph-theoretic facts about this study's own diagnostic objects; they are not imported results and do not transfer to or from any other DSN.
 
@@ -95,12 +95,12 @@ This document is not a standard scientific DSN. It is an **infrastructure and le
 
 The concrete arithmetic observations that make this motivation non-trivial — i.e., that elevate it above numerology — are owned by the Dyadic DSN and cited here by reference:
 
-- `[import-ref]` **$p=5$ lattice cancellation is unique.** $G_{\rm lattice}(5)=0$ with both sides nonzero and equal: a non-trivial degree-4 lattice bridge cancellation with no analogue at other tested $p$. `[ALG]` `[RID: DYAD-ALG-GLATTICE5]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`
+- `[import-ref]` **$p=5$ lattice cancellation is unique.** $G_{\rm lattice}(5)=0$ with both sides nonzero and equal: a non-trivial degree-4 lattice bridge cancellation with no analogue at other tested $p$. `[ALG]` `[RID: DYAD-ALG-GLATTICE5]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`
 - `[import-ref]` **$p=7$ prime-horizon transparency fails.** $G_{06}(7) \neq 0$: the prime-horizon first-lattice transparency conjecture is `[FAIL]`. This means primes do not transparently propagate in the way the initial conjecture suggested. `[ALG/FAIL]` `[RID: DYAD-OPEN-P-RESONANCE, sub-item]`
 - `[import-ref]` **$p=12$ cascade boundary is near-zero but not zero.** Exact value $-13 + 15\sqrt{3}/2 \neq 0$, $|-13+15\sqrt{3}/2| \approx 0.0096$: a cascade boundary that is numerically small but algebraically nonzero. The structure of this near-cancellation remains open. `[ALG]` `[RID: DYAD-OPEN-P-RESONANCE, sub-item]`
 - `[import-ref]` **Low-degree pure anti-holomorphic raw vanishing is now certified.** $F_{\rm raw}^p(0,b)=0$ for $b\in\{2,3,4\}$ in the exact ranges $p\ge b+2$, proved by automatic $\beta$-mode path enumeration with no source $\beta$-set containing the secular mode. `[ALG]` `[RID: DYAD-ALG-VANISH-B2; DYAD-ALG-VANISH-B3; DYAD-ALG-VANISH-B4]`
   `[COR v0.4]` Boundary precision: the clean statement is $p\ge b+2$, not "$p\ne b+1$". Nonzero boundary cases include the direct-resonant $p=b+1$ cases and additional small-$p$ cross-contribution cases: $p=3,4$ for $b=3$ and $p=4,5$ for $b=4$.
-- `[import-ref]` **The dyadic channel boundary is closed at $b=4$.** Universal pure anti-holomorphic raw vanishing holds iff $b\le4$ for the dyadic map and fails at $b=5$ for every $p\ge6$; all-$b\ge5$ persistence and general-coefficient versions remain `[OPEN]`. `[ALG]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`
+- `[import-ref]` **The dyadic channel boundary at $b=4$.** Universal pure anti-holomorphic raw vanishing (for $p\ge b+2$) holds for $b\in\{2,3,4\}$ and fails at $b=5$ for every $p\ge6$; all-$b\ge5$ persistence and general-coefficient versions remain `[OPEN]`, so no "iff $b\le4$" statement is made (the owner withdrew that shorthand). `[ALG]` `[RID: DYAD-ALG-B5-ALLP-NONVANISHING]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`
 
 These observations together motivate the study: the arithmetic horizon is not featureless, but the certified features do not follow naive prime-based intuition. The operative arithmetic mechanism appears to be **divisor structure, subgroup charge, orbit sums, cyclic-horizon closure, and secular-mode exclusion/presence**, not primality by itself.
 
@@ -148,13 +148,13 @@ Status: RESOLVED | Decision: **DIRECTED, BOTH ORIENTATIONS.** Each symmetric def
 
 ## §3. Scope Guards
 
-Programme-level guards from `RTG_PROGRAMME_OVERVIEW_v1.1` apply in full. Sub-study guards specific to this document follow.
+Programme-level guards SG-PROG-1 to SG-PROG-4 of `RTG_PROGRAMME_OVERVIEW` v1.4 (`programme-v1.4`) §8 apply in full. Their governing text is there and is not quoted here; the three entries below state only how each applies to this study. Sub-study guards specific to this document follow.
 
-**[SG-PROG-1]** No result may flow between the discrete and continuous branches without a named bridge theorem. This is the primary firewall governing Thread B (§4) of this study. `[source: RTG_PROGRAMME_OVERVIEW_v1.1]`
+**[SG-PROG-1]** (cross-branch physical use). No physical law, coefficient, observable identification or evidential strengthening passes between the discrete and continuous branches of this study without a named, proved bridge. This is the primary firewall governing Thread B (§4) of this study. `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`
 
-**[SG-PROG-2]** No continuous-branch coefficient may be described as physically primitive until OPEN-P0 is resolved. All Thread A results (§4.1) carry this programme-level condition. `[source: RTG_PROGRAMME_OVERVIEW_v1.1]`
+**[SG-PROG-2]** (model selection is not local proof status). All Thread A results (§4.1) are conditional on the selected continuous generator and are not described as physically primitive while OPEN-P0 is open. `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`
 
-**[SG-PROG-4]** No result from Tier 4 or Tier 5 may be used to strengthen a result in Tier 3 without an explicit bridge theorem. This study is Tier 5 and must not inject Thread B/C items into Thread A or vice versa. `[source: RTG_PROGRAMME_OVERVIEW_v1.1]`
+**[SG-PROG-4]** (document location does not create transfer authority). This study's Tier 5 hub placement is not a bridge: Thread B/C items are not injected into Thread A or vice versa. `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`
 
 **[SG-AZ-1] — No RH claim.**  
 No statement in this study may be interpreted as a proof, disproof, reformulation, or physical derivation of the Riemann Hypothesis. The RH appears here as historical motivation only (§1.2).  
@@ -196,16 +196,16 @@ This study organizes its material into three threads. They are structurally sepa
 
 ### §4.1 Thread A — Continuous $p$-Resonance (Dyadic OPEN 9 import ledger)
 
-**Ownership:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1`, §2 and §6.11.  
-**Status here:** Reference only. All results cited as `[import-ref]`. This document does not own, retag, or add sub-items to Dyadic OPEN 9. v0.6 carries the Thread A ledger forward from v0.5 unchanged in content; no Thread A item is altered by the Thread C work.
+**Ownership:** `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 (`dyad-v6.4.23`), §2 and §6.11.  
+**Status here:** Reference only. All results cited as `[import-ref]`. This document does not own, retag, or add sub-items to Dyadic OPEN 9. v0.7 synchronizes the Thread A ledger with Dyadic v6.4.23 (pins, identifiers and owner corrections; Appendix A); no Thread A item is altered by the Thread C work.
 
 #### §4.1.1 Certified results (imported by reference)
 
-`[import-ref]` `[THM]` **Raw cubic theorem.** The raw cubic coefficient of the $p$-step map is exact. `[RID: DYAD-THM-RAW-CUBIC]`
+`[import-ref]` `[THM]` **Raw cubic theorem.** For the declared $K_p$ family in the raw $Z_p$ eigenframe, the $z^2\bar z$ coefficient of the **raw one-step map** is exact, for $p\ge3$. It is not a statement about the raw $p$-step map. Owner caveat: the formula is recovered and algebraically verified; its identity with the historical proposition is not yet established (Dyadic Appendix E). `[RID: DYAD-THM-RAW-CUBIC]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §2 OPEN 9]`
 
 `[import-ref]` `[ALG]` **Finite one-step ledger, $p=5,6,7$.** Exact coefficients:
 - $p=6$: $c_{05}^{(1,6)} = 43/17280 - i\,227\sqrt{3}/155520$ in the one-step engine/DSN bridge convention; distinct from the raw six-step Lie-gauge coefficient $c_{05}^{({\rm raw},6\text{-step})}=-61/2160-i\,43\sqrt{3}/6480$
-- $p=5$: $\nu_5^{(5)}$ exact over $\mathbb{Q}(\sqrt5, \sqrt{10+2\sqrt5})$
+- $p=5$: $\nu_5^{(5)}$ exact in $\mathbb{Q}(\zeta_5)$ (real and imaginary parts in $\mathbb{Q}(\sqrt5,\sqrt{10+2\sqrt5})$)
 - $p=7$: $c_{06}^{(7)}$ exact over $\mathbb{Q}(\zeta_7)$
 
 `[RID: DYAD-ALG-P567-LEDGER]`
@@ -218,6 +218,8 @@ This study organizes its material into three threads. They are structurally sepa
 
 `[import-ref]` `[FAIL]` **Universal $q=4$, $(0,3)$ cancellation.** Not universal; $p=12$ is a counterexample. `[source: DYAD-OPEN-P-RESONANCE]`
 
+`[import-ref]` `[THM]` `[scope: all $p=4s$, $s\ge2$]` **Cubic cascade $q=4$, $(0,3)$ phase/factorization law.** $Q_p=i\,\zeta_p^3\,M_p$ with $M_p\in\mathbb{Q}(\zeta_p)^+$; $p=8$ is the zero degeneracy ($Q_8=0$). This closes the exact cascade formula for the family $p=4s$; it is not a generic-$s$ formula. `[RID: DYAD-THM-Q403-PHASELAW]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`
+
 `[import-ref]` `[FAIL]` **Prime-horizon first-lattice transparency.** $G_{06}(7) \neq 0$: exact $p=7$ counterexample. Primes do not transparently propagate at the first lattice horizon. `[source: DYAD-OPEN-P-RESONANCE]`
 
 `[import-ref]` `[ALG]` **Degree-2 raw-vanishing.** $F_{\rm raw}^p(0,2)=0$ for all $p\ge4$; resonant exception $p=3$ nonzero. `[RID: DYAD-ALG-VANISH-B2]`
@@ -226,28 +228,27 @@ This study organizes its material into three threads. They are structurally sepa
 
 `[import-ref]` `[ALG]` **Degree-4 raw-vanishing.** $F_{\rm raw}^p(0,4)=0$ for all $p\ge6$, by automatic $\beta$-mode path enumeration; boundary cases $p=4$ and $p=5$ are nonzero, with $p=4$ a small-$p$ cross-contribution case and $p=5$ the direct-resonant/lattice-anomaly boundary. `[RID: DYAD-ALG-VANISH-B4]`
 
-`[import-ref]` `[ALG]` **Channel classification boundary at $b=4$ (dyadic map).** Universal pure anti-holomorphic raw vanishing for $p\ge b+2$ holds for $b\in\{2,3,4\}$ and fails at $b=5$ for every $p\ge6$. The all-$p$ $b=5$ failure is proved by secular-mode extraction plus cyclotomic non-division, not merely finite scan. The all-$b\ge5$ persistence and general-coefficient versions remain `[OPEN]`. `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`
+`[import-ref]` `[ALG]` **Channel classification boundary at $b=4$ (dyadic map).** Universal pure anti-holomorphic raw vanishing for $p\ge b+2$ holds for $b\in\{2,3,4\}$ and fails at $b=5$ for every $p\ge6$. The all-$p$ $b=5$ failure is proved by secular-mode extraction plus cyclotomic non-division, not merely finite scan. The all-$b\ge5$ persistence and general-coefficient versions remain `[OPEN]`. `[RID: DYAD-ALG-B5-ALLP-NONVANISHING]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`
 
-`[import-ref]` `[ALG, exact]` **Direct-accumulation weight vanishing.** For channel $(0,b)$, the direct accumulation weight is $\lambda^{-(b+1)k}$, and the $p$-fold orbit sum vanishes when $p\nmid(b+1)$. This is an arithmetic kernel of the $b\le4$ vanishing boundary. Scope precision: the all-$p$ $b=5$ failure is not a consequence of the direct-weight argument alone; it uses a separate secular-coefficient nonvanishing and cyclotomic non-division proof for the dyadic map (`DYAD-OPEN-B5-ALLP`, with `DYAD-ART-B5-SECULAR` as the secular-coefficient artifact). `[RID: DYAD-ALG-DIRECT-WEIGHT]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`
+`[import-ref]` `[ALG, exact]` **Direct-accumulation weight vanishing.** For channel $(0,b)$, the direct accumulation weight is $\lambda^{-(b+1)k}$, and the $p$-fold orbit sum vanishes when $p\nmid(b+1)$. This is an arithmetic kernel of the $b\le4$ vanishing boundary. Scope precision: the all-$p$ $b=5$ failure is not a consequence of the direct-weight argument alone; it uses a separate secular-coefficient nonvanishing and cyclotomic non-division proof for the dyadic map (`DYAD-ALG-B5-ALLP-NONVANISHING`, with `DYAD-ART-B5-SECULAR` as the secular-coefficient artifact; `DYAD-OPEN-B5-ALLP` is the closed lifecycle identifier). `[RID: DYAD-ALG-DIRECT-WEIGHT]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §2 OPEN 9]`
 
-`[import-ref]` `[ALG, exact]` **Cyclotomic cross-term identity.** $\tfrac12[(\sum_j\lambda^{2j})^2-\sum_j\lambda^{4j}]=0$ for all $p\ge5$. This exact cyclotomic sum cancellation is used in the degree-4 vanishing proof to eliminate the only possible cross-path contribution in the clean range. `[RID: DYAD-ALG-CROSS-IDENTITY]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`
+`[import-ref]` `[ALG, exact]` **Cyclotomic cross-term identity.** $\tfrac12[(\sum_j\lambda^{2j})^2-\sum_j\lambda^{4j}]=0$ for all $p\ge5$. This exact cyclotomic sum cancellation is used in the degree-4 vanishing proof to eliminate the only possible cross-path contribution in the clean range. `[RID: DYAD-ALG-CROSS-IDENTITY]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §2 OPEN 9]`
 
-`[import-ref]` `[ALG]` `[conv: raw Birkhoff-strobe]` **Degree-2 $q=3$ anti-holomorphic cancellation theorem.** For all $p>3$ with $3\mid p$, $\operatorname{Coeff}_{(0,2)}[\tau_{\le D}(L_p^{-p/3} f_p^{p/3}-\mathrm{Id})]=0$ for all $D\ge2$. Two-component structure: (a) reachability — the $(0,2)$ slot is dynamically active in the one-step map for $p>3$, so the zero is not vacuous; (b) cancellation — the $s$-step strobe kills the reachable slot by a geometric phase sum of a primitive $s$-th root of unity at the direct-averaging layer, anchored by the eigenframe linear-part lemma. This is a closed general sub-horizon cancellation theorem and a clear source-scoped example of composite-horizon cyclic-subgroup structure producing a selection rule. `[RID: DYAD-ALG-Q3-CANCEL]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §2 OPEN 9]`
+`[import-ref]` `[ALG]` `[conv: raw Birkhoff-strobe]` **Degree-2 $q=3$ anti-holomorphic cancellation theorem.** For all $p>3$ with $3\mid p$, $\operatorname{Coeff}_{(0,2)}[\tau_{\le D}(L_p^{-p/3} f_p^{p/3}-\mathrm{Id})]=0$ for all $D\ge2$. Two-component structure: (a) reachability — the $(0,2)$ slot is dynamically active in the one-step map for $p>3$, so the zero is not vacuous; (b) cancellation — the $s$-step strobe kills the reachable slot by a geometric phase sum of a primitive $s$-th root of unity at the direct-averaging layer, anchored by the eigenframe linear-part lemma (the owner keeps that lemma `[ALG]`; its statement is not recovered, Dyadic Appendix D). This is a closed general sub-horizon cancellation theorem and a clear source-scoped example of composite-horizon cyclic-subgroup structure producing a selection rule. `[RID: DYAD-ALG-Q3-DEG2-CANCEL]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`
 
-`[import-ref]` `[ALG]` **Subgroup-charge projector formalism.** Current OPEN 9 canonical objects include $\mathcal{Q}(p)$, $s=p/q$, $\chi_p(a,b)=a-b-1\pmod p$, $K^{\rm extra}_{p,q}$, $\Pi^{\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\mathcal{B}^{extra}_{p,q,D}$, $Z^{\rm miss}_{p,q,D}$, $C^{\rm mult}_{\rm sub}$, $C^{\rm uniq}_{\rm sub}$, and $\Delta_{\rm overlap}$. The closed cardinality lemma $|K^{\rm extra}_{p,q}|=s-1$ makes the formalism computable without raw case enumeration in the registered sub-horizon setting. `[source: DYAD-OPEN-P-RESONANCE]`
+`[import-ref]` `[ALG]` **Subgroup-charge projector formalism.** Current OPEN 9 canonical objects include $\mathcal{Q}(p)$, $s=p/q$, $\chi_p(a,b)=a-b-1\pmod p$, $K^{\rm extra}_{p,q}$, $\Pi^{\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\mathcal{B}^{extra}_{p,q,D}$, $Z^{\rm miss}_{p,q,D}$, $C^{\rm mult}_{\rm sub}$, $C^{\rm uniq}_{\rm sub}$, and $\Delta_{\rm overlap}$. The closed cardinality lemma $|K^{\rm extra}_{p,q}|=s-1$ makes the formalism computable without raw case enumeration in the registered sub-horizon setting. Owner evidence boundary (Dyadic Appendix D): $\chi_p$, $K^{\rm extra}_{p,q}$ and the cardinality lemma are defined; the other eight objects ($\mathcal{Q}(p)$, $\Pi^{\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\mathcal{B}^{extra}_{p,q,D}$, $Z^{\rm miss}_{p,q,D}$, $C^{\rm mult}_{\rm sub}$, $C^{\rm uniq}_{\rm sub}$, $\Delta_{\rm overlap}$) keep their names without a recovered definition, so they are not usable here for independent computation. `[source: DYAD-OPEN-P-RESONANCE]`
 
 `[import-ref]` `[ALG, exact]` **$p=6$ / $K_4$ face-flux identity.** $\lambda=e^{i\pi/3}=e^{iF_f/2}$ with $F_f=2\pi/3$. The identity is exact in Dyadic, but any transfer to OPEN-M source amplitude remains `[CAND/conditional]` and is not a Zeta result. `[RID: DYAD-ALG-P6-FACEFLUX]`
 
 #### §4.1.2 Active open frontier (imported by reference, owned by Dyadic DSN)
 
-The following items are owned by `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` OPEN 9. They are listed here as programme context only. Progress on them is tracked in the Dyadic DSN, not here.
+The following items are owned by `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 OPEN 9. They are listed here as programme context only. Progress on them is tracked in the Dyadic DSN, not here; the owner's current list is Dyadic §2 OPEN 9 (active sub-items), which also holds items not repeated here.
 
-- Exact cubic cascade formula for $q=4,(0,3)$: why does $p=8$ cancel while $p=12$ survives at $-13+15\sqrt3/2$?
 - Universal missing-slot rules $Z^{\rm miss}_{p,q,D}$ via reachable-basis projector formalism.
 - Bridge-gap smooth baseline: exact form of $G_{32}/K_p$ and whether a smooth baseline exists beyond the nonconstant tested ratio.
 - All-$b\ge5$ persistence extension beyond the certified all-$p$ $b=5$ failure; general-coefficient version of the boundary.
 - Universal $\nu_5^{(p)}$ theorem, only after subgroup-strobe definitions and cancellation rules are stabilized.
-- Near-cancellation structure of $-13+15\sqrt3/2\approx0.0096$ at the $p=12$, $q=4$, $(0,3)$ cascade boundary; algebraic nonzero is closed, structural explanation remains `[OPEN]`.
+- Near-cancellation structure at the $p=12$, $q=4$, $(0,3)$ cascade boundary, $-13+15\sqrt3/2\approx-0.0096$ (modulus $0.0096$): algebraic nonzero is closed and the exact cascade formula is closed (`DYAD-THM-Q403-PHASELAW`, §4.1.1); the structural explanation — in the owner's current form, the exact large-$p$ behaviour of $|Q_p|$ — remains `[OPEN]`.
 
 `[COR]` **v0.3 frontier correction (carried).** Low-degree anti-holomorphic vanishing for $b\in\{2,3,4\}$ is no longer a Zeta-listed open frontier. It is a Dyadic `[ALG]` import-ref item in §4.1.1.
 
@@ -265,26 +266,26 @@ The following items are owned by `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` OPEN 9. Th
 
 ### §4.2 Thread B — Discrete $\mathbb{Z}_N$ Arithmetic Structure (bridge-candidate only)
 
-**Ownership:** `RTG_DISCRETE_GENESIS_DSN_v2.12`.  
-**Status here:** Branch-local context and bridge-candidate observable family under OPEN-P1. SG-PROG-1, SG-PROG-4, SG-AZ-3, and SG-AZ-0.4 apply. No TDR-G result is imported as a cross-branch claim, and no TDR-G fact is used as evidence for a Dyadic claim. v0.6 carries Thread B forward unchanged.
+**Ownership:** `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`).  
+**Status here:** Branch-local context and bridge-candidate observable family under OPEN-P1. SG-PROG-1, SG-PROG-4, SG-AZ-3, and SG-AZ-0.4 apply. No TDR-G result is imported as a cross-branch claim, and no TDR-G fact is used as evidence for a Dyadic claim. v0.7 synchronizes Thread B with TDR-G v2.12.14 (owner RIDs and owner corrections; Appendix A).
 
-`[bridge-candidate]` **$\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\Delta_{ij}=(\theta_i-\theta_j)\bmod N$, and absolute phases gauge. The defect band is $\mathcal{D}_k=\{\Delta\in\mathbb{Z}_N: \operatorname{dist}_{\mathbb{Z}_N}(\Delta,N/2)\le k\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[source: RTG_DISCRETE_GENESIS_DSN_v2.12 §1]`
+`[bridge-candidate]` **$\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\Delta_{ij}=(\theta_i-\theta_j)\bmod N$, and absolute phases gauge. The defect band is $\mathcal{D}_k=\{\Delta\in\mathbb{Z}_N: \operatorname{dist}_{\mathbb{Z}_N}(\Delta,N/2)\le k\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[RID: TDRG-DEF-ZN-STATE]` (phase universe and variable-size state) `[RID: TDRG-DEF-PHYSICAL-STATE]` (physical state as the quotient by global phase; relational phases) `[RID: TDRG-DEF-BAND]` (defect band) `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §6.1]`
 
-`[bridge-candidate]` **Reachability / superselection.** For $k=0$, two-node interaction occurs iff $\gcd(d,N)\mid(N/2-\Delta_0)$; unreachable pairs are superselection sectors. v2.12 adds the band-form extension LEM-REACH: $\mathcal{D}_k$ is reachable iff $\mathcal{D}_k\cap(\Delta_0+g\mathbb{Z}_N)\neq\varnothing$; superselection persists at $k>0$ in the two-node universe. `[THM/ALG in source]` `[scope: branch-local]`
+`[bridge-candidate]` **Reachability / superselection.** For $k=0$, two-node interaction occurs iff $\gcd(d,N)\mid(N/2-\Delta_0)$; unreachable pairs are superselection sectors. The band-form extension is LEM-REACH (`TDRG-ALG-LEM-REACH`; the $k=0$ statement is `TDRG-THM-REACHABILITY-K0`): $\mathcal{D}_k$ is reachable iff $\mathcal{D}_k\cap(\Delta_0+g\mathbb{Z}_N)\neq\varnothing$; superselection persists at $k>0$ in the two-node universe. `[THM/ALG in source]` `[scope: branch-local]`
 
-`[bridge-candidate]` **Retrigger / binding threshold.** LEM-RETRIG gives an exact two-node period-2 retrigger criterion: $\varepsilon\in B_k\cap(B_k+d)$, possible iff $|d|_c\le2k$. This is arithmetic memory inside TDR-G only; it is not evidence for Dyadic resonance closure. `[ALG in source]` `[scope: two-node TDR-G]`
+`[bridge-candidate]` **Retrigger / binding threshold.** LEM-RETRIG (`TDRG-ALG-LEM-RETRIG`) gives an exact two-node retrigger criterion for a bound state of period dividing 2 (least period 2 for $d\ne0$; $d=0$ is a fixed point): $\varepsilon\in B_k\cap(B_k+d)$, possible iff $|d|_c\le2k$. This is arithmetic memory inside TDR-G only; it is not evidence for Dyadic resonance closure. `[ALG in source]` `[scope: two-node TDR-G]`
 
-`[bridge-candidate]` **Advance-spectrum conservation.** LEM-SPECCONS states that in the three-node no-birth universe the multiset $\{|d_{AB}|_c,|d_{BC}|_c,|d_{CA}|_c\}$ is exactly conserved under swap/$P_3$/tie events. Equivalently, the multiset of orbit-lattice spacings $\{\gcd(d_{ij},N)\}$ is conserved. Star blow-up creates new nodes and new pairwise advances; generalization beyond the no-birth sector remains source-scoped/open. `[ALG]` `[scope: 3 nodes, no star blow-up]`
+`[bridge-candidate]` **Advance-spectrum conservation.** LEM-SPECCONS (`TDRG-ALG-LEM-SPECCONS`) states that in the three-node no-birth universe the multiset $\{|d_{AB}|_c,|d_{BC}|_c,|d_{CA}|_c\}$ is exactly conserved under swap/$P_3$/tie events. In particular, the multiset of orbit-lattice spacings $\{\gcd(d_{ij},N)\}$ is conserved; this is a consequence only — the converse fails (owner counterexample at $N=24$: $|d|_c=1$ and $|d|_c=5$ share $\gcd=1$). Star blow-up creates new nodes and new pairwise advances; generalization beyond the no-birth sector remains source-scoped/open. `[ALG]` `[scope: 3 nodes, no star blow-up]`
 
-`[bridge-candidate]` **BIND3 arithmetic/parity diagnostics.** In the exact three-node $N=24,k=1$ BIND3 enumeration, the isolated period-2 bound dyad is not a persistent primitive: most bound-entry ICs become multi-pair recurrent scattering cycles with bond transfer; pure-bound survival is confined to even-advance parity sectors; conserved spectrum gates autonomous retrigger. BIND3-KNIFE is `[FAIL]`/`[REPLACED]`, and the odd-sector memory claim is `[COR]` as a composition artifact. `[ALG/NUM strong in source]` `[scope: N=24,k=1; no-birth/three-node]`
+`[bridge-candidate]` **BIND3 arithmetic/parity diagnostics.** In the exact three-node $N=24,k=1$ BIND3 enumeration, the isolated period-2 bound dyad is not a persistent primitive: most bound-entry ICs become multi-pair recurrent scattering cycles with bond transfer; pure-bound survival is confined to even-advance parity sectors; conserved spectrum gates autonomous retrigger. BIND3-KNIFE is `[FAIL]`/`[REPLACED]`, and the odd-sector memory claim is `[COR]` as a composition artifact. `[ALG/NUM strong in source]` `[scope: N=24,k=1; no-birth/three-node]` `[conv: v18 path orientation]` (owner RIDs: `TDRG-ALG-BIND3-CYCLE-N24K1`; `TDRG-NUM-BIND3-PARITY`, `TDRG-NUM-BIND3-SPECTRAL-GATE`, `TDRG-NUM-BIND3-MEMORY-PARITY`, `TDRG-NUM-BIND3-XFER`, `TDRG-NUM-BIND3-REGEN`; these numbers were computed with the orientation completion the owner has since superseded and are not rerun by the owner)
 
-`[bridge-candidate]` **$k/N$ and N-scaling.** TDR-G v2.12 reports that $k/N$ controls entry into the growth regime and that the canonical clean branch (`bound_symmetric`) shows bulk-conditioned birth rate
+`[bridge-candidate]` **$k/N$ and N-scaling.** TDR-G v2.12.14 reports that $k/N$ controls entry into the growth regime and that the canonical clean branch (`bound_symmetric`) shows bulk-conditioned birth rate
 $$B_{\rm bulk}/\text{step}\sim1.041\cdot N^{-0.869},\quad R^2=0.973$$
-at fixed $k/N=1/15$, $T=5000$, over $N=120$–$1440$, excluding tail runs $M>500$. This strongly supports thermodynamic crystallization but remains `[HEUR strong]` rather than theorem-grade. `[NUM strong / HEUR strong in source]`
+at fixed $k/N=1/15$, $T=5000$, over $N=120$–$1440$, excluding tail runs $M>500$ (full-range composite fit). The exponent is window-dependent: read on $N=480$–$1440$ the same scan gives $N^{-0.730}$, and $-0.869$ is the owner's full-range value, not a structural constant. Thermodynamic crystallization in the $N\to\infty$ limit is a `[HEUR]` extrapolation in the source, not theorem-grade. `[NUM]` (fit) / `[HEUR]` (limit) in source `[conv: v18 path orientation]` `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §1; TDRG-OPEN-NSCALING, TDRG-OPEN-CRYSTALLIZATION]`
 
-`[bridge-candidate]` **TDR-26 birth-anchored discriminator.** Discrete Genesis v2.12 records a birth-anchored dataset fact over $[\mathrm{fb},\mathrm{fb}+200)$, where $\mathrm{fb}$ is first-birth step: the rule $b/\text{step}\ge0.30\wedge ms_{\rm abs}\le0.25$ is satisfied by both known defective/crystallization-failure runs and by none of the 198 known bulk runs across $N=720$ and $N=722$ (combined TP=2, FP=0, FN=0, TN=198). Source tag split must be preserved: the dataset separation is `[NUM cross-cell, n=2]`, while the classifier/out-of-sample claim remains `[HEUR]` pending batch-scale validation. For this DSN it is a branch-local memory-window observable only, not a bridge theorem. `[source: RTG_DISCRETE_GENESIS_DSN_v2.12 TDR-26]`
+`[bridge-candidate]` **TDR-26 birth-anchored discriminator.** Discrete Genesis v2.12.14 records (OPEN TDR-26, `TDRG-OPEN-LOCKING-FAIL`) a birth-anchored dataset fact over $[\mathrm{fb},\mathrm{fb}+200)$, where $\mathrm{fb}$ is first-birth step: the rule $b/\text{step}\ge0.30\wedge ms_{\rm abs}\le0.25$ is satisfied by both known defective/crystallization-failure runs and by none of the 198 known bulk runs across $N=720$ and $N=722$ (combined TP=2, FP=0, FN=0, TN=198). Source tag split must be preserved: the dataset separation is `[NUM cross-cell, n=2]`, while the classifier/out-of-sample claim remains `[HEUR]` pending batch-scale validation. For this DSN it is a branch-local memory-window observable only, not a bridge theorem. `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §2 OPEN TDR-26]`
 
-`[bridge-candidate]` **TDR-24 frontier.** The immediate discrete frontier is the TDR-24 derivation chain: slot-volume identity, topological filtering, and geometric compression. It must close before discrete triadic dynamics can be studied. This DSN may track arithmetic/zeta observables that could assist TDR-24 or future OPEN-P1, but cannot promote them without source-DSN closure and bridge routing.
+`[bridge-candidate]` **TDR-24 frontier.** The immediate discrete frontier is the TDR-24 derivation chain. In TDR-G v2.12.14 the slot-volume identity (TDR-24D) and the structural-to-slot projection (TDR-24F) are closed at the mechanism level, with their analytic constants open; the gate before discrete triadic dynamics is TDR-24A (topological filtering, `TDRG-OPEN-TOPO-FILTER`) → TDR-24B (pair-to-component compression, `TDRG-OPEN-CHI-SCALING`) → TDR-24C (thermodynamic suppression, `TDRG-OPEN-THERMO-SUPPRESS`). This DSN may track arithmetic/zeta observables that could assist TDR-24 or future OPEN-P1, but cannot promote them without source-DSN closure and bridge routing.
 
 `[AZ-OPEN]` **AZ-OPEN-SCOPE-ARITH.** Are the $\mathbb{Z}_N$ arithmetic objects above — memory horizon $(N,k)$, divisibility, reachable cosets, orbit-lattice spacings, advance-spectrum conservation, parity sectors, TDR-26 birth-anchored memory window, and policy-dependent N-scaling — genuinely comparable to the Dyadic $p$-resonance arithmetic horizon, or are they structurally different objects that merely share vocabulary? Answering this question requires OPEN-P1 to be at minimum formally opened, a candidate bridge observable to be defined, and SG-AZ-7 to be satisfied. **v0.6 note:** the Phase-2 `4|q` angular result (§4.3.3) is NOT an answer to this question in the affirmative — it is proven to be substrate geometry (§4.3.2/§4.3.4), so it neither supplies nor supports a bridge.
 
@@ -407,7 +408,7 @@ This is a genuinely useful negative: it removes the angular Hashimoto spectrum f
 | Prime relevance | Only through explicit mechanisms | Vague appeal to "primes appearing" | SG-AZ-2 |
 | Dyadic OPEN 9 results | `[import-ref]` — ownership stays in Dyadic DSN | Retagging as this study's own `[ALG]`/`[THM]`/`[OPEN]` | SG-AZ-6, SG-AZ-0.4 |
 | Low-degree anti-holomorphic boundary | Dyadic-map-specific `[import-ref]`: $b\le4$ vanishing, $b=5$ all-$p$ failure | General-coefficient or all-$b\ge5$ theorem; cross-branch theorem | SG-AZ-6 |
-| TDR-G arithmetic structure | Branch-local / `[bridge-candidate]` from Discrete Genesis v2.12 | Active cross-branch import; evidence for Dyadic/bridge claim | SG-PROG-1, SG-AZ-3 |
+| TDR-G arithmetic structure | Branch-local / `[bridge-candidate]` from Discrete Genesis v2.12.14 | Active cross-branch import; evidence for Dyadic/bridge claim | SG-PROG-1, SG-AZ-3 |
 | TDR-G BIND3 / advance-spectrum | Three-node/no-birth or specified source scope only | Full TDR-G theorem through star blow-up or continuum bridge | SG-PROG-1, SG-AZ-3 |
 | TDR-26 discriminator | Branch-local dataset separation `[NUM cross-cell, n=2]`; classifier `[HEUR]` | Theorem-grade, universal, or cross-branch evidence | SG-PROG-1, SG-AZ-3, SG-AZ-7 |
 | **Thread C engineering** | **`[ENG PASS]` — certified, exit-code-gated, hashed artifacts (§4.3.1, §9)** | Treating any single run as certified without its manifest/hash/null provenance | SG-AZ-5 (revised) |
@@ -424,7 +425,7 @@ This is a genuinely useful negative: it removes the angular Hashimoto spectrum f
 This section records the potential connections between threads and between this study and the programme-level open problems. All items are `[bridge-candidate]`, `[bridge-disqualified]`, or `[OPEN]`; none is an active import.
 
 **To Dyadic OPEN 9:**  
-Thread A collects the current Dyadic arithmetic horizon as an import-ref ledger from `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1`. The active arithmetic frontier remains cubic cascade $q=4,(0,3)$, universal missing-slot rules, bridge-gap smooth baseline, near-cancellation structure, all-$b\ge5$ persistence/general-coefficient extension, and the universal $\nu_5^{(p)}$ theorem.
+Thread A collects the current Dyadic arithmetic horizon as an import-ref ledger from `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23. The active arithmetic frontier listed in §4.1.2 is: universal missing-slot rules, bridge-gap smooth baseline, near-cancellation structure, all-$b\ge5$ persistence/general-coefficient extension, and the universal $\nu_5^{(p)}$ theorem; the exact cubic cascade formula for $q=4,(0,3)$ is closed in Dyadic (`DYAD-THM-Q403-PHASELAW`). The owner's current list is Dyadic §2 OPEN 9.
 
 **To OPEN-P1 (discrete-continuous bridge):**  
 Thread B defines the TDR-G $\mathbb{Z}_N$ arithmetic structure as a candidate observable family for OPEN-P1; these remain branch-local until a named bridge theorem exists; SG-AZ-7 blocks vocabulary-similarity promotion.  
@@ -434,73 +435,53 @@ Thread B defines the TDR-G $\mathbb{Z}_N$ arithmetic structure as a candidate ob
 `[OPEN]` Whether $p$-resonance arithmetic selects the physical phase moments for the cascade condition $\langle\mathcal{P}_4\rangle>0$ is downstream of both Thread A and the Genesis study; recorded only as a candidate after the relevant Genesis/Triadic phase-import gates resolve.
 
 **To Genesis OPEN 1 / cascade criterion:**  
-`[bridge-candidate]` Genesis v2.8.4 closes OPEN 1C and certifies that the $\mathcal{P}_4$-only cascade is impossible in the reduced birth-race model; the cascade question routes through OPEN M. A Thread C spectral observable could in principle serve as an independent discriminator for crystallizing-vs-growth TDR-G policy branches — but only a DYNAMICAL one would qualify; the angular spectrum does not (§4.3.4). Speculative; `[SG-AZ-3, SG-AZ-4, SG-PROG-1, SG-AZ-7 apply]`.
+`[bridge-candidate]` In Genesis v2.10, OPEN 1C (triad chiral admissibility surface, `GEN-OPEN-CHIRAL-ADMISS`) is closed `[THM]`. Separately, within OPEN 1 (`GEN-OPEN-PHASE-DIST`, active) the $\mathcal{P}_4$-only cascade is impossible `[RESULT]` `[scope: reduced birth-race model]` — a statement about the reduced model, not about arbitrary phase measures; cascade then requires a non-$\mathcal{P}_4$ source, and the question routes through OPEN-GEN-II-7B (`GEN-OPEN-UVJET-ALPHAF`) and OPEN M. A Thread C spectral observable could in principle serve as an independent discriminator for crystallizing-vs-growth TDR-G policy branches — but only a DYNAMICAL one would qualify; the angular spectrum does not (§4.3.4). Speculative; `[SG-AZ-3, SG-AZ-4, SG-PROG-1, SG-AZ-7 apply]`.
 
 **To OPEN M:**  
-`[bridge-candidate]` The $p=6/K_4$ face-flux identity $\lambda=e^{iF_f/2}$ is a Dyadic import-ref. The SU(2) energy ratio $E_{\rm full}/E_{\rm half}=4$ is source-scoped, but the OPEN-M cascade test is linear in $\|H\|_B$ (amplitude), so the legal correction is $\times2$, not $\times4$; applying $\times4$ is a certified dimensional type error under AUDIT-1-DIMENSIONAL in the OPEN-M ledger. No arithmetic-horizon or graph-zeta result in this DSN contributes to or supersedes that verdict. `[SG-AZ-6, SG-PROG-4]`
+`[bridge-candidate]` The $p=6/K_4$ face-flux identity $\lambda=e^{iF_f/2}$ is a Dyadic import-ref. The SU(2) energy ratio $E_{\rm full}/E_{\rm half}=4$ is source-scoped, and the OPEN-M cascade test is linear in the admitted source amplitude $\|H\|_B$. OPEN-M v0.7.1 certifies no numerical deficit factor: R16 (`UVM-RESULT-AUDIT1`, `[COR]`) withdraws the earlier "legal SU(2) correction $=2\times$" as a physical conclusion — the $2\times$ branch is conditional on two unproved bridges (the source identification and an $E\propto A^2$ constitutive relation), and the $4\times$ energy factor is likewise not directly admissible in the amplitude-linear inequality — and R15 (`UVM-NUM-2F-RHO`) is a calibration-conditional proxy diagnostic. No arithmetic-horizon or graph-zeta result in this DSN contributes to or supersedes that verdict. `[source: RTG_OPEN_M_DSN v0.7.1 R15, R16]` `[SG-AZ-6, SG-PROG-4]`
 
 **To Programme Overview §6:**  
-This study is a Tier 5 infrastructure entry. The Programme Overview should be updated to register `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6`. See §7 Note.
+This study is a Tier 5 infrastructure entry and is registered in Programme Overview v1.4 (its §6.1, §6.5 and §7.2). See §7.
 
 ---
 
 ## §7. Note on Programme Overview Update
 
-`[DEF]` The Programme Overview `RTG_PROGRAMME_OVERVIEW_v1.1` should be patched to register this study at its current version. Proposed Tier 5 entry:
-
-```md
-**`RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN`** (current: v0.6)
-
-Physical question: Does arithmetic horizon structure — period length, divisibility, prime/composite
-obstruction, cyclic memory, advance-spectrum conservation, and zeta/transfer spectra — play a genuine
-structural role in RTG resonance dynamics, discrete relational memory, or future discrete-continuous
-bridge observables?
-
-Maturity: Level A — infrastructure and ledger. Thread C engineering certified (AZ-1 closed,
-[ENG PASS]); first Phase-2 diagnostic executed and reclassified as static Z_N substrate geometry;
-no Zeta-owned cross-branch scientific result; no bridge-candidate promoted.
-Imports from (by reference only): RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 (OPEN 9 ledger).
-Branch-local context from: RTG_DISCRETE_GENESIS_DSN_v2.12 (Z_N arithmetic, reachability,
-advance-spectrum/BIND3/N-scaling; bridge-candidate only).
-Bridge-candidate connections: OPEN-P1 (TDR-G Z_N arithmetic as candidate observable family);
-NOTE the Core(G_T) 4|q angular observable is bridge-DISQUALIFIED (static Z_N geometry).
-Cross-branch: SG-PROG-1, SG-PROG-4, SG-AZ-3, SG-AZ-0.4 apply; threads separated until a named
-bridge theorem exists.
-```
-
-Also: in the cross-study dependency graph, keep the dashed `[reference / bridge-candidate]` edges from Dyadic OPEN 9 and to `[RTG_DISCRETE_CONTINUOUS_BRIDGE]`, and the dashed branch-local context edge from `RTG_DISCRETE_GENESIS_DSN_v2.12`; annotate the latter `[TDR-G arithmetic context; no cross-branch import; 4|q observable bridge-disqualified]`.
+`[DEF]` This study is registered in `RTG_PROGRAMME_OVERVIEW` v1.4 (`programme-v1.4`): the document inventory (its §6.1; Tier 5, canonical infrastructure), the study entry (its §6.5), the cross-study dependency graph (its §7.1; a reference edge from Dyadic to Thread A and an edge from TDR-G to Threads B/C) and the interface register (its §7.2; IF20 Dyadic → AZ, reference-only, and IF21 TDR-G → AZ). The request carried through v0.6 that the Programme Overview be patched to register this study is met and closed; the proposed entry text is removed. The Programme's maintenance proposals for this study (its §6.7 and §9.2) are Programme records and are not adopted by this edition.
 
 ---
 
 ## §8. Import Ledger
 
-This document makes no active cross-branch imports. All Dyadic OPEN 9 results cited in §4.1 are `[import-ref]` — owned by `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1`. TDR-G facts cited in §4.2 are branch-local context / `[bridge-candidate]`. The Thread C internal results (§4.3.2) and Phase-2 diagnostic (§4.3.3) are owned by this DSN and are not imports.
+This document makes no active cross-branch imports. All Dyadic OPEN 9 results cited in §4.1 are `[import-ref]` — owned by `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23. TDR-G facts cited in §4.2 are branch-local context / `[bridge-candidate]`. The Thread C internal results (§4.3.2) and Phase-2 diagnostic (§4.3.3) are owned by this DSN and are not imports.
 
-### Reference imports from `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1`
+### Reference imports from `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 (`dyad-v6.4.23`)
 
-- [RID: DYAD-THM-RAW-CUBIC] :: Raw cubic theorem :: `[import-ref]` `[THM]`
+- [RID: DYAD-THM-RAW-CUBIC] :: Raw cubic theorem (raw one-step map, $p\ge3$; owner caveat on the historical proposition) :: `[import-ref]` `[THM]`
 - [RID: DYAD-ALG-P567-LEDGER] :: Finite one-step ledger $p=5,6,7$ :: `[import-ref]` `[ALG]`
 - [RID: DYAD-ALG-GLATTICE5] :: $p=5$ lattice cancellation $G_{\rm lattice}(5)=0$ :: `[import-ref]` `[ALG]`
-- [RID: DYAD-OPEN-P-RESONANCE — sub-items] :: $G_{04}(10)=0$ reinterpretation; $p=12$ cascade boundary; $p=7$ transparency `[FAIL]`; universal $q=4,(0,3)$ `[FAIL]`; subgroup-projector/missing-slot formalism :: `[import-ref]`
+- [RID: DYAD-OPEN-P-RESONANCE] (named sub-items of the owner's OPEN 9 record; the sub-labels are not identifiers) :: $G_{04}(10)=0$ reinterpretation; $p=12$ cascade boundary; $p=7$ transparency `[FAIL]`; universal $q=4,(0,3)$ `[FAIL]`; subgroup-projector/missing-slot formalism; cardinality lemma $|K^{\rm extra}_{p,q}|=s-1$ `[ALG]` :: `[import-ref]`
 - [RID: DYAD-ALG-VANISH-B2] :: $F_{\rm raw}^p(0,2)=0$ for $p\ge4$; exception $p=3$ :: `[import-ref]` `[ALG]`
 - [RID: DYAD-ALG-VANISH-B3] :: $F_{\rm raw}^p(0,3)=0$ for $p\ge5$; boundary $p=3,4$ :: `[import-ref]` `[ALG]`
 - [RID: DYAD-ALG-VANISH-B4] :: $F_{\rm raw}^p(0,4)=0$ for $p\ge6$; boundary $p=4,5$ :: `[import-ref]` `[ALG]`
-- [RID: DYAD-OPEN-P-RESONANCE — b-boundary] :: vanishing iff $b\le4$, $b=5$ failure for $p\ge6$ :: `[import-ref]` `[ALG]` :: dyadic-map scope; all-$b\ge5$/general-coefficient `[OPEN]`
+- [RID: DYAD-ALG-B5-ALLP-NONVANISHING] :: channel boundary at $b=4$: vanishing for $b\in\{2,3,4\}$, failure at $b=5$ for every $p\ge6$ :: `[import-ref]` `[ALG]` :: dyadic-map scope; all-$b\ge5$/general-coefficient `[OPEN]`; `DYAD-OPEN-B5-ALLP` is the closed lifecycle identifier
 - [RID: DYAD-ALG-DIRECT-WEIGHT] :: direct weight $\lambda^{-(b+1)k}$, orbit-sum vanishing for $p\nmid(b+1)$ :: `[import-ref]` `[ALG, exact]`
 - [RID: DYAD-ALG-CROSS-IDENTITY] :: cyclotomic cross-term identity for $p\ge5$ :: `[import-ref]` `[ALG, exact]`
-- [RID: DYAD-ALG-Q3-CANCEL] :: degree-2 $q=3$ anti-holomorphic cancellation (raw Birkhoff-strobe) :: `[import-ref]` `[ALG]`
-- [RID: DYAD-OPEN-P-RESONANCE — subgroup cardinality] :: $|K^{\rm extra}_{p,q}|=s-1$ :: `[import-ref]` `[ALG]`
+- [RID: DYAD-ALG-Q3-DEG2-CANCEL] :: degree-2 $q=3$ anti-holomorphic cancellation (raw Birkhoff-strobe) :: `[import-ref]` `[ALG]`
 - [RID: DYAD-ALG-P6-FACEFLUX] :: $p=6/K_4$ face-flux identity :: `[import-ref]` `[ALG, exact]` :: OPEN-M transfer `[CAND/conditional]`
+- [RID: DYAD-THM-Q403-PHASELAW] :: cubic cascade $q=4,(0,3)$ phase/factorization law, $p=4s$, $s\ge2$ :: `[import-ref]` `[THM]`
 
-### Branch-local context from `RTG_DISCRETE_GENESIS_DSN_v2.12`
+### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`)
 
-- [RID: TDRG-ZN-STATE] :: $\mathbb{Z}_N$ system, defect band $\mathcal{D}_k$, relational phases, absolute-phase gauge :: `[bridge-candidate]`
-- [RID: LEM-REACH] :: band-form reachability/superselection :: `[bridge-candidate]` `[THM/ALG in source]`
-- [RID: LEM-RETRIG] :: two-node retrigger threshold :: `[bridge-candidate]` `[ALG in source]`
-- [RID: LEM-SPECCONS] :: three-node no-birth advance-spectrum conservation :: `[bridge-candidate]` `[ALG in source]`
-- [RID: BIND3-*] :: cycle enumeration / NKSCAN; survival parity, spectral gate, even-sector memory correction :: `[bridge-candidate]` `[ALG/NUM strong in source]`
-- [RID: TDR-24 / N-SCALING] :: $k/N$ growth control, `bound_symmetric` $N^{-0.869}$ scaling, crystallization `[HEUR strong]`, TDR-24 frontier :: `[bridge-candidate]`
-- [RID: TDR-26-BIRTH-ANCHOR] :: birth-anchored discriminator over $[\mathrm{fb},\mathrm{fb}+200)$, $N=720,722$ :: `[bridge-candidate]` `[NUM cross-cell, n=2; classifier HEUR]`
+- [RID: TDRG-DEF-ZN-STATE] :: $\mathbb{Z}_N$ phase universe, variable-size state :: `[bridge-candidate]` :: the consumer name `TDRG-ZN-STATE` resolves to it through the owner's §7 map
+- [RID: TDRG-DEF-PHYSICAL-STATE] :: physical state as the quotient by global phase shift; relational phases $\Delta_{ij}$ (absolute-phase gauge) :: `[bridge-candidate]`
+- [RID: TDRG-DEF-BAND] :: defect band $\mathcal{D}_k$ :: `[bridge-candidate]`
+- [RID: TDRG-ALG-LEM-REACH] :: band-form reachability/superselection ($k=0$: `TDRG-THM-REACHABILITY-K0`) :: `[bridge-candidate]` `[THM/ALG in source]`
+- [RID: TDRG-ALG-LEM-RETRIG] :: two-node retrigger threshold; bound state of period dividing 2 :: `[bridge-candidate]` `[ALG in source]`
+- [RID: TDRG-ALG-LEM-SPECCONS] :: three-node no-birth advance-spectrum conservation; the gcd multiset as a consequence only :: `[bridge-candidate]` `[ALG in source]`
+- [RID: TDRG-ALG-BIND3-CYCLE-N24K1; TDRG-NUM-BIND3-PARITY; TDRG-NUM-BIND3-SPECTRAL-GATE; TDRG-NUM-BIND3-MEMORY-PARITY; TDRG-NUM-BIND3-XFER; TDRG-NUM-BIND3-REGEN; TDRG-OPEN-BIND3-NKSCAN] :: cycle enumeration / NKSCAN; survival parity, spectral gate, even-sector memory correction :: `[bridge-candidate]` `[ALG/NUM strong in source]` `[conv: v18 path orientation]`
+- [RID: TDRG-OPEN-NSCALING; TDRG-OPEN-CRYSTALLIZATION; TDRG-OPEN-TOPO-FILTER; TDRG-OPEN-CHI-SCALING; TDRG-OPEN-THERMO-SUPPRESS] :: $k/N$ growth control, `bound_symmetric` full-range $N^{-0.869}$ fit (window-dependent exponent), crystallization `[HEUR]`, TDR-24A → 24B → 24C gate :: `[bridge-candidate]`
+- [RID: TDRG-OPEN-LOCKING-FAIL] :: OPEN TDR-26 birth-anchored discriminator over $[\mathrm{fb},\mathrm{fb}+200)$, $N=720,722$ :: `[bridge-candidate]` `[NUM cross-cell, n=2; classifier HEUR]`
 
 ### Bridge-required / bridge-disqualified export candidates
 
@@ -513,7 +494,7 @@ This document makes no active cross-branch imports. All Dyadic OPEN 9 results ci
 
 ## §9. Artifact and Script Registry
 
-**Current status (v0.6):** the engine and Phase-2 artifacts are real and named. `[COR]` SHA-256 hashes are stored in `AZ-ART-AZV5-REGISTRY` and the per-result artifact manifests; this DSN lists RID-level artifact identities and points to that hash source rather than duplicating hashes inline (SG-AZ-5 provenance is satisfied by the manifest reference). The prior `v3 historical / v4,v5 planned` placeholder registry is superseded.
+**Current status (v0.7):** the engine and Phase-2 artifacts are named below by RID. **Availability:** none of these files, including the hash registry `AZ-ART-AZV5-REGISTRY`, is in the repository as of this edition, and they are not described as recreated. The certifications and hashes are therefore source-reported from the June 2026 Thread C work (`EV-SRC-REPORTED`), and nothing was rerun for this edition (`EV-NOT-RERUN`). This DSN lists RID-level artifact identities and points to that registry and the per-result artifact manifests as the hash source rather than duplicating hashes inline; SG-AZ-5 provenance is by pointer to that manifest and cannot be inspected from the repository until the files are supplied unchanged and hash-checked against the registry. The existing grades are kept with this verification limit; it applies wherever this document calls a Thread C artifact hashed or certified (§4.3.1, §5). The prior `v3 historical / v4,v5 planned` placeholder registry is superseded.
 
 - [RID: AZ-ART-AZV5-REGISTRY] :: `az_v5` package + SHA-256 manifest (lib/hashimoto, graphgen, graphio, manifest; benchmark_ladder; validate_solver; az1b_certify; phase2_harness; benchmarks) :: certified engine, exit-code-gated; **canonical hash source** :: `[ENG PASS]`
 - [RID: AZ-ART-CONVENTIONS-FROZEN] :: `CONVENTIONS_FROZEN.md` (CONV-AZ-GRAPH-EXPORT, DEF-AZ-CORE, CONV-AZ-SPECTRUM-MODE, CONV-AZ-STATS-MULTITEST, CONV-AZ-NULLS, CONV-AZ-ANGLE-ZERO, SG-PLAN-*) :: frozen conventions :: `[ENG PASS]`
@@ -531,6 +512,7 @@ This document makes no active cross-branch imports. All Dyadic OPEN 9 results ci
 
 Authors: Mustafa (PI) · Claude · ChatGPT · Gemini · Grok
 
+- **November 2026 — v0.7 corrections edition.** Prepared from v0.6 (tag `az-v0.6`) against the current adopted owner editions (Dyadic v6.4.23, TDR-G v2.12.14, Genesis v2.10, Programme v1.4, OPEN-M v0.7.1), limited to list (i) of `records/az/AZ_REACTIVATION_TRIAGE.md` as decided by the PI on 10 Nov 2026. No new science and no Thread C change; edit-level record in `records/az/AZ_v0_7_RELEASE_RECORD.md`.
 - **June 2026 — v0.6 ledger-state update (with audit patch round).** Prepared from v0.5 plus the Thread C engineering/audit/Phase-2 work and the attached structured audits. Scope: recorded AZ-1 closure (AZ-1A/1B/1C `[ENG PASS]`); registered AZ-OPEN-EDGE resolution; registered `[THM-ALG]` PROP-AZ-CORE-EQUIV and `[ALG]` antipodal-band low-order obstruction; registered the Phase-2 `4|q` result and its reclassification as static $\mathbb{Z}_N$ geometry; added the §4.3.4 retraction block; revised SG-AZ-5 from a pre-science gate to a provenance guard; added the SG-AZ-7 worked example; recorded AZ-2 as attempted/negative-clarifying with no Level B promotion; populated §9 with real hashed artifacts. Post-draft audit patches applied: (1) odd-closure threshold softened to a necessary obstruction bound, not a sufficiency/existence theorem; "$L=4$ shortest" → "first constructible closure scale"; (2) G_cumulative retraction reason corrected (Null1/topology control, not a radius-bug artifact); (3) the `4|q` evidence split into Chain 1 (Null0/Null1 statistical excess) and Chain 2 (core-matched theta per-$q$ comparison) with distinct scope and sample size; (4) §9 artifact hashes pointed to the manifest source and the shorthand `N120/180/240` path expanded to exact registered file names; (5) per-$q$ $z$-score claim made artifact-scoped rather than quoting an inline range. Maturity remains Level A. No cross-branch import; no bridge-candidate promoted. Multiple internal self-corrections (spectral-radius bug, core-definition mismatch, v1 exact-theorem counterexample, falsified $k/N$ prediction) are recorded permanently per error-culture policy.
 - **June 2026 — v0.5 precision patch.** Corrected stale v0.3 wording; sharpened direct-weight/$b=5$ attribution; expanded degree-2 $q=3$ theorem; added `[ENG-open-3]`; added SG-AZ-1/2 guards on the zeta-pole item. Thread C engineering-blocked at that time.
 - **June 2026 — v0.4 post-audit correction patch.** Added Dyadic import-ref mechanisms, TDR-26 branch-local discriminator, SG-AZ-7, blocker sequencing, Genesis/OPEN-M precision notes.
@@ -540,6 +522,20 @@ Authors: Mustafa (PI) · Claude · ChatGPT · Gemini · Grok
 ---
 
 ## Appendix A — Version History
+
+### v0.7 — November 2026
+
+Corrections only over v0.6 (tag `az-v0.6`). No new scientific claim; no grade change of an AZ-owned result; Thread C (§4.3) unchanged. Edit-level record: `records/az/AZ_v0_7_RELEASE_RECORD.md`.
+
+- **Header [COR]:** Version → v0.7; Supersedes → v0.6 with its hash; companion documents repinned to the governing editions. DSN Methodology v1.2 stays declared (v1.4 governs; the migration is a separate edition).
+- **Pins [COR]:** Programme v1.1 → v1.4; Dyadic v6.4.8.1 → v6.4.23; TDR-G v2.12 → v2.12.14; Genesis v2.8.4 → v2.10; OPEN-M v0.6 → v0.7.1.
+- **§3 [COR]:** SG-PROG-1/2/4 cited by pointer to Programme v1.4 §8 with this study's application; the v1.1 wording is no longer quoted.
+- **§1.2 / §4.1 [COR]:** raw cubic theorem restated at the owner's scope (raw one-step map, $p\ge3$, owner caveat); the "iff $b\le4$" wording removed; cubic cascade $q=4,(0,3)$ registered as closed (`DYAD-THM-Q403-PHASELAW`) and removed from the open frontier; sign of the $p=12$ value in §4.1.2; $\mathbb{Q}(\zeta_5)$ field label; `DYAD-ALG-Q3-CANCEL` → `DYAD-ALG-Q3-DEG2-CANCEL`; `DYAD-ALG-B5-ALLP-NONVANISHING` cited for the $b=5$ result; owner evidence boundary recorded for the eigenframe lemma and eight projector objects; source pointers corrected; the frontier list points to Dyadic §2 OPEN 9.
+- **§4.2 [COR]:** owner RIDs cited; LEM-RETRIG "period dividing 2"; LEM-SPECCONS gcd multiset as a consequence only; BIND3 and N-scaling carry `[conv: v18 path orientation]`; N-scaling exponent window-dependent and crystallization `[HEUR]`; TDR-24D/F closed at mechanism level, gate TDR-24A → 24B → 24C; TDR-26 cited as `TDRG-OPEN-LOCKING-FAIL`.
+- **§6 [COR]:** "To OPEN M" rewritten against OPEN-M v0.7.1 R15/R16 (Appendix B); Genesis OPEN 1C and the reduced-model $\mathcal{P}_4$ statement cited as two entries of Genesis v2.10; Dyadic frontier sentence synchronized.
+- **§0.1 / §6 / §7 [COR]:** the Programme Overview registration is recorded as met; the patch request and the proposed entry text are removed.
+- **§8 [COR]:** Import Ledger rows carry the owner RIDs and editions; the `DYAD-OPEN-P-RESONANCE` sub-labels are no longer printed as identifiers.
+- **§9 [COR]:** availability of the Thread C files stated (`EV-SRC-REPORTED`, not in the repository, `EV-NOT-RERUN`); the present-tense "provenance is satisfied" claim replaced.
 
 ### v0.6 — June 2026
 
@@ -595,7 +591,10 @@ Initial release. Infrastructure-and-ledger document; three threads defined; five
 `[RETRACTED]` even-non-$4\mid q$ suppression ($q\in\{2,6,10\}$) as a TDR-G dynamical residue — not stable across $N$ under the core-matched theta null (present $N=120$, gone $N=180$, reversed $N=240$).  
 `[RETRACTED]` predicted weakening of the `4|q` rule with larger $k/N$ — falsified ($R_4$ rises 0.75→0.97 with $k$).
 
+### Corrections registered at v0.7
+`[COR]` §6 "To OPEN M" (as printed in v0.6): "the legal correction is $\times2$, not $\times4$; applying $\times4$ is a certified dimensional type error under AUDIT-1-DIMENSIONAL in the OPEN-M ledger." Withdrawn as a current statement. Reason: OPEN-M v0.7.1 R16 (`UVM-RESULT-AUDIT1`) withdrew the "legal $2\times$" verdict as a physical conclusion and records that no certified numerical deficit factor exists. Replacement: §6 "To OPEN M". The sentence reported an owner reading; it was never an AZ result, and no AZ grade depended on it.
+
 ---
 
-*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6*  
-*Supersedes v0.5. Infrastructure and ledger document. Thread C engineering certified (`[ENG PASS]`, AZ-1 closed); one Phase-2 diagnostic registered and reclassified as static $\mathbb{Z}_N$ substrate geometry; no Zeta-owned cross-branch scientific result; no OPEN-P1/Dyadic bridge-candidate promoted (the `4|q` angular observable is bridge-disqualified). Maturity: Level A. Promotion to Level B requires a reproducible, null-gated, TDR-G-DYNAMICAL (non-substrate) observable plus satisfaction of the success criterion in §1.1.*
+*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.7*  
+*Supersedes v0.6 (corrections only; no new science). Infrastructure and ledger document. Thread C engineering certified (`[ENG PASS]`, AZ-1 closed); one Phase-2 diagnostic registered and reclassified as static $\mathbb{Z}_N$ substrate geometry; no Zeta-owned cross-branch scientific result; no OPEN-P1/Dyadic bridge-candidate promoted (the `4|q` angular observable is bridge-disqualified). Maturity: Level A. Promotion to Level B requires a reproducible, null-gated, TDR-G-DYNAMICAL (non-substrate) observable plus satisfaction of the success criterion in §1.1.*

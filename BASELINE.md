@@ -12,18 +12,18 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 | Study | File | Version | SHA-256 | Verification | Tag |
 |---|---|---|---|---|---|
 | Methodology | `DSN_METHODOLOGY.md` | v1.4 | `cdacab5feb79161cd86313086065ca67313ef354e30ceaf205386cf2f3a0f2df` | OWNER: release record `records/methodology/DSN_METHODOLOGY_v1.4_RELEASE_RECORD.md` | `methodology-v1.4` |
-| Programme | `RTG_PROGRAMME_OVERVIEW.md` | v1.3 | `1b8358b3e1d3abb853e226786d21e6559c289b7c85570dac0ff1ebc2dabaea06` | OWNER: release record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_RELEASE_RECORD.md`; predecessor v1.2 `4207da05…9359` (`programme-v1.2`) | `programme-v1.3` |
+| Programme | `RTG_PROGRAMME_OVERVIEW.md` | v1.4 | `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0` | OWNER: release record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`; change-focused review ACCEPT SCOPED (PR #179); predecessor v1.3 `1b8358b3…aea06` (`programme-v1.3`) | `programme-v1.4` |
 | DYAD | `RTG_DYADIC_OSCILLATOR_DSN.md` | v6.4.23 | `9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb` | OWNER: release record `records/dyad/RTG_DYADIC_v6_4_23_RELEASE_RECORD.md`; change-focused review and r2 read-back (PR #132), Atlas row check (PR #134) | `dyad-v6.4.23` (v6.4.22: `2363ca40…8c29`, `dyad-v6.4.22`; v6.4.21: `a412f34d…dc7d`, `dyad-v6.4.21`; v6.4.20: `0b2d5a44…4852`, `dyad-v6.4.20`; v6.4.19: `dyad-v6.4.19`) |
 | TRIAD | `RTG_TRIADIC_BIRTH_LIFT_DSN.md` | v1.7 | `506f3403628ca01d5a904f885df055d9bfbdf1ef5e474e24e83d4797c122e64a` | OWNER: release record `records/triad/TRIAD_v1_7_RELEASE_RECORD.md`; co-owner reviews on PR #140; Atlas row checks (PR #141, #143); post-tag read-back `records/triad/TRIAD_v1_7_POST_TAG.md`; predecessor v1.6.1 `95340abe…451f` (`triad-v1.6.1`) | `triad-v1.7` |
 | GEN | `RTG_GENESIS_GEOMETRY_DSN.md` | v2.10 | `63c3b020d9c63a43a2e5e9a43c411fad2d07dfcab33995bd928683435bb13d62` | OWNER: release record `records/gen/GEN_v2_10_RELEASE_RECORD.md`; predecessor v2.9 `9178ca2c…00ac` (`gen-v2.9`) | `gen-v2.10` |
 | TDRG | `RTG_DISCRETE_GENESIS_DSN.md` | v2.12.14 | `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392` | OWNER: release record `records/tdrg/TDRG_v2_12_14_RELEASE_RECORD.md`; predecessor v2.12.13 `aa232643…053f` (`tdrg-v2.12.13`) | `tdrg-v2.12.14` |
-| RECOG | `RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.26 | `45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34` | OWNER: release record `records/recog/RECOG_v0_3_26_RELEASE_RECORD.md`; per-group reviews (PR #96 rounds #5675460082, #5689280577; cell PR #93) | `recog-v0.3.26` (tag to be created by the PI; v0.3.25: `86cae8ff…d7db`, `recog-v0.3.25`; v0.3.24: `8c64bea2…e7c1`; v0.3.23: `0d583400…a31a`; v0.3.22: `0dcce9e4…bcd9`; XREF RER v0.2 G9) |
+| RECOG | `RTG_RELATIONAL_RECOGNITION_DSN.md` | v0.3.27 | `19556f913f51b98599faa6ad88c363dda0a278345677f3bd69f3b892d810e1f1` | OWNER: release record `records/recog/RECOG_v0_3_27_RELEASE_RECORD.md`; per-group reviews (PR #175 #5764962040, receiving read-back #5765657572; reconciliation PRs #172, #173) | `recog-v0.3.27` (tag to be created by the PI; v0.3.26: `45e307f8…dd34`, `recog-v0.3.26`; v0.3.25: `86cae8ff…d7db`, `recog-v0.3.25`; v0.3.24: `8c64bea2…e7c1`; v0.3.23: `0d583400…a31a`; v0.3.22: `0dcce9e4…bcd9`; XREF RER v0.2 G9) |
 | NUMGEN | `RTG_NUMBER_GENESIS_DSN.md` | v1.21 | `4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701` | OWNER: release record `records/numgen/NUMGEN_v1_21_RELEASE_RECORD.md`; atlas row checks (PR #77); predecessor v1.20.8 `835a56f8…817e` (`numgen-v1.20.8`) | `numgen-v1.21` |
 | OFN | `RTG_ONTOLOGICAL_FOUNDATIONS.md` | v0.12 | `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa` | OWNER: release record `records/ofn/OFN_v0_12_RELEASE_RECORD.md`; co-owner reviews (PR #126 reviews #5711097535, #5711501720); predecessor v0.11 `38a2f444…e9e4` (`ofn-v0.11`) | `ofn-v0.12` (merge commit `2b2573f5…ec66`) |
 | UVM (OPEN-M) | `RTG_OPEN_M_DSN.md` | v0.7.1 | `0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e` | XREF: RER v0.2 §7 | `uvm-v0.7.1` |
 | RRF | `RTG_RRF_REPRESENTATION_REGISTRY.md` | v0.8.4 | `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce` | XREF: RER v0.2 §7 (byte-verified, Phase A r19) | `rrf-v0.8.4` |
 | DZT | `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md` | v0.8 | `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2` | PI | `dzt-v0.8` |
-| AZ | `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | v0.6 | `dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a` | PI | `az-v0.6` |
+| AZ | `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | v0.7 | `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` | OWNER: release record `records/az/AZ_v0_7_RELEASE_RECORD.md`; change-focused review and readback (PR #208, reviews `5854287756`, `5854348724`); predecessor v0.6 `dec78a47…0b8a` (`az-v0.6`) | `az-v0.7` |
 | Legacy | `RTG_L0_L1_L2_BRIDGE_LEGACY_DSN.md` | v0.7 | `3b707c90eb5e048717513c6ba161b738d0d1d4cd341eb0a125fb15779afd7e13` | PI | `legacy-v0.7` |
 | Pre-Legacy | `RTG_PRE_LEGACY_DSN.md` | v0.8 | `22ecf37869cd1192b7fc3a13efe364d6cc2644928f4ecf5afe38e0ad8b95a446` | PI | `prelegacy-v0.8` |
 
@@ -36,6 +36,13 @@ The table lists the **governing adopted editions**. Predecessor: Methodology v1.
 | RER | `RTG_RELATIONAL_EMERGENCE_REGISTRY.md` | v0.2 ADOPTED (noncanonical) | `58feee5ff1f16a37fc4ee029f24499928ea7439731de0a090d8794c1cbe57ad0` | PI | `rer-v0.2` |
 | ER-2B | `RTG_ER2B_CONSOLIDATED_STUDY.md` | v0.3 | `80669c69ada042230c36883f5f1de7a0738e637793a4d1cf4b590990da57a134` | PI | `er2b-v0.3` |
 | FMS | `FMS_MODEL_SELECTION_LEDGER.md` | v0.6.4 (session) | `d6313b707464da7ae016662e32fc366981cae9cc5335033129acfcce515d3984` | PI | `fms-v0.6.4` |
+
+## Derived maps (`atlas/`) — noncanonical
+
+| Study | File | Version | SHA-256 | Verification | Tag |
+|---|---|---|---|---|---|
+| ATLAS | `RTG_STATE_ATLAS.md` | v0.11 (noncanonical; owner DSNs govern on conflict) | `8d7a43f05a42c6a69b50eb97b98dd96ddda7eea327333ae5cc73e03dee46f358` | ATLAS OWNER: acceptance record `records/atlas/RTG_STATE_ATLAS_v0.11_RELEASE_RECORD.md` (PI accepted 10 Nov 2026); post-tag `records/atlas/RTG_STATE_ATLAS_v0.11_TAG_VERIFICATION.md` | `atlas-v0.11` |
+| ATLAS Method | `RTG_STATE_ATLAS_METHOD.md` | v0.2 | `fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04` | ATLAS OWNER: unchanged since `atlas-v0.2` | `atlas-v0.2` |
 
 ## Not yet in the repository
 

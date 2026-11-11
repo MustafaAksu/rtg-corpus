@@ -4,7 +4,9 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| 2026-10-26 | GEN | finding | open | Programme v1.3 §8.2 cross-stream κ table (11 rows); GEN v2.9 §6.8 κ_f; OFN v0.10 §11.4 and RRF v0.8.4 §6.2a (γ≡κ parameter convention); records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_POST_RELEASE_NOTE.md (E-P13-1) | — | `20261026-GEN-kappa-table-kappa-f-row-and-e-p13-1.md` |
-| 2026-10-30 | OFN | notice | open | OFN v0.11 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9); Programme v1.3 lists OFN v0.10 | — | `20261030-OFN-v0-11-adopted.md` |
-| 2026-10-30 | OFN | notice | open | OFN v0.12 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9) | — | `20261030-OFN-v0-12-adopted.md` |
-| 2026-11-03 | TRIAD | notice | open | Triadic v1.7 adopted; interface register IF07 (TRIAD → GEN) and IF11 (TRIAD → UVM) pin v1.6; CN-05 Programme/OFN note (§7.4) | — | `20261103-TRIAD-v1-7-adopted.md` |
+| 2026-10-26 | GEN | finding | closed | Programme v1.3 §8.2 cross-stream κ table (11 rows); GEN v2.9 §6.8 κ_f; OFN v0.10 §11.4 and RRF v0.8.4 §6.2a (γ≡κ parameter convention); records/programme/RTG_PROGRAMME_OVERVIEW_v1_3_POST_RELEASE_NOTE.md (E-P13-1) | — | `20261026-GEN-kappa-table-kappa-f-row-and-e-p13-1.md` |
+| 2026-10-30 | OFN | notice | closed | OFN v0.11 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9); Programme v1.3 lists OFN v0.10 | — | `20261030-OFN-v0-11-adopted.md` |
+| 2026-10-30 | OFN | notice | closed | OFN v0.12 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9) | — | `20261030-OFN-v0-12-adopted.md` |
+| 2026-11-03 | TRIAD | notice | closed | Triadic v1.7 adopted; interface register IF07 (TRIAD → GEN) and IF11 (TRIAD → UVM) pin v1.6; CN-05 Programme/OFN note (§7.4) | — | `20261103-TRIAD-v1-7-adopted.md` |
+| 2026-11-09 | SAT | request | open | interface between rtg-corpus and the satellite repository MustafaAksu/rtg-sat (pointer file; pipe keys for satellite items; re-pin notices) | — | `20261109-SAT-satellite-interface.md` |
+| 2026-11-11 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ; §7.2 IF20 and IF21 pins; §9.2 maintenance row; §8 SG-PROG-1/2/4 as cited by AZ §3 | — | `20261111-AZ-v0-7-adopted.md` |
