@@ -1,13 +1,13 @@
 # Arithmetic Resonance and Zeta (AZ) v0.7 — Release Record
 
-**Status:** CANDIDATE — not adopted. Review and the PI's adoption decision are pending (§12, §13). Until an annotated tag `az-v0.7` exists, `az-v0.6` remains the governing edition.
-**Date:** 10 November 2026; revised 11 November 2026 after the change-focused review (§1).
+**Status:** ADOPTED by the PI, 11 November 2026 (§13). Merge and the annotated tag `az-v0.7` follow this record (§12); until that tag exists, `az-v0.6` remains the governing edition.
+**Date:** 10 November 2026; revised 11 November 2026 after the change-focused review (§1); adoption entered and record frozen 11 November 2026.
 **Prepared by:** Claude, AZ co-owner session (branch `claude/az-v0.7`).
 **Edition:** v0.7, corrections only, one stage, under DSN Methodology v1.2 as declared (PI decision of 10 Nov 2026; the Methodology v1.4 migration and any layout work are a separate edition).
 **Predecessor:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6`, tag `az-v0.6`, SHA-256 `dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a`. It has no release record (`BASELINE.md`: verification "PI").
 **LIT dependencies:** none.
 
-Fields marked *(to be filled)* depend on steps that have not happened yet. This record invents no hash, approval or review identifier; every hash below was computed on the branch files.
+This record is frozen at adoption. Steps that come after it (merge, tag, notices, tag verification) are named in §12 as pending at adoption; their identities are carried by the merge commit, the tag and the pipe items, not by a later edit here. This record invents no hash, approval or review identifier; every hash below was computed on the branch files.
 
 ## 1. Authorization and reviews
 
@@ -17,9 +17,9 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Triage | `records/az/AZ_REACTIVATION_TRIAGE.md` (PR #207, head `23e6d4d`): 34 rows, two inbox items, five Atlas findings; list (i) / list (ii) | merged by the PI, 11 Nov 2026, merge commit `f5e548e` |
 | Co-owner review of the triage | ChatGPT co-owner session, PR #207 reviews `5848171706` (accept with minor corrections) and `5848352191` (accepted) | done |
 | PI decisions on the six triage questions | PI, 10 Nov 2026, 22:52 +03:00, project conversation: "6 konuda da co-owner tavsiyelerini kabul ediyorum" (triage §7) | given: list (i) is the scope; Methodology v1.2 stays declared; corrected Thread A list with a pointer; SG-PROG by pointer; the §9 provenance claim is replaced; Claude drafts, ChatGPT reviews |
-| Change-focused review of this edition | ChatGPT co-owner session, PR #208 review `5854287756` on `fcd1c3d` (candidate `c1cb4140…a39f`): accepted with two minor corrections. It reconstructed the 59 edits against the tagged v0.6 text and recomputed five hashes; gate and control outputs were inspected, not rerun. R1 (size figures of this record) and R2 (three TDR-G definitions cited under one RID) are applied in this revision. | done; readback of the changed lines *(to be filled)* |
-| Adoption | PI | *(to be filled)* |
-| Merge commit, tag `az-v0.7` | PI | *(to be filled)* |
+| Change-focused review of this edition | ChatGPT co-owner session, PR #208 review `5854287756` on `fcd1c3d` (candidate `c1cb4140…a39f`): accepted with two minor corrections. It reconstructed the 59 edits against the tagged v0.6 text and recomputed five hashes; gate and control outputs were inspected, not rerun. R1 (size figures of this record) and R2 (three TDR-G definitions cited under one RID) are applied in this revision. | done. Readback `5854348724` on `9bb9d33` (candidate `2294d2a3…fc94`): accepted, R1 and R2 closed, no further corrections; it re-applied the 59 edits and matched the candidate, builder, edit-log and check-output hashes |
+| Adoption | PI, 11 Nov 2026, 08:52 +03:00, project conversation | given (§13) |
+| Merge commit, tag `az-v0.7` | PI | pending at adoption |
 
 ## 2. Identities
 
@@ -167,17 +167,23 @@ Net change: +9,648 bytes (+13.1 %), measured on the candidate bytes of §2. The 
 
 | # | Step | Who | State |
 |---|---|---|---|
-| 1 | Change-focused review of this branch: every edit against its triage row and the owner text | ChatGPT co-owner | review `5854287756` done; R1 and R2 applied; readback of the changed lines *(to be filled)* |
-| 2 | Adoption decision entered here (§13) | PI | *(to be filled)* |
-| 3 | Adoption commit on this branch: status line of this record, §13, and the `BASELINE.md` AZ row (v0.7, the adopted hash, this record, tag `az-v0.7`) | AZ co-owner | *(to be filled)* |
-| 4 | Merge commits (not squash): the triage PR #207 first, then this PR | PI | #207 merged (`f5e548e`); this PR *(to be filled)* |
-| 5 | Annotated tag `az-v0.7` on the merge commit of this PR, with the adopted hash in the tag message | PI | *(to be filled)* |
-| 6 | Notices of §9; close both `pipes/AZ/` items; lane update in the orientation note | AZ co-owner, after the tag | *(to be filled)* |
-| 7 | Tag verification and Atlas refresh | atlas owner | *(to be filled)* |
+| 1 | Change-focused review of this branch: every edit against its triage row and the owner text | ChatGPT co-owner | done: review `5854287756`, R1 and R2 applied, readback `5854348724` accepted |
+| 2 | Adoption decision entered here (§13) | PI | done, 11 Nov 2026 |
+| 3 | Adoption commit on this branch: status line of this record, §13, and the `BASELINE.md` AZ row (v0.7, the adopted hash, this record, tag `az-v0.7`) | AZ co-owner | done with this commit |
+| 4 | Merge commits (not squash): the triage PR #207 first, then this PR | PI | #207 merged (`f5e548e`); this PR pending at adoption |
+| 5 | Annotated tag `az-v0.7` on the merge commit of this PR, with the adopted hash in the tag message | PI | pending at adoption |
+| 6 | Notices of §9; close both `pipes/AZ/` items; lane update in the orientation note | AZ co-owner, after the tag | pending at adoption |
+| 7 | Tag verification and Atlas refresh | atlas owner | pending at adoption |
 
 ## 13. Adoption decision
 
-*(to be filled — PI.)* No publication transform is planned: the candidate carries no DRAFT marker, so the adopted object would be the candidate bytes of §2 as they stand after review.
+**Decision (PI, 11 November 2026, 08:52 +03:00, project conversation, verbatim):** "AZ v0.7 benimsiyorum" ("I adopt AZ v0.7"). It answers the question put to the PI in that conversation, which named the bytes: `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md`, SHA-256 `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` (83,281 bytes, 600 lines).
+
+- **Adopted object:** `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md`, SHA-256 `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` — the candidate of §2, byte for byte. No publication transform is applied (the candidate carries no DRAFT marker; Methodology v1.2 as declared).
+- **Basis:** the triage (PR #207, merged `f5e548e`) and the PI's six scope decisions of 10 Nov 2026; the ChatGPT change-focused review `5854287756` with R1 and R2 applied; its readback `5854348724`, accepted with no further corrections; gates 7/7 and negative controls 4/4 on the adopted bytes.
+- **What the adoption covers:** the corrections of §3 only. No new scientific claim is adopted and no AZ-owned result is regraded. The reviewer's independent degree-2 $q=3$ check (§6) is not adopted.
+- **`BASELINE.md`** names v0.7 with this hash in the same commit, before the tag; adoption precedes merge, and the atlas owner verifies the row after the tag.
+- **Not yet done at adoption:** the merge commit of PR #208 and the annotated tag `az-v0.7` (PI); the notices of §9, closing the two `pipes/AZ/` items and the lane update (AZ co-owner, after the tag); tag verification (atlas owner).
 
 ## 14. Open items carried forward
 
