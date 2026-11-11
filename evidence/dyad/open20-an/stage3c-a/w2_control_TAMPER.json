@@ -1,0 +1,298 @@
+{
+ "all_pass": false,
+ "control": "TAMPER",
+ "gates": {
+  "ACC_relative_radius_below_10_percent": true,
+  "C0_leading_coefficients": true,
+  "G0_stage2_input": true,
+  "M_circle_bounds_and_tails": true,
+  "SND_independent_values_inside_enclosures": false,
+  "S_structural_zeros_consistent": true
+ },
+ "info": {
+  "M": {
+   "D": 360,
+   "X": 1.1,
+   "arcs": 16000,
+   "cauchy_constants": {
+    "ET44": 0.70522,
+    "G0": 1.6338,
+    "M3": 1234.5,
+    "Q4": 2.1095
+   },
+   "sup_on_circle": {
+    "W0": 0.53304,
+    "W1": 2.3843,
+    "Z0": 1.2921,
+    "Z1": 3.0886,
+    "dphiZ_Z1": 1984.6,
+    "phiZ": 46.198
+   },
+   "tails_at_1p02": {
+    "ET44": 1.41e-11,
+    "G0": 3.26e-11,
+    "M3": 2.46e-08,
+    "Q4": 4.21e-11
+   }
+  },
+  "S": {
+   "S1_Z0_minus_x": true,
+   "S2_Z1": true,
+   "S3_bracket": true,
+   "S4_defect": true,
+   "max_radius_of_vanishing_coefficients": 1.320882013035527e-272
+  },
+  "discs": [
+   {
+    "abs_x": "1.0",
+    "misses": [],
+    "relative_radius": "0.02",
+    "relrad_dtau": 0.608,
+    "relrad_dxdd": 0.321,
+    "relrad_g": 0.169,
+    "relrad_mu0_minus_1": 0.389
+   },
+   {
+    "abs_x": "1.0",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_dtau": 0.125,
+    "relrad_dxdd": 0.0758,
+    "relrad_g": 0.0409,
+    "relrad_mu0_minus_1": 0.0852
+   },
+   {
+    "abs_x": "1.0",
+    "misses": [
+     "g",
+     "dtau",
+     "mu0",
+     "E",
+     "g",
+     "dtau",
+     "mu0",
+     "E",
+     "g",
+     "dtau",
+     "mu0",
+     "E",
+     "g",
+     "dtau",
+     "mu0",
+     "E",
+     "g",
+     "dtau",
+     "mu0",
+     "E"
+    ],
+    "relative_radius": "0.000001",
+    "relrad_dtau": 2.37e-05,
+    "relrad_dxdd": 1.49e-05,
+    "relrad_g": 8.09e-06,
+    "relrad_mu0_minus_1": 1.64e-05
+   },
+   {
+    "abs_x": "0.87",
+    "misses": [],
+    "relative_radius": "0.02",
+    "relrad_dtau": 0.294,
+    "relrad_dxdd": 0.304,
+    "relrad_g": 0.172,
+    "relrad_mu0_minus_1": 0.306
+   },
+   {
+    "abs_x": "0.87",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_dtau": 0.0653,
+    "relrad_dxdd": 0.0721,
+    "relrad_g": 0.0417,
+    "relrad_mu0_minus_1": 0.0704
+   },
+   {
+    "abs_x": "0.87",
+    "misses": [
+     "g",
+     "dtau",
+     "mu0",
+     "g",
+     "dtau",
+     "mu0",
+     "g",
+     "dtau",
+     "mu0",
+     "g",
+     "dtau",
+     "mu0",
+     "g",
+     "dtau",
+     "mu0"
+    ],
+    "relative_radius": "0.000001",
+    "relrad_dtau": 1.26e-05,
+    "relrad_dxdd": 1.42e-05,
+    "relrad_g": 8.25e-06,
+    "relrad_mu0_minus_1": 1.37e-05
+   },
+   {
+    "abs_x": "0.65",
+    "misses": [],
+    "relative_radius": "0.02",
+    "relrad_dtau": 0.0901,
+    "relrad_dxdd": 0.291,
+    "relrad_g": 0.176,
+    "relrad_mu0_minus_1": 0.234
+   },
+   {
+    "abs_x": "0.65",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_dtau": 0.0214,
+    "relrad_dxdd": 0.0694,
+    "relrad_g": 0.0426,
+    "relrad_mu0_minus_1": 0.0558
+   },
+   {
+    "abs_x": "0.65",
+    "misses": [
+     "g",
+     "dtau",
+     "mu0",
+     "g",
+     "dtau",
+     "mu0",
+     "g",
+     "dtau",
+     "mu0",
+     "g",
+     "dtau",
+     "mu0",
+     "g",
+     "dtau",
+     "mu0"
+    ],
+    "relative_radius": "0.000001",
+    "relrad_dtau": 4.2e-06,
+    "relrad_dxdd": 1.36e-05,
+    "relrad_g": 8.44e-06,
+    "relrad_mu0_minus_1": 1.1e-05
+   },
+   {
+    "abs_x": "0.4",
+    "misses": [],
+    "relative_radius": "0.02",
+    "relrad_dtau": 0.0232,
+    "relrad_dxdd": 0.283,
+    "relrad_g": 0.177,
+    "relrad_mu0_minus_1": 0.199
+   },
+   {
+    "abs_x": "0.4",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_dtau": 0.00568,
+    "relrad_dxdd": 0.0674,
+    "relrad_g": 0.0431,
+    "relrad_mu0_minus_1": 0.0483
+   },
+   {
+    "abs_x": "0.4",
+    "misses": [
+     "dtau",
+     "dtau",
+     "dtau",
+     "dtau",
+     "dtau"
+    ],
+    "relative_radius": "0.000001",
+    "relrad_dtau": 1.13e-06,
+    "relrad_dxdd": 1.33e-05,
+    "relrad_g": 8.54e-06,
+    "relrad_mu0_minus_1": 9.55e-06
+   },
+   {
+    "abs_x": "0.2",
+    "misses": [],
+    "relative_radius": "0.02",
+    "relrad_dtau": 0.00664,
+    "relrad_dxdd": 0.276,
+    "relrad_g": 0.178,
+    "relrad_mu0_minus_1": 0.187
+   },
+   {
+    "abs_x": "0.2",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_dtau": 0.00165,
+    "relrad_dxdd": 0.0658,
+    "relrad_g": 0.0433,
+    "relrad_mu0_minus_1": 0.0456
+   },
+   {
+    "abs_x": "0.2",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_dtau": 3.29e-07,
+    "relrad_dxdd": 1.3e-05,
+    "relrad_g": 8.58e-06,
+    "relrad_mu0_minus_1": 9.04e-06
+   },
+   {
+    "abs_x": "0.05",
+    "misses": [],
+    "relative_radius": "0.02",
+    "relrad_dtau": 0.0013,
+    "relrad_dxdd": 0.27,
+    "relrad_g": 0.178,
+    "relrad_mu0_minus_1": 0.183
+   },
+   {
+    "abs_x": "0.05",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_dtau": 0.000325,
+    "relrad_dxdd": 0.0645,
+    "relrad_g": 0.0433,
+    "relrad_mu0_minus_1": 0.0445
+   },
+   {
+    "abs_x": "0.05",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_dtau": 6.5e-08,
+    "relrad_dxdd": 1.27e-05,
+    "relrad_g": 8.6e-06,
+    "relrad_mu0_minus_1": 8.83e-06
+   },
+   {
+    "abs_x": "0.01",
+    "misses": [],
+    "relative_radius": "0.02",
+    "relrad_dtau": 0.000253,
+    "relrad_dxdd": 0.269,
+    "relrad_g": 0.178,
+    "relrad_mu0_minus_1": 0.182
+   },
+   {
+    "abs_x": "0.01",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_dtau": 6.33e-05,
+    "relrad_dxdd": 0.0642,
+    "relrad_g": 0.0433,
+    "relrad_mu0_minus_1": 0.0443
+   },
+   {
+    "abs_x": "0.01",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_dtau": 1.27e-08,
+    "relrad_dxdd": 1.26e-05,
+    "relrad_g": 8.6e-06,
+    "relrad_mu0_minus_1": 8.79e-06
+   }
+  ]
+ },
+ "script": "dyad_open20_an_stage3c_w2_check.py",
+ "status": "stage 3c-a development run; not a certificate"
+}
