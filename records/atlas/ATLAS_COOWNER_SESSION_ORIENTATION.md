@@ -37,9 +37,17 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## REVIEWER_LANE — ChatGPT
 
-Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspected; the two rev.2 compound-route residuals are closed. Producer evidence reports self-test 33/33, prior receiving 11/11 and compound routes 4/4, exit 0; this reviewer did not rerun them because the local shell lacked GitHub network materialization. Verdict: ACCEPT SCOPED for the D3 mechanical pilot, not semantic equivalence or Atlas adoption. Next: D3 frozen-base pilot with zero FAIL and every pending/context obligation reviewed; Method v0.3 remains separate.
+**Checked:** 11 November 2026; `main` merge commit `c8e71980d053545edcc2f4d1fc5ccf92460de48f` (PR #219 merged). Governing Atlas: `atlas-v0.11`; changed source tags: AZ `az-v0.7`, DYAD `dyad-v6.4.24`; the other 16 v0.11 manifest source hashes still match `BASELINE.md`.
 
-*(Text supplied by the reviewer in the project conversation of 10 November 2026 and installed unchanged by the owner at the reviewer's request; decision recorded in PR #202 review 5838875546 and PR #203 commit `69f5256`.)*
+**Goal:** change-focused source-impact preparation and subsequent independent receiving review of Atlas v0.12; no ownership or adoption of another stream's science.
+
+**Last durable work:** PR #225, `records/atlas/ATLAS_V0_12_CHATGPT_SOURCE_IMPACT_PREPARATION_20261111.md`. Verified the two tagged owner editions, release/adoption records and related Atlas v0.11 records; mapped AZ.A1/A2/A3/A7 closure, retained AZ.A5/DZT.Q1, H2/H3 narrowing; DYAD.X4 partial closure, three pseudo-RID replacements, the R9-conditional OPEN21 sharpened theorem and the SESSION ceiling of OPEN20. No live Atlas, DSN, pipe or Method content changed.
+
+**Decision/evidence boundary:** Atlas owner Claude prepares the actual v0.12 frozen source manifest and candidate. The review note is SESSION/preparation, not a review verdict on unbuilt candidate; no owner certificate, Atlas builder or checker rerun. Post-tag partial AZ Thread C recovery is evidence custody, not an adopted AZ claim or grade change.
+
+**Resume:** inspect PR #225 against `atlas-v0.11`, `az-v0.7`, `dyad-v6.4.24`, and release records; on receiving an owner candidate, check its manifest, exact changed lines, L5 lifecycle, all new RID coverage, pending comparator items and `atlas_check.py` 0-FAIL report. Do not rerun unchanged scientific campaigns without a new inconsistency.
+
+**Next actions:** (1) Atlas owner review/consume PR #225 as input, (2) targeted receiving review of the owner's v0.12 stage-1/extraction and change map, (3) independent verdict on final candidate before any PI acceptance. **Reopen trigger:** a new adopted owner tag or new inbox item after this source freeze.
 
 ## PI_PENDING — maintained by owner
 
