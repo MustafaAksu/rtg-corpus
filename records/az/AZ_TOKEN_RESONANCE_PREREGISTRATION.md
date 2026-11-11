@@ -1,6 +1,6 @@
 # AZ Action 1 — Token Resonance and Basin Selection: preregistration and test package
 
-**[SESSION] NONCANONICAL. Draft r2 (amended before any confirmatory data, in answer to the independent review `5855522171`; amendment log in §12); nothing here is adopted.** Prepared by the AZ co-owner (Claude) on 11 November 2026 on the PI's message of that day (10:00 +03:00), which relayed the task "Proceed with AZ Action 1 — Token Resonance and Basin Selection, as selected by the PI" together with the co-owner review (ChatGPT) of the BOOTSTRAP 4 advisory. Branch `claude/az-token-resonance-prereg`. It edits no DSN, closes no pipe item, claims no TDR-G result and authorises no campaign: the PI decides on the confirmatory run after the independent review.
+**[SESSION] NONCANONICAL. Draft r2 (amended before any confirmatory data, in answer to the independent review `5855522171`; accepted, scoped, by the readback `5857601141`; log in §12); nothing here is adopted and no campaign is authorised by a review.** Prepared by the AZ co-owner (Claude) on 11 November 2026 on the PI's message of that day (10:00 +03:00), which relayed the task "Proceed with AZ Action 1 — Token Resonance and Basin Selection, as selected by the PI" together with the co-owner review (ChatGPT) of the BOOTSTRAP 4 advisory. Branch `claude/az-token-resonance-prereg`. It edits no DSN, closes no pipe item, claims no TDR-G result and authorises no campaign: the PI decides on the confirmatory run after the independent review.
 
 Governing sources: AZ `az-v0.7` (file SHA-256 `2294d2a3…fc94`), TDR-G `tdrg-v2.12.14` (file SHA-256 `3be72923…2392`, §§6.1–6.3, §6.5, §6.12, SG-11–SG-14). Every statement about TDR-G dynamics below is a proposal to the TDR-G owner; `TDRG-OPEN-SPECCONS-STAR` and `TDRG-OPEN-LOCKING-FAIL` (TDR-26) stay open and stay TDR-G's (SG-AZ-6).
 
@@ -179,7 +179,7 @@ Executed on 11 Nov 2026 (Linux container, Python 3.13.18), outputs in `evidence/
 
 One instrument defect was found from the first smoke output and fixed before registration (r1): the plain Wald interval has zero width when there is no discordant pair; it was replaced by the Agresti–Min interval. The test-campaign files contain outcome data of 288 runs with other seeds than the registered ones; they were seen. The 156 records at C1 settings are identical, in every dynamical field, to the smoke records of draft r1 (checked field by field before the r1 files were removed): the amended runner changes bookkeeping only. No hypothesis, endpoint, arm, seed, sample size, `δ*`, test or interval of PC1–PC4 was changed after seeing any of these outputs; the changes of draft r2 are listed in §12.
 
-**Not executed:** any run with tag `AZ-TOKRES-S1`; any run at `N ≥ 240`; any TDR-26-scope run; the reconstruction of r43/r31; anything on Windows (fixtures, driver, the PowerShell lines of §8).
+**Not executed:** any run with tag `AZ-TOKRES-S1`; any run at `N ≥ 240`; any TDR-26-scope run; the reconstruction of r43/r31; anything on the PI's Ubuntu server or on Windows (fixtures, driver, the command blocks of §8).
 
 Earlier machine checks of Proposition 1 that are part of the frozen pilot, not of this package: 3,000 runs, five policies, both orientation bindings, 463,193 births, no violation (these used the weaker check: alphabet, no decrease, total).
 
@@ -201,7 +201,36 @@ python3 -I $S/az_tokres_fixtures.py --engine $E --orient $O --runner $S/az_tokre
 ```
 The test-campaign records are reproducible in every field except `secs`; the analysis output is reproducible except for the SHA-256 lines of the record files (they contain `secs`).
 
-**Stage 1 campaign (PI's Windows machine, PowerShell; only after the PI's authorisation).** One command; the driver runs the fixtures, the three cells as parallel shards and the analyses, checks every exit code and every shard, and writes `CAMPAIGN_COMPLETE.json` only if all of it succeeded. `--jobs` is the number of parallel workers.
+**Stage 1 campaign (only after the PI's authorisation).** One command; the driver runs the fixtures, the three cells as parallel shards and the analyses, checks every exit code and every shard, and writes `CAMPAIGN_COMPLETE.json` only if all of it succeeded. `--jobs` is the number of parallel workers; **it must be the same on `--resume`** (another worker count gives differently named shards and leaves obsolete files in the directory).
+
+*Venue: the PI's Ubuntu server* (PI, 11 Nov 2026, 14:02 +03:00: large computations run on the Ubuntu server). The block stops at the first failure, runs the reviewed bytes, and hands the directory over unchanged on an upload branch:
+```bash
+( set -euo pipefail
+  cd ~/rtg-corpus
+  test -z "$(git status --porcelain)" || { echo "STOP: working tree not clean"; exit 1; }
+  trap 'git checkout -q main' EXIT
+  git fetch -q origin
+  git checkout -q --detach origin/claude/az-token-resonance-prereg
+  git log --oneline -1; python3 --version; nproc
+  ( cd evidence/az/token_resonance && sha256sum -c --quiet SHA256SUMS )
+  echo "package bytes OK"
+  OUT="$HOME/az_tokres_stage1"; JOBS=4
+  python3 -I evidence/az/scripts/az_tokres_campaign.py --plan stage1 --jobs "$JOBS" --out "$OUT" --confirmatory
+  test -f "$OUT/CAMPAIGN_COMPLETE.json"
+  ( cd "$OUT" && sha256sum -c --quiet HASHES.txt )
+  echo "campaign hashes OK"
+  cat "$OUT/CAMPAIGN_COMPLETE.json"
+  git checkout -q -b upload/az-token-resonance-stage1 origin/main
+  mkdir -p upload/az-token-resonance-stage1
+  cp -r "$OUT"/. upload/az-token-resonance-stage1/
+  git add upload/az-token-resonance-stage1
+  git commit -q -m "upload: AZ token-resonance Stage 1 campaign output, unchanged"
+  git push -q -u origin upload/az-token-resonance-stage1
+  echo "UPLOADED: upload/az-token-resonance-stage1 at $(git rev-parse --short HEAD)" )
+```
+If the run is interrupted: the same block with `--resume` added to the driver line and the same `JOBS`. If the driver ends with `CAMPAIGN FAILED`, nothing is uploaded and `$HOME/az_tokres_stage1/CAMPAIGN_FAILED.txt` names the step.
+
+*Alternative venue, not planned: Windows, PowerShell.*
 ```powershell
 $ErrorActionPreference = "Stop"
 python -I evidence\az\scripts\az_tokres_campaign.py --plan stage1 --jobs 4 --out az_tokres_stage1 --confirmatory
@@ -209,7 +238,7 @@ if ($LASTEXITCODE -ne 0) { throw "AZ-TOKRES Stage 1 FAILED (exit code $LASTEXITC
 if (-not (Test-Path az_tokres_stage1\CAMPAIGN_COMPLETE.json)) { throw "AZ-TOKRES Stage 1: no completion marker" }
 Get-Content az_tokres_stage1\CAMPAIGN_COMPLETE.json
 ```
-An interrupted run is continued with the same command plus `--resume`; workers then refuse any record file of another identity or of other shard arguments. A directory without `CAMPAIGN_COMPLETE.json` is not a campaign result and is not reported as one. The directory `az_tokres_stage1` comes back unchanged on a branch `upload/az-token-resonance-stage1` and is hash-checked against its `HASHES.txt` before placement (CONVENTIONS §6). The registered analysis is then rerun from the placed files — which repeats every integrity check and both gates — by the co-owner and, independently, by the reviewer:
+On `--resume` workers refuse any record file of another identity or of other shard arguments. A directory without `CAMPAIGN_COMPLETE.json` is not a campaign result and is not reported as one. The directory arrives unchanged under `upload/az-token-resonance-stage1/` on the branch of that name and is hash-checked against its `HASHES.txt` before it is placed under `evidence/az/token_resonance/stage1/` by a follow-up commit (CONVENTIONS §6). The registered analysis is then rerun from the placed files — which repeats every integrity check and both gates — by the co-owner and, independently, by the reviewer:
 ```bash
 D=evidence/az/token_resonance/stage1    # the placed directory
 python3 -I $S/az_tokres_analyse.py --registered S1-C1 --engine $E --orient $O --runner $S/az_tokres_run.py --fixtures-log $D/fixtures_output.txt $D/S1-C1_*.jsonl --sensitivity $D/S1-C3_*.jsonl
@@ -248,7 +277,7 @@ Fields of a run record (schema `az_tokres_run_v2`). Identity: `schema`, `tag`, `
 
 | Stage | Content | Runs | Cost | State |
 |---|---|---|---|---|
-| 1 | C1, C2, C3 as registered in §5 | 19,900 | test-campaign timing here: 0.38 s (C1), 0.20 s (C2), 0.29 s (C3) per run, two workers on a two-core container: about 1.7 core-hours, i.e. roughly half an hour with four workers; to be confirmed on the PI's machine | registered; waits for the readback of draft r2 and then for the PI's authorisation |
+| 1 | C1, C2, C3 as registered in §5 | 19,900 | test-campaign timing here: 0.38 s (C1), 0.20 s (C2), 0.29 s (C3) per run, two workers on a two-core container: about 1.7 core-hours, i.e. roughly half an hour with four workers; to be confirmed on the PI's machine | registered; accepted for submission to the PI by the readback `5857601141`; waits for the PI's authorisation; venue: the PI's Ubuntu server |
 | 2 | `N ∈ {240, 242, 480}` at `k/N ≈ 1/15` (`k = 16, 16, 32`), same arms, 1,000 base draws per cell | 6,000 / 5,000 / 6,000, plus calibration | unknown; a timing probe of 20 base draws per cell comes first | **proposal only.** `T` and the threshold of `Y` are not known for these cells and are not frozen. Proposed: `T = 800`; threshold `⌈2.5 × median M⌉` of 500 native runs with a separate tag (exposure-blind; at `N = 120` this gives 103 against the registered 100). To be fixed by an amendment after Stage 1 is reviewed. |
 | 3 | TDR-26 in its own scope: `N = 720`, `k = 48` and `N = 722`, `k = 48`, `T = 5000`, arms O1R, O1D (and O2R, O2D at 720), birth-anchored rule as the endpoint, 200 base draws per cell | 800 + 400 | unknown, large; timing probe first | **proposal only; needs the TDR-G owner** (engine profile, node cap, rule thresholds, relation to TDR-G's own campaign specification of batch ≥ 500) |
 | — | r43 (`N = 720`) and r31 (`N = 722`): do their initial tokens contain a `4x ≡ 0` value? | 0 new runs | negligible | **not executable now.** The v17 `N = 720/722` files are held outside the repository and their command line and master seed are not recorded in TDR-G §8. If the PI supplies the exact command (engine, `--seed`, grid arguments, batch), the run seeds follow from the engine's `monte_carlo` and the initial tokens from `init_universe`, without running the dynamics. Under independence the chance that both runs contain such a token is about `0.022 × 0.011 ≈ 2.4·10⁻⁴`. |
@@ -286,6 +315,13 @@ Proposed text for `pipes/TDRG/` — **not filed in this PR**:
 
 Unchanged from r1: hypotheses H1–H3, the endpoint, the arms and their randomisation, the seed derivation and the registered tag, cells and sample sizes, `δ* = 0.05`, the McNemar test and the Agresti–Min interval of PC1–PC4, the pilot and its provenance.
 
-**Requested now:** a readback of the changed parts by the independent reviewer — §6.5 with `az_tokres_analyse.py` (`validate`, `check_record`, `check_fixtures_log`, the gate and qualifier logic), `az_tokres_run.py` (`read_existing`, manifest, `law_check_tick`), `az_tokres_campaign.py`, the negative-control list, §§6.1–6.2 and §6.6 — and, if possible, a rerun of the reviewer block of §8.
+**Readback of draft r2** (`f7fdfac`): GitHub review `5857601141`, 11 Nov 2026 — *accepted (scoped); no remaining Stage-1-blocking finding; PI authorisation still required*. R1–R4 closed. The reviewer recomputed 11 SHA-256 values and compared the 156 test records at C1 settings with the r1 smoke records (19 dynamical fields, all equal); the negative controls, fixtures and test campaign were read from the stored outputs, not rerun by the reviewer. Two non-blocking notes, with their disposition:
 
-Decision points: this PR → readback → PI decision on Stage 1. No merge, tag or adoption is implied by the PR.
+| Note | Disposition |
+|---|---|
+| N1. `superiority()` words its reading "Holm p < 0.05" also when it is called for PC3, whose adjusted `p` is the Bonferroni one printed on the line above. The number and the decision are right; the word is wrong. | **Erratum, declared before data:** in the output of cell C2 the PC3 reading "SUPPORTED (Holm p < 0.05 …)" is to be read "SUPPORTED (Bonferroni-adjusted p < 0.05 …)". The Stage 1 report will carry this erratum next to the verbatim output. The analysis script is **not** changed before Stage 1, so that the bytes the reviewer accepted (`az_tokres_analyse.py`, §9) are the bytes that run and that are named in every stored output. |
+| N2. Keep `--jobs` constant on `--resume`. | Stated in §8; the server block fixes `JOBS=4`. |
+
+**After r2, documentation only (no script, fixture, golden or pilot byte changed; `SHA256SUMS` unchanged):** this readback record; the venue of Stage 1 moved from the PI's Windows machine to the PI's Ubuntu server on the PI's instruction of 11 Nov 2026, 14:02 +03:00, with the bash block of §8.
+
+Decision points: PI decision on Stage 1 (the reviews do not authorise it) → run on the server → upload branch → hash check and placement → registered analysis rerun by both co-owners. No merge, tag or adoption is implied by the PR.
