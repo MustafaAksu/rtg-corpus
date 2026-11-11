@@ -1,0 +1,145 @@
+{
+ "all_pass": true,
+ "base_sha256": "9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb",
+ "candidate_sha256": "7f22ea3511d24170036dc2ec318d630f1d95d7e007deec3ad82ec7623a882327",
+ "gates": {
+  "C0": true,
+  "C1": true,
+  "C10": true,
+  "C11": true,
+  "C2": true,
+  "C3": true,
+  "C4": true,
+  "C5": true,
+  "C6": true,
+  "C7": true,
+  "C8": true,
+  "C9": true
+ },
+ "info": {
+  "C10": {
+   "az_strings": 16,
+   "not_owner_rid": [
+    "DYAD-ALG-Q3-CANCEL",
+    "DYAD-OPEN-B5-ALLP"
+   ]
+  },
+  "C11": {
+   "AZ": true,
+   "GEN": true,
+   "Programme": true,
+   "RECOG": true,
+   "TRIAD": true
+  },
+  "C2": {
+   "appendix_a_kept": true,
+   "edits": 34,
+   "reverse_equals_base": true,
+   "reverse_failures": []
+  },
+  "C3": {
+   "dyad_strings_added": [
+    "DYAD-ALG-HOMOLOGICAL-RESONANCE",
+    "DYAD-ALG-NOT-AREA-PRESERVING",
+    "DYAD-ALG-P6-LINEAR-ORDER",
+    "DYAD-ART-BRIDGE-NOTE-CHECK",
+    "DYAD-ART-OPEN20-AN-PILOT",
+    "DYAD-ART-OPEN21-SHARP-ROWS",
+    "DYAD-THM-OPEN21-SHARP-ROWS"
+   ],
+   "grade_net_change": {
+    "`[ALG]`": 4,
+    "`[DEF]`": 1,
+    "`[NUM]`": 3,
+    "`[SESSION]`": 2,
+    "`[THM]`": 2
+   },
+   "grades_removed_per_edit": {
+    "X4-1": {
+     "`[THM]`": 1
+    },
+    "X4-2": {
+     "`[THM]`": 1
+    }
+   },
+   "math_added_undeclared": [],
+   "math_removed_undeclared": [],
+   "rid_tags_added": [
+    "DYAD-ALG-HOMOLOGICAL-RESONANCE",
+    "DYAD-ALG-NOT-AREA-PRESERVING",
+    "DYAD-ALG-P6-LINEAR-ORDER",
+    "DYAD-ART-BRIDGE-NOTE-CHECK",
+    "DYAD-ART-OPEN20-AN-PILOT",
+    "DYAD-ART-OPEN21-SHARP-ROWS",
+    "DYAD-THM-OPEN21-SHARP-ROWS"
+   ],
+   "rid_tags_removed": []
+  },
+  "C4": {
+   "S_A": "492/25",
+   "S_B": "6357/1000",
+   "counts_base_cand": {
+    "\\tfrac{10682368}{50625}": [
+     1,
+     1
+    ],
+    "\\tfrac{33882112}{50625}": [
+     1,
+     1
+    ],
+    "\\tfrac{3951}{1000}": [
+     1,
+     2
+    ],
+    "\\tfrac{403}{250}": [
+     8,
+     8
+    ],
+    "\\tfrac{8831}{250}": [
+     1,
+     3
+    ],
+    "\\tfrac{883}{100}": [
+     1,
+     3
+    ],
+    "\\tfrac{971}{250}": [
+     1,
+     2
+    ]
+   },
+   "stale_left": []
+  },
+  "C5": {
+   "recog_entry_identical_26_27": true
+  },
+  "C8": {
+   "evidence/dyad/bridge-note-v1-1/bridge_check.json": true,
+   "evidence/dyad/open20-an/lit-inf014-inf015/hypothesis_check.json": true,
+   "evidence/dyad/open20-an/stage1_prep.json": true,
+   "evidence/dyad/open20-an/stage2b/jump_law.json": true,
+   "evidence/dyad/open20-an/stage2b/jump_scout.json": true,
+   "evidence/dyad/open20-an/stage3-route/route_check.json": true,
+   "evidence/dyad/s1-open21-sharp/s1_cert.json": true,
+   "evidence/dyad/scripts/dyad_bridge_note_v1_1_check.py": true,
+   "evidence/dyad/scripts/dyad_open20_an_stage1_prep.py": true,
+   "evidence/dyad/scripts/dyad_open20_an_stage2_scout.py": true,
+   "evidence/dyad/scripts/dyad_open20_an_stage2b_jump_scout.py": true,
+   "evidence/dyad/scripts/dyad_open20_an_stage2b_law.py": true,
+   "evidence/dyad/scripts/dyad_open20_an_stage3_apriori_route_check.py": true,
+   "evidence/dyad/scripts/dyad_open20_lit_inf014_inf015_hypothesis_check.py": true,
+   "evidence/dyad/scripts/dyad_s1_open21_sharp_rows_cert.py": true,
+   "upload/dyad-bridge-note/dyad_triad_antisymmetric_bridge_v1_1.md": true
+  },
+  "C9": {
+   "P_prime_identity": true,
+   "X_bound": "1.7596397e-6",
+   "X_bound_ok": true,
+   "detDT": true,
+   "lambda_order_6": true,
+   "resonance_condition": true,
+   "stage2b_figures": true,
+   "stage2b_slopes": true
+  }
+ }
+}
