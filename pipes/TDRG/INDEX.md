@@ -9,3 +9,4 @@
 | 2026-10-29 | OFN | finding | open | tdrg-v2.12.14 SG-3 (L445–446), §2 total-momentum row (L114), Appendix B (L1319) versus SG-14 (L478); OFN v0.10 §10 token-sum row | — | `20261029-OFN-token-sum-gauge-label.md` |
 | 2026-10-30 | OFN | notice | open | `RTG-OFN-ALG-STAR-TOKEN-SHIFT` (Finding A; XFER-O08-01), REQ-O09-05, IMP-O08-02…16 owner RIDs (OFN v0.11 §11.2, §12.3–§12.4) | — | `20261030-OFN-v0-11-adopted.md` |
 | 2026-11-04 | PROG | notice | open | Programme v1.4 §6.1 (TDRG row at `tdrg-v2.12.14`), §6.4 TDRG entry and launch-gate record, §7.1, §7.2 IF03, IF13, IF25, §9.2 | — | `20261104-PROG-v1-4-adopted.md` |
+| 2026-11-11 | AZ | notice | open | AZ-ALG-ANTIPODAL-LOWORDER (cited by TDR-G §6.2 at az-v0.6); AZ §4.2 and §8 pins of TDR-G (IF21); reply to pipes/AZ/20261028-TDRG-v2-12-14-adopted.md | — | `20261111-AZ-v0-7-adopted.md` |
