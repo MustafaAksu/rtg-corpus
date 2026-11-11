@@ -1,0 +1,19 @@
+tail runs: 8  bulk: 244
+top-class share  tail: min/median/max = 0.981 / 0.987 / 0.990
+top-class share  bulk: q05/median/q95/max = 0.343 / 0.514 / 0.793 / 0.948
+classifier 'share>=0.9': tail TP=8/8  bulk FP=2/244
+tail runs: dominant class a*, share, |2a*|_c, gcd(2a*,N), tau(a*), seeds |d0|_c, M, fb
+  a*=  0 share=0.990 |2a|=  0 gcd=120 tau= 1 seeds=[0, 34, 43, 54] M=300 fb=28
+  a*=  0 share=0.990 |2a|=  0 gcd=120 tau= 1 seeds=[0, 22, 34, 46] M=300 fb=117
+  a*= 30 share=0.983 |2a|= 60 gcd= 60 tau= 2 seeds=[19, 22, 30, 49] M=180 fb=221
+  a*=  0 share=0.990 |2a|=  0 gcd=120 tau= 1 seeds=[0, 15, 28, 37] M=300 fb=28
+  a*= 30 share=0.981 |2a|= 60 gcd= 60 tau= 2 seeds=[22, 22, 30, 38] M=161 fb=300
+  a*= 30 share=0.987 |2a|= 60 gcd= 60 tau= 2 seeds=[30, 34, 49, 50] M=230 fb=58
+  a*=  0 share=0.983 |2a|=  0 gcd=120 tau= 1 seeds=[0, 39, 40, 49] M=233 fb=383
+  a*= 30 share=0.986 |2a|= 60 gcd= 60 tau= 2 seeds=[2, 17, 30, 56] M=213 fb=142
+  slow(|2a|<=k)        seed baseline 0.144   tail dominant class 0.500 (n=4)
+  mid(k<|2a|<=2k+1)    seed baseline 0.122   tail dominant class 0.000 (n=0)
+  fast(|2a|>2k+1)      seed baseline 0.734   tail dominant class 0.500 (n=4)
+dominant class is a seed class in all tail runs: True
+  has slow seed: yes n=117 tail=5 (0.0427) | no n=135 tail=3 (0.0222)
+  has seed with tau<=2: yes n=153 tail=8 (0.0523) | no n=99 tail=0 (0.0000)

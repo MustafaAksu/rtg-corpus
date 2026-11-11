@@ -1,0 +1,49 @@
+analysis script SHA-256 7fc9ecd7b516cfabdae6de9ef0844eb7b53b15801e0971290685e43a806449b0
+input smoke_N122k8_P1.jsonl  SHA-256 7563ec9a33badeb7a10566129dce0efebba8ef5bbd02431ef4ce7caf3a6c625d  lines 60
+profile P1  cell N=122  base draws analysed=12  excluded=[]
+law check: runs with a token-alphabet or census violation, summed counter = 0 (registered expectation 0)
+
+[registered contrasts, paired on base draw; Agresti-Min intervals, 97.5 % two-sided; Holm over the superiority tests of the family]
+PC3  O1R vs O1D  (2x = 0)
+    n=12  p1=0.1667  p0=0.0833  RD=+0.0833 [-0.2459, +0.3888]  discordant 2/1  McNemar p=1.000e+00  Holm p=1.000e+00
+    registered reading: INCONCLUSIVE (interval contains 0.05)
+PC4  Q2R vs BASE (no order-2 token exists)
+    n=12  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.1601, +0.1601]  discordant 0/0  McNemar p=1.000e+00
+    registered reading: NOT SHOWN EQUIVALENT (interval leaves +-0.05)
+
+[secondary, nominal 95 %; no confirmatory reading]
+S2  native association in the BASE arm (alphabet class of the four native tokens):
+      NR     n=   11 tails=   0 rate=0.0000 [0.0000, 0.2588]
+      O1     n=    1 tails=   0 rate=0.0000 [0.0000, 0.7935]
+      any 4x = 0 seed versus none: 0/1 against 0/11, risk ratio 7.67 [0.22, 261.98] (Katz)
+S3a O1D vs BASE: n=12  p1=0.0833  p0=0.0000  RD=+0.0833 [-0.1230, +0.2658]  discordant 1/0  McNemar p=1.000e+00
+S3c O1R vs BASE: n=12  p1=0.1667  p0=0.0000  RD=+0.1667 [-0.0878, +0.3735]  discordant 2/0  McNemar p=5.000e-01
+S3e SHAM vs BASE on base draws whose native and sham alphabets are both non-resonant: n=10  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.1633, +0.1633]  discordant 0/0  McNemar p=1.000e+00
+S4  resonant arms by the value set (the engine is exactly invariant under delta -> delta + N/2 on all nodes):
+      O1R value    0: n=    6 rate=0.1667 [0.0301, 0.5635]
+      O1R value   61: n=    6 rate=0.1667 [0.0301, 0.5635]
+      Q2R value   30: n=    2 rate=0.0000 [0.0000, 0.6576]
+      Q2R value   31: n=    3 rate=0.0000 [0.0000, 0.5615]
+      Q2R value   91: n=    4 rate=0.0000 [0.0000, 0.4899]
+      Q2R value   92: n=    3 rate=0.0000 [0.0000, 0.5615]
+S5  pairs whose three other tokens are non-resonant (n=11):
+      O1R vs O1D: n=11  p1=0.1818  p0=0.0000  RD=+0.1818 [-0.0935, +0.4012]  discordant 2/0  McNemar p=5.000e-01
+S6  threshold sensitivity, rate of M >= c by arm:
+      c= 60  BASE 0.0000  O1R 0.2500  O1D 0.1667  Q2R 0.0000  SHAM 0.0833
+      c= 80  BASE 0.0000  O1R 0.1667  O1D 0.0833  Q2R 0.0000  SHAM 0.0833
+      c=150  BASE 0.0000  O1R 0.1667  O1D 0.0000  Q2R 0.0000  SHAM 0.0833
+      c=200  BASE 0.0000  O1R 0.1667  O1D 0.0000  Q2R 0.0000  SHAM 0.0833
+      c=300  BASE 0.0000  O1R 0.1667  O1D 0.0000  Q2R 0.0000  SHAM 0.0833
+S7  mean share of the largest signed token class at the end, by arm and outcome (Y=1 / Y=0):
+      BASE  Y=1: n=   0 mean=-   Y=0: n=   12 mean=0.501
+      O1R   Y=1: n=   2 mean=0.978   Y=0: n=   10 mean=0.626
+      O1D   Y=1: n=   1 mean=0.698   Y=0: n=   11 mean=0.625
+      Q2R   Y=1: n=   0 mean=-   Y=0: n=   12 mean=0.513
+      SHAM  Y=1: n=   1 mean=0.987   Y=0: n=   11 mean=0.556
+S8  TDR-26 birth-anchored rule (b/step >= 0.30 and ms_abs <= 0.25 over [fb, fb+200)); separate output:
+      BASE  rule- Y=0: 12
+      O1R   rule+ Y=1: 1  rule- Y=0: 10  rule- Y=1: 1
+      O1D   rule+ Y=1: 1  rule- Y=0: 11
+      Q2R   not applicable (no birth): 1  rule- Y=0: 11
+      SHAM  rule+ Y=1: 1  rule- Y=0: 11
+S10 first-birth step, median by arm (runs with a birth): BASE 58 (n=12)  O1R 116 (n=12)  O1D 86 (n=12)  Q2R 63 (n=11)  SHAM 87 (n=12)

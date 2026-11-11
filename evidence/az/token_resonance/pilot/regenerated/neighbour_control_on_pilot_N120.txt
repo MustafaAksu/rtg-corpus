@@ -1,0 +1,14 @@
+no resonant seed, some seed at distance 1 from one   n=  462 tails=  1 rate=0.0022 [0.0004,0.0122]
+no resonant seed, some seed at distance 2 from one   n=  452 tails=  0 rate=0.0000 [0.0000,0.0084]
+no resonant seed, some seed at distance 3 from one   n=  452 tails=  4 rate=0.0088 [0.0034,0.0225]
+no resonant seed, no seed within 3 of one            n=  755 tails=  6 rate=0.0079 [0.0036,0.0172]
+resonant seed present                                n=  258 tails= 61 rate=0.2364 [0.1887,0.2919]
+exactly 1 resonant seed(s)                           n=  239 tails= 48 rate=0.2008 [0.1550,0.2562]
+exactly 2 resonant seed(s)                           n=   18 tails= 12 rate=0.6667 [0.4375,0.8372]
+tails with resonant seed: 61 of 72 ; among capped (M>=300): 16 of 17
+  M>=60: resonant 0.4264  non-resonant 0.0413
+  M>=80: resonant 0.2946  non-resonant 0.0107
+  M>=100: resonant 0.2364  non-resonant 0.0059
+  M>=150: resonant 0.1899  non-resonant 0.0027
+  M>=200: resonant 0.1589  non-resonant 0.0011
+  M>=300: resonant 0.0620  non-resonant 0.0005

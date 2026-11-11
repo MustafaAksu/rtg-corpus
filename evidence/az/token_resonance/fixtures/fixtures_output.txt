@@ -1,0 +1,24 @@
+bytes under test (SHA-256):
+  engine                 4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608
+  orientation reference  ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c
+  runner                 ad52a20d7cb8d94b1e0786a67702f8320eb7f9ac92ed7a2bfe74907ffc2372af
+  fixtures script        ddbbf1eeaff71124e97c9c0e1eb999846284465a766a781898492884e94220a8
+  golden file            40eba43073fba138130244f75cc0790ef20bffcbeda7599ff4e372b95427c134
+PASS T1 engine pin :: 4c94d8741dc4
+PASS T1 orientation-reference pin :: ca59e9b9a1bb
+PASS T1 two orientation bindings on one unmodified engine module
+PASS T2 runner loop == engine run_one (final theta, delta, births, steps, cap flag) :: 24 runs, 0 differ
+PASS T3 built-in orientation rotates the tokens on S=0, E=N/2 :: ([5, 12, 0], 1, 0, 0)
+PASS T3 TDRG-DEF-ORIENT (v2.12.14) returns the balanced tie there :: ([0, 5, 12], 0, 1, 1)
+PASS T4 motif collection is dynamically neutral :: 30 runs
+PASS T8 delta -> delta + N/2 on all nodes leaves (M, births, steps, fb, M_at) unchanged :: 30 runs
+PASS T9 permuting the four initial labels leaves (M, births, steps, fb, M_at) unchanged (P1) :: 20 runs
+PASS T5 token alphabet and class counts: no violation :: 120 runs, 15965 births
+PASS T5 negative control: an injected foreign token is detected :: counter 7
+PASS T6 Delta(j) = N/2 + 2jx until the first band return at j = tau(x); 4x = 0 <=> ord(2x) <= 2 :: 290 tokens
+PASS T7 hub table equals the golden file (N = 120, 122; 60 ticks)
+PASS T10 seed derivation and native draws equal the golden file
+PASS T10 fixture run summaries equal the golden file
+PASS T7 a hub with 2x = 0 gives one birth per tick (N = 120: x = 0, 60) :: 60, 60
+PASS T11 exhaustive N=6, k=0, T=16, cap=24: token alphabet and class counts :: 279936 states, 22752 with a birth, 112264 births, 0 violations
+FIXTURES PASS (103.2 s; python 3.13.18)
