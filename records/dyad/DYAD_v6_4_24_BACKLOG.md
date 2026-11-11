@@ -105,6 +105,8 @@ Held one day after the planned date. Sources: `records/dyad/DYAD_INBOX_20261111_
 
 NUMGEN and OFN answers are included if they arrive before step 3; otherwise they stay open dependencies in the release record.
 
+**Status, 11 November 2026:** steps 1 and 2 are done. Candidate r1 `7f22ea35…2327` is on `claude/dyad-v6.4.24`, with the draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`. Step 3 (co-owner review) is next.
+
 ## D. Not in v6.4.24
 
 - §1 compaction (two-stage editorial edition, v6.4.25 or later).
