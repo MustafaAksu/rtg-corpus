@@ -1,10 +1,10 @@
 # DYAD OPEN 20 (analytic branch) — written design of a sectorial pilot for one formal branch
 
-**Date:** 23 October 2026 (revised the same day after the receiving review `records/dyad/DYAD_LH2012_PILOT_RECEIVING_REVIEW.md`: P-R3 domains, P-R4 inverse branch and full-map quotients, the §6 bookkeeping guards). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It is a written design; stage 1 (exact preparation, §7) is complete and stage 2 (limited `[NUM]` scouting, §5 item 2) has been run. No sectorial sum, jump or Stokes quantity has been computed. §8 (3 Nov 2026) records the a-priori route check for stage 3 after the LIT constants (INF-009/010); stage 3 itself is not authorized.
+**Date:** 23 October 2026 (revised the same day after the receiving review `records/dyad/DYAD_LH2012_PILOT_RECEIVING_REVIEW.md`: P-R3 domains, P-R4 inverse branch and full-map quotients, the §6 bookkeeping guards). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It is a written design; stage 1 (exact preparation, §7) is complete and stage 2 (limited `[NUM]` scouting, §5 item 2) has been run. §8 (3 Nov 2026) records the a-priori route check for stage 3 after the LIT constants (INF-009/010). §9 (11 Nov 2026) collects the inputs to the stage-3b design, including LIT's two literature replies. Stage 2b (11 Nov 2026, `[NUM]`, authorized by the PI) measured one sectorial jump numerically; it is in its own record and is not a certificate. No certified sectorial sum, jump or Stokes quantity exists. Stage 3c is not authorized.
 
 **Authority:** receiving review `records/dyad/DYAD_LH2012_RECEIVING_REVIEW.md` §6 ("WRITTEN PILOT DESIGN SUPPORTED"), on `records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md`.
 
-**Governing edition:** DYAD v6.4.22. OPEN 20 B-an and B-6 are ACTIVE.
+**Governing edition:** DYAD v6.4.22 when the design was written; v6.4.24 (`dyad-v6.4.24`) since 11 November 2026, whose OPEN 20 entry records the pilot's state. OPEN 20 B-an and B-6 are ACTIVE.
 
 **Notation:**
 - $F=T^6$ in the complexified raw frame $z=\rho+\omega\eta$, $w=\rho+\bar\omega\eta$ ($z=W$). This $z$ is not the normalized NF coordinate.
@@ -255,10 +255,39 @@ Guards (§6) unchanged: no change to the DSN, RIDs or OPEN statuses from this re
 2. **3b design note.** Compare the operator-with-transport route and the Borel–Laplace route using the stage-2b numbers; state the proof obligations of the chosen route (local a-posteriori theorem with explicit constants, validated transport, the common-point subtraction).
 3. **Review and PI decision** on the design. Stage 3c stays not authorized.
 
-The LIT request on subpetal orbit constants is still with LIT (acknowledged). Its answer bears on the size of the certified local domain, not on stage 2b.
+LIT answered the request on subpetal orbit constants later on 11 November 2026; the owner disposition is at the end of this section.
 
 **Status, 11 November 2026 (later the same day).** The PI authorized stage 2b. It was run: `records/dyad/DYAD_OPEN20_AN_STAGE2B_JUMP_SCOUTING_NUM.md` (`[NUM]`, OWNER-RUN).
 - The jump on S₀ ∩ S₁ is numerically nonzero: \|ΔY\| from 1.6·10⁻⁵ at \|ξ*\| = 0.45 to 7.3·10⁻⁵⁰ at 0.24, stable to 33–79 digits; the zero-jump control returns 10⁻¹⁶⁰.
 - In the Fatou time of the restricted map it decays like exp(−2πT), with local slopes −2π·(0.984 … 0.9988). The low apparent scale of stage 2 is a pre-asymptotic effect of the leading-time variable.
 - For the 3b design: the certificate can aim at \|ξ*\| ≈ 0.40–0.45, where enclosures to about 10⁻¹⁰ suffice. The table above (10⁻¹¹⁴ at 0.2, from the leading model) overstated the required precision, because the model time 1/(3\|ξ\|³) is larger than the Fatou time at these radii.
 - Items 2 and 3 of the order of work stand. Stage 3c stays not authorized.
+
+**LIT's answer on subpetal orbit constants (11 November 2026; owner disposition: accept; SESSION).** Item `pipes/DYAD/20261111-LIT-subpetal-orbit-constant-search.md`; LIT report at rtg-lit `e053e73e07b7cdeac55b44a01539d23a83d1b015` (bounded search; its limits are stated there). It answers the request of 3 November (`pipes/LIT/20261103-DYAD-subpetal-orbit-constant-search.md`).
+
+What LIT reports:
+- **Published.** No bound with an explicit radius was found. The published form is qualitative: M. Arizzi, J. Raissy, *On Écalle–Hakim's theorems in holomorphic dynamics*, arXiv:1106.1710v2, Lemma 6.2 (after Hakim 1998, Lemma 4.2, which LIT did not obtain). It gives \|xₙ\|ᵏ ≤ 2\|x\|ᵏ/\|1 + n xᵏ\| for "r small enough", in another normalization and for a base map prepared to order 2k+1.
+- **LIT derivation (`[ALG]`, SESSION; not published; not a DYAD result).** Under INF-009 (i) and ε₀ < sin η: \|fⁿ(x)\|ᵏ ≤ \|x\|ᵏ / ((1 − ε₀/sin η)\|1 + kn xᵏ\|), uniformly over the f_u family. With the denominator 1 + kn\|x\|ᵏ an extra factor sec(θ/2), θ = \|arg xᵏ\|, is needed and is sharp. It equals √2 at the overlap direction arg ξ³ = π/2.
+- **Radius.** With K = K₁ + K₂ = 13.52, INF-009's majorant admits ρ < 0.0184 (ε₀ = 0.25), 0.0369 (ε₀ < 1/2), 0.0522 (ε₀ < sin π/4) and 0.0737 (ε₀ < 1, the supremum over η). These are caps of this criterion in this chart, not of the map.
+- **E4.** A sharper orbit constant does not rescue the a-priori route: the E4 radius is about 2.1·10⁻⁸ even with C = 1 (§8).
+- **Suggestion (`[HEUR]`, nonbinding).** The published proof gains from a more prepared chart (base map normalized to order 2k+1, a corrected coordinate with logarithmic terms, a class of curves close to a higher-order approximation), not from a sharper constant.
+
+Owner check (OWNER-RUN): `evidence/dyad/scripts/dyad_open20_lit_subpetal_reply_check.py`, run `evidence/dyad/open20-an/lit-subpetal-reply/run.sh`; gates G0, T1–T6 PASS; the controls KCLASS and SEC each exit 1 at the named gate.
+- The four radii and the example constants (1.5469, 2.1877, 4.0423; INF-009's C = 7.66) are reproduced.
+- The inequality \|1 + te^{iθ}\|² − cos²(θ/2)(1 + t)² = (1 − cos θ)(1 − t)²/2 is exact; equality at t = 1.
+- The owner read LIT's four-line proof (LIT screen §3). It uses only Steps 1–3 of INF-009 and the identity k(w + n) = x^{−k}(1 + kn xᵏ) in the coordinate w = 1/(kxᵏ). The owner found no gap. This is a reading, not a DYAD proof record.
+- `[NUM]` illustration only: no violation along 40 seeded orbits of 2000 steps with a saturating perturbation (largest ratio to the bound 0.65, the value LIT reports).
+
+Owner note on the class of curves:
+- LIT's caps use K = K₁ + K₂, the class \|u\| ≤ \|ξ\| of INF-009's f_u version. The stage-3a calculation of §8 used K = 2K₁ + K₂, the radius-2 ball of INF-010.
+- The "ρ ≤ 0.019" of §8 is the cap of that larger class with ε₀ < 1/2 (0.01896). It is not LIT's row ε₀ = 0.25 (0.01849). The two numbers are close because E(ρ) ≈ Kρ.
+- For the radius-2 class the four caps are 0.0095, 0.0190, 0.0268 and 0.0379. No conclusion of §8 or of LIT's reply depends on the difference.
+
+Consequences for the 3b design (owner reading; nothing authorized):
+1. **The matching radius is outside this criterion.** Stage 2b met the truncated series at \|ξ\| = 0.08, 0.10 and 0.12. All three exceed the largest cap, 0.0737. So the local enclosure at \|ξ\| ≈ 0.1 cannot take its orbit control from INF-009 in the m = 2 chart, whatever the orbit constant.
+2. **Orbit control has to come from the restricted map itself.** On curves in a narrow tube around the truncated series, the restricted map is a known function up to a small error. Stage 2b computed its formal Fatou coordinate, truncated at J = 12 (A₃, A₂, A₁, κ, B_j; Abel defect 1.2·10⁻¹⁸ at one orbit point, `[NUM]`). In such a coordinate the per-step error is of high order in \|ξ\| by construction, where the m = 2 chart has K\|ξ\|. This is LIT's "prepared chart" suggestion in the pilot's terms. A bound for that error on the range of \|ξ\| used is DYAD's own obligation and is not computed; feasibility is not known.
+3. **Tail near 0.** If the 3b proof needs an analytic estimate on a small petal, the modulus form can be used there, with constant 1.55 in place of 7.66 at η = π/4 and ε₀ = 0.25. It has to be written out in the DYAD proof record; LIT's derivation is not imported.
+4. **Form of the bound.** At the overlap direction no bound with denominator 1 + kn\|x\|ᵏ has a constant below √2. Tail sums in 3b should use \|1 + kn xᵏ\|.
+5. **Stage 3a stands.** The a-priori route stays set aside.
+
+Not taken: no source of this reply is cited in the DSN, and nothing is imported. LIT's limits apply (Hakim 1998 and Kotus–Urbański 2023, ch. 15 not obtained; the near-parabolic renormalization literature not opened).

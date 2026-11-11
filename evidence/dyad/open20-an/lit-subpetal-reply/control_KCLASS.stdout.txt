@@ -1,0 +1,29 @@
+PASS G0_K_lit_below_K1_plus_K2
+PASS G0_inputs_all_pass
+PASS G0_route_hash
+PASS G0_scout_hash
+FAIL T1_lit_radius_table
+PASS T2_condition_i_not_binding
+PASS T2_ii_bound_is_one_half
+PASS T2_owner_cap_is_0.019
+PASS T3_exact_identity
+PASS T3_inequality_on_grid
+PASS T3_sharp_at_t_1
+PASS T4_example_constants
+PASS T5_NUM_no_violation_40x2000
+PASS T6_matching_radii_outside_every_cap
+  K1_plus_K2: 13.546175
+  K_lit: 13.52
+  K_owner_2K1_plus_K2: 26.369659
+  T1_caps: {'0.25': '0.0094804918', '0.5': '0.018960022', 'sin(pi/4)': '0.026810906', '1': '0.037905846'}
+  T2_A_at_cap: 1.02235e-5
+  T2_caps_owner_class: {'0.25': '0.0094804918', '0.5': '0.018960022', 'sin(pi/4)': '0.026810906', '1': '0.037905846'}
+  T2_owner_cap: 0.018960022
+  T3_equality_gap_at_t_1: 2.3e-41
+  T3_min_slack_on_grid: -2.29589e-41
+  T4: {'modulus': '1.5469182', 'at_half_pi': '2.1876726', 'whole_domain': '4.042292', 'C_inf009': '7.6568542'}
+  T5_max_ratio_to_bound: 0.6508
+  T5_rho: 0.0184897
+  T6_stage2b_matching_radii: ['0.08', '0.1', '0.12']
+  T6_sup_cap: 0.0737272
+RESULT FAIL
