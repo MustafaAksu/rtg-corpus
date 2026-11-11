@@ -1,7 +1,7 @@
 # AZ Thread C (`az_v5`) — recovery, intake manifest
 
-**Intake dates:** 11 November 2026, two deliveries. **Written by:** Claude (AZ co-owner session); this manifest and `SHA256SUMS` are the session's, everything else in this directory is an unchanged outside file.
-**Source:** files the PI attached to the AZ co-owner session, found on his side after the AZ v0.7 release record (§14) listed the Thread C evidence as absent: eleven files at 16:53 +03:00 (first commit, `10426f7`) and four at 17:07 +03:00 (second commit). The first files had earlier been given to the ChatGPT co-owner session, whose upload to this branch did not arrive (the branch existed without any commit of its own).
+**Intake dates:** 11 November 2026, three deliveries. **Written by:** Claude (AZ co-owner session); this manifest and `SHA256SUMS` are the session's, everything else in this directory is an unchanged outside file.
+**Source:** files the PI attached to the AZ co-owner session, found on his side after the AZ v0.7 release record (§14) listed the Thread C evidence as absent: eleven files at 16:53 +03:00 (first commit, `10426f7`), four at 17:07 +03:00 (second commit, `f6be0b3`) and one at 17:25 +03:00 (third commit). The first files had earlier been given to the ChatGPT co-owner session, whose upload to this branch did not arrive (the branch existed without any commit of its own).
 **Authority for the push:** PI, 11 Nov 2026, 16:41 +03:00: "bu dosyalardan lazımlı olanları repoya yükleyelim. sana bu konuda tam yetki." CONVENTIONS §6 otherwise restricts Claude sessions to `claude/*` branches; the pushes to this `upload/*` branch are made under that instruction and are declared here.
 
 ## Deposited unchanged (exact bytes as attached)
@@ -21,6 +21,7 @@ The files arrived with flat names. The paths under `az_v5/` are those of the reg
 | `az_v5/benchmarks/bouquet_2_4_hashimoto_matrix.json` | `4c377fa704e8b08e648caf3baff516f97bb5551cafc17506d7a560501347ca01` | equal |
 | `az_v5/benchmarks/bouquet_2_4_charpoly.txt` | `6a6979b0d25b8a314f524a35a8f7114848701d4486f70b0a029b1c3313db788f` | equal |
 | `CONVENTIONS_FROZEN.md` | `1c4b715aea0785c22c2f194d9cf8ba6a1b3c76dc2608366dedd58160ed478f2d` | not a registry entry (AZ §9 names it as `AZ-ART-CONVENTIONS-FROZEN`, without a hash) |
+| `export/conv_az_graph_export.py` | `fab14ae1d2b151f405bda105103ec3fcca32841542369304d1d1a5b35517fe1e` | not a registry entry and not part of the `az_v5` package as the registry lists it; the TDR-G defect-graph exporter under `CONV-AZ-GRAPH-EXPORT` (self-identified `[RID: TDRG-AZ-EXPORT-BASELINE]`, schema `tdrg_az_graph_export_v1`); third delivery. Its place relative to the package is not known; `export/` is the session's choice |
 | `phase2/AZ_PHASE2_N120_NULL1_smoke.json` | `561c66ac8e5d359d5806d9aa058e988b682412ddb4a84e71371e754e89e22284` | not a registry entry and not one of the registered Phase-2 reports: a **smoke** output (one seed, `T = 1000`, 100 nulls, self-labelled `[NUM diagnostic]`); second delivery |
 
 Nine of the ten registry entries are deposited as original bytes. Duplicates received and not deposited twice: a second copy of `hashimoto.py` and a second copy of `CONVENTIONS_FROZEN.md`, each byte-identical to the deposited one.
@@ -30,7 +31,6 @@ Nine of the ten registry entries are deposited as original bytes. Duplicates rec
 | File | State |
 |---|---|
 | `benchmarks/az_v5_synthetic_benchmark_report.json` (`e6fd6968…a4e`) | the tenth registry entry; **original not received**. Running the deposited `benchmark_ladder.py` regenerates a file with exactly this hash (`records/az/AZ_UPLOAD_HASH_CHECK_20261111.md`); the regenerated file is kept under `evidence/az/az_v5_replay/` and is not the original |
-| `conv_az_graph_export.py` | named by the ChatGPT session as present on its side and absent from the registry; **not received by this session** |
 | `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0_5.md` | received (SHA-256 `fe9be4031baed86769ec7289e1bcddaa93bfd0136fd6727f3d247405b18802bb`, 66,428 bytes); **held, not deposited**: a superseded DSN edition without authority, which predates the `az_v5` work and names no registry or hash; the tagged v0.6 names it as its predecessor but records no hash of it. It can be deposited later if the PI wants the pre-Git history kept |
 
 Everything else AZ §9 names (`phase2_harness`, `spectral_radius_patch.py`, `prove_core_equiv.py` and its certificates, `THM_AZ_ANTIPODAL_4Q.md`, the Phase-2 runner and the three registered Null1 reports, `AZ_THETA_CORE_MATCHED.json`, `rtg_graph_zeta_proto_v3.py`) was not received.
