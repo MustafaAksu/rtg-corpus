@@ -77,6 +77,6 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 ## PI_PENDING
 
 As of 11 November 2026, 13:50 +03:00:
-1. **Merge of the post-tag PR** (branch `claude/dyad-v6.4.24-post-tag`; records, notices and one inbox closure; no DSN change).
+1. **Merge of the post-tag PR #216** (branch `claude/dyad-v6.4.24-post-tag`; records, notices and one inbox closure; no DSN change).
 
 No scientific decision is pending. Stage 3c and scouting of the second overlap class are not authorized, and neither is requested.
