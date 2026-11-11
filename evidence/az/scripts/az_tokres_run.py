@@ -8,8 +8,8 @@ are the engine's own native draw (`init_universe`) with, per arm, one declared t
 engine's `run_one` loop line for line and adds read-only bookkeeping (token census, law check, birth-anchored window).
 
 Profiles
-  P1  engine 4c94d874...a608 + TDRG-DEF-ORIENT as amended in tdrg-v2.12.14 (reference orient_path ca59e9b9...d59c)   primary
-  P2  engine 4c94d874...a608 with its built-in orient_path ("v18 path orientation", superseded)                sensitivity
+  P1  engine 4c94d874...a608 + TDRG-DEF-ORIENT as amended in tdrg-v2.12.14 (reference orient_path ca59e9b9...d59c) primary
+  P2  engine 4c94d874...a608 with its built-in orient_path ("v18 path orientation", superseded)             sensitivity
 
 Arms (one base draw b = native (theta0, delta0); slot j and all choices from a second, independent stream)
   BASE   native state
@@ -19,13 +19,24 @@ Arms (one base draw b = native (theta0, delta0); slot j and all choices from a s
   O2D    delta_j := r2 + s2
   Q2R    delta_j := q,        q in {floor(N/4), ceil(N/4), floor(3N/4), ceil(3N/4)}   (N = 2 mod 4: no order-2 token)
   SHAM   delta_j := delta_j + s3                                   (perturbation of the native token)
-  BASE_P, O1R_P   BASE and O1R with the four initial node labels permuted (first --n-perm base draws)
+  BASE_P, O1R_P   BASE and O1R with the four initial node labels permuted (base draws b < --n-perm)
+
+Law check (every tick; counter `law_viol`): (i) every token lies in S0 = A0 u (-A0); (ii) EXACT class update: the
+token census after the tick equals the census before it plus one count at -x for every node born in the tick, x being
+the newborn's token (= the centre's pre-event token by TDRG-DEF-STAR); (iii) for every newborn there is a node at the
+antipode of the newborn carrying -x (the centre).
+
+Every record carries the identity of the run (tag, cell parameters, profile, policy, the three SHA-256 pins, the
+confirmatory flag). A manifest line (identity, shard range, record count and SHA-256 of the record file) is appended to
+OUT.manifest.json at the end of every invocation. --resume refuses a record file written under any other identity or
+shard arguments.
 
 usage
   python -I az_tokres_run.py --engine ENGINE.py --orient ORIENT.py --out OUT.jsonl --tag TAG --N 120 --k 8
-         [--T 800] [--cap 300] [--profile P1] [--policy bound_symmetric] [--start 0] [--stop 1500] [--n-perm 200]
-         [--arms BASE,O1R,...] [--no-tdr26] [--resume] [--confirmatory]
-Registered campaign tags (AZ-TOKRES-*) are refused without --confirmatory; that flag is for the PI-authorised run only.
+         --stop 1500 [--start 0] [--T 800] [--cap 300] [--profile P1] [--policy bound_symmetric] [--n-perm 200]
+         [--no-tdr26] [--resume] [--confirmatory]
+Registered campaign tags (AZ-TOKRES-*) are refused without --confirmatory; that flag is for the PI-authorised run only
+and is refused with any other tag. Exit codes: 0 done; 2 refused (pins, arguments, identity, existing output).
 """
 from __future__ import annotations
 
@@ -45,7 +56,16 @@ ORIENT_SHA256 = "ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59
 M0 = 4                      # engine default number of initial nodes (init_universe m0)
 TDR26_WINDOW = 200          # birth-anchored window of the TDR-26 rule (tdr26_early_basin_classifier.py --rule-w)
 CHECKPOINTS = (100, 200, 300, 400, 500, 600, 700, 800)
-SCHEMA = "az_tokres_run_v1"
+SCHEMA = "az_tokres_run_v2"
+MANIFEST_SCHEMA = "az_tokres_manifest_v2"
+IDENTITY_KEYS = ("schema", "tag", "cell", "N", "k", "T", "cap", "profile", "policy", "confirmatory",
+                 "engine_sha256", "orient_sha256", "runner_sha256")
+
+
+class Refused(SystemExit):
+    def __init__(self, msg: str):
+        print("REFUSED: " + msg, file=sys.stderr)
+        super().__init__(2)
 
 
 # ---------------------------------------------------------------- loading and pins
@@ -65,21 +85,18 @@ def load_module(path: str, name: str):
     return mod
 
 
-def load_engine(engine_path: str, orient_path: str, profile: str, allow_unpinned: bool = False):
+def load_engine(engine_path: str, orient_path: str, profile: str):
     """Return (engine module, info). The engine file is never written; P1 rebinds the module attribute orient_path."""
     es, os_ = sha256_file(engine_path), sha256_file(orient_path)
-    if not allow_unpinned and (es != ENGINE_SHA256 or os_ != ORIENT_SHA256):
-        raise SystemExit(f"pin mismatch: engine {es} orient {os_}")
+    if es != ENGINE_SHA256 or os_ != ORIENT_SHA256:
+        raise Refused(f"pin mismatch: engine {es} orient {os_}")
+    if profile not in ("P1", "P2"):
+        raise Refused(f"unknown profile {profile}")
     sys.dont_write_bytecode = True
     eng = load_module(engine_path, "tdrg_engine_pinned")
     ori = load_module(orient_path, "tdrg_orient_reference")
-    native = eng.orient_path
     if profile == "P1":
         eng.orient_path = ori.make_orient(eng)
-    elif profile == "P2":
-        eng.orient_path = native
-    else:
-        raise SystemExit(f"unknown profile {profile}")
     return eng, {"engine_sha256": es, "orient_sha256": os_, "profile": profile}
 
 
@@ -158,7 +175,31 @@ def arm_state(arm: str, th0, d0, ch: dict, N: int):
     return th, d
 
 
+def slot_token(arm: str, d, ch: dict) -> int:
+    """Token carried, in the state actually run, by the node that holds the intervention slot."""
+    return d[ch["perm"].index(ch["slot"])] if arm.endswith("_P") else d[ch["slot"]]
+
+
 # ---------------------------------------------------------------- one run
+def law_check_tick(u, N: int, alphabet, census, ids_before) -> tuple:
+    """Exact check of the signed-alphabet law and of the class update for one tick. Returns (violations, census)."""
+    viol = 0
+    c2 = Counter(u.delta.values())
+    if not set(c2) <= alphabet:
+        viol += 1
+    newborn = [i for i in u.theta if i not in ids_before]
+    expected = Counter(census)
+    for e in newborn:
+        x = u.delta[e]
+        expected[(-x) % N] += 1
+        centre_pos = (u.theta[e] + N // 2) % N
+        if not any(i != e and u.theta[i] == centre_pos and u.delta[i] == (-x) % N for i in u.theta):
+            viol += 1
+    if c2 != expected:
+        viol += 1
+    return viol, c2
+
+
 def run_state(eng, N: int, k: int, theta0, delta0, T: int, cap: int, policy: str, tdr26: bool = True,
               check_law: bool = True, keep_final: bool = False) -> dict:
     """The engine's run_one loop on a given initial state, with read-only bookkeeping."""
@@ -181,6 +222,7 @@ def run_state(eng, N: int, k: int, theta0, delta0, T: int, cap: int, policy: str
         nxt = u.steps + 1
         want_motif = tdr26 and (fb is None or nxt < fb + TDR26_WINDOW)
         b0 = u.births
+        ids_before = set(u.theta) if check_law else None
         motif = eng.step_universe(u, multistar_policy=policy, collect_motif=want_motif)
         db = u.births - b0
         if fe is None and (u.single_edge_swaps or u.path_interactions or u.births or u.multistar_seen
@@ -194,14 +236,10 @@ def run_state(eng, N: int, k: int, theta0, delta0, T: int, cap: int, policy: str
             w_occ += float(motif.get("occ_clean_pairs", 0))
             w_oims += float(motif.get("occ_clean_pairs_in_multistar", 0))
         if check_law:
-            c2 = Counter(u.delta.values())
-            if not set(c2) <= alphabet:
+            v, census = law_check_tick(u, N, alphabet, census, ids_before)
+            law_viol += v
+            if len(u.theta) - len(ids_before) != db:
                 law_viol += 1
-            if any(c2[y] < n for y, n in census.items()):
-                law_viol += 1
-            if sum(c2.values()) - sum(census.values()) != db:
-                law_viol += 1
-            census = c2
         m = len(u.theta)
         if t100 is None and m >= 100:
             t100 = u.steps
@@ -234,7 +272,34 @@ def run_state(eng, N: int, k: int, theta0, delta0, T: int, cap: int, policy: str
     return out
 
 
-# ---------------------------------------------------------------- campaign driver
+# ---------------------------------------------------------------- campaign shard driver
+def read_existing(path: str, identity: dict, start: int, stop: int, n_perm: int, arms) -> set:
+    """Records already in a shard file; every one must carry the current identity and lie in the current shard."""
+    with open(path, "rb") as f:
+        raw = f.read().decode("utf-8").split("\n")
+    good, done = [], set()
+    for idx, line in enumerate(raw):
+        if not line.strip():
+            continue
+        try:
+            r = json.loads(line)
+        except ValueError:
+            if idx == len(raw) - 1:                # a record cut off by an interruption: dropped, then rewritten
+                continue
+            raise Refused(f"{path}: unreadable record at line {idx + 1}")
+        for key in IDENTITY_KEYS:
+            if r.get(key) != identity[key]:
+                raise Refused(f"{path}: record of another identity ({key}={r.get(key)!r}, expected {identity[key]!r})")
+        allowed = set(arms) | ({"BASE_P", "O1R_P"} if r["base"] < n_perm else set())
+        if not (start <= r["base"] < stop) or r["arm"] not in allowed or (r["base"], r["arm"]) in done:
+            raise Refused(f"{path}: record (base {r['base']}, arm {r['arm']}) is outside this shard or duplicated")
+        done.add((r["base"], r["arm"]))
+        good.append(line)
+    with open(path, "w", newline="\n") as f:      # normalises a cut-off tail; complete records are kept byte for byte
+        f.write("".join(x + "\n" for x in good))
+    return done
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--engine", required=True)
@@ -245,31 +310,44 @@ def main() -> int:
     ap.add_argument("--k", type=int, required=True)
     ap.add_argument("--T", type=int, default=800)
     ap.add_argument("--cap", type=int, default=300)
-    ap.add_argument("--profile", default="P1", choices=["P1", "P2"])
+    ap.add_argument("--profile", default="P1")
     ap.add_argument("--policy", default="bound_symmetric")
     ap.add_argument("--start", type=int, default=0)
     ap.add_argument("--stop", type=int, required=True)
     ap.add_argument("--n-perm", type=int, default=0, help="base draws b < n-perm also run BASE_P and O1R_P")
-    ap.add_argument("--arms", default=None, help="comma list; default: all arms of the cell")
     ap.add_argument("--no-tdr26", action="store_true")
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--confirmatory", action="store_true")
     a = ap.parse_args()
 
-    if a.tag.startswith("AZ-TOKRES-") and not a.confirmatory:
-        raise SystemExit("registered campaign tag: refused without --confirmatory (PI-authorised run only)")
+    registered = a.tag.startswith("AZ-TOKRES-")
+    if registered and not a.confirmatory:
+        raise Refused("registered campaign tag without --confirmatory (PI-authorised run only)")
+    if a.confirmatory and not registered:
+        raise Refused("--confirmatory is reserved for registered campaign tags")
+    if not (0 <= a.start < a.stop):
+        raise Refused("need 0 <= start < stop")
     eng, info = load_engine(a.engine, a.orient, a.profile)
-    arms = tuple(a.arms.split(",")) if a.arms else arms_for(a.N)
-    done = set()
-    if os.path.exists(a.out):
-        if not a.resume:
-            raise SystemExit(f"{a.out} exists; use --resume or another --out")
-        with open(a.out) as f:
-            for line in f:
-                r = json.loads(line)
-                if r.get("schema") == SCHEMA:
-                    done.add((r["base"], r["arm"]))
+    arms = arms_for(a.N)
     cell = f"N{a.N}k{a.k}"
+    identity = {"schema": SCHEMA, "tag": a.tag, "cell": cell, "N": a.N, "k": a.k, "T": a.T, "cap": a.cap,
+                "profile": a.profile, "policy": a.policy, "confirmatory": bool(a.confirmatory),
+                "engine_sha256": info["engine_sha256"], "orient_sha256": info["orient_sha256"],
+                "runner_sha256": sha256_file(os.path.abspath(__file__))}
+    shard = {"start": a.start, "stop": a.stop, "n_perm": a.n_perm, "arms": list(arms), "tdr26": not a.no_tdr26}
+    man_path = a.out + ".manifest.json"
+    done = set()
+    if os.path.exists(a.out) or os.path.exists(man_path):
+        if not a.resume:
+            raise Refused(f"{a.out} or its manifest exists; use --resume or another --out")
+        if os.path.exists(man_path):
+            with open(man_path) as f:
+                for line in f:
+                    m = json.loads(line)
+                    if m.get("identity") != identity or m.get("shard") != shard:
+                        raise Refused(f"{man_path}: earlier invocation used another identity or other shard arguments")
+        if os.path.exists(a.out):
+            done = read_existing(a.out, identity, a.start, a.stop, a.n_perm, arms)
     t0 = time.time()
     n_new = 0
     with open(a.out, "a", newline="\n") as f:
@@ -283,23 +361,24 @@ def main() -> int:
                 th, d = arm_state(arm, th0, d0, ch, a.N)
                 t1 = time.time()
                 res = run_state(eng, a.N, a.k, th, d, a.T, a.cap, a.policy, tdr26=not a.no_tdr26)
-                rec = {"schema": SCHEMA, "tag": a.tag, "cell": cell, "N": a.N, "k": a.k, "T": a.T, "cap": a.cap,
-                       "profile": a.profile, "policy": a.policy, "base": b, "arm": arm, "seed": seed,
-                       "slot": ch["slot"], "choices": ch, "th0": th, "d0": d, "d0_base": d0,
-                       "alphabet_class": alphabet_class(d, a.N), "slot_class": res_class(d[ch["perm"].index(ch["slot"])]
-                                                                                       if arm.endswith("_P") else d[ch["slot"]], a.N),
-                       "secs": round(time.time() - t1, 4)}
+                rec = dict(identity)
+                rec.update({"base": b, "arm": arm, "seed": seed, "slot": ch["slot"], "choices": ch, "th0": th, "d0": d,
+                            "d0_base": d0, "alphabet_class": alphabet_class(d, a.N),
+                            "slot_class": res_class(slot_token(arm, d, ch), a.N),
+                            "secs": round(time.time() - t1, 4)})
                 rec.update(res)
                 f.write(json.dumps(rec, sort_keys=True) + "\n")
                 f.flush()
                 n_new += 1
-    man = {"schema": "az_tokres_manifest_v1", "args": vars(a), "arms": list(arms), "runs_written": n_new,
-           "runs_present_before": len(done), "seconds": round(time.time() - t0, 1),
-           "runner_sha256": sha256_file(os.path.abspath(__file__)), "python": sys.version.split()[0],
-           "platform": platform.platform(), "finished_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), **info}
-    with open(a.out + ".manifest.json", "a", newline="\n") as f:
+    with open(a.out, "rb") as f:
+        rows_total = sum(1 for _ in f)
+    man = {"schema": MANIFEST_SCHEMA, "identity": identity, "shard": shard, "runs_written": n_new,
+           "runs_present_before": len(done), "rows_total": rows_total, "file_sha256": sha256_file(a.out),
+           "seconds": round(time.time() - t0, 1), "python": sys.version.split()[0], "platform": platform.platform(),
+           "finished_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+    with open(man_path, "a", newline="\n") as f:
         f.write(json.dumps(man, sort_keys=True) + "\n")
-    print(json.dumps({"runs_written": n_new, "seconds": man["seconds"], "out": a.out}))
+    print(json.dumps({"runs_written": n_new, "rows_total": rows_total, "seconds": man["seconds"], "out": a.out}))
     return 0
 
 

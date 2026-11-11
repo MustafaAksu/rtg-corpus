@@ -3,8 +3,8 @@
 kinematic statements of records/az/AZ_TOKEN_RESONANCE_PREREGISTRATION.md section 2 on the pinned TDR-G engine.
 
 usage
-  python -I az_tokres_fixtures.py --engine ENGINE.py --orient ORIENT.py --runner az_tokres_run.py --golden GOLDEN.json
-         [--write-golden] [--exhaustive N6k0|N8k1]
+  python -I az_tokres_fixtures.py --engine ENGINE.py --orient ORIENT.py --runner az_tokres_run.py
+         --analysis az_tokres_analyse.py --golden GOLDEN.json [--write-golden] [--exhaustive N6k0|N8k1]
 Exit code 0 iff every test passes. --write-golden (re)creates the golden file from this machine's results; it is used
 once when the package is frozen and never by a verifier. --exhaustive runs one extra, longer enumeration.
 """
@@ -69,6 +69,7 @@ def main() -> int:
     ap.add_argument("--engine", required=True)
     ap.add_argument("--orient", required=True)
     ap.add_argument("--runner", required=True)
+    ap.add_argument("--analysis", required=True)
     ap.add_argument("--golden", required=True)
     ap.add_argument("--write-golden", action="store_true")
     ap.add_argument("--exhaustive", default=None, choices=["N6k0", "N8k1"])
@@ -78,7 +79,8 @@ def main() -> int:
     t0 = time.time()
     print("bytes under test (SHA-256):")
     for label, path in (("engine", a.engine), ("orientation reference", a.orient), ("runner", a.runner),
-                        ("fixtures script", __file__)) + (() if a.write_golden else (("golden file", a.golden),)):
+                        ("fixtures script", __file__), ("analysis script", a.analysis)) + (
+                            () if a.write_golden else (("golden file", a.golden),)):
         print("  %-22s %s" % (label, R.sha256_file(path)))
 
     # T1 pins
@@ -160,7 +162,8 @@ def main() -> int:
                 r = R.run_state(e, 120, 8, th1, d1, 200, 200, pol, tdr26=False)
                 viol += r["law_viol"]
                 births += r["births"]
-    report("T5 token alphabet and class counts: no violation", viol == 0, f"120 runs, {births} births")
+    report("T5 token alphabet, exact class update c(-x) += 1 per birth, centre witness: no violation", viol == 0,
+           f"120 runs, {births} births")
 
     class Corrupt:                                                   # engine shim that breaks the law at tick 5
         Universe = eng.Universe
@@ -173,6 +176,49 @@ def main() -> int:
             return m
     r = R.run_state(Corrupt, 120, 8, [0, 10, 20, 30], [3, 5, 9, 11], 10, 0, "bound_symmetric", tdr26=False)
     report("T5 negative control: an injected foreign token is detected", r["law_viol"] > 0, f"counter {r['law_viol']}")
+
+    def hub_state(x, N=120):                                         # first tick: clean star, one birth
+        return [(0 - x) % N] + [(N // 2 - x) % N] * 3, [x] * 4
+
+    def make_shim(mutate):
+        state = {"done": False}
+
+        class Shim:
+            Universe = eng.Universe
+
+            @staticmethod
+            def step_universe(u, multistar_policy="bound_symmetric", collect_motif=False):
+                before = set(u.theta)
+                m = eng.step_universe(u, multistar_policy=multistar_policy, collect_motif=collect_motif)
+                new = [i for i in u.theta if i not in before]
+                if new and not state["done"]:
+                    state["done"] = True
+                    mutate(u, new[0])
+                return m
+        return Shim
+
+    def unflip_centre(u, child):                                     # the centre keeps x instead of taking -x
+        x = u.delta[child]
+        for i in u.theta:
+            if i != child and u.theta[i] == (u.theta[child] + u.N // 2) % u.N and u.delta[i] == (-x) % u.N:
+                u.delta[i] = x
+                return
+
+    def flip_child(u, child):                                        # the child takes -x instead of x
+        u.delta[child] = (-u.delta[child]) % u.N
+
+    th, d = hub_state(7)
+    u = eng.Universe(N=120, k=8, theta=dict(enumerate(th)), delta=dict(enumerate(d)))
+    make_shim(unflip_centre).step_universe(u)
+    weak_ok = set(u.delta.values()) <= {7, 113} and sorted(u.delta.values()) == [7] * 5 and u.births == 1
+    r = R.run_state(make_shim(unflip_centre), 120, 8, th, d, 3, 0, "bound_symmetric", tdr26=False)
+    report("T5b negative control: a birth that adds its count at x instead of -x passes the weak checks "
+           "(alphabet, no decrease, total) and is caught by the exact class update", weak_ok and r["law_viol"] > 0,
+           f"weak checks pass: {weak_ok}; counter {r['law_viol']}")
+    r = R.run_state(make_shim(flip_child), 120, 8, th, d, 3, 0, "bound_symmetric", tdr26=False)
+    report("T5c negative control: a child born with -x instead of x is caught", r["law_viol"] > 0, f"counter {r['law_viol']}")
+    r = R.run_state(eng, 120, 8, th, d, 3, 0, "bound_symmetric", tdr26=False)
+    report("T5d the same hub without the shim: no violation", r["law_viol"] == 0 and r["births"] >= 1, f"births {r['births']}")
 
     # T6 free parent-child phase law on the engine: post-birth pair (centre -x, child x at the antipode)
     bad = n = 0
@@ -190,6 +236,25 @@ def main() -> int:
             bad += not ok
             n += 1
     report("T6 Delta(j) = N/2 + 2jx until the first band return at j = tau(x); 4x = 0 <=> ord(2x) <= 2", bad == 0, f"{n} tokens")
+
+    # T12 the analysis script's independent re-derivation of every registered initial state equals the runner's
+    A = load_module(a.analysis, "az_tokres_analyse")
+    bad = n = 0
+    for N in (120, 122):
+        for b in range(40):
+            seed, th, d = R.base_draw(e, FIX_TAG, N, 8, b)
+            ch = R.arm_choices(FIX_TAG, N, 8, b)
+            for arm in R.arms_for(N) + ("BASE_P", "O1R_P"):
+                th1, d1 = R.arm_state(arm, th, d, ch, N)
+                mine = {"seed": seed, "slot": ch["slot"], "choices": ch, "th0": th1, "d0": d1, "d0_base": d,
+                        "alphabet_class": R.alphabet_class(d1, N), "slot_class": R.res_class(R.slot_token(arm, d1, ch), N)}
+                bad += A.expected_state(FIX_TAG, N, 8, b, arm) != mine
+                n += 1
+    report("T12 analysis-side re-derivation of seed, phases, tokens, slot, choices and classes == runner (engine draw)",
+           bad == 0 and A.arms_for(120) == R.arms_for(120) and A.arms_for(122) == R.arms_for(122), f"{n} states, {bad} differ")
+    report("T12 analysis pins: engine and orientation reference equal the runner's",
+           A.ENGINE_SHA256 == R.ENGINE_SHA256 and A.ORIENT_SHA256 == R.ORIENT_SHA256 and A.SCHEMA == R.SCHEMA
+           and A.MANIFEST_SCHEMA == R.MANIFEST_SCHEMA)
 
     # T7 regression: isolated same-token hub, births in 60 ticks for every token; T10 seed derivation
     for N in (120, 122):
@@ -234,7 +299,7 @@ def main() -> int:
                 births += r["births"]
                 with_birth += r["births"] > 0
                 states += 1
-        report(f"T11 exhaustive N={N}, k={k}, T={T}, cap={cap}: token alphabet and class counts",
+        report(f"T11 exhaustive N={N}, k={k}, T={T}, cap={cap}: token alphabet, exact class update, centre witness",
                viol == 0, f"{states} states, {with_birth} with a birth, {births} births, {viol} violations")
 
     print(f"FIXTURES {'PASS' if OK else 'FAIL'} ({time.time() - t0:.1f} s; python {sys.version.split()[0]})")
