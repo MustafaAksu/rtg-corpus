@@ -1,0 +1,228 @@
+{
+ "all_pass": false,
+ "control": "SHIFTCOEF",
+ "gates": {
+  "A0_wedge_functionals_increase": true,
+  "A1_wedge_functionals_increase": true,
+  "B0_strong_exit_inequality": false,
+  "B1_strong_exit_inequality": false,
+  "E0_series_inside_tube": false,
+  "E1_series_inside_tube": false,
+  "F1_A3_is_minus_one_over_3ell": true,
+  "G0_inputs": true,
+  "INV_G_inverts_F": true,
+  "NL_nonlinearity_small": true,
+  "PATH_common_curve_reaches_small_xi": true,
+  "SEP_width_far_below_jump": true
+ },
+ "info": {
+  "D0": {
+   "max_E_over_R": "2.56774e+7",
+   "max_abs_xi": "0.363078",
+   "max_nl": "0.000313653",
+   "min_first_gain": "0.979628",
+   "min_margin": "-2.56777e+7",
+   "min_margin_over_model": "-1.7324e+12",
+   "min_second_gain": "0.358308",
+   "points": 83,
+   "worst_at": "|xi|=0.01 arg=0.05208 pi"
+  },
+  "D0_by_radius": [
+   {
+    "band": "0.01-0.03",
+    "max_E_over_R": "2.57e+7",
+    "min_margin_B": "-2.568e+7",
+    "model_gain_there": "1.482e-5",
+    "points": 24
+   },
+   {
+    "band": "0.03-0.06",
+    "max_E_over_R": "1.51e+4",
+    "min_margin_B": "-1.51e+4",
+    "model_gain_there": "0.0004176",
+    "points": 18
+   },
+   {
+    "band": "0.06-0.10",
+    "max_E_over_R": "49.6",
+    "min_margin_B": "-49.77",
+    "model_gain_there": "0.005258",
+    "points": 12
+   },
+   {
+    "band": "0.10-0.15",
+    "max_E_over_R": "0.952",
+    "min_margin_B": "-0.9433",
+    "model_gain_there": "0.02933",
+    "points": 6
+   },
+   {
+    "band": "0.15-0.20",
+    "max_E_over_R": "0.127",
+    "min_margin_B": "-0.06041",
+    "model_gain_there": "0.06997",
+    "points": 6
+   },
+   {
+    "band": "0.20-0.25",
+    "max_E_over_R": "0.0174",
+    "min_margin_B": "0.1611",
+    "model_gain_there": "0.1662",
+    "points": 6
+   },
+   {
+    "band": "0.25-0.30",
+    "max_E_over_R": "0.00305",
+    "min_margin_B": "0.4473",
+    "model_gain_there": "0.3783",
+    "points": 6
+   },
+   {
+    "band": "0.30-0.35",
+    "max_E_over_R": "0.0",
+    "min_margin_B": null,
+    "model_gain_there": null,
+    "points": 0
+   },
+   {
+    "band": "0.35-0.41",
+    "max_E_over_R": "0.00114",
+    "min_margin_B": "1.049",
+    "model_gain_there": "0.752",
+    "points": 5
+   }
+  ],
+  "D1": {
+   "max_E_over_R": "3.53571e+6",
+   "max_abs_xi": "0.363078",
+   "max_nl": "0.000328467",
+   "min_first_gain": "0.985094",
+   "min_margin": "-3.53574e+6",
+   "min_margin_over_model": "-2.35299e+11",
+   "min_second_gain": "0.370372",
+   "points": 88,
+   "worst_at": "|xi|=0.01 arg=0.2708 pi"
+  },
+  "D1_by_radius": [
+   {
+    "band": "0.01-0.03",
+    "max_E_over_R": "3.54e+6",
+    "min_margin_B": "-3.536e+6",
+    "model_gain_there": "1.503e-5",
+    "points": 28
+   },
+   {
+    "band": "0.03-0.06",
+    "max_E_over_R": "2.17e+3",
+    "min_margin_B": "-2168.0",
+    "model_gain_there": "0.0004172",
+    "points": 21
+   },
+   {
+    "band": "0.06-0.10",
+    "max_E_over_R": "7.84",
+    "min_margin_B": "-7.861",
+    "model_gain_there": "0.005085",
+    "points": 13
+   },
+   {
+    "band": "0.10-0.15",
+    "max_E_over_R": "0.173",
+    "min_margin_B": "-0.1484",
+    "model_gain_there": "0.02709",
+    "points": 6
+   },
+   {
+    "band": "0.15-0.20",
+    "max_E_over_R": "0.0271",
+    "min_margin_B": "0.03946",
+    "model_gain_there": "0.06267",
+    "points": 6
+   },
+   {
+    "band": "0.20-0.25",
+    "max_E_over_R": "0.00428",
+    "min_margin_B": "0.1547",
+    "model_gain_there": "0.1456",
+    "points": 6
+   },
+   {
+    "band": "0.25-0.30",
+    "max_E_over_R": "0.000653",
+    "min_margin_B": "0.4104",
+    "model_gain_there": "0.343",
+    "points": 5
+   },
+   {
+    "band": "0.30-0.35",
+    "max_E_over_R": "0.0",
+    "min_margin_B": null,
+    "model_gain_there": null,
+    "points": 0
+   },
+   {
+    "band": "0.35-0.41",
+    "max_E_over_R": "8.83e-5",
+    "min_margin_B": "1.281",
+    "model_gain_there": "0.8441",
+    "points": 3
+   }
+  ],
+  "INV_max_error": "3.69e-101",
+  "PATH_first_and_last": {
+   "columns": "-Im tau, |xi|, arg xi / pi",
+   "first": [
+    "4.08189",
+    "0.4",
+    "0.166667"
+   ],
+   "last": [
+    "3000.0",
+    "0.0473851",
+    "0.163394"
+   ]
+  },
+  "SEP": {
+   "R0_at_xi_end": "6.938e-13",
+   "R1_at_xi_start": "7.298e-12",
+   "abs_deltaY_stage2b": "1.95275604519937e-8",
+   "amplification_forward": "1711.16",
+   "contraction_from_S1_side": "0.000118571",
+   "end_of_S1_leg_abs_xi": "0.400039",
+   "estimated_total_width": "2.542e-15",
+   "in_wedges": true,
+   "n": 334,
+   "width_over_abs_deltaY": "1.302e-7",
+   "xi_end_abs": "0.0961441",
+   "xi_start_abs": "0.0985539"
+  },
+  "fatou4": {
+   "A1": "(-0.135079834899795 + 0.153567697075599j)",
+   "A2": "(0.536700186091055 + 1.61148875597112j)",
+   "A3": "(-3.32788058725899 - 0.681896765229739j)",
+   "kappa": "(1.81162096236788 + 0.0896653995437725j)"
+  },
+  "parameters": {
+   "N": 40,
+   "R_at_xi_star": "1e-3",
+   "c0": "2.9731748",
+   "c1": "4.2691799",
+   "dc": "0.15",
+   "dps": 100,
+   "ds": "0.25",
+   "eta0": "pi/8",
+   "first_index": 0,
+   "q1": 9,
+   "q2": 9,
+   "s0": "-1.9433123",
+   "s1": "-1.4433123",
+   "stride": 3,
+   "tau_star": "(-1.69331231532 - 4.0818929651j)",
+   "xi_star_abs": "0.40",
+   "xi_star_arg": "pi/6"
+  }
+ },
+ "mpmath": "1.3.0",
+ "script": "dyad_open20_an_stage3b_tube_sampling.py",
+ "status": "NUM feasibility sampling for the stage-3b design; not a certificate; not theorem evidence"
+}

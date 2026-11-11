@@ -1,0 +1,15 @@
+D0: 83 points, min margin_B -2.568e+7 (|xi|=0.01 arg=0.05208 pi), min margin/model -1.732e+12, max |E|/R 2.57e+7, max nl 0.000314, gains >= 0.98, 0.358
+D1: 88 points, min margin_B -3.536e+6 (|xi|=0.01 arg=0.2708 pi), min margin/model -2.353e+11, max |E|/R 3.54e+6, max nl 0.000328, gains >= 0.985, 0.37
+A0_wedge_functionals_increase PASS
+A1_wedge_functionals_increase PASS
+B0_strong_exit_inequality FAIL
+B1_strong_exit_inequality FAIL
+E0_series_inside_tube FAIL
+E1_series_inside_tube FAIL
+F1_A3_is_minus_one_over_3ell PASS
+G0_inputs PASS
+INV_G_inverts_F PASS
+NL_nonlinearity_small PASS
+PATH_common_curve_reaches_small_xi PASS
+SEP_width_far_below_jump PASS
+RESULT FAIL (control SHIFTCOEF) | [NUM] sampling for a design; not a certificate
