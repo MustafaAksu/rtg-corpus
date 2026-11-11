@@ -65,7 +65,41 @@ Owner decision needed per row: register (name, scope) or record "no RID; cite th
 
 ## C2. Schedule
 
-Checkpoint **10 November 2026** (co-owner proposal, 3 Nov). If RECOG and NUMGEN have answered the v6.4.23 notices by then, their answers are included. Otherwise they are recorded as open dependencies and the v6.4.24 candidate is prepared. Until then: the X4 decisions and the v6.4.24 change matrix. This is a maintenance schedule, not a scientific requirement.
+Checkpoint **10 November 2026** (co-owner proposal, 3 Nov); held on 11 November, see §C3. If RECOG and NUMGEN have answered the v6.4.23 notices by then, their answers are included. Otherwise they are recorded as open dependencies and the v6.4.24 candidate is prepared. Until then: the X4 decisions and the v6.4.24 change matrix. This is a maintenance schedule, not a scientific requirement.
+
+## C3. State at the checkpoint of 11 November 2026
+
+Held one day after the planned date. Sources: `records/dyad/DYAD_INBOX_20261111_OWNER_DISPOSITION.md`; live state from `tools/orient.py` at `main` `fe73d56`.
+
+**Answers to the v6.4.23 notices and the 3 Nov notices:**
+
+| Receiver | State | For the v6.4.24 register (§7.0, §7) |
+|---|---|---|
+| RECOG | answered: `recog-v0.3.27` imports BRIDGE, SPIRAL-REM and C7-SHARP; c′_Q = 0.36916 used throughout | row at `recog-v0.3.27` |
+| GEN | answered: `gen-v2.10`; `DYAD-ALG-NU5-P5` label corrected, claim-level pin `dyad-v6.4.23` §6.11 | row at `gen-v2.10` |
+| AZ | answered: `az-v0.7` pins `dyad-v6.4.23`; owner RIDs used | row at `az-v0.7`; Appendix F re-read |
+| Programme | `programme-v1.4` adopted | companion pin |
+| NUMGEN, OFN | **open** | recorded as open dependencies; rows unchanged |
+| Triadic | bridge-note notice open; v1.7 row as in §A | row at `triad-v1.7` |
+| DZT, ER-2B, RER, RRF, UVM | open | rows unchanged |
+
+**Additions to the candidate scope since 3 November:**
+- S3 paragraph: the stage-3a verdict with its chart-relative scope and LIT's grid-free bound (design record §8); the INF-014/015 sentence with its four limits; the `[ALG]` line P′(u) = α(c₄₀ + μu).
+- §8 artifacts: the stage-3 route check, the INF-014/015 hypothesis check and the bridge-note check, with hashes.
+- No DYAD RID for RECOG's c_J and c_7 (disposition record, item 3).
+
+**Not in v6.4.24, recorded for later:**
+- a sharper row-A constant built on `RECOG-ALG-A1C-JET-REMAINDER-BOUNDS` (optional; needs its own certificate);
+- the owner check of AZ §4.1.1 (answer to AZ by pipe; a DSN change only if the owner text is found unclear);
+- OPEN 20 stage 2b and the 3b design (design record §9).
+
+**Schedule proposed by the owner** (maintenance schedule, not a scientific requirement):
+1. change matrix and X4 RID names: with the candidate;
+2. candidate build (assertion-gated script, checks, negative controls) and draft release record on `claude/dyad-v6.4.24`;
+3. co-owner review; corrections; read-back;
+4. PI adoption, merge and tag.
+
+NUMGEN and OFN answers are included if they arrive before step 3; otherwise they stay open dependencies in the release record.
 
 ## D. Not in v6.4.24
 
