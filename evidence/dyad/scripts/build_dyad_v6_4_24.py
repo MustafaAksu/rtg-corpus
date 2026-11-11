@@ -15,6 +15,10 @@ Scope (records/dyad/DYAD_v6_4_24_BACKLOG.md, sections A, B, B2, C, C3; PI decisi
   REG  consumer register: Section 7.0 rows and Section 7 lines to RECOG v0.3.27, Genesis v2.10, Triadic v1.7,
        Programme v1.4, AZ v0.7; notice-table and Appendix F state sentences (N16-N21 filed through pipes/).
   ED   edition lines (title, date, status, supersedes, release record, Appendix A entry, Appendix G note, footer).
+r2 (co-owner review 5856200509 on PR #213, R1-R6): Section 7 claim-level import row for RECOG-THM-R9-SHARPENED-ROWS;
+  the P'(u) identity kept as a SESSION owner-run finding (no [ALG] tag); published works cited by their bibliographic data;
+  the stage-2b law stated as consistency of nine finite-radius slopes; Appendix F AZ rows re-read at az-v0.7; the Genesis
+  pin exceptions spelled out; version commentary removed from live tags (history in Appendix A).
 No compaction. No statement, constant or OPEN status changed; one displayed grade tag changed (X4, retag); four result RIDs
 and three artifact RIDs added. Every edit asserts exactly one occurrence of its old text in the current working text.
 usage: build_dyad_v6_4_24.py BASE OUT EDITLOG_JSON
@@ -56,26 +60,43 @@ S1 = (
 S3 = (
     "(B-an, analytic branch — state of work) `[SESSION]` `[v6.4.24]` **Sectorial pilot; no result is claimed.** Records: "
     "`records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md`, `records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md` and the "
-    "stage records (§8 DYAD-ART-OPEN20-AN-PILOT). In the complexified raw frame, $F=T^6$ has two formal invariant curves "
-    "$\\Gamma_\\pm$ ($w=a_\\pm z^2+\\cdots$), exchanged by $T$. By the pilot's decision rule, a certified nonzero sectorial jump of "
-    "one branch would give divergence of $\\Gamma_\\pm$ and of $\\log F$; it would not decide B-an or B-6. "
+    "stage records (§8 DYAD-ART-OPEN20-AN-PILOT); the literature was read through the LIT stream, whose records are named there. "
+    "In the complexified raw frame, $F=T^6$ has two formal invariant curves $\\Gamma_\\pm$ ($w=a_\\pm z^2+\\cdots$), exchanged by "
+    "$T$. By the pilot's decision rule, a certified nonzero sectorial jump of one branch would give divergence of $\\Gamma_\\pm$ and "
+    "of $\\log F$; it would not decide B-an or B-6. "
     "(i) Stage 1, exact (OWNER-RUN): normalized data $k=3$, $m=2$, $\\alpha=-\\tfrac{102}{19}-\\tfrac{16\\sqrt3}{19}i$ on both "
-    "branches; `[ALG]` the ratio is the same on both because $P'(u)=\\alpha\\,(c_{40}+\\mu u)$ identically, with $P$ the quadratic "
-    "whose roots are $a_\\pm$ and $c_{40}=[z^4]F_z$. "
-    "(ii) Literature basis, SESSION scope, through LIT: 3-summability of $\\Gamma_\\pm$ "
-    "(`lopezhernanz2012-summable-curves@vor`, with LIT INF-005 to INF-008); local orbit structure of the complexified germ along "
-    "$\\Gamma_\\pm$ (`lopezhernanz2025-flower@vor:Theorem 1.3`; `lopezhernanz2021-stable-manifolds@arxiv-v1:Theorem 5.1`, "
-    "`:Theorem 7.1`; LIT INF-014, INF-015). The orbit statements are conditional and carry open source questions (FL-Q1, IMRN-Q1, "
-    "an arXiv-v1 reading) and a separate identification step with the 3-sums; they are not `[THM]` imports. They concern the "
-    "complexified germ only: on the real slice $w=\\bar z$, $|w/z^2|=1/|z|\\to\\infty$, so no real-orbit statement follows. "
+    "branches. An exact owner-run finding at SESSION scope, not registered as a result of this ledger: $P'(u)=\\alpha\\,(c_{40}+\\mu u)$ "
+    "identically, with $P$ the quadratic whose roots are $a_\\pm$ and $c_{40}=[z^4]F_z$; this is why the ratio is the same on both branches. "
+    "(ii) Literature basis, SESSION scope: 3-summability of $\\Gamma_\\pm$ from L. López-Hernanz, *Summable formal invariant curves of "
+    "diffeomorphisms*, Ergodic Theory Dynam. Systems 32 (2012) 211–221, Corollary 5.2; local orbit structure of the complexified germ "
+    "along $\\Gamma_\\pm$ from L. López-Hernanz and R. Rosas, *A flower theorem in dimension two*, Ergodic Theory Dynam. Systems 45 "
+    "(2025) 3223–3254, Theorem 1.3, and from L. López-Hernanz, J. Raissy, J. Ribón and F. Sanz-Sánchez, *Stable manifolds of "
+    "two-dimensional biholomorphisms asymptotic to formal curves*, Int. Math. Res. Not. IMRN 2021, 12847–12887, Theorems 5.1 and 7.1 "
+    "(read from arXiv:1710.03728v1, not from the journal version). The orbit statements are conditional and carry open source questions "
+    "(FL-Q1, IMRN-Q1); the identification of the curves with the 3-sums is a separate SESSION step; none of this is a theorem-grade "
+    "import. The statements concern the complexified germ only: on the real slice $w=\\bar z$, $|w/z^2|=1/|z|\\to\\infty$, so no "
+    "real-orbit statement follows. "
     "(iii) Stage 2, `[NUM]`: the coefficients $a_2,\\dots,a_{216}$ of $\\Gamma_+$; the Borel scale read from them was INCONCLUSIVE. "
-    "(iv) Stage 3a, owner calculation: the a-priori operator route (LIT INF-009, INF-010) is negative — in the $m=2$ normalized "
-    "chart it admits only $|\\xi|<1.76\\cdot10^{-6}$, for every admissible sector opening and every scaling of the transversal "
-    "coordinate, far below any radius at which the jump is resolvable. "
-    "(v) Stage 2b, `[NUM]` scouting with no proved error bound: on one overlap the jump is numerically nonzero "
-    "($|\\Delta_Y|$ from $1.6\\cdot10^{-5}$ at $|\\xi_*|=0.45$ to $7.3\\cdot10^{-50}$ at $|\\xi_*|=0.24$) and decays like "
-    "$e^{-2\\pi T}$ in the Fatou time $T$ of the restricted map. "
+    "(iv) Stage 3a, owner calculation: the a-priori operator route (explicit constants for López-Hernanz 2012, Theorems 3.1 and 4.2, "
+    "written out by LIT) is negative — in the $m=2$ normalized chart it admits only $|\\xi|<1.76\\cdot10^{-6}$, for every admissible "
+    "sector opening and every scaling of the transversal coordinate, far below any radius at which the jump is resolvable. "
+    "(v) Stage 2b, `[NUM]` scouting on one branch ($\\Gamma_+$), one overlap ($S_0\\cap S_1$) and one direction "
+    "($\\arg\\xi_*=\\pi/6$), with no certified truncation bound: the two sectorial values differ numerically, "
+    "$|\\Delta_Y|=|\\Delta w|/|z_*|^2$ from $1.6\\cdot10^{-5}$ at $|\\xi_*|=0.45$ to $7.3\\cdot10^{-50}$ at $|\\xi_*|=0.24$. The nine "
+    "local slopes of $\\ln|\\Delta_Y|$ between the ten radii, taken against the Fatou time $T$ of the restricted map, are consistent "
+    "with $e^{-2\\pi T}$ after the stated prefactor (ratio $0.984$ to $0.9988$); no asymptotic exponent is certified. "
     "None of (i)–(v) is a theorem about B-an or B-6; both stay ACTIVE, and no certification run is authorized.  \n")
+
+IMP = (
+    "\n- [RID: RECOG-THM-R9-SHARPENED-ROWS] :: the statement of RECOG-THM-R9-MEMORY holds with $(C_2',q_{\\max})=(259.2,\\tfrac1{400})$ on "
+    "$|z|\\le\\tfrac1{20}$ and $(81.49,\\tfrac1{1600})$ on $|z|\\le\\tfrac1{40}$, rows not mixed :: RTG_RELATIONAL_RECOGNITION_DSN v0.3.26 "
+    "§6.13a :: the R9 constant of DYAD-THM-OPEN21-SHARP-ROWS (§6.14) :: scope of RECOG-THM-R9-MEMORY, per row; the $-$C7 rows are not imported\n"
+    "  Source status: `[THM]` in the inspected source.\n"
+    "  Depends on: RECOG-THM-R9-MEMORY and RECOG-ALG-R9-SUM-LEMMA (RECOG's proof); no local bridge is required (same chart, rows and "
+    "observable as the RECOG-THM-R9-MEMORY import above).\n"
+    "  Verification: source statement inspected at `recog-v0.3.26` and read from the tag by DYAD-ART-OPEN21-SHARP-ROWS (gate G0); RECOG's "
+    "certificate not rerun.\n"
+    "  Synchronization: the entry is byte-identical at `recog-v0.3.27`; custody RECOG. The RECOG-THM-R9-MEMORY row above keeps its pin.")
 
 A_ENTRY = (
     "### v6.4.24 — 11 November 2026 — Draft candidate\n\n"
@@ -83,16 +104,17 @@ A_ENTRY = (
     "$S_B=\\tfrac{6357}{1000}$ (adopted $K_A=\\tfrac{8831}{250}$, $K_B=\\tfrac{883}{100}$). `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` "
     "is unchanged.\n"
     "- **RID registrations (Atlas DYAD.X4):** `DYAD-ALG-NOT-AREA-PRESERVING` (§6.1; displayed tag retagged `[THM]`→`[ALG]`, a direct "
-    "Jacobian computation, content unchanged), `DYAD-ALG-P6-LINEAR-ORDER`, `DYAD-ALG-HOMOLOGICAL-RESONANCE` (§6.6). The cubic radial "
+    "Jacobian computation, content unchanged, §1 and §6.1), `DYAD-ALG-P6-LINEAR-ORDER`, `DYAD-ALG-HOMOLOGICAL-RESONANCE` (§6.6). The cubic radial "
     "rate across $p$ stays a statement-level import of `RECOG-ALG-NU3-CLOSED-FORM` without a Dyadic RID.\n"
     "- **`DYAD-DEF-PRIMITIVE-MAP`:** the bare \"provisional\" is replaced by a `[scope:]` note (the Programme's reference map; "
     "generator selection open). Definition, RID and imports unchanged.\n"
     "- **Sources:** `DYAD-ART-BRIDGE-NOTE` recovered (PI-supplied 3 Nov 2026; path and hash in §8) with its exact replay "
     "`DYAD-ART-BRIDGE-NOTE-CHECK`.\n"
-    "- **OPEN 20:** one `[SESSION]` paragraph on the state of the analytic-branch sectorial pilot (stages 1, 2, 3a, 2b; literature "
-    "basis through LIT); `DYAD-ART-OPEN20-AN-PILOT`. B-an and B-6 stay ACTIVE; no result is claimed.\n"
-    "- **Consumer register:** §7.0 and §7 to RECOG v0.3.27, Genesis v2.10, Triadic v1.7, Programme v1.4, AZ v0.7; N16–N21 filed "
-    "through `pipes/` (Genesis and AZ answered). NUMGEN and OFN had not answered the v6.4.23 notice.\n"
+    "- **OPEN 20:** one `[SESSION]` paragraph on the state of the analytic-branch sectorial pilot (stages 1, 2, 3a, 2b; published literature "
+    "basis, read through LIT); `DYAD-ART-OPEN20-AN-PILOT`. B-an and B-6 stay ACTIVE; no result is claimed.\n"
+    "- **Imports and register:** claim-level import row `RECOG-THM-R9-SHARPENED-ROWS` (§7); §7.0 and §7 to RECOG v0.3.27, Genesis "
+    "v2.10, Triadic v1.7, Programme v1.4, AZ v0.7; Appendix F re-read at `az-v0.7` (the v0.6 crosswalk is in `dyad-v6.4.23`); N16–N21 "
+    "filed through `pipes/` (Genesis and AZ answered). NUMGEN and OFN had not answered the v6.4.23 notice.\n"
     "- No statement, constant or OPEN status changed; four result RIDs and three artifact RIDs added. Backlog "
     "`records/dyad/DYAD_v6_4_24_BACKLOG.md`; release record `" + REC + "`; predecessor tag `dyad-v6.4.23`.\n\n")
 
@@ -127,7 +149,7 @@ E1 = (
     "\n| `DYAD-THM-OPEN21-SHARP-ROWS` | THM `[assuming: RECOG-THM-R9-SHARPENED-ROWS]` — new in v6.4.24 | as "
     "DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER; rows not mixed | §6.14 | DYAD-ART-OPEN21-SHARP-ROWS | `325c2a8a…30ef` | exact rational "
     "| constants $S_A$, $S_B$ only; $K'_j$ and R9 at statement level |\n"
-    "| `DYAD-ALG-NOT-AREA-PRESERVING` | ALG — RID new in v6.4.24 (tag retagged from THM) | the map $T$, globally | §6.1 | "
+    "| `DYAD-ALG-NOT-AREA-PRESERVING` | ALG — RID new in v6.4.24 | the map $T$, globally | §6.1 | "
     "DYAD-ART-BRIDGE-NOTE-CHECK (gate B2) | `a0382cea…4734` | exact symbolic (sympy) | Jacobian determinant identity |\n"
     "| `DYAD-ALG-P6-LINEAR-ORDER` | ALG — RID new in v6.4.24 | linear part at $P_1$ | §6.6 | elementary; DYAD-ART-BRIDGE-NOTE-CHECK "
     "(gate B3: $\\lambda^6=1$, $\\lambda^3=-1$) | `a0382cea…4734` | exact symbolic (sympy) | order of $\\lambda$ only |\n"
@@ -175,23 +197,26 @@ EDITS = [
 ("S1-3", "Section 6.14 new result",
  "`[OPEN]` `[v6.4.17]` **Not established:** an unconditional version (independent of R9);",
  S1 + "`[OPEN]` `[v6.4.17]` **Not established:** an unconditional version (independent of R9);"),
+("R1-1", "Section 7 claim-level import row",
+ "Used by DYAD-THM-OPEN3-ASYMPTOTIC-PHASE (T1, memory law) and DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER. Custody: RECOG.",
+ "Used by DYAD-THM-OPEN3-ASYMPTOTIC-PHASE (T1, memory law) and DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER. Custody: RECOG." + IMP),
 # ---- X4
 ("X4-1", "Section 1 readout, not area-preserving",
  "`[THM]` The map is not globally area-preserving:\n",
- "`[ALG]` `DYAD-ALG-NOT-AREA-PRESERVING` `[v6.4.24: retagged from [THM]; direct Jacobian computation; content unchanged]` The map is not globally area-preserving:\n"),
+ "`[ALG]` `DYAD-ALG-NOT-AREA-PRESERVING` The map is not globally area-preserving:\n"),
 ("X4-2", "Section 6.1 RID, not area-preserving",
  "`[THM]` Map is not globally area-preserving. The equality",
- "`[ALG]` [RID: DYAD-ALG-NOT-AREA-PRESERVING] `[v6.4.24: RID registered; retagged from [THM]; direct Jacobian computation; content unchanged]` Map is not globally area-preserving. The equality"),
+ "`[ALG]` [RID: DYAD-ALG-NOT-AREA-PRESERVING] Map is not globally area-preserving. The equality"),
 ("X4-3", "Section 6.6 RID, p=6 linear order",
  "`[ALG]` `[v6.4.20: retagged from [THM]; content stated exactly]` **$p=6$ linear order.**",
- "`[ALG]` [RID: DYAD-ALG-P6-LINEAR-ORDER] `[v6.4.20: retagged from [THM]; content stated exactly]` `[v6.4.24: RID registered]` **$p=6$ linear order.**"),
+ "`[ALG]` [RID: DYAD-ALG-P6-LINEAR-ORDER] `[v6.4.20: retagged from [THM]; content stated exactly]` **$p=6$ linear order.**"),
 ("X4-4", "Section 6.6 RID, homological resonance",
  "`[ALG]` `[v6.4.20]` **Homological resonance is a separate condition.**",
- "`[ALG]` [RID: DYAD-ALG-HOMOLOGICAL-RESONANCE] `[v6.4.20]` `[v6.4.24: RID registered]` **Homological resonance is a separate condition.**"),
+ "`[ALG]` [RID: DYAD-ALG-HOMOLOGICAL-RESONANCE] `[v6.4.20]` **Homological resonance is a separate condition.**"),
 # ---- B2
 ("B2-1", "primitive map label",
  "`[DEF]` `DYAD-DEF-PRIMITIVE-MAP` `[v6.4.11, provisional]` **Dyad map.**",
- "`[DEF]` `DYAD-DEF-PRIMITIVE-MAP` `[v6.4.11]` `[scope: the Programme's reference map (Programme Overview v1.4 §5); the selection of the generator is open (`RTG-OPEN-GENERATOR-SELECTION`, OPEN-P0). v6.4.24: this note replaces the bare \"provisional\"; definition, RID and imports unchanged]` **Dyad map.**"),
+ "`[DEF]` `DYAD-DEF-PRIMITIVE-MAP` `[v6.4.11]` `[scope: the Programme's reference map (Programme Overview v1.4 §5); the selection of the generator is open (`RTG-OPEN-GENERATOR-SELECTION`, OPEN-P0)]` **Dyad map.**"),
 ("B2-2", "bridge note source",
  "- [RID: DYAD-ART-BRIDGE-NOTE] :: `dyad_triad_antisymmetric_bridge_v1_1.md` :: Bridge note v1.1: antisymmetric odd-channel identity, $\\mu_p=p\\bar\\lambda\\nu_3^{(1,p)}$, protection matrix, Genesis lift obstruction :: `[ALG]`",
  "- [RID: DYAD-ART-BRIDGE-NOTE] :: `upload/dyad-bridge-note/dyad_triad_antisymmetric_bridge_v1_1.md` (SHA-256 `5ddebfe46b5572761a5154a05712fbcfe4e675f912430ee7d6bfcf0d93f4e875`; `[v6.4.24]` PI-supplied 3 Nov 2026, no earlier hash on record, identified by name and content) :: Bridge note v1.1: antisymmetric odd-channel identity, $\\mu_p=p\\bar\\lambda\\nu_3^{(1,p)}$, protection matrix, Genesis lift obstruction; its §1 prints $\\Delta_cT_\\eta$ in the $K=1$ form (general $K$: $2cb+2Ke^\\rho\\sinh(ca)-2K\\cos\\eta\\sin(cb)$) :: `[ALG]`; replay DYAD-ART-BRIDGE-NOTE-CHECK"),
@@ -225,7 +250,7 @@ EDITS = [
  "| Programme Overview | v1.4 | ADOPTED 4 Nov 2026 | `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0` | tag `programme-v1.4` | SG-PROG-1–4; `RTG-OPEN-GENERATOR-SELECTION` (both unchanged from v1.3); its Dyadic rows read at `dyad-v6.4.23` |"),
 ("REG-5", "AZ row",
  "| AZ | v0.6 | June 2026 (project copy) | not recorded in this ledger | — | string crosswalk (Appendix F) |",
- "| AZ | v0.7 | ADOPTED 11 Nov 2026 (corrections only) | `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` | tag `az-v0.7`; AZ release record | reference consumer; its `[import-ref]` rows pin `dyad-v6.4.23` and use owner RIDs; string crosswalk of v0.6 in Appendix F |"),
+ "| AZ | v0.7 | ADOPTED 11 Nov 2026 (corrections only) | `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` | tag `az-v0.7`; AZ release record | reference consumer; its `[import-ref]` rows pin `dyad-v6.4.23` and use owner RIDs; string crosswalk in Appendix F |"),
 # ---- REG: Section 7 text
 ("REG-6", "programme context line", "- `RTG_PROGRAMME_OVERVIEW_v1.3` — SG-PROG-1 through SG-PROG-4;", "- `RTG_PROGRAMME_OVERVIEW_v1.4` — SG-PROG-1 through SG-PROG-4;"),
 ("REG-7", "RECOG context line",
@@ -234,9 +259,12 @@ EDITS = [
 ("REG-8", "Triadic export line",
  "- `RTG_TRIADIC_BIRTH_LIFT_DSN` (v1.6.1, adopted 19 Oct 2026) — §7.1 imports `DYAD-THM-C21`, `DYAD-ALG-BRIDGE-LEMMA`, `DYAD-DEF-BRIDGE-EXPORT-CONTRACT` item 1, `DYAD-ALG-PROTECTION-MATRIX` and `DYAD-DEF-PRIMITIVE-MAP`, pinned to Dyadic v6.4.13 (N2 answered).",
  "- `RTG_TRIADIC_BIRTH_LIFT_DSN` (v1.7, adopted 3 Nov 2026) — §7.1 imports `DYAD-THM-C21`, `DYAD-ALG-BRIDGE-LEMMA`, `DYAD-DEF-BRIDGE-EXPORT-CONTRACT` item 1, `DYAD-ALG-PROTECTION-MATRIX` and `DYAD-DEF-PRIMITIVE-MAP`, repinned to Dyadic v6.4.23 after a claim-level re-read (N2 answered at v1.6.1). `DYAD-ALG-KP-FRAME-SCALE` and the isolated-dyad results are not imported."),
-("REG-9", "Genesis export line",
+("REG-9", "Genesis export line, edition",
  "- `RTG_GENESIS_GEOMETRY_DSN` (v2.9, adopted 25 Oct 2026) — imports",
- "- `RTG_GENESIS_GEOMETRY_DSN` (v2.10, adopted 3 Nov 2026; its `DYAD-ALG-NU5-P5` row is pinned at `dyad-v6.4.23` §6.11) — imports"),
+ "- `RTG_GENESIS_GEOMETRY_DSN` (v2.10, adopted 3 Nov 2026) — imports"),
+("REG-9b", "Genesis export line, pins",
+ "Genesis pins Dyadic v6.4.13 for these rows; its repin is deferred (R-1). v2.9 adds a scoped import of `DYAD-THM-SMOOTH-EMBEDDING` and `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` at `dyad-v6.4.22` for its §6.3c G-20 note only.",
+ "Genesis pins Dyadic v6.4.13 for these rows (historical proof pins; no bulk repin), except `DYAD-ALG-NU5-P5`, which it pins at `dyad-v6.4.23` (§6.11, field label). It also has a scoped import of `DYAD-THM-SMOOTH-EMBEDDING` and `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` at `dyad-v6.4.22` for its §6.3c G-20 note only."),
 ("REG-10", "RECOG consumer line",
  "acceptance recorded from v0.3.2 and retained through v0.3.26; v0.3.26 also carries the NF-REM certificate values and the (D5) row-A constants of `DYAD-THM-LPHASE-ROWA-REMAINDER` under `[assuming:]` (registered here as `DYAD-THM-NF-REM-C7-SHARP` and `DYAD-THM-LPHASE-ROWA-BRIDGE`; whether RECOG drops the qualifier is RECOG's decision, after its re-check with $c'_Q=0.36916$).",
  "acceptance recorded from v0.3.2 and retained through v0.3.27; v0.3.27 imports `DYAD-THM-NF-REM-C7-SHARP`, `DYAD-THM-LPHASE-ROWA-BRIDGE` and `DYAD-THM-OPEN3-SPIRAL-REM` (re-check with $c'_Q=0.36916$ done by RECOG; its known-$a$ chain carries no (D5) `[assuming:]`). RECOG's own `RECOG-ALG-A1C-JET-REMAINDER-BOUNDS` ($c_J\\le0.500819$, $c_7\\le100.231$ on $q\\le\\tfrac{256}{140625}$) is not registered here; the constants of `DYAD-THM-LPHASE-ROWA-REMAINDER` are unchanged."),
@@ -244,9 +272,15 @@ EDITS = [
 ("REG-11", "notice table sentence",
  "Notices N16–N21 are prepared and not yet sent (`records/dyad/DYAD_NOTICES_N16_N21.md`, routed through the PI); their states per recipient (sent, received, statement accepted, adopted use) are kept there and entered in this table when a state is recorded.",
  "`[v6.4.24]` Notices N16–N21 were filed on 3 November 2026 as items in `pipes/<STREAM>/` (per-recipient disposition in `records/dyad/DYAD_NOTICES_N16_N21.md`); Genesis (v2.10) and AZ (v0.7) have answered. From v6.4.23 on, notices are pipe items: their states are read from `pipes/<STREAM>/INDEX.md` and are not copied into this table."),
-("REG-12", "Appendix F state sentence",
- "consumer repins are requested by notice N17 (prepared, not yet sent; `records/dyad/DYAD_NOTICES_N16_N21.md`).",
- "consumer repins were requested by notice N17 (filed through `pipes/` on 3 November 2026; `records/dyad/DYAD_NOTICES_N16_N21.md`). `[v6.4.24]` AZ answered at `az-v0.7`: every Dyadic-pattern string it prints is an owner RID, except the closed lifecycle item `DYAD-OPEN-B5-ALLP` and one occurrence of `DYAD-ALG-Q3-CANCEL` in its Appendix A change entry; the AZ rows below record the v0.6 reading and are kept as history. DZT has not answered."),
+("REG-12", "Appendix F intro",
+ "`[DEF]` `[v6.4.20]` Every Dyadic-pattern string printed in DZT v0.8 (§7) and AZ v0.6 (§§4.1, 8), classified. Classes: exact match; component of `DYAD-THM-Q403-PHASELAW`; historical note label; artifact; unmatched. No alias is created by this table; consumer repins are requested by notice N17 (prepared, not yet sent; `records/dyad/DYAD_NOTICES_N16_N21.md`).",
+ "`[DEF]` `[v6.4.20]` Every Dyadic-pattern string printed in DZT v0.8 (§7) and in AZ v0.7 (§§1.2, 4.1, 6, 8 and its Appendix A), classified. Classes: exact match; component of `DYAD-THM-Q403-PHASELAW`; historical note label; artifact; unmatched; historical mention. No alias is created by this table. Consumer repins were requested by notice N17 (filed through `pipes/` on 3 November 2026; `records/dyad/DYAD_NOTICES_N16_N21.md`): AZ answered at `az-v0.7`; DZT has not answered, and its rows are as read at v0.8."),
+("F-1", "Appendix F AZ rows at az-v0.7",
+ '| AZ v0.6 §8 | DYAD-THM-RAW-CUBIC | exact match | `DYAD-THM-RAW-CUBIC` | formula recovered and algebraically verified (P1, FA-08); identity with the historical proposition not yet established (Appendix E) |\n| AZ v0.6 §8 | DYAD-ALG-P567-LEDGER | exact match | `DYAD-ALG-P567-LEDGER` | — |\n| AZ v0.6 §8 | DYAD-ALG-GLATTICE5 | exact match | `DYAD-ALG-GLATTICE5` | — |\n| AZ v0.6 §8 | DYAD-OPEN-P-RESONANCE (sub-item labels) | exact match (lifecycle RID with free-text sub-labels) | `DYAD-OPEN-P-RESONANCE` | sub-labels are not identifiers |\n| AZ v0.6 §8 | DYAD-ALG-VANISH-B2, -B3, -B4 | exact match | the three vanishing RIDs | — |\n| AZ v0.6 §8 | DYAD-ALG-DIRECT-WEIGHT | exact match | `DYAD-ALG-DIRECT-WEIGHT` | — |\n| AZ v0.6 §8 | DYAD-ALG-CROSS-IDENTITY | exact match | `DYAD-ALG-CROSS-IDENTITY` | — |\n| AZ v0.6 §8 | DYAD-ALG-P6-FACEFLUX | exact match | `DYAD-ALG-P6-FACEFLUX` | — |\n| AZ v0.6 §4.1 | DYAD-OPEN-B5-ALLP | exact match | `DYAD-OPEN-B5-ALLP` | — |\n| AZ v0.6 §4.1 | DYAD-ART-B5-SECULAR | exact match | `DYAD-ART-B5-SECULAR` | — |\n| AZ v0.6 §8 | DYAD-ALG-Q3-CANCEL | unmatched | statement = the degree-2 $q=3,(0,2)$ cancellation (§6.11 micro-certification, no RID in v6.4.19) | `DYAD-ALG-Q3-DEG2-CANCEL` (registered at v6.4.20 adoption) covers the statement; no alias is created; AZ may repin |',
+ "| AZ v0.7 §4.1, §8 | DYAD-THM-RAW-CUBIC | exact match | `DYAD-THM-RAW-CUBIC` | AZ states it as the raw one-step coefficient for $p\\ge3$, with the owner caveat; identity with the historical proposition not established (Appendix E) |\n| AZ v0.7 §4.1, §8 | DYAD-ALG-P567-LEDGER | exact match | `DYAD-ALG-P567-LEDGER` | — |\n| AZ v0.7 §1.2, §4.1, §8 | DYAD-ALG-GLATTICE5 | exact match | `DYAD-ALG-GLATTICE5` | — |\n| AZ v0.7 §1.2, §4.1, §8 | DYAD-OPEN-P-RESONANCE | exact match (lifecycle RID) | `DYAD-OPEN-P-RESONANCE` | sub-item labels are no longer printed as identifiers |\n| AZ v0.7 §1.2, §4.1, §8 | DYAD-ALG-VANISH-B2, -B3, -B4 | exact match | the three vanishing RIDs | — |\n| AZ v0.7 §4.1, §8 | DYAD-ALG-DIRECT-WEIGHT | exact match | `DYAD-ALG-DIRECT-WEIGHT` | — |\n| AZ v0.7 §4.1, §8 | DYAD-ALG-CROSS-IDENTITY | exact match | `DYAD-ALG-CROSS-IDENTITY` | — |\n| AZ v0.7 §4.1, §8 | DYAD-ALG-P6-FACEFLUX | exact match | `DYAD-ALG-P6-FACEFLUX` | — |\n| AZ v0.7 §1.2, §4.1, §8 | DYAD-ALG-B5-ALLP-NONVANISHING | exact match | `DYAD-ALG-B5-ALLP-NONVANISHING` | the result RID that closes `DYAD-OPEN-B5-ALLP` |\n| AZ v0.7 §4.1, §8 | DYAD-OPEN-B5-ALLP | exact match (closed lifecycle item, untagged in this ledger) | `DYAD-OPEN-B5-ALLP` | cited as closed |\n| AZ v0.7 §4.1 | DYAD-ART-B5-SECULAR | exact match | `DYAD-ART-B5-SECULAR` | — |\n| AZ v0.7 §4.1, §8 | DYAD-ALG-Q3-DEG2-CANCEL | exact match | `DYAD-ALG-Q3-DEG2-CANCEL` | — |\n| AZ v0.7 §4.1, §6, §8 | DYAD-THM-Q403-PHASELAW | exact match | `DYAD-THM-Q403-PHASELAW` | registered by AZ as closed |\n| AZ v0.7 Appendix A | DYAD-ALG-Q3-CANCEL | historical mention | none; not cited as an RID | one occurrence, in AZ's own change entry |"),
+("F-2", "Appendix F table header",
+ "| Consumer (pin v6.4.8.1) | String as printed | Class | Dyadic reading | Note |",
+ "| Consumer (DZT pins v6.4.8.1; AZ pins v6.4.23) | String as printed | Class | Dyadic reading | Note |"),
 ]
 
 

@@ -1,7 +1,7 @@
 {
  "all_pass": true,
  "base_sha256": "9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb",
- "candidate_sha256": "7f22ea3511d24170036dc2ec318d630f1d95d7e007deec3ad82ec7623a882327",
+ "candidate_sha256": "014e1ac3be8c21d0e70afb72f23f7592528b01ffc5cd6390628721cc69e98958",
  "gates": {
   "C0": true,
   "C1": true,
@@ -33,7 +33,7 @@
   },
   "C2": {
    "appendix_a_kept": true,
-   "edits": 34,
+   "edits": 38,
    "reverse_equals_base": true,
    "reverse_failures": []
   },
@@ -48,7 +48,7 @@
     "DYAD-THM-OPEN21-SHARP-ROWS"
    ],
    "grade_net_change": {
-    "`[ALG]`": 4,
+    "`[ALG]`": 3,
     "`[DEF]`": 1,
     "`[NUM]`": 3,
     "`[SESSION]`": 2,
@@ -71,7 +71,8 @@
     "DYAD-ART-BRIDGE-NOTE-CHECK",
     "DYAD-ART-OPEN20-AN-PILOT",
     "DYAD-ART-OPEN21-SHARP-ROWS",
-    "DYAD-THM-OPEN21-SHARP-ROWS"
+    "DYAD-THM-OPEN21-SHARP-ROWS",
+    "RECOG-THM-R9-SHARPENED-ROWS"
    ],
    "rid_tags_removed": []
   },

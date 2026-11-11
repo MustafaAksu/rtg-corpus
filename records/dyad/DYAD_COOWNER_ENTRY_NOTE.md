@@ -20,7 +20,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 | Thread | Records | State |
 |---|---|---|
-| v6.4.24 maintenance edition | `records/dyad/DYAD_v6_4_24_BACKLOG.md`; draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`; branch `claude/dyad-v6.4.24` | candidate r1 built (`7f22ea35…2327`), checks and controls pass; co-owner review pending; not adopted |
+| v6.4.24 maintenance edition | `records/dyad/DYAD_v6_4_24_BACKLOG.md`; draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`; branch `claude/dyad-v6.4.24` | candidate r2 (`014e1ac3…8958`) after the co-owner's r1 review (PR #213, `5856200509`, R1–R6); read-back pending; not adopted |
 | S1, OPEN 21 on the sharpened R9 rows | `records/dyad/DYAD_S1_OPEN21_SHARP_ROWS_DESIGN.md`; `evidence/dyad/s1-open21-sharp/` | accepted by the co-owner; enters v6.4.24 as `DYAD-THM-OPEN21-SHARP-ROWS` |
 | OPEN 20 analytic branch, sectorial pilot | `records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md` (§7 stage 1, §8 stage 3a, §9 inputs to 3b); `…_STAGE2_SCOUTING_NUM.md`; `…_STAGE2B_JUMP_SCOUTING_NUM.md`; `…_LH2012_OWNER_ASSESSMENT.md` (§5, §6); `DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md` | stage 3a done, negative; stage 2b done (`[NUM]`: jump numerically nonzero); 3b design not written; 3c not authorized |
 | Inbox rounds | `DYAD_OWNER_DISPOSITION_INBOX_20261030.md` with its reconciliation; `DYAD_INBOX_20261111_OWNER_DISPOSITION.md` | both closed |
@@ -61,7 +61,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read `DYAD_v6_4_24_BACKLOG.md` §C3 and the design record §9. Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **v6.4.24 review cycle.** Candidate r1 is on `claude/dyad-v6.4.24` (34 edits; gates C0–C11 pass; controls Q1–Q12 as expected). Next: the co-owner's change-focused review (decision points in the release record §4); corrections as r2 if asked; read-back; then the PI's adoption, the status-lines-only transform, merge and tag. **The branch must not be merged before adoption:** it carries a DRAFT DSN.
+1. **v6.4.24 review cycle.** Candidate r2 is on `claude/dyad-v6.4.24` (38 edits; gates C0–C11 pass; controls Q1–Q17 as expected; release record §4 lists R1–R6). Next: the co-owner's read-back of r2; then the PI's adoption, the status-lines-only transform, merge and tag. **The branch must not be merged before adoption:** it carries a DRAFT DSN.
 2. **3b design note** for OPEN 20: certificate of Δ ≠ 0 at \|ξ*\| ≈ 0.40–0.45 (stage-2b record §6). First the same scouting on the second overlap class (S₁ ∩ S₂); then the local-enclosure obligation (invariant tube around a truncated series at \|ξ\| ≈ 0.1, to about 10⁻¹⁰). Acceptance: the note states every proof obligation and which are computer-checked; co-owner review; PI decision. No certification run.
 3. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
 

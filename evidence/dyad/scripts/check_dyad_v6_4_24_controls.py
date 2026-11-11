@@ -28,6 +28,11 @@ CONTROLS = [
  ("Q10", "C11", "the Triadic hash altered", lambda s: one(s, "506f3403628ca01d5a904f885df055d9bfbdf1ef5e474e24e83d4797c122e64a", "506f3403628ca01d5a904f885df055d9bfbdf1ef5e474e24e83d4797c122e64b")),
  ("Q11", "C5", "the R9 assumption dropped from the new result", lambda s: one(s, "`[THM]` `[assuming: RECOG-THM-R9-SHARPENED-ROWS]` [RID: DYAD-THM-OPEN21-SHARP-ROWS]", "`[THM]` [RID: DYAD-THM-OPEN21-SHARP-ROWS]")),
  ("Q12", "C9", "the stage-2b figure overstated (1.6e-5 -> 1.6e-3)", lambda s: one(s, "1.6\\cdot10^{-5}", "1.6\\cdot10^{-3}")),
+ ("Q13", "C3", "version commentary put back into a live tag (r2 R6)", lambda s: one(s, "`[ALG]` [RID: DYAD-ALG-NOT-AREA-PRESERVING] Map is", "`[ALG]` [RID: DYAD-ALG-NOT-AREA-PRESERVING] `[v6.4.24: RID registered]` Map is")),
+ ("Q14", "C10", "an AZ v0.6 row put back into Appendix F (r2 R4)", lambda s: one(s, "| AZ v0.7 §4.1 | DYAD-ART-B5-SECULAR |", "| AZ v0.6 §4.1 | DYAD-ART-B5-SECULAR |")),
+ ("Q15", "C9", "the stage-2b slope range misquoted (r2 R3)", lambda s: one(s, "ratio $0.984$ to $0.9988$", "ratio $0.994$ to $0.9988$")),
+ ("Q16", "C3", "the Section 7 import tag removed (r2 R1)", lambda s: one(s, "- [RID: RECOG-THM-R9-SHARPENED-ROWS] ::", "- RECOG-THM-R9-SHARPENED-ROWS ::")),
+ ("Q17", "C4", "the stage-2b law stated without qualification (r2 R3)", lambda s: one(s, "are consistent with $e^{-2\\pi T}$ after the stated prefactor", "show that the jump decays like $e^{-2\\pi T}$")),
 ]
 
 

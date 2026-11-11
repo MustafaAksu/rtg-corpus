@@ -43,6 +43,58 @@
    ],
    "what": "the stage-2b figure overstated (1.6e-5 -> 1.6e-3)"
   },
+  "Q13": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "version commentary put back into a live tag (r2 R6)"
+  },
+  "Q14": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C10",
+   "failing_gates": [
+    "C2",
+    "C4",
+    "C10"
+   ],
+   "what": "an AZ v0.6 row put back into Appendix F (r2 R4)"
+  },
+  "Q15": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C9",
+   "failing_gates": [
+    "C2",
+    "C3",
+    "C9"
+   ],
+   "what": "the stage-2b slope range misquoted (r2 R3)"
+  },
+  "Q16": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "the Section 7 import tag removed (r2 R1)"
+  },
+  "Q17": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C4",
+   "failing_gates": [
+    "C2",
+    "C4"
+   ],
+   "what": "the stage-2b law stated without qualification (r2 R3)"
+  },
   "Q2": {
    "as_expected": true,
    "exit": 1,

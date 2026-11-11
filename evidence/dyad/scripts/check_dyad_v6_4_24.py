@@ -5,7 +5,8 @@ C0  identities: base = v6.4.23 (9f874ccc...); candidate = fresh build of the bas
 C1  determinism: two builds in clean directories are byte-identical (file and edit log)
 C2  confinement: undoing every logged edit (new -> old, each new text exactly once, in reverse order) gives the base
     byte for byte; Appendix A of the base is kept byte for byte (one entry inserted)
-C3  science invariants: every RID tag and Dyadic RID string of the base is kept; exactly the seven declared RIDs are added;
+C3  science invariants: every RID tag and Dyadic RID string of the base is kept; exactly the seven declared RIDs and the one
+    Section 7 import tag are added; no "v6.4.24: ..." commentary sits in a live tag (history is in Appendix A);
     the only grade tags removed are the two [THM] tags of the declared retag (X4-1, X4-2) and every added grade tag belongs
     to a logged edit; every removed math span belongs to the old text of a logged edit and every added one to its new text
 C4  constants: the adopted OPEN 21 constants occur at least as often as in the base; S_A = 492/25 and S_B = 6357/1000 are the
@@ -21,7 +22,8 @@ C8  cited evidence: every script, output and source hash cited by the new Sectio
 C9  spot checks of the registered and recorded statements (exact): det DT; order of lambda; the resonance condition;
     P'(u) = alpha (c40 + mu u); the stage-2b figures quoted in Section 2 against jump_scout.json; the bound 1.76e-6
     recomputed from the INF-010 formula with K_2, K_4 rounded down
-C10 Appendix F: every Dyadic-pattern string of AZ v0.7 is an owner RID, or one of the two exceptions named in the text
+C10 Appendix F: its AZ rows list exactly the Dyadic-pattern strings of AZ v0.7; each is an owner RID, except the closed
+    lifecycle item DYAD-OPEN-B5-ALLP and the historical mention DYAD-ALG-Q3-CANCEL; no AZ v0.6 row is left
 C11 register: the Section 7.0 hashes of RECOG v0.3.27, Genesis v2.10, Triadic v1.7, Programme v1.4 and AZ v0.7 equal
     BASELINE.md and the file at the tag
 Exit 0 all pass / 1 any fail / 3 crash.
@@ -56,6 +58,7 @@ REGISTER = {  # study row in BASELINE.md -> (tag, file, sha)
  "TRIAD": ("triad-v1.7", "dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md", "506f3403628ca01d5a904f885df055d9bfbdf1ef5e474e24e83d4797c122e64a"),
  "Programme": ("programme-v1.4", "dsn/RTG_PROGRAMME_OVERVIEW.md", "37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0"),
  "AZ": ("az-v0.7", "dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md", "2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94")}
+IMPORT_RIDS = ["RECOG-THM-R9-SHARPENED-ROWS"]   # the Section 7 claim-level import row (Methodology 4.3 format)
 GRADE = re.compile(r"`\[(?:THM-ALG via IA|ALG|THM|DEF|CAND|ENG|NUM|HYP|OBS|OPEN|COR|FAIL|RETRACTED|SESSION)\]`")
 
 
@@ -119,7 +122,7 @@ def main():
     rid = lambda s: re.findall(r"\[RID:\s*([^\]]+)\]", s)
     dy = lambda s: set(re.findall(r"(?<![A-Za-z0-9-])DYAD-(?:ALG|THM|DEF|OPEN|ART|CAND|NUM|CF)-[A-Z0-9]+(?:-[A-Z0-9]+)*", s))
     rb, rc = collections.Counter(rid(B)), collections.Counter(rid(C))
-    rid_ok = not (rb - rc) and sorted((rc - rb).elements()) == sorted(NEW_RIDS)
+    rid_ok = not (rb - rc) and sorted((rc - rb).elements()) == sorted(NEW_RIDS + IMPORT_RIDS)
     dy_ok = dy(B) <= dy(C) and dy(C) - dy(B) == set(NEW_RIDS)
     olds, news, gdecl, gold = collections.Counter(), collections.Counter(), collections.Counter(), collections.Counter()
     for e, w, o, n in EDITS:
@@ -135,8 +138,12 @@ def main():
         net.update(GRADE.findall(n)); net.subtract(GRADE.findall(o))
     grade_ok = retag and all(gc[k] - gb[k] == net[k] for k in set(gc) | set(gb) | set(net))
     xo = {e: (o, n) for e, w, o, n in EDITS if e in ("X4-1", "X4-2")}
-    retag_decl = all(o.startswith("`[THM]` ") and n.startswith("`[ALG]` ") and "retagged from [THM]" in n for o, n in xo.values()) and len(xo) == 2
-    G["C3"] = rid_ok and dy_ok and math_ok and grade_ok and retag_decl
+    a_new = next(n for e, w, o, n in EDITS if e == "ED-8")
+    retag_decl = (all(o.startswith("`[THM]` ") and n.startswith("`[ALG]` ") for o, n in xo.values()) and len(xo) == 2
+                  and "retagged `[THM]`→`[ALG]`" in a_new)          # the history of the retag is in the Appendix A entry
+    live = C[:C.index("## Appendix A — Version History")]
+    no_commentary = not any(x in live for x in ("v6.4.24: retagged", "v6.4.24: RID registered", "v6.4.24: this note replaces"))
+    G["C3"] = rid_ok and dy_ok and math_ok and grade_ok and retag_decl and no_commentary
     info["C3"] = {"rid_tags_added": sorted((rc - rb).elements()), "rid_tags_removed": sorted((rb - rc).elements()),
                   "dyad_strings_added": sorted(dy(C) - dy(B)), "math_removed_undeclared": [k for k, v in removed.items() if olds[k] < v][:5],
                   "math_added_undeclared": [k for k, v in added.items() if news[k] < v][:5],
@@ -151,7 +158,8 @@ def main():
              and SA < Fr(8831, 250) and SB < Fr(883, 100)
              and all(x in C for x in ("\\tfrac{1048576}{3125}", "\\tfrac{133513216}{1265625}", "\\tfrac{492}{25}", "\\tfrac{6357}{1000}")))
     stale = ["not yet sent", "`[v6.4.11, provisional]`", "(current edition v0.3.26, §7.0)", "(v1.6.1, adopted 19 Oct 2026)", "`RTG_PROGRAMME_OVERVIEW_v1.3`",
-             "(v2.9, adopted 25 Oct 2026)", "| AZ | v0.6 | June 2026", "retained through v0.3.26;"]
+             "(v2.9, adopted 25 Oct 2026)", "| AZ | v0.6 | June 2026", "retained through v0.3.26;", "AZ v0.6", "kept as history",
+             "its repin is deferred (R-1)", "decays like", "`[ALG]` the ratio"]
     left = [x for x in stale if x in C]
     G["C4"] = all(b <= c for b, c in same.values()) and s1_ok and not left
     info["C4"] = {"counts_base_cand": same, "S_A": str(SA), "S_B": str(SB), "stale_left": left}
@@ -208,7 +216,8 @@ def main():
     tb = {r_["r"]: float(r_["abs_deltaY"]) for r_ in js}
     c_2b = abs(tb["0.45"] / 1.6e-5 - 1) < 0.05 and abs(tb["0.24"] / 7.3e-50 - 1) < 0.05 and "1.6\\cdot10^{-5}" in C and "7.3\\cdot10^{-50}" in C
     jl = json.load(open(os.path.join(ROOT, "evidence/dyad/open20-an/stage2b/jump_law.json"), encoding="utf-8"))["info"]["local_slopes"]
-    c_law = all(0.98 < float(x["slope_over_minus_2pi"]) < 1.0 for x in jl)
+    sl = [float(x["slope_over_minus_2pi"]) for x in jl]
+    c_law = len(sl) == 9 and 0.9835 < min(sl) < 0.9845 and 0.99875 < max(sl) < 0.99885 and "ratio $0.984$ to $0.9988$" in C
     mp.mp.dps = 40
     alm = mp.mpc(mp.mpf(-102) / 19, -16 * mp.sqrt(3) / 19); K2, K4 = mp.mpf("0.72268998"), mp.mpf("5.54117445")
     rho_al = abs(alm) * abs(alm + 1) / 2 * mp.power(2, abs(alm.real + 2)) * mp.exp(abs(alm.imag) * mp.pi / 6)
@@ -222,7 +231,15 @@ def main():
     az = git_show("az-v0.7:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md").decode()
     strs = sorted(set(re.findall(r"DYAD-[A-Z0-9]+(?:-[A-Z0-9]+)*", az)))
     not_rid = [x for x in strs if "[RID: %s]" % x not in C]
-    G["C10"] = not_rid == ["DYAD-ALG-Q3-CANCEL", "DYAD-OPEN-B5-ALLP"] and az.count("DYAD-ALG-Q3-CANCEL") == 1
+    appF = C[C.index("## Appendix F —"):C.index("## Appendix G —")]
+    rows_f = [l for l in appF.split("\n") if l.startswith("| AZ v0.7 ")]
+    printed = set()
+    for l in rows_f:
+        cell = l.split("|")[2].strip()
+        if cell == "DYAD-ALG-VANISH-B2, -B3, -B4": printed |= {"DYAD-ALG-VANISH-B2", "DYAD-ALG-VANISH-B3", "DYAD-ALG-VANISH-B4"}
+        else: printed.add(cell)
+    G["C10"] = (not_rid == ["DYAD-ALG-Q3-CANCEL", "DYAD-OPEN-B5-ALLP"] and az.count("DYAD-ALG-Q3-CANCEL") == 1
+                and printed == set(strs) and "AZ v0.6" not in appF)
     info["C10"] = {"az_strings": len(strs), "not_owner_rid": not_rid}
     # C11
     base_md = open(os.path.join(ROOT, "BASELINE.md"), encoding="utf-8").read()

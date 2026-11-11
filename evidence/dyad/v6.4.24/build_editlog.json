@@ -45,7 +45,7 @@
   },
   {
    "id": "ED-8",
-   "new_sha256": "45b09e39b95ee6f7ed0d7770c0d0d9e406a0fb1cd7dce48705e445ab7efc0876",
+   "new_sha256": "9896c8f0cc9c424bfcebb24fd27cb4582b6b17757b683f38327cd1d1693e58b8",
    "old_sha256": "bfce699975bf5350212d51792cf24c3236b6a68844df426408b040d436cb1caf",
    "what": "Appendix A entry"
   },
@@ -74,32 +74,38 @@
    "what": "Section 6.14 new result"
   },
   {
+   "id": "R1-1",
+   "new_sha256": "0011250b681997e0accf8e1d6267fa250666dbba40b3eb5df77fcecf91c9beb5",
+   "old_sha256": "c6ed61d4411dc58b802dac7c9fbf11421d55e839b89896d5fc234a7767d09df6",
+   "what": "Section 7 claim-level import row"
+  },
+  {
    "id": "X4-1",
-   "new_sha256": "ebc8165a597f082df30c6ab6271728641c7dbf85c283ed099d4362ae3a70ad78",
+   "new_sha256": "f25df4d3a3c23e69d0878018758fdf48f156a1ca93817b803a44b3b6e62504e6",
    "old_sha256": "b0028dbc9feb0cee141231c3e698548f02371d21df486cc582aab8cf8fec26b5",
    "what": "Section 1 readout, not area-preserving"
   },
   {
    "id": "X4-2",
-   "new_sha256": "c1fcbcebbc1c1ce9b377343e2f5e909d9112229d8291a1d6115beaaaeeabb45b",
+   "new_sha256": "7f3f64124bd0563c5d2bf2b721075808ffb3b6e534043a79514575a087ff947e",
    "old_sha256": "2ec5884b3ed0cfc8b57bb33ed7477a6f965cc06daab68e4c912aa380802429aa",
    "what": "Section 6.1 RID, not area-preserving"
   },
   {
    "id": "X4-3",
-   "new_sha256": "34f1b71de1f12015944cfc071d6a650c9a4843508705b7b1a8c87f2bb9264cbe",
+   "new_sha256": "7a3a7462c8a746fcd2ec8ce213108aa768d07f771ccb8647aa41161564a312a4",
    "old_sha256": "ccc259a5eda8f770645f34561d8bcf7bdab44a0247027606d175203a14813557",
    "what": "Section 6.6 RID, p=6 linear order"
   },
   {
    "id": "X4-4",
-   "new_sha256": "16d3f7cc744b090e6fb3c8f2f94529c217dfce867d39e31b3c96e9c5dab15c1c",
+   "new_sha256": "2ca7c93a77a73476d8a6b71e67e4122aebc2acd82542f642a58e69e1aba41135",
    "old_sha256": "9e3e9ebfb14517a081d5d5a31761a2d5b9c73fdcf815f6737acc7cb1650135fa",
    "what": "Section 6.6 RID, homological resonance"
   },
   {
    "id": "B2-1",
-   "new_sha256": "f6b636844e2f462dd33612aaa8518b81437c37db51e396b200c896b6b67fe11b",
+   "new_sha256": "e12d6ce2bcfe6e56ec65e3aff8382d0dca7536e2a917d9120997803637761ca4",
    "old_sha256": "2c938863d98e21e264ea5ec357b951ed23b977bdbf83ed0cae8979e3b833d2fe",
    "what": "primitive map label"
   },
@@ -111,7 +117,7 @@
   },
   {
    "id": "S3-1",
-   "new_sha256": "218cb1cfae2e454880a1550008204b4936636360bfe5377b2f0b31278cd4ac3e",
+   "new_sha256": "e769e076400282685933aae1ca50ded83534a4299a226a9951507e0731003ba2",
    "old_sha256": "717a3c7abb78c89880ae6c667afe0bff6c5aded311fb6c1cf017e3147dfcf485",
    "what": "OPEN 20 pilot paragraph"
   },
@@ -123,7 +129,7 @@
   },
   {
    "id": "E-1",
-   "new_sha256": "a09f0d501e6986d6060b056aadac927f6419622cf561fe0fb88d718ab3605f39",
+   "new_sha256": "ff5eba7056df1238d68ece6078d9b47dcf67af4bfc18b442f273ef0498e4e039",
    "old_sha256": "8679efe4cd55adea8a395ac77c038e7ebe4d781167d8dce73ce948d22615560f",
    "what": "Appendix E.1 rows"
   },
@@ -159,7 +165,7 @@
   },
   {
    "id": "REG-5",
-   "new_sha256": "6abd2e8c01d232fb585515643845696648366b20ea66abe10974c5ec928ef6fb",
+   "new_sha256": "ee97b63ad056ee9aa5c0ee18aa9bbe98554a971ff8e16aac303adbc1082bf078",
    "old_sha256": "7db7add69b8805a0852994b82205f3b485a8a30b838fb07520dd7a6004430a62",
    "what": "AZ row"
   },
@@ -183,9 +189,15 @@
   },
   {
    "id": "REG-9",
-   "new_sha256": "3bb6691811b492166dd0943bdec39a503ada77d4b756c3882ce9ab3d4bee6dc9",
+   "new_sha256": "e1481060767c7b7391b090fc41e5560034a4cb6b60e6073eab8c7b76001bce61",
    "old_sha256": "f667e335a757cbf5e34e84fc602c282461c2c5a9b876e5a1ac5a0ebade77a147",
-   "what": "Genesis export line"
+   "what": "Genesis export line, edition"
+  },
+  {
+   "id": "REG-9b",
+   "new_sha256": "9214acda647b37014ea3ffe6137ab95a596d08313953cd5f5f36a916b143cd41",
+   "old_sha256": "fcda8f374724025c773ee050bd716be38a8e047177666898cbbd4575551d49ef",
+   "what": "Genesis export line, pins"
   },
   {
    "id": "REG-10",
@@ -201,11 +213,23 @@
   },
   {
    "id": "REG-12",
-   "new_sha256": "6d7f419864bbc7580c0de1b056711c654e769d6a758d54287d7eebfc3940d899",
-   "old_sha256": "d243a2ee0313aae78f6b3f47b188d88a8937f84b30107864579a48685853f8c1",
-   "what": "Appendix F state sentence"
+   "new_sha256": "e8d7a81a8ba7e1b9f4386ae0aefa781385c4a9e1621c3ecf015284d52a0c9681",
+   "old_sha256": "8144e1ae1b6d74b847680ff6dadcaec68ae9285bb34dbdf14e148a8b0b7f8f8d",
+   "what": "Appendix F intro"
+  },
+  {
+   "id": "F-1",
+   "new_sha256": "a06d58012b5fd5e6fd39f8ff8bad29c0d42bbc45d9485ebc7bc09cce38869dde",
+   "old_sha256": "4ea9be2077ed0d2627f07faa0d6a13f0efa64b83d23e6667c7479a86bb06580f",
+   "what": "Appendix F AZ rows at az-v0.7"
+  },
+  {
+   "id": "F-2",
+   "new_sha256": "6152b19e0b2a6d2edcf3cda2844ffeda6c6e291f17fb13614b1cd92257e2164d",
+   "old_sha256": "3a00bb6f44c3ad80d8e5b60c88e76e38980343c01900cd5f6563a7075c4e3049",
+   "what": "Appendix F table header"
   }
  ],
- "n_edits": 34,
- "out_sha256": "7f22ea3511d24170036dc2ec318d630f1d95d7e007deec3ad82ec7623a882327"
+ "n_edits": 38,
+ "out_sha256": "014e1ac3be8c21d0e70afb72f23f7592528b01ffc5cd6390628721cc69e98958"
 }
