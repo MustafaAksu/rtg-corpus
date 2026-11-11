@@ -73,3 +73,20 @@ The remedy is the one Programme v1.4 §6.7 already proposes: imports by pointer 
 | 4 | Thread C evidence: search the PI's machines for the `az_v5` package | before any further AZ edition |
 | 5 | Next edition v0.8 = §6.7 reduction + Methodology v1.4 migration, after Stage 1 | yes, as one edition |
 | 6 | Maintainer of the AZ entry note's shared sections | the AZ co-owner holding the working lane |
+
+## 5. PI decision
+
+**Decided by the PI, project conversation, 11 November 2026, 18:15 +03:00, verbatim:** "tüm tavsiyelerini kabul ediyorum." ("I accept all your recommendations.") The six rows of §4 are therefore decided as advised:
+
+| # | Decided | Who acts |
+|---|---|---|
+| 1 | An outcome rule for Action 1 (home and grade path per result) is recorded before Stage 1 runs | AZ co-owners draft it in the preregistration's amendment log; it is the PI's rule once the PI confirms the wording |
+| 2 | The offer to TDR-G drafted in the preregistration §11 is filed now | AZ co-owner, in `pipes/TDRG/` |
+| 3 | PR #211 is merged before the run; the Stage 1 authorization names the PR head and the `SHA256SUMS` hash | PI (merge, authorization); AZ co-owner supplies the two identities at the head that is merged |
+| 4 | Thread C evidence is searched for and deposited before any further AZ edition | PI and AZ co-owners |
+| 5 | The next edition, v0.8, is the Programme §6.7 reduction together with the Methodology v1.4 migration, after Stage 1 is closed | AZ co-owners, by the usual release cycle |
+| 6 | The shared sections of the AZ entry note are maintained by the AZ co-owner who holds the working lane (Claude) | that co-owner, from its next checkpoint |
+
+This decision sets direction and order. It authorizes no campaign, adopts no text and changes no DSN; Stage 1 still needs the PI's own authorization naming the bytes (row 3), and the wording of the outcome rule (row 1) is confirmed by the PI when it is written.
+
+**State of row 4 at the time of the decision** (observed on `main` `47cb6f7`, not part of what §§1–3 reviewed): the recovery has started. On the PI's instruction of 11 Nov 16:41 +03:00 thirteen `az_v5` files were deposited unchanged through `upload/az-v5-partial-recovery-20261111` (PRs #221, #222); `records/az/AZ_UPLOAD_HASH_CHECK_20261111.md` reports nine of the ten registry entries equal to `AZ-ART-AZV5-REGISTRY` and the tenth recovered by regeneration. The Atlas owner has read the head of that record only; it is a [SESSION] custody record and AZ §9 stands as adopted until an AZ edition changes it.

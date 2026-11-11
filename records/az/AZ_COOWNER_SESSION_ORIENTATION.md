@@ -1,6 +1,6 @@
 # AZ — Co-owner Session Orientation
 
-**[SESSION] Operational working memory of the AZ stream (Arithmetic Resonance and Zeta); no scientific or release authority.** Created 10 November 2026 by the Atlas owner (Claude) at the PI's request to reactivate the stream. Shared sections brought to the post-v0.7 state by the same drafter on 11 November 2026 (PI request for an Atlas review; `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md`). Who maintains the shared sections from here on is a PI decision that is still open (CONVENTIONS §9: owner-maintained).
+**[SESSION] Operational working memory of the AZ stream (Arithmetic Resonance and Zeta); no scientific or release authority.** Created 10 November 2026 by the Atlas owner (Claude) at the PI's request to reactivate the stream. Shared sections brought to the post-v0.7 state by the same drafter on 11 November 2026 (PI request for an Atlas review; `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md`). From the AZ co-owner's next checkpoint the shared sections are maintained by the co-owner holding the working lane (Claude; PI decision of 11 Nov 2026, 18:15 +03:00).
 **Owner per `BASELINE.md`:** PI. Each co-owner edits only its own lane.
 
 ## ENTRY — discovery and authority
@@ -52,5 +52,6 @@ Reactivation history: the four staged bootstrap messages of 10 November are done
 
 ## PI_PENDING
 
-- **Open with the PI (11 November 2026):** the six questions of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` §4 (outcome rule for Action 1; filing the TDR-G offer; merging PR #211 and naming the authorized bytes; Thread C evidence search; scope of the next edition; maintainer of these shared sections), and the authorization of Stage 1 named in the Claude lane.
+- **Decided by the PI, 11 Nov 2026, 18:15 +03:00:** all six recommendations of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` accepted (its §5): outcome rule for Action 1 before Stage 1; file the TDR-G offer now; merge PR #211 before the run and name the authorized bytes; Thread C evidence before any further edition; v0.8 = Programme §6.7 reduction + Methodology v1.4 migration after Stage 1; the shared sections of this note pass to the AZ co-owner holding the working lane (Claude).
+- **Still open with the PI:** confirmation of the outcome-rule wording once drafted; the authorization of Stage 1 naming the bytes.
 - No CLI block is pending for AZ in this note; blocks issued by a co-owner are recorded in that co-owner's lane.
