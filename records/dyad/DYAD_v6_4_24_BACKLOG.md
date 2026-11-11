@@ -107,6 +107,8 @@ NUMGEN and OFN answers are included if they arrive before step 3; otherwise they
 
 **Status, 11 November 2026:** steps 1 and 2 are done. Candidate r1 `7f22ea35…2327` is on `claude/dyad-v6.4.24`, with the draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`. Step 3 (co-owner review) is next.
 
+**Closed, 11 November 2026:** r1 reviewed (PR #213, `5856200509`), r2 `014e1ac3…8958` read back (`5857204402`, ACCEPT), adopted by the PI. Adopted file `10fbdacc…bc16`. This backlog is complete for v6.4.24; the items of §D carry over to the next edition.
+
 ## D. Not in v6.4.24
 
 - §1 compaction (two-stage editorial edition, v6.4.25 or later).

@@ -1,0 +1,180 @@
+{
+ "all_as_expected": true,
+ "controls": {
+  "Q1": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C5",
+   "failing_gates": [
+    "C2",
+    "C3",
+    "C5"
+   ],
+   "what": "an adopted OPEN 21 table constant changed (8831/250 -> 8831/251 in the adopted row)"
+  },
+  "Q10": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C11",
+   "failing_gates": [
+    "C2",
+    "C11"
+   ],
+   "what": "the Triadic hash altered"
+  },
+  "Q11": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C5",
+   "failing_gates": [
+    "C2",
+    "C5"
+   ],
+   "what": "the R9 assumption dropped from the new result"
+  },
+  "Q12": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C9",
+   "failing_gates": [
+    "C2",
+    "C3",
+    "C9"
+   ],
+   "what": "the stage-2b figure overstated (1.6e-5 -> 1.6e-3)"
+  },
+  "Q13": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "version commentary put back into a live tag (r2 R6)"
+  },
+  "Q14": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C10",
+   "failing_gates": [
+    "C2",
+    "C4",
+    "C10"
+   ],
+   "what": "an AZ v0.6 row put back into Appendix F (r2 R4)"
+  },
+  "Q15": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C9",
+   "failing_gates": [
+    "C2",
+    "C3",
+    "C9"
+   ],
+   "what": "the stage-2b slope range misquoted (r2 R3)"
+  },
+  "Q16": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "the Section 7 import tag removed (r2 R1)"
+  },
+  "Q17": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C4",
+   "failing_gates": [
+    "C2",
+    "C4"
+   ],
+   "what": "the stage-2b law stated without qualification (r2 R3)"
+  },
+  "Q2": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C4",
+   "failing_gates": [
+    "C2",
+    "C3",
+    "C4"
+   ],
+   "what": "S_A rounded down in the new result (492/25 -> 491/25, every occurrence)"
+  },
+  "Q3": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "an existing RID tag removed"
+  },
+  "Q4": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C3",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "an eighth RID added"
+  },
+  "Q5": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C7",
+   "failing_gates": [
+    "C2",
+    "C7"
+   ],
+   "what": "a section 2 Status line changed"
+  },
+  "Q6": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C6",
+   "failing_gates": [
+    "C2",
+    "C6"
+   ],
+   "what": "footer marked ADOPTED"
+  },
+  "Q7": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C8",
+   "failing_gates": [
+    "C2",
+    "C8"
+   ],
+   "what": "a cited artifact hash altered"
+  },
+  "Q8": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C2",
+   "failing_gates": [
+    "C2",
+    "C3"
+   ],
+   "what": "an undeclared second retag ([THM] -> [ALG] on the smooth flow embedding readout)"
+  },
+  "Q9": {
+   "as_expected": true,
+   "exit": 1,
+   "expected_gate": "C4",
+   "failing_gates": [
+    "C2",
+    "C4"
+   ],
+   "what": "a superseded register wording restored"
+  }
+ }
+}
