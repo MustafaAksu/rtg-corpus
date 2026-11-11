@@ -1,0 +1,5 @@
+[CAUGHT] K1 withdrawn ×2 sentence restored: failing gates ['G1', 'G4']
+[CAUGHT] K2 old Dyadic pin restored in one place: failing gates ['G1', 'G4']
+[CAUGHT] K3 unlogged change inside Thread C: failing gates ['G1', 'G3']
+[CAUGHT] K4 unlogged removal of an AZ grade tag (header): failing gates ['G1']
+CONTROLS: PASS (all caught)

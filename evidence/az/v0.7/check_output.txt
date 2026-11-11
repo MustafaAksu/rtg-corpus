@@ -1,0 +1,9 @@
+[PASS] G1 BUILD (candidate equals the build from the tag)
+[PASS] G2 LOG (edit log equals the build's log)
+[PASS] G3 PROTECTED (4 AZ-owned regions byte-identical)
+[PASS] G4 STALE (no superseded pin, identifier or sentence outside the history lines)
+[PASS] G5 OWNED-IDS (no edit drops an AZ-owned identifier; E43 removes proposal text only)
+[PASS] G6 TAGS (no edit drops a grade or status tag except the declared owner-tag changes)
+[PASS] G7 ROWS (every edit names its triage row)
+candidate sha256 2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94
+RESULT: PASS (7/7 gates)

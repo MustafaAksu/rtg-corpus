@@ -4,5 +4,5 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| 2026-10-28 | TDRG | notice | open | TDRG-DEF-ZN-STATE (alias of AZ's TDRG-ZN-STATE), TDRG-ALG-LEM-REACH / -RETRIG / -SPECCONS, TDR-G v2.12.14 §6.2 citation of AZ-ALG-ANTIPODAL-LOWORDER | — | `20261028-TDRG-v2-12-14-adopted.md` |
-| 2026-11-03 | DYAD | notice | open | DYAD-THM-RAW-CUBIC caveat and range (AZ §8 import-ref); Appendix F crosswalk; OPEN 9 $p=12$ value; DYAD-ALG-VANISH-B2 | — | `20261103-DYAD-notices-n16-n21.md` |
+| 2026-10-28 | TDRG | notice | dispositioned | TDRG-DEF-ZN-STATE (alias of AZ's TDRG-ZN-STATE), TDRG-ALG-LEM-REACH / -RETRIG / -SPECCONS, TDR-G v2.12.14 §6.2 citation of AZ-ALG-ANTIPODAL-LOWORDER | — | `20261028-TDRG-v2-12-14-adopted.md` |
+| 2026-11-03 | DYAD | notice | dispositioned | DYAD-THM-RAW-CUBIC caveat and range (AZ §8 import-ref); Appendix F crosswalk; OPEN 9 $p=12$ value; DYAD-ALG-VANISH-B2 | — | `20261103-DYAD-notices-n16-n21.md` |
