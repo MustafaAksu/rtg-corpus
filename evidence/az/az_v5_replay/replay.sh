@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# AZ Thread C (az_v5) recovery - replay of the three runnable deposited scripts. [SESSION] custody check.
+# AZ Thread C (az_v5) recovery - replay of the four runnable deposited scripts. [SESSION] custody check.
 # Runs from the repository root. The deposited files are never executed in place: benchmark_ladder.py writes into
 # benchmarks/ next to itself and az1b_certify.py rewrites the registry there, so the package is copied to temporary
 # directories first.
@@ -83,7 +83,45 @@ sed -e "s#$TMP/b/##" -E -e 's/= [0-9.]+e-[0-9]+ over/= <residual> over/' "$TMP/a
 ( cd "$TMP/b/benchmarks" && sha256sum AZ_ARTIFACT_REGISTRY.json )
 cmp "$TMP/b/benchmarks/AZ_ARTIFACT_REGISTRY.json" "$SRC/benchmarks/AZ_ARTIFACT_REGISTRY.json"
 echo "registry written by the deposited az1b_certify.py is byte-identical to the deposited registry: True"
+
+# ---- C. exporter: self-test, checksum manifest, and how its files meet the package's loader and manifest validator
+mkdir -p "$TMP/c"
+cp upload/az-records/export/conv_az_graph_export.py "$TMP/c/"
+set +e
+( cd "$TMP/c" && python3 -I conv_az_graph_export.py ) > "$TMP/export.txt" 2>&1; RC4=$?
+set -e
+echo "--- C. conv_az_graph_export.py self-test (exit code $RC4)"
+cat "$TMP/export.txt"
+python3 -I - "$TMP/c" "$SRC/lib" "$TMP/c/out" <<'PY'
+import hashlib, json, os, sys
+sys.path.insert(0, sys.argv[1]); sys.path.insert(0, sys.argv[2])
+import conv_az_graph_export as X
+from graphio import load_graph_json, parse_graph_obj, GraphSchemaError
+from manifest import validate_manifest
+hist = [[(0, 1)], [(0, 1), (1, 2), (2, 0)], [(0, 1), (1, 2), (2, 0)]]
+nodes = [[0, 1], [0, 1, 2], [0, 1, 2]]
+exp = X.build_export(hist, birth_ticks=[1], node_history=nodes, N=24, k=1, policy="bound_symmetric",
+                     run_id="selftest", T=3, seed=0)
+man = X.write_export(exp, sys.argv[3])
+ok = all(hashlib.sha256(open(os.path.join(sys.argv[3], fn), "rb").read()).hexdigest() == man["checksums"][name]
+         for name, fn in man["artifact_paths"].items())
+print("exporter writes %d object files and a manifest; its checksums verify: %s" % (len(man["artifact_paths"]), ok))
+p = os.path.join(sys.argv[3], man["artifact_paths"]["Core_G_T"])
+try:
+    load_graph_json(p)
+    direct = True
+except GraphSchemaError as ex:
+    direct = False
+    print("lib/graphio.load_graph_json on the exporter's Core_G_T file: rejected (%s)" % ex)
+edges, meta = parse_graph_obj({"directed": True, "edges": json.load(open(p))["directed_edges"]})
+print("after mapping 'directed_edges' -> 'edges' with 'directed': true, the loader accepts it: %d edges" % meta["n_edges"])
+print("lib/manifest.validate_manifest on the exporter's manifest: %d problem(s), first: %s"
+      % (len(validate_manifest(man)), validate_manifest(man)[:1]))
+print("exporter output is loadable by the package loader without an adapter:", direct)
+sys.exit(0 if ok else 1)
+PY
 test "$RC1" -eq 0
 test "$RC2" -eq 0
 test "$RC3" -eq 0
+test "$RC4" -eq 0
 echo "REPLAY PASS"

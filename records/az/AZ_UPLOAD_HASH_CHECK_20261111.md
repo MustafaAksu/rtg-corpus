@@ -5,7 +5,7 @@
 
 ## 1. What arrived
 
-The PI attached files to this session in two deliveries on 11 Nov 2026, found after the AZ v0.7 release record (§14) listed the Thread C evidence as absent: eleven files at 16:53 +03:00 and four at 17:07 +03:00. On the PI's instruction ("bu dosyalardan lazımlı olanları repoya yükleyelim. sana bu konuda tam yetki", 16:41 +03:00) twelve of them were pushed unchanged to `upload/az-v5-partial-recovery-20261111` (commits `10426f7`, `f6be0b3`), directory `upload/az-records/`; two were byte-identical duplicates; one is held. The branch had been created by the ChatGPT co-owner session and carried no commit of its own before. Intake manifest: `upload/az-records/INTAKE_MANIFEST.md`.
+The PI attached files to this session in three deliveries on 11 Nov 2026, found after the AZ v0.7 release record (§14) listed the Thread C evidence as absent: eleven files at 16:53 +03:00, four at 17:07 +03:00 and one at 17:25 +03:00. On the PI's instruction ("bu dosyalardan lazımlı olanları repoya yükleyelim. sana bu konuda tam yetki", 16:41 +03:00) thirteen of them were pushed unchanged to `upload/az-v5-partial-recovery-20261111` (commits `10426f7`, `f6be0b3`, `b3aa0ba`), directory `upload/az-records/`; two were byte-identical duplicates; one is held. The branch had been created by the ChatGPT co-owner session and carried no commit of its own before. Intake manifest: `upload/az-records/INTAKE_MANIFEST.md`.
 
 ## 2. Hash check (`EV-BYTES`, `EV-HASH`)
 
@@ -24,9 +24,10 @@ All hashes recomputed here from the bytes on the branch; the staged Git blobs we
 | `az_v5/benchmarks/bouquet_2_4_hashimoto_matrix.json` | `4c377fa704e8b08e648caf3baff516f97bb5551cafc17506d7a560501347ca01` | equal |
 | `az_v5/benchmarks/bouquet_2_4_charpoly.txt` | `6a6979b0d25b8a314f524a35a8f7114848701d4486f70b0a029b1c3313db788f` | equal |
 | `CONVENTIONS_FROZEN.md` | `1c4b715aea0785c22c2f194d9cf8ba6a1b3c76dc2608366dedd58160ed478f2d` | not a registry entry |
+| `export/conv_az_graph_export.py` | `fab14ae1d2b151f405bda105103ec3fcca32841542369304d1d1a5b35517fe1e` | not a registry entry |
 | `phase2/AZ_PHASE2_N120_NULL1_smoke.json` | `561c66ac8e5d359d5806d9aa058e988b682412ddb4a84e71371e754e89e22284` | not a registry entry |
 
-**Nine of the ten registry entries are deposited as original bytes and are equal.** The tenth, `benchmarks/az_v5_synthetic_benchmark_report.json`, was not received as a file; its content is recovered by regeneration (§3). `conv_az_graph_export.py`, which the ChatGPT session named as present on its side and outside the registry, did not reach this session.
+**Nine of the ten registry entries are deposited as original bytes and are equal.** The tenth, `benchmarks/az_v5_synthetic_benchmark_report.json`, was not received as a file; its content is recovered by regeneration (§3). `export/conv_az_graph_export.py` (third delivery) has no registry entry to be checked against; its hash is recorded here and in the intake manifest.
 
 **Limits of the identification.**
 1. No adopted document records the registry's own hash. §3 shows that the deposited `az1b_certify.py`, run over the deposited files, writes a registry byte-identical to the found one: the set is self-consistent and self-generating. That it is the June 2026 state rests on the PI's account of where the files come from.
@@ -41,6 +42,7 @@ All hashes recomputed here from the bytes on the branch; the staged Git blobs we
 |---|---|
 | `benchmark_ladder.py` | exit code 0, "AZ-1 GATE: PASS": S1 directed cycles `L = 4, 6, 8`, S2 bidirected cycles `L = 4, 6`, S3 disjoint cycles `(k, L) = (2,4), (3,6)`, S4 bouquet `k = 2, L = 4` by construction, spectral radius `1.189207` (`= 2^{1/4}`, the value AZ §4.3 names for AZ-1A) |
 | `validate_solver.py` | exit code 0, "Result: PASS": sparse leading-10 against dense on a 200-edge graph, difference of order `1e-15`; trace moments `m = 1…8` consistent |
+| `export/conv_az_graph_export.py` | self-test exit code 0 (6 directed edges in `G_T`, non-empty core, one birth snapshot); `write_export` writes four object files and a manifest whose checksums verify |
 | `az1b_certify.py` | exit code 0, "AZ-1B GATE: PASS": independent S2 assertion `L = 4, 6, 8`; JSON loader round-trips, empty graph, six malformed inputs rejected, flagged self-loop and multiedge accepted; non-empty Hashimoto on a both-orientations export and detection of the acyclic case; sparse against dense leading-12 angular error of order `1e-15`; manifest validator (valid passes; odd `N`, non-canonical `B1`, no-null rejected); registry written |
 
 Regenerated files against the deposited originals and the registry:
@@ -54,7 +56,9 @@ Regenerated files against the deposited originals and the registry:
 
 The replay output is not byte-reproducible (it prints floating-point residuals); the exit codes, the PASS lines, the report hash and the registry identity are.
 
-**Scope of the AZ-1B replay.** AZ §4.3 describes AZ-1B as certifying that "real TDR-G defect-graph exports … ingest, validate, and round-trip with checksums". The deposited `az1b_certify.py` exercises the loader, the export convention and the manifest validator on synthetic graphs and on one example manifest; it reads no TDR-G export. The exporter (`conv_az_graph_export.py`) and any real export were not received, so that part of the description is not replayed.
+**Scope of the AZ-1B replay, and how the exporter meets the package.** AZ §4.3 describes AZ-1B as certifying that "real TDR-G defect-graph exports … ingest, validate, and round-trip with checksums". The deposited `az1b_certify.py` exercises the loader, the export convention and the manifest validator on synthetic graphs and on one example manifest; it reads no TDR-G export. The deposited exporter runs, but as received the two sides do not meet without an adapter: `lib/graphio.load_graph_json` rejects the exporter's object files (they carry `directed_edges`, the loader requires `directed` and `edges`; after that mapping the edges load), and the exporter's manifest is a checksum manifest of schema `tdrg_az_graph_export_v1`, not the run manifest that `lib/manifest.validate_manifest` checks (seven required keys are absent). The piece that joined them — presumably the Phase-2 harness — and any real export were not received. That part of the AZ-1B description is therefore not replayed.
+
+**An inconsistency between two deposited files, recorded and not resolved.** `CONVENTIONS_FROZEN.md` defines `G_birth(w)` as the birth-*window* graph over `[t_first_birth, t_first_birth + w]`, default `w = 200` (and `lib/manifest.py` has an export type `birth_window` with `window_w`); `conv_az_graph_export.py` defines `G_birth(w)` as the snapshot at the tick of the `w`-th birth. Which of the two the Phase-2 work used cannot be read from the received files; the registered Phase-2 results and the smoke report use `Core(G_T)` only. This matters for AZ §4.3.6, which names "the `G_birth(w)` sequence" among the candidate dynamical observables: the object is not uniquely defined by the recovered material.
 
 ## 4. The Phase-2 smoke report (`EV-BYTES` only)
 
@@ -69,6 +73,7 @@ What it shows, as read from the file: `R_q` observed against null mean — `q = 
 | `AZ-ART-AZV5-REGISTRY` | **in the repository at the AZ-1B state.** Registry and nine of its ten entries deposited as original bytes, hash-equal; the tenth regenerated with the registry's hash; AZ-1A ladder, solver acceptance and AZ-1B gate replayed with exit code 0; registry regenerated byte-identically. `phase2_harness`: not in the registry, not received |
 | `AZ-ART-AZ1B-CERTIFY` | `az1b_certify.py` deposited, hash-equal, replayed (synthetic scope, §3) |
 | `AZ-ART-CONVENTIONS-FROZEN` | a file of that name deposited; it lacks `CONV-AZ-ANGLE-ZERO` and `CONV-AZ-MANIFEST` — not shown to be the frozen state the DSN cites |
+| (no §9 identifier) `conv_az_graph_export.py` | deposited; it identifies itself as `[RID: TDRG-AZ-EXPORT-BASELINE]`, an identifier AZ v0.7 does not list; self-test replayed; not joined to the loader by the received bytes (§3) |
 | `AZ-ART-PHASE2-N120-CORE` | not received. Only an unregistered smoke report of the same family is deposited (§4) |
 | `AZ-ART-SPECTRAL-RADIUS-PATCH`, `AZ-ART-PROP-CORE-EQUIV`, `AZ-ART-ANTIPODAL-LOWORDER`, `AZ-ART-THETA-CORE-MATCHED`, `AZ-ART-ZETA-V3` | not received; unchanged: source-reported only (`EV-SRC-REPORTED`, `EV-NOT-RERUN`) |
 
@@ -82,6 +87,6 @@ Held, not deposited: `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0_5.md`, SHA-256 `f
 
 ## 7. Open
 
-1. `conv_az_graph_export.py`: reported by the ChatGPT session; if the PI attaches it, it is hash-recorded and added to the same upload directory (it has no registry entry to be checked against).
+1. For the next AZ edition, with the PI: the status of `conv_az_graph_export.py` and of its identifier `TDRG-AZ-EXPORT-BASELINE`; the two definitions of `G_birth(w)` (§3).
 2. The later states — `CONVENTIONS_FROZEN.md` with `CONV-AZ-ANGLE-ZERO`, a registry with `phase2_harness`, the Phase-2 harness, runner and the three registered Null1 reports, the core-matched null report, the core-equivalence prover and certificates, the spectral-radius patch, `THM_AZ_ANTIPODAL_4Q.md`: missing.
 3. Merge order: the upload PR first (custody), then this record with the replay files.

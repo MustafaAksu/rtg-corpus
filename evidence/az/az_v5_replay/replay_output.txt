@@ -41,7 +41,7 @@ ENG-blocker-4 acceptance: sparse vs dense
   graph: 200 directed edges
   dense full: 200 eigs
   sparse leading-10: 10 eigs
-  max |mag| diff on top-10: 2.66e-15  -> PASS
+  max |mag| diff on top-10: 1.78e-15  -> PASS
 
 Trace-moment fallback self-consistency: Tr(B^m) vs sum(lambda^m)
   m=1: Tr(B^m)=0.0000  sum(l^m)=0.0000  diff=5.22e-15  ok
@@ -91,4 +91,14 @@ AZ-1B.6 Artifact hash registry
 AZ-1B GATE: PASS (exit 0)
 6686706490c0f4d1d90629aaf6594176faff333096d4b0e3834128ff75ba875a  AZ_ARTIFACT_REGISTRY.json
 registry written by the deposited az1b_certify.py is byte-identical to the deposited registry: True
+--- C. conv_az_graph_export.py self-test (exit code 0)
+G_T directed edges: 6
+Core nonempty: True core directed edges: 6
+G_birth keys: ['1']
+G_cumulative directed edges: 6
+exporter writes 4 object files and a manifest; its checksums verify: True
+lib/graphio.load_graph_json on the exporter's Core_G_T file: rejected (missing required keys: ['directed', 'edges'])
+after mapping 'directed_edges' -> 'edges' with 'directed': true, the loader accepts it: 6 edges
+lib/manifest.validate_manifest on the exporter's manifest: 7 problem(s), first: ['missing top-level key: k_over_N_actual']
+exporter output is loadable by the package loader without an adapter: False
 REPLAY PASS
