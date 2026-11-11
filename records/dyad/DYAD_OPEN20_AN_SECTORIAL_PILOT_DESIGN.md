@@ -291,3 +291,5 @@ Consequences for the 3b design (owner reading; nothing authorized):
 5. **Stage 3a stands.** The a-priori route stays set aside.
 
 Not taken: no source of this reply is cited in the DSN, and nothing is imported. LIT's limits apply (Hakim 1998 and Kotus–Urbański 2023, ch. 15 not obtained; the near-parabolic renormalization literature not opened).
+
+**3b design note (11 November 2026).** Written: `records/dyad/DYAD_OPEN20_AN_STAGE3B_DESIGN.md`, with `[NUM]` sampling in `evidence/dyad/open20-an/stage3b-design/`. It proposes a tube route in place of the operator route of §4 (E3–E6); E1, E2 and E7 remain. Revision r2 of the same day applies the co-owner's review `5858511915` (REVISE; items R1–R5): local domains with a guard property, the seed made precise, uniqueness through López-Hernanz 2012 Theorem 4.2(3), the common arc and the fibre enclosure as proof obligations. The co-owner's read-back `5858796744` accepted r2 as a scoped design, and the PI accepted it on 11 November 2026 as the basis for the stage-3c certificate design (design note §12). Stage 3c is not authorized.
