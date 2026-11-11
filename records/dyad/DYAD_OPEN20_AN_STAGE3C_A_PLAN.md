@@ -1,7 +1,7 @@
 # DYAD OPEN 20 (analytic branch) — stage 3c-a: work plan and certificate architecture
 
 **Date:** 11 November 2026. **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). A plan and its progress log. It claims no result.
-**Authority:** PI decision of 11 November 2026, 15:59 (UTC+3), in the owner session: "3c-a ile başlayalım, neticelendirelim; sonrasını daha sonra değerlendiririz." Stage 3c-a is the proof record and the certificate script, with no certification claim. Stage 3c-b (the certification run and its receiving review) is **not** authorized.
+**Authority:** PI decision of 11 November 2026, 15:59 (UTC+3), in the owner session: "3c-a ile başlayalıp neticelendirelim sonrasını daha sonra değerlendiririz." Stage 3c-a is the proof record and the certificate script, with no certification claim. Stage 3c-b (the certification run and its receiving review) is **not** authorized.
 **Basis:** `records/dyad/DYAD_OPEN20_AN_STAGE3B_DESIGN.md` r2 (accepted by the PI as scoped basis, §12 there). Obligation numbers P1–P11, L1–L3 are those of its §6.
 **Governing edition:** DYAD v6.4.24. OPEN 20 B-an and B-6 are ACTIVE.
 

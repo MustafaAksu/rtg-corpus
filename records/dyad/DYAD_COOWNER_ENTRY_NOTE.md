@@ -45,7 +45,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 - PI, 3 Nov 2026: Dyadic work is done in rtg-corpus and its outputs go into the Dyadic DSN; LIT is used only through requests in `pipes/LIT/`.
 - PI: OPEN 20 stage 3 is not authorized; N = 432 is deferred (stage-2 adoption, SESSION scope).
 - PI, 11 Nov 2026 (in session): start the v6.4.24 candidate now ("başlayalım"); stage 2b authorized ("evet aşama 2b'yi yetkilendiriyorum"). Stage 3c is still not authorized.
-- PI, 11 Nov 2026, 15:59 +03:00: "3c-a ile başlayalım, neticelendirelim; sonrasını daha sonra değerlendiririz." Stage 3c-a is authorized; 3c-b is not.
+- PI, 11 Nov 2026, 15:59 +03:00: "3c-a ile başlayalıp neticelendirelim sonrasını daha sonra değerlendiririz." Stage 3c-a is authorized; 3c-b is not.
 - PI, 11 Nov 2026, 15:52 +03:00: the 3b r2 tube route is accepted, scoped, as the basis of the stage-3c certificate design aimed at \|ξ*\| = 0.40 (design note §12). No run is authorized by it.
 - PI, 11 Nov 2026, 13:26 +03:00: "v6.4.24 r2 'yi benimsiyorum" (adopted bytes after the status transform: `10fbdacc…bc16`).
 - Co-owner and owner, 11 Nov: the 3b design aims at certifying one jump (\|ξ*\| = 0.40 as a first target); scouting of the second overlap class is not needed now and is not authorized.
