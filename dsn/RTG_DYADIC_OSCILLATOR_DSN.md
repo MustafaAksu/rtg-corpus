@@ -4,7 +4,7 @@
 **Date:** 11 November 2026  
 **Scope:** The primitive 2D non-symplectic dyad map, its six-step resonant dynamics, ISP crossing geometry, normalized $p$-step structure, and $p$-resonance generalization program.  
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5). §1 profile exception: §1 gives RID-level readouts of the certified results with their load-bearing qualifications (about 1,500 words); a pointer-only list would drop those qualifications (Methodology v1.4 §1.1 item 3).  
-**Document status:** DRAFT — v6.4.24 candidate (S1 result on RECOG's sharpened R9 rows, three RID registrations, consumer register, bridge-note source, state of the OPEN 20 analytic-branch pilot); not adopted.  
+**Document status:** ADOPTED — PI, 11 November 2026 (S1 result on RECOG's sharpened R9 rows, three RID registrations, consumer register, bridge-note source, state of the OPEN 20 analytic-branch pilot). Adoption record: `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`.  
 **Supersedes:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.23` (SHA-256 `9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb`; tag `dyad-v6.4.23`).  
 **Companion documents:** one current-edition table, §7.0.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
@@ -1283,7 +1283,7 @@ Exports to (via Import Ledger entries in those documents):
 
 One compact entry per edition (Methodology v1.4 §1). Full records of earlier editions — adoption metadata, draft-round records, review verdicts, replaced lines and every `[COR]` entry — are in Appendix A of v6.4.20 (tag `dyad-v6.4.20`, SHA-256 `0b2d5a44…4852`). Scientific corrections, retractions and regrades are also recorded in Appendix B.
 
-### v6.4.24 — 11 November 2026 — Draft candidate
+### v6.4.24 — 11 November 2026 — Adopted
 
 - **S1 result:** `DYAD-THM-OPEN21-SHARP-ROWS` `[assuming: RECOG-THM-R9-SHARPENED-ROWS]`, §6.14: $S_A=\tfrac{492}{25}$, $S_B=\tfrac{6357}{1000}$ (adopted $K_A=\tfrac{8831}{250}$, $K_B=\tfrac{883}{100}$). `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` is unchanged.
 - **RID registrations (Atlas DYAD.X4):** `DYAD-ALG-NOT-AREA-PRESERVING` (§6.1; displayed tag retagged `[THM]`→`[ALG]`, a direct Jacobian computation, content unchanged, §1 and §6.1), `DYAD-ALG-P6-LINEAR-ORDER`, `DYAD-ALG-HOMOLOGICAL-RESONANCE` (§6.6). The cubic radial rate across $p$ stays a statement-level import of `RECOG-ALG-NU3-CLOSED-FORM` without a Dyadic RID.
@@ -1635,4 +1635,4 @@ The v6.4.19→v6.4.20 section map is Appendix G of v6.4.20 (tag `dyad-v6.4.20`).
 
 ---
 
-*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.24 (DRAFT candidate, 11 November 2026).*
+*END OF DOCUMENT — RTG_DYADIC_OSCILLATOR_DSN_v6.4.24 (ADOPTED, 11 November 2026).*

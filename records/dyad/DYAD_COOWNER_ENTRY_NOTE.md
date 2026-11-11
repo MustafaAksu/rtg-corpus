@@ -7,7 +7,7 @@
 
 Read **from GitHub**, repository `MustafaAksu/rtg-corpus`, fixed path `records/dyad/DYAD_COOWNER_ENTRY_NOTE.md` on `main`. Project synchronization does not include `records/`, `pipes/`, `evidence/` or `tools/`. Start with `CONVENTIONS.md`, this note, `BASELINE.md` and `pipes/DYAD/INDEX.md`. Failure to access a source means **UNVERIFIED**, not an empty queue.
 
-The governing edition is the newest **adopted** tag with its release record. At the time of writing: `dyad-v6.4.23`, file `dsn/RTG_DYADIC_OSCILLATOR_DSN.md`, SHA-256 `9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb`, release record `records/dyad/RTG_DYADIC_v6_4_23_RELEASE_RECORD.md`. Recheck it; do not trust this line. The tag sits on `ab8749b`, not on the PR #132 merge commit; no DYAD file differs (`records/dyad/DYAD_v6_4_23_POST_TAG.md`).
+The governing edition is the newest **adopted** tag with its release record. At the time of writing: v6.4.24, adopted by the PI on 11 November 2026, file `dsn/RTG_DYADIC_OSCILLATOR_DSN.md`, SHA-256 `10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16`, release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`; its tag `dyad-v6.4.24` is created by the PI after the merge of PR #213. Until that tag exists, `dyad-v6.4.23` (`9f874ccc…25cb`) is the newest tag. Recheck; do not trust this line.
 
 `records/dyad/DYAD_OWNER_ENTRY_NOTE_INBOX_20261030.md` is the note of one closed inbox round. It is history, not a second entry point.
 
@@ -20,7 +20,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 | Thread | Records | State |
 |---|---|---|
-| v6.4.24 maintenance edition | `records/dyad/DYAD_v6_4_24_BACKLOG.md`; draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`; branch `claude/dyad-v6.4.24` | candidate r2 (`014e1ac3…8958`) after the co-owner's r1 review (PR #213, `5856200509`, R1–R6); read-back pending; not adopted |
+| v6.4.24 maintenance edition | `records/dyad/DYAD_v6_4_24_BACKLOG.md`; draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`; branch `claude/dyad-v6.4.24` | ADOPTED by the PI on 11 Nov 2026 (`10fbdacc…bc16`); r1 review `5856200509`, r2 read-back `5857204402`; merge and tag by the PI pending; post-tag read-back and notices pending |
 | S1, OPEN 21 on the sharpened R9 rows | `records/dyad/DYAD_S1_OPEN21_SHARP_ROWS_DESIGN.md`; `evidence/dyad/s1-open21-sharp/` | accepted by the co-owner; enters v6.4.24 as `DYAD-THM-OPEN21-SHARP-ROWS` |
 | OPEN 20 analytic branch, sectorial pilot | `records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md` (§7 stage 1, §8 stage 3a, §9 inputs to 3b); `…_STAGE2_SCOUTING_NUM.md`; `…_STAGE2B_JUMP_SCOUTING_NUM.md`; `…_LH2012_OWNER_ASSESSMENT.md` (§5, §6); `DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md` | stage 3a done, negative; stage 2b done (`[NUM]`: jump numerically nonzero); 3b design not written; 3c not authorized |
 | Inbox rounds | `DYAD_OWNER_DISPOSITION_INBOX_20261030.md` with its reconciliation; `DYAD_INBOX_20261111_OWNER_DISPOSITION.md` | both closed |
@@ -44,6 +44,8 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 - PI, 3 Nov 2026: Dyadic work is done in rtg-corpus and its outputs go into the Dyadic DSN; LIT is used only through requests in `pipes/LIT/`.
 - PI: OPEN 20 stage 3 is not authorized; N = 432 is deferred (stage-2 adoption, SESSION scope).
 - PI, 11 Nov 2026 (in session): start the v6.4.24 candidate now ("başlayalım"); stage 2b authorized ("evet aşama 2b'yi yetkilendiriyorum"). Stage 3c is still not authorized.
+- PI, 11 Nov 2026, 13:26 +03:00: "v6.4.24 r2 'yi benimsiyorum" (adopted bytes after the status transform: `10fbdacc…bc16`).
+- Co-owner and owner, 11 Nov: the 3b design aims at certifying one jump (\|ξ*\| = 0.40 as a first target); scouting of the second overlap class is not needed now and is not authorized.
 - Co-owner and owner, 3 Nov: v6.4.24 carries interface changes and S1; the §1 compaction waits for v6.4.25 or later; S2 (L-PHASE row B) is separate.
 - X4, tentative: DYAD RIDs for "not area-preserving" (owner proposal `[ALG]`), the p = 6 linear order and the homological resonance condition; no DYAD RID for the cubic radial rate across p (stays a RECOG import).
 - 11 Nov: no DYAD RID for RECOG's c_J and c_7 (disposition record, item 3).
@@ -61,7 +63,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read `DYAD_v6_4_24_BACKLOG.md` §C3 and the design record §9. Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **v6.4.24 review cycle.** Candidate r2 is on `claude/dyad-v6.4.24` (38 edits; gates C0–C11 pass; controls Q1–Q17 as expected; release record §4 lists R1–R6). Next: the co-owner's read-back of r2; then the PI's adoption, the status-lines-only transform, merge and tag. **The branch must not be merged before adoption:** it carries a DRAFT DSN.
+1. **v6.4.24 post-tag work** (after the PI's merge and tag): verify the tag, the merge commit and the file hash; write `records/dyad/DYAD_v6_4_24_POST_TAG.md`; file the notices of the release record §7 as pipe items (RECOG, NUMGEN, Triadic, Genesis, OFN, ATLAS, LIT). Acceptance: `tools/pipes_index.py --check` passes; the file at the tag has the adopted hash.
 2. **3b design note** for OPEN 20: certificate of Δ ≠ 0 at \|ξ*\| ≈ 0.40–0.45 (stage-2b record §6). First the same scouting on the second overlap class (S₁ ∩ S₂); then the local-enclosure obligation (invariant tube around a truncated series at \|ξ\| ≈ 0.1, to about 10⁻¹⁰). Acceptance: the note states every proof obligation and which are computer-checked; co-owner review; PI decision. No certification run.
 3. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
 
@@ -73,8 +75,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## PI_PENDING
 
-As of 11 November 2026, 14:00 +03:00:
-1. **Merge** of `claude/dyad-open20-stage2b` (merge commit, no tag): the stage-2b record, scripts and outputs. Safe to merge now.
-2. **Do not merge** `claude/dyad-v6.4.24` yet. Open a PR from it for the co-owner's review; adoption is the PI's decision after that review.
+As of 11 November 2026, 13:45 +03:00:
+1. **Merge PR #213 and tag `dyad-v6.4.24`** (merge commit; annotated tag on the merge commit). The CLI block was issued in the owner session of 11 November 2026; it checks the file hash `10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16` before tagging.
 
-No CLI block is pending for a tag.
+No other decision is pending.

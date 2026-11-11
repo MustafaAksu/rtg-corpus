@@ -1,6 +1,6 @@
 # RTG Dyadic v6.4.24 — release record
 
-**Status:** DRAFT — candidate r2, 11 November 2026. Reviewed by the co-owner at r1 (changes requested, R1–R6); r2 awaits the read-back. Not adopted. The PI decided on 11 November 2026 to start the candidate ("başlayalım"); adoption is a separate decision after the co-owner's review.
+**Status:** ADOPTED — PI, 11 November 2026. Final SHA-256 `10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16` (after the status-lines-only publication transform of the reviewed r2 candidate). Tag `dyad-v6.4.24` to be created by the PI after the merge.
 
 ## 1. Candidate
 
@@ -79,14 +79,23 @@ Not rerun for r2, as agreed in the review: the S1 certificate, the stage-2b camp
 |---|---|---|
 | Co-owner change-focused review of r1 (`c9b54e3`, `7f22ea35…2327`) | PR #213 review `5856200509` | scientific core accepted; corrections R1–R6 requested |
 | r2 (`014e1ac3…8958`): R1–R6 applied | this record §4 | — |
-| Co-owner read-back of r2 | — | pending |
-| PI decision | — | pending |
+| Co-owner delta-only read-back of r2 (`23e610e`) | PR #213 review `5857204402` | ACCEPT — R1–R6 closed; no new scientific correction. One editorial note on this record's §7 (applied below) |
+| **PI decision** | relayed in the owner session, 11 November 2026, 13:26 (UTC+3): "v6.4.24 r2 'yi benimsiyorum" | **ADOPTED** |
 
 ## 6. Publication
 
-Pending adoption. Planned, as for v6.4.23: a status-lines-only transform of the reviewed candidate (header status, Appendix A heading, footer), merge by the PI with a merge commit, annotated tag `dyad-v6.4.24`, post-tag read-back.
+- **Transform:** `evidence/dyad/scripts/release_dyad_v6_4_24.py` (SHA-256 `38f365ea78e524d57744c953a376f2bc9aa1784ab7638d8756b2ba5e3455f562`). It asserts the reviewed r2 hash and changes three status lines only: the header status, the Appendix A heading and the footer. Output in `evidence/dyad/v6.4.24/release.stdout.txt`.
+- **Merge:** by the PI, with a merge commit (PR #213).
+- **Tag:** annotated `dyad-v6.4.24` on the merge commit, by the PI.
+- **After the tag:** read-back of the tag and the file hash; notices of §7; `BASELINE.md` tag cell already names the tag.
 
-## 7. Notices (prepared, not sent; filed after adoption)
+| | SHA-256 |
+|---|---|
+| Reviewed candidate (r2) | `014e1ac3be8c21d0e70afb72f23f7592528b01ffc5cd6390628721cc69e98958` |
+| **Adopted v6.4.24** | **`10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16`** (285 321 bytes) |
+| Predecessor v6.4.23 | `9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb` (`dyad-v6.4.23`) |
+
+## 7. Notices (filed as pipe items after the tag)
 
 | To | Content |
 |---|---|
@@ -94,4 +103,4 @@ Pending adoption. Planned, as for v6.4.23: a status-lines-only transform of the 
 | NUMGEN | informational: no R9-conditional input changes; register row unchanged |
 | Triadic, Genesis, OFN | `DYAD-DEF-PRIMITIVE-MAP` label wording; no change to the definition or the RID |
 | ATLAS | DYAD.X4: three RIDs registered, one statement left without a DYAD RID; OPEN 20 pilot state now in the DSN |
-| LIT | use report: the DSN cites four LIT source labels at SESSION scope in the OPEN 20 entry |
+| LIT | use report: the OPEN 20 entry cites three published works at SESSION scope, read through LIT (López-Hernanz 2012; López-Hernanz–Rosas 2025; López-Hernanz–Raissy–Ribón–Sanz 2021, arXiv v1) |
