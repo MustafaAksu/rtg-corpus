@@ -203,19 +203,19 @@ The test-campaign records are reproducible in every field except `secs`; the ana
 
 **Stage 1 campaign (only after the PI's authorisation).** One command; the driver runs the fixtures, the three cells as parallel shards and the analyses, checks every exit code and every shard, and writes `CAMPAIGN_COMPLETE.json` only if all of it succeeded. `--jobs` is the number of parallel workers; **it must be the same on `--resume`** (another worker count gives differently named shards and leaves obsolete files in the directory).
 
-*Venue: the PI's Ubuntu server* (PI, 11 Nov 2026, 14:02 +03:00: large computations run on the Ubuntu server). The block writes a small script to the home directory and runs it in a fresh `bash`, so that it stops at the first failure whatever the calling shell is. It runs the reviewed bytes and hands the directory over unchanged on an upload branch:
+*Venue: the PI's Ubuntu server* (PI, 11 Nov 2026, 14:02 +03:00: large computations run on the Ubuntu server). The block writes a small script to the home directory and runs it in a fresh `bash`, so that it stops at the first failure whatever the calling shell is. It works in a separate git worktree (`~/az_tokres_wt`) and never touches the working tree of `~/rtg-corpus` (a first attempt on 11 Nov, 14:14 +03:00, with a block that used that working tree stopped at its clean-tree check before anything ran). It runs the reviewed bytes and hands the directory over unchanged on an upload branch:
 ```bash
 cat > ~/az_tokres_stage1.sh <<'AZ_STAGE1'
 set -euo pipefail
-cd ~/rtg-corpus
-test -z "$(git status --porcelain)" || { echo "STOP: working tree not clean"; exit 1; }
-trap 'git checkout -q main' EXIT
-git fetch -q origin
+REPO="$HOME/rtg-corpus"; WT="$HOME/az_tokres_wt"; OUT="$HOME/az_tokres_stage1"; JOBS=4
+git -C "$REPO" fetch -q origin
+test -d "$WT" || git -C "$REPO" worktree add -q --detach "$WT" origin/claude/az-token-resonance-prereg
+cd "$WT"
 git checkout -q --detach origin/claude/az-token-resonance-prereg
+test -z "$(git status --porcelain)" || { echo "STOP: worktree not clean"; exit 1; }
 git log --oneline -1; python3 --version; nproc
 ( cd evidence/az/token_resonance && sha256sum -c --quiet SHA256SUMS )
 echo "package bytes OK"
-OUT="$HOME/az_tokres_stage1"; JOBS=4
 python3 -I evidence/az/scripts/az_tokres_campaign.py --plan stage1 --jobs "$JOBS" --out "$OUT" --confirmatory ${AZ_RESUME:+--resume}
 test -f "$OUT/CAMPAIGN_COMPLETE.json"
 ( cd "$OUT" && sha256sum -c --quiet HASHES.txt )
@@ -231,7 +231,7 @@ echo "UPLOADED: upload/az-token-resonance-stage1 at $(git rev-parse --short HEAD
 AZ_STAGE1
 bash ~/az_tokres_stage1.sh
 ```
-If the run is interrupted: `AZ_RESUME=1 bash ~/az_tokres_stage1.sh` (same `JOBS`). If the driver ends with `CAMPAIGN FAILED`, nothing is uploaded and `~/az_tokres_stage1/CAMPAIGN_FAILED.txt` names the step. The mechanics of this block (clean-tree stop, package-hash stop, completion, hand-over commit, refusal of a second run into the same directory) were tested in a throwaway clone with the test plan and without the push; the registered plan was not run.
+If the run is interrupted: `AZ_RESUME=1 bash ~/az_tokres_stage1.sh` (same `JOBS`). If the driver ends with `CAMPAIGN FAILED`, nothing is uploaded and `~/az_tokres_stage1/CAMPAIGN_FAILED.txt` names the step. The mechanics of this block (package-hash stop, completion, hand-over commit with every file of the directory, refusal of a second run into the same directory, main working tree left untouched while dirty) were tested in a throwaway clone with the test plan and without the push; the registered plan was not run there.
 
 *Alternative venue, not planned: Windows, PowerShell.*
 ```powershell
