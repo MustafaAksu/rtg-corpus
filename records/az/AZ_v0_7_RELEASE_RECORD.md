@@ -1,7 +1,7 @@
 # Arithmetic Resonance and Zeta (AZ) v0.7 — Release Record
 
 **Status:** CANDIDATE — not adopted. Review and the PI's adoption decision are pending (§12, §13). Until an annotated tag `az-v0.7` exists, `az-v0.6` remains the governing edition.
-**Date:** 10 November 2026
+**Date:** 10 November 2026; revised 11 November 2026 after the change-focused review (§1).
 **Prepared by:** Claude, AZ co-owner session (branch `claude/az-v0.7`).
 **Edition:** v0.7, corrections only, one stage, under DSN Methodology v1.2 as declared (PI decision of 10 Nov 2026; the Methodology v1.4 migration and any layout work are a separate edition).
 **Predecessor:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6`, tag `az-v0.6`, SHA-256 `dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a`. It has no release record (`BASELINE.md`: verification "PI").
@@ -14,10 +14,10 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Step | Source | State |
 |---|---|---|
 | Reactivation | PI, 10 Nov 2026: AZ is reactivated; advisory row 1 first (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md` §4) | given |
-| Triage | `records/az/AZ_REACTIVATION_TRIAGE.md` (PR #207, head `69cf58e`): 34 rows, two inbox items, five Atlas findings; list (i) / list (ii) | open PR at the time of writing |
+| Triage | `records/az/AZ_REACTIVATION_TRIAGE.md` (PR #207, head `23e6d4d`): 34 rows, two inbox items, five Atlas findings; list (i) / list (ii) | merged by the PI, 11 Nov 2026, merge commit `f5e548e` |
 | Co-owner review of the triage | ChatGPT co-owner session, PR #207 reviews `5848171706` (accept with minor corrections) and `5848352191` (accepted) | done |
 | PI decisions on the six triage questions | PI, 10 Nov 2026, 22:52 +03:00, project conversation: "6 konuda da co-owner tavsiyelerini kabul ediyorum" (triage §7) | given: list (i) is the scope; Methodology v1.2 stays declared; corrected Thread A list with a pointer; SG-PROG by pointer; the §9 provenance claim is replaced; Claude drafts, ChatGPT reviews |
-| Change-focused review of this edition | ChatGPT co-owner session | *(to be filled)* |
+| Change-focused review of this edition | ChatGPT co-owner session, PR #208 review `5854287756` on `fcd1c3d` (candidate `c1cb4140…a39f`): accepted with two minor corrections. It reconstructed the 59 edits against the tagged v0.6 text and recomputed five hashes; gate and control outputs were inspected, not rerun. R1 (size figures of this record) and R2 (three TDR-G definitions cited under one RID) are applied in this revision. | done; readback of the changed lines *(to be filled)* |
 | Adoption | PI | *(to be filled)* |
 | Merge commit, tag `az-v0.7` | PI | *(to be filled)* |
 
@@ -26,10 +26,10 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v0.6) | `git show az-v0.6:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | `dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a` |
-| **Candidate v0.7** | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | `c1cb414064b26797643dac5435acb3b61cbf0bb842b6b34c3986f958c578a39f` |
-| Builder and checker | `evidence/az/scripts/build_az_v0_7.py` | `3328774537883f27953cbf650ee33a404bbfae960fb28beb6ed624142689e4b5` |
-| Edit log (59 edits, old and new text with hashes, triage rows) | `evidence/az/v0.7/edit_log.json` | `05e8f30f370efb38d5f4b6abd4bc76fefa4b02c8f91ca54cba97f2d469ae1f15` |
-| Check output (gates) | `evidence/az/v0.7/check_output.txt` | `7755e95f20f3fad8c47643be99fcd0dd3ecb41438fae694556f1e815b1bfd5d4` |
+| **Candidate v0.7** | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` |
+| Builder and checker | `evidence/az/scripts/build_az_v0_7.py` | `753c273d2b50f8063e0d5a6c329af598ff80e7532d4870f9e6dc73ca510b0f50` |
+| Edit log (59 edits, old and new text with hashes, triage rows) | `evidence/az/v0.7/edit_log.json` | `341dd6dd54ea4e5e84575a7a1290923d07f4a601c32684fae8bcef3d654b1357` |
+| Check output (gates) | `evidence/az/v0.7/check_output.txt` | `13640f0b1fb0ec97bb7aa8267d25ce104aa0e140d6598b53af693b35164c7f00` |
 | Check output (negative controls) | `evidence/az/v0.7/controls_output.txt` | `13e30f32bf4df37f5829e5aa06813d87a5c2a9a6b76ec61fa06741363ed166ff` |
 
 **Reproduce.** `git show az-v0.6:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md > base.md`; `python3 -I evidence/az/scripts/build_az_v0_7.py base.md OUT.md LOG.json` writes the candidate and the log; `python3 -I evidence/az/scripts/build_az_v0_7.py base.md dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md evidence/az/v0.7/edit_log.json --check` runs the gates (`--controls` for the negative controls).
@@ -56,7 +56,7 @@ All 59 edits address base lines by number and are asserted against the base text
 | 16 | sub-labels are not identifiers | E47, E48, E50 | §8: one `DYAD-OPEN-P-RESONANCE` row naming its sub-items, including the cardinality lemma; the separate "subgroup cardinality" row is merged into it. |
 | 17 | section pointer | E20, E21 | DIRECT-WEIGHT and CROSS-IDENTITY: source §2 OPEN 9. |
 | 18 | label | E17 | $\nu_5^{(5)}$: exact in $\mathbb{Q}(\zeta_5)$; the radical field is that of its real and imaginary parts. |
-| 19–20 | repin | E29, E30, E53 | `TDRG-DEF-ZN-STATE` (§6.1); `TDRG-ALG-LEM-REACH`, `TDRG-THM-REACHABILITY-K0`. |
+| 19–20 | repin | E29, E30, E53 | The three owner definitions of TDR-G §6.1, each under its own RID: `TDRG-DEF-ZN-STATE` (phase universe, state), `TDRG-DEF-PHYSICAL-STATE` (quotient by global phase), `TDRG-DEF-BAND` (defect band) — in §4.2 and as three §8 rows (review R2). `TDRG-ALG-LEM-REACH`, `TDRG-THM-REACHABILITY-K0`. |
 | 21 | owner wording | E31, E53 | LEM-RETRIG: bound state of period dividing 2; least period 2 for $d\ne0$; fixed point at $d=0$. |
 | 22 | owner wording | E32, E53 | LEM-SPECCONS: gcd multiset "in particular", a consequence only, with the owner's $N=24$ counterexample to the converse. |
 | 23 | repin + convention | E33, E53 | BIND3 owner RIDs; `[conv: v18 path orientation]`; not rerun by the owner. |
@@ -93,7 +93,7 @@ Rows 30, 33 and 34 need no edit. Row 32 is a release step (§9).
 CONTROLS: PASS (all caught)
 ```
 
-**Lint** (`tools/dsn_lint.py`, informational, no gate): 82,889 bytes, 598 lines; growth +9,256 bytes (+12.6 %) over v0.6.
+**Lint** (`tools/dsn_lint.py`, informational, no gate; rerun on the final bytes): 83,281 bytes, 600 lines; growth +9,648 bytes (+13.1 %) over v0.6.
 
 **Pipes:** `tools/pipes_index.py --check` passes on the branch.
 
@@ -112,7 +112,7 @@ The Thread C evidence named in §9 is not in the repository (triage §1). PI, 10
 - **Bare `[THM-ALG]`** stays under the declared v1.2 (triage row 34).
 - **`TDRG-AZ-STATIC-ZN-4Q` and `PROP-AZ-CORE-EQUIV`** keep their names (triage row 33).
 - **`[CAND/conditional]`** on the $p=6$ face-flux transfer (§4.1.1, §8) is AZ's v0.6 spelling of the owner's `[CAND]` `[scope: conditional]` (`DYAD-CAND-P0-DYADIC`); triage classed that row "none", so it is not touched.
-- **The two-component description of the degree-2 $q=3$ cancellation** (reachability; cancellation) is carried from v0.6. The current Dyadic edition prints that result as a one-line entry with its RID; the longer description was not found there and is unverified against the owner's current text.
+- **The two-component description of the degree-2 $q=3$ cancellation** (reachability; cancellation) is carried from v0.6. The current Dyadic edition prints that result as a one-line entry with its RID; the longer description was not found there and is unverified against the owner's current text. Review `5854287756` checked the degree-2 mechanism independently for the declared $K_p$ family (`[SESSION]`, not owner-adopted): the one-step $\bar z^2$ coefficient is nonzero and its $s$-step sum vanishes for $s=p/3\ge2$. That check does not recover or authenticate the owner's eigenframe linear-part lemma, is not adopted by this edition, and changes no text.
 - **"Thread B (§4)"** in the SG-PROG-1 entry is v0.6's own cross-reference and is kept.
 
 ## 7. Removals and tag changes
@@ -124,7 +124,7 @@ The Thread C evidence named in §9 is not in the repository (triage §1). PI, 10
 
 ## 8. Pipe items (`pipes/`)
 
-Inbox checkpoint: 10 Nov 2026 on `origin/main` (`ebf1163`). `pipes/AZ/` holds two items; both are notices that ask for nothing.
+Inbox checkpoint: 11 Nov 2026 on `origin/main` (`f5e548e`). `pipes/AZ/` holds two items; both are notices that ask for nothing.
 
 | Item | State on this branch | Disposition |
 |---|---|---|
@@ -150,9 +150,9 @@ One `kind: notice` item per consumer, filed by the AZ co-owner after `az-v0.7` e
 | File | Bytes | Lines |
 |---|---|---|
 | v0.6 (adopted) | 73,633 | 601 |
-| v0.7 candidate | 82,889 | 598 |
+| v0.7 candidate | 83,281 | 600 |
 
-Net change: +9,256 bytes (+12.6 %). The growth is the owner RIDs and qualifications in Thread A, Thread B and §8, the §9 availability statement and the Appendix A/B entries; §7 shrinks by 22 lines.
+Net change: +9,648 bytes (+13.1 %), measured on the candidate bytes of §2. The growth is the owner RIDs and qualifications in Thread A, Thread B and §8, the §9 availability statement and the Appendix A/B entries; §7 shrinks by 22 lines. (The first issue of this record printed 82,889 bytes, taken from a lint run that preceded the final build; the candidate reviewed at `fcd1c3d` was 82,896 bytes — review finding R1.)
 
 ## 11. Not done (by decision)
 
@@ -167,10 +167,10 @@ Net change: +9,256 bytes (+12.6 %). The growth is the owner RIDs and qualificati
 
 | # | Step | Who | State |
 |---|---|---|---|
-| 1 | Change-focused review of this branch: every edit against its triage row and the owner text | ChatGPT co-owner | *(to be filled)* |
+| 1 | Change-focused review of this branch: every edit against its triage row and the owner text | ChatGPT co-owner | review `5854287756` done; R1 and R2 applied; readback of the changed lines *(to be filled)* |
 | 2 | Adoption decision entered here (§13) | PI | *(to be filled)* |
 | 3 | Adoption commit on this branch: status line of this record, §13, and the `BASELINE.md` AZ row (v0.7, the adopted hash, this record, tag `az-v0.7`) | AZ co-owner | *(to be filled)* |
-| 4 | Merge commits (not squash): the triage PR #207 first, then this PR | PI | *(to be filled)* |
+| 4 | Merge commits (not squash): the triage PR #207 first, then this PR | PI | #207 merged (`f5e548e`); this PR *(to be filled)* |
 | 5 | Annotated tag `az-v0.7` on the merge commit of this PR, with the adopted hash in the tag message | PI | *(to be filled)* |
 | 6 | Notices of §9; close both `pipes/AZ/` items; lane update in the orientation note | AZ co-owner, after the tag | *(to be filled)* |
 | 7 | Tag verification and Atlas refresh | atlas owner | *(to be filled)* |

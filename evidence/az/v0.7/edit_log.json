@@ -1,6 +1,6 @@
 {
  "base_sha256": "dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a",
- "candidate_sha256": "c1cb414064b26797643dac5435acb3b61cbf0bb842b6b34c3986f958c578a39f",
+ "candidate_sha256": "2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94",
  "edits": [
   {
    "id": "E01",
@@ -415,10 +415,10 @@
     "`[bridge-candidate]` **$\\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\\Delta_{ij}=(\\theta_i-\\theta_j)\\bmod N$, and absolute phases gauge. The defect band is $\\mathcal{D}_k=\\{\\Delta\\in\\mathbb{Z}_N: \\operatorname{dist}_{\\mathbb{Z}_N}(\\Delta,N/2)\\le k\\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[source: RTG_DISCRETE_GENESIS_DSN_v2.12 §1]`"
    ],
    "new": [
-    "`[bridge-candidate]` **$\\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\\Delta_{ij}=(\\theta_i-\\theta_j)\\bmod N$, and absolute phases gauge. The defect band is $\\mathcal{D}_k=\\{\\Delta\\in\\mathbb{Z}_N: \\operatorname{dist}_{\\mathbb{Z}_N}(\\Delta,N/2)\\le k\\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[RID: TDRG-DEF-ZN-STATE]` `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §6.1]`"
+    "`[bridge-candidate]` **$\\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\\Delta_{ij}=(\\theta_i-\\theta_j)\\bmod N$, and absolute phases gauge. The defect band is $\\mathcal{D}_k=\\{\\Delta\\in\\mathbb{Z}_N: \\operatorname{dist}_{\\mathbb{Z}_N}(\\Delta,N/2)\\le k\\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[RID: TDRG-DEF-ZN-STATE]` (phase universe and variable-size state) `[RID: TDRG-DEF-PHYSICAL-STATE]` (physical state as the quotient by global phase; relational phases) `[RID: TDRG-DEF-BAND]` (defect band) `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §6.1]`"
    ],
    "old_sha256": "4673d5a6c5f8c5c5f7cb1413b464a37c2b996d1fcade26226fa60c4af19e3083",
-   "new_sha256": "1503d31f28ac057406de1b89815768246804b943edc38a64f7e2e5b85b56e6ce"
+   "new_sha256": "f08088256c4fe9de8ca9136069f7ee55d220fead48481e37d1a226c78b4b2c4e"
   },
   {
    "id": "E30",
@@ -781,7 +781,9 @@
     "- [RID: TDR-26-BIRTH-ANCHOR] :: birth-anchored discriminator over $[\\mathrm{fb},\\mathrm{fb}+200)$, $N=720,722$ :: `[bridge-candidate]` `[NUM cross-cell, n=2; classifier HEUR]`"
    ],
    "new": [
-    "- [RID: TDRG-DEF-ZN-STATE] :: $\\mathbb{Z}_N$ system, defect band $\\mathcal{D}_k$, relational phases, absolute-phase gauge :: `[bridge-candidate]` :: the consumer name `TDRG-ZN-STATE` resolves to it through the owner's §7 map",
+    "- [RID: TDRG-DEF-ZN-STATE] :: $\\mathbb{Z}_N$ phase universe, variable-size state :: `[bridge-candidate]` :: the consumer name `TDRG-ZN-STATE` resolves to it through the owner's §7 map",
+    "- [RID: TDRG-DEF-PHYSICAL-STATE] :: physical state as the quotient by global phase shift; relational phases $\\Delta_{ij}$ (absolute-phase gauge) :: `[bridge-candidate]`",
+    "- [RID: TDRG-DEF-BAND] :: defect band $\\mathcal{D}_k$ :: `[bridge-candidate]`",
     "- [RID: TDRG-ALG-LEM-REACH] :: band-form reachability/superselection ($k=0$: `TDRG-THM-REACHABILITY-K0`) :: `[bridge-candidate]` `[THM/ALG in source]`",
     "- [RID: TDRG-ALG-LEM-RETRIG] :: two-node retrigger threshold; bound state of period dividing 2 :: `[bridge-candidate]` `[ALG in source]`",
     "- [RID: TDRG-ALG-LEM-SPECCONS] :: three-node no-birth advance-spectrum conservation; the gcd multiset as a consequence only :: `[bridge-candidate]` `[ALG in source]`",
@@ -790,7 +792,7 @@
     "- [RID: TDRG-OPEN-LOCKING-FAIL] :: OPEN TDR-26 birth-anchored discriminator over $[\\mathrm{fb},\\mathrm{fb}+200)$, $N=720,722$ :: `[bridge-candidate]` `[NUM cross-cell, n=2; classifier HEUR]`"
    ],
    "old_sha256": "beda953445cdc7ec01252c7aded0702bae9bce1b6474f80815613f4376ac6b09",
-   "new_sha256": "52dfd8676988c1e6c4599523857a6eb3a1db80039e63c9e86fa3758b8768958d"
+   "new_sha256": "486b2bf40b24ab555e708947bbe247385aad941982fc7e5cfe47e963c8d4d436"
   },
   {
    "id": "E54",

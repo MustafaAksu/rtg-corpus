@@ -269,7 +269,7 @@ The following items are owned by `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 OPEN 9. The
 **Ownership:** `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`).  
 **Status here:** Branch-local context and bridge-candidate observable family under OPEN-P1. SG-PROG-1, SG-PROG-4, SG-AZ-3, and SG-AZ-0.4 apply. No TDR-G result is imported as a cross-branch claim, and no TDR-G fact is used as evidence for a Dyadic claim. v0.7 synchronizes Thread B with TDR-G v2.12.14 (owner RIDs and owner corrections; Appendix A).
 
-`[bridge-candidate]` **$\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\Delta_{ij}=(\theta_i-\theta_j)\bmod N$, and absolute phases gauge. The defect band is $\mathcal{D}_k=\{\Delta\in\mathbb{Z}_N: \operatorname{dist}_{\mathbb{Z}_N}(\Delta,N/2)\le k\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[RID: TDRG-DEF-ZN-STATE]` `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §6.1]`
+`[bridge-candidate]` **$\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\Delta_{ij}=(\theta_i-\theta_j)\bmod N$, and absolute phases gauge. The defect band is $\mathcal{D}_k=\{\Delta\in\mathbb{Z}_N: \operatorname{dist}_{\mathbb{Z}_N}(\Delta,N/2)\le k\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[RID: TDRG-DEF-ZN-STATE]` (phase universe and variable-size state) `[RID: TDRG-DEF-PHYSICAL-STATE]` (physical state as the quotient by global phase; relational phases) `[RID: TDRG-DEF-BAND]` (defect band) `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §6.1]`
 
 `[bridge-candidate]` **Reachability / superselection.** For $k=0$, two-node interaction occurs iff $\gcd(d,N)\mid(N/2-\Delta_0)$; unreachable pairs are superselection sectors. The band-form extension is LEM-REACH (`TDRG-ALG-LEM-REACH`; the $k=0$ statement is `TDRG-THM-REACHABILITY-K0`): $\mathcal{D}_k$ is reachable iff $\mathcal{D}_k\cap(\Delta_0+g\mathbb{Z}_N)\neq\varnothing$; superselection persists at $k>0$ in the two-node universe. `[THM/ALG in source]` `[scope: branch-local]`
 
@@ -473,7 +473,9 @@ This document makes no active cross-branch imports. All Dyadic OPEN 9 results ci
 
 ### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`)
 
-- [RID: TDRG-DEF-ZN-STATE] :: $\mathbb{Z}_N$ system, defect band $\mathcal{D}_k$, relational phases, absolute-phase gauge :: `[bridge-candidate]` :: the consumer name `TDRG-ZN-STATE` resolves to it through the owner's §7 map
+- [RID: TDRG-DEF-ZN-STATE] :: $\mathbb{Z}_N$ phase universe, variable-size state :: `[bridge-candidate]` :: the consumer name `TDRG-ZN-STATE` resolves to it through the owner's §7 map
+- [RID: TDRG-DEF-PHYSICAL-STATE] :: physical state as the quotient by global phase shift; relational phases $\Delta_{ij}$ (absolute-phase gauge) :: `[bridge-candidate]`
+- [RID: TDRG-DEF-BAND] :: defect band $\mathcal{D}_k$ :: `[bridge-candidate]`
 - [RID: TDRG-ALG-LEM-REACH] :: band-form reachability/superselection ($k=0$: `TDRG-THM-REACHABILITY-K0`) :: `[bridge-candidate]` `[THM/ALG in source]`
 - [RID: TDRG-ALG-LEM-RETRIG] :: two-node retrigger threshold; bound state of period dividing 2 :: `[bridge-candidate]` `[ALG in source]`
 - [RID: TDRG-ALG-LEM-SPECCONS] :: three-node no-birth advance-spectrum conservation; the gcd multiset as a consequence only :: `[bridge-candidate]` `[ALG in source]`

@@ -5,5 +5,5 @@
 [PASS] G5 OWNED-IDS (no edit drops an AZ-owned identifier; E43 removes proposal text only)
 [PASS] G6 TAGS (no edit drops a grade or status tag except the declared owner-tag changes)
 [PASS] G7 ROWS (every edit names its triage row)
-candidate sha256 c1cb414064b26797643dac5435acb3b61cbf0bb842b6b34c3986f958c578a39f
+candidate sha256 2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94
 RESULT: PASS (7/7 gates)
