@@ -1,0 +1,64 @@
+deposited bytes: SHA256SUMS OK
+registry lib/hashimoto.py                                     equal
+registry lib/graphgen.py                                      equal
+registry lib/graphio.py                                       absent
+registry lib/manifest.py                                      absent
+registry benchmark_ladder.py                                  equal
+registry validate_solver.py                                   equal
+registry az1b_certify.py                                      absent
+registry benchmarks/bouquet_2_4_hashimoto_matrix.json         equal
+registry benchmarks/bouquet_2_4_charpoly.txt                  equal
+registry benchmarks/az_v5_synthetic_benchmark_report.json     absent
+python 3.13.18 numpy 2.5.3 scipy 1.18.1
+--- benchmark_ladder.py (exit code 0)
+================================================================
+AZ Phase 1 Benchmark Ladder — AZ-1 closure gate
+================================================================
+S1 directed L-cycle
+  [PASS] L=4: ok
+  [PASS] L=6: ok
+  [PASS] L=8: ok
+S2 bidirected L-cycle (forward + backward independent)
+  [PASS] L=4: ok; 8/8 eigs near L-th roots; matrix (8, 8)
+  [PASS] L=6: ok; 12/12 eigs near L-th roots; matrix (12, 12)
+S3 disjoint union of k directed L-cycles
+  [PASS] k=2,L=4: ok
+  [PASS] k=3,L=6: ok
+S4 bouquet k=2,L=4 (benchmark BY CONSTRUCTION, no asserted spectrum)
+  [PASS] bouquet matrix size: (8, 8) (k*L = 8 directed edges)
+  [PASS] artifact round-trip: ok
+     stored matrix:   benchmarks/bouquet_2_4_hashimoto_matrix.json
+     stored charpoly: benchmarks/bouquet_2_4_charpoly.txt
+     spectral radius rho(B) = 1.189207
+----------------------------------------------------------------
+Analytic steps (S1,S3): PASS
+Construction steps (S2,S4): PASS
+Report: benchmarks/az_v5_synthetic_benchmark_report.json
+================================================================
+AZ-1 GATE: PASS (exit 0)
+--- validate_solver.py (exit code 0; timings omitted)
+ENG-blocker-4 acceptance: sparse vs dense
+  graph: 200 directed edges
+  dense full: 200 eigs
+  sparse leading-10: 10 eigs
+  max |mag| diff on top-10: 2.44e-15  -> PASS
+
+Trace-moment fallback self-consistency: Tr(B^m) vs sum(lambda^m)
+  m=1: Tr(B^m)=0.0000  sum(l^m)=0.0000  diff=5.22e-15  ok
+  m=2: Tr(B^m)=0.0000  sum(l^m)=0.0000  diff=5.62e-14  ok
+  m=3: Tr(B^m)=0.0000  sum(l^m)=0.0000  diff=1.40e-13  ok
+  m=4: Tr(B^m)=0.0000  sum(l^m)=0.0000  diff=7.26e-14  ok
+  m=5: Tr(B^m)=200.0000  sum(l^m)=200.0000  diff=0.00e+00  ok
+  m=6: Tr(B^m)=0.0000  sum(l^m)=0.0000  diff=8.17e-14  ok
+  m=7: Tr(B^m)=0.0000  sum(l^m)=0.0000  diff=3.63e-13  ok
+  m=8: Tr(B^m)=0.0000  sum(l^m)=0.0000  diff=7.31e-13  ok
+
+Result: PASS
+--- regenerated benchmark files
+e6fd69680b80bb906a84bdb1a82cff806a033af996d51bafdf0e5088fc371a4e  az_v5_synthetic_benchmark_report.json
+regenerated report equals the registry entry of the missing original: True
+bouquet matrix: k, L, edges, matrix_size, matrix identical to the deposited original: True
+bouquet matrix: stored eigenvalues, greedy multiset distance to the regenerated ones < 1e-6: True
+bouquet charpoly: 9 coefficients, max difference to the regenerated ones < 1e-12: True
+bouquet charpoly rounded to 9 places: [1.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0]
+REPLAY PASS
