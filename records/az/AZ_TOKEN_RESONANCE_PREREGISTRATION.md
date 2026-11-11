@@ -203,32 +203,35 @@ The test-campaign records are reproducible in every field except `secs`; the ana
 
 **Stage 1 campaign (only after the PI's authorisation).** One command; the driver runs the fixtures, the three cells as parallel shards and the analyses, checks every exit code and every shard, and writes `CAMPAIGN_COMPLETE.json` only if all of it succeeded. `--jobs` is the number of parallel workers; **it must be the same on `--resume`** (another worker count gives differently named shards and leaves obsolete files in the directory).
 
-*Venue: the PI's Ubuntu server* (PI, 11 Nov 2026, 14:02 +03:00: large computations run on the Ubuntu server). The block stops at the first failure, runs the reviewed bytes, and hands the directory over unchanged on an upload branch:
+*Venue: the PI's Ubuntu server* (PI, 11 Nov 2026, 14:02 +03:00: large computations run on the Ubuntu server). The block writes a small script to the home directory and runs it in a fresh `bash`, so that it stops at the first failure whatever the calling shell is. It runs the reviewed bytes and hands the directory over unchanged on an upload branch:
 ```bash
-( set -euo pipefail
-  cd ~/rtg-corpus
-  test -z "$(git status --porcelain)" || { echo "STOP: working tree not clean"; exit 1; }
-  trap 'git checkout -q main' EXIT
-  git fetch -q origin
-  git checkout -q --detach origin/claude/az-token-resonance-prereg
-  git log --oneline -1; python3 --version; nproc
-  ( cd evidence/az/token_resonance && sha256sum -c --quiet SHA256SUMS )
-  echo "package bytes OK"
-  OUT="$HOME/az_tokres_stage1"; JOBS=4
-  python3 -I evidence/az/scripts/az_tokres_campaign.py --plan stage1 --jobs "$JOBS" --out "$OUT" --confirmatory
-  test -f "$OUT/CAMPAIGN_COMPLETE.json"
-  ( cd "$OUT" && sha256sum -c --quiet HASHES.txt )
-  echo "campaign hashes OK"
-  cat "$OUT/CAMPAIGN_COMPLETE.json"
-  git checkout -q -b upload/az-token-resonance-stage1 origin/main
-  mkdir -p upload/az-token-resonance-stage1
-  cp -r "$OUT"/. upload/az-token-resonance-stage1/
-  git add upload/az-token-resonance-stage1
-  git commit -q -m "upload: AZ token-resonance Stage 1 campaign output, unchanged"
-  git push -q -u origin upload/az-token-resonance-stage1
-  echo "UPLOADED: upload/az-token-resonance-stage1 at $(git rev-parse --short HEAD)" )
+cat > ~/az_tokres_stage1.sh <<'AZ_STAGE1'
+set -euo pipefail
+cd ~/rtg-corpus
+test -z "$(git status --porcelain)" || { echo "STOP: working tree not clean"; exit 1; }
+trap 'git checkout -q main' EXIT
+git fetch -q origin
+git checkout -q --detach origin/claude/az-token-resonance-prereg
+git log --oneline -1; python3 --version; nproc
+( cd evidence/az/token_resonance && sha256sum -c --quiet SHA256SUMS )
+echo "package bytes OK"
+OUT="$HOME/az_tokres_stage1"; JOBS=4
+python3 -I evidence/az/scripts/az_tokres_campaign.py --plan stage1 --jobs "$JOBS" --out "$OUT" --confirmatory ${AZ_RESUME:+--resume}
+test -f "$OUT/CAMPAIGN_COMPLETE.json"
+( cd "$OUT" && sha256sum -c --quiet HASHES.txt )
+echo "campaign hashes OK"
+cat "$OUT/CAMPAIGN_COMPLETE.json"
+git checkout -q -b upload/az-token-resonance-stage1 origin/main
+mkdir -p upload/az-token-resonance-stage1
+cp -r "$OUT"/. upload/az-token-resonance-stage1/
+git add upload/az-token-resonance-stage1
+git commit -q -m "upload: AZ token-resonance Stage 1 campaign output, unchanged"
+git push -q -u origin upload/az-token-resonance-stage1
+echo "UPLOADED: upload/az-token-resonance-stage1 at $(git rev-parse --short HEAD)"
+AZ_STAGE1
+bash ~/az_tokres_stage1.sh
 ```
-If the run is interrupted: the same block with `--resume` added to the driver line and the same `JOBS`. If the driver ends with `CAMPAIGN FAILED`, nothing is uploaded and `$HOME/az_tokres_stage1/CAMPAIGN_FAILED.txt` names the step.
+If the run is interrupted: `AZ_RESUME=1 bash ~/az_tokres_stage1.sh` (same `JOBS`). If the driver ends with `CAMPAIGN FAILED`, nothing is uploaded and `~/az_tokres_stage1/CAMPAIGN_FAILED.txt` names the step. The mechanics of this block (clean-tree stop, package-hash stop, completion, hand-over commit, refusal of a second run into the same directory) were tested in a throwaway clone with the test plan and without the push; the registered plan was not run.
 
 *Alternative venue, not planned: Windows, PowerShell.*
 ```powershell
