@@ -88,10 +88,14 @@ Held one day after the planned date. Sources: `records/dyad/DYAD_INBOX_20261111_
 - §8 artifacts: the stage-3 route check, the INF-014/015 hypothesis check and the bridge-note check, with hashes.
 - No DYAD RID for RECOG's c_J and c_7 (disposition record, item 3).
 
+**Added 11 November 2026 (after the PI's decisions of that day: start the candidate; stage 2b authorized):**
+- S3 paragraph: one `[NUM]` sentence on stage 2b (`records/dyad/DYAD_OPEN20_AN_STAGE2B_JUMP_SCOUTING_NUM.md`): the jump on S₀ ∩ S₁ is numerically nonzero and decays like exp(−2πT) in the Fatou time. It is scouting; B-an and B-6 stay ACTIVE; no divergence statement is made.
+- §8 artifacts: the two stage-2b scripts and their outputs.
+
 **Not in v6.4.24, recorded for later:**
 - a sharper row-A constant built on `RECOG-ALG-A1C-JET-REMAINDER-BOUNDS` (optional; needs its own certificate);
 - the owner check of AZ §4.1.1 (answer to AZ by pipe; a DSN change only if the owner text is found unclear);
-- OPEN 20 stage 2b and the 3b design (design record §9).
+- the OPEN 20 3b design (design record §9; stage 2b is done).
 
 **Schedule proposed by the owner** (maintenance schedule, not a scientific requirement):
 1. change matrix and X4 RID names: with the candidate;
@@ -100,6 +104,8 @@ Held one day after the planned date. Sources: `records/dyad/DYAD_INBOX_20261111_
 4. PI adoption, merge and tag.
 
 NUMGEN and OFN answers are included if they arrive before step 3; otherwise they stay open dependencies in the release record.
+
+**Status, 11 November 2026:** steps 1 and 2 are done. Candidate r1 `7f22ea35…2327` is on `claude/dyad-v6.4.24`, with the draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`. Step 3 (co-owner review) is next.
 
 ## D. Not in v6.4.24
 

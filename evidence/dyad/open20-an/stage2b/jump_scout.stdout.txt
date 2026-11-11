@@ -1,0 +1,59 @@
+base                       r=0.45  n=334  |Delta_Y|=1.63222532169e-5  on-curve=3.36e-82
+base                       r=0.42  n=334  |Delta_Y|=4.50429875484e-7  on-curve=3.35e-82
+base                       r=0.4  n=334  |Delta_Y|=1.9527560452e-8  on-curve=3.35e-82
+base                       r=0.37  n=334  |Delta_Y|=3.65782336644e-11  on-curve=3.35e-82
+base                       r=0.35  n=334  |Delta_Y|=1.31588972011e-13  on-curve=3.34e-82
+base                       r=0.32  n=334  |Delta_Y|=1.17131998079e-18  on-curve=3.34e-82
+base                       r=0.3  n=334  |Delta_Y|=2.36235344518e-23  on-curve=3.33e-82
+base                       r=0.28  n=333  |Delta_Y|=1.31102277049e-29  on-curve=3.34e-82
+base                       r=0.26  n=333  |Delta_Y|=4.25678898781e-38  on-curve=3.33e-82
+base                       r=0.24  n=333  |Delta_Y|=7.28247374427e-50  on-curve=3.32e-82
+smaller matching radius    r=0.45  n=652  |Delta_Y|=1.63222532169e-5  on-curve=1.69e-82
+smaller matching radius    r=0.42  n=652  |Delta_Y|=4.50429875484e-7  on-curve=1.69e-82
+smaller matching radius    r=0.4  n=652  |Delta_Y|=1.9527560452e-8  on-curve=1.69e-82
+smaller matching radius    r=0.37  n=652  |Delta_Y|=3.65782336644e-11  on-curve=1.69e-82
+smaller matching radius    r=0.35  n=651  |Delta_Y|=1.31588972011e-13  on-curve=1.69e-82
+smaller matching radius    r=0.32  n=651  |Delta_Y|=1.17131998079e-18  on-curve=1.69e-82
+smaller matching radius    r=0.3  n=651  |Delta_Y|=2.36235344518e-23  on-curve=1.69e-82
+smaller matching radius    r=0.28  n=651  |Delta_Y|=1.31102277049e-29  on-curve=1.69e-82
+smaller matching radius    r=0.26  n=651  |Delta_Y|=4.25678898781e-38  on-curve=1.69e-82
+smaller matching radius    r=0.24  n=651  |Delta_Y|=7.28247374427e-50  on-curve=1.69e-82
+larger matching radius     r=0.45  n=193  |Delta_Y|=1.63222532169e-5  on-curve=5.9e-82
+larger matching radius     r=0.42  n=193  |Delta_Y|=4.50429875484e-7  on-curve=5.89e-82
+larger matching radius     r=0.4  n=193  |Delta_Y|=1.9527560452e-8  on-curve=5.88e-82
+larger matching radius     r=0.37  n=193  |Delta_Y|=3.65782336644e-11  on-curve=5.87e-82
+larger matching radius     r=0.35  n=193  |Delta_Y|=1.31588972011e-13  on-curve=5.86e-82
+larger matching radius     r=0.32  n=193  |Delta_Y|=1.17131998079e-18  on-curve=5.84e-82
+larger matching radius     r=0.3  n=193  |Delta_Y|=2.36235344518e-23  on-curve=5.82e-82
+larger matching radius     r=0.28  n=193  |Delta_Y|=1.31102277049e-29  on-curve=5.8e-82
+larger matching radius     r=0.26  n=192  |Delta_Y|=4.25678898781e-38  on-curve=5.81e-82
+larger matching radius     r=0.24  n=192  |Delta_Y|=7.28247374427e-50  on-curve=5.77e-82
+fewer coefficients         r=0.45  n=334  |Delta_Y|=1.63222532169e-5  on-curve=3.36e-82
+fewer coefficients         r=0.42  n=334  |Delta_Y|=4.50429875484e-7  on-curve=3.35e-82
+fewer coefficients         r=0.4  n=334  |Delta_Y|=1.9527560452e-8  on-curve=3.35e-82
+fewer coefficients         r=0.37  n=334  |Delta_Y|=3.65782336644e-11  on-curve=3.35e-82
+fewer coefficients         r=0.35  n=334  |Delta_Y|=1.31588972011e-13  on-curve=3.34e-82
+fewer coefficients         r=0.32  n=334  |Delta_Y|=1.17131998079e-18  on-curve=3.34e-82
+fewer coefficients         r=0.3  n=334  |Delta_Y|=2.36235344518e-23  on-curve=3.33e-82
+fewer coefficients         r=0.28  n=333  |Delta_Y|=1.31102277049e-29  on-curve=3.34e-82
+fewer coefficients         r=0.26  n=333  |Delta_Y|=4.25678898781e-38  on-curve=3.33e-82
+fewer coefficients         r=0.24  n=333  |Delta_Y|=7.28247374427e-50  on-curve=3.32e-82
+higher precision           r=0.45  n=334  |Delta_Y|=1.63222532169e-5  on-curve=3.36e-82
+higher precision           r=0.42  n=334  |Delta_Y|=4.50429875484e-7  on-curve=3.35e-82
+higher precision           r=0.4  n=334  |Delta_Y|=1.9527560452e-8  on-curve=3.35e-82
+higher precision           r=0.37  n=334  |Delta_Y|=3.65782336644e-11  on-curve=3.35e-82
+higher precision           r=0.35  n=334  |Delta_Y|=1.31588972011e-13  on-curve=3.34e-82
+higher precision           r=0.32  n=334  |Delta_Y|=1.17131998079e-18  on-curve=3.34e-82
+higher precision           r=0.3  n=334  |Delta_Y|=2.36235344518e-23  on-curve=3.33e-82
+higher precision           r=0.28  n=333  |Delta_Y|=1.31102277049e-29  on-curve=3.34e-82
+higher precision           r=0.26  n=333  |Delta_Y|=4.25678898781e-38  on-curve=3.33e-82
+higher precision           r=0.24  n=333  |Delta_Y|=7.28247374427e-50  on-curve=3.32e-82
+G0_stage2_hash PASS
+G_NEWTON_converged PASS
+G_ON_map_and_series_agree PASS
+G_ORBIT_stays_near_0 PASS
+G_SEC_secant_converged PASS
+G_STAB_across_N_rm_dps PASS
+G_ZERO_control_at_rounding_level PASS
+fit: A_xi = 1.82915117711  (model 2pi/3 = 2.09439510239 ), beta = 5.469296005
+RESULT PASS  | [NUM] scouting; not a certificate

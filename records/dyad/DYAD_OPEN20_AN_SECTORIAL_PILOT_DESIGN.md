@@ -256,3 +256,9 @@ Guards (§6) unchanged: no change to the DSN, RIDs or OPEN statuses from this re
 3. **Review and PI decision** on the design. Stage 3c stays not authorized.
 
 The LIT request on subpetal orbit constants is still with LIT (acknowledged). Its answer bears on the size of the certified local domain, not on stage 2b.
+
+**Status, 11 November 2026 (later the same day).** The PI authorized stage 2b. It was run: `records/dyad/DYAD_OPEN20_AN_STAGE2B_JUMP_SCOUTING_NUM.md` (`[NUM]`, OWNER-RUN).
+- The jump on S₀ ∩ S₁ is numerically nonzero: \|ΔY\| from 1.6·10⁻⁵ at \|ξ*\| = 0.45 to 7.3·10⁻⁵⁰ at 0.24, stable to 33–79 digits; the zero-jump control returns 10⁻¹⁶⁰.
+- In the Fatou time of the restricted map it decays like exp(−2πT), with local slopes −2π·(0.984 … 0.9988). The low apparent scale of stage 2 is a pre-asymptotic effect of the leading-time variable.
+- For the 3b design: the certificate can aim at \|ξ*\| ≈ 0.40–0.45, where enclosures to about 10⁻¹⁰ suffice. The table above (10⁻¹¹⁴ at 0.2, from the leading model) overstated the required precision, because the model time 1/(3\|ξ\|³) is larger than the Fatou time at these radii.
+- Items 2 and 3 of the order of work stand. Stage 3c stays not authorized.
