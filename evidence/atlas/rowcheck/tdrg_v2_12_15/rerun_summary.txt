@@ -1,0 +1,27 @@
+Atlas row check of TDR-G v2.12.15 — independent rerun, 12 November 2026
+Checkout: origin/claude/tdrg-v2-12-15-stage1 at db0a1993 (PR #248, round 2), in a separate worktree.
+Base: git show tdrg-v2.12.14:dsn/RTG_DISCRETE_GENESIS_DSN.md  sha256 3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392
+
+1. python3 -I evidence/tdrg/scripts/build_tdrg_v2_12_15.py BASE OUT LOG
+   -> "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64 32 edits 9 new RIDs"
+   OUT byte-identical to the branch dsn/RTG_DISCRETE_GENESIS_DSN.md (cmp)
+   LOG byte-identical to evidence/tdrg/v2.12.15/edit_log.json (cmp), sha256 a3c79ba63e854e84...
+   builder sha256 e1332fece5f1ad2c..., checker sha256 df9b0195afdbf9d0... (as in the draft release record)
+2. python3 -I evidence/tdrg/scripts/check_tdrg_v2_12_15.py BASE CANDIDATE LOG
+   -> RESULT: PASS (11/11 gates); C10: 12635 ticks, violations 0, residual classes {}, F1 True, F2 True   (2 s)
+   output byte-identical to evidence/tdrg/v2.12.15/check_output.txt  (check_rerun.txt)
+3. same with --controls
+   -> CONTROLS: PASS (all caught), K1-K8   (14 s)
+   output byte-identical to evidence/tdrg/v2.12.15/controls_output.txt  (controls_rerun.txt)
+4. python3 tools/pipes_index.py --check on the branch -> pipes OK: 110 items in 20 inboxes
+5. Pinned engine upload/tdrg-records/genesis_mode_b_mc_v18.py sha256 9d787b435c42fd20... ; star_centers and classify_component read (lines 179-222).
+6. Imported statements, compared by this check at the tags:
+   RTG-OFN-ALG-STAR-TOKEN-SHIFT entry line, ofn-v0.10 vs ofn-v0.12: differs only in the scope tag
+     ("transfer proposed" -> "statement accepted by TDR-G, custody transfer deferred"); the statement text is identical.
+   AZ-ALG-ANTIPODAL-LOWORDER entry line: identical at az-v0.6, az-v0.7 and az-v0.8 (sha256 of the line 8522a2cc130b...).
+   Programme v1.4 line 318: "TDR-24A -> TDR-24B -> TDR-24C -> TDR-T: pending launch chain".
+7. Trial merge onto main e3fafc8: PR #247 merges cleanly; PR #248 then CONFLICTS in pipes/TDRG/INDEX.md
+   (main gained pipes/TDRG/20261112-AZ-v0-8-adopted.md after the branch was cut). GitHub reports mergeable=false, state "dirty".
+   The DSN is not touched by main: after the merge its sha256 is 1e35be54... .
+Not rerun: owner_token_law_check_v2.py (223,651 ticks; its numbers were compared with the stored output JSON only);
+AZ's Stage 1 campaign; any v2.12.14-or-earlier campaign. No independent re-implementation of the token laws was written; the proofs were read.
