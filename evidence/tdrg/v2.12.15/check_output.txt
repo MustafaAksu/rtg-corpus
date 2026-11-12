@@ -1,0 +1,13 @@
+[PASS] C0 BASE 
+[PASS] C1 BUILD 32 edits, candidate 429a57f220b3
+[PASS] C2 REVERSE 
+[PASS] C3 HISTORY 
+[PASS] C4 RIDS new 9/9; collisions []
+[PASS] C5 TAGS compound left {}
+[PASS] C6 CONTENT 
+[PASS] C7 NUMBERS missing []
+[PASS] C8 EVIDENCE hash issues []; missing paths []; release record True
+[PASS] C9 SOURCES 
+  sample: 12635 ticks, violations 0; residual classes {}; F1 True; F2 True
+[PASS] C10 DYNAMICS 
+RESULT: PASS (11/11 gates)
