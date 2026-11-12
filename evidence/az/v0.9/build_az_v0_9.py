@@ -88,9 +88,10 @@ def main():
                  "AZ-owned, scoped to its cells, horizon and threshold; not a TDR-G result and **not** a bridge-candidate |", "routing row")
     sub("S0.2-B", "- **Thread B** (discrete $\\mathbb{Z}_N$ arithmetic structure):", "`AZ-OPEN-SCOPE-ARITH` is open (§2).",
         "`AZ-OPEN-SCOPE-ARITH` is open (§2). One item of this thread is owned here: `AZ-NUM-TOKRES-S1` `[NUM diagnostic]` — in a "
-        "registered paired intervention at $N=120$ and $N=122$, replacing one initial token by a value with $4x\\equiv0\\pmod N$ "
-        "raises the probability of a run ending with $M\\ge100$ nodes against its $\\pm1$ neighbour (§4.2.1); mechanism not "
-        "established; no statement beyond its cells, horizon and threshold.", "current-state readout")
+        "registered paired intervention, replacing one initial token by a value with $4x\\equiv0\\pmod N$ raises the probability of a "
+        "run ending with $M\\ge100$ nodes against its $\\pm1$ neighbour (confirmatory at $N=120$ for both resonance orders; "
+        "supportive replication at $N=122$ for $2x\\equiv0$), and at $N=122$ the values nearest $N/4$ are equivalent to the native "
+        "state (§4.2.1); mechanism not established; no statement beyond its cells, horizon and threshold.", "current-state readout")
     sub("S1.1-crit", "`[OPEN]` **Success criterion.**", "and is disqualified as a bridge observable (§4.3.4).",
         "and is disqualified as a bridge observable (§4.3.4). The seed-token resonance diagnostic (§4.2.1) is an arithmetic condition "
         "with an effect on the dynamics, at two cells and one horizon; by the PI's outcome rule of 12 November 2026 it does not by "
@@ -98,6 +99,9 @@ def main():
         "the criterion's status is not changed; the new diagnostic is named with the rule that limits it")
 
     # ---- Thread B
+    set_line("S4.2-head", "### §4.2 Thread B — Discrete $\\mathbb{Z}_N$ Arithmetic Structure (bridge-candidate only)",
+             "### §4.2 Thread B — Discrete $\\mathbb{Z}_N$ Arithmetic Structure (bridge-candidate family; one AZ-owned diagnostic)",
+             "review 5877247214: the heading no longer says 'bridge-candidate only', since §4.2.1 is not a bridge-candidate; section number unchanged")
     sub("S4.2-status", "**Status here:** Branch-local context and bridge-candidate observable family under OPEN-P1.",
         "and no TDR-G fact is used as evidence for a Dyadic claim.",
         "and no TDR-G fact is used as evidence for a Dyadic claim. One item of this thread is owned by this DSN: the diagnostic of §4.2.1.",
@@ -151,9 +155,10 @@ def main():
                 break
         else:
             die("a base line is missing or out of order: %r" % bl[:80])
-    if len(changed_old) != 4 or len(sub_lines) != 4:
+    if len(changed_old) != 5 or len(sub_lines) != 4:
         die("unexpected number of changed base lines: %d set, %d substituted" % (len(changed_old), len(sub_lines)))
-    for bad in ("v0.8*", "candidate of v0.8"):
+    for bad in ("v0.8*", "candidate of v0.8", "(bridge-candidate only)", "continuous distribution of $M$", "There is no relation to the Hashimoto",
+                "is a candidate only"):
         if bad in out:
             die("stale string %r" % bad)
     open(a.out, "w", encoding="utf-8", newline="").write(out)

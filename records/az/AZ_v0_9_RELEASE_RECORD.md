@@ -9,15 +9,16 @@
 | | File | SHA-256 | Bytes |
 |---|---|---|---|
 | base | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` at tag `az-v0.8` | `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76` | 89,039 |
-| **candidate (DRAFT)** | same path on this branch | `24f25f70361d8159f629f555bc8207cc8cc285b34e74a775e2a6a4dfc2e05ec7` | 96,598 |
+| candidate as first submitted (commit `4ea9d2f`; reviews `5876303497`, `5877247214`) | same path | `24f25f70361d8159f629f555bc8207cc8cc285b34e74a775e2a6a4dfc2e05ec7` | 96,598 |
+| **candidate after review (DRAFT)** | same path on this branch | `4fac5f517712f93543e4c09a05c8c28cdc3a7c57cb5e8992ff5c97d5fdd9c0a2` | 97,620 |
 
 ```bash
 python3 -I evidence/az/v0.9/build_az_v0_9.py --out /tmp/c.md --log /tmp/l.txt
 sha256sum /tmp/c.md dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md        # equal
-git diff az-v0.8 -- dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md        # the whole delta: twelve hunks
+git diff az-v0.8 -- dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md        # the whole delta: thirteen hunks
 ```
 
-One content stage, no compaction (Methodology v1.4 §13.6 asks for two stages only when a release also compacts). The builder reads the base from the tag, asserts its hash and the hashes of the registration package and of the campaign output, applies 13 exact-once edits (`evidence/az/v0.9/edit_log.txt`; the block is `evidence/az/v0.9/block_4_2_1.md`), and asserts that every base line not named in an edit is unchanged and in order: 594 of 602; four lines replaced (title, *Document status*, *Supersedes*, footer), four edited in place.
+One content stage, no compaction (Methodology v1.4 §13.6 asks for two stages only when a release also compacts). The builder reads the base from the tag, asserts its hash and the hashes of the registration package and of the campaign output, applies 14 exact-once edits (`evidence/az/v0.9/edit_log.txt`; the block is `evidence/az/v0.9/block_4_2_1.md`), and asserts that every base line not named in an edit is unchanged and in order: 593 of 602; five lines replaced (title, *Document status*, *Supersedes*, the §4.2 heading, footer), four edited in place.
 
 ## 2. What changes
 
@@ -25,6 +26,7 @@ One content stage, no compaction (Methodology v1.4 §13.6 asks for two stages on
 |---|---|---|
 | S4.2.1 | new §4.2.1, at the end of Thread B | **The diagnostic block.** `[NUM diagnostic]` `AZ-NUM-TOKRES-S1`, with scope and convention qualifiers; the statement; the four registered contrasts with their intervals, discordant pairs and readings, copied from the report §5 (erratum N1 applied: PC3 "Bonferroni-adjusted"); the controls; what the statement is and is not; evidence |
 | S4.2-status | §4.2 status line | one sentence: one item of the thread is owned by this DSN |
+| S4.2-head | §4.2 heading | "(bridge-candidate only)" → "(bridge-candidate family; one AZ-owned diagnostic)" (review correction); the section number is unchanged |
 | S0.1-row | §0.1 routing table | one row: owner, grade, not a TDR-G result, not a bridge-candidate |
 | S0.2-B | §0.2, Thread B bullet | current-state readout of the diagnostic |
 | S1.1-crit | §1.1 success criterion | the status stays "not met"; one sentence names the diagnostic and the outcome rule that limits it |
@@ -57,11 +59,26 @@ New identifiers: `AZ-NUM-TOKRES-S1`, `AZ-ART-TOKRES-S1`. None removed. No pin ch
 
 | Check | Result |
 |---|---|
-| Build from the tag, base and evidence hashes asserted, 13 exact-once edits | candidate `24f25f70…5ec7` |
-| Base lines unchanged and in order | 594 of 602; the other eight are the declared edits |
-| `tools/dsn_lint.py` (informational) | 96,598 bytes; one footer line; 72 identifiers |
+| Build from the tag, base and evidence hashes asserted, 14 exact-once edits | candidate `4fac5f51…c0a2` |
+| Base lines unchanged and in order | 593 of 602; the other nine are the declared edits |
+| `tools/dsn_lint.py` (informational) | 97,620 bytes; one footer line; 72 identifiers |
 | `tools/pipes_index.py --check` | OK; `pipes/AZ/` two items, both closed |
 | `bash evidence/az/token_resonance/stage1/verify.sh` | `VERIFY PASS` (the evidence the block cites) |
+
+## 5a. Review record
+
+Two reviews by the second co-owner (ChatGPT) on commit `4ea9d2f`, candidate `24f25f70…5ec7`; neither is an adoption. Both checked the four contrasts (risks, intervals, discordant pairs, adjusted `p`, readings) against the report §5 and the stored analysis outputs and found them equal; the first also recomputed the base and candidate hashes and confirmed 594 of 602 predecessor lines unchanged in order with its own comparison. Neither executed the builder or reran the engine. Both accept the §1.1 sentence (it stays) and the placement in Thread B (no fourth thread).
+
+| Review | Finding | Disposition |
+|---|---|---|
+| `5876303497` R1 | "the parent–child phase law … is a candidate only" conflates a conditional kinematic identity (derived in the registration under token persistence) with its untested role in basin selection | Accepted: the block says that the law is a conditional identity under a token-persistence hypothesis, a `[SESSION]` statement offered to TDR-G and not a result of this DSN, and that its role in the selection of the tail basin is untested. No grade is given to it here |
+| `5876303497` R1 | "There is no relation to the Hashimoto `4\|q` rule …" states an absence of evidence as a fact | Accepted: "No relation is established or claimed …; the shared numeral is not evidence of one" |
+| `5877247214` (1) | The §4.2 heading ends "(bridge-candidate only)" although §4.2.1 is not a bridge-candidate | Accepted: heading "(bridge-candidate family; one AZ-owned diagnostic)"; the family's bridge-candidate status stays in its own paragraph |
+| `5877247214` (2) | "a continuous distribution of `M`" is false: `M` is an integer | Accepted: "the node count `M`, an integer-valued outcome whose distribution is not separated into two groups at the threshold" |
+| `5877247214` (3) | The statement and the §0.2 readout should separate the resonant-against-neighbour effects (PC1–PC3) from the PC4 equivalence control, and keep PC3 supportive only | Accepted in the statement, the family sentence and the §0.2 readout |
+| `5877247214` (4) | Name the interval; "unqualified" is a control qualifier, not a further validation | Accepted: "97.5 % Agresti–Min paired-proportion interval" (the level printed by the registered analysis for both families); the controls' intervals named as 95 % Agresti–Min; the qualifier explained |
+
+All in one content pass: `block_4_2_1.md` and two builder edits; the old phrases are on the builder's stale-string list. Delta for the readback: `git diff 4ea9d2f HEAD -- dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` — six hunks (§0.2 readout; §4.2 heading; four within §4.2.1).
 
 ## 6. Steps
 
