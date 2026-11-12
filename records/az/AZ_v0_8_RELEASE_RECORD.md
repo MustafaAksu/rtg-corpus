@@ -1,6 +1,11 @@
-# AZ v0.8 — release record (DRAFT; stages 1 and 2 built, not adopted)
+# AZ v0.8 — release record
 
-**[SESSION] Not adopted.** No edition exists until the PI adopts one, this record is completed, and the PI merges and tags. This draft covers **stage 1**, the corrected intermediate (a build stage, not an edition; Methodology v1.4 §13.6; §§1–6a), and **stage 2**, the compacted candidate (§6b). Prepared by the AZ co-owner (Claude), 12 November 2026.
+**Status:** ADOPTED by the PI, 12 November 2026 (§9). Merge and the annotated tag `az-v0.8` follow this record (§7); until that tag exists, `az-v0.7` remains the governing edition.
+**Adopted file:** `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md`, SHA-256 `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76`, 89,039 bytes.
+**Predecessor:** v0.7, tag `az-v0.7`, SHA-256 `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94`, record `records/az/AZ_v0_7_RELEASE_RECORD.md`.
+**Prepared by:** the AZ co-owner (Claude), 12 November 2026. Second co-owner and reviewer: ChatGPT.
+
+This record is frozen at adoption. Steps that come after it (merge, tag, notices) are named in §7 as pending at adoption; their identities are carried by the merge commit, the tag and the pipe items, not by a later edit here. It invents no hash, approval or review identifier. §§1–6a describe **stage 1**, the corrected intermediate (a build stage; Methodology v1.4 §13.6); §6b **stage 2**, the compacted candidate; §6c the publication transform.
 
 **Authority.** v0.8 cycle started by the PI on 12 Nov 2026, 11:30 +03:00 ("başlatalım"). Content: PI decision of 11 Nov 2026, 18:15 +03:00, row 5 (`records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` §5). Choices D1–D4: PI decision of 12 Nov 2026, 12:52 +03:00, "Ortak önerilerinizin tamamını kabul ediyorum" — D1 (a) declared section map, D2 (a) ledger rows only, D3 (a) `[THM]` on a written proof, D4 the Action 1 diagnostic is not in v0.8 (`records/az/AZ_v0_8_EDIT_PLAN.md` §4, §7).
 
@@ -11,7 +16,8 @@
 | base | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` at tag `az-v0.7` | `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` | 83,281 |
 | 1 — as first submitted (commit `aeb6108`, reviewed in `5874174108`) | same path | `8ebcfb9a6c4065278ff6120b28237d7d6752d05a6c48655a42542478528eba67` | 92,719 |
 | **1 — corrected intermediate after review** (this branch) | same path | `19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426` | 94,673 |
-| **2 — compacted candidate (DRAFT)** | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` on the edition branch; its base is the stage-1 file at commit `873b277a8c62b9a8536207e68fe153257fdb9454` | `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d` | 88,992 |
+| 2 — compacted candidate (commit `906eec7`) | same path; its base is the stage-1 file at commit `873b277a8c62b9a8536207e68fe153257fdb9454` | `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d` | 88,992 |
+| **published — the adopted file** (status lines only, §6c) | same path, from the publication commit on | `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76` | 89,039 |
 
 ```bash
 python3 -I evidence/az/v0.8/stage1/build_az_v0_8_stage1.py --out /tmp/inter.md --log /tmp/edit_log.txt
@@ -125,10 +131,55 @@ python3 -I evidence/az/v0.8/stage2/stage2_negative_controls.py
 | R1 (custody) | `evidence/az/v0.8/stage1_intermediate.md` was a second full copy of a DSN state (Methodology §13.7, `CONVENTIONS.md`); the same bytes are in commit `873b277a` | Accepted. The file is removed. Builder, map and negative controls read the base from the reviewed commit and assert `19a1faf0…0426`; the checker gets it as a temporary file (`--emit-base`). Checker and negative controls rerun: PASS, 8 of 8; **candidate unchanged, `f15ee1d7…a50d`**. Identities after the change: map `013d2e8810e87840baab15050c08d3d075e4dd17adfb4b3001915a8d27cb7b4a`; builder `565a381f…d402`; negative-control script `9d1b4d5d…83a6` |
 | E1 (non-blocking) | The PR description carried the first stage-1 identity (49 edits, `8ebcfb9a…`) | Done: description rewritten for the candidate |
 
-## 7. Left for the release
+Readback of the custody fix: review `5875324590` (12 Nov 2026, 16:34 +03:00, on commit `906eec7`): *accepted (scoped); R1 and E1 closed; ready for the PI's adoption decision.* The reviewer again recomputed the three hashes and re-applied the six operations independently; the checker and negative-control runs were read from the stored outputs, not rerun by it.
 
-Mechanical review of stage 2 by the second co-owner; the PI's adoption decision; then, by this lane: status-lines commit (header *Document status*, footer), the adopted hash and the `BASELINE.md` row, completion of this record; the PI merges (merge commit) and creates the annotated tag `az-v0.8`. Notices through `pipes/` at release: PROG (its §6.7 and §9.2 rows for AZ; its §7.2 pointers "AZ §8" stay valid), DYAD (its table of consumer strings cites AZ "§1.2, §4.1, §8"; the Dyadic strings are now in §8 only), TDRG, DZT, ATLAS. `pipes/AZ/` is read again before the status-lines commit.
+## 6c. Publication transform (status lines only)
+
+`evidence/az/v0.8/publish_az_v0_8.py` reads the adopted candidate from commit `906eec7ea66c40059eb4821810544fdaa9f75e14` (hash `f15ee1d7…a50d` asserted) and changes exactly two lines: the header field *Document status* (DRAFT → ADOPTED, with the adoption record) and the footer (the DRAFT clause removed). The Appendix A heading of v0.8 carried no draft marker and is unchanged. `--check` (`evidence/az/v0.8/publication_check_output.txt`): the file in `dsn/` equals the re-derived bytes; lines 10 and 601 of 602 differ from the candidate; **PASS**. Published file: `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76`, 89,039 bytes.
+
+```bash
+python3 -I evidence/az/v0.8/publish_az_v0_8.py --check
+sha256sum dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md
+```
+
+Not rerun on the published bytes: `tools/check_compaction.py` (its candidate is the DRAFT candidate named in the movement map; the published file differs from it in the two status lines only, which the check above establishes). `tools/pipes_index.py --check`: OK. `tools/atlas_check.py`: the same counts on this branch as on `main`.
+
+## 7. Steps, in order
+
+| # | Step | By | State at adoption |
+|---|---|---|---|
+| 1 | Stage 1, reviews `5874174108` and `5874483729` | AZ co-owner; second co-owner | done |
+| 2 | Stage 2, reviews `5875164532` and `5875324590` | AZ co-owner; second co-owner | done |
+| 3 | Adoption decision (§9) | PI | given, 12 Nov 2026, 16:39 +03:00 |
+| 4 | Publication commit on the edition branch: status lines (§6c), this record, the `BASELINE.md` AZ row (v0.8, the adopted hash, this record, tag `az-v0.8`) | AZ co-owner | done with this commit |
+| 5 | Merge of PR #240 by a merge commit (not squash) | PI | pending at adoption |
+| 6 | Annotated tag `az-v0.8` on that merge commit, with the adopted hash in the tag message | PI | pending at adoption |
+| 7 | Notices through `pipes/` (below); lane and shared sections of `records/az/AZ_COOWNER_SESSION_ORIENTATION.md` | AZ co-owner, after the tag | pending at adoption |
+| 8 | Tag verification and Atlas refresh | atlas owner | pending at adoption |
+
+Notices due after the tag, one item per inbox: **PROG** — Programme §6.1/§6.5 entries and §7.2 IF20/IF21 pins name AZ v0.7 and `dyad-v6.4.23`; its §9.2 row lists the AZ Methodology migration and §6.7 reduction as not executed, and they are executed in this edition; its pointers "AZ §8" stay valid. **DYAD** — its table of consumer strings cites AZ v0.7 "§1.2, §4.1, §8"; the Dyadic strings are in §8 only, pinned at `dyad-v6.4.24`. **TDRG** — Thread B rows are in §8 only; pin unchanged; the open offer `20261112-AZ-token-alphabet-law-offer.md` is not affected. **DZT** — SG-DZT-1 is untouched; the statement that no relation is claimed stands. **ATLAS** — AZ rows: edition, Methodology v1.4, `[THM]` form of PROP-AZ-CORE-EQUIV, availability. `pipes/AZ/` held two items at the publication commit, both closed.
 
 ## 8. Not in v0.8
 
 The Action 1 `[NUM diagnostic]` (D4); AZ-2; the still missing Thread C files; any change of Level A.
+
+## 9. Adoption decision
+
+**Decision (PI, 12 November 2026, 16:39 +03:00, project conversation with this session, verbatim):** "Benimsiyorum." ("I adopt.") It was given together with the second co-owner's final readback, relayed in the same message, which names the object: PR #240 at commit `906eec7`, candidate `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d`, review `5875324590`, "ready for the PI's adoption decision".
+
+- **Adopted object:** the candidate `f15ee1d7…a50d`, published with the status-lines transform of §6c as `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md`, SHA-256 `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76`.
+- **Basis:** the PI's decisions on scope (11 Nov, 18:15 +03:00, row 5) and on D1–D4 (12 Nov, 12:52 +03:00); stage 1 with reviews `5874174108` (corrections R1, R2 applied) and `5874483729`; stage 2 with reviews `5875164532` (custody correction applied) and `5875324590`; the compaction check and its eight negative controls; the publication check.
+- **What the adoption covers:** the Methodology v1.4 migration with a declared section map; the reduction of restated owner text; `[THM]` for PROP-AZ-CORE-EQUIV on the written proof of §4.3.2; the unpacked tag forms; the narrowed wording of the static-geometry conclusion in SG-AZ-7 and §4.3.5; the availability statements of §9; the Dyadic pin `dyad-v6.4.24`; the six `[COR]` records of Appendix B.
+- **What it does not cover:** no new scientific result; Level A is retained; AZ-2, `AZ-OPEN-SCOPE-ZETA`, `AZ-OPEN-SCOPE-ARITH` and `AZ-OPEN-PROMO` stay open; the Action 1 Stage 1 result is not in this edition (D4) and its entry stays a separate PI decision under the outcome rule; the finite check `AZ-ART-CORE-EQUIV-CHECK` is corroboration, not the basis of a grade; the reviewer's independent small-graph comparison is not adopted.
+- **Order:** decision → this record → merge → tag. A merge, a tag or a passing check is not an adoption; the adoption is this decision.
+
+## 10. Open items carried forward
+
+1. **Action 1 diagnostic** (`records/az/AZ_TOKEN_RESONANCE_STAGE1_REPORT.md`): eligible for a `[NUM diagnostic]` entry by a separate PI decision; not tied to Stage 2. Stage 2 and Stage 3 are undecided proposals.
+2. **§10** keeps its dated list and has no v0.8 line (§6b); bringing it to the "current only" form is a stage-1 item of a later edition.
+3. **Thread C files still missing:** `phase2_harness`, the AZ-1C files, `AZ-ART-SPECTRAL-RADIUS-PATCH`, `AZ-ART-PROP-CORE-EQUIV`, `AZ-ART-ANTIPODAL-LOWORDER`, the registered Phase-2 reports, `AZ-ART-THETA-CORE-MATCHED`, `AZ-ART-ZETA-V3`, and the frozen conventions state with CONV-AZ-ANGLE-ZERO. They are source-reported until supplied unchanged and hash-checked.
+4. **`G_birth(w)`** has two definitions in the deposited files (§9 of the DSN); to be fixed before any result is registered on it.
+5. **Statements of the static-geometry conclusion outside SG-AZ-7 and §4.3.5** (§0.2, §1.1, §4.2, §4.3.3, §5, §6) carry no universal quantifier and were not changed; the reviewer was asked and raised nothing further.
+6. **Closure criteria** of the three OPEN entries point to existing conditions; `AZ-OPEN-PROMO` still asks for the promotion conditions with their provenance requirements.
+7. **TDR-G's disposition** of the offer `pipes/TDRG/20261112-AZ-token-alphabet-law-offer.md`.
+
