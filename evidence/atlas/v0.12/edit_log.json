@@ -1,0 +1,353 @@
+[
+ {
+  "id": "AR12-001",
+  "finding": "identity",
+  "where": "title",
+  "old_sha256": "26be7dc384ca99742553bd2c23bd733d17cc6405d135bf6e440c00e72e8885f0",
+  "new_sha256": "5e7e5f18041aa86d3563084b8f0337f78c58053fc2317f2151d0d8cadebc4b99",
+  "old": "# RTG STATE ATLAS v0.11\n",
+  "new": "# RTG STATE ATLAS v0.12\n"
+ },
+ {
+  "id": "AR12-002",
+  "finding": "identity",
+  "where": "SOURCES header",
+  "old_sha256": "142c1d37b21b349d736fd3469c3cf6a9c8cd7f57cac65909e89860a7f81af1ce",
+  "new_sha256": "acf4a4913bfda517ef146f344fed45dade9f2d65efd605ab516ccdd30bc2c9b1",
+  "old": "evidence/atlas/v0.11/source_manifest.json",
+  "new": "evidence/atlas/v0.12/source_manifest.json"
+ },
+ {
+  "id": "AR12-003",
+  "finding": "identity",
+  "where": "end line",
+  "old_sha256": "993cec1eb7251ea91f90e442ac7e6166b486f3831876f2e32daf4300a887734e",
+  "new_sha256": "af7d43d207c26560dffc089fef4532395ee9dd13130ea2e8f6927768104b5a50",
+  "old": "*END — RTG STATE ATLAS v0.11.",
+  "new": "*END — RTG STATE ATLAS v0.12."
+ },
+ {
+  "id": "AR12-004",
+  "finding": "identity",
+  "where": "SOURCES row DYAD",
+  "old_sha256": "9e8ee8b21f105dbdc95a83ed9a7ccf42fc93a7adf898f7d9365db0b644ca0059",
+  "new_sha256": "c0288b39f1c1869caceb03a4f9e9da6c5613c090f15fb408c92728c39ce7a3c3",
+  "old": "| DYAD | RTG_DYADIC_OSCILLATOR_DSN | v6.4.23 | `dyad-v6.4.23` | canonical Tier 3 |",
+  "new": "| DYAD | RTG_DYADIC_OSCILLATOR_DSN | v6.4.24 | `dyad-v6.4.24` | canonical Tier 3 |"
+ },
+ {
+  "id": "AR12-005",
+  "finding": "identity",
+  "where": "SOURCES row AZ",
+  "old_sha256": "c816f66356ae95c969258295215d68c2f01415b052ad35da4ce063603025066c",
+  "new_sha256": "d456495520fe1493142ee3f0bddf215bac70190577879fa434443b3d9e093024",
+  "old": "| AZ | RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN | v0.6 | `az-v0.6` | canonical Tier 5 |",
+  "new": "| AZ | RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN | v0.7 | `az-v0.7` | canonical Tier 5 |"
+ },
+ {
+  "id": "AR12-006",
+  "finding": "identity",
+  "where": "D2 header, DYAD",
+  "old_sha256": "762d4b02483cb422b609a0bbc440695c7bac64ff1b8a80377a9b43396390cf13",
+  "new_sha256": "51e1fb345cabd39edf36a3e44dd9480b57ccca45c11519ebd6fce63ed7b3b11d",
+  "old": "(sources: DYAD v6.4.23 · NUMGEN v1.21",
+  "new": "(sources: DYAD v6.4.24 · NUMGEN v1.21"
+ },
+ {
+  "id": "AR12-007",
+  "finding": "identity",
+  "where": "D2 header, AZ",
+  "old_sha256": "eb688a05578d303cc64249d4f6273cf2d92830048ccce9069fdc3ec5ebaf61b9",
+  "new_sha256": "a57f1edf43501228af7f39cba2b99ed1e61e8b8829234510177c5dba89ccfbba",
+  "old": "· DZT v0.8 · AZ v0.6 Thread A.",
+  "new": "· DZT v0.8 · AZ v0.7 Thread A."
+ },
+ {
+  "id": "AR12-008",
+  "finding": "identity",
+  "where": "D5 header, AZ",
+  "old_sha256": "16e2db788a5898dd2938c48a593ec48d356991c6ab8eddebddfa0aae9b57edd3",
+  "new_sha256": "0c0501def2875a846283a3fa77f858af13c7cf89359f3e7555f9f137b4a3ae9f",
+  "old": "AZ = RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN v0.6 (June 2026, Tier 5, Level A retained)",
+  "new": "AZ = RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN v0.7 (11 Nov 2026 corrections edition of the June 2026 v0.6 text: pins, identifiers and owner corrections, Thread C byte-identical; Methodology v1.2 declared, the v1.4 migration is a separate edition; Tier 5, Level A retained)"
+ },
+ {
+  "id": "AR12-009",
+  "finding": "AZ v0.7",
+  "where": "H2 without the AZ conflict",
+  "old_sha256": "c9927f1109447a0fef582aefeb88162e2e1d0aa9a3660ac15f5f983d97794480",
+  "new_sha256": "d6e28481f247265ca73497959fa301cf69a87e22cc259d7a793835b81ea5e624",
+  "old": "H2 D-WRONG/D-LINK high — no certified OPEN-M deficit: the chain 0.024 target → 4/125 → ρ≥16/5 → R15 0.007–0.008 is one node *UVM:deficit-chain (D4b) with verdict \"no certified deficit\"; PROG does not adopt the \"2× short\" headline; AZ §6 \"legal ×2 correction\" is withdrawn by OPEN-M v0.7.1 R16 (AZ.A1 D-WRONG; OPENM.U2, U11; DYAD.X8).",
+  "new": "H2 D-LINK high — no certified OPEN-M deficit: the chain 0.024 target → 4/125 → ρ≥16/5 → R15 0.007–0.008 is one node *UVM:deficit-chain (D4b) with verdict \"no certified deficit\"; PROG does not adopt the \"2× short\" headline; AZ v0.7 §6 states the same verdict (OPENM.U2, U11; DYAD.X8)."
+ },
+ {
+  "id": "AR12-010",
+  "finding": "AZ v0.7",
+  "where": "D-WRONG list: AZ.A1 leaves; the list is empty",
+  "old_sha256": "a285ec2f6f44ade4943a6cec9f2d01850c3781804f9a3b184e2cab216c0a235b",
+  "new_sha256": "f3921d7ca7add8aaa78583bbd232a99b378a75122e324326a21eae0f20b77b78",
+  "old": "AZ.A1 | AZ §6 \"To OPEN M\": legal deficit correction ×2 (not ×4) | contradicts OPEN-M v0.7.1 R16 (2× branch SUPERSEDED; no certified deficit factor)",
+  "new": "(none at this edition)"
+ },
+ {
+  "id": "AR12-011",
+  "finding": "AZ v0.7",
+  "where": "UVM deficit node: AZ edge",
+  "old_sha256": "a535112c44423d0a13dfcf620942f74be7389cfa572bfbcb716fdfc0f1bdb9e8",
+  "new_sha256": "3cb33807ff31015b5cba71f46e31e03873f80ebd81ad369e3b58c0ce59bd7332",
+  "old": "UVM-RESULT-AUDIT1 (R16) COR | conditional 2× branch: if (1) ESM/BCH source ≡ the physical ‖H‖_B pipeline and (2) an E∝A² constitutive law, then SU(2) E_full/E_half=4 ⇒ A_full/A_half=2; neither premise is proved (GCL-08); the 4× energy factor is not admissible in an amplitude-linear inequality | v0.6 \"legal 2×\" SUPERSEDED | ~ PREL E_full=4E_half (D6) | ! AZ \"legal ×2 correction\" (D5, D-WRONG AZ.A1) | @UVM",
+  "new": "UVM-RESULT-AUDIT1 (R16) COR | conditional 2× branch: if (1) ESM/BCH source ≡ the physical ‖H‖_B pipeline and (2) an E∝A² constitutive law, then SU(2) E_full/E_half=4 ⇒ A_full/A_half=2; neither premise is proved (GCL-08); the 4× energy factor is not admissible in an amplitude-linear inequality | v0.6 \"legal 2×\" SUPERSEDED | ~ PREL E_full=4E_half (D6) | >AZ §6 (v0.7 cites R15/R16 as stated; its v0.6 \"legal ×2\" sentence is withdrawn, AZ App. B) | @UVM"
+ },
+ {
+  "id": "AR12-012",
+  "finding": "AZ v0.7",
+  "where": "OPENM.U11: AZ clause",
+  "old_sha256": "ba60dd6f5696331e5a82bacfc80c2ea9072e3c38bffe9bb6f0989fbdf00b82bf",
+  "new_sha256": "f94c7fbba4df320e12b87d3c3e7b15fc636fa60726667f257a1db3acd285b11e",
+  "old": "OPENM.U11 ~ D-LINK: R16's E_full/E_half=4 is the PREL Pauli-lift E_full=4E_half (*PL:SU2-lift, D6) via DYAD-CAND-P0-DYADIC. AZ's \"legal ×2 correction\" (D-WRONG AZ.A1) contradicts R16's SUPERSEDED verdict.",
+  "new": "OPENM.U11 ~ D-LINK: R16's E_full/E_half=4 is the PREL Pauli-lift E_full=4E_half (*PL:SU2-lift, D6) via DYAD-CAND-P0-DYADIC. AZ v0.7 §6 cites R15/R16 as stated; its v0.6 \"legal ×2\" sentence is withdrawn (AZ App. B)."
+ },
+ {
+  "id": "AR12-013",
+  "finding": "AZ v0.7",
+  "where": "AZ.A1 retired (D5.L5)",
+  "old_sha256": "04dbfdb01ddff568e09ad77d105a73d8d8fa07aa8b6e66b0e0a9700f2d4dbb0d",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "AZ.A1 D-WRONG (high; ≡ OPEN-M U2 chain): AZ §6 \"To OPEN M\": \"the legal correction is ×2, not ×4; applying ×4 is a certified dimensional type error under AUDIT-1-DIMENSIONAL\". OPEN-M v0.7.1 R16 withdrew the \"legal 2×\" verdict (conditional on two unproved bridges); no certified deficit factor exists; R15 ~4× reinterpreted. Not used as a node.\n",
+  "new": ""
+ },
+ {
+  "id": "AR12-014",
+  "finding": "AZ v0.7",
+  "where": "Q403 node: AZ consumer",
+  "old_sha256": "9d2517a8186b930182d7ae88fe5c92f3955a4298cabf061fa04cc2a1833e1fbd",
+  "new_sha256": "45abd4de6723f1d58afd5d54a3809d370881ba570c8a5c2e8662db2a363a41b2",
+  "old": "DYAD-THM-Q403-PHASELAW THM (proof: exact algebraic identity) | p=4s, s≥2: Q_p=[λ^{−s}f_p^s−Id]^W_{(0,3)}=iζ_p³M_p, M_p∈ℚ(ζ_p)⁺; Q(L,I)=L⁵(IL²+I−L²+1)/(2(L+1)⁴(L²+L+1)), I=L^{p/4}=i; arg Q_p=π/2+6π/p (p≥12); Q₈=0; p=12: Q₁₂=−M₁₂=−13+15√3/2=−0.0096189 (modulus ≈0.0096); σ₋₁(Q)=−L⁻⁶Q exact in ℚ(I)(L); three paths (one cubic cancels S₋₄=0; two quadratic–quadratic) | ¬ generic-s formula | universal q=4,(0,3) cancellation FAIL | >NUMGEN (retires N-3C+ q=4 item; pin v6.4.18; NUMGEN grades RES[THM]), DZT (prints the historical note label DYAD-THM-Q403-PHASE-ALLP, not an owner RID; L5 DZT.Q1), PROG (correct RID), AZ (lists as open: stale, L5 AZ.A2) | @DYAD§6.11",
+  "new": "DYAD-THM-Q403-PHASELAW THM (proof: exact algebraic identity) | p=4s, s≥2: Q_p=[λ^{−s}f_p^s−Id]^W_{(0,3)}=iζ_p³M_p, M_p∈ℚ(ζ_p)⁺; Q(L,I)=L⁵(IL²+I−L²+1)/(2(L+1)⁴(L²+L+1)), I=L^{p/4}=i; arg Q_p=π/2+6π/p (p≥12); Q₈=0; p=12: Q₁₂=−M₁₂=−13+15√3/2=−0.0096189 (modulus ≈0.0096); σ₋₁(Q)=−L⁻⁶Q exact in ℚ(I)(L); three paths (one cubic cancels S₋₄=0; two quadratic–quadratic) | ¬ generic-s formula | universal q=4,(0,3) cancellation FAIL | >NUMGEN (retires N-3C+ q=4 item; pin v6.4.18; NUMGEN grades RES[THM]), DZT (prints the historical note label DYAD-THM-Q403-PHASE-ALLP, not an owner RID; L5 DZT.Q1), PROG (correct RID), AZ (import-ref at az-v0.7 §4.1.1, §8) | @DYAD§6.11"
+ },
+ {
+  "id": "AR12-015",
+  "finding": "AZ v0.7",
+  "where": "AZ.A2 retired (D2.L5 row)",
+  "old_sha256": "28d427eaf412524036356c60ffff4ea85a9f5d092789f2e09231aa79cc8c8c1c",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "AZ.A2 D-STALE (Thread A) | AZ §4.1.2 lists exact q=4,(0,3) cascade formula as open DYAD frontier — closed (Q403-PHASELAW, v6.4.9); §6 cites GEN v2.8.4 OPEN 1C statement (current GEN v2.10). (AZ.A1 D-WRONG ×2 sentence → D4b/D5)\n",
+  "new": ""
+ },
+ {
+  "id": "AR12-016",
+  "finding": "AZ v0.7",
+  "where": "AZ.A2 retired (D5.L5 row)",
+  "old_sha256": "9f210c6aef5d4fa78b30894f1af5bbaf6ed8d139b27b4d16f04a05bffe0a257c",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "AZ.A2 D-STALE: §4.1.2 lists \"exact cubic cascade formula for q=4,(0,3)\" as open DYAD frontier — closed by DYAD-THM-Q403-PHASELAW (v6.4.9); §6 cites \"Genesis v2.8.4 closes OPEN 1C… P₄-only cascade impossible\" (current GEN v2.10).\n",
+  "new": ""
+ },
+ {
+  "id": "AR12-017",
+  "finding": "AZ v0.7",
+  "where": "D5.L3: closed request leaves the frontier line",
+  "old_sha256": "0f4755de475c960aa2f8b0c9b2394044ba37a3cebea8f7ae114d359e0a5963ad",
+  "new_sha256": "5e1e6cef67e13c20d21699cc123bd06df46c97331e56b0990c94dde3ca887485",
+  "old": "AZ: AZ-OPEN-SCOPE-ZETA (any graph/transfer-zeta observable dynamical rather than substrate? angular spectrum = substrate) · AZ-OPEN-SCOPE-ARITH (ℤ_N objects comparable to DYAD p-resonance? needs OPEN-P1 opened + candidate bridge observable + SG-AZ-7) · AZ-OPEN-PROMO (Level-B promotion conditions incl. artifact/transcript provenance) · *AZ:C-open: dynamical graph observable (G_birth(w) sequence, advance-spectrum statistics along trajectory, inter-birth-interval structure e.g. CV ~ TDRG branch-response survivor) null-gated against degree/reciprocal AND ℤ_N geometry nulls; analytic completion of 4|q mechanism (substrate); transfer-zeta determinant/poles as cascade/policy diagnostic (untested) · *AZ:programme-patch-request (register AZ as Tier 5; DONE in PROG v1.2)",
+  "new": "AZ: AZ-OPEN-SCOPE-ZETA (any graph/transfer-zeta observable dynamical rather than substrate? angular spectrum = substrate) · AZ-OPEN-SCOPE-ARITH (ℤ_N objects comparable to DYAD p-resonance? needs OPEN-P1 opened + candidate bridge observable + SG-AZ-7) · AZ-OPEN-PROMO (Level-B promotion conditions incl. artifact/transcript provenance) · *AZ:C-open: dynamical graph observable (G_birth(w) sequence, advance-spectrum statistics along trajectory, inter-birth-interval structure e.g. CV ~ TDRG branch-response survivor) null-gated against degree/reciprocal AND ℤ_N geometry nulls; analytic completion of 4|q mechanism (substrate); transfer-zeta determinant/poles as cascade/policy diagnostic (untested)"
+ },
+ {
+  "id": "AR12-018",
+  "finding": "AZ v0.7",
+  "where": "AZ.A3 retired",
+  "old_sha256": "3873316d592395c04d2e4d65195f4720d0293f14651785f19d53a05b625a94a4",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "AZ.A3 D-STALE: AZ's programme-patch request is satisfied by Programme v1.2 and v1.3 but still listed as open in AZ v0.6.\n",
+  "new": ""
+ },
+ {
+  "id": "AR12-019",
+  "finding": "AZ v0.7",
+  "where": "PROG.G6: AZ state after the Programme snapshot",
+  "old_sha256": "4c2523eb2a58c80a0ff5a80c8d6bd2616437e265e317b78c7566ca0de3979510",
+  "new_sha256": "fdd4d90d84cc753f97c816c71e5e93abbee64f97b81ccb59362e836904f60bd6",
+  "old": "PROG.G6 D-STALE (owner-recorded): Programme v1.4 §9.2 records the maintenance sequence as executed for OFN, Legacy, Dyadic, Number Genesis, Genesis, Triadic, OPEN M, RECOG, executed in part for TDR-G (v2.12.14 corrections edition; Methodology v1.4 migration planned for v2.13) and not executed for Pre-Legacy, DZT, AZ; Pre-Legacy (v0.8, June) still carries v0.5/v0.3/v1.1/v1.2 pins (bears on PREL.P1).",
+  "new": "PROG.G6 D-STALE (owner-recorded): Programme v1.4 §9.2 records the maintenance sequence as executed for OFN, Legacy, Dyadic, Number Genesis, Genesis, Triadic, OPEN M, RECOG, executed in part for TDR-G (v2.12.14 corrections edition; Methodology v1.4 migration planned for v2.13) and not executed for Pre-Legacy, DZT, AZ (since then AZ v0.7, 11 Nov 2026: a corrections edition, by its release record not the §9.2 pass — no Methodology migration, no restructuring); Pre-Legacy (v0.8, June) still carries v0.5/v0.3/v1.1/v1.2 pins (bears on PREL.P1)."
+ },
+ {
+  "id": "AR12-020",
+  "finding": "AZ v0.7",
+  "where": "H3: DZT half only",
+  "old_sha256": "a8a1a899abb15094c5d166f7aa1bc5c66dfdaed007917040aaf77ceca2b1c066",
+  "new_sha256": "f0e50592b326080adcc6326fe0745327cdf23e64db0016e6594d0a5e14e7e059",
+  "old": "H3 D-RID high — consumer strings that are not owner RIDs: DZT cites DYAD-THM-Q403-PHASE-ALLP and DYAD-ALG-PHASELAW (historical note labels; owner theorem DYAD-THM-Q403-PHASELAW), DYAD-THM-P1, -REALITY, -LEAD, -R, DYAD-CF-Q403 (components of PHASELAW, no separate RID), DYAD-ALG-CASCADE-P12 (unmatched) and DYAD-ART-CASCADE-Q4-03 (content = DYAD-ART-Q403-EXTRACT, no byte identity); AZ cites DYAD-ALG-Q3-CANCEL (statement = DYAD-ALG-Q3-DEG2-CANCEL) and TDRG-ZN-STATE (AZ.A7). The owner classifies each string (DYAD App F) and creates no aliases; DZT and AZ cite them unchanged (DZT.Q1). PROG cites the correct PHASELAW.",
+  "new": "H3 D-RID high — consumer strings that are not owner RIDs: DZT cites DYAD-THM-Q403-PHASE-ALLP and DYAD-ALG-PHASELAW (historical note labels; owner theorem DYAD-THM-Q403-PHASELAW), DYAD-THM-P1, -REALITY, -LEAD, -R, DYAD-CF-Q403 (components of PHASELAW, no separate RID), DYAD-ALG-CASCADE-P12 (unmatched) and DYAD-ART-CASCADE-Q4-03 (content = DYAD-ART-Q403-EXTRACT, no byte identity). The owner classifies each string (DYAD App F) and creates no aliases; DZT cites them unchanged (DZT.Q1). AZ repinned to the owner RIDs in v0.7. PROG cites the correct PHASELAW."
+ },
+ {
+  "id": "AR12-021",
+  "finding": "AZ v0.7",
+  "where": "DZT.Q1: AZ half done",
+  "old_sha256": "35af19ba57eb2c99c2d132b7d4160a0e77264031336a4cca6046d92a2c5fce6e",
+  "new_sha256": "59dae5ca07d10b569cd4d2f40cb0d981df1e9457fa7d06d214d997b14efd62f3",
+  "old": "DZT.Q1 D-RID | DZT v0.8 §7 prints DYAD strings that are not owner RIDs: DYAD-THM-Q403-PHASE-ALLP, DYAD-ALG-PHASELAW (historical note labels; theorem DYAD-THM-Q403-PHASELAW), DYAD-THM-P1, -REALITY, -LEAD, -R, DYAD-CF-Q403 (components of PHASELAW), DYAD-ALG-CASCADE-P12 (unmatched; the p=12 micro-certification value −13+15√3/2 has no RID), DYAD-ART-CASCADE-Q4-03 (content = DYAD-ART-Q403-EXTRACT, byte identity not claimed). AZ cites DYAD-ALG-Q3-CANCEL (statement = DYAD-ALG-Q3-DEG2-CANCEL). DYAD App F classifies all strings and creates no aliases. Fix: DZT and AZ repin.",
+  "new": "DZT.Q1 D-RID | DZT v0.8 §7 prints DYAD strings that are not owner RIDs: DYAD-THM-Q403-PHASE-ALLP, DYAD-ALG-PHASELAW (historical note labels; theorem DYAD-THM-Q403-PHASELAW), DYAD-THM-P1, -REALITY, -LEAD, -R, DYAD-CF-Q403 (components of PHASELAW), DYAD-ALG-CASCADE-P12 (unmatched; the p=12 micro-certification value −13+15√3/2 has no RID), DYAD-ART-CASCADE-Q4-03 (content = DYAD-ART-Q403-EXTRACT, byte identity not claimed). DYAD App F classifies all strings and creates no aliases. Fix: DZT repins. (AZ repinned in v0.7.)"
+ },
+ {
+  "id": "AR12-022",
+  "finding": "AZ v0.7",
+  "where": "Q3 node: AZ consumer",
+  "old_sha256": "a7a7c34f558a38c896843492b763960dfc33981a6bd9343c9841a788f5745003",
+  "new_sha256": "741daa00b2187546f662c7a6991ca52e2b1cf90bcc4f2e08bbf636015dacfd05",
+  "old": "DYAD-ALG-Q3-DEG2-CANCEL ALG | degree-2 q=3,(0,2) cancellation ∀p>3 with 3|p: Coeff_{(0,2)}[τ_{≤D}(L_p^{−p/3}f_p^{p/3}−Id)]=0 ∀D≥2 (reachable slot killed by the primitive s-th-root phase sum) | cert rtg_p_certs.py (DYAD-ART-P-CERTS; EV-NOT-RERUN in the v6.4.20 review) | AZ prints DYAD-ALG-Q3-CANCEL (not a DYAD RID; DYAD App F maps it here, no alias) | @DYAD§6.11",
+  "new": "DYAD-ALG-Q3-DEG2-CANCEL ALG | degree-2 q=3,(0,2) cancellation ∀p>3 with 3|p: Coeff_{(0,2)}[τ_{≤D}(L_p^{−p/3}f_p^{p/3}−Id)]=0 ∀D≥2 (reachable slot killed by the primitive s-th-root phase sum) | cert rtg_p_certs.py (DYAD-ART-P-CERTS; EV-NOT-RERUN in the v6.4.20 review) | >AZ (import-ref under this RID since az-v0.7; the eigenframe linear-part lemma's statement is not recovered at the owner, DYAD App D) | @DYAD§6.11"
+ },
+ {
+  "id": "AR12-023",
+  "finding": "AZ v0.7",
+  "where": "TDRG state node: AZ citation",
+  "old_sha256": "09aecd263c15098c8672e9084c909eba7573443cd9a416083f2fd2ea590b20fb",
+  "new_sha256": "3d10218ac64aaa3862c94ca87d19b097c292fec3fb01138aefdba6bc4dfaa0ba",
+  "old": "TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) | ℤ_N, N even (SG-4, unique antipode); X_n=(θ₁..θ_M, δ₁..δ_M)∈⊔_{M≥2}ℤ_N^{2M}; M grows at star blow-up; physical state = quotient by global phase θ_i↦θ_i+c; relabelling covariance declared (SG-14, v2.12.14); Δ_ij=(θ_i−θ_j) mod N; relative advance d_ij=δ_i−δ_j; kinematics Δ_{ij,n+1}=Δ_{ij,n}+d_{ij,n} (TDRG-DEF-PHYSICAL-STATE, -REL-ADVANCE, -KINEMATICS) | ≡ OFN IMP-O08-02 | ! OFN Finding A: common token shift NOT a full-model gauge — statement accepted by TDR-G v2.12.14 §7, outside SG-14's group | AZ's \"TDRG-ZN-STATE\" resolves through the v2.12.14 §7 alias map | >NUMGEN imp-DISC (RID available since v2.12.14; NUMGEN repin is NUMGEN's) @TDRG§6.1",
+  "new": "TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) | ℤ_N, N even (SG-4, unique antipode); X_n=(θ₁..θ_M, δ₁..δ_M)∈⊔_{M≥2}ℤ_N^{2M}; M grows at star blow-up; physical state = quotient by global phase θ_i↦θ_i+c; relabelling covariance declared (SG-14, v2.12.14); Δ_ij=(θ_i−θ_j) mod N; relative advance d_ij=δ_i−δ_j; kinematics Δ_{ij,n+1}=Δ_{ij,n}+d_{ij,n} (TDRG-DEF-PHYSICAL-STATE, -REL-ADVANCE, -KINEMATICS) | ≡ OFN IMP-O08-02 | ! OFN Finding A: common token shift NOT a full-model gauge — statement accepted by TDR-G v2.12.14 §7, outside SG-14's group | AZ cites TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE and TDRG-DEF-BAND since az-v0.7 (the consumer name \"TDRG-ZN-STATE\" resolves through the v2.12.14 §7 map) | >NUMGEN imp-DISC (RID available since v2.12.14; NUMGEN repin is NUMGEN's) @TDRG§6.1"
+ },
+ {
+  "id": "AR12-024",
+  "finding": "AZ v0.7",
+  "where": "AZ Thread B ledger at v0.7",
+  "old_sha256": "8e0462669e536ea26edf87a66b8b76f5ad38f042e2d59b1c4509cd13be4b66b9",
+  "new_sha256": "f9431ba1f642c2a2b2d25f2892db1dce8f2fb096e0b52dbebc24961239167b4e",
+  "old": "*AZ:B-ledger (restatement; edges only) | AZ Thread B re-quotes *TDRG:state, *TDRG:band, *TDRG:reach-k0, LEM-REACH, LEM-RETRIG, LEM-SPECCONS, BIND3 (isolated period-2 not persistent, multi-pair scattering, even-parity survival, KNIFE FAIL, odd-memory COR), k/N growth control, *TDRG:bulk-fits (full-range 0.869 only), TDR-26 rule, TDR-24 frontier; all as bridge-candidate @AZ§4.2",
+  "new": "*AZ:B-ledger (restatement; edges only; owner RIDs since az-v0.7) | AZ Thread B re-quotes TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE, TDRG-DEF-BAND, TDRG-THM-REACHABILITY-K0, TDRG-ALG-LEM-REACH, TDRG-ALG-LEM-RETRIG (bound state of period dividing 2; least period 2 for d≠0), TDRG-ALG-LEM-SPECCONS (gcd multiset a consequence only; converse fails), BIND3 (TDRG-ALG-BIND3-CYCLE-N24K1, TDRG-NUM-BIND3-PARITY, TDRG-NUM-BIND3-SPECTRAL-GATE, TDRG-NUM-BIND3-MEMORY-PARITY, TDRG-NUM-BIND3-XFER, TDRG-NUM-BIND3-REGEN: isolated period-2 not persistent, multi-pair scattering, even-parity survival, KNIFE FAIL, odd-memory COR; conv v18 path orientation, not rerun by the owner), k/N growth control, *TDRG:bulk-fits (full-range 0.869; window-dependent, N^{−0.730} on N=480–1440; not a structural constant), TDR-26 rule (TDRG-OPEN-LOCKING-FAIL), TDR-24 frontier (24A → 24B → 24C); all as bridge-candidate @AZ§4.2"
+ },
+ {
+  "id": "AR12-025",
+  "finding": "AZ v0.7",
+  "where": "AZ.A7 retired",
+  "old_sha256": "ff9be03c0af1d7860680e321257b255637414f516dc4f6839c9ec28dac1deb7e",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "AZ.A7 D-RID: AZ's \"TDRG-ZN-STATE\" is an alias of TDRG-DEF-ZN-STATE in the TDR-G v2.12.14 §7 map (notice filed in pipes/AZ/); the AZ-side labels BIND3-*, TDR-24/N-SCALING, TDR-26-BIRTH-ANCHOR remain AZ's to repin (actual owner IDs: TDRG-ALG/NUM-BIND3-*; TDR-24/26 exist only as OPEN module RIDs).\n",
+  "new": ""
+ },
+ {
+  "id": "AR12-026",
+  "finding": "AZ v0.7",
+  "where": "AZ Thread A ledger at v0.7",
+  "old_sha256": "0efc1eb201d0026e5c6d9dadda653ef5eea7e2a399786ac53bac632d753f120e",
+  "new_sha256": "433a475eab042bd66187b1103f71b94b551bc05e2f77a4085f212d4b183ed162",
+  "old": "*AZ:A-ledger (→ D2 reference-only edges) | DYAD raw cubic, P567 ledger, GLATTICE5, VANISH-B2/B3/B4, B5-ALLP, DIRECT-WEIGHT, CROSS-IDENTITY, Q3-CANCEL, subgroup-charge 𝒬(p), P6-FACEFLUX; *AZ:A-heur \"operative arithmetic = divisor structure, subgroup charge, cyclotomic cancellation, not primality\" @AZ§4.1",
+  "new": "*AZ:A-ledger (→ D2 reference-only edges; pin dyad-v6.4.23 since az-v0.7) | DYAD raw cubic (raw one-step map, p≥3; carried with the owner caveat on the historical proposition), P567 ledger, GLATTICE5, VANISH-B2/B3/B4, B5-ALLP-NONVANISHING (DYAD-OPEN-B5-ALLP named as the closed lifecycle identifier), DIRECT-WEIGHT, CROSS-IDENTITY, Q3-DEG2-CANCEL, Q403-PHASELAW (closed; import-ref), subgroup-charge 𝒬(p) (named sub-items of DYAD-OPEN-P-RESONANCE; eight projector objects not recovered at the owner), P6-FACEFLUX; *AZ:A-heur \"operative arithmetic = divisor structure, subgroup charge, cyclotomic cancellation, not primality\" @AZ§4.1"
+ },
+ {
+  "id": "AR12-027",
+  "finding": "AZ v0.7",
+  "where": "A-heur: pin",
+  "old_sha256": "748329b077bd21d40fc0878774959fc3f38c9971cfc16edc274983af2ef31606",
+  "new_sha256": "013a0680e545707dec9a049b6d02e6b7404a56b4f42140cf4e59b8f3619092bf",
+  "old": "*AZ:A-heur HEUR | operative arithmetic = divisor structure, subgroup charge, direct orbit weights, cyclotomic cancellation, reachable-basis/missing slot, cyclic closure, secular exclusion — not primality; p=5 prime unique cancellation, p=7 prime transparency fails, p=12 composite near-miss, p=6 selected by order-6 structure | AZ Thread A is otherwise an import-ref ledger of the DYAD nodes above (pin v6.4.8.1) | @AZ§4.1",
+  "new": "*AZ:A-heur HEUR | operative arithmetic = divisor structure, subgroup charge, direct orbit weights, cyclotomic cancellation, reachable-basis/missing slot, cyclic closure, secular exclusion — not primality; p=5 prime unique cancellation, p=7 prime transparency fails, p=12 composite near-miss, p=6 selected by order-6 structure | AZ Thread A is otherwise an import-ref ledger of the DYAD nodes above (pin dyad-v6.4.23 since az-v0.7) | @AZ§4.1"
+ },
+ {
+  "id": "AR12-028",
+  "finding": "AZ v0.7",
+  "where": "B5 node: consumers",
+  "old_sha256": "b6cdb0689bdc3f8925f36d7168d49c7244d1f266cf50d5c01630f1fcdba5ec05",
+  "new_sha256": "78663e33bd85c241ce731a7465472ddf57a22b20bab84d6b7f93c1343a73028f",
+  "old": "DYAD-ALG-B5-ALLP-NONVANISHING ALG (closes lifecycle RID DYAD-OPEN-B5-ALLP) | (0,5) source contains secular β=1, coefficient S∝c₀₂² (5 terms, nonzero); p=6..12 exact F_raw^p(0,5)≠0 in ℚ(ζ_p) (finite sweep; e.g. F_raw⁷(0,5)=15/2λ⁵+23/8λ⁴+21/8λ³+15/2λ²−⅛λ+17/2); p≥13: nonsecular m=0 modes vanish, polynomial mode (−2,1) sums to −p/(1−λ⁻³) ⇒ F_raw^p(0,5)=pλ^{p−1}S_eff, S_eff=S−c_{(−2,1)}/(1−λ^{−3}), S_eff/S=N/D, N=2λ⁶+λ⁵−5λ⁴−3λ³−4λ²+2λ+1 (lim λ→1 =3); deg N=6 ⇒ only φ(p)≤6 candidates, Φ_p∤N for all ⇒ F_raw^p(0,5)≠0 ∀p≥6 | universal vanishing holds b∈{2,3,4} (p≥b+2), first fails b=5 ∀p≥6; all-b≥5 persistence OPEN (scan b=6 only); \"iff b≤4\" withdrawn | cert rtg_b5_Seff_limit_cert.py, exact_Fraw_b5_sweep.py, rtg_b5_step3_reduction.py, DYAD-ART-B5-SECULAR | >DZT, AZ (both cite the lifecycle RID) | @DYAD§6.11",
+  "new": "DYAD-ALG-B5-ALLP-NONVANISHING ALG (closes lifecycle RID DYAD-OPEN-B5-ALLP) | (0,5) source contains secular β=1, coefficient S∝c₀₂² (5 terms, nonzero); p=6..12 exact F_raw^p(0,5)≠0 in ℚ(ζ_p) (finite sweep; e.g. F_raw⁷(0,5)=15/2λ⁵+23/8λ⁴+21/8λ³+15/2λ²−⅛λ+17/2); p≥13: nonsecular m=0 modes vanish, polynomial mode (−2,1) sums to −p/(1−λ⁻³) ⇒ F_raw^p(0,5)=pλ^{p−1}S_eff, S_eff=S−c_{(−2,1)}/(1−λ^{−3}), S_eff/S=N/D, N=2λ⁶+λ⁵−5λ⁴−3λ³−4λ²+2λ+1 (lim λ→1 =3); deg N=6 ⇒ only φ(p)≤6 candidates, Φ_p∤N for all ⇒ F_raw^p(0,5)≠0 ∀p≥6 | universal vanishing holds b∈{2,3,4} (p≥b+2), first fails b=5 ∀p≥6; all-b≥5 persistence OPEN (scan b=6 only); \"iff b≤4\" withdrawn | cert rtg_b5_Seff_limit_cert.py, exact_Fraw_b5_sweep.py, rtg_b5_step3_reduction.py, DYAD-ART-B5-SECULAR | >DZT (cites the lifecycle RID), AZ (cites this RID since az-v0.7) | @DYAD§6.11"
+ },
+ {
+  "id": "AR12-029",
+  "finding": "AZ v0.7",
+  "where": "raw cubic node: AZ import at owner scope",
+  "old_sha256": "e866822926482bde66f41daa7584d77bc8d9ea64c9875752658076c3e931fc4d",
+  "new_sha256": "64c516dd63eb31b4a33c6f4697e1f47292ae8bf8e2384edc2238e9cfc0096b7b",
+  "old": "DYAD-THM-RAW-CUBIC THM | declared K_p family, raw Z_p eigenframe (η=Z+Z̄, ρ=uZ+ūZ̄, u=1/(1−λ), λ=e^{2πi/p}): the z²z̄ coefficient of the raw one-step map (before any normalizer) is ν_{3,raw}^(p)=K_p/4+i(2cos²(2π/p)−2cos(2π/p)+1)/(4 sin(2π/p)); read off the cubic Taylor terms ρ′∋η³/6, η′∋K_p(ρ³+η³)/6 | sc: one step, raw frame, p≥3 (eigenframe needs λ≠λ̄; 4 sin(2π/p) vanishes at p=2) | ¬ normalized ν₃ of RECOG-ALG-NU3-CLOSED-FORM; ¬ six-step μ; ¬ raw p-step map | formula recovered and algebraically verified (owner P1-2; reviewer independent derivation); identity with the historical OPEN-9 proposition not established (L5 DYAD.X11) | >AZ Thread A | @DYAD§2 OPEN 9, App E, App F",
+  "new": "DYAD-THM-RAW-CUBIC THM | declared K_p family, raw Z_p eigenframe (η=Z+Z̄, ρ=uZ+ūZ̄, u=1/(1−λ), λ=e^{2πi/p}): the z²z̄ coefficient of the raw one-step map (before any normalizer) is ν_{3,raw}^(p)=K_p/4+i(2cos²(2π/p)−2cos(2π/p)+1)/(4 sin(2π/p)); read off the cubic Taylor terms ρ′∋η³/6, η′∋K_p(ρ³+η³)/6 | sc: one step, raw frame, p≥3 (eigenframe needs λ≠λ̄; 4 sin(2π/p) vanishes at p=2) | ¬ normalized ν₃ of RECOG-ALG-NU3-CLOSED-FORM; ¬ six-step μ; ¬ raw p-step map | formula recovered and algebraically verified (owner P1-2; reviewer independent derivation); identity with the historical OPEN-9 proposition not established | >AZ Thread A (az-v0.7 imports it at this scope, with the caveat) | @DYAD§2 OPEN 9, App E, App F"
+ },
+ {
+  "id": "AR12-030",
+  "finding": "AZ v0.7",
+  "where": "DYAD.X11 retired",
+  "old_sha256": "2e744ce1697fa1e899f38ab491f7d72f3f9d067f15d65684deb2ec0f6dd5e292",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "DYAD.X11 D-LINK | AZ v0.6 §8 imports DYAD-THM-RAW-CUBIC; DYAD's recovered formula is algebraically verified, but its identity with the historical proposition AZ cites is not established (DYAD App E/F).\n",
+  "new": ""
+ },
+ {
+  "id": "AR12-031",
+  "finding": "AZ v0.7",
+  "where": "Thread C: availability qualifier",
+  "old_sha256": "0e4f158c93c7b34f28856d2a1f175fae6a0b6ecbf18474b2a44286620c101039",
+  "new_sha256": "791aefda485026f042c0dcc974c0a0074febe0039b6e202838565d0007a2e789",
+  "old": "AZ-1A/1B/1C ENG PASS | Hashimoto engine certified on benchmark ladder (directed/bidirected cycles, bouquet 2^{1/4}, disjoint unions; sparse vs dense <10⁻⁶); fixes gen_bouquet off-by-one, gen_from_json precedence, O(m³) eigensolver (ARPACK which='LM', dense fallback); TDR-G ingestion/export/provenance round-trip with checksums, loud-fail manifest validator; az_v5 hashed package (AZ-ART-AZV5-REGISTRY canonical hash source); manifest checks k/N consistency, ≥1000 nulls, artifact_paths, birth_window_status | power-iteration spectral radius mis-handled ±R dominant pairs (2.879 vs true 3.306 on N=120 core) → AZ-ART-SPECTRAL-RADIUS-PATCH @AZ",
+  "new": "AZ-1A/1B/1C ENG PASS | Hashimoto engine certified on benchmark ladder (directed/bidirected cycles, bouquet 2^{1/4}, disjoint unions; sparse vs dense <10⁻⁶); fixes gen_bouquet off-by-one, gen_from_json precedence, O(m³) eigensolver (ARPACK which='LM', dense fallback); TDR-G ingestion/export/provenance round-trip with checksums, loud-fail manifest validator; az_v5 hashed package (AZ-ART-AZV5-REGISTRY canonical hash source); manifest checks k/N consistency, ≥1000 nulls, artifact_paths, birth_window_status | power-iteration spectral radius mis-handled ±R dominant pairs (2.879 vs true 3.306 on N=120 core) → AZ-ART-SPECTRAL-RADIUS-PATCH | evidence (AZ v0.7 §9): none of the Thread C files, the hash registry AZ-ART-AZV5-REGISTRY included, is in the repository at this edition and none is described as recreated (EV-SRC-REPORTED, EV-NOT-RERUN); the owner keeps the grades with that limit, which holds for every AZ-owned node of this block; a later [SESSION] custody record (records/az/AZ_UPLOAD_HASH_CHECK_20261111.md) is not owner text and changes nothing here @AZ"
+ },
+ {
+  "id": "AR12-032",
+  "finding": "AZ v0.7",
+  "where": "PREL/Legacy routing row: AZ edition (AZ v0.7 does not mention CHSH)",
+  "old_sha256": "3dd24e17a87c9a3ef4699b632a41470ebf7f7e715abc827e6309b374da207c55",
+  "new_sha256": "a54c9354d2d0c398b485c528d423c8703cb7cfae3383a8e98965f3d18dffd381",
+  "old": "not supported by AZ v0.6;",
+  "new": "not supported by AZ v0.7;"
+ },
+ {
+  "id": "AR12-033",
+  "finding": "DYAD v6.4.24",
+  "where": "RID registered; THM -> ALG",
+  "old_sha256": "15ab7c1e9f7dcefdba94fdcec342208463cf48576a9928e9ae7e6776cb34f4af",
+  "new_sha256": "86d7b3ca062905a811311104c56f7eb10d297dfefc56afddd5df72183f7b7566",
+  "old": "*DYAD:not-area-preserving THM | det DT=1+(e^ρ−1)cosη; =1 only on ρ=0 or cosη=0; non-symplecticity lets Q_true decay (no RID, L5 DYAD.X4) | @DYAD§1,§6.1",
+  "new": "DYAD-ALG-NOT-AREA-PRESERVING ALG | det DT=1+(e^ρ−1)cosη; =1 only on ρ=0 or cosη=0, not globally; non-symplecticity lets Q_true decay | owner tag ALG (a direct Jacobian computation); THM in editions before v6.4.24, content unchanged | cert DYAD-ART-BRIDGE-NOTE-CHECK (gate B2; exact replay of DYAD-ART-BRIDGE-NOTE) | @DYAD§1,§6.1"
+ },
+ {
+  "id": "AR12-034",
+  "finding": "DYAD v6.4.24",
+  "where": "RID registered",
+  "old_sha256": "75be9434b13a764c0340cf8b476bde68136ab62f73b5844726bc57a12bc963e8",
+  "new_sha256": "c29459b77dcb75a14aa612c833c0b68c83a9cc1ea7d6087805ebe7dcb13b3ec5",
+  "old": "*DYAD:p6-linear-order ALG | λ=e^{iπ/3} has order exactly 6 (λ^j≠1, j=1..5; λ⁶=1); linear part only; holds for every primitive root of unity, not a uniqueness property of p=6 | @DYAD§6.6",
+  "new": "DYAD-ALG-P6-LINEAR-ORDER ALG | λ=e^{iπ/3} has order exactly 6 (λ^j≠1, j=1..5; λ⁶=1); linear part only; holds for every primitive root of unity, not a uniqueness property of p=6 | cert DYAD-ART-BRIDGE-NOTE-CHECK (gate B3) | @DYAD§6.6"
+ },
+ {
+  "id": "AR12-035",
+  "finding": "DYAD v6.4.24",
+  "where": "RID registered",
+  "old_sha256": "ebc7dae37df78980390035ffdced1259cdb2c607bba2f7d7c55e84512b3f0282",
+  "new_sha256": "e44272faecfb209dbc3db7914f12a1e287512d3be79fd25839a5ad49da17200c",
+  "old": "*DYAD:homological-resonance ALG | one-step NF: z^az̄^b (a+b≥2) resonant iff λ^aλ̄^b=λ iff a−b−1≡0 mod 6; resonant monomials at every odd degree, none at even degree (z²z̄: n₂₁; z³z̄², z̄⁵: n₃₂, n₀₅), not removable by the normalizer; non-resonant divisors λ(1−λ^{a−b−1}) have modulus 1, √3 or 2 ⇒ no small divisors at any degree | ¬ order of λ ≡ homological resonance (that conflation is withdrawn) | cert dyad_p1_math_checks.py P1-3 | @DYAD§6.6",
+  "new": "DYAD-ALG-HOMOLOGICAL-RESONANCE ALG | one-step NF: z^az̄^b (a+b≥2) resonant iff λ^aλ̄^b=λ iff a−b−1≡0 mod 6; resonant monomials at every odd degree, none at even degree (z²z̄: n₂₁; z³z̄², z̄⁵: n₃₂, n₀₅), not removable by the normalizer; non-resonant divisors λ(1−λ^{a−b−1}) have modulus 1, √3 or 2 ⇒ no small divisors at any degree | ¬ order of λ ≡ homological resonance (that conflation is withdrawn) | cert dyad_p1_math_checks.py P1-3 | @DYAD§6.6"
+ },
+ {
+  "id": "AR12-036",
+  "finding": "DYAD v6.4.24",
+  "where": "DYAD.X4 narrowed",
+  "old_sha256": "ffa603b3f9021a28b98940dec2037594bf39732d1dcd127c9834aedd1b58c0a8",
+  "new_sha256": "1ff85674718f919ea914ea21a0d4a4673576aeaee19a190084447cb1672b35eb",
+  "old": "DYAD.X4 D-RID | results used downstream without an owner RID: not-area-preserving THM, p6 linear order ALG, homological resonance ALG, cubic rate across p ALG.",
+  "new": "DYAD.X4 D-RID | one statement is used downstream without a Dyadic RID: the cubic radial rate across p (*DYAD:cubic-rate-across-p), which the owner keeps as a statement-level import of RECOG-ALG-NU3-CLOSED-FORM (owner decision, dyad-v6.4.24). The other three statements of this row have owner RIDs since v6.4.24: DYAD-ALG-NOT-AREA-PRESERVING, DYAD-ALG-P6-LINEAR-ORDER, DYAD-ALG-HOMOLOGICAL-RESONANCE."
+ },
+ {
+  "id": "AR12-037",
+  "finding": "DYAD v6.4.24",
+  "where": "new node: sharpened R9 rows",
+  "old_sha256": "cf960210578e73ab1f1dd3c9d15512eab5743c4f7e02c4d8b52b09e97c5f1011",
+  "new_sha256": "53c1f7ce37a861c19aab4c190c688d2dc47d935acc363f4f7debb5bde86d8551",
+  "old": "DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER THM·c | if R9: |M_W−𝒫₂(W₀)|≤K′_jQ₀^{3/2}+C_{2,j}(256/225)²Q₀²; row A |W₀|≤3/64: K′=3951/1000, C₂=517, single K=8831/250; row B |W₀|≤3/128: 971/250, 163, 883/100; c_inv^A≤467/500, c_inv^B≤927/1000; Λ₁(Θ)=(43sin6Θ−5611√3cos6Θ)/1270080, ‖Λ₁‖∞=√481897/90720, c_iso=−4√3/27 | R9 at statement level only; NUM slack ≈11×; ¬ unconditional; rows not mixed | cert DYAD-ART-OPEN21-P5 (28 gates; reviewer replay byte-identical) | <RECOG-THM-R9-MEMORY | >RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (pin v6.4.18) | @DYAD§6.14\n",
+  "new": "DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER THM·c | if R9: |M_W−𝒫₂(W₀)|≤K′_jQ₀^{3/2}+C_{2,j}(256/225)²Q₀²; row A |W₀|≤3/64: K′=3951/1000, C₂=517, single K=8831/250; row B |W₀|≤3/128: 971/250, 163, 883/100; c_inv^A≤467/500, c_inv^B≤927/1000; Λ₁(Θ)=(43sin6Θ−5611√3cos6Θ)/1270080, ‖Λ₁‖∞=√481897/90720, c_iso=−4√3/27 | R9 at statement level only; NUM slack ≈11×; ¬ unconditional; rows not mixed | cert DYAD-ART-OPEN21-P5 (28 gates; reviewer replay byte-identical) | <RECOG-THM-R9-MEMORY | >RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION (pin v6.4.18) | @DYAD§6.14\nDYAD-THM-OPEN21-SHARP-ROWS THM·c | sc: as DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER — rows A, B of NF-REM, not mixed; primitive start W₀, 0<|W₀|≤w_j; 𝒫₂, M_W, w_j as there | if RECOG-THM-R9-SHARPENED-ROWS: |M_W−𝒫₂(W₀)|≤K′_jQ₀^{3/2}+C′_{2,j}(256/225)²Q₀² (primary) and ≤S_jQ₀^{3/2} (secondary); row A w=3/64: K′=3951/1000 (unchanged), C′₂=259.2, S=492/25 (adopted single K=8831/250); row B w=3/128: K′=971/250, C′₂=81.49, S=6357/1000 (adopted 883/100); S_j = three-decimal ceiling of K′_j+C′_{2,j}(256/225)²w_j (exact 19.67964, 6.356466963…) | ¬ unconditional; rows not mixed; RECOG's −C7 rows are not imported; DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER and its rows are unchanged | cert DYAD-ART-OPEN21-SHARP-ROWS (exact rationals, gates G0–G5, five negative controls; OWNER-RUN; RECOG's certificate not rerun) | <RECOG-THM-R9-SHARPENED-ROWS (pin recog-v0.3.26 §6.13a; the entry is byte-identical at recog-v0.3.27) | @DYAD§6.14\n"
+ },
+ {
+  "id": "AR12-038",
+  "finding": "DYAD v6.4.24",
+  "where": "OPEN 20: owner state-of-work paragraph",
+  "old_sha256": "bc3f8eec871f37a0897f3c33babdd60106728c9d14579e9240fe308d41c0930e",
+  "new_sha256": "2a11167081345993521a8eff7febfc9158456cbd3f5519cc1979b86129521933",
+  "old": "**smooth/analytic realization** DYAD-OPEN-INVOLUTION-REALIZATION (OPEN 20) PARTIAL: B-∞ existence CLOSED (SMOOTH-EMBEDDING), B-∞ flat uniqueness CLOSED; B-an (R₀ / F^{1/2} analytic) OPEN; B-6 (F^{1/6} / J_ℤ6 / exactly equivariant analytic chart) OPEN. Negative B-an excludes analytic non-identity involutions commuting with T (and with T⁶ under §6.15(b)). Blocks: analytic class-C realization (>D4a, D1 FMS/RRF/OFN). Quantitative: finite-C^k / quantitative-radius smooth embedding.",
+  "new": "**smooth/analytic realization** DYAD-OPEN-INVOLUTION-REALIZATION (OPEN 20) PARTIAL: B-∞ existence CLOSED (SMOOTH-EMBEDDING), B-∞ flat uniqueness CLOSED; B-an (R₀ / F^{1/2} analytic) OPEN; B-6 (F^{1/6} / J_ℤ6 / exactly equivariant analytic chart) OPEN. Negative B-an excludes analytic non-identity involutions commuting with T (and with T⁶ under §6.15(b)). Blocks: analytic class-C realization (>D4a, D1 FMS/RRF/OFN). Quantitative: finite-C^k / quantitative-radius smooth embedding. State of work on B-an at v6.4.24 (owner [SESSION] paragraph; no result claimed): sectorial pilot in the complexified raw frame — F=T⁶ has two formal invariant curves Γ_± (w=a_±z²+…), exchanged by T; stage 1 exact (OWNER-RUN): k=3, m=2, α=−102/19−16√3i/19 on both branches; literature basis at SESSION scope (3-summability of Γ_±; not a theorem-grade import; the statements concern the complexified germ only, no real-orbit statement follows); stage 2 [NUM]: coefficients a₂..a₂₁₆ of Γ_+, Borel scale INCONCLUSIVE; stage 3a: the a-priori operator route is negative (it admits only |ξ|<1.76·10⁻⁶); stage 2b [NUM] scouting on one branch, one overlap, one direction, no certified truncation bound: the two sectorial values differ numerically, slopes consistent with e^{−2πT}, no asymptotic exponent certified. By the pilot's decision rule a certified nonzero sectorial jump would give divergence of Γ_± and of log F and would not decide B-an or B-6; both stay ACTIVE; no certification run is authorized (evidence DYAD-ART-OPEN20-AN-PILOT, SESSION working evidence; no theorem rests on it)."
+ },
+ {
+  "id": "AR12-039",
+  "finding": "pipes",
+  "where": "pipe census at c8e7198",
+  "old_sha256": "0dc93e12f8edbbd2c623e2c4b5cbc390db5fbfc99ca490bd9fb2fd29249fe0db",
+  "new_sha256": "b9dd72cff6487d5711c49a1d8d3b5b1ac2f820ea917d47e937f158872f678820",
+  "old": "NUMGEN.N-I1 D-LINK (pipe states, receiver side) | at the source snapshot fa3db80, pipes_index --check passes with 87 items in 20 inboxes — 38 closed, 1 dispositioned, 48 open; with this edition's three ATLAS state changes (TRIAD finding on Legacy Y6 and the RER citation, PROG v1.4 and RECOG v0.3.27 notices: dispositioned, closed by the atlas owner after the tag) 38 closed, 4 dispositioned, 45 open. Open at the snapshot, by receiver: AZ (TDR-G v2.12.14, DYAD N16–N21) · DYAD (PROG v1.4, RECOG v0.3.27) · DZT, ER2B, RER, RRF, UVM (DYAD N16–N21 each) · ER2B, FMS, NUMGEN, RRF, TDRG (OFN v0.11; FMS, NUMGEN, RRF also OFN v0.12) · GEN (PROG v1.4) · LIT (three DYAD requests: INF009/INF010 use validation, sub-petal orbit constant, validated Stokes numerics) · NUMGEN (TDR-G v2.12.14, RECOG v0.3.26 and v0.3.27, DYAD v6.4.23, PROG v1.4) · OFN (DYAD v6.4.23, GEN v2.10, TRIAD v1.7, PROG v1.4, RECOG v0.3.27) · RER, RRF (RECOG v0.3.26) · RRF (GEN v2.10, TRIAD v1.7) · TDRG (OFN token-sum label finding, PROG v1.4) · TRIAD (DYAD bridge-note recovery, GEN 𝒫₄-identity and birth-symmetry answers, GEN v2.10, PROG v1.4; F30) · UVM (GEN κ_f/B_*/sourced-junction items, GEN v2.10, TRIAD v1.7); dispositioned: OFN v0.12 notice to TRIAD (no action). A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7).",
+  "new": "NUMGEN.N-I1 D-LINK (pipe states, receiver side) | at the source snapshot c8e7198, pipes_index --check passes with 107 items in 20 inboxes — 52 closed, 4 dispositioned (among them the two ATLAS notices this edition answers: AZ v0.7, DYAD v6.4.24; closed by the atlas owner after the tag), 51 open. Open at the snapshot, by receiver: DZT (DYAD N16–N21, AZ v0.7) · ER2B (OFN v0.11, DYAD N16–N21) · FMS (OFN v0.11, v0.12) · GEN (LIT Regge interface inputs, PROG v1.4, DYAD v6.4.24) · LIT (two DYAD items: LH2012 Thm 4.2 uniqueness use, v6.4.24 use report) · NUMGEN (TDR-G v2.12.14, RECOG v0.3.26 and v0.3.27, DYAD v6.4.23 and v6.4.24, OFN v0.11 and v0.12, PROG v1.4) · OFN (DYAD v6.4.23 and v6.4.24, GEN v2.10, TRIAD v1.7, PROG v1.4, RECOG v0.3.27) · PREL (SAT finding on K₃ degeneracy and lift) · PROG (SAT satellite interface, AZ v0.7) · RECOG (DYAD v6.4.24) · RER (RECOG v0.3.26, DYAD N16–N21) · RRF (RECOG v0.3.26, OFN v0.11 and v0.12, DYAD N16–N21, GEN v2.10, TRIAD v1.7) · TDRG (OFN token-sum label finding, OFN v0.11, PROG v1.4, AZ v0.7) · TRIAD (DYAD bridge-note recovery, GEN 𝒫₄-identity and birth-symmetry answers, GEN v2.10, PROG v1.4, DYAD v6.4.24; F30) · UVM (GEN κ_f/B_*/sourced-junction items, DYAD N16–N21, GEN v2.10, TRIAD v1.7). AZ and DYAD have no open inbox item. A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7)."
+ }
+]

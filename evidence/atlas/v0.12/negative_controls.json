@@ -1,0 +1,92 @@
+[
+ {
+  "id": "V1",
+  "what": "H2 cites the retired AZ.A1",
+  "detected": true
+ },
+ {
+  "id": "V2",
+  "what": "retired key reused",
+  "detected": true
+ },
+ {
+  "id": "V3",
+  "what": "SOURCES row older than the manifest",
+  "detected": true
+ },
+ {
+  "id": "V4",
+  "what": "stale AZ SOURCES row",
+  "detected": true
+ },
+ {
+  "id": "V5",
+  "what": "new Dyadic RID misspelled against the source",
+  "detected": true
+ },
+ {
+  "id": "V6",
+  "what": "sharp rows shown as unconditional",
+  "detected": true
+ },
+ {
+  "id": "V7",
+  "what": "row constants mixed",
+  "detected": true
+ },
+ {
+  "id": "V8",
+  "what": "not-area-preserving kept at THM against the owner tag",
+  "detected": true
+ },
+ {
+  "id": "V9",
+  "what": "registered RID shown as a pseudo-ID again (coverage)",
+  "detected": true
+ },
+ {
+  "id": "V10",
+  "what": "DYAD.X4 shown as closed",
+  "detected": true
+ },
+ {
+  "id": "V11",
+  "what": "OPEN 20 pilot read as a result",
+  "detected": true
+ },
+ {
+  "id": "V12",
+  "what": "SESSION recovery read as owner evidence",
+  "detected": true
+ },
+ {
+  "id": "V13",
+  "what": "4|q rule read as dynamics",
+  "detected": true
+ },
+ {
+  "id": "V14",
+  "what": "AZ.A5 dropped with the retired rows",
+  "detected": true
+ },
+ {
+  "id": "V15",
+  "what": "withdrawn sentence listed as a current D-WRONG",
+  "detected": true
+ },
+ {
+  "id": "V16",
+  "what": "DZT half of the identifier finding dropped",
+  "detected": true
+ },
+ {
+  "id": "V17",
+  "what": "consumer pin of the new theorem moved to the newest RECOG edition",
+  "detected": true
+ },
+ {
+  "id": "V18",
+  "what": "raw cubic import without the owner caveat",
+  "detected": true
+ }
+]
