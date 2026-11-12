@@ -211,6 +211,15 @@ def main():
     d.sub("S3-SG7", "**v0.6 worked example of the trap this guard exists to catch:**",
           "**v0.6 worked example of the trap this guard exists to catch:**",
           "**Worked example of the trap this guard exists to catch:**", "version label")
+    d.sub("R1-SG7", "**Worked example of the trap this guard exists to catch:**",
+          "It is proven static $\\mathbb{Z}_N$ substrate geometry that would appear for *any* antipodal-band graph on *any* "
+          "$\\mathbb{Z}_N$ (§4.3.2, §4.3.4); a \"resemblance\" to Dyadic cyclic selection is therefore vacuous.",
+          "It is not specific to TDR-G dynamics: in the tested protocol a core-matched random-$\\theta$ antipodal-band null "
+          "with no TDR-G dynamics reproduces it (`[NUM diagnostic]`; §4.3.3 Chain 2, $N\\in\\{120,180,240\\}$; §4.3.4). It is "
+          "read as static $\\mathbb{Z}_N$ antipodal-band geometry on that evidence; nothing is asserted for every "
+          "antipodal-band graph or every $N$. A \"resemblance\" to Dyadic cyclic selection is therefore vacuous as evidence "
+          "of a bridge.",
+          "review 5874174108 R1: universal quantifier and 'proven' removed; scope of the numerical evidence stated")
     for n in ("1", "2", "4"):
         d.sub("S3-PROG-%s" % n, "**[SG-PROG-%s]**" % n, "`[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`",
               "`[import: RTG_PROGRAMME_OVERVIEW v1.4 §8 | SG-PROG-%s]`" % n, "[source:] -> [import:] (Methodology §3.3); same pin")
@@ -298,6 +307,11 @@ def main():
                 "the retraction block keeps its bytes (Methodology §8.4, historical spellings)"))
     d.sub("A5-result", "`[RESULT diagnostic]` **AZ-2 attempted; negative-clarifying. No Level B promotion.**",
           "`[RESULT diagnostic]`", "`[RESULT]` `[from: NUM]` `[scope: diagnostic]`", "RESULT pairing (Methodology §3.4)")
+    d.sub("R1-AZ2", "The first angular-spectrum candidate (the Core(G_T) `4|q` rule) was tested and **disqualified as a bridge-candidate**",
+          "the most tempting observable was shown to be substrate geometry that any antipodal-band $\\mathbb{Z}_N$ graph would exhibit.",
+          "the most tempting observable was reproduced, in the tested null protocol (§4.3.3 Chain 2), by a core-matched "
+          "random-$\\theta$ antipodal-band null without TDR-G dynamics, so it is not specific to the dynamics.",
+          "review 5874174108 R1: universal quantifier removed; the negative verdict is kept at the scope of the evidence")
     d.set_line("S4.3.6-head", "#### §4.3.6 Scientific open items (Thread C) — revised", "#### §4.3.6 Scientific open items (Thread C)",
                "version label")
     d.sub("C3-gbirth", "`[OPEN]` **A dynamical (non-substrate) graph observable.**",
@@ -542,7 +556,8 @@ def main():
     stale = []
     for bad in ("v6.4.23 (`dyad-v6.4.23`)", "[THM-ALG]", "[ENG-planned]", "[ENG-historical]", "[RESULT diagnostic]",
                 "[source: ", "[ALG, exact]", "[CAND/conditional]", "in source]", "v0.6 note", "(v0.6", "v0.6 status",
-                "REVISED v0.6", "(revised)", "v0.5", "[COR v0.4]"):
+                "REVISED v0.6", "(revised)", "v0.5", "[COR v0.4]", "*any* antipodal-band", "any antipodal-band $\\mathbb{Z}_N$ graph would",
+                "It is proven static"):
         if bad in live:
             stale.append(bad)
             for m in re.finditer(re.escape(bad), live):

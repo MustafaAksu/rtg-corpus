@@ -9,7 +9,8 @@
 | Stage | File | SHA-256 | Bytes |
 |---|---|---|---|
 | base | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` at tag `az-v0.7` | `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` | 83,281 |
-| **1 — corrected intermediate** (this branch) | same path | `8ebcfb9a6c4065278ff6120b28237d7d6752d05a6c48655a42542478528eba67` | 92,719 |
+| 1 — as first submitted (commit `aeb6108`, reviewed in `5874174108`) | same path | `8ebcfb9a6c4065278ff6120b28237d7d6752d05a6c48655a42542478528eba67` | 92,719 |
+| **1 — corrected intermediate after review** (this branch) | same path | `19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426` | 94,673 |
 | 2 — compacted candidate | not built | — | — |
 
 ```bash
@@ -19,7 +20,7 @@ diff /tmp/edit_log.txt evidence/az/v0.8/stage1/edit_log.txt               # empt
 git diff az-v0.7 -- dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md          # the stage-1 delta
 ```
 
-The builder reads the base from the tag, asserts its hash, and applies 49 edits, each located by an anchor that must occur exactly once (`evidence/az/v0.8/stage1/edit_log.txt`; new text in `evidence/az/v0.8/stage1/blocks/`). It stops on a missing or repeated anchor, on a lost identifier, on a stale string, and when a protected region differs from the base.
+The builder reads the base from the tag, asserts its hash, and applies 51 edits, each located by an anchor that must occur exactly once (`evidence/az/v0.8/stage1/edit_log.txt`; new text in `evidence/az/v0.8/stage1/blocks/`). It stops on a missing or repeated anchor, on a lost identifier, on a stale string, and when a protected region differs from the base.
 
 ## 2. What stage 1 changes
 
@@ -32,7 +33,8 @@ The builder reads the base from the tag, asserts its hash, and applies 49 edits,
 | Pins (C5) | S0.1-dyad, and inside B1-B3, B5, S8 | Dyadic `dyad-v6.4.23` → `dyad-v6.4.24` in the live body |
 | Availability (C1–C4) | C1-C4, C3-gbirth, S0.1-engine, S4.3-status, S5-eng | §9 per-artifact availability and evidence state; conventions file as found; two definitions of `G_birth(w)`; exporter registered under its own identifier; new check registered |
 | Version-scoped wording | S1.1-done, S1.1-crit, S1.3-AZ0/AZ1/AZ2, S3-SG5-head, S3-SG5-hist, S3-SG6, S3-SG7, B4-note, S4.3.6-head, S5-eng2, S5-gz, S6-bd, S7-hist, S7-67 | "v0.6 note", "(REVISED v0.6)", "Was:" and similar labels removed or reworded as current status |
-| Appendix B | APPB | "Corrections registered at v0.8": five `[COR]` records for the status and tag changes above |
+| Scope of the static-geometry conclusion (review R1) | R1-SG7, R1-AZ2 | The worked example of SG-AZ-7 and §4.3.5 no longer say that the `4\|q` rule appears for *any* antipodal-band graph on *any* $\mathbb{Z}_N$, nor that this is "proven"; they state that the rule is reproduced without TDR-G dynamics in the tested null protocol and is therefore not specific to the dynamics. The `[NUM diagnostic]` result and the `[bridge-disqualified]` verdict are unchanged |
+| Appendix B | APPB | "Corrections registered at v0.8": six `[COR]` records for the status, scope and tag changes above |
 
 **How the Import Ledger rows were made.** Each row is the readout of the v0.7 §8 row (its bytes) followed by limitation sentences taken byte for byte from the v0.7 thread text (builder functions `readout` and `frag`), with the owner's location and tag. The only new words are the labels that join them and, in one row, "remains a conditional candidate in the owner documents" for the non-canonical `[CAND/conditional]`. Mixed tags are unpacked to the owner's tags as printed at `tdrg-v2.12.14` (`[THM]` for `TDRG-THM-REACHABILITY-K0`, `[ALG]` for the three lemmas and the BIND3 cycle enumeration, `[NUM strong]` for the BIND3 `NUM` identifiers). Formulas and numerical values that were printed only in the threads are no longer in this document, except where a row keeps them (the `p = 12` boundary value, the N-scaling fit and its window dependence, the TDR-26 counts).
 
@@ -58,22 +60,34 @@ Each is a place where stage 1 words something that the adopted file did not say 
 ## 5. Differences from the edit plan
 
 - **The reduction is in stage 1, not stage 2.** The operation classes of `tools/check_compaction.py` (reference substitution, history removal, history sections, header, footer, reorder) do not include "remove a restated owner statement whose readout survives elsewhere". Removing it is therefore a content change and is reviewed as one. Stage 2 keeps only what the checker can verify.
-- **Size.** The plan estimated 60–65 KB after both stages. The intermediate is 92.7 KB: the thread sections fell from 20.8 KB to 6.3 KB (§1.2, §4.1, §4.2 together), but the ledger grew from 5.0 KB to 13.9 KB because every limitation sentence was kept, so the text about owner results fell by 5.5 KB in all; and the edition adds the proof (+4.5 KB), the per-artifact availability (+4.6 KB), the state and section map (+2.8 KB), the OPEN entries in full form (+0.9 KB) and five correction records (+2.8 KB). Stage 2 (header, §10, Appendix A) is expected to remove about 8 KB. The estimate in the plan was wrong; nothing was cut to meet it.
+- **Size.** The plan estimated 60–65 KB after both stages. The intermediate is 92.7 KB: the thread sections fell from 20.8 KB to 6.3 KB (§1.2, §4.1, §4.2 together), but the ledger grew from 5.0 KB to 13.9 KB because every limitation sentence was kept, so the text about owner results fell by 5.5 KB in all; and the edition adds the proof (+4.5 KB), the per-artifact availability (+4.6 KB), the state and section map (+2.8 KB), the OPEN entries in full form (+0.9 KB) and the correction records (+2.8 KB; +2.0 KB more with the review corrections, 94.7 KB in all). Stage 2 (header, §10, Appendix A) is expected to remove about 8 KB. The estimate in the plan was wrong; nothing was cut to meet it.
 - **Row wording.** The plan foresaw newly worded short readouts. The rows reuse the v0.7 readouts and v0.7 sentences instead (§2 above), so that no owner statement is paraphrased anew.
 
 ## 6. Checks run for stage 1
 
 | Check | Result |
 |---|---|
-| Build from the tag, base hash asserted, 49 exact-once edits | intermediate `8ebcfb9a…ba67`; edit log stored |
+| Build from the tag, base hash asserted, 51 exact-once edits | intermediate `19a1faf0…0426`; edit log stored |
 | Protected regions | 11 regions byte-identical |
 | Identifiers | none lost |
-| Stale strings in the live body (`v6.4.23` pin, `[THM-ALG]`, `[source:`, mixed tags, version labels) | none; `[HEUR/NUM strong]` twice, both inside or about the retraction block |
-| `tools/dsn_lint.py --prev` (informational) | 92,719 bytes; context-core marker present; context core 36.8 k characters (v0.7: 46.4 k); history phrases in live text 16 (v0.7: 25) |
+| Stale strings in the live body (`v6.4.23` pin, `[THM-ALG]`, `[source:`, mixed tags, version labels, the universal wording of R1) | none; `[HEUR/NUM strong]` twice, both inside or about the retraction block |
+| `tools/dsn_lint.py --prev` (informational) | 94,673 bytes; context-core marker present; context core 36.8 k characters (v0.7: 46.4 k); history phrases in live text 16 (v0.7: 25) |
 | `evidence/az/core_equiv_check/az_core_equiv_check.py --nmax 7` | exit 0; 2,131,019 graphs, 0 mismatches (plan §8.3) |
 | `tools/pipes_index.py --check` | OK; `pipes/AZ/` holds two items, both closed |
 
 Not run: `tools/check_compaction.py` (stage 2); no owner artifact; no Thread C computation other than the finite check.
+
+## 6a. Review record
+
+**Review `5874174108`** (second co-owner, ChatGPT; 12 Nov 2026, 15:06 +03:00; on commit `aeb6108`, intermediate `8ebcfb9a…ba67`): *accept with corrections; R1 required before stage 2; no adoption or merge authorisation.* By its own statement the reviewer recomputed the two file hashes and the edit count, read the proof, the ledger rows, the availability block, this record, the edit log and the finite check's source and stored output, and ran an independent comparison of the 2-core with the recurrent core on all 1,099 labelled simple graphs with at most 5 vertices (0 mismatches); it did not execute the builder, the full finite check or the compaction checker. Accepted: the proof and `[THM]` at the stated domain; `[HEUR]` for the mechanism link; D1, D2 in stage 1, D4; the §2 closure pointers; the §9 separation of recovered and missing files and the open `G_birth(w)` discrepancy.
+
+| # | Finding | Disposition |
+|---|---|---|
+| R1 | SG-AZ-7 (worked example) and §4.3.5 assert that the `4\|q` rule would appear for any antipodal-band graph on any $\mathbb{Z}_N$ and call this proven. It follows neither from §4.3.2 nor from Chain 2, and is false as stated (full antipodal graph at $k=0$: a perfect matching, empty 2-core). An overstatement inherited from v0.7 | Accepted. Edits R1-SG7 and R1-AZ2; `[COR]` record in Appendix B; the old wording added to the builder's stale-string list. The other places that state the conclusion (§0.2, §1.1, §4.2, §4.3.3, §5, §6) carry no universal quantifier and are unchanged; Chain 2 itself is a protected region |
+| R2a | `AZ-ART-AZV5-REGISTRY` lists `phase2_harness` in the set covered by the registry, while the received registry has ten files and no harness | Accepted. The entry now describes the received ten-file AZ-1A/AZ-1B registry; the harness is stated separately as not covered and source-reported; noted in the §9 `[COR]` record |
+| R2b | `AZ-ART-CORE-EQUIV-CHECK` says three negative controls; the stored output has four lines | Accepted: "four negative-control checks of three kinds", named |
+
+Delta for the readback: `git diff aeb6108 HEAD -- dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` — five hunks (SG-AZ-7; §4.3.5; two in §9; Appendix B).
 
 ## 7. Left for stage 2 and for the release
 
