@@ -1,0 +1,15 @@
+{
+ "birth_free_ticks": 201813,
+ "birth_ticks": 21838,
+ "births": 33121,
+ "p2_phase_checks": 743740,
+ "star_shapes": {
+  "multistar": 154661,
+  "star pure K_1,3": 4648,
+  "star pure K_1,>=4": 9045,
+  "star with extra nodes, contains a cycle": 1829,
+  "star with extra nodes, tree": 1944
+ },
+ "ticks": 223651,
+ "violations": {}
+}
