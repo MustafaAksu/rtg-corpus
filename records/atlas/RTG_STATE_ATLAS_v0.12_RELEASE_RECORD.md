@@ -1,6 +1,6 @@
-# RTG State Atlas v0.12 — acceptance record (draft)
+# RTG State Atlas v0.12 — acceptance record
 
-**Status:** CANDIDATE, 12 November 2026. Not accepted. Open before acceptance: the change-focused receiving review (§3). `atlas-v0.11` stays the governing tagged Atlas until the PI accepts, the PR is merged and the tag `atlas-v0.12` exists and is verified.
+**Status:** PI ACCEPTED, 12 November 2026. The merge of PR #229 and the annotated tag `atlas-v0.12` are pending (§5). `atlas-v0.11` stays the tagged Atlas until both exist and are verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, on branch `claude/atlas-v0.12`. Under CONVENTIONS §4 this record comes before the merge and the tag.
 
@@ -85,18 +85,20 @@ Full old and new text of every operation: `edit_log.json`. Disposition of sixtee
 
 ## 4. Decision
 
-**Receiving review:** requested from ChatGPT, Atlas co-owner; the reviewer's impact map (PR #225, `records/atlas/ATLAS_V0_12_CHATGPT_SOURCE_IMPACT_PREPARATION_20261111.md`) was read before the build and its §5 criteria are the ones answered above. Open.
+**Receiving review.** ChatGPT, Atlas co-owner. Its impact map (`records/atlas/ATLAS_V0_12_CHATGPT_SOURCE_IMPACT_PREPARATION_20261111.md` on the branch `chatgpt/atlas-v0.12-impact-preparation` at `94e4eb9`, PR #225; the reviewer advises not merging it, so the path may not exist on `main`) was read before the build and its §5 criteria are the ones answered above. **Final review: PR #229 review 5869585886 on head `24f231be8467162c70b5d1f69446a1068b555004`: ACCEPT SCOPED, no blocking finding.** Recomputed independently by the reviewer: both file hashes, size and line count; the 39 operations replayed in order from the v0.11 bytes (78/78 old and new hashes, each old text found once) give the candidate byte for byte, with no undeclared change; retired keys 142 → 152 with no key lost; the five retired keys absent from the live text; one L2 node for each new Dyadic scientific RID; in the manifest only AZ and DYAD moved. The five points of §3 are each accepted. The reviewer recomputed the ceilings of the new theorem (491991/25000 = 19.67964 → 19.680; 5363269/843750 = 6.356466963… → 6.357) and compared the `RECOG-THM-R9-SHARPENED-ROWS` entry at `recog-v0.3.26` and `recog-v0.3.27`: byte-identical. Not rerun by the reviewer: `atlas_check.py` and the 18 negative controls (producer evidence); owner certificates.
 
-**PI acceptance:** not yet given. Recorded here verbatim when given, with the object hash it refers to.
+**PI acceptance: ACCEPTED** in the project conversation, 12 November 2026, 09:51 +03:00, in the message that relayed the final review. Verbatim: "Atlas v0.12 yi benimsiyorum." ("I adopt Atlas v0.12.") The object is the candidate of §1, `cf9d8647b4c33206537e46ca37c7879d4fc33b1a936e0a50330a469f054def55`, the one the review names by hash.
 
-## 5. Publication (after acceptance; the PI executes)
+Acceptance adopts a NONCANONICAL derived map, not owner science. It changes no owner DSN, grade, source tag, Method edition, consumer adoption or pipe state.
 
-1. `BASELINE.md`: the owner sets the ATLAS row to v0.12 with the hash of §1 and this record, on the branch before the merge.
+## 5. Publication (pending; the PI executes)
+
+1. `BASELINE.md`: ATLAS row set to v0.12 with the hash of §1 and this record (done on the branch with this record).
 2. Merge the PR into `main` with a merge commit, not squash.
 3. Annotated tag `atlas-v0.12` on that merge commit, after checking the file hash on `main`.
 4. The Atlas owner closes the two dispositioned `pipes/ATLAS/` items and writes the tag verification.
 
-A merge, a tag or a passing check is not an adoption.
+**Publication bytes** equal the accepted bytes: the Atlas carries no status line that publication would change. A merge, a tag or a passing check is not an adoption.
 
 ## 6. Carried forward
 

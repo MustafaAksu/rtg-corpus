@@ -30,7 +30,7 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 **Evidence:** v0.12: 39 logged operations; AZ.A1, A2, A3, A7 and DYAD.X11 retired; DYAD.X4 narrowed; one new node `DYAD-THM-OPEN21-SHARP-ROWS`; shared check 0 FAIL (coverage 137, links 507/5/10, keys 152); 18 focused negative controls detected. A slip found and recorded: the v0.11 check used the tool's default retired-key list (31) instead of the cumulative one (142); rerun on the v0.11 bytes with the right list: 0 FAIL.
 **Resume:** `python3 -I evidence/atlas/build/refresh_v0_12.py` (rebuilds and checks; stops on any failed assertion). A refresh follows the builder of the previous refresh (`refresh_v0_10.py`), not the compaction tools; pass the checker the edition's manifest, coverage map and cumulative retired-key list, never its defaults.
 **Next 1–3 actions / acceptance:**
-1. Receiving review of v0.12 (five points in the record §3); then PI acceptance, BASELINE row, one CLI block, tag verification, closing the two inbox items.
+1. v0.12 is reviewed (5869585886) and PI-accepted; publication is with the PI. After the tag: tag-verification record, the two `pipes/ATLAS/` items closed, BASELINE tag cell, in one maintenance PR.
 2. Method v0.3 delta, separately reviewed (size aim subordinate to completeness and structure; K1/K2 at refreshes; satellite repositories out of scope).
 3. Deferred debts: seven other multi-line identifiers; a comparator mode for heading renames; a built-in AZ profile for `tools/orient.py`.
 **Reopen trigger:** any owner tag after `fa3db80` (impact refresh); any open item in `pipes/ATLAS/`.
@@ -48,7 +48,7 @@ Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspec
 - Nothing is waiting on the PI for the Atlas. v0.11 is accepted, merged and tagged (10 Nov; CLI block issued in the project conversation at 15:27 +03:00, output returned 15:29).
 - 10 Nov 17:23: advisory dispositions decided (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md` §4); rows 1 and 3 since resolved by `az-v0.7`.
 - 11 Nov 18:15: the PI accepted all six recommendations of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` (§5); they are AZ's to carry out.
-- **Coming to the PI:** acceptance of Atlas v0.12 (`cf9d8647…ef55`) after the receiving review; then one CLI block (merge, tag `atlas-v0.12`). Nothing to run now.
+- **Accepted by the PI, 12 Nov 09:51 +03:00:** Atlas v0.12, `cf9d8647…ef55` (final review 5869585886). **Issued to the PI the same hour:** one CLI block — merge PR #229 (merge commit), check the file hash on `main`, create and push the annotated tag `atlas-v0.12`. Source: project conversation. After the output: tag verification and closing of the two inbox items.
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
 
