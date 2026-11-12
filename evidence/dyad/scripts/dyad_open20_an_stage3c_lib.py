@@ -813,6 +813,9 @@ def _piece_check(SER, MC, TB, xc, r, sigma, kappa, rho_max, inverse):
         if iv is None:
             return 'fail', dict(why='local inverse not found')
         q = iv['q']; info['r_over_rp'] = iv['r'] / r
+        xis = TB.K.c * q['x']; ag = xis.arg() / arb.pi()         # the source disc B (as its square), for the proof record
+        info['src'] = (float(abs(xis).upper()), float(ag.lower()), float(ag.upper()),
+                       float((R_hi - _up(q['E'])).lower()), iv['rho'])
         if not arb(iv['rho']) < rho_max:
             return 'fail', dict(why='preimage fibre radius above rho_max')
     dre = arb((q['dtau0'].real - q['dtau_dev']).lower())
@@ -893,7 +896,7 @@ def build_engine(N=40, D=360, X=1.10, narc=16000, rem=((0.90, 8000), (1.03, 3200
 #   | mu0 (1+g)^-alpha - 1 | <= lam |x|^3,
 #   lam = |h0| + X sup|H1| + |beta| gm sup|M3| + (1 + t sup|M3|) rho2/t + 2 X^42 sup|ET44| sup|Q4| (1 - gm)^-|3+alpha|,
 #   gm = t sup|G0|,  rho2 = (1 - gm)^-|beta| - 1 - |beta| gm   (majorant of the binomial remainder).
-def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02):
+def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02, extra=False):
     """Zone I for the side TB.j.  Returns a dict of margins (arb lower bounds as floats; each must be > 0) and data.
       guard_low, guard_high   on the two guard arcs of the chart sector, a wedge condition fails for all 0 < |xi| <= xi0
       A1_first, A1_second     Re dtau > 0;  Re(e^{+-i theta0} dtau) - sigma >= 0   (on the disc, all |d| <= 2 Rmax)
@@ -965,6 +968,9 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02):
         kk = 1 + 2 * t * Gb
         Gd = up(SER['G0'].enclose_derivative(acb(0), Xf))
         Lc = 4 * t * Gb + X * t * Gd
+        if extra:                       # for the proof record: relative radius of the lemma disc, sup |E|/R(x') on it
+            out.update(src_rel_radius=float((2 * t * Gb).upper()), E_over_R=float((kk ** 42 * t * e_over).upper()),
+                       L_disc=float(Lc.upper()))
         out.update(inv_disc=float((X - Xt * kk).lower()),
                    inv_i=float((2 * P_lo * (1 - t * lam) - 1 - kk ** 42 * t * e_over - 4 * C2b * t * Rmax - 8 * q['M3c'] * t * Rmax ** 2).lower()),
                    inv_ii=float((2 * Gb * (1 - Lc) - Gb - kk ** 4 * bm).lower()))
@@ -1090,3 +1096,213 @@ def arc_tail(K, TAU, xi_M, eps=0.03, cores=None, branch=0):
             ok = ok and bool(up(K.c) * XB <= rad and axi / arb.pi() >= clo and axi / arb.pi() <= chi)
         out['in_cores'] = ok
     return out
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Work package W6: the two legs at xi* (design section 5, steps 3 and 4) and the two-disc test (step 5).
+#
+# What is enclosed.  d0* = delta_0(xi*) and d1* = delta_1(xi*): the deviations at xi* of the two sectorial curves from
+# phi_N, in the one coordinate d.  By the tube lemma, the orbit p_k = F^k(xi*, d0*) = (x_k, d_k) stays in the tube over
+# D0:  |d_k| <= R0(x_k) for every k;  likewise p_k = G^k(xi*, d1*) stays in the tube over D1.
+# Method (forward-backward enclosure of the one true orbit).  Discs X_k = (centre, radius) and D_k with x_k in X_k,
+# d_k in D_k are kept for k = 0..n.  X_0 = {x*}.  Every update replaces a disc by another disc that contains the true
+# value, using one of the exact relations of the lifted map at consecutive orbit points (a, b) with F(a) = b:
+#     x_b = b0(x_a) + x_a^4 Q4(x_a) d_a + x_a^4 P4(x_a) d_a^2 + rZ,     b0(x) = x (1 + g(x)),   |rZ| <= MZ3 |x_a|^4 |d_a|^3
+#     d_b = E(x_a) + mu0(x_a) d_a + c2(x_a) d_a^2 + r,                  |r|  <= M3 |x_a|^3 |d_a|^3
+# and the a-priori bound |d_k| <= sup R_j over X_k.  The relations are used in centred form: the value at the centres,
+# plus modulus bounds of the variation over the discs (no interval product is carried from step to step, so nothing
+# is wrapped).  With var f = sup_X |f(x) - f(xc)|, ds = sup |d|, rx, rd the radii:
+#   base forwards   |x_b - b(xc, dc)| <= sup_X|b0'| rx + var(x^4 Q4) ds + |xc^4 Q4c| rd + var(x^4 P4) ds^2
+#                                        + |xc^4 P4c| rd (2|dc| + rd) + 2 MZ3 |x|^4 ds^3
+#   d forwards      |d_b - Phi(xc, dc)| <= var E + var(mu0) ds + |mu0c| rd + var(c2) ds^2 + |c2c| rd (2|dc| + rd) + M3 |x|^3 ds^3
+#   d backwards     d_a = (d_b - E - c2 d_a^2 - r)/mu0;  with cen = (dbc - Ec - c2c dc^2)/mu0c:
+#                   |d_a - cen| <= (rb + var E + var(c2) ds^2 + |c2c| rd (2|dc| + rd) + M3 |x|^3 ds^3 + |cen| var(mu0)) / inf_X|mu0|
+#   base backwards  from b0(x_a) = x_b - (x_a^4 Q4 d_a + ...):  with u = xc - (b(xc, dc) - xbc)/b0'(xc):
+#                   |x_a - u| <= (rb + [the variation terms of 'base forwards' without the first] + var(b0') rx) / |b0'(xc)|
+# No update needs a contraction condition to be valid; the conditions only decide whether the discs shrink.
+#   leg F:  a = p_k, b = p_k+1.  Sweep out: X_k+1 (base forwards), D_k+1 a priori.  Sweep back: D_k (d backwards).
+#   leg G:  a = p_k+1, b = p_k.  Sweep in: X_k+1 by the local inverse lemma (first round), then base backwards;
+#           D_k+1 a priori and d backwards.  Sweep back: D_k (d forwards).
+# The sweeps are repeated; D_0 shrinks until the a-priori bound at the far end, divided by the product of the normal
+# multipliers, is reached.  This replaces the nested discs with interval Jacobians of the design (section 5, step 3)
+# by another use of the same facts; the moving base point is carried by the discs X_k.
+def _disc0(v):
+    v = arb(arb(v).upper())
+    return acb(arb(0, v), arb(0, v))
+
+
+def _mid(v):
+    return acb(v.real.mid(), v.imag.mid())
+
+
+def _radc(v):
+    """Modulus bound of the deviation of the ball v from its midpoint."""
+    return arb((arb(v.real.rad()) ** 2 + arb(v.imag.rad()) ** 2).sqrt().upper())
+
+
+def _tighter(a, b):
+    return a if float(a[1]) <= float(b[1]) else b
+
+
+def R_upper(TB, x):
+    """Upper bound of the tube radius on the ball x, for points of D_j (first >= 1, second >= c_j)."""
+    first, second = TB.functionals(x)
+    f_lo = arb(1).max(arb(first.lower())); s_lo = arb(TB.cw.upper()).max(arb(second.lower()))
+    return arb((TB.eps * arb(TB.xi_alpha(x).upper()) * f_lo ** (-TB.q3) * s_lo ** (-TB.q3)).upper())
+
+
+class MapEngine:
+    """The lifted map of F through the series engine."""
+    def __init__(self, SER, TAU, MC):
+        self.SER, self.TAU, self.MC = SER, TAU, MC
+
+    def enc(self, xc, r, rho):
+        return tube_step(self.SER, self.TAU, self.MC, xc, r, rho)
+
+    def b0p(self, xc, r):
+        """b0'(x) = 1 + 4 x^3 G0 + x^4 G0' on the square of half-side r around xc."""
+        x = xc + _disc0(r); x3 = x * x * x
+        return 1 + 4 * x3 * self.SER['G0'].enclose(xc, r) + x3 * x * self.SER['G0'].enclose_derivative(xc, r)
+
+    def inv0(self, xc, r, Rp):
+        """Centre, radius and fibre radius of a disc that contains the preimage of every (x', d') with |x' - xc| <= r,
+        |d'| <= Rp (local inverse lemma)."""
+        iv = inverse_step(self.SER, self.TAU, self.MC, xc, r, Rp)
+        if iv is None:
+            raise ArithmeticError('local inverse not found')
+        return iv['c'], iv['r'], iv['rho']
+
+
+class ModelEngine:
+    """Zero-jump model (design P11): the time-one map of the vector field  x' = -x^4,  d' = -alpha x^3 (d - dref) + ...,
+    written in the lifted form.  Base: x -> x (1 + 3 x^3)^(-1/3) (so tau = 1/(3 x^3) increases by 1).  Fibre:
+    d -> (x'/x)^alpha (d - dref(x)) + dref(x'),  dref(x) = eta x^14.  The curve d = dref(x) is invariant and analytic at
+    0, so both sectorial curves equal it: the jump is exactly 0, and d0* = d1* = dref(x*)."""
+    def __init__(self, alpha, eta=2):
+        self.alpha, self.eta = alpha, eta
+
+    def dref(self, x):
+        return self.eta * x ** 14
+
+    def enc(self, xc, r, rho):
+        x = xc + _disc0(r); x3 = x * x * x
+        ls = (1 + 3 * x3).log()
+        og = (-ls / 3).exp(); g = og - 1
+        mu0 = (-self.alpha * ls / 3).exp()
+        E = self.dref(x * og) - mu0 * self.dref(x)
+        z = acb(0)
+        return dict(x=x, g=g, G0=g / x3, Q4=z, P4=z, mu0=mu0, E=E, c2=z, dxdd=z, d2xdd2=z, M3c=arb(0), MZ3=arb(0),
+                    absx=arb(abs(x).upper()))
+
+    def b0p(self, xc, r):
+        x = xc + _disc0(r)
+        return (-4 * (1 + 3 * x * x * x).log() / 3).exp()
+
+    def inv0(self, xc, r, Rp):
+        xp = xc + _disc0(r)
+        x = xp * (-(1 - 3 * xp * xp * xp).log() / 3).exp()
+        c = _mid(x); rr = float(_radc(x).upper()) * (1 + 1e-9) + 1e-300
+        q = self.enc(c, rr, 0)
+        return c, rr, float(((arb(Rp) + _up(q['E'])) / arb(abs(q['mu0']).lower())).upper()) * (1 + 1e-9)
+
+
+def _leg_data(eng, X, D):
+    xc, rx = X; dc, rd = D
+    ds = arb((_up(dc) + rd).upper())
+    q = eng.enc(xc, float(rx.upper()) * (1 + 1e-12), float(ds.upper()))
+    qc = eng.enc(xc, 0.0, float(ds.upper()))
+    return q, qc
+
+
+def _ds(D):
+    return arb((_up(D[0]) + D[1]).upper())
+
+
+def _var_base(q, qc, D):
+    dc, rd = D; ds = _ds(D)
+    return (_up(q['dxdd'] - qc['dxdd']) * ds + _up(qc['dxdd']) * rd + _up(q['d2xdd2'] - qc['d2xdd2']) * ds ** 2
+            + _up(qc['d2xdd2']) * rd * (2 * _up(dc) + rd) + 2 * q['MZ3'] * q['absx'] ** 4 * ds ** 3)
+
+
+def _base_centre(qc, D):
+    dc = D[0]
+    return qc['x'] * (1 + qc['g']) + qc['dxdd'] * dc + qc['d2xdd2'] * dc * dc
+
+
+def _base_fwd(eng, X, D, q, qc):
+    img = _base_centre(qc, D)
+    rn = _up(eng.b0p(X[0], float(X[1].upper()) * (1 + 1e-12))) * X[1] + _var_base(q, qc, D) + _radc(img)
+    return (_mid(img), arb(rn.upper()))
+
+
+def _base_back(eng, Xa, Da, Xb, q, qc):
+    xa, ra = Xa
+    b0c = eng.b0p(xa, 0.0); b0X = eng.b0p(xa, float(ra.upper()) * (1 + 1e-12))
+    u = xa - (_base_centre(qc, Da) - Xb[0]) / b0c
+    rad = (Xb[1] + _var_base(q, qc, Da) + _up(b0X - b0c) * ra) / arb(abs(b0c).lower()) + _radc(u)
+    return (_mid(u), arb(rad.upper()))
+
+
+def _d_fwd(q, qc, D):
+    dc, rd = D; ds = _ds(D)
+    cen = qc['E'] + qc['mu0'] * dc + qc['c2'] * dc * dc
+    rad = (_up(q['E'] - qc['E']) + _up(q['mu0'] - qc['mu0']) * ds + _up(qc['mu0']) * rd + _up(q['c2'] - qc['c2']) * ds ** 2
+           + _up(qc['c2']) * rd * (2 * _up(dc) + rd) + q['M3c'] * q['absx'] ** 3 * ds ** 3 + _radc(cen))
+    return (_mid(cen), arb(rad.upper()))
+
+
+def _d_back(q, qc, D, Dn):
+    dc, rd = D; ds = _ds(D)
+    cen = (Dn[0] - qc['E'] - qc['c2'] * dc * dc) / qc['mu0']
+    rad = (Dn[1] + _up(q['E'] - qc['E']) + _up(q['c2'] - qc['c2']) * ds ** 2 + _up(qc['c2']) * rd * (2 * _up(dc) + rd)
+           + q['M3c'] * q['absx'] ** 3 * ds ** 3 + _up(cen) * _up(q['mu0'] - qc['mu0'])) / arb(abs(q['mu0']).lower()) + _radc(cen)
+    return (_mid(cen), arb(rad.upper()))
+
+
+def _apriori(TB, X):
+    return (acb(0), R_upper(TB, X[0] + _disc0(X[1])))
+
+
+def leg_F(eng, TB, xs, n, rounds):
+    """Enclosure of d0* (leg F).  xs: the ball of x*.  Returns (D_0 = (centre, radius), history of the radius, X, D)."""
+    X = [(_mid(xs), _radc(xs))] + [None] * n
+    D = [_apriori(TB, X[0])] + [None] * n; Q = [None] * n
+    hist = []
+    for _ in range(rounds):
+        for k in range(n):
+            Q[k] = _leg_data(eng, X[k], D[k])
+            Xn = _base_fwd(eng, X[k], D[k], *Q[k])
+            X[k + 1] = Xn if X[k + 1] is None else _tighter(Xn, X[k + 1])
+            Dap = _apriori(TB, X[k + 1])
+            D[k + 1] = Dap if D[k + 1] is None else _tighter(D[k + 1], Dap)
+        for k in range(n - 1, -1, -1):
+            D[k] = _tighter(D[k], _d_back(Q[k][0], Q[k][1], D[k], D[k + 1]))
+        hist.append(float(D[0][1]))
+    return D[0], hist, X, D
+
+
+def leg_G(eng, TB, xs, n, rounds, inner=1, full_fibre=False):
+    """Enclosure of d1* (leg G).  Returns (D_0 = (centre, radius), history of the radius, X, D).
+    full_fibre=True: in the first round the local inverse lemma is called for the whole a-priori fibre over X_k, not
+    only for the current disc D_k.  The proof record (inverse branch, leg) needs this form: the target set then
+    contains the point of the reference curve at which the local inverse is identified with the branch G.  The
+    default keeps the behaviour of the W6 development run."""
+    X = [(_mid(xs), _radc(xs))] + [None] * n
+    D = [_apriori(TB, X[0])] + [None] * n; Q = [None] * (n + 1)
+    hist = []
+    for _ in range(rounds):
+        for k in range(n):
+            if X[k + 1] is None:
+                Rp = _ds(D[k]).max(_apriori(TB, X[k])[1]) if full_fibre else _ds(D[k])
+                c, r, rho = eng.inv0(X[k][0], float(X[k][1].upper()) * (1 + 1e-12), float(Rp.upper()))
+                X[k + 1] = (c, arb(r)); D[k + 1] = _tighter((acb(0), arb(rho)), _apriori(TB, X[k + 1]))
+            for _ in range(inner):
+                q, qc = _leg_data(eng, X[k + 1], D[k + 1])
+                D[k + 1] = _tighter(D[k + 1], _d_back(q, qc, D[k + 1], D[k]))
+                X[k + 1] = _tighter(X[k + 1], _base_back(eng, X[k + 1], D[k + 1], X[k], q, qc))
+                D[k + 1] = _tighter(D[k + 1], _apriori(TB, X[k + 1]))
+            Q[k + 1] = (q, qc)
+        for k in range(n - 1, -1, -1):
+            D[k] = _tighter(D[k], _d_fwd(Q[k + 1][0], Q[k + 1][1], D[k + 1]))
+        hist.append(float(D[0][1]))
+    return D[0], hist, X, D

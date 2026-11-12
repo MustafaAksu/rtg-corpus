@@ -1,0 +1,89 @@
+{
+ "all_pass": false,
+ "control": "ZEROJUMP",
+ "gates": {
+  "ENG_engine": true,
+  "G0_stage2_input": true,
+  "LEGF_leg_F": true,
+  "LEGG_leg_G": true,
+  "SEP_two_disc_test": false,
+  "SND_independent_values": true
+ },
+ "info": {
+  "ENG": "zero-jump model: explicit formulas, no series engine",
+  "LEGF_leg_F": {
+   "centre": [
+    "2.68435455999948592430104722336e-6",
+    "4.64943848342457979271910922384e-6"
+   ],
+   "contains_the_known_value": true,
+   "end_of_orbit": {
+    "a_priori_radius": 3.982e-12,
+    "abs_xi": 0.099929,
+    "arg_over_pi": 0.001654,
+    "relative_radius_of_X": 5.71e-46
+   },
+   "every_disc_in_the_core": true,
+   "known_value": [
+    "2.68435456000000000000000000000e-6",
+    "4.64943848344919827696085907198e-6"
+   ],
+   "model_curve_over_tube_radius_max": 0.1675,
+   "radius": 4.95096e-15,
+   "radius_after_each_round": [
+    4.951e-15,
+    4.951e-15,
+    4.951e-15,
+    4.951e-15,
+    4.951e-15
+   ],
+   "rounds": 5,
+   "steps": 334
+  },
+  "LEGG_leg_G": {
+   "centre": [
+    "2.68435456000507951697963035855e-6",
+    "4.64943848344728631385941138370e-6"
+   ],
+   "contains_the_known_value": true,
+   "end_of_orbit": {
+    "a_priori_radius": 1.806e-11,
+    "abs_xi": 0.099929,
+    "arg_over_pi": 0.3317,
+    "relative_radius_of_X": 9.14e-46
+   },
+   "every_disc_in_the_core": true,
+   "known_value": [
+    "2.68435456000000000000000000000e-6",
+    "4.64943848344919827696085907198e-6"
+   ],
+   "model_curve_over_tube_radius_max": 0.07669,
+   "radius": 4.95096e-15,
+   "radius_after_each_round": [
+    4.951e-15,
+    4.951e-15,
+    4.951e-15,
+    4.951e-15,
+    4.951e-15
+   ],
+   "rounds": 5,
+   "steps": 334
+  },
+  "SEP": {
+   "abs_c1_minus_c0": [
+    2.338534544e-17,
+    2.338534544e-17
+   ],
+   "c1_minus_c0": [
+    "5.5935926785831351816e-18",
+    "2.2706521140302159866e-17"
+   ],
+   "gap": -9.87853e-15,
+   "note": "development output; no statement about the jump is drawn from it",
+   "r0_plus_r1": 9.90191e-15
+  },
+  "SND": "not applicable: the model value is known in closed form"
+ },
+ "script": "dyad_open20_an_stage3c_w6_legs.py",
+ "status": "stage 3c-a development run; not a certificate; no statement about the jump is drawn"
+}
