@@ -1,3 +1,4 @@
+base: git show 873b277a8c62b9a8536207e68fe153257fdb9454:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md  sha256 19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426
 OK    P0 unmutated map                                               exit 0 (want 0)  RESULT: PASS
 OK    N1 undeclared word in the live text                            exit 1 (want 1)  FAIL  mechanical scope (re-derivation)  — first difference at line 120: derived 'not met.** The first observable tested (the Core(G_T) `4|q` angular r
 OK    N2 status summary with a sentence not in the base              exit 1 (want 1)  FAIL  operation S2-H (presentation)  — status summary adds text not in the base summary (header): ['The angular rule is a dynamical signal. **No Level

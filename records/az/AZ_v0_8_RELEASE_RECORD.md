@@ -11,13 +11,14 @@
 | base | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` at tag `az-v0.7` | `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` | 83,281 |
 | 1 — as first submitted (commit `aeb6108`, reviewed in `5874174108`) | same path | `8ebcfb9a6c4065278ff6120b28237d7d6752d05a6c48655a42542478528eba67` | 92,719 |
 | **1 — corrected intermediate after review** (this branch) | same path | `19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426` | 94,673 |
-| **2 — compacted candidate (DRAFT)** | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` on the stage-2 branch; base stored as `evidence/az/v0.8/stage1_intermediate.md` | `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d` | 88,992 |
+| **2 — compacted candidate (DRAFT)** | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` on the edition branch; its base is the stage-1 file at commit `873b277a8c62b9a8536207e68fe153257fdb9454` | `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d` | 88,992 |
 
 ```bash
 python3 -I evidence/az/v0.8/stage1/build_az_v0_8_stage1.py --out /tmp/inter.md --log /tmp/edit_log.txt
-sha256sum /tmp/inter.md evidence/az/v0.8/stage1_intermediate.md           # equal
+git show 873b277a8c62b9a8536207e68fe153257fdb9454:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md | sha256sum    # 19a1faf0…0426
+sha256sum /tmp/inter.md                                                  # the same
 diff /tmp/edit_log.txt evidence/az/v0.8/stage1/edit_log.txt               # empty
-git diff --no-index <(git show az-v0.7:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md) evidence/az/v0.8/stage1_intermediate.md   # the stage-1 delta
+git diff az-v0.7 873b277a8c62b9a8536207e68fe153257fdb9454 -- dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md    # the stage-1 delta
 ```
 
 The builder reads the base from the tag, asserts its hash, and applies 51 edits, each located by an anchor that must occur exactly once (`evidence/az/v0.8/stage1/edit_log.txt`; new text in `evidence/az/v0.8/stage1/blocks/`). It stops on a missing or repeated anchor, on a lost identifier, on a stale string, and when a protected region differs from the base.
@@ -91,11 +92,12 @@ Delta for the readback: `git diff aeb6108 HEAD -- dsn/RTG_ARITHMETIC_RESONANCE_A
 
 ## 6b. Stage 2 — compacted candidate
 
-**Base:** the intermediate accepted in the readback review `5874483729` (second co-owner, 12 Nov 2026, on commit `873b277`: *accepted (scoped), R1 and R2 closed*; changed lines read, the full finite check not rerun) — `19a1faf0…0426`, stored byte-exact as `evidence/az/v0.8/stage1_intermediate.md`. **Candidate:** `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d`, 88,992 bytes. Built by `evidence/az/v0.8/stage2/build_az_v0_8_stage2.py`; movement map `evidence/az/v0.8/stage2/movement_map.json`.
+**Base:** the intermediate accepted in the readback review `5874483729` (second co-owner, 12 Nov 2026, on commit `873b277`: *accepted (scoped), R1 and R2 closed*; changed lines read, the full finite check not rerun) — `19a1faf0…0426`. It is not kept as a second file: the builder, the map and the negative controls read it from the reviewed commit, `873b277a8c62b9a8536207e68fe153257fdb9454:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` (blob `81c371b2…`), and assert its hash. **Candidate:** `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d`, 88,992 bytes. Built by `evidence/az/v0.8/stage2/build_az_v0_8_stage2.py`; movement map `evidence/az/v0.8/stage2/movement_map.json`.
 
 ```bash
-python3 -I evidence/az/v0.8/stage2/build_az_v0_8_stage2.py
-python3 tools/check_compaction.py evidence/az/v0.8/stage1_intermediate.md dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md evidence/az/v0.8/stage2/movement_map.json
+T=$(mktemp -d)
+python3 -I evidence/az/v0.8/stage2/build_az_v0_8_stage2.py --emit-base "$T/stage1_intermediate.md"
+python3 tools/check_compaction.py "$T/stage1_intermediate.md" dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md evidence/az/v0.8/stage2/movement_map.json
 python3 -I evidence/az/v0.8/stage2/stage2_negative_controls.py
 ```
 
@@ -115,6 +117,13 @@ python3 -I evidence/az/v0.8/stage2/stage2_negative_controls.py
 **Left as it is — §10.** The plan foresaw reducing the dated list of §10 to one provenance paragraph. Its entries carry claim tags and math, and the checker does not let a history operation remove such a span without a registered, reviewer-confirmed region; a region of this kind may carry `[DEF]` only. §10 is therefore byte-identical to v0.7: it keeps its dated list and has no v0.8 line. The v0.8 provenance is in Appendix A, in the header and in this record. Bringing §10 to the "current only" form is left to a later edition as a stage-1 item.
 
 **Size.** 83,281 (v0.7) → 94,673 (stage 1) → 88,992 bytes (candidate): +6.9 % against v0.7. The context core (header and §0–§3) is 37.1 k characters against 46.4 k in v0.7.
+
+**Review record, stage 2.** Review `5875164532` (second co-owner, 12 Nov 2026, 16:22 +03:00, on commit `0238670`): *scientific and mechanical content accepted (scoped); one repository-custody correction required before publication.* By its own statement the reviewer recomputed the hashes of the intermediate, the candidate and the map, and re-applied the six operations with its own implementation (output byte-identical to the candidate); it did not run `tools/check_compaction.py` or the negative controls, whose results are source-reported to it. Accepted: the header, the three Appendix A entries, and §10 left as it is (no v0.8 line to be inserted).
+
+| # | Finding | Disposition |
+|---|---|---|
+| R1 (custody) | `evidence/az/v0.8/stage1_intermediate.md` was a second full copy of a DSN state (Methodology §13.7, `CONVENTIONS.md`); the same bytes are in commit `873b277a` | Accepted. The file is removed. Builder, map and negative controls read the base from the reviewed commit and assert `19a1faf0…0426`; the checker gets it as a temporary file (`--emit-base`). Checker and negative controls rerun: PASS, 8 of 8; **candidate unchanged, `f15ee1d7…a50d`**. Identities after the change: map `013d2e8810e87840baab15050c08d3d075e4dd17adfb4b3001915a8d27cb7b4a`; builder `565a381f…d402`; negative-control script `9d1b4d5d…83a6` |
+| E1 (non-blocking) | The PR description carried the first stage-1 identity (49 edits, `8ebcfb9a…`) | Done: description rewritten for the candidate |
 
 ## 7. Left for the release
 

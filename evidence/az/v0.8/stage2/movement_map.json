@@ -2,13 +2,13 @@
  "study": "AZ",
  "target": "v0.8",
  "stage": 2,
- "base": "evidence/az/v0.8/stage1_intermediate.md",
+ "base": "873b277a8c62b9a8536207e68fe153257fdb9454:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md",
  "base_sha256": "19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426",
  "candidate_sha256": "f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d",
  "archives": [
   {
    "name": "stage1-intermediate",
-   "path": "evidence/az/v0.8/stage1_intermediate.md",
+   "git": "873b277a8c62b9a8536207e68fe153257fdb9454:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md",
    "sha256": "19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426"
   },
   {
@@ -17,7 +17,7 @@
    "sha256": "2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94"
   }
  ],
- "archives_note": "the stage-1 intermediate, committed byte-exact, holds every removed byte; the predecessor tag holds the v0.7 header, Appendix A and footer verbatim.",
+ "archives_note": "the stage-1 intermediate, read from the reviewed commit, holds every removed byte; the predecessor tag holds the v0.7 header, Appendix A and footer verbatim.",
  "profile": {
   "study": "AZ",
   "ref_words": [],

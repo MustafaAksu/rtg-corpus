@@ -5,20 +5,27 @@
 
 Each case mutates the map (and re-derives the candidate with the checker's own apply_ops) or
 the files, runs tools/check_compaction.py and requires FAIL (exit 1) with the expected check
-named. The unmutated map must PASS. Exit 0 only if every case behaves as required.
+named. The base is read from the reviewed commit named in the map (git show) into a temporary
+file and its SHA-256 is asserted against the map. The unmutated map must PASS. Exit 0 only if every case behaves as required.
 """
 import copy, hashlib, importlib.util, json, os, subprocess, sys, tempfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", ".."))
 TOOL = os.path.join(ROOT, "tools", "check_compaction.py")
-BASE = os.path.join(ROOT, "evidence/az/v0.8/stage1_intermediate.md")
 CAND = os.path.join(ROOT, "dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md")
 MAP = os.path.join(ROOT, "evidence/az/v0.8/stage2/movement_map.json")
 spec = importlib.util.spec_from_file_location("cc", TOOL); cc = importlib.util.module_from_spec(spec); spec.loader.exec_module(cc)
 sha = lambda b: hashlib.sha256(b).hexdigest()
-base = open(BASE, encoding="utf-8").read()
 cand = open(CAND, encoding="utf-8").read()
 mp0 = json.load(open(MAP, encoding="utf-8"))
+_tmp = tempfile.TemporaryDirectory()
+BASE = os.path.join(_tmp.name, "stage1_intermediate.md")
+_b = subprocess.run(["git", "-C", ROOT, "show", mp0["base"]], capture_output=True, check=True).stdout
+if sha(_b) != mp0["base_sha256"]:
+    sys.exit("base read from %s does not have the hash named in the map" % mp0["base"])
+open(BASE, "wb").write(_b)
+base = _b.decode("utf-8")
+print("base: git show %s  sha256 %s" % (mp0["base"], sha(_b)))
 
 
 def run(mp, cand_text, base_path=BASE, rederive=True):

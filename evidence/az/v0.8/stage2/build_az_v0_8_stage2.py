@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """AZ v0.8, stage 2: compacted candidate from the reviewed stage-1 intermediate.
 
-    python3 -I evidence/az/v0.8/stage2/build_az_v0_8_stage2.py
+    python3 -I evidence/az/v0.8/stage2/build_az_v0_8_stage2.py [--emit-base PATH]
 
-Reads evidence/az/v0.8/stage1_intermediate.md (asserts its SHA-256: the intermediate
-accepted in review 5874483729), applies the declared operations, writes the candidate to
-dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md and the movement map to
-evidence/az/v0.8/stage2/movement_map.json. The map is then checked by
-tools/check_compaction.py, which re-derives the candidate from the base and the map.
+The base is the stage-1 intermediate accepted in review 5874483729. It is not kept as a
+second file: it is read from the reviewed commit with
+`git show 873b277a8c62b9a8536207e68fe153257fdb9454:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md`
+and its SHA-256 is asserted. The script applies the declared operations, writes the candidate
+to dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md and the movement map to
+evidence/az/v0.8/stage2/movement_map.json. With --emit-base it also writes the base bytes to
+PATH (a temporary file), which tools/check_compaction.py needs as its first argument; the
+checker re-derives the candidate from that base and the map.
 
 Stage 2 is layout only: header, Appendix A, footer, and three reference substitutions.
 """
@@ -19,11 +22,12 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", "..", ".."))
-BASE = "evidence/az/v0.8/stage1_intermediate.md"
+BASE_COMMIT = "873b277a8c62b9a8536207e68fe153257fdb9454"
 BASE_SHA = "19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426"
 PRED_TAG = "az-v0.7"
 PRED_SHA = "2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94"
 DSN = "dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md"
+BASE = "%s:%s" % (BASE_COMMIT, DSN)
 
 
 def sha(b):
@@ -35,7 +39,7 @@ def die(m):
     sys.exit(1)
 
 
-base_b = open(os.path.join(ROOT, BASE), "rb").read()
+base_b = subprocess.run(["git", "-C", ROOT, "show", BASE], capture_output=True, check=True).stdout
 if sha(base_b) != BASE_SHA:
     die("base is not the reviewed stage-1 intermediate")
 pred_b = subprocess.run(["git", "-C", ROOT, "show", "%s:%s" % (PRED_TAG, DSN)], capture_output=True, check=True).stdout
@@ -127,9 +131,9 @@ open(os.path.join(ROOT, DSN), "wb").write(cand_b)
 mp = {
     "study": "AZ", "target": "v0.8", "stage": 2,
     "base": BASE, "base_sha256": BASE_SHA, "candidate_sha256": sha(cand_b),
-    "archives": [{"name": "stage1-intermediate", "path": BASE, "sha256": BASE_SHA},
+    "archives": [{"name": "stage1-intermediate", "git": BASE, "sha256": BASE_SHA},
                  {"name": PRED_TAG, "git": "%s:%s" % (PRED_TAG, DSN), "sha256": PRED_SHA}],
-    "archives_note": "the stage-1 intermediate, committed byte-exact, holds every removed byte; the predecessor tag holds the "
+    "archives_note": "the stage-1 intermediate, read from the reviewed commit, holds every removed byte; the predecessor tag holds the "
                      "v0.7 header, Appendix A and footer verbatim.",
     "profile": {"study": "AZ", "ref_words": [], "history_words": [],
                 "checked_tag_prefixes": ["az-", "tdrg-", "gen-", "uvm-", "programme-", "methodology-", "dzt-"],
@@ -139,5 +143,8 @@ mp = {
     "operations": ops,
 }
 json.dump(mp, open(os.path.join(HERE, "movement_map.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print("base      %s" % BASE_SHA)
+if "--emit-base" in sys.argv:
+    out = sys.argv[sys.argv.index("--emit-base") + 1]
+    open(out, "wb").write(base_b)
+print("base      %s  (git show %s)" % (BASE_SHA, BASE))
 print("candidate %s  %d bytes  (%d operations)" % (sha(cand_b), len(cand_b), len(ops)))
