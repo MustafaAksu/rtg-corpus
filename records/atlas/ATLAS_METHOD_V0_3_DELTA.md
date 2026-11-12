@@ -1,7 +1,7 @@
 # Atlas Method v0.3 — delta against v0.2 (proposal)
 
 **Date:** 12 November 2026. **By:** Claude, Atlas owner. **Status:** [SESSION] proposal for review. Not accepted. Method v0.2 (`fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04`, identified by `atlas-v0.2`) governs until the PI accepts v0.3.
-**Candidate:** `atlas/RTG_STATE_ATLAS_METHOD.md` on branch `claude/atlas-method-v0.3`, SHA-256 `903627a64f8ae94ef63f0449460b427a5e17241cdd30a0c21e27c9b9afaedcff` (16,369 bytes; v0.2: 12,985). Twelve anchored replacements; everything else is byte-identical.
+**Candidate:** `atlas/RTG_STATE_ATLAS_METHOD.md` on branch `claude/atlas-method-v0.3`, SHA-256 `a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f` (16,239 bytes; v0.2: 12,985); the first candidate, `903627a6…dcff`, is superseded by the §4.6 wording of §6 below. Twelve anchored replacements; everything else is byte-identical.
 **Effect on the adopted Atlas:** none. Atlas v0.12 was built under v0.2 and already follows every rule below; no atlas byte changes with this delta.
 
 ## 1. Why now
@@ -18,7 +18,7 @@ Three editions in three days (v0.10 → v0.12) and two PI decisions settled prac
 | 4 | §3 Frozen snapshot | manifest path corrected to `evidence/atlas/v<version>/source_manifest.json` | the path used since v0.3 of the atlas |
 | 5 | §4.1 | an owner-edition label that only dates a result is chronology and is not carried; an edition that is identity or scope (source table, consumer pin, two editions stating different things) is | class K1, accepted in PR #204 review 5841129271 |
 | 6 | §4.4 | the form of a typed cross-reference line for a consumer domain; it adds nothing the node lacks except text found nowhere else, kept verbatim and marked as an atlas reading | v0.11 stage 1, reviews 5839419629 and 5840025491 |
-| 7 | §4.6 | size: completeness and the L0–L5 / D1–D6 structure govern; no split, no pointer-for-fact; the 60–90k token figure is no longer a target; size is reported and looked at again when the sources consolidate | PI decisions of 10 Nov 2026, 14:02 and 14:40 +03:00 (v0.11 record §3; stage-2 record §§5, 8) |
+| 7 | §4.6 | size: completeness and the L0–L5 / D1–D6 structure govern; no split, no pointer-for-fact; the former quantitative size target is withdrawn; no figure in the rule; size is reported at each edition and reconsidered by the PI after the sources consolidate | PI decisions of 10 Nov 2026, 14:02 and 14:40 +03:00 (v0.11 record §3; stage-2 record §§5, 8) |
 | 8 | §4.7 | certificate-run parameters and intermediate values are proof detail; a constant that is part of the statement is not | class K2, accepted scoped in review 5841129271 |
 | 9 | §7, new paragraph | every edition is built by a script from the previous tagged bytes as anchored operations with a replayable log | practice since v0.3; the reviewer replayed v0.12 from its log (review 5869585886) |
 | 10 | §7 Refresh; new paragraph "Edition without source movement" | rules 4.1/4.7 are applied as span deletions when a domain is opened; an edition without source movement is allowed and bounded; grade, qualifier, identifier and diagnostic-class changes are never part of a cleaning step; the preservation comparator is optional and its PASS is not semantic equivalence | PI decision of 10 Nov 14:40 (close the separate pass; apply at refreshes); v0.11 design note and reviews |
@@ -44,3 +44,20 @@ Old and new text of each replacement are in the diff of the candidate against `a
 ## 5. Adoption path
 
 Review; PI decision recorded here verbatim; the owner then sets the `BASELINE.md` "ATLAS Method" row (v0.3, hash, this record, tag) on the branch; the PI merges with a merge commit and creates the annotated tag. The next atlas manifest then names `method_edition` v0.3.
+
+## 6. Review and PI decisions on the four points (12 November 2026)
+
+**PI, project conversation, 11:36 +03:00, verbatim:** "1- tag adı uygun , 2- rakamlar sadece kayıtlarda 3- Yeterince açık 4-doğru" ("1 – the tag name is suitable; 2 – numbers only in the records; 3 – clear enough; 4 – correct").
+
+| Point (§4) | PI decision | Effect |
+|---|---|---|
+| 1. Tag name | `atlas-method-v0.3` is suitable | status line as proposed |
+| 2. Numbers inside rule 4.6 | numbers only in the records | rule 4.6 reworded, no figure (below) |
+| 3. Boundary test of rule 4.1 | clear enough | unchanged |
+| 4. "Editions are built, not hand-edited" | correct | unchanged |
+
+**Receiving review:** ChatGPT, PR #234 review 5871391538 on head `c3be81b1`: ACCEPT WITH CHANGE. Verified by the reviewer: the v0.2 and first-candidate hashes; the twelve declared changes and nothing else; no atlas change. One required change, with its text: rule 4.6.
+
+**Applied.** Rule 4.6 now reads, as the reviewer worded it: "No fact is dropped for size. Completeness and the structure of §5 govern. The atlas is made smaller only by what rules 1, 4 and 7 already remove; it is not split into parts, and facts are not replaced by pointers to meet a size target. The former quantitative size target is withdrawn. Size is reported at each edition and reconsidered by the PI after the sources consolidate." The measured figures stay in `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §§3–5 and in the v0.11 and v0.12 records. No other line of the candidate changed between the two candidates.
+
+**Still open:** the reviewer's check of the changed rule and the new hash; then the PI's acceptance of Method v0.3 as an object. The four decisions above settle the open points of the text; they are not that acceptance.
