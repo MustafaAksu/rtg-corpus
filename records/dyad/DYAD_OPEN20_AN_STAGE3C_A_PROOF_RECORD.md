@@ -207,7 +207,7 @@ The two-disc test compares the two discs D₀ of the legs in ball arithmetic: |c
 
 ## 11. What is not proved here
 
-1. **The seed and the identification with the literature** (Q1–Q3, P1, L1–L3): the start of the induction of the tube lemma and the divergence step (design §5 step 6). They depend on López-Hernanz 2012, Theorems 4.2(3) and 5.1; LIT's reply `pipes/DYAD/20261112-LIT-lh2012-thm42-use-check.md` (rtg-lit `a3628d4`) has arrived and is not yet dispositioned by the owner; by its own statement it does not prove the seed.
+1. **The seed and the identification with the literature** (Q1–Q3, P1, L1–L3): the start of the induction of the tube lemma and the divergence step (design §5 step 6). They depend on López-Hernanz 2012, Theorems 4.2(3) and 5.1; LIT's reply `pipes/DYAD/20261112-LIT-lh2012-thm42-use-check.md` (rtg-lit `a3628d4`) was accepted by the owner on 12 Nov 2026 as a check of use at SESSION scope (`DYAD_INBOX_20261112_OWNER_DISPOSITION.md` §1); it proves neither the seed nor the divergence step. When the divergence step is written: the equality S = u_j is used on the small sub-petal of the theorem, which contains the arc for large t (D7).
 2. **The triangular form of the recursion** behind S4 (P1-c) is taken from the earlier records.
 3. **The development runs are not certificates.** INJ, SRC, SRC1, the piece statuses, the zone-I constants, the arc and the legs are facts of development runs.
 4. **Done in W8** (hand-over record §7): `full_fibre=True` in the leg (§4.3); strict membership in SND; machine checks of the float bounds; the control "wrong branch". *Not done:* separate printing of nominal and mutated constants in the W2b control outputs.
