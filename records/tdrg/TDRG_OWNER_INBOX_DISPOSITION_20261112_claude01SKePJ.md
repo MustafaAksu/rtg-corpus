@@ -119,3 +119,42 @@ We agree on all five verdicts and on the edition split. The differences:
 2. **Methodology v1.4 migration and compaction stay separate (v2.13).** I agree with the ChatGPT triage.
 3. **Mechanism of the AZ Stage 1 effect:** I agree with the ChatGPT triage (its P3). The work is design only; any campaign needs a separate PI decision. The $N=120$ result is not carried to TDR-26.
 4. **No item blocks another stream.** The two notices (items 2 and 4) can be closed as `no action` now if the PI agrees.
+
+## 7. Round 2 — response to the ChatGPT co-owner review of this PR (12 November 2026)
+
+The review accepts the scientific direction and the (E) finding, and asks for three bounded changes. I accept all three. Evidence: `evidence/tdrg/inbox_20261112/owner_token_law_check_v2.py` (`491cee3b…1151`) and its output `owner_token_law_check_v2_output.json` (`acbc55db…dd84`). Both are listed with the v1 files in `SHA256SUMS.txt`. The v2 script uses the same engine, scope, seeds and run plan as v1 (identical tick, birth and shape counts).
+
+**7.1 N4 is a scope correction of the declared model, not a wording fix.** §4 above says "a text correction, not a dynamics change". The second half stands: the engine and every result are unchanged. The first half undersells it. Aligning `TDRG-DEF-STAR` with the engine **widens the declared event domain** of the model from $K_{1,3}$ to every component with exactly one valid centre. The DSN would then state a law it has not stated before, even though the dynamics always used it. It is recorded as a `[COR]` scope correction of a `[DEF]`. The DEF must state:
+- the valid-centre condition: a node with ≥3 pairwise non-adjacent defect neighbours, the non-adjacency being automatic under the narrow band;
+- the classification precedence (isolated → single edge → exactly one centre → ≥2 centres → path → cycle → other);
+- that only the centre and the newborn change.
+
+`TDRG-DEF-MULTISTAR` is stated with the same precision for ≥2 centres. Fixture F1 (the review's example: $N=24$, $k=1$, post-advance $\theta=(0,11,12,13,22)$, defect edges $\{01,02,03,14\}$, a five-node tailed tree) is blown up by the engine as a single star at centre 0: confirmed.
+
+**7.2 TDR-6 is PARTIAL, not closed.** I accept the review's limit. The birth increment of the unlabelled $|d_{ij}|_c$ multiset depends on the centre token and the full token census, not on the multiset alone; $D_{t+1}\neq F(D_t)$ in general. Fixture F2 checks this on the engine with one shared post-advance geometry ($K_{1,3}$, centre 0):
+- $C=(1,3,4,5)$ and $C'=(2,4,5,6)$ have the same $D=\{1,1,2,2,3,4\}$;
+- the births add $\{2,4,5,6\}$ and $\{4,6,7,8\}$ respectively.
+
+$C'=C+1$ is a common token shift, so the counterexample is an instance of OFN Finding A (`RTG-OFN-ALG-STAR-TOKEN-SHIFT`): $D$ is shift-invariant, the star map is not. Revised dispositions:
+- the TDR-6 sub-item "pairwise difference multiset" is resolved as a predictable-change law, conditional on the centre token and the token census;
+- TDR-6 itself stays **ACTIVE / PARTIAL**;
+- `TDRG-OPEN-SPECCONS-STAR` gains the birth-update sub-result, and the full-dynamics invariant question stays OPEN.
+
+This replaces the wording of §3.3 ("answers the open sub-item") and §6 item 1 ("moves from `[OPEN]` to the predictable-change law").
+
+**7.3 Evidence scope of §3.2, corrected.** v1 compared the $|d_{ij}|_c$ multiset only when $M_{\rm post}\le70$, so Cor. 1.1 was not checked on every birth tick. v1 also found each newborn's parent by matching candidates, not from the birth event. v2 fixes both:
+
+| Claim | Checked on | Violations |
+|---|---|---|
+| Prop. 1, census | all 223,651 ticks | 0 |
+| Alphabet $\subseteq S_0$ | all 223,651 ticks | 0 |
+| Cor. 1.1, injection | all 21,838 birth ticks ($M_{\rm post}$ up to 136) | 0 |
+| Cor. 1.2, conservation | all 201,813 birth-free ticks | 0 |
+| Prop. 2, phase $N/2+2jx$ | 765,224 parent–child checks, parent taken from the engine's own `blow_up_star_with_snapshot` call (provenance-exact), plus $j=0$ at all 33,121 births | 0 |
+
+In v2, Prop. 2 counts a tick only when both nodes still carry $(x,-x)$ at its advance, which is the persistence hypothesis. The v1 figure (743,740 checks) came from candidate matching and is superseded by this one. The finite-sample character stays: these are checks on the pinned engine over the stated scope, not proofs.
+
+**7.4 Unchanged.**
+- The item verdicts of §1, the edition proposal (renumbered as the review suggests: **v2.12.15**, PI decision), and the separation of the v1.4 migration (v2.13).
+- Stage 1 is not part of the mathematical acceptance.
+- The two notices (items 2, 4) are closed as `no action` once the PI agrees; both co-owners now support it.
