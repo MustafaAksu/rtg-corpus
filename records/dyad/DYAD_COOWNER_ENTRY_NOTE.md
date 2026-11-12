@@ -28,9 +28,9 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## OWNER LANE — Claude
 
-**Updated:** 11 November 2026, 18:25 +03:00, with W2b of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w2b`). (The stamp "18:20" of the W2a update was not read from a clock and was wrong: PR #223 merged at 17:09 +03:00.) **Checked:** 11 November 2026, 18:05 +03:00; `main` `07fdbd6` (PR #223 merged); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 17 items, all closed; open PR #183 adds one OFN finding to the inbox.
+**Updated:** 12 November 2026, 08:35 +03:00, with W4 of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w4`). **Checked:** 12 November 2026, 08:20 +03:00; `main` `3bc5202` (PR #226 merged); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 17 items, all closed; open PR #183 adds one OFN finding to the inbox.
 
-**Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1, W2a and W2b are done as development checks, W3 (zone II) is next.
+**Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1, W2a, W2b, W3 (zone II, 0.05 ≤ \|ξ\| ≤ 0.60) and W4 (zone I, \|ξ\| ≤ 0.05) are done as development checks, both sides; W5 (the arc) is next.
 
 **Last durable work.**
 - v6.4.23 adopted 30 Oct 2026 (PR #132; post-tag record).
@@ -52,6 +52,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 - Co-owner and owner, 3 Nov: v6.4.24 carries interface changes and S1; the §1 compaction waits for v6.4.25 or later; S2 (L-PHASE row B) is separate.
 - X4, adopted in v6.4.24: DYAD RIDs for "not area-preserving" (`[ALG]`), the p = 6 linear order and the homological resonance condition; no DYAD RID for the cubic radial rate across p (stays a RECOG import).
 - 11 Nov: no DYAD RID for RECOG's c_J and c_7 (disposition record, item 3).
+- `[SESSION]`, 11 Nov (co-owner's comparison with LIT's notes; DYAD side checked by the owner): the certificate target is the jump at one point of S₀ ∩ S₁ (Im t → −∞). LIT's harmonic target s₁ is on the other overlap class and is a first Fourier coefficient. A certified jump does not give s₁ ≠ 0; no derivation between the two is recorded. Whether LIT's candidate also holds on the lower overlap is a question for LIT (not filed).
 - B-an and B-6 are ACTIVE. No analytic existence or divergence theorem has been claimed.
 
 **Tried and set aside** (do not repeat without a new reason):
@@ -74,7 +75,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read `DYAD_OPEN20_AN_STAGE3B_DESIGN.md` (§4 lemma, §6 obligations, §9 risks). Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **Stage 3c-a, W3:** zone II verification with adaptive pieces, for F on Ω₀ and for G on Ω₁ through the local inverse, with the guard property (`DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §3). It must carry the coupling between fibre and base in (A1), (A2) (plan §4, W2b). Then W4 (zone I), W5 (arc), W6 (legs, controls), W7 (proof record, with S1–S5 and the rounding justification), W8. Acceptance of each: a development check with soundness tests against independent point evaluations and a negative control. No certification claim; 3c-b is not authorized.
+1. **Stage 3c-a, W5:** the common arc γ (Re τ = Re τ*) inside both domains, as a proof obligation with its check (`DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §3). Open from W3: one inverse branch on overlaps (plan §4). Then W6 (legs, two-disc test, controls), W7 (proof record: S1–S5, the pointwise form of (B) for G with the zero count, the zone-I derivation, the cover and the rounding), W8.
 2. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
 3. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
 
@@ -86,7 +87,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## PI_PENDING
 
-As of 11 November 2026, 18:25 +03:00:
-1. **Merge of the W2b PR** (second-order jets, remainder in d, tube pieces, local inverse; development check), after the co-owner's review.
+As of 12 November 2026, 08:35 +03:00:
+1. **Merge of the W4 PR** (zone I for both sides, seam with zone II; development check), after the co-owner's review.
 
 No decision is pending. Stage 3c-b and scouting of the second overlap class are not authorized.

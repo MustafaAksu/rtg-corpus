@@ -45,8 +45,8 @@ a₂ … a_N are the exact formal coefficients; the certificate knows them as ba
 
 ### 2.4 Zones
 
-- **Zone II** (ρ₀ ≤ \|x\|): adaptive boxes in x over each chart sector. A box is *guard* (shown to violate a wedge condition everywhere), or *active*. On an active box the inequalities (A1), (A2), (B) are verified for every point of the box that satisfies the wedge conditions, without locating the walls: the functionals enter only through first ≥ 1, second ≥ c_j and their upper bounds on the box. A box that fails is split; a minimal size ends the run with a failure report.
-- **Zone I** (\|x\| ≤ ρ₀): the same inequalities in scale-free form. Each series is enclosed on the whole disc by its leading term and the sum of the absolute values of the rest; every term of (B) is then \|x\|³ times a quantity bounded on the zone. The reduction is part of the proof record.
+- **Zone II** (ρ₀ ≤ \|ξ\| ≤ 0.60, the whole chart sector): rectangles in (log\|ξ\|, arg ξ), each covered by one disc in x (a *piece*). A piece is *out* (a wedge condition fails on all of it) or *pass* (it lies in the guard core, and (A1), (A2), (B) hold for every point of it that satisfies the wedge conditions). The walls are not located: the functionals enter only through first ≥ 1, second ≥ c_j and their upper bounds on the piece. A piece that is neither is cut into four; the first piece that is neither at the largest depth ends the run with a failure. If all pieces are out or pass, (G) holds on the covered part and (A1), (A2), (B) hold on D_j there (§5, W3).
+- **Zone I** (0 < \|ξ\| ≤ ξ₀ = 0.05): no cover. The hypotheses are reduced to inequalities between constants: sup bounds of the series on one disc at 0, elementary bounds of τ, of the functionals and of the tube radius, each inequality divided by the power of \|x\| it scales with (`zone1_check`, with the derivation in its header; §5, W4). The seam with zone II is the circle \|ξ\| = 0.05, which both zones contain.
 
 ### 2.5 The inverse map, the legs and the arc
 
@@ -78,8 +78,8 @@ The series of 2.2 replace it. The code of the first engine is not kept.
 | W1 | Engine, first part: constants, coefficient balls, series of the map and of the defect along the curve | P5 | **done as a development check** (§5) |
 | W2a | Jets in d (first order), order-zero series, Cauchy constants and tails, Taylor-shift evaluation on discs, the one-step quantities of 2.2 for F | P6 | **done as a development check** (§5) |
 | W2b | Second-order jets in d; remainder in d beyond second order; one step on a tube piece; local inverse from the forward series | P6, method for P8 | **done as a development check** (§5) |
-| W3 | Zone II verification with adaptive boxes, for F on Ω₀ and G on Ω₁ (through the local inverse), including the guard property | P7, P8 | open |
-| W4 | Zone I: scale-free verification and its reduction | P3 | open |
+| W3 | Zone II verification with adaptive pieces, for F on Ω₀ and G on Ω₁ (through the local inverse), including the guard property | P7, P8 | **done as a development check** for 0.05 ≤ \|ξ\| ≤ 0.60 (§5); gluing of the local inverses open (§4) |
+| W4 | Zone I: reduction of (G), (A1), (A2), (B) and of the local inverse lemma to constant inequalities; seam with zone II | P7, P8 | **done as a development check** (§5) |
 | W5 | Arc: compact continuation; analytic tail | P9 | open |
 | W6 | Legs and the two-disc test; controls (zero-jump model, wrong branch, wrong log branch, perturbed α) | P10, P11 | open |
 | W7 | Proof record: tube lemma, inward property, seed, divergence argument, soundness of every computer-checked step | P1, P4, and the analytic parts of P3, P9 | open |
@@ -99,6 +99,21 @@ LIT's answer on Theorem 4.2(3) (L3; `pipes/LIT/20261111-DYAD-lh2012-thm42-unique
   - *The inverse series is dropped* (2.6) and replaced by the local inverse of 2.5. The 3b design is not changed by this; plan section 2.5 is.
   - *One more structural fact, S5* (library, W2b header): with weights (1, 2) for (z, w), F_w − w has only monomials of weighted order at least 5 (and F_z − z of order at least 4, which is S1). It makes (Φ − d)/x³ analytic and is what the maximum principle for the remainder rests on. Its proof joins S1–S4 in W7.
   - *The coupling between fibre and base is not negligible near the outer edge.* ∂x′/∂d = x⁴Q4 with \|Q4(0)\| = \|μ\| ≈ 1.26, against a base step x⁴G0 with \|G0(0)\| = \|ℓ\| ≈ 0.098. At \|x\| = 0.87 a fibre radius of 2·10⁻³ changes the relative step by 2.4% and Δτ by 2.6%; a radius of 5·10⁻³ by 6% and 7% (§5). W3 has to carry this in (A1) and (A2). It is a property of the map: the bounds are attained to within a few per cent.
+
+- **11 Nov 2026, W2b reviewed.** PR #224, co-owner review `5861181371` (ACCEPT for the development archive; the local inverse is an acceptable *conditional* method for P8, not yet a verified inverse on a cover of D₁), merged as `dce1cc5`. The co-owner checked S5 independently at low order with exact rational arithmetic. Conditions taken over from the review:
+  - *W3:* the two conditions of the lemma on every active target piece of D₁; source discs and fibres inside the chart; one inverse branch on overlaps; μ₀ ≠ 0; positive Rouché margins; the coupling in (A1) and (A2); every tube piece inside a recorded remainder profile; a stop on any uncovered piece.
+  - *W7:* a reproducible exact derivation of S1–S5 with the chart and the weighted-order cutoff; the arc enclosure, the Taylor-in-d bound and the maximum-principle step; outward conversion of the float constants (an argument, or Arb-only constants).
+  - *W8:* in control outputs, distinguish the printed nominal constants from the mutated ones.
+- **11 Nov 2026, W3.** Zone II for both sides, 0.05 ≤ \|ξ\| ≤ 0.60 (§5). How the review conditions are met, and what is not:
+  - *Met in the run.* Every pass piece of D₁ carries the two verified conditions of the lemma (they include inf\|μ₀\| > 0 and both Rouché margins). Every pass piece lies in the guard core. Tube pieces use `gt_dev` and `dtau_dev` in (A1) and (A2). A piece outside the remainder profiles or the range of the series is a failure, not an exception. The run stops at the first unresolved piece.
+  - *Chart.* For G the source disc B is an enclosure; functions are evaluated on it only through the entire series and through log(1 + g̃) with \|g̃\| ≤ 1/4. That the true preimage stays in the chart sector follows from the core and (A2), as in the design (§4 there).
+  - *Form of (B) for G.* Checked on the source disc in forward form: \|d\| ≤ R₁(x) implies \|d′\| < R₁(x′). On the fibre circle \|d′\| = R₁(x′) this gives \|d\| > R₁(x) at the same point, which is the pointwise inequality Rouché's theorem needs. The design states (B) with a supremum over the fibre; the pointwise form is weaker and sufficient. For F the run checks the supremum form. **To be confirmed in review; the proof belongs to W7.**
+  - *Not done: one inverse branch on overlaps.* Planned method: verify the lemma also on an enlarged source set that contains the source sets of the neighbouring pieces; uniqueness in the larger set then identifies the local inverses on common targets. Open.
+  - *Below ρ₀ = 0.05:* zone I (W4), including the guard property there.
+- **11 Nov 2026, a distinction to keep** (`[SESSION]`, from the co-owner's comparison with LIT's notes; the owner checked the DYAD side against the stage-2b record). The target here is the jump at one point of the overlap S₀ ∩ S₁ (Im t → −∞). LIT's harmonic target s₁ is worked out on the other overlap class (S₅ ∩ S₀, Im t → +∞) and is a first Fourier coefficient, not a point value. A certified jump gives the divergence of the branch under the recorded conditional steps; it does not give s₁ ≠ 0, and no derivation between the two is recorded. Nothing from LIT is used here.
+
+- **12 Nov 2026, W3 reviewed.** PR #226, co-owner review `5869443092` (ACCEPT as a development record), merged as `3bc5202`. On the form of (B) for G: the pointwise form can be enough, the supremum form of the design is not required; but three things must be proved in W7 for it: one analytic inverse branch on the whole target fibre, a unique solution of the base equation, and that its normal image stays inside the target fibre (the zero count). Also for W7: the exact covering argument for the pieces with the float bounds, given the thin (A2) margin (0.0011).
+- **12 Nov 2026, W4.** Zone I for both sides (§5). With W3 the hypotheses (G), (A1), (A2), (B) are now checked, as development runs, on all of D₀ and D₁ inside the chart sectors. Open as before: one inverse branch on overlaps; the proofs (W7).
 
 ## 5. Development runs (not certificates)
 
@@ -144,3 +159,38 @@ Recorded here as the packages are completed. None of them is a certificate.
   - *Δτ on a tube piece.* The first version used x′/x − 1 as one ball in every term (relative radius 62% at \|x\| = 0.87, ρ = 5·10⁻³). The second separated the d-dependence but kept it as a complex box (20%, against a true variation of 6%). The committed version gives modulus bounds.
   - *`inverse_step`.* The first search did not enlarge the disc enough when the coupling term exceeds the target radius; it now solves condition (ii) for r.
   - *Precision.* Early scratch samples used coefficients built at 60 digits. The recursion loses its precision there and the sizes were wrong (\|a₄₀\| came out 12 times too large). Everything recorded here uses coefficients built at 400 digits, as the checks do.
+
+**W3** (`…_stage3c_lib.py`: `Tube`, `piece_check`, `build_engine`; `…_stage3c_w3_zone2.py`; run `evidence/dyad/open20-an/stage3c-a/run_w3.sh`; both sides in parallel, about 24 minutes on two cores with the three controls). Both positive runs exit 0 with all gates PASS (G0, ENG, Z2, SND); the controls CORE, SIGMA, QZERO exit 1 at Z2. A second full run gave identical output files.
+- **Parameters.** σ = 0.05, κ = 0.15, q₁ = q₂ = 9, R(ξ*) = 2·10⁻³ (design values; σ is fixed here). Cover of ρ₀ ≤ \|ξ\| ≤ 0.60 with ρ₀ = 0.05 over the whole chart sector; rectangles of side 0.02 in (log\|ξ\|, arg ξ), cut into four up to depth 5. Design objects are built as balls from the exact definitions (s_j, c_j, ε from τ(ξ*)).
+- **Result.**
+
+  | Side | pieces out | pieces pass | cut | deepest piece used | smallest margin of (B) | largest relative step |
+  |---|---|---|---|---|---|---|
+  | F on Ω₀ | 6 427 | 4 312 | 288 | depth 3 | 1.5·10⁻³ at \|ξ\| = 0.0505 | 0.1489 |
+  | G on Ω₁ | 5 884 | 3 663 | 99 | depth 2 | 1.6·10⁻³ at \|ξ\| = 0.0505 | 0.1114 |
+
+  No piece is unresolved. So on 0.05 ≤ \|ξ\| ≤ 0.60: the guard property holds (every piece that meets D_j lies in the core), and (A1), (A2), (B) hold on D_j, for both sides.
+- **Margins.**
+  - (B): the margin shrinks like \|ξ\|³ toward 0, as the model gain does; its smallest value is at the inner edge of the cover. At the outer edge of D₀ it stays above 5·10⁻⁴ after cutting (exploratory scan).
+  - (A2): 0.1489 against κ = 0.15 for F, at the outer edge of D₀. The margin is thin. κ is a design value; the sampling of 3b had 0.137.
+  - (A1): smallest enclosed gains of the second functional 0.064 (F) and 0.051 (G) against σ = 0.05. These are lower ends of enclosures: the true gains near those pieces are 0.32 and 0.37. The first functional gains at least 0.70.
+  - For G the preimage disc is up to 5.4 times the target piece (the coupling term).
+- **Semantics check (SND).** At 60 random points of D_j in pass pieces, with \|d\| = R, an independent evaluation (mpmath, the full map and its numerical inverse, its own formulas for τ, the functionals and R) confirms (A1), (A2) and the exit inequality. Smallest exit ratio \|d_new\|/R(ξ_new): 1.0022 (F), 1.0023 (G), at small \|ξ\|.
+- **Controls.** CORE (core shrunk to \|ξ\| ≤ 0.44): an undecided guard piece at \|ξ\| = 0.458. SIGMA (σ = 0.5): (A1) fails on the first active piece. QZERO (q₁ = q₂ = 0): (B) fails at \|ξ\| = 0.424, arg ξ = 0.019π; 3 015 pieces of the outer part pass before that, so without the two functional factors the inequality holds on part of the domain only.
+- **Not covered by this run.** \|ξ\| < 0.05 (zone I). The identification of the local inverses on overlaps (§4). The proof that the piece statuses imply the hypotheses of the lemma (W7), including the pointwise form of (B) for G, the cover by discs of rectangles, and the rounding of the float piece radii.
+- **Changes made while testing, recorded here.** The first scan used σ = 0.1 and depth 2 and left 19 guard pieces undecided at \|ξ\| = 0.469; D₀ ends between 0.460 and 0.465 there (second functional 2.88 against c₀ = 2.97 at \|ξ\| = 0.47), so more depth resolves them. A control with R(ξ*) = 10⁻³ was planned for (B) and replaced by QZERO before it was run: the gain at the outer edge is large, so it was not expected to fail. The stop at the first unresolved piece was added so that a failing run ends quickly.
+
+**W4** (`…_stage3c_lib.py`: `zone1_check`; `…_stage3c_w4_zone1.py`; run `evidence/dyad/open20-an/stage3c-a/run_w4.sh`; about 1.5 minutes on two cores with the three controls). The positive run exits 0 with all gates PASS (G0, ENG, Z1F, Z1G, SEAM, SND); the controls BIGZONE, SIGMA, CORE exit 1 at the zone-I gates. A second run gave identical output files.
+- **Setting.** ξ₀ = 0.05, σ = 0.05, κ = 0.15. Targets \|x′\| ≤ X′ = (ξ₀/\|c\|)(1 + 10⁻⁹); sources and lemma discs \|x\| ≤ X = 1.001 X′ = 0.10851. All sup bounds are over the disc \|x\| ≤ X (sum of the moduli of the coefficients, plus the Cauchy tail).
+- **How the reduction goes** (derivation in the library header of W4; to be written out in W7).
+  - τ = A₃x⁻³(1 + η), \|η\| ≤ 0.0586. So \|τ\| ≥ t_lo\|x\|⁻³ and both functionals are at most T_c\|x\|⁻³, T_c = 3.60.
+  - *Guard.* On each guard arc of the chart sector the argument of τ lies in a half-plane where one wedge condition fails. Margins: 0.30 and 631 (F), 0.62 and 0.44 (G).
+  - *Tube radius.* On D_j the product of the two functionals is at least \|τ\|/K − \|s_j\| (K = 1 + cot θ₀), because they are two independent real-linear functionals of τ with lower bounds 1 and c_j. This gives R ≤ 2.8·10⁻⁶ (F) and 2.0·10⁻⁵ (G) in zone I. Without it the factor \|ξ^α\| alone is unbounded.
+  - *(A1), (A2).* Δτ ∈ 1 ± 0.11 on the whole disc and fibre: Re Δτ ≥ 0.89; the second functional gains at least 0.24 against σ = 0.05; relative step at most 9·10⁻⁴.
+  - *(B).* μ₀(1 + g)^{−α} − 1 = x³(M3 − (2 + α)G0) + higher order, and M3 − (2 + α)G0 vanishes at 0, so the left side is at most λ\|x\|³ with λ = 0.0088. The value at 0 enters as a ball of radius below 10⁻⁴⁰; it is not assumed to be 0. The gain of the first functional alone is 3 Re Δτ/first ≥ 0.74\|x\|³. Margin of (B) divided by \|x\|³: 0.734 on both sides. The terms with the defect, with c₂ and with the remainder are below 4·10⁻⁴.
+  - *Local inverse for G.* With centre x′, radius 2\|x′\|⁴ sup\|G0\| and fibre radius 2R(x′), both conditions of the lemma hold for every target of zone I (margins 0.9985 and 0.102 in the normalised forms); the disc stays inside \|x\| ≤ X.
+- **Seam.** The gate SEAM reads the two zone-II outputs of W3 (by hash): they pass Z2 and start at ρ₀ = 0.05 = ξ₀. Zone II covers 0.05 ≤ \|ξ\| ≤ 0.60 and zone I covers 0 < \|ξ\| ≤ 0.05(1 + 10⁻⁹), so the circle \|ξ\| = 0.05 lies in both.
+- **Semantics check (SND).** Grid of \|ξ\| ∈ {0.05, 0.03, 0.01, 0.003} × 41 arguments across each chart sector, independent evaluation at 110 digits: 68 (F) and 72 (G) grid points lie in D_j; all of them lie in the guard core and satisfy (A1), (A2) and the exit inequality at \|d\| = R. Smallest exit ratio minus 1: 4·10⁻⁷, the size the \|ξ\|³ scaling gives at \|ξ\| = 0.003.
+- **Controls.** BIGZONE (ξ₀ = 0.10): (A1) for the second functional fails on both sides (enclosed gain 0.03 and 0.02 against σ = 0.05). SIGMA (σ = 0.5): fails on both sides, and in the independent check. CORE (core of Ω₀ cut to arg ξ ≤ 0.10π): the guard arc fails for F, and the independent check finds points of D₀ outside the cut core.
+- **Not covered.** The proofs of the elementary steps (W7). One inverse branch on overlaps. Zone I gives no piece list; its statement is uniform.
+- **A correction made while testing.** The first version of the guard margin for F had the sign of s₀ wrong in one term (the margin came out 634.5 instead of 630.6; the verdict was the same). Found on re-reading the derivation, before the committed run.

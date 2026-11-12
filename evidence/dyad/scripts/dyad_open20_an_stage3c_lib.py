@@ -709,3 +709,278 @@ def inverse_step(SER, TAU, MC, xcp, rp, Rp):
             return None
         r = max(1.3 * r, 1.25 * (det['residual'] + rp + det['beta']) / (1 - det['L']))      # (ii) failed: enlarge the disc
     return None
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Work package W3: zone II.  The objects of the design (3b r2, section 3) and the check of one piece.
+#
+# A piece is a disc |x - xc| <= r in the raw variable x (xi = c x).  The check is wall-independent: a piece that meets
+# a wall of D_j is not cut.  Every inequality is verified for all points of the piece that satisfy the two wedge
+# conditions; the functionals enter through their enclosures on the piece and through the lower bounds that the
+# conditions give (first >= 1, second >= c_j).
+class Tube:
+    """Design objects for j = 0 (F on D0) or j = 1 (G on D1), as balls.
+        tau(x) = A3 x^-3 + A2 x^-2 + A1 x^-1 + kappa log x          (principal log; x = xi / c)
+        first(x)  = sgn (Re tau - s_j) + 1,   sgn = +1 (j = 0), -1 (j = 1);   wedge condition: first > 1
+        second(x) = Re(rot tau),  rot = e^{i theta0} (j = 0), -e^{-i theta0} (j = 1);   wedge condition: second > c_j
+        R(x) = eps |xi^alpha| first^(-q1/3) second^(-q2/3),  eps fixed by R(xi*) = rstar
+    with theta0 = pi/2 - pi/8, s_j = Re tau* -+ 0.25, c_j = second(xi*) - 0.15, xi* = 0.40 e^{i pi/6}."""
+    def __init__(self, K, TAU, j, rstar='0.002', q=9):
+        self.j, self.K, self.TAU, self.q3 = j, K, TAU, q // 3
+        assert q % 3 == 0
+        th0 = arb.pi() / 2 - arb.pi() / 8
+        self.sgn = 1 if j == 0 else -1
+        self.rot = (acb(0, 1) * th0).exp() if j == 0 else -((acb(0, -1) * th0).exp())
+        xs = acb('0.4') * (acb(0, 1) * arb.pi() / 6).exp() / K.c
+        ts = self.tau(xs)
+        self.s = ts.real - self.sgn * arb('0.25')
+        self.cw = (self.rot * ts).real - arb('0.15')
+        self.eps = arb(rstar) / (self.xi_alpha(xs) * arb('1.25') ** (-self.q3) * (self.cw + arb('0.15')) ** (-self.q3))
+        # chart sector and guard core (in xi): radius limits and argument limits in units of pi
+        self.chart = (arb('0.60'), arb('-0.20'), arb('0.30')) if j == 0 else (arb('0.60'), arb('0.03'), arb('0.50'))
+        self.core = (arb('0.47'), arb('-0.08'), arb('0.20')) if j == 0 else (arb('0.42'), arb('0.09'), arb('0.43'))
+
+    def tau(self, x):
+        A3, A2, A1, KA = self.TAU
+        ix = 1 / x
+        return ((A3 * ix + A2) * ix + A1) * ix + KA * x.log()
+
+    def xi_alpha(self, x):
+        """|xi^alpha| = exp(Re(alpha log xi)), principal log of xi = c x (an arb)."""
+        return ((self.K.ALPHA * (self.K.c * x).log()).real).exp()
+
+    def functionals(self, x):
+        t = self.tau(x)
+        return self.sgn * (t.real - self.s) + 1, (self.rot * t).real
+
+    def in_core(self, x):
+        """True if the ball x lies in the guard core, False if it lies in its complement, None if undecided."""
+        xi = self.K.c * x
+        rad, lo, hi = self.core
+        a = xi.arg() / arb.pi(); m = abs(xi)
+        if m <= rad and a >= lo and a <= hi:
+            return True
+        if m > rad or a < lo or a > hi:
+            return False
+        return None
+
+
+def piece_check(SER, MC, TB, xc, r, sigma, kappa='0.15', rho_max=0.02, inverse=False):
+    """_piece_check, with every refusal of the engine (a piece outside the range of the series or of the remainder
+    constants, a step too large for the logarithm) turned into the status 'fail'."""
+    try:
+        return _piece_check(SER, MC, TB, xc, r, sigma, kappa, rho_max, inverse)
+    except (ArithmeticError, AssertionError) as e:
+        return 'fail', dict(why='engine: %s' % (str(e) or type(e).__name__))
+
+
+def _piece_check(SER, MC, TB, xc, r, sigma, kappa, rho_max, inverse):
+    """Check of one piece for the tube lemma (design section 4).  Returns (status, info):
+        'out'     a wedge condition fails on the whole piece: no point of D_j in it
+        'pass'    (A1), (A2), (B) hold for every point of the piece that satisfies the wedge conditions
+        'guard'   the piece is not 'out' and is not inside the guard core: (G) is not shown on it
+        'fail'    an inequality is not shown (info['why'])
+    For j = 0 the step is F on the piece.  For j = 1 (inverse=True) the piece is a target set of the local inverse
+    lemma; the step is the inverse step, and the inequalities are checked on the preimage disc B in forward form:
+        (A1)  Re dtau > 0 and Re(e^{-i theta0} dtau) >= sigma on B x {|d| <= rho}      (dtau the forward increment)
+        (A2)  |x/x' - 1| = |gt/(1 + gt)| <= kappa
+        (B)   for x in B and |d| <= R(x):  |d'| < R(x'), in the form
+              |mu0| + |E|/R(x) + |c2| R(x) + M3 |x|^3 R(x)^2  <  inf R(x')/R(x).
+    For j = 0, (B) is  inf|mu0| - |E|/R - |c2| R - M3 |x|^3 R^2 > sup R(x')/R(x)."""
+    rr = arb(r); x = xc + acb(arb(0, rr), arb(0, rr))
+    first, second = TB.functionals(x)
+    if not (first.is_finite() and second.is_finite()):
+        return 'fail', dict(why='functionals not finite')
+    if first <= 1 or second <= TB.cw:
+        return 'out', {}
+    core = TB.in_core(x)
+    if core is not True:
+        return 'guard', {}
+    q3 = TB.q3
+    one = arb(1)
+    f_lo = one.max(arb(first.lower())); f_hi = arb(first.upper())
+    s_lo = arb(TB.cw.upper()).max(arb(second.lower())); s_hi = arb(second.upper())
+    xa = TB.xi_alpha(x)
+    R_hi = arb((TB.eps * arb(xa.upper()) * f_lo ** (-q3) * s_lo ** (-q3)).upper())
+    R_lo = arb((TB.eps * arb(xa.lower()) * f_hi ** (-q3) * s_hi ** (-q3)).lower())
+    if not R_hi < rho_max:
+        return 'fail', dict(why='tube radius above rho_max')
+    info = {}
+    if not inverse:
+        q = tube_step(SER, TB.TAU, MC, xc, r, float(R_hi.upper()))
+    else:
+        iv = inverse_step(SER, TB.TAU, MC, xc, r, float(R_hi.upper()))
+        if iv is None:
+            return 'fail', dict(why='local inverse not found')
+        q = iv['q']; info['r_over_rp'] = iv['r'] / r
+        if not arb(iv['rho']) < rho_max:
+            return 'fail', dict(why='preimage fibre radius above rho_max')
+    dre = arb((q['dtau0'].real - q['dtau_dev']).lower())
+    rot = TB.rot if not inverse else -TB.rot                     # for j = 1: -rot = e^{-i theta0}
+    dh = arb(((rot * q['dtau0']).real - q['dtau_dev']).lower())
+    info.update(dre=float(dre), dh=float(dh))
+    if not (dre > 0 and dh >= arb(sigma)):
+        return 'fail', dict(info, why='A1')
+    gt = q['gt']
+    a2 = _up(gt) if not inverse else _up(gt / (1 + gt))
+    info['a2'] = float(a2)
+    if not a2 <= arb(kappa):
+        return 'fail', dict(info, why='A2')
+    pw = (TB.K.ALPHA * (1 + gt).log()).real.exp()                # |(x'/x)^alpha| on the piece and the fibre
+    ax = q['absx']
+    if not inverse:
+        ratio_hi = arb(pw.upper()) * (1 + dre / f_hi) ** (-q3) * (1 + dh / s_hi) ** (-q3)
+        lhs = arb(abs(q['mu0']).lower()) - _up(q['E']) / R_lo - _up(q['c2']) * R_hi - q['M3c'] * ax ** 3 * R_hi ** 2
+        margin = arb((lhs - ratio_hi).lower())
+    else:
+        # source disc B: R(x) for x in B.  With first(x) = first(x') + (Re dtau), second(x) = second(x') + (Re(e^{-i th0} dtau)),
+        # and x' in D1:  R(x')/R(x) = |(x'/x)^alpha| (first(x)/first(x'))^q3 (second(x)/second(x'))^q3
+        #                           >= inf|(1+gt)^alpha| (1 + dre/f_hi)^q3 (1 + dh/s_hi)^q3.
+        ratio_lo = arb(pw.lower()) * (1 + dre / f_hi) ** q3 * (1 + dh / s_hi) ** q3
+        # R on B: from R(x') and the ratio:  R(x) <= R_hi(target) / ratio_lo;  R(x) >= R_lo(target) / sup ratio
+        dre_hi = arb((q['dtau0'].real + q['dtau_dev']).upper()); dh_hi = arb(((rot * q['dtau0']).real + q['dtau_dev']).upper())
+        ratio_hi = arb(pw.upper()) * (1 + dre_hi / f_lo) ** q3 * (1 + dh_hi / s_lo) ** q3
+        RS_hi = R_hi / ratio_lo; RS_lo = R_lo / ratio_hi
+        if not RS_hi <= arb(iv['rho']):                           # the tube fibre over B must lie in the fibre disc of q
+            return 'fail', dict(info, why='source fibre above the fibre radius of the lemma')
+        lhs = _up(q['mu0']) + _up(q['E']) / RS_lo + _up(q['c2']) * RS_hi + q['M3c'] * ax ** 3 * RS_hi ** 2
+        margin = arb((ratio_lo - lhs).lower())
+    info['margin_B'] = float(margin)
+    if not margin > 0:
+        return 'fail', dict(info, why='B')
+    return 'pass', info
+
+
+def build_engine(N=40, D=360, X=1.10, narc=16000, rem=((0.90, 8000), (1.03, 32000)), rho_d=0.02):
+    """The engine of W1-W2 in one call: constants, coefficient balls, the six Series with their Cauchy constants, the
+    remainder constants.  Series at 400 digits; on return the working precision is 160 bits.
+    Returns K, a, SER, MC, report (structural-zero consistency, tails at |x| = 1.02, theta)."""
+    ctx.dps = 400
+    K = Consts(); a = coefficients(K, N)
+    Zj, Wj = forward_jets(K, a, D + N + 6)
+    ser, rep = order_zero_from_jets(a, Zj, Wj, D)
+    ctx.prec = 160
+    M, _ = circle_sup(K, a, X, narc, second=True)
+    SER = {k: Series(ser[k], X, M[k]) for k in ser}
+    MC = [d_remainder_constants(K, a, Xr, rho_d, n) for Xr, n in rem]
+    report = dict(structural_zeros_consistent=bool(rep['all_contain_zero'] and rep['max_radius'] < 1e-150),
+                  max_tail_at_1p02=max(float(SER[k].tail(1.02).upper()) for k in SER),
+                  remainder_constants=[dict(X=m['X'], rho=m['rho'], M3=m['M3'], MZ3=m['MZ3'], theta=m['theta']) for m in MC])
+    return K, a, SER, MC, report
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Work package W4: zone I.  The hypotheses of the tube lemma for 0 < |xi| <= xi0, from enclosures on one disc at 0.
+#
+# Notation.  X' = (xi0/|c|)(1 + 1e-9) bounds the targets, X = 1.001 X' the sources; t = X^3; all sup bounds are over
+# the disc |x| <= X (Series.enclose at the centre 0: the sum of the moduli of the coefficients, plus the tail).
+#   tau = A3 x^-3 (1 + eta(x)),  |eta| <= eta_bar = (|A2| X + |A1| X^2 + |kappa| X^3 (|ln X| + pi)) / |A3|
+#   |tau| >= tlo |x|^-3,  tlo = |A3| (1 - eta_bar);     first, second <= Tc |x|^-3,  Tc = |A3| (1 + eta_bar) + (|s_j| + 1) t
+# Product of the functionals on D_j.  With a = Re tau and b = second,  |tau| <= K (|a| + |b|),  K = max(1 + cot theta0,
+# 1/sin theta0); |a| <= (first - 1) + |s_j|.  So first + second >= |tau|/K - |s_j| + 1 =: S, and for first >= 1,
+# second >= c_j >= 1, S >= 1 + c_j:  first * second >= S - 1.  Hence on D_j
+#   R(x) <= eps |xi^alpha| (|tau|/K - |s_j|)^-3 <= Rmax   (the bound increases with |x|; it is taken at X),
+#   R(x) >= eps |xi^alpha| (Tc |x|^-3)^-6               (for every x),
+# and  |E|/R <= e_over |x|^3  with  e_over = X^(21 - Re alpha) sup|ET44| Tc^6 / ((1 - gm)^2 eps |c|^(Re alpha) E_lo).
+# The pointwise bounds in |x|^3 use: |g| <= |x|^3 sup|G0|; a convex function nu(u) with nu(0) = 0 satisfies
+# nu(u) <= u nu(u_max)/u_max; and 1/(1 + u) <= 1 - u + u^2.
+# (B), F:  |mu0| - e_terms > sup|(1+gt)^alpha| (1 + dre/first)^-3   follows from   w (1 - w t) - lam - e1/P_lo - nu1 > 0,
+#          w = 3 dre/Tc  (the factor of the second functional, which is <= 1, is dropped).
+# (B), G:  |mu0| + e_terms < inf|(1+gt)^alpha| (1 + dre/first(x'))^3   follows from   w - lam - e1/P_lo - nu1 (1 + t w) > 0,
+#          w = 3 dre (1 - ghat)^3/Tc,  ghat = sup|x'/x - 1|.
+# Normal multiplier.  With beta = 2 + alpha:  mu0 (1+g)^-alpha - 1 = x^3 (M3 - beta G0) + (higher order), and
+# M3 - beta G0 = h0 + x H1(x) with |h0| a ball of radius far below 1e-40 (h0 = 0 by structure; not assumed).  So
+#   | mu0 (1+g)^-alpha - 1 | <= lam |x|^3,
+#   lam = |h0| + X sup|H1| + |beta| gm sup|M3| + (1 + t sup|M3|) rho2/t + 2 X^42 sup|ET44| sup|Q4| (1 - gm)^-|3+alpha|,
+#   gm = t sup|G0|,  rho2 = (1 - gm)^-|beta| - 1 - |beta| gm   (majorant of the binomial remainder).
+def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02):
+    """Zone I for the side TB.j.  Returns a dict of margins (arb lower bounds as floats; each must be > 0) and data.
+      guard_low, guard_high   on the two guard arcs of the chart sector, a wedge condition fails for all 0 < |xi| <= xi0
+      A1_first, A1_second     Re dtau > 0;  Re(e^{+-i theta0} dtau) - sigma >= 0   (on the disc, all |d| <= 2 Rmax)
+      A2                      kappa - sup|relative step|
+      B                       (B) divided by |x|^3: for F the supremum form, for G the forward form on the sources
+      and for G the conditions of the local inverse lemma with c = x', r = 2 |x'|^4 sup|G0|, rho = 2 R(x'):
+      inv_disc (the disc stays in |x| <= X), inv_i, inv_ii."""
+    TAU = TB.TAU; A3, A2, A1, KA = TAU; j = TB.j
+    up = _up
+    lo = lambda v: arb(abs(v).lower())
+    Xt = arb(xi0) / lo(K.c) * (1 + arb('1e-9'))
+    Xf = float((Xt * arb('1.001')).upper()); X = arb(Xf)
+    t = X ** 3
+    eta = (up(A2) * X + up(A1) * X ** 2 + up(KA) * t * (abs(X.log()) + arb.pi())) / lo(A3)
+    tlo = lo(A3) * (1 - eta)
+    sj = up(TB.s); cj = arb(TB.cw.upper())
+    Tc = up(A3) * (1 + eta) + (sj + 1) * t
+    th0 = arb.pi() / 2 - arb.pi() / 8
+    Kth = (1 + th0.cos() / th0.sin()).max(1 / th0.sin())
+    pre = tlo / Kth - sj * t                                  # (|tau|/K - |s_j|) |x|^3 >= pre
+    re_al = K.ALPHA.real; mim = -K.ALPHA.imag                 # Re alpha < 0, -Im alpha > 0
+    a_lo, a_hi = TB.chart[1] * arb.pi(), TB.chart[2] * arb.pi()
+    E_hi, E_lo = (mim * a_hi).exp(), (mim * a_lo).exp()
+    Rmax = arb((TB.eps * lo(K.c) ** re_al * E_hi * X ** (re_al + 3 * TB.q3) * pre ** (-TB.q3)).upper())
+    out = dict(X=Xf, eta=float(eta.upper()), Tc=float(Tc.upper()), Rmax=float(Rmax.upper()))
+    ok_pre = bool(eta < 1 and pre >= cj * t and cj >= 1 and re_al + 3 * TB.q3 > 0 and 39 - 6 * TB.q3 - re_al > 0
+                  and 2 * Rmax < rho_d and X < 1 and TB.core[0] >= arb(xi0))
+    out['preconditions'] = ok_pre
+    if not ok_pre:
+        return out
+    rho = float((2 * Rmax).upper())
+    q = tube_step(SER, TAU, MC, acb(0), Xf, rho)
+    Gb, Qb, Pb = up(q['G0']), up(q['Q4']), up(q['P4'])
+    Mb, Sb, Eb = (up(SER[k].enclose(acb(0), Xf)) for k in ('M3', 'S2', 'ET44'))
+    gm = t * Gb
+    # (A1), (A2)
+    dre = arb((q['dtau0'].real - q['dtau_dev']).lower())
+    rot = TB.rot if j == 0 else -TB.rot
+    dh = arb(((rot * q['dtau0']).real - q['dtau_dev']).lower())
+    gt = q['gt']
+    a2 = up(gt) if j == 0 else up(gt / (1 + gt))
+    out.update(A1_first=float(dre), A1_second=float((dh - arb(sigma)).lower()), A2=float((arb(kappa) - a2).lower()),
+               dre=float(dre), dh=float(dh), rel_step=float(a2.upper()))
+    # lam
+    beta = 2 + K.ALPHA; ab = up(beta)
+    h = [SER['M3'].poly[k] - beta * SER['G0'].poly[k] for k in range(SER['G0'].D + 1)]
+    H1 = arb(0); pw = arb(1)
+    for k in range(1, len(h)):
+        H1 += up(h[k]) * pw; pw = pw * X
+    tt = X / arb(SER['G0'].X)
+    H1 += (arb(SER['M3'].M) + ab * arb(SER['G0'].M)) / X * tt ** (SER['G0'].D + 1) / (1 - tt)
+    rho2 = (1 - gm) ** (-ab) - 1 - ab * gm
+    lam = (up(h[0]) + X * H1 + ab * gm * Mb + (1 + t * Mb) * rho2 / t
+           + 2 * X ** 42 * Eb * Qb * (1 - gm) ** (-up(3 + K.ALPHA)))
+    P_lo = (1 - gm) ** up(K.ALPHA)
+    C2b = Sb / (1 - gm) ** 2 + 2 * Qb * (1 + t * Mb) / (1 - gm) ** 3 + X ** 42 * (3 * t * Qb ** 2 / (1 - gm) ** 4 + 2 * Pb / (1 - gm) ** 3) * Eb
+    e_over = X ** (39 - 6 * TB.q3 - re_al) * Eb / (1 - gm) ** 2 * Tc ** (2 * TB.q3) / (TB.eps * up(K.c) ** re_al * E_lo)
+    e1 = e_over + C2b * Rmax + q['M3c'] * Rmax ** 2
+    bm = q['gt_dev'] / q['absx'] ** 3
+    gam = t * bm / (1 - gm)
+    nu1 = ((up(K.ALPHA) * gam / (1 - gam)).exp() - 1) / t
+    if j == 0:
+        w = 3 * dre / Tc
+        mB = w * (1 - w * t) - lam - e1 / P_lo - nu1
+    else:
+        ghat = gm + t * bm
+        w = 3 * dre * (1 - ghat) ** 3 / Tc
+        mB = w - lam - e1 / P_lo - nu1 * (1 + t * w)
+        kk = 1 + 2 * t * Gb
+        Gd = up(SER['G0'].enclose_derivative(acb(0), Xf))
+        Lc = 4 * t * Gb + X * t * Gd
+        out.update(inv_disc=float((X - Xt * kk).lower()),
+                   inv_i=float((2 * P_lo * (1 - t * lam) - 1 - kk ** 42 * t * e_over - 4 * C2b * t * Rmax - 8 * q['M3c'] * t * Rmax ** 2).lower()),
+                   inv_ii=float((2 * Gb * (1 - Lc) - Gb - kk ** 4 * bm).lower()))
+    out.update(B=float(mB.lower()), lam=float(lam.upper()), gain=float(w.lower()), gm=float(gm.upper()),
+               sup_G0=float(Gb.upper()), e_terms=float((e1 / P_lo + nu1).upper()))
+    # (G): the two guard arcs
+    argA3 = A3.arg(); argc = K.c.arg(); dphi = eta.asin()
+    for name, a1, a2_ in (('guard_low', TB.chart[1], TB.core[1]), ('guard_high', TB.core[2], TB.chart[2])):
+        ax1, ax2 = a1 * arb.pi() - argc, a2_ * arb.pi() - argc                  # range of arg x on the arc
+        mid, rad = (ax1 + ax2) / 2, (ax2 - ax1) / 2
+        phi = argA3 - 3 * mid + arb(0, arb((3 * rad + dphi).upper()))             # all values of arg tau
+        if j == 0:      # out if Re tau <= s0 (s0 < 0), or second = |tau| cos(phi + theta0) <= c0 (c0 > 0)
+            m1 = TB.s.lower() - (tlo / t * phi.cos()).upper() if phi.cos() < 0 else arb(-1)
+            m2 = -((phi + th0).cos().upper())
+        else:           # out if Re tau >= s1 (s1 < 0), or second = -|tau| cos(phi - theta0) <= c1 (c1 > 0)
+            m1 = phi.cos().lower()
+            m2 = (phi - th0).cos().lower()
+        out[name] = float(arb(m1).max(arb(m2)).lower())
+    return out
