@@ -1,0 +1,19 @@
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  archive identity stage1-intermediate  — 19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426
+PASS  archive identity az-v0.7  — 2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation S2-H (presentation)  — header replaced; status-summary sentences are a subset of the base summary (header)
+PASS  operation S2-R1 (ref-subst)  — reference substitution only ('E' → 'E, `dyad-v6.4.24`')
+PASS  operation S2-R2 (ref-subst)  — reference substitution only ('D' → 'D, `dyad-v6.4.24`')
+PASS  operation S2-R3 (ref-subst)  — reference substitution only ('D' → 'D, `dyad-v6.4.24`')
+PASS  operation S2-A (history-appendix)  — section relocated (6296 chars), found in ['stage1-intermediate', 'az-v0.7']
+PASS  operation S2-F (presentation)  — footer replaced
+PASS  qualified claim blocks  — 115 claim blocks in base live text: 112 byte-identical, 3 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS
