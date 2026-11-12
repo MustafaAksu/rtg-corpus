@@ -1,0 +1,21 @@
+runs=252 tails(M>=100)=8 rate=0.0317; capped=3
+order of 2a* for the dominant class of tail runs: [(1, 4), (2, 4)]
+dominant class a* of tail runs: [(0, 4), (30, 4)]
+min top-class share among tail runs: 0.981 ; bulk runs with share>=0.9: 2 of 244
+tail rate by seed alphabet:
+  no seed with o(x)<=2 (4x!=0)           n=  219 tails=   0 rate=0.0000  95% [0.0000,0.0172]
+  some seed with o(x)<=2 (4x=0)          n=   33 tails=   8 rate=0.2424  95% [0.1283,0.4102]
+    some seed x=0                        n=   12 tails=   4 rate=0.3333  95% [0.1381,0.6094]
+    some seed x=N/2                      n=    2 tails=   0 rate=0.0000  95% [0.0000,0.6576]
+    some seed x=+-N/4                    n=   19 tails=   4 rate=0.2105  95% [0.0851,0.4333]
+  min seed order o(x)==3                 n=   33 tails=   0 rate=0.0000  95% [0.0000,0.1043]
+  min seed order o(x)==4                 n=   22 tails=   0 rate=0.0000  95% [0.0000,0.1487]
+  min seed order o(x)==5                 n=   54 tails=   0 rate=0.0000  95% [0.0000,0.0664]
+  min seed order o(x)==6                 n=   14 tails=   0 rate=0.0000  95% [0.0000,0.2153]
+  min seed order o(x)==8                 n=    0 tails=   0 rate=0.0000  95% [0.0000,0.0000]
+  min seed order o(x)==10                n=   26 tails=   0 rate=0.0000  95% [0.0000,0.1287]
+  min seed order o(x)==12                n=   23 tails=   0 rate=0.0000  95% [0.0000,0.1431]
+  min seed order o(x)>12                 n=   47 tails=   0 rate=0.0000  95% [0.0000,0.0756]
+  two seeds equal or opposite, all o>2   n=   38 tails=   0 rate=0.0000  95% [0.0000,0.0918]
+median final M by min seed order: [(1, 66), (2, 52), (3, 40), (4, 40), (5, 40), (6, 39), (10, 40), (12, 39), (15, 43), (20, 38), (30, 70), (60, 58)]
+Fisher exact one-sided p (4x=0 seeds enrich tails) = 3.851e-08; expected share of runs with a 4x=0 seed = 0.1268, observed 0.1310

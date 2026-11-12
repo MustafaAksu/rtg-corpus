@@ -1,0 +1,30 @@
+bytes under test (SHA-256):
+  engine                 4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608
+  orientation reference  ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c
+  runner                 75c5f139a453a4b2595eba76760e34cddc32c990370259ae6e84ec5379408992
+  fixtures script        da9256dc01d786355e2fc28938647b1b800d54b1425e2e927af1febff2f9cb86
+  analysis script        490b3d4f06ef52d6d39b217d0821bd8361d0a8ed37941f32f9c154113c91dc80
+  golden file            40eba43073fba138130244f75cc0790ef20bffcbeda7599ff4e372b95427c134
+PASS T1 engine pin :: 4c94d8741dc4
+PASS T1 orientation-reference pin :: ca59e9b9a1bb
+PASS T1 two orientation bindings on one unmodified engine module
+PASS T2 runner loop == engine run_one (final theta, delta, births, steps, cap flag) :: 24 runs, 0 differ
+PASS T3 built-in orientation rotates the tokens on S=0, E=N/2 :: ([5, 12, 0], 1, 0, 0)
+PASS T3 TDRG-DEF-ORIENT (v2.12.14) returns the balanced tie there :: ([0, 5, 12], 0, 1, 1)
+PASS T4 motif collection is dynamically neutral :: 30 runs
+PASS T8 delta -> delta + N/2 on all nodes leaves (M, births, steps, fb, M_at) unchanged :: 30 runs
+PASS T9 permuting the four initial labels leaves (M, births, steps, fb, M_at) unchanged (P1) :: 20 runs
+PASS T5 token alphabet, exact class update c(-x) += 1 per birth, centre witness: no violation :: 120 runs, 15965 births
+PASS T5 negative control: an injected foreign token is detected :: counter 7
+PASS T5b negative control: a birth that adds its count at x instead of -x passes the weak checks (alphabet, no decrease, total) and is caught by the exact class update :: weak checks pass: True; counter 2
+PASS T5c negative control: a child born with -x instead of x is caught :: counter 2
+PASS T5d the same hub without the shim: no violation :: births 1
+PASS T6 Delta(j) = N/2 + 2jx until the first band return at j = tau(x); 4x = 0 <=> ord(2x) <= 2 :: 290 tokens
+PASS T12 analysis-side re-derivation of seed, phases, tokens, slot, choices and classes == runner (engine draw) :: 600 states, 0 differ
+PASS T12 analysis pins: engine and orientation reference equal the runner's
+PASS T7 hub table equals the golden file (N = 120, 122; 60 ticks)
+PASS T10 seed derivation and native draws equal the golden file
+PASS T10 fixture run summaries equal the golden file
+PASS T7 a hub with 2x = 0 gives one birth per tick (N = 120: x = 0, 60) :: 60, 60
+PASS T11 exhaustive N=8, k=1, T=16, cap=24: token alphabet, exact class update, centre witness :: 2097152 states, 1860288 with a birth, 7829856 births, 0 violations
+FIXTURES PASS (1090.0 s; python 3.13.18)

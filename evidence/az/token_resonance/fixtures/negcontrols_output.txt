@@ -1,0 +1,60 @@
+bytes under test (SHA-256):
+  engine    4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608
+  orient    ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c
+  runner    75c5f139a453a4b2595eba76760e34cddc32c990370259ae6e84ec5379408992
+  fixtures  da9256dc01d786355e2fc28938647b1b800d54b1425e2e927af1febff2f9cb86
+  analyse   490b3d4f06ef52d6d39b217d0821bd8361d0a8ed37941f32f9c154113c91dc80
+  driver    792c9563960161686bdec10b613f68182dab65e25563dd266c7763eb275306f8
+  golden    40eba43073fba138130244f75cc0790ef20bffcbeda7599ff4e372b95427c134
+PASS A1 runner refuses the registered tag without --confirmatory :: exit 2
+PASS A2 runner refuses --confirmatory with a non-registered tag :: exit 2
+PASS A3 runner refuses an engine that does not hash to the pin :: exit 2
+PASS B0 test data generated (TEST-C1 in two shards, TEST-C3) :: exit codes [0, 0], 0
+PASS B1 valid input: integrity and gates pass; readings are marked as test configuration :: exit 0
+PASS B2 valid input with the sensitivity set, shards in any order :: exit 0
+PASS B3 runner refuses an existing output without --resume :: exit 2
+PASS B4 runner refuses --resume under a changed T :: exit 2
+PASS B5 runner refuses --resume under a changed shard range :: exit 2
+PASS B6 runner refuses --resume under a changed --n-perm :: exit 2
+PASS B7 --resume with identical arguments adds nothing and the set still validates :: exit 0, 0
+PASS B8 --resume drops a cut-off last record and restores the file :: exit 0
+PASS C01 wrong tag in a record :: exit 2
+PASS C02 wrong T in a record :: exit 2
+PASS C03 wrong cap in a record :: exit 2
+PASS C04 wrong policy in a record :: exit 2
+PASS C05 wrong profile in a record :: exit 2
+PASS C06 wrong engine pin in a record :: exit 2
+PASS C07 wrong runner pin in a record :: exit 2
+PASS C08 wrong confirmatory flag in a record :: exit 2
+PASS C09 tampered initial phases :: exit 2
+PASS C10 tampered initial token of a resonant arm :: exit 2
+PASS C11 arm label changed (O1R recorded as O1D) :: exit 2
+PASS C12 seed changed :: exit 2
+PASS C13 class label changed :: exit 2
+PASS C14 outcome edited (M raised by one) :: exit 2
+PASS C15 census with a token outside S0 :: exit 2
+PASS C16 a record removed :: exit 2
+PASS C17 a record duplicated :: exit 2
+PASS C18 a record of an unregistered base draw :: exit 2
+PASS C19 record file edited after the run (manifest not updated) :: exit 2
+PASS C20 manifest missing :: exit 2
+PASS C21 manifest of another identity :: exit 2
+PASS C22 one shard missing :: exit 2
+PASS C23 one shard given twice :: exit 2
+PASS C24 runner file that does not hash to the registered pin :: exit 2
+PASS C25 law-violation counter > 0 in one record: gate G2 stops everything :: exit 3
+PASS C26 fixtures log with a failed test: gate G1 stops everything :: exit 3
+PASS C27 fixtures log of other runner bytes :: exit 3
+PASS C28 fixtures log missing :: exit 3
+PASS C29 exploratory mode prints estimates but no reading of any kind :: exit 0
+PASS C30 the sensitivity profile analysed on its own gets no reading :: exit 0
+PASS C31 a base draw missing in all arms is rejected, and accepted only as a declared deviation that qualifies every reading :: exit 2, 0
+PASS D1 driver refuses plan stage1 without --confirmatory :: exit 2
+PASS D2 driver completes the test plan: marker written, analyses exit 0 :: exit 0
+PASS D2b the driver's records equal the directly generated ones in every field except secs
+PASS D3 driver refuses a non-empty output directory without --resume :: exit 2
+PASS D4 a worker that exits non-zero fails the campaign (record of another identity in a shard) :: exit 1; marker absent: True
+PASS D5 an analysis that exits non-zero fails the campaign (gate G2) :: exit 1; marker absent: True
+PASS D6 an incomplete shard is completed by --resume and the campaign then validates :: exit 0
+PASS D7 a failing fixtures run stops the campaign before any shard is started :: exit 1
+NEGATIVE CONTROLS PASS (51 cases; 129.1 s; python 3.13.18)
