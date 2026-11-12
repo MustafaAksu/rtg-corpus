@@ -80,3 +80,44 @@ The extensions at OPEN-SPECCONS-STAR, SG-12 and LEM-SPECCONS correctly restrict 
 **Editorial provenance note:** The displayed formula in round-1 §3 above suffered a Markdown/escaping transcription error (including backspace characters); the correct formula is the \(\mathcal I\) display in this addendum. The earlier text is retained as historical review evidence and is not silently rewritten.
 
 **Publication boundary.** This ACCEPT SCOPED readback finds no outstanding R1/R2 condition, but does not adopt the TDR-G result, validate the entire unchanged DSN, or certify the owner's 223,651-tick run. The PI decides adoption of these exact candidate bytes. PR #250 (this review record) should be merged before PR #248 so its referenced path is available; PR #247 merges before #248. PR #248's publication/pipe/BASELINE check and any final status-line transform are separate governance steps. No merge, tag, pipe state or owner DSN modification was performed by this reviewer.
+
+
+## 6. Round-2 readback — 12 November 2026
+
+**Readback identity.** PR #248 head 9b82993d3e979b45c512304f49bea77c8c886c19; candidate DSN SHA-256 1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64. The candidate Git blob is identical at the Atlas-checked head db0a1993 and at the latest PR #248 head 9b82993. Later commits updated integration and the DRAFT release record, not the candidate DSN.
+
+**[SESSION — source identity]** SHA-256 independently recomputed from the full contents fetched from GitHub at the latest PR head; all match the release record:
+
+| Object | SHA-256 |
+|---|---|
+| Candidate DSN | 1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64 |
+| Builder | e1332fece5f1ad2c14f647220d782cb1a59bfbd90801fb0c30638258935d3234 |
+| Checker | df9b0195afdbf9d0f57639e8dc5fd0b42e3e85ba4140ebc103fb48ef4326d414 |
+| Edit log | a3c79ba63e854e84172e411b584be9c2c32d188d5108730b3aca46d83f213cf1 |
+
+Both edit logs have 32 edits with unchanged original match text. Only replacement text in E09, E10, E13, E18, E19, and E29 (Appendix A) differs between rounds.
+
+### R1 — CLOSED, including the owner extension
+
+**[SESSION — THM conditional on TDRG-ALG-EVENT-INVENTORY]** Section 6.13 TDRG-ALG-TOKEN-CENSUS-LAW (iii) defines the set of present signed classes
+
+\[
+\mathcal I(X_t)=\{[\delta_i]_\pm : i\in V_t\},
+\qquad [x]_\pm=\{x,-x\}.
+\]
+
+Token permutations and identity preserve it. At a star birth, centre token x becomes -x and the newborn gets x; hence the existing signed class neither disappears nor introduces another. Simultaneous births on distinct snapshot centres compose. Thus I(X_{t+1})=I(X_t), including birth ticks, for the six declared policies. The object is a token-state signed-class support set, invariant under phase gauge and node relabeling; its admissibility as a purely relational *physical* observable remains undecided, so TDR-6 correctly stays ACTIVE/PARTIAL.
+
+The unconditional nonexistence claim is removed. The TDR-6 line now says the full *unlabelled pairwise-advance spectrum* is not birth-conserved and has no autonomous update D_{t+1}=F(D_t), which is supported by the explicit counterexample. The signed-class support is not itself a function of that spectrum: at N=24, C=(1,3,4,5) and C'=(2,4,5,6) have the same pairwise spectrum {1,1,2,2,3,4} but distinct sets of signed classes: I(C)={[1],[3],[4],[5]}, whereas I(C')={[2],[4],[5],[6]}. This one-line reason supports the owner's aligned spectrum-status statements in TDR-6, SG-12 and LEM-SPECCONS. It need not be added to the already Atlas-checked candidate; no new scientific campaign is warranted.
+
+**R1 CLOSED**, including the independent rereading of (iii), its proof, the spectrum-versus-token distinction, and the owner's three-clause extension.
+
+### R2 — CLOSED
+
+**[SESSION — ALG]** The conditional free parent–child relation and the order classification remain correct. Section 6.13 now specifies the formal free orbit with the token-persistence hypothesis for all j≥0; j=1 already forces 2x in {0,N/2}, equivalent to 4x=0 mod N. A zero-advance window imposes no condition. **R2 CLOSED.**
+
+### Verification and publication boundary
+
+Atlas PR #252 reports ACCEPT FOR ADOPTION (Atlas side) from a byte-identical independent reconstruction of the same candidate, 11/11 checker gates and 8/8 caught negative controls. The former index conflict has been resolved on the current PR #248 branch; GitHub reported mergeable=true for head 9b82993 on inspection.
+
+**Final verdict: PASS / REVIEW-CLOSED for DSN SHA-256 1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64.** This is a reviewer verdict, not a new owner adoption or an independent repeat of historic campaigns. The PI wrote “benimsiyorum” for this candidate in the current conversation. The TDR-G co-owner should place that adoption decision, the byte identity, and this round-2 review into the DRAFT release record before publication. Recommended merge order: #247 → #250 → #248 → #252, with actual mergeability and ancestry checked again. The annotated tag must point to the final #248 merge commit. No canonical DSN, engine, inbox, or tag is edited by this review.
