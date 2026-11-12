@@ -1,0 +1,84 @@
+{
+ "all_pass": true,
+ "control": null,
+ "gates": {
+  "ENG_engine": true,
+  "G0_stage2_input": true,
+  "SND_independent_semantics": true,
+  "Z2_every_piece_out_or_pass": true
+ },
+ "info": {
+  "ENG": {
+   "max_tail_at_1p02": 5.7e-07,
+   "remainder_constants": [
+    {
+     "M3": 109.39,
+     "MZ3": 65.437,
+     "X": 0.9,
+     "rho": 0.02,
+     "theta": 0.12988
+    },
+    {
+     "M3": 680.86,
+     "MZ3": 117.37,
+     "X": 1.03,
+     "rho": 0.02,
+     "theta": 0.21767
+    }
+   ]
+  },
+  "SND": {
+   "points_tested": 60,
+   "smallest_exit_ratio": 1.00219,
+   "violations": []
+  },
+  "Z2": {
+   "by_depth": {
+    "out_depth0": 5913,
+    "out_depth1": 217,
+    "out_depth2": 221,
+    "out_depth3": 76,
+    "pass_depth0": 3816,
+    "pass_depth1": 244,
+    "pass_depth2": 252
+   },
+   "counts": {
+    "cut": 288,
+    "out": 6427,
+    "pass": 4312
+   },
+   "h0": 0.02,
+   "kappa": "0.15",
+   "largest_preimage_disc_ratio": 0.0,
+   "largest_relative_step": 0.1489,
+   "max_depth": 5,
+   "rho0": 0.05,
+   "rmax": 0.6,
+   "side": 0,
+   "sigma": "0.05",
+   "smallest": {
+    "dh": 0.06415,
+    "dre": 0.7584,
+    "margin_B": 0.00154
+   },
+   "smallest_at": {
+    "dh": [
+     0.42371,
+     0.05
+    ],
+    "dre": [
+     0.44974,
+     0.14494
+    ],
+    "margin_B": [
+     0.050499,
+     0.037342
+    ]
+   },
+   "stopped_at_first_unresolved_piece": false,
+   "unresolved": []
+  }
+ },
+ "script": "dyad_open20_an_stage3c_w3_zone2.py",
+ "status": "stage 3c-a development run; not a certificate"
+}
