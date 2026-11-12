@@ -77,8 +77,8 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Next 1–3 actions / acceptance:**
 1. **Disposition of the open inbox item** `pipes/DYAD/20261112-LIT-inf016-harmonic-first-mode-obstruction.md`: read INF-016 at the rtg-lit commit it names; give a verdict on the statement and on whether its conditions match the owner's objects (D1–D10, the overlap j = 0, the jump of stage 2b); say whether a first-harmonic observable should enter a later design. Record it in `records/dyad/` and close the item. It does not change stage 3c-a, whose target is a point value (plan record §4, 11 Nov).
 2. **OPEN 20 analytic branch: wait.** Stage 3c-b is not authorized, and two of the five conditions of the design are not met: LIT's verdict on López-Hernanz 2012 (L1–L3; `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md`, open) and the seed (Q1–Q3). When LIT answers: disposition of the reply, then the seed and P4 as a written argument. Scouting of the second overlap class is not authorized.
-2. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
-3. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
+3. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
+4. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
 
 **Reopen trigger.** A new item in `pipes/DYAD/`; an answer from NUMGEN, OFN or Triadic to the open DYAD notices; LIT's answer on Theorem 4.2(3); a new owner tag of RECOG, NUMGEN, OFN, Genesis or Triadic that changes a statement DYAD imports or exports.
 
