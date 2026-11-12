@@ -1,0 +1,88 @@
+{
+ "all_pass": true,
+ "control": null,
+ "gates": {
+  "ENG_engine": true,
+  "G0_stage2_input": true,
+  "SEAM_zones_cover_the_sector": true,
+  "SND_independent_semantics": true,
+  "Z1F_zone1_side_F": true,
+  "Z1G_zone1_side_G": true
+ },
+ "info": {
+  "SEAM": {
+   "w3": {
+    "w3_zone2_F.json": {
+     "ok": true,
+     "rho0": 0.05,
+     "rmax": 0.6
+    },
+    "w3_zone2_G.json": {
+     "ok": true,
+     "rho0": 0.05,
+     "rmax": 0.6
+    }
+   },
+   "xi0": 0.05
+  },
+  "SND": {
+   "side_F": {
+    "points_of_D_tested": 68,
+    "smallest_exit_ratio_minus_1": 3.964e-07,
+    "violations": []
+   },
+   "side_G": {
+    "points_of_D_tested": 72,
+    "smallest_exit_ratio_minus_1": 3.95e-07,
+    "violations": []
+   }
+  },
+  "Z1F_zone1_side_F": {
+   "A1_first": 0.89191,
+   "A1_second": 0.19149,
+   "A2": 0.14911,
+   "B": 0.73376,
+   "Rmax": 2.7823e-06,
+   "Tc": 3.5999,
+   "X": 0.10851,
+   "dh": 0.24149,
+   "dre": 0.89191,
+   "e_terms": 5.2095e-05,
+   "eta": 0.058623,
+   "gain": 0.74327,
+   "gm": 0.00013102,
+   "guard_high": 630.6,
+   "guard_low": 0.29803,
+   "lam": 0.0087544,
+   "preconditions": true,
+   "rel_step": 0.00089084,
+   "sup_G0": 0.10254
+  },
+  "Z1G_zone1_side_G": {
+   "A1_first": 0.89143,
+   "A1_second": 0.191,
+   "A2": 0.14911,
+   "B": 0.73359,
+   "Rmax": 1.9692e-05,
+   "Tc": 3.5993,
+   "X": 0.10851,
+   "dh": 0.241,
+   "dre": 0.89143,
+   "e_terms": 0.00036873,
+   "eta": 0.058623,
+   "gain": 0.74271,
+   "gm": 0.00013102,
+   "guard_high": 0.44368,
+   "guard_low": 0.6162,
+   "inv_disc": 7.9998e-05,
+   "inv_i": 0.99852,
+   "inv_ii": 0.10238,
+   "lam": 0.0087544,
+   "preconditions": true,
+   "rel_step": 0.00089261,
+   "sup_G0": 0.10254
+  }
+ },
+ "script": "dyad_open20_an_stage3c_w4_zone1.py",
+ "status": "stage 3c-a development run; not a certificate"
+}

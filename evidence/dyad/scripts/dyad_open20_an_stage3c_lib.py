@@ -867,3 +867,120 @@ def build_engine(N=40, D=360, X=1.10, narc=16000, rem=((0.90, 8000), (1.03, 3200
                   max_tail_at_1p02=max(float(SER[k].tail(1.02).upper()) for k in SER),
                   remainder_constants=[dict(X=m['X'], rho=m['rho'], M3=m['M3'], MZ3=m['MZ3'], theta=m['theta']) for m in MC])
     return K, a, SER, MC, report
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Work package W4: zone I.  The hypotheses of the tube lemma for 0 < |xi| <= xi0, from enclosures on one disc at 0.
+#
+# Notation.  X' = (xi0/|c|)(1 + 1e-9) bounds the targets, X = 1.001 X' the sources; t = X^3; all sup bounds are over
+# the disc |x| <= X (Series.enclose at the centre 0: the sum of the moduli of the coefficients, plus the tail).
+#   tau = A3 x^-3 (1 + eta(x)),  |eta| <= eta_bar = (|A2| X + |A1| X^2 + |kappa| X^3 (|ln X| + pi)) / |A3|
+#   |tau| >= tlo |x|^-3,  tlo = |A3| (1 - eta_bar);     first, second <= Tc |x|^-3,  Tc = |A3| (1 + eta_bar) + (|s_j| + 1) t
+# Product of the functionals on D_j.  With a = Re tau and b = second,  |tau| <= K (|a| + |b|),  K = max(1 + cot theta0,
+# 1/sin theta0); |a| <= (first - 1) + |s_j|.  So first + second >= |tau|/K - |s_j| + 1 =: S, and for first >= 1,
+# second >= c_j >= 1, S >= 1 + c_j:  first * second >= S - 1.  Hence on D_j
+#   R(x) <= eps |xi^alpha| (|tau|/K - |s_j|)^-3 <= Rmax   (the bound increases with |x|; it is taken at X),
+#   R(x) >= eps |xi^alpha| (Tc |x|^-3)^-6               (for every x),
+# and  |E|/R <= e_over |x|^3  with  e_over = X^(21 - Re alpha) sup|ET44| Tc^6 / ((1 - gm)^2 eps |c|^(Re alpha) E_lo).
+# The pointwise bounds in |x|^3 use: |g| <= |x|^3 sup|G0|; a convex function nu(u) with nu(0) = 0 satisfies
+# nu(u) <= u nu(u_max)/u_max; and 1/(1 + u) <= 1 - u + u^2.
+# (B), F:  |mu0| - e_terms > sup|(1+gt)^alpha| (1 + dre/first)^-3   follows from   w (1 - w t) - lam - e1/P_lo - nu1 > 0,
+#          w = 3 dre/Tc  (the factor of the second functional, which is <= 1, is dropped).
+# (B), G:  |mu0| + e_terms < inf|(1+gt)^alpha| (1 + dre/first(x'))^3   follows from   w - lam - e1/P_lo - nu1 (1 + t w) > 0,
+#          w = 3 dre (1 - ghat)^3/Tc,  ghat = sup|x'/x - 1|.
+# Normal multiplier.  With beta = 2 + alpha:  mu0 (1+g)^-alpha - 1 = x^3 (M3 - beta G0) + (higher order), and
+# M3 - beta G0 = h0 + x H1(x) with |h0| a ball of radius far below 1e-40 (h0 = 0 by structure; not assumed).  So
+#   | mu0 (1+g)^-alpha - 1 | <= lam |x|^3,
+#   lam = |h0| + X sup|H1| + |beta| gm sup|M3| + (1 + t sup|M3|) rho2/t + 2 X^42 sup|ET44| sup|Q4| (1 - gm)^-|3+alpha|,
+#   gm = t sup|G0|,  rho2 = (1 - gm)^-|beta| - 1 - |beta| gm   (majorant of the binomial remainder).
+def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02):
+    """Zone I for the side TB.j.  Returns a dict of margins (arb lower bounds as floats; each must be > 0) and data.
+      guard_low, guard_high   on the two guard arcs of the chart sector, a wedge condition fails for all 0 < |xi| <= xi0
+      A1_first, A1_second     Re dtau > 0;  Re(e^{+-i theta0} dtau) - sigma >= 0   (on the disc, all |d| <= 2 Rmax)
+      A2                      kappa - sup|relative step|
+      B                       (B) divided by |x|^3: for F the supremum form, for G the forward form on the sources
+      and for G the conditions of the local inverse lemma with c = x', r = 2 |x'|^4 sup|G0|, rho = 2 R(x'):
+      inv_disc (the disc stays in |x| <= X), inv_i, inv_ii."""
+    TAU = TB.TAU; A3, A2, A1, KA = TAU; j = TB.j
+    up = _up
+    lo = lambda v: arb(abs(v).lower())
+    Xt = arb(xi0) / lo(K.c) * (1 + arb('1e-9'))
+    Xf = float((Xt * arb('1.001')).upper()); X = arb(Xf)
+    t = X ** 3
+    eta = (up(A2) * X + up(A1) * X ** 2 + up(KA) * t * (abs(X.log()) + arb.pi())) / lo(A3)
+    tlo = lo(A3) * (1 - eta)
+    sj = up(TB.s); cj = arb(TB.cw.upper())
+    Tc = up(A3) * (1 + eta) + (sj + 1) * t
+    th0 = arb.pi() / 2 - arb.pi() / 8
+    Kth = (1 + th0.cos() / th0.sin()).max(1 / th0.sin())
+    pre = tlo / Kth - sj * t                                  # (|tau|/K - |s_j|) |x|^3 >= pre
+    re_al = K.ALPHA.real; mim = -K.ALPHA.imag                 # Re alpha < 0, -Im alpha > 0
+    a_lo, a_hi = TB.chart[1] * arb.pi(), TB.chart[2] * arb.pi()
+    E_hi, E_lo = (mim * a_hi).exp(), (mim * a_lo).exp()
+    Rmax = arb((TB.eps * lo(K.c) ** re_al * E_hi * X ** (re_al + 3 * TB.q3) * pre ** (-TB.q3)).upper())
+    out = dict(X=Xf, eta=float(eta.upper()), Tc=float(Tc.upper()), Rmax=float(Rmax.upper()))
+    ok_pre = bool(eta < 1 and pre >= cj * t and cj >= 1 and re_al + 3 * TB.q3 > 0 and 39 - 6 * TB.q3 - re_al > 0
+                  and 2 * Rmax < rho_d and X < 1 and TB.core[0] >= arb(xi0))
+    out['preconditions'] = ok_pre
+    if not ok_pre:
+        return out
+    rho = float((2 * Rmax).upper())
+    q = tube_step(SER, TAU, MC, acb(0), Xf, rho)
+    Gb, Qb, Pb = up(q['G0']), up(q['Q4']), up(q['P4'])
+    Mb, Sb, Eb = (up(SER[k].enclose(acb(0), Xf)) for k in ('M3', 'S2', 'ET44'))
+    gm = t * Gb
+    # (A1), (A2)
+    dre = arb((q['dtau0'].real - q['dtau_dev']).lower())
+    rot = TB.rot if j == 0 else -TB.rot
+    dh = arb(((rot * q['dtau0']).real - q['dtau_dev']).lower())
+    gt = q['gt']
+    a2 = up(gt) if j == 0 else up(gt / (1 + gt))
+    out.update(A1_first=float(dre), A1_second=float((dh - arb(sigma)).lower()), A2=float((arb(kappa) - a2).lower()),
+               dre=float(dre), dh=float(dh), rel_step=float(a2.upper()))
+    # lam
+    beta = 2 + K.ALPHA; ab = up(beta)
+    h = [SER['M3'].poly[k] - beta * SER['G0'].poly[k] for k in range(SER['G0'].D + 1)]
+    H1 = arb(0); pw = arb(1)
+    for k in range(1, len(h)):
+        H1 += up(h[k]) * pw; pw = pw * X
+    tt = X / arb(SER['G0'].X)
+    H1 += (arb(SER['M3'].M) + ab * arb(SER['G0'].M)) / X * tt ** (SER['G0'].D + 1) / (1 - tt)
+    rho2 = (1 - gm) ** (-ab) - 1 - ab * gm
+    lam = (up(h[0]) + X * H1 + ab * gm * Mb + (1 + t * Mb) * rho2 / t
+           + 2 * X ** 42 * Eb * Qb * (1 - gm) ** (-up(3 + K.ALPHA)))
+    P_lo = (1 - gm) ** up(K.ALPHA)
+    C2b = Sb / (1 - gm) ** 2 + 2 * Qb * (1 + t * Mb) / (1 - gm) ** 3 + X ** 42 * (3 * t * Qb ** 2 / (1 - gm) ** 4 + 2 * Pb / (1 - gm) ** 3) * Eb
+    e_over = X ** (39 - 6 * TB.q3 - re_al) * Eb / (1 - gm) ** 2 * Tc ** (2 * TB.q3) / (TB.eps * up(K.c) ** re_al * E_lo)
+    e1 = e_over + C2b * Rmax + q['M3c'] * Rmax ** 2
+    bm = q['gt_dev'] / q['absx'] ** 3
+    gam = t * bm / (1 - gm)
+    nu1 = ((up(K.ALPHA) * gam / (1 - gam)).exp() - 1) / t
+    if j == 0:
+        w = 3 * dre / Tc
+        mB = w * (1 - w * t) - lam - e1 / P_lo - nu1
+    else:
+        ghat = gm + t * bm
+        w = 3 * dre * (1 - ghat) ** 3 / Tc
+        mB = w - lam - e1 / P_lo - nu1 * (1 + t * w)
+        kk = 1 + 2 * t * Gb
+        Gd = up(SER['G0'].enclose_derivative(acb(0), Xf))
+        Lc = 4 * t * Gb + X * t * Gd
+        out.update(inv_disc=float((X - Xt * kk).lower()),
+                   inv_i=float((2 * P_lo * (1 - t * lam) - 1 - kk ** 42 * t * e_over - 4 * C2b * t * Rmax - 8 * q['M3c'] * t * Rmax ** 2).lower()),
+                   inv_ii=float((2 * Gb * (1 - Lc) - Gb - kk ** 4 * bm).lower()))
+    out.update(B=float(mB.lower()), lam=float(lam.upper()), gain=float(w.lower()), gm=float(gm.upper()),
+               sup_G0=float(Gb.upper()), e_terms=float((e1 / P_lo + nu1).upper()))
+    # (G): the two guard arcs
+    argA3 = A3.arg(); argc = K.c.arg(); dphi = eta.asin()
+    for name, a1, a2_ in (('guard_low', TB.chart[1], TB.core[1]), ('guard_high', TB.core[2], TB.chart[2])):
+        ax1, ax2 = a1 * arb.pi() - argc, a2_ * arb.pi() - argc                  # range of arg x on the arc
+        mid, rad = (ax1 + ax2) / 2, (ax2 - ax1) / 2
+        phi = argA3 - 3 * mid + arb(0, arb((3 * rad + dphi).upper()))             # all values of arg tau
+        if j == 0:      # out if Re tau <= s0 (s0 < 0), or second = |tau| cos(phi + theta0) <= c0 (c0 > 0)
+            m1 = TB.s.lower() - (tlo / t * phi.cos()).upper() if phi.cos() < 0 else arb(-1)
+            m2 = -((phi + th0).cos().upper())
+        else:           # out if Re tau >= s1 (s1 < 0), or second = -|tau| cos(phi - theta0) <= c1 (c1 > 0)
+            m1 = phi.cos().lower()
+            m2 = (phi - th0).cos().lower()
+        out[name] = float(arb(m1).max(arb(m2)).lower())
+    return out
