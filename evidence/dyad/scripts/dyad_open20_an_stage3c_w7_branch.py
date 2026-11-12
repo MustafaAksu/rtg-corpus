@@ -49,8 +49,8 @@ def main():
 
     # ---- INJ: sup |b0' - 1| on a cover of S1 ----------------------------------------------------------------------------
     TB = L.Tube(K, TAU, 1)
-    X0 = float((arb(RHO0) / arb(abs(K.c).lower()) * (1 + arb('1e-9'))).upper())
-    Linner = float(L._up(eng.b0p(acb(0), X0) - 1).upper())
+    X0 = L._assert_up(float((arb(RHO0) / arb(abs(K.c).lower()) * (1 + arb('1e-9'))).upper()), arb(RHO0) / arb(abs(K.c).lower()))
+    Linner = L._fup(L._up(eng.b0p(acb(0), X0) - 1))            # checked float upper bounds: the gate compares them with 1
     alo, ahi = S_LO * math.pi, S_HI * math.pi
     ns = math.ceil((math.log(S_RAD) - math.log(RHO0)) / H0); nt = math.ceil((ahi - alo) / H0)
     hs = (math.log(S_RAD) - math.log(RHO0)) / ns / 2; ht = (ahi - alo) / nt / 2
@@ -59,7 +59,7 @@ def main():
         for k in range(nt):
             s, t = math.log(RHO0) + (2 * i + 1) * hs, alo + (2 * k + 1) * ht
             xc, r = piece(s, t, hs, ht)
-            v = float(L._up(eng.b0p(xc, r) - 1).upper())
+            v = L._fup(L._up(eng.b0p(xc, r) - 1))
             if v > Lmax:
                 Lmax, where = v, [float('%.5g' % math.exp(s)), float('%.5g' % (t / math.pi))]
     g['INJ_base_map_injective_on_the_sector'] = bool(Lmax < 1)
@@ -116,9 +116,10 @@ def main():
 
     # ---- SRC1: zone I -----------------------------------------------------------------------------------------------------
     z = L.zone1_check(K, SER, MC, TB, str(RHO0), SIGMA, kappa=KAPPA, extra=True)
-    da = math.asin(z['src_rel_radius']) / math.pi
+    da = arb(z['src_rel_radius']).asin() / arb.pi()            # ball arithmetic; z[...] below are checked float bounds
     ok1 = bool(z.get('preconditions') and z['guard_low'] > 0 and z['guard_high'] > 0 and z['inv_i'] > 0 and z['inv_ii'] > 0
-               and float(TB.core[1]) - da >= S_LO and float(TB.core[2]) + da <= S_HI and z['E_over_R'] < 1 and z['X'] * cabs <= s_rad)
+               and TB.core[1] - da >= arb(S_LO) and TB.core[2] + da <= arb(S_HI) and z['E_over_R'] < 1
+               and arb(z['X']) * L._up(K.c) <= arb(s_rad))
     g['SRC1_sources_of_zone_I_in_the_sector'] = ok1
     info['SRC1'] = dict(relative_radius_of_the_source_disc=float('%.4g' % z['src_rel_radius']), sup_E_over_R=float('%.4g' % z['E_over_R']),
                         sup_abs_b0prime_minus_1_on_the_disc=float('%.4g' % z['L_disc']))

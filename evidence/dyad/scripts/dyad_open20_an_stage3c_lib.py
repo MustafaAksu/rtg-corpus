@@ -826,14 +826,14 @@ def _piece_check(SER, MC, TB, xc, r, sigma, kappa, rho_max, inverse):
         return 'fail', dict(why='tube radius above rho_max')
     info = {}
     if not inverse:
-        q = tube_step(SER, TB.TAU, MC, xc, r, float(R_hi.upper()))
+        q = tube_step(SER, TB.TAU, MC, xc, r, _fup(R_hi))
     else:
-        iv = inverse_step(SER, TB.TAU, MC, xc, r, float(R_hi.upper()))
+        iv = inverse_step(SER, TB.TAU, MC, xc, r, _fup(R_hi))
         if iv is None:
             return 'fail', dict(why='local inverse not found')
         q = iv['q']; info['r_over_rp'] = iv['r'] / r
         xis = TB.K.c * q['x']; ag = xis.arg() / arb.pi()         # the source disc B (as its square), for the proof record
-        info['src'] = (float(abs(xis).upper()), float(ag.lower()), float(ag.upper()),
+        info['src'] = (_fup(abs(xis)), _fdn(ag), _fup(ag),
                        float((R_hi - _up(q['E'])).lower()), iv['rho'], float((R_lo - _up(q['E'])).lower()))
         if not arb(iv['rho']) < rho_max:
             return 'fail', dict(why='preimage fibre radius above rho_max')
@@ -933,7 +933,7 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02, extra=Fals
     up = _up
     lo = lambda v: arb(abs(v).lower())
     Xt = arb(xi0) / lo(K.c) * (1 + arb('1e-9'))
-    Xf = float((Xt * arb('1.001')).upper()); X = arb(Xf)
+    Xf = _assert_up(float((Xt * arb('1.001')).upper()), Xt); X = arb(Xf)      # the disc |x| <= Xf contains zone I
     t = X ** 3
     eta = (up(A2) * X + up(A1) * X ** 2 + up(KA) * t * (abs(X.log()) + arb.pi())) / lo(A3)
     tlo = lo(A3) * (1 - eta)
@@ -952,7 +952,7 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02, extra=Fals
     out['preconditions'] = ok_pre
     if not ok_pre:
         return out
-    rho = float((2 * Rmax).upper())
+    rho = _fup(2 * Rmax)
     q = tube_step(SER, TAU, MC, acb(0), Xf, rho)
     Gb, Qb, Pb = up(q['G0']), up(q['Q4']), up(q['P4'])
     Mb, Sb, Eb = (up(SER[k].enclose(acb(0), Xf)) for k in ('M3', 'S2', 'ET44'))
@@ -994,8 +994,7 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02, extra=Fals
         Gd = up(SER['G0'].enclose_derivative(acb(0), Xf))
         Lc = 4 * t * Gb + X * t * Gd
         if extra:                       # for the proof record: relative radius of the lemma disc, sup |E|/R(x') on it
-            out.update(src_rel_radius=float((2 * t * Gb).upper()), E_over_R=float((kk ** 42 * t * e_over).upper()),
-                       L_disc=float(Lc.upper()))
+            out.update(src_rel_radius=_fup(2 * t * Gb), E_over_R=_fup(kk ** 42 * t * e_over), L_disc=_fup(Lc))
         out.update(inv_disc=float((X - Xt * kk).lower()),
                    inv_i=float((2 * P_lo * (1 - t * lam) - 1 - kk ** 42 * t * e_over - 4 * C2b * t * Rmax - 8 * q['M3c'] * t * Rmax ** 2).lower()),
                    inv_ii=float((2 * Gb * (1 - Lc) - Gb - kk ** 4 * bm).lower()))
@@ -1106,14 +1105,14 @@ def arc_tail(K, TAU, xi_M, eps=0.03, cores=None, branch=0):
     tau = Tube(K, TAU, 0).tau
     ts = tau(acb('0.4') * (acb(0, 1) * arb.pi() / 6).exp() / K.c); re_s = ts.real
     wmin = lo(A3) / XM ** 3                                    # |w| >= wmin  <=>  |x0| <= XM
-    tM = float((wmin ** 2 - re_s ** 2).sqrt().upper()) * (1 + 1e-12)
+    tM = _fup((wmin ** 2 - re_s ** 2).sqrt())
     rot = (acb(0, 2) * arb.pi() * branch / 3).exp()
     x0 = lambda tt: ((A3.log() - acb(re_s, -arb(tt)).log()) / 3).exp() * rot
     # arguments on the tail: arg w in [-pi/2 - atan(|Re tau*|/tM), -pi/2] (Re tau* < 0), principal
     dw = (abs(re_s) / arb(tM)).atan()
     aw = -arb.pi() / 2 - dw / 2 + arb(0, arb((dw / 2).upper()))
     axi = (A3.arg() - aw) / 3 + 2 * arb.pi() * branch / 3 + K.c.arg() + arb(0, arb(arb(eps).asin().upper()))
-    out = dict(margin=float(margin.lower()), epp=float((e0 / (3 * br)).upper()) if br > 0 else float('inf'),
+    out = dict(margin=float(margin.lower()), epp=_fup(e0 / (3 * br)) if br > 0 else float('inf'),
                tM=tM, XM=float(XM.upper()), arg_xi_over_pi=[float((axi / arb.pi()).lower()), float((axi / arb.pi()).upper())],
                abs_xi_max=float((up(K.c) * XB).upper()), re_tau_star_negative=bool(re_s < 0), x0=x0, eps=eps)
     if cores:
@@ -1228,9 +1227,10 @@ class ModelEngine:
     def inv0(self, xc, r, Rp):
         xp = xc + _disc0(r)
         x = xp * (-(1 - 3 * xp * xp * xp).log() / 3).exp()
-        c = _mid(x); rr = float(_radc(x).upper()) * (1 + 1e-9) + 1e-300
+        c = _mid(x); rr = _assert_up(float(_radc(x).upper()) * (1 + 1e-9) + 1e-300, _radc(x))
         q = self.enc(c, rr, 0)
-        return c, rr, float(((arb(Rp) + _up(q['E'])) / arb(abs(q['mu0']).lower())).upper()) * (1 + 1e-9)
+        rho = (arb(Rp) + _up(q['E'])) / arb(abs(q['mu0']).lower())
+        return c, rr, _assert_up(float(rho.upper()) * (1 + 1e-9), rho)
 
 
 def _fup(v):
@@ -1238,11 +1238,20 @@ def _fup(v):
     return _assert_up(float(arb(v).upper()) * (1 + 1e-12), v)
 
 
+def _fdn(v):
+    """A float lower bound of the positive ball v, machine-checked."""
+    f = float(arb(v).lower()) * (1 - 1e-12)
+    if not arb(f) <= arb(v):
+        raise ArithmeticError('float lower bound not verified')
+    return f
+
+
 def _leg_data(eng, X, D):
     xc, rx = X; dc, rd = D
     ds = arb((_up(dc) + rd).upper())
-    q = eng.enc(xc, _fup(rx), float(ds.upper()))
-    qc = eng.enc(xc, 0.0, float(ds.upper()))
+    rho = _fup(ds)                      # the fibre radius of the enclosures: a checked upper bound of sup |d|
+    q = eng.enc(xc, _fup(rx), rho)
+    qc = eng.enc(xc, 0.0, rho)
     return q, qc
 
 

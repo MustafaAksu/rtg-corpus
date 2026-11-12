@@ -1,6 +1,6 @@
 # DYAD OPEN 20 (analytic branch) — stage 3c-a: hand-over (W8)
 
-**Date:** 12 November 2026. **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It closes stage 3c-a as a set of development and working records. **It is not a certificate and it makes no statement about the jump, about divergence, or about B-an and B-6.**
+**Date:** 12 November 2026 (r2 of the same day, after review `5875142356`). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It closes stage 3c-a as a set of development and working records. **It is not a certificate and it makes no statement about the jump, about divergence, or about B-an and B-6.**
 **Authority:** PI decision of 11 November 2026 for stage 3c-a (`records/dyad/DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §1). **Stage 3c-b (a certification run) is not authorized.** Whether to authorize it is the PI's decision; this record states what such a run would consist of and what it could and could not claim.
 **Governing edition:** DYAD v6.4.24. OPEN 20 B-an and B-6 are ACTIVE.
 
@@ -59,7 +59,7 @@ bash evidence/dyad/open20-an/stage3c-a/run_w5.sh      # the arc
 bash evidence/dyad/open20-an/stage3c-a/run_w8.sh      # legs with --full-fibre --strict-snd; inverse branch with --strict-e; controls
 ```
 
-About 85 minutes on two cores. `run_w6.sh` is the earlier form of the legs and is superseded by the legs part of `run_w8.sh`. For a certification package the eight scripts would be wrapped in one command with one checksum file; that wrapper is not written, because it belongs to the authorized run.
+About 100 minutes on two cores. `run_w6.sh` is the earlier form of the legs and is superseded by the legs part of `run_w8.sh`. For a certification package the eight scripts would be wrapped in one command with one checksum file; that wrapper is not written, because it belongs to the authorized run.
 
 ## 5. Obligations of the design, at hand-over
 
@@ -76,19 +76,25 @@ About 85 minutes on two cores. `run_w6.sh` is the earlier form of the legs and i
 | P9 | Domain and arc | W5; proof record §8 | development run; (Q1) belongs to the seed, open |
 | P10 | Fibre enclosures and the two-disc test | W6, W8 (`--full-fibre`); proof record §9 | development run; the method differs from the design's step 3 and was accepted as the development approach (review `5872115882`) |
 | P11 | Negative controls | ZEROJUMP, SHORT (legs); ALPHA, BRANCH (zone I); LOGBRANCH (arc) | all four controls of the design exist |
-| L1–L3 | López-Hernanz 2012, Theorems 4.2(3) and 5.1 | `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md` | **open at LIT** |
+| L1–L3 | López-Hernanz 2012, Theorems 4.2(3) and 5.1 | request `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md` (closed by LIT on 12 Nov, pointing to the reply); LIT's reply `pipes/DYAD/20261112-LIT-lh2012-thm42-use-check.md` | **reply received, not yet dispositioned by the owner** (source cut below) |
+
+**Source cut for L1–L3** (the pipe item as it stands on rtg-corpus `main` at `e3fafc8`, unchanged since `8f72092`; it names LIT's report at rtg-lit `a3628d4`; the owner has read the pipe item, not yet the report):
+- *L3 (use of Theorem 4.2(3)):* LIT finds that it holds as used. It is uniqueness among all holomorphic invariant graphs in the class, on a sufficiently small petal (condition C1: existential, explicit and very small in LIT's INF-010), for a graph that is in the class there (C2: analytic with S = O(ξ²)); the graph then extends by the identity theorem. The same holds for F⁻¹ in the rotated chart of D5.
+- *L1 (use of Theorem 5.1):* uniform asymptotics on closed subsectors at every finite order hold as used, conditionally on Theorem 4.2(1) and Proposition 5.3 as read (called C3 in the co-owner's comment `6824805211`); the propagation to closed subsectors is supplied by a separate k = 3 proof in rtg-lit and by a published theorem (Jiménez-Garrido, Sanz, Schindl 2020, Theorem 5.2).
+- *Limits stated by LIT:* a check of use, not a validation of the design; it supplies no value of any constant; it does not cover P1, P3–P11. **It does not prove the seed of the tube.** (The sender's dated correction of one sentence about constants is open as PR #246; it does not change the finding.)
+- The item is `open` in the DYAD inbox: the owner's disposition and the owner's check of C1–C3 against the design are pending. Until they are recorded, nothing of the reply is used here. The earlier text of this record ("open at LIT") described the state at the W8 commit `2dbaaa1`; it is replaced, not kept beside the new state, and git holds the earlier wording.
 
 The five conditions recorded in the design (§12 there) before a certification run can claim anything:
 
 | # | Condition | State |
 |---|---|---|
-| 1 | LIT's verdict on L3, or an independent proof | **open** |
+| 1 | LIT's verdict on L3, or an independent proof | LIT supplied a conditional verdict of use (C1, C2; for L1 also C3); **the owner's disposition and check of C1–C3 are open** |
 | 2 | A quantified proof of the seed (Q1, Q2) and the full zone-I bounds | zone I: done as a development run with its derivation; **the seed: open** |
 | 3 | Certified guard property and cover of (A), (B) on zone II for both sectors | scripts and development runs exist; a certified run is 3c-b |
 | 4 | Certified tail of the arc and validated compact continuation | script and development run exist |
 | 5 | Rigorous transport and inverse, and disjoint enclosures | script and development run exist; the inverse branch is proved under INJ, SRC, SRC1 |
 
-**Conditions 1 and 2 (seed) are not met.** Until they are, a run of §4 could at most certify the *computational* statements (zones, arc, enclosures, two-disc test) under the stated hypotheses. It could not by itself give the divergence of the formal branch.
+**Condition 2 (the seed) is not met, and condition 1 is not closed.** Until they are, a run of §4 could at most certify the *computational* statements (zones, arc, enclosures, two-disc test) under the stated hypotheses. It could not by itself give the divergence of the formal branch.
 
 ## 6. What a certificate could and could not say
 
@@ -105,9 +111,16 @@ The five conditions recorded in the design (§12 there) before a certification r
 4. **Control "wrong branch"** (zone-I script, `--control BRANCH`): the other root of the quadratic for a₂ gives a second valid formal curve, with consistent structural zeros. Against the tube data of the pilot branch it is rejected: the first functional *decreases* along its orbits (Re Δτ ≈ −1.1), so (A1) and (B) fail on both sides.
 5. **Proof record:** §4.3 step 1 now derives |E(x₀)| below the tube radius from the checked inequality itself and from the new `--strict-e` check; §10 refers to the machine checks.
 
+6. **r2 (review `5875142356`).**
+   - *R1.* `_leg_data` passed the fibre radius of the enclosures as a float rounded to nearest, which can lie below the bound by one unit in the last place. Both calls now use `_fup`, a float upper bound checked in ball arithmetic. The leg and the two-disc test were recomputed (plan record §5, W8 r2).
+   - *The same defect elsewhere.* Every conversion of a ball to a float in the library and in the scripts of W3–W7 was read again. Corrected in the same way (`_fup`, `_fdn`): the fibre radius handed to the tube step and to the local inverse lemma in `piece_check`; the fibre radius of zone I; t_M and the relative bound of the arc tail (gate TAIL); the bounds of sup|b₀′ − 1| (gate INJ); the source discs recorded for SRC and SRC1. The zone-I part of SRC1 was decided in float arithmetic and is now decided in ball arithmetic. Where a margin factor was present but unchecked, the check was added and the value kept: the radius of the disc of zone I, the inner disc of INJ, the two radii of the model engine of control ZEROJUMP.
+   - *Left as they are, with the reason:* floats that define a disc, a time or a sector (they enter Arb exactly); floats of the non-rigorous searches of the local inverse (the result is verified with the same floats); floats used only for their sign; printed values; the quality thresholds on tails and on vanishing coefficients (proof record §10); the routing test of the covers (it selects which rigorous test is applied, and the engine checks its own range); the default form of `leg_G`, which is kept only so that the W6 run can be replayed and is superseded by `full_fibre=True`. The scripts of W1, W2a and W2b test the engine against independent values and were not changed.
+   - *R2.* `run_w8.sh` records the exit code of every positive process under a name and accepts the run only if each of the ten names occurs once with code 0 and every replay is byte-identical. The rule has its own control: a replay of W5 that writes the committed file and then exits 1 must be, and is, rejected. On an unexpected result the work files are kept.
+   - *Run again with the corrected library:* the legs, both zone-II covers, both branch runs, W2a, W2b, zone I, the arc, and the controls ZEROJUMP and BRANCH.
+
 ## 8. Open at hand-over
 
-- L1–L3 at LIT; the seed (Q1–Q3); P4. These decide whether anything can be claimed (§5).
+- The owner's dispositions of the two open inbox items (LIT's reply on L1–L3; LIT's offer of INF-016); the seed (Q1–Q3); P4. These decide whether anything can be claimed (§5).
 - The triangular form of the recursion behind S4 is taken from the stage-1 and stage-2 records.
 - Analyticity of the new δ in the base variable in the Rouché step is stated as standard, not written out.
 - No REVIEWER-REPLAYED run exists.

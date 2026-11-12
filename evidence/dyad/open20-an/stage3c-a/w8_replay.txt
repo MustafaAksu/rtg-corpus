@@ -1,6 +1,13 @@
 identical: w3_zone2_F.json
+identical: w3_zone2_G.json
+identical: w7_branch.json
 identical: w6_legs.json
 identical: w2b_check.json
 identical: w2_check.json
 identical: w4_zone1.json
 identical: w5_arc.json
+identical: w6_control_ZEROJUMP.json
+exit codes: w3F 0 w3G 0 w7branch 0 branch 0 legs 0 w6legs 0 w2 0 w4 0 w5 0 w2b 0 
+control ZEROJUMP (replay) exit code: 1 (expected 1)
+control BRANCH exit code: 1 (expected 1)
+rule control: a replay with identical output (yes) and exit code 1 is rejected (expected: rejected)
