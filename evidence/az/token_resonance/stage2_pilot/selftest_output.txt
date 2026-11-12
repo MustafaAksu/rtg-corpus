@@ -1,0 +1,10 @@
+N=120 k=8 T=800 base=0: pilot M=44 births=40 | runner BASE M=44 births=40 | equal
+N=120 k=8 T=800 base=1: pilot M=38 births=34 | runner BASE M=38 births=34 | equal
+N=120 k=8 T=800 base=2: pilot M=51 births=47 | runner BASE M=51 births=47 | equal
+N=120 k=8 T=800 base=3: pilot M=43 births=39 | runner BASE M=43 births=39 | equal
+N=242 k=16 T=300 base=0: pilot M=32 births=28 | runner BASE M=32 births=28 | equal
+N=242 k=16 T=300 base=1: pilot M=32 births=28 | runner BASE M=32 births=28 | equal
+N=242 k=16 T=300 base=2: pilot M=4 births=0 | runner BASE M=4 births=0 | equal
+N=242 k=16 T=300 base=3: pilot M=28 births=24 | runner BASE M=28 births=24 | equal
+pilot seed differs from the Stage 1 seed of the same index: True
+RESULT: PASS
