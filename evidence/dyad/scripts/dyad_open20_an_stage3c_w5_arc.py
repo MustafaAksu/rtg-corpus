@@ -24,6 +24,8 @@ Controls (each must exit 1 at the named gate):
   --control BIGSTEP   segments 1.5 times longer than the step rule            -> CHAIN (LINK and SND fail with it)
   --control CORE      the core of Omega_0 cut to arg xi <= 0.16 pi           -> CHAIN (and TAIL)
   --control BRANCH    the tail uses another cube root                        -> TAIL, LINK (and SND)
+  --control LOGBRANCH tau of D1 on another branch of the logarithm (tau + 2 pi i kappa) against the walls of the
+                      principal branch (design P11)                           -> WEDGE
 Usage: python3 -I -B dyad_open20_an_stage3c_w5_arc.py --out OUT.json [--control NAME]
 """
 import os, sys, json, argparse
@@ -38,7 +40,7 @@ XI_M, EPS_TAIL, EPS_CHAIN, STEP = '0.04', 0.03, 0.02, 0.8
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--out', required=True); ap.add_argument('--control', choices=['BIGSTEP', 'CORE', 'BRANCH'])
+    ap.add_argument('--out', required=True); ap.add_argument('--control', choices=['BIGSTEP', 'CORE', 'BRANCH', 'LOGBRANCH'])
     o = ap.parse_args()
     g, info = {}, {}
     ctx.dps = 400
@@ -48,6 +50,9 @@ def main():
     TB = [L.Tube(K, TAU, 0), L.Tube(K, TAU, 1)]
     if o.control == 'CORE':
         TB[0].core = (TB[0].core[0], TB[0].core[1], arb('0.16'))
+    if o.control == 'LOGBRANCH':
+        tau_principal = TB[1].tau
+        TB[1].tau = lambda x: tau_principal(x) + acb(0, 2) * arb.pi() * TAU[3]
     xs = acb('0.4') * (acb(0, 1) * arb.pi() / 6).exp() / K.c
     f0, s0 = TB[0].functionals(xs); f1, s1 = TB[1].functionals(xs)
     g['WEDGE_conditions_along_the_half_line'] = bool(

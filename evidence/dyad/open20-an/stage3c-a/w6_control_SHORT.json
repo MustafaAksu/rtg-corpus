@@ -1,0 +1,112 @@
+{
+ "all_pass": false,
+ "control": "SHORT",
+ "gates": {
+  "ENG_engine": true,
+  "G0_stage2_input": true,
+  "LEGF_leg_F": true,
+  "LEGG_leg_G": true,
+  "SEP_two_disc_test": false,
+  "SND_independent_values": true
+ },
+ "info": {
+  "ENG": {
+   "remainder_constants": [
+    {
+     "M3": 109.39,
+     "MZ3": 65.437,
+     "X": 0.9,
+     "rho": 0.02,
+     "theta": 0.12988
+    },
+    {
+     "M3": 680.86,
+     "MZ3": 117.37,
+     "X": 1.03,
+     "rho": 0.02,
+     "theta": 0.21767
+    }
+   ]
+  },
+  "LEGF_leg_F": {
+   "centre": [
+    "-4.31673058567480613474393922204e-9",
+    "1.99337774863906606725927521559e-8"
+   ],
+   "end_of_orbit": {
+    "a_priori_radius": 8.028e-07,
+    "abs_xi": 0.28868,
+    "arg_over_pi": 0.01851,
+    "relative_radius_of_X": 1.3e-06
+   },
+   "every_disc_in_the_core": true,
+   "radius": 2.04684e-07,
+   "radius_after_each_round": [
+    1.557e-05,
+    2.06e-07,
+    2.047e-07,
+    2.047e-07,
+    2.047e-07
+   ],
+   "rounds": 5,
+   "steps": 10
+  },
+  "LEGG_leg_G": {
+   "centre": [
+    "4.04470838275404979612991597461e-9",
+    "2.28690511280202952305551074316e-9"
+   ],
+   "end_of_orbit": {
+    "a_priori_radius": 3.782e-06,
+    "abs_xi": 0.29188,
+    "arg_over_pi": 0.2641,
+    "relative_radius_of_X": 6.39e-06
+   },
+   "every_disc_in_the_core": true,
+   "radius": 3.17337e-07,
+   "radius_after_each_round": [
+    3.688e-07,
+    3.25e-07,
+    3.174e-07,
+    3.173e-07,
+    3.173e-07
+   ],
+   "rounds": 5,
+   "steps": 10
+  },
+  "SEP": {
+   "abs_c1_minus_c0": [
+    1.952756427e-08,
+    1.952756427e-08
+   ],
+   "c1_minus_c0": [
+    "8.3614389684288559309e-9",
+    "-1.7646872373588631150e-8"
+   ],
+   "gap": -5.02494e-07,
+   "note": "development output; no statement about the jump is drawn from it",
+   "r0_plus_r1": 5.22022e-07
+  },
+  "SND": {
+   "abs_difference": "1.952756045e-8",
+   "leg_F": {
+    "base_error": 1.49e-66,
+    "distance_to_centre": 3.116e-15,
+    "value": [
+     "-4.31673035579427e-9",
+     "1.99337743786725e-8"
+    ]
+   },
+   "leg_G": {
+    "base_error": 7.57e-70,
+    "distance_to_centre": 1.164e-15,
+    "value": [
+     "4.04470865235936e-9",
+     "2.28690624522764e-9"
+    ]
+   }
+  }
+ },
+ "script": "dyad_open20_an_stage3c_w6_legs.py",
+ "status": "stage 3c-a development run; not a certificate; no statement about the jump is drawn"
+}
