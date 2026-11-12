@@ -984,3 +984,109 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02):
             m2 = (phi - th0).cos().lower()
         out[name] = float(arb(m1).max(arb(m2)).lower())
     return out
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Work package W5: the common arc  tau(gamma(t)) = Re tau* - i t,  t >= t* = -Im tau*,  gamma(t*) = xi*  (in x = xi/c).
+#
+# Inverse function step used twice.  Let f be analytic on a closed disc B = {|x - c| <= r} with
+#   m = |f'(c)| - r sup_B |f''| > 0.
+# Then |f(a) - f(b)| >= m |a - b| on B (f is injective there), and every w with |w - f(c)| < r m has exactly one
+# preimage in the open disc (Rouche against f'(c)(x - c) + f(c) - w).
+def _tau_derivs(TAU, x):
+    """tau'(x), tau''(x) for the four-term tau (x a ball away from 0)."""
+    A3, A2, A1, KA = TAU
+    ix = 1 / x
+    d1 = (((-3 * A3 * ix - 2 * A2) * ix - A1) * ix + KA) * ix
+    d2 = (((12 * A3 * ix + 6 * A2) * ix + 2 * A1) * ix - KA) * ix * ix
+    return d1, d2
+
+
+def arc_chain(K, TAU, t_end, eps=0.02, step=0.8, cores=None, max_segments=5000):
+    """Validated continuation of the arc from t* to at least t_end, by discs B_k = {|x - x_k| <= eps |x_k|}.
+    For segment k (t_k <= t <= t_k+1, t_k+1 = t_k + step * r_k m_k as floats) it is checked that
+      m_k > 0 and  |tau(x_k) - w(t_k)| + (t_k+1 - t_k) < r_k m_k           (one solution in B_k for every t of the segment),
+      x_k+1 in B_k with |x_k+1 - x_k| + |tau(x_k+1) - w(t_k+1)|/m_k < r_k,  and  |tau(x_k+1) - w(t_k+1)|/m_k < r_k+1
+                                                                           (the solutions of consecutive segments agree),
+      B_k lies in the guard core of each Tube in `cores`.
+    x_0 is the exact starting point x* = xi*/c (a ball); the later centres are Newton approximations, rounded to points.
+    Returns dict(ok, segments, t_reached, why, discs=[(t_k, t_k+1, x_k, r_k)], last=(x_K, t_K, bound on |gamma(t_K) - x_K|))."""
+    tau = Tube(K, TAU, 0).tau
+    xs = acb('0.4') * (acb(0, 1) * arb.pi() / 6).exp() / K.c
+    ts = tau(xs); re_s = ts.real; t = float((-ts.imag).mid())
+    w = lambda tt: acb(re_s, -arb(tt))
+    xk = acb(xs.real.mid(), xs.imag.mid())
+    res = _up(tau(xk) - w(t))                     # includes the rounding of x* and of t*
+    discs = []
+    for k in range(max_segments):
+        r = eps * float(abs(xk).mid())
+        ball = xk + acb(arb(0, r), arb(0, r))
+        d1c, _ = _tau_derivs(TAU, xk); _, d2b = _tau_derivs(TAU, ball)
+        m = arb(abs(d1c).lower()) - arb(r) * _up(d2b)
+        if not m > 0:
+            return dict(ok=False, why='m <= 0', segments=k)
+        if cores and not all(TB.in_core(ball) is True for TB in cores):
+            return dict(ok=False, why='disc not in the guard cores', segments=k, t=t)
+        t1 = t + step * float((arb(r) * m).lower())
+        if not res + arb(t1) - arb(t) < arb(r) * m:
+            return dict(ok=False, why='segment not covered', segments=k, t=t)
+        x1 = xk
+        for _ in range(6):                        # Newton for tau(x) = w(t1), non-rigorous
+            d1, _ = _tau_derivs(TAU, x1)
+            x1 = x1 - (tau(x1) - w(t1)) / d1
+            x1 = acb(x1.real.mid(), x1.imag.mid())
+        res1 = _up(tau(x1) - w(t1))
+        r1 = eps * float(abs(x1).mid())
+        if not (_up(x1 - xk) + res1 / m < arb(r) and res1 / m < arb(r1)):
+            return dict(ok=False, why='link to the next disc', segments=k, t=t)
+        discs.append((t, t1, xk, r))
+        last = (x1, t1, arb((res1 / m).upper()))
+        xk, t, res = x1, t1, res1
+        if t >= t_end:
+            return dict(ok=True, segments=k + 1, t_reached=t, discs=discs, last=last, why=None, t_star=float((-ts.imag).mid()))
+    return dict(ok=False, why='too many segments', segments=max_segments)
+
+
+def arc_tail(K, TAU, xi_M, eps=0.03, cores=None, branch=0):
+    """The arc for all large t.  For w = Re tau* - i t put x0(w) = exp((log A3 - log w)/3 + 2 pi i branch/3)
+    (principal logs; branch 0 is the one with arg xi near pi/6), so that A3 x0^-3 = w and |x0| = (|A3|/|w|)^(1/3).
+    With XM = xi_M/|c| and sup bounds for |x| <= XB = (1 + eps) XM:
+        tau   = A3 x^-3 (1 + eta),         |eta|  <= e0 = (|A2| x + |A1| x^2 + |kappa| x^3 (|ln x| + pi)) / |A3|
+        tau'  = -3 A3 x^-4 (1 + eta1),     |eta1| <= e1 = (2|A2| x + |A1| x^2 + |kappa| x^3) / (3|A3|)
+        tau'' = 12 A3 x^-5 (1 + eta2),     |eta2| <= e2 = (6|A2| x + 2|A1| x^2 + |kappa| x^3) / (12|A3|)
+    the inverse function step on B = {|x - x0| <= eps |x0|} needs
+        |tau(x0) - w| = |w| |eta(x0)| <= |A3| |x0|^-3 e0  <  eps |x0| * 3 |A3| |x0|^-4 (1 - e1 - 4 eps (1 + e2)/(1 - eps)^5),
+    that is   margin = 3 eps (1 - e1 - 4 eps (1 + e2)/(1 - eps)^5) - e0 > 0   (all bounds increase with |x|).
+    Then for every t with |x0(w(t))| <= XM, i.e. t >= tM, there is exactly one solution gamma(t) in B; it depends
+    analytically on w, |gamma(t)| <= (1 + eps)(|A3|/|w|)^(1/3) -> 0, and
+        |gamma(t) - x0| <= epp |x0|,  epp = e0 / (3 (1 - e1 - 4 eps (1 + e2)/(1 - eps)^5)) < eps.
+    Returns dict(margin, epp, tM, XM, arg range of xi on the tail (units of pi), in_cores, x0 function)."""
+    A3, A2, A1, KA = TAU
+    up = _up
+    lo = lambda v: arb(abs(v).lower())
+    XM = arb(xi_M) / lo(K.c); XB = XM * (1 + arb(eps))
+    e0 = (up(A2) * XB + up(A1) * XB ** 2 + up(KA) * XB ** 3 * (abs(XB.log()) + arb.pi())) / lo(A3)
+    e1 = (2 * up(A2) * XB + up(A1) * XB ** 2 + up(KA) * XB ** 3) / (3 * lo(A3))
+    e2 = (6 * up(A2) * XB + 2 * up(A1) * XB ** 2 + up(KA) * XB ** 3) / (12 * lo(A3))
+    br = 1 - e1 - 4 * arb(eps) * (1 + e2) / (1 - arb(eps)) ** 5
+    margin = 3 * arb(eps) * br - e0
+    tau = Tube(K, TAU, 0).tau
+    ts = tau(acb('0.4') * (acb(0, 1) * arb.pi() / 6).exp() / K.c); re_s = ts.real
+    wmin = lo(A3) / XM ** 3                                    # |w| >= wmin  <=>  |x0| <= XM
+    tM = float((wmin ** 2 - re_s ** 2).sqrt().upper()) * (1 + 1e-12)
+    rot = (acb(0, 2) * arb.pi() * branch / 3).exp()
+    x0 = lambda tt: ((A3.log() - acb(re_s, -arb(tt)).log()) / 3).exp() * rot
+    # arguments on the tail: arg w in [-pi/2 - atan(|Re tau*|/tM), -pi/2] (Re tau* < 0), principal
+    dw = (abs(re_s) / arb(tM)).atan()
+    aw = -arb.pi() / 2 - dw / 2 + arb(0, arb((dw / 2).upper()))
+    axi = (A3.arg() - aw) / 3 + 2 * arb.pi() * branch / 3 + K.c.arg() + arb(0, arb(arb(eps).asin().upper()))
+    out = dict(margin=float(margin.lower()), epp=float((e0 / (3 * br)).upper()) if br > 0 else float('inf'),
+               tM=tM, XM=float(XM.upper()), arg_xi_over_pi=[float((axi / arb.pi()).lower()), float((axi / arb.pi()).upper())],
+               abs_xi_max=float((up(K.c) * XB).upper()), re_tau_star_negative=bool(re_s < 0), x0=x0, eps=eps)
+    if cores:
+        ok = True
+        for TB in cores:
+            rad, clo, chi = TB.core
+            ok = ok and bool(up(K.c) * XB <= rad and axi / arb.pi() >= clo and axi / arb.pi() <= chi)
+        out['in_cores'] = ok
+    return out

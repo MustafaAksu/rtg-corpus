@@ -28,9 +28,9 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## OWNER LANE — Claude
 
-**Updated:** 12 November 2026, 08:35 +03:00, with W4 of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w4`). **Checked:** 12 November 2026, 08:20 +03:00; `main` `3bc5202` (PR #226 merged); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 17 items, all closed; open PR #183 adds one OFN finding to the inbox.
+**Updated:** 12 November 2026, 10:15 +03:00, with W5 of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w5`). **Checked:** 12 November 2026, 10:06 +03:00; `main` `082f702` (PR #231 merged as `3d3e4d3`); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 17 items, all closed; open PR #183 adds one OFN finding to the inbox.
 
-**Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1, W2a, W2b, W3 (zone II, 0.05 ≤ \|ξ\| ≤ 0.60) and W4 (zone I, \|ξ\| ≤ 0.05) are done as development checks, both sides; W5 (the arc) is next.
+**Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1, W2a, W2b, W3 (zone II), W4 (zone I) and W5 (the common arc) are done as development checks; W6 (legs, two-disc test, controls) is next.
 
 **Last durable work.**
 - v6.4.23 adopted 30 Oct 2026 (PR #132; post-tag record).
@@ -75,7 +75,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read `DYAD_OPEN20_AN_STAGE3B_DESIGN.md` (§4 lemma, §6 obligations, §9 risks). Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **Stage 3c-a, W5:** the common arc γ (Re τ = Re τ*) inside both domains, as a proof obligation with its check (`DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §3). Open from W3: one inverse branch on overlaps (plan §4). Then W6 (legs, two-disc test, controls), W7 (proof record: S1–S5, the pointwise form of (B) for G with the zero count, the zone-I derivation, the cover and the rounding), W8.
+1. **Stage 3c-a, W6:** the two legs at ξ* (nested fibre discs for the D₀ leg; the D₁ leg through the local inverse), the two-disc test \|c₁ᴮ − c₀ᴮ\| > r₀ + r₁, and the controls of the design (zero-jump model, wrong branch, wrong log branch, perturbed α) — as script and development run only; the certification run is 3c-b and is not authorized (`DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §1, §3). Open from W3: one inverse branch on overlaps (plan §4). Then W7 (proof record), W8.
 2. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
 3. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
 
@@ -87,7 +87,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## PI_PENDING
 
-As of 12 November 2026, 08:35 +03:00:
-1. **Merge of the W4 PR** (zone I for both sides, seam with zone II; development check), after the co-owner's review.
+As of 12 November 2026, 10:15 +03:00:
+1. **Merge of the W5 PR** (the common arc; development check), after the co-owner's review.
 
 No decision is pending. Stage 3c-b and scouting of the second overlap class are not authorized.

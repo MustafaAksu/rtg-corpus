@@ -1,0 +1,6 @@
+CHAIN_validated_continuation FAIL
+LINK_chain_meets_tail FAIL
+SND_independent_continuation FAIL
+TAIL_unique_solution_for_large_t PASS
+WEDGE_conditions_along_the_half_line PASS
+RESULT FAIL (control BIGSTEP) | development run; not a certificate
