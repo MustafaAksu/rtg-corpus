@@ -1,6 +1,6 @@
 # Discrete Genesis (TDR-G) v2.12.15 — Release Record
 
-**Status:** DRAFT, round 2. The candidate is rebuilt with the two corrections of the ChatGPT co-owner's change-focused review (§3a) and checked. The atlas owner's row check accepts it for adoption (atlas side); it awaits the PI's decision on a round-2 readback and the PI's adoption.
+**Status:** ADOPTED by the PI on 12 November 2026 (§11), on the bytes `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64`. The merge commits and the annotated tag `tdrg-v2.12.15` are still to be made; until the tag exists, the governing edition stays `tdrg-v2.12.14`.
 **Date:** 12 November 2026
 **Prepared by:** Claude, TDR-G co-owner session `claude01SKePJ` (branch `claude/tdrg-v2-12-15-stage1`).
 **Edition:** v2.12.15, a scientific scope edition built in one stage. Methodology v1.2 stays as declared; there is no layout compaction and nothing is rerun. The Methodology v1.4 migration remains v2.13.
@@ -17,9 +17,10 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | ChatGPT co-owner | triage and review of 12 Nov 2026, relayed in the session; its agreement and its requested limits (N4 as a scope correction, TDR-6 PARTIAL, evidence scope) are recorded in §7 of the owner record | not a repository record |
 | PI decision | "v2.12.15 bilimsel sürümü başlatılabilir"; "OFN v0.11 ve AZ v0.7 bildirimlerini `no action` ile kapatılabilir"; "PR 243 merge edildi" (12 Nov 2026, 16:37 +03:00, in the session) | given |
 | Change-focused review | ChatGPT co-owner: `records/tdrg/TDRG_v2_12_15_CHATGPT_CHANGE_FOCUSED_REVIEW_20261112.md` on PR #250 (head `91d510a2`, open at the time of round 2); GitHub review `5875732026` on PR #248. Verdict CONDITIONAL PASS on the round-1 candidate `429a57f2…4f19`: R1 required, R2 nonblocking in the same round | conditions applied in round 2 (§3a) |
-| Round-2 readback | ChatGPT co-owner, on the round-2 bytes (R1, R2 and the owner's extension of R1, §3a) | recommended by the row check (§4.2); the PI decides whether to wait for it — *(to be filled)* |
-| Row check and rerun | atlas owner: `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_12_15.md` and `evidence/atlas/rowcheck/tdrg_v2_12_15/` on PR #252 (open). The rebuild, the gates and the controls are byte-identical; the 32 edits are read against the decisions; the §6.13 proofs are checked by hand | ACCEPT FOR ADOPTION (atlas side), with one publication condition (PR not mergeable, `pipes/TDRG/INDEX.md`) and one recommendation (round-2 readback). The condition is met: `main` was merged into #247 and #247 into this branch, and the indexes were regenerated (§10) |
-| Adoption, merge commit, tag `tdrg-v2.12.15` | PI | *(to be filled)* |
+| Round-2 readback | ChatGPT co-owner, on head `9b82993` (DSN `1e35be54…2e64`): GitHub reviews `5876282524` and `5876326403` on PR #248; addendum §6 of the review record on PR #250 (head `70ed8e9b`) | PASS: R1 closed, including the owner's extension (E10, E13, E18); R2 closed. The addendum also gives the one-line reason the row check asked for: the $N=24$ pair has equal $D$ but different signed-class sets, so $\mathcal I(X)$ is not a function of $D$. The DSN bytes are unchanged. |
+| Row check and rerun | atlas owner: `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_12_15.md` and `evidence/atlas/rowcheck/tdrg_v2_12_15/` on PR #252 (head `8d47b1e7`, with a follow-up noting the condition and the recommendation met). The rebuild, the gates and the controls are byte-identical; the 32 edits are read against the decisions; the §6.13 proofs are checked by hand | ACCEPT FOR ADOPTION (atlas side), with one publication condition (PR not mergeable, `pipes/TDRG/INDEX.md`) and one recommendation (round-2 readback). The condition is met: `main` was merged into #247 and #247 into this branch, and the indexes were regenerated (§10) |
+| Adoption | PI: "benimsiyorum" (12 Nov 2026, 18:39 +03:00, in the session), given on the candidate `1e35be54…2e64` after the row check and with the round-2 readback | given (§11) |
+| Merge commits, tag `tdrg-v2.12.15` | PI | *(to be filled after the tag)* |
 
 ## 2. Identities
 
@@ -138,16 +139,25 @@ Net change: +17,359 bytes (+9.7 %), almost all of it the new §6.13 and the TDRG
 |---|---|---|---|
 | 1 | Change-focused review | ChatGPT co-owner | CONDITIONAL PASS (PR #250); R1 and R2 applied, §3a |
 | 2 | Row check and rerun | atlas owner | ACCEPT FOR ADOPTION (atlas side), PR #252; publication condition met |
-| 2a | Round-2 readback (optional) | ChatGPT co-owner | *(PI decides)* |
-| 3 | Adoption decision (§11) | PI | *(to be filled)* |
-| 4 | Merge commits (not squash): #247, then #250 (the review record cited in §1), then this PR; #252 at any time | PI | *(to be filled)* |
+| 2a | Round-2 readback | ChatGPT co-owner | PASS (reviews `5876282524`, `5876326403`; PR #250 §6) |
+| 3 | Adoption decision (§11) | PI | given, 12 Nov 2026 |
+| 4 | Merge commits (not squash): #247, #250, #252 (the records cited in §1), then this PR | PI | *(to be filled)* |
 | 5 | Annotated tag `tdrg-v2.12.15` on the merge commit of this PR, with the candidate SHA-256 in the message | PI | *(to be filled)* |
 | 6 | `BASELINE.md` TDRG row | this branch: row entered | entered |
 | 7 | Notices (§8); close the three dispositioned items | TDR-G co-owner, after the tag | *(to be filled)* |
 
 ## 11. Adoption decision
 
-*(to be filled by the PI)*
+The PI adopts Discrete Genesis v2.12.15 on 12 November 2026: "benimsiyorum" (18:39 +03:00, in the session).
+
+- **Bytes adopted:** `dsn/RTG_DISCRETE_GENESIS_DSN.md`, SHA-256 `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64`, 196,268 bytes. These are the bytes of the candidate as built and checked; no publication transform.
+- **Basis:**
+  - the PI's decision to start the edition (16:37);
+  - the ChatGPT co-owner's change-focused review, CONDITIONAL PASS, with R1 and R2 applied in round 2 (§3a);
+  - the atlas owner's row check, ACCEPT FOR ADOPTION, with its condition met;
+  - the ChatGPT co-owner's round-2 readback, PASS.
+- **Status after adoption:** TDR-6 stays ACTIVE — PARTIAL. Whether the signed-class set is a purely relational observable stays open.
+- **Governing edition:** this edition governs from the annotated tag `tdrg-v2.12.15` on the merge commit of PR #248. Until then `tdrg-v2.12.14` governs.
 
 ## 12. Open items carried forward
 
