@@ -32,6 +32,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--stage2', required=True); ap.add_argument('--w3', required=True); ap.add_argument('--out', required=True)
     ap.add_argument('--control', choices=['SMALLSECTOR'])
+    ap.add_argument('--strict-e', action='store_true', help='W8: also require sup_B |E| < the lower bound of R1 on the piece')
     o = ap.parse_args()
     raw = open(o.stage2, 'rb').read(); d2 = json.loads(raw.decode('utf-8'))
     g, info = {}, {}
@@ -44,8 +45,7 @@ def main():
     cabs = float(abs(K.c).mid()); carg = float(K.c.arg().mid())
 
     def piece(s, t, hs, ht):
-        xc = acb(arb(s - math.log(cabs)), arb(t - carg)).exp(); xc = acb(xc.real.mid(), xc.imag.mid())
-        return xc, float(abs(xc).upper()) * (math.exp(math.hypot(hs, ht)) - 1) * (1 + 1e-9)
+        return L.piece_disc(K, s, t, hs, ht)                   # with the machine check of the covering claim (W8)
 
     # ---- INJ: sup |b0' - 1| on a cover of S1 ----------------------------------------------------------------------------
     TB = L.Tube(K, TAU, 1)
@@ -91,7 +91,11 @@ def main():
             break
         cnt[st] += 1
         if st == 'pass':
-            ax, a1, a2, em, rho = inf['src']
+            ax, a1, a2, em, rho, em_lo = inf['src']
+            if o.strict_e:
+                ext['E_margin_lo'] = em_lo if ext.get('E_margin_lo') is None else min(ext['E_margin_lo'], em_lo)
+                if not em_lo > 0:
+                    bad.append(dict(abs_xi=float('%.5g' % math.exp(s)), arg_over_pi=float('%.5g' % (t / math.pi)), why='sup|E| not below R_lo'))
             ext['abs_xi'] = max(ext['abs_xi'], ax); ext['arg_lo'] = min(ext['arg_lo'], a1); ext['arg_hi'] = max(ext['arg_hi'], a2)
             ext['E_margin'] = em if ext['E_margin'] is None else min(ext['E_margin'], em)
             ext['rho'] = max(ext['rho'], rho); ext['r_over_rp'] = max(ext['r_over_rp'], inf['r_over_rp'])
@@ -107,6 +111,8 @@ def main():
                        sources=dict(largest_abs_xi=float('%.5g' % ext['abs_xi']), arg_over_pi=[float('%.5g' % ext['arg_lo']), float('%.5g' % ext['arg_hi'])],
                                     smallest_fibre_radius_minus_sup_E=None if ext['E_margin'] is None else float('%.4g' % ext['E_margin']),
                                     largest_fibre_radius_rho=float('%.5g' % ext['rho']), largest_r_over_rp=float('%.5g' % ext['r_over_rp'])))
+    if o.strict_e:
+        info['SRC']['sources']['smallest_R_lo_minus_sup_E'] = None if ext.get('E_margin_lo') is None else float('%.4g' % ext['E_margin_lo'])
 
     # ---- SRC1: zone I -----------------------------------------------------------------------------------------------------
     z = L.zone1_check(K, SER, MC, TB, str(RHO0), SIGMA, kappa=KAPPA, extra=True)

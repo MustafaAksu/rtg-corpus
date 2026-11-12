@@ -1,0 +1,57 @@
+{
+ "all_pass": true,
+ "control": null,
+ "gates": {
+  "ENG_engine": true,
+  "G0_stage2_input": true,
+  "INJ_base_map_injective_on_the_sector": true,
+  "SRC1_sources_of_zone_I_in_the_sector": true,
+  "SRC_sources_of_zone_II_in_the_sector": true
+ },
+ "info": {
+  "INJ": {
+   "attained_near": [
+    0.46536,
+    0.033176
+   ],
+   "pieces": 8362,
+   "sector": {
+    "abs_xi_max": 0.47,
+    "arg_over_pi": [
+     0.03,
+     0.5
+    ]
+   },
+   "sup_abs_b0prime_minus_1": 0.703806,
+   "sup_on_inner_disc": 0.0036333
+  },
+  "SRC": {
+   "counts": {
+    "cut": 99,
+    "out": 5884,
+    "pass": 3663
+   },
+   "counts_equal_those_of_W3": true,
+   "not_in_sector": [],
+   "not_in_sector_total": 0,
+   "sources": {
+    "arg_over_pi": [
+     0.12819,
+     0.38621
+    ],
+    "largest_abs_xi": 0.41667,
+    "largest_fibre_radius_rho": 0.0084408,
+    "largest_r_over_rp": 5.377,
+    "smallest_R_lo_minus_sup_E": 1.77e-16,
+    "smallest_fibre_radius_minus_sup_E": 1.1e-15
+   }
+  },
+  "SRC1": {
+   "relative_radius_of_the_source_disc": 0.000262,
+   "sup_E_over_R": 5.267e-30,
+   "sup_abs_b0prime_minus_1_on_the_disc": 0.0005292
+  }
+ },
+ "script": "dyad_open20_an_stage3c_w7_branch.py",
+ "status": "stage 3c-a development run; not a certificate"
+}

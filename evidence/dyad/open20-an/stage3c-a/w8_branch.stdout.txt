@@ -1,0 +1,6 @@
+ENG_engine PASS
+G0_stage2_input PASS
+INJ_base_map_injective_on_the_sector PASS
+SRC1_sources_of_zone_I_in_the_sector PASS
+SRC_sources_of_zone_II_in_the_sector PASS
+RESULT PASS  | development run; not a certificate

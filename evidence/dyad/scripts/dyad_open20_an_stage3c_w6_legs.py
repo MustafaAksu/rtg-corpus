@@ -23,6 +23,9 @@ Controls (each must exit 1 at SEP):
   --control ZEROJUMP   the zero-jump model of design P11 (lib: ModelEngine) in place of the map: the two discs must
                        overlap; both must contain the known common value, and the model curve must lie in the tube
   --control SHORT      legs of 10 steps: the discs are too wide to separate
+W8 options (the form for a certification run; the W6 development run used neither):
+  --full-fibre   leg G calls the local inverse lemma for the whole a-priori fibre (proof record 4.3)
+  --strict-snd   SND requires the independent values to lie in the discs, with no tolerance
 Usage: python3 -I -B dyad_open20_an_stage3c_w6_legs.py --stage2 scout_N216_dps840.json --out OUT.json [--control NAME]
 """
 import os, sys, json, argparse, hashlib
@@ -41,6 +44,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--stage2', required=True); ap.add_argument('--out', required=True)
     ap.add_argument('--control', choices=['ZEROJUMP', 'SHORT'])
+    ap.add_argument('--full-fibre', action='store_true'); ap.add_argument('--strict-snd', action='store_true')
     o = ap.parse_args()
     raw = open(o.stage2, 'rb').read(); d2 = json.loads(raw.decode('utf-8'))
     g, info = {}, {}
@@ -68,7 +72,7 @@ def main():
     for j, name, fn in ((0, 'LEGF_leg_F', L.leg_F), (1, 'LEGG_leg_G', L.leg_G)):
         TB = L.Tube(K, TAU, j)
         try:
-            D0, hist, X, D = fn(eng, TB, xs, n, ROUNDS)
+            D0, hist, X, D = fn(eng, TB, xs, n, ROUNDS, full_fibre=True) if (j == 1 and o.full_fibre) else fn(eng, TB, xs, n, ROUNDS)
         except (ArithmeticError, AssertionError) as e:
             g[name] = False; info[name] = dict(error=str(e) or type(e).__name__)
             continue
@@ -128,12 +132,15 @@ def main():
                 y = y - (p0 - xi_s) * h / (p1 - p0)
                 p0, dd = carry(y)
             dev = abs(dd - tomp(res[j][0]))
-            okj = abs(p0 - xi_s) < mp.mpf(10) ** (-40) and dev <= mp.mpf(float(res[j][1].upper())) + mp.mpf(10) ** (-11)
+            tol = mp.mpf(0) if o.strict_snd else mp.mpf(10) ** (-11)
+            okj = abs(p0 - xi_s) < mp.mpf(10) ** (-40) and dev <= mp.mpf(float(res[j][1].lower())) + tol
             snd = snd and bool(okj)
             out['leg_%s' % 'FG'[j]] = dict(value=[mp.nstr(dd.real, 15), mp.nstr(dd.imag, 15)],
                                            distance_to_centre=float(mp.nstr(dev, 4)), base_error=float(mp.nstr(abs(p0 - xi_s), 3)))
             out['d%d' % j] = dd
         out['abs_difference'] = mp.nstr(abs(out.pop('d1') - out.pop('d0')), 10)
+        if o.full_fibre or o.strict_snd:
+            out['options'] = dict(full_fibre=bool(o.full_fibre), strict_snd=bool(o.strict_snd))
         g['SND_independent_values'] = snd; info['SND'] = out
 
     g = {k: bool(v) for k, v in g.items()}; ok = all(g.values())
