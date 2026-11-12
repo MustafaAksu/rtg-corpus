@@ -11,3 +11,4 @@
 | 2026-11-09 | SAT | request | open | interface between rtg-corpus and the satellite repository MustafaAksu/rtg-sat (pointer file; pipe keys for satellite items; re-pin notices) | — | `20261109-SAT-satellite-interface.md` |
 | 2026-11-11 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ; §7.2 IF20 and IF21 pins; §9.2 maintenance row; §8 SG-PROG-1/2/4 as cited by AZ §3 | — | `20261111-AZ-v0-7-adopted.md` |
 | 2026-11-12 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ; §6.7 proposal for AZ; §7.2 IF20 and IF21 pins; §9.2 maintenance row | — | `20261112-AZ-v0-8-adopted.md` |
+| 2026-11-12 | TDRG | notice | open | answer to pipes/TDRG/20261104-PROG-v1-4-adopted.md; TDRG-EXPORT-DISCRETE-TRIAD (TDR-G §7 export row); companion and context pins | — | `20261112-TDRG-v2-12-15-adopted.md` |
