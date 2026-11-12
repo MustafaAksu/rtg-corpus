@@ -813,6 +813,9 @@ def _piece_check(SER, MC, TB, xc, r, sigma, kappa, rho_max, inverse):
         if iv is None:
             return 'fail', dict(why='local inverse not found')
         q = iv['q']; info['r_over_rp'] = iv['r'] / r
+        xis = TB.K.c * q['x']; ag = xis.arg() / arb.pi()         # the source disc B (as its square), for the proof record
+        info['src'] = (float(abs(xis).upper()), float(ag.lower()), float(ag.upper()),
+                       float((R_hi - _up(q['E'])).lower()), iv['rho'])
         if not arb(iv['rho']) < rho_max:
             return 'fail', dict(why='preimage fibre radius above rho_max')
     dre = arb((q['dtau0'].real - q['dtau_dev']).lower())
@@ -893,7 +896,7 @@ def build_engine(N=40, D=360, X=1.10, narc=16000, rem=((0.90, 8000), (1.03, 3200
 #   | mu0 (1+g)^-alpha - 1 | <= lam |x|^3,
 #   lam = |h0| + X sup|H1| + |beta| gm sup|M3| + (1 + t sup|M3|) rho2/t + 2 X^42 sup|ET44| sup|Q4| (1 - gm)^-|3+alpha|,
 #   gm = t sup|G0|,  rho2 = (1 - gm)^-|beta| - 1 - |beta| gm   (majorant of the binomial remainder).
-def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02):
+def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02, extra=False):
     """Zone I for the side TB.j.  Returns a dict of margins (arb lower bounds as floats; each must be > 0) and data.
       guard_low, guard_high   on the two guard arcs of the chart sector, a wedge condition fails for all 0 < |xi| <= xi0
       A1_first, A1_second     Re dtau > 0;  Re(e^{+-i theta0} dtau) - sigma >= 0   (on the disc, all |d| <= 2 Rmax)
@@ -965,6 +968,9 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02):
         kk = 1 + 2 * t * Gb
         Gd = up(SER['G0'].enclose_derivative(acb(0), Xf))
         Lc = 4 * t * Gb + X * t * Gd
+        if extra:                       # for the proof record: relative radius of the lemma disc, sup |E|/R(x') on it
+            out.update(src_rel_radius=float((2 * t * Gb).upper()), E_over_R=float((kk ** 42 * t * e_over).upper()),
+                       L_disc=float(Lc.upper()))
         out.update(inv_disc=float((X - Xt * kk).lower()),
                    inv_i=float((2 * P_lo * (1 - t * lam) - 1 - kk ** 42 * t * e_over - 4 * C2b * t * Rmax - 8 * q['M3c'] * t * Rmax ** 2).lower()),
                    inv_ii=float((2 * Gb * (1 - Lc) - Gb - kk ** 4 * bm).lower()))
@@ -1275,15 +1281,20 @@ def leg_F(eng, TB, xs, n, rounds):
     return D[0], hist, X, D
 
 
-def leg_G(eng, TB, xs, n, rounds, inner=1):
-    """Enclosure of d1* (leg G).  Returns (D_0 = (centre, radius), history of the radius, X, D)."""
+def leg_G(eng, TB, xs, n, rounds, inner=1, full_fibre=False):
+    """Enclosure of d1* (leg G).  Returns (D_0 = (centre, radius), history of the radius, X, D).
+    full_fibre=True: in the first round the local inverse lemma is called for the whole a-priori fibre over X_k, not
+    only for the current disc D_k.  The proof record (inverse branch, leg) needs this form: the target set then
+    contains the point of the reference curve at which the local inverse is identified with the branch G.  The
+    default keeps the behaviour of the W6 development run."""
     X = [(_mid(xs), _radc(xs))] + [None] * n
     D = [_apriori(TB, X[0])] + [None] * n; Q = [None] * (n + 1)
     hist = []
     for _ in range(rounds):
         for k in range(n):
             if X[k + 1] is None:
-                c, r, rho = eng.inv0(X[k][0], float(X[k][1].upper()) * (1 + 1e-12), float(_ds(D[k]).upper()))
+                Rp = _ds(D[k]).max(_apriori(TB, X[k])[1]) if full_fibre else _ds(D[k])
+                c, r, rho = eng.inv0(X[k][0], float(X[k][1].upper()) * (1 + 1e-12), float(Rp.upper()))
                 X[k + 1] = (c, arb(r)); D[k + 1] = _tighter((acb(0), arb(rho)), _apriori(TB, X[k + 1]))
             for _ in range(inner):
                 q, qc = _leg_data(eng, X[k + 1], D[k + 1])

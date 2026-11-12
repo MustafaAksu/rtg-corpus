@@ -1,0 +1,6 @@
+LEAD_constants_and_real_structure FAIL
+LIN_identity_plus_degree_3 FAIL
+P4_no_w2_in_Fz FAIL
+S5W_Fw_minus_w_weighted_order_ge_5 FAIL
+S5Z_Fz_minus_z_weighted_order_ge_4 FAIL
+RESULT FAIL (control SCALE) | exact algebra
