@@ -28,9 +28,9 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## OWNER LANE — Claude
 
-**Updated:** 11 November 2026, 18:20 +03:00, with W2a of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w2`). **Checked:** 11 November 2026, 16:55 +03:00; `main` `d730738` (PR #220 merged); tag `dyad-v6.4.24` → `f0af639`, file hash equal on `main`; `pipes/DYAD/` 17 items, all closed; open PR #183 adds one OFN finding to the inbox.
+**Updated:** 11 November 2026, 18:25 +03:00, with W2b of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w2b`). (The stamp "18:20" of the W2a update was not read from a clock and was wrong: PR #223 merged at 17:09 +03:00.) **Checked:** 11 November 2026, 18:05 +03:00; `main` `07fdbd6` (PR #223 merged); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 17 items, all closed; open PR #183 adds one OFN finding to the inbox.
 
-**Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1 and W2a are done as development checks, W2b is next.
+**Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1, W2a and W2b are done as development checks, W3 (zone II) is next.
 
 **Last durable work.**
 - v6.4.23 adopted 30 Oct 2026 (PR #132; post-tag record).
@@ -63,6 +63,8 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 - As negative controls of the tube sampling: a tube with \|ξ^{−α}\| (it still passes, so it is not a control) and q₁ = q₂ = 0 (the tube radius grows without bound near 0; the run does not finish).
 - Tube parameters q = 12, R(ξ*) = 10⁻⁴, and η₀ = π/6: the truncated series (N = 40) is not inside the tube at the outer edge of D₀. R(ξ*) = 10⁻³ fails the same gate once the edge radii 0.44–0.46 are sampled; r2 uses 2·10⁻³.
 - Stage 3c engine with second-order Taylor forms on boxes in (x, u): sound but far too wide (H_u enclosures above 100% at 0.5% boxes); the quotients are of order \|x\|⁴ against steps of order 1. Replaced by power series in x along the curve (plan record 2.6).
+- Power series of F⁻¹ along the curve: the coefficients grow (ratio 1.13, `[NUM]`), so there is no tail bound on the circle D₁ needs. The inverse step is taken from the forward series by a local inverse lemma (plan record 2.5, 2.6).
+- Building the curve coefficients at 60 digits: the recursion loses its precision and the values are wrong in size. Build them at 400 digits.
 - Wedge domains defined by the two τ-conditions alone: not local, the conditions hold again for \|ξ\| ≳ 0.7 (review R1). Use the chart sectors and the guard property.
 - A uniqueness theorem of our own for all invariant graphs in the tube (r1's P2): withdrawn; reopen only if LIT finds that Theorem 4.2(3) does not cover the use.
 - The co-owner's Cauchy-majorant preflight as stage-3 evidence: its constants (K₁ ≈ 2·10⁹ and larger) come from a Cauchy radius of 0.002. It is tooling for E1–E2 only.
@@ -72,7 +74,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read `DYAD_OPEN20_AN_STAGE3B_DESIGN.md` (§4 lemma, §6 obligations, §9 risks). Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **Stage 3c-a, W2b:** the remainder in d beyond first order (Cauchy bound on a torus) and the inverse map along the curve with a validated inverse (`DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §3). Then W3 (zone II), W4 (zone I), W5 (arc), W6 (legs, controls), W7 (proof record), W8. Acceptance of each: a development check with soundness tests against independent point evaluations and a negative control. No certification claim; 3c-b is not authorized.
+1. **Stage 3c-a, W3:** zone II verification with adaptive pieces, for F on Ω₀ and for G on Ω₁ through the local inverse, with the guard property (`DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §3). It must carry the coupling between fibre and base in (A1), (A2) (plan §4, W2b). Then W4 (zone I), W5 (arc), W6 (legs, controls), W7 (proof record, with S1–S5 and the rounding justification), W8. Acceptance of each: a development check with soundness tests against independent point evaluations and a negative control. No certification claim; 3c-b is not authorized.
 2. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
 3. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
 
@@ -84,7 +86,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## PI_PENDING
 
-As of 11 November 2026, 18:20 +03:00:
-1. **Merge of the W2a PR** (series engine with jets, tails and disc evaluation; development check).
+As of 11 November 2026, 18:25 +03:00:
+1. **Merge of the W2b PR** (second-order jets, remainder in d, tube pieces, local inverse; development check), after the co-owner's review.
 
 No decision is pending. Stage 3c-b and scouting of the second overlap class are not authorized.
