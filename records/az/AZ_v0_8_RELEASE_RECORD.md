@@ -71,7 +71,7 @@ Each is a place where stage 1 words something that the adopted file did not say 
 | Protected regions | 11 regions byte-identical |
 | Identifiers | none lost |
 | Stale strings in the live body (`v6.4.23` pin, `[THM-ALG]`, `[source:`, mixed tags, version labels, the universal wording of R1) | none; `[HEUR/NUM strong]` twice, both inside or about the retraction block |
-| `tools/dsn_lint.py --prev` (informational) | 94,673 bytes; context-core marker present; context core 36.8 k characters (v0.7: 46.4 k); history phrases in live text 16 (v0.7: 25) |
+| `tools/dsn_lint.py --prev` (informational) | 94,673 bytes; context-core marker present; context core 37.1 k characters (v0.7: 46.4 k); history phrases in live text 16 (v0.7: 25) |
 | `evidence/az/core_equiv_check/az_core_equiv_check.py --nmax 7` | exit 0; 2,131,019 graphs, 0 mismatches (plan §8.3) |
 | `tools/pipes_index.py --check` | OK; `pipes/AZ/` holds two items, both closed |
 
