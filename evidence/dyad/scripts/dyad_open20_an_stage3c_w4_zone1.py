@@ -24,6 +24,8 @@ Controls (each must exit 1 at the named gate):
   --control BIGZONE   xi0 = 0.10                                  -> Z1F and Z1G ((A1) for the second functional)
   --control SIGMA     sigma = 0.5                                 -> Z1F and Z1G (and SND)
   --control CORE      core of Omega_0 cut to arg xi <= 0.10 pi    -> Z1F (guard arc) and SND
+  --control ALPHA     alpha replaced by alpha + 10 (design P11)   -> Z1F and Z1G ((B); a small change of alpha is
+                      absorbed by the gain of the functionals, so the control uses a large one)
 Usage: python3 -I -B dyad_open20_an_stage3c_w4_zone1.py --stage2 scout_N216_dps840.json --w3dir DIR --out OUT.json
 """
 import os, sys, json, argparse, hashlib
@@ -44,7 +46,7 @@ MARGINS_INV = ('inv_disc', 'inv_i', 'inv_ii')
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--stage2', required=True); ap.add_argument('--w3dir', required=True); ap.add_argument('--out', required=True)
-    ap.add_argument('--control', choices=['BIGZONE', 'SIGMA', 'CORE'])
+    ap.add_argument('--control', choices=['BIGZONE', 'SIGMA', 'CORE', 'ALPHA'])
     o = ap.parse_args()
     raw = open(o.stage2, 'rb').read(); d2 = json.loads(raw.decode('utf-8'))
     g, info = {}, {}
@@ -53,6 +55,8 @@ def main():
     g['ENG_engine'] = bool(rep['structural_zeros_consistent'] and rep['max_tail_at_1p02'] < 1e-6
                            and all(m['theta'] < 1 for m in rep['remainder_constants']))
     TAU = L.tau_coefficients()
+    if o.control == 'ALPHA':
+        K.ALPHA = K.ALPHA + 10
     xi0 = '0.10' if o.control == 'BIGZONE' else XI0
     sigma = '0.5' if o.control == 'SIGMA' else SIGMA
     core_hi0 = '0.10' if o.control == 'CORE' else '0.20'
