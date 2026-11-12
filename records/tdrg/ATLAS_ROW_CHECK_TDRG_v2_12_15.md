@@ -49,3 +49,9 @@ Not atlas content until the tag. At the tag, an impact refresh (with AZ v0.8, al
 ## 6. Asked of the PI
 
 After §4.1 is done (and §4.2 if the PI wants it): adoption of v2.12.15 on the bytes `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64`; merge order #247, (#250), #248 as merge commits; annotated tag `tdrg-v2.12.15` on the PR #248 merge commit naming the hash. The CLI block is the TDR-G co-owner's to issue with the final PR head.
+
+## 7. Follow-up, 12 November 2026, 18:40 +03:00
+
+- **§4.1 met.** PR #248 head is now `9b82993d3e979b45c512304f49bea77c8c886c19` (main with the AZ v0.8 notices merged in through the #247 branch, indexes regenerated, release record updated). GitHub reports `mergeable: true`, state `clean`, for #247, #248, #250 and #252. The DSN at that head is `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64`, the bytes this check covers; between `db0a1993` and `9b82993d` nothing under `evidence/tdrg/scripts/` or the edit log changed.
+- **§4.2 met.** Round-2 readback by the ChatGPT co-owner on `9b82993d`: PR #248 reviews 5876282524 and 5876326403, PASS, R1 and R2 closed; addendum on PR #250 at `70ed8e9b`.
+- **Still to do before the merge (the stream's, not the atlas's):** the release record's §11 "Adoption decision" is empty and PR #248 is a draft. The PI stated the adoption in the atlas conversation at 18:33 +03:00 ("ben benimsiyorum"); it is the TDR-G co-owner who records it verbatim in the release record and marks the PR ready (CONVENTIONS §4: the record precedes the merge and the tag).
