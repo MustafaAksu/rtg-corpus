@@ -1,0 +1,26 @@
+r=0.45  T_model=3.657979  t=(-1.08311849887 - 2.62708252967j)  |t(S1)-t(S0)|=0.000295
+r=0.42  T_model=4.4991542  t=(-1.36465683963 - 3.27228421173j)  |t(S1)-t(S0)|=8.86e-6
+r=0.40  T_model=5.2083333  t=(-1.57912163341 - 3.82271065243j)  |t(S1)-t(S0)|=4.19e-7
+r=0.37  T_model=6.5807224  t=(-1.95047753197 - 4.90169118387j)  |t(S1)-t(S0)|=9.37e-10
+r=0.35  T_model=7.7745384  t=(-2.23885520486 - 5.8527413453j)  |t(S1)-t(S0)|=7.28e-13
+r=0.32  T_model=10.172526  t=(-2.75094383495 - 7.79115945521j)  |t(S1)-t(S0)|=4.54e-12
+r=0.30  T_model=12.345679  t=(-3.16048139208 - 9.57377567289j)  |t(S1)-t(S0)|=4.51e-12
+r=0.28  T_model=15.184645  t=(-3.64151937368 - 11.9316486437j)  |t(S1)-t(S0)|=4.53e-12
+r=0.26  T_model=18.965256  t=(-4.21496062402 - 15.1117918497j)  |t(S1)-t(S0)|=4.49e-12
+r=0.24  T_model=24.112654  t=(-4.91051484109 - 19.4980802261j)  |t(S1)-t(S0)|=4.43e-12
+G0_stage2_hash PASS
+L1_restricted_map_leading_terms PASS
+L2_abel_defect_small PASS
+L3_two_sides_agree PASS
+L4_slopes_near_minus_2pi PASS
+{'between': '0.45-0.42', 'slope': '-6.181090019', 'slope_over_minus_2pi': '0.98375103', 'without_power_factor': '0.88558253'}
+{'between': '0.42-0.40', 'slope': '-6.199650591', 'slope_over_minus_2pi': '0.98670504', 'without_power_factor': '0.90745638'}
+{'between': '0.40-0.37', 'slope': '-6.218130161', 'slope_over_minus_2pi': '0.98964615', 'without_power_factor': '0.92634992'}
+{'between': '0.37-0.35', 'slope': '-6.234197524', 'slope_over_minus_2pi': '0.99220335', 'without_power_factor': '0.94174684'}
+{'between': '0.35-0.32', 'slope': '-6.248167297', 'slope_over_minus_2pi': '0.99442671', 'without_power_factor': '0.95483101'}
+{'between': '0.32-0.30', 'slope': '-6.259074628', 'slope_over_minus_2pi': '0.99616267', 'without_power_factor': '0.96525965'}
+{'between': '0.30-0.28', 'slope': '-6.266017424', 'slope_over_minus_2pi': '0.99726765', 'without_power_factor': '0.97228533'}
+{'between': '0.28-0.26', 'slope': '-6.271400345', 'slope_over_minus_2pi': '0.99812436', 'without_power_factor': '0.97818621'}
+{'between': '0.26-0.24', 'slope': '-6.275417657', 'slope_over_minus_2pi': '0.99876374', 'without_power_factor': '0.98309872'}
+mean slope/(-2pi) over the smaller radii: 0.99694903
+RESULT PASS | [NUM] scouting; not a certificate

@@ -1,0 +1,111 @@
+{
+ "all_pass": false,
+ "configs": [
+  {
+   "N": 216,
+   "dps": 160,
+   "r_m": "0.10",
+   "tag": "base"
+  },
+  {
+   "N": 216,
+   "dps": 160,
+   "r_m": "0.08",
+   "tag": "smaller matching radius"
+  },
+  {
+   "N": 216,
+   "dps": 160,
+   "r_m": "0.12",
+   "tag": "larger matching radius"
+  },
+  {
+   "N": 144,
+   "dps": 160,
+   "r_m": "0.10",
+   "tag": "fewer coefficients"
+  },
+  {
+   "N": 216,
+   "dps": 230,
+   "r_m": "0.10",
+   "tag": "higher precision"
+  }
+ ],
+ "control": "SHIFTCOEF",
+ "gates": {
+  "G0_stage2_hash": true,
+  "G_NEWTON_converged": true,
+  "G_ON_map_and_series_agree": false,
+  "G_ORBIT_stays_near_0": true,
+  "G_SEC_secant_converged": true,
+  "G_STAB_across_N_rm_dps": false,
+  "G_ZERO_control_at_rounding_level": true
+ },
+ "info": {
+  "finding_jump_nonzero_numerically": true,
+  "fit_c0_A_beta": null,
+  "local_slopes_dlnDelta_dT": [
+   {
+    "A_xi": "1.604155792",
+    "between": "0.4-0.3",
+    "slope": "-4.812467375"
+   }
+  ],
+  "seconds": 143.2,
+  "stability_max_relative_spread": {
+   "0.3": "0.000549",
+   "0.4": "1.14e-19"
+  },
+  "table_base": [
+   {
+    "T": "5.2083333",
+    "abs_deltaY": "1.95275604519937e-8",
+    "abs_delta_w": "1.46863731271229e-8",
+    "abs_xi0": "0.0985539",
+    "abs_xi_end": "0.0961442",
+    "amplification_A": "98.8647",
+    "arg_deltaY_over_pi": "-0.3591526119",
+    "arg_xi0_over_pi": "0.321404",
+    "arg_xi_end_over_pi": "-0.000266709",
+    "first_order_rel_diff": "4.95e-5",
+    "model_exp_minus_2piT": "6.13404e-15",
+    "n": 334,
+    "r": "0.4",
+    "ratio_to_model": "3183476.7",
+    "re_im_deltaY": [
+     "8.361439008153631624e-9",
+     "-1.7646868133444977089e-8"
+    ]
+   },
+   {
+    "T": "12.345679",
+    "abs_deltaY": "2.36262881510476e-23",
+    "abs_delta_w": "9.99504123362611e-24",
+    "abs_xi0": "0.0983702",
+    "abs_xi_end": "0.0962826",
+    "amplification_A": "29.5321",
+    "arg_deltaY_over_pi": "0.9310448878",
+    "arg_xi0_over_pi": "0.319633",
+    "arg_xi_end_over_pi": "0.00150936",
+    "first_order_rel_diff": "1.01e-20",
+    "model_exp_minus_2piT": "2.04972e-34",
+    "n": 334,
+    "r": "0.3",
+    "ratio_to_model": "1.1526582e+11",
+    "re_im_deltaY": [
+     "-2.3074084674587604529e-23",
+     "5.0781993094298288635e-24"
+    ]
+   }
+  ],
+  "zero_control_abs_deltaY": {
+   "0.3": "1.23e-160",
+   "0.4": "7.0e-160"
+  }
+ },
+ "mpmath": "1.3.0",
+ "quick": false,
+ "script": "dyad_open20_an_stage2b_jump_scout.py",
+ "status": "NUM scouting; not a certificate; not theorem evidence"
+}

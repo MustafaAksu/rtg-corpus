@@ -1,0 +1,41 @@
+{
+ "cells": [
+  "S1-C1",
+  "S1-C2",
+  "S1-C3"
+ ],
+ "confirmatory": true,
+ "finished_utc": "2026-11-11T18:11:11Z",
+ "fixtures_skipped": false,
+ "jobs": 4,
+ "plan": "stage1",
+ "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+ "python": "3.12.3",
+ "records": {
+  "S1-C1": 9400,
+  "S1-C2": 7500,
+  "S1-C3": 3000
+ },
+ "resumed": true,
+ "schema": "az_tokres_campaign_v1",
+ "seconds": 16512.6,
+ "sha256": {
+  "HASHES.txt": "5ddbc60516acbeb75f2fc09fabdcaa017a320a68d88ee4904767c1c59b88500a",
+  "analysis": "490b3d4f06ef52d6d39b217d0821bd8361d0a8ed37941f32f9c154113c91dc80",
+  "driver": "792c9563960161686bdec10b613f68182dab65e25563dd266c7763eb275306f8",
+  "engine": "4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608",
+  "fixtures": "da9256dc01d786355e2fc28938647b1b800d54b1425e2e927af1febff2f9cb86",
+  "golden": "40eba43073fba138130244f75cc0790ef20bffcbeda7599ff4e372b95427c134",
+  "orient": "ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c",
+  "runner": "75c5f139a453a4b2595eba76760e34cddc32c990370259ae6e84ec5379408992"
+ },
+ "started_utc": "2026-11-11T13:35:58Z",
+ "steps": [
+  "fixtures: exit code 0",
+  "cell S1-C1: 4 shard(s), all exit codes 0, record counts as expected",
+  "cell S1-C2: 4 shard(s), all exit codes 0, record counts as expected",
+  "cell S1-C3: 4 shard(s), all exit codes 0, record counts as expected",
+  "analysis S1-C1: exit code 0",
+  "analysis S1-C2: exit code 0"
+ ]
+}

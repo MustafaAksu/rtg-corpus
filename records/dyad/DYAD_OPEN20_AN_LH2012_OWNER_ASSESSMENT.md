@@ -161,7 +161,12 @@ The two controls (α + 1/19; μ̄ in place of μ) each fail H1 and exit 1. The i
   - the LIT identification step (c).
   With these open, the statement is not a `[THM]` import.
 - **What it adds.** It gives the formal branches Γ_σ a dynamical meaning: every orbit of the six-step return that converges to 0 through p_σ (z_j → 0, w_j/z_j² → a_σ) ends on one of three parabolic curves per branch. These curves realize Γ_σ on sectors. It supports the selected-sum convention of the pilot (design D8) through an independent uniqueness basis.
-- **What it does not decide.** Nothing about B-an or B-6: it says nothing on the convergence of Γ_σ, log F or F^{1/2}. It gives no Stokes value and no E3/E4 constant; the stage-3 route check of the design record §8 is unaffected. It does not cover the inverse map, other infinitely-near points, the real slice or a physical carrier.
+- **What it does not decide.** Nothing about B-an or B-6: it says nothing on the convergence of Γ_σ, log F or F^{1/2}. It gives no Stokes value and no E3/E4 constant; the stage-3 route check of the design record §8 is unaffected. It does not cover the inverse map, other infinitely-near points or a physical carrier.
+- **Real slice (co-owner scope check, 4 Nov 2026; checked here).** The results concern the complexified germ only.
+  - On the real slice w = z̄, so a nonzero real orbit tending to 0 has \|w_n/z_n²\| = 1/\|z_n\| → ∞. It never approaches the finite points p_σ (w/z² → a_σ), and it is not asymptotic to Γ_σ, whose w/z² tends to a_σ.
+  - No real-orbit statement follows: none on PRIM-CTR, L-PHASE or a physical carrier.
+  - This agrees with the pilot's real-slice guard (design record §6).
+- **Exact relation worth recording (co-owner proposal).** P′(u) = α·(c₄₀ + μu) identically (H1). It shows why the eigenvalue ratio is the same α on both roots. It is a candidate `[ALG]` line for v6.4.24. It changes no constant.
 - **DSN.** Proposed for the v6.4.24 S3 paragraph (backlog) as one `[SESSION]` sentence with the LIT-ID@version:label citations:
   - `lopezhernanz2025-flower@vor:Theorem 1.3`
   - `lopezhernanz2021-stable-manifolds@arxiv-v1:Theorem 5.1`

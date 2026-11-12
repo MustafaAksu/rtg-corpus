@@ -1,0 +1,19 @@
+D0: 120 points, |xi| <= 0.46, min margin_B -1.284e+7 (|xi|=0.01 arg=0.05208 pi), min margin/model -8.662e+11, max |E|/R 1.28e+7, max nl 0.00109, gains >= 0.938, 0.292, rel step <= 0.136; guard zone: 263 grid points, 0 in wedge
+D1: 84 points, |xi| <= 0.4, min margin_B -1.66e+6 (|xi|=0.01 arg=0.25 pi), min margin/model -1.09e+11, max |E|/R 1.66e+6, max nl 0.00441, gains >= 0.959, 0.35, rel step <= 0.068; guard zone: 256 grid points, 0 in wedge
+A0_base_moves_inward PASS
+A1_base_moves_inward PASS
+B0_strong_exit_inequality FAIL
+B1_strong_exit_inequality FAIL
+E0_series_inside_tube FAIL
+E1_series_inside_tube FAIL
+F1_A3_is_minus_one_over_3ell PASS
+G0_inputs PASS
+GUARD0_local_component_inside_core PASS
+GUARD1_local_component_inside_core PASS
+INV_G_inverts_F PASS
+NL_nonlinearity_small PASS
+PATH_common_curve_reaches_small_xi PASS
+SEP_width_far_below_jump PASS
+STEP_relative_step_below_kappa PASS
+XISTAR_common_point PASS
+RESULT FAIL (control SHIFTCOEF) | [NUM] sampling for a design; not a certificate

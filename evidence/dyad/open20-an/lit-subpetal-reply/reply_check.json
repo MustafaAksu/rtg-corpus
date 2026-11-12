@@ -1,0 +1,59 @@
+{
+ "all_pass": true,
+ "control": null,
+ "gates": {
+  "G0_K_lit_below_K1_plus_K2": true,
+  "G0_inputs_all_pass": true,
+  "G0_route_hash": true,
+  "G0_scout_hash": true,
+  "T1_lit_radius_table": true,
+  "T2_condition_i_not_binding": true,
+  "T2_ii_bound_is_one_half": true,
+  "T2_owner_cap_is_0.019": true,
+  "T3_exact_identity": true,
+  "T3_inequality_on_grid": true,
+  "T3_sharp_at_t_1": true,
+  "T4_example_constants": true,
+  "T5_NUM_no_violation_40x2000": true,
+  "T6_matching_radii_outside_every_cap": true
+ },
+ "info": {
+  "K1_plus_K2": "13.546175",
+  "K_lit": "13.52",
+  "K_owner_2K1_plus_K2": "26.369659",
+  "T1_caps": {
+   "0.25": "0.018489663",
+   "0.5": "0.036965435",
+   "1": "0.073727174",
+   "sin(pi/4)": "0.052239326"
+  },
+  "T2_A_at_cap": "1.02235e-5",
+  "T2_caps_owner_class": {
+   "0.25": "0.0094804918",
+   "0.5": "0.018960022",
+   "1": "0.037905846",
+   "sin(pi/4)": "0.026810906"
+  },
+  "T2_owner_cap": "0.018960022",
+  "T3_equality_gap_at_t_1": "2.3e-41",
+  "T3_min_slack_on_grid": "-2.29589e-41",
+  "T4": {
+   "C_inf009": "7.6568542",
+   "at_half_pi": "2.1876726",
+   "modulus": "1.5469182",
+   "whole_domain": "4.042292"
+  },
+  "T5_max_ratio_to_bound": "0.6508",
+  "T5_rho": "0.0184897",
+  "T6_stage2b_matching_radii": [
+   "0.08",
+   "0.1",
+   "0.12"
+  ],
+  "T6_sup_cap": "0.0737272"
+ },
+ "mpmath": "1.3.0",
+ "script": "dyad_open20_lit_subpetal_reply_check.py",
+ "status": "owner check of a LIT reply; SESSION; not a certificate for the dyad map",
+ "sympy": "1.14.0"
+}
