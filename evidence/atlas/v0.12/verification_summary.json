@@ -1,0 +1,148 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.11",
+ "base_sha256": "8d7a43f05a42c6a69b50eb97b98dd96ddda7eea327333ae5cc73e03dee46f358",
+ "atlas_sha256": "cf9d8647b4c33206537e46ca37c7879d4fc33b1a936e0a50330a469f054def55",
+ "atlas_bytes": 523005,
+ "atlas_lines": 1537,
+ "base_bytes": 520271,
+ "base_lines": 1542,
+ "source_snapshot": "c8e71980d053545edcc2f4d1fc5ccf92460de48f",
+ "changed_sources": [
+  "AZ",
+  "DYAD"
+ ],
+ "edit_operations": 39,
+ "retired_keys": [
+  "AZ.A1",
+  "AZ.A2",
+  "AZ.A3",
+  "AZ.A7",
+  "DYAD.X11"
+ ],
+ "new_keys": [],
+ "new_rids_at_tag": {
+  "DYAD": [
+   "DYAD-ALG-NOT-AREA-PRESERVING",
+   "DYAD-ALG-P6-LINEAR-ORDER",
+   "DYAD-ALG-HOMOLOGICAL-RESONANCE",
+   "DYAD-THM-OPEN21-SHARP-ROWS",
+   "DYAD-ART-OPEN21-SHARP-ROWS",
+   "DYAD-ART-BRIDGE-NOTE-CHECK",
+   "DYAD-ART-OPEN20-AN-PILOT"
+  ]
+ },
+ "new_node_rids": [
+  "DYAD-ALG-NOT-AREA-PRESERVING",
+  "DYAD-ALG-P6-LINEAR-ORDER",
+  "DYAD-ALG-HOMOLOGICAL-RESONANCE",
+  "DYAD-THM-OPEN21-SHARP-ROWS"
+ ],
+ "new_artifact_rids": [
+  "DYAD-ART-OPEN21-SHARP-ROWS",
+  "DYAD-ART-BRIDGE-NOTE-CHECK",
+  "DYAD-ART-OPEN20-AN-PILOT"
+ ],
+ "dyad_rids_at_tag": 155,
+ "owner_facts": {
+  "az_x2_sentence_only_in_appendix_b": true,
+  "az_cites_deg2_cancel": true,
+  "az_cites_zn_state": true,
+  "az_imports_q403": true,
+  "az_raw_cubic_caveat": true,
+  "az_thread_c_availability": true,
+  "az_no_chsh": true,
+  "az_owned_identifiers_kept": true,
+  "dyad_tag_alg": true,
+  "dyad_sharp_conditional": true,
+  "dyad_open20_no_result": true,
+  "dyad_cubic_rate_no_rid": true,
+  "recog_sharp_rows_at_pin": true
+ },
+ "pipes": {
+  "items": 107,
+  "snapshot": {
+   "closed": 52,
+   "dispositioned": 4,
+   "open": 51
+  }
+ },
+ "dispositions": {
+  "retired": 5,
+  "retained": 6,
+  "reworded": 5
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 137
+  },
+  "qualifiers": {
+   "PASS": 4
+  },
+  "links": {
+   "PASS": 507,
+   "UNVERIFIED": 5,
+   "DOCUMENTED-UNRESOLVED": 10
+  },
+  "artifacts": {
+   "PASS": 115,
+   "UNVERIFIED": 3
+  },
+  "keys": {
+   "PASS": 152
+  },
+  "process": {},
+  "wording": {
+   "WARN": 12
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 18,
+ "v0_11_recheck_with_cumulative_retired_list": {
+  "atlas_sha256": "8d7a43f05a42c6a69b50eb97b98dd96ddda7eea327333ae5cc73e03dee46f358",
+  "fails": 0,
+  "counts": {
+   "sources": {},
+   "coverage": {
+    "PASS": 132
+   },
+   "qualifiers": {
+    "PASS": 3
+   },
+   "links": {
+    "PASS": 499,
+    "UNVERIFIED": 5,
+    "DOCUMENTED-UNRESOLVED": 11
+   },
+   "artifacts": {
+    "PASS": 110,
+    "UNVERIFIED": 3
+   },
+   "keys": {
+    "PASS": 142
+   },
+   "process": {},
+   "wording": {
+    "WARN": 12
+   }
+  }
+ },
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 109
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373",
+  "evidence/atlas/build/refresh_v0_12.py": "e01435b95a2cce802202cf1a5191c7205c1c2216569e7ab06c44ed828b41f389",
+  "evidence/atlas/build/refresh_v0_10.py": "9405436c738f9c3dd079975ce21d5a4a73d45181a2831634b43c6c7512f2e01c"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate was rerun for this edition; new RIDs are checked for presence in the tagged sources, not re-proved.",
+  "Impact refresh of two moved sources (AZ v0.7, DYAD v6.4.24) and the two ATLAS inbox items; the other 16 sources were not re-extracted. AZ v0.7 was read at statement level in its header, §§2, 4.1, 4.2, 6–9 and Appendix B, and through its release record §§3–7; the 59 edits were not re-compared one by one with their owner texts. DYAD v6.4.24 was read in the diff against v6.4.23 (§§1, 2 OPEN 20, 6.1, 6.6, 6.14, 7, 8, Appendix A, F).",
+  "Edition labels on Dyadic and RECOG results (\"(v6.4.23)\", pins of other consumers) are not source currency and stay; a consumer pin is moved only where the consumer moved it."
+ ]
+}

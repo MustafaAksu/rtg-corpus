@@ -1,0 +1,114 @@
+[
+ {
+  "key": "AZ.A1",
+  "disposition": "retired",
+  "reason": "AZ v0.7 (az-v0.7; release record records/az/AZ_v0_7_RELEASE_RECORD.md §3, triage row 1, edits E41, E57): §6 \"To OPEN M\" now carries the OPEN-M v0.7.1 verdict (R16 UVM-RESULT-AUDIT1 withdraws the 2× reading; no certified deficit factor; R15 a calibration-conditional diagnostic); the v0.6 sentence is recorded as withdrawn in AZ Appendix B. The owner text no longer asserts what its source withdrew.",
+  "previous_sha256": "1e54c5db42d1848fbdb5029e1783641602ffd37b94eb61cd848839daccffb18c",
+  "current_sha256": null
+ },
+ {
+  "key": "AZ.A2",
+  "disposition": "retired",
+  "reason": "AZ v0.7 (az-v0.7; release record records/az/AZ_v0_7_RELEASE_RECORD.md §3, rows 11, 13, 29): DYAD-THM-Q403-PHASELAW is an [import-ref] [THM] row (§4.1.1, §8) and the \"exact cubic cascade formula\" bullet is removed from §4.1.2; Genesis is cited at v2.10 with OPEN 1C and the reduced-model 𝒫₄ statement as two entries (§6).",
+  "previous_sha256": "a938d70a1048b33d774067431cf9ed14ba5a123ef43c28a36a0ae034a306942c",
+  "current_sha256": null
+ },
+ {
+  "key": "AZ.A3",
+  "disposition": "retired",
+  "reason": "AZ v0.7 (az-v0.7; release record records/az/AZ_v0_7_RELEASE_RECORD.md §3, row 28): §0.1, §6 and §7 record the registration in Programme v1.4; the patch request and the proposed entry text are removed.",
+  "previous_sha256": "006c12a97196f422bdc615ba94c862af9123d21af3f8cbe66ebcacd25af7fb8e",
+  "current_sha256": null
+ },
+ {
+  "key": "AZ.A7",
+  "disposition": "retired",
+  "reason": "AZ v0.7 (az-v0.7; release record records/az/AZ_v0_7_RELEASE_RECORD.md §3, rows 14, 19–26): DYAD-ALG-Q3-DEG2-CANCEL; TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE, TDRG-DEF-BAND, the TDR-G lemma, BIND3 and OPEN RIDs are cited; \"TDRG-ZN-STATE\" survives once as a named consumer string. Dyadic v6.4.24 Appendix F re-read at az-v0.7: each of AZ's 16 Dyadic-pattern strings is an owner RID except the closed lifecycle item DYAD-OPEN-B5-ALLP and the historical mention DYAD-ALG-Q3-CANCEL. DZT.Q1 keeps the DZT half.",
+  "previous_sha256": "6a5e4456373b267abd204795faa06c0f3651869737dbeda02e2735649ff3b92f",
+  "current_sha256": null
+ },
+ {
+  "key": "DYAD.X11",
+  "disposition": "retired",
+  "reason": "AZ v0.7 (az-v0.7; release record records/az/AZ_v0_7_RELEASE_RECORD.md §3, row 9, edits E16, E46): AZ §4.1.1 and §8 import DYAD-THM-RAW-CUBIC as the raw one-step statement for p≥3 and carry the owner caveat that the identity with the historical proposition is not established (Dyadic Appendix E). The consumer no longer cites more than the owner states; the caveat itself stays on the DYAD-THM-RAW-CUBIC node.",
+  "previous_sha256": "21f91bd86f749578b1169d0d080e57a03574178bb8d899daca8f98baf557bbdc",
+  "current_sha256": null
+ },
+ {
+  "key": "AZ.A5",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.12 sources",
+  "previous_sha256": "5b6bb175304d8987116c4cc92080d26d915976066a8f07bc8d0b175a32626fcc",
+  "current_sha256": "5b6bb175304d8987116c4cc92080d26d915976066a8f07bc8d0b175a32626fcc"
+ },
+ {
+  "key": "DYAD.X4",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "ffa603b3f9021a28b98940dec2037594bf39732d1dcd127c9834aedd1b58c0a8",
+  "current_sha256": "1ff85674718f919ea914ea21a0d4a4673576aeaee19a190084447cb1672b35eb"
+ },
+ {
+  "key": "DZT.Q1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "35af19ba57eb2c99c2d132b7d4160a0e77264031336a4cca6046d92a2c5fce6e",
+  "current_sha256": "59dae5ca07d10b569cd4d2f40cb0d981df1e9457fa7d06d214d997b14efd62f3"
+ },
+ {
+  "key": "OPENM.U11",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "ba60dd6f5696331e5a82bacfc80c2ea9072e3c38bffe9bb6f0989fbdf00b82bf",
+  "current_sha256": "f94c7fbba4df320e12b87d3c3e7b15fc636fa60726667f257a1db3acd285b11e"
+ },
+ {
+  "key": "PROG.G6",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "4c2523eb2a58c80a0ff5a80c8d6bd2616437e265e317b78c7566ca0de3979510",
+  "current_sha256": "fdd4d90d84cc753f97c816c71e5e93abbee64f97b81ccb59362e836904f60bd6"
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "reworded",
+  "reason": "reworded; see edit_log.json",
+  "previous_sha256": "0dc93e12f8edbbd2c623e2c4b5cbc390db5fbfc99ca490bd9fb2fd29249fe0db",
+  "current_sha256": "b9dd72cff6487d5711c49a1d8d3b5b1ac2f820ea917d47e937f158872f678820"
+ },
+ {
+  "key": "OPENM.U2",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.12 sources",
+  "previous_sha256": "b5e83ca8d6bf9cdee7a47f561393a318d63268443a63f4a456b96322a3c60573",
+  "current_sha256": "b5e83ca8d6bf9cdee7a47f561393a318d63268443a63f4a456b96322a3c60573"
+ },
+ {
+  "key": "DYAD.X8",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.12 sources",
+  "previous_sha256": "d044a35089a848ba4f66d0e36a1a768b8f56324b064e0cd9db378fce751b6238",
+  "current_sha256": "d044a35089a848ba4f66d0e36a1a768b8f56324b064e0cd9db378fce751b6238"
+ },
+ {
+  "key": "D5.X3",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.12 sources",
+  "previous_sha256": "df04657c011bb80a0eb6cb7f5bd181c938eacf55ffc0fc32ae73076ae16e18d1",
+  "current_sha256": "df04657c011bb80a0eb6cb7f5bd181c938eacf55ffc0fc32ae73076ae16e18d1"
+ },
+ {
+  "key": "METH.M1",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.12 sources",
+  "previous_sha256": "0c570df5122258d069c4ed224e7bf3bf67839d859d765ae2d7339a944125093f",
+  "current_sha256": "0c570df5122258d069c4ed224e7bf3bf67839d859d765ae2d7339a944125093f"
+ },
+ {
+  "key": "METH.M2",
+  "disposition": "retained",
+  "reason": "unchanged: the owner state it records is unchanged at the v0.12 sources",
+  "previous_sha256": "8d0ed4e162183fb609e1ff56f6740e79e4b6c3c7137034c4e0ffdc7d375db790",
+  "current_sha256": "8d0ed4e162183fb609e1ff56f6740e79e4b6c3c7137034c4e0ffdc7d375db790"
+ }
+]

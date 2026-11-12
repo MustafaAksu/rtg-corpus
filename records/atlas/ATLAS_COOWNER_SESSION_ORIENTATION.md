@@ -22,17 +22,17 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## OWNER_LANE — Claude
 
-**Checked:** 11 November 2026, 15:30 +03:00; `main` `5ffec34`; tag `atlas-v0.11` unchanged; **two source tags moved** since the v0.11 snapshot: `az-v0.7`, `dyad-v6.4.24`; inbox: two items dispositioned (AZ, DYAD), seven closed.
-**Goal / current question:** impact refresh Atlas v0.12 for `az-v0.7` and `dyad-v6.4.24` (Method §7). Second advisory written: `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` (state of AZ after reactivation; six questions to the PI).
-**Last durable work:** Atlas v0.11 published (release record and tag verification under `records/atlas/RTG_STATE_ATLAS_v0.11_*`): six second homes → typed cross-references, 21 D3 span deletions (edition labels, method detail), three stale `(D5)` tags corrected against `recog-v0.3.27`. No source moved.
+**Checked:** 12 November 2026, 09:40 +03:00; `main` `c8e7198` at the snapshot; tag `atlas-v0.11` governs; the 18 source tags are the newest of their studies, two of them moved since v0.11 (`az-v0.7`, `dyad-v6.4.24`); inbox: two items dispositioned, seven closed.
+**Goal / current question:** Atlas v0.12, impact refresh for AZ v0.7 and Dyadic v6.4.24: candidate built, with the reviewer.
+**Last durable work:** branch `claude/atlas-v0.12`: candidate `cf9d8647…ef55`, builder `evidence/atlas/build/refresh_v0_12.py`, evidence `evidence/atlas/v0.12/`, draft record `records/atlas/RTG_STATE_ATLAS_v0.12_RELEASE_RECORD.md`. Before it: Atlas v0.11 (tag), two advisories (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md`, `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md`).
 **Decisions held:** PI, 10 Nov: route A — the structure is kept and nothing is dropped for size; compaction is closed; size is looked at again after the remaining streams (AZ and others) are reworked. `DECLARED` is never `PRESERVED`; grade, qualifier, identifier and diagnostic-class changes need their own reviewed delta. #189 deferred. `rtg-sat` is outside the Atlas inputs.
 **Tried and set aside:** compaction as a route to the Method size aim — measured at 1.9 % of D3 under Method v0.2; other domains hold under 0.5 % in labelled form (`records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §§3–5, 11). Reopen when the PI asks after the stream rework. Rewording for size — not attempted. Core + annex split and a lossy core — declined by the PI.
-**Evidence:** chain `443b5990…` → stage 1 `0f8ba5c0…` → 2a `ace0b408…` → 2b `66f0b2eb…` → v0.11 `8d7a43f0…`; each builder asserts its input hash. Known tool limit: `atlas_preservation.py` reports the whole file when the title heading changes (heading context); such a step is shown by a line diff.
-**Resume:** `python3 -I tools/orient.py ATLAS`; `python3 tools/atlas_check.py --manifest evidence/atlas/v0.11/source_manifest.json` (the default manifest is an old one).
+**Evidence:** v0.12: 39 logged operations; AZ.A1, A2, A3, A7 and DYAD.X11 retired; DYAD.X4 narrowed; one new node `DYAD-THM-OPEN21-SHARP-ROWS`; shared check 0 FAIL (coverage 137, links 507/5/10, keys 152); 18 focused negative controls detected. A slip found and recorded: the v0.11 check used the tool's default retired-key list (31) instead of the cumulative one (142); rerun on the v0.11 bytes with the right list: 0 FAIL.
+**Resume:** `python3 -I evidence/atlas/build/refresh_v0_12.py` (rebuilds and checks; stops on any failed assertion). A refresh follows the builder of the previous refresh (`refresh_v0_10.py`), not the compaction tools; pass the checker the edition's manifest, coverage map and cumulative retired-key list, never its defaults.
 **Next 1–3 actions / acceptance:**
-1. Atlas v0.12 impact refresh: AZ rows (AZ.A1, A2, A3, A7 expected to close; H2, H3 reworded; Thread C evidence qualifier) and the Dyadic notice items; source manifest at the new snapshot; change-focused review; PI acceptance.
-2. Close the two dispositioned inbox items when v0.12 is published.
-3. Method v0.3 delta, separately reviewed (size aim subordinate to completeness and structure; K1/K2 at refreshes; satellite repositories out of scope). Deferred debts: seven other multi-line identifiers; a comparator mode for heading renames.
+1. Receiving review of v0.12 (five points in the record §3); then PI acceptance, BASELINE row, one CLI block, tag verification, closing the two inbox items.
+2. Method v0.3 delta, separately reviewed (size aim subordinate to completeness and structure; K1/K2 at refreshes; satellite repositories out of scope).
+3. Deferred debts: seven other multi-line identifiers; a comparator mode for heading renames; a built-in AZ profile for `tools/orient.py`.
 **Reopen trigger:** any owner tag after `fa3db80` (impact refresh); any open item in `pipes/ATLAS/`.
 
 ## REVIEWER_LANE — ChatGPT
@@ -47,7 +47,8 @@ Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspec
 - **Decided by the PI, 10 Nov 14:02 +03:00 (project conversation): route A** — "continue with A; we want it smaller and shrink as far as we can, but we do not break the structure to shrink it" (translated; recorded in `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §8). No split, no lossy core.
 - Nothing is waiting on the PI for the Atlas. v0.11 is accepted, merged and tagged (10 Nov; CLI block issued in the project conversation at 15:27 +03:00, output returned 15:29).
 - 10 Nov 17:23: advisory dispositions decided (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md` §4); rows 1 and 3 since resolved by `az-v0.7`.
-- 11 Nov 18:15: the PI accepted all six recommendations of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` (§5). They are AZ's to carry out; the Atlas needs no decision for its own refresh.
+- 11 Nov 18:15: the PI accepted all six recommendations of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` (§5); they are AZ's to carry out.
+- **Coming to the PI:** acceptance of Atlas v0.12 (`cf9d8647…ef55`) after the receiving review; then one CLI block (merge, tag `atlas-v0.12`). Nothing to run now.
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
 
