@@ -1,0 +1,39 @@
+az_core_equiv_check: finite check of PROP-AZ-CORE-EQUIV ([SESSION], new check)
+script sha256: bd1ee6f7bf31a3db35f88d45006ff7c1f8ac32960a2bf9cf178ed228d6170b9a
+python: 3.13.18
+deposited hashimoto.py sha256: 9cc2137936bd43b2dcf02c4ffd4c5c039527076a9891edecea33d13abd5f1b70
+deposited exporter sha256: fab14ae1d2b151f405bda105103ec3fcca32841542369304d1d1a5b35517fe1e
+
+[1] named cases: |R|, |core|, equal
+  triangle                                           6   6 True
+  path_P4                                            0   0 True
+  lollipop (triangle + pendant path of 2)            6   6 True
+  barbell (two triangles joined by an edge)         14  14 True
+  dumbbell (two triangles joined by a path of 3)    16  16 True
+  theta (two vertices joined by three paths)        12  12 True
+  figure-8 (two triangles sharing a vertex)         12  12 True
+  K4                                                12  12 True
+  tree with a 4-cycle hanging on a bridge            8   8 True
+
+[2] cross-implementation, all labelled simple graphs, n = 1..5
+  graphs: 1099
+  own transitions vs deposited build_hashimoto: 0 mismatches
+  deposited recurrent_core_directed vs own_core and own_R: 0 mismatches
+
+[3] exhaustive, all labelled simple graphs: own_R == own_core
+  n = 1: graphs        1, with non-empty 2-core        0, mismatches 0
+  n = 2: graphs        2, with non-empty 2-core        0, mismatches 0
+  n = 3: graphs        8, with non-empty 2-core        1, mismatches 0
+  n = 4: graphs       64, with non-empty 2-core       26, mismatches 0
+  n = 5: graphs     1024, with non-empty 2-core      733, mismatches 0
+  n = 6: graphs    32768, with non-empty 2-core    29836, mismatches 0
+  n = 7: graphs  2097152, with non-empty 2-core  2060191, mismatches 0
+  total graphs: 2131019
+
+[4] negative controls (each must report a difference)
+  closed walks allowed to backtrack at the closing point, lollipop: differs = True
+  no stripping (all edges kept), path P4: differs = True
+  one directed edge per pair instead of both orientations, triangle: differs = True
+  tailed definition over all labelled graphs on 5 vertices: differs on 410 of 1024
+
+RESULT: PASS
