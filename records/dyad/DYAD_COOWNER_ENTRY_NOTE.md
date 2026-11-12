@@ -28,7 +28,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## OWNER LANE — Claude
 
-**Updated:** 12 November 2026, 16:05 +03:00, with W8 of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w8`). **Checked:** 12 November 2026, 15:10 +03:00; `main` `63160f9` (PR #241 merged as `2679f37`); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 17 items, all closed; open PR #183 adds one OFN finding to the inbox; `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md` is open at LIT.
+**Updated:** 12 November 2026, 16:05 +03:00, with W8 of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w8`). **Checked:** 12 November 2026, 15:10 +03:00; `main` `63160f9` (PR #241 merged as `2679f37`); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 18 items: 17 closed and **one open**, `20261112-LIT-inf016-harmonic-first-mode-obstruction.md` (LIT's offer of INF-016, a conditional first-harmonic obstruction; it asks for the owner's verdict; nothing blocks). Open PR #183 would add one OFN finding. `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md` is open at LIT.
 
 **Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1 to W8 are done as development and working records. The hand-over is `DYAD_OPEN20_AN_STAGE3C_A_HANDOVER.md`. Stage 3c-a has no further package; nothing in it is a certificate.
 
@@ -75,7 +75,8 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read `DYAD_OPEN20_AN_STAGE3B_DESIGN.md` (§4 lemma, §6 obligations, §9 risks). Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **OPEN 20 analytic branch: wait.** Stage 3c-b is not authorized, and two of the five conditions of the design are not met: LIT's verdict on López-Hernanz 2012 (L1–L3; `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md`, open) and the seed (Q1–Q3). When LIT answers: disposition of the reply, then the seed and P4 as a written argument. Scouting of the second overlap class is not authorized.
+1. **Disposition of the open inbox item** `pipes/DYAD/20261112-LIT-inf016-harmonic-first-mode-obstruction.md`: read INF-016 at the rtg-lit commit it names; give a verdict on the statement and on whether its conditions match the owner's objects (D1–D10, the overlap j = 0, the jump of stage 2b); say whether a first-harmonic observable should enter a later design. Record it in `records/dyad/` and close the item. It does not change stage 3c-a, whose target is a point value (plan record §4, 11 Nov).
+2. **OPEN 20 analytic branch: wait.** Stage 3c-b is not authorized, and two of the five conditions of the design are not met: LIT's verdict on López-Hernanz 2012 (L1–L3; `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md`, open) and the seed (Q1–Q3). When LIT answers: disposition of the reply, then the seed and P4 as a written argument. Scouting of the second overlap class is not authorized.
 2. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
 3. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
 
