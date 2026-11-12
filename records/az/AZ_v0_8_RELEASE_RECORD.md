@@ -1,6 +1,6 @@
-# AZ v0.8 — release record (DRAFT; stage 1 of 2)
+# AZ v0.8 — release record (DRAFT; stages 1 and 2 built, not adopted)
 
-**[SESSION] Not adopted.** No edition exists until the PI adopts one, this record is completed, and the PI merges and tags. This draft covers **stage 1**, the corrected intermediate: a build stage, not an edition (Methodology v1.4 §13.6). Prepared by the AZ co-owner (Claude), 12 November 2026.
+**[SESSION] Not adopted.** No edition exists until the PI adopts one, this record is completed, and the PI merges and tags. This draft covers **stage 1**, the corrected intermediate (a build stage, not an edition; Methodology v1.4 §13.6; §§1–6a), and **stage 2**, the compacted candidate (§6b). Prepared by the AZ co-owner (Claude), 12 November 2026.
 
 **Authority.** v0.8 cycle started by the PI on 12 Nov 2026, 11:30 +03:00 ("başlatalım"). Content: PI decision of 11 Nov 2026, 18:15 +03:00, row 5 (`records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` §5). Choices D1–D4: PI decision of 12 Nov 2026, 12:52 +03:00, "Ortak önerilerinizin tamamını kabul ediyorum" — D1 (a) declared section map, D2 (a) ledger rows only, D3 (a) `[THM]` on a written proof, D4 the Action 1 diagnostic is not in v0.8 (`records/az/AZ_v0_8_EDIT_PLAN.md` §4, §7).
 
@@ -11,13 +11,13 @@
 | base | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` at tag `az-v0.7` | `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94` | 83,281 |
 | 1 — as first submitted (commit `aeb6108`, reviewed in `5874174108`) | same path | `8ebcfb9a6c4065278ff6120b28237d7d6752d05a6c48655a42542478528eba67` | 92,719 |
 | **1 — corrected intermediate after review** (this branch) | same path | `19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426` | 94,673 |
-| 2 — compacted candidate | not built | — | — |
+| **2 — compacted candidate (DRAFT)** | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` on the stage-2 branch; base stored as `evidence/az/v0.8/stage1_intermediate.md` | `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d` | 88,992 |
 
 ```bash
 python3 -I evidence/az/v0.8/stage1/build_az_v0_8_stage1.py --out /tmp/inter.md --log /tmp/edit_log.txt
-sha256sum /tmp/inter.md dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md      # equal
+sha256sum /tmp/inter.md evidence/az/v0.8/stage1_intermediate.md           # equal
 diff /tmp/edit_log.txt evidence/az/v0.8/stage1/edit_log.txt               # empty
-git diff az-v0.7 -- dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md          # the stage-1 delta
+git diff --no-index <(git show az-v0.7:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md) evidence/az/v0.8/stage1_intermediate.md   # the stage-1 delta
 ```
 
 The builder reads the base from the tag, asserts its hash, and applies 51 edits, each located by an anchor that must occur exactly once (`evidence/az/v0.8/stage1/edit_log.txt`; new text in `evidence/az/v0.8/stage1/blocks/`). It stops on a missing or repeated anchor, on a lost identifier, on a stale string, and when a protected region differs from the base.
@@ -89,9 +89,36 @@ Not run: `tools/check_compaction.py` (stage 2); no owner artifact; no Thread C c
 
 Delta for the readback: `git diff aeb6108 HEAD -- dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` — five hunks (SG-AZ-7; §4.3.5; two in §9; Appendix B).
 
-## 7. Left for stage 2 and for the release
+## 6b. Stage 2 — compacted candidate
 
-Stage 2 (layout only, against the reviewed intermediate): header in the v1.4 field order with the declared section map, Methodology v1.4, companions with `dyad-v6.4.24`, a 2–4 sentence status summary, no "Major update" list; the dated list of §10 to one provenance paragraph; Appendix A with a v0.8 entry and compact earlier entries; footer. Then: second co-owner review of each stage, PI decision, completion of this record, status-lines commit, merge and tag by the PI; notices through `pipes/` to PROG (its §6.7 and §9.2 rows), DYAD (its table of consumer strings), TDRG, DZT and ATLAS.
+**Base:** the intermediate accepted in the readback review `5874483729` (second co-owner, 12 Nov 2026, on commit `873b277`: *accepted (scoped), R1 and R2 closed*; changed lines read, the full finite check not rerun) — `19a1faf0…0426`, stored byte-exact as `evidence/az/v0.8/stage1_intermediate.md`. **Candidate:** `f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d`, 88,992 bytes. Built by `evidence/az/v0.8/stage2/build_az_v0_8_stage2.py`; movement map `evidence/az/v0.8/stage2/movement_map.json`.
+
+```bash
+python3 -I evidence/az/v0.8/stage2/build_az_v0_8_stage2.py
+python3 tools/check_compaction.py evidence/az/v0.8/stage1_intermediate.md dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md evidence/az/v0.8/stage2/movement_map.json
+python3 -I evidence/az/v0.8/stage2/stage2_negative_controls.py
+```
+
+| Operation | Class | What |
+|---|---|---|
+| S2-H | replace-header (presentation) | v1.4 header: Scope, Document class with the declared section map, Document status, one predecessor with its hash, companions with `dyad-v6.4.24`, Methodology v1.4. The status summary is three sentences taken from the base summary. The "Major update (v0.6 at a glance)" list and the v0.6/v0.7 edition narrative leave the header; their bytes are in the intermediate and at `az-v0.7` |
+| S2-R1, S2-R2, S2-R3 | edit (ref-subst) | "Dyadic Appendix E" / "Dyadic Appendix D" (three places in §8) get the edition tag `dyad-v6.4.24`, so that the appendix references resolve; nothing else in those rows changes |
+| S2-A | replace-section (history-appendix) | Appendix A: new v0.8 entry; the v0.7 and v0.6 entries shortened, their full text in Appendix A of `az-v0.7`; the v0.5–v0.1 entries byte-identical. 8 editions, at most 104 words each |
+| S2-F | replace-footer (presentation) | one footer line |
+
+**Checker result** (`evidence/az/v0.8/stage2/check_compaction_output.txt`, report JSON beside it): **PASS**, exit 0. The candidate equals base + declared operations; 115 claim blocks of the base live text — 112 byte-identical, 3 changed by the declared reference substitutions, 0 unexplained; RID set, heading anchors, source hashes and qualifier tags of the live text preserved; references resolve; header fields present, one predecessor, one footer.
+
+**Negative controls** (`stage2_negative_controls_output.txt`): the unmutated map passes; eight mutations each fail on the expected check — an undeclared word in the live text; a status-summary sentence not in the base; a history-removal of a tagged, identified span; an Appendix A entry naming an identifier absent from the live text (the route by which an Action 1 entry could have entered against D4); a reference substitution that changes a statement; two footer lines; a base that is not the reviewed intermediate; a claim tag changed under the label of a reference substitution.
+
+**What the checker does not show** (its own limits): it compares bytes and declared classes; the wording of the new header (Scope, Document class, Maturity, Document status) and of the new Appendix A entries is presentation text and is for the reviewer to read.
+
+**Left as it is — §10.** The plan foresaw reducing the dated list of §10 to one provenance paragraph. Its entries carry claim tags and math, and the checker does not let a history operation remove such a span without a registered, reviewer-confirmed region; a region of this kind may carry `[DEF]` only. §10 is therefore byte-identical to v0.7: it keeps its dated list and has no v0.8 line. The v0.8 provenance is in Appendix A, in the header and in this record. Bringing §10 to the "current only" form is left to a later edition as a stage-1 item.
+
+**Size.** 83,281 (v0.7) → 94,673 (stage 1) → 88,992 bytes (candidate): +6.9 % against v0.7. The context core (header and §0–§3) is 37.1 k characters against 46.4 k in v0.7.
+
+## 7. Left for the release
+
+Mechanical review of stage 2 by the second co-owner; the PI's adoption decision; then, by this lane: status-lines commit (header *Document status*, footer), the adopted hash and the `BASELINE.md` row, completion of this record; the PI merges (merge commit) and creates the annotated tag `az-v0.8`. Notices through `pipes/` at release: PROG (its §6.7 and §9.2 rows for AZ; its §7.2 pointers "AZ §8" stay valid), DYAD (its table of consumer strings cites AZ "§1.2, §4.1, §8"; the Dyadic strings are now in §8 only), TDRG, DZT, ATLAS. `pipes/AZ/` is read again before the status-lines commit.
 
 ## 8. Not in v0.8
 

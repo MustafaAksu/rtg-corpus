@@ -1,0 +1,10 @@
+OK    P0 unmutated map                                               exit 0 (want 0)  RESULT: PASS
+OK    N1 undeclared word in the live text                            exit 1 (want 1)  FAIL  mechanical scope (re-derivation)  — first difference at line 120: derived 'not met.** The first observable tested (the Core(G_T) `4|q` angular r
+OK    N2 status summary with a sentence not in the base              exit 1 (want 1)  FAIL  operation S2-H (presentation)  — status summary adds text not in the base summary (header): ['The angular rule is a dynamical signal. **No Level
+OK    N3 history-removal of a tagged, identified span                exit 1 (want 1)  FAIL  operation X3 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: ' `[bridge-disqualified]` `[RID: TDRG-AZ-STATIC-ZN-4
+OK    N4 Appendix A names an identifier absent from the live text    exit 1 (want 1)  FAIL  operation S2-A (history-appendix)  — history entry names identifiers absent from the live text: ['AZ-NUM-TOKRES-S1']
+OK    N5 reference substitution that changes a statement             exit 1 (want 1)  FAIL  operation S2-R1 (ref-subst)  — changed text is not reference text: 'not yet established (Dyadic Appendix E' (offending: ['not', 'yet', 'establis
+OK    N6 two footer lines                                            exit 1 (want 1)  FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line
+OK    N7 base differs from the reviewed intermediate                 exit 1 (want 1)  FAIL  base identity  — map base_sha256 vs file
+OK    N8 a claim tag changed under the label of a reference substitution exit 1 (want 1)  FAIL  operation X8 (ref-subst)  — changed text is not reference text: 'THM' (offending: ['THM'])
+RESULT: PASS

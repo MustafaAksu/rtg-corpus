@@ -1,0 +1,117 @@
+{
+ "study": "AZ",
+ "target": "v0.8",
+ "stage": 2,
+ "base": "evidence/az/v0.8/stage1_intermediate.md",
+ "base_sha256": "19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426",
+ "candidate_sha256": "f15ee1d7601b43a7219f245990fa6e8f7c61bd0dd6e221e3267d683cb129a50d",
+ "archives": [
+  {
+   "name": "stage1-intermediate",
+   "path": "evidence/az/v0.8/stage1_intermediate.md",
+   "sha256": "19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426"
+  },
+  {
+   "name": "az-v0.7",
+   "git": "az-v0.7:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md",
+   "sha256": "2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94"
+  }
+ ],
+ "archives_note": "the stage-1 intermediate, committed byte-exact, holds every removed byte; the predecessor tag holds the v0.7 header, Appendix A and footer verbatim.",
+ "profile": {
+  "study": "AZ",
+  "ref_words": [],
+  "history_words": [],
+  "checked_tag_prefixes": [
+   "az-",
+   "tdrg-",
+   "gen-",
+   "uvm-",
+   "programme-",
+   "methodology-",
+   "dzt-"
+  ],
+  "known_tags": [
+   "az-v0.6",
+   "az-v0.7",
+   "dyad-v6.4.23",
+   "dyad-v6.4.24",
+   "tdrg-v2.12.14",
+   "gen-v2.10",
+   "uvm-v0.7.1",
+   "programme-v1.4",
+   "methodology-v1.4"
+  ],
+  "summary_from": [
+   "header"
+  ]
+ },
+ "operations": [
+  {
+   "id": "S2-H",
+   "op": "replace-header",
+   "class": "presentation",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "new": "# RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.8\n\n**Title:** RTG Arithmetic Resonance and Zeta Study — Infrastructure and Diagnostic Ledger  \n**Date:** 12 November 2026  \n**Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok  \n**Scope:** A reference-only index of the arithmetic-resonance results of the Dyadic DSN; the TDR-G $\\mathbb{Z}_N$ arithmetic structure as a bridge-candidate observable family; and the graph/transfer-zeta diagnostic infrastructure with the diagnostics it has produced. No cross-branch import is made and nothing is claimed about the Riemann Hypothesis.  \n**Document class:** Infrastructure / diagnostic ledger (Methodology v1.4 §0.5) with a declared section map (§0.3); not a scientific result ledger  \n**Programme tier:** Tier 5 — Arithmetic-diagnostic infrastructure; serves both continuous and discrete branches without belonging to either  \n**Maturity:** Level A — retained. Defined scope, internal consistency established, exploration begun. Thread C engineering is certified; the one Phase-2 scientific result is a negative-clarifying diagnostic, not a Level-B-promoting bridge result.  \n**Document status:** DRAFT — stage-2 candidate of v0.8; not adopted. `az-v0.7` governs until the PI adopts and tags this edition.  \n**Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN` v0.7 (tag `az-v0.7`, SHA-256 `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94`)  \n**Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`) · Discrete Genesis v2.12.14 (`tdrg-v2.12.14`) · Genesis Geometry v2.10 (`gen-v2.10`) · OPEN-M v0.7.1 (`uvm-v0.7.1`)  \n**DSN Methodology:** v1.4 (`methodology-v1.4`)  \n\n**Status summary:** This document remains an infrastructure ledger, not an active scientific study, and Maturity remains **Level A**. Milestone AZ-2 is recorded as **attempted, negative-clarifying**: the most tempting angular observable was tested and **disqualified** as a bridge-candidate. **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.**\n\n---\n",
+   "note": "v1.4 header: field order with Scope and Document status; one predecessor with its hash; companions with dyad-v6.4.24; status summary of three sentences taken from the base summary; the v0.6 'Major update' list and the v0.6/v0.7 edition narrative are history (in the stage-1 intermediate and at az-v0.7)"
+  },
+  {
+   "id": "S2-R1",
+   "op": "edit",
+   "class": "ref-subst",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "is not yet established (Dyadic Appendix E).",
+   "new": "is not yet established (Dyadic Appendix E, `dyad-v6.4.24`).",
+   "note": "the owner appendix is named with its edition tag, so that the reference resolves"
+  },
+  {
+   "id": "S2-R2",
+   "op": "edit",
+   "class": "ref-subst",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "Owner evidence boundary (Dyadic Appendix D):",
+   "new": "Owner evidence boundary (Dyadic Appendix D, `dyad-v6.4.24`):",
+   "note": "as S2-R1"
+  },
+  {
+   "id": "S2-R3",
+   "op": "edit",
+   "class": "ref-subst",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "its statement is not recovered, Dyadic Appendix D).",
+   "new": "its statement is not recovered, Dyadic Appendix D, `dyad-v6.4.24`).",
+   "note": "as S2-R1"
+  },
+  {
+   "id": "S2-A",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "archive": [
+    "stage1-intermediate",
+    "az-v0.7"
+   ],
+   "start": "## Appendix A — Version History",
+   "end": "## Appendix B — Retired and Rejected Claims",
+   "new": "## Appendix A — Version History\n\n### v0.8 — November 2026\nMethodology v1.4 migration with a declared section map (§0.3), the reduction asked for in Programme §6.7, and availability corrections. Each owner result is cited once, in §8; restated Dyadic and TDR-G text is removed from §1.2, §4.1, §4.2 and §6. PROP-AZ-CORE-EQUIV is `[THM]` on a written proof (§4.3.2), replacing the bare `[THM-ALG]`; a finite check is registered (`AZ-ART-CORE-EQUIV-CHECK`). The static-geometry reading of the `4|q` rule (`TDRG-AZ-STATIC-ZN-4Q`) is stated at the scope of its numerical evidence (SG-AZ-7, §4.3.5). §9 gives per-artifact availability after the partial recovery of 11 November 2026. Dyadic pin: `dyad-v6.4.24`. No new scientific result; Level A retained. Corrections: Appendix B. Record: `records/az/AZ_v0_8_RELEASE_RECORD.md`.\n\n### v0.7 — November 2026\nCorrections-only edition. Owner pins, identifiers and imported statements synchronized with the adopted owner editions (Dyadic v6.4.23, TDR-G v2.12.14, Genesis v2.10, Programme v1.4, OPEN-M v0.7.1); the withdrawn OPEN-M \"legal ×2\" reading removed; the Thread C evidence files recorded as not available in the repository. No grade of an AZ-owned result changed. Full entry: Appendix A of `az-v0.7`; record: `records/az/AZ_v0_7_RELEASE_RECORD.md`.\n\n### v0.6 — June 2026\nLedger-state update. AZ-1 closed (AZ-1A, AZ-1B, AZ-1C `[ENG PASS]`); AZ-OPEN-EDGE resolved (directed, both orientations); PROP-AZ-CORE-EQUIV and the antipodal-band low-order obstruction registered; the first Phase-2 diagnostic (the Core(G_T) `4|q` rule) registered and reclassified as static $\\mathbb{Z}_N$ geometry; retraction block added (§4.3.4, Appendix B); SG-AZ-5 repurposed as a provenance guard; AZ-2 attempted, negative-clarifying; Level A retained. Full entry: Appendix A of `az-v0.7`.\n\n### v0.5 — June 2026\nPrecision patch over v0.4. No Zeta-owned scientific content added. (Header/§1.3/§4.1 wording corrections; `[ENG-open-3]` added; zeta-pole SG-AZ-1/2 guard.)\n\n### v0.4 — June 2026\nPost-audit correction patch. Added Dyadic import-ref mechanisms, TDR-26 discriminator, SG-AZ-7, blocker sequencing, Genesis/OPEN-M precision notes.\n\n### v0.3 — June 2026\nSource-refresh and distributed-ownership patch. Pointer updates to Dyadic v6.4.8.1 / Discrete Genesis v2.12; Thread A/B refresh; §0.1 ownership map added.\n\n### v0.2 — June 2026\nConsistency pass after multi-AI audit of v0.1. Tag-alias normalization; \"four\"→\"five\" blocker fixes; High-Risk Claims Ledger added.\n\n### v0.1 — June 2026\nInitial release. Infrastructure-and-ledger document; three threads defined; five `[ENG-blocker]`, two `[ENG-open]`, four scientific `[OPEN]` items registered (all then blocked).\n\n---\n\n",
+   "note": "one compact entry per edition; new v0.8 entry; the v0.7 and v0.6 entries shortened, their full text in Appendix A of az-v0.7; the v0.5-v0.1 entries byte-identical"
+  },
+  {
+   "id": "S2-F",
+   "op": "replace-footer",
+   "class": "presentation",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "new": "*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.8 — DRAFT, stage-2 candidate; adoption pending; `az-v0.7` governs until adoption and tag.*\n",
+   "note": "single footer line"
+  }
+ ]
+}
