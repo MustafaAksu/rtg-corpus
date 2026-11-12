@@ -1,0 +1,16 @@
+AZ Action 1 Stage 2 pilot summary - native arm; outcomes shown for draws WITHOUT a resonant seed token only
+tag S2-CALIB-PILOT-20261112
+
+cell             runs  secs_sum secs_med secs_max |   n_NR   q50   q90   q95   q99 q99.5   max | P(M>=100) theta_ref
+N120k8T800       3000      1154     0.21     34.5 |   2620    40    51    56    76   107   300 |   0.0053 91
+N240k16T800      3000       833     0.20     25.5 |   2796    39    48    53    70    79   195 |   0.0029 80
+N240k16T1460     3000      2039     0.45     48.2 |   2796    45    59    67    90   108   300 |   0.0064 106
+N242k16T800      3000       676     0.21      4.0 |   2913    39    46    50    59    65   104 |   0.0003 64
+N242k16T1460     3000      1507     0.46     13.1 |   2913    44    55    60    76    85   147 |   0.0027 84
+N480k32T800      3000       765     0.20     27.3 |   2906    39    46    50    64    69   116 |   0.0007 70
+N480k32T2670     3000      3997     1.05    170.6 |   2906    49    64    73   100   117   300 |   0.0103 114
+
+reference exceedance alpha = P(M >= 100 | no resonant seed token) at N120k8T800 = 0.0053 (14 of 2620)
+theta_ref = smallest integer m whose exceedance fraction among non-resonant native draws is <= alpha
+
+RESULT: PASS
