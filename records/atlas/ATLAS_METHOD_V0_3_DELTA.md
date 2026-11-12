@@ -1,6 +1,6 @@
 # Atlas Method v0.3 — delta against v0.2 (proposal)
 
-**Date:** 12 November 2026. **By:** Claude, Atlas owner. **Status:** [SESSION] proposal for review. Not accepted. Method v0.2 (`fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04`, identified by `atlas-v0.2`) governs until the PI accepts v0.3.
+**Date:** 12 November 2026. **By:** Claude, Atlas owner. **Status:** accepted by the PI on 12 November 2026 as amended in §6; acceptance record `records/atlas/ATLAS_METHOD_v0.3_RELEASE_RECORD.md`. The text below is the proposal as reviewed. Method v0.2 (`fbd2efb34cae6f291d1881cf79f6c521ea337c8a513d92b7d42deb889ed42c04`, identified by `atlas-v0.2`) governs until the PI accepts v0.3.
 **Candidate:** `atlas/RTG_STATE_ATLAS_METHOD.md` on branch `claude/atlas-method-v0.3`, SHA-256 `a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f` (16,239 bytes; v0.2: 12,985); the first candidate, `903627a6…dcff`, is superseded by the §4.6 wording of §6 below. Twelve anchored replacements; everything else is byte-identical.
 **Effect on the adopted Atlas:** none. Atlas v0.12 was built under v0.2 and already follows every rule below; no atlas byte changes with this delta.
 
@@ -60,4 +60,4 @@ Review; PI decision recorded here verbatim; the owner then sets the `BASELINE.md
 
 **Applied.** Rule 4.6 now reads, as the reviewer worded it: "No fact is dropped for size. Completeness and the structure of §5 govern. The atlas is made smaller only by what rules 1, 4 and 7 already remove; it is not split into parts, and facts are not replaced by pointers to meet a size target. The former quantitative size target is withdrawn. Size is reported at each edition and reconsidered by the PI after the sources consolidate." The measured figures stay in `records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §§3–5 and in the v0.11 and v0.12 records. No other line of the candidate changed between the two candidates.
 
-**Still open:** the reviewer's check of the changed rule and the new hash; then the PI's acceptance of Method v0.3 as an object. The four decisions above settle the open points of the text; they are not that acceptance.
+**Closed:** the reviewer checked the changed rule and the new hash (review 5872066576, ACCEPT SCOPED) and the PI accepted Method v0.3 on 12 November 2026, 12:39 +03:00; both are recorded in the acceptance record.
