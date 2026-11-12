@@ -188,6 +188,14 @@ def _up(v):
     return arb(abs(v).upper())
 
 
+def _assert_up(f, v):
+    """Machine check of a float upper bound: the float f, read exactly, is >= every point of the ball v.
+    Raises ArithmeticError otherwise.  Used wherever a rigorous bound is stored as a float (W8)."""
+    if not arb(f) >= arb(v):
+        raise ArithmeticError('float upper bound not verified')
+    return f
+
+
 def _tm_step_bound(qb, Br, Be, rho):
     """Remainder bounds of one step of T for the Taylor model in d of order two.
     Input: rho = r0 + r1 d + r2 d^2 + (remainder of modulus <= Br), eta likewise with Be, valid for |d| <= rho and x on
@@ -266,7 +274,9 @@ def _arcs(X, narc):
     rad_arc = float((arb(X) * half * 1.0001).upper())
     for i in range(narc):
         c = acb(X) * (acb(0, 1) * (2 * i + 1) * half).exp()
-        yield acb(c.real.mid(), c.imag.mid()), rad_arc
+        xc = acb(c.real.mid(), c.imag.mid())
+        _assert_up(rad_arc, arb(X) * half + _up(c - xc))       # the ball contains arc i (chord <= arc length)
+        yield xc, rad_arc
 
 
 def _phi_at(a, Z0, order):
@@ -294,7 +304,7 @@ def circle_sup(K, a, X, narc, second=False):
     Upper bounds are converted to floats and multiplied by 1 + 1e-12, which covers the rounding of the conversion.
     Returns the constants and the sup bounds."""
     names = ('Z0', 'W0', 'Z1', 'W1', 'phiZ', 'dphiZ_Z1') + (('Z2', 'W2', 'dphiZ_Z2', 'ddphiZ_Z1sq') if second else ())
-    sup = dict.fromkeys(names, 0.0)
+    sup = dict.fromkeys(names, 0.0); supa = dict.fromkeys(names, arb(0))
     for xc, rad_arc in _arcs(X, narc):
         Z0, W0, Z1, W1, Z2, W2, x = raw_jet_arc(K, a, xc, rad_arc)
         p, dp, ddp = _phi_at(a, Z0, 2)
@@ -305,13 +315,19 @@ def circle_sup(K, a, X, narc, second=False):
             u = float(abs(v).upper())
             if not u == u or u == float('inf'):
                 raise ArithmeticError('circle_sup: enclosure not finite; use more arcs')
-            sup[k] = max(sup[k], u)
+            sup[k] = max(sup[k], u); supa[k] = supa[k].max(arb(abs(v).upper()))
     up = 1 + 1e-12
-    sup = {k: v * up for k, v in sup.items()}
+    sup = {k: _assert_up(v * up, supa[k]) for k, v in sup.items()}
     M = dict(G0=(sup['Z0'] + X) / X ** 4 * up, Q4=sup['Z1'] / X ** 4 * up,
              M3=(sup['W1'] + sup['dphiZ_Z1'] + X ** 2) / X ** 5 * up, ET44=(sup['W0'] + sup['phiZ']) / X ** 44 * up)
     if second:
         M.update(P4=sup['Z2'] / X ** 4 * up, S2=(sup['W2'] + sup['dphiZ_Z2'] + sup['ddphiZ_Z1sq'] / 2) / X ** 5 * up)
+    Xa = arb(X); sa = {k: arb(v) for k, v in sup.items()}        # machine check of the float formulas for M
+    _assert_up(M['G0'], (sa['Z0'] + Xa) / Xa ** 4); _assert_up(M['Q4'], sa['Z1'] / Xa ** 4)
+    _assert_up(M['M3'], (sa['W1'] + sa['dphiZ_Z1'] + Xa ** 2) / Xa ** 5); _assert_up(M['ET44'], (sa['W0'] + sa['phiZ']) / Xa ** 44)
+    if second:
+        _assert_up(M['P4'], sa['Z2'] / Xa ** 4)
+        _assert_up(M['S2'], (sa['W2'] + sa['dphiZ_Z2'] + sa['ddphiZ_Z1sq'] / 2) / Xa ** 5)
     return M, sup
 
 
@@ -544,7 +560,7 @@ def d_remainder_constants(K, a, X, rho, narc):
     N = len(a) - 1
     rho_a = arb(rho)
     p3 = acb_poly([a[k] * (k * (k - 1) * (k - 2)) for k in range(3, N + 1)])       # phi_N''' as a polynomial
-    worst = dict(BPhi=0.0, BZ=0.0, theta=0.0)
+    worst = dict(BPhi=0.0, BZ=0.0, theta=0.0); worsta = dict(BPhi=arb(0), BZ=arb(0), theta=arb(0))
     for xc, rad_arc in _arcs(X, narc):
         Z0, W0, Z1, W1, Z2, W2, x, BZ, BW = raw_jet_arc(K, a, xc, rad_arc, rho_a)
         z1, z2 = _up(Z1), _up(Z2)
@@ -573,10 +589,13 @@ def d_remainder_constants(K, a, X, rho, narc):
             u = float(v.upper())
             if not u == u or u == float('inf'):
                 raise ArithmeticError('d_remainder_constants: bound not finite; use more arcs')
-            worst[k] = max(worst[k], u)
+            worst[k] = max(worst[k], u); worsta[k] = worsta[k].max(arb(v.upper()))
     up = 1 + 1e-12
-    return dict(M3=worst['BPhi'] / (X ** 3 * rho ** 3) * up, MZ3=worst['BZ'] / (X ** 4 * rho ** 3) * up,
-                theta=worst['theta'] * up, X=float(X), rho=float(rho))
+    out = dict(M3=worst['BPhi'] / (X ** 3 * rho ** 3) * up, MZ3=worst['BZ'] / (X ** 4 * rho ** 3) * up,
+               theta=worst['theta'] * up, X=float(X), rho=float(rho))
+    _assert_up(out['M3'], worsta['BPhi'] / (arb(X) ** 3 * arb(rho) ** 3))      # machine check of the float formulas
+    _assert_up(out['MZ3'], worsta['BZ'] / (arb(X) ** 4 * arb(rho) ** 3)); _assert_up(out['theta'], worsta['theta'])
+    return out
 
 
 _SIX = ('G0', 'Q4', 'P4', 'M3', 'S2', 'ET44')
@@ -807,15 +826,15 @@ def _piece_check(SER, MC, TB, xc, r, sigma, kappa, rho_max, inverse):
         return 'fail', dict(why='tube radius above rho_max')
     info = {}
     if not inverse:
-        q = tube_step(SER, TB.TAU, MC, xc, r, float(R_hi.upper()))
+        q = tube_step(SER, TB.TAU, MC, xc, r, _fup(R_hi))
     else:
-        iv = inverse_step(SER, TB.TAU, MC, xc, r, float(R_hi.upper()))
+        iv = inverse_step(SER, TB.TAU, MC, xc, r, _fup(R_hi))
         if iv is None:
             return 'fail', dict(why='local inverse not found')
         q = iv['q']; info['r_over_rp'] = iv['r'] / r
         xis = TB.K.c * q['x']; ag = xis.arg() / arb.pi()         # the source disc B (as its square), for the proof record
-        info['src'] = (float(abs(xis).upper()), float(ag.lower()), float(ag.upper()),
-                       float((R_hi - _up(q['E'])).lower()), iv['rho'])
+        info['src'] = (_fup(abs(xis)), _fdn(ag), _fup(ag),
+                       float((R_hi - _up(q['E'])).lower()), iv['rho'], float((R_lo - _up(q['E'])).lower()))
         if not arb(iv['rho']) < rho_max:
             return 'fail', dict(why='preimage fibre radius above rho_max')
     dre = arb((q['dtau0'].real - q['dtau_dev']).lower())
@@ -854,14 +873,20 @@ def _piece_check(SER, MC, TB, xc, r, sigma, kappa, rho_max, inverse):
     return 'pass', info
 
 
-def build_engine(N=40, D=360, X=1.10, narc=16000, rem=((0.90, 8000), (1.03, 32000)), rho_d=0.02):
+def build_engine(N=40, D=360, X=1.10, narc=16000, rem=((0.90, 8000), (1.03, 32000)), rho_d=0.02, root='pilot'):
     """The engine of W1-W2 in one call: constants, coefficient balls, the six Series with their Cauchy constants, the
     remainder constants.  Series at 400 digits; on return the working precision is 160 bits.
     Returns K, a, SER, MC, report (structural-zero consistency, tails at |x| = 1.02, theta)."""
     ctx.dps = 400
-    K = Consts(); a = coefficients(K, N)
+    K = Consts()
+    if root == 'other':            # control "wrong branch": the other root of the quadratic for a_2, with the recursion
+        disc = K.B * K.B - 4 * K.A * K.CC                     # constants of the pilot branch
+        K.a = (-K.B + disc.sqrt()) / (2 * K.A); K.ell = K.C40 + K.MU * K.a
+    a = coefficients(K, N)
     Zj, Wj = forward_jets(K, a, D + N + 6)
     ser, rep = order_zero_from_jets(a, Zj, Wj, D)
+    if root != 'pilot' and not (rep['all_contain_zero'] and rep['max_radius'] < 1e-150):
+        raise ArithmeticError('structural zeros not consistent: %s' % rep.get('first_nonzero', 'the defect is not O(x^44)'))
     ctx.prec = 160
     M, _ = circle_sup(K, a, X, narc, second=True)
     SER = {k: Series(ser[k], X, M[k]) for k in ser}
@@ -908,7 +933,7 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02, extra=Fals
     up = _up
     lo = lambda v: arb(abs(v).lower())
     Xt = arb(xi0) / lo(K.c) * (1 + arb('1e-9'))
-    Xf = float((Xt * arb('1.001')).upper()); X = arb(Xf)
+    Xf = _assert_up(float((Xt * arb('1.001')).upper()), Xt); X = arb(Xf)      # the disc |x| <= Xf contains zone I
     t = X ** 3
     eta = (up(A2) * X + up(A1) * X ** 2 + up(KA) * t * (abs(X.log()) + arb.pi())) / lo(A3)
     tlo = lo(A3) * (1 - eta)
@@ -927,7 +952,7 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02, extra=Fals
     out['preconditions'] = ok_pre
     if not ok_pre:
         return out
-    rho = float((2 * Rmax).upper())
+    rho = _fup(2 * Rmax)
     q = tube_step(SER, TAU, MC, acb(0), Xf, rho)
     Gb, Qb, Pb = up(q['G0']), up(q['Q4']), up(q['P4'])
     Mb, Sb, Eb = (up(SER[k].enclose(acb(0), Xf)) for k in ('M3', 'S2', 'ET44'))
@@ -969,8 +994,7 @@ def zone1_check(K, SER, MC, TB, xi0, sigma, kappa='0.15', rho_d=0.02, extra=Fals
         Gd = up(SER['G0'].enclose_derivative(acb(0), Xf))
         Lc = 4 * t * Gb + X * t * Gd
         if extra:                       # for the proof record: relative radius of the lemma disc, sup |E|/R(x') on it
-            out.update(src_rel_radius=float((2 * t * Gb).upper()), E_over_R=float((kk ** 42 * t * e_over).upper()),
-                       L_disc=float(Lc.upper()))
+            out.update(src_rel_radius=_fup(2 * t * Gb), E_over_R=_fup(kk ** 42 * t * e_over), L_disc=_fup(Lc))
         out.update(inv_disc=float((X - Xt * kk).lower()),
                    inv_i=float((2 * P_lo * (1 - t * lam) - 1 - kk ** 42 * t * e_over - 4 * C2b * t * Rmax - 8 * q['M3c'] * t * Rmax ** 2).lower()),
                    inv_ii=float((2 * Gb * (1 - Lc) - Gb - kk ** 4 * bm).lower()))
@@ -1036,6 +1060,8 @@ def arc_chain(K, TAU, t_end, eps=0.02, step=0.8, cores=None, max_segments=5000):
         t1 = t + step * float((arb(r) * m).lower())
         if not res + arb(t1) - arb(t) < arb(r) * m:
             return dict(ok=False, why='segment not covered', segments=k, t=t)
+        if k == 0 and not (_up(tau(xk) - ts) + arb(t1) - (-ts.imag) < arb(r) * m and _up(xs - xk) < arb(r)):
+            return dict(ok=False, why='exact start not covered', segments=0, t=t)       # exact t* and x*, as balls
         x1 = xk
         for _ in range(6):                        # Newton for tau(x) = w(t1), non-rigorous
             d1, _ = _tau_derivs(TAU, x1)
@@ -1079,14 +1105,14 @@ def arc_tail(K, TAU, xi_M, eps=0.03, cores=None, branch=0):
     tau = Tube(K, TAU, 0).tau
     ts = tau(acb('0.4') * (acb(0, 1) * arb.pi() / 6).exp() / K.c); re_s = ts.real
     wmin = lo(A3) / XM ** 3                                    # |w| >= wmin  <=>  |x0| <= XM
-    tM = float((wmin ** 2 - re_s ** 2).sqrt().upper()) * (1 + 1e-12)
+    tM = _fup((wmin ** 2 - re_s ** 2).sqrt())
     rot = (acb(0, 2) * arb.pi() * branch / 3).exp()
     x0 = lambda tt: ((A3.log() - acb(re_s, -arb(tt)).log()) / 3).exp() * rot
     # arguments on the tail: arg w in [-pi/2 - atan(|Re tau*|/tM), -pi/2] (Re tau* < 0), principal
     dw = (abs(re_s) / arb(tM)).atan()
     aw = -arb.pi() / 2 - dw / 2 + arb(0, arb((dw / 2).upper()))
     axi = (A3.arg() - aw) / 3 + 2 * arb.pi() * branch / 3 + K.c.arg() + arb(0, arb(arb(eps).asin().upper()))
-    out = dict(margin=float(margin.lower()), epp=float((e0 / (3 * br)).upper()) if br > 0 else float('inf'),
+    out = dict(margin=float(margin.lower()), epp=_fup(e0 / (3 * br)) if br > 0 else float('inf'),
                tM=tM, XM=float(XM.upper()), arg_xi_over_pi=[float((axi / arb.pi()).lower()), float((axi / arb.pi()).upper())],
                abs_xi_max=float((up(K.c) * XB).upper()), re_tau_star_negative=bool(re_s < 0), x0=x0, eps=eps)
     if cores:
@@ -1201,16 +1227,31 @@ class ModelEngine:
     def inv0(self, xc, r, Rp):
         xp = xc + _disc0(r)
         x = xp * (-(1 - 3 * xp * xp * xp).log() / 3).exp()
-        c = _mid(x); rr = float(_radc(x).upper()) * (1 + 1e-9) + 1e-300
+        c = _mid(x); rr = _assert_up(float(_radc(x).upper()) * (1 + 1e-9) + 1e-300, _radc(x))
         q = self.enc(c, rr, 0)
-        return c, rr, float(((arb(Rp) + _up(q['E'])) / arb(abs(q['mu0']).lower())).upper()) * (1 + 1e-9)
+        rho = (arb(Rp) + _up(q['E'])) / arb(abs(q['mu0']).lower())
+        return c, rr, _assert_up(float(rho.upper()) * (1 + 1e-9), rho)
+
+
+def _fup(v):
+    """A float upper bound of the non-negative ball v, machine-checked."""
+    return _assert_up(float(arb(v).upper()) * (1 + 1e-12), v)
+
+
+def _fdn(v):
+    """A float lower bound of the positive ball v, machine-checked."""
+    f = float(arb(v).lower()) * (1 - 1e-12)
+    if not arb(f) <= arb(v):
+        raise ArithmeticError('float lower bound not verified')
+    return f
 
 
 def _leg_data(eng, X, D):
     xc, rx = X; dc, rd = D
     ds = arb((_up(dc) + rd).upper())
-    q = eng.enc(xc, float(rx.upper()) * (1 + 1e-12), float(ds.upper()))
-    qc = eng.enc(xc, 0.0, float(ds.upper()))
+    rho = _fup(ds)                      # the fibre radius of the enclosures: a checked upper bound of sup |d|
+    q = eng.enc(xc, _fup(rx), rho)
+    qc = eng.enc(xc, 0.0, rho)
     return q, qc
 
 
@@ -1231,13 +1272,13 @@ def _base_centre(qc, D):
 
 def _base_fwd(eng, X, D, q, qc):
     img = _base_centre(qc, D)
-    rn = _up(eng.b0p(X[0], float(X[1].upper()) * (1 + 1e-12))) * X[1] + _var_base(q, qc, D) + _radc(img)
+    rn = _up(eng.b0p(X[0], _fup(X[1]))) * X[1] + _var_base(q, qc, D) + _radc(img)
     return (_mid(img), arb(rn.upper()))
 
 
 def _base_back(eng, Xa, Da, Xb, q, qc):
     xa, ra = Xa
-    b0c = eng.b0p(xa, 0.0); b0X = eng.b0p(xa, float(ra.upper()) * (1 + 1e-12))
+    b0c = eng.b0p(xa, 0.0); b0X = eng.b0p(xa, _fup(ra))
     u = xa - (_base_centre(qc, Da) - Xb[0]) / b0c
     rad = (Xb[1] + _var_base(q, qc, Da) + _up(b0X - b0c) * ra) / arb(abs(b0c).lower()) + _radc(u)
     return (_mid(u), arb(rad.upper()))
@@ -1294,7 +1335,7 @@ def leg_G(eng, TB, xs, n, rounds, inner=1, full_fibre=False):
         for k in range(n):
             if X[k + 1] is None:
                 Rp = _ds(D[k]).max(_apriori(TB, X[k])[1]) if full_fibre else _ds(D[k])
-                c, r, rho = eng.inv0(X[k][0], float(X[k][1].upper()) * (1 + 1e-12), float(Rp.upper()))
+                c, r, rho = eng.inv0(X[k][0], _fup(X[k][1]), _fup(Rp) if full_fibre else float(Rp.upper()))
                 X[k + 1] = (c, arb(r)); D[k + 1] = _tighter((acb(0), arb(rho)), _apriori(TB, X[k + 1]))
             for _ in range(inner):
                 q, qc = _leg_data(eng, X[k + 1], D[k + 1])
@@ -1306,3 +1347,22 @@ def leg_G(eng, TB, xs, n, rounds, inner=1, full_fibre=False):
             D[k] = _tighter(D[k], _d_fwd(Q[k + 1][0], Q[k + 1][1], D[k + 1]))
         hist.append(float(D[0][1]))
     return D[0], hist, X, D
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# W8: the disc of a rectangle of the zone-II cover, with a machine check of the covering claim.
+def piece_disc(K, s, t, hs, ht):
+    """The piece of the rectangle |log|xi| - s| <= hs, |arg xi - t| <= ht  (floats): centre xc (a point) and float radius
+    r of a disc in x = xi/c that contains it.  The numbers are those of the W3 cover.  Checked in ball arithmetic:
+    for a point of the rectangle enlarged by the relative margin 1e-12 on both half-sides (which absorbs the rounding
+    of the float rectangle edges, so that the rectangles of the cover and of its subdivisions overlap),
+        x/xc = exp(delta),  |delta| <= h' + |s + i t - log(c xc)|,  h' = (1 + 1e-12) sqrt(hs^2 + ht^2),
+    and |exp(delta) - 1| <= exp(|delta|) - 1; the check is  |xc| (exp(|delta|_max) - 1) <= r."""
+    import math
+    cabs = float(abs(K.c).mid()); carg = float(K.c.arg().mid())
+    xc = acb(arb(s - math.log(cabs)), arb(t - carg)).exp(); xc = acb(xc.real.mid(), xc.imag.mid())
+    r = float(abs(xc).upper()) * (math.exp(math.hypot(hs, ht)) - 1) * (1 + 1e-9)
+    off = _up(acb(arb(s), arb(t)) - (K.c * xc).log())
+    hmax = (arb(hs) ** 2 + arb(ht) ** 2).sqrt() * (1 + arb('1e-12')) + off
+    _assert_up(r, _up(xc) * (hmax.exp() - 1))
+    return xc, r

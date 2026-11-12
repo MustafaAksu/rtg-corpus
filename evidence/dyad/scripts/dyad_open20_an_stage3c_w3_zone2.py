@@ -67,8 +67,7 @@ def main():
     mins = dict(dre=None, dh=None, margin_B=None); where = {}; max_a2 = 0.0; max_rr = 0.0
     while stack:
         s, t, hs_, ht_, dep = stack.pop()
-        xc = acb(arb(s - math.log(cabs)), arb(t - carg)).exp(); xc = acb(xc.real.mid(), xc.imag.mid())
-        r = float(abs(xc).upper()) * (math.exp(math.hypot(hs_, ht_)) - 1) * (1 + 1e-9)
+        xc, r = L.piece_disc(K, s, t, hs_, ht_)                # with the machine check of the covering claim (W8)
         if float(abs(xc).upper()) + r >= XENG:                  # outside the range of the engine: only 'out' is possible
             f, sec = TB.functionals(xc + acb(arb(0, r), arb(0, r)))
             st, inf = ('out', {}) if (f <= 1 or sec <= TB.cw) else ('guard', {})
