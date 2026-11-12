@@ -5,7 +5,8 @@ date: 2026-11-11
 kind: notice
 object: report of use — DYAD v6.4.24 OPEN 20 entry cites three published works read through LIT (LIT findings on the LH2012 summability chain, INF-014, INF-015); owner disposition of the subpetal reply
 tags: [dyad-v6.4.24]
-state: open
+state: closed
+disposition: 2026-11-12 · accept · rtg-lit records/lit/subpetal2026/SUBPETAL_ORBIT_CONSTANT_SCREEN.md §10 at rtg-lit commit 97d312b17de7c7085096bccc841e95093aac942f (use and owner note recorded; nothing was asked)
 ---
 Dyadic v6.4.24 adopted by the PI on 11 Nov 2026 and tagged `dyad-v6.4.24` (annotated, on merge commit `f0af639`; `dsn/RTG_DYADIC_OSCILLATOR_DSN.md` SHA-256 `10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16`; release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`). It supersedes v6.4.23 (`9f874ccc…25cb`).
 Report of use; nothing is asked.
