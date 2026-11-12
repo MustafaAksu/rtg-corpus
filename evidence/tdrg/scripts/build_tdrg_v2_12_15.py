@@ -69,15 +69,22 @@ TDR6_D_OLD = "- Pairwise difference multiset: `[OPEN]`"
 TDR6_D_NEW = ("- Token census and pairwise difference multiset: **predictable-change law** `[ALG]` *(v2.12.15)* — "
               "TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-BIRTH-SPECTRUM-INJECTION (§6.13): exact, given the centre token(s) "
               "and the token census; the multiset alone does not determine its update "
-              "(TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED). The sub-item is resolved in that form; TDR-6 is not closed — no "
-              "purely relational quantity is preserved across births.")
+              "(TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED). The sub-item is resolved in that form: the full pairwise-advance "
+              "spectrum is not preserved at births, and $D_{t+1}$ is not a function of $D_t$ alone, so no closed update "
+              "law computable from $D_t$ exists.\n"
+              "- Signed-class set $\\mathcal I(X_t)=\\{[\\delta_i]_\\pm: i\\in V_t\\}$, $[x]_\\pm=\\{x,-x\\}$: "
+              "**exactly invariant** `[ALG]` *(v2.12.15)* — TDRG-ALG-TOKEN-CENSUS-LAW (iii): preserved at every tick, "
+              "births included, for all six policies; a token-state quantity, unchanged by the declared phase gauge and by "
+              "relabelling (SG-14). Whether it meets the purely relational condition of this question is undecided, so it "
+              "does not close TDR-6. Pointed out by the ChatGPT co-owner change-focused review (PR #250).")
 SPEC_STAR_OLD = "Either outcome is valuable; neither is assumed (SG-12)."
 SPEC_STAR_NEW = (SPEC_STAR_OLD + "\n\n**Current status (v2.12.15):** the birth update is exact "
                  "(TDRG-ALG-BIRTH-SPECTRUM-INJECTION) and the token support is fixed at $t=0$ "
                  "(TDRG-ALG-TOKEN-CENSUS-LAW): a birth extends the spectrum by an explicit injection that depends on the "
                  "centre token and the census, not on the spectrum alone (TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED). This is a "
-                 "characterized extension law for each birth. Still open: an invariant of the full dynamics, and which "
-                 "centre tokens fire (a dynamical question). Status stays ACTIVE.")
+                 "characterized extension law for each birth. Still open: a spectrum-level quantity preserved across births, or "
+                 "updated by a law closed on the spectrum (the token-level invariant of TDRG-ALG-TOKEN-CENSUS-LAW (iii) is not "
+                 "a function of the spectrum), and which centre tokens fire (a dynamical question). Status stays ACTIVE.")
 
 # ---------------------------------------------------------------------------------------------------- §3
 SG3_OLD = "**[SG-3]** Total additive momentum $P = \\sum \\delta_i$ is not a physical observable.  "
@@ -92,8 +99,8 @@ SG12_OLD = ("Star blow-up creates a new node and new pairwise advances; spectrum
             "across star blow-up is `[OPEN]` and must not be assumed.")
 SG12_NEW = ("*(v2.12.15)* Its $n$-node birth-free form is TDRG-ALG-SPECCONS-N; across a birth the update is exact but "
             "needs the centre token and the census (TDRG-ALG-BIRTH-SPECTRUM-INJECTION, "
-            "TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED). An invariant of the full dynamics across births is `[OPEN]` and must "
-            "not be assumed.")
+            "TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED). Spectrum conservation across births, or a spectrum-level invariant of the "
+            "full dynamics, is `[OPEN]` and must not be assumed.")
 
 # ---------------------------------------------------------------------------------------------------- §6.2, §6.3
 AZCIT_OLD = "`AZ-ALG-ANTIPODAL-LOWORDER` (`az-v0.6`) is the same"
@@ -127,15 +134,16 @@ SPECC_OLD = ("**Generalization:** $n$-node signed-permutation invariance is conj
              "blow-up creates a new node and new pairwise advances and is `[OPEN]` (SG-12)**.")
 SPECC_NEW = ("**Generalization** *(v2.12.15 `[COR]`)*: the $n$-node birth-free statement is proved, TDRG-ALG-SPECCONS-N "
              "(§6.13), replacing the former conjecture; across star blow-up the update is exact but not determined by the "
-             "spectrum (TDRG-ALG-BIRTH-SPECTRUM-INJECTION, TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED), and an invariant of the "
-             "full dynamics is `[OPEN]` (SG-12).")
+             "spectrum (TDRG-ALG-BIRTH-SPECTRUM-INJECTION, TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED), and a spectrum-level "
+             "invariant of the full dynamics is `[OPEN]` (SG-12).")
 
 # ---------------------------------------------------------------------------------------------------- §6.13
 S613_ANCHOR = "\n\n---\n\n## §7. Import Ledger {#sec-7-imports}"
 S613 = (
     "\n\n### §6.13 Token Alphabet and Birth Laws `[ALG]` {#sec-6-13-tokens} *(new in v2.12.15)*\n\n"
     "> **[SG-12 applies.]** These are statements about tokens and the unlabelled advance spectrum under the event rules of "
-    "§6.3; none is an invariant of the full dynamics across births, a growth mechanism or a bridge (SG-10). Sources: "
+    "§6.3. They describe the token and spectrum updates exactly; none closes TDR-6 or OPEN-SPECCONS-STAR, and none "
+    "is a growth mechanism or a bridge (SG-10). Sources: "
     "proposed by the AZ co-owner, " + AZ_SRC + ", offered as `pipes/TDRG/20261112-AZ-token-alphabet-law-offer.md`; "
     "verified by the TDR-G owner sessions (" + OWNER_REC + ", §3 and §7) and registered here as TDR-G results, credited "
     "to AZ. AZ's registered Stage 1 campaign and its numbers are not part of them.\n\n"
@@ -158,10 +166,14 @@ S613 = (
     "initial tokens, $S_0=A_0\\cup(-A_0)$, and $c_t(y)$ the number of nodes with token $y$ at tick $t$. Under "
     "TDRG-ALG-EVENT-INVENTORY: (i) $\\delta_i(t)\\in S_0$ for every node and tick, so at most $|S_0|\\le2|A_0|$ distinct "
     "tokens ever occur; (ii) a tick whose births have centre snapshot tokens $x_1,\\dots,x_m$ changes the census by "
-    "$c_{t+1}(y)-c_t(y)=\\#\\{a: y\\equiv-x_a\\}$, so $c_t$ is coordinatewise non-decreasing and $\\sum_y c_t(y)=M_t$. "
+    "$c_{t+1}(y)-c_t(y)=\\#\\{a: y\\equiv-x_a\\}$, so $c_t$ is coordinatewise non-decreasing and $\\sum_y c_t(y)=M_t$; "
+    "(iii) the set of signed classes present, $\\mathcal I(X_t)=\\{[\\delta_i]_\\pm\\}$ with $[x]_\\pm=\\{x,-x\\}$, is "
+    "invariant at every tick, births included: $\\mathcal I(X_t)=\\{[a]_\\pm: a\\in A_0\\}$. "
     "*Proof.* (a) and (b) leave the multiset of tokens unchanged; in (c) the centre's $x$ becomes $-x$ and the newborn adds "
-    "$x$, a net gain of one $-x$; distinct centres compose; (i) follows by induction because $S_0=-S_0$. ∎ The object is "
-    "the global multiset, not node identity: the centre's own token is not conserved.\n\n"
+    "$x$, a net gain of one $-x$; distinct centres compose; (i) follows by induction because $S_0=-S_0$. (iii): by (ii) no "
+    "token count decreases, so no class disappears, and a birth adds only $-x$, whose class $[x]_\\pm$ is already present "
+    "at the centre. ∎ The object is the global multiset, not node identity: the centre's own token is not conserved. Item "
+    "(iii) was pointed out by the ChatGPT co-owner change-focused review (PR #250).\n\n"
     "`[ALG]` " + rid("TDRG-ALG-BIRTH-SPECTRUM-INJECTION") + " **Birth update of the advance spectrum.** Let $C_t$ be the "
     "token multiset before the tick and $D(C)$ the multiset of $|y-y'|_c$ over unordered pairs of $C$. With births at "
     "centre snapshot tokens $x_1,\\dots,x_m$: $C_{t+1}=C_t\\uplus\\{-x_1,\\dots,-x_m\\}$ and "
@@ -186,7 +198,10 @@ S613 = (
     "hypothesis]` **Free parent–child phase law and order classification.** If a star event at tick $t_0$ has centre $A$ "
     "with snapshot token $x$ and newborn $E$, and the next $j$ advances use $\\delta_A=-x$ and $\\delta_E=x$, then after "
     "the advance of tick $t_0+j$, $\\theta_E-\\theta_A\\equiv N/2+2jx \\pmod N$. *Proof:* the separation is $N/2$ at birth "
-    "(TDRG-DEF-STAR) and each advance adds $2x$. ∎ The separation stays in $\\{N/2,0\\}$ iff $4x\\equiv0 \\pmod N$: "
+    "(TDRG-DEF-STAR) and each advance adds $2x$. ∎ Along the free orbit — the hypothesis holding for every $j\\ge0$ — "
+    "the separation stays in $\\{N/2,0\\}$ for all $j$ iff $4x\\equiv0 \\pmod N$; already $j=1$ forces "
+    "$2x\\in\\{0,N/2\\}$, so the same holds on any window with at least one advance, while a window with no advance "
+    "imposes no condition. Equivalently $\\operatorname{ord}(2x)\\le2$: "
     "$\\operatorname{ord}(2x)=1$ iff $x\\in\\{0,N/2\\}$, and $\\operatorname{ord}(2x)=2$ iff $4\\mid N$ and "
     "$x\\in\\{N/4,3N/4\\}$; for $N\\equiv2 \\pmod 4$ no token has order 2. This is a kinematic identity, not a "
     "bond-persistence or growth mechanism: in a many-node universe further events usually break the hypothesis, and it "
@@ -277,7 +292,8 @@ APPA_NEW = (
     "-BIRTH-SPECTRUM-INJECTION, -SPECCONS-N, -BIRTH-SPECTRUM-NOT-CLOSED, -PARENT-CHILD-PHASE; owner check "
     "TDRG-NUM-TOKEN-LAW-CHECK. Proposed by AZ, verified by the owner, credited to AZ.\n"
     "- **§6.12 [COR]:** the LEM-SPECCONS $n$-node conjecture resolved by TDRG-ALG-SPECCONS-N.\n"
-    "- **§2 [COR]:** TDR-6 PARTIAL (the pairwise-multiset sub-item resolved as a predictable-change law); "
+    "- **§2 [COR]:** TDR-6 PARTIAL (the pairwise-multiset sub-item resolved as a predictable-change law; the signed-class "
+    "set registered as an exact invariant, its relational status undecided — ChatGPT co-owner review, PR #250); "
     "OPEN-SPECCONS-STAR current status.\n"
     "- **§3 [COR]:** SG-3 — $P$ not conserved at births and not a gauge quantity (OFN finding); SG-12 updated.\n"
     "- **§7 [COR]:** export row `TDRG-EXPORT-DISCRETE-TRIAD` on the A → B → C gate (Programme v1.4 notice); Finding A "

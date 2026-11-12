@@ -19,7 +19,10 @@ Gates (exit 0 iff all PASS):
                SG-3, TDR-6 and Appendix B no longer give "gauge artifact"/"gauge-like" as the reason; TDR-6 is
                "ACTIVE — PARTIAL"; the LEM-SPECCONS conjecture sentence is replaced; the export row names
                TDR-24A → TDR-24B → TDR-24C; companion pins programme-v1.4 / ofn-v0.12 and no live Programme v1.3 /
-               OFN v0.10 context pin
+               OFN v0.10 context pin; round 2 (review PR #250): the universal negative on TDR-6 and the "invariant of
+               the full dynamics" phrasings are gone, the signed-class invariant (census law (iii), TDR-6 sub-item) is
+               present and left undecided as relational, and the parent–child order statement carries the free-orbit
+               quantifier
  C7  NUMBERS   every number of §6.13 and of the TDRG-DEF-STAR note equals the owner check output
                (evidence/tdrg/inbox_20261112/owner_token_law_check_v2_output.json), fixtures included
  C8  EVIDENCE  every hash prefix cited in edited text matches its file (tree or tag); every cited repository path
@@ -28,7 +31,8 @@ Gates (exit 0 iff all PASS):
                and az-v0.7; the AZ preregistration on this tree carries Propositions 1-3 and Corollaries 1.1-1.2; the
                five pipes items cited exist; programme-v1.4 tag exists
  C10 DYNAMICS  on the pinned engine (hash-checked) with the TDRG-DEF-ORIENT reference: census law, alphabet and
-               birth injection on a random sample of all six policies (0 violations); fixture F1 (tailed tree is a
+               birth injection and the signed-class set invariance on a random sample of all six policies
+               (0 violations); fixture F1 (tailed tree is a
                single star); fixture F2 (equal spectra, different birth increments); no residual component class
                under the narrow band; negative control: an engine whose star map does not flip the centre must
                violate the census law
@@ -116,7 +120,17 @@ def gates(root, base, cand, log, builder=None, engine_mutation=None, out=print):
           and "$n$-node signed-permutation invariance is conjectured" not in cand
           and "blocked by TDR-24A → TDR-24B → TDR-24C and TDR-T0" in cand and "blocked by TDR-24D/A/B" not in cand
           and "Programme Overview v1.4 (`programme-v1.4`)" in cand and "Ontological Foundations v0.12 (`ofn-v0.12`)" in cand
-          and "Programme Overview v1.3 SG-PROG" not in L and "OFN v0.10 O0–O3" not in L)
+          and "Programme Overview v1.3 SG-PROG" not in L and "OFN v0.10 O0–O3" not in L
+          # round 2 (ChatGPT change-focused review, PR #250): R1 and R2
+          and "no purely relational quantity is preserved" not in cand
+          and "none is an invariant of the full dynamics" not in cand and "an invariant of the full dynamics" not in cand
+          and "none closes TDR-6 or OPEN-SPECCONS-STAR" in cand
+          and "(iii) the set of signed classes present" in cand
+          and "- Signed-class set $\\mathcal I(X_t)" in cand and "**exactly invariant** `[ALG]`" in cand
+          and "Whether it meets the purely relational condition of this question is undecided, so it does not close TDR-6." in cand
+          and "no closed update law computable from $D_t$ exists" in cand
+          and "Along the free orbit — the hypothesis holding for every $j\\ge0$" in cand
+          and "∎ The separation stays in $\\{N/2,0\\}$ iff" not in cand)
     g("C6 CONTENT", ok)
     o = json.load(open(os.path.join(root, OWNER_OUT)))
     c, s, fx = o["counts"], o["star_shapes (campaign, fixtures excluded)"], o["fixtures"]
@@ -190,6 +204,7 @@ def dynamics(root, out, mutation=None):
                     xs = [u.delta[i] for i in u.theta if i not in pre]
                     viol += Counter(u.delta.values()) != Counter(C) + Counter((-x) % N for x in xs)
                     viol += not set(u.delta.values()) <= S0
+                    viol += {min(y, (-y) % N) for y in u.delta.values()} != {min(y, (-y) % N) for y in C}
                     De = D(C, N)
                     for a, x in enumerate(xs):
                         for y in C: De[cd((-x) % N, y, N)] += 1
@@ -220,6 +235,9 @@ def controls(root, base, cand, log, out=print):
         "K3 unlogged change": cand.replace("**Free parent–child phase law", "**Free parent-child phase law", 1),
         "K5 one new RID declaration dropped": cand.replace("[RID: TDRG-ALG-SPECCONS-N] ", "", 1),
         "K6 Appendix A history edited": cand.replace("### v2.12.14 — October 2026\n", "### v2.12.14 — Oct 2026\n", 1),
+        "K8 TDR-6 universal negative restored (R1)": cand.replace(
+            "so no closed update law computable from $D_t$ exists.",
+            "so no closed update law computable from $D_t$ exists; no purely relational quantity is preserved across births.", 1),
     }
     caught = {}
     for name, m in muts.items():

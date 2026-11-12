@@ -1,6 +1,6 @@
 # Discrete Genesis (TDR-G) v2.12.15 — Release Record
 
-**Status:** DRAFT. The candidate is built and checked. It awaits the ChatGPT co-owner's change-focused review, the atlas owner's row check and the PI's adoption.
+**Status:** DRAFT, round 2. The candidate is rebuilt with the two corrections of the ChatGPT co-owner's change-focused review (§3a) and checked. It awaits the atlas owner's row check and the PI's adoption.
 **Date:** 12 November 2026
 **Prepared by:** Claude, TDR-G co-owner session `claude01SKePJ` (branch `claude/tdrg-v2-12-15-stage1`).
 **Edition:** v2.12.15, a scientific scope edition built in one stage. Methodology v1.2 stays as declared; there is no layout compaction and nothing is rerun. The Methodology v1.4 migration remains v2.13.
@@ -16,7 +16,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | Owner records | `records/tdrg/TDRG_OWNER_INBOX_DISPOSITION_20261112_claude01SKePJ.md` (§§1–4; round 2, §7, after the ChatGPT review) | merged (PR #243, `e8d317d`) |
 | ChatGPT co-owner | triage and review of 12 Nov 2026, relayed in the session; its agreement and its requested limits (N4 as a scope correction, TDR-6 PARTIAL, evidence scope) are recorded in §7 of the owner record | not a repository record |
 | PI decision | "v2.12.15 bilimsel sürümü başlatılabilir"; "OFN v0.11 ve AZ v0.7 bildirimlerini `no action` ile kapatılabilir"; "PR 243 merge edildi" (12 Nov 2026, 16:37 +03:00, in the session) | given |
-| Change-focused review | ChatGPT co-owner | *(to be filled)* |
+| Change-focused review | ChatGPT co-owner: `records/tdrg/TDRG_v2_12_15_CHATGPT_CHANGE_FOCUSED_REVIEW_20261112.md` on PR #250 (head `91d510a2`, open at the time of round 2); GitHub review `5875732026` on PR #248. Verdict CONDITIONAL PASS on the round-1 candidate `429a57f2…4f19`: R1 required, R2 nonblocking in the same round | conditions applied in round 2 (§3a) |
 | Row check and rerun | atlas owner | *(to be filled)* |
 | Adoption, merge commit, tag `tdrg-v2.12.15` | PI | *(to be filled)* |
 
@@ -25,19 +25,19 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v2.12.14) | `git show tdrg-v2.12.14:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392` |
-| **Candidate v2.12.15** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `429a57f220b32ccc6559abc26f146d5db4fbf081bcd02529f286723f37b54f19` |
-| Builder | `evidence/tdrg/scripts/build_tdrg_v2_12_15.py` | `e14f465f9e3a5f6cb7b7d606cc6366b55d88531bacc774203efbb1926bbb526d` |
-| Checker | `evidence/tdrg/scripts/check_tdrg_v2_12_15.py` | `b633738baacc99e70ccff18bbf1102d716d63ea30c75abb70d24d807565b52d4` |
-| Edit log (32 edits) | `evidence/tdrg/v2.12.15/edit_log.json` | `35824f8c3deebee23ae0413efecc1e3cbf4ff062c828bd640058d67f462d0815` |
-| Checker output (gates) | `evidence/tdrg/v2.12.15/check_output.txt` | `43e90a0abc36be0c02a694c8f970188f954e5f4bd9e50893ef270c78b0c7ae18` |
-| Checker output (negative controls) | `evidence/tdrg/v2.12.15/controls_output.txt` | `9983aec8873fd5b2f9b1465dc56b4a93f34af3dd8ec3f47460cf66d8c43dd2f4` |
+| **Candidate v2.12.15** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64` |
+| Builder | `evidence/tdrg/scripts/build_tdrg_v2_12_15.py` | `e1332fece5f1ad2c14f647220d782cb1a59bfbd90801fb0c30638258935d3234` |
+| Checker | `evidence/tdrg/scripts/check_tdrg_v2_12_15.py` | `df9b0195afdbf9d0f57639e8dc5fd0b42e3e85ba4140ebc103fb48ef4326d414` |
+| Edit log (32 edits) | `evidence/tdrg/v2.12.15/edit_log.json` | `a3c79ba63e854e84172e411b584be9c2c32d188d5108730b3aca46d83f213cf1` |
+| Checker output (gates) | `evidence/tdrg/v2.12.15/check_output.txt` | `ba1ffdb5d5ced586de65c72124b2cc6b30e846c0b9fcf63c946e327584b115b1` |
+| Checker output (negative controls) | `evidence/tdrg/v2.12.15/controls_output.txt` | `6636140f139cc581e602baf1340de80ffbd340399b40e121874302f42957a6d0` |
 | Owner token-law check v2 and output | `evidence/tdrg/inbox_20261112/owner_token_law_check_v2.py`, `…_v2_output.json` | `491cee3b30d9020899d1028b89ff5a67fb79fded6eead292005d2d7ac9b91151`, `acbc55dbcb17b769e7ec7db822e2a7b08521ec4850cbf90ab8ad5a8e9329dd84` |
 | AZ source of §6.13 | `records/az/AZ_TOKEN_RESONANCE_PREREGISTRATION.md` | `198d2f4af9ae338fec007874d003c755674ac90da087411c57c51d63714fb829` |
 | Pinned engine | `upload/tdrg-records/genesis_mode_b_mc_v18.py` | `9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e` |
 
 **Reproduce.**
 1. `git show tdrg-v2.12.14:dsn/RTG_DISCRETE_GENESIS_DSN.md > base.md`
-2. `python3 -I evidence/tdrg/scripts/build_tdrg_v2_12_15.py base.md OUT.md LOG.json` writes the candidate (`429a57f2…4f19`) and the edit log.
+2. `python3 -I evidence/tdrg/scripts/build_tdrg_v2_12_15.py base.md OUT.md LOG.json` writes the candidate (`1e35be54…2e64`) and the edit log.
 3. `python3 -I evidence/tdrg/scripts/check_tdrg_v2_12_15.py base.md dsn/RTG_DISCRETE_GENESIS_DSN.md evidence/tdrg/v2.12.15/edit_log.json` runs the gates; add `--controls` for the negative controls. The checker needs the tags and commit `e8d317d` to be present; no branch name is consulted.
 
 No publication transform is planned: the candidate carries no DRAFT marker.
@@ -54,6 +54,19 @@ No publication transform is planned: the candidate carries no DRAFT marker.
 | OFN v0.11 / AZ v0.7 notices | no action (closed, PR #247) | E14, E20, E21, E23 | The pins move to the current editions after checking that the imported statements are byte-identical: Finding A at `ofn-v0.10`/`ofn-v0.12`; `AZ-ALG-ANTIPODAL-LOWORDER` at `az-v0.6`/`az-v0.7`. The consumers table is updated. |
 | Registry | — | E01–E03, E05, E06, E25, E26, E29, E31, E32 | Header, status summary, RID map rows, Appendix A entry, footer. |
 
+## 3a. Round 2 — corrections from the change-focused review
+
+The review verified the round-1 candidate (`429a57f2…4f19`, commit `e2db210`) and supported §6.13, the N4 scope and TDR-6 PARTIAL. It asked for two corrections. Both are applied by changing the texts of existing builder edits; the edit count (32) and the new RIDs (9) are unchanged.
+
+| Review item | Edits | Change |
+|---|---|---|
+| **R1** (required): the candidate stated an unproven universal negative, "no purely relational quantity is preserved across births" | E09 (TDR-6 sub-items), E19 (§6.13 intro) | The sentence is replaced by what is proved: the full pairwise-advance spectrum is not preserved at births, and $D_{t+1}$ is not a function of $D_t$, so no closed update law computable from $D_t$ exists. The §6.13 intro now says that none of its statements closes TDR-6 or OPEN-SPECCONS-STAR. TDR-6 stays ACTIVE — PARTIAL. |
+| **R1** (the reviewer's observation): the signed-class set $\mathcal I(X_t)=\{[\delta_i]_\pm\}$ is exactly invariant | E19 (TDRG-ALG-TOKEN-CENSUS-LAW (iii)), E09 (new TDR-6 sub-item) | Registered as item (iii) of the census law with its proof: no token count decreases, so no class disappears; a birth adds only $-x$, whose class is already present at the centre. It is a token-state quantity, unchanged by the declared phase gauge and by relabelling. Whether it meets the purely relational condition of TDR-6 is left undecided, so it does not close TDR-6. Credited to the review. |
+| Consequence of R1 (owner) | E10 (OPEN-SPECCONS-STAR status), E13 (SG-12), E18 (LEM-SPECCONS generalization) | Three phrasings said that "an invariant of the full dynamics" is open; (iii) is such an invariant at token level. They now name the open question at spectrum level: a spectrum quantity preserved across births, or a law closed on the spectrum. |
+| **R2** (nonblocking): the parent–child order statement needs its time quantifier | E19 (TDRG-ALG-PARENT-CHILD-PHASE) | Stated along the free orbit (hypothesis for every $j\ge0$): the separation stays in $\{N/2,0\}$ for all $j$ iff $4x\equiv0$. Already $j=1$ forces $2x\in\{0,N/2\}$, so the same holds on any window with at least one advance; a window with no advance imposes no condition. |
+
+**Checker, round 2.** C6 also asserts that the R1 phrasings are gone, that the new statements are present and that the R2 quantifier is in place. C10 also checks the signed-class set on every tick of the sample; it is implied by the census law, so this is an independent recomputation, not a new test. A new negative control, K8, restores the universal negative and must be caught. No campaign is rerun; the owner token-law check and its numbers are unchanged.
+
 ## 4. Checks
 
 **Gates** (`check_output.txt`): RESULT: PASS (11/11 gates) — C0 BASE; C1 BUILD; C2 REVERSE; C3 HISTORY; C4 RIDS; C5 TAGS; C6 CONTENT; C7 NUMBERS; C8 EVIDENCE; C9 SOURCES; C10 DYNAMICS.
@@ -66,6 +79,7 @@ No publication transform is planned: the candidate carries no DRAFT marker.
 [CAUGHT] K3 unlogged change: failing ['C1 BUILD', 'C2 REVERSE']
 [CAUGHT] K5 one new RID declaration dropped: failing ['C1 BUILD', 'C2 REVERSE', 'C4 RIDS']
 [CAUGHT] K6 Appendix A history edited: failing ['C1 BUILD', 'C2 REVERSE', 'C3 HISTORY']
+[CAUGHT] K8 TDR-6 universal negative restored (R1): failing ['C1 BUILD', 'C2 REVERSE', 'C6 CONTENT']
 [CAUGHT] K4 wrong number, consistent log: failing ['C7 NUMBERS']
 [CAUGHT] K7 star map without centre flip: C10 FAIL
 CONTROLS: PASS (all caught)
@@ -112,15 +126,15 @@ Each notice is `kind: notice`, and filing one is a queue event, not adoption.
 | File | Bytes | Lines |
 |---|---|---|
 | v2.12.14 (adopted) | 178,909 | 1,387 |
-| v2.12.15 candidate | 194,602 | 1,431 |
+| v2.12.15 candidate | 196,268 | 1,432 |
 
-Net change: +15,693 bytes (+8.8 %), almost all of it the new §6.13 and the TDRG-DEF-STAR statement.
+Net change: +17,359 bytes (+9.7 %), almost all of it the new §6.13 and the TDRG-DEF-STAR statement.
 
 ## 10. Steps after adoption
 
 | # | Step | Who | State |
 |---|---|---|---|
-| 1 | Change-focused review | ChatGPT co-owner | *(to be filled)* |
+| 1 | Change-focused review | ChatGPT co-owner | CONDITIONAL PASS (PR #250); R1 and R2 applied, §3a |
 | 2 | Row check and rerun | atlas owner | *(to be filled)* |
 | 3 | Adoption decision (§11) | PI | *(to be filled)* |
 | 4 | Merge commits (not squash): #247, then this PR | PI | *(to be filled)* |
@@ -134,8 +148,8 @@ Net change: +15,693 bytes (+8.8 %), almost all of it the new §6.13 and the TDRG
 
 ## 12. Open items carried forward
 
-- **TDR-6:** a purely relational invariant across births (none known).
-- **OPEN-SPECCONS-STAR:** an invariant of the full dynamics, and which centre tokens fire.
+- **TDR-6:** whether the signed-class set $\mathcal I(X)$ (TDRG-ALG-TOKEN-CENSUS-LAW (iii)) meets the purely relational condition, and whether any further purely relational invariant exists across births.
+- **OPEN-SPECCONS-STAR:** a spectrum-level invariant, or a law closed on the spectrum, across births; and which centre tokens fire.
 - **N4 follow-up:** the share of non-pure single-star events in the canonical scans is not measured. It needs only a log reading, no rerun, and can be done in a later campaign.
 - **Mechanism of the AZ Stage 1 effect:** design only (PI decision); not carried to TDR-26.
 - **v2.13:** Methodology v1.4 migration and compaction; XFER-O08-01 custody; `largest_center` with TDR-19.
