@@ -56,6 +56,6 @@ Reactivation history: the four staged bootstrap messages of 10 November are done
 
 ## PI_PENDING
 
-- **Open with the PI:** running the Stage 2 pilot block on the server (issued in the project conversation of 12 Nov, about 17:20 +03:00; recorded in the Claude lane); later, the compute authorisation for the registered Stage 2 run and the adoption of v0.9. Decided on 12 Nov, 16:54 +03:00: the Stage 1 result enters the next edition as a `[NUM diagnostic]`; Stage 2 starts.
+- **Open with the PI:** running the Stage 2 pilot block on the server (issued in the project conversation of 12 Nov, about 17:10 +03:00); later, the compute authorisation for the registered Stage 2 run and the adoption of v0.9. Decided on 12 Nov, 16:54 +03:00: the Stage 1 result enters the next edition as a `[NUM diagnostic]`; Stage 2 starts.
 - **Done on 12 Nov 2026:** v0.8 started, decided (D1–D4), adopted, merged and tagged by the PI; the six rows of the Atlas advisory of 11 Nov (`records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` §5) are dealt with — row 1 outcome rule confirmed after Stage 1; row 2 offer to TDR-G filed; row 3 registration merged after the run, authorisation recorded retrospectively; row 4 Thread C partial recovery in and reflected in v0.8 §9; row 5 v0.8 released; row 6 in effect.
 - No CLI block is pending for AZ in this note; blocks issued by a co-owner are recorded in that co-owner's lane.
