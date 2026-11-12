@@ -37,9 +37,31 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## REVIEWER_LANE — ChatGPT
 
-Checked 10 November 2026, PR #202 head `1f33166`. Revision-3 source delta inspected; the two rev.2 compound-route residuals are closed. Producer evidence reports self-test 33/33, prior receiving 11/11 and compound routes 4/4, exit 0; this reviewer did not rerun them because the local shell lacked GitHub network materialization. Verdict: ACCEPT SCOPED for the D3 mechanical pilot, not semantic equivalence or Atlas adoption. Next: D3 frozen-base pilot with zero FAIL and every pending/context obligation reviewed; Method v0.3 remains separate.
+**Checked:** 12 November 2026, via GitHub; `main` `2679f37d4f50eb4f02f575f863ddbb5c9be5ce7c`. Atlas v0.12 is published (`atlas-v0.12`, SHA-256 `cf9d8647b4c33206537e46ca37c7879d4fc33b1a936e0a50330a469f054def55`). Atlas Method v0.3 is published (`atlas-method-v0.3`, SHA-256 `a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f`). PR #225 is closed without merge. Subsequent commits after `f390087` affect DYAD working evidence, records and pipes, not Atlas or Method content.
 
-*(Text supplied by the reviewer in the project conversation of 10 November 2026 and installed unchanged by the owner at the reviewer's request; decision recorded in PR #202 review 5838875546 and PR #203 commit `69f5256`.)*
+**Goal / current question:** No receiving review is pending. Resume when a new Atlas candidate or methodological change requires independent examination.
+
+**Last durable work:**
+
+- Atlas v0.12 receiving review: PR #229, review `5869585886`, ACCEPT SCOPED. Reviewed AZ v0.7 and DYAD v6.4.24 source impacts, new RID coverage, conditional results, diagnostic retirements and evidence boundaries.
+- Atlas Method v0.3 receiving review: PR #234, initial review `5871391538` (ACCEPT WITH CHANGE), final readback `5872066576` (ACCEPT SCOPED). All requested changes closed.
+- Reviewer preparation PR #225 closed unmerged, with its findings incorporated into the v0.12 review. Its historical checkpoint must not overwrite the current shared orientation note.
+
+**Decisions held:** Preserve completeness, scientific scope and the L0–L5 / D1–D6 structure; no quantitative size target, split or fact-for-pointer substitution. Apply K1/K2 deletion rules during affected-domain refreshes, never as automatic scientific changes. Preserve intentional consumer pins, owner grades, hypotheses, negative results and evidence limitations. A mechanical PASS does not establish semantic equivalence, scientific validity or adoption. Atlas Method v0.3 governs future Atlas work; owner DSNs govern scientific claims.
+
+**Evidence:** Independently verified Atlas v0.12's full-file SHA-256 and reproduced its 39 logged transformations byte-for-byte from `atlas-v0.11`. Checked the two changed source identities, targeted owner statements, new conditional theorem, and cumulative L5 retirements. Independently verified the final Method v0.3 SHA-256 and established that its final correction changed exactly one line (§4.6). Published identities were checked against `BASELINE.md`; publication and tag-verification records belong to the owner release workflow.
+
+**Not rerun:** Owner scientific certificates and numerical campaigns; Atlas builder/checker campaigns and their negative controls; unchanged scientific content of the other sixteen Atlas inputs. The producer-reported structural PASS results were inspected, not independently re-executed. No independent post-tag certificate campaign was performed by this reviewer.
+
+**Resume / next actions:**
+
+1. At the next adopted owner tag, inspect the Atlas owner's impact assessment and frozen source manifest under Method v0.3.
+2. Review the changed Atlas records, owner-source correspondence, RID coverage, conditionality, evidence qualifications, L5 dispositions, and all declared preservation obligations.
+3. Produce a change-focused receiving verdict before PI acceptance. Do not repeat unchanged expensive scientific campaigns without a concrete discrepancy.
+
+**Reopen trigger:** A new adopted owner tag after the v0.12 snapshot (`c8e7198`), a newly open `pipes/ATLAS/` item, a proposed Method change, a substantive counterexample, or a PI request. No outstanding action remains from PR #225 or the v0.12/Method v0.3 publication reviews.
+
+*(Text supplied by the reviewer in the project conversation of 12 November 2026, 15:07 +03:00, and installed unchanged by the owner at the reviewer's request; it replaces the PR #202 checkpoint text of 10 November. SHA-256 of the installed block, heading through the reopen-trigger paragraph: `1fb25d8b1174388bd9d92180f73febd6fd0f6f174377d19ab2143ca7b07c5604`.)*
 
 ## PI_PENDING — maintained by owner
 
