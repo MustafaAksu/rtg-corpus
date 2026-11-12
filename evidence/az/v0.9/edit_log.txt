@@ -1,0 +1,57 @@
+AZ v0.9 edit log
+base az-v0.8 146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76
+result sha256 24f25f70361d8159f629f555bc8207cc8cc285b34e74a775e2a6a4dfc2e05ec7, 96598 bytes
+base lines: 602; unchanged and in order: 594; replaced: 4; edited in place: 4
+
+E01 H-title      set-line     
+    old: # RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.8
+    new: # RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.9
+    why: edition
+E02 H-status     set-line     
+    old: **Document status:** ADOPTED — PI, 12 November 2026 (Methodology v1.4 migration with a declared section map; Programme §6.7 reduction; availability corrections; PROP-AZ-CORE-EQUIV `[THM]` on a written proof). Adoption record: `records/az/AZ
+    new: **Document status:** DRAFT — candidate of v0.9; not adopted. `az-v0.8` governs until the PI adopts and tags this edition.  
+    why: edition
+E03 H-supersedes set-line     
+    old: **Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN` v0.7 (tag `az-v0.7`, SHA-256 `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94`)  
+    new: **Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN` v0.8 (tag `az-v0.8`, SHA-256 `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76`)  
+    why: edition
+E04 H-summary    sub          
+    old: **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.**
+    new: **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.** One AZ-owned `[NUM diagnostic]` on seed-token resonance in the TDR-G dynamics is registered (§4.2.1); by the PI's outcome rule it changes neither the maturity level
+    why: status summary names the new diagnostic and its limit
+E05 F            set-line     
+    old: *END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.8*
+    new: *END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.9 — DRAFT candidate; adoption pending; `az-v0.8` governs until adoption and tag.*
+    why: edition
+E06 S0.1-row     insert-after 
+    old: | Phase-2 diagnostics computed on TDR-G defect-graph exports |
+    new: 1 lines
+    why: routing row
+E07 S0.2-B       sub          
+    old: `AZ-OPEN-SCOPE-ARITH` is open (§2).
+    new: `AZ-OPEN-SCOPE-ARITH` is open (§2). One item of this thread is owned here: `AZ-NUM-TOKRES-S1` `[NUM diagnostic]` — in a registered paired intervention at $N=120$ and $N=122$, replacing one initial token by a value with $4x\equiv0\pmod N$ ra
+    why: current-state readout
+E08 S1.1-crit    sub          
+    old: and is disqualified as a bridge observable (§4.3.4).
+    new: and is disqualified as a bridge observable (§4.3.4). The seed-token resonance diagnostic (§4.2.1) is an arithmetic condition with an effect on the dynamics, at two cells and one horizon; by the PI's outcome rule of 12 November 2026 it does 
+    why: the criterion's status is not changed; the new diagnostic is named with the rule that limits it
+E09 S4.2-status  sub          
+    old: and no TDR-G fact is used as evidence for a Dyadic claim.
+    new: and no TDR-G fact is used as evidence for a Dyadic claim. One item of this thread is owned by this DSN: the diagnostic of §4.2.1.
+    why: ownership of the new subsection stated
+E10 S4.2.1       insert-before
+    old: ### §4.3 Thread C — Graph/Transfer-Zeta Diagnostics
+    new: 21 lines
+    why: the diagnostic block (PI decision of 12 Nov 2026, 16:54 +03:00)
+E11 S5-row       insert-after 
+    old: | TDR-G BIND3 / advance-spectrum |
+    new: 1 lines
+    why: high-risk row
+E12 S9           insert-before
+    old: **Two definitions of `G_birth(w)` in the deposited files — recorded, not resolved.**
+    new: 2 lines
+    why: artifact entry
+E13 AppA         insert-before
+    old: ### v0.8 — November 2026
+    new: 2 lines
+    why: version entry

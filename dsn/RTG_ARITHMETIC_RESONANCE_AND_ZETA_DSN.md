@@ -1,4 +1,4 @@
-# RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.8
+# RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.9
 
 **Title:** RTG Arithmetic Resonance and Zeta Study — Infrastructure and Diagnostic Ledger  
 **Date:** 12 November 2026  
@@ -7,12 +7,12 @@
 **Document class:** Infrastructure / diagnostic ledger (Methodology v1.4 §0.5) with a declared section map (§0.3); not a scientific result ledger  
 **Programme tier:** Tier 5 — Arithmetic-diagnostic infrastructure; serves both continuous and discrete branches without belonging to either  
 **Maturity:** Level A — retained. Defined scope, internal consistency established, exploration begun. Thread C engineering is certified; the one Phase-2 scientific result is a negative-clarifying diagnostic, not a Level-B-promoting bridge result.  
-**Document status:** ADOPTED — PI, 12 November 2026 (Methodology v1.4 migration with a declared section map; Programme §6.7 reduction; availability corrections; PROP-AZ-CORE-EQUIV `[THM]` on a written proof). Adoption record: `records/az/AZ_v0_8_RELEASE_RECORD.md`.  
-**Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN` v0.7 (tag `az-v0.7`, SHA-256 `2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94`)  
+**Document status:** DRAFT — candidate of v0.9; not adopted. `az-v0.8` governs until the PI adopts and tags this edition.  
+**Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN` v0.8 (tag `az-v0.8`, SHA-256 `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76`)  
 **Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`) · Discrete Genesis v2.12.14 (`tdrg-v2.12.14`) · Genesis Geometry v2.10 (`gen-v2.10`) · OPEN-M v0.7.1 (`uvm-v0.7.1`)  
 **DSN Methodology:** v1.4 (`methodology-v1.4`)  
 
-**Status summary:** This document remains an infrastructure ledger, not an active scientific study, and Maturity remains **Level A**. Milestone AZ-2 is recorded as **attempted, negative-clarifying**: the most tempting angular observable was tested and **disqualified** as a bridge-candidate. **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.**
+**Status summary:** This document remains an infrastructure ledger, not an active scientific study, and Maturity remains **Level A**. Milestone AZ-2 is recorded as **attempted, negative-clarifying**: the most tempting angular observable was tested and **disqualified** as a bridge-candidate. **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.** One AZ-owned `[NUM diagnostic]` on seed-token resonance in the TDR-G dynamics is registered (§4.2.1); by the PI's outcome rule it changes neither the maturity level nor any OPEN.
 
 ---
 
@@ -61,6 +61,7 @@ This document is an **infrastructure and diagnostic ledger** (Methodology §0.5)
 | Graph/transfer-zeta diagnostic engine, conventions, manifests, null models, certification suite | this DSN, Thread C | internal; `[ENG PASS]` (availability of the certifying files: §9) |
 | Graph-theoretic facts about the diagnostic objects (core equivalence; antipodal-band low-order cycle structure) | this DSN, Thread C | Thread-C-owned `[THM]` / `[ALG]`; not cross-branch |
 | Phase-2 diagnostics computed on TDR-G defect-graph exports | this DSN, Thread C | `[NUM diagnostic]`, branch-local; reclassified static-geometry; **not** a bridge-candidate |
+| Seed-token resonance diagnostic computed on the TDR-G engine (Action 1) | this DSN, Thread B §4.2.1 | `[NUM diagnostic]`, AZ-owned, scoped to its cells, horizon and threshold; not a TDR-G result and **not** a bridge-candidate |
 | Discrete-continuous comparison between Dyadic $p$-horizons and TDR-G $\mathbb{Z}_N$ horizons | future OPEN-P1 bridge document | `[bridge-candidate]` only |
 | Programme placement and dependency graph | `RTG_PROGRAMME_OVERVIEW` v1.4 (`programme-v1.4`) | registered there as a Tier 5 infrastructure entry (its §6.1, §6.5) with interfaces IF20 and IF21 (its §7.2); see §7 |
 | Genesis cascade criterion and OPEN-M amplitude cascade | `RTG_GENESIS_GEOMETRY_DSN` v2.10 (`gen-v2.10`) / `RTG_OPEN_M_DSN` v0.7.1 (`uvm-v0.7.1`) | companion/bridge context only; arithmetic-horizon or graph-zeta observables cannot substitute for UV inputs |
@@ -71,7 +72,7 @@ This document is an **infrastructure and diagnostic ledger** (Methodology §0.5)
 
 - **Maturity:** Level A, retained. The Level B success criterion (§1.1) is not met.
 - **Thread A** (continuous $p$-resonance): a reference-only index of Dyadic OPEN 9 results at `dyad-v6.4.24` (§4.1, §8). Nothing in it is owned here.
-- **Thread B** (discrete $\mathbb{Z}_N$ arithmetic structure): TDR-G facts at `tdrg-v2.12.14` as branch-local context and `[bridge-candidate]` observables (§4.2, §8); `AZ-OPEN-SCOPE-ARITH` is open (§2).
+- **Thread B** (discrete $\mathbb{Z}_N$ arithmetic structure): TDR-G facts at `tdrg-v2.12.14` as branch-local context and `[bridge-candidate]` observables (§4.2, §8); `AZ-OPEN-SCOPE-ARITH` is open (§2). One item of this thread is owned here: `AZ-NUM-TOKRES-S1` `[NUM diagnostic]` — in a registered paired intervention at $N=120$ and $N=122$, replacing one initial token by a value with $4x\equiv0\pmod N$ raises the probability of a run ending with $M\ge100$ nodes against its $\pm1$ neighbour (§4.2.1); mechanism not established; no statement beyond its cells, horizon and threshold.
 - **Thread C** (graph/transfer-zeta diagnostics), owned here:
   - engine and conventions `[ENG PASS]` (AZ-1A, AZ-1B, AZ-1C; §4.3.1). The certifying files are in the repository only in part (§9): the `az_v5` package is deposited at its AZ-1B registry state and replayed; the AZ-1C, Phase-2 and proof-certificate files are source-reported;
   - `PROP-AZ-CORE-EQUIV` `[THM]`: for a both-orientations export of a finite simple graph, the re-directed 2-core equals DEF-AZ-CORE; statement and proof in §4.3.2;
@@ -117,7 +118,7 @@ The AI Context Core is the header and §0–§3.
 
 `[OPEN]` **Central question.** Does arithmetic horizon structure merely organize diagnostics, or does it select physically meaningful resonance, memory, or bridge observables in RTG?
 
-`[OPEN]` **Success criterion.** This study becomes scientifically active beyond infrastructure — and would be promoted to a full Level B DSN — only if at least one arithmetic/zeta observable is shown to be reproducible, branch-scoped, and useful for distinguishing resonance classes, memory-length regimes, TDR-G policy ensembles, or candidate OPEN-P1 bridge behavior **in a way that reflects the dynamics rather than the fixed substrate geometry.** **Status: not met.** The first observable tested (the Core(G_T) `4|q` angular rule) is reproducible and branch-scoped but is static $\mathbb{Z}_N$ substrate geometry, so it does not distinguish dynamical classes and is disqualified as a bridge observable (§4.3.4).
+`[OPEN]` **Success criterion.** This study becomes scientifically active beyond infrastructure — and would be promoted to a full Level B DSN — only if at least one arithmetic/zeta observable is shown to be reproducible, branch-scoped, and useful for distinguishing resonance classes, memory-length regimes, TDR-G policy ensembles, or candidate OPEN-P1 bridge behavior **in a way that reflects the dynamics rather than the fixed substrate geometry.** **Status: not met.** The first observable tested (the Core(G_T) `4|q` angular rule) is reproducible and branch-scoped but is static $\mathbb{Z}_N$ substrate geometry, so it does not distinguish dynamical classes and is disqualified as a bridge observable (§4.3.4). The seed-token resonance diagnostic (§4.2.1) is an arithmetic condition with an effect on the dynamics, at two cells and one horizon; by the PI's outcome rule of 12 November 2026 it does not by itself meet this criterion or change the maturity level, and whether it bears on the criterion is left to a separate decision.
 
 `[FAIL]` **Forbidden interpretation.** This study is not a proof, disproof, reformulation, or physical derivation of the Riemann Hypothesis. The RH appears in this document only as historical motivation; see §1.2.
 
@@ -264,7 +265,7 @@ The open arithmetic frontier is the owner's: Dyadic §2 OPEN 9 (`DYAD-OPEN-P-RES
 ### §4.2 Thread B — Discrete $\mathbb{Z}_N$ Arithmetic Structure (bridge-candidate only)
 
 **Ownership:** `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`).  
-**Status here:** Branch-local context and bridge-candidate observable family under OPEN-P1. SG-PROG-1, SG-PROG-4, SG-AZ-3, and SG-AZ-0.4 apply. No TDR-G result is imported as a cross-branch claim, and no TDR-G fact is used as evidence for a Dyadic claim.
+**Status here:** Branch-local context and bridge-candidate observable family under OPEN-P1. SG-PROG-1, SG-PROG-4, SG-AZ-3, and SG-AZ-0.4 apply. No TDR-G result is imported as a cross-branch claim, and no TDR-G fact is used as evidence for a Dyadic claim. One item of this thread is owned by this DSN: the diagnostic of §4.2.1.
 
 `[bridge-candidate]` **Observable family.** The TDR-G objects this study treats as candidate OPEN-P1 observables are listed in the second group of §8, one row per owner identifier or group of identifiers, each with a readout, its limitations, the owner's tag, scope and convention. They are not stated a second time here. The status of the family as a whole is the hypothesis that some of these objects could serve as OPEN-P1 observables; no row is a bridge, and none is used outside its branch.
 
@@ -276,6 +277,27 @@ The open arithmetic frontier is the owner's: Dyadic §2 OPEN 9 (`DYAD-OPEN-P-RES
 - No claim is made that TDR-G $\mathbb{Z}_N$ structure is related to Dyadic OPEN 9 arithmetic structure.
 - No cross-branch inference is made.
 
+#### §4.2.1 AZ-owned diagnostic — seed-token resonance and tail risk (Action 1, Stage 1)
+
+`[NUM diagnostic]` `[RID: AZ-NUM-TOKRES-S1]` `[scope: pinned TDR-G engine with TDRG-DEF-ORIENT; policy bound_symmetric; $N\in\{120,122\}$, $k=8$; four initial nodes; 800 ticks; node cap 300; endpoint $M\ge100$]` `[conv: orientation reference of TDR-G v2.12.14 (profile P1)]`
+*Owned by this DSN. It is computed on the TDR-G engine, which is not changed; it is not a TDR-G result, not a bridge, and no bridge-candidate is promoted by it.*
+
+**Statement.** In a registered, paired intervention on the engine's own initial draw — one of the four initial tokens $\delta_j$ is replaced, and the same base draw is run under every arm — replacing the token by a value $x$ with $4x\equiv0\pmod N$ raises the probability that the run ends with at least 100 nodes, against replacing it by a neighbour $x\pm1$:
+
+| Contrast (1,500 base draws each) | Resonant arm | Comparison arm | Risk difference, registered interval | Discordant pairs | Registered reading |
+|---|---|---|---|---|---|
+| PC1 — $2x\equiv0$, $N=120$ | 0.2580 | 0.0153 (detuned) | $+0.2427$ $[+0.2166, +0.2681]$ | 374 / 10 | supported; Holm $p=1.780\cdot10^{-96}$ |
+| PC2 — $2x\equiv N/2$, $N=120$ | 0.1853 | 0.0240 (detuned) | $+0.1613$ $[+0.1381, +0.1841]$ | 259 / 17 | supported; Holm $p=9.375\cdot10^{-57}$ |
+| PC3 — $2x\equiv0$, $N=122$ | 0.2307 | 0.0113 (detuned) | $+0.2193$ $[+0.1944, +0.2436]$ | 336 / 7 | supported; Bonferroni-adjusted $p=2.375\cdot10^{-89}$ |
+| PC4 — values nearest $N/4$, $N=122$ | 0.0087 | 0.0160 (native) | $-0.0073$ $[-0.0158, +0.0011]$ | 10 / 21 | equivalent to the native state within $\pm0.05$ |
+
+PC1 and PC2 are the confirmatory family; PC3 and PC4 are a separate, supportive replication family at $N\equiv2\pmod 4$, where $2x\equiv N/2$ has no solution. Tests are exact McNemar tests on the paired outcomes. The registered controls read as required: at $N=120$ the node-label permutation left every compared quantity unchanged (0 of 400 permuted runs differ); in both cells a $\pm1$ perturbation of a non-resonant native token and the detuned replacement are equivalent to the native state within $\pm0.025$ on the draws whose native slot token is non-resonant; and the exact per-tick token law of the registration had no violation in any of the 19,900 runs. All four readings are unqualified.
+
+**What the statement is.** The total causal effect of the token replacement on the registered endpoint, for the engine, profile, cells, horizon, cap and threshold named in the scope.
+
+**What it is not.** No mechanism is established; the parent–child phase law of the registration is a candidate only. Nothing is shown about other $N$, other $k/N$, other policies, longer horizons or other thresholds; the endpoint is a threshold on a continuous distribution of $M$, and it is not the TDR-26 birth-anchored discriminator. Nothing is stated about TDR-26 or about any open module of TDR-G. There is no relation to the Hashimoto `4|q` rule of §4.3.3, to Dyadic cyclic-subgroup selection or to any DZT object beyond the numeral (SG-AZ-3, SG-AZ-7), and OPEN-P1 is untouched (SG-PROG-1). By the PI's outcome rule of 12 November 2026 the diagnostic does not by itself close `AZ-OPEN-PROMO`, change the maturity level, or become a TDR-G claim. The algebraic statements of the registration (the signed token alphabet and its corollaries) are offered to TDR-G through `pipes/TDRG/` and are not results of this DSN.
+
+**Evidence.** `[artifact: AZ-ART-TOKRES-S1]` (§9): the registration, reviewed twice and accepted before the run; the campaign output of 19,900 records, run on the PI's server and deposited unchanged; the report; and a script that re-derives the registered analysis from the stored records, byte-identical to the campaign machine's output (`EV-BYTES`, `EV-HASH`, `EV-CODE`, `EV-RUN` for the analysis; the engine runs were made once, on the campaign machine). The four contrasts were recomputed from the raw records by the second co-owner with its own code (`EV-INDEP` for the aggregation, not for the runs). The run was interrupted once and resumed; the outcome rule and the authorisation naming the bytes were recorded after the run (report §8, §11).
 ### §4.3 Thread C — Graph/Transfer-Zeta Diagnostics
 
 **Ownership:** This thread is internal to this study.  
@@ -407,6 +429,7 @@ This is a genuinely useful negative: it removes the angular Hashimoto spectrum f
 | Low-degree anti-holomorphic boundary | Dyadic-map-specific `[import-ref]`: $b\le4$ vanishing, $b=5$ all-$p$ failure | General-coefficient or all-$b\ge5$ theorem; cross-branch theorem | SG-AZ-6 |
 | TDR-G arithmetic structure | Branch-local / `[bridge-candidate]` from Discrete Genesis v2.12.14 | Active cross-branch import; evidence for Dyadic/bridge claim | SG-PROG-1, SG-AZ-3 |
 | TDR-G BIND3 / advance-spectrum | Three-node/no-birth or specified source scope only | Full TDR-G theorem through star blow-up or continuum bridge | SG-PROG-1, SG-AZ-3 |
+| **Seed-token resonance diagnostic** (`AZ-NUM-TOKRES-S1`) | **`[NUM diagnostic]`: registered paired contrast at $N\in\{120,122\}$, $k=8$, 800 ticks, endpoint $M\ge100$** | A mechanism; persistence at other $N$, $k/N$, policies, horizons or thresholds; an explanation of TDR-26; a relation to the `4\|q` rule or to Dyadic/DZT $q=4$; a TDR-G result; grounds for promotion | SG-PROG-1, SG-AZ-3, SG-AZ-7 |
 | TDR-26 discriminator | Branch-local dataset separation `[NUM cross-cell, n=2]`; classifier `[HEUR]` | Theorem-grade, universal, or cross-branch evidence | SG-PROG-1, SG-AZ-3, SG-AZ-7 |
 | **Thread C engineering** | **`[ENG PASS]` — certified, exit-code-gated (§4.3.1); availability of the artifacts per entry in §9** | Treating any single run as certified without its manifest/hash/null provenance | SG-AZ-5 |
 | **PROP-AZ-CORE-EQUIV** | **`[THM]` (proof in §4.3.2), scope: finite simple undirected, both-orientations, no multiedges/self-loops; closed walks non-backtracking at every step including the closing one** | Applying it to arbitrary directed exports or multigraphs; claiming strong connectivity of the transition graph; reading the enumeration certificate as the proof | SG-AZ-6 (Thread-C-owned) |
@@ -524,6 +547,8 @@ Row format: identifier :: readout of the owner statement, with its limitations :
 - `conv_az_graph_export.py`, self-identifier `TDRG-AZ-EXPORT-BASELINE` (no `AZ-ART` identifier was assigned to it in the June 2026 work; the identifier is this study's, see the owner map) :: graph exporter for CONV-AZ-GRAPH-EXPORT (both orientations; objects G_T, Core(G_T), G_birth(w), G_cumulative)  
   Availability: deposited (`upload/az-records/export/conv_az_graph_export.py`, SHA-256 `fab14ae1d2b151f405bda105103ec3fcca32841542369304d1d1a5b35517fe1e`; `EV-BYTES`); its self-test replayed (`EV-RUN`). As received, the loader `lib/graphio` of the deposited package does not read its object files without an adapter, and the deposited files do not show that it produced the registered Phase-2 exports.
 
+- [RID: AZ-ART-TOKRES-S1] :: registration `records/az/AZ_TOKEN_RESONANCE_PREREGISTRATION.md` with its package `evidence/az/token_resonance/` (`SHA256SUMS`, SHA-256 `81c87dcfc8d326e3c29861b9124c9654535f1c64cc6e5f9c7a9c9cafa6abd6eb`: runner, analysis, fixtures, negative controls, driver; the pinned TDR-G engine `upload/tdrg-records/genesis_mode_b_mc.py` and orientation reference `evidence/tdrg/scripts/tdrg_orient_v2_12_14.py` are used unchanged); campaign output `upload/az-token-resonance-stage1/` (`HASHES.txt`, SHA-256 `5ddbc60516acbeb75f2fc09fabdcaa017a320a68d88ee4904767c1c59b88500a`; 19,900 records); report `records/az/AZ_TOKEN_RESONANCE_STAGE1_REPORT.md`; verification `evidence/az/token_resonance/stage1/verify.sh` with its stored output :: evidence for `AZ-NUM-TOKRES-S1` (§4.2.1)  
+  Availability: in the repository (`EV-BYTES`, `EV-HASH`). The registered analysis was inspected and executed on the campaign machine and again from the stored records, byte-identical (`EV-CODE`, `EV-RUN`); the engine runs were made once, on the PI's server (Python 3.12.3), and are not rerun. The registration was reviewed and accepted before the run (reviews `5855522171`, `5857601141`); the report was reviewed after it (`5869662603`).
 **Two definitions of `G_birth(w)` in the deposited files — recorded, not resolved.** The deposited `CONVENTIONS_FROZEN.md` defines `G_birth(w)` as the birth-window graph over `[t_first_birth, t_first_birth + w]`, default `w = 200`; the deposited exporter defines it as the snapshot at the tick of the `w`-th birth. Which of the two the June 2026 work used cannot be read from the deposited files. No registered result of this DSN uses `G_birth(w)` (the Phase-2 results use Core(G_T)); the object is named only as a candidate in §4.3.6 and in the graph-object list of SG-AZ-5, and has to be fixed by an explicit definition before any result is registered on it.
 
 ---
@@ -543,6 +568,8 @@ Authors: Mustafa (PI) · Claude · ChatGPT · Gemini · Grok
 
 ## Appendix A — Version History
 
+### v0.9 — November 2026
+One addition: the Action 1 Stage 1 result enters as an AZ-owned `[NUM diagnostic]`, `AZ-NUM-TOKRES-S1` (§4.2.1), by the PI's decision of 12 November 2026 under the outcome rule of the same day — a registered paired contrast on seed-token resonance at $N=120$ and $N=122$, with its scope and its evidence (`AZ-ART-TOKRES-S1`, §9). Pointers to it in §0.1, §0.2, §1.1, §4.2 and §5. The maturity level, the OPEN registry and every earlier statement are unchanged. Record: `records/az/AZ_v0_9_RELEASE_RECORD.md`.
 ### v0.8 — November 2026
 Methodology v1.4 migration with a declared section map (§0.3), the reduction asked for in Programme §6.7, and availability corrections. Each owner result is cited once, in §8; restated Dyadic and TDR-G text is removed from §1.2, §4.1, §4.2 and §6. PROP-AZ-CORE-EQUIV is `[THM]` on a written proof (§4.3.2), replacing the bare `[THM-ALG]`; a finite check is registered (`AZ-ART-CORE-EQUIV-CHECK`). The static-geometry reading of the `4|q` rule (`TDRG-AZ-STATIC-ZN-4Q`) is stated at the scope of its numerical evidence (SG-AZ-7, §4.3.5). §9 gives per-artifact availability after the partial recovery of 11 November 2026. Dyadic pin: `dyad-v6.4.24`. No new scientific result; Level A retained. Corrections: Appendix B. Record: `records/az/AZ_v0_8_RELEASE_RECORD.md`.
 
@@ -598,4 +625,4 @@ Initial release. Infrastructure-and-ledger document; three threads defined; five
 
 ---
 
-*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.8*
+*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.9 — DRAFT candidate; adoption pending; `az-v0.8` governs until adoption and tag.*
