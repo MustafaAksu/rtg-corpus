@@ -6,3 +6,4 @@
 |---|---|---|---|---|---|---|
 | 2026-11-03 | DYAD | notice | open | Appendix F crosswalk; OPEN 9 $p=12$ cascade value; DYAD-ALG-VANISH-B2; DYAD-THM-RAW-CUBIC caveat and range | — | `20261103-DYAD-notices-n16-n21.md` |
 | 2026-11-11 | AZ | notice | open | DZT v0.8 companion-document pin of AZ v0.6; SG-DZT-1 | — | `20261111-AZ-v0-7-adopted.md` |
+| 2026-11-12 | AZ | notice | open | DZT v0.8 companion-document pin of AZ v0.6; SG-DZT-1 | — | `20261112-AZ-v0-8-adopted.md` |

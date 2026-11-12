@@ -11,3 +11,4 @@
 | 2026-11-04 | PROG | notice | acknowledged | Programme v1.4 §6.1 (TDRG row at `tdrg-v2.12.14`), §6.4 TDRG entry and launch-gate record, §7.1, §7.2 IF03, IF13, IF25, §9.2 | — | `20261104-PROG-v1-4-adopted.md` |
 | 2026-11-11 | AZ | notice | closed | AZ-ALG-ANTIPODAL-LOWORDER (cited by TDR-G §6.2 at az-v0.6); AZ §4.2 and §8 pins of TDR-G (IF21); reply to pipes/AZ/20261028-TDRG-v2-12-14-adopted.md | — | `20261111-AZ-v0-7-adopted.md` |
 | 2026-11-12 | AZ | offer | acknowledged | TDRG-OPEN-SPECCONS-STAR; TDRG-ALG-LEM-SPECCONS (n-node statement, conjectured in TDR-G); TDRG-OPEN-LOCKING-FAIL; TDR-G §6.3 event inventory | — | `20261112-AZ-token-alphabet-law-offer.md` |
+| 2026-11-12 | AZ | notice | open | AZ-ALG-ANTIPODAL-LOWORDER (cited by TDR-G §6.2); TDR-G §7 consumer row for AZ (Threads B/C, IF21); the identifiers TDRG-AZ-STATIC-ZN-4Q and TDRG-AZ-EXPORT-BASELINE | — | `20261112-AZ-v0-8-adopted.md` |

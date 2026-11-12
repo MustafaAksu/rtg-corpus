@@ -1,0 +1,221 @@
+AZ v0.8 stage 1 edit log
+base az-v0.7 2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94
+result sha256 19a1faf01e44a74d2bffc8dbf14fddae798f21e75f3c5e166f290d6f11fd0426, 94673 bytes
+
+Protected regions, byte-identical to the base:
+    header                                       3681 bytes  sha256 7701e06b7bd0864b
+    §4.1.3                                       1122 bytes  sha256 e6a28db203160cf7
+    §4.2 non-claims                               367 bytes  sha256 46dbba0a6a057430
+    §4.3.1 engineering closure                   3361 bytes  sha256 f3ca99c5ffd3f1c5
+    §4.3.2 low-order obstruction, statement      1161 bytes  sha256 a2bef9efabc1f11d
+    §4.3.3 chains                                1604 bytes  sha256 24a8b4dd8bdae57a
+    §4.3.4 retraction block                      1667 bytes  sha256 61b510b36b5b14e2
+    §10                                          2816 bytes  sha256 6bcc1fb9f3346dbe
+    Appendix A                                   6387 bytes  sha256 7ee6c801ab83518e
+    Appendix B through v0.7                      1686 bytes  sha256 be29bd62973e5f15
+    footer                                        631 bytes  sha256 d78761156a8479a3
+
+E01 A5-A6        replace-range 
+    old: 18 lines, sha256 e4971e1ac15661ca
+    new: 22 lines
+    why: aliases under Methodology v1.4 §8.4; [ENG-planned], [ENG-historical] dropped; labels separated from status tags; identifier owner map
+E02 S0-intro     replace-range 
+    old: 12 lines, sha256 27d13e343b7c8261
+    new: 12 lines
+    why: version-scoped wording removed; functions point to their sections
+E03 S0.1-head    set-line      
+    old: sha256 05feb57d533f6c6c (39 chars)
+    new: ### §0.1 Ownership and Layer Routing Map
+    why: serves the layer-routing function (section map, §0.3)
+E04 S0.1-dyad    sub           
+    old: `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 (`dyad-v6.4.23`)
+    new: `RTG_DYADIC_OSCILLATOR_DSN` v6.4.24 (`dyad-v6.4.24`)
+    why: pin (C5)
+E05 S0.1-engine  sub           
+    old: internal and **now `[ENG PASS]`** (was `[ENG-blocker]` through v0.5)
+    new: internal; `[ENG PASS]` (availability of the certifying files: §9)
+    why: history removed; availability pointer
+E06 S0.1-facts   sub           
+    old: Thread-C-owned `[THM-ALG]` / `[ALG]`; not cross-branch
+    new: Thread-C-owned `[THM]` / `[ALG]`; not cross-branch
+    why: tag form (D3)
+E07 S0.1-sg04    sub           
+    old: **v0.6 note:** the two internal `[THM-ALG]`/`[ALG]` items registered this version are
+    new: The two internal results of §4.3.2 (`[THM]` and `[ALG]`) are
+    why: version note removed; tag form (D3)
+E08 S0.2-S0.3    insert-before 
+    old: ## §1. Study Goal and Historical Origin
+    new: 36 lines
+    why: current-state readout and declared section map (D1 a); navigation text, mapped to its sections
+E09 S1.1-done    sub           
+    old:  **(v0.6: this is now done — infrastructure certified, first diagnostic executed and interpreted.)**
+    new:  This is done: the infrastructure is certified and a first diagnostic is executed and interpreted (§4.3).
+    why: version note reworded as current status
+E10 S1.1-crit    sub           
+    old: **v0.6 status: NOT met.**
+    new: **Status: not met.**
+    why: version label removed
+E11 B2           replace-range 
+    old: 8 lines, sha256 a59d111f614ca5ea
+    new: 1 line
+    why: five restated Dyadic results cited by RID; statements once, in §8
+E12 S1.3-AZ0     set-line      
+    old: sha256 996138b31f53a716 (478 chars)
+    new: `[DEF]` **Milestone AZ-0 (closed).** Create a clean ledger of what already exists: Dyadic OPEN 9 arithmetic facts, TDR-G
+    why: refresh history (v0.2–v0.6, superseded pins) removed; recoverable at az-v0.7
+E13 S1.3-AZ1     sub           
+    old: **Milestone AZ-1 (CLOSED — v0.6).**
+    new: **Milestone AZ-1 (closed).**
+    why: version label
+E14 S1.3-AZ2     sub           
+    old: **Milestone AZ-2 (ATTEMPTED — negative-clarifying — v0.6).**
+    new: **Milestone AZ-2 (attempted; negative-clarifying).**
+    why: version label
+E15 S2           replace-range 
+    old: 30 lines, sha256 c9749a83b4691288
+    new: 46 lines
+    why: OPEN entries in the Methodology §5.1 form; questions unchanged; closed modules as one-line records
+E16 S3-SG5-head  set-line      
+    old: sha256 9e154ee9fdc26411 (82 chars)
+    new: **[SG-AZ-5] — Provenance guard for imported graph-zeta results.**  
+    why: version label
+E17 S3-SG5-hist  delete-line   
+    old: sha256 17a156dd641668ff (320 chars)
+    new: 
+    why: history of the guard's earlier wording; recoverable at az-v0.7; the guard text is unchanged
+E18 S3-SG6       sub           
+    old: *(v0.6 clarification: PROP-AZ-CORE-EQUIV and the antipodal-band low-order obstruction are
+    new: *(PROP-AZ-CORE-EQUIV and the antipodal-band low-order obstruction are
+    why: version label
+E19 S3-SG7       sub           
+    old: **v0.6 worked example of the trap this guard exists to catch:**
+    new: **Worked example of the trap this guard exists to catch:**
+    why: version label
+E20 R1-SG7       sub           
+    old: It is proven static $\mathbb{Z}_N$ substrate geometry that would appear for *any* antipodal-band graph on *any* $\mathbb{Z}_N$ (§4.3.2, §4.3.4); a "resemblance" to Dyadic cyclic selection is therefore vacuous.
+    new: It is not specific to TDR-G dynamics: in the tested protocol a core-matched random-$\theta$ antipodal-band null with no TDR-G dynamics reproduces it (`[NUM diagnostic]`; §4.3.3 Chain 2, $N\in\{120,180,240\}$; §4.3.4). It is read as static $\mathbb{Z}_N$ antipodal-band geometry on that evidence; noth
+    why: review 5874174108 R1: universal quantifier and 'proven' removed; scope of the numerical evidence stated
+E21 S3-PROG-1    sub           
+    old: `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`
+    new: `[import: RTG_PROGRAMME_OVERVIEW v1.4 §8 | SG-PROG-1]`
+    why: [source:] -> [import:] (Methodology §3.3); same pin
+E22 S3-PROG-2    sub           
+    old: `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`
+    new: `[import: RTG_PROGRAMME_OVERVIEW v1.4 §8 | SG-PROG-2]`
+    why: [source:] -> [import:] (Methodology §3.3); same pin
+E23 S3-PROG-4    sub           
+    old: `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`
+    new: `[import: RTG_PROGRAMME_OVERVIEW v1.4 §8 | SG-PROG-4]`
+    why: [source:] -> [import:] (Methodology §3.3); same pin
+E24 A7-marker    insert        
+    old: 
+    new: <!-- AI_CONTEXT_CORE_END -->
+    why: context-core marker at the end of §3 (section map §0.3)
+E25 B1-B3        replace-range 
+    old: 58 lines, sha256 8933c97282505790
+    new: 13 lines
+    why: restated owner results and the owner's frontier list removed; statements once, in §8; §4.1.3 unchanged
+E26 B4           replace-range 
+    old: 23 lines, sha256 b2f47a8cb8ecf5da
+    new: 7 lines
+    why: nine restated TDR-G paragraphs removed; statements once, in §8; AZ-OPEN-SCOPE-ARITH and the non-claims unchanged
+E27 B4-note      sub           
+    old: **v0.6 note:** the Phase-2 `4|q` angular result (§4.3.3) is NOT an answer to this question in the affirmative — it is proven to be substrate geometry
+    new: The Phase-2 `4|q` angular result (§4.3.3) is NOT an answer to this question in the affirmative — it is shown to be substrate geometry
+    why: version label; 'proven' -> 'shown' (the reclassification is `[NUM diagnostic]`, §4.3.3)
+E28 S4.3-status  set-line      
+    old: sha256 aabbe6b2cf800522 (309 chars)
+    new: **Status:** Engineering certified (`[ENG PASS]`; availability of the certifying files in §9). One Phase-2 diagnostic pro
+    why: version label and 'was engineering-blocked through v0.5' removed; availability pointer
+E29 D3           replace-range 
+    old: 3 lines, sha256 7b44df0d553da4af
+    new: proof block
+    why: [THM-ALG] -> [THM] on a written proof (PI decision D3 a); enumeration separated as corroboration; the reading of 'closed non-backtracking walk' made explicit
+E30 A5-heur-1    sub           
+    old: The connection from the low-order obstruction to the angular rule is `[HEUR/NUM strong]` only.
+    new: The connection from the low-order obstruction to the angular rule is `[HEUR]` only; the numerical observations it rests on are the `[NUM diagnostic]` chains of §4.3.3.
+    why: mixed tag unpacked (Methodology §8.4): heuristic link, numerical support named
+E31 A5-heur-2    sub           
+    old: The full causal link to "$R_q$ elevated iff $4\mid q$" is `[HEUR/NUM strong]`, not exact:
+    new: The full causal link to "$R_q$ elevated iff $4\mid q$" is `[HEUR]`, not exact:
+    why: mixed tag unpacked; the same sentence already records the falsified prediction
+E32 A5-heur-3    insert        
+    old: 
+    new: one line after the retraction block
+    why: the retraction block keeps its bytes (Methodology §8.4, historical spellings)
+E33 A5-result    sub           
+    old: `[RESULT diagnostic]`
+    new: `[RESULT]` `[from: NUM]` `[scope: diagnostic]`
+    why: RESULT pairing (Methodology §3.4)
+E34 R1-AZ2       sub           
+    old: the most tempting observable was shown to be substrate geometry that any antipodal-band $\mathbb{Z}_N$ graph would exhibit.
+    new: the most tempting observable was reproduced, in the tested null protocol (§4.3.3 Chain 2), by a core-matched random-$\theta$ antipodal-band null without TDR-G dynamics, so it is not specific to the dynamics.
+    why: review 5874174108 R1: universal quantifier removed; the negative verdict is kept at the scope of the evidence
+E35 S4.3.6-head  set-line      
+    old: sha256 ef3595ab0b591c5e (54 chars)
+    new: #### §4.3.6 Scientific open items (Thread C)
+    why: version label
+E36 C3-gbirth    sub           
+    old: birth-window graph evolution (the $G_{\rm birth}(w)$ sequence),
+    new: birth-window graph evolution (the $G_{\rm birth}(w)$ sequence; the object has two different definitions in the deposited files, §9, and has to be fixed before use),
+    why: C3: the recovered material does not define G_birth(w) uniquely
+E37 S5-eng       sub           
+    old: certified, exit-code-gated, hashed artifacts (§4.3.1, §9)**
+    new: certified, exit-code-gated (§4.3.1); availability of the artifacts per entry in §9**
+    why: availability
+E38 S5-eng2      sub           
+    old: | SG-AZ-5 (revised) |
+    new: | SG-AZ-5 |
+    why: version label
+E39 S5-prop      sub           
+    old: **`[THM-ALG]`, scope: finite simple undirected, both-orientations, no multiedges/self-loops**
+    new: **`[THM]` (proof in §4.3.2), scope: finite simple undirected, both-orientations, no multiedges/self-loops; closed walks non-backtracking at every step including the closing one**
+    why: tag form (D3); the reading the proof depends on
+E40 S5-prop2     sub           
+    old: claiming strong connectivity of the transition graph |
+    new: claiming strong connectivity of the transition graph; reading the enumeration certificate as the proof |
+    why: forbidden overclaim added with D3
+E41 S5-4q        sub           
+    old: **`[NUM diagnostic]` / `[HEUR/NUM strong]`: static $\mathbb{Z}_N$ antipodal-band geometry**
+    new: **`[NUM diagnostic]`: static $\mathbb{Z}_N$ antipodal-band geometry; the link to the low-order obstruction is `[HEUR]`**
+    why: mixed tag unpacked
+E42 S5-gz        sub           
+    old: | SG-AZ-5 (revised) |
+    new: | SG-AZ-5 |
+    why: version label
+E43 B5           set-line      
+    old: sha256 1e80e4ee60a0d138 (498 chars)
+    new: Thread A indexes the Dyadic arithmetic horizon by reference to `RTG_DYADIC_OSCILLATOR_DSN` v6.4.24 (
+    why: restated owner frontier replaced by the pointer; pin (C5)
+E44 S6-bd        sub           
+    old: **v0.6 [bridge-disqualified]:**
+    new: **`[bridge-disqualified]`:**
+    why: version label
+E45 S6-uvm       sub           
+    old: `[source: RTG_OPEN_M_DSN v0.7.1 R15, R16]`
+    new: `[import: RTG_OPEN_M_DSN v0.7.1 R15, R16 | UVM-NUM-2F-RHO; UVM-RESULT-AUDIT1]` (reference only)
+    why: [source:] -> [import:] (Methodology §3.3); same pin; identifiers as already named in the sentence
+E46 S7-head      set-line      
+    old: sha256 6afe6cfd342b28e1 (40 chars)
+    new: ## §7. Programme Registration
+    why: title states the current function
+E47 S7-hist      sub           
+    old:  The request carried through v0.6 that the Programme Overview be patched to register this study is met and closed; the proposed entry text is removed.
+    new: 
+    why: history sentence; recoverable at az-v0.7
+E48 S7-67        sub           
+    old:  The Programme's maintenance proposals for this study (its §6.7 and §9.2) are Programme records and are not adopted by this edition.
+    new:  The Programme's maintenance proposals for this study (its §6.7 and §9.2) are Programme records; the reduction of restated owner text asked for in its §6.7 is carried out in this edition by the PI's decision, and no merger with another study is made.
+    why: state of the §6.7 item after this edition
+E49 S8           replace-range 
+    old: 41 lines, sha256 bed7963a482b5e06
+    new: 48 lines
+    why: Methodology §4.3 row form with group clauses; each row = the v0.7 ledger readout plus limitation sentences taken byte for byte from the v0.7 thread text (mixed tags unpacked to the owner's tags; pin C5); export candidates unchanged but for 'now'
+E50 C1-C4        replace-range 
+    old: 16 lines, sha256 de657b6f5414d0c7
+    new: 32 lines
+    why: availability and evidence state per artifact after the partial recovery; conventions file as found; two definitions of G_birth(w); exporter registered by its own identifier; new finite check registered
+E51 APPB         insert        
+    old: 
+    new: Corrections registered at v0.8
+    why: correction records for the status and tag changes of this stage
