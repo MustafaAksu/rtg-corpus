@@ -33,7 +33,7 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 1. Method v0.3 delta, separately reviewed: size aim subordinate to completeness and structure; K1/K2 span deletions as a standing rule when a domain is opened for a refresh; satellite repositories out of scope; a refresh passes the checker the edition's own manifest, coverage map and cumulative retired-key list.
 2. Watch for the next owner tags: AZ (Action 1 and the Thread C recovery are [SESSION] until an AZ or TDR-G edition adopts them), DZT, OPEN-M, TDR-G.
 3. Deferred debts: seven other multi-line identifiers; a comparator mode for heading renames; a built-in AZ profile for `tools/orient.py`.
-**Reopen trigger:** any owner tag after `fa3db80` (impact refresh); any open item in `pipes/ATLAS/`.
+**Reopen trigger:** any owner tag after the v0.12 snapshot `c8e7198` (impact refresh); any open item in `pipes/ATLAS/`.
 
 ## REVIEWER_LANE — ChatGPT
 
