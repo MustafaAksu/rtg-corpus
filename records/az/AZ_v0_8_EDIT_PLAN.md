@@ -84,6 +84,8 @@ Source: a text by the second co-owner (ChatGPT), relayed by the PI to this sessi
 
 Both co-owners now recommend the same four choices. They remain the PI's decisions.
 
+**PI decision, 12 Nov 2026, 12:52 +03:00** (project conversation with this session, in reply to the two co-owners' common recommendations, verbatim): "Ortak önerilerinizin tamamını kabul ediyorum." Hence: **D1 (a)** declared section map, numbering kept; **D2 (a)** ledger rows only; **D3 (a)** `[THM]` on the written proof of §8.2, which goes into the DSN and is reviewed, the earlier enumeration kept as separate source-reported support and not shown as rerun; **D4** the Action 1 diagnostic is not in v0.8. The conditions of this section apply. The decision fixes the plan; it adopts no edition.
+
 ## 8. PROP-AZ-CORE-EQUIV — proof and a new finite check (for D3)
 
 **[SESSION] Proposed text and a session check; nothing here changes the grade in the adopted file.**
