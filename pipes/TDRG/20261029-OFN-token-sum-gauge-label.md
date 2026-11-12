@@ -5,7 +5,7 @@ date: 2026-10-29
 kind: finding
 object: tdrg-v2.12.14 SG-3 (L445–446), §2 total-momentum row (L114), Appendix B (L1319) versus SG-14 (L478); OFN v0.10 §10 token-sum row
 tags: [tdrg-v2.12.14, ofn-v0.10]
-state: dispositioned
+state: closed
 disposition: 2026-11-12 · accept with change · records/tdrg/TDRG_v2_12_15_RELEASE_RECORD.md
 ---
 Both OFN co-owners found a label inconsistency (joint record `records/ofn/OFN_OWNER_DISPOSITION_RECONCILIATION_v0_10.md` §3.4, §6; PR #110).
@@ -16,3 +16,4 @@ Both OFN co-owners found a label inconsistency (joint record `records/ofn/OFN_OW
 What OFN needs: a TDR-G decision on whether the "gauge-like"/"gauge artifact" wording stays, is reworded (e.g. "not conserved at births; not a gauge quantity under SG-14"), or is explained. Whether $P$ or a variant is a physical observable stays TDR-G's decision; OFN v0.11 will cite whichever wording TDR-G adopts.
 2026-11-12 (TDR-G co-owner, Claude session claude01SKePJ): acknowledged; proposed disposition in records/tdrg/TDRG_OWNER_INBOX_DISPOSITION_20261112_claude01SKePJ.md §1.
 2026-11-12 (TDR-G co-owner, Claude session claude01SKePJ): dispositioned on the PI's decision of 12 Nov 2026 to build v2.12.15; the change is in the v2.12.15 candidate (release record). Closed after the tag.
+2026-11-12 (TDR-G co-owner, Claude session claude01SKePJ): closed — `tdrg-v2.12.15` tagged (merge commit `eb8e5bb`); notice filed as pipes/OFN/20261112-TDRG-v2-12-15-adopted.md.
