@@ -1,0 +1,10 @@
+registered package (scripts, fixtures, pilot): SHA256SUMS OK; SHA-256 of SHA256SUMS = 81c87dcfc8d326e3c29861b9124c9654535f1c64cc6e5f9c7a9c9cafa6abd6eb
+campaign directory: HASHES.txt OK (39 files); SHA-256 of HASHES.txt = 5ddbc60516acbeb75f2fc09fabdcaa017a320a68d88ee4904767c1c59b88500a
+marker: plan stage1, confirmatory True, jobs 4, resumed True, fixtures_skipped False, python 3.12.3
+marker: started 2026-11-11T13:35:58Z, finished 2026-11-11T18:11:11Z, records {"S1-C1": 9400, "S1-C2": 7500, "S1-C3": 3000}
+marker: the eight SHA-256 values it records equal the bytes in this repository: True
+record files: 19900 records in 12 files
+registered analysis S1-C1 (with sensitivity set S1-C3): exit code 0
+registered analysis S1-C2: exit code 0
+rerun outputs are byte-identical to the outputs produced on the campaign machine
+VERIFY PASS
