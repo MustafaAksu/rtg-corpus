@@ -1,0 +1,228 @@
+Stage 2 analysis script SHA-256 f89737e778578bcce2f771544515d0230550b63775e82d1744937ef998c894db
+registered configuration T2-C240: {"N": 240, "T": 900, "band": [40, 50], "cap": 300, "confirmatory": false, "k": 16, "n_base": 10, "n_perm": 2, "pilot_file": "N240k16T900.jsonl", "pilot_sha256": null, "policy": "bound_symmetric", "profile": "P1", "tag": "S2SMOKE", "theta": 45}
+registered configuration T2-C242: {"N": 242, "T": 900, "band": [40, 50], "cap": 300, "confirmatory": false, "k": 16, "n_base": 8, "n_perm": 0, "pilot_file": "N242k16T900.jsonl", "pilot_sha256": null, "policy": "bound_symmetric", "profile": "P1", "tag": "S2SMOKE", "theta": 45}
+registered configuration T2-C480: {"N": 480, "T": 900, "band": [40, 50], "cap": 300, "confirmatory": false, "k": 32, "n_base": 6, "n_perm": 2, "pilot_file": "N480k32T900.jsonl", "pilot_sha256": null, "policy": "bound_symmetric", "profile": "P1", "tag": "S2SMOKE", "theta": 45}
+*** TEST CONFIGURATION (tag S2SMOKE): instrument validation only; no evidential value ***
+input T2-C240_00000_00005.jsonl  SHA-256 aa7df57f96dc396ca066488f21ee4f93bbd5a10983b263e3e187104d9c806b54
+input T2-C240_00005_00010.jsonl  SHA-256 b25db7774b0af1dd41d761abf859f1b5c9f4c30878107da2c613882f97baf52a
+input T2-C242_00000_00004.jsonl  SHA-256 38f7efc8a006772dbbafcfdf21afa3cfc7ccc670277065acdf16f423fcc3dff6
+input T2-C242_00004_00008.jsonl  SHA-256 c3a79ffb4ba17d19c4f1a57e5cdab70bebb1ef3b1a9db92fa5eda07662c0aaf7
+input T2-C480_00000_00003.jsonl  SHA-256 d3af6dab7c7f71d7a220acbf6888d65f86604f7d5aba7dc7ee120d2b0e6df3ca
+input T2-C480_00003_00006.jsonl  SHA-256 a6fdd1f7ed06906b8ad4703445f6ce7069c230e18c756cbcdb43fbe8d6b19471
+INTEGRITY: PASS (144 records in 6 file(s) of 3 cells; identity, custody, states, records, set, tick-800 checkpoint checked)
+G1 fixtures on the campaign machine: PASS
+G2 token law (alphabet, exact class update, centre witness), summed violation counter: 0 -> PASS
+cell T2-C240  N=240 k=16  horizon T=900  theta=45  base draws analysed=10  excluded=[]
+cell T2-C242  N=242 k=16  horizon T=900  theta=45  base draws analysed=8  excluded=[]
+cell T2-C480  N=480 k=32  horizon T=900  theta=45  base draws analysed=6  excluded=[]
+
+[control contrasts, per cell and endpoint; Agresti-Min intervals 95 %, not adjusted for multiplicity; neutrality margin +-0.025; readings EQUIVALENT / DIFFERENT / INCONCLUSIVE]
+T2-C240, E_theta:
+  G3 node-label permutation: PASS
+      0 of 4 permuted runs differ in (M, births, steps, fb, M_at)
+  G4 sham perturbation vs BASE (native and perturbed slot token non-resonant): INCONCLUSIVE
+      n=10  p1=0.1000  p0=0.2000  RD=-0.1000 [-0.4066, +0.2399]  discordant 1/2  McNemar p=1.000e+00
+  G5 detuned arm O1D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=10  p1=0.1000  p0=0.2000  RD=-0.1000 [-0.4066, +0.2399]  discordant 1/2  McNemar p=1.000e+00
+  G5 detuned arm O2D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=10  p1=0.3000  p0=0.2000  RD=+0.1000 [-0.2399, +0.4066]  discordant 2/1  McNemar p=1.000e+00
+T2-C240, E_100:
+  G3 node-label permutation: PASS
+      0 of 4 permuted runs differ in (M, births, steps, fb, M_at)
+  G4 sham perturbation vs BASE (native and perturbed slot token non-resonant): INCONCLUSIVE
+      n=10  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.1633, +0.1633]  discordant 0/0  McNemar p=1.000e+00
+  G5 detuned arm O1D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=10  p1=0.1000  p0=0.0000  RD=+0.1000 [-0.1428, +0.3095]  discordant 1/0  McNemar p=1.000e+00
+  G5 detuned arm O2D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=10  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.1633, +0.1633]  discordant 0/0  McNemar p=1.000e+00
+T2-C242, E_theta:
+  G4 sham perturbation vs BASE (native and perturbed slot token non-resonant): INCONCLUSIVE
+      n=8  p1=0.0000  p0=0.1250  RD=-0.1250 [-0.3702, +0.1702]  discordant 0/1  McNemar p=1.000e+00
+  G5 detuned arm O1D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=8  p1=0.1250  p0=0.1250  RD=+0.0000 [-0.3395, +0.3395]  discordant 1/1  McNemar p=1.000e+00
+T2-C242, E_100:
+  G4 sham perturbation vs BASE (native and perturbed slot token non-resonant): INCONCLUSIVE
+      n=8  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.1960, +0.1960]  discordant 0/0  McNemar p=1.000e+00
+  G5 detuned arm O1D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=8  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.1960, +0.1960]  discordant 0/0  McNemar p=1.000e+00
+T2-C480, E_theta:
+  G3 node-label permutation: PASS
+      0 of 4 permuted runs differ in (M, births, steps, fb, M_at)
+  G4 sham perturbation vs BASE (native and perturbed slot token non-resonant): INCONCLUSIVE
+      n=6  p1=0.3333  p0=0.3333  RD=+0.0000 [-0.2450, +0.2450]  discordant 0/0  McNemar p=1.000e+00
+  G5 detuned arm O1D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=6  p1=0.5000  p0=0.3333  RD=+0.1667 [-0.2105, +0.4605]  discordant 1/0  McNemar p=1.000e+00
+  G5 detuned arm O2D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=6  p1=0.0000  p0=0.3333  RD=-0.3333 [-0.6374, +0.1374]  discordant 0/2  McNemar p=5.000e-01
+T2-C480, E_100:
+  G3 node-label permutation: PASS
+      0 of 4 permuted runs differ in (M, births, steps, fb, M_at)
+  G4 sham perturbation vs BASE (native and perturbed slot token non-resonant): INCONCLUSIVE
+      n=6  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.2450, +0.2450]  discordant 0/0  McNemar p=1.000e+00
+  G5 detuned arm O1D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=6  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.2450, +0.2450]  discordant 0/0  McNemar p=1.000e+00
+  G5 detuned arm O2D vs BASE (native slot token non-resonant): INCONCLUSIVE
+      n=6  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.2450, +0.2450]  discordant 0/0  McNemar p=1.000e+00
+
+[the confirmatory family: five contrasts x two endpoints = 10; paired on the base draw]
+[tests of RD = 0: exact two-sided McNemar, Holm over the ten]
+[minimum effect: simultaneous Agresti-Min intervals, 99.5 % two-sided each (Bonferroni over the ten; approximate)]
+E_theta | T2-C240 N=240 | order 1 (2x = 0) | O1R vs O1D
+    n=10  p1=0.6000  p0=0.1000  RD=+0.5000 [-0.0463, +0.8796]  discordant 5/0  McNemar p=6.250e-02  Holm p=6.250e-01
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_theta | T2-C240 N=240 | order 2 (2x = N/2) | O2R vs O2D
+    n=10  p1=0.8000  p0=0.3000  RD=+0.5000 [-0.1523, +0.9857]  discordant 6/1  McNemar p=1.250e-01  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_theta | T2-C242 N=242 | order 1 (2x = 0) | O1R vs O1D
+    n=8  p1=0.6250  p0=0.1250  RD=+0.5000 [-0.2523, +1.0000]  discordant 5/1  McNemar p=2.188e-01  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_theta | T2-C480 N=480 | order 1 (2x = 0) | O1R vs O1D
+    n=6  p1=0.3333  p0=0.5000  RD=-0.1667 [-0.6055, +0.3555]  discordant 0/1  McNemar p=1.000e+00  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_theta | T2-C480 N=480 | order 2 (2x = N/2) | O2R vs O2D
+    n=6  p1=0.5000  p0=0.0000  RD=+0.5000 [-0.2199, +0.9699]  discordant 3/0  McNemar p=2.500e-01  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_100 | T2-C240 N=240 | order 1 (2x = 0) | O1R vs O1D
+    n=10  p1=0.2000  p0=0.1000  RD=+0.1000 [-0.2405, +0.4072]  discordant 1/0  McNemar p=1.000e+00  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_100 | T2-C240 N=240 | order 2 (2x = N/2) | O2R vs O2D
+    n=10  p1=0.2000  p0=0.0000  RD=+0.2000 [-0.2153, +0.5487]  discordant 2/0  McNemar p=5.000e-01  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_100 | T2-C242 N=242 | order 1 (2x = 0) | O1R vs O1D
+    n=8  p1=0.1250  p0=0.0000  RD=+0.1250 [-0.2869, +0.4869]  discordant 1/0  McNemar p=1.000e+00  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_100 | T2-C480 N=480 | order 1 (2x = 0) | O1R vs O1D
+    n=6  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.3509, +0.3509]  discordant 0/0  McNemar p=1.000e+00  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+E_100 | T2-C480 N=480 | order 2 (2x = N/2) | O2R vs O2D
+    n=6  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.3509, +0.3509]  discordant 0/0  McNemar p=1.000e+00  Holm p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (simultaneous interval contains 0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE; G5 INCONCLUSIVE
+
+[the two endpoints of each contrast, side by side]
+T2-C240 N=240 order 1 (2x = 0): E_theta INCONCLUSIVE; E_100 INCONCLUSIVE
+T2-C240 N=240 order 2 (2x = N/2): E_theta INCONCLUSIVE; E_100 INCONCLUSIVE
+T2-C242 N=242 order 1 (2x = 0): E_theta INCONCLUSIVE; E_100 INCONCLUSIVE
+T2-C480 N=480 order 1 (2x = 0): E_theta INCONCLUSIVE; E_100 INCONCLUSIVE
+T2-C480 N=480 order 2 (2x = N/2): E_theta INCONCLUSIVE; E_100 INCONCLUSIVE
+
+[near-quarter control at N=242, separate from the family: Q2R vs BASE; Agresti-Min interval 99.5 % two-sided; equivalence margin +-0.05]
+E_theta | Q2R vs BASE (no order-2 token exists)
+    n=8  p1=0.5000  p0=0.1250  RD=+0.3750 [-0.1942, +0.7942]  discordant 3/0  McNemar p=2.500e-01
+    test-configuration reading, no evidential value: INCONCLUSIVE (interval neither inside nor outside +-0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE
+E_100 | Q2R vs BASE (no order-2 token exists)
+    n=8  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.2807, +0.2807]  discordant 0/0  McNemar p=1.000e+00
+    test-configuration reading, no evidential value: INCONCLUSIVE (interval neither inside nor outside +-0.05)
+    qualifiers: QUALIFIED BY G4 INCONCLUSIVE
+
+[descriptive outputs; nominal 95 %; no reading and no decision is attached to any of them]
+D1  the contrasts at the two band thresholds of the pilot (intake section 5):
+      T2-C240 O1R vs O1D, M >=  40: n=10  p1=0.8000  p0=0.8000  RD=+0.0000 [-0.2829, +0.2829]  discordant 1/1  McNemar p=1.000e+00
+      T2-C240 O1R vs O1D, M >=  50: n=10  p1=0.6000  p0=0.1000  RD=+0.5000 [+0.0934, +0.7399]  discordant 5/0  McNemar p=6.250e-02
+      T2-C240 O2R vs O2D, M >=  40: n=10  p1=0.8000  p0=0.7000  RD=+0.1000 [-0.2399, +0.4066]  discordant 2/1  McNemar p=1.000e+00
+      T2-C240 O2R vs O2D, M >=  50: n=10  p1=0.8000  p0=0.2000  RD=+0.6000 [+0.1733, +0.8267]  discordant 6/0  McNemar p=3.125e-02
+      T2-C242 O1R vs O1D, M >=  40: n=8  p1=0.8750  p0=0.1250  RD=+0.7500 [+0.2386, +0.9614]  discordant 6/0  McNemar p=3.125e-02
+      T2-C242 O1R vs O1D, M >=  50: n=8  p1=0.5000  p0=0.0000  RD=+0.5000 [+0.0386, +0.7614]  discordant 4/0  McNemar p=1.250e-01
+      T2-C480 O1R vs O1D, M >=  40: n=6  p1=0.5000  p0=0.8333  RD=-0.3333 [-0.6374, +0.1374]  discordant 0/2  McNemar p=5.000e-01
+      T2-C480 O1R vs O1D, M >=  50: n=6  p1=0.3333  p0=0.3333  RD=+0.0000 [-0.4243, +0.4243]  discordant 1/1  McNemar p=1.000e+00
+      T2-C480 O2R vs O2D, M >=  40: n=6  p1=0.8333  p0=0.5000  RD=+0.3333 [-0.1374, +0.6374]  discordant 2/0  McNemar p=5.000e-01
+      T2-C480 O2R vs O2D, M >=  50: n=6  p1=0.5000  p0=0.0000  RD=+0.5000 [-0.0404, +0.7904]  discordant 3/0  McNemar p=2.500e-01
+D2  threshold ladder, rate of M >= c by arm: at the end of the run / at tick 800:
+      T2-C240 c= 60  BASE 0.0000/0.0000  O1R 0.5000/0.3000  O1D 0.1000/0.1000  O2R 0.4000/0.4000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C240 c= 80  BASE 0.0000/0.0000  O1R 0.3000/0.3000  O1D 0.1000/0.1000  O2R 0.3000/0.3000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C240 c=100  BASE 0.0000/0.0000  O1R 0.2000/0.2000  O1D 0.1000/0.1000  O2R 0.2000/0.2000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C240 c=150  BASE 0.0000/0.0000  O1R 0.1000/0.1000  O1D 0.1000/0.1000  O2R 0.2000/0.2000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C240 c=200  BASE 0.0000/0.0000  O1R 0.1000/0.1000  O1D 0.1000/0.1000  O2R 0.2000/0.2000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C240 c=300  BASE 0.0000/0.0000  O1R 0.1000/0.1000  O1D 0.1000/0.1000  O2R 0.2000/0.2000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C242 c= 60  BASE 0.0000/0.0000  O1R 0.2500/0.2500  O1D 0.0000/0.0000  Q2R 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C242 c= 80  BASE 0.0000/0.0000  O1R 0.1250/0.1250  O1D 0.0000/0.0000  Q2R 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C242 c=100  BASE 0.0000/0.0000  O1R 0.1250/0.1250  O1D 0.0000/0.0000  Q2R 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C242 c=150  BASE 0.0000/0.0000  O1R 0.1250/0.1250  O1D 0.0000/0.0000  Q2R 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C242 c=200  BASE 0.0000/0.0000  O1R 0.1250/0.1250  O1D 0.0000/0.0000  Q2R 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C242 c=300  BASE 0.0000/0.0000  O1R 0.1250/0.1250  O1D 0.0000/0.0000  Q2R 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C480 c= 60  BASE 0.0000/0.0000  O1R 0.0000/0.0000  O1D 0.1667/0.1667  O2R 0.3333/0.3333  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C480 c= 80  BASE 0.0000/0.0000  O1R 0.0000/0.0000  O1D 0.0000/0.0000  O2R 0.3333/0.3333  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C480 c=100  BASE 0.0000/0.0000  O1R 0.0000/0.0000  O1D 0.0000/0.0000  O2R 0.0000/0.0000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C480 c=150  BASE 0.0000/0.0000  O1R 0.0000/0.0000  O1D 0.0000/0.0000  O2R 0.0000/0.0000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C480 c=200  BASE 0.0000/0.0000  O1R 0.0000/0.0000  O1D 0.0000/0.0000  O2R 0.0000/0.0000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+      T2-C480 c=300  BASE 0.0000/0.0000  O1R 0.0000/0.0000  O1D 0.0000/0.0000  O2R 0.0000/0.0000  O2D 0.0000/0.0000  SHAM 0.0000/0.0000
+D3  threshold-free paired comparison of M, resonant against detuned (exact sign test on non-tied pairs; M is capped at 300):
+      T2-C240 O1R vs O1D, end of run: greater 7, smaller 3, equal 0; sign test p=3.438e-01; median difference 6.5
+      T2-C240 O1R vs O1D, tick 800  : greater 6, smaller 4, equal 0; sign test p=7.539e-01; median difference 3.0
+      T2-C240 O2R vs O2D, end of run: greater 8, smaller 2, equal 0; sign test p=1.094e-01; median difference 15.0
+      T2-C240 O2R vs O2D, tick 800  : greater 8, smaller 2, equal 0; sign test p=1.094e-01; median difference 13.5
+      T2-C242 O1R vs O1D, end of run: greater 6, smaller 2, equal 0; sign test p=2.891e-01; median difference 12.5
+      T2-C242 O1R vs O1D, tick 800  : greater 6, smaller 2, equal 0; sign test p=2.891e-01; median difference 12.0
+      T2-C480 O1R vs O1D, end of run: greater 2, smaller 3, equal 1; sign test p=1.000e+00; median difference -1.0
+      T2-C480 O1R vs O1D, tick 800  : greater 2, smaller 4, equal 0; sign test p=6.875e-01; median difference -2.0
+      T2-C480 O2R vs O2D, end of run: greater 6, smaller 0, equal 0; sign test p=3.125e-02; median difference 14.0
+      T2-C480 O2R vs O2D, tick 800  : greater 6, smaller 0, equal 0; sign test p=3.125e-02; median difference 13.5
+D4  out-of-sample check of the pilot calibration (BASE arm, draws without a resonant seed token). Report only: the thresholds are registered constants and are not changed by this output.
+      pilot reference rate alpha = 14/2620 = 0.00534, exact 95 % [0.00292, 0.00895]
+      T2-C240: M >= 45 at the end: 2 of 8 = 0.25000, exact 95 % [0.03185, 0.65086]; point estimate outside the pilot interval of alpha; M >= 100 at tick 800: 0 of 8, exact 95 % [0.00000, 0.36942]
+      T2-C242: M >= 45 at the end: 1 of 8 = 0.12500, exact 95 % [0.00316, 0.52651]; point estimate outside the pilot interval of alpha; M >= 100 at tick 800: 0 of 8, exact 95 % [0.00000, 0.36942]
+      T2-C480: M >= 45 at the end: 2 of 6 = 0.33333, exact 95 % [0.04327, 0.77722]; point estimate outside the pilot interval of alpha; M >= 100 at tick 800: 0 of 6, exact 95 % [0.00000, 0.45926]
+D5  native decomposition P(Y) = p0 + P(R) (p1 - p0), from native (BASE) draws only: R = at least one seed token with 4x = 0.
+    The risks of the intervention arms are not used in it. Wilson 95 % intervals.
+      T2-C240 E_theta campaign BASE: p0 = 2/8 = 0.2500 [0.0715, 0.5907]; p1 = 0/2 = 0.0000 [0.0000, 0.6576]; P(R) = 2/10 = 0.2000 (law: 0.0650); P(Y) = 0.2000 = p0 + P(R)(p1 - p0) = 0.2000
+      T2-C240 E_theta pilot supplement: not supplied (test configuration)
+      T2-C240 E_100 campaign BASE: p0 = 0/8 = 0.0000 [0.0000, 0.3244]; p1 = 0/2 = 0.0000 [0.0000, 0.6576]; P(R) = 2/10 = 0.2000 (law: 0.0650); P(Y) = 0.0000 = p0 + P(R)(p1 - p0) = 0.0000
+      T2-C240 E_100 pilot supplement: not supplied (test configuration)
+      T2-C242 E_theta campaign BASE: p0 = 1/8 = 0.1250 [0.0224, 0.4709]; p1 = 0/0 = nan [nan, nan]; P(R) = 0/8 = 0.0000 (law: 0.0327); P(Y) = 0.1250 = p0 + P(R)(p1 - p0) = nan
+      T2-C242 E_theta pilot supplement: not supplied (test configuration)
+      T2-C242 E_100 campaign BASE: p0 = 0/8 = 0.0000 [0.0000, 0.3244]; p1 = 0/0 = nan [nan, nan]; P(R) = 0/8 = 0.0000 (law: 0.0327); P(Y) = 0.0000 = p0 + P(R)(p1 - p0) = nan
+      T2-C242 E_100 pilot supplement: not supplied (test configuration)
+      T2-C480 E_theta campaign BASE: p0 = 2/6 = 0.3333 [0.0968, 0.7000]; p1 = 0/0 = nan [nan, nan]; P(R) = 0/6 = 0.0000 (law: 0.0329); P(Y) = 0.3333 = p0 + P(R)(p1 - p0) = nan
+      T2-C480 E_theta pilot supplement: not supplied (test configuration)
+      T2-C480 E_100 campaign BASE: p0 = 0/6 = 0.0000 [0.0000, 0.3903]; p1 = 0/0 = nan [nan, nan]; P(R) = 0/6 = 0.0000 (law: 0.0329); P(Y) = 0.0000 = p0 + P(R)(p1 - p0) = nan
+      T2-C480 E_100 pilot supplement: not supplied (test configuration)
+D6  BASE draws without a resonant seed token, by the smallest additive order of 2x among the four seed tokens (exploratory; the cut at 6 was chosen post hoc on the pilot; no mechanism is claimed): positives E_theta / E_100 of n
+      T2-C240  ord 5: 0/0 of 1  ord 8: 1/0 of 2  ord 12: 1/0 of 1  ord >12: 0/0 of 4
+      T2-C240  smallest order <= 6: 0/0 of 1;  every order > 6: 2/0 of 7
+      T2-C242  ord 11: 0/0 of 3  ord >12: 1/0 of 5
+      T2-C242  smallest order <= 6: 0/0 of 0;  every order > 6: 1/0 of 8
+      T2-C480  ord 5: 0/0 of 1  ord 10: 0/0 of 1  ord >12: 2/0 of 4
+      T2-C480  smallest order <= 6: 0/0 of 1;  every order > 6: 2/0 of 5
+D7  resonant arms by value, E_theta / E_100 (Wilson 95 % for E_theta):
+      T2-C240 O1R value    0: n=    5  E_theta 0.6000 [0.2307, 0.8824]  E_100 0.2000
+      T2-C240 O1R value  120: n=    5  E_theta 0.6000 [0.2307, 0.8824]  E_100 0.2000
+      T2-C240 O2R value   60: n=    4  E_theta 0.5000 [0.1500, 0.8500]  E_100 0.0000
+      T2-C240 O2R value  180: n=    6  E_theta 1.0000 [0.6097, 1.0000]  E_100 0.3333
+      T2-C242 O1R value    0: n=    4  E_theta 0.7500 [0.3006, 0.9544]  E_100 0.2500
+      T2-C242 O1R value  121: n=    4  E_theta 0.5000 [0.1500, 0.8500]  E_100 0.0000
+      T2-C242 Q2R value   60: n=    1  E_theta 1.0000 [0.2065, 1.0000]  E_100 0.0000
+      T2-C242 Q2R value   61: n=    3  E_theta 0.6667 [0.2077, 0.9385]  E_100 0.0000
+      T2-C242 Q2R value  182: n=    4  E_theta 0.2500 [0.0456, 0.6994]  E_100 0.0000
+      T2-C480 O1R value    0: n=    4  E_theta 0.2500 [0.0456, 0.6994]  E_100 0.0000
+      T2-C480 O1R value  240: n=    2  E_theta 0.5000 [0.0945, 0.9055]  E_100 0.0000
+      T2-C480 O2R value  120: n=    4  E_theta 0.5000 [0.1500, 0.8500]  E_100 0.0000
+      T2-C480 O2R value  360: n=    2  E_theta 0.5000 [0.0945, 0.9055]  E_100 0.0000
+D8  the contrasts on pairs whose three other seed tokens are non-resonant:
+      T2-C240 O1R vs O1D E_theta (n=8): n=8  p1=0.5000  p0=0.0000  RD=+0.5000 [+0.0386, +0.7614]  discordant 4/0  McNemar p=1.250e-01
+      T2-C240 O1R vs O1D E_100 (n=8): n=8  p1=0.1250  p0=0.0000  RD=+0.1250 [-0.1702, +0.3702]  discordant 1/0  McNemar p=1.000e+00
+      T2-C240 O2R vs O2D E_theta (n=8): n=8  p1=0.7500  p0=0.2500  RD=+0.5000 [-0.0555, +0.8555]  discordant 5/1  McNemar p=2.188e-01
+      T2-C240 O2R vs O2D E_100 (n=8): n=8  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.1960, +0.1960]  discordant 0/0  McNemar p=1.000e+00
+      T2-C242 O1R vs O1D E_theta (n=8): n=8  p1=0.6250  p0=0.1250  RD=+0.5000 [-0.0555, +0.8555]  discordant 5/1  McNemar p=2.188e-01
+      T2-C242 O1R vs O1D E_100 (n=8): n=8  p1=0.1250  p0=0.0000  RD=+0.1250 [-0.1702, +0.3702]  discordant 1/0  McNemar p=1.000e+00
+      T2-C480 O1R vs O1D E_theta (n=6): n=6  p1=0.3333  p0=0.5000  RD=-0.1667 [-0.4605, +0.2105]  discordant 0/1  McNemar p=1.000e+00
+      T2-C480 O1R vs O1D E_100 (n=6): n=6  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.2450, +0.2450]  discordant 0/0  McNemar p=1.000e+00
+      T2-C480 O2R vs O2D E_theta (n=6): n=6  p1=0.5000  p0=0.0000  RD=+0.5000 [-0.0404, +0.7904]  discordant 3/0  McNemar p=2.500e-01
+      T2-C480 O2R vs O2D E_100 (n=6): n=6  p1=0.0000  p0=0.0000  RD=+0.0000 [-0.2450, +0.2450]  discordant 0/0  McNemar p=1.000e+00
+D9  runs that reached the cap of 300, by arm: all / before tick 800 (the latter are positive on E_100 without a tick-800 checkpoint):
+      T2-C240  BASE 0/0  O1R 1/1  O1D 1/1  O2R 2/2  O2D 0/0  SHAM 0/0
+      T2-C242  BASE 0/0  O1R 1/1  O1D 0/0  Q2R 0/0  SHAM 0/0
+      T2-C480  BASE 0/0  O1R 0/0  O1D 0/0  O2R 0/0  O2D 0/0  SHAM 0/0
+D10 mean run time by arm, seconds (record field; planning information only):
+      T2-C240  BASE 0.26  O1R 0.40  O1D 0.34  O2R 1.27  O2D 0.29  SHAM 0.29
+      T2-C242  BASE 0.29  O1R 0.46  O1D 0.29  Q2R 0.30  SHAM 0.26
+      T2-C480  BASE 0.45  O1R 0.49  O1D 0.56  O2R 0.58  O2D 0.40  SHAM 0.42
