@@ -12,13 +12,13 @@
 
 ## 2. Custody checks (`EV-BYTES`, `EV-HASH`, `EV-RUN`)
 
-`evidence/az/token_resonance/stage2_pilot/intake_check.py` (SHA-256 `29d37f24934ff48def91ef765e68aec158c2fbb899d01173fe4799db3957f50c`), run on a clean checkout of the upload commit; output `intake_output.txt` (SHA-256 `04dfb890771551147c899aae6d297fc931922d3249c1569deaae772f55b499a2`), exit code 0, `RESULT: PASS`:
+`evidence/az/token_resonance/stage2_pilot/intake_check.py` (SHA-256 `cc94d9bbefae94cb1b92f63080cb964089d1d9c6f07e0e5a19b399cfefa23a98`), run on a clean checkout of the upload commit; output `intake_output.txt` (SHA-256 `04c750d38352a9496ecdb120e93875dcee08e9aa2e7e0ac3f82fd5cc3be2bbb4`), exit code 0, `RESULT: PASS`:
 
 - `HASHES.txt` lists ten files and every one has its listed hash; the manifest, the completion marker and the files agree on the seven record-file hashes; the marker carries the manifest's hash;
 - every one of the 21,000 records carries its cell's identity (`N`, `k`, `T`, cap 300, profile P1, policy `bound_symmetric`, arm `BASE`, tag) and the four pinned hashes of `stage2_pilot/SHA256SUMS` (engine `4c94d874…a608`, orientation reference `ca59e9b9…d59c`, runner `75c5f139…8992`, pilot script `ccc9e776…9a95`); records are complete and in the order of the draw index; the law-violation counter is 0 in every record;
 - the stored `summary.txt` equals, byte for byte, a rerun of the pilot script's `summary` on the uploaded files.
 
-**What was read, and what was not.** Review `5875885484` item 9 limits this lane's intake to the hash check, the stored summary and its rerun. The intake script reads, in addition and for every record, the identity fields, the draw index, the law-violation counter and the run time; it reads the outcome fields (`M`, `hit_cap`) **only** for native draws without a resonant seed token (`native_class == "NR"`), and `t100`, `births` and `M_at` for no record. No outcome of a draw that carries a resonant token was read, tabulated or printed in this intake, by the script or otherwise. Two aggregate facts about all draws were already in the stored summary and are repeated: total run time and the longest run per cell.
+**What was read, and what was not.** Review `5875885484` item 9 limits this lane's intake to the hash check, the stored summary and its rerun. The intake script reads, in addition and for every record, the identity fields, the draw index, the law-violation counter and the run time; it reads the outcome fields (`M`, `hit_cap`) and the seed tokens **only** for native draws without a resonant seed token (`native_class == "NR"`), and `t100`, `births` and `M_at` for no record. No outcome of a draw that carries a resonant token was read, tabulated or printed in this intake, by the script or otherwise. Two aggregate facts about all draws were already in the stored summary and are repeated: total run time and the longest run per cell.
 
 ## 3. Calibration table (non-resonant native draws only)
 
@@ -61,27 +61,63 @@ No cell falls back to `T = 800`; no calibration failed. By the rules as written,
 
 (`T = 800` cells in `intake_output.txt`.) Reading: within the uncertainty of `α` alone the selected thresholds move by 6–14 nodes downwards and 14–21 upwards. A threshold fixed on one half of the draws gives, in the other half, rates between 0.0021 and 0.0072 in the three selected cells (0.0014 to 0.0076 over all seven cells): of the fourteen half-sample rates four lie below the lower end of the interval of `α` (two of them in selected cells: 3 of 1,411 at `N = 240`, 4 of 1,455 at `N = 480`) and none above its upper end. The half-sample exercise uses half the draws and so overstates the uncertainty of the full-sample thresholds, by a factor of roughly √2. This lane's reading: the registered thresholds should be expected to give an out-of-sample baseline within roughly a factor of two of 0.5 %, not equal to it. Nothing here indicates a failed calibration; it is the precision of the calibration, and the registration has to carry it.
 
-**Consequences proposed for the registration** (proposals of this lane; review and the PI decide):
+## 6. Two findings in the non-resonant draws that bear on the design (exploratory, post hoc)
 
-1. The thresholds enter as **registered constants** (106, 84, 114 at horizons 1,460, 1,460, 2,670). Each paired contrast at one `N` compares two arms at the same threshold and is a valid test of a difference between them **for any fixed threshold**; calibration error does not bias it. What the calibration carries is only the comparability of the endpoint *across* `N`.
-2. A **registered out-of-sample calibration check**: the confirmatory campaign's own native (`BASE`) draws without a resonant token give, per cell, a fresh realised rate at the registered `θ` with its exact interval. It is reported whatever it is. Any statement that compares effect sizes across `N` is conditional on it; the within-`N` readings are not.
-3. A **registered sensitivity band**: each contrast is also reported at the two thresholds of the middle column above, without a decision rule, next to the Stage 1 endpoint (`M ≥ 100`, `T = 800`) and the threshold-free paired comparison already planned.
-4. The alternative — enlarging the pilot before registering (four times the draws would halve the uncertainty of `θ`; about ten hours on the server) — is not recommended by this lane: item 2 obtains the same information from runs the campaign needs anyway, and item 1 makes the primary readings independent of it.
+Both were looked for after the calibration table was seen, because the thresholds of `N = 240` and `N = 242` differ (106 against 84) at the same `k` and `T`. They use non-resonant native draws only. The classification below and its cut were chosen after the fact; the `p`-values are descriptions, not tests.
 
-## 6. Other observations (non-resonant native draws only; exploratory)
+### 6.1 The baseline the threshold is matched to is not a homogeneous background
 
-- **The bulk moves with the horizon, as the plan expected.** Fraction with `M ≥ 100`: at `N = 240`, 8 of 2,796 at `T = 800` and 18 of 2,796 at `T = 1460`; at `N = 480`, 2 of 2,906 at `T = 800` and 30 of 2,906 at `T = 2670`. A fixed threshold of 100 would have given a baseline of 0.07 % at (480, 800) and 1.0 % at (480, 2670), against 0.53 % at the reference.
-- **`N = 240` and `N = 242` differ in the non-resonant tail at the same `k` and `T`.** `M ≥ 100`: 8 of 2,796 against 1 of 2,913 at `T = 800` (Fisher exact two-sided `p = 0.019`); 18 of 2,796 against 8 of 2,913 at `T = 1460` (`p = 0.048`); the matched thresholds differ accordingly (106 against 84). Post hoc, two overlapping comparisons, unadjusted: **not established**, and no cause is proposed. If real, it would mean that the class "no token with `4x ≡ 0`" is not equally inert at the two `N`; the matched threshold absorbs such a difference by construction, which is a reason to keep the fixed-threshold endpoint in parallel (review item 3). It is noted so that the registration can decide in advance whether to describe the non-resonant class further (for instance by `8x ≡ 0`), not to motivate a claim.
-- **Share of native draws with a resonant seed token** (identity field): 380, 204, 87 and 94 of 3,000 at `N = 120, 240, 242, 480`. The native-only decomposition of plan §4 will rest on few exposed draws at the larger `N` unless the campaign's `BASE` arm is large; its resolution has to be stated in the registration.
+For a seed token `x`, let `ord(2x)` be the additive order of `2x` in `ℤ_N` — the number of ticks after which the free parent–child separation of preregistration Proposition 2 returns to `N/2`. Orders 1 and 2 are the two resonant classes of Stage 1; a non-resonant draw has every order ≥ 3. Draws are classified by the **smallest** order among their four seed tokens.
 
-## 7. Run time and a cost estimate for Stage 2
+| Cell (threshold) | smallest order ≤ 6 | every order > 6 | Fisher exact, two-sided |
+|---|---|---|---|
+| N120 k8 T800 (`M ≥ 100`) | 14 of 1,419 | **0 of 1,201** | 2.0·10⁻⁴ |
+| N240 k16 T1460 (`θ = 106`) | 11 of 828 | 3 of 1,968 | 2.1·10⁻⁴ |
+| N242 k16 T1460 (`θ = 84`) | no such token exists (`ord(2x) ∈ {1, 11, 121}`) | 15 of 2,913 | — |
+| N480 k32 T2670 (`θ = 114`) | 6 of 466 | 9 of 2,440 | 0.023 |
+
+In the reference cell all 14 baseline events are draws that contain a token of order 3 (8 of 343), 4 (4 of 329), 5 (1 of 537) or 6 (1 of 210); none of the 1,201 draws without such a token reaches 100 (largest `M`: 85). Full tables by order in `intake_output.txt`.
+
+Reading, with its limits. (i) The reference rate `α` is not the rate of a featureless background: on this sample it is carried entirely by draws with a low-order token. This looks like a graded continuation of the Stage 1 pattern (order 1: 0.258, order 2: 0.185 in the intervention arms; orders 3 and 4: about 0.02 and 0.01 in native draws here) — **a hypothesis formed on these data, not a result.** (ii) The share of non-resonant draws that contain a token of order ≤ 6 depends on the arithmetic of `N`: 54 % at `N = 120`, 30 % at 240, none at 242, 16 % at 480. A threshold matched to `α` therefore equates rates of populations of different composition. This is review item 3 ("equal baseline exceedance is not the same dynamical event") in concrete form. (iii) It is a sufficient description of the `N = 240` / `N = 242` difference: `M ≥ 100` at `T = 1460` in 18 of 2,796 against 8 of 2,913 (Fisher `p = 0.048`), and at `T = 800` in 8 against 1 (`p = 0.019`) — two overlapping post hoc comparisons, unadjusted; among draws with every order > 6 the counts at `N = 240` are 4 of 1,968 and 1 of 1,968, against 8 and 1 of 2,913 at `N = 242`. (iv) None of this touches the Stage 1 contrasts: the detuned neighbours `r ± 1` have large order, and the three other tokens are native in both arms of a pair.
+
+### 6.2 At `T = 800` the non-resonant bulk does not move with `N` in this range
+
+| | N = 120 | N = 240 | N = 242 | N = 480 |
+|---|---|---|---|---|
+| all non-resonant draws, `T = 800`: median / 90 % / 99 % of `M` | 40 / 51 / 76 | 39 / 48 / 70 | 39 / 46 / 59 | 39 / 46 / 64 |
+| draws with every order > 6, `T = 800`: median / 90 % / 99 % / 99.5 % / max | 39 / 50 / 62 / 71 / 85 | 39 / 47 / 61 / 68 / 101 | 39 / 46 / 59 / 65 / 104 | 39 / 46 / 63 / 68 / 105 |
+| the same draws with `M ≥ 100` at `T = 800` | 0 of 1,201 | 1 of 1,968 | 1 of 2,913 | 1 of 2,440 |
+
+The pilot plan expected the bulk at fixed `T` to fall with `N` (the owner's bulk birth-rate scaling, which review item 8 had already limited to its own profile and horizon). In this profile, at `k/N = 1/15` and `T = 800`, it does not: the Stage 1 endpoint `M ≥ 100` at `T = 800` meets an almost empty background at every `N` of Stage 2 — three draws of 8,522 among draws without a low-order token. It is the scaled horizons that lift the bulk towards 100 (99.5 % of `M` among those draws: 89, 85 and 107 at the three scaled horizons). Whether *tails* need the longer horizon at larger `N` is not answered by non-resonant draws; one weak indication that they may: draws with a token of order ≤ 6 reach 100 by `T = 800` in 14 of 1,419 at `N = 120` and 1 of 466 at `N = 480`, and in 10 of 466 at `N = 480` by `T = 2670`.
+
+## 7. What this means for the registration — choices for review and the PI
+
+**Unaffected by any of the choices.** The campaign runs each cell once, to its scaled horizon, with the checkpoint at tick 800: both endpoints come from the same runs at the same cost. Thresholds are registered constants. A paired contrast at one `N` compares two arms at one fixed threshold and is a valid test of a difference between them whatever the threshold; calibration error and the composition effect of §6.1 do not bias it. They affect only how an endpoint compares *across* `N`.
+
+**Choice A — which endpoint carries the confirmatory readings.** The plan (§4) fixed in advance: primary `M ≥ θ(N)` at the scaled horizon, the Stage 1 endpoint as a secondary. That rule was applied in §4 above and stands unless the PI changes it. §6 weakens its rationale (the matched baseline is not one population) and strengthens the Stage 1 endpoint's (identical definition; background almost empty and stable across `N`).
+
+| | Confirmatory | Secondary | For | Against |
+|---|---|---|---|---|
+| A1 | `M ≥ θ(N)`, scaled horizon (five contrasts) | `M ≥ 100`, `T = 800` | the rule fixed before the pilot, unchanged | its comparability across `N` rests on a baseline of changing composition, and on thresholds known to ±10–20 nodes |
+| A2 | `M ≥ 100`, `T = 800` (five contrasts) | `M ≥ θ(N)`, scaled horizon | the Stage 1 endpoint itself; no calibrated constant in a confirmatory reading | departs from the rule fixed in advance; if tails are slower at large `N`, the confirmatory reading could miss an effect that the secondary shows |
+| A3 | both (ten contrasts, one family, Holm) | — | keeps the pre-committed endpoint confirmatory and adds the Stage 1 endpoint on equal terms; every pattern (both, only one) has a registered reading | intervals about 9 % wider than with five contrasts; the two endpoints of one contrast are strongly dependent, so Holm is conservative |
+
+This lane recommends **A3**. The change from the plan is an addition, it is made before any outcome of an exposed draw has been read by anyone, and it is the reviewer's and the PI's to accept or refuse; A1 remains available without any new work.
+
+**Choice B — the order hierarchy of §6.1.** B1: no new arm; the registration adds one descriptive output — the native (`BASE`) arm by smallest order — and names the hypothesis as untested. B2: test it, with intervention arms for order 3 and order 4 (resonant value against its `±1` neighbour, as for orders 1 and 2). B2 needs a new version of the pinned runner (it has no such arms), a larger family and more compute, and `N = 242` cannot carry it. This lane recommends **B1 now**, and B2, if the PI wants it, as its own registered step after Stage 2 — at `N = 120`, where Stage 1 gives the reference.
+
+**Choice C — precision of the thresholds (§5).** C1: register the pilot's thresholds; add an out-of-sample calibration check from the campaign's own non-resonant `BASE` draws (reported whatever it is; with 1,500 base draws it rests on about seven expected exceedances and detects only a miscalibration by a factor of roughly two to three or more); report every contrast also at the two band thresholds of §5 and on a ladder of fixed thresholds, without decision rules. C2: enlarge the pilot first (four times the draws halve the uncertainty; about ten hours). This lane recommends **C1**; under A3 the Stage 1 endpoint does not depend on the thresholds at all.
+
+**Also for the registration.** The share of native draws with a resonant seed token is 380, 204, 87 and 94 of 3,000 at `N = 120, 240, 242, 480` (identity field). The native-only decomposition of plan §4 will rest on few exposed draws; this lane proposes to register, as a descriptive supplement, the pilot's own exposed draws at the selected horizons (unread so far; the thresholds were chosen without them), read for the first time by the registered analysis after the campaign.
+
+## 8. Run time and a cost estimate for Stage 2
 
 Native runs on the PI's server (one core, one process): mean 0.68 s at (240, 1460), 0.50 s at (242, 1460), 1.33 s at (480, 2670); 0.23–0.39 s at `T = 800`. Among non-resonant draws a run ending below 100 nodes costs 0.5 s / 0.5 s / 1.1 s in these three cells, one ending at 100–299 about 2–4 s, a run reaching the cap 15–19 s (one such run at `N = 240` and one at `N = 480`).
 
 In Stage 1 (already analysed) the mean run time over all arms was 1.65 times the native mean in cell C1 and 1.18 times in C2. **If** the arms behave at the larger `N` as they did at `N = 120` — which is what Stage 2 asks, so this is a planning assumption and not a prediction — a campaign with the Stage 1 arms and 1,000 base draws per cell (6,400 + 5,000 + 6,400 runs) costs about 7 core-hours, and with 1,500 base draws about 10; with no effect at all, about 4 and 6. Tail runs at the scaled horizons may cost more than the Stage 1 ratio assumes; twice these figures is a prudent upper planning value. The server has one core, so core-hours are wall-clock hours.
 
-## 8. State and next steps
+## 9. State and next steps
 
-- The upload is offered for custody unchanged (its own PR from `upload/az-token-resonance-s2-pilot`); merge is the PI's decision.
-- Next in this lane: the Stage 2 registration (`records/az/`, with its package), carrying the nine obligations of plan §8 and the proposals of §5 above; then review by the second co-owner; then the PI's decision on compute. No confirmatory run before that.
+- The upload is offered for custody unchanged (PR #259); merge is the PI's decision.
+- **Next step is a review of this evaluation, not yet the registration.** The agreed order (review `5875885484`) puts the validity of the calibration before the registration, and §7 contains choices that change what is registered. After the second co-owner's review and the PI's decision on A, B and C: the Stage 2 registration (`records/az/`, with its package), carrying the nine obligations of plan §8; then its review; then the PI's decision on compute. No confirmatory run before that.
 - Until the registration is fixed, the outcomes of draws with a resonant token in these files stay unread by this lane.

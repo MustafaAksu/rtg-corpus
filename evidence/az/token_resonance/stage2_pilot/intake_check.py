@@ -102,6 +102,12 @@ def main():
     NR = {}
     secs = {}
     BANDS = {}
+    ORD = {}
+
+    def ord2(x, N):
+        # additive order of 2x in Z_N (1 for 2x = 0, 2 for 2x = N/2: the two resonant classes; larger otherwise)
+        y = (2 * x) % N
+        return N // math.gcd(y, N) if y else 1
     for (N, k, T) in PLAN:
         c = "N%dk%dT%d" % (N, k, T)
         ident = mans[c]["identity"]
@@ -124,6 +130,7 @@ def main():
             ss.append(r["secs"])
             if r["native_class"] == "NR":          # outcomes are read for these records only
                 nr.append(r["M"])
+                ORD.setdefault((N, k, T), []).append((min(ord2(x, N) for x in r["d0"]), r["M"]))
                 band = "cap" if r["hit_cap"] else ("100-299" if r["M"] >= 100 else "<100")
                 BANDS.setdefault((N, k, T), {}).setdefault(band, []).append(r["secs"])
         check("%s: %d records, in order, cell identity and pinned hashes on every record, law violations %d" % (c, n, viol),
@@ -216,6 +223,37 @@ def main():
             T, a0, len(v0), a2, len(v2), fisher2(a0, len(v0) - a0, a2, len(v2) - a2)))
     print("  N = 480: T = 800: %d of %d;  T = 2670: %d of %d" % (
         sum(1 for y in NR[(480, 32, 800)] if y >= 100), len(NR[(480, 32, 800)]), sum(1 for y in NR[(480, 32, 2670)] if y >= 100), len(NR[(480, 32, 2670)])))
+
+    print("\nnon-resonant native draws by the smallest additive order of 2x among the four seed tokens")
+    print("(exploratory, post hoc: the classification and the cut at 6 were chosen after the calibration table was seen;")
+    print(" orders 1 and 2 are the resonant classes and do not occur here)")
+    for (N, k, T) in PLAN:
+        c = "N%dk%dT%d" % (N, k, T)
+        th = 100 if (N, k, T) == REF else table[(N, k, T)][0]
+        tab = {}
+        for o, m in ORD[(N, k, T)]:
+            key = o if o <= 12 else 13
+            t = tab.setdefault(key, [0, 0, 0])
+            t[0] += 1
+            t[1] += m >= th
+            t[2] += m >= 100
+        print("  %s  (theta = %d)" % (c, th))
+        for key in sorted(tab):
+            n_, a_, b_ = tab[key]
+            print("      min order %-4s n = %4d   M >= theta: %2d   M >= 100: %2d" % (str(key) if key <= 12 else ">12", n_, a_, b_))
+        lo_n = sum(v[0] for q, v in tab.items() if q <= 6)
+        lo_x = sum(v[1] for q, v in tab.items() if q <= 6)
+        hi_n = sum(v[0] for q, v in tab.items() if q > 6)
+        hi_x = sum(v[1] for q, v in tab.items() if q > 6)
+        gen = sorted(m for o, m in ORD[(N, k, T)] if o > 6)
+        q = lambda f: gen[min(len(gen) - 1, int(f * len(gen)))]
+        if lo_n:
+            print("      order <= 6: %d of %d;  order > 6: %d of %d;  Fisher exact two-sided p = %.2e (post hoc cut)" % (
+                lo_x, lo_n, hi_x, hi_n, fisher2(lo_x, lo_n - lo_x, hi_x, hi_n - hi_x)))
+        else:
+            print("      no seed token of order <= 6 exists at this N;  order > 6: %d of %d" % (hi_x, hi_n))
+        print("      draws with every order > 6: n = %d, M quantiles 50 / 90 / 99 / 99.5 %% = %d / %d / %d / %d, max %d" % (
+            len(gen), q(0.5), q(0.9), q(0.99), q(0.995), gen[-1]))
 
     print("\nrun time by final size, non-resonant native draws only (count, mean seconds):")
     for (N, k, T) in PLAN:

@@ -1,5 +1,5 @@
 AZ Action 1 Stage 2 pilot - intake check and calibration table ([SESSION], exploratory)
-intake script sha256 29d37f24934ff48def91ef765e68aec158c2fbb899d01173fe4799db3957f50c
+intake script sha256 cc94d9bbefae94cb1b92f63080cb964089d1d9c6f07e0e5a19b399cfefa23a98
 PASS  HASHES.txt lists the 7 record files, MANIFEST.jsonl, PILOT_COMPLETE.json and summary.txt
 PASS  every listed file has its listed hash
 PASS  manifest and completion marker name exactly the 7 planned cells
@@ -51,6 +51,74 @@ fixed threshold M >= 100 among non-resonant native draws (count of n_NR), and N 
   T =  800: N = 240:  8 of 2796;  N = 242:  1 of 2913;  Fisher exact two-sided p = 0.0191
   T = 1460: N = 240: 18 of 2796;  N = 242:  8 of 2913;  Fisher exact two-sided p = 0.0482
   N = 480: T = 800: 2 of 2906;  T = 2670: 30 of 2906
+
+non-resonant native draws by the smallest additive order of 2x among the four seed tokens
+(exploratory, post hoc: the classification and the cut at 6 were chosen after the calibration table was seen;
+ orders 1 and 2 are the resonant classes and do not occur here)
+  N120k8T800  (theta = 100)
+      min order 3    n =  343   M >= theta:  8   M >= 100:  8
+      min order 4    n =  329   M >= theta:  4   M >= 100:  4
+      min order 5    n =  537   M >= theta:  1   M >= 100:  1
+      min order 6    n =  210   M >= theta:  1   M >= 100:  1
+      min order 10   n =  350   M >= theta:  0   M >= 100:  0
+      min order 12   n =  256   M >= theta:  0   M >= 100:  0
+      min order >12  n =  595   M >= theta:  0   M >= 100:  0
+      order <= 6: 14 of 1419;  order > 6: 0 of 1201;  Fisher exact two-sided p = 1.99e-04 (post hoc cut)
+      draws with every order > 6: n = 1201, M quantiles 50 / 90 / 99 / 99.5 % = 39 / 50 / 62 / 71, max 85
+  N240k16T800  (theta = 80)
+      min order 3    n =  180   M >= theta:  3   M >= 100:  2
+      min order 4    n =  187   M >= theta:  5   M >= 100:  4
+      min order 5    n =  323   M >= theta:  1   M >= 100:  0
+      min order 6    n =  138   M >= theta:  2   M >= 100:  1
+      min order 8    n =  282   M >= theta:  1   M >= 100:  1
+      min order 10   n =  232   M >= theta:  0   M >= 100:  0
+      min order 12   n =  189   M >= theta:  1   M >= 100:  0
+      min order >12  n = 1265   M >= theta:  0   M >= 100:  0
+      order <= 6: 11 of 828;  order > 6: 2 of 1968;  Fisher exact two-sided p = 6.12e-05 (post hoc cut)
+      draws with every order > 6: n = 1968, M quantiles 50 / 90 / 99 / 99.5 % = 39 / 47 / 61 / 68, max 101
+  N240k16T1460  (theta = 106)
+      min order 3    n =  180   M >= theta:  5   M >= 100:  7
+      min order 4    n =  187   M >= theta:  4   M >= 100:  4
+      min order 5    n =  323   M >= theta:  0   M >= 100:  1
+      min order 6    n =  138   M >= theta:  2   M >= 100:  2
+      min order 8    n =  282   M >= theta:  2   M >= 100:  2
+      min order 10   n =  232   M >= theta:  0   M >= 100:  0
+      min order 12   n =  189   M >= theta:  1   M >= 100:  1
+      min order >12  n = 1265   M >= theta:  0   M >= 100:  1
+      order <= 6: 11 of 828;  order > 6: 3 of 1968;  Fisher exact two-sided p = 2.09e-04 (post hoc cut)
+      draws with every order > 6: n = 1968, M quantiles 50 / 90 / 99 / 99.5 % = 44 / 58 / 81 / 89, max 165
+  N242k16T800  (theta = 64)
+      min order 11   n =  858   M >= theta:  3   M >= 100:  0
+      min order >12  n = 2055   M >= theta: 12   M >= 100:  1
+      no seed token of order <= 6 exists at this N;  order > 6: 15 of 2913
+      draws with every order > 6: n = 2913, M quantiles 50 / 90 / 99 / 99.5 % = 39 / 46 / 59 / 65, max 104
+  N242k16T1460  (theta = 84)
+      min order 11   n =  858   M >= theta:  5   M >= 100:  1
+      min order >12  n = 2055   M >= theta: 10   M >= 100:  7
+      no seed token of order <= 6 exists at this N;  order > 6: 15 of 2913
+      draws with every order > 6: n = 2913, M quantiles 50 / 90 / 99 / 99.5 % = 44 / 55 / 76 / 85, max 147
+  N480k32T800  (theta = 70)
+      min order 3    n =  106   M >= theta:  1   M >= 100:  1
+      min order 4    n =  113   M >= theta:  2   M >= 100:  0
+      min order 5    n =  172   M >= theta:  0   M >= 100:  0
+      min order 6    n =   75   M >= theta:  1   M >= 100:  0
+      min order 8    n =  172   M >= theta:  1   M >= 100:  0
+      min order 10   n =  144   M >= theta:  1   M >= 100:  0
+      min order 12   n =  140   M >= theta:  0   M >= 100:  0
+      min order >12  n = 1984   M >= theta:  8   M >= 100:  1
+      order <= 6: 4 of 466;  order > 6: 10 of 2440;  Fisher exact two-sided p = 2.61e-01 (post hoc cut)
+      draws with every order > 6: n = 2440, M quantiles 50 / 90 / 99 / 99.5 % = 39 / 46 / 63 / 68, max 105
+  N480k32T2670  (theta = 114)
+      min order 3    n =  106   M >= theta:  4   M >= 100:  6
+      min order 4    n =  113   M >= theta:  1   M >= 100:  2
+      min order 5    n =  172   M >= theta:  1   M >= 100:  2
+      min order 6    n =   75   M >= theta:  0   M >= 100:  0
+      min order 8    n =  172   M >= theta:  4   M >= 100:  5
+      min order 10   n =  144   M >= theta:  0   M >= 100:  1
+      min order 12   n =  140   M >= theta:  0   M >= 100:  1
+      min order >12  n = 1984   M >= theta:  5   M >= 100: 13
+      order <= 6: 6 of 466;  order > 6: 9 of 2440;  Fisher exact two-sided p = 2.26e-02 (post hoc cut)
+      draws with every order > 6: n = 2440, M quantiles 50 / 90 / 99 / 99.5 % = 48 / 63 / 92 / 107, max 176
 
 run time by final size, non-resonant native draws only (count, mean seconds):
   N120k8T800     <100: 2606,    0.21 s;  100-299:   13,    1.24 s;  cap:    1,    4.50 s
