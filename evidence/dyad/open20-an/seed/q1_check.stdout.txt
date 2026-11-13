@@ -1,0 +1,7 @@
+ANG_chart_edges_and_cosines PASS
+COEF_bounds_of_the_draft PASS
+Q12_inequality_at_r0 PASS
+Q13_levels PASS
+Q2_exponents_and_constants PASS
+SND_independent_sampling PASS
+RESULT PASS  | SESSION check; not a certificate; no seed is proved

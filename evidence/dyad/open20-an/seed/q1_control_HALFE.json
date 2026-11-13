@@ -1,0 +1,78 @@
+{
+ "all_pass": false,
+ "control": "HALFE",
+ "gates": {
+  "ANG_chart_edges_and_cosines": true,
+  "COEF_bounds_of_the_draft": true,
+  "Q12_inequality_at_r0": true,
+  "Q13_levels": true,
+  "Q2_exponents_and_constants": true,
+  "SND_independent_sampling": false
+ },
+ "info": {
+  "Q12": {
+   "largest_grid_value_passing": 0.18,
+   "lhs_at_0p001": 0.00108438,
+   "lhs_at_0p05": 0.0595934,
+   "lhs_at_r0": 0.382187,
+   "r0": 0.18
+  },
+  "Q13": {
+   "0.001": {
+    "M_upper": 333695000.0,
+    "level_H_must_exceed": 333695000.0
+   },
+   "0.05": {
+    "M_upper": 2823.64,
+    "level_H_must_exceed": 2823.64
+   },
+   "r0": {
+    "M_upper": 77.0568,
+    "level_H_must_exceed": 77.0568
+   }
+  },
+  "Q2": {
+   "C_B": 0.466561,
+   "C_tau": 0.449395,
+   "K0_lower": 0.00444567,
+   "K1_lower": 0.0125943,
+   "eps0": 0.000405104,
+   "eps1": 0.00114763,
+   "exponent_of_the_ratio": "501/19",
+   "exponent_of_the_tube_bound": "240/19"
+  },
+  "SND": {
+   "annulus_samples_per_sector": 12060,
+   "largest_ratio_deviation_over_E": 1.0,
+   "samples_in_D0": 3384,
+   "samples_in_D1": 3655,
+   "samples_of_D_j_outside_the_window_at_radius_above_r0": {
+    "D0": 0,
+    "D1": 0
+   },
+   "samples_per_sector": 8241,
+   "violations": {
+    "E": 16464,
+    "annulus": 0,
+    "factors": 0,
+    "radius": 0,
+    "window": 0
+   }
+  },
+  "constants": {
+   "S": 1.94331,
+   "a1": 0.283002,
+   "a2": 1.08403,
+   "abs_log_c": 1.24855,
+   "c0": 2.97317,
+   "c1": 4.26918,
+   "e3_upper": 1.26212e-15,
+   "k3": 5.44152,
+   "s0": -1.94331,
+   "s1": -1.44331,
+   "sin_pi_8": 0.382683
+  }
+ },
+ "script": "dyad_open20_an_seed_q1_check.py",
+ "status": "SESSION owner check of explicit inequalities; not a certificate; no seed is proved"
+}
