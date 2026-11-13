@@ -1,8 +1,8 @@
 # DYAD OPEN 20 — Seed Q1–Q3 and divergence step P4: co-owner written argument
 
-**Date:** 12 November 2026. **Author:** ChatGPT, DYAD co-owner. **Status:** SESSION / NONCANONICAL WORKING DRAFT; not a theorem, certificate, disposition or adoption. **PI instruction:** start the written arguments; do not run stage 3c-b. **Governing owner:** Dyadic v6.4.24, tag dyad-v6.4.24 (SHA-256 10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16). **Open scientific status:** B-an and B-6 ACTIVE; a nonzero jump is not certified.
+**Date:** 12 November 2026; revision 13 November 2026 after PR #258 review (C-1, P-1–P-3). **Author:** ChatGPT, DYAD co-owner. **Status:** SESSION / NONCANONICAL WORKING DRAFT; not a theorem, certificate, disposition or adoption. **PI instruction:** start the written arguments; do not run stage 3c-b. **Governing owner:** Dyadic v6.4.24, tag dyad-v6.4.24 (SHA-256 10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16). **Open scientific status:** B-an and B-6 ACTIVE; a nonzero jump is not certified.
 
-**Reading extent:** targeted, not exhaustive. Read the stage-3b design §§1,3–6; the stage-3c-a proof record §§3–5,8–11; the W8 r2 hand-over §§1–8; the sectorial pilot D1–D9; the owner assessment of López-Hernanz 2012 §1; and the P1-c-5 Lemma 5b-1. Read the complete LIT use-check report at rtg-lit a3628d4 (SESSION), but not the source article, its complete proof or its Proposition 5.3. The owner's 12 November inbox disposition is a proposal in PR #254 at this checkpoint; it does not change the adopted DSN. All deductions below are SESSION, not owner-adopted.
+**Reading extent:** targeted, not exhaustive. Read the stage-3b design §§1,3–6; the stage-3c-a proof record §§3–5,8–11; the W8 r2 hand-over §§1–8; the sectorial pilot D1–D9; the owner assessment of López-Hernanz 2012 §1; and the P1-c-5 Lemma 5b-1. Read the complete LIT use-check report at rtg-lit a3628d4 (SESSION), but not the source article, its complete proof or its Proposition 5.3. The owner's 12 November inbox disposition is a proposal in PR #254 at this checkpoint; it does not change the adopted DSN. Read PR #258 owner review and its development-check JSON and inspected its checker source; no independent execution. All deductions below are SESSION, not owner-adopted.
 
 ## 1. Proof contract
 
@@ -10,8 +10,10 @@ Work in the pilot branch Gamma-plus with normalized coordinate xi = c z and c^3 
 
 $$
 \tau(\xi)= A_3 z^{-3}+A_2 z^{-2}+A_1 z^{-1}+\kappa\log z,
-\qquad A_3=-\frac{1}{3\ell},\qquad 3 A_3c^3=1.
+\qquad 3A_3c^3=1+e_3,\qquad e_3:=3A_3c^3-1.
 $$
+
+**C-1 (decimal versus formal time).** The exact formal coefficient $A_3^{\rm formal}=-1/(3\ell)$ satisfies $3A_3^{\rm formal}c^3=1$. However all W8 domains, tubes, arc and legs use the library's fixed **15-digit decimal** TAU_DECIMALS. Every $A_3,A_2,A_1,\kappa$ below denotes the coefficients of that actual time function. In PR #258 the owner-run ball check finds $e_3\ne0$ and $|e_3|\le1.27\times10^{-15}$ (development result; not independently replayed). Using the exact formal coefficient would alter the sets and is not proposed.
 
 The branches of log xi, log z and log c are the ones fixed in the stage-3b design §3 and pilot D4–D5; in particular log z = log xi - log c throughout the chosen charts.
 
@@ -33,14 +35,14 @@ For each j let u_j denote the published sectorial invariant graph in the straigh
 For r<1, define the explicit monotone upper function (take 0<r<=exp(-1))
 
 $$
-E(r)=3|A_2c^2|r+3|A_1c|r^2+
+E(r)=|e_3|+3|A_2c^2|r+3|A_1c|r^2+
 3|\kappa|r^3\bigl(|\log r|+|\log c|+\pi/2\bigr).
 $$
 
-Indeed, by the exact leading-coefficient identity,
+For the actual decimal-valued tube time, the exact algebraic expansion is
 
 $$
-3\xi^3\tau(\xi)=1+3A_2c^2\xi+3A_1c\xi^2+
+3\xi^3\tau(\xi)=1+e_3+3A_2c^2\xi+3A_1c\xi^2+
 3\kappa\xi^3(\log\xi-\log c).
 $$
 
@@ -58,7 +60,7 @@ E(r_0)+3S r_0^3<\sin(\pi/8).
 \tag{Q1.2}
 $$
 
-This is an explicit finite inequality involving the four fixed coefficients and two fixed wall constants; because E(r)->0 it is satisfiable for some r_0>0. For every 0<r<=r_0, (Q1.2) follows by monotonicity of r, r^2 and r^3|log r| in that range.
+This is an explicit finite inequality involving the four fixed coefficients and two fixed wall constants; because $E(r)\to|e_3|<\sin(\pi/8)$ it is satisfiable for some r_0>0. For every 0<r<=r_0, (Q1.2) follows by monotonicity of r, r^2 and r^3|log r| in that range.
 
 **Forward sector (j=0).** The straight sector S_0 requires |theta|<=5pi/24. The lower angle bound is automatic because Omega_0 has theta> -pi/5 > -5pi/24. For theta>=5pi/24 within Omega_0, cos(3theta)<=cos(5pi/8)=-sin(pi/8). By (Q1.1) and (Q1.2),
 
@@ -81,7 +83,7 @@ contrary to Re tau<s_1. So D_1 intersect {r<=r_0} lies strictly inside S_1's ang
 **Radial petal size and an explicit level H.** The straight sectors of pilot D7 also require r^3 < k_delta delta, where k_delta=2 cos(3pi/8) and delta>0 is any allowed sufficiently small LH2012 petal parameter. Narrow r_0 further to r_0<(k_delta delta)^(1/3), if necessary. To exclude all xi with r>=r_0, bound tau on the closed annulus r_0<=r<=0.60 and both chart closures by
 
 $$
-M(r_0)=\frac1{3r_0^3}+\frac{|A_2c^2|}{r_0^2}
+M(r_0)=\frac{|A_3c^3|}{r_0^3}+\frac{|A_2c^2|}{r_0^2}
 +\frac{|A_1c|}{r_0}
 +|\kappa|\bigl(|\log r_0|+|\log c|+\pi/2\bigr).
 \tag{Q1.3}
@@ -101,7 +103,7 @@ The domains D_j(H_seed) are nonempty: on the bisector theta=j pi/3, both definin
 
 ## 3. [SESSION/THM, conditional] Q2 — literature curve enters the tube
 
-Fix an r_0 satisfying Q1. Set C_tau>0 such that |tau(xi)|<=C_tau r^-3 for 0<r<=r_0 in the sectors. Such a bound follows directly from the four displayed terms in tau (an explicit possible C_tau is 1/3+|A_2c^2|r_0+|A_1c|r_0^2+|kappa|r_0^3(|log r_0|+|log c|+pi/2)). Set
+Fix an r_0 satisfying Q1. Set C_tau>0 such that |tau(xi)|<=C_tau r^-3 for 0<r<=r_0 in the sectors. Such a bound follows directly from the four displayed terms in tau (an explicit possible C_tau is |A_3c^3|+|A_2c^2|r_0+|A_1c|r_0^2+|kappa|r_0^3(|log r_0|+|log c|+pi/2)). Set
 
 $$
 C_B=C_\tau+(1+S)r_0^3,\qquad
