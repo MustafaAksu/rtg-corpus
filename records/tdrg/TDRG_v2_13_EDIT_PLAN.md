@@ -151,4 +151,20 @@ The following are also outside v2.13:
 
 ## 7. PI decision
 
-*(to be recorded)*
+**PI decision, 13 Nov 2026, 12:23 +03:00** (project conversation with this session, verbatim): "1- a 2-a 3-a". Hence:
+- **D1 (a):** §1 is reduced to readouts with pointers, after S6.
+- **D2 (a):** history only in §2 in v2.13. The OPEN-registry restructuring is a separately planned later edition.
+- **D3 (a):** §A.sim moves verbatim to §8.
+
+The decision fixes the plan; it adopts no edition.
+
+**Consequence for the stage boundary.** This follows the AZ v0.8 precedent: release record §5 and §6b, "the reduction is in stage 1, not stage 2". The operation classes of `tools/check_compaction.py` do not remove a restated statement whose readout survives elsewhere. They also do not let a history operation remove a span that carries claim tags, identifiers or mathematics. The header status summary must also already exist in the stage-2 base. Therefore Stage 1 carries:
+- the reduction of §1 (D1);
+- the removal of the S8 narratives, which carry tags;
+- the new status summary sentences.
+
+Stage 2 keeps only what the checker can verify:
+- version labels without content;
+- the header and footer;
+- Appendix A, including the §A.sim copy once S5 has placed it in §8;
+- the alias-table history sentence.
