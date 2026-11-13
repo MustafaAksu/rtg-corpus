@@ -97,9 +97,7 @@ D_j(H_{\rm seed})\subset\{0<r<r_0\}\cap S_j
 \tag{Q1.4}
 $$
 
-The domains D_j(H_seed) are nonempty: on the bisector theta=j pi/3, both defining wedge inequalities and h_j->+infinity hold near 0, since the leading term of tau is (-1)^j/(3r^3). Thus Q1 has a written *conditional, explicitly checkable* proof. The original numeric stage-3b certificate does **not** yet include interval-evaluated (Q1.2), coefficient bounds or a selected H_seed.
-
-**Convenient proposed numerical precheck (NOT CERTIFIED):** bounds |3A_2c^2|<=2, |3A_1c|<=2, 3|kappa|<=10, |log c|<=3 and S<=4 are consistent with the source's displayed approximations. If separately established with outward-rounded exact/ball arithmetic, r_0=10^-3 satisfies (Q1.2) with ample margin (and can still be reduced to the article's delta). These bounds are an acceptance test for future verification, not premises claimed to have been certified here.
+The domains D_j(H_seed) are nonempty: on the bisector theta=j pi/3, both defining wedge inequalities and h_j->+infinity hold near 0, since the leading term of tau is (-1)^j/(3r^3). Thus Q1 has a written *conditional, explicitly checkable* proof. **Q1 numerical status (OWNER-RUN development check, PR #258).** The owner-run 200-bit ball check, `evidence/dyad/scripts/dyad_open20_an_seed_q1_check.py` (output `evidence/dyad/open20-an/seed/q1_check.json`, branch head $2dd9824$), reports six gates PASS, two expected failures of negative controls and a byte-identical rerun. It verifies $|e_3|\le1.27\cdot10^{-15}$, the original coarse coefficient ceilings and (Q1.2) for $r_0=10^{-3}$ and $r_0=0.18$. At $r_0=0.18$, (Q1.3) yields $M(r_0)<77.06$, so $H>77.06$ is sufficient **before** shrinking to the existential petal size $\delta$ or Q2 radius $r_1$. A smaller radius may require larger $H$. These values were **not independently replayed** and are not a stage-3c-b certificate. The JSON's displayed $K_{1,\rm lower}=0.0125943$ is below $0.0126$; rounding this *lower bound* up would be invalid.
 
 ## 3. [SESSION/THM, conditional] Q2 — literature curve enters the tube
 
@@ -159,7 +157,14 @@ The earlier draft's strict membership in $D_j(h_j(\tau(\xi))+\sigma)$ was too st
 
 **Proof.** Suppose instead that Gamma-plus has a convergent representative phi(z) at z=0. Its normalized graph Y=S(xi) has S(xi)=O(xi^2) because the constant and linear terms have been removed and m=2 (pilot D3). Analyticity of the map and formal invariance imply exact analytic graph invariance as germs for both F and its local inverse G. For a sufficiently small delta, on each applicable curved petal S is holomorphic and satisfies |S(xi)|<=|xi| and |S'(xi)|<=1. It is a parabolic invariant graph in the LH2012 class. By L3/C1/C2, its restriction is u_0 in the forward petal and u_1 in the rotated inverse petal.
 
-For large t the arc gamma(t) lies in the small straight sectors around 0 and pi/3: its angular distance pi/6 to either bisector is strictly less than 5pi/24, and its radius tends to 0. Pilot D7 puts those sectors into *every sufficiently small permitted* curved petal. By the seed identities, phi_0=phi=phi_1 on a nonempty open neighbourhood of a large-t tail point inside U. Both functions are holomorphic on the connected U, hence the identity theorem makes phi_0=phi_1 on U. In particular phi_0(xi_*)=phi_1(xi_*), contradicting the disjoint-disc condition (iii). QED.
+For large t the arc gamma(t) lies in the small straight sectors around 0 and pi/3: its angular distance pi/6 to either bisector is strictly less than 5pi/24, and its radius tends to 0. Pilot D7 puts the sufficiently small tail sectors into both permitted curved petals. **P-3 (tail in both seed domains).** With $a=\operatorname{Re}\tau(\xi_*)$ and $\tau(\gamma(t))=a-it$ we have $s_0<a<s_1$ and
+
+$
+h_0(\tau(\gamma(t)))=a\cos\theta_0+t\sin\theta_0,\qquad
+h_1(\tau(\gamma(t)))=-a\cos\theta_0+t\sin\theta_0.
+$
+
+Since $\sin\theta_0>0$ and the arc lies in both chart sectors by hypothesis (ii), for each fixed $H$ the tail eventually lies in $D_0(H)\cap D_1(H)$. In particular it lies in both seed domains $D_j(H_{\rm seed})$, where $\phi_j=u_j$. Consequently $\phi_0=\phi=\phi_1$ on a nonempty open neighbourhood of a sufficiently late tail point inside $U$. Both functions are holomorphic on the connected U, hence the identity theorem makes phi_0=phi_1 on U. In particular phi_0(xi_*)=phi_1(xi_*), contradicting the disjoint-disc condition (iii). QED.
 
 **Consequences at their inherited grades.** The unique other formal branch Gamma-minus also diverges because the analytic local diffeomorphism T exchanges the two formal branches (pilot D1 / owner assessment). Under P1-c-5 Lemma 5b-1 (SESSION), convergence of the formal vector field X-hat=log F would imply convergence of both invariant curves, so divergence of Gamma-plus implies divergence of X-hat. **Neither inference excludes convergent canonical roots F^(1/2) or F^(1/6): B-an and B-6 remain OPEN.** A nonzero jump at one point does not prove any first Fourier harmonic (INF-016 remains a deferred, distinct question).
 
@@ -167,11 +172,11 @@ The proof uses equality on the *small petal itself*; no identity-theorem continu
 
 ## 6. Outstanding obligations and acceptance criteria
 
-1. **Quantified Q1:** retrieve exact coefficient enclosures for A_2, A_1, kappa, c, tau(xi_*), s_0,s_1 and choose a radius r_0 satisfying (Q1.2). Record a rigorous numerical or symbolic bound, not a floating-point display. Ensure the petal parameter delta is treated existentially and that H_seed can be selected after delta, with no unproved uniformity in delta.
+1. **Q1 corrected and OWNER-RUN development-checked:** PR #258 checks the actual decimal-$\tau$ inequalities and the revised $E,M,C_\tau$ at $r_0=0.18$. No independent replay is claimed. The petal parameter $\delta$ and the Q2 radius $r_1$ remain existential and can require a larger $H_{\rm seed}$.
 2. **Literature L1/C3:** the owner has read and accepted LIT's use-check at SESSION scope (PR #254); LIT has not re-proved LH2012 Proposition 5.3. A future theorem-grade import must carry that source limitation. The uniform-asymptotics constant C_j is existential; a numeric value is not needed for the logical existence of H_seed.
 3. **Q3:** prove that the D5 inverse branch is the same branch used for u_1 on the chosen overlap, preserving the chart and the selected graph. The stage-3c-a proof record §4.3 provides the proposed inverse-branch derivation; its numerical gates remain development outputs.
 4. **Tube lemma:** the analytic extension and Rouché step in the stage-3c-a proof record §5 use (G),(A),(B). Their W3–W8 results are development checks, not certification, and should not be described as a completed theorem application.
 5. **P4:** retain the explicit hypotheses (i)–(iv) at every point of use. A nonzero point jump and its raw-variable transport require a *separately authorized* 3c-b run, recorded hashes, independent replay and scientific review. W8's tail-threshold correction using the upper bound of |A_3| also remains a prerequisite.
 6. **Status:** do not edit the Dyadic canonical DSN or claim OPEN 20/B-an/B-6 closure from this draft. The science may be promoted only through a later owner review and PI authorization.
 
-**Suggested next scoped owner step:** turn (Q1.2) and (Q1.3) into a small exact/ball-arithmetic check against the frozen coefficient package, and separately review the conditional P4 lemma. This is a written-argument task, not stage 3c-b.
+**This revision:** incorporates C-1 and P-1–P-3 from the owner review PR #258. Q1 has an OWNER-RUN development ball check; no independent replay or certification run is claimed. Following owner read-back, the written argument may be integrated into the established stage-3c-a proof and hand-over records. Stage 3c-b remains subject to a separate PI decision.
