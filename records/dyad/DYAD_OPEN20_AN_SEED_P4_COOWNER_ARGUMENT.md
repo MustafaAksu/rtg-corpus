@@ -161,8 +161,7 @@ The earlier draft's strict membership in $D_j(h_j(\tau(\xi))+\sigma)$ was too st
 
 For large t the arc gamma(t) lies in the small straight sectors around 0 and pi/3: its angular distance pi/6 to either bisector is strictly less than 5pi/24, and its radius tends to 0. Pilot D7 puts the sufficiently small tail sectors into both permitted curved petals. **P-3 (tail in both seed domains).** With $a=\operatorname{Re}\tau(\xi_*)$ and $\tau(\gamma(t))=a-it$ we have $s_0<a<s_1$ and
 
-$h_0(\tau(\gamma(t)))=a\cos\theta_0+t\sin\theta_0,\qquad
-h_1(\tau(\gamma(t)))=-a\cos\theta_0+t\sin\theta_0.$
+$h_0(\tau(\gamma(t)))=a\cos\theta_0+t\sin\theta_0,\qquad h_1(\tau(\gamma(t)))=-a\cos\theta_0+t\sin\theta_0.$
 
 Since $\sin\theta_0>0$ and the arc lies in both chart sectors by hypothesis (ii), for each fixed $H$ the tail eventually lies in $D_0(H)\cap D_1(H)$. In particular it lies in both seed domains $D_j(H_{\rm seed})$, where $\phi_j=u_j$. Consequently $\phi_0=\phi=\phi_1$ on a nonempty open neighbourhood of a sufficiently late tail point inside $U$. Both functions are holomorphic on the connected U, hence the identity theorem makes phi_0=phi_1 on U. In particular phi_0(xi_*)=phi_1(xi_*), contradicting the disjoint-disc condition (iii). QED.
 
