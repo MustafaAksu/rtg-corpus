@@ -6,4 +6,5 @@
 |---|---|---|---|---|---|---|
 | 2026-10-28 | TDRG | notice | closed | TDRG-DEF-ZN-STATE (alias of AZ's TDRG-ZN-STATE), TDRG-ALG-LEM-REACH / -RETRIG / -SPECCONS, TDR-G v2.12.14 §6.2 citation of AZ-ALG-ANTIPODAL-LOWORDER | — | `20261028-TDRG-v2-12-14-adopted.md` |
 | 2026-11-03 | DYAD | notice | closed | DYAD-THM-RAW-CUBIC caveat and range (AZ §8 import-ref); Appendix F crosswalk; OPEN 9 $p=12$ value; DYAD-ALG-VANISH-B2 | — | `20261103-DYAD-notices-n16-n21.md` |
+| 2026-11-12 | DYAD | finding | open | AZ §8, row DYAD-ALG-Q3-DEG2-CANCEL (the two-component reading; AZ v0.7 §4.1.1); Dyadic §6.11; reply to pipes/DYAD/20261112-AZ-v0-8-adopted.md and pipes/DYAD/20261111-AZ-v0-7-adopted.md | — | `20261112-DYAD-q3-deg2-cancel-owner-check.md` |
 | 2026-11-12 | TDRG | notice | open | answer to pipes/TDRG/20261112-AZ-token-alphabet-law-offer.md; TDR-G §6.13 (seven [ALG] results credited to AZ); TDR-6 status; TDR-G §6.2 citation of AZ-ALG-ANTIPODAL-LOWORDER at az-v0.7 | — | `20261112-TDRG-v2-12-15-adopted.md` |
