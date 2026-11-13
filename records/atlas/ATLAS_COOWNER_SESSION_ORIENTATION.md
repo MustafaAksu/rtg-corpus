@@ -22,17 +22,17 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## OWNER_LANE — Claude
 
-**Checked:** 12 November 2026, 13:00 +03:00; `main` `6946ec7` (PR #234 merged); tags `atlas-v0.12` → `661b295` (file `cf9d8647…ef55`) and `atlas-method-v0.3` → `6946ec7` (Method `a2921735…509f`); all 18 source tags are the newest of their studies; inbox 9/9 closed.
-**Goal / current question:** none open. Atlas v0.12 and Method v0.3 are published; the Atlas waits for the next owner tag.
-**Last durable work:** Atlas v0.12 published (impact refresh for AZ v0.7 and Dyadic v6.4.24; release record and tag verification under `records/atlas/RTG_STATE_ATLAS_v0.12_*`; builder `evidence/atlas/build/refresh_v0_12.py`). Before it: Atlas v0.11 and two advisories (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md`, `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md`).
+**Checked:** 13 November 2026, 12:10 +03:00; `main` `2de679b`; tags `atlas-v0.12` and `atlas-method-v0.3` unchanged; **two source tags moved** since the v0.12 snapshot: `az-v0.8`, `tdrg-v2.12.15`; AZ v0.9 candidate open (PR #253, not adopted); inbox: one item open (AZ v0.8), nine closed.
+**Goal / current question:** Atlas v0.13 as one impact refresh for AZ and TDR-G, built after AZ v0.9 is adopted (sequence relayed by the PI on 13 Nov; early two-source refresh only if the AZ review drags).
+**Last durable work:** `records/atlas/ATLAS_V0_13_IMPACT_PREPARATION_20261113.md` (impact map, no build, no frozen manifest). Before it: atlas row check of TDR-G v2.12.15 (`records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_12_15.md`, PR #252, merged); Atlas v0.12 and Method v0.3 published.
 **Decisions held:** PI, 10 Nov: route A — the structure is kept and nothing is dropped for size; compaction is closed; size is looked at again after the remaining streams (AZ and others) are reworked. `DECLARED` is never `PRESERVED`; grade, qualifier, identifier and diagnostic-class changes need their own reviewed delta. #189 deferred. `rtg-sat` is outside the Atlas inputs.
 **Tried and set aside:** compaction as a route to the Method size aim — measured at 1.9 % of D3 under Method v0.2; other domains hold under 0.5 % in labelled form (`records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §§3–5, 11). Reopen when the PI asks after the stream rework. Rewording for size — not attempted. Core + annex split and a lossy core — declined by the PI.
 **Evidence:** v0.12: 39 logged operations; AZ.A1, A2, A3, A7 and DYAD.X11 retired; DYAD.X4 narrowed; one new node `DYAD-THM-OPEN21-SHARP-ROWS`; shared check 0 FAIL (coverage 137, links 507/5/10, keys 152); 18 focused negative controls detected. A slip found and recorded: the v0.11 check used the tool's default retired-key list (31) instead of the cumulative one (142); rerun on the v0.11 bytes with the right list: 0 FAIL.
 **Resume:** `python3 -I evidence/atlas/build/refresh_v0_12.py` (rebuilds and checks; stops on any failed assertion). A refresh follows the builder of the previous refresh (`refresh_v0_10.py`), not the compaction tools; pass the checker the edition's manifest, coverage map and cumulative retired-key list, never its defaults.
 **Next 1–3 actions / acceptance:**
-1. At the next owner tag: impact refresh under Method v0.3 (manifest names `method_edition` v0.3, `method_tag` `atlas-method-v0.3`; rules 4.1 and 4.7 applied as span deletions in the domains opened).
-2. Watch for the next owner tags: AZ (Action 1 and the Thread C recovery are [SESSION] until an AZ or TDR-G edition adopts them), DZT, OPEN-M, TDR-G.
-3. Deferred debts: seven other multi-line identifiers; a comparator mode for heading renames; a built-in AZ profile for `tools/orient.py`.
+1. When `az-v0.9` is tagged: verify the tag, redo §4 of the preparation record against the adopted bytes, freeze the manifest, build v0.13 under Method v0.3 (`refresh_v0_13.py` on the pattern of `refresh_v0_12.py`), with the RID assertions for TDR-G and AZ that the shared checker lacks.
+2. In the build: one node per claim across AZ and TDR-G (the diagnostic under AZ's RID, the token laws under TDR-G's); `PROP-AZ-CORE-EQUIV` THM-ALG → THM as its own reviewed item; TDRG.G9 re-evaluated; D5 cleaned by rules 4.1 and 4.7.
+3. Change-focused review, PI acceptance, tag; close the AZ v0.8 inbox item.
 **Reopen trigger:** any owner tag after the v0.12 snapshot `c8e7198` (impact refresh); any open item in `pipes/ATLAS/`.
 
 ## REVIEWER_LANE — ChatGPT
@@ -70,8 +70,7 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 - Nothing is waiting on the PI for the Atlas. v0.11 is accepted, merged and tagged (10 Nov; CLI block issued in the project conversation at 15:27 +03:00, output returned 15:29).
 - 10 Nov 17:23: advisory dispositions decided (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md` §4); rows 1 and 3 since resolved by `az-v0.7`.
 - 11 Nov 18:15: the PI accepted all six recommendations of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` (§5); they are AZ's to carry out.
-- Nothing is waiting on the PI for the Atlas. Atlas v0.12 and Method v0.3 are accepted, merged and tagged (12 Nov; CLI blocks issued in the project conversation at 09:55 and 12:42 +03:00, outputs returned 10:06 and 12:51).
-- PR #225 (the reviewer's v0.12 preparation record): the reviewer advises closing it unmerged; the PI's call.
+- Nothing is waiting on the PI for the Atlas. v0.13 is prepared, not built; it starts when `az-v0.9` is tagged (13 Nov, project conversation, 11:23 +03:00).
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
 
