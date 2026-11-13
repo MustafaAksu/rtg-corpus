@@ -1,0 +1,10 @@
+K1 AZ pin back to az-v0.7: CAUGHT (target C6 FAIL; C1 FAIL)
+K2 tag changed in an untouched paragraph: CAUGHT (target C4 FAIL; C1 FAIL)
+K3 RID declaration dropped: CAUGHT (target C3 FAIL; C1 FAIL)
+K4 OPEN Status line changed: CAUGHT (target C5 FAIL; C1 FAIL)
+K5 §1 home lost: CAUGHT (target C7 FAIL; C1 FAIL)
+K6 §A.sim copy altered: CAUGHT (target C8 FAIL; C1 FAIL)
+K7 Appendix B paraphrased: CAUGHT (target C9 FAIL; C1 FAIL)
+K8 fifth summary sentence: CAUGHT (target C10 FAIL; C1 FAIL)
+K9 stale v2.13 promise reintroduced: CAUGHT (target C6 FAIL; C1 FAIL)
+CONTROLS: 9/9 caught
