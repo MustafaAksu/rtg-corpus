@@ -28,7 +28,7 @@ So the identity reads 3ξ³τ = 1 + e₃ + 3A₂c²ξ + 3A₁cξ² + 3κξ³(log
 - In (Q1.3) and in C_τ the leading term 1/3 becomes \|A₃c³\| = \|1 + e₃\|/3.
 - "E(r) → 0" becomes "E(r) → \|e₃\|", which is far below sin(π/8); (Q1.2) stays satisfiable.
 
-The correction is of size 10⁻¹⁵ and changes no conclusion. It has to be made because the seed must be a seed for the sets D_j of the runs, not for sets defined by the exact Fatou coefficient. The other route, redefining τ with the exact A₃, would change the objects of every run and is not proposed. **Owner's own item:** the proof record does not yet say in words that τ has the library's decimal coefficients; that sentence is added when the seed is folded in (§6).
+The correction is of size 10⁻¹⁵ and changes no conclusion. It has to be made because the seed must be a seed for the sets D_j of the runs, not for sets defined by the exact Fatou coefficient. The other route, redefining τ with the exact A₃, would change the objects of every run and is not proposed. **Owner's own item:** the proof record does not yet say in words that τ has the library's decimal coefficients; that sentence is added when the seed is folded in (§7).
 
 ## 3. Steps checked
 
@@ -46,17 +46,19 @@ The correction is of size 10⁻¹⁵ and changes no conclusion. It has to be mad
 | Quantity | Value |
 |---|---|
 | \|e₃\| | ≤ 1.27·10⁻¹⁵ |
-| a₂, a₁, k₃, \|log c\|, S | ≤ 1.08403, 0.283002, 5.44152, 1.24855, 1.94331 |
+| a₂, a₁, k₃, \|log c\|, S | ≤ 1.08404, 0.283003, 5.44152, 1.24856, 1.94332 |
 | The bounds proposed in the draft (2, 2, 10, 3, 4) | hold |
-| (Q1.2) at the draft's r₀ = 10⁻³ | left side 1.08·10⁻³ against sin(π/8) = 0.382683 |
-| Largest r₀ on the grid k/200 at which (Q1.2) holds | **0.18** (left side 0.382187); it holds at every smaller grid value |
-| M(r₀): the level must exceed | 77.06 at r₀ = 0.18; 2823.7 at 0.05; 3.34·10⁸ at 10⁻³ |
-| C_τ, C_B at r₀ = 0.18 | 0.449395, 0.466561 |
-| K₀, K₁ at r₀ = 0.18 (lower bounds) | 4.44·10⁻³, 1.26·10⁻² |
+| (Q1.2) at the draft's r₀ = 10⁻³ | left side ≤ 1.09·10⁻³ against sin(π/8) ≥ 0.382683 |
+| Largest r₀ on the grid k/200 at which (Q1.2) holds | **0.18** (left side ≤ 0.382187); it holds at every smaller grid value |
+| M(r₀) ≤ ; a level above this suffices | 77.0569 at r₀ = 0.18; 2823.64 at 0.05; 3.33695·10⁸ at 10⁻³ |
+| C_τ, C_B at r₀ = 0.18 | ≤ 0.449396, 0.466561 |
+| K₀, K₁ at r₀ = 0.18 | ≥ 4.44566·10⁻³, 1.25942·10⁻² |
+
+**Rounding (corrected on 13 November after the co-owner's comment `6848114443` on PR #258).** The first version of this table gave K₁ ≥ 1.26·10⁻², which the printed value 0.0125943 does not support: a lower bound had been rounded up. The cause was general: the script printed its bounds rounded to nearest. It now prints every bound as a 6-digit decimal rounded outward from a machine-checked float bound (names ending in `_upper`, `_lower`; values named `_approx` are not bounds), and the table above is taken from that output. Nine printed bounds moved by one unit in the sixth digit; no gate changed. The argument needs only K_j > 0.
 
 - *Independent sampling* (mpmath, own formulas; 8241 points per sector inside r ≤ r₀ and 12060 on the annulus): no violation of the bound E(r), of the angular window, of the two factor bounds, of R_j ≥ K_j r^{240/19}, or of \|τ\| ≤ M(r₀); 3384 samples lie in D₀ and 3655 in D₁.
-- *Controls.* BIG (r₀ = 0.30): (Q1.2) fails, left side 1.0992. HALFE (the sampling compares with E/2): 16464 violations.
-- So Q1 holds with **r₀ = 0.18 and any level H > 77.06**, as far as the explicit inequalities go. The seed radius is then the smallest of r₀, the petal size (κδ)^{1/3} and the radius r₁ of Q2; the last two are existential.
+- *Controls.* BIG (r₀ = 0.30): (Q1.2) fails, left side about 1.0992. HALFE (the sampling compares with E/2): 16464 violations.
+- So Q1 holds with **r₀ = 0.18 and any level H ≥ 77.06**, as far as the explicit inequalities go. The seed radius is then the smallest of r₀, the petal size (κδ)^{1/3} and the radius r₁ of Q2; the last two are existential.
 
 ## 4. Precisions
 
@@ -76,8 +78,23 @@ The correction is of size 10⁻¹⁵ and changes no conclusion. It has to be mad
   5. Neither the seed nor P4 decides B-an or B-6 (DSN §2, OPEN 20).
 - **State of the design's conditions, proposed for the hand-over record once this is merged:** condition 2 (the seed) — *written, conditional on L1 at SESSION scope and on the tube hypotheses*; P4 — *written, conditional*. Neither is "proved".
 
-## 6. Recommendation
+## 6. Read-back of the corrected argument (13 November 2026)
 
-1. **PR #257:** the co-owner applies C-1 and P-1 to P-3 to the draft; it can then be merged as a working record. The owner has no other objection.
-2. **After #254 and #257 are merged:** the owner folds the seed and P4 into the proof record of stage 3c-a (§11) and updates the hand-over record §5 and the entry note. Not done here, to keep this branch free of conflicts with PR #254.
+**Read:** the diff `def878f5` → `1728dea9` of the co-owner's file, whole, and the unchanged passages it touches.
+
+| Item | In the corrected file | Owner |
+|---|---|---|
+| C-1 | e₃ is defined and enters E(r), the limit of E, M(r₀) and C_τ; the text says that every coefficient is that of the decimal τ; the non-emptiness argument uses \|e₃\| < 1 | closed |
+| P-1 | the D9 identity is stated; (Q2.2) is L1 at order 38; K_j is indexed in (Q2.1), (Q2.3) and in the choice of r₁ | closed |
+| P-2 | the level inequality replaces the membership statement | closed |
+| P-3 | Re τ* between s₀ and s₁, the two formulas for h_j on the arc, and the conclusion γ(t) ∈ D₀(H) ∩ D₁(H) for large t | closed |
+
+No leftover use of the old formulas was found (search for the exact identity, the term 1/(3r₀³), an unindexed K, the old membership). The file quotes this record's numbers with their evidence level (OWNER-RUN, development, not replayed) and pins the JSON it read to the branch head `2dd9824`; the outward-rounded output of the later commit differs from that JSON in the last printed digit of some bounds, which does not affect anything the file states.
+
+**Owner verdict on PR #257 at `1728dea9`: accept as a working record (SESSION).** It is the written, conditional argument for the seed and for P4; it is not a proof of the seed without its conditions, and not a certificate.
+
+## 7. Recommendation
+
+1. **PR #257** at `1728dea9`: can be merged as a working record (§6).
+2. **After #254 and #257 are merged:** the owner folds the seed and P4 into the proof record of stage 3c-a (§11, with the sentence that τ has the library's decimal coefficients) and updates the hand-over record §5 and the entry note. Not done here, to keep this branch free of conflicts with PR #254.
 3. **No further step is implied.** Whether to authorize a certification run remains the PI's decision; with the seed written, what separates the present state from a claim is the certification run itself with an independent replay, and the scope of the literature inputs.

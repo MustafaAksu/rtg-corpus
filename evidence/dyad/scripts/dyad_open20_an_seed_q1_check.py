@@ -36,11 +36,30 @@ Usage: python3 -I -B dyad_open20_an_seed_q1_check.py --out OUT.json [--control N
 """
 import os, sys, json, argparse
 from fractions import Fraction as Fr
+from decimal import Decimal, ROUND_CEILING, ROUND_FLOOR
 sys.dont_write_bytecode = True
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from flint import acb, arb, ctx
 import mpmath as mp
 import dyad_open20_an_stage3c_lib as L
+
+
+def _r6(f, mode):
+    """The float f rounded to 6 significant digits in the given direction (the printed decimal is the bound)."""
+    d = Decimal(repr(f))
+    if d == 0:
+        return 0.0
+    return float(d.quantize(Decimal(1).scaleb(d.adjusted() - 5), rounding=mode))
+
+
+def up6(v):
+    """A 6-digit decimal that is an upper bound of the non-negative ball v (checked float bound, then rounded up)."""
+    return _r6(L._fup(v), ROUND_CEILING)
+
+
+def dn6(v):
+    """A 6-digit decimal that is a lower bound of the positive ball v (checked float bound, then rounded down)."""
+    return _r6(L._fdn(v), ROUND_FLOOR)
 
 
 def main():
@@ -63,11 +82,13 @@ def main():
     e3 = up(3 * A3 * c ** 3 - 1); a2 = up(3 * A2 * c * c); a1 = up(3 * A1 * c); k3 = 3 * up(KA); lc = up(c.log())
     S = up(acb(TB[0].s)).max(up(acb(TB[1].s))); A3c = up(A3 * c ** 3)
     g['COEF_bounds_of_the_draft'] = bool(a2 <= 2 and a1 <= 2 and k3 <= 10 and lc <= 3 and S <= 4 and e3 < arb('1e-13'))
-    f6 = lambda v: float('%.6g' % float(arb(v).upper()))
-    info['constants'] = dict(e3_upper=f6(e3), a2=f6(a2), a1=f6(a1), k3=f6(k3), abs_log_c=f6(lc), S=f6(S),
-                             s0=float('%.6g' % float(TB[0].s.mid())), s1=float('%.6g' % float(TB[1].s.mid())),
-                             c0=float('%.6g' % float(TB[0].cw.mid())), c1=float('%.6g' % float(TB[1].cw.mid())),
-                             sin_pi_8=float('%.6g' % float(s8.mid())))
+    f6 = up6                                                     # every reported upper bound is rounded upward
+    ap6 = lambda v: float('%.6g' % float(arb(v).mid()))          # approximate values, for orientation only
+    info['constants'] = dict(e3_upper=f6(e3), a2_upper=f6(a2), a1_upper=f6(a1), k3_upper=f6(k3), abs_log_c_upper=f6(lc),
+                             S_upper=f6(S), s0_approx=ap6(TB[0].s), s1_approx=ap6(TB[1].s), c0_approx=ap6(TB[0].cw),
+                             c1_approx=ap6(TB[1].cw), sin_pi_8_lower=dn6(s8))
+    info['rounding'] = 'names ending in _upper / _lower are 6-digit decimals rounded outward from checked bounds; _approx are not bounds'
+
 
     def bracket(r):
         return abs(r.log()) + lc + pi / 2
@@ -87,8 +108,8 @@ def main():
     r0 = arb(r0q.numerator) / r0q.denominator
     g['Q12_inequality_at_r0'] = bool(kmax >= 0 and q12(r0) and all(okg[:kmax + 1]) and q12(arb('0.001')))
     info['Q12'] = dict(r0=float(r0q), largest_grid_value_passing=float(rmax) if rmax else None,
-                       lhs_at_r0=f6(E(r0) + 3 * S * r0 ** 3), lhs_at_0p05=f6(E(arb('0.05')) + 3 * S * arb('0.05') ** 3),
-                       lhs_at_0p001=f6(E(arb('0.001')) + 3 * S * arb('0.001') ** 3))
+                       lhs_at_r0_upper=f6(E(r0) + 3 * S * r0 ** 3), lhs_at_0p05_upper=f6(E(arb('0.05')) + 3 * S * arb('0.05') ** 3),
+                       lhs_at_0p001_upper=f6(E(arb('0.001')) + 3 * S * arb('0.001') ** 3))
 
     # Q13
     def M(r):
@@ -98,7 +119,7 @@ def main():
     for name, r in (('r0', r0), ('0.05', arb('0.05')), ('0.001', arb('0.001'))):
         m = M(r); H = m.max(TB[0].cw).max(TB[1].cw)
         okm = okm and bool(m > 0 and m.is_finite() and H >= TB[0].cw and H >= TB[1].cw)
-        rows[name] = dict(M_upper=f6(m), level_H_must_exceed=f6(H))
+        rows[name] = dict(M_upper=f6(m), a_level_H_above_this_suffices=f6(H))
     g['Q13_levels'] = bool(okm); info['Q13'] = rows
 
     # Q2
@@ -109,9 +130,8 @@ def main():
     Kj = [low(TB[j].eps) * (-up(acb(K.ALPHA.imag)) * pi / 2).exp() / (Cb ** 3 * Ct ** 3) for j in (0, 1)]
     g['Q2_exponents_and_constants'] = bool(ex == Fr(240, 19) and Fr(39) - ex == Fr(501, 19) and K.ALPHA.real.contains(arb(-102) / 19)
                                            and all(k > 0 for k in Kj))
-    info['Q2'] = dict(exponent_of_the_tube_bound='240/19', exponent_of_the_ratio='501/19', C_tau=f6(Ct), C_B=f6(Cb),
-                      K0_lower=float('%.6g' % float(Kj[0].lower())), K1_lower=float('%.6g' % float(Kj[1].lower())),
-                      eps0=float('%.6g' % float(TB[0].eps.mid())), eps1=float('%.6g' % float(TB[1].eps.mid())))
+    info['Q2'] = dict(exponent_of_the_tube_bound='240/19', exponent_of_the_ratio='501/19', C_tau_upper=f6(Ct), C_B_upper=f6(Cb),
+                      K0_lower=dn6(Kj[0]), K1_lower=dn6(Kj[1]), eps0_approx=ap6(TB[0].eps), eps1_approx=ap6(TB[1].eps))
 
     # SND: independent sampling
     mp.mp.dps = 30

@@ -12,32 +12,32 @@
  "info": {
   "Q12": {
    "largest_grid_value_passing": 0.18,
-   "lhs_at_0p001": 0.00108438,
-   "lhs_at_0p05": 0.0595934,
-   "lhs_at_r0": 1.0992,
+   "lhs_at_0p001_upper": 0.00108438,
+   "lhs_at_0p05_upper": 0.0595934,
+   "lhs_at_r0_upper": 1.0992,
    "r0": 0.3
   },
   "Q13": {
    "0.001": {
     "M_upper": 333695000.0,
-    "level_H_must_exceed": 333695000.0
+    "a_level_H_above_this_suffices": 333695000.0
    },
    "0.05": {
     "M_upper": 2823.64,
-    "level_H_must_exceed": 2823.64
+    "a_level_H_above_this_suffices": 2823.64
    },
    "r0": {
-    "M_upper": 23.9727,
-    "level_H_must_exceed": 23.9727
+    "M_upper": 23.9728,
+    "a_level_H_above_this_suffices": 23.9728
    }
   },
   "Q2": {
-   "C_B": 0.726733,
-   "C_tau": 0.647264,
-   "K0_lower": 0.000393713,
+   "C_B_upper": 0.726734,
+   "C_tau_upper": 0.647264,
+   "K0_lower": 0.000393712,
    "K1_lower": 0.00111536,
-   "eps0": 0.000405104,
-   "eps1": 0.00114763,
+   "eps0_approx": 0.000405104,
+   "eps1_approx": 0.00114763,
    "exponent_of_the_ratio": "501/19",
    "exponent_of_the_tube_bound": "240/19"
   },
@@ -60,18 +60,19 @@
    }
   },
   "constants": {
-   "S": 1.94331,
-   "a1": 0.283002,
-   "a2": 1.08403,
-   "abs_log_c": 1.24855,
-   "c0": 2.97317,
-   "c1": 4.26918,
-   "e3_upper": 1.26212e-15,
-   "k3": 5.44152,
-   "s0": -1.94331,
-   "s1": -1.44331,
-   "sin_pi_8": 0.382683
-  }
+   "S_upper": 1.94332,
+   "a1_upper": 0.283003,
+   "a2_upper": 1.08404,
+   "abs_log_c_upper": 1.24856,
+   "c0_approx": 2.97317,
+   "c1_approx": 4.26918,
+   "e3_upper": 1.26213e-15,
+   "k3_upper": 5.44152,
+   "s0_approx": -1.94331,
+   "s1_approx": -1.44331,
+   "sin_pi_8_lower": 0.382683
+  },
+  "rounding": "names ending in _upper / _lower are 6-digit decimals rounded outward from checked bounds; _approx are not bounds"
  },
  "script": "dyad_open20_an_seed_q1_check.py",
  "status": "SESSION owner check of explicit inequalities; not a certificate; no seed is proved"
