@@ -1,0 +1,56 @@
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  archive identity stage1-intermediate  — b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc
+PASS  archive identity tdrg-v2.12.15  — 1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation S2-H (presentation)  — header replaced; status-summary sentences are a subset of the base summary (header)
+PASS  operation S2-L01 (history-removal)  — history span removed (14 chars), found in ['stage1-intermediate']
+PASS  operation S2-L02 (history-removal)  — history span removed (13 chars), found in ['stage1-intermediate']
+PASS  operation S2-L03 (history-removal)  — history span removed (13 chars), found in ['stage1-intermediate']
+PASS  operation S2-L04 (history-removal)  — history span removed (13 chars), found in ['stage1-intermediate']
+PASS  operation S2-L05 (history-removal)  — history span removed (18 chars), found in ['stage1-intermediate']
+PASS  operation S2-L06 (history-removal)  — history span removed (11 chars), found in ['stage1-intermediate']
+PASS  operation S2-L07 (history-removal)  — history span removed (10 chars), found in ['stage1-intermediate']
+PASS  operation S2-L08 (history-removal)  — history span removed (9 chars), found in ['stage1-intermediate']
+PASS  operation S2-L09 (history-removal)  — history span removed (12 chars), found in ['stage1-intermediate']
+PASS  operation S2-L10 (history-removal)  — history span removed (8 chars), found in ['stage1-intermediate']
+PASS  operation S2-L11 (history-removal)  — history span removed (8 chars), found in ['stage1-intermediate']
+PASS  operation S2-L12 (history-removal)  — history span removed (11 chars), found in ['stage1-intermediate']
+PASS  operation S2-L13 (history-removal)  — history span removed (10 chars), found in ['stage1-intermediate']
+PASS  operation S2-L14 (history-removal)  — history span removed (10 chars), found in ['stage1-intermediate']
+PASS  operation S2-L15 (history-removal)  — history span removed (13 chars), found in ['stage1-intermediate']
+PASS  operation S2-L16 (history-removal)  — history span removed (10 chars), found in ['stage1-intermediate']
+PASS  operation S2-L17 (history-removal)  — history span removed (13 chars), found in ['stage1-intermediate']
+PASS  operation S2-L18 (history-removal)  — history span removed (10 chars), found in ['stage1-intermediate']
+PASS  operation S2-L19 (history-removal)  — history span removed (12 chars), found in ['stage1-intermediate']
+PASS  operation S2-L20 (history-removal)  — history span removed (7 chars), found in ['stage1-intermediate']
+PASS  operation S2-L21 (history-removal)  — history span removed (95 chars), found in ['stage1-intermediate']
+PASS  operation S2-L22 (history-removal)  — history span removed (8 chars), found in ['stage1-intermediate']
+PASS  operation S2-L23 (history-removal)  — history span removed (8 chars), found in ['stage1-intermediate']
+PASS  operation S2-L24 (history-removal)  — history span removed (8 chars), found in ['stage1-intermediate']
+PASS  operation S2-L25 (history-removal)  — history span removed (7 chars), found in ['stage1-intermediate']
+PASS  operation S2-L26 (history-removal)  — history span removed (15 chars), found in ['stage1-intermediate']
+PASS  operation S2-L27 (history-removal)  — history span removed (31 chars), found in ['stage1-intermediate']
+PASS  operation S2-L28 (history-removal)  — history span removed (10 chars), found in ['stage1-intermediate']
+PASS  operation S2-L29 (history-removal)  — history span removed (13 chars), found in ['stage1-intermediate']
+PASS  operation S2-L30 (history-removal)  — history span removed (17 chars), found in ['stage1-intermediate']
+PASS  operation S2-L31 (history-removal)  — history span removed (15 chars), found in ['stage1-intermediate']
+PASS  operation S2-L32 (history-removal)  — history span removed (11 chars), found in ['stage1-intermediate']
+PASS  operation S2-L33 (history-removal)  — history span removed (13 chars), found in ['stage1-intermediate']
+PASS  operation S2-L34 (history-removal)  — history span removed (20 chars), found in ['stage1-intermediate']
+PASS  operation S2-L35 (history-removal)  — history span removed (172 chars), found in ['stage1-intermediate']
+PASS  operation S2-L36 (history-removal)  — history span removed (133 chars), found in ['stage1-intermediate']
+PASS  operation S2-L37 (history-removal)  — history span removed (13 chars), found in ['stage1-intermediate']
+PASS  operation S2-L38 (history-removal)  — history span removed (47 chars), found in ['stage1-intermediate']
+PASS  operation S2-L39 (history-removal)  — history span removed (11 chars), found in ['stage1-intermediate']
+PASS  operation S2-L40 (history-removal)  — history span removed (19 chars), found in ['stage1-intermediate']
+PASS  operation S2-A (history-appendix)  — section relocated (41084 chars), found in ['stage1-intermediate', 'tdrg-v2.12.15']
+PASS  operation S2-F (presentation)  — footer replaced
+PASS  qualified claim blocks  — 268 claim blocks in base live text: 244 byte-identical, 24 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS

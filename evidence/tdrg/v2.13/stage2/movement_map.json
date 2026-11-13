@@ -1,0 +1,527 @@
+{
+ "study": "TDRG",
+ "target": "v2.13",
+ "stage": 2,
+ "base": "1a8e02a29ed4589291b752e0a0a0901cf7e7d8b6:dsn/RTG_DISCRETE_GENESIS_DSN.md",
+ "base_sha256": "b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc",
+ "candidate_sha256": "1691a136d01ce3f68a241c72d13d9f17c1a184986f6869fe9b9d507a324dee18",
+ "archives": [
+  {
+   "name": "stage1-intermediate",
+   "git": "1a8e02a29ed4589291b752e0a0a0901cf7e7d8b6:dsn/RTG_DISCRETE_GENESIS_DSN.md",
+   "sha256": "b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc"
+  },
+  {
+   "name": "tdrg-v2.12.15",
+   "git": "tdrg-v2.12.15:dsn/RTG_DISCRETE_GENESIS_DSN.md",
+   "sha256": "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64"
+  }
+ ],
+ "archives_note": "the stage-1 intermediate, read from its commit, holds every removed byte; the predecessor tag holds the v2.12.15 header, Appendix A and footer verbatim.",
+ "profile": {
+  "study": "TDRG",
+  "ref_words": [],
+  "history_words": [
+   "v2.12"
+  ],
+  "checked_tag_prefixes": [
+   "tdrg-",
+   "az-",
+   "ofn-",
+   "programme-",
+   "methodology-",
+   "numgen-"
+  ],
+  "known_tags": [
+   "tdrg-v2.12.13",
+   "tdrg-v2.12.14",
+   "tdrg-v2.12.15",
+   "az-v0.6",
+   "az-v0.7",
+   "az-v0.8",
+   "ofn-v0.10",
+   "ofn-v0.12",
+   "programme-v1.4",
+   "methodology-v1.4",
+   "numgen-v1.21"
+  ],
+  "summary_from": [
+   "header"
+  ]
+ },
+ "operations": [
+  {
+   "id": "S2-H",
+   "op": "replace-header",
+   "class": "presentation",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "new": "# RTG_DISCRETE_GENESIS_DSN_v2.13\n\n**Title:** RTG Discrete Relational Genesis — Canonical Study Ledger\n**Date:** 13 November 2026\n**Scope:** Fully discrete pre-metric relational universe on $\\mathbb{Z}_N$. Interaction from relational distinguishability; no continuous coordinates; no imported continuous coefficients.\n**Document class:** Technical scientific ledger (Methodology v1.4 §0.5): standard §0–§9 with Appendices A and B and the scientific Appendix C (TDR-T requirements).\n**Document status:** DRAFT — stage-2 candidate of v2.13; not adopted. `tdrg-v2.12.15` governs until the PI adopts and tags this edition.\n**Supersedes:** `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (tag `tdrg-v2.12.15`, SHA-256 `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64`)\n**Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Ontological Foundations v0.12 (`ofn-v0.12`) · DSN Methodology v1.4 (`methodology-v1.4`)\n**DSN Methodology:** DSN_METHODOLOGY_v1.4 (`methodology-v1.4`)\n**Status summary:** TDR-G is a finite-state relational universe on $\\mathbb{Z}_N$ with three characterized multistar-policy branches: $k/N$ controls entry into the growth regime, and the multistar interaction axiom controls its character. On the canonical clean branch (`bound_symmetric`) the bulk-conditioned birth rate falls as $B_{\\rm bulk}/\\text{step}\\sim N^{-0.869}$ over $N=120$–$1440$ (a window-dependent full-range fit; crystallization as $N\\to\\infty$ is `[HEUR]`); TDR-24D and TDR-24F are closed at the mechanism level with their analytic constants OPEN, and the gate before discrete triadic dynamics is TDR-24A → TDR-24B → TDR-24C. The genesis-layer kinematics are exact — two-node lemmas, the three-node BIND3 certification, $n$-node birth-free spectrum conservation and the token laws (§6.5, §6.12, §6.13) — while TDR-6 is PARTIAL and the path orientation rule is relabelling-covariant on the canonical branch (SG-14).\n**Programme tier:** Tier 4 — Discrete Programme (see Programme Overview §6)\n",
+   "note": "v1.4 header: field order with Document class and Document status; Supersedes names the immediate predecessor and its hash only; companions current; the status summary is the stage-1 sentence set, unchanged"
+  },
+  {
+   "id": "S2-L01",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "frontier** *(new in v2.12; does not block TDR-T)*",
+   "new": "frontier** *(does not block TDR-T)*",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L02",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "Status: ACTIVE — PARTIAL *(v2.12.15)*  \nQuestion: Identify a purely relational invariant",
+   "new": "Status: ACTIVE — PARTIAL  \nQuestion: Identify a purely relational invariant",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L03",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**predictable-change law** `[ALG]` *(v2.12.15)* — TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-BIRTH-SPECTRUM-INJECTION",
+   "new": "**predictable-change law** `[ALG]` — TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-BIRTH-SPECTRUM-INJECTION",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L04",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**exactly invariant** `[ALG]` *(v2.12.15)* — TDRG-ALG-TOKEN-CENSUS-LAW (iii)",
+   "new": "**exactly invariant** `[ALG]` — TDRG-ALG-TOKEN-CENSUS-LAW (iii)",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L05",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "Question (revised v2.12.1): derive the clean-star-count collapse",
+   "new": "Question: derive the clean-star-count collapse",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L06",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**Current status (v2.12.14):** the derivation target is the clean-star-count collapse",
+   "new": "**Current status:** the derivation target is the clean-star-count collapse",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L07",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**`[COR]` (v2.12.1) $\\chi$ re-fit on v17 corpus",
+   "new": "**`[COR]` $\\chi$ re-fit on v17 corpus",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L08",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "`[SCOPE — decidability, v2.12.4]` Field count is not resolvable",
+   "new": "`[SCOPE — decidability]` Field count is not resolvable",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L09",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "*(v2.12 note: the \"failed null-return\" component",
+   "new": "*(the \"failed null-return\" component",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L10",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "- **(v2.12) LEM-REACH / LEM-NOANNIHIL / LEM-RETRIG / LEM-SPECCONS closed**",
+   "new": "- **LEM-REACH / LEM-NOANNIHIL / LEM-RETRIG / LEM-SPECCONS closed**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L11",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "- **(v2.12) BIND3-CYCLE-N24K1 certified**",
+   "new": "- **BIND3-CYCLE-N24K1 certified**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L12",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**Current status (v2.12.15):** the birth update is exact",
+   "new": "**Current status:** the birth update is exact",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L13",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**[SG-11]** *(v2.12)* **Pairwise bound-state scope.**",
+   "new": "**[SG-11]** **Pairwise bound-state scope.**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L14",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**[SG-12]** *(v2.12)* **Spectrum-conservation star firewall.**",
+   "new": "**[SG-12]** **Spectrum-conservation star firewall.**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L15",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "under canonical swap and $P_3$ events. *(v2.12.15)* Its $n$-node birth-free form",
+   "new": "under canonical swap and $P_3$ events. Its $n$-node birth-free form",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L16",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**[SG-13]** *(v2.12)* **Spectral-gate scope.**",
+   "new": "**[SG-13]** **Spectral-gate scope.**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L17",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**[SG-14]** *(v2.12.14)* **Relabelling covariance.**",
+   "new": "**[SG-14]** **Relabelling covariance.**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L18",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "star-supported structures. *(v2.12.14, cross-citation; AZ-owned)*",
+   "new": "star-supported structures. *(cross-citation; AZ-owned)*",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L19",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**(v2.12)** This convention is named **CONV-TICK**",
+   "new": "This convention is named **CONV-TICK**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L20",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "oriented 3-cycle along the path direction. **(v2.12, `[script-certified v18]`)**",
+   "new": "oriented 3-cycle along the path direction. **(`[script-certified v18]`)**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L21",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "orientation rule below. *(v2.12.14: previously used here but defined only in the engine, function `signed_centered`.)*",
+   "new": "orientation rule below.",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L22",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "[RID: TDRG-ALG-LEM-REACH] **(v2.12) LEM-REACH — band-form reachability.**",
+   "new": "[RID: TDRG-ALG-LEM-REACH] **LEM-REACH — band-form reachability.**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L23",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "[RID: TDRG-ALG-LEM-NOANNIHIL] **(v2.12) LEM-NOANNIHIL — no free annihilation.**",
+   "new": "[RID: TDRG-ALG-LEM-NOANNIHIL] **LEM-NOANNIHIL — no free annihilation.**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L24",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "[RID: TDRG-ALG-LEM-RETRIG] **(v2.12) LEM-RETRIG — two-node retrigger / binding threshold.**",
+   "new": "[RID: TDRG-ALG-LEM-RETRIG] **LEM-RETRIG — two-node retrigger / binding threshold.**",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L25",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "| Retrigger bound state (v2.12; period dividing 2) |",
+   "new": "| Retrigger bound state (period dividing 2) |",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L26",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "Policy results are branch-specific. **(v2.12.14)** All motif-log results of §§6.6–6.10",
+   "new": "Policy results are branch-specific. All motif-log results of §§6.6–6.10",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L27",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "pinned v17/v18 engines]` *(v2.12.14, owner finding N1)* **`largest_center` breaks equal-degree ties",
+   "new": "pinned v17/v18 engines]` **`largest_center` breaks equal-degree ties",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L28",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "composite ratio — not a power law (v2.12.1); $\\texttt{cs}/\\text{row}\\sim N^{-0.73}$",
+   "new": "composite ratio — not a power law; $\\texttt{cs}/\\text{row}\\sim N^{-0.73}$",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L29",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "`[COR]` *(v2.12.14)* The former companion check",
+   "new": "`[COR]` The former companion check",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L30",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "{#sec-6-12-threenode} *(new in v2.12)*",
+   "new": "{#sec-6-12-threenode}",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L31",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "unless stated otherwise. **(v2.12.14)** The enumerations and suites",
+   "new": "unless stated otherwise. The enumerations and suites",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L32",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "Under TDRG-DEF-ORIENT (v2.12.14) th",
+   "new": "Under TDRG-DEF-ORIENT th",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L33",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "#### Orientation covariance at the antipodal-endpoint stratum *(v2.12.14)*",
+   "new": "#### Orientation covariance at the antipodal-endpoint stratum",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L34",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "{#sec-6-13-tokens} *(new in v2.12.15)*",
+   "new": "{#sec-6-13-tokens}",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L35",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "with the one scoped import below. *(v2.12.14: four-way register — imports, consumers, pins, exports — with the states received / statement accepted / adopted use read from records, not from queue states.)*",
+   "new": "with the one scoped import below.",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L36",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "this entry. *(v2.12.15: repinned from `ofn-v0.10` to `ofn-v0.12`; the statement text is byte-identical at both tags, only OFN's scope tag changed. Also cited by TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED.)*",
+   "new": "this entry. *(Also cited by TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED.)*",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L37",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "Contributions registered as TDR-G results, not imports *(v2.12.15)*: the token laws of §6.13",
+   "new": "Contributions registered as TDR-G results, not imports: the token laws of §6.13",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L38",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**Owner RID map** (v2.12.14; rows for v2.12.15 added at the end). RID names carry",
+   "new": "**Owner RID map**. RID names carry",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L39",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "path orientation rule (v2.12.14) | §6.3 | `TDRG-ORIENT`",
+   "new": "path orientation rule | §6.3 | `TDRG-ORIENT`",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-L40",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "*(v2.12.14 register; hash check `records/tdrg/TDRG_UPLOAD_HASH_CHECK_20261027.md`",
+   "new": "*(hash check `records/tdrg/TDRG_UPLOAD_HASH_CHECK_20261027.md`",
+   "note": "version label without claim content; the text around it stays"
+  },
+  {
+   "id": "S2-A",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "archive": [
+    "stage1-intermediate",
+    "tdrg-v2.12.15"
+   ],
+   "start": "## Appendix A — Version History {#appendix-a}",
+   "end": "## Appendix B — Retired and Rejected Claims {#appendix-b}",
+   "new": "## Appendix A — Version History {#appendix-a}\n\nOne compact entry per edition. Entries before v2.12.14 are shortened to one line; their full text is in Appendix A of the tagged edition `tdrg-v2.12.15` (byte-complete), and the editions from v2.12.13 on are tagged. Retired and corrected statements are in Appendix B.\n\n### v2.13 — November 2026 — maintenance edition\n- **Header, Local Tag Aliases, §1 [governance]:** migration to Methodology v1.4. The header is current-only, with the immediate predecessor and a three-sentence status summary. §1 is reduced to readouts with pointers (PI decision D1 (a)). In those readouts the band form of reachability carries the owner grade `[ALG]` of §6.5, the policy branches the grades of §6.6, and BIND3 the grades of §6.12. This aligns the typing of the summary; no grade in §6 changes.\n- **§§2–8 [editorial]:** version labels, and correction labels that only gave provenance, are removed from the live sections. Each correction stays recorded in the entries below and in its release record. Under D2 (a) the §2 record is kept in place.\n- **§2 TDR-25, Appendix B [scope/typing]:** the superseded failed-relock hypothesis (v2.8) leaves §2; Appendix B records it with its original statement.\n- **§6.2, §6.3, §6.5, §7 [evidence]:** the AZ citation is repinned to `az-v0.8` (the entry is byte-identical at `az-v0.6`, `az-v0.7` and `az-v0.8`). The OPEN-OFN-2 connection, the CONV-TICK and LEM-NOANNIHIL consumer pins and the consumer rows are stated at their current editions (OFN v0.12, AZ v0.8). XFER-O08-01 is stated as open, a separate decision of both owners.\n- **§2 [governance]:** the owner-review tasks are stated as TDR-G's own current items.\n- **§8, Appendix A, footer [editorial]:** §A.sim is moved verbatim to §8 (D3 (a)). Appendix A is compacted; the footer has one line.\n- **Not changed:** every scientific result, RID, grade, OPEN state, scope guard and evidence state. Plan `records/tdrg/TDRG_v2_13_EDIT_PLAN.md`; release record `records/tdrg/TDRG_v2_13_RELEASE_RECORD.md`; predecessor `tdrg-v2.12.15`.\n\n### v2.12.15 — 12 November 2026 — adopted\n- **§6.3 [scientific]:** TDRG-DEF-STAR states the implemented event domain: every component with exactly one valid centre, any shape (owner finding N4). TDRG-DEF-MULTISTAR and CONV-TICK step 4 are aligned.\n- **§6.13 [scientific]:** token laws TDRG-ALG-EVENT-INVENTORY, TDRG-ALG-NARROW-BAND-CLASSES, TDRG-ALG-TOKEN-CENSUS-LAW, TDRG-ALG-BIRTH-SPECTRUM-INJECTION, TDRG-ALG-SPECCONS-N, TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED and TDRG-ALG-PARENT-CHILD-PHASE, with the owner check TDRG-NUM-TOKEN-LAW-CHECK. They were proposed by AZ and are credited to AZ. The LEM-SPECCONS $n$-node conjecture is resolved.\n- **§2, §3, Appendix B [scope/typing]:** TDR-6 is PARTIAL; the signed-class set is invariant, with its relational status undecided. $P$ is not conserved at births and is not a gauge quantity (SG-3, OFN finding). SG-12 and OPEN-SPECCONS-STAR are updated.\n- **§7, §6.2 [evidence]:** the export row now names the A → B → C gate (Programme v1.4); Finding A is at `ofn-v0.12`; AZ is cited at `az-v0.7`.\n- Release record `records/tdrg/TDRG_v2_12_15_RELEASE_RECORD.md`; predecessor `tdrg-v2.12.14`.\n\n### v2.12.14 — 28 October 2026 — adopted\n- **§6.3, §3 [scientific]:** TDRG-DEF-ORIENT extends the balanced path-tie to $S=0\\wedge2E\\equiv0$; this replaces the node-ID completion. TDRG-ALG-ORIENT-NOGO is added. `signed_centered` and `signed_defect_error` are defined. SG-14 states relabelling covariance.\n- **§6.12, §6.6, §6.5 [scientific]:** the orientation-covariance block is added. BIND3 and motif-log results carry `[conv: v18 path orientation]` and are not rerun. TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK is added. The least period of LEM-RETRIG is corrected (period dividing 2; fixed point at $d=0$).\n- **§1, §2, §5, §6.8 [scope/typing]:** the N-scaling is range-tagged and graded `[NUM]`; the $\\chi=0.836$ check is withdrawn; crystallization is `[HEUR]`. Live compound tags are unpacked.\n- **§7, §8 [governance/evidence]:** 39 RIDs (owner RID map), the import and consumer register, and the custody register with hashes.\n- Release record `records/tdrg/TDRG_v2_12_14_RELEASE_RECORD.md`; predecessor `tdrg-v2.12.13`.\n\n### v2.12.13 — June 2026\n- **§2 [evidence]:** feature-map injectivity tested on existing data; a births delay-rank artifact was caught by a shuffle null.\n\n### v2.12.12 — June 2026\n- **§2 [scope/typing]:** the \"dynamical layer near-saturated\" reading is retracted; on a rank-1 control manifold the result is excitation-insufficiency.\n\n### v2.12.11 — June 2026\n- **§2 [evidence]:** dynamical signal layer of the response-tensor branch; inter-birth-interval CV carries the N-dependence.\n\n### v2.12.10 — June 2026\n- **§2 [governance]:** response-tensor branch opened (PI directive; firewalled); a null-gated dimension reader was built.\n\n### v2.12.9 — June 2026\n- **§2 TDR-24B [scientific]:** OPEN-POLICY-GEOMETRY reframed as a factorization test; the existing scan serves as Experiment 0; new runs reduced to four.\n\n### v2.12.8 — June 2026\n- **§2 TDR-24B [scientific]:** minimal OPEN-POLICY-GEOMETRY design with pre-registered thresholds.\n\n### v2.12.7 — June 2026\n- **§2 TDR-24B [scope/typing]:** the \"$k/N$ is a phase boundary\" reading is rejected against §6.7; two-layer reading.\n\n### v2.12.6 — June 2026\n- **§2 TDR-24B [scope/typing]:** one $\\log N$ axis explains 88.7 % of the observable variance; the reading is geometric, not ontological.\n\n### v2.12.5 — June 2026\n- **§2 TDR-24B [evidence]:** formal observable-rank test; the control manifold has rank 1.\n\n### v2.12.4 — June 2026\n- **§2 TDR-24B [scope/typing]:** the field count is not resolvable on a $k/N$-fixed family; the decisive experiment is recorded.\n\n### v2.12.3 — June 2026\n- **§2 TDR-24B [scientific]:** the proposed $\\rho\\sigma\\kappa$ three-field basis is rejected; standing note on ratio exponents.\n\n### v2.12.2 — June 2026\n- **§2 TDR-24B [scope/typing]:** errata on the $\\chi$ consistency note; $\\chi$ is not an independent scaling field.\n\n### v2.12.1 — June 2026\n- **§2 TDR-24B, §6.8 [scientific]:** the $\\chi$ re-fit supersedes $N^{+0.836}$; $\\chi$ is a composite ratio, and the target is the clean-star-count collapse.\n\n### v2.12 — June 2026\n- **§§1–3, 6.3, 6.5, 6.12, 8, Appendix B [scientific]:** genesis-kinematics and BIND3 arc: CONV-TICK, CONV-P3CYC, LEM-REACH, LEM-NOANNIHIL, LEM-RETRIG, LEM-SPECCONS; TDRG-ALG-BIND3-CYCLE-N24K1; the NKSCAN suite; SG-11–SG-13; BIND3-KNIFE `[FAIL]`.\n\n### v2.11.1 — June 2026\n- **§2 TDR-26, §6 [scope/typing]:** tag split of the birth-anchored rule; N=722 reclassified as a tail witness; engine v18 dense-birth-window logging.\n\n### v2.11 — June 2026\n- **§2 TDR-26 [scientific]:** N=722 cross-cell test; the absolute-step rule fails; the birth-anchored rule (n=2).\n\n### v2.10.1 — June 2026\n- **§2 TDR-26 [editorial]:** the $w\\le100$ ranking is corrected.\n\n### v2.10 — June 2026\n- **§2 TDR-26 [scientific]:** early-basin discriminator study at N=720.\n\n### v2.9 — June 2026\n- **§2 TDR-25/26 [scientific]:** N=720 onset test; burst-size quantile rejected; failed-relock hypothesis revised; basin-selection problem.\n\n### v2.8 — June 2026\n- **§2 TDR-25 [scientific]:** burst-quantile bridge, part 1; the failed-relock hypothesis is posed.\n\n### v2.7.1 — June 2026\n- **§2 TDR-24A [editorial]:** pre-freeze corrections; the coverage range is widened.\n\n### v2.7 — June 2026\n- **§2 TDR-24A [scientific]:** rate-law decomposition R1–R3; other-burst conditioning.\n\n### v2.6 — June 2026\n- **§2 TDR-24A [scientific]:** Level-1 provenance; exact numerator decomposition; mechanism `[HEUR strong]`.\n\n### v2.5 — June 2026\n- **§2 TDR-24A [scientific]:** $C_{\\rm component}$ decomposition; geometric dilution; the composite exponent is range-dependent.\n\n### v2.4 — June 2026\n- **§2 TDR-24F [scope/typing]:** $q_{\\rm proj}\\sim N^{1.371}$ reclassified as a convention artifact; high-N scope guard; run-level filtering.\n\n### v2.3 — June 2026\n- **§2 TDR-24F [scientific]:** projection mechanism resolved, $q_{\\rm proj}\\sim N^{1.06}$ (`[NUM strong]`).\n\n### v2.2 — June 2026\n- **§1, §2, §6.8 [scientific]:** v17/v6 canonical scan ($N=120$–$1440$); slot-volume model promoted; TDR-24D closed; $V_{\\rm pair\\_load}$ corrected.\n\n### v2.1 — June 2026\n- **§6.4–§6.11 [editorial]:** canonical-freeze errata; observable definitions and regime results completed.\n\n### v2.0 — June 2026\n- **All sections [governance]:** refactor to the Methodology v1.2 architecture; Appendix C (TDR-T) and §A.sim created.\n\n### v1.5 — May 2026\n- **§2 [scientific]:** slot-volume formula on $M_{t,\\rm pre}$; TDR-24N; fully defective $K_3$ forbidden.\n\n### v1.4 — May 2026\n- **§2, Appendix C [scientific]:** TDR-0 formalized; TDR-T requirements ledger; dependency ordering.\n\n### v1.3 — May 2026\n- **§§2, 3 [scientific]:** cross-branch scope definitions; slot-volume model.\n\n### v1.2 — May 2026\n- **§§2, 6 [scientific]:** TDR-24 factorization; birth identity; arithmetic controls; TDR-24A–D, TDR-25, TDR-26.\n\n### v1.1 — May 2026\n- **§§2, 6 [scientific]:** CLI; path orientation law; cycle bound states; long-horizon data; TDR-22 split; TDR-24.\n\n",
+   "note": "one compact entry for v2.13, v2.12.15, v2.12.14; one line for each earlier edition, full text at the tag; §A.sim removed (stage 1 placed it verbatim in §8)"
+  },
+  {
+   "id": "S2-F",
+   "op": "replace-footer",
+   "class": "presentation",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "new": "*END OF DOCUMENT — RTG_DISCRETE_GENESIS_DSN_v2.13*\n",
+   "note": "single footer line; the predecessor lineage is in the header (immediate predecessor) and the tags"
+  }
+ ]
+}

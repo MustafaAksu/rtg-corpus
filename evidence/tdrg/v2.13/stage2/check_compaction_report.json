@@ -1,0 +1,637 @@
+{
+ "base_sha256": "b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc",
+ "candidate_sha256": "1691a136d01ce3f68a241c72d13d9f17c1a184986f6869fe9b9d507a324dee18",
+ "map_sha256": "024a730e0482404c8c77299036d37cc7f6cd97c8b24547bc8ccb7cc31866a75b",
+ "operations": [
+  {
+   "id": "S2-H",
+   "op": "replace-header",
+   "class": "presentation",
+   "result": "PASS",
+   "detail": "header replaced; status-summary sentences are a subset of the base summary (header)"
+  },
+  {
+   "id": "S2-L01",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (14 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L02",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L03",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L04",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L05",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (18 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L06",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (11 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L07",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L08",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (9 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L09",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (12 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L10",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L11",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L12",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (11 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L13",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L14",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L15",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L16",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L17",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L18",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L19",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (12 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L20",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (7 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L21",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (95 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L22",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L23",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L24",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L25",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (7 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L26",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (15 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L27",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (31 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L28",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L29",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L30",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (17 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L31",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (15 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L32",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (11 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L33",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L34",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (20 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L35",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (172 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L36",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (133 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L37",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L38",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (47 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L39",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (11 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-L40",
+   "op": "edit",
+   "class": "history-removal",
+   "result": "PASS",
+   "detail": "history span removed (19 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "id": "S2-A",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "result": "PASS",
+   "detail": "section relocated (41084 chars), found in ['stage1-intermediate', 'tdrg-v2.12.15']"
+  },
+  {
+   "id": "S2-F",
+   "op": "replace-footer",
+   "class": "presentation",
+   "result": "PASS",
+   "detail": "footer replaced"
+  }
+ ],
+ "claim_blocks": {
+  "base": 268,
+  "identical": 244,
+  "declared_change": 24,
+  "unexplained": []
+ },
+ "profile": {
+  "study": "TDRG",
+  "ref_words": [],
+  "history_words": [
+   "v2.12"
+  ],
+  "checked_tag_prefixes": [
+   "tdrg-",
+   "az-",
+   "ofn-",
+   "programme-",
+   "methodology-",
+   "numgen-"
+  ],
+  "known_tags": [
+   "tdrg-v2.12.13",
+   "tdrg-v2.12.14",
+   "tdrg-v2.12.15",
+   "az-v0.6",
+   "az-v0.7",
+   "az-v0.8",
+   "ofn-v0.10",
+   "ofn-v0.12",
+   "programme-v1.4",
+   "methodology-v1.4",
+   "numgen-v1.21"
+  ],
+  "summary_from": [
+   "header"
+  ]
+ },
+ "checks": [
+  {
+   "check": "base identity",
+   "result": "PASS",
+   "detail": "map base_sha256 vs file"
+  },
+  {
+   "check": "candidate identity",
+   "result": "PASS",
+   "detail": "map candidate_sha256 vs file"
+  },
+  {
+   "check": "archive identity stage1-intermediate",
+   "result": "PASS",
+   "detail": "b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc"
+  },
+  {
+   "check": "archive identity tdrg-v2.12.15",
+   "result": "PASS",
+   "detail": "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64"
+  },
+  {
+   "check": "mechanical scope (re-derivation)",
+   "result": "PASS",
+   "detail": "candidate equals base + declared operations"
+  },
+  {
+   "check": "operation S2-H (presentation)",
+   "result": "PASS",
+   "detail": "header replaced; status-summary sentences are a subset of the base summary (header)"
+  },
+  {
+   "check": "operation S2-L01 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (14 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L02 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L03 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L04 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L05 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (18 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L06 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (11 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L07 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L08 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (9 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L09 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (12 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L10 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L11 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L12 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (11 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L13 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L14 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L15 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L16 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L17 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L18 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L19 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (12 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L20 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (7 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L21 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (95 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L22 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L23 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L24 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (8 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L25 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (7 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L26 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (15 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L27 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (31 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L28 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (10 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L29 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L30 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (17 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L31 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (15 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L32 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (11 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L33 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L34 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (20 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L35 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (172 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L36 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (133 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L37 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (13 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L38 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (47 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L39 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (11 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-L40 (history-removal)",
+   "result": "PASS",
+   "detail": "history span removed (19 chars), found in ['stage1-intermediate']"
+  },
+  {
+   "check": "operation S2-A (history-appendix)",
+   "result": "PASS",
+   "detail": "section relocated (41084 chars), found in ['stage1-intermediate', 'tdrg-v2.12.15']"
+  },
+  {
+   "check": "operation S2-F (presentation)",
+   "result": "PASS",
+   "detail": "footer replaced"
+  },
+  {
+   "check": "qualified claim blocks",
+   "result": "PASS",
+   "detail": "268 claim blocks in base live text: 244 byte-identical, 24 changed by declared operations, 0 unexplained"
+  },
+  {
+   "check": "RID set preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "heading anchors preserved",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "source hashes preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "qualifier tags preserved",
+   "result": "PASS",
+   "detail": "lost: []"
+  },
+  {
+   "check": "references resolve",
+   "result": "PASS",
+   "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
+  },
+  {
+   "check": "presentation (header, footer)",
+   "result": "PASS",
+   "detail": "required fields present; one predecessor; one footer"
+  }
+ ],
+ "warnings": [],
+ "result": "PASS",
+ "limitations": [
+  "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
+  "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",
+  "RID pattern covers the registered namespace prefixes listed in the script (RTG-… and RTG-OFN-… with category and description; DYAD, RECOG, GEN, TRIAD, NUMGEN, UVM, RRF, DZT, AZ, TDRG and the other listed prefixes); other identifiers (e.g. PL, L0L1, L2) are not tracked.",
+  "History region: Appendix A bounded by Appendix B, or the appendix named by profile key history_appendix up to the next '## ' heading or the footer; it is excluded from the live text. With the key, its heading is unique in base and candidate, one history-appendix operation replaces exactly it, and hashes leave the live text only by declared relocation (relocate_hashes).",
+  "Reference resolution: in the sentence of each tagged-edition pointer, H-labels (as '**H-n** —' definitions), 'Appendix X' headings, 'Local Tag Aliases' and version entries ('### vX') are looked up in the pinned archive; section numbers (§n.m) are not resolved.",
+  "Reference substitutions may change only reference vocabulary (REF_WORDS, labels, versions, tags, punctuation); any other changed word fails.",
+  "tag_examples/navigation relocations need a registered region (hash, kind) and a reviewer confirmation; unconfirmed regions give PENDING. In a tag_examples region an identifier may occur only inside a tag spelling in a table row (and must survive in the live text); a navigation region may carry no identifier and only [DEF] tags.",
+  "An H-label resolves if the archive defines it ('**H-n** —') or defines its lettered group ('**H-na** —').",
+  "Archive membership is a byte-substring test against the named archive files.",
+  "Study profile (map key 'profile'): extra history words, extra reference words and the status-summary source (base header summary, optionally base §1) are calibration inputs declared in the map and printed in the report.",
+  "A 'move' (class reorder) cuts one whole blank-line-delimited block and reinserts it byte-identical before a unique block-starting anchor inside the same section of the live text; it can change no text, tag, RID, math or hash (re-derivation and the block-multiset test)."
+ ]
+}
