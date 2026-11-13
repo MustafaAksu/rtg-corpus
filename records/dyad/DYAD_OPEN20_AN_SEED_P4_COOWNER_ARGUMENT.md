@@ -107,19 +107,19 @@ Fix an r_0 satisfying Q1. Set C_tau>0 such that |tau(xi)|<=C_tau r^-3 for 0<r<=r
 
 $$
 C_B=C_\tau+(1+S)r_0^3,\qquad
-K=\varepsilon_{\rm tube}e^{-|\operatorname{Im}\alpha|\pi/2}
-  C_B^{-3} C_\tau^{-3}>0.
+K_j=\varepsilon_je^{-|\operatorname{Im}\alpha|\pi/2}
+  C_B^{-3} C_\tau^{-3}>0,\qquad j=0,1.
 $$
 
-On D_j, the two positive tube-base factors are at most C_B r^-3 and C_tau r^-3. With q_1=q_2=9, the tube radii of design §3 therefore obey
+The tube prefactors $\varepsilon_0$ and $\varepsilon_1$ differ, hence $K_j$ is indexed (owner precision P-1). On $D_j$, the two positive tube-base factors are at most C_B r^-3 and C_tau r^-3. With q_1=q_2=9, the tube radii of design §3 therefore obey
 
 $$
-R_j(\xi)\ge K\,r^{\operatorname{Re}\alpha+18}
-=K\,r^{240/19},\quad \operatorname{Re}\alpha=-102/19.
+R_j(\xi)\ge K_j\,r^{\operatorname{Re}\alpha+18}
+=K_j\,r^{240/19},\quad \operatorname{Re}\alpha=-102/19.
 \tag{Q2.1}
 $$
 
-Because Q1 places D_j(H_seed) inside one closed inner subsector of its LH2012 petal, the conditional L1 statement gives, for a finite constant C_j and all sufficiently small r there,
+**P-1 (D9's exact relation).** We have $\phi_j(z)=z^2(a_++b_1z+u_j(cz))$ and $\phi_{40}(z)/z^2=a_++b_1z+\sum_{n=2}^{38}b_nz^n$, so $d_j(\xi)=u_j(\xi)-\sum_{n=2}^{38}b_nz^n$ exactly. It is $u_j$ minus the order-38 truncation of **its own** asymptotic series, with no further asymptotic transport across charts. Since Q1 places $D_j(H_{\rm seed})$ inside a closed inner subsector of the corresponding LH2012 petal, conditional L1/C3 supplies a finite $C_j$ so that for all sufficiently small $r$ there,
 
 $$
 |d_j(\xi)|=\left|\frac{\phi_j(z)-\phi_{40}(z)}{z^2}\right|
@@ -131,23 +131,23 @@ No numerical value of C_j is required: it is the finite-order, uniform asymptoti
 
 $$
 \frac{|d_j(\xi)|}{R_j(\xi)}
-\le\frac{C_j}{K}r^{39-240/19}
-=\frac{C_j}{K}r^{501/19}\longrightarrow0.
+\le\frac{C_j}{K_j}r^{39-240/19}
+=\frac{C_j}{K_j}r^{501/19}\longrightarrow0.
 \tag{Q2.3}
 $$
 
-Narrow the seed radius to r_1<=r_0 so that (C_j/K)r_1^(501/19)<1 for both j, then increase H_seed using (Q1.3) with r_1. The published curves lie **strictly** inside their respective tubes on D_j(H_seed). This establishes Q2 *conditional on L1/C3*, not as a proof of the unpublished constants or the article's Proposition 5.3.
+Narrow the seed radius to r_1<=r_0 so that (C_j/K_j)r_1^(501/19)<1 for both j, then increase H_seed using (Q1.3) with r_1. The published curves lie **strictly** inside their respective tubes on D_j(H_seed). This establishes Q2 *conditional on L1/C3*, not as a proof of the unpublished constants or the article's Proposition 5.3.
 
 ## 4. [SESSION/THM, conditional] Q3 — restricted-graph invariance
 
 The selected u_0 is an invariant graph of F on its petal, and u_1 an invariant graph of the declared branch G=F^(-1), expressed in the D5-rotated coordinate and transported to the common xi coordinate. For each point of the graph over D_j(H_seed), Q2 makes it a point of the applicable tube; (G), (A1) and (A2) then give
 
 $$
-\xi'\in D_j(h_j(\tau(\xi))+\sigma)
-\subset D_j(H_{\rm seed}).
+h_j(\tau(\xi'))\ge h_j(\tau(\xi))+\sigma>H_{\rm seed}
+\quad\Longrightarrow\quad \xi'\in D_j(H_{\rm seed}).
 $$
 
-Thus the image of the *restricted selected graph* is again a point of the same graph on D_j(H_seed), in the domain where the source graph is defined. This is exactly the invariance required of seed (Q). It does not assert invariance of a literal straight sector in isolation; the published curves live on the curved LH2012 petals.
+The earlier draft's strict membership in $D_j(h_j(\tau(\xi))+\sigma)$ was too strong: (A1) permits equality at that level (P-2). Thus the image of the *restricted selected graph* is again a point of the same graph on D_j(H_seed), in the domain where the source graph is defined. This is exactly the invariance required of seed (Q). It does not assert invariance of a literal straight sector in isolation; the published curves live on the curved LH2012 petals.
 
 **Seed verdict:** Q1 follows from one explicit coefficient inequality and the petal size; Q2 follows under L1/C3; Q3 follows under the design's (G),(A) and the source invariance. The seed is not unconditional until the required estimates and imported assumptions are discharged at the declared evidence level.
 
