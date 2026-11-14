@@ -45,8 +45,10 @@ import dyad_open20_an_stage3c_lib as L
 
 
 def _r6(f, mode):
-    """The float f rounded to 6 significant digits in the given direction (the printed decimal is the bound)."""
-    d = Decimal(repr(f))
+    """The float f rounded to 6 significant digits in the given direction (the printed decimal is the bound).
+    Decimal(f) is the exact binary value of f; repr(f) would be the shortest decimal that rounds to f, which can lie
+    on the wrong side of it (co-owner's comment 6848895970 on PR #258)."""
+    d = Decimal(f)
     if d == 0:
         return 0.0
     return float(d.quantize(Decimal(1).scaleb(d.adjusted() - 5), rounding=mode))
