@@ -30,6 +30,22 @@ from fractions import Fraction as Fr
 from flint import acb, arb
 import dyad_open20_an_stage2_scout as S2
 
+RUN_ENV = 'DYAD_OPEN20_3CB'
+
+
+def run_status(dev):
+    """The status line of an output file.  The scripts were written for development runs and say so.  In a run started
+    by the stage-3c-b driver (environment variable DYAD_OPEN20_3CB=1) the line names that kind of run instead.  The
+    verdict of such a run is its ledger together with the replay and the release record, never one output file."""
+    if os.environ.get(RUN_ENV) == '1':
+        return 'stage 3c-b run; one output of the run; the verdict is the ledger of the run with its replay, not this file'
+    return dev
+
+
+def run_tail(dev):
+    """The same for the last printed line."""
+    return '| stage 3c-b run; see the ledger of the run' if os.environ.get(RUN_ENV) == '1' else dev
+
 
 class Consts:
     """Exact constants of the pilot branch (stage 1), as balls at the current precision."""
@@ -1104,7 +1120,8 @@ def arc_tail(K, TAU, xi_M, eps=0.03, cores=None, branch=0):
     margin = 3 * arb(eps) * br - e0
     tau = Tube(K, TAU, 0).tau
     ts = tau(acb('0.4') * (acb(0, 1) * arb.pi() / 6).exp() / K.c); re_s = ts.real
-    wmin = lo(A3) / XM ** 3                                    # |w| >= wmin  <=>  |x0| <= XM
+    wmin = up(A3) / XM ** 3                                    # |w| >= |A3|/XM^3  <=>  |x0| <= XM: the sufficient
+    #                                                            threshold takes the UPPER bound of |A3| (review 5877317450)
     tM = _fup((wmin ** 2 - re_s ** 2).sqrt())
     rot = (acb(0, 2) * arb.pi() * branch / 3).exp()
     x0 = lambda tt: ((A3.log() - acb(re_s, -arb(tt)).log()) / 3).exp() * rot

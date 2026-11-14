@@ -67,10 +67,10 @@ def main():
     g = {k: bool(v) for k, v in g.items()}; ok = all(g.values())
     for k in sorted(g):
         print(k, 'PASS' if g[k] else 'FAIL')
-    print('RESULT', 'PASS' if ok else 'FAIL', '(control %s)' % o.control if o.control else '', '| development run; not a certificate')
+    print('RESULT', 'PASS' if ok else 'FAIL', '(control %s)' % o.control if o.control else '', L.run_tail('| development run; not a certificate'))
     with open(o.out, 'w', encoding='utf-8', newline='\n') as f:
         json.dump({'gates': g, 'info': info, 'all_pass': ok, 'control': o.control,
-                   'status': 'stage 3c-a development run; not a certificate', 'script': 'dyad_open20_an_stage3c_w1_check.py'},
+                   'status': L.run_status('stage 3c-a development run; not a certificate'), 'script': 'dyad_open20_an_stage3c_w1_check.py'},
                   f, indent=1, sort_keys=True)
         f.write('\n')
     return 0 if ok else 1
