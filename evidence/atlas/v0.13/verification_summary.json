@@ -1,0 +1,218 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.12",
+ "base_sha256": "cf9d8647b4c33206537e46ca37c7879d4fc33b1a936e0a50330a469f054def55",
+ "atlas_sha256": "47384c0c6959392e786829e4435a62b52d76aa38c19d655fe9f7890ac86160a1",
+ "atlas_bytes": 536466,
+ "atlas_lines": 1545,
+ "base_bytes": 523005,
+ "base_lines": 1537,
+ "source_snapshot": "2676e6ff3e111aaa7d030cc1efcff45128b1abf3",
+ "method": {
+  "tag": "atlas-method-v0.3",
+  "sha256": "a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f"
+ },
+ "changed_sources": [
+  "AZ",
+  "TDRG"
+ ],
+ "edit_operations": 74,
+ "operations_by_finding": {
+  "identity": 7,
+  "TDR-G v2.12.15": 16,
+  "Method §4.1 span deletion (edition label that only dates a result)": 30,
+  "reviewed item (grade, qualifier or diagnostic change)": 6,
+  "AZ v0.9": 14,
+  "pipes": 1
+ },
+ "span_deletions_rule_4_1": {
+  "count": 30,
+  "bytes_removed": 336
+ },
+ "span_deletions_rule_4_7": 0,
+ "retired_keys": [
+  "TDRG.G9"
+ ],
+ "new_keys": [],
+ "moved_source_homes": {
+  "TDRG-ALG-EVENT-INVENTORY": {
+   "kind": "node",
+   "home": "TDRG-ALG-EVENT-INVENTORY ALG |"
+  },
+  "TDRG-ALG-NARROW-BAND-CLASSES": {
+   "kind": "node",
+   "home": "TDRG-ALG-NARROW-BAND-CLASSES ALG |"
+  },
+  "TDRG-ALG-TOKEN-CENSUS-LAW": {
+   "kind": "node",
+   "home": "TDRG-ALG-TOKEN-CENSUS-LAW ALG |"
+  },
+  "TDRG-ALG-BIRTH-SPECTRUM-INJECTION": {
+   "kind": "node",
+   "home": "TDRG-ALG-BIRTH-SPECTRUM-INJECTION ALG |"
+  },
+  "TDRG-ALG-SPECCONS-N": {
+   "kind": "node",
+   "home": "TDRG-ALG-SPECCONS-N ALG |"
+  },
+  "TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED": {
+   "kind": "node",
+   "home": "TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED ALG |"
+  },
+  "TDRG-ALG-PARENT-CHILD-PHASE": {
+   "kind": "node",
+   "home": "TDRG-ALG-PARENT-CHILD-PHASE ALG |"
+  },
+  "TDRG-NUM-TOKEN-LAW-CHECK": {
+   "kind": "node",
+   "home": "TDRG-NUM-TOKEN-LAW-CHECK NUM |"
+  },
+  "TDRG-ART-TOKEN-LAW-CHECKS": {
+   "kind": "cert",
+   "home": "TDRG-NUM-TOKEN-LAW-CHECK NUM |"
+  },
+  "AZ-NUM-TOKRES-S1": {
+   "kind": "node",
+   "home": "AZ-NUM-TOKRES-S1 NUM·dx |"
+  },
+  "AZ-ART-TOKRES-S1": {
+   "kind": "cert",
+   "home": "AZ-NUM-TOKRES-S1 NUM·dx |"
+  },
+  "AZ-ART-CORE-EQUIV-CHECK": {
+   "kind": "cert",
+   "home": "PROP-AZ-CORE-EQUIV THM |"
+  },
+  "AZ-OPEN-SCOPE-ZETA": {
+   "kind": "frontier",
+   "home": "AZ: AZ-OPEN-SCOPE-ZETA PARTIAL"
+  },
+  "AZ-OPEN-SCOPE-ARITH": {
+   "kind": "frontier",
+   "home": "AZ: AZ-OPEN-SCOPE-ZETA PARTIAL"
+  },
+  "AZ-OPEN-PROMO": {
+   "kind": "frontier",
+   "home": "AZ: AZ-OPEN-SCOPE-ZETA PARTIAL"
+  },
+  "TDRG-OPEN-TOPO-FILTER": {
+   "kind": "node",
+   "home": "TDRG-OPEN-TOPO-FILTER (TDR-24A) ACTIVE"
+  }
+ },
+ "new_identifiers": {
+  "TDRG": [
+   "TDRG-ALG-BIRTH-SPECTRUM-INJECTION",
+   "TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED",
+   "TDRG-ALG-EVENT-INVENTORY",
+   "TDRG-ALG-NARROW-BAND-CLASSES",
+   "TDRG-ALG-PARENT-CHILD-PHASE",
+   "TDRG-ALG-SPECCONS-N",
+   "TDRG-ALG-TOKEN-CENSUS-LAW",
+   "TDRG-ART-TOKEN-LAW-CHECKS",
+   "TDRG-NUM-TOKEN-LAW-CHECK"
+  ],
+  "AZ": [
+   "AZ-ART-CORE-EQUIV-CHECK",
+   "AZ-ART-TOKRES-S1",
+   "AZ-NUM-TOKRES-S1",
+   "AZ-OPEN-PROMO",
+   "AZ-OPEN-SCOPE-ARITH",
+   "AZ-OPEN-SCOPE-ZETA",
+   "TDRG-ALG-EVENT-INVENTORY",
+   "TDRG-ALG-PARENT-CHILD-PHASE",
+   "TDRG-OPEN-TOPO-FILTER"
+  ]
+ },
+ "rids_at_tag": {
+  "TDRG": 81,
+  "AZ": 48
+ },
+ "owner_facts": {
+  "tdrg_star_domain": true,
+  "tdrg_tdr6_partial": true,
+  "tdrg_p_not_gauge": true,
+  "tdrg_speccons_n": true,
+  "tdrg_speccons_star_active": true,
+  "tdrg_phase_law_scope": true,
+  "tdrg_stage1_not_part": true,
+  "tdrg_export_row_aligned": true,
+  "tdrg_az_pin": true,
+  "tdrg_methodology_v1_2": true,
+  "tdrg_check_counts": true,
+  "programme_sentence_unchanged": true,
+  "az_core_equiv_thm": true,
+  "az_4q_scope": true,
+  "az_4q_tag": true,
+  "az_tokres": true,
+  "az_tokres_numbers": true,
+  "az_tokres_no_promo": true,
+  "az_open_status": true,
+  "az_thread_c_partial": true,
+  "az_gbirth_two_definitions": true,
+  "az_pins": true,
+  "az_compound_tags_only_in_history": true,
+  "az_antipodal_statement_unchanged": true,
+  "az_owned_identifiers_kept": true,
+  "az_no_least_period": true
+ },
+ "pipes": {
+  "items": 123,
+  "snapshot": {
+   "closed": 66,
+   "open": 55,
+   "dispositioned": 2
+  }
+ },
+ "dispositions": {
+  "reworded": 9,
+  "retired": 1,
+  "retained": 7
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 137
+  },
+  "qualifiers": {
+   "PASS": 4
+  },
+  "links": {
+   "PASS": 525,
+   "DOCUMENTED-UNRESOLVED": 10,
+   "UNVERIFIED": 2
+  },
+  "artifacts": {
+   "PASS": 120,
+   "UNVERIFIED": 2
+  },
+  "keys": {
+   "PASS": 154
+  },
+  "process": {},
+  "wording": {
+   "WARN": 13
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 26,
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 108
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373",
+  "evidence/atlas/build/refresh_v0_13.py": "5dccad82527df9220e009b69dec3edee613f35fc381dedfe1b42d4c9470ee30f",
+  "evidence/atlas/build/refresh_v0_10.py": "9405436c738f9c3dd079975ce21d5a4a73d45181a2831634b43c6c7512f2e01c"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate was rerun for this edition; new identifiers are checked for presence in the tagged sources and for one home each, not re-proved.",
+  "Impact refresh of two moved sources; the other 16 sources were not re-extracted. TDR-G v2.12.15 was read in its full diff against v2.12.14 (all added lines, §6.13 in full) and through the atlas row check of 12 Nov 2026. AZ v0.9 was read in full at statement level (header, §§0.2–9, Appendix A v0.8/v0.9 entries, Appendix B); its Dyadic rows of §8 were read but not re-compared word by word with the Dyadic text, which is unchanged since atlas-v0.12.",
+  "The shared checker's coverage check extracts Dyadic RIDs only; the homes of the TDR-G and AZ identifiers are asserted by this builder (homes_check), which is not the shared tool.",
+  "Method §4.1 deletions were applied in D5 to edition labels on TDR-G nodes and to AZ edition labels made stale by the source movement (three edges outside D5: H2, the OPEN-M audit node, OPENM.U11; three Dyadic nodes' AZ consumer clauses). Labels inside H4, H9, D5.X1 and the orientation node that distinguish what two editions state are kept (rule 4.1, third sentence). Rule 4.7 was not applied: no certificate-run span in D5 was identified as removable without rewording.",
+  "AZ-ART-ZETA-V3 loses the grade token ENG-historical because the owner removed that alias; the atlas line now carries no grade."
+ ]
+}

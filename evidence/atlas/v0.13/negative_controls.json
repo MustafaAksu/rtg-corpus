@@ -1,0 +1,132 @@
+[
+ {
+  "id": "V1",
+  "what": "star stated on K_{1,3} only",
+  "detected": true
+ },
+ {
+  "id": "V2",
+  "what": "\"gauge\" restored as the reason for P",
+  "detected": true
+ },
+ {
+  "id": "V3",
+  "what": "TDR-6 shown as closed",
+  "detected": true
+ },
+ {
+  "id": "V4",
+  "what": "signed-class invariant shown as closing TDR-6",
+  "detected": true
+ },
+ {
+  "id": "V5",
+  "what": "n-node conservation shown as holding across births",
+  "detected": true
+ },
+ {
+  "id": "V6",
+  "what": "phase law shown as a bond or growth mechanism",
+  "detected": true
+ },
+ {
+  "id": "V7",
+  "what": "PROP-AZ-CORE-EQUIV left at THM-ALG",
+  "detected": true
+ },
+ {
+  "id": "V8",
+  "what": "enumeration shown as the proof",
+  "detected": true
+ },
+ {
+  "id": "V9",
+  "what": "4|q verdict stated beyond the tested protocol",
+  "detected": true
+ },
+ {
+  "id": "V10",
+  "what": "the diagnostic placed under a TDR-G RID",
+  "detected": true
+ },
+ {
+  "id": "V11",
+  "what": "a TDR-G law placed under an AZ locator",
+  "detected": true
+ },
+ {
+  "id": "V12",
+  "what": "a Stage 1 number on a TDR-G node",
+  "detected": true
+ },
+ {
+  "id": "V13",
+  "what": "the phase law restated inside the AZ node",
+  "detected": true
+ },
+ {
+  "id": "V14",
+  "what": "the diagnostic read as a mechanism or a promotion",
+  "detected": true
+ },
+ {
+  "id": "V15",
+  "what": "supportive contrasts shown as confirmatory",
+  "detected": true
+ },
+ {
+  "id": "V16",
+  "what": "a second home for the diagnostic",
+  "detected": true
+ },
+ {
+  "id": "V17",
+  "what": "a new TDR-G RID without a home",
+  "detected": true
+ },
+ {
+  "id": "V18",
+  "what": "a new TDR-G RID misspelled against the source",
+  "detected": true
+ },
+ {
+  "id": "V19",
+  "what": "the artifact RID cited twice as a certificate",
+  "detected": true
+ },
+ {
+  "id": "V20",
+  "what": "Thread C recovery read as full certification",
+  "detected": true
+ },
+ {
+  "id": "V21",
+  "what": "retired TDRG.G9 reused",
+  "detected": true
+ },
+ {
+  "id": "V22",
+  "what": "SOURCES row older than the manifest (TDRG)",
+  "detected": true
+ },
+ {
+  "id": "V23",
+  "what": "SOURCES row older than the manifest (AZ)",
+  "detected": true
+ },
+ {
+  "id": "V24",
+  "what": "AZ.A5 dropped",
+  "detected": true
+ },
+ {
+  "id": "V25",
+  "what": "AZ open items shown as closed by the diagnostic",
+  "detected": true
+ },
+ {
+  "id": "V26",
+  "what": "spectrum conservation assumed across births (SG-12)",
+  "detected": true
+ }
+]
