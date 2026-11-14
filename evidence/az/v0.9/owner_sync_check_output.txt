@@ -1,0 +1,27 @@
+compared: tdrg-v2.12.14 (3be72923...) and tdrg-v2.12.15 (1e35be54...)
+TDRG-DEF-ZN-STATE                block identical heading identical ### §6.1 Primitive State and Relational Structure `[DEF]` {#sec-6-1-state}
+TDRG-DEF-PHYSICAL-STATE          block identical heading identical ### §6.1 Primitive State and Relational Structure `[DEF]` {#sec-6-1-state}
+TDRG-DEF-BAND                    block identical heading identical ### §6.1 Primitive State and Relational Structure `[DEF]` {#sec-6-1-state}
+TDRG-ALG-LEM-REACH               block identical heading identical ### §6.5 Two-Node Universe `[ALG structure]` {#sec-6-5-twonode}
+TDRG-THM-REACHABILITY-K0         block identical heading identical ### §6.5 Two-Node Universe `[ALG structure]` {#sec-6-5-twonode}
+TDRG-ALG-LEM-RETRIG              block identical heading identical ### §6.5 Two-Node Universe `[ALG structure]` {#sec-6-5-twonode}
+TDRG-ALG-LEM-SPECCONS            block CHANGED   heading identical ### §6.12 Three-Node Universe and BIND3 Certification `[ALG]` — mixed content (exact lemma and enumerations; numerical suites) {#sec-6-12-threenode} *(new in v2.12)*
+TDRG-ALG-BIND3-CYCLE-N24K1       block identical heading identical ### §6.12 Three-Node Universe and BIND3 Certification `[ALG]` — mixed content (exact lemma and enumerations; numerical suites) {#sec-6-12-threenode} *(new in v2.12)*
+TDRG-NUM-BIND3-PARITY            block identical heading identical ### §6.12 Three-Node Universe and BIND3 Certification `[ALG]` — mixed content (exact lemma and enumerations; numerical suites) {#sec-6-12-threenode} *(new in v2.12)*
+TDRG-NUM-BIND3-SPECTRAL-GATE     block identical heading identical ### §6.12 Three-Node Universe and BIND3 Certification `[ALG]` — mixed content (exact lemma and enumerations; numerical suites) {#sec-6-12-threenode} *(new in v2.12)*
+TDRG-NUM-BIND3-MEMORY-PARITY     block identical heading identical ### §6.12 Three-Node Universe and BIND3 Certification `[ALG]` — mixed content (exact lemma and enumerations; numerical suites) {#sec-6-12-threenode} *(new in v2.12)*
+TDRG-NUM-BIND3-XFER              block identical heading identical ### §6.12 Three-Node Universe and BIND3 Certification `[ALG]` — mixed content (exact lemma and enumerations; numerical suites) {#sec-6-12-threenode} *(new in v2.12)*
+TDRG-NUM-BIND3-REGEN             block identical heading identical ### §6.12 Three-Node Universe and BIND3 Certification `[ALG]` — mixed content (exact lemma and enumerations; numerical suites) {#sec-6-12-threenode} *(new in v2.12)*
+TDRG-OPEN-BIND3-NKSCAN           block identical heading identical ### TDR-24 Dependency Chain
+TDRG-OPEN-NSCALING               block identical heading identical ### Priority ordering
+TDRG-OPEN-CRYSTALLIZATION        block identical heading identical ### Priority ordering
+TDRG-OPEN-LOCKING-FAIL           block identical heading identical ### TDR-24 Dependency Chain
+TDRG-OPEN-TOPO-FILTER            block identical heading identical ### TDR-24 Dependency Chain
+TDRG-OPEN-CHI-SCALING            block identical heading identical ### TDR-24 Dependency Chain
+TDRG-OPEN-THERMO-SUPPRESS        block identical heading identical ### TDR-24 Dependency Chain
+TDRG-DEF-ORIENT                  block identical heading identical ### §6.3 Interaction Laws and Policy Definitions `[DEF]` {#sec-6-3-interaction}
+TDRG-ALG-EVENT-INVENTORY         new at tdrg-v2.12.15 ### §6.13 Token Alphabet and Birth Laws `[ALG]` {#sec-6-13-tokens} *(new in v2.12.15)*
+TDRG-ALG-TOKEN-CENSUS-LAW        new at tdrg-v2.12.15 ### §6.13 Token Alphabet and Birth Laws `[ALG]` {#sec-6-13-tokens} *(new in v2.12.15)*
+TDRG-ALG-PARENT-CHILD-PHASE      new at tdrg-v2.12.15 ### §6.13 Token Alphabet and Birth Laws `[ALG]` {#sec-6-13-tokens} *(new in v2.12.15)*
+identifiers cited in the IMP-B rows: 20; defining block identical: 19; changed: ['TDRG-ALG-LEM-SPECCONS']
+RESULT: AS RECORDED

@@ -4,7 +4,9 @@
     python3 -I evidence/az/v0.9/build_az_v0_9.py [--out PATH] [--log PATH]
 
 Adds the Action 1 Stage 1 diagnostic (PI decision of 12 Nov 2026, 16:54 +03:00) as one
-[NUM diagnostic] block, §4.2.1, with the pointers to it. Reads the base with git show az-v0.8,
+[NUM diagnostic] block, §4.2.1, with the pointers to it, and synchronizes the TDR-G owner pin
+from tdrg-v2.12.14 to tdrg-v2.12.15 (adopted 12 Nov 2026; review 5890500279; comparison in
+owner_sync_check.py). Reads the base with git show az-v0.8,
 asserts its SHA-256, applies exact-once edits, and asserts that every line of the base that is
 not named in an edit is unchanged and in order. No compaction; no other content change.
 """
@@ -109,6 +111,64 @@ def main():
     insert_before("S4.2.1", "### §4.3 Thread C — Graph/Transfer-Zeta Diagnostics", open(os.path.join(HERE, "block_4_2_1.md"), encoding="utf-8").read() + "\n",
                   "the diagnostic block (PI decision of 12 Nov 2026, 16:54 +03:00)")
 
+    # ---- owner synchronization: TDR-G tdrg-v2.12.14 -> tdrg-v2.12.15 (review 5890500279)
+    SY = "owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)"
+    sub("Y-companion", "**Companion documents:**", "Discrete Genesis v2.12.14 (`tdrg-v2.12.14`)", "Discrete Genesis v2.12.15 (`tdrg-v2.12.15`)",
+        "companion edition")
+    sub("Y-0.1", "| TDR-G $\\mathbb{Z}_N$ state space, reachability,",
+        "advance-spectrum conservation, BIND3 arithmetic/parity diagnostics | `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`)",
+        "advance-spectrum conservation, token laws, BIND3 arithmetic/parity diagnostics | `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (`tdrg-v2.12.15`)",
+        "routing row: owner pin; the token laws the owner registered at v2.12.15 are named")
+    sub("Y-0.2", "- **Thread B** (discrete $\\mathbb{Z}_N$ arithmetic structure):", "TDR-G facts at `tdrg-v2.12.14`", "TDR-G facts at `tdrg-v2.12.15`", "owner pin")
+    set_line("Y-4.2-own", "**Ownership:** `RTG_DISCRETE_GENESIS_DSN` v2.12.14", "**Ownership:** `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (`tdrg-v2.12.15`).  ", "owner pin")
+    sub("Y-5", "| TDR-G arithmetic structure |", "from Discrete Genesis v2.12.14 |", "from Discrete Genesis v2.12.15 |", "owner pin")
+    sub("Y-IMPB", "- **IMP-B** (rows of the second group).",
+        "Verification: owner statements read at `tdrg-v2.12.14` for edition v0.7 (`EV-SRC-READ`); no owner artifact inspected or rerun for these rows "
+        "(`EV-NOT-RERUN`). Synchronization: `tdrg-v2.12.14` is the governing edition; nothing pending.",
+        "Verification: owner statements read at `tdrg-v2.12.14` for edition v0.7 and compared with `tdrg-v2.12.15` for edition v0.9 (`EV-SRC-READ`; "
+        "`evidence/az/v0.9/owner_sync_check.py`): of the 20 owner identifiers cited in these rows before v0.9, the defining block of 19 is "
+        "byte-identical in the two editions and under the same section heading; `TDRG-ALG-LEM-SPECCONS` carries an owner `[COR]` to its "
+        "generalization sentence, followed in its row; the two token-law rows are new at `tdrg-v2.12.15` §6.13. No owner artifact inspected or "
+        "rerun for these rows (`EV-NOT-RERUN`); the owner's check `TDRG-NUM-TOKEN-LAW-CHECK` is the owner's and is not reproduced here. "
+        "Synchronization: `tdrg-v2.12.15` is the governing edition (owner notice `pipes/AZ/20261112-TDRG-v2-12-15-adopted.md`); nothing pending.",
+        "import clause: verification and synchronization state at the new owner edition")
+    set_line("Y-8-head", "### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.14",
+             "### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (`tdrg-v2.12.15`) — clauses IMP-B", "owner pin")
+    for key, prefix, old in (
+            ("Y-r1", "- [RID: TDRG-DEF-ZN-STATE] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 §6.1"),
+            ("Y-r2", "- [RID: TDRG-DEF-PHYSICAL-STATE] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 §6.1"),
+            ("Y-r3", "- [RID: TDRG-DEF-BAND] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 §6.1"),
+            ("Y-r4", "- [RID: TDRG-ALG-LEM-REACH] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 (located by identifier)"),
+            ("Y-r5", "- [RID: TDRG-ALG-LEM-RETRIG] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 (located by identifier)"),
+            ("Y-r6", "- [RID: TDRG-ALG-LEM-SPECCONS] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 (located by identifier)"),
+            ("Y-r7", "- [RID: TDRG-ALG-BIND3-CYCLE-N24K1;", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 (located by identifier)"),
+            ("Y-r8a", "- [RID: TDRG-OPEN-NSCALING; TDRG-OPEN-CRYSTALLIZATION] ::", "TDR-G v2.12.14 reports that"),
+            ("Y-r8b", "- [RID: TDRG-OPEN-NSCALING; TDRG-OPEN-CRYSTALLIZATION] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 §1"),
+            ("Y-r9", "- [RID: TDRG-OPEN-LOCKING-FAIL] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 §2 OPEN TDR-26"),
+            ("Y-r10a", "- [RID: TDRG-OPEN-TOPO-FILTER; TDRG-OPEN-CHI-SCALING; TDRG-OPEN-THERMO-SUPPRESS] ::", "In TDR-G v2.12.14 the slot-volume identity"),
+            ("Y-r10b", "- [RID: TDRG-OPEN-TOPO-FILTER; TDRG-OPEN-CHI-SCALING; TDRG-OPEN-THERMO-SUPPRESS] ::", "`RTG_DISCRETE_GENESIS_DSN` v2.12.14 §2 :: owner OPEN modules")):
+        sub(key, prefix, old, old.replace("v2.12.14", "v2.12.15"), SY)
+    sub("Y-r6-cor", "- [RID: TDRG-ALG-LEM-SPECCONS] ::",
+        "Star blow-up creates new nodes and new pairwise advances; generalization beyond the no-birth sector remains source-scoped/open.",
+        "At `tdrg-v2.12.15` (owner `[COR]` to the generalization): the $n$-node birth-free statement is proved (`TDRG-ALG-SPECCONS-N`, "
+        "§6.13); across star blow-up the update is exact but not determined by the spectrum, and a spectrum-level invariant of the full dynamics "
+        "is open (`TDRG-OPEN-SPECCONS-STAR`).",
+        "owner [COR] of v2.12.15 to the generalization sentence of LEM-SPECCONS, followed here")
+    insert_after("Y-rows", "- [RID: TDRG-ALG-LEM-SPECCONS] ::",
+                 "- [RID: TDRG-ALG-EVENT-INVENTORY; TDRG-ALG-TOKEN-CENSUS-LAW] :: token-changing events and the signed token alphabet with its census "
+                 "law: under the owner's event inventory every token stays in $S_0=A_0\\cup(-A_0)$, the set of initial tokens and their negatives, "
+                 "and the token census changes only at births, by the negatives of the centre tokens. Proposed by AZ (Action 1 registration), "
+                 "accepted with change, proved and owned by TDR-G, credited to AZ. Local use: §4.2.1 names it as the law whose registration "
+                 "formulation the per-tick check of `AZ-ART-TOKRES-S1` tested; it is not an explanation of the tail and no AZ number depends on it. "
+                 ":: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 §6.13 :: owner `[ALG]`; `[scope: the six policies of the owner's §6.3, either orientation rule]`\n"
+                 "- [RID: TDRG-ALG-PARENT-CHILD-PHASE] :: free parent–child phase law: if after a star event the centre keeps $-x$ and the newborn "
+                 "$x$ for $j$ advances, their phase separation is $N/2+2jx$, and along the free orbit it stays in $\\{N/2,0\\}$ iff $4x\\equiv0\\pmod N$. "
+                 "The owner states it as a kinematic identity, not a bond-persistence or growth mechanism, with no bearing on `TDRG-OPEN-LOCKING-FAIL` "
+                 "or TDR-26. Local use: it gives the arithmetic condition $4x\\equiv0$ of the intervention of §4.2.1; whether that condition acts "
+                 "through this identity is untested. :: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 §6.13 :: owner `[ALG]`; "
+                 "`[scope: two-body kinematics under a token-persistence hypothesis]`",
+                 "two owner results registered at tdrg-v2.12.15 from the AZ offer, cited at their point of use with their hypotheses")
+
     # ---- high-risk ledger
     insert_after("S5-row", "| TDR-G BIND3 / advance-spectrum |",
                  "| **Seed-token resonance diagnostic** (`AZ-NUM-TOKRES-S1`) | **`[NUM diagnostic]`: registered paired contrast at $N\\in\\{120,122\\}$, "
@@ -135,7 +195,11 @@ def main():
                   "One addition: the Action 1 Stage 1 result enters as an AZ-owned `[NUM diagnostic]`, `AZ-NUM-TOKRES-S1` (§4.2.1), by the PI's "
                   "decision of 12 November 2026 under the outcome rule of the same day — a registered paired contrast on seed-token resonance at "
                   "$N=120$ and $N=122$, with its scope and its evidence (`AZ-ART-TOKRES-S1`, §9). Pointers to it in §0.1, §0.2, §1.1, §4.2 and §5. "
-                  "The maturity level, the OPEN registry and every earlier statement are unchanged. Record: `records/az/AZ_v0_9_RELEASE_RECORD.md`.\n",
+                  "Owner synchronization: the TDR-G pin moves from `tdrg-v2.12.14` to `tdrg-v2.12.15` (adopted 12 November 2026). Of the 20 owner "
+                  "identifiers cited in §8, 19 are unchanged in their defining blocks; `TDRG-ALG-LEM-SPECCONS` is followed in the owner's `[COR]`; two "
+                  "rows are added for the token laws TDR-G registered from the AZ offer, which §4.2.1 now cites as owner results. TDR-G did not adopt "
+                  "the diagnostic or its numbers. "
+                  "The maturity level, the OPEN registry and every earlier AZ-owned statement are unchanged. Record: `records/az/AZ_v0_9_RELEASE_RECORD.md`.\n",
                   "version entry")
 
     out = "\n".join(L)
@@ -155,10 +219,10 @@ def main():
                 break
         else:
             die("a base line is missing or out of order: %r" % bl[:80])
-    if len(changed_old) != 5 or len(sub_lines) != 4:
+    if len(changed_old) != 7 or len(sub_lines) != 18:
         die("unexpected number of changed base lines: %d set, %d substituted" % (len(changed_old), len(sub_lines)))
     for bad in ("v0.8*", "candidate of v0.8", "(bridge-candidate only)", "continuous distribution of $M$", "There is no relation to the Hashimoto",
-                "is a candidate only"):
+                "is a candidate only", "offered to TDR-G through", "`tdrg-v2.12.14` is the governing edition", "statement offered to TDR-G"):
         if bad in out:
             die("stale string %r" % bad)
     open(a.out, "w", encoding="utf-8", newline="").write(out)

@@ -1,7 +1,7 @@
 AZ v0.9 edit log
 base az-v0.8 146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76
-result sha256 4fac5f517712f93543e4c09a05c8c28cdc3a7c57cb5e8992ff5c97d5fdd9c0a2, 97620 bytes
-base lines: 602; unchanged and in order: 593; replaced: 5; edited in place: 4
+result sha256 8fc940797089c9627a9e75f0108cc0fce9af4d28d282d1afdef4b483c0ea6c29, 100945 bytes
+base lines: 602; unchanged and in order: 577; replaced: 7; edited in place: 18
 
 E01 H-title      set-line     
     old: # RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.8
@@ -47,15 +47,99 @@ E11 S4.2.1       insert-before
     old: ### §4.3 Thread C — Graph/Transfer-Zeta Diagnostics
     new: 21 lines
     why: the diagnostic block (PI decision of 12 Nov 2026, 16:54 +03:00)
-E12 S5-row       insert-after 
+E12 Y-companion  sub          
+    old: Discrete Genesis v2.12.14 (`tdrg-v2.12.14`)
+    new: Discrete Genesis v2.12.15 (`tdrg-v2.12.15`)
+    why: companion edition
+E13 Y-0.1        sub          
+    old: advance-spectrum conservation, BIND3 arithmetic/parity diagnostics | `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`)
+    new: advance-spectrum conservation, token laws, BIND3 arithmetic/parity diagnostics | `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (`tdrg-v2.12.15`)
+    why: routing row: owner pin; the token laws the owner registered at v2.12.15 are named
+E14 Y-0.2        sub          
+    old: TDR-G facts at `tdrg-v2.12.14`
+    new: TDR-G facts at `tdrg-v2.12.15`
+    why: owner pin
+E15 Y-4.2-own    set-line     
+    old: **Ownership:** `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`).  
+    new: **Ownership:** `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (`tdrg-v2.12.15`).  
+    why: owner pin
+E16 Y-5          sub          
+    old: from Discrete Genesis v2.12.14 |
+    new: from Discrete Genesis v2.12.15 |
+    why: owner pin
+E17 Y-IMPB       sub          
+    old: Verification: owner statements read at `tdrg-v2.12.14` for edition v0.7 (`EV-SRC-READ`); no owner artifact inspected or rerun for these rows (`EV-NOT-RERUN`). Synchronization: `tdrg-v2.12.14` is the governing edition; nothing pending.
+    new: Verification: owner statements read at `tdrg-v2.12.14` for edition v0.7 and compared with `tdrg-v2.12.15` for edition v0.9 (`EV-SRC-READ`; `evidence/az/v0.9/owner_sync_check.py`): of the 20 owner identifiers cited in these rows before v0.9,
+    why: import clause: verification and synchronization state at the new owner edition
+E18 Y-8-head     set-line     
+    old: ### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`) — clauses IMP-B
+    new: ### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (`tdrg-v2.12.15`) — clauses IMP-B
+    why: owner pin
+E19 Y-r1         sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 §6.1
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 §6.1
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E20 Y-r2         sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 §6.1
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 §6.1
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E21 Y-r3         sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 §6.1
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 §6.1
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E22 Y-r4         sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (located by identifier)
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (located by identifier)
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E23 Y-r5         sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (located by identifier)
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (located by identifier)
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E24 Y-r6         sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (located by identifier)
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (located by identifier)
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E25 Y-r7         sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (located by identifier)
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (located by identifier)
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E26 Y-r8a        sub          
+    old: TDR-G v2.12.14 reports that
+    new: TDR-G v2.12.15 reports that
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E27 Y-r8b        sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 §1
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 §1
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E28 Y-r9         sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 §2 OPEN TDR-26
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 §2 OPEN TDR-26
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E29 Y-r10a       sub          
+    old: In TDR-G v2.12.14 the slot-volume identity
+    new: In TDR-G v2.12.15 the slot-volume identity
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E30 Y-r10b       sub          
+    old: `RTG_DISCRETE_GENESIS_DSN` v2.12.14 §2 :: owner OPEN modules
+    new: `RTG_DISCRETE_GENESIS_DSN` v2.12.15 §2 :: owner OPEN modules
+    why: owner pin synchronized to tdrg-v2.12.15; defining block identical in the two editions (owner_sync_check.py)
+E31 Y-r6-cor     sub          
+    old: Star blow-up creates new nodes and new pairwise advances; generalization beyond the no-birth sector remains source-scoped/open.
+    new: At `tdrg-v2.12.15` (owner `[COR]` to the generalization): the $n$-node birth-free statement is proved (`TDRG-ALG-SPECCONS-N`, §6.13); across star blow-up the update is exact but not determined by the spectrum, and a spectrum-level invariant
+    why: owner [COR] of v2.12.15 to the generalization sentence of LEM-SPECCONS, followed here
+E32 Y-rows       insert-after 
+    old: - [RID: TDRG-ALG-LEM-SPECCONS] ::
+    new: 2 lines
+    why: two owner results registered at tdrg-v2.12.15 from the AZ offer, cited at their point of use with their hypotheses
+E33 S5-row       insert-after 
     old: | TDR-G BIND3 / advance-spectrum |
     new: 1 lines
     why: high-risk row
-E13 S9           insert-before
+E34 S9           insert-before
     old: **Two definitions of `G_birth(w)` in the deposited files — recorded, not resolved.**
     new: 2 lines
     why: artifact entry
-E14 AppA         insert-before
+E35 AppA         insert-before
     old: ### v0.8 — November 2026
     new: 2 lines
     why: version entry
