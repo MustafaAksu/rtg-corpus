@@ -1,0 +1,121 @@
+[
+ {
+  "key": "TDRG.G8",
+  "disposition": "reworded",
+  "reason": "reworded; operations: TDRG.G8 at v2.12.15",
+  "previous_sha256": "d477cd5dd9fb7af668bc3f9c203cbe339826c057489bff3a5c84761ddc1020b2",
+  "current_sha256": "a8f42d18f657c50edd28853858ebe59f3dac6ef1af29e5bac497ce7653a5b11e"
+ },
+ {
+  "key": "TDRG.G9",
+  "disposition": "retired",
+  "reason": "TDR-G v2.12.15 (tdrg-v2.12.15 §2, edits E09–E10 of its edit log): the row recorded one question under two RIDs — the pairwise-difference-multiset sub-item of TDR-6 (TDRG-OPEN-BIRTH-INVARIANT) and TDRG-OPEN-SPECCONS-STAR. The owner now separates them: the TDR-6 sub-item is resolved as a predictable-change law (TDRG-ALG-TOKEN-CENSUS-LAW, TDRG-ALG-BIRTH-SPECTRUM-INJECTION, TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED), and TDRG-OPEN-SPECCONS-STAR stays ACTIVE for a different question (a spectrum-level invariant or a law closed on the spectrum, and which centre tokens fire). No duplicate remains; the frontier line carries both items with their statuses.",
+  "previous_sha256": "c8e9c2117276b16ad40aab6a4474d3f3a3a8b67e47b540b9298db90a647e81ae",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G10",
+  "disposition": "reworded",
+  "reason": "reworded; operations: TDRG.G10 head",
+  "previous_sha256": "7dd47b2cdda6515852d1d7e87e5bc1dd9d3b1d770d1b232f94efa5444a955243",
+  "current_sha256": "c93f34ef84ed41d2a097317fc11e2cddc365afda584735b0c05c8247c50c7d23"
+ },
+ {
+  "key": "TDRG.G11",
+  "disposition": "reworded",
+  "reason": "reworded; operations: TDRG.G11: new placed artifact; TDRG.G11 head",
+  "previous_sha256": "e087c6567031780e98d69f1d2626f8cf8c63a2b9c5dc217bf36806830f41ef01",
+  "current_sha256": "e446c76e2e79f012b7b52b66b8e1e2d6c02bd5d72674f47b732f1aa4a58b4845"
+ },
+ {
+  "key": "AZ.A5",
+  "disposition": "reworded",
+  "reason": "reworded; operations: AZ.A5 kept; AZ clause at v0.9 (D2 row); AZ.A5 kept; AZ clause at v0.9 (D5 row)",
+  "previous_sha256": "5b6bb175304d8987116c4cc92080d26d915976066a8f07bc8d0b175a32626fcc",
+  "current_sha256": "64ee313bb5fccaa675fc5ab9d8d06d6670f251c1c8c00c16f6e321dbce9700bb"
+ },
+ {
+  "key": "D5.X1",
+  "disposition": "reworded",
+  "reason": "reworded; operations: D5.X1 head",
+  "previous_sha256": "786c09691fe8c959790113635f299cc918cb12d7dff78b8e782815f9e2621e0a",
+  "current_sha256": "67d61d68a93f99480308a99746c06d8a811f0f523be402b2fc3fc5c738e206c2"
+ },
+ {
+  "key": "D5.X3",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.13 sources",
+  "previous_sha256": "df04657c011bb80a0eb6cb7f5bd181c938eacf55ffc0fc32ae73076ae16e18d1",
+  "current_sha256": "df04657c011bb80a0eb6cb7f5bd181c938eacf55ffc0fc32ae73076ae16e18d1"
+ },
+ {
+  "key": "NUMGEN.N-R1",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.13 sources",
+  "previous_sha256": "a64ba5f2547ec7b1a8776f5f44a34fbc346cee875cc45d5ec694da1a9949e772",
+  "current_sha256": "a64ba5f2547ec7b1a8776f5f44a34fbc346cee875cc45d5ec694da1a9949e772"
+ },
+ {
+  "key": "NUMGEN.N-S2",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.13 sources",
+  "previous_sha256": "797fa671dc3857de8163990dcfcdbab1f6f9b27adc9c8262d6c9b696cdd3eb10",
+  "current_sha256": "797fa671dc3857de8163990dcfcdbab1f6f9b27adc9c8262d6c9b696cdd3eb10"
+ },
+ {
+  "key": "PROG.G6",
+  "disposition": "reworded",
+  "reason": "reworded; operations: PROG.G6: AZ state after the Programme snapshot",
+  "previous_sha256": "fdd4d90d84cc753f97c816c71e5e93abbee64f97b81ccb59362e836904f60bd6",
+  "current_sha256": "26b571ac0b4aa18ec43c7dd65914dfa1734e735b6c3dc5e43fca428229d0385e"
+ },
+ {
+  "key": "METH.M1",
+  "disposition": "reworded",
+  "reason": "reworded; operations: METH.M1: AZ leaves the row",
+  "previous_sha256": "0c570df5122258d069c4ed224e7bf3bf67839d859d765ae2d7339a944125093f",
+  "current_sha256": "ef9614f68ea9acbc0bca62757ce868edebfc631c83758862747a38b51be158da"
+ },
+ {
+  "key": "METH.M2",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.13 sources",
+  "previous_sha256": "8d0ed4e162183fb609e1ff56f6740e79e4b6c3c7137034c4e0ffdc7d375db790",
+  "current_sha256": "8d0ed4e162183fb609e1ff56f6740e79e4b6c3c7137034c4e0ffdc7d375db790"
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "reworded",
+  "reason": "reworded; operations: pipe census at 2676e6f",
+  "previous_sha256": "b9dd72cff6487d5711c49a1d8d3b5b1ac2f820ea917d47e937f158872f678820",
+  "current_sha256": "11d4e294ffd737b28de1da4fe9db70429cc9d4e6c1c9863ab47116f17713b94c"
+ },
+ {
+  "key": "OPENM.U11",
+  "disposition": "reworded",
+  "reason": "reworded; operations: OPENM.U11: AZ edition label",
+  "previous_sha256": "f94c7fbba4df320e12b87d3c3e7b15fc636fa60726667f257a1db3acd285b11e",
+  "current_sha256": "f6e9f131bb89d0919f2ea170c1c9899b833cbf5a0c4baa5037b9ee360397c129"
+ },
+ {
+  "key": "OPENM.U2",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.13 sources",
+  "previous_sha256": "b5e83ca8d6bf9cdee7a47f561393a318d63268443a63f4a456b96322a3c60573",
+  "current_sha256": "b5e83ca8d6bf9cdee7a47f561393a318d63268443a63f4a456b96322a3c60573"
+ },
+ {
+  "key": "DYAD.X8",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.13 sources",
+  "previous_sha256": "d044a35089a848ba4f66d0e36a1a768b8f56324b064e0cd9db378fce751b6238",
+  "current_sha256": "d044a35089a848ba4f66d0e36a1a768b8f56324b064e0cd9db378fce751b6238"
+ },
+ {
+  "key": "DZT.Q1",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.13 sources",
+  "previous_sha256": "59dae5ca07d10b569cd4d2f40cb0d981df1e9457fa7d06d214d997b14efd62f3",
+  "current_sha256": "59dae5ca07d10b569cd4d2f40cb0d981df1e9457fa7d06d214d997b14efd62f3"
+ }
+]
