@@ -1,7 +1,7 @@
 {
  "base_tag": "tdrg-v2.12.15",
  "base_sha256": "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64",
- "intermediate_sha256": "b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc",
+ "intermediate_sha256": "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff",
  "edits": [
   {
    "key": "E01",
@@ -277,9 +277,9 @@
    "key": "E28",
    "mode": "insert",
    "after": "- Post-edition data, not cited by any claim here:",
-   "new_lines": 17,
-   "new_sha256": "44d0c31e9e6a32de9b69048f20b3d96f74b0eb77791077229adc5e77513308af",
-   "note": "D3 (a), S5: the table and its [RESULT] carry live records (a [FAIL] row that invalidates the v1–v2 results); stage 2 removes the Appendix A copy"
+   "new_lines": 15,
+   "new_sha256": "264430fc05d70b7e6e15b139038b478befa82aebc1181f8326b717a74e2c8ecd",
+   "note": "D3 (a), S5: the table carries live records (a [FAIL] row that invalidates the v1–v2 results); review R1: the closing interpretive [RESULT] is not promoted to live text; stage 2 removes the Appendix A copy"
   },
   {
    "key": "E29",

@@ -22,10 +22,11 @@ Gates
                 owner-review tasks; no stale pin or stale v2.13 promise is left in the live text
   C7 §1         word count (dsn_lint method) at most 420; every RID it names is declared in the live text;
                 every statement dropped from §1 still has its home outside §1 (home table below)
-  C8 §A.sim     the §8 copy of the table and its [RESULT] equals the Appendix A block byte for byte
+  C8 §A.sim     the §8 copy of the table equals the Appendix A table byte for byte, and the closing
+                interpretive [RESULT] of §A.sim is not in the live text (review R1, PR #268)
   C9 App. B     the new record quotes the removed hypothesis verbatim
   C10 header    DSN Methodology v1.4; status summary of 2–4 sentences whose numbers occur in the live text
-Exit 0 = all gates pass. --controls runs nine mutations and requires each to fail its target gate.
+Exit 0 = all gates pass. --controls runs ten mutations and requires each to fail its target gate.
 """
 import collections, difflib, hashlib, importlib.util, json, os, re, subprocess, sys
 
@@ -42,7 +43,7 @@ RID_DECL = re.compile(r"\[RID: ([A-Z0-9-]+)\]")
 RID_ANY = re.compile(r"\b(?:TDRG|RTG-OFN|AZ)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b")
 TAG = re.compile(r"`\[[A-Z][A-Za-z -]*?\]`")
 NEW_IDS = {"RTG-OFN-OPEN-DISC-INTERACTION"}
-TAG_OUT = {"`[COR]`": 11, "`[REVISED]`": 1}
+TAG_OUT = {"`[COR]`": 11, "`[REVISED]`": 1, "`[RESULT]`": 1}
 TAG_IN = {"`[ALG]`": 3, "`[HEUR]`": 1, "`[FAIL]`": 1, "`[NUM]`": 1, "`[ENG]`": 5}
 # statements of the base §1 that the new §1 drops or shortens, and a string that must still occur at
 # their home outside §1 (D1 (a), S6)
@@ -167,9 +168,12 @@ def gates(base, cand, log):
       "%d words; %d RIDs named, undeclared %s; %d homes checked, missing %s" % (words, len(rids), undeclared, len(HOMES), nohome))
 
     a = cand.index("### §A.sim — Simulation Artifact Evolution `[ENG]`")
-    appx = cand[a:cand.index("\n---", a)].split("\n", 2)[2].strip("\n")
+    blk = cand[a:cand.index("\n---", a)].split("\n", 2)[2].strip("\n")
+    res = "`[RESULT]` Policy and bookkeeping bugs can invert the cosmological interpretation."
+    appx = blk.split("\n\n")[0]
     sec8 = section(cand, "## §8.")
-    g("C8 §A.sim", appx in sec8 and sec8.count(appx) == 1, "%d bytes, verbatim in §8" % len(appx.encode()))
+    g("C8 §A.sim", appx.startswith("| Version |") and blk.endswith(res) and sec8.count(appx) == 1 and res not in L,
+      "table %d bytes, verbatim in §8; closing [RESULT] not in the live text" % len(appx.encode()))
 
     hyp = [l for l in base.split("\n") if l.startswith("**`[REVISED]` v2.8 failed-relock hypothesis")][0].split(":** ", 1)[1]
     appb = section(cand, "## Appendix B", "\n---")
@@ -204,6 +208,10 @@ def controls(base, cand, log):
         ("K8 fifth summary sentence", "C10", lambda t: t.replace("relabelling-covariant on the canonical branch (SG-14).",
             "relabelling-covariant on the canonical branch (SG-14). It is complete. It is closed.", 1)),
         ("K9 stale v2.13 promise reintroduced", "C6", lambda t: t.replace("**open**, a separate decision of both owners", "**deferred** to v2.13", 1)),
+        ("K10 unpaired [RESULT] promoted to §8 (review R1)", "C8", lambda t: t.replace(
+            "| v13 | CLI support + corrected `orientation_ties` counter | `[ENG]` |\n\n---",
+            "| v13 | CLI support + corrected `orientation_ties` counter | `[ENG]` |\n\n"
+            "`[RESULT]` Policy and bookkeeping bugs can invert the cosmological interpretation.\n\n---", 1)),
     ]
     caught = 0
     for name, target, f in M:

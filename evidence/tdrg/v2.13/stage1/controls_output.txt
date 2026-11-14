@@ -7,4 +7,5 @@ K6 §A.sim copy altered: CAUGHT (target C8 FAIL; C1 FAIL)
 K7 Appendix B paraphrased: CAUGHT (target C9 FAIL; C1 FAIL)
 K8 fifth summary sentence: CAUGHT (target C10 FAIL; C1 FAIL)
 K9 stale v2.13 promise reintroduced: CAUGHT (target C6 FAIL; C1 FAIL)
-CONTROLS: 9/9 caught
+K10 unpaired [RESULT] promoted to §8 (review R1): CAUGHT (target C8 FAIL; C1 FAIL)
+CONTROLS: 10/10 caught

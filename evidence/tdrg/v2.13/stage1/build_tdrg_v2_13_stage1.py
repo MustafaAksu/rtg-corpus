@@ -216,11 +216,14 @@ def build(base):
     table = d.L[i + 2:j - 1]
     if not (table[0].startswith("| Version |") and table[-1].startswith("| v13 |") and d.L[i + 1] == "" and d.L[j - 1] == ""):
         die("E28: §A.sim layout not as expected")
-    sim = "\n".join(["", "**Simulation artifact evolution** `[ENG]` (engine lineage; moved verbatim from Appendix A §A.sim):", ""]
-                    + table + ["", d.L[j]])
+    # review R1 (PR #268): only the evidence table becomes live; the closing interpretive `[RESULT]` of §A.sim,
+    # which has no `[from: …]` pairing (Methodology §3.4), is not promoted and stays at the tagged predecessor
+    sim = "\n".join(["", "**Simulation artifact evolution** `[ENG]` (engine lineage; the table of Appendix A §A.sim, moved verbatim):", ""]
+                    + table)
     d.insert_after("E28", "- Post-edition data, not cited by any claim here:", sim,
-                   "D3 (a), S5: the table and its [RESULT] carry live records (a [FAIL] row that invalidates the "
-                   "v1–v2 results); stage 2 removes the Appendix A copy")
+                   "D3 (a), S5: the table carries live records (a [FAIL] row that invalidates the v1–v2 results); "
+                   "review R1: the closing interpretive [RESULT] is not promoted to live text; stage 2 removes the "
+                   "Appendix A copy")
 
     # S8 — Appendix B record of the superseded hypothesis
     rec = ("- `[SUPERSEDED]` Failed-relock hypothesis for the $N=720$ runaway (v2.8, TDR-25). Original: \"" +
