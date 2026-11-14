@@ -1,0 +1,5 @@
+Stage 2 analysis script SHA-256 f89737e778578bcce2f771544515d0230550b63775e82d1744937ef998c894db
+N240k16T1460.jsonl: SHA-256 as registered; 3000 records, structure and identity as expected; 204 with a resonant seed token, 2796 without
+N242k16T1460.jsonl: SHA-256 as registered; 3000 records, structure and identity as expected; 87 with a resonant seed token, 2913 without
+N480k32T2670.jsonl: SHA-256 as registered; 3000 records, structure and identity as expected; 94 with a resonant seed token, 2906 without
+PILOT CHECK PASS
