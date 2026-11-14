@@ -1,0 +1,4 @@
+candidate 8fc940797089c9627a9e75f0108cc0fce9af4d28d282d1afdef4b483c0ea6c29  (git show cc26933c2d8233f190cdf7550ce064d153c0c332:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md)
+published c198a8bbddb23ce0d546c3ed03bddcdcf02dd83b974da7651a89a3fec5ac7598  100978 bytes
+lines that differ from the candidate: [4, 10, 630] (of 631)
+RESULT: PASS
