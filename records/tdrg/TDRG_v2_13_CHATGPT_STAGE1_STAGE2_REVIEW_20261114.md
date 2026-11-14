@@ -77,3 +77,51 @@ Under Methodology v1.4 §13.8, growth per new RID is N/A when no RID is added. K
 Request a single correction round addressing R1 and R2, then rerun the 11 Stage-1 gates/9 negative controls and Stage-2 movement-map and 8 negative controls; a changed Stage-1 hash requires a new Stage-2 candidate and map identity. Seek a targeted readback of the corrected spans and then an atlas row check, followed by the PI's separate adoption and authorized merge/tag. Do not perform unchanged BIND3/NKSCAN/scaling campaigns or implement TDR-19/XFER actions during this maintenance review.
 
 PR #263's plan content already sits on PR #265; it does not require an independent merge merely to preserve the plan. Any later closeout of the duplicate plan PR is an administrative owner choice. No DSN, engine, inbox, canonical tag or main-branch change was performed in this review.
+
+
+## 6. Round-2 readback — 14 November 2026
+
+**Target:** PR #265 head f38c538a4295437873bfd2c3c20ea9c196c70811, after the owner's response to R1 and R2. This section supersedes only the open conditions of §3 above; the round-1 evidence and limitations remain preserved.
+
+**Verdict: PASS / REVIEW CLOSED** for the exact **DRAFT** candidate SHA-256 c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14. This is a co-owner scientific/structural review verdict, not PI adoption or an authorization to merge/tag.
+
+### Source identities and independent mechanical replay
+
+**[SESSION — independent SHA-256 and exact replay]** Reopened and hashed the adopted predecessor, both old/new Stage-1 intermediates, both old/new Stage-2 candidates and the new movement map using full GitHub-fetched content. Relevant identities:
+
+| Object | SHA-256 |
+|---|---|
+| Adopted base tdrg-v2.12.15 | 1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64 |
+| Stage-1 intermediate (commit fd96f8a0b33a1236989b9e941b1c1c0e2381f2db) | 472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff |
+| Stage-2 candidate (PR #265 head f38c538) | c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14 |
+| Stage-2 movement map | ece985e46464b68d00636168c8f56e716c5dd4d1008f77780ed82bd22639217b |
+
+The Stage-2 map again has 43 operations. **Independently** applied all its operations to the new Stage-1 bytes (40 unique anchored history-label substitutions, header replacement, Appendix A replacement, footer replacement). The result is byte-identical to the PR #265 candidate, and the SHA-256 agrees. This does not imply the standalone Python checker was independently run.
+
+Live RID declarations in §§2–9: **81/81 preserved**, same across tagged base, new intermediate and new candidate. OPEN records by heading, RID and status: **21/21 preserved**, after omitting the historical version marker in the status display. No other adopted scientific campaign was rerun.
+
+### R1 — CLOSED
+
+The chosen second remedy is correct and strictly limited. The old Stage-1 intermediate and the new intermediate differ in the §8 simulation-artifact insertion: its descriptive heading now specifies that the **table** is moved verbatim, the table rows themselves are unchanged, and the sentence
+
+> [RESULT] Policy and bookkeeping bugs can invert the cosmological interpretation.
+
+is **not imported into live §8**. The sentence remains in the immutable Appendix A of adopted tag tdrg-v2.12.15, and the new compact Appendix A entry expressly points to that preserved history. This does not invent a [from:] grade or alter any live technical result. The only other bare RESULT use inspected in the v2.13 live candidate (§6.5) is properly paired with [from: THM].
+
+[OWNER: Methodology v1.4 §3.4] A live RESULT requires a canonical [from:] qualifier. The new candidate satisfies this requirement for the affected text. The change narrows D3(a)'s literal whole-block transfer to a **verbatim table transfer plus historical retention of the interpretation**. This is a justifiable conservative maintenance interpretation; the PI should see the narrowing in the adoption record rather than treat it as a new physics or grade choice.
+
+The Stage-1 checker now reports 11/11 PASS, 10/10 negative controls including **K10**, designed to catch reintroducing the unpaired RESULT in live §8. These are owner-run outputs read from the PR; no standalone execution is claimed.
+
+### R2 — CLOSED
+
+The release record §8 now reproduces the raw lint count (new_rids=1, which is a newly *mentioned* pre-existing OFN RID) and states separately that no new TDR-G RID is declared and that growth per newly registered TDR-G RID is N/A. This resolves the recording ambiguity without altering the lint output or DSN.
+
+### New Stage-2 report
+
+The new owner-run compaction output reports **PASS** (267 qualified live claim blocks: 243 byte-identical, 24 declared changes, 0 unexplained) and 8/8 negative controls. Independent map replay, original source/target identities, 81 declared RID identities and 21 OPEN statuses confirm mechanical scope at the new bytes. The candidate is now 157,343 bytes (compared with 196,268 at tdrg-v2.12.15). R1's Stage-1 change required rebuilding the Stage-2 candidate; this was done.
+
+### Publication boundary
+
+Round-2 review is **PASS** at exactly c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14. The Atlas owner row check, PI adoption decision, publication status/header and BASELINE update, final merge ancestry/mergeability and annotated tag remain separate steps. **Do not merge or tag on this reviewer verdict alone**.
+
+Earlier nonblocking limitations remain: different crystallization HEUR grades in historical/live contexts (owner scientific decision), no TDR-19 largest_center law choice, and no XFER-O08-01 custody transfer. No additional TDR-G numerical campaign is indicated by this round-2 correction.
