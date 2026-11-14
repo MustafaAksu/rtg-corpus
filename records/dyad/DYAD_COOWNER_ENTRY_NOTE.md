@@ -22,15 +22,15 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 |---|---|---|
 | v6.4.24 maintenance edition | `records/dyad/DYAD_v6_4_24_BACKLOG.md`; draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`; branch `claude/dyad-v6.4.24` | ADOPTED by the PI on 11 Nov 2026 (`10fbdacc…bc16`) and tagged; r1 review `5856200509`, r2 read-back `5857204402`; post-tag record `records/dyad/DYAD_v6_4_24_POST_TAG.md`; seven notices filed. Backlog §D carries over |
 | S1, OPEN 21 on the sharpened R9 rows | `records/dyad/DYAD_S1_OPEN21_SHARP_ROWS_DESIGN.md`; `evidence/dyad/s1-open21-sharp/` | in the DSN since v6.4.24 as `DYAD-THM-OPEN21-SHARP-ROWS`; offered to RECOG for A1a |
-| OPEN 20 analytic branch, sectorial pilot | `records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md` (§7 stage 1, §8 stage 3a, §9 inputs to 3b); `…_STAGE2_SCOUTING_NUM.md`; `…_STAGE2B_JUMP_SCOUTING_NUM.md`; `…_LH2012_OWNER_ASSESSMENT.md` (§5, §6); `DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md` | stage 3a done, negative; stage 2b done (`[NUM]`: jump numerically nonzero); both LIT literature replies dispositioned (§9); state recorded in the DSN's OPEN 20 entry (v6.4.24); **3b design note r2** (`DYAD_OPEN20_AN_STAGE3B_DESIGN.md`, sampling in `evidence/dyad/open20-an/stage3b-design/`; PR #218): r1 reviewed REVISE (`5858511915`, R1–R5), r2 read back ACCEPT scoped (`5858796744`); **accepted by the PI on 11 Nov 2026 as the basis for the stage-3c certificate design** (note §12); **stage 3c-a authorized by the PI on 11 Nov 2026** (proof record and certificate script, no claim); plan and progress in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; 3c-b (certification run) not authorized; L3 and P1, P3–P11 open |
-| Inbox rounds | `DYAD_OWNER_DISPOSITION_INBOX_20261030.md` with its reconciliation; `DYAD_INBOX_20261111_OWNER_DISPOSITION.md`; `DYAD_v6_4_24_POST_TAG.md` §3 | all closed |
+| OPEN 20 analytic branch, sectorial pilot | `records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md` (§7 stage 1, §8 stage 3a, §9 inputs to 3b); `…_STAGE2_SCOUTING_NUM.md`; `…_STAGE2B_JUMP_SCOUTING_NUM.md`; `…_LH2012_OWNER_ASSESSMENT.md` (§5, §6); `DYAD_OWNER_REVIEW_OPEN20_BOUNDS_PREFLIGHT.md` | stage 3a done, negative; stage 2b done (`[NUM]`: jump numerically nonzero); both LIT literature replies dispositioned (§9); state recorded in the DSN's OPEN 20 entry (v6.4.24); **3b design note r2** (`DYAD_OPEN20_AN_STAGE3B_DESIGN.md`, sampling in `evidence/dyad/open20-an/stage3b-design/`; PR #218): r1 reviewed REVISE (`5858511915`, R1–R5), r2 read back ACCEPT scoped (`5858796744`); **accepted by the PI on 11 Nov 2026 as the basis for the stage-3c certificate design** (note §12); **stage 3c-a authorized by the PI on 11 Nov 2026** (proof record and certificate script, no claim); plan and progress in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; 3c-b (certification run) not authorized; W1–W8 done as development and working records, hand-over in `DYAD_OPEN20_AN_STAGE3C_A_HANDOVER.md`; LIT's reply on L1, L3 accepted as a check of use (SESSION), so condition 1 of the design is met at that scope; LIT's INF-016 (first-harmonic route to B-an, B-6) deferred; the seed (Q1–Q3) and P4 open |
+| Inbox rounds | `DYAD_OWNER_DISPOSITION_INBOX_20261030.md` with its reconciliation; `DYAD_INBOX_20261111_OWNER_DISPOSITION.md`; `DYAD_v6_4_24_POST_TAG.md` §3; `DYAD_INBOX_20261112_OWNER_DISPOSITION.md` | all closed |
 | Source recovery | `records/dyad/DYAD_SOURCE_RECOVERY_LIST.md`; `DYAD_UPLOAD_HASH_CHECK_*.md` | bridge note placed 3 Nov; the rest still missing |
 
 ## OWNER LANE — Claude
 
-**Updated:** 12 November 2026, 13:25 +03:00, with W7 of stage 3c-a (branch `claude/dyad-open20-stage3c-a-w7`). **Checked:** 12 November 2026, 12:40 +03:00; `main` `8c89820` (PR #237 merged); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 17 items, all closed; open PR #183 adds one OFN finding to the inbox.
+**Updated:** 12 November 2026, 18:55 +03:00, with the owner dispositions of the inbox items of 12 Nov (branch `claude/dyad-inbox-20261112-disposition`). **Checked:** 12 November 2026, 18:50 +03:00; `main` `fdc4fc4` (PR #244, W8 r2, merged; co-owner read-back `5877317450`); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 20 items, **all closed with this branch** (`DYAD_INBOX_20261112_OWNER_DISPOSITION.md`). Open PR #183 would add one OFN finding. Outgoing, new and open at their receivers: `pipes/LIT/20261112-DYAD-lh2012-use-report.md`, `pipes/AZ/20261112-DYAD-q3-deg2-cancel-owner-check.md`.
 
-**Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1 to W5 are done as development checks; the W6 script (legs, two-disc test, controls) is written and tested in a development run, from which no statement about the jump is drawn; the W7 proof record (`DYAD_OPEN20_AN_STAGE3C_A_PROOF_RECORD.md`) is written and awaits review; W8 (hand-over) is next.
+**Goal / current question.** OPEN 20 B-an, stage 3c-a: write the proof record and build the certificate script for the tube route at \|ξ*\| = 0.40, with no certification claim. Work packages in `DYAD_OPEN20_AN_STAGE3C_A_PLAN.md`; W1 to W8 are done as development and working records. The hand-over is `DYAD_OPEN20_AN_STAGE3C_A_HANDOVER.md`. Stage 3c-a has no further package; nothing in it is a certificate.
 
 **Last durable work.**
 - v6.4.23 adopted 30 Oct 2026 (PR #132; post-tag record).
@@ -52,6 +52,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 - Co-owner and owner, 3 Nov: v6.4.24 carries interface changes and S1; the §1 compaction waits for v6.4.25 or later; S2 (L-PHASE row B) is separate.
 - X4, adopted in v6.4.24: DYAD RIDs for "not area-preserving" (`[ALG]`), the p = 6 linear order and the homological resonance condition; no DYAD RID for the cubic radial rate across p (stays a RECOG import).
 - 11 Nov: no DYAD RID for RECOG's c_J and c_7 (disposition record, item 3).
+- Owner, 12 Nov: LIT's check of the use of López-Hernanz 2012 accepted at SESSION scope (C1–C3 compared with the design); INF-016 deferred, nothing adopted; the AZ owner check of `DYAD-ALG-Q3-DEG2-CANCEL` is done and answered by pipe (no correction asked).
 - `[SESSION]`, 11 Nov (co-owner's comparison with LIT's notes; DYAD side checked by the owner): the certificate target is the jump at one point of S₀ ∩ S₁ (Im t → −∞). LIT's harmonic target s₁ is on the other overlap class and is a first Fourier coefficient. A certified jump does not give s₁ ≠ 0; no derivation between the two is recorded. Whether LIT's candidate also holds on the lower overlap is a question for LIT (not filed).
 - B-an and B-6 are ACTIVE. No analytic existence or divergence theorem has been claimed.
 
@@ -75,11 +76,12 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read `DYAD_OPEN20_AN_STAGE3B_DESIGN.md` (§4 lemma, §6 obligations, §9 risks). Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **Stage 3c-a, W8:** the hand-over for a possible 3c-b: fixed commands and package layout; `full_fibre=True` in the G leg (proof record §4.3); a strict membership test in place of the SND tolerance of the W6 script (review `5872115882`); a decision on the control "wrong branch"; nominal and mutated constants in control outputs. Still conditional and outside 3c-a's proof record: the seed (Q), P1, P4 and the divergence step, which wait for LIT's answer on López-Hernanz 2012 (L1–L3).
-2. **Small owner check for AZ:** AZ §4.1.1's two-component description of the degree-2 q = 3 cancellation against `DYAD-ALG-Q3-DEG2-CANCEL`; answer by an item in `pipes/AZ/`.
-3. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
+1. **OPEN 20 analytic branch: nothing is authorized beyond stage 3c-a, which is complete.** Open for a claim: the seed (Q1–Q3) and the divergence step P4, as written arguments (hand-over record §5, §8). They are the next scientific step if the PI wants one. Stage 3c-b and scouting of the second overlap class are not authorized. A prerequisite of a certification run is filed in the hand-over record §8 (t_M with the upper bound of \|A₃\|).
+2. **INF-016 (deferred):** the only recorded route from a jump to B-an and B-6. A later design with a first-harmonic observable would need the items listed in the disposition record §2; it is the PI's decision whether to open it.
+3. **Next Dyadic edition (v6.4.25 or later):** consumer register row and Appendix F rows for AZ at `az-v0.8` (disposition record §3); the carried items of the v6.4.24 backlog §D.
+4. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.
 
-**Reopen trigger.** A new item in `pipes/DYAD/`; an answer from NUMGEN, OFN or Triadic to the open DYAD notices; LIT's answer on Theorem 4.2(3); a new owner tag of RECOG, NUMGEN, OFN, Genesis or Triadic that changes a statement DYAD imports or exports.
+**Reopen trigger.** A new item in `pipes/DYAD/`; an answer from NUMGEN, OFN or Triadic to the open DYAD notices; a change of LIT's reply on Theorem 4.2(3) or of INF-016; a new owner tag of RECOG, NUMGEN, OFN, Genesis or Triadic that changes a statement DYAD imports or exports.
 
 ## CO-OWNER LANE — ChatGPT
 
@@ -87,7 +89,8 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## PI_PENDING
 
-As of 12 November 2026, 13:25 +03:00:
-1. **Merge of the W7 PR** (proof record with two supporting computations), after the co-owner's review.
+As of 12 November 2026, 18:55 +03:00:
+1. **Merge of the inbox-disposition PR** (this branch), after the co-owner's review.
+2. **What comes next on OPEN 20** — the PI's choice among: the seed (Q1–Q3) and P4 as written arguments (the owner's and the co-owner's recommendation); nothing for now. A decision on stage 3c-b is not due before the seed is written.
 
-No decision is pending. Stage 3c-b and scouting of the second overlap class are not authorized.
+Stage 3c-b and scouting of the second overlap class are not authorized.

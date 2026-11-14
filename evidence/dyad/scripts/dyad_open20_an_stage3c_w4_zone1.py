@@ -26,6 +26,8 @@ Controls (each must exit 1 at the named gate):
   --control CORE      core of Omega_0 cut to arg xi <= 0.10 pi    -> Z1F (guard arc) and SND
   --control ALPHA     alpha replaced by alpha + 10 (design P11)   -> Z1F and Z1G ((B); a small change of alpha is
                       absorbed by the gain of the functionals, so the control uses a large one)
+  --control BRANCH    the formal curve of the other root of the quadratic for a_2 (a valid formal curve, with its own
+                      series), against the tube data of the pilot branch (alpha, c, tau) (design P11)   -> Z1F and Z1G
 Usage: python3 -I -B dyad_open20_an_stage3c_w4_zone1.py --stage2 scout_N216_dps840.json --w3dir DIR --out OUT.json
 """
 import os, sys, json, argparse, hashlib
@@ -46,12 +48,12 @@ MARGINS_INV = ('inv_disc', 'inv_i', 'inv_ii')
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--stage2', required=True); ap.add_argument('--w3dir', required=True); ap.add_argument('--out', required=True)
-    ap.add_argument('--control', choices=['BIGZONE', 'SIGMA', 'CORE', 'ALPHA'])
+    ap.add_argument('--control', choices=['BIGZONE', 'SIGMA', 'CORE', 'ALPHA', 'BRANCH'])
     o = ap.parse_args()
     raw = open(o.stage2, 'rb').read(); d2 = json.loads(raw.decode('utf-8'))
     g, info = {}, {}
     g['G0_stage2_input'] = hashlib.sha256(raw).hexdigest() == STAGE2_SHA and d2.get('all_pass') is True
-    K, a, SER, MC, rep = L.build_engine(rem=((0.90, 8000),))
+    K, a, SER, MC, rep = L.build_engine(rem=((0.90, 8000),), root='other' if o.control == 'BRANCH' else 'pilot')
     g['ENG_engine'] = bool(rep['structural_zeros_consistent'] and rep['max_tail_at_1p02'] < 1e-6
                            and all(m['theta'] < 1 for m in rep['remainder_constants']))
     TAU = L.tau_coefficients()

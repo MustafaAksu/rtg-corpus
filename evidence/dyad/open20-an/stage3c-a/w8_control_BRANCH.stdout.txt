@@ -1,0 +1,7 @@
+ENG_engine FAIL
+G0_stage2_input PASS
+SEAM_zones_cover_the_sector PASS
+SND_independent_semantics PASS
+Z1F_zone1_side_F FAIL
+Z1G_zone1_side_G FAIL
+RESULT FAIL (control BRANCH) | development run; not a certificate

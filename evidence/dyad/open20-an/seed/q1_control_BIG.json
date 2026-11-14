@@ -1,0 +1,79 @@
+{
+ "all_pass": false,
+ "control": "BIG",
+ "gates": {
+  "ANG_chart_edges_and_cosines": true,
+  "COEF_bounds_of_the_draft": true,
+  "Q12_inequality_at_r0": false,
+  "Q13_levels": true,
+  "Q2_exponents_and_constants": true,
+  "SND_independent_sampling": true
+ },
+ "info": {
+  "Q12": {
+   "largest_grid_value_passing": 0.18,
+   "lhs_at_0p001_upper": 0.00108438,
+   "lhs_at_0p05_upper": 0.0595934,
+   "lhs_at_r0_upper": 1.0992,
+   "r0": 0.3
+  },
+  "Q13": {
+   "0.001": {
+    "M_upper": 333695000.0,
+    "a_level_H_above_this_suffices": 333695000.0
+   },
+   "0.05": {
+    "M_upper": 2823.64,
+    "a_level_H_above_this_suffices": 2823.64
+   },
+   "r0": {
+    "M_upper": 23.9728,
+    "a_level_H_above_this_suffices": 23.9728
+   }
+  },
+  "Q2": {
+   "C_B_upper": 0.726734,
+   "C_tau_upper": 0.647264,
+   "K0_lower": 0.000393712,
+   "K1_lower": 0.00111536,
+   "eps0_approx": 0.000405104,
+   "eps1_approx": 0.00114763,
+   "exponent_of_the_ratio": "501/19",
+   "exponent_of_the_tube_bound": "240/19"
+  },
+  "SND": {
+   "annulus_samples_per_sector": 12060,
+   "largest_ratio_deviation_over_E": 1.0,
+   "samples_in_D0": 3366,
+   "samples_in_D1": 3623,
+   "samples_of_D_j_outside_the_window_at_radius_above_r0": {
+    "D0": 0,
+    "D1": 0
+   },
+   "samples_per_sector": 8241,
+   "violations": {
+    "E": 0,
+    "annulus": 0,
+    "factors": 0,
+    "radius": 0,
+    "window": 0
+   }
+  },
+  "constants": {
+   "S_upper": 1.94332,
+   "a1_upper": 0.283003,
+   "a2_upper": 1.08404,
+   "abs_log_c_upper": 1.24856,
+   "c0_approx": 2.97317,
+   "c1_approx": 4.26918,
+   "e3_upper": 1.26213e-15,
+   "k3_upper": 5.44152,
+   "s0_approx": -1.94331,
+   "s1_approx": -1.44331,
+   "sin_pi_8_lower": 0.382683
+  },
+  "rounding": "names ending in _upper / _lower are 6-digit decimals rounded outward from checked bounds; _approx are not bounds"
+ },
+ "script": "dyad_open20_an_seed_q1_check.py",
+ "status": "SESSION owner check of explicit inequalities; not a certificate; no seed is proved"
+}

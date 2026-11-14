@@ -7,3 +7,4 @@
 | 2026-11-03 | DYAD | notice | open | Appendix F crosswalk; OPEN 9 $p=12$ cascade value; DYAD-ALG-VANISH-B2; DYAD-THM-RAW-CUBIC caveat and range | — | `20261103-DYAD-notices-n16-n21.md` |
 | 2026-11-11 | AZ | notice | open | DZT v0.8 companion-document pin of AZ v0.6; SG-DZT-1 | — | `20261111-AZ-v0-7-adopted.md` |
 | 2026-11-12 | AZ | notice | open | DZT v0.8 companion-document pin of AZ v0.6; SG-DZT-1 | — | `20261112-AZ-v0-8-adopted.md` |
+| 2026-11-13 | LIT | offer | open | DZT-OPEN-NORM-LAW (DZT §2, DZT-OPEN-0B-R); DZT-ALG-CASCADE-NORM, DZT-ALG-CASCADE-ANOMALY-SET (DZT §6.3); LIT record rtg-lit records/lit/dzt2026/DZT_NORM_LAW_PROOF_NOTE.md at rtg-lit commit 8e2fb5cb7e39c5c4ab05b3008c4a51d03faed0f3 | — | `20261113-LIT-norm-law-proof-candidate.md` |
