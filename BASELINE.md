@@ -23,7 +23,7 @@ Baseline completed 22 October 2026. Every file is stored byte-exact; the SHA-256
 | UVM (OPEN-M) | `RTG_OPEN_M_DSN.md` | v0.7.1 | `0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e` | XREF: RER v0.2 §7 | `uvm-v0.7.1` |
 | RRF | `RTG_RRF_REPRESENTATION_REGISTRY.md` | v0.8.4 | `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce` | XREF: RER v0.2 §7 (byte-verified, Phase A r19) | `rrf-v0.8.4` |
 | DZT | `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md` | v0.8 | `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2` | PI | `dzt-v0.8` |
-| AZ | `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | v0.8 | `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76` | OWNER: release record `records/az/AZ_v0_8_RELEASE_RECORD.md`; two-stage release with change-focused and mechanical reviews (PR #240, reviews `5874174108`, `5874483729`, `5875164532`, `5875324590`); predecessor v0.7 `2294d2a3…fc94` (`az-v0.7`) | `az-v0.8` |
+| AZ | `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | v0.9 | `c198a8bbddb23ce0d546c3ed03bddcdcf02dd83b974da7651a89a3fec5ac7598` | OWNER: release record `records/az/AZ_v0_9_RELEASE_RECORD.md`; one content stage with change-focused reviews (PR #253, reviews `5876303497`, `5877247214`, `5890500279`, `5906873736`); predecessor v0.8 `146fcc28…ee76` (`az-v0.8`) | `az-v0.9` |
 | Legacy | `RTG_L0_L1_L2_BRIDGE_LEGACY_DSN.md` | v0.7 | `3b707c90eb5e048717513c6ba161b738d0d1d4cd341eb0a125fb15779afd7e13` | PI | `legacy-v0.7` |
 | Pre-Legacy | `RTG_PRE_LEGACY_DSN.md` | v0.8 | `22ecf37869cd1192b7fc3a13efe364d6cc2644928f4ecf5afe38e0ad8b95a446` | PI | `prelegacy-v0.8` |
 
