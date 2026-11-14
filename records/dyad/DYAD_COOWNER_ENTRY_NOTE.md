@@ -28,7 +28,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## OWNER LANE — Claude
 
-**Updated:** 15 November 2026, 00:55 +03:00, with the preparation of stage 3c-b (branch `claude/dyad-open20-stage3c-b-prep`). **Checked:** 15 November 2026, 00:55 +03:00; `main` `7f61f38` (PR #266 merged as `c9c60f2`); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 20 items, all closed. Open PR #183 would add one OFN finding; open PR #269 files the owner's request to LIT on Proposition 5.3. Outgoing items open at their receivers: the list of LIVE_STATE.
+**Updated:** 15 November 2026, 00:55 +03:00, with the preparation of stage 3c-b (branch `claude/dyad-open20-stage3c-b-prep`). **Checked:** 15 November 2026, 00:55 +03:00; `main` `2676e6f` (PR #266 merged as `c9c60f2`; the branch was cut at `7f61f38`); tag `dyad-v6.4.24` → `f0af639`; `pipes/DYAD/` 20 items, all closed. Open PR #183 would add one OFN finding; open PR #269 files the owner's request to LIT on Proposition 5.3. Outgoing items open at their receivers: the list of LIVE_STATE.
 
 **Goal / current question.** OPEN 20 B-an. Stage 3c-a is complete (W1 to W8, hand-over record); the seed and the divergence step are written, conditionally (proof record §12, §13). **Stage 3c-b is prepared, not run:** one driver, a manifest, one acceptance rule, a selftest (`DYAD_OPEN20_AN_STAGE3C_B_PREP.md`). Nothing is a certificate; no divergence is claimed.
 
