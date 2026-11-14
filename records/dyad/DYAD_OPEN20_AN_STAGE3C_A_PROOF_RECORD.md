@@ -1,6 +1,6 @@
-# DYAD OPEN 20 (analytic branch) — stage 3c-a: proof record (W7)
+# DYAD OPEN 20 (analytic branch) — stage 3c-a: proof record (W7; seed and divergence step added 13 Nov)
 
-**Date:** 12 November 2026. **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It writes out the arguments on which the certificate script of stage 3c-a relies. It claims no result about the jump, about divergence, or about B-an and B-6. Nothing here has been reviewed yet.
+**Date:** 12 November 2026; §12 and §13 added on 13 November 2026 (PI decision of that day: written work on Q1–Q3 and P4; no new DSN theorem, no certification decision). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It writes out the arguments on which the certificate script of stage 3c-a relies. It claims no result about the jump, about divergence, or about B-an and B-6. §§2–10 were read back by the co-owner with W7 and W8 (reviews `5874133624`, `5877317450`); §12 and §13 are the owner's form of the co-owner's written argument, which the owner reviewed (`DYAD_OPEN20_AN_SEED_P4_OWNER_REVIEW.md`).
 **Authority and basis:** as in `records/dyad/DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` (PI decision of 11 November 2026; design `DYAD_OPEN20_AN_STAGE3B_DESIGN.md` r2). Stage 3c-b is not authorized.
 **Governing edition:** DYAD v6.4.24. OPEN 20 B-an and B-6 are ACTIVE.
 
@@ -12,15 +12,17 @@
 | 2 | Structural facts S1–S5 | exact algebra (script) and one argument (S4) | written |
 | 3 | Remainder in d: Taylor model on arcs, maximum principle | proof | written |
 | 4 | Local inverse lemma; one analytic inverse branch G | proof, with three computed facts | written |
-| 5 | Tube lemma: the Rouché step for F and for G, with the zero count | proof | written; the seed (Q) is not treated here |
+| 5 | Tube lemma: the Rouché step for F and for G, with the zero count | proof | written; the seed (Q) is in §12 |
 | 6 | Zone II: from the piece statuses to the hypotheses | proof | written |
 | 7 | Zone I: the reduction | proof | written |
 | 8 | The common arc | proof | written |
 | 9 | The legs: validity of the forward–backward updates | proof | written |
 | 10 | Rounding | argument | written |
 | 11 | What is not proved here | list | — |
+| 12 | The seed (Q1–Q3) of the tube lemma | proof, conditional on L1 and on (G), (A); one checked inequality | written |
+| 13 | The divergence step (P4) | proof, conditional on four hypotheses, among them a certified point jump | written |
 
-Every statement of §§3–9 is conditional on the computed facts it names. Those facts come from development runs. A proof in this record does not turn a development run into a certificate.
+Every statement of §§3–9 and of §§12–13 is conditional on the computed facts and on the hypotheses it names. Those facts come from development runs. A proof in this record does not turn a development run into a certificate.
 
 ## 1. Notation
 
@@ -29,7 +31,7 @@ Every statement of §§3–9 is conditional on the computed facts it names. Thos
 - Input point (z, w) = (x, φ_N(x) + x²d). Image (Z, W) = F(z, w). Lifted map F̂(x, d) = (x′, d′) with x′ = Z and d′ = Φ(x, d) = (W − φ_N(Z))/Z². ξ = cx.
 - d-jets at d = 0: Z = Z₀ + Z₁d + Z₂d² + …, W likewise. Order-zero series G0, Q4, P4, M3, S2, ET44 as in the library (`order_zero_from_jets`). g = x³G0, b₀(x) = x(1 + g(x)) = Z₀.
 - One-step quantities: Φ(x, d) = E + μ₀d + c₂d² + r(x, d); Z(x, d) = b₀(x) + x⁴Q4·d + x⁴P4·d² + r_Z(x, d).
-- τ, the functionals first and second, the walls s_j, c_j, the domains D_j, the chart sectors Ω_j, the guard cores Ω_j⁻ and the tube radius R_j: design §3. Side j = 0 is F on D₀; side j = 1 is the inverse branch G on D₁.
+- τ, the functionals first and second, the walls s_j, c_j, the domains D_j, the chart sectors Ω_j, the guard cores Ω_j⁻ and the tube radius R_j: design §3. **The coefficients of τ are fixed 15-digit decimals** (`TAU_DECIMALS` in the library: the stage-2b values rounded). τ is therefore a fixed explicit function and not the truncation of the formal Fatou coordinate with the exact coefficient −1/(3ℓ₊) that the design writes; every domain, tube and run of this stage is defined with the decimal τ, and nothing in §§2–13 uses that τ solves an equation. Side j = 0 is F on D₀; side j = 1 is the inverse branch G on D₁.
 
 ## 2. Structural facts
 
@@ -138,7 +140,7 @@ Let δ be analytic on D₁(c), |δ| ≤ R₁, and x′ ∈ D₁(c − σ). On th
 - *Simplicity.* If the zero d₀′ had multiplicity m ≥ 2, then for small ε ≠ 0 the equation Ψ₀(d′) = ε would have m distinct solutions near d₀′. Each gives a point (x, ε) with b(x, ε) = x′ and x near x₀. Since ∂b/∂x(x₀, 0) = b₀′(x₀) ≠ 0 (|b₀′ − 1| < 1), the equation b(x, ε) = x′ has one solution near x₀ for small ε. So the m solutions have the same G-value, hence, G being injective on the fibre, are equal. Contradiction.
 - So Ψ has exactly one zero in 𝔽°, simple; it is the new value δ(x′), analytic in x′.
 
-**What this section does not contain.** The seed (Q1–Q3), the start of the induction, and the identification of the resulting graphs with the sectorial curves of the literature (L1–L3). They are as in the design and remain conditional (§11).
+**What this section does not contain.** The seed (Q1–Q3), which is the start of the induction and the identification of the resulting graphs with the sectorial curves of the literature: §12. It is conditional (L1; §11).
 
 ## 6. Zone II: from the statuses to the hypotheses
 
@@ -207,8 +209,80 @@ The two-disc test compares the two discs D₀ of the legs in ball arithmetic: |c
 
 ## 11. What is not proved here
 
-1. **The seed and the identification with the literature** (Q1–Q3, P1, L1–L3): the start of the induction of the tube lemma and the divergence step (design §5 step 6). They depend on López-Hernanz 2012, Theorems 4.2(3) and 5.1; LIT's reply `pipes/DYAD/20261112-LIT-lh2012-thm42-use-check.md` (rtg-lit `a3628d4`) was accepted by the owner on 12 Nov 2026 as a check of use at SESSION scope (`DYAD_INBOX_20261112_OWNER_DISPOSITION.md` §1); it proves neither the seed nor the divergence step. When the divergence step is written: the equality S = u_j is used on the small sub-petal of the theorem, which contains the arc for large t (D7).
+1. **The literature inputs are not proved, and the seed and the divergence step are conditional on them.** §12 uses López-Hernanz 2012, Theorems 4.2(1) and 5.1 (L1); §13 uses Theorem 4.2(3) (L3). LIT checked both uses (`pipes/DYAD/20261112-LIT-lh2012-thm42-use-check.md`, rtg-lit `a3628d4`), and the owner accepted that check at SESSION scope (`DYAD_INBOX_20261112_OWNER_DISPOSITION.md` §1). LIT has not re-proved Proposition 5.3 of the article; the owner has not read the article. Nothing here is a theorem-grade import.
 2. **The triangular form of the recursion** behind S4 (P1-c) is taken from the earlier records.
 3. **The development runs are not certificates.** INJ, SRC, SRC1, the piece statuses, the zone-I constants, the arc and the legs are facts of development runs.
 4. **Done in W8** (hand-over record §7): `full_fibre=True` in the leg (§4.3); strict membership in SND; machine checks of the float bounds; the control "wrong branch". *Not done:* separate printing of nominal and mutated constants in the W2b control outputs.
 5. **Analyticity of the new δ in the base variable** in §5 is stated, not written out (the zero of a holomorphic family with a simple zero; standard).
+6. **No certified point jump exists.** §13 needs one. The legs and the two-disc test of §9 are development runs; stage 3c-b is not authorized.
+7. **B-an and B-6.** Neither the seed nor the divergence step decides them (DSN §2, OPEN 20).
+
+## 12. The seed (Q1–Q3)
+
+First written by the co-owner (`DYAD_OPEN20_AN_SEED_P4_COOWNER_ARGUMENT.md`, PR #257); reviewed by the owner with one correction and three precisions, all taken up there (`DYAD_OPEN20_AN_SEED_P4_OWNER_REVIEW.md`). This section is the same argument in the notation of this record. Where the two texts differ in wording, this one is the owner's.
+
+**Setting.** D_j(H) = D_j ∩ {second > H}. S_j(δ) = {\|arg ξ − jπ/3\| ≤ 5π/24, \|ξ\|³ < κ_δδ}, κ_δ = 2cos(3π/8), is the straight sector of pilot D7, which lies in the petal Δ_j(δ) for every δ ≤ δ₀. u₀ is the sectorial invariant curve of F on Δ₀(δ), u₁ that of F⁻¹ on Δ₁(δ) in the chart of D5 (Theorem 4.2(1) of the article, as read). By D9, φ_j(z) = z²(a₊ + b₁z + u_j(c₊z)).
+
+**Hypotheses.**
+- (L1) For each j there is C_j with \|u_j(ξ) − Σ_{n=2}^{38} b_n zⁿ\| ≤ C_j\|ξ\|³⁹ on S_j(δ) (uniform asymptotics at one finite order on one closed subsector; Theorem 5.1 as read, LIT's condition C3).
+- (G), (A1), (A2) of §5 hold on the tube over D_j.
+
+**Proposition 12.1.** Under these hypotheses there is H₁ such that for every H ≥ H₁ and j = 0, 1:
+- (Q1) D_j(H) is nonempty and D_j(H) ⊂ S_j(δ) ⊂ Δ_j(δ);
+- (Q2) d_j = (φ_j − φ_N)/x² is analytic on D_j(H) and \|d_j\| < R_j there;
+- (Q3) the graph of d_j over D_j(H) is mapped into itself by F̂ (j = 0), by G (j = 1).
+
+So d_j is a seed (Q) of the tube lemma at the level c₁ = H, and the graph that the lemma continues to D_j is φ_j.
+
+*Proof.*
+1. **The expansion of τ.** With z = ξ/c and the principal logarithms (design §3: arg z stays in (−0.512π, 0.188π) on both chart sectors),
+   3ξ³τ = 1 + e₃ + 3A₂c²ξ + 3A₁cξ² + 3κξ³(log ξ − log c), e₃ = 3A₃c³ − 1.
+   e₃ would be 0 for A₃ = −1/(3ℓ₊); for the decimal τ it is not (§1). On both chart sectors \|arg ξ\| < π/2, so for 0 < r = \|ξ\| ≤ 1/e
+   \|3ξ³τ − 1\| ≤ E(r) = \|e₃\| + a₂r + a₁r² + k₃r³(\|ln r\| + \|log c\| + π/2), a₂ = \|3A₂c²\|, a₁ = \|3A₁c\|, k₃ = 3\|κ\|,
+   and E increases with r. Writing ξ = re^{iθ}: \|3r³Re τ − cos 3θ\| ≤ E(r).
+2. **Angles.** Let S = max(\|s₀\|, \|s₁\|) and let r₀ ≤ 1/e satisfy
+   (Q1.2) E(r₀) + 3Sr₀³ < sin(π/8).
+   Let r ≤ r₀. *j = 0:* if 5π/24 ≤ θ < 0.30π then cos 3θ ≤ −sin(π/8), so 3r³Re τ < −3Sr³ ≤ 3s₀r³ and the point is not in D₀. The other edge of Ω₀ is inside the window: −π/5 > −5π/24. *j = 1:* if 0.03π < θ ≤ π/8 then cos 3θ ≥ sin(π/8), so Re τ > s₁ and the point is not in D₁; and π/2 < 13π/24. So D_j ∩ {r ≤ r₀} lies in {\|θ − jπ/3\| < 5π/24}.
+3. **Radius.** On r₀ ≤ r < 0.60 in the chart sectors, \|second\| ≤ \|τ\| ≤ M(r₀) = \|A₃c³\|r₀⁻³ + (a₂r₀⁻² + a₁r₀⁻¹ + k₃(\|ln r₀\| + \|log c\| + π/2))/3, each term being largest at r₀. So H ≥ max(c₀, c₁, M(r₀)) gives D_j(H) ⊂ {r < r₀}. Take r₀ also below (κ_δδ)^{1/3}; then D_j(H) ⊂ S_j(δ), and D7 gives (Q1). Nonempty: on the bisector θ = jπ/3 the leading term of τ is (−1)^j(1 + e₃)/(3r³), so the two wedge conditions hold and second → +∞ as r → 0.
+4. **Lower bound of the tube radius.** For r ≤ r₀: \|τ\| ≤ C_τr⁻³ with C_τ = \|A₃c³\| + (a₂r₀ + a₁r₀² + k₃r₀³(\|ln r₀\| + \|log c\| + π/2))/3. On D_j the factors of R_j (design §3) satisfy 1 ≤ first = ±(Re τ − s_j) + 1 ≤ C_Br⁻³ with C_B = C_τ + (1 + S)r₀³, and 0 < second ≤ C_τr⁻³; and \|ξ^α\| ≥ r^{Re α}e^{−\|Im α\|π/2}. With the exponents q₁/3 = q₂/3 = 3:
+   R_j ≥ K_j r^{18 + Re α} = K_j r^{240/19}, K_j = ε_j e^{−\|Im α\|π/2} C_B⁻³C_τ⁻³ > 0.
+5. **(Q2).** φ_N(z)/z² = a₊ + b₁z + Σ_{n=2}^{38} b_n zⁿ (b_n = a_{n+2}), so d_j = u_j − Σ_{n=2}^{38} b_n zⁿ exactly: the lifted deviation is u_j minus the truncation of its own series, and (L1) is a statement about d_j with no change of chart. Hence \|d_j\|/R_j ≤ (C_j/K_j) r^{39 − 240/19} = (C_j/K_j) r^{501/19}. Choose r₁ ≤ r₀ with (C_j/K_j) r₁^{501/19} < 1 for both j, and H₁ = max(c₀, c₁, M(r₁)) by step 3 with r₁ in place of r₀. d_j is analytic because u_j is.
+6. **(Q3), j = 0.** Let x ∈ D₀(H) and p = (x, d₀(x)). By (Q2), p is in the tube, so (G), (A1), (A2) apply: x′ ∈ D₀ and second(x′) ≥ second(x) + σ > H, that is x′ ∈ D₀(H). F maps the graph of u₀ over the petal into itself, and x′ ∈ D₀(H) ⊂ Δ₀(δ); so F̂(p) = (x′, d₀(x′)).
+7. **(Q3), j = 1.** Let x′ ∈ D₁(H), p′ = (x′, d₁(x′)), in the tube by (Q2). Let π(x, d) = (x, φ_N(x) + x²d) be the map from the lifted to the raw coordinates (§1). It is injective on x ≠ 0, and π∘F̂ = F∘π there: that is the definition of F̂. Two preimages of p′ under F̂ are at hand: G(p′) of Proposition 4.2, and q = (x, d₁(x)), the graph point of u₁ with π(q) = F⁻¹(π(p′)), where F⁻¹ is the germ and x is in the petal. So π(G(p′)) and π(q) are two raw points with the same image π(p′) under F. F is a local diffeomorphism at the origin (its linear part there is the identity), hence injective on a neighbourhood V of the origin in (z, w). If both raw points lie in V they are equal, and then G(p′) = q because π is injective on x ≠ 0. For H large both lie in V:
+   - *G(p′).* By §4.3 it lies in the zone-I source set N(x′): \|x − x′\| < 2\|x′\|⁴ sup\|G0\| and \|d\| < 2R₁(x′). And R₁(x′) → 0 with x′ on D₁: both factors of R₁ are at least 1 there; first − 1 − s₁ = −Re τ and second = −cos θ₀·Re τ − sin θ₀·Im τ determine τ linearly, with Re τ < s₁ < 0, so the larger factor is at least a constant times \|τ\| once \|τ\| is large; and \|τ\| ≥ t_lo\|x′\|⁻³ (§7). Hence R₁(x′) ≤ const·\|ξ′\|^{9 + Re α} with 9 + Re α = 69/19 > 0. So π(G(p′)) = (x, φ_N(x) + x²d) tends to the origin with x′.
+   - *q.* π(p′), the raw graph point over x′, tends to the origin with x′, and F⁻¹ is continuous at the origin; so π(q) tends to the origin.
+   - By step 3 the largest radius \|ξ′\| on D₁(H) tends to 0 as H → ∞. So, after enlarging H₁ once more, G(p′) = q for H ≥ H₁. Then (A1) for G gives second(x) ≥ second(x′) + σ > H, and x ∈ D₁ by (G) and the chart argument of §5; so G(p′) = (x, d₁(x)) with x ∈ D₁(H). ∎
+
+**The numbers** (`evidence/dyad/scripts/dyad_open20_an_seed_q1_check.py`, output in `evidence/dyad/open20-an/seed/`; ball arithmetic at 200 bits; OWNER-RUN, development; bounds printed as decimals rounded outward):
+- \|e₃\| ≤ 1.26213·10⁻¹⁵; a₂, a₁, k₃, \|log c\|, S ≤ 1.08404, 0.283003, 5.44152, 1.24856, 1.94332.
+- (Q1.2) holds at every grid value r₀ = k/200 up to **0.18** (left side ≤ 0.382187 against sin(π/8) ≥ 0.382683); it fails at 0.30 (control).
+- M(0.18) ≤ 77.0569. C_τ ≤ 0.449396, C_B ≤ 0.466561, K₀ ≥ 4.44566·10⁻³, K₁ ≥ 1.25942·10⁻² at r₀ = 0.18.
+- An independent sampling in mpmath found no violation of steps 1–4.
+- r₁, δ and the neighbourhood V of step 7 are existential; no value is computed and none is needed: the induction of the tube lemma takes finitely many steps from any level H.
+
+**What the proposition does not give.** It does not prove (L1). Step 7 identifies two inverse branches on the seed domain; it does not certify INJ, SRC or SRC1, on which Proposition 4.2 rests. It does not turn (G), (A1), (A2) into certified facts: on the seed domain they are the zone-I inequalities of §7, from a development run. REVIEWER-REPLAYED: none.
+
+## 13. The divergence step (P4)
+
+First written by the co-owner in the same file; this is the design's §5 step 6 with its hypotheses made explicit.
+
+**Hypotheses.**
+- (i) The tube lemma holds on D₀ for F and on D₁ for G with the seeds of §12; φ₀, φ₁ are the resulting analytic graphs, and φ_j = u_j on D_j(H₁).
+- (ii) The arc γ(t), τ(γ(t)) = Re τ* − it, t ≥ t*, lies in D₀ ∩ D₁, tends to 0 with arg γ(t) → π/6, and has a connected open neighbourhood U ⊂ D₀ ∩ D₁ (§8).
+- (iii) The values of the two graphs at ξ* lie in two disjoint certified discs of the same lifted coordinate d (§9).
+- (iv) (L3) Theorem 4.2(3) of the article as read, with LIT's conditions C1 and C2: on Δ_j(δ), δ ≤ δ₀, a holomorphic graph in the class \|u\| ≤ \|ξ\|, \|u′\| ≤ 1 that is invariant under F (j = 0), under F⁻¹ in the chart of D5 (j = 1), is u_j.
+
+**Proposition 13.1.** Under (i)–(iv) the formal invariant branch Γ̂₊ has no convergent representative.
+
+*Proof.* Suppose it converges, with sum φ, and let S be φ in the chart of D9: S(ξ) = O(ξ²), analytic on a disc \|ξ\| < ρ.
+1. *S is in the class.* For δ small, \|S\| ≤ \|ξ\| and \|S′\| ≤ 1 on Δ_j(δ). The graph of S is invariant under F and under F⁻¹ as a germ, because the formal curve is and the series converges. In the chart of D5, F⁻¹ has the normal form of F with the same k, α, m (`DYAD_INBOX_20261112_OWNER_DISPOSITION.md` §1; stage 1, gate S5).
+2. *S = u_j on the small petal.* By (iv), S = u₀ on Δ₀(δ) and S = u₁ on Δ₁(δ).
+3. *The tail of the arc is in both seed domains.* On the arc Re τ = Re τ*, which lies strictly between s₀ and s₁ (s₀ = Re τ* − 0.25, s₁ = Re τ* + 0.25), so first > 1 on both sides; and with θ₀ = 3π/8
+   second₀ = Re τ*·cos θ₀ + t sin θ₀, second₁ = −Re τ*·cos θ₀ + t sin θ₀,
+   both → +∞. With (ii), γ(t) ∈ D₀(H₁) ∩ D₁(H₁) for all large t. By (Q1) such a point lies in S₀(δ) ∩ S₁(δ), hence in both small petals; no continuation by the identity theorem is needed.
+4. *Equality near a tail point.* Near γ(t), t large: φ₀ = u₀ = S = u₁ = φ₁, by (i), step 2 and step 3 (all in the unit d of D9).
+5. *Identity theorem.* φ₀ and φ₁ are analytic on the connected open set U and agree on an open subset. So φ₀ = φ₁ on U, in particular at ξ*. This contradicts (iii). ∎
+
+**Consequences, at their own grades.** Γ̂₋ diverges with Γ̂₊, because T is an analytic local diffeomorphism exchanging the two formal branches. By Lemma 5b-1 of P1-c-5 (SESSION), convergence of X̂ = log F would give convergence of both branches; so X̂ would diverge. **Nothing follows for the canonical roots F^{1/2} and F^{1/6}: B-an and B-6 stay open** (DSN §2, OPEN 20; LIT's INF-016 is a different, deferred question).
+
+**State of the hypotheses.** (i): the step of the lemma is §5, the seed §12; its hypotheses (G), (A), (B) are development results. (ii): §8, development run; the prerequisite on t_M stands (hand-over record §8). (iii): **does not exist**; the legs of §9 are development runs and stage 3c-b is not authorized. (iv): LIT-checked use at SESSION scope. So Proposition 13.1 is a conditional statement and no divergence is claimed.
