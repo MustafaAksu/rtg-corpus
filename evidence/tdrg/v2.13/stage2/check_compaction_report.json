@@ -1,7 +1,7 @@
 {
- "base_sha256": "b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc",
- "candidate_sha256": "1691a136d01ce3f68a241c72d13d9f17c1a184986f6869fe9b9d507a324dee18",
- "map_sha256": "024a730e0482404c8c77299036d37cc7f6cd97c8b24547bc8ccb7cc31866a75b",
+ "base_sha256": "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff",
+ "candidate_sha256": "c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14",
+ "map_sha256": "ece985e46464b68d00636168c8f56e716c5dd4d1008f77780ed82bd22639217b",
  "operations": [
   {
    "id": "S2-H",
@@ -306,8 +306,8 @@
   }
  ],
  "claim_blocks": {
-  "base": 268,
-  "identical": 244,
+  "base": 267,
+  "identical": 243,
   "declared_change": 24,
   "unexplained": []
  },
@@ -356,7 +356,7 @@
   {
    "check": "archive identity stage1-intermediate",
    "result": "PASS",
-   "detail": "b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc"
+   "detail": "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff"
   },
   {
    "check": "archive identity tdrg-v2.12.15",
@@ -586,7 +586,7 @@
   {
    "check": "qualified claim blocks",
    "result": "PASS",
-   "detail": "268 claim blocks in base live text: 244 byte-identical, 24 changed by declared operations, 0 unexplained"
+   "detail": "267 claim blocks in base live text: 243 byte-identical, 24 changed by declared operations, 0 unexplained"
   },
   {
    "check": "RID set preserved in live text",

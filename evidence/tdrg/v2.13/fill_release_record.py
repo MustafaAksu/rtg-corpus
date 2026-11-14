@@ -32,7 +32,11 @@ with tempfile.TemporaryDirectory() as d:
     lint = subprocess.run([sys.executable, "-I", "tools/dsn_lint.py", "dsn/RTG_DISCRETE_GENESIS_DSN.md", "--prev", p],
                           capture_output=True, text=True, check=True).stdout.replace(p, "tdrg-v2.12.15")
 out = out.replace("{{SIZE}}", "```\n" + lint.strip() + "\n```\n\nCounting method: the lint script's own "
-                  "(whitespace tokens; §1 between its heading and the next `## `). Stage-1 intermediate: 191,737 bytes.")
+                  "(whitespace tokens; §1 between its heading and the next `## `). Stage-1 intermediate: 191,662 bytes.\n\n"
+                  "**RID growth (review R2).** TDR-G declares no new RID in v2.13 (stage-1 checker C3: every declaration "
+                  "is kept and none is added). The lint's `new_rids: 1` counts a new identifier in the text: the citation "
+                  "of OFN's existing `RTG-OFN-OPEN-DISC-INTERACTION` (S3). Growth per new TDR-G RID is therefore N/A; "
+                  "the raw lint output above is kept as produced.")
 left = re.findall(r"\{\{[^}]*\}\}", out)
 if left:
     raise SystemExit("unfilled markers: %s" % left)

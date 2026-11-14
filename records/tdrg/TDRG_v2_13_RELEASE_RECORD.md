@@ -1,7 +1,7 @@
 # Discrete Genesis (TDR-G) v2.13 — Release Record
 
-**Status:** DRAFT. The candidate is built in two stages and checked. Before adoption it needs:
-- the ChatGPT co-owner's review of stage 1 (change-focused) and of stage 2 (mechanical);
+**Status:** DRAFT, round 2. The candidate is built in two stages and checked. The ChatGPT co-owner reviewed round 1: stage 1 CONDITIONAL PASS, stage 2 PASS. Its two corrections are applied in round 2 (§3a). Before adoption it needs:
+- the co-owner's readback of round 2;
 - the atlas owner's row check;
 - the PI's adoption.
 
@@ -23,8 +23,8 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | Plan | `records/tdrg/TDRG_v2_13_EDIT_PLAN.md` (PR #263): rows S1–S8 and C1–C6, decisions D1–D3 | written |
 | Co-owner evaluation of the plan | ChatGPT co-owner, relayed in the session at 12:06 +03:00. Agrees with the order. Stage 1 carries pins, structural fit and scope corrections; stage 2 is compaction only, with a movement map; results, RIDs, grades and OPEN states are preserved; the TDR-6 relational question is not a closing condition | not a repository record |
 | PI decisions | "1- a 2-a 3-a" (13 Nov 2026, 12:23 +03:00): D1 (a), §1 as readouts; D2 (a), §2 history only; D3 (a), §A.sim to §8. Recorded in plan §7 | given |
-| Stage 1 review | ChatGPT co-owner (change-focused) | *(to be filled)* |
-| Stage 2 review | ChatGPT co-owner (mechanical) | *(to be filled)* |
+| Stage 1 review | ChatGPT co-owner (change-focused): `records/tdrg/` review record on PR #268 (head `da61a6c8`, open at round 2); GitHub review `5906863206` on PR #265. Round 1 (intermediate `b24c17cc…cdcc`): CONDITIONAL PASS — R1 (methodological): the unpaired `[RESULT]` moved into live §8; R2 (record): the RID-growth metric | R1 and R2 applied in round 2 (§3a); readback *(to be filled)* |
+| Stage 2 review | ChatGPT co-owner (mechanical), same record: round-1 candidate `1691a136…ee18` reproduced byte for byte by an independent implementation of the 43 operations | PASS on round 1; stage 2 rebuilt from the round-2 intermediate (§3a) |
 | Row check | atlas owner | *(to be filled)* |
 | Adoption, merge commit, tag `tdrg-v2.13` | PI | *(to be filled)* |
 
@@ -33,29 +33,29 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v2.12.15) | `git show tdrg-v2.12.15:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64` |
-| Stage-1 intermediate (a build stage, not an edition) | `git show 1a8e02a29ed4589291b752e0a0a0901cf7e7d8b6:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc` |
-| **Candidate v2.13** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `1691a136d01ce3f68a241c72d13d9f17c1a184986f6869fe9b9d507a324dee18` |
-| Stage-1 builder | `evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py` | `cde3d5e6c47eeaf87b8ce0cf476b82c4bea2c789a1b2cd76e8bb315a05d7aa7b` |
-| Stage-1 checker | `evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py` | `f54d36be5c1635971df992612c777dadbf5cc78d4e5bf6b123b303c4730065f1` |
-| Stage-1 edit log (29 edits) | `evidence/tdrg/v2.13/stage1/edit_log.json` | `6945f982725bdca286c24418b634f63a8a82847b68a9f7531de474411ac68cb5` |
-| Stage-1 gates / controls output | `evidence/tdrg/v2.13/stage1/check_output.txt`, `controls_output.txt` | `93f070ec3054276656e464d4c21e55e4505e2728e9ea14876a791e1fb09558f2`, `4093f1ec91f8f1f492bae8fa54e53c7e99128993534e20a9c516468e562a5998` |
-| Stage-2 builder | `evidence/tdrg/v2.13/stage2/build_tdrg_v2_13_stage2.py` | `4a724d53966af488b2f9c1a314c6731ed6d3fdf7a4d17b959a79e42e5ac55781` |
-| Movement map (43 operations) | `evidence/tdrg/v2.13/stage2/movement_map.json` | `024a730e0482404c8c77299036d37cc7f6cd97c8b24547bc8ccb7cc31866a75b` |
-| Compaction check output / report | `evidence/tdrg/v2.13/stage2/check_compaction_output.txt`, `check_compaction_report.json` | `12cdafea7ec921db4774aeb854416ade3701f8d089041a1d65e547bc3d74e6ce`, `f72cabff82bea8c0a2f3515a6f5c437eeaf447c9324eb84fa9df39cc1c02b5ef` |
-| Stage-2 negative controls and output | `evidence/tdrg/v2.13/stage2/stage2_negative_controls.py`, `stage2_negative_controls_output.txt` | `474fcaca0d65bb244488ece9ddcf2b7d332b5df150c4ec042bb717e9c782340f`, `2e1ae162d81d9a8cfbe1837e468791964e0241ab7e93bc3b2e6839af7a00a801` |
+| Stage-1 intermediate (a build stage, not an edition) | `git show fd96f8a0b33a1236989b9e941b1c1c0e2381f2db:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff` |
+| **Candidate v2.13** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14` |
+| Stage-1 builder | `evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py` | `77cbf44137c3a003183c9f1482af7dde44335f7d5318e1f1a4b54117e5a27751` |
+| Stage-1 checker | `evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py` | `460d395fc5ec209b998df47094db62c7fb1a6b75ac5b6c688005550bdd456223` |
+| Stage-1 edit log (29 edits) | `evidence/tdrg/v2.13/stage1/edit_log.json` | `bbceff2a68217a9ba7dbdfd5d311d1dffa3ce8744c359c8ef723a3caf250f6b3` |
+| Stage-1 gates / controls output | `evidence/tdrg/v2.13/stage1/check_output.txt`, `controls_output.txt` | `3a8e44b98916f8f98650ce495d2d603b4d5a90ab817d6f8fd2b384452860c568`, `f172ab2daaae16f5f6665dd003dd3c90b1eadbefed936a1e3bdb579fa6f223bd` |
+| Stage-2 builder | `evidence/tdrg/v2.13/stage2/build_tdrg_v2_13_stage2.py` | `5fb2154fe6a164b334394251d9f9abcfa30a15efd6b2c57a1a0b4db83323fd32` |
+| Movement map (43 operations) | `evidence/tdrg/v2.13/stage2/movement_map.json` | `ece985e46464b68d00636168c8f56e716c5dd4d1008f77780ed82bd22639217b` |
+| Compaction check output / report | `evidence/tdrg/v2.13/stage2/check_compaction_output.txt`, `check_compaction_report.json` | `fad23622db375887fd28eb0ce118c49a025d54ab06c674da382d54d85abfc28f`, `4bc11e81a913597de6359d2449eccdd980944447582cc32cb98e6df26b0b6c8f` |
+| Stage-2 negative controls and output | `evidence/tdrg/v2.13/stage2/stage2_negative_controls.py`, `stage2_negative_controls_output.txt` | `474fcaca0d65bb244488ece9ddcf2b7d332b5df150c4ec042bb717e9c782340f`, `0d24d0889a408a8309a253e692de6c21276a9e373776d1a35e06a50981973c3e` |
 | Compaction checker (repository tool, unchanged) | `tools/check_compaction.py` | `d2977b3e24fd54a1d85fe53ea88f65dd51a9e26890b56b17ab5855716b57d87c` |
 
 **Reproduce** (from the repository root, with the tags present):
 ```
 T=$(mktemp -d)
-git show 1a8e02a29ed4589291b752e0a0a0901cf7e7d8b6:dsn/RTG_DISCRETE_GENESIS_DSN.md > $T/inter.md
+git show fd96f8a0b33a1236989b9e941b1c1c0e2381f2db:dsn/RTG_DISCRETE_GENESIS_DSN.md > $T/inter.md
 python3 -I evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py --out $T/rebuilt.md --log $T/log.json   # = inter.md, = edit_log.json
 python3 -I evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py --intermediate $T/inter.md [--controls]
 python3 -I evidence/tdrg/v2.13/stage2/build_tdrg_v2_13_stage2.py --emit-base $T/base.md   # writes the candidate and the map
 python3 tools/check_compaction.py $T/base.md dsn/RTG_DISCRETE_GENESIS_DSN.md evidence/tdrg/v2.13/stage2/movement_map.json
 python3 -I evidence/tdrg/v2.13/stage2/stage2_negative_controls.py
 ```
-The stage-1 builder reads its base from the tag. The stage-2 builder, the map and the controls read the intermediate from commit `1a8e02a` and assert its hash, so no second copy of a DSN state is kept (Methodology v1.4 §13.7).
+The stage-1 builder reads its base from the tag. The stage-2 builder, the map and the controls read the intermediate from commit `fd96f8a` and assert its hash, so no second copy of a DSN state is kept (Methodology v1.4 §13.7).
 
 ## 3. Stage 1 — what changes, by decision (29 edits; `edit_log.json`)
 
@@ -65,7 +65,7 @@ The stage-1 builder reads its base from the tag. The stage-2 builder, the map an
 | S2 — Methodology | E01, E02 | The header declares v1.4. The alias sentence names v1.4 §8.1; its v2.12.14 history (the legacy rows, which carry tags) stays in the tagged predecessor. |
 | S3 — historical pins | E06, E07, E15, E19, E26 | The OPEN-OFN-2 connection of TDR-1 and TDR-19 points to `ofn-v0.12`, where OPEN-OFN-2 is open as `RTG-OFN-OPEN-DISC-INTERACTION`. CONV-TICK and LEM-NOANNIHIL name their current consumer rows, OFN v0.12 IMP-O08-14 and IMP-O08-06; OFN imports LEM-NOANNIHIL as `[ALG]`, so the old "`[RESULT]` `[from: ALG]`" description of OFN v0.7 leaves. No claim-specific historical pin remains in the live text. |
 | S4 — owner-review tasks | E05 | Stated as TDR-G's own current items (Programme v1.4 does not carry them; checker C6), with the same four statuses. |
-| S5 / D3 (a) — §A.sim | E28 | The table and its `[RESULT]` are copied verbatim into §8 as "Simulation artifact evolution" (checker C8). Stage 2 removes the Appendix A copy. |
+| S5 / D3 (a) — §A.sim | E28 | The table is copied verbatim into §8 as "Simulation artifact evolution" (checker C8). Its closing interpretive `[RESULT]` is not promoted (round 2, §3a). Stage 2 removes the Appendix A copy. |
 | S6, S7 / D1 (a) — §1 and summary | E03, E04 | §1 has 407 words of readouts with RIDs and pointers. Checker C7 requires that 24 statements dropped or shortened (formulas, fit values, rates, the factorization precision, the slot-volume fits, the $q_{\rm proj}$ correction and others) still occur at their home outside §1. The status summary has three present-state sentences. |
 | Typing of the summary (part of D1 (a)) | E04 | The old §1 graded some summaries more strongly or more loosely than their owner records. The readouts now carry the owner grades: the band form of reachability is `[ALG]` as LEM-REACH in §6.5 (old §1: under `[THM]`); the policy branches are `[NUM]`, `[NUM]` and `[HEUR strong]` as in §6.6 (old §1: one `[NUM strong]` for all three); BIND3 is `[ALG]` for the exact enumeration and `[NUM strong]` for parity and the spectral gate, as in §6.12 (old §1: `[NUM strong]` throughout). No grade in §§2–9 changes (checker C4). The old §1 sentence "No plateau through $N=1080$" is not carried: the §6.8 table extends to $N=1440$, and the statement is stale. |
 | S8 — superseded hypothesis | E10, E11, E29 | The v2.8 failed-relock hypothesis leaves TDR-25. Appendix B records it as `[SUPERSEDED]`, quoting its original statement verbatim (checker C9), with its reason and replacement. The bullet that revised it now points to Appendix B. |
@@ -86,8 +86,18 @@ K6 §A.sim copy altered: CAUGHT (target C8 FAIL; C1 FAIL)
 K7 Appendix B paraphrased: CAUGHT (target C9 FAIL; C1 FAIL)
 K8 fifth summary sentence: CAUGHT (target C10 FAIL; C1 FAIL)
 K9 stale v2.13 promise reintroduced: CAUGHT (target C6 FAIL; C1 FAIL)
-CONTROLS: 9/9 caught
+K10 unpaired [RESULT] promoted to §8 (review R1): CAUGHT (target C8 FAIL; C1 FAIL)
+CONTROLS: 10/10 caught
 ```
+
+## 3a. Round 2 — corrections from the review of 14 November 2026
+
+| Review item | Change |
+|---|---|
+| **R1** (methodological): the closing sentence of §A.sim, "`[RESULT]` Policy and bookkeeping bugs can invert the cosmological interpretation.", reached live §8 without the `[from: …]` pairing Methodology §3.4 requires. Moving the old bytes verbatim proved the move, not the typing in a live section. | The reviewer offered two remedies: a reasoned owner typing decision, or moving only the evidence table. The second is applied. E28 copies only the table into §8; its rows keep their own tags, and none of them is a `[RESULT]`. The interpretive sentence is not promoted; it stays in Appendix A of `tdrg-v2.12.15`, and the compact v2.13 entry of Appendix A says so. No `[from: …]` tag is invented. Checker C8 now also requires that the sentence is absent from the live text; C4 counts one `[RESULT]` fewer; the new control K10 restores the sentence in §8 and is caught. |
+| **R2** (record): the size report showed `new_rids: 1` and `growth_per_new_rid: -39008.0` although TDR-G declares no new RID. | §8 below explains that the one new identifier is a citation of OFN's existing `RTG-OFN-OPEN-DISC-INTERACTION` (S3), not a TDR-G RID, so growth per new RID is N/A. The raw lint output is kept. |
+
+Stage 2 is rebuilt from the round-2 intermediate. Its 43 operations are the same; only the Appendix A entry for v2.13 changes, to record R1. The review's stage-2 PASS concerned the round-1 bytes, and the readback covers the rebuilt candidate.
 
 ## 4. Stage 2 — compaction (43 operations; `movement_map.json`)
 
@@ -97,11 +107,11 @@ The base is the stage-1 intermediate. The operations are:
 - Appendix A: compact entries for v2.13, v2.12.15 and v2.12.14, and one line for each earlier edition, whose full text stays at `tdrg-v2.12.15`; §A.sim leaves;
 - one footer line.
 
-**Compaction check** (`tools/check_compaction.py`, `check_compaction_output.txt`): RESULT: PASS, exit 0 — 55 checks, every operation and every global check PASS; 268 claim blocks in base live text: 244 byte-identical, 24 changed by declared operations, 0 unexplained
+**Compaction check** (`tools/check_compaction.py`, `check_compaction_output.txt`): RESULT: PASS, exit 0 — 55 checks, every operation and every global check PASS; 267 claim blocks in base live text: 243 byte-identical, 24 changed by declared operations, 0 unexplained
 
 **Negative controls** (`stage2_negative_controls_output.txt`):
 ```
-base: git show 1a8e02a29ed4589291b752e0a0a0901cf7e7d8b6:dsn/RTG_DISCRETE_GENESIS_DSN.md  sha256 b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc
+base: git show fd96f8a0b33a1236989b9e941b1c1c0e2381f2db:dsn/RTG_DISCRETE_GENESIS_DSN.md  sha256 472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff
 OK    P0 unmutated map                                               exit 0 (want 0)  RESULT: PASS
 OK    N1 undeclared change in the live text                          exit 1 (want 1)  FAIL  mechanical scope (re-derivation)  — first difference at line 92: derived 'ACTIVE — PARTIAL  \nQuestion: Identify a purely relational invariant p
 OK    N2 status summary with a sentence not in the base              exit 1 (want 1)  FAIL  operation S2-H (presentation)  — status summary adds text not in the base summary (header): ['TDR-6 is closed.']
@@ -122,7 +132,6 @@ RESULT: PASS
 ## 6. Found and not changed (reported, not resolved here)
 
 - **Crystallization grade.** In §2 TDR-24B, the `[ADMIN]` note calls the thermodynamic-crystallization claim `[HEUR strong]`, while TDR-22b and §1 grade it `[HEUR]`. This is a grade question for the owners, not a maintenance edit. The readouts keep `[HEUR]`, the owner OPEN record's grade.
-- **`[RESULT]` without `[from: …]`.** The §A.sim `[RESULT]`, now in §8, lacks the `[from: TAG]` pairing of Methodology §3.4. It was moved verbatim (D3 (a)). Choosing the source tag is a typing decision.
 - **History phrases left in live sections.** Phrases such as "superseded", "historical" and "former", and version references such as "consistent with the v2.12.5–.7 rank-1 finding", "executed in v2.12" and "**(v2.12 note:**" in §6.5 remain. They are part of statements or correction records; removing them would reword claim text. The lint report counts them.
 - **§2 shape.** Under D2 (a) the TDR-24A/B/F, TDR-25/26 and OPEN-POLICY-GEOMETRY result bodies stay in §2. The OPEN-registry restructuring is a separately planned later edition.
 - **Deviations from the plan.**
@@ -144,28 +153,30 @@ RESULT: PASS
 
 ```
 file: dsn/RTG_DISCRETE_GENESIS_DSN.md
-bytes: 157260
-lines: 1201
+bytes: 157343
+lines: 1199
 header_chars: 1996
-live_body_chars: 144881
-appendix_a_chars: 9097
+live_body_chars: 144806
+appendix_a_chars: 9253
 section1_words: 407
 orientation_core: {"chars": 63130, "lines": 459, "words": 8022, "core_end_marker_present": true}
 header_fields: {"Title": 67, "Date": 26, "Scope": 187, "Document class": 163, "Document status": 136, "Supersedes": 149, "Companion documents": 157, "DSN Methodology": 62, "Status summary": 930, "Programme tier": 75}
-appendix_a_words_per_edition: 37 editions, max 251 words
+appendix_a_words_per_edition: 37 editions, max 276 words
 footer_lines: 1
 history_phrases_live: {"historical": 7, "superseded": 11, "former": 4, "no longer": 1}
 near_duplicate_paragraphs: 0
 rids_total: 91
 previous: {"file": "tdrg-v2.12.15", "bytes": 196268}
-growth_bytes: -39008
-growth_percent: -19.9
+growth_bytes: -38925
+growth_percent: -19.8
 new_rids: 1
-growth_per_new_rid: -39008.0
+growth_per_new_rid: -38925.0
 (informational report; no gate)
 ```
 
-Counting method: the lint script's own (whitespace tokens; §1 between its heading and the next `## `). Stage-1 intermediate: 191,737 bytes.
+Counting method: the lint script's own (whitespace tokens; §1 between its heading and the next `## `). Stage-1 intermediate: 191,662 bytes.
+
+**RID growth (review R2).** TDR-G declares no new RID in v2.13 (stage-1 checker C3: every declaration is kept and none is added). The lint's `new_rids: 1` counts a new identifier in the text: the citation of OFN's existing `RTG-OFN-OPEN-DISC-INTERACTION` (S3). Growth per new TDR-G RID is therefore N/A; the raw lint output above is kept as produced.
 
 ## 9. Steps after adoption
 
@@ -188,5 +199,5 @@ Counting method: the lint script's own (whitespace tokens; §1 between its headi
 - **XFER-O08-01:** custody of Finding A; a decision note follows separately.
 - **`largest_center` / TDR-19:** the label-dependent centre choice; a decision note follows separately.
 - **§2 OPEN-registry restructuring** (D2 (b)): a later, separately planned edition.
-- **§6 items:** the crystallization grade and the `[RESULT]` pairing.
+- **§6 item:** the crystallization grade.
 - **N4 follow-up:** the log reading.

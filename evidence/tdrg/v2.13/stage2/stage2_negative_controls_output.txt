@@ -1,4 +1,4 @@
-base: git show 1a8e02a29ed4589291b752e0a0a0901cf7e7d8b6:dsn/RTG_DISCRETE_GENESIS_DSN.md  sha256 b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc
+base: git show fd96f8a0b33a1236989b9e941b1c1c0e2381f2db:dsn/RTG_DISCRETE_GENESIS_DSN.md  sha256 472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff
 OK    P0 unmutated map                                               exit 0 (want 0)  RESULT: PASS
 OK    N1 undeclared change in the live text                          exit 1 (want 1)  FAIL  mechanical scope (re-derivation)  — first difference at line 92: derived 'ACTIVE — PARTIAL  \nQuestion: Identify a purely relational invariant p
 OK    N2 status summary with a sentence not in the base              exit 1 (want 1)  FAIL  operation S2-H (presentation)  — status summary adds text not in the base summary (header): ['TDR-6 is closed.']

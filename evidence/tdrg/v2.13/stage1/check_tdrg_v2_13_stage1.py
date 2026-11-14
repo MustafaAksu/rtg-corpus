@@ -6,7 +6,7 @@
 Run from the repository root; needs the tags tdrg-v2.12.15, az-v0.6, az-v0.7, az-v0.8, ofn-v0.12 and
 programme-v1.4. Reads the base from the tag, the intermediate from --intermediate FILE (default
 dsn/RTG_DISCRETE_GENESIS_DSN.md; after stage 2, pass the stage-1 commit's bytes:
-`git show 1a8e02a29ed4589291b752e0a0a0901cf7e7d8b6:dsn/RTG_DISCRETE_GENESIS_DSN.md > FILE`) and the edit log from evidence/tdrg/v2.13/stage1/edit_log.json.
+`git show fd96f8a0b33a1236989b9e941b1c1c0e2381f2db:dsn/RTG_DISCRETE_GENESIS_DSN.md > FILE`) and the edit log from evidence/tdrg/v2.13/stage1/edit_log.json.
 
 Gates
   C0 base       the tag bytes have the asserted SHA-256

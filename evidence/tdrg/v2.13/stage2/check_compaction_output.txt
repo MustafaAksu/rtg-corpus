@@ -1,6 +1,6 @@
 PASS  base identity  — map base_sha256 vs file
 PASS  candidate identity  — map candidate_sha256 vs file
-PASS  archive identity stage1-intermediate  — b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc
+PASS  archive identity stage1-intermediate  — 472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff
 PASS  archive identity tdrg-v2.12.15  — 1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64
 PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
 PASS  operation S2-H (presentation)  — header replaced; status-summary sentences are a subset of the base summary (header)
@@ -46,7 +46,7 @@ PASS  operation S2-L39 (history-removal)  — history span removed (11 chars), f
 PASS  operation S2-L40 (history-removal)  — history span removed (19 chars), found in ['stage1-intermediate']
 PASS  operation S2-A (history-appendix)  — section relocated (41084 chars), found in ['stage1-intermediate', 'tdrg-v2.12.15']
 PASS  operation S2-F (presentation)  — footer replaced
-PASS  qualified claim blocks  — 268 claim blocks in base live text: 244 byte-identical, 24 changed by declared operations, 0 unexplained
+PASS  qualified claim blocks  — 267 claim blocks in base live text: 243 byte-identical, 24 changed by declared operations, 0 unexplained
 PASS  RID set preserved in live text  — missing: []
 PASS  heading anchors preserved  — missing: []
 PASS  source hashes preserved in live text  — missing: []

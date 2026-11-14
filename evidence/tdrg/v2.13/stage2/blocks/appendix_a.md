@@ -8,7 +8,7 @@ One compact entry per edition. Entries before v2.12.14 are shortened to one line
 - **§2 TDR-25, Appendix B [scope/typing]:** the superseded failed-relock hypothesis (v2.8) leaves §2; Appendix B records it with its original statement.
 - **§6.2, §6.3, §6.5, §7 [evidence]:** the AZ citation is repinned to `az-v0.8` (the entry is byte-identical at `az-v0.6`, `az-v0.7` and `az-v0.8`). The OPEN-OFN-2 connection, the CONV-TICK and LEM-NOANNIHIL consumer pins and the consumer rows are stated at their current editions (OFN v0.12, AZ v0.8). XFER-O08-01 is stated as open, a separate decision of both owners.
 - **§2 [governance]:** the owner-review tasks are stated as TDR-G's own current items.
-- **§8, Appendix A, footer [editorial]:** §A.sim is moved verbatim to §8 (D3 (a)). Appendix A is compacted; the footer has one line.
+- **§8, Appendix A, footer [editorial]:** the §A.sim table is moved verbatim to §8 (D3 (a)); its closing interpretive `[RESULT]`, which has no `[from: …]` pairing, is not promoted to the live text and stays at `tdrg-v2.12.15` (review R1). Appendix A is compacted; the footer has one line.
 - **Not changed:** every scientific result, RID, grade, OPEN state, scope guard and evidence state. Plan `records/tdrg/TDRG_v2_13_EDIT_PLAN.md`; release record `records/tdrg/TDRG_v2_13_RELEASE_RECORD.md`; predecessor `tdrg-v2.12.15`.
 
 ### v2.12.15 — 12 November 2026 — adopted

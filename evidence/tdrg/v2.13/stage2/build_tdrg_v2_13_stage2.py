@@ -20,8 +20,8 @@ import hashlib, json, os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", "..", ".."))
 DSN = "dsn/RTG_DISCRETE_GENESIS_DSN.md"
-BASE_COMMIT = "1a8e02a29ed4589291b752e0a0a0901cf7e7d8b6"
-BASE_SHA = "b24c17ccbc93150449842a603c2c18fd47e66bc6f27ee77152802b36d450cdcc"
+BASE_COMMIT = "fd96f8a0b33a1236989b9e941b1c1c0e2381f2db"
+BASE_SHA = "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff"
 PRED_TAG = "tdrg-v2.12.15"
 PRED_SHA = "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64"
 sha = lambda b: hashlib.sha256(b).hexdigest()
@@ -132,7 +132,7 @@ ops.append({"id": "S2-A", "op": "replace-section", "class": "history-appendix", 
             "start": "## Appendix A — Version History {#appendix-a}", "end": "## Appendix B — Retired and Rejected Claims {#appendix-b}",
             "new": open(os.path.join(HERE, "blocks", "appendix_a.md"), encoding="utf-8").read(),
             "note": "one compact entry for v2.13, v2.12.15, v2.12.14; one line for each earlier edition, full text at the tag; "
-                    "§A.sim removed (stage 1 placed it verbatim in §8)"})
+                    "§A.sim removed (stage 1 placed its table verbatim in §8; its closing [RESULT] stays at the tag)"})
 ops.append({"id": "S2-F", "op": "replace-footer", "class": "presentation", "archive": ["stage1-intermediate"], "new": FOOTER,
             "note": "single footer line; the predecessor lineage is in the header (immediate predecessor) and the tags"})
 
