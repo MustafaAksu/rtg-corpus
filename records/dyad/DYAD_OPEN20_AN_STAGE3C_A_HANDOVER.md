@@ -1,6 +1,6 @@
 # DYAD OPEN 20 (analytic branch) — stage 3c-a: hand-over (W8)
 
-**Date:** 12 November 2026 (r2 of the same day, after review `5875142356`; §5 and §8 updated the same day after the merge, with the inbox dispositions; §5, §6 and §8 updated on 13 November 2026 with the written seed and divergence step). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It closes stage 3c-a as a set of development and working records. **It is not a certificate and it makes no statement about the jump, about divergence, or about B-an and B-6.**
+**Date:** 12 November 2026 (r2 of the same day, after review `5875142356`; §5 and §8 updated the same day after the merge, with the inbox dispositions; §5, §6 and §8 updated on 13 November 2026 with the written seed and divergence step; §4 and §8 on 14 November 2026 with the preparation of stage 3c-b). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It closes stage 3c-a as a set of development and working records. **It is not a certificate and it makes no statement about the jump, about divergence, or about B-an and B-6.**
 **Authority:** PI decision of 11 November 2026 for stage 3c-a (`records/dyad/DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §1). **Stage 3c-b (a certification run) is not authorized.** Whether to authorize it is the PI's decision; this record states what such a run would consist of and what it could and could not claim.
 **Governing edition:** DYAD v6.4.24. OPEN 20 B-an and B-6 are ACTIVE.
 
@@ -46,7 +46,7 @@ Environment of the development runs: Python 3.13.16, python-flint 0.9.0, mpmath 
 
 ## 4. What a certification run (3c-b) would be
 
-Not authorized. If the PI authorizes it, the run is the following commands at a frozen commit, on a machine of the PI's choice, followed by an independent replay by the receiving reviewer and by a release record that states the scope of §6.
+Not authorized. **Since 14 November 2026 the run is prepared as one command with a manifest and one acceptance rule** (`DYAD_OPEN20_AN_STAGE3C_B_PREP.md`; PI decision of that day: preparation only). If the PI authorizes the run, it is that command at a frozen commit, on a machine of the PI's choice, followed by a replay and by a release record that states the scope of §6. The command runs the processes of the following list, each once, with every control:
 
 ```
 bash evidence/dyad/open20-an/stage3c-a/run_w1.sh
@@ -59,7 +59,7 @@ bash evidence/dyad/open20-an/stage3c-a/run_w5.sh      # the arc
 bash evidence/dyad/open20-an/stage3c-a/run_w8.sh      # legs with --full-fibre --strict-snd; inverse branch with --strict-e; controls
 ```
 
-About 100 minutes on two cores. `run_w6.sh` is the earlier form of the legs and is superseded by the legs part of `run_w8.sh`. For a certification package the eight scripts would be wrapped in one command with one checksum file; that wrapper is not written, because it belongs to the authorized run.
+About 100 minutes on two cores. `run_w6.sh` is the earlier form of the legs and is superseded by the legs part of `run_w8.sh`. The driver `dyad_open20_an_stage3c_b_run.py` replaces this list: 11 positive processes and 23 negative controls, about 50 minutes on two cores.
 
 ## 5. Obligations of the design, at hand-over
 
@@ -127,8 +127,8 @@ A run of §4, if authorized and replayed, would certify the computational statem
 ## 8. Open at hand-over
 
 - The seed (Q1–Q3) and P4 are written, conditionally (13 Nov 2026; §5). Open for a claim: a certified, replayed run; the scope of L1 and L3. The inbox items of 12 Nov are dispositioned (`DYAD_INBOX_20261112_OWNER_DISPOSITION.md`): LIT's reply on L1, L3 accepted as a check of use; LIT's INF-016 deferred.
-- **Prerequisite of a certification run, from the read-back of r2** (review `5877317450`, item 2): in `arc_tail` the threshold t_M must be computed with the upper bound of \|A₃\| (the condition \|x₀\| ≤ X_M is \|w\| ≥ \|A₃\|/X_M³), or the inequality against that threshold must be checked in ball arithmetic. The present code uses the lower bound and relies on the slack 10⁻¹² of the float bound. Not a numerical failure; to be changed in the frozen code of the run.
+- **Prerequisite of a certification run, from the read-back of r2** (review `5877317450`, item 2): in `arc_tail` the threshold t_M must be computed with the upper bound of \|A₃\| (the condition \|x₀\| ≤ X_M is \|w\| ≥ \|A₃\|/X_M³), or the inequality against that threshold must be checked in ball arithmetic. The present code uses the lower bound and relies on the slack 10⁻¹² of the float bound. Not a numerical failure. **Done on 14 November 2026** in the preparation of stage 3c-b (`wmin = up(A3) / XM ** 3`); the output of the arc script is byte-identical.
 - The triangular form of the recursion behind S4 is taken from the stage-1 and stage-2 records.
 - Analyticity of the new δ in the base variable in the Rouché step is stated as standard, not written out.
 - No REVIEWER-REPLAYED run exists.
-- A single wrapper command and package checksum for 3c-b are not written.
+- The single command and the manifest for 3c-b are written (14 November 2026, preparation record). The production run and its replay are not authorized.
