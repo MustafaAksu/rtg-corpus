@@ -1,0 +1,293 @@
+{
+ "base_tag": "tdrg-v2.12.15",
+ "base_sha256": "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64",
+ "intermediate_sha256": "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff",
+ "edits": [
+  {
+   "key": "E01",
+   "mode": "line",
+   "line_anchor": "**DSN Methodology:**",
+   "old_sha256": "b96bafcf5a514e1b7f916ad6494806fe5d7daf97875859b85ce853d4615072ef",
+   "new_sha256": "6934b4310f71695831fe678ba0ac2e6f10e87034c5ca3949fe19a8b93df60a68",
+   "old_len": 141,
+   "new_len": 64,
+   "note": "S2: the edition migrates to Methodology v1.4 (was: v1.2 declared for the v2.12.x line)"
+  },
+  {
+   "key": "E02",
+   "mode": "line",
+   "line_anchor": "Canonical tags follow `DSN_METHODOLOGY`",
+   "old_sha256": "0b9936753d10b89a9e8f614d2e56585338b0b178d3fefdd25818ddef61fdc333",
+   "new_sha256": "cf8fac44b2e513955566b73e486de890c56a33a4a47eca64a9fec933891d09ab",
+   "old_len": 288,
+   "new_len": 50,
+   "note": "S2: the alias sentence states the governing edition; its v2.12.14 history (legacy rows, with tags) stays in the tagged predecessor"
+  },
+  {
+   "key": "E03",
+   "mode": "line",
+   "line_anchor": "**Status summary:**",
+   "old_sha256": "9dd20cb514b717ac87195ecadbfae55900049b3c3a55b32b3dfa6d5b9271e75a",
+   "new_sha256": "1396cf7118e227441678c5c6733e7528cec44943163ad656589d0d9268835f07",
+   "old_len": 2874,
+   "new_len": 930,
+   "note": "S7: present-state summary in three sentences; every statement is a readout of §1/§2/§6"
+  },
+  {
+   "key": "E04",
+   "mode": "range",
+   "start": "## §1. Current Canonical State",
+   "end": "## §2. Active Frontier / OPEN Registry",
+   "old_lines": 42,
+   "new_lines": 22,
+   "old_sha256": "c53aba5dd93e44df415fe289b9c9c17c623e1ef259dc25d9007065022d0ef586",
+   "new_sha256": "b36c125ea2aaa1f78808c7a5dcec139c6181d55d590ad148292ca5ee8f0ab418",
+   "note": "D1 (a), S6: §1 as readouts with pointers; every dropped statement has its full home (stage-1 record, §1 home table)"
+  },
+  {
+   "key": "E05",
+   "mode": "line",
+   "line_anchor": "**Owner-review tasks**",
+   "old_sha256": "2e55ff303dcb1ae3101649afbdc51c79a36fcb1f73b84d10b24b377ec2bd6c88",
+   "new_sha256": "0450d37f3f303e554f115ad9a6f762d33ec40b1d3e0ced6b9f54f6a3d7e7f03c",
+   "old_len": 563,
+   "new_len": 439,
+   "note": "S4: TDR-G's own open items with current status; Programme v1.4 does not carry them"
+  },
+  {
+   "key": "E06",
+   "mode": "str",
+   "line_anchor": "Connection: OPEN-OFN-2",
+   "old": "Connection: OPEN-OFN-2 in `RTG_ONTOLOGICAL_FOUNDATIONS_v0.6`.",
+   "new": "Connection: OPEN-OFN-2 (RTG-OFN-OPEN-DISC-INTERACTION) in `RTG_ONTOLOGICAL_FOUNDATIONS` v0.12 (`ofn-v0.12`).",
+   "old_sha256": "b5930cf8f9921b0c637661f8d9c1575cabcb0d4fce7587cfa58ab6503189bded",
+   "new_sha256": "247e6a1596fd69936fb95529bbe5d24cb06e81008e68dc64e5a9823a748d89c4",
+   "note": "S3: TDR-1 connection repinned; OPEN-OFN-2 is open at ofn-v0.12"
+  },
+  {
+   "key": "E07",
+   "mode": "str",
+   "line_anchor": "Connection: OPEN-OFN-2",
+   "old": "Connection: OPEN-OFN-2 in `RTG_ONTOLOGICAL_FOUNDATIONS_v0.6`.",
+   "new": "Connection: OPEN-OFN-2 (RTG-OFN-OPEN-DISC-INTERACTION) in `RTG_ONTOLOGICAL_FOUNDATIONS` v0.12 (`ofn-v0.12`).",
+   "old_sha256": "b5930cf8f9921b0c637661f8d9c1575cabcb0d4fce7587cfa58ab6503189bded",
+   "new_sha256": "247e6a1596fd69936fb95529bbe5d24cb06e81008e68dc64e5a9823a748d89c4",
+   "note": "S3: TDR-19 connection repinned, as E06"
+  },
+  {
+   "key": "E08",
+   "mode": "str",
+   "line_anchor": "- Total additive momentum $P$: `[FAIL]` as a birth invariant",
+   "old": "(SG-3, v2.12.15 `[COR]`)",
+   "new": "(SG-3)",
+   "old_sha256": "90d69378b3143e6c17fdc1e45e980b14d7128fa730e5309aeb3579b2e7115e12",
+   "new_sha256": "c078055d6be698b0e13fc9fa8d8645a5e0b198bacea7a26abdffd12d82406db5",
+   "note": "label: the correction is recorded in Appendix A; the statement stays"
+  },
+  {
+   "key": "E09",
+   "mode": "str",
+   "line_anchor": "**Current status (v2.12.14):** the derivation target",
+   "old": " The dated paragraphs below (v2.12.1–v2.12.9) are the supporting record; moving them to Appendix A is v2.13 layout work.",
+   "new": " The paragraphs below are the supporting record.",
+   "old_sha256": "0201d906278e737311f913688fa89cc4a5a0c6eb5fd31d4d058e5b1c3b3a49d9",
+   "new_sha256": "255f58251dbefaebf88e70bf4039f52ee4f7c4ebdd087e8bef8f733172691ee8",
+   "note": "D2 (a): the record stays in §2; the announced relocation is not made"
+  },
+  {
+   "key": "E10",
+   "mode": "delete",
+   "line_anchor": "**`[REVISED]` v2.8 failed-relock hypothesis",
+   "old_sha256": "98e512c5d20813d417407861be7673763cf52444e99fc0cf2f9f78b11b362fb9",
+   "old_len": 396,
+   "note": "S8: superseded hypothesis removed from TDR-25; recorded in Appendix B (E29)"
+  },
+  {
+   "key": "E11",
+   "mode": "str",
+   "line_anchor": "- *But the v2.8 failed-relock framing was too late-stage*",
+   "old": "*But the v2.8 failed-relock framing was too late-stage*",
+   "new": "*The failed-relock framing (Appendix B) is too late-stage*",
+   "old_sha256": "dbb5d377d4989d9ab50022f6c509c97ac9fe8b4e4ebc4fc7beb550b0e9ba9fe0",
+   "new_sha256": "da8144e01faf2816f6aea9a90e5311d94685055dc1cc1663e930d0a7f243b46d",
+   "note": "S8: pointer to the Appendix B record"
+  },
+  {
+   "key": "E12",
+   "mode": "str",
+   "line_anchor": "**[SG-3]**",
+   "old": " *(v2.12.15 `[COR]`; OFN finding `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md`)*",
+   "new": "",
+   "old_sha256": "0c6834d78cad199b65d175f92d52bf01fe6c21893230b3f56882c31b72f7fcd6",
+   "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "note": "label: provenance of the v2.12.15 correction (Appendix A, release record)"
+  },
+  {
+   "key": "E13",
+   "mode": "str",
+   "line_anchor": "Physical consequence: fully defective $K_3$",
+   "old": "(`az-v0.7`; statement unchanged from `az-v0.6`)",
+   "new": "(`az-v0.8`)",
+   "old_sha256": "a40e2cc43dd601abac0fce3274ab3584cb6a907873d460b2a31a7e55e1aaa363",
+   "new_sha256": "ecad91d75f6108a806022deac2f4dc6841d27355b2131f6dad50deff7f66188e",
+   "note": "S1: the cited AZ-ALG-ANTIPODAL-LOWORDER entry is byte-identical at az-v0.6, az-v0.7 and az-v0.8 (checker C6)"
+  },
+  {
+   "key": "E14",
+   "mode": "str",
+   "line_anchor": "4. Classify each component, in this order:",
+   "old": "*(v2.12.15 `[COR]`: the precedence as implemented; ties are outcomes",
+   "new": "*(ties are outcomes",
+   "old_sha256": "b10572e75c8bfd822154859afe967b2e24db83f8d2c39029cc8b2f4a4cfe226a",
+   "new_sha256": "1e1d6d0a34d0cb02ae208c83fed7bb548b822a2122f2017b9ad442be3d56e55d",
+   "note": "label: the correction is recorded in Appendix A; the qualifications stay"
+  },
+  {
+   "key": "E15",
+   "mode": "str",
+   "line_anchor": "**(v2.12)** This convention is named **CONV-TICK**",
+   "old": "(it is imported by `RTG_ONTOLOGICAL_FOUNDATIONS` v0.7)",
+   "new": "(it is imported by `RTG_ONTOLOGICAL_FOUNDATIONS` v0.12, IMP-O08-14)",
+   "old_sha256": "3ab4768e0c76a862f6b6a1c6d4019104066e768cef78c55db7cec91df0ef4b06",
+   "new_sha256": "1ce3d24f85b6abc54c3850ac53ac194c85eb9d561145ffd6595039c5d9451ee1",
+   "note": "S3: current consumer edition and import row"
+  },
+  {
+   "key": "E16",
+   "mode": "str",
+   "line_anchor": "`[DEF]` [RID: TDRG-DEF-ORIENT] **Path orientation rule.**",
+   "old": " *(v2.12.14 `[COR]`; owner dispositions of 27 Oct 2026, option (b).)*",
+   "new": "",
+   "old_sha256": "d344e652b733a6559cbceb09265949311028dddea17101ad3635c80b9058f69c",
+   "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "note": "label: provenance (Appendix A, v2.12.14 release record); the superseded completion stays stated in the body"
+  },
+  {
+   "key": "E17",
+   "mode": "str",
+   "line_anchor": "`[DEF]` [RID: TDRG-DEF-STAR] **Star blow-up**",
+   "old": " *(v2.12.15 `[COR]` — event domain stated as implemented; owner finding N4)*",
+   "new": "",
+   "old_sha256": "ca37ad5dfcc375a7ff742db3c01891528c02eb7ea1905260eb93259147c93b20",
+   "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "note": "label: provenance; the superseded wording stays stated in the body"
+  },
+  {
+   "key": "E18",
+   "mode": "str",
+   "line_anchor": "`[DEF]` [RID: TDRG-DEF-MULTISTAR] **Multistar**",
+   "old": "(two or more valid centres, any shape; *v2.12.15 `[COR]`: stated with the precision of TDRG-DEF-STAR*)",
+   "new": "(two or more valid centres, any shape)",
+   "old_sha256": "fe61ec318f86c51a8781100569083cb6be93ea0059f4d5df8e4a47843578d363",
+   "new_sha256": "cec20d1960f94b74f3ac7a555d1809a19adb382a7390fd4e5d803e1e01253545",
+   "note": "label: provenance"
+  },
+  {
+   "key": "E19",
+   "mode": "str",
+   "line_anchor": "`[ALG]` `[NUM exhaustive: $N=2$–$40$, all $(\\Delta_0,d_0)$]`",
+   "old": "(exported to `RTG_ONTOLOGICAL_FOUNDATIONS` v0.7 as `[RESULT]` `[from: ALG]`)",
+   "new": "(imported by `RTG_ONTOLOGICAL_FOUNDATIONS` v0.12 as IMP-O08-06)",
+   "old_sha256": "f0891096c920ae86fb2448437f9b3439aeccf945e586b9a7aac3d1db1f7d3256",
+   "new_sha256": "faa60dee9499b04fa03179fba71977aa427479a3922a96898c48c8a913a6edfd",
+   "note": "S3: current consumer edition and import row (OFN v0.12 imports it as `[ALG]`)"
+  },
+  {
+   "key": "E20",
+   "mode": "str",
+   "line_anchor": "`[ALG]` `[NUM exhaustive: even $N\\le40$, $k\\le N/6$]`",
+   "old": " *(v2.12.14 `[COR]`)*",
+   "new": "",
+   "old_sha256": "4ba9d99986e27c2d49a2a8c42bcfec6090f5186b3778d3fab75678a84df5acf7",
+   "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "note": "label: provenance of the v2.12.14 correction"
+  },
+  {
+   "key": "E21",
+   "mode": "str",
+   "line_anchor": "is **exactly conserved**",
+   "old": "*(v2.12.14 `[COR]`: the converse fails",
+   "new": "*(the converse fails",
+   "old_sha256": "0da8dd44160335015951d621bc5ea49b24672f1b6450fe4339db0d24d0d48e75",
+   "new_sha256": "ced5ee5d7258f24678f3ecf9463747f98b0d93988e0558d2ad103b20063e98fa",
+   "note": "label: the counterexample stays"
+  },
+  {
+   "key": "E22",
+   "mode": "str",
+   "line_anchor": "is **exactly conserved**",
+   "old": "**Generalization** *(v2.12.15 `[COR]`)*:",
+   "new": "**Generalization**:",
+   "old_sha256": "3144173d3de0d1ac5eb5182c71ade6b57c53b5b9ec9adf4c2599d8e82466aaa5",
+   "new_sha256": "d65ab22e44c656b6492f9bc282f16a2276c82d87b488d980b25924884201f3ba",
+   "note": "label: provenance"
+  },
+  {
+   "key": "E23",
+   "mode": "str",
+   "line_anchor": "Rows $|d|_c\\le2$ are retrigger-entry ICs",
+   "old": "*(v2.12.14 `[COR]`: this is not node-relabelling",
+   "new": "*(this is not node-relabelling",
+   "old_sha256": "b401c1364d9d0159a6090ef7a2fa444d66c26a9277da88af4b94e87882deb94e",
+   "new_sha256": "180e2c242c0103f3d30a0f0172e6e5d3e04b434fbad8ef58e09bf7dd485a45b9",
+   "note": "label: the qualification stays"
+  },
+  {
+   "key": "E24",
+   "mode": "str",
+   "line_anchor": "- `[ALG]` [import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.12",
+   "old": "Custody transfer XFER-O08-01: **deferred** to v2.13 (the RID stays OFN's).",
+   "new": "Custody transfer XFER-O08-01: **open**, a separate decision of both owners (the RID stays OFN's).",
+   "old_sha256": "faf391239c83b4fcb1a4290c0b9e7b6210c6479d5e562ba704bc8409169e6db1",
+   "new_sha256": "8ea274c3bc98b87ad050c01264008dda43e2d8790ffb52a847b2677312602824",
+   "note": "scope: custody is outside v2.13 (PI, 13 Nov 2026); the state is stated as open"
+  },
+  {
+   "key": "E25",
+   "mode": "range",
+   "start": "**Consumers** (from the consumers' own records;",
+   "end": "**Pins.** Governing editions at this release:",
+   "old_lines": 12,
+   "new_lines": 10,
+   "old_sha256": "b7502c3827df0f7c9f7ee2192533b2f4e6cd244a9a87025e0c72746cf545dbfc",
+   "new_sha256": "419b5eeea5eda697abddc64a45b93ba0b4d92ee795938cf7598656164882b22f",
+   "note": "S1, S7: rows state current use; AZ at az-v0.8 from its own §8; queue states and the 'notices after the tag' sentence leave"
+  },
+  {
+   "key": "E26",
+   "mode": "line",
+   "line_anchor": "**Pins.** Governing editions at this release:",
+   "old_sha256": "311bed136ae52661c494b4114b2d7d24f264495977d72f38eb73e3249d8e0a75",
+   "new_sha256": "5b8faa401b61543494c1a36a0f9c719efb989a1e8415d68c0cbb8b6feebf5547",
+   "old_len": 354,
+   "new_len": 231,
+   "note": "S1, S3: current pins; no historical pin remains live"
+  },
+  {
+   "key": "E27",
+   "mode": "str",
+   "line_anchor": "- [RID: TDRG-EXPORT-DISCRETE-TRIAD]",
+   "old": " *(v2.12.15 `[COR]`: the row named the earlier D/A/B gate; Programme v1.4 §6.4 notice.)*",
+   "new": "",
+   "old_sha256": "6fe3156ac0f75f3a8f705ddff53809379f547bbe18ee5946b1363c0f023ff058",
+   "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "note": "label: provenance of the v2.12.15 correction"
+  },
+  {
+   "key": "E28",
+   "mode": "insert",
+   "after": "- Post-edition data, not cited by any claim here:",
+   "new_lines": 15,
+   "new_sha256": "264430fc05d70b7e6e15b139038b478befa82aebc1181f8326b717a74e2c8ecd",
+   "note": "D3 (a), S5: the table carries live records (a [FAIL] row that invalidates the v1–v2 results); review R1: the closing interpretive [RESULT] is not promoted to live text; stage 2 removes the Appendix A copy"
+  },
+  {
+   "key": "E29",
+   "mode": "insert",
+   "after": "- [FAIL] $K_3$ globally explosive",
+   "new_lines": 1,
+   "new_sha256": "c5e03f446f0553f74938b0f64991fe5cd37ac296445bba5168813c7888fa25d8",
+   "note": "S8: permanent record of the hypothesis removed by E10, with its original statement"
+  }
+ ]
+}

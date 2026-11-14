@@ -1,0 +1,1 @@
+**Pins.** Governing editions: Programme Overview v1.4, OFN v0.12, AZ v0.8, DSN Methodology v1.4 (declared). Each claim-level citation above carries the edition it uses; no claim-specific historical pin remains in the live sections.
