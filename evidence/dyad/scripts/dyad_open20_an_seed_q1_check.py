@@ -193,10 +193,10 @@ def main():
     g = {k: bool(v) for k, v in g.items()}; ok = all(g.values())
     for k in sorted(g):
         print(k, 'PASS' if g[k] else 'FAIL')
-    print('RESULT', 'PASS' if ok else 'FAIL', '(control %s)' % o.control if o.control else '', '| SESSION check; not a certificate; no seed is proved')
+    print('RESULT', 'PASS' if ok else 'FAIL', '(control %s)' % o.control if o.control else '', L.run_tail('| SESSION check; not a certificate; no seed is proved'))
     with open(o.out, 'w', encoding='utf-8', newline='\n') as f:
         json.dump({'gates': g, 'info': info, 'all_pass': ok, 'control': o.control,
-                   'status': 'SESSION owner check of explicit inequalities; not a certificate; no seed is proved',
+                   'status': L.run_status('SESSION owner check of explicit inequalities; not a certificate; no seed is proved'),
                    'script': 'dyad_open20_an_seed_q1_check.py'}, f, indent=1, sort_keys=True)
         f.write('\n')
     return 0 if ok else 1

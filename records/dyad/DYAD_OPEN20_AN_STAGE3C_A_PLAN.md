@@ -151,6 +151,9 @@ LIT's answer on Theorem 4.2(3) (L3; `pipes/LIT/20261111-DYAD-lh2012-thm42-unique
   - The owner folded both into the proof record as §12 and §13, added to its §1 that τ has decimal coefficients, and wrote out one step that the co-owner's file lists as open: on the seed domain the branch G of Proposition 4.2 is the lift of the germ F⁻¹ (§12 step 7).
   - Co-owner review of the fold-in (PR #266, `5890482430`, ACCEPT SCOPED at head `901d0e4`): §12 step 7 accepted as a conditional argument; two clarifications taken up (the map π between lifted and raw coordinates is written out in step 7; the stream map of the entry note). No computation was replayed by the co-owner.
   - **State:** seed and P4 written, conditional. No certified point jump, no replayed run, L1 and L3 at SESSION scope. Stage 3c-b is not authorized.
+- **14 Nov 2026, PR #266 merged (`c9c60f2`); two PI decisions.** Asked in session by the owner, the PI authorized (1) the **preparation** of stage 3c-b — the t_M correction, freezing the code, a package fixed by SHA-256, one command block for the server — and (2) a targeted request to LIT on Proposition 5.3 of López-Hernanz 2012. **The production run and the replay are not authorized.**
+  - Preparation: `DYAD_OPEN20_AN_STAGE3C_B_PREP.md` (driver, manifest, acceptance rule, selftest). This plan record, which belongs to stage 3c-a, is not continued for stage 3c-b.
+  - LIT request: `pipes/LIT/20261114-DYAD-lh2012-prop53-scope.md` (PR #269).
 
 ## 5. Development runs (not certificates)
 

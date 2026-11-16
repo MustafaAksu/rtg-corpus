@@ -1,0 +1,426 @@
+{
+ "jobs": {
+  "arc": {
+   "false": [],
+   "gates": [
+    "CHAIN_validated_continuation",
+    "LINK_chain_meets_tail",
+    "SND_independent_continuation",
+    "TAIL_unique_solution_for_large_t",
+    "WEDGE_conditions_along_the_half_line"
+   ]
+  },
+  "arc_BIGSTEP": {
+   "false": [
+    "CHAIN_validated_continuation",
+    "LINK_chain_meets_tail",
+    "SND_independent_continuation"
+   ],
+   "gates": [
+    "CHAIN_validated_continuation",
+    "LINK_chain_meets_tail",
+    "SND_independent_continuation",
+    "TAIL_unique_solution_for_large_t",
+    "WEDGE_conditions_along_the_half_line"
+   ]
+  },
+  "arc_BRANCH": {
+   "false": [
+    "LINK_chain_meets_tail",
+    "SND_independent_continuation",
+    "TAIL_unique_solution_for_large_t"
+   ],
+   "gates": [
+    "CHAIN_validated_continuation",
+    "LINK_chain_meets_tail",
+    "SND_independent_continuation",
+    "TAIL_unique_solution_for_large_t",
+    "WEDGE_conditions_along_the_half_line"
+   ]
+  },
+  "arc_CORE": {
+   "false": [
+    "CHAIN_validated_continuation",
+    "LINK_chain_meets_tail",
+    "SND_independent_continuation",
+    "TAIL_unique_solution_for_large_t"
+   ],
+   "gates": [
+    "CHAIN_validated_continuation",
+    "LINK_chain_meets_tail",
+    "SND_independent_continuation",
+    "TAIL_unique_solution_for_large_t",
+    "WEDGE_conditions_along_the_half_line"
+   ]
+  },
+  "arc_LOGBRANCH": {
+   "false": [
+    "WEDGE_conditions_along_the_half_line"
+   ],
+   "gates": [
+    "CHAIN_validated_continuation",
+    "LINK_chain_meets_tail",
+    "SND_independent_continuation",
+    "TAIL_unique_solution_for_large_t",
+    "WEDGE_conditions_along_the_half_line"
+   ]
+  },
+  "branch": {
+   "false": [],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "INJ_base_map_injective_on_the_sector",
+    "SRC1_sources_of_zone_I_in_the_sector",
+    "SRC_sources_of_zone_II_in_the_sector"
+   ]
+  },
+  "branch_SMALLSECTOR": {
+   "false": [
+    "SRC_sources_of_zone_II_in_the_sector"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "INJ_base_map_injective_on_the_sector",
+    "SRC1_sources_of_zone_I_in_the_sector",
+    "SRC_sources_of_zone_II_in_the_sector"
+   ]
+  },
+  "engine_w1": {
+   "false": [],
+   "gates": [
+    "G0_stage2_input",
+    "W1a_coefficient_balls",
+    "W1b_identity_plus_order_four",
+    "W1c_defect_vanishes_to_order_43_raw",
+    "W1d_coefficients_decay"
+   ]
+  },
+  "engine_w1_SHIFTCOEF": {
+   "false": [
+    "W1c_defect_vanishes_to_order_43_raw"
+   ],
+   "gates": [
+    "G0_stage2_input",
+    "W1a_coefficient_balls",
+    "W1b_identity_plus_order_four",
+    "W1c_defect_vanishes_to_order_43_raw",
+    "W1d_coefficients_decay"
+   ]
+  },
+  "engine_w2a": {
+   "false": [],
+   "gates": [
+    "ACC_relative_radius_below_10_percent",
+    "C0_leading_coefficients",
+    "G0_stage2_input",
+    "M_circle_bounds_and_tails",
+    "SND_independent_values_inside_enclosures",
+    "S_structural_zeros_consistent"
+   ]
+  },
+  "engine_w2a_TAMPER": {
+   "false": [
+    "SND_independent_values_inside_enclosures"
+   ],
+   "gates": [
+    "ACC_relative_radius_below_10_percent",
+    "C0_leading_coefficients",
+    "G0_stage2_input",
+    "M_circle_bounds_and_tails",
+    "SND_independent_values_inside_enclosures",
+    "S_structural_zeros_consistent"
+   ]
+  },
+  "engine_w2b": {
+   "false": [],
+   "gates": [
+    "C2_second_order_coefficients_sound",
+    "G0_stage2_input",
+    "INV_local_inverse_verified_and_sound",
+    "J2_second_order_series",
+    "M_circle_bounds_and_tails",
+    "REM_remainder_constants_sound",
+    "TUBE_step_on_tube_pieces_sound"
+   ]
+  },
+  "engine_w2b_SHIFTINV": {
+   "false": [
+    "INV_local_inverse_verified_and_sound"
+   ],
+   "gates": [
+    "C2_second_order_coefficients_sound",
+    "G0_stage2_input",
+    "INV_local_inverse_verified_and_sound",
+    "J2_second_order_series",
+    "M_circle_bounds_and_tails",
+    "REM_remainder_constants_sound",
+    "TUBE_step_on_tube_pieces_sound"
+   ]
+  },
+  "engine_w2b_SHRINKREM": {
+   "false": [
+    "REM_remainder_constants_sound",
+    "TUBE_step_on_tube_pieces_sound"
+   ],
+   "gates": [
+    "C2_second_order_coefficients_sound",
+    "G0_stage2_input",
+    "INV_local_inverse_verified_and_sound",
+    "J2_second_order_series",
+    "M_circle_bounds_and_tails",
+    "REM_remainder_constants_sound",
+    "TUBE_step_on_tube_pieces_sound"
+   ]
+  },
+  "legs": {
+   "false": [],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "LEGF_leg_F",
+    "LEGG_leg_G",
+    "SEP_two_disc_test",
+    "SND_independent_values"
+   ]
+  },
+  "legs_SHORT": {
+   "false": [
+    "SEP_two_disc_test"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "LEGF_leg_F",
+    "LEGG_leg_G",
+    "SEP_two_disc_test",
+    "SND_independent_values"
+   ]
+  },
+  "legs_ZEROJUMP": {
+   "false": [
+    "SEP_two_disc_test"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "LEGF_leg_F",
+    "LEGG_leg_G",
+    "SEP_two_disc_test",
+    "SND_independent_values"
+   ]
+  },
+  "seed": {
+   "false": [],
+   "gates": [
+    "ANG_chart_edges_and_cosines",
+    "COEF_bounds_of_the_draft",
+    "Q12_inequality_at_r0",
+    "Q13_levels",
+    "Q2_exponents_and_constants",
+    "SND_independent_sampling"
+   ]
+  },
+  "seed_BIG": {
+   "false": [
+    "Q12_inequality_at_r0"
+   ],
+   "gates": [
+    "ANG_chart_edges_and_cosines",
+    "COEF_bounds_of_the_draft",
+    "Q12_inequality_at_r0",
+    "Q13_levels",
+    "Q2_exponents_and_constants",
+    "SND_independent_sampling"
+   ]
+  },
+  "seed_HALFE": {
+   "false": [
+    "SND_independent_sampling"
+   ],
+   "gates": [
+    "ANG_chart_edges_and_cosines",
+    "COEF_bounds_of_the_draft",
+    "Q12_inequality_at_r0",
+    "Q13_levels",
+    "Q2_exponents_and_constants",
+    "SND_independent_sampling"
+   ]
+  },
+  "structure": {
+   "false": [],
+   "gates": [
+    "LEAD_constants_and_real_structure",
+    "LIN_identity_plus_degree_3",
+    "P4_no_w2_in_Fz",
+    "S5W_Fw_minus_w_weighted_order_ge_5",
+    "S5Z_Fz_minus_z_weighted_order_ge_4"
+   ]
+  },
+  "structure_SCALE": {
+   "false": [
+    "LEAD_constants_and_real_structure",
+    "LIN_identity_plus_degree_3",
+    "P4_no_w2_in_Fz",
+    "S5W_Fw_minus_w_weighted_order_ge_5",
+    "S5Z_Fz_minus_z_weighted_order_ge_4"
+   ],
+   "gates": [
+    "LEAD_constants_and_real_structure",
+    "LIN_identity_plus_degree_3",
+    "P4_no_w2_in_Fz",
+    "S5W_Fw_minus_w_weighted_order_ge_5",
+    "S5Z_Fz_minus_z_weighted_order_ge_4"
+   ]
+  },
+  "structure_SHIFT": {
+   "false": [
+    "LEAD_constants_and_real_structure"
+   ],
+   "gates": [
+    "LEAD_constants_and_real_structure",
+    "LIN_identity_plus_degree_3",
+    "P4_no_w2_in_Fz",
+    "S5W_Fw_minus_w_weighted_order_ge_5",
+    "S5Z_Fz_minus_z_weighted_order_ge_4"
+   ]
+  },
+  "zone1": {
+   "false": [],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SEAM_zones_cover_the_sector",
+    "SND_independent_semantics",
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ]
+  },
+  "zone1_ALPHA": {
+   "false": [
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SEAM_zones_cover_the_sector",
+    "SND_independent_semantics",
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ]
+  },
+  "zone1_BIGZONE": {
+   "false": [
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SEAM_zones_cover_the_sector",
+    "SND_independent_semantics",
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ]
+  },
+  "zone1_BRANCH": {
+   "false": [
+    "ENG_engine",
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SEAM_zones_cover_the_sector",
+    "SND_independent_semantics",
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ]
+  },
+  "zone1_CORE": {
+   "false": [
+    "SND_independent_semantics",
+    "Z1F_zone1_side_F"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SEAM_zones_cover_the_sector",
+    "SND_independent_semantics",
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ]
+  },
+  "zone1_SIGMA": {
+   "false": [
+    "SND_independent_semantics",
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SEAM_zones_cover_the_sector",
+    "SND_independent_semantics",
+    "Z1F_zone1_side_F",
+    "Z1G_zone1_side_G"
+   ]
+  },
+  "zone2_CORE": {
+   "false": [
+    "Z2_every_piece_out_or_pass"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SND_independent_semantics",
+    "Z2_every_piece_out_or_pass"
+   ]
+  },
+  "zone2_F": {
+   "false": [],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SND_independent_semantics",
+    "Z2_every_piece_out_or_pass"
+   ]
+  },
+  "zone2_G": {
+   "false": [],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SND_independent_semantics",
+    "Z2_every_piece_out_or_pass"
+   ]
+  },
+  "zone2_QZERO": {
+   "false": [
+    "Z2_every_piece_out_or_pass"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SND_independent_semantics",
+    "Z2_every_piece_out_or_pass"
+   ]
+  },
+  "zone2_SIGMA": {
+   "false": [
+    "Z2_every_piece_out_or_pass"
+   ],
+   "gates": [
+    "ENG_engine",
+    "G0_stage2_input",
+    "SND_independent_semantics",
+    "Z2_every_piece_out_or_pass"
+   ]
+  }
+ },
+ "package": "DYAD-OPEN20-AN-3CB-1",
+ "source": "gates of the committed reference outputs named in the job table"
+}
