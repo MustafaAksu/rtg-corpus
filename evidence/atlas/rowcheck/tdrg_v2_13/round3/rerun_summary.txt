@@ -1,0 +1,14 @@
+Atlas row check, TDR-G v2.13 — follow-up on F1, 16 November 2026
+PR #265 head 40d823574c9544e2dbea196a2fc263d93535ca2d, clean detached worktree
+stage-1 intermediate (git show 10a8843:...)    65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5 (191,996 bytes)
+stage-1 builder rebuild                        byte-identical to the intermediate; edit log byte-identical (29 edits)
+stage-1 checker C0-C10                         byte-identical to check_output.txt; C6: AZ entry identical at v0.6-v0.9, consumer scope True, no stale string
+stage-1 controls K1-K10                        byte-identical to controls_output.txt; K1 (pin back to az-v0.8) caught
+stage-2 builder                                candidate c79898f99eaf83eb7b9d98749ec2f168868b664fa2e3f91916d888439a5236f4 (157,768 bytes) and map byte-identical (43 operations)
+tools/check_compaction.py                      exit 0; output byte-identical
+stage-2 controls P0, N1-N8                     output byte-identical
+candidate fba3ea1 -> 40d8235                   exactly four lines differ: 538 (§6.2 pin), 885 (AZ consumer row), 889 (governing editions), 1007 (Appendix A v2.13 entry)
+RID declarations                               81, same set; no backticked [NUM diagnostic] tag in the TDR-G text
+pipes/TDRG/20261114-AZ-v0-9-adopted.md         dispositioned on the branch (accept)
+trial merge onto main c9e313f                  clean
+not rerun                                      no engine, no campaign (EV-NOT-RERUN)
