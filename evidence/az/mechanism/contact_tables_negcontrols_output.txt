@@ -1,0 +1,9 @@
+PASS  NC0 untouched copy is tabulated (exit 0, expected 0; 'INTEGRITY: PASS')
+PASS  NC1 one record dropped (a non-attainer or any other) (exit 2, expected 2; 'missing record')
+PASS  NC2 record file duplicated under another name (exit 2, expected 2; 'INTEGRITY: FAIL')
+PASS  NC3 pairing keys swapped between two base draws (manifest re-stamped) (exit 2, expected 2; 'INTEGRITY: FAIL')
+PASS  NC4 records carry a wrong engine pin (exit 2, expected 2; 'INTEGRITY: FAIL')
+PASS  NC5 record file changed after the run (clock field edited, manifest not re-stamped) (exit 2, expected 2; 'INTEGRITY: FAIL')
+PASS  NC6 registered plan with the unfrozen manifest (exit 2, expected 2; 'REFUSED: manifest is not frozen')
+PASS  NC7 registered plan, frozen hash right, input hash wrong (exit 2, expected 2; "does not have the manifest's hash")
+NEGCONTROLS PASS

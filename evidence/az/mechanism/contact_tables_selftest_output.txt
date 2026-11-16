@@ -1,0 +1,13 @@
+PASS Stage 1 library hashes to its pin
+PASS first-contact time, whole edge set and component types = engine pre-interaction snapshot (1860 of 1860)
+PASS t = N boundary: (N, k) = (12, 0), theta (0,6,0,0), delta (1,0,1,1) -> tau 12
+PASS paired counterexample: tau 2 in both, E_R = {(1,2)}, E_D = {(0,1),(1,2)}, slot out in R and in in D
+PASS paired counterexample is not strict (tau_slot^D = tau_common)
+PASS stationary K2,2: tau 1, one bound 4-cycle, no star
+PASS no contact ever: tau = inf, no graph, slot degree None
+PASS periods: P(0) = 1, P(N/2) = 2, P(N/4) = 4 at N = 120
+PASS covariance: common phase shift; common advance shift; node relabelling (time, types, slot role, relabelled edges)
+PASS invalid input refused (odd N, k >= N/6, three nodes, non-integer phase)
+PASS clock conversion: runner fb = engine birth_steps_list[0] + 1 (59 of 60 synthetic runs with a birth; growth values not printed)
+PASS freeze gate refuses an unfrozen manifest in registered mode
+SELFTEST PASS

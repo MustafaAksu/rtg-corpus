@@ -1,0 +1,237 @@
+contact tables script SHA-256 8d405e55429cbde2013e44a13e4eab5f02e1b8a5a806bc3bcd0e43f1ea036f6a; manifest 472fbb7bb98198eaf5fb442911540df43156f4499abb2605e49aa376e4cd7c01; plan test
+*** TEST RECORDS: instrument validation only; no evidential value ***
+INTEGRITY: PASS (Stage 1 validator: identity, custody, states, records, set; pairing keys)
+====================================================================================================
+cell TEST-C1  N=120 k=8 T=800 profile P1  base draws 24  arms BASE,O1R,O1D,O2R,O2D,SHAM
+
+T1 population: every base draw has every listed arm (checked); slot from the record; permuted copies not used
+   BASE  n=24  endpoint Y=1: 0
+   O1R   n=24  endpoint Y=1: 5
+   O1D   n=24  endpoint Y=1: 0
+   O2R   n=24  endpoint Y=1: 5
+   O2D   n=24  endpoint Y=1: 1
+   SHAM  n=24  endpoint Y=1: 0
+
+T2 first-contact descriptors per arm (computed from th0, d0, slot; no engine stepping)
+   BASE  tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [19, 20, 24, 24, 24, 24, 24, 24, 24, 24]
+          quantiles of finite tau (10/50/90 %): 1 / 1 / 3; max 4
+          slot degree in E_contact: {0: 7, 1: 15, 2: 2}
+          slot component type: {'single_edge': 11, 'isolated': 7, 'path_p3': 5, 'star_k1c_c3': 1}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 17), (('isolated', 'path_p3'), 6), (('star_k1c_c3',), 1)]
+          unique-centre star in E_contact: 1
+          slot period P(d_s): {5: 3, 8: 1, 10: 1, 12: 1, 15: 3, 20: 2, 24: 3, 30: 1, 40: 2, 60: 1, 120: 6}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {1: 2, 4: 2, 5: 4, 6: 1, 8: 2, 12: 1, 15: 4, 20: 1, 24: 1, 30: 1, 40: 2, 60: 3}
+   O1R   tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [17, 20, 23, 24, 24, 24, 24, 24, 24, 24]
+          quantiles of finite tau (10/50/90 %): 1 / 1 / 4; max 7
+          slot degree in E_contact: {0: 8, 1: 13, 2: 3}
+          slot component type: {'isolated': 8, 'path_p3': 8, 'single_edge': 6, 'star_k1c_c3': 2}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 13), (('isolated', 'path_p3'), 9), (('star_k1c_c3',), 2)]
+          unique-centre star in E_contact: 2
+          slot period P(d_s): {1: 13, 2: 11}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {1: 1, 3: 3, 4: 4, 5: 1, 8: 2, 10: 3, 12: 2, 15: 3, 20: 1, 40: 4}
+   O1D   tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [16, 20, 23, 24, 24, 24, 24, 24, 24, 24]
+          quantiles of finite tau (10/50/90 %): 1 / 1 / 4; max 6
+          slot degree in E_contact: {0: 9, 1: 13, 2: 2}
+          slot component type: {'isolated': 9, 'single_edge': 7, 'path_p3': 6, 'star_k1c_c3': 2}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 15), (('isolated', 'path_p3'), 7), (('star_k1c_c3',), 2)]
+          unique-centre star in E_contact: 2
+          slot period P(d_s): {120: 24}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {2: 2, 3: 2, 5: 1, 6: 2, 8: 2, 12: 2, 15: 1, 24: 2, 30: 2, 40: 6, 60: 1, 120: 1}
+   O2R   tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [20, 23, 24, 24, 24, 24, 24, 24, 24, 24]
+          quantiles of finite tau (10/50/90 %): 1 / 1 / 2; max 3
+          slot degree in E_contact: {0: 6, 1: 15, 2: 3}
+          slot component type: {'single_edge': 10, 'path_p3': 7, 'isolated': 6, 'star_k1c_c3': 1}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 13), (('isolated', 'path_p3'), 9), (('star_k1c_c3',), 1), (('single_edge', 'single_edge'), 1)]
+          unique-centre star in E_contact: 1
+          slot period P(d_s): {4: 24}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {1: 2, 2: 2, 3: 4, 4: 1, 5: 1, 6: 1, 8: 1, 10: 1, 12: 1, 15: 4, 20: 2, 30: 2, 40: 1, 60: 1}
+   O2D   tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [19, 23, 24, 24, 24, 24, 24, 24, 24, 24]
+          quantiles of finite tau (10/50/90 %): 1 / 1 / 2; max 4
+          slot degree in E_contact: {0: 6, 1: 14, 2: 4}
+          slot component type: {'single_edge': 9, 'path_p3': 8, 'isolated': 6, 'star_k1c_c3': 1}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 12), (('isolated', 'path_p3'), 10), (('star_k1c_c3',), 1), (('single_edge', 'single_edge'), 1)]
+          unique-centre star in E_contact: 1
+          slot period P(d_s): {120: 24}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {2: 1, 3: 3, 4: 1, 6: 1, 8: 2, 10: 1, 12: 2, 15: 1, 20: 1, 24: 3, 30: 4, 40: 4}
+   SHAM  tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [18, 20, 24, 24, 24, 24, 24, 24, 24, 24]
+          quantiles of finite tau (10/50/90 %): 1 / 1 / 3; max 5
+          slot degree in E_contact: {0: 7, 1: 16, 2: 1}
+          slot component type: {'single_edge': 11, 'isolated': 7, 'path_p3': 5, 'star_k1c_c3': 1}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 17), (('isolated', 'path_p3'), 6), (('star_k1c_c3',), 1)]
+          unique-centre star in E_contact: 1
+          slot period P(d_s): {10: 1, 15: 3, 20: 2, 24: 2, 30: 2, 40: 5, 60: 4, 120: 5}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {3: 3, 5: 2, 8: 4, 10: 3, 12: 2, 15: 1, 20: 3, 24: 1, 30: 2, 40: 2, 60: 1}
+
+T3 runner clocks per arm (fe, fb, t100 from the records; never relabelled); attainment by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]
+   BASE  fe   none by the horizon 0; attained: [19, 20, 24, 24, 24, 24, 24, 24, 24, 24]
+   BASE  fb   none by the horizon 0; attained: [1, 2, 3, 3, 4, 8, 15, 20, 24, 24]
+   BASE  t100 none by the horizon 24; attained: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   BASE  categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 0
+   BASE  fe against tau_contact (both finite): {'fe=tau': 24}
+   O1R   fe   none by the horizon 0; attained: [17, 20, 23, 24, 24, 24, 24, 24, 24, 24]
+   O1R   fb   none by the horizon 1; attained: [1, 2, 4, 6, 8, 10, 14, 20, 23, 23]
+   O1R   t100 none by the horizon 19; attained: [0, 0, 0, 0, 0, 0, 0, 1, 3, 5]
+   O1R   categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 1
+   O1R   fe against tau_contact (both finite): {'fe=tau': 24}
+   O1D   fe   none by the horizon 0; attained: [16, 20, 23, 24, 24, 24, 24, 24, 24, 24]
+   O1D   fb   none by the horizon 0; attained: [1, 1, 2, 3, 6, 9, 14, 21, 24, 24]
+   O1D   t100 none by the horizon 24; attained: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   O1D   categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 0
+   O1D   fe against tau_contact (both finite): {'fe=tau': 24}
+   O2R   fe   none by the horizon 0; attained: [20, 23, 24, 24, 24, 24, 24, 24, 24, 24]
+   O2R   fb   none by the horizon 1; attained: [1, 1, 2, 3, 5, 12, 16, 21, 23, 23]
+   O2R   t100 none by the horizon 19; attained: [0, 0, 0, 0, 0, 0, 0, 1, 3, 5]
+   O2R   categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 1
+   O2R   fe against tau_contact (both finite): {'fe=tau': 24}
+   O2D   fe   none by the horizon 0; attained: [19, 23, 24, 24, 24, 24, 24, 24, 24, 24]
+   O2D   fb   none by the horizon 0; attained: [1, 1, 2, 2, 5, 7, 14, 21, 24, 24]
+   O2D   t100 none by the horizon 23; attained: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+   O2D   categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 1
+   O2D   fe against tau_contact (both finite): {'fe=tau': 24}
+   SHAM  fe   none by the horizon 0; attained: [18, 20, 24, 24, 24, 24, 24, 24, 24, 24]
+   SHAM  fb   none by the horizon 0; attained: [1, 1, 4, 4, 6, 12, 18, 22, 23, 24]
+   SHAM  t100 none by the horizon 24; attained: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   SHAM  categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 0
+   SHAM  fe against tau_contact (both finite): {'fe=tau': 24}
+
+T4 paired O1R vs O1D, order 1 (2x = 0) (same base draw: same th0, same three non-slot tokens - checked)
+   slot in E_contact (R, D): {'R-in/D-in': 15, 'R-in/D-out': 1, 'R-out/D-out': 8}
+   identical first-contact time and graph: 21 of 24
+   strict common-contact condition (design §4.2: tau_common finite, both tau_slot > tau_common): 8 of 24
+   tau_contact R vs D (infinity allowed): {'R=D': 22, 'R>D': 1, 'R<D': 1}
+
+T4 paired O2R vs O2D, order 2 (2x = N/2) (same base draw: same th0, same three non-slot tokens - checked)
+   slot in E_contact (R, D): {'R-in/D-in': 18, 'R-out/D-out': 6}
+   identical first-contact time and graph: 22 of 24
+   strict common-contact condition (design §4.2: tau_common finite, both tau_slot > tau_common): 6 of 24
+   tau_contact R vs D (infinity allowed): {'R=D': 22, 'R<D': 2}
+
+Joint tables (prelisted in the manifest; descriptive; post-intervention descriptors, not mediation estimates)
+   J1 O1R vs O1D: rows slot membership (R, D), columns endpoint (Y_R, Y_D)
+      R-in/D-in      (1,1):0 (1,0):5 (0,1):0 (0,0):10
+      R-in/D-out     (1,1):0 (1,0):0 (0,1):0 (0,0):1
+      R-out/D-out    (1,1):0 (1,0):0 (0,1):0 (0,0):8
+   J2 O1R vs O1D: rows strict common-contact condition, columns (Y_R, Y_D)
+      strict         (1,1):0 (1,0):0 (0,1):0 (0,0):8
+      not strict     (1,1):0 (1,0):5 (0,1):0 (0,0):11
+   J1 O2R vs O2D: rows slot membership (R, D), columns endpoint (Y_R, Y_D)
+      R-in/D-in      (1,1):1 (1,0):4 (0,1):0 (0,0):13
+      R-out/D-out    (1,1):0 (1,0):0 (0,1):0 (0,0):6
+   J2 O2R vs O2D: rows strict common-contact condition, columns (Y_R, Y_D)
+      strict         (1,1):0 (1,0):0 (0,1):0 (0,0):6
+      not strict     (1,1):1 (1,0):4 (0,1):0 (0,0):13
+   J3 BASE  star in E_contact x Y: star&Y 0, star&noY 1, nostar&Y 0, nostar&noY 23
+   J4 BASE  fb<=100 x Y: born&Y 0, born&noY 15, notborn&Y 0, notborn&noY 9
+   J3 O1R   star in E_contact x Y: star&Y 1, star&noY 1, nostar&Y 4, nostar&noY 18
+   J4 O1R   fb<=100 x Y: born&Y 3, born&noY 11, notborn&Y 2, notborn&noY 8
+   J3 O1D   star in E_contact x Y: star&Y 0, star&noY 2, nostar&Y 0, nostar&noY 22
+   J4 O1D   fb<=100 x Y: born&Y 0, born&noY 14, notborn&Y 0, notborn&noY 10
+   J3 O2R   star in E_contact x Y: star&Y 0, star&noY 1, nostar&Y 5, nostar&noY 18
+   J4 O2R   fb<=100 x Y: born&Y 5, born&noY 11, notborn&Y 0, notborn&noY 8
+   J3 O2D   star in E_contact x Y: star&Y 0, star&noY 1, nostar&Y 1, nostar&noY 22
+   J4 O2D   fb<=100 x Y: born&Y 1, born&noY 13, notborn&Y 0, notborn&noY 10
+   J3 SHAM  star in E_contact x Y: star&Y 0, star&noY 1, nostar&Y 0, nostar&noY 23
+   J4 SHAM  fb<=100 x Y: born&Y 0, born&noY 18, notborn&Y 0, notborn&noY 6
+====================================================================================================
+cell TEST-C2  N=122 k=8 T=800 profile P1  base draws 12  arms BASE,O1R,O1D,Q2R,SHAM
+
+T1 population: every base draw has every listed arm (checked); slot from the record; permuted copies not used
+   BASE  n=12  endpoint Y=1: 0
+   O1R   n=12  endpoint Y=1: 2
+   O1D   n=12  endpoint Y=1: 1
+   Q2R   n=12  endpoint Y=1: 0
+   SHAM  n=12  endpoint Y=1: 1
+
+T2 first-contact descriptors per arm (computed from th0, d0, slot; no engine stepping)
+   BASE  tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [6, 9, 12, 12, 12, 12, 12, 12, 12, 12]
+          quantiles of finite tau (10/50/90 %): 1 / 2 / 4; max 5
+          slot degree in E_contact: {0: 4, 1: 6, 2: 2}
+          slot component type: {'isolated': 4, 'path_p3': 4, 'single_edge': 3, 'cycle_c4_bound': 1}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'path_p3'), 5), (('isolated', 'isolated', 'single_edge'), 5), (('single_edge', 'single_edge'), 1), (('cycle_c4_bound',), 1)]
+          unique-centre star in E_contact: 0
+          slot period P(d_s): {61: 3, 122: 9}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {61: 11, 122: 1}
+   O1R   tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [9, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+          quantiles of finite tau (10/50/90 %): 1 / 1 / 2; max 2
+          slot degree in E_contact: {0: 5, 1: 6, 2: 1}
+          slot component type: {'isolated': 5, 'single_edge': 5, 'path_p3': 2}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 7), (('isolated', 'path_p3'), 4), (('single_edge', 'single_edge'), 1)]
+          unique-centre star in E_contact: 0
+          slot period P(d_s): {1: 6, 2: 6}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {1: 1, 61: 10, 122: 1}
+   O1D   tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [9, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+          quantiles of finite tau (10/50/90 %): 1 / 1 / 2; max 2
+          slot degree in E_contact: {0: 6, 1: 5, 2: 1}
+          slot component type: {'isolated': 6, 'single_edge': 5, 'path_p3': 1}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 8), (('isolated', 'path_p3'), 3), (('single_edge', 'single_edge'), 1)]
+          unique-centre star in E_contact: 0
+          slot period P(d_s): {61: 6, 122: 6}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {61: 11, 122: 1}
+   Q2R   tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [6, 10, 12, 12, 12, 12, 12, 12, 12, 12]
+          quantiles of finite tau (10/50/90 %): 1 / 2 / 3; max 3
+          slot degree in E_contact: {0: 6, 1: 6}
+          slot component type: {'isolated': 6, 'single_edge': 3, 'path_p3': 3}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 7), (('isolated', 'path_p3'), 5)]
+          unique-centre star in E_contact: 0
+          slot period P(d_s): {61: 5, 122: 7}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {1: 1, 61: 9, 122: 2}
+   SHAM  tau_contact: never 0; attained by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]: [6, 10, 12, 12, 12, 12, 12, 12, 12, 12]
+          quantiles of finite tau (10/50/90 %): 1 / 2 / 3; max 3
+          slot degree in E_contact: {0: 3, 1: 7, 2: 2}
+          slot component type: {'single_edge': 5, 'isolated': 3, 'path_p3': 3, 'cycle_c4_bound': 1}
+          first-contact component types (multiset, 8 most common): [(('isolated', 'isolated', 'single_edge'), 6), (('isolated', 'path_p3'), 4), (('single_edge', 'single_edge'), 1), (('cycle_c4_bound',), 1)]
+          unique-centre star in E_contact: 0
+          slot period P(d_s): {1: 1, 61: 8, 122: 3}
+          smallest relative period min_j N/gcd(N, d_s - d_j): {61: 11, 122: 1}
+
+T3 runner clocks per arm (fe, fb, t100 from the records; never relabelled); attainment by t<=g for g in [1, 2, 5, 10, 20, 50, 100, 200, 400, 800]
+   BASE  fe   none by the horizon 0; attained: [5, 8, 11, 12, 12, 12, 12, 12, 12, 12]
+   BASE  fb   none by the horizon 0; attained: [0, 0, 0, 0, 2, 6, 11, 12, 12, 12]
+   BASE  t100 none by the horizon 12; attained: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   BASE  categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 0
+   BASE  fe against tau_contact (both finite): {'fe=tau': 11, 'fe>tau': 1}
+   O1R   fe   none by the horizon 0; attained: [9, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+   O1R   fb   none by the horizon 0; attained: [0, 0, 1, 1, 1, 2, 5, 10, 11, 12]
+   O1R   t100 none by the horizon 10; attained: [0, 0, 0, 0, 0, 0, 0, 1, 2, 2]
+   O1R   categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 2
+   O1R   fe against tau_contact (both finite): {'fe=tau': 12}
+   O1D   fe   none by the horizon 0; attained: [9, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+   O1D   fb   none by the horizon 0; attained: [0, 0, 1, 1, 2, 3, 8, 10, 11, 12]
+   O1D   t100 none by the horizon 11; attained: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+   O1D   categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 0
+   O1D   fe against tau_contact (both finite): {'fe=tau': 12}
+   Q2R   fe   none by the horizon 0; attained: [6, 10, 12, 12, 12, 12, 12, 12, 12, 12]
+   Q2R   fb   none by the horizon 1; attained: [0, 0, 0, 0, 2, 4, 8, 11, 11, 11]
+   Q2R   t100 none by the horizon 12; attained: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   Q2R   categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 0
+   Q2R   fe against tau_contact (both finite): {'fe=tau': 12}
+   SHAM  fe   none by the horizon 0; attained: [5, 9, 12, 12, 12, 12, 12, 12, 12, 12]
+   SHAM  fb   none by the horizon 0; attained: [0, 0, 0, 0, 0, 5, 7, 7, 11, 12]
+   SHAM  t100 none by the horizon 11; attained: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+   SHAM  categories: analytically no contact ever 0; contact but no fe by the horizon 0; cap reached before tick 800: 1
+   SHAM  fe against tau_contact (both finite): {'fe=tau': 11, 'fe>tau': 1}
+
+T4 paired O1R vs O1D, order 1 (2x = 0) (same base draw: same th0, same three non-slot tokens - checked)
+   slot in E_contact (R, D): {'R-in/D-in': 6, 'R-in/D-out': 1, 'R-out/D-out': 5}
+   identical first-contact time and graph: 11 of 12
+   strict common-contact condition (design §4.2: tau_common finite, both tau_slot > tau_common): 5 of 12
+   tau_contact R vs D (infinity allowed): {'R=D': 12}
+
+Joint tables (prelisted in the manifest; descriptive; post-intervention descriptors, not mediation estimates)
+   J1 O1R vs O1D: rows slot membership (R, D), columns endpoint (Y_R, Y_D)
+      R-in/D-in      (1,1):0 (1,0):0 (0,1):1 (0,0):5
+      R-in/D-out     (1,1):0 (1,0):0 (0,1):0 (0,0):1
+      R-out/D-out    (1,1):0 (1,0):2 (0,1):0 (0,0):3
+   J2 O1R vs O1D: rows strict common-contact condition, columns (Y_R, Y_D)
+      strict         (1,1):0 (1,0):2 (0,1):0 (0,0):3
+      not strict     (1,1):0 (1,0):0 (0,1):1 (0,0):6
+   J3 BASE  star in E_contact x Y: star&Y 0, star&noY 0, nostar&Y 0, nostar&noY 12
+   J4 BASE  fb<=100 x Y: born&Y 0, born&noY 11, notborn&Y 0, notborn&noY 1
+   J3 O1R   star in E_contact x Y: star&Y 0, star&noY 0, nostar&Y 2, nostar&noY 10
+   J4 O1R   fb<=100 x Y: born&Y 2, born&noY 3, notborn&Y 0, notborn&noY 7
+   J3 O1D   star in E_contact x Y: star&Y 0, star&noY 0, nostar&Y 1, nostar&noY 11
+   J4 O1D   fb<=100 x Y: born&Y 1, born&noY 7, notborn&Y 0, notborn&noY 4
+   J3 Q2R   star in E_contact x Y: star&Y 0, star&noY 0, nostar&Y 0, nostar&noY 12
+   J4 Q2R   fb<=100 x Y: born&Y 0, born&noY 8, notborn&Y 0, notborn&noY 4
+   J3 SHAM  star in E_contact x Y: star&Y 0, star&noY 0, nostar&Y 1, nostar&noY 11
+   J4 SHAM  fb<=100 x Y: born&Y 1, born&noY 6, notborn&Y 0, notborn&noY 5
