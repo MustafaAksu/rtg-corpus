@@ -73,3 +73,29 @@ Any of these changes the evaluator, not the contractor. The owner's Python legs 
 ## 6. Evidence
 
 `evidence/dyad/open20-an/cpp-review/`: `probe_kernel.cpp` (probes 2–5; includes the reviewed source unchanged), `probe_kernel_output_n20.txt` (20 steps; all probes), `probe_kernel_output.txt` (30 steps; shows the range refusal), `probe_oracle.cpp`, `probe_oracle_endpoints.txt`, `check_oracle.py`, `check_oracle_output.txt`, `SHA256SUMS.txt`. The probes include `independent_core.cpp` by name; it is not in the repository yet, so the probes are reproducible once the package arrives on an `upload/…` branch. OWNER-RUN, SESSION.
+
+## 7. Second checkpoint: the centred evaluator (16 November 2026)
+
+**Reviewed (as relayed by the PI; not yet in the repository):** `centered_evaluator.hpp` (SHA-256 `b868f945…a04a894`, matching the co-owner's comment `6919482912`) and `DYAD_OPEN20_CPP_CENTERED_FEASIBILITY.md` (SHA-256 `c0acf8a3…1567`), read whole. The package zip (`5dfb8b1f…068a`), the 15 new unit tests, the probes and the patched `independent_core.cpp` (F3) were **not** available to the owner; F3 is therefore not checked.
+
+**Verdict: the evaluator is correct as far as checked, and F1 is answered on the tested trajectories.** Accepted as a development checkpoint. The actual legs remain open.
+
+**Checked by reading.**
+- *Eigen-map.* With E = e^ρ − 1 − ρ and S = sin η − η: ρ′ = ρ − η − S and η′ = ρ + E − S. Since 1 + ω + ω² = 0, λz = (1 + ω)ρ − η, so z′ = λz + ωE − λS; w′ likewise with the conjugated constants only. The code implements exactly this.
+- *Residual series.* `exp_residual` sums degrees ≥ 2 for E and ≥ 1 for E′ = e^ρ − 1. `sin_residual` takes odd degrees ≥ 3 with sign + at k ≡ 1 (mod 4) for S, and even degrees ≥ 2 with sign + at k ≡ 0 (mod 4) for S′ = cos η − 1. Every omitted term has degree ≥ 161 and is bounded by the exponential majorant E1. Correct.
+- *MV1.* F is entire, the polydisc P is convex, and the 2×2 Jacobian is enclosed on the rectangle containing all of P (`block(boxes)`). The centre error is the radius of the ball around the interval value of F(c). r′_i = e_i + Σ_j sup\|J_ij\| r_j, rounded up. Correct.
+- *AD1.* The tangent at the true point is DF(p)·v with DF(p) in the whole-P Jacobian and v in the tangent disc. Disc products use \|a\|s + \|b\|r + rs plus the centre-rounding error; sums add radii. Correct.
+- *Lift and readout.* The input is z = x, w = φ(x) + x²d with the whole d-disk, and tangent (0, x²). The readout d = (w − φ(z))/z² is taken once, at the end, with the pole excluded. Because the raw map is iterated, intermediate lifts are not needed for holomorphy in d. The readout treats w and z as independent boxes: sound, and loose by \|φ′\|·width(z)/\|z\|².
+
+**Checked by running** (`evidence/dyad/open20-an/cpp-review/centered/`; the evaluator built against the reviewed kernel):
+- *334 blocks at the owner's raw point,* 13 s. Final widths 7.743·10⁻⁷¹ (values) and 1.414·10⁻⁶⁶ (tangents), equal to the co-owner's. All 16 enclosures at blocks 1, 10, 100 and 334 contain the 360-digit mpmath values of T⁶ᵏ and of its variational equation.
+- *The broad synthetic disk* (φ = x²/2, x = 1/64 + i/128, \|d\| ≤ ⌈2²⁵⁶/500⌉/2²⁵⁶). The enclosure of d₃₃₄ has width 1.12·10⁻²; that of its derivative has width 5.99·10⁻², equal to the co-owner's 5.99178729·10⁻². Independent mpmath iterations at 36 initial points (on the boundary, at half radius, at the centre) are all inside both enclosures.
+
+**Points for the next steps** (none blocks this checkpoint):
+- *F2, refined.* The true point after n steps lies on the graph over a base point in D_j: (G) and the tube lemma keep the true orbit there. So M may be the supremum of R_j over the base enclosure **intersected with** D_j, provided R_j is bounded there rigorously. Full containment of the enclosure in D_j is not needed. If no bound on that intersection can be proved, the tile is retained.
+- *Readout.* For the real leg, where \|d\| is small against \|z\|, the independent-box readout may dominate the final width. Reading out d through the lifted tangent, or with a mean-value step for w − φ(z), would tighten it.
+- *Real-leg feasibility.* The tested trajectories are a raw point and a synthetic lift. On the real legs the fibre expands along the orbit. Whether the full initial fibre \|d\| ≤ R_j(ξ*) contracts with a manageable number of tiles is the open question. A short-horizon test with the real φ₄₀ and ξ* answers it.
+- *The inverse leg G* is unimplemented, as the checkpoint states.
+
+**Not done by the owner:** the package as a whole, the 15 unit tests, the sanitizer runs, the F3 change, and the shooting probe with its contractor step. The checkpoint's statements about these are the co-owner's.
+
