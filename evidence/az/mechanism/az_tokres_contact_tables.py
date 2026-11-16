@@ -4,12 +4,21 @@
 (review of PR #281 r2, readback 5921285881) and nothing else. Exploratory: the outcomes are known.
 
     python3 -I az_tokres_contact_tables.py --selftest
-    python3 -I az_tokres_contact_tables.py --manifest M.json --dir DIR --plan test          (test records, tag SMOKE)
-    python3 -I az_tokres_contact_tables.py --manifest M.json --dir DIR --plan registered    (refused until frozen)
+    python3 -I az_tokres_contact_tables.py --manifest M.json --dir DIR --plan test [--json OUT.jsonl]
+    python3 -I az_tokres_contact_tables.py --manifest M.json --dir DIR --plan registered [--json OUT.jsonl]  (refused until frozen)
 
-FREEZE GATE. With --plan registered the script refuses to open any record unless the manifest's field
-frozen_script_sha256 equals this file's SHA-256 and every listed input hash matches. The manifest is
-frozen only after review (a commit that sets the field); until then no table on registered records exists.
+GATES, all before any record file is looked up or opened (review 5922692022, R1-R2):
+  plan and cells   --plan test accepts only Stage 1 test cells (TEST-*, tag SMOKE, confirmatory False);
+                   --plan registered accepts only registered cells (tag AZ-TOKRES-S1, confirmatory True);
+                   a mixed or unknown cell list is refused;
+  freeze           --plan registered: the manifest's frozen_script_sha256 equals this file's SHA-256;
+  pins             the manifest's pins equal the bytes of engine, orientation reference, runner and the Stage 1
+                   library, checked before any of them is imported;
+  input binding    exactly one trusted hash list: for registered, the repository file named in the manifest with its
+                   SHA-256; for test, the test directory's own HASHES.txt. Every selected record file and its side
+                   manifest must be listed there with an equal hash; a listed piece of a selected cell that is not
+                   selected, an unlisted file, or a duplicate is refused.
+Then: the Stage 1 validator (unchanged), the pairing keys, and a clock and endpoint layer (R3) - any failure: no table.
 
 What it computes, per record, without stepping the engine (only from th0, d0 and the slot):
   tau_contact    first processed tick whose post-advance, pre-interaction defect graph has an edge, by the closed
@@ -19,7 +28,9 @@ What it computes, per record, without stepping the engine (only from th0, d0 and
                  three relative periods N/gcd(N, d_s - d_j);
   tau_common, tau_slot   the same minimum over the three pairs without / with the slot (design §4.2).
 and reads the runner clocks fe, fb, t100 and the endpoint Y = 1{M >= 100 at tick 800} (cap before 800: positive).
-Tables T1-T4 and the four prelisted joint tables J1-J4 are printed; nothing else. No test, no p-value, no verdict.
+Tables T1-T4 and the four prelisted joint tables J1-J4 are printed; with --json, every per-record descriptor (full
+edge set, component types, all three relative periods, clocks, endpoint) is written as deterministic JSON lines.
+No test, no p-value, no verdict.
 """
 from __future__ import annotations
 
@@ -33,9 +44,18 @@ RUNNER = os.path.join(ROOT, "evidence", "az", "scripts", "az_tokres_run.py")
 ENGINE = os.path.join(ROOT, "upload", "tdrg-records", "genesis_mode_b_mc.py")
 ORIENT = os.path.join(ROOT, "evidence", "tdrg", "scripts", "tdrg_orient_v2_12_14.py")
 S1_LIB_SHA256 = "490b3d4f06ef52d6d39b217d0821bd8361d0a8ed37941f32f9c154113c91dc80"
+PINS = {"engine": (ENGINE, "4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608"),
+        "orient": (ORIENT, "ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c"),
+        "runner": (RUNNER, "75c5f139a453a4b2595eba76760e34cddc32c990370259ae6e84ec5379408992"),
+        "stage1_analysis_library": (S1_LIB, S1_LIB_SHA256)}
+SUPPORTED_PAIRS = [["O1R", "O1D"], ["O2R", "O2D"]]
+SUPPORTED_JOINT = ["J1", "J2", "J3", "J4"]
+TEST_CELLS = {"TEST-C1": (120, 8, 800), "TEST-C2": (122, 8, 800)}
+REG_CELLS = {"S1-C1": (120, 8, 800), "S1-C2": (122, 8, 800)}
+CHECKPOINTS = (100, 200, 300, 400, 500, 600, 700, 800)
 INF = float("inf")
 Y_THRESHOLD, Y_TICK = 100, 800
-PAIRS = (("O1R", "O1D", "order 1 (2x = 0)"), ("O2R", "O2D", "order 2 (2x = N/2)"))
+PAIR_LABEL = {"O1R": "order 1 (2x = 0)", "O2R": "order 2 (2x = N/2)"}
 
 
 def sha256_file(p):
@@ -129,9 +149,179 @@ def first_contact(eng, th, de, N, k, slot):
     return d
 
 
-def endpoint(r):
+
+class Refused(Exception):
+    pass
+
+
+# ------------------------------------------------------------------ gates (no record is looked up before they pass)
+def check_manifest(man, plan):
+    """Schema, supported values, plan/cell consistency. Pure: reads nothing from disk."""
+    e = []
+    if man.get("schema") != "az_tokres_contact_tables_manifest_v2":
+        e.append("manifest schema must be az_tokres_contact_tables_manifest_v2")
+    cells = man.get("cells_registered" if plan == "registered" else "cells_test")
+    allowed = REG_CELLS if plan == "registered" else TEST_CELLS
+    if not isinstance(cells, list) or not cells or len(set(cells)) != len(cells) or any(c not in allowed for c in cells):
+        e.append("cells for plan %s must be a non-empty list of distinct values from %s" % (plan, sorted(allowed)))
+    other = man.get("cells_test" if plan == "registered" else "cells_registered", [])
+    forbidden = TEST_CELLS if plan == "registered" else REG_CELLS
+    if not isinstance(other, list) or any(c not in forbidden for c in other):
+        e.append("the other plan's cell list may contain only that plan's cells")
+    if man.get("pairs") is None or not isinstance(man["pairs"], list) or not man["pairs"] or any(p not in SUPPORTED_PAIRS for p in man["pairs"]) \
+            or len({tuple(p) for p in man["pairs"]}) != len(man["pairs"]):
+        e.append("pairs must be a non-empty list of distinct values from %s" % SUPPORTED_PAIRS)
+    if sorted(man.get("joint_tables", {})) != SUPPORTED_JOINT:
+        e.append("joint_tables must name exactly %s" % SUPPORTED_JOINT)
+    g = man.get("time_grid")
+    if not (isinstance(g, list) and g and all(isinstance(x, int) and not isinstance(x, bool) for x in g)
+            and all(1 <= x <= 800 for x in g) and all(a < b for a, b in zip(g, g[1:]))):
+        e.append("time_grid must be strictly increasing integers in 1..800")
+    tb = man.get("birth_time_for_J4")
+    if not (isinstance(tb, int) and not isinstance(tb, bool) and 1 <= tb <= 800):
+        e.append("birth_time_for_J4 must be an integer in 1..800")
+    arms = man.get("arms")
+    if not (isinstance(arms, list) and arms and len(set(arms)) == len(arms) and "BASE" in arms
+            and all(a in ("BASE", "O1R", "O1D", "O2R", "O2D", "Q2R", "SHAM") for a in arms)):
+        e.append("arms must be distinct Stage 1 arm names including BASE")
+    elif isinstance(man.get("pairs"), list):
+        for p in man["pairs"]:
+            if isinstance(p, list) and not set(p) <= set(arms):
+                e.append("pair %s uses an arm not listed in arms" % p)
+    if plan == "registered":
+        ins = man.get("inputs")
+        if not (isinstance(ins, list) and len(ins) == 1 and isinstance(ins[0], dict)
+                and {"hashes_file", "sha256", "commit"} <= set(ins[0])):
+            e.append("registered plan needs exactly one input with hashes_file, sha256 and commit")
+    if e:
+        raise Refused("; ".join(e))
+    return cells
+
+
+def check_pins(man):
+    """Pins of the manifest = this script's pins = the bytes on disk, before anything is imported."""
+    e = []
+    for name, (path, want) in PINS.items():
+        if man.get("pins", {}).get(name) != want:
+            e.append("manifest pin %s differs from the script's" % name)
+        elif sha256_file(path) != want:
+            e.append("%s does not hash to its pin" % name)
+    if e:
+        raise Refused("; ".join(e))
+
+
+def check_freeze(man, plan):
+    if plan == "registered" and man.get("frozen_script_sha256") != sha256_file(os.path.abspath(__file__)):
+        raise Refused("manifest is not frozen for this script (frozen_script_sha256 must equal this file's SHA-256)")
+
+
+def trusted_list(man, plan, d):
+    """(path, {name: sha256}) of the one trusted hash list."""
+    if plan == "registered":
+        item = man["inputs"][0]
+        p = os.path.join(ROOT, item["hashes_file"])
+        if not os.path.isfile(p) or sha256_file(p) != item["sha256"]:
+            raise Refused("input %s does not have the manifest's hash" % item["hashes_file"])
+    else:
+        p = os.path.join(d, "HASHES.txt")
+        if not os.path.isfile(p):
+            raise Refused("test directory has no HASHES.txt")
+    listed = {}
+    for ln in open(p):
+        parts = ln.split()
+        if len(parts) != 2:
+            raise Refused("malformed line in %s" % os.path.basename(p))
+        h, name = parts[0], parts[1].lstrip("*")
+        if name in listed:
+            raise Refused("%s lists %s twice" % (os.path.basename(p), name))
+        listed[name] = h
+    return p, listed
+
+
+def bind_inputs(cells, listed, d):
+    """Every selected piece is listed with an equal hash; nothing listed for a selected cell is missing; no extra file."""
+    e = []
+    files = {}
+    for c in cells:
+        want = sorted(n for n in listed if n.startswith(c + "_") and n.endswith(".jsonl"))
+        have = sorted(os.path.basename(x) for x in glob.glob(os.path.join(glob.escape(d), c + "_*")))
+        need = sorted(want + [n + ".manifest.json" for n in want])
+        if not want:
+            e.append("%s: the trusted list names no record file" % c)
+        for n in sorted(set(need) - set(have)):
+            e.append("%s: listed piece %s is missing" % (c, n))
+        for n in sorted(set(have) - set(need)):
+            e.append("%s: %s is not in the trusted list" % (c, n))
+        for n in sorted(set(need) & set(have)):
+            if listed.get(n) is None or sha256_file(os.path.join(d, n)) != listed[n]:
+                e.append("%s: %s does not have the listed hash" % (c, n))
+        files[c] = [os.path.join(d, n) for n in want]
+    if e:
+        raise Refused("; ".join(e[:20]))
+    return files
+
+
+# ------------------------------------------------------------------ clock and endpoint layer (R3)
+def clock_errors(r, d, T, cap):
+    """Integrity of fe, fb, t100, M_at and the endpoint for one record, given its first-contact descriptor d."""
+    e = []
+    isint = lambda x: isinstance(x, int) and not isinstance(x, bool)
+    steps, M, at = r.get("steps"), r.get("M"), r.get("M_at")
+    if not (isint(steps) and 0 <= steps <= T and isint(M) and M >= 4 and isinstance(at, dict) and isinstance(r.get("hit_cap"), bool)
+            and isint(r.get("births"))):
+        return ["steps, M, births, hit_cap or M_at malformed"]
+    for key, v in at.items():
+        if not (key.isdigit() and int(key) in CHECKPOINTS and isint(v) and 4 <= v <= M):
+            e.append("checkpoint %r malformed" % key)
+    if set(int(x) for x in at if x.isdigit()) != {c for c in CHECKPOINTS if c <= steps}:
+        e.append("checkpoints are not exactly the ticks <= steps")
+    vals = [at[str(c)] for c in CHECKPOINTS if str(c) in at]
+    if any(a > b for a, b in zip(vals, vals[1:])):
+        e.append("checkpoints decrease")
+    if str(steps) in at and at[str(steps)] != M:
+        e.append("checkpoint at the last tick differs from M")
+    if r["hit_cap"] != (M >= cap) or (steps < T and not r["hit_cap"]):
+        e.append("stop reason inconsistent (hit_cap, M, steps)")
+    if r["births"] != M - 4:
+        e.append("M != 4 + births")
+    for name in ("fe", "fb", "t100"):
+        v = r.get(name, "absent")
+        if v == "absent":
+            e.append("%s absent" % name)
+        elif v is not None and not (isint(v) and 1 <= v <= steps):
+            e.append("%s = %r is not None or an integer in 1..steps" % (name, v))
+    if e:
+        return e
+    fe, fb, t100, tau = r["fe"], r["fb"], r["t100"], d["tau"]
+    if (fb is None) != (r["births"] == 0):
+        e.append("fb present iff births > 0 violated")
+    if (t100 is None) != (M < Y_THRESHOLD):
+        e.append("t100 present iff M >= 100 violated")
+    if tau == INF and (fe is not None or fb is not None or M != 4):
+        e.append("an event or a birth although no contact ever occurs")
+    if fe is not None and tau != INF and fe < tau:
+        e.append("fe < tau_contact")
+    if fb is not None and tau != INF and fb < tau:
+        e.append("fb < tau_contact")
+    if fb is not None and (fe is None or fe > fb):
+        e.append("a birth without an earlier or simultaneous counted event (fe <= fb violated)")
+    if t100 is not None and fb is not None and t100 < fb:
+        e.append("t100 < fb")
+    for c in CHECKPOINTS:
+        if str(c) in at and t100 is not None and (at[str(c)] >= Y_THRESHOLD) != (c >= t100):
+            e.append("checkpoint %d inconsistent with t100" % c)
+            break
+    return e
+
+
+def endpoint(r, cap, T=800):
+    """Y = 1{M >= 100 at tick 800}. Without a tick-800 checkpoint only a valid cap stop before 800 counts (positive)."""
     at = r["M_at"]
-    return int((at[str(Y_TICK)] if str(Y_TICK) in at else r["M"]) >= Y_THRESHOLD)
+    if str(Y_TICK) in at:
+        return int(at[str(Y_TICK)] >= Y_THRESHOLD)
+    if r["hit_cap"] and r["steps"] < Y_TICK and r["M"] >= cap:
+        return 1
+    raise Refused("record without a tick-800 checkpoint that did not stop at the cap before tick 800")
 
 
 # ------------------------------------------------------------------ tables
@@ -139,102 +329,111 @@ def fmt_t(t):
     return "inf" if t == INF else ("none" if t is None else str(t))
 
 
-def tables(eng, s1, cells, data, man, out=sys.stdout):
+def paired_clock(xa, xb):
+    """Paired order of two event times; None = not attained by the horizon."""
+    c = Counter()
+    for a, b in zip(xa, xb):
+        if a is None and b is None:
+            c["neither"] += 1
+        elif a is None:
+            c["D only"] += 1
+        elif b is None:
+            c["R only"] += 1
+        else:
+            c["R<D" if a < b else "R=D" if a == b else "R>D"] += 1
+    return dict(sorted(c.items()))
+
+
+def tables(cells, data, D, Y, cfgs, man, out=sys.stdout):
     w = lambda s="": print(s, file=out)
     grid = man["time_grid"]
     tb = man["birth_time_for_J4"]
     for c in cells:
-        cfg = s1.REGISTRY[c]
-        N, k, T = cfg["N"], cfg["k"], cfg["T"]
+        N, k, T = cfgs[c]
         rows = data[c]
         bases = sorted(rows)
-        arms = [a for a in man["arms"] if a in s1.arms_for(N)]
-        pairs = [p for p in PAIRS if p[0] in arms and p[1] in arms]
+        arms = [a for a in man["arms"] if a in rows[bases[0]]]
+        pairs = [p for p in man["pairs"] if p[0] in arms and p[1] in arms]
         w("=" * 100)
-        w("cell %s  N=%d k=%d T=%d profile %s  base draws %d  arms %s" % (c, N, k, T, cfg["profile"], len(bases), ",".join(arms)))
-        D = {a: {} for a in arms}
-        for b in bases:
-            for a in arms:
-                r = rows[b][a]
-                D[a][b] = first_contact(eng, r["th0"], r["d0"], N, k, r["slot"])
-        # ---- T1 population
+        w("cell %s  N=%d k=%d T=%d  base draws %d  arms %s  pairs %s" % (c, N, k, T, len(bases), ",".join(arms), pairs))
         w("\nT1 population: every base draw has every listed arm (checked); slot from the record; permuted copies not used")
         for a in arms:
-            w("   %-5s n=%d  endpoint Y=1: %d" % (a, len(bases), sum(endpoint(rows[b][a]) for b in bases)))
-        # ---- T2 contact descriptors
-        w("\nT2 first-contact descriptors per arm (computed from th0, d0, slot; no engine stepping)")
+            w("   %-5s n=%d  endpoint Y=1: %d" % (a, len(bases), sum(Y[c][a][b] for b in bases)))
+        w("\nT2 first-contact descriptors per arm (from th0, d0, slot; no engine stepping; full descriptors in the JSON output)")
         for a in arms:
-            taus = [D[a][b]["tau"] for b in bases]
-            fin = sorted(t for t in taus if t != INF)
-            w("   %-5s tau_contact: never %d; attained by t<=g for g in %s: %s" % (a, len(taus) - len(fin), grid, [sum(1 for t in fin if t <= g) for g in grid]))
+            dd = [D[c][a][b] for b in bases]
+            fin = sorted(x["tau"] for x in dd if x["tau"] != INF)
+            w("   %-5s tau_contact: never %d; attained by t<=g for g in %s: %s" % (a, len(dd) - len(fin), grid, [sum(1 for t in fin if t <= g) for g in grid]))
             if fin:
                 q = lambda f: fin[min(len(fin) - 1, int(f * len(fin)))]
                 w("          quantiles of finite tau (10/50/90 %%): %d / %d / %d; max %d" % (q(.1), q(.5), q(.9), fin[-1]))
-            w("          slot degree in E_contact: %s" % dict(sorted(Counter("never" if D[a][b]["slot_deg"] is None else D[a][b]["slot_deg"] for b in bases).items(), key=str)))
-            w("          slot component type: %s" % dict(Counter(str(D[a][b]["slot_type"]) for b in bases).most_common()))
-            w("          first-contact component types (multiset, 8 most common): %s" % Counter(D[a][b]["types"] for b in bases).most_common(8))
-            w("          unique-centre star in E_contact: %d" % sum(D[a][b]["star"] for b in bases))
-            w("          slot period P(d_s): %s" % dict(sorted(Counter(D[a][b]["P_slot"] for b in bases).items())))
-            w("          smallest relative period min_j N/gcd(N, d_s - d_j): %s" % dict(sorted(Counter(min(D[a][b]["P_rel"]) for b in bases).items())))
-        # ---- T3 clocks
-        w("\nT3 runner clocks per arm (fe, fb, t100 from the records; never relabelled); attainment by t<=g for g in %s" % grid)
+            w("          slot degree in E_contact: %s" % dict(sorted(Counter("never" if x["slot_deg"] is None else x["slot_deg"] for x in dd).items(), key=str)))
+            w("          slot component type: %s" % dict(sorted(Counter(str(x["slot_type"]) for x in dd).items())))
+            w("          first-contact component-type multisets: %s" % sorted(Counter(x["types"] for x in dd).items()))
+            w("          first-contact edge sets (as sets of node pairs; 12 most common): %s" % Counter(x["edges"] for x in dd).most_common(12))
+            w("          unique-centre star in E_contact: %d" % sum(x["star"] for x in dd))
+            w("          slot period P(d_s): %s" % dict(sorted(Counter(x["P_slot"] for x in dd).items())))
+            w("          sorted triple of relative periods N/gcd(N, d_s - d_j) (12 most common): %s" % Counter(x["P_rel"] for x in dd).most_common(12))
+        w("\nT3 runner clocks per arm (fe, fb, t100 as recorded; checked against tau_contact and each other); attainment by t<=g, g in %s" % grid)
         for a in arms:
             rr = [rows[b][a] for b in bases]
-            cap_early = sum(1 for r in rr if r["hit_cap"] and r["steps"] < T)
             for name in ("fe", "fb", "t100"):
                 v = [r[name] for r in rr]
-                w("   %-5s %-4s none by the horizon %d; attained: %s" % (a, name, sum(1 for x in v if x is None), [sum(1 for x in v if x is not None and x <= g) for g in grid]))
-            nc = sum(1 for b in bases if D[a][b]["tau"] == INF)
-            nofe = sum(1 for b in bases if D[a][b]["tau"] != INF and rows[b][a]["fe"] is None)
-            w("   %-5s categories: analytically no contact ever %d; contact but no fe by the horizon %d; cap reached before tick %d: %d"
+                w("   %-5s %-4s not attained by the end of the run %d; attained: %s" % (a, name, sum(1 for x in v if x is None), [sum(1 for x in v if x is not None and x <= g) for g in grid]))
+            nc = sum(1 for b in bases if D[c][a][b]["tau"] == INF)
+            nofe = sum(1 for b in bases if D[c][a][b]["tau"] != INF and rows[b][a]["fe"] is None)
+            cap_early = sum(1 for r in rr if r["hit_cap"] and r["steps"] < T)
+            w("   %-5s categories: no contact ever (proved by the closed form) %d; contact but no counted event by the end %d; stopped at the cap before tick %d: %d"
               % (a, nc, nofe, T, cap_early))
-            lag = Counter()
+            lag = Counter(("fe=tau" if rows[b][a]["fe"] == D[c][a][b]["tau"] else "fe>tau") for b in bases
+                          if rows[b][a]["fe"] is not None)
+            w("   %-5s fe against tau_contact (fe < tau is an integrity failure and cannot occur here): %s" % (a, dict(sorted(lag.items()))))
+        for r_, d_ in pairs:
+            lab = PAIR_LABEL[r_]
+            w("\nT4 paired %s vs %s, %s (same base draw: same th0 and three non-slot tokens - checked)" % (r_, d_, lab))
+            A = [D[c][r_][b] for b in bases]
+            B = [D[c][d_][b] for b in bases]
+            for x, y in zip(A, B):
+                if x["tau_common"] != y["tau_common"]:
+                    raise Refused("pairing error: tau_common differs within a pair")
+            w("   slot in E_contact (R, D): %s" % dict(sorted(Counter(membership(x, y) for x, y in zip(A, B)).items())))
+            w("   identical first-contact time and edge set: %d of %d" % (sum(x["tau"] == y["tau"] and x["edges"] == y["edges"] for x, y in zip(A, B)), len(bases)))
+            w("   strict common-contact condition (design §4.2): %d of %d" % (sum(strict(x, y) for x, y in zip(A, B)), len(bases)))
+            ta = [None if x["tau"] == INF else x["tau"] for x in A]
+            tbb = [None if y["tau"] == INF else y["tau"] for y in B]
+            w("   tau_contact, paired (None = no contact ever): %s" % paired_clock(ta, tbb))
+            for name in ("fe", "fb", "t100"):
+                xa = [rows[b][r_][name] for b in bases]
+                xb = [rows[b][d_][name] for b in bases]
+                w("   %-4s paired (not attained kept as its own category): %s" % (name, paired_clock(xa, xb)))
+                w("        both attained by t<=g, R only, D only, for g in %s: %s" % (grid, [
+                    (sum(1 for u, v in zip(xa, xb) if u is not None and v is not None and u <= g and v <= g),
+                     sum(1 for u, v in zip(xa, xb) if u is not None and u <= g and not (v is not None and v <= g)),
+                     sum(1 for u, v in zip(xa, xb) if v is not None and v <= g and not (u is not None and u <= g))) for g in grid]))
+        w("\nJoint tables (manifest: %s; descriptive; post-intervention descriptors, not mediation estimates)" % ", ".join(SUPPORTED_JOINT))
+        cols = ("(1,1)", "(1,0)", "(0,1)", "(0,0)")
+        for r_, d_ in pairs:
+            j1, j2 = defaultdict(Counter), defaultdict(Counter)
             for b in bases:
-                t, fe = D[a][b]["tau"], rows[b][a]["fe"]
-                if t != INF and fe is not None:
-                    lag["fe<tau" if fe < t else "fe=tau" if fe == t else "fe>tau"] += 1
-            w("   %-5s fe against tau_contact (both finite): %s" % (a, dict(lag)))
-        # ---- T4 paired
-        for r_, d_, lab in pairs:
-            w("\nT4 paired %s vs %s, %s (same base draw: same th0, same three non-slot tokens - checked)" % (r_, d_, lab))
-            mem = Counter()
-            same = inv = 0
-            cmpt = Counter()
-            for b in bases:
-                A, B = D[r_][b], D[d_][b]
-                if A["tau_common"] != B["tau_common"]:
-                    raise SystemExit("pairing error: tau_common differs within a pair (base %d)" % b)
-                mem[membership(A, B)] += 1
-                same += (A["tau"] == B["tau"] and A["edges"] == B["edges"])
-                inv += (A["tau_common"] != INF and A["tau_slot"] > A["tau_common"] and B["tau_slot"] > B["tau_common"])
-                cmpt["R<D" if A["tau"] < B["tau"] else "R=D" if A["tau"] == B["tau"] else "R>D"] += 1
-            w("   slot in E_contact (R, D): %s" % dict(sorted(mem.items())))
-            w("   identical first-contact time and graph: %d of %d" % (same, len(bases)))
-            w("   strict common-contact condition (design §4.2: tau_common finite, both tau_slot > tau_common): %d of %d" % (inv, len(bases)))
-            w("   tau_contact R vs D (infinity allowed): %s" % dict(cmpt))
-        # ---- joint tables
-        w("\nJoint tables (prelisted in the manifest; descriptive; post-intervention descriptors, not mediation estimates)")
-        for r_, d_, lab in pairs:
-            j1 = defaultdict(Counter)
-            j2 = defaultdict(Counter)
-            for b in bases:
-                key = "(%d,%d)" % (endpoint(rows[b][r_]), endpoint(rows[b][d_]))
-                A, B = D[r_][b], D[d_][b]
-                j1[membership(A, B)][key] += 1
-                flag = A["tau_common"] != INF and A["tau_slot"] > A["tau_common"] and B["tau_slot"] > B["tau_common"]
-                j2["strict" if flag else "not strict"][key] += 1
+                key = "(%d,%d)" % (Y[c][r_][b], Y[c][d_][b])
+                x, y = D[c][r_][b], D[c][d_][b]
+                j1[membership(x, y)][key] += 1
+                j2["strict" if strict(x, y) else "not strict"][key] += 1
             w("   J1 %s vs %s: rows slot membership (R, D), columns endpoint (Y_R, Y_D)" % (r_, d_))
             for m in sorted(j1):
-                w("      %-14s %s" % (m, " ".join("%s:%d" % (kk, j1[m][kk]) for kk in ("(1,1)", "(1,0)", "(0,1)", "(0,0)"))))
+                w("      %-14s %s" % (m, " ".join("%s:%d" % (kk, j1[m][kk]) for kk in cols)))
             w("   J2 %s vs %s: rows strict common-contact condition, columns (Y_R, Y_D)" % (r_, d_))
             for m in ("strict", "not strict"):
-                w("      %-14s %s" % (m, " ".join("%s:%d" % (kk, j2[m][kk]) for kk in ("(1,1)", "(1,0)", "(0,1)", "(0,0)"))))
+                w("      %-14s %s" % (m, " ".join("%s:%d" % (kk, j2[m][kk]) for kk in cols)))
         for a in arms:
-            j3 = Counter((int(D[a][b]["star"]), endpoint(rows[b][a])) for b in bases)
-            fbx = lambda r: r["fb"] is not None and r["fb"] <= tb
-            j4 = Counter((int(fbx(rows[b][a])), endpoint(rows[b][a])) for b in bases)
+            j3 = Counter((int(D[c][a][b]["star"]), Y[c][a][b]) for b in bases)
+            j4 = Counter((int(rows[b][a]["fb"] is not None and rows[b][a]["fb"] <= tb), Y[c][a][b]) for b in bases)
             w("   J3 %-5s star in E_contact x Y: star&Y %d, star&noY %d, nostar&Y %d, nostar&noY %d" % (a, j3[(1, 1)], j3[(1, 0)], j3[(0, 1)], j3[(0, 0)]))
             w("   J4 %-5s fb<=%d x Y: born&Y %d, born&noY %d, notborn&Y %d, notborn&noY %d" % (a, tb, j4[(1, 1)], j4[(1, 0)], j4[(0, 1)], j4[(0, 0)]))
+
+
+def strict(x, y):
+    return x["tau_common"] != INF and x["tau_slot"] > x["tau_common"] and y["tau_slot"] > y["tau_common"]
 
 
 def membership(A, B):
@@ -242,7 +441,14 @@ def membership(A, B):
     return "R-%s/D-%s" % (f(A), f(B))
 
 
-# ------------------------------------------------------------------ self-test (synthetic only)
+def descriptor_json(cell, b, arm, r, d, y):
+    j = lambda t: None if t == INF else t
+    return json.dumps({"cell": cell, "base": b, "arm": arm, "slot": r["slot"], "tau_contact": j(d["tau"]), "tau_common": j(d["tau_common"]),
+                       "tau_slot": j(d["tau_slot"]), "edges": [list(e) for e in d["edges"]], "types": list(d["types"]),
+                       "slot_deg": d["slot_deg"], "slot_type": d["slot_type"], "star": d["star"], "P_slot": d["P_slot"],
+                       "P_rel": list(d["P_rel"]), "fe": r["fe"], "fb": r["fb"], "t100": r["t100"], "Y": y}, sort_keys=True)
+
+
 def selftest():
     ok = True
 
@@ -338,23 +544,126 @@ def selftest():
         good &= r["fb"] == first
         cnt += first is not None
     chk("clock conversion: runner fb = engine birth_steps_list[0] + 1 (%d of 60 synthetic runs with a birth; growth values not printed)" % cnt, good)
-    # 6. freeze gate
-    gate = freeze_errors({"frozen_script_sha256": None, "inputs": []}, registered=True)
-    chk("freeze gate refuses an unfrozen manifest in registered mode", gate != [])
+    # 6. gates (R1, R2): refused before any record is looked up
+    man = json.load(open(os.path.join(HERE, "contact_tables_manifest.json")))
+
+    def refused_before_binding(m, plan, d="/nonexistent-directory"):
+        probe = []
+        try:
+            run(m, plan, d, _probe=probe)
+        except Refused:
+            return probe == []
+        return False
+    m1 = dict(man, cells_test=["S1-C1"])
+    chk("R1: test plan naming a registered cell is refused before any lookup", refused_before_binding(m1, "test"))
+    m2 = dict(man, cells_test=["TEST-C1", "S1-C1"])
+    chk("R1: mixed cell list refused before any lookup", refused_before_binding(m2, "test"))
+    m3 = dict(man, cells_registered=["TEST-C1"])
+    chk("R1: registered plan naming a test cell refused", refused_before_binding(dict(m3, frozen_script_sha256=sha256_file(os.path.abspath(__file__))), "registered"))
+    chk("freeze: unfrozen manifest refused in registered mode before any lookup", refused_before_binding(man, "registered"))
+    fz = dict(man, frozen_script_sha256=sha256_file(os.path.abspath(__file__)))
+    chk("R2: frozen manifest with no input refused", refused_before_binding(dict(fz, inputs=[]), "registered"))
+    chk("R2: frozen manifest with a wrong pin refused", refused_before_binding(dict(fz, pins=dict(fz["pins"], runner="0" * 64)), "registered"))
+    chk("R2: frozen manifest with a wrong input hash refused",
+        refused_before_binding(dict(fz, inputs=[dict(fz["inputs"][0], sha256="0" * 64)]), "registered"))
+    for bad, why in ((dict(man, pairs=[["O1R", "O2D"]]), "unsupported pair"), (dict(man, joint_tables={"J1": ""}), "joint tables"),
+                     (dict(man, time_grid=[1, 5, 5]), "grid not increasing"), (dict(man, birth_time_for_J4=0), "J4 time 0"),
+                     (dict(man, schema="v1"), "schema")):
+        chk("R4: manifest field enforced (%s)" % why, refused_before_binding(bad, "test"))
+    # 7. clock and endpoint layer (R3): the reviewer's counterexamples and others
+    d1 = {"tau": 3}
+    ok_rec = {"steps": 800, "M": 120, "births": 116, "hit_cap": False, "fe": 3, "fb": 5, "t100": 650,
+              "M_at": {str(c): (4 if c < 700 else 120) for c in CHECKPOINTS}}
+    ok_rec["M_at"]["600"] = 90
+    chk("R3: a consistent record passes", clock_errors(ok_rec, d1, 800, 300) == [])
+    cases = [("fe = -1", {"fe": -1}), ("fe = 801", {"fe": 801}), ("fe = 'invalid'", {"fe": "invalid"}), ("fb = 801", {"fb": 801}),
+             ("negative t100", {"t100": -5}), ("t100 missing although M >= 100", {"t100": None}), ("fe < tau_contact", {"fe": 2}),
+             ("fb before fe", {"fe": 6, "fb": 5}), ("t100 < fb", {"t100": 4}),
+             ("steps 800, M 100, M_at[800] = 4", {"M": 100, "births": 96, "M_at": dict(ok_rec["M_at"], **{"700": 4, "800": 4})}),
+             ("M != 4 + births", {"births": 7}), ("checkpoint missing", {"M_at": {k: v for k, v in ok_rec["M_at"].items() if k != "300"}}),
+             ("fb without births", {"births": 0, "M": 4, "t100": None, "M_at": {str(c): 4 for c in CHECKPOINTS}})]
+    chk("R3: every listed inconsistency is an integrity error (%d cases)" % len(cases),
+        all(clock_errors(dict(ok_rec, **ch), d1, 800, 300) for _, ch in cases))
+    capped = {"steps": 512, "M": 300, "births": 296, "hit_cap": True, "fe": 3, "fb": 5, "t100": 400,
+              "M_at": {"100": 4, "200": 10, "300": 40, "400": 100, "500": 290}}
+    chk("R3: a valid cap stop before tick 800 passes and is positive", clock_errors(capped, d1, 800, 300) == [] and endpoint(capped, 300) == 1)
+    try:
+        endpoint(dict(capped, hit_cap=False), 300)
+        no_cp = False
+    except Refused:
+        no_cp = True
+    chk("R3: a missing tick-800 checkpoint without a cap stop is refused, not counted", no_cp)
+    chk("R3: events without any contact are an integrity error", clock_errors(dict(ok_rec), {"tau": INF}, 800, 300) != [])
     print("SELFTEST", "PASS" if ok else "FAIL")
     return 0 if ok else 1
 
 
-def freeze_errors(man, registered):
-    e = []
-    if registered:
-        if man.get("frozen_script_sha256") != sha256_file(os.path.abspath(__file__)):
-            e.append("manifest is not frozen for this script (frozen_script_sha256 must equal this file's SHA-256)")
-        for item in man.get("inputs", []):
-            p = os.path.join(ROOT, item["hashes_file"])
-            if not os.path.exists(p) or sha256_file(p) != item["sha256"]:
-                e.append("input %s does not have the manifest's hash" % item["hashes_file"])
-    return e
+
+def run(man, plan, d, json_out=None, out=sys.stdout, _probe=None):
+    """All gates first; records are looked up only after check_manifest, check_freeze, check_pins, trusted_list."""
+    cells = check_manifest(man, plan)
+    check_freeze(man, plan)
+    check_pins(man)
+    _, listed = trusted_list(man, plan, d)
+    files = bind_inputs(cells, listed, d)
+    if _probe is not None:
+        _probe.append("bound")
+    s1 = load(S1_LIB, "az_tokres_analyse")
+    R = load(RUNNER, "az_tokres_run")
+    eng, _ = R.load_engine(ENGINE, ORIENT, "P1")
+    want_tag = "AZ-TOKRES-S1" if plan == "registered" else "SMOKE"
+    pins = {"engine": PINS["engine"][1], "orient": PINS["orient"][1], "runner": PINS["runner"][1],
+            "fixtures": s1.FIXTURES_SHA256, "golden": s1.GOLDEN_SHA256}
+    data, D, Y, cfgs, errors = {}, {}, {}, {}, []
+    for c in cells:
+        cfg = s1.REGISTRY[c]
+        if cfg["tag"] != want_tag or cfg["confirmatory"] != (plan == "registered") or cfg["profile"] != "P1" \
+                or (cfg["N"], cfg["k"], cfg["T"]) != (REG_CELLS if plan == "registered" else TEST_CELLS)[c]:
+            raise Refused("%s: the Stage 1 registry entry does not match plan %s" % (c, plan))
+        cfgs[c] = (cfg["N"], cfg["k"], cfg["T"])
+        rows, errs = s1.validate(files[c], cfg, pins)
+        errors += ["%s: %s" % (c, x) for x in errs]
+        D[c], Y[c] = defaultdict(dict), defaultdict(dict)
+        for b in sorted(rows):
+            base = rows[b].get("BASE")
+            for arm in man["arms"]:
+                r = rows[b].get(arm)
+                if r is None:
+                    if arm in s1.arms_for(cfg["N"]):
+                        errors.append("%s: base %d: arm %s missing" % (c, b, arm))
+                    continue
+                if base is None or r["th0"] != base["th0"] or [x for i, x in enumerate(r["d0"]) if i != r["slot"]] != \
+                        [x for i, x in enumerate(base["d0"]) if i != r["slot"]]:
+                    errors.append("%s: base %d arm %s: pairing keys (th0, non-slot tokens) differ from BASE" % (c, b, arm))
+                    continue
+                dd = first_contact(eng, r["th0"], r["d0"], cfg["N"], cfg["k"], r["slot"])
+                ce = clock_errors(r, dd, cfg["T"], cfg["cap"])
+                if ce:
+                    errors += ["%s: base %d arm %s: %s" % (c, b, arm, x) for x in ce[:3]]
+                    continue
+                try:
+                    Y[c][arm][b] = endpoint(r, cfg["cap"])
+                except Refused as ex:
+                    errors.append("%s: base %d arm %s: %s" % (c, b, arm, ex))
+                    continue
+                D[c][arm][b] = dd
+        data[c] = rows
+    if errors:
+        print("INTEGRITY: FAIL (%d). No table is produced." % len(errors), file=out)
+        for x in errors[:30]:
+            print("  - " + x, file=out)
+        return 2
+    print("INTEGRITY: PASS (trusted hash list binding; Stage 1 validator: identity, custody, states, records, set; pairing keys; clocks and endpoint)", file=out)
+    tables(cells, data, D, Y, cfgs, man, out=out)
+    if json_out:
+        with open(json_out, "w", newline="\n") as f:
+            for c in cells:
+                for b in sorted(data[c]):
+                    for arm in man["arms"]:
+                        if b in D[c].get(arm, {}):
+                            f.write(descriptor_json(c, b, arm, data[c][b][arm], D[c][arm][b], Y[c][arm][b]) + "\n")
+        print("descriptors written: %s  SHA-256 %s" % (os.path.basename(json_out), sha256_file(json_out)), file=out)
+    return 0
 
 
 def main():
@@ -363,56 +672,22 @@ def main():
     ap.add_argument("--manifest")
     ap.add_argument("--dir")
     ap.add_argument("--plan", choices=("test", "registered"))
+    ap.add_argument("--json")
     a = ap.parse_args()
     if a.selftest:
         return selftest()
     if not (a.manifest and a.dir and a.plan):
         ap.error("--manifest, --dir and --plan are required")
-    man = json.load(open(a.manifest))
-    registered = a.plan == "registered"
-    err = freeze_errors(man, registered)
-    if err:
-        print("REFUSED: " + "; ".join(err))
-        return 2
-    if sha256_file(S1_LIB) != S1_LIB_SHA256:
-        print("REFUSED: Stage 1 library does not hash to its pin")
-        return 2
-    s1 = load(S1_LIB, "az_tokres_analyse")
-    R = load(RUNNER, "az_tokres_run")
-    eng, _ = R.load_engine(ENGINE, ORIENT, "P1")
-    cells = man["cells_registered"] if registered else man["cells_test"]
-    pins = {"engine": sha256_file(ENGINE), "orient": sha256_file(ORIENT), "runner": sha256_file(RUNNER),
-            "fixtures": s1.FIXTURES_SHA256, "golden": s1.GOLDEN_SHA256}
+    with open(a.manifest) as f:
+        man = json.load(f)
     print("contact tables script SHA-256 %s; manifest %s; plan %s" % (sha256_file(os.path.abspath(__file__)), sha256_file(a.manifest), a.plan))
-    if not registered:
+    if a.plan == "test":
         print("*** TEST RECORDS: instrument validation only; no evidential value ***")
-    data, errors = {}, []
-    for c in cells:
-        cfg = s1.REGISTRY[c]
-        if cfg["profile"] != "P1":
-            errors.append("%s: profile %s is not covered by this script (P1 only)" % (c, cfg["profile"]))
-            continue
-        files = sorted(glob.glob(os.path.join(glob.escape(a.dir), c + "_*.jsonl")))
-        rows, errs = s1.validate(files, cfg, pins)
-        errors += ["%s: %s" % (c, x) for x in errs]
-        if not files:
-            errors.append("%s: no record file" % c)
-        for b in rows:
-            base = rows[b].get("BASE")
-            for arm, r in rows[b].items():
-                if arm.endswith("_P"):          # node-label permuted copies: relabelled by design, not used here
-                    continue
-                if base and (r["th0"] != base["th0"] or [x for i, x in enumerate(r["d0"]) if i != r["slot"]] != [x for i, x in enumerate(base["d0"]) if i != r["slot"]]):
-                    errors.append("%s: base %d arm %s: pairing keys (th0, non-slot tokens) differ from BASE" % (c, b, arm))
-        data[c] = rows
-    if errors:
-        print("INTEGRITY: FAIL (%d). No table is produced." % len(errors))
-        for x in errors[:30]:
-            print("  - " + x)
+    try:
+        return run(man, a.plan, os.path.abspath(a.dir), a.json)
+    except Refused as ex:
+        print("REFUSED: %s" % ex)
         return 2
-    print("INTEGRITY: PASS (Stage 1 validator: identity, custody, states, records, set; pairing keys)")
-    tables(eng, s1, cells, data, man)
-    return 0
 
 
 if __name__ == "__main__":

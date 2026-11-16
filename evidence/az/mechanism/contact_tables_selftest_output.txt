@@ -9,5 +9,21 @@ PASS periods: P(0) = 1, P(N/2) = 2, P(N/4) = 4 at N = 120
 PASS covariance: common phase shift; common advance shift; node relabelling (time, types, slot role, relabelled edges)
 PASS invalid input refused (odd N, k >= N/6, three nodes, non-integer phase)
 PASS clock conversion: runner fb = engine birth_steps_list[0] + 1 (59 of 60 synthetic runs with a birth; growth values not printed)
-PASS freeze gate refuses an unfrozen manifest in registered mode
+PASS R1: test plan naming a registered cell is refused before any lookup
+PASS R1: mixed cell list refused before any lookup
+PASS R1: registered plan naming a test cell refused
+PASS freeze: unfrozen manifest refused in registered mode before any lookup
+PASS R2: frozen manifest with no input refused
+PASS R2: frozen manifest with a wrong pin refused
+PASS R2: frozen manifest with a wrong input hash refused
+PASS R4: manifest field enforced (unsupported pair)
+PASS R4: manifest field enforced (joint tables)
+PASS R4: manifest field enforced (grid not increasing)
+PASS R4: manifest field enforced (J4 time 0)
+PASS R4: manifest field enforced (schema)
+PASS R3: a consistent record passes
+PASS R3: every listed inconsistency is an integrity error (13 cases)
+PASS R3: a valid cap stop before tick 800 passes and is positive
+PASS R3: a missing tick-800 checkpoint without a cap stop is refused, not counted
+PASS R3: events without any contact are an integrity error
 SELFTEST PASS
