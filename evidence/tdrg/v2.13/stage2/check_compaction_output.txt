@@ -1,6 +1,6 @@
 PASS  base identity  — map base_sha256 vs file
 PASS  candidate identity  — map candidate_sha256 vs file
-PASS  archive identity stage1-intermediate  — 65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5
+PASS  archive identity stage1-intermediate  — a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb
 PASS  archive identity tdrg-v2.12.15  — 1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64
 PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
 PASS  operation S2-H (presentation)  — header replaced; status-summary sentences are a subset of the base summary (header)

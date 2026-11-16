@@ -1,7 +1,7 @@
 {
- "base_sha256": "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5",
- "candidate_sha256": "c79898f99eaf83eb7b9d98749ec2f168868b664fa2e3f91916d888439a5236f4",
- "map_sha256": "4acc1d021f13310a1b4ea32a2e4509a6a3ca9569c977aa3cd94d3ae4dad8da55",
+ "base_sha256": "a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb",
+ "candidate_sha256": "6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88",
+ "map_sha256": "72408186ed90ed7fa993816668471aabe9abfd583cb974f8ff9f40b306d0fde5",
  "operations": [
   {
    "id": "S2-H",
@@ -333,6 +333,7 @@
    "az-v0.7",
    "az-v0.8",
    "az-v0.9",
+   "az-v0.10",
    "ofn-v0.10",
    "ofn-v0.12",
    "programme-v1.4",
@@ -357,7 +358,7 @@
   {
    "check": "archive identity stage1-intermediate",
    "result": "PASS",
-   "detail": "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5"
+   "detail": "a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb"
   },
   {
    "check": "archive identity tdrg-v2.12.15",

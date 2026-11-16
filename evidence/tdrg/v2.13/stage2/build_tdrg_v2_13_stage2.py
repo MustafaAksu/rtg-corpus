@@ -20,8 +20,8 @@ import hashlib, json, os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", "..", ".."))
 DSN = "dsn/RTG_DISCRETE_GENESIS_DSN.md"
-BASE_COMMIT = "10a88435cde255e3b66c235102a77214c9c6bd2c"
-BASE_SHA = "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5"
+BASE_COMMIT = "b7687f11c38f8adc5af2e4d42ff5c74a4e7f2dce"
+BASE_SHA = "a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb"
 PRED_TAG = "tdrg-v2.12.15"
 PRED_SHA = "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64"
 sha = lambda b: hashlib.sha256(b).hexdigest()
@@ -165,7 +165,7 @@ mp = {"study": "TDRG", "target": "v2.13", "stage": 2,
                        "holds the v2.12.15 header, Appendix A and footer verbatim.",
       "profile": {"study": "TDRG", "ref_words": [], "history_words": ["v2.12"],
                   "checked_tag_prefixes": ["tdrg-", "az-", "ofn-", "programme-", "methodology-", "numgen-"],
-                  "known_tags": ["tdrg-v2.12.13", "tdrg-v2.12.14", "tdrg-v2.12.15", "az-v0.6", "az-v0.7", "az-v0.8", "az-v0.9",
+                  "known_tags": ["tdrg-v2.12.13", "tdrg-v2.12.14", "tdrg-v2.12.15", "az-v0.6", "az-v0.7", "az-v0.8", "az-v0.9", "az-v0.10",
                                  "ofn-v0.10", "ofn-v0.12", "programme-v1.4", "methodology-v1.4", "numgen-v1.21"],
                   "summary_from": ["header"]},
       "operations": ops}

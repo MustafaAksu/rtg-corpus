@@ -8,7 +8,7 @@
 
 **Prepared by:** Claude, TDR-G co-owner session `claude01SKePJ`, on branch `claude/tdrg-v2-13`.
 
-**Edition:** v2.13, a maintenance edition. It migrates the document to Methodology v1.4 and pins AZ at v0.9 (v0.8 in the plan; atlas row check F1). No scientific result changes, and nothing is rerun.
+**Edition:** v2.13, a maintenance edition. It migrates the document to Methodology v1.4 and pins AZ at v0.10 (v0.8 in the plan, v0.9 after F1; PI option 1; atlas row check F1). No scientific result changes, and nothing is rerun.
 
 **Predecessor:** `RTG_DISCRETE_GENESIS_DSN` v2.12.15, tag `tdrg-v2.12.15`, SHA-256 `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64`.
 
@@ -32,7 +32,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v2.12.15) | `git show tdrg-v2.12.15:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64` |
-| Stage-1 intermediate (a build stage, not an edition) | `git show 10a88435cde255e3b66c235102a77214c9c6bd2c:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5` |
+| Stage-1 intermediate (a build stage, not an edition) | `git show b7687f11c38f8adc5af2e4d42ff5c74a4e7f2dce:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb` |
 | **Candidate v2.13** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `{{H:dsn/RTG_DISCRETE_GENESIS_DSN.md}}` |
 | Stage-1 builder | `evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py` | `{{H:evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py}}` |
 | Stage-1 checker | `evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py` | `{{H:evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py}}` |
@@ -47,20 +47,20 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 **Reproduce** (from the repository root, with the tags present):
 ```
 T=$(mktemp -d)
-git show 10a88435cde255e3b66c235102a77214c9c6bd2c:dsn/RTG_DISCRETE_GENESIS_DSN.md > $T/inter.md
+git show b7687f11c38f8adc5af2e4d42ff5c74a4e7f2dce:dsn/RTG_DISCRETE_GENESIS_DSN.md > $T/inter.md
 python3 -I evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py --out $T/rebuilt.md --log $T/log.json   # = inter.md, = edit_log.json
 python3 -I evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py --intermediate $T/inter.md [--controls]
 python3 -I evidence/tdrg/v2.13/stage2/build_tdrg_v2_13_stage2.py --emit-base $T/base.md   # writes the candidate and the map
 python3 tools/check_compaction.py $T/base.md dsn/RTG_DISCRETE_GENESIS_DSN.md evidence/tdrg/v2.13/stage2/movement_map.json
 python3 -I evidence/tdrg/v2.13/stage2/stage2_negative_controls.py
 ```
-The stage-1 builder reads its base from the tag. The stage-2 builder, the map and the controls read the intermediate from commit `10a8843` and assert its hash, so no second copy of a DSN state is kept (Methodology v1.4 §13.7).
+The stage-1 builder reads its base from the tag. The stage-2 builder, the map and the controls read the intermediate from commit `b7687f1` and assert its hash, so no second copy of a DSN state is kept (Methodology v1.4 §13.7).
 
 ## 3. Stage 1 — what changes, by decision (29 edits; `edit_log.json`)
 
 | Plan row | Edits | What changed |
 |---|---|---|
-| S1 — AZ pin (with F1, §3b) | E13, E25, E26 | §6.2 cites `AZ-ALG-ANTIPODAL-LOWORDER` at `az-v0.9`. Checker C6 shows the entry is byte-identical at `az-v0.6`, `az-v0.7`, `az-v0.8` and `az-v0.9`. The AZ consumer row is restated from AZ's own v0.9 text: AZ §8, IMP-B, cites TDR-G at `tdrg-v2.12.15`, follows the LEM-SPECCONS generalization and adds the TDRG-ALG-EVENT-INVENTORY / TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-PARENT-CHILD-PHASE rows; AZ-NUM-TOKRES-S1 is named as AZ's numerical diagnostic, not a TDR-G result (its grade in words, not as a TDR-G tag); the two AZ identifiers with a `TDRG-` prefix are AZ's, not TDR-G RIDs, and are not named, so that no tool reads them as TDR-G identifiers. Pins are current. |
+| S1 — AZ pin (with F1 and option 1, §3b–§3c) | E13, E25, E26 | §6.2 cites `AZ-ALG-ANTIPODAL-LOWORDER` at `az-v0.10`. Checker C6 shows the entry is byte-identical at `az-v0.6` to `az-v0.10`. The AZ consumer row is restated from AZ's own v0.10 text: AZ §8, IMP-B, cites TDR-G at `tdrg-v2.12.15`, follows the LEM-SPECCONS generalization and adds the TDRG-ALG-EVENT-INVENTORY / TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-PARENT-CHILD-PHASE rows; AZ-NUM-TOKRES-S1 and AZ-NUM-TOKRES-S2 are named as AZ's numerical diagnostics, not TDR-G results (their grades in words, not as TDR-G tags); the two AZ identifiers with a `TDRG-` prefix are AZ's, not TDR-G RIDs, and are not named, so that no tool reads them as TDR-G identifiers. The pin line names the verified source editions used by this release, not "governing" editions. |
 | S2 — Methodology | E01, E02 | The header declares v1.4. The alias sentence names v1.4 §8.1; its v2.12.14 history (the legacy rows, which carry tags) stays in the tagged predecessor. |
 | S3 — historical pins | E06, E07, E15, E19, E26 | The OPEN-OFN-2 connection of TDR-1 and TDR-19 points to `ofn-v0.12`, where OPEN-OFN-2 is open as `RTG-OFN-OPEN-DISC-INTERACTION`. CONV-TICK and LEM-NOANNIHIL name their current consumer rows, OFN v0.12 IMP-O08-14 and IMP-O08-06; OFN imports LEM-NOANNIHIL as `[ALG]`, so the old "`[RESULT]` `[from: ALG]`" description of OFN v0.7 leaves. No claim-specific historical pin remains in the live text. |
 | S4 — owner-review tasks | E05 | Stated as TDR-G's own current items (Programme v1.4 does not carry them; checker C6), with the same four statuses. |
@@ -106,6 +106,26 @@ The TDR-G co-owner (Claude) completed the propagation:
 
 No TDR-G result, grade or RID changes. AZ's numerical result is not adopted.
 
+## 3c. AZ v0.10 (PI option 1, 16 Nov 2026)
+
+`az-v0.10` was adopted (PR #276) after the F1 rebuild, so the F1 candidate `c79898f9…36f4` named a superseded AZ edition. Its pin line also called AZ v0.9 a "governing" edition. The co-owner (Claude) compared the two editions:
+- `AZ-ALG-ANTIPODAL-LOWORDER` is byte-identical at `az-v0.9` and `az-v0.10`;
+- AZ §8 still uses TDR-G v2.12.15 with the same rows. Only AZ's local-use sentences change, to cover its new diagnostic AZ-NUM-TOKRES-S2 and its §4.2.2.
+
+The PI chose option 1, repin to `az-v0.10`, in the session on 16 Nov 2026. The ChatGPT co-owner's relayed note confirms it and adds two points: the sync authorizes no adoption of AZ numbers, and the pin line should name "verified source editions used by this release", so that a later AZ edition does not make it false.
+
+**Changes (stage 1, round 4, commit `b7687f1`):**
+- E13 cites `az-v0.10`.
+- The E25 consumer row is restated from AZ v0.10 §8, with AZ-NUM-TOKRES-S1 and AZ-NUM-TOKRES-S2 named as AZ-owned diagnostics.
+- The E26 pin line is written as verified source editions.
+- C6 checks the cited entry at `az-v0.6` to `az-v0.10` and AZ v0.10's §8 rows and diagnostics, and treats "AZ v0.9", `az-v0.9` and "Governing editions" as stale.
+- K1 now fails a repin from `az-v0.10` back to `az-v0.9`.
+- In stage 2, the Appendix A entry and `known_tags` are updated.
+
+**Policy for later editions:** a newer AZ edition alone does not trigger a rebuild. What decides is whether the cited statement or AZ's use of TDR-G changes.
+
+**Reviews:** the ChatGPT F1 readback, PASS (review `5918564536`, PR #268 `6603997a`), concerned `c79898f9…36f4`. The candidate of this round needs its own bounded readback and the atlas re-check.
+
 ## 4. Stage 2 — compaction (43 operations; `movement_map.json`)
 
 The base is the stage-1 intermediate. The operations are:
@@ -137,11 +157,11 @@ The base is the stage-1 intermediate. The operations are:
 
 ## 7. Pipe items
 
-`pipes/TDRG/` was read at `main` `93f1986` (no open item) and again at `main` `c9e313f`: it holds `20261114-AZ-v0-9-adopted.md` (notice, open on `main`). Its subject — the §6.2 citation and AZ §8 — is what F1 changes; on this branch it is **dispositioned** `2026-11-16 · accept · records/tdrg/TDRG_v2_13_RELEASE_RECORD.md` and is closed after the tag (atlas row check F2). Notices after the tag, each `kind: notice`:
+`pipes/TDRG/` was read at `main` `93f1986` (no open item) and again at `main` `c9e313f`: it holds `20261114-AZ-v0-9-adopted.md` (notice, open on `main`). Its subject — the §6.2 citation and AZ §8 — is what F1 changes; on this branch it is **dispositioned** `2026-11-16 · accept · records/tdrg/TDRG_v2_13_RELEASE_RECORD.md` and is closed after the tag (atlas row check F2). Read again at `main` `e8b40cb` (16 Nov): no v0.10 notice had reached `pipes/TDRG/`; v2.13 already cites `az-v0.10`. Notices after the tag, each `kind: notice`:
 
 | Consumer | Contents |
 |---|---|
-| `pipes/AZ/` | §6.2 citation at `az-v0.9`; the consumer row restated from AZ's v0.9 §8, with AZ-NUM-TOKRES-S1 named as AZ-owned; reply to the v0.9 notice; nothing asked |
+| `pipes/AZ/` | §6.2 citation at `az-v0.10`; the consumer row restated from AZ's v0.10 §8, with AZ-NUM-TOKRES-S1/S2 named as AZ-owned; reply to the v0.9 notice; nothing asked |
 | `pipes/OFN/` | OPEN-OFN-2, CONV-TICK and LEM-NOANNIHIL pins at `ofn-v0.12`; XFER-O08-01 stated as open (decision note to follow) |
 | `pipes/PROG/` | Methodology v1.4 migration done; no export or gate changes |
 | `pipes/NUMGEN/` | none needed (no NUMGEN-facing content changes); listed for completeness |
