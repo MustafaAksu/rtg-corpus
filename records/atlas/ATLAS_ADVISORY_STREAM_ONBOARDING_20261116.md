@@ -74,3 +74,9 @@ The AZ cycle (10–16 Nov) took four editions. A smaller stream can take one or 
 4. Whether the maintained streams run a light inbox pass now, and what happens to PRs #160 and #183.
 
 After the PI chooses, the Atlas owner drafts the first stream's entry note, as for AZ (`records/az/AZ_COOWNER_SESSION_ORIENTATION.md`). The stream's owners then maintain it.
+
+## 6. PI decision
+
+**Project conversation, 16 November 2026, 16:19 +03:00.** Verbatim: "DZT ile başlayalım. diğer tüm konular sonra gelsin." ("Let us start with DZT. All the other matters come later.")
+
+Reading: question 1 is answered (DZT first). Questions 2–4 (parallelism, the three noncanonical studies, the inbox pass and PRs #160/#183) are deferred, not decided. The Atlas owner drafts the DZT entry note: `records/dzt/DZT_COOWNER_SESSION_ORIENTATION.md`.
