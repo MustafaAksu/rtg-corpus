@@ -1,0 +1,86 @@
+# AZ v0.10 — release record
+
+**Adopted by the PI on 16 November 2026 (§8).** This record is frozen at adoption; the steps after it (merge, tag, notices) are named in §6 as pending at adoption and are carried by the merge commit, the tag and the pipe items. Until the PI has merged and tagged, `az-v0.9` is the governing tag. Prepared by the AZ co-owner (Claude), 16 November 2026. It invents no hash, approval or review identifier.
+
+## 1. Authority
+
+- **PI, 12 Nov 2026** — outcome rule for Action 1 (Stage 1 report §11 item 3): a validated, supported contrast is eligible for a PI-approved `[NUM diagnostic]` entry in AZ Level A with its exact scope and provenance; it closes no `AZ-OPEN-PROMO`, promotes no maturity and is no TDR-G claim.
+- **PI, 16 Nov 2026** — given in the second co-owner's conversation and recorded verbatim in review `5915724946` (PR #275), relayed to this session by the PI at 12:13 +03:00; source-reported to this lane: "I accept the report"; "Continue as proposed"; "TDR-G gets no separate item for the numerical result." As recorded there: authorisation to prepare the separate entry `AZ-NUM-TOKRES-S2` / `AZ-ART-TOKRES-S2` in an AZ v0.10 candidate, Level A and `AZ-OPEN-PROMO` retained; not the adoption of this file.
+
+## 2. What changes
+
+| Object | Path | SHA-256 | Bytes |
+|---|---|---|---|
+| base, `az-v0.9` | `dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md` | `c198a8bbddb23ce0d546c3ed03bddcdcf02dd83b974da7651a89a3fec5ac7598` | 100,978 |
+| candidate r1 (commit `ff753f5`; review `5917774476`) | same path | `7336ab384288e4cffc58ae3b550a6567e08252ec340f5f657a0276686f256cfa` | 111,765 |
+| candidate r2 — **the candidate the PI adopted** (commit `e5668cc0dede1a318f261257b48ef83277bcaa65`; readback `5917900634`) | same path | `b672fd03cfe73e4cd674721bca24a3da4b76c0fe09cf52727d92ed932a178217` | 112,563 |
+| **published — the adopted file** (status lines only, §7) | same path, from the publication commit on | `0cc84c9a587bab270624a824d5e004a327f20f41f0c03307e01a6725afe80e6e` | 112,562 |
+
+One content stage. `evidence/az/v0.10/build_az_v0_10.py` reads the base with `git show az-v0.9:…` (hash asserted), asserts the Stage 2 package (`25b796b3…eb4b`) and data (`3e211e6a…a7e7`) hashes and the presence of the cited records, applies 19 exact-once edits (`evidence/az/v0.10/edit_log.txt`; the block is `evidence/az/v0.10/block_4_2_2.md`), and asserts that every base line not named in an edit is unchanged and in order: 618 of 631; six lines replaced (title, *Date*, *Document status*, *Supersedes*, the §4.2 heading, footer), seven edited in place. It also asserts that the line declaring `AZ-NUM-TOKRES-S1` is unchanged and that each new identifier is declared once.
+
+| Where | Change |
+|---|---|
+| header, footer | edition v0.10, DRAFT; *Status summary* names both diagnostics |
+| §0.1 | the routing row covers §4.2.1 and §4.2.2 |
+| §0.2 Thread B | readout of `AZ-NUM-TOKRES-S2` |
+| §1.1 | the criterion sentence names both diagnostics; the criterion and its status unchanged |
+| §4.2 | heading "(bridge-candidate family; AZ-owned diagnostics)"; ownership sentence; **new §4.2.2** (the block) |
+| §5 | one high-risk row for `AZ-NUM-TOKRES-S2` |
+| §8 | local-use clauses of `TDRG-ALG-TOKEN-CENSUS-LAW` and `TDRG-ALG-PARENT-CHILD-PHASE` name the second check and intervention; the owner statements and pins unchanged |
+| §9 | artifact entry `AZ-ART-TOKRES-S2` |
+| Appendix A | v0.10 entry |
+
+New identifiers: `AZ-NUM-TOKRES-S2`, `AZ-ART-TOKRES-S2` (80 in the file). None removed. No pin changes: `dyad-v6.4.24`, `tdrg-v2.12.15` govern per `BASELINE.md`.
+
+**Content of §4.2.2.** Exactly the registered output, corrected report wording (review `5915724946`, R1–R2): cells as `(N, k)` pairs; the order-2 intervention only at `N = 240, 480`; the support criterion for `RD > 0.05` with its nominal simultaneous coverage and no exact finite-sample familywise guarantee; the near-quarter control; the controls; the calibration and its out-of-sample check; the post-pilot design decision named; what it is not; evidence keys (`EV-INDEP` limited to the second co-owner's recomputation from the published counts).
+
+## 3. What does not change
+
+`AZ-NUM-TOKRES-S1` and its scope; Level A; the OPEN registry, `AZ-OPEN-PROMO` included; the milestones; the owner pins; every other AZ-owned statement. No mechanism, no `N`-law, no order hierarchy below 2, nothing on TDR-26; no TDR-G claim; OPEN-P1 untouched.
+
+## 4. Checks (this session)
+
+| Check | Result |
+|---|---|
+| Build from the tag, base and evidence hashes asserted, 19 exact-once edits | r2 `b672fd03…8217` (rebuilt twice, equal; and again after merging `main` `e817a63`) |
+| Base lines unchanged and in order | 618 of 631 |
+| `tools/dsn_lint.py` (informational) | 112,563 bytes; one footer line; 80 identifiers; history phrases unchanged from v0.9 (10 / 5 / 1) |
+| `tools/pipes_index.py --check` | OK, 126 items |
+| `bash evidence/az/token_resonance/stage1/verify.sh` | `VERIFY PASS` |
+| `bash evidence/az/token_resonance/stage2_result/verify.sh` | `VERIFY PASS` |
+
+## 5. Review record
+
+- **Review `5917774476`** (second co-owner, 16 Nov 2026, 09:34Z, on `ff753f5`): *accept with two minor scope corrections; not adopted.* The ten rows match the corrected report; cells, horizons, thresholds, support criterion and approximate simultaneous coverage correctly carried; the S1 block unchanged in the full diff; Level A, OPEN registry, pins and the TDR-26 boundary kept. By its own statement it did not run the builder or the `verify.sh` scripts and did not recompute the candidate hash; those are source-reported to it.
+  - **R1** — "θ(N) equates baseline rates" replaced: the thresholds were calibrated to match approximately the reference rate in non-resonant native pilot draws; equality of population rates is not shown; the out-of-sample rates inside the pilot interval are a consistency report, not an equivalence test (§4.2.2, two sentences).
+  - **R2** — the subsets of the control equivalences carried: G4 sham on draws whose native and perturbed slot token are both non-resonant; G5 detuned on draws whose native slot token is non-resonant; equivalences stated for those subsets only.
+  - Non-blocking, applied: runs capped before tick 800 count positive on E_100; the near-quarter result is one registered mixture arm (token drawn from the four values), not four tests — in §4.2.2 and the §0.2 readout.
+  - No number, reading or control decision changed. Candidate r2 `b672fd03…8217`.
+- **Readback `5917900634`** (second co-owner, 16 Nov 2026, 09:44Z, on `e5668cc`): *pass, accept scoped; ready for the PI's adoption decision.* R1 and R2 closed, the two clarifications correctly applied; five text lines of the DSN changed against `ff753f5`; the ten rows, the S1 block, the criterion, the control decisions, Level A, the OPEN registry and the pins kept. Change-focused; by its own statement it did not run the builder or the verification scripts or recompute the file hash.
+
+## 6. Steps
+
+| # | Step | By | State |
+|---|---|---|---|
+| 1 | Candidate | AZ co-owner | done |
+| 2 | Change-focused review, corrections, readback | second co-owner | done (§5) |
+| 3 | Adoption decision | PI | done (§8) |
+| 4 | Publication commit (status lines, §7; this record; `BASELINE.md` AZ row: v0.10, the adopted hash, tag `az-v0.10`) | AZ co-owner | done with this commit |
+| 5 | Merge (merge commit) and annotated tag `az-v0.10` | PI | pending at adoption |
+| 6 | Edition notices (TDRG — edition notice only, no separate item for the numerical result; ATLAS; PROG if affected) | AZ co-owner, after the tag | pending at adoption |
+
+PR #275 (Stage 2 report) was merged on 16 Nov 2026 (`e817a63`, review `5917746984`), before this edition, since §4.2.2 and §9 cite its files.
+
+## 7. Publication transform (status lines only)
+
+`evidence/az/v0.10/publish_az_v0_10.py` reads the adopted candidate from commit `e5668cc0dede1a318f261257b48ef83277bcaa65` (hash `b672fd03…8217` asserted) and changes exactly two lines: *Document status* (DRAFT → ADOPTED, with the adoption record) and the footer (DRAFT clause removed); the *Date* is already 16 November 2026, the day of adoption. `--check`: lines 10 and 664 of 665 differ, `RESULT: PASS` (`evidence/az/v0.10/publication_check_output.txt`). Published file: `0cc84c9a587bab270624a824d5e004a327f20f41f0c03307e01a6725afe80e6e`, 112,562 bytes. Between the reviewed commit and the publication commit the branch took a merge of `main` (`02b3958`; unrelated streams), which does not touch the DSN, the v0.10 evidence or this record.
+
+## 8. Adoption
+
+**Decision (PI, 16 November 2026, 13:24 +03:00, project conversation with this session, verbatim):** "benimsiyorum" ("I adopt"), given together with the second co-owner's report relayed in the same message, which names the object and its state: PR #276, readback `5917900634` — pass, ready for the PI's adoption decision — on commit `e5668cc`, candidate `b672fd03…8217`.
+
+- **Object:** the candidate `b672fd03cfe73e4cd674721bca24a3da4b76c0fe09cf52727d92ed932a178217` at `e5668cc`, published by the transform of §7 as `0cc84c9a587bab270624a824d5e004a327f20f41f0c03307e01a6725afe80e6e`.
+- **Basis:** the outcome rule of 12 Nov 2026; the PI's decisions of 16 Nov 2026 recorded in review `5915724946`; the Stage 2 pilot, intake, registration, authorisation, campaign, report and their reviews (`AZ-ART-TOKRES-S2`); reviews `5917774476` and `5917900634` of this candidate.
+- **Covers:** `AZ-NUM-TOKRES-S2` as an AZ-owned `[NUM diagnostic]` with the scope printed in §4.2.2 and its pointers; the artifact entry `AZ-ART-TOKRES-S2`.
+- **Does not cover:** a mechanism; an `N`-law or `N`-independence; other `k/N`, policies, horizons or thresholds; the order hierarchy below 2; anything on TDR-26; a change of Level A, AZ-2 or any OPEN (`AZ-OPEN-PROMO` stays open); a TDR-G claim; a bridge (OPEN-P1 untouched); any new campaign.
+- **Order:** decision → this record → merge → tag. A merge, a tag or a passing check is not an adoption.
