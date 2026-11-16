@@ -7,7 +7,7 @@
 **Document class:** Infrastructure / diagnostic ledger (Methodology v1.4 §0.5) with a declared section map (§0.3); not a scientific result ledger  
 **Programme tier:** Tier 5 — Arithmetic-diagnostic infrastructure; serves both continuous and discrete branches without belonging to either  
 **Maturity:** Level A — retained. Defined scope, internal consistency established, exploration begun. Thread C engineering is certified; the one Phase-2 scientific result is a negative-clarifying diagnostic, not a Level-B-promoting bridge result.  
-**Document status:** DRAFT — candidate of v0.10; not adopted. `az-v0.9` governs until the PI adopts and tags this edition.  
+**Document status:** ADOPTED — PI, 16 November 2026 (the Action 1 Stage 2 result as a separate AZ-owned `[NUM diagnostic]`, `AZ-NUM-TOKRES-S2`). Adoption record: `records/az/AZ_v0_10_RELEASE_RECORD.md`.  
 **Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN` v0.9 (tag `az-v0.9`, SHA-256 `c198a8bbddb23ce0d546c3ed03bddcdcf02dd83b974da7651a89a3fec5ac7598`)  
 **Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`) · Discrete Genesis v2.12.15 (`tdrg-v2.12.15`) · Genesis Geometry v2.10 (`gen-v2.10`) · OPEN-M v0.7.1 (`uvm-v0.7.1`)  
 **DSN Methodology:** v1.4 (`methodology-v1.4`)  
@@ -661,4 +661,4 @@ Initial release. Infrastructure-and-ledger document; three threads defined; five
 
 ---
 
-*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.10 — DRAFT candidate; adoption pending; `az-v0.9` governs until adoption and tag.*
+*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.10*
