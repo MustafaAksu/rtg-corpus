@@ -1,7 +1,7 @@
 {
  "base_tag": "tdrg-v2.12.15",
  "base_sha256": "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64",
- "intermediate_sha256": "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5",
+ "intermediate_sha256": "a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb",
  "edits": [
   {
    "key": "E01",
@@ -127,10 +127,10 @@
    "mode": "str",
    "line_anchor": "Physical consequence: fully defective $K_3$",
    "old": "(`az-v0.7`; statement unchanged from `az-v0.6`)",
-   "new": "(`az-v0.9`)",
+   "new": "(`az-v0.10`)",
    "old_sha256": "a40e2cc43dd601abac0fce3274ab3584cb6a907873d460b2a31a7e55e1aaa363",
-   "new_sha256": "91295c91f03920e49d0156b4f5fadf1138396b954a769baa391d493799c40468",
-   "note": "S1/F1: the cited AZ-ALG-ANTIPODAL-LOWORDER statement is byte-identical at az-v0.6, az-v0.7, az-v0.8 and az-v0.9 (checker C6)"
+   "new_sha256": "56bac4922af7ebe53ecf466b049f20615eca1a7bcab0c96eccdd632ec866ec19",
+   "note": "S1/F1: the cited AZ-ALG-ANTIPODAL-LOWORDER statement is byte-identical at az-v0.6 to az-v0.10 (checker C6; PI option 1, 16 Nov 2026)"
   },
   {
    "key": "E14",
@@ -250,17 +250,17 @@
    "old_lines": 12,
    "new_lines": 10,
    "old_sha256": "b7502c3827df0f7c9f7ee2192533b2f4e6cd244a9a87025e0c72746cf545dbfc",
-   "new_sha256": "bb653aaa843eee888d97f9ad58bf7b293a201766755fc777d50ecff0a55740ba",
-   "note": "S1, S7/F1: rows state current use; AZ at az-v0.9 from its own §8, including its tdrg-v2.12.15 pin and token-law rows; AZ-NUM-TOKRES-S1 remains AZ-owned, not adopted TDR-G science; queue states leave"
+   "new_sha256": "46d3b8f85a4effaec46d310b46548ab824b0e1e28400f53dd3fc20ecda57aeac",
+   "note": "S1, S7/F1: rows state current use; AZ at az-v0.10 from its own §8, including its tdrg-v2.12.15 pin and token-law rows; AZ-NUM-TOKRES-S1/S2 remain AZ-owned, not adopted TDR-G science; queue states leave"
   },
   {
    "key": "E26",
    "mode": "line",
    "line_anchor": "**Pins.** Governing editions at this release:",
    "old_sha256": "311bed136ae52661c494b4114b2d7d24f264495977d72f38eb73e3249d8e0a75",
-   "new_sha256": "12c3ee8ab0c88067f69c87b604b71b836d377324f4959846ec705f1c089193bf",
+   "new_sha256": "09e4d963a2f383273a167e35c36a86e012f1d4377a2faa19114cbd6e3e2d3619",
    "old_len": 354,
-   "new_len": 231,
+   "new_len": 259,
    "note": "S1, S3: current pins; no historical pin remains live"
   },
   {

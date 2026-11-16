@@ -158,8 +158,8 @@ def build(base):
           "label: provenance of the v2.12.15 correction (Appendix A, release record)")
 
     # S1 / Atlas F1 — current adopted AZ pin, not a new TDR-G result
-    d.sub("E13", "Physical consequence: fully defective $K_3$", "(`az-v0.7`; statement unchanged from `az-v0.6`)", "(`az-v0.9`)",
-          "S1/F1: the cited AZ-ALG-ANTIPODAL-LOWORDER statement is byte-identical at az-v0.6, az-v0.7, az-v0.8 and az-v0.9 (checker C6)")
+    d.sub("E13", "Physical consequence: fully defective $K_3$", "(`az-v0.7`; statement unchanged from `az-v0.6`)", "(`az-v0.10`)",
+          "S1/F1: the cited AZ-ALG-ANTIPODAL-LOWORDER statement is byte-identical at az-v0.6 to az-v0.10 (checker C6; PI option 1, 16 Nov 2026)")
 
     d.sub("E14", "4. Classify each component, in this order:",
           "*(v2.12.15 `[COR]`: the precedence as implemented; ties are outcomes", "*(ties are outcomes",
@@ -201,8 +201,8 @@ def build(base):
     # S1, S7 / Atlas F1 — current consumer use, with AZ numerical ownership explicit
     d.replace_range("E25", "**Consumers** (from the consumers' own records;", "**Pins.** Governing editions at this release:",
                     block("consumers.md").rstrip("\n") + "\n",
-                    "S1, S7/F1: rows state current use; AZ at az-v0.9 from its own §8, including its tdrg-v2.12.15 pin and token-law rows; "
-                    "AZ-NUM-TOKRES-S1 remains AZ-owned, not adopted TDR-G science; queue states leave")
+                    "S1, S7/F1: rows state current use; AZ at az-v0.10 from its own §8, including its tdrg-v2.12.15 pin and token-law rows; "
+                    "AZ-NUM-TOKRES-S1/S2 remain AZ-owned, not adopted TDR-G science; queue states leave")
     d.line("E26", "**Pins.** Governing editions at this release:", block("pins.md").rstrip("\n"),
            "S1, S3: current pins; no historical pin remains live")
 

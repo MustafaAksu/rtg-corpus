@@ -1,4 +1,4 @@
-K1 AZ pin back to az-v0.8: CAUGHT (target C6 FAIL; C1 FAIL)
+K1 AZ pin back to az-v0.9: CAUGHT (target C6 FAIL; C1 FAIL)
 K2 tag changed in an untouched paragraph: CAUGHT (target C4 FAIL; C1 FAIL)
 K3 RID declaration dropped: CAUGHT (target C3 FAIL; C1 FAIL)
 K4 OPEN Status line changed: CAUGHT (target C5 FAIL; C1 FAIL)
