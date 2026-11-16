@@ -1,6 +1,6 @@
 PASS  base identity  — map base_sha256 vs file
 PASS  candidate identity  — map candidate_sha256 vs file
-PASS  archive identity stage1-intermediate  — 3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27
+PASS  archive identity stage1-intermediate  — 65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5
 PASS  archive identity tdrg-v2.12.15  — 1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64
 PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
 PASS  operation S2-H (presentation)  — header replaced; status-summary sentences are a subset of the base summary (header)
@@ -51,6 +51,6 @@ PASS  RID set preserved in live text  — missing: []
 PASS  heading anchors preserved  — missing: []
 PASS  source hashes preserved in live text  — missing: []
 PASS  qualifier tags preserved  — lost: []
-FAIL  references resolve  — v0.9 has no Appendix A entry in tdrg-v2.12.15; v0.9 has no Appendix A entry in tdrg-v2.12.15
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive
 PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
-RESULT: FAIL
+RESULT: PASS

@@ -1,7 +1,7 @@
 {
- "base_sha256": "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27",
- "candidate_sha256": "5e3859bf3ec309742469cc735d1a5d33cc98df961d0d589d4d5e3aefa0754dc8",
- "map_sha256": "bfcf01c2bd30d4bc0526e454df821f3c4004a705994539824d7f16d5f52639c3",
+ "base_sha256": "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5",
+ "candidate_sha256": "c79898f99eaf83eb7b9d98749ec2f168868b664fa2e3f91916d888439a5236f4",
+ "map_sha256": "4acc1d021f13310a1b4ea32a2e4509a6a3ca9569c977aa3cd94d3ae4dad8da55",
  "operations": [
   {
    "id": "S2-H",
@@ -357,7 +357,7 @@
   {
    "check": "archive identity stage1-intermediate",
    "result": "PASS",
-   "detail": "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27"
+   "detail": "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5"
   },
   {
    "check": "archive identity tdrg-v2.12.15",
@@ -611,8 +611,8 @@
   },
   {
    "check": "references resolve",
-   "result": "FAIL",
-   "detail": "v0.9 has no Appendix A entry in tdrg-v2.12.15; v0.9 has no Appendix A entry in tdrg-v2.12.15"
+   "result": "PASS",
+   "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
   },
   {
    "check": "presentation (header, footer)",
@@ -621,7 +621,7 @@
   }
  ],
  "warnings": [],
- "result": "FAIL",
+ "result": "PASS",
  "limitations": [
   "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
   "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",

@@ -2,14 +2,14 @@
  "study": "TDRG",
  "target": "v2.13",
  "stage": 2,
- "base": "0a7d7d80472ff27b9e40622bfc8440dfc71cd49e:dsn/RTG_DISCRETE_GENESIS_DSN.md",
- "base_sha256": "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27",
- "candidate_sha256": "5e3859bf3ec309742469cc735d1a5d33cc98df961d0d589d4d5e3aefa0754dc8",
+ "base": "10a88435cde255e3b66c235102a77214c9c6bd2c:dsn/RTG_DISCRETE_GENESIS_DSN.md",
+ "base_sha256": "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5",
+ "candidate_sha256": "c79898f99eaf83eb7b9d98749ec2f168868b664fa2e3f91916d888439a5236f4",
  "archives": [
   {
    "name": "stage1-intermediate",
-   "git": "0a7d7d80472ff27b9e40622bfc8440dfc71cd49e:dsn/RTG_DISCRETE_GENESIS_DSN.md",
-   "sha256": "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27"
+   "git": "10a88435cde255e3b66c235102a77214c9c6bd2c:dsn/RTG_DISCRETE_GENESIS_DSN.md",
+   "sha256": "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5"
   },
   {
    "name": "tdrg-v2.12.15",

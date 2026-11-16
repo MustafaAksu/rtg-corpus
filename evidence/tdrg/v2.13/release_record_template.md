@@ -32,7 +32,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | Object | Path | SHA-256 |
 |---|---|---|
 | Base (adopted v2.12.15) | `git show tdrg-v2.12.15:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64` |
-| Stage-1 intermediate (a build stage, not an edition) | `git show 0a7d7d80472ff27b9e40622bfc8440dfc71cd49e:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27` |
+| Stage-1 intermediate (a build stage, not an edition) | `git show 10a88435cde255e3b66c235102a77214c9c6bd2c:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5` |
 | **Candidate v2.13** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `{{H:dsn/RTG_DISCRETE_GENESIS_DSN.md}}` |
 | Stage-1 builder | `evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py` | `{{H:evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py}}` |
 | Stage-1 checker | `evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py` | `{{H:evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py}}` |
@@ -47,14 +47,14 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 **Reproduce** (from the repository root, with the tags present):
 ```
 T=$(mktemp -d)
-git show 0a7d7d80472ff27b9e40622bfc8440dfc71cd49e:dsn/RTG_DISCRETE_GENESIS_DSN.md > $T/inter.md
+git show 10a88435cde255e3b66c235102a77214c9c6bd2c:dsn/RTG_DISCRETE_GENESIS_DSN.md > $T/inter.md
 python3 -I evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py --out $T/rebuilt.md --log $T/log.json   # = inter.md, = edit_log.json
 python3 -I evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py --intermediate $T/inter.md [--controls]
 python3 -I evidence/tdrg/v2.13/stage2/build_tdrg_v2_13_stage2.py --emit-base $T/base.md   # writes the candidate and the map
 python3 tools/check_compaction.py $T/base.md dsn/RTG_DISCRETE_GENESIS_DSN.md evidence/tdrg/v2.13/stage2/movement_map.json
 python3 -I evidence/tdrg/v2.13/stage2/stage2_negative_controls.py
 ```
-The stage-1 builder reads its base from the tag. The stage-2 builder, the map and the controls read the intermediate from commit `0a7d7d8` and assert its hash, so no second copy of a DSN state is kept (Methodology v1.4 §13.7).
+The stage-1 builder reads its base from the tag. The stage-2 builder, the map and the controls read the intermediate from commit `10a8843` and assert its hash, so no second copy of a DSN state is kept (Methodology v1.4 §13.7).
 
 ## 3. Stage 1 — what changes, by decision (29 edits; `edit_log.json`)
 

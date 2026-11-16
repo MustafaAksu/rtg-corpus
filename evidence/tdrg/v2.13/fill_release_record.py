@@ -31,7 +31,7 @@ with tempfile.TemporaryDirectory() as d:
                                        capture_output=True, check=True).stdout)
     lint = subprocess.run([sys.executable, "-I", "tools/dsn_lint.py", "dsn/RTG_DISCRETE_GENESIS_DSN.md", "--prev", p],
                           capture_output=True, text=True, check=True).stdout.replace(p, "tdrg-v2.12.15")
-INTER_BYTES = len(subprocess.run(["git", "show", "0a7d7d80472ff27b9e40622bfc8440dfc71cd49e:dsn/RTG_DISCRETE_GENESIS_DSN.md"],
+INTER_BYTES = len(subprocess.run(["git", "show", "10a88435cde255e3b66c235102a77214c9c6bd2c:dsn/RTG_DISCRETE_GENESIS_DSN.md"],
                                  capture_output=True, check=True).stdout)
 out = out.replace("{{SIZE}}", "```\n" + lint.strip() + "\n```\n\nCounting method: the lint script's own "
                   "(whitespace tokens; §1 between its heading and the next `## `). Stage-1 intermediate: %s bytes.\n\n" % format(INTER_BYTES, ",") +
