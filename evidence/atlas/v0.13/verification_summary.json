@@ -2,12 +2,12 @@
  "status": "DRAFT_REVIEW_READY",
  "base_atlas": "atlas-v0.12",
  "base_sha256": "cf9d8647b4c33206537e46ca37c7879d4fc33b1a936e0a50330a469f054def55",
- "atlas_sha256": "47384c0c6959392e786829e4435a62b52d76aa38c19d655fe9f7890ac86160a1",
- "atlas_bytes": 536466,
+ "atlas_sha256": "208ddd9622b2ea9d291b40dbc103d6eaa3f357aa0e23b2de6190df2c0f879045",
+ "atlas_bytes": 537046,
  "atlas_lines": 1545,
  "base_bytes": 523005,
  "base_lines": 1537,
- "source_snapshot": "2676e6ff3e111aaa7d030cc1efcff45128b1abf3",
+ "source_snapshot": "54cddd742fde337fbb1b447367f915ccbd41667f",
  "method": {
   "tag": "atlas-method-v0.3",
   "sha256": "a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f"
@@ -16,18 +16,19 @@
   "AZ",
   "TDRG"
  ],
- "edit_operations": 74,
+ "edit_operations": 75,
  "operations_by_finding": {
   "identity": 7,
   "TDR-G v2.12.15": 16,
-  "Method §4.1 span deletion (edition label that only dates a result)": 30,
+  "Method §4.1 span deletion (edition label that only dates a result)": 28,
   "reviewed item (grade, qualifier or diagnostic change)": 6,
-  "AZ v0.9": 14,
+  "reviewed source/locator wording update (not a span deletion)": 2,
+  "AZ v0.9": 15,
   "pipes": 1
  },
  "span_deletions_rule_4_1": {
-  "count": 30,
-  "bytes_removed": 336
+  "count": 28,
+  "bytes_removed": 328
  },
  "span_deletions_rule_4_7": 0,
  "retired_keys": [
@@ -157,11 +158,11 @@
   "az_no_least_period": true
  },
  "pipes": {
-  "items": 123,
+  "items": 126,
   "snapshot": {
-   "closed": 66,
-   "open": 55,
-   "dispositioned": 2
+   "closed": 67,
+   "open": 58,
+   "dispositioned": 1
   }
  },
  "dispositions": {
@@ -197,7 +198,7 @@
   }
  },
  "shared_controls": 18,
- "focused_controls": 26,
+ "focused_controls": 33,
  "h_l5": {
   "dangling": [],
   "high_without_h": [],
@@ -205,7 +206,7 @@
  },
  "tool_sha256": {
   "tools/atlas_check.py": "2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373",
-  "evidence/atlas/build/refresh_v0_13.py": "5dccad82527df9220e009b69dec3edee613f35fc381dedfe1b42d4c9470ee30f",
+  "evidence/atlas/build/refresh_v0_13.py": "ffd063ecdc298eecb6bce93a784bedc54f3e5a50869efc51221d9d1cdf902473",
   "evidence/atlas/build/refresh_v0_10.py": "9405436c738f9c3dd079975ce21d5a4a73d45181a2831634b43c6c7512f2e01c"
  },
  "limitations": [

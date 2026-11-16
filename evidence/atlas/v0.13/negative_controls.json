@@ -125,6 +125,41 @@
   "detected": true
  },
  {
+  "id": "V27",
+  "what": "the two laws made dependencies of the diagnostic again (first-candidate form)",
+  "detected": true
+ },
+ {
+  "id": "V28",
+  "what": "the phase law alone made a dependency",
+  "detected": true
+ },
+ {
+  "id": "V29",
+  "what": "the census law shown as consumed by the diagnostic",
+  "detected": true
+ },
+ {
+  "id": "V30",
+  "what": "a second home for an AZ open item (separate line)",
+  "detected": true
+ },
+ {
+  "id": "V31",
+  "what": "a second home for an AZ open item (inside another line)",
+  "detected": true
+ },
+ {
+  "id": "V32",
+  "what": "15 called an odd prime",
+  "detected": true
+ },
+ {
+  "id": "V33",
+  "what": "a reworded span presented as a §4.1 deletion",
+  "detected": true
+ },
+ {
   "id": "V26",
   "what": "spectrum conservation assumed across births (SG-12)",
   "detected": true

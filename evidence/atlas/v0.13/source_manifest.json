@@ -1,7 +1,7 @@
 {
  "atlas": "v0.13",
  "frozen_at": "2026-11-14",
- "repository_snapshot": "2676e6ff3e111aaa7d030cc1efcff45128b1abf3",
+ "repository_snapshot": "54cddd742fde337fbb1b447367f915ccbd41667f",
  "sources": [
   {
    "key": "METH",
@@ -529,5 +529,7 @@
  "previous_atlas_tag": "atlas-v0.12",
  "method_tag": "atlas-method-v0.3",
  "method_edition": "v0.3",
- "method_sha256": "a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f"
+ "method_sha256": "a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f",
+ "first_candidate_snapshot": "2676e6ff3e111aaa7d030cc1efcff45128b1abf3",
+ "snapshot_note": "Moved from the first candidate's snapshot after review 5915598211: every source file is byte-identical at both commits; between them only pipe items, AZ [SESSION] records and the AZ Stage 2 upload changed (no adopted source text)."
 }

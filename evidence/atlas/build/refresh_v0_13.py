@@ -24,7 +24,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / 'evidence/atlas/v0.13'
 ATLAS = 'atlas/RTG_STATE_ATLAS.md'
-SNAPSHOT = '2676e6ff3e111aaa7d030cc1efcff45128b1abf3'   # main after PR #253 (az-v0.9)
+SNAPSHOT = '54cddd742fde337fbb1b447367f915ccbd41667f'   # main after PR #271 (AZ v0.9 notices); source bytes equal to those at 2676e6f (merge of PR #253, az-v0.9)
+FIRST_SNAPSHOT = '2676e6ff3e111aaa7d030cc1efcff45128b1abf3'   # the snapshot of the first candidate (044cd62)
 BASE_TAG = 'atlas-v0.12'
 BASE_SHA = 'cf9d8647b4c33206537e46ca37c7879d4fc33b1a936e0a50330a469f054def55'
 METHOD_TAG, METHOD_SHA = 'atlas-method-v0.3', 'a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f'
@@ -52,8 +53,8 @@ HOMES = {
  'AZ-OPEN-PROMO': ('frontier', 'AZ: AZ-OPEN-SCOPE-ZETA PARTIAL'),
  'TDRG-OPEN-TOPO-FILTER': ('node', 'TDRG-OPEN-TOPO-FILTER (TDR-24A) ACTIVE'),   # an owner RID that AZ newly declares as cited; its home is TDR-G's own node, unchanged
 }
-PIPE_SNAPSHOT = {'closed': 66, 'dispositioned': 2, 'open': 55}
-ATLAS_ITEMS = ['pipes/ATLAS/20261112-AZ-v0-8-adopted.md']
+PIPE_SNAPSHOT = {'closed': 67, 'dispositioned': 1, 'open': 58}
+ATLAS_ITEMS = ['pipes/ATLAS/20261112-AZ-v0-8-adopted.md', 'pipes/ATLAS/20261114-AZ-v0-9-adopted.md']
 PATHS = ['records/az/AZ_v0_9_RELEASE_RECORD.md', 'records/az/AZ_v0_8_RELEASE_RECORD.md', 'records/tdrg/TDRG_v2_12_15_RELEASE_RECORD.md',
          'records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_12_15.md', 'records/atlas/ATLAS_V0_13_IMPACT_PREPARATION_20261113.md',
          'evidence/az/core_equiv_check/az_core_equiv_check.py', 'records/az/AZ_TOKEN_RESONANCE_STAGE1_REPORT.md'] + ATLAS_ITEMS
@@ -73,10 +74,11 @@ class Edit(R10.Edit):
         self.rep(l, l.replace(span, ''), K1, where)
 
 K1 = 'Method §4.1 span deletion (edition label that only dates a result)'
+LOC = 'reviewed source/locator wording update (not a span deletion)'
 BIND3 = 'BIND3 (TDRG-ALG-BIND3-CYCLE-N24K1, TDRG-NUM-BIND3-PARITY, TDRG-NUM-BIND3-SPECTRAL-GATE, TDRG-NUM-BIND3-MEMORY-PARITY, TDRG-NUM-BIND3-XFER, TDRG-NUM-BIND3-REGEN: isolated period-2 not persistent, multi-pair scattering, even-parity survival, KNIFE FAIL, odd-memory COR; conv v18 path orientation, not rerun by the owner)'
 
 def refresh(a: Edit):
-    I, T, Z, P = 'identity', 'TDR-G v2.12.15', 'AZ v0.9', 'pipes'
+    I, T, Z, P = 'identity', 'TDR-G v2.12.15', 'AZ v0.9', 'pipes'; Z_ = Z
     G = 'reviewed item (grade, qualifier or diagnostic change)'
     # ---- identity ----
     a.rep('# RTG STATE ATLAS v0.12\n', '# RTG STATE ATLAS v0.13\n', I, 'title')
@@ -104,11 +106,11 @@ def refresh(a: Edit):
     a.after_line('TDRG-ALG-LEM-SPECCONS ALG (alias LEM-SPECCONS;', [
         'TDRG-ALG-EVENT-INVENTORY ALG | sc: the six policies, either orientation rule | in one tick the tokens change only by (a) a permutation of the tokens of one component (antipodal swap; path successor shift), (b) identity (isolated nodes, balanced path ties, cycle bound states, multistars under trap and the bound_* policies, every non-centre node of a star component), or (c) the star map at a valid centre with snapshot token x: centre x↦−x, newborn x; snapshot components are disjoint, so no node is written by two events in one tick, and the several centres of one tick are distinct nodes read from the snapshot | ENG conformance (EV-CODE): the pinned engines write tokens in exactly three places; the node cap ends a run before a step instead of suppressing a birth inside one | proposed by AZ, verified and owned by TDR-G | <TDRG-DEF-CONV-TICK, TDRG-DEF-STAR @TDRG§6.13',
         'TDRG-ALG-NARROW-BAND-CLASSES ALG | k<N/6 ⇒ every node of defect degree ≥3 is a valid centre (two adjacent neighbours would close a fully defective K₃); a connected graph of maximum degree ≤2 is a path or a cycle, C₃ excluded ⇒ every component with an edge has a class, the CONV-TICK step-4 precedence is a complete classification and the engine\'s residual classes are empty under the narrow band | <TDRG-THM-NARROW-BAND-EXCLUSION @TDRG§6.13',
-        'TDRG-ALG-TOKEN-CENSUS-LAW ALG | A₀ = set of initial tokens, S₀=A₀∪(−A₀), c_t(y) = number of nodes with token y at tick t | (i) δ_i(t)∈S₀ for every node and tick (at most |S₀|≤2|A₀| distinct tokens ever occur); (ii) a tick whose births have centre snapshot tokens x₁..x_m changes the census by c_{t+1}(y)−c_t(y)=#{a: y≡−x_a}: c_t is coordinatewise non-decreasing, Σ_y c_t(y)=M_t; (iii) the set of signed classes present, I(X_t)={[δ_i]_±}, [x]_±={x,−x}, is invariant at every tick, births included: I(X_t)={[a]_±: a∈A₀} | the object is the global multiset, not node identity (the centre\'s own token is not conserved); (iii) is a token-state quantity, unchanged by the declared phase gauge and by relabelling; whether it is purely relational is undecided, so it does not close TDR-6 | ¬ growth mechanism, ¬ bridge (SG-10, SG-12) | proposed by AZ, accepted with change, proved and owned by TDR-G | <TDRG-ALG-EVENT-INVENTORY | >AZ-NUM-TOKRES-S1 (the law whose registration formulation AZ\'s per-tick check tested; no AZ number is part of this result) @TDRG§6.13',
+        'TDRG-ALG-TOKEN-CENSUS-LAW ALG | A₀ = set of initial tokens, S₀=A₀∪(−A₀), c_t(y) = number of nodes with token y at tick t | (i) δ_i(t)∈S₀ for every node and tick (at most |S₀|≤2|A₀| distinct tokens ever occur); (ii) a tick whose births have centre snapshot tokens x₁..x_m changes the census by c_{t+1}(y)−c_t(y)=#{a: y≡−x_a}: c_t is coordinatewise non-decreasing, Σ_y c_t(y)=M_t; (iii) the set of signed classes present, I(X_t)={[δ_i]_±}, [x]_±={x,−x}, is invariant at every tick, births included: I(X_t)={[a]_±: a∈A₀} | the object is the global multiset, not node identity (the centre\'s own token is not conserved); (iii) is a token-state quantity, unchanged by the declared phase gauge and by relabelling; whether it is purely relational is undecided, so it does not close TDR-6 | ¬ growth mechanism, ¬ bridge (SG-10, SG-12) | proposed by AZ, accepted with change, proved and owned by TDR-G | <TDRG-ALG-EVENT-INVENTORY | checked by: AZ-NUM-TOKRES-S1 (its registration formulation is the object of the per-tick check of AZ\'s registered run; no AZ number depends on it, none is part of this result) @TDRG§6.13',
         'TDRG-ALG-BIRTH-SPECTRUM-INJECTION ALG | C_t = token multiset before the tick, D(C) = multiset of |y−y′|_c over unordered pairs; births at centre snapshot tokens x₁..x_m: C_{t+1}=C_t⊎{−x₁..−x_m}, D(C_{t+1})=D(C_t)⊎{|x_a+y|_c: 1≤a≤m, y∈C_t}⊎{|x_a−x_b|_c: a<b} (mM_t+C(m,2) new entries); the token sum changes by −Σ_a x_a (mod N) | an identity of unlabelled multisets, not a list of edges at the newborn; the one-birth form applied m times against the pre-tick multiset misses the newborn–newborn pairs | proposed by AZ, owned by TDR-G | <TDRG-ALG-TOKEN-CENSUS-LAW @TDRG§6.13',
         'TDRG-ALG-SPECCONS-N ALG | on any tick without a star event, for any number of nodes, the token multiset and hence {|d_ij|_c}_{i<j} are exactly conserved | ¬ across births | proves the n-node generalization of TDRG-ALG-LEM-SPECCONS (three nodes: that lemma) | proposed by AZ, owned by TDR-G | <TDRG-ALG-EVENT-INVENTORY @TDRG§6.13',
         'TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED ALG | N=24: C=(1,3,4,5) and C′=(2,4,5,6) have D(C)=D(C′)={1,1,2,2,3,4}; a birth at the centre with token 1, respectively 2, adds {2,4,5,6}, respectively {4,6,7,8}; both realised on the pinned engine with one geometry (k=1, post-advance θ=(0,11,12,13), a K_{1,3} at centre 0) ⇒ D_{t+1} is not a function of D_t: the update needs the centre token(s) and the census | C′=C+1 is a common token shift: D is shift-invariant, the star map is not (<RTG-OFN-ALG-STAR-TOKEN-SHIFT) @TDRG§6.13',
-        'TDRG-ALG-PARENT-CHILD-PHASE ALG | sc: two-body kinematics under a token-persistence hypothesis | star event at tick t₀, centre A with snapshot token x, newborn E; if the next j advances use δ_A=−x and δ_E=x, then θ_E−θ_A≡N/2+2jx (mod N); along the free orbit the separation stays in {N/2,0} for all j iff 4x≡0 (mod N), equivalently ord(2x)≤2: ord 1 iff x∈{0,N/2}, ord 2 iff 4|N and x∈{N/4,3N/4}; for N≡2 (mod 4) no token has order 2 | ¬ bond-persistence or growth mechanism (in a many-node universe further events usually break the hypothesis); no bearing on TDRG-OPEN-LOCKING-FAIL / TDR-26 | proposed by AZ, owned by TDR-G | <TDRG-DEF-STAR | >AZ-NUM-TOKRES-S1 (names the arithmetic condition of AZ\'s intervention; AZ\'s numbers are not part of this result) @TDRG§6.13',
+        'TDRG-ALG-PARENT-CHILD-PHASE ALG | sc: two-body kinematics under a token-persistence hypothesis | star event at tick t₀, centre A with snapshot token x, newborn E; if the next j advances use δ_A=−x and δ_E=x, then θ_E−θ_A≡N/2+2jx (mod N); along the free orbit the separation stays in {N/2,0} for all j iff 4x≡0 (mod N), equivalently ord(2x)≤2: ord 1 iff x∈{0,N/2}, ord 2 iff 4|N and x∈{N/4,3N/4}; for N≡2 (mod 4) no token has order 2 | ¬ bond-persistence or growth mechanism (in a many-node universe further events usually break the hypothesis); no bearing on TDRG-OPEN-LOCKING-FAIL / TDR-26 | proposed by AZ, owned by TDR-G | <TDRG-DEF-STAR | context for: AZ-NUM-TOKRES-S1 (names the arithmetic condition of AZ\'s intervention; not shown to be the mechanism of its effect; AZ\'s numbers are not part of this result) @TDRG§6.13',
         'TDRG-NUM-TOKEN-LAW-CHECK NUM | sc: pinned v18 engine with TDRG-DEF-ORIENT; six policies × (N,k)∈{(24,1),(30,2),(60,4),(120,8)} × 30 random four-node starts, up to 400 ticks or 70 nodes | owner check of the token laws on the engine: census law and alphabet on every tick, birth injection on every birth tick, birth-free conservation on every birth-free tick, phase law on every parent–child advance — 0 violations; in the same mixed-policy sample 3,773 of 17,466 single-star events are not pure stars (the shares in the canonical scans are not measured) | a finite check, not a proof; AZ\'s own machine checks are source-reported (EV-SRC-REPORTED) | cert TDRG-ART-TOKEN-LAW-CHECKS (placed) @TDRG§6.13'], T, 'eight new nodes (§6.13), owner RIDs')
     # ---- frontier ----
     a.line('invariants: TDRG-OPEN-SPECCONS-STAR ≡ TDR-6 TDRG-OPEN-BIRTH-INVARIANT',
@@ -139,7 +141,7 @@ def refresh(a: Edit):
     a.sub_in_line('TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) |', '(SG-14, v2.12.14)', '(SG-14)', K1, 'state node: SG-14 label')
     a.sub_in_line('TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) |', 'statement accepted by TDR-G v2.12.14 §7', 'statement accepted by TDR-G §7', K1, 'state node: Finding A')
     a.sub_in_line('TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) |', '(RID available since v2.12.14; NUMGEN repin is NUMGEN\'s)', '(RID available; NUMGEN repin is NUMGEN\'s)', K1, 'state node: NUMGEN edge')
-    a.sub_in_line('TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) |', 'resolves through the v2.12.14 §7 map', 'resolves through the owner §7 map', K1, 'state node: §7 map')
+    a.sub_in_line('TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) |', 'resolves through the v2.12.14 §7 map', 'resolves through the owner §7 map', LOC, 'state node: §7 map')
     a.sub_in_line('TDRG-DEF-ZN-STATE DEF (alias TDRG-ZN-STATE; v2.12.14) |', '(alias TDRG-ZN-STATE; v2.12.14) |', '(alias TDRG-ZN-STATE) |', K1, 'state node head')
     a.sub_in_line('TDRG-DEF-BAND DEF (with TDRG-DEF-EDGE-SET, -NARROW-BAND; v2.12.14) |', '-NARROW-BAND; v2.12.14) |', '-NARROW-BAND) |', K1, 'band node head')
     a.sub_in_line('TDRG-ALG-ORIENT-NOGO ALG (v2.12.14) |', 'TDRG-ALG-ORIENT-NOGO ALG (v2.12.14) |', 'TDRG-ALG-ORIENT-NOGO ALG |', K1, 'orientation no-go head')
@@ -164,11 +166,11 @@ def refresh(a: Edit):
            'PROP-AZ-CORE-EQUIV THM | sc: finite simple undirected graph, both-orientation export, no multiedges/self-loops; closed walks non-backtracking at every index, the closing one included | the set of directed edges on a directed cycle of the Hashimoto transition digraph (DEF-AZ-CORE) = both orientations of the edges of the 2-core; proof: written derivation (closed non-backtracking walk ⇒ minimum degree ≥2; non-bridge edge on a simple cycle; bridge edge between two cycle-carrying sides) | ¬ strong connectivity (a bidirected cycle splits into two SCCs; every directed 2-core edge lies in some cyclic SCC); ¬ arbitrary directed exports or multigraphs; false if backtracking is allowed where the walk closes | corroboration, not the basis of the grade: the reported enumeration AZ-ART-PROP-CORE-EQUIV (2,141,014 graphs, 0 counterexamples; source-reported, EV-NOT-RERUN) and, separately, cert AZ-ART-CORE-EQUIV-CHECK (R(G) from the definition against the 2-core on all 2,131,019 labelled simple graphs with ≤7 vertices, 0 mismatches; EV-CODE, EV-RUN; not a rerun of the former) @AZ§4.3.2', G, 'PROP-AZ-CORE-EQUIV: grade THM-ALG -> THM (owner [COR], written proof)')
     # ---- 4|q rule: scope of the tested null protocol; link HEUR ----
     a.line('TDRG-AZ-STATIC-ZN-4Q NUM·dx / HEUR strong · bridge-disqualified |',
-           'TDRG-AZ-STATIC-ZN-4Q NUM·dx · bridge-disqualified (the link to the low-order obstruction is HEUR) | chain 1 (N=120, k=8, bound_symmetric, Core(G_T), full spectrum, Null0+Null1, 1000 nulls × 5 seeds): R_q elevated for 4|q (q∈{4,8,12,20,24}), ≈0 for odd-prime q (3,5,15); generic even-q elevation = bidirected-export artifact collapsing under Null1; 4|q persists above Null1 (z-scores artifact-scoped, AZ-ART-PHASE2-N120-CORE); chain 2 (N∈{120,180,240}, core-matched random-theta antipodal-band null, a per-q comparison, not a 1000-null × 5-seed report; AZ-ART-THETA-CORE-MATCHED): 4|q reproduced with no TDR-G dynamics; strong set tracks 2-adic divisors of N (q=16 only at N=240) ⇒ read as static ℤ_N antipodal-band geometry, not a TDR-G dynamical signal, at the scope of the tested null protocol (one null family, three N); nothing is asserted for every antipodal-band graph or every N (SG-AZ-7) | mechanism partly = low-order obstruction (AZ-ALG-ANTIPODAL-LOWORDER; 4-dominated cycles), the link HEUR; k-dependence prediction falsified | both certifying artifacts source-reported (AZ §9) @AZ§4.3.3', G, '4|q rule: grade spelling unpacked by the owner; verdict at the scope of its evidence')
+           'TDRG-AZ-STATIC-ZN-4Q NUM·dx · bridge-disqualified (the link to the low-order obstruction is HEUR) | chain 1 (N=120, k=8, bound_symmetric, Core(G_T), full spectrum, Null0+Null1, 1000 nulls × 5 seeds): R_q elevated for 4|q (q∈{4,8,12,20,24}), ≈0 for q with an odd prime factor (3,5,15); generic even-q elevation = bidirected-export artifact collapsing under Null1; 4|q persists above Null1 (z-scores artifact-scoped, AZ-ART-PHASE2-N120-CORE); chain 2 (N∈{120,180,240}, core-matched random-theta antipodal-band null, a per-q comparison, not a 1000-null × 5-seed report; AZ-ART-THETA-CORE-MATCHED): 4|q reproduced with no TDR-G dynamics; strong set tracks 2-adic divisors of N (q=16 only at N=240) ⇒ read as static ℤ_N antipodal-band geometry, not a TDR-G dynamical signal, at the scope of the tested null protocol (one null family, three N); nothing is asserted for every antipodal-band graph or every N (SG-AZ-7) | mechanism partly = low-order obstruction (AZ-ALG-ANTIPODAL-LOWORDER; 4-dominated cycles), the link HEUR; k-dependence prediction falsified | both certifying artifacts source-reported (AZ §9) @AZ§4.3.3', G, '4|q rule: grade spelling unpacked by the owner; verdict at the scope of its evidence')
     a.line('AZ-ART-ZETA-V3 ENG-historical |', 'AZ-ART-ZETA-V3 (artifact registry entry; the owner prints no status tag) | rtg_graph_zeta_proto_v3.py; historical, superseded by az_v5; all v3 runs unverified; not the source of any AZ result; source-reported @AZ§9', G, 'v3 prototype: the alias [ENG-historical] is removed by the owner')
     # ---- the AZ-owned diagnostic ----
     a.after_line('AZ-ART-ZETA-V3 (artifact registry entry; the owner prints no status tag) |', [
-        'AZ-NUM-TOKRES-S1 NUM·dx | sc: pinned TDR-G engine with TDRG-DEF-ORIENT; policy bound_symmetric; N∈{120,122}, k=8; four initial nodes; 800 ticks; node cap 300; endpoint M≥100; conv: orientation reference of TDR-G v2.12.14 (profile P1; TDRG-DEF-ORIENT unchanged at tdrg-v2.12.15) | registered paired intervention on the engine\'s own initial draw (one of the four initial tokens replaced; the same base draw under every arm; 1,500 base draws per contrast; exact McNemar tests): replacing the token by x with 4x≡0 (mod N) raises the probability that the run ends with M≥100 against a neighbour x±1 — risk difference with 97.5 % paired-proportion interval: PC1 (2x≡0, N=120) +0.2427 [+0.2166, +0.2681]; PC2 (2x≡N/2, N=120) +0.1613 [+0.1381, +0.1841] (PC1, PC2 confirmatory, Holm); PC3 (2x≡0, N=122) +0.2193 [+0.1944, +0.2436] (supportive only); PC4, an equivalence control at N=122 where 2x≡N/2 has no solution (values nearest N/4 against the native state): −0.0073 [−0.0158, +0.0011], equivalent within ±0.05 (supportive only); the registered controls read as required | what it is: the total causal effect of the token replacement on the registered endpoint, for the engine, profile, cells, horizon, cap and threshold of the scope | ¬ mechanism (the parent–child phase law names the arithmetic condition and does not explain the effect; its role in the tail is untested); ¬ other N, k/N, policies, horizons or thresholds; ¬ the TDR-26 birth-anchored discriminator, nothing about TDR-26 or any open module of TDR-G; ¬ relation to the 4|q rule, to DYAD cyclic-subgroup selection or to any DZT object (the shared numeral is not evidence; SG-AZ-3, SG-AZ-7); OPEN-P1 untouched; not a TDR-G result, not a bridge, no bridge-candidate promoted; does not by itself close AZ-OPEN-PROMO or change the maturity level | <TDRG-ALG-PARENT-CHILD-PHASE, TDRG-ALG-TOKEN-CENSUS-LAW, TDRG-DEF-ORIENT (engine and laws owned by TDR-G, unchanged) | cert AZ-ART-TOKRES-S1 (in the repository; the registered analysis re-derived byte-identically from the stored records, EV-CODE, EV-RUN; the engine runs were made once and are not rerun; EV-INDEP for the aggregation only) @AZ§4.2.1'], Z, 'new node: AZ-owned [NUM diagnostic]')
+        'AZ-NUM-TOKRES-S1 NUM·dx | sc: pinned TDR-G engine with TDRG-DEF-ORIENT; policy bound_symmetric; N∈{120,122}, k=8; four initial nodes; 800 ticks; node cap 300; endpoint M≥100; conv: orientation reference of TDR-G v2.12.14 (profile P1; TDRG-DEF-ORIENT unchanged at tdrg-v2.12.15) | registered paired intervention on the engine\'s own initial draw (one of the four initial tokens replaced; the same base draw under every arm; 1,500 base draws per contrast; exact McNemar tests): replacing the token by x with 4x≡0 (mod N) raises the probability that the run ends with M≥100 against a neighbour x±1 — risk difference with 97.5 % paired-proportion interval: PC1 (2x≡0, N=120) +0.2427 [+0.2166, +0.2681]; PC2 (2x≡N/2, N=120) +0.1613 [+0.1381, +0.1841] (PC1, PC2 confirmatory, Holm); PC3 (2x≡0, N=122) +0.2193 [+0.1944, +0.2436] (supportive only); PC4, an equivalence control at N=122 where 2x≡N/2 has no solution (values nearest N/4 against the native state): −0.0073 [−0.0158, +0.0011], equivalent within ±0.05 (supportive only); the registered controls read as required | what it is: the total causal effect of the token replacement on the registered endpoint, for the engine, profile, cells, horizon, cap and threshold of the scope | ¬ mechanism (the parent–child phase law names the arithmetic condition and does not explain the effect; its role in the tail is untested); ¬ other N, k/N, policies, horizons or thresholds; ¬ the TDR-26 birth-anchored discriminator, nothing about TDR-26 or any open module of TDR-G; ¬ relation to the 4|q rule, to DYAD cyclic-subgroup selection or to any DZT object (the shared numeral is not evidence; SG-AZ-3, SG-AZ-7); OPEN-P1 untouched; not a TDR-G result, not a bridge, no bridge-candidate promoted; does not by itself close AZ-OPEN-PROMO or change the maturity level | <TDRG-DEF-ORIENT (the engine and its orientation convention, as pinned in the scope: reference of TDR-G v2.12.14, unchanged at tdrg-v2.12.15; owned by TDR-G) | context (not a dependency): TDRG-ALG-PARENT-CHILD-PHASE (names the arithmetic condition 4x≡0 of the intervention; not shown to be the mechanism of the effect) | checked law (not a dependency): TDRG-ALG-TOKEN-CENSUS-LAW (its registration formulation is the object of the per-tick check of the registered run; no AZ number depends on it) | cert AZ-ART-TOKRES-S1 (in the repository; the registered analysis re-derived byte-identically from the stored records, EV-CODE, EV-RUN; the engine runs were made once and are not rerun; EV-INDEP for the aggregation only) @AZ§4.2.1'], Z, 'new node: AZ-owned [NUM diagnostic]')
     # ---- ledgers: each owner result cited once, in AZ §8 ----
     a.line('*AZ:B-ledger (restatement; edges only; owner RIDs since az-v0.7) |',
            '*AZ:B-ledger (edges only; each owner result is cited once, in AZ §8; pin tdrg-v2.12.15) | AZ Thread B cites, as branch-local context and bridge-candidate observable family: TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE, TDRG-DEF-BAND, TDRG-THM-REACHABILITY-K0, TDRG-ALG-LEM-REACH, TDRG-ALG-LEM-RETRIG (bound state of period dividing 2), TDRG-ALG-LEM-SPECCONS (gcd multiset a consequence only; converse fails; the n-node birth-free form and the open spectrum-level question followed as the owner states them), TDRG-ALG-EVENT-INVENTORY with TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-PARENT-CHILD-PHASE (local use: AZ-NUM-TOKRES-S1 only; no AZ number depends on them), ' + BIND3 + ', k/N growth control with TDRG-OPEN-NSCALING and TDRG-OPEN-CRYSTALLIZATION (*TDRG:bulk-fits: full-range 0.869; window-dependent, N^{−0.730} on N=480–1440; not a structural constant), TDR-26 rule (TDRG-OPEN-LOCKING-FAIL), TDR-24 frontier (TDRG-OPEN-TOPO-FILTER → TDRG-OPEN-CHI-SCALING → TDRG-OPEN-THERMO-SUPPRESS); no row is a bridge and none is used outside its branch; owner statements read, no owner artifact rerun (EV-SRC-READ, EV-NOT-RERUN) @AZ§8', Z, 'AZ Thread B ledger at v0.9')
@@ -178,7 +180,7 @@ def refresh(a: Edit):
     # ---- AZ edges in other domains: edition labels of the moved source ----
     a.cut('DYAD-ALG-Q3-DEG2-CANCEL ALG |', ' since az-v0.7', 'Q3 node: AZ consumer')
     a.cut('DYAD-ALG-B5-ALLP-NONVANISHING ALG', ' since az-v0.7', 'B5 node: AZ consumer')
-    a.sub_in_line('DYAD-THM-RAW-CUBIC THM |', '(az-v0.7 imports it at this scope, with the caveat)', '(AZ imports it at this scope, with the caveat)', K1, 'raw cubic node: AZ consumer')
+    a.sub_in_line('DYAD-THM-RAW-CUBIC THM |', '(az-v0.7 imports it at this scope, with the caveat)', '(AZ imports it at this scope, with the caveat)', LOC, 'raw cubic node: AZ consumer')
     a.sub_in_line('H2 D-LINK high —', 'AZ v0.7 §6 states the same verdict', 'AZ §6 states the same verdict', K1, 'H2: AZ edition label')
     a.sub_in_line('UVM-RESULT-AUDIT1 (R16) COR |', '>AZ §6 (v0.7 cites R15/R16 as stated;', '>AZ §6 (cites R15/R16 as stated;', K1, 'UVM audit node: AZ edition label')
     a.sub_in_line('OPENM.U11 ~ D-LINK:', 'AZ v0.7 §6 cites R15/R16 as stated;', 'AZ §6 cites R15/R16 as stated;', K1, 'OPENM.U11: AZ edition label')
@@ -196,11 +198,13 @@ def refresh(a: Edit):
     a.sub_in_line('METH.M1 D-GRADE (programme pattern):', 'persist in DZT, AZ, TDRG, OPEN-M, FMS session labels;', 'persist in DZT, TDRG, OPEN-M, FMS session labels (AZ unpacked its compound tags; the old spellings remain only in its registered retraction block, its corrections list and its edition history);', G, 'METH.M1: AZ leaves the row')
 
     # ---- pipes census at the new snapshot ----
-    a.line('NUMGEN.N-I1 D-LINK (pipe states, receiver side) |', 'NUMGEN.N-I1 D-LINK (pipe states, receiver side) | at the source snapshot 2676e6f, pipes_index --check passes with 123 items in 20 inboxes — 66 closed, 2 dispositioned, 55 open. Open at the snapshot, by receiver: ATLAS (AZ v0.8; answered by this edition, closed by the atlas owner after the tag) · AZ (DYAD owner check of the q=3 degree-2 cancellation) · DZT (DYAD N16–N21, AZ v0.7 and v0.8, LIT norm-law proof candidate) · ER2B (OFN v0.11, DYAD N16–N21) · FMS (OFN v0.11, v0.12) · GEN (LIT Regge interface inputs, PROG v1.4, DYAD v6.4.24) · LIT (DYAD LH2012 use report, SAT coil strong-null map-class search) · NUMGEN (TDR-G v2.12.14 and v2.12.15, RECOG v0.3.26 and v0.3.27, DYAD v6.4.23 and v6.4.24, OFN v0.11 and v0.12, PROG v1.4) · OFN (DYAD v6.4.23 and v6.4.24, GEN v2.10, TRIAD v1.7, PROG v1.4, RECOG v0.3.27, TDR-G v2.12.15) · PREL (SAT finding on K₃ degeneracy and lift) · PROG (SAT satellite interface, AZ v0.7 and v0.8, TDR-G v2.12.15) · RECOG (DYAD v6.4.24) · RER (RECOG v0.3.26, DYAD N16–N21) · RRF (RECOG v0.3.26, OFN v0.11 and v0.12, DYAD N16–N21, GEN v2.10, TRIAD v1.7) · TRIAD (DYAD bridge-note recovery, GEN 𝒫₄-identity and birth-symmetry answers, GEN v2.10, PROG v1.4, DYAD v6.4.24; F30) · UVM (GEN κ_f/B_*/sourced-junction items, DYAD N16–N21, GEN v2.10, TRIAD v1.7). DYAD and TDRG have no open inbox item. A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7).', P, 'pipe census at 2676e6f')
+    a.line('NUMGEN.N-I1 D-LINK (pipe states, receiver side) |', 'NUMGEN.N-I1 D-LINK (pipe states, receiver side) | at the source snapshot 54cddd7, pipes_index --check passes with 126 items in 20 inboxes — 67 closed, 1 dispositioned, 58 open. Open at the snapshot, by receiver: ATLAS (AZ v0.8, AZ v0.9; answered by this edition, closed by the atlas owner after the tag) · AZ (DYAD owner check of the q=3 degree-2 cancellation) · DZT (DYAD N16–N21, AZ v0.7 and v0.8, LIT norm-law proof candidate) · ER2B (OFN v0.11, DYAD N16–N21) · FMS (OFN v0.11, v0.12) · GEN (LIT Regge interface inputs, PROG v1.4, DYAD v6.4.24) · LIT (DYAD LH2012 use report, SAT coil strong-null map-class search) · NUMGEN (TDR-G v2.12.14 and v2.12.15, RECOG v0.3.26 and v0.3.27, DYAD v6.4.23 and v6.4.24, OFN v0.11 and v0.12, PROG v1.4) · OFN (DYAD v6.4.23 and v6.4.24, GEN v2.10, TRIAD v1.7, PROG v1.4, RECOG v0.3.27, TDR-G v2.12.15) · PREL (SAT finding on K₃ degeneracy and lift) · PROG (SAT satellite interface, AZ v0.7, v0.8 and v0.9, TDR-G v2.12.15) · RECOG (DYAD v6.4.24) · RER (RECOG v0.3.26, DYAD N16–N21) · RRF (RECOG v0.3.26, OFN v0.11 and v0.12, DYAD N16–N21, GEN v2.10, TRIAD v1.7) · TDRG (AZ v0.9) · TRIAD (DYAD bridge-note recovery, GEN 𝒫₄-identity and birth-symmetry answers, GEN v2.10, PROG v1.4, DYAD v6.4.24; F30) · UVM (GEN κ_f/B_*/sourced-junction items, DYAD N16–N21, GEN v2.10, TRIAD v1.7). DYAD has no open inbox item. A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7).', P, 'pipe census at 54cddd7')
+    # ---- added after review 5915598211 (R1); placed last so that the operation ids of the first candidate are unchanged ----
+    a.sub_in_line('TDRG-DEF-ORIENT DEF [COR v2.12.14] (alias TDRG-ORIENT)', '| >NUMGEN DISC-1/DISC-2 (re-annotation NUMGEN\'s), OFN REQ-O09-05 (answered) @TDRG§6.3', '| >NUMGEN DISC-1/DISC-2 (re-annotation NUMGEN\'s), OFN REQ-O09-05 (answered), AZ-NUM-TOKRES-S1 (engine convention of its scope) @TDRG§6.3', Z_, 'orientation node: the diagnostic\'s one dependency, reverse edge')
 
 STALE = [r'`tdrg-v2\.12\.14` \|', r'\| v2\.12\.14 \| `tdrg', r'`az-v0\.7` \|', r'\| v0\.7 \| `az', r'AZ v0\.7 Thread A', r'AZ v0\.7 §', r'ZETA_DSN v0\.7', r'GENESIS_DSN v2\.12\.14 \(',
          r'since az-v0\.7', r'az-v0\.7 imports', r'K_\{1,3\} center A', r'P FAIL \(gauge\)', r'TDRG\.G9', r'PROP-AZ-CORE-EQUIV THM-ALG', r'NUM·dx / HEUR strong', r'ENG-historical', r'recorded, not repaired',
-         r'none of the Thread C files', r'snapshot c8e7198', r'total P not physical', r'still carries older D/A/B', r'restatement; edges only', r'one question, two RIDs', r'CAND for swap/path sectors',
+         r'none of the Thread C files', r'snapshot c8e7198', r'snapshot 2676e6f', r'total P not physical', r'still carries older D/A/B', r'restatement; edges only', r'one question, two RIDs', r'CAND for swap/path sectors',
          r'evidence/atlas/v0\.12/']
 def stale_editions(text):
     return [l[:90] for l in text.split('\n') if not l.startswith('*ATLAS:checked-') and any(re.search(p, l) for p in STALE)]
@@ -241,12 +245,19 @@ def scope_guards(text):
     need('N∈{120,122}, k=8' in tk and '800 ticks' in tk and 'endpoint M≥100' in tk and 'bound_symmetric' in tk and 'conv: orientation reference of TDR-G v2.12.14' in tk, 'diagnostic: scope and convention')
     need('not a TDR-G result, not a bridge, no bridge-candidate promoted' in tk and '¬ mechanism' in tk and 'OPEN-P1 untouched' in tk and 'does not by itself close AZ-OPEN-PROMO' in tk, 'diagnostic: negatives')
     need('(supportive only)' in tk and 'confirmatory' in tk and 'equivalence control' in tk, 'diagnostic: families')
-    need('<TDRG-ALG-PARENT-CHILD-PHASE, TDRG-ALG-TOKEN-CENSUS-LAW, TDRG-DEF-ORIENT' in tk and 'iff 4x≡0' not in tk, 'diagnostic: edges only, law not restated')
+    need('iff 4x≡0' not in tk and 'separation stays' not in tk, 'diagnostic: law not restated')
+    deps = lambda l, sig: [g for g in l.split(' | ') if g.startswith(sig)]
+    need(any(g.startswith('<TDRG-DEF-ORIENT (') for g in deps(tk, '<')), 'diagnostic: the orientation convention is its one dependency')
+    need(not any('TDRG-ALG-PARENT-CHILD-PHASE' in g or 'TDRG-ALG-TOKEN-CENSUS-LAW' in g for g in deps(tk, '<')), 'diagnostic: the two laws are not dependencies')
+    need('context (not a dependency): TDRG-ALG-PARENT-CHILD-PHASE (' in tk and 'checked law (not a dependency): TDRG-ALG-TOKEN-CENSUS-LAW (' in tk and 'no AZ number depends on it' in tk, 'diagnostic: typed relations')
+    need(not any('AZ-NUM-TOKRES-S1' in g for g in deps(cl, '>') + deps(ph, '>')) and 'checked by: AZ-NUM-TOKRES-S1 (' in cl and 'context for: AZ-NUM-TOKRES-S1 (' in ph, 'reverse relations: same roles')
+    need('AZ-NUM-TOKRES-S1 (engine convention of its scope)' in node(text, 'TDRG-DEF-ORIENT DEF [COR v2.12.14] (alias TDRG-ORIENT)'), 'orientation node: reverse dependency')
     need(len([l for l in text.split('\n') if l.startswith('AZ-NUM-TOKRES-S1') or l.startswith('TDRG-NUM-TOKRES') or l.startswith('*TDRG:tokres')]) == 1, 'diagnostic: one home')
     ce = node(text, 'PROP-AZ-CORE-EQUIV THM |')
     need('proof: written derivation' in ce and 'corroboration, not the basis of the grade' in ce and 'the closing one included' in ce and 'not a rerun of the former' in ce, 'core equivalence: THM on the written proof')
     need(not node(text, 'PROP-AZ-CORE-EQUIV THM-ALG |'), 'core equivalence: old grade')
     z = node(text, 'TDRG-AZ-STATIC-ZN-4Q NUM·dx · bridge-disqualified')
+    need('q with an odd prime factor (3,5,15)' in z and 'odd-prime' not in z, '4|q: owner wording for 3, 5, 15')
     need('at the scope of the tested null protocol' in z and 'nothing is asserted for every antipodal-band graph or every N' in z and 'not a TDR-G dynamical signal' in z and 'the link HEUR' in z, '4|q: verdict at the scope of its evidence')
     c = node(text, 'AZ-1A/1B/1C ENG PASS |')
     need('only in part' in c and 'reads no TDR-G export' in c and 'EV-SRC-REPORTED' in c and 'not described as recreated' in c and 'the owner keeps the [ENG PASS] records with these limits' in c, 'Thread C: evidence qualifier')
@@ -272,6 +283,19 @@ def homes_check(text, tdrg_new, az_new):
             if len(re.findall(r'cert ' + re.escape(r) + r'(?![A-Za-z0-9-])', text)) != 1 or ('cert ' + r) not in hl[0]: bad.append(('cert home', r))
         else:
             if not re.search(re.escape(r) + r'(?![A-Za-z0-9-])', hl[0]): bad.append(('frontier home', r))
+            if [l for l in lines if re.match(r'(?:[A-Z][A-Za-z0-9 ]*: )?' + re.escape(r) + r'(?![A-Za-z0-9-])', l) and l is not hl[0]]: bad.append(('frontier second home', r))
+            st = re.findall(re.escape(r) + r'(?![A-Za-z0-9-]) (ACTIVE|PARTIAL|CLOSED|OPEN|RESOLVED)', text)
+            if r.startswith('AZ-OPEN-') and len(st) != 1: bad.append(('frontier status count', r, len(st)))
+    return bad
+
+def k1_violations(log):
+    """A §4.1 operation must be the deletion of one contiguous span: old = prefix + span + suffix, new = prefix + suffix."""
+    bad = []
+    for e in log:
+        if e['finding'] != K1: continue
+        o, n = e['old'], e['new']; i = 0
+        while i < len(n) and o[i] == n[i]: i += 1
+        if not (len(n) < len(o) and o.endswith(n[i:]) and len(o) - len(n[i:]) >= i): bad.append(e.get('id', e.get('where')))
     return bad
 
 RID = lambda t: set(re.findall(r'RID: ([A-Z][A-Z0-9]*(?:-[A-Z0-9.]+)+)', t))
@@ -281,6 +305,7 @@ def main():
     base = at(BASE_TAG, ATLAS).decode(); assert sha(base) == BASE_SHA
     assert sha(at(METHOD_TAG, 'atlas/RTG_STATE_ATLAS_METHOD.md')) == METHOD_SHA and at(SNAPSHOT, 'atlas/RTG_STATE_ATLAS_METHOD.md') == at(METHOD_TAG, 'atlas/RTG_STATE_ATLAS_METHOD.md')
     a = Edit(base); refresh(a); text = a.text
+    assert not k1_violations(a.log), k1_violations(a.log)
     assert not stale_editions(text), stale_editions(text)
     assert not scope_guards(text), scope_guards(text)
     # ---- manifest ----
@@ -288,7 +313,7 @@ def main():
     m = json.loads(json.dumps(old)); m.pop('note', None)
     for s in m['sources']:
         for k in [k for k in s if k.startswith('v0_11_')]: del s[k]
-    m.update(atlas='v0.13', frozen_at='2026-11-14', repository_snapshot=SNAPSHOT, previous_atlas_tag=BASE_TAG, method_tag=METHOD_TAG, method_edition='v0.3', method_sha256=METHOD_SHA)
+    m.update(atlas='v0.13', frozen_at='2026-11-14', repository_snapshot=SNAPSHOT, previous_atlas_tag=BASE_TAG, method_tag=METHOD_TAG, method_edition='v0.3', method_sha256=METHOD_SHA, first_candidate_snapshot=FIRST_SNAPSHOT, snapshot_note='Moved from the first candidate\'s snapshot after review 5915598211: every source file is byte-identical at both commits; between them only pipe items, AZ [SESSION] records and the AZ Stage 2 upload changed (no adopted source text).')
     for s in m['sources']:
         prev = next(x for x in old['sources'] if x['key'] == s['key'])
         s['v0_12_edition'] = prev['edition']; s['v0_12_input_sha256'] = prev['sha256']
@@ -298,7 +323,7 @@ def main():
             s.update(edition=mv['edition'], tag=mv['tag'], commit=git('rev-parse', mv['tag'] + '^{commit}').decode().strip(), sha256=sha(data), authority=mv['authority'])
         data = at(s['tag'], s['path']); resolved = git('rev-parse', s['tag'] + '^{commit}').decode().strip()
         assert sha(data) == s['sha256'] and resolved == s['commit'], s['key']
-        assert data == at(SNAPSHOT, s['path']), ('snapshot/tag divergence', s['key'])
+        assert data == at(SNAPSHOT, s['path']) == at(FIRST_SNAPSHOT, s['path']), ('snapshot/tag divergence', s['key'])
         newest = git('tag', '--list', s['tag'].rsplit('-v', 1)[0] + '-v*', '--sort=v:refname').decode().split()[-1]
         assert newest == s['tag'], ('a newer source tag exists', s['key'], newest)
         s['v0_12_input_equality'] = 'EQUAL' if data == oldbytes else 'CHANGED'
@@ -368,7 +393,7 @@ def main():
         az_no_least_period='least period' not in z9)
     assert all(owner_facts.values()), [k for k, v in owner_facts.items() if not v]
     for p in PATHS: assert at(SNAPSHOT, p), p
-    n_snap, st_snap = pipe_states(SNAPSHOT); assert n_snap == 123 and st_snap == PIPE_SNAPSHOT, (n_snap, st_snap)
+    n_snap, st_snap = pipe_states(SNAPSHOT); assert n_snap == 126 and st_snap == PIPE_SNAPSHOT, (n_snap, st_snap)
     for it in ATLAS_ITEMS: assert re.search(r'^state:\s*open', at(SNAPSHOT, it).decode(), re.M), it
     # ---- dispositions: every L5 row of the opened domain D5, and every other row this edition touches ----
     def row(t, key):
@@ -407,7 +432,7 @@ def main():
     ctl('V10', 'the diagnostic placed under a TDR-G RID', scope_guards(sw('AZ-NUM-TOKRES-S1 NUM·dx |', 'TDRG-NUM-TOKRES-S1 NUM·dx |')) and homes(sw('AZ-NUM-TOKRES-S1 NUM·dx |', 'TDRG-NUM-TOKRES-S1 NUM·dx |')) and run(sw('AZ-NUM-TOKRES-S1 NUM·dx |', 'TDRG-NUM-TOKRES-S1 NUM·dx |'), False))
     ctl('V11', 'a TDR-G law placed under an AZ locator', scope_guards(sw('AZ\'s numbers are not part of this result) @TDRG§6.13', 'AZ\'s numbers are not part of this result) @AZ§4.2.1')))
     ctl('V12', 'a Stage 1 number on a TDR-G node', scope_guards(sw('no bearing on TDRG-OPEN-LOCKING-FAIL / TDR-26 |', 'no bearing on TDRG-OPEN-LOCKING-FAIL / TDR-26; risk difference +0.2427 at N=120 |')))
-    ctl('V13', 'the phase law restated inside the AZ node', scope_guards(sw('<TDRG-ALG-PARENT-CHILD-PHASE, TDRG-ALG-TOKEN-CENSUS-LAW, TDRG-DEF-ORIENT (engine', 'separation stays in {N/2,0} iff 4x≡0; <TDRG-ALG-PARENT-CHILD-PHASE, TDRG-ALG-TOKEN-CENSUS-LAW, TDRG-DEF-ORIENT (engine')))
+    ctl('V13', 'the phase law restated inside the AZ node', scope_guards(sw('| context (not a dependency): TDRG-ALG-PARENT-CHILD-PHASE (', '| separation stays in {N/2,0} iff 4x≡0 | context (not a dependency): TDRG-ALG-PARENT-CHILD-PHASE (')))
     ctl('V14', 'the diagnostic read as a mechanism or a promotion', scope_guards(sw('¬ mechanism (the parent–child phase law names', 'mechanism: (the parent–child phase law names')) and scope_guards(sw('does not by itself close AZ-OPEN-PROMO or change the maturity level', 'closes AZ-OPEN-PROMO')))
     ctl('V15', 'supportive contrasts shown as confirmatory', scope_guards(sw(' (supportive only); PC4', ' (confirmatory); PC4').replace('equivalent within ±0.05 (supportive only)', 'equivalent within ±0.05', 1)))
     ctl('V16', 'a second home for the diagnostic', scope_guards(text + 'AZ-NUM-TOKRES-S1 NUM·dx | duplicate\n') or homes(text + 'AZ-NUM-TOKRES-S1 NUM·dx | duplicate\n'))
@@ -420,12 +445,22 @@ def main():
     ctl('V23', 'SOURCES row older than the manifest (AZ)', run(sw('| v0.9 | `az-v0.9` |', '| v0.7 | `az-v0.7` |')) and stale_editions(sw('| v0.9 | `az-v0.9` |', '| v0.7 | `az-v0.7` |')))
     ctl('V24', 'AZ.A5 dropped', scope_guards('\n'.join(l for l in text.split('\n') if not l.startswith('AZ.A5 ~ D-LINK / SG trap:'))))
     ctl('V25', 'AZ open items shown as closed by the diagnostic', scope_guards(sw('AZ-OPEN-PROMO ACTIVE (Level-B promotion conditions incl. artifact/transcript provenance; not closed by AZ-NUM-TOKRES-S1)', 'AZ-OPEN-PROMO CLOSED')))
+    old_dep = '| <TDRG-ALG-PARENT-CHILD-PHASE, TDRG-ALG-TOKEN-CENSUS-LAW, TDRG-DEF-ORIENT (engine and laws owned by TDR-G, unchanged) | cert AZ-ART-TOKRES-S1'
+    tk0 = node(text, 'AZ-NUM-TOKRES-S1 NUM·dx |'); i_ = tk0.index('| <TDRG-DEF-ORIENT ('); j_ = tk0.index('| cert AZ-ART-TOKRES-S1')
+    ctl('V27', 'the two laws made dependencies of the diagnostic again (first-candidate form)', scope_guards(text.replace(tk0, tk0[:i_] + old_dep + tk0[j_ + len('| cert AZ-ART-TOKRES-S1'):])))
+    ctl('V28', 'the phase law alone made a dependency', scope_guards(sw('| context (not a dependency): TDRG-ALG-PARENT-CHILD-PHASE (', '| <TDRG-ALG-PARENT-CHILD-PHASE (')))
+    ctl('V29', 'the census law shown as consumed by the diagnostic', scope_guards(sw('| checked by: AZ-NUM-TOKRES-S1 (', '| >AZ-NUM-TOKRES-S1 (')))
+    ctl('V30', 'a second home for an AZ open item (separate line)', homes(text + 'AZ-OPEN-PROMO ACTIVE | duplicate\n'))
+    ctl('V31', 'a second home for an AZ open item (inside another line)', homes(sw('| ¬ mechanism (the parent–child', '| AZ-OPEN-PROMO CLOSED | ¬ mechanism (the parent–child')))
+    ctl('V32', '15 called an odd prime', scope_guards(sw('q with an odd prime factor (3,5,15)', 'odd-prime q (3,5,15)')))
+    ctl('V33', 'a reworded span presented as a §4.1 deletion', bool(k1_violations([dict(finding=K1, old='resolves through the v2.12.14 §7 map', new='resolves through the owner §7 map')])))
     ctl('V26', 'spectrum conservation assumed across births (SG-12)', scope_guards(sw('is OPEN and must not be assumed', 'holds')))
     wjson(OUT / 'negative_controls.json', controls); assert all(x['detected'] for x in controls), [x for x in controls if not x['detected']]
     wjson(OUT / 'edit_log.json', a.log)
     r = Edit(base); refresh(r); assert r.text == text   # replay
     (ROOT / ATLAS).write_text(text, encoding='utf-8')
     k1 = [e for e in a.log if e['finding'] == K1]
+    assert (len(k1), sum(len(e['old'].encode()) - len(e['new'].encode()) for e in k1)) == (28, 328), (len(k1),)
     summary = dict(status='DRAFT_REVIEW_READY', base_atlas=BASE_TAG, base_sha256=BASE_SHA, atlas_sha256=sha(text), atlas_bytes=len(text.encode()), atlas_lines=text.count('\n'),
                    base_bytes=len(base.encode()), base_lines=base.count('\n'), source_snapshot=SNAPSHOT, method=dict(tag=METHOD_TAG, sha256=METHOD_SHA), changed_sources=list(MOVED),
                    edit_operations=len(a.log), operations_by_finding=dict(Counter(e['finding'] for e in a.log)),

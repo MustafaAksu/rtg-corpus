@@ -1,6 +1,6 @@
 # RTG State Atlas v0.13 — acceptance record (draft)
 
-**Status:** DRAFT — candidate for change-focused review. Not accepted. `atlas-v0.12` is the tagged Atlas until the PI accepts this candidate, PR for branch `claude/atlas-v0.13` is merged and the annotated tag `atlas-v0.13` exists and is verified.
+**Status:** DRAFT — second candidate, after review round 1 (review `5915598211`, ACCEPT WITH CHANGES; §3a). Not accepted. `atlas-v0.12` is the tagged Atlas until the PI accepts this candidate, PR for branch `claude/atlas-v0.13` is merged and the annotated tag `atlas-v0.13` exists and is verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, 14 November 2026, on branch `claude/atlas-v0.13`.
 **Method:** Atlas Method v0.3 (`atlas-method-v0.3`). This is the first edition built under it.
@@ -9,12 +9,13 @@
 
 | Object | SHA-256 |
 |---|---|
-| `atlas/RTG_STATE_ATLAS.md`, v0.13 candidate | `47384c0c6959392e786829e4435a62b52d76aa38c19d655fe9f7890ac86160a1` (536,466 bytes, 1,545 lines) |
+| `atlas/RTG_STATE_ATLAS.md`, v0.13 candidate | `208ddd9622b2ea9d291b40dbc103d6eaa3f357aa0e23b2de6190df2c0f879045` (537,046 bytes, 1,545 lines) |
+| first candidate (reviewed, superseded) | `47384c0c6959392e786829e4435a62b52d76aa38c19d655fe9f7890ac86160a1` (head `044cd62`) |
 | base `atlas-v0.12` | `cf9d8647b4c33206537e46ca37c7879d4fc33b1a936e0a50330a469f054def55` (523,005 bytes, 1,537 lines) |
 | `atlas/RTG_STATE_ATLAS_METHOD.md` (unchanged, v0.3) | `a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f` |
-| `evidence/atlas/v0.13/source_manifest.json` | `c2b14b420df463552e43d1b3bf631cc799981493602a59b6fcb70884973d0a4e` |
+| `evidence/atlas/v0.13/source_manifest.json` | `460b87ced83608ef5f626196235e0998b745a956d68049acb8bb006353551b4e` |
 
-Source snapshot: `main` `2676e6ff3e111aaa7d030cc1efcff45128b1abf3` (merge of PR #253). Two sources moved against the v0.12 manifest; the other sixteen are byte-identical and were not re-extracted.
+Source snapshot: `main` `54cddd742fde337fbb1b447367f915ccbd41667f` (merge of PR #271). The first candidate used `2676e6f` (merge of PR #253); the builder asserts that every source file is byte-identical at both commits — between them only pipe items, AZ [SESSION] records and the AZ Stage 2 upload changed. The snapshot moved so that the pipe census includes the AZ v0.9 notice to the Atlas, which this edition answers. Two sources moved against the v0.12 manifest; the other sixteen are byte-identical and were not re-extracted.
 
 | Source | v0.12 | v0.13 | File SHA-256 | Authority |
 |---|---|---|---|---|
@@ -23,11 +24,11 @@ Source snapshot: `main` `2676e6ff3e111aaa7d030cc1efcff45128b1abf3` (merge of PR 
 
 Sequence: one refresh for both sources, after `az-v0.9`, by the PI's [SESSION] decision relayed 13 Nov 2026 (`records/atlas/ATLAS_V0_13_IMPACT_PREPARATION_20261113.md` §1). Both tags are annotated; the builder asserts tag bytes = manifest hash = snapshot bytes and that no newer tag of any source exists.
 
-Build: `python3 -I evidence/atlas/build/refresh_v0_13.py` — from the bytes of `atlas-v0.12`, 74 anchored operations (`evidence/atlas/v0.13/edit_log.json`), replayed inside the run with an identical result. Evidence: `evidence/atlas/v0.13/`.
+Build: `python3 -I evidence/atlas/build/refresh_v0_13.py` — from the bytes of `atlas-v0.12`, 75 anchored operations (`evidence/atlas/v0.13/edit_log.json`), replayed inside the run with an identical result. Evidence: `evidence/atlas/v0.13/`.
 
-## 2. What changed (74 logged operations; net +8 lines, +13,461 bytes)
+## 2. What changed (75 logged operations; net +8 lines, +14,041 bytes)
 
-Operations by kind: identity 7 · TDR-G 16 · AZ 14 · reviewed items 6 · Method §4.1 span deletions 30 · pipes 1.
+Operations by kind: identity 7 · TDR-G 16 · AZ 15 · reviewed items 6 · reviewed source/locator wording updates 2 · Method §4.1 span deletions 28 · pipes 1. Operation ids AR13-001 … AR13-074 are those of the first candidate; AR13-075 is new (§3a).
 
 ### 2.1 TDR-G v2.12.15
 
@@ -41,7 +42,7 @@ Operations by kind: identity 7 · TDR-G 16 · AZ 14 · reviewed items 6 · Metho
 
 ### 2.2 AZ v0.9 (with v0.8)
 
-- **New node `AZ-NUM-TOKRES-S1`**, `NUM·dx`, locator `@AZ§4.2.1`, `cert AZ-ART-TOKRES-S1`: full scope and convention, the four contrasts with their families, the owner's negatives, and edges to `TDRG-ALG-PARENT-CHILD-PHASE`, `TDRG-ALG-TOKEN-CENSUS-LAW`, `TDRG-DEF-ORIENT`. The phase law is not restated in the AZ node. One home.
+- **New node `AZ-NUM-TOKRES-S1`**, `NUM·dx`, locator `@AZ§4.2.1`, `cert AZ-ART-TOKRES-S1`: full scope and convention, the four contrasts with their families, the owner's negatives. Relations by role: one dependency, `<TDRG-DEF-ORIENT` (the engine and its orientation convention, pinned at the v2.12.14 reference, unchanged at `tdrg-v2.12.15`); `context (not a dependency): TDRG-ALG-PARENT-CHILD-PHASE`; `checked law (not a dependency): TDRG-ALG-TOKEN-CENSUS-LAW`. The reverse relations carry the same roles (`>AZ-NUM-TOKRES-S1` on the orientation node; `context for:` and `checked by:` on the two laws). The phase law is not restated in the AZ node. One home.
 - **Thread C evidence qualifier** rewritten from AZ §9 per artifact (what is deposited and replayed, what is source-reported). The v0.12 clause about a [SESSION] custody record is gone: the owner text now states the availability itself.
 - **Ledgers:** `*AZ:A-ledger`, `*AZ:B-ledger`, `*AZ:A-heur` point to AZ §8 (each owner result cited once); pins `dyad-v6.4.24` and `tdrg-v2.12.15`; the B ledger gains the two token-law rows with their local use.
 - **Frontier and guards:** `AZ-OPEN-SCOPE-ZETA` PARTIAL, `-SCOPE-ARITH` and `-PROMO` ACTIVE (not closed by the diagnostic); the two definitions of `G_birth(w)`; SG-AZ-7's worked example at the scope of its evidence; AZ.A5 kept in both rows with the AZ clause at v0.9.
@@ -60,19 +61,19 @@ Operations by kind: identity 7 · TDR-G 16 · AZ 14 · reviewed items 6 · Metho
 
 No L5 key is new. Retired keys: the cumulative list has 154 entries (152 at v0.12, plus TDRG.G9 in its two spellings; `evidence/atlas/v0.13/retired_l5_keys.json`). Dispositions of all D5 L5 rows and of every other touched row: `evidence/atlas/v0.13/dispositions.json` (9 reworded, 1 retired, 7 retained).
 
-### 2.4 Method §4.1 span deletions (30 operations, 336 bytes)
+### 2.4 Method §4.1 span deletions (28 operations, 328 bytes)
 
-Edition labels that only date a result, removed without rewording: on TDR-G nodes of D5 (`(v2.12.14)` heads, "since v2.12.14" clauses), and AZ edition labels made stale by the source movement (`since az-v0.7`, `AZ v0.7 §6`) — the latter also on three Dyadic nodes' AZ consumer clauses and on H2, the OPEN-M audit node and OPENM.U11, outside D5. Kept, under the third sentence of rule 4.1: labels in H4, H9, D5.X1 and `TDRG-DEF-ORIENT` that say what two editions state differently, and consumer pins (OFN's `tdrg-v2.12.14`, TDR-G's `az-v0.7`). Rule 4.7 was not applied: no certificate-run span in D5 was found that could be cut without rewording.
+Edition labels that only date a result, removed without rewording; the builder asserts that each of the 28 is the deletion of one contiguous span (old = prefix + span + suffix, new = prefix + suffix). Two operations of the first candidate that were filed here are reworded locator updates and are now their own kind (§3a, R2): on TDR-G nodes of D5 (`(v2.12.14)` heads, "since v2.12.14" clauses), and AZ edition labels made stale by the source movement (`since az-v0.7`, `AZ v0.7 §6`) — the latter also on three Dyadic nodes' AZ consumer clauses and on H2, the OPEN-M audit node and OPENM.U11, outside D5. Kept, under the third sentence of rule 4.1: labels in H4, H9, D5.X1 and `TDRG-DEF-ORIENT` that say what two editions state differently, and consumer pins (OFN's `tdrg-v2.12.14`, TDR-G's `az-v0.7`). Rule 4.7 was not applied: no certificate-run span in D5 was found that could be cut without rewording.
 
 ### 2.5 Pipes
 
-NUMGEN.N-I1 restated at the snapshot: 123 items in 20 inboxes — 66 closed, 2 dispositioned, 55 open. The open ATLAS item (`pipes/ATLAS/20261112-AZ-v0-8-adopted.md`) is dispositioned on this branch (accept) and is closed after the tag.
+NUMGEN.N-I1 restated at the snapshot `54cddd7`: 126 items in 20 inboxes — 67 closed, 1 dispositioned, 58 open. The two open ATLAS items (`pipes/ATLAS/20261112-AZ-v0-8-adopted.md`, `pipes/ATLAS/20261114-AZ-v0-9-adopted.md`) are dispositioned on this branch (accept) and are closed after the tag.
 
 ## 3. Checks, limits, and points for the reviewer
 
-**Shared checker** (`tools/atlas_check.py`, run with this edition's manifest, coverage map and cumulative retired list): 0 FAIL — sources 72 PASS; coverage 137 PASS; qualifiers 4 PASS; links 525 PASS, 10 documented-unresolved, 2 UNVERIFIED; artifacts 120 PASS, 2 UNVERIFIED; keys 154 PASS; wording 13 WARN. Against v0.12: four UNVERIFIED rows are gone (the three `AZ-OPEN-*` RIDs now have declarations; `prove_core_equiv.py` is no longer cited as a bare file); one WARN is new ("resolved" in the TDR-6 line, the owner's word). 18 shared controls behave as expected.
+**Shared checker** (`tools/atlas_check.py`, run with this edition's manifest, coverage map and cumulative retired list): 0 FAIL — sources 72 PASS; coverage 137 PASS; qualifiers 4 PASS; links 525 PASS, 10 documented-unresolved, 2 UNVERIFIED; artifacts 120 PASS, 2 UNVERIFIED; keys 154 PASS; wording 13 WARN (v0.12: 12). Against v0.12: four UNVERIFIED rows are gone (the three `AZ-OPEN-*` RIDs now have declarations; `prove_core_equiv.py` is no longer cited as a bare file); one WARN is new ("resolved" in the TDR-6 line, the owner's word). 18 shared controls behave as expected.
 
-**Builder assertions the shared tool lacks:** no RID of `tdrg-v2.12.14` or `az-v0.7` is missing at the new tags; the 16 identifiers new at the tags (nine at TDR-G; at AZ six of its own and three TDR-G RIDs it newly declares as cited, two of them among the nine and the third `TDRG-OPEN-TOPO-FILTER`, whose home is TDR-G's own node) each have exactly one declared home (`verification_summary.json`, `moved_source_homes`); 26 owner-text facts; 26 focused negative controls, all detected (`negative_controls.json`) — among them every control planned in the preparation record §5.
+**Builder assertions the shared tool lacks:** no RID of `tdrg-v2.12.14` or `az-v0.7` is missing at the new tags; the 16 identifiers new at the tags (nine at TDR-G; at AZ six of its own and three TDR-G RIDs it newly declares as cited, two of them among the nine and the third `TDRG-OPEN-TOPO-FILTER`, whose home is TDR-G's own node) each have exactly one declared home (`verification_summary.json`, `moved_source_homes`), and for the three `AZ-OPEN-*` items no second home and exactly one status; every §4.1 operation is a pure span deletion; 26 owner-text facts; 33 focused negative controls, all detected (`negative_controls.json`) — among them every control planned in the preparation record §5.
 
 **Limits.** Structural checks only; no owner certificate was rerun. TDR-G was read in its full diff and §6.13; AZ v0.9 in full at statement level; AZ's Dyadic rows were not re-compared word by word with the unchanged Dyadic text. The homes check is the builder's, not the shared tool's.
 
@@ -85,6 +86,18 @@ NUMGEN.N-I1 restated at the snapshot: 123 items in 20 inboxes — 66 closed, 2 d
 6. **D5.L3 launch-chain line: an Atlas error corrected.** v0.12 carried "! owner Appendix C still carries older D/A/B gate". The owner had aligned Appendix C in v2.12.14 (TDRG.G8 in v0.12 said so itself); the note did not describe the owner text. It is replaced. The builder asserts that "D/A/B" occurs once in the owner file, in the correction note of the export row.
 7. The §4.1 deletions outside D5 (H2, OPEN-M audit node, OPENM.U11, three Dyadic nodes): accepted as consequences of the source movement, or to be held for a D2/D4b opening?
 8. METH.M2 keeps AZ: the Thread C items without RIDs (engineering records, retractions, the three open items) remain.
+
+## 3a. Review round 1 (review `5915598211` on head `044cd62`, ACCEPT WITH CHANGES)
+
+| Finding | Change in the second candidate | Check |
+|---|---|---|
+| **R1** — the diagnostic carried the two token laws as `<` dependencies; Method §5 reads `<` as "depends on", and AZ §8 says no AZ number depends on the token law and that the phase law names the condition without being shown to be the mechanism | `<TDRG-DEF-ORIENT` stays the one dependency, with its v2.12.14 pin and "unchanged at `tdrg-v2.12.15`"; the phase law becomes `context (not a dependency)`, the census law `checked law (not a dependency)`. Reverse relations: `checked by:` on the census law, `context for:` on the phase law (both were `>`), and a new `>AZ-NUM-TOKRES-S1` on `TDRG-DEF-ORIENT` (AR13-075). `context`/`checked law` are plain field labels, not new edge symbols; Method §5 is unchanged | the scope guard that required the old `<…` string is replaced by guards that the two laws are in no `<` segment and in no `>` segment of the reverse nodes; controls V27 (first-candidate form restored), V28 (phase law alone as `<`), V29 (census law as `>`) detected |
+| **R2** — AR13-036 (`v2.12.14` → `owner`) and AR13-061 (`az-v0.7` → `AZ`) were filed as §4.1 span deletions but reword | both reclassified as "reviewed source/locator wording update"; the resulting text is unchanged. §4.1 total 30/336 → **28/328** | `k1_violations` asserts that every §4.1 operation is one contiguous deletion; control V33 (a reworded span filed as a deletion) detected; the builder asserts 28/328 |
+| Note — the frontier branch of `homes_check` did not reject a second home | the check now rejects a second line that heads with the RID and, for the `AZ-OPEN-*` items, any second status | V30 (separate duplicate line), V31 (status inside another node) detected |
+| Note — "odd-prime q (3,5,15)" (inherited from v0.12; 15 is not prime) | "q with an odd prime factor (3,5,15)", AZ §4.3.3 chain 1 | scope guard; V32 detected |
+| Programme D-STALE key (point 5) | none created, as the reviewer recommends: Programme v1.4 §6.4 records the state of `tdrg-v2.12.14`, which the later owner correction does not falsify; the node keeps the pinned observation and the current owner state apart | — |
+
+Also in this round: the snapshot moved to `54cddd7` (§1) and the AZ v0.9 notice to the Atlas is answered. The reviewer's other points (six reviewed items, the diagnostic's statement, the eight TDR-G nodes, the removed Appendix C note, the §4.1 deletions outside D5) were accepted without change; the reviewer's evidence boundary (targeted source reading; hashes, replay, checker and controls not run independently) is recorded in the review.
 
 ## 4. Decision
 
