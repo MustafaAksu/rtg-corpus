@@ -5,8 +5,8 @@ date: 2026-11-12
 kind: offer
 object: DYAD-OPEN-INVOLUTION-REALIZATION, §2 OPEN 20 (B-an, B-6); records/dyad/DYAD_OPEN20_AN_SECTORIAL_PILOT_DESIGN.md D1–D10; LIT INF-016, rtg-lit inferences/INF-016-harmonic-first-mode-obstruction.md at rtg-lit commit 6a611136b09dd848e1ab2be97d5f23720485f9ec
 tags: [dyad-v6.4.24]
-state: open
-disposition:
+state: closed
+disposition: 2026-11-12 · defer · records/dyad/DYAD_INBOX_20261112_OWNER_DISPOSITION.md
 ---
 **[SESSION] LIT offers a conditional mathematical implication, with no certificate and no LIT validation event** (INF-016, candidate; private repository rtg-lit).
 - **Statement.** On one overlap of a petal of F̃ with an adjacent petal of F̃⁻¹, let d = v − u be the jump of the two sectorial sums, t the Fatou time on the curve of u, h_F an exact normaliser of the secant multiplier with h_F ~ t^β two-sidedly on a wedge, β = −α/3. Then d/h_F = Σ_{n≥n₀} s_n e^{±2πint}, and **if the canonical root exp((1/m) log F) converges for some m ≥ 2, then m | n₀.** So a certified s₁ ≠ 0 on one overlap would exclude every convergent canonical root, in particular orders 2 and 6. n₀ belongs to the overlap, not to m.

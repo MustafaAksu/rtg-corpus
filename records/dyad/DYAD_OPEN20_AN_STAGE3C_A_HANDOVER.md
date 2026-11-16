@@ -1,6 +1,6 @@
 # DYAD OPEN 20 (analytic branch) — stage 3c-a: hand-over (W8)
 
-**Date:** 12 November 2026 (r2 of the same day, after review `5875142356`). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It closes stage 3c-a as a set of development and working records. **It is not a certificate and it makes no statement about the jump, about divergence, or about B-an and B-6.**
+**Date:** 12 November 2026 (r2 of the same day, after review `5875142356`; §5 and §8 updated the same day after the merge, with the inbox dispositions; §5, §6 and §8 updated on 13 November 2026 with the written seed and divergence step; §4 and §8 on 14 November 2026 with the preparation of stage 3c-b). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It closes stage 3c-a as a set of development and working records. **It is not a certificate and it makes no statement about the jump, about divergence, or about B-an and B-6.**
 **Authority:** PI decision of 11 November 2026 for stage 3c-a (`records/dyad/DYAD_OPEN20_AN_STAGE3C_A_PLAN.md` §1). **Stage 3c-b (a certification run) is not authorized.** Whether to authorize it is the PI's decision; this record states what such a run would consist of and what it could and could not claim.
 **Governing edition:** DYAD v6.4.24. OPEN 20 B-an and B-6 are ACTIVE.
 
@@ -46,7 +46,7 @@ Environment of the development runs: Python 3.13.16, python-flint 0.9.0, mpmath 
 
 ## 4. What a certification run (3c-b) would be
 
-Not authorized. If the PI authorizes it, the run is the following commands at a frozen commit, on a machine of the PI's choice, followed by an independent replay by the receiving reviewer and by a release record that states the scope of §6.
+Not authorized. **Since 14 November 2026 the run is prepared as one command with a manifest and one acceptance rule** (`DYAD_OPEN20_AN_STAGE3C_B_PREP.md`; PI decision of that day: preparation only). If the PI authorizes the run, it is that command at a frozen commit, on a machine of the PI's choice, followed by a replay and by a release record that states the scope of §6. The command runs the processes of the following list, each once, with every control:
 
 ```
 bash evidence/dyad/open20-an/stage3c-a/run_w1.sh
@@ -59,47 +59,53 @@ bash evidence/dyad/open20-an/stage3c-a/run_w5.sh      # the arc
 bash evidence/dyad/open20-an/stage3c-a/run_w8.sh      # legs with --full-fibre --strict-snd; inverse branch with --strict-e; controls
 ```
 
-About 100 minutes on two cores. `run_w6.sh` is the earlier form of the legs and is superseded by the legs part of `run_w8.sh`. For a certification package the eight scripts would be wrapped in one command with one checksum file; that wrapper is not written, because it belongs to the authorized run.
+About 100 minutes on two cores. `run_w6.sh` is the earlier form of the legs and is superseded by the legs part of `run_w8.sh`. The driver `dyad_open20_an_stage3c_b_run.py` replaces this list: 11 positive processes and 23 negative controls, about 50 minutes on two cores.
 
 ## 5. Obligations of the design, at hand-over
 
 | # | Obligation | Covered by | State |
 |---|---|---|---|
-| P1 | Tube lemma, with guard and inward property | proof record §5 (the Rouché step for F and G, zero count), §4 (branch) | the step is written; **the seed (Q1–Q3) and the start of the induction are not** |
+| P1 | Tube lemma, with guard and inward property | proof record §5 (the Rouché step for F and G, zero count), §4 (branch) | the step is written; **the seed (Q1–Q3) is written, conditionally** (proof record §12: conditional on L1 and on (G), (A) on the seed domain) |
 | P2 | withdrawn | — | — |
 | P3 | Zone I | W4; proof record §7 | development run; derivation written and read back by the co-owner |
-| P4 | Divergence argument | design §5 step 6 | **not rewritten; conditional on L3** |
+| P4 | Divergence argument | proof record §13; co-owner's first text `DYAD_OPEN20_AN_SEED_P4_COOWNER_ARGUMENT.md` | **written, conditionally**: four hypotheses, among them L3 (LIT-checked use at SESSION scope) and a certified point jump, which does not exist |
 | P5 | Enclosures of a₂…a₄₀ | W1 | development run |
 | P6 | Bounds of the lifted map and of the inverse branch | W2a, W2b; proof record §3, §4.1 | development run |
 | P7 | Zone II for F | W3; replayed in W8 with the machine check of every piece | development run |
 | P8 | Zone II for G with a validated inverse | W3, W7 (branch), W8 (`--strict-e`); proof record §4, §6 | development run |
-| P9 | Domain and arc | W5; proof record §8 | development run; (Q1) belongs to the seed, open |
+| P9 | Domain and arc | W5; proof record §8 | development run; (Q1): proof record §12 steps 1–3, its inequality checked in ball arithmetic up to r₀ = 0.18 (`evidence/dyad/open20-an/seed/`, OWNER-RUN, development) |
 | P10 | Fibre enclosures and the two-disc test | W6, W8 (`--full-fibre`); proof record §9 | development run; the method differs from the design's step 3 and was accepted as the development approach (review `5872115882`) |
 | P11 | Negative controls | ZEROJUMP, SHORT (legs); ALPHA, BRANCH (zone I); LOGBRANCH (arc) | all four controls of the design exist |
-| L1–L3 | López-Hernanz 2012, Theorems 4.2(3) and 5.1 | request `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md` (closed by LIT on 12 Nov, pointing to the reply); LIT's reply `pipes/DYAD/20261112-LIT-lh2012-thm42-use-check.md` | **reply received, not yet dispositioned by the owner** (source cut below) |
+| L1–L3 | López-Hernanz 2012, Theorems 4.2(3) and 5.1 | request `pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md` (closed by LIT on 12 Nov, pointing to the reply); LIT's reply `pipes/DYAD/20261112-LIT-lh2012-thm42-use-check.md` | **dispositioned by the owner on 12 Nov 2026: accepted as a check of use at SESSION scope** (`DYAD_INBOX_20261112_OWNER_DISPOSITION.md` §1; source cut below) |
 
-**Source cut for L1–L3** (the pipe item as it stands on rtg-corpus `main` at `e3fafc8`, unchanged since `8f72092`; it names LIT's report at rtg-lit `a3628d4`; the owner has read the pipe item, not yet the report):
+**Source cut for L1–L3** (the pipe item as it stands on rtg-corpus `main` at `e3fafc8`, unchanged since `8f72092`; it names LIT's report at rtg-lit `a3628d4`, which the owner read for the disposition below):
 - *L3 (use of Theorem 4.2(3)):* LIT finds that it holds as used. It is uniqueness among all holomorphic invariant graphs in the class, on a sufficiently small petal (condition C1: existential, explicit and very small in LIT's INF-010), for a graph that is in the class there (C2: analytic with S = O(ξ²)); the graph then extends by the identity theorem. The same holds for F⁻¹ in the rotated chart of D5.
 - *L1 (use of Theorem 5.1):* uniform asymptotics on closed subsectors at every finite order hold as used, conditionally on Theorem 4.2(1) and Proposition 5.3 as read (called C3 in the co-owner's comment `6824805211`); the propagation to closed subsectors is supplied by a separate k = 3 proof in rtg-lit and by a published theorem (Jiménez-Garrido, Sanz, Schindl 2020, Theorem 5.2).
 - *Limits stated by LIT:* a check of use, not a validation of the design; it supplies no value of any constant; it does not cover P1, P3–P11. **It does not prove the seed of the tube.** (The sender's dated correction of one sentence about constants is open as PR #246; it does not change the finding.)
-- The item is `open` in the DYAD inbox: the owner's disposition and the owner's check of C1–C3 against the design are pending. Until they are recorded, nothing of the reply is used here. The earlier text of this record ("open at LIT") described the state at the W8 commit `2dbaaa1`; it is replaced, not kept beside the new state, and git holds the earlier wording.
+- **Owner disposition (12 Nov 2026, after the merge of W8 r2 as `fdc4fc4`):** accepted as a check of use. The owner read LIT's report and compared C1, C2, C3 and the chart of D5 with the design; they are met by step 6 and by (Q2) as designed, with one precision for P4 (the equality S = u_j is used on the small sub-petal, which contains the arc for large t). L1 and L3 are LIT-checked uses at SESSION scope, L1 conditional on C3. This is not a theorem-grade import and proves neither the seed nor P4. The states of this record before that disposition ("open at LIT" at `2dbaaa1`; "reply received, not yet dispositioned" at `9c62927`) are in git.
 
 The five conditions recorded in the design (§12 there) before a certification run can claim anything:
 
 | # | Condition | State |
 |---|---|---|
-| 1 | LIT's verdict on L3, or an independent proof | LIT supplied a conditional verdict of use (C1, C2; for L1 also C3); **the owner's disposition and check of C1–C3 are open** |
-| 2 | A quantified proof of the seed (Q1, Q2) and the full zone-I bounds | zone I: done as a development run with its derivation; **the seed: open** |
+| 1 | LIT's verdict on L3, or an independent proof | **met at SESSION scope:** LIT's verdict of use (C1, C2; for L1 also C3), accepted by the owner on 12 Nov 2026 after a check against the design |
+| 2 | A quantified proof of the seed (Q1, Q2) and the full zone-I bounds | zone I: done as a development run with its derivation; **the seed: written (13 Nov 2026), conditional on L1 at SESSION scope and on the tube hypotheses**; (Q1) is quantified, (Q2) needs no number |
 | 3 | Certified guard property and cover of (A), (B) on zone II for both sectors | scripts and development runs exist; a certified run is 3c-b |
 | 4 | Certified tail of the arc and validated compact continuation | script and development run exist |
 | 5 | Rigorous transport and inverse, and disjoint enclosures | script and development run exist; the inverse branch is proved under INJ, SRC, SRC1 |
 
-**Condition 2 (the seed) is not met, and condition 1 is not closed.** Until they are, a run of §4 could at most certify the *computational* statements (zones, arc, enclosures, two-disc test) under the stated hypotheses. It could not by itself give the divergence of the formal branch.
+**State on 13 November 2026.** The seed and the divergence step are written (proof record §12, §13; reviewed between owner and co-owner, PRs #257 and #258). Both are conditional. What now separates the state from a claim:
+- **no certified point jump exists** — every run so far is a development run, and stage 3c-b is not authorized;
+- **no REVIEWER-REPLAYED run exists**;
+- **the literature inputs L1 and L3 are LIT-checked uses at SESSION scope**, not theorem-grade imports (the owner has not read the article; LIT has not re-proved its Proposition 5.3).
+
+A run of §4, if authorized and replayed, would certify the computational statements (zones, arc, enclosures, two-disc test). Together with §12 and §13 it would give the divergence of the formal branch **conditionally on L1 and L3 at their scope**. It would not decide B-an or B-6.
 
 ## 6. What a certificate could and could not say
 
 - *Could say, if every gate passes in an authorized and replayed run:* under the remainder constants of W2b and the structural facts S1–S5, the hypotheses (G), (A1), (A2), (B) of the tube lemma hold on D₀ for F and on D₁ for the inverse branch G; the arc γ lies in D₀ ∩ D₁; and, **if** each sectorial curve is a graph in its tube whose orbit from ξ* stays in the tube, the two values at ξ* lie in two disjoint discs.
-- *Could not say without the open items:* that the graphs exist and are the sectorial curves of the literature (seed, L1); that a nonzero jump implies divergence of the formal branch (L3, P4); anything at theorem grade in the DSN (the literature inputs are at SESSION scope).
+- *What the written seed and divergence step add (proof record §12, §13):* under L1, the graphs exist and are the sectorial curves of the literature; under L3, disjoint discs at ξ* contradict a convergent formal branch.
+- *Could not say:* anything at theorem grade in the DSN, as long as L1 and L3 are at SESSION scope; anything about B-an or B-6.
 - *Not related:* LIT's harmonic target s₁ on the other overlap class (plan record §4, 11 Nov).
 
 ## 7. W8 changes
@@ -120,8 +126,9 @@ The five conditions recorded in the design (§12 there) before a certification r
 
 ## 8. Open at hand-over
 
-- The owner's dispositions of the two open inbox items (LIT's reply on L1–L3; LIT's offer of INF-016); the seed (Q1–Q3); P4. These decide whether anything can be claimed (§5).
+- The seed (Q1–Q3) and P4 are written, conditionally (13 Nov 2026; §5). Open for a claim: a certified, replayed run; the scope of L1 and L3. The inbox items of 12 Nov are dispositioned (`DYAD_INBOX_20261112_OWNER_DISPOSITION.md`): LIT's reply on L1, L3 accepted as a check of use; LIT's INF-016 deferred.
+- **Prerequisite of a certification run, from the read-back of r2** (review `5877317450`, item 2): in `arc_tail` the threshold t_M must be computed with the upper bound of \|A₃\| (the condition \|x₀\| ≤ X_M is \|w\| ≥ \|A₃\|/X_M³), or the inequality against that threshold must be checked in ball arithmetic. The present code uses the lower bound and relies on the slack 10⁻¹² of the float bound. Not a numerical failure. **Done on 14 November 2026** in the preparation of stage 3c-b (`wmin = up(A3) / XM ** 3`); the output of the arc script is byte-identical.
 - The triangular form of the recursion behind S4 is taken from the stage-1 and stage-2 records.
 - Analyticity of the new δ in the base variable in the Rouché step is stated as standard, not written out.
 - No REVIEWER-REPLAYED run exists.
-- A single wrapper command and package checksum for 3c-b are not written.
+- The single command and the manifest for 3c-b are written (14 November 2026, preparation record). The production run and its replay are not authorized.

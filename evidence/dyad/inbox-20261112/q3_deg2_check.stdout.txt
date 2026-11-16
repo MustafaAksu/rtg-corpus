@@ -1,0 +1,5 @@
+CONTROL_P3_no_cancellation_for_p_3 PASS
+CONTROL_WRONGS_no_cancellation_for_s_plus_1 PASS
+FORMULA_coefficient_02_of_the_s_step_map PASS
+VANISH_p_6_to_30_step_3 PASS
+RESULT PASS

@@ -1,0 +1,141 @@
+AZ Action 1 Stage 2 pilot - intake check and calibration table ([SESSION], exploratory)
+intake script sha256 cc94d9bbefae94cb1b92f63080cb964089d1d9c6f07e0e5a19b399cfefa23a98
+PASS  HASHES.txt lists the 7 record files, MANIFEST.jsonl, PILOT_COMPLETE.json and summary.txt
+PASS  every listed file has its listed hash
+PASS  manifest and completion marker name exactly the 7 planned cells
+PASS  manifest hash in the completion marker
+PASS  record-file hashes agree in manifest, completion marker and files
+PASS  pilot script used for the rerun is the one named in SHA256SUMS  - ccc9e776fc5586d8636d7d4b00da3c537e6661428c82332d8f3141870b9e9a95
+PASS  N120k8T800: 3000 records, in order, cell identity and pinned hashes on every record, law violations 0
+PASS  N240k16T800: 3000 records, in order, cell identity and pinned hashes on every record, law violations 0
+PASS  N240k16T1460: 3000 records, in order, cell identity and pinned hashes on every record, law violations 0
+PASS  N242k16T800: 3000 records, in order, cell identity and pinned hashes on every record, law violations 0
+PASS  N242k16T1460: 3000 records, in order, cell identity and pinned hashes on every record, law violations 0
+PASS  N480k32T800: 3000 records, in order, cell identity and pinned hashes on every record, law violations 0
+PASS  N480k32T2670: 3000 records, in order, cell identity and pinned hashes on every record, law violations 0
+PASS  stored summary.txt equals a rerun of the pilot script's summary
+
+reference cell N120k8T800: non-resonant native draws 2620, with M >= 100: 14
+alpha = 0.00534, exact 95 % interval [0.00292, 0.00895]
+
+cell             n_NR  theta    exceed  realised  exact 95% of realised   - alpha in CI(a) th<=200     gap
+N120k8T800       2620     91        14   0.00534     [0.00292, 0.00895]  +0.00000      yes     yes  90..91
+N240k16T800      2796     80        13   0.00465     [0.00248, 0.00794]  -0.00069      yes     yes  79..80
+N240k16T1460     2796    106        14   0.00501     [0.00274, 0.00839]  -0.00034      yes     yes 105..106
+N242k16T800      2913     64        15   0.00515     [0.00288, 0.00848]  -0.00019      yes     yes  63..64
+N242k16T1460     2913     84        15   0.00515     [0.00288, 0.00848]  -0.00019      yes     yes  83..84
+N480k32T800      2906     70        14   0.00482     [0.00264, 0.00807]  -0.00053      yes     yes  69..70
+N480k32T2670     2906    114        15   0.00516     [0.00289, 0.00850]  -0.00018      yes     yes 113..114
+
+gap = largest non-resonant M below theta .. theta (the step of the integer threshold)
+
+horizon and threshold by the rules fixed before the pilot (plan §4 and §8 item 2):
+  N = 240: scaled horizon T = 1460, theta = 106  (valid: theta <= 200 and realised rate inside the interval of alpha)
+  N = 242: scaled horizon T = 1460, theta = 84  (valid: theta <= 200 and realised rate inside the interval of alpha)
+  N = 480: scaled horizon T = 2670, theta = 114  (valid: theta <= 200 and realised rate inside the interval of alpha)
+
+sensitivity of theta (the in-sample check above holds almost by construction; these do not):
+cell             theta theta at CI-hi(a) theta at CI-lo(a) | split by parity of the draw index: theta from one half, exceedances in the other half
+N120k8T800          91               78              129 | even->odd theta  86:  9 of 1291 (0.00697);  odd->even theta 110:  5 of 1329 (0.00376)
+N240k16T800         80               71               98 | even->odd theta  95:  2 of 1411 (0.00142);  odd->even theta  75: 10 of 1385 (0.00722)
+N240k16T1460       106               92              127 | even->odd theta 119:  3 of 1411 (0.00213);  odd->even theta 103: 10 of 1385 (0.00722)
+N242k16T800         64               61               71 | even->odd theta  64:  8 of 1459 (0.00548);  odd->even theta  68:  6 of 1454 (0.00413)
+N242k16T1460        84               78               98 | even->odd theta  83:  9 of 1459 (0.00617);  odd->even theta  92:  5 of 1454 (0.00344)
+N480k32T800         70               66               76 | even->odd theta  68: 11 of 1455 (0.00756);  odd->even theta  75:  3 of 1451 (0.00207)
+N480k32T2670       114              104              131 | even->odd theta 122:  4 of 1455 (0.00275);  odd->even theta 114:  8 of 1451 (0.00551)
+
+fraction of native draws with a resonant seed token (identity field only): N=120: 380 of 3000, N=240: 204 of 3000, N=242: 87 of 3000, N=480: 94 of 3000
+reference cell: non-resonant draws with M >= 91: 14, with M >= 100: 14 (no non-resonant value in 91..99: yes)
+
+fixed threshold M >= 100 among non-resonant native draws (count of n_NR), and N = 240 against N = 242 (exploratory, post hoc):
+  T =  800: N = 240:  8 of 2796;  N = 242:  1 of 2913;  Fisher exact two-sided p = 0.0191
+  T = 1460: N = 240: 18 of 2796;  N = 242:  8 of 2913;  Fisher exact two-sided p = 0.0482
+  N = 480: T = 800: 2 of 2906;  T = 2670: 30 of 2906
+
+non-resonant native draws by the smallest additive order of 2x among the four seed tokens
+(exploratory, post hoc: the classification and the cut at 6 were chosen after the calibration table was seen;
+ orders 1 and 2 are the resonant classes and do not occur here)
+  N120k8T800  (theta = 100)
+      min order 3    n =  343   M >= theta:  8   M >= 100:  8
+      min order 4    n =  329   M >= theta:  4   M >= 100:  4
+      min order 5    n =  537   M >= theta:  1   M >= 100:  1
+      min order 6    n =  210   M >= theta:  1   M >= 100:  1
+      min order 10   n =  350   M >= theta:  0   M >= 100:  0
+      min order 12   n =  256   M >= theta:  0   M >= 100:  0
+      min order >12  n =  595   M >= theta:  0   M >= 100:  0
+      order <= 6: 14 of 1419;  order > 6: 0 of 1201;  Fisher exact two-sided p = 1.99e-04 (post hoc cut)
+      draws with every order > 6: n = 1201, M quantiles 50 / 90 / 99 / 99.5 % = 39 / 50 / 62 / 71, max 85
+  N240k16T800  (theta = 80)
+      min order 3    n =  180   M >= theta:  3   M >= 100:  2
+      min order 4    n =  187   M >= theta:  5   M >= 100:  4
+      min order 5    n =  323   M >= theta:  1   M >= 100:  0
+      min order 6    n =  138   M >= theta:  2   M >= 100:  1
+      min order 8    n =  282   M >= theta:  1   M >= 100:  1
+      min order 10   n =  232   M >= theta:  0   M >= 100:  0
+      min order 12   n =  189   M >= theta:  1   M >= 100:  0
+      min order >12  n = 1265   M >= theta:  0   M >= 100:  0
+      order <= 6: 11 of 828;  order > 6: 2 of 1968;  Fisher exact two-sided p = 6.12e-05 (post hoc cut)
+      draws with every order > 6: n = 1968, M quantiles 50 / 90 / 99 / 99.5 % = 39 / 47 / 61 / 68, max 101
+  N240k16T1460  (theta = 106)
+      min order 3    n =  180   M >= theta:  5   M >= 100:  7
+      min order 4    n =  187   M >= theta:  4   M >= 100:  4
+      min order 5    n =  323   M >= theta:  0   M >= 100:  1
+      min order 6    n =  138   M >= theta:  2   M >= 100:  2
+      min order 8    n =  282   M >= theta:  2   M >= 100:  2
+      min order 10   n =  232   M >= theta:  0   M >= 100:  0
+      min order 12   n =  189   M >= theta:  1   M >= 100:  1
+      min order >12  n = 1265   M >= theta:  0   M >= 100:  1
+      order <= 6: 11 of 828;  order > 6: 3 of 1968;  Fisher exact two-sided p = 2.09e-04 (post hoc cut)
+      draws with every order > 6: n = 1968, M quantiles 50 / 90 / 99 / 99.5 % = 44 / 58 / 81 / 89, max 165
+  N242k16T800  (theta = 64)
+      min order 11   n =  858   M >= theta:  3   M >= 100:  0
+      min order >12  n = 2055   M >= theta: 12   M >= 100:  1
+      no seed token of order <= 6 exists at this N;  order > 6: 15 of 2913
+      draws with every order > 6: n = 2913, M quantiles 50 / 90 / 99 / 99.5 % = 39 / 46 / 59 / 65, max 104
+  N242k16T1460  (theta = 84)
+      min order 11   n =  858   M >= theta:  5   M >= 100:  1
+      min order >12  n = 2055   M >= theta: 10   M >= 100:  7
+      no seed token of order <= 6 exists at this N;  order > 6: 15 of 2913
+      draws with every order > 6: n = 2913, M quantiles 50 / 90 / 99 / 99.5 % = 44 / 55 / 76 / 85, max 147
+  N480k32T800  (theta = 70)
+      min order 3    n =  106   M >= theta:  1   M >= 100:  1
+      min order 4    n =  113   M >= theta:  2   M >= 100:  0
+      min order 5    n =  172   M >= theta:  0   M >= 100:  0
+      min order 6    n =   75   M >= theta:  1   M >= 100:  0
+      min order 8    n =  172   M >= theta:  1   M >= 100:  0
+      min order 10   n =  144   M >= theta:  1   M >= 100:  0
+      min order 12   n =  140   M >= theta:  0   M >= 100:  0
+      min order >12  n = 1984   M >= theta:  8   M >= 100:  1
+      order <= 6: 4 of 466;  order > 6: 10 of 2440;  Fisher exact two-sided p = 2.61e-01 (post hoc cut)
+      draws with every order > 6: n = 2440, M quantiles 50 / 90 / 99 / 99.5 % = 39 / 46 / 63 / 68, max 105
+  N480k32T2670  (theta = 114)
+      min order 3    n =  106   M >= theta:  4   M >= 100:  6
+      min order 4    n =  113   M >= theta:  1   M >= 100:  2
+      min order 5    n =  172   M >= theta:  1   M >= 100:  2
+      min order 6    n =   75   M >= theta:  0   M >= 100:  0
+      min order 8    n =  172   M >= theta:  4   M >= 100:  5
+      min order 10   n =  144   M >= theta:  0   M >= 100:  1
+      min order 12   n =  140   M >= theta:  0   M >= 100:  1
+      min order >12  n = 1984   M >= theta:  5   M >= 100: 13
+      order <= 6: 6 of 466;  order > 6: 9 of 2440;  Fisher exact two-sided p = 2.26e-02 (post hoc cut)
+      draws with every order > 6: n = 2440, M quantiles 50 / 90 / 99 / 99.5 % = 48 / 63 / 92 / 107, max 176
+
+run time by final size, non-resonant native draws only (count, mean seconds):
+  N120k8T800     <100: 2606,    0.21 s;  100-299:   13,    1.24 s;  cap:    1,    4.50 s
+  N240k16T800    <100: 2788,    0.21 s;  100-299:    8,    1.03 s;  cap:    0,     nan s
+  N240k16T1460   <100: 2778,    0.47 s;  100-299:   17,    2.58 s;  cap:    1,   14.72 s
+  N242k16T800    <100: 2912,    0.21 s;  100-299:    1,    0.73 s;  cap:    0,     nan s
+  N242k16T1460   <100: 2905,    0.48 s;  100-299:    8,    1.69 s;  cap:    0,     nan s
+  N480k32T800    <100: 2904,    0.20 s;  100-299:    2,    0.67 s;  cap:    0,     nan s
+  N480k32T2670   <100: 2876,    1.11 s;  100-299:   29,    3.97 s;  cap:    1,   19.18 s
+
+run time, native arm, all draws (seconds): cell, sum, mean, median, max
+  N120k8T800         1154   0.385   0.206     34.5
+  N240k16T800         833   0.278   0.202     25.5
+  N240k16T1460       2039   0.680   0.455     48.2
+  N242k16T800         676   0.225   0.210      4.0
+  N242k16T1460       1507   0.502   0.460     13.1
+  N480k32T800         765   0.255   0.199     27.3
+  N480k32T2670       3997   1.332   1.047    170.6
+
+RESULT: PASS

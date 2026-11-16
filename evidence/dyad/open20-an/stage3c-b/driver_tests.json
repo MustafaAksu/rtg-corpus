@@ -1,0 +1,298 @@
+{
+ "all_pass": true,
+ "script": "dyad_open20_an_stage3c_b_driver_tests.py",
+ "status": "tests of the driver of stage 3c-b; no mathematics; not a run",
+ "tests": {
+  "COMPARE": {
+   "info": [
+    {
+     "case": "unchanged copy",
+     "expected": "AGREE",
+     "got": "AGREE"
+    },
+    {
+     "case": "wrong JSON hash in the ledger",
+     "expected": "DISAGREE",
+     "got": "DISAGREE"
+    },
+    {
+     "case": "job recorded twice",
+     "expected": "DISAGREE",
+     "got": "DISAGREE"
+    },
+    {
+     "case": "exit code of a positive process set to 7",
+     "expected": "DISAGREE",
+     "got": "DISAGREE"
+    },
+    {
+     "case": "a gate set to false in the ledger only",
+     "expected": "DISAGREE",
+     "got": "DISAGREE"
+    },
+    {
+     "case": "one byte of one printed output changed, SHA256SUMS renewed",
+     "expected": "DISAGREE",
+     "got": "DISAGREE"
+    },
+    {
+     "case": "one output deleted, SHA256SUMS renewed",
+     "expected": "DISAGREE",
+     "got": "DISAGREE"
+    },
+    {
+     "case": "an output with a false gate under a stored ACCEPTED verdict",
+     "expected": "DISAGREE",
+     "got": "DISAGREE"
+    }
+   ],
+   "pass_": true
+  },
+  "FIXTURE": {
+   "info": {
+    "fixture_verdict_reasons": [],
+    "validate_reasons": []
+   },
+   "pass_": true
+  },
+  "GIT": {
+   "info": [
+    {
+     "case": "status fails (128)",
+     "non_strict_clean": false,
+     "strict_stopped": true
+    },
+    {
+     "case": "both answer, no changes",
+     "strict_clean": true
+    }
+   ],
+   "pass_": true
+  },
+  "MODE": {
+   "info": [
+    {
+     "case": "production against replay, consistent",
+     "expected": true,
+     "result": true
+    },
+    {
+     "case": "two selftests relabelled production and replay",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production without a PI authorization",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production with a git state that is not clean",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production with the selftest scope text",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production with other package versions",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production with one output in development status",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "selftest recording a PI authorization",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "the library writes exactly the status the driver expects",
+     "expected": true,
+     "result": true
+    }
+   ],
+   "pass_": true
+  },
+  "PACKAGE": {
+   "info": [
+    {
+     "case": "legs with a false two-disc gate, frozen schema",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "the same, with a changed schema and the old manifest",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "validate with a changed schema",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "schema restored and the package matches its manifest again",
+     "expected": true,
+     "result": true
+    }
+   ],
+   "pass_": true
+  },
+  "RULE": {
+   "info": [
+    {
+     "case": "complete and as expected",
+     "expected": "ACCEPTED",
+     "got": "ACCEPTED"
+    },
+    {
+     "case": "a positive process with the right output and exit code 1",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a missing process",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a process recorded twice",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a control that passes",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a positive process with exit code 0 and a false gate",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "selftest: an output that differs from its reference",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "legs without the two-disc gate",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "control seed_BIG failing at the wrong gate",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a control with every gate true and all_pass false",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a gate value that is not a boolean",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "an extra gate",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "an exit code of 7",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a record with an error",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a skipped job",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    },
+    {
+     "case": "a record of an unknown job",
+     "expected": "REJECTED",
+     "got": "REJECTED"
+    }
+   ],
+   "pass_": true
+  },
+  "WORKER": {
+   "info": {
+    "ended": true,
+    "reasons": [
+     "t_list: output is not a JSON object",
+     "t_dep: not run (dependency t_list did not end as expected)",
+     "t_notjson: output is not valid JSON (JSONDecodeError)"
+    ],
+    "records": [
+     {
+      "command": "python3 -I -B /tmp/dyad3cb_tests_qql28j97/scripts/list.py --out {OUT}/t_list.json",
+      "error": "output is not a JSON object",
+      "exit": 0,
+      "expected_exit": 0,
+      "json": "t_list.json",
+      "json_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "kind": "positive",
+      "name": "t_list",
+      "seconds": 0.0,
+      "stderr_bytes": 0,
+      "stdout": "t_list.stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     },
+     {
+      "expected_exit": 0,
+      "kind": "positive",
+      "name": "t_dep",
+      "skipped": "dependency t_list did not end as expected"
+     },
+     {
+      "command": "python3 -I -B /tmp/dyad3cb_tests_qql28j97/scripts/notjson.py --out {OUT}/t_notjson.json",
+      "error": "output is not valid JSON (JSONDecodeError)",
+      "exit": 0,
+      "expected_exit": 0,
+      "json": "t_notjson.json",
+      "json_sha256": "7ccfa1fbf3940e6f0c0375d87c0f9235a50514e14cb427bdfaf5077987b26ccf",
+      "kind": "positive",
+      "name": "t_notjson",
+      "seconds": 0.0,
+      "stderr_bytes": 0,
+      "stdout": "t_notjson.stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     },
+     {
+      "all_pass": true,
+      "command": "python3 -I -B /tmp/dyad3cb_tests_qql28j97/scripts/good.py --out {OUT}/t_good.json",
+      "exit": 0,
+      "expected_exit": 0,
+      "gates": {
+       "A": true
+      },
+      "json": "t_good.json",
+      "json_sha256": "57d9efc564370dddbc08897a71789450ca910b39911e75de7f2126bace3b1c2b",
+      "kind": "positive",
+      "name": "t_good",
+      "seconds": 0.0,
+      "status": null,
+      "stderr_bytes": 0,
+      "stdout": "t_good.stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     }
+    ]
+   },
+   "pass_": true
+  }
+ }
+}
