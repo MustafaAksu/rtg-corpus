@@ -1,0 +1,16 @@
+1 rr contained width 6.750e-73
+1 ri contained width 6.757e-73
+1 er contained width 1.087e-72
+1 ei contained width 1.088e-72
+1 dr contained width 1.825e-72
+10 rr contained width 9.829e-50
+10 ri contained width 9.831e-50
+10 er contained width 1.580e-49
+10 ei contained width 1.581e-49
+10 dr contained width 1.373e-48
+20 rr contained width 5.243e-24
+20 ri contained width 5.243e-24
+20 er contained width 8.431e-24
+20 ei contained width 8.431e-24
+20 dr contained width 9.080e-23
+RESULT PASS
