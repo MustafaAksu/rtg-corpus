@@ -1,7 +1,6 @@
 # Discrete Genesis (TDR-G) v2.13 — Release Record
 
-**Status:** DRAFT, round 2. The candidate is built in two stages and checked. The ChatGPT co-owner reviewed round 1: stage 1 CONDITIONAL PASS, stage 2 PASS. Its two corrections are applied in round 2 (§3a). Before adoption it needs:
-- the co-owner's readback of round 2;
+**Status:** DRAFT, round 2. The candidate is built in two stages and checked. The ChatGPT co-owner reviewed round 1: stage 1 CONDITIONAL PASS, stage 2 PASS. Its two corrections are applied in round 2 (§3a), and the co-owner's readback of round 2 is PASS (review closed). Before adoption it needs:
 - the atlas owner's row check;
 - the PI's adoption.
 
@@ -23,8 +22,8 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | Plan | `records/tdrg/TDRG_v2_13_EDIT_PLAN.md` (PR #263): rows S1–S8 and C1–C6, decisions D1–D3 | written |
 | Co-owner evaluation of the plan | ChatGPT co-owner, relayed in the session at 12:06 +03:00. Agrees with the order. Stage 1 carries pins, structural fit and scope corrections; stage 2 is compaction only, with a movement map; results, RIDs, grades and OPEN states are preserved; the TDR-6 relational question is not a closing condition | not a repository record |
 | PI decisions | "1- a 2-a 3-a" (13 Nov 2026, 12:23 +03:00): D1 (a), §1 as readouts; D2 (a), §2 history only; D3 (a), §A.sim to §8. Recorded in plan §7 | given |
-| Stage 1 review | ChatGPT co-owner (change-focused): `records/tdrg/` review record on PR #268 (head `da61a6c8`, open at round 2); GitHub review `5906863206` on PR #265. Round 1 (intermediate `b24c17cc…cdcc`): CONDITIONAL PASS — R1 (methodological): the unpaired `[RESULT]` moved into live §8; R2 (record): the RID-growth metric | R1 and R2 applied in round 2 (§3a); readback *(to be filled)* |
-| Stage 2 review | ChatGPT co-owner (mechanical), same record: round-1 candidate `1691a136…ee18` reproduced byte for byte by an independent implementation of the 43 operations | PASS on round 1; stage 2 rebuilt from the round-2 intermediate (§3a) |
+| Stage 1 review | ChatGPT co-owner (change-focused): `records/tdrg/` review record on PR #268 (head `da61a6c8`, open at round 2); GitHub review `5906863206` on PR #265. Round 1 (intermediate `b24c17cc…cdcc`): CONDITIONAL PASS — R1 (methodological): the unpaired `[RESULT]` moved into live §8; R2 (record): the RID-growth metric | R1 and R2 applied in round 2 (§3a). Readback on head `f38c538` (PR #268 head `c9925513`; GitHub review `5906970313`): PASS — R1 and R2 closed; no objection to the narrowing of D3 (a) to the table; review closed |
+| Stage 2 review | ChatGPT co-owner (mechanical), same record: round-1 candidate `1691a136…ee18` reproduced byte for byte by an independent implementation of the 43 operations | PASS on round 1; stage 2 rebuilt from the round-2 intermediate (§3a). Readback: candidate `c89eb81b…0a14` reproduced byte for byte by the independent implementation (43/43 operations; 81 RID declarations and 21 OPEN records kept) — PASS |
 | Row check | atlas owner | *(to be filled)* |
 | Adoption, merge commit, tag `tdrg-v2.13` | PI | *(to be filled)* |
 
@@ -137,7 +136,7 @@ The base is the stage-1 intermediate. The operations are:
 
 | # | Step | Who | State |
 |---|---|---|---|
-| 1 | Stage-1 and stage-2 reviews | ChatGPT co-owner | *(to be filled)* |
+| 1 | Stage-1 and stage-2 reviews | ChatGPT co-owner | PASS after round 2 (PR #268, reviews `5906863206`, `5906970313`) |
 | 2 | Row check | atlas owner | *(to be filled)* |
 | 3 | Adoption decision (§10) | PI | *(to be filled)* |
 | 4 | Publication commit: header *Document status* ADOPTED with this record; `BASELINE.md` row | TDR-G co-owner | *(to be filled)* |
