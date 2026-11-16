@@ -3,23 +3,24 @@
 
     python3 -I evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py [--intermediate FILE] [--controls]
 
-Run from the repository root; needs the tags tdrg-v2.12.15, az-v0.6, az-v0.7, az-v0.8, ofn-v0.12 and
+Run from the repository root; needs the tags tdrg-v2.12.15, az-v0.6, az-v0.7, az-v0.8, az-v0.9, ofn-v0.12 and
 programme-v1.4. Reads the base from the tag, the intermediate from --intermediate FILE (default
-dsn/RTG_DISCRETE_GENESIS_DSN.md; after stage 2, pass the stage-1 commit's bytes:
-`git show fd96f8a0b33a1236989b9e941b1c1c0e2381f2db:dsn/RTG_DISCRETE_GENESIS_DSN.md > FILE`) and the edit log from evidence/tdrg/v2.13/stage1/edit_log.json.
+dsn/RTG_DISCRETE_GENESIS_DSN.md; after stage 2, pass the current stage-1 intermediate's bytes),
+and the edit log from evidence/tdrg/v2.13/stage1/edit_log.json.
 
 Gates
   C0 base       the tag bytes have the asserted SHA-256
   C1 build      the builder, run on the base, reproduces the intermediate and the edit log byte for byte
   C2 confined   every base paragraph that changed contains an anchor of a logged edit (no undeclared change)
   C3 RIDs       every [RID: …] declaration of the base live text survives once; new identifiers are only the
-                declared ones
+                declared external references, not new TDR-G results
   C4 tags       outside §1 and the header, the truth-tag multiset changes exactly by the declared amounts
-                (correction labels and the superseded hypothesis out; the §A.sim copy in)
+                (correction labels and the superseded hypothesis out; the §A.sim copy and AZ source grade in)
   C5 OPEN       every OPEN record keeps its heading, RID and Status line
-  C6 pins       AZ-ALG-ANTIPODAL-LOWORDER byte-identical at az-v0.6/v0.7/v0.8; the OFN v0.12 rows the new
-                pins name exist; AZ v0.8 cites tdrg-v2.12.14 in its §8; Programme v1.4 does not carry the
-                owner-review tasks; no stale pin or stale v2.13 promise is left in the live text
+  C6 pins       AZ-ALG-ANTIPODAL-LOWORDER byte-identical at az-v0.6/v0.7/v0.8/v0.9; the OFN v0.12 rows the new
+                pins name exist; AZ v0.9 cites tdrg-v2.12.15 in §8 with its token-law rows; its numerical
+                diagnostic stays AZ-owned; Programme v1.4 does not carry the owner-review tasks;
+                no stale pin or stale v2.13 promise is left in the live text
   C7 §1         word count (dsn_lint method) at most 420; every RID it names is declared in the live text;
                 every statement dropped from §1 still has its home outside §1 (home table below)
   C8 §A.sim     the §8 copy of the table equals the Appendix A table byte for byte, and the closing
@@ -42,9 +43,11 @@ B = importlib.util.module_from_spec(spec); spec.loader.exec_module(B)
 RID_DECL = re.compile(r"\[RID: ([A-Z0-9-]+)\]")
 RID_ANY = re.compile(r"\b(?:TDRG|RTG-OFN|AZ)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b")
 TAG = re.compile(r"`\[[A-Z][A-Za-z -]*?\]`")
-NEW_IDS = {"RTG-OFN-OPEN-DISC-INTERACTION"}
+# Existing foreign owner identifiers newly mentioned in the live interface record.
+NEW_IDS = {"RTG-OFN-OPEN-DISC-INTERACTION", "AZ-NUM-TOKRES-S1"}
 TAG_OUT = {"`[COR]`": 11, "`[REVISED]`": 1, "`[RESULT]`": 1}
-TAG_IN = {"`[ALG]`": 3, "`[HEUR]`": 1, "`[FAIL]`": 1, "`[NUM]`": 1, "`[ENG]`": 5}
+# NUM diagnostic is AZ's source grade in the consumer row, not a TDR-G claim grade.
+TAG_IN = {"`[ALG]`": 3, "`[HEUR]`": 1, "`[FAIL]`": 1, "`[NUM]`": 1, "`[ENG]`": 5, "`[NUM diagnostic]`": 1}
 # statements of the base §1 that the new §1 drops or shortens, and a string that must still occur at
 # their home outside §1 (D1 (a), S6)
 HOMES = [
@@ -127,7 +130,7 @@ def gates(base, cand, log):
     lost = sorted(r for r in db if dc[r] != db[r])
     ids_b, ids_c = set(RID_ANY.findall(live(base))), set(RID_ANY.findall(live(cand)))
     newid = ids_c - ids_b
-    g("C3 RIDs", not lost and newid == NEW_IDS, "lost/changed declarations %s; new identifiers %s" % (lost, sorted(newid)))
+    g("C3 RIDs", not lost and newid == NEW_IDS, "lost/changed declarations %s; new external references %s" % (lost, sorted(newid)))
 
     def tags(t):
         return collections.Counter(TAG.findall(t[t.index("\n## §2."):t.index("\n## Appendix A")]))
@@ -144,19 +147,29 @@ def gates(base, cand, log):
       "changed: %s" % sorted(k for k in ob if ob.get(k) != oc.get(k)))
 
     az = {t: [l for l in git("%s:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md" % t).split("\n")
-              if "There is no closed non-backtracking walk of length 2 or 3" in l] for t in ("az-v0.6", "az-v0.7", "az-v0.8")}
+              if "There is no closed non-backtracking walk of length 2 or 3" in l] for t in ("az-v0.6", "az-v0.7", "az-v0.8", "az-v0.9")}
     ofn = git("ofn-v0.12:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md")
-    az8 = git("az-v0.8:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md")
+    az9 = git("az-v0.9:dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md")
     prog = git("programme-v1.4:dsn/RTG_PROGRAMME_OVERVIEW.md")
     L = live(cand)
-    stale = [s for s in ("az-v0.7", "az-v0.6", "FOUNDATIONS_v0.6", "`RTG_ONTOLOGICAL_FOUNDATIONS` v0.7", "DSN_METHODOLOGY_v1.2",
-                         "deferred to v2.13", "deferred** to v2.13", "v2.13 layout work", "AZ v0.7", "declared v1.2") if s in L]
-    ok6 = (all(len(v) == 1 for v in az.values()) and az["az-v0.6"] == az["az-v0.7"] == az["az-v0.8"]
+    stale = [s for s in ("az-v0.8", "az-v0.7", "az-v0.6", "FOUNDATIONS_v0.6", "`RTG_ONTOLOGICAL_FOUNDATIONS` v0.7", "DSN_METHODOLOGY_v1.2",
+                         "deferred to v2.13", "deferred** to v2.13", "v2.13 layout work", "AZ v0.8", "AZ v0.7", "declared v1.2") if s in L]
+    az_rows = [l for l in L.split("\n") if l.startswith("| AZ v0.9 (`az-v0.9`) |")]
+    consumer_ok = (len(az_rows) == 1
+                   and "at `tdrg-v2.12.15`" in az_rows[0]
+                   and all(r in az_rows[0] for r in ("TDRG-ALG-EVENT-INVENTORY", "TDRG-ALG-TOKEN-CENSUS-LAW", "TDRG-ALG-PARENT-CHILD-PHASE"))
+                   and "AZ-NUM-TOKRES-S1 remains an AZ-owned `[NUM diagnostic]`" in az_rows[0]
+                   and "not a TDR-G result or a demonstrated growth mechanism" in az_rows[0]
+                   and "[RID: AZ-NUM-TOKRES-S1]" not in L)
+    ok6 = (all(len(v) == 1 for v in az.values()) and az["az-v0.6"] == az["az-v0.7"] == az["az-v0.8"] == az["az-v0.9"]
            and "**OPEN-OFN-2 — Discrete interaction and policy selection** [RID: RTG-OFN-OPEN-DISC-INTERACTION]" in ofn
            and re.search(r"IMP-O08-06\*\* \[RID: TDRG-ALG-LEM-NOANNIHIL\]", ofn) and re.search(r"IMP-O08-14\*\* \[RID: TDRG-DEF-CONV-TICK\]", ofn)
-           and "### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`) — clauses IMP-B" in az8
-           and "counting observables" not in prog.lower() and "(`az-v0.8`)" in L and not stale)
-    g("C6 pins", ok6, "AZ entry sha %s at v0.6/v0.7/v0.8; stale strings %s" % (sha(az["az-v0.8"][0])[:12] if az["az-v0.8"] else "-", stale))
+           and "### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (`tdrg-v2.12.15`) — clauses IMP-B" in az9
+           and "[RID: TDRG-ALG-EVENT-INVENTORY; TDRG-ALG-TOKEN-CENSUS-LAW]" in az9
+           and "[RID: TDRG-ALG-PARENT-CHILD-PHASE]" in az9 and "AZ-NUM-TOKRES-S1" in az9
+           and "counting observables" not in prog.lower() and "(`az-v0.9`)" in L and consumer_ok and not stale)
+    g("C6 pins", ok6, "AZ entry sha %s at v0.6/v0.7/v0.8/v0.9; consumer scope %s; stale strings %s" %
+      (sha(az["az-v0.9"][0])[:12] if az["az-v0.9"] else "-", consumer_ok, stale))
 
     s1 = section(cand, "## §1.")
     words = len(s1.split()) - 4
@@ -165,6 +178,7 @@ def gates(base, cand, log):
     rest = outside1(cand)
     nohome = [n for n, s, _ in HOMES if s not in rest]
     g("C7 §1", words <= 420 and not undeclared and not nohome,
+      "%d words; %d RIDs named, undeclared %s; %d homes checked, missing %s" % (words, len(rids), sorted(rids - set(RID_DECL.findall(L)))), len(HOMES), nohome) if False else
       "%d words; %d RIDs named, undeclared %s; %d homes checked, missing %s" % (words, len(rids), undeclared, len(HOMES), nohome))
 
     a = cand.index("### §A.sim — Simulation Artifact Evolution `[ENG]`")
@@ -196,7 +210,7 @@ def report(R):
 
 def controls(base, cand, log):
     M = [
-        ("K1 AZ pin back to az-v0.7", "C6", lambda t: t.replace("(`az-v0.8`)", "(`az-v0.7`)", 1)),
+        ("K1 AZ pin back to az-v0.8", "C6", lambda t: t.replace("(`az-v0.9`)", "(`az-v0.8`)", 1)),
         ("K2 tag changed in an untouched paragraph", "C4",
          lambda t: t.replace("`[NUM strong]` **Tail suppression with rare locking failure.**", "`[ALG]` **Tail suppression with rare locking failure.**", 1)),
         ("K3 RID declaration dropped", "C3", lambda t: t.replace("[RID: TDRG-THM-RECURRENCE] ", "", 1)),
