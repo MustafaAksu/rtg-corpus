@@ -1,0 +1,9 @@
+registered package: SHA256SUMS OK and equal to the authorised hash 25b796b3890a0e49c8f99f91a8866758b826c87a40dc5918b35928b5fb35eb4b
+campaign directory: HASHES.txt OK (13 files); SHA-256 of HASHES.txt = 3e211e6a7bab27b9e13af0dd5c0a93128b79c464d64470ea4d6b86775314a7e7
+marker: plan stage2, confirmatory True, jobs 1, resumed False, fixtures_skipped False, pilot_supplied True, python 3.12.3
+marker: started 2026-11-14T20:14:02Z, finished 2026-11-15T15:51:22Z, 70640 s, records {"S2-C240": 9400, "S2-C242": 7500, "S2-C480": 9400}
+marker: the nine SHA-256 values it records equal the bytes in this repository: True
+record files: 26300 records in 3 files
+registered Stage 2 analysis: exit code 0
+rerun output is byte-identical to the output produced on the campaign machine
+VERIFY PASS
