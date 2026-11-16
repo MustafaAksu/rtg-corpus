@@ -1,0 +1,11 @@
+AZ mechanism design - first-contact instrument check ([SESSION], development)
+script sha256 c5b797832f22fd7fe9641a71fdb6d6dcc244d3072c23e5defd0c8d7878665630
+engine 4c94d8741dc43780  orientation ca59e9b9a1bb260a  profile P1  policy bound_symmetric  seed 20261116
+targeted cases: 35, closed form = scan in all: True
+random states: 5 cells x 600 native states, each with its slot variants; closed form = scan: 31800 of 31800
+closed form = pinned engine (first post-advance, pre-interaction edge): 10329 agreements
+engine-checked states with no contact in ticks 1..N: 0
+runner clock fe vs tau_contact: fe = tau_contact 10241; fe > tau_contact 88; no counted event within N+2 ticks 0
+  lag fe - tau_contact (10 = 10 or more): {1: 33, 2: 23, 3: 21, 4: 8, 7: 3}
+component types at tau_contact (most common 8): [(('single_edge',), 6435), (('path_p3',), 2787), (('single_edge', 'single_edge'), 650), (('path_p4',), 195), (('star_k1c_c3',), 174), (('cycle_c4_bound',), 88)]
+RESULT: PASS
