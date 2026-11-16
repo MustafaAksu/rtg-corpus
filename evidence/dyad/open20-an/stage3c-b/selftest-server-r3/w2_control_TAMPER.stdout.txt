@@ -1,0 +1,7 @@
+ACC_relative_radius_below_10_percent PASS
+C0_leading_coefficients PASS
+G0_stage2_input PASS
+M_circle_bounds_and_tails PASS
+SND_independent_values_inside_enclosures FAIL
+S_structural_zeros_consistent PASS
+RESULT FAIL (control TAMPER) | development run; not a certificate

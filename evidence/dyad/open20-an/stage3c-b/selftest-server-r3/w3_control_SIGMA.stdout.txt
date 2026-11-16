@@ -1,0 +1,5 @@
+ENG_engine PASS
+G0_stage2_input PASS
+SND_independent_semantics PASS
+Z2_every_piece_out_or_pass FAIL
+RESULT FAIL (control SIGMA) | development run; not a certificate

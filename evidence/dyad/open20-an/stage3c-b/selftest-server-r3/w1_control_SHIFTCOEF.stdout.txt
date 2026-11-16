@@ -1,0 +1,6 @@
+G0_stage2_input PASS
+W1a_coefficient_balls PASS
+W1b_identity_plus_order_four PASS
+W1c_defect_vanishes_to_order_43_raw FAIL
+W1d_coefficients_decay PASS
+RESULT FAIL (control SHIFTCOEF) | development run; not a certificate

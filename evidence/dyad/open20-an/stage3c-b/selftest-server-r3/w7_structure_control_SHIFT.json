@@ -1,0 +1,30 @@
+{
+ "all_pass": false,
+ "control": "SHIFT",
+ "gates": {
+  "LEAD_constants_and_real_structure": false,
+  "LIN_identity_plus_degree_3": true,
+  "P4_no_w2_in_Fz": true,
+  "S5W_Fw_minus_w_weighted_order_ge_5": true,
+  "S5Z_Fz_minus_z_weighted_order_ge_4": true
+ },
+ "info": {
+  "Fw_monomials_weighted_order_le_5": {
+   "(0, 1)": "1",
+   "(1, 2)": "-2/5 + 103*sqrt(3)*I/150",
+   "(3, 1)": "103/300 - 103*sqrt(3)*I/1500",
+   "(5, 0)": "-2321/54000 - 2029*sqrt(3)*I/810000"
+  },
+  "Fz_monomials_weighted_order_le_5": {
+   "(1, 0)": "1",
+   "(2, 1)": "-2/5 - 103*sqrt(3)*I/150",
+   "(3, 1)": "-283/1500 - 289*sqrt(3)*I/1500",
+   "(4, 0)": "-91/1200 + 203*sqrt(3)*I/6000",
+   "(5, 0)": "-13/15000 - 1193*sqrt(3)*I/405000"
+  },
+  "offending_Fw": [],
+  "offending_Fz": [],
+  "total_degree": 5
+ },
+ "script": "dyad_open20_an_stage3c_w7_structure.py"
+}
