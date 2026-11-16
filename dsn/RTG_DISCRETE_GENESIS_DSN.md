@@ -4,7 +4,7 @@
 **Date:** 13 November 2026
 **Scope:** Fully discrete pre-metric relational universe on $\mathbb{Z}_N$. Interaction from relational distinguishability; no continuous coordinates; no imported continuous coefficients.
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5): standard §0–§9 with Appendices A and B and the scientific Appendix C (TDR-T requirements).
-**Document status:** DRAFT — stage-2 candidate of v2.13; not adopted. `tdrg-v2.12.15` governs until the PI adopts and tags this edition.
+**Document status:** ADOPTED by the PI on 16 November 2026; release record `records/tdrg/TDRG_v2_13_RELEASE_RECORD.md`; tag `tdrg-v2.13`.
 **Supersedes:** `RTG_DISCRETE_GENESIS_DSN` v2.12.15 (tag `tdrg-v2.12.15`, SHA-256 `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64`)
 **Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Ontological Foundations v0.12 (`ofn-v0.12`) · DSN Methodology v1.4 (`methodology-v1.4`)
 **DSN Methodology:** DSN_METHODOLOGY_v1.4 (`methodology-v1.4`)

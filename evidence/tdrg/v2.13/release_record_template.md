@@ -1,8 +1,6 @@
 # Discrete Genesis (TDR-G) v2.13 — Release Record
 
-**Status:** DRAFT, round 2. The candidate is built in two stages and checked. The ChatGPT co-owner reviewed round 1: stage 1 CONDITIONAL PASS, stage 2 PASS. Its two corrections are applied in round 2 (§3a), and the co-owner's readback of round 2 is PASS (review closed). Before adoption it needs:
-- the atlas owner's row check;
-- the PI's adoption.
+**Status:** ADOPTED by the PI on 16 November 2026 (§10), on the candidate bytes `6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88`. The published file differs from them only in the header's *Document status* line (publication transform, §2). The merge commits and the annotated tag `tdrg-v2.13` are still to be made; until the tag exists, `tdrg-v2.12.15` governs.
 
 **Date:** 13 November 2026.
 
@@ -24,8 +22,9 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | PI decisions | "1- a 2-a 3-a" (13 Nov 2026, 12:23 +03:00): D1 (a), §1 as readouts; D2 (a), §2 history only; D3 (a), §A.sim to §8. Recorded in plan §7 | given |
 | Stage 1 review | ChatGPT co-owner (change-focused): `records/tdrg/` review record on PR #268 (head `da61a6c8`, open at round 2); GitHub review `5906863206` on PR #265. Round 1 (intermediate `b24c17cc…cdcc`): CONDITIONAL PASS — R1 (methodological): the unpaired `[RESULT]` moved into live §8; R2 (record): the RID-growth metric | R1 and R2 applied in round 2 (§3a). Readback on head `f38c538` (PR #268 head `c9925513`; GitHub review `5906970313`): PASS — R1 and R2 closed; no objection to the narrowing of D3 (a) to the table; review closed |
 | Stage 2 review | ChatGPT co-owner (mechanical), same record: round-1 candidate `1691a136…ee18` reproduced byte for byte by an independent implementation of the 43 operations | PASS on round 1; stage 2 rebuilt from the round-2 intermediate (§3a). Readback: candidate `c89eb81b…0a14` reproduced byte for byte by the independent implementation (43/43 operations; 81 RID declarations and 21 OPEN records kept) — PASS |
-| Row check | atlas owner: `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` (PR #277, merged to `main`). First check at head `fba3ea1`: build sound and reproducible; F1 recommended. Follow-up at head `40d8235`: F1 and F2 closed; ACCEPT FOR ADOPTION (atlas side) of candidate `c79898f9…36f4` | superseded by §3c; re-check of the current candidate *(to be filled)* |
-| Adoption, merge commit, tag `tdrg-v2.13` | PI | *(to be filled)* |
+| Row check | atlas owner: `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` (PR #277, merged to `main`). First check at head `fba3ea1`: build sound and reproducible; F1 recommended. Follow-up at head `40d8235`: F1 and F2 closed; ACCEPT FOR ADOPTION (atlas side) of candidate `c79898f9…36f4` | superseded by §3c. **Round 4** (head `811dc6a`; `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` §7, PR #291): **ACCEPT FOR ADOPTION** (atlas side) of `6a4b94d5…de88`. Clean-worktree rerun byte-identical (both stages, C0–C10, K1–K10, map, compaction check, P0/N1–N8); four pin lines differ from `c79898f9…36f4`; F5: the new bytes need their own PI decision (given, below) |
+| Adoption | PI: "TDR-G v2.13'ü `6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88` baytlarıyla benimsiyorum." (project conversation, 16 Nov 2026, 18:20 +03:00; relayed verbatim by the atlas owner on PR #265). It supersedes the decision of 15:45 +03:00 ("2- Benimsiyorum"), which named the superseded candidate `c79898f9…36f4` | given (§10) |
+| Merge commits, tag `tdrg-v2.13` | PI | *(to be filled after the tag)* |
 
 ## 2. Identities and build
 
@@ -33,7 +32,9 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 |---|---|---|
 | Base (adopted v2.12.15) | `git show tdrg-v2.12.15:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64` |
 | Stage-1 intermediate (a build stage, not an edition) | `git show b7687f11c38f8adc5af2e4d42ff5c74a4e7f2dce:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb` |
-| **Candidate v2.13** | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `{{H:dsn/RTG_DISCRETE_GENESIS_DSN.md}}` |
+| Candidate v2.13 (adopted bytes, stage-2 output) | stage-2 builder output; `git show 7f02c06:dsn/RTG_DISCRETE_GENESIS_DSN.md` | `6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88` |
+| **Published v2.13** (the adopted bytes with the *Document status* line ADOPTED) | `dsn/RTG_DISCRETE_GENESIS_DSN.md` | `{{H:dsn/RTG_DISCRETE_GENESIS_DSN.md}}` |
+| Publication transform | `evidence/tdrg/v2.13/publish_tdrg_v2_13.py` (`--check` undoes the one line and asserts the adopted bytes) | `{{H:evidence/tdrg/v2.13/publish_tdrg_v2_13.py}}` |
 | Stage-1 builder | `evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py` | `{{H:evidence/tdrg/v2.13/stage1/build_tdrg_v2_13_stage1.py}}` |
 | Stage-1 checker | `evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py` | `{{H:evidence/tdrg/v2.13/stage1/check_tdrg_v2_13_stage1.py}}` |
 | Stage-1 edit log (29 edits) | `evidence/tdrg/v2.13/stage1/edit_log.json` | `{{H:evidence/tdrg/v2.13/stage1/edit_log.json}}` |
@@ -175,15 +176,26 @@ The base is the stage-1 intermediate. The operations are:
 | # | Step | Who | State |
 |---|---|---|---|
 | 1 | Stage-1 and stage-2 reviews | ChatGPT co-owner | PASS after round 2 (PR #268, reviews `5906863206`, `5906970313`) |
-| 2 | Row check | atlas owner | ACCEPT of `c79898f9…36f4` (PR #277); re-check of the current candidate *(to be filled)* |
-| 3 | Adoption decision (§10) | PI | *(to be filled)* |
-| 4 | Publication commit: header *Document status* ADOPTED with this record; `BASELINE.md` row | TDR-G co-owner | *(to be filled)* |
+| 2 | Row check | atlas owner | ACCEPT of `c79898f9…36f4` (PR #277); round 4 ACCEPT of `6a4b94d5…de88` (PR #291) |
+| 3 | Adoption decision (§10) | PI | given, 16 Nov 2026, 18:20 +03:00 |
+| 4 | Publication commit: header *Document status* ADOPTED with this record; `BASELINE.md` row | TDR-G co-owner | done on this branch (published hash in §2) |
 | 5 | Merge commit (not squash) and annotated tag `tdrg-v2.13` with the published SHA-256 | PI | *(to be filled)* |
 | 6 | Notices (§7) | TDR-G co-owner, after the tag | *(to be filled)* |
 
 ## 10. Adoption decision
 
-*(to be filled by the PI)*
+The PI adopts Discrete Genesis v2.13 on 16 November 2026: "TDR-G v2.13'ü `6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88` baytlarıyla benimsiyorum." (18:20 +03:00, project conversation; relayed verbatim by the atlas owner on PR #265.)
+
+- **Bytes adopted:** the stage-2 candidate `6a4b94d5…de88`, 157,864 bytes.
+- **Published file:** the adopted bytes with one line changed, the header's *Document status*, from DRAFT to ADOPTED. Its SHA-256 is the "Published v2.13" row of §2. `publish_tdrg_v2_13.py --check` proves the relation.
+- **Superseded decision:** the decision of 15:45 +03:00, which named `c79898f9…36f4`.
+- **Basis:**
+  - the plan and decisions D1–D3;
+  - the ChatGPT co-owner's reviews, rounds 1–4, all PASS after correction;
+  - the atlas owner's row check, round 4, ACCEPT.
+- **Status after adoption:** no scientific status changes (TDR-6 stays ACTIVE — PARTIAL).
+- **Separate questions, unchanged:** XFER-O08-01, `largest_center` / TDR-19, and the crystallization grade.
+- **Governing edition:** this edition governs from the annotated tag `tdrg-v2.13` on the merge commit of PR #265. Until then `tdrg-v2.12.15` governs.
 
 ## 11. Open items carried forward
 
