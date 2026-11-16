@@ -178,7 +178,6 @@ def gates(base, cand, log):
     rest = outside1(cand)
     nohome = [n for n, s, _ in HOMES if s not in rest]
     g("C7 §1", words <= 420 and not undeclared and not nohome,
-      "%d words; %d RIDs named, undeclared %s; %d homes checked, missing %s" % (words, len(rids), sorted(rids - set(RID_DECL.findall(L)))), len(HOMES), nohome) if False else
       "%d words; %d RIDs named, undeclared %s; %d homes checked, missing %s" % (words, len(rids), undeclared, len(HOMES), nohome))
 
     a = cand.index("### §A.sim — Simulation Artifact Evolution `[ENG]`")
