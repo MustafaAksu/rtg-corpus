@@ -1,0 +1,81 @@
+AZ v0.10 edit log
+base az-v0.9 c198a8bbddb23ce0d546c3ed03bddcdcf02dd83b974da7651a89a3fec5ac7598
+result sha256 7336ab384288e4cffc58ae3b550a6567e08252ec340f5f657a0276686f256cfa, 111765 bytes
+base lines: 631; unchanged and in order: 618; replaced: 6; edited in place: 7
+
+E01 H-title      set-line     
+    old: # RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.9
+    new: # RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.10
+    why: edition
+E02 H-date       set-line     
+    old: **Date:** 14 November 2026  
+    new: **Date:** 16 November 2026  
+    why: edition
+E03 H-status     set-line     
+    old: **Document status:** ADOPTED — PI, 14 November 2026 (the Action 1 Stage 1 result as an AZ-owned `[NUM diagnostic]`, `AZ-NUM-TOKRES-S1`; owner synchronization to `tdrg-v2.12.15`). Adoption record: `records/az/AZ_v0_9_RELEASE_RECORD.md`.  
+    new: **Document status:** DRAFT — candidate of v0.10; not adopted. `az-v0.9` governs until the PI adopts and tags this edition.  
+    why: edition
+E04 H-supersedes set-line     
+    old: **Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN` v0.8 (tag `az-v0.8`, SHA-256 `146fcc2837f69e3d6a4fd626d29b5b038c7948c239eaedf7e55b57e74dd0ee76`)  
+    new: **Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN` v0.9 (tag `az-v0.9`, SHA-256 `c198a8bbddb23ce0d546c3ed03bddcdcf02dd83b974da7651a89a3fec5ac7598`)  
+    why: edition
+E05 H-summary    sub          
+    old: One AZ-owned `[NUM diagnostic]` on seed-token resonance in the TDR-G dynamics is registered (§4.2.1); by the PI's outcome rule it changes neither the maturity level nor any OPEN.
+    new: Two AZ-owned `[NUM diagnostic]` entries on seed-token resonance in the TDR-G dynamics are registered, at $N=120,122$ (§4.2.1) and at $N=240,242,480$ (§4.2.2); by the PI's outcome rule they change neither the maturity level nor any OPEN.
+    why: status summary names the second diagnostic
+E06 F            set-line     
+    old: *END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.9*
+    new: *END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.10 — DRAFT candidate; adoption pending; `az-v0.9` governs until adoption and tag.*
+    why: edition
+E07 S0.1-row     sub          
+    old: | Seed-token resonance diagnostic computed on the TDR-G engine (Action 1) | this DSN, Thread B §4.2.1 | `[NUM diagnostic]`, AZ-owned, scoped to its cells,
+    new: | Seed-token resonance diagnostics computed on the TDR-G engine (Action 1, Stages 1 and 2) | this DSN, Thread B §4.2.1, §4.2.2 | `[NUM diagnostic]`, AZ-owned, each scoped to its cells,
+    why: routing row covers both entries
+E08 S0.2-B       sub          
+    old: One item of this thread is owned here:
+    new: Two items of this thread are owned here:
+    why: current-state readout: count
+E09 S0.2-B2      sub          
+    old: mechanism not established; no statement beyond its cells, horizon and threshold.
+    new: and `AZ-NUM-TOKRES-S2` `[NUM diagnostic]` — the same contrast in the registered cells $(N,k)=(240,16),(242,16),(480,32)$, on $M\ge\theta(N)$ at a calibrated horizon and on $M\ge100$ at tick 800: all ten contrasts of its confirmatory family 
+    why: current-state readout of the second diagnostic
+E10 S1.1-crit    sub          
+    old: The seed-token resonance diagnostic (§4.2.1) is an arithmetic condition with an effect on the dynamics, at two cells and one horizon; by the PI's outcome rule of 12 November 2026 it does not by itself meet this criterion or change the matur
+    new: The seed-token resonance diagnostics (§4.2.1, §4.2.2) record an arithmetic condition with an effect on the dynamics, in five cells from $N=120$ to $N=480$ at their registered horizons; by the PI's outcome rule of 12 November 2026 they do no
+    why: the criterion's status is not changed; the second diagnostic is named with the rule that limits it
+E11 S1.1-crit2   sub          
+    old: and whether it bears on the criterion is left to a separate decision.
+    new: and whether they bear on the criterion is left to a separate decision.
+    why: agreement with the plural subject
+E12 S4.2-head    set-line     
+    old: ### §4.2 Thread B — Discrete $\mathbb{Z}_N$ Arithmetic Structure (bridge-candidate family; one AZ-owned diagnostic)
+    new: ### §4.2 Thread B — Discrete $\mathbb{Z}_N$ Arithmetic Structure (bridge-candidate family; AZ-owned diagnostics)
+    why: heading no longer says 'one'; section number unchanged
+E13 S4.2-status  sub          
+    old: One item of this thread is owned by this DSN: the diagnostic of §4.2.1.
+    new: Two items of this thread are owned by this DSN: the diagnostics of §4.2.1 and §4.2.2.
+    why: ownership of the new subsection stated
+E14 S4.2.2       insert-before
+    old: ### §4.3 Thread C — Graph/Transfer-Zeta Diagnostics
+    new: 29 lines
+    why: the Stage 2 diagnostic block (PI, 16 Nov 2026; review 5915724946)
+E15 S8-census    sub          
+    old: the per-tick check of `AZ-ART-TOKRES-S1` tested
+    new: the per-tick checks of `AZ-ART-TOKRES-S1` and `AZ-ART-TOKRES-S2` tested
+    why: local use names the second check
+E16 S8-phase     sub          
+    old: of the intervention of §4.2.1;
+    new: of the interventions of §4.2.1 and §4.2.2;
+    why: local use names the second intervention
+E17 S5           insert-after 
+    old: | **Seed-token resonance diagnostic** (`AZ-NUM-TOKRES-S1`) |
+    new: 1 lines
+    why: high-risk row
+E18 S9           insert-before
+    old: **Two definitions of `G_birth(w)` in the deposited files — recorded, not resolved.**
+    new: 2 lines
+    why: artifact entry
+E19 AppA         insert-before
+    old: ### v0.9 — November 2026
+    new: 2 lines
+    why: version entry
