@@ -2,7 +2,7 @@
 
 **Date:** 16 November 2026. **By:** Claude, atlas owner (advises; does not adopt).
 **Object:** PR #265 `claude/tdrg-v2-13` (draft, head `fba3ea13`): candidate `dsn/RTG_DISCRETE_GENESIS_DSN.md` SHA-256 `c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14` (157,343 bytes, 1,199 lines), built in two stages from `tdrg-v2.12.15` (`1e35be54…2e64`) through the stage-1 intermediate `472e26e9…56ff` (commit `fd96f8a`). Release record `records/tdrg/TDRG_v2_13_RELEASE_RECORD.md` at `fba3ea1`. Co-owner reviews: PR #268 (`5906863206`, `5906970313`, round 2 PASS).
-**Status:** record. **Verdict: the build is sound and reproduces; one correction is recommended before adoption (§3, F1): the edition pins AZ at v0.8 and restates AZ's v0.8 consumer row, but `az-v0.9` was adopted on 14 Nov, after the cycle started.**
+**Status:** record. **Verdict (first check, head `fba3ea1`): the build is sound and reproduces; one correction recommended before adoption (§3, F1). Follow-up at head `40d8235` (§6): F1 and F2 closed — ACCEPT FOR ADOPTION (atlas side).**
 **Reruns:** `evidence/atlas/rowcheck/tdrg_v2_13/`. Owner sources read at their tags (`EV-SRC-READ`). No engine or campaign rerun (`EV-NOT-RERUN`).
 
 ## 1. Independent rerun
@@ -53,3 +53,21 @@ The v0.13 builder asserts that no newer source tag exists. Once `tdrg-v2.13` exi
 ## 5. Asked of the PI
 
 Whether F1 is applied before adoption (recommended) or the edition is adopted as is with the staleness recorded. The merge order (#263 → #268 → #265, or #263 closed unmerged) is the PI's choice. The atlas side has no preference.
+
+## 6. Follow-up, 16 November 2026 — F1 applied (PR #265 head `40d8235`)
+
+**Verdict: F1 and F2 closed. ACCEPT FOR ADOPTION (atlas side) of candidate `c79898f99eaf83eb7b9d98749ec2f168868b664fa2e3f91916d888439a5236f4` (157,768 bytes, 1,199 lines).**
+
+Rerun at the new head (`evidence/atlas/rowcheck/tdrg_v2_13/round3/`):
+- stage 1: intermediate `65c0661d…44b5` (commit `10a8843`), the edit log, C0–C10 and K1–K10, all byte-identical. C6 now requires `az-v0.9`, and K1 (pin back to `az-v0.8`) is caught.
+- stage 2: the candidate, the 43-operation map, the compaction check and P0/N1–N8, all byte-identical.
+
+Between the candidate of the first check (`c89eb81b…0a14`) and this one, exactly four lines differ:
+- 538: the §6.2 pin;
+- 885: the AZ consumer row;
+- 889: governing editions;
+- 1007: the Appendix A entry for v2.13.
+
+The consumer row now states AZ v0.9 §8 as it is: TDR-G cited at v2.12.15, the LEM-SPECCONS generalization followed, and the two token-law rows. `AZ-NUM-TOKRES-S1` is named as AZ-owned and not a TDR-G result. AZ's grade is given in words, so the TDR-G text gains no truth tag for an AZ claim. RIDs are unchanged (81, same set). `pipes/TDRG/20261114-AZ-v0-9-adopted.md` is dispositioned on the branch. The trial merge onto `main` `c9e313f` is clean.
+
+For publication (editorial, no rebuild): the release record's status line still reads "DRAFT, round 2" and lists the row check as needed, and its §1 and §9 row-check cells are "(to be filled)". These can be completed in the publication commit.
