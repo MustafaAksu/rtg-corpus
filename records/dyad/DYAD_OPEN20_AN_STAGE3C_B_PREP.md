@@ -1,6 +1,6 @@
 # DYAD OPEN 20 (analytic branch) — stage 3c-b: preparation record
 
-**Date:** 14–15 November 2026 (finished 15 November, 00:55 +03:00). **By:** Claude, Dyadic DSN owner. **Status:** working record (SESSION). **It is not a run of stage 3c-b and certifies nothing.**
+**Date:** 14–15 November 2026; r2 on 16 November 2026 after the co-owner's review `5915522711` (REVISE; §10). **By:** Claude, Dyadic DSN owner. **Status:** working record (SESSION). **It is not a run of stage 3c-b and certifies nothing.**
 **Authority:** PI decision of 14 November 2026, given in session on the owner's question: preparation of stage 3c-b is authorized — the t_M correction, freezing the code, a run package fixed by SHA-256, and one command block for the PI's Ubuntu server. **The production run and the independent replay are not part of that authorization; each needs a separate decision of the PI.**
 **Governing edition:** `dyad-v6.4.24` (`10fbdacc…bc16`), unchanged. B-an and B-6 are ACTIVE. No statement about the jump or about divergence is drawn from anything here.
 **Basis:** hand-over record of stage 3c-a (§4 commands, §6 scope, §8 prerequisite); proof record §§2–13.
@@ -12,8 +12,9 @@
 | 1 | The t_M prerequisite: the tail threshold of the arc uses the upper bound of \|A₃\| | library, `arc_tail`, one line |
 | 2 | A status line that tells a stage-3c-b run from a development run | library (`run_status`, `run_tail`), two lines in each of nine scripts |
 | 3 | One driver for the whole run, with one acceptance rule and one ledger | `evidence/dyad/scripts/dyad_open20_an_stage3c_b_run.py` |
-| 4 | The manifest of the frozen code and input | `evidence/dyad/open20-an/stage3c-b/MANIFEST_SHA256.txt` |
-| 5 | A complete test of the package in development mode (selftest) | `evidence/dyad/open20-an/stage3c-b/selftest/` |
+| 4 | The manifest of the frozen code and input, and the gate schema | `evidence/dyad/open20-an/stage3c-b/MANIFEST_SHA256.txt`, `GATE_SCHEMA.json` |
+| 5 | A complete test of the package in development mode (selftest, r1 driver) | `evidence/dyad/open20-an/stage3c-b/selftest/` |
+| 6 | Tests of the driver itself (r2) | `evidence/dyad/scripts/dyad_open20_an_stage3c_b_driver_tests.py`, output `driver_tests.json` |
 
 Nothing else in the mathematical code was changed.
 
@@ -25,8 +26,8 @@ Nothing else in the mathematical code was changed.
 
 ## 3. The package
 
-**Identifier:** `DYAD-OPEN20-AN-3CB-1`. **Manifest:** `evidence/dyad/open20-an/stage3c-b/MANIFEST_SHA256.txt`, 17 files, SHA-256 `6014347580008e7ebcbcc422bf8a87e5a5e54ceb9db509fe4bb62db4808a9455`.
-The manifest lists the driver, the ten scripts of the job table, every `dyad_*` module they import (the library, the stage-2 and stage-2b modules, the stage-3b tube sampling), and the stage-2 input `scout_N216_dps840.json`. The driver refuses to run if a listed file differs, or if the list is not exactly this set.
+**Identifier:** `DYAD-OPEN20-AN-3CB-1`. **Manifest (r2):** `evidence/dyad/open20-an/stage3c-b/MANIFEST_SHA256.txt`, 18 files, SHA-256 `e57a1614e7bf4723178195f887706d5ed9c320b2882149e26d6fad971a4a1163`. (r1: 17 files, `60143475…9455`.)
+The manifest lists the driver, the ten scripts of the job table, every `dyad_*` module they import (the library, the stage-2 and stage-2b modules, the stage-3b tube sampling), the stage-2 input `scout_N216_dps840.json`, and the gate schema `GATE_SCHEMA.json`. The driver refuses to run if a listed file differs, or if the list is not exactly this set.
 
 **Frozen environment:** python-flint 0.9.0 (FLINT 3.6.0 in the wheel used here), mpmath 1.3.0, sympy 1.14.0. The driver stops on any other version of these three. The development runs used Python 3.13.16; the Python version is recorded, not fixed.
 
@@ -45,18 +46,35 @@ The manifest lists the driver, the ten scripts of the job table, every `dyad_*` 
 
 Parameters: hand-over record §3; none was changed.
 
-## 4. The acceptance rule
+## 4. The acceptance rule (r2)
 
-A run is **ACCEPTED** iff every job of the table occurs exactly once in the ledger with its expected outcome:
-- positive process: exit code 0, and its output has `all_pass` true and every gate true;
-- control: exit code 1, and its output has `all_pass` false;
-- selftest only: in addition the JSON and the printed output are byte-identical to the committed reference.
+**Gate schema.** `GATE_SCHEMA.json` fixes, for each of the 34 jobs, the exact set of gate names and the exact set of gates that are false: none for a positive process; for a control, its expected failure (for example `SEP_two_disc_test` for `legs_ZEROJUMP`, `Q12_inequality_at_r0` for `seed_BIG`). It was written from the committed reference outputs by the mode `schema` and is part of the manifest.
 
-Before any job starts the driver applies the rule to seven synthetic ledgers and stops if an answer is wrong: one complete ledger (accepted) and six defective ones (rejected) — a positive process with the right output and exit code 1; a missing process; a process recorded twice; a control that passes; a positive process with exit code 0 and a false gate; an output that differs from its reference.
+A run is **ACCEPTED** iff every job of the table occurs exactly once among the records, and its record shows:
+- exit code 0 for a positive process, 1 for a control;
+- exactly the gate names of the schema, each a boolean;
+- `all_pass` a boolean equal to the conjunction of the gates;
+- exactly the false gates of the schema;
+- no error and not skipped;
+- in selftest also: JSON and printed output byte-identical to the committed reference.
 
-The driver writes `LEDGER.json` (mode, the PI's authorization as quoted on the command line, times, manifest, environment, git commit, the result of the rule test, and for every job its command, exit code, time, hashes and gates) and `SHA256SUMS.txt` over every file of the run.
+**Records.** Every job ends with exactly one record. An output that is missing, not JSON, not a JSON object or without a gates object gives an error record. A job whose dependency did not end as expected is not run and gets a skipped record. Dependencies point to earlier jobs, so the queue always empties.
 
-**Modes.** `selftest` (development mode, compared with the committed outputs); `production` and `replay` (need `--pi-authorization`, a clean git checkout and the manifest); `compare` (two run directories: same manifest, both accepted, every output byte-identical).
+**Rule test.** Before any job starts the driver applies the rule to 16 synthetic ledgers built from the schema (one accepted, fifteen rejected) and stops if an answer is wrong. The rejected cases: exit 1 with the right output; a missing process; a process recorded twice; a control that passes; a positive process with exit 0 and a false gate; an output that differs from its reference; the legs without the two-disc gate; `seed_BIG` failing at the wrong gate; a control with every gate true and `all_pass` false; a gate value that is not a boolean; an extra gate; exit code 7; an error record; a skipped job; a record of an unknown job.
+
+The driver writes `LEDGER.json` (mode, the PI's authorization as quoted on the command line, times, manifest, environment, git state, the result of the rule test, and for every job its command, exit code, time, hashes and gates) and `SHA256SUMS.txt` over every file of the run.
+
+**Git.** Production and replay need both git queries to succeed and a clean tree on the package paths. A failing query stops the run; it is never read as a clean tree.
+
+**Modes.** `selftest` (development mode, compared with the committed outputs); `production` and `replay` (need `--pi-authorization`, a readable and clean git checkout and the manifest).
+
+`validate DIR` checks one run directory on its own, from its files. The stored verdict is not trusted:
+- `SHA256SUMS.txt` must list exactly the files with their hashes;
+- each record must name the files of its job and carry their actual hashes;
+- its gates must be those of the actual output;
+- the rule is then applied again, and the stored verdict must equal the result.
+
+`compare A B` validates both directories, requires the manifest of this checkout in both and production against replay (or two selftests), and then compares every output byte for byte.
 
 ## 5. The selftest
 
@@ -81,6 +99,10 @@ The driver writes `LEDGER.json` (mode, the PI's authorization as quoted on the c
 - `compare` reports AGREE for a run directory against an unchanged copy, DISAGREE when one byte of one output is changed, and DISAGREE for the two selftests above because their manifests differ;
 - the environment block of §6 step 2 was executed in a fresh virtual environment here: the driver's environment and manifest checks pass in it.
 
+**r2.** The selftest above ran with the r1 driver (manifest `60143475…9455`); it is kept as a record of that run, and its ledger is in the r1 format, so `validate` of r2 does not accept it. r2 changes only the driver and adds the gate schema; no script of the job table and no module they import changed (the 16 other files of the manifest have the same hashes as in r1). So the 68 outputs of that selftest are the outputs the r2 driver would see. The co-owner's review asked for no new campaign, and none was run. Instead:
+- the six quick real jobs (structure and seed, with their controls) were run through the r2 runner in both modes, and both were accepted;
+- the driver tests of §10 build a run directory from the 68 committed reference outputs and check that it is valid under the r2 rule and schema.
+
 **Not executed:** the modes `production` and `replay` as a whole. Their parts are the ones tested above; the only difference to the selftest inside the scripts is the status line, which was checked on the arc script.
 
 ## 6. How a production run would go (not authorized)
@@ -91,11 +113,12 @@ The driver writes `LEDGER.json` (mode, the PI's authorization as quoted on the c
    python3 -m venv /root/venv-dyad-3cb \
    && /root/venv-dyad-3cb/bin/pip install --no-cache-dir python-flint==0.9.0 mpmath==1.3.0 sympy==1.14.0
    ```
-3. **Selftest on the server** (development mode; recommended before the production run, see §8 item 2):
+3. **Selftest on the server** (development mode; recommended before the production run, see §8 item 2). The manifest pins the package: the block tests its hash before running, and keeps the driver's exit code as the block's status.
    ```bash
    cd /root/rtg-corpus && git fetch origin --tags && git checkout main && git pull --ff-only origin main \
+   && test "$(sha256sum evidence/dyad/open20-an/stage3c-b/MANIFEST_SHA256.txt | cut -d' ' -f1)" = "<the manifest hash of the merged package>" \
    && /root/venv-dyad-3cb/bin/python -I -B evidence/dyad/scripts/dyad_open20_an_stage3c_b_run.py selftest \
-        --out /root/dyad-3cb-selftest --jobs 2
+        --out /root/dyad-3cb-selftest --jobs 2; rc=$?; echo "exit=$rc"; (exit $rc)
    ```
 4. **Production run,** at the commit the PI names:
    ```bash
@@ -132,3 +155,17 @@ As in the hand-over record §6 and the proof record §§11–13:
 - Whether the selftest is run on the server now (it is a development-mode run and produces no certification output).
 - Whether and when stage 3c-b is run; who replays it and where.
 - Independently of both: the LIT request on Proposition 5.3 is filed (`pipes/LIT/20261114-DYAD-lh2012-prop53-scope.md`, PR #269).
+
+## 10. r2 — co-owner review `5915522711` (REVISE), 16 November 2026
+
+The review found no fault in the mathematics or in the development outputs. It found three faults in how the driver accepts runs and handles errors. All three are corrected in the driver; the scripts of the job table are unchanged.
+
+| Finding | Correction | Test (`dyad_open20_an_stage3c_b_driver_tests.py`) |
+|---|---|---|
+| **R1** The rule checked only the gates present, and for a control only exit 1 and `all_pass` false | Gate schema in the manifest: exact gate names and exact false gates per job; `all_pass` must equal the conjunction; booleans only (§4) | RULE: 16 synthetic ledgers, among them the three cases of the review; FIXTURE: the 68 committed outputs satisfy the schema |
+| **R2** `compare` trusted the stored verdicts, lost duplicates, and checked hashes only against the first ledger | `validate` of each directory from its files, then the comparison (§4) | COMPARE: unchanged copy AGREE; seven changes DISAGREE: wrong JSON hash in the ledger, a job recorded twice, exit 7, a gate false in the ledger only, one changed byte with renewed SHA256SUMS, a deleted output, a false gate under a stored ACCEPTED |
+| **R3** A defective output stopped the worker and left a dependent job waiting; a failing `git status` read as clean | Error and skipped records; every job ends with one record; dependencies point backwards; a failing git query stops a strict check (§4) | WORKER: outputs `[]` and non-JSON give error records, the dependent job is skipped and not run, the run ends; GIT: status exit 128 stops the strict check and is not clean |
+
+- **Result:** all five tests PASS (`evidence/dyad/open20-an/stage3c-b/driver_tests.json`; checksums in `DRIVER_TESTS_SHA256SUMS.txt`). They take under a second and use only the standard library. OWNER-RUN.
+- **Server command** (the review's last point): pinned by the manifest hash, and it keeps the driver's exit code (§6 step 3).
+- **Not done:** no campaign run, no selftest with the r2 driver, no production run, no replay.
