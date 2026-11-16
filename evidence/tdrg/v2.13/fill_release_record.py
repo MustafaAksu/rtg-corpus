@@ -38,7 +38,7 @@ out = out.replace("{{SIZE}}", "```\n" + lint.strip() + "\n```\n\nCounting method
                   "**RID growth (review R2).** TDR-G declares no new RID in v2.13 (stage-1 checker C3: every declaration "
                   "is kept and none is added). The lint's `new_rids` counts identifiers new to the text, which are citations "
                   "of other owners' existing RIDs: OFN's `RTG-OFN-OPEN-DISC-INTERACTION` (S3) and AZ's `AZ-NUM-TOKRES-S1` "
-                  "(F1). Growth per new TDR-G RID is therefore N/A; "
+                  "(F1) and `AZ-NUM-TOKRES-S2` (§3c). Growth per new TDR-G RID is therefore N/A; "
                   "the raw lint output above is kept as produced.")
 left = re.findall(r"\{\{[^}]*\}\}", out)
 if left:

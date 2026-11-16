@@ -134,7 +134,7 @@ The PI chose option 1, repin to `az-v0.10`, in the session on 16 Nov 2026. The C
 
 **Policy for later editions:** a newer AZ edition alone does not trigger a rebuild. What decides is whether the cited statement or AZ's use of TDR-G changes.
 
-**Reviews:** the ChatGPT F1 readback, PASS (review `5918564536`, PR #268 `6603997a`), concerned `c79898f9…36f4`. The candidate of this round needs its own bounded readback and the atlas re-check.
+**Reviews:** the ChatGPT F1 readback, PASS (review `5918564536`, PR #268 `6603997a`), concerned `c79898f9…36f4`. The readback of this round, at head `7ca1b3e` (review `5921238501`, PR #268 `b72a7031`), is PASS for candidate `6a4b94d5…de88`. Its one nonblocking point was the S2 entry in the RID-growth note (§8), which is now added; the candidate bytes are unchanged. The atlas re-check is pending.
 
 ## 4. Stage 2 — compaction (43 operations; `movement_map.json`)
 
@@ -213,7 +213,7 @@ growth_per_new_rid: -12801.3
 
 Counting method: the lint script's own (whitespace tokens; §1 between its heading and the next `## `). Stage-1 intermediate: 192,047 bytes.
 
-**RID growth (review R2).** TDR-G declares no new RID in v2.13 (stage-1 checker C3: every declaration is kept and none is added). The lint's `new_rids` counts identifiers new to the text, which are citations of other owners' existing RIDs: OFN's `RTG-OFN-OPEN-DISC-INTERACTION` (S3) and AZ's `AZ-NUM-TOKRES-S1` (F1). Growth per new TDR-G RID is therefore N/A; the raw lint output above is kept as produced.
+**RID growth (review R2).** TDR-G declares no new RID in v2.13 (stage-1 checker C3: every declaration is kept and none is added). The lint's `new_rids` counts identifiers new to the text, which are citations of other owners' existing RIDs: OFN's `RTG-OFN-OPEN-DISC-INTERACTION` (S3) and AZ's `AZ-NUM-TOKRES-S1` (F1) and `AZ-NUM-TOKRES-S2` (§3c). Growth per new TDR-G RID is therefore N/A; the raw lint output above is kept as produced.
 
 ## 9. Steps after adoption
 

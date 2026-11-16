@@ -124,7 +124,7 @@ The PI chose option 1, repin to `az-v0.10`, in the session on 16 Nov 2026. The C
 
 **Policy for later editions:** a newer AZ edition alone does not trigger a rebuild. What decides is whether the cited statement or AZ's use of TDR-G changes.
 
-**Reviews:** the ChatGPT F1 readback, PASS (review `5918564536`, PR #268 `6603997a`), concerned `c79898f9…36f4`. The candidate of this round needs its own bounded readback and the atlas re-check.
+**Reviews:** the ChatGPT F1 readback, PASS (review `5918564536`, PR #268 `6603997a`), concerned `c79898f9…36f4`. The readback of this round, at head `7ca1b3e` (review `5921238501`, PR #268 `b72a7031`), is PASS for candidate `6a4b94d5…de88`. Its one nonblocking point was the S2 entry in the RID-growth note (§8), which is now added; the candidate bytes are unchanged. The atlas re-check is pending.
 
 ## 4. Stage 2 — compaction (43 operations; `movement_map.json`)
 
