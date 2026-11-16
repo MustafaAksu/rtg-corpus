@@ -1,6 +1,6 @@
-# RTG State Atlas v0.13 — acceptance record (draft)
+# RTG State Atlas v0.13 — acceptance record
 
-**Status:** DRAFT — second candidate, review complete: round 1 `5915598211` (ACCEPT WITH CHANGES; §3a), round-2 readback `5917882889` on head `d11f7df` (ACCEPT SCOPED, R1 and R2 closed). Ready for the PI's decision; not accepted. `atlas-v0.12` is the tagged Atlas until the PI accepts this candidate, PR for branch `claude/atlas-v0.13` is merged and the annotated tag `atlas-v0.13` exists and is verified.
+**Status:** ACCEPTED by the PI, 16 Nov 2026 (§4). Review: round 1 `5915598211` (ACCEPT WITH CHANGES; §3a), round-2 readback `5917882889` on head `d11f7df` (ACCEPT SCOPED, R1 and R2 closed). `atlas-v0.12` is the tagged Atlas until the PI accepts this candidate, PR for branch `claude/atlas-v0.13` is merged and the annotated tag `atlas-v0.13` exists and is verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, 14 November 2026, on branch `claude/atlas-v0.13`.
 **Method:** Atlas Method v0.3 (`atlas-method-v0.3`). This is the first edition built under it.
@@ -105,11 +105,16 @@ Also in this round: the snapshot moved to `54cddd7` (§1) and the AZ v0.9 notice
 
 The frozen inputs stay `tdrg-v2.12.15` and `az-v0.9`. TDR-G v2.13 (PR #265) enters through the Atlas v0.14 refresh after its tag; this candidate is not re-pinned.
 
-**PI:** pending.
+**PI:** accepted. Mustafa, project conversation, 16 Nov 2026, 15:45 +03:00, answering the question "Atlas v0.13'ü (`208ddd96…9045`) benimsiyor musunuz?": "1- Benimsiyorum". Accepted bytes: `atlas/RTG_STATE_ATLAS.md` SHA-256 `208ddd9622b2ea9d291b40dbc103d6eaa3f357aa0e23b2de6190df2c0f879045`. In the same message the PI also adopted TDR-G v2.13 ("2- Benimsiyorum"); that edition is published by the TDR-G track and enters the Atlas through the v0.14 refresh.
 
-## 5. Publication (pending; the PI executes)
+## 5. Publication (the PI executes)
 
-After acceptance: BASELINE row for ATLAS; merge (merge commit) and annotated tag `atlas-v0.13` in one CLI block; tag verification record; closure of the ATLAS inbox item.
+1. `BASELINE.md`: ATLAS row set to v0.13 with the hash of §1 and this record (done on the branch with this record).
+2. Merge PR #272 into `main` with a merge commit, not squash.
+3. Annotated tag `atlas-v0.13` on that merge commit, after checking the file hash on `main`.
+4. The Atlas owner closes the two dispositioned `pipes/ATLAS/` items and writes the tag verification.
+
+**Publication bytes** equal the accepted bytes: the Atlas carries no status line that publication would change. A merge, a tag or a passing check is not an adoption.
 
 ## 6. Carried forward
 
