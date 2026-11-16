@@ -20,8 +20,8 @@ import hashlib, json, os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", "..", ".."))
 DSN = "dsn/RTG_DISCRETE_GENESIS_DSN.md"
-BASE_COMMIT = "fd96f8a0b33a1236989b9e941b1c1c0e2381f2db"
-BASE_SHA = "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff"
+BASE_COMMIT = "0a7d7d80472ff27b9e40622bfc8440dfc71cd49e"
+BASE_SHA = "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27"
 PRED_TAG = "tdrg-v2.12.15"
 PRED_SHA = "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64"
 sha = lambda b: hashlib.sha256(b).hexdigest()

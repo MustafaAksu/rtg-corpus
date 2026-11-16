@@ -1,7 +1,7 @@
 {
- "base_sha256": "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff",
- "candidate_sha256": "c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14",
- "map_sha256": "ece985e46464b68d00636168c8f56e716c5dd4d1008f77780ed82bd22639217b",
+ "base_sha256": "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27",
+ "candidate_sha256": "5e3859bf3ec309742469cc735d1a5d33cc98df961d0d589d4d5e3aefa0754dc8",
+ "map_sha256": "bfcf01c2bd30d4bc0526e454df821f3c4004a705994539824d7f16d5f52639c3",
  "operations": [
   {
    "id": "S2-H",
@@ -306,8 +306,8 @@
   }
  ],
  "claim_blocks": {
-  "base": 267,
-  "identical": 243,
+  "base": 268,
+  "identical": 244,
   "declared_change": 24,
   "unexplained": []
  },
@@ -332,6 +332,7 @@
    "az-v0.6",
    "az-v0.7",
    "az-v0.8",
+   "az-v0.9",
    "ofn-v0.10",
    "ofn-v0.12",
    "programme-v1.4",
@@ -356,7 +357,7 @@
   {
    "check": "archive identity stage1-intermediate",
    "result": "PASS",
-   "detail": "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff"
+   "detail": "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27"
   },
   {
    "check": "archive identity tdrg-v2.12.15",
@@ -586,7 +587,7 @@
   {
    "check": "qualified claim blocks",
    "result": "PASS",
-   "detail": "267 claim blocks in base live text: 243 byte-identical, 24 changed by declared operations, 0 unexplained"
+   "detail": "268 claim blocks in base live text: 244 byte-identical, 24 changed by declared operations, 0 unexplained"
   },
   {
    "check": "RID set preserved in live text",
@@ -610,8 +611,8 @@
   },
   {
    "check": "references resolve",
-   "result": "PASS",
-   "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
+   "result": "FAIL",
+   "detail": "v0.9 has no Appendix A entry in tdrg-v2.12.15; v0.9 has no Appendix A entry in tdrg-v2.12.15"
   },
   {
    "check": "presentation (header, footer)",
@@ -620,7 +621,7 @@
   }
  ],
  "warnings": [],
- "result": "PASS",
+ "result": "FAIL",
  "limitations": [
   "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
   "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",

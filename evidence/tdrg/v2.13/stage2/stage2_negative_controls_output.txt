@@ -1,5 +1,5 @@
-base: git show fd96f8a0b33a1236989b9e941b1c1c0e2381f2db:dsn/RTG_DISCRETE_GENESIS_DSN.md  sha256 472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff
-OK    P0 unmutated map                                               exit 0 (want 0)  RESULT: PASS
+base: git show 0a7d7d80472ff27b9e40622bfc8440dfc71cd49e:dsn/RTG_DISCRETE_GENESIS_DSN.md  sha256 3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27
+BAD   P0 unmutated map                                               exit 1 (want 0)  
 OK    N1 undeclared change in the live text                          exit 1 (want 1)  FAIL  mechanical scope (re-derivation)  — first difference at line 92: derived 'ACTIVE — PARTIAL  \nQuestion: Identify a purely relational invariant p
 OK    N2 status summary with a sentence not in the base              exit 1 (want 1)  FAIL  operation S2-H (presentation)  — status summary adds text not in the base summary (header): ['TDR-6 is closed.']
 OK    N3 history-removal of a tagged, identified span                exit 1 (want 1)  FAIL  operation X3 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: '`[DEF]` [RID: TDRG-DEF-CANONICAL-BRANCH] '
@@ -8,4 +8,4 @@ OK    N5 history-removal of a span not marked as history             exit 1 (wan
 OK    N6 two footer lines                                            exit 1 (want 1)  FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line
 OK    N7 base differs from the stage-1 intermediate                  exit 1 (want 1)  FAIL  base identity  — map base_sha256 vs file
 OK    N8 a claim tag changed under the label of a reference substitution exit 1 (want 1)  FAIL  operation X8 (ref-subst)  — changed text is not reference text: 'ALG' (offending: ['ALG'])
-RESULT: PASS
+RESULT: FAIL

@@ -1,7 +1,7 @@
 {
  "base_tag": "tdrg-v2.12.15",
  "base_sha256": "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64",
- "intermediate_sha256": "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27",
+ "intermediate_sha256": "65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5",
  "edits": [
   {
    "key": "E01",
@@ -250,7 +250,7 @@
    "old_lines": 12,
    "new_lines": 10,
    "old_sha256": "b7502c3827df0f7c9f7ee2192533b2f4e6cd244a9a87025e0c72746cf545dbfc",
-   "new_sha256": "05cd33d48c0a25357357b61f84d677fc744807d5313aabff3d7dda5314b78f74",
+   "new_sha256": "bb653aaa843eee888d97f9ad58bf7b293a201766755fc777d50ecff0a55740ba",
    "note": "S1, S7/F1: rows state current use; AZ at az-v0.9 from its own §8, including its tdrg-v2.12.15 pin and token-law rows; AZ-NUM-TOKRES-S1 remains AZ-owned, not adopted TDR-G science; queue states leave"
   },
   {

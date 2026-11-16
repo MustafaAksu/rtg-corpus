@@ -31,11 +31,14 @@ with tempfile.TemporaryDirectory() as d:
                                        capture_output=True, check=True).stdout)
     lint = subprocess.run([sys.executable, "-I", "tools/dsn_lint.py", "dsn/RTG_DISCRETE_GENESIS_DSN.md", "--prev", p],
                           capture_output=True, text=True, check=True).stdout.replace(p, "tdrg-v2.12.15")
+INTER_BYTES = len(subprocess.run(["git", "show", "0a7d7d80472ff27b9e40622bfc8440dfc71cd49e:dsn/RTG_DISCRETE_GENESIS_DSN.md"],
+                                 capture_output=True, check=True).stdout)
 out = out.replace("{{SIZE}}", "```\n" + lint.strip() + "\n```\n\nCounting method: the lint script's own "
-                  "(whitespace tokens; §1 between its heading and the next `## `). Stage-1 intermediate: 191,662 bytes.\n\n"
+                  "(whitespace tokens; §1 between its heading and the next `## `). Stage-1 intermediate: %s bytes.\n\n" % format(INTER_BYTES, ",") +
                   "**RID growth (review R2).** TDR-G declares no new RID in v2.13 (stage-1 checker C3: every declaration "
-                  "is kept and none is added). The lint's `new_rids: 1` counts a new identifier in the text: the citation "
-                  "of OFN's existing `RTG-OFN-OPEN-DISC-INTERACTION` (S3). Growth per new TDR-G RID is therefore N/A; "
+                  "is kept and none is added). The lint's `new_rids` counts identifiers new to the text, which are citations "
+                  "of other owners' existing RIDs: OFN's `RTG-OFN-OPEN-DISC-INTERACTION` (S3) and AZ's `AZ-NUM-TOKRES-S1` "
+                  "(F1). Growth per new TDR-G RID is therefore N/A; "
                   "the raw lint output above is kept as produced.")
 left = re.findall(r"\{\{[^}]*\}\}", out)
 if left:

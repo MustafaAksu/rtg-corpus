@@ -156,7 +156,7 @@ def gates(base, cand, log):
                          "deferred to v2.13", "deferred** to v2.13", "v2.13 layout work", "AZ v0.8", "AZ v0.7", "declared v1.2") if s in L]
     az_rows = [l for l in L.split("\n") if l.startswith("| AZ v0.9 (`az-v0.9`) |")]
     consumer_ok = (len(az_rows) == 1
-                   and "at `tdrg-v2.12.15`" in az_rows[0]
+                   and "at TDR-G v2.12.15;" in az_rows[0]
                    and all(r in az_rows[0] for r in ("TDRG-ALG-EVENT-INVENTORY", "TDRG-ALG-TOKEN-CENSUS-LAW", "TDRG-ALG-PARENT-CHILD-PHASE"))
                    and "AZ-NUM-TOKRES-S1 remains an AZ-owned numerical diagnostic (AZ's grade)" in az_rows[0]
                    and "not a TDR-G result or a demonstrated growth mechanism" in az_rows[0]
