@@ -14,3 +14,4 @@
 | 2026-11-12 | TDRG | notice | open | answer to pipes/TDRG/20261104-PROG-v1-4-adopted.md; TDRG-EXPORT-DISCRETE-TRIAD (TDR-G §7 export row); companion and context pins | — | `20261112-TDRG-v2-12-15-adopted.md` |
 | 2026-11-14 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ (edition, what AZ owns); §7.2 IF21 pin | — | `20261114-AZ-v0-9-adopted.md` |
 | 2026-11-16 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ (edition; what AZ owns) | — | `20261116-AZ-v0-10-adopted.md` |
+| 2026-11-16 | TDRG | notice | open | TDR-G Methodology v1.4 migration; TDRG-EXPORT-DISCRETE-TRIAD and TDRG-EXPORT-POLICY-PHASE (unchanged) | — | `20261116-TDRG-v2-13-adopted.md` |
