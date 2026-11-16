@@ -1,0 +1,80 @@
+{
+  "schema": "dzt-lossless-transport-v1",
+  "status": "RECEIVED_ONLY_NOT_ADOPTED",
+  "date": "2026-11-16",
+  "source_zip": {
+    "name": "dzt_recovery_20261116T135733Z_c1afc390.zip",
+    "bytes": 618268,
+    "sha256": "44e14fb53f7746b4a3bd3a70f99f5e27ab8afd8d36a3b27334964a81be3ba0ee",
+    "outer_zip_stored": false
+  },
+  "archive": {
+    "format": "tar.xz",
+    "bytes": 71116,
+    "sha256": "b9e53d745c93d05066aec95a8be9e6617ddd1611c1ec2605e0637f786031b035",
+    "entries": 71,
+    "entry_bytes": 1776029
+  },
+  "originals": {
+    "files": 67,
+    "bytes": 1725716,
+    "unique_hashes": 54
+  },
+  "package_file_sha256": {
+    "MANIFEST.json": "e23f16dc4523c08f9bcf1a6226f1e2d80ad0288b30b5016503ca412044714ec9",
+    "SHA256SUMS": "fcf8ff6074d73a17faec145cc862ee6a617dc2c43fc603442079346e21b5e09e",
+    "DUPLICATE_HASHES.json": "ff967050ad3d660c7a274f44be42950a9102c294fdf4df15d6b37dab3eb4b99d",
+    "README.md": "6c0e595e28d144e3c37727e1eb6a7a25f691dec42b429cbab21aad99d1e3fe97"
+  },
+  "parts": [
+    {
+      "name": "dzt-originals.tar.xz.part01",
+      "size": 9000,
+      "sha256": "6a42552e3284b2b8c0d6a847c156d9e5f294ebffec0d03f5e14f237017b2ddfc",
+      "git_blob": "67c22e3ad7ea79f86936f6c16880c47426ddf0cc"
+    },
+    {
+      "name": "dzt-originals.tar.xz.part02",
+      "size": 9000,
+      "sha256": "60bb6ffc4182ae8a05aeee3d7d4406ceb8603e9f8b24d9a60cf6c8d1ddbba765",
+      "git_blob": "4adfc64fc0aa94e876cfb0384fcc2ac7279877f6"
+    },
+    {
+      "name": "dzt-originals.tar.xz.part03",
+      "size": 9000,
+      "sha256": "134955abf38d97e22a64399f58b2990d1fd03f522a1914952aebb035d0267655",
+      "git_blob": "1aaec3779248e73c77d13e974cba92cd8cd1bb84"
+    },
+    {
+      "name": "dzt-originals.tar.xz.part04",
+      "size": 9000,
+      "sha256": "311a3c4d1c514f5b9578987aa5a16dcae57f4a4cf6537ec453f15a553db9c798",
+      "git_blob": "9534152f5283c100523ab7da41d231d39b9cfc99"
+    },
+    {
+      "name": "dzt-originals.tar.xz.part05",
+      "size": 9000,
+      "sha256": "18f978c0ef232fb0493181e16c1683df1ec8a6c7b15cb57bf247d1adc041608f",
+      "git_blob": "d8229fb4a81d230d8516566a4fccc4fd8c4060ab"
+    },
+    {
+      "name": "dzt-originals.tar.xz.part06",
+      "size": 9000,
+      "sha256": "fe8151a53c2d6f01a2860290a7646ae34c68fed5a2622b4f97284101298f11c2",
+      "git_blob": "0afd9dd07bf85ebf6f803d14cdafadbc2daebe95"
+    },
+    {
+      "name": "dzt-originals.tar.xz.part07",
+      "size": 9000,
+      "sha256": "35153163976fb1a202423ca89f8c8f622e0294587047ff2bc84490eb85d2868b",
+      "git_blob": "b15c85acaf0ffa5720d2e456483690612cb4206c"
+    },
+    {
+      "name": "dzt-originals.tar.xz.part08",
+      "size": 8116,
+      "sha256": "f0e9a4c9504b36267ec4072e3165fcfb1fcdee530fc5787b8edbcfa21a45005b",
+      "git_blob": "8c510221668e0b205e8b60850f6a9f45e24f3731"
+    }
+  ],
+  "preservation": "All 71 ZIP entry payloads are byte-identical in the transport archive. Windows entry separators are normalized to POSIX paths; filenames, source-root separation and numbered copies are retained. Tar container metadata is deterministic, not historical provenance. Original source timestamps remain in the unchanged MANIFEST.json. The original outer ZIP is not reconstructed by this transport; its hash is provenance only."
+}
