@@ -1,0 +1,460 @@
+{
+ "all_pass": false,
+ "control": "SHRINKREM",
+ "gates": {
+  "C2_second_order_coefficients_sound": true,
+  "G0_stage2_input": true,
+  "INV_local_inverse_verified_and_sound": true,
+  "J2_second_order_series": true,
+  "M_circle_bounds_and_tails": true,
+  "REM_remainder_constants_sound": false,
+  "TUBE_step_on_tube_pieces_sound": false
+ },
+ "info": {
+  "C2": [
+   {
+    "abs_x": "1.0",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.156
+   },
+   {
+    "abs_x": "1.0",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 2.88e-05
+   },
+   {
+    "abs_x": "0.87",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.0998
+   },
+   {
+    "abs_x": "0.87",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 1.89e-05
+   },
+   {
+    "abs_x": "0.5",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.0528
+   },
+   {
+    "abs_x": "0.5",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 1.04e-05
+   },
+   {
+    "abs_x": "0.2",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.0444
+   },
+   {
+    "abs_x": "0.2",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 8.78e-06
+   },
+   {
+    "abs_x": "0.05",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.0423
+   },
+   {
+    "abs_x": "0.05",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 8.37e-06
+   }
+  ],
+  "INV": [
+   {
+    "L": 0.302,
+    "Rp": 0.005,
+    "abs_x": "0.87",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 0.000157,
+    "margin_ii": 0.00111,
+    "misses": [],
+    "r_over_rp": 4.4073,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.7865
+   },
+   {
+    "L": 0.284,
+    "Rp": 0.005,
+    "abs_x": "0.87",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 0.000155,
+    "margin_ii": 0.000612,
+    "misses": [],
+    "r_over_rp": 12559.0,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.7017
+   },
+   {
+    "L": 0.286,
+    "Rp": 0.002,
+    "abs_x": "0.87",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 6.09e-05,
+    "margin_ii": 0.0014,
+    "misses": [],
+    "r_over_rp": 2.772,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.6741
+   },
+   {
+    "L": 0.27,
+    "Rp": 0.002,
+    "abs_x": "0.87",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 6.07e-05,
+    "margin_ii": 0.000493,
+    "misses": [],
+    "r_over_rp": 4934.9,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.6178
+   },
+   {
+    "L": 0.0958,
+    "Rp": 0.0001,
+    "abs_x": "0.6",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-06,
+    "margin_ii": 0.000368,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.1844
+   },
+   {
+    "L": 0.0922,
+    "Rp": 0.0001,
+    "abs_x": "0.6",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-06,
+    "margin_ii": 5.66e-06,
+    "misses": [],
+    "r_over_rp": 51.99,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.1785
+   },
+   {
+    "L": 0.0118,
+    "Rp": 1e-07,
+    "abs_x": "0.3",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-09,
+    "margin_ii": 0.000353,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.0465
+   },
+   {
+    "L": 0.0114,
+    "Rp": 1e-07,
+    "abs_x": "0.3",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-09,
+    "margin_ii": 6.96e-08,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.0459
+   },
+   {
+    "L": 0.000419,
+    "Rp": 1e-10,
+    "abs_x": "0.1",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-12,
+    "margin_ii": 0.000125,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.0306
+   },
+   {
+    "L": 0.000403,
+    "Rp": 1e-10,
+    "abs_x": "0.1",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-12,
+    "margin_ii": 2.49e-08,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.0305
+   },
+   {
+    "L": 1.11e-05,
+    "Rp": 1e-14,
+    "abs_x": "0.03",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-16,
+    "margin_ii": 3.75e-05,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.03
+   },
+   {
+    "L": 1.07e-05,
+    "Rp": 1e-14,
+    "abs_x": "0.03",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-16,
+    "margin_ii": 7.5e-09,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.03
+   }
+  ],
+  "J2": {
+   "leading_coefficients_ok": true,
+   "overlap_with_w2a_series": true,
+   "report": {
+    "all_contain_zero": true,
+    "max_radius": 1.320882013035527e-272
+   }
+  },
+  "M": {
+   "D": 360,
+   "X": 1.1,
+   "arcs": 16000,
+   "cauchy_constants": {
+    "ET44": 0.70522,
+    "G0": 1.6338,
+    "M3": 1234.5,
+    "P4": 3.836,
+    "Q4": 2.1095,
+    "S2": 28555.0
+   },
+   "tails_at_1p02": {
+    "ET44": 1.41e-11,
+    "G0": 3.26e-11,
+    "M3": 2.46e-08,
+    "P4": 7.66e-11,
+    "Q4": 4.21e-11,
+    "S2": 5.7e-07
+   }
+  },
+  "REM_constants": [
+   {
+    "M3": 109.39,
+    "MZ3": 65.437,
+    "X": 0.9,
+    "arcs": 8000,
+    "rho": 0.02,
+    "theta": 0.12988
+   },
+   {
+    "M3": 680.86,
+    "MZ3": 117.37,
+    "X": 1.03,
+    "arcs": 32000,
+    "rho": 0.02,
+    "theta": 0.21767
+   }
+  ],
+  "REM_samples": [
+   {
+    "abs_x": 1.02,
+    "true_over_bound_Phi": 42.5,
+    "true_over_bound_Z": 29.3
+   },
+   {
+    "abs_x": 0.95,
+    "true_over_bound_Phi": 30.0,
+    "true_over_bound_Z": 14.0
+   },
+   {
+    "abs_x": 0.87,
+    "true_over_bound_Phi": 124.0,
+    "true_over_bound_Z": 12.0
+   },
+   {
+    "abs_x": 0.5,
+    "true_over_bound_Phi": 15.7,
+    "true_over_bound_Z": 1.26
+   },
+   {
+    "abs_x": 0.2,
+    "true_over_bound_Phi": 1.24,
+    "true_over_bound_Z": 0.054
+   }
+  ],
+  "TUBE": [
+   {
+    "abs_x": "1.0",
+    "dev_hi_over_rho": 1.38,
+    "dev_lo_over_rho": 1.1491,
+    "dtau_dev_over_abs_dtau0": 0.0787,
+    "gt_dev_over_abs_g": 0.0583,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 0.005,
+    "true_over_bound_dtau_dev": 0.801,
+    "true_over_bound_gt_dev": 0.988
+   },
+   {
+    "abs_x": "1.0",
+    "dev_hi_over_rho": 1.2973,
+    "dev_lo_over_rho": 1.2367,
+    "dtau_dev_over_abs_dtau0": 0.0713,
+    "gt_dev_over_abs_g": 0.0571,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 0.005,
+    "true_over_bound_dtau_dev": 0.867,
+    "true_over_bound_gt_dev": 1.0
+   },
+   {
+    "abs_x": "0.87",
+    "dev_hi_over_rho": 1.2155,
+    "dev_lo_over_rho": 1.0989,
+    "dtau_dev_over_abs_dtau0": 0.0712,
+    "gt_dev_over_abs_g": 0.0605,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 0.005,
+    "true_over_bound_dtau_dev": 0.895,
+    "true_over_bound_gt_dev": 0.987
+   },
+   {
+    "abs_x": "0.87",
+    "dev_hi_over_rho": 1.176,
+    "dev_lo_over_rho": 1.1397,
+    "dtau_dev_over_abs_dtau0": 0.068,
+    "gt_dev_over_abs_g": 0.0594,
+    "misses": [
+     "dev",
+     "gt_dev"
+    ],
+    "relative_radius": "0.000001",
+    "rho": 0.005,
+    "true_over_bound_dtau_dev": 0.94,
+    "true_over_bound_gt_dev": 1.0
+   },
+   {
+    "abs_x": "0.87",
+    "dev_hi_over_rho": 1.2036,
+    "dev_lo_over_rho": 1.1108,
+    "dtau_dev_over_abs_dtau0": 0.0272,
+    "gt_dev_over_abs_g": 0.0242,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 0.002,
+    "true_over_bound_dtau_dev": 0.935,
+    "true_over_bound_gt_dev": 0.994
+   },
+   {
+    "abs_x": "0.87",
+    "dev_hi_over_rho": 1.1651,
+    "dev_lo_over_rho": 1.1506,
+    "dtau_dev_over_abs_dtau0": 0.026,
+    "gt_dev_over_abs_g": 0.0237,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 0.002,
+    "true_over_bound_dtau_dev": 0.976,
+    "true_over_bound_gt_dev": 1.0
+   },
+   {
+    "abs_x": "0.5",
+    "dev_hi_over_rho": 1.0284,
+    "dev_lo_over_rho": 1.0216,
+    "dtau_dev_over_abs_dtau0": 0.00128,
+    "gt_dev_over_abs_g": 0.00127,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 0.0001,
+    "true_over_bound_dtau_dev": 0.994,
+    "true_over_bound_gt_dev": 0.986
+   },
+   {
+    "abs_x": "0.5",
+    "dev_hi_over_rho": 1.0251,
+    "dev_lo_over_rho": 1.025,
+    "dtau_dev_over_abs_dtau0": 0.00127,
+    "gt_dev_over_abs_g": 0.00125,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 0.0001,
+    "true_over_bound_dtau_dev": 1.0,
+    "true_over_bound_gt_dev": 1.0
+   },
+   {
+    "abs_x": "0.2",
+    "dev_hi_over_rho": 1.0017,
+    "dev_lo_over_rho": 1.0014,
+    "dtau_dev_over_abs_dtau0": 1.27e-07,
+    "gt_dev_over_abs_g": 1.29e-07,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 1e-08,
+    "true_over_bound_dtau_dev": 0.999,
+    "true_over_bound_gt_dev": 0.99
+   },
+   {
+    "abs_x": "0.2",
+    "dev_hi_over_rho": 1.0016,
+    "dev_lo_over_rho": 1.0016,
+    "dtau_dev_over_abs_dtau0": 1.27e-07,
+    "gt_dev_over_abs_g": 1.27e-07,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 1e-08,
+    "true_over_bound_dtau_dev": 1.0,
+    "true_over_bound_gt_dev": 1.0
+   },
+   {
+    "abs_x": "0.05",
+    "dev_hi_over_rho": 1.0,
+    "dev_lo_over_rho": 1.0,
+    "dtau_dev_over_abs_dtau0": 1.28e-11,
+    "gt_dev_over_abs_g": 1.3e-11,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 1e-12,
+    "true_over_bound_dtau_dev": 1.0,
+    "true_over_bound_gt_dev": 0.985
+   },
+   {
+    "abs_x": "0.05",
+    "dev_hi_over_rho": 1.0,
+    "dev_lo_over_rho": 1.0,
+    "dtau_dev_over_abs_dtau0": 1.28e-11,
+    "gt_dev_over_abs_g": 1.28e-11,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 1e-12,
+    "true_over_bound_dtau_dev": 1.0,
+    "true_over_bound_gt_dev": 1.0
+   }
+  ]
+ },
+ "script": "dyad_open20_an_stage3c_w2b_check.py",
+ "status": "stage 3c-a development run; not a certificate"
+}
