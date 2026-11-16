@@ -157,9 +157,9 @@ def build(base):
     d.sub("E12", "**[SG-3]**", " *(v2.12.15 `[COR]`; OFN finding `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md`)*", "",
           "label: provenance of the v2.12.15 correction (Appendix A, release record)")
 
-    # S1 — AZ pin
-    d.sub("E13", "Physical consequence: fully defective $K_3$", "(`az-v0.7`; statement unchanged from `az-v0.6`)", "(`az-v0.8`)",
-          "S1: the cited AZ-ALG-ANTIPODAL-LOWORDER entry is byte-identical at az-v0.6, az-v0.7 and az-v0.8 (checker C6)")
+    # S1 / Atlas F1 — current adopted AZ pin, not a new TDR-G result
+    d.sub("E13", "Physical consequence: fully defective $K_3$", "(`az-v0.7`; statement unchanged from `az-v0.6`)", "(`az-v0.9`)",
+          "S1/F1: the cited AZ-ALG-ANTIPODAL-LOWORDER statement is byte-identical at az-v0.6, az-v0.7, az-v0.8 and az-v0.9 (checker C6)")
 
     d.sub("E14", "4. Classify each component, in this order:",
           "*(v2.12.15 `[COR]`: the precedence as implemented; ties are outcomes", "*(ties are outcomes",
@@ -198,11 +198,11 @@ def build(base):
           "Custody transfer XFER-O08-01: **open**, a separate decision of both owners (the RID stays OFN's).",
           "scope: custody is outside v2.13 (PI, 13 Nov 2026); the state is stated as open")
 
-    # S1, S7 — consumer rows as current use; the notice sentence is queue history
+    # S1, S7 / Atlas F1 — current consumer use, with AZ numerical ownership explicit
     d.replace_range("E25", "**Consumers** (from the consumers' own records;", "**Pins.** Governing editions at this release:",
                     block("consumers.md").rstrip("\n") + "\n",
-                    "S1, S7: rows state current use; AZ at az-v0.8 from its own §8; queue states and the "
-                    "'notices after the tag' sentence leave")
+                    "S1, S7/F1: rows state current use; AZ at az-v0.9 from its own §8, including its tdrg-v2.12.15 pin and token-law rows; "
+                    "AZ-NUM-TOKRES-S1 remains AZ-owned, not adopted TDR-G science; queue states leave")
     d.line("E26", "**Pins.** Governing editions at this release:", block("pins.md").rstrip("\n"),
            "S1, S3: current pins; no historical pin remains live")
 
