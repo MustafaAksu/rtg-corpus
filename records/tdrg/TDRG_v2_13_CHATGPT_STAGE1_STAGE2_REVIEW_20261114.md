@@ -1,91 +1,91 @@
 # TDR-G v2.13 — independent co-owner review of Stage 1 and Stage 2
 
 **Current review date:** 16 November 2026. **Reviewer:** ChatGPT, independent TDR-G co-owner.
-**Current verdict:** **PASS — bounded F1 source/interface readback.** F1 is addressed in the inspected candidate; F2 is recorded at the dispositioned, not closed, stage. This is not adoption, an Atlas verdict, or authorization to merge/tag.
-**Reviewed PR:** #265, head `40d823574c9544e2dbea196a2fc263d93535ca2d`.
-**Candidate identity:** SHA-256 `c79898f99eaf83eb7b9d98749ec2f168868b664fa2e3f91916d888439a5236f4`, Git blob `f0ea40f61df2df14513172c59986e5637abf9df9`.
-**Authority:** adopted `tdrg-v2.12.15` remains governing; Methodology `methodology-v1.4`; repository-root `CONVENTIONS.md`. The candidate's DRAFT status is unchanged.
+**Current verdict:** **PASS — bounded AZ v0.10 source/interface readback.** No candidate-DSN correction is requested. One nonblocking release-record enumeration omission is recorded in §5 for the ordinary metadata update; it requires no DSN rebuild.
+**Reviewed PR:** #265, head `7ca1b3ebf4294279c6a3d5525f481dae9132beff`.
+**Candidate identity:** owner-recorded SHA-256 `6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88`; GitHub file blob `3af27eca21a060064d13e2d8bb1a5236f287043d`, identical at the generated-candidate commit `7f02c06` and the reviewed head.
+**Authority:** this is a reviewer verdict, not scientific adoption, an Atlas verdict, or authorization to merge/tag. The candidate is DRAFT; its adopted predecessor is `tdrg-v2.12.15`. Repository-root `CONVENTIONS.md` and `methodology-v1.4` govern the workflow.
 
-## 1. Review history and immutable evidence
+## 1. Immutable review history
 
-This fixed-path working review is now current-state-oriented. The full earlier review rounds remain unchanged at the following immutable revisions of this same path; this update does not withdraw or retroactively extend their computations:
+This fixed-path working review is current-state-oriented. Earlier reviews and their full evidence remain at these immutable revisions of this same path. No previous calculation is withdrawn or retroactively extended to different candidate bytes.
 
-| Round | Review-record commit | Reviewed candidate and verdict |
+| Round | Review-record commit | Exact scope |
 |---|---|---|
-| Original two-stage review, 14 Nov | `da61a6c8bc192f299efac102a0aa2927a579f8ea` | PR #265 head `e9778208537278131d22bbc3ac1ae3a024aa388a`; candidate `1691a136d01ce3f68a241c72d13d9f17c1a184986f6869fe9b9d507a324dee18`; Stage 1 CONDITIONAL PASS (R1/R2), Stage 2 mechanical PASS |
-| Round-2 readback, 14 Nov | `c992551392e05595b98c9175f6c0b34576b55c96` | PR #265 head `f38c538a4295437873bfd2c3c20ea9c196c70811`; candidate `c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14`; R1/R2 CLOSED and PASS |
-| F1 source-input implementation checkpoint, 16 Nov | `ddadd8ad07779274cdd2ea5f753f573238d14f60`, `records/tdrg/TDRG_v2_13_F1_IMPLEMENTATION.md` | Source-input patch only; explicitly no rebuild executed at that checkpoint. Completion is subsequently reported by the owner at PR #265 head `40d8235` and inspected in this readback. |
+| Original two-stage review, 14 Nov | `da61a6c8bc192f299efac102a0aa2927a579f8ea` | Candidate `1691a136…ee18`: Stage 1 CONDITIONAL PASS (R1/R2), Stage 2 mechanical PASS |
+| Round-2 readback, 14 Nov | `c992551392e05595b98c9175f6c0b34576b55c96` | Candidate `c89eb81b…0a14`: R1/R2 CLOSED; independent complete movement-map replay for those bytes |
+| F1 implementation checkpoint, 16 Nov | `ddadd8ad07779274cdd2ea5f753f573238d14f60`, `records/tdrg/TDRG_v2_13_F1_IMPLEMENTATION.md` | Source-input patch only; no rebuild claimed at that checkpoint |
+| AZ v0.9 F1 readback, 16 Nov | `6603997a89128bcca2c76379bbfa460e20fde04b` | Candidate `c79898f9…36f4`: bounded source/interface PASS and 10 local predicate fixtures; no independent full rebuild/hash recomputation |
 
-The first two reviews include independent full SHA-256 calculations and movement-map replays for their own exact bytes. Those historical computations do **not** certify the new candidate. The present verification extent is separately stated below.
+The earlier independent complete hashes and map replays certify only their named candidate bytes. The current bounded verification is described separately below.
 
-## 2. Sources reopened and actual reading extent
+## 2. Sources reopened and reading extent
 
-**[SESSION]** Read through the GitHub connector, with candidate reads pinned to `40d823574c9544e2dbea196a2fc263d93535ca2d`:
+**[SESSION]** Current candidate source reads were pinned to `7ca1b3ebf4294279c6a3d5525f481dae9132beff`, unless another revision is explicitly named:
 
-- PR #265 metadata; `CONVENTIONS.md` and `BASELINE.md` on main; Methodology v1.4 §3.3's intentional-pin rule and §3.4.
-- Candidate DSN §6.2 and §7, including the actual generated AZ citation, consumer row, ownership boundary and pins. This was a targeted readback, not a full scientific reread of the DSN.
-- Stage-1 builder E13/E25/E26 and their adjacent guards; the full consumer block; checker C3/C4 and C6/K1, including its ownership predicate; C7–C10 and the registered negative-control definitions.
-- Stage-2 source identity constants, movement-map identity/profile header, and the v2.13 Appendix A block. The obsolete candidate hashes were not reused as current identities.
-- DRAFT release record identities, source-propagation description, F1/F2 treatment, gate/control summaries and notification plan; Stage-1 gate/control outputs and the full compaction check output.
-- `pipes/TDRG/20261114-AZ-v0-9-adopted.md` on the candidate branch.
-- Adopted AZ v0.9 §8 IMP-B, especially LEM-SPECCONS and the two new token-law rows; the low-order-obstruction block at both `az-v0.8` and `az-v0.9`.
-- PR #276 metadata: still open/unmerged at head `e5668cc0dede1a318f261257b48ef83277bcaa65` when checked. No AZ v0.10 adoption is presumed.
+- PR #265 metadata and `CONVENTIONS.md` on main; PR #268 state and the entire preceding fixed-path review at `6603997a`.
+- Generated DSN §6.2 and §7, including the actual AZ citation, consumer row, non-adoption boundary and verified-source pin line; the DSN header/blob at generated-candidate commit `7f02c06`.
+- Stage-1 builder E13/E25/E26 and adjacent edits; complete `consumers.md` and `pins.md`; checker C3/C4/C5 and C6/K1, plus adjacent controls; stored Stage-1 gate and negative-control outputs.
+- Stage-2 movement-map identity/profile header and its `known_tags`; the complete v2.13 Appendix A entry; compaction-result summary and stored negative controls.
+- DRAFT release record identities, §3c authority and source comparison, §7 notice disposition, §8 lint interpretation, and review/adoption boundary. The current release-record filler was inspected at its intermediate-size calculation and foreign-RID explanation.
+- AZ's annotated `az-v0.10` reference and tagged release record (PI adoption recorded on 16 Nov); tagged AZ DSN §4.3.2's low-order-obstruction block and §8 IMP-B, particularly the event-inventory/census and parent-child rows and their updated local-use clauses.
+- Candidate-branch `pipes/TDRG/20261116-AZ-v0-10-adopted.md` and the release record's handling of both AZ notices.
+- Commit `7ca1b3e`'s diff correcting the unsupported `main` reading reference to `2d898fd` and the inbox status. The diff changes the release-record template and filled record, not the DSN.
 
-No historical TDR-G or AZ scientific campaign was run. The local runtime could not resolve GitHub for an executable repository checkout, so this readback does not claim a fresh full two-stage build, independent full-candidate SHA-256 calculation, or replay of all 43 current map operations.
+This was a source/interface readback, not a full reread of unchanged TDR-G science or a new scientific campaign. The local runtime cannot resolve GitHub for an executable checkout. No independent complete two-stage build, full-candidate SHA-256 calculation, or replay of all 43 current map operations is claimed in this pass.
 
-## 3. F1 source/interface disposition — CLOSED
+## 3. AZ v0.10 synchronization — PASS
 
-**[OWNER: AZ v0.9 §4.3.2 / AZ-ALG-ANTIPODAL-LOWORDER]** The inspected algebraic statement and its domain agree with the same source block at v0.8. TDR-G's candidate §6.2 now cites `az-v0.9` and retains the static-antipodal-graph restriction, the exclusion of a dynamical/bridge interpretation and the TDR-19 OPEN boundary. No low-order statement was promoted or re-proved by this pin update.
+**[OWNER: AZ v0.10 §4.3.2 / AZ-ALG-ANTIPODAL-LOWORDER]** The inspected statement has the same narrow-band antipodal-graph content used by TDR-G. Actual candidate §6.2 cites `az-v0.10` while retaining static-graph scope, no dynamical/bridge interpretation, and the TDR-19 OPEN boundary. The five-edition byte-equality check is implemented in C6 and reported PASS by the owner; it was not independently run across all five tags here.
 
-**[SESSION] E13/E25/E26: PASS.** E13 emits `az-v0.9`; E25 uses the revised AZ v0.9 consumer block; E26 emits AZ v0.9 in the selected editions. The generated §7 row correctly reports AZ's TDR-G v2.12.15 source use, the LEM-SPECCONS generalization and the event-inventory/token-census and conditional parent-child rows.
+**[SESSION] E13/E25/E26: PASS.** E13 emits `az-v0.10`; E25 inserts the source-accurate AZ v0.10 consumer row; E26 uses the new pin heading **Verified source editions used by this release**. The remaining occurrence of the old heading in E25/E26's input anchor is correct: it matches the adopted predecessor, not the generated candidate.
 
-The row explicitly states that **AZ-NUM-TOKRES-S1 is AZ-owned**, a numerical diagnostic in AZ's grading, not a TDR-G result or a demonstrated growth mechanism, and that its numerical conclusions are not adopted here. The source grade written in prose preserves this distinction. Attribution and non-adoption scope, not typography alone, determine ownership; no claim that every explicitly attributed source tag would itself imply adoption is made.
+**[OWNER: AZ v0.10 §8 / IMP-B]** AZ continues to use TDR-G v2.12.15. The event-inventory/token-census local-use clause now names both S1 and S2 checks, and the conditional parent-child local-use clause refers to both §4.2.1 and §4.2.2. Neither clause claims a growth mechanism or TDR-26 consequence. The candidate consumer row follows these uses and explicitly identifies **AZ-NUM-TOKRES-S1 and AZ-NUM-TOKRES-S2 as AZ-owned numerical diagnostics**, not TDR-G results or demonstrated mechanisms. No numerical TDR-G adoption is asserted.
 
-The spelling `at TDR-G v2.12.15` is unambiguous in this consumer row, whose immutable source is `az-v0.9` §8. Removing code-style tag formatting does not change the edition cited. The reported compaction-parser false positive was not independently reproduced; the current wording was checked for source accuracy rather than accepted merely because it avoids the parser.
+The source grades in prose are unambiguous. Attribution and the non-adoption boundary, not typography alone, establish ownership; this review does not claim that an explicitly attributed source-status tag would automatically constitute adoption.
 
-The v2.13 Appendix A entry records the v0.9 repin and AZ numerical-ownership boundary. Earlier historical edition entries intentionally retain their historical pins. Stage-2 `known_tags` includes `az-v0.9`.
+The v2.13 Appendix A entry and Stage-2 known-tag profile include AZ v0.10. Earlier edition history retains its historical pins. The verified-source heading avoids the false premise that a pinned edition must always be the latest producer edition; future repinning remains claim/use-dependent rather than automatic.
 
-## 4. Verification extent and identities
+## 4. Verification actually performed
 
-### 4.1 Independent local check, actually executed
+### 4.1 Independent bounded source and predicate checks
 
-The exact full `stage1/blocks/consumers.md` text was obtained via GitHub, copied into the local bounded harness and verified against GitHub's content identity:
+The complete consumer and pin blocks were copied from the reopened source and checked against GitHub's blob identity before local testing:
 
-- Git blob SHA-1: `26e329303015b25b1bfff5d3ef1533dff026f675`.
-- Independently computed SHA-256: `bb653aaa843eee888d97f9ad58bf7b293a201766755fc777d50ecff0a55740ba`.
+| Block | Git blob SHA-1 | Independently computed SHA-256 |
+|---|---|---|
+| `stage1/blocks/consumers.md` | `614e6ef72302616243629aeda70727f535a53ee0` | `46d3b8f85a4effaec46d310b46548ab824b0e1e28400f53dd3fc20ecda57aeac` |
+| `stage1/blocks/pins.md` | `36a5e75321f6a763f091d17d93d31af7ea4d2608` | `8954b1b45fdca28f18687c62b24d079fe6ac15b9c652becc8fbfc1c0d19f5572` |
 
-The current C6 consumer predicate was exercised in **10 bounded fixtures**: one valid row accepted; nine corruptions rejected (old AZ pin, old TDR-G source edition, missing event-inventory RID, missing census RID, missing parent-child RID, missing AZ ownership, missing non-mechanism boundary, local declaration of the foreign diagnostic RID, duplicated AZ row). The row contains no backticked truth-status tag. This is a predicate-level check, **not** the full C0–C10 run or a scientific simulation.
+**[SESSION] 14/14 local fixtures behaved as expected:** the valid source was accepted; 13 corruptions were rejected: K1 v0.10→v0.9 regression, old TDR-G consumer version, missing inventory/census/phase identifier (three cases), missing S2, removed AZ ownership, removed mechanism boundary, local declaration of S1 or S2 (two cases), duplicated AZ row, restored Governing-editions language, and an old AZ pin elsewhere in the tested live fragment.
 
-### 4.2 Owner-run identities and checks, inspected rather than rerun
+These tests execute the inspected C6 **local consumer/pin predicates**. They are not the complete C6 external-source check, C0–C10, or a scientific simulation.
+
+### 4.2 Full build identities and owner-run evidence
 
 | Object | Recorded identity |
 |---|---|
-| Adopted predecessor | `tdrg-v2.12.15`; SHA-256 `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64` |
-| New intermediate | commit `10a88435cde255e3b66c235102a77214c9c6bd2c`; SHA-256 `65c0661dcdfaa697329eadc61b5609efc5a5e8d043a98541fc47f08c451144b5` |
-| New candidate | commit `40d823574c9544e2dbea196a2fc263d93535ca2d`; SHA-256 `c79898f99eaf83eb7b9d98749ec2f168868b664fa2e3f91916d888439a5236f4`; Git blob `f0ea40f61df2df14513172c59986e5637abf9df9` |
-| Movement map | SHA-256 `4acc1d021f13310a1b4ea32a2e4509a6a3ca9569c977aa3cd94d3ae4dad8da55` |
+| Adopted base | `tdrg-v2.12.15`; `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64` |
+| New intermediate | commit `b7687f11c38f8adc5af2e4d42ff5c74a4e7f2dce`; `a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb` |
+| Current candidate | `6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88`; Git blob `3af27eca21a060064d13e2d8bb1a5236f287043d` |
+| Movement map | `72408186ed90ed7fa993816668471aabe9abfd583cb974f8ff9f40b306d0fde5` |
 
-The intermediate/candidate hashes agree among the release record, Stage-2 constants/map and stored run outputs. The full SHA-256 values in this table are **owner-reported and cross-checked across those sources**, not independently recomputed here.
+Full-file SHA-256 values above are **owner-reported, cross-checked between the release record and map**, not independently recomputed in this pass. GitHub reports the same DSN blob at `7f02c06` and `7ca1b3e`, confirming that the subsequent provenance-record correction did not change the candidate file.
 
-Stored Stage-1 results: 29 edits, 11/11 gates, 10/10 negative controls. K1 now regresses v0.9 to v0.8. C6 checks the four AZ source editions, current consumer edition and explicit ownership guard. C3 allows two new foreign references, `AZ-NUM-TOKRES-S1` and `RTG-OFN-OPEN-DISC-INTERACTION`, not new TDR-G result registrations. C4's truth-tag accounting is unchanged by the prose source grade.
+Owner-run outputs inspected: Stage 1 has 29 edits, **11/11 gates and 10/10 negative controls**; C6 reads AZ v0.6 through v0.10 and K1 regresses to v0.9. C3 reports exactly three newly mentioned foreign identifiers (OFN's open-interaction RID, AZ's S1 and S2), not new TDR-G declarations. C4's declared truth-tag changes remain unchanged. Stage 2 reports **PASS**, 268 qualified blocks (244 identical, 24 declared, 0 unexplained), and **8/8 negative controls** using the new intermediate identity. The clean-worktree reproduction remains owner-reported; this bounded review does not replace the Atlas recheck.
 
-Stored Stage-2 results: 43 operations, PASS, 268 qualified blocks (244 identical, 24 declared, zero unexplained), 8/8 negative controls. The owner's clean-worktree replay is source-reported. This scoped reviewer acceptance does not replace the Atlas owner's requested independent F1/F2 recheck.
+## 5. Provenance, inbox and nonblocking record-only cleanup
 
-## 5. F2 and release metadata
+**[SESSION] Provenance correction verified at file-diff level.** Commit `7ca1b3e` removes the unsupported `e8b40cb` reading assertion, replaces it with `2d898fd`, and records the actually present AZ v0.10 notice. The commit message preserves the acknowledgement of the earlier error. This verifies the corrected repository record, not the historical act of reading in another session. The command-chain failure reported by the owner warrants fail-closed execution for future build/recording pipelines; it does not require a DSN-byte correction here.
 
-**[SESSION] F2: addressed on the candidate branch.** The AZ v0.9 notice is `dispositioned`, with `2026-11-16 · accept` pointing to the DRAFT release record. It is not yet closed; closure is explicitly after the tag. Release §7 no longer describes an empty current inbox and the planned AZ notification names v0.9. Accepting the notice and source synchronization does not adopt AZ's numerical result into TDR-G.
+The AZ v0.10 notice is **dispositioned · accept on the candidate branch**, not closed; the release record also retains the AZ v0.9 disposition and reserves closure for after the tag. Receipt, disposition and adopted scientific use remain separate.
 
-Two metadata items remain for the ordinary publication preparation, not a new DSN correction round:
+**NB1 — record-only enumeration omission.** Release §8's raw lint correctly reports `new_rids: 3`, but the generated explanation still enumerates only `RTG-OFN-OPEN-DISC-INTERACTION` and `AZ-NUM-TOKRES-S1`. The current `fill_release_record.py` contains that same two-item text. Add `AZ-NUM-TOKRES-S2` to the filler explanation and regenerate the DRAFT release record when filling this readback and the Atlas verdict. Actual new TDR-G declarations remain zero; growth per new TDR-G RID remains N/A. **No candidate DSN change, two-stage rebuild, or repeat scientific campaign is needed for NB1.**
 
-1. PR #265's body still described F1 as rebuild-pending when this review began, despite its updated title and generated files. It must describe the completed owner rebuild and this bounded readback rather than the obsolete source-only checkpoint.
-2. The DRAFT release-record header/rows still lead with the pre-F1 round-2 review. Add this F1 readback and the new Atlas disposition before adoption; preserve the earlier reviews at their exact candidate identities.
+Before publication, update the PR body and the release's latest-review row to this candidate instead of presenting the old v0.9 readback as current. Preserve the earlier hash-specific reviews. Publication BASELINE changes must be based on then-current main without overwriting other streams.
 
-BASELINE remains a publication-stage change against current main. Do not overwrite newer rows for other streams. No merge, tag, pipe closure or adoption follows from this reviewer PASS.
+## 6. Final reviewer disposition and remaining boundary
 
-## 6. Newer AZ editions and final decision
+**PASS / AZ v0.10 READBACK CLOSED** for the bounded source/interface delta at candidate `6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88`. The reviewer requests no new DSN correction round. NB1 belongs in the ordinary release-record completion, alongside this review reference and the new Atlas result.
 
-**[OWNER: Methodology v1.4 §3.3]** A newer owner edition does not automatically invalidate an intentionally pinned older import. The current source choice is the adopted `az-v0.9`; PR #276 is not itself a governing edition.
-
-**[SESSION — recommendation, not PI authorization]** If AZ v0.10 is adopted before TDR-G v2.13, inspect only the affected imported claim and consumer-use clauses. If those remain compatible, retain v0.9 as an explicitly selected use pin and record the newer source plus deferred synchronization. Do not keep describing v0.9 as the newest governing AZ edition after that becomes false. If the imported proposition or permitted use actually changes, a substantive source disposition is still required. Avoid an automatic repin/rebuild loop based only on version numbers.
-
-**Final reviewer disposition: PASS / F1 READBACK CLOSED** for candidate `c79898f99eaf83eb7b9d98749ec2f168868b664fa2e3f91916d888439a5236f4`, with F2 correctly dispositioned on the branch. This is a bounded source/interface review supported by targeted local checks and inspected owner-run outputs, not an independent full-build certificate. Next: Atlas F1/F2 recheck, PI adoption, then publication preparation and separately authorized merge/tag. TDR-19, XFER-O08-01, crystallization grade reconciliation and TDR-6 physical-observable selection remain outside this maintenance readback.
+Next: Atlas's recheck of the new candidate; the PI's separate v2.13 adoption; publication record/status/BASELINE preparation; and separately authorized merge/tag. Choosing option 1 authorized the repin, not those later acts. TDR-19, XFER-O08-01, crystallization-grade reconciliation and the TDR-6 physical-observable question remain outside this maintenance readback. No canonical DSN, engine, pipe item, main branch or tag was modified by this review.
