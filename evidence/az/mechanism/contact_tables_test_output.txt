@@ -1,4 +1,4 @@
-contact tables script SHA-256 f1f21b0218eb5632592668f61ad09510c92d427fd4ce2ffcfe69eb3a5e312e24; manifest b19fce788e14772877f1c3bd06b73a4537e7f2f8353c18336c7790bca82574a0; plan test
+contact tables script SHA-256 78822775de7d52540f4700d923ab55a5750df6aa06245c9178a2ed91e952611b; manifest b19fce788e14772877f1c3bd06b73a4537e7f2f8353c18336c7790bca82574a0; plan test
 *** TEST RECORDS: instrument validation only; no evidential value ***
 INTEGRITY: PASS (trusted hash list binding; Stage 1 validator: identity, custody, states, records, set; pairing keys; clocks and endpoint)
 ====================================================================================================

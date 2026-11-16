@@ -13,9 +13,15 @@ PASS R1: test plan naming a registered cell is refused before any lookup
 PASS R1: mixed cell list refused before any lookup
 PASS R1: registered plan naming a test cell refused
 PASS freeze: unfrozen manifest refused in registered mode before any lookup
+PASS R4: registered plan without --json refused before any lookup
 PASS R2: frozen manifest with no input refused
 PASS R2: frozen manifest with a wrong pin refused
 PASS R2: frozen manifest with a wrong input hash refused
+PASS R5: existing --json target refused before any lookup
+PASS R5: --json target inside the record directory refused
+PASS R5: --json target in a missing directory refused
+PASS R4: manifest field enforced (Q2R in a cell with 4 | N)
+PASS R4: manifest field enforced (O2R/O2D in a cell with N = 2 mod 4)
 PASS R4: manifest field enforced (unsupported pair)
 PASS R4: manifest field enforced (joint tables)
 PASS R4: manifest field enforced (grid not increasing)
@@ -23,6 +29,7 @@ PASS R4: manifest field enforced (J4 time 0)
 PASS R4: manifest field enforced (schema)
 PASS R3: a consistent record passes
 PASS R3: every listed inconsistency is an integrity error (13 cases)
+PASS R3 (r3): M(100) = 4, M(200) = 5 accepts fb = 150 and refuses fb = 50 and fb = 250
 PASS R3: a valid cap stop before tick 800 passes and is positive
 PASS R3: a missing tick-800 checkpoint without a cap stop is refused, not counted
 PASS R3: events without any contact are an integrity error

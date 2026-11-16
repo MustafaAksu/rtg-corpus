@@ -51,6 +51,7 @@ PINS = {"engine": (ENGINE, "4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc
 SUPPORTED_PAIRS = [["O1R", "O1D"], ["O2R", "O2D"]]
 SUPPORTED_JOINT = ["J1", "J2", "J3", "J4"]
 TEST_CELLS = {"TEST-C1": (120, 8, 800), "TEST-C2": (122, 8, 800)}
+ARMS_BY_RESIDUE = {True: {"BASE", "O1R", "O1D", "O2R", "O2D", "SHAM"}, False: {"BASE", "O1R", "O1D", "Q2R", "SHAM"}}   # 4 | N, else
 REG_CELLS = {"S1-C1": (120, 8, 800), "S1-C2": (122, 8, 800)}
 CHECKPOINTS = (100, 200, 300, 400, 500, 600, 700, 800)
 INF = float("inf")
@@ -188,6 +189,12 @@ def check_manifest(man, plan):
         for p in man["pairs"]:
             if isinstance(p, list) and not set(p) <= set(arms):
                 e.append("pair %s uses an arm not listed in arms" % p)
+        if isinstance(cells, list):
+            for c in cells:
+                if c in allowed:
+                    avail = ARMS_BY_RESIDUE[allowed[c][0] % 4 == 0]
+                    if not set(arms) <= avail:
+                        e.append("arms %s do not exist in cell %s" % (sorted(set(arms) - avail), c))
     if plan == "registered":
         ins = man.get("inputs")
         if not (isinstance(ins, list) and len(ins) == 1 and isinstance(ins[0], dict)
@@ -308,8 +315,12 @@ def clock_errors(r, d, T, cap):
     if t100 is not None and fb is not None and t100 < fb:
         e.append("t100 < fb")
     for c in CHECKPOINTS:
-        if str(c) in at and t100 is not None and (at[str(c)] >= Y_THRESHOLD) != (c >= t100):
+        if str(c) in at and (at[str(c)] >= Y_THRESHOLD) != (t100 is not None and c >= t100):
             e.append("checkpoint %d inconsistent with t100" % c)
+            break
+    for c in CHECKPOINTS:                       # M starts at 4 and never decreases: M(c) > 4 iff the first birth is at or before c
+        if str(c) in at and (at[str(c)] > 4) != (fb is not None and fb <= c):
+            e.append("checkpoint %d inconsistent with fb" % c)
             break
     return e
 
@@ -547,13 +558,17 @@ def selftest():
     # 6. gates (R1, R2): refused before any record is looked up
     man = json.load(open(os.path.join(HERE, "contact_tables_manifest.json")))
 
-    def refused_before_binding(m, plan, d="/nonexistent-directory"):
+    import tempfile
+    tmpd = tempfile.mkdtemp(prefix="az_ct_selftest_")
+
+    def refused_before_binding(m, plan, d="/nonexistent-directory", want="", js=None):
         probe = []
         try:
-            run(m, plan, d, _probe=probe)
-        except Refused:
-            return probe == []
+            run(m, plan, d, json_out=js, _probe=probe)
+        except Refused as ex:
+            return probe == [] and want in str(ex)
         return False
+    newjs = lambda: os.path.join(tmpd, "out_%d.jsonl" % len(os.listdir(tmpd)))
     m1 = dict(man, cells_test=["S1-C1"])
     chk("R1: test plan naming a registered cell is refused before any lookup", refused_before_binding(m1, "test"))
     m2 = dict(man, cells_test=["TEST-C1", "S1-C1"])
@@ -561,31 +576,44 @@ def selftest():
     m3 = dict(man, cells_registered=["TEST-C1"])
     chk("R1: registered plan naming a test cell refused", refused_before_binding(dict(m3, frozen_script_sha256=sha256_file(os.path.abspath(__file__))), "registered"))
     chk("freeze: unfrozen manifest refused in registered mode before any lookup", refused_before_binding(man, "registered"))
+    fz0 = dict(man, frozen_script_sha256=sha256_file(os.path.abspath(__file__)))
+    chk("R4: registered plan without --json refused before any lookup", refused_before_binding(fz0, "registered", want="--json is required"))
     fz = dict(man, frozen_script_sha256=sha256_file(os.path.abspath(__file__)))
-    chk("R2: frozen manifest with no input refused", refused_before_binding(dict(fz, inputs=[]), "registered"))
-    chk("R2: frozen manifest with a wrong pin refused", refused_before_binding(dict(fz, pins=dict(fz["pins"], runner="0" * 64)), "registered"))
+    chk("R2: frozen manifest with no input refused", refused_before_binding(dict(fz, inputs=[]), "registered", want="exactly one input", js=newjs()))
+    chk("R2: frozen manifest with a wrong pin refused",
+        refused_before_binding(dict(fz, pins=dict(fz["pins"], runner="0" * 64)), "registered", want="manifest pin runner", js=newjs()))
     chk("R2: frozen manifest with a wrong input hash refused",
-        refused_before_binding(dict(fz, inputs=[dict(fz["inputs"][0], sha256="0" * 64)]), "registered"))
-    for bad, why in ((dict(man, pairs=[["O1R", "O2D"]]), "unsupported pair"), (dict(man, joint_tables={"J1": ""}), "joint tables"),
+        refused_before_binding(dict(fz, inputs=[dict(fz["inputs"][0], sha256="0" * 64)]), "registered", want="does not have the manifest's hash", js=newjs()))
+    ex = os.path.join(tmpd, "exists.jsonl"); open(ex, "w").close()
+    chk("R5: existing --json target refused before any lookup", refused_before_binding(man, "test", d=tmpd, want="exists", js=ex))
+    chk("R5: --json target inside the record directory refused", refused_before_binding(man, "test", d=tmpd, want="protected", js=os.path.join(tmpd, "new.jsonl")))
+    chk("R5: --json target in a missing directory refused", refused_before_binding(man, "test", want="directory does not exist", js=os.path.join(tmpd, "no", "x.jsonl")))
+    for bad, why in ((dict(man, arms=man["arms"] + ["Q2R"]), "Q2R in a cell with 4 | N"),
+                     (dict(man, cells_test=["TEST-C2"]), "O2R/O2D in a cell with N = 2 mod 4"),
+                     (dict(man, pairs=[["O1R", "O2D"]]), "unsupported pair"), (dict(man, joint_tables={"J1": ""}), "joint tables"),
                      (dict(man, time_grid=[1, 5, 5]), "grid not increasing"), (dict(man, birth_time_for_J4=0), "J4 time 0"),
                      (dict(man, schema="v1"), "schema")):
         chk("R4: manifest field enforced (%s)" % why, refused_before_binding(bad, "test"))
     # 7. clock and endpoint layer (R3): the reviewer's counterexamples and others
     d1 = {"tau": 3}
-    ok_rec = {"steps": 800, "M": 120, "births": 116, "hit_cap": False, "fe": 3, "fb": 5, "t100": 650,
+    ok_rec = {"steps": 800, "M": 120, "births": 116, "hit_cap": False, "fe": 3, "fb": 550, "t100": 650,
               "M_at": {str(c): (4 if c < 700 else 120) for c in CHECKPOINTS}}
     ok_rec["M_at"]["600"] = 90
     chk("R3: a consistent record passes", clock_errors(ok_rec, d1, 800, 300) == [])
     cases = [("fe = -1", {"fe": -1}), ("fe = 801", {"fe": 801}), ("fe = 'invalid'", {"fe": "invalid"}), ("fb = 801", {"fb": 801}),
              ("negative t100", {"t100": -5}), ("t100 missing although M >= 100", {"t100": None}), ("fe < tau_contact", {"fe": 2}),
-             ("fb before fe", {"fe": 6, "fb": 5}), ("t100 < fb", {"t100": 4}),
+             ("fb before fe", {"fe": 551, "fb": 550}), ("t100 < fb", {"t100": 540, "M_at": dict(ok_rec["M_at"], **{"600": 120})}),
              ("steps 800, M 100, M_at[800] = 4", {"M": 100, "births": 96, "M_at": dict(ok_rec["M_at"], **{"700": 4, "800": 4})}),
              ("M != 4 + births", {"births": 7}), ("checkpoint missing", {"M_at": {k: v for k, v in ok_rec["M_at"].items() if k != "300"}}),
              ("fb without births", {"births": 0, "M": 4, "t100": None, "M_at": {str(c): 4 for c in CHECKPOINTS}})]
     chk("R3: every listed inconsistency is an integrity error (%d cases)" % len(cases),
         all(clock_errors(dict(ok_rec, **ch), d1, 800, 300) for _, ch in cases))
-    capped = {"steps": 512, "M": 300, "births": 296, "hit_cap": True, "fe": 3, "fb": 5, "t100": 400,
+    capped = {"steps": 512, "M": 300, "births": 296, "hit_cap": True, "fe": 3, "fb": 150, "t100": 400,
               "M_at": {"100": 4, "200": 10, "300": 40, "400": 100, "500": 290}}
+    rv = {"steps": 300, "M": 5, "births": 1, "hit_cap": False, "fe": 3, "t100": None, "M_at": {"100": 4, "200": 5, "300": 5}}
+    chk("R3 (r3): M(100) = 4, M(200) = 5 accepts fb = 150 and refuses fb = 50 and fb = 250",
+        clock_errors(dict(rv, fb=150), d1, 300, 300) == [] and clock_errors(dict(rv, fb=50), d1, 300, 300) != []
+        and clock_errors(dict(rv, fb=250), d1, 300, 300) != [])
     chk("R3: a valid cap stop before tick 800 passes and is positive", clock_errors(capped, d1, 800, 300) == [] and endpoint(capped, 300) == 1)
     try:
         endpoint(dict(capped, hit_cap=False), 300)
@@ -599,11 +627,35 @@ def selftest():
 
 
 
+def check_output_target(json_out, plan, d, protected):
+    """The descriptor file must be new: not existing (as a file, link or anything else), not inside the record directory,
+    not inside upload/ or evidence/az/scripts/, and its directory must exist. Checked before any record is processed;
+    the file is then created with O_EXCL, so a target that appears in the meantime is refused too."""
+    if json_out is None:
+        if plan == "registered":
+            raise Refused("--json is required for the registered plan (the full descriptors must be stored)")
+        return None
+    t = os.path.abspath(json_out)
+    if os.path.lexists(t):
+        raise Refused("--json target exists; it must be a new file")
+    parent = os.path.dirname(t)
+    if not os.path.isdir(parent):
+        raise Refused("--json target directory does not exist")
+    rp = os.path.realpath(parent)
+    for q in [d, os.path.join(ROOT, "upload"), os.path.join(ROOT, "evidence", "az", "scripts")] + list(protected):
+        q = os.path.realpath(q)
+        if rp == q or rp.startswith(q.rstrip(os.sep) + os.sep) or os.path.realpath(t) == q:
+            raise Refused("--json target lies in a protected location (record directory, upload/, scripts, or an input)")
+    return t
+
+
 def run(man, plan, d, json_out=None, out=sys.stdout, _probe=None):
-    """All gates first; records are looked up only after check_manifest, check_freeze, check_pins, trusted_list."""
+    """All gates first; records are looked up only after check_manifest, check_freeze, check_pins, output target, trusted_list."""
     cells = check_manifest(man, plan)
     check_freeze(man, plan)
     check_pins(man)
+    tl_path = os.path.join(ROOT, man["inputs"][0]["hashes_file"]) if plan == "registered" else os.path.join(d, "HASHES.txt")
+    json_out = check_output_target(json_out, plan, d, [tl_path] + [x for x, _ in PINS.values()])
     _, listed = trusted_list(man, plan, d)
     files = bind_inputs(cells, listed, d)
     if _probe is not None:
@@ -656,7 +708,11 @@ def run(man, plan, d, json_out=None, out=sys.stdout, _probe=None):
     print("INTEGRITY: PASS (trusted hash list binding; Stage 1 validator: identity, custody, states, records, set; pairing keys; clocks and endpoint)", file=out)
     tables(cells, data, D, Y, cfgs, man, out=out)
     if json_out:
-        with open(json_out, "w", newline="\n") as f:
+        try:
+            fd = os.open(json_out, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o644)
+        except FileExistsError:
+            raise Refused("--json target appeared during the run; nothing written")
+        with os.fdopen(fd, "w", newline="\n") as f:
             for c in cells:
                 for b in sorted(data[c]):
                     for arm in man["arms"]:

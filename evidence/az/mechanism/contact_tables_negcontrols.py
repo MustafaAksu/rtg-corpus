@@ -2,7 +2,7 @@
 """Negative controls of az_tokres_contact_tables.py on copies of a Stage 1 TEST campaign (tag SMOKE). [SESSION]
 
     python3 -I contact_tables_negcontrols.py --campaign TESTDIR --work EMPTYDIR
-One positive control and twelve controls that damage a copy (or the manifest) in one way; each must be refused with
+One positive control and eighteen controls that damage a copy (or the manifest) in one way; each must be refused with
 exit code 2 and no table. NC09-NC12 point at the registered Stage 1 records and must be refused before any of them
 is looked up (the manifest is unfrozen, or the cell/plan/pin/input is wrong).
 """
@@ -42,8 +42,9 @@ def write(p, recs, restamp=True, hashes=False):
         open(hp, "w", newline="\n").writelines(lines)
 
 
-def run(d, plan="test", manifest=M):
-    p = subprocess.run([sys.executable, "-I", T, "--manifest", manifest, "--dir", d, "--plan", plan], capture_output=True, text=True)
+def run(d, plan="test", manifest=M, js=None):
+    cmd = [sys.executable, "-I", T, "--manifest", manifest, "--dir", d, "--plan", plan] + (["--json", js] if js else [])
+    p = subprocess.run(cmd, capture_output=True, text=True)
     return p.returncode, p.stdout + p.stderr
 
 
@@ -70,7 +71,8 @@ def main():
         return d
     first = lambda d, c: sorted(glob.glob(os.path.join(d, c + "_*.jsonl")))[0]
 
-    d = case("nc00"); rc, t = run(d); check("NC00 positive control: untouched copy is tabulated", rc, t, 0, "INTEGRITY: PASS")
+    d = case("nc00"); rc, t = run(d, js=os.path.join(work, "nc00_descriptors.jsonl"))
+    check("NC00 positive control: untouched copy is tabulated, descriptors written", rc, t, 0, "descriptors written")
     # binding to the trusted list (R2)
     d = case("nc01"); p = first(d, "TEST-C1"); r = read(p); write(p, r[:-1]); rc, t = run(d)
     check("NC01 one record dropped, side manifest re-stamped: not the listed bytes", rc, t, 2, "does not have the listed hash")
@@ -107,11 +109,39 @@ def main():
     check("NC10 registered plan with the unfrozen manifest", rc, t, 2, "REFUSED: manifest is not frozen")
     fz = dict(man, frozen_script_sha256=sha(T))
     mp = os.path.join(work, "m_badinput.json"); json.dump(dict(fz, inputs=[dict(fz["inputs"][0], sha256="0" * 64)]), open(mp, "w"))
-    rc, t = run(os.path.normpath(reg), plan="registered", manifest=mp)
+    rc, t = run(os.path.normpath(reg), plan="registered", manifest=mp, js=os.path.join(work, "nc11.jsonl"))
     check("NC11 registered plan, frozen hash right, input hash wrong", rc, t, 2, "does not have the manifest's hash")
     mp = os.path.join(work, "m_badpin.json"); json.dump(dict(fz, pins=dict(fz["pins"], engine="0" * 64)), open(mp, "w"))
     rc, t = run(os.path.normpath(reg), plan="registered", manifest=mp)
     check("NC12 registered plan, frozen hash right, manifest engine pin wrong", rc, t, 2, "manifest pin engine differs")
+    # output target (R5) and execution contract (R4)
+    d = case("nc13"); p = first(d, "TEST-C1"); before = {n: sha(os.path.join(d, n)) for n in os.listdir(d) if os.path.isfile(os.path.join(d, n))}
+    rc, t = run(d, js=p)
+    after = {n: sha(os.path.join(d, n)) for n in os.listdir(d) if os.path.isfile(os.path.join(d, n))}
+    check("NC13 --json target is an input record file", rc, t, 2, "exists")
+    good = before == after
+    globals()["OK"] = OK and good
+    print("%s  NC13b every file of the record directory is byte-identical after the refusal" % ("PASS" if good else "FAIL"))
+    d = case("nc14"); lk = os.path.join(work, "nc14_link.jsonl"); os.symlink(os.path.join(d, "HASHES.txt"), lk); h0 = sha(os.path.join(d, "HASHES.txt"))
+    rc, t = run(d, js=lk)
+    check("NC14 --json target is a symbolic link to the trusted list", rc, t, 2, "exists")
+    good = sha(os.path.join(d, "HASHES.txt")) == h0
+    globals()["OK"] = OK and good
+    print("%s  NC14b the trusted list is byte-identical after the refusal" % ("PASS" if good else "FAIL"))
+    d = case("nc15"); p = first(d, "TEST-C1"); hl = os.path.join(work, "nc15_hardlink.jsonl"); os.link(p, hl); h0 = sha(p)
+    rc, t = run(d, js=hl)
+    check("NC15 --json target is a hard link to an input record file", rc, t, 2, "exists")
+    good = sha(p) == h0
+    globals()["OK"] = OK and good
+    print("%s  NC15b the record file is byte-identical after the refusal" % ("PASS" if good else "FAIL"))
+    d = case("nc16"); rc, t = run(d, js=os.path.join(d, "inside.jsonl"))
+    check("NC16 --json target inside the record directory", rc, t, 2, "protected location")
+    mp = os.path.join(work, "m_q2r.json"); json.dump(dict(man, arms=man["arms"] + ["Q2R"]), open(mp, "w"))
+    rc, t = run(case("nc17"), manifest=mp)
+    check("NC17 arm Q2R requested in a cell where it does not exist", rc, t, 2, "do not exist in cell")
+    mp = os.path.join(work, "m_frozen_nojson.json"); json.dump(fz, open(mp, "w"))
+    rc, t = run(os.path.normpath(reg), plan="registered", manifest=mp)
+    check("NC18 registered plan without --json (pointed at the registered records)", rc, t, 2, "--json is required")
     print("NEGCONTROLS", "PASS" if OK else "FAIL")
     return 0 if OK else 1
 
