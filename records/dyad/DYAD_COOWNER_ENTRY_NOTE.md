@@ -28,7 +28,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## OWNER LANE — Claude
 
-**Updated:** 16 November 2026, 12:15 +03:00, with r2 of the stage-3c-b preparation (co-owner reviews `5915522711` and `5917787569`, both REVISE: driver findings R1–R3 and R2-A, R2-B corrected; manifest `2553ea87…280f`). **Checked:** 16 November 2026, 12:10 +03:00; `main` `54cddd7`; PR #269 (LIT request) reviewed ACCEPT SCOPED (`5915517388`), open; PR #273 open. Tag `dyad-v6.4.24` → `f0af639`.
+**Updated:** 16 November 2026, 15:50 +03:00, with the PI's selftest of the stage-3c-b package on the server (ACCEPTED; 68 of 68 outputs byte-identical; preparation record §5.1). **Checked:** 16 November 2026, 15:45 +03:00; `main` `c9e313f` (PRs #269 and #273 merged; co-owner review of r3 `5918074811`, ACCEPT SCOPED). Tag `dyad-v6.4.24` → `f0af639`.
 
 **Goal / current question.** OPEN 20 B-an. Stage 3c-a is complete (W1 to W8, hand-over record); the seed and the divergence step are written, conditionally (proof record §12, §13). **Stage 3c-b is prepared, not run:** one driver, a manifest, one acceptance rule, a selftest (`DYAD_OPEN20_AN_STAGE3C_B_PREP.md`). Nothing is a certificate; no divergence is claimed.
 
@@ -92,9 +92,9 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## PI_PENDING
 
-As of 15 November 2026, 00:55 +03:00:
-1. **Merge of the preparation PR** (this branch) and of the LIT request PR #269, after the co-owner's review.
-2. **Selftest on the PI's server** (preparation record §6 steps 2–3): a development-mode run of about 50 minutes that shows whether the package gives byte-identical outputs on that machine. It produces no certification output. Recommended before any production run.
-3. **Stage 3c-b itself:** whether and when to run it, and who replays it and where. Not authorized.
+As of 16 November 2026, 15:50 +03:00:
+1. **Merge of the server-selftest record** (this branch, on top of the upload branch `upload/dyad-3cb-selftest-r3-server`).
+2. **Stage 3c-b itself:** whether and when to run it, and who replays it and where. Not authorized. The package is ready and reproduces on the server (preparation record §5.1); a production run there takes about 2.5 hours.
+3. LIT's answer on Proposition 5.3 (request merged with PR #269) is awaited; no run waits for it.
 
 Stage 3c-b and scouting of the second overlap class are not authorized.
