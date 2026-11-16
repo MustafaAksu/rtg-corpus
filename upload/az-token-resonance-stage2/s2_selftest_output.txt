@@ -1,0 +1,36 @@
+PASS Stage 1 analysis library hashes to its pin
+PASS pins equal the Stage 1 pins
+PASS margins equal the Stage 1 margins
+PASS family quantile is the two-sided 1 - 0.05/10 normal quantile
+PASS family: five contrasts x two endpoints = ten
+PASS registry: horizons, thresholds and bands of the pilot intake
+PASS registry: Stage 2 cells are confirmatory with 1500 base draws, test cells are not confirmatory
+PASS registry: every horizon is at least 800 ticks
+PASS registry: contrasts name arms that exist in their cell
+PASS seed of a Stage 2 draw differs from Stage 1, the pilot and the test tag
+PASS E_theta and E_100 can differ: M = 150 at the end, 99 at tick 800
+PASS a run capped before tick 800 is positive on E_100 and is counted as cap-decided
+PASS a run capped at tick 800 has its checkpoint and is not cap-decided
+PASS record check accepts the three
+PASS record check rejects a missing checkpoint in an uncapped run
+PASS record check rejects a checkpoint in a run stopped before tick 800
+PASS record check rejects a checkpoint above the final M
+PASS exact interval 14/2620 -> [0.0029243, 0.0089493]
+PASS exact interval 0/1201 -> [0, 0.003067]
+PASS sign test 3 against 1 -> 0.625; no non-tied pair -> 1
+PASS order of 2x: resonant classes are orders 1 and 2
+PASS order of 2x at N = 242 takes the values 1, 11, 121 only
+PASS order of 2x: 3 at N/6 and N/3, 4 at N/8
+PASS reading: supported
+PASS reading: a lower limit above 0.05 without a significant Holm p is not supported
+PASS reading: not supported
+PASS reading: inconclusive when the simultaneous interval contains 0.05
+PASS the family interval is wider than the Stage 1 interval on the same counts
+PASS Holm over ten: smallest p is multiplied by ten
+PASS pilot loader reads a well-formed file
+PASS pilot loader accepts the registered hash
+PASS pilot loader refuses a file that does not hash to the registered value
+PASS pilot loader refuses records without the pilot tag and pins in registered mode
+PASS pilot loader refuses a class label that contradicts the seed tokens
+PASS pilot loader reports a missing file
+SELFTEST PASS
