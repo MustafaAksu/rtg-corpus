@@ -28,7 +28,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## OWNER LANE — Claude
 
-**Updated:** 16 November 2026, 12:15 +03:00, with r2 of the stage-3c-b preparation (co-owner review `5915522711`, REVISE: driver findings R1–R3 corrected; manifest `e57a1614…1163`). **Checked:** 16 November 2026, 12:10 +03:00; `main` `54cddd7`; PR #269 (LIT request) reviewed ACCEPT SCOPED (`5915517388`), open; PR #273 open. Tag `dyad-v6.4.24` → `f0af639`.
+**Updated:** 16 November 2026, 12:15 +03:00, with r2 of the stage-3c-b preparation (co-owner reviews `5915522711` and `5917787569`, both REVISE: driver findings R1–R3 and R2-A, R2-B corrected; manifest `2553ea87…280f`). **Checked:** 16 November 2026, 12:10 +03:00; `main` `54cddd7`; PR #269 (LIT request) reviewed ACCEPT SCOPED (`5915517388`), open; PR #273 open. Tag `dyad-v6.4.24` → `f0af639`.
 
 **Goal / current question.** OPEN 20 B-an. Stage 3c-a is complete (W1 to W8, hand-over record); the seed and the divergence step are written, conditionally (proof record §12, §13). **Stage 3c-b is prepared, not run:** one driver, a manifest, one acceptance rule, a selftest (`DYAD_OPEN20_AN_STAGE3C_B_PREP.md`). Nothing is a certificate; no divergence is claimed.
 
@@ -79,7 +79,7 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 **Resume.** Run LIVE_STATE. Read the preparation record of stage 3c-b (§5 selftest, §6 procedure, §8 limits), the hand-over record (§5 state) and the proof record §11–§13. Then check PI_PENDING below.
 
 **Next 1–3 actions / acceptance:**
-1. **OPEN 20 analytic branch: the production run of stage 3c-b and its replay are not authorized.** The package is frozen (manifest `e57a1614…1163`, r2); any change to a listed file needs a new manifest and a new selftest. If the PI authorizes the run: preparation record §6. LIT's answer on Proposition 5.3 (PR #269) arrives in `pipes/DYAD/` and is then the owner's to disposition. Scouting of the second overlap class is not authorized.
+1. **OPEN 20 analytic branch: the production run of stage 3c-b and its replay are not authorized.** The package is frozen (manifest `2553ea87…280f`, r3); any change to a listed file needs a new manifest and a new selftest. If the PI authorizes the run: preparation record §6. LIT's answer on Proposition 5.3 (PR #269) arrives in `pipes/DYAD/` and is then the owner's to disposition. Scouting of the second overlap class is not authorized.
 2. **INF-016 (deferred):** the only recorded route from a jump to B-an and B-6. A later design with a first-harmonic observable would need the items listed in the disposition record §2; it is the PI's decision whether to open it.
 3. **Next Dyadic edition (v6.4.25 or later):** consumer register row and Appendix F rows for AZ at `az-v0.8` (disposition record §3); the carried items of the v6.4.24 backlog §D.
 4. **When PR #183 reaches `main`:** disposition of `pipes/DYAD/20261104-OFN-binary-six-cycle-linear-bridge.md`.

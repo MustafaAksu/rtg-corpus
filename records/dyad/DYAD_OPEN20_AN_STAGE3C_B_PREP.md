@@ -1,6 +1,6 @@
 # DYAD OPEN 20 (analytic branch) — stage 3c-b: preparation record
 
-**Date:** 14–15 November 2026; r2 on 16 November 2026 after the co-owner's review `5915522711` (REVISE; §10). **By:** Claude, Dyadic DSN owner. **Status:** working record (SESSION). **It is not a run of stage 3c-b and certifies nothing.**
+**Date:** 14–15 November 2026; r2 and r3 on 16 November 2026 after the co-owner's reviews `5915522711` and `5917787569` (both REVISE; §10, §11). **By:** Claude, Dyadic DSN owner. **Status:** working record (SESSION). **It is not a run of stage 3c-b and certifies nothing.**
 **Authority:** PI decision of 14 November 2026, given in session on the owner's question: preparation of stage 3c-b is authorized — the t_M correction, freezing the code, a run package fixed by SHA-256, and one command block for the PI's Ubuntu server. **The production run and the independent replay are not part of that authorization; each needs a separate decision of the PI.**
 **Governing edition:** `dyad-v6.4.24` (`10fbdacc…bc16`), unchanged. B-an and B-6 are ACTIVE. No statement about the jump or about divergence is drawn from anything here.
 **Basis:** hand-over record of stage 3c-a (§4 commands, §6 scope, §8 prerequisite); proof record §§2–13.
@@ -26,7 +26,7 @@ Nothing else in the mathematical code was changed.
 
 ## 3. The package
 
-**Identifier:** `DYAD-OPEN20-AN-3CB-1`. **Manifest (r2):** `evidence/dyad/open20-an/stage3c-b/MANIFEST_SHA256.txt`, 18 files, SHA-256 `e57a1614e7bf4723178195f887706d5ed9c320b2882149e26d6fad971a4a1163`. (r1: 17 files, `60143475…9455`.)
+**Identifier:** `DYAD-OPEN20-AN-3CB-1`. **Manifest (r3):** `evidence/dyad/open20-an/stage3c-b/MANIFEST_SHA256.txt`, 18 files, SHA-256 `2553ea87400a09e225597c1b287b7cabadb3ec2838575ae0576e9dcb022d280f`. (r1: 17 files, `60143475…9455`; r2: `e57a1614…1163`.)
 The manifest lists the driver, the ten scripts of the job table, every `dyad_*` module they import (the library, the stage-2 and stage-2b modules, the stage-3b tube sampling), the stage-2 input `scout_N216_dps840.json`, and the gate schema `GATE_SCHEMA.json`. The driver refuses to run if a listed file differs, or if the list is not exactly this set.
 
 **Frozen environment:** python-flint 0.9.0 (FLINT 3.6.0 in the wheel used here), mpmath 1.3.0, sympy 1.14.0. The driver stops on any other version of these three. The development runs used Python 3.13.16; the Python version is recorded, not fixed.
@@ -68,13 +68,14 @@ The driver writes `LEDGER.json` (mode, the PI's authorization as quoted on the c
 
 **Modes.** `selftest` (development mode, compared with the committed outputs); `production` and `replay` (need `--pi-authorization`, a readable and clean git checkout and the manifest).
 
-`validate DIR` checks one run directory on its own, from its files. The stored verdict is not trusted:
+`validate DIR` checks one run directory on its own, from its files. It first checks the frozen package against its manifest, so the gate schema it uses is the frozen one, and the ledger must carry that manifest (r3). The stored verdict is not trusted:
 - `SHA256SUMS.txt` must list exactly the files with their hashes;
 - each record must name the files of its job and carry their actual hashes;
 - its gates must be those of the actual output;
+- the ledger must agree with its mode (r3): its scope text is the text of the mode; it shows a passed rule test and the frozen package versions; in `production` and `replay` it records a PI authorization and a clean, readable git state, and every output that has a status field says "stage 3c-b run"; a selftest records no authorization and no output with that status (the structure script writes no status and is the stated exception). This cannot show that a PI decision is real; it rejects a set of files that contradicts itself;
 - the rule is then applied again, and the stored verdict must equal the result.
 
-`compare A B` validates both directories, requires the manifest of this checkout in both and production against replay (or two selftests), and then compares every output byte for byte.
+`compare A B` checks the package against its manifest, validates both directories, requires the manifest of this checkout in both and production against replay (or two selftests), and then compares every output byte for byte.
 
 ## 5. The selftest
 
@@ -126,7 +127,7 @@ The driver writes `LEDGER.json` (mode, the PI's authorization as quoted on the c
    && /root/venv-dyad-3cb/bin/python -I -B evidence/dyad/scripts/dyad_open20_an_stage3c_b_run.py production \
         --out /root/dyad-3cb-production --jobs 2 --pi-authorization "<the PI's decision, date and words>"
    ```
-5. **The output directory arrives unchanged** on an `upload/…` branch and is hash-checked against its `SHA256SUMS.txt` (CONVENTIONS).
+5. **The whole output directory** (every JSON and printed output, `LEDGER.json`, `SHA256SUMS.txt`) **arrives unchanged** on an `upload/…` branch — `validate` needs the files, not only the ledger — and is hash-checked against its `SHA256SUMS.txt` (CONVENTIONS).
 6. **Replay** by the second party with the mode `replay`, then `compare PRODUCTION_DIR REPLAY_DIR`.
 7. **Release record** by the owner, stating the scope of §7; review; PI decision.
 
@@ -169,3 +170,16 @@ The review found no fault in the mathematics or in the development outputs. It f
 - **Result:** all five tests PASS (`evidence/dyad/open20-an/stage3c-b/driver_tests.json`; checksums in `DRIVER_TESTS_SHA256SUMS.txt`). They take under a second and use only the standard library. OWNER-RUN.
 - **Server command** (the review's last point): pinned by the manifest hash, and it keeps the driver's exit code (§6 step 3).
 - **Not done:** no campaign run, no selftest with the r2 driver, no production run, no replay.
+
+## 11. r3 — co-owner review `5917787569` (REVISE), 16 November 2026
+
+R1 and R3 of the previous review were accepted, and the counter-examples of R2 were found closed. Two gaps were found in the new `validate`/`compare` path.
+
+| Finding | Correction | Test |
+|---|---|---|
+| **R2-A** `validate` and `compare` did not check the package against the manifest, so a changed schema with an unchanged manifest could make a false two-disc gate acceptable | both call `check_manifest()` before using the schema; the ledger must carry the frozen manifest | PACKAGE: two directories with a false `SEP_two_disc_test` DISAGREE; they still DISAGREE with the schema changed to expect that failure and the manifest unchanged (the package check stops); the schema is restored and the package matches its manifest again |
+| **R2-B** two selftests relabelled `production` and `replay` compared AGREE | the mode check of §4, on the statuses read from the output files | MODE: a consistent production/replay pair AGREE; the relabelled selftests DISAGREE; five inconsistent production ledgers (no authorization, unclean git, selftest scope, other package versions, one output in development status) INVALID; a selftest with an authorization INVALID; the library's status text equals the driver's |
+
+- **Result:** seven driver tests, all PASS (`driver_tests.json`, `DRIVER_TESTS_SHA256SUMS.txt`). OWNER-RUN.
+- **Manifest r3:** `2553ea87…280f`; only the driver changed since r2. No script of the job table changed; no campaign was run.
+- **Kept output:** the stored selftest ledger of r1 is a ledger only. A selftest or a run that is to be checked by `validate` must be kept as a whole directory (§6 step 5).

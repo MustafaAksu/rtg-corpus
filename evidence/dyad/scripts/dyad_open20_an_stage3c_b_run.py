@@ -67,6 +67,8 @@ DRIVER = SD + '/dyad_open20_an_stage3c_b_run.py'
 REQUIRED = {'python-flint': '0.9.0', 'mpmath': '1.3.0', 'sympy': '1.14.0'}
 RUN_ENV = 'DYAD_OPEN20_3CB'
 PACKAGE_ID = 'DYAD-OPEN20-AN-3CB-1'
+# the status that lib.run_status gives when RUN_ENV is set (the driver tests check that the library has this text)
+RUN_STATUS = 'stage 3c-b run; one output of the run; the verdict is the ledger of the run with its replay, not this file'
 
 P = lambda name: SD + '/dyad_open20_an_' + name + '.py'
 W1, W2, W2B = P('stage3c_w1_check'), P('stage3c_w2_check'), P('stage3c_w2b_check')
@@ -511,8 +513,14 @@ def validate_dir(d):
     """Check one finished run directory on its own, from its files (R2).  The stored verdict is not trusted: the
     checksum file must list exactly the files of the directory with their hashes; each ledger record must name the
     files of its job, carry their actual hashes and the gates that the actual output contains; then the rule is
-    applied again.  Returns (ok, reasons, ledger)."""
+    applied again.  Before anything else the frozen package is checked against its manifest, so the gate schema used
+    is the frozen one (r3, review 5917787569 R2-A), and the ledger must carry that manifest.  The ledger must also be
+    consistent with its mode (R2-B).  Returns (ok, reasons, ledger)."""
     why = []
+    try:
+        man = check_manifest()
+    except SystemExit as e:
+        return False, ['package check: %s' % e], None
     try:
         led = json.load(open(os.path.join(d, 'LEDGER.json'), encoding='utf-8'))
     except (OSError, ValueError) as e:
@@ -538,6 +546,9 @@ def validate_dir(d):
     mode = led.get('mode')
     if mode not in SCOPE:
         why.append('mode %r' % mode)
+    if (led.get('manifest') or {}).get('sha256') != man['sha256']:
+        why.append('the ledger carries manifest %r, not the frozen manifest %s'
+                   % ((led.get('manifest') or {}).get('sha256'), man['sha256']))
     table = job_table(); schema = load_schema(); byname = {j['name']: j for j in table}
     rebuilt = []
     for r in led['jobs']:
@@ -556,12 +567,13 @@ def validate_dir(d):
                 why.append('%s: the hash of the JSON output differs from the ledger' % j['name'])
             if not os.path.exists(so) or r.get('stdout_sha256') != sha256(so):
                 why.append('%s: the printed output is missing or differs from the ledger' % j['name'])
-            if r.get('gates') != x.get('gates') or r.get('all_pass') != x.get('all_pass'):
+            if r.get('gates') != x.get('gates') or r.get('all_pass') != x.get('all_pass') or r.get('status') != x.get('status'):
                 why.append('%s: the gates in the ledger differ from those of the output' % j['name'])
             if mode == 'selftest':
                 x['same_json'] = same_bytes(oj, os.path.join(ROOT, j['ref']))
                 x['same_stdout'] = same_bytes(so, os.path.join(ROOT, j['ref'][:-5] + '.stdout.txt'))
         rebuilt.append(x)
+    why += mode_problems(led, rebuilt)
     ok, w = verdict(table, rebuilt, mode == 'selftest', schema)
     why += w
     if led.get('verdict') != ('ACCEPTED' if ok else 'REJECTED'):
@@ -569,10 +581,55 @@ def validate_dir(d):
     return (not why), why, led
 
 
+def mode_problems(led, records):
+    """A ledger must not contradict its own mode (R2-B).  It cannot prove that a PI decision is real; it rejects a set
+    of files that contradicts itself."""
+    why, mode = [], led.get('mode')
+    if mode not in SCOPE:
+        return why
+    if led.get('scope') != SCOPE[mode]:
+        why.append('the scope text is not the text of mode %s' % mode)
+    rt = led.get('rule_test')
+    if not (isinstance(rt, list) and rt and all(isinstance(r, dict) and r.get('got') == r.get('expected') for r in rt)):
+        why.append('the ledger does not show a passed rule test')
+    env = led.get('environment') or {}
+    if (env.get('packages') or {}) != REQUIRED:
+        why.append('the recorded package versions are not the frozen ones')
+    auth = led.get('pi_authorization')
+    production = mode in ('production', 'replay')
+    if production:
+        if not (isinstance(auth, str) and auth.strip()):
+            why.append('mode %s without a recorded PI authorization' % mode)
+        git = led.get('git') or {}
+        if not (git.get('clean') is True and git.get('commit')):
+            why.append('mode %s without a clean, readable git state' % mode)
+    elif auth not in (None, ''):
+        why.append('a selftest that records a PI authorization')
+    for r in records:                                   # rebuilt from the output files, not from the ledger
+        if not isinstance(r, dict) or r.get('error') or r.get('skipped'):
+            continue
+        j = {x['name']: x for x in job_table()}.get(r.get('name'))
+        if j is None:
+            continue
+        st = r.get('status')
+        if j['script'] == STR:                          # the structure script has no status field
+            if st is not None:
+                why.append('%s: a status where the script writes none' % j['name'])
+        elif production and st != RUN_STATUS:
+            why.append('%s: the output says %r in mode %s' % (j['name'], (st or '')[:40], mode))
+        elif not production and st == RUN_STATUS:
+            why.append('%s: a selftest output with the status of a production run' % j['name'])
+    return why
+
+
 def compare(a, b):
     """Validate both directories on their own, then compare them (R2)."""
     ok = True
     leds = []
+    try:
+        check_manifest()
+    except SystemExit as e:
+        print('package check:', e); print('COMPARE DISAGREE'); return 1
     for d in (a, b):
         v, why, led = validate_dir(d)
         print('%-60s %s' % (d[-60:], 'VALID' if v else 'INVALID'))

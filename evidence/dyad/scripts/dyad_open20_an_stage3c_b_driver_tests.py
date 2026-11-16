@@ -16,6 +16,14 @@ Written for the co-owner's review 5915522711 of PR #273 (findings R1-R3).  Secon
             JSON value [] becomes an error record; a job whose output is not JSON becomes an error record; a job that
             depends on a failed job is recorded as skipped and not run; a job that passes runs; every job has exactly
             one record; the run ends; the rule rejects.
+  MODE      (review 5917787569, R2-B) a production and a replay directory (outputs with the production status) compare
+            AGREE; two selftests relabelled production/replay DISAGREE; a production ledger without authorization,
+            with an unclean git state, with the selftest scope, with other package versions, or with one output in
+            development status is INVALID; so is a selftest that records an authorization; the library writes the
+            status text the driver expects.
+  PACKAGE   (R2-A) two directories whose legs output has a false two-disc gate DISAGREE; they still DISAGREE when the
+            gate schema is changed to expect that failure while the manifest is not (the package check stops
+            validate and compare); the schema is restored and checked.
   GIT       (R3) with git answering rev-parse but failing status (exit 128), the strict check stops and the non-strict
             check reports the tree as not clean; with both answering and no changes it is clean.
 
@@ -28,23 +36,34 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import dyad_open20_an_stage3c_b_run as R
 
 
-def fixture(d):
-    """A run directory from the committed reference outputs, with a ledger in the driver's format."""
+def fixture(d, mode='selftest'):
+    """A run directory from the committed reference outputs, with a ledger in the driver's format.  For the modes
+    production and replay the status of each output that has one is set to the status of such a run (as the scripts
+    write it when the driver sets the environment variable); gates are untouched."""
     os.makedirs(d)
     recs = []
     for j in R.job_table():
         shutil.copyfile(os.path.join(R.ROOT, j['ref']), os.path.join(d, j['stem'] + '.json'))
+        if mode != 'selftest':
+            p = os.path.join(d, j['stem'] + '.json'); x = json.load(open(p, encoding='utf-8'))
+            if 'status' in x:
+                x['status'] = R.RUN_STATUS
+                with open(p, 'w', encoding='utf-8', newline='\n') as fh:
+                    json.dump(x, fh, indent=1, sort_keys=True); fh.write('\n')
         shutil.copyfile(os.path.join(R.ROOT, j['ref'][:-5] + '.stdout.txt'), os.path.join(d, j['stem'] + '.stdout.txt'))
         rec = dict(name=j['name'], kind='positive' if j['expect'] == 0 else 'control', expected_exit=j['expect'],
                    exit=j['expect'], json=j['stem'] + '.json', stdout=j['stem'] + '.stdout.txt', seconds=0.0)
         R.read_output(rec, os.path.join(d, j['stem'] + '.json'))
         rec['stdout_sha256'] = R.sha256(os.path.join(d, j['stem'] + '.stdout.txt'))
         recs.append(rec)
-    R.compare_refs(R.job_table(), recs, d)
-    ok, why = R.verdict(R.job_table(), recs, True, R.load_schema())
-    led = dict(package=R.PACKAGE_ID, mode='selftest', label='driver-test fixture', pi_authorization=None,
-               scope=R.SCOPE['selftest'], manifest=dict(sha256=R.sha256(os.path.join(R.ROOT, R.MANIFEST))), jobs=recs,
-               verdict='ACCEPTED' if ok else 'REJECTED', reasons=why)
+    if mode == 'selftest':
+        R.compare_refs(R.job_table(), recs, d)
+    ok, why = R.verdict(R.job_table(), recs, mode == 'selftest', R.load_schema())
+    led = dict(package=R.PACKAGE_ID, mode=mode, label='driver-test fixture',
+               pi_authorization=None if mode == 'selftest' else 'driver-test fixture; not a PI decision',
+               scope=R.SCOPE[mode], manifest=dict(sha256=R.sha256(os.path.join(R.ROOT, R.MANIFEST))), jobs=recs,
+               environment=dict(packages=dict(R.REQUIRED)), rule_test=R.rule_test()[1],
+               git=dict(commit='0' * 40, clean=True), verdict='ACCEPTED' if ok else 'REJECTED', reasons=why)
     R.write_ledger(d, led)
     return ok, why
 
@@ -125,6 +144,64 @@ def main():
             rc, _ = quiet(R.compare, A, C)
             rows.append((name, 'AGREE' if rc == 0 else 'DISAGREE', 'DISAGREE'))
         gate('COMPARE', all(g == w for _, g, w in rows), [dict(case=n, got=g, expected=w) for n, g, w in rows])
+
+        # MODE (review 5917787569, R2-B): a ledger must not contradict its mode
+        P1, P2 = os.path.join(tmp, 'P1'), os.path.join(tmp, 'P2')
+        fixture(P1, 'production'); fixture(P2, 'replay')
+        rows = []
+        rc, _ = quiet(R.compare, P1, P2); rows.append(('production against replay, consistent', rc == 0, True))
+        def relabel(m):
+            def f(d): edit_ledger(d, lambda l: l.update(mode=m))
+            return f
+        S1, S2 = os.path.join(tmp, 'S1'), os.path.join(tmp, 'S2')
+        shutil.copytree(A, S1); shutil.copytree(A, S2); relabel('production')(S1); relabel('replay')(S2)
+        rc, _ = quiet(R.compare, S1, S2); rows.append(('two selftests relabelled production and replay', rc == 0, False))
+        def one_dev_status(d):
+            p = os.path.join(d, pos2['stem'] + '.json'); x = json.load(open(p)); x['status'] = 'stage 3c-a development run'
+            json.dump(x, open(p, 'w'), indent=1, sort_keys=True)
+            edit_ledger(d, lambda l: next(r for r in l['jobs'] if r['name'] == pos2['name']).update(json_sha256=R.sha256(p), status=x['status']))
+        pos2 = next(j for j in T if j['expect'] == 0 and j['script'] != R.STR)
+        cases = [('production without a PI authorization', lambda d: edit_ledger(d, lambda l: l.update(pi_authorization=None))),
+                 ('production with a git state that is not clean', lambda d: edit_ledger(d, lambda l: l['git'].update(clean=False))),
+                 ('production with the selftest scope text', lambda d: edit_ledger(d, lambda l: l.update(scope=R.SCOPE['selftest']))),
+                 ('production with other package versions', lambda d: edit_ledger(d, lambda l: l['environment'].update(packages={'mpmath': '1.4.0'}))),
+                 ('production with one output in development status', one_dev_status)]
+        for name, f in cases:
+            C = os.path.join(tmp, 'C'); shutil.rmtree(C, ignore_errors=True); shutil.copytree(P1, C); f(C)
+            v, why, _ = R.validate_dir(C); rows.append((name, v, False))
+        C = os.path.join(tmp, 'C'); shutil.rmtree(C, ignore_errors=True); shutil.copytree(A, C)
+        edit_ledger(C, lambda l: l.update(pi_authorization='x')); v, _, _ = R.validate_dir(C)
+        rows.append(('selftest recording a PI authorization', v, False))
+        lib = open(os.path.join(R.ROOT, R.SD, 'dyad_open20_an_stage3c_lib.py'), encoding='utf-8').read()
+        rows.append(('the library writes exactly the status the driver expects', ("'%s'" % R.RUN_STATUS) in lib, True))
+        gate('MODE', all(bool(g) == w for _, g, w in rows), [dict(case=n, result=bool(g), expected=w) for n, g, w in rows])
+
+        # PACKAGE (review 5917787569, R2-A): validate and compare check the frozen package before using the schema
+        rows = []
+        L1, L2 = os.path.join(tmp, 'L1'), os.path.join(tmp, 'L2')
+        for Ld in (L1, L2):
+            shutil.copytree(A, Ld)
+            def bad_legs(d):
+                p = os.path.join(d, 'legs.json'); x = json.load(open(p)); x['gates']['SEP_two_disc_test'] = False; x['all_pass'] = False
+                json.dump(x, open(p, 'w'), indent=1, sort_keys=True)
+                edit_ledger(d, lambda l: next(r for r in l['jobs'] if r['name'] == 'legs').update(
+                    json_sha256=R.sha256(p), gates=x['gates'], all_pass=False))
+            bad_legs(Ld)
+        rc, _ = quiet(R.compare, L1, L2); rows.append(('legs with a false two-disc gate, frozen schema', rc == 0, False))
+        sp = os.path.join(R.ROOT, R.SCHEMA); orig = open(sp, 'rb').read()
+        try:
+            x = json.loads(orig); x['jobs']['legs']['false'] = ['SEP_two_disc_test']
+            open(sp, 'w').write(json.dumps(x, indent=1, sort_keys=True) + '\n')
+            rc, _ = quiet(R.compare, L1, L2); rows.append(('the same, with a changed schema and the old manifest', rc == 0, False))
+            v, why, _ = R.validate_dir(L1); rows.append(('validate with a changed schema', v, False))
+        finally:
+            open(sp, 'wb').write(orig)
+        try:
+            R.check_manifest(); restored = True
+        except SystemExit:
+            restored = False
+        rows.append(('schema restored and the package matches its manifest again', restored, True))
+        gate('PACKAGE', all(bool(g) == w for _, g, w in rows), [dict(case=n, result=bool(g), expected=w) for n, g, w in rows])
 
         # WORKER
         W = os.path.join(tmp, 'W'); os.makedirs(W); S = os.path.join(tmp, 'scripts'); os.makedirs(S)

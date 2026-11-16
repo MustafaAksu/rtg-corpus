@@ -69,6 +69,81 @@
    ],
    "pass_": true
   },
+  "MODE": {
+   "info": [
+    {
+     "case": "production against replay, consistent",
+     "expected": true,
+     "result": true
+    },
+    {
+     "case": "two selftests relabelled production and replay",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production without a PI authorization",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production with a git state that is not clean",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production with the selftest scope text",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production with other package versions",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "production with one output in development status",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "selftest recording a PI authorization",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "the library writes exactly the status the driver expects",
+     "expected": true,
+     "result": true
+    }
+   ],
+   "pass_": true
+  },
+  "PACKAGE": {
+   "info": [
+    {
+     "case": "legs with a false two-disc gate, frozen schema",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "the same, with a changed schema and the old manifest",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "validate with a changed schema",
+     "expected": false,
+     "result": false
+    },
+    {
+     "case": "schema restored and the package matches its manifest again",
+     "expected": true,
+     "result": true
+    }
+   ],
+   "pass_": true
+  },
   "RULE": {
    "info": [
     {
@@ -164,7 +239,7 @@
     ],
     "records": [
      {
-      "command": "python3 -I -B /tmp/dyad3cb_tests_nn_bj9yo/scripts/list.py --out {OUT}/t_list.json",
+      "command": "python3 -I -B /tmp/dyad3cb_tests_qql28j97/scripts/list.py --out {OUT}/t_list.json",
       "error": "output is not a JSON object",
       "exit": 0,
       "expected_exit": 0,
@@ -184,7 +259,7 @@
       "skipped": "dependency t_list did not end as expected"
      },
      {
-      "command": "python3 -I -B /tmp/dyad3cb_tests_nn_bj9yo/scripts/notjson.py --out {OUT}/t_notjson.json",
+      "command": "python3 -I -B /tmp/dyad3cb_tests_qql28j97/scripts/notjson.py --out {OUT}/t_notjson.json",
       "error": "output is not valid JSON (JSONDecodeError)",
       "exit": 0,
       "expected_exit": 0,
@@ -199,7 +274,7 @@
      },
      {
       "all_pass": true,
-      "command": "python3 -I -B /tmp/dyad3cb_tests_nn_bj9yo/scripts/good.py --out {OUT}/t_good.json",
+      "command": "python3 -I -B /tmp/dyad3cb_tests_qql28j97/scripts/good.py --out {OUT}/t_good.json",
       "exit": 0,
       "expected_exit": 0,
       "gates": {
