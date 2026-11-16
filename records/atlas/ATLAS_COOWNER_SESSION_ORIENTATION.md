@@ -30,8 +30,8 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 **Evidence:** v0.13 second candidate: 75 logged operations; 9 new nodes (8 TDR-G, 1 AZ); TDRG.G9 retired; six reviewed items and two reviewed locator updates (record §2.3, §3a); 28 rule-4.1 span deletions (328 bytes), each asserted to be one contiguous deletion; shared check 0 FAIL (coverage 137, links 525/2/10, keys 154, wording 13 WARN); 33 focused negative controls detected; one Atlas error of v0.12 corrected (launch-chain note, record §3 point 6).
 **Resume:** `python3 -I evidence/atlas/build/refresh_v0_13.py` (rebuilds and checks; stops on any failed assertion). The shared checker's coverage check sees Dyadic RIDs only; for other moved sources the builder asserts the homes itself (`HOMES`, `homes_check`).
 **Next 1–3 actions / acceptance:**
-1. Bounded readback by the reviewer of R1, R2 and the two notes (record §3a).
-2. Any further finding as a follow-up commit; rebuild; update hashes in the record.
+1. PI decision on v0.13 (review complete).
+2. After acceptance: release record §4 and BASELINE row, then the CLI block.
 3. After PI acceptance: BASELINE row, one CLI block (merge commit + annotated tag `atlas-v0.13`), tag verification, close `pipes/ATLAS/20261112-AZ-v0-8-adopted.md` and `pipes/ATLAS/20261114-AZ-v0-9-adopted.md`.
 **Reopen trigger:** any owner tag after the v0.13 snapshot `54cddd7` (impact refresh); any open item in `pipes/ATLAS/`.
 
@@ -70,8 +70,9 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 - Nothing is waiting on the PI for the Atlas. v0.11 is accepted, merged and tagged (10 Nov; CLI block issued in the project conversation at 15:27 +03:00, output returned 15:29).
 - 10 Nov 17:23: advisory dispositions decided (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md` §4); rows 1 and 3 since resolved by `az-v0.7`.
 - 11 Nov 18:15: the PI accepted all six recommendations of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` (§5); they are AZ's to carry out.
-- Nothing is waiting on the PI for the Atlas. v0.13 is prepared, not built; it starts when `az-v0.9` is tagged (13 Nov, project conversation, 11:23 +03:00).
-- 14 Nov: the PI reported `az-v0.9` tagged (project conversation); the v0.13 candidate is built and is with the reviewer. Waiting on the PI after the review: acceptance of v0.13.
+- 13 Nov, 11:23 +03:00 (project conversation): v0.13 to be built as one refresh once `az-v0.9` is tagged; 14 Nov: the PI reported the tag; the candidate was built.
+- **Waiting on the PI (16 Nov): adoption of Atlas v0.13**, candidate `208ddd96…9045` on PR #272 (review complete: `5915598211`, then readback `5917882889`, ACCEPT SCOPED). After acceptance the owner adds the BASELINE row and issues one CLI block (merge commit and annotated tag `atlas-v0.13`).
+- TDR-G v2.13 (PR #265, candidate `c79898f9…36f4`): atlas row check ACCEPT FOR ADOPTION after F1 (`records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` §6, PR #277). After its tag: Atlas v0.14 refresh.
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
 

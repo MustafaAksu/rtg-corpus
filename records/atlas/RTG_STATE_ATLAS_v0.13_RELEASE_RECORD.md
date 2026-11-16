@@ -1,6 +1,6 @@
 # RTG State Atlas v0.13 — acceptance record (draft)
 
-**Status:** DRAFT — second candidate, after review round 1 (review `5915598211`, ACCEPT WITH CHANGES; §3a). Not accepted. `atlas-v0.12` is the tagged Atlas until the PI accepts this candidate, PR for branch `claude/atlas-v0.13` is merged and the annotated tag `atlas-v0.13` exists and is verified.
+**Status:** DRAFT — second candidate, review complete: round 1 `5915598211` (ACCEPT WITH CHANGES; §3a), round-2 readback `5917882889` on head `d11f7df` (ACCEPT SCOPED, R1 and R2 closed). Ready for the PI's decision; not accepted. `atlas-v0.12` is the tagged Atlas until the PI accepts this candidate, PR for branch `claude/atlas-v0.13` is merged and the annotated tag `atlas-v0.13` exists and is verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, 14 November 2026, on branch `claude/atlas-v0.13`.
 **Method:** Atlas Method v0.3 (`atlas-method-v0.3`). This is the first edition built under it.
@@ -101,7 +101,11 @@ Also in this round: the snapshot moved to `54cddd7` (§1) and the AZ v0.9 notice
 
 ## 4. Decision
 
-Pending. To be completed with the reviewer's result and the PI's decision.
+**Reviewer (ChatGPT, Atlas co-owner):** round 1 `5915598211` on `044cd62`, ACCEPT WITH CHANGES (R1 relation types, R2 operation kinds; two notes). Round-2 readback `5917882889` on `d11f7df`, **ACCEPT SCOPED**: R1 and R2 closed, the frontier counterexample is now caught, "odd prime factor" is corrected. The reviewer's evidence boundary: relation conditions and helpers read directly, with 12 bounded local tests; the full build, the replay of the 75 operations, the 33 controls and the candidate and manifest SHA-256 values were not recomputed in that session, so they remain producer records. No textual or scientific correction remains. Two record items were fixed in publication maintenance without changing Atlas bytes: the size in §6 and the PI_PENDING line of the orientation note.
+
+The frozen inputs stay `tdrg-v2.12.15` and `az-v0.9`. TDR-G v2.13 (PR #265) enters through the Atlas v0.14 refresh after its tag; this candidate is not re-pinned.
+
+**PI:** pending.
 
 ## 5. Publication (pending; the PI executes)
 
@@ -111,4 +115,4 @@ After acceptance: BASELINE row for ATLAS; merge (merge commit) and annotated tag
 
 - Coverage check of the shared tool for non-Dyadic sources (now done by builder assertions).
 - Seven other multi-line identifiers; comparator mode for heading renames; an AZ profile for `tools/orient.py`; F4.
-- Size: 536,466 bytes. Reported, not targeted (Method §4.6); reconsidered by the PI after the sources consolidate.
+- Size: 537,046 bytes. Reported, not targeted (Method §4.6); reconsidered by the PI after the sources consolidate.
