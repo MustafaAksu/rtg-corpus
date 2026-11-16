@@ -1,6 +1,6 @@
 AZ v0.10 edit log
 base az-v0.9 c198a8bbddb23ce0d546c3ed03bddcdcf02dd83b974da7651a89a3fec5ac7598
-result sha256 7336ab384288e4cffc58ae3b550a6567e08252ec340f5f657a0276686f256cfa, 111765 bytes
+result sha256 b672fd03cfe73e4cd674721bca24a3da4b76c0fe09cf52727d92ed932a178217, 112563 bytes
 base lines: 631; unchanged and in order: 618; replaced: 6; edited in place: 7
 
 E01 H-title      set-line     

@@ -102,7 +102,7 @@ def main():
         "and `AZ-NUM-TOKRES-S2` `[NUM diagnostic]` — the same contrast in the registered cells $(N,k)=(240,16),(242,16),(480,32)$, on "
         "$M\\ge\\theta(N)$ at a calibrated horizon and on $M\\ge100$ at tick 800: all ten contrasts of its confirmatory family meet the "
         "registered support criterion for a risk difference above 0.05 ($2x\\equiv0$ in all three cells; $2x\\equiv N/2$ at $N=240,480$), and at "
-        "$N=242$ the values nearest $N/4$ are equivalent to the native state (§4.2.2); for both, mechanism not established and no statement "
+        "$N=242$ the near-quarter arm (the token drawn from the four values nearest $N/4$, $3N/4$) is equivalent to the native state (§4.2.2); for both, mechanism not established and no statement "
         "beyond their cells, horizons and thresholds.", "current-state readout of the second diagnostic")
     sub("S1.1-crit", "`[OPEN]` **Success criterion.**",
         "The seed-token resonance diagnostic (§4.2.1) is an arithmetic condition with an effect on the dynamics, at two cells and one horizon; "
