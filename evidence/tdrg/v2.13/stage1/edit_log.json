@@ -1,7 +1,7 @@
 {
  "base_tag": "tdrg-v2.12.15",
  "base_sha256": "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64",
- "intermediate_sha256": "472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff",
+ "intermediate_sha256": "3aa03d9e50144ac201ef0abf30371d6889a1e7e8e2aabcb47646812a8719ba27",
  "edits": [
   {
    "key": "E01",
@@ -127,10 +127,10 @@
    "mode": "str",
    "line_anchor": "Physical consequence: fully defective $K_3$",
    "old": "(`az-v0.7`; statement unchanged from `az-v0.6`)",
-   "new": "(`az-v0.8`)",
+   "new": "(`az-v0.9`)",
    "old_sha256": "a40e2cc43dd601abac0fce3274ab3584cb6a907873d460b2a31a7e55e1aaa363",
-   "new_sha256": "ecad91d75f6108a806022deac2f4dc6841d27355b2131f6dad50deff7f66188e",
-   "note": "S1: the cited AZ-ALG-ANTIPODAL-LOWORDER entry is byte-identical at az-v0.6, az-v0.7 and az-v0.8 (checker C6)"
+   "new_sha256": "91295c91f03920e49d0156b4f5fadf1138396b954a769baa391d493799c40468",
+   "note": "S1/F1: the cited AZ-ALG-ANTIPODAL-LOWORDER statement is byte-identical at az-v0.6, az-v0.7, az-v0.8 and az-v0.9 (checker C6)"
   },
   {
    "key": "E14",
@@ -250,15 +250,15 @@
    "old_lines": 12,
    "new_lines": 10,
    "old_sha256": "b7502c3827df0f7c9f7ee2192533b2f4e6cd244a9a87025e0c72746cf545dbfc",
-   "new_sha256": "419b5eeea5eda697abddc64a45b93ba0b4d92ee795938cf7598656164882b22f",
-   "note": "S1, S7: rows state current use; AZ at az-v0.8 from its own §8; queue states and the 'notices after the tag' sentence leave"
+   "new_sha256": "05cd33d48c0a25357357b61f84d677fc744807d5313aabff3d7dda5314b78f74",
+   "note": "S1, S7/F1: rows state current use; AZ at az-v0.9 from its own §8, including its tdrg-v2.12.15 pin and token-law rows; AZ-NUM-TOKRES-S1 remains AZ-owned, not adopted TDR-G science; queue states leave"
   },
   {
    "key": "E26",
    "mode": "line",
    "line_anchor": "**Pins.** Governing editions at this release:",
    "old_sha256": "311bed136ae52661c494b4114b2d7d24f264495977d72f38eb73e3249d8e0a75",
-   "new_sha256": "5b8faa401b61543494c1a36a0f9c719efb989a1e8415d68c0cbb8b6feebf5547",
+   "new_sha256": "12c3ee8ab0c88067f69c87b604b71b836d377324f4959846ec705f1c089193bf",
    "old_len": 354,
    "new_len": 231,
    "note": "S1, S3: current pins; no historical pin remains live"

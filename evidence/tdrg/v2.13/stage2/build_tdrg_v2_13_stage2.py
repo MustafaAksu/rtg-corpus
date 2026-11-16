@@ -165,7 +165,7 @@ mp = {"study": "TDRG", "target": "v2.13", "stage": 2,
                        "holds the v2.12.15 header, Appendix A and footer verbatim.",
       "profile": {"study": "TDRG", "ref_words": [], "history_words": ["v2.12"],
                   "checked_tag_prefixes": ["tdrg-", "az-", "ofn-", "programme-", "methodology-", "numgen-"],
-                  "known_tags": ["tdrg-v2.12.13", "tdrg-v2.12.14", "tdrg-v2.12.15", "az-v0.6", "az-v0.7", "az-v0.8",
+                  "known_tags": ["tdrg-v2.12.13", "tdrg-v2.12.14", "tdrg-v2.12.15", "az-v0.6", "az-v0.7", "az-v0.8", "az-v0.9",
                                  "ofn-v0.10", "ofn-v0.12", "programme-v1.4", "methodology-v1.4", "numgen-v1.21"],
                   "summary_from": ["header"]},
       "operations": ops}

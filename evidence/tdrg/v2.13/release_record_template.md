@@ -8,7 +8,7 @@
 
 **Prepared by:** Claude, TDR-G co-owner session `claude01SKePJ`, on branch `claude/tdrg-v2-13`.
 
-**Edition:** v2.13, a maintenance edition. It migrates the document to Methodology v1.4 and pins AZ at v0.8. No scientific result changes, and nothing is rerun.
+**Edition:** v2.13, a maintenance edition. It migrates the document to Methodology v1.4 and pins AZ at v0.9 (v0.8 in the plan; atlas row check F1). No scientific result changes, and nothing is rerun.
 
 **Predecessor:** `RTG_DISCRETE_GENESIS_DSN` v2.12.15, tag `tdrg-v2.12.15`, SHA-256 `1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64`.
 
@@ -60,7 +60,7 @@ The stage-1 builder reads its base from the tag. The stage-2 builder, the map an
 
 | Plan row | Edits | What changed |
 |---|---|---|
-| S1 — AZ pin | E13, E25, E26 | §6.2 cites `AZ-ALG-ANTIPODAL-LOWORDER` at `az-v0.8`. Checker C6 shows the entry is byte-identical at `az-v0.6`, `az-v0.7` and `az-v0.8`. The AZ consumer row is restated from AZ's own v0.8 text: AZ §8, IMP-B, cites TDR-G at `tdrg-v2.12.14`; the two AZ identifiers with a `TDRG-` prefix are AZ's, not TDR-G RIDs, and are not named, so that no tool reads them as TDR-G identifiers. Pins are current. |
+| S1 — AZ pin (with F1, §3b) | E13, E25, E26 | §6.2 cites `AZ-ALG-ANTIPODAL-LOWORDER` at `az-v0.9`. Checker C6 shows the entry is byte-identical at `az-v0.6`, `az-v0.7`, `az-v0.8` and `az-v0.9`. The AZ consumer row is restated from AZ's own v0.9 text: AZ §8, IMP-B, cites TDR-G at `tdrg-v2.12.15`, follows the LEM-SPECCONS generalization and adds the TDRG-ALG-EVENT-INVENTORY / TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-PARENT-CHILD-PHASE rows; AZ-NUM-TOKRES-S1 is named as AZ's numerical diagnostic, not a TDR-G result (its grade in words, not as a TDR-G tag); the two AZ identifiers with a `TDRG-` prefix are AZ's, not TDR-G RIDs, and are not named, so that no tool reads them as TDR-G identifiers. Pins are current. |
 | S2 — Methodology | E01, E02 | The header declares v1.4. The alias sentence names v1.4 §8.1; its v2.12.14 history (the legacy rows, which carry tags) stays in the tagged predecessor. |
 | S3 — historical pins | E06, E07, E15, E19, E26 | The OPEN-OFN-2 connection of TDR-1 and TDR-19 points to `ofn-v0.12`, where OPEN-OFN-2 is open as `RTG-OFN-OPEN-DISC-INTERACTION`. CONV-TICK and LEM-NOANNIHIL name their current consumer rows, OFN v0.12 IMP-O08-14 and IMP-O08-06; OFN imports LEM-NOANNIHIL as `[ALG]`, so the old "`[RESULT]` `[from: ALG]`" description of OFN v0.7 leaves. No claim-specific historical pin remains in the live text. |
 | S4 — owner-review tasks | E05 | Stated as TDR-G's own current items (Programme v1.4 does not carry them; checker C6), with the same four statuses. |
@@ -87,6 +87,24 @@ Negative controls:
 | **R2** (record): the size report showed `new_rids: 1` and `growth_per_new_rid: -39008.0` although TDR-G declares no new RID. | §8 below explains that the one new identifier is a citation of OFN's existing `RTG-OFN-OPEN-DISC-INTERACTION` (S3), not a TDR-G RID, so growth per new RID is N/A. The raw lint output is kept. |
 
 Stage 2 is rebuilt from the round-2 intermediate. Its 43 operations are the same; only the Appendix A entry for v2.13 changes, to record R1. The review's stage-2 PASS concerned the round-1 bytes, and the readback covers the rebuilt candidate.
+
+## 3b. F1 — AZ v0.9 (atlas row check, PR #277)
+
+The atlas row check (`records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md`, PR #277) found the build sound and reproducible. It recommended one correction before adoption, F1: `az-v0.9` was adopted on 14 Nov, after the cycle started, so the AZ pin and the AZ consumer row were one edition old. The PI instructed "F1 hemen uygulansın" (relayed in the session, 16 Nov 2026).
+
+**Source changes** were made by the ChatGPT co-owner (`records/tdrg/TDRG_v2_13_F1_IMPLEMENTATION.md`; commits `e4e54ec`–`ddadd8a`):
+- `consumers.md` and `pins.md`;
+- E13 and E25;
+- C6 (four AZ editions, the v0.9 §8 rows, AZ's ownership of AZ-NUM-TOKRES-S1);
+- K1 (v0.9 → v0.8 must fail).
+
+The TDR-G co-owner (Claude) completed the propagation:
+- In the consumer row, AZ's grade of AZ-NUM-TOKRES-S1 is named in words rather than as a backticked tag, so the TDR-G live text gains no truth tag for an AZ claim; the C4 tag accounting is unchanged.
+- The v2.13 Appendix A entry and the stage-2 `known_tags` are updated.
+- This record and the AZ v0.9 pipe item are updated (F2).
+- Both stages are rebuilt (identities in §2).
+
+No TDR-G result, grade or RID changes. AZ's numerical result is not adopted.
 
 ## 4. Stage 2 — compaction (43 operations; `movement_map.json`)
 
@@ -119,11 +137,11 @@ The base is the stage-1 intermediate. The operations are:
 
 ## 7. Pipe items
 
-`pipes/TDRG/` holds no open item; it was read at `main` `93f1986`. Notices after the tag, each `kind: notice`:
+`pipes/TDRG/` was read at `main` `93f1986` (no open item) and again at `main` `c9e313f`: it holds `20261114-AZ-v0-9-adopted.md` (notice, open on `main`). Its subject — the §6.2 citation and AZ §8 — is what F1 changes; on this branch it is **dispositioned** `2026-11-16 · accept · records/tdrg/TDRG_v2_13_RELEASE_RECORD.md` and is closed after the tag (atlas row check F2). Notices after the tag, each `kind: notice`:
 
 | Consumer | Contents |
 |---|---|
-| `pipes/AZ/` | §6.2 citation at `az-v0.8`; the consumer row restated from AZ's v0.8 §8; nothing asked |
+| `pipes/AZ/` | §6.2 citation at `az-v0.9`; the consumer row restated from AZ's v0.9 §8, with AZ-NUM-TOKRES-S1 named as AZ-owned; reply to the v0.9 notice; nothing asked |
 | `pipes/OFN/` | OPEN-OFN-2, CONV-TICK and LEM-NOANNIHIL pins at `ofn-v0.12`; XFER-O08-01 stated as open (decision note to follow) |
 | `pipes/PROG/` | Methodology v1.4 migration done; no export or gate changes |
 | `pipes/NUMGEN/` | none needed (no NUMGEN-facing content changes); listed for completeness |

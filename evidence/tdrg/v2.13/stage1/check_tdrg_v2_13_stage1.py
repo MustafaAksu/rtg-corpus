@@ -15,7 +15,7 @@ Gates
   C3 RIDs       every [RID: …] declaration of the base live text survives once; new identifiers are only the
                 declared external references, not new TDR-G results
   C4 tags       outside §1 and the header, the truth-tag multiset changes exactly by the declared amounts
-                (correction labels and the superseded hypothesis out; the §A.sim copy and AZ source grade in)
+                (correction labels and the superseded hypothesis out; the §A.sim table in)
   C5 OPEN       every OPEN record keeps its heading, RID and Status line
   C6 pins       AZ-ALG-ANTIPODAL-LOWORDER byte-identical at az-v0.6/v0.7/v0.8/v0.9; the OFN v0.12 rows the new
                 pins name exist; AZ v0.9 cites tdrg-v2.12.15 in §8 with its token-law rows; its numerical
@@ -46,8 +46,8 @@ TAG = re.compile(r"`\[[A-Z][A-Za-z -]*?\]`")
 # Existing foreign owner identifiers newly mentioned in the live interface record.
 NEW_IDS = {"RTG-OFN-OPEN-DISC-INTERACTION", "AZ-NUM-TOKRES-S1"}
 TAG_OUT = {"`[COR]`": 11, "`[REVISED]`": 1, "`[RESULT]`": 1}
-# NUM diagnostic is AZ's source grade in the consumer row, not a TDR-G claim grade.
-TAG_IN = {"`[ALG]`": 3, "`[HEUR]`": 1, "`[FAIL]`": 1, "`[NUM]`": 1, "`[ENG]`": 5, "`[NUM diagnostic]`": 1}
+# AZ's grade of AZ-NUM-TOKRES-S1 is named in words, not as a tag, so no TDR-G truth tag is added for it.
+TAG_IN = {"`[ALG]`": 3, "`[HEUR]`": 1, "`[FAIL]`": 1, "`[NUM]`": 1, "`[ENG]`": 5}
 # statements of the base §1 that the new §1 drops or shortens, and a string that must still occur at
 # their home outside §1 (D1 (a), S6)
 HOMES = [
@@ -158,7 +158,7 @@ def gates(base, cand, log):
     consumer_ok = (len(az_rows) == 1
                    and "at `tdrg-v2.12.15`" in az_rows[0]
                    and all(r in az_rows[0] for r in ("TDRG-ALG-EVENT-INVENTORY", "TDRG-ALG-TOKEN-CENSUS-LAW", "TDRG-ALG-PARENT-CHILD-PHASE"))
-                   and "AZ-NUM-TOKRES-S1 remains an AZ-owned `[NUM diagnostic]`" in az_rows[0]
+                   and "AZ-NUM-TOKRES-S1 remains an AZ-owned numerical diagnostic (AZ's grade)" in az_rows[0]
                    and "not a TDR-G result or a demonstrated growth mechanism" in az_rows[0]
                    and "[RID: AZ-NUM-TOKRES-S1]" not in L)
     ok6 = (all(len(v) == 1 for v in az.values()) and az["az-v0.6"] == az["az-v0.7"] == az["az-v0.8"] == az["az-v0.9"]
