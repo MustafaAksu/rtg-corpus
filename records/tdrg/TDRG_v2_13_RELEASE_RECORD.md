@@ -24,7 +24,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. Every
 | PI decisions | "1- a 2-a 3-a" (13 Nov 2026, 12:23 +03:00): D1 (a), §1 as readouts; D2 (a), §2 history only; D3 (a), §A.sim to §8. Recorded in plan §7 | given |
 | Stage 1 review | ChatGPT co-owner (change-focused): `records/tdrg/` review record on PR #268 (head `da61a6c8`, open at round 2); GitHub review `5906863206` on PR #265. Round 1 (intermediate `b24c17cc…cdcc`): CONDITIONAL PASS — R1 (methodological): the unpaired `[RESULT]` moved into live §8; R2 (record): the RID-growth metric | R1 and R2 applied in round 2 (§3a). Readback on head `f38c538` (PR #268 head `c9925513`; GitHub review `5906970313`): PASS — R1 and R2 closed; no objection to the narrowing of D3 (a) to the table; review closed |
 | Stage 2 review | ChatGPT co-owner (mechanical), same record: round-1 candidate `1691a136…ee18` reproduced byte for byte by an independent implementation of the 43 operations | PASS on round 1; stage 2 rebuilt from the round-2 intermediate (§3a). Readback: candidate `c89eb81b…0a14` reproduced byte for byte by the independent implementation (43/43 operations; 81 RID declarations and 21 OPEN records kept) — PASS |
-| Row check | atlas owner | *(to be filled)* |
+| Row check | atlas owner: `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` (PR #277, merged to `main`). First check at head `fba3ea1`: build sound and reproducible; F1 recommended. Follow-up at head `40d8235`: F1 and F2 closed; ACCEPT FOR ADOPTION (atlas side) of candidate `c79898f9…36f4` | superseded by §3c; re-check of the current candidate *(to be filled)* |
 | Adoption, merge commit, tag `tdrg-v2.13` | PI | *(to be filled)* |
 
 ## 2. Identities and build
@@ -177,7 +177,7 @@ RESULT: PASS
 
 ## 7. Pipe items
 
-`pipes/TDRG/` was read at `main` `93f1986` (no open item) and again at `main` `c9e313f`: it holds `20261114-AZ-v0-9-adopted.md` (notice, open on `main`). Its subject — the §6.2 citation and AZ §8 — is what F1 changes; on this branch it is **dispositioned** `2026-11-16 · accept · records/tdrg/TDRG_v2_13_RELEASE_RECORD.md` and is closed after the tag (atlas row check F2). Read again at `main` `e8b40cb` (16 Nov): no v0.10 notice had reached `pipes/TDRG/`; v2.13 already cites `az-v0.10`. Notices after the tag, each `kind: notice`:
+`pipes/TDRG/` was read at `main` `93f1986` (no open item) and again at `main` `c9e313f`: it holds `20261114-AZ-v0-9-adopted.md` (notice, open on `main`). Its subject — the §6.2 citation and AZ §8 — is what F1 changes; on this branch it is **dispositioned** `2026-11-16 · accept · records/tdrg/TDRG_v2_13_RELEASE_RECORD.md` and is closed after the tag (atlas row check F2). Read again at `main` `2d898fd` (16 Nov): it also holds `20261116-AZ-v0-10-adopted.md` (notice; nothing asked). On this branch it is **dispositioned** `2026-11-16 · accept · records/tdrg/TDRG_v2_13_RELEASE_RECORD.md`, since v2.13 cites `az-v0.10` (§3c), and it is closed after the tag. Notices after the tag, each `kind: notice`:
 
 | Consumer | Contents |
 |---|---|
@@ -220,7 +220,7 @@ Counting method: the lint script's own (whitespace tokens; §1 between its headi
 | # | Step | Who | State |
 |---|---|---|---|
 | 1 | Stage-1 and stage-2 reviews | ChatGPT co-owner | PASS after round 2 (PR #268, reviews `5906863206`, `5906970313`) |
-| 2 | Row check | atlas owner | *(to be filled)* |
+| 2 | Row check | atlas owner | ACCEPT of `c79898f9…36f4` (PR #277); re-check of the current candidate *(to be filled)* |
 | 3 | Adoption decision (§10) | PI | *(to be filled)* |
 | 4 | Publication commit: header *Document status* ADOPTED with this record; `BASELINE.md` row | TDR-G co-owner | *(to be filled)* |
 | 5 | Merge commit (not squash) and annotated tag `tdrg-v2.13` with the published SHA-256 | PI | *(to be filled)* |
