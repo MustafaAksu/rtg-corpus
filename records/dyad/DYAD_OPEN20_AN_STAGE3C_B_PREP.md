@@ -106,6 +106,26 @@ The driver writes `LEDGER.json` (mode, the PI's authorization as quoted on the c
 
 **Not executed:** the modes `production` and `replay` as a whole. Their parts are the ones tested above; the only difference to the selftest inside the scripts is the status line, which was checked on the arc script.
 
+### 5.1 Selftest of the r3 package on the PI's server (16 November 2026)
+
+**Run by the PI** on the Ubuntu server, at `main` `c9e313f` (the merge of PR #273), manifest `2553ea87…280f`, clean git state. Python 3.12.3, python-flint 0.9.0 (FLINT 3.6.0), mpmath 1.3.0, sympy 1.14.0; one CPU; two workers. 10:08–12:43 UTC (2 h 34 min). Development mode; **not a certification run.** The whole run directory came unchanged on `upload/dyad-3cb-selftest-r3-server` (commit `bc5ed24`), at `evidence/dyad/open20-an/stage3c-b/selftest-server-r3/`.
+
+| Check | Result |
+|---|---|
+| Verdict of the run | **ACCEPTED**, exit code 0 |
+| `validate` on the server (PI) and here (owner, from the uploaded files) | **VALID** both |
+| `SHA256SUMS.txt` | 70 files: 68 outputs, `LEDGER.json`, the checksum file; all match |
+| Byte-identity with the committed outputs of stage 3c-a and of the seed check | **68 of 68 files** |
+| Rule test | 16 of 16; no message on the error stream |
+
+**What it settles:**
+- **§8 item 2 (byte-identity across machines):** shown for this server. A different machine, a different Python minor version (3.12.3 against 3.13.16) and a single CPU produced the same 68 files byte for byte. It is also the first complete selftest of the r3 driver.
+- **§8 item 3 (Python version):** 3.12 and 3.13 gave the same outputs; the version stays recorded, not fixed.
+
+**What it does not settle:** it runs the same frozen code as the owner's runs, so it is a reproducibility check by a second operator on a second machine, not an independent implementation (§8 item 1). It is not REVIEWER-REPLAYED, and it is not a run of stage 3c-b.
+
+**Time:** with one CPU the two workers share it; the longest jobs were the inverse branch and its control (about 54 min each), zone II for G (44 min) and the legs (26 min). A production run on this server needs about 2.5 hours.
+
 ## 6. How a production run would go (not authorized)
 
 1. **PI decision** to run stage 3c-b, and who replays it.
@@ -143,7 +163,7 @@ As in the hand-over record §6 and the proof record §§11–13:
 ## 8. Limits of the package
 
 1. **A replay is a reproducibility check, not an independent implementation.** Both runs execute the same frozen code. Agreement shows that the result does not depend on the machine or the operator. It does not test the code against a second implementation. What tests the code is inside the run: the independent sampling gates (SND) and the 23 negative controls.
-2. **Byte-identity across machines is not yet shown.** The selftest of §5 ran on the machine of the development runs. The outputs print rounded decimals of ball-arithmetic results; with the same wheel of python-flint they should be identical elsewhere, but that is an expectation. The selftest on the server (§6 step 3) settles it before a production run.
+2. **Byte-identity across machines — shown for the PI's server on 16 November 2026 (§5.1).** The outputs print rounded decimals of ball-arithmetic results; identity elsewhere was an expectation until that run. Another machine still needs its own selftest before it carries a production run or a replay.
 3. **The Python version is recorded, not fixed.** If the server's Python differs from 3.13 and the selftest there is not byte-identical, the difference has to be understood before anything else.
 4. **Messages on the error stream are recorded, not judged.** The ledger gives their size per job; the rule does not use it. In the selftest of §5 no job wrote any.
 5. **The two controls of the legs run in the default form of the leg,** as in W6, not with `--full-fibre`. They test the two-disc test and the length of the leg.
@@ -153,7 +173,6 @@ As in the hand-over record §6 and the proof record §§11–13:
 
 ## 9. Open decisions (the PI's)
 
-- Whether the selftest is run on the server now (it is a development-mode run and produces no certification output).
 - Whether and when stage 3c-b is run; who replays it and where.
 - Independently of both: the LIT request on Proposition 5.3 is filed (`pipes/LIT/20261114-DYAD-lh2012-prop53-scope.md`, PR #269).
 

@@ -1,0 +1,130 @@
+{
+ "all_pass": false,
+ "control": "BRANCH",
+ "gates": {
+  "CHAIN_validated_continuation": true,
+  "LINK_chain_meets_tail": false,
+  "SND_independent_continuation": false,
+  "TAIL_unique_solution_for_large_t": false,
+  "WEDGE_conditions_along_the_half_line": true
+ },
+ "info": {
+  "CHAIN": {
+   "abs_xi_of_centres": [
+    0.039643,
+    0.4
+   ],
+   "arg_xi_over_pi_of_centres": [
+    0.14932,
+    0.16667
+   ],
+   "eps": 0.02,
+   "every_20th_disc": [
+    {
+     "abs_xi": 0.4,
+     "arg_over_pi": 0.16667,
+     "t": 4.08189
+    },
+    {
+     "abs_xi": 0.30767,
+     "arg_over_pi": 0.15068,
+     "t": 9.22585
+    },
+    {
+     "abs_xi": 0.23541,
+     "arg_over_pi": 0.14981,
+     "t": 21.0777
+    },
+    {
+     "abs_xi": 0.17999,
+     "arg_over_pi": 0.15279,
+     "t": 48.8
+    },
+    {
+     "abs_xi": 0.13753,
+     "arg_over_pi": 0.15607,
+     "t": 113.147
+    },
+    {
+     "abs_xi": 0.10501,
+     "arg_over_pi": 0.15878,
+     "t": 261.452
+    },
+    {
+     "abs_xi": 0.080148,
+     "arg_over_pi": 0.16084,
+     "t": 601.508
+    },
+    {
+     "abs_xi": 0.061149,
+     "arg_over_pi": 0.16235,
+     "t": 1378.32
+    },
+    {
+     "abs_xi": 0.046642,
+     "arg_over_pi": 0.16345,
+     "t": 3147.91
+    }
+   ],
+   "ok": true,
+   "segments": 173,
+   "step": 0.8,
+   "t_reached": 5376.9317,
+   "t_star": 4.081892965,
+   "why": null
+  },
+  "LINK": {
+   "relative_distance_to_tail_centre": 1.726,
+   "tM": 5208.3331,
+   "t_K": 5376.9317
+  },
+  "SND": {
+   "near_t_3000": {
+    "abs_xi": 0.046833,
+    "arg_over_pi": 0.16343,
+    "t": 3108.9
+   },
+   "outside": [
+    5583.13,
+    5862.29,
+    6155.4,
+    6463.17,
+    6786.33,
+    7125.65,
+    7481.93,
+    7856.03,
+    8248.83,
+    8661.27
+   ],
+   "points": 175
+  },
+  "TAIL": {
+   "XM": 0.0867228,
+   "abs_xi_max": 0.0412,
+   "arg_xi_over_pi": [
+    0.8237826004624367,
+    0.842918561771512
+   ],
+   "epp": 0.0190463,
+   "eps": 0.03,
+   "in_cores": false,
+   "margin": 0.0271782,
+   "re_tau_star_negative": true,
+   "tM": 5208.33
+  },
+  "WEDGE": {
+   "first_minus_1": [
+    0.25,
+    0.25
+   ],
+   "second0_exceeds_c1_for_t_above": 5.32232,
+   "second_minus_c": [
+    0.15,
+    0.15
+   ],
+   "slope_of_second": 0.9238795325112867
+  }
+ },
+ "script": "dyad_open20_an_stage3c_w5_arc.py",
+ "status": "stage 3c-a development run; not a certificate"
+}

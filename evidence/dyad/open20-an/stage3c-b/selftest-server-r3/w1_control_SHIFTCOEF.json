@@ -1,0 +1,47 @@
+{
+ "all_pass": false,
+ "control": "SHIFTCOEF",
+ "gates": {
+  "G0_stage2_input": true,
+  "W1a_coefficient_balls": true,
+  "W1b_identity_plus_order_four": true,
+  "W1c_defect_vanishes_to_order_43_raw": false,
+  "W1d_coefficients_decay": true
+ },
+ "info": {
+  "W1a": {
+   "max_ball_radius": 4.030452482302453e-276,
+   "max_relative_difference_to_stage2": 2.4033336536590486e-80
+  },
+  "W1c": {
+   "abs_coefficient_44": 3.475826112987885e-06,
+   "max_radius_below_44": 1.320882015790035e-272
+  },
+  "W1d_roots_Z_W": {
+   "100": [
+    0.7712,
+    0.7718
+   ],
+   "150": [
+    0.7732,
+    0.7725
+   ],
+   "200": [
+    0.7761,
+    0.7764
+   ]
+  },
+  "defect_abs_sums": {
+   "0.9": 1.307e-06,
+   "1.0": 0.0004171,
+   "1.02": 0.00132
+  },
+  "parameters": {
+   "D": 200,
+   "N": 40,
+   "dps": 400
+  }
+ },
+ "script": "dyad_open20_an_stage3c_w1_check.py",
+ "status": "stage 3c-a development run; not a certificate"
+}

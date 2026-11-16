@@ -1,0 +1,6 @@
+LEAD_constants_and_real_structure PASS
+LIN_identity_plus_degree_3 PASS
+P4_no_w2_in_Fz PASS
+S5W_Fw_minus_w_weighted_order_ge_5 PASS
+S5Z_Fz_minus_z_weighted_order_ge_4 PASS
+RESULT PASS  | exact algebra
