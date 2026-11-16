@@ -1,0 +1,49 @@
+{
+  "status": "NUM cross-check only; no scientific campaign",
+  "reference": "fresh mpmath 220-decimal evaluation of T^6",
+  "tests": [
+    {
+      "bits": 128,
+      "point_and_derivative_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "all_pass": true
+    },
+    {
+      "bits": 256,
+      "point_and_derivative_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "all_pass": true
+    },
+    {
+      "bits": 512,
+      "point_and_derivative_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "all_pass": true
+    }
+  ],
+  "all_pass": true
+}

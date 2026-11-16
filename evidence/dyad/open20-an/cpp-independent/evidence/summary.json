@@ -1,0 +1,30 @@
+{
+  "status": "SESSION development kernel; not a scientific campaign",
+  "author": "ChatGPT",
+  "auditor_requested": "Claude",
+  "auditor_status": "not yet reviewed",
+  "repository_base": "2d898fdafedee7f5b3d4628fe0c08ef2871a8b0c",
+  "bits": [
+    128,
+    256,
+    512
+  ],
+  "kernel_checks_per_precision": 20,
+  "kernel_failures": 0,
+  "point_reference_checks": 24,
+  "point_reference_failures": 0,
+  "sanitizer_exit": 0,
+  "sanitizer_stderr_bytes": 0,
+  "unsupported_production_mode_exit": 2,
+  "mpfr_runtime": "4.2.2",
+  "full_development_header_present": false,
+  "local_build_header": "evidence/local_build/mpfr.h",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0\nLinux 6.18.57 #1 SMP Tue Oct 20 21:56:04 UTC 2026 x86_64\n",
+  "not_executed": [
+    "actual xi_star leg enclosures",
+    "full phi_40 coefficient generation",
+    "full pilot campaign",
+    "stage 3c-b",
+    "Fourier/multi-height campaign"
+  ]
+}
