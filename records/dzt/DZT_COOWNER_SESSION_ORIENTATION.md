@@ -35,6 +35,8 @@ This decides the shape of the whole cycle:
 
 Until the PI answers, nothing beyond reading (BOOTSTRAP 1) starts.
 
+**Answered (17–18 Nov 2026):** v0.1–v0.17 exist, without v0.6, and were received unchanged (PR #289; plain files PR #308). Reading record: `records/dzt/DZT_RECOVERY_READING_RECORD.md` (PR #309). The PI chose the mixed route: `dzt-v0.8` is the edition basis and v0.9–v0.17 are sources to verify (decision D1, `records/dzt/DZT_REACTIVATION_TRIAGE.md` §7).
+
 ## LIVE_STATE — generated, never copied here
 
 `git fetch origin --tags && python3 -I tools/orient.py DZT --tag-prefix dzt-v --file dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md --paths dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md records/dzt pipes/DZT`
@@ -95,7 +97,27 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 *(Each session writes its own lane under its own heading with a check stamp. The lane covers: goal, last durable work, decisions held, tried and set aside, evidence, resume, next 1–3 actions, reopen trigger.)*
 
+### CO-OWNER LANE — Claude
+
+**Checked:** 18 November 2026, 00:10 +03:00. `main` `6c5a74a`. Tag `dzt-v0.8` governs (`cad20982…92ff2`). `pipes/DZT/`: four items open. Open DZT PR: this lane's triage PR (branch `claude/dzt-triage`).
+**Role:** DZT co-owner, preparer. The second co-owner (ChatGPT) is the independent receiving reviewer. The PI decides adoption and publication (D6).
+**Shared sections:** this lane's session updated FIRST QUESTION ("Answered") and PI_PENDING on 18 Nov.
+**Goal / current question:** BOOTSTRAP 2 is done once the triage is reviewed. Next comes BOOTSTRAP 3, the edition (list (i), two stages), with the (ii) work running alongside.
+**Last durable work:** PR #308 (recovery placed as plain files, `5fa09bd`); PR #309 (reading record and variant diffs, `b4ebe61`); triage `records/dzt/DZT_REACTIVATION_TRIAGE.md` (branch `claude/dzt-triage`, unmerged).
+**Decisions held:** PI, 18 Nov, 00:00 +03:00, D1–D7 (triage §7): mixed basis on v0.8; no retrospective tags, v0.6 `NOT RECEIVED`; LIT reviewed this cycle, tables labelled $\lvert N_+\rvert$, no sign OPEN; B1 re-examined, freeze = unverified history; Methodology v1.4 in the same cycle as Stage 2; Claude prepares, ChatGPT reviews; targeted search.
+**Tried and set aside:** treating any recovered variant as final from its file name, size or time stamp (no basis; RR §4). Reusing the DZT script outputs as signed norms: they are `sqrt(abs)` (RR §9.2).
+**Evidence:** RR §§2–9; session sign check script and output reproduced in RR §9.3; recovered files under `upload/dzt-recovery-20261116/received/`.
+**Resume:** the LIVE_STATE command; the triage PR and its review; triage §6 for the split, §3 for acceptance criteria.
+**Next 1–3 actions / acceptance:**
+1. After the triage review and the PI's scope and number decisions (triage §8): build Stage 1 by an assertion-gated script (rows 1, 8–11, 13, 16), then record the intermediate hash. Acceptance: the per-row criteria of triage §3.
+2. Row 2 (ii): an owner proof review of the norm law against the recovered notes and the LIT note, written to `records/dzt/`. Acceptance: criteria (a)–(d) of row 2. Grade left to the PI.
+3. Row 6 (ii): a note fixing the B1 dynamical object at the Dyadic tag before any B1 result is reconsidered.
+
+**Reopen trigger:** a review point on the triage; a new `pipes/DZT/` item; a Dyadic edition that changes §6.5, §6.11 or Appendix D/F; any material found by the row 17 search.
+
 ## PI_PENDING
 
 - 16 Nov 2026, 16:19 +03:00: the PI decided to start the onboarding with DZT; the other onboarding questions are deferred (advisory §6).
-- **Open to the PI:** do DZT v0.9–v0.17, the v0.17 session record and the DZT §8 scripts exist, and where (question 0)?
+- **Done, 17–18 Nov 2026:** question 0 answered (PR #289, #308, #309). D1–D7 decided by the PI on 18 Nov, 00:00 +03:00 (triage §7).
+- **Open with the PI:** after the triage review, the scope of the next edition (list (i)) and its number (triage §8).
+- No CLI block is pending for DZT.
