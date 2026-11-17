@@ -1,0 +1,4 @@
+METHOD=primitive_per_T; HORIZON=2; status=SESSION_CONDITIONAL
+grid subdiv active first_evaluated first_excluded first_retained first_unresolved second_subtiles second_evaluated second_excluded second_retained second_unresolved M1_min M1_max M2_min M2_max first_hull_radius final_hull_radius
+8 4 60 60 44 16 0 256 256 96 160 0 2.708876e-04 2.987379e-04 6.016285e-05 8.930092e-05 1.526194e-03 1.296767e-03
+NO_CERTIFICATE; conditional D0 graph, two tube bounds, source-transfer assumptions.

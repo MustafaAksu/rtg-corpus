@@ -84,3 +84,65 @@ The library floors `second` with **`TB.cw.upper()`** (`R_upper` l. 1193, `_piece
 - PI: put `DYAD_CPP_F1_TUBE_CONTRACTOR.zip` unchanged on an `upload/...` branch (hash above).
 - Co-owner: proceed to horizon 2 and finer tiles per #301 §3; the review conditions of R3 carry over unchanged.
 - PI decision on O-1.
+
+---
+
+# Addendum — F2: two-block successor (17 November 2026, evening)
+
+**Reviewed:** `DYAD_CPP_F2_TUBE_CONTRACTOR.zip`, SHA-256 `b30dda66278ee6e21fde8b040f80abebb9ad534c906e3cb9613112b5e30d378e`, on branch `upload/dyad-cpp-f2-20261117` (head `596c2319f8edd27fc4ed136f7757cf43abc7d326`, pushed by the PI from the server together with his run outputs, `pi-run/`). Inner `SHA256SUMS.txt` 7/7 OK. Main source `real_f2_tube.cpp` (140 lines), read in full; it includes the unchanged F1 source and the reviewed engine.
+**Request:** the package's `OWNER_REVIEW_REQUEST.md`, F2-R1 to F2-R5.
+
+## Verdict
+
+**ACCEPT as a development checkpoint, at SESSION scope.** F2-R1 to F2-R4 pass by reading. The owner rerun of the unchanged runner gives outputs **byte-identical** to the PI's server run (§F2-R5). The status of everything is the same as for F1: conditional on the graph/tube hypotheses, not a certificate, no point jump.
+
+## F2-R1 — the two-step induction
+
+Hypothesis (as in R5 above, now for two blocks): the candidate d* satisfies, for k = 1, 2, x_k(d*) ∈ D₀ and \|d_k(d*)\| ≤ R₀(x_k(d*)).
+1. Step 1 is the F1 step unchanged in substance (same calls: whole-tile flow, centre point flow, mid slope, `necessary_disk`, box intersection). So d* ∈ tile implies d* ∈ after1 = tile box ∩ box of the first necessary disc.
+2. `split_box(after1, 4)`: the 16 rectangles cover after1 (below). So d* lies in some part P.
+3. `ball(P)` ⊇ P ∋ d*. Extra points in the disc only weaken the bound; they cannot remove d*.
+4. `iter(x*, ball(P), φ, 2)`: `from_lift` once, two `direct6` blocks, `lifted_readout` once at the end. `Tcentered` composes the tangent as Σ J_ij · tangent_j with J the Jacobian enclosure over the whole state box: the chain rule with an enclosure of DT on a set that contains every intermediate state. The tangent is never reset. So `R2.b.d` encloses ∂d₂/∂d₀ on all of ball(P), and `R2.a.v` encloses x₂ there.
+5. \|d₂(d*)\| ≤ R₀(x₂(d*)) ≤ M₂ := `upper(R2.a.v)` (F1-R1 applies unchanged, on X₂ ∩ D₀). C1–C2 then gives d* ∈ necessary disc 2, so d* ∈ P ∩ box(disc 2).
+Step 2 uses only the k = 2 condition on P ⊂ after1; it does not need to repeat k = 1. ✓
+
+## F2-R2 — the bound at both bases; exceptions; wall
+
+- M₁ = `upper(X₁)`, M₂ = `upper(X₂)`, each the F1-reviewed bound on X_k ∩ D₀; no claim X_k ⊂ D₀; no sampled or Python value enters. ✓
+- A `domain_error` at step 1 keeps the whole tile in the final hull; at step 2 it keeps P (the box the candidate is known to be in at that point). Other exceptions end the run with exit 3, never a discard. ✓
+- **Wall.** The C++ floor `cwall.l` is the lower end of a 256-bit enclosure of second(ξ*) − 0.15. It is ≤ c₀ for the current definition. It is also ≤ c₀ under the O-1 proposal (c_j := upper end of the library ball, which is ≥ the real value). So the C++ code is valid under both. ✓
+- **O-1 status.** The co-owner's request calls the proposal "PI-approved". This review has no record of a PI decision on O-1. Until the PI decides, O-1 is open. The co-owner's point is right: if adopted, c_j must be fixed as one exact dyadic number with its provenance (precision, routine), not as whatever `cw.upper()` gives at the working precision of a run.
+
+## F2-R3 — tiling, coverage, hull
+
+- `split_box`: with Δ = h − l ≥ 0, the pieces are [l + ⌊Δi/n⌋, l + ⌈Δ(i+1)/n⌉]. The first starts at l, the last ends at l + Δ = h, and each piece ends at or after the start of the next (⌈·⌉ ≥ ⌊·⌋). So the union is the whole box, for any signed l (only Δi ≥ 0 is divided). ✓ The unit test samples 17 × 17 points; the argument above covers all points.
+- Discard only on empty intersection; F1-excluded tiles leave no row in the final hull; unresolved tiles keep their whole box. ✓
+- **Hull radius.** `enclosing_disk` uses `norm_upper`, the \|Re\| + \|Im\| bound about the box centre. The printed radii are therefore L¹ radii, an upper bound on the Euclidean radius (at most √2 times it). The F1 radii above use the same convention, so the F1 → F2 comparison is like for like. ✓
+- Negative controls: no arguments → 64; JSON as transfer → 3; subdivision 7 → 3. ✓
+- Detail TSV: the package's integer checker passes on both grids. **Independent check against #301:** the estimated d* lies in subtiles (25,15), (26,12), (33,3), (34,0) for 8×8 and (42,15), (43,12), (52,3), (53,0) for 10×10. All are RETAINED at both steps.
+
+## F2-R4 — sources and dependencies
+
+- F2 zip hash matches on the PI server and here. Runner gates: the F2, F1, benchmark and V2 package sums and the pinned stage-2 JSON. ✓
+- The F1 source is included under a renamed `main`, unchanged; bench.cpp, `centered_evaluator.hpp` and `independent_core.cpp` come from the reviewed packages, unchanged. ✓
+- The coefficient transfer is the one checked in R4 above (against the library recursion; not a C++ regeneration). Output `phi40_outer_256.txt` is identical on both machines.
+- The PI's `unzip` prompt (an older SHA256SUMS not replaced): the PI-side `f2_package_checks.txt` equals the owner's, and every result file is byte-identical to the owner's run from the hash-verified zip. That rules out a stale source in effect.
+
+## F2-R5 — scope and the runs
+
+| run | status | grid / subdiv | step 1: excluded / kept | step 2: subtiles / excluded / kept | unresolved | M₂ range | L¹ radius F1 → F2 |
+|---|---|---|---|---|---|---|---|
+| PI server, 17 Nov 14:01 UTC | PI-RUN | 8 / 4 | 44 / 16 | 256 / 96 / 160 | 0 | 6.016285·10⁻⁵ – 8.930092·10⁻⁵ | 1.526194·10⁻³ → 1.296767·10⁻³ |
+| PI server | PI-RUN | 10 / 4 | 80 / 16 | 256 / 128 / 128 | 0 | 5.585222·10⁻⁵ – 7.644073·10⁻⁵ | 1.198129·10⁻³ → 9.656854·10⁻⁴ |
+| owner container | REVIEWER-REPLAYED | both | identical | identical | 0 | identical | identical |
+
+`compare_pi_vs_owner.txt` (evidence `cpp-review/f2-tube/`): 21 of 23 files identical; the two that differ are `environment.txt` (time, repo head, Python version) and `RUN_SHA256SUMS.txt`, which hashes `environment.txt`.
+The co-owner's local proxy figures (18-digit coefficients) are a third level ([NUM]); they agree to the printed digits but are not evidence for the source-backed run.
+
+**Reading of the numbers ([NUM]).** M₂ is about 1.3–2× the true R₀(ξ₂) ≈ 4.5·10⁻⁵ of #301, as a bound should be. The radius falls only about 15–20 % from F1 to F2, against the factor of about 30 that an exact derivative would give (#301 §3). The D·r term still dominates. Finer parts at step 2 (or per-T mean-value updates) will gain more than further blocks; adding blocks on the present parts mainly increases D.
+
+## Next
+
+- Co-owner: before a five-block run, measure on the step-2 parts how D·r and M₂ compare (one column each in the TSV is enough), and use that to choose subdivision against horizon.
+- PI: decide O-1. If accepted, the owner fixes c₀ and c₁ as exact dyadic numbers with provenance in proof record §1, on a separate branch.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
