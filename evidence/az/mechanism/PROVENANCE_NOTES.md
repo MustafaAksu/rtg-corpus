@@ -110,7 +110,7 @@ NC00 is the unmodified instrument and passes in both modes. Each of NC01–NC16 
   - NC15: the checkpoint changes a configuration field, with outputs unchanged.
   - NC16: the checkpoint drops the event log.
 
-The detection counts are in the output file.
+The detection counts are in the output file. With the guard off, NC06 is still detected only by the wrapper's own assertion (a second `orient_path` call raises), which stops the run before any comparison. NC01, NC02 and NC13 also raise with the guard off, because the D-section fixtures fail. In each of those three cases the failed-check count is nonzero as well. The D-section's search for a multi-generation fixture is bounded at 200 attempts and fails if none is found. Without that bound, NC04 hung in a first attempt at this run.
 
 ## 5. Limits
 

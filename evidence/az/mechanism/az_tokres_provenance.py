@@ -732,13 +732,19 @@ def selftest(trials=240):
 
     # a synthetic trajectory with several generations of births, for the ledger checks D4-D8
     rng2 = random.Random(7)
-    while True:
+    deep = []
+    for _attempt in range(200):                      # bounded search (a faulty instrument may never produce one)
         d0 = [rng2.randrange(24) for _ in range(6)]
         th0 = [rng2.randrange(24) for _ in range(6)]
         base = run_to(ieng, run, RunState(ieng, run, 24, 2, th0, d0, 60, 80, provenance=True))
         deep = [c for c in range(len(base.prov.copies)) if len(base.prov.lineage(c)) >= 3]
         if deep:
             break
+    if not deep:
+        C.ok(False, "D4a no synthetic trajectory with a lineage of depth 3 found in 200 attempts")
+        print("checks: %d, failed: %d" % (C.n, C.bad))
+        print("SELFTEST FAIL")
+        return 1
     child = deep[-1]
     par = base.prov.copies[child]["parent"]
     alt = [c for c in range(len(base.prov.copies)) if c not in (child, par)
