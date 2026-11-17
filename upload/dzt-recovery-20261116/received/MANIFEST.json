@@ -1,0 +1,555 @@
+{
+    "schema":  "dzt-intake-local-v1",
+    "collected_at_utc":  "2026-11-16T13:57:39.2636884Z",
+    "status":  "LOCAL_INTAKE_ONLY_NOT_ADOPTED",
+    "selection":  "Name contains DZT or ARITHMETIC*RESONANCE*TRANSFORM; extensions .md .py .csv .txt .json .log; Downloads top-level, legacy src recursive.",
+    "source_roots":  [
+                         {
+                             "label":  "downloads",
+                             "recursive":  false
+                         },
+                         {
+                             "label":  "legacy-src",
+                             "recursive":  true
+                         }
+                     ],
+    "evidence_limit":  "Original file contents were not interpreted or executed. Hashes document current collection, not historical authenticity, past adoption, or a successful scientific run. Timestamps are observations, not authority.",
+    "files":  [
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DYAD_RESPONSE_TO_DZT_REQ-002 (1).md",
+                      "package_path":  "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-002 (1).md",
+                      "bytes":  6746,
+                      "sha256":  "0f8c4b1566e62f0cb97513bc9b9e2b57d9fd712a314f24f66ba8ad7b0a7f7dd3",
+                      "observed_last_write_time_utc":  "2026-06-23T12:47:59.0510705Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DYAD_RESPONSE_TO_DZT_REQ-002.md",
+                      "package_path":  "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-002.md",
+                      "bytes":  6746,
+                      "sha256":  "0f8c4b1566e62f0cb97513bc9b9e2b57d9fd712a314f24f66ba8ad7b0a7f7dd3",
+                      "observed_last_write_time_utc":  "2026-06-23T12:16:45.1355644Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DYAD_RESPONSE_TO_DZT_REQ-003 (1).md",
+                      "package_path":  "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-003 (1).md",
+                      "bytes":  8933,
+                      "sha256":  "c8b5ee22297c9db7d51581ff3272b06281187e98c7985909e042635ca14f8e09",
+                      "observed_last_write_time_utc":  "2026-06-24T05:59:50.2395325Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DYAD_RESPONSE_TO_DZT_REQ-003.md",
+                      "package_path":  "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-003.md",
+                      "bytes":  8933,
+                      "sha256":  "c8b5ee22297c9db7d51581ff3272b06281187e98c7985909e042635ca14f8e09",
+                      "observed_last_write_time_utc":  "2026-06-24T05:50:08.0065922Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DYAD_RESPONSE_TO_DZT_REQ-004 (1).md",
+                      "package_path":  "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-004 (1).md",
+                      "bytes":  6901,
+                      "sha256":  "94f3f458d1d491ea231803520636bd00d558854832669c80731fde84d4c12f55",
+                      "observed_last_write_time_utc":  "2026-06-24T07:21:08.4573361Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DYAD_RESPONSE_TO_DZT_REQ-004.md",
+                      "package_path":  "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-004.md",
+                      "bytes":  6901,
+                      "sha256":  "94f3f458d1d491ea231803520636bd00d558854832669c80731fde84d4c12f55",
+                      "observed_last_write_time_utc":  "2026-06-24T07:18:00.7142950Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_0b_audit.py",
+                      "package_path":  "originals/downloads/dzt_0b_audit.py",
+                      "bytes":  2794,
+                      "sha256":  "b586c7c273469dd075164b245b485486ca08a33f514f11585c00ac940f8586f9",
+                      "observed_last_write_time_utc":  "2026-06-23T05:18:06.4381263Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_0b_den_law_check (1).py",
+                      "package_path":  "originals/downloads/dzt_0b_den_law_check (1).py",
+                      "bytes":  2995,
+                      "sha256":  "54c02ce01d9559348782d62e4f98708c69fcb2832c01f0db9d42fa19f5fd64f1",
+                      "observed_last_write_time_utc":  "2026-06-24T10:32:06.4171192Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_0b_den_law_check.py",
+                      "package_path":  "originals/downloads/dzt_0b_den_law_check.py",
+                      "bytes":  2995,
+                      "sha256":  "54c02ce01d9559348782d62e4f98708c69fcb2832c01f0db9d42fa19f5fd64f1",
+                      "observed_last_write_time_utc":  "2026-06-24T09:46:46.3492712Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_0b_normlaw.py",
+                      "package_path":  "originals/downloads/dzt_0b_normlaw.py",
+                      "bytes":  3790,
+                      "sha256":  "1b03da50a3bc02c7efd368d644970ec84f1c8255990ea6e31814a888c57f0fb4",
+                      "observed_last_write_time_utc":  "2026-06-23T05:18:04.7366879Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_anomaly_rule_check.py",
+                      "package_path":  "originals/downloads/dzt_anomaly_rule_check.py",
+                      "bytes":  2159,
+                      "sha256":  "cec06de0650a43f91f4c242403c6eb18af5a40915add5cdc2ff51611a4145b44",
+                      "observed_last_write_time_utc":  "2026-06-23T09:27:59.1386883Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_b1_leadinglog_tower.py",
+                      "package_path":  "originals/downloads/dzt_b1_leadinglog_tower.py",
+                      "bytes":  2525,
+                      "sha256":  "ed2403497b7e5fde295d87f80c1571a425cbb3c5e83e0942c31eed9d108c3b9a",
+                      "observed_last_write_time_utc":  "2026-06-24T08:53:42.5819877Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_b1_polylog_hierarchy.py",
+                      "package_path":  "originals/downloads/dzt_b1_polylog_hierarchy.py",
+                      "bytes":  2159,
+                      "sha256":  "f4d6515ca15ebf45908bcf5d6f46fb06ed10f56d6435f658312615e41b6f59f7",
+                      "observed_last_write_time_utc":  "2026-06-24T07:29:33.5629331Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_b1_wB_audit.py",
+                      "package_path":  "originals/downloads/dzt_b1_wB_audit.py",
+                      "bytes":  2250,
+                      "sha256":  "4ecbfbfc45706fd542a348894dd618b77112efcc17efa1c4165b9f7f51aa934b",
+                      "observed_last_write_time_utc":  "2026-06-24T05:59:48.4091347Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_casev_norm_audit (1).py",
+                      "package_path":  "originals/downloads/dzt_casev_norm_audit (1).py",
+                      "bytes":  7281,
+                      "sha256":  "22783fcd701dce5f4a8cf073f84db058e13604b55b1f5867e5653a32f54f0f16",
+                      "observed_last_write_time_utc":  "2026-06-23T06:51:57.3625850Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_casev_norm_audit.py",
+                      "package_path":  "originals/downloads/dzt_casev_norm_audit.py",
+                      "bytes":  5980,
+                      "sha256":  "d48716c892d9c04804cdebd1bde79fb4cc6efff95d24f213634c932fc8279d9b",
+                      "observed_last_write_time_utc":  "2026-06-23T06:11:28.4439100Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_casev_norm_closed_form_p8_1000 (1).csv",
+                      "package_path":  "originals/downloads/dzt_casev_norm_closed_form_p8_1000 (1).csv",
+                      "bytes":  14293,
+                      "sha256":  "d9dd7bd90bb9fd2340f6e5259129437db4850d5c057be0d5f527bbc78183555a",
+                      "observed_last_write_time_utc":  "2026-06-23T09:28:01.8583042Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_casev_norm_closed_form_p8_1000.csv",
+                      "package_path":  "originals/downloads/dzt_casev_norm_closed_form_p8_1000.csv",
+                      "bytes":  14293,
+                      "sha256":  "d9dd7bd90bb9fd2340f6e5259129437db4850d5c057be0d5f527bbc78183555a",
+                      "observed_last_write_time_utc":  "2026-06-23T08:44:31.6864224Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_casev_norm_from_closed_form (1).py",
+                      "package_path":  "originals/downloads/dzt_casev_norm_from_closed_form (1).py",
+                      "bytes":  6403,
+                      "sha256":  "4d3d3ca374d884377cf1ad5faa83fa218897c10dd69d9e119e076a73f7edb10e",
+                      "observed_last_write_time_utc":  "2026-06-23T09:28:00.2331452Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_casev_norm_from_closed_form (2).py",
+                      "package_path":  "originals/downloads/dzt_casev_norm_from_closed_form (2).py",
+                      "bytes":  6784,
+                      "sha256":  "e38b5f7e0d809bc9333df91968ee741c89fecad5ea8fcd10fbfd3eecd65aa6ed",
+                      "observed_last_write_time_utc":  "2026-06-23T09:40:37.4699209Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_casev_norm_from_closed_form (3).py",
+                      "package_path":  "originals/downloads/dzt_casev_norm_from_closed_form (3).py",
+                      "bytes":  6784,
+                      "sha256":  "e38b5f7e0d809bc9333df91968ee741c89fecad5ea8fcd10fbfd3eecd65aa6ed",
+                      "observed_last_write_time_utc":  "2026-06-23T09:44:56.2088032Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_casev_norm_from_closed_form.py",
+                      "package_path":  "originals/downloads/dzt_casev_norm_from_closed_form.py",
+                      "bytes":  6403,
+                      "sha256":  "4d3d3ca374d884377cf1ad5faa83fa218897c10dd69d9e119e076a73f7edb10e",
+                      "observed_last_write_time_utc":  "2026-06-23T08:44:30.2471812Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_channel_audit.py",
+                      "package_path":  "originals/downloads/dzt_channel_audit.py",
+                      "bytes":  5500,
+                      "sha256":  "afcbed4f6ba7d6d00aef40d181789626fa44a6a9dd3b283ca5e171fa384c563c",
+                      "observed_last_write_time_utc":  "2026-06-22T13:39:36.1314337Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_channel_universality_check.py",
+                      "package_path":  "originals/downloads/dzt_channel_universality_check.py",
+                      "bytes":  2706,
+                      "sha256":  "047c8bf9b41558dedcd2623b09694f1d1f235839751d10301f9bbf83bbc00af0",
+                      "observed_last_write_time_utc":  "2026-06-23T12:47:57.6564250Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_odd_support_proof_check.py",
+                      "package_path":  "originals/downloads/dzt_odd_support_proof_check.py",
+                      "bytes":  2742,
+                      "sha256":  "8cf67b9a62381e7f6423a98fe77ba5b6846461e4955e7c642fcd881fb8128bae",
+                      "observed_last_write_time_utc":  "2026-06-23T10:14:24.0320018Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_open_0a_verify (1).py",
+                      "package_path":  "originals/downloads/dzt_open_0a_verify (1).py",
+                      "bytes":  1191,
+                      "sha256":  "3791b110b94fb7e6988c05109d963522f1fbc9e2907034945152d74ff7ba5c7e",
+                      "observed_last_write_time_utc":  "2026-06-22T13:30:35.6104774Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_open_0a_verify (2).py",
+                      "package_path":  "originals/downloads/dzt_open_0a_verify (2).py",
+                      "bytes":  1191,
+                      "sha256":  "3791b110b94fb7e6988c05109d963522f1fbc9e2907034945152d74ff7ba5c7e",
+                      "observed_last_write_time_utc":  "2026-06-22T13:39:37.4158685Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_open_0a_verify.py",
+                      "package_path":  "originals/downloads/dzt_open_0a_verify.py",
+                      "bytes":  1100,
+                      "sha256":  "989f6c2d858747bac66a97a7fe6eb6a7e135ddde040c57a936f881a7a9e62b52",
+                      "observed_last_write_time_utc":  "2026-06-22T13:18:47.2467583Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DZT_OPEN_0B_R_odd_support_proof_note (1).md",
+                      "package_path":  "originals/downloads/DZT_OPEN_0B_R_odd_support_proof_note (1).md",
+                      "bytes":  4049,
+                      "sha256":  "9ce5e99f012319d5cd5d095ed32261857e009d905ed8cf9cf3274f7b6355a30f",
+                      "observed_last_write_time_utc":  "2026-06-23T10:14:26.1354283Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DZT_OPEN_0B_R_odd_support_proof_note.md",
+                      "package_path":  "originals/downloads/DZT_OPEN_0B_R_odd_support_proof_note.md",
+                      "bytes":  4049,
+                      "sha256":  "9ce5e99f012319d5cd5d095ed32261857e009d905ed8cf9cf3274f7b6355a30f",
+                      "observed_last_write_time_utc":  "2026-06-23T10:09:57.6781364Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_q4_03_numeric_probe.py",
+                      "package_path":  "originals/downloads/dzt_q4_03_numeric_probe.py",
+                      "bytes":  1528,
+                      "sha256":  "6b6d62faa3543f042679c5c753bfe307795c5ead7bc640a1d81b34fbf6550714",
+                      "observed_last_write_time_utc":  "2026-06-22T18:59:02.6032127Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "dzt_q4_03_profile_exact.py",
+                      "package_path":  "originals/downloads/dzt_q4_03_profile_exact.py",
+                      "bytes":  2707,
+                      "sha256":  "beda44ab07bc0b14ad3ab7802dec5ac83019db8356b88b7f18bb861b6707b5cc",
+                      "observed_last_write_time_utc":  "2026-06-22T18:59:06.5632951Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DZT_REQUEST_TO_DYADIC__REQ-002_second_channel (1).md",
+                      "package_path":  "originals/downloads/DZT_REQUEST_TO_DYADIC__REQ-002_second_channel (1).md",
+                      "bytes":  4801,
+                      "sha256":  "ed6bf3630e65a0873f692277c3e36dab1c18d6a7083b35756c388bcabc7f97f9",
+                      "observed_last_write_time_utc":  "2026-06-23T10:34:13.8284733Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DZT_REQUEST_TO_DYADIC__REQ-002_second_channel.md",
+                      "package_path":  "originals/downloads/DZT_REQUEST_TO_DYADIC__REQ-002_second_channel.md",
+                      "bytes":  4801,
+                      "sha256":  "ed6bf3630e65a0873f692277c3e36dab1c18d6a7083b35756c388bcabc7f97f9",
+                      "observed_last_write_time_utc":  "2026-06-23T10:34:07.6260778Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DZT_REQUEST_TO_DYADIC__REQ-003_local_germ_data.md",
+                      "package_path":  "originals/downloads/DZT_REQUEST_TO_DYADIC__REQ-003_local_germ_data.md",
+                      "bytes":  4026,
+                      "sha256":  "b69439ec3afc8d72cb13e56ad07afcfab5864392eda9178f6549e70c7785f51e",
+                      "observed_last_write_time_utc":  "2026-06-24T05:46:42.5346079Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DZT_REQUEST_TO_DYADIC__REQ-004_resonant_tower.md",
+                      "package_path":  "originals/downloads/DZT_REQUEST_TO_DYADIC__REQ-004_resonant_tower.md",
+                      "bytes":  3680,
+                      "sha256":  "ca746c0839b67e5fb09f76e47cdd65ca68ed80471974399ef400b28da2a57254",
+                      "observed_last_write_time_utc":  "2026-06-24T06:27:32.9211716Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DZT_THM_CASCADE_DENOMINATOR_proof.md",
+                      "package_path":  "originals/downloads/DZT_THM_CASCADE_DENOMINATOR_proof.md",
+                      "bytes":  2706,
+                      "sha256":  "2a8354ca43d9c33b443a4f8f5d8fdf03548304b39e22badf46aedd598c1b5e39",
+                      "observed_last_write_time_utc":  "2026-06-24T10:32:05.0220859Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "DZT_v0_7_closed_form_iteration_note.md",
+                      "package_path":  "originals/downloads/DZT_v0_7_closed_form_iteration_note.md",
+                      "bytes":  2422,
+                      "sha256":  "e6887488f354d468efd8e99e98c597fc05c55dcb44e8f8e72ede8255e3ee42f0",
+                      "observed_last_write_time_utc":  "2026-06-23T08:44:33.2075940Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "ng_review_dzt_independent_audit_v1.py",
+                      "package_path":  "originals/downloads/ng_review_dzt_independent_audit_v1.py",
+                      "bytes":  2601,
+                      "sha256":  "17f8415bb0524fcdfcb3e7e2b6a6ad43157f51ac139017a8c4d5b788cc54cad8",
+                      "observed_last_write_time_utc":  "2026-08-27T14:46:11.7370209Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_1.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_1.md",
+                      "bytes":  21078,
+                      "sha256":  "c7656a7a9e9c5d43d14b6fe41d332f1f8afdb8fe72ece761983e051e0ff6ad99",
+                      "observed_last_write_time_utc":  "2026-06-22T13:18:42.8459389Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_10 (1).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_10 (1).md",
+                      "bytes":  61869,
+                      "sha256":  "a70c6522145bbb714a240db020b8b048b2fa275f615540ffcf0254a58174b400",
+                      "observed_last_write_time_utc":  "2026-06-23T13:44:09.8001665Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_10 (2).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_10 (2).md",
+                      "bytes":  62520,
+                      "sha256":  "70a529d9eb38d00f76575634ef88ce56f579e23309597731849ff2fcc2331a75",
+                      "observed_last_write_time_utc":  "2026-06-24T05:46:45.5909718Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_10.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_10.md",
+                      "bytes":  60338,
+                      "sha256":  "6942d7cd5e224b7a016ca72fca9bf01a8b1000ab2363122ddd9b2522df9e285a",
+                      "observed_last_write_time_utc":  "2026-06-23T12:47:56.5484921Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_11 (1).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_11 (1).md",
+                      "bytes":  67759,
+                      "sha256":  "0c5addf779bd5c1503e89a39007672281d2a56a23e18aef483ec0877a41767e6",
+                      "observed_last_write_time_utc":  "2026-06-24T06:27:34.2326381Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_11.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_11.md",
+                      "bytes":  67128,
+                      "sha256":  "ec75d6c9095adb38c29bc6f68fd97247d29bd5259cdbcf97c2625bf675b0b366",
+                      "observed_last_write_time_utc":  "2026-06-24T05:59:46.8957246Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_12.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_12.md",
+                      "bytes":  71924,
+                      "sha256":  "032bf581fd424f03dffc9fc9c2825ba7ed0b4af441c47fc88b37e09d8080d2b2",
+                      "observed_last_write_time_utc":  "2026-06-24T07:21:07.0958758Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_13.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_13.md",
+                      "bytes":  75267,
+                      "sha256":  "1392acb37d75f34137ffcbfcd5b05898f353ab4f693aeacce7deb66e0b1cbe02",
+                      "observed_last_write_time_utc":  "2026-06-24T07:29:32.5220155Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_14.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_14.md",
+                      "bytes":  79768,
+                      "sha256":  "b3b56875868be5f2ee3c6b1d266587dd868a8401aa9904b9f2eec56cd9dde739",
+                      "observed_last_write_time_utc":  "2026-06-24T08:53:40.5304121Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_15.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_15.md",
+                      "bytes":  83938,
+                      "sha256":  "916ecab0861ff781e55d24197afe41a9c79415660522c426d1b4902735c87d5c",
+                      "observed_last_write_time_utc":  "2026-06-24T09:46:44.9566211Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_16 (1).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_16 (1).md",
+                      "bytes":  88425,
+                      "sha256":  "975c7b98a3b316307df51a57cc2b0e3be2dc4357631ad8c39ccfd976becccf11",
+                      "observed_last_write_time_utc":  "2026-06-24T14:49:40.8567449Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_16.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_16.md",
+                      "bytes":  86638,
+                      "sha256":  "2b68463e6ef536c815d3e50744141ea1a4925247480e0a0c1714586aac317e5b",
+                      "observed_last_write_time_utc":  "2026-06-24T10:32:03.6293649Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_17 (1).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_17 (1).md",
+                      "bytes":  93107,
+                      "sha256":  "e24acfc150e3f4e9753ff06e6bd6edb89bf913e11382818743b9bce057bf1bcd",
+                      "observed_last_write_time_utc":  "2026-06-25T07:23:03.1928480Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_17.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_17.md",
+                      "bytes":  92269,
+                      "sha256":  "10ca26328ded751269081b3d85e5aa78c30ae97a85e899f017eee24ea07e2df8",
+                      "observed_last_write_time_utc":  "2026-06-24T14:56:46.4644916Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_2.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_2.md",
+                      "bytes":  26282,
+                      "sha256":  "838f49ea3ec6a60b1c94922e48e2a587b7919ce449849b7957ce2218630090ea",
+                      "observed_last_write_time_utc":  "2026-06-22T13:30:34.3726459Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_3.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_3.md",
+                      "bytes":  27678,
+                      "sha256":  "6af8db841f75e86630397c70b2942b4b4b0489ee2f2fc08800707a08422ebe3d",
+                      "observed_last_write_time_utc":  "2026-06-22T13:39:33.3352459Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_4 (1).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_4 (1).md",
+                      "bytes":  34605,
+                      "sha256":  "806ff90041365404513b34767d9f9ef0d2ea47519ae71089ee43af9bb8ac83e8",
+                      "observed_last_write_time_utc":  "2026-06-23T05:28:17.8262151Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_4.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_4.md",
+                      "bytes":  33151,
+                      "sha256":  "ad797e5d28ac5a4d316b3da618ef44d2760260982d236850713f12d5a2f632c7",
+                      "observed_last_write_time_utc":  "2026-06-23T05:18:03.4743128Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_5.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_5.md",
+                      "bytes":  38055,
+                      "sha256":  "d59146da69443cb1901b2e97ad6244582fc5938d5f4f0d30853f11122a0d8fba",
+                      "observed_last_write_time_utc":  "2026-06-23T06:11:26.8600138Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_7.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_7.md",
+                      "bytes":  45807,
+                      "sha256":  "33b3030ce1e3fec5e3c0139788e6ac61461bd2a193671ec3902e41d86ebd3af0",
+                      "observed_last_write_time_utc":  "2026-06-23T09:27:57.9828303Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8 (1).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8 (1).md",
+                      "bytes":  50547,
+                      "sha256":  "cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2",
+                      "observed_last_write_time_utc":  "2026-06-23T09:40:36.1157101Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8.md",
+                      "bytes":  49224,
+                      "sha256":  "57cbb30e8405ab961fcf2d3ceea1e6275aacd460948f42c6109622189d3cdceb",
+                      "observed_last_write_time_utc":  "2026-06-23T09:35:41.1703797Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_9 (1).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_9 (1).md",
+                      "bytes":  54817,
+                      "sha256":  "bf12113fb050ef3600d21d6e4a5141e8a75c8f574eff8e584104eaa3250448bf",
+                      "observed_last_write_time_utc":  "2026-06-23T10:18:55.3273748Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_9 (2).md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_9 (2).md",
+                      "bytes":  56353,
+                      "sha256":  "3990c411d4b89c54e1d4556fb361cd8f9d65bff6f393f1fb7548c367e571666e",
+                      "observed_last_write_time_utc":  "2026-06-23T10:34:15.1614413Z"
+                  },
+                  {
+                      "source_root_label":  "downloads",
+                      "source_relative_path":  "RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_9.md",
+                      "package_path":  "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_9.md",
+                      "bytes":  55539,
+                      "sha256":  "5e2e4462243d2e27934b277d305fb4d5bb218a36729371060ff0651fd5e6224e",
+                      "observed_last_write_time_utc":  "2026-06-23T10:14:22.2721729Z"
+                  },
+                  {
+                      "source_root_label":  "legacy-src",
+                      "source_relative_path":  "rtg-toolkit/scripts/dyadic/DSN/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8.md",
+                      "package_path":  "originals/legacy-src/rtg-toolkit/scripts/dyadic/DSN/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8.md",
+                      "bytes":  50547,
+                      "sha256":  "cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2",
+                      "observed_last_write_time_utc":  "2026-06-23T09:46:03.3249714Z"
+                  },
+                  {
+                      "source_root_label":  "legacy-src",
+                      "source_relative_path":  "rtg-toolkit/scripts/dyadic/dzt_q4_03_numeric_probe.py",
+                      "package_path":  "originals/legacy-src/rtg-toolkit/scripts/dyadic/dzt_q4_03_numeric_probe.py",
+                      "bytes":  1528,
+                      "sha256":  "6b6d62faa3543f042679c5c753bfe307795c5ead7bc640a1d81b34fbf6550714",
+                      "observed_last_write_time_utc":  "2026-06-22T18:59:02.6032127Z"
+                  },
+                  {
+                      "source_root_label":  "legacy-src",
+                      "source_relative_path":  "rtg-toolkit/scripts/dyadic/dzt_q4_03_profile_exact.py",
+                      "package_path":  "originals/legacy-src/rtg-toolkit/scripts/dyadic/dzt_q4_03_profile_exact.py",
+                      "bytes":  2707,
+                      "sha256":  "beda44ab07bc0b14ad3ab7802dec5ac83019db8356b88b7f18bb861b6707b5cc",
+                      "observed_last_write_time_utc":  "2026-06-22T18:59:06.5632951Z"
+                  }
+              ]
+}
