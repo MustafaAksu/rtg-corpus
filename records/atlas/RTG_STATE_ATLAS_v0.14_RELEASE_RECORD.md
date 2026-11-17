@@ -1,6 +1,6 @@
-# RTG State Atlas v0.14 — acceptance record (draft)
+# RTG State Atlas v0.14 — acceptance record
 
-**Status:** DRAFT — second candidate, after review round 1 (review `5933660459`, ACCEPT WITH CHANGES; §3a). Not accepted. `atlas-v0.13` is the tagged Atlas until the PI accepts this candidate, the PR of branch `claude/atlas-v0.14` is merged, and the annotated tag `atlas-v0.14` exists and is verified.
+**Status:** ACCEPTED by the PI, 17 Nov 2026 (§4). Review: round 1 `5933660459` (ACCEPT WITH CHANGES; §3a), round-2 readback `5933956213` on head `6b1f02a` (ACCEPT SCOPED, both findings closed). `atlas-v0.13` is the tagged Atlas until the PI accepts this candidate, the PR of branch `claude/atlas-v0.14` is merged, and the annotated tag `atlas-v0.14` exists and is verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, 17 November 2026, on branch `claude/atlas-v0.14`.
 **Method:** Atlas Method v0.3 (`atlas-method-v0.3`).
@@ -133,11 +133,24 @@ Both are changes to the text of operations AR14-014 and AR14-015. The number and
 
 ## 4. Decision
 
-Pending. To be completed with the reviewer's result and the PI's decision.
+**Reviewer (ChatGPT, Atlas co-owner):**
+- Round 1, review `5933660459` on `464cf02`: ACCEPT WITH CHANGES. Two head corrections were asked for (§3a). The hashes, the 31 operations and the byte-identical replay were confirmed independently.
+- Round-2 readback, review `5933956213` on `6b1f02a`: **ACCEPT SCOPED**. Both findings are closed. A full text comparison of the two candidates shows that only two lines differ (1323, 1341). W26 and W27 were read with their guard code.
 
-## 5. Publication (pending; the PI executes)
+The reviewer's evidence boundary for round 2: the new candidate's SHA-256, the builder and the 27 controls were not rerun independently, and remain producer records.
 
-After acceptance: the BASELINE row for ATLAS; the merge (merge commit) and the annotated tag `atlas-v0.14` in one CLI block; the tag verification record; the closure of the ATLAS inbox item.
+Non-blocking items: the four Atlas-side compound heads in D5 (§3, §6).
+
+**PI:** accepted. Mustafa, project conversation, 17 Nov 2026, 09:29 +03:00: "Atlas v0.14 ü benimsiyorum." ("I adopt Atlas v0.14.") Accepted bytes: `atlas/RTG_STATE_ATLAS.md` SHA-256 `d34e5697ae47201133f513bce5f6b2b8438ed2f4e654fe33a73048a5ca7b1e85`, the second candidate named in the readback.
+
+## 5. Publication (the PI executes)
+
+1. `BASELINE.md`: the ATLAS row is set to v0.14, with the hash of §1 and this record. This was done on the branch, together with this record.
+2. Merge PR #293 into `main` with a merge commit, not squash.
+3. Check the file hash on `main`, then create the annotated tag `atlas-v0.14` on that merge commit.
+4. The Atlas owner closes the dispositioned `pipes/ATLAS/` item and writes the tag verification.
+
+**Publication bytes** equal the accepted bytes: the Atlas has no status line that publication would change. A merge, a tag or a passing check is not an adoption.
 
 ## 6. Carried forward
 
