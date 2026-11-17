@@ -27,3 +27,14 @@
 **Reproduce the test output:** `python3 -I evidence/az/scripts/az_tokres_campaign.py --plan test --out DIR --jobs 2`, then `python3 -I evidence/az/mechanism/az_tokres_contact_tables.py --manifest evidence/az/mechanism/contact_tables_manifest.json --dir DIR --plan test --json NEW_FILE.jsonl` (the records differ only in `secs`; the tables do not use it).
 
 **Choices for review and the PI** (each listed in the manifest; none taken by looking at a table): the cell (`S1-C1` alone, or also `S1-C2`; Stage 2 cells would need a Stage 2 validator path, not written); `t_b` of J4; the time grid; whether `SHAM` and `Q2R` stay as descriptor-only arms.
+
+## PI decision on the four settings (17 November 2026)
+
+**PI, 17 November 2026, 08:54 +03:00, project conversation with the Claude AZ session, verbatim:** "Dördünü onaylıyorum" ("I approve all four"), in answer to the four settings listed in the same conversation and recommended in review `5933459799`:
+
+1. cell `S1-C1` only (`N = 120`, `k = 8`);
+2. `t_b = 100` for J4;
+3. time grid `1, 2, 5, 10, 20, 50, 100, 200, 400, 800`;
+4. arms BASE, O1R, O1D, O2R, O2D, SHAM; SHAM descriptor-only; Q2R not included (absent at `N = 120`).
+
+These are the values in `contact_tables_manifest.json` at `19c3b58` (reviewed, PASS `5933459799`). They were chosen without any table on registered records. The freezing commit that follows changes only the manifest's `status` and `frozen_script_sha256` (set to the script's SHA-256 `78822775de7d52540f4700d923ab55a5750df6aa06245c9178a2ed91e952611b`). After it, one run on the Stage 1 records; its output is stored as it comes and is exploratory: a pre-specified description, not mechanism evidence and not a confirmatory test.
