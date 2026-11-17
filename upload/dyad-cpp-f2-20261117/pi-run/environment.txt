@@ -1,0 +1,6 @@
+UTC=2026-11-17T14:01:53Z
+REPO_HEAD=180676a2247beb6ecd34ed9aaa54052091ab66ad
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Python 3.12.3
+SOURCE_SHA256=6ca8c663061ce2fa9e062938a1e6046c932da4cbddccc6e3e2c3de4df68c477e
+MODE=SESSION_ONLY; F2 conditioned on sectorial tube/seed; NOT 3c-b
