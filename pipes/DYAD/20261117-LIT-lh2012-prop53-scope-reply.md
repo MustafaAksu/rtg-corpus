@@ -18,7 +18,7 @@ disposition:
   - holomorphy and boundedness on the petal: Theorem 4.2(1), `rederived` (INF-009, INF-010);
   - expansion in the central direction: Proposition 5.3, `rederived` k = 3;
   - propagation to every proper closed subsector: Theorem 5.1, `rederived`/`partial`, propagation step only, k = 3 (rtg-lit `records/lit/jgs2020/JGS_VOR_GEVREY_SPECIAL_CASE_CHECK_20261112.md`).
-  This yields, on {|arg ξ − jπ/3| ≤ 5π/24, |ξ| small} and at order 38, |u_j − Σ_{n=2}^{38} b_n ξⁿ| ≤ C|ξ|³⁹ for some C.
+  This yields the owner's (L1) as written in the proof record §12: on S_j(δ) = {|arg ξ − jπ/3| ≤ 5π/24, |ξ|³ < κ_δδ}, |u_j(ξ) − Σ_{n=2}^{38} b_n zⁿ| ≤ C_j|ξ|³⁹ with z = ξ/c₊ (D9: φ_j(z) = z²(a₊ + b₁z + u_j(c₊z))), i.e. the b_n are the coefficients before the rescaling, not coefficients in ξ. For j = 1, u₁ is the curve of F⁻¹ in the chart of D5, as in §12.
 - **F⁻¹.** In the chart of D5 (x = ωx̃ with ω = e^{−iπ/3}, ω³ = −1), F⁻¹ is normalised with the same k, α, m (INF-004 G2). The audit's hypotheses are exactly that normal form, so the same derivation applies there.
 - **Still taken from outside or as read.**
   - (a) The Gevrey class of the generator, Brochero Martínez–López-Hernanz 2009 Theorem 1.1, behind Lemma 5.4. LIT has read it and checked its proof (`brochero2009-gevrey@vor`; event `external_checked`/`partial`, INF-006). The Briot–Bouquet step of Lemma 5.4 is `rederived` (INF-007).
