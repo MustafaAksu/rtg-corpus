@@ -1,0 +1,79 @@
+[
+ {
+  "key": "TDRG.G8",
+  "disposition": "retired",
+  "reason": "TDR-G v2.13 (tdrg-v2.13; release record §4): the row recorded three layout items the PI deferred to v2.13 on 27 Oct 2026 — the footer supersession chain of the v2.12.x point releases, the Appendix A ordering, and the Methodology v1.2 declaration. At tdrg-v2.13 the file has one footer line, Appendix A in edition order (v2.13, v2.12.15, v2.12.14, then one line per earlier edition), and declares Methodology v1.4. Nothing of the row remains.",
+  "previous_sha256": "a8f42d18f657c50edd28853858ebe59f3dac6ef1af29e5bac497ce7653a5b11e",
+  "current_sha256": null
+ },
+ {
+  "key": "TDRG.G10",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.14 sources",
+  "previous_sha256": "c93f34ef84ed41d2a097317fc11e2cddc365afda584735b0c05c8247c50c7d23",
+  "current_sha256": "c93f34ef84ed41d2a097317fc11e2cddc365afda584735b0c05c8247c50c7d23"
+ },
+ {
+  "key": "TDRG.G11",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.14 sources",
+  "previous_sha256": "e446c76e2e79f012b7b52b66b8e1e2d6c02bd5d72674f47b732f1aa4a58b4845",
+  "current_sha256": "e446c76e2e79f012b7b52b66b8e1e2d6c02bd5d72674f47b732f1aa4a58b4845"
+ },
+ {
+  "key": "AZ.A5",
+  "disposition": "reworded",
+  "reason": "reworded; operations: AZ.A5: both diagnostics (D2 row); AZ.A5: both diagnostics (D5 row)",
+  "previous_sha256": "64ee313bb5fccaa675fc5ab9d8d06d6670f251c1c8c00c16f6e321dbce9700bb",
+  "current_sha256": "8f753715c8e86e5ef0b72ed49d27453ab5d0e3a374708dcf426eb7bbcf79516f"
+ },
+ {
+  "key": "D5.X1",
+  "disposition": "reworded",
+  "reason": "reworded; operations: D5.X1: owner-review tasks",
+  "previous_sha256": "67d61d68a93f99480308a99746c06d8a811f0f523be402b2fc3fc5c738e206c2",
+  "current_sha256": "c9d69d3799a7e50abb002a6effdc607e21cad221bb80891081e4e7978cbca17d"
+ },
+ {
+  "key": "D5.X3",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.14 sources",
+  "previous_sha256": "df04657c011bb80a0eb6cb7f5bd181c938eacf55ffc0fc32ae73076ae16e18d1",
+  "current_sha256": "df04657c011bb80a0eb6cb7f5bd181c938eacf55ffc0fc32ae73076ae16e18d1"
+ },
+ {
+  "key": "NUMGEN.N-R1",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.14 sources",
+  "previous_sha256": "a64ba5f2547ec7b1a8776f5f44a34fbc346cee875cc45d5ec694da1a9949e772",
+  "current_sha256": "a64ba5f2547ec7b1a8776f5f44a34fbc346cee875cc45d5ec694da1a9949e772"
+ },
+ {
+  "key": "NUMGEN.N-S2",
+  "disposition": "retained",
+  "reason": "unchanged: what it records is unchanged at the v0.14 sources",
+  "previous_sha256": "797fa671dc3857de8163990dcfcdbab1f6f9b27adc9c8262d6c9b696cdd3eb10",
+  "current_sha256": "797fa671dc3857de8163990dcfcdbab1f6f9b27adc9c8262d6c9b696cdd3eb10"
+ },
+ {
+  "key": "PROG.G6",
+  "disposition": "reworded",
+  "reason": "reworded; operations: PROG.G6: TDR-G state after the Programme record",
+  "previous_sha256": "26b571ac0b4aa18ec43c7dd65914dfa1734e735b6c3dc5e43fca428229d0385e",
+  "current_sha256": "b3ab68f36284f3ab8df8814db90277ac51d0aa60be62ffb2e2a248471e74c0be"
+ },
+ {
+  "key": "METH.M1",
+  "disposition": "reworded",
+  "reason": "reworded; operations: METH.M1: TDR-G leaves the row",
+  "previous_sha256": "ef9614f68ea9acbc0bca62757ce868edebfc631c83758862747a38b51be158da",
+  "current_sha256": "c716e9c7a530ee3cef42af17bc1bae22daee97156f6711319b49cf37267d35cb"
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "reworded",
+  "reason": "reworded; operations: pipe census at a5826ac",
+  "previous_sha256": "64442d160f17afede204b4e9c5ddbf8e7d3ca1e3d5269844c6cfb30f1cae6408",
+  "current_sha256": "4d0816e4194452e0166c14e7c70b8472cfd56196d109f4e5891385a433537094"
+ }
+]

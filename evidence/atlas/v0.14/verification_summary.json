@@ -1,0 +1,136 @@
+{
+ "status": "DRAFT_REVIEW_READY",
+ "base_atlas": "atlas-v0.13",
+ "base_sha256": "208ddd9622b2ea9d291b40dbc103d6eaa3f357aa0e23b2de6190df2c0f879045",
+ "atlas_sha256": "acab587128ede70c779948288e97ceac76042bb6477d098f46aca7517937e5e4",
+ "atlas_bytes": 541017,
+ "atlas_lines": 1545,
+ "base_bytes": 537046,
+ "base_lines": 1545,
+ "source_snapshot": "a5826ace61f14065b5c386efc817c883cdc775c0",
+ "method": {
+  "tag": "atlas-method-v0.3",
+  "sha256": "a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f"
+ },
+ "changed_sources": [
+  "AZ",
+  "TDRG"
+ ],
+ "edit_operations": 31,
+ "operations_by_finding": {
+  "identity": 8,
+  "TDR-G v2.13": 5,
+  "reviewed item (grade, qualifier or diagnostic change)": 5,
+  "Method §4.1 span deletion (edition label that only dates a result)": 3,
+  "AZ v0.10": 9,
+  "pipes": 1
+ },
+ "span_deletions_rule_4_1": {
+  "count": 3,
+  "bytes_removed": 48
+ },
+ "span_deletions_rule_4_7": 0,
+ "retired_keys": [
+  "TDRG.G8"
+ ],
+ "new_keys": [],
+ "moved_source_homes": {
+  "AZ-NUM-TOKRES-S2": {
+   "kind": "node",
+   "home": "AZ-NUM-TOKRES-S2 NUM·dx |"
+  },
+  "AZ-ART-TOKRES-S2": {
+   "kind": "cert",
+   "home": "AZ-NUM-TOKRES-S2 NUM·dx |"
+  }
+ },
+ "new_identifiers": [
+  "AZ-ART-TOKRES-S2",
+  "AZ-NUM-TOKRES-S2"
+ ],
+ "rids_at_tag": {
+  "TDRG": 81,
+  "AZ": 50
+ },
+ "owner_facts": {
+  "tdrg_methodology_v1_4": true,
+  "tdrg_xfer_open": true,
+  "tdrg_az_pin": true,
+  "tdrg_no_plateau_dropped": true,
+  "tdrg_policy_grades": true,
+  "tdrg_dtable_alg": true,
+  "tdrg_one_footer": true,
+  "tdrg_appendix_order": true,
+  "tdrg_no_compound_tag": true,
+  "tdrg_crystallization_question": true,
+  "tdrg_retrig_clause": true,
+  "programme_record_unchanged": true,
+  "az_s2_block": true,
+  "az_s2_numbers": true,
+  "az_s2_negatives": true,
+  "az_s2_artifact": true,
+  "az_s1_unchanged": true,
+  "az_tdrg_pin_unchanged": true,
+  "az_open_status": true,
+  "az_level_a": true
+ },
+ "pipes": {
+  "items": 135,
+  "snapshot": {
+   "closed": 72,
+   "open": 62,
+   "dispositioned": 1
+  }
+ },
+ "dispositions": {
+  "retired": 1,
+  "retained": 5,
+  "reworded": 5
+ },
+ "shared_counts": {
+  "sources": {
+   "PASS": 72
+  },
+  "coverage": {
+   "PASS": 137
+  },
+  "qualifiers": {
+   "PASS": 4
+  },
+  "links": {
+   "PASS": 527,
+   "DOCUMENTED-UNRESOLVED": 10,
+   "UNVERIFIED": 2
+  },
+  "artifacts": {
+   "PASS": 121,
+   "UNVERIFIED": 2
+  },
+  "keys": {
+   "PASS": 156
+  },
+  "process": {},
+  "wording": {
+   "WARN": 13
+  }
+ },
+ "shared_controls": 18,
+ "focused_controls": 25,
+ "h_l5": {
+  "dangling": [],
+  "high_without_h": [],
+  "l5_rows": 107
+ },
+ "tool_sha256": {
+  "tools/atlas_check.py": "2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373",
+  "evidence/atlas/build/refresh_v0_14.py": "62e2e985e02a7e4018f963c9338d753464f38d30bb024e6afb8d882ca73bba86",
+  "evidence/atlas/build/refresh_v0_13.py": "ffd063ecdc298eecb6bce93a784bedc54f3e5a50869efc51221d9d1cdf902473",
+  "evidence/atlas/build/refresh_v0_10.py": "9405436c738f9c3dd079975ce21d5a4a73d45181a2831634b43c6c7512f2e01c"
+ },
+ "limitations": [
+  "Structural checks only; no owner certificate was rerun; the new identifiers are checked for presence in the tagged source and for one home each, not re-proved.",
+  "Impact refresh of two moved sources; the other 16 sources were not re-extracted. AZ v0.10 was read in its full diff against v0.9 (every changed line, §4.2.2 in full). TDR-G v2.13 was read through its release record, its stage-1 edit list and the atlas row checks of 16 Nov 2026 (four rounds, both stages rerun byte-identically), and at statement level where an Atlas line depends on it; it was not reread in full.",
+  "The shared checker's coverage check extracts Dyadic RIDs only; the homes of the AZ identifiers are asserted by this builder.",
+  "Four Atlas-side compound heads in D5 that this movement does not touch (*TDRG:TDR-24-factorization ALG/NUM, *TDRG:edge-builder ENG/ALG, *TDRG:slot-volume ALG/NUM strong, *NUMGEN:imp-DISC DEF/THM import) are left for a D5 opening; *BIND3:d-table is corrected because its grade differed from the owner's."
+ ]
+}

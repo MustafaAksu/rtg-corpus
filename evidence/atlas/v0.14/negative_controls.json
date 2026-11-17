@@ -1,0 +1,127 @@
+[
+ {
+  "id": "W1",
+  "what": "S2 placed under a TDR-G RID",
+  "detected": true
+ },
+ {
+  "id": "W2",
+  "what": "S2 under a TDR-G locator",
+  "detected": true
+ },
+ {
+  "id": "W3",
+  "what": "an S2 number on a TDR-G node",
+  "detected": true
+ },
+ {
+  "id": "W4",
+  "what": "the phase law made a dependency of S2",
+  "detected": true
+ },
+ {
+  "id": "W5",
+  "what": "the census law shown as consumed by S2",
+  "detected": true
+ },
+ {
+  "id": "W6",
+  "what": "S2 read as N-independence",
+  "detected": true
+ },
+ {
+  "id": "W7",
+  "what": "S2 read as widening S1",
+  "detected": true
+ },
+ {
+  "id": "W8",
+  "what": "the coverage caveat of the ten intervals dropped",
+  "detected": true
+ },
+ {
+  "id": "W9",
+  "what": "S2 shown as closing AZ-OPEN-PROMO",
+  "detected": true
+ },
+ {
+  "id": "W10",
+  "what": "a second home for S2",
+  "detected": true
+ },
+ {
+  "id": "W11",
+  "what": "the S2 artifact cited twice as a certificate",
+  "detected": true
+ },
+ {
+  "id": "W12",
+  "what": "the stale plateau clause restored",
+  "detected": true
+ },
+ {
+  "id": "W13",
+  "what": "the crystallization grade question dropped",
+  "detected": true
+ },
+ {
+  "id": "W14",
+  "what": "one [NUM strong] restored for all policy branches",
+  "detected": true
+ },
+ {
+  "id": "W15",
+  "what": "BIND3 d-table compound grade restored",
+  "detected": true
+ },
+ {
+  "id": "W16",
+  "what": "XFER custody shown as deferred to v2.13",
+  "detected": true
+ },
+ {
+  "id": "W17",
+  "what": "the OFN queue record overwritten by the TDR-G state",
+  "detected": true
+ },
+ {
+  "id": "W18",
+  "what": "retired TDRG.G8 reused",
+  "detected": true
+ },
+ {
+  "id": "W19",
+  "what": "METH.M1 still lists TDR-G",
+  "detected": true
+ },
+ {
+  "id": "W20",
+  "what": "SOURCES row older than the manifest (TDRG)",
+  "detected": true
+ },
+ {
+  "id": "W21",
+  "what": "SOURCES row older than the manifest (AZ)",
+  "detected": true
+ },
+ {
+  "id": "W22",
+  "what": "D5 header still declaring Methodology v1.2 for TDR-G",
+  "detected": true
+ },
+ {
+  "id": "W23",
+  "what": "AZ.A5 dropped",
+  "detected": true
+ },
+ {
+  "id": "W24",
+  "what": "a reworded span filed as a §4.1 deletion",
+  "detected": true
+ },
+ {
+  "id": "W25",
+  "what": "an AZ pointer still naming one diagnostic",
+  "detected": true
+ }
+]
