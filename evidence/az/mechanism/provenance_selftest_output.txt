@@ -25,11 +25,23 @@ pass: C coverage: birth occurs (3717)
 pass: C coverage: birth_x0 occurs (561)
 pass: C coverage: birth_xhalf occurs (907)
 pass: C coverage: birth_other occurs (2249)
+pass: C coverage: birth_from_descended_copy occurs (1553)
+pass: C coverage: birth_centre_carries_foreign_copy occurs (2138)
+pass: C coverage: birth_centre_value_shared occurs (2982)
+pass: C coverage: lineage_depth>=4 occurs (452)
 pass: C coverage: tick_with_>=2_events occurs (1616)
 pass: C coverage: init_equal_values occurs (157)
-coverage: swap 5123, swap_equal_values 847, path_forward 1364, path_reversed 1514, path_tie_bound 133, path_rotation_or_tie_n>=4 335, bound_cycle 386, multistar_bound 18861, birth 3717, birth_x0 561, birth_xhalf 907, birth_other 2249, tick_with_>=2_events 1616, init_equal_values 157
+coverage: swap 5123, swap_equal_values 847, path_forward 1364, path_reversed 1514, path_tie_bound 133, path_rotation_or_tie_n>=4 335, bound_cycle 386, multistar_bound 18861, birth 3717, birth_x0 561, birth_xhalf 907, birth_other 2249, birth_from_descended_copy 1553, birth_centre_carries_foreign_copy 2138, birth_centre_value_shared 2982, lineage_depth>=4 452, tick_with_>=2_events 1616, init_equal_values 157
 pass: D1 a wrong permutation of distinct values is detected by the value identity
 pass: D2 an unflipped centre sign with x = 0 is detected (sign history)
+pass: D2b centre's early sign history dropped, last entry kept: detected
 pass: D3 provenance on the plain engine is refused
-checks: 4825, failed: 0
+pass: D4a ledger fixture: copy 16 of depth 5, an alternative parent with the same root and root value exists
+pass: D4 parent redirected to another copy with the same root and value (labels and engine unchanged): detected
+pass: D5 birth record with a wrong tick: detected
+pass: D6 early sign-history entries dropped, last kept (copy 3): detected
+pass: D7 strict mode raises at the next tick on a corrupted ledger
+pass: D8 a changed continuation field (checkpoint grid) with unchanged outputs: the full snapshot differs
+pass: D9 landmark_tick alone is excluded from the snapshot (annotation)
+checks: 5556, failed: 0
 SELFTEST PASS

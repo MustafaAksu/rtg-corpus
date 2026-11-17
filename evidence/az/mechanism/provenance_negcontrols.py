@@ -17,7 +17,11 @@ import az_tokres_provenance as P                                    # noqa: E402
 TRIALS = 40
 
 
-def run_selftest():
+def run_selftest(guard=True):
+    """guard=False switches the fail-closed runtime guard off, so that detection must come from the self-test's own
+    comparisons (oracle ledger, full snapshots, ledger check); the D7 line, which tests the guard itself, is then
+    not counted."""
+    P.FORCE_STRICT = None if guard else False
     buf = io.StringIO()
     with contextlib.redirect_stdout(buf):
         try:
@@ -25,8 +29,13 @@ def run_selftest():
         except Exception as e:                                       # a guard that raises also counts as detection
             print("raised: %r" % e)
             rc = 1
+    P.FORCE_STRICT = None
     out = buf.getvalue()
-    return rc, sum(1 for line in out.splitlines() if line.startswith("FAIL")), "raised" in out
+    fails = [line for line in out.splitlines() if line.startswith("FAIL") and (guard or " D7 " not in line + " ")]
+    raised = "raised" in out
+    if not guard:
+        rc = 1 if (fails or raised) else 0
+    return rc, len(fails), raised
 
 
 def patch(obj, name, new):
@@ -143,27 +152,102 @@ def nc_tick_checks_cap_late():
     return patch(P, "tick", bad)
 
 
+def nc_parent_systematic_consistent():
+    """birth links the child to the grandparent copy, event log made consistent"""
+    orig = P.Provenance.on_birth
+
+    def bad(self, centre, newborn):
+        orig(self, centre, newborn)
+        child = len(self.copies) - 1
+        gp = self.copies[self.copies[child]["parent"]]["parent"]
+        if gp is not None:
+            self.copies[child]["parent"] = gp
+            t, kind, (c_, n_, p_, ch) = self.events[-1]
+            self.events[-1] = (t, kind, (c_, n_, gp, ch))
+    return patch(P.Provenance, "on_birth", bad)
+
+
+def nc_birth_record_tick():
+    """birth record stores the previous tick"""
+    orig = P.Provenance.on_birth
+
+    def bad(self, centre, newborn):
+        orig(self, centre, newborn)
+        self.copies[-1]["birth"] = dict(self.copies[-1]["birth"], tick=self._tick - 1)
+    return patch(P.Provenance, "on_birth", bad)
+
+
+def nc_sign_history_last_only():
+    """at a flip, the centre's sign history keeps only the latest entry"""
+    orig = P.Provenance.on_birth
+
+    def bad(self, centre, newborn):
+        orig(self, centre, newborn)
+        c = self.copies[-1]["parent"]
+        self.sign_history[c] = self.sign_history[c][-1:]
+    return patch(P.Provenance, "on_birth", bad)
+
+
+def nc_checkpoint_truncates_sign_history():
+    """checkpoint keeps only the last sign-history entry of each copy"""
+    def bad(st):
+        c = copy.deepcopy(st)
+        c.landmark_tick = st.u.steps
+        if c.prov is not None:
+            c.prov.sign_history = {k: v[-1:] for k, v in c.prov.sign_history.items()}
+        return c
+    return patch(P, "checkpoint", bad)
+
+
+def nc_checkpoint_changes_config():
+    """checkpoint extends the checkpoint grid beyond T (outputs unchanged)"""
+    def bad(st):
+        c = copy.deepcopy(st)
+        c.landmark_tick = st.u.steps
+        c.checkpoints = tuple(c.checkpoints) + (10 ** 6,)
+        return c
+    return patch(P, "checkpoint", bad)
+
+
+def nc_checkpoint_drops_events():
+    """checkpoint drops the provenance event log"""
+    def bad(st):
+        c = copy.deepcopy(st)
+        c.landmark_tick = st.u.steps
+        if c.prov is not None:
+            c.prov.events = []
+        return c
+    return patch(P, "checkpoint", bad)
+
+
 CONTROLS = [nc_rotation_raw, nc_rotation_backwards, nc_birth_post_labels, nc_birth_same_copy, nc_swap_by_value,
             nc_double_orient, nc_shallow_checkpoint, nc_checkpoint_drops_runner_state,
-            nc_tick_skips_window, nc_tick_checks_cap_late]
+            nc_tick_skips_window, nc_tick_checks_cap_late, nc_parent_systematic_consistent, nc_birth_record_tick,
+            nc_sign_history_last_only, nc_checkpoint_truncates_sign_history, nc_checkpoint_changes_config,
+            nc_checkpoint_drops_events]
 
 
 def main():
     ok = True
-    rc, nfail, _ = run_selftest()
-    good = rc == 0 and nfail == 0
-    ok &= good
-    print("NC00 unmodified instrument: self-test %s" % ("PASS" if good else "FAIL"))
+    for guard in (True, False):
+        rc, nfail, _ = run_selftest(guard)
+        good = rc == 0 and nfail == 0
+        ok &= good
+        print("NC00 unmodified instrument, runtime guard %s: self-test %s" % ("on" if guard else "off",
+                                                                            "PASS" if good else "FAIL"))
     for i, ctl in enumerate(CONTROLS, 1):
-        undo = ctl()
-        try:
-            rc, nfail, raised = run_selftest()
-        finally:
-            undo()
-        detected = rc != 0
-        ok &= detected
-        print("NC%02d %-62s %s (%d failed checks%s)" % (i, ctl.__doc__.strip(), "DETECTED" if detected else "MISSED",
-                                                         nfail, ", guard raised" if raised else ""))
+        res = []
+        for guard in (True, False):
+            undo = ctl()
+            try:
+                rc, nfail, raised = run_selftest(guard)
+            finally:
+                undo()
+            det = rc != 0
+            ok &= det
+            res.append("%s %s (%d failed checks%s)" % ("on:" if guard else "off:", "DETECTED" if det else "MISSED",
+                                                        nfail, ", raised" if raised else ""))
+        print("NC%02d %s\n     guard %s; guard %s" % (i, ctl.__doc__.strip(), res[0], res[1]))
     print("NEGCONTROLS PASS" if ok else "NEGCONTROLS FAIL")
     return 0 if ok else 1
 

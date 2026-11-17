@@ -46,6 +46,7 @@ PINS = {ENGINE: "4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa60
         ORIENT: "ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c",
         RUNNER: "75c5f139a453a4b2595eba76760e34cddc32c990370259ae6e84ec5379408992"}
 POLICY = "bound_symmetric"
+FORCE_STRICT = None          # negative controls only: None = as constructed; False = guard off (to test the oracle)
 
 
 # ---------------------------------------------------------------- loading
@@ -99,6 +100,7 @@ class Provenance:
             self.labels[node] = [c, 1]
             self.carrier[c] = node
             self.sign_history[c] = [(0, 1)]
+        self.n_roots = len(self.copies)
         self.events = []                     # (tick, kind, details)
         self._pre = None
         self._tick = 0
@@ -175,6 +177,47 @@ class Provenance:
                 errs.append("value identity fails at node %d" % v)
             if s not in (1, -1) or self.sign_history[c][-1][1] != s:
                 errs.append("sign history of copy %d" % c)
+        errs += self.check_ledger()
+        return errs
+
+    def check_ledger(self):
+        """Lineage metadata against the event log: roots, parents, birth records, full sign histories."""
+        errs = []
+        births = [(t, d) for t, kind, d in self.events if kind == "birth"]
+        by_child = {}
+        for t, (centre, newborn, parent, child) in births:
+            if child in by_child:
+                errs.append("two birth events for copy %d" % child)
+            by_child[child] = (t, centre, newborn, parent)
+        flips = {}
+        for t, (centre, newborn, parent, child) in births:
+            flips.setdefault(parent, []).append(t)
+        for c, x in enumerate(self.copies):
+            if x["parent"] is None:
+                if c >= self.n_roots or x["birth"] is not None or x["root"] != c or c in by_child:
+                    errs.append("root copy %d malformed" % c)
+                first = (0, 1)
+            else:
+                p = x["parent"]
+                ev = by_child.get(c)
+                if c < self.n_roots or not (0 <= p < c) or ev is None:
+                    errs.append("copy %d: parent or birth event missing" % c)
+                    continue
+                t, centre, newborn, ep = ev
+                if ep != p or x["birth"] != {"tick": t, "centre": centre, "newborn": newborn}:
+                    errs.append("copy %d: parent/birth record disagrees with the event log" % c)
+                if x["root"] != self.copies[p]["root"] or x["root_value"] != self.copies[p]["root_value"]:
+                    errs.append("copy %d: root differs from its parent's" % c)
+                sp = [sg for tt, sg in self.sign_history[p] if tt < t]
+                first = (t, sp[-1] if sp else None)
+            h = self.sign_history.get(c, [])
+            want = [first]
+            for t in flips.get(c, []):
+                want.append((t, -want[-1][1]))
+            if h != want:
+                errs.append("copy %d: sign history disagrees with the birth events" % c)
+        if len(by_child) != len(self.copies) - self.n_roots:
+            errs.append("birth events and non-root copies differ in number")
         return errs
 
 
@@ -238,7 +281,8 @@ def install(eng):
 class RunState:
     """Every mutable quantity of az_tokres_run.run_state, plus provenance. Deep-copyable; holds no module."""
 
-    def __init__(self, eng, run, N, k, theta0, delta0, T, cap, tdr26=True, check_law=True, provenance=False):
+    def __init__(self, eng, run, N, k, theta0, delta0, T, cap, tdr26=True, check_law=True, provenance=False,
+                 strict=True):
         if N % 2 or not (k < N / 6):
             raise ValueError("N must be even and k < N/6")
         self.N, self.k, self.T, self.cap, self.tdr26, self.check_law = N, k, T, cap, tdr26, check_law
@@ -258,6 +302,11 @@ class RunState:
         self.window = run.TDR26_WINDOW
         self.checkpoints = run.CHECKPOINTS
         self.prov = Provenance(self.u.delta, N) if provenance else None
+        self.strict = strict if FORCE_STRICT is None else FORCE_STRICT  # fail closed: check every tick, raise
+
+
+class ProvenanceError(RuntimeError):
+    pass
 
 
 def tick(eng, run, st):
@@ -282,8 +331,16 @@ def tick(eng, run, st):
     want_motif = st.tdr26 and (st.fb is None or nxt < st.fb + st.window)
     b0 = u.births
     ids_before = set(u.theta) if st.check_law else None
-    motif = eng.step_universe(u, multistar_policy=POLICY, collect_motif=want_motif)
+    try:
+        motif = eng.step_universe(u, multistar_policy=POLICY, collect_motif=want_motif)
+    finally:
+        if holder is not None:
+            holder["prov"] = None
     st.iters += 1
+    if st.prov is not None and st.strict:
+        errs = st.prov.check(u)
+        if errs:
+            raise ProvenanceError("tick %d: %s" % (u.steps, "; ".join(errs[:3])))
     db = u.births - b0
     if st.fe is None and (u.single_edge_swaps or u.path_interactions or u.births or u.multistar_seen
                           or u.path_ties_seen):
@@ -307,8 +364,6 @@ def tick(eng, run, st):
         st.m_at[u.steps] = m
     if st.cap > 0 and m >= st.cap:
         st.hit_cap, st.done = True, True
-    if holder is not None:
-        holder["prov"] = None
     return not st.done
 
 
@@ -346,50 +401,88 @@ def result(st):
     return out
 
 
-def fingerprint(st):
-    """Every Universe field (dict order kept) and every runner field: the full state at a tick boundary."""
-    u = st.u
-    uf = []
-    for f in dataclasses.fields(u):
-        x = getattr(u, f.name)
-        uf.append((f.name, list(x.items()) if isinstance(x, dict) else copy.deepcopy(x)))
-    rf = (sorted(st.alphabet), sorted(st.census.items()), st.law_viol, st.fb, st.fe, st.t100, sorted(st.m_at.items()),
-          st.w_n, st.w_b, st.w_occ, st.w_oims, st.hit_cap, st.iters, st.done)
-    pf = None if st.prov is None else (sorted((v, tuple(l)) for v, l in st.prov.labels.items()), len(st.prov.copies))
-    return (uf, rf, pf)
+ANNOTATION_FIELDS = ("landmark_tick",)    # set only on a checkpoint copy; compared separately, never continued from
+
+
+def canon(x):
+    """Canonical, order-preserving representation of a state object (dataclasses, plain objects, containers)."""
+    if dataclasses.is_dataclass(x) and not isinstance(x, type):
+        return ("dc", type(x).__name__, tuple((f.name, canon(getattr(x, f.name))) for f in dataclasses.fields(x)))
+    if isinstance(x, dict):
+        return ("dict", type(x).__name__, tuple((canon(k), canon(v)) for k, v in x.items()))
+    if isinstance(x, (list, tuple)):
+        return (type(x).__name__, tuple(canon(v) for v in x))
+    if isinstance(x, (set, frozenset)):
+        return ("set", tuple(sorted(canon(v) for v in x)))
+    if hasattr(x, "__dict__"):
+        return ("obj", type(x).__name__, tuple((k, canon(v)) for k, v in sorted(vars(x).items())
+                                             if k not in ANNOTATION_FIELDS))
+    return (type(x).__name__, x)
+
+
+def fingerprint(st, with_prov=True):
+    """Full tick-boundary snapshot: every Universe field (dict order kept), every runner field including the
+    configuration (N, k, T, cap, tdr26, check_law, window, checkpoints) and, with_prov, the whole provenance object
+    (copies with parent/root/birth, labels, carriers, full sign histories, event log, scratch fields).
+    Only ANNOTATION_FIELDS are excluded."""
+    snap = canon(st)
+    if not with_prov:
+        snap = snap[:2] + (tuple(kv for kv in snap[2] if kv[0] != "prov"),)
+    return snap
 
 
 # ================================================================ self-test (synthetic only)
-def oracle_tick(peng, theta, delta, labels, copies_n, N, k):
-    """Independent expectation for one tick: labels, delta and new nodes, computed on copies from the pre-tick state
-    with the engine's pure graph helpers and an own counter-free copy of the v2.12.14 orientation rule."""
+class OracleLedger:
+    """Independent lineage reference for the self-test, in its own representation (separate field maps), advanced
+    only by oracle_tick from the engine's pre-tick physical state. Never reads the sidecar after initialisation."""
+
+    def __init__(self, delta0):
+        self.label = {v: (v, 1) for v in delta0}            # node -> (copy, sign); root copy id = initial node id
+        self.root = {v: v for v in delta0}
+        self.root_value = dict(delta0)
+        self.parent = {v: None for v in delta0}
+        self.born = {v: None for v in delta0}
+        self.signs = {v: [(0, 1)] for v in delta0}
+        self.next_copy = len(delta0)
+
+    def as_sidecar(self):
+        copies = [{"root": self.root[c], "root_value": self.root_value[c], "parent": self.parent[c],
+                   "birth": self.born[c]} for c in range(self.next_copy)]
+        labels = {v: list(l) for v, l in self.label.items()}
+        carrier = {c: v for v, (c, _) in self.label.items()}
+        return copies, labels, carrier, {c: list(h) for c, h in self.signs.items()}
+
+
+def oracle_tick(peng, theta, delta, led, N, k, t):
+    """Independent expectation for tick t from the pre-tick engine state (theta, delta) and the oracle ledger:
+    returns the expected delta and advances the ledger. Uses the engine's pure graph helpers and an own counter-free
+    copy of the v2.12.14 orientation rule."""
     th = {x: (theta[x] + delta[x]) % N for x in theta}
     nodes = list(th)
     edges = peng.graph_edges_for(nodes, th, N, k)
     adj = peng.build_adj(nodes, edges)
-    lab = {v: tuple(l) for v, l in labels.items()}
+    pre = dict(led.label)
     dl = dict(delta)
-    pre_lab, pre_d = dict(lab), dict(delta)
     nid = max(theta) + 1
-    nc = copies_n
-    kinds = []
     for comp in peng.connected_components(nodes, adj):
         ctype, centers = peng.classify_component(comp, adj)
         if ctype.startswith("star_k1c_") and len(centers) == 1:
             c = centers[0]
-            cc, s = pre_lab[c]
-            lab[nid] = (nc, s)
-            dl[nid] = pre_d[c]
-            lab[c] = (cc, -s)
-            dl[c] = (-pre_d[c]) % N
-            kinds.append("birth")
+            cc, sg = pre[c]
+            new = led.next_copy
+            led.next_copy += 1
+            led.root[new], led.root_value[new] = led.root[cc], led.root_value[cc]
+            led.parent[new] = cc
+            led.born[new] = {"tick": t, "centre": c, "newborn": nid}
+            led.signs[new] = [(t, sg)]
+            led.signs[cc].append((t, -sg))
+            led.label[nid], led.label[c] = (new, sg), (cc, -sg)
+            dl[nid], dl[c] = delta[c], (-delta[c]) % N
             nid += 1
-            nc += 1
         elif ctype == "single_edge":
             a, b = comp
-            lab[a], lab[b] = lab[b], lab[a]
-            dl[a], dl[b] = dl[b], dl[a]
-            kinds.append("swap")
+            led.label[a], led.label[b] = pre[b], pre[a]
+            dl[a], dl[b] = delta[b], delta[a]
         elif ctype.startswith("path_p"):
             raw = peng.raw_ordered_path(comp, adj)
             if raw is None:
@@ -403,13 +496,11 @@ def oracle_tick(peng, theta, delta, labels, copies_n, N, k):
                 e = peng.signed_centered(delta[raw[-1]] - delta[raw[0]], N)
                 path = raw if 0 < e < N // 2 else raw[::-1] if e < 0 else None
             if path is None:
-                kinds.append("tie")
                 continue
-            ol, od = {v: lab[v] for v in path}, {v: dl[v] for v in path}
             for i, v in enumerate(path):
-                lab[v], dl[v] = ol[path[(i + 1) % len(path)]], od[path[(i + 1) % len(path)]]
-            kinds.append("rotation")
-    return lab, dl, kinds
+                w = path[(i + 1) % len(path)]
+                led.label[v], dl[v] = pre[w], delta[w]
+    return dl
 
 
 class Checks:
@@ -487,7 +578,9 @@ def selftest(trials=240):
     st = one_tick(ieng, run, N, k, [0, 12, 11, 13], [12, 2, 3, 4])
     st2 = RunState(ieng, run, N, k, *fixture_state(N, [0, 12, 11, 13], [12, 2, 3, 4]), T=1, cap=0)
     tick(ieng, run, st2)
-    C.ok(fingerprint(st)[:2] == fingerprint(st2)[:2], "A8 same fixture with provenance off: identical state")
+    st2.strict = st.strict
+    C.ok(fingerprint(st, with_prov=False) == fingerprint(st2, with_prov=False),
+         "A8 same fixture with provenance off: identical state")
 
     th, d = [0, 5, 9, 14], [3, 3, 7, 11]
     st = RunState(ieng, run, 24, 2, th, d, T=50, cap=4, provenance=True)
@@ -516,32 +609,43 @@ def selftest(trials=240):
         if len(set(d0)) < m0:
             cover["init_equal_values"] += 1
 
-        st = RunState(ieng, run, N, k, th0, d0, T, cap, provenance=True)
-        fp_i = [fingerprint(st)]
+        st = RunState(ieng, run, N, k, th0, d0, T, cap, provenance=True, strict=False)
+        led = OracleLedger({i: d % N for i, d in enumerate(d0)})
+        fp_i = [fingerprint(st, with_prov=False)]
         orc_ok = cons_ok = True
         g_state = random.getstate()
         while not st.done:
-            pre = (dict(st.u.theta), dict(st.u.delta), {v: tuple(l) for v, l in st.prov.labels.items()},
-                   len(st.prov.copies))
+            pre_th, pre_d = dict(st.u.theta), dict(st.u.delta)
             n_ev, it0 = len(st.prov.events), st.iters
             bc0, ms0 = st.u.bound_cycle_hits, st.u.multistar_bound
             tick(ieng, run, st)
             if st.iters == it0:                                   # loop ended without a tick
                 continue
             n_ticks += 1
-            exp_lab, exp_d, _ = oracle_tick(peng, pre[0], pre[1], pre[2], pre[3], N, k)
-            if exp_lab != {v: tuple(l) for v, l in st.prov.labels.items()} or exp_d != st.u.delta:
+            exp_d = oracle_tick(peng, pre_th, pre_d, led, N, k, st.u.steps)
+            copies, labels, carrier, signs = led.as_sidecar()
+            if (exp_d != st.u.delta or labels != st.prov.labels or copies != st.prov.copies
+                    or carrier != st.prov.carrier or signs != st.prov.sign_history):
                 orc_ok = False
             if st.prov.check(st.u):
                 cons_ok = False
             new = st.prov.events[n_ev:]
             for _, kind, det in new:
                 cover[kind] += 1
-                if kind == "swap" and pre[1][det[0]] == pre[1][det[1]]:
+                if kind == "swap" and pre_d[det[0]] == pre_d[det[1]]:
                     cover["swap_equal_values"] += 1
                 if kind == "birth":
-                    x = pre[1][det[0]]
+                    centre, _nb, pc, child = det
+                    x = pre_d[centre]
                     cover["birth_x0" if x == 0 else "birth_xhalf" if x == N // 2 else "birth_other"] += 1
+                    if st.prov.copies[pc]["parent"] is not None:
+                        cover["birth_from_descended_copy"] += 1
+                    if len(st.prov.lineage(child)) >= 4:
+                        cover["lineage_depth>=4"] += 1
+                    if sum(1 for v in pre_d.values() if v == x) >= 2:
+                        cover["birth_centre_value_shared"] += 1
+                    if pc != centre:
+                        cover["birth_centre_carries_foreign_copy"] += 1
                 if kind.startswith("path_") and len(det) >= 4:
                     cover["path_rotation_or_tie_n>=4"] += 1
             if len(new) >= 2:
@@ -550,57 +654,60 @@ def selftest(trials=240):
                 cover["bound_cycle"] += 1
             if st.u.multistar_bound > ms0:
                 cover["multistar_bound"] += 1
-            fp_i.append(fingerprint(st))
-        sp = RunState(peng, run, N, k, th0, d0, T, cap)
-        fp_p = [fingerprint(sp)]
+            fp_i.append(fingerprint(st, with_prov=False))
+        sp = RunState(peng, run, N, k, th0, d0, T, cap, strict=False)
+        fp_p = [fingerprint(sp, with_prov=False)]
         while not sp.done:
             it0 = sp.iters
             tick(peng, run, sp)
             if sp.iters > it0:
-                fp_p.append(fingerprint(sp))
-        C.ok(orc_ok, "B1 trial %d: provenance and values equal the independent oracle at every tick" % trial)
-        C.ok(cons_ok, "B2 trial %d: value identity, bijection, carriers and sign histories hold at every tick" % trial)
-        C.ok([f[:2] for f in fp_i] == [f[:2] for f in fp_p],
-             "B3 trial %d: instrumented and plain engine: identical full state at every tick" % trial)
+                fp_p.append(fingerprint(sp, with_prov=False))
+        C.ok(orc_ok, "B1 trial %d: values, labels, carriers, whole copy table (root, parent, birth) and full sign "
+                     "histories equal the independent oracle ledger at every tick" % trial)
+        C.ok(cons_ok, "B2 trial %d: value identity, bijection, carriers and the ledger check hold at every tick" % trial)
+        C.ok(fp_i == fp_p, "B3 trial %d: instrumented and plain engine: identical full state at every tick" % trial)
         C.ok(random.getstate() == g_state, "B4 trial %d: global random state untouched" % trial)
         ref = run.run_state(peng, N, k, th0, d0, T, cap, POLICY)
         C.ok(result(st) == ref and result(sp) == ref,
              "B5 trial %d: result equals the frozen runner's run_state (instrumented and plain)" % trial)
 
-        # restart at up to three tick boundaries
+        # restart at up to three tick boundaries; full snapshots compared (only landmark_tick excluded, checked apart)
         end = st.u.steps
         for c in sorted({1, max(1, end // 2), rng.randint(1, max(1, end))}):
             if c > end:
                 continue
-            for eng_, prov_ in ((ieng, True), (peng, False)):
-                a = RunState(eng_, run, N, k, th0, d0, T, cap, provenance=prov_)
+            for eng_, prov_, whole in ((ieng, True, st), (peng, False, sp)):
+                a = RunState(eng_, run, N, k, th0, d0, T, cap, provenance=prov_, strict=False)
                 run_to(eng_, run, a, c)
                 cp = checkpoint(a)
                 cp_fp = fingerprint(cp)
+                same_at_boundary = cp_fp == fingerprint(a) and a.landmark_tick is None and cp.landmark_tick == c
                 trail_a, trail_b = [], []
                 while not a.done:
                     tick(eng_, run, a)
                     trail_a.append(fingerprint(a))
-                C.ok(fingerprint(cp) == cp_fp, "B6 trial %d c=%d: checkpoint unaffected by continuing the original"
-                     % (trial, c))
+                C.ok(fingerprint(cp) == cp_fp and same_at_boundary,
+                     "B6 trial %d c=%d: checkpoint equals the live state at the boundary (landmark_tick apart) and is "
+                     "unaffected by continuing the original" % (trial, c))
                 b = copy.deepcopy(cp)
                 while not b.done:
                     tick(eng_, run, b)
                     trail_b.append(fingerprint(b))
                 C.ok(trail_a == trail_b and result(a) == result(b) == ref and b.landmark_tick == c
                      and b.u.steps - b.landmark_tick == end - c,
-                     "B7 trial %d c=%d %s: restarted trajectory equals the uninterrupted one; absolute tick kept"
+                     "B7 trial %d c=%d %s: restarted trajectory equals the uninterrupted one in full snapshot at every "
+                     "tick; absolute tick kept" % (trial, c, "instr" if prov_ else "plain"))
+                C.ok(fingerprint(b) == fingerprint(a) == fingerprint(whole),
+                     "B8 trial %d c=%d %s: final full snapshot (provenance included) equals the uninterrupted run"
                      % (trial, c, "instr" if prov_ else "plain"))
-                if prov_:
-                    C.ok(b.prov.events == st.prov.events and b.prov.copies == st.prov.copies,
-                         "B8 trial %d c=%d: provenance after restart equals the uninterrupted provenance" % (trial, c))
         n_traj += 1
 
     print("randomized: %d trajectories, %d ticks; B1-B5 per trajectory, B6-B8 per restart point (failures listed above)"
           % (n_traj, n_ticks))
     need = ["swap", "swap_equal_values", "path_forward", "path_reversed", "path_tie_bound", "path_rotation_or_tie_n>=4",
             "bound_cycle", "multistar_bound", "birth", "birth_x0", "birth_xhalf", "birth_other",
-            "tick_with_>=2_events", "init_equal_values"]
+            "birth_from_descended_copy", "birth_centre_carries_foreign_copy", "birth_centre_value_shared",
+            "lineage_depth>=4", "tick_with_>=2_events", "init_equal_values"]
     for key in need:
         C.ok(cover[key] > 0, "C coverage: %s occurs (%d)" % (key, cover[key]))
     print("coverage:", ", ".join("%s %d" % (key, cover[key]) for key in need))
@@ -614,11 +721,59 @@ def selftest(trials=240):
     bad = copy.deepcopy(st)
     bad.prov.labels[0][1] = 1
     C.ok(bool(bad.prov.check(bad.u)), "D2 an unflipped centre sign with x = 0 is detected (sign history)")
+    bad = copy.deepcopy(st)
+    bad.prov.sign_history[0] = bad.prov.sign_history[0][-1:]
+    C.ok(bool(bad.prov.check(bad.u)), "D2b centre's early sign history dropped, last entry kept: detected")
     try:
         tick(peng, run, RunState(peng, run, 24, 2, [0], [0], 1, 0, provenance=True))
         C.ok(False, "D3 provenance on the plain engine is refused")
     except RuntimeError:
         C.ok(True, "D3 provenance on the plain engine is refused")
+
+    # a synthetic trajectory with several generations of births, for the ledger checks D4-D8
+    rng2 = random.Random(7)
+    while True:
+        d0 = [rng2.randrange(24) for _ in range(6)]
+        th0 = [rng2.randrange(24) for _ in range(6)]
+        base = run_to(ieng, run, RunState(ieng, run, 24, 2, th0, d0, 60, 80, provenance=True))
+        deep = [c for c in range(len(base.prov.copies)) if len(base.prov.lineage(c)) >= 3]
+        if deep:
+            break
+    child = deep[-1]
+    par = base.prov.copies[child]["parent"]
+    alt = [c for c in range(len(base.prov.copies)) if c not in (child, par)
+           and base.prov.copies[c]["root_value"] == base.prov.copies[child]["root_value"]
+           and base.prov.copies[c]["root"] == base.prov.copies[child]["root"] and c < child]
+    C.ok(not base.prov.check(base.u) and bool(alt),
+         "D4a ledger fixture: copy %d of depth %d, an alternative parent with the same root and root value exists"
+         % (child, len(base.prov.lineage(child))))
+    bad = copy.deepcopy(base)
+    bad.prov.copies[child]["parent"] = alt[0]
+    C.ok(bool(bad.prov.check(bad.u)) and bad.prov.descendants(par) != base.prov.descendants(par),
+         "D4 parent redirected to another copy with the same root and value (labels and engine unchanged): detected")
+    bad = copy.deepcopy(base)
+    bad.prov.copies[child]["birth"] = dict(bad.prov.copies[child]["birth"], tick=bad.prov.copies[child]["birth"]["tick"] - 1)
+    C.ok(bool(bad.prov.check(bad.u)), "D5 birth record with a wrong tick: detected")
+    flipped = [c for c, h in base.prov.sign_history.items() if len(h) >= 3]
+    bad = copy.deepcopy(base)
+    c0 = flipped[0] if flipped else par
+    bad.prov.sign_history[c0] = bad.prov.sign_history[c0][-1:]
+    C.ok(bool(bad.prov.check(bad.u)), "D6 early sign-history entries dropped, last kept (copy %d): detected" % c0)
+    bad = copy.deepcopy(base)
+    bad.T, bad.done = bad.T + 5, False
+    bad.prov.copies[child]["parent"] = alt[0]
+    try:
+        tick(ieng, run, bad)
+        C.ok(False, "D7 strict mode raises at the next tick on a corrupted ledger")
+    except ProvenanceError:
+        C.ok(True, "D7 strict mode raises at the next tick on a corrupted ledger")
+    other = copy.deepcopy(base)
+    other.checkpoints = tuple(other.checkpoints) + (10 ** 6,)
+    C.ok(result(other) == result(base) and fingerprint(other) != fingerprint(base),
+         "D8 a changed continuation field (checkpoint grid) with unchanged outputs: the full snapshot differs")
+    other = copy.deepcopy(base)
+    other.landmark_tick = 17
+    C.ok(fingerprint(other) == fingerprint(base), "D9 landmark_tick alone is excluded from the snapshot (annotation)")
 
     print("checks: %d, failed: %d" % (C.n, C.bad))
     print("SELFTEST PASS" if C.bad == 0 else "SELFTEST FAIL")
