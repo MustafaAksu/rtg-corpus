@@ -22,16 +22,16 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## OWNER_LANE — Claude
 
-**Checked:** 17 November 2026; `main` `a5826ac`; tags `atlas-v0.13`, `atlas-method-v0.3`; sources moved since v0.13: `tdrg-v2.13`, `az-v0.10` (both tagged); inbox: one item (AZ v0.10), dispositioned on the v0.14 branch.
-**Goal / current question:** Atlas v0.14 accepted by the PI on 17 Nov 2026; publication (merge, tag `atlas-v0.14`) pending.
-**Last durable work:** branch `claude/atlas-v0.14`: candidate `d34e5697…1e85` (541,061 bytes, 1,545 lines; first candidate `acab5871…e5e4`), builder `evidence/atlas/build/refresh_v0_14.py`, evidence `evidence/atlas/v0.14/`, draft record `records/atlas/RTG_STATE_ATLAS_v0.14_RELEASE_RECORD.md`. Before it: Atlas v0.13 (`atlas-v0.13` → `a7a0002`, verified), the TDR-G v2.13 row check (four rounds), the DZT entry note.
+**Checked:** 17 November 2026, 09:35 +03:00; `main` `870afbe`; tags `atlas-v0.14` (verified), `atlas-method-v0.3`; no source moved after the v0.14 snapshot; inbox: no open item.
+**Goal / current question:** Atlas v0.14 published (`atlas-v0.14`, verified). Next: an impact refresh at the next owner tag (expected: DZT after its onboarding).
+**Last durable work:** Atlas v0.14 published: `atlas-v0.14` → `870afbe`, file `d34e5697…1e85`, record `records/atlas/RTG_STATE_ATLAS_v0.14_RELEASE_RECORD.md`, tag verification `records/atlas/RTG_STATE_ATLAS_v0.14_TAG_VERIFICATION.md`; builder `evidence/atlas/build/refresh_v0_14.py`, evidence `evidence/atlas/v0.14/`. Before it: Atlas v0.13, the TDR-G v2.13 row check (four rounds), the DZT entry note.
 **Decisions held:** PI, 10 Nov: route A — the structure is kept and nothing is dropped for size; compaction is closed; size is looked at again after the remaining streams are reworked. PI [SESSION], 13 Nov: one refresh after AZ v0.9; the diagnostic under AZ's RID, the token laws under TDR-G's, no claim with two scientific owners. `DECLARED` is never `PRESERVED`; grade, qualifier, identifier and diagnostic-class changes are separate reviewed items. #189 deferred. `rtg-sat` is outside the Atlas inputs.
 **Tried and set aside:** compaction as a route to a size aim (`records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §§3–5, 11). In v0.13, rule 4.7 was not applied in D5: no certificate-run span was found that could be cut without rewording.
 **Evidence:** v0.14 candidate: 31 logged operations; 1 new node (AZ-NUM-TOKRES-S2); TDRG.G8 retired; five reviewed items (record §2.3: policies and BIND3 d-table grades, crystallization clause, G8, METH.M1); 3 rule-4.1 deletions (48 bytes); shared check 0 FAIL (coverage 137, links 527/2/10, keys 156, wording 13 WARN); 27 focused negative controls detected.
 **Resume:** `python3 -I evidence/atlas/build/refresh_v0_14.py` (rebuilds and checks; stops on any failed assertion; it imports helpers from `refresh_v0_13.py` and `refresh_v0_10.py`). The shared checker's coverage check sees Dyadic RIDs only; for other moved sources the builder asserts the homes itself (`HOMES`, `homes_check`).
 **Next 1–3 actions / acceptance:**
-1. The PI runs the CLI block (merge #293, tag `atlas-v0.14`).
-2. Owner: tag verification record; close `pipes/ATLAS/20261116-AZ-v0-10-adopted.md`.
+1. At the next owner tag: impact refresh (Atlas v0.15) from `refresh_v0_14.py`.
+2. DZT: an Atlas row check when its first edition after the onboarding is a candidate.
 3. Carried forward: the four Atlas-side compound heads in D5 (record §3), at the next D5 opening.
 **Reopen trigger:** any owner tag after the v0.14 snapshot `a5826ac`; any open item in `pipes/ATLAS/`.
 
@@ -72,7 +72,7 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 - 11 Nov 18:15: the PI accepted all six recommendations of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` (§5); they are AZ's to carry out.
 - 13 Nov, 11:23 +03:00 (project conversation): v0.13 to be built as one refresh once `az-v0.9` is tagged; 14 Nov: the PI reported the tag; the candidate was built.
 - 16 Nov 2026, 15:45 +03:00: the PI accepted Atlas v0.13 and adopted TDR-G v2.13. `atlas-v0.13` tagged and verified (`records/atlas/RTG_STATE_ATLAS_v0.13_TAG_VERIFICATION.md`).
-- 17 Nov 2026, 08:30 +03:00: the PI started Atlas v0.14; 09:29 +03:00: the PI accepted it ("Atlas v0.14 ü benimsiyorum", candidate `d34e5697…1e85`). Waiting on the PI: the server steps — merge of PR #293 and annotated tag `atlas-v0.14`.
+- 17 Nov 2026: the PI started Atlas v0.14 (08:30) and accepted it (09:29, "Atlas v0.14 ü benimsiyorum"); `atlas-v0.14` tagged and verified (`records/atlas/RTG_STATE_ATLAS_v0.14_TAG_VERIFICATION.md`). Nothing for the Atlas is waiting on the PI.
 - TDR-G v2.13 (PR #265, candidate `c79898f9…36f4`): atlas row check ACCEPT FOR ADOPTION after F1 (`records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` §6, PR #277). After its tag: Atlas v0.14 refresh.
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
