@@ -1,0 +1,11 @@
+Development compilation in the authoring container, not a production build.
+The include path below deliberately selects the documented public-ABI subset.
+For normal builds use CMake and the system libmpfr-dev header instead.
+
+g++ -std=c++17 -O2 -Wall -Wextra -Wpedantic -Werror \
+  -Ievidence/local_build src/main.cpp -Wl,-l:libmpfr.so.6 -lgmp \
+  -o /tmp/dyad_cpp_kernel
+/tmp/dyad_cpp_kernel --bits 128
+/tmp/dyad_cpp_kernel --bits 256
+/tmp/dyad_cpp_kernel --bits 512
+python3 tests/check_reference.py /tmp/dyad_cpp_kernel

@@ -1,0 +1,22 @@
+{"status":"SESSION independent C++ kernel; not a jump certificate","bits":256,"mpfr":"4.2.2"}
+{"test":"directed_thirds","pass":true,"error":""}
+{"test":"zero_division_refused","pass":true,"error":""}
+{"test":"interval_square","pass":true,"error":""}
+{"test":"periodic_trig_extremum","pass":true,"error":""}
+{"test":"trig_full_period","pass":true,"error":""}
+{"test":"exp_log_identity","pass":true,"error":""}
+{"test":"pilot_branch","pass":true,"error":""}
+{"test":"raw_origin_identity","pass":true,"error":""}
+{"test":"lift_singularity_refused","pass":true,"error":""}
+{"test":"mean_value_contains_point_image","pass":true,"error":""}
+{"test":"contractor_keeps_known_source","pass":true,"error":""}
+{"test":"inverse_box_uniform_target","pass":true,"error":""}
+{"test":"inverse_box_rejects_far_target","pass":true,"error":""}
+{"test":"forward_chain_inclusion","pass":true,"error":""}
+{"test":"reverse_chain_inclusion","pass":true,"error":""}
+{"test":"strict_disjoint_discs","pass":true,"error":""}
+{"test":"tangent_discs_not_separated","pass":true,"error":""}
+{"test":"overlapping_discs_not_separated","pass":true,"error":""}
+{"test":"negative_radius_refused","pass":true,"error":""}
+{"test":"rectangle_to_disc","pass":true,"error":""}
+{"checks":20,"failures":0,"status":"development tests only"}
