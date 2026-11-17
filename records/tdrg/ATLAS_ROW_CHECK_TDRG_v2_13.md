@@ -2,7 +2,7 @@
 
 **Date:** 16 November 2026. **By:** Claude, atlas owner (advises; does not adopt).
 **Object:** PR #265 `claude/tdrg-v2-13` (draft, head `fba3ea13`): candidate `dsn/RTG_DISCRETE_GENESIS_DSN.md` SHA-256 `c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14` (157,343 bytes, 1,199 lines), built in two stages from `tdrg-v2.12.15` (`1e35be54…2e64`) through the stage-1 intermediate `472e26e9…56ff` (commit `fd96f8a`). Release record `records/tdrg/TDRG_v2_13_RELEASE_RECORD.md` at `fba3ea1`. Co-owner reviews: PR #268 (`5906863206`, `5906970313`, round 2 PASS).
-**Status:** record. **Verdict (first check, head `fba3ea1`): the build is sound and reproduces; one correction recommended before adoption (§3, F1). Follow-up at head `40d8235` (§6): F1 and F2 closed — ACCEPT FOR ADOPTION (atlas side).**
+**Status:** record. **Verdict (first check, head `fba3ea1`): the build is sound and reproduces; one correction recommended before adoption (§3, F1). Follow-up at head `40d8235` (§6): F1 and F2 closed — ACCEPT FOR ADOPTION (atlas side) of `c79898f9…36f4`. Round 4 at head `811dc6a` (§7): ACCEPT FOR ADOPTION (atlas side) of `6a4b94d5…de88`, which supersedes it.**
 **Reruns:** `evidence/atlas/rowcheck/tdrg_v2_13/`. Owner sources read at their tags (`EV-SRC-READ`). No engine or campaign rerun (`EV-NOT-RERUN`).
 
 ## 1. Independent rerun
@@ -71,3 +71,23 @@ Between the candidate of the first check (`c89eb81b…0a14`) and this one, exact
 The consumer row now states AZ v0.9 §8 as it is: TDR-G cited at v2.12.15, the LEM-SPECCONS generalization followed, and the two token-law rows. `AZ-NUM-TOKRES-S1` is named as AZ-owned and not a TDR-G result. AZ's grade is given in words, so the TDR-G text gains no truth tag for an AZ claim. RIDs are unchanged (81, same set). `pipes/TDRG/20261114-AZ-v0-9-adopted.md` is dispositioned on the branch. The trial merge onto `main` `c9e313f` is clean.
 
 For publication (editorial, no rebuild): the release record's status line still reads "DRAFT, round 2" and lists the row check as needed, and its §1 and §9 row-check cells are "(to be filled)". These can be completed in the publication commit.
+
+## 7. Round 4, 16 November 2026 — AZ v0.10 repin (PR #265 head `811dc6a`)
+
+**Verdict: ACCEPT FOR ADOPTION (atlas side) of candidate `6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88` (157,864 bytes, 1,199 lines). It supersedes `c79898f9…36f4` of §6.**
+
+`az-v0.10` was adopted after the F1 rebuild. The record (§3c) states that the PI chose option 1, repinning to `az-v0.10`, in the TDR-G session of 16 Nov 2026 (relayed; not seen by the atlas owner).
+
+Rerun at the new head (`evidence/atlas/rowcheck/tdrg_v2_13/round4/`):
+- stage 1: intermediate `a27c3c52…75eb` (commit `b7687f1`), the edit log, C0–C10 and K1–K10, all byte-identical. C6 requires `az-v0.10`, and K1 (pin back to `az-v0.9`) is caught.
+- stage 2: the candidate, the 43-operation map, the compaction check and P0/N1–N8, all byte-identical.
+
+Against `c79898f9…36f4`, exactly four lines differ. Each says the same as before, at the new AZ edition:
+- the §6.2 pin;
+- the AZ consumer row;
+- the pin line, which now reads "verified source editions used by this release", so that a later AZ edition does not make it false;
+- the Appendix A entry for v2.13.
+
+The consumer row matches AZ v0.10 §8. AZ cites TDR-G at `tdrg-v2.12.15`, and `AZ-NUM-TOKRES-S1` and `-S2` are named as AZ-owned diagnostics computed on the pinned engine, not TDR-G results. AZ's grades are stated in words. RIDs are unchanged (81, the same set). The AZ v0.9 and v0.10 notices in `pipes/TDRG/` are dispositioned on the branch. The trial merge onto `main` `65a4f32` is clean.
+
+**F5 — the PI's adoption names other bytes.** The PI adopted TDR-G v2.13 on 16 Nov 2026 at 15:45 +03:00 in the project conversation ("2- Benimsiyorum"). The question asked then named candidate `c79898f9…36f4`. That candidate is superseded, so the adoption does not carry over to `6a4b94d5…de88` by itself. The release record (§§1, 9, 10) should name the bytes the PI adopts and the decision that adopts them. At head `811dc6a` its status line still reads "DRAFT, round 2", and it does not mention the 15:45 decision.

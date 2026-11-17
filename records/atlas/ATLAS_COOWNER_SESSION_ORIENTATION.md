@@ -22,19 +22,18 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 
 ## OWNER_LANE — Claude
 
-**Checked:** 16 November 2026; `main` `54cddd7`; tags `atlas-v0.12`, `atlas-method-v0.3` unchanged; sources `tdrg-v2.12.15` and `az-v0.9` adopted and tagged, no newer source tag; inbox: two items (AZ v0.8, AZ v0.9), dispositioned on the v0.13 branch.
-**Goal / current question:** Atlas v0.13 accepted by the PI on 16 Nov 2026; publication (merge, tag `atlas-v0.13`) pending. Next: v0.14 impact refresh for `tdrg-v2.13` after its tag.
-**Last durable work:** branch `claude/atlas-v0.13`: candidate `208ddd96…9045` (537,046 bytes, 1,545 lines; first candidate `47384c0c…60a1`), builder `evidence/atlas/build/refresh_v0_13.py`, evidence `evidence/atlas/v0.13/`, draft record `records/atlas/RTG_STATE_ATLAS_v0.13_RELEASE_RECORD.md`. Before it: impact preparation (`records/atlas/ATLAS_V0_13_IMPACT_PREPARATION_20261113.md`), Atlas v0.12, Method v0.3.
+**Checked:** 16 November 2026, 16:07 +03:00; `main` `2d898fd`; tags `atlas-v0.13` (verified), `atlas-method-v0.3`; sources since the v0.13 snapshot: `az-v0.10` tagged, TDR-G v2.13 adopted and not yet tagged (PR #265); inbox: one open item (AZ v0.10).
+**Goal / current question:** Atlas v0.13 published (`atlas-v0.13`, verified). Next: Atlas v0.14 impact refresh for `tdrg-v2.13` (adopted 16 Nov, not yet tagged) and `az-v0.10` (tagged 16 Nov).
+**Last durable work:** Atlas v0.13 published: `atlas-v0.13` → `a7a0002`, file `208ddd96…9045`, record `records/atlas/RTG_STATE_ATLAS_v0.13_RELEASE_RECORD.md`, tag verification `records/atlas/RTG_STATE_ATLAS_v0.13_TAG_VERIFICATION.md`; builder `evidence/atlas/build/refresh_v0_13.py`, evidence `evidence/atlas/v0.13/`. Atlas row check of TDR-G v2.13 (`records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md`, accept for adoption after F1).
 **Decisions held:** PI, 10 Nov: route A — the structure is kept and nothing is dropped for size; compaction is closed; size is looked at again after the remaining streams are reworked. PI [SESSION], 13 Nov: one refresh after AZ v0.9; the diagnostic under AZ's RID, the token laws under TDR-G's, no claim with two scientific owners. `DECLARED` is never `PRESERVED`; grade, qualifier, identifier and diagnostic-class changes are separate reviewed items. #189 deferred. `rtg-sat` is outside the Atlas inputs.
 **Tried and set aside:** compaction as a route to a size aim (`records/atlas/ATLAS_V0_11_D3_PILOT_STAGE2_RESULT.md` §§3–5, 11). In v0.13, rule 4.7 was not applied in D5: no certificate-run span was found that could be cut without rewording.
 **Evidence:** v0.13 second candidate: 75 logged operations; 9 new nodes (8 TDR-G, 1 AZ); TDRG.G9 retired; six reviewed items and two reviewed locator updates (record §2.3, §3a); 28 rule-4.1 span deletions (328 bytes), each asserted to be one contiguous deletion; shared check 0 FAIL (coverage 137, links 525/2/10, keys 154, wording 13 WARN); 33 focused negative controls detected; one Atlas error of v0.12 corrected (launch-chain note, record §3 point 6).
-**Resume:** `python3 -I evidence/atlas/build/refresh_v0_13.py` (rebuilds and checks; stops on any failed assertion). The shared checker's coverage check sees Dyadic RIDs only; for other moved sources the builder asserts the homes itself (`HOMES`, `homes_check`).
+**Resume:** the v0.14 builder starts from `refresh_v0_13.py` (it no longer runs unchanged: its "no newer source tag" assertion fails since `az-v0.10`, as intended). The shared checker's coverage check sees Dyadic RIDs only; for other moved sources the builder asserts the homes itself (`HOMES`, `homes_check`).
 **Next 1–3 actions / acceptance:**
-1. PI runs the CLI block (merge #272, tag `atlas-v0.13`).
-2. Owner: tag verification record; close the two `pipes/ATLAS/` items.
-3. After `tdrg-v2.13` is tagged: Atlas v0.14 impact refresh (row list in `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` §4).
-3. After PI acceptance: BASELINE row, one CLI block (merge commit + annotated tag `atlas-v0.13`), tag verification, close `pipes/ATLAS/20261112-AZ-v0-8-adopted.md` and `pipes/ATLAS/20261114-AZ-v0-9-adopted.md`.
-**Reopen trigger:** any owner tag after the v0.13 snapshot `54cddd7` (impact refresh); any open item in `pipes/ATLAS/`.
+1. After `tdrg-v2.13` is tagged: Atlas v0.14 impact refresh for it and `az-v0.10` (one refresh).
+2. Open inbox item: `pipes/ATLAS/20261116-AZ-v0-10-adopted.md` (answered by v0.14).
+3. TDR-G rows affected by v2.13: `records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` §4.
+**Reopen trigger:** the `tdrg-v2.13` tag (start v0.14); any further owner tag; any open item in `pipes/ATLAS/`.
 
 ## REVIEWER_LANE — ChatGPT
 
@@ -72,7 +71,7 @@ Reporter: `tools/orient.py` on `main` (rev. 3, PR #190; receiving review PR #192
 - 10 Nov 17:23: advisory dispositions decided (`records/atlas/ATLAS_ADVISORY_TO_PI_DORMANT_OWNERS_20261110.md` §4); rows 1 and 3 since resolved by `az-v0.7`.
 - 11 Nov 18:15: the PI accepted all six recommendations of `records/atlas/ATLAS_ADVISORY_AZ_STATE_20261111.md` (§5); they are AZ's to carry out.
 - 13 Nov, 11:23 +03:00 (project conversation): v0.13 to be built as one refresh once `az-v0.9` is tagged; 14 Nov: the PI reported the tag; the candidate was built.
-- 16 Nov 2026, 15:45 +03:00: the PI accepted Atlas v0.13 (`208ddd96…9045`) and adopted TDR-G v2.13. Waiting on the PI: the server steps — merge of PR #272 and annotated tag `atlas-v0.13`.
+- 16 Nov 2026, 15:45 +03:00: the PI accepted Atlas v0.13 and adopted TDR-G v2.13. `atlas-v0.13` tagged and verified (`records/atlas/RTG_STATE_ATLAS_v0.13_TAG_VERIFICATION.md`). Nothing for the Atlas is waiting on the PI.
 - TDR-G v2.13 (PR #265, candidate `c79898f9…36f4`): atlas row check ACCEPT FOR ADOPTION after F1 (`records/tdrg/ATLAS_ROW_CHECK_TDRG_v2_13.md` §6, PR #277). After its tag: Atlas v0.14 refresh.
 - F4: one fresh AI session with `gh` and a clone runs the reporter from the BOOTSTRAP message; still open, not blocking.
 - CONVENTIONS §9 is generalized (PR #198); follow-up notes on its length, a BASELINE "Entry note" column and the definition of an active stream are with the reviewer, no PI action yet.
