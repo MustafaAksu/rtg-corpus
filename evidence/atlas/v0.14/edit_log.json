@@ -121,18 +121,18 @@
   "finding": "reviewed item (grade, qualifier or diagnostic change)",
   "where": "policies: one [NUM strong] for all branches (the former §1 typing) replaced by the owner's per-statement grades",
   "old_sha256": "e8f0d93e71a582926dc95495c3d85538b3d273acd9a7ddddaa5094f35084ccb6",
-  "new_sha256": "63490473f6b5b32fb36fc3140b387cc12f675b2f85f491d2d916181357ab0dfc",
+  "new_sha256": "1ffc0a390b9593b1ee0ccf41b47ae8399cea31c0310c22a9ad1fc87c021ce947",
   "old": "*TDRG:policies NUM strong | bound_symmetric → crystallization (p_ambig=0, slow growth); largest_center → continuous inflation (rN_T≈0.76–0.80 at k/N≈0.0667; rN_late_birth=0.9995 at N=90,k=8; ms_bpe=1.00); all_centers → avalanche (b/step≈16–25, often cap-limited; ms_bpe≈33.91 at N=60,k=4); rN_T(largest)>rN_T(all)>rN_T(bound_symmetric) at k/N≈0.0667 (cap-protocol dependent); multi-birth b/step>1 universal (1.03–1.24 bound_symmetric; 1.01–1.02 largest_center) @TDRG",
-  "new": "*TDRG:policies NUM (graded per statement as in the owner's §6.6) | bound_symmetric → crystallization NUM (p_ambig=0, slow growth); largest_center → continuous inflation NUM (rN_T≈0.76–0.80 at k/N≈0.0667; rN_late_birth=0.9995 at N=90,k=8; ms_bpe=1.00, ALG definitional); all_centers → avalanche HEUR strong (b/step≈16–25, often cap-limited; ms_bpe≈33.91 at N=60,k=4, NUM); rN_T(largest)>rN_T(all)>rN_T(bound_symmetric) at k/N≈0.0667 NUM (cap-protocol dependent); multi-birth b/step>1 universal NUM strong (1.03–1.24 bound_symmetric; 1.01–1.02 largest_center) @TDRG§6.6"
+  "new": "*TDRG:policies (no common grade; each statement carries the owner's grade, §6.6) | bound_symmetric → crystallization NUM (p_ambig=0, slow growth); largest_center → continuous inflation NUM (rN_T≈0.76–0.80 at k/N≈0.0667; rN_late_birth=0.9995 at N=90,k=8; ms_bpe=1.00, ALG definitional); all_centers → avalanche HEUR strong (b/step≈16–25, often cap-limited; ms_bpe≈33.91 at N=60,k=4, NUM); rN_T(largest)>rN_T(all)>rN_T(bound_symmetric) at k/N≈0.0667 NUM (cap-protocol dependent); multi-birth b/step>1 universal NUM strong (1.03–1.24 bound_symmetric; 1.01–1.02 largest_center) @TDRG§6.6"
  },
  {
   "id": "AR14-015",
   "finding": "reviewed item (grade, qualifier or diagnostic change)",
   "where": "BIND3 d-table: the owner grades the d-resolved anatomy [ALG] (§6.12)",
   "old_sha256": "7a55a69743813401d96d362ad8e5e52d1611e07b30280e5b5a4c6a4d52faa809",
-  "new_sha256": "f0a006726ae4b935c3ed25621db2fa26080088d46fda3570a1958b2610cee0e3",
+  "new_sha256": "3de386a08e40b9cb30dffe0544b9430f8aa5466858a21d98b9ba3e9f7d221948",
   "old": "*BIND3:d-table ALG/NUM strong | (d, gcd, |d|_c, ICs, pure%, scatter%, transfer%, ⟨f_AB⟩, ⟨f_AC/BC⟩): ±1 (1,1,1152×2,0,100,82.4,0.290,0.167); ±2 (2,2,576×2,10.8,89.2,80.6,0.319,0.125); ±3 (3,3,1728×2,0,100,97.9,0.143,0.140); ±4 (4,4,1728×2,0,100,90.0,0.155,0.130); ±5 (1,5,1728×2,0,100,97.6,0.139,0.131) | |d|_c≥3 = supplementary one-pass family (10368), not poolable into headline; ±d mirror symmetry PASS | >NUMGEN DISC-2 (same 10368 family) @TDRG",
-  "new": "*BIND3:d-table ALG (sc: N=24, k=1) | (d, gcd, |d|_c, ICs, pure%, scatter%, transfer%, ⟨f_AB⟩, ⟨f_AC/BC⟩): ±1 (1,1,1152×2,0,100,82.4,0.290,0.167); ±2 (2,2,576×2,10.8,89.2,80.6,0.319,0.125); ±3 (3,3,1728×2,0,100,97.9,0.143,0.140); ±4 (4,4,1728×2,0,100,90.0,0.155,0.130); ±5 (1,5,1728×2,0,100,97.6,0.139,0.131) | |d|_c≥3 = supplementary one-pass family (10368), not poolable into headline; ±d mirror symmetry PASS | >NUMGEN DISC-2 (same 10368 family) @TDRG"
+  "new": "*BIND3:d-table ALG (sc: N=24, k=1; conv: v18 path orientation) | (d, gcd, |d|_c, ICs, pure%, scatter%, transfer%, ⟨f_AB⟩, ⟨f_AC/BC⟩): ±1 (1,1,1152×2,0,100,82.4,0.290,0.167); ±2 (2,2,576×2,10.8,89.2,80.6,0.319,0.125); ±3 (3,3,1728×2,0,100,97.9,0.143,0.140); ±4 (4,4,1728×2,0,100,90.0,0.155,0.130); ±5 (1,5,1728×2,0,100,97.6,0.139,0.131) | |d|_c≥3 = supplementary one-pass family (10368), not poolable into headline; ±d mirror symmetry PASS | >NUMGEN DISC-2 (same 10368 family) @TDRG"
  },
  {
   "id": "AR14-016",

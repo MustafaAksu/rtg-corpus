@@ -75,6 +75,16 @@
   "detected": true
  },
  {
+  "id": "W26",
+  "what": "a common grade restored on the policies head (review 5933660459, item 1)",
+  "detected": true
+ },
+ {
+  "id": "W27",
+  "what": "the v18 path-orientation convention dropped from the BIND3 d-table (review 5933660459, item 2)",
+  "detected": true
+ },
+ {
   "id": "W16",
   "what": "XFER custody shown as deferred to v2.13",
   "detected": true

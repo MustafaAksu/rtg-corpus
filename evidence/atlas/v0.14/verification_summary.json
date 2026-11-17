@@ -2,8 +2,8 @@
  "status": "DRAFT_REVIEW_READY",
  "base_atlas": "atlas-v0.13",
  "base_sha256": "208ddd9622b2ea9d291b40dbc103d6eaa3f357aa0e23b2de6190df2c0f879045",
- "atlas_sha256": "acab587128ede70c779948288e97ceac76042bb6477d098f46aca7517937e5e4",
- "atlas_bytes": 541017,
+ "atlas_sha256": "d34e5697ae47201133f513bce5f6b2b8438ed2f4e654fe33a73048a5ca7b1e85",
+ "atlas_bytes": 541061,
  "atlas_lines": 1545,
  "base_bytes": 537046,
  "base_lines": 1545,
@@ -115,7 +115,7 @@
   }
  },
  "shared_controls": 18,
- "focused_controls": 25,
+ "focused_controls": 27,
  "h_l5": {
   "dangling": [],
   "high_without_h": [],
@@ -123,7 +123,7 @@
  },
  "tool_sha256": {
   "tools/atlas_check.py": "2141e0b991f21acfa2c4f2e0575e88d3ae5d1f43bffd00dafc4ef80d66f66373",
-  "evidence/atlas/build/refresh_v0_14.py": "62e2e985e02a7e4018f963c9338d753464f38d30bb024e6afb8d882ca73bba86",
+  "evidence/atlas/build/refresh_v0_14.py": "57bb38d02df448c8c6f9738a57907c0bd954fbf6e6813d726e5f3f35c155e993",
   "evidence/atlas/build/refresh_v0_13.py": "ffd063ecdc298eecb6bce93a784bedc54f3e5a50869efc51221d9d1cdf902473",
   "evidence/atlas/build/refresh_v0_10.py": "9405436c738f9c3dd079975ce21d5a4a73d45181a2831634b43c6c7512f2e01c"
  },
