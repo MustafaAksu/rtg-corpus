@@ -1,0 +1,23 @@
+PASS  NC00 positive control: untouched copy is tabulated, descriptors written (exit 0, expected 0; 'descriptors written')
+PASS  NC01 one record dropped, side manifest re-stamped: not the listed bytes (exit 2, expected 2; 'does not have the listed hash')
+PASS  NC02 an unlisted copy of a record file in the directory (exit 2, expected 2; 'is not in the trusted list')
+PASS  NC03 a listed side manifest missing (exit 2, expected 2; 'is missing')
+PASS  NC04 pairing keys swapped, record and side manifest re-stamped together (exit 2, expected 2; 'does not have the listed hash')
+PASS  NC05 swapped pairing keys with every hash re-stamped: Stage 1 state re-derivation (exit 2, expected 2; 'INTEGRITY: FAIL')
+PASS  NC06 fe = 801 with every hash re-stamped: clock layer (exit 2, expected 2; 'is not None or an integer in 1..steps')
+PASS  NC07 fe moved before tau_contact with every hash re-stamped: clock layer (exit 2, expected 2; 'fe < tau_contact')
+PASS  NC08 tick-800 checkpoint below the final M at steps = 800, re-stamped: clock layer (exit 2, expected 2; 'checkpoint at the last tick differs from M')
+PASS  NC09 test plan naming S1-C1 pointed at the registered records: refused, nothing validated (exit 2, expected 2; 'REFUSED: cells for plan test')
+PASS  NC10 registered plan with the unfrozen manifest (exit 2, expected 2; 'REFUSED: manifest is not frozen')
+PASS  NC11 registered plan, frozen hash right, input hash wrong (exit 2, expected 2; "does not have the manifest's hash")
+PASS  NC12 registered plan, frozen hash right, manifest engine pin wrong (exit 2, expected 2; 'manifest pin engine differs')
+PASS  NC13 --json target is an input record file (exit 2, expected 2; 'exists')
+PASS  NC13b every file of the record directory is byte-identical after the refusal
+PASS  NC14 --json target is a symbolic link to the trusted list (exit 2, expected 2; 'exists')
+PASS  NC14b the trusted list is byte-identical after the refusal
+PASS  NC15 --json target is a hard link to an input record file (exit 2, expected 2; 'exists')
+PASS  NC15b the record file is byte-identical after the refusal
+PASS  NC16 --json target inside the record directory (exit 2, expected 2; 'protected location')
+PASS  NC17 arm Q2R requested in a cell where it does not exist (exit 2, expected 2; 'do not exist in cell')
+PASS  NC18 registered plan without --json (pointed at the registered records) (exit 2, expected 2; '--json is required')
+NEGCONTROLS PASS
