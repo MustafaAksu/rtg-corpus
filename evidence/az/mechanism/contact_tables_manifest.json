@@ -1,7 +1,7 @@
 {
  "schema": "az_tokres_contact_tables_manifest_v2",
- "status": "PROPOSAL - not frozen; no registered record may be read until frozen_script_sha256 is set by a reviewed commit",
- "frozen_script_sha256": null,
+ "status": "FROZEN - PI decision of 17 Nov 2026 on the four settings; script reviewed PASS 5933459799 at 19c3b58",
+ "frozen_script_sha256": "78822775de7d52540f4700d923ab55a5750df6aa06245c9178a2ed91e952611b",
  "cells_registered": [
   "S1-C1"
  ],
