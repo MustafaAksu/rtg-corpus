@@ -1,0 +1,13 @@
+NC00 unmodified instrument: self-test PASS
+NC01 rotation applied along the RAW path (ignores the engine's orientation) DETECTED (57 failed checks)
+NC02 rotation applied in the opposite direction                     DETECTED (64 failed checks)
+NC03 birth leaves the centre's sign unflipped                       DETECTED (55 failed checks)
+NC04 newborn and centre share one copy id (no distinct copy identity) DETECTED (58 failed checks)
+NC05 swap transports labels only when the values differ (value matching) DETECTED (11 failed checks)
+NC06 the sidecar calls orient_path a second time on the live state  DETECTED (0 failed checks, guard raised)
+NC07 checkpoint by shallow copy (shares the Universe with the original) DETECTED (572 failed checks)
+NC08 checkpoint copies the Universe and provenance but resets fb (runner state outside the Universe) DETECTED (114 failed checks)
+NC09 the held loop never collects the TDR-26 window (diverges from run_state) DETECTED (187 failed checks)
+NC10 the held loop omits the cap test before the step               DETECTED (1 failed checks)
+NEGCONTROLS PASS
+exit 0
