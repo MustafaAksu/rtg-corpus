@@ -1,0 +1,15 @@
+---
+from: SAT
+to: LIT
+date: 2026-11-17
+kind: notice
+object: HCG (rtg-sat) report of use and finding — Abdulali 1999, Theorem 4.1 (`abdulali1999-type3-hodge@vor-scan:Thm 4.1`, `:U-2`; rtg-lit ea7800d3f76a76dee1d3e852f64e3d139d21fb76), in rtg-sat records/hcg/HCG_OPEN12_TYPE3_REVIEW_CLAUDE_20261117.md §§2–4 (PR #86); reply to rtg-sat pipes/HCG/20261117-LIT-abdulali-type3-reply.md
+tags: [programme-v1.4]
+state: open
+disposition:
+---
+**[SESSION] Report of use** (PI authorisation, 17 Nov 2026). Consumer HCG · source `abdulali1999-type3-hodge@vor-scan`, labels `Thm 4.1`, `U-2` · rtg-lit `ea7800d3` · scope: Thm 4.1 with its proof (p. 673–674) and §2.5 (p. 670), read against Severn v2 §12 by the Claude HCG session (page images and transcript) and by the ChatGPT HCG session (transcript; ACCEPT SCOPED, rtg-sat PR #86 review 5945975704) · owner decision: LIT reply dispositioned *accept with change*; the record is a proposal, not merged; HCG OPEN 12 stays ACTIVE. This is a scoped finding on the wording and the written proof of a published theorem. **It is not a counterexample to the Hodge conjecture**, and it does not say the theorem's conclusion is false.
+1. **Dimension count** (`[THM]` under the first fundamental theorem for SO(6); exact F_p check `rtg-sat/evidence/hcg/verification/abdulali_type3_invariant_check.py`, independently re-run by ChatGPT): for a general type III sixfold over ℚ (m = 3), the Hodge classes of degree 6 on A form an 8-dimensional space (1 from divisors, 7 of determinant type). Divisors with the Weil plane W_E of **one fixed** maximal subfield E reach 3 of them. So the first sentence of Thm 4.1, if "the Weil cycles associated to a maximal subfield" means W_E of one subfield without its D-translates, fails already on A. The D-translates of W_E span all 7.
+2. **Written proof** (separate point): the odd generators displayed on p. 674 are Weil cycles pulled back along the projections A^k → A. The cited invariant theory also needs determinants mixing factors and mixing σ with σ̄; on A² these span 84 dimensions, the projections give 4.
+3. **Repair** (separate point; HCG's own lemma, proposed RID `HCG-LEM-TYPE3-HOM-PULLBACK`, `[SESSION]`; conditional PASS by both HCG sessions in PR #86; not in the HCG ledger): pull-backs of W_E along the homomorphisms x ↦ Σ d_j x_j, d_j in an order of D, span all determinants. With it, the second sentence of Thm 4.1 (algebraic Weil cycles ⇒ usual Hodge conjecture for all powers) holds as stated.
+**Asked of LIT:** does Abdulali's phrase "the Weil cycles associated to a maximal subfield" admit a reading that includes the quaternionic translates (e.g. in the paper's own usage, in Abdulali 2002, or in van Geemen–Verra §§4.6–4.9)? If so, point 1 concerns the literal wording only. Findings to rtg-sat `pipes/HCG/`. Nothing here is an RTG result.
