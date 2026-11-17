@@ -1,8 +1,8 @@
-# First-contact tables — script, manifest and validation (for review; not frozen)
+# First-contact tables — script, manifest and validation (frozen; run once on S1-C1)
 
 **[SESSION] NONCANONICAL.** Implementation of the table contract of `records/az/AZ_TOKEN_RESONANCE_MECHANISM_DESIGN.md` §5 by the Claude AZ lane, 16 November 2026, at the request recorded in PR #281 comment `6919043197`. Exploratory: the outcomes of the registered records are known.
 
-**No registered record has been read by this script.** Revision r2 closed R1–R4 of review `5922692022`; revision r3 (16 November 2026) closes the remaining points of review `5923426652` (R3 birth–checkpoint consistency, R4 execution contract, R5 output safety) in one pass. The frozen Stage 1 library is unchanged.
+**Status (17 November 2026):** script frozen at SHA-256 `78822775…611b` (reviewed PASS `5933459799` at `19c3b58`); manifest frozen at `e157ffe` (readback PASS `5933699818`); run **once** on the registered Stage 1 records of `S1-C1` (17 Nov, 09:00 +03:00), outputs committed unchanged at `1211e06` (`s1c1_run/`), exploratory description in `records/az/AZ_TOKEN_RESONANCE_MECHANISM_S1C1_TABLES.md`. Until that run no registered record had been read by the script. History: r2 closed R1–R4 of review `5922692022`; r3 (16 November 2026) closed review `5923426652` (R3 birth–checkpoint consistency, R4 execution contract, R5 output safety). The frozen Stage 1 library is unchanged.
 
 **Gates, all before any record file is looked up** (R1, R2): `--plan test` accepts only `TEST-C1`, `TEST-C2` (tag `SMOKE`, not confirmatory), `--plan registered` only `S1-C1`, `S1-C2` (tag `AZ-TOKRES-S1`); a mixed or unknown list is refused; the Stage 1 registry entry must also match the plan. `--plan registered` needs `frozen_script_sha256` equal to the script's SHA-256 and exactly one input with `hashes_file`, `sha256` and `commit`. The manifest's `pins` must equal the script's pins and the bytes on disk before engine, orientation reference, runner or library is imported. Every selected record file and side manifest is bound to the one trusted list (registered: the repository `HASHES.txt` pinned by hash; test: the directory's own `HASHES.txt`) — a listed piece that is missing, an unlisted file, a duplicate or a hash mismatch is refused.
 
@@ -15,7 +15,7 @@
 | File | Role |
 |---|---|
 | `az_tokres_contact_tables.py` | descriptors and tables T1–T4, J1–J4; Stage 1 validator reused unchanged (identity, custody, states re-derivation, records, set); pairing keys checked (`th0` and the three non-slot tokens equal to `BASE`) |
-| `contact_tables_manifest.json` | schema v2, **proposal**: cell `S1-C1` only (`(120, 8)`, profile P1); arms BASE, O1R, O1D, O2R, O2D, SHAM (Q2R exists only at `N = 122`); pairs `O1R/O1D`, `O2R/O2D`; endpoint `M ≥ 100` at tick 800 (valid cap stop before 800 positive); grid `1, 2, 5, 10, 20, 50, 100, 200, 400, 800`; `t_b = 100`; input `upload/az-token-resonance-stage1/HASHES.txt` with its SHA-256, commit `95db7af` and the S1-C1 inventory |
+| `contact_tables_manifest.json` | schema v2, **frozen** (`e157ffe`; settings approved by the PI, below): cell `S1-C1` only (`(120, 8)`, profile P1); arms BASE, O1R, O1D, O2R, O2D, SHAM (Q2R exists only at `N = 122`); pairs `O1R/O1D`, `O2R/O2D`; endpoint `M ≥ 100` at tick 800 (valid cap stop before 800 positive); grid `1, 2, 5, 10, 20, 50, 100, 200, 400, 800`; `t_b = 100`; input `upload/az-token-resonance-stage1/HASHES.txt` with its SHA-256, commit `95db7af` and the S1-C1 inventory |
 | `contact_tables_selftest_output.txt` | synthetic checks, `SELFTEST PASS` |
 | `contact_tables_test_output.txt`, `contact_tables_test_descriptors.jsonl` | tables and per-record descriptors on Stage 1 **test-configuration** records (tag `SMOKE`, cell `TEST-C1`; no evidential value) |
 | `contact_tables_negcontrols.py`, `..._output.txt` | one positive control and eighteen refusal controls with three byte-identity checks after refusal, `NEGCONTROLS PASS` (r1 had one positive and seven refusal controls, not \"eight\" — corrected) |
@@ -26,7 +26,7 @@
 
 **Reproduce the test output:** `python3 -I evidence/az/scripts/az_tokres_campaign.py --plan test --out DIR --jobs 2`, then `python3 -I evidence/az/mechanism/az_tokres_contact_tables.py --manifest evidence/az/mechanism/contact_tables_manifest.json --dir DIR --plan test --json NEW_FILE.jsonl` (the records differ only in `secs`; the tables do not use it).
 
-**Choices for review and the PI** (each listed in the manifest; none taken by looking at a table): the cell (`S1-C1` alone, or also `S1-C2`; Stage 2 cells would need a Stage 2 validator path, not written); `t_b` of J4; the time grid; whether `SHAM` and `Q2R` stay as descriptor-only arms.
+**Choices that were open for review and the PI** (each listed in the manifest; none taken by looking at a table; decided below): the cell (`S1-C1` alone, or also `S1-C2`; Stage 2 cells would need a Stage 2 validator path, not written); `t_b` of J4; the time grid; whether `SHAM` and `Q2R` stay as descriptor-only arms.
 
 ## PI decision on the four settings (17 November 2026)
 
@@ -37,4 +37,4 @@
 3. time grid `1, 2, 5, 10, 20, 50, 100, 200, 400, 800`;
 4. arms BASE, O1R, O1D, O2R, O2D, SHAM; SHAM descriptor-only; Q2R not included (absent at `N = 120`).
 
-These are the values in `contact_tables_manifest.json` at `19c3b58` (reviewed, PASS `5933459799`). They were chosen without any table on registered records. The freezing commit that follows changes only the manifest's `status` and `frozen_script_sha256` (set to the script's SHA-256 `78822775de7d52540f4700d923ab55a5750df6aa06245c9178a2ed91e952611b`). After it, one run on the Stage 1 records; its output is stored as it comes and is exploratory: a pre-specified description, not mechanism evidence and not a confirmatory test.
+These are the values in `contact_tables_manifest.json` at `19c3b58` (reviewed, PASS `5933459799`). They were chosen without any table on registered records. The freezing commit that follows changes only the manifest's `status` and `frozen_script_sha256` (set to the script's SHA-256 `78822775de7d52540f4700d923ab55a5750df6aa06245c9178a2ed91e952611b`). After it, one run on the Stage 1 records (done 17 Nov, 09:00 +03:00; outputs at `1211e06`); its output is stored as it came and is exploratory: a pre-specified description, not mechanism evidence and not a confirmatory test. The table field `tau_slot` is the free-flight slot contact time `tau_slot^free` (design §4), not the replaced node's actual first contact.
