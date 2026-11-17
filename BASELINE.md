@@ -41,7 +41,7 @@ The table lists the **governing adopted editions**. Predecessor: Methodology v1.
 
 | Study | File | Version | SHA-256 | Verification | Tag |
 |---|---|---|---|---|---|
-| ATLAS | `RTG_STATE_ATLAS.md` | v0.13 (noncanonical; owner DSNs govern on conflict) | `208ddd9622b2ea9d291b40dbc103d6eaa3f357aa0e23b2de6190df2c0f879045` | ATLAS OWNER: acceptance record `records/atlas/RTG_STATE_ATLAS_v0.13_RELEASE_RECORD.md` (PI accepted 16 Nov 2026); post-tag `records/atlas/RTG_STATE_ATLAS_v0.13_TAG_VERIFICATION.md` | `atlas-v0.13` |
+| ATLAS | `RTG_STATE_ATLAS.md` | v0.14 (noncanonical; owner DSNs govern on conflict) | `d34e5697ae47201133f513bce5f6b2b8438ed2f4e654fe33a73048a5ca7b1e85` | ATLAS OWNER: acceptance record `records/atlas/RTG_STATE_ATLAS_v0.14_RELEASE_RECORD.md` (PI accepted 17 Nov 2026); post-tag `records/atlas/RTG_STATE_ATLAS_v0.14_TAG_VERIFICATION.md` | `atlas-v0.14` |
 | ATLAS Method | `RTG_STATE_ATLAS_METHOD.md` | v0.3 | `a29217352d989f75310f1c5fbb5e666cb02be9bc9a7c3b67d03d6e138115509f` | ATLAS OWNER: acceptance record `records/atlas/ATLAS_METHOD_v0.3_RELEASE_RECORD.md` (PI accepted 12 Nov 2026); post-tag `records/atlas/ATLAS_METHOD_v0.3_TAG_VERIFICATION.md` | `atlas-method-v0.3` |
 
 ## Not yet in the repository
