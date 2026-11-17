@@ -5,8 +5,8 @@ date: 2026-11-14
 kind: request
 object: validation of a cited step — López-Hernanz 2012, Proposition 5.3 as it enters Theorem 5.1, for the one use (L1) in records/dyad/DYAD_OPEN20_AN_STAGE3C_A_PROOF_RECORD.md §12; follow-up to pipes/DYAD/20261112-LIT-lh2012-thm42-use-check.md
 tags: [dyad-v6.4.24]
-state: open
-disposition:
+state: closed
+disposition: 2026-11-17 · accept · pipes/DYAD/20261117-LIT-lh2012-prop53-scope-reply.md (answer: holds as used, with a derivation, k = 3; rtg-lit records/lit/lh2012/LH2012_PROP53_PROOF_AUDIT.md at 2b0a142)
 ---
 Targeted request (PI decision of 14 Nov 2026): one dependency of one use. LIT's use check (rtg-lit `a3628d4`) found Theorem 5.1 to hold as used *conditionally on Theorem 4.2(1) and Proposition 5.3 as read*. DYAD asks about that condition only.
 - **The use (L1), exactly.** Normal form with k = 3, m = 2, α = −102/19 − (16√3/19)i; F on the petal with bisector 0, and F⁻¹ in the rotated chart ξ̃ = e^{iπ/3}ξ (pilot design D5). u_j is the sectorial curve of Theorem 4.2(1). Needed: on **one** closed subsector {\|arg ξ − jπ/3\| ≤ 5π/24, \|ξ\| small}, **at the one order 38**, a bound \|u_j(ξ) − Σ_{n=2}^{38} b_n zⁿ\| ≤ C\|ξ\|³⁹ with **some** constant C. No value of C, no Gevrey or summability statement, no other order.
