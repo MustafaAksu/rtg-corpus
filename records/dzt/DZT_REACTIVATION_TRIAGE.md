@@ -8,7 +8,7 @@
 ## 1. Basis
 
 - **Governing edition:** `dzt-v0.8`. It has no release record (tagged at the 22 Oct 2026 baseline, verified by BASELINE as "PI").
-- **Answer to the note's FIRST QUESTION:** DZT v0.1–v0.17 exist and were received unchanged (PR #289), with v0.6 missing. Several editions have more than one variant (RR §2, §4). Every edition from v0.9 on is built on the tagged v0.8 text (RR O-3.2). None of them was ever adopted (RR O-3.5).
+- **Answer to the note's FIRST QUESTION:** DZT v0.1–v0.17 exist and were received unchanged (PR #289), with v0.6 missing. Several editions have more than one variant (RR §2, §4). Every edition from v0.9 on is textually based on the tagged v0.8 text (RR O-3.2). No adoption record or tag was found for any recovered successor (RR O-3.5); any historical authorization outside the available records is UNVERIFIED, and no successor is governing.
 - **How they enter (PI decision D1, §7):** the triage runs against `dzt-v0.8` as the edition basis. v0.9–v0.17 are sources to be verified, not a basis. A row below that concerns only recovered content is marked "recovered".
 - **Read for this record:** RR in full; `dzt-v0.8` in full; the reading list of the orientation note at the tags RR names (`methodology-v1.4`, `programme-v1.4`, `dyad-v6.4.24`, `az-v0.10`, `ofn-v0.12`, `numgen-v1.21`, `atlas-v0.14`); `pipes/DZT/` (four open items). What could not be verified is listed in RR §10. That list is unchanged.
 
@@ -27,7 +27,7 @@
 - **(ii)** new work this cycle. Its outcome enters an edition only by a separate PI decision.
 - **—** no action.
 
-Every row gives an acceptance criterion: what must be true before the row is done.
+Every row gives an acceptance criterion: action rows identify completion conditions, while no-action rows specify the source/scope that must remain unchanged.
 
 ## 3. Rows
 
@@ -68,12 +68,12 @@ Every row gives an acceptance criterion: what must be true before the row is don
 
 ### 3.4 C4 — no scientific change
 
-| # | Item | Finding | Proposed action | List |
-|---|---|---|---|---|
-| 21 | AZ separation: SG-DZT-1 (v0.8 line 122), Atlas AZ.A5, AZ SG-AZ-7, Programme §6.7 | Unchanged at `az-v0.10` and `programme-v1.4`. AZ v0.9 and v0.10 sent DZT no item. | No change beyond the AZ pin (row 9). | — |
-| 22 | p=12 value | DZT writes $-13+\tfrac{15\sqrt3}{2}$, the sign Dyadic restored | No change (citation per row 10) | — |
-| 23 | `DYAD-THM-RAW-CUBIC` caveat | DZT does not cite it | No change | — |
-| 24 | VANISH-B2 holds for all $p\ge4$ | v0.8 line 81 (`DZT-ALG-B234-STRUCTURAL`) states $p\ge b+2$, which is $p\ge4$ for $b=2$ | No change (repin per row 10) | — |
+| # | Item | Finding | Proposed action | Acceptance criterion | List |
+|---|---|---|---|---|---|
+| 21 | AZ separation: SG-DZT-1 (v0.8 line 122), Atlas AZ.A5, AZ SG-AZ-7, Programme §6.7 | Unchanged at `az-v0.10` and `programme-v1.4`. AZ v0.9 and v0.10 sent DZT no item. | No change beyond the AZ pin (row 9). | SG-DZT-1 and SG-AZ-7 remain separate; no AZ–DZT scientific bridge is inferred. | — |
+| 22 | p=12 value | DZT writes $-13+\tfrac{15\sqrt3}{2}$, the sign Dyadic restored | No change (citation per row 10) | The already-correct signed value is preserved and cited at Dyadic §6.11 without inventing a RID. | — |
+| 23 | `DYAD-THM-RAW-CUBIC` caveat | DZT does not cite it | No change | No unrelated RAW-CUBIC import or asserted theorem identity is added. | — |
+| 24 | VANISH-B2 holds for all $p\ge4$ | v0.8 line 81 (`DZT-ALG-B234-STRUCTURAL`) states $p\ge b+2$, which is $p\ge4$ for $b=2$ | No change (repin per row 10) | The existing b=2 range is retained; Dyadic VANISH-B2 is separately pinned under row 10. | — |
 
 ## 4. Inbox items (`pipes/DZT/`)
 
