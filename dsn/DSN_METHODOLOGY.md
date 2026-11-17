@@ -1,14 +1,14 @@
-# DSN_METHODOLOGY_v1.4
+# DSN_METHODOLOGY_v1.5
 
 **Title:** Dense Semantic Notation — Methodology, Grammar, and Canonical Tag Registry  
-**Date:** 22 October 2026  
-**Scope:** Rules for scientific records, evidence, ownership, imports, document profiles, repository custody, and controlled corpus maintenance. This document contains no RTG physics result and does not decide any study's scientific OPEN.  
+**Date:** 6 November 2026 (draft for review)  
+**Scope:** Rules for scientific records, evidence, ownership, imports, document profiles, repository custody, co-owner session continuity, and controlled corpus maintenance. This document contains no RTG physics result and does not decide any study's scientific OPEN.  
 **Document class:** Methodology / governance reference  
-**Document status:** ADOPTED — PI, 22 October 2026. Release record: `records/methodology/DSN_METHODOLOGY_v1.4_RELEASE_RECORD.md`.  
-**Supersedes:** `DSN_METHODOLOGY_v1.3` (SHA-256 `3e23ba94606706b3c8d50aecfb2184df52042cf8e65cdd3c3e0cd3159254ec7e`; tag `methodology-v1.3`).  
+**Document status:** DRAFT — proposed v1.5 co-owner session orientation amendment; NOT ADOPTED. `methodology-v1.4` remains governing until a PI decision, merge and annotated tag. No v1.5 release record exists yet.  
+**Supersedes:** `DSN_METHODOLOGY_v1.4` (tag `methodology-v1.4`, SHA-256 `cdacab5feb79161cd86313086065ca67313ef354e30ceaf205386cf2f3a0f2df`, adopted 22 October 2026). Proposed successor only; no supersession until adoption.  
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok. Inherited authorship is not a record of separate approval of this revision.  
-**Revision:** prepared by Claude; editor review by ChatGPT; adoption by the PI (§13.1). Release record: `records/methodology/`.  
-**Status summary:** v1.4 keeps the claim-block model, tag registry, technical-ledger layout and evidence discipline of v1.3. It adds the live-file rule (live sections state the current state; history is in the repository), current-only headers, compact version histories, claim-preserving compaction releases, advisory size reporting, and the repository workflow (`rtg-corpus`: fixed filenames, tags, pull requests, records and evidence without redundant copies, project-knowledge synchronization). Adoption changes the methodology, not any scientific claim; each DSN migrates at its next release.
+**Revision:** proposed by ChatGPT on 6 November 2026; methodology owner/editor review and PI adoption pending. Review packet: `records/methodology/METHODOLOGY_COOWNER_ORIENTATION_v1_5_REVIEW_PACKET.md`.  
+**Status summary:** Draft v1.5 introduces a proposed fixed-path, co-owner-maintained session orientation record (§6.4): verified-source and staleness checks, meaningful update checkpoints, and role-specific next actions. It is operational continuity, not an additional scientific home, evidence certificate, frozen release record or replacement for the AI Context Core. Scientific grades, proof rules, owners and existing v1.4 release discipline remain unchanged. PI adoption is pending.
 
 ---
 
@@ -538,6 +538,26 @@ The orientation core has no fixed line-count budget. Its size is reported under 
 7. Ask focused questions for missing definitions, versions, conventions, scripts, datasets, or owner decisions. Record unresolved requests explicitly; do not invent archive paths, hashes, approvals, or previous-session content.
 8. Finish with the actual output version, branch and commit, checks performed, unresolved limitations, and affected consumers. Never claim that inaccessible project files, remote archives, merges or tags were updated.
 
+### 6.4 Co-owner Session Orientation — Operational Continuity
+
+A long-running AI session can end without notice (context exhaustion, reset or loss of tool access). The §1–§4 AI Context Core conveys *scientific current state*; a session orientation record conveys *operational continuation state*. Neither substitutes for the other.
+
+**Working-record home.** Each actively co-owned study maintains one current-state note at `records/<study>/<STUDY>_COOWNER_SESSION_ORIENTATION.md`, for example `records/atlas/ATLAS_COOWNER_SESSION_ORIENTATION.md`. Co-owners maintain the same file in reviewed Git commits, with separate role-specific next-action fields rather than competing session-specific documents. It is a `[SESSION]` working note, not an owner DSN, proof source, review verdict, imported claim, PI approval, release record or scientific status. Updating it creates no new adopted scientific edition. An external service such as private LIT observes its own repository's disclosure rules: confidential identifiers never enter the public orientation.
+
+**Minimum current-state fields.**
+1. Co-owner roles, study authority, PI-only decisions, last checked date and the note's provisional status.
+2. Governing adopted tag, tag target, release/adoption record, source SHA-256 when checked, Methodology edition, and last verified `main` commit; distinguish frozen owner/Atlas snapshots from mutable working state.
+3. Active branches, PRs, durable commits, review/disposition/PI-decision status, and explicitly pending or uncommitted work (never invent lost private session data).
+4. Relevant incoming/outgoing pipe states, dependencies, missing evidence, owner versus consumer responsibilities, and blocking decisions.
+5. The next one to three eligible actions, owner/co-owner role and acceptance criteria; say when no active action exists.
+6. A brief replacement-session reading/checking procedure, sources and sections actually inspected, and known staleness or verification limits.
+
+**Update checkpoints.** Update proactively at meaningful milestones: new PR or review verdict, reconciliation, blocker or cross-stream response, PI adoption and tag, or material change to the next action. Save a continuation point before unusually long work phases while tools remain accessible; never depend on a final chat message. Routine turns and unchanged rereads need no update. Replace stale working text in place on a branch/PR; earlier states remain in Git. Cite detailed reviews and owner RIDs rather than duplicate proofs or long histories. Co-owner changes must not silently overwrite one another.
+
+**Replacement-session validation.** Read the note first, then independently verify `CONVENTIONS.md`, the most recent adopted **tag plus release/adoption record**, `BASELINE.md`, live PRs, the receiving inbox, and the actual owner sections, assumptions and evidence needed for the intended task. Report exact versions, reading extent and stale pointers. If the note disagrees, the governing owner and recorded decisions win; amend the note through review. Unavailable required owner sources mean `[UNVERIFIED]` for affected claims, not permission to reconstruct them from the note.
+
+**Limits.** The note does not recover hidden reasoning, unsaved scripts, unpublished approvals or evidence never committed to the repository. An orientation check, script PASS or a new AI session's agreement is no scientific proof, owner acceptance or consumer adoption. All existing §12 evidence, §13 release and PI authority rules remain in force.
+
 ---
 
 <a id="dsn-section-7"></a>
@@ -899,6 +919,8 @@ The corpus repository is `rtg-corpus` (public). It is the archive of adopted edi
 - certification scripts live once, under `evidence/<study>/scripts/` with fixed names; a release record cites script path, commit, command and output hash; only small per-release outputs (logs, JSON) are added under `evidence/<study>/<version>/`;
 - frozen external packages that must stay byte-complete may be kept as received, with a README naming files kept elsewhere in the repository.
 
+**Co-owner orientation record.** The §6.4 file is a fixed-path working note, maintained under the same branch/PR and Git-history rules as other records. If materially used for a release, cite the exact working-note commit/blob in that release record. It is not certified evidence or an owner-science revision.
+
 **Release record.** One per release, `records/<study>/<STUDY>_v<version>_RELEASE_RECORD.md`, never edited after adoption (later facts go in a dated addendum file). It carries identities and hashes, the predecessor tag, the build stages, the adoption decision, the checks run and their extent (§12.2 keys), the size report (§13.8), and pointers to reviews and evidence. Working records may be updated at their fixed paths, but every adopted release cites the exact commit (or blob hash) of each working-note revision it relied on; updating the path never changes what was reviewed. Release records and accepted certificate identities are frozen on adoption; corrections are dated, hash-pinned addenda.
 
 **Removal from `main`.** A file removed from the current tree remains in its tags and commits; removal is recorded in the release record or commit message. Nothing adopted is deleted from history. Published tags are never moved or rewritten, and published history is never force-pushed or pruned. Git preserves only what was committed: an external artifact that a claim depends on keeps its hash and a durable locator. “No redundant copies” is a housekeeping rule; it never permits discarding a byte-complete certificate bundle or other provenance cited by a published claim.
@@ -911,13 +933,19 @@ There are no fixed size budgets. A lint script reports, for each release: file s
 
 ### 13.9 Project Knowledge Synchronization
 
-AI working contexts (for example a Claude project) may mirror files from `main` (`dsn/`, `noncanonical/`, `atlas/`) through the repository integration; synchronization is refreshed after each merge. The governing edition of each study is its most recent adopted tagged release supported by its release record, not the latest `main` content or a status header. A file on `main` that is DRAFT, REVIEW-READY or otherwise unadopted is working material, not authority. `BASELINE.md` records, for each study, the governing adopted tag and any divergence of the working tree from it; a synchronization check reports such a divergence as pending, never as current. Working notes still in progress may sit in the project until they are committed under `records/`. A project copy is never the authority, imports stay pinned to their actual owner versions, and no historical or unadopted file is loaded as current scientific context.
+AI working contexts (for example a Claude project) may mirror files from `main` (`dsn/`, `noncanonical/`, `atlas/`) through the repository integration; synchronization is refreshed after each merge. The governing edition of each study is its most recent adopted tagged release supported by its release record, not the latest `main` content or a status header. A file on `main` that is DRAFT, REVIEW-READY or otherwise unadopted is working material, not authority. `BASELINE.md` records, for each study, the governing adopted tag and any divergence of the working tree from it; a synchronization check reports such a divergence as pending, never as current. Working notes still in progress may sit in the project until they are committed under `records/`. The §6.4 orientation note is a starting index only; each replacement session must independently revalidate adopted tags, release records, active PR/pipe states and required scientific owner sources. A project copy is never the authority, imports stay pinned to their actual owner versions, and no historical or unadopted file is loaded as current scientific context.
 
 ---
 
 <a id="dsn-appendix-a"></a>
 
 ## Appendix A — Version History
+
+### v1.5 — 6 November 2026 — DRAFT for review (not adopted)
+
+- **§6.4 [governance proposal]:** one fixed-path, co-owner-maintained session orientation note per active co-owned study; verified identity, role, checkpoint, queue and next-action fields. Separate operational continuity from the §1–§4 scientific AI Context Core.
+- **§§13.7/13.9 [governance proposal]:** continuity notes follow working-record provenance and do not replace adopted tags, evidence or authority.
+- **Pilot and review:** Atlas-only pilot PR #188; this version's review packet under `records/methodology/`. No canonical DSN or claim is updated by this draft.
 
 ### v1.4 — 22 October 2026 — Adopted
 
@@ -980,4 +1008,4 @@ These administrative correction keys are not historical scientific RIDs. M13-C01
 
 ---
 
-*END OF DOCUMENT — DSN_METHODOLOGY_v1.4 (ADOPTED, 22 October 2026).*
+*END OF DOCUMENT — DSN_METHODOLOGY_v1.5 (DRAFT, 6 November 2026; methodology-v1.4 remains governing).*
