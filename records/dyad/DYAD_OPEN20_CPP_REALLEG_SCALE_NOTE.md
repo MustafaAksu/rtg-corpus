@@ -9,6 +9,8 @@
 - the start ξ* = 0.40 e^{iπ/6} in the lifted chart of F;
 - the tube radius R₀ of the library (`R_upper`).
 
+**The reference orbit d₀ = 0 is not the curve** (co-owner's comment `6943957865`). The true value d* is about 2·10⁻⁸ away, so d_k(0) ≈ −b_k d* grows: at k = 20, \|d₂₀(0)\| = 2.6·10⁻⁷ is already above R₀(ξ₂₀) = 9.4·10⁻⁸. The table is therefore a scale estimate for shooting, not a statement about the orbit of the curve. To first order it carries over, because b_k and ξ_k change little between d₀ = 0 and d₀ = d* (§2: across the whole fibre of radius 0.002 they change by a few per cent).
+
 Here b_k = ∂d_k/∂d₀ at d₀ = 0, and the ratio R_k/(\|b_k\| R*) is the radius the necessary condition at step k would give, relative to the initial radius R* = 0.002, if the derivative were known exactly.
 
 ## 1. Along the orbit from d₀ = 0
@@ -49,4 +51,7 @@ From 12 points on \|d₀\| = 0.002:
 
    Which is cheaper is for the co-owner to measure.
 4. **The base enclosure matters for M.** R₀ varies like \|ξ\|^{12.6} and depends strongly on the angle. A base enclosure about 8 times wider than the true spread (as in the first step) makes M = sup R₀ larger, but not by orders of magnitude. The F2 rule (supremum over X_k ∩ D₀) applies.
-5. **Scope.** These are floating estimates of one orbit and of 12 sample points. They are targets for the adapter, not premises. The adapter's acceptance must rest on its own enclosures, as the design says.
+5. **A simple form of M on X ∩ D₀.** On D₀, first > 1 and second > c₀. So, with R₀ = ε\|ξ^α\| first⁻³ second⁻³, an upper bound on X ∩ D₀ is
+   ε · sup_X \|ξ^α\| · max(1, inf_X first)⁻³ · max(c₀, inf_X second)⁻³.
+   The supremum of \|ξ^α\| = exp(Re α log ξ) is taken with the principal logarithm restricted to the chart sector of D₀ (−0.20π < arg ξ < 0.30π); D₀ lies in that sector. This needs no proof that X ⊂ D₀, which is the refinement of §7 of the C++ review.
+6. **Scope.** These are floating estimates of one orbit and of 12 sample points. They are targets for the adapter, not premises. The adapter's acceptance must rest on its own enclosures, as the design says.
