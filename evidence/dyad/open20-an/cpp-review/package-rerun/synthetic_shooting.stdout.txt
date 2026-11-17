@@ -1,0 +1,1 @@
+SYNTHETIC horizon=334 initial_radius=2.00000000e-03 contracted_radius=1.20120069e-04 derivative_width=5.99178729e-02 factor_two=PASS

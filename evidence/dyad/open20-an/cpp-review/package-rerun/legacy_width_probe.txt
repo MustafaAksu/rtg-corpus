@@ -1,0 +1,4 @@
+legacy_step=1 max_component_width=1.08766498e-72
+legacy_step=10 max_component_width=1.58059690e-49
+legacy_step=20 max_component_width=8.43109727e-24
+EXPECTED_REFUSAL completed=29 next=30 reason=elementary evaluator range budget

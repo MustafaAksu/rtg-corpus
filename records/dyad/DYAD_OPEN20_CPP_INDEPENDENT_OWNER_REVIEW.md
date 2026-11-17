@@ -99,3 +99,33 @@ Any of these changes the evaluator, not the contractor. The owner's Python legs 
 
 **Not done by the owner:** the package as a whole, the 15 unit tests, the sanitizer runs, the F3 change, and the shooting probe with its contractor step. The checkpoint's statements about these are the co-owner's.
 
+## 8. The full centred package (17 November 2026)
+
+**Received.** The PI pushed the zip on 17 November with GitHub Desktop, to the branch `dyad-cpp-centered-20261116` (commit `9adb9dd`), at the path `upload/dyad-cpp-centered-20261116/received/DYAD_OPEN20_CPP_CENTERED_REVIEW_PACKAGE.zip`. The branch name lacks the `upload/` prefix of CONVENTIONS. The co-owner's pin of the hash is on `upload/dyad-cpp-centered-20261116` (`ed8841b`). The bytes are what matters here, and they are correct:
+- SHA-256 `5dfb8b1f…068a`, equal to the pin;
+- 35 members, CRC clean;
+- 34 of 34 entries of the internal `SHA256SUMS.txt` match, and they cover every other member;
+- the earlier package inside it is byte-identical (`c2d1c19c…`);
+- `centered_evaluator.hpp` inside it is the file reviewed in §7 (`b868f945…`).
+
+**F3, read.** On a `domain_error` the cover now bisects a tile while it is wider than the width limit, and keeps it as a leaf otherwise. The two halves cover the tile; every bisection shrinks the tile; the budget retains the pending queue. So the cover still terminates and loses no candidate. The changed unit test checks that the hull of the retained leaves contains the input box. The rest of the patch to `independent_core.cpp` is the include guard. **Closed.**
+
+**Shooting probe, read.** `necessary_disk` gets three things, which is the use C1 requires: the value at the exact centre d = 0, the derivative of d₃₃₄ over the whole initial disk (a flow started from the whole disk), and an exact slope at the centre's derivative.
+
+**Rerun of the package's own check script** (`run_centered_checks.sh`, here with GCC 13.3 and Boost.Multiprecision/Config 1.83 headers in standalone mode; the co-owner used GCC 14.2):
+- 82 s; exit 0;
+- the 20 kernel tests and the 15 new tests pass; the sanitizer build passes with an empty error stream;
+- the production mode is refused with exit 64;
+- the oracle passes 220/220 with its two negative controls; the shooting oracle passes 18/18;
+- **every one of the ten outputs the co-owner recorded is byte-identical to the rerun**: the unit tests, the sanitizer run, the legacy probe, the feasibility JSONL and its printout, the shooting probe and its printout, and both oracle results.
+
+Outputs: `evidence/dyad/open20-an/cpp-review/package-rerun/`.
+
+**State.** With §7 the owner has now checked everything the checkpoint claims. It stands as a development checkpoint of the evaluator, OWNER-RUN at SESSION scope. Still open, as before:
+- real-leg feasibility with φ₄₀ and ξ*;
+- the R_j adapter (with the refinement of §7 and the co-owner's review `5922570504`);
+- the inverse G;
+- a tighter readout.
+
+No point jump has been computed.
+

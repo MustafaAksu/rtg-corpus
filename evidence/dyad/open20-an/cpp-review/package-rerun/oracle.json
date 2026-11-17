@@ -1,0 +1,1775 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "owner_raw_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_point",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 0
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 1
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 2
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 3
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 4
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 5
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 6
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 7
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 1,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 1,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 10,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 10,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 20,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 20,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 100,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 100,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "values",
+      "step": 334,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 0,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 8
+    },
+    {
+      "case": "synthetic_lift_disk",
+      "component": 1,
+      "contained": true,
+      "field": "tangents",
+      "step": 334,
+      "witness": 8
+    }
+  ],
+  "complex_checks": 220,
+  "contained": 220,
+  "decimal_digits": 320,
+  "mpmath_version": "1.3.0",
+  "negative_controls": {
+    "shifted_value_rejected": true,
+    "zero_derivative_rejected": true
+  },
+  "scope": "SESSION numerical oracle, not a certificate; synthetic lift, not phi_40",
+  "witnesses_on_disk": 9
+}
