@@ -3,7 +3,7 @@
 **[SESSION] Working record of the DZT stream (Dyadic Arithmetic-Resonance Transform). It has no scientific or release authority, and nothing in it is adopted.** It classifies every drift row, inbox item and Atlas finding on DZT, and proposes dispositions within the scope the PI has already set (§7). The DZT DSN is not edited by this record. No pipe state is changed and no tag is created.
 **Date:** 18 November 2026. **By:** Claude, DZT co-owner session (BOOTSTRAP message 2 of `records/dzt/DZT_COOWNER_SESSION_ORIENTATION.md`).
 **Subject edition:** `dzt-v0.8` — `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2` (equal on `main` `6c5a74a`). Line numbers marked "v0.8" are lines of that file.
-**Evidence base:** `records/dzt/DZT_RECOVERY_READING_RECORD.md` (merged in PR #309, `b4ebe61`; cited below as **RR**) and its companion `records/dzt/DZT_RECOVERY_VARIANT_DIFFS.md`. Recovered files are under `upload/dzt-recovery-20261116/received/originals/downloads/` (PR #308, `5fa09bd`). Line numbers marked "v0.17" are lines of `…_v0_17 (1).md`.
+**Evidence base:** `records/dzt/DZT_RECOVERY_READING_RECORD.md` (merged in PR #309, `b4ebe61`; cited below as **RR**) and its companion `records/dzt/DZT_RECOVERY_VARIANT_DIFFS.md` (no longer on `main`; exact bytes at commit `2c22802778d62445eea32fe08a3c463d0bf7afa3`, regeneration command in RR). Recovered files are under `upload/dzt-recovery-20261116/received/originals/downloads/` (PR #308, `5fa09bd`). Line numbers marked "v0.17" are lines of `…_v0_17 (1).md`.
 
 ## 1. Basis
 
