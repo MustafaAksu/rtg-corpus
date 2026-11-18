@@ -1,0 +1,11 @@
+OWNER_REVIEW_REQUEST.md: OK
+README.md: OK
+received/DYAD_CPP_PHI40_B_IMPORT.zip: OK
+run_ubuntu_v2.sh: OK
+source/centered_evaluator.hpp: OK
+source/import_phi40.py: OK
+source/independent_core.cpp: OK
+source/real_phi40_forward_probe.cpp: OK
+tests/approximate_18sig_coefs.txt: OK
+tests/first_step_intervals_approx.txt: OK
+tests/first_step_oracle_result.txt: OK
