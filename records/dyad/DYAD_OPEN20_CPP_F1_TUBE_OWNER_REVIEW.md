@@ -198,3 +198,48 @@ This is a replay of the same code on a second machine, not an independent implem
 - Co-owner: a horizon step (k = 3 to 5) on the 144 retained children, with the same rules (own M_k, whole-disc derivative, unresolved kept), and the D·r/M_k column. Compare its cost with one more 2×2 split.
 - The 924 + 256 exclusions stay valid only together with the logs they come from; any later stage must cite both run hashes above.
 - No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 3 — horizon 3 against a further 2×2 split (18 November 2026, evening)
+
+**Reviewed:** `DYAD_CPP_F3_HORIZON_DIAGNOSTIC.zip`, SHA-256 `0bee93e58d7df73525a5817e7340a9258d8e13bb63065ddbbdc535accceec379`, on `upload/dyad-cpp-f3-horizon-20261118` (head `c500a6dc1b1598fce9c08c766bf89668c609b335`); inner `SHA256SUMS.txt` 10/10 OK. PI run on `upload/dyad-cpp-f3-horizon-results-20261118` (head `1c980e945a870d4d14db77cf19dca0831e8b457c`). New source `horizon.cpp` (193 lines), read in full; it includes the reviewed selective, F2, F1 and engine sources unchanged.
+**Request:** H1 to H5 of the package's `OWNER_REVIEW_REQUEST.md`.
+
+## Verdict
+
+**ACCEPT as a development experiment, at SESSION scope.** H1 to H4 pass by reading; the owner replay of `compare` gives the same `details.tsv` for both modes and the same counts, M ranges, ratios and radii; only wall-clock times differ. Scope as before; for `h3` the hypothesis now also covers k = 3 (x₃ ∈ D₀, \|d₃\| ≤ R₀(x₃)).
+
+## H1 — frozen source
+
+`load_checked_source` rejects a wrong header, missing or extra fields, inverted boxes, IDs out of range, duplicates, non-VALID rows, broken integer identities (Dr, radius, and necessary-box width = 2·radius), a child that is not `split_box(parent, 2)[k]`, a RETAINED row whose final box is not the intersection, an EXCLUDED row whose intersection is not empty, and any count other than 400 / 144 / 256 / 100 parents with four children each. Each of the 144 retained rows is then recomputed by the unchanged F2 code, and the run stops unless all seven integers, the necessary box and the final box agree. The 256 excluded rows are not recomputed; they rest on the selective run, which was replayed (Addendum 2). ✓
+
+## H2 — the horizon step
+
+`h3`: on each retained final box b, `ball(b)`, three `direct6` blocks from the original lift (`f2::iter(…, 3)`, tangent never reset), M₃ = `upper(X₃)` from the box's own base, C1–C2 at k = 3. `refine2`: `split_box(b, 2)` and the k = 2 step on each child. Both are necessary conditions on the same candidate set; their results could also be intersected. `h5` exists and was not run. ✓
+
+## H3 — retention and arithmetic
+
+Exclusion only on an empty intersection with the probe box; `domain_error` keeps the probe box (a subset of b); other exceptions → exit 3; counts are checked (144 replays; 144 or 576 evaluations) and the final hull must lie in the source hull. The package checker (`check_horizon.py`) passes on both modes here. ✓
+
+## H4, H5 — comparison and provenance
+
+| mode | evaluations | excluded / retained / unresolved | M range | Dr/M median | L¹ hull 2.501176·10⁻⁴ → | owner time |
+|---|---|---|---|---|---|---|
+| h3 | 144 | 4 / 140 / 0 | 1.79–4.46·10⁻⁵ | 8.39 | 2.499532·10⁻⁴ | 74 s |
+| refine2 | 576 | 252 / 324 / 0 | 4.49–4.82·10⁻⁵ | 0.144 | 1.707123·10⁻⁴ | 137 s |
+
+PI-RUN and REVIEWER-REPLAYED agree in every result file (`evidence/dyad/open20-an/cpp-review/f3-horizon/compare_pi_vs_owner.txt`; 25 files identical, the rest differ only in times, local paths or the hash lists of those). Same code on two machines, not an independent implementation. Coefficient transfer as in R4. ✓
+
+## Reading ([NUM]) — where the two-block route stops
+
+From the `details.tsv` files (owner computation):
+- `refine2`: box radius r ≈ 1.6·10⁻⁵ (median), but the necessary-disc radius is ≈ 8.5·10⁻⁵, with the tube-only part M₂/\|b₂\| ≥ 6.95·10⁻⁵ (median 7.4·10⁻⁵, \|b₂\| ≈ 0.65). The discs are already about five times larger than the boxes. Further 2×2 splits at k = 2 can only cut the candidate set down to roughly the intersection of these discs, a set of radius of order M₂/\|b₂\| ≈ 7·10⁻⁵. **The two-block route saturates near an L¹ hull of about 10⁻⁴**, a factor below 2 from the present 1.7·10⁻⁴.
+- `h3`: the tube-only part is smaller, M₃/\|b₃\| from 2.2·10⁻⁵ (median 5.5·10⁻⁵), but D₃·r is about 8 M₃ on the present boxes (r ≈ 3.1·10⁻⁵). With D ∝ r^{1.17} (Addendum 2), halving r divides D·r by about 4.5, so on the 324 `refine2` boxes (r ≈ 1.6·10⁻⁵) one expects D₃·r ≈ 2 M₃, and on their 2×2 children ≈ 0.4 M₃.
+- So the next gain needs both: smaller boxes **and** k = 3. A horizon step pays only once r is below about M_k/D_k (per unit of r).
+
+## Next
+
+- Co-owner proposal (a k = 3 pilot on the 324 `refine2` boxes): agreed. A subset is not needed: from the times above, all 324 at k = 3 cost about 3 minutes. In the same run, k = 3 on their 2×2 children (1296 evaluations, about 11 minutes) gives the combined split + horizon point, which the estimate above says is the one that should work.
+- The 252 new `refine2` exclusions depend on the selective run and on the 8×8 run; cite all three log hashes.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
