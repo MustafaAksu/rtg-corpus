@@ -1,6 +1,6 @@
 DZT v0.18 stage 1 edit log
 base dzt-v0.8 cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2
-result sha256 a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc, 54254 bytes
+result sha256 fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d, 54833 bytes
 
 E00a programme-pin     set-line      
     old: line 7, sha256 9fde05ee696cd4db
@@ -40,8 +40,8 @@ E05 0B-R verified      substitute
     why: grade token unpacked; |N_+|
 E06 0B-R target        set-line      
     old: line 105, sha256 c2ca6bd4435ff4d8
-    new: 814 chars
-    why: version label removed; Dyadic RID; grade token unpacked; mechanism kept `[HYP]`
+    new: 900 chars
+    why: version label removed; Dyadic RID; grade token unpacked; mechanism kept `[HYP]`; source dependency on the Dyadic factorization stated (review R2)
 E07 HR norm            set-line      
     old: line 182, sha256 354b7b669e512604
     new: 344 chars
@@ -104,8 +104,8 @@ E20 prov-289           substitute
     why: compound token unpacked
 E21 prov-291           substitute    
     old: '| `[THM/ALG]` |'
-    new: '| `[THM]` (Dyadic) |'
-    why: owner grade
+    new: '| factorization `[THM]` (Dyadic, DYAD-THM-Q403-PHASELAW); norm object all-$p$ `[ALG]` `[s
+    why: compound token unpacked into its two components, each with its grade and owner (review R1)
 E22 prov-292           substitute    
     old: '| `[scope]` |'
     new: '| `[DEF]` (scope rule) |'
@@ -114,7 +114,11 @@ E23 prov-294           substitute
     old: '| `[THM]`/`[ALG fin-hor]` |'
     new: '| `[THM]` (Dyadic, at `dyad-v6.4.24`) |'
     why: owner grade at the pinned edition
+E23b prov-294-label    substitute    
+    old: '| Imported Dyadic all-$p$ THMs (P1, reality, LEAD) + phase law |'
+    new: '| Imported Dyadic phase law (DYAD-THM-Q403-PHASELAW); P1, reality and LEAD are its compon
+    why: components named as such, not as separate owner theorems (review N1)
 E24 appendix-b         insert        
     old: before line 352
     new: 8 lines
-    why: two [SUPERSEDED] records: |N_+| labels and M_p wording; v0.6 'p=40 isolated' observation
+    why: two [SUPERSEDED] records: |N_+| labels and M_p wording (with the scope of the v0.5 [FAIL] record, review N2); v0.6 'p=40 isolated' observation

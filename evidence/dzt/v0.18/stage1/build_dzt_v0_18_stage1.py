@@ -129,7 +129,8 @@ OB_VERIFIED_NEW = "Verified `[ALG]` `[scope: finite horizon p≤1000, 249 points
 OB_TARGET = ("Open target: prove or reject the corrected rule from a resultant identity for $\\mathrm{Res}(\\Phi_{8q},A_s)$. "
              "With the Dyadic phase law proved for all $p$ (DYAD-THM-Q403-PHASELAW), the factorization and hence the norm object "
              "$M_p\\in\\mathbb{Q}(\\zeta_p)^+$ are defined for all $p=4s\\ge12$, so this is a fully **DZT-native** problem (a "
-             "cyclotomic resultant identity) with no remaining dependency on the Dyadic stream. The anomaly law itself stays "
+             "cyclotomic resultant identity) with no outstanding upstream gate: the resultant proof is DZT-owned, conditional on "
+             "the imported Dyadic factorization at `dyad-v6.4.24`. The anomaly law itself stays "
              "`[ALG]` `[scope: finite horizon p≤1000]` until the identity is proved. Candidate mechanism (`[HYP]`): the "
              "$\\equiv1\\!\\pmod4$ gate is the reality of $\\mathbb{Q}(\\sqrt q)\\subset\\mathbb{Q}(\\zeta_q)^+$ — for $q\\equiv1$, "
              "$\\sqrt q$ is real and $\\ell$ enters $N_+$; for $q\\equiv3$, only $\\sqrt{-q}$ (imaginary) lies in "
@@ -236,7 +237,7 @@ Every exit code in this section is source-reported; none was rerun for v0.18.
 APPENDIX_B_ADD = """
 ---
 
-`[SUPERSEDED]` Original (DZT-ALG-CASCADE-NORM and the §1 readout, `dzt-v0.8` §1 and §6.3): the tabulated values were headed $N_+(M_p)$, and $M_p$ was written as $\\lvert Q_p\\rvert$. Reason: the values are absolute values — the closed-form audit computes $\\sqrt{\\lvert N_{\\rm full}\\rvert}$ and the sign of $N_+(M_p)$ is not determined by DZT — and $M_p$ is defined as $Q_p/(i\\zeta_p^3)$, a real number whose sign is not asserted. Replacement: §6.3, DZT-ALG-CASCADE-NORM, stated for $\\lvert N_+(M_p)\\rvert$; the values are unchanged. Recorded in: v0.18.
+`[SUPERSEDED]` Original (DZT-ALG-CASCADE-NORM and the §1 readout, `dzt-v0.8` §1 and §6.3): the tabulated values were headed $N_+(M_p)$, and $M_p$ was written as $\\lvert Q_p\\rvert$. Reason: the values are absolute values — the closed-form audit computes $\\sqrt{\\lvert N_{\\rm full}\\rvert}$ and the sign of $N_+(M_p)$ is not determined by DZT — and $M_p$ is defined as $Q_p/(i\\zeta_p^3)$, a real number whose sign is not asserted. Replacement: §6.3, DZT-ALG-CASCADE-NORM, stated for $\\lvert N_+(M_p)\\rvert$; the values are unchanged. The same holds for the values in the `[FAIL]` record of DZT-HYP-MAHLER-NEARMISS above, which is kept as worded at `dzt-v0.8`: they are $\\lvert N_+\\rvert$ values, and its "unique point with $N_+>1$" refers to the points that record names ($p=12$–$52$, 11 points). Recorded in: v0.18.
 
 ---
 
@@ -277,7 +278,8 @@ def build(base_text):
     d.sub("E05 0B-R verified", "Verified `[ALG finite horizon, p≤1000, 249 pts]`", OB_VERIFIED_OLD, OB_VERIFIED_NEW,
           "grade token unpacked; |N_+|")
     d.set_line("E06 0B-R target", "Open target: prove or reject the corrected rule", OB_TARGET,
-               "version label removed; Dyadic RID; grade token unpacked; mechanism kept `[HYP]`")
+               "version label removed; Dyadic RID; grade token unpacked; mechanism kept `[HYP]`; source dependency on the "
+               "Dyadic factorization stated (review R2)")
     # E07 §5 rows (rows 1, 8, 10, 13)
     d.set_line("E07 HR norm", "| Amplitude norm |", HR_NORM, "|N_+|; table and audit scopes; [ALG fin-hor] unpacked")
     d.set_line("E08 HR phase", "| Phase-law import |", HR_PHASE, "Dyadic RID per Appendix F")
@@ -315,13 +317,18 @@ def build(base_text):
           "(isolated outlier; superseded, Appendix B) | Claude (v0.6) | `[OBS]` |", "superseded observation marked")
     d.sub("E20 prov-289", "| Corrected anomaly rule:", "| `[ALG fin-hor]`/`[HEUR]` |",
           "| `[ALG]` `[scope: finite horizon p≤1000]`; mechanism `[HYP]` |", "compound token unpacked")
-    d.sub("E21 prov-291", "| (R)-link closed upstream", "| `[THM/ALG]` |", "| `[THM]` (Dyadic) |", "owner grade")
+    d.sub("E21 prov-291", "| (R)-link closed upstream", "| `[THM/ALG]` |",
+          "| factorization `[THM]` (Dyadic, DYAD-THM-Q403-PHASELAW); norm object all-$p$ `[ALG]` `[scope: object-level, all p=4s≥12]` (DZT, §6.3) |",
+          "compound token unpacked into its two components, each with its grade and owner (review R1)")
     d.sub("E22 prov-292", "| Object-vs-pattern discipline", "| `[scope]` |", "| `[DEF]` (scope rule) |", "non-tag replaced")
     d.sub("E23 prov-294", "| Imported Dyadic all-$p$ THMs", "| `[THM]`/`[ALG fin-hor]` |",
           "| `[THM]` (Dyadic, at `dyad-v6.4.24`) |", "owner grade at the pinned edition")
+    d.sub("E23b prov-294-label", "| Imported Dyadic all-$p$ THMs", "| Imported Dyadic all-$p$ THMs (P1, reality, LEAD) + phase law |",
+          "| Imported Dyadic phase law (DYAD-THM-Q403-PHASELAW); P1, reality and LEAD are its components, historical note labels without owner RIDs (owner Appendix F, `dyad-v6.4.24`) |",
+          "components named as such, not as separate owner theorems (review N1)")
     # E24 Appendix B (rows 1, 8)
     d.insert_before("E24 appendix-b", "*END OF DOCUMENT", APPENDIX_B_ADD.lstrip("\n"),
-                    "two [SUPERSEDED] records: |N_+| labels and M_p wording; v0.6 'p=40 isolated' observation")
+                    "two [SUPERSEDED] records: |N_+| labels and M_p wording (with the scope of the v0.5 [FAIL] record, review N2); v0.6 'p=40 isolated' observation")
     return d.text()
 
 
@@ -337,7 +344,8 @@ def main():
     # assertions on the result
     for s in ["DYAD-THM-Q403-PHASE-ALLP", "DYAD-ART-CASCADE-Q4-03", "DYAD-ALG-PHASELAW", "DYAD-THM-P1", "DYAD-THM-REALITY",
               "DYAD-THM-LEAD", "DYAD-CF-Q403", "DYAD-ALG-CASCADE-P12", "DYAD-ALG-VANISH-B2/B3/B4", "M_p=|Q_p|",
-              "[THM/ALG]", "[ALG fin-hor]", "[HEUR diagnostic]", "[ALG finite horizon"]:
+              "[THM/ALG]", "[ALG fin-hor]", "[HEUR diagnostic]", "[ALG finite horizon",
+              "no remaining dependency on the Dyadic stream", "Imported Dyadic all-$p$ THMs", "| `[THM]` (Dyadic) |"]:
         live = out.split("## Appendix A")[0].split("**Status summary:**")[1].split("\n", 1)[1]
         if s in live:
             die("forbidden string survives in the live body: %r" % s)
