@@ -146,3 +146,55 @@ The co-owner's local proxy figures (18-digit coefficients) are a third level ([N
 - Co-owner: before a five-block run, measure on the step-2 parts how D·r and M₂ compare (one column each in the TSV is enough), and use that to choose subdivision against horizon.
 - PI: decide O-1. If accepted, the owner fixes c₀ and c₁ as exact dyadic numbers with provenance in proof record §1, on a separate branch.
 - No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 2 — selective second-stage refinement (18 November 2026)
+
+**Reviewed:** `DYAD_CPP_F2_SELECTIVE_REFINE.zip`, SHA-256 `a900d31a88725dc0a0870b84ab5ee0658971d62399b7da9583263fe98b35f3ae`, on `upload/dyad-cpp-f2-selective-20261118` (head `0a658b85fbc41659f4e72b2b7f0e550a730763e3`). The branch also carries the PI's 4×4 and 8×8 term runs (`pi-run/sub4`, `pi-run/sub8`). The PI's selective run is on `upload/dyad-cpp-f2-selective-results-20261118` (head `fc84ab66a7f49e21b2726d79147686a47a44f6c6`). Dependency used for the 8×8 source run: `DYAD_CPP_F2_TERM_AUDIT_SUB8.zip` `1677b05a…ea16` (on `main`, `upload/dyad-cpp-centered-20261116/received/`). Its diagnostic differs from the 4×4 term audit (`b2a0f428…d6c0`) only in admitting subdivision 8 and a limit up to 1024 (diff checked).
+**Request:** the package's `OWNER_REVIEW_REQUEST.md`, S1 to S5.
+
+## Verdict
+
+**ACCEPT as a development checkpoint, at SESSION scope.** S1 to S4 pass by reading. The owner replay of both the 8×8 source run and the selective run is byte-identical to the PI's runs in every result file. The status is unchanged: conditional on the graph/tube hypotheses; no certificate, no point jump.
+
+## S1 — the frozen source selection
+
+- `read_prior` rejects a wrong header, extra or missing fields, any row that is not VALID, any action other than RETAINED/EXCLUDED, indices out of range, duplicates, rows that break the integer identities Dr = ⌈D·r⌉ and radius = err + ⌈(M + Dr)/|b|⌉, and any run that does not have exactly 1024 rows, 100 RETAINED and 16 first-stage tiles with 64 rows each.
+- The 924 EXCLUDED parents are not replayed. Their exclusion rests on the 8×8 run of `f2_term_diagnostic_sub8.cpp`. That code is the reviewed F2 step (same `iter`, `upper`, `necessary_disk`, `intersection`; exclusion only on an empty intersection; `domain_error` → UNRESOLVED and kept). The log does not store the box endpoints, so an exclusion cannot be rechecked from the log alone. It is rechecked here by the **owner replay of the whole 8×8 run** (§S5), whose `terms.tsv` is byte-identical to the PI's.
+- The 100 RETAINED parents are recomputed by the original F2 calculation, and the run stops unless all seven recorded integers (M₂, Dr, D, r, |b|_lower, recentring error, radius) are equal. This also fixes the index correspondence between the log and `split_box(after1, 8)`. ✓
+
+## S2 — the retained set
+
+The parent rectangle is `intersection(part, N2.box())`, the same expression as `after2` in F2, recomputed from the same disc. `split_box(·, 2)` covers it (Addendum 1, F2-R3). A candidate in the parent lies in some child. Children are cut from the post-F2 rectangle, not from the wider part. ✓
+
+## S3 — the child bound
+
+For each child: `ball(child)`; two unreset `direct6` blocks from the lift; whole-disc tangent; M₂ from the child's own X₂ ∩ D₀ (`upper`, F1-R1); the C1–C2 disc, with its radius identity checked; exclusion only on an empty intersection with the child. A `domain_error` keeps the child box. At the parent level a `domain_error` ends the run with exit 2 and no narrower claim. Other exceptions → exit 3. The final hull is required to lie inside the prior hull. ✓
+
+## S4 — the output
+
+The package checker, re-run here, passes: every child is `split_four(parent)[k]`, lies in its parent, and the four children of each parent are all present; every VALID row satisfies the integer identities; RETAINED ⇔ non-empty intersection, and the stored final box equals that intersection; 400 rows, 100 parents. The prior hull is recomputed from the 100 parent rectangles and equals the 8×8 run's `final_L1_hull` (5.723708·10⁻⁴). The counts 100 + 400 involve no repetition of the 924. ✓
+
+## S5 — evidence and replay
+
+| run | status | result |
+|---|---|---|
+| 8×8 source (grid 8, sub 8) | PI-RUN 17 Nov; REVIEWER-REPLAYED 18 Nov | 1024 rows: 924 excluded, 100 retained, 0 unresolved; L¹ hull 5.723708·10⁻⁴; `terms.tsv` SHA-256 `1f5fa762…6e72` |
+| selective (100 parents × 2×2) | PI-RUN 18 Nov; REVIEWER-REPLAYED 18 Nov | 400 children: 256 excluded, 144 retained, 0 unresolved; L¹ hull 2.501176·10⁻⁴; `selective_children.tsv` SHA-256 `3566a7c7…6579` |
+
+Byte comparison (`evidence/dyad/open20-an/cpp-review/f2-selective/compare_pi_vs_owner.txt`): every result file is identical. The only files that differ are `environment.txt` (time, repo head, Python), the `RUN_SHA256SUMS.txt` that hashes it, and `stage2_source_check.txt` (it prints the local path). The executables were not compared.
+This is a replay of the same code on a second machine, not an independent implementation. The co-owner's integer check of the outputs (#305 comment `6974990978`) is a third, independent reading of the same rows.
+
+**Matched scaling (co-owner's `matched_scaling.py`, re-run here on the PI 4×4 log and the owner's 8×8 log):** median child/parent ratios r 0.5, D 0.443, D·r 0.221, M₂ 0.759, D·r/M₂ 0.292. These are the figures of comment `6971328504`, now from deposited files.
+
+## Reading ([NUM])
+
+- On the selected children, D·r/M₂ has median 0.549 and max 0.555 (min 0.081). The derivative term is now below the tube term on every child. Further subdivision gains less than before. The radius M₂/|b| becomes the main limit.
+- The L¹ hull is 2.5·10⁻⁴, about 8 times smaller than 0.002. The W8 distance between the two centres (about 1.95·10⁻⁸, co-owner's figure) is still about 10⁴ times smaller. Two blocks cannot close this gap: M₂ itself is of order 10⁻⁵ to 10⁻⁴. The next lever is the horizon (more blocks shrink M_k, #301 §1), now on the small retained set rather than on the whole fibre.
+
+## Next
+
+- Co-owner: a horizon step (k = 3 to 5) on the 144 retained children, with the same rules (own M_k, whole-disc derivative, unresolved kept), and the D·r/M_k column. Compare its cost with one more 2×2 split.
+- The 924 + 256 exclusions stay valid only together with the logs they come from; any later stage must cite both run hashes above.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
