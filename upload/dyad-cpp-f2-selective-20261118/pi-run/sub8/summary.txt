@@ -1,0 +1,6 @@
+MODE=SESSION_ONLY; F2_TERM_DIAGNOSTIC; LIMIT=0; SAMPLED=NO
+grid=8 subdiv=8 active=60 first_excluded=44 first_retained=16 first_unresolved=0 second_evaluated=1024 second_unresolved=0 second_excluded=924 second_retained=100
+Dr_gt_M2=768 Dr_gt_2M2=189 Dr_gt_5M2=0 Dr_gt_10M2=0
+Dr_over_M2_min=5.674343e-01 median=1.321481e+00 max=2.050000e+00
+final_L1_hull=5.723708e-04
+NO_CERTIFICATE; the F1/F2 contractor is conditional on owner tube/graph hypotheses.
