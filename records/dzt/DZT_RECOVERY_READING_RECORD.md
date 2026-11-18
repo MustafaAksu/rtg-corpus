@@ -12,7 +12,19 @@
 - NUMGEN audit memo `upload/numgen-records/RTG_NG_PROGRAMME_REVIEW_AUDIT_v1.md` (SHA-256 `45d418b7…c91`).
 - LIT record `records/lit/dzt2026/DZT_NORM_LAW_PROOF_NOTE.md` in the private repository `MustafaAksu/rtg-lit` at commit `8e2fb5cb7e39c5c4ab05b3008c4a51d03faed0f3` (unchanged at LIT `main` `6526c4cd` when read); its review on LIT PR #100 (review `5888136234`).
 
-**Companion file:** `records/dzt/DZT_RECOVERY_VARIANT_DIFFS.md` — the complete `diff -U0` output of every same-numbered variant pair, with both hashes.
+**Companion diffs (generated on demand; Methodology v1.4 §13.7).** The complete `diff -U0` output of every same-numbered variant pair was stored as `records/dzt/DZT_RECOVERY_VARIANT_DIFFS.md` and is no longer on `main`.
+- **Identity of the removed file:** SHA-256 `385299fd0d120b22a99f0b77aa30617c866cc72a22c2222b6e73332bbb870494`, 87,609 bytes, git blob `a9b91777f9b7d927463a23274ae81d89f8cfffa9`. It was added by commit `2c22802778d62445eea32fe08a3c463d0bf7afa3` and merged in PR #309 (`b4ebe61c565ec8dcc048e1b5d3e7c62b8d258e5c`). It was removed from `main` by the commit that adds this paragraph, at the PI's authorization of 18 Nov 2026.
+- **Exact bytes:** `git show 2c22802778d62445eea32fe08a3c463d0bf7afa3:records/dzt/DZT_RECOVERY_VARIANT_DIFFS.md`.
+- **Regeneration:** run the command below on the nine pairs of §4. Each pair exits 1 (files differ). Its hunks equal the stored block byte for byte; this was checked for all nine pairs before removal. Only the two header lines differ, since they carry the file times of the checkout.
+
+```bash
+cd upload/dzt-recovery-20261116/received/originals/downloads
+R=RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_
+for p in "v0_4.md|v0_4 (1).md" "v0_8.md|v0_8 (1).md" "v0_9.md|v0_9 (1).md" "v0_9 (1).md|v0_9 (2).md" \
+         "v0_10.md|v0_10 (1).md" "v0_10 (1).md|v0_10 (2).md" "v0_11.md|v0_11 (1).md" "v0_16.md|v0_16 (1).md" "v0_17.md|v0_17 (1).md"; do
+  a="$R${p%%|*}"; b="$R${p#*|}"; sha256sum "$a" "$b"; diff -U0 "$a" "$b"
+done
+```
 
 **No recovered script was executed.** One new session check was run (§9.3); its script and output are reproduced in full below.
 
@@ -68,7 +80,7 @@ Times are the collection manifest's `observed_last_write_time_utc` (an observati
 - **O-3.4** Every v0.9–v0.17 file keeps the v0.8 header pins (Methodology v1.2, Programme v1.1, Dyadic v6.4.8.1, AZ v0.6, OFN v0.7).
 - **O-3.5** No release record, adoption record or tag exists for any recovered edition. The NUMGEN memo (line 6) cites a "DZT v0.17 session record"; no such file is in the recovery.
 
-## 4. Same-numbered variants — what differs (observations; complete diffs in the companion file)
+## 4. Same-numbered variants — what differs (observations; complete diffs: regeneration command in the header)
 
 | edition | pair | hunks | difference |
 |---|---|---|---|
