@@ -181,7 +181,7 @@ DZT editions v0.9–v0.17 have no adoption record and are **received, not adopte
 
 ## 8. Inbox (`pipes/DZT/`)
 
-The four items were read before the stage-1 intermediate was fixed (checkpoint 2 of `pipes/README.md`). They are set to `acknowledged` in this PR. Dispositions are entered by the publication commit after adoption, with this record as pointer:
+The first four items were read before the stage-1 intermediate was fixed (checkpoint 2 of `pipes/README.md`). The fifth, the LIT sign supplement, arrived on `main` on 18 Nov after that, and was brought into this branch by a merge of `main`; it was read against the revision-2 candidate, which needs no change for it. All five are set to `acknowledged` in this PR. Dispositions are entered by the publication commit after adoption, with this record as pointer:
 
 | Item | Disposition at adoption | Basis |
 |---|---|---|
@@ -189,6 +189,7 @@ The four items were read before the stage-1 intermediate was fixed (checkpoint 2
 | `20261111-AZ-v0-7-adopted.md` | `no action` | superseded by the AZ v0.8 item; AZ pin now `az-v0.10` |
 | `20261112-AZ-v0-8-adopted.md` | `accept` | AZ companion pin at the governing tag `az-v0.10`; SG-DZT-1 unchanged (row 21) |
 | `20261113-LIT-norm-law-proof-candidate.md` | stays `acknowledged` | the verdict follows the triage row 2 review, list (ii); not part of v0.18 |
+| `20261118-LIT-norm-sign-supplement.md` | `accept` for its question; the finding itself stays with list (ii) | The item asks DZT to relabel the table as $\lvert N_+\rvert$ or give signed values. v0.18 relabels (row 1, D3): every tabulated value and finite-horizon statement reads $\lvert N_+(M_p)\rvert$, and the sign is not asserted. This agrees with the item's statement that the listed values are moduli. The sign lemma, the sign count and the $p\le20000$ pattern are not adopted and enter no edition here. They are reviewed with the 13 Nov offer under triage row 2, list (ii); no sign OPEN is opened (D3) |
 
 ## 9. Notices (triage rows 14 and 20)
 

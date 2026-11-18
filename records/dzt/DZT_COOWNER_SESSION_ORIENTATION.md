@@ -99,7 +99,7 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 ### CO-OWNER LANE — Claude
 
-**Checked:** 18 November 2026, 12:30 +03:00. `main` `3546c01`. Tag `dzt-v0.8` governs (`cad20982…92ff2`). `pipes/DZT/`: four items, all `acknowledged` on the edition branch. Open DZT PR: this lane's v0.18 edition PR (branch `claude/dzt-v0.18`).
+**Checked:** 18 November 2026, 12:30 +03:00. `main` `3546c01`. Tag `dzt-v0.8` governs (`cad20982…92ff2`). `pipes/DZT/`: five items (the LIT sign supplement of 18 Nov is the fifth), all `acknowledged` on the edition branch. Open DZT PR: this lane's v0.18 edition PR (branch `claude/dzt-v0.18`).
 **Role:** DZT co-owner, preparer. The second co-owner (ChatGPT) is the independent receiving reviewer. The PI decides adoption and publication (D6).
 **Shared sections:** this lane's session updated PI_PENDING on 18 Nov.
 **Goal / current question:** BOOTSTRAP 3, the v0.18 edition: list (i) of the triage in two stages. It is done when the edition is reviewed, adopted, merged and tagged. The (ii) work starts alongside.
