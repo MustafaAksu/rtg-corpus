@@ -1,0 +1,11 @@
+base: git show 6600ada1628b392d7a9157236f04d508c74d3255:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md  sha256 a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc
+OK    P0 unmutated map                                               exit 0 (want 0)  RESULT: PASS
+OK    N1 undeclared word in the live text                            exit 1 (want 1)  FAIL  mechanical scope (re-derivation)  — first difference at line 64: derived 'false ($p=40$ gives $\\tfrac{25}{16}$). Record: §6.3 and Appendix B, D
+OK    N2 status summary with a sentence not in the base              exit 1 (want 1)  FAIL  operation S2-H (presentation)  — status summary adds text not in the base summary (header/section1): ['The anomaly rule is proved for all $p$.']
+OK    N3 history-removal of an identified span                       exit 1 (want 1)  FAIL  operation X3 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: ' [RID: DZT-ALG-CASCADE-ROW]'
+OK    N4 Appendix A names an identifier absent from the live text    exit 1 (want 1)  FAIL  operation S2-A (history-appendix)  — history entry names identifiers absent from the live text: ['DZT-THM-CASCADE-DENOMINATOR']
+OK    N5 a claim tag changed under the label of a reference substitution exit 1 (want 1)  FAIL  operation X5 (ref-subst)  — changed text is not reference text: 'ALG' (offending: ['ALG'])
+OK    N6 two footer lines                                            exit 1 (want 1)  FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line
+OK    N7 base differs from the stage-1 intermediate                  exit 1 (want 1)  FAIL  base identity  — map base_sha256 vs file
+OK    N8 predecessor without its hash                                exit 1 (want 1)  FAIL  presentation (header, footer)  — Supersedes must name exactly one predecessor with one full hash
+RESULT: PASS

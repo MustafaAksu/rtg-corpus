@@ -1,0 +1,138 @@
+{
+ "study": "DZT",
+ "target": "v0.18",
+ "stage": 2,
+ "base": "6600ada1628b392d7a9157236f04d508c74d3255:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md",
+ "base_sha256": "a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc",
+ "candidate_sha256": "db74f0a28ca2bda7c62ae436bc12fc4d71e9741ebdfe0e192837658cbe2375bf",
+ "archives": [
+  {
+   "name": "stage1-intermediate",
+   "git": "6600ada1628b392d7a9157236f04d508c74d3255:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md",
+   "sha256": "a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc"
+  },
+  {
+   "name": "dzt-v0.8",
+   "git": "dzt-v0.8:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md",
+   "sha256": "cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2"
+  }
+ ],
+ "archives_note": "the stage-1 intermediate, read from its commit, holds every removed byte; the predecessor tag holds the v0.8 header, Appendix A and footer verbatim.",
+ "profile": {
+  "study": "DZT",
+  "ref_words": [],
+  "history_words": [
+   "v0."
+  ],
+  "checked_tag_prefixes": [
+   "dzt-",
+   "dyad-",
+   "az-",
+   "ofn-",
+   "programme-",
+   "methodology-"
+  ],
+  "known_tags": [
+   "dzt-v0.8",
+   "dyad-v6.4.24",
+   "az-v0.10",
+   "ofn-v0.12",
+   "programme-v1.4",
+   "methodology-v1.4"
+  ],
+  "summary_from": [
+   "header",
+   "section1"
+  ]
+ },
+ "operations": [
+  {
+   "id": "S2-H",
+   "op": "replace-header",
+   "class": "presentation",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "new": "# RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.18\n\n**Title:** RTG Dyadic Arithmetic-Resonance Transform Study — Founding Charter and Diagnostic Ledger\n**Date:** 18 November 2026\n**Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok\n**Scope:** Arithmetic transforms (cyclotomic resultants and real-subfield norms) over Dyadic-owned OPEN 9 $p$-resonance observables, and the diagnostics they produce; no Dyadic result is re-owned, no AZ graph-zeta result transfers, and nothing is claimed about the Riemann Hypothesis or prime distribution.\n**Document class:** Technical scientific ledger (Methodology v1.4 §0.5), standard layout. Short name: *Dyadic Zeta/Arithmetic Transform (DZT)*.\n**Programme tier:** Tier 3 — Continuous Programme, downstream diagnostic of Dyadic. Maturity **Level A** (defined model; exploration begun). All results inherit the OPEN-P0 ceiling (SG-PROG-2 / SG-DZT-6).\n**Document status:** DRAFT — stage-2 candidate of v0.18; not adopted. `dzt-v0.8` governs until the PI adopts and tags this edition.\n**Supersedes:** `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN` v0.8 (tag `dzt-v0.8`, SHA-256 `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2`)\n**Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`; source of truth for all OPEN 9 arithmetic) · Arithmetic Resonance and Zeta v0.10 (`az-v0.10`; discrete branch, quarantined, see SG-DZT-1) · Ontological Foundations v0.12 (`ofn-v0.12`)\n**DSN Methodology:** v1.4 (`methodology-v1.4`)\n**§1 length:** above the 500-word target of Methodology §1, because §1 states the three founding `[DEF]` records of the study (transform, channel state, ambient field) in full.\n\n**Status summary:** This study defines a transform on Dyadic-owned OPEN 9 arithmetic. DZT-OPEN-0A is closed at finite-horizon scope (all three rows: $b=5$ survival, $b\\le4$ structural absence, cascade $(4,(0,3))$). The active frontier is DZT-OPEN-0B-R: prove or reject the anomaly rule for all $p$ from a resultant identity (§2). No Dyadic result is re-owned here; no AZ Thread-C graph-zeta result transfers; no OPEN-M amplitude or RH/prime claim is made.\n",
+   "note": "v1.4 header: field order with Scope and Document status; one predecessor with its hash; the Methodology pin (triage row 9, stage 2); companion pins as set in stage 1; the §1 length exception declared in the header (Methodology §1); status summary of four sentences taken from the base summary and the base §1; the version-by-version narrative of the old summary is history (stage-1 intermediate and dzt-v0.8)"
+  },
+  {
+   "id": "S2-L1",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**Two-layer channel state (v0.2).**",
+   "new": "**Two-layer channel state.**",
+   "note": "version label in a live heading"
+  },
+  {
+   "id": "S2-L2",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**Ambient field (v0.2).**",
+   "new": "**Ambient field.**",
+   "note": "version label in a live heading"
+  },
+  {
+   "id": "S2-L3",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**Cascade correction (v0.4):**",
+   "new": "**Cascade correction:**",
+   "note": "version label in a live heading"
+  },
+  {
+   "id": "S2-L4",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "- Cascade $(q,D)=(4,(0,3))$ (v0.4, finite horizon):",
+   "new": "- Cascade $(q,D)=(4,(0,3))$ (finite horizon):",
+   "note": "version label in a closed sub-item"
+  },
+  {
+   "id": "S2-L5",
+   "op": "edit",
+   "class": "history-removal",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "old": "**Case V cascade channel (v0.4):**",
+   "new": "**Case V cascade channel:**",
+   "note": "version label in a live heading"
+  },
+  {
+   "id": "S2-A",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "archive": [
+    "stage1-intermediate",
+    "dzt-v0.8"
+   ],
+   "start": "## Appendix A — Version History",
+   "end": "## Appendix B — Retired and Rejected Claims",
+   "new": "## Appendix A — Version History\n\n### v0.18 — 18 November 2026 — DRAFT (stage-2 candidate)\nCorrections and synchronization edition after the reactivation triage (`records/dzt/DZT_REACTIVATION_TRIAGE.md`), with the Methodology v1.4 migration as a second build stage; no new scientific claim and no grade raised. The tabulated amplitude norms are stated as $\\lvert N_+(M_p)\\rvert$, and $M_p$ is defined as $Q_p/(i\\zeta_p^3)$ with its sign not asserted; the validation table and the anomaly set are scoped together; the Import Ledger is repinned to `dyad-v6.4.24` per its Appendix F; compound grade tokens are unpacked; §8 cites the recovered script files by path and hash with their evidence states; §1 keeps readouts and pointers. Companion pins: `programme-v1.4`, `dyad-v6.4.24`, `az-v0.10`, `ofn-v0.12`, `methodology-v1.4`. Corrections: Appendix B. Record: `records/dzt/DZT_v0_18_RELEASE_RECORD.md`.\n\n### v0.9–v0.17 — not part of this lineage\nDZT editions v0.9–v0.17 (June 2026) have no adoption record. Their files were received on 16 November 2026 and are listed with hashes in the v0.18 release record; their content enters v0.18 only through the corrections above.\n\n### v0.1–v0.8 — June 2026\nFrom the founding charter (v0.1) to the integration of the Dyadic all-$p$ phase law (v0.8). Full entries: Appendix A of `dzt-v0.8`.\n\n",
+   "note": "one compact entry for v0.18, one line on the unadopted v0.9-v0.17, one pointer for v0.1-v0.8; the v0.1-v0.8 entries are byte-identical in Appendix A of dzt-v0.8"
+  },
+  {
+   "id": "S2-F",
+   "op": "replace-footer",
+   "class": "presentation",
+   "archive": [
+    "stage1-intermediate"
+   ],
+   "new": "*END OF DOCUMENT — RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.18 — DRAFT, stage-2 candidate; adoption pending; `dzt-v0.8` governs until adoption and tag.*\n",
+   "note": "single footer line (the descriptive second line of the base footer restates §3 and is dropped)"
+  }
+ ]
+}
