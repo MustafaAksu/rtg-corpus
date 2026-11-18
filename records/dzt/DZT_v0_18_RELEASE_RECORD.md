@@ -1,7 +1,7 @@
 # DZT v0.18 — release record
 
 **Status:** DRAFT, for review. **Not adopted.** `dzt-v0.8` governs until the PI adopts this edition and the annotated tag `dzt-v0.18` exists. This draft is completed at adoption (§12) and frozen then.
-**Candidate file:** `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `db74f0a28ca2bda7c62ae436bc12fc4d71e9741ebdfe0e192837658cbe2375bf`, 42,850 bytes (stage-2 candidate, commit `9de9b438c735159ff5d8980efe0263951aa6ca2d`).
+**Candidate file:** `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2`, 43,429 bytes (stage-2 candidate, revision 2, commit `523282a0a55979507a47962d89bbdb7a321d6f58`).
 **Predecessor:** v0.8, tag `dzt-v0.8`, SHA-256 `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2`, 50,547 bytes. It has no release record; it was tagged at the 22 Oct 2026 baseline (`BASELINE.md`, "PI").
 **Prepared by:** the DZT co-owner (Claude), 18 November 2026. Second co-owner and independent reviewer: ChatGPT (D6).
 
@@ -17,41 +17,44 @@ This record invents no hash, approval or review identifier. Steps after adoption
 | Stage | File | SHA-256 | Bytes |
 |---|---|---|---|
 | base | `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md` at tag `dzt-v0.8` | `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2` | 50,547 |
-| 1 — corrected intermediate (commit `6600ada1628b392d7a9157236f04d508c74d3255`) | same path | `a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc` | 54,254 |
-| 2 — compacted candidate (commit `9de9b438c735159ff5d8980efe0263951aa6ca2d`) | same path | `db74f0a28ca2bda7c62ae436bc12fc4d71e9741ebdfe0e192837658cbe2375bf` | 42,850 |
+| 1 — corrected intermediate as first submitted (commit `6600ada1628b392d7a9157236f04d508c74d3255`, reviewed in `5953533755`) | same path | `a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc` | 54,254 |
+| 2 — compacted candidate as first submitted (commit `9de9b438c735159ff5d8980efe0263951aa6ca2d`) | same path | `db74f0a28ca2bda7c62ae436bc12fc4d71e9741ebdfe0e192837658cbe2375bf` | 42,850 |
+| **1 — corrected intermediate, revision 2** (commit `3058bd29528caf070bb69f2ac09f52cc6e48acbb`; review findings R1, R2, N1, N2, §3a) | same path | `fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d` | 54,833 |
+| **2 — compacted candidate, revision 2** (commit `523282a0a55979507a47962d89bbdb7a321d6f58`) | same path | `086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2` | 43,429 |
 | published — the adopted file | — | pending adoption (§12) | — |
 
 ```bash
 python3 -I evidence/dzt/v0.18/stage1/build_dzt_v0_18_stage1.py --out /tmp/inter.md --log /tmp/edit_log.txt
-sha256sum /tmp/inter.md                                                              # a552c01c…1cdc
-git show 6600ada1628b392d7a9157236f04d508c74d3255:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md | sha256sum   # the same
+sha256sum /tmp/inter.md                                                              # fbfbc00d…716d
+git show 3058bd29528caf070bb69f2ac09f52cc6e48acbb:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md | sha256sum   # the same
 diff /tmp/edit_log.txt evidence/dzt/v0.18/stage1/edit_log.txt                         # empty
-git diff dzt-v0.8 6600ada1628b392d7a9157236f04d508c74d3255 -- dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md   # stage-1 delta
+git diff dzt-v0.8 3058bd29528caf070bb69f2ac09f52cc6e48acbb -- dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md   # stage-1 delta
+git diff 6600ada1628b392d7a9157236f04d508c74d3255 3058bd29528caf070bb69f2ac09f52cc6e48acbb -- dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md   # revision 2 against the reviewed intermediate
 T=$(mktemp -d)
 python3 -I evidence/dzt/v0.18/stage2/build_dzt_v0_18_stage2.py --emit-base "$T/stage1_intermediate.md"
 python3 -I tools/check_compaction.py "$T/stage1_intermediate.md" dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md evidence/dzt/v0.18/stage2/movement_map.json
 python3 -I evidence/dzt/v0.18/stage2/stage2_negative_controls.py
 ```
 
-The stage-1 builder reads the base from the tag with `git show` and asserts its hash. It applies 29 edits, each located by an anchor that must occur exactly once (`evidence/dzt/v0.18/stage1/edit_log.txt`). It stops on a missing or repeated anchor; on a forbidden string left in the live body (nine superseded Dyadic strings, "M_p=|Q_p|", `[THM/ALG]`, `[ALG fin-hor]`, `[HEUR diagnostic]`, "[ALG finite horizon"); on the loss of any of the 22 registered DZT RIDs; and on the loss of any of SG-DZT-1 to SG-DZT-8. The stage-2 builder reads the intermediate from commit `6600ada1` and asserts its hash. No second copy of a DSN state is kept (Methodology §13.7).
+The stage-1 builder reads the base from the tag with `git show` and asserts its hash. It applies 30 edits, each located by an anchor that must occur exactly once (`evidence/dzt/v0.18/stage1/edit_log.txt`). It stops on a missing or repeated anchor; on a forbidden string left in the live body (nine superseded Dyadic strings, "M_p=|Q_p|", `[THM/ALG]`, `[ALG fin-hor]`, `[HEUR diagnostic]`, "[ALG finite horizon", and the three wordings corrected after review: "no remaining dependency on the Dyadic stream", "Imported Dyadic all-$p$ THMs", a provenance cell reading only "`[THM]` (Dyadic)"); on the loss of any of the 22 registered DZT RIDs; and on the loss of any of SG-DZT-1 to SG-DZT-8. The stage-2 builder reads the intermediate from commit `3058bd29` and asserts its hash. No second copy of a DSN state is kept (Methodology §13.7).
 
 ## 2. What stage 1 changes (triage list (i), stage 1)
 
 | Triage row | Edits (log keys) | What |
 |---|---|---|
-| 1 — norm object | E02c, E03, E05, E07, E11, E12, E14, E24 | $M_p:=Q_p/(i\zeta_p^3)\in\mathbb Q(\zeta_p)^+$ is the defined object; "$M_p=\lvert Q_p\rvert$" is gone. Every tabulated value and finite-horizon statement reads $\lvert N_+(M_p)\rvert$, and the sign is stated as not determined. No value changed. Correction record in Appendix B |
+| 1 — norm object | E02c, E03, E05, E07, E11, E12, E14, E21, E24 | $M_p:=Q_p/(i\zeta_p^3)\in\mathbb Q(\zeta_p)^+$ is the defined object; "$M_p=\lvert Q_p\rvert$" is gone. Every tabulated value and finite-horizon statement reads $\lvert N_+(M_p)\rvert$, and the sign is stated as not determined. No value changed. Correction record in Appendix B |
 | 8 — table scope | E03, E07, E13, E14, E19, E24 | The §1 validation table and the §6.3 table are the same 14 points ($p=12$–$64$). The anomaly set ($p=8\ell^a$, 20 points on $p\le1000$) is given in the same paragraph. The v0.6 `[OBS]` "$p=40$ is the sole anomaly" and its v0.7 `[COR]` leave the live text and are recorded in Appendix B as `[SUPERSEDED]` |
 | 9 — pins except Methodology | E00a, E00b; in the body E09, E11, E16, E23 | Header: Programme `programme-v1.4`, Dyadic `dyad-v6.4.24`, AZ `az-v0.10`, OFN `ofn-v0.12`. Body: Dyadic `dyad-v6.4.24`. Each tag is in `BASELINE.md` and is the newest tag of its study |
-| 10 — Appendix F repins | E02, E02b, E06, E08, E09, E11, E16 | Every Dyadic string resolves to a RID at `dyad-v6.4.24`, or is marked as text without a RID: VANISH-B2/B3/B4 are three RIDs; `DYAD-OPEN-B5-ALLP` → result `DYAD-ALG-B5-ALLP-NONVANISHING`; `DYAD-THM-Q403-PHASE-ALLP` → `DYAD-THM-Q403-PHASELAW` `[THM]`; P1, REALITY, LEAD, R and CF-Q403 are cited as parts of PHASELAW; the $p=12$ value is §6.11 text; the cascade artifact is `DYAD-ART-Q403-EXTRACT` "by content; no byte identity". No alias is created |
+| 10 — Appendix F repins | E02, E02b, E06, E08, E09, E11, E16, E23b | Every Dyadic string resolves to a RID at `dyad-v6.4.24`, or is marked as text without a RID: VANISH-B2/B3/B4 are three RIDs; `DYAD-OPEN-B5-ALLP` → result `DYAD-ALG-B5-ALLP-NONVANISHING`; `DYAD-THM-Q403-PHASE-ALLP` → `DYAD-THM-Q403-PHASELAW` `[THM]`; P1, REALITY, LEAD, R and CF-Q403 are cited as parts of PHASELAW; the $p=12$ value is §6.11 text; the cascade artifact is `DYAD-ART-Q403-EXTRACT` "by content; no byte identity". No alias is created |
 | 11 — certificate | E16, E17 | Cited as `DYAD-ART-Q403-CERT`, not in the repository |
-| 13 — compound grades | E04, E05, E06, E07, E11, E14, E15, E18, E20, E21, E23; aliases E01 | No `/`-joined or abbreviated grade remains. The finite-horizon statements are `[ALG]` with an explicit `[scope: …]`; the mechanism stays `[HYP]`; owner results carry the owner's grade. The alias table follows Methodology v1.4 §8.4; `[import-ref]` is a label; the standard clause **[RECOVERED]** is defined once |
+| 13 — compound grades | E04, E05, E06, E07, E11, E14, E15, E18, E20, E21, E23; aliases E01 | No `/`-joined or abbreviated grade remains. A compound is split into its components, each with its own grade and owner (§9 row of the (R)-link: factorization `[THM]` Dyadic; norm object `[ALG]` `[scope: object-level]` DZT). The finite-horizon statements are `[ALG]` with an explicit `[scope: …]`; the mechanism stays `[HYP]`; owner results carry the owner's grade. The alias table follows Methodology v1.4 §8.4; `[import-ref]` is a label; the standard clause **[RECOVERED]** is defined once |
 | 16 — §8 evidence states | E12, E14, E17 | Each script is cited by its recovered path and SHA-256 as `EV-BYTES`, with "historical execution evidence not available; `EV-NOT-RERUN`". Where two contents exist, both are cited and the one matching the DSN's description is named, without asserting identity. Exit codes are source-reported |
 
 **Other stage-1 text.** §1 keeps readouts with RIDs and pointers, with one home per statement (Methodology §1.1). E12b gives the $p=12$ computation its full statement at its §6.3 home; before, part of it was printed only in §1. E10 is the §6.3 heading in the mixed-content form (Methodology §3.5); its anchor is kept.
 
 ## 3. Stage 2 — compacted candidate
 
-**Base:** the stage-1 intermediate `a552c01c…1cdc`, read from commit `6600ada1628b392d7a9157236f04d508c74d3255`. **Candidate:** `db74f0a2…75bf`. Builder `evidence/dzt/v0.18/stage2/build_dzt_v0_18_stage2.py`; movement map `evidence/dzt/v0.18/stage2/movement_map.json` (SHA-256 `8e747d5213f842733a409e30a2e4ff896c5c0bc1627c5c29f9165977f315b8e2`).
+**Base:** the stage-1 intermediate, revision 2, `fbfbc00d…716d`, read from commit `3058bd29528caf070bb69f2ac09f52cc6e48acbb`. **Candidate:** `086bb348…67d2`. Builder `evidence/dzt/v0.18/stage2/build_dzt_v0_18_stage2.py`; movement map `evidence/dzt/v0.18/stage2/movement_map.json` (SHA-256 `eb1673d88e6c0a8940a7d3d12a956bf198c8fa021eeca9c230f0fba6f5e793a3`). The eight operations are the same as in the first submission; only the base identity changed.
 
 | Operation | Class | What |
 |---|---|---|
@@ -79,6 +82,32 @@ The stage-1 builder reads the base from the tag with `git show` and asserts its 
 
 **What the checker does not show:** it compares bytes and declared classes. The wording of the new header (Scope, Document class, Programme tier, Document status, the §1 length line) and of the Appendix A entries is presentation text for the reviewer to read.
 
+## 3a. Review record
+
+**Review `5953533755`** (second co-owner, ChatGPT; 18 Nov 2026, 12:05 +03:00; on head `316517d2e5c8d85d65003cfc19e42497322d3560`): *REVISE R1–R2 before accepting stage 1; not merge-ready.*
+- By its own statement the reviewer did the following:
+  - recomputed the three DSN hashes and sizes and the movement-map hash;
+  - replayed the eight stage-2 operations on the stage-1 text in a separate implementation, with a byte-identical candidate;
+  - checked the 21 live DZT RID declarations and the eight SG-DZT guards;
+  - checked the 11 §8 SHA-256 citations against the recovered manifest;
+  - checked the 20 finite-horizon anomaly positions against the stated filter.
+- It did not rerun `tools/check_compaction.py` or the negative controls; their results are source-reported to it. It executed no recovered script.
+
+| # | Finding | Disposition |
+|---|---|---|
+| R1 (required) | §9 provenance row of the (R)-link: the v0.8 cell `[THM/ALG]` was collapsed to one `[THM]` (Dyadic), although §6.3 separates the Dyadic factorization `[THM]` from DZT's norm-object consequence `[ALG]` `[scope: object-level]` | Accepted. E21 now writes both components, each with its grade and owner. The builder asserts the collapsed cell is absent |
+| R2 (required) | §2 DZT-OPEN-0B-R: "no remaining dependency on the Dyadic stream", while the paragraph rests on `DYAD-THM-Q403-PHASELAW` | Accepted. E06 now reads: "no outstanding upstream gate: the resultant proof is DZT-owned, conditional on the imported Dyadic factorization at `dyad-v6.4.24`". The wording was inherited from v0.8. The builder asserts the old wording is absent |
+| N1 | §9 "Imported Dyadic all-$p$ THMs (P1, reality, LEAD)" reads as separate owner theorems | Done. E23b names them as components of `DYAD-THM-Q403-PHASELAW`, historical note labels without owner RIDs (Appendix F at `dyad-v6.4.24`) |
+| N2 | The v0.5 `[FAIL]` record in Appendix B says "the unique point with $N_+>1$" without its range and with the unsigned value | Done without touching the historical record. The record stays as worded at `dzt-v0.8`. The $\lvert N_+\rvert$ correction record (E24) now says that its values are $\lvert N_+\rvert$ values and that "unique point" refers to the 11 points it names ($p=12$–$52$) |
+| Hygiene | Remove `records/dzt/DZT_RECOVERY_VARIANT_DIFFS.md` (Methodology §13.7) after amending the reading record with the commit/blob provenance and a regeneration command | Not in this edition. A separate maintenance PR, if the PI authorizes it |
+
+**Revision 2:**
+- Stage 1 at `3058bd29`, intermediate `fbfbc00d…716d` (30 edits).
+- Stage 2 at `523282a0`, candidate `086bb348…67d2`.
+- Checker: PASS (99 claim blocks: 96 identical, 3 declared, 0 unexplained).
+- Negative controls: PASS (8 of 8).
+- Delta for the readback: `git diff 6600ada1 3058bd29 -- dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`. It has four changed lines: §2 DZT-OPEN-0B-R, two §9 rows and the Appendix B correction record.
+
 ## 4. Points for the change-focused review
 
 Methodology §13.6: the stage-1 delta receives the review its content requires; stage 2 is checked against the intermediate. If the review changes stage 1, both stages are rebuilt (the stage-2 builder names the stage-1 commit) and the checks are rerun.
@@ -104,11 +133,11 @@ Methodology §13.6: the stage-1 delta receives the review its content requires; 
 
 | Metric | `dzt-v0.8` | v0.18 candidate |
 |---|---|---|
-| bytes | 50,547 | 42,850 (−7,697; −15.2 %) |
+| bytes | 50,547 | 43,429 (−7,118; −14.1 %) |
 | §1 words | 697 | 609 (exception declared in the header) |
-| orientation core (chars / words) | 17,996 / 2,161 | 16,783 / 2,065 |
+| orientation core (chars / words) | 17,996 / 2,161 | 16,869 / 2,075 |
 | Appendix A (chars; editions; max words per edition) | 9,133; 8; 192 | 1,329; 3; 104 |
-| history phrases in live sections | 8 | 6 |
+| history phrases in live sections | 8 | 7 (one is "historical note labels" in the §9 row of review N1) |
 | identifier strings (lint count) | 40 | 36 |
 | near-duplicate paragraphs | 0 | 0 |
 | footer lines (lint count) | 1 | 1 |
@@ -174,7 +203,7 @@ Filed after the tag, one item per inbox; each needs the tag `dzt-v0.18` to valid
 | # | Step | By | State |
 |---|---|---|---|
 | 1 | Stage 1 and stage 2, checks, this draft | DZT co-owner | done (this PR) |
-| 2 | Change-focused review of stage 1, then of stage 2 (§4) | second co-owner | requested |
+| 2 | Change-focused review of stage 1, then of stage 2 (§4) | second co-owner | review `5953533755`: REVISE (R1, R2); revision 2 done (§3a); readback requested |
 | 3 | Adoption decision (§12) | PI | pending |
 | 4 | Publication commit on this branch: status lines only (a reviewed transform, as `evidence/az/v0.8/publish_az_v0_8.py`); the inbox dispositions (§8); this record completed and frozen; the `BASELINE.md` DZT row (v0.18, the adopted hash, this record, tag `dzt-v0.18`) | DZT co-owner | pending |
 | 5 | Merge by a merge commit (not squash) | PI | pending |
