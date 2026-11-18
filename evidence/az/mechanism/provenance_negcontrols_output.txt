@@ -1,0 +1,36 @@
+NC00 unmodified instrument, runtime guard on: self-test PASS
+NC00 unmodified instrument, runtime guard off: self-test PASS
+NC01 rotation applied along the RAW path (ignores the engine's orientation)
+     guard on: DETECTED (0 failed checks, raised); guard off: DETECTED (58 failed checks, raised)
+NC02 rotation applied in the opposite direction
+     guard on: DETECTED (0 failed checks, raised); guard off: DETECTED (65 failed checks, raised)
+NC03 birth leaves the centre's sign unflipped
+     guard on: DETECTED (0 failed checks, raised); guard off: DETECTED (59 failed checks)
+NC04 newborn and centre share one copy id (no distinct copy identity)
+     guard on: DETECTED (0 failed checks, raised); guard off: DETECTED (61 failed checks)
+NC05 swap transports labels only when the values differ (value matching)
+     guard on: DETECTED (11 failed checks); guard off: DETECTED (11 failed checks)
+NC06 the sidecar calls orient_path a second time on the live state
+     guard on: DETECTED (0 failed checks, raised); guard off: DETECTED (0 failed checks, raised)
+NC07 checkpoint by shallow copy (shares the Universe with the original)
+     guard on: DETECTED (708 failed checks); guard off: DETECTED (708 failed checks)
+NC08 checkpoint copies the Universe and provenance but resets fb (runner state outside the Universe)
+     guard on: DETECTED (342 failed checks); guard off: DETECTED (342 failed checks)
+NC09 the held loop never collects the TDR-26 window (diverges from run_state)
+     guard on: DETECTED (187 failed checks); guard off: DETECTED (187 failed checks)
+NC10 the held loop omits the cap test before the step
+     guard on: DETECTED (1 failed checks); guard off: DETECTED (1 failed checks)
+NC11 birth links the child to the grandparent copy, event log made consistent
+     guard on: DETECTED (42 failed checks, raised); guard off: DETECTED (43 failed checks)
+NC12 birth record stores the previous tick
+     guard on: DETECTED (0 failed checks, raised); guard off: DETECTED (56 failed checks)
+NC13 at a flip, the centre's sign history keeps only the latest entry
+     guard on: DETECTED (0 failed checks, raised); guard off: DETECTED (4 failed checks, raised)
+NC14 checkpoint keeps only the last sign-history entry of each copy
+     guard on: DETECTED (171 failed checks); guard off: DETECTED (171 failed checks)
+NC15 checkpoint extends the checkpoint grid beyond T (outputs unchanged)
+     guard on: DETECTED (714 failed checks); guard off: DETECTED (714 failed checks)
+NC16 checkpoint drops the provenance event log
+     guard on: DETECTED (303 failed checks); guard off: DETECTED (303 failed checks)
+NEGCONTROLS PASS
+exit 0

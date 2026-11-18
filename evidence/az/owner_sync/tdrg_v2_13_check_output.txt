@@ -1,0 +1,27 @@
+compared: tdrg-v2.12.15 (1e35be54...) and tdrg-v2.13 (98b4cba5...)
+TDRG-DEF-ZN-STATE                identical
+TDRG-DEF-PHYSICAL-STATE          identical
+TDRG-DEF-BAND                    identical
+TDRG-ALG-LEM-REACH               identical after removing edition-history markers
+TDRG-THM-REACHABILITY-K0         identical
+TDRG-ALG-LEM-RETRIG              identical after removing edition-history markers
+TDRG-ALG-LEM-SPECCONS            identical after removing edition-history markers
+TDRG-ALG-BIND3-CYCLE-N24K1       identical
+TDRG-NUM-BIND3-PARITY            identical
+TDRG-NUM-BIND3-SPECTRAL-GATE     identical
+TDRG-NUM-BIND3-MEMORY-PARITY     identical
+TDRG-NUM-BIND3-XFER              identical
+TDRG-NUM-BIND3-REGEN             identical
+TDRG-OPEN-BIND3-NKSCAN           identical
+TDRG-OPEN-NSCALING               identical
+TDRG-OPEN-CRYSTALLIZATION        identical
+TDRG-OPEN-LOCKING-FAIL           identical
+TDRG-OPEN-TOPO-FILTER            identical
+TDRG-OPEN-CHI-SCALING            identical
+TDRG-OPEN-THERMO-SUPPRESS        identical
+TDRG-DEF-ORIENT                  identical after removing edition-history markers
+TDRG-ALG-EVENT-INVENTORY         identical
+TDRG-ALG-TOKEN-CENSUS-LAW        identical
+TDRG-ALG-PARENT-CHILD-PHASE      identical
+identifiers: 24; identical: 20; history markers only: 4
+RESULT: CITED STATEMENTS UNCHANGED
