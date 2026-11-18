@@ -1,7 +1,7 @@
 {
- "base_sha256": "a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc",
- "candidate_sha256": "db74f0a28ca2bda7c62ae436bc12fc4d71e9741ebdfe0e192837658cbe2375bf",
- "map_sha256": "8e747d5213f842733a409e30a2e4ff896c5c0bc1627c5c29f9165977f315b8e2",
+ "base_sha256": "fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d",
+ "candidate_sha256": "086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2",
+ "map_sha256": "eb1673d88e6c0a8940a7d3d12a956bf198c8fa021eeca9c230f0fba6f5e793a3",
  "operations": [
   {
    "id": "S2-H",
@@ -107,7 +107,7 @@
   {
    "check": "archive identity stage1-intermediate",
    "result": "PASS",
-   "detail": "a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc"
+   "detail": "fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d"
   },
   {
    "check": "archive identity dzt-v0.8",

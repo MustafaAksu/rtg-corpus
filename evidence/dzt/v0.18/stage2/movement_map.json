@@ -2,14 +2,14 @@
  "study": "DZT",
  "target": "v0.18",
  "stage": 2,
- "base": "6600ada1628b392d7a9157236f04d508c74d3255:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md",
- "base_sha256": "a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc",
- "candidate_sha256": "db74f0a28ca2bda7c62ae436bc12fc4d71e9741ebdfe0e192837658cbe2375bf",
+ "base": "3058bd29528caf070bb69f2ac09f52cc6e48acbb:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md",
+ "base_sha256": "fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d",
+ "candidate_sha256": "086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2",
  "archives": [
   {
    "name": "stage1-intermediate",
-   "git": "6600ada1628b392d7a9157236f04d508c74d3255:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md",
-   "sha256": "a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc"
+   "git": "3058bd29528caf070bb69f2ac09f52cc6e48acbb:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md",
+   "sha256": "fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d"
   },
   {
    "name": "dzt-v0.8",

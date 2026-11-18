@@ -1,4 +1,4 @@
-base: git show 6600ada1628b392d7a9157236f04d508c74d3255:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md  sha256 a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc
+base: git show 3058bd29528caf070bb69f2ac09f52cc6e48acbb:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md  sha256 fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d
 OK    P0 unmutated map                                               exit 0 (want 0)  RESULT: PASS
 OK    N1 undeclared word in the live text                            exit 1 (want 1)  FAIL  mechanical scope (re-derivation)  — first difference at line 64: derived 'false ($p=40$ gives $\\tfrac{25}{16}$). Record: §6.3 and Appendix B, D
 OK    N2 status summary with a sentence not in the base              exit 1 (want 1)  FAIL  operation S2-H (presentation)  — status summary adds text not in the base summary (header/section1): ['The anomaly rule is proved for all $p$.']

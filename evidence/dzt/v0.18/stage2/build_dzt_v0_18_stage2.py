@@ -3,7 +3,7 @@
 
     python3 -I evidence/dzt/v0.18/stage2/build_dzt_v0_18_stage2.py [--emit-base PATH]
 
-The base is the stage-1 intermediate of commit 6600ada1 (SHA-256 asserted). It is read with
+The base is the stage-1 intermediate of commit 3058bd29 (SHA-256 asserted). It is read with
 `git show <commit>:<DSN>`; it is not kept as a second file. The script applies the declared
 operations, writes the candidate to the DSN path and the movement map to
 evidence/dzt/v0.18/stage2/movement_map.json. With --emit-base it also writes the base bytes to
@@ -21,8 +21,8 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", "..", ".."))
-BASE_COMMIT = "6600ada1628b392d7a9157236f04d508c74d3255"
-BASE_SHA = "a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc"
+BASE_COMMIT = "3058bd29528caf070bb69f2ac09f52cc6e48acbb"
+BASE_SHA = "fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d"
 PRED_TAG = "dzt-v0.8"
 PRED_SHA = "cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2"
 DSN = "dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md"

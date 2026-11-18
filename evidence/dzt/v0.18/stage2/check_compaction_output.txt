@@ -1,6 +1,6 @@
 PASS  base identity  — map base_sha256 vs file
 PASS  candidate identity  — map candidate_sha256 vs file
-PASS  archive identity stage1-intermediate  — a552c01c318ec41dca3ac6e1cc223d65ee53f7063394c3e185cd0a4fd7b51cdc
+PASS  archive identity stage1-intermediate  — fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d
 PASS  archive identity dzt-v0.8  — cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2
 PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
 PASS  operation S2-H (presentation)  — header replaced; status-summary sentences are a subset of the base summary (header/section1)
