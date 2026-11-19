@@ -99,17 +99,17 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 ### CO-OWNER LANE — Claude
 
-**Checked:** 19 November 2026, 15:25 +03:00. `main` `9a75aaa` (merge of PR #319). Tag `dzt-v0.18` (annotated, on `9a75aaa`) governs; file `04581d1e…8dee` equal on `main`. `pipes/DZT/`: five items; the 13 Nov LIT offer is `acknowledged`, the AZ v0.7 item `closed`, the other three `dispositioned`. Open DZT PR: the v0.18 notices (branch `claude/dzt-v0.18-notices`).
+**Checked:** 20 November 2026, 00:30 +03:00. `main` `d6f28dc` (merge of PR #327). Tag `dzt-v0.18` (annotated, on `9a75aaa`) governs; file `04581d1e…8dee` equal on `main`. `pipes/DZT/`: five items; the 13 Nov LIT offer is `acknowledged`, the AZ v0.7 item `closed`, the other three `dispositioned`. Open DZT PR: the norm-law owner review (branch `claude/dzt-norm-law-review`).
 **Role:** DZT co-owner, preparer. The second co-owner (ChatGPT) is the independent receiving reviewer. The PI decides adoption and publication (D6).
 **Shared sections:** this lane's session updated the governing-edition paragraph and PI_PENDING on 19 Nov.
 **Goal / current question:** triage list (ii), starting with row 2 (norm-law proof review). Each item enters an edition only by a separate PI decision.
-**Last durable work:** PR #308, #309, #317, #321, #319 (merged); tag `dzt-v0.18` (release record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`). Notices to PROG, NUMGEN and OFN filed on `claude/dzt-v0.18-notices`.
+**Last durable work:** PR #308, #309, #317, #321, #319 (merged); tag `dzt-v0.18` (release record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`). PR #327 (notices to PROG, NUMGEN, OFN) merged. Norm-law owner review `records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md` with `evidence/dzt/norm_law_review/` (check PASS to p=4000 exact; negative controls 6 of 6) on `claude/dzt-norm-law-review`.
 **Decisions held:** PI, 18 Nov, 00:00 +03:00, D1–D7 (triage §7). PI, 18 Nov: scope = triage list (i) as written; number = v0.18. PI, 19 Nov, 15:03 +03:00: v0.18 adopted (record §12).
 **Tried and set aside:** treating any recovered variant as final from its file name, size or time stamp (no basis; RR §4). Reusing the DZT script outputs as signed norms: they are `sqrt(abs)` (RR §9.2).
 **Evidence:** `evidence/dzt/v0.18/`; RR §§2–9; recovered files under `upload/dzt-recovery-20261116/received/`; LIT notes at rtg-lit `8e2fb5cb` (norm law) and `da9d5bcb` (sign).
 **Resume:** the LIVE_STATE command; release record §11 and §13; triage rows 2–7, 12, 17, 19.
 **Next 1–3 actions / acceptance:**
-1. Row 2 (ii): an owner proof review of the norm law against the recovered notes and the LIT notes (13 Nov offer and 18 Nov sign supplement), written to `records/dzt/`. Acceptance: criteria (a)–(d) of triage row 2; the grade and any edition are left to the PI.
+1. Row 2 (ii): answer the second co-owner's review of `records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md`; then the PI's grade decision (record §8). Acceptance: criteria (d) and (e) of triage row 2; then the reply to LIT (`pipes/LIT/`).
 2. Row 6 (ii): the B1 re-examination, starting from the dynamical object. Acceptance: a written object definition checked against Dyadic `dyad-v6.4.24`, with no B1 result carried.
 3. Row 17: the targeted search for missing sources; anything found arrives unchanged on an upload branch and is hash-checked.
 
