@@ -243,3 +243,49 @@ From the `details.tsv` files (owner computation):
 - Co-owner proposal (a k = 3 pilot on the 324 `refine2` boxes): agreed. A subset is not needed: from the times above, all 324 at k = 3 cost about 3 minutes. In the same run, k = 3 on their 2×2 children (1296 evaluations, about 11 minutes) gives the combined split + horizon point, which the estimate above says is the one that should work.
 - The 252 new `refine2` exclusions depend on the selective run and on the 8×8 run; cite all three log hashes.
 - No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 4 — k = 3 on the 324 refined survivors (19 November 2026)
+
+**Reviewed:** `DYAD_CPP_F3_ON_REFINED_324.zip`, SHA-256 `499db143cb952a2d663c967e64866c136064487a84d00ecc7ac4ee857c8b5c74`, on `upload/dyad-cpp-h3-refined-20261118` (head `f873c643299ef99a79d9985673dbc997de4fafe7`); inner sums OK. PI run on `upload/dyad-cpp-h3-refined-results-20261118` (head `c7699269162b4debf42815d2d5b56d35b5c687de`). New source `h3_refined.cpp` (197 lines), read in full; it includes `horizon.cpp` and everything below it unchanged.
+**Request:** K1 to K5 of the package's `OWNER_REVIEW_REQUEST.md`.
+
+## Verdict
+
+**ACCEPT as a development experiment, at SESSION scope.** K1 to K3 pass by reading. The owner replay of `compare` gives byte-identical `details.tsv` for both modes (SHA-256 `b285d0dc…dd0d` for `h3_324`, `3f3ac0df…7325` for `h3_split2`); summaries differ only in times. The hypothesis now covers k = 1, 2, 3.
+
+## K1 — the cumulative cover
+
+`load_frozen` reads the `refine2` log of the horizon run (SHA-256 `bf9d4507…7a1a`, identical to the owner's replay in Addendum 3) on top of the checked selective log. It rejects wrong headers or fields, inverted boxes, IDs out of range or not among the 144 selective survivors, duplicates, non-VALID rows, a parent rectangle different from the selective final box, a child that is not `split_box(parent, 2)[k]`, broken integer identities, RETAINED/EXCLUDED rows inconsistent with the stored intersection, and any count other than 576 / 144 parents × 4 / 324 kept / 252 excluded. Then the 144 selective survivors (`horizon::replay`) and the 324 `refine2` survivors (`replay_frozen`, unchanged F2) are recomputed, and the run stops on any difference in the seven integers, the necessary box or the final box. The earlier exclusions (924 + 256 + 252) are not re-evaluated or counted again. ✓
+
+## K2 — the two k = 3 modes
+
+`h3_324`: each of the 324 final rectangles; `h3_split2`: `split_box(·, 2)` of each (1296). Both use `f2::iter(…, 3)` from the original lift over the current disc, M₃ = `upper(X₃)` of that disc, the C1–C2 disc, exclusion only on an empty intersection, `domain_error` → the current rectangle kept, other exceptions → exit 3; counts and hull inclusion are checked. ✓
+
+## K3, K4 — output and replay
+
+The package checker passes here on both modes. Results (identical PI-RUN and REVIEWER-REPLAYED):
+
+| mode | evaluations | excluded / retained / unresolved | M₃ range | Dr/M₃ median | L¹ hull 1.707123·10⁻⁴ → | owner time |
+|---|---|---|---|---|---|---|
+| h3_324 | 324 | 72 / 252 / 0 | 1.68–2.50·10⁻⁵ | 2.88 | 1.659646·10⁻⁴ | 160 s |
+| h3_split2 | 1296 | 972 / 324 / 0 | 1.63–1.97·10⁻⁵ | 0.818 | 8.790759·10⁻⁵ | 396 s |
+
+Owner recomputation from the TSV files confirms the co-owner's figures (#305 comment `7018240286`): the 324 retained children come from 100 of the 324 parents (0 / 1 / 2 / 4 children kept for 224 / 4 / 32 / 64 parents); on them, median r = 7.81·10⁻⁶, M₃/\|b₃\| = 2.42·10⁻⁵ (minimum 2.41·10⁻⁵), necessary radius 4.39·10⁻⁵, \|b₃\| ≈ 0.81.
+
+## K5 — scope
+
+Same-engine conditional numerical development; not an independent implementation, not a proof of the graph or tube, not a jump. O-1 is PR #312, not merged at the time of writing.
+
+## Reading ([NUM], [HEUR])
+
+- The pattern of Addendum 3 repeats one block later. At k = 2 the cover stalled at a disc floor M₂/\|b₂\| ≈ 7·10⁻⁵; at k = 3 the floor is M₃/\|b₃\| ≈ 2.4·10⁻⁵, a factor of about 3 per block, and the retained boxes (r ≈ 8·10⁻⁶) are again about 5 times smaller than the discs. Further splitting at k = 3 cannot go much below an L¹ hull of a few 10⁻⁵.
+- So the working rule is: **at each horizon, split until D_k·r is below M_k, then add a block.** The number of live boxes then stays roughly constant (here 100 to 300), and each evaluation costs k blocks.
+- Scale to the target, from the #301 table (true R₀ along the orbit, not enclosures): the tube-only floor is about 0.002 × 1.7·10⁻³ ≈ 3·10⁻⁶ at k = 5, 2·10⁻⁷ at k = 10 and 7·10⁻⁹ at k = 20, against the W8 centre distance ≈ 2·10⁻⁸. The present enclosed floors are within a factor of about 2 of the true ones at k = 2, 3. A horizon of about 15 to 20 blocks is therefore the order needed, not 4 or 5. This is an estimate for planning, not a claim.
+
+## Next
+
+- The co-owner's 4-block comparison (direct and with 2×2) is a reasonable next measurement. Expected [HEUR]: direct k = 4 on the 324 boxes behaves like `h3_324` (Dr/M₄ of a few); k = 4 with 2×2 works.
+- More useful than one more pairwise comparison would be a small **adaptive driver** that applies the rule above: for k = 4, 5, …, split the retained boxes until the median Dr/M_k < 0.5, evaluate, keep the log, and stop at a fixed budget. Same rules as before (own M_k, whole-disc tangent from the original lift, unresolved kept, hashes of all source logs). Its output would show directly how the floor and the cost grow with k.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
