@@ -289,3 +289,58 @@ Same-engine conditional numerical development; not an independent implementation
 - The co-owner's 4-block comparison (direct and with 2×2) is a reasonable next measurement. Expected [HEUR]: direct k = 4 on the 324 boxes behaves like `h3_324` (Dr/M₄ of a few); k = 4 with 2×2 works.
 - More useful than one more pairwise comparison would be a small **adaptive driver** that applies the rule above: for k = 4, 5, …, split the retained boxes until the median Dr/M_k < 0.5, evaluate, keep the log, and stop at a fixed budget. Same rules as before (own M_k, whole-disc tangent from the original lift, unresolved kept, hashes of all source logs). Its output would show directly how the floor and the cost grow with k.
 - No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 5 — bounded adaptive driver, k = 4 (19 November 2026, night)
+
+**Reviewed:** `DYAD_CPP_ADAPTIVE_HORIZON.zip`, SHA-256 `0e664496627904aa50c44cccfbc2cdfc557693f01e3e1014a93bcbc2a8df5707`, on `upload/dyad-cpp-adaptive-20261119` (head `337a78c355ae99bdb05935b77651eb074b42509e`); inner sums OK. PI run on `upload/dyad-cpp-adaptive-results-20261119` (head `bab839a726147bdd73516f430b04139789726bac`), parameters K = 4..6, budget 1600, depth 2, frontier 4096. New source `adaptive.cpp` (264 lines), read in full; it includes `h3_refined.cpp` and everything below it unchanged.
+**Request:** A1 to A6 of the package's `OWNER_REVIEW_REQUEST.md`.
+
+## Verdict
+
+**ACCEPT as a development experiment, at SESSION scope; the run itself is INCONCLUSIVE (budget), as reported.** A1 to A4 pass by reading. The owner replay with the same parameters is byte-identical to the PI run in every result file, including `events.tsv` (only the pin file's printed paths and the environment differ). No candidate is lost; nothing beyond k = 4 was reached.
+
+## A1 — sources
+
+`load_seeds` reads the `h3_split2` log (SHA-256 `3f3ac0df…7325`) on top of the checked `refine2` and selective logs, with the same header, ID, partition, integer-identity, intersection and count checks as before (1296 rows, 324 parents × 4, 324 kept, 972 excluded). `execute` replays 144 + 324 + 324 survivors bit-exactly before stage 4; the frontier starts as the 324 `h3_split2` final boxes. Five source hashes are gated by the runner. Inherited exclusions 924 + 256 + 252 + 972 are not recounted. ✓
+
+## A2, A3 — the stage
+
+For each queued box: `ball(box)`, `f2::iter(…, k)` from the original lift, M_k = `upper(X_k)`, C1–C2. Exclusion only on an empty intersection. A box with 2·Dr > M (heuristic only) and room in depth, frontier and budget is marked SPLIT; its **post-contractor intersection** is split by `split_box(·, 2)` and the four children are queued and evaluated in the same stage. A SPLIT box never enters the frontier itself; its children do. `domain_error` keeps the box. The new hull must lie inside the old one. Depth resets per k, but boxes are not changed by the reset. ✓
+
+## A4 — budgets and completeness
+
+Budget exhaustion before evaluation writes `NOT_EVALUATED / BUDGET_KEEP` and keeps the box; other exceptions → exit 3; the run returns 2 unless all stages up to MAX_K are READY. The package's integer checker passes here (`ADAPTIVE_INDEPENDENT_INTEGER_PASS`). The accounting identities hold: 324 + 4·319 = 1600 evaluations; 324 + 3·319 − 384 = 897 final boxes. ✓
+Minor remarks (no soundness issue):
+- a1. The counter `budget_kept` mixes two cases: unevaluated `BUDGET_KEEP` rows, and evaluated boxes kept because a split would not fit in the budget. Here all 897 are of the second kind (no `NOT_EVALUATED` rows). Two counters would make summaries unambiguous.
+- a2. `can_split` reserves budget for the whole queue (total + queue + 4 ≤ budget). With budget 1600 = 324 + 4·319, no depth-1 box could split; the stop at depth 1 is by construction.
+- a3. `tests/test_adaptive_structure.py` imports from a sibling directory `../DYAD_CPP_F3_ON_REFINED_324/tests` that is not an argument of the runner; the replay here needed that layout. Not hash-relevant (the H3 package is gated), but a hidden path dependency.
+
+## A5 — replay
+
+Owner container, same parameters, wall time 704 s (≈ 0.44 s per k = 4 evaluation including source replays). `compare_pi_vs_owner.txt` in `evidence/dyad/open20-an/cpp-review/adaptive-k4/`: 35 files identical; `events.tsv` identical. Same engine on two machines, not an independent implementation.
+
+## A6 — reading ([NUM])
+
+By split depth (owner computation, `depth_breakdown_owner.txt`; medians):
+
+| depth | action | n | Dr/M₄ | M₄ | M₄/\|b₄\| | r | Dr |
+|---|---|---|---|---|---|---|---|
+| 0 | SPLIT | 319 | 4.36 | 4.32·10⁻⁵ | 4.84·10⁻⁵ | 7.81·10⁻⁶ | 1.88·10⁻⁴ |
+| 0 | EXCLUDED / RETAINED | 4 / 1 | 1.12 / 3.47 | | | | |
+| 1 | EXCLUDED | 380 | 1.27 | 1.27·10⁻⁵ | 1.43·10⁻⁵ | 2.93·10⁻⁶ | 1.62·10⁻⁵ |
+| 1 | RETAINED | 896 | 2.03 | 1.55·10⁻⁵ | 1.74·10⁻⁵ | 3.91·10⁻⁶ | 3.15·10⁻⁵ |
+
+Two observations:
+1. **M₄ is set by the base enclosure, not by R₀.** On the same boxes where `h3_split2` had M₃ = 1.63–1.97·10⁻⁵, the depth-0 M₄ is 4.3·10⁻⁵, larger, although R₀ falls along the orbit (#301 §1). When r halves, M₄ falls by a factor 2.8. R₀ itself hardly changes across a box of radius 8·10⁻⁶ in d. So M₄ is dominated by the width of the enclosure X₄ of the base after four blocks, which grows with the box.
+2. **D₄ also wraps more strongly.** From depth 0 to 1, D·r falls by a factor of about 6 for a factor 2 in r, so D₄ scales like r^{1.6} here (r^{1.17} at k = 2).
+Both are effects of the long interval flow from the original lift, and both improve with r. They also mean that the k = 2, 3 trend (tube floor −3× per block) cannot be read off directly for k ≥ 4; the planning estimate of Addendum 4 stays an estimate.
+
+## Next (owner suggestions; the choice is the co-owner's and the PI's)
+
+1. **Mean-value base enclosure (cheap, local).** The readout already holds the tangent of the base coordinate (`whole.a.d`, an enclosure of ∂x_k/∂d over the disc). For d in a disc of radius r about c, x_k(d) ∈ x_k(c) + A·B(0, r) with A = `whole.a.d` (mean value along the segment; the disc is convex). Take X_k := `point.a.v` + A·B(0, r), intersected with `whole.a.v`, and M_k = `upper(X_k)`. This is the same kind of centring already used for d, keeps every rule, and should bring M₄ close to the true R₀ on the present boxes. It can be tested first by recomputing M₄ on the 1600 logged k = 4 boxes, without any split.
+2. **Checkpoint and resume**, as the co-owner proposes: start from `final_frontier.tsv` (hash-pinned) rather than from k = 3. A depth-2 continuation of the 896 boxes is 3584 evaluations, about 25 minutes at the measured cost.
+3. Separate counters (a1) and an explicit argument for the sibling test path (a3).
+
+No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.

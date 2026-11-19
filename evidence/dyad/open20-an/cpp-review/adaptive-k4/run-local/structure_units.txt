@@ -1,0 +1,18 @@
+H3_REFINED_STRUCTURE_PASS mode=h3_split2 children=1296 frozen_refine2_survivors=324
+excluded=200 retained=1096 unresolved=0
+prior_L1_256=1292 final_L1_256=1099
+prior_L1=1.115792977318e-74 final_L1=9.491149242049e-75 reduction=14.938080%
+Dr_gt_M3=0; M3_min_exact_256=2 M3_max_exact_256=2
+SESSION_ONLY: preserved 924+256+252 inherited exclusions; graph/tube hypotheses conditional; no jump
+STRUCTURE_MUTATION_PASS mode=h3_split2 negative=8
+ADAPTIVE_FROZEN_SOURCE_PARSE_PASS 400 -> 576 -> 1296 -> 324
+ADAPTIVE_INDEPENDENT_INTEGER_PASS initial=324 events=648 stages=2 evaluated=648 retained_final=324 L1_256=325 stop=READY
+SESSION_ONLY; excludes rely on frozen source logs and unproved graph/tube hypotheses
+ADAPTIVE_NEGATIVE_MUTATIONS_PASS=6 high=False budget=648
+ADAPTIVE_INDEPENDENT_INTEGER_PASS initial=324 events=648 stages=2 evaluated=400 retained_final=324 L1_256=325 stop=BUDGET
+SESSION_ONLY; excludes rely on frozen source logs and unproved graph/tube hypotheses
+ADAPTIVE_NEGATIVE_MUTATIONS_PASS=6 high=False budget=400
+ADAPTIVE_INDEPENDENT_INTEGER_PASS initial=324 events=600 stages=1 evaluated=600 retained_final=531 L1_256=325 stop=BUDGET
+SESSION_ONLY; excludes rely on frozen source logs and unproved graph/tube hypotheses
+ADAPTIVE_NEGATIVE_MUTATIONS_PASS=6 high=True budget=600
+ADAPTIVE_STRUCTURE_SYNTHETIC_PASS
