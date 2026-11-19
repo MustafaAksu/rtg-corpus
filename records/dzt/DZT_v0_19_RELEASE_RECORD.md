@@ -1,7 +1,7 @@
 # DZT v0.19 — release record
 
 **Status:** DRAFT, for review. **Not adopted.** `dzt-v0.18` governs until the PI adopts this edition and the annotated tag `dzt-v0.19` exists. This draft is completed at adoption (§9) and frozen then.
-**Candidate file:** `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `00a6921437787e77bc8af5fcd50663fca4b4440ea564ea7c1054640d22464268`, 46,444 bytes.
+**Candidate file:** `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `50f58c885083636be36b7c44ad5655a8568e5c7f2cc9cf6447312aa79fc57442`, 46,662 bytes (revision 2, after review `5984329391`).
 **Predecessor:** v0.18, tag `dzt-v0.18`, SHA-256 `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee`, 43,448 bytes (release record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`).
 **Prepared by:** the DZT co-owner (Claude), 20 November 2026. Second co-owner and independent reviewer: ChatGPT.
 
@@ -19,12 +19,13 @@ This record invents no hash, approval or review identifier. Steps after adoption
 | Stage | SHA-256 | Bytes |
 |---|---|---|
 | base — `dzt-v0.18` | `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee` | 43,448 |
-| candidate | `00a6921437787e77bc8af5fcd50663fca4b4440ea564ea7c1054640d22464268` | 46,444 |
+| candidate as first submitted (commit `9f4ceb56bb65c958828dd789f29205e357cba7aa`, reviewed in `5984329391`) | `00a6921437787e77bc8af5fcd50663fca4b4440ea564ea7c1054640d22464268` | 46,444 |
+| **candidate, revision 2** (R1, N1; §4a) | `50f58c885083636be36b7c44ad5655a8568e5c7f2cc9cf6447312aa79fc57442` | 46,662 |
 | published (status lines only) | pending adoption | — |
 
 ```bash
 python3 -I evidence/dzt/v0.19/build_dzt_v0_19.py --out /tmp/c.md --log /tmp/log.txt
-sha256sum /tmp/c.md                                       # 00a69214…4268
+sha256sum /tmp/c.md                                       # 50f58c88…7442
 diff /tmp/log.txt evidence/dzt/v0.19/edit_log.txt         # empty
 git diff dzt-v0.18 -- dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md
 python3 -I evidence/dzt/norm_law_review/dzt_norm_law_review_check.py 4000 1000 100000   # PASS (about 100 s)
@@ -48,8 +49,8 @@ python3 -I evidence/dzt/norm_law_review/dzt_norm_law_review_check.py 4000 1000 1
 | S2a, S2d, S2e | §2 | `DZT-OPEN-NORM-LAW` closes (Methodology §5.2). The ACTIVE block is removed. Its finite-horizon statement and the correction of the imported note were already in §6.3; its `[HYP]` goes to Appendix B. The priority list and a one-line closed reference at the end of §2 name the result |
 | S1a, S1b, H5 | §1, header | Readout of the theorem, which has one home, §6.3. The frontier now names B1 and B2. The status summary keeps four sentences |
 | S6c | §6.3 | The `[OPEN]` paragraph "What survives the falsification … DZT-OPEN-0B-R …" is removed: the question it names is closed, and its other contents are stated at their homes (§6.3, §2 0A) |
-| S6d, S6e | §6.3 | `DZT-ALG-CASCADE-ANOMALY-SET` is kept as the $p\le1000$ finite record, with a pointer to the theorem. The correction of the imported note now says that the general denominator law is the theorem |
-| S6f, B | §6.3, Appendix B | **`[HYP]` mechanism retired** as `[SUPERSEDED]` (triage row 3). Reason: the gate is the order of $L^{s-2}$. The quadratic-subfield reading fails at $q=9$ ($p=72$) and at every $q=\ell^{2b}$ |
+| S6d, S6e | §6.3 | `DZT-ALG-CASCADE-ANOMALY-SET` is kept as the $p\le1000$ finite record, with a pointer to the theorem. The correction of the imported note now says that the note's formula $N_+=2^{-\varphi(q)}$ is wrong as a value, that only its denominator exponent is right on the anomaly set, and that the general law is the theorem (R1, §4a) |
+| S6f, B | §6.3, Appendix B | **`[HYP]` mechanism retired** as `[SUPERSEDED]` with the administrative correction key DZT19-C01, since the statement had no RID (Methodology Appendix B; N1, §4a) (triage row 3). Reason: the gate is the order of $L^{s-2}$. The quadratic-subfield reading fails at $q=9$ ($p=72$) and at every $q=\ell^{2b}$ |
 | S5 | §5 | High-risk row: the valid form is the theorem with its assumption. "Any $k_p$ formula" is replaced by "the law without its Dyadic assumption" |
 | S7 | §7 | The PHASELAW row names its new consumer, the assumption of the theorem. Pin check: no Dyadic tag newer than `dyad-v6.4.24` |
 | S8a | §8 | **New registry entry `DZT-ART-NORMLAW-CHECK`** for the review check (repository path, hashes, negative controls). The closing sentence of §8 distinguishes the recovered exit codes from this run |
@@ -80,7 +81,7 @@ The recovered identifiers `DZT-THM-CASCADE-ODD-SUPPORT` and `DZT-THM-CASCADE-DEN
 
   | Metric | `dzt-v0.18` | v0.19 candidate |
   |---|---|---|
-  | bytes | 43,448 | 46,444 (+6.9 %) |
+  | bytes | 43,448 | 46,662 (+7.4 %) |
   | §1 words | 609 | 606 |
   | Appendix A editions | 3 | 4 (max 104 words) |
   | footer lines | 1 | 1 |
@@ -91,6 +92,23 @@ The recovered identifiers `DZT-THM-CASCADE-ODD-SUPPORT` and `DZT-THM-CASCADE-DEN
   - The theorem statement is the combined statement of the owner review §3, accepted in review `5983698371`.
   - The proof in §6.3 is a condensation of steps P1–P11.
   - `DZT-ART-NORMLAW-CHECK` verifies every norm in it exactly for $12\le p\le4000$ (check A1–A10).
+
+## 4a. Review record
+
+**Review `5984329391`** (second co-owner, ChatGPT, on commit `9f4ceb56`).
+- **Verdict:** REVISE; only R1 is required.
+- **Checks reported by the reviewer:** an independent re-application of the 27 edits to `dzt-v0.18` (27/27 unique anchors, log 27/27, byte-identical candidate); the five proof steps against the owner review; exact SymPy resultants at 12 selected $p$; and $p=8$.
+
+| # | Finding | Disposition |
+|---|---|---|
+| R1 (required) | S6e said the imported note's $N_+=2^{-\varphi(q)}$ "holds on the anomaly set". It does not: $\lvert N_+(M_{40})\rvert=25/16\ne2^{-\varphi(5)}=1/16$. Only the denominator exponent is right there ($d_{8\ell^a}=\varphi(\ell^a)$) | **Accepted.** S6e now says the formula is wrong as a value, and that on the anomaly set only its denominator exponent is right, with the $p=40$ example. The theorem block was already correct ($\ell^2/2^{\varphi(\ell^a)}$). The same wording is in the LIT note (§4, after the Proposition: "right on the anomaly set"); it goes into the LIT notice (§7) |
+| N1 | The Appendix B record of the RID-less `[HYP]` should carry an administrative correction key (Methodology Appendix B) | **Done:** key `DZT19-C01` |
+
+**Revision 2.**
+- Candidate `50f58c88…7442` (46,662 bytes), from the same 27 edits.
+- The texts of S6e and of the Appendix B record changed; no other edit changed.
+- The builder assertions pass, and a rebuild is byte-identical.
+- The check `DZT-ART-NORMLAW-CHECK` is unaffected, because no statement it checks changed.
 
 ## 5. Points for the change-focused review
 
@@ -118,6 +136,7 @@ Each notice is one item, filed after the tag `dzt-v0.19` exists. The receivers d
   - The corrections in the owner review §7 concern the recovered DZT notes, not the LIT note.
   - The status lines of the two LIT notes are out of date (owner review §7.5; triage row 19). This is a LIT action.
   - The sign note's real form and count were verified, and its pattern was checked to $p\le100000$. Neither enters DZT.
+  - The norm-law note says, after its Proposition, that the imported note's formula $2^{-\varphi(q)}$ is "right on the anomaly set". Only its denominator exponent is right there (review `5984329391` R1).
 - **PROG** (`pipes/PROG/`): DZT now holds an all-$p$ theorem, conditional on `DYAD-THM-Q403-PHASELAW`. Level A is unchanged. IF18 and IF19 are unchanged.
 - **NUMGEN** (`pipes/NUMGEN/`): the `[PROVENANCE]` paragraph names an audit-reported "v0.17" with all-$p$ odd-support and denominator theorems. Both statements are now covered by the adopted `DZT-THM-CASCADE-NORM-LAW`, which has a different RID and the explicit Dyadic assumption.
 - **DYAD** (`pipes/DYAD/`): the closed form of `DYAD-THM-Q403-PHASELAW` is the assumption of a DZT theorem. This is for Dyadic's consumer register. Nothing is asked.

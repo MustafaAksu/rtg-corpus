@@ -55,7 +55,7 @@ The mod-4 gate is the order of $L^{s-2}$: for $p=8q$ it is $q$ exactly when $8\m
 
 APPB_HYP = r"""---
 
-`[SUPERSEDED]` Original (`dzt-v0.18` §2 and §6.3, `[HYP]`): "the $\equiv1\!\pmod4$ gate is the reality of $\mathbb{Q}(\sqrt q)\subset\mathbb{Q}(\zeta_q)^+$ — for $q\equiv1$, $\sqrt q$ is real and $\ell$ enters $N_+$; for $q\equiv3$, only $\sqrt{-q}$ (imaginary) lies in $\mathbb{Q}(\zeta_q)$". Reason: the proof of DZT-THM-CASCADE-NORM-LAW locates the gate in the order of $L^{s-2}$ ($q$ when $q\equiv1\!\pmod4$, $2q$ when $q\equiv3$); no quadratic subfield enters. The reading cannot be the reason at $q=9$: $p=72$ is an anomaly ($\lvert N_+\rvert=9/64$) while $\sqrt9$ is rational and $\mathbb{Q}(\zeta_9)^+$ is cubic; the same holds for every $q=\ell^{2b}$. Replacement: §6.3, DZT-THM-CASCADE-NORM-LAW, proof step (iv). Recorded in: v0.19.
+`[SUPERSEDED]` **DZT19-C01** (administrative correction key; the statement had no RID) Original (`dzt-v0.18` §2 and §6.3, `[HYP]`): "the $\equiv1\!\pmod4$ gate is the reality of $\mathbb{Q}(\sqrt q)\subset\mathbb{Q}(\zeta_q)^+$ — for $q\equiv1$, $\sqrt q$ is real and $\ell$ enters $N_+$; for $q\equiv3$, only $\sqrt{-q}$ (imaginary) lies in $\mathbb{Q}(\zeta_q)$". Reason: the proof of DZT-THM-CASCADE-NORM-LAW locates the gate in the order of $L^{s-2}$ ($q$ when $q\equiv1\!\pmod4$, $2q$ when $q\equiv3$); no quadratic subfield enters. The reading cannot be the reason at $q=9$: $p=72$ is an anomaly ($\lvert N_+\rvert=9/64$) while $\sqrt9$ is rational and $\mathbb{Q}(\zeta_9)^+$ is cubic; the same holds for every $q=\ell^{2b}$. Replacement: §6.3, DZT-THM-CASCADE-NORM-LAW, proof step (iv). Recorded in: v0.19.
 
 """
 
@@ -127,8 +127,8 @@ EDITS = [
      "pointer"),
     ("S6e note correction",
      "The note's $N_+=2^{-\\varphi(q)}$ denominator formula also fails in general (only the anomaly *locations* and the $\\ell^2$ *numerators* are clean); **no denominator law is asserted**.",
-     "The note's $N_+=2^{-\\varphi(q)}$ denominator formula also fails in general: it holds on the anomaly set and not off it. The general law, denominators included, is DZT-THM-CASCADE-NORM-LAW.",
-     "the denominator law is now asserted (theorem)"),
+     "The note's formula $N_+=2^{-\\varphi(q)}$ is also wrong as a value: on the anomaly set only its denominator exponent is right ($d_{8\\ell^a}=\\varphi(\\ell^a)$, while $\\lvert N_+(M_{8\\ell^a})\\rvert=\\ell^2/2^{\\varphi(\\ell^a)}$, e.g. $25/16\\ne2^{-\\varphi(5)}$ at $p=40$). The general law, denominators included, is DZT-THM-CASCADE-NORM-LAW.",
+     "the denominator law is now asserted (theorem); only the exponent of the note's formula is right on the anomaly set (review 5984329391 R1)"),
     ("S6f hyp",
      "`[HYP]` Candidate mechanism for the mod-4 gate: $q\\equiv1\\!\\pmod4\\Rightarrow\\mathbb{Q}(\\sqrt q)\\subset\\mathbb{Q}(\\zeta_q)^+$ real (so $\\ell$ enters the real-subfield norm); $q\\equiv3\\Rightarrow$ only $\\mathbb{Q}(\\sqrt{-q})$, imaginary, excluded. To be settled by the DZT-OPEN-0B-R resultant identity.\n\n",
      "",

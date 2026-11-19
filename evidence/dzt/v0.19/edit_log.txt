@@ -17,7 +17,7 @@ S6a heading | 211 | 6c8fb902a9a8d8a2 | 80 | 80 | primary status of the subsectio
 S6b theorem | 215 | bd755a02d56ceb42 | 37 | 2417 | theorem record with proof, before the finite records
 S6c open para | 229 | 2080de44ad9b7681 | 278 | 0 | status paragraph superseded by the theorem (the question it names is closed)
 S6d anomaly set | 229 | e2e4a46e737ff61e | 99 | 154 | pointer
-S6e note correction | 231 | 6eff9d36b26fa761 | 182 | 188 | the denominator law is now asserted (theorem)
+S6e note correction | 231 | 6eff9d36b26fa761 | 182 | 334 | the denominator law is now asserted (theorem); only the exponent of the note's formula is right on the anomaly set (review 5984329391 R1)
 S6f hyp | 233 | d0bdc642c3a259b4 | 302 | 0 | [HYP] retired; record in Appendix B
 S7 phaselaw use | 252 | 91fa85bd84476cb2 | 58 | 85 | consumer of the import
 S7 checked | 237 | bc5be0de181693f4 | 39 | 71 | pin check
@@ -26,5 +26,5 @@ S9a hyp row | 312 | 5cded48b7f17cd9a | 79 | 104 | provenance of the retired [HYP
 S9b thm row | 315 | 901eda13f0b81363 | 125 | 809 | provenance of the theorem
 A v0.19 entry | 324 | 9604acf118a4bc17 | 56 | 657 | Appendix A entry
 A lineage | 331 | 4e40a39c02e9dd17 | 62 | 102 | lineage line
-B hyp record | 352 | aab5eac9b59284b4 | 71 | 891 | Appendix B record of the retired [HYP]; footer
-candidate SHA-256 00a6921437787e77bc8af5fcd50663fca4b4440ea564ea7c1054640d22464268, 46444 bytes, 27 edits
+B hyp record | 352 | aab5eac9b59284b4 | 71 | 963 | Appendix B record of the retired [HYP]; footer
+candidate SHA-256 50f58c885083636be36b7c44ad5655a8568e5c7f2cc9cf6447312aa79fc57442, 46662 bytes, 27 edits
