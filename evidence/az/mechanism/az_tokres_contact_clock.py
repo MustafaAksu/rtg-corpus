@@ -26,11 +26,25 @@ Exit 0 iff every self-test check passes ("SELFTEST PASS").
 """
 from __future__ import annotations
 
-import copy
-import hashlib
 import os
-import random
 import sys
+
+# File-access audit (self-test D1): installed before any project module is imported, so that it covers every file
+# opened by this process from here on - the helper import, the pinned engine/orientation/runner and the tests.
+# Python audit hooks cannot be removed; the list only grows.
+OPENED = []
+
+
+def _audit(event, args):
+    if event == "open" and args and isinstance(args[0], str):
+        OPENED.append(os.path.abspath(args[0]))
+
+
+sys.addaudithook(_audit)
+
+import copy                                                          # noqa: E402
+import hashlib                                                       # noqa: E402
+import random                                                        # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -154,12 +168,7 @@ def observe(oeng, run, rec, peng, N, k, th0, d0, j, T, cap):
 
 
 def selftest(trials=400, verbose=True, coverage=True):
-    opened = []
-
-    def hook(event, args):
-        if event == "open" and args and isinstance(args[0], str):
-            opened.append(os.path.abspath(args[0]))
-    sys.addaudithook(hook)                                # before anything is read (audit hooks cannot be removed)
+    opened = OPENED                                   # every open since this module was first loaded (see top)
     check_pins()
     run = P.load_runner()
     peng = P.load_engine("clk_engine_plain")
@@ -182,8 +191,10 @@ def selftest(trials=400, verbose=True, coverage=True):
     th, d = fx(N, [0, 12], [5, 7])
     r, _ = clock(N, k, th, d, 0, 50, 0)
     C.ok(r["status"] == "contact" and r["tau_C"] == 1 and r["edges"] == [(0, 1)] and r["minus"].iters == 0
-         and r["carrier_pre"] == 0 and r["carrier_plus"] == 1 and r["eligible_minus"] and r["eligible_plus"],
-         "A1 tick-1 contact (swap): tau_C = 1, C- = S_0, edge (0,1), carrier moves to node 1 at C+")
+         and r["carrier_pre"] == 0 and r["carrier_plus"] == 1 and r["eligible_minus"] and r["eligible_plus"]
+         and r["minus"].landmark_tick == 0 and r["plus"].landmark_tick == 1,
+         "A1 tick-1 contact (swap): tau_C = 1, C- = S_0, edge (0,1), carrier moves to node 1 at C+; "
+         "landmark_tick 0 and 1")
     th, d = [0, 6], [1, 0]
     r, _ = clock(N, k, th, d, 0, 50, 0)
     C.ok(r["status"] == "contact" and r["tau_C"] == 16 and r["edges"] == [(0, 1)] and r["minus"].u.steps == 15
@@ -273,8 +284,11 @@ def selftest(trials=400, verbose=True, coverage=True):
             C.ok(tau_obs == t and r["edges"] == obs_edges and r["carrier_pre"] == obs_carrier,
                  "B2 trial %d: tau_C, its incident edge set and the pre-tick carrier equal the engine-observed ones"
                  % trial)
-            C.ok(t < len(fps) and P.fingerprint(r["minus"]) == fps[t - 1] and P.fingerprint(r["plus"]) == fps[t],
-                 "B3 trial %d: C- and C+ states equal the independent run at ticks tau_C - 1 and tau_C" % trial)
+            C.ok(t < len(fps) and P.fingerprint(r["minus"]) == fps[t - 1] and P.fingerprint(r["plus"]) == fps[t]
+                 and r["minus"].landmark_tick == t - 1 and r["plus"].landmark_tick == t
+                 and r["minus"].u.steps == t - 1 and r["plus"].u.steps == t,
+                 "B3 trial %d: C- and C+ states equal the independent run at ticks tau_C - 1 and tau_C; their "
+                 "landmark_tick annotations are tau_C - 1 and tau_C" % trial)
             C.ok(r["carrier_minus_is_j"] and r["token_minus_is_base"] and r["slot_events_before"] == 0,
                  "B4 trial %d: before tau_C the slot copy took part in no event: carrier j, original token" % trial)
             C.ok(t <= len(ticks) and r["carrier_plus"] == so_carrier_at(fps, ticks, t, j, so) and

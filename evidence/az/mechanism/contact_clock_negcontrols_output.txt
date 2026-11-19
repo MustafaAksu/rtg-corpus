@@ -6,6 +6,7 @@ NC04 tau_slot^free substituted for the dynamic contact time                 DETE
 NC05 boundary eligibility ignores the node cap                              DETECTED (9 failed checks: A4 B2 B3 B5)
 NC06 C- boundary taken after the contact tick (off-by-one boundary)         DETECTED (60 failed checks: A1 A2 B3)
 NC07 prediction advances the live phases in place                           DETECTED (192 failed checks: A2 A5 B1 B2 B3 B4 B6)
-NC08 the self-test tries to open a path under the registered campaign uploads DETECTED (1 failed checks: D1)
+NC08 checkpoint annotates the boundary with the wrong landmark tick         DETECTED (59 failed checks: A1 B3)
+NC09 the self-test tries to open a path under the registered campaign uploads DETECTED (1 failed checks: D1)
 NEGCONTROLS PASS
 exit 0

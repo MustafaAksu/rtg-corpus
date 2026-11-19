@@ -1,6 +1,6 @@
 # BASE contact clock τ_C and C⁻/C⁺ boundary states — synthetic stage (for review)
 
-**[SESSION] NONCANONICAL.** This is the first Gate I deliverable of the §6.3 fork design (`records/az/AZ_TOKEN_RESONANCE_FORK_DESIGN.md` r2, PR #322, head `08ef706`, Gate D PASS `5960841961`). Its scope is the one set in PR #322 comment `7008416095`, which records the PI decision of 19 November 2026 (source-reported there). The PI's own words in this session, 18 Nov 2026, 20:35 +03:00: "Uygulama şamasını başlatalım" ("let us start the implementation stage"). Written by the Claude AZ lane; independent review by ChatGPT.
+**[SESSION] NONCANONICAL.** r2 (19 Nov 2026) closes the two non-blocking points F1 and F2 of review `5980963543`. This is the first Gate I deliverable of the §6.3 fork design (`records/az/AZ_TOKEN_RESONANCE_FORK_DESIGN.md` r2, PR #322, head `08ef706`, Gate D PASS `5960841961`). Its scope is the one set in PR #322 comment `7008416095`, which records the PI decision of 19 November 2026 (source-reported there). The PI's own words in this session, 18 Nov 2026, 20:35 +03:00: "Uygulama şamasını başlatalım" ("let us start the implementation stage"). Written by the Claude AZ lane; independent review by ChatGPT.
 
 **Synthetic only.** No registered record is read. No fork operator, intervention epoch, R/D arm or BASE pilot is implemented or run.
 
@@ -8,7 +8,7 @@
 |---|---|
 | `az_tokres_contact_clock.py` | `predicted_graph`, `contact_clock`, `eligible`, `tau_free` (counterfactual, never a substitute); `--selftest` |
 | `contact_clock_selftest_output.txt` | `SELFTEST PASS`, 2,374 checks |
-| `contact_clock_negcontrols.py`, `contact_clock_negcontrols_output.txt` | eight injected faults, each must make the self-test fail; `NEGCONTROLS PASS` |
+| `contact_clock_negcontrols.py`, `contact_clock_negcontrols_output.txt` | nine injected faults, each must make the self-test fail; `NEGCONTROLS PASS` |
 
 Pins are checked before anything is loaded:
 
@@ -54,7 +54,7 @@ All four files are unchanged. Profile: P1, `bound_symmetric`.
 - **B — 400 synthetic trajectories** (51,461 observed ticks). 100 are native draws in the chosen cell, N = 120, k = 8, L = 400, cap ∈ {0, 100, 300}, from seeds derived from the tag `AZ-FORK-CLOCK-SYNTH`, never a registered tag. The other 300 are small random states with N ∈ {24, 60, 120}, small caps and L ∈ {3, 20, 60, 150}. The independent reference is the pinned engine's **own** graph: a separate instance with a read-only wrapper on `graph_edges_for`, used only in the test, which calls the original once per call and records it. Checks:
   - B1: at every tick there is exactly one graph call, and pure prediction = engine graph (nodes, phases, edges) = `graph_edges_bruteforce`.
   - B2: `τ_C`, its incident edges and the pre-tick carrier equal the engine-observed ones.
-  - B3: the C⁻ and C⁺ states equal the independent run at ticks `τ_C − 1` and `τ_C`, in full snapshot including provenance.
+  - B3: the C⁻ and C⁺ states equal the independent run at ticks `τ_C − 1` and `τ_C`, in full snapshot including provenance; their `landmark_tick` annotations are `τ_C − 1` and `τ_C` (r2, F2; also in A1).
   - B4: before `τ_C` the slot copy took part in no event, so at C⁻ its carrier is j and its token is the original one. This is the design's claim, checked on every contact trajectory.
   - B5: the C⁺ carrier and C⁺ eligibility agree with the independent run.
   - B6: the clock run (continued to the end) = the observed run, in full state including provenance and orientation counters. Both equal a plain run in physical trajectory at every tick. The global random state is untouched.
@@ -65,11 +65,11 @@ All four files are unchanged. Profile: P1, `bound_symmetric`.
   - contact without a slot event: 66; carrier moved at contact: 306; slot-copy birth at contact: 9;
   - C⁺ ineligible: 6; other components in the contact tick: 226;
   - equal tokens: 87; sign-invisible slot token: 96; already at threshold at C⁻: 65 (q ∈ {5, 8, 100} in the small states).
-- **D1.** An audit hook, installed before anything is read, shows that the only repository files opened are the four pinned files and this script, or their attempted bytecode-cache entries. Nothing under `upload/az-token-resonance-*` is opened.
+- **D1.** An audit hook, installed at the top of the module before any project module is imported (r2, F1 of review `5980963543`); it covers the helper import, the pinned files and the tests, shows that the only repository files opened are the four pinned files and this script, or their attempted bytecode-cache entries. Nothing under `upload/az-token-resonance-*` is opened.
 
 ## 3. Negative controls (`contact_clock_negcontrols.py`; 60 trajectories each, fixtures included; the coverage assertions, which need the full 400, are skipped)
 
-NC00 is the unmodified clock and passes. Each of NC01–NC08 injects one fault, and each must be detected:
+NC00 is the unmodified clock and passes. Each of NC01–NC09 injects one fault, and each must be detected:
 
 - NC01: graph one tick late (tick shift).
 - NC02: post-interaction graph (no advance).
@@ -78,7 +78,8 @@ NC00 is the unmodified clock and passes. Each of NC01–NC08 injects one fault, 
 - NC05: eligibility ignores the cap.
 - NC06: C⁻ taken after the contact tick.
 - NC07: the prediction mutates the live phases.
-- NC08: an attempt to open a path under the registered uploads.
+- NC08 (r2): wrong `landmark_tick` annotation on the boundary checkpoint.
+- NC09: an attempt to open a path under the registered uploads. It stays last, because the audit list is process-wide.
 
 The checks that fail for each control are listed in the output.
 

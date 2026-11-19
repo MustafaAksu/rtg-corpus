@@ -115,6 +115,17 @@ def nc_prediction_mutates():
     return patch(K, "predicted_graph", bad)
 
 
+def nc_landmark_annotation():
+    """checkpoint annotates the boundary with the wrong landmark tick"""
+    orig = K.P.checkpoint
+
+    def bad(st):
+        c = orig(st)
+        c.landmark_tick = st.u.steps + 1
+        return c
+    return patch(K.P, "checkpoint", bad)
+
+
 def nc_registered_path():
     """the self-test tries to open a path under the registered campaign uploads"""
     orig = K.check_pins
@@ -129,7 +140,8 @@ def nc_registered_path():
 
 
 CONTROLS = [nc_graph_one_tick_late, nc_graph_post_interaction, nc_stale_carrier_plus, nc_tau_free,
-            nc_eligibility_ignores_cap, nc_minus_after_contact, nc_prediction_mutates, nc_registered_path]
+            nc_eligibility_ignores_cap, nc_minus_after_contact, nc_prediction_mutates, nc_landmark_annotation,
+            nc_registered_path]          # nc_registered_path stays LAST: the audit list is process-wide and only grows
 
 
 def main():
