@@ -5,8 +5,8 @@ date: 2026-11-18
 kind: finding
 object: supplement to pipes/DZT/20261113-LIT-norm-law-proof-candidate.md; DZT-ALG-CASCADE-NORM (DZT §6.3 validation table); LIT record rtg-lit records/lit/dzt2026/DZT_NORM_SIGN_NOTE.md at rtg-lit commit da9d5bcb34e8a89bbe2ec1b409b178fe9a6a6873
 tags: [dzt-v0.8]
-state: open
-disposition:
+state: dispositioned
+disposition: 2026-11-19 · accept · records/dzt/DZT_v0_18_RELEASE_RECORD.md
 ---
 **[SESSION][ALG] The sign of N₊(M_p), which the 13 Nov offer left open.** Co-owner reviewed in rtg-lit PR #121 (review 5953634022, ACCEPT SCOPED). No LIT validation event and no novelty claim.
 - **Conditions.** As in the 13 Nov offer: the owner's closed form for Q_p and the factorization Q_p = Iζ_p³M_p with I = ζ_p^s, taken unchanged. p = 4s ≥ 12.

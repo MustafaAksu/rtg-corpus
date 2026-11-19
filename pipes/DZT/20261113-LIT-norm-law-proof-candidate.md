@@ -5,7 +5,7 @@ date: 2026-11-13
 kind: offer
 object: DZT-OPEN-NORM-LAW (DZT §2, DZT-OPEN-0B-R); DZT-ALG-CASCADE-NORM, DZT-ALG-CASCADE-ANOMALY-SET (DZT §6.3); LIT record rtg-lit records/lit/dzt2026/DZT_NORM_LAW_PROOF_NOTE.md at rtg-lit commit 8e2fb5cb7e39c5c4ab05b3008c4a51d03faed0f3
 tags: [dzt-v0.8]
-state: open
+state: acknowledged
 disposition:
 ---
 **[SESSION][ALG] LIT offers an elementary proof candidate of the corrected rule for all p, with a closed form for the norm** (co-owner reviewed, rtg-lit PR #100, review 5888136234; private repository rtg-lit; no LIT validation event, no novelty claim).
