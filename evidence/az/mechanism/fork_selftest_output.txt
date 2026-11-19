@@ -4,7 +4,18 @@ pass: A2 s = 0: the R continuation over H = 30 equals run_state on the arm_state
 pass: A3 C+ after a slot-centred birth: target = centre (token -x); newborn keeps x and its parent link to the retired copy; new origin copy 5; ledger check passes
 pass: A4 no-op arm (pre-existing value = x): no value change, epoch still logged
 pass: A5 cap 5 reached at h = 1 < H with cap >= q = 5: Y = 1, h_stop recorded
-pass: A6 an ineligible (terminal) boundary is refused
+pass: A6 slot-centred birth at contact reaching cap 5: the C+ fork is refused, the C- fork is accepted
+pass: A7 C+ after a slot-centred birth with a no-op write (-x = x_R = N/2): continuation and endpoint equal the BASE reference arm
+pass: E1 endpoint of an unadvanced fork is refused
+pass: E2 endpoint of a partial continuation (h = 10 < H = 30) is refused
+pass: E3 completed continuation: stop = horizon; q not a positive integer is refused
+pass: E4 cap-stopped run: refused when 0 < cap < q (censoring), accepted with stop = cap when cap >= q
+pass: E5 o1_values refuses off-family r, invalid epsilon, non-integers, missing keys and odd N
+pass: E6 fork refuses value pairs outside O1 (off-family r, |D - R| != 1, extra or missing keys)
+pass: E7 fork refuses landmarks other than C- and C+
+pass: E8 fork refuses a boundary whose landmark_tick does not match the C-/C+ fork tick (or is missing)
+pass: E9 fork refuses H that is not a positive integer
+pass: E10 fork refuses a non-root slot, an unknown arm and an already forked state
 pass: B0 0 C-: oracle-replayed BASE prefix equals the C- boundary
 pass: B0 0 C+: oracle-replayed BASE prefix equals the C+ boundary
 pass: B0 1 C-: oracle-replayed BASE prefix equals the C- boundary
@@ -613,7 +624,9 @@ pass: C coverage: contact_removed_by_write (276)
 pass: C coverage: Y_differs (40)
 pass: C coverage: slot_birth_before_Cplus (8)
 pass: C coverage: native_120_8 (100)
-coverage: Y_differs 40, already_positive_at_boundary 2, birth_after_intervention 401, cap_hit 18, contact_removed_by_write 276, descendants_of_retired 16, fork_C+ 297, fork_C- 297, native_120_8 100, no_contact_by_L 3, noop_arm 73, s0_identity 137, sign_invisible_x 594, slot_birth_before_Cplus 8, target_not_j 494
+pass: C coverage: M2_noop_C- (36)
+pass: C coverage: M2_noop_C+ (37)
+coverage: M2_noop_C+ 37, M2_noop_C- 36, Y_differs 40, already_positive_at_boundary 2, birth_after_intervention 401, cap_hit 18, contact_removed_by_write 276, descendants_of_retired 16, fork_C+ 297, fork_C- 297, native_120_8 100, no_contact_by_L 3, noop_arm 73, s0_identity 137, sign_invisible_x 594, slot_birth_before_Cplus 8, target_not_j 494
 pass: D1 files opened inside the repository: only the pinned files, the clock, the provenance library and this script (9 paths)
-checks: 12174, failed: 0
+checks: 13448, failed: 0
 SELFTEST PASS

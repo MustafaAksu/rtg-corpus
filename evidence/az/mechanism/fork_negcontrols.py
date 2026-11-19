@@ -47,8 +47,8 @@ def wrap_fork(post):
     """Run the real fork, then apply `post(st, boundary, j, arm, values)` to the result."""
     orig = F.fork
 
-    def bad(boundary, j, arm, values, H, landmark):
-        st = orig(boundary, j, arm, values, H, landmark)
+    def bad(boundary, j, arm, values, H, landmark, **kw):
+        st = orig(boundary, j, arm, values, H, landmark, **kw)
         post(st, boundary, j, arm, values)
         return st
     return patch(F, "fork", bad)
@@ -74,8 +74,8 @@ def nc_no_epoch():
     """token written without an intervention epoch (plain delta mutation)"""
     orig = F.fork
 
-    def bad(boundary, j, arm, values, H, landmark):
-        st = orig(boundary, j, "BASE", values, H, landmark)
+    def bad(boundary, j, arm, values, H, landmark, **kw):
+        st = orig(boundary, j, "BASE", values, H, landmark, **kw)
         if arm != "BASE":
             v = st.fork["target"]
             st.u.delta[v] = values[arm] % st.N
@@ -137,14 +137,14 @@ def nc_target_node_j():
     """target fixed to node id j instead of the current carrier of c_j"""
     orig = F.fork
 
-    def bad(boundary, j, arm, values, H, landmark):
+    def bad(boundary, j, arm, values, H, landmark, **kw):
         b2 = copy.deepcopy(boundary)
         if j in b2.prov.labels and b2.prov.carrier.get(j) != j:
             cj = b2.prov.labels[j][0]
             vj = b2.prov.carrier[j]
             b2.prov.carrier[j], b2.prov.carrier[cj] = j, vj
             b2.prov.labels[j], b2.prov.labels[vj] = [j, b2.prov.labels[vj][1]], [cj, b2.prov.labels[j][1]]
-        return orig(b2, j, arm, values, H, landmark)
+        return orig(b2, j, arm, values, H, landmark, **kw)
     return patch(F, "fork", bad)
 
 
@@ -152,8 +152,8 @@ def nc_virtual_tick():
     """a virtual engine tick is injected at the fork"""
     orig = F.fork
 
-    def bad(boundary, j, arm, values, H, landmark):
-        st = orig(boundary, j, arm, values, H, landmark)
+    def bad(boundary, j, arm, values, H, landmark, **kw):
+        st = orig(boundary, j, arm, values, H, landmark, **kw)
         P.tick(sys.modules["frk_engine_instr"], sys.modules["az_tokres_run_frozen"], st)
         return st
     return patch(F, "fork", bad)
@@ -181,9 +181,64 @@ def nc_origin_as_birth_child():
     return patch(F.ForkProvenance, "intervene", bad)
 
 
+def nc_endpoint_unchecked():
+    """endpoint without the completion, stop-reason and cap >= q checks"""
+    def bad(st, q):
+        m = len(st.u.theta)
+        return {"Y": int(m >= q), "G": m - st.fork["M_s"], "M": m, "h_stop": st.u.steps - st.fork["s"],
+                "hit_cap": st.hit_cap, "stop": "cap" if st.hit_cap else "horizon"}
+    return patch(F, "endpoint", bad)
+
+
+def nc_no_validation():
+    """value and boundary validation removed (any r, eps, landmark, annotation, j)"""
+    u1 = patch(F, "check_values", lambda values, N: 1)
+    u2 = patch(F, "check_boundary", lambda boundary, j, landmark, tau_C: None)
+    u3 = patch(F, "o1_values", lambda ch, N: {"R": ch.get("r1", 0) % N, "D": (ch.get("r1", 0) + ch.get("s1", 1)) % N})
+
+    def undo():
+        u3(), u2(), u1()
+    return undo
+
+
+def nc_arm_dependent_side_effect():
+    """the D arm has a hidden side effect on runner state (fe cleared)"""
+    orig = F._apply
+
+    def bad(boundary, j, arm, x, values, H, landmark):
+        st = orig(boundary, j, arm, x, values, H, landmark)
+        if arm == "D":
+            st.fe = None
+        return st
+    return patch(F, "_apply", bad)
+
+
+def nc_noop_not_neutral():
+    """a no-op write still alters the runner state (first-event clock fe cleared)"""
+    orig = F._apply
+
+    def bad(boundary, j, arm, x, values, H, landmark):
+        st = orig(boundary, j, arm, x, values, H, landmark)
+        if st.fork["noop"]:
+            st.fe = None
+        return st
+    return patch(F, "_apply", bad)
+
+
+def nc_D_value_reinterpreted():
+    """the D arm writes -x instead of x (breaks the R/D swap relation)"""
+    orig = F._apply
+
+    def bad(boundary, j, arm, x, values, H, landmark):
+        return orig(boundary, j, arm, None if x is None else ((-x) % boundary.N if arm == "D" else x), values, H,
+                    landmark)
+    return patch(F, "_apply", bad)
+
+
 CONTROLS = [nc_sign_covariant, nc_no_epoch, nc_recycle_old_copy, nc_T_not_set, nc_clock_reset, nc_shallow_copy,
             nc_alphabet_not_expanded, nc_census_not_reset, nc_target_node_j, nc_virtual_tick,
-            nc_retired_still_carried, nc_origin_as_birth_child]
+            nc_retired_still_carried, nc_origin_as_birth_child, nc_endpoint_unchecked, nc_no_validation,
+            nc_arm_dependent_side_effect, nc_noop_not_neutral, nc_D_value_reinterpreted]
 
 
 def main():
