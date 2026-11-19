@@ -1,0 +1,8 @@
+OK   anomaly gate 3 mod 4 instead of 1 mod 4                    exit 1  FAILURES: 10 ['A7 p=24 odd=1', 'A7 p=40 odd=25', 'A7 p=56 odd=1', 'A7 p=72 odd=9', 'A7 p=8
+OK   denominator without [p=2^k]                                exit 1  FAILURES: 4 ['A8 p=16', 'A8 p=32', 'A8 p=64', 'A8 p=128']
+OK   N(L+1) = 1 for all 4|p (the odd-support note, line 173)    exit 1  FAILURES: 4 ['A4 p=16', 'A4 p=32', 'A4 p=64', 'A4 p=128']
+OK   I-1 taken as a unit (v0.17 line 250)                       exit 1  FAILURES: 48 ['A2 p=12', 'A2 p=16', 'A2 p=20', 'A2 p=24', 'A2 p=28', 'A2 p=32', 'A2 p=36',
+OK   sign from c1 alone                                         exit 1  FAILURES: 7 ['B sign count p=12', 'B sign count p=20', 'B sign count p=36', 'B sign count 
+OK   pattern with l = 3, 7 mod 8                                exit 1  FAILURES: 1 ['C pattern exceptions [20, 28, 52, 92, 100, 116, 124, 148, 188, 196]']
+OK   unmutated check                                            exit 0
+RESULT: PASS
