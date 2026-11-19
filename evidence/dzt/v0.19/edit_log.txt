@@ -1,0 +1,30 @@
+DZT v0.19 build log. Base: git show dzt-v0.18:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md, SHA-256 04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee
+key | line in the text before the edit | sha256[:16] of the replaced span | old chars | new chars | note
+H1 title | 1 | 5c4158c61cbba41c | 54 | 54 | edition number
+H2 date | 4 | 4d988f33c497165d | 27 | 27 | edition date
+H3 status | 9 | 29bd505e6f2a91c8 | 242 | 124 | draft status
+H4 supersedes | 10 | 0013636115be3c5c | 161 | 163 | one predecessor with its hash
+H5 summary | 15 | b229c9c82742bec6 | 131 | 197 | status summary: closure; still four sentences
+S1a anomalies | 62 | bbfded8011199751 | 362 | 479 | §1 readout of the theorem (one home: §6.3)
+S1b frontier | 66 | b2f84970a391736e | 140 | 132 | §1 frontier
+S2a priority | 74 | d68c6557ea9968ed | 311 | 169 | priority list
+S2b 0A sub-items | 91 | 31ab920f4ae77191 | 78 | 130 | pointer
+S2c 0A next | 96 | a005e43db178e409 | 133 | 82 | pointer
+S2d 0B-R block | 102 | 72332cfa741e32a0 | 2065 | 0 | the ACTIVE block of DZT-OPEN-0B-R is removed (Methodology §5.2): its finite-horizon statement and the correction of the imported note are in §6.3; its `[HYP]` goes to Appendix B
+S2e closed reference | 113 | 388492d0aa9d1fa5 | 38 | 263 | one-line closed reference at the end of §2 (Methodology §5.2)
+S5 high-risk | 178 | bbe2a76ca0248349 | 344 | 389 | high-risk row
+S6a heading | 211 | 6c8fb902a9a8d8a2 | 80 | 80 | primary status of the subsection (Methodology §3.5); anchor kept
+S6b theorem | 215 | bd755a02d56ceb42 | 37 | 2417 | theorem record with proof, before the finite records
+S6c open para | 229 | 2080de44ad9b7681 | 278 | 0 | status paragraph superseded by the theorem (the question it names is closed)
+S6d anomaly set | 229 | e2e4a46e737ff61e | 99 | 154 | pointer
+S6e note correction | 231 | 6eff9d36b26fa761 | 182 | 188 | the denominator law is now asserted (theorem)
+S6f hyp | 233 | d0bdc642c3a259b4 | 302 | 0 | [HYP] retired; record in Appendix B
+S7 phaselaw use | 252 | 91fa85bd84476cb2 | 58 | 85 | consumer of the import
+S7 checked | 237 | bc5be0de181693f4 | 39 | 71 | pin check
+S8a artifact | 281 | 47a745d696652f4a | 77 | 855 | registry entry for the review check
+S9a hyp row | 312 | 5cded48b7f17cd9a | 79 | 104 | provenance of the retired [HYP]
+S9b thm row | 315 | 901eda13f0b81363 | 125 | 809 | provenance of the theorem
+A v0.19 entry | 324 | 9604acf118a4bc17 | 56 | 657 | Appendix A entry
+A lineage | 331 | 4e40a39c02e9dd17 | 62 | 102 | lineage line
+B hyp record | 352 | aab5eac9b59284b4 | 71 | 891 | Appendix B record of the retired [HYP]; footer
+candidate SHA-256 00a6921437787e77bc8af5fcd50663fca4b4440ea564ea7c1054640d22464268, 46444 bytes, 27 edits

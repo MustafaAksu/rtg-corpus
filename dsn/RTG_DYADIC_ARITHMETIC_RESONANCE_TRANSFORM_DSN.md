@@ -1,18 +1,18 @@
-# RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.18
+# RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.19
 
 **Title:** RTG Dyadic Arithmetic-Resonance Transform Study — Founding Charter and Diagnostic Ledger
-**Date:** 18 November 2026
+**Date:** 20 November 2026
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok
 **Scope:** Arithmetic transforms (cyclotomic resultants and real-subfield norms) over Dyadic-owned OPEN 9 $p$-resonance observables, and the diagnostics they produce; no Dyadic result is re-owned, no AZ graph-zeta result transfers, and nothing is claimed about the Riemann Hypothesis or prime distribution.
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5), standard layout. Short name: *Dyadic Zeta/Arithmetic Transform (DZT)*.
 **Programme tier:** Tier 3 — Continuous Programme, downstream diagnostic of Dyadic. Maturity **Level A** (defined model; exploration begun). All results inherit the OPEN-P0 ceiling (SG-PROG-2 / SG-DZT-6).
-**Document status:** ADOPTED — PI, 19 November 2026 (corrections and synchronization after the reactivation triage, list (i); Methodology v1.4 layout; no new claim, no grade raised). Adoption record: `records/dzt/DZT_v0_18_RELEASE_RECORD.md`.
-**Supersedes:** `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN` v0.8 (tag `dzt-v0.8`, SHA-256 `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2`)
+**Document status:** DRAFT — candidate of v0.19; not adopted. `dzt-v0.18` governs until the PI adopts and tags this edition.
+**Supersedes:** `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN` v0.18 (tag `dzt-v0.18`, SHA-256 `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee`)
 **Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`; source of truth for all OPEN 9 arithmetic) · Arithmetic Resonance and Zeta v0.10 (`az-v0.10`; discrete branch, quarantined, see SG-DZT-1) · Ontological Foundations v0.12 (`ofn-v0.12`)
 **DSN Methodology:** v1.4 (`methodology-v1.4`)
 **§1 length:** above the 500-word target of Methodology §1, because §1 states the three founding `[DEF]` records of the study (transform, channel state, ambient field) in full.
 
-**Status summary:** This study defines a transform on Dyadic-owned OPEN 9 arithmetic. DZT-OPEN-0A is closed at finite-horizon scope (all three rows: $b=5$ survival, $b\le4$ structural absence, cascade $(4,(0,3))$). The active frontier is DZT-OPEN-0B-R: prove or reject the anomaly rule for all $p$ from a resultant identity (§2). No Dyadic result is re-owned here; no AZ Thread-C graph-zeta result transfers; no OPEN-M amplitude or RH/prime claim is made.
+**Status summary:** This study defines a transform on Dyadic-owned OPEN 9 arithmetic. DZT-OPEN-0A is closed at finite-horizon scope (all three rows: $b=5$ survival, $b\le4$ structural absence, cascade $(4,(0,3))$). DZT-OPEN-0B-R is closed by the all-$p$ theorem DZT-THM-CASCADE-NORM-LAW (§6.3), conditional on the imported Dyadic closed form; the open items are DZT-OPEN-B1 and DZT-OPEN-B2 (§2). No Dyadic result is re-owned here; no AZ Thread-C graph-zeta result transfers; no OPEN-M amplitude or RH/prime claim is made.
 
 ## Local Tag Aliases
 
@@ -59,11 +59,11 @@ where $F_C$ is the Dyadic coefficient field fixed by the source convention and $
 
 `[ALG]` `[scope: validation table p=12–64, 14 points]` **Amplitude norm.** With $M_p=Q_p/(i\zeta_p^3)\in\mathbb{Q}(\zeta_p)^+$ (Dyadic all-$p$ factorization, DYAD-THM-Q403-PHASELAW), $\lvert N_{\mathbb{Q}(\zeta_p)^+/\mathbb{Q}}(M_p)\rvert$ is rational at every audited point. The tabulated values are absolute values; their sign is not determined here. The canonical computation is the closed-form audit for $p\le1000$. Statement and values: §6.3, DZT-ALG-CASCADE-NORM.
 
-`[ALG]` `[scope: finite horizon p≤1000, 249 points]` **Odd-prime anomalies.** On the audited range the values with an odd prime in their numerator are exactly those at $p=8\ell^a$ ($\ell$ an odd prime, $\ell^a\equiv1\!\pmod4$; 20 points), with numerator $\ell^2$; on the 14-point table the only such point is $p=40$. Statement: §6.3, DZT-ALG-CASCADE-ANOMALY-SET.
+`[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]` **Amplitude-norm law.** For every $p=4s\ge12$, $\lvert N_+(M_p)\rvert=\ell(p)^2/2^{d_p}$ with $d_p=\varphi(p)/4+[p=2^k]+[p=3\cdot2^k]$, where $\ell(p)=\ell$ if $p=8\ell^a$ ($\ell$ an odd prime, $\ell^a\equiv1\!\pmod4$) and $1$ otherwise. The odd-prime anomalies are exactly these points (20 for $p\le1000$; on the 14-point table only $p=40$). The sign is not part of the statement. Statement and proof: §6.3, DZT-THM-CASCADE-NORM-LAW.
 
 `[FAIL]` **Support-on-2 hypothesis.** The hypothesis that the amplitude norm is a pure power of 2 for all $4\mid p$ is false ($p=40$ gives $\tfrac{25}{16}$). Record: §6.3 and Appendix B, DZT-HYP-MAHLER-NEARMISS.
 
-`[OPEN]` **Frontier.** DZT-OPEN-0A is closed at finite-horizon scope (all three rows: $b=5$ survival, $b\le4$ structural absence, cascade $(4,(0,3))$). The active frontier is DZT-OPEN-0B-R: prove or reject the anomaly rule for all $p$ from a resultant identity (§2). Then the Track B objects.
+`[OPEN]` **Frontier.** DZT-OPEN-0A is closed at finite-horizon scope (all three rows: $b=5$ survival, $b\le4$ structural absence, cascade $(4,(0,3))$). DZT-OPEN-0B-R is closed by DZT-THM-CASCADE-NORM-LAW (§6.3). The open items are the Track B objects DZT-OPEN-B1 and DZT-OPEN-B2 (§2).
 
 ---
 
@@ -71,7 +71,7 @@ where $F_C$ is the Dyadic coefficient field fixed by the source convention and $
 
 ### Priority ordering
 1. **DZT-OPEN-0A** — cyclotomic reproduction audit. CLOSED at finite-horizon scope: $b=5$ survival, $b\le4$ structural absence, and cascade $(4,(0,3))$ Case-V norm row all done.
-2. **DZT-OPEN-0B-R** — prove or reject the corrected resultant pattern: $\lvert N_+(M_{8q})\rvert$ has odd-prime support iff $q=\ell^a$ is a prime power with $q\equiv1\!\pmod4$, with numerator $\ell^2$. Verified `[ALG]` `[scope: finite horizon p≤1000, 249 points]`; candidate mechanism `[HYP]` (below and §6.3).
+2. **DZT-OPEN-0B-R** — CLOSED for all $p=4s\ge12$ by DZT-THM-CASCADE-NORM-LAW (§6.3), conditional on DYAD-THM-Q403-PHASELAW; closed reference at the end of this section.
 3. **DZT-OPEN-B1** — formal local NF/dynamical zeta near $P_1$ (algebraic, near-term).
 4. **DZT-OPEN-B2** — analytic transfer/Ruelle zeta of the global map (deferred analytic frontier).
 
@@ -88,24 +88,14 @@ Closed sub-items:
 - $b\le4$ structural-absence encoding: for $b\in\{2,3,4\}$ at $p\ge b+2$, the transform reports $E_{(0,b)}(p)=0$ (structural/secular absence) with no $P_C$ and no resultant defined — distinct from a cyclotomic cancellation $R_C=0$. Certified against the $b=5$ $E_C=1$ contrast class by `dzt_channel_audit.py` (exit 0). `[ALG]` `[scope: DZT channel-state encoding test]` ✓ [RID: DZT-ALG-B234-STRUCTURAL]
 - Cascade $(q,D)=(4,(0,3))$ (finite horizon): using the Dyadic-emitted Case-V values (Dyadic extractor DYAD-ART-Q403-EXTRACT; §7), DZT reproduces $p=8$ cancellation and the $p=12$ value $-13+\tfrac{15\sqrt3}{2}$, and registers the transform as the real-subfield norm in $\mathbb{Q}(\zeta_p)^+$ (not a $\Phi_p$-resultant: the channel is Case V, a per-$p$ algebraic value, not a single polynomial). The amplitude norm $N_{\mathbb{Q}(\zeta_p)^+/\mathbb{Q}}(M_p)$ is rational at all points; its absolute value is a 2-power on $p=12$–$36$ and $p=44,48,52$ but $5^2\cdot2^{-4}$ at $p=40$ (DZT-ALG-CASCADE-NORM, §6.3). `[ALG]` `[scope: finite horizon]` ✓ [RID: DZT-ALG-CASCADE-ROW]
 
-Active sub-items: none — the reproduction audit is complete. The norm-mechanism question (post-falsification) is tracked under DZT-OPEN-0B.
+Active sub-items: none — the reproduction audit is complete. The norm-mechanism question (post-falsification) was tracked under DZT-OPEN-0B-R and is closed by DZT-THM-CASCADE-NORM-LAW (§6.3).
 
 Pass: reproduces certified zero/nonzero exactly; separates $E_C=0$ structural vanishing ($b\le4$) from $E_C=1$ cyclotomic survival ($b=5$); registers $p=12,(4,(0,3))$ as algebraically nonzero with its reduced-norm diagnostic.
 Fail: collapses to prime/composite classification; mixes channels; encodes structural vanishing as a resultant zero; depends on a $\lambda_6=\zeta_p$ substitution outside $p=6$ (SG-DZT-7); cannot reproduce a certified status.
 
-Next required artifact: none (audit complete). With the Dyadic (R)-link now closed, the factorization is all-$p$; the remaining all-$p$ work (DZT-OPEN-0B-R) is the **DZT-native** resultant-identity proof and no longer depends on any upstream gate.
+Next required artifact: none (audit complete). With the Dyadic (R)-link now closed, the factorization is all-$p$; the all-$p$ norm law (DZT-OPEN-0B-R) is proved as DZT-THM-CASCADE-NORM-LAW (§6.3).
 
 Dependencies: Dyadic OPEN 9 channel polynomials/values (Import Ledger §7).
-
----
-
-**DZT-OPEN-0B-R — Corrected odd-prime anomaly law (resultant pattern)** [RID: DZT-OPEN-NORM-LAW]
-
-Status: ACTIVE (corrected pattern verified finite-horizon; all-$p$ proof open)
-Verified `[ALG]` `[scope: finite horizon p≤1000, 249 points]`: computing $\lvert N_+(M_p)\rvert$ from the Dyadic closed form via $N_{\rm full}=\mathrm{Res}(\Phi_p,A_s)/[2^{\varphi(p)}\mathrm{Res}(\Phi_p,L{+}1)^4\mathrm{Res}(\Phi_p,L^2{+}L{+}1)]$ with $A_s=L^{s+2}+L^s-L^2+1$, the odd-prime anomalies are **exactly** $p=8\ell^a$ with $\ell^a\equiv1\!\pmod4$ (the 20 points $40,72,\dots,1000$), and the numerator is exactly $\ell^2$. Machine-verified `dzt_anomaly_rule_check.py` (exit 0, 0 mismatches over 249 rows).
-Correction of import: the note's "every odd prime power $q$" is **false** — $q\equiv3\!\pmod4$ prime powers ($p=24,56,88,152,184,216$) are clean 2-powers; the $\equiv1\!\pmod4$ condition is required. The note's $N_+=2^{-\varphi(q)}$ denominator claim is also not general (fails off prime-powers); **no denominator formula is asserted**.
-Open target: prove or reject the corrected rule from a resultant identity for $\mathrm{Res}(\Phi_{8q},A_s)$. With the Dyadic phase law proved for all $p$ (DYAD-THM-Q403-PHASELAW), the factorization and hence the norm object $M_p\in\mathbb{Q}(\zeta_p)^+$ are defined for all $p=4s\ge12$, so this is a fully **DZT-native** problem (a cyclotomic resultant identity) with no outstanding upstream gate: the resultant proof is DZT-owned, conditional on the imported Dyadic factorization at `dyad-v6.4.24`. The anomaly law itself stays `[ALG]` `[scope: finite horizon p≤1000]` until the identity is proved. Candidate mechanism (`[HYP]`): the $\equiv1\!\pmod4$ gate is the reality of $\mathbb{Q}(\sqrt q)\subset\mathbb{Q}(\zeta_q)^+$ — for $q\equiv1$, $\sqrt q$ is real and $\ell$ enters $N_+$; for $q\equiv3$, only $\sqrt{-q}$ (imaginary) lies in $\mathbb{Q}(\zeta_q)$, excluded from the real-subfield norm.
-Standing falsifier: any $p\le1000$ violating the rule (none found); any larger $p$ with odd-prime support off the predicted set.
 
 ---
 
@@ -121,6 +111,10 @@ Candidate form: $\zeta_{\rm loc}(z)=\exp\!\big(\sum_m W_m z^m/m\big)$ with $W_m$
 
 Status: OPEN (analytic frontier; not a launch object)
 Requires a fixed operator type (Perron–Frobenius / Koopman / weighted Ruelle), domain (global map / wrapped cylinder / Birkhoff sector / $p$-step strobe), function space, weight, and a periodic-point-finiteness statement. The global map has an elliptic point $P_1$, a hyperbolic saddle $P_2$, and nonconstant $\det J$; singular/near-singular $\det(I-DT^m)$ on elliptic resonant orbits needs branch accounting. Deferred until B1 and 0A are settled.
+
+---
+
+**DZT-OPEN-0B-R — Corrected odd-prime anomaly law (resultant pattern)** [RID: DZT-OPEN-NORM-LAW] :: CLOSED :: `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]` :: all $p=4s\ge12$ :: Results: DZT-THM-CASCADE-NORM-LAW :: §6.3
 
 ---
 
@@ -181,7 +175,7 @@ Routing rules:
 | Claim | Valid form | Forbidden overclaim | Section |
 |---|---|---|---|
 | $b=5$ survival reproduction | $R_{(0,5)}(p)\ne0$ on finite horizon, reproduces certified all-$p$ survival `[RESULT]` `[from: ALG]` | DZT *proves* all-$p$ survival (it is Dyadic-owned, imported) | §6.2 |
-| Amplitude norm | rational $\lvert N_+(M_p)\rvert$ per point, `[ALG]` `[scope: validation table p=12–64; audit p≤1000]`; on the audited range the odd-prime anomalies are exactly $p=8\ell^a$, $\ell^a\equiv1\!\pmod4$ | the 2-power/support-on-2 *law* — **falsified** at $p=40$; any $k_p$ formula; a sign of $N_+(M_p)$ read off the tables | §6.3 |
+| Amplitude norm | $\lvert N_+(M_p)\rvert=\ell(p)^2/2^{d_p}$ for all $p=4s\ge12$, `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]` (DZT-THM-CASCADE-NORM-LAW); per-point values `[ALG]` `[scope: validation table p=12–64; audit p≤1000]` | the 2-power/support-on-2 *law* — **falsified** at $p=40$; the law without its Dyadic assumption; a sign of $N_+(M_p)$ read off the tables or the law | §6.3 |
 | Phase-law import | $Q_p=i\zeta_p^3M_p$, $M_p\in\mathbb{Q}(\zeta_p)^+$ as Dyadic **all-$p$ `[THM]`** (DYAD-THM-Q403-PHASELAW) | zeta-continuation / RH / prime-distribution reading without a named DZT bridge (SG-DZT-4) | §6.3, §7 |
 | Cyclotomic transform | vanishing $\iff \Phi_p\mid P_C$ `[ALG]` | a $p^{-s}$/RH/Euler-product reading | §1 |
 | $\lambda_6$ vs $\zeta_p$ | distinct except $p=6$ (SG-DZT-7) | identifying them at general $p$ | §3 |
@@ -214,9 +208,15 @@ Routing rules:
 
 The transform is nonzero throughout, reproducing the imported $b=5$ survival on the tested horizon, and carries arithmetic magnitude beyond the zero/nonzero bit (satisfying SG-DZT-8: nonvanishing resultant $=$ cyclotomic non-division, mapped onto a certified fact). Certified by `dzt_open_0a_verify.py` (exit 0; output attributes the all-$p$ statement to DYAD-OPEN-B5-ALLP and only the finite sweep to DZT). The all-$p$ statement remains Dyadic-owned (`[import-ref]`); DZT reproduces it on the horizon and supplies the size diagnostic.
 
-### §6.3 Cascade amplitude norm `[ALG]` — mixed content {#sec-6-3-nearmiss-norm}
+### §6.3 Cascade amplitude norm `[THM]` — mixed content {#sec-6-3-nearmiss-norm}
 
 `[import-ref]` `[THM]` `[import: RTG_DYADIC_OSCILLATOR_DSN v6.4.24 §6.11 | DYAD-THM-Q403-PHASELAW]` Each $q=4,(0,3)$ cascade value (Dyadic extraction DYAD-ART-Q403-EXTRACT; closed form in §7) factors as $Q_p=i\zeta_p^3 M_p$ with $M_p=Q_p/(i\zeta_p^3)\in\mathbb{Q}(\zeta_p)^+$ for all $p=4s\ge12$ ($p=8$ the zero degeneracy); the direction $i\zeta_p^3$ is universal ($\lambda^{-s}=-i$). $M_p$ is a real algebraic number whose sign is not asserted here. DZT's pointwise re-verification at the audited $p$ (incl. $p=40$) corroborates the Dyadic theorem; the all-$p$ proof is Dyadic-owned. `[ALG]` `[scope: object-level, all p=4s≥12]` Hence the norm $N_{\mathbb{Q}(\zeta_p)^+/\mathbb{Q}}(M_p)\in\mathbb{Q}$ is a well-defined invariant for all $p=4s\ge12$; its *values and anomaly pattern* are finite-horizon (below).
+
+`[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]` `[proof: written derivation]` `[RID: DZT-THM-CASCADE-NORM-LAW]` **Amplitude-norm law.** For every $p=4s\ge12$,
+$$\lvert N_+(M_p)\rvert=\frac{\ell(p)^2}{2^{d_p}},\qquad d_p=\frac{\varphi(p)}{4}+[p=2^k]+[p=3\cdot2^k],$$
+where $\ell(p)=\ell$ if $p=8\ell^a$ with $\ell$ an odd prime and $\ell^a\equiv1\!\pmod4$, and $\ell(p)=1$ otherwise. Hence the odd part of the numerator is $\ell^2$ exactly at the points $p=8\ell^a$, $\ell^a\equiv1\!\pmod4$, and $1$ elsewhere; the denominator is always $2^{d_p}$; on that set $\lvert N_+(M_{8\ell^a})\rvert=\ell^2/2^{\varphi(\ell^a)}$. The sign of $N_+(M_p)$ is not part of the statement. The assumption is the imported closed form of $Q_p$ (§7); $L=\zeta_p$ and $I=L^s$ are field elements of $K=\mathbb{Q}(\zeta_p)$.
+*Proof.* (i) Roots of unity in $K$ have norm 1 and $M_p\in K^+$, so $N_+(M_p)^2=N_{K/\mathbb{Q}}(M_p)=N_{K/\mathbb{Q}}(A_s)\big/\big(N_{K/\mathbb{Q}}(2)\,N_{K/\mathbb{Q}}(L+1)^4\,N_{K/\mathbb{Q}}(L^2+L+1)\big)$ with $A_s=IL^2+I-L^2+1$. (ii) $A_s=(I-1)(L^2-I)$ and $L^2-I=L^2(1-L^{s-2})$. (iii) `[MATH]` For $\eta\in K$ of exact order $n>1$: $N_{K/\mathbb{Q}}(1-\eta)=\Phi_n(1)^{\varphi(p)/\varphi(n)}$, with $\Phi_n(1)=\ell$ if $n=\ell^a$ and $\Phi_n(1)=1$ otherwise. (iv) By (iii): $N(2)=2^{\varphi(p)}$; $N(I-1)=2^{\varphi(p)/2}$ ($I$ has order 4; $I-1$ is not a unit); $N(L+1)=2$ if $p=2^k$ and $1$ otherwise ($1+L=1-L^{2s+1}$, of order $p$); $N(L^2+L+1)=4$ if $p=3\cdot2^k$ and $1$ otherwise ($L^2+L+1=(1-L^3)/(1-L)$). The order of $L^{s-2}$ is $n=p/\gcd(p,s-2)$; with $p=2^\alpha m$, $m$ odd: $n=p$ if $\alpha=2$; $n=2^{\alpha-1}m$ if $\alpha\ge4$; and for $p=8q$, $n=q$ if $q\equiv1\!\pmod4$ and $n=2q$ if $q\equiv3\!\pmod4$. So $N(1-L^{s-2})=\ell^4$ if $p=8\ell^a$ with $\ell^a\equiv1\!\pmod4$, $4$ if $p=2^k$, and $1$ otherwise; at $p=8$, $n=1$ and $Q_8=0$. (v) Assembling, $N_+(M_p)^2=2^{-\varphi(p)/2}\,\ell(p)^4\,4^{[p=2^k]}\big/\big(16^{[p=2^k]}\,4^{[p=3\cdot2^k]}\big)$, the square of the stated value ($4\mid\varphi(p)$). $\square$
+The mod-4 gate is the order of $L^{s-2}$: for $p=8q$ it is $q$ exactly when $8\mid s-2$. Step-by-step audit of the proof sources (named in §9): `records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md` §3. Exact check for $12\le p\le4000$: DZT-ART-NORMLAW-CHECK (§8). It contains DZT-ALG-CASCADE-NORM and DZT-ALG-CASCADE-ANOMALY-SET as finite cases.
 
 `[ALG]` `[RID: DZT-ALG-CASCADE-NORM]` `[scope: validation table, p=12–64; canonical computation is the p≤1000 closed-form audit below]` The absolute value of the real-subfield norm, $\lvert N_{\mathbb{Q}(\zeta_p)^+/\mathbb{Q}}(M_p)\rvert$, is rational at every point:
 $$\big(\tfrac14,\tfrac18,\tfrac14,\tfrac18,\tfrac18,\tfrac1{32},\tfrac18,\tfrac{25}{16},\tfrac1{32},\tfrac1{32},\tfrac1{64},\tfrac1{64},\tfrac1{16},\tfrac1{512}\big),\quad p=(12,16,20,24,28,32,36,40,44,48,52,56,60,64).$$
@@ -226,19 +226,15 @@ Pure 2-power at all 14 points except $p=40$: $\lvert N_+(M_{40})\rvert=\tfrac{25
 
 `[ALG]` `[RID: DZT-ALG-P12-NORM]` The certified cascade-boundary survivor $v=-13+\tfrac{15\sqrt3}{2}\in\mathbb{Q}(\sqrt3)$ (Dyadic, channel $(q,D)=(4,(0,3))$, $p=12$; $|v|\approx0.0096$) has $\mathbb{Q}(\sqrt3)/\mathbb{Q}$ **reduced** field norm $N_{\mathbb{Q}(\sqrt3)/\mathbb{Q}}(v)=v\,\bar v=(-13)^2-3\big(\tfrac{15}{2}\big)^2=169-\tfrac{675}{4}=\tfrac14$. The smallness of $|v|$ coincides with a large conjugate ($\bar v\approx-25.99$) and a small rational norm $\tfrac14$. The norm value is exact and machine-verified (`dzt_open_0a_verify.py`, §8; run source-reported). It is the $\varphi/2=2$ point ($\mathbb{Q}(\zeta_{12})^+=\mathbb{Q}(\sqrt3)$); $p=8$ is the $Q_8=0$ degeneracy ($\mathbb{Q}(\zeta_8)^+=\mathbb{Q}(\sqrt2)$). A fact about one value; survives the family falsification.
 
-`[OPEN]` What survives the falsification: the norm is rational; the Dyadic factorization holds; the certified boundaries are reproduced. The odd-prime support question is DZT-OPEN-0B-R (§2); the anomaly set found so far is DZT-ALG-CASCADE-ANOMALY-SET below — not support-on-2.
+`[ALG]` `[scope: finite horizon p≤1000, 249 points]` `[RID: DZT-ALG-CASCADE-ANOMALY-SET]` The odd-prime anomalies are exactly $p=8\ell^a$ with $\ell^a\equiv1\!\pmod4$: the 20 points $\{40,72,104,136,200,232,296,328,392,424,488,584,648,712,776,808,872,904,968,1000\}$, each with $\lvert N_+\rvert$ numerator exactly $\ell^2$ (e.g. $p=72=8\cdot3^2\!\to9/64$; $p=200=8\cdot5^2\!\to25/2^{20}$; $p=392=8\cdot7^2\!\to49/2^{42}$). Machine-verified `dzt_anomaly_rule_check.py` (exit 0, 0 mismatches / 249; run source-reported, §8). It is the $p\le1000$ case of DZT-THM-CASCADE-NORM-LAW.
 
-`[ALG]` `[scope: finite horizon p≤1000, 249 points]` `[RID: DZT-ALG-CASCADE-ANOMALY-SET]` The odd-prime anomalies are exactly $p=8\ell^a$ with $\ell^a\equiv1\!\pmod4$: the 20 points $\{40,72,104,136,200,232,296,328,392,424,488,584,648,712,776,808,872,904,968,1000\}$, each with $\lvert N_+\rvert$ numerator exactly $\ell^2$ (e.g. $p=72=8\cdot3^2\!\to9/64$; $p=200=8\cdot5^2\!\to25/2^{20}$; $p=392=8\cdot7^2\!\to49/2^{42}$). Machine-verified `dzt_anomaly_rule_check.py` (exit 0, 0 mismatches / 249; run source-reported, §8).
-
-`[ALG]` `[scope: finite horizon p≤1000]` **Correction of the imported note.** The note's pattern "anomaly for every odd prime power $q$" is **false**: prime powers $q\equiv3\!\pmod4$ ($p=24,56,88,152,184,216,\dots$) are pure 2-powers on the audited range. The required condition is $q\equiv1\!\pmod4$. The note's $N_+=2^{-\varphi(q)}$ denominator formula also fails in general (only the anomaly *locations* and the $\ell^2$ *numerators* are clean); **no denominator law is asserted**.
-
-`[HYP]` Candidate mechanism for the mod-4 gate: $q\equiv1\!\pmod4\Rightarrow\mathbb{Q}(\sqrt q)\subset\mathbb{Q}(\zeta_q)^+$ real (so $\ell$ enters the real-subfield norm); $q\equiv3\Rightarrow$ only $\mathbb{Q}(\sqrt{-q})$, imaginary, excluded. To be settled by the DZT-OPEN-0B-R resultant identity.
+`[ALG]` `[scope: finite horizon p≤1000]` **Correction of the imported note.** The note's pattern "anomaly for every odd prime power $q$" is **false**: prime powers $q\equiv3\!\pmod4$ ($p=24,56,88,152,184,216,\dots$) are pure 2-powers on the audited range. The required condition is $q\equiv1\!\pmod4$. The note's $N_+=2^{-\varphi(q)}$ denominator formula also fails in general: it holds on the anomaly set and not off it. The general law, denominators included, is DZT-THM-CASCADE-NORM-LAW.
 
 ---
 
 ## §7. Import Ledger {#sec-7-imports}
 
-All imports are from `RTG_DYADIC_OSCILLATOR_DSN` v6.4.24 (`dyad-v6.4.24`), checked against that edition for v0.18; identifiers as classified by its Appendix F (`dyad-v6.4.24`), which creates no alias. Ownership remains Dyadic. No AZ, TDR-G, OPEN-M or Genesis import (SG-DZT-1/2/5).
+All imports are from `RTG_DYADIC_OSCILLATOR_DSN` v6.4.24 (`dyad-v6.4.24`), checked against that edition for v0.18 and v0.19 (no newer Dyadic tag); identifiers as classified by its Appendix F (`dyad-v6.4.24`), which creates no alias. Ownership remains Dyadic. No AZ, TDR-G, OPEN-M or Genesis import (SG-DZT-1/2/5).
 
 - [RID: DYAD-ALG-B5-ALLP-NONVANISHING] :: $b=5$ channel: $F_{\rm raw}^p(0,5)\ne0$ for every $p\ge6$; channel polynomial $N=2x^6+x^5-5x^4-3x^3-4x^2+2x+1$ with $\Phi_p\nmid N$ :: Dyadic v6.4.24 §6.11 :: source for §6.2 :: dyadic map, $b=5$, all $p\ge6$
   Source status: `[ALG]` (all $p$, complete); it closes the lifecycle identifier DYAD-OPEN-B5-ALLP.
@@ -253,7 +249,7 @@ All imports are from `RTG_DYADIC_OSCILLATOR_DSN` v6.4.24 (`dyad-v6.4.24`), check
   Source status: owner statement without a RID (owner Appendix F, `dyad-v6.4.24`, lists the string DZT used as unmatched); cited as text. Sign as stated by the owner.
 - [RID: DYAD-ALG-P6-FACEFLUX] :: $\lambda_6=e^{iF_f/2}=e^{i\pi/3}$ resonance eigenvalue :: Dyadic v6.4.24 §6.2 :: SG-DZT-7 two-root discipline :: $p=6$ only
   Source status: `[ALG]`.
-- [RID: DYAD-THM-Q403-PHASELAW] :: for $p=4s$, $s\ge2$: $\sigma_{-1}(Q)=-L^{-6}Q$ for the closed form $Q=L^5(IL^2+I-L^2+1)/[2(L+1)^4(L^2+L+1)]$, $L=\zeta_p$, $I=L^{p/4}=i$; hence $Q_p=i\zeta_p^3M_p$ with $M_p=Q_p/(i\zeta_p^3)\in\mathbb{Q}(\zeta_p)^+$ ($p=8$ the zero degeneracy; nonzero phase law from $p=12$) :: Dyadic v6.4.24 §6.11 :: §6.3 norm object; closed-form audit of DZT-OPEN-0B-R :: dyadic map, $4\mid p$
+- [RID: DYAD-THM-Q403-PHASELAW] :: for $p=4s$, $s\ge2$: $\sigma_{-1}(Q)=-L^{-6}Q$ for the closed form $Q=L^5(IL^2+I-L^2+1)/[2(L+1)^4(L^2+L+1)]$, $L=\zeta_p$, $I=L^{p/4}=i$; hence $Q_p=i\zeta_p^3M_p$ with $M_p=Q_p/(i\zeta_p^3)\in\mathbb{Q}(\zeta_p)^+$ ($p=8$ the zero degeneracy; nonzero phase law from $p=12$) :: Dyadic v6.4.24 §6.11 :: §6.3 norm object; the assumption of DZT-THM-CASCADE-NORM-LAW; closed-form audit :: dyadic map, $4\mid p$
   Source status: `[THM]` `[proof: exact algebraic identity]`. Its parts at the owner carry no separate RIDs (owner Appendix F, `dyad-v6.4.24`): the universal direction $\lambda^{-s}=\zeta_p^{-p/4}=-i$ for all $4\mid p$; the reality relation $f^{\bar W}_{(b,a)}=\overline{f^W_{(a,b)}}$, lifting through composition ($J(f^s)=(Jf)^s$), with $J$ realized by the Galois automorphism $\sigma_{-1}$; the leading $(0,3)$ accumulation $\sum_{k=0}^{s-1}\zeta_p^{-4k}=0$ for $s\ge2$, so that $Q_p$ is the subleading remainder (total cancellation at $s=2$, i.e. $Q_8=0$); the remainder relation in its $A_p$-form, $\sigma_{-1}(A_p)=\zeta_p^{-6}A_p$; and the closed form above.
   Verification: owner entry inspected (`EV-SRC-READ`). DZT checked the closed form against the Dyadic extractor at $p=12,16,20,24,40,44,60$ (source-reported). The owner certificate is DYAD-ART-Q403-CERT; not rerun by DZT.
 - [RID: DYAD-ART-Q403-EXTRACT] :: exact in-field extractor `q4_03_cascade_extract.py` for the Case-V values $Q_p\in\mathbb{Q}(\zeta_p)$ ($p=8$–$64$, $4\mid p$): raw $R^{\rm raw}_{p,4}=\lambda^{-s}f_p^s-\mathrm{Id}$, $s=p/4$, charge-projected on $K^{\rm extra}_{p,4}$, $\chi(a,b)=(a-b-1)\bmod p$; calibration gates $p=8\to0$, $p=12\to-13+\tfrac{15\sqrt3}{2}$ :: Dyadic v6.4.24 §8 :: source of the Case-V values used for §6.3 and DZT-ALG-CASCADE-ROW :: dyadic map, $4\mid p$, $p=8$–$64$
@@ -282,7 +278,10 @@ Paths in this section are relative to `upload/dzt-recovery-20261116/received/ori
 - [RID: DZT-ART-ANOMALY-RULE] :: `dzt_anomaly_rule_check.py` :: verifies the **corrected** anomaly rule ($p=8\ell^a$, $\ell^a\equiv1\!\pmod4$, numerator $\ell^2$) against the 249-row CSV :: `[ENG]` exit 0 (0 mismatches)
   Files: [RECOVERED] `dzt_anomaly_rule_check.py`, SHA-256 `cec06de0650a43f91f4c242403c6eb18af5a40915add5cdc2ff51611a4145b44`.
 
-Every exit code in this section is source-reported; none was rerun for v0.18.
+- [RID: DZT-ART-NORMLAW-CHECK] :: `evidence/dzt/norm_law_review/dzt_norm_law_review_check.py` (repository path) :: exact integer resultants for $12\le p\le4000$ checking every norm in the proof of DZT-THM-CASCADE-NORM-LAW and the law itself, $p=8$, the recovered CSV and the 14-point table; signed products for $p\le1000$; the LIT sign pattern for $p\le100000$ :: `[ENG]` exit 0
+  Files: SHA-256 `566867bb541cd3f5cb4fb1aa11c43ddd4f9b9c0a1e5149697c35a805ac4cebb7`; output `check_output_4000_1000_100000.txt` (`2cc86b9e88f94aa0ca4133bbc961fa3a3f1ae0c1f760c981734ac699d0be188f`); six negative controls PASS (`negative_controls.py`). Run for the owner review on 19 November 2026; a finite check, not the proof.
+
+The exit codes of the recovered files are source-reported and were not rerun; DZT-ART-NORMLAW-CHECK was run in the repository for the owner review.
 
 ---
 
@@ -310,10 +309,11 @@ Every exit code in this section is source-reported; none was rerun for v0.18.
 | $p=40$ is the sole 2-power anomaly across 14 points (isolated outlier; superseded, Appendix B) | Claude (v0.6) | `[OBS]` |
 | Dyadic closed form for the cascade; DZT-verified faithful | Dyadic stream (v0.7) | `[import-ref]` |
 | Anomalies recur; $p=40$ not globally isolated (next $p=72$) | Claude (v0.7) | `[COR]` |
-| Corrected anomaly rule: $p=8\ell^a$, $\ell^a\equiv1\!\pmod4$, numerator $\ell^2$ (249 pts) | Claude (v0.7) | `[ALG]` `[scope: finite horizon p≤1000]`; mechanism `[HYP]` |
+| Corrected anomaly rule: $p=8\ell^a$, $\ell^a\equiv1\!\pmod4$, numerator $\ell^2$ (249 pts) | Claude (v0.7) | `[ALG]` `[scope: finite horizon p≤1000]`; mechanism `[HYP]` (superseded, Appendix B) |
 | Correction of imported note ($\equiv1\!\pmod4$ required; no denominator law) | Claude (v0.7) | `[COR]` |
 | (R)-link closed upstream → factorization $Q_p=i\zeta_p^3M_p$ now all-$p$; norm object all-$p$ | Dyadic stream (v0.8) | factorization `[THM]` (Dyadic, DYAD-THM-Q403-PHASELAW); norm object all-$p$ `[ALG]` `[scope: object-level, all p=4s≥12]` (DZT, §6.3) |
 | Object-vs-pattern discipline: anomaly law stays finite-horizon despite (R)-closure | Claude (v0.8) | `[DEF]` (scope rule) |
+| All-$p$ amplitude-norm law $\lvert N_+(M_p)\rvert=\ell(p)^2/2^{d_p}$; the mod-4 gate is the order of $L^{s-2}$ | recovered DZT proof notes (odd support: `DZT_OPEN_0B_R_odd_support_proof_note.md`, SHA-256 `9ce5e99f012319d5cd5d095ed32261857e009d905ed8cf9cf3274f7b6355a30f`; denominator: `DZT_THM_CASCADE_DENOMINATOR_proof.md`, `2a8354ca43d9c33b443a4f8f5d8fdf03548304b39e22badf46aedd598c1b5e39`; both [RECOVERED]); LIT note `DZT_NORM_LAW_PROOF_NOTE.md` at rtg-lit `8e2fb5cb` (complete derivation; Claude, LIT co-owner); owner review (Claude) and independent review (ChatGPT, review `5983698371`); PI grade decision, 20 Nov 2026 (v0.19) | `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]` |
 | $p=8$ real-subfield correction ($\mathbb{Q}(\zeta_8)^+=\mathbb{Q}(\sqrt2)$, $Q_8=0$) | Dyadic catch + Claude verify (v0.4) | `[ALG]` |
 | Imported Dyadic phase law (DYAD-THM-Q403-PHASELAW); P1, reality and LEAD are its components, historical note labels without owner RIDs (owner Appendix F, `dyad-v6.4.24`) | Dyadic stream (v0.4) | `[THM]` (Dyadic, at `dyad-v6.4.24`) |
 
@@ -321,11 +321,14 @@ Every exit code in this section is source-reported; none was rerun for v0.18.
 
 ## Appendix A — Version History
 
+### v0.19 — 20 November 2026 — DRAFT
+The all-$p$ amplitude-norm law enters as DZT-THM-CASCADE-NORM-LAW, `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`, after the owner review `records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md` and the PI's decisions of 20 November 2026 on its grade, RID and entry by edition; it closes DZT-OPEN-NORM-LAW (DZT-OPEN-0B-R). The `[HYP]` mechanism of the mod-4 gate is retired (Appendix B). The review check is registered as DZT-ART-NORMLAW-CHECK. No other claim or grade changes; the sign of $N_+(M_p)$ stays outside the theorem. Record: `records/dzt/DZT_v0_19_RELEASE_RECORD.md`.
+
 ### v0.18 — 18 November 2026 — adopted 19 November 2026
 Corrections and synchronization edition after the reactivation triage (`records/dzt/DZT_REACTIVATION_TRIAGE.md`), with the Methodology v1.4 migration as a second build stage; no new scientific claim and no grade raised. The tabulated amplitude norms are stated as $\lvert N_+(M_p)\rvert$, and $M_p$ is defined as $Q_p/(i\zeta_p^3)$ with its sign not asserted; the validation table and the anomaly set are scoped together; the Import Ledger is repinned to `dyad-v6.4.24` per its Appendix F; compound grade tokens are unpacked; §8 cites the recovered script files by path and hash with their evidence states; §1 keeps readouts and pointers. Companion pins: `programme-v1.4`, `dyad-v6.4.24`, `az-v0.10`, `ofn-v0.12`, `methodology-v1.4`. Corrections: Appendix B. Record: `records/dzt/DZT_v0_18_RELEASE_RECORD.md`.
 
 ### v0.9–v0.17 — not part of this lineage
-DZT editions v0.9–v0.17 (June 2026) have no adoption record. Their files were received on 16 November 2026 and are listed with hashes in the v0.18 release record; their content enters v0.18 only through the corrections above.
+DZT editions v0.9–v0.17 (June 2026) have no adoption record. Their files were received on 16 November 2026 and are listed with hashes in the v0.18 release record; their content enters this lineage only through the corrections of v0.18 and the owner review of v0.19.
 
 ### v0.1–v0.8 — June 2026
 From the founding charter (v0.1) to the integration of the Dyadic all-$p$ phase law (v0.8). Full entries: Appendix A of `dzt-v0.8`.
@@ -346,4 +349,8 @@ From the founding charter (v0.1) to the integration of the Dyadic all-$p$ phase 
 
 `[SUPERSEDED]` Original (`dzt-v0.8` §6.3, an `[OBS]` of v0.6): "$p=40$ is the sole anomaly across 14 points", an isolated exception. Reason: true only for $p\le64$; the closed-form audit to $p\le1000$ finds 20 anomaly points (the next after $p=40$ is $p=72$), as the v0.7 `[COR]` recorded. Replacement: §6.3, DZT-ALG-CASCADE-ANOMALY-SET. Recorded in: v0.7 (as a `[COR]` in §6.3); moved here in v0.18.
 
-*END OF DOCUMENT — RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.18*
+---
+
+`[SUPERSEDED]` Original (`dzt-v0.18` §2 and §6.3, `[HYP]`): "the $\equiv1\!\pmod4$ gate is the reality of $\mathbb{Q}(\sqrt q)\subset\mathbb{Q}(\zeta_q)^+$ — for $q\equiv1$, $\sqrt q$ is real and $\ell$ enters $N_+$; for $q\equiv3$, only $\sqrt{-q}$ (imaginary) lies in $\mathbb{Q}(\zeta_q)$". Reason: the proof of DZT-THM-CASCADE-NORM-LAW locates the gate in the order of $L^{s-2}$ ($q$ when $q\equiv1\!\pmod4$, $2q$ when $q\equiv3$); no quadratic subfield enters. The reading cannot be the reason at $q=9$: $p=72$ is an anomaly ($\lvert N_+\rvert=9/64$) while $\sqrt9$ is rational and $\mathbb{Q}(\zeta_9)^+$ is cubic; the same holds for every $q=\ell^{2b}$. Replacement: §6.3, DZT-THM-CASCADE-NORM-LAW, proof step (iv). Recorded in: v0.19.
+
+*END OF DOCUMENT — RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.19 — DRAFT; adoption pending; `dzt-v0.18` governs until adoption and tag.*
