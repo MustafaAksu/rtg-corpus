@@ -1,0 +1,3 @@
+STAGE=4 evaluated=1600 excluded=384 split=319 retained=897 unresolved=0 budget_kept=897 depth_kept=0 frontier_kept=0 L1=8.204566e-05 status=BUDGET
+STATUS=BUDGET initial=324 replay_400=144 replay_576=324 replay_1296=324 stages=1 total_evaluations=1600 budget=1600 final_boxes=897 final_L1_256=9500238610898602800774973324854448480248468715523481333284230686146628257 final_L1=8.204566e-05
+SESSION_ONLY; all candidates retained on budget/domain/cap; NO certificate, point jump or stage3c-b.
