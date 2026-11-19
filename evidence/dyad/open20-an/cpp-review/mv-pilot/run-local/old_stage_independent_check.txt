@@ -1,0 +1,2 @@
+ADAPTIVE_INDEPENDENT_INTEGER_PASS initial=324 events=1600 stages=1 evaluated=1600 retained_final=897 L1_256=9500238610898602800774973324854448480248468715523481333284230686146628257 stop=BUDGET
+SESSION_ONLY; excludes rely on frozen source logs and unproved graph/tube hypotheses

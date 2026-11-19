@@ -344,3 +344,52 @@ Both are effects of the long interval flow from the original lift, and both impr
 3. Separate counters (a1) and an explicit argument for the sibling test path (a3).
 
 No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 6 — mean-value base enclosure and resume driver (20 November 2026)
+
+**Reviewed:** `DYAD_CPP_MV_RESUME.zip`, SHA-256 `4c55165e9ca7db345397c3edc0a3ca76a5df688f1163d2109dc6996fc2f07b38` (relayed by the PI as an attachment; **not yet on an `upload/` branch**); inner sums 10/10 OK. New source `mv_resume.cpp` (282 lines), read in full; it includes `adaptive.cpp` and everything below it unchanged.
+**Request:** R1 to R6 of the package's `OWNER_REVIEW_REQUEST.md`. This addendum is a **pre-run review plus an owner pilot run**; the PI's pilot output is not yet deposited.
+
+## Verdict
+
+**R1 to R5 ACCEPT by reading (SESSION).** The owner pilot on the pinned Stage-2 transfer completes (1600/1600, exit 0, package checker `MV_PILOT_INTEGER_PASS`). R6 (byte comparison with the PI) is pending the PI run.
+
+## R1 — the mean-value base bound
+
+- x_k is a holomorphic function of d on the evaluation disc (the engine propagates one complex tangent through complexified T; the C1–C2 step already relies on this). `whole.a.d` encloses ∂x_k/∂d on the whole disc (`lifted_readout` builds the base jet from the whole-disc state and tangent). The disc is convex, so x_k(d) − x_k(c) = ∫₀¹ x_k′(c + t(d − c))(d − c) dt and \|x_k(d) − x_k(c)\| ≤ sup\|x_k′\|·r. `abs_upper` is an outward Euclidean bound (ceil-sqrt of squared outward magnitudes), the product is rounded up (`cd`), `point.a.v` is an enclosure of x_k(c), and `inflate` adds the radius on both axes (box ⊇ disc). ✓
+- X_whole ∩ X_mv contains every x_k(d); a disjoint pair aborts (runtime error, exit 3), never an empty cover. ✓
+- `upper(X)` is a valid bound of R₀ on X ∩ D₀ for any enclosure X (F1-R1), so each of the three values is valid and their minimum is valid. A `domain_error` in an optional bound keeps the raw bound. ✓
+- The new necessary disc has the same centre and a smaller radius; `measure` checks old ⊇ new. ✓
+
+## R2, R3 — sources and pilot
+
+The seven pins include the adaptive `events.tsv` (`276701a0…8a1f`) and `final_frontier.tsv` (`4cb41a4f…5c2f`), equal to the owner replay of Addendum 5. `replay_frozen_events` reconstructs the original FIFO (324 depth-0 inputs; children of SPLIT rows in order) and the 897-box frontier exactly; the 144 + 324 + 324 source survivors are replayed. In `pilot`, each of the 1600 logged discs is recomputed and its seven old integers, necessary box and old action must match before the new bound is recorded. ✓
+Minor: in `pilot`, the printed column `intersection_M_256` calls `upper(effective)` again outside the `try`; a `domain_error` there would end the pilot as INCONCLUSIVE (safe, but it would lose a valid row). It did not occur.
+
+## R4, R5 — resume
+
+`resume` starts from the 897 frozen final rectangles with their depths (1 at 0, 896 at 1), evaluates them at k = 4 with the new bound, splits only post-contractor intersections, resets depth only for k ≥ 5, and keeps every box on budget, cap or domain paths. The two budget counters are now separate (`budget_pending`, `budget_valid_no_split`). The run returns 2 unless all stages to MAX_K are READY. ✓
+
+## Owner pilot ([NUM], REVIEWER-RUN)
+
+Owner container, pinned transfer, wall time 785 s. `base_pilot.tsv` SHA-256 `5ff09c47…04b8` (kept for comparison with the PI run). By depth (`pilot_breakdown_owner.txt`; medians):
+
+| depth | old action | n | M₄ new/old | Dr/M₄ new | M₄/\|b₄\| new | radius old → new | new action |
+|---|---|---|---|---|---|---|---|
+| 0 | SPLIT | 319 | 0.18 | 24.2 | 8.73·10⁻⁶ | 2.59 → 2.20·10⁻⁴ | 319 retained |
+| 1 | RETAINED | 896 | 0.50 | 4.06 | 8.69·10⁻⁶ | 5.27 → 4.40·10⁻⁵ | 784 retained, **112 newly excluded** |
+| 1 | EXCLUDED | 380 | 0.61 | 2.09 | 8.68·10⁻⁶ | | 380 excluded |
+
+**Reading.**
+1. The diagnosis of Addendum 5 is confirmed: with the mean-value base, M₄ falls on every disc (1600/1600), and the tube part of the necessary radius becomes **M₄/\|b₄\| ≈ 8.7·10⁻⁶, independent of box size**. That is the k = 4 tube floor. The floors are now 7.4·10⁻⁵ (k = 2), 2.4·10⁻⁵ (k = 3), 8.7·10⁻⁶ (k = 4): the factor of about 3 per block returns.
+2. The derivative term now dominates (Dr/M₄ ≈ 4 at r ≈ 3.9·10⁻⁶). With D₄ ∝ r^{1.6} (Addendum 5), one more halving gives about 1.3 and two give about 0.4.
+3. Applied to the frozen frontier, the new bound alone removes 112 of the 896 depth-1 boxes.
+
+## Advice on the resume parameters
+
+The co-owner's resume line uses budget 1800, depth 2. The budget rule reserves room for the whole queue: after re-evaluating the 897 boxes, a split is allowed only while total + queue + 4 ≤ budget. With about 785 high-ratio survivors, all of them split only if the budget is at least about 897 + 4·785 ≈ 4040. With 1800, about 225 split and the run stops INCONCLUSIVE again. **Suggested: `resume 4 4200 2 4096`** (k = 4 only, about 30–35 minutes at the measured 0.44 s per evaluation). The frontier cap 4096 is enough (≈ 3140 children).
+Also: the MV package should go to an `upload/` branch unchanged before or with the PI's results.
+
+No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.

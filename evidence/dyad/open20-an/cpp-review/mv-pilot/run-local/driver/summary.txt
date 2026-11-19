@@ -1,0 +1,2 @@
+PILOT rows=1600 expected=1600 improved_M=1600 original_excluded=384 new_excluded=496 M_ratio_median_256=57785760180252480683375862590509150189362919539693731783435106449910838737899
+SESSION_ONLY: MV base bound, old exact replay, no graph/tube certificate or point jump.
