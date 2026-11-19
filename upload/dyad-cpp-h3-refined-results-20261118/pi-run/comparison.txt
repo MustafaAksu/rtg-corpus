@@ -1,0 +1,7 @@
+h3_324 evaluations=324 retained=252 excluded=72 unresolved=0 finalL1=1.659646e-04 elapsed_seconds=304.841 Dr_gt_M3=308 median_Dr_over_M3=2.879238e+00
+h3_split2 evaluations=1296 retained=324 excluded=972 unresolved=0 finalL1=8.790759e-05 elapsed_seconds=893.070 Dr_gt_M3=0 median_Dr_over_M3=8.178159e-01
+h3_324_radius_reduction_pct=2.78108587
+h3_split2_radius_reduction_pct=48.50541158
+h3_split2_over_h3_324_radius_ratio=0.52967665
+h3_split2_over_h3_324_elapsed_ratio=2.929626
+SESSION_ONLY; same-engine finite-precision campaign, graph/tube hypotheses conditional; no point jump
