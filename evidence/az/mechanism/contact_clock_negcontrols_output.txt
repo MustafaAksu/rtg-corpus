@@ -1,0 +1,11 @@
+NC00 unmodified clock: self-test PASS
+NC01 prediction uses the phases two ticks ahead (tick shift)                DETECTED (129 failed checks: A2 A7 B1 B2 B3 B4)
+NC02 prediction uses the current (already-interacted) phases without the advance DETECTED (143 failed checks: A2 B1 B2 B3 B4)
+NC03 C+ target taken as the pre-tick carrier (stale identity)               DETECTED (46 failed checks: A1 A6 B5)
+NC04 tau_slot^free substituted for the dynamic contact time                 DETECTED (31 failed checks: B2 B3 B5)
+NC05 boundary eligibility ignores the node cap                              DETECTED (9 failed checks: A4 B2 B3 B5)
+NC06 C- boundary taken after the contact tick (off-by-one boundary)         DETECTED (60 failed checks: A1 A2 B3)
+NC07 prediction advances the live phases in place                           DETECTED (192 failed checks: A2 A5 B1 B2 B3 B4 B6)
+NC08 the self-test tries to open a path under the registered campaign uploads DETECTED (1 failed checks: D1)
+NEGCONTROLS PASS
+exit 0

@@ -1,0 +1,32 @@
+pins: engine 4c94d874, orientation ca59e9b9, runner 75c5f139, provenance library 5d5ca8ac - OK
+pass: A1 tick-1 contact (swap): tau_C = 1, C- = S_0, edge (0,1), carrier moves to node 1 at C+
+pass: A2 delayed contact: slot at 0 moving +1, partner fixed at 6: tau_C = 16 = tau_free, C- = S_15
+pass: A3 contact in a bound 4-cycle (no event): counted; carrier stays; both slot edges listed
+pass: A4 slot is the centre of a birth at contact, cap 5: C+ carrier = centre (6.1 convention); C+ ineligible (cap reached on the contact tick), C- eligible
+pass: A5 never in contact (equal velocities): no_contact_by_L, no time substituted
+pass: A6 equal, sign-invisible tokens (x = N/2): values unchanged at contact, carrier still tracked to node 1
+pass: A7 two components in the contact tick: only the slot's edges; both events happen
+pass: A8 cap reached by another component before the slot's contact: terminated_before_contact
+randomized: 400 trajectories, 51461 observed ticks
+pass: C coverage: contact (381)
+pass: C coverage: no_contact_by_L (15)
+pass: C coverage: terminated_before_contact (4)
+pass: C coverage: tau1 (196)
+pass: C coverage: events_before (113)
+pass: C coverage: birth_before (9)
+pass: C coverage: free_differs (66)
+pass: C coverage: free_earlier (40)
+pass: C coverage: free_later_or_none (26)
+pass: C coverage: contact_no_slot_event (66)
+pass: C coverage: carrier_moved (306)
+pass: C coverage: slot_birth (9)
+pass: C coverage: plus_ineligible (6)
+pass: C coverage: multi_component_contact_tick (226)
+pass: C coverage: equal_tokens (87)
+pass: C coverage: sign_invisible (96)
+pass: C coverage: pos_minus (65)
+pass: C coverage: native_120_8 (100)
+coverage: contact 381, no_contact_by_L 15, terminated_before_contact 4, tau1 196, events_before 113, birth_before 9, free_differs 66, free_earlier 40, free_later_or_none 26, contact_no_slot_event 66, carrier_moved 306, slot_birth 9, plus_ineligible 6, multi_component_contact_tick 226, equal_tokens 87, sign_invisible 96, pos_minus 65, native_120_8 100
+pass: D1 files opened inside the repository: only the pinned engine, orientation, runner, provenance library and this script (7 paths)
+checks: 2374, failed: 0
+SELFTEST PASS
