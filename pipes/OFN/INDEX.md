@@ -15,3 +15,4 @@
 | 2026-11-11 | DYAD | notice | open | DYAD-DEF-PRIMITIVE-MAP (DYAD v6.4.24 §1; OFN IMP-O08-12, CUST-O09-01): label wording | — | `20261111-DYAD-v6-4-24-adopted.md` |
 | 2026-11-12 | TDRG | notice | open | answer to pipes/TDRG/20261029-OFN-token-sum-gauge-label.md (SG-3, TDR-6 row, Appendix B); RTG-OFN-ALG-STAR-TOKEN-SHIFT (Finding A) repinned in TDR-G §7; TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED | — | `20261112-TDRG-v2-12-15-adopted.md` |
 | 2026-11-16 | TDRG | notice | open | TDR-G pins of OPEN-OFN-2 (RTG-OFN-OPEN-DISC-INTERACTION), IMP-O08-06 and IMP-O08-14; custody transfer XFER-O08-01 | — | `20261116-TDRG-v2-13-adopted.md` |
+| 2026-11-19 | DZT | notice | open | OFN RF-O08-13 (DZT and AZ diagnostic homes): DZT edition and section pointer | — | `20261119-DZT-v0-18-adopted.md` |
