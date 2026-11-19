@@ -6,7 +6,7 @@
 **Scope:** Arithmetic transforms (cyclotomic resultants and real-subfield norms) over Dyadic-owned OPEN 9 $p$-resonance observables, and the diagnostics they produce; no Dyadic result is re-owned, no AZ graph-zeta result transfers, and nothing is claimed about the Riemann Hypothesis or prime distribution.
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5), standard layout. Short name: *Dyadic Zeta/Arithmetic Transform (DZT)*.
 **Programme tier:** Tier 3 — Continuous Programme, downstream diagnostic of Dyadic. Maturity **Level A** (defined model; exploration begun). All results inherit the OPEN-P0 ceiling (SG-PROG-2 / SG-DZT-6).
-**Document status:** DRAFT — stage-2 candidate of v0.18; not adopted. `dzt-v0.8` governs until the PI adopts and tags this edition.
+**Document status:** ADOPTED — PI, 19 November 2026 (corrections and synchronization after the reactivation triage, list (i); Methodology v1.4 layout; no new claim, no grade raised). Adoption record: `records/dzt/DZT_v0_18_RELEASE_RECORD.md`.
 **Supersedes:** `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN` v0.8 (tag `dzt-v0.8`, SHA-256 `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2`)
 **Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`; source of truth for all OPEN 9 arithmetic) · Arithmetic Resonance and Zeta v0.10 (`az-v0.10`; discrete branch, quarantined, see SG-DZT-1) · Ontological Foundations v0.12 (`ofn-v0.12`)
 **DSN Methodology:** v1.4 (`methodology-v1.4`)
@@ -321,7 +321,7 @@ Every exit code in this section is source-reported; none was rerun for v0.18.
 
 ## Appendix A — Version History
 
-### v0.18 — 18 November 2026 — DRAFT (stage-2 candidate)
+### v0.18 — 18 November 2026 — adopted 19 November 2026
 Corrections and synchronization edition after the reactivation triage (`records/dzt/DZT_REACTIVATION_TRIAGE.md`), with the Methodology v1.4 migration as a second build stage; no new scientific claim and no grade raised. The tabulated amplitude norms are stated as $\lvert N_+(M_p)\rvert$, and $M_p$ is defined as $Q_p/(i\zeta_p^3)$ with its sign not asserted; the validation table and the anomaly set are scoped together; the Import Ledger is repinned to `dyad-v6.4.24` per its Appendix F; compound grade tokens are unpacked; §8 cites the recovered script files by path and hash with their evidence states; §1 keeps readouts and pointers. Companion pins: `programme-v1.4`, `dyad-v6.4.24`, `az-v0.10`, `ofn-v0.12`, `methodology-v1.4`. Corrections: Appendix B. Record: `records/dzt/DZT_v0_18_RELEASE_RECORD.md`.
 
 ### v0.9–v0.17 — not part of this lineage
@@ -346,4 +346,4 @@ From the founding charter (v0.1) to the integration of the Dyadic all-$p$ phase 
 
 `[SUPERSEDED]` Original (`dzt-v0.8` §6.3, an `[OBS]` of v0.6): "$p=40$ is the sole anomaly across 14 points", an isolated exception. Reason: true only for $p\le64$; the closed-form audit to $p\le1000$ finds 20 anomaly points (the next after $p=40$ is $p=72$), as the v0.7 `[COR]` recorded. Replacement: §6.3, DZT-ALG-CASCADE-ANOMALY-SET. Recorded in: v0.7 (as a `[COR]` in §6.3); moved here in v0.18.
 
-*END OF DOCUMENT — RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.18 — DRAFT, stage-2 candidate; adoption pending; `dzt-v0.8` governs until adoption and tag.*
+*END OF DOCUMENT — RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.18*

@@ -1,11 +1,11 @@
 # DZT v0.18 — release record
 
-**Status:** DRAFT, for review. **Not adopted.** `dzt-v0.8` governs until the PI adopts this edition and the annotated tag `dzt-v0.18` exists. This draft is completed at adoption (§12) and frozen then.
-**Candidate file:** `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2`, 43,429 bytes (stage-2 candidate, revision 2, commit `523282a0a55979507a47962d89bbdb7a321d6f58`).
+**Status:** ADOPTED by the PI, 19 November 2026 (§12). Merge and the annotated tag `dzt-v0.18` follow this record (§10); until that tag exists, `dzt-v0.8` remains the governing edition.
+**Adopted file:** `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee`, 43,448 bytes, published from the candidate `086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2` (43,429 bytes; stage 2, revision 2, commit `523282a0a55979507a47962d89bbdb7a321d6f58`) by the status-lines transform of §1.
 **Predecessor:** v0.8, tag `dzt-v0.8`, SHA-256 `cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2`, 50,547 bytes. It has no release record; it was tagged at the 22 Oct 2026 baseline (`BASELINE.md`, "PI").
 **Prepared by:** the DZT co-owner (Claude), 18 November 2026. Second co-owner and independent reviewer: ChatGPT (D6).
 
-This record invents no hash, approval or review identifier. Steps after adoption (publication commit, merge, tag, notices) are listed in §10 and are carried by their own commits, tag and pipe items.
+This record is frozen at adoption. It invents no hash, approval or review identifier. Steps that come after it (merge, tag, notices) are named in §10 as pending at adoption; their identities are carried by the merge commit, the tag and the pipe items, not by a later edit here.
 
 **Authority.**
 - BOOTSTRAP 3 of `records/dzt/DZT_COOWNER_SESSION_ORIENTATION.md`.
@@ -21,7 +21,7 @@ This record invents no hash, approval or review identifier. Steps after adoption
 | 2 — compacted candidate as first submitted (commit `9de9b438c735159ff5d8980efe0263951aa6ca2d`) | same path | `db74f0a28ca2bda7c62ae436bc12fc4d71e9741ebdfe0e192837658cbe2375bf` | 42,850 |
 | **1 — corrected intermediate, revision 2** (commit `3058bd29528caf070bb69f2ac09f52cc6e48acbb`; review findings R1, R2, N1, N2, §3a) | same path | `fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d` | 54,833 |
 | **2 — compacted candidate, revision 2** (commit `523282a0a55979507a47962d89bbdb7a321d6f58`) | same path | `086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2` | 43,429 |
-| published — the adopted file | — | pending adoption (§12) | — |
+| published — the adopted file (status lines only; `evidence/dzt/v0.18/publish_dzt_v0_18.py`) | same path | `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee` | 43,448 |
 
 ```bash
 python3 -I evidence/dzt/v0.18/stage1/build_dzt_v0_18_stage1.py --out /tmp/inter.md --log /tmp/edit_log.txt
@@ -34,7 +34,10 @@ T=$(mktemp -d)
 python3 -I evidence/dzt/v0.18/stage2/build_dzt_v0_18_stage2.py --emit-base "$T/stage1_intermediate.md"
 python3 -I tools/check_compaction.py "$T/stage1_intermediate.md" dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md evidence/dzt/v0.18/stage2/movement_map.json
 python3 -I evidence/dzt/v0.18/stage2/stage2_negative_controls.py
+python3 -I evidence/dzt/v0.18/publish_dzt_v0_18.py --check     # PASS: lines 9, 324, 349 differ from the candidate, nothing else
 ```
+
+**Publication transform.** `evidence/dzt/v0.18/publish_dzt_v0_18.py` reads the adopted candidate from commit `523282a0` and asserts its hash. It changes exactly three lines: the header field "Document status" (ADOPTED, with this record), the heading of the v0.18 entry in Appendix A ("adopted 19 November 2026" in place of "DRAFT (stage-2 candidate)"), and the footer. `--check` re-derives the published bytes; output: `evidence/dzt/v0.18/publish_check_output.txt` (PASS).
 
 The stage-1 builder reads the base from the tag with `git show` and asserts its hash. It applies 30 edits, each located by an anchor that must occur exactly once (`evidence/dzt/v0.18/stage1/edit_log.txt`). It stops on a missing or repeated anchor; on a forbidden string left in the live body (nine superseded Dyadic strings, "M_p=|Q_p|", `[THM/ALG]`, `[ALG fin-hor]`, `[HEUR diagnostic]`, "[ALG finite horizon", and the three wordings corrected after review: "no remaining dependency on the Dyadic stream", "Imported Dyadic all-$p$ THMs", a provenance cell reading only "`[THM]` (Dyadic)"); on the loss of any of the 22 registered DZT RIDs; and on the loss of any of SG-DZT-1 to SG-DZT-8. The stage-2 builder reads the intermediate from commit `3058bd29` and asserts its hash. No second copy of a DSN state is kept (Methodology §13.7).
 
@@ -99,7 +102,7 @@ The stage-1 builder reads the base from the tag with `git show` and asserts its 
 | R2 (required) | §2 DZT-OPEN-0B-R: "no remaining dependency on the Dyadic stream", while the paragraph rests on `DYAD-THM-Q403-PHASELAW` | Accepted. E06 now reads: "no outstanding upstream gate: the resultant proof is DZT-owned, conditional on the imported Dyadic factorization at `dyad-v6.4.24`". The wording was inherited from v0.8. The builder asserts the old wording is absent |
 | N1 | §9 "Imported Dyadic all-$p$ THMs (P1, reality, LEAD)" reads as separate owner theorems | Done. E23b names them as components of `DYAD-THM-Q403-PHASELAW`, historical note labels without owner RIDs (Appendix F at `dyad-v6.4.24`) |
 | N2 | The v0.5 `[FAIL]` record in Appendix B says "the unique point with $N_+>1$" without its range and with the unsigned value | Done without touching the historical record. The record stays as worded at `dzt-v0.8`. The $\lvert N_+\rvert$ correction record (E24) now says that its values are $\lvert N_+\rvert$ values and that "unique point" refers to the 11 points it names ($p=12$–$52$) |
-| Hygiene | Remove `records/dzt/DZT_RECOVERY_VARIANT_DIFFS.md` (Methodology §13.7) after amending the reading record with the commit/blob provenance and a regeneration command | Not in this edition. A separate maintenance PR, if the PI authorizes it |
+| Hygiene | Remove `records/dzt/DZT_RECOVERY_VARIANT_DIFFS.md` (Methodology §13.7) after amending the reading record with the commit/blob provenance and a regeneration command | Done outside this edition: PI authorization 18 Nov 2026; PR #321, review `5953869906` (ACCEPT SCOPED), merged as `a2d22abb7b46cfb7e2faefc6d4680d191b6ab4ba` |
 
 **Revision 2:**
 - Stage 1 at `3058bd29`, intermediate `fbfbc00d…716d` (30 edits).
@@ -181,7 +184,7 @@ DZT editions v0.9–v0.17 have no adoption record and are **received, not adopte
 
 ## 8. Inbox (`pipes/DZT/`)
 
-The first four items were read before the stage-1 intermediate was fixed (checkpoint 2 of `pipes/README.md`). The fifth, the LIT sign supplement, arrived on `main` on 18 Nov after that, and was brought into this branch by a merge of `main`; it was read against the revision-2 candidate, which needs no change for it. All five are set to `acknowledged` in this PR. Dispositions are entered by the publication commit after adoption, with this record as pointer:
+The first four items were read before the stage-1 intermediate was fixed (checkpoint 2 of `pipes/README.md`). The fifth, the LIT sign supplement, arrived on `main` on 18 Nov after that, and was brought into this branch by a merge of `main`; it was read against the revision-2 candidate, which needs no change for it. All five were set to `acknowledged` in this PR. The publication commit enters the dispositions below, with this record as pointer (`2026-11-19 · <verdict> · records/dzt/DZT_v0_18_RELEASE_RECORD.md`). States: the AZ v0.7 item `closed`; the DYAD, AZ v0.8 and LIT sign items `dispositioned`; the LIT offer of 13 Nov stays `acknowledged`.
 
 | Item | Disposition at adoption | Basis |
 |---|---|---|
@@ -204,9 +207,9 @@ Filed after the tag, one item per inbox; each needs the tag `dzt-v0.18` to valid
 | # | Step | By | State |
 |---|---|---|---|
 | 1 | Stage 1 and stage 2, checks, this draft | DZT co-owner | done (this PR) |
-| 2 | Change-focused review of stage 1, then of stage 2 (§4) | second co-owner | review `5953533755`: REVISE (R1, R2); revision 2 done (§3a); readback requested |
-| 3 | Adoption decision (§12) | PI | pending |
-| 4 | Publication commit on this branch: status lines only (a reviewed transform, as `evidence/az/v0.8/publish_az_v0_8.py`); the inbox dispositions (§8); this record completed and frozen; the `BASELINE.md` DZT row (v0.18, the adopted hash, this record, tag `dzt-v0.18`) | DZT co-owner | pending |
+| 2 | Change-focused review of stage 1, then of stage 2 (§4) | second co-owner | done: `5953533755` REVISE (R1, R2); revision 2 (§3a); readback `5961093360` ACCEPT SCOPED |
+| 3 | Adoption decision (§12) | PI | done, 19 Nov 2026 |
+| 4 | Publication commit on this branch: status lines only (§1); the inbox dispositions (§8); this record completed and frozen; the `BASELINE.md` DZT row (v0.18, the adopted hash, this record, tag `dzt-v0.18`) | DZT co-owner | done (the commit that adds this text) |
 | 5 | Merge by a merge commit (not squash) | PI | pending |
 | 6 | Annotated tag `dzt-v0.18` on that merge commit, with the adopted hash in the tag message | PI | pending |
 | 7 | Notices (§9); lane in the orientation note | DZT co-owner, after the tag | pending |
@@ -224,10 +227,34 @@ No grade is raised. No recovered theorem, RID or B1 result enters. No sign OPEN 
 
 ## 12. Adoption decision
 
-Not given. To be completed with the PI's verbatim decision, its time, the adopted object (candidate hash and published hash) and what the adoption covers and does not cover. Order: decision → this record → merge → tag.
+**Decision (PI, 19 November 2026, 15:03 +03:00, project conversation with this session, verbatim):** "benimsiyorum" ("I adopt"). It answers the co-owner's question of the same conversation, which named the object and the scope: the candidate `086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2` (43,429 bytes) of PR #319, after the second co-owner's readback `5961093360` (ACCEPT SCOPED on head `bfac4715bb4e365352bc63c333991e34254fa130`).
+
+- **Adopted object:** the candidate `086bb348…67d2`, published with the status-lines transform of §1 as `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee`.
+- **Basis:**
+  - the PI's decisions D1–D7 (18 Nov, 00:00 +03:00) and on scope and number (18 Nov);
+  - stage 1 with review `5953533755` (R1, R2 applied; N1, N2 done) and readback `5961093360`;
+  - stage 2 with the compaction check, its eight negative controls, and the reviewer's independent replay of the eight operations;
+  - the publication check.
+- **What the adoption covers:** triage list (i) as written. That is:
+  - the $\lvert N_+(M_p)\rvert$ labels and the $M_p$ wording, with the sign not asserted;
+  - the joint scope of the validation table and the anomaly set;
+  - the companion and import pins at `programme-v1.4`, `dyad-v6.4.24`, `az-v0.10`, `ofn-v0.12` and `methodology-v1.4`;
+  - the Import Ledger by Dyadic Appendix F;
+  - the certificate citation `DYAD-ART-Q403-CERT`;
+  - the unpacked grade tokens and the alias table;
+  - the §8 evidence states of the recovered files;
+  - the two `[SUPERSEDED]` records of Appendix B;
+  - the Methodology v1.4 layout.
+- **What it does not cover:**
+  - no new scientific result and no grade raised; Level A is retained;
+  - list (ii) of §11, including the norm-law proof, the LIT verdict, the LIT sign lemma, count and pattern, the B1 re-examination and channel universality;
+  - no recovered v0.9–v0.17 theorem, RID or status record (D1, D4);
+  - no retrospective tag (D2);
+  - no sign OPEN (D3).
+- **Order:** decision → this record → merge → tag. A merge, a tag or a passing check is not an adoption; the adoption is this decision.
 
 ## 13. Open items carried forward
 
 1. List (ii) (§11).
 2. Missing material (row 17): the Dyadic `q4_03` certificate, extractor and data; `qb_extract.py` and DZT-REQ-001; v0.6 and the v0.17 session record; DZT-REQ-005.
-3. The LIT record header at rtg-lit `8e2fb5cb` says "not reviewed / not offered" (row 19); this is named in the reply to the LIT item.
+3. The LIT record header at rtg-lit `8e2fb5cb` says "not reviewed / not offered" (row 19). The second co-owner's readback `5961093360` asks LIT to correct it. This is a LIT action, not a DZT one.

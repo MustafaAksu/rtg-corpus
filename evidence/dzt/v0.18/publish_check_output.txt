@@ -1,0 +1,4 @@
+candidate 086bb348e46f3ae4eca94bfac05d35a0efd57ff4d59866cc2ce64d3d369e67d2  (git show 523282a0a55979507a47962d89bbdb7a321d6f58:dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md)
+published 04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee  43448 bytes
+lines that differ from the candidate: [9, 324, 349] (of 350)
+RESULT: PASS

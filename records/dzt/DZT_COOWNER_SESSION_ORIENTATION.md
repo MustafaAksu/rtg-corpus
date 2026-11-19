@@ -99,7 +99,7 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 ### CO-OWNER LANE — Claude
 
-**Checked:** 18 November 2026, 12:30 +03:00. `main` `3546c01`. Tag `dzt-v0.8` governs (`cad20982…92ff2`). `pipes/DZT/`: five items (the LIT sign supplement of 18 Nov is the fifth), all `acknowledged` on the edition branch. Open DZT PR: this lane's v0.18 edition PR (branch `claude/dzt-v0.18`).
+**Checked:** 19 November 2026, 15:20 +03:00. `main` `3546c01`. Tag `dzt-v0.8` governs (`cad20982…92ff2`) until the tag `dzt-v0.18`; v0.18 adopted by the PI on 19 Nov (published `04581d1e…8dee`). `pipes/DZT/`: five items (the LIT sign supplement of 18 Nov is the fifth), all `acknowledged` on the edition branch. Open DZT PR: this lane's v0.18 edition PR (branch `claude/dzt-v0.18`).
 **Role:** DZT co-owner, preparer. The second co-owner (ChatGPT) is the independent receiving reviewer. The PI decides adoption and publication (D6).
 **Shared sections:** this lane's session updated PI_PENDING on 18 Nov.
 **Goal / current question:** BOOTSTRAP 3, the v0.18 edition: list (i) of the triage in two stages. It is done when the edition is reviewed, adopted, merged and tagged. The (ii) work starts alongside.
@@ -109,8 +109,8 @@ Each message asks for one bounded product. The PI sends the next one after readi
 **Evidence:** `evidence/dzt/v0.18/stage1/`, `evidence/dzt/v0.18/stage2/`; RR §§2–9; recovered files under `upload/dzt-recovery-20261116/received/`.
 **Resume:** the LIVE_STATE command; the v0.18 PR and its review; release record §1 (rebuild), §4 (review points), §10 (steps).
 **Next 1–3 actions / acceptance:**
-1. Readback of revision 2 by the second co-owner (release record §3a). Acceptance: R1 and R2 closed; the hashes in the record equal the rebuilt bytes.
-2. After adoption: the publication commit (status lines, dispositions, record, `BASELINE.md`); after the tag, the notices to PROG, NUMGEN and OFN (record §9).
+1. After the PI's merge and tag `dzt-v0.18`: verify the tag and file the notices to PROG, NUMGEN and OFN (record §9). Acceptance: `tools/pipes_index.py --check` OK with the tag present.
+2. Refresh this lane for v0.18 as the governing edition.
 3. Row 2 (ii): an owner proof review of the norm law against the recovered notes and the LIT note, written to `records/dzt/`. Acceptance: criteria (a)–(d) of triage row 2. The grade is left to the PI.
 
 **Reopen trigger:** a review point on the v0.18 PR; a new `pipes/DZT/` item; a Dyadic edition that changes §6.5, §6.11 or Appendix D/F; any material found by the row 17 search.
@@ -119,5 +119,6 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 - 16 Nov 2026, 16:19 +03:00: the PI decided to start the onboarding with DZT; the other onboarding questions are deferred (advisory §6).
 - **Done, 17–18 Nov 2026:** question 0 answered (PR #289, #308, #309). D1–D7 decided by the PI on 18 Nov, 00:00 +03:00 (triage §7). Triage merged (PR #317). Scope (list (i)) and number (v0.18) decided by the PI on 18 Nov.
-- **Open with the PI:** adoption of v0.18 after the review (release record §12).
+- **Done, 19 Nov 2026, 15:03 +03:00:** v0.18 adopted by the PI (release record §12).
+- **Open with the PI:** merge of PR #319 and the annotated tag `dzt-v0.18`.
 - No CLI block is pending for DZT.

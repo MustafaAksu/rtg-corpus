@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: notice
 object: Appendix F crosswalk; OPEN 9 $p=12$ cascade value; DYAD-ALG-VANISH-B2; DYAD-THM-RAW-CUBIC caveat and range
 tags: [dyad-v6.4.23, dzt-v0.8]
-state: acknowledged
+state: dispositioned
+disposition: 2026-11-19 · accept · records/dzt/DZT_v0_18_RELEASE_RECORD.md
 ---
 Dyadic `dyad-v6.4.23` (SHA-256 `9f874ccc…25cb`). This notice carries the still-unmet content of the Dyadic notices N17 and N21 (prepared 22 Oct 2026 for PI routing and never sent; disposition `records/dyad/DYAD_NOTICES_N16_N21.md` §"Disposition, 3 November 2026"). Sections below are those of v6.4.23.
 - Appendix F maps the DZT identifiers to Dyadic RIDs (e.g. DYAD-ALG-VANISH-B2/B3/B4 are cited separately).
