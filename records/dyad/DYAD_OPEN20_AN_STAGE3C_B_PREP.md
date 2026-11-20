@@ -114,7 +114,7 @@ The driver writes `LEDGER.json` (mode, the PI's authorization as quoted on the c
 |---|---|
 | Verdict of the run | **ACCEPTED**, exit code 0 |
 | `validate` on the server (PI) and here (owner, from the uploaded files) | **VALID** both |
-| `SHA256SUMS.txt` | 70 files: 68 outputs, `LEDGER.json`, the checksum file; all match |
+| `SHA256SUMS.txt` | 69 entries (68 outputs and `LEDGER.json`; the checksum file does not list itself); all match |
 | Byte-identity with the committed outputs of stage 3c-a and of the seed check | **68 of 68 files** |
 | Rule test | 16 of 16; no message on the error stream |
 

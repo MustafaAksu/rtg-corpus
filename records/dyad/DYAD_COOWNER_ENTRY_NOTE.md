@@ -28,11 +28,13 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## OWNER LANE — Claude
 
-**Updated:** 16 November 2026, 15:50 +03:00, with the PI's selftest of the stage-3c-b package on the server (ACCEPTED; 68 of 68 outputs byte-identical; preparation record §5.1). **Checked:** 16 November 2026, 15:45 +03:00; `main` `c9e313f` (PRs #269 and #273 merged; co-owner review of r3 `5918074811`, ACCEPT SCOPED). Tag `dyad-v6.4.24` → `f0af639`.
+**Updated:** 20 November 2026, 22:51 +03:00. **Checked:** 20 November 2026, 22:50 +03:00; `main` `a25706d` (PRs #296, #301, #312 and #305 merged by the PI). Tag `dyad-v6.4.24` → `f0af639`.
 
 **Goal / current question.** OPEN 20 B-an. Stage 3c-a is complete (W1 to W8, hand-over record); the seed and the divergence step are written, conditionally (proof record §12, §13). **Stage 3c-b is prepared, not run:** one driver, a manifest, one acceptance rule, a selftest (`DYAD_OPEN20_AN_STAGE3C_B_PREP.md`). Nothing is a certificate; no divergence is claimed.
 
 **Last durable work.**
+- 17–20 Nov, C++ independent line (SESSION, co-owner implements, owner audits and replays): owner review of the C++ evaluator (#296); real-leg scale note (#301); review record `DYAD_OPEN20_CPP_F1_TUBE_OWNER_REVIEW.md` with Addenda 1–8 (#305): F1, F2, selective F2, horizon 3, k = 3 on refined boxes, adaptive k = 4, mean-value base and resume, k = 5. Every PI run was replayed here byte-identically. Current cover: 2640 boxes at k = 5, L¹ hull 3.207925·10⁻⁵, INCONCLUSIVE (`REFINEMENT_CAP`). Addendum 8: the whole-disc tangent enclosure D_k exceeds a sampled derivative variation by 2.4·10² (k = 1) to 7.2·10⁵ (k = 5), an upper estimate of the overestimation factor.
+- 17 Nov, O-1 (#312): walls c₀, c₁ fixed as exact dyadic numbers in proof record §1, with a check script; library and 3c-b manifest unchanged.
 - v6.4.23 adopted 30 Oct 2026 (PR #132; post-tag record).
 - S1 (PR #150), backlog (PRs #148, #156), bridge-note intake (PR #155).
 - OPEN 20: stage-3a route check (PR #159), owner review and read-back of the co-owner's bounds preflight (PRs #163, #165, with #157), disposition of LIT INF-014/015 (PR #176).
@@ -42,6 +44,8 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 - 3b design note with `[NUM]` sampling (PR #218). r1 was reviewed REVISE; r2 has bounded local domains with a guard property, a precise seed, uniqueness through López-Hernanz 2012 Theorem 4.2(3), and the arc and the fibre enclosure as obligations. 16 gates PASS, two negative controls. LIT is asked to validate the use of Theorem 4.2(3) (`pipes/LIT/20261111-DYAD-lh2012-thm42-uniqueness-use.md`).
 
 **Decisions held** (with their evidence):
+- PI, 17 Nov 2026, 23:03 +03:00 (in session): "onaylıyorum" — O-1 accepted; c₀, c₁ become exact dyadic numbers with provenance (proof record §1, PR #312).
+- Co-owner and owner, 20 Nov: next C++ step is a certified, tighter D_k (second-order jet first, Lohner-type centred tangent as alternative) on the four Addendum-8 boxes at k = 1…5, reported as D_new/D_sample; then a fixed sample of the 2640 boxes; only then a campaign decision. The checker argument-order defect of the k = 5 package is fixed separately; no rerun needed for it.
 - PI, 3 Nov 2026: Dyadic work is done in rtg-corpus and its outputs go into the Dyadic DSN; LIT is used only through requests in `pipes/LIT/`.
 - PI, 14 Nov 2026 (in session, on the owner's two questions): "Evet, yalnız hazırlık" — the preparation of stage 3c-b is authorized (t_M correction, frozen code, package fixed by SHA-256, command block for the server); the production run and the replay are not. "Evet, şimdi aç" — a targeted request to LIT on Proposition 5.3 of López-Hernanz 2012.
 - PI, 13 Nov 2026 (relayed with the co-owner's report): written work on Q1–Q3 and P4 is started; scope OPEN 20 analytic branch only; no new DSN theorem and no certification decision. Stage 3c-b stays unauthorized.
@@ -92,9 +96,9 @@ Without a shell: obtain the same facts (tag, file hash, open PRs touching these 
 
 ## PI_PENDING
 
-As of 16 November 2026, 15:50 +03:00:
-1. **Merge of the server-selftest record** (this branch, on top of the upload branch `upload/dyad-3cb-selftest-r3-server`).
-2. **Stage 3c-b itself:** whether and when to run it, and who replays it and where. Not authorized. The package is ready and reproduces on the server (preparation record §5.1); a production run there takes about 2.5 hours.
-3. LIT's answer on Proposition 5.3 (request merged with PR #269) is awaited; no run waits for it.
+As of 20 November 2026, 22:51 +03:00:
+1. **Stage 3c-b itself:** whether and when to run it, and who replays it and where. Not authorized. The package is ready and reproduces on the server (preparation record §5.1); a production run there takes about 2.5 hours. O-1 (#312) changes no file of its manifest.
+2. LIT's answer on Proposition 5.3 (request merged with PR #269) is awaited; no run waits for it.
+3. C++ line: nothing pending from the PI; the next package (D_k prototype) comes from the co-owner.
 
 Stage 3c-b and scouting of the second overlap class are not authorized.
