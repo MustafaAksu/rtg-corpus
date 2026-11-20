@@ -114,11 +114,25 @@ def nc_tag_guard_off():
 
 def nc_output_overwrite():
     """an existing output directory is accepted"""
+    made = []
+
     def bad(out):
         t = os.path.abspath(out)
+        if not os.path.exists(t):
+            made.append(t)
         os.makedirs(t, exist_ok=True)
         return t
-    return patch(D, "make_out", bad)
+    undo = patch(D, "make_out", bad)
+
+    def undo_and_clean():
+        undo()
+        for t in made:
+            if os.path.realpath(t).startswith(os.path.join(D.P.ROOT, "upload") + os.sep):
+                try:
+                    os.rmdir(os.path.realpath(t))
+                except OSError:
+                    pass
+    return undo_and_clean
 
 
 def nc_tau_free_substituted():
@@ -134,13 +148,71 @@ def nc_tau_free_substituted():
 
 
 def nc_audit_disabled():
-    """post-hoc audit always passes"""
-    return patch(D, "audit", lambda peng, ieng, run, man, records: [])
+    """complete audit always passes"""
+    return patch(D, "audit_dir", lambda peng, ieng, run, d, raw, sha: [])
+
+
+def nc_audit_no_field_compare():
+    """audit checks only the replay, not every stored field"""
+    return patch(D, "_audit_records", lambda peng, ieng, run, man, records: [
+        "record %d: replay differs" % b for b in D.audit(peng, ieng, run, man, records)])
+
+
+def nc_audit_no_summary():
+    """audit does not recompute the summaries"""
+    return patch(D, "_audit_summary", lambda d, records, man, raw: [])
+
+
+def nc_audit_no_sums():
+    """audit does not check the file set and SHA256SUMS"""
+    return patch(D, "_audit_sums", lambda d: [])
+
+
+def nc_audit_no_identity():
+    """audit does not bind the approved manifest"""
+    return patch(D, "_audit_identity", lambda d, raw, sha: [])
+
+
+def nc_run_no_identity():
+    """run accepts manifest bytes that differ from the approved SHA-256"""
+    return patch(D, "check_manifest_identity", lambda raw, sha: None)
+
+
+def nc_no_git_binding():
+    """pilot manifest need not be committed at HEAD"""
+    return patch(D, "check_git_committed", lambda path: None)
+
+
+def nc_output_no_realpath():
+    """output check ignores symbolic links in the parent path"""
+    def bad(out):
+        t = os.path.abspath(out)
+        for bad_ in ("upload", "records", "dsn"):
+            b = os.path.join(D.P.ROOT, bad_)
+            if t == b or t.startswith(b + os.sep):
+                raise D.Refused("inside")
+        if os.path.lexists(t):
+            raise D.Refused("exists")
+        os.mkdir(t)
+        made.append(t)
+        return t
+    made = []
+    undo = patch(D, "make_out", bad)
+
+    def undo_and_clean():
+        undo()
+        for t in made:
+            try:
+                os.rmdir(t)
+            except OSError:
+                pass
+    return undo_and_clean
 
 
 CONTROLS = [nc_verify_disabled, nc_denominator_contacts_only, nc_auto_Lmax, nc_strict_less, nc_wilson_wrong_z,
             nc_timing_in_summary, nc_freeze_gate_off, nc_tag_guard_off, nc_output_overwrite, nc_tau_free_substituted,
-            nc_audit_disabled]
+            nc_audit_disabled, nc_audit_no_field_compare, nc_audit_no_summary, nc_audit_no_sums,
+            nc_audit_no_identity, nc_run_no_identity, nc_no_git_binding, nc_output_no_realpath]
 
 
 def main():

@@ -13,10 +13,14 @@ pass: C1 a genuine clock result is verified; its C-/C+ checkpoint ids are return
 pass: C2 refused: forged tau_C, swapped C-/C+, a boundary from another seed, a wrong annotation, a wrong status
 pass: C3 seed 0: tau_C, C+ eligibility and the C- state (engine and provenance; T_ref differs by design) are the same with L = 8 (T_ref = L + 1) as with L_max = 800
 pass: C3 seed 0: tau_C, C+ eligibility and the C- state (engine and provenance; T_ref differs by design) are the same with L = 800 (T_ref = L + 1) as with L_max = 800
-pass: D1 two test-plan runs (16 seeds): seeds.jsonl, summary.json, summary.txt byte-identical
-pass: D2 every contact record carries verified C-/C+ checkpoint ids
-pass: D4 post-hoc audit: an independent replay of every stored seed reproduces its draw, status, tau_C and checkpoint ids
-pass: D5 the audit flags a tampered stored tau_C
+pass: D1 two test-plan runs (16 seeds): manifest.json, seeds.jsonl, summary.json, summary.txt byte-identical
+pass: D2 every contact record carries verified checkpoint ids; the summary binds the manifest and script SHA-256
+pass: D4 complete audit of a genuine output: identity, file set and SHA256SUMS, seeds 0 .. n-1, every record field recomputed and replayed, summaries recomputed - no problem
+pass: D5 the audit fails on every consistent forgery (SHA256SUMS rewritten): M_minus, centre_case, eligible_plus, empty_seeds, extra_file, manifest_copy, missing_seed, reordered, summary_json, summary_txt, tau_free; and on a SHA256SUMS mismatch
+pass: D6 the audit fails against a different approved SHA-256 and against changed manifest parameters
+pass: D7 a run is refused when the manifest bytes do not match the approved SHA-256 (parameters changed after approval)
+pass: D8 pilot binding: a manifest outside the repository is refused; a committed, unmodified repository file is accepted
+pass: D9 an output path through a symbolic link into upload/ is refused (F1); nothing was created there
 AZ fork BASE-only pilot - tag AZ-FORK-BASEPILOT-TEST, N=120, k=8, cap=300, q=100, n=16
 status: contact 16, no_contact_by_L 0, terminated_before_contact 0
      L     k    F(L)            Wilson  elig C-  elig C+     both  centre   pos-   pos+
@@ -25,7 +29,8 @@ status: contact 16, no_contact_by_L 0, terminated_before_contact 0
    400    16  1.0000 [ 0.8064, 1.0000]       16       16       16       0      0      0
    800    16  1.0000 [ 0.8064, 1.0000]       16       16       16       0      0      0
 rule: min L with F >= 0.95  ->  L* = 100
+manifest sha256 9800a3d9ad22fa75ae050711f78831b6205013367da170c6b950435b50c8dbde; script sha256 6c62905c2c02ad44feb384f3a6d59bcb7c9651165876ffc55331726ee586b0f0
 tau_C quantiles (contacts): {"max": 8, "min": 1, "p50": 3, "p90": 8, "p95": 8}; tau_free != tau_C in 7 contacts
 pass: D3 repository files opened: only the pinned engine, orientation, runner, provenance library, clock and this script (10 paths); nothing under upload/az-token-resonance-*
-checks: 20, failed: 0
+checks: 24, failed: 0
 SELFTEST PASS

@@ -22,8 +22,10 @@ L rule (fixed before the run; design section 8)
   reported but never change the rule.
 
     python3 -I evidence/az/mechanism/az_fork_base_pilot.py --selftest
-    python3 -I evidence/az/mechanism/az_fork_base_pilot.py --run --manifest evidence/az/mechanism/base_pilot_manifest.json --out DIR
-    python3 -I evidence/az/mechanism/az_fork_base_pilot.py --audit DIR --manifest evidence/az/mechanism/base_pilot_manifest.json
+    python3 -I evidence/az/mechanism/az_fork_base_pilot.py --run   --manifest M --manifest-sha256 H --out DIR
+    python3 -I evidence/az/mechanism/az_fork_base_pilot.py --audit DIR --manifest M --manifest-sha256 H
+  M must be committed and unmodified at HEAD; H is the SHA-256 of M as approved by the PI (authorisation record);
+  the output stores M byte for byte and binds its SHA-256 and the script's in summary.json/summary.txt.
 """
 from __future__ import annotations
 
@@ -90,24 +92,66 @@ def check_manifest(man, plan):
 
 
 def make_out(out):
-    """A NEW directory outside upload/, records/, dsn/ and evidence/az/scripts/; created atomically (mkdir)."""
+    """A NEW directory outside upload/, records/, dsn/ and evidence/az/scripts/; created atomically (mkdir). The
+    check is made on the resolved parent (symbolic links followed), so a link cannot redirect the output."""
     t = os.path.abspath(out)
-    for bad in ("upload", "records", "dsn", os.path.join("evidence", "az", "scripts")):
-        b = os.path.join(P.ROOT, bad)
-        if t == b or t.startswith(b + os.sep):
-            raise Refused("output directory inside %s/" % bad)
+    name = os.path.basename(t)
+    if name in ("", ".", ".."):
+        raise Refused("output directory name is not a plain name")
     if os.path.lexists(t):
         raise Refused("output directory exists; it must be new")
-    if not os.path.isdir(os.path.dirname(t)):
+    parent = os.path.dirname(t)
+    if not os.path.isdir(parent):
         raise Refused("parent of the output directory does not exist")
-    os.mkdir(t)
-    return t
+    real = os.path.join(os.path.realpath(parent), name)
+    roots = {P.ROOT, os.path.realpath(P.ROOT)}
+    for root in roots:
+        for bad in ("upload", "records", "dsn", os.path.join("evidence", "az", "scripts")):
+            b = os.path.join(root, bad)
+            if any(x == b or x.startswith(b + os.sep) for x in (t, real)):
+                raise Refused("output directory inside %s/ (after resolving links)" % bad)
+    os.mkdir(real)
+    return real
 
 
 def write_new(path, text):
     fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o644)
     with os.fdopen(fd, "w") as f:
         f.write(text)
+
+
+def manifest_bytes(man):
+    """Canonical bytes of a manifest dict (used by the test plan; the pilot reads the committed file's bytes)."""
+    return (json.dumps(man, sort_keys=True, indent=1) + "\n").encode()
+
+
+def sha256_bytes(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def check_manifest_identity(raw, expected_sha):
+    """The manifest used must be byte-identical to the PI-approved one, named by its SHA-256."""
+    if not (isinstance(expected_sha, str) and len(expected_sha) == 64):
+        raise Refused("the approved manifest SHA-256 must be given")
+    if sha256_bytes(raw) != expected_sha:
+        raise Refused("manifest bytes do not match the approved SHA-256")
+
+
+def check_git_committed(path):
+    """Pilot plan only: the manifest file must lie in this repository and equal its committed version at HEAD."""
+    import subprocess
+    a = os.path.realpath(path)
+    root = os.path.realpath(P.ROOT)
+    if not a.startswith(root + os.sep):
+        raise Refused("manifest is not a file of this repository")
+    rel = os.path.relpath(a, root)
+    try:
+        head = subprocess.run(["git", "-C", root, "show", "HEAD:" + rel], capture_output=True, check=True).stdout
+    except (subprocess.CalledProcessError, OSError):
+        raise Refused("manifest is not committed at HEAD")
+    with open(a, "rb") as f:
+        if f.read() != head:
+            raise Refused("manifest differs from its committed version at HEAD")
 
 
 # ---------------------------------------------------------------- one seed
@@ -160,8 +204,7 @@ def verify(peng, ieng, run, r, N, k, th0, d0, j, Lmax, cap):
 
 
 def audit(peng, ieng, run, man, records):
-    """Post-hoc audit of stored records: every seed is replayed independently and its status, tau_C and checkpoint
-    ids must equal the stored ones; the draw (theta0, delta0, j) must equal the manifest's seed law."""
+    """Per-record replay check (independent loop): draw, status, tau_C and checkpoint ids. Returns bad seeds."""
     bad = []
     for rec in records:
         b = rec["b"]
@@ -169,9 +212,100 @@ def audit(peng, ieng, run, man, records):
         j = run.arm_choices(man["tag"], man["N"], man["k"], b)["slot"]
         st, t, im, ip = replay(peng, ieng, run, man["N"], man["k"], th0, d0, j, man["L_grid"][-1], man["cap"])
         if (rec["theta0"], rec["delta0"], rec["j"], rec["status"], rec["tau_C"]) != (th0, d0, j, st, t) or \
-                (st == "contact" and (rec["id_minus"], rec["id_plus"]) != (im, ip)):
+                (st == "contact" and (rec.get("id_minus"), rec.get("id_plus")) != (im, ip)):
             bad.append(b)
     return bad
+
+
+OUTPUT_FILES = ("manifest.json", "seeds.jsonl", "summary.json", "summary.txt", "timing.txt")
+
+
+def _audit_identity(d, raw, expected_sha):
+    try:
+        check_manifest_identity(raw, expected_sha)
+    except Refused as e:
+        return ["approved manifest: %s" % e]
+    with open(os.path.join(d, "manifest.json"), "rb") as f:
+        return [] if f.read() == raw else ["stored manifest.json differs from the approved manifest"]
+
+
+def _audit_sums(d):
+    errs = []
+    names = sorted(os.listdir(d))
+    if names != sorted(OUTPUT_FILES + ("SHA256SUMS",)):
+        errs.append("output files differ from the expected set: %s" % names)
+    try:
+        lines = open(os.path.join(d, "SHA256SUMS")).read().splitlines()
+        listed = {ln.split("  ", 1)[1]: ln.split("  ", 1)[0] for ln in lines}
+    except (OSError, IndexError):
+        return errs + ["SHA256SUMS unreadable"]
+    if sorted(listed) != sorted(OUTPUT_FILES):
+        errs.append("SHA256SUMS does not list exactly the output files")
+    for f, h in listed.items():
+        p = os.path.join(d, f)
+        if not os.path.isfile(p) or P.sha256_file(p) != h:
+            errs.append("hash mismatch: %s" % f)
+    return errs
+
+
+def _audit_seed_set(records, man):
+    n = man["n_seeds"]
+    if len(records) != n or [r.get("b") for r in records] != list(range(n)):
+        return ["seeds.jsonl does not hold exactly the seeds 0 .. %d in order (%d records)" % (n - 1, len(records))]
+    return []
+
+
+def _audit_records(peng, ieng, run, man, records):
+    errs = ["record %d: replay differs" % b for b in audit(peng, ieng, run, man, records)]
+    for rec in records:
+        exp = seed_record(peng, ieng, run, man, rec["b"])
+        if json.dumps(exp, sort_keys=True) != json.dumps(rec, sort_keys=True):
+            errs.append("record %d: stored fields differ from the recomputed record" % rec["b"])
+    return errs
+
+
+def _audit_summary(d, records, man, raw):
+    s = summarize(records, man)
+    s.update(identity_fields(raw))
+    errs = []
+    if open(os.path.join(d, "summary.json")).read() != json.dumps(s, sort_keys=True, indent=1) + "\n":
+        errs.append("summary.json differs from the summary recomputed from the records")
+    if open(os.path.join(d, "summary.txt")).read() != summary_text(s, man):
+        errs.append("summary.txt differs from the summary recomputed from the records")
+    tl = open(os.path.join(d, "timing.txt")).read().splitlines()
+    if [ln.split()[0] for ln in tl] != [str(b) for b in range(man["n_seeds"])]:
+        errs.append("timing.txt does not list the seeds 0 .. n-1")
+    return errs
+
+
+def audit_dir(peng, ieng, run, d, raw, expected_sha):
+    """Complete audit of a stored pilot output against the APPROVED manifest (bytes and SHA-256): identity, file set
+    and SHA256SUMS, exactly n seeds in order, every record field recomputed and replayed, both summaries recomputed.
+    Returns the list of problems (empty = PASS)."""
+    errs = _audit_identity(d, raw, expected_sha)
+    if errs:
+        return errs
+    man = json.loads(raw)
+    errs += _audit_sums(d)
+    try:
+        records = [json.loads(x) for x in open(os.path.join(d, "seeds.jsonl"))]
+    except (OSError, ValueError):
+        return errs + ["seeds.jsonl unreadable"]
+    e = _audit_seed_set(records, man)
+    errs += e
+    if e:
+        return errs
+    errs += _audit_records(peng, ieng, run, man, records)
+    try:
+        errs += _audit_summary(d, records, man, raw)
+    except (Refused, OSError, ValueError, KeyError) as ex:
+        errs.append("summary audit failed: %s" % ex)
+    return errs
+
+
+def identity_fields(raw):
+    """The output's binding to the approved manifest and to this script."""
+    return {"manifest_sha256": sha256_bytes(raw), "script_sha256": P.sha256_file(os.path.abspath(__file__))}
 
 
 def seed_record(peng, ieng, run, man, b, verifier=None):
@@ -261,12 +395,16 @@ def summary_text(s, man):
             r["L"], r["k"], r["F"], r["wilson_lo"], r["wilson_hi"], r["eligible_minus"], r["eligible_plus"],
             r["eligible_both"], r["centre_cases"], r["pos_minus"], r["pos_plus"]))
     lines.append("rule: min L with %s >= %s  ->  L* = %s" % (s["rule"], s["threshold"], s["L_star"]))
+    if "manifest_sha256" in s:
+        lines.append("manifest sha256 %s; script sha256 %s" % (s["manifest_sha256"], s["script_sha256"]))
     lines.append("tau_C quantiles (contacts): %s; tau_free != tau_C in %d contacts" % (
         json.dumps(s["tau_C_quantiles"], sort_keys=True), s["tau_free_differs"]))
     return "\n".join(lines) + "\n"
 
 
-def run_pilot(man, out, peng, ieng, run, plan):
+def run_pilot(raw, expected_sha, out, peng, ieng, run, plan):
+    check_manifest_identity(raw, expected_sha)
+    man = json.loads(raw)
     check_manifest(man, plan)
     d = make_out(out)
     recs, timing = [], []
@@ -275,11 +413,13 @@ def run_pilot(man, out, peng, ieng, run, plan):
         recs.append(seed_record(peng, ieng, run, man, b))
         timing.append("%d %.4f" % (b, time.perf_counter() - t0))
     s = summarize(recs, man)
+    s.update(identity_fields(raw))
+    write_new(os.path.join(d, "manifest.json"), raw.decode())
     write_new(os.path.join(d, "seeds.jsonl"), "".join(json.dumps(r, sort_keys=True) + "\n" for r in recs))
     write_new(os.path.join(d, "summary.json"), json.dumps(s, sort_keys=True, indent=1) + "\n")
     write_new(os.path.join(d, "summary.txt"), summary_text(s, man))
     write_new(os.path.join(d, "timing.txt"), "\n".join(timing) + "\n")
-    sums = "".join("%s  %s\n" % (P.sha256_file(os.path.join(d, f)), f) for f in DETERMINISTIC + ("timing.txt",))
+    sums = "".join("%s  %s\n" % (P.sha256_file(os.path.join(d, f)), f) for f in OUTPUT_FILES)
     write_new(os.path.join(d, "SHA256SUMS"), sums)
     return d, s
 
@@ -401,22 +541,95 @@ def selftest(n=16, verbose=True):
              "C3 seed %d: tau_C, C+ eligibility and the C- state (engine and provenance; T_ref differs by design) "
              "are the same with L = %d (T_ref = L + 1) as with L_max = 800" % (b, L))
 
-    # ---- D. end-to-end test plan, twice: deterministic outputs
+    # ---- D. end-to-end test plan, twice: deterministic outputs, identity binding, complete audit
+    import shutil
+    traw = manifest_bytes(test_manifest(n))
+    tsha = sha256_bytes(traw)
     outs = []
     for rep in (1, 2):
-        d, s = run_pilot(test_manifest(n), os.path.join(tmp, "run%d" % rep), peng, ieng, run, "test")
+        d, s = run_pilot(traw, tsha, os.path.join(tmp, "run%d" % rep), peng, ieng, run, "test")
         outs.append(d)
     same = all(open(os.path.join(outs[0], f), "rb").read() == open(os.path.join(outs[1], f), "rb").read()
-               for f in DETERMINISTIC)
-    C.ok(same, "D1 two test-plan runs (%d seeds): seeds.jsonl, summary.json, summary.txt byte-identical" % n)
+               for f in DETERMINISTIC + ("manifest.json",))
+    C.ok(same, "D1 two test-plan runs (%d seeds): manifest.json, seeds.jsonl, summary.json, summary.txt "
+               "byte-identical" % n)
     recs1 = [json.loads(x) for x in open(os.path.join(outs[0], "seeds.jsonl"))]
-    C.ok(all(x["status"] != "contact" or (x["id_minus"] and x["id_plus"]) for x in recs1) and len(recs1) == n,
-         "D2 every contact record carries verified C-/C+ checkpoint ids")
-    C.ok(audit(peng, ieng, run, test_manifest(n), recs1) == [],
-         "D4 post-hoc audit: an independent replay of every stored seed reproduces its draw, status, tau_C and "
-         "checkpoint ids")
-    tampered = [dict(x, tau_C=x["tau_C"] + 1) if x["b"] == 0 and x["status"] == "contact" else x for x in recs1]
-    C.ok(audit(peng, ieng, run, test_manifest(n), tampered) == [0], "D5 the audit flags a tampered stored tau_C")
+    sj = json.load(open(os.path.join(outs[0], "summary.json")))
+    C.ok(all(x["status"] != "contact" or (x["id_minus"] and x["id_plus"]) for x in recs1) and len(recs1) == n
+         and sj["manifest_sha256"] == tsha and sj["script_sha256"] == P.sha256_file(os.path.abspath(__file__)),
+         "D2 every contact record carries verified checkpoint ids; the summary binds the manifest and script SHA-256")
+    C.ok(audit_dir(peng, ieng, run, outs[0], traw, tsha) == [],
+         "D4 complete audit of a genuine output: identity, file set and SHA256SUMS, seeds 0 .. n-1, every record "
+         "field recomputed and replayed, summaries recomputed - no problem")
+
+    def tamper(name, fn, fix_sums=True):
+        t = os.path.join(tmp, "t_" + name)
+        shutil.copytree(outs[0], t)
+        fn(t)
+        if fix_sums:                                   # a consistent forgery: SHA256SUMS rewritten to match
+            os.remove(os.path.join(t, "SHA256SUMS"))
+            with open(os.path.join(t, "SHA256SUMS"), "w") as f:
+                f.write("".join("%s  %s\n" % (P.sha256_file(os.path.join(t, x)), x) for x in OUTPUT_FILES
+                                if os.path.exists(os.path.join(t, x))))
+        return audit_dir(peng, ieng, run, t, traw, tsha)
+
+    def edit_seeds(t, f):
+        p_ = os.path.join(t, "seeds.jsonl")
+        rs = [json.loads(x) for x in open(p_)]
+        rs = f(rs)
+        open(p_, "w").write("".join(json.dumps(r, sort_keys=True) + "\n" for r in rs))
+
+    def edit_json(t, name, f):
+        p_ = os.path.join(t, name)
+        x = json.load(open(p_))
+        f(x)
+        open(p_, "w").write(json.dumps(x, sort_keys=True, indent=1) + "\n")
+    c0 = next(i for i, x in enumerate(recs1) if x["status"] == "contact")
+    cases = {
+        "empty_seeds": lambda t: open(os.path.join(t, "seeds.jsonl"), "w").close(),
+        "missing_seed": lambda t: edit_seeds(t, lambda rs: rs[:-1]),
+        "reordered": lambda t: edit_seeds(t, lambda rs: rs[1:] + rs[:1]),
+        "eligible_plus": lambda t: edit_seeds(t, lambda rs: [dict(r, eligible_plus=not r["eligible_plus"])
+                                                              if i == c0 else r for i, r in enumerate(rs)]),
+        "centre_case": lambda t: edit_seeds(t, lambda rs: [dict(r, centre_case=not r["centre_case"])
+                                                            if i == c0 else r for i, r in enumerate(rs)]),
+        "M_minus": lambda t: edit_seeds(t, lambda rs: [dict(r, M_minus=r["M_minus"] + 1)
+                                                        if i == c0 else r for i, r in enumerate(rs)]),
+        "tau_free": lambda t: edit_seeds(t, lambda rs: [dict(r, tau_free=-1) if i == c0 else r
+                                                         for i, r in enumerate(rs)]),
+        "summary_json": lambda t: edit_json(t, "summary.json", lambda x: x.update(L_star=800)),
+        "summary_txt": lambda t: open(os.path.join(t, "summary.txt"), "a").write("x\n"),
+        "manifest_copy": lambda t: open(os.path.join(t, "manifest.json"), "wb").write(
+            manifest_bytes(dict(test_manifest(n), n_seeds=n - 1))),
+        "extra_file": lambda t: open(os.path.join(t, "notes.txt"), "w").write("x"),
+    }
+    res = {k_: tamper(k_, f) for k_, f in cases.items()}
+    res["sums_mismatch"] = tamper("sums_mismatch", lambda t: open(os.path.join(t, "summary.txt"), "a").write("y\n"),
+                                  fix_sums=False)
+    C.ok(all(res.values()), "D5 the audit fails on every consistent forgery (SHA256SUMS rewritten): %s; and on a "
+                            "SHA256SUMS mismatch" % ", ".join(sorted(cases)))
+    C.ok(audit_dir(peng, ieng, run, outs[0], traw, "0" * 64) != [] and
+         audit_dir(peng, ieng, run, outs[0], manifest_bytes(dict(test_manifest(n), n_seeds=n - 1)), tsha) != [],
+         "D6 the audit fails against a different approved SHA-256 and against changed manifest parameters")
+    C.ok(refused(lambda: run_pilot(traw, "0" * 64, os.path.join(tmp, "x1"), peng, ieng, run, "test")) and
+         refused(lambda: run_pilot(manifest_bytes(dict(test_manifest(n), n_seeds=n + 1)), tsha,
+                                   os.path.join(tmp, "x2"), peng, ieng, run, "test")),
+         "D7 a run is refused when the manifest bytes do not match the approved SHA-256 (parameters changed after "
+         "approval)")
+    C.ok(refused(lambda: check_git_committed(os.path.join(tmp, "run1", "manifest.json"))) and
+         not refused(lambda: check_git_committed(os.path.join(HERE, "az_tokres_contact_clock.py"))),
+         "D8 pilot binding: a manifest outside the repository is refused; a committed, unmodified repository file "
+         "is accepted")
+    link = os.path.join(tmp, "link_to_upload")
+    os.symlink(os.path.join(P.ROOT, "upload"), link)
+    probe = "az_pilot_probe_" + os.path.basename(tmp)           # unique per self-test run
+    ok9 = refused(lambda: make_out(os.path.join(link, probe)))
+    leaked = os.path.join(P.ROOT, "upload", probe)
+    created = os.path.isdir(leaked)
+    if created:                                                  # only if the guard failed: remove the leak
+        os.rmdir(leaked)
+    C.ok(ok9 and not created,
+         "D9 an output path through a symbolic link into upload/ is refused (F1); nothing was created there")
     say(open(os.path.join(outs[0], "summary.txt")).read().rstrip())
     root_files = sorted({p for p in K.OPENED if p.startswith(P.ROOT + os.sep)})
     allowed = {P.ENGINE, P.ORIENT, P.RUNNER, K.LIB, os.path.join(HERE, "az_tokres_contact_clock.py"),
@@ -442,33 +655,34 @@ def main():
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--run", action="store_true")
     ap.add_argument("--manifest")
+    ap.add_argument("--manifest-sha256", dest="msha", help="SHA-256 of the PI-approved manifest file")
     ap.add_argument("--out")
-    ap.add_argument("--audit", help="stored pilot output directory to re-verify against the manifest")
+    ap.add_argument("--audit", help="stored pilot output directory to audit against the approved manifest")
     a = ap.parse_args()
-    if a.audit and a.manifest:
-        check_pins()
-        with open(a.manifest) as f:
-            man = json.load(f)
-        peng, ieng, run = load_engines("audit")
-        recs = [json.loads(x) for x in open(os.path.join(a.audit, "seeds.jsonl"))]
-        bad = audit(peng, ieng, run, man, recs)
-        print("AUDIT %s: %d records, %d mismatching %s" % ("PASS" if not bad else "FAIL", len(recs), len(bad), bad[:20]))
-        return 0 if not bad else 1
     if a.selftest:
         return selftest()
-    if not (a.run and a.manifest and a.out):
+    if not (a.manifest and a.msha and (a.audit or (a.run and a.out))):
         print(__doc__)
         return 2
     try:
         check_pins()
-        with open(a.manifest) as f:
-            man = json.load(f)
+        check_git_committed(a.manifest)
+        with open(a.manifest, "rb") as f:
+            raw = f.read()
+        check_manifest_identity(raw, a.msha)
         peng, ieng, run = load_engines("pilot")
-        d, s = run_pilot(man, a.out, peng, ieng, run, "pilot")
+        if a.audit:
+            check_manifest(json.loads(raw), "pilot")
+            errs = audit_dir(peng, ieng, run, a.audit, raw, a.msha)
+            print("AUDIT %s: %d problem(s)" % ("PASS" if not errs else "FAIL", len(errs)))
+            for e in errs[:50]:
+                print("  " + e)
+            return 0 if not errs else 1
+        d, s = run_pilot(raw, a.msha, a.out, peng, ieng, run, "pilot")
     except Refused as e:
         print("REFUSED:", e)
         return 3
-    print(summary_text(s, man), end="")
+    print(summary_text(s, json.loads(raw)), end="")
     print("outputs:", d)
     return 0
 
