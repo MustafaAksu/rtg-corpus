@@ -1,0 +1,8 @@
+MV_PILOT_INTEGER_PASS rows=1600 complete=True improved=1600 old_excluded=384 new_excluded=384 median_ratio_256=57896044618658097711785492504343953926634992332820282019728792003956564819968
+SESSION_ONLY: no independent propagation of complex dynamics; graph/tube conditional
+MV_RESUME_INTEGER_PASS input=897 events=897 stages=1 evaluated=2 final=897 L1_256=57896044618658097711785492504343953926634992332820282019728792003956564819968 stop=BUDGET
+SESSION_ONLY: exclusions conditional on frozen sources and graph/tube premises
+MV_RESUME_INTEGER_PASS input=897 events=897 stages=1 evaluated=897 final=897 L1_256=57896044618658097711785492504343953926634992332820282019728792003956564819968 stop=READY
+SESSION_ONLY: exclusions conditional on frozen sources and graph/tube premises
+MV_STRUCTURE_UNIT_PASS parser=1 pilot_rows=1600 resume_budget=(2,897) negative_mutations=28
+SESSION_ONLY: structural fixtures, not actual F4 numerics

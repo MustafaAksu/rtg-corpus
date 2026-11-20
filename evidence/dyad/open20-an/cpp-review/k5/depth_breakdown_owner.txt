@@ -1,0 +1,5 @@
+# k = 5 events by depth and action (owner computation from events.tsv); medians
+depth action n Dr/M5 M5/|b5| Dr/|b5| r necessary_radius
+0 EXCLUDED 16 1.809 4.789e-06 8.660e-06 6.538e-07 1.345e-05
+0 SPLIT 660 36.30 4.803e-06 1.744e-04 1.953e-06 1.792e-04
+1 RETAINED 2640 4.794 4.790e-06 2.296e-05 9.766e-07 2.776e-05

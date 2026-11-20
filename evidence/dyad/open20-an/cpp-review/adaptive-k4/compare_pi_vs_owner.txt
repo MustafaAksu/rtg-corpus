@@ -1,0 +1,42 @@
+# owner replay vs PI run (upload/dyad-cpp-adaptive-results-20261119, bab839a7), cmp; executables not compared
+DIFFERS ./FIVE_FROZEN_SHA256_PINS.txt
+DIFFERS ./RUN_SHA256SUMS.txt
+IDENTICAL ./bench_package_checks.txt
+IDENTICAL ./driver/SHA256SUMS.txt
+IDENTICAL ./driver/events.tsv
+IDENTICAL ./driver/final_frontier.tsv
+IDENTICAL ./driver/initial_frontier.tsv
+IDENTICAL ./driver/stages.tsv
+IDENTICAL ./driver/stderr.txt
+IDENTICAL ./driver/structure_check.txt
+IDENTICAL ./driver/summary.txt
+DIFFERS ./environment.txt
+IDENTICAL ./f1_package_checks.txt
+IDENTICAL ./f2_package_checks.txt
+IDENTICAL ./h3_package_checks.txt
+IDENTICAL ./horizon_package_checks.txt
+IDENTICAL ./import.log
+IDENTICAL ./negative_controls.txt
+IDENTICAL ./new_package_checks.txt
+IDENTICAL ./phi40_outer_256.txt
+IDENTICAL ./previous_h3_run_checks.txt
+IDENTICAL ./previous_h3_split2_checks.txt
+IDENTICAL ./previous_horizon_run_checks.txt
+IDENTICAL ./previous_refine2_checks.txt
+IDENTICAL ./previous_selective_run_checks.txt
+IDENTICAL ./previous_sub8_run_checks.txt
+IDENTICAL ./sanitizer_stderr.txt
+IDENTICAL ./selective_package_checks.txt
+IDENTICAL ./source_cpp_parser.txt
+IDENTICAL ./source_h3_check.txt
+IDENTICAL ./source_parser_sanitized.txt
+IDENTICAL ./source_refine2_check.txt
+IDENTICAL ./source_selective_check.txt
+IDENTICAL ./source_sub8_completion_check.txt
+IDENTICAL ./source_sub8_terms_check.txt
+IDENTICAL ./structure_units.txt
+IDENTICAL ./sub8_package_checks.txt
+IDENTICAL ./v2_package_checks.txt
+# FIVE_FROZEN_SHA256_PINS.txt differs only in printed local paths; environment.txt in time/head/python
+# events.tsv kept only on the upload branch (identical):
+276701a085aefcc528290e496a721f83080780fabab5aafd78f3f7b3cc0a8a1f  driver/events.tsv

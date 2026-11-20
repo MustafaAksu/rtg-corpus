@@ -1,0 +1,4 @@
+METHOD=primitive_per_T; stage1_real_M; status=SESSION_CONDITIONAL
+grid active done unresolved discarded kept M_min M_max hull_radius
+10 96 96 0 80 16 2.516209e-04 2.783942e-04 1.198129e-03
+NO_CERTIFICATE; requires graph/seed/hypotheses, no 3c-b or jump claim

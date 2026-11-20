@@ -1,0 +1,50 @@
+# owner replay vs PI run (upload/dyad-cpp-mv-resume-results-20261119, 801e69ac), cmp; executables not compared
+DIFFERS ./RUN_SHA256SUMS.txt
+DIFFERS ./SEVEN_FROZEN_SHA256_PINS.txt
+IDENTICAL ./adaptive_package_checks.txt
+IDENTICAL ./adaptive_run_checks.txt
+IDENTICAL ./bench_package_checks.txt
+IDENTICAL ./driver/SHA256SUMS.txt
+IDENTICAL ./driver/events.tsv
+IDENTICAL ./driver/final_frontier.tsv
+IDENTICAL ./driver/initial_frontier.tsv
+IDENTICAL ./driver/stages.tsv
+IDENTICAL ./driver/stderr.txt
+IDENTICAL ./driver/structure_check.txt
+IDENTICAL ./driver/summary.txt
+DIFFERS ./environment.txt
+IDENTICAL ./f1_package_checks.txt
+IDENTICAL ./f2_package_checks.txt
+IDENTICAL ./h3_check.txt
+IDENTICAL ./h3_package_checks.txt
+IDENTICAL ./h3_run_checks.txt
+IDENTICAL ./h3split_checks.txt
+IDENTICAL ./horizon_package_checks.txt
+IDENTICAL ./horizon_run_checks.txt
+IDENTICAL ./import.log
+IDENTICAL ./negative_controls.txt
+IDENTICAL ./new_package_checks.txt
+IDENTICAL ./old_stage_independent_check.txt
+IDENTICAL ./parser_sanitized.txt
+IDENTICAL ./phi40_outer_256.txt
+IDENTICAL ./previous_cpp_parser.txt
+IDENTICAL ./previous_driver_checks.txt
+IDENTICAL ./refine2_check.txt
+IDENTICAL ./refine2_checks.txt
+IDENTICAL ./sanitizer_stderr.txt
+IDENTICAL ./selective_check.txt
+IDENTICAL ./selective_package_checks.txt
+IDENTICAL ./selective_run_checks.txt
+IDENTICAL ./structure_units.txt
+IDENTICAL ./sub8_check.txt
+IDENTICAL ./sub8_completion.txt
+IDENTICAL ./sub8_package_checks.txt
+IDENTICAL ./sub8_run_checks.txt
+IDENTICAL ./v2_package_checks.txt
+# environment.txt, the pin file (local paths) and the run hash list differ as expected
+# events.tsv kept only on the upload branch (identical):
+2646cf7c0f7509d266a35dcbc13571b4de1cffee5fd13b2b9fc0b9b1827501c0  driver/events.tsv
+# pilot (PI hashes relayed 20 Nov, equal to the owner pilot of Addendum 6):
+5ff09c47058966a92cce2d823c8404a85c66b94e54aa72c42322189b0db804b8  base_pilot.tsv
+a7654db35bf64b5ceb57b0d9250ac098fa614fd69886df9ed5f04581f32efd60  structure_check.txt
+3722e1907ab399e9858d425aa58724b3fc31ea86abf6aac97254e5cd4d4bfb14  summary.txt
