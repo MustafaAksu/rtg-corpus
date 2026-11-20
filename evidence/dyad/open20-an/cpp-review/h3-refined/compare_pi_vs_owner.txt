@@ -1,0 +1,42 @@
+# owner replay vs PI run (upload/dyad-cpp-h3-refined-results-20261118, c7699269), cmp; executables not compared
+DIFFERS ./FOUR_FROZEN_SHA256_PINS.txt
+DIFFERS ./RUN_SHA256SUMS.txt
+IDENTICAL ./bench_package_checks.txt
+DIFFERS ./comparison.txt
+DIFFERS ./environment.txt
+IDENTICAL ./f1_package_checks.txt
+IDENTICAL ./f2_package_checks.txt
+DIFFERS ./h3_324/SHA256SUMS.txt
+IDENTICAL ./h3_324/details.tsv
+IDENTICAL ./h3_324/stderr.txt
+IDENTICAL ./h3_324/structure_check.txt
+DIFFERS ./h3_324/summary.txt
+DIFFERS ./h3_split2/SHA256SUMS.txt
+IDENTICAL ./h3_split2/details.tsv
+IDENTICAL ./h3_split2/stderr.txt
+IDENTICAL ./h3_split2/structure_check.txt
+DIFFERS ./h3_split2/summary.txt
+IDENTICAL ./horizon_package_checks.txt
+IDENTICAL ./import.log
+IDENTICAL ./negative_controls.txt
+IDENTICAL ./new_package_checks.txt
+IDENTICAL ./phi40_outer_256.txt
+IDENTICAL ./previous_horizon_run_checks.txt
+IDENTICAL ./previous_refine2_checks.txt
+IDENTICAL ./previous_selective_run_checks.txt
+IDENTICAL ./previous_sub8_run_checks.txt
+IDENTICAL ./sanitizer_stderr.txt
+IDENTICAL ./selective_package_checks.txt
+IDENTICAL ./source_cpp_parser.txt
+IDENTICAL ./source_parser_sanitized.txt
+IDENTICAL ./source_refine2_check.txt
+IDENTICAL ./source_selective_check.txt
+IDENTICAL ./source_sub8_completion_check.txt
+IDENTICAL ./source_sub8_terms_check.txt
+IDENTICAL ./structure_units.txt
+IDENTICAL ./sub8_package_checks.txt
+IDENTICAL ./v2_package_checks.txt
+# both details.tsv identical; summaries differ only in elapsed_seconds; FOUR_FROZEN_SHA256_PINS.txt only in the printed local paths
+# details.tsv files kept only on upload/dyad-cpp-h3-refined-results-20261118 (identical):
+b285d0dc52b4c63043e0833a7f2199df1c2ae83435b371aa63f754fcf683dd0d  run-local/h3_324/details.tsv
+3f3ac0df96733f7213a93ebd60ed93e0f03f90b341259cfe58564f76e56a7325  run-local/h3_split2/details.tsv

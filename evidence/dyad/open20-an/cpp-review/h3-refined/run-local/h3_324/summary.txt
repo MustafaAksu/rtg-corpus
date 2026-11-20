@@ -1,0 +1,9 @@
+MODE=SESSION_CONDITIONAL; H3_ON_REFINED=h3_324; SOURCE=H3_REFINE2_576
+source_selective_rows=400 source_horizon_rows=576 prior_refine2_excluded=252 prior_refine2_retained=324 checked_selective_retained=144 checked_refine2_retained=324
+evaluations=324 excluded=72 retained=252 unresolved=0
+M3_min=1.682127e-05 M3_max=2.503345e-05 Dr_gt_M3=308
+Dr_over_M3_min=8.846386e-02 median=2.879238e+00 max=2.883803e+00
+prior_L1_256=19767131630908729099984464475098106858248062967844156673697753334259987771 final_L1_256=19217390726399135507013087804850347876877012820482410758286064873488023598
+prior_L1=1.707123e-04 final_L1=1.659646e-04
+elapsed_seconds=159.816
+NO_CERTIFICATE; k=3 tube/graph hypotheses conditional; NO stage3c-b or point jump.

@@ -1,0 +1,7 @@
+MODE=SESSION_CONDITIONAL; F2_SELECTED_REFINEMENT; SOURCE_GRID=8; SOURCE_SUB=8; CHILD_SUB=2
+source_first_tiles=16 source_parent_rows=1024 prior_excluded=924 selected_parent_rows=100 checked_parent_rows=100
+child_attempted=400 child_evaluated=400 child_excluded=256 child_retained=144 child_unresolved=0
+prior_hull_L1_256=66276013166535482055106451787519563252984657259931175255082165220941974212 final_hull_L1_256=28961643128333647571562521706463956514062805250593986713132882887043200788
+prior_hull_L1=5.723708e-04 final_hull_L1=2.501176e-04
+Dr_over_M2_min=8.111258e-02 median=5.490915e-01 max=5.547892e-01
+NO_CERTIFICATE; conditional on sectorial graph and D0-tube hypotheses; NOT stage3c-b or jump.

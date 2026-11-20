@@ -1,0 +1,6 @@
+UTC=2026-11-17T10:32:42Z
+REPO_HEAD=3de7ab633e3f9fad3c11cefa38656aaf9818df2c
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Python 3.13.18
+SOURCE_SHA256=6ca8c663061ce2fa9e062938a1e6046c932da4cbddccc6e3e2c3de4df68c477e
+STATUS=SESSION; conditional on source midpoint enclosures and sectorial graph hypotheses; not 3c-b

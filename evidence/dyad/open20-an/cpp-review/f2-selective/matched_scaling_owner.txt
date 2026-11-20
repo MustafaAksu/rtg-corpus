@@ -1,0 +1,7 @@
+MATCHED_SECOND_SUBTILE_GROUPING_OK 1024 children; 256 parents; 16 first-stage tiles
+r_8_over_4 min=0.50000000 median=0.5 max=0.5
+D_8_over_4 min=0.42630752 median=0.44294921 max=0.46485514
+Dr_8_over_4 min=0.21315376 median=0.22147460 max=0.23242757
+M_8_over_4 min=0.69369640 median=0.75851775 max=0.84835500
+q_8_over_4 min=0.27386745 median=0.29197926 max=0.30775024
+SESSION diagnostic only; sample distribution and M changes cannot establish a wrapping floor
