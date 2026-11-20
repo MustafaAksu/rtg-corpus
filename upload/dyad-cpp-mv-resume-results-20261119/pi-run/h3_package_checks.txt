@@ -1,0 +1,9 @@
+OWNER_REVIEW_REQUEST.md: OK
+README.md: OK
+run_ubuntu_h3_refined.sh: OK
+source/check_h3_refined.py: OK
+source/compare_refined.py: OK
+source/h3_refined.cpp: OK
+source/test_frozen_parser.cpp: OK
+tests/test_h3_structure.py: OK
+upload_h3_refined_evidence.sh: OK
