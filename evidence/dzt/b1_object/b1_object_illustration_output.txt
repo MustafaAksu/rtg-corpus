@@ -1,0 +1,40 @@
+Part 1 (exact): |mu|^2 = 19/12, 2 Re a32 = -97/216, |mu|^2 + 2 Re a32 = 245/216; 1 - that = -29/216
+                raw angular mean 47/54 = 47/54; recovered B1 drift 1 - 47/54 = 7/54; 245/216 - 47/54 = 19/72
+Part 2 ([NUM] illustration): D_prim = 1/Q_m-1/Q_0-m; D_chart = 1/q_m-1/q_0-m (first-order chart);
+        chart = -(29/216) H_m(b); recovered = +(7/54) H_m(b); b = 1/q_0
+start (rho, eta) = (0.03, 0): Q_0 = 0.000900, q_0 = 0.000920
+  m=      10  D_prim=     0.063  D_chart=  -0.001  chart=  -0.001  recovered=   0.001  sqrt(m)=    3.2
+  m=      30  D_prim=     0.186  D_chart=  -0.003  chart=  -0.004  recovered=   0.004  sqrt(m)=    5.5
+  m=     100  D_prim=     0.610  D_chart=  -0.012  chart=  -0.012  recovered=   0.011  sqrt(m)=   10.0
+  m=     300  D_prim=     1.968  D_chart=  -0.041  chart=  -0.033  recovered=   0.032  sqrt(m)=   17.3
+  m=    1000  D_prim=     9.280  D_chart=  -0.100  chart=  -0.088  recovered=   0.085  sqrt(m)=   31.6
+  m=    3000  D_prim=     5.723  D_chart=  -0.216  chart=  -0.178  recovered=   0.172  sqrt(m)=   54.8
+  m=   10000  D_prim=  -103.299  D_chart=  -0.348  chart=  -0.312  recovered=   0.301  sqrt(m)=  100.0
+  m=   30000  D_prim=  -156.301  D_chart=  -0.462  chart=  -0.450  recovered=   0.435  sqrt(m)=  173.2
+  m=  100000  D_prim=    50.779  D_chart=  -0.688  chart=  -0.609  recovered=   0.588  sqrt(m)=  316.2
+  m=  300000  D_prim=   371.375  D_chart=  -0.757  chart=  -0.755  recovered=   0.729  sqrt(m)=  547.7
+  m= 1000000  D_prim=   383.126  D_chart=  -0.964  chart=  -0.917  recovered=   0.885  sqrt(m)= 1000.0
+start (rho, eta) = (0, 0.03): Q_0 = 0.000900, q_0 = 0.000880
+  m=      10  D_prim=    -0.059  D_chart=  -0.001  chart=  -0.001  recovered=   0.001  sqrt(m)=    3.2
+  m=      30  D_prim=    -0.161  D_chart=  -0.004  chart=  -0.003  recovered=   0.003  sqrt(m)=    5.5
+  m=     100  D_prim=    -0.341  D_chart=  -0.013  chart=  -0.011  recovered=   0.011  sqrt(m)=   10.0
+  m=     300  D_prim=     0.641  D_chart=  -0.048  chart=  -0.031  recovered=   0.030  sqrt(m)=   17.3
+  m=    1000  D_prim=    16.884  D_chart=  -0.163  chart=  -0.085  recovered=   0.082  sqrt(m)=   31.6
+  m=    3000  D_prim=    69.188  D_chart=  -0.237  chart=  -0.173  recovered=   0.168  sqrt(m)=   54.8
+  m=   10000  D_prim=   101.364  D_chart=  -0.332  chart=  -0.306  recovered=   0.296  sqrt(m)=  100.0
+  m=   30000  D_prim=    66.213  D_chart=  -0.516  chart=  -0.445  recovered=   0.429  sqrt(m)=  173.2
+  m=  100000  D_prim=  -215.935  D_chart=  -0.606  chart=  -0.603  recovered=   0.582  sqrt(m)=  316.2
+  m=  300000  D_prim=  -361.860  D_chart=  -0.757  chart=  -0.749  recovered=   0.723  sqrt(m)=  547.7
+  m= 1000000  D_prim=   739.061  D_chart=  -0.965  chart=  -0.910  recovered=   0.879  sqrt(m)= 1000.0
+start (rho, eta) = (0.02, -0.02): Q_0 = 0.001200, q_0 = 0.001230
+  m=      10  D_prim=     0.158  D_chart=  -0.002  chart=  -0.002  recovered=   0.002  sqrt(m)=    3.2
+  m=      30  D_prim=     0.480  D_chart=  -0.005  chart=  -0.005  recovered=   0.005  sqrt(m)=    5.5
+  m=     100  D_prim=     1.630  D_chart=  -0.014  chart=  -0.016  recovered=   0.015  sqrt(m)=   10.0
+  m=     300  D_prim=     4.645  D_chart=  -0.028  chart=  -0.042  recovered=   0.041  sqrt(m)=   17.3
+  m=    1000  D_prim=     2.900  D_chart=  -0.115  chart=  -0.108  recovered=   0.104  sqrt(m)=   31.6
+  m=    3000  D_prim=   -51.362  D_chart=  -0.257  chart=  -0.208  recovered=   0.200  sqrt(m)=   54.8
+  m=   10000  D_prim=   -95.258  D_chart=  -0.338  chart=  -0.348  recovered=   0.336  sqrt(m)=  100.0
+  m=   30000  D_prim=   -96.876  D_chart=  -0.513  chart=  -0.488  recovered=   0.471  sqrt(m)=  173.2
+  m=  100000  D_prim=   223.893  D_chart=  -0.634  chart=  -0.647  recovered=   0.625  sqrt(m)=  316.2
+  m=  300000  D_prim=   388.659  D_chart=  -0.770  chart=  -0.794  recovered=   0.767  sqrt(m)=  547.7
+  m= 1000000  D_prim=  -646.638  D_chart=  -0.997  chart=  -0.955  recovered=   0.922  sqrt(m)= 1000.0
