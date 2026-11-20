@@ -109,3 +109,16 @@ $$\frac1{Q_m}=b+m-\frac{29}{216}H_m(b)-\frac{2\Re\big(\bar z_mh_2(z_m)\big)}{q_m
 3. Then define $W_m$ on O3 and redo $W^{(B)}$, B1-1 and $W^{(C)}$. That work imports RECOG results. A question to RECOG (`pipes/RECOG/`) on the gauge status of $\tfrac{245}{216}$ would precede any invariance claim (§4 (d)).
 
 Not decided here: no object, grade, RID or edition. `DZT-OPEN-LOCAL-FORMAL-ZETA` stays as stated in `dzt-v0.19`.
+
+## 9. PI decision on the object
+
+**Decision (PI, 20 November 2026, 23:20 +03:00, project conversation with the DZT co-owner, verbatim):** "O3". It answers the question of the same conversation, which named the candidates of §2 and the proposal of §5. The answer came after the record was merged (PR #341, `b1106fc`) on reviews `5992705393`, `5998598925` and `5998658151`.
+
+**What the decision covers:** O3 is the object of `DZT-OPEN-LOCAL-FORMAL-ZETA` (B1), as fixed in §5 (clock, coordinate, regularity, observable, certified inputs). The B1 weight $W_m$ is to be defined on it, and the recovered B1 claims are to be tested on it one by one (§7).
+
+**What it does not cover:**
+- no B1 result, grade, RID or edition;
+- no import yet of the RECOG RIDs named in §5 (that needs an edition and an import row);
+- the gauge question for $\tfrac{245}{216}$ (O4, §4 (d)), which is asked of RECOG separately: `pipes/RECOG/20261120-DZT-b1-chart-drift-question.md`.
+
+`DZT-OPEN-LOCAL-FORMAL-ZETA` stays as stated in `dzt-v0.19` until an edition restates it.

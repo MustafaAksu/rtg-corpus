@@ -99,18 +99,18 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 ### CO-OWNER LANE — Claude
 
-**Checked:** 20 November 2026, 23:05 +03:00. `main` `ecc7e2d` (merge of PR #338). Tag `dzt-v0.19` (annotated, on `5f3b205`) governs; file `2b959f46…f6ce` equal on `main`. `pipes/DZT/`: five items, none open (the AZ v0.7 item `closed`, the other four `dispositioned`). Open DZT PR: #341, the B1 object record (branch `claude/dzt-b1-object`).
+**Checked:** 20 November 2026, 23:25 +03:00. `main` `b1106fc` (merge of PR #341). Tag `dzt-v0.19` (annotated, on `5f3b205`) governs; file `2b959f46…f6ce` equal on `main`. `pipes/DZT/`: five items, none open (the AZ v0.7 item `closed`, the other four `dispositioned`). Open DZT PR: the B1 O3 decision and the RECOG question (branch `claude/dzt-b1-o3`).
 **Role:** DZT co-owner, preparer. The second co-owner (ChatGPT) is the independent receiving reviewer. The PI decides adoption and publication (D6).
 **Shared sections:** this lane's session updated the governing-edition paragraph and PI_PENDING on 20 Nov.
 **Goal / current question:** triage list (ii), row 6: the B1 re-examination, starting from the dynamical object. Each item enters an edition only by a separate PI decision.
-**Last durable work:** PR #308, #309, #317, #321, #319, #327, #332, #334 (merged); tags `dzt-v0.18`, `dzt-v0.19`. `DZT-THM-CASCADE-NORM-LAW` adopted (v0.19). PR #338 (notices to LIT, PROG, NUMGEN, DYAD) merged.
-**Decisions held:** PI, 18 Nov, 00:00 +03:00, D1–D7 (triage §7). PI, 18 Nov: scope list (i), number v0.18. PI, 19 Nov, 15:03: v0.18 adopted. PI, 20 Nov, 00:55: norm law `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`, new RID, by a new edition. PI, 20 Nov, 12:19: v0.19 adopted.
+**Last durable work:** PR #308, #309, #317, #321, #319, #327, #332, #334 (merged); tags `dzt-v0.18`, `dzt-v0.19`. `DZT-THM-CASCADE-NORM-LAW` adopted (v0.19). PR #338 (notices to LIT, PROG, NUMGEN, DYAD) and PR #341 (B1 object record) merged.
+**Decisions held:** PI, 18 Nov, 00:00 +03:00, D1–D7 (triage §7). PI, 18 Nov: scope list (i), number v0.18. PI, 19 Nov, 15:03: v0.18 adopted. PI, 20 Nov, 00:55: norm law `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`, new RID, by a new edition. PI, 20 Nov, 12:19: v0.19 adopted. PI, 20 Nov, 23:20: B1 object O3.
 **Tried and set aside:** treating any recovered variant as final from its file name, size or time stamp (no basis; RR §4). Reusing the DZT script outputs as signed norms: they are `sqrt(abs)` (RR §9.2). Reading the imported note's $2^{-\varphi(q)}$ as right in value on the anomaly set (only its exponent is; review `5984329391` R1).
 **Evidence:** `evidence/dzt/v0.18/`, `evidence/dzt/v0.19/`, `evidence/dzt/norm_law_review/`; RR §§2–9; recovered files under `upload/dzt-recovery-20261116/received/`.
 **Resume:** the LIVE_STATE command; v0.19 record §7 (notices); triage rows 6, 7, 12, 17.
 **Next 1–3 actions / acceptance:**
 1. Watch the receivers' dispositions of the four v0.19 notices.
-2. Row 6 (ii): the B1 object record `records/dzt/DZT_B1_OBJECT_DEFINITION.md` (PR #341; review `5992705393` REVISE, revision 2 `571d7aaf`). It proposes the chart orbit $q_m$ (O3); there the orbit drift is $-\tfrac{29}{216}$ (`RECOG-ALG-A1C-RECIPROCAL-DRIFT`), not the recovered $+\tfrac7{54}$. Acceptance: readback; then the PI's choice of object.
+2. Row 6 (ii), B1 on O3 (PI, 20 Nov, 23:20; B1 record §9): define $W_m$ on the chart orbit $q_m$ and test $W^{(B)}$, B1-1 and $W^{(C)}$ on it, one by one, in a new record. The RECOG question on the gauge status of $\tfrac{245}{216}$ is `pipes/RECOG/20261120-DZT-b1-chart-drift-question.md`. Acceptance: a reviewed record; nothing enters an edition without the PI.
 3. Rows 7 and 12 (channel universality), then row 17 (targeted search for missing sources).
 
 **Reopen trigger:** a review of the notices PR; a new `pipes/DZT/` item; a receiver disposition on a DZT notice; a Dyadic edition that changes §6.5, §6.11 (the closed form assumed by `DZT-THM-CASCADE-NORM-LAW`) or Appendix D/F; any material found by the row 17 search.
