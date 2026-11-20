@@ -119,6 +119,6 @@ Not decided here: no object, grade, RID or edition. `DZT-OPEN-LOCAL-FORMAL-ZETA`
 **What it does not cover:**
 - no B1 result, grade, RID or edition;
 - no import yet of the RECOG RIDs named in §5 (that needs an edition and an import row);
-- the gauge question for $\tfrac{245}{216}$ (O4, §4 (d)), which is asked of RECOG separately: `pipes/RECOG/20261120-DZT-b1-chart-drift-question.md`.
+- the gauge question for $\tfrac{245}{216}$ (O4, §4 (d)), which is asked of RECOG separately: `pipes/RECOG/20261120-DZT-b1-chart-drift-question.md`. DZT's intended consumer use of the two RECOG RIDs is a notice to RECOG: `pipes/RECOG/20261120-DZT-b1-chart-import-intent.md`.
 
 `DZT-OPEN-LOCAL-FORMAL-ZETA` stays as stated in `dzt-v0.19` until an edition restates it.
