@@ -1,0 +1,22 @@
+NC00 unmodified driver: self-test PASS
+NC01 clock results accepted without verification             DETECTED (1 failed checks: C2)
+NC02 F(L) computed over contact seeds only                   DETECTED (4 failed checks: A1 A2 A3 A4)
+NC03 L_max chosen automatically when no L qualifies          DETECTED (3 failed checks: A2 A3 A4)
+NC04 tau_C < L used instead of tau_C <= L                    DETECTED (1 failed checks: A1)
+NC05 Wilson interval computed with the one-sided z (1.645)   DETECTED (1 failed checks: A4)
+NC06 run time written into the deterministic summary         DETECTED (2 failed checks: D1 D4)
+NC07 pilot plan does not require a frozen manifest           DETECTED (1 failed checks: B2)
+NC08 any tag accepted in either plan                         DETECTED (2 failed checks: B1 B4)
+NC09 an existing output directory is accepted                DETECTED (2 failed checks: B6 D9)
+NC10 tau_slot^free recorded as tau_C                         DETECTED (1 failed checks: D4)
+NC11 complete audit always passes                            DETECTED (2 failed checks: D5 D6)
+NC12 audit checks only the replay, not every stored field    DETECTED (1 failed checks: D5)
+NC13 audit does not recompute the summaries                  DETECTED (1 failed checks: D5)
+NC14 audit does not check the file set and SHA256SUMS        DETECTED (1 failed checks: D5)
+NC15 audit does not bind the approved manifest               DETECTED (2 failed checks: D5 D6)
+NC16 run accepts manifest bytes that differ from the approved SHA-256 DETECTED (2 failed checks: D6 D7)
+NC17 pilot manifest need not be committed at HEAD            DETECTED (1 failed checks: D8)
+NC18 output check ignores symbolic links in the parent path  DETECTED (1 failed checks: D9)
+NC19 SHA256SUMS parsed leniently (duplicates collapse, the last entry wins) DETECTED (1 failed checks: D5)
+NEGCONTROLS PASS
+exit 0

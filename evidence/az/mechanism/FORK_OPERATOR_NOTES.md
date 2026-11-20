@@ -61,6 +61,7 @@ Profile: P1, `bound_symmetric`.
   - an eligible state.
   
   This validation is not a PI selection of any further parameter.
+  - Maintenance (20 Nov, review `5989076562`, non-blocking): `o1_values` also refuses a draw that is not a mapping (E5).
 
 ## 2. Self-test (`python3 -I evidence/az/mechanism/az_tokres_fork.py --selftest`, about 2.5 min)
 
