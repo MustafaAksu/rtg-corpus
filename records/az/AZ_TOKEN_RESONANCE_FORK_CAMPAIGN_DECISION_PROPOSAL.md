@@ -28,7 +28,7 @@ Use the unmodified, frozen P1 runner's exact laws for each preassigned integer i
 - base_seed_b = derive_int(tag, "N120", "k8", "base", b)
 - arm_seed_b = derive_int(tag, "N120", "k8", "arm", b)
 - theta0_b, delta0_b = base_draw(engine, tag, 120, 8, b); initial node count 4.
-- (j_b, r_b, epsilon_b) = (arm_choices(tag,120,8,b)["slot"], ["r1"], ["s1"]); j uniform among four root nodes, r in {0,60}, epsilon in {-1,+1}.
+- choices_b = arm_choices(tag, 120, 8, b); (j_b, r_b, epsilon_b) = (choices_b["slot"], choices_b["r1"], choices_b["s1"]). Here j is uniform among four root nodes, r in {0,60}, epsilon in {-1,+1}.
 - R writes x_R=r_b and D writes x_D=(r_b+epsilon_b) mod 120 **absolutely** to the current physical carrier of original slot copy c_j, only at their selected BASE fork boundary. The R/D alternatives use identical pre-fork phases, other tokens, identity and reference event time.
 
 **[SESSION]** The hash-derived streams are reproducible *pseudorandom* draws under a declared computational generator, not a theorem asserting probabilistic independence of deterministic outputs. The same b may be used for R/D/C-/C+ within this **one campaign** (that is the paired design); the initial seed streams must be disjoint from prior pilot and registered experiment streams.
