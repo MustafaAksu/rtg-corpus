@@ -31,12 +31,12 @@ The recovered B1 work (v0.10–v0.17, not adopted; reading record O-8.1) answere
 |---|---|---|---|---|---|---|---|
 | O1 | Raw angular mean $\mathcal A_{\rm raw}(Q)=\frac1{2\pi}\int_0^{2\pi}\lvert F_W(\sqrt Qe^{i\theta})\rvert^2d\theta$ | none (a function of $Q$, not a sequence) | raw linear frame $W$ | jet to degree 6 | the circle mean of $\lvert F_W\rvert^2$ | no | `DYAD-ALG-RAW-ANGULAR-MEAN` (`[ALG]`, scope: fixed-radius uniform-angle mean in the raw $W$-frame) |
 | O2 | Primitive orbit $Q_m=Q(T^{6m}x_0)$, $x_0\in U=\{0<Q\le\tfrac1{625}\}$ | block index $m$ of $F=T^6$ | primitive $(\rho,\eta)$; $Q=\lvert W\rvert^2$ | exact map; certified inequalities | $Q_m$ (and the primitive phase) | yes | `DYAD-THM-PRIM-CTR`, `DYAD-ALG-P5-RADIAL`, `DYAD-ALG-ONE-BLOCK-BURST` (Dyadic); `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` (`[THM]`, imported by Dyadic §6.5) |
-| O3 | Chart orbit $q_m=\lvert z_m\rvert^2$, $z_m=h^{-1}\big(W(T^{6m}x_0)\big)$, $x_0\in U$ | block index $m$ | conjugacy chart $W=h(z,\bar z)$, row A ($\lvert z\rvert\le\tfrac1{20}$) | degree-6 jet $J$ with certified remainder $\lvert\widehat F-J\rvert\le100\lvert z\rvert^7$ | $q_m$, $\Theta_m=\arg z_m$ | yes | `DYAD-ALG-NF6`, `DYAD-THM-NF-INV`, `DYAD-THM-NF-REM` (Dyadic); `RECOG-ALG-CHART-LAWS`, `RECOG-ALG-A1C-RECIPROCAL-DRIFT` (`[ALG]`, RECOG) |
+| O3 | Chart orbit $q_m=\lvert z_m\rvert^2$, $z_m=h^{-1}\big(W(T^{6m}x_0)\big)$, $x_0\in U$ | block index $m$ | conjugacy chart $W=h(z,\bar z)$, row A ($\lvert z\rvert\le\tfrac1{20}$) | exact map $\widehat F=h^{-1}F_Wh$ locally real-analytic; proof inputs: the degree-6 jet $J$ and the certified remainder $\lvert\widehat F-J\rvert\le100\lvert z\rvert^7$ | $q_m$, $\Theta_m=\arg z_m$ | yes | `DYAD-ALG-NF6`, `DYAD-THM-NF-INV`, `DYAD-THM-NF-REM` (Dyadic); `RECOG-ALG-CHART-LAWS`, `RECOG-ALG-A1C-RECIPROCAL-DRIFT` (`[ALG]`, RECOG) |
 | O4 | Germ data of $F$ at $P_1$ | none | the chart, or formal | formal / finite jet | $\mu$, $a_{32}$, $a_{05}$; $X=\log F$ | no | `DYAD-THM-C21`, `DYAD-ALG-NF6`, `DYAD-ALG-CUBIC-PARABOLIC`, `DYAD-THM-FORMAL-CENTRALIZER` (scope formal) |
 
 ## 3. Facts at the pinned editions (owner statements)
 
-- **F1.** $\tfrac{47}{54}$ is the coefficient of O1 only. Dyadic §6.5, `DYAD-ALG-RAW-ANGULAR-MEAN`, calls it "an averaging operator, not a pointwise recurrence for $Q$ along arbitrary primitive orbits (the pointwise update carries the nonzero $Q^{5/2}$ term below), and not by itself a long-orbit backbone theorem". `[COR]` `[v6.4.10]` supersedes the unqualified recurrence.
+- **F1.** $\tfrac{47}{54}$ is the cubic coefficient of O1, and also the $(3,3)$ coefficient $[W^3\bar W^3]P_6$ of the raw radial jet (`DYAD-THM-PRIM-CTR`, Dyadic §6.5). Neither makes it the coefficient of a pointwise scalar recurrence. Dyadic §6.5, `DYAD-ALG-RAW-ANGULAR-MEAN`, calls it "an averaging operator, not a pointwise recurrence for $Q$ along arbitrary primitive orbits (the pointwise update carries the nonzero $Q^{5/2}$ term below), and not by itself a long-orbit backbone theorem". `[COR]` `[v6.4.10]` supersedes the unqualified recurrence.
 - **F2.** The pointwise update of $Q$ is $Q(T^6x)-Q=-Q^2+P_5+O(\lVert x\rVert^6)$, with $P_5=\tfrac Q{24}(5\eta^3-43\eta^2\rho+4\eta\rho^2-5\rho^3)\ne0$ (`DYAD-ALG-P5-RADIAL`). On the positive ray it gives $-\tfrac5{24}Q^{5/2}$ (`DYAD-ALG-ONE-BLOCK-BURST`).
 - **F3.** On O2 the certified law is the leading decay $\lvert Q_{m+1}^{-1}-Q_m^{-1}-1\rvert<\tfrac{15}2\sqrt{Q_m}$, so $Q_m^{-1}=Q_0^{-1}+m+O(\sqrt m)$ (`RECOG-THM-A1A-RECIPROCAL-AMPLITUDE`, `[THM]`, Dyadic §6.5).
 - **F4.** The chart is defined, but the primitive and chart amplitudes are only compared, not identified. $W=h(z,\bar z)$ with $h=\mathrm{id}+h_2+\cdots+h_6$ ($h_2=-\tfrac{1+i\sqrt3}{12}z^2-\tfrac13z\bar z+\tfrac{1-i\sqrt3}{24}\bar z^2$). The six-step jet is $J(z)=z+\mu z^2\bar z+a_{32}z^3\bar z^2+a_{05}\bar z^5$, with:
@@ -52,12 +52,13 @@ The recovered B1 work (v0.10–v0.17, not adopted; reading record O-8.1) answere
 
 ## 4. What this means for B1 ([SESSION] analysis)
 
-**(a) O1 cannot carry the index $m$.** O1 is a function of $Q$. Iterating $\mathcal A_{\rm raw}$ is an averaged model, not the dynamics (F1). That model's reciprocal drift is $1-\tfrac{47}{54}=+\tfrac7{54}$, and no orbit has it (see (c)).
+**(a) O1 cannot carry the index $m$.** O1 is a function of $Q$. Iterating $\mathcal A_{\rm raw}$ is an averaged model, not the dynamics (F1). That model's reciprocal drift is $1-\tfrac{47}{54}=+\tfrac7{54}$. The certified orbit law on O3 has $-\tfrac{29}{216}$ instead (see (c)). No orbit law with $\tfrac7{54}$ is established, on O2 or on O3.
 
-**(b) On O2 no logarithmic term is visible.**
-- The derivation: $Q_m-q_m=\lvert h(z_m)\rvert^2-\lvert z_m\rvert^2=2\Re\big(\bar z_mh_2(z_m)\big)+O(q_m^2)$. This is a nonzero cubic form in $z_m$ that depends on the angle (F4).
-- Hence $Q_m^{-1}-q_m^{-1}$ is of order $q_m^{-1/2}\sim\sqrt m$, with a sign that turns slowly as $\Theta_m$ drifts, while $q_m^{-1}$ carries only $-\tfrac{29}{216}\ln m$ (F6).
-- This agrees with the certified $O(\sqrt m)$ of F3. It means that a weight built on the primitive $Q_m$ has its first correction from an orbit-dependent, angle-dependent offset, not from a logarithm.
+**(b) On O2 no autonomous logarithmic orbit law is established; the logarithmic part is masked.**
+- The derivation (`[SESSION]`, from F4 and F6): $Q_m-q_m=\lvert h(z_m)\rvert^2-\lvert z_m\rvert^2=2\Re\big(\bar z_mh_2(z_m)\big)+O(q_m^2)$. This is a nonzero cubic form in $z_m$ that depends on the angle (F4). Hence
+$$\frac1{Q_m}=b+m-\frac{29}{216}H_m(b)-\frac{2\Re\big(\bar z_mh_2(z_m)\big)}{q_m^2}+O(1).$$
+- The angular term is of order $q_m^{-1/2}\sim\sqrt m$, with a sign that turns slowly as $\Theta_m$ drifts. It is larger than the logarithmic term $-\tfrac{29}{216}H_m(b)$, which is present but masked. This agrees with the certified $O(\sqrt m)$ of F3.
+- Consequence: a weight built on the primitive $Q_m$ has its first correction from an orbit-dependent, angle-dependent term, not from the logarithm. No autonomous logarithmic law for $Q_m$ alone is established.
 - `[NUM]` illustration (§6): on three orbits from $U$ and $10^6$ blocks, $1/Q_m-1/Q_0-m$ oscillates with amplitude of about $0.4$–$0.75\sqrt m$ (up to 739 at $m=10^6$).
 
 **(c) On O3 the orbit law is owner-certified (F6).**
@@ -69,13 +70,16 @@ The recovered B1 work (v0.10–v0.17, not adopted; reading record O-8.1) answere
 - `[HEUR]`: for a resonant cubic gauge, the bracket with the cubic term changes only the angular part of the quintic coefficient; this suggests that the radial part is invariant at that order.
 - The sixth harmonic $a_{05}$ is not gauge-invariant in phase (F8).
 
-**Recommendation to the owner and the PI.** Pose B1 on O3, or directly on O4. Do not pose it on O1, which is not a sequence, or on O2, where the logarithmic structure B1 sought is not visible.
+**Recommendation to the owner and the PI.** Pose B1 on O3, or directly on O4. Do not pose it on O1, which is not a sequence, or on O2, where the logarithmic part is masked by an angle-dependent $O(\sqrt m)$ term and no autonomous law is established.
 
 ## 5. Proposed fixed object (for review and for the PI's decision)
 
 - **Clock:** block index $m\ge0$ of $F=T^6$; base points $x_m=T^{6m}x_0$, $x_0\in U$ (`DYAD-THM-PRIM-CTR`).
 - **Coordinate:** $z_m=h^{-1}(W(x_m))$ in the chart of `DYAD-ALG-NF6`, row A ($\lvert z\rvert\le\tfrac1{20}$); rows are not mixed.
-- **Regularity:** the degree-6 jet with certified remainder (`DYAD-THM-NF-REM`). Nothing formal to all orders, and nothing analytic.
+- **Regularity:** two things are kept apart.
+  - The exact chart map $\widehat F=h^{-1}F_Wh$ is locally real-analytic: $T$ is analytic and $h$ is a polynomial with an inverse on $\lvert W\rvert\le\tfrac9{100}$ (`DYAD-THM-NF-INV`).
+  - The proof inputs for B1 are the degree-6 jet and its certified remainder (`DYAD-THM-NF-REM`).
+  No formal all-order statement and no analytic zeta theorem is established.
 - **Observable:** $q_m=\lvert z_m\rvert^2$ and $\Theta_m$. The primitive $Q_m$ is a comparison quantity only (F4).
 - **Certified inputs:** `RECOG-ALG-A1C-RECIPROCAL-DRIFT` and `RECOG-ALG-CHART-LAWS` (RECOG-owned, `recog-v0.3.27`). Germ data: $\mu$, $a_{32}$, $a_{05}$ (`DYAD-ALG-NF6`).
 - **Weight:** $W_m$ must be defined on this object and pass the B1-0 gate. B1-0's "certified Dyadic local data" are then the chart objects above, with SG-19 non-transfer.
@@ -94,7 +98,7 @@ The recovered B1 work (v0.10–v0.17, not adopted; reading record O-8.1) answere
 | DZT-B1-0, the admissible-weight gate | definitions | Usable as a gate. Criterion 2's data list must name chart objects (§5) |
 | $W^{(A)}$ `[FAIL]` (det and trace of the linearization) | $DF^m(P_1)=I$ | Independent of the O1/O2/O3 choice (F7): $\det(I-DF^m)=0$ and $\operatorname{tr}DF^m=2$. It survives, as a candidate for later entry with the Dyadic import |
 | $W^{(B)}$ pure $\mathrm{Li}_2$ `[FAIL]` | "$A=\tfrac{47}{54}\ne1$ forces a log correction" | The recovered reason uses O1. On O3 the drift coefficient is $-\tfrac{29}{216}\ne0$ (F6), so a log correction is present and pure $\mathrm{Li}_2$ still fails, for the corrected reason. This becomes a proof only once $W_m$ is defined on O3 |
-| DZT-B1-1 "RESULT": leading-log tower $c_r=(A-1)^r$, $Q_m^{\rm LL}=1/(m-(A-1)\ln m)$, $A=\tfrac{47}{54}$ | O1 coefficient applied as an orbit law | **Wrong object and wrong coefficient at the pin.** On O3 the orbit drift is $-\tfrac{29}{216}\ln m$ (the recovered value is $+\tfrac7{54}\ln m$); on O2 no log term is visible. It must be rebuilt on O3 if wanted; its recovered `[ALG]` has no basis at `dyad-v6.4.24` |
+| DZT-B1-1 "RESULT": leading-log tower $c_r=(A-1)^r$, $Q_m^{\rm LL}=1/(m-(A-1)\ln m)$, $A=\tfrac{47}{54}$ | O1 coefficient applied as an orbit law | **Wrong object and wrong coefficient at the pin.** On O3 the orbit drift is $-\tfrac{29}{216}\ln m$ (the recovered value is $+\tfrac7{54}\ln m$); on O2 the logarithmic part is masked by an angle-dependent $O(\sqrt m)$ term and no autonomous law is established. It must be rebuilt on O3 if wanted; its recovered `[ALG]` has no basis at `dyad-v6.4.24` |
 | DZT-B1-WC, $W^{(C)}$ "FAIL at certification level" | invariant data $\{c_{21},A\}$ with $A=\tfrac{47}{54}$ | Its invariant data used the raw coefficient. The chart isotropic coefficient is $\tfrac{245}{216}$ (F5), and the gauge behaviour of $a_{32}$ and $a_{05}$ must be taken from the chart (F8). Re-examine |
 | Dyadic responses to REQ-003 and REQ-004 | REQ-004 lines 24–27: "$A=\tfrac{47}{54}$ … the physical radial recurrence" | Superseded at the owner (F1). If cited, cite by path and hash (`c8b5ee22…8e09`, `94f3f458…2f55`), not as RIDs (triage row 12) |
 
