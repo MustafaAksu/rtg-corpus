@@ -99,17 +99,17 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 ### CO-OWNER LANE — Claude
 
-**Checked:** 20 November 2026, 00:30 +03:00. `main` `d6f28dc` (merge of PR #327). Tag `dzt-v0.18` (annotated, on `9a75aaa`) governs; file `04581d1e…8dee` equal on `main`. `pipes/DZT/`: five items; the 13 Nov LIT offer is `acknowledged`, the AZ v0.7 item `closed`, the other three `dispositioned`. Open DZT PR: the norm-law owner review (branch `claude/dzt-norm-law-review`).
+**Checked:** 20 November 2026, 12:25 +03:00. `main` `d422b89`. v0.19 adopted by the PI on 20 Nov, 12:19 +03:00 (published `2b959f46…f6ce`); `dzt-v0.18` governs until the tag `dzt-v0.19`. Tag `dzt-v0.18` (annotated, on `9a75aaa`) governs; file `04581d1e…8dee` equal on `main`. `pipes/DZT/`: five items; the 13 Nov LIT offer is `acknowledged`, the AZ v0.7 item `closed`, the other three `dispositioned`. Open DZT PR: the v0.19 edition (branch `claude/dzt-v0.19`).
 **Role:** DZT co-owner, preparer. The second co-owner (ChatGPT) is the independent receiving reviewer. The PI decides adoption and publication (D6).
 **Shared sections:** this lane's session updated the governing-edition paragraph and PI_PENDING on 19 Nov.
 **Goal / current question:** triage list (ii), starting with row 2 (norm-law proof review). Each item enters an edition only by a separate PI decision.
-**Last durable work:** PR #308, #309, #317, #321, #319 (merged); tag `dzt-v0.18` (release record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`). PR #327 (notices to PROG, NUMGEN, OFN) merged. Norm-law owner review `records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md` with `evidence/dzt/norm_law_review/` (check PASS to p=4000 exact; negative controls 6 of 6) on `claude/dzt-norm-law-review`.
-**Decisions held:** PI, 18 Nov, 00:00 +03:00, D1–D7 (triage §7). PI, 18 Nov: scope = triage list (i) as written; number = v0.18. PI, 19 Nov, 15:03 +03:00: v0.18 adopted (record §12).
+**Last durable work:** PR #308, #309, #317, #321, #319 (merged); tag `dzt-v0.18` (release record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`). PR #327 (notices to PROG, NUMGEN, OFN) merged. PR #332 (norm-law owner review, review `5983698371`) merged. v0.19 candidate revision 2 `50f58c88…7442` (review `5984329391` R1, N1 applied) with release record draft `records/dzt/DZT_v0_19_RELEASE_RECORD.md` on `claude/dzt-v0.19`.
+**Decisions held:** PI, 18 Nov, 00:00 +03:00, D1–D7 (triage §7). PI, 18 Nov: scope = triage list (i) as written; number = v0.18. PI, 19 Nov, 15:03 +03:00: v0.18 adopted (record §12). PI, 20 Nov, 00:55 +03:00: norm law `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`, new RID, by a new edition (v0.19 record, Authority).
 **Tried and set aside:** treating any recovered variant as final from its file name, size or time stamp (no basis; RR §4). Reusing the DZT script outputs as signed norms: they are `sqrt(abs)` (RR §9.2).
 **Evidence:** `evidence/dzt/v0.18/`; RR §§2–9; recovered files under `upload/dzt-recovery-20261116/received/`; LIT notes at rtg-lit `8e2fb5cb` (norm law) and `da9d5bcb` (sign).
 **Resume:** the LIVE_STATE command; release record §11 and §13; triage rows 2–7, 12, 17, 19.
 **Next 1–3 actions / acceptance:**
-1. Row 2 (ii): answer the second co-owner's review of `records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md`; then the PI's grade decision (record §8). Acceptance: criteria (d) and (e) of triage row 2; then the reply to LIT (`pipes/LIT/`).
+1. v0.19: answer the review; after adoption the publication commit; after the tag the notices to LIT, PROG, NUMGEN, DYAD (v0.19 record §7). Acceptance: tag `dzt-v0.19`; `tools/pipes_index.py --check` OK.
 2. Row 6 (ii): the B1 re-examination, starting from the dynamical object. Acceptance: a written object definition checked against Dyadic `dyad-v6.4.24`, with no B1 result carried.
 3. Row 17: the targeted search for missing sources; anything found arrives unchanged on an upload branch and is hash-checked.
 
@@ -121,5 +121,7 @@ Each message asks for one bounded product. The PI sends the next one after readi
 - **Done, 17–18 Nov 2026:** question 0 answered (PR #289, #308, #309). D1–D7 decided by the PI on 18 Nov, 00:00 +03:00 (triage §7). Triage merged (PR #317). Scope (list (i)) and number (v0.18) decided by the PI on 18 Nov.
 - **Done, 19 Nov 2026, 15:03 +03:00:** v0.18 adopted by the PI (release record §12).
 - **Done, 19 Nov 2026:** PR #319 merged by the PI (`9a75aaa`), annotated tag `dzt-v0.18`.
-- **Open with the PI:** the order of the list (ii) items, if the PI wants one other than the lane's.
+- **Done, 20 Nov 2026, 00:55 +03:00:** norm-law grade, new RID, entry by v0.19 (v0.19 record, Authority).
+- **Done, 20 Nov 2026, 12:19 +03:00:** v0.19 adopted (v0.19 record §9).
+- **Open with the PI:** merge of PR #334 and the annotated tag `dzt-v0.19`.
 - No CLI block is pending for DZT.

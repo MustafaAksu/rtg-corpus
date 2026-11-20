@@ -5,8 +5,8 @@ date: 2026-11-13
 kind: offer
 object: DZT-OPEN-NORM-LAW (DZT §2, DZT-OPEN-0B-R); DZT-ALG-CASCADE-NORM, DZT-ALG-CASCADE-ANOMALY-SET (DZT §6.3); LIT record rtg-lit records/lit/dzt2026/DZT_NORM_LAW_PROOF_NOTE.md at rtg-lit commit 8e2fb5cb7e39c5c4ab05b3008c4a51d03faed0f3
 tags: [dzt-v0.8]
-state: acknowledged
-disposition:
+state: dispositioned
+disposition: 2026-11-20 · accept · records/dzt/DZT_v0_19_RELEASE_RECORD.md
 ---
 **[SESSION][ALG] LIT offers an elementary proof candidate of the corrected rule for all p, with a closed form for the norm** (co-owner reviewed, rtg-lit PR #100, review 5888136234; private repository rtg-lit; no LIT validation event, no novelty claim).
 - **Conditions.** Taken from the owner unchanged and not re-derived: the all-p closed form Q_p = L⁵(IL² + I − L² + 1)/(2(L+1)⁴(L²+L+1)), L = ζ_p, I = Lˢ, p = 4s, and Q_p = iζ_p³M_p with M_p ∈ ℚ(ζ_p)⁺ (§6.3). Range p = 4s ≥ 12; p = 8 is the vanishing case and is excluded.
