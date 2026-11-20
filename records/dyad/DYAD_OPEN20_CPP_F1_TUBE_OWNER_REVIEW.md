@@ -393,3 +393,32 @@ The co-owner's resume line uses budget 1800, depth 2. The budget rule reserves r
 Also: the MV package should go to an `upload/` branch unchanged before or with the PI's results.
 
 No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 7 — MV pilot and k = 4 resume, PI runs compared (20 November 2026)
+
+**Deposited:** package `upload/dyad-cpp-mv-resume-20261119` (head `46f9f0831b26046ed2f266e9c0b63e4440b0ccb7`; ZIP SHA-256 `4c55165e…7b38`, equal to the copy reviewed in Addendum 6); resume results `upload/dyad-cpp-mv-resume-results-20261119` (head `801e69ac703e8609774f76edcf569e5d302f5a43`). The pilot results were not uploaded, because the package's upload script has one fixed results-branch name; the PI relayed their hashes instead.
+
+## R6 — comparison
+
+- **Pilot:** the PI's `base_pilot.tsv`, `structure_check.txt` and `summary.txt` have the SHA-256 values of the owner pilot (`5ff09c47…04b8`, `a7654db3…fd60`, `3722e190…fb14`).
+- **Resume (`resume 4 4200 2 4096`):** owner replay (wall time 1758 s, exit 2, `REFINEMENT_CAP`) and PI run agree in 39 files, including `events.tsv` (`2646cf7c…01c0`), `final_frontier.tsv` (`6eccf626…85e1`) and `stages.tsv` (`fcca8378…4942`). Only `environment.txt`, the pin file (local paths) and the run hash list differ.
+R6 is met at the level of same-engine replay. **The MV package is accepted as a development checkpoint (SESSION)**, together with Addendum 6.
+
+Minor finding on the package: `upload_mv_evidence.sh` uses one fixed results branch, so a pilot and a resume cannot both be deposited. A per-run suffix would fix it.
+
+## Result ([NUM])
+
+897 frozen boxes → 4037 evaluations, 785 splits, 2576 exclusions, **676 boxes**, 0 unresolved, 0 pending; L¹ hull 8.790759·10⁻⁵ → **3.223882·10⁻⁵** (−63.3 %). The stop is the depth cap (676 boxes at depth 2), not the budget (163 evaluations unused). Accounting: 897 + 4·785 = 4037; 897 + 3·785 − 2576 = 676.
+
+By depth (`depth_breakdown_owner.txt`; medians): at depth 1, Dr/M₄ = 4.06 with r = 3.9·10⁻⁶; at depth 2, Dr/M₄ = 0.86 with r = 1.95·10⁻⁶ and necessary radius 1.6·10⁻⁵. M₄/\|b₄\| = 8.7·10⁻⁶ at every depth.
+
+## Reading and next step
+
+- One halving cut Dr/M₄ by a factor 4.7 with M₄ fixed: here D₄ scales like r^{1.25}.
+- The k = 4 discs (1.6·10⁻⁵) are within a factor of two of the k = 4 tube floor (8.7·10⁻⁶). Another k = 4 split (2704 evaluations) could bring the hull to about 2·10⁻⁵ at most.
+- **Owner advice: move to k = 5 on the 676 boxes**, splitting at most once (depth 1): at most 676·5 ≈ 3400 evaluations, about 30–40 minutes. If the factor of about 3 per block holds, the k = 5 floor is near 3·10⁻⁶.
+- This needs a small successor: `resume` is fixed to start from the 897-box frontier at k = 4; it should start from this run's hash-pinned `final_frontier.tsv` (676 boxes) at k = 5, with the same rules (MV base, own M_k, whole-disc tangent from the original lift, unresolved kept).
+
+No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
