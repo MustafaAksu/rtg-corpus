@@ -482,3 +482,25 @@ The tangent is propagated as J(X)·t with J the Jacobian over the whole state bo
 - Package: fix the `check_k5.py` argument order in the source; give the upload helper a per-run branch suffix.
 - Co-owner: a D-tightening prototype measured on the same four boxes (and then a sample of the 2640) against the sampled values above, before any new campaign.
 - No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 8a — certified lower estimate for the sampled D (20 November 2026)
+
+**Correction (co-owner, 20 Nov).** `dgrow.cpp` sampled ‖mid(b_k(d_j)) − slope‖ with the L¹ upper norm. The midpoint of an enclosure is not the derivative, and an upper norm is not a lower bound, so the chain D_sample ≤ D_true ≤ D_encl did not follow from that code.
+**Fix.** `dgrow_cert.cpp` (same evidence folder) differs in one line: D_lower = max_j `norm_lower`(b_k(d_j) − slope), where b_k(d_j) is the point-orbit enclosure and `norm_lower` is the L^∞ lower bound (≤ Euclidean modulus). The same disc, centre, radius, lift and slope are used. Now, with D_true := sup over the disc of \|b_k(d) − slope\|,
+D_lower ≤ D_true ≤ D_encl (D_encl uses `norm_upper`, the L¹ upper bound, ≥ Euclidean).
+
+| k | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| D_encl (box 0, r = 6.36·10⁻⁷) | 1.19·10⁻³ | 1.75·10⁻² | 0.153 | 1.00 | 12.2 |
+| D_lower, certified | 3.52·10⁻⁶ | 6.09·10⁻⁶ | 8.43·10⁻⁶ | 1.00·10⁻⁵ | 1.20·10⁻⁵ |
+| D_encl / D_lower | 3.4·10² | 2.9·10³ | 1.8·10⁴ | 1.0·10⁵ | 1.0·10⁶ |
+
+The four boxes agree to three digits (`dgrow_cert_output.txt`). D_encl/D_lower is a certified **upper** bound of the overestimation factor D_encl/D_true; it includes the norm factors (L¹ against L^∞, at most 2). The values are about 0.7 of the earlier sampled ones; the conclusion of Addendum 8 is unchanged.
+
+**On the co-owner's second-order jet (20 Nov), owner check.** The jet recursions for T are correct: with J = [[1, −cos η], [e^ρ, 1 − cos η]], p⁺ = J p and q⁺ = J q + (sin η · p_η², e^ρ p_ρ² + sin η · p_η²). For the contractor three more pieces are needed:
+1. The initial lift is affine in d₀ (z₀ = x*, w₀ = φ(x*) + x*² d₀), and (ρ, η) ↔ (z, w) is linear, so q₀ = 0 and the jets transform linearly.
+2. f_k is the **readout** d_k = (w − φ_N(z))/z², not a component of T⁶. Its second derivative needs the chain rule through the readout: d_k″ = [w″ − φ′z″ − φ″z′²]/z² − 4z′(w′ − φ′z′)/z³ + (w − φ)(6z′²/z⁴ − 2z″/z³), with every factor enclosed on the whole disc.
+3. C1–C2 computes D inside `necessary_disk` from a derivative box. Using D_jet = δ + r·H needs a variant that takes D directly (or min(D_old, D_jet)). Wrapping the jet into a box b ± D_jet would lose up to a factor 2 through the L¹ norm.
+The whole-disc first jet p (width up to about 12 at k = 5) enters the source terms p², so H may be wide too. It is multiplied by r, so even H of order 10³–10⁴ would give D_jet of order 10⁻³ at k = 5, against D_encl = 12. This is an expectation, not a result; the acceptance test is the co-owner's (H_k a valid bound; report D_lower, D_old, D_jet, δ and the necessary radius on the same boxes).

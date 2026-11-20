@@ -1,5 +1,7 @@
 a351fa877d1e62e2c09063dda13520f7d03440a77707d693d972a5b5e47f7680  ./compare_pi_vs_owner.txt
 41beda83ea9ffde4293ae55646d6844a67246d575cf218edf439005c2547172a  ./d-growth/dgrow.cpp
+8856544c1214a88ed36ff79288ba360347d09508d48de6e6072cee33b77d64e2  ./d-growth/dgrow_cert.cpp
+62b65e8ba926e016b0902025349b35e27e1f0eb9a896fcfa40b5743d2657c3e6  ./d-growth/dgrow_cert_output.txt
 1069b85b18e9a935b556a78bf6aa8566fea50ae963fd9c3772d606233fb1d095  ./d-growth/dgrow_output.txt
 2c0391c7a1144b695a788936c4d45f54ad0182f1dce25943d0b247cf133a4076  ./depth_breakdown_owner.txt
 44dd224a7b05402364a4e5c8359aba23cad8efab0aa555b025eee77ae10d8d83  ./run-local/driver/final_frontier.tsv
