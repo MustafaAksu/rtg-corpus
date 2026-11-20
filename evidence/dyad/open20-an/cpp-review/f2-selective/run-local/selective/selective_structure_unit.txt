@@ -1,0 +1,6 @@
+SELECTIVE_F2_STRUCTURE_PASS children=400 selected_parents=100 prior_excluded=924
+evaluated=400 excluded=0 retained=400 unresolved=0
+prior_L1_256= 3184 final_L1_256= 3184
+prior_L1_approx=2.7497560679e-74 final_L1_approx=2.7497560679e-74
+SESSION_ONLY: conditional source-backed contractor; NOT a graph/tube certificate or jump
+SELECTIVE_STRUCTURE_TEST_PASS positive=1 negative=4

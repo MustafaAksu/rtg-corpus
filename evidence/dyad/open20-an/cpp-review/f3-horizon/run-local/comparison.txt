@@ -1,0 +1,5 @@
+h3 evaluations=144 retained=140 unresolved=0 finalL1=2.499532e-04 seconds=73.761
+refine2 evaluations=576 retained=324 unresolved=0 finalL1=1.707123e-04 seconds=137.233
+H3_vs_refine2_radius_ratio=1.464178
+H3_vs_refine2_elapsed_ratio=0.537487
+SESSION_ONLY, comparison may favour neither; graph/tube hypotheses conditional.

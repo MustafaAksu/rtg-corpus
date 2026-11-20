@@ -1,0 +1,4 @@
+details.tsv: OK
+stderr.txt: OK
+structure_check.txt: OK
+summary.txt: OK

@@ -1,0 +1,2 @@
+SAMPLED=562 WITHIN_D0=562 MAX_R_OVER_CERTIFIED_M=0.76450956174348547531
+PASS_SAMPLES: supports but does NOT certify interval M bounds or candidate elimination

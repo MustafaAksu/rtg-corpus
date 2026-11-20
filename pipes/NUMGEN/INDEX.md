@@ -15,3 +15,4 @@
 | 2026-11-11 | DYAD | notice | open | DYAD v6.4.24: no change to the statements NUMGEN imports; DYAD-THM-OPEN21-SHARP-ROWS for information | — | `20261111-DYAD-v6-4-24-adopted.md` |
 | 2026-11-12 | TDRG | notice | open | TDRG-DEF-STAR and TDRG-DEF-MULTISTAR scope statement (owner finding N4); CONV-TICK step 4 precedence; nine new TDR-G RIDs (§6.13) | — | `20261112-TDRG-v2-12-15-adopted.md` |
 | 2026-11-19 | DZT | notice | open | Number Genesis [PROVENANCE] paragraph on the audit-reported DZT "v0.17" (governing DZT edition; v0.17 files now in the repository) | — | `20261119-DZT-v0-18-adopted.md` |
+| 2026-11-20 | DZT | notice | open | Number Genesis [PROVENANCE] paragraph on the audit-reported DZT "v0.17" all-p odd-support and denominator theorems | — | `20261120-DZT-v0-19-adopted.md` |

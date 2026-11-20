@@ -1,0 +1,2 @@
+MV_PILOT_INTEGER_PASS rows=1600 complete=True improved=1600 old_excluded=384 new_excluded=496 median_ratio_256=57785760180252480683375862590509150189362919539693731783435106449910838737899
+SESSION_ONLY: no independent propagation of complex dynamics; graph/tube conditional

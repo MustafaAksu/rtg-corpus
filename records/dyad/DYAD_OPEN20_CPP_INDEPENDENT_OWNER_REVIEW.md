@@ -121,6 +121,8 @@ Any of these changes the evaluator, not the contractor. The owner's Python legs 
 
 Outputs: `evidence/dyad/open20-an/cpp-review/package-rerun/`.
 
+**On the PI's Ubuntu server** (17 November, run by the PI: GCC 13.3.0, Boost 1.83.0 system package, Python 3.12.3): the same check script exits 0, the oracles pass 220/220 and 18/18, and all ten outputs are byte-identical to the co-owner's recorded outputs (the PI's `cmp` over the same ten files; reported in session, the output directory is not uploaded). So the outputs agree byte for byte in three environments: the co-owner's (GCC 14.2), the owner's and the PI's.
+
 **State.** With §7 the owner has now checked everything the checkpoint claims. It stands as a development checkpoint of the evaluator, OWNER-RUN at SESSION scope. Still open, as before:
 - real-leg feasibility with φ₄₀ and ξ*;
 - the R_j adapter (with the refinement of §7 and the co-owner's review `5922570504`);

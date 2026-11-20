@@ -1,0 +1,3 @@
+STAGE=5 source=MV_K4_676 evaluated=3316 excluded=16 split=660 retained=2640 unresolved=0 budget_pending=0 budget_valid_no_split=0 depth_cap=2640 frontier_cap=0 finalL1=3.207925e-05 stop=REFINEMENT_CAP
+STATUS=REFINEMENT_CAP source_boxes=676 evaluations=3316 budget=3600 stages=1 final_boxes=2640 L1_256=3714523421042452277742559632711178737172657526167195841067591670835648596 finalL1=3.207925e-05
+SESSION_ONLY; k5 candidate cover conditional on graph/tube; NO stage 3c-b, jump, or certificate.
