@@ -1,0 +1,57 @@
+{
+ "all_pass": true,
+ "gates": {
+  "ABOVE": true,
+  "CLOSE": true,
+  "MARGIN": true,
+  "ONE": true,
+  "REPRO": true
+ },
+ "info": {
+  "C_WALL": {
+   "0": {
+    "exponent": -158,
+    "mantissa": "1086324957910094173414457875632740785514726345335"
+   },
+   "1": {
+    "exponent": -156,
+    "mantissa": "389963341406742017386679541510573444277057039337"
+   }
+  },
+  "c_decimal_30": [
+   "2.97317479546315723867330091804",
+   "4.26917993325189014477799711538"
+  ],
+  "c_minus_v_upper": [
+   "3.0035e-46",
+   "3.0207e-46"
+  ],
+  "engine_profile_upper": [
+   {
+    "exponent": -158,
+    "mantissa": "1086324957910094173414457875632740785514726345335"
+   },
+   {
+    "exponent": -156,
+    "mantissa": "389963341406742017386679541510573444277057039337"
+   }
+  ],
+  "lib_sha256": "47ce39dd53d33d8bdca6c482c9a009f7fd4ae4783a2b0f5e0d8617e2983a6bbf",
+  "python_flint": "0.9.0",
+  "second_star_minus_c_lower": [
+   "0.15000000",
+   "0.15000000"
+  ],
+  "seed_profile": [
+   {
+    "abs_diff_upper": "3.00e-46",
+    "cw_upper_ge_c": false
+   },
+   {
+    "abs_diff_upper": "3.02e-46",
+    "cw_upper_ge_c": false
+   }
+  ]
+ },
+ "script": "dyad_open20_an_wall_constants_check.py"
+}
