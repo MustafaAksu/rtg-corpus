@@ -1,0 +1,18 @@
+{
+ "schema": 1,
+ "study": "AZ token-resonance fork design (records/az/AZ_TOKEN_RESONANCE_FORK_DESIGN.md r2): BASE-only pilot for the observation bound L. FROZEN 20 Nov 2026 on the PI's decisions of 20 Nov (protocol section 6); the run is bound to this file's SHA-256 (records/az/AZ_TOKEN_RESONANCE_FORK_BASE_PILOT_AUTHORISATION.md).",
+ "frozen_script_sha256": "a91ada53dd6f629cade2b8a2b6addc9b7ad2f5818ae06e023f084c6feb17d0a1",
+ "tag": "AZ-FORK-BASEPILOT-P1",
+ "N": 120,
+ "k": 8,
+ "profile": "P1",
+ "policy": "bound_symmetric",
+ "cap": 300,
+ "q": 100,
+ "n_seeds": 500,
+ "L_grid": [100, 200, 400, 800],
+ "threshold": 0.95,
+ "wilson_level": 0.95,
+ "wilson_in_rule": false,
+ "notes": "Frozen: script az_fork_base_pilot.py a91ada53...d0a1, wilson_in_rule false (PI 20 Nov 22:43). Run only after the ChatGPT readback PASS of the R1b fix and of this freeze."
+}
