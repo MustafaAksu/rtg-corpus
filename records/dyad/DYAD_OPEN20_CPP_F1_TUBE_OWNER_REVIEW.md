@@ -422,3 +422,62 @@ By depth (`depth_breakdown_owner.txt`; medians): at depth 1, Dr/M₄ = 4.06 with
 - This needs a small successor: `resume` is fixed to start from the 897-box frontier at k = 4; it should start from this run's hash-pinned `final_frontier.tsv` (676 boxes) at k = 5, with the same rules (MV base, own M_k, whole-disc tangent from the original lift, unresolved kept).
 
 No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 8 — k = 5 from the MV frontier, and where D comes from (20 November 2026)
+
+**Reviewed:** `DYAD_CPP_K5_FROM_MV_FRONTIER.zip`, SHA-256 `2c90712f4c0cdd135fd66cdd8b9924f325b6549916847ca32be0635566d81b41`, on `upload/dyad-cpp-k5-20261120` (head `6ddc4760e1cfbb49bee586e06eb4edd36c3aec9c`); inner sums 9/9 OK. PI run on `upload/dyad-cpp-k5-results-20261120` (head `59ebfda24413fa8f44c0efd6b73fcbe688ca5c22`), parameters budget 3600, depth 1, frontier 4096, with a `recovery/` folder. New source `k5.cpp` (152 lines), read in full; it includes `mv_resume.cpp` and everything below it unchanged.
+**Request:** K5-X1 to K5-X6.
+
+## Verdict
+
+**ACCEPT as a development experiment, at SESSION scope**, with one package defect (X4). The k = 5 run is INCONCLUSIVE (`REFINEMENT_CAP`).
+
+## X1, X2 — sources and intake
+
+Ten pinned files and all package and run manifests are gated. `load_k4_events` checks header, fields, k = 4, depth ≤ 2, VALID only, unique IDs, the integer identities, the necessary-box width, and the intersection/action consistency, and requires the counts 4037 / 785 / 2576 / 676. `verify_mv_fifo` rebuilds the k = 4 FIFO from the 897 initial boxes and requires the 676 final boxes and the exact L¹ integer of Addendum 7. The 144 + 324 + 324 earlier survivors are recomputed. The 4037 k = 4 events are replayed as a log, not re-evaluated; they rest on the k = 4 run replayed in Addendum 7. ✓
+
+## X3 — the k = 5 stage
+
+Depth is reset to 0 for the new horizon only. `mvresume::stage` at k = 5: five blocks from the original lift, whole-disc tangent never reset, per-disc MV base enclosure and M₅, C1–C2, exclusion only on an empty intersection, splits of post-contractor rectangles, and every failure or cap path keeps the box. ✓
+
+## X4 — output and the checker defect
+
+The run's `check_k5.py` call passes `summary` as the sixth positional argument, but `verify()` receives it in the ninth place (`verify(…, a.budget, a.depth, a.cap, a.summary)` against the signature order). The checker then misreads the stop accounting and raises; the runner exits 3. **The C++ outputs are complete and unaffected.** The PI's `recovery/` folder records this: the original exit code (3), the console log, the corrected checker (`check_k5_fixed.py`, one-line change of argument order, diff checked here), and its PASS on the unchanged outputs. The owner replay hits the same exit 3; the corrected checker on the owner outputs prints the same line as the PI recovery (`K5_INDEPENDENT_INTEGER_PASS … final=2640 … stop=REFINEMENT_CAP`). The fix belongs in the package source.
+Accounting: 676 + 4·660 = 3316 evaluations; 676 + 3·660 − 16 = 2640 boxes; the stop is the depth cap (2640 at depth 1), with 284 evaluations unused.
+
+## X5, X6 — results and replay
+
+Owner replay of the unchanged ZIP (wall time 1777 s): `events.tsv`, `final_frontier.tsv`, `initial_frontier.tsv`, `stages.tsv`, `summary.txt` and `stderr.txt` are byte-identical to the PI run. Same engine on two machines.
+
+| depth | action | n | Dr/M₅ | M₅/\|b₅\| | Dr/\|b₅\| | r | necessary radius |
+|---|---|---|---|---|---|---|---|
+| 0 | EXCLUDED | 16 | 1.81 | 4.79·10⁻⁶ | 8.7·10⁻⁶ | 6.5·10⁻⁷ | 1.3·10⁻⁵ |
+| 0 | SPLIT | 660 | 36.3 | 4.80·10⁻⁶ | 1.74·10⁻⁴ | 1.95·10⁻⁶ | 1.79·10⁻⁴ |
+| 1 | RETAINED | 2640 | 4.79 | 4.79·10⁻⁶ | 2.30·10⁻⁵ | 9.8·10⁻⁷ | 2.78·10⁻⁵ |
+
+L¹ hull 3.223882·10⁻⁵ → 3.207925·10⁻⁵. The k = 5 tube floor is M₅/\|b₅\| = 4.8·10⁻⁶ (k = 4: 8.7·10⁻⁶); the derivative term is 83 % of the necessary radius at depth 1. These figures equal the co-owner's.
+
+## Where D comes from (owner diagnostic, [NUM])
+
+`evidence/dyad/open20-an/cpp-review/k5/d-growth/`: `dgrow.cpp` includes the unchanged chain and, for four of the 676 k = 4 final boxes, computes for k = 1…5 the enclosed D_k = ‖`whole.b.d` − slope‖ (as in C1–C2) and a sampled D_k: the largest ‖b_k(d) − slope‖ over eight point orbits on the disc (four on the boundary, four at 0.7 r). b_k − b_k(c) is holomorphic, so its maximum on the disc is on the boundary; the sample is a lower estimate of the true sup, not a bound.
+
+| k | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| D enclosed (box 0, r = 6.4·10⁻⁷) | 1.19·10⁻³ | 1.75·10⁻² | 0.153 | 1.00 | 12.2 |
+| D sampled | 4.9·10⁻⁶ | 8.7·10⁻⁶ | 1.2·10⁻⁵ | 1.4·10⁻⁵ | 1.7·10⁻⁵ |
+| ratio | 2.4·10² | 2.0·10³ | 1.3·10⁴ | 7.0·10⁴ | 7.2·10⁵ |
+
+The four boxes give the same ratios to three digits. So:
+- The true variation of b_k across the disc is small and grows slowly (second derivative about 26 at k = 5, consistent with the #301 fibre estimate of about 20).
+- The enclosure overestimates it by a factor 240 already after one block and gains a factor 6–15 per block: the wrapping of the tangent enclosure, not the dynamics.
+- With a D close to the sampled value, D·r at k = 5 would be about 10⁻¹¹, far below M₅ ≈ 5·10⁻⁶; the necessary radius would be about the tube floor 4.8·10⁻⁶ without any splitting.
+
+The tangent is propagated as J(X)·t with J the Jacobian over the whole state box. A centred form for the tangent (point Jacobian along the centre orbit plus a remainder, or a second-order jet giving D ≤ sup‖∂²d_k/∂d₀²‖·r) should remove most of this factor. This supports the co-owner's plan (decompose D₅, tighten it on a sample, then decide), and gives its first target: bring the k = 1 ratio from 240 towards 1.
+
+## Next
+
+- Package: fix the `check_k5.py` argument order in the source; give the upload helper a per-run branch suffix.
+- Co-owner: a D-tightening prototype measured on the same four boxes (and then a sample of the 2640) against the sampled values above, before any new campaign.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
