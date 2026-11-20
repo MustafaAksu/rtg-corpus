@@ -234,11 +234,21 @@ def _audit_sums(d):
     names = sorted(os.listdir(d))
     if names != sorted(OUTPUT_FILES + ("SHA256SUMS",)):
         errs.append("output files differ from the expected set: %s" % names)
+    import re
     try:
-        lines = open(os.path.join(d, "SHA256SUMS")).read().splitlines()
-        listed = {ln.split("  ", 1)[1]: ln.split("  ", 1)[0] for ln in lines}
-    except (OSError, IndexError):
+        lines = open(os.path.join(d, "SHA256SUMS")).read().split("\n")
+    except OSError:
         return errs + ["SHA256SUMS unreadable"]
+    if lines and lines[-1] == "":
+        lines = lines[:-1]
+    pat = re.compile(r"^([0-9a-f]{64})  ([A-Za-z0-9._-]+)$")
+    parsed = [pat.match(ln) for ln in lines]
+    if len(lines) != len(OUTPUT_FILES) or not all(parsed):
+        return errs + ["SHA256SUMS must have exactly %d lines '<64 hex>  <name>'" % len(OUTPUT_FILES)]
+    names = [m.group(2) for m in parsed]
+    if len(set(names)) != len(names):
+        return errs + ["SHA256SUMS lists a file more than once"]
+    listed = {m.group(2): m.group(1) for m in parsed}
     if sorted(listed) != sorted(OUTPUT_FILES):
         errs.append("SHA256SUMS does not list exactly the output files")
     for f, h in listed.items():
@@ -606,8 +616,19 @@ def selftest(n=16, verbose=True):
     res = {k_: tamper(k_, f) for k_, f in cases.items()}
     res["sums_mismatch"] = tamper("sums_mismatch", lambda t: open(os.path.join(t, "summary.txt"), "a").write("y\n"),
                                   fix_sums=False)
-    C.ok(all(res.values()), "D5 the audit fails on every consistent forgery (SHA256SUMS rewritten): %s; and on a "
-                            "SHA256SUMS mismatch" % ", ".join(sorted(cases)))
+
+    def duplicate_entry(t):                            # R1b: a wrong checksum hidden by a later correct duplicate
+        good = open(os.path.join(t, "SHA256SUMS")).read().splitlines()
+        seeds_line = next(ln for ln in good if ln.endswith("  seeds.jsonl"))
+        with open(os.path.join(t, "SHA256SUMS"), "w") as f:
+            f.write("%s  seeds.jsonl\n" % ("0" * 64) + "\n".join(good) + "\n")
+        assert seeds_line in good
+    res["duplicate_entry"] = tamper("duplicate_entry", duplicate_entry, fix_sums=False)
+    res["malformed_line"] = tamper("malformed_line", lambda t: open(os.path.join(t, "SHA256SUMS"), "a").write(
+        "not a checksum line\n"), fix_sums=False)
+    C.ok(all(res.values()), "D5 the audit fails on every consistent forgery (SHA256SUMS rewritten): %s; on a "
+                            "SHA256SUMS mismatch; on a wrong checksum hidden by a later duplicate entry (R1b); and on "
+                            "a malformed checksum line" % ", ".join(sorted(cases)))
     C.ok(audit_dir(peng, ieng, run, outs[0], traw, "0" * 64) != [] and
          audit_dir(peng, ieng, run, outs[0], manifest_bytes(dict(test_manifest(n), n_seeds=n - 1)), tsha) != [],
          "D6 the audit fails against a different approved SHA-256 and against changed manifest parameters")

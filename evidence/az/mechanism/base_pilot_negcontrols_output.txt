@@ -17,5 +17,6 @@ NC15 audit does not bind the approved manifest               DETECTED (2 failed 
 NC16 run accepts manifest bytes that differ from the approved SHA-256 DETECTED (2 failed checks: D6 D7)
 NC17 pilot manifest need not be committed at HEAD            DETECTED (1 failed checks: D8)
 NC18 output check ignores symbolic links in the parent path  DETECTED (1 failed checks: D9)
+NC19 SHA256SUMS parsed leniently (duplicates collapse, the last entry wins) DETECTED (1 failed checks: D5)
 NEGCONTROLS PASS
 exit 0

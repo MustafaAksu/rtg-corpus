@@ -1,6 +1,6 @@
 # AZ token-resonance fork design — BASE-only pilot protocol (for review; not authorised)
 
-r2 (20 Nov 2026) closes R1, R2 and F1 of review `5993141443`; see §3 and §5.
+r2 (20 Nov 2026) closes R1, R2 and F1 of review `5993141443`; r3 closes R1b of review `5998258372` (strict `SHA256SUMS` parsing); see §3 and §5. The PI's decisions on §6 are recorded in §6.
 
 **[SESSION] NONCANONICAL operational protocol.** It belongs to the §6.3 fork design (`records/az/AZ_TOKEN_RESONANCE_FORK_DESIGN.md` r2; Gate D PASS `5960841961`) and follows Gate I.1 (PR #328) and Gate I.2 (PR #331), both merged.
 
@@ -47,7 +47,7 @@ No seed is replaced, dropped or added. The denominator is always all n seeds.
   - `--run --manifest M --manifest-sha256 H --out DIR` refuses unless all of the following hold: M is a file of this repository; M is byte-identical to its committed version at HEAD; `sha256(M) = H`; M passes the protocol checks (frozen script SHA-256, decided `wilson_in_rule`, a new tag).
   - Freezing the script hash alone would not freeze n, the tag or the grid. Binding the manifest bytes does.
   - The output stores M byte for byte as `manifest.json`. `summary.json` and `summary.txt` carry both `manifest_sha256` and `script_sha256`.
-- **Outputs.** A new directory, created atomically. Its location is checked on the **resolved** parent path (r2, F1), so a symbolic link cannot redirect it into `upload/`, `records/`, `dsn/` or `evidence/az/scripts/`. The directory holds exactly `manifest.json`, `seeds.jsonl`, `summary.json`, `summary.txt`, `timing.txt` and `SHA256SUMS`. All are written with `O_EXCL`, and `SHA256SUMS` lists exactly the five data files.
+- **Outputs.** A new directory, created atomically. Its location is checked on the **resolved** parent path (r2, F1), so a symbolic link cannot redirect it into `upload/`, `records/`, `dsn/` or `evidence/az/scripts/`. The directory holds exactly `manifest.json`, `seeds.jsonl`, `summary.json`, `summary.txt`, `timing.txt` and `SHA256SUMS`. All are written with `O_EXCL`. `SHA256SUMS` must have exactly five lines of the form `<64 lowercase hex>  <name>`, with unique names, naming exactly the five data files (r3, R1b).
 - **Complete audit (r2, R1).** `--audit DIR --manifest M --manifest-sha256 H` checks, in order:
   - the approved identity: H, and the stored `manifest.json` equal to M;
   - the exact file set and every `SHA256SUMS` entry;
@@ -77,12 +77,12 @@ C⁻/C⁺ eligibility, centre cases and already-positive counts are reported. **
   - C1–C3: verification and the L-invariance of the single run.
   - D1–D3: two end-to-end test-plan runs with 16 seeds are byte-identical, including `manifest.json`. Every contact carries verified ids, the summary binds the manifest and script SHA-256, and only pinned files are opened.
   - D4: the complete audit of a genuine output reports no problem.
-  - D5: the audit fails on every **consistent** forgery, that is, with `SHA256SUMS` rewritten to match. The forgeries tested: an empty `seeds.jsonl`, a missing seed, reordered seeds, a changed `eligible_plus`, `centre_case`, `M_minus` or `tau_free`, a changed `summary.json` or `summary.txt`, a changed stored manifest, and an extra file. It also fails on a `SHA256SUMS` mismatch.
+  - D5: the audit fails on every **consistent** forgery, that is, with `SHA256SUMS` rewritten to match. The forgeries tested: an empty `seeds.jsonl`, a missing seed, reordered seeds, a changed `eligible_plus`, `centre_case`, `M_minus` or `tau_free`, a changed `summary.json` or `summary.txt`, a changed stored manifest, and an extra file. It also fails on a `SHA256SUMS` mismatch, on a wrong checksum hidden by a later duplicate entry (r3, R1b), and on a malformed checksum line.
   - D6: the audit fails against a different approved SHA-256 and against changed manifest parameters.
   - D7: a run is refused when the manifest bytes do not match the approved SHA-256.
   - D8: a manifest outside the repository is refused, while a committed, unmodified file is accepted.
   - D9: an output path through a symbolic link into `upload/` is refused, and nothing is created there.
-- `base_pilot_negcontrols.py` and its output: eighteen injected faults (r1: eleven), all detected. They are:
+- `base_pilot_negcontrols.py` and its output: nineteen injected faults (r1: eleven), all detected. They are:
   - verification disabled;
   - denominator over contacts only;
   - automatic L_max;
@@ -97,19 +97,26 @@ C⁻/C⁺ eligibility, centre cases and already-positive counts are reported. **
   - (r2) the audit without its field comparison, without summary recomputation, without the file-set and `SHA256SUMS` check, and without the manifest identity;
   - (r2) a run without the manifest identity check;
   - (r2) no git binding;
-  - (r2) an output check that ignores links.
+  - (r2) an output check that ignores links;
+  - (r3) lenient `SHA256SUMS` parsing, where a later duplicate hides a wrong checksum.
 
 **Synthetic orientation, not pilot data.** On the 16 test-tag seeds of the end-to-end self-test, every seed made contact by tick 8, so L\* = 100. In the 400 synthetic trajectories of Gate I.1, 196 of 381 contacts were at τ_C = 1. The pilot is therefore likely to give L\* = 100, the smallest candidate. Its main value would then lie in the eligibility, centre-case and already-positive rates, and in the run-time estimate for the later campaign. This expectation comes from synthetic test seeds only. It is stated here **before** the pilot so that it cannot be read into the result afterwards.
 
-## 6. Decisions needed before the run (PI)
+## 6. Decisions (PI)
 
-| # | Decision | Proposal |
+The PI decided on 20 Nov 2026 at 22:43 +03:00. Verbatim:
+
+> "1- Chat GPT yazar Claude denetler / 2- Uygun / 3- False / 4 Uygun / 5 Sunucuda koşabiliriz"
+
+On row 1, the PI was asked at 22:52 +03:00 whether this applies to the present PR. The answer (chosen option): "Bu PR'ı Claude bitirsin" ("let Claude finish this PR"). Claude finishes the R1b fix and the freeze of this PR, and ChatGPT reads them back. From the next work items on (for example the pilot report), ChatGPT writes and Claude reviews.
+
+| # | Decision | As decided |
 |---|---|---|
-| 1 | Task split: Claude writes the protocol and driver, ChatGPT reviews | as relayed on 20 Nov; to be confirmed in the PI's words |
-| 2 | n, tag, grid 𝓛, threshold | n = 500, `AZ-FORK-BASEPILOT-P1`, {100, 200, 400, 800}, 0.95 |
-| 3 | `wilson_in_rule` | **false**: F(L) in the rule, Wilson reported. With n = 500, the lower bound for F = 0.95 is about 0.927, so `true` amounts to a stricter threshold; the PI may prefer that. |
-| 4 | Freeze | after review PASS: set `frozen_script_sha256` and `wilson_in_rule` in `base_pilot_manifest.json` in one freeze commit; readback. The PI then approves the manifest by its SHA-256 `H` (the committed file's bytes) in the authorisation record. |
-| 5 | Compute authorisation | run once on the PI's server, in a separate worktree at the freeze commit: `python3 -I evidence/az/mechanism/az_fork_base_pilot.py --run --manifest evidence/az/mechanism/base_pilot_manifest.json --manifest-sha256 H --out <new dir>`; then `--audit <dir> --manifest … --manifest-sha256 H`; then the outputs are uploaded unchanged on an `upload/...` branch and hash-checked |
+| 1 | Task split | This PR is finished by Claude and read back by ChatGPT. Afterwards ChatGPT writes and Claude reviews. |
+| 2 | n, tag, grid 𝓛, threshold | n = 500, `AZ-FORK-BASEPILOT-P1`, {100, 200, 400, 800}, 0.95 ("Uygun") |
+| 3 | `wilson_in_rule` | **false**: F(L) is used in the rule, and the Wilson interval is reported only. |
+| 4 | Freeze | "Uygun". After the review PASS, `frozen_script_sha256` and `wilson_in_rule` are set in `base_pilot_manifest.json` in one freeze commit, and the freeze is read back. The run is bound to the manifest's SHA-256 `H`, stated in `records/az/AZ_TOKEN_RESONANCE_FORK_BASE_PILOT_AUTHORISATION.md`. |
+| 5 | Compute authorisation | "Sunucuda koşabiliriz". The pilot is run once on the PI's server, after the readback PASS of the freeze, in a separate worktree at the freeze commit: `python3 -I evidence/az/mechanism/az_fork_base_pilot.py --run --manifest evidence/az/mechanism/base_pilot_manifest.json --manifest-sha256 H --out <new dir>`. Then `--audit <dir> --manifest … --manifest-sha256 H`. Then the outputs are uploaded unchanged on an `upload/...` branch and hash-checked. |
 
 ## 7. What follows the pilot (each a separate PI decision)
 

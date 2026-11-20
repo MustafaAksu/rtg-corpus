@@ -168,6 +168,24 @@ def nc_audit_no_sums():
     return patch(D, "_audit_sums", lambda d: [])
 
 
+def nc_lenient_sums():
+    """SHA256SUMS parsed leniently (duplicates collapse, the last entry wins)"""
+    def bad(d):
+        errs = []
+        names = sorted(os.listdir(d))
+        if names != sorted(D.OUTPUT_FILES + ("SHA256SUMS",)):
+            errs.append("files")
+        lines = open(os.path.join(d, "SHA256SUMS")).read().splitlines()
+        listed = {ln.split("  ", 1)[1]: ln.split("  ", 1)[0] for ln in lines if "  " in ln}
+        if sorted(listed) != sorted(D.OUTPUT_FILES):
+            errs.append("list")
+        for f, h in listed.items():
+            if D.P.sha256_file(os.path.join(d, f)) != h:
+                errs.append("hash")
+        return errs
+    return patch(D, "_audit_sums", bad)
+
+
 def nc_audit_no_identity():
     """audit does not bind the approved manifest"""
     return patch(D, "_audit_identity", lambda d, raw, sha: [])
@@ -212,7 +230,7 @@ def nc_output_no_realpath():
 CONTROLS = [nc_verify_disabled, nc_denominator_contacts_only, nc_auto_Lmax, nc_strict_less, nc_wilson_wrong_z,
             nc_timing_in_summary, nc_freeze_gate_off, nc_tag_guard_off, nc_output_overwrite, nc_tau_free_substituted,
             nc_audit_disabled, nc_audit_no_field_compare, nc_audit_no_summary, nc_audit_no_sums,
-            nc_audit_no_identity, nc_run_no_identity, nc_no_git_binding, nc_output_no_realpath]
+            nc_audit_no_identity, nc_run_no_identity, nc_no_git_binding, nc_output_no_realpath, nc_lenient_sums]
 
 
 def main():
