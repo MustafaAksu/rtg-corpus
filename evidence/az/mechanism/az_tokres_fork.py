@@ -177,6 +177,8 @@ def o1_values(ch, N):
     r1 in {0, N/2}, s1 in {-1, +1}; anything else is refused (only the PI-selected O1 family is supported)."""
     if not (_is_int(N) and N > 0 and N % 2 == 0):
         raise ValueError("N must be a positive even integer")
+    if not isinstance(ch, dict):
+        raise ValueError("the draw must be a mapping with keys r1 and s1")
     r, e = ch.get("r1"), ch.get("s1")
     if not (_is_int(r) and r in (0, N // 2)) or not (_is_int(e) and e in (1, -1)):
         raise ValueError("O1 needs r1 in {0, N/2} and s1 in {-1, +1}")
@@ -569,9 +571,10 @@ def selftest(trials=300, verbose=True, coverage=True):
         cs = continue_fork(ieng, run, fork(r5["minus"], 1, "BASE", vals, 50, "C-", tau_C=r5["tau_C"]))
         C.ok(cs.hit_cap and refused(lambda: endpoint(cs, 6)) and endpoint(cs, 5)["stop"] == "cap",
              "E4 cap-stopped run: refused when 0 < cap < q (censoring), accepted with stop = cap when cap >= q")
-        bad_ch = [{"r1": 6, "s1": 1}, {"r1": 0, "s1": 2}, {"r1": 0, "s1": True}, {"r1": 12.0, "s1": 1}, {"r1": 0}]
+        bad_ch = [{"r1": 6, "s1": 1}, {"r1": 0, "s1": 2}, {"r1": 0, "s1": True}, {"r1": 12.0, "s1": 1}, {"r1": 0},
+                  [("r1", 0), ("s1", 1)], None, "r1=0,s1=1"]
         C.ok(all(refused(lambda c=c: o1_values(c, N)) for c in bad_ch) and refused(lambda: o1_values(ch, 23)),
-             "E5 o1_values refuses off-family r, invalid epsilon, non-integers, missing keys and odd N")
+             "E5 o1_values refuses off-family r, invalid epsilon, non-integers, missing keys, non-mapping draws and odd N")
         bad_v = [{"R": 6, "D": 7}, {"R": 0, "D": 2}, {"R": 12, "D": 12}, {"R": 0, "D": 1, "X": 3}, {"R": 0}]
         C.ok(all(refused(lambda vv=vv: fork(mi, 0, "R", vv, 10, "C-", tau_C=tc)) for vv in bad_v),
              "E6 fork refuses value pairs outside O1 (off-family r, |D - R| != 1, extra or missing keys)")

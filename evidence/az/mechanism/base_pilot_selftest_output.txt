@@ -1,0 +1,31 @@
+pass: A1 20 seeds, contacts at 1 (x16), 100 (= L, counted), 150, 300 and one no-contact seed: k(L) = 17, 18, 19, 19; F(400) = 19/20 >= 0.95, so L* = 400 (the no-contact seed counts in the denominator)
+pass: A2 same records, threshold 0.96: 'no qualifying L'
+pass: A3 17/20 at every L: 'no qualifying L' (no automatic L = 800); terminated seeds stay in the denominator
+pass: A4 Wilson bound (z = 1.96): 20/20 gives lower bound 0.8389 < 0.95, so with wilson_in_rule the rule does not qualify
+pass: A5 summary refuses a record set that is not exactly the pre-fixed seeds 0 .. n-1
+pass: B1 the test plan refuses any tag but the synthetic test tag (pilot seeds are never touched by tests)
+pass: B2 the pilot plan refuses a manifest that is not frozen for this script
+pass: B3 the pilot plan refuses wilson_in_rule = null and accepts a frozen, decided manifest
+pass: B4 the pilot plan refuses registered and synthetic tags
+pass: B5 manifest refuses an unsorted grid, cap < q and unknown keys
+pass: B6 output refused inside upload/ or records/, and when the directory already exists
+pass: C1 a genuine clock result is verified; its C-/C+ checkpoint ids are returned
+pass: C2 refused: forged tau_C, swapped C-/C+, a boundary from another seed, a wrong annotation, a wrong status
+pass: C3 seed 0: tau_C, C+ eligibility and the C- state (engine and provenance; T_ref differs by design) are the same with L = 8 (T_ref = L + 1) as with L_max = 800
+pass: C3 seed 0: tau_C, C+ eligibility and the C- state (engine and provenance; T_ref differs by design) are the same with L = 800 (T_ref = L + 1) as with L_max = 800
+pass: D1 two test-plan runs (16 seeds): seeds.jsonl, summary.json, summary.txt byte-identical
+pass: D2 every contact record carries verified C-/C+ checkpoint ids
+pass: D4 post-hoc audit: an independent replay of every stored seed reproduces its draw, status, tau_C and checkpoint ids
+pass: D5 the audit flags a tampered stored tau_C
+AZ fork BASE-only pilot - tag AZ-FORK-BASEPILOT-TEST, N=120, k=8, cap=300, q=100, n=16
+status: contact 16, no_contact_by_L 0, terminated_before_contact 0
+     L     k    F(L)            Wilson  elig C-  elig C+     both  centre   pos-   pos+
+   100    16  1.0000 [ 0.8064, 1.0000]       16       16       16       0      0      0
+   200    16  1.0000 [ 0.8064, 1.0000]       16       16       16       0      0      0
+   400    16  1.0000 [ 0.8064, 1.0000]       16       16       16       0      0      0
+   800    16  1.0000 [ 0.8064, 1.0000]       16       16       16       0      0      0
+rule: min L with F >= 0.95  ->  L* = 100
+tau_C quantiles (contacts): {"max": 8, "min": 1, "p50": 3, "p90": 8, "p95": 8}; tau_free != tau_C in 7 contacts
+pass: D3 repository files opened: only the pinned engine, orientation, runner, provenance library, clock and this script (10 paths); nothing under upload/az-token-resonance-*
+checks: 20, failed: 0
+SELFTEST PASS
