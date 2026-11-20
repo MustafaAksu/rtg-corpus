@@ -54,11 +54,11 @@ The recovered B1 work (v0.10–v0.17, not adopted; reading record O-8.1) answere
 
 **(a) O1 cannot carry the index $m$.** O1 is a function of $Q$. Iterating $\mathcal A_{\rm raw}$ is an averaged model, not the dynamics (F1). That model's reciprocal drift is $1-\tfrac{47}{54}=+\tfrac7{54}$. The certified orbit law on O3 has $-\tfrac{29}{216}$ instead (see (c)). No orbit law with $\tfrac7{54}$ is established, on O2 or on O3.
 
-**(b) On O2 no autonomous logarithmic orbit law is established; the logarithmic part is masked.**
+**(b) On O2 no autonomous logarithmic orbit law is established; the logarithmic part can be masked.**
 - The derivation (`[SESSION]`, from F4 and F6): $Q_m-q_m=\lvert h(z_m)\rvert^2-\lvert z_m\rvert^2=2\Re\big(\bar z_mh_2(z_m)\big)+O(q_m^2)$. This is a nonzero cubic form in $z_m$ that depends on the angle (F4). Hence
 $$\frac1{Q_m}=b+m-\frac{29}{216}H_m(b)-\frac{2\Re\big(\bar z_mh_2(z_m)\big)}{q_m^2}+O(1).$$
-- The angular term is of order $q_m^{-1/2}\sim\sqrt m$, with a sign that turns slowly as $\Theta_m$ drifts. It is larger than the logarithmic term $-\tfrac{29}{216}H_m(b)$, which is present but masked. This agrees with the certified $O(\sqrt m)$ of F3.
-- Consequence: a weight built on the primitive $Q_m$ has its first correction from an orbit-dependent, angle-dependent term, not from the logarithm. No autonomous logarithmic law for $Q_m$ alone is established.
+- The angular term is $O(q_m^{-1/2})=O(\sqrt m)$, with a sign that turns slowly as $\Theta_m$ drifts. It can be larger than the logarithmic term $-\tfrac{29}{216}H_m(b)$, which is present. Because it depends on the phase and vanishes at some phases, it is not shown to dominate at every $m$. This agrees with the certified $O(\sqrt m)$ of F3.
+- Consequence: for a weight built on the primitive $Q_m$, the leading correction can come from an orbit-dependent, angle-dependent term of order up to $\sqrt m$ rather than from the logarithm. No autonomous logarithmic law for $Q_m$ alone is established.
 - `[NUM]` illustration (§6): on three orbits from $U$ and $10^6$ blocks, $1/Q_m-1/Q_0-m$ oscillates with amplitude of about $0.4$–$0.75\sqrt m$ (up to 739 at $m=10^6$).
 
 **(c) On O3 the orbit law is owner-certified (F6).**
@@ -70,7 +70,7 @@ $$\frac1{Q_m}=b+m-\frac{29}{216}H_m(b)-\frac{2\Re\big(\bar z_mh_2(z_m)\big)}{q_m
 - `[HEUR]`: for a resonant cubic gauge, the bracket with the cubic term changes only the angular part of the quintic coefficient; this suggests that the radial part is invariant at that order.
 - The sixth harmonic $a_{05}$ is not gauge-invariant in phase (F8).
 
-**Recommendation to the owner and the PI.** Pose B1 on O3, or directly on O4. Do not pose it on O1, which is not a sequence, or on O2, where the logarithmic part is masked by an angle-dependent $O(\sqrt m)$ term and no autonomous law is established.
+**Recommendation to the owner and the PI.** Pose B1 on O3, or directly on O4. Do not pose it on O1, which is not a sequence, or on O2, where an angle-dependent $O(\sqrt m)$ term can mask the logarithmic part and no autonomous law is established.
 
 ## 5. Proposed fixed object (for review and for the PI's decision)
 
@@ -98,7 +98,7 @@ $$\frac1{Q_m}=b+m-\frac{29}{216}H_m(b)-\frac{2\Re\big(\bar z_mh_2(z_m)\big)}{q_m
 | DZT-B1-0, the admissible-weight gate | definitions | Usable as a gate. Criterion 2's data list must name chart objects (§5) |
 | $W^{(A)}$ `[FAIL]` (det and trace of the linearization) | $DF^m(P_1)=I$ | Independent of the O1/O2/O3 choice (F7): $\det(I-DF^m)=0$ and $\operatorname{tr}DF^m=2$. It survives, as a candidate for later entry with the Dyadic import |
 | $W^{(B)}$ pure $\mathrm{Li}_2$ `[FAIL]` | "$A=\tfrac{47}{54}\ne1$ forces a log correction" | The recovered reason uses O1. On O3 the drift coefficient is $-\tfrac{29}{216}\ne0$ (F6), so a log correction is present and pure $\mathrm{Li}_2$ still fails, for the corrected reason. This becomes a proof only once $W_m$ is defined on O3 |
-| DZT-B1-1 "RESULT": leading-log tower $c_r=(A-1)^r$, $Q_m^{\rm LL}=1/(m-(A-1)\ln m)$, $A=\tfrac{47}{54}$ | O1 coefficient applied as an orbit law | **Wrong object and wrong coefficient at the pin.** On O3 the orbit drift is $-\tfrac{29}{216}\ln m$ (the recovered value is $+\tfrac7{54}\ln m$); on O2 the logarithmic part is masked by an angle-dependent $O(\sqrt m)$ term and no autonomous law is established. It must be rebuilt on O3 if wanted; its recovered `[ALG]` has no basis at `dyad-v6.4.24` |
+| DZT-B1-1 "RESULT": leading-log tower $c_r=(A-1)^r$, $Q_m^{\rm LL}=1/(m-(A-1)\ln m)$, $A=\tfrac{47}{54}$ | O1 coefficient applied as an orbit law | **Wrong object and wrong coefficient at the pin.** On O3 the orbit drift is $-\tfrac{29}{216}\ln m$ (the recovered value is $+\tfrac7{54}\ln m$); on O2 an angle-dependent $O(\sqrt m)$ term can mask the logarithmic part, and no autonomous law is established. It must be rebuilt on O3 if wanted; its recovered `[ALG]` has no basis at `dyad-v6.4.24` |
 | DZT-B1-WC, $W^{(C)}$ "FAIL at certification level" | invariant data $\{c_{21},A\}$ with $A=\tfrac{47}{54}$ | Its invariant data used the raw coefficient. The chart isotropic coefficient is $\tfrac{245}{216}$ (F5), and the gauge behaviour of $a_{32}$ and $a_{05}$ must be taken from the chart (F8). Re-examine |
 | Dyadic responses to REQ-003 and REQ-004 | REQ-004 lines 24–27: "$A=\tfrac{47}{54}$ … the physical radial recurrence" | Superseded at the owner (F1). If cited, cite by path and hash (`c8b5ee22…8e09`, `94f3f458…2f55`), not as RIDs (triage row 12) |
 
