@@ -1,0 +1,22 @@
+DYAD_CPP_K5_FROM_MV_FRONTIER.zip: OK
+Archive:  DYAD_CPP_K5_FROM_MV_FRONTIER.zip
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/OWNER_REVIEW_REQUEST.md  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/README.md  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/SHA256SUMS.txt  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/run_ubuntu_k5.sh  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/source/check_k5.py  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/source/k5.cpp  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/source/test_k4_checkpoint.cpp  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/tests/LOCAL_VALIDATION.md  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/tests/test_k5_structure.py  
+  inflating: DYAD_CPP_K5_FROM_MV_FRONTIER/upload_k5_evidence.sh  
+Traceback (most recent call last):
+  File "/root/DYAD_CPP_K5_FROM_MV_FRONTIER/source/check_k5.py", line 148, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/root/DYAD_CPP_K5_FROM_MV_FRONTIER/source/check_k5.py", line 146, in main
+    verify(a.oldfront,a.initial,a.events,a.stages,a.final,a.budget,a.depth,a.cap,a.summary)
+  File "/root/DYAD_CPP_K5_FROM_MV_FRONTIER/source/check_k5.py", line 89, in verify
+    assert evalstate=='NOT_EVALUATED' and act=='BUDGET_KEEP'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

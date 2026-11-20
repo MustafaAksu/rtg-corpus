@@ -1,0 +1,10 @@
+/root/rtg-corpus/evidence/dyad/open20-an/stage2/scout_N216_dps840.json: OK
+/root/dyad-f2-term8-full/terms.tsv: OK
+/root/dyad-f2-selective-run/selective_children.tsv: OK
+/root/dyad-horizon-compare/refine2/details.tsv: OK
+/root/dyad-f3-refined-compare/h3_split2/details.tsv: OK
+/root/dyad-adaptive-k4-k6/driver/events.tsv: OK
+/root/dyad-adaptive-k4-k6/driver/final_frontier.tsv: OK
+/root/dyad-mv-resume-k4/driver/events.tsv: OK
+/root/dyad-mv-resume-k4/driver/final_frontier.tsv: OK
+/root/dyad-mv-resume-k4/driver/stages.tsv: OK

@@ -1,0 +1,2 @@
+K5_INDEPENDENT_INTEGER_PASS initial=676 events=3316 evaluated=3316 excluded=16 split=660 final=2640 unresolved=0 L1_256=3714523421042452277742559632711178737172657526167195841067591670835648596 stop=REFINEMENT_CAP
+SESSION_ONLY: conditional C1C2 exclusions; not a graph/tube proof, jump or stage3c-b
