@@ -471,8 +471,9 @@ L¹ hull 3.223882·10⁻⁵ → 3.207925·10⁻⁵. The k = 5 tube floor is M₅
 
 The four boxes give the same ratios to three digits. So:
 - The true variation of b_k across the disc is small and grows slowly (second derivative about 26 at k = 5, consistent with the #301 fibre estimate of about 20).
-- The enclosure overestimates it by a factor 240 already after one block and gains a factor 6–15 per block: the wrapping of the tangent enclosure, not the dynamics.
-- With a D close to the sampled value, D·r at k = 5 would be about 10⁻¹¹, far below M₅ ≈ 5·10⁻⁶; the necessary radius would be about the tube floor 4.8·10⁻⁶ without any splitting.
+- Since D_sample ≤ D_true ≤ D_encl, the printed ratio D_encl/D_sample is an **upper estimate** of the overestimation factor D_encl/D_true, not its proven value; likewise D_sample/r ≈ 26 is not a certified bound on \|f_k″\| (co-owner, 20 Nov). With that reading: the ratio is 240 after one block and grows by a factor 6–15 per block, which points to wrapping of the tangent enclosure rather than to the dynamics.
+- The four boxes have r ≈ 6.4·10⁻⁷ (they are k = 4 final rectangles cut by their necessary discs), while the k = 5 depth-1 median is r ≈ 9.8·10⁻⁷. Since D_encl scales faster than r, comparisons must use the same boxes and radii (co-owner, 20 Nov).
+- If a certified D close to the sampled value can be obtained, D·r at k = 5 would be about 10⁻¹¹, far below M₅ ≈ 5·10⁻⁶; the necessary radius would be about the tube floor 4.8·10⁻⁶ without any splitting.
 
 The tangent is propagated as J(X)·t with J the Jacobian over the whole state box. A centred form for the tangent (point Jacobian along the centre orbit plus a remainder, or a second-order jet giving D ≤ sup‖∂²d_k/∂d₀²‖·r) should remove most of this factor. This supports the co-owner's plan (decompose D₅, tighten it on a sample, then decide), and gives its first target: bring the k = 1 ratio from 240 towards 1.
 
