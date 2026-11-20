@@ -16,7 +16,7 @@ Read **from GitHub**, repository `MustafaAksu/rtg-corpus`, fixed path `records/d
 
 Failure to access a source means **UNVERIFIED**, not an empty queue.
 
-The governing DZT edition is the adopted tag `dzt-v0.18` (file `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee`; merge `9a75aaa`; release record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`). Its predecessor `dzt-v0.8` (`cad20982…92ff2`) has no release record; it was tagged on 22 October 2026 when the corpus moved to Git, from the project copy, and BASELINE verified it as "PI" only. Memory of earlier chats, project copies and file headers are not authority. The reading list below is dated 16 November 2026 and describes v0.8.
+The governing DZT edition is the adopted tag `dzt-v0.19` (file `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `2b959f46b8e23363beac087183caf4946d63d1e8d5ac597bdb7d9230143bf6ce`; merge `5f3b205`; release record `records/dzt/DZT_v0_19_RELEASE_RECORD.md`). Its predecessors are `dzt-v0.18` (`04581d1e…8dee`, record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`) and `dzt-v0.8` (`cad20982…92ff2`, tagged on 22 October 2026 from the project copy, BASELINE "PI" only, no release record). Memory of earlier chats, project copies and file headers are not authority. The reading list below is dated 16 November 2026 and describes v0.8.
 
 ## FIRST QUESTION — DZT editions after v0.8 (before any triage)
 
@@ -99,21 +99,21 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 ### CO-OWNER LANE — Claude
 
-**Checked:** 20 November 2026, 12:25 +03:00. `main` `d422b89`. v0.19 adopted by the PI on 20 Nov, 12:19 +03:00 (published `2b959f46…f6ce`); `dzt-v0.18` governs until the tag `dzt-v0.19`. Tag `dzt-v0.18` (annotated, on `9a75aaa`) governs; file `04581d1e…8dee` equal on `main`. `pipes/DZT/`: five items; the 13 Nov LIT offer is `acknowledged`, the AZ v0.7 item `closed`, the other three `dispositioned`. Open DZT PR: the v0.19 edition (branch `claude/dzt-v0.19`).
+**Checked:** 20 November 2026, 12:40 +03:00. `main` `5f3b205` (merge of PR #334). Tag `dzt-v0.19` (annotated, on `5f3b205`) governs; file `2b959f46…f6ce` equal on `main`. `pipes/DZT/`: five items, none open (the AZ v0.7 item `closed`, the other four `dispositioned`). Open DZT PR: the v0.19 notices (branch `claude/dzt-v0.19-notices`).
 **Role:** DZT co-owner, preparer. The second co-owner (ChatGPT) is the independent receiving reviewer. The PI decides adoption and publication (D6).
-**Shared sections:** this lane's session updated the governing-edition paragraph and PI_PENDING on 19 Nov.
-**Goal / current question:** triage list (ii), starting with row 2 (norm-law proof review). Each item enters an edition only by a separate PI decision.
-**Last durable work:** PR #308, #309, #317, #321, #319 (merged); tag `dzt-v0.18` (release record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`). PR #327 (notices to PROG, NUMGEN, OFN) merged. PR #332 (norm-law owner review, review `5983698371`) merged. v0.19 candidate revision 2 `50f58c88…7442` (review `5984329391` R1, N1 applied) with release record draft `records/dzt/DZT_v0_19_RELEASE_RECORD.md` on `claude/dzt-v0.19`.
-**Decisions held:** PI, 18 Nov, 00:00 +03:00, D1–D7 (triage §7). PI, 18 Nov: scope = triage list (i) as written; number = v0.18. PI, 19 Nov, 15:03 +03:00: v0.18 adopted (record §12). PI, 20 Nov, 00:55 +03:00: norm law `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`, new RID, by a new edition (v0.19 record, Authority).
-**Tried and set aside:** treating any recovered variant as final from its file name, size or time stamp (no basis; RR §4). Reusing the DZT script outputs as signed norms: they are `sqrt(abs)` (RR §9.2).
-**Evidence:** `evidence/dzt/v0.18/`; RR §§2–9; recovered files under `upload/dzt-recovery-20261116/received/`; LIT notes at rtg-lit `8e2fb5cb` (norm law) and `da9d5bcb` (sign).
-**Resume:** the LIVE_STATE command; release record §11 and §13; triage rows 2–7, 12, 17, 19.
+**Shared sections:** this lane's session updated the governing-edition paragraph and PI_PENDING on 20 Nov.
+**Goal / current question:** triage list (ii), row 6: the B1 re-examination, starting from the dynamical object. Each item enters an edition only by a separate PI decision.
+**Last durable work:** PR #308, #309, #317, #321, #319, #327, #332, #334 (merged); tags `dzt-v0.18`, `dzt-v0.19`. `DZT-THM-CASCADE-NORM-LAW` adopted (v0.19). Notices to LIT, PROG, NUMGEN and DYAD on `claude/dzt-v0.19-notices`.
+**Decisions held:** PI, 18 Nov, 00:00 +03:00, D1–D7 (triage §7). PI, 18 Nov: scope list (i), number v0.18. PI, 19 Nov, 15:03: v0.18 adopted. PI, 20 Nov, 00:55: norm law `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`, new RID, by a new edition. PI, 20 Nov, 12:19: v0.19 adopted.
+**Tried and set aside:** treating any recovered variant as final from its file name, size or time stamp (no basis; RR §4). Reusing the DZT script outputs as signed norms: they are `sqrt(abs)` (RR §9.2). Reading the imported note's $2^{-\varphi(q)}$ as right in value on the anomaly set (only its exponent is; review `5984329391` R1).
+**Evidence:** `evidence/dzt/v0.18/`, `evidence/dzt/v0.19/`, `evidence/dzt/norm_law_review/`; RR §§2–9; recovered files under `upload/dzt-recovery-20261116/received/`.
+**Resume:** the LIVE_STATE command; v0.19 record §7 (notices); triage rows 6, 7, 12, 17.
 **Next 1–3 actions / acceptance:**
-1. v0.19: answer the review; after adoption the publication commit; after the tag the notices to LIT, PROG, NUMGEN, DYAD (v0.19 record §7). Acceptance: tag `dzt-v0.19`; `tools/pipes_index.py --check` OK.
-2. Row 6 (ii): the B1 re-examination, starting from the dynamical object. Acceptance: a written object definition checked against Dyadic `dyad-v6.4.24`, with no B1 result carried.
-3. Row 17: the targeted search for missing sources; anything found arrives unchanged on an upload branch and is hash-checked.
+1. Answer the review of the notices PR; after the PI's merge, the LIT, PROG, NUMGEN and DYAD inboxes hold the items. Acceptance: `tools/pipes_index.py --check` OK.
+2. Row 6 (ii): the B1 re-examination. Define the dynamical object B1 is about, checked against Dyadic `dyad-v6.4.24`, with no recovered B1 result carried (the 47/54 value is `DYAD-ALG-RAW-ANGULAR-MEAN`, not a pointwise recurrence). Acceptance: a written object definition in `records/dzt/`, reviewed.
+3. Rows 7 and 12 (channel universality), then row 17 (targeted search for missing sources).
 
-**Reopen trigger:** a review of the notices PR; a new `pipes/DZT/` item; a receiver disposition on a DZT notice; a Dyadic edition that changes §6.5, §6.11 or Appendix D/F; any material found by the row 17 search.
+**Reopen trigger:** a review of the notices PR; a new `pipes/DZT/` item; a receiver disposition on a DZT notice; a Dyadic edition that changes §6.5, §6.11 (the closed form assumed by `DZT-THM-CASCADE-NORM-LAW`) or Appendix D/F; any material found by the row 17 search.
 
 ## PI_PENDING
 
@@ -123,5 +123,6 @@ Each message asks for one bounded product. The PI sends the next one after readi
 - **Done, 19 Nov 2026:** PR #319 merged by the PI (`9a75aaa`), annotated tag `dzt-v0.18`.
 - **Done, 20 Nov 2026, 00:55 +03:00:** norm-law grade, new RID, entry by v0.19 (v0.19 record, Authority).
 - **Done, 20 Nov 2026, 12:19 +03:00:** v0.19 adopted (v0.19 record §9).
-- **Open with the PI:** merge of PR #334 and the annotated tag `dzt-v0.19`.
+- **Done, 20 Nov 2026:** PR #334 merged by the PI (`5f3b205`), annotated tag `dzt-v0.19`.
+- **Open with the PI:** none for DZT beyond the notices PR.
 - No CLI block is pending for DZT.
