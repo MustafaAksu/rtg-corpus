@@ -42,6 +42,7 @@ The columns:
 | **RER** (noncanonical) | v0.2 (baseline) | **no** (PI) | — | none | 2 | 0 | current |
 | **ER-2B** (noncanonical) | v0.3 (baseline) | **no** (PI) | — | none | 2 | 0 | current |
 | **FMS** (session) | v0.6.4 (baseline) | **no** (PI) | — | none | 2 | 0 | current |
+| **PRR Wrap-up** (noncanonical) | v0.2 cited; **not in the repository** | — | — | none | no inbox | 0 | — |
 | Atlas | v0.14 (17 Nov) | yes | Method v0.3 | 17 Nov | 0 | 4 Atlas heads | — |
 | LIT (`rtg-lit`) | records, not DSNs | own repo | own CONVENTIONS (adopted 11 Nov) | own entry note | 1 (DYAD's LH2012 use report), and the SAT items | — | not an input |
 
@@ -66,6 +67,8 @@ AZ took four editions and DZT two, both under a week.
 | A3 | **Pre-Legacy** | Old pins (PROG.G6); the "0.5" convention trap (advisory row 5); one SAT finding (K₃ degeneracy and lift) | 3 — historical source; maintenance only |
 | A4 | **Legacy** | Methodology v1.3 → v1.4; advisory row 5 together with Pre-Legacy; nothing open | 4 — with A3 or right after |
 | A5 | **RER, ER-2B, FMS** | **The PI decides their status first:** onboard each as a live registry or study, or record it as frozen at its tag. In the second case its notices are answered "recorded, no further editions" and the Atlas marks it historical. 2 open items each | after the PI's decision (question 3 of the 16 Nov advisory, deferred) |
+| A6 | **PRR Wrap-up** (`RTG_PRIMORDIAL_RELATIONAL_REPRESENTATION_WRAPUP`, noncanonical; added 20 Nov 2026 after the PI noted that a fourth noncanonical element never reached GitHub) | Never imported. It is the declared parent of RRF (`dsn/RTG_RRF_REPRESENTATION_REGISTRY.md` header: "parent: …WRAPUP_v0_2 §20, §26") and is cited by RECOG (§ source ledger: "PRR Wrap-up v0.2, noncanonical … interpretive only"). Its v0.3 synchronisation was delegated to its editor in Sep–Oct 2026 and is not known to have been produced. Steps: (1) the PI locates the bytes (v0.2, and v0.3 if it exists); (2) they arrive unchanged on an `upload/...` branch and are hash-checked; (3) `noncanonical/` gets the governing version under a fixed filename, with a release record and a BASELINE row; (4) the PI decides its status together with A5. No hash is known to the Atlas owner | with A5; the import (1)–(3) can come first, since RRF's parent pointer cannot be checked until then |
+| A7 | **Other cited, absent noncanonical sources** | Cited by RRF and RER with hashes recorded there, but not in the repository: `RTG_RRF_RER_DYNAMICAL_CLOSURE_PROPOSAL_v0_1` (RER records SHA-256 `65186f39…4e86`), `RTG_RRF_RESPONSE_TO_OFN_COINCIDENCE_v0_2` (`897bfad0…126d`), `RTG_RRF_COINCIDENCE_ADMISSIBILITY_REVIEW_v0_1` (hash in RER), `ER2B_COINCIDENCE_SIXSTEP_AUDIT_v0_1.zip` (no hash anywhere). Also the "Initial Ontological Premises and Questions" note (Oct 2026), not cited in the repository. Legacy cites `RTG_MASTER_DSN` and `RTG_L0_L1_L2_BRIDGE_LEGACY_HISTORY_ARCHIVE`, also absent | a targeted search together with A6; each found file goes through the same `upload/...` hash check against the recorded hash |
 
 ### B. Streams in the pattern that the later changes have overtaken
 
@@ -100,7 +103,7 @@ These streams have notices waiting and pins one or more editions behind. The wor
 
 | # | Item | State |
 |---|---|---|
-| D1 | **Entry notes missing**: Methodology, Programme, OPEN-M, RRF, Pre-Legacy, Legacy, RER, ER-2B, FMS | Each is written when the stream is opened (A), or now for Programme, which has open items |
+| D1 | **Entry notes missing**: Methodology, Programme, OPEN-M, RRF, Pre-Legacy, Legacy, RER, ER-2B, FMS, PRR Wrap-up | Each is written when the stream is opened (A), or now for Programme, which has open items |
 | D2 | **Entry notes not refreshed since 11 Nov**: GEN, NUMGEN, OFN, RECOG, TDR-G, TRIAD, and the two DYAD/GEN/RECOG inbox notes of 30 Oct–3 Nov | Each lane gets a checkpoint at the stream's next session (CONVENTIONS §9). TDR-G's lane predates v2.13's tag |
 | D3 | `tools/orient.py` has no built-in profile for AZ and DZT. Their release records are not found without `--tag-prefix`, `--file` and `--record-glob` | Tool debt. A profile table for every study would make LIVE_STATE one command everywhere |
 | D4 | Notices sent but not closed: DYAD 14, OFN 8, GEN 7, TDR-G 6, AZ 6, RECOG 5, PROG 4, TRIAD 3, DZT 3 | No action by the sender. Each closes when its receiver decides |
@@ -134,13 +137,13 @@ These streams have notices waiting and pins one or more editions behind. The wor
 2. **OPEN-M**, on the AZ/DZT pattern. In parallel, if the PI wants: an inbox pass for **NUMGEN** and **OFN**, the two largest backlogs, and the oldest maintained editions.
 3. **RRF**, then a **Programme** maintenance edition that records the state after A1–A2 and answers its 8 items.
 4. **Pre-Legacy and Legacy** together (maintenance only).
-5. **RER, ER-2B, FMS** according to the PI's status decision.
+5. **RER, ER-2B, FMS** according to the PI's status decision; the **PRR Wrap-up** import (A6) and the search for the other absent sources (A7) can start now, independent of that decision.
 6. Throughout: GEN answers LIT (E1); the decisions on the old PRs (D5); the C2 rule if the PI wants it in Methodology.
 
 ## 4. Asked of the PI
 
 1. Whether to start OPEN-M next. Whether inbox passes in NUMGEN and OFN run in parallel.
-2. The status of RER, ER-2B and FMS: onboard them, or record them as frozen.
+2. The status of RER, ER-2B, FMS and the PRR Wrap-up: onboard them, or record them as frozen. Where the PRR Wrap-up bytes (v0.2, any v0.3) are, and whether the ontological premises note belongs in the repository.
 3. Whether the equality annotation (C2) becomes a Methodology rule, and in what form.
 4. What happens to PRs #160, #183, #189 and #287.
 5. Whether the Atlas waits for DZT v0.19 before refreshing (F1).
