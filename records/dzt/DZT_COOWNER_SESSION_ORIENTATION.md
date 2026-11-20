@@ -99,7 +99,7 @@ Each message asks for one bounded product. The PI sends the next one after readi
 
 ### CO-OWNER LANE — Claude
 
-**Checked:** 20 November 2026, 01:30 +03:00. `main` `6e70332` (merge of PR #332). Tag `dzt-v0.18` (annotated, on `9a75aaa`) governs; file `04581d1e…8dee` equal on `main`. `pipes/DZT/`: five items; the 13 Nov LIT offer is `acknowledged`, the AZ v0.7 item `closed`, the other three `dispositioned`. Open DZT PR: the v0.19 edition (branch `claude/dzt-v0.19`).
+**Checked:** 20 November 2026, 12:25 +03:00. `main` `d422b89`. v0.19 adopted by the PI on 20 Nov, 12:19 +03:00 (published `2b959f46…f6ce`); `dzt-v0.18` governs until the tag `dzt-v0.19`. Tag `dzt-v0.18` (annotated, on `9a75aaa`) governs; file `04581d1e…8dee` equal on `main`. `pipes/DZT/`: five items; the 13 Nov LIT offer is `acknowledged`, the AZ v0.7 item `closed`, the other three `dispositioned`. Open DZT PR: the v0.19 edition (branch `claude/dzt-v0.19`).
 **Role:** DZT co-owner, preparer. The second co-owner (ChatGPT) is the independent receiving reviewer. The PI decides adoption and publication (D6).
 **Shared sections:** this lane's session updated the governing-edition paragraph and PI_PENDING on 19 Nov.
 **Goal / current question:** triage list (ii), starting with row 2 (norm-law proof review). Each item enters an edition only by a separate PI decision.
@@ -122,5 +122,6 @@ Each message asks for one bounded product. The PI sends the next one after readi
 - **Done, 19 Nov 2026, 15:03 +03:00:** v0.18 adopted by the PI (release record §12).
 - **Done, 19 Nov 2026:** PR #319 merged by the PI (`9a75aaa`), annotated tag `dzt-v0.18`.
 - **Done, 20 Nov 2026, 00:55 +03:00:** norm-law grade, new RID, entry by v0.19 (v0.19 record, Authority).
-- **Open with the PI:** adoption of v0.19 after review (v0.19 record §9).
+- **Done, 20 Nov 2026, 12:19 +03:00:** v0.19 adopted (v0.19 record §9).
+- **Open with the PI:** merge of PR #334 and the annotated tag `dzt-v0.19`.
 - No CLI block is pending for DZT.

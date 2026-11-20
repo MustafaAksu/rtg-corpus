@@ -1,11 +1,11 @@
 # DZT v0.19 — release record
 
-**Status:** DRAFT, for review. **Not adopted.** `dzt-v0.18` governs until the PI adopts this edition and the annotated tag `dzt-v0.19` exists. This draft is completed at adoption (§9) and frozen then.
-**Candidate file:** `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `50f58c885083636be36b7c44ad5655a8568e5c7f2cc9cf6447312aa79fc57442`, 46,662 bytes (revision 2, after review `5984329391`).
+**Status:** ADOPTED by the PI, 20 November 2026 (§9). Merge and the annotated tag `dzt-v0.19` follow this record (§8); until that tag exists, `dzt-v0.18` remains the governing edition.
+**Adopted file:** `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `2b959f46b8e23363beac087183caf4946d63d1e8d5ac597bdb7d9230143bf6ce`, 46,757 bytes. It is published from the candidate `50f58c885083636be36b7c44ad5655a8568e5c7f2cc9cf6447312aa79fc57442` (46,662 bytes; revision 2, commit `757d88910d0a034a1a78517710a7234b04c8d571`) by the status-lines transform of §1.
 **Predecessor:** v0.18, tag `dzt-v0.18`, SHA-256 `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee`, 43,448 bytes (release record `records/dzt/DZT_v0_18_RELEASE_RECORD.md`).
 **Prepared by:** the DZT co-owner (Claude), 20 November 2026. Second co-owner and independent reviewer: ChatGPT.
 
-This record invents no hash, approval or review identifier. Steps after adoption are listed in §8.
+This record is frozen at adoption. It invents no hash, approval or review identifier. Steps that come after it (merge, tag, notices) are named in §8 as pending at adoption; their identities are carried by the merge commit, the tag and the pipe items.
 
 **Authority.**
 - **PI decisions, 20 November 2026, 00:55 +03:00**, project conversation, verbatim: "1- Evet 2- yeni RID açılsın 3- yeni sürümle girsin". They answer the three questions put to the PI after review `5983698371` (owner review record §8):
@@ -21,7 +21,7 @@ This record invents no hash, approval or review identifier. Steps after adoption
 | base — `dzt-v0.18` | `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee` | 43,448 |
 | candidate as first submitted (commit `9f4ceb56bb65c958828dd789f29205e357cba7aa`, reviewed in `5984329391`) | `00a6921437787e77bc8af5fcd50663fca4b4440ea564ea7c1054640d22464268` | 46,444 |
 | **candidate, revision 2** (R1, N1; §4a) | `50f58c885083636be36b7c44ad5655a8568e5c7f2cc9cf6447312aa79fc57442` | 46,662 |
-| published (status lines only) | pending adoption | — |
+| published (status lines only; `evidence/dzt/v0.19/publish_dzt_v0_19.py`) | `2b959f46b8e23363beac087183caf4946d63d1e8d5ac597bdb7d9230143bf6ce` | 46,757 |
 
 ```bash
 python3 -I evidence/dzt/v0.19/build_dzt_v0_19.py --out /tmp/c.md --log /tmp/log.txt
@@ -29,7 +29,10 @@ sha256sum /tmp/c.md                                       # 50f58c88…7442
 diff /tmp/log.txt evidence/dzt/v0.19/edit_log.txt         # empty
 git diff dzt-v0.18 -- dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md
 python3 -I evidence/dzt/norm_law_review/dzt_norm_law_review_check.py 4000 1000 100000   # PASS (about 100 s)
+python3 -I evidence/dzt/v0.19/publish_dzt_v0_19.py --check   # PASS: lines 9, 324, 356 differ from the candidate
 ```
+
+**Publication transform.** `evidence/dzt/v0.19/publish_dzt_v0_19.py` reads the adopted candidate from commit `757d8891` and asserts its hash. It changes exactly three lines: the header field "Document status" (ADOPTED, with this record), the heading of the v0.19 entry in Appendix A, and the footer. Output of `--check`: `evidence/dzt/v0.19/publish_check_output.txt` (PASS).
 
 **What the builder does.** `evidence/dzt/v0.19/build_dzt_v0_19.py` reads the base with `git show dzt-v0.18:…` and asserts its hash. It applies 27 edits; each replaces a span that must occur exactly once (log: `evidence/dzt/v0.19/edit_log.txt`).
 
@@ -120,7 +123,7 @@ The recovered identifiers `DZT-THM-CASCADE-ODD-SUPPORT` and `DZT-THM-CASCADE-DEN
 
 ## 6. Inbox (`pipes/DZT/`)
 
-These dispositions are entered by the publication commit after adoption, with this record as pointer:
+The publication commit enters this disposition (`2026-11-20 · accept · records/dzt/DZT_v0_19_RELEASE_RECORD.md`):
 
 | Item | Disposition | Basis |
 |---|---|---|
@@ -146,9 +149,9 @@ Each notice is one item, filed after the tag `dzt-v0.19` exists. The receivers d
 | # | Step | By | State |
 |---|---|---|---|
 | 1 | Candidate, checks, this draft | DZT co-owner | done (this PR) |
-| 2 | Change-focused review (§5) | second co-owner | requested |
-| 3 | Adoption decision (§9) | PI | pending |
-| 4 | Publication commit on this branch: status lines only, by a reviewed transform as for v0.18; the dispositions (§6); this record completed and frozen; the `BASELINE.md` DZT row | DZT co-owner | pending |
+| 2 | Change-focused review (§5) | second co-owner | done: `5984329391` REVISE (R1); revision 2 (§4a); `5988755813` ACCEPT SCOPED |
+| 3 | Adoption decision (§9) | PI | done, 20 Nov 2026 |
+| 4 | Publication commit on this branch: status lines only (§1); the disposition (§6); this record completed and frozen; the `BASELINE.md` DZT row | DZT co-owner | done (the commit that adds this text) |
 | 5 | Merge by a merge commit (not squash) | PI | pending |
 | 6 | Annotated tag `dzt-v0.19` on that merge commit | PI | pending |
 | 7 | Notices (§7); lane in the orientation note | DZT co-owner, after the tag | pending |
@@ -156,9 +159,26 @@ Each notice is one item, filed after the tag `dzt-v0.19` exists. The receivers d
 
 ## 9. Adoption decision
 
-Not given. To be completed with:
-- the PI's verbatim decision and its time;
-- the adopted object (candidate hash and published hash);
-- what the adoption covers and does not cover.
+**Decision (PI, 20 November 2026, 12:19 +03:00, project conversation with this session, verbatim):** "benimsiyorum" ("I adopt").
+- **Question answered:** the co-owner's question of the same conversation, which named the object and the scope: the candidate `50f58c885083636be36b7c44ad5655a8568e5c7f2cc9cf6447312aa79fc57442` (46,662 bytes) of PR #334.
+- **Review basis:** readback `5988755813` (ACCEPT SCOPED on head `757d88910d0a034a1a78517710a7234b04c8d571`).
 
-Order: decision → this record → merge → tag.
+- **Adopted object:** the candidate `50f58c88…7442`, published with the status-lines transform of §1 as `dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`, SHA-256 `2b959f46b8e23363beac087183caf4946d63d1e8d5ac597bdb7d9230143bf6ce`.
+- **Basis:**
+  - the PI's decisions of 20 Nov 2026, 00:55 +03:00 (grade, new RID, entry by edition);
+  - the owner review `records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md` with review `5983698371`;
+  - this edition's reviews `5984329391` (R1, N1 applied) and `5988755813`;
+  - the builder assertions and the byte-identical rebuild, the reviewer's independent re-application of the 27 edits, and the publication check.
+- **What the adoption covers:**
+  - `DZT-THM-CASCADE-NORM-LAW` `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`, with its statement and proof in §6.3;
+  - the closure of `DZT-OPEN-NORM-LAW`;
+  - the retirement of the mod-4 `[HYP]` (Appendix B, `DZT19-C01`);
+  - the registry entry `DZT-ART-NORMLAW-CHECK`;
+  - the dependent updates of §1, §2, §5, §7 and §9.
+- **What it does not cover:**
+  - the sign of $N_+(M_p)$, and with it the LIT sign count and pattern;
+  - any change of maturity level (Level A stays);
+  - the recovered RIDs `DZT-THM-CASCADE-ODD-SUPPORT` and `DZT-THM-CASCADE-DENOMINATOR`;
+  - B1 and the rest of triage list (ii);
+  - any claim about Dyadic's physical model (the closed form is an assumption).
+- **Order:** decision → this record → merge → tag. A merge, a tag or a passing check is not an adoption; the adoption is this decision.

@@ -6,7 +6,7 @@
 **Scope:** Arithmetic transforms (cyclotomic resultants and real-subfield norms) over Dyadic-owned OPEN 9 $p$-resonance observables, and the diagnostics they produce; no Dyadic result is re-owned, no AZ graph-zeta result transfers, and nothing is claimed about the Riemann Hypothesis or prime distribution.
 **Document class:** Technical scientific ledger (Methodology v1.4 §0.5), standard layout. Short name: *Dyadic Zeta/Arithmetic Transform (DZT)*.
 **Programme tier:** Tier 3 — Continuous Programme, downstream diagnostic of Dyadic. Maturity **Level A** (defined model; exploration begun). All results inherit the OPEN-P0 ceiling (SG-PROG-2 / SG-DZT-6).
-**Document status:** DRAFT — candidate of v0.19; not adopted. `dzt-v0.18` governs until the PI adopts and tags this edition.
+**Document status:** ADOPTED — PI, 20 November 2026 (the all-$p$ amplitude-norm theorem DZT-THM-CASCADE-NORM-LAW, `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`; DZT-OPEN-NORM-LAW closed; the mod-4 `[HYP]` retired). Adoption record: `records/dzt/DZT_v0_19_RELEASE_RECORD.md`.
 **Supersedes:** `RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN` v0.18 (tag `dzt-v0.18`, SHA-256 `04581d1e8d8a187ec231d670d9639591e2b8d3aefb9834d5dd9f5cdf792a8dee`)
 **Companion documents:** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`; source of truth for all OPEN 9 arithmetic) · Arithmetic Resonance and Zeta v0.10 (`az-v0.10`; discrete branch, quarantined, see SG-DZT-1) · Ontological Foundations v0.12 (`ofn-v0.12`)
 **DSN Methodology:** v1.4 (`methodology-v1.4`)
@@ -321,7 +321,7 @@ The exit codes of the recovered files are source-reported and were not rerun; DZ
 
 ## Appendix A — Version History
 
-### v0.19 — 20 November 2026 — DRAFT
+### v0.19 — 20 November 2026 — adopted 20 November 2026
 The all-$p$ amplitude-norm law enters as DZT-THM-CASCADE-NORM-LAW, `[THM]` `[assuming: DYAD-THM-Q403-PHASELAW]`, after the owner review `records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md` and the PI's decisions of 20 November 2026 on its grade, RID and entry by edition; it closes DZT-OPEN-NORM-LAW (DZT-OPEN-0B-R). The `[HYP]` mechanism of the mod-4 gate is retired (Appendix B). The review check is registered as DZT-ART-NORMLAW-CHECK. No other claim or grade changes; the sign of $N_+(M_p)$ stays outside the theorem. Record: `records/dzt/DZT_v0_19_RELEASE_RECORD.md`.
 
 ### v0.18 — 18 November 2026 — adopted 19 November 2026
@@ -353,4 +353,4 @@ From the founding charter (v0.1) to the integration of the Dyadic all-$p$ phase 
 
 `[SUPERSEDED]` **DZT19-C01** (administrative correction key; the statement had no RID) Original (`dzt-v0.18` §2 and §6.3, `[HYP]`): "the $\equiv1\!\pmod4$ gate is the reality of $\mathbb{Q}(\sqrt q)\subset\mathbb{Q}(\zeta_q)^+$ — for $q\equiv1$, $\sqrt q$ is real and $\ell$ enters $N_+$; for $q\equiv3$, only $\sqrt{-q}$ (imaginary) lies in $\mathbb{Q}(\zeta_q)$". Reason: the proof of DZT-THM-CASCADE-NORM-LAW locates the gate in the order of $L^{s-2}$ ($q$ when $q\equiv1\!\pmod4$, $2q$ when $q\equiv3$); no quadratic subfield enters. The reading cannot be the reason at $q=9$: $p=72$ is an anomaly ($\lvert N_+\rvert=9/64$) while $\sqrt9$ is rational and $\mathbb{Q}(\zeta_9)^+$ is cubic; the same holds for every $q=\ell^{2b}$. Replacement: §6.3, DZT-THM-CASCADE-NORM-LAW, proof step (iv). Recorded in: v0.19.
 
-*END OF DOCUMENT — RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.19 — DRAFT; adoption pending; `dzt-v0.18` governs until adoption and tag.*
+*END OF DOCUMENT — RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0.19*
