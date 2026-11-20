@@ -1,0 +1,245 @@
+[
+ {
+  "id": "AR15-001",
+  "finding": "identity",
+  "where": "title",
+  "old_sha256": "64bbfc37f3e6daa4d5ec5ba8a0d9ba18a6592122a76401596a36bd28eaa8d530",
+  "new_sha256": "2bf604175a0e1a7df67ef77c60c750423d6bc33ccd2a3761c2ce10425762998a",
+  "old": "# RTG STATE ATLAS v0.14\n",
+  "new": "# RTG STATE ATLAS v0.15\n"
+ },
+ {
+  "id": "AR15-002",
+  "finding": "identity",
+  "where": "SOURCES header",
+  "old_sha256": "2d55baa7da5f3be308a1b16f063c5dd1bb047b1f3066d5436353930e95de397a",
+  "new_sha256": "3c4f3dba0cbd16371fbb86b0baa3f231d9fe233994375f674986ece5c2b21aba",
+  "old": "evidence/atlas/v0.14/source_manifest.json",
+  "new": "evidence/atlas/v0.15/source_manifest.json"
+ },
+ {
+  "id": "AR15-003",
+  "finding": "identity",
+  "where": "end line",
+  "old_sha256": "20be9836144b5f4502d4d40a1e0fef9c132e0bf0a052f207cac90bdf80b43065",
+  "new_sha256": "1e8467433a1c36f914f41b0b9cdb340c45a2537c2601457a75f196e0ae1bd1e6",
+  "old": "*END — RTG STATE ATLAS v0.14.",
+  "new": "*END — RTG STATE ATLAS v0.15."
+ },
+ {
+  "id": "AR15-004",
+  "finding": "identity",
+  "where": "SOURCES row DZT",
+  "old_sha256": "77bd7b23b1b108071e1dbd05a87a299e22237bc1cd4c5fc7bc65c9cb080a2d70",
+  "new_sha256": "45a4655a8b9426d9058ad2534122ad26de9c825b610b3fe7f5efae9101f702c7",
+  "old": "| DZT | RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN | v0.8 | `dzt-v0.8` | canonical Tier 3 |",
+  "new": "| DZT | RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN | v0.19 | `dzt-v0.19` | canonical Tier 3 |"
+ },
+ {
+  "id": "AR15-005",
+  "finding": "identity",
+  "where": "D2 header, DZT",
+  "old_sha256": "bb4fdec51c0d76a71d7b5010cd9b48b482580a5982fe184f9ed0697e1ddbb33a",
+  "new_sha256": "5c861c2b3f0650bde46f4fac5378ff9cf0be18be8001b9a94a216cdda8ccb8ed",
+  "old": "· DZT v0.8 · AZ v0.10 Thread A.",
+  "new": "· DZT v0.19 (Methodology v1.4 declared; Level A) · AZ v0.10 Thread A."
+ },
+ {
+  "id": "AR15-006",
+  "finding": "reviewed source/locator wording update (not a span deletion)",
+  "where": "D2 header: DZT tag aliases as the owner states them (Local Tag Aliases)",
+  "old_sha256": "1b317c2dc4cd7e5704de35ea1dad07ad5b83096a7b6b18c8873df9986d48ab0d",
+  "new_sha256": "7ee9121ab419bf788a533b717ffa2cb70732091c2353e54f899b10babc1ebc5d",
+  "old": "DZT aliases [import-ref]=[DEF][scope: reference-only], [NUM diagnostic].)",
+  "new": "DZT alias [NUM diagnostic]=[NUM][scope: named diagnostic campaign]; DZT's [import-ref] is a reference label, not a status tag.)"
+ },
+ {
+  "id": "AR15-007",
+  "finding": "DZT v0.19",
+  "where": "phase law: reverse relation toward DZT at the owner's §7",
+  "old_sha256": "45abd4de6723f1d58afd5d54a3809d370881ba570c8a5c2e8662db2a363a41b2",
+  "new_sha256": "6daf9ce3bd5653d5889cbc51c5b437532aca347aa6e504b752490f98b4a035ba",
+  "old": "DYAD-THM-Q403-PHASELAW THM (proof: exact algebraic identity) | p=4s, s≥2: Q_p=[λ^{−s}f_p^s−Id]^W_{(0,3)}=iζ_p³M_p, M_p∈ℚ(ζ_p)⁺; Q(L,I)=L⁵(IL²+I−L²+1)/(2(L+1)⁴(L²+L+1)), I=L^{p/4}=i; arg Q_p=π/2+6π/p (p≥12); Q₈=0; p=12: Q₁₂=−M₁₂=−13+15√3/2=−0.0096189 (modulus ≈0.0096); σ₋₁(Q)=−L⁻⁶Q exact in ℚ(I)(L); three paths (one cubic cancels S₋₄=0; two quadratic–quadratic) | ¬ generic-s formula | universal q=4,(0,3) cancellation FAIL | >NUMGEN (retires N-3C+ q=4 item; pin v6.4.18; NUMGEN grades RES[THM]), DZT (prints the historical note label DYAD-THM-Q403-PHASE-ALLP, not an owner RID; L5 DZT.Q1), PROG (correct RID), AZ (import-ref at az-v0.7 §4.1.1, §8) | @DYAD§6.11",
+  "new": "DYAD-THM-Q403-PHASELAW THM (proof: exact algebraic identity) | p=4s, s≥2: Q_p=[λ^{−s}f_p^s−Id]^W_{(0,3)}=iζ_p³M_p, M_p∈ℚ(ζ_p)⁺; Q(L,I)=L⁵(IL²+I−L²+1)/(2(L+1)⁴(L²+L+1)), I=L^{p/4}=i; arg Q_p=π/2+6π/p (p≥12); Q₈=0; p=12: Q₁₂=−M₁₂=−13+15√3/2=−0.0096189 (modulus ≈0.0096); σ₋₁(Q)=−L⁻⁶Q exact in ℚ(I)(L); three paths (one cubic cancels S₋₄=0; two quadratic–quadratic) | ¬ generic-s formula | universal q=4,(0,3) cancellation FAIL | >NUMGEN (retires N-3C+ q=4 item; pin v6.4.18; NUMGEN grades RES[THM]), DZT (the assumption of DZT-THM-CASCADE-NORM-LAW and of the norm object; cited by this RID at dzt-v0.19 §7, its parts without separate RIDs), PROG (correct RID), AZ (import-ref at az-v0.7 §4.1.1, §8) | @DYAD§6.11"
+ },
+ {
+  "id": "AR15-008",
+  "finding": "DZT v0.19",
+  "where": "DZT import record restated at §7: owner RIDs only",
+  "old_sha256": "7a7de40e2ad49a06008a14d058f6a14482224b25c1ed6b1c9b6f96dafb840b5f",
+  "new_sha256": "1c5525594a75fb54552ea1eb14ee58b81ef60984a1c41a73b3b36223af130a64",
+  "old": "*DZT:imports-dyad-note THM(import; phantom RIDs !) | from a \"Dyadic phase-law note\" (not a DSN): DYAD-THM-P1 λ^{−s}=ζ_p^{−p/4}=−i ∀4|p; DYAD-THM-REALITY f^{W̄}_{(b,a)}=conj f^W_{(a,b)}, J(f^s)=(Jf)^s, Galois σ₋₁ realizes J; DYAD-THM-LEAD Σ_{k=0}^{s−1}ζ_p^{−4k}=0 (s≥2), Q_p subleading remainder, explains p=8; DYAD-ALG-PHASELAW (arg law, finite horizon) SUPERSEDED; DYAD-THM-R σ₋₁(A_p)=ζ_p^{−6}A_p validation alias; DYAD-CF-Q403 closed form (DZT-verified vs extractor at p=12,16,20,24,40,44,60); DYAD-ART-CASCADE-Q4-03 (Case-V values p=8–64; extract script ecdb805f…05eac2, horizon md 14526cf1…7bec16; R^raw_{p,4}=λ^{−s}f_p^s−Id, s=p/4); cert q4_03_R_identity_certificate.py (Dyadic-owned) — none of these strings is a DYAD RID; DYAD App F classifies them: P1, REALITY, LEAD, R, CF-Q403 = components of DYAD-THM-Q403-PHASELAW (no separate RID); PHASE-ALLP, ALG-PHASELAW = historical note labels; CASCADE-P12 unmatched (no-RID p=12 value); ART-CASCADE-Q4-03 content matches DYAD-ART-Q403-EXTRACT without byte identity; no alias created | @DZT",
+  "new": "*DZT:imports-dyad (import record; no DZT claim; grades are the owner's) | DZT §7 imports from DYAD v6.4.24 by owner RID only: DYAD-THM-Q403-PHASELAW, with its parts named without separate RIDs as DYAD App F classifies them (universal direction λ^{−s}=ζ_p^{−p/4}=−i ∀4|p; reality relation f^{W̄}_{(b,a)}=conj f^W_{(a,b)}, J(f^s)=(Jf)^s, J realized by σ₋₁; leading (0,3) accumulation Σ_{k=0}^{s−1}ζ_p^{−4k}=0 (s≥2), so Q_p is the subleading remainder and Q₈=0; remainder relation σ₋₁(A_p)=ζ_p^{−6}A_p; the closed form, DZT-checked against the extractor at p=12,16,20,24,40,44,60, source-reported) · DYAD-ART-Q403-EXTRACT (Case-V values p=8–64; correspondence by content only: DZT's hashes ecdb805f…05eac2 and 14526cf1…7bec16 name files not in the repository, no byte identity) · DYAD-ART-Q403-CERT (not in the repository, not rerun) · DYAD-ALG-B5-ALLP-NONVANISHING · DYAD-ALG-VANISH-B2/B3/B4 · DYAD-ALG-P6-FACEFLUX; the p=8 and p=12 cascade values have no owner RID and are cited as text; the note labels of the dzt-v0.8 text are gone from the owner text | @DZT§7"
+ },
+ {
+  "id": "AR15-009",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "p=12 norm: the Mahler reading traced to the FAIL record",
+  "old_sha256": "4fdd33bec438b23de1d796bb045f8a012cce68989b3935c430d4097290cb9e83",
+  "new_sha256": "39d55e56137f0bb2aa74f0d187a9cef1bca9a15a84bf2f8d0e550db526002093",
+  "old": "DZT-ALG-P12-NORM ALG | v=−13+15√3/2 (|v|≈0.0096; conjugate v̄≈−25.99): N_{ℚ(√3)/ℚ}(v)=169−675/4=¼ (reduced norm, family member φ/2=2) | partial answer to DYAD OPEN \"near-cancellation of −13+15√3/2\" (cited by DYAD §2 OPEN 9 at finite DZT scope) | Mahler mechanism HYP only (DZT-RETRACT-MAHLER-RESULT retracted the RESULT voice) | @DZT",
+  "new": "DZT-ALG-P12-NORM ALG | v=−13+15√3/2 (|v|≈0.0096; conjugate v̄≈−25.99): N_{ℚ(√3)/ℚ}(v)=169−675/4=¼ (reduced norm, family member φ/2=2) | partial answer to DYAD OPEN \"near-cancellation of −13+15√3/2\" (cited by DYAD §2 OPEN 9 at finite DZT scope) | the Mahler reading: its RESULT voice retracted (DZT-RETRACT-MAHLER-RESULT), its family form DZT-HYP-MAHLER-NEARMISS falsified at p=40; the value survives | @DZT"
+ },
+ {
+  "id": "AR15-010",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "norm object: compound head unpacked into the owner's [ALG] (sc: object level); the imported factorization stays DYAD's [THM]",
+  "old_sha256": "4d7a421e9484b2240c6df1959e91d66d885a95dfd31dc33d7bdeb506123f3260",
+  "new_sha256": "963540f7964976ab0be728f9bc4b620588974760200a6fce85c3fa066c093ee1",
+  "old": "*DZT:norm-object THM/ALG(import)·all p | Q_p=iζ_p³M_p, M_p∈ℚ(ζ_p)⁺ for p=4s≥12 ⇒ N_+(M_p) well-defined all-p real-subfield invariant (object level only) | <DYAD-THM-Q403-PHASELAW | @DZT",
+  "new": "*DZT:norm-object ALG (sc: object level, all p=4s≥12) | Q_p=iζ_p³M_p with M_p=Q_p/(iζ_p³)∈ℚ(ζ_p)⁺ (DYAD THM, imported) ⇒ N_+(M_p)∈ℚ well-defined for all p=4s≥12; M_p real, its sign not asserted; values and anomaly pattern: DZT-THM-CASCADE-NORM-LAW | <DYAD-THM-Q403-PHASELAW | @DZT§6.3"
+ },
+ {
+  "id": "AR15-011",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "cascade norm: absolute values (owner v0.18), scope of the table, finite case of the theorem",
+  "old_sha256": "8c7206ff6edf7261264415272288f55f187ead1f78c115fccd5c4236d1995fe4",
+  "new_sha256": "6cd97f2470ac6fffc0705ec3e1dcf768f35b29bd5a6769111dac56a2e8877b5c",
+  "old": "DZT-ALG-CASCADE-NORM ALG·validation table | N_+(M_p), p=12,16,…,64: ¼, ⅛, ¼, ⅛, ⅛, 1/32, ⅛, 25/16, 1/32, 1/32, 1/64, 1/64, 1/16, 1/512; pure 2-power except p=40 (5²·2⁻⁴) | cert dzt_casev_norm_audit.py (exit 1 by design: falsifier fires at p=40) | @DZT",
+  "new": "DZT-ALG-CASCADE-NORM ALG·validation table p=12–64 (14 points) | |N_+(M_p)| (absolute values; the sign of N_+(M_p) is not determined by DZT), p=12,16,…,64: ¼, ⅛, ¼, ⅛, ⅛, 1/32, ⅛, 25/16, 1/32, 1/32, 1/64, 1/64, 1/16, 1/512; pure 2-power except p=40 (5²·2⁻⁴) | canonical computation: the p≤1000 closed-form audit (DZT-ALG-CASCADE-ANOMALY-SET); a finite case of DZT-THM-CASCADE-NORM-LAW | cert dzt_casev_norm_audit.py (DZT-ART-CASEV-AUDIT; exit 1 by design: falsifier fires at p=40) | @DZT§6.3"
+ },
+ {
+  "id": "AR15-012",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "anomaly set: absolute values",
+  "old_sha256": "0c20df8aa84db3c7c210762a5f9d3d40ffd4d1e8ead5df32720af8952d4fe522",
+  "new_sha256": "fb90b04774d2236a108b0133dc4ec71efe455471cb67318789195c622858ee85",
+  "old": "DZT-ALG-CASCADE-ANOMALY-SET ALG·finite horizon p≤1000 (249 points, 4|p) | odd-prime anomalies exactly at p=8ℓ^a, ℓ^a≡1 mod 4: {40,72,104,136,200,232,296,328,392,424,488,584,648,712,776,808,872,904,968,1000} (20 points), numerator exactly ℓ² (72→9/64, 200→25/2²⁰, 392→49/2⁴²); via N_full=Res(Φ_p,A_s)/[2^{φ(p)}Res(Φ_p,L+1)⁴Res(Φ_p,L²+L+1)], A_s=L^{s+2}+L^s−L²+1 | COR: \"p=40 isolated\" horizon-local; \"every odd prime power\" false (q≡3 mod 4: p=24,56,88,152,184,216 clean); no denominator law (2^{−φ(q)} fails) | cert dzt_casev_norm_from_closed_form.py (DZT-ART-CF-AUDIT, CSV p8–1000), dzt_anomaly_rule_check.py (0/249 mismatches) | @DZT",
+  "new": "DZT-ALG-CASCADE-ANOMALY-SET ALG·finite horizon p≤1000 (249 points, 4|p) | odd-prime anomalies exactly at p=8ℓ^a, ℓ^a≡1 mod 4: {40,72,104,136,200,232,296,328,392,424,488,584,648,712,776,808,872,904,968,1000} (20 points), |N_+| numerator exactly ℓ² (72→9/64, 200→25/2²⁰, 392→49/2⁴²); via N_full=Res(Φ_p,A_s)/[2^{φ(p)}Res(Φ_p,L+1)⁴Res(Φ_p,L²+L+1)], A_s=L^{s+2}+L^s−L²+1 | COR: \"p=40 isolated\" horizon-local; \"every odd prime power\" false (q≡3 mod 4: p=24,56,88,152,184,216 clean); no denominator law (2^{−φ(q)} fails) | cert dzt_casev_norm_from_closed_form.py (DZT-ART-CF-AUDIT, CSV p8–1000), dzt_anomaly_rule_check.py (0/249 mismatches) | @DZT"
+ },
+ {
+  "id": "AR15-013",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "anomaly set: finite case of the theorem; the denominator correction as the owner states it",
+  "old_sha256": "fb90b04774d2236a108b0133dc4ec71efe455471cb67318789195c622858ee85",
+  "new_sha256": "df821687196918241981fa8fee69530219be6f54930e50ae58adc5323098958b",
+  "old": "DZT-ALG-CASCADE-ANOMALY-SET ALG·finite horizon p≤1000 (249 points, 4|p) | odd-prime anomalies exactly at p=8ℓ^a, ℓ^a≡1 mod 4: {40,72,104,136,200,232,296,328,392,424,488,584,648,712,776,808,872,904,968,1000} (20 points), |N_+| numerator exactly ℓ² (72→9/64, 200→25/2²⁰, 392→49/2⁴²); via N_full=Res(Φ_p,A_s)/[2^{φ(p)}Res(Φ_p,L+1)⁴Res(Φ_p,L²+L+1)], A_s=L^{s+2}+L^s−L²+1 | COR: \"p=40 isolated\" horizon-local; \"every odd prime power\" false (q≡3 mod 4: p=24,56,88,152,184,216 clean); no denominator law (2^{−φ(q)} fails) | cert dzt_casev_norm_from_closed_form.py (DZT-ART-CF-AUDIT, CSV p8–1000), dzt_anomaly_rule_check.py (0/249 mismatches) | @DZT",
+  "new": "DZT-ALG-CASCADE-ANOMALY-SET ALG·finite horizon p≤1000 (249 points, 4|p) | odd-prime anomalies exactly at p=8ℓ^a, ℓ^a≡1 mod 4: {40,72,104,136,200,232,296,328,392,424,488,584,648,712,776,808,872,904,968,1000} (20 points), |N_+| numerator exactly ℓ² (72→9/64, 200→25/2²⁰, 392→49/2⁴²); via N_full=Res(Φ_p,A_s)/[2^{φ(p)}Res(Φ_p,L+1)⁴Res(Φ_p,L²+L+1)], A_s=L^{s+2}+L^s−L²+1 | the p≤1000 case of DZT-THM-CASCADE-NORM-LAW | COR (of the imported note): \"p=40 isolated\" horizon-local; \"every odd prime power\" false (q≡3 mod 4: p=24,56,88,152,184,216 clean); the note's value N_+=2^{−φ(q)} wrong (on the set only its denominator exponent is right: |N_+(M_{8ℓ^a})|=ℓ²/2^{φ(ℓ^a)}; denominators in general: DZT-THM-CASCADE-NORM-LAW) | cert dzt_casev_norm_from_closed_form.py (DZT-ART-CF-AUDIT, CSV p8–1000), dzt_anomaly_rule_check.py (0/249 mismatches) | @DZT"
+ },
+ {
+  "id": "AR15-014",
+  "finding": "DZT v0.19",
+  "where": "new node: DZT-owned [THM] [assuming: DYAD-THM-Q403-PHASELAW]",
+  "old_sha256": "11187c1d4a870f8c85c074868a513ddedd71e8b4a4b078c263b88885288433c6",
+  "new_sha256": "07674d72e1b2f7bcebe7379bcb0fa0d11869d2d2eadfcf49b0f6cf7038cd063d",
+  "old": "DZT-ALG-CASCADE-ANOMALY-SET ALG·finite horizon p≤1000 (249 points, 4|p) | odd-prime anomalies exactly at p=8ℓ^a, ℓ^a≡1 mod 4: {40,72,104,136,200,232,296,328,392,424,488,584,648,712,776,808,872,904,968,1000} (20 points), |N_+| numerator exactly ℓ² (72→9/64, 200→25/2²⁰, 392→49/2⁴²); via N_full=Res(Φ_p,A_s)/[2^{φ(p)}Res(Φ_p,L+1)⁴Res(Φ_p,L²+L+1)], A_s=L^{s+2}+L^s−L²+1 | the p≤1000 case of DZT-THM-CASCADE-NORM-LAW | COR (of the imported note): \"p=40 isolated\" horizon-local; \"every odd prime power\" false (q≡3 mod 4: p=24,56,88,152,184,216 clean); the note's value N_+=2^{−φ(q)} wrong (on the set only its denominator exponent is right: |N_+(M_{8ℓ^a})|=ℓ²/2^{φ(ℓ^a)}; denominators in general: DZT-THM-CASCADE-NORM-LAW) | cert dzt_casev_norm_from_closed_form.py (DZT-ART-CF-AUDIT, CSV p8–1000), dzt_anomaly_rule_check.py (0/249 mismatches) | @DZT\n",
+  "new": "DZT-ALG-CASCADE-ANOMALY-SET ALG·finite horizon p≤1000 (249 points, 4|p) | odd-prime anomalies exactly at p=8ℓ^a, ℓ^a≡1 mod 4: {40,72,104,136,200,232,296,328,392,424,488,584,648,712,776,808,872,904,968,1000} (20 points), |N_+| numerator exactly ℓ² (72→9/64, 200→25/2²⁰, 392→49/2⁴²); via N_full=Res(Φ_p,A_s)/[2^{φ(p)}Res(Φ_p,L+1)⁴Res(Φ_p,L²+L+1)], A_s=L^{s+2}+L^s−L²+1 | the p≤1000 case of DZT-THM-CASCADE-NORM-LAW | COR (of the imported note): \"p=40 isolated\" horizon-local; \"every odd prime power\" false (q≡3 mod 4: p=24,56,88,152,184,216 clean); the note's value N_+=2^{−φ(q)} wrong (on the set only its denominator exponent is right: |N_+(M_{8ℓ^a})|=ℓ²/2^{φ(ℓ^a)}; denominators in general: DZT-THM-CASCADE-NORM-LAW) | cert dzt_casev_norm_from_closed_form.py (DZT-ART-CF-AUDIT, CSV p8–1000), dzt_anomaly_rule_check.py (0/249 mismatches) | @DZT\nDZT-THM-CASCADE-NORM-LAW THM (assuming: DYAD-THM-Q403-PHASELAW; proof: written derivation) | ∀p=4s≥12: |N_+(M_p)|=ℓ(p)²/2^{d_p}, d_p=φ(p)/4+[p=2^k]+[p=3·2^k]; ℓ(p)=ℓ if p=8ℓ^a (ℓ an odd prime, ℓ^a≡1 mod 4), ℓ(p)=1 otherwise; so the odd-prime anomalies are exactly p=8ℓ^a, ℓ^a≡1 mod 4 (20 for p≤1000; p=40 the only one on the 14-point table), with |N_+(M_{8ℓ^a})|=ℓ²/2^{φ(ℓ^a)}, and the denominator is always 2^{d_p}; the mod-4 gate is the order of L^{s−2} (for p=8q: q if q≡1 mod 4, 2q if q≡3 mod 4); proof by cyclotomic norms N(1−η)=Φ_n(1)^{φ(p)/φ(n)} on A_s=(I−1)L²(1−L^{s−2}) | ¬ the sign of N_+(M_p) (not part of the statement); ¬ p=8 (Q₈=0, outside the statement); ¬ unconditional (the imported Dyadic closed form is assumed); ¬ a bearing on RH or prime distribution (SG-DZT-4) | contains as finite cases: DZT-ALG-CASCADE-NORM (p=12–64) and DZT-ALG-CASCADE-ANOMALY-SET (p≤1000) | closes DZT-OPEN-NORM-LAW (0B-R) | retires the earlier [HYP] reading of the mod-4 gate as the reality of ℚ(√q)⊂ℚ(ζ_q)⁺ (owner [SUPERSEDED] DZT19-C01: no quadratic subfield enters; fails at q=9, p=72) | <DYAD-THM-Q403-PHASELAW (the closed form of Q_p and M_p=Q_p/(iζ_p³)∈ℚ(ζ_p)⁺; owned by DYAD) | proof sources (owner §9): the recovered DZT proof notes (odd support; denominator), the LIT note DZT_NORM_LAW_PROOF_NOTE.md (rtg-lit 8e2fb5cb), the owner review records/dzt/DZT_NORM_LAW_OWNER_REVIEW.md, the independent review 5983698371; grade, RID and entry by edition: PI, 20 Nov 2026 | cert DZT-ART-NORMLAW-CHECK (evidence/dzt/norm_law_review/dzt_norm_law_review_check.py, in the repository: exact integer resultants for 12≤p≤4000, every norm of the proof and the law, signed products p≤1000, six negative controls; run for the owner review on 19 Nov 2026, not rerun here; a finite check, not the proof) @DZT§6.3\n"
+ },
+ {
+  "id": "AR15-015",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "mod-4 [HYP] removed: owner [SUPERSEDED] DZT19-C01 (named in the theorem node)",
+  "old_sha256": "76888fac0d2f231c905afdab1ea0301763ea5b9317371ae071f43e0e71d8d9bd",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "*DZT:mechanism HYP | mod-4 gate = reality of ℚ(√q)⊂ℚ(ζ_q)⁺ for q≡1 (ℓ enters N_+); q≡3 gives imaginary ℚ(√−q), excluded | @DZT\n",
+  "new": ""
+ },
+ {
+  "id": "AR15-016",
+  "finding": "DZT v0.19",
+  "where": "p=40 courtesy flag removed: not in the owner text since v0.18",
+  "old_sha256": "1e345419a8a2aae33429c28b93dab988cf6f8b6c8173d81661a16985816cd11f",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "*DZT:p40-flag OBS(historical) | courtesy flag that p=40 might be an (R)-link degeneracy — superseded by recurrence | @DZT\n",
+  "new": ""
+ },
+ {
+  "id": "AR15-017",
+  "finding": "DZT v0.19",
+  "where": "OPEN 9 micro: DZT no longer prints the unmatched string",
+  "old_sha256": "a1bd3aad29ee44e646c4ef03e16d75b1d1750126dcacb7d0427b5e5efbecc306",
+  "new_sha256": "df429b7b5f6f6f9c30daee73200ff30edac0208eb3a56ae4d174ea475c0b164e",
+  "old": "*DYAD:OPEN9-micro ALG | |K^extra_{p,q}|=s−1; eigenframe linear-part lemma anchors the degree-2 no-cascade bypass (statement not recovered, App D; L5 DYAD.X12); p=8,q=4,(0,3): Q₈=0 exactly; p=12,q=4,(0,3): −13+15√3/2≠0 (cascade boundary; no RID; DZT prints DYAD-ALG-CASCADE-P12, an unmatched consumer string, not an owner RID) | FAIL: prime-horizon first-lattice transparency (p=7, G₀₆(7)≠0); rectangular M(D) support heuristic | @DYAD§6.11",
+  "new": "*DYAD:OPEN9-micro ALG | |K^extra_{p,q}|=s−1; eigenframe linear-part lemma anchors the degree-2 no-cascade bypass (statement not recovered, App D; L5 DYAD.X12); p=8,q=4,(0,3): Q₈=0 exactly; p=12,q=4,(0,3): −13+15√3/2≠0 (cascade boundary; no RID; DZT cites it as text) | FAIL: prime-horizon first-lattice transparency (p=7, G₀₆(7)≠0); rectangular M(D) support heuristic | @DYAD§6.11"
+ },
+ {
+  "id": "AR15-018",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "FAIL list: the wrong value, not a denominator law",
+  "old_sha256": "14f6671a2c6ffbfd44ad124ffeb07e9ff733d4603c11ffba2b5d54aa3a35c997",
+  "new_sha256": "2622c09bfce6b57561a66cff68ea0a4ae47f949022d88aa14b038e1bc104c733",
+  "old": "FAIL (DZT) | DZT-HYP-MAHLER-NEARMISS (2-power norm law) · \"every odd prime power\" anomaly reading · denominator law 2^{−φ(q)}\n",
+  "new": "FAIL (DZT) | DZT-HYP-MAHLER-NEARMISS (2-power norm law) · \"every odd prime power\" anomaly reading · the imported note's value N_+=2^{−φ(q)}\n"
+ },
+ {
+  "id": "AR15-019",
+  "finding": "DZT v0.19",
+  "where": "frontier: norm law closed, result named",
+  "old_sha256": "5f139b7c95bb63e7c7f94232a6c336ab3c6e9847fc362914c3a9c21926c9fc83",
+  "new_sha256": "f8cdca9e0c5dfb7f885630fb1464644742c062aeeaa6c0533f9e2024cf887301",
+  "old": "**arithmetic transforms** DZT-OPEN-REPRODUCTION-AUDIT (0A) CLOSED finite horizon · DZT-OPEN-NORM-LAW (0B-R) ACTIVE: prove/reject N_+(M_{8q}) has odd-prime support ⟺ q=ℓ^a, q≡1 mod 4, numerator ℓ² (DZT-native cyclotomic resultant identity for Res(Φ_{8q},A_s); falsifier: violation p≤1000 (none) or beyond) · DZT-OPEN-LOCAL-FORMAL-ZETA (B1): ζ_loc(z)=exp(Σ_mW_mz^m/m), W_m from Q_true contraction or certified p-step channel data (weights unspecified), local only · DZT-OPEN-ANALYTIC-ZETA (B2, deferred): needs operator type (Perron–Frobenius/Koopman/weighted Ruelle), domain, function space, weight, periodic-point finiteness; elliptic P₁, hyperbolic P₂, nonconstant det; branch accounting for det(I−DT^m) on resonant orbits.",
+  "new": "**arithmetic transforms** DZT-OPEN-REPRODUCTION-AUDIT (0A) CLOSED finite horizon · DZT-OPEN-NORM-LAW (0B-R) CLOSED by DZT-THM-CASCADE-NORM-LAW (all p=4s≥12, assuming DYAD-THM-Q403-PHASELAW; D2.L2) · DZT-OPEN-LOCAL-FORMAL-ZETA (B1): ζ_loc(z)=exp(Σ_mW_mz^m/m), W_m from Q_true contraction or certified p-step channel data (weights unspecified), local only · DZT-OPEN-ANALYTIC-ZETA (B2, deferred): needs operator type (Perron–Frobenius/Koopman/weighted Ruelle), domain, function space, weight, periodic-point finiteness; elliptic P₁, hyperbolic P₂, nonconstant det; branch accounting for det(I−DT^m) on resonant orbits."
+ },
+ {
+  "id": "AR15-020",
+  "finding": "DZT v0.19",
+  "where": "DZT high-risk ledger at §5",
+  "old_sha256": "a1443d16fcb60a0162810bfe0b089ecc78f92de0ef1ba93692f7067f0aa5da77",
+  "new_sha256": "9003c4fe273f389e2f30fc41b8d761b74d448d592481def14d916e3bd1febc66",
+  "old": "**DZT guards** SG-DZT-1 no AZ Thread-C graph-zeta (Hashimoto/Ihara) carryover; shared \"zeta\" vocabulary ≠ bridge (≡ SG-AZ-7) · SG-DZT-2 continuous only; no ℤ_N/discrete observable · SG-DZT-3 DYAD owns OPEN 9 facts; DZT diagnostics reproduce or predict, prediction confirmed only by DYAD enumeration · SG-DZT-4 no RH / prime-distribution reading; primes only via named RTG mechanisms (divisor structure, cyclic closure, subgroup charge, cyclotomic sum/divisibility, missing slot, secular inclusion) (≡ SG-AZ-1/2) · SG-DZT-5 no OPEN-M amplitude import (no σ_f resolution) · SG-DZT-6 OPEN-P0 ceiling · SG-DZT-7 λ₆≠ζ_p except p=6 · SG-DZT-8 no lookup-table transform (must map zero locus/resultant/norm/valuation/special value/functional relation onto a certified DYAD fact; pure relabeling = FAIL). High-risk: DZT does not prove all-p b=5 survival; norm is rational per point, 2-power law falsified, no k_p formula; no zeta-continuation/Euler-product reading; no relation to AZ without bridge.",
+  "new": "**DZT guards** SG-DZT-1 no AZ Thread-C graph-zeta (Hashimoto/Ihara) carryover; shared \"zeta\" vocabulary ≠ bridge (≡ SG-AZ-7) · SG-DZT-2 continuous only; no ℤ_N/discrete observable · SG-DZT-3 DYAD owns OPEN 9 facts; DZT diagnostics reproduce or predict, prediction confirmed only by DYAD enumeration · SG-DZT-4 no RH / prime-distribution reading; primes only via named RTG mechanisms (divisor structure, cyclic closure, subgroup charge, cyclotomic sum/divisibility, missing slot, secular inclusion) (≡ SG-AZ-1/2) · SG-DZT-5 no OPEN-M amplitude import (no σ_f resolution) · SG-DZT-6 OPEN-P0 ceiling · SG-DZT-7 λ₆≠ζ_p except p=6 · SG-DZT-8 no lookup-table transform (must map zero locus/resultant/norm/valuation/special value/functional relation onto a certified DYAD fact; pure relabeling = FAIL). High-risk: DZT does not prove all-p b=5 survival; the amplitude-norm law is [THM] only under DYAD-THM-Q403-PHASELAW and says nothing about the sign of N_+(M_p); the 2-power law is falsified; no zeta-continuation/Euler-product reading; no relation to AZ without bridge."
+ },
+ {
+  "id": "AR15-021",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "H3 retired (it summarised DZT.Q1 only)",
+  "old_sha256": "ca57a9729c1265b00c495a6accd2c2480c5f9f519a383cce7068d3a7e9b1d7b0",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "H3 D-RID high — consumer strings that are not owner RIDs: DZT cites DYAD-THM-Q403-PHASE-ALLP and DYAD-ALG-PHASELAW (historical note labels; owner theorem DYAD-THM-Q403-PHASELAW), DYAD-THM-P1, -REALITY, -LEAD, -R, DYAD-CF-Q403 (components of PHASELAW, no separate RID), DYAD-ALG-CASCADE-P12 (unmatched) and DYAD-ART-CASCADE-Q4-03 (content = DYAD-ART-Q403-EXTRACT, no byte identity). The owner classifies each string (DYAD App F) and creates no aliases; DZT cites them unchanged (DZT.Q1). AZ repinned to the owner RIDs in v0.7. PROG cites the correct PHASELAW.\n",
+  "new": ""
+ },
+ {
+  "id": "AR15-022",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "DZT.Q1 retired",
+  "old_sha256": "56d8ad071048efe6761873d87a353fdf2b66580f7a7fe5a28821c6749c22ca93",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "DZT.Q1 D-RID | DZT v0.8 §7 prints DYAD strings that are not owner RIDs: DYAD-THM-Q403-PHASE-ALLP, DYAD-ALG-PHASELAW (historical note labels; theorem DYAD-THM-Q403-PHASELAW), DYAD-THM-P1, -REALITY, -LEAD, -R, DYAD-CF-Q403 (components of PHASELAW), DYAD-ALG-CASCADE-P12 (unmatched; the p=12 micro-certification value −13+15√3/2 has no RID), DYAD-ART-CASCADE-Q4-03 (content = DYAD-ART-Q403-EXTRACT, byte identity not claimed). DYAD App F classifies all strings and creates no aliases. Fix: DZT repins. (AZ repinned in v0.7.)\n",
+  "new": ""
+ },
+ {
+  "id": "AR15-023",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "DZT.Q4 retired",
+  "old_sha256": "9a7c8e56542ba63a428c8e8931e71bebf2f707be2289af369dac2cbae03707a0",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "DZT.Q4 D-GRADE | \"[THM/ALG]\", \"[ALG finite horizon]/[HEUR]\" compound grades must be unpacked (METH v1.4 §8.4); ANOMALY-SET carries ALG and HEUR labels in different sections.\n",
+  "new": ""
+ },
+ {
+  "id": "AR15-024",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "DZT.Q5 retired",
+  "old_sha256": "f6ab275ac0a04af5f200f3eeefdf239d76f74106f34bf695513fc2228f8742d6",
+  "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "old": "DZT.Q5 D-SCOPE | §1 table p=12–52 vs §6.3 p=12–64; §1 \"pure 2-powers except p=40\" without the p≤1000 correction in the same paragraph.\n",
+  "new": ""
+ },
+ {
+  "id": "AR15-025",
+  "finding": "reviewed item (grade, qualifier or diagnostic change)",
+  "where": "METH.M1: DZT leaves the row",
+  "old_sha256": "c716e9c7a530ee3cef42af17bc1bae22daee97156f6711319b49cf37267d35cb",
+  "new_sha256": "e9e8400b355a934d684267073ef8a1c9cf09a7e4e4a61a4c1fe76b6422cf647b",
+  "old": "METH.M1 D-GRADE (programme pattern): compound grades ([ALG/NUM], [THM/IA], [NUM/ALG]) persist in DZT, OPEN-M, FMS session labels (TDR-G v2.13 declares Methodology v1.4 and carries none) (AZ unpacked its compound tags; the old spellings remain only in its registered retraction block, its corrections list and its edition history); METH v1.4 §8.4 requires unpacking into the exact assertion and its corroboration.",
+  "new": "METH.M1 D-GRADE (programme pattern): compound grades ([ALG/NUM], [THM/IA], [NUM/ALG]) persist in OPEN-M, FMS session labels (TDR-G v2.13 and DZT v0.19 declare Methodology v1.4 and carry none) (AZ unpacked its compound tags; the old spellings remain only in its registered retraction block, its corrections list and its edition history); METH v1.4 §8.4 requires unpacking into the exact assertion and its corroboration."
+ },
+ {
+  "id": "AR15-026",
+  "finding": "DZT v0.19",
+  "where": "PROG.G6: DZT state after the Programme record",
+  "old_sha256": "b3ab68f36284f3ab8df8814db90277ac51d0aa60be62ffb2e2a248471e74c0be",
+  "new_sha256": "18e5643a027a08e1c438b6587eeb050c0fdefa2632250fedb6df40e6564ca30e",
+  "old": "PROG.G6 D-STALE (owner-recorded): Programme v1.4 §9.2 records the maintenance sequence as executed for OFN, Legacy, Dyadic, Number Genesis, Genesis, Triadic, OPEN M, RECOG, executed in part for TDR-G (v2.12.14 corrections edition; Methodology v1.4 migration planned for v2.13 — after that record, the TDR-G edition of this snapshot is that migration, Methodology v1.4 declared) and not executed for Pre-Legacy, DZT, AZ (after that record, at the AZ edition of this snapshot: Methodology v1.4 declared with a declared section map, and the reduction of restated owner text asked for in Programme §6.7 carried out, no merger — AZ §7); Pre-Legacy (v0.8, June) still carries v0.5/v0.3/v1.1/v1.2 pins (bears on PREL.P1).",
+  "new": "PROG.G6 D-STALE (owner-recorded): Programme v1.4 §9.2 records the maintenance sequence as executed for OFN, Legacy, Dyadic, Number Genesis, Genesis, Triadic, OPEN M, RECOG, executed in part for TDR-G (v2.12.14 corrections edition; Methodology v1.4 migration planned for v2.13 — after that record, the TDR-G edition of this snapshot is that migration, Methodology v1.4 declared) and not executed for Pre-Legacy, DZT, AZ (after that record, at the DZT edition of this snapshot: Methodology v1.4 declared, after a reactivation triage and the v0.18 corrections edition; at the AZ edition of this snapshot: Methodology v1.4 declared with a declared section map, and the reduction of restated owner text asked for in Programme §6.7 carried out, no merger — AZ §7); Pre-Legacy (v0.8, June) still carries v0.5/v0.3/v1.1/v1.2 pins (bears on PREL.P1)."
+ },
+ {
+  "id": "AR15-027",
+  "finding": "pipes",
+  "where": "pipe census at 357b963",
+  "old_sha256": "4d0816e4194452e0166c14e7c70b8472cfd56196d109f4e5891385a433537094",
+  "new_sha256": "e9e670f7da4294c4d2818758eeb1e4feb6881052e32afdb1acc150908b20d901",
+  "old": "NUMGEN.N-I1 D-LINK (pipe states, receiver side) | at the source snapshot a5826ac, pipes_index --check passes with 135 items in 20 inboxes — 72 closed, 1 dispositioned, 62 open. Open at the snapshot, by receiver: ATLAS (AZ v0.10; answered by this edition, closed by the atlas owner after the tag) · AZ (TDR-G v2.13) · DYAD (AZ v0.10) · DZT (DYAD N16–N21, AZ v0.7 and v0.8, LIT norm-law proof candidate) · ER2B (OFN v0.11, DYAD N16–N21) · FMS (OFN v0.11, v0.12) · GEN (LIT Regge interface inputs, PROG v1.4, DYAD v6.4.24) · LIT (DYAD LH2012 use report and Prop. 5.3 scope, SAT coil strong-null map-class search, SAT HCG Abdulali type III source) · NUMGEN (TDR-G v2.12.14 and v2.12.15, RECOG v0.3.26 and v0.3.27, DYAD v6.4.23 and v6.4.24, OFN v0.11 and v0.12, PROG v1.4) · OFN (DYAD v6.4.23 and v6.4.24, GEN v2.10, TRIAD v1.7, PROG v1.4, RECOG v0.3.27, TDR-G v2.12.15 and v2.13) · PREL (SAT finding on K₃ degeneracy and lift) · PROG (SAT satellite interface, AZ v0.7, v0.8, v0.9 and v0.10, TDR-G v2.12.15 and v2.13) · RECOG (DYAD v6.4.24) · RER (RECOG v0.3.26, DYAD N16–N21) · RRF (RECOG v0.3.26, OFN v0.11 and v0.12, DYAD N16–N21, GEN v2.10, TRIAD v1.7) · TRIAD (DYAD bridge-note recovery, GEN 𝒫₄-identity and birth-symmetry answers, GEN v2.10, PROG v1.4, DYAD v6.4.24) · UVM (GEN κ_f/B_*/sourced-junction items, DYAD N16–N21, GEN v2.10, TRIAD v1.7). TDRG has no open inbox item. A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7).",
+  "new": "NUMGEN.N-I1 D-LINK (pipe states, receiver side) | at the source snapshot 357b963, pipes_index --check passes with 147 items in 20 inboxes — 80 closed, 5 dispositioned, 62 open. Open at the snapshot, by receiver: DYAD (AZ v0.10, LIT reply on LH2012 Prop. 5.3 scope, DZT v0.19) · ER2B (OFN v0.11, DYAD N16–N21) · FMS (OFN v0.11, v0.12) · GEN (LIT Regge interface inputs, PROG v1.4, DYAD v6.4.24) · LIT (DYAD LH2012 use report, DZT norm-law use report, SAT coil physical-coil channel) · NUMGEN (TDR-G v2.12.14 and v2.12.15, RECOG v0.3.26 and v0.3.27, DYAD v6.4.23 and v6.4.24, OFN v0.11 and v0.12, PROG v1.4, DZT v0.18 and v0.19) · OFN (DYAD v6.4.23 and v6.4.24, GEN v2.10, TRIAD v1.7, PROG v1.4, RECOG v0.3.27, TDR-G v2.12.15 and v2.13, DZT v0.18) · PREL (SAT finding on K₃ degeneracy and lift) · PROG (SAT satellite interface, AZ v0.7, v0.8, v0.9 and v0.10, TDR-G v2.12.15 and v2.13, DZT v0.18 and v0.19) · RECOG (DYAD v6.4.24) · RER (RECOG v0.3.26, DYAD N16–N21) · RRF (RECOG v0.3.26, OFN v0.11 and v0.12, DYAD N16–N21, GEN v2.10, TRIAD v1.7) · TRIAD (DYAD bridge-note recovery, GEN 𝒫₄-identity and birth-symmetry answers, GEN v2.10, PROG v1.4, DYAD v6.4.24) · UVM (GEN κ_f/B_*/sourced-junction items, DYAD N16–N21, GEN v2.10, TRIAD v1.7). ATLAS, AZ, DZT and TDRG have no open inbox item. A filed item is not adopted use; each receiver decides at its own checkpoint (CONVENTIONS §7)."
+ }
+]
