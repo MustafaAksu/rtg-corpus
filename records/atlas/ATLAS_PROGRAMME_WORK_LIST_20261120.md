@@ -147,3 +147,13 @@ These streams have notices waiting and pins one or more editions behind. The wor
 3. Whether the equality annotation (C2) becomes a Methodology rule, and in what form.
 4. What happens to PRs #160, #183, #189 and #287.
 5. Whether the Atlas waits for DZT v0.19 before refreshing (F1).
+
+## 5. Since the snapshot (added 21 November 2026)
+
+The tables above are the 20 Nov snapshot and are not rewritten. What has changed since:
+- **DZT v0.19** was adopted and tagged on 20 Nov (`dzt-v0.19`, file `2b959f46…f6ce`). Row B10's first clause, sequence step 1 and item E4's condition are met. DZT's B1 work continues in PR #347.
+- **Atlas v0.15** was accepted and tagged on 21 Nov (`atlas-v0.15`, file `483e6003…02df`; DZT `dzt-v0.8` → `dzt-v0.19`). F1 is closed and question 5 of §4 no longer needs an answer. In §1 the DZT pin is current and the Atlas edition is v0.15.
+- **A2, A6, A7** were added on 20–21 Nov after the PI noted that RRF's records and the PRR Wrap-up never reached GitHub.
+- The Atlas reviewer proposed (orientation note, reviewer lane, 21 Nov) a verified per-stream state matrix with the categories `CURRENT`, `NEEDS_REVIEW`, `BLOCKED`, `UNVERIFIED`, `INTENTIONAL_PIN`. It starts from the §1 table here, so that one table is maintained and not two.
+
+Questions 1–4 of §4 are still open with the PI.
