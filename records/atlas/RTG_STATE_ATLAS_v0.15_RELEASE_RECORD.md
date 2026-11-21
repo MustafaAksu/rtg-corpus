@@ -1,6 +1,6 @@
 # RTG State Atlas v0.15 — acceptance record
 
-**Status:** REVIEWED — review `6004985736` on head `46a4105`, ACCEPT SCOPED, no correction asked (§4). Not accepted: the PI's decision on the named bytes is pending. `atlas-v0.14` stays the tagged Atlas until the PI accepts a candidate, the PR of branch `claude/atlas-v0.15` is merged, and the annotated tag `atlas-v0.15` exists and is verified.
+**Status:** ACCEPTED by the PI, 21 Nov 2026 (§4). Review: `6004985736` on head `46a4105`, ACCEPT SCOPED, no correction asked. `atlas-v0.14` stays the tagged Atlas until the PI accepts a candidate, the PR of branch `claude/atlas-v0.15` is merged, and the annotated tag `atlas-v0.15` exists and is verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, 21 November 2026, on branch `claude/atlas-v0.15`.
 **Method:** Atlas Method v0.3 (`atlas-method-v0.3`).
@@ -110,7 +110,7 @@ The nine DZT note strings leave the documented-unresolved links. The one that re
 **Limits.** These are structural checks only. No owner certificate was rerun, and DZT-ART-NORMLAW-CHECK was not rerun here.
 - DZT v0.19 was read in full. The v0.8 → v0.18 changes were read through the v0.19 text, its Appendices A and B, and the v0.18 and v0.19 release records.
 - DYAD's OPEN 9 frontier line (near-cancellation of −13+15√3/2; exact large-p behaviour of |Q_p| OPEN) is a DYAD statement and is not changed. DZT's theorem is about \|N_+(M_p)\|, not \|Q_p\|.
-- `BASELINE.md` is not changed on this branch. Its ATLAS row is set at acceptance, as for v0.14.
+- `BASELINE.md` was not changed while the candidate was under review. Its ATLAS row was set at acceptance (§5).
 
 **Points for the change-focused review:**
 1. The theorem node against DZT §6.3 (statement, scope, negatives, the one dependency, the certificate wording).
@@ -133,16 +133,16 @@ Source fidelity, read against DZT v0.19 (§§1, 2, 5, 6.3, 7–9, Appendix B), i
 
 The reviewer's evidence boundary: the builder, the shared checker, the 22 focused controls and the owner's norm-law certificate were not run by the reviewer. Their results were read and remain producer records. The 17 unchanged owner DSNs were not reread.
 
-**PI:** pending.
+**PI:** accepted. Mustafa, project conversation, 21 Nov 2026, 14:51 +03:00: "benimsiyorum" ("I adopt it"), in answer to the Atlas owner's question of the same conversation whether he adopts Atlas v0.15 with the bytes SHA-256 `483e60034ff3bb644216c5123d28b8bca253d3ba1b72cdf68bfb0056518d02df`. Accepted bytes: `atlas/RTG_STATE_ATLAS.md` with that SHA-256, the candidate reviewed in `6004985736`.
 
-## 5. Publication (the PI executes, after acceptance)
+## 5. Publication (the PI executes)
 
-1. `BASELINE.md`: the ATLAS row is set to v0.15 with the accepted hash and this record (on the branch, with the decision).
-2. Merge the PR into `main` with a merge commit, not squash.
+1. `BASELINE.md`: the ATLAS row is set to v0.15, with the hash of §1 and this record. This was done on the branch, together with the decision.
+2. Merge PR #349 into `main` with a merge commit, not squash.
 3. Check the file hash on `main`, then create the annotated tag `atlas-v0.15` on that merge commit.
 4. The Atlas owner writes the tag verification.
 
-A merge, a tag or a passing check is not an adoption.
+**Publication bytes** equal the accepted bytes: the Atlas has no status line that publication would change. A merge, a tag or a passing check is not an adoption.
 
 ## 6. Carried forward
 
