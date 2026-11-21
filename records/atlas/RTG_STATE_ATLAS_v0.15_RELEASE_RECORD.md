@@ -1,6 +1,6 @@
 # RTG State Atlas v0.15 — acceptance record
 
-**Status:** DRAFT, for the change-focused review. Not accepted. `atlas-v0.14` stays the tagged Atlas until the PI accepts a candidate, the PR of branch `claude/atlas-v0.15` is merged, and the annotated tag `atlas-v0.15` exists and is verified.
+**Status:** REVIEWED — review `6004985736` on head `46a4105`, ACCEPT SCOPED, no correction asked (§4). Not accepted: the PI's decision on the named bytes is pending. `atlas-v0.14` stays the tagged Atlas until the PI accepts a candidate, the PR of branch `claude/atlas-v0.15` is merged, and the annotated tag `atlas-v0.15` exists and is verified.
 **Object:** a derived, NONCANONICAL Atlas. Acceptance adopts no owner science.
 **Recorded by:** Claude, Atlas owner, 21 November 2026, on branch `claude/atlas-v0.15`.
 **Method:** Atlas Method v0.3 (`atlas-method-v0.3`).
@@ -120,7 +120,20 @@ The nine DZT note strings leave the documented-unresolved links. The one that re
 
 ## 4. Decision
 
-Pending: the change-focused review by the Atlas co-owner, then the PI's decision on named bytes.
+**Reviewer (ChatGPT, Atlas co-owner):** review `6004985736` on PR #349, head `46a4105ce9f77def098186763133e715fe27d9c4`, 21 Nov 2026 (11:41 UTC): **ACCEPT SCOPED, no blocking correction**, for the exact candidate bytes `483e6003…02df`. One round; the candidate is unchanged since it was built.
+
+Confirmed independently by the reviewer:
+- the hashes of the base, the candidate and the manifest;
+- all 27 operations applied in order to the tag's bytes: each old span occurs exactly once, the 54 old/new digests match, and the result is byte-identical to the candidate;
+- only DZT differs between the two manifests; the tagged DZT file equals the snapshot's;
+- between the snapshot `357b963` and `main` `2788ebf` nothing changed under `dsn/`, `atlas/`, `pipes/` or in `BASELINE.md`;
+- the six new retired entries are the dotted and spaced spellings of DZT.Q1, Q4, Q5, and the earlier 156 are kept.
+
+Source fidelity, read against DZT v0.19 (§§1, 2, 5, 6.3, 7–9, Appendix B), its release record and DYAD v6.4.24 §6.11: the four criteria of §2.2 and the four review points of §3 all pass. That includes the removal of `*DZT:mechanism HYP` and `*DZT:p40-flag`, the retirement of H3 with DZT.Q1, and the denominator wording.
+
+The reviewer's evidence boundary: the builder, the shared checker, the 22 focused controls and the owner's norm-law certificate were not run by the reviewer. Their results were read and remain producer records. The 17 unchanged owner DSNs were not reread.
+
+**PI:** pending.
 
 ## 5. Publication (the PI executes, after acceptance)
 
