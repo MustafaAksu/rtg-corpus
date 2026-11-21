@@ -12,39 +12,43 @@
 
 Owner texts were not reread beyond their headers and the strings counted. Counts are mechanical and are to be confirmed by each owner.
 **Builds on:** `records/atlas/ATLAS_ADVISORY_STREAM_ONBOARDING_20261116.md` (§6: DZT first; the rest deferred).
+**B-stage review scope (21 November 2026):** §1 is a new source-checked current-state proposal at `main` `bf101d9` under Atlas Method v0.3 and CONVENTIONS §9. Sections §2–§4 retain their original 20 November advisory content and may mention then-pending decisions that have since been resolved. Nothing here is an owner disposition, PI decision, release, tag or instruction to other streams.
 
-## 1. Where each stream stands
+## 1. Where each stream stands — verified B-stage checkpoint (21 November 2026)
 
-The columns:
-- **Repo** — the governing edition has an OWNER release record in `records/`, as opposed to a PI- or XREF-verified baseline import;
-- **Meth.** — the Methodology version the file declares;
-- **Entry** — an entry note or orientation note for co-owner sessions exists, with the date it was last changed;
-- **Open in** — open or acknowledged items in the stream's own inbox;
-- **Compound** — backticked `[X/Y]` grade tokens still in the file. Some may sit in history or retraction blocks, which are allowed; the owner checks.
+**[SESSION] Source/reading extent.** GitHub `main` `bf101d9be34e5b7e23c5bfe80576ac7521066321`; governing tag refs and `BASELINE.md`; tagged-document headers and a targeted literal-grade-token scan of all eighteen Atlas inputs; `CONVENTIONS.md` §§2, 6, 7, 9; repository tree for the existence of owner release records and working entry notes; all 20 public `pipes/<KEY>/INDEX.md` files; and the open `rtg-corpus` PR list. Atlas `atlas-v0.15` and `main` share the same Atlas Git blob. The PI's server `pipes_index.py --check` reported PASS at 147 items, 20 inboxes; this check was **not rerun** by the reviewer. LIT's own `rtg-lit/CONVENTIONS.md` was read; its private scientific records and complete private queue were **not** audited or copied here. The working list's earlier 20 November findings remain historical observations in §§2–4; their owner-dependent conclusions have not all been independently re-reviewed.
 
-| Stream | Edition (tagged) | Repo | Meth. | Entry | Open in | Compound | Atlas v0.14 pin |
-|---|---|---|---|---|---|---|---|
-| Methodology | v1.4 (22 Oct) | yes | — | none | 0 | 2 (examples?) | source |
-| Programme | v1.4 (4 Nov) | yes | v1.4 | none | 8 | 0 | current |
-| DYAD | v6.4.24 (11 Nov) | yes | v1.4 | 16 Nov | 2 | 2 | current |
-| TDR-G | v2.13 (16 Nov) | yes | v1.4 | 11 Nov | 0 | 0 | current |
-| AZ | v0.10 (16 Nov) | yes | v1.4 | 18 Nov | 0 | 2 (retraction block) | current |
-| DZT | v0.18 (19 Nov); **v0.19 waiting for the PI** (PR #334) | yes | v1.4 | 19 Nov | 1 acknowledged | 0 | **behind (v0.8)** |
-| TRIAD | v1.7 (3 Nov) | yes | v1.4 | 11 Nov | 6 | 3 | current |
-| GEN | v2.10 (3 Nov) | yes | v1.4 | 11 Nov | 3 | 2 | current |
-| RECOG | v0.3.27 (4 Nov) | yes | v1.4 | 11 Nov | 1 | 4 | current |
-| NUMGEN | v1.21 (26 Oct) | yes | v1.4 | 11 Nov | **10** | **17** (audit labels) | current |
-| OFN | v0.12 (30 Oct) | yes | v1.4 | 11 Nov | **9** | 0 | current |
-| **OPEN-M (UVM)** | v0.7.1 (baseline) | **no** (XREF) | **v1.3** | none | 4 | 10 | current |
-| **RRF** | v0.8.4 (baseline) | **no** (XREF) | not stated | none | 6 | 0 | current |
-| **Pre-Legacy** | v0.8 (baseline) | **no** (PI) | not stated | none | 1 | 0 | current |
-| **Legacy** | v0.7 (baseline) | **no** (PI) | **v1.3** | none | 0 | 0 | current |
-| **RER** (noncanonical) | v0.2 (baseline) | **no** (PI) | — | none | 2 | 0 | current |
-| **ER-2B** (noncanonical) | v0.3 (baseline) | **no** (PI) | — | none | 2 | 0 | current |
-| **FMS** (session) | v0.6.4 (baseline) | **no** (PI) | — | none | 2 | 0 | current |
-| **PRR Wrap-up** (noncanonical) | v0.2 cited; **not in the repository** | — | — | none | no inbox | 0 | — |
-| Atlas | v0.14 (17 Nov) | yes | Method v0.3 | 17 Nov | 0 | 4 Atlas heads | — |
-| LIT (`rtg-lit`) | records, not DSNs | own repo | own CONVENTIONS (adopted 11 Nov) | own entry note | 1 (DYAD's LH2012 use report), and the SAT items | — | not an input |
+**[SESSION] Classification is an advisory triage, not an owner verdict.** `CURRENT` = tagged identity/known release basis and working entry/queue show no identified *operational synchronization blocker* at this snapshot; it does not mean scientific completion, absence of OPENs or accepted consumer repins. `NEEDS_REVIEW` = owner confirmation of inbox, pin, grade or entry-currentness still needed. `BLOCKED` = required source/record or PI onboarding/status decision missing. `UNVERIFIED` = the necessary scope of source/queue verification was not completed. `INTENTIONAL_PIN` may be attached **only to an individual consumer pin after that stream's owner records the decision**, never inferred by Atlas from an older tag; no such label is assigned in this checkpoint. Multiple issues may coexist; the last column selects the immediate operational gate, not a rank or grade.
+
+The **Authority** column distinguishes an owner release record visible at the named repo path (`OWNER`) from a `PI`-supplied baseline, cross-stream hash `XREF`, or explicitly non-adopted session source. Tag presence alone does not turn `ER2B` or `FMS` into adopted science. **Entry** reports the presence/currentness of the existing entry note, not whether a human session is presently online. **Compound** is a lexical count of backticked `[X/Y]`-shaped tokens at the tagged source (not a count of scientific grade defects); examples, retractions, provenance notation and historical text need owner classification. In particular RECOG has nine such occurrences under this documented lexical test, versus four in the earlier advisory's unspecified count: that is **not** evidence of an edition change or nine active errors.
+
+| Stream | Tagged source | Authority | Method | Entry | Open in | Compound* | Atlas v0.15 input | B-stage class — next gate |
+|---|---|---|---|---|---:|---:|---|---|
+| Methodology | `methodology-v1.4` | OWNER | governance | not required for dormant work | 0 | 2 examples | current | `CURRENT` — no identified release sync blocker; PR #189 deferred |
+| Programme | `programme-v1.4` | OWNER | v1.4 | none | 9 | 0 | current | `NEEDS_REVIEW` — owner entry, receiver dispositions and dated inventory |
+| DYAD | `dyad-v6.4.24` | OWNER | v1.4 | present; 20 Nov checkpoint | 3 | 2 aliases | current | `NEEDS_REVIEW` — AZ, LIT and DZT receiving items; owner decides; OPEN 20 remains separate |
+| TDR-G | `tdrg-v2.13` | OWNER | v1.4 | present; predates v2.13 | 0 | 0 | current | `NEEDS_REVIEW` — entry resumption, policy grade and OFN XFER-O08-01 custody |
+| AZ | `az-v0.10` | OWNER | v1.4 | present; v0.10 scope | 0 | 2 historical | current | `CURRENT` — separate fork work is not an adopted AZ edition or a pin discrepancy |
+| DZT | `dzt-v0.19` | OWNER | v1.4 | present; v0.19 checkpoint | 0 | 0 | current | `CURRENT` — B1 PR #347 remains an unadopted research branch |
+| TRIAD | `triad-v1.7` | OWNER | v1.4 | present; pre-v1.7 resumption text | 6 | 3 | current | `NEEDS_REVIEW` — receiver queue, older consumer pins, mixed-token scopes |
+| GEN | `gen-v2.10` | OWNER | v1.4 | present; pre-v2.10 resumption text | 3 | 2 | current | `NEEDS_REVIEW` — includes LIT Regge request, producer notice and older pins; PR #160 open |
+| RECOG | `recog-v0.3.27` | OWNER | v1.4 | present; pre-v0.3.27 resumption text | 1 | 9 lexical | current | `NEEDS_REVIEW` — DYAD notice, pinned uses and token provenance; nine ≠ nine defects |
+| NUMGEN | `numgen-v1.21` | OWNER | v1.4 | present; pre-v1.21 resumption text | 11 | 17 | current | `NEEDS_REVIEW` — highest receiver backlog, dated imports and mixed evidence tags |
+| OFN | `ofn-v0.12` | OWNER | v1.4 | present; pre-v0.12 resumption text | 9 | 0 | current | `NEEDS_REVIEW` — receiver queue, owner/consumer pins, TDR-G custody; PR #183 open |
+| OPEN-M / UVM | `uvm-v0.7.1` | XREF; no owner record here | v1.3 | none | 4 | 10 | current | `BLOCKED` — PI/owner reactivation and release provenance before a recipient pass |
+| RRF | `rrf-v0.8.4` | XREF; cited adoption record absent | v1.3 | none | 6 | 0 | current | `BLOCKED` — locate owner adoption/review records and PRR parent source; then activate owner |
+| Pre-Legacy | `prelegacy-v0.8` | PI baseline | not stated | none | 1 | 0 | current | `NEEDS_REVIEW` — historical-source owner activation, old pins and SAT finding |
+| Legacy | `legacy-v0.7` | PI baseline | v1.3 | none | 0 | 0 | current | `NEEDS_REVIEW` — historical scope, v1.4 migration decision and source identity |
+| RER (noncanonical) | `rer-v0.2` | PI; scoped NONCANONICAL adoption | — | none | 2 | 0 | current | `BLOCKED` — PI decides frozen versus live working-registry continuation |
+| ER-2B (noncanonical) | `er2b-v0.3` | PI baseline; owner text: WORKING / NOT OWNER-ADOPTED | — | none | 2 | 0 | current | `BLOCKED` — PI scope/status decision; source and model conditions retained |
+| FMS (session) | `fms-v0.6.4` | PI baseline; owner text: SESSION / NOT OWNER-ADOPTED | — | none | 2 | 0 | current | `BLOCKED` — PI scope/status decision; no science promoted from tag |
+| PRR Wrap-up (noncanonical) | v0.2 cited; bytes absent | missing source | — | none | no inbox | — | not an input | `BLOCKED` — locate v0.2/v0.3 bytes, establish hash/provenance and PI status |
+| Atlas | `atlas-v0.15` | OWNER acceptance + tag verification | Atlas Method v0.3 | present; 21 Nov | 0 | 4 inherited D5 heads | derived (not an input) | `CURRENT` — the four heads remain explicitly nonblocking review debt |
+| LIT (`rtg-lit`) | per-source records, not DSN tags | private independent workflow | own adopted CONVENTIONS | own repo (not counted here) | 3 public; private not audited | — | not an input | `UNVERIFIED` — public receiving queue is known; full private-source/queue state belongs to LIT co-owners |
+
+**[SESSION] Queue cross-check:** 147 public items / 20 indexes = 80 `closed` + 5 `dispositioned` + 62 `open` (0 acknowledged). The largest currently open inboxes are NUMGEN 11, OFN 9, Programme 9, TRIAD 6 and RRF 6. Neither an inbox `closed` nor a document tag implies accepted imported use; see CONVENTIONS §7. No pipe was modified.
+
+**[SESSION] Owner review requested:** validate status class and one immediate gate for each stream; check that old pins are accurately scoped, and record `INTENTIONAL_PIN` only for a particular pin with a named owner disposition. For unstaffed streams, begin with the existing/required entry note and PI activation decision rather than sending an unreceived `pipes/` advisory. For active streams, one batched receiver notice or review request per owner after checking the relevant owner DSN. Do not repin, close an OPEN, revise a grade, elevate a SESSION result, or declare an adoption from this matrix.
 
 ## 2. The work, by kind
 
@@ -150,10 +154,10 @@ These streams have notices waiting and pins one or more editions behind. The wor
 
 ## 5. Since the snapshot (added 21 November 2026)
 
-The tables above are the 20 Nov snapshot and are not rewritten. What has changed since:
+Sections §2–§4 retain the original 20 Nov advisory snapshot; §1 is the reviewed **proposal** for a 21 Nov B-stage current-state replacement, still awaiting Atlas-owner verification. The dated historical changes below are kept as provenance, not additional live status tables:
 - **DZT v0.19** was adopted and tagged on 20 Nov (`dzt-v0.19`, file `2b959f46…f6ce`). Row B10's first clause, sequence step 1 and item E4's condition are met. DZT's B1 work continues in PR #347.
 - **Atlas v0.15** was accepted and tagged on 21 Nov (`atlas-v0.15`, file `483e6003…02df`; DZT `dzt-v0.8` → `dzt-v0.19`). F1 is closed and question 5 of §4 no longer needs an answer. In §1 the DZT pin is current and the Atlas edition is v0.15.
 - **A2, A6, A7** were added on 20–21 Nov after the PI noted that RRF's records and the PRR Wrap-up never reached GitHub.
-- The Atlas reviewer proposed (orientation note, reviewer lane, 21 Nov) a verified per-stream state matrix with the categories `CURRENT`, `NEEDS_REVIEW`, `BLOCKED`, `UNVERIFIED`, `INTENTIONAL_PIN`. It starts from the §1 table here, so that one table is maintained and not two.
+- B-stage review of 21 Nov now **proposes** the single updated §1 status matrix, with `CURRENT`, `NEEDS_REVIEW`, `BLOCKED` and `UNVERIFIED` as immediate triage classes. `INTENTIONAL_PIN` is owner-only per specific consumer pin, not a class that Atlas may assign by tag age. Awaiting Atlas-owner review; §§2–§4 and the original 20 Nov counts remain archival.
 
 Questions 1–4 of §4 are still open with the PI.
