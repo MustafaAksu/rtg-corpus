@@ -12,7 +12,7 @@
 
 Owner texts were not reread beyond their headers and the strings counted. Counts are mechanical and are to be confirmed by each owner.
 **Builds on:** `records/atlas/ATLAS_ADVISORY_STREAM_ONBOARDING_20261116.md` (§6: DZT first; the rest deferred).
-**B-stage review scope (21 November 2026):** §1 is a new source-checked current-state proposal at `main` `bf101d9` under Atlas Method v0.3 and CONVENTIONS §9. Sections §2–§4 retain their original 20 November advisory content and may mention then-pending decisions that have since been resolved. Nothing here is an owner disposition, PI decision, release, tag or instruction to other streams.
+**B-stage review scope and authorship (21 November 2026):** §1 was prepared by the Atlas reviewer **ChatGPT** on PR #353 from the source-checked `main` `bf101d9` snapshot, under Atlas Method v0.3 and CONVENTIONS §9. The Atlas owner **Claude** independently checked it in PR #353 comment `7062936161` (**ACCEPT WITH CHANGES**); all five requested editorial/classification changes are incorporated here, pending the owner's final readback. The file's original "By: Claude, Atlas owner" line refers to the 20 November advisory (§§2–§4), not to the authorship of this §1 replacement. Sections §2–§4 retain their original 20 November advisory content and may mention then-pending decisions that have since been resolved. Nothing here is an owner scientific disposition, PI decision, release, tag or instruction to other streams.
 
 ## 1. Where each stream stands — verified B-stage checkpoint (21 November 2026)
 
@@ -24,10 +24,10 @@ The **Authority** column distinguishes an owner release record visible at the na
 
 | Stream | Tagged source | Authority | Method | Entry | Open in | Compound* | Atlas v0.15 input | B-stage class — next gate |
 |---|---|---|---|---|---:|---:|---|---|
-| Methodology | `methodology-v1.4` | OWNER | governance | not required for dormant work | 0 | 2 examples | current | `CURRENT` — no identified release sync blocker; PR #189 deferred |
+| Methodology | `methodology-v1.4` | OWNER | governance | none (draft in PR #189, deferred) | 0 | 2 examples | current | `CURRENT` — no identified release sync blocker; PR #189 deferred |
 | Programme | `programme-v1.4` | OWNER | v1.4 | none | 9 | 0 | current | `NEEDS_REVIEW` — owner entry, receiver dispositions and dated inventory |
 | DYAD | `dyad-v6.4.24` | OWNER | v1.4 | present; 20 Nov checkpoint | 3 | 2 aliases | current | `NEEDS_REVIEW` — AZ, LIT and DZT receiving items; owner decides; OPEN 20 remains separate |
-| TDR-G | `tdrg-v2.13` | OWNER | v1.4 | present; predates v2.13 | 0 | 0 | current | `NEEDS_REVIEW` — entry resumption, policy grade and OFN XFER-O08-01 custody |
+| TDR-G | `tdrg-v2.13` | OWNER | v1.4 | present; predates v2.13 | 0 | 0 | current | `NEEDS_REVIEW` — entry resumption, crystallization grade (`[HEUR strong]` vs `[HEUR]`) and OFN XFER-O08-01 custody |
 | AZ | `az-v0.10` | OWNER | v1.4 | present; v0.10 scope | 0 | 2 historical | current | `CURRENT` — separate fork work is not an adopted AZ edition or a pin discrepancy |
 | DZT | `dzt-v0.19` | OWNER | v1.4 | present; v0.19 checkpoint | 0 | 0 | current | `CURRENT` — B1 PR #347 remains an unadopted research branch |
 | TRIAD | `triad-v1.7` | OWNER | v1.4 | present; pre-v1.7 resumption text | 6 | 3 | current | `NEEDS_REVIEW` — receiver queue, older consumer pins, mixed-token scopes |
@@ -37,8 +37,8 @@ The **Authority** column distinguishes an owner release record visible at the na
 | OFN | `ofn-v0.12` | OWNER | v1.4 | present; pre-v0.12 resumption text | 9 | 0 | current | `NEEDS_REVIEW` — receiver queue, owner/consumer pins, TDR-G custody; PR #183 open |
 | OPEN-M / UVM | `uvm-v0.7.1` | XREF; no owner record here | v1.3 | none | 4 | 10 | current | `BLOCKED` — PI/owner reactivation and release provenance before a recipient pass |
 | RRF | `rrf-v0.8.4` | XREF; cited adoption record absent | v1.3 | none | 6 | 0 | current | `BLOCKED` — locate owner adoption/review records and PRR parent source; then activate owner |
-| Pre-Legacy | `prelegacy-v0.8` | PI baseline | not stated | none | 1 | 0 | current | `NEEDS_REVIEW` — historical-source owner activation, old pins and SAT finding |
-| Legacy | `legacy-v0.7` | PI baseline | v1.3 | none | 0 | 0 | current | `NEEDS_REVIEW` — historical scope, v1.4 migration decision and source identity |
+| Pre-Legacy | `prelegacy-v0.8` | PI baseline | not declared (companion: `DSN_METHODOLOGY_v1.2`) | none | 1 | 0 | current | `BLOCKED` — PI activation/owner entry first; PI baseline source exists; then review older pins and SAT finding |
+| Legacy | `legacy-v0.7` | PI baseline | v1.3 | none | 0 | 0 | current | `BLOCKED` — PI activation/owner entry first; PI baseline source exists; then historical scope and v1.4 migration decision |
 | RER (noncanonical) | `rer-v0.2` | PI; scoped NONCANONICAL adoption | — | none | 2 | 0 | current | `BLOCKED` — PI decides frozen versus live working-registry continuation |
 | ER-2B (noncanonical) | `er2b-v0.3` | PI baseline; owner text: WORKING / NOT OWNER-ADOPTED | — | none | 2 | 0 | current | `BLOCKED` — PI scope/status decision; source and model conditions retained |
 | FMS (session) | `fms-v0.6.4` | PI baseline; owner text: SESSION / NOT OWNER-ADOPTED | — | none | 2 | 0 | current | `BLOCKED` — PI scope/status decision; no science promoted from tag |
@@ -48,7 +48,7 @@ The **Authority** column distinguishes an owner release record visible at the na
 
 **[SESSION] Queue cross-check:** 147 public items / 20 indexes = 80 `closed` + 5 `dispositioned` + 62 `open` (0 acknowledged). The largest currently open inboxes are NUMGEN 11, OFN 9, Programme 9, TRIAD 6 and RRF 6. Neither an inbox `closed` nor a document tag implies accepted imported use; see CONVENTIONS §7. No pipe was modified.
 
-**[SESSION] Owner review requested:** validate status class and one immediate gate for each stream; check that old pins are accurately scoped, and record `INTENTIONAL_PIN` only for a particular pin with a named owner disposition. For unstaffed streams, begin with the existing/required entry note and PI activation decision rather than sending an unreceived `pipes/` advisory. For active streams, one batched receiver notice or review request per owner after checking the relevant owner DSN. Do not repin, close an OPEN, revise a grade, elevate a SESSION result, or declare an adoption from this matrix.
+**[SESSION] Owner check:** Atlas owner independently inspected the §1 source and queue inventory, PR #353 comment `7062936161`, verdict **ACCEPT WITH CHANGES**. Five requested changes have been applied to this draft; final owner readback is pending. Classification total: **4 `CURRENT`, 8 `NEEDS_REVIEW`, 8 `BLOCKED`, 1 `UNVERIFIED`** (21 rows including Atlas/LIT/PRR). Individual scientific owners still must validate their own pins and dispositions; record `INTENTIONAL_PIN` only for a specific pin with a named owner decision. For unstaffed streams, begin with a fixed entry note and PI activation decision; for active streams, one batched receiver notice or review request per owner after inspecting its DSN. Do not repin, close an OPEN, revise a grade, elevate a SESSION result, or declare an adoption from this matrix.
 
 ## 2. The work, by kind
 
@@ -154,10 +154,10 @@ These streams have notices waiting and pins one or more editions behind. The wor
 
 ## 5. Since the snapshot (added 21 November 2026)
 
-Sections §2–§4 retain the original 20 Nov advisory snapshot; §1 is the reviewed **proposal** for a 21 Nov B-stage current-state replacement, still awaiting Atlas-owner verification. The dated historical changes below are kept as provenance, not additional live status tables:
+Sections §2–§4 retain the original 20 Nov advisory snapshot; §1 is the 21 Nov B-stage current-state **proposal**, independently checked by the Atlas owner with five corrections requested (PR #353 comment `7062936161`) and applied; final readback is pending. The dated historical changes below are provenance, not additional live status tables:
 - **DZT v0.19** was adopted and tagged on 20 Nov (`dzt-v0.19`, file `2b959f46…f6ce`). Row B10's first clause, sequence step 1 and item E4's condition are met. DZT's B1 work continues in PR #347.
 - **Atlas v0.15** was accepted and tagged on 21 Nov (`atlas-v0.15`, file `483e6003…02df`; DZT `dzt-v0.8` → `dzt-v0.19`). F1 is closed and question 5 of §4 no longer needs an answer. In §1 the DZT pin is current and the Atlas edition is v0.15.
 - **A2, A6, A7** were added on 20–21 Nov after the PI noted that RRF's records and the PRR Wrap-up never reached GitHub.
-- B-stage review of 21 Nov now **proposes** the single updated §1 status matrix, with `CURRENT`, `NEEDS_REVIEW`, `BLOCKED` and `UNVERIFIED` as immediate triage classes. `INTENTIONAL_PIN` is owner-only per specific consumer pin, not a class that Atlas may assign by tag age. Awaiting Atlas-owner review; §§2–§4 and the original 20 Nov counts remain archival.
+- B-stage review of 21 Nov **proposes** the single updated §1 status matrix (4 `CURRENT`, 8 `NEEDS_REVIEW`, 8 `BLOCKED`, 1 `UNVERIFIED`), reviewed by the Atlas owner in PR #353 comment `7062936161` with five changes now applied; **owner readback pending**. `INTENTIONAL_PIN` remains owner-only per specific consumer pin, not a class that Atlas assigns by tag age. §§2–§4 and the original 20 Nov counts remain archival.
 
 Questions 1–4 of §4 are still open with the PI.
