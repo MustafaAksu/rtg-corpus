@@ -1,0 +1,49 @@
+RTG OPEN-M v0.7 DRAFT2 — document validation
+PASS 45/45
+Scope: document/integrity/consumer-faithfulness checks only; no scientific certificate rerun.
+
+[PASS] R12 body byte-identical to v0.6 :: sha=011256ba54ad
+[PASS] R13 body byte-identical to v0.6 :: sha=a8926f316e6f
+[PASS] R14 body byte-identical to v0.6 :: sha=7de75ff075b0
+[PASS] R15 body byte-identical to v0.6 :: sha=089201910d99
+[PASS] Draft 2 status
+[PASS] g object typing guard
+[PASS] covariant g norm
+[PASS] g no-direction guard
+[PASS] OPEN-M-3 typing
+[PASS] R15 scalar qualifier
+[PASS] R16 scalar qualifier
+[PASS] 2C status scalar qualifier
+[PASS] CN02 physical ratio
+[PASS] CN02 reference sign
+[PASS] F_face exact
+[PASS] F_face/F_W distinction
+[PASS] T6u sqrt2 comparator
+[PASS] T6u gate prohibition
+[PASS] frame-map retired
+[PASS] HYP-M-PREFRACTURE retained
+[PASS] SG-M-ESM-CAL
+[PASS] ERR-M-2F-CONV
+[PASS] ERR-M-2F-THRESH
+[PASS] current Dyadic pointer
+[PASS] current Triadic pointer
+[PASS] current Genesis pointer
+[PASS] Methodology v1.3
+[PASS] validation registry D2
+[PASS] no v0.6 net-state live
+[PASS] no live sole channel verdict
+[PASS] no live physical apex verdict
+[PASS] no live pending frame-map
+[PASS] no live T6u old ratio current
+[PASS] §1 present
+[PASS] §2 present
+[PASS] §3 present
+[PASS] §4 present
+[PASS] §5 present
+[PASS] §6 present
+[PASS] §7 present
+[PASS] §8 present
+[PASS] §9 present
+[PASS] AI marker
+[PASS] UTF8 roundtrip
+[PASS] no NUL
