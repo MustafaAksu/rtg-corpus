@@ -1,0 +1,24 @@
+{
+  "record_type": "OWNER_ADOPTION",
+  "study": "RTG_OPEN_M",
+  "version": "0.7.1",
+  "decision": "ADOPTED",
+  "date": "2026-10-07",
+  "accepted_candidate": {
+    "filename": "RTG_OPEN_M_DSN_v0_7_1_DRAFT2.md",
+    "sha256": "ebbf23ea99fb281624accafb573a4e4b127a577da92956e778a37329fb41db95"
+  },
+  "released_owner_file": {
+    "filename": "RTG_OPEN_M_DSN_v0_7_1.md",
+    "sha256": "0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e"
+  },
+  "supersedes": "RTG_OPEN_M_DSN_v0.7",
+  "scientific_change_at_release": false,
+  "basis": "Owner/reviewer verification reports no remaining findings and states v0.7.1 is ready for owner adoption.",
+  "release_boundary": "Metadata/history/governance finalization only; reviewed scientific dispositions unchanged.",
+  "preservation": [
+    "R12-R14 unchanged from v0.7",
+    "v0.7 R15 current-use block archived verbatim in Appendix B",
+    "no scientific certificate or numerical campaign rerun"
+  ]
+}

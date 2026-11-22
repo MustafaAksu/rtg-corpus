@@ -1,0 +1,45 @@
+RTG OPEN-M v0.7 DRAFT3 VALIDATION
+Scope: document/integrity + independent overstatement/stale-import review; no scientific certificate rerun
+
+[PASS] R12 — body byte-identical
+[PASS] R13 — body byte-identical
+[PASS] R14 — body byte-identical
+[PASS] R15 — body byte-identical
+[PASS] R12 source-proxy correction adjacent
+[PASS] R14 corridor-localization correction adjacent
+[PASS] contains: source normalization, the physical lowering map
+[PASS] contains: certified only **within the inherited scalar-$g$
+[PASS] contains: conditional on both bridges
+[PASS] contains: not the sole certified remaining physical channe
+[PASS] contains: settled neither for nor against
+[PASS] contains: physical source bridge OPEN
+[PASS] contains: no preferential corridor concentration
+[PASS] contains: OPEN-M-3 ($g$ object typing)
+[PASS] contains: 1.55$–$1.70$ $U(1)^2$ shell
+[PASS] contains: No hypercubic coefficients in ESM cascade calcul
+[PASS] no live stale: OPEN-M is ~2× short under legal calibration
+[PASS] no live stale: gap is localized to the non-$\mathcal{P}_4$ U
+[PASS] no live stale: apex/out-of-plane source direction well-posed
+[PASS] no live stale: \sqrt{21}/64
+[PASS] no live stale: Genesis frame-map is next decisive
+[PASS] phase-exhaustion only negated/withdrawn
+[PASS] T-6u benchmark explicitly sqrt2
+[PASS] T-6u gate comparison forbidden
+[PASS] physical child ratio present
+[PASS] F_face separated from F_W
+[PASS] pointer RTG_DYADIC_OSCILLATOR_DSN_v6.4.10
+[PASS] pointer RTG_TRIADIC_BIRTH_LIFT_DSN_v1.6
+[PASS] pointer RTG_GENESIS_GEOMETRY_DSN_v2.8.5
+[PASS] pointer DSN_METHODOLOGY_v1.3
+[PASS] AI context marker exactly once
+[PASS] DRAFT 3 status
+[PASS] v0.7 history date aligned
+[PASS] change record current filename
+[PASS] no control characters :: count=0
+[PASS] change record C01 scalar-g qualifier
+[PASS] change record has V07-C16
+[PASS] change record has V07-C17
+[PASS] change record has V07-C18
+
+ALL CHECKS: 39/39 PASS
+SHA-256 DRAFT3: 81eef9541c2314cd537338a3f6811674ca0061dde2aaf2dcac5b7cfba358ff08
