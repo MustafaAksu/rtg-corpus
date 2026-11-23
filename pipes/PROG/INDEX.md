@@ -17,3 +17,4 @@
 | 2026-11-16 | TDRG | notice | open | TDR-G Methodology v1.4 migration; TDRG-EXPORT-DISCRETE-TRIAD and TDRG-EXPORT-POLICY-PHASE (unchanged) | — | `20261116-TDRG-v2-13-adopted.md` |
 | 2026-11-19 | DZT | notice | open | Programme v1.4 §6.1 inventory row, §6.5 entry, maturity row and §9.2 maintenance row for DZT; interface rows IF18, IF19 | — | `20261119-DZT-v0-18-adopted.md` |
 | 2026-11-20 | DZT | notice | open | Programme v1.4 §6.1 inventory row, §6.5 entry and maturity row for DZT (edition; first all-p DZT theorem) | — | `20261120-DZT-v0-19-adopted.md` |
+| 2026-11-22 | ATLAS | request | open | Programme v1.4 receiving decision for a single nine-item source synchronization pass (Programme §6-9) | — | `20261122-ATLAS-programme-receiver-pass.md` |
