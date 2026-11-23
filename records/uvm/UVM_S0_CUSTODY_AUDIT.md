@@ -119,11 +119,38 @@ No ESM pack was loaded. The header's suggested sanity check on the real cluster 
 
 ## 6. I-4 — `T100` (`nm=2` at line 110, `nm=0` at line 277)
 
-**BLOCKED — missing NPZ inputs.**
-- `open_m_2f_trajectory.py` reads `<stub>_microstate.npz` for T89…T94 and `open_m_2d_seed_001_rank_2_T80_to_T100_gentle`.
-- `open_m_2e_panel.py` takes an `<auditpack.npz>` and, optionally, a previous-stage pack.
-- None of these files, and neither campaign's printed output, is in either upload folder. The only npz in the corpus upload is `su2_lift.npz`, which is unrelated.
-- Neither value is chosen. Both lines stay as they are until the inputs or the original outputs arrive.
+**Status: still BLOCKED for the decision; partly informed by data (addendum, 23 November 2026, 16:47 +03:00).**
+
+**The two lines name different scripts.**
+- Line 110 (OPEN-M-2E status) gives `σ_{h,int}=0.252`, `L_{z_h}=0.527`, `nm=2`, graded by `open_m_2e_panel.py`. That script reads an audit pack with `internal_edges`.
+- Line 277 (R14) gives `σ_{h,int}=0.252`, `nm=0`, corridor fraction `0.302`, from `open_m_2f_trajectory.py`. That script reads the microstate `…T80_to_T100_gentle`.
+- Both scripts count `nm` the same way: edges in three or more faces of the complex they read. A difference in `nm` therefore points to different complexes, not different definitions.
+
+**Data received.** The PI supplied seven microstate packs, placed unchanged on `upload/uvm-i4-microstates` (`7be6e47`) with `SHA256SUMS.txt` and `README_UPLOAD.md`:
+- five of the trajectory stages: T89, T90, T91, T92 and T94;
+- `…T93_to_T102_2e` and `…T98_to_T100_2e_ultra`.
+
+Not received:
+- the T100 stub `…T80_to_T100_gentle` and the T80, T93 and T120 stubs;
+- any audit pack.
+
+**Reading.**
+- Tool: `evidence/uvm/scripts/uvm_i4_t100_pack_diagnostic.py`. It re-implements the trajectory script's per-pack row with that script's definitions. It loads with `allow_pickle=False` and does not read the object arrays.
+- Output: `evidence/uvm/i4-t100-packs/stdout.txt`, exit 0, byte-identical on rerun.
+- The two T100-range packs:
+
+| Pack | nint | corrFrac | `σ_{h,int}` | `L_{z_h}` (int := inc ≥ 2) | nm | dimH |
+|---|---|---|---|---|---|---|
+| `T98_to_T100_2e_ultra` | 105 | 0.267 | 0.2949 | 0.527 | 2 | 10 |
+| `T93_to_T102_2e` | 109 | 0.220 | 0.2083 | 0.529 | 1 | 10 |
+
+**What this shows and what it does not.**
+1. The `ultra` pack agrees with line 110 on `nm=2` and `L_{z_h}=0.527`. It does not reproduce `σ_{h,int}=0.252`: it gives 0.2949, with no ddof, RMS or raw-`z` variant equal to 0.252. Its corridor fraction, 0.267, is not line 277's 0.302. So this pack is not shown to be the source of either line.
+2. Line 277's `nm=0` belongs to the `gentle` pack, which was not supplied. Line 110's internal-edge set comes from an audit pack, also not supplied. The triage acceptance criterion ("the two lines agree, or are shown to describe different packs") is **not yet met**. The data are consistent with two different packs and do not establish it.
+3. The R14 trajectory correlations (+0.654, +0.326, +0.488) cannot be rerun: 5 of the 9 `SERIES` stages are present, and the script requires at least 7 rows.
+4. No value is chosen and no line is changed.
+
+**Still needed for I-4:** the microstate `open_m_2d_seed_001_rank_2_T80_to_T100_gentle_microstate.npz` (decides line 277), and the T100 audit pack that `open_m_2e_panel.py` graded (decides line 110), or the original printed outputs of either script.
 
 ---
 
@@ -137,7 +164,7 @@ Listed by the PI's `_WANTED_LIST.txt` with tag UVM and not found:
 
 Data, not found:
 - the OPEN-M-2E panel output and the T80→T120 trajectory output (I-4);
-- the microstate / audit-pack npz files named in §6;
+- the microstates `…mid40_to_T80_minref`, `…T80_to_T93_2e_loadtest`, `…T80_to_T100_gentle`, `…v13_loose_T80_to_T120`, and the T100 audit pack (§6). The five other trajectory microstates were received on 23 November (§6);
 - the prior output of `open_m_3g_mini_protocol.py` (I-3);
 - the ESM packs for RUN05, RUN10, RUN11, T100, T103.
 
@@ -151,7 +178,7 @@ This record does not:
 - adopt, re-grade or re-scope any UVM statement;
 - treat a passing script as a theorem;
 - treat the PI's confirmations or merges as an edition decision;
-- rerun the v0.7.1 validation or any campaign other than the I-3 diagnostic of §5;
+- rerun the v0.7.1 validation or any campaign. The I-3 diagnostic of §5 and the I-4 data reading of §6 are the only executions;
 - change a pipe state.
 
 The triage rows it touches are updated in `UVM_REACTIVATION_TRIAGE.md` revision 4, which cites this record.
