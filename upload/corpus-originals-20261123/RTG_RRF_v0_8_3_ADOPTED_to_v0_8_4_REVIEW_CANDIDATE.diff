@@ -1,0 +1,135 @@
+--- RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3.md
++++ RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_REVIEW_CANDIDATE.md
+@@ -1,22 +1,24 @@
+ ---
+ title: "RTG — RRF Representation Registry"
+-version: "v0.8.3"
+-date: "19 October 2026"
++version: "v0.8.4"
++date: "20 October 2026"
+ class: "working artefact / representation discipline"
+-status: "ADOPTED — RRF working representation standard only; DYAD v6.4.13 N8/N9 consumer source synchronization; no scientific-owner or physical-model selection"
+-supersedes: "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_2.md — ADOPTED 17 October 2026; SHA-256 f09dbb12f4b65b13c3f08ec049dcd701b04ca24c4b55876b565868f288555461"
+-review scope: "DYAD v6.4.13 N8/N9 owner imports: Lemma F / F1–F3, formal Z6 generator, OPEN 20 B-an/B-6/B-infinity; clock and root existence bridges; no physics adoption"
+-revision base: "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_2.md (ADOPTED; SHA-256 f09dbb12f4b65b13c3f08ec049dcd701b04ca24c4b55876b565868f288555461); preceding history preserved"
++status: "REVIEW CANDIDATE — NOT ADOPTED; RRF v0.8.4 source and interface synchronization only"
++intended superseded standard if adopted: "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3.md — ADOPTED 19 October 2026; SHA-256 b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187"
++review scope: "DYAD v6.4.18 N14 C-infinity existence; RECOG v0.3.21 RF-1 W3 owner alignment; OFN v0.10 RF-O10-01 class-C model contract and psi readout; Genesis v2.8.9 conditional Q6 owner pin; no profile or physical choice"
++revision base: "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3.md (ADOPTED; SHA-256 b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187); historical publication text preserved"
+ predecessor source draft: "RTG_RRF_REPRESENTATION_REGISTRY_v0_7_DRAFT.md; preserved unchanged"
+ predecessor adoption record: "RTG_RRF_REPRESENTATION_REGISTRY_v0_7_ADOPTION_RECORD.md"
+ predecessor revision editor: "ChatGPT; 5 October 2026 scoped v0.7 finalization, unchanged history"
+-revision editor: "ChatGPT; 19 October 2026 scoped RRF v0.8.3 working-standard finalization"
+-adoption: "RRF working-standard scope, 19 October 2026; separate RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3_ADOPTION_RECORD.md; no DYAD/OFN/Programme scientific adoption"
++revision editor: "ChatGPT; 20 October 2026 v0.8.4 review candidate; adoption pending"
++adoption: "NOT ADOPTED; adopted v0.8.3 and its separate adoption record remain governing"
+ parent: "RTG_PRIMORDIAL_RELATIONAL_REPRESENTATION_WRAPUP_v0_2 §20, §26"
+ governing methodology: "DSN_METHODOLOGY_v1.3"
+ ---
+ 
+ # 0. Purpose, scope, status grammar, lock
++
++**v0.8.4 candidate overlay (20 October 2026; NOT ADOPTED).** This overlay synchronizes adopted DYAD v6.4.18 smooth existence (N14), adopted RECOG v0.3.21 RF-1 owner W3, adopted OFN v0.10 model-contract request RF-O10-01 and its modulus-readout limitations, and conditional Genesis v2.8.9 Q6. The original v0.8.3 publication text and earlier §9/§10 histories below remain archival facts and are not retrospectively revised. This draft adopts no theorem, physics, carrier, clock, native profile or OPEN-A/B/E closure.
+ 
+ **v0.8.3 publication boundary (19 October 2026).** This adopted RRF working-standard successor to v0.8.2 uses adopted DYAD v6.4.13 §§6.16–6.17 as scientific owner for Lemma F / F1–F3 and the formal ℤ₆ generator. The independent review requested a single §2.4c scope correction: B-6 ⇔ B-an ∧ B-3, so B-6 ⇒ B-an; no strictness claim. Earlier v0.8.2/v0.8.1 histories and source receipts remain historical text. The preceding v0.8.3 review overlay records the *prepublication* state, not the current adoption status. Adoption covers RRF working representation discipline only, and not new physics, mathematical theorem ownership, analytic/smooth existence or G2 realization. See the separate v0.8.3 adoption record and §10.3.
+ 
+@@ -69,6 +71,10 @@
+ 
+ | Current source | Verified source location / status | RRF import boundary |
+ |---|---|---|
++| **DYAD v6.4.18 (ADOPTED; N14)** | §6.17 `DYAD-THM-SMOOTH-EMBEDDING` E1–E4; OPEN 20 B-∞ existence CLOSED; B-an/B-6 OPEN | Local C∞ flow embedding, roots, J and involution R exist. E2 uniqueness applies **only** to generators with zero linear part. Construction uses `G_∞^{-n}F^n`, not the old unproved `F^{-n}R_∞F^n` route. No physical G2 or analyticity. |
++| **RECOG v0.3.21 (ADOPTED; G3 / RF-1)** | §6.6a orientation RID; §§6.13a–6.16g prior scientific results retained; §7.2 RF-1 | Owner W3 requires `a^-` and `a^+` in one and the same cohomology space. Inter-space transport is a distinct, presently unspecified RRF extension (§6.3). |
++| **OFN v0.10 (ADOPTED; RF-O10-01)** | §5.5.1–5.5.7 class-C and modulus/readout contract; `RTG-OFN-DEF-TRIAD-MODEL-CONTRACT` | Class C is a distinct conditional model, **not** a native profile or chosen physical network state; see §6.2a. |
++| **Genesis Geometry v2.8.9 (ADOPTED)** | §6.3c `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO` | Conditional real C³ planar-product obstruction for class-C Q6 under owner hypotheses; not unconditional physical model selection. |
+ | OFN v0.9 (ADOPTED) | Complete-state/presentation covariance; RF-O09-03/04; §4.5 and OPEN-OPA; OPEN-PRIMACY-3B/3C | No universal node-coincidence axiom, carrier selection or physical clock derived |
+ | **DYAD v6.4.13 (ADOPTED; N8/N9, §6.17)** | §6.16 `DYAD-THM-FORMAL-Z6-GENERATOR`; §6.17 `DYAD-CAND-FLAT-CENTRALIZER` **[THM]**, `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` **[THM — conditional]**; OPEN 20 B-∞ flat uniqueness CLOSED | Existing C∞ involutions commuting with six-step `F=T^6` commute **exactly** with primitive `T` and are unique (F1–F2); existing C∞ tangent-identity roots commute with `T` and are unique (F3). B-an, B-6, B-∞ **existence**, physical exchange and distinct network-factor clock contracts remain OPEN. RID prefix `CAND` is a historical identifier, not current grade. |
+ | **DYAD v6.4.12 (ADOPTED; N7 source synchronization)** | §6.16 `DYAD-ALG-CENT-KERNEL`, `DYAD-THM-FORMAL-CENTRALIZER`, `DYAD-THM-FORMAL-INVOLUTION-UNIQUE`; §6.15 `DYAD-THM-LOCAL-INVOLUTION-GERM`, `DYAD-THM-ANALYTIC-CLOCK-BRIDGE`; OPEN 19 formally CLOSED, OPEN 20 B-an/B-∞ OPEN | Formal uniqueness and analytic *conditional* clock bridge adopted by scientific owner; no analytic/C∞ involution existence, full G2/physical exchange, or convergence of the formal `R_0` / tangent-to-identity `F^{1/2}` asserted |
+@@ -76,6 +82,8 @@
+ | Genesis Geometry v2.8.5 (ADOPTED) / Triadic v1.6 (ADOPTED) | Genesis's child direction/amplitude, apex/UV and source lowering corrections; Triadic §6.15/SG-15 | No physical source/child functional/transverse dimension is selected by these notices |
+ | ER-2B consolidated v0.2 (noncanonical) and RRF coincidence v0.2 (noncanonical) | Specified projected three-edge map; analytic conditional noninvariance at primitive and six-step clocks | A physical exclusion requires complete-state exchange, actual fixed-state realization, encoding and clock intertwining (§6.2) |
+ | Communicated RER v0.2 **update plan only** | Proposed closure taxonomy, factor and N=7/8 Stage-2 status; moved into separate noncanonical proposal | Original RER v0.2 and newest Stage-2 certificate unavailable; no theorem/profile/standard adopted (§6.4) |
++
++**v0.8.4 RECOG owner-pin convention.** For current consumption, RECOG v0.3.21 replaces unchanged live v0.3.14/v0.3.20 scientific imports at §§0.2, 4.1, 4.1a, 4.2, 4.3 and 6.3 (R11/R9/R1/token/F4 as applicable), always preserving their respective RIDs and claim scopes. Historic release statements, §0.1 and dated provenance receipts retain their original source versions. OFN v0.10 is the current consumer/ontology source; OFN v0.9 remains historical.
+ 
+ ### 0.3 Model/carrier versus passive-chart safety rule
+ 
+@@ -212,6 +220,8 @@
+ 
+ `[ALG] [scope: class-wise local existence equivalence, conditional on the owner clock/root results; not a physical realization] [import: DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES] [import: DYAD v6.4.13 §§2, 6.16; RID: DYAD-OPEN-INVOLUTION-REALIZATION]` In each of C∞ and analytic categories, a nonidentity primitive-commuting involution (equivalently an odd chart for primitive `T`) exists **iff** a tangent-to-identity square root `Q²=F` exists in that category. The easy direction is `Q=T³R`; the reverse uses F3 for C∞, and the analytic special case of F3 (or formal-root uniqueness plus analytic identity) for Cω, with `R=T³Q^{-1}`. The existence equivalence is an algebraic *consequence* of owner theorems plus the explicitly defined averaging chart (G2 v0.3 §4); it does **not** make the open root/involution exist. No G2 physical factor/encoding is claimed.
+ 
++**v0.8.4 current-state override (DYAD N14; owner v6.4.18).** `[THM] [import: DYAD v6.4.18 §6.17; RID: DYAD-THM-SMOOTH-EMBEDDING] [scope: C∞ germs at P₁; §6.15 local domain]` E1 supplies a smooth field `X` with `F=T⁶=φ_X¹`, `j∞X=log F`; E3 gives existing smooth tangent-to-identity roots `K_m=φ_X^{1/m}` commuting with `T`; E4 gives an existing smooth `J=T K_6^{-1}` and `R=T³ K_2^{-1}`. Hence **OPEN 20 B-∞ EXISTENCE CLOSED**; B-an/B-6 analytic existence remains OPEN, as does physical G2/OPEN-A. E2 uniqueness is restricted to smooth time-one generators with `DX'(0)=0`—not all generators. The owner construction passes by `G_∞^{-n}F^n`; convergence of the prior `F^{-n}R_∞ F^n` scheme remains unproved. L-SHADOW-POLY is not used. The older v0.8.3 receipt below is historical and its B-∞ existence OPEN wording is superseded **for current status only**.
++
+ ### 2.4c DYAD N9 receipt: formal ℤ₆ and smooth centralizer (v0.8.3 source sync)
+ 
+ `[THM] [scope: formal only] [import: DYAD v6.4.13 §6.16; RID: DYAD-THM-FORMAL-Z6-GENERATOR]` The canonical formal generator `J=T∘F^{-1/6}` has order six and linear part `A`; `R_0=J³`, `G=J²`. **OPEN 20 B-6** concerns its analytic realization. **B-6 ⇒ B-an** and **B-6 ⇔ B-an ∧ B-3** `[ALG] [import: DYAD v6.4.13 §6.16; RID: DYAD-OPEN-INVOLUTION-REALIZATION]`; whether B-an alone entails B-3 is not established. A finite or formal generator is not a chosen physical pole/triad action.
+@@ -337,6 +347,8 @@
+ 
+ ### 4.2a Cross-model orientation conjugacy is not physical pole exchange
+ 
++**Current owner-source pin (v0.8.4).** RECOG **v0.3.21 ADOPTED**, §6.6a, RID `RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY`, is the primary source of the unchanged family-conjugacy result below. OFN **v0.10** is a **consumer cross-reference**, not the theorem owner. The former RECOG v0.3.20 / OFN v0.9 pins appearing below are preserved as dated v0.8.1 text and are not the current-source state.
++
+ `[ALG] [import: RECOG v0.3.20 §6.6a #sec-6-6a-composition; RID: RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY] [provenance: RECOG freeze candidate; owner source inspected, no independent certificate rerun; adopted OFN v0.9 §6.4 / IMP-O09-03 is a consumer cross-reference, not the theorem owner] [scope: character/shear family only]` For the declared character/shear family and `S_o(ρ,η)=(-ρ,-η)`:
+ 
+ \[
+@@ -389,6 +401,8 @@
+ ---
+ 
+ ### 6.2 `RRF-CND-01` — coincidence realization admissibility (PROPOSED INTERFACE ONLY)
++
++**v0.8.4 current regularity/clock notice.** `[THM] [import: DYAD v6.4.18 §6.17; RID: DYAD-THM-SMOOTH-EMBEDDING]` At the adopted local C∞ germ scope, a smooth involution and smooth roots actually **exist** and commute with primitive `T` (E3–E4); the following v0.8.3 text asserting lack of such existence is an archived statement, not current owner status. **Analytic B-an/B-6 existence and finite-Cʳ classification remain open.** The physical contract still must declare `clock:` because `EF_phys=TE` and `EF_phys=T⁶E` are different factor hypotheses even though the existing C∞ involution commutes with both local clocks. No physical node exchange, network submersion or carrier has been selected.
+ 
+ **Status:** `[DEF] [scope: noncanonical interface proposal; RRF/OFN ACCEPT SCOPED; not an adopted physics choice]`. This registry records **representation and admissibility contracts, not proofs or polynomial-jet tables**. The general exchange-fixed lemma remains mathematical source background and the primitive/six-step coincidence counterexample belongs to ER-2B and the two RRF/OFN coincidence reviews; their proofs, exact coefficients and execution provenance are **not reproduced or owned here**.
+ 
+@@ -409,6 +423,22 @@
+ 
+ **Passive transport guard:** A true passive recharting transports the *same* model, action and test subset; it cannot change invariance/noninvariance. Reimposing linear closure, replacing the carrier, changing update or selecting another physical clock is a **different model contract** requiring its own admissibility audit. Do not identify `(P_\mathcal C T^{\times3})^6` with `P_\mathcal C (T^6)^{\times3}` without proof of equivalence.
+ 
++### 6.2a OFN class-C model contract — reference-only, not a native profile (v0.8.4 proposal)
++
++`[DEF] [scope: RRF model-contract entry, not a physics selection] [import: OFN v0.10 §5.5.4; RID: RTG-OFN-DEF-TRIAD-MODEL-CONTRACT] [reference: OFN RF-O10-01]` **Class C** reimposes additive mean-feedback *in the transported carrier*, `F^N_κ(z)_e=N(z_e)-(κ/3)Σ_j N(z_j)`, and is a **different conditional model**, not passive recharting of the raw family and not a `RRF-NET-W-RAW` native-profile equation.
++
++| Contract field | Declared RRF reading / obligation |
++|---|---|
++| Carrier / operation | Transformed or Bochner-chart modal variables; newly imposed mean-feedback. Passive coordinate transport alone does not define this class. |
++| `regularity:` | **Formal**; real `C³` polynomial representatives. **`C∞`**: DYAD E4 supplies an existing smooth `J` (`DYAD-THM-SMOOTH-EMBEDDING`), permitting the Bochner-chart carrier *under the class-C construction*; this consequence has **not yet been separately owner-recorded by OFN or Genesis as a physical class-C realization**. **Analytic**: conditional on DYAD OPEN 20 **B-6**; still OPEN. Earlier OFN v0.10 §5.5.4 labels both real branches conditional; that wording predates DYAD v6.4.18 and is not reproduced here as current DYAD status. |
++| `clock:` | Primitive `T` / declared primitive class-C update; `T⁶` is derived sampling, not an interchangeable network factor condition. |
++| Domain / chart | Local neighborhood of 0; state and readouts in transported `z` or specified `Φ` chart. Raw-W readouts require offset transport/subtraction; no off-surface transfer inferred. |
++| `κ:` | Formal contract for `κ∉{0,1,2}`; scoped stability for `0<κ<2, κ≠1`. `κ=2` is excluded from the applicable center reduction, not simply a failed physical Q6 model. |
++| Q6 factor exclusion | `[THM] [import: Genesis v2.8.9 §6.3c; RID: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO]` Applies only under **`(H_spec)`, `μ≠0`, `γ∉{0,2}`**, real `C³` and the owner's appropriate transported-jet hypotheses. See adopted OFN v0.10 §5.5.3 narrow-Q6 corollary `RTG-OFN-ALG-NARROW-Q6-PLANAR-PRODUCT`. No factor prohibition outside this scoped family. |
++| Native-profile impact | **None**: four dyad profiles and one provisional `RRF-NET-W-RAW` profile remain unchanged; OPEN-B/E1 not resolved. |
++
++`[DEF] [scope: ψ-modulus readout and representation non-transfer] [import: OFN v0.10 §5.5.7; reference: RF-O10-02]` Within the stipulated fifth-order reduced family, `m(a)=Im(aar μ)` is the scoped modulus. `|c|` determines `m` **only up to** the reflection `m↦2m_*−m`; phase of `c` is representation-dependent. `Im c=0` is neither a canonical chart gauge nor a physical selection principle. A phase readout must state the **primitive clock** and the **transported chart**, and cannot be promoted to a physical chirality observable by this entry alone.
++
+ ### 6.3 Token, history and network inheritance — interface prerequisites only
+ 
+ `[ALG] [scope: pointer to the preserved §4.3; no duplicate theorem import]` The full B-token transport rule is already registered in **§4.3**; RECOG v0.3.20 §6.16b retains its content. The B-section/count phase lift remains distinct from the primitive-`\eta` N-3A deck state. No duplicate transport claim or competing live version pin is introduced here.
+@@ -419,9 +449,11 @@
+ |---|---|
+ | **W1** | graph, coefficient module, edge cochain and network realization |
+ | **W2** | dyad→edge/subgraph attachment preserving the relevant token predicate |
+-| **W3** | comparison/transport between *pre- and post-birth* cohomology spaces before forming `\Delta[a]` |
++| **W3** | event-indexed cochains $a^-$, $a^+$ in the **same** cohomology space, so that $\Delta[a]=[a^+]-[a^-]$ is defined `[import: RECOG v0.3.21 §6.16g; RID: RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS]` |
+ | **W4** | independence from the event log, count or Track-A clock alone |
+ | **W5** | conditioning/common-driver quotient distinguishing token-specific writing from shared-driver correlation |
++
++`[OPEN] [scope: RRF extension, **not** RECOG W3; no map registered]` If pre- and post-birth classes naturally belong to different spaces `H⁻`, `H⁺`, an extension must explicitly supply an appropriate typed comparison into **one common cohomology space** `H`, for example maps `j⁻:H⁻→H`, `j⁺:H⁺→H`, with justified algebraic and event-domain semantics, and then define `Δ_H[a]=j⁺[a⁺]-j⁻[a⁻]`. This is a **new missing-interface obligation**, not a currently registered transport, not an automatic birth law and not a restatement of RECOG W3. RER G9/1 should cite owner W3 separately from this extension.
+ 
+ The closed algebra of NUMGEN NG-7A, including its closed sub-RID, does not produce NG-7B source/curvature or a multiplicative G1 realization. M2-1's transported counting identity is not a co-realized physical composition or new birth law. Genesis v2.8.5 and Triadic v1.6 also distinguish unit rotation `W(J_Qs)/W(s)=i` from loaded child ratio `W(c_0^{[3]})/W(s_*)=i\kappa Q_s`; full remainder/physical source remain conditional. Independent Jacobi *mode labels* do not select an extra physical state dimension, and covariance typing does not uniquely fix physical lowering.
+ 
+@@ -468,6 +500,8 @@
+ 
+ # 9. Change log
+ 
++- **v0.8.4 — REVIEW CANDIDATE (20 Oct 2026; NOT ADOPTED):** DYAD v6.4.18 E1–E4 / N14 B-∞ C∞ existence CLOSED with E2 scope and proof-route guards; RECOG v0.3.21 owner W3 RF-1 same-space wording and explicitly OPEN interspace extension; OFN v0.10 RF-O10-01 class-C conditional model-contract row and ψ-modulus readout guards, with Genesis v2.8.9 Q6 conditional RID; owner-first RECOG/OFN source receipts. Older v0.8.3 and preceding histories unchanged. RER Phase A G9 request answered in separate editor response; 4 dyad + 1 provisional profiles and OPEN-A/B/E preserved. No owner mathematics, executable certification or physics adoption.
++
+ - **v0.8.3 — ADOPTED as RRF working representation standard (19 Oct 2026):** DYAD v6.4.13 N8/N9 source receipts for formal ℤ₆ generator (`DYAD-THM-FORMAL-Z6-GENERATOR`), owner-adopted Lemma F (`DYAD-CAND-FLAT-CENTRALIZER` [THM]) and F1–F3 (`DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` [THM conditional]); OPEN 20 B-∞ flat uniqueness CLOSED while B-an, B-6 and B-∞ existence OPEN. The C∞/analytic odd-chart–square-root *existence equivalence* is registered as an algebraic consequence of those owner results and the G2 averaging chart, not as an existence proof. C∞ six-step involution exact primitive commutation adopted at §6.17 domains; network factor clocks remain distinct. The reviewer-requested §2.4c qualifier limits B-6 to `B-6 ⇔ B-an ∧ B-3` (hence `B-6 ⇒ B-an`), without claiming strictness. Four dyad profiles, OPEN-A/B/E and predecessor publication history unchanged; source and certificate boundaries in §10.3 and separate adoption record.
+ 
+ - **v0.8.2 — ADOPTED as RRF working representation standard (17 Oct 2026):** DYAD v6.4.12 N7 owner-RID import: OPEN 19 formally CLOSED, `DYAD-THM-FORMAL-CENTRALIZER`, `DYAD-THM-FORMAL-INVOLUTION-UNIQUE`, `DYAD-THM-ANALYTIC-CLOCK-BRIDGE`, separate OPEN 20 B-an/B-∞. G1 source-pending language corrected; analytic six-step versus primitive clock bridge imported conditionally without identifying network-factor clocks. VF-1 **mathematical scope unchanged; primary owner provenance now pinned** to `DYAD-ALG-NF6-DEG10` (§2.4a), retaining earlier written verification as supplementary evidence. §2.4b distinguishes the owner OPEN 20 status from the RRF/SESSION analytic odd-chart/square-root existence equivalence. §6.2 pins all three relevant owner RIDs; §0.2 corrects the convergence object (`R_0`/`F^{1/2}`, not polynomial `h_6`). §8.12 updated to owner-adopted *formal* theorem with unchanged realization/physical nonclaims. The distinct G2 v0.3 noncanonical review remains a separate interface record. Older v0.8.1 and v0.8 histories preserved verbatim. Separate v0.8.2 adoption record governs this **working-standard only** release; physical G2, OPEN-A/B/E and OPEN 20 remain open.
+@@ -561,3 +595,7 @@
+ - **Publication gate:** This is a review candidate. A separate reviewer decision, real final diff, and adoption record are required before v0.8.3 can supersede v0.8.2.
+ 
+ **v0.8.3 adoption boundary (19 October 2026).** The preceding §10.3 receipt and candidate publication gate above remain archived as the state at review. The independently reviewed candidate was accepted subject to one bounded source-scope correction in §2.4c, and released with publication metadata and this separate adoption boundary. The adoption record identifies exact final bytes/hash, predecessor/candidate identities, and distinct G2 v0.4 acceptance. This release did **not** rerun owner certificates or amend the historical §10.2/v0.8.2 release boundary. OPEN-A/B/E, OPEN 20 B-an/B-6/B-∞ existence, and physical G2/network realization remain unresolved.
++
++### 10.4 v0.8.4 candidate receipt — 20 October 2026
++
++The successor candidate is based on the exact adopted v0.8.3 bytes (SHA-256 `b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187`). Sources directly inspected in this editorial update: DYAD v6.4.18 §6.17 / N14, RECOG v0.3.21 §6.16g / RF-1, OFN v0.10 §5.5.3–§5.5.7 / RF-O10-01–02, Genesis v2.8.9 §6.3c and RER's 20 Oct request. No scientific scripts were executed. The candidate is NOT ADOPTED; v0.8.3 governs until independent review and a separate adoption record. The old source-receipt tables and dated publication boundaries above are retained as historical text; new current-state overlays supersede only their live status claims.

@@ -1,0 +1,16 @@
+{
+  "components": {
+    "named_hard_cases": 6,
+    "exhaustive_n2": 2,
+    "exhaustive_n3": 8,
+    "exhaustive_n4": 64,
+    "exhaustive_n5": 1024,
+    "exhaustive_n6": 32768,
+    "random": 9990,
+    "exhaustive_n7_referenced": 2097152
+  },
+  "counterexamples": [],
+  "total_including_n7": 2141014,
+  "total_this_artifact": 43862,
+  "passed": true
+}

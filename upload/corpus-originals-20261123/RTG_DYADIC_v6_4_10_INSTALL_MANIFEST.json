@@ -1,0 +1,158 @@
+{
+  "document": "RTG_DYADIC_OSCILLATOR_DSN_v6.4.10",
+  "adopted": "2026-09-24",
+  "adopted_by": "PI / owner",
+  "base": "v6.4.9 (unchanged)",
+  "review": "scoped external review r1\u2192r2\u2192r3; r3 disposition: review-complete, no scientific blocker",
+  "consumer_acceptance": {
+    "RECOG": "pending (R11 then R10; R8/R9 separate)",
+    "NUMGEN": "pending (seed admission recorded; GAP-LOCK angular hypotheses separate)",
+    "Genesis/Triadic": "pending (E_odd diagnostic export; physical identification OPEN)"
+  },
+  "entries": [
+    {
+      "rid": "DOCUMENT",
+      "file": "RTG_DYADIC_OSCILLATOR_DSN_v6_4_10.md",
+      "role": "adopted owner document",
+      "sha256": "7455811928606076b3bc3075632275dc2a24e37fdbf0ae20036db5529a1b56b7",
+      "bytes": 123234,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DOCUMENT-BASE",
+      "file": "RTG_DYADIC_OSCILLATOR_DSN_v6_4_9.md",
+      "role": "revision base, preserved unchanged",
+      "sha256": "99a6a15ee361053c0f9929e37f1bf84b1654333ae5402f581b17157097d1b588",
+      "bytes": 87158,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DOCUMENT-DIFF",
+      "file": "v6_4_9_to_v6_4_10_FINAL.diff",
+      "role": "normal-format diff base\u2192adopted",
+      "sha256": "50f5d24f169fa6d77e70bde73c8007ae4867564d03a0e2d1af835df7f23c0b97",
+      "bytes": 49361,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-P0P1",
+      "file": "DYAD_RETURN_ENCLOSURE_P0_P1_evidence.zip",
+      "role": "P0\u2013P1 normalization evidence package",
+      "sha256": "433805bfa77c22d1a02c103b1168c9ace6f05d476b45bc7db578d76edf258d81",
+      "bytes": 68205,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-P2B2",
+      "file": "DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip",
+      "role": "P2-A v2 / P2-B v1 baseline + P2-B v2 producer/validator",
+      "sha256": null,
+      "status": "not held by owner at installation \u2014 record from the producer's manifest before install closes",
+      "note": "producer-side archive; its own 56-member manifest was verified by the reviewer; hash to be copied from `DYAD_v6_4_10_DRAFT_REVIEW_v1/data/proposed_registration_identities.json` or re-measured on receipt"
+    },
+    {
+      "rid": "DYAD-ART-RE-REFEREE",
+      "file": "dyad_referee_p2b_v2.py",
+      "role": "reviewer referee harness (47 exit-coded checks)",
+      "sha256": "2c400b49cca5f1f3fa207ed9ba7c67aa49c5ddf7a258e08e35d5fc50ac0c8115",
+      "bytes": 9239,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-REFEREE-BACKEND",
+      "file": "dyad_return_qchi_exact.py",
+      "role": "exact Q(i\u221a3) arithmetic backend",
+      "sha256": "e45286fa100b2b31c4d547e8513e23f926b2bda36d31938577fa9f312ca350f6",
+      "bytes": 2511,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-SUPPL",
+      "file": "DYAD_OWNER_ADOPTION_REVIEW_v1.zip \u2192 scripts/check_owner_adoption.py",
+      "role": "shared-backend supplementary checker",
+      "sha256": null,
+      "status": "not held by owner at installation \u2014 record from the producer's manifest before install closes",
+      "note": "producer/reviewer-side archive; record on receipt"
+    },
+    {
+      "rid": "DYAD-ART-RE-REVIEWS",
+      "file": "DYAD_RETURN_ENCLOSURE_P0_P1_REVIEW.md",
+      "role": "review record",
+      "sha256": "a6990e423807a67d69e2eddbef7a4a2e4d88f8b67abb326c6c06c4070ae8ce2a",
+      "bytes": 7277,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-REVIEWS",
+      "file": "DYAD_P2A_V2_P2B_V1_REVIEW.md",
+      "role": "review record",
+      "sha256": "a5f569afee6ce385f476bcc03f8a6693269f4bebf14d08592c078272c00f5dda",
+      "bytes": 7452,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-REVIEWS",
+      "file": "DYAD_P2B_V2_REVIEW.md",
+      "role": "review record",
+      "sha256": "0dc29e7e33a6ff73fc52ab07109f19b4b08308ddaef2ca53e8b259c2f2d77287",
+      "bytes": 4625,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-REVIEWS",
+      "file": "DYAD_P2A_PRIMITIVE_CONTRACTION_REVIEW.md",
+      "role": "review record (P2-A v1)",
+      "sha256": "93392eec9c3a82b2a0b73a5598f90f29c1209f41b2582bf35036c94bfb587382",
+      "bytes": 9202,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-REVIEWS",
+      "file": "OWNER_ADOPTION_REVIEW_v1.md",
+      "role": "external review record (ChatGPT)",
+      "sha256": "071e2359d8bb8b87707636a7f75b9451dfe228d73407ad5b257e9a5836d59033",
+      "bytes": 11457,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-REVIEWS",
+      "file": "R2_REVIEW.md",
+      "role": "external review record (ChatGPT)",
+      "sha256": "f32efc5f83cc0156d84d9b7d564bb74681868ebe8fd33caf571169df7ad2ec14",
+      "bytes": 9002,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-REVIEWS",
+      "file": "FINAL_TEXT_PATCH_PROPOSAL.md",
+      "role": "external review record (ChatGPT)",
+      "sha256": "53b8a436985d05512e3877012f8cec081335d446de73af91bddbfce35d4aba58",
+      "bytes": 4375,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-REVIEWS",
+      "file": "REVIEW_DISPOSITION__1_.md",
+      "role": "external review record (ChatGPT)",
+      "sha256": "c69547024452683575358f092e8bad44215049091377b9d2851dea5f4538c42d",
+      "bytes": 3203,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DYAD-ART-RE-R2REVIEW-PKG",
+      "file": "DYAD_v6_4_10_r2_REVIEW_v1.zip",
+      "role": "r2 review package",
+      "sha256": "c0b0b546ef96c8cc65ebd6b32eaffa58da25b339b20dc384a2862d1ea47c5de3",
+      "bytes": 817567,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    },
+    {
+      "rid": "DRAFT-LINEAGE",
+      "file": "RTG_DYADIC_OSCILLATOR_DSN_v6_4_10_DRAFT_r3.md",
+      "role": "last reviewed draft (reviewer-held prefix 4ef13741cb1212d0)",
+      "sha256": "4ef13741cb1212d06eefbcdb18ea259730dc17628db50e3bb878ddd0c6de3761",
+      "bytes": 122039,
+      "measured_by": "owner (Claude), 24 Sep 2026"
+    }
+  ]
+}

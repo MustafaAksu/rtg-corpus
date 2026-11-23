@@ -1,0 +1,32 @@
+{
+  "baseline": {
+    "file": "RTG_RRF_REPRESENTATION_REGISTRY_v0_8.md",
+    "bytes": 75580,
+    "sha256": "c4ec1f10da0cdf3b95a84b3013909e04db49212e0119b858c170e5fd8f42b44a"
+  },
+  "candidate": {
+    "file": "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_1_REVIEW_CANDIDATE.md",
+    "bytes": 77621,
+    "sha256": "fbc5e90d7bef516b58c7313b0178fe30a0acea24fdeb50bd8b45522684667150"
+  },
+  "proposal": {
+    "file": "RTG_RRF_RER_DYNAMICAL_CLOSURE_PROPOSAL_v0_1.md",
+    "bytes": 3847,
+    "sha256": "65186f393985ed502512c875601891cec999830abc2cc7db2fe01dd94f554e86"
+  },
+  "checks": {
+    "baseline_hash": true,
+    "owner_rid_orientation": true,
+    "ofn_consumer_not_owner": true,
+    "ofn_rank_typing": true,
+    "proposal_extracted": true,
+    "source_pending": true,
+    "G1_formal_finite_separated": true,
+    "node_slot_separated": true,
+    "regularity_clock_open": true,
+    "adoption_not_claimed": true,
+    "open_b_e_not_closed": true,
+    "v0_8_history_retained": true,
+    "no_original_v08_mutation": true
+  }
+}

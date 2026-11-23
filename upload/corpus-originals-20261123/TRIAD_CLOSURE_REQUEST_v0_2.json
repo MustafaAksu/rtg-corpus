@@ -1,0 +1,139 @@
+{
+  "record": "initial triad closure test — revised proposed source contract",
+  "status": "NO_TARGET_VECTOR_LAW_SELECTED",
+  "registry_version": "0.1",
+  "entry_ids": [
+    "RER-T01",
+    "RER-T02"
+  ],
+  "primary_readout": {
+    "Phi": "(Qs,Qc,Isc,Omega_G)",
+    "Omega_G": "sqrt(3)/2*(s_eta*c_rho-s_rho*c_eta)",
+    "constraint": "QsQc-Isc^2=Omega_G^2",
+    "domain_patch": "Qs>0, other actual-source restrictions to be supplied"
+  },
+  "needed_source_fields": {
+    "target_branch": null,
+    "state_carrier_and_incidence": null,
+    "independent_vector_law_or_jet": null,
+    "time_block_or_flow_convention": null,
+    "metric_orientation_and_transports": null,
+    "admissible_domain_and_events": null,
+    "full_action_if_claimed_physical_quotient": null,
+    "precision_remainder_if_truncated": null,
+    "source_owner_version_hash_and_evidence": null,
+    "simultaneous_proper_B_isometry_action_and_domain": null,
+    "equivariance_proof_or_failure_witness": null,
+    "forward_domain_or_explicit_exit_chart_contract": null
+  },
+  "test": "Phi(x)=Phi(xprime) => Phi(T(x))=Phi(T(xprime)) on a common admissible domain. For an event, also establish admissibility from the reduced state or retain the event variable.",
+  "acceptable_first_outputs": [
+    "Source-pinned full-SO(B) equivariance proof plus domain/event/forward-patch obligations; conditional signed-Gram closure then follows without deriving a complete closed formula first.",
+    "Source-pinned exact closed update on Phi(X), with proof and domain.",
+    "Source-checkable same-readout/different-successor witness.",
+    "A finite-jet result explicitly retaining higher-order/domain obligations."
+  ],
+  "not_admitted_shortcuts": [
+    "defining Tpost by the desired quotient identity and citing it as a source discovery",
+    "using M_root closure as proof of microscopic reduction",
+    "replacing standalone K3 by K4 at d=0",
+    "using isolated-dyad h as a joint network normal form",
+    "inferring finite-memory closure from the R9 memory theorem",
+    "Treating failed vector equivariance as automatic observable nonclosure.",
+    "Replacing full SO(B) symmetry by C6 or sign symmetry alone.",
+    "Promoting a homogeneous jet or sampled rotational check to exact microscopic symmetry.",
+    "Ignoring a non-invariant event domain, exit decision, source parameter or hidden variable."
+  ],
+  "request_version": "0.2",
+  "date": "2026-10-08",
+  "based_on": {
+    "file": "inputs/TRIAD_CLOSURE_REQUEST.json",
+    "sha256": "96a637aa272a9507a0e8182255d34f5d0122fdce8685bcb1db19d8fd76f12c57",
+    "registry_version_unchanged": "0.1",
+    "basis": "User-supplied initial assessment and conditional equivariance-to-closure argument; registry RER-T02, sections 5.1–5.2 and 8."
+  },
+  "source_delivery_question": "Does the independently specified standalone K3 vector law commute with every simultaneous proper B-isometry on its declared domain, including its incidence, fixed parameters, orientation convention, and event/admissibility rules? Supply the law/jet, clock, domain, and either exact proof or an explicit failure witness. A jet proof must retain the remainder and exact-closure limitations.",
+  "symmetry_precheck": {
+    "status": "NOT_TESTED_NO_TARGET_VECTOR_LAW",
+    "group": "SO(B)={R in GL(2,R): R^T B R=B, det R=1}; linear proper B-isometries, not affine translations",
+    "action": "rho_R(s,c)=(Rs,Rc)",
+    "observable": "Phi=(Qs,Qc,Isc,Omega_G) with the unchanged primitive Omega_G convention",
+    "assumptions": [
+      "D is a declared SO(B)-invariant subset of Qs>0 with all actual-source restrictions included.",
+      "T is the independently supplied deterministic law, not defined to force quotient closure.",
+      "For a reduced endomap on Phi(D), T(D) must lie in D. Otherwise specify an output patch, exit/termination symbol or another continuation contract.",
+      "All variable parameters, hidden receiver/history data and additional roles must be part of the source state and action before applying this V^2 theorem.",
+      "For partial events, admissibility/trigger/terminal classifications must be constant on readout fibres, or be retained as extra observable state."
+    ],
+    "sufficient_condition": "T(rho_R x)=rho_R T(x) for all R in SO(B) and x in D.",
+    "conditional_consequence": "Static orbit separation from RER-T02 implies a unique reduced update F on Phi(D) with Phi o T = F o Phi under the declared endomap/domain premises.",
+    "proof": "If Phi(x)=Phi(xprime), static completeness provides R with xprime=rho_R x. Equivariance and invariance of Phi give Phi(Txprime)=Phi(rho_R Tx)=Phi(Tx). Apply registry section 5.1. Uniqueness is only on Phi(D).",
+    "not_necessary": "If equivariance fails, test Phi(T(rho_R x))=Phi(Tx) directly. A nonzero vector equivariance defect alone is not a closure counterexample.",
+    "optional_exact_symbolic_test": {
+      "status": "method only; not applied to an actual K3 law",
+      "regularity": "C1 source map on an open SO(B)-invariant domain, with complete rotation orbits in the domain",
+      "JQ": "[[1,-2],[2,-1]]/sqrt(3); J=diag(JQ,JQ)",
+      "generator_residual": "E_T(x)=DT(x) J x - J T(x)",
+      "meaning": "E_T=0 identically is equivalent to full connected SO(B) equivariance under these hypotheses. Differentiate R(-theta)T(R(theta)x).",
+      "direct_closure_residual": "For q(x)=Phi(T(x)), Dq(x) J x=0 identically proves constancy on connected rotation orbits even when E_T != 0.",
+      "flow_guard": "A vector-field equivariance check concerns its flow only with local uniqueness and a common existence/domain convention; it is not an identification of the ODE time-one map with a discrete return."
+    },
+    "finite_order_guards": [
+      "Commutation with a sixfold rotation or bare sign alone is not equivariance under all SO(B).",
+      "Polynomial/jet equivariance proves only the declared finite-order result unless the supplied law is exactly that polynomial or the full remainder is handled.",
+      "Numerical sampling of rotations is a search or witness procedure, not a proof for all rotations.",
+      "If T(0)=0, n>=1, and T=J_n T+O(||x||^(n+1)), the homogeneous-quadratic readout transports the tail at order O(||x||^(n+2)); that estimate still does not close the exact reduced map.",
+      "For a failure witness, match the same admitted state/domain/clock and prove the successor-readout difference, with remainder control when needed."
+    ],
+    "physical_scope": "SO(B) is the kinematic fibre action of this readout. No physical gauge, pole relabel or RRF profile is selected."
+  },
+  "test_sequence": [
+    {
+      "order": 0,
+      "task": "T-START",
+      "action": "Obtain and pin one standalone K3 law, state/incidence, clock, domain and source evidence; keep all missing fields unresolved."
+    },
+    {
+      "order": 1,
+      "task": "T-FIBRE / domain",
+      "action": "Verify readout fibres and the action/domain/event contract. Include forward invariance or explicit exit/chart handling."
+    },
+    {
+      "order": 2,
+      "task": "T-FIBRE / symmetry",
+      "action": "Test full proper-B-isometry equivariance first. Use exact symbolic identities or the C1 generator criterion when applicable."
+    },
+    {
+      "order": 3,
+      "task": "T-FIBRE / observation",
+      "action": "If exact equivariance succeeds, prove signed-Gram closure. If it fails, inspect successor Phi: distinguish same-observable non-equivariance from a genuine same-readout/different-successor witness."
+    },
+    {
+      "order": 4,
+      "task": "T-MEMORY",
+      "action": "Only after a witnessed failure, investigate an explicit state/history augmentation; no claim that an added variable is unique, minimal or sufficient until its own closure test."
+    },
+    {
+      "order": 5,
+      "task": "C-NET",
+      "action": "Proceed to cycle/network closure only with admitted coupled-edge state and update."
+    }
+  ],
+  "result_record": {
+    "target_law_selected": false,
+    "equivariance": "NOT_TESTED_NO_SOURCE",
+    "signed_Gram_dynamic_closure": "NOT_TESTED_NO_SOURCE",
+    "independent_vector_witness": null,
+    "same_readout_different_successor_witness": null,
+    "exact_reduced_update": null,
+    "physical_emergence_claimed": false
+  },
+  "amendment_scope": {
+    "registry_entries_added": 0,
+    "registry_v0_1_modified": false,
+    "original_four_programme_priorities_unchanged": true,
+    "owner_adoption": false,
+    "new_RRF_registration": false,
+    "other_stream_acceptance_or_dispatch_claimed": false
+  }
+}

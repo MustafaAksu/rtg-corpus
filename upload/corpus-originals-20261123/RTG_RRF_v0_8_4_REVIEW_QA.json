@@ -1,0 +1,19 @@
+{
+  "base_sha": "b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187",
+  "candidate_sha": "5b97f495ac4f7b502dd6b7c2b0f951e845728f217d07bd9fbb95863a6b41128f",
+  "candidate_bytes": 106723,
+  "source_dyad_sha": "f70308f19f5955c0597c03a27b572abfd4c8746aef6922c959675eb0d56e458d",
+  "source_recog_sha": "a3459522c8f58204f83f5e65e3d1a99912f9651d1c17cc4fb0c090196f670ae3",
+  "source_ofn_sha": "acb70a8cfc7962abcc047dedffb59e9ceca8f2e9843d6203df6eba54f5ed5dfa",
+  "source_genesis_sha": "d143673e9596abc900f54f269582299c87c9146504d6c9e1fd08ac294ba8c6fc",
+  "rer_reply_sha": "3092fd5a808c023869319fb991d5e87f89dab95096ddfeeb3911d81f24196053",
+  "sec_v08_sha": "0db65928574b3702be16b3cf9fcd6817c8457c8ef9c8766b71117e53392a8c24",
+  "sec_v083_sha": "0db65928574b3702be16b3cf9fcd6817c8457c8ef9c8766b71117e53392a8c24",
+  "sec_same": true,
+  "kept_history": true,
+  "native_profile_count_unchanged": true,
+  "adoption": "REVIEW CANDIDATE NOT ADOPTED",
+  "block_without_final_newline_sha": "588f37a0adcacd1a3150846a98e067a12713c63f59c4657712ab34c3191105a3",
+  "block_without_final_newline_bytes": 1905,
+  "two_block_hash_conventions_reconciled": true
+}

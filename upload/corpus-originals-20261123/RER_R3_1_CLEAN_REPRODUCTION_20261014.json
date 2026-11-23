@@ -1,0 +1,24 @@
+{
+  "archive_sha256": "0c79a746a46b11898fbe9460d8f9a56e1382ced483ee2f8e0444b4597e648e18",
+  "prior_attempt": "An aggregate container call was interrupted by the 45-second outer tool limit after the regression and K6 row check; not counted as completed. This new process records every completion separately.",
+  "runs": [
+    {
+      "script": "run_r3_1_checks.py",
+      "exit": 0,
+      "stdout": "PASS build\nPASS validate\nPASS false-global\nPASS false-full-coverage\nPASS false-pilot-complete\nPASS false-rrf-acceptance\nPASS changed-formula\n",
+      "stderr": "",
+      "seconds": 5.344089294000014
+    },
+    {
+      "script": "replay_stage2.py",
+      "exit": 0,
+      "stdout": "PASS regression exit 0\nPASS pilot_K6_rows exit 1\nPASS pilot_K8_rows exit 1\n",
+      "stderr": "",
+      "seconds": 28.631225330999996
+    }
+  ],
+  "manifest_entries_verified": 764,
+  "rebuild_exact": true,
+  "completed": true,
+  "scope": "Original supplied 41-suite and pilot-row coverage; one coarse K4 retry, no K6/K8 pilot or sweep restarted; new registry integration rebuild byte-identical."
+}

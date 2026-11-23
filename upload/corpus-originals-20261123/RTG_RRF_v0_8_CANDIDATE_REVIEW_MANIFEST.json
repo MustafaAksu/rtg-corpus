@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-14",
+  "candidate_is_adopted": false,
+  "comparison_base": "v0.7 DRAFT; NOT adopted final",
+  "adopted_final_sha_reported": "2a2b4102ba12e53bc56c746ffe30c553d24ecffa90afddeb4027cd72307717a5",
+  "adopted_final_bytes_reported": 57524,
+  "adopted_final_bytes_mounted": false,
+  "files": {
+    "RTG_RRF_REPRESENTATION_REGISTRY_v0_7_DRAFT.md": {
+      "sha256": "b7135dc9859fd17282b6fb70eee4dea04869d9bc2a405ad7fcbbb9cbb070bab9",
+      "bytes": 54734
+    },
+    "RTG_RRF_REPRESENTATION_REGISTRY_v0_7_ADOPTION_RECORD.md": {
+      "sha256": "d5d56c935e2c86512301b1fccb52eddd09c176351b1c371d6f360d94d7a4d8dd",
+      "bytes": 13379
+    },
+    "RTG_RRF_v0_8_INTEGRATION_DRAFT.md": {
+      "sha256": "a8946293d92e2fca460cbe6e6ea4aeff9edce436b61c1083a536ff28fafa8827",
+      "bytes": 21972
+    },
+    "RTG_RRF_RESPONSE_TO_OFN_COINCIDENCE_v0_2.md": {
+      "sha256": "897bfad065aa20c995b471c09cab564d4c1b6ac610769ae5b3f0fa1eb401126d",
+      "bytes": 8809
+    },
+    "RTG_RRF_COINCIDENCE_ADMISSIBILITY_REVIEW_v0_1.md": {
+      "sha256": "ef89db5c9aa6544c286cdc62b3841f4c7787ac90bf6512594865af122d472a53",
+      "bytes": 5975
+    },
+    "RTG_ONTOLOGICAL_FOUNDATIONS_v0_9.md": {
+      "sha256": "5ae8fdabad35a370f5709afa4d5dca6491e154c75f8a6f15fbb32d251fe59795",
+      "bytes": 158473
+    },
+    "RTG_RELATIONAL_RECOGNITION_DSN_v0_3_20.md": {
+      "sha256": "fdb8c9a72cbea67bae339a890f440b7d67c608979f7886279e2cd00bdabfb8df",
+      "bytes": 285585
+    },
+    "RTG_GENESIS_GEOMETRY_DSN_v2_8_5.md": {
+      "sha256": "41ed76602c1c87c42972ac5b3f0a53f6973ac484427473ac371c57db1ab475cf",
+      "bytes": 149799
+    },
+    "RTG_TRIADIC_BIRTH_LIFT_DSN_v1_6.md": {
+      "sha256": "c768687cec6d52ffd358dc362cee4348f076160943564adaa461e6c7c4595b36",
+      "bytes": 141313
+    },
+    "RTG_ER2B_CONSOLIDATED_STUDY_v0_2.md": {
+      "sha256": "ea26d3d1a4853ac88d1938dcb66c76eda4d55980ebf6f4d61091b97d67b2bb5e",
+      "bytes": 50183
+    },
+    "RTG_NUMBER_GENESIS_DSN_v1_20_7.md": {
+      "sha256": "c4637e7a5cfaf8eaf001746f172111385f5df2a8cd552e3ab56308ff7abfab28",
+      "bytes": 324155
+    },
+    "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_REVIEW_CANDIDATE.md": {
+      "sha256": "09fd4e010df6848ad52930a4af4ab64cf68642d8ebbed0afdc0c3fb58ba94abb",
+      "bytes": 72615
+    },
+    "RTG_RRF_v0_7_DRAFT_to_v0_8_CANDIDATE.diff": {
+      "sha256": "688ca1dc7b70a3993cc0ee44e220f09161196aec62080e42d86e2fdd5153c91c",
+      "bytes": 34181
+    }
+  }
+}

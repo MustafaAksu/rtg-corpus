@@ -1,0 +1,162 @@
+{
+  "runs": [
+    {
+      "job": "historical_t6s",
+      "script": "inputs/historical/triad_t6s_chirality.py",
+      "script_sha256": "0eb2fd1bf5ff3d44612b42428ee3285637ed09fbedc0585621daa55b69f325dc",
+      "arguments": [],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "pass_assertions": 11,
+      "fail_assertions": 0,
+      "expected_pass_assertions": 11,
+      "expected_failed_assertion": null,
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 0,
+      "seconds": 1.651489569999967
+    },
+    {
+      "job": "historical_t6t",
+      "script": "inputs/historical/triad_thread4_chirality_count.py",
+      "script_sha256": "e0718a25fa8d18338cb55d8fd84b13b17d72ecf6d1f5bd06a79b4b36a7afc909",
+      "arguments": [],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "pass_assertions": 13,
+      "fail_assertions": 0,
+      "expected_pass_assertions": 13,
+      "expected_failed_assertion": null,
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 0,
+      "seconds": 1.4404655890000413
+    },
+    {
+      "job": "historical_t6u",
+      "script": "inputs/historical/triad_t6u_apex_source.py",
+      "script_sha256": "435cf09964850626b08c6d7c59f6f93401cced554eff0cb023ce8f27cc96762f",
+      "arguments": [],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "pass_assertions": 8,
+      "fail_assertions": 0,
+      "expected_pass_assertions": 8,
+      "expected_failed_assertion": null,
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 0,
+      "seconds": 1.5054327740000417
+    },
+    {
+      "job": "t6u_v16_primary",
+      "script": "scripts/triad_t6u_apex_source_v1_6.py",
+      "script_sha256": "d38f0a394a80d3254bb93c5eb07bad0d0ac1d149e10a436c975c026167411240",
+      "arguments": [
+        "--output",
+        "evidence/t6u_certificate.json"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "pass_assertions": 47,
+      "fail_assertions": 0,
+      "expected_pass_assertions": 47,
+      "expected_failed_assertion": null,
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 0,
+      "seconds": 3.5472513460000528
+    },
+    {
+      "job": "r2_point_use",
+      "script": "scripts/triad_v1_6_r2_point_use_checks.py",
+      "script_sha256": "ae8dc0c27e5e9a4dd7cc7b7c25176df94a55730e88b32f18115275135eb9e306",
+      "arguments": [
+        "--output",
+        "evidence/r2_point_use_checks.json"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "pass_assertions": 16,
+      "fail_assertions": 0,
+      "expected_pass_assertions": 16,
+      "expected_failed_assertion": null,
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 0,
+      "seconds": 1.6909432449999713
+    },
+    {
+      "job": "negative_conflate",
+      "script": "scripts/triad_t6u_apex_source_v1_6.py",
+      "script_sha256": "d38f0a394a80d3254bb93c5eb07bad0d0ac1d149e10a436c975c026167411240",
+      "arguments": [
+        "--negative-conflate-readings"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "pass_assertions": 47,
+      "fail_assertions": 1,
+      "expected_pass_assertions": 47,
+      "expected_failed_assertion": "NEGATIVE: increment diagnostic is the first seeded state norm",
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 99,
+      "seconds": 3.4633374559999766
+    },
+    {
+      "job": "negative_only_c3",
+      "script": "scripts/triad_t6u_apex_source_v1_6.py",
+      "script_sha256": "d38f0a394a80d3254bb93c5eb07bad0d0ac1d149e10a436c975c026167411240",
+      "arguments": [
+        "--negative-only-c3-dependent"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "pass_assertions": 47,
+      "fail_assertions": 1,
+      "expected_pass_assertions": 47,
+      "expected_failed_assertion": "NEGATIVE: mixed channels add no kappa-dependent q^4 term",
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 94,
+      "seconds": 3.4196940849999464
+    },
+    {
+      "job": "negative_child_sign",
+      "script": "scripts/triad_v1_6_r2_point_use_checks.py",
+      "script_sha256": "ae8dc0c27e5e9a4dd7cc7b7c25176df94a55730e88b32f18115275135eb9e306",
+      "arguments": [
+        "--negative-unit-is-child"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "pass_assertions": 16,
+      "fail_assertions": 1,
+      "expected_pass_assertions": 16,
+      "expected_failed_assertion": "NEGATIVE: shear leading factor has +i phase",
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 63,
+      "seconds": 1.7284174310000253
+    },
+    {
+      "job": "r2_document_validation",
+      "script": "scripts/validate_r2.py",
+      "script_sha256": "0da9d8fab51f8ec7c50c0020d871aa348d475a511f54269d97de29f094f965b6",
+      "arguments": [],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "pass_assertions": 55,
+      "fail_assertions": 0,
+      "expected_pass_assertions": 55,
+      "expected_failed_assertion": null,
+      "correct_failure_reached": true,
+      "accepted": true,
+      "stderr_bytes": 0,
+      "seconds": 0.9412754769999765
+    }
+  ],
+  "all_expected_outcomes": true,
+  "scope": "historical bytes, unchanged primary assertions, r2 companion and mechanical checks; no microscopic return or numerical campaign rerun"
+}

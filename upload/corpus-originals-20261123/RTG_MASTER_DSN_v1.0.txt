@@ -1,0 +1,1384 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  RTG_MASTER_DSN_v1.0                                                         ║
+║  Relational Time Geometry — Complete Knowledge Anchor                        ║
+║  Layers: L0 (Configurational) · L1 (Spectral) · L2 (Effective Geometry)     ║
+║  Date: 2026-02-20                                                            ║
+║  Synthesized from: T_GENESIS_SPECTRAL_WINDOW_v4.3 +                         ║
+║                    RTG_CORE_KNOWLEDGE_v4.1 +                                 ║
+║                    L0_AUDIT_NATIVE + all review cycles                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌─ STATUS KEY ────────────────────────────────────────────────────────────────┐
+  ✓  = Locked / validated within stated scope                                 │
+  ⊕  = Master anchor (open items listed; safe to build on)                    │
+  ⚠  = Empirical / provisional / partial coverage / confound present         │
+  ⊗  = Open problem — blocking or high-priority                               │
+  !  = Hazard / do-not-conflate / scope warning                               │
+  ~  = Observed pattern; not yet mechanism-level                              │
+  ✗  = Falsified                                                              │
+  :=  = Definition (not empirical)                                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─ LAYER KEY ─────────────────────────────────────────────────────────────────┐
+  L0 = Configurational substrate (θ, μ, filtration, percolation, topology)   │
+  L1 = Microscopic dynamics (NS bifurcation, spectral competition, ΔH)       │
+  L2 = Effective geometry (SU(2) lift, κ₃ sector, patch-probe response)      │
+  L3 = Continuum EFT/GR mapping (EXCLUDED from this DSN)                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§0  EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OVERALL STATUS: ⊕ Master
+  L0: Locked and stable (substrate, filtration, normalization policy)
+  L1: Predictive-validated; structurally conditional (β derivation pending)
+  L2: R2 ensemble validated; Phase-4 partially gated pending null models
+
+LAYER SUMMARY:
+
+  L0: Frozen-μ filtration is machine-precision verified. Heavy-tail μ
+      distributions require MST-based normalization; single μ_spread
+      normalization is falsified for this substrate class. Growth selects
+      low-μ nodes algorithmically (KS=0.40 vs base). Percolation backbone
+      and bulk inclusion are distinct physical events.
+
+  L1: Neimark-Sacker circle fracture is governed by spectral competition
+      (B1), not Q-barrier. The window ΔH is predicted by a constitutive
+      spectral theorem with LOO CV ≤ 3.6%. The saturation exponent follows
+      α(φ) = 0.044·exp(1.673φ), empirically locked across 4 φ values.
+      Single-mode resonance (C) acts as a protective secondary modulator.
+      β derivation from Jacobian Im(σ) is the primary blocking condition
+      for full structural status.
+
+  L2: κ₃ is a non-Abelian closure defect preferentially concentrated at
+      embedded bottleneck hinges. Under symmetric π/2 shear probes, 94% of
+      Type-I faces exhibit quartic softening (Q_opp<0) within the probed
+      α-window. Phase-4 pilot (seed19) shows stability under lift restarts,
+      phase kicks, and edge cuts; probe-insensitivity interpretation requires
+      explicit discrimination test (pending).
+
+CROSS-LAYER DEPENDENCY:
+  L1 results are conditioned on L0 substrate (low-μ algorithmic selection,
+  KS=0.40). All L2 findings inherit this conditioning. Generalization to
+  non-stiffness-gated substrates requires explicit tests.
+
+CORE THEOREM (L1, conditional):
+  W_obs = ΔH_obs · γ²/K* ≈ (Δ_spec/c₂(φ)) · a₀(φ) · (X/X_ref)^{-α(φ)}
+  where α(φ) = 0.04399·exp(1.6728φ), X = K*/γ², X_ref = geometric mean
+  over complete dt×γ grid (φ-independent global reference).
+
+CORE CLAIM (L2, conditional):
+  "κ₃ is a non-Abelian closure defect preferentially concentrated at
+  embedded bottleneck hinges within a relational backbone; under symmetric
+  π/2 shear probes and within the probed α-window, 94% of Type-I faces
+  exhibit quartic softening consistent with constitutive yielding."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§1  SCOPE AND SUBSTRATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TOPOLOGY:        Directed ringdiag, ESM_TETRA
+COUPLING FORM:   θ̇_i = ω_i + Σ_j K_ij·[sin(θ_j−θ_i) + ε_asym·sin(θ_j−θ_i+φ)]
+                 Real-valued sinusoidal coupling.
+                 No literal exp(iφ) terms in implementation.
+                 Complex notation (e.g., exp(iφ)) is interpretive shorthand only.
+ε_ASYM:          0.25
+DEG_NORM:        false
+φ-GRID (L1):     {1.0, 1.2, 1.4, 1.6}
+dt GRID (L1):    {0.07, 0.09, 0.12}
+γ GRID (L1):     {0.8, 1.0, 1.3}
+SEEDS (L2):      17–26 (N=10, R2_ENSEMBLE)
+PIPELINE:        bootstrap → dipole_search → dipole_lock →
+                 flux_grow_v13 (v13.2) → su2_lift → patch_probe
+
+PIPELINE STATUS (as of v1.0):
+  bootstrap          → operational
+  dipole_search      → operational
+  dipole_lock        → operational (z-centering convention fix applied)
+  flux_grow_v13      → operational (v13.2; fixed: KAPPA_COMMON, edge_phase_diff,
+                       Any import, CLI ambiguity, 7 new flags)
+  su2_lift           → operational
+  patch_probe        → operational
+
+SUBSTRATE CONDITIONING (CRITICAL — CARRIES TO ALL LAYERS):
+  Layer 0a (Algorithmic):
+    ESM growth pipeline stiffness gate → low |Δω| preference → low μ selection.
+    KS=0.40 between grown-cluster μ and base-substrate μ distributions.
+    NOT emergent RTG physics; consequence of --min-stiffness parameter.
+    ALL L1 and L2 results are conditional on this selection.
+    Generalization requires tests on non-stiffness-gated clusters.
+
+  Layer 0b (Physical substrate):
+    Directed frustrated triad structure; ringdiag topology; ε_asym=0.25.
+    Intrinsic to this RTG substrate class.
+    Universality beyond this class: untested.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§2  L0 — CONFIGURATIONAL LAYER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+──────────────────────────────────────────────────────────────────────────────
+§2.1  AXIOMS
+──────────────────────────────────────────────────────────────────────────────
+
+AXIOM: RELATIONAL PRIMACY
+  All measurable structure arises from binary relations.
+  Nodes are persistent endpoints of relational structures.
+  IMPLEMENTATION NOTE: Current construction is node-first for operational
+  stability. Formal inversion (U_ij primary → Ĵ_i derived) is consistent
+  but deferred. This is a foundational fork that affects L1 perturbation
+  formalism.
+  STATUS: Foundational; not yet operationally inverted.
+
+AXIOM: SNAPSHOT INDEPENDENCE
+  L0 depends only on snapshot {θ_i} and fixed substrate data.
+  No γ, dt, update maps, NS thresholds, or time-averaging at L0.
+
+──────────────────────────────────────────────────────────────────────────────
+§2.2  SUBSTRATE SCHEMA
+──────────────────────────────────────────────────────────────────────────────
+
+REQUIRED NPZ FIELDS:
+  edges, r_geom, phi, spins, omega, tets, faces,
+  face_edges, tet_faces, mu_node, dmu_edge, alpha_edge
+
+──────────────────────────────────────────────────────────────────────────────
+§2.3  μ DEFINITION AND FROZEN THEOREM
+──────────────────────────────────────────────────────────────────────────────
+
+@DEF ID:D_MU_NODE
+  LAYER: L0
+  STATUS: :=
+  EQ:
+    μ_i = Σ_{j~i} w_ij · |sin((θ_j − θ_i) − α_ij)|
+
+  CANONICAL WEIGHT (ESM):
+    w_ij = r_geom,ij^{-2}
+
+  ALTERNATIVE WEIGHT (Genesis):
+    w_ij = |κ̂_ij|
+
+@V ID:V_L0_FROZEN_MU_THEOREM
+  LAYER: L0
+  STATUS: ✓ Locked
+  SCOPE: run_28 native NPZ; N=160 nodes
+  RESULT:
+    max|μ_recomputed − μ_stored| = 2.27e-13  (machine precision)
+    max|dμ_recomputed − dμ_stored| = 3.41e-13
+  IMPLICATION:
+    Filtration A_active(ε) is strictly monotone.
+    No ε-dependent recomputation loop required.
+    Persistent homology interpretation is valid.
+
+──────────────────────────────────────────────────────────────────────────────
+§2.4  SU(2) DEFECT SEED
+──────────────────────────────────────────────────────────────────────────────
+
+@DEF ID:D_SU2_DEFECT
+  LAYER: L0
+  STATUS: :=
+  EQ:
+    U_ij = exp(−i·((θ_j−θ_i)−α_ij)·σ₃/2)
+    H_f = U_ij · U_jk · U_ki    (holonomy around face f = triangle ijk)
+    Δ_f^(0) = 1 − (1/2)Tr(H_f)  (trace-gap = SU(2) defect measure)
+  ROLE:
+    L0 diagnostic for closure failure; input to L2 κ₃ analysis.
+    Canonical L0 trace-gap measures closure failure only.
+
+──────────────────────────────────────────────────────────────────────────────
+§2.5  FILTRATION AND PERCOLATION
+──────────────────────────────────────────────────────────────────────────────
+
+@DEF ID:D_FILTRATION_METRIC
+  LAYER: L0
+  STATUS: :=
+  EQ:
+    d_ij = dmu_edge_ij  (stored directly; equals |μ_i − μ_j| by construction)
+  NOTE: dmu_edge is precomputed and frozen. Reference stored field directly;
+        do not re-derive from node μ values at runtime.
+
+@V ID:V_L0_DISTINCT_PERCOLATION_EVENTS
+  LAYER: L0
+  STATUS: ✓ Locked
+  SCOPE: run_28 native NPZ; 99-quantile ε grid
+  RESULT:
+    ε_c_dS  (max slope / backbone onset)  = 0.462
+    ε_c_50  (S ≥ 0.5 / bulk inclusion)    = 3.912
+    Ratio: ~8.5×
+  IMPLICATION:
+    These are DISTINCT physical events:
+      ε_c_dS → backbone formation (first spanning connected subgraph)
+      ε_c_50 → bulk inclusion (majority of nodes connected)
+    They coincide only in thin-tailed μ distributions.
+    Prior assumption "either threshold is equivalent" is FALSIFIED for
+    heavy-tail substrates.
+  BASE SUBSTRATE STATS (run_28):
+    N=160, E=746, F=1305, T=586
+    μ_median=14.14, μ_p95=543.4, μ_max=1406.1  (heavy-tailed)
+    Bridge peak: 28 bridges at ε=0.615 (post-backbone, pre-bulk)
+  TOPOLOGY:
+    β1_EP peak = 13 at ε=16.14
+    NOTE: β1_EP valid only when β0≈1, β2≈0, β3≈0.
+    At β1 peak, β0 > 1 was observed — report β0 at peak in all analyses.
+
+──────────────────────────────────────────────────────────────────────────────
+§2.6  NORMALIZATION POLICY
+──────────────────────────────────────────────────────────────────────────────
+
+@THM ID:THM_L0_PERCOLATION_NORMALIZATION
+  LAYER: L0
+  STATUS: ⊕ Theory-fixed; multi-run validation pending
+  RESULT:
+    Intrinsic percolation scale = MST maximum edge weight:
+      ε_MST = max_{e ∈ MST(G,w)} w_e
+    This is the theoretically correct normalization for ε_c_dS.
+    Low dμ quantiles (p05) approximate it in heavy-tail regimes.
+    μ_spread normalization is inadequate for heavy-tail substrates.
+
+  POLICY:
+    ε_c_dS   → normalize by ε_MST (theory) or dμ_p05 (empirical proxy)
+    ε_β1peak → normalize by μ_median
+    DO NOT use single μ_spread for both.
+    DO NOT select normalization quantile by minimizing variance (circular).
+
+  SCALING LAW STATUS:
+    Previous ensemble constants (0.0507, 0.127) were derived on thin-tailed μ.
+    Run_28 ratios differ by factors of 11–154× due to heavy tails.
+    Constants are not universal; they are substrate-distribution-dependent.
+
+  VALIDATION REQUIRED:
+    Confirm MST normalization collapses ε_c across ≥3 run directories (⊗).
+
+──────────────────────────────────────────────────────────────────────────────
+§2.7  GROWTH SELECTION AND BRIDGE TOPOLOGY
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_L0_LOW_MU_GROWTH_SELECTION
+  LAYER: L0
+  STATUS: ✓ Locked (mechanism identified)
+  RESULT:
+    Grown-cluster μ median < base μ median; KS=0.40
+  MECHANISM: Algorithmic.
+    Stiffness gate → low |Δω| → low μ by definition of μ.
+    NOT emergent RTG physics. NOT requiring L1 theoretical explanation.
+  IMPLICATION:
+    All L1 and L2 results computed on non-representative low-μ subsample.
+    Carry as explicit caveat in all downstream results.
+
+@V ID:V_L0_BRIDGE_BACKBONE_CONVERGENCE
+  LAYER: L0
+  STATUS: ⚠ Partial convergence; not proven
+  RESULT:
+    28 base bridges at ε=0.615 (post-backbone onset)
+    19 of 28 bridges are inside the grown-node set
+    Small but non-zero overlap with growth boundary edges
+  INTERPRETATION:
+    L0 bridge structure and L1 growth bottlenecks are related but not identical.
+    Convergence is suggestive; exact edge matching and correlation test pending.
+
+@V ID:V_L0_BACKBONE_RTG_INTERPRETATION
+  LAYER: L0
+  STATUS: ⊕ RTG-consistent interpretation proposed; κ₃ alignment pending
+  RESULT:
+    ε_c_dS = scale at which substrate first supports a system-spanning
+    path of near-matched edges (r_em ≈ r_geom along the path).
+    RTG interpretation: first macroscopic path of approximate gauge
+    consistency. Not purely combinatorial.
+  OPEN: Quantitative alignment with κ₃ stress localization (⊗).
+
+──────────────────────────────────────────────────────────────────────────────
+§2.8  L0 OPEN PROBLEMS
+──────────────────────────────────────────────────────────────────────────────
+
+@O ID:O_L0_MST_NORMALIZATION_VALIDATION
+  LAYER: L0
+  STATUS: ⊗
+  PRIORITY: MEDIUM
+  QUESTION: Does MST-normalized ε_c collapse across ≥3 run directories?
+  ACCEPTANCE: Compute ε_c_dS / ε_MST for 3 runs; CV < 20% across runs.
+
+@O ID:O_L0_BRIDGE_KAP3_OVERLAP
+  LAYER: L0
+  STATUS: ⊗
+  PRIORITY: LOW
+  QUESTION: Do bridge-peak edges overlap with κ₃ bottleneck edges?
+  ACCEPTANCE: Exact edge-level matching; Jaccard coefficient + p-value
+              under random null.
+
+@O ID:O_L0_RELATIONAL_INVERSION
+  LAYER: L0
+  STATUS: ⊗
+  PRIORITY: LOW (not blocking L1/L2)
+  QUESTION: Can nodes Ĵ_i be derived from edge transports U_ij?
+  NOTE: This affects whether perturbation theory is node-first or edge-first.
+        Foundational but not blocking current empirical work.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§3  L1 — SPECTRAL COMPETITION LAYER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SCOPE: φ∈{1.0,1.2,1.4,1.6} | dt∈{0.07,0.09,0.12} | γ∈{0.8,1.0,1.3}
+       Full 3×3 grid per φ (36 cases total); grid-complete after Phase-3.5.
+       All results conditional on Layer 0a (low-μ algorithmic selection).
+
+──────────────────────────────────────────────────────────────────────────────
+§3.1  NEAR-SPARK GROWTH LAW (c(φ) CORRECTION)
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_C_PHI_COMPLEX_SIGMA_CORRECTION
+  LAYER: L1
+  STATUS: ✓ Locked
+  RESULT:
+    Near-spark NS growth law: d|λ₁|²/dK = EOS_real × c(φ) × (dt·γ/K*)
+    c(φ) = 1.000 exactly in undirected / ε_asym=0 regime (real-σ limit).
+    c(φ) < 1 in directed+frustrated regime; dt/γ-independent (constitutive).
+    c(φ) decreases as φ increases.
+  MECHANISM: σ is genuinely complex in frustrated directed coupling.
+    The real-σ det(A) shortcut fails; Im(σ) ≠ 0.
+  DSN STATEMENT: "EOS_real × c(φ)", not "EOS_real".
+
+──────────────────────────────────────────────────────────────────────────────
+§3.2  NS FIRST LYAPUNOV COEFFICIENT
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_L1_FIRST_LYAPUNOV_SIGN
+  LAYER: L1
+  STATUS: ✓ Locked
+  SCOPE: φ∈{1.0, 1.2, 1.6}; projected-v3 pipeline
+  RESULT: l₁ < 0 (supercritical NS birth) at all tested φ values.
+  IMPLICATION: NS circle is born via supercritical bifurcation; circle
+               grows continuously from K_spark.
+
+──────────────────────────────────────────────────────────────────────────────
+§3.3  PRIMARY FRACTURE MECHANISM — B1 MODE COMPETITION
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_B1_MODE_COMPETITION_PRIMARY
+  LAYER: L1
+  STATUS: ✓ Locked
+  SCOPE: φ∈{1.0,1.2,1.4,1.6} | full dt×γ grid | threshold-free analysis
+  EVIDENCE:
+    (1) comp_ratio@fracture = |λ₂|/|λ₁| ≈ 0.97–0.99 across all φ, dt, γ.
+    (2) K_lam2_hit_pred < K_fracture in all cases (threshold-free).
+        Competitor extrapolated to cross |λ|=1 BEFORE observed fracture.
+        φ=1.0: Λ_comp = K_fracture − K_lam2_hit_pred ≈ −1.66 K-units
+        φ=1.6: Λ_comp = K_fracture − K_lam2_hit_pred ≈ −0.91 K-units
+  B1 vs B2 DISTINCTION:
+    φ=1.0: inter_modal_gap >> single_mode_gap → B2 excluded
+    φ=1.6: inter_modal_gap (0.00115) < single_mode_gap (0.00170)
+           → B2 cannot be excluded; Arnold tongue width check pending (⊗)
+           NOTE: proximity is necessary but not sufficient for B2 causal role.
+  FALSIFICATION CONDITION:
+    If K_lam2_hit_pred > K_fracture in any validated case → B1 primary rejected.
+
+@V ID:V_L1_QBARRIER_FALSIFIED
+  LAYER: L1
+  STATUS: ✗ Falsified
+  RESULT: Q-barrier (ΔH–l₁–Q invariant S(φ)) fails with ratio ≈ 2.6–2.9.
+  EXPLANATION: |λ₂|→1 extrapolates before fracture; barrier amplitude
+               never reached. S(φ) failure is mechanistic, not parametric.
+
+@V ID:V_L1_C_PRIMARY_FALSIFIED
+  LAYER: L1
+  STATUS: ✗ Falsified
+  RESULT: res_gap@fracture does NOT decrease monotonically with φ.
+    dt=0.07, γ=0.8 cells show INCREASING res_gap as φ increases
+    (0.0042 → 0.0056 → 0.0080).
+  CONCLUSION: Single-mode resonance proximity (C) is not primary closure.
+
+──────────────────────────────────────────────────────────────────────────────
+§3.4  COMPETITOR GROWTH — c₂(φ) CONSTITUTIVE FACTOR
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_C2_PHI_COMPETITOR_SLOPE_CONSTITUTIVE
+  LAYER: L1
+  STATUS: ✓ Locked
+  RESULT:
+    d|λ₂|/dK = c₂(φ) · (dt·γ/K*)
+    φ=1.0: c₂ ≈ 0.335 (CV=6.7%)
+    φ=1.6: c₂ ≈ 0.375 (CV=7.9%)
+    corr(c₂, γ/dt) ≈ −0.089 (structurally zero → dt/γ-independent)
+  ANTI-CORRELATION WITH c(φ):
+    c(φ) DECREASES with φ (primary mode slows)
+    c₂(φ) INCREASES with φ (competitor accelerates)
+    → Anti-correlated spectral flow: modes exchange dominance as φ increases.
+    c(φ)/c₂(φ) is candidate dimensionless control parameter for ΔH(φ).
+
+──────────────────────────────────────────────────────────────────────────────
+§3.5  SPECTRAL WINDOW THEOREM
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_ALPHA_PHI_VALUES
+  LAYER: L1
+  STATUS: ✓ Locked
+  SCOPE: All four φ values; full 3×3 grid; robustness confirmed
+  RESULT (per-φ power-law exponents, threshold-free):
+    φ=1.0 → α = 0.2379
+    φ=1.2 → α = 0.3225
+    φ=1.4 → α = 0.4508
+    φ=1.6 → α = 0.6489
+  ROBUSTNESS:
+    Δα < 0.5% after grid completion (missing cells added).
+    Δβ < 0.1% after grid completion.
+    α(φ) ordering is leverage-unbiased and grid-stable.
+
+@V ID:V_ALPHA_PHI_EXPONENTIAL_FORM
+  LAYER: L1
+  STATUS: ✓ Locked (within-φ); ⚠ Cross-φ refinement pending
+  FIT:
+    α(φ) = α₀ · exp(β·φ)
+    α₀ ≈ 0.04399
+    β  ≈ 1.6728
+    R² ≈ 0.9984  (4 points)
+  WITHIN-φ LOO VALIDATION (V3 predictor):
+    φ=1.0: η3_LOO CV = 1.0%
+    φ=1.2: η3_LOO CV = 1.4%
+    φ=1.4: η3_LOO CV = 2.2%
+    φ=1.6: η3_LOO CV = 3.6%
+    CONCLUSION: V3 is predictive (not fitted identity).
+    COMPARISON: V1 CV at φ=1.6 = 22.9% → V3 CV = 3.6% (6× reduction).
+  CROSS-φ VALIDATION:
+    Shape correct; ±2–5% systematic oscillating bias remains.
+    Quadratic a₀(φ) reduces but does not eliminate bias (R²=0.859 at n=4).
+    PREFERRED EXPLANATION: rational-structure in a₀(φ) (see §3.8).
+    ALTERNATIVE: higher-order exponential correction term.
+  β DERIVABILITY NOTE:
+    Coupling contains sin(φ) and cos(φ) terms (bounded, periodic).
+    Exponential α(φ) over φ∈[1.0,1.6] may be empirical approximation.
+    β derivation may yield:
+      (a) Exact exponential via topological amplification
+      (b) Approximation form (tan(φ/2), sinh(φ)) resembling exponential
+          over [1.0,1.6]
+      (c) Network-level operating-point shift: fixed points shift with φ →
+          cosine operating points shift → multiplicative accumulation across
+          network → effective exponential-like growth without violating
+          bounded local coupling.
+    Distinguishing (a)/(b)/(c) requires φ values outside [1.0,1.6].
+    β DERIVATION IS THE PRIMARY BLOCKING CONDITION FOR STRUCTURAL STATUS.
+
+@THM ID:THM_SPECTRAL_WINDOW
+  LAYER: L1
+  STATUS: ⊕ Predictive-validated; structural (conditional on β derivation)
+  FORMULA:
+    W_obs := ΔH_obs · γ²/K*
+
+    W_obs ≈ (Δ_spec/c₂(φ)) · a₀(φ) · (X/X_ref)^{−α(φ)}
+
+    where:
+      X     = K*/γ²                (per-case)
+      X_ref = geometric mean of K*(dt,γ)/γ² over complete dt×γ grid
+              (φ-INDEPENDENT global reference; prevents a₀/X_ref entanglement)
+      α(φ)  = 0.04399 · exp(1.6728·φ)
+      c₂(φ) = constitutive competitor slope factor (see §3.4)
+      Δ_spec = 1 − |λ₂(K*)|       (spectral gap at K_spark)
+      a₀(φ) = φ-dependent prefactor (cross-φ model; quadratic fit R²=0.859)
+  NORMALIZATION NOTE:
+    X_ref must be computed over the full dt×γ parameter grid, NOT over
+    per-φ mini-grids. Per-φ X_ref creates a₀(φ)/X_ref(φ)^{α(φ)} entanglement
+    making a₀(φ) non-identifiable.
+  K*/γ² ENTANGLEMENT:
+    corr(η, K*/γ²) ≈ −0.97 (near-deterministic before correction).
+    Power-law correction absorbed this: R²≥0.977 within each φ.
+    After correction: residual CV = 0.6%–2.2% (increases with φ).
+
+──────────────────────────────────────────────────────────────────────────────
+§3.6  EXTRAPOLATION-DISTANCE AMPLIFIER
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_RK_THRESHOLD_ACTIVATION
+  LAYER: L1
+  STATUS: ✓ Observed (threshold existence); ⚠ Location and mechanism pending
+  METRIC:
+    R_K = (K_fracture − K*) / K*
+  PARTIAL CORRELATION:
+    pcorr(logA, R_K | log(K*/γ²)):
+      φ=1.0: ≈0.072 (R_K is K*/γ² proxy only)
+      φ=1.2: ≈0.001 (R_K is K*/γ² proxy only)
+      φ=1.4: ≈0.685 (R_K becomes independent amplifier)
+      φ=1.6: ≈0.620 (R_K independent amplifier)
+  THRESHOLD:
+    φ* ∈ (1.2, 1.4). Midpoint φ*≈1.3 is estimate ONLY.
+  INTERPRETATION:
+    At φ ≤ 1.2: R_K is a proxy for K*/γ²; no independent distance effect.
+    At φ ≥ 1.4: extrapolation-distance becomes an independent secondary amplifier.
+    This is a mechanism-layer phase transition not visible in smooth α(φ).
+  BLOCKING:
+    φ=1.25, 1.35 required to locate φ* to ±0.05 precision.
+  NOTE: R_K and φ are globally anti-correlated (corr≈−0.966), so
+        within-φ R_K effect and constitutive φ-effect are confounded globally.
+
+──────────────────────────────────────────────────────────────────────────────
+§3.7  RESONANCE MODULATION (C) — PROTECTIVE SECONDARY
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_C_PROTECTIVE_MODULATOR
+  LAYER: L1
+  STATUS: ✓ Locked (sign confirmed; trend observed)
+  RESULT:
+    corr(V3 residual, res_gap_fracture):
+      φ=1.0: +0.447
+      φ=1.2: +0.389
+      φ=1.4: +0.326
+      φ=1.6: +0.339  (slight recovery)
+    Sign: POSITIVE across all φ.
+  INTERPRETATION:
+    Larger resonance proximity → positive residual →
+    survival extended BEYOND competition baseline prediction.
+    C is protective, not destructive. Not primary closure.
+  TREND:
+    Protective strength DECREASES from φ=1.0→1.4, consistent with
+    faster c₂(φ) leaving less time for rational-rotation stabilization.
+    Slight recovery at φ=1.6 may indicate B2 inter-modal channel (⊗).
+  PROPOSED MECHANISM:
+    Near rational rotation → small-denominator-like conditions →
+    temporarily reduced perturbation growth from primary to competitor.
+    NOTE: Classical KAM theory applies to Hamiltonian (conservative) systems.
+    This system is dissipative. KAM language requires extension via
+    normally hyperbolic invariant manifold theory (Fenichel) or direct
+    Jacobian evidence before formal use.
+    STATUS: Analogy proposed; mechanism not formally derived.
+    MINIMUM SAFE LANGUAGE: "observed protective modulation near rational
+    rotation" — no KAM claim without conservative-system justification.
+
+──────────────────────────────────────────────────────────────────────────────
+§3.8  RATIONAL-STRUCTURE HYPOTHESIS (CROSS-φ BIAS)
+──────────────────────────────────────────────────────────────────────────────
+
+@H ID:H_RATIONAL_STRUCTURE_PREFERRED
+  LAYER: L1
+  STATUS: Preferred hypothesis; not locked (n=4 φ values)
+  DEFINITION:
+    dQ(φ) = min_{q≤10, 1≤p≤q} |φ/(2π) − p/q|
+  EVIDENCE (three independent lines):
+    (1) Quadratic a₀(φ) fit R²=0.859 at n=4 — polynomial underfitting
+        (quadratic with 3 parameters fitting 4 points should give R²>0.95
+        for smooth data; R²=0.859 is weak → data is non-polynomial)
+    (2) corr(cross-φ bias, dQ) = −0.784 (n=4)
+    (3) Oscillating bias sign pattern (0, −, +, −) inconsistent with
+        smooth polynomial underfitting
+  PHYSICAL MOTIVATION:
+    Coupling contains sin(θ+φ) terms; at fixed points these contribute
+    cos(φ+offset) Jacobian terms. Near-rational φ/(2π) may produce
+    quasi-periodic coupling structure affecting cross-φ model performance.
+    NOTE: Coupling is real-valued; no literal exp(iφ) in implementation.
+  STATUS UPGRADE CONDITION:
+    n≥6 φ values; confirm dQ correlation persists.
+    Add φ=1.25, 1.35 (also needed for φ* location).
+
+──────────────────────────────────────────────────────────────────────────────
+§3.9  RESIDUAL STRUCTURE AND B2 HYPOTHESIS
+──────────────────────────────────────────────────────────────────────────────
+
+~ RESIDUAL EXPONENTIAL PRECISION DECAY
+  LAYER: L1
+  STATUS: ~ Observed (not a mechanism layer; diagnostic only)
+  RESULT:
+    Composite residual CV (after c₂-collapse + power-law correction):
+      φ=1.0: 0.6%  |  φ=1.2: 1.0%  |  φ=1.4: 1.5%  |  φ=1.6: 2.2%
+    Fit: log(CV_res) ≈ 2.08·φ  (R²≈0.998)
+  COMPARISON WITH α EXPONENT:
+    Primary exponent: β ≈ 1.673
+    Residual exponent: ≈ 2.08
+    Excess: 2.08 − 1.673 = 0.407
+    INTERPRETATION: Residual precision decays faster than primary saturation.
+    Candidate: B2 inter-modal coupling grows at rate ≈0.41/unit φ.
+    → See H_B2_EXPONENT_ADDITIVITY.
+
+@H ID:H_B2_EXPONENT_ADDITIVITY
+  LAYER: L1
+  STATUS: Hypothesis
+  OBSERVATION: 2.08 ≈ 1.673 + 0.41
+  PREDICTION:
+    B2 inter-modal coupling growth rate γ_B2 ≈ 0.41/unit φ.
+    → inter-modal coupling strength ∝ exp(0.41·φ).
+  CONFIRMATION CRITERIA:
+    corr(V3 residual, inter_modal_gap) increases with φ;
+    residual growth rate matches 0.41/unit φ after instrumentation.
+  FALSIFICATION:
+    inter_modal_gap shows no systematic correlation with residual,
+    OR residual growth is φ-independent after instrumentation.
+  REQUIRED: Export lam1_ang, lam2_ang from diagnosis pipeline (one-line fix).
+
+──────────────────────────────────────────────────────────────────────────────
+§3.10  L1 LAYERED ARCHITECTURE
+──────────────────────────────────────────────────────────────────────────────
+
+FULL MECHANISM STACK:
+
+  Layer 0a: Algorithmic substrate conditioning
+    Low-μ selection (KS=0.40); source: stiffness gate.
+    NOT emergent — all L1 results conditional on this.
+
+  Layer 0b: Physical substrate conditioning
+    Directed ringdiag; ε_asym=0.25; frustrated triad structure.
+
+  Layer 1: B1 mode competition (PRIMARY CLOSURE)
+    comp_ratio@fracture ≈ 0.97–0.99; K_lam2_hit_pred < K_fracture.
+
+  Layer 2: α(φ) exponential saturation (CONSTITUTIVE)
+    α(φ) = 0.04399·exp(1.6728φ); empirically locked within [1.0,1.6].
+
+  Layer 3: R_K extrapolation amplifier
+    Activates at φ*∈(1.2,1.4); secondary, φ-dependent.
+
+  Layer 4: C resonance protective modulation
+    Positive residual; decreases with φ; KAM analogy proposed only.
+
+  Residual Structure: Exponential precision decay (likely B2 signature)
+    NOT a mechanism layer — diagnostic pointer to missing physics.
+
+──────────────────────────────────────────────────────────────────────────────
+§3.11  L1 OPEN PROBLEMS (PRIORITY ORDERED)
+──────────────────────────────────────────────────────────────────────────────
+
+@O ID:O_BETA_DERIVATION_JACOBIAN
+  LAYER: L1
+  STATUS: ⊗ BLOCKING (highest priority for structural theorem status)
+  QUESTION:
+    Is β≈1.673 derivable analytically from Kuramoto Jacobian Im(σ)?
+  NOTE:
+    Sinusoidal coupling is bounded/periodic, so true exponential requires
+    one of: (a) topological amplification, (b) approximation over [1.0,1.6],
+    (c) network-level operating-point shift amplification.
+    β derivation will determine which case and whether exponential is exact
+    or approximate. This is independent of new simulations.
+  ACCEPTANCE:
+    Derive closed-form β(ε_asym, φ) from Jacobian structure;
+    confirm R²≥0.99 for predicted vs observed α(φ).
+
+@O ID:O_INTER_MODAL_GAP_EXPORT
+  LAYER: L1
+  STATUS: ⊗ HIGH (one-line pipeline change; no new simulations)
+  QUESTION:
+    Does inter-modal coupling rate match B2 additivity prediction (0.41/unit φ)?
+  ACTION: Add lam1_ang, lam2_ang to diagnosis_points.csv export.
+  RESOLVES: H_B2_EXPONENT_ADDITIVITY AND Arnold tongue width check at φ=1.6.
+
+@O ID:O_PHI_STAR_LOCATION
+  LAYER: L1
+  STATUS: ⊗ HIGH
+  QUESTION: Where exactly is the R_K activation threshold φ*?
+  ACTION: Add φ=1.25, 1.35 to simulation grid.
+  RESOLVES: R_K threshold location (±0.05); rational-structure hypothesis
+            validation (n→6).
+
+@O ID:O_RATIONAL_STRUCTURE_VALIDATION
+  LAYER: L1
+  STATUS: ⊗ MEDIUM (follows from φ* simulations)
+  QUESTION: Does corr(cross-φ bias, dQ) persist beyond n=4 φ values?
+  ACCEPTANCE: n≥6 φ values; corr magnitude >0.7 and sign consistent.
+
+@O ID:O_ARNOLD_TONGUE_B2_PHI16
+  LAYER: L1
+  STATUS: ⊗ MEDIUM (partially resolved by O_INTER_MODAL_GAP_EXPORT)
+  QUESTION: Is B2 causally active at φ=1.6?
+  REQUIRED: Arnold tongue half-width at relevant rational rotation number
+            at K_fracture. Width > 0.00115 → B2 cannot be excluded.
+  NOTE: Proximity is necessary; tongue width is sufficient condition.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§4  L2 — EFFECTIVE GEOMETRY LAYER (κ₃ SECTOR)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SCOPE: R2_ENSEMBLE | N=10 seeds (17–26) | ESM_TETRA | SU2_LIFT + PATCH_PROBE (π/2)
+       Per-seed natural face cap (typically 120; seed25 re-grown to 120).
+       All results conditional on Layer 0a (low-μ algorithmic selection).
+
+──────────────────────────────────────────────────────────────────────────────
+§4.1  DEFINITIONS
+──────────────────────────────────────────────────────────────────────────────
+
+@DEF ID:D_TYPEI_GATE_PI2
+  LAYER: L2
+  STATUS: :=
+  SCOPE: PATCH_PROBE (π/2)
+  EQ:
+    Type-I(A)(f) := [n_active_faces(f) ≥ 2]
+                AND [percolation_ratio_E(f) ≥ 2.6]
+                AND [gap_ref_opp(f) ≤ 1e-2]
+  THRESHOLD PROVENANCE:
+    n_active_faces ≥ 2:
+      Source: Inherited operational minimum from Phase-3 protocol.
+      Rationale: Exclude single-active-face patches (vacuum/gauge-only).
+      Not tuned on R2 outcomes.
+    percolation_ratio_E ≥ 2.6:
+      Source: Inherited Phase-3 pilot gate.
+      Rationale: Conservative separation from ~2.0–2.5 vacuum-like plateau.
+      Not post-hoc optimized on R2 ensemble.
+    gap_ref_opp ≤ 1e-2:
+      Source: Inherited holonomy-consistency gate.
+      Rationale: Exclude gap-large Ricci-hot false positives.
+      Not post-hoc optimized on R2 ensemble.
+  BIAS WARNING:
+    If any threshold was tuned using Phase-3/R2 outcomes, prevalence
+    estimates become selection-conditioned.
+    Any tuning must be documented with out-of-sample validation.
+
+@DEF ID:D_KAPPA3_DENS
+  LAYER: L2
+  STATUS: :=
+  SCOPE: PATCH_PROBE (π/2)
+  EQ:
+    ΔE(f) := E_ref_opp(f) − E_ref_same(f)
+    κ₃^dens(f) := ΔE(f) / max(1, n_active_faces(f))
+  MECHANICAL CONFOUND (BUILT-IN):
+    Smaller n_active inflates per-face density by definition.
+    This confound applies everywhere κ₃^dens is compared across n_active groups.
+    Do NOT interpret raw κ₃^dens differences as purely relational without
+    null model controlling for n_active.
+
+@DEF ID:D_RELATIONAL_BACKBONE_KCORE
+  LAYER: L2
+  STATUS: :=
+  EQ:
+    Build graph G over Type-I faces.
+    Connect faces by:
+      edge-sharing adjacency  := share ≥ 2 vertices
+      vertex-sharing adjacency := share ≥ 1 vertex
+    Relational core := k-core(G, k=2).
+
+@DEF ID:D_BOTTLENECK_HINGE
+  LAYER: L2
+  STATUS: :=
+  EQ:
+    bottleneck(f) := [f ∈ k-core(G, k=2)] AND [n_active_faces(f) = 2]
+  CRITICAL NOTE:
+    All bottlenecks have n_active=2 BY DEFINITION.
+    → κ₃^dens enrichment at bottlenecks is mechanically confounded with
+      n_active denominator inflation (see D_KAPPA3_DENS confound note).
+    → Bottleneck enrichment ratio cannot be attributed to relational
+      localization alone until null model controls for n_active.
+    Do NOT equate n_active=2 with geometric boundary.
+    Bottleneck hinges are typically embedded.
+
+──────────────────────────────────────────────────────────────────────────────
+§4.2  EXISTENCE AND TOPOLOGY
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_TYPEI_EXISTENCE_PREVALENCE_R2_N10
+  LAYER: L2
+  STATUS: ✓
+  SCOPE: PHASE3 | π/2 scan | seeds 17–26 | 100% face coverage per seed cap
+  METRICS:
+    prevalence_mean: 0.2358
+    prevalence_std:  0.0614
+    prevalence_range: ~0.133 .. ~0.325
+  CONDITIONING NOTE:
+    Conditional on growth protocol and low-μ algorithmic selection (KS=0.40).
+  ARTIFACT: sensitivity_analysis_N10.csv
+
+@V ID:V_TYPEI_TOPOLOGY_ADJACENCY_LIFT_R2_N10
+  LAYER: L2
+  STATUS: ✓
+  SCOPE: PHASE3 | Type-I adjacency graphs | seeds 17–26
+  METRICS:
+    edge adj:   n_components_mean=6.5 | max_component_mean=12.1 | max_frac=0.428
+    vertex adj: n_components_mean=3.9 | max_component_mean=16.3 | max_frac=0.580
+  NOTE: All topology statements must specify adjacency mode (edge vs vertex).
+  ARTIFACT: sensitivity_analysis_N10.csv
+
+──────────────────────────────────────────────────────────────────────────────
+§4.3  STRESS ANATOMY
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_STRESS_ANATOMY_PATCH_PROXY_R2_N10
+  LAYER: L2
+  STATUS: ✓
+  SCOPE: PHASE3 | Type-I(A) | κ₃^dens | seeds 17–26 | π/2 scan
+  METRICS:
+    Type-I rows: 283  |  Boundary (n≤2): 169  |  Core (n≥3): 114
+    Boundary κ₃^dens median: 2.366  |  95% CI [2.227, 2.548]
+    Core     κ₃^dens median: 1.796  |  95% CI [1.672, 1.861]
+    Mann-Whitney p: 1.10e-19  (PRIMARY — distribution-free)
+    Cliff δ: 0.637             (PRIMARY — distribution-free)
+    Cohen d: 1.076             (SECONDARY — distribution-shape sensitive;
+                                heavy-tail μ reduces reliability)
+  MECHANISTIC CONFOUND:
+    n_active_faces is a constraint-count proxy. Higher κ₃^dens at n≤2 may
+    partially reflect mechanical underdetermination (fewer constraints)
+    rather than purely relational stress localization.
+    Null control required before relational interpretation is safe (see @O below).
+  ARTIFACT: stress_anatomy_stats.json, stress_anatomy_samples.csv
+
+@O ID:O_NULL_STRESS_ANATOMY
+  LAYER: L2
+  STATUS: ⊗
+  PRIORITY: HIGH
+  QUESTION:
+    Is κ₃^dens(n_active≤2) > κ₃^dens(n_active≥3) exceptional vs random subsets?
+    Is bottleneck κ₃^dens enrichment (ratio 1.602) exceptional vs random?
+  ACCEPTANCE:
+    For each seed, draw M random face subsets of size |Type-I| with
+    matched size/topology. Compute κ₃^dens vs n_active split.
+    Report z-score, percentile per seed, and aggregate.
+    Include bottleneck-specific null comparison (n_active=2 subsets).
+
+@V ID:V_BOTTLENECK_LOCALIZATION_RELATIONAL_R2_N10
+  LAYER: L2
+  STATUS: ✓ (raw result); ⚠ (relational attribution pending null model)
+  SCOPE: PHASE3 | Type-I(A) | bottleneck = k-core∧n_active=2 | adj=edge
+  METRICS:
+    bottleneck_count: 209  |  rest_count: 74
+    median κ₃^dens (bottleneck): 2.705
+    median κ₃^dens (rest):       1.689
+    ratio (bn/rest): 1.602
+    Mann-Whitney p: 6.25e-18  |  Cliff δ: 0.606
+  MECHANISTIC CONFOUND (CRITICAL):
+    All bottlenecks have n_active=2 by definition (D_BOTTLENECK_HINGE).
+    Ratio 1.602 cannot be cleanly attributed to relational localization
+    until O_NULL_STRESS_ANATOMY controls for n_active.
+    This is not a minor caveat — the confound is structural by definition.
+  ARTIFACT: k3_relational_faces.csv, k3_relational_summary.csv
+
+──────────────────────────────────────────────────────────────────────────────
+§4.4  DISTANCE TO CORE
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_DISTANCE_TO_CORE_EMBEDDING_R2
+  LAYER: L2
+  STATUS: ✓
+  SCOPE: PHASE3.5 | Type-I(A) | dist-to-kcore(k=2) | seeds 17–26 | adj=edge+vertex
+  METRICS (mean_of_means):
+    edge adjacency:
+      dist=0: 2.643  |  dist=1: 2.113  |  dist=2: 2.205 (NON-MONOTONE)
+      dist=3+: 2.004
+    vertex adjacency:
+      dist=0: 2.452  |  dist=1: 2.009  |  dist=2: 1.841  |  dist=3+: 1.754
+  INTERPRETATION:
+    κ₃^dens is highest at dist=0 in BOTH adjacency modes.
+    VERTEX adjacency: monotone decrease — supports embedded-hinge interpretation.
+    EDGE adjacency: NON-MONOTONE at dist=2 (2.205 > 2.113 at dist=1).
+    Do NOT claim "monotone decrease" without specifying adjacency mode.
+    The dist=2 bump under edge adjacency may be structural or sampling noise.
+  OPEN: O_DISTANCE_BIN_COUNTS_AND_SEED_CONSISTENCY
+  ARTIFACT: k3_dist_to_core_summary.csv, k3_dist_to_core_by_seed.csv
+
+@O ID:O_DISTANCE_BIN_COUNTS_AND_SEED_CONSISTENCY
+  LAYER: L2
+  STATUS: ⊗
+  PRIORITY: MEDIUM
+  QUESTION: Is the edge-adjacency dist=2 bump structural or sampling noise?
+  ACCEPTANCE:
+    Report N per bin and per-seed medians by dist_bin (edge + vertex).
+    If ≥7/10 seeds show dist=2 > dist=1: treat as structural secondary ring.
+    Else: treat as sampling artifact.
+
+──────────────────────────────────────────────────────────────────────────────
+§4.5  QUARTIC SOFTENING
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_QUARTIC_SOFTENING_TYPEI_UNIVERSAL_R2
+  LAYER: L2
+  STATUS: ✓
+  SCOPE: PHASE3 | symmetric ±α quartic fits | channel=opp | top subset per seed
+  MODEL: E(α) = E₀ + (1/2)K·α² + (1/24)Q·α⁴
+  RESULTS:
+    fit_success: 100/100 (R²≥0.95 gate)
+    softening_fraction: 94/100 (94%) with Q_opp < 0
+  BOTTLENECK SPLIT:
+    bottleneck: N=80, softening=93.8%, median Q=−24.635
+    rest:       N=20, softening=95.0%, median Q=−17.033
+    MW p=0.118 (UNDERPOWERED: N=80 vs 20; do not interpret p alone)
+  ADDITIONAL OBSERVATION:
+    Median |Q| is ~45% larger at bottlenecks: ratio ≈ 1.447.
+    Bottlenecks may be dynamically softer under shear (larger quartic term)
+    even when softening frequency is similar.
+    IMPLICATION FOR PHASE-4: bottlenecks are candidate sites for
+    preferential mobility.
+    REQUIRED: power analysis for bottleneck Q comparison; expand N if needed (⊗).
+  SAFE INTERPRETATION:
+    Type-I sector is constitutively yielding under symmetric π/2 shear
+    within the probed α-window. Q_opp < 0 does NOT prove mobility or
+    exclude glassy global landscape (see !H_QUARTIC_MOBILITY_OVERREACH).
+  ARTIFACT: quartic_softening_fits.csv, quartic_softening_summary.json,
+            quartic_bottleneck_split_summary.json
+
+@V ID:V_SEXTIC_STABILIZER_CHECK_R2
+  LAYER: L2
+  STATUS: ⚠
+  SCOPE: PHASE3.5 | sextic add-on | channel=opp | same quartic sample set
+  MODEL: E(α) = E₀ + (1/2)K·α² + (1/24)Q·α⁴ + (1/720)S·α⁶
+  RESULT: Typical ΔR² ≈ 0 in current α-window; S present but non-material.
+  INTERPRETATION: Quartic model adequate for current α-window.
+    Global stability cannot be inferred; larger-α probing required.
+  UPGRADE CONDITION:
+    Extend to α_max = 2× current window.
+    If S remains noise-level: upgrade to ✓.
+    If S becomes systematically non-zero: add sextic to constitutive model.
+  ARTIFACT: sextic_fits_opp.csv, sextic_summary_opp.json,
+            sextic_S_hist_opp.png, sextic_dR2_hist_opp.png
+
+──────────────────────────────────────────────────────────────────────────────
+§4.6  STRUCTURAL CRITICALITY
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_CORE_CRITICALITY_METRICS_R2
+  LAYER: L2
+  STATUS: ⚠
+  SCOPE: PHASE3.5 | Type-I graphs | k=2 | seeds 17–26 | adj=edge+vertex
+  METRICS (mean across seeds):
+    edge adj:   critical_edge_fraction ≈ 0.777 | mean_sum_core_drop ≈ 3.773
+    vertex adj: critical_edge_fraction ≈ 0.615 | mean_sum_core_drop ≈ 3.534
+  STATUS NOTE: Descriptive only. "Fragile vs redundant vs random" requires
+    explicit null model — see O_CORE_CRITICALITY_NULL_MODEL.
+  ARTIFACT: k3_core_critical_edges_coreonly.csv,
+            k3_core_critical_summary_coreonly.csv
+
+@O ID:O_CORE_CRITICALITY_NULL_MODEL
+  LAYER: L2
+  STATUS: ⊗
+  PRIORITY: HIGH
+  QUESTION:
+    Is the κ₃ backbone more fragile or more redundant than random
+    size-matched face subsets?
+  ACCEPTANCE:
+    For each seed and adjacency, draw M random subsets matching |Type-I|.
+    Compute critical_edge_fraction and mean_sum_core_drop.
+    Report z-scores, percentiles, bottleneck-incident enrichment under null.
+
+──────────────────────────────────────────────────────────────────────────────
+§4.7  LOCAL DEFICIENCY
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_LOCAL_DEFICIENCY_DIAGNOSTIC_R2
+  LAYER: L2
+  STATUS: ⚠
+  SCOPE: PHASE3.5 | local neighborhood deficiency | seeds 17–26 | adj=edge
+  SUMMARY: Local deficiency diagnostics exported for correlational testing.
+  NEXT: Quantify corr(deficiency, κ₃^dens) and corr(deficiency, bottleneck)
+        with null controls (⊗).
+  ARTIFACT: k3_local_deficiency_faces.csv, k3_local_deficiency_summary.json
+
+──────────────────────────────────────────────────────────────────────────────
+§4.8  PHASE-4 PERTURBATIONS (SEED 19 PILOT)
+──────────────────────────────────────────────────────────────────────────────
+
+@V ID:V_RELAX_LONGER_LIFT_SENSITIVITY_SEED19
+  LAYER: L2
+  STATUS: ⚠
+  SCOPE: PH4 | seed19 | SU2 restarts (axis-salt) + π/2 probe | fixed topology
+  SUMMARY: Type-I prevalence and anatomy stable across tested lift restarts.
+  NOTE: Tests lift-solution sensitivity, NOT micro-dynamics on ω,φ.
+  ARTIFACT: relax_longer_timeseries.csv
+
+@V ID:V_STRONG_PHASE_KICK_SWEEP_SEED19
+  LAYER: L2
+  STATUS: ⚠
+  SCOPE: PH4 | seed19 | phase-kick sweep | Jaccard overlap tracking
+  SUMMARY: Jaccard ≈ 1.0 for tested dphi range and step schedule.
+  REQUIRED OPERATIONALIZATION (UNRESOLVED):
+    "Strong" kick must be quantified relative to natural phase scale.
+    Report: mean/median |Δφ_edge| from snapshot edges (natural phase scale).
+    Report: dphi_tested / mean|Δφ_edge| for each kick level tested.
+    Until reported: statement is "stable for tested dphi range (unscaled)".
+  ARTIFACT: summary_by_dphi.csv, overlap_vs_dphi.csv, b_overlap_vs_dphi.csv
+
+@V ID:V_TOPOLOGY_PERTURBATION_T1_T2_SEED19
+  LAYER: L2
+  STATUS: ⚠
+  NOTE: STATUS DOWNGRADED FROM ✓ (v4.0) TO ⚠ (v4.1/v1.0).
+        Reason: Jaccard=1.0 admits two interpretations:
+          (A) Genuine loop-redundant protection (defect set stable under cuts)
+          (B) Probe insensitivity (cuts do not affect probe-relevant neighborhoods)
+        Re-upgrade to ✓ pending O_PH4_CUTS_TOUCH_TYPEI_NEIGHBORHOODS.
+  SCOPE: PH4-T1/T2 | seed19 | n_cuts∈{5,10,20,30} | π/2 reprobe
+  SUMMARY: Jaccard=1.0 for all cut budgets, Type-I/top-20%/top-bottleneck sets.
+  ARTIFACT: seed19_T1_n{5,10,20,30}_overlap.json,
+            seed19_T2crit_n{5,10,20,30}_overlap.json,
+            ph4_t2_edgecuts_manifest_n{5,10,20,30}.json
+
+@O ID:O_PH4_CUTS_TOUCH_TYPEI_NEIGHBORHOODS
+  LAYER: L2
+  STATUS: ⊗
+  PRIORITY: HIGH
+  QUESTION:
+    Are PH4-T1/T2 cuts genuinely perturbing Type-I probe neighborhoods?
+  ACCEPTANCE:
+    For each cut manifest, identify Type-I face neighborhoods used by probe.
+    Report:
+      (a) Fraction of cuts landing within any Type-I neighborhood.
+      (b) Fraction of Type-I neighborhoods touched by any cut.
+    Interpretation requires (b): cuts might all land in one neighborhood.
+    Gate: "effective perturbation" if ≥20% of Type-I neighborhoods touched.
+    NOTE: Gate defined by Type-I coverage fraction, not raw cut fraction.
+
+@O ID:O_PH4_MOBILITY_TRUE_DYNAMICS
+  LAYER: L2
+  STATUS: ⊗ PRIORITY: IMMEDIATE
+  QUESTION:
+    Do κ₃ defects move (relocalize) under true state evolution of ω,φ?
+    (Not just re-lifts / re-probes — actual micro-dynamics.)
+  ACCEPTANCE:
+    Run micro-relax/anneal after controlled perturbations (phase kick,
+    frequency noise). Re-probe π/2 at intervals. Track drift and Jaccard
+    decay vs time. Distinguish pinned-yielding vs mobile-yielding.
+
+@O ID:O_DPHI_SCALE_QUANTIFICATION
+  LAYER: L2
+  STATUS: ⊗
+  PRIORITY: HIGH (blocks interpretation of V_STRONG_PHASE_KICK_SWEEP)
+  QUESTION: What is the dphi / natural-phase-scale ratio for tested kicks?
+  ACCEPTANCE:
+    Compute mean/median |Δφ_edge| from seed19 esm_snapshot edges.
+    Report dphi_tested / mean|Δφ_edge| for each tested kick level.
+    Update V_STRONG_PHASE_KICK_SWEEP with these ratios.
+
+──────────────────────────────────────────────────────────────────────────────
+§4.9  L2 NEXT ACTIONS (PRIORITY ORDERED)
+──────────────────────────────────────────────────────────────────────────────
+
+1) O_PH4_MOBILITY_TRUE_DYNAMICS        (IMMEDIATE)
+2) O_DPHI_SCALE_QUANTIFICATION         (HIGH; blocks kick interpretation)
+3) O_PH4_CUTS_TOUCH_TYPEI_NEIGHBORHOODS (HIGH; blocks T1/T2 interpretation)
+4) O_CORE_CRITICALITY_NULL_MODEL       (HIGH)
+5) O_NULL_STRESS_ANATOMY               (HIGH; covers bottleneck confound too)
+6) O_DISTANCE_BIN_COUNTS_AND_SEED_CONSISTENCY (MEDIUM)
+7) V_LOCAL_DEFICIENCY correlations + null controls (MEDIUM)
+8) V_SEXTIC upgrade — extend α-window (LOW/optional)
+9) Bottleneck Q power analysis (LOW/optional)
+10) Representation dependence test (spin-1 adjoint, after mobility established)
+11) Interaction / annihilation precursors (after mobility established)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§5  HAZARDS — ALL LAYERS (DO-NOT-CONFLATE GOVERNANCE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+! H_LOW_MU_SUBSTRATE_CONDITIONING         (L0/L1/L2)
+  All results computed on low-μ substrate subsample.
+  Source: ESM stiffness gate → low |Δω| → low μ (algorithmic; KS=0.40 vs base).
+  KS=0.40 reported in L0 audit (companion DSN; this document §3.1).
+  NOT emergent physics. Affects all downstream L1 and L2 claims.
+  Generalization requires non-stiffness-gated cluster tests.
+
+! H_EPS_ASYM_COUPLING_FORM               (L1)
+  Coupling is real-valued sinusoidal: sin(θ+φ) terms.
+  No literal exp(iφ) in implementation.
+  exp(iφ) is complex-notation shorthand only.
+  α(φ) exponential may be empirical approximation to bounded function.
+
+! H_KAM_DISSIPATIVE_SCOPE                (L1)
+  KAM theory applies to Hamiltonian (conservative) systems.
+  This Kuramoto system with damping γ is dissipative.
+  Do not claim KAM stabilization without conservative justification or
+  Fenichel NHIM extension. Use "observed protective modulation" language.
+
+! H_ALPHA_EXPONENTIAL_EXTRAPOLATION      (L1)
+  α(φ) = 0.044·exp(1.673φ) validated over φ∈[1.0,1.6] only.
+  Extrapolation beyond this range is untested.
+  Sinusoidal coupling bounds Im(σ), so true exponential at large φ requires
+  specific amplification mechanism. Do not extrapolate freely.
+
+! H_BOUNDARY_CONFLATION                  (L2)
+  Do not equate n_active_faces=2 with geometric boundary.
+  Bottleneck hinges are (k-core≥2)∧(n_active=2) and are typically embedded.
+
+! H_ADJACENCY_GRANULARITY                (L2)
+  All topology statements must specify adjacency mode (edge vs vertex).
+  Adjacency lift is operational at current resolution; not a continuum claim.
+
+! H_KAPPA3_DENS_N_ACTIVE_CONFOUND        (L2)
+  κ₃^dens is normalized by n_active (denominator).
+  Higher κ₃^dens at low n_active groups can reflect mechanical underdetermination
+  (fewer constraints), not purely relational stress concentration.
+  This confound is structural in the bottleneck definition (all bottlenecks
+  have n_active=2 by definition).
+  Do not attribute κ₃^dens differences to relational localization without
+  null model controlling for n_active.
+
+! H_FACECOUNT_CAP_NATURAL_LIMIT          (L2)
+  Face availability varies by seed. Never scan beyond audit face count.
+  Always: face_max := min(requested, audit_faces_total).
+
+! H_QUARTIC_MOBILITY_OVERREACH           (L2)
+  Q_opp < 0 implies yielding under symmetric π/2 shear within probed α-window.
+  Does NOT prove mobility, global landscape non-glassiness, or
+  dynamical lability under ω,φ evolution.
+
+! H_NULL_MODEL_REQUIRED                  (L2)
+  Any "exceptional vs random" claim (Betti, criticality, stress anatomy, etc.)
+  requires explicit null model artifacts.
+  Without null, raw magnitudes can INVERT interpretation.
+
+! H_THRESHOLD_TUNING_RISK                (L2)
+  If Type-I gate thresholds are post-hoc tuned on Phase-3/R2 data,
+  prevalence estimates become selection-conditioned.
+  Any tuning must be documented with out-of-sample validation.
+
+! H_JACCARD_PROBE_INSENSITIVITY          (L2)
+  Jaccard=1.0 under topology perturbations admits two interpretations:
+  (A) Genuine loop-redundant protection, or
+  (B) Probe insensitivity (cuts don't reach Type-I neighborhoods).
+  Do not claim (A) without O_PH4_CUTS_TOUCH_TYPEI_NEIGHBORHOODS result.
+
+! H_BETA1_EP_MULTI_COMPONENT             (L0)
+  β1_EP is valid only when β0≈1, β2≈0, β3≈0.
+  At β1_EP peak, β0 > 1 was observed (multiple components).
+  Always report β0 at β1_EP peak; do not interpret EP proxy as
+  single-component handle count without verification.
+
+! H_PERCOLATION_NORMALIZATION_SCALE      (L0)
+  Single μ_spread normalization is NOT universal.
+  Heavy-tail μ distributions require MST-based normalization.
+  μ_spread and robust quantile normalizations are distribution-dependent.
+  Do not apply thin-tailed ensemble constants to heavy-tail substrates.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§6  MASTER STATUS TABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+L0 LAYER:
+  Frozen-μ theorem (machine precision)                ✓ Locked
+  Distinct percolation events (backbone vs bulk)      ✓ Locked
+  MST normalization (theory)                          ⊕ Theory-fixed; validation ⊗
+  μ_spread normalization (single scale)               ✗ Falsified (heavy-tail)
+  Growth low-μ selection (algorithmic)                ✓ Locked (mechanism identified)
+  Backbone RTG interpretation                         ⊕ Proposed; κ₃ alignment ⊗
+  Bridge/bottleneck partial overlap                   ⚠ Suggestive; not proven
+
+L1 LAYER:
+  B1 mode competition primary                        ✓ Locked
+  Q-barrier primary                                  ✗ Falsified
+  C (resonance) primary                              ✗ Falsified
+  c(φ) constitutive correction (λ₁ slope)            ✓ Locked
+  c₂(φ) constitutive correction (λ₂ slope)           ✓ Locked
+  Anti-correlated c/c₂ spectral flow                 ✓ Locked
+  l₁ < 0 (supercritical NS birth)                    ✓ Locked
+  α(φ) per-φ values (4 points, grid-complete)        ✓ Locked (<0.5% drift)
+  α(φ) exponential form (within-φ)                   ✓ Locked
+  α(φ) exponential form (cross-φ)                    ⚠ ±2-5% oscillating bias
+  K*/γ² power-law entanglement (deterministic)        ✓ Locked
+  Spectral theorem (within-φ LOO, CV≤3.6%)           ✓ Predictive-validated
+  X_ref global normalization                          ✓ Implemented
+  R_K threshold existence φ*∈(1.2,1.4)               ✓ Observed; location ⊗
+  C protective modulator (sign confirmed)             ✓ Locked
+  Rational-structure hypothesis                       Preferred; n=4
+  Residual exponential decay (2.08φ)                 ~ Observed
+  B2 exponent additivity hypothesis                   Hypothesis
+  β derivation from Jacobian                          ⊗ BLOCKING
+
+L2 LAYER:
+  Type-I existence + prevalence (23.6%)              ✓ Locked (conditional)
+  Type-I topology/adjacency lift                     ✓ Locked
+  Stress anatomy split (MW p<1e-19)                  ✓ Raw result
+  Stress anatomy (relational attribution)             ⚠ Null model pending
+  Bottleneck enrichment (ratio 1.602)                ✓ Raw result
+  Bottleneck relational attribution                  ⚠ n_active confound pending
+  Quartic softening 94%                              ✓ Locked (within α-window)
+  Bottleneck |Q| 45% larger                          ✓ Observed (underpowered)
+  Sextic stabilizer adequate (current α-window)      ⚠ Larger-α not tested
+  Distance-to-core embedding (vertex adj)            ✓ Locked
+  Distance-to-core edge adj dist=2 bump              ~ Non-monotone; investigate
+  Core criticality metrics                           ⚠ Null model pending
+  Local deficiency diagnostic                        ⚠ Correlation pending
+  Phase-4 lift stability (seed19)                    ⚠ Scope: lift only
+  Phase-4 kick stability (seed19)                    ⚠ dphi scale unquantified
+  Phase-4 topology perturbation (T1/T2)              ⚠ Probe-sensitivity ⊗
+  Phase-4 true mobility                              ⊗ IMMEDIATE
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§7  MASTER NEXT ACTIONS (FULL PRIORITY-ORDERED LIST)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMMEDIATE:
+  A1) O_PH4_MOBILITY_TRUE_DYNAMICS
+      Run micro-relax/anneal on seed19 after phase kick;
+      re-probe π/2 at intervals; track Jaccard decay vs time.
+
+HIGH (no new simulations required):
+  A2) O_BETA_DERIVATION_JACOBIAN
+      Derive β≈1.673 analytically from Kuramoto Jacobian Im(σ).
+      Determines structural vs empirical theorem status.
+      Tests (a) topological amplification vs (b) approximation vs (c) network shift.
+
+  A3) O_INTER_MODAL_GAP_EXPORT
+      Add lam1_ang, lam2_ang to diagnosis_points.csv (one-line pipeline fix).
+      Resolves BOTH: H_B2_EXPONENT_ADDITIVITY and Arnold tongue check at φ=1.6.
+
+  A4) O_DPHI_SCALE_QUANTIFICATION
+      Compute mean/median |Δφ_edge| for seed19; report dphi/scale ratios.
+      Unblocks kick stability interpretation.
+
+  A5) O_PH4_CUTS_TOUCH_TYPEI_NEIGHBORHOODS
+      Parse cut manifests; check T1/T2 coverage of Type-I neighborhoods.
+      Unblocks Jaccard=1.0 interpretation.
+
+HIGH (new simulations required):
+  A6) O_PHI_STAR_LOCATION
+      Add φ=1.25, 1.35 simulations.
+      Locates R_K threshold φ* to ±0.05; tests rational-structure with n=6.
+
+  A7) O_CORE_CRITICALITY_NULL_MODEL
+      Random null model for core-criticality fragility assessment.
+
+  A8) O_NULL_STRESS_ANATOMY
+      Random null model for κ₃^dens vs n_active split; include bottleneck null.
+
+MEDIUM:
+  A9) O_DISTANCE_BIN_COUNTS_AND_SEED_CONSISTENCY
+      Per-bin N and per-seed medians for dist=2 bump investigation.
+
+  A10) V_LOCAL_DEFICIENCY correlations + null controls
+
+  A11) O_L0_MST_NORMALIZATION_VALIDATION
+       Confirm MST-normalized ε_c collapses across ≥3 run directories.
+
+LOW / OPTIONAL:
+  A12) V_SEXTIC upgrade — extend α_max to 2× current window.
+  A13) Bottleneck Q power analysis (expand N for bottleneck Q comparison).
+  A14) O_L0_BRIDGE_KAP3_OVERLAP — exact edge matching.
+  A15) O_RATIONAL_STRUCTURE_VALIDATION — after A6 adds φ=1.25,1.35.
+  A16) Representation dependence test (spin-1 adjoint) — after mobility established.
+  A17) κ₃ interaction/annihilation precursors — after mobility established.
+  A18) O_L0_RELATIONAL_INVERSION — foundational; not blocking empirical work.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§8  ARTIFACT INVENTORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+L1 SPECTRAL THEOREM:
+  spectral_gap_cases.csv              (36 cases; 4φ × 9 dt/γ)
+  spectral_gap_phi_summary.json       (per-φ α, LOO CV, cross-φ biases)
+  diagnosis_points.csv                (per-case Jacobian eigenvalue data)
+  fracture_diag_phi_minigrid_v3.csv   (fracture mechanism diagnosis)
+
+L0 AUDIT (run_28 native):
+  l0_audit_phase_diagram_run28_base.csv  (S, β0, β1_EP, bridges vs ε)
+  esm_snapshot.npz                       (base substrate; schema-verified)
+
+L2 PHASE-3 R2:
+  data_phase3/k3_scan_seed17..26.csv
+  sensitivity_analysis_N10.csv
+  k3_relational_faces.csv
+  k3_relational_summary.csv
+  k3_dist_to_core_summary.csv
+  k3_dist_to_core_by_seed.csv
+  k3_dist_to_core_R2.png
+  stress_anatomy_stats.json
+  stress_anatomy_samples.csv
+
+L2 QUARTIC R2:
+  quartic_softening_fits.csv
+  quartic_softening_samples.csv
+  quartic_softening_summary.json
+  quartic_Qopp_by_bottleneck.png
+  quartic_Qopp_vs_kappa3dens.png
+  quartic_bottleneck_split_merged.csv
+  quartic_bottleneck_split_summary.json
+
+L2 SEXTIC CHECK:
+  sextic_fits_opp.csv
+  sextic_summary_opp.json
+  sextic_S_hist_opp.png
+  sextic_dR2_hist_opp.png
+
+L2 CORE CRITICALITY:
+  k3_core_critical_edges.csv
+  k3_core_critical_summary.csv
+  k3_core_critical_edges_coreonly.csv
+  k3_core_critical_summary_coreonly.csv
+
+L2 DEFICIENCY:
+  k3_local_deficiency_faces.csv
+  k3_local_deficiency_summary.json
+
+L2 PHASE-4 SEED19:
+  relax_longer_timeseries.csv
+  summary_by_dphi.csv
+  summary_by_step.csv
+  overlap_vs_dphi.csv
+  b_overlap_vs_dphi.csv
+  overlap_by_step.csv
+  b_overlap_by_step.csv
+  seed19_T1_n{5,10,20,30}_overlap.json
+  seed19_T2crit_n{5,10,20,30}_overlap.json
+  ph4_t2_edgecuts_manifest_n{5,10,20,30}.json
+
+PIPELINE (v13.2):
+  esm_flux_grow_v13.py  (v13.2; all bugs fixed; 7 new CLI flags)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§9  LAYER BOUNDARY AND GATING CONDITIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+L0 → L1 GATE:
+  L0 is closed and stable. L1 development may proceed with:
+  [REQUIRED] Low-μ algorithmic selection caveat carried explicitly.
+  [REQUIRED] lam1_ang/lam2_ang export added to pipeline (A3).
+  [RECOMMENDED] MST normalization validated before publishing L0 constants.
+
+L1 → L2 GATE:
+  L1 spectral theorem is predictive-validated (LOO CV≤3.6%).
+  L2 uses L1 only as background context; L2 is independently validated.
+  Both layers carry the same L0 substrate conditioning caveat.
+
+L1 FULL STRUCTURAL STATUS:
+  Currently: Predictive-validated (empirical constitutive law).
+  Blocking: β≈1.673 derivation from Jacobian Im(σ) (A2).
+  On achievement: upgrade L1 status to "Structural theorem".
+
+L2 → L3 GATE (EXCLUDED):
+  L3 (continuum EFT/GR) is explicitly excluded from this DSN.
+  No entries, claims, or cross-references to L3 are registered here.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+§10  CHANGE LOG FROM COMPONENT DSNs
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Changes from T_GENESIS_SPECTRAL_WINDOW_v4.3:
+  + Coupling form now explicit (§1)
+  + Layer 0a/0b split fully integrated
+  + X_ref: per-φ → global (identification problem resolved)
+  + β derivability note: sinusoidal coupling → bounded Im(σ) (§3.5)
+  + Network-level amplification added as candidate (c) (§3.5)
+  + KAM language removed; replaced with neutral "protective modulation" (§3.7)
+  + Rational-structure: dQ definition with p constraint (§3.8)
+  + R_K: "Locked qualitative" resolved to "Observed/pending" (§3.6)
+  + Blocking conditions priority-ordered (§3.11)
+  + V_ALPHA split maintained (values vs exponential form)
+  + Residual structure correctly labeled as diagnostic, not mechanism
+
+Changes from RTG_CORE_KNOWLEDGE_v4.1:
+  + Core claim: "localizes on" → "preferentially concentrated at" (§0)
+  + Threshold provenance added to D_TYPEI_GATE_PI2 (§4.1)
+  + D_KAPPA3_DENS mechanical confound note added (§4.1)
+  + D_BOTTLENECK_HINGE: n_active=2 confound stated explicitly (§4.1)
+  + V_BOTTLENECK_LOCALIZATION: n_active confound added (§4.3)
+  + Cohen d demoted to secondary in V_STRESS_ANATOMY (§4.3)
+  + O_NULL_STRESS_ANATOMY: now includes bottleneck-specific null (§4.3)
+  + V_TOPOLOGY_PERTURBATION: ✓→⚠ downgrade explained (§4.8)
+  + O_PH4_CUTS gate: fixed fraction → Type-I coverage fraction (§4.8)
+  + V_STRONG_PHASE_KICK: dphi operationalization required (§4.8)
+  + V_DISTANCE_TO_CORE: non-monotone dist=2 corrected (§4.4)
+  + Bottleneck Q 45% observation: added with power analysis note (§4.5)
+  + V_SEXTIC: upgrade condition added (§4.5)
+  + Sextic figure artifacts restored (§8)
+  + §10 actions: priority-ordered; dphi promoted to formal @O entry (§4.9)
+  + H_LOW_MU_SUBSTRATE_CONDITIONING: KS=0.40 and source specified (§5)
+  + L2 cross-reference to L0 audit integrated throughout
+
+New hazards added:
+  H_EPS_ASYM_COUPLING_FORM (L1)
+  H_KAM_DISSIPATIVE_SCOPE (L1)
+  H_ALPHA_EXPONENTIAL_EXTRAPOLATION (L1)
+  H_KAPPA3_DENS_N_ACTIVE_CONFOUND (L2)
+  H_JACCARD_PROBE_INSENSITIVITY (L2)
+  H_BETA1_EP_MULTI_COMPONENT (L0)
+  H_PERCOLATION_NORMALIZATION_SCALE (L0)
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  END: RTG_MASTER_DSN_v1.0                                                    ║
+║  L0: Closed ✓  |  L1: Predictive ⊕  |  L2: R2 validated ⊕                  ║
+║  Primary blocking: β derivation (L1) · Mobility test (L2)                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝

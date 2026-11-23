@@ -1,0 +1,250 @@
+--- v0.7_DRAFT_mounted_NOT_adopted_final
++++ v0.8_REVIEW_CANDIDATE_fullcontent
+@@ -1,31 +1,34 @@
+ ---
+ title: "RTG — RRF Representation Registry"
+-version: "v0.7 DRAFT"
++version: "v0.8 REVIEW CANDIDATE"
+ date: "5 October 2026"
+ class: "working artefact / representation discipline"
+-status: "Noncanonical candidate working standard; source-synchronization draft. Reviewed against supplied RECOG v0.3.14 (30 Sep 2026) and NUMGEN v1.20.7 (version-history date 1 Oct 2026), preserving DYAD v6.4.10 profiles. No PI adoption, scientific-owner amendment, certificate rerun, new result RID, or closure of RRF OPEN-A/B/E is performed. Previous review provenance remains in the preserved v0.6 history and source file."
+-revision base: "RTG_RRF_REPRESENTATION_REGISTRY_v0_6; unchanged original retained; not superseded as an adopted document by this draft"
++status: "NONCANONICAL — complete-content v0.8 review candidate; based on the mounted v0.7 DRAFT plus editorial finalization known only from adoption record; cannot claim byte-exact successor to missing adopted v0.7 final. No owner DSN amendment, physical model selection, certificate rerun, PI adoption or OPEN closure."
++comparison base: "RTG_RRF_REPRESENTATION_REGISTRY_v0_7_DRAFT.md (SHA-256 b7135dc9859fd17282b6fb70eee4dea04869d9bc2a405ad7fcbbb9cbb070bab9); complete source inspected"
++intended superseded standard: "adopted RTG_RRF_REPRESENTATION_REGISTRY_v0_7.md, SHA-256 2a2b4102ba12e53bc56c746ffe30c553d24ecffa90afddeb4027cd72307717a5; 57524 bytes; not mounted"
++adoption: "PENDING — review candidate only; owner adoption not inferred"
++revision date: "14 October 2026"
+ parent: "RTG_PRIMORDIAL_RELATIONAL_REPRESENTATION_WRAPUP_v0_2 §20, §26"
+ governing methodology: "DSN_METHODOLOGY_v1.3"
+ ---
+ 
+ # 0. Purpose, scope, status grammar, lock
+ 
+-**Purpose.** Fix, for every representation profile in current RTG dyad/network work, its native objects, transport arrows to the other profiles, observable status (native / transported / re-defined / projected), the pole-relabeling candidate action in that profile, and what each transport loses. The registry produces no new physics; it makes representation mistakes of the R11 type mechanically visible.
++**Purpose.** Fix, for every representation profile in current RTG dyad/network work, its native objects, transport arrows to the other profiles, observable status (native / transported / re-defined / projected), the pole-relabeling candidate action in that profile, and what each transport loses. The registry produces no new physics; it makes representation mistakes of the R11 type mechanically visible. The registry records track/domain/typing/transport and admissibility interfaces; it is **not an authoritative theorem ledger**. Mathematical statements quoted here remain governed by their scientific-owner source.
+ 
+ **Scope.** Isolated continuous dyad (four profiles) and one provisional network profile. Discrete (TDR-G) state representation is not registered (§7). All dyad statements are conditional on the postulated generator $T$ (DYAD SG-14).
+ 
+ **Status grammar (DSN v1.3).** Claim tags `[DEF]`, `[ALG]`, `[THM]`, `[NUM]`, `[HYP]`, `[OPEN]`; `[scope: …]`, `[conv: …]`, `[import: DOC vX §…; RID: …]` and `[provenance: …]` are qualifiers. `RID unavailable` identifies a source block without inventing a result identifier. An artifact RID identifies evidence, not a replacement theorem RID. Imported owner claim status, the extent of source inspection/reproduction, and RRF adoption are separate axes.
+ 
+ **Provenance vocabulary and this update.**
+-- `owner-adopted`: retained for adopted DYAD v6.4.10 results. This label does not adopt the RRF registry or certify later downstream interpretations.
++- `owner-adopted`: retained for adopted DYAD v6.4.10 results. This label does not adopt the RRF registry or certify later downstream interpretations. The separate RRF v0.7 working-standard adoption is an administrative act, **not** owner adoption of imported scientific results.
+ - `Claude-checked as recorded by RECOG`: a written owner-ledger record attributes an independent reconstruction to Claude. For the covered swap identities, the source is RECOG v0.3.14 §6.14, certificate check 9, `RECOG-ART-R11-LEDGER`. This update reads that source; it does **not** rerun its script or authenticate an absent executable against its printed hash.
+ - `algebraic consequence of imported definitions/results`: e.g. a general two-input cubic expansion derived from the registered $s_2=2h_2$. It is not silently described as an additional case independently executed by the source's check 9.
+ - `Claude-checked (written verification record); prior report confirmed`: the separate degree-ten record already carried in VF-1. Its evidence is not upgraded by importing RECOG's degree-six check.
+ - `Claude-checked`: retained for earlier discussion-local derivations expressly attributed that way; no new execution is asserted here.
+ - Historical labels `participant-rechecked; third-party reproduced; Claude-check pending`, `(ext.)`, and `third-party reported; unreviewed` describe the earlier evidence state. The covered swap-commutator and real-ray comparator records no longer await that review, because RECOG records it. Any other claim needs its own matching evidence; this is not a blanket removal of provenance obligations.
+ 
+-**Reading/reproduction boundary.** The supplied RECOG v0.3.14 and NUMGEN v1.20.7 were read in full; the entire registry v0.6 was reviewed. Existing scientific owner files were checked at the affected interfaces and against recorded hashes. No numerical or symbolic certificate, simulator, or archived gate was executed in this synchronization. Source-reported PASS counts remain source reports. Exact source identities and missing artifacts are recorded in §10. Historical attribution is prose, not a truth grade.
++**Historical v0.7 draft reading/reproduction boundary.** The earlier draft reported full reads of RECOG v0.3.14, NUMGEN v1.20.7 and registry v0.6. This v0.8 candidate cross-checked available OFN v0.9, RECOG v0.3.20, Genesis v2.8.5, Triadic v1.6, ER-2B v0.2, owner interfaces and RRF coincidence reviews at the referenced sections. It did **not** run scientific certificates or authenticate reported external PASS claims. Source-reported checks are not new independent proof here. Original dated source snapshot is retained in §10; §10.1 adds current receipts. The adopted v0.7 final file was **not** provided; only its separate adoption record and the earlier v0.7 DRAFT were available.
+ 
+ **Representation safety lock (provisional, until OPEN-E).**
+ 
+@@ -45,6 +48,24 @@
+ **No circular scientific import.** RECOG imports the RRF's notation and convention only; its §6.14 finite algebra is independently reconstructed from the specified generator and adopted DYAD chart. This registry cites that algebraic evidence, not its own earlier convention as a proof. RECOG's internal RRF v0.4 pointers have not been edited here. NUMGEN's RRF v0.6 pointer is likewise explicitly noncanonical and imports no theorem. The source status of RECOG v0.3.14 is not promoted to an unrecorded owner/PI freeze decision by this receipt.
+ 
+ ---
++
++### 0.2 Current source receipts and inheritance/representation boundary — v0.8 review candidate
++
++These rows **supplement**, not retrospectively replace, the dated v0.7 source readings in §0.1 or §10. Scientific-owner proof grade, RRF's work-local adoption, and executable revalidation are separate.
++
++| Current source | Verified source location / status | RRF import boundary |
++|---|---|---|
++| OFN v0.9 (ADOPTED) | Complete-state/presentation covariance; RF-O09-03/04; §4.5 and OPEN-OPA; OPEN-PRIMACY-3B/3C | No universal node-coincidence axiom, carrier selection or physical clock derived |
++| RECOG v0.3.20 (freeze candidate, not auto-adopted) | §6.6a `RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY`; §6.16b `RECOG-ALG-BTOKEN-TRANSPORT`; §6.16g `RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS` | Family conjugacy ≠ physical relabeling; section transport ≠ new event rule; CELL-F4 W1–W5 are prerequisites, not a birth law |
++| Genesis Geometry v2.8.5 (ADOPTED) / Triadic v1.6 (ADOPTED) | Genesis's child direction/amplitude, apex/UV and source lowering corrections; Triadic §6.15/SG-15 | No physical source/child functional/transverse dimension is selected by these notices |
++| ER-2B consolidated v0.2 (noncanonical) and RRF coincidence v0.2 (noncanonical) | Specified projected three-edge map; analytic conditional noninvariance at primitive and six-step clocks | A physical exclusion requires complete-state exchange, actual fixed-state realization, encoding and clock intertwining (§6.2) |
++| Communicated RER v0.2 **update plan only** | Proposed `K_closure` taxonomy, factor and N=7/8 Stage 2 status | No original v0.2 or newest Stage 2 certificate mounted; no RER theorem/profile/adoption imported (§6.4) |
++
++### 0.3 Model/carrier versus passive-chart safety rule
++
++`[DEF/ALG] [scope: RRF representation discipline; conditional ER-2B illustration]` A **passive** diffeomorphic recharting transports the state, update, exchange action, incidence/closure operator, event predicate and comparison subset together. It retains the same model, so correctly transported fixed-set noninvariance cannot disappear. **Reimposing** linear addition, projection or incidence in the new coordinates creates a *different conditional model* unless an intertwining equivalence is proved. This distinction already exists in §§3/6; ER-2B v0.2 C15A–C20 supplies a bounded illustration, **not** a physical threshold or native RRF network profile.
++
++`[NON-TRANSFER]` `RRF-DYAD-W` and `RRF-NET-W-RAW` remain distinct types; additive closure of the latter is not automatically transported from isolated dyads. Neither a coordinate change, a source identification, nor a finite-order factor is evidence of a chosen physical carrier, incidence law or birth mechanism. OPEN-B → OPEN-E1 → OPEN-E2 remains locked.
+ 
+ # 1. Equation annotation syntax
+ 
+@@ -132,7 +153,7 @@
+ | Observable status | $q$, $\chi_m$, $C_z$ **native / re-defined**; $Q_{\rm prim}=\lvert h(z,\bar z)\rvert^2$ and $C_W\!\mid_{\rm NF}=\overline{h(z_a)}\,h(z_b)$ **transported** |
+ | Relabeling candidate | $z\mapsto-z$: exact symmetry of $\widehat f_{\rm form}$; degree-6 certified for $\widehat f_6$. $h_6$ is the unique solution of the specified homological recursion through degree 6 under the zero-resonant-coefficient convention, so the exact map $S_h=h_6(-I)h_6^{-1}$ and its truncation $S_6=\mathcal J_{\le6}S_h$ carry no residual-gauge ambiguity at degree $\le6$ `[ALG] [scope: degree ≤ 6] [conv: DYAD-ALG-NF6]`. Canonicity under other normalizer conventions and at all formal orders is not supplied by this fixed-chart registry and remains `[OPEN] [scope: other normalization classes]`. This is not an unclosed R11 task: the completed R11 ledger pins the adopted chart and routes physical pole identification to RRF OPEN-A `[import: RECOG v0.3.14 §6.14; evidence RID: RECOG-ART-R11-LEDGER]`. |
+ | Covariance under $-I$ | **Exact algebraic identities:** $q(-z)=q(z)$; $C_z(-z_a,-z_b)=C_z(z_a,z_b)$; $C_z(-z_a,z_b)=-C_z(z_a,z_b)$. **Self-return multiplier:** for the formal odd normal form the formal multiplier is sign-invariant; for the polynomial model $\chi^J_m=J^{\circ m}/z$ sign-invariance is exact but that model is a separate re-definition, not a transport of $\chi_m$; for the delivered exact $\widehat F$, $\chi_1$ is **not exactly sign-invariant** — a consequence of the verified fixed-$h_6$ degree-ten finding VF-1 (§2.4a); $\chi_m$ for $m\ge2$ is not classified in this registry. Bounded statement for one return: with $R:=\widehat F-J$, $\lvert R(z)\rvert\le C_7\lvert z\rvert^7$ and $J(-z)=-J(z)$, $\chi_1(-z)-\chi_1(z)=-\tfrac{R(-z)+R(z)}{z}$, hence $\lvert\chi_1(-z)-\chi_1(z)\rvert\le2C_7\lvert z\rvert^6$ on $0<\lvert z\rvert\le r$ `[ALG] [scope: direct consequence of DYAD-THM-NF-REM, one six-step return, either (r,C_7) profile unmixed] [provenance: review v1 deduction; Claude-checked]`. No $m$-uniform iteration bound is claimed. |
+-| Common-realisation condition `[DEF] [scope: proposed RRF convention]` | two $z$-states may be compared by $C_z$ only if $z_a=h_6^{-1}(W_a)$, $z_b=h_6^{-1}(W_b)$ — **preimages under the same registered $h_6$** (images under $h_6^{-1}$) of states in the **same registered $W$-frame**, both inside the registered inverse domain — or an explicit certified frame transport between their charts is registered. Direction/typing only; decides nothing about physical co-realisation, birth inheritance or the network bridge. A registered frame/context transport is necessary for comparing differently represented data, but does not itself supply an admissible shared physical history; NUMGEN M2-1 makes this separation explicit (§6.1). |
++| Common-realisation condition `[DEF] [scope: RRF v0.7 working convention; source-reported adoption, exact final bytes unavailable]` | two $z$-states may be compared by $C_z$ only if $z_a=h_6^{-1}(W_a)$, $z_b=h_6^{-1}(W_b)$ — **preimages under the same registered $h_6$** (images under $h_6^{-1}$) of states in the **same registered $W$-frame**, both inside the registered inverse domain — or an explicit certified frame transport between their charts is registered. Direction/typing only; decides nothing about physical co-realisation, birth inheritance or the network bridge. A registered frame/context transport is necessary for comparing differently represented data, but does not itself supply an admissible shared physical history; NUMGEN M2-1 makes this separation explicit (§6.1). |
+ | Exactness | formal all-order / degree-6 certified / certified remainder |
+ | Information loss | none inside domain; no global content |
+ | Guards | $q\ne Q_{\rm prim}$ beyond leading order — they are different native observables, not two coordinate expressions of one; primitive iterates $Q_m$ and normalized iterates $q_m$ are **not identified** (DYAD §6.14); $\bar z_az_b\ne\overline{h(z_a)}h(z_b)$ in general |
+@@ -247,6 +268,16 @@
+ 
+ **Generator-family limit on OPEN-A.** `[import: RECOG v0.3.14 §6.7 and §6.15; RID: RECOG-THM-TWIN-RADIAL-ACCESS]` The global radial-access theorem concerns the particular symmetric twin $T_s=(\rho-\sin\eta,\eta+\sinh\rho-\sin\eta)$: every initial state with $0<Q<7/200$ eventually reaches $|\rho|\ge\operatorname{arccosh}2$. It contrasts with the selected $T$'s certified local contraction. It is **not** a theorem that exact swap symmetry precludes healing for every admissible shear. RECOG §6.7 explicitly retains $g(\rho)=\tanh\rho$ as an odd, healing-at-cubic-order counterexample. The family law $\Re\mu_6=3b-4a^2$ for $g=\rho+a\rho^2+b\rho^3+\cdots$ has two routes to negative radial drift; removing the quadratic term does not force $b>0$. The diagnostic twins are not new registered RRF physical profiles. OPEN-A is not resolved in favor of a nonlinear physical swap by the $\sinh$ result; R1 remains PARTIAL in RECOG.
+ 
++### 4.2a Cross-model orientation conjugacy is not physical pole exchange
++
++`[ALG — source: RECOG v0.3.20 §6.6a; RID RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY; freeze-candidate source]` For the declared character/shear family and `S_o(ρ,η)=(-ρ,-η)`:
++
++\[
++ S_o\circ T_k\circ S_o=T_{-k}.
++\]
++
++This is **conjugacy between two parameter-labelled maps**, not an exact symmetry of the fixed primitive `T_1`, nor an identity with the nonlinear fixed-chart involution `S_h=h_6(-I)h_6^{-1}` or the edge-bookkeeping reversal `\mathscr O_e`. Thus an isolated-dyad conjugacy invariant cannot select the `k` sign *within this model family*, while physical oriented-role interpretation stays OFN `OPEN-OPA` / RRF OPEN-A. The specific `sinh` diagnostic twin's radial theorem cannot exclude all odd generators: RECOG's odd `tanh` example has local cubic healing. No additional RRF native profile or physical gauge law is created.
++
+ ## 4.3 Event predicates and sections: transported is not reselected
+ 
+ `[ALG]` [scope: same registered exact map and complete event predicate, where its chart/transition domains are valid] [import: RECOG v0.3.14 §6.16b; RID: RECOG-ALG-BTOKEN-TRANSPORT]
+@@ -270,7 +301,7 @@
+ | $H_2(\gamma)=\prod_{e\in\gamma}\sigma_e$ | $\mathbb Z_2$ | cycle $\ge3$ | pole-identification connection $\sigma_e$ | $\sigma_{ij}\mapsto g_i\sigma_{ij}g_j$, $g_i\in\mathbb Z_2$ (incidence-dressed) | N/A (no cycle; no winding needed) | not independently represented in current node-mediated attachment |
+ | $k$ | $\mathbb Z$ | history / path-lift; cycle when spatially closed | coherent lifted history | $\tilde\theta_i\mapsto\tilde\theta_i+2\pi n_i$ (node-coherent lift gauge) | $k=0$ `[import: NUMGEN v1.20.7 §6.4 N-3A; RID: NUMGEN-N3A-DECK-TRIVIAL] [scope: certified local one-chart tube, not every network or global trajectory]` | `[OPEN]` until a discrete profile is registered |
+ 
+-Obstruction statements, one-way: $H_\times\ne1\Rightarrow$ no pure node-presentation reduction `[ALG] [scope: RRF discussion-local]`; $H_2=-1\Rightarrow$ present node-mediated identification scheme insufficient (pole-role identification or an added $\mathbb Z_2$ edge field required) `[ALG] [scope: RRF discussion-local]`; additive $Ca\ne0\Rightarrow$ node-potential representation insufficient `[import: NUMGEN v1.20.7 §6.8 NG-7A; RID: NUMGEN-OPEN-REC-HOL-OPERATOR]`. No coupling among the three is claimed.
++Obstruction statements, one-way: $H_\times\ne1\Rightarrow$ no pure node-presentation reduction `[ALG] [scope: RRF discussion-local]`; $H_2=-1\Rightarrow$ present node-mediated identification scheme insufficient (pole-role identification or an added $\mathbb Z_2$ edge field required) `[ALG] [scope: RRF discussion-local]`; additive $Ca\ne0\Rightarrow$ node-potential representation insufficient `[import: NUMGEN v1.20.7 §6.8 NG-7A; RID: NUMGEN-OPEN-REC-HOL-OPERATOR (sub-RID of closed NG-7A; identifier spelling preserved)]`. No coupling among the three is claimed.
+ 
+ ---
+ 
+@@ -289,6 +320,104 @@
+ For this registry, the consequence is a **boundary**, not a new physical composition theorem: same numerical labels, same $h_6$, or a registered coordinate/context map alone do not establish an admissible common birth history or comparison interface. The common-realisation condition in §2.4 is a representation requirement, not a construction of its physical prerequisites. No NUMGEN C7C instrument-only lemma is promoted here. OPEN-B/E and the source M-4 HOLD on the Discrete-owner P2 policy remain separate.
+ 
+ ---
++
++### 6.2 `RRF-CND-01` — full-configuration coincidence admissibility interface (PROPOSED)
++
++**Status:** `[DEF/HEUR] [scope: noncanonical RRF interface; ACCEPT SCOPED by RRF/Foundations audit; not a new primordial axiom or an adopted physical triad]`.
++
++The following predicates are different: **(i)** equal node coordinates, **(ii)** zero edge relation, **(iii)** exchange-fixed *complete* configuration, **(iv)** physical node merge/reduction. Only (iii) automatically enters the fixed-set argument; (iv) needs a separate lower-cardinality map.
++
++**[THM — elementary fixed-set lemma; standard mathematics, not new RRF theorem]** On an invariant complete-state domain `\mathscr X`, if `\sigma` is a fixed-model exchange action and deterministic `F_phys` obeys `F_phys\sigma=\sigma F_phys`, then:
++
++\[
++ F_{\rm phys}(\operatorname{Fix}\sigma)\subseteq\operatorname{Fix}\sigma.
++\]
++
++This is **fixed-model equivariance**, stronger than parameter-family covariance unless the parameter/role data transform consistently and the selected member is exchange-symmetric. The state must include every transition-relevant incidence, pole/role, connection, parameter and admissible history field. `[import: OFN v0.9 state-completeness/covariance; RTG_RRF_RESPONSE_TO_OFN_COINCIDENCE_v0_2 §§1,4; review evidence only]`
++
++| Owner contract | Actual object required | Necessary compatibility for physical-exclusion use |
++|---|---|---|
++| **Identity / Action** | Complete `\mathscr X`, specified `\sigma_{BC}`, physically realizable points in `Fix\sigma`, admissible sector and structural role/parameter action | `F_phys\sigma=\sigma F_phys` for the **selected clock**, on its declared full domain |
++| **Carrier / Encoding** | `E:\mathscr X\to\mathcal C`, carrier action `R`, coincidence test stratum `\mathcal D` | `E\sigma=RE`; crucially **at least one witnessed counterexample point is in `E(Fix\sigma)`**, not merely `\mathcal D` |
++| **Clock / Model** | Physical `F_phys`, candidate `K`, primitive or return strobe, projection cadence and domain | `EF_phys=KE` on relevant states, with the same action/carrier conventions |
++| **Merge** (separate) | Lower-cardinality carrier, merge map and dynamics | Independently specified commuting reduction; **not** inferred from coincidence or exchange symmetry |
++
++**[ALG — named conditional projected three-edge model, source-level reviewed]** With `T` the postulated DYAD primitive map, projection *after each primitive step*, and
++
++\[
++\mathcal C=\{(a,b,c)\in(\mathbb R^2)^3:a+b+c=0\},\quad
++\mathcal N=P_\mathcal C T^{\times3}|_\mathcal C,\quad K_6=\mathcal N^6,
++\]
++
++`R(a,b,c)=(-c,-b,-a)` fixes the **standard additive coincidence embedding** `\mathcal D_{BC}=\{(a,0,-a)\}`. Starting at `a=(\rho,\eta)`, the restricted output's middle edge obeys:
++
++\[
++ b^{(1)}=\begin{pmatrix}0\\-\frac23(\cosh\rho-1)\end{pmatrix},\qquad
++ b^{(6)}=\frac1{36}\begin{pmatrix}
++3\rho^4+\eta^4\\
++\rho^4+12\rho^3\eta-12\rho^2\eta^2+12\rho\eta^3-2\eta^4
++\end{pmatrix}+O(\|a\|^5).
++\]
++
++The degree-two and degree-three terms of `b^(6)` vanish. The first quartic component satisfies:
++
++\[
++\frac{3\rho^4+\eta^4}{36}-\frac{(\rho^2+\eta^2)^2}{48}
++=\frac{(3\rho^2-\eta^2)^2}{144}\ge0.
++\]
++
++Analyticity therefore gives a **punctured neighborhood** of noninvariance at the six-step clock (no certified explicit numerical radius), while primitive invariance already fails at degree two. The conditional result does **not** prove that this standard embedding is realized by a complete exchange-fixed physical configuration. `[import: ER-2B v0.2 conditional model, RRF coincidence review v0.1, RRF response v0.2, ER2B audit package; mathematical-source provenance distinct from physical admissibility]`
++
++**[SESSION] Conditional exclusion test:** only if a *physically admissible* exchange-fixed full state maps under `E` to an actually witnessed noninvariant point and the specified full-state/encoding/clock laws commute does the projected model conflict with that realization. Neither universal physical node exclusion nor compulsory node merge/memory follows. This witness bridge is still `[OPEN]` at OFN 3B/3C and RRF OPEN-B/E1.
++
++**Passive transport guard:** an invertible chart `H` transporting map, subset and action simultaneously,
++
++\[
++\widehat K=H^{-1}KH,\quad\widehat{\mathcal D}=H^{-1}\mathcal D,\quad
++\widehat R=H^{-1}RH,
++\]
++
++satisfies `\widehat K(\widehat{\mathcal D})\subseteq\widehat{\mathcal D}` **iff** `K(\mathcal D)\subseteq\mathcal D`. Thus passive recharting **cannot** repair the noninvariance; reimposing fresh linear closure is a different model. Also, `\mathcal N^6` and `P_\mathcal C\circ(T^6)^{\times3}` are different projection cadences, not interchangeable.
++
++### 6.3 Token, history and network inheritance — interface prerequisites only
++
++`[ALG — RECOG v0.3.20 §6.16b; RECOG-ALG-BTOKEN-TRANSPORT]` Event indices and return gaps are preserved under a registered `W=h(z)` **only when both the section and full event predicate/coorientation are transported**. Replacing them with a native `z`-ray defines another token. A B-section/count phase lift is not automatically the primitive-`\eta` N-3A deck state.
++
++`[RESULT — RECOG v0.3.20 §6.16g; RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS]` For the currently registered source/carrier package, `token\to\Delta[a]` is **not yet well-posed**, rather than disproved. RRF records CELL-F4's necessary interface conditions without inventing physical attachments:
++
++| Gate | Missing declaration |
++|---|---|
++| **W1** | graph, coefficient module, edge cochain and network realization |
++| **W2** | dyad→edge/subgraph attachment preserving the relevant token predicate |
++| **W3** | comparison/transport between *pre- and post-birth* cohomology spaces before forming `\Delta[a]` |
++| **W4** | independence from the event log, count or Track-A clock alone |
++| **W5** | conditioning/common-driver quotient distinguishing token-specific writing from shared-driver correlation |
++
++The closed algebra of NUMGEN NG-7A, including its misleadingly named closed sub-RID, does not produce NG-7B source/curvature or a multiplicative G1 realization. M2-1's transported counting identity is not a co-realized physical composition or new birth law. Genesis v2.8.5 and Triadic v1.6 also distinguish unit rotation `W(J_Qs)/W(s)=i` from loaded child ratio `W(c_0^{[3]})/W(s_*)=i\kappa Q_s`; full remainder/physical source remain conditional. Independent Jacobi *mode labels* do not select an extra physical state dimension, and covariance typing does not uniquely fix physical lowering.
++
++### 6.4 Optional dynamical-closure evaluation contract — RER plan, not imported theorem
++
++`[DEF/HEUR]` A *claim record* about the sufficiency of a proposed representation may carry
++
++\[
++\mathcal K_{\rm closure}=(S,F,O,\pi,D,p,\mathcal E;\ \text{clock},\text{source/adoption}).
++\]
++
++`S`: full specified state and carrier; `F`: exact named update/projection cadence; `O`: preserved observable family; `\pi`: proposed factor map with admissible regularity class (`NOT_PROPOSED` if none); `D`: source and invariance domain; `p`: jet order or `exact`; `\mathcal E`: norm/domain/constants/remainder **and horizon** if approximation claimed. `clock` is not inferred from dyad degree; `source/adoption` separates a local calculation, source report and scientific owner/adoption status.
++
++| Closure outcome | Required meaning; never automatic physical interpretation |
++|---|---|
++| `STATIC_COMPLETE` | present-state quotient completeness under specified symmetry; not dynamic closure |
++| `EXACT_CLOSURE` | `\pi F=F_{eff}\pi` plus `O=O_{eff}\pi` if observables must be retained |
++| `FINITE_ORDER_CLOSURE` | equality of finite Taylor jets under explicit degree/weight convention; not exact analytic closure |
++| `CONTROLLED_APPROXIMATE_CLOSURE` | explicit domain, norm, remainder bound and finite-time error propagation horizon (unless globally proved) |
++| `NONCLOSURE_WITNESS` | same reduced state but different next `O` **for same named full map** |
++| `FORMAL_ONLY` | formal power series or finite jet; no convergence or physical selection |
++| `OPEN` | missing map/attachment/realization/proof/validated global error, itemized |
++
++**[SESSION] Observable-rank necessary condition:** if a smooth factor preserves named `F` and `O`, then locally `rank D(O,O\circ F,\ldots,O\circ F^m)\le\dim S_{eff}`. Any rank-four deduction from the signed-Gram/harmonic study remains **session-grade pending RER owner review**; this note does not import it as a verified RER theorem. A rank lower than four alone does not construct a factor.
++
++**[RER-PLAN-ONLY]** The user-described RER v0.2 plan proposes T02/T03 source synchronization, F3/age-family and `w_13` entries, plus N=7/8 finite-jet vs Stage-2 certificate separation. No full v0.2 registry, F3, age-family or Stage-2 current proof artifact was supplied. Accordingly **do not mark Stage-2 as globally certified** or register bounds `\|\mathcal E_7\|_B\le K_{7,2}R^8` / `\|\mathcal E_8\|_B\le K_{8,2}R^9` as `CONTROLLED_APPROXIMATE_CLOSURE`. The communicated status is `FINITE_JET_FORMAL_VERIFIED / LOCAL_CERTIFICATE_REPORTED / GLOBAL_CERTIFICATE_PENDING`, **only as RER plan/source report**.
+ 
+ # 7. Not registered (current version)
+ 
+@@ -316,7 +445,19 @@
+ 
+ ---
+ 
++### 8.1 v0.8 integration guard — source/adoption nonclaims
++
++- `RRF-CND-01` does not establish a new primordial coincidence axiom, physical node identity or admissible node merge. No selected physical `K_3` law or universal prohibition of node-mediated RTG follows.
++- The `T_k\leftrightarrow T_{-k}` family conjugacy does not make `S_o`, `S_h`, `-I_{NF}` and `\mathscr O_e` the same physical pole action; RRF OPEN-A stays open.
++- The ER-2B additive-carrier continuum is conditional mathematics, not a passive-gauge family of *one* physical triad; quartic drift thresholds do not select a physical carrier.
++- RECOG CELL-F4 W1–W5 are missing-interface criteria, not a registered token-to-cochain map, network memory field or birth inheritance law.
++- A formally verified finite jet does not supply a global remainder or controlled approximate closure. N=7/8 Stage-2 **global certificate remains pending** on the communicated RER status; no latest executable was inspected.
++- RER F3, formal age families, child-free/ambient minima, `w_13`, or candidate factors are not imported as verified RRF scientific theorems or new native profiles.
++- `RRF-NET-W-RAW` remains provisional, the `RRF-DYAD-W→RRF-NET-W-RAW` bridge is OPEN and OPEN-B→E1→E2 is unchanged. OFN 3B/3C, NG-7B and physical Genesis/Triadic/OPEN-M selections remain open.
++
+ # 9. Change log
++
++- **v0.8 REVIEW CANDIDATE (14 Oct 2026; NONCANONICAL, NOT ADOPTED):** full-content successor *candidate* built from the reviewed v0.7 **DRAFT**, with known editorial notes from the v0.7 adoption record and bounded new source/interface annotations: OFN v0.9; RECOG v0.3.20 orientation and CELL-F4; Genesis v2.8.5 / Triadic v1.6 no-transfer; ER-2B additive-carrier and `RRF-CND-01`; optional RER closure taxonomy. The actual adopted v0.7 final (57,524 bytes; SHA recorded by adoption receipt) was not mounted; byte-exact adopted-final diff and v0.8 adoption **remain blocked**. No native profile, physical model, owner theorem or OPEN status changed. Original v0.7 DRAFT and v0.6–v0.1 history lines below are preserved.
+ 
+ - v0.7 DRAFT (5 Oct 2026): source synchronization against RECOG v0.3.14 and NUMGEN v1.20.7. Covered degree-six swap and real-ray comparator provenance now cites the owner's independently reconstructed R11 check 9; no script rerun in this update. R11 CLOSED / R10 accepted receipts, current pins, and the standing refusal of incompatible archival quantities are explicit. R9 retained-memory observable is imported on its exact chart/track and two separate domain/window profiles. VF-1 retains independent written evidence; RECOG's degree-ten non-dependency is recorded without claiming no textual mention. Section/predicate transport is distinguished from event-rule replacement; NUMGEN M2-1 alignment is separated from physical co-realization and WD-DOM closure. The `sinh` twin result is not generalized to all odd shears; `tanh` counterexample retained. No new physical profile, generator, carrier, geometry, birth inheritance, or RRF adoption. Historical v0.6–v0.1 records below are unchanged. Source snapshot and evidence boundaries added in §10.
+ 
+@@ -355,3 +496,21 @@
+ **Separate files not edited:** RECOG retains RRF v0.4 convention pins in §6.14/§7, and its companion/source table contains other older pointers. Any owner update must distinguish a historical pin from a current dependency; this registry cannot rewrite the upstream record. NUMGEN already references RRF v0.6 as noncanonical, no theorem import. Its pointer change occurred at v1.20.5; v1.20.7 additionally adopts M2-1 and records Census-1. The Wrap-up and Genesis Identification & Inheritance Ledger need their own source synchronization; no version of either is created by this registry draft. Their recent Markdown copies are not mounted in this update, so this document does not claim to have edited or reread those absent files.
+ 
+ **History and adoption:** original v0.6 and all scientific owners are left byte-for-byte unchanged. Imported source closures do not administratively close RRF OPEN-A/B/E, create an independent pole-identification field, or constitute PI adoption of this candidate.
++
++### 10.1 Additional v0.8 source inventory and release-blocking difference
++
++The §10 table is the **unchanged dated v0.7 DRAFT source snapshot**, not a claim that the earlier supplied versions were reread as current. The following are *new* inspected sources; SHA-256 values are listed in the separate review manifest, which distinguishes unchanged original files from generated candidate artifacts.
++
++| Source | Record type / evidence boundary |
++|---|---|
++| `RTG_ONTOLOGICAL_FOUNDATIONS_v0_9.md` | Adopted OFN owner; current covariance / complete-state / RF-O09 guards; no rerun |
++| `RTG_RELATIONAL_RECOGNITION_DSN_v0_3_20.md` | Freeze candidate; §§6.6a/6.16b/6.16g source-checked; no local replay of its certificates |
++| `RTG_GENESIS_GEOMETRY_DSN_v2_8_5.md` | Adopted Genesis corrections; scoped interpretations |
++| `RTG_TRIADIC_BIRTH_LIFT_DSN_v1_6.md` | Adopted Triadic consumer; existing source unchanged |
++| `RTG_ER2B_CONSOLIDATED_STUDY_v0_2.md` | Conditional noncanonical mathematical study; not selected physics |
++| `RTG_RRF_RESPONSE_TO_OFN_COINCIDENCE_v0_2.md`, `RTG_RRF_COINCIDENCE_ADMISSIBILITY_REVIEW_v0_1.md` | Earlier noncanonical scoped RRF audits |
++| `RTG_RRF_REPRESENTATION_REGISTRY_v0_7_ADOPTION_RECORD.md` | Records final adopted hash `2a2b4102ba12e53bc56c746ffe30c553d24ecffa90afddeb4027cd72307717a5` and size 57,524 bytes; **final file itself not mounted** |
++| `RTG_RRF_REPRESENTATION_REGISTRY_v0_7_DRAFT.md` | Exactly inspected **draft** baseline (SHA `b7135dc9859fd17282b6fb70eee4dea04869d9bc2a405ad7fcbbb9cbb070bab9`); not interchangeable with adopted final |
++| RER proposed v0.2 / F3 / formal age / N=7/8 Stage 2 | **NOT READ / NOT MOUNTED**; user plan only, no owner-RID or numerical certificate upgraded |
++
++**Publication gate:** compare this candidate to the authentic adopted v0.7 bytes; reconcile finalization metadata, source snapshot and adoption-local wording; produce zero-unexplained-deletion diff and owner review; only then consider a separate v0.8 working-standard adoption record. A new v0.8 candidate file **is not** an adoption decision, and no scientific-owner file was changed.

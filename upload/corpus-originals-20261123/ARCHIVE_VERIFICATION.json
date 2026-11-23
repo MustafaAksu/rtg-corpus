@@ -1,0 +1,150 @@
+{
+  "zip_sha256": "d782a7018ed7a9405d6dd04f48ca036f01d14dbcfbc6ea8e7d1b2dd02aae9be8",
+  "zip_crc_pass": true,
+  "rows": [
+    {
+      "path": "STAGE2_REPLAY_20261014/README.md",
+      "expected": "02588f55098bd732bd45bf70d2288451c9268a1b483b5015e894b4aae4d02a61",
+      "actual": "02588f55098bd732bd45bf70d2288451c9268a1b483b5015e894b4aae4d02a61",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/SHA256SUMS.txt",
+      "expected": "b7581e7716ffdd10573cb6d7ec03665baa5a10e6daeea456162428714dd303e7",
+      "actual": "d0e107bb11e6fa1e0d70d8784ec64215963284c70f1ad04502a9850855c561f8",
+      "matches": false,
+      "manifest_self_entry": true
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/age_family_polynomials_kt1.json",
+      "expected": "03042f84016aa2128ca7ac425a0782d84a617e4b74c490d4f0c7b912c300d83c",
+      "actual": "03042f84016aa2128ca7ac425a0782d84a617e4b74c490d4f0c7b912c300d83c",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/stage2_config.json",
+      "expected": "dce1d569fb7e5eaa01c49795a4f171f578d055ec6c8f37422e0e8b783b6942fc",
+      "actual": "dce1d569fb7e5eaa01c49795a4f171f578d055ec6c8f37422e0e8b783b6942fc",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/stage2_config_K8.json",
+      "expected": "1eb79417d18fe5ed109686c3728cb613bd040fe78f2ead59e34041a32793966e",
+      "actual": "1eb79417d18fe5ed109686c3728cb613bd040fe78f2ead59e34041a32793966e",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/stage2_pilot_K6_v32.jsonl",
+      "expected": "93a1e0692b6c3d2a30528569d12342ab903628127ec555832b5b9cbed5af04f7",
+      "actual": "93a1e0692b6c3d2a30528569d12342ab903628127ec555832b5b9cbed5af04f7",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/stage2_pilot_K8_v32.jsonl",
+      "expected": "b241531d07c2979463f7839917d10306b24160e9c431e95c6e4d7f4b113f1dca",
+      "actual": "b241531d07c2979463f7839917d10306b24160e9c431e95c6e4d7f4b113f1dca",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/triad_stage2_contract.py",
+      "expected": "8af038c85241d889b8f50d7e5da18cf8a1b572d6e8f544d3efc1080ab811746c",
+      "actual": "8af038c85241d889b8f50d7e5da18cf8a1b572d6e8f544d3efc1080ab811746c",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/triad_stage2_coverage.py",
+      "expected": "a298cf467799ee1f5bcab726870f0424f6864e1e922ab98ef28f508b6e4e9968",
+      "actual": "a298cf467799ee1f5bcab726870f0424f6864e1e922ab98ef28f508b6e4e9968",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/triad_stage2_driver.py",
+      "expected": "4dd936ec388f28ccfe591046d4cdd4aac0824fc9294e79b5bf356e1df82905ce",
+      "actual": "4dd936ec388f28ccfe591046d4cdd4aac0824fc9294e79b5bf356e1df82905ce",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/pilots/triad_tm_engine_v3_2.py",
+      "expected": "7d4e8ec24e75c35bd8296121425b56e28049efd5846b6a932b7e2f64a6716716",
+      "actual": "7d4e8ec24e75c35bd8296121425b56e28049efd5846b6a932b7e2f64a6716716",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/W_inner.jsonl",
+      "expected": "61082183889b800848f153a53dfa30c7f5ec1bb4bec23dee8ae33deca3f887c3",
+      "actual": "61082183889b800848f153a53dfa30c7f5ec1bb4bec23dee8ae33deca3f887c3",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/W_outer.jsonl",
+      "expected": "eb8b874d4df26f5d57ba4cfcde6597db0f03e2409592d5ad3532996a187ed1ab",
+      "actual": "eb8b874d4df26f5d57ba4cfcde6597db0f03e2409592d5ad3532996a187ed1ab",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/age_family_polynomials_kt1.json",
+      "expected": "03042f84016aa2128ca7ac425a0782d84a617e4b74c490d4f0c7b912c300d83c",
+      "actual": "03042f84016aa2128ca7ac425a0782d84a617e4b74c490d4f0c7b912c300d83c",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/reg_config.json",
+      "expected": "38a80edebe29d32d54f97f3660879fec4eac3a88ef338c46426dfb9042b6144b",
+      "actual": "38a80edebe29d32d54f97f3660879fec4eac3a88ef338c46426dfb9042b6144b",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/triad_stage2_contract.py",
+      "expected": "8af038c85241d889b8f50d7e5da18cf8a1b572d6e8f544d3efc1080ab811746c",
+      "actual": "8af038c85241d889b8f50d7e5da18cf8a1b572d6e8f544d3efc1080ab811746c",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/triad_stage2_coverage.py",
+      "expected": "a298cf467799ee1f5bcab726870f0424f6864e1e922ab98ef28f508b6e4e9968",
+      "actual": "a298cf467799ee1f5bcab726870f0424f6864e1e922ab98ef28f508b6e4e9968",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/triad_stage2_driver.py",
+      "expected": "4dd936ec388f28ccfe591046d4cdd4aac0824fc9294e79b5bf356e1df82905ce",
+      "actual": "4dd936ec388f28ccfe591046d4cdd4aac0824fc9294e79b5bf356e1df82905ce",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/triad_stage2_regression.py",
+      "expected": "2802f97bd28871412bcef6e716cfb1a9bcd7ae251d8b203bcf87912320e44e2a",
+      "actual": "2802f97bd28871412bcef6e716cfb1a9bcd7ae251d8b203bcf87912320e44e2a",
+      "matches": true,
+      "manifest_self_entry": false
+    },
+    {
+      "path": "STAGE2_REPLAY_20261014/regression/triad_tm_engine_v3_2.py",
+      "expected": "7d4e8ec24e75c35bd8296121425b56e28049efd5846b6a932b7e2f64a6716716",
+      "actual": "7d4e8ec24e75c35bd8296121425b56e28049efd5846b6a932b7e2f64a6716716",
+      "matches": true,
+      "manifest_self_entry": false
+    }
+  ],
+  "payload_rows_match": true,
+  "matching_rows": 19,
+  "total_manifest_rows": 20,
+  "self_entry_mismatch": true
+}

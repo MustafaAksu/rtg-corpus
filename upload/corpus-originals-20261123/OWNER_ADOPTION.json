@@ -1,0 +1,114 @@
+{
+  "record_type": "owner adoption and release publication; separate from scientific DSN and prior review receipts",
+  "date": "2026-10-05",
+  "authorization": {
+    "source": "Latest user instruction in this conversation, following the supplied exact-byte review closure and peer concurrence",
+    "verbatim_instruction": "We should immediately update project DSN files starting from RTG_TRIADIC_BIRTH_LIFT_DSN",
+    "recorded_interpretation": "Authorization to execute the requested Triadic owner-file update by publishing the accepted v1.6 content. Adoption is based on this instruction, not inferred from reviewer acceptance.",
+    "authorizing_actor": "Conversation user / project-owner instruction; no separate signature or approval form is asserted",
+    "recorded_by": "ChatGPT, maintaining co-owner"
+  },
+  "accepted_scientific_baseline": {
+    "file": "RTG_TRIADIC_BIRTH_LIFT_DSN_v1_6_DRAFT_r4_2_FINAL_CANDIDATE.md",
+    "sha256": "420eaf3e0b98ee150d4a44de805480ae05764f6bdcac753a9c73e14e0e5a9bf0",
+    "revision": "r4.2",
+    "exact_byte_revision_editor_review": "ACCEPTED",
+    "review_record": "history/review_closure/records/REVIEW_CLOSURE_RECEIPT.json",
+    "review_record_sha256": "b83dabc59cba0ae7490e72ff8e81dc23d8ff9062981e5e5927adf128de6d594f",
+    "peer_concurrence": "Recorded in the preserved review-closure receipt and reaffirmed in the latest supplied reports",
+    "accepted_bytes_modified": false
+  },
+  "released_owner": {
+    "file": "RTG_TRIADIC_BIRTH_LIFT_DSN_v1_6.md",
+    "version": "1.6",
+    "sha256": "c768687cec6d52ffd358dc362cee4348f076160943564adaa461e6c7c4595b36",
+    "bytes": 141313,
+    "status": "ADOPTED",
+    "identity_note": "This metadata-promoted release has its own hash. It must not be identified by the accepted candidate hash.",
+    "release_delta": "Release metadata, already accepted owner-side RID/replacement activation, and a new history entry only; no change to scientific statements, equations, coefficients, proof grades or adopted scope."
+  },
+  "predecessor": {
+    "file": "RTG_TRIADIC_BIRTH_LIFT_DSN_v1_5.md",
+    "version": "1.5",
+    "sha256": "07e9f00b818950c70d3e51e8f3b65fd1e79922074211d0f0b20d400f8c45b735",
+    "superseded_as_current_owner": true,
+    "original_bytes_preserved": true,
+    "history_location": "history/RTG_TRIADIC_BIRTH_LIFT_DSN_v1_5.md"
+  },
+  "metadata_change_record": "records/METADATA_EDITS.json",
+  "reviewed_to_release_diff": "diffs/accepted_r4_2_to_owner_v1_6.diff",
+  "claim_lifecycle": {
+    "RID_set_unchanged_from_candidate": true,
+    "unique_RIDs": 49,
+    "new_release_RIDs": [],
+    "effect": "Accepted successor/replacement identities become owner records. Historical predecessor claims and their original verdicts remain preserved. No unreviewed claim is created.",
+    "reviewed_identities_newly_registered_relative_to_v1_5": [
+      "TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION",
+      "TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN",
+      "TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN",
+      "TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY",
+      "TRIAD-ALG-T6T-JACOBI-MODE-SIGNS",
+      "TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC",
+      "TRIAD-ART-T6-ORIENTATION-NORMALIZATION-V16",
+      "TRIAD-ART-T6U-APEX-SEED-DIAGNOSTIC-V16",
+      "TRIAD-EXPORT-PROTOCOL-2",
+      "TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION"
+    ],
+    "preexisting_v1_5_identities_preserved": 39
+  },
+  "evidence": {
+    "root": "evidence/accepted_r4_2",
+    "accepted_package_manifest": "evidence/accepted_r4_2/PACKAGE_MANIFEST_R4_2.json",
+    "accepted_manifest_preserved": true,
+    "prior_packaging_status": "evidence/accepted_r4_2/evidence/ADOPTION_STATUS_R4_2.json",
+    "prior_packaging_status_preserved": true,
+    "prior_review_closure_preserved": true,
+    "scope": "Certificate reruns, when recorded by the release runner, are same-implementation regressions in a disposable copy, not fresh independent proofs or new physics campaigns."
+  },
+  "consumer_reconciliation": {
+    "status": "PENDING; NOT PERFORMED BY THIS RELEASE",
+    "notices": [
+      "CN-01",
+      "CN-02",
+      "CN-03",
+      "CN-04",
+      "CN-05"
+    ],
+    "queue": "records/CONSUMER_RECONCILIATION_QUEUE.json",
+    "required_source_pin": {
+      "version": "1.6",
+      "owner_sha256": "c768687cec6d52ffd358dc362cee4348f076160943564adaa461e6c7c4595b36",
+      "accepted_scientific_baseline_sha256": "420eaf3e0b98ee150d4a44de805480ae05764f6bdcac753a9c73e14e0e5a9bf0"
+    },
+    "consumer_acceptance": false,
+    "consumer_documents_modified": false,
+    "next_document": "RTG_GENESIS_GEOMETRY_DSN_v2_8_4.md",
+    "then": [
+      "OPEN M",
+      "RRF convention-only reconciliation",
+      "Programme / OFN pass two"
+    ]
+  },
+  "deployment_scope": {
+    "local_workspace_owner_release_created": true,
+    "local_release_records_select_v1_6": true,
+    "chatgpt_project_library_replaced": false,
+    "remote_repository_updated": false,
+    "archive_deposit_created": false,
+    "note": "The released file and package are supplied for the project. No available action in this task directly changes an external project library or repository."
+  },
+  "no_additional_actions": [
+    "No new numerical campaign",
+    "No physical residual or event rule selected",
+    "No physical pole-relabel action selected",
+    "No RRF profile or bridge registration",
+    "No Genesis/OPEN-M scientific correction enacted",
+    "No Programme/OFN adoption or pass-two completion"
+  ],
+  "verification_records": {
+    "release_validation": "records/RELEASE_VALIDATION.json",
+    "accepted_evidence_regression": "records/ACCEPTED_EVIDENCE_REGRESSION.json",
+    "original_manifest_verification": "records/SOURCE_VERIFICATION.json",
+    "note": "Mechanical and same-implementation regression checks do not constitute a new revision-editor sign-off or independent proof."
+  }
+}
