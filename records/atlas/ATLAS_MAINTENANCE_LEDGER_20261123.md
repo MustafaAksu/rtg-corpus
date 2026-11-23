@@ -82,6 +82,27 @@ The Atlas owner's recommendation is option 2, done once and not inside an editio
 | Headline numbering | H3 retired at v0.15; H4–H12 keep their numbers (display order only) |
 | Builder chain | `refresh_v0_15.py` imports helpers from `refresh_v0_13.py` and `refresh_v0_10.py`; each builder stops by design once a source tag is newer than its manifest |
 
-## 5. What this ledger does not do
+## 5. RRF v0.8.4, read in full (PI request, 23 November 2026, 12:10 +03:00)
+
+The Atlas owner had read RRF only at its header and at the lines its rows cite. `dsn/RTG_RRF_REPRESENTATION_REGISTRY.md` at `rrf-v0.8.4` (`2fb0a0fe…afce`, 604 lines) was now read in full. This is a reading for the Atlas and the work list, not a scientific review of RRF: the PI's limit stands that no RRF review opens before its source files are verified.
+
+**The five Atlas rows hold.** RRF.F2 (the owner-pin convention is not applied in the live §2 rows), F3 (stacked overlays and superseded text kept with override notes), F4 (RRF's own statements have no RIDs), F5 (κ ≡ γ convention) and F7 (smooth embedding scope) each describe what the text shows.
+
+**Candidates for the next D1 opening** (not Atlas rows now):
+1. **RER pointer.** RRF §0.2, §6.4, §8.1 and §10.1 treat RER v0.2 as "update plan only", "NOT READ / NOT MOUNTED", with the Stage-2 certificate pending. RER v0.2 was adopted on 21 Oct, one day after RRF v0.8.4, and is in the repository at `rer-v0.2`. No Atlas row records this.
+2. **A construction that lives in an absent file.** The `[ALG]` existence equivalence of §2.4b (odd chart ⇔ tangent-to-identity square root) uses "the explicitly defined averaging chart (G2 v0.3 §4)". The G2 review (v0.3, v0.4) is not in the repository. The Atlas node `*RRF:odd-chart-root-equivalence` says "+ averaging chart" without saying where the chart is defined.
+3. **Pointers into the PRR Wrap-up.** Besides the parent line (§20, §26), the text leans on Wrap-up §10.2 (the typed-covariance criterion for gauge status), §11 (comparator discussion), §14.1 (the Genesis Identification & Inheritance Ledger) and §19 (the rationale of the representation safety lock). The Atlas names the Wrap-up nowhere. RRF §10 also says that no version of the Inheritance Ledger was created, while §2.1 and §7 point to it.
+4. **One owner RID exists now.** RRF §6.2a cites "DYAD v6.4.13 F3 plus the E4 existence" for the exactly λ-equivariant smooth chart and defers an owner-RID restatement (§10.4). DYAD has since registered `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (§6.17, at v6.4.20). The Atlas already lists that RID with class C as a consumer (cross-domain index).
+
+**Corrections to the work list** (`ATLAS_PROGRAMME_WORK_LIST_20261120.md`, rows A2 and A7; to be made there, not here):
+- Adoption records: the text names **six** separate records (v0.7, v0.8, v0.8.1, v0.8.2, v0.8.3, v0.8.4) and a v0.8 QA manifest, not three.
+- Further absent RRF-side files named in the text: the G2 interface review v0.3 and v0.4; the "separate editor response" to RER's Phase A G9 request; the SESSION review that locates the first non-matching jet of S_h and R₀ (§10.3); `PRR_RRF_REVIEW_v1`; the degree-ten verification record `DYAD_CHECK_degree10_even_term_hatF`.
+- Row A2's "declares no Methodology" was wrong (v1.3 is declared in the header); the §1 matrix already has it right.
+
+**What the reading says about sequence.** RRF is a consumer of DYAD, RECOG, OFN, NUMGEN, GEN and TRIAD at pins three to six editions old (DYAD v6.4.18, RECOG v0.3.21, OFN v0.10, GEN v2.8.9, NUMGEN v1.20.7, TRIAD v1.6), and roughly two fifths of its text is dated history (§9, §10, the overlays). Its rework is therefore mostly a current-state consolidation and a repin, and it should follow the NUMGEN and OFN passes, whose dispositions decide what RRF repins to. Two live links:
+- DYAD's OPEN 20 (B-an, B-6) is ACTIVE at `dyad-v6.4.24` and is exactly what RRF §§2.4b, 6.2, 6.2a and 8.12 keep open. A DYAD closure changes those rows.
+- NUMGEN: RRF §6.1 rests on M2-1, on Census-1 INCONCLUSIVE and on the C7C-M4 HOLD. `numgen-v1.21` states both unchanged (line 2911), so that RRF paragraph is still right at the current NUMGEN edition.
+
+## 6. What this ledger does not do
 
 It does not change `atlas/RTG_STATE_ATLAS.md`, any evidence file, any tool or any pipe. It does not classify a head finally, decide U10, or assert that an identifier lacks a home. It records where to look. The next refresh is triggered as before: an adopted owner tag after `357b963`, or a verified correction need in the Atlas's own text that the PI wants made.
