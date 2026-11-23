@@ -1,6 +1,6 @@
 # OPEN M (UVM) — OPEN-M-6 Stage 1: Jet-Covariance Results
 
-**Status:** [SESSION] / NONCANONICAL. Results of the bounded jet algebra the PI authorized on 23 November 2026. They are finite-jet identities with a filed script and output. Nothing here is adopted UVM science, edits the DSN, registers an RRF profile, or selects a carrier, lowering or normalization. **Independent reproduction by the second co-owner is pending**; until then every result below is `EV-CODE`, `EV-RUN` of one session.
+**Status:** [SESSION] / NONCANONICAL. Results of the bounded jet algebra the PI authorized on 23 November 2026. They are finite-jet identities with a filed script and output. Nothing here is adopted UVM science, edits the DSN, registers an RRF profile, or selects a carrier, lowering or normalization. **Revision 2** (23 November 2026) answers the second co-owner's review `6019523031` (ACCEPT WITH SCOPED CHANGES): its independent reproduction is recorded in §2, its three required changes in §4–§6, the revision in §9. The numerical results are unchanged and the certificate was not rerun.
 **By:** Claude, UVM co-owner (preparer and triage owner).
 **Date:** 23 November 2026. Branch base `main` `98a4a80643007c2421dc4cee09260ba12d4ed9b4`.
 **Scope:** `records/uvm/UVM_OPEN_M6_SCOPE_DRAFT.md` (PR #365), contracts C0, C1 (A1–A3), C2 (A1′).
@@ -31,6 +31,10 @@ Recorded by the preparer from the PI's numbered reply to the three numbered ques
 | Environment | Python 3.13.18, standard library only; about two seconds; exit code 0 |
 | Result | 39 checks, 39 passed, 0 failed; a second run is byte-identical |
 | Method | exact arithmetic in `ℚ(i√3)` on jets of total degree ≤ 6 in a complex variable and its conjugate; no floating point |
+| Independent reproduction | second co-owner (ChatGPT UVM session), review `6019523031`: a separate SymPy 1.14 polynomial-ring implementation over `ℚ(i√3)[z, z̄]`, written without importing or running this script. Checks reproduced: E0–E6, G0–G6, P2, A2, A1′ (degree 2 and degrees 2–6), P3, C2a-1, plus the GL₂(ℝ) source-matching identity of §4 through degree 6. All pass. `EV-INDEP` for those checks |
+| Its files | `evidence/uvm/scripts/uvm_open_m6_independent_sympy_check.py`, SHA-256 `2f1089d16c981677a676258cbc9878ab18bc1a763cea0837a10a4ec4a3370405`; `evidence/uvm/open-m6-stage1/independent_sympy_output.txt`, SHA-256 `c371a8ede8f3176aa7bb3e088789da1e1ecdd0907ea2a9a880603f16faa02eb3`. Arrived unchanged on branch `upload/uvm-open-m6-independent-check` (commit `1b42a1a2cf14`); placed here by copy. Hashes equal those stated in the review |
+| Its re-run here | in an empty directory with `python3 -I` (SymPy 1.14.0): exit 0, output byte-identical. This confirms the run; the independence is of the reviewer's implementation |
+| Not independently reproduced | A1 as a separate check (it follows from P2), A3, Q1–Q3, CONTROL-Q4, C0-0 to C0-4 and the four controls, C2a-2, C2a-3. Single-session `EV-RUN` |
 
 Four of the 39 are expected-failure controls (`CONTROL-*`): each passes when a deliberately wrong variant is detected as wrong.
 
@@ -57,8 +61,8 @@ Four of the 39 are expected-failure controls (`CONTROL-*`): each passes when a d
 | **A1′**, A1′b | C2, `s(W) = Λ W̄` in the raw frame, with the same constant fibre action: the covariance defect is `Λ·conj(δ_2)` at degree 2 and is nonzero at every degree 2 to 6 (3, 4, 5, 6, 7 nonzero coefficients) | pass: **C2 is not covariant** under that action |
 | P3 | `s_C1` written in the raw frame minus `s_C2` equals `−Λ·conj(h_2(W, W̄))` at degree 2 | pass |
 | C2a-1 | the `W²` coefficient of the degree-2 defect is `−1/6 ≠ 0`, so defect / `W̄` is not differentiable at 0: no `C¹` complex-scalar fibre action absorbs it | pass |
-| C2a-2 | a real-linear state-dependent action `s ↦ α(W)s + β(W)s̄` absorbs the defect through degree 2 | pass (explicit `α`, `β` in the output) |
-| C2a-3 | a real-linear state-dependent re-trivialization carries C1, written in the raw frame, onto C2 through degree 2 | pass (explicit map in the output) |
+| C2a-2 | a real-linear state-dependent repair `s ↦ α(W)s + β(W)s̄` removes the covariance defect through degree 2 | pass (explicit `α`, `β` in the output). **Requalified (revision 2):** a pointwise repair of covariance, with the action taken at the source point. It does not check the ℤ₆ composition law, the update form or the restoring block, so it is not a ℤ₆ action. Exploratory `[SESSION]` algebra |
+| C2a-3 | a real-linear state-dependent re-trivialization carries C1, written in the raw frame, onto C2 through degree 2 | pass (explicit map in the output). **Requalified (revision 2):** this is a *source-section match* with the gauge evaluated at the source point, not an update conjugacy. Superseded in strength by the all-order construction in §4 S4(a). Exploratory `[SESSION]` algebra |
 | CONTROL-P2 | a perturbed `h_2` coefficient makes the generator nonlinear in that chart | pass (detected) |
 
 C2a-1 to C2a-3 go one step beyond A1′. They were added because the scope's deliverable (c), the separation of C1, C2a and C2b, cannot be stated without them; they are degree-2 algebra of the same kind and are offered for review as such.
@@ -75,15 +79,21 @@ C2a-1 to C2a-3 go one step beyond A1′. They were added because the scope's del
 
 **S3.** The W-native source with the same constant action is not covariant, at any degree from 2 to 6. Read as C2b, it is a source that does not respect the dyad's ℤ₆ symmetry; in one trivialization it differs from C1 by `−Λ·conj(h_2)` at degree 2.
 
-**S4.** No differentiable complex-scalar fibre action repairs that. A real-linear, state-dependent one does — and then, at degree 2, C2a is C1 in another trivialization.
+**S4 — three levels, kept apart** (revision 2, after the second co-owner's review).
 
-**S5 — the conditional separation.** Whether C1 and C2 are two models or one is therefore not a property of the source. It is exactly as strong as the restriction placed on fibre trivializations:
-- if the transverse fibre carries a rigid complex structure, so that only complex-linear re-trivializations are admissible, C1 and C2 are different models and only C1 is ℤ₆-covariant;
-- if arbitrary real-linear, state-dependent re-trivializations are admissible, the two cannot be told apart at the order tested.
+(a) *Source-section match.* Let `V(W) = Λ·conj(h_6⁻¹(W))` (C1 written in the raw frame) and `U(W) = Λ W̄` (C2), with `Λ ≠ 0`, both read as real maps of `ℝ²` on the disk where `DYAD-THM-NF-INV` gives an analytic inverse. Both vanish at 0 and have the same invertible real derivative `A`. With `B(W) = ∫₀¹ DV(tW) dt` and `Γ(W) = A B(W)⁻¹`, one has `V(W) = B(W)W` and hence `Γ(W)V(W) = U(W)` exactly, on a neighbourhood where `B(W)` is invertible. `[SESSION: THM, conditional on that domain and Λ ≠ 0]` — the second co-owner's construction, checked by its implementation through degree 6; the argument checked by hand here. The same argument relates **any** two source germs that vanish at 0 and share an invertible real derivative. So under unrestricted local `GL₂(ℝ)` gauges, section-level comparison carries no information, at any order. C2a-3 is the degree-2 instance. No `C¹` complex-scalar gauge does this: the `W²` coefficient of `V − U` is `−Λ(1+i√3)/24 ≠ 0` (P3; asserted independently in the reviewer's script), so `U/V` is not `C¹` at 0.
 
-The first physical input C3 needs is thus identified: **the structure group of the transverse bundle**. This is what the `J_⊥` proposal in §6 has to fix.
+(b) *Update conjugacy.* A re-trivialization of the update acts with the fibre factor at the image point (S6), so the gauge that matches the sources is `g(Y) = Γ(f⁻¹(Y))`, giving `g(f(W))V(W) = U(W)`. The same `g` then transforms the restoring block, `M̃(W) = g(f(W)) M(W) g(W)⁻¹`, and the symmetry action, `P̃_W = g(J_W W) P_W g(W)⁻¹`. An action obtained by such a transport satisfies the ℤ₆ composition law `P_{J⁵x}⋯P_{Jx}P_x = I` to the order tested, by telescoping (with `J_W⁶ = id`). C2a-3 as computed is (a), not (b); C2a-2 is a repair, not an action of this form.
 
-**S6.** In the model class tested (an update whose transverse part is `s(x) + m(x)y`), the transport rule that reproduces the observable takes the fibre factor at the image point. By the same algebra the covariance equation is the update form `H(J_ℤ6 x) = J_⊥(Tx)H(x)`, not the section form; they coincide for a constant action. The certificate tests the re-trivialization rule; the covariance form is the hand derivation of the scope draft §5.
+(c) *Model equivalence.* Two models are equivalent only if one admissible gauge relates source, restoring block, action and observable together. That is not established. It needs the admissible gauge group, the dual action on `Π_⊥*`, `M_spin2`, the observable and the UV dynamics.
+
+**S5 — the conditional separation, restated.** In the model class tested:
+- if admissible re-trivializations are complex-linear (structure group `GL₁(ℂ)`), C1 is ℤ₆-covariant under a constant action, C2 is not, and no admissible gauge carries one source onto the other: within that class they are different models. This is a conditional statement about the named class, not a proof of physical inequivalence;
+- if `GL₂(ℝ)` gauges are admissible, the two sources are section-equivalent at all orders (S4(a)), and any distinction moves to (b)–(c): whether, under the same gauge, the restoring blocks and the actions correspond.
+
+The structure group of the transverse bundle is therefore a necessary input. It is not sufficient to select the physical model.
+
+**S6 — transport rule.** For `U(x, y) = (f(x), s(x) + M(x)y + O(y²))` and a re-trivialization `Ψ(x, y) = (φ(x), g(x)y)`, direct composition gives `s̃(φx) = g(fx)s(x)` and `M̃(φx) = g(fx)M(x)g(x)⁻¹`, for an arbitrary real-linear `M` (the second co-owner's general statement; checked by hand). The certificate tested this rule in a one-complex-dimensional fibre with scalar `M` (C0-1 to C0-4) and showed the source-point rule to be wrong (CONTROL-C0-5). A symmetry lift `𝒥(x, y) = (Jx, P_x y)` commutes with the update iff `fJ = Jf`, `s(Jx) = P_{fx}s(x)` and `M(Jx)P_x = P_{fx}M(x)`. Stage 1 tested the first two with constant `P`; the condition on `M` is untested, because `M_spin2` has not been typed.
 
 **A side observation from A2.** The degree-5 members are two: `z² z̄³` and `z⁵`. The second is covariant under ℤ₆ but would not be under a continuous phase symmetry. v0.7.1 R1 names the degrees and the degree-1 and degree-3 members only.
 
@@ -98,6 +108,8 @@ The first physical input C3 needs is thus identified: **the structure group of t
 - **C2a** is degree-2 algebra only.
 - **C0** uses a one-complex-dimensional fibre with complex-scalar `m` and `g`. It is an implementation control of the transport rule in that class.
 - `Λ = 1` in A1, A1′, P3: those statements are linear in `Λ`.
+- **C2a-2 and C2a-3** exceed the authorized C0 / C1 / A1′ task; they are kept as exploratory `[SESSION]` algebra, as the second co-owner recommends, pending any PI decision on scientific use.
+- **S4(a)** is a local statement on the analytic-inverse disk; it says nothing about the update, the restoring block or physics.
 - Not touched: `M_spin2`, the anisotropy `w`, any norm, `0.024`, `4/125`, R15, any physical observable, the historical `1.006×10⁻²` envelope.
 
 ---
@@ -108,12 +120,12 @@ Under PI decision 3. **A proposal, not adopted**; identifier for discussion only
 
 | # | Proposed | Basis | Open for Genesis |
 |---|---|---|---|
-| JP1 | UV space `ℍ ∋ q = z + j y` with `j a = ā j`; `Π_∥ = {y = 0}`; `Π_⊥` is the `j`-component | reconstruction from v0.7.1 R1, R3, R10; checks Q1–Q3 | is this the embedding the harness `T_ℍ^UV` uses? |
-| JP2 | the base coordinate `z` is a ℤ₆-equivariant dyad chart: the NF chart through degree 6, or the smooth chart `Φ` of `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` exactly (`C^∞` only) | P2; Dyadic §6.17 | — |
-| JP3 | the symmetry lifts as left multiplication by `λ` in that chart, so `J_⊥` is multiplication by `λ̄` on `y`: constant and complex-linear | Q1; A1 | does the harness commute with this lift, or with another one? |
-| JP4 | covariance is imposed in the update form: `T_ℍ^UV∘J_ℍ = J_ℍ∘T_ℍ^UV` | S6 | — |
-| JP5 | admissible fibre re-trivializations are complex-linear; real-linear state-dependent ones are not gauge | S4, S5: without this the NF/W distinction is empty | is a rigid complex structure on `Π_⊥` physically justified, and by what? |
-| JP6 | the covector side: left open | scope hypothesis H7 | which pairing identifies the action on `Π_⊥*`; is the left action `B`-orthogonal; does the conditional lowering `S_f = Bc_f` commute with it? |
+| JP1 | UV space `ℍ ∋ q = z + j y` with `j a = ā j`; `Π_∥ = {y = 0}`; `Π_⊥` is the `j`-component | reconstruction from v0.7.1 R1, R3, R10; checks Q1–Q3 show it is a *consistent stipulated model* | is this the embedding the harness `T_ℍ^UV` uses? Genesis has not adopted it |
+| JP2 | the base coordinate `z` is a ℤ₆-equivariant dyad chart, **named at each claim**: the NF chart `W = h_6(z)` (linearizes the generator through degree 6 only; P2) or the smooth chart `Φ` of `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (exact, `C^∞` only, qualitative radius) | P2; Dyadic §6.17 | the two charts need not coincide; to the order where both linearize the generator they differ by an `A`-equivariant centralizer change, which moves the higher tower members (A3). `h_6` is not an all-order symmetry statement |
+| JP3 | the symmetry lifts as left multiplication by `λ` in that chart. On the **vector** fibre `Π_⊥` this gives the constant complex-linear action `P = λ̄`, which satisfies the composition law `P⁶ = I` | Q1; A1 | does the harness commute with this lift, or with another one? |
+| JP4 | covariance in the update form, all three conditions of S6: `fJ = Jf`, `s(Jx) = P_{fx}s(x)`, `M(Jx)P_x = P_{fx}M(x)`; any state-dependent `P` must satisfy `P_{J⁵x}⋯P_x = I` | S6, S4(b) | — |
+| JP5 | structure group `GL₁(ℂ)`: admissible re-trivializations are complex-linear | S4, S5: without a restriction the NF/W distinction is empty at section level | **a physical hypothesis**, not a consequence of the jet calculation. What justifies a rigid complex structure on `Π_⊥`? Genesis / PI |
+| JP6 | the covector side, hand analysis `[SESSION: ALG]`, not certified: the source takes values in `Π_⊥*`, on which the symmetry acts by the dual `P* = (P⁻¹)ᵀ`. A real rotation of order six on a real plane fixes a unique complex structure in which it acts as `λ̄`, and the opposite one in which it acts as `λ`. Hence the real content of R1 — which real maps `Π_∥ → Π_⊥*` are covariant, with degrees 1, 3, 5 and one degree-1 member — does not depend on how `Π_⊥*` is identified with `Π_⊥`; the words "antilinear / conjugation-type" hold in one of the two complex structures and read "complex-linear" in the other, and the scope must name the one meant. What is not conventional is the lowering: `S_f = B c_f` is ℤ₆-equivariant iff `PᵀBP = B` on the relevant block | scope H7; `GEN-OPEN-SOURCE-PAIRING` | is the lifted action `B`-orthogonal on `Π_⊥`? If not, lowered and unlowered sources lie in different covariance classes |
 | JP7 | clock: primitive `T` | RRF §6.2 | — |
 
 Consequence if JP1–JP5 were accepted: C1 would be the covariant model, C2 would be C2b (a source breaking ℤ₆), and the question "which is physical" would become "does the UV source respect the dyad's ℤ₆ symmetry". That is a hypothesis to be stated, not a result.
@@ -137,12 +149,29 @@ Byte-identical output on another machine confirms the run, not the mathematics. 
 
 ---
 
-## 8. Asked of the second co-owner
+## 8. Second co-owner's review and what it settled
 
-1. Reproduce independently: E1–E6 against Dyadic, P2, A1′ at degree 2, P3, C2a-1.
-2. Is S5 stated correctly — in particular, is "structure group of the transverse bundle" the right name for what is missing?
-3. C2a-3 shows equivalence at degree 2 only. Is there an obstruction at higher degree that would make C2a a genuine rival after all?
-4. Is the update form (S6) established widely enough by a one-dimensional complex fibre, or does it need the real two-dimensional fibre with a real-linear `m`?
-5. Check `UVM-PROP-JPERP-01` before it goes to Genesis: anything mis-stated, anything missing.
+Review `6019523031` (23 November 2026 09:55 UTC, on `06f4545`), verdict ACCEPT WITH SCOPED CHANGES:
+
+| Question put in revision 1 | Answer |
+|---|---|
+| reproduce E1–E6, P2, A1′ at degree 2, P3, C2a-1 | done with a separate implementation; all pass; also A2, G0–G6 and A1′ at degrees 2–6 (§2) |
+| is S5 stated correctly | partly: section match, update conjugacy and model equivalence had to be separated, and the structure group is necessary but not sufficient (S4, S5 now) |
+| does C2a survive beyond degree 2 | as a section match, yes, at all orders, under unrestricted `GL₂(ℝ)` gauge (S4(a)); as an update conjugacy only with the image-point gauge, and as a model equivalence not shown |
+| does the update form need a real two-dimensional fibre | not for the algebra: S6 holds for arbitrary real-linear `M`; the physical `Π_⊥*` interface still needs real matrix notation |
+| review the `J_⊥` proposal before Genesis | guards added: stipulated model (JP1), chart named per claim (JP2), vector-fibre action and composition law (JP3, JP4), structure group as a physical hypothesis (JP5), dual action and lowering (JP6) |
+
+## 9. Revision record
+
+| Review item | Change | Where |
+|---|---|---|
+| R1 | C2a-2 and C2a-3 requalified (repair; source-section match at the source point); S4 split into section match, update conjugacy, model equivalence; S5 restated as conditional on the model class | §3, §4 |
+| R2 | the reviewer's local `GL₂(ℝ)` construction recorded as a conditional finding with its domain; consequence stated: section-level comparison carries no information under that gauge class | §4 S4(a) |
+| R3 | composition law, dual action on `Π_⊥*`, chart named per claim, structure group as physical hypothesis | §6 JP1–JP6 |
+| other | S6 stated for real-linear `M`, with the update-form condition on `M` marked untested; independent reproduction and its files recorded | §2, §4 S6 |
+
+Not changed: the certificate, its output and hashes, every numerical result. No new certificate run.
+
+The `pipes/GEN/` request for `UVM-PROP-JPERP-01` is not yet filed; it waits for the second co-owner's check of §6 as revised.
 
 *End of record. No UVM statement, pin, grade or pipe state is changed by it.*
