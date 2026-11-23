@@ -1,0 +1,182 @@
+{
+ "upload": "upload/corpus-originals-20261123",
+ "files_in_sha256sums": 529,
+ "manifest_rows": 529,
+ "stated_hash_mismatches": [],
+ "files_not_listed": [],
+ "wanted_names": 440,
+ "totals": {
+  "PRESENT, NO RECORDED HASH": 165,
+  "HASH-VERIFIED": 135,
+  "NOT FOUND": 125,
+  "PRESENT, HASH DIFFERS": 15
+ },
+ "in_zip": 46,
+ "per_stream": {
+  "AZ": {
+   "PRESENT, NO RECORDED HASH": 11,
+   "NOT FOUND": 1
+  },
+  "DYAD": {
+   "NOT FOUND": 60,
+   "HASH-VERIFIED": 34,
+   "PRESENT, NO RECORDED HASH": 42,
+   "PRESENT, HASH DIFFERS": 3
+  },
+  "DZT": {
+   "NOT FOUND": 1,
+   "HASH-VERIFIED": 1,
+   "PRESENT, NO RECORDED HASH": 1
+  },
+  "ER2B": {
+   "PRESENT, NO RECORDED HASH": 14,
+   "HASH-VERIFIED": 13,
+   "NOT FOUND": 1
+  },
+  "FMS": {
+   "NOT FOUND": 3,
+   "PRESENT, HASH DIFFERS": 4,
+   "PRESENT, NO RECORDED HASH": 6,
+   "HASH-VERIFIED": 4
+  },
+  "GEN": {
+   "NOT FOUND": 2,
+   "PRESENT, NO RECORDED HASH": 12,
+   "HASH-VERIFIED": 6
+  },
+  "LEGACY": {
+   "PRESENT, NO RECORDED HASH": 18,
+   "NOT FOUND": 21,
+   "HASH-VERIFIED": 1
+  },
+  "METH": {
+   "PRESENT, NO RECORDED HASH": 1
+  },
+  "NUMGEN": {
+   "PRESENT, NO RECORDED HASH": 19,
+   "NOT FOUND": 2
+  },
+  "OFN": {
+   "NOT FOUND": 5,
+   "HASH-VERIFIED": 2,
+   "PRESENT, NO RECORDED HASH": 3
+  },
+  "PREL": {
+   "PRESENT, NO RECORDED HASH": 2,
+   "NOT FOUND": 1
+  },
+  "PROG": {
+   "PRESENT, NO RECORDED HASH": 1
+  },
+  "PRR": {
+   "PRESENT, NO RECORDED HASH": 3
+  },
+  "RECOG": {
+   "PRESENT, HASH DIFFERS": 1,
+   "PRESENT, NO RECORDED HASH": 1
+  },
+  "RER": {
+   "HASH-VERIFIED": 74,
+   "PRESENT, NO RECORDED HASH": 17,
+   "PRESENT, HASH DIFFERS": 8,
+   "NOT FOUND": 11
+  },
+  "RRF": {
+   "NOT FOUND": 2,
+   "HASH-VERIFIED": 16,
+   "PRESENT, NO RECORDED HASH": 8
+  },
+  "TDRG": {
+   "NOT FOUND": 1
+  },
+  "TRIAD": {
+   "PRESENT, NO RECORDED HASH": 9,
+   "NOT FOUND": 12,
+   "HASH-VERIFIED": 8
+  },
+  "UVM": {
+   "NOT FOUND": 4
+  }
+ },
+ "bytes_with_a_recorded_hash_under_another_name": [
+  {
+   "stored_as": "build_r4_1_draft.py",
+   "original_name": "RTG_RELATIONAL_EMERGENCE_REGISTRY_v0_2_DRAFT_r3_1.md",
+   "sha256": "a57aef068ec9eb31f1d7981c239faf855b758652a4e6a37c4295e712d3e42bf9",
+   "wanted_name": "build_r4_1_draft.py"
+  },
+  {
+   "stored_as": "build_r4_2_draft.py",
+   "original_name": "RTG_RELATIONAL_EMERGENCE_REGISTRY_v0_2_DRAFT_r4.md",
+   "sha256": "93a63c49131d665f258dccf16ffcc6ccfb6af9a60035073ebd710dd4d80c8eff",
+   "wanted_name": "build_r4_2_draft.py"
+  },
+  {
+   "stored_as": "build_r4_7_draft.py",
+   "original_name": "RRF_EDITOR_RESPONSE_TO_RER_PHASEA_v0_2_20261019.md",
+   "sha256": "413a869b49a295652af1379510fbece2d10619daffd5874c1320e1d686113084",
+   "wanted_name": "build_r4_7_draft.py"
+  },
+  {
+   "stored_as": "cb732e21-46ad-4a96-a76f-71566f4ed100.zip",
+   "original_name": "data.zip",
+   "sha256": "c9b2865c8bce1810dc462b76833325f93e3ca7a7f5c256f53f2535f08a68be75",
+   "wanted_name": "cb732e21-46ad-4a96-a76f-71566f4ed100.zip"
+  },
+  {
+   "stored_as": "cent_output.txt",
+   "original_name": "cent.py",
+   "sha256": "c61890682c7e07a6eb3e7c19e28698e5556a963cec706a174669cfedc1cb4624",
+   "wanted_name": "cent_output.txt"
+  },
+  {
+   "stored_as": "DYAD_CHECK_degree10_even_term_hatF.md",
+   "original_name": "DYAD_CHECK_degree10_even_term_hatF281%29.md",
+   "sha256": "dcfd808c0270202768b4422acb474cda08f693a1cf69e8ec368e7faac414f4d4",
+   "wanted_name": "DYAD_CHECK_degree10_even_term_hatF.md"
+  },
+  {
+   "stored_as": "exact_q_output.txt",
+   "original_name": "exact_q.py",
+   "sha256": "44105683b5da2b57fa9dfbd2f9e05488107c560f7b7fae7ab88b6ae24d4a6001",
+   "wanted_name": "exact_q_output.txt"
+  },
+  {
+   "stored_as": "fit_output.txt",
+   "original_name": "cm.py",
+   "sha256": "4c74e53d936338dcb10a914f3e14de6cba124b3a6db5c46b338be0cad9bb5eb8",
+   "wanted_name": "fit_output.txt"
+  },
+  {
+   "stored_as": "lock5_output.txt",
+   "original_name": "lock5.py",
+   "sha256": "0f24df601a35b648991bd51e334188c063b291b28e4a78025fdc03a6a723bf23",
+   "wanted_name": "lock5_output.txt"
+  },
+  {
+   "stored_as": "rtg_betagraded_vanishing.py",
+   "original_name": "rtg_betagraded_vanishing_v1_1.py",
+   "sha256": "dec08174bcf24955d8a387aad9f6f560e742a6395c1761fad3fc1126ea64d774",
+   "wanted_name": "rtg_betagraded_vanishing.py"
+  },
+  {
+   "stored_as": "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_CANDIDATE.md",
+   "original_name": "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_REVISED_REVIEW_CANDIDATE.md",
+   "sha256": "fc53acff20c17e152884bc1835d4de2d4354a406f4d63262cdb04c200e2cab9e",
+   "wanted_name": "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_CANDIDATE.md"
+  },
+  {
+   "stored_as": "STAGE2_FOLLOWUP_RECEIVING_RESPONSE_20261014.md",
+   "original_name": "RECEIVING_RESPONSE.md",
+   "sha256": "a613f58908eeee1bf5c29a933cf977fcdff0c15332524119b14b6d0c305813b5",
+   "wanted_name": "STAGE2_FOLLOWUP_RECEIVING_RESPONSE_20261014.md"
+  }
+ ],
+ "manifest_status": {
+  "NO-RECORDED-HASH": 164,
+  "MATCH": 128,
+  "DIFFERENT-FROM-RECORDED": 21,
+  "PATTERN": 216
+ },
+ "variant_named_files": 56
+}
