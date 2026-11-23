@@ -119,11 +119,11 @@ No ESM pack was loaded. The header's suggested sanity check on the real cluster 
 
 ## 6. I-4 — `T100` (`nm=2` at line 110, `nm=0` at line 277)
 
-**Status: resolved to a proposal. The two lines describe two different T100 packs. Line 277 and the whole R14 trajectory are reproduced with the original scripts. Line 110's triple mixes the two packs. Proposed class (i) for line 110 and (iii) for line 277. The PI decides.**
+**Status: resolved to a proposal. The two lines describe two different T100 packs, and line 110's triple mixes them: class (i). R14's numbers are reproduced with the original script on the nine named packs: (iii) for the values. The nine packs are not documented as one continuous growth run, so R14's "single T80→T120 growth series" wording is a separate class (i) scope item. Correction after review 6028154223 (second co-owner). The PI decides.**
 
 **The two lines name different scripts.**
 - Line 110 (OPEN-M-2E status) reports "Near-pass … T100: `σ_{h,int}=0.252`, `L_{z_h}=0.527`, nm=2", graded by `open_m_2e_panel.py` on an audit pack.
-- Line 277 (R14, RESULT-M-2F) reports "T100: `σ_{h,int}=0.252`, nm=0, corridor 0.302" and the trajectory correlations +0.654 / +0.326 / +0.488, from `open_m_2f_trajectory.py` on the nine-stage microstate series.
+- Line 277 (R14, RESULT-M-2F) reports "T100: `σ_{h,int}=0.252`, nm=0, corridor 0.302" and the correlations +0.654 / +0.326 / +0.488 "along a single T80→T120 growth series", from `open_m_2f_trajectory.py`. That script reads nine microstates named by hand in its `SERIES` list and checks only that at least seven rows exist. It does not check that the packs descend from one another.
 - Both scripts count `nm` as edges in three or more faces.
 
 **Data.** The PI supplied three batches on 23 November 2026 (16:47, 17:05 and 22:23 +03:00). They are placed unchanged on `upload/uvm-i4-microstates` (`7be6e47`, `f358697`, `40c26ce`) with `SHA256SUMS.txt` (24 files) and `README_UPLOAD.md`.
@@ -140,7 +140,7 @@ No earlier record gives hashes for these files: their integrity is checked, thei
 
 **Results.**
 
-| Quantity | DSN | Reproduced (original script) |
+| Quantity (on the nine named `SERIES` packs) | DSN | Reproduced (original script) |
 |---|---|---|
 | corr(corridorFrac, `σ_{h,int}`), n=9 | +0.654 | **+0.654** |
 | corr(`σ_{h,int}`, nm) | +0.326 | **+0.326** |
@@ -154,16 +154,35 @@ No earlier record gives hashes for these files: their integrity is checked, thei
 | line 110 as written | 0.252 | 0.527 | 2 | — | — |
 
 **Findings.**
-1. **R14 (line 277) is reproduced** with the original certificate on the nine PI-supplied stages: all three correlations to three decimals, and the T100 row. This adds `EV-RUN` by a co-owner to the DSN's "PI-reproduced on repo data". Grade and scope are unchanged.
+1. **R14's numbers are reproduced** with the original certificate on the nine PI-supplied packs: all three correlations to three decimals, and the T100 row.
+   - This adds `EV-RUN` by a co-owner for the values. Their identity with the June campaign is not shown: the June hashes are not recorded, so the upload proves integrity only.
+   - Reproducing the numbers does not establish R14's "single growth series" scope; see Lineage below.
 2. **Line 110's T100 triple is reproduced by no single pack.** Under the original panel, `L_{z_h}=0.527` and nm=2 are the `ultra` pack's values, and `σ_{h,int}=0.252` is the `gentle` pack's. The `ultra` pack's own `σ_{h,int}` is 0.295, which lies inside the binding band [0.28, 0.35]. Its panel fails only nm=0 and the consequence `σ_int≥0.8` (0.741). Line 110 therefore misstates the `ultra` near-pass: its `σ_{h,int}` is in band, not below the floor. This is a numerical-attribution error inside a `[NUM]` status line: class (i).
 3. **Unchanged:** line 110's conclusion "no clean A-candidate", since `ultra` has nm=2 and `gentle` fails three criteria. The T103 / RUN05 values in the same line were not examined.
 4. **Growth log:** `nm` rises to 7 at growth step 100 of the `gentle` run. After `swap_polish` the final pack has `nonmanifold=0`, and line 277 refers to the final pack.
 5. **Also checked:** the T80 audit pack under the original panel gives `σ_{h,int}=0.1888`, `L_{z_h}=0.5769`, nm=0, equal to the trajectory's T80 row.
 
+**Lineage of the nine `SERIES` packs.** These are facts read from the PI-supplied files by `evidence/uvm/scripts/uvm_i4_series_lineage.py` (output `series_lineage.txt`); no ESM computation was run.
+- **Divergent growth histories.** The `T80_to_T93_2e_loadtest` and `T80_to_T100_gentle` growth logs both start at step 81 and already differ there:
+  - T93: Q=0.000121, C=0.674155, nm=1;
+  - T100: Q=0.090188, C=0.760935, nm=0.
+
+  Neither run continues the other. (Point raised by the second co-owner's review.)
+- **Different T80 input.** The T100 `gentle` run records its input as `…rank_2_T80_v2_resume_cluster.json` (cluster JSON `params.input_cluster`). The T80 stage of `SERIES` is a different pack, `…mid40_to_T80_minref`.
+  - The `gentle` audit pack is time-stamped 2026-06-12 15:59:47, earlier than the `minref` T80 audit pack (17:29:02). The T100 stage therefore cannot continue that T80 file as recorded.
+  - The T93 audit pack is time-stamped 21:34:19.
+- **No nested face sets.** No `SERIES` pack's face set is contained in the next one's. The fraction of a pack's faces found in the next pack ranges from 0.31 to 0.57. Because the growth code also removes faces (surgery, swap polish), non-nesting alone would not exclude ancestry; it simply gives no evidence of it.
+- **Reading.** The nine packs are **stage-labelled snapshots selected from several run continuations from T80-level states of one bootstrap** (`seed_001`, `rank_2`, `locked_bootstrap_rank_2`). They are not shown to be one continuous growth run.
+  - R14's correlations are therefore descriptive associations across a selected nine-pack panel, n=9.
+  - They are not evidence of evolution within one run, nor of causal corridor loading.
+  - The v0.7 guard against promoting localization or causality stays in force.
+
 **Proposed owner action** for the successor edition, PI decision:
-- Line 110: restate the T100 near-pass per pack, for example "T100 (`T98_to_T100_2e_ultra`): `σ_{h,int}=0.295`, `L_{z_h}=0.527`, nm=2", optionally adding the clean `gentle` T100 state (0.252, 0.343, nm=0).
-- Line 277: unchanged. It can cite this reproduction.
-- No value is changed by this record.
+- **Line 110 (class i, numerical attribution).** Restate the T100 near-pass per pack, for example "T100 (`T98_to_T100_2e_ultra`): `σ_{h,int}=0.295`, `L_{z_h}=0.527`, nm=2". The clean `gentle` T100 state (0.252, 0.343, nm=0) can be added. "No clean A-candidate" is scoped to the examined T100 packs; T103 and RUN05 stay unverified.
+- **R14 values (class iii).** Keep +0.654 / +0.326 / +0.488, the T100 row and `[NUM]`, citing this reproduction and naming the nine packs.
+- **R14 scope (class i).** Replace "along a single T80→T120 growth series" and "along the sampled trajectory" with "across nine stage-labelled packs drawn from several run continuations of one bootstrap (n=9)". Keep the selection caveat and the negative results. The alternative is to supply an immutable ancestry map that reconciles the step-81 divergence; none is available.
+- **Line 110's dependent clause.** The HYP-2E-COUPLING clause ("tracks corridor occupancy … along the sampled trajectory") needs the same wording change.
+- No value is changed by this record. The tagged v0.7.1 file is not modified.
 
 ---
 
@@ -191,7 +210,7 @@ This record does not:
 - adopt, re-grade or re-scope any UVM statement;
 - treat a passing script as a theorem;
 - treat the PI's confirmations or merges as an edition decision;
-- rerun the v0.7.1 validation or any campaign. The I-3 diagnostic of §5 and the I-4 runs of §6 (the original trajectory script on nine microstates, the original panel script on three audit packs, and the diagnostic on eleven microstates) are the only executions;
+- rerun the v0.7.1 validation or any campaign. The I-3 diagnostic of §5 and the I-4 runs of §6 (the original trajectory script on nine microstates, the original panel script on three audit packs, the diagnostic on eleven microstates, and the face-set lineage comparison of the nine packs) are the only executions;
 - change a pipe state.
 
 The triage rows it touches are updated in `UVM_REACTIVATION_TRIAGE.md` revision 4, which cites this record.
