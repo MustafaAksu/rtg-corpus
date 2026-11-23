@@ -1,0 +1,57 @@
+{
+  "source": "Genesis-named six-step modal model N=(P tensor I2)Te^3(E tensor I2), F=N^6, with reprojection each step",
+  "status": "conditional Triadic study; not adopted to Genesis/Triadic owner, not physical K3",
+  "variables": "a=sqrt(Qs)>0, h=Isc/a, k=-Omega/a, u=exp(i theta)",
+  "theta_update": "theta_plus=theta+t^2 Theta2(a,h,k)+t^3[2/a^2 Re(P1 u+P3 u^3)]+O(t^4) for X=t X0",
+  "Theta2": "-h*k/3 - sqrt(3)*(a**2/4 + h**2/3 + k**2/9)",
+  "P1": "-9*sqrt(3)*a**5/128 - 3*I*a**5/128 + 11*sqrt(3)*a**3*h**2/48 + 3*I*a**3*h**2/16 - a**3*h*k/12 + sqrt(3)*I*a**3*h*k/18 + sqrt(3)*a**3*k**2/48 + 5*I*a**3*k**2/144 + 5*sqrt(3)*a*h**4/216 - I*a*h**4/24 + a*h**3*k/9 + 5*sqrt(3)*a*h**2*k**2/108 + I*a*h**2*k**2/36 + a*h*k**3/9 + 5*sqrt(3)*a*k**4/216 + 5*I*a*k**4/72",
+  "P3": "3*sqrt(3)*a**5/256 + 31*I*a**5/768 - sqrt(3)*a**3*h**2/96 - 7*I*a**3*h**2/96 + 7*a**3*h*k/48 - sqrt(3)*I*a**3*h*k/48 + sqrt(3)*a**3*k**2/96 + 7*I*a**3*k**2/96 - 7*sqrt(3)*a*h**4/432 - 17*I*a*h**4/432 + a*h**3*k/12 - 13*sqrt(3)*I*a*h**3*k/324 + 5*sqrt(3)*a*h**2*k**2/216 + I*a*h**2*k**2/72 + 7*a*h*k**3/108 - sqrt(3)*I*a*h*k**3/108 + 11*sqrt(3)*a*k**4/1296 + 5*I*a*k**4/144",
+  "phase_witness": {
+    "theta2": "-sqrt(3)/3",
+    "P1": "65*sqrt(3)/3456 + 19*I/384",
+    "P3": "-199*sqrt(3)/6912 + 863*I/6912"
+  },
+  "quintic_witness_fourier_matrix": [
+    [
+      "65/288",
+      "161*sqrt(3)/864",
+      "73/192",
+      "-59*sqrt(3)/5184"
+    ],
+    [
+      "-11/48",
+      "-17*sqrt(3)/144",
+      "17/48",
+      "-13*sqrt(3)/432"
+    ],
+    [
+      "-11/32",
+      "-7*sqrt(3)/27",
+      "-137/1152",
+      "271*sqrt(3)/10368"
+    ],
+    [
+      "25*sqrt(3)/216",
+      "55/288",
+      "-709*sqrt(3)/3456",
+      "53/3456"
+    ]
+  ],
+  "quintic_witness_rank": 3,
+  "quintic_witness_kernel": [
+    "-1716859*sqrt(3)",
+    "2492295",
+    "-160036*sqrt(3)",
+    "1413576"
+  ],
+  "chord_injectivity_obstruction": "31867336191987863672583168*sqrt(3)",
+  "interpretation": "for reference noncollinear shape, theta -> quintic successor signed-Gram readout is a smooth embedding; no phase-collapsing factor on that orbit can predict all four successor observables at leading broken order",
+  "limitations": [
+    "fixed named conditional model",
+    "requires source-domain chart Qs>0",
+    "not global minimality across all shapes",
+    "no physical SO(B) gauge identified",
+    "not a memory or independent degree theorem",
+    "not source-verified full map outside retained jet"
+  ]
+}

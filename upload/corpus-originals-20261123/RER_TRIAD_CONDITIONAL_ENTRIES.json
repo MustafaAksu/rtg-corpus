@@ -1,0 +1,81 @@
+{
+  "schema": "RER target-specific supplemental records v0.1",
+  "document_status": "NONCANONICAL_WORKING_SUPPLEMENT",
+  "authority": "proposed local records, not adopted scientific RIDs",
+  "physical_target_status": "NO_TARGET_VECTOR_LAW_SELECTED",
+  "named_model": "Genesis conditional standalone modal analytic: N=(P tensor I2) o T_edge^x3 o (E tensor I2); F=N^6; projection every primitive step",
+  "source_snapshots": {
+    "GENESIS_TO_RER_TRIAD_CLOSURE.md": {
+      "sha256": "721d9059434f6f7bc82632f86e50b886da9361e4afe65815d0b1b81dd9933304",
+      "bytes": 12107
+    },
+    "CONDITIONAL_CLOSURE_RESPONSE.json": {
+      "sha256": "553dbfccd2ece8bd516e8991672ae0a6ceb326004d070dc8bee63fe05fe7a05b",
+      "bytes": 2332
+    },
+    "RTG_RELATIONAL_EMERGENCE_REGISTRY_v0_1_DRAFT.md": {
+      "sha256": "886a249ad41f97b99c3473cc06bb0b3e27dcfe2946053539518228e23babbbdb",
+      "bytes": 58964
+    }
+  },
+  "records": [
+    {
+      "id": "RER-GEN-C01",
+      "parent_id": "RER-T01",
+      "claim_grade": "ALG",
+      "source_type": "conditional_named_model",
+      "carrier": "X=V^2, V=R^2, B=[[1,-1/2],[-1/2,1]]; exact cubic polynomial surrogate J3=X+G3; all proper/event-unrestricted real inputs",
+      "observables": [
+        "Qs",
+        "Qc",
+        "Isc"
+      ],
+      "constraints": "QsQc-Isc^2>=0, signed chirality not retained",
+      "transformation_law": "unsigned readout identifies opposite chirality under improper B-isometry; cubic G3 preserves proper but not all improper rotation/reflection fibres",
+      "closure_status": "DISPROVED_EXACT_CLOSURE_FOR_SURROGATE",
+      "memory": "missing signed chirality relative to unsigned readout; no necessary historical memory inferred",
+      "witness": "s=t*(1,0); c=+/-t*J_Q(1,0), same unsigned inputs and successor Isc differs at t^4",
+      "next_test": "compare with signed Gram under same exact J3",
+      "adoption": "NOT_ADOPTED_NONCANONICAL"
+    },
+    {
+      "id": "RER-GEN-C02",
+      "parent_id": "RER-T02",
+      "claim_grade": "ALG",
+      "source_type": "conditional_named_model",
+      "carrier": "same X=V^2; exact polynomial surrogate J3=X+G3; no physical event choice",
+      "observables": [
+        "Qs",
+        "Qc",
+        "Isc",
+        "OmegaG"
+      ],
+      "constraints": "QsQc=Isc^2+OmegaG^2, OmegaG=sqrt(3)/2*(s_eta*c_rho-s_rho*c_eta)",
+      "transformation_law": "G3 SO(B)-equivariant, signed tuple orbit-separating; admits unique quotient under J3; ODE dX/dt=G3 separately closed for admitted times",
+      "closure_status": "EXACT_CLOSURE_FOR_SURROGATE",
+      "memory": "no additional current-state common angle needed for J3 quotient; no physical memory theorem",
+      "next_test": "test same signed readout against raw six-step analytic modal F=N^6",
+      "adoption": "NOT_ADOPTED_NONCANONICAL"
+    },
+    {
+      "id": "RER-GEN-C03",
+      "parent_id": "RER-T02",
+      "claim_grade": "ALG",
+      "source_type": "conditional_named_model",
+      "carrier": "X=V^2, named analytic modal F=N^6 with reprojection every primitive step; local noncollinear common admissible neighborhood",
+      "observables": [
+        "Qs",
+        "Qc",
+        "Isc",
+        "OmegaG"
+      ],
+      "constraints": "QsQc=Isc^2+OmegaG^2; admissible event predicate not selected",
+      "transformation_law": "F is not readout-equivariant for common SO(B) rotations; quintic observable defect has Fourier modes +/-1, +/-3 and no +/-5",
+      "closure_status": "DISPROVED_EXACT_CLOSURE_FOR_NAMED_MODEL",
+      "memory": "missing present common-frame angle relative to signed Gram; full theta_s restores state on Qs>0; historical memory not forced",
+      "witness": "X_t=((t,0),(0,t)), X_prime=-X_t; same Phi, Delta successor Qs=349/288*t^5+O(t^7)",
+      "next_test": "derive theta_s evolution; analyze controlled-order noninvertible augmented quotients before invoking memory",
+      "adoption": "NOT_ADOPTED_NONCANONICAL"
+    }
+  ]
+}

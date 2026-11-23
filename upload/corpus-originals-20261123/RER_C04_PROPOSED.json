@@ -1,0 +1,21 @@
+{
+  "schema": "RER target-specific supplemental record v0.1",
+  "document_status": "NONCANONICAL_WORKING_SUPPLEMENT",
+  "authority": "Triadic conditional study result; source model Genesis; RER adoption not implied",
+  "physical_target_status": "NO_TARGET_VECTOR_LAW_SELECTED",
+  "id": "RER-GEN-C04",
+  "parent_id": "RER-GEN-C03",
+  "claim_grade": "ALG",
+  "source_type": "conditional_named_model",
+  "carrier": "X=(s,c) in V^2; Genesis analytic six-step modal model N^6 with per-step reprojection; Qs>0 chart, fixed noncollinear witness orbit X_t=t R_theta((1,0),(0,1))",
+  "observables": ["Qs", "Qc", "Isc", "OmegaG", "theta_s"],
+  "constraints": "QsQc=Isc^2+OmegaG^2; theta_s=arg L_B(s), chart Qs>0; five displayed numbers but four independent coordinates",
+  "transformation_law": "SO(B) simultaneous rotation changes theta_s and fixes signed Gram; cubic vector jet is equivariant; quartic jet produces first/third angular modes in successor Gram and common-angle drift",
+  "closure_status": "EXACT_LOCAL_REPARAMETERIZATION; ANGLE_ORBIT_INJECTIVITY_FOR_NAMED_MODEL_ON_FIXED_WITNESS_SMALL_AMPLITUDE; NOT_A_PROPER_DIMENSION_REDUCTION",
+  "memory": "Missing information is present common-frame phase; no historical memory variable required on this lossless augmented chart; no globally minimal effective state asserted",
+  "witness": "for X0=((1,0),(0,1)) quintic readout map theta->M(cos theta,sin theta,cos3theta,sin3theta) is embedded; M rank 3 with a one-dimensional kernel whose cubic chord compatibility obstruction is nonzero; full analytic successor readout inherits injectivity for sufficiently small positive scale",
+  "new_angle_result": "theta_plus=theta+t^2 Theta2+t^3 Theta3+O(t^4), Theta2 signed-Gram-only, Theta3 first/third harmonic, no fifth",
+  "next_test": "Genesis reviews source fidelity; RER reviews conditional record; evaluate alternative observable targets and cross-level applicability, no new branch yet",
+  "adoption": "NOT_ADOPTED_NONCANONICAL",
+  "guard": "No physical K3 law, event admissibility, new independent degree, memory necessity, or canonical RRF profile inferred"
+}

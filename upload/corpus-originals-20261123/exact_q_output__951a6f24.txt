@@ -1,0 +1,12 @@
+k=1/2: q=-2/27 - 8*sqrt(3)*I/27  p=1/18 - 4*sqrt(3)*I/27  other-monomials-nonzero=0  q-qform=0  p-pform=0
+k=3/2: q=2/21 - 16*sqrt(3)*I/63  p=5/42 - 8*sqrt(3)*I/63  other-monomials-nonzero=0  q-qform=0  p-pform=0
+k=1/4: q=-18/91 - 44*sqrt(3)*I/117  p=-5/78 - 22*sqrt(3)*I/117  other-monomials-nonzero=0  q-qform=0  p-pform=0
+k=3: q=-16/21 - 22*sqrt(3)*I/63  p=-1/42 - 11*sqrt(3)*I/63  other-monomials-nonzero=0  q-qform=0  p-pform=0
+k=-1: q=-16/27 - 14*sqrt(3)*I/27  p=-5/18 - 7*sqrt(3)*I/27  other-monomials-nonzero=0  q-qform=0  p-pform=0
+k=5/3: q=16/57 - 46*sqrt(3)*I/171  p=11/114 - 23*sqrt(3)*I/171  other-monomials-nonzero=0  q-qform=0  p-pform=0
+k=7: q=-144/215 - 158*sqrt(3)*I/387  p=-29/258 - 79*sqrt(3)*I/387  other-monomials-nonzero=0  q-qform=0  p-pform=0
+q*D interpolant: -2*I*(2*sqrt(3)*k**3 - 3*I*k**3 - 7*sqrt(3)*k**2 + 9*I*k**2 + 8*sqrt(3)*k - 9*I*k - 4*sqrt(3) + 3*I)/9
+matches qform*D: True
+checks at extra points: [True, True, True]
+p*D interpolant matches: True [True, True, True]
+# runtime 7m35s (sympy, exact rational arithmetic), 17 Oct 2026

@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-14",
+  "status": "SEPARATE_REVIEW_RECEIPT_NOT_ADOPTION",
+  "review_source": "sources/TRIAD_RER_v0_2_r2_RECORD_REVIEW_20261014.md",
+  "review_source_sha256": "d388d7eb0e0855051d0a783383b69254be17f64102e6568fdc37c5d3e907e1ab",
+  "reviewed_r2_md_sha256": "3d346b84d63cc25b8a565bb6407bcd5bd674fb0b811b4165fd41e054f762b163",
+  "reviewed_r2_json_sha256": "888321b962f03b7dda8a5604e3e5763160f8d4ead6a09363be580d9a3494f0ea",
+  "contributor_dispositions": [
+    {
+      "entry_id": "RER-GEN-C07",
+      "disposition": "ACCEPT_SCOPED",
+      "attribution": "Supplied contributor review; not an independent re-proof in this turn"
+    },
+    {
+      "entry_id": "RER-GEN-C08",
+      "disposition": "ACCEPT_SCOPED",
+      "attribution": "Supplied contributor review; not an independent re-proof in this turn"
+    },
+    {
+      "entry_id": "RER-GEN-C09",
+      "disposition": "ACCEPT_SCOPED",
+      "attribution": "Supplied contributor review; not an independent re-proof in this turn"
+    },
+    {
+      "entry_id": "RER-TRIAD-FORMAL-AGE",
+      "disposition": "ACCEPT_SCOPED",
+      "attribution": "Supplied contributor review; not an independent re-proof in this turn"
+    },
+    {
+      "entry_id": "RER-TRIAD-AGE-CURVATURE",
+      "disposition": "ACCEPT_SCOPED",
+      "attribution": "Supplied contributor review; not an independent re-proof in this turn"
+    },
+    {
+      "entry_id": "RER-TRIAD-REGULAR-3FOLD",
+      "disposition": "ACCEPT_SCOPED",
+      "attribution": "Supplied contributor review; not an independent re-proof in this turn"
+    },
+    {
+      "entry_id": "RER-ER2B-T6D",
+      "disposition": "ACCEPT_SCOPED",
+      "attribution": "Supplied contributor review; not an independent re-proof in this turn"
+    },
+    {
+      "entry_id": "RER-F3-N7N8",
+      "disposition": "ACCEPT_SCOPED",
+      "attribution": "Supplied contributor review; not an independent re-proof in this turn"
+    }
+  ],
+  "wording_proposals": "notes/RER_WORDING_AMENDMENTS_PROPOSED.md",
+  "mathematical_certificates_rerun": false,
+  "governing_stage2_config_received": false,
+  "K8_pilot_received": false,
+  "global_error_constants_certified": false,
+  "RER_r2_modified": false,
+  "owner_adoption": false,
+  "source_status_updates_require_later_registry_revision": true
+}

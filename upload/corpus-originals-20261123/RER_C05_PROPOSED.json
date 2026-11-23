@@ -1,0 +1,40 @@
+{
+  "id": "RER-GEN-C05",
+  "title": "Scalar-parent delayed-observable full-rank obstruction",
+  "schema": "noncanonical model-specific relational-emergence supplement",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "parent_records": ["RER-GEN-C02", "RER-GEN-C03", "RER-GEN-C04"],
+  "owner_boundary": {
+    "microscopic_model": "Genesis (conditional named model)",
+    "effective_factor_test": "Triadic",
+    "cross_level_registry": "RER (noncanonical)",
+    "physical_target": "NO_TARGET_VECTOR_LAW_SELECTED",
+    "RRF": "NO_NEW_PROFILE"
+  },
+  "claim_grade": "ALG conditional exact local theorem",
+  "carrier": "S=V^2=R^4 with X=(s_rho,s_eta,c_rho,c_eta)",
+  "state": "X is 4-dimensional; chart Q_s>0",
+  "map": "F=N^6, N=(P tensor I2) Te^{x3} (E tensor I2), Te(rho,eta)=(rho-sin eta, eta+exp(rho)-1-sin eta), reprojection after EACH step",
+  "observable": "O=Q_s=s_rho^2-s_rho*s_eta+s_eta^2",
+  "candidate_factor": "any C^1 map pi:U -> Y_eff of dimension <4 preserving O and intertwining F; none exists near the certified witness",
+  "domain": "open neighborhood of X_t=(t,0,0,t) with t>0 sufficiently small, containing the necessary three forward six-step iterates; source event admission not selected",
+  "delayed_observation": "H3=(O, O o F, O o F^2, O o F^3)",
+  "order": "leading determinant coefficient t^17; analytic remainder O(t^18), not an explicit uniform constant",
+  "remainder": "Analytic local O(t^18) from the named sine/exponential model; no certified radius, stability bound, or iteration-uniform error claim",
+  "closure_status": "NO_LOCAL_C1_OBSERVABLE_PRESERVING_FACTOR_DIM_LT_4_FOR_NAMED_MODEL_NEAR_WITNESS",
+  "certificate": "det(DH3)(t,0,0,t)=(12645889/11943936)t^17+O(t^18) != 0 for sufficiently small t>0",
+  "related_F1_failures": [
+    {"observable":"Q_s", "first_failure":"t^4", "witness":"(t,0,0,0) vs (t,0,0,t); delta_next=1/2*t^4+O(t^5)"},
+    {"observable":"Omega_G", "first_failure":"t^4", "witness":"(t,0,0,t) vs (2t,0,0,t/2); delta_next=-sqrt(3)/2*t^4+O(t^5)"}
+  ],
+  "transformation_law": "Passive simultaneous transport of (F,O) preserves factor existence/nonexistence; reusing a bare printed Q formula after changing chart is a different observable",
+  "memory": "A delay vector is used to TEST observability, not assumed as an independent historical state; rank 4 does not imply new memory or a new physical degree of freedom",
+  "remaining_test": "F3: test only independently source-defined admissible birth/incidence submanifolds for invariance and factors; no such subset selected here",
+  "exclusions": [
+    "not physical standalone-K3",
+    "not a global minimal-dimension theorem across every event domain",
+    "not a denial of reduction on a separately invariant birth manifold",
+    "not proof that historical memory is required",
+    "not a new RRF registration or accepted scientific RID"
+  ]
+}

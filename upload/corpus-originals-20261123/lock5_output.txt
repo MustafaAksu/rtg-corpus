@@ -1,0 +1,74 @@
+# (a) z̄^5 coefficient of H∘F - F∘H for H = c z + h2 + h3 (generic), F = six-step NF jet
+# (b) kernel of degree-4 operator on quadratic maps G2(x,y) (two- AND three-edge locks)
+import sympy as sp, itertools
+z,Z=sp.symbols('z Z'); c,C=sp.symbols('c C')   # C = conj(c) = 1/c
+s3=sp.sqrt(3); lam=sp.Rational(1,2)+sp.I*s3/2
+mu=-sp.Rational(1,2)-2*sp.I*s3/3; mub=sp.conjugate(mu)
+n05=sp.Rational(43,17280)-sp.I*227*s3/155520; a05=sp.expand(6*sp.conjugate(lam)*n05); a05b=sp.conjugate(a05)
+a32,A32=sp.symbols('a32 A32')
+F =z+mu*z**2*Z+a32*z**3*Z**2+a05*Z**5
+Fb=Z+mub*Z**2*z+A32*Z**3*z**2+a05b*z**5
+mons=lambda d:[(a,d-a) for a in range(d+1)]
+h={};hb={}
+for d in (2,3):
+    for (a,b) in mons(d):
+        h[(a,b)]=sp.Symbol(f'h{a}{b}'); hb[(a,b)]=sp.Symbol(f'H{a}{b}')
+H =c*z+sum(h[k]*z**k[0]*Z**k[1] for k in h)
+Hb=C*Z+sum(hb[k]*Z**k[0]*z**k[1] for k in hb)
+def trunc(e,d=5):
+    p=sp.Poly(sp.expand(e),z,Z); return sum(cf*z**m[0]*Z**m[1] for m,cf in zip(p.monoms(),p.coeffs()) if sum(m)<=d)
+HF=trunc(H.subs({z:F,Z:Fb},simultaneous=True))
+FH=trunc(F.subs({z:H,Z:Hb},simultaneous=True))
+D=sp.Poly(sp.expand(HF-FH),z,Z)
+print("deg-3 coeff z^2 Zb:",sp.factor(D.coeff_monomial(z**2*Z)))
+print("Z^5 coefficient (general h2,h3):",sp.factor(D.coeff_monomial(Z**5)))
+print("Z^5 coefficient with h2=0:",sp.factor(D.coeff_monomial(Z**5).subs({h[k]:0 for k in h if sum(k)==2}).subs({hb[k]:0 for k in hb if sum(k)==2})))
+# (b) degree-4 operator on G2(x,y): M(G)=Gx*mu x|x|^2+GX*mub X|x|^2+Gy*mu y|y|^2+GY*mub Y|y|^2-2mu|x|^2 G-mu c^2 x^2 conj(G)
+x,X,y,Y=sp.symbols('x X y Y')
+q2=[m for m in itertools.product(range(3),repeat=4) if sum(m)==2]
+def kern(cval):
+    cols=[]
+    for m in q2:
+        for u in (1,sp.I):
+            G=u*x**m[0]*X**m[1]*y**m[2]*Y**m[3]; Gb=sp.conjugate(u)*X**m[0]*x**m[1]*Y**m[2]*y**m[3]
+            M=(sp.diff(G,x)*mu*x**2*X+sp.diff(G,X)*mub*X**2*x+sp.diff(G,y)*mu*y**2*Y+sp.diff(G,Y)*mub*Y**2*y
+               -2*mu*x*X*G-mu*cval**2*x**2*Gb)
+            P=sp.Poly(sp.expand(M),x,X,y,Y)
+            q4=[n for n in itertools.product(range(5),repeat=4) if sum(n)==4]
+            vec=[]
+            for n in q4:
+                cf=P.coeff_monomial(x**n[0]*X**n[1]*y**n[2]*Y**n[3]); vec+=[sp.re(cf),sp.im(cf)]
+            cols.append(vec)
+    Mx=sp.Matrix(cols).T; return Mx.shape[1]-Mx.rank()
+for cv in [1,-1,lam,sp.exp(sp.I*sp.Rational(7,10))]:
+    print("c =",cv," dim ker (quadratic G2(x,y)) =",kern(cv))
+t=sp.Symbol('t',real=True)
+cpar=(1-t**2+2*sp.I*t)/(1+t**2)
+cols=[]
+q4=[n for n in itertools.product(range(5),repeat=4) if sum(n)==4]
+for m in q2:
+    for u in (1,sp.I):
+        G=u*x**m[0]*X**m[1]*y**m[2]*Y**m[3]; Gb=sp.conjugate(u)*X**m[0]*x**m[1]*Y**m[2]*y**m[3]
+        M=(sp.diff(G,x)*mu*x**2*X+sp.diff(G,X)*mub*X**2*x+sp.diff(G,y)*mu*y**2*Y+sp.diff(G,Y)*mub*Y**2*y
+           -2*mu*x*X*G-mu*cpar**2*x**2*Gb)*(1+t**2)**2
+        P=sp.Poly(sp.expand(M),x,X,y,Y); vec=[]
+        for n in q4:
+            cf=sp.expand(P.coeff_monomial(x**n[0]*X**n[1]*y**n[2]*Y**n[3])); vec+=[sp.expand(sp.re(cf)),sp.expand(sp.im(cf))]
+        cols.append(vec)
+Mx=sp.Matrix(cols).T
+# find a 20x20 minor whose determinant is a nonzero polynomial in t, and its real roots
+rows=[i for i in range(Mx.shape[0]) if any(Mx[i,j]!=0 for j in range(Mx.shape[1]))]
+import random
+best=None
+Mn=Mx.subs(t,sp.Rational(3,7))
+R=Mn.rref()[1]
+print("generic-t rank:",Mn.rank(),"of",Mx.shape[1])
+# choose independent rows at t=3/7, then symbolic det
+sel=[];cur=sp.zeros(0,Mx.shape[1])
+for i in rows:
+    trial=cur.col_join(Mn[i,:])
+    if trial.rank()>cur.rank(): cur=trial; sel.append(i)
+    if len(sel)==Mx.shape[1]: break
+det=sp.factor(Mx.extract(sel,list(range(Mx.shape[1]))).det())
+print("det factor:",det)
+print("real roots:",sp.Poly(sp.numer(sp.together(det)),t).real_roots() if det!=0 else "det=0")

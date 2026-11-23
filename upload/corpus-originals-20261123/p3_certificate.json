@@ -1,0 +1,94 @@
+{
+ "rows": {
+  "1/20": {
+   "C7": 100,
+   "domain_ok(|g|<1/16, s+ <= 1/10, beta<1/2)": true,
+   "beta(r)": 0.003154189875933406,
+   "K_Theta_float": 0.9836824070691428,
+   "K_Theta_stated": "123/125",
+   "K_Theta_parts(A1,A2,B,C)": [
+    0.02661438354831777,
+    0.0505531674204375,
+    0.32212159490388925,
+    0.5843932611964983
+   ],
+   "c1": "261/1000",
+   "c2": "393/500",
+   "c3 (per 1/|w|)": "2/3",
+   "K_Q_float": 2.3525463194096963,
+   "K_Q_stated": "2353/1000",
+   "K_Q_parts(A,B,C)": [
+    0.2511641969855219,
+    0.21203692358877663,
+    1.8893451988353975
+   ],
+   "primitive_form: K_Theta*(256/225)^2": "637/500",
+   "primitive_form: K_Q*(256/225)^3": "1733/500"
+  },
+  "1/40": {
+   "C7": 30,
+   "domain_ok(|g|<1/16, s+ <= 1/10, beta<1/2)": true,
+   "beta(r)": 0.0007868773504702129,
+   "K_Theta_float": 0.9086438005562857,
+   "K_Theta_stated": "909/1000",
+   "K_Theta_parts(A1,A2,B,C)": [
+    0.013219489363335932,
+    0.02094064621021875,
+    0.3085328911442557,
+    0.5659507738384754
+   ],
+   "c1": "51/200",
+   "c2": "96/125",
+   "c3 (per 1/|w|)": "2/3",
+   "K_Q_float": 2.0636221754277324,
+   "K_Q_stated": "258/125",
+   "K_Q_parts(A,B,C)": [
+    0.12475560074345252,
+    0.08783208702726487,
+    1.851034487657015
+   ],
+   "primitive_form: K_Theta*(256/225)^2": "1177/1000",
+   "primitive_form: K_Q*(256/225)^3": "3041/1000"
+  }
+ },
+ "inputs": {
+  "|mu| ub": "314576434803/250000000000",
+  "A5=|a32|+|a05| ub": "219616892909/200000000000",
+  "a32": "(-97/432) + (197/324)*i\u221a3",
+  "a05": "(-49/8640) + (-307/25920)*i\u221a3",
+  "L1": "3/4",
+  "B_k (D_Q degree-k modulus sums, k=3..12)": {
+   "3": 1.0485837703566667,
+   "4": 0.3628236363933333,
+   "5": 0.11960371299925926,
+   "6": 0.13426761427580522,
+   "7": 0.100682747306,
+   "8": 0.036135628463403596,
+   "9": 0.007349954058,
+   "10": 0.0058235255869235805,
+   "11": 0.002502603746,
+   "12": 0.002031089622787562
+  }
+ },
+ "checks": {
+  "mu = -1/2 - i*2sqrt3/3": true,
+  "J linear = id": true,
+  "J has only (1,0),(2,1),(3,2),(0,5) through deg 6": true,
+  "chart law 245/216 = |mu|^2 + 2Re a32": true,
+  "chart law 89sqrt3/324 = Im(a32 - mu^2/2)": true,
+  "h2 matches NF6": true,
+  "h has 23 nonzero coefficients incl. linear": true,
+  "resonant coefficients of h are zero": true,
+  "deg-2 modulus sum of h <= M(s) coefficient": true,
+  "deg-3 modulus sum of h <= M(s) coefficient": true,
+  "deg-4 modulus sum of h <= M(s) coefficient": true,
+  "deg-5 modulus sum of h <= M(s) coefficient": true,
+  "deg-6 modulus sum of h <= M(s) coefficient": true,
+  "deg-2 moduli exact 1/6,1/3,1/12": true,
+  "D_Q has no degree < 3": true,
+  "[D_Q]_3 = 2Re(zbar h2)": true,
+  "row 1/20: domain conditions": true,
+  "row 1/40: domain conditions": true
+ },
+ "verdict": "PASS"
+}

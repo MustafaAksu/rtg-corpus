@@ -1,0 +1,98 @@
+{
+  "source_model": "Genesis conditional analytic modal map F=N^6, reprojection after every Te step",
+  "source_jet_sha256": "15a7d0569a1e8ceefe04260ce83e204acb2eeed20b2639eebd810e14ee992824",
+  "physical_target": "NO_TARGET_VECTOR_LAW_SELECTED",
+  "target_observable": "Q_s(s,c)=s_rho^2-s_rho s_eta+s_eta^2",
+  "delay_vector": "H3(X)=(Q_s(X),Q_s(FX),Q_s(F^2X),Q_s(F^3X))",
+  "coordinate_order": [
+    "s_rho",
+    "s_eta",
+    "c_rho",
+    "c_eta"
+  ],
+  "witness_line": [
+    "t",
+    "0",
+    "0",
+    "t"
+  ],
+  "homogeneous_delay_grades": {
+    "D0": 2,
+    "D1": [
+      4,
+      5
+    ],
+    "D2": [
+      6,
+      7
+    ],
+    "D3": [
+      8,
+      9
+    ]
+  },
+  "gradients_at_witness": {
+    "Q": [
+      "2",
+      "-1",
+      "0",
+      "0"
+    ],
+    "A4": [
+      "2",
+      "-1/6",
+      "1/3",
+      "1"
+    ],
+    "A5": [
+      "1009/576",
+      "-533/576",
+      "-11/12",
+      "23/18"
+    ],
+    "B6": [
+      "21/4",
+      "-1/12",
+      "1/6",
+      "19/4"
+    ],
+    "B7": [
+      "92027/13824",
+      "-15445/6912",
+      "-175/48",
+      "389/96"
+    ],
+    "C8": [
+      "3191/144",
+      "-193/144",
+      "-169/72",
+      "3481/144"
+    ],
+    "C9": [
+      "7323931/331776",
+      "-5633/331776",
+      "-26269/2304",
+      "378397/41472"
+    ]
+  },
+  "leading_degree_16_cubic_only_determinant": "0",
+  "degree_17_determinant_contributions": [
+    "1724491/248832",
+    "-337264345/5971968",
+    "201466337/3981312"
+  ],
+  "exact_delay_jacobian_expansion": "det D H3(t,0,0,t)=(12645889/11943936) t^17+O(t^18)",
+  "positive_rank_certified": true,
+  "rank": 4,
+  "conditional_theorem": "On a small admissible neighborhood of X_t, no C1 dimension<4 factor can both intertwine the chosen F and preserve Q_s forward observables.",
+  "additional_shape_coefficient": "-57718145/11943936",
+  "scalar_qs_failure_first_order": "(1/2)t^4+O(t^5) on pair (t,0,0,0) vs (t,0,0,t)",
+  "scalar_omega_failure_first_order": "-sqrt(3)/2 t^4+O(t^5) on pair (t,0,0,t) vs (2t,0,0,t/2)",
+  "excluded": [
+    "physical K3 selection",
+    "new physical dimension",
+    "compulsory historical memory",
+    "new canonical RRF profile",
+    "invariant birth submanifold without separately supplied constraint"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "RER-GEN-C09",
+  "status": "PROPOSED_NONCANONICAL_CONDITIONAL_ALG",
+  "source_owner": "Genesis",
+  "study_owner": "Triadic",
+  "registry": "RER",
+  "physical_target": "NO_TARGET_VECTOR_LAW_SELECTED",
+  "carrier": "fixed-age embedded surfaces M_{kappa,n} in V^2, kappa nonzero, finite n",
+  "observables": "parent s and Q_s, with all-age common-factor question OPEN",
+  "constraints": "one-time B_kappa birth initialization; untruncated conditional analytic N^6 with reprojection at every edge step; local nondegenerate chart",
+  "transformation_law": "F=N^6 on (s,c); graph normal defect c_n-C_kappa=n R_kappa+O_n(|s|^6)",
+  "closure_status": "each fixed sheet 2D; distinct fixed finite sheets meet only at origin sufficiently locally; parent-only factor fails pairwise across ages; arbitrary 2D factor OPEN",
+  "memory": "no age state or physical memory selected; different mathematical sheets do not demonstrate independent physical memory",
+  "claim": "R_kappa(s)=-(sqrt(3) kappa/6)Q_s^2 s; Q_s(FX_n)-Q_s(FX_m)=-(n-m)(2 kappa^2/9) Q_s^5 + O_{n,m}(|s|^11)",
+  "scope": "local, pairwise, each fixed finite n,m; no uniform all-age domain; no physical selection",
+  "source_jet_sha256": "15a7d0569a1e8ceefe04260ce83e204acb2eeed20b2639eebd810e14ee992824",
+  "predecessors": ["RER-GEN-C05", "RER-GEN-C06", "RER-GEN-C07", "RER-GEN-C08"],
+  "adoption": "NOT_ADOPTED"
+}

@@ -1,0 +1,54 @@
+{
+ "main": {
+  "M1a_DQ_deg3": true,
+  "M1a_arg_series": true,
+  "M1a_D3_harmonic_recon": true,
+  "M1b_I5": true,
+  "M1b_SQ5_two_methods": true,
+  "M1c_L_two_methods": true,
+  "M1c_series": true,
+  "fourier_recon_D3": true,
+  "harmonics_odd_D3": true,
+  "fourier_recon_DT1": true,
+  "harmonics_odd_DT1": true,
+  "fourier_recon_L": true,
+  "harmonics_odd_L": true,
+  "fourier_recon_SQ5": true,
+  "harmonics_odd_SQ5": true
+ },
+ "negative_controls_must_be_false": {
+  "N1_wrong_omega": false,
+  "N2_missing_2qD3": false,
+  "N3_crossterm_sign": false,
+  "N4_angular_sign_flip": false,
+  "N5_mu_conj_swap": false
+ },
+ "verdict": "PASS",
+ "coefficients_r1_exp_basis": {
+  "D_Q_deg3 [x r^3]": {
+   "-3": "1/24 - sqrt(3)*I/24",
+   "-1": "-5/12 + sqrt(3)*I/12",
+   "1": "-5/12 - sqrt(3)*I/12",
+   "3": "1/24 + sqrt(3)*I/24"
+  },
+  "D_Theta_deg1 [x r]": {
+   "-3": "-sqrt(3)/48 - I/48",
+   "-1": "-sqrt(3)/24 + I/8",
+   "1": "-sqrt(3)/24 - I/8",
+   "3": "-sqrt(3)/48 + I/48"
+  },
+  "L_Theta [x r^3, per F-block]": {
+   "-3": "5*sqrt(3)/96 - 11*I/96",
+   "-1": "-sqrt(3)/16 - 7*I/48",
+   "1": "-sqrt(3)/16 + 7*I/48",
+   "3": "5*sqrt(3)/96 + 11*I/96"
+  },
+  "S_Q_deg5 [x r^5, per F-block]": {
+   "-3": "3/16 + 7*sqrt(3)*I/48",
+   "-1": "11/24 - 29*sqrt(3)*I/72",
+   "1": "11/24 + 29*sqrt(3)*I/72",
+   "3": "3/16 - 7*sqrt(3)*I/48"
+  }
+ },
+ "L_Theta_closed_form": "-sqrt(3)*X**3/48 - 47*X**2*Y/48 - 7*sqrt(3)*X*Y**2/16 - Y**3/16"
+}

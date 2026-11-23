@@ -1,0 +1,58 @@
+{
+  "document": "RTG_DYADIC_OSCILLATOR_DSN_v6.4.12",
+  "status": "ADOPTED 16 Oct 2026 (owner/PI decision after external review of DRAFT r1: REVIEW ACCEPTED)",
+  "base": {
+    "file": "RTG_DYADIC_OSCILLATOR_DSN_v6_4_11.md",
+    "sha256": "6fccd429758adb729032a68c2a99e24a7bab6f5226aae5df1453b09b189ccb2e",
+    "status": "adopted, preserved unchanged"
+  },
+  "files": {
+    "RTG_DYADIC_OSCILLATOR_DSN_v6_4_12.md": "c2f00eb0832e6aabcbcfd1a3c583d6f1e7b0950a2f8db97d89045ed0bcb438e8",
+    "RTG_DYADIC_OSCILLATOR_DSN_v6_4_12_DRAFT_r1.md": "1efaf56958a71227b6bf5aff110fd96d60db352bb4d7a13694e1478f553459ea",
+    "v6_4_11_to_v6_4_12_r1.diff": "e0a2c2aa1415a870351cc3c0821ec5dff33d0a0985730071a29034f4318700a7",
+    "v6_4_12_r1_to_final.diff": "b56818d7889a2edaf251db12ee3379672b2834d73855f56118e16f5a280d42e7",
+    "v6_4_11_to_v6_4_12_final.diff": "89202bb56646fb51a678402f17742c89dbbe64df1637afe575aed79b57268e84",
+    "DYAD_OPEN19_FORMAL_CENTRALIZER_PROOF_SESSION.md": "6749df1126b36453f1f860dd797a872f291fcc7926412225f839acfb2e60e1c6",
+    "dyad_open19_kernel_check.py": "1cb40446c0289424fcb8539c77aec6d43f4e6a0873434645b8cc3dc4397a291e",
+    "dyad_open19_a0_boundary_check.py": "a2aedc51acef70738e5b6006c601c036d5ee182a5d2eb899beb92c5dc4303a45",
+    "dyad_open19_R0_identity_cert.py": "c8c144426b2c9e795df19a997b181209fce6ab7edeaa1b9c04e731ad0d059cf8",
+    "dyad_return_qchi_exact.py": "e45286fa100b2b31c4d547e8513e23f926b2bda36d31938577fa9f312ca350f6"
+  },
+  "new_rids": [
+    "DYAD-ALG-CENT-KERNEL",
+    "DYAD-THM-FORMAL-CENTRALIZER",
+    "DYAD-THM-FORMAL-INVOLUTION-UNIQUE",
+    "DYAD-THM-ANALYTIC-CLOCK-BRIDGE",
+    "DYAD-OPEN-INVOLUTION-REALIZATION",
+    "DYAD-ART-OPEN19-SESSION",
+    "DYAD-ART-OPEN19-KERNEL",
+    "DYAD-ART-OPEN19-R0CERT"
+  ],
+  "status_changes": {
+    "DYAD-OPEN-FORMAL-CENTRALIZER (OPEN 19)": "ACTIVE -> CLOSED (formal scope); lifecycle RID retained"
+  },
+  "rid_integrity": {
+    "lost_from_v6_4_11": 0
+  },
+  "checks_run_by_owner_16Oct2026": {
+    "dyad_open19_kernel_check.py": "PASS k=2..13",
+    "dyad_open19_R0_identity_cert.py": "7/7 PASS at N=6,8,12; negative control exit 1",
+    "dyad_open19_a0_boundary_check.py": "PASS b=0..7; negative control exit 1"
+  },
+  "reviewer_reruns": {
+    "SESSION v1.1 round": "kernel check PASS; R0 cert 7/7 at N=6,8,12",
+    "r1 round": "a0 boundary check PASS; diff/hash integrity verified"
+  },
+  "not_owner_inspected": {
+    "cent.py": "reviewer-reported, SHA prefix c6189068 / suffix 4624",
+    "centk.py, polar.py": "reported in G2 consolidated note v0.4"
+  },
+  "pending": [
+    "N1",
+    "N2",
+    "N3",
+    "N7 (RRF v0.8.2 sync; OFN; Genesis)",
+    "two owner hashes carried from v6.4.10 manifest (P2-B v2 evidence zip, check_owner_adoption.py)",
+    "OPEN 20 B-an / B-inf"
+  ]
+}
