@@ -1,0 +1,110 @@
+{
+  "created_at": "2026-06-12 15:59:47",
+  "run_dir": "runs\\open_m_2d_seed_001\\locked_bootstrap_rank_2",
+  "source_snapshot": "esm_snapshot.npz",
+  "lock_manifest": "lock_manifest.json",
+  "output_json": "grown_cluster_v13_rank2_T80_to_T100_gentle.json",
+  "seed_arg": 123,
+  "seed_note": "Phase-3 seed diversity should come from bootstrap+dipole selection. This seed affects refinement randomness.",
+  "counts": {
+    "faces": 100,
+    "edges": 214,
+    "nodes": 103,
+    "boundary_edges": 128,
+    "internal_edges": 86,
+    "nonmanifold_edges": 0,
+    "components_beta0": 1
+  },
+  "final_centered": {
+    "Q": 0.0018169592804220258,
+    "C": 0.7264525118984322,
+    "curl_rms": 1.083217645761789,
+    "raw_obj": 1.085034605042211
+  },
+  "conventions": {
+    "z_convention": "z_raw = ln(r_em) - ln(r_geo); z = z_raw - ln(s) = ln(r_em) - ln(s*r_geo)",
+    "r_em_formula": "r_em = (2\u03c0 c)/|\u0394\u03c9|"
+  },
+  "stats": {
+    "z_edge_centered": {
+      "name": "z_edge_centered",
+      "n": 214,
+      "min": -1.2542532303325338,
+      "max": 2.6119117024850134,
+      "mean": 0.18173424362273657,
+      "std": 0.7510301851372121
+    },
+    "z_edge_raw": {
+      "name": "z_edge_raw",
+      "n": 214,
+      "min": 6.907918968930844,
+      "max": 10.77408390174839,
+      "mean": 8.343906442886114,
+      "std": 0.7510301851372121
+    },
+    "dphi_edge": {
+      "name": "dphi_edge",
+      "n": 214,
+      "min": -2.7188628736125406,
+      "max": 2.6778948073489524,
+      "mean": 0.02917821493596235,
+      "std": 0.8298085662608918
+    },
+    "r_geo_edge": {
+      "name": "r_geo_edge",
+      "n": 214,
+      "min": 0.2042586524587799,
+      "max": 0.5153041136090389,
+      "mean": 0.3408617819817943,
+      "std": 0.0775573009140046
+    },
+    "r_em_edge": {
+      "name": "r_em_edge",
+      "n": 214,
+      "min": 324.4237527971076,
+      "max": 15958.980556328688,
+      "mean": 1913.2750808767455,
+      "std": 2093.3134514408366
+    },
+    "domega_edge": {
+      "name": "domega_edge",
+      "n": 214,
+      "min": 1.1803082036852743e+20,
+      "max": 5.80614566926262e+21,
+      "mean": 1.6971825610652037e+21,
+      "std": 1.0801277678741459e+21
+    },
+    "boundary_z_centered": {
+      "name": "boundary_z_centered",
+      "n": 128,
+      "min": -1.2542532303325338,
+      "max": 2.4703179964218123,
+      "mean": 1.4194994378297077e-05,
+      "std": 0.726452511759746
+    },
+    "boundary_z_raw": {
+      "name": "boundary_z_raw",
+      "n": 128,
+      "min": 6.907918968930844,
+      "max": 10.63249019568519,
+      "mean": 8.162186394257755,
+      "std": 0.726452511759746
+    },
+    "internal_z_centered": {
+      "name": "internal_z_centered",
+      "n": 86,
+      "min": -1.0416345317632842,
+      "max": 2.6119117024850134,
+      "mean": 0.45220129274401394,
+      "std": 0.7041249992200252
+    },
+    "internal_z_raw": {
+      "name": "internal_z_raw",
+      "n": 86,
+      "min": 7.120537667500093,
+      "max": 10.77408390174839,
+      "mean": 8.61437349200739,
+      "std": 0.704124999220025
+    }
+  }
+}
