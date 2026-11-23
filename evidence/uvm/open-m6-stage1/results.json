@@ -1,0 +1,358 @@
+{
+ "A1prime_defect": {
+  "x^0 xb^2": "1/12 + (-1/12)*i*sqrt3",
+  "x^0 xb^3": "(-1/54)*i*sqrt3",
+  "x^0 xb^4": "19/864 + (-1/864)*i*sqrt3",
+  "x^0 xb^5": "17/2592 + (-11/7776)*i*sqrt3",
+  "x^0 xb^6": "29/15552 + (-19/15552)*i*sqrt3",
+  "x^1 xb^1": "-1/6 + (-1/6)*i*sqrt3",
+  "x^1 xb^2": "-1/24 + (-1/8)*i*sqrt3",
+  "x^1 xb^3": "-2/27 + (-2/27)*i*sqrt3",
+  "x^1 xb^4": "-35/2592 + (-161/7776)*i*sqrt3",
+  "x^1 xb^5": "43/5760 + (-2167/155520)*i*sqrt3",
+  "x^2 xb^0": "-1/6",
+  "x^2 xb^1": "-1/6 + (-1/18)*i*sqrt3",
+  "x^2 xb^2": "-5/36 + (-7/72)*i*sqrt3",
+  "x^2 xb^3": "-265/1728 + (-1615/15552)*i*sqrt3",
+  "x^2 xb^4": "-1207/10368 + (-1673/31104)*i*sqrt3",
+  "x^3 xb^0": "(1/54)*i*sqrt3",
+  "x^3 xb^1": "-5/108",
+  "x^3 xb^2": "-31/324 + (-85/1944)*i*sqrt3",
+  "x^3 xb^3": "-2203/15552 + (-473/5184)*i*sqrt3",
+  "x^4 xb^0": "-1/432 + (1/432)*i*sqrt3",
+  "x^4 xb^1": "-79/2592 + (35/7776)*i*sqrt3",
+  "x^4 xb^2": "-79/1152 + (-173/15552)*i*sqrt3",
+  "x^5 xb^0": "-1/432 + (1/3888)*i*sqrt3",
+  "x^5 xb^1": "-5/648 + (1/243)*i*sqrt3",
+  "x^6 xb^0": "17/15552 + (-31/77760)*i*sqrt3"
+ },
+ "A1prime_defect_nonzero_by_degree": {
+  "2": 3,
+  "3": 4,
+  "4": 5,
+  "5": 6,
+  "6": 7
+ },
+ "A2_weight_set": [
+  "x^0 xb^1",
+  "x^1 xb^2",
+  "x^5 xb^0",
+  "x^2 xb^3"
+ ],
+ "A3": [
+  {
+   "psi": "psi1",
+   "transported_source": {
+    "x^0 xb^1": "1",
+    "x^1 xb^2": "-1/7 + (2/5)*i*sqrt3",
+    "x^2 xb^3": "-513/1225 + (-8/35)*i*sqrt3"
+   }
+  },
+  {
+   "psi": "psi2",
+   "transported_source": {
+    "x^0 xb^1": "1",
+    "x^1 xb^2": "3/11 + (1/4)*i*sqrt3",
+    "x^2 xb^3": "-3251/17424 + (28/143)*i*sqrt3",
+    "x^5 xb^0": "-5/17 + (3/8)*i*sqrt3"
+   }
+  }
+ ],
+ "J_W": {
+  "x^0 xb^2": "-1/6",
+  "x^0 xb^3": "(-1/54)*i*sqrt3",
+  "x^0 xb^4": "-1/432 + (-1/432)*i*sqrt3",
+  "x^0 xb^5": "-1/432 + (-1/3888)*i*sqrt3",
+  "x^0 xb^6": "17/15552 + (31/77760)*i*sqrt3",
+  "x^1 xb^0": "1/2 + (1/2)*i*sqrt3",
+  "x^1 xb^1": "-1/6 + (1/6)*i*sqrt3",
+  "x^1 xb^2": "-1/6 + (1/18)*i*sqrt3",
+  "x^1 xb^3": "-5/108",
+  "x^1 xb^4": "-79/2592 + (-35/7776)*i*sqrt3",
+  "x^1 xb^5": "-5/648 + (-1/243)*i*sqrt3",
+  "x^2 xb^0": "1/12 + (1/12)*i*sqrt3",
+  "x^2 xb^1": "-1/24 + (1/8)*i*sqrt3",
+  "x^2 xb^2": "-5/36 + (7/72)*i*sqrt3",
+  "x^2 xb^3": "-31/324 + (85/1944)*i*sqrt3",
+  "x^2 xb^4": "-79/1152 + (173/15552)*i*sqrt3",
+  "x^3 xb^0": "(1/54)*i*sqrt3",
+  "x^3 xb^1": "-2/27 + (2/27)*i*sqrt3",
+  "x^3 xb^2": "-265/1728 + (1615/15552)*i*sqrt3",
+  "x^3 xb^3": "-2203/15552 + (473/5184)*i*sqrt3",
+  "x^4 xb^0": "19/864 + (1/864)*i*sqrt3",
+  "x^4 xb^1": "-35/2592 + (161/7776)*i*sqrt3",
+  "x^4 xb^2": "-1207/10368 + (1673/31104)*i*sqrt3",
+  "x^5 xb^0": "17/2592 + (11/7776)*i*sqrt3",
+  "x^5 xb^1": "43/5760 + (2167/155520)*i*sqrt3",
+  "x^6 xb^0": "29/15552 + (19/15552)*i*sqrt3"
+ },
+ "J_W_nonzero_by_degree": {
+  "1": 1,
+  "2": 3,
+  "3": 4,
+  "4": 5,
+  "5": 6,
+  "6": 7
+ },
+ "N": 6,
+ "P3_difference": {
+  "x^0 xb^2": "1/12 + (-1/12)*i*sqrt3",
+  "x^0 xb^3": "-5/108 + (-1/108)*i*sqrt3",
+  "x^0 xb^4": "1/1728 + (31/1728)*i*sqrt3",
+  "x^0 xb^5": "7/432 + (-11/3888)*i*sqrt3",
+  "x^0 xb^6": "-149/31104 + (-55/31104)*i*sqrt3",
+  "x^1 xb^1": "1/3",
+  "x^1 xb^2": "5/24 + (-1/12)*i*sqrt3",
+  "x^1 xb^3": "-19/432 + (-35/432)*i*sqrt3",
+  "x^1 xb^4": "-361/5184 + (241/15552)*i*sqrt3",
+  "x^1 xb^5": "8291/311040 + (5197/311040)*i*sqrt3",
+  "x^2 xb^0": "-1/24 + (-1/24)*i*sqrt3",
+  "x^2 xb^1": "1/18",
+  "x^2 xb^2": "55/288 + (-1/32)*i*sqrt3",
+  "x^2 xb^3": "121/1728 + (-913/7776)*i*sqrt3",
+  "x^2 xb^4": "-7499/62208 + (-1079/20736)*i*sqrt3",
+  "x^3 xb^0": "1/216 + (-1/216)*i*sqrt3",
+  "x^3 xb^1": "-1/432 + (-1/432)*i*sqrt3",
+  "x^3 xb^2": "217/2592 + (103/7776)*i*sqrt3",
+  "x^3 xb^3": "491/3456 + (-649/10368)*i*sqrt3",
+  "x^4 xb^0": "-1/216 + (-1/432)*i*sqrt3",
+  "x^4 xb^1": "-17/864 + (-83/7776)*i*sqrt3",
+  "x^4 xb^2": "-155/13824 + (965/124416)*i*sqrt3",
+  "x^5 xb^0": "-1/648 + (-11/1944)*i*sqrt3",
+  "x^5 xb^1": "7/5184 + (-215/15552)*i*sqrt3",
+  "x^6 xb^0": "317/38880 + (-71/38880)*i*sqrt3"
+ },
+ "checks": [
+  {
+   "check": "E0  linear part of f is lambda*W",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "E1  h_2 equals the owner h_2",
+   "detail": "{'x^2 xb^0': '-1/12 + (-1/12)*i*sqrt3', 'x^1 xb^1': '-1/3', 'x^0 xb^2': '1/24 + (-1/24)*i*sqrt3'}",
+   "pass": true
+  },
+  {
+   "check": "E2  h_3 nonzero exactly in channels (3,0),(1,2),(0,3)",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "E3  h has 23 nonzero coefficients incl. linear",
+   "detail": "count=23",
+   "pass": true
+  },
+  {
+   "check": "E4  one-step normal form n equals the owner n (n_21, n_32, n_05)",
+   "detail": "{'x^1 xb^0': '1/2 + (1/2)*i*sqrt3', 'x^2 xb^1': '1/8 + (-7/72)*i*sqrt3', 'x^3 xb^2': '-5/432 + (23/3888)*i*sqrt3', 'x^0 xb^5': '43/17280 + (-227/155520)*i*sqrt3'}",
+   "pass": true
+  },
+  {
+   "check": "E5  J_{<=6}(f o h - h o n) = 0",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "E6  six-step jet J_NF = J_{<=5} n^6 equals the owner (mu, a_32, a_05)",
+   "detail": "{'x^1 xb^0': '1', 'x^2 xb^1': '-1/2 + (-2/3)*i*sqrt3', 'x^3 xb^2': '-97/432 + (197/324)*i*sqrt3', 'x^0 xb^5': '-49/8640 + (-307/25920)*i*sqrt3'}",
+   "pass": true
+  },
+  {
+   "check": "G0  F = f^6 is tangent to the identity",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "G1  K^6 = F through degree 6 (tangent-to-identity sixth root)",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "G2  K commutes with f through degree 6",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "G3  J_W := f o K^{-1} has linear part lambda",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "G4  J_W^6 = id through degree 6",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "G5  J_W commutes with f through degree 6",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "G6  h^{-1} o h = id through degree 6",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "P2  J_{<=6}(h^{-1} J_Z6 h) = A  (generator is linear in the NF chart)",
+   "detail": "{'x^1 xb^0': '1/2 + (1/2)*i*sqrt3'}",
+   "pass": true
+  },
+  {
+   "check": "P4  quadratic part of J_W equals delta_2 = h_2(lam W, lamb Wb) - lam h_2(W, Wb)",
+   "detail": "{'x^2 xb^0': '1/12 + (1/12)*i*sqrt3', 'x^1 xb^1': '-1/6 + (1/6)*i*sqrt3', 'x^0 xb^2': '-1/6'}",
+   "pass": true
+  },
+  {
+   "check": "A1  C1 is covariant under J_Z6 through degree 6 (constant fibre action lamb)",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "A2  covariant source monomials through degree 6 are exactly zb, z zb^2, z^5, z^2 zb^3",
+   "detail": "[(0, 1), (1, 2), (5, 0), (2, 3)]",
+   "pass": true
+  },
+  {
+   "check": "A2b covariant degrees are {1,3,5}; the only degree-1 member is conj(z)",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "A3  psi1: commutes with A; source stays in the weight class; degree-1 coefficient invariant; cubic member = -conj(c_21) != 0",
+   "detail": "{'x^0 xb^1': '1', 'x^1 xb^2': '-1/7 + (2/5)*i*sqrt3', 'x^2 xb^3': '-513/1225 + (-8/35)*i*sqrt3'}",
+   "pass": true
+  },
+  {
+   "check": "A3  psi2: commutes with A; source stays in the weight class; degree-1 coefficient invariant; cubic member = -conj(c_21) != 0",
+   "detail": "{'x^0 xb^1': '1', 'x^1 xb^2': '3/11 + (1/4)*i*sqrt3', 'x^5 xb^0': '-5/17 + (3/8)*i*sqrt3', 'x^2 xb^3': '-3251/17424 + (28/143)*i*sqrt3'}",
+   "pass": true
+  },
+  {
+   "check": "A1' C2 is NOT covariant under J_Z6 with a constant fibre action: defect nonzero at degree 2 and equal to conj(delta_2)",
+   "detail": "{'x^2 xb^0': '-1/6', 'x^1 xb^1': '-1/6 + (-1/6)*i*sqrt3', 'x^0 xb^2': '1/12 + (-1/12)*i*sqrt3'}",
+   "pass": true
+  },
+  {
+   "check": "A1'b defect of C2 is nonzero at every degree 2..6",
+   "detail": "{2: 3, 3: 4, 4: 5, 5: 6, 6: 7}",
+   "pass": true
+  },
+  {
+   "check": "P3  s_C1^W - s_C2 = -conj(h_2(W, Wb)) at degree 2, nonzero",
+   "detail": "{'x^2 xb^0': '-1/24 + (-1/24)*i*sqrt3', 'x^1 xb^1': '1/3', 'x^0 xb^2': '1/12 + (-1/12)*i*sqrt3'}",
+   "pass": true
+  },
+  {
+   "check": "C2a-1 no C^1 complex-scalar fibre action absorbs the degree-2 defect (coefficient of W^2 in the defect is nonzero, so defect/conj(W) is not C^1 at 0)",
+   "detail": "-1/6",
+   "pass": true
+  },
+  {
+   "check": "C2a-2 a real-linear state-dependent fibre action alpha*s + beta*conj(s) absorbs it through degree 2",
+   "detail": "alpha={'x^0 xb^0': '1/2 + (-1/2)*i*sqrt3', 'x^1 xb^0': '-1/6 + (-1/6)*i*sqrt3', 'x^0 xb^1': '1/12 + (-1/12)*i*sqrt3'} beta={'x^1 xb^0': '-1/6'}",
+   "pass": true
+  },
+  {
+   "check": "C2a-3 a real-linear state-dependent re-trivialization carries C1 (raw frame) onto C2 through degree 2: with unrestricted fibre gauge C2a is C1 in another trivialization",
+   "detail": "g: s -> ({'x^0 xb^0': '1', 'x^1 xb^0': '-1/3', 'x^0 xb^1': '-1/12 + (1/12)*i*sqrt3'}) s + ({'x^1 xb^0': '1/24 + (1/24)*i*sqrt3'}) conj(s)",
+   "pass": true
+  },
+  {
+   "check": "Q1  left multiplication by lambda acts as (lambda z, conj(lambda) y): j-component has weight -1",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "Q2  H = j Lambda conj(z) on Pi_par satisfies H(lambda z) = lambda H(z); its coefficient function is Lambda conj(z)",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "Q3  the word q j Lambda conj(q) q is left-equivariant for general q and gives j Lambda z conj(z)^2 on Pi_par",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "CONTROL-Q4 the full-space linear word j Lambda conj(q) is NOT left-equivariant off Pi_par (the minimal coupling is a statement on Pi_par only)",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "C0-0 base map in the NF chart equals the normal form n through degree 6",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "C0-1 NF -> W, fixed trivialization (g = 1): transported model reproduces the observable, steps 1..3",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "C0-2 NF -> W with a fibre re-trivialization g(x): update-form rule s~ = g(b x) s(x) reproduces it",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "C0-3 W -> NF, fixed trivialization: transported model reproduces the observable",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "C0-4 W -> NF with a fibre re-trivialization: update-form rule reproduces it",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "CONTROL-C0-5 section-form rule s~ = g(x) s(x) with nonconstant g is detected as wrong",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "CONTROL-C0-6 re-imposing Lambda conj(W) in the raw frame differs from the transported source at degree 2",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "CONTROL-P2 a perturbed h_2 coefficient is detected: generator no longer linear in that chart",
+   "detail": "",
+   "pass": true
+  }
+ ],
+ "h": {
+  "x^0 xb^2": "1/24 + (-1/24)*i*sqrt3",
+  "x^0 xb^3": "-1/216 + (5/216)*i*sqrt3",
+  "x^0 xb^4": "13/5184 + (-53/5184)*i*sqrt3",
+  "x^0 xb^6": "-8383/5598720 + (-353/1866240)*i*sqrt3",
+  "x^1 xb^0": "1",
+  "x^1 xb^1": "-1/3",
+  "x^1 xb^2": "1/36",
+  "x^1 xb^3": "-5/2592 + (5/2592)*i*sqrt3",
+  "x^1 xb^4": "401/31104 + (-97/31104)*i*sqrt3",
+  "x^1 xb^5": "-859/46656 + (269/46656)*i*sqrt3",
+  "x^2 xb^0": "-1/12 + (-1/12)*i*sqrt3",
+  "x^2 xb^2": "-5/216 + (-1/144)*i*sqrt3",
+  "x^2 xb^3": "1/1944 + (-1/324)*i*sqrt3",
+  "x^2 xb^4": "-185/746496 + (569/746496)*i*sqrt3",
+  "x^3 xb^0": "1/216 + (1/216)*i*sqrt3",
+  "x^3 xb^1": "25/648 + (-11/648)*i*sqrt3",
+  "x^3 xb^3": "173/139968 + (13/15552)*i*sqrt3",
+  "x^4 xb^0": "-121/10368 + (55/10368)*i*sqrt3",
+  "x^4 xb^1": "-407/31104 + (37/31104)*i*sqrt3",
+  "x^4 xb^2": "2813/373248 + (773/373248)*i*sqrt3",
+  "x^5 xb^0": "257/31104 + (-43/10368)*i*sqrt3",
+  "x^5 xb^1": "-5761/1866240 + (-8753/1866240)*i*sqrt3",
+  "x^6 xb^0": "-5021/1119744 + (1051/373248)*i*sqrt3"
+ },
+ "n": {
+  "x^0 xb^5": "43/17280 + (-227/155520)*i*sqrt3",
+  "x^1 xb^0": "1/2 + (1/2)*i*sqrt3",
+  "x^2 xb^1": "1/8 + (-7/72)*i*sqrt3",
+  "x^3 xb^2": "-5/432 + (23/3888)*i*sqrt3"
+ },
+ "summary": {
+  "checks": 39,
+  "failed": 0,
+  "passed": 39
+ }
+}
