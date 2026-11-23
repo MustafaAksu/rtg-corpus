@@ -58,7 +58,7 @@ Verbatim: "PR 361 ve 366 yı onaylıyorum / U8 denetimimden geçti / Dosyalar pu
 |---|---|---|---|
 | S0-1 | **closed** | four v0.7.1 governance files present; identities as §2.2–2.4; adoption JSON names `0a51644d…` | — |
 | S0-2 | **closed** | six v0.7 governance files and both editions present, hashes equal | Draft 3 / Draft 3.1 bytes (§2.3): delivery gap, non-blocking |
-| S0-3 | **PARTIAL** | 15 of 18 named scripts and `open_m_3g_mini_protocol.py` present | 3 scripts, the wiring note, every campaign output, ESM packs and growth series: delivery gap (§7). The I-4 data arrived later the same day (§6). Statements whose certificates are present stay `EV-SRC-REPORTED` until a co-owner reruns them under a PI decision |
+| S0-3 | **PARTIAL** | 15 of 18 named scripts and `open_m_3g_mini_protocol.py` present | 3 scripts, the wiring note, every campaign output, ESM packs and growth series: delivery gap (§7). The I-4 data, including the complete growth series, arrived later the same day (§6). Statements whose certificates are present stay `EV-SRC-REPORTED` until a co-owner reruns them under a PI decision |
 | S0-4 | **closed for custody** | the original Genesis v2.8.5 file is present with SHA-256 equal to the reconstruction target | the reconstruction recipe stays as the cross-check. The requirement that a separately recorded hash be checked is satisfied by §2.2. PI decision 2 (comparison source) is unchanged |
 | S0-5 | **closed for identity**; statement-level comparison in §4 | three editions present, hashes equal | `B` in Dyadic v6.4.10 not located (§4.1) |
 
@@ -119,44 +119,50 @@ No ESM pack was loaded. The header's suggested sanity check on the real cluster 
 
 ## 6. I-4 — `T100` (`nm=2` at line 110, `nm=0` at line 277)
 
-**Status: the two lines are shown to describe different packs. Line 277 is reproduced; line 110 is reproduced by no single pack. Proposed class (i) for line 110. The PI decides.**
+**Status: resolved to a proposal. The two lines describe two different T100 packs. Line 277 and the whole R14 trajectory are reproduced with the original scripts. Line 110's triple mixes the two packs. Proposed class (i) for line 110 and (iii) for line 277. The PI decides.**
 
 **The two lines name different scripts.**
-- Line 110 (OPEN-M-2E status) gives `σ_{h,int}=0.252`, `L_{z_h}=0.527`, `nm=2`, graded by `open_m_2e_panel.py`. That script reads an audit pack with `internal_edges`.
-- Line 277 (R14) gives `σ_{h,int}=0.252`, `nm=0`, corridor fraction `0.302`, from `open_m_2f_trajectory.py`. That script reads the microstate `…T80_to_T100_gentle`.
-- Both scripts count `nm` the same way: edges in three or more faces.
+- Line 110 (OPEN-M-2E status) reports "Near-pass … T100: `σ_{h,int}=0.252`, `L_{z_h}=0.527`, nm=2", graded by `open_m_2e_panel.py` on an audit pack.
+- Line 277 (R14, RESULT-M-2F) reports "T100: `σ_{h,int}=0.252`, nm=0, corridor 0.302" and the trajectory correlations +0.654 / +0.326 / +0.488, from `open_m_2f_trajectory.py` on the nine-stage microstate series.
+- Both scripts count `nm` as edges in three or more faces.
 
-**Data.** The PI supplied the data in two batches on 23 November 2026. Both are placed unchanged on `upload/uvm-i4-microstates` (`7be6e47`, `f358697`) with `SHA256SUMS.txt` (15 files) and `README_UPLOAD.md`.
-- Batch 1: the microstates of T89, T90, T91, T92 and T94, plus `T93_to_T102_2e` and `T98_to_T100_2e_ultra`.
-- Batch 2: the complete `T80_to_T100_gentle` set — microstate, audit pack (npz and json), grown manifest, growth log and cluster JSONs.
+**Data.** The PI supplied three batches on 23 November 2026 (16:47, 17:05 and 22:23 +03:00). They are placed unchanged on `upload/uvm-i4-microstates` (`7be6e47`, `f358697`, `40c26ce`) with `SHA256SUMS.txt` (24 files) and `README_UPLOAD.md`.
+- All nine `SERIES` microstates (T80, T89–T94, T100 `gentle`, T120).
+- The audit packs (npz) of T80, T100 `gentle` and `T98_to_T100_2e_ultra`.
+- Manifests, growth logs and cluster JSONs where supplied.
 
-No earlier record gives hashes for these files, so their integrity is checked but their identity against a record is not. The pickled object arrays were disassembled before any `allow_pickle=True` load: they hold only numpy reconstruction calls and two convention strings.
+No earlier record gives hashes for these files: their integrity is checked, their identity against a record is not. The pickled object arrays were disassembled before any `allow_pickle=True` load. They hold only numpy reconstruction calls and two convention strings.
 
-**Runs.** All are in `evidence/uvm/i4-t100-packs/`; each was byte-identical on rerun.
-1. The original `open_m_2e_panel.py` (`da9900af…`) on `…T80_to_T100_gentle_auditpack.npz`, output `panel_T80_to_T100_gentle_auditpack.txt`: `σ_{h,int}=0.2521`, `L_{z_h}=0.3425`, `nonmanifold=0`, `dimH=13`, density 1.488. Verdict "2E: not yet" (fails `L_zh>0.5`, the 0.28 floor, density, and `σ_int≥0.8`).
-2. The diagnostic re-implementation of the trajectory row on all eight microstates, output `stdout.txt`:
+**Runs.** All are in `evidence/uvm/i4-t100-packs/` and gave byte-identical output on rerun.
+1. **Original `open_m_2f_trajectory.py`** (`4f6a31cf…`) on the nine stages: `trajectory_T80_to_T120.txt`. The script reads a hard-coded `/mnt/user-data/uploads/` directory, so it was executed through `evidence/uvm/scripts/uvm_run_original_with_datadir.py`. That runner substitutes only this one path string, checks that it occurs exactly once, and logs the script hash (`trajectory_T80_to_T120.stderr.txt`). Result: `ALL CHECKS: PASS`.
+2. **Original `open_m_2e_panel.py`** (`da9900af…`) on three audit packs: `panel_T80_to_T100_gentle_auditpack.txt`, `panel_T98_to_T100_2e_ultra_auditpack.txt`, `panel_mid40_to_T80_minref_auditpack.txt`.
+3. **Diagnostic re-implementation** (`uvm_i4_t100_pack_diagnostic.py`) on all eleven microstates: `stdout.txt`. On the nine `SERIES` stages it agrees with run 1 in every printed `nint`, corrFrac, `σ_{h,int}` and nm value.
 
-| Pack | nint | corrFrac | `σ_{h,int}` | `L_{z_h}` | nm | dimH | Source of the numbers |
-|---|---|---|---|---|---|---|---|
-| `T80_to_T100_gentle` | 86 | **0.302** | **0.2521** | 0.343 | **0** | 13 | microstate, trajectory definitions; equal to the panel run on its audit pack (86 internal edges both ways) |
-| `T98_to_T100_2e_ultra` | 105 | 0.267 | 0.2949 | **0.527** | **2** | 10 | microstate only; its audit pack is not supplied |
+**Results.**
+
+| Quantity | DSN | Reproduced (original script) |
+|---|---|---|
+| corr(corridorFrac, `σ_{h,int}`), n=9 | +0.654 | **+0.654** |
+| corr(`σ_{h,int}`, nm) | +0.326 | **+0.326** |
+| corr(corridorFrac, nm) | +0.488 | **+0.488** |
+| T100 row (line 277) | `σ_{h,int}`=0.252, nm=0, corridor 0.302 | **0.2521, 0, 0.302** (`gentle`) |
+
+| T100 pack (original panel) | `σ_{h,int}` | `L_{z_h}` | nm | density | Panel criteria |
+|---|---|---|---|---|---|
+| `T80_to_T100_gentle` | **0.2521** | 0.3425 | 0 | 1.488 | nm PASS; `L_zh` FAIL; floor FAIL; density FAIL |
+| `T98_to_T100_2e_ultra` | 0.2949 | **0.5273** | **2** | 0.838 | nm FAIL; `L_zh` PASS; floor PASS; density PASS |
+| line 110 as written | 0.252 | 0.527 | 2 | — | — |
 
 **Findings.**
-1. **Line 277 is reproduced exactly** by the `gentle` pack: `σ_{h,int}=0.252`, `nm=0`, corridor fraction `0.302`. The original panel script on the same pack's audit pack gives the same `σ_{h,int}` and `nm`.
-2. **Line 110 is not reproduced by any single supplied pack.**
-   - The `gentle` pack, under the original panel, has line 110's `σ_{h,int}=0.252` but `L_{z_h}=0.343` (not 0.527) and `nm=0` (not 2).
-   - The `ultra` T98→T100 pack has line 110's `L_{z_h}=0.527` and `nm=2` but `σ_{h,int}=0.295`. Its internal-edge set here is the trajectory rule (inc ≥ 2), not an audit pack's `internal_edges`.
-   - **Reading [SESSION], not established:** line 110 combines `σ_{h,int}` of the `gentle` pack with `L_{z_h}` and `nm` of the `ultra` pack. Confirming it would need the `ultra` audit pack or the original panel printout.
-3. **The triage acceptance criterion is met** in its second form: the two lines describe different packs. Line 277 is `gentle`; line 110 is not `gentle`, because two of its three values differ under the original panel.
-4. **Not changed by this:**
-   - The surrounding conclusions of line 110 ("near-pass … but no clean A-candidate"): the `gentle` pack fails three binding criteria, and the `ultra` pack has `nm=2`.
-   - R14's statement that clean high-loading stages exist (`gentle`: `nm=0`, `σ_{h,int}=0.252`).
-5. **Growth log.** `…_growth_log.csv` shows `nm` rising to 7 at growth step 100. The final cluster after `swap_polish` has `nonmanifold=0` (manifest, cluster JSON, audit pack). Line 277's `nm=0` refers to the final pack.
-6. **R14 correlations** (+0.654, +0.326, +0.488) are still not rerun: 6 of the 9 `SERIES` stages are present (T80, T93 and T120 missing), and the script requires at least 7 rows.
+1. **R14 (line 277) is reproduced** with the original certificate on the nine PI-supplied stages: all three correlations to three decimals, and the T100 row. This adds `EV-RUN` by a co-owner to the DSN's "PI-reproduced on repo data". Grade and scope are unchanged.
+2. **Line 110's T100 triple is reproduced by no single pack.** Under the original panel, `L_{z_h}=0.527` and nm=2 are the `ultra` pack's values, and `σ_{h,int}=0.252` is the `gentle` pack's. The `ultra` pack's own `σ_{h,int}` is 0.295, which lies inside the binding band [0.28, 0.35]. Its panel fails only nm=0 and the consequence `σ_int≥0.8` (0.741). Line 110 therefore misstates the `ultra` near-pass: its `σ_{h,int}` is in band, not below the floor. This is a numerical-attribution error inside a `[NUM]` status line: class (i).
+3. **Unchanged:** line 110's conclusion "no clean A-candidate", since `ultra` has nm=2 and `gentle` fails three criteria. The T103 / RUN05 values in the same line were not examined.
+4. **Growth log:** `nm` rises to 7 at growth step 100 of the `gentle` run. After `swap_polish` the final pack has `nonmanifold=0`, and line 277 refers to the final pack.
+5. **Also checked:** the T80 audit pack under the original panel gives `σ_{h,int}=0.1888`, `L_{z_h}=0.5769`, nm=0, equal to the trajectory's T80 row.
 
 **Proposed owner action** for the successor edition, PI decision:
-- Line 110: class (i), numerical attribution. Restate the T100 near-pass values per pack, for example `T100 gentle: σ_{h,int}=0.252, L_{z_h}=0.343, nm=0`, and give the `ultra` values only with their source typed. Alternatively mark the triple `[UNVERIFIED: values not reproduced by a single pack]`.
-- Line 277: unchanged. Its T100 entry can cite the reproduction.
+- Line 110: restate the T100 near-pass per pack, for example "T100 (`T98_to_T100_2e_ultra`): `σ_{h,int}=0.295`, `L_{z_h}=0.527`, nm=2", optionally adding the clean `gentle` T100 state (0.252, 0.343, nm=0).
+- Line 277: unchanged. It can cite this reproduction.
 - No value is changed by this record.
 
 ---
@@ -170,8 +176,8 @@ Listed by the PI's `_WANTED_LIST.txt` with tag UVM and not found:
 - `EDIT_A_wiring_instructions.txt`
 
 Data, not found:
-- the original printed OPEN-M-2E panel output and T80→T120 trajectory output (I-4; no longer needed for line 277);
-- the microstates `…mid40_to_T80_minref`, `…T80_to_T93_2e_loadtest` and `…v13_loose_T80_to_T120` (R14 correlations), and the `T98_to_T100_2e_ultra` audit pack (line 110). The T100 `gentle` set and five other trajectory microstates were received on 23 November (§6);
+- the original printed OPEN-M-2E panel and T80→T120 trajectory outputs of June 2026 (historical; superseded for I-4 by the reruns of §6);
+- none for I-4: all nine trajectory microstates and the deciding audit packs were received on 23 November (§6);
 - the prior output of `open_m_3g_mini_protocol.py` (I-3);
 - the ESM packs for RUN05, RUN10, RUN11, T100, T103.
 
@@ -185,7 +191,7 @@ This record does not:
 - adopt, re-grade or re-scope any UVM statement;
 - treat a passing script as a theorem;
 - treat the PI's confirmations or merges as an edition decision;
-- rerun the v0.7.1 validation or any campaign. The I-3 diagnostic of §5 and the I-4 runs of §6 (the original panel script on one audit pack, and the diagnostic on eight microstates) are the only executions;
+- rerun the v0.7.1 validation or any campaign. The I-3 diagnostic of §5 and the I-4 runs of §6 (the original trajectory script on nine microstates, the original panel script on three audit packs, and the diagnostic on eleven microstates) are the only executions;
 - change a pipe state.
 
 The triage rows it touches are updated in `UVM_REACTIVATION_TRIAGE.md` revision 4, which cites this record.
