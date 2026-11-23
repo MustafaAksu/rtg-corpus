@@ -9,7 +9,7 @@
 
 ## 1. PI decisions of 23 November 2026 (12:32 +03:00, project conversation with this session)
 
-Recorded by the preparer from the PI's numbered reply to the three numbered questions of the scope draft §10; preparer-reported until the PI confirms on the PR.
+Recorded by the preparer from the PI's numbered reply to the three numbered questions of the scope draft §10; preparer-reported until the PI confirms on the PR. **Confirmed:** the PI confirmed this PR (#366) in the project conversation of 23 November 2026 ("PR 361 ve 366 yı onaylıyorum") and merged it (`bfe0c47`); see `records/uvm/UVM_S0_CUSTODY_AUDIT.md` §1. A merge is not an adoption; this record stays [SESSION].
 
 | # | Question | PI's reply | What it settles |
 |---|---|---|---|
