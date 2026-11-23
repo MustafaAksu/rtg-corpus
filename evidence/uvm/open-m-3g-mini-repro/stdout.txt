@@ -1,0 +1,13 @@
+[PASS] equilibrium: |sum z| / (N_E*rms z) small  (got 2.80e-04)
+[PASS] bare K_conf = N_E*K_vac exactly (fit 116.000000 vs 116.0)
+[PASS] bare linear term = K_vac*sum z (fit -1.540e-03 vs -1.540e-03)
+[PASS] relaxed K_conf <= bare (115.998 <= 116.000)
+    N_E=116; softening fraction = 0.000
+    g_conf (relaxed, per-edge) = 1.0000  [bare = 1.0]
+    => rho = ell/g_conf amplification vs bare proxy: x1.00
+    NOTE: zero softening is the THEOREM, not a synthetic artifact —
+    g_conf = K_vac holds for any topology/frustration (see header).
+[PASS] g_conf positive (stable conformal mode)
+[PASS] THEOREM check, cluster 2 (different N, topology, frustration): K_rel = N_E*K_vac (123.999 vs 124.0)
+
+ALL CHECKS: PASS
