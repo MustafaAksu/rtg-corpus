@@ -48,14 +48,18 @@ The full rules are in `CONVENTIONS.md` and Methodology v1.4 (`dsn/DSN_METHODOLOG
 ## 3. Open scientific frontier (unchanged by v1.22)
 
 - **C7C-M.** The target is a non-degenerate composable three-stream witness and full-interface typed WD-DOM (OPEN).
-  - M-4 stays on HOLD. The P2 policy is answered; the hold rests on the missing chain. The Census-1 universe is all `(SWAP, P3)`.
+  - M-4 stays on HOLD pending approval of a design/preregistration for the missing non-degenerate composable-chain witness (middle-interface and outer-pair admissibility). The P2 policy is answered. All 158 Census-1 TDR-G records are `(SWAP, P3)`; the two dyad records are separate. Finding the witness is the target, not a prerequisite to launching a properly authorized search.
   - Census-1 stays INCONCLUSIVE / INCONCLUSIVE.
   - A new evidence universe needs its own preregistration (Census-2).
 - **C7B global breadth** is OPEN. DISC-3 is deferred.
 - **N-4, N-6 and full NG-8** are OPEN.
 - **φ* vs `C_D^ext`** stays OPEN as a comparison. No identification is claimed.
 
-## 4. Not asked
+## 4. Next checkpoint
+
+PR #377 round 2: the ChatGPT co-owner applied the bounded R1–R4 repairs requested in review `6041922508`. Rebuild/check records and the previous candidate identity are in the draft release record. Read the receiving inbox again before the final release record; native builder/checker rerun and Atlas row check precede PI adoption. No campaign or merge is authorized by this checkpoint.
+
+## 5. Not asked
 
 - No rerun of the N-5, C7A or DISC campaigns.
 - No change to the C7C algebra or Census-1.

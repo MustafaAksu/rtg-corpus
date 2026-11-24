@@ -16,6 +16,7 @@ Gates:
  C8 PATHS       every repository path named in the edit texts exists (the DRAFT release record may be pending)
  C9 HASH-ABBR   every abbreviated hash `xxxxxxxx…yyyy` in the edit texts is prefix…last-four of a known SHA-256
                 (evidence files, hashes written in full in base or candidate, owner DSN files at every tag the candidate names)
+ C10 REVIEW-R1R4  current hold, evidence scope, receiving/pin and artifact-availability review repairs
 Negative controls (--controls): each mutation must make at least one gate other than C1 fail (C1 rejects any
 drift from the builder; the controls show that the substantive gates also see the defect).
 """
@@ -91,6 +92,9 @@ def run(base, cand, log, root, builder, verbose=True):
     bad = [f"{a}…{b}" for a, b in re.findall(r"`([0-9a-f]{8})…([0-9a-f]+)`", texts)
            if len(b) != 4 or not any(h.startswith(a) and h.endswith(b) for h in known)]
     g("C9 HASH-ABBR", not bad, f"bad {bad}")
+    review_guards = [["R1 stale HOLD","M-4 HOLD (P2)",False],["R1 sub-universe","all 158 Census-1 TDR-G records (including the 40 quarantined ones)",True],["R1 launch gate","Finding the witness is the research objective, not a prerequisite to searching for it.",True],["R2 DISC-2","DISC-2 comparison: 136/136 verdicts/classes and v18 exposure indicators",True],["R2 DISC-1","The DISC-1 result is from S1's direct execution, not from that audit.",True],["R3 star scope","No affected NUMGEN claim relies on the earlier K1,3-only restriction",True],["R3 OFN scope","N-1A2 vocabulary only (no import of its closure)",True],["R3 pin","v2.12.13 (retained SG-10 firewall pin)",True],["R4 source","original owner-side BIND3-CYCLE-N24K1 enumeration/export",True],["R4 missing","is still owner-reported missing (EV-SRC-REPORTED)",True],["R4 stale availability","enumerator/export still pending in accessible corpus",False]]
+    bad_review = [key for key, fragment, expected in review_guards if (fragment in cand) != expected]
+    g("C10 REVIEW-R1R4", not bad_review, f"failed {bad_review}")
     return R
 
 def main():
@@ -128,6 +132,10 @@ def main():
         ("NC9 second predecessor in Supersedes", mut_edit("H4", lambda t: t.replace("tag `numgen-v1.21`).", "tag `numgen-v1.21`); also `RTG_NUMBER_GENESIS_DSN_v1.20.8`."))),
         ("NC10 duplicated footer", mut_edit("F1", lambda t: t + "\n*END OF DOCUMENT — extra.*")),
         ("NC11 wrong base", None),
+        ("NC12 stale M4 reason", mut_cand(lambda c: c.replace("M-4 HOLD (approved design/preregistration for the missing composable chain pending; P2 answered)", "M-4 HOLD (P2)", 1))),
+        ("NC13 unscoped inert agreement", mut_cand(lambda c: c.replace("DISC-2 comparison: 136/136 verdicts/classes and v18 exposure indicators", "All witnesses: verdicts/classes and exposure indicators", 1))),
+        ("NC14 overbroad star scope", mut_cand(lambda c: c.replace("No affected NUMGEN claim relies on the earlier K1,3-only restriction", "No NUMGEN statement mentions a star", 1))),
+        ("NC15 stale owner export availability", mut_cand(lambda c: c.replace("is still owner-reported missing (EV-SRC-REPORTED)", "is now recovered", 1))),
     ]
     allok = True
     for name, m in NC:
