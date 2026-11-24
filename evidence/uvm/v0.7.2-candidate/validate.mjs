@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // UVM v0.7.2 candidate review verifier. Run at repository root: node evidence/uvm/v0.7.2-candidate/validate.mjs
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 const path="dsn/RTG_OPEN_M_DSN.md",dir="evidence/uvm/v0.7.2-candidate/";
@@ -63,7 +63,56 @@ function negatives(source,one,intermediate,final,p1,p2,map,digest){
  return changes.map(([name,...args])=>{let fail="";try{verify(...args,digest)}catch(e){fail=e.message}if(!fail)throw Error("negative control did not reject: "+name);return {name,ok:true,rejectedBy:fail}});
 }
 const p1=JSON.parse(read(dir+'stage_a_edits.json')),p2=JSON.parse(read(dir+'stage_a_readback_edits.json')),map=JSON.parse(read(dir+'stage_b_map.json'));
-const source=git(p1.source_tag),one=git("dfe37264b0bf35a4ccd134ce9fad013366530ad5"),intermediate=git("8b6a46ec8ace905cf7400f2e43f2129b326fb6f5"),final=read(path);
+const source=git(p1.source_tag),one=git("dfe37264b0bf35a4ccd134ce9fad013366530ad5"),intermediate=git("8b6a46ec8ace905cf7400f2e43f2129b326fb6f5"),final=git("e9efaddc722a5157d1217ac632bf72d9f4403e32");
 const checks=verify(source,one,intermediate,final,p1,p2,map,digest),neg=negatives(source,one,intermediate,final,p1,p2,map,digest);
 for(const x of checks) console.log('PASS '+x.name);for(const x of neg) console.log('PASS negative: '+x.name+' (rejected by '+x.rejectedBy+')');
 console.log('SUMMARY: '+checks.length+'/'+checks.length+' checks PASS; '+neg.length+'/'+neg.length+' negative controls rejected.');
+
+function replay(s,ops){for(const x of ops){if(s.split(x.old).length-1!==x.count)throw Error("literal guard "+x.reason);s=s.split(x.old).join(x.new)}return s}
+function verifyRevision(src,A,C,out,M,rev,NM,digest){
+ let checks=[];const ck=(n,ok)=>{if(!ok)throw Error(n);checks.push(n)};
+ const live=s=>s.split("## Appendix A — Version History")[0],ids=s=>[...live(s).matchAll(/\[RID:\s*([^\]\n]+)\]/g)].flatMap(x=>x[1].match(/\bUVM-[A-Z0-9-]+\b/g)||[]),unique=s=>[...new Set(ids(s))].sort(),eq=(x,y)=>JSON.stringify(x)===JSON.stringify(y),op=M.operations[0],strip=s=>s.slice(0,s.indexOf(op.start))+s.slice(s.indexOf(op.end)),hist=s=>s.slice(s.indexOf(op.start),s.indexOf(op.end));
+ ck("R01 original identities",digest(src)===M.archives[0].sha256&&digest(A)===M.base_sha256&&digest(C)===M.candidate_sha256);
+ ck("R02 exact original B replay",A.slice(0,A.indexOf(op.start))+op.new+A.slice(A.indexOf(op.end))===C);
+ ck("R03 review parents match",rev.source_sha256===digest(C)&&rev.intermediate_source_sha256===digest(A));
+ const a=replay(A,rev.operations);
+ ck("R04 revised intermediate",digest(a)===rev.intermediate_sha256&&digest(a)===NM.base_sha256);
+ ck("R05 exact revision replay and candidate hash",replay(C,rev.operations)===out&&digest(out)===rev.candidate_sha256&&digest(out)===NM.candidate_sha256);
+ ck("R06 B01 operation, archive and profile unchanged",eq(M.operations,NM.operations)&&eq(M.archives,NM.archives)&&eq(M.profile,NM.profile));
+ ck("R07 revised B exact replay",a.slice(0,a.indexOf(op.start))+op.new+a.slice(a.indexOf(op.end))===out);
+ ck("R08 outside Appendix A byte-identical",strip(a)===strip(out));
+ ck("R09 history unchanged and archived",hist(a)===hist(A)&&src.includes(hist(a))&&hist(out)===hist(C));
+ const before=unique(src),after=unique(out),added=after.filter(x=>!before.includes(x));
+ ck("R10 all 50 predecessor RIDs retained",before.length===50&&before.every(x=>after.includes(x)));
+ ck("R11 exactly seven approved new RIDs",eq(added,["UVM-ALG-CENTRAL-WEIGHTS","UVM-ALG-HINDEX","UVM-ALG-LOCK-EQUATION","UVM-ALG-SOURCE-TOWER","UVM-ALG-SPIN2-JET","UVM-HEUR-SINGLEJET-NATURALNESS","UVM-HYP-PARAMETER-COUNT"])&&after.length===57);
+ ck("R12 no duplicate declarations",ids(out).length===after.length);
+ let t=live(out),rows=t.split("\n"),row=id=>rows.find(x=>x.startsWith("- [RID: "+id+"]"))||"";
+ ck("R13 carrier NUM provenance",row("UVM-NUM-CARRIER").includes("`[NUM]`")&&row("UVM-NUM-CARRIER").includes("EV-SRC-REPORTED")&&row("UVM-NUM-CARRIER").includes("missing"));
+ ck("R14 in-grow ENG and 4dp",["`[ENG]`","4 dp","EV-SRC-REPORTED"].every(x=>row("UVM-ENG-INGROW").includes(x)));
+ ck("R15 doclint ENG scope",["`[ENG]`","§6 body","EV-SRC-REPORTED"].every(x=>row("UVM-ENG-DOCLINT").includes(x)));
+ ck("R16 artifact grades",["UVM-ART-EQUIV-CLASS","UVM-ART-CONSTRAINT-SCOPE","UVM-ART-PHASE-CLOSE"].every((id,i)=>row(id).includes(i===0?"`[ALG]`":"`[ENG]`")&&row(id).includes("EV-SRC-REPORTED")));
+ ck("R17 R9 scoped NUM and separate OPEN",rows.some(x=>x.startsWith("`[NUM]` `[scope: archival chart only; source-reported]` **R9")&&x.includes("[RID: UVM-ALG-H3AUDIT]")&&x.includes("UVM-OPEN-H3AUDIT")&&x.includes("no full-map gauge-class invariance follows")));
+ ck("R18 complete R14 scope sentence twice",t.split("The correlations are computed across nine stage-labelled packs from several run continuations within the recorded `seed_001/rank_2` context (n=9); a common byte-identical bootstrap state has not been established.").length===3);
+ ck("R19 R14 values and grade retained",["+0.654","+0.326","+0.488"].every(x=>t.includes(x))&&rows.some(x=>x.startsWith("`[NUM]`")&&x.includes("[RID: UVM-NUM-2F-TRAJ]")));
+ ck("R20 all 16 SG-M guards retained",[...Array.from({length:15},(_,i)=>"SG-M-"+(i+1)),"SG-M-ESM-CAL"].every(x=>t.includes("**["+x+"]**")));
+ ck("R21 RRF reference only",t.includes("PI-approved reference-only scope")&&t.includes("no registered profile or transport arrow")&&t.includes("no factor 2 applied to 0.1")&&!t.includes("PI approval pending"));
+ ck("R22 C3 and stage1 status",t.includes("Stage 1 is not adopted science.")&&t.includes("C3 blocked on Genesis"));
+ ck("R23 draft status",t.includes("**Document status:** DRAFT")&&out.endsWith("DRAFT CANDIDATE; NOT ADOPTED*\n"));
+ ck("R24 target domain and values",["$gC_mh\\ne0$","single-jet hypothesis","$\\rho r^4\\ge4/125$","$\\rho\\ge16/5$","no certified numerical deficit factor"].every(x=>t.includes(x)));
+ ck("R25 missing originals remain explicit",["uvjet_equivariant_classification.py","esm_harmonic_report.py","t103_defect_carrier_test.py","EDIT_A_wiring_instructions.txt"].every(x=>t.includes(x)));
+ return {checks,intermediate:a};
+}
+function negRevision(src,A,C,out,M,rev,NM,digest){return [
+["lost RID",out.replace("[RID: UVM-NUM-CARRIER]","UVM-NUM-CARRIER")],
+["grade promotion",out.replace("`[NUM]` [scope: per-edge harmonic-energy","`[THM]` [scope: per-edge harmonic-energy")],
+["RRF broadening",out.replace("PI-approved reference-only scope; no new profile/arrow or UV bundle transport","physical transport approved")],
+["n=11",out.replace("context (n=9)","context (n=11)")],
+["stage1 adoption",out.replace("Stage 1 is not adopted science.","Stage 1 is adopted science.")],
+["history status",out.replace("DRAFT; adoption pending","ADOPTED")]
+].map(([name,m])=>{if(m===out)throw Error("absent mutant "+name);let why="";try{verifyRevision(src,A,C,m,M,{...rev,candidate_sha256:digest(m)},{...NM,candidate_sha256:digest(m)},digest)}catch(e){why=e.message}if(!why)throw Error("negative survived "+name);return {name,why}})}
+const revision=JSON.parse(read(dir+'review_revision_edits.json')), revisedMap=JSON.parse(read(dir+'stage_b_revision_map.json'));
+const revisedCandidate=read(path), result=verifyRevision(source,intermediate,final,revisedCandidate,map,revision,revisedMap,digest), controls=negRevision(source,intermediate,final,revisedCandidate,map,revision,revisedMap,digest);
+for(const x of result.checks) console.log('PASS '+x);
+for(const x of controls) console.log('PASS negative: '+x.name+' (rejected by '+x.why+')');
+console.log('Revision '+result.checks.length+'/'+result.checks.length+' PASS; '+controls.length+'/'+controls.length+' negative controls rejected.');
+if(process.argv.length!==2){if(process.argv.length!==4||process.argv[2]!=='--write-intermediate')throw Error('Usage: node validate.mjs [--write-intermediate PATH]');writeFileSync(process.argv[3],result.intermediate,{encoding:'utf8',flag:'wx'});console.log('Revised intermediate SHA-256 '+digest(result.intermediate));}

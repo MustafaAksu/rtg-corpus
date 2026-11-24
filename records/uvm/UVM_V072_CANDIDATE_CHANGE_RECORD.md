@@ -171,3 +171,29 @@ python3 tools/pipes_index.py --check
 ```
 
 The standard compaction negative-control harness may have source-specific cases not applicable to UVM; report any failure or inapplicability explicitly, not as PASS. No merge, adoption, publication record, tag, BASELINE change or consumer disposition is authorized. PI approval remains necessary for the final version and RRF dependency.
+
+## Review 6037156148 and PI decisions (24 November 2026)
+
+Claude's [review](https://github.com/MustafaAksu/rtg-corpus/pull/376#pullrequestreview-6037156148) at `e9efaddc722a5157d1217ac632bf72d9f4403e32`: ACCEPT WITH TWO SCOPED CORRECTIONS. Independently reported: four hashes matched; original validator 41/41, 5/5 negatives; official compaction PASS, 118/118 claim blocks identical; profile checker PASS; 9/9 UVM-specific mutations rejected; linter informational; pipes 149/20 OK; 29 foreign RIDs resolved. Standard harness P0 PASS, N6/N8 rejected, 14 controls not applicable (harness failure, not PASS). These checks apply to the original reviewed head.
+
+PI answers, directly recorded from the 24 Nov project conversation:
+1. "sürüm numarası uygun" — v0.7.2 confirmed.
+2. "RRF v0.8.4 yalnızca referans olarak bağımlılık listesine girsin" — approved reference-only dependency, no physical transport.
+3. "yeni RIDler uygun" — seven new local names approved, all predecessor IDs and R-labels retained.
+4. "uygun" — record final reviewed candidate and actual publication hashes separately; publication metadata-only, no scientific change at publication. This is approval of procedure, not adoption of the revised candidate.
+
+### Scoped correction / readback
+
+R-1: restored six standalone predecessor declarations (ART x3, ENG x2, NUM-CARRIER), their original evidence classes as source-reported (including the 4-dp report and doclint scope). Also restored UVM-CONV-QPAIR and UVM-LEM-RJ from the predecessor's combined row, discovered by the full RID census. All 50 unique predecessor IDs now retained, plus exactly seven approved new IDs = 57; no duplicate declarations. Five existing R3/R8/R9/R10/R11 identifiers now have §6 declarations, not new IDs. R-2: R9 NUM, archival chart only, EV-SRC-REPORTED; preserve legacy RID, separate UVM-OPEN-H3AUDIT; no grade promotion. N-1: complete scope sentence at both sites; original historical check 20 remains pinned to old head; R18 checks revised wording. N-2: identified correction narratives reduced to current-state wording, prior verdicts remain in predecessor/Appendix B. RRF wording implements PI decision in header, §2, §3, §7. No C3 or other physical closure.
+
+The original A1/A2/B and outputs are preserved. The 22 guarded review substitutions in `evidence/uvm/v0.7.2-candidate/review_revision_edits.json` apply identically to original A2 and to the original compacted candidate. This reconstructs a corrected A intermediate (not a new adopted or committed DSN), SHA-256 `e4e8fa53f52400da10843ed0acdb36150486d6b63881b8ef23f91e9d7371ec3e`. The unchanged B01 operation yields the revised candidate SHA-256 `22d14dd8e086c9be25d966b860bcf79db03270e874abe939e8246b80da03fc57`. All outside-Appendix-A bytes are identical between revised intermediate and revised candidate. New map `evidence/uvm/v0.7.2-candidate/stage_b_revision_map.json`; original map unchanged. Connector-side revision validation 25/25 PASS; 6/6 negative controls rejected; log `evidence/uvm/v0.7.2-candidate/review_revision_validation.txt`. Updated Node CLI retains original validator at the historical head, then verifies revision; official checker not rerun here.
+
+### Claude changed-lines review
+
+```bash
+work=$(mktemp -d)
+node evidence/uvm/v0.7.2-candidate/validate.mjs --write-intermediate "$work/stage-a-revised.md"
+python3 tools/check_compaction.py "$work/stage-a-revised.md" dsn/RTG_OPEN_M_DSN.md evidence/uvm/v0.7.2-candidate/stage_b_revision_map.json --report "$work/compaction.json"
+```
+
+Review only `review_revision_edits.json` and affected checks. No new scientific run. Final reviewed revised hash replaces 857a3dbc… as adoption candidate. After separate PI adoption prepare status-only publication and compute its actual hash. No merge, tag, BASELINE change, or pipe disposition authorized by this correction.
