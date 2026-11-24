@@ -110,3 +110,41 @@ All edits are exact-line replacements against the immutable source; the JSON rec
 | 443–444 | M-1 current footer |
 
 Evidence and build inputs: evidence/uvm/v0.7.2-candidate/stage_a_edits.json, stage_a_checks.txt. Stage A execution used a separate assertion-gated connector-side script on the fetched tagged bytes. The checked-in Python verifier is provided in Stage B for reproducible review; no Python release checker or official compaction test claimed yet.
+
+## Stage A readback (A2)
+
+Stage A1 commit: `dfe37264b0bf35a4ccd134ce9fad013366530ad5`; SHA-256 `5696a765f82463c531da56d359fdfd2aa6e1dc80b684a7bb7387a336dc0e0932`. A2 corrects residual presentation, source locator, exact threshold implication, bounded tower/panel and consumer-notice wording before freezing the scientific intermediate. The 31 guarded literal edits are recorded in `evidence/uvm/v0.7.2-candidate/stage_a_readback_edits.json`. Corrected intermediate DSN SHA-256: `a49d2454854099b676eb218ce04d153915899a690134e939b529fd3964c8ee47`. Appendix A is unchanged. This is part of Stage A, not structural Stage B. No results were rerun.
+
+| Edit | Reason |
+|---|---|
+| A2-1 | Grammar and I-3 evidence attribution |
+| A2-2 | Internal pointer |
+| A2-3 | Punctuation |
+| A2-4 | Correct guard ownership |
+| A2-5 | Grammar |
+| A2-6 | Internal pointer |
+| A2-7 | I-1 exact conversion versus estimated input |
+| A2-8 | Finite tower scope; no new stage-1 result |
+| A2-9 | I-4 panel evidence and label disambiguation |
+| A2-10 | I-4 execution provenance |
+| A2-11 | Historical source locator |
+| A2-12 | GEN v2.10 §8 line 1274 covers 9B-tau in owner registry |
+| A2-13 | Same owner identity and limitation in import ledger |
+| A2-14 | Current-only presentation |
+| A2-15 | Current result pointer |
+| A2-16 | Current result pointer |
+| A2-17 | Separate source reference and notice states |
+| A2-18 | No inferred receipt or adoption from reference |
+| A2-19 | Proposal queue event distinct from notice receipt |
+| A2-20 | Remove dated label from current registry |
+| A2-21 | Remove dated label from current registry |
+| A2-22 | Remove dated label from current registry |
+| A2-23 | Remove dated label from current registry |
+| A2-24 | Remove dated label from current registry |
+| A2-25 | Remove dated label from current registry |
+| A2-26 | Remove dated label from current registry |
+| A2-27 | Remove dated label from current registry |
+| A2-28 | Remove dated label from current registry |
+| A2-29 | Move retired preregistration pointer to Appendix B |
+| A2-30 | Explicit correction and historical pointer |
+| A2-31 | Preserve I-3 evidence distinction in archive explanation |
