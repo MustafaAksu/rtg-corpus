@@ -1,0 +1,83 @@
+{
+ "N": 24,
+ "annotation_file": "numgen_v1_22_s1_witness_annotation.jsonl",
+ "annotation_sha256": "1819015aa3a0d64f91422960faf5c084f03a04e9cbfddaf065b466cfa1cc3524",
+ "differences": {},
+ "engine_policy": "bound_symmetric",
+ "expected": {
+  "base_dual_lost": 6,
+  "changed_DISC2": 20,
+  "exposed_DISC1_reported": 0,
+  "exposed_DISC2": 40,
+  "labels_kept": 10,
+  "pass_kept_class_changed": 8,
+  "pass_lost_base_dual_kept": 6,
+  "witnesses_DISC2": 136
+ },
+ "gates": {
+  "G1 IDENTITY": true,
+  "G2 POSITIVE": true,
+  "G3 SINGLE": true,
+  "G4 DISC-2": true,
+  "G5 DISC-1": true,
+  "G6 NEGATIVE": true,
+  "G7 SUMMARY": true
+ },
+ "inputs": {
+  "audit": {
+   "path": "upload/numgen-records/disc2_p2_antipodal_exposure_audit_v1.py",
+   "sha256": "89a1466ff8922fb17ed21b0fbff9f719b752abb5ad3fe9cf76545259ebe5fe1c"
+  },
+  "d1_code": {
+   "path": "upload/numgen-records/bind3_enumerate_k0123_v1.py",
+   "sha256": "41a86011c6ad7ccb378097aa62106bf2dfbf5acf9a4b56792a690379a6eae929"
+  },
+  "d1_result": {
+   "path": "upload/numgen-records/disc1_result.json",
+   "sha256": "92593b8cfdc7b9d37af49af32952652b7d4555dec4e13c4a1571c81388cb6f70"
+  },
+  "d2_code": {
+   "path": "upload/numgen-records/disc2_supplementary_enumerator_v3_1.py",
+   "sha256": "b7cee9220f73252af3b7322b50a67ecff4227424b6b1309f241d5e24babb35df"
+  },
+  "d2_report": {
+   "path": "upload/numgen-records/disc2_witness_report.json",
+   "sha256": "ccc8457086b01193bdec598a7db44508be8486659ae07feb4df15a66401faa7d"
+  },
+  "engine": {
+   "path": "upload/tdrg-records/genesis_mode_b_mc_v18.py",
+   "sha256": "9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e"
+  },
+  "orient": {
+   "path": "evidence/tdrg/scripts/tdrg_orient_v2_12_14.py",
+   "sha256": "ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c"
+  },
+  "universe": {
+   "path": "upload/numgen-records/NG_C7C_M2_CENSUS1_UTDRG_UNIVERSE_v1.json",
+   "sha256": "80b0c3b17349e8746b939c241007b7a0a67c2e69160badc4ebbfa3f1973513e9"
+  }
+ },
+ "k": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
+ "python": "3.13.18",
+ "script": "numgen_v1_22_s1_p2_reannotation.py",
+ "script_sha256": "4c5c2f1703d41f15344ad2d4c9c5bf66be4a616111a1cf8598f6dc3ed3e78ae9",
+ "summary": {
+  "base_dual_lost": 6,
+  "changed_DISC1": 0,
+  "changed_DISC2": 20,
+  "exposed_DISC1_reported": 0,
+  "exposed_DISC2": 40,
+  "labels_kept": 10,
+  "labels_new_pass": 10,
+  "labels_v18": 10,
+  "pass_kept_class_changed": 8,
+  "pass_lost_base_dual_kept": 6,
+  "witnesses_DISC2": 136
+ }
+}

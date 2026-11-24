@@ -1,0 +1,13 @@
+[PASS] G1 IDENTITY 8 inputs
+[PASS] G3 SINGLE functions differing other than orient_path: []
+[PASS] G2 POSITIVE 158/158 witnesses reproduce the frozen record with v18 (DISC-1 tuple k=0..3 + PASS_INT; DISC-2 verdict + base class; lockstep with own enumerator)
+[PASS] G4 DISC-2 136/136 witnesses: verdict, class and exposure equal to the held audit's inert column
+[PASS] G5 DISC-1 22 witnesses evaluated directly: exposed 0/22 (reported value 0/22), verdict/class changed 0/22
+[PASS] G6 NEGATIVE fixture {"v18": {"successor_delta": [1, 12, 0], "relabelled_run": [1, 0, 12], "equivariant": false}, "tdrg_def_orient": {"successor_delta": [0, 1, 12], "relabelled_run": [12, 1, 0], "equivariant": true}}; always-reversed orient breaks the v18 reproduction on 158/158 witnesses
+[PASS] G7 SUMMARY {"witnesses_DISC2": 136, "exposed_DISC2": 40, "changed_DISC2": 20, "pass_kept_class_changed": 8, "pass_lost_base_dual_kept": 6, "base_dual_lost": 6, "labels_kept": 10, "labels_v18": 10, "labels_new_pass": 10, "exposed_DISC1_reported": 0, "changed_DISC1": 0}; differences from the expected table: none
+   transition PASS_INT (1, 1) -> PASS_INT (3, 2): 4
+   transition PASS_INT (1, 1) -> PASS_INT (4, 3): 4
+   transition PASS_INT (1, 1) -> STABLE_NO_CONTINGENCY (1, 1): 4
+   transition PASS_INT (4, 3) -> STABLE_NO_CONTINGENCY (1, 1): 2
+   transition PASS_INT (5, 2) -> NO_BASE_DUAL None: 6
+RESULT: PASS
