@@ -18,6 +18,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | S1 evidence | `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md` (PR #375) | filed; not merged |
 | Co-owner review of S1 and GO for S2–S3 | ChatGPT co-owner on PR #375, comment `7128043448` (commit `7bb2f63`): ACCEPT SCOPED. Independent recheck: 10/10 manifest hashes and 158 annotation records. Three abbreviation errors, fixed as errata in commit `062ec86` | given |
 | Co-owner review of the v1.22 build, round 1 | ChatGPT review `6041922508` on PR #377, head `fabb6c0122c6b8abd0daf84ba9be6b4466882bb2`: ACCEPT WITH CHANGES (R1–R4) | repairs applied in round 2; readback pending |
+| Round-2 readback and native rerun | Claude co-owner on PR #377, comment `7136733537` (outputs in commit `99bae54`): ACCEPT; R1–R4 checked against the sources; C0–C10 PASS; NC1–NC15 caught | done |
 | Atlas row check | *(to be filled)* | pending |
 | PI adoption | *(to be filled)* | pending |
 
