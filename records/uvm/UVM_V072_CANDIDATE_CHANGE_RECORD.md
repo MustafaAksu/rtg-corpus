@@ -109,7 +109,7 @@ All edits are exact-line replacements against the immutable source; the JSON rec
 | 416–424 | M-1; relocate retired verbatim history to immutable predecessor; no active result removed |
 | 443–444 | M-1 current footer |
 
-Evidence and build inputs: evidence/uvm/v0.7.2-candidate/stage_a_edits.json, stage_a_checks.txt. Stage A execution used a separate assertion-gated connector-side script on the fetched tagged bytes. The checked-in Python verifier is provided in Stage B for reproducible review; no Python release checker or official compaction test claimed yet.
+Evidence and build inputs: evidence/uvm/v0.7.2-candidate/stage_a_edits.json, stage_a_checks.txt. Stage A execution used a separate assertion-gated connector-side script on the fetched tagged bytes. The checked-in JavaScript verifier is provided in Stage B for reproducible review; no Python release checker or official compaction test claimed yet.
 
 ## Stage A readback (A2)
 
@@ -148,3 +148,26 @@ Stage A1 commit: `dfe37264b0bf35a4ccd134ce9fad013366530ad5`; SHA-256 `5696a765f8
 | A2-29 | Move retired preregistration pointer to Appendix B |
 | A2-30 | Explicit correction and historical pointer |
 | A2-31 | Preserve I-3 evidence distinction in archive explanation |
+
+## Stage B — historical compaction only
+
+Frozen Stage A2 commit `8b6a46ec8ace905cf7400f2e43f2129b326fb6f5`; SHA-256 `a49d2454854099b676eb218ce04d153915899a690134e939b529fd3964c8ee47`. Candidate SHA-256 `857a3dbc53df7a68cb4fe2d55605b0c5bba2e88c8fe949cde9e30437e41b871d`. B01 replaces Appendix A only; the removed complete history occurs byte-identically in the tagged predecessor. All text outside Appendix A (header, live scientific body, import and evidence registries, Appendix B, footer) is byte-identical. There is no Stage B scientific delta. Old/current correction decisions are in A1/A2 maps, not B.
+
+Validation: connector-side execution of the same bounded replay/guard logic filed as `evidence/uvm/v0.7.2-candidate/validate.mjs`: **41/41 PASS; 5/5 negative controls rejected**. The Node CLI uses native SHA-256 and is for reviewer reproduction; the connector used its own SHA-256 with known-answer check. Logs: `evidence/uvm/v0.7.2-candidate/validation_output.txt`. Neither the official compaction checker nor the linter or the standard negative-control harness was executed in this preparation environment. They remain explicit receiving-review checks. The candidate-specific negative controls test exact replay and forbidden Stage B changes even when the candidate digest is recomputed.
+
+### Receiving review — Claude
+
+Review Stage A1/A2 scientific/attribution/grade and pin deltas against the cited owners (in particular I-4, I-7, I-1/2/5/8/9, U1/U3/U8/U9/U10). Check whether all load-bearing qualifiers and old scientific negatives survive; confirm that the R14 new identifier is used only for that result, and that all new candidate RIDs are legitimate. Check claim-specific repins, historical locators, provisional RRF dependency and the absence of receipt or use claims. Re-run the independent document checks at the candidate head:
+
+```bash
+node evidence/uvm/v0.7.2-candidate/validate.mjs
+work=$(mktemp -d)
+git show 8b6a46ec8ace905cf7400f2e43f2129b326fb6f5:dsn/RTG_OPEN_M_DSN.md > "$work/stage-a.md"
+git show uvm-v0.7.1:dsn/RTG_OPEN_M_DSN.md > "$work/predecessor.md"
+python3 tools/check_compaction.py "$work/stage-a.md" dsn/RTG_OPEN_M_DSN.md evidence/uvm/v0.7.2-candidate/stage_b_map.json --report "$work/compaction.json"
+python3 tools/test_check_compaction.py "$work/stage-a.md" dsn/RTG_OPEN_M_DSN.md evidence/uvm/v0.7.2-candidate/stage_b_map.json
+python3 tools/dsn_lint.py dsn/RTG_OPEN_M_DSN.md --prev "$work/predecessor.md"
+python3 tools/pipes_index.py --check
+```
+
+The standard compaction negative-control harness may have source-specific cases not applicable to UVM; report any failure or inapplicability explicitly, not as PASS. No merge, adoption, publication record, tag, BASELINE change or consumer disposition is authorized. PI approval remains necessary for the final version and RRF dependency.
