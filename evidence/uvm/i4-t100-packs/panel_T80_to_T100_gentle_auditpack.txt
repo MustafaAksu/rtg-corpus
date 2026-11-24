@@ -1,0 +1,18 @@
+== OPEN-M-2E PANEL :: open_m_2d_seed_001_rank_2_T80_to_T100_gentle_auditpack.npz ==
+  beta1_graph  = 112
+  dimH         = 13
+  L_sub        = 0.2752
+  L_zh         = 0.3425
+  sigma_h_int  = 0.2521
+  harm_frac    = 0.1256
+  sigma_int    = 0.7041
+  SE           = 0.0537
+  nonmanifold  = 0
+  density      = 1.4884
+-- criteria --
+  [PASS] nonmanifold=0
+  [FAIL] L_zh>0.5
+  [FAIL] sigma_h_int>=0.28 (floor)
+  [FAIL] density<=1.2
+  [FAIL] [consequence] sigma_int>=0.8
+== 2E VERDICT: not yet ==

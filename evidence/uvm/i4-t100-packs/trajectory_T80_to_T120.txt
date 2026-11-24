@@ -1,0 +1,19 @@
+OPEN-M-2F trajectory :: corridor fraction vs harmonic loading along growth
+
+stage nint corrFrac sig_h_int sig_h_corr sig_h_win  nm dimH
+T80     81    0.185    0.1888     0.1311    0.0851   0    4
+T89     76    0.197    0.2057     0.1326    0.2221   0   14
+T90     74    0.230    0.1146     0.1240    0.1508   0   11
+T91     92    0.196    0.2305     0.2045    0.2988   1    7
+T92     89    0.213    0.1535     0.1237    0.1706   2   13
+T93     93    0.226    0.2591     0.2341    0.2743   0   12
+T94     86    0.151    0.0906     0.1096    0.0890   1    6
+T100    86    0.302    0.2521     0.2471    0.3227   0   13
+T120   118    0.305    0.2749     0.2523    0.2553   7   14
+
+corr(corridorFrac, sigma_h_int) along trajectory = +0.654
+corr(corridorFrac, nonmanifold)  along trajectory = +0.488
+corr(sigma_h_int, nonmanifold)    along trajectory = +0.326
+[PASS] trajectory computed for full series
+
+ALL CHECKS: PASS

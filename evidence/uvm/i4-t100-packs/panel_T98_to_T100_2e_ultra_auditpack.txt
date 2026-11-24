@@ -1,0 +1,18 @@
+== OPEN-M-2E PANEL :: open_m_2d_seed_001_rank_2_T98_to_T100_2e_ultra_auditpack.npz ==
+  beta1_graph  = 105
+  dimH         = 10
+  L_sub        = 0.3598
+  L_zh         = 0.5273
+  sigma_h_int  = 0.2949
+  harm_frac    = 0.1539
+  sigma_int    = 0.7408
+  SE           = 0.0511
+  nonmanifold  = 2
+  density      = 0.8381
+-- criteria --
+  [FAIL] nonmanifold=0
+  [PASS] L_zh>0.5
+  [PASS] sigma_h_int>=0.28 (floor)
+  [PASS] density<=1.2
+  [FAIL] [consequence] sigma_int>=0.8
+== 2E VERDICT: not yet ==
