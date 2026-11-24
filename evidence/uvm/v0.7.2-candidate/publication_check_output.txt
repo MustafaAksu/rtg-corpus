@@ -1,0 +1,112 @@
+Python 3.14.4
+v24.22.3
+PASS candidate SHA-256 22d14dd8e086c9be25d966b860bcf79db03270e874abe939e8246b80da03fc57
+PASS publication SHA-256 2bd854dfd0168906159f8add900ad70c86782bc8d06b420614308959f807880f
+PASS 9 exact metadata edits; inverse byte equality
+PASS all live scientific text and Appendix B byte-identical
+PASS one footer; no scientific change at publication
+PASS 01 tagged base identity
+PASS 02 Stage A1 identity
+PASS 03 Stage A1 map non-overlapping
+PASS 04 all A1 source spans exact
+PASS 05 exact replay A1
+PASS 06 A2 parent identity
+PASS 07 all A2 literal guards
+PASS 08 exact replay A2
+PASS 09 corrected intermediate hash
+PASS 10 candidate hash
+PASS 11 exactly one structural operation
+PASS 12 unique ordered history bounds
+PASS 13 archive identity
+PASS 14 complete removed history occurs in adopted archive
+PASS 15 exact Stage B replay
+PASS 16 entire outside-history text byte-identical
+PASS 17 Stage B history-only heading
+PASS 18 unique live local RID declarations
+PASS 19 OPEN and R14 identities distinct
+PASS 20 R14 selected panel scope twice
+PASS 21 no former single-series assertion
+PASS 22 ultra panel identity
+PASS 23 gentle panel identity
+PASS 24 correlations retained
+PASS 25 R14 numerical grade
+PASS 26 independent-correlation/causal limits
+PASS 27 single jet target contract
+PASS 28 positive-m branch and signed magnitude
+PASS 29 nondegenerate R15 quotient
+PASS 30 exact diagnostic conversion retained
+PASS 31 prelegacy finite scope
+PASS 32 proxy not physical identification
+PASS 33 THM-3G only scoped reported evidence
+PASS 34 old audit missing artifact
+PASS 35 stage 1 not adopted
+PASS 36 RRF provisional reference
+PASS 37 owner source receipt not inferred
+PASS 38 all four missing original items named
+PASS 39 DRAFT not adopted
+PASS 40 one final footer
+PASS 41 no compound RESULT companion tags
+PASS negative: source corruption (rejected by 01 tagged base identity)
+PASS negative: undeclared A1 change (rejected by 02 Stage A1 identity)
+PASS negative: undeclared A2 change (rejected by 08 exact replay A2)
+PASS negative: B modifies live result even with matching candidate hash (rejected by 15 exact Stage B replay)
+PASS negative: B removes live conditional phrase even with matching hash (rejected by 15 exact Stage B replay)
+SUMMARY: 41/41 checks PASS; 5/5 negative controls rejected.
+PASS R01 original identities
+PASS R02 exact original B replay
+PASS R03 review parents match
+PASS R04 revised intermediate
+PASS R05 exact revision replay and candidate hash
+PASS R06 B01 operation, archive and profile unchanged
+PASS R07 revised B exact replay
+PASS R08 outside Appendix A byte-identical
+PASS R09 history unchanged and archived
+PASS R10 all 50 predecessor RIDs retained
+PASS R11 exactly seven approved new RIDs
+PASS R12 no duplicate declarations
+PASS R13 carrier NUM provenance
+PASS R14 in-grow ENG and 4dp
+PASS R15 doclint ENG scope
+PASS R16 artifact grades
+PASS R17 R9 scoped NUM and separate OPEN
+PASS R18 complete R14 scope sentence twice
+PASS R19 R14 values and grade retained
+PASS R20 all 16 SG-M guards retained
+PASS R21 RRF reference only
+PASS R22 C3 and stage1 status
+PASS R23 draft status
+PASS R24 target domain and values
+PASS R25 missing originals remain explicit
+PASS negative: lost RID (rejected by R05 exact revision replay and candidate hash)
+PASS negative: grade promotion (rejected by R05 exact revision replay and candidate hash)
+PASS negative: RRF broadening (rejected by R05 exact revision replay and candidate hash)
+PASS negative: n=11 (rejected by R05 exact revision replay and candidate hash)
+PASS negative: stage1 adoption (rejected by R05 exact revision replay and candidate hash)
+PASS negative: history status (rejected by R05 exact revision replay and candidate hash)
+Revision 25/25 PASS; 6/6 negative controls rejected.
+Revised intermediate SHA-256 e4e8fa53f52400da10843ed0acdb36150486d6b63881b8ef23f91e9d7371ec3e
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  archive identity uvm-v0.7.1  — 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation B01 (history-appendix)  — section relocated (12570 chars), found in ['uvm-v0.7.1']
+PASS  history appendix region  — Appendix A is the unique history region in base and candidate; operation B01 replaces exactly it
+PASS  qualified claim blocks  — 119 claim blocks in base live text: 119 byte-identical, 0 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS
+bytes: 103683
+lines: 609
+section1_words: 1302
+orientation_core: {"chars": 34419, "lines": 189, "words": 4365, "core_end_marker_present": true}
+appendix_a_words_per_edition: 2 editions, max 52 words
+previous: {"file": "/home/runner/work/_temp/uvm-publish/predecessor.md", "bytes": 92170}
+growth_bytes: 11513
+growth_percent: 12.5
+pipes OK: 149 items in 20 inboxes
+be15b7990458b08b970cfd1898c9303b931c83bdb01fc7ef2c7290515a9266c0  /home/runner/work/_temp/uvm-publish/compaction.json
+e0c28c769e9da9c87dbb0931e2eee4a65fb21d136b8c965a380061158d5f3622  /home/runner/work/_temp/uvm-publish/lint.json
