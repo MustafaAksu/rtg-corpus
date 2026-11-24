@@ -1,6 +1,6 @@
 # Number Genesis v1.22 — Release Record
 
-**Status:** DRAFT. Not adopted. `numgen-v1.21` governs until the PI adopts v1.22 and tags it.
+**Status:** ADOPTED by the PI, 24 November 2026; publication prepared, merge and annotated tag pending (§10). Until the verified tag exists, `numgen-v1.21` remains the governing tagged edition.
 **Date:** 24 November 2026.
 **Prepared by:** Claude, Number Genesis co-owner session; round-2 repairs applied by ChatGPT, at the PI's request. Branch `claude/numgen-v1.22`, stacked on PR #375, which is stacked on PR #374.
 **Edition:** v1.22, one content stage: receiving and synchronization. No layout change, so no stage 2 (Methodology v1.4 §13.6).
@@ -17,10 +17,11 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Co-owner review and GO for S1 | ChatGPT co-owner, 24 Nov 2026, as given to this session by the PI: v1.22 ACCEPT SCOPED; S1 GO with acceptance criteria 1–7 | given |
 | S1 evidence | `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md` (PR #375) | filed; not merged |
 | Co-owner review of S1 and GO for S2–S3 | ChatGPT co-owner on PR #375, comment `7128043448` (commit `7bb2f63`): ACCEPT SCOPED. Independent recheck: 10/10 manifest hashes and 158 annotation records. Three abbreviation errors, fixed as errata in commit `062ec86` | given |
-| Co-owner review of the v1.22 build, round 1 | ChatGPT review `6041922508` on PR #377, head `fabb6c0122c6b8abd0daf84ba9be6b4466882bb2`: ACCEPT WITH CHANGES (R1–R4) | repairs applied in round 2; readback pending |
+| Co-owner review of the v1.22 build, round 1 | ChatGPT review `6041922508` on PR #377, head `fabb6c0122c6b8abd0daf84ba9be6b4466882bb2`: ACCEPT WITH CHANGES (R1–R4) | repairs applied and readback accepted (next row) |
 | Round-2 readback and native rerun | Claude co-owner on PR #377, comment `7136733537` (outputs in commit `99bae54`): ACCEPT; R1–R4 checked against the sources; C0–C10 PASS; NC1–NC15 caught | done |
-| Atlas row check | *(to be filled)* | pending |
-| PI adoption | *(to be filled)* | pending |
+| Atlas co-owner row check | PR #377 comment `7136961345`, head `dafd8c7c274eb4a0ea25b9e7929fa90593ebf2ba`: CONCUR / ACCEPT SCOPED; 14/14 full hashes, 39 edits, 78 edit hashes; native outputs inspected, not independently rerun; not a blind review because ChatGPT applied R1–R4 | done |
+| Distinct Atlas-owner acceptance | Not located in PR #377 at this checkpoint; not inferred from the Atlas co-owner concurrence | pending separate record; Atlas is advisory, PI decision recorded below |
+| PI adoption | PI, 24 November 2026, verbatim: “PI olarak v1.22'yi benimsiyorum. yapabildiğin işlemleri yap lütfen.” Exact round-2 candidate identified in §2; see §10 | given |
 
 ## 2. Identities
 
@@ -29,7 +30,7 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | Base: `numgen-v1.21` (274,246 bytes) | `4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701` |
 | Candidate round 1 (reviewed, superseded; Git commit `fabb6c0122c6b8abd0daf84ba9be6b4466882bb2`) | `8ccc8e38f0ad054d68f59bf5d95c9364afa093f02cb3e418295625db3763148a` |
 | **Candidate round 2** `dsn/RTG_NUMBER_GENESIS_DSN.md` (282,107 bytes, 2990 lines) | **`fa28c0abe8bca5e9e7bb307e27ecb8f13c75399a7d804487a7a48b7a8b5c78b9`** |
-| Published file (after the publication transform) | *(to be filled)* |
+| **Published-form file** (five status/record-reference lines only; 282105 bytes, 2,990 lines) | `36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b` |
 | Tag `numgen-v1.22` | *(to be filled by the PI)* |
 
 | Build or check file | SHA-256 |
@@ -46,6 +47,8 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | `evidence/numgen/v1.22/round2_negative_controls_output.txt` (round 2, native: NC1–NC15 caught) | `ccc5b707b3356cd3d81161e42c67e9be206d7b827b5aaa54d4a246331e5f3a93` |
 | `evidence/numgen/v1.22/round2_dsn_lint.txt` (round 2, informational) | `7e28828950c5839c0216d4a0c08082e3c50859bdf21b2acf90354b65da57b177` |
 | `evidence/numgen/v1.22/round2_pipes_check.txt` (round 2: OK, 149 items in 20 inboxes) | `6a8820015bf7afa2fa4adf458baedb7d4cd0657a0bbb340f19cf5f8d2a5822da` |
+| `evidence/numgen/scripts/publish_numgen_v1_22.py` (reproduction script; not executed natively here) | `286f41953eea85f616dad9d1484bbd948858d9ad7d45be60d416cde0d913c5d0` |
+| `evidence/numgen/v1.22/publication_transform.json` (executed connector transform and reverse check) | `1ff1c38d7986c4abf0ef375039b5caa07c812bedb75dc24fe385d0fc8f1f9ed6` |
 | S1: script / annotation / manifest | `4c5c2f17…8ae9` / `1819015a…3524` / `3981cfe6…67dc` |
 
 **Reproduce:**
@@ -79,7 +82,7 @@ No other grade tag changes. No edit lowers OPEN, CLOSED or INCONCLUSIVE (C4). No
 
 ## 4. Checks
 
-Round-1 native output files are retained unchanged and refer to the superseded candidate. Round 2 was rebuilt and reversed against the exact tagged base by a connector-side independent readback, including edit hashes, tag/status/RID checks and the four targeted negative controls. The Python builder, checker with full controls, lint and pipes validator were then rerun natively on round 2 by the Claude co-owner session (24 Nov 2026, Python 3.13): candidate and edit log reproduced byte-identically; C0–C10 PASS; NC1–NC15 each caught by a substantive gate; pipes OK. Outputs: `evidence/numgen/v1.22/round2_*.txt`. The atlas row check may rerun them independently.
+Round-1 native output files are retained unchanged and refer to the superseded candidate. Round 2 was rebuilt and reversed against the exact tagged base by a connector-side independent readback, including edit hashes, tag/status/RID checks and the four targeted negative controls. The Python builder, checker with full controls, lint and pipes validator were then rerun natively on round 2 by the Claude co-owner session (24 Nov 2026, Python 3.13): candidate and edit log reproduced byte-identically; C0–C10 PASS; NC1–NC15 each caught by a substantive gate; pipes OK. Outputs: `evidence/numgen/v1.22/round2_*.txt`. The Atlas co-owner inspected those native outputs and independently checked the stored identities and edit replay (comment `7136961345`), without claiming native execution.
 
 | Check | Evidence key | Result |
 |---|---|---|
@@ -126,15 +129,29 @@ Round 2 clarifies the §9.1 availability row: NUMGEN enumerators and S1 inputs a
 - No M4.
 - No DISC-3.
 - No compaction.
-- No merge and no tag by this session.
+- No merge or tag as of preparation of this publication commit; subsequent publication facts belong in a dated addendum (§13.7).
 
 ## 9. Remaining steps
 
 1. Round-2 change-focused readback of R1–R4: done by the Claude co-owner session (24 Nov 2026; PR #377 comment).
-2. Atlas row check (native round-2 outputs are on the branch; independent rerun optional).
-3. PI adoption.
-4. Publication transform (status lines only).
-5. PI merge (#374 → #375 → v1.22 PR) and tag `numgen-v1.22`.
-6. Notices (§6) and closure of the eleven inbox items.
+2. Atlas co-owner row check: CONCUR / ACCEPT SCOPED (`7136961345`); separate Atlas-owner record not located.
+3. PI adoption: given on 24 Nov 2026 (§10).
+4. Publication transform: done; five exact status/record-reference lines and reverse recovery of the candidate (§10).
+5. PI-authorized merge (#374 → #375 → #377) and annotated tag `numgen-v1.22`: pending at this commit; verify current main and record actual merge/tag identities in a dated post-tag addendum.
+6. Notices (§6), closure of the eleven inbox items, and entry-note refresh after verified tag: pending.
+
+## 10. PI adoption and publication transform
+
+**Decision (24 November 2026, verbatim from the PI in the NUMGEN co-owner conversation):**
+
+> PI olarak v1.22'yi benimsiyorum. yapabildiğin işlemleri yap lütfen.
+
+The adopted scientific object is the reviewed round-2 candidate at `dafd8c7c274eb4a0ea25b9e7929fa90593ebf2ba` with SHA-256 `fa28c0abe8bca5e9e7bb307e27ecb8f13c75399a7d804487a7a48b7a8b5c78b9`. The completed Claude co-owner native readback and the Atlas co-owner concurrence are recorded separately in §1. The Atlas concurrence is not independent of ChatGPT's prior involvement in the R1–R4 repairs and is not represented as a distinct Claude Atlas-owner acceptance. The Atlas method is advisory and the PI has final authority over owner science; no Atlas acceptance or Atlas edition is inferred from the PI decision.
+
+**Scope of adoption.** One content stage as reviewed: S1 finite witness-panel NUM evidence (not replacement of the frozen verdicts), eleven receiving dispositions, S3 synchronization and the bounded R1–R4 repairs. No grade promotion, new NUMGEN RID, automatic repin, Census-1 re-admission, campaign launch or new physical bridge is authorized. Census-1 remains INCONCLUSIVE / INCONCLUSIVE, full-interface WD-DOM OPEN, M4 HOLD pending an approved design/preregistration, DISC-3 DEFER and the phi-star comparison OPEN.
+
+**Publication transform.** The five declared line changes are the Document status header, the separate Release record header, the v1.22 Appendix A heading, its Records reference, and the single footer. All other bytes are preserved. Candidate SHA-256 verified and final SHA-256 `36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b` independently calculated from the UTF-8 publication bytes; the inverse exact-once substitutions recover the candidate byte-identically. Executed check: `evidence/numgen/v1.22/publication_transform.json`; reproducible native script: `evidence/numgen/scripts/publish_numgen_v1_22.py` (not natively executed by this connector session). Earlier native builder/checker runs belong to the candidate, not a new execution of the publication transform. No scientific campaign repeated.
+
+**Publication boundary.** This record freezes the adoption and transform. `BASELINE.md` on the publication branch carries the planned v1.22 row; the tag is not yet created. Confirm the merge commit, annotated tag, final file hash and pipe index after publication; append a dated post-tag record rather than altering this adopted release record. Consumer notices are not sent or closed before the tag. No Atlas refresh is authorized here.
 
 *END OF RECORD.*

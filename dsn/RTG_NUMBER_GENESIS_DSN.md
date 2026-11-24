@@ -4,12 +4,12 @@
 **Date:** 24 November 2026  
 **Scope:** Foundational construction of number-like representations and arithmetic compatibility from relational arrows/transitions, composition, repeatable event histories, orientation/inversion, finite multiplicity, phase/character structure, commensurability classification, and recurrence-holonomy diagnostics. Additive, difference, ratio, and multiplicative numerical forms are treated as sector-dependent representations unless a certified mechanism gives them stronger physical status.  
 **Document class:** Foundational/technical bridge ledger (Methodology v1.4 §0.5); it does not modify the ontology, Dyadic, Discrete, Triadic, or Genesis dynamics, and it is not itself an OPEN-P1 physical bridge (Programme v1.3 SG-PROG-4). §1 profile exception: §1 states the imported foundations, the thesis and the three-track counting architecture with their scope guards in full (above the 400-word guide); a pointer-only §1 would drop those qualifications.  
-**Document status:** DRAFT — v1.22 candidate (one content stage: receiving and synchronization), not adopted; v1.21 governs until PI adoption. Release record (DRAFT): `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`.  
+**Document status:** ADOPTED — PI, 24 November 2026 (one content stage: receiving and synchronization, including the scoped P2 re-annotation and R1–R4 review repairs). Release record: `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`.  
 **Supersedes:** `RTG_NUMBER_GENESIS_DSN_v1.21` (SHA-256 `4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701`; tag `numgen-v1.21`).  
 **Companion documents:** current editions, pins used and consumers in §9.1 (Consumers and pins).  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Status summary:** Local Track-A/Track-B number-like representations are certified on an explicit Dyadic-certified tube; the canonical section stream is a non-fixed re-blocking with theorem-grade logarithmic defect and physical slip-ratio limit (GAP-LOCK 1–3 closed); bounded commensurability yields unique rational labels (C7A) with a ratified ten-label dynamic lower bound `{1, 3/2, 2, 3, 4, 4/3, 5, 5/2, 7/2, 9/4} ⊆ Q_RTG^dyn`; C7C-0 reciprocal is closed and C7C-M is partially resolved (exact chain identity and conditional carrier closure `[ALG]`; interface-typed WD-DOM OPEN). C7B global breadth, C7C-A, N-4, N-6, NG-7B and full NG-8 remain OPEN.  
-**Release record:** `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md` (DRAFT). Version history: Appendix A.
+**Release record:** `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`. Version history: Appendix A.
 
 ## §0. Epistemic Conventions
 
@@ -2913,14 +2913,14 @@ Candidate areas:
 
 One compact entry per recent edition (Methodology v1.4 §1). The full changelog of v0.1–v1.20.8 and the three legacy notes (v0.3 Change Note, v1.0 Result Note, v0.9 Result Note) are in the predecessor edition (tag `numgen-v1.20.8`, sections "Changelog" and the notes after it); the held release records and packages of v1.20.x are on the branch `upload/numgen-records` (hash check `records/numgen/NUMGEN_UPLOAD_HASH_CHECK_20261026.md`).
 
-### v1.22 — 24 November 2026 — DRAFT (not adopted)
+### v1.22 — 24 November 2026 — Adopted
 
 - **Basis:** Atlas sync advisory of 23 Nov 2026 (rev. 2, `records/numgen/ATLAS_ADVISORY_NUMGEN_SYNC_20261123.md`); owner disposition (`records/numgen/NUMGEN_OWNER_DISPOSITION_SYNC_20261123_CLAUDE_20261124.md`); co-owner GO for S1 and for S2–S3 (24 Nov 2026).
 - **Evidence [NUM] (S1):** P2 re-annotation of the 158 Census-1 TDR-G witnesses under TDRG-DEF-ORIENT (§6.6; `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md`); DISC-1 0/22 now has an execution artifact.
 - **Receiving (S2):** eleven inbox notices dispositioned (`records/numgen/NUMGEN_v1_22_RECEIVING_LEDGER.md`); no new import.
 - **Synchronization (S3):** §1.1 TDR-G imports cite TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE and TDRG-THM-RECURRENCE at `tdrg-v2.13`; §2 item 1 and §6.6: C7C-M4 hold reason (P2 answered; approved design/preregistration for the missing composable chain still needed); §6.2 `q_*` vs Dyadic `q_{3/4}`; §8 DZT provenance (`dzt-v0.19`); §9.1 consumers and pins (Dyadic v6.4.24, TDR-G v2.13, OFN v0.12, Programme v1.4, Genesis v2.10 with the IF38 export, RECOG v0.3.27 two-grade GAP-LOCK 3 use); §9.2 S1 artifact row.
 - **Unchanged:** every claim grade and OPEN status; Census-1 INCONCLUSIVE / INCONCLUSIVE; C7C-M4 HOLD; DISC-3 deferred; the C7C algebra; the φ* comparison.
-- **Records:** release record `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md` (DRAFT); predecessor tag `numgen-v1.21` (`4805760d…5701`).
+- **Records:** release record `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`; predecessor tag `numgen-v1.21` (`4805760d…5701`).
 
 ### v1.21 — 26 October 2026 — Adopted
 
@@ -2987,4 +2987,4 @@ Historical (v1.19): `[HYP]` programme thesis plus `[DEF]/[INTERP]` paradigm clar
 
 ---
 
-*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.22 (DRAFT; not adopted).*
+*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.22 (ADOPTED, 24 November 2026).*
