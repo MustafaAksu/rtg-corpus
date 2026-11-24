@@ -1,0 +1,112 @@
+# UVM v0.7.2 candidate — change-focused review record
+
+**Status:** [SESSION], DRAFT, not adopted. PI requested ChatGPT to prepare the DSN and Claude to review. Candidate version v0.7.2; final version, RRF reference-only dependency, scientific acceptance, merge and tag remain PI decisions. No owner or consumer disposition is inferred.
+
+**Base:** main 9ab42f4754bfcce9dd95516b0272ebe6ef84babb; exact adopted uvm-v0.7.1:dsn/RTG_OPEN_M_DSN.md; blob 805335e8eb2b46e8007159f965489f5669352eaf; SHA-256 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e. Main file matched adopted bytes. Governing Methodology: v1.4. Scope: merged triage rev. 4 (PR #370, review 6029118674), PR #366 reviewed stage-1 record, PI-confirmed U8, source-custody audit. Stage A SHA-256: 5696a765f82463c531da56d359fdfd2aa6e1dc80b684a7bb7387a336dc0e0932. Stage B is separately planned: history compaction only, without changing the Stage-A live body.
+
+## Scientific and documentary boundaries
+
+- No new physical result, scientific-grade promotion, ESM run, Hodge recomputation, source normalization, model selection or C3 closure. Stage-1 record remains SESSION; new Dyadic theorem is reference-only. RRF reference is proposed, pending PI approval. No pipe state, BASELINE, source owner file, upload file or release tag changes.
+- I-4: separate T100 gentle/ultra, R14 nine selected packs; values and [NUM] retained, no single trajectory or common byte-identical bootstrap state asserted. Weighted-band statements are source-reported, not reproduced by I-4. I-7 wording is updated consistently (the earlier triage I-7 single-trajectory phrase is superseded by the later I-4 finding).
+- U2/I-1/I-5/I-8: target table, explicit single-jet and 9C hypotheses, large-positive-g, state/metric/clock/source dependencies; no new target, no factor 2, no certified deficit. I-2: positive-m branch separated from signed equations and magnitude; degenerate domain excluded where quotient used; no negative-m physical lock proof.
+- U9/I-6/I-9: Pre-Legacy §1.9/§1.12/§6.2 locators and split source grades; retain finite N=175, 0.403; remove physical proxy identification and false source quotation; preserve hypothesis and observations. I-3/U10: typed definitions plus OPEN bridge, no grade inferred for THM-3G, recovered script and synthetic rerun only. U8 is PI-attestation (23 Nov); original June artifact absent.
+- U3: R14 uses existing registry/result-reference label UVM-NUM-2F-TRAJ rather than duplicate UVM-OPEN-2F. Other newly proposed result IDs in §6 are candidate local identifiers (not previously adopted RIDs); existing identifiers reused only for their own results. Owner RIDs never minted. Proposed owner RID requests not filed. Artifact rows are references, not duplicate claim declarations. U5/U7: symbol and consumer tables; no invented receiver acceptance. U4/U6/U11: preserve existing owner scope, no new physical interpretation. M-2 uses expanded §1 profile exception; M-3/4/5 ledger/alias/claim-type normalization in A so that B changes no science. The original verbatim retired R15 archive remains at the immutable predecessor, Appendix B. Stage A intentionally keeps old Appendix A for the separate B movement.
+
+## Source manifest / reading extent
+
+- uvm-v0.7.1: full exact file, local supplied copy SHA-256 identical, and tagged source. Triaged issues from merged records/uvm/UVM_REACTIVATION_TRIAGE.md and UVM_S0_CUSTODY_AUDIT.md; prior independent readbacks and actual uploaded evidence lists. Current CONVENTIONS, Methodology v1.4 §§1.1, 3.3–3.4, 4.3, 8.1–8.4, 13.6 read targeted; not a new proof review of all science.
+- GEN v2.10 §§2 (7B, norm, face ratio), 6.1, 6.7–6.9, current dependency registry, exact scoped statements and owner RID locations; no-go proof not in repository. Old Genesis v2.8.5 exact comparison from recovered file and prior audited triage. Preserve historical GCL notice locators. DYAD v6.4.24 §§6.2,6.11–6.14,6.16–17, SG-14/15/19; old v6.4.10 comparisons in custody audit §4.1 (B locator unresolved). TRIAD v1.7 T-6s/t/u, SG-17 and CN-02/05 summary, old notice versions retained as specified. OFN v0.12 OPA/RF-O08-08/11, Programme v1.4 guards/IF09 and §§2/6, AZ v0.10 UVM references; not full re-proof. PRE-LEGACY v0.8 §§1.9,1.12,6.2, SG-PL-13; RRF v0.8.4 §3 and prior §0.3/6.2 read, reference proposal only. All actual owner tags are checked against BASELINE at 9ab42f4754bfcce9dd95516b0272ebe6ef84babb. No LIT dependencies.
+
+## Stage A edit map
+
+All edits are exact-line replacements against the immutable source; the JSON records old/new bytes, and an assertion rejects mismatches. Review each interval at Stage A, not the original history alone. Original line numbers refer to v0.7.1. Mechanical checks are not mathematical review.
+
+| Old lines | Reason / triage |
+|---|---|
+| 1–17 | header; M-2 profile; M-4 alias protocol; candidate status and pins |
+| 27 | P-GEN-a: current source scope verified |
+| 41 | P-DYAD; preserve unresolved old B locator |
+| 51 | M-5 |
+| 54 | P-GEN-a/b; preserve frame/9B type distinction |
+| 56 | P-GEN-b/c; no-go proof-custody qualifier |
+| 59 | P-GEN-a; exact conditional scope |
+| 61 | P-GEN-a; 9B scope |
+| 63 | P-GEN-a/b; verified norm RID |
+| 65 | P-GEN-a/b; no borrowed theorem RID |
+| 68 | U2/I-1/I-5; target dependencies |
+| 70 | U10/I-3; no grade inferred from theorem name |
+| 72 | I-1 |
+| 74 | M-1 current-use correction |
+| 76 | P-GEN-a/P-TRIAD; leading/remainder separation |
+| 79 | U10/M-3; current GEN dependency scope |
+| 81 | I-6/U9; distinct source grades and scopes |
+| 83 | I-6/M-4 |
+| 85 | M-4 |
+| 87–88 | M-1; historical negative inventory retained in tag |
+| 101 | U2/I-1 |
+| 104 | I-1/I-5/I-8 |
+| 107 | U9/I-9/M-1; no live overclaim |
+| 110 | I-4/I-7; all two-pack numbers with exact provenance |
+| 116 | I-4/I-7 |
+| 119 | P-TRIAD/P-GEN; current status |
+| 124 | I-3/I-1 |
+| 133 | I-2/P-GEN |
+| 136 | I-2 sign and zero domains |
+| 139 | U1/M-1; stage-1 status only; separate new DYAD import; RRF pending |
+| 142 | P-OFN; physical bridge guard |
+| 163 | U2/I-1/I-5/I-8; central target table |
+| 175 | I-2 |
+| 194 | U1/P-DYAD |
+| 197 | I-3 |
+| 202 | U2/I-4 |
+| 215 | I-1 |
+| 218 | U1 |
+| 221 | I-4/I-7 |
+| 224 | P-TRIAD |
+| 225 | P-TRIAD |
+| 226 | P-TRIAD |
+| 235 | U8/S0-3 |
+| 237 | U3/U8/U1; monomial not unique map |
+| 239 | U3/I-2 |
+| 241 | U3/M-1 |
+| 248 | U8/M-1 |
+| 250 | U3/M-1 |
+| 254 | M-1/M-4; hypothesis retained |
+| 256 | U3/M-1 |
+| 258 | M-4; preserve symbolic candidate scope |
+| 264–267 | U2/I-1/I-2/I-5/I-8/M-1; combine R11 live result and scope |
+| 269 | U3/U8/U1; no mechanism promoted |
+| 271–273 | U9/I-9/M-1; preserve values and negative scope |
+| 275 | I-4 evidence scope; avoid causal upgrade |
+| 277–279 | I-4/I-7/U3/M-1; numeric evidence preserved, sampling scope corrected |
+| 281 | I-8/M-1 |
+| 283 | I-8/U2 |
+| 285 | U10/I-3; split type and OPEN |
+| 289 | I-2/I-1 |
+| 291 | U11/P-DYAD |
+| 293 | U9 |
+| 295 | M-1 |
+| 297 | U3/U5/U8 |
+| 299 | I-2/U3/U8 |
+| 301 | I-2/U3/M-1 |
+| 304 | U1/U3/M-1 |
+| 307 | I-1/I-2/U3/M-4 |
+| 313–320 | M-3; P-GEN/P-DYAD/P-TRIAD/P-OFN/P-PROG; per-statement pins |
+| 324–340 | S0/U8/I-3/I-4/M-4; evidence registry, no new execution |
+| 342 | S0 governance custody |
+| 343 | S0 governance custody |
+| 344 | S0 governance custody |
+| 345 | S0 governance custody |
+| 346 | S0 governance custody |
+| 347 | S0 governance custody |
+| 349 | S0 governance custody |
+| 350 | S0 governance custody |
+| 351 | S0 governance custody |
+| 352 | S0 governance custody |
+| 354 | M-1 |
+| 356 | U1 current-state |
+| 363 | U5/U7; current synchronization, no pipe disposition |
+| 416–424 | M-1; relocate retired verbatim history to immutable predecessor; no active result removed |
+| 443–444 | M-1 current footer |
+
+Evidence and build inputs: evidence/uvm/v0.7.2-candidate/stage_a_edits.json, stage_a_checks.txt. Stage A execution used a separate assertion-gated connector-side script on the fetched tagged bytes. The checked-in Python verifier is provided in Stage B for reproducible review; no Python release checker or official compaction test claimed yet.
