@@ -24,7 +24,7 @@
 
 The held v1.19 audit `upload/numgen-records/disc2_p2_antipodal_exposure_audit_v1.py` (`89a1466f…fe1c`) already computes the case. Its `inert` policy handles S=0, E=N/2 exactly as its own E=0 branch, as an inert tie. TDRG-DEF-ORIENT (`tdrg-v2.13` §6.3) makes S=0, 2E≡0 mod N a balanced tie, which is an inert bound state under `bound_path_tie` and `bound_symmetric`. The audit's log (`51cde879…8c47`) reports **inert-policy changes 20** and **reverse-policy changes 10**. TDR-G's record of the atlas rerun (§6.12, DISC-2 witness effect) reports **20/136** under TDRG-DEF-ORIENT and **reverse 10**.
 
-**Replay (EV-RUN, this session).** The audit was rerun on the held witness report (`ccc84570…faa7d`), and its log reproduced byte-identically (`evidence/numgen/sync_20261124/disc2_p2_audit_replay.log`).
+**Replay (EV-RUN, this session).** The audit was rerun on the held witness report (`ccc84570…aa7d`), and its log reproduced byte-identically (`evidence/numgen/sync_20261124/disc2_p2_audit_replay.log`).
 
 **Session diagnostic.** The diagnostic `evidence/numgen/sync_20261124/p2_witness_identity_check.py` (`2a9a9311…8791`, output `8f99d397…f54d`) uses the audit's own functions:
 - The 40 P2-exposed DISC-2 witnesses are **exactly** the 40 Census-1 TDR-G records that fail F6/R6-P2. Census-1 universe = DISC-1 22 + DISC-2 136 = 158 (`NG_C7C_M2_CENSUS_PROTOCOL_v1.md` §U-TDRG).
