@@ -5,13 +5,14 @@ usage: python3 -I evidence/ofn/scripts/ofn_receiving_source_compare_claude.py   
 
 S1  For every DYAD / GEN / TDRG / RECOG RID that ofn-v0.12 cites, compare the source line(s) declaring that RID
     ("[RID: X]" or "**RID:** `X`") at OFN's pin and at the producer's governing tag. Report SAME / CHANGED / NOT-DECLARED.
-S2  Triadic: §§6.15–6.18 and the SG-18 guard byte-compared triad-v1.6.1 → triad-v1.7; CN-01..CN-05 note bodies compared
-    after removing the consumer-state sentences that v1.7 moved into its §7.4 matrix.
+S2  Triadic triad-v1.6.1 → triad-v1.7: §§6.15–6.18 (heading to next same-or-higher heading), the SG-18 guard and the full
+    CN-01..CN-05 blocks; edit runs are listed. r2 fixes the r1 heading false pass (R379-2); missing, ambiguous or empty
+    spans now stop the script with exit 1.
 S3  GEN §6.3a–§6.3c span (the "### §6.3a" heading to the "### §6.4" heading) compared gen-v2.9 → gen-v2.10.
 S4  RECOG §6.6a span compared recog-v0.3.26 → recog-v0.3.27.
 S5  Programme OPEN-P0 / RTG-OPEN-GENERATOR-SELECTION lines compared programme-v1.3 → programme-v1.4.
 S6  ofn-v0.12 sites whose wording no longer matches the governing producer editions (stale-wording census).
-A comparison is a text check, not a proof or certificate replay. Exit 0 always; the report is the result.
+A comparison is a text check, not a proof or certificate replay. Exit 0 unless an S2 span cannot be extracted (exit 1).
 """
 import re, subprocess, hashlib
 
@@ -40,16 +41,57 @@ for key, (a, b, f) in PROD.items():
                 print(f"      {len(ops)} edit(s); first: {ops[0][0]} {ops[0][1][:80]!r} -> {ops[0][2][:80]!r}")
 
 print("\nS2 Triadic triad-v1.6.1 -> triad-v1.7")
+# r2 (24 Nov 2026): the r1 extractor searched "### 6.15" while the headings are "### §6.15", so all four section
+# comparisons compared None == None (false pass found in the ChatGPT co-owner readback R379-2). The extractor now
+# requires exactly one heading match and a nonempty span, or the script stops with exit 1.
+import difflib, sys
 TA, TB = show("triad-v1.6.1", "dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md"), show("triad-v1.7", "dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md")
-def sec(s, hd):
-    i = s.find(hd); j = s.find("\n### ", i + 5); return s[i:j] if i >= 0 else None
-for hd in ("### 6.15", "### 6.16", "### 6.17", "### 6.18"):
-    print(f"  {hd}: {'SAME' if sec(TA, hd) == sec(TB, hd) else 'CHANGED'}")
+def heading_span(s, num):
+    """Span from the unique heading '#{2,4} §<num> ' to the next heading of the same or higher level (nested subsections included)."""
+    L = s.split("\n")
+    hits = [i for i, l in enumerate(L) if re.match(rf"^(#{{2,4}}) §{re.escape(num)} ", l)]
+    if len(hits) != 1:
+        sys.exit(f"S2 FAIL: heading §{num}: {len(hits)} matches")
+    i = hits[0]; lev = len(re.match(r"^#+", L[i]).group())
+    j = next((k for k in range(i + 1, len(L)) if re.match(rf"^#{{1,{lev}}} ", L[k])), len(L))
+    span = "\n".join(L[i:j]).rstrip()
+    if len(span) <= len(L[i]):
+        sys.exit(f"S2 FAIL: heading §{num}: empty span")
+    return span
+def cn_block(s, k):
+    """Full CN-0k block: from its '**CN-0k —' line to the next CN line or heading (all paragraphs, display math included)."""
+    L = s.split("\n")
+    hits = [i for i, l in enumerate(L) if l.startswith(f"**CN-0{k} —")]
+    if len(hits) != 1:
+        sys.exit(f"S2 FAIL: CN-0{k}: {len(hits)} matches")
+    i = hits[0]
+    j = next((m for m in range(i + 1, len(L)) if L[m].startswith("**CN-0") or re.match(r"^#{1,4} ", L[m])), len(L))
+    return "\n".join(L[i:j]).rstrip()
+def edits(a, b):
+    ops = [(o, a[i1:i2], b[j1:j2]) for o, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes() if o != "equal"]
+    return ops
+def report(label, a, b):
+    if a == b:
+        print(f"  {label}: SAME ({len(a)} chars, {h(a)})"); return
+    ops = edits(a, b)
+    print(f"  {label}: CHANGED ({len(a)}/{len(b)} chars, {h(a)}/{h(b)}, {len(ops)} edit run(s))")
+    for o, x, y in ops[:12]:
+        print(f"      {o}: {x[:110]!r} -> {y[:110]!r}")
+    if len(ops) > 12:
+        print(f"      ... {len(ops) - 12} further edit run(s)")
+for num in ("6.15", "6.16", "6.17", "6.18"):
+    report(f"§{num} (to next same-or-higher heading)", heading_span(TA, num), heading_span(TB, num))
 sg = lambda s: [l for l in s.split("\n") if l.startswith("**[SG-18]**")]
-print(f"  SG-18: {'SAME' if sg(TA) == sg(TB) else 'CHANGED'}")
-strip = lambda l: re.sub(r"\*\*Consumer (status|state)[^*]*\*\*.*$", "", l)
-cn = lambda s: [strip(l) for l in s.split("\n") if re.match(r"\*\*CN-0[1-5] —", l)]
-print(f"  CN-01..CN-05 note bodies without consumer-state sentence: {'SAME' if cn(TA) == cn(TB) else 'CHANGED'} ({len(cn(TA))}/{len(cn(TB))})")
+a18, b18 = sg(TA), sg(TB)
+if len(a18) != 1 or len(b18) != 1:
+    sys.exit("S2 FAIL: SG-18 not unique")
+report("SG-18", a18[0], b18[0])
+strip = lambda t: re.sub(r"\*\*Consumer (status|state)[^*]*\*\*[^\n]*", "", t)
+for k in range(1, 6):
+    a, b = cn_block(TA, k), cn_block(TB, k)
+    report(f"CN-0{k} full block, raw", a, b)
+    if a != b:
+        report(f"CN-0{k} full block, consumer-state sentences removed", strip(a), strip(b))
 
 print("\nS3 GEN §6.3a–§6.3c span gen-v2.9 -> gen-v2.10")
 def span(s, start, end):

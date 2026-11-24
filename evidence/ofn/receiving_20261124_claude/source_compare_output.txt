@@ -67,12 +67,78 @@ S1 owner RID declarations cited by ofn-v0.12 (pin -> governing tag)
   RECOG  RECOG-THM-R9-SHARPENED-ROWS                          recog-v0.3.26 -> recog-v0.3.27: SAME (1/1 declaring lines)
 
 S2 Triadic triad-v1.6.1 -> triad-v1.7
-  ### 6.15: SAME
-  ### 6.16: SAME
-  ### 6.17: SAME
-  ### 6.18: SAME
-  SG-18: SAME
-  CN-01..CN-05 note bodies without consumer-state sentence: SAME (5/5)
+  §6.15 (to next same-or-higher heading): CHANGED (5459/5445 chars, 82c3cf81861c/83097192fe94, 5 edit run(s))
+      delete: ' v1.6.1 r2 — D3-R1' -> ''
+      replace: '8.7' -> '9'
+      delete: 'v1.6.1 r2 ' -> ''
+      replace: 'pi' -> '-read at `ge'
+      insert: '' -> '-v2.9`'
+  §6.16 (to next same-or-higher heading): SAME (2983 chars, aa60cb491af8)
+  §6.17 (to next same-or-higher heading): CHANGED (12121/12205 chars, 2ef3ab0166aa/6d352b577a6c, 24 edit run(s))
+      replace: 'accep' -> 's'
+      replace: 'nc' -> 't'
+      insert: '' -> ':'
+      replace: 'remains pending' -> '§7.4'
+      insert: '' -> 'claim-le'
+      replace: '1.6.1' -> 'el'
+      insert: '' -> 'histo'
+      replace: '2' -> 'ical'
+      delete: 're' -> ''
+      replace: 'print' -> 'se'
+      insert: '' -> ' norms re-read at `gen-v2.9` unchanged, the'
+      insert: '' -> '=2d^TBG_{3,d}'
+      ... 12 further edit run(s)
+  §6.18 (to next same-or-higher heading): CHANGED (5485/8679 chars, 52aeb990c556/9788e2081c0c, 12 edit run(s))
+      delete: ' / ALG' -> ''
+      insert: '' -> ' — mixed content'
+      insert: '' -> 'Type of the Gram relation.** The relation $2\\Omega\\Delta\\Omega=Q_c\\Delta Q_s+Q_s\\Delta Q_c-2I_{sc}\\Delta I_{sc'
+      insert: '' -> 'of the kind '
+      insert: '' -> '; domain $Q_s>0$, $Q_c>0$; time is the continuous coefficient-ODE time in units of one six-step block, not the'
+      insert: '' -> '. The off-root extension is not unique, and $f_s$, $f_c$ depend on it. Two root-equivalent extensions of the d'
+      insert: '' -> '.\n\n`[ALG]` `[scope: truncated coefficient ODE; diagnostic]` **Remark — $D=\\mathcal G/Q_s=Q_c(1-K)$.** In exten'
+      insert: '' -> '; its status'
+      replace: 's' -> 'nd'
+      replace: 'b' -> 'th'
+      replace: 'fo' -> ' metric caveat a'
+      insert: '' -> ' stated once in §1'
+  SG-18: SAME (459 chars, 932042d9e8da)
+  CN-01 full block, raw: CHANGED (1150/1111 chars, 981e3f46561a/e0d897b6ff0f, 7 edit run(s))
+      replace: 'us' -> 'e'
+      insert: '' -> '**'
+      replace: 'OPEN; sc' -> 'matr'
+      replace: 'entific review, not' -> 'x'
+      replace: ' p' -> 'b'
+      replace: 'inter-only updat' -> 'v'
+      delete: '**' -> ''
+  CN-01 full block, consumer-state sentences removed: SAME (1078 chars, 2e4dd54b54ef)
+  CN-02 full block, raw: CHANGED (2172/2183 chars, 90311af2ddc4/6cb8b8da7f09, 6 edit run(s))
+      delete: ' v1.6.1 r2 — D3-R1' -> ''
+      replace: 'C' -> 'Requested acti'
+      delete: 'sumer status' -> ''
+      replace: ' OPEN;' -> '**'
+      insert: '' -> ' '
+      insert: '' -> 'Consumer state:** matrix above.'
+  CN-02 full block, consumer-state sentences removed: CHANGED (2077/2150 chars, 59a17a23bd34/ba4ef08274f9, 2 edit run(s))
+      delete: ' v1.6.1 r2 — D3-R1' -> ''
+      insert: '' -> '**Requested action:** update sign, extent, symbol and artifact interpretation at each use. '
+  CN-03 full block, raw: CHANGED (970/984 chars, f40f06d65eb1/ccf080e9c806, 5 edit run(s))
+      replace: 'us' -> 'e'
+      insert: '' -> '**'
+      insert: '' -> 'matrix above ('
+      insert: '' -> ')'
+      delete: '**' -> ''
+  CN-03 full block, consumer-state sentences removed: SAME (894 chars, d00f034b5bf9)
+  CN-04 full block, raw: CHANGED (930/901 chars, 95d32b3bce71/e629d4cf4152, 8 edit run(s))
+      replace: 'us' -> 'e'
+      insert: '' -> '**'
+      replace: 'OPEN, scientific reconcili' -> 'm'
+      insert: '' -> 'r'
+      insert: '' -> 'x ab'
+      replace: 'n r' -> 'v'
+      delete: 'quired' -> ''
+      delete: '**' -> ''
+  CN-04 full block, consumer-state sentences removed: SAME (868 chars, 7e7778b3ad4a)
+  CN-05 full block, raw: SAME (3364 chars, 919a56383b49)
 
 S3 GEN §6.3a–§6.3c span gen-v2.9 -> gen-v2.10
   heading '### §6.3a Projected-$K_3$ Planar-Factor Obstruction `[THM]` ': SAME (24176/24176 chars, c20394600a6f/c20394600a6f)

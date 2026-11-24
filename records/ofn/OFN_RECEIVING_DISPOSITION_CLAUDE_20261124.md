@@ -21,7 +21,7 @@ Every verdict below rests on my own reading of the producer tags and of `ofn-v0.
 
 | Script | Output |
 |---|---|
-| `evidence/ofn/scripts/ofn_receiving_source_compare_claude.py` (`8833dfa0…5794`) | `evidence/ofn/receiving_20261124_claude/source_compare_output.txt` (`3c16c9ee…c63b`) |
+| `evidence/ofn/scripts/ofn_receiving_source_compare_claude.py` (`4a318f82…15b8`, r2) | `evidence/ofn/receiving_20261124_claude/source_compare_output.txt` (`e107d025…58fa`, r2) |
 | `evidence/ofn/scripts/ofn_p4_ideal_check_claude.py` (`83853f00…d074`) | `…/p4_ideal_check_output.txt` (`11592209…86cd`); inputs `…/p4_inputs_sha256.txt` (`f5cb0eb3…63e4`) |
 
 All runs used Python 3.13.18 and SymPy 1.14.0.
@@ -47,7 +47,16 @@ The seven changed TDRG lines:
   - `TDRG-DEF-ORIENT`
 - **`TDRG-DEF-STAR`** carries a declared-domain `[COR]` at v2.12.15. The event domain becomes every single-star component with one valid centre (pure $K_{1,m}$, $m\ge3$; trees with longer branches; components containing a cycle). The centre/newborn map is unchanged: $\theta_E=\theta_A+N/2$, $\delta_E=\delta_A$, $\delta_A\mapsto-\delta_A$, read from the CONV-TICK snapshot. TDR-G states that no result changes, because the engines always used this domain.
 
-**S2 — Triadic, triad-v1.6.1 → triad-v1.7.** §§6.15–6.18 and SG-18 are byte-identical. The CN-01…CN-05 note bodies are identical once the consumer-state sentence is removed; v1.7 moved those states into its §7.4 matrix. So the Triadic statements that OFN's RF-O08-02/03/08 cite are unchanged.
+**S2 — Triadic, triad-v1.6.1 → triad-v1.7.** `[COR r2]` The r1 report said §§6.15–6.18 were byte-identical. That was a false pass: the r1 extractor searched `### 6.15` while the headings read `### §6.15`, so it compared None with None (found in the ChatGPT co-owner readback, R379-2). The r2 extractor stops on a missing, ambiguous or empty span and compares each section to the next heading of the same or higher level, nested subsections included, and the full CN blocks. r2 results:
+- §6.16 and SG-18: identical.
+- §6.15 (5,459 → 5,445 chars): `[COR v1.6.1 r2 — D3-R1]` → `[COR]` labels and the Genesis source reference (v2.8.7 → v2.9, "re-read at `gen-v2.9`").
+- §6.17 (12,121 → 12,205): labels, consumer state moved to §7.4, Genesis source metadata (historical P4 premise versus seed norms re-read at `gen-v2.9`).
+- §6.18 (5,485 → 8,679): **substantive scope additions.** These are the type of the Gram relation, its domain $Q_s,Q_c>0$, and coefficient-ODE time in units of one six-step block (not tick time). The off-root extension is not unique, and $f_s,f_c$ depend on it. v1.7 also adds a diagnostic remark $D=\mathcal G/Q_s=Q_c(1-K)$.
+- CN-01, CN-03 and CN-04 full blocks: identical once the consumer-state sentence is removed.
+- CN-02: v1.7 removes one label and adds a "Requested action" sentence (update sign, extent, symbol and artifact interpretation at each use).
+- CN-05 full block (3,364 chars): identical.
+
+The T-6s/t/u statement text is unchanged. §6.18 is not unchanged. A move of RF-O08-02 to `triad-v1.7` must record the §6.18 coefficient-clock and extension boundary, with no stronger stability or physical conclusion.
 
 **S3 — GEN §6.3a–§6.3c** (24,176 characters): identical at gen-v2.9 and gen-v2.10.
 
@@ -74,7 +83,7 @@ The seven changed TDRG lines:
 |---|---|---|---|
 | P01 | DYAD v6.4.23 | **accept** (receipt; no action needed beyond pins) | Record the receipt in the §12.3 consumer register: DYAD names OFN v0.12 with IMP-O08-12/20 and IMP-O10-03…07. Its statement that the raw-map identity follows from `DYAD-DEF-PRIMITIVE-MAP` is consistent with OFN §9 (3B frame). Pins: see P06 |
 | P02 | GEN v2.10 | **accept** | Repin the Genesis imports (IMP-O08-01/10/11/13, IMP-O10-01/02, narrow-Q6 dependency) to `gen-v2.10`; their statements are unchanged (S1, S3). Record that Genesis uses neither OFN11-C01 nor OFN11-C02 and prints no edges-minus-closure count. The old Genesis v2.8.5 claim-level pins in RF-O08-02/03/08 stay labelled as not re-read (see §4) |
-| P03 | TRIAD v1.7 | **accept** | Repin RF-O08-02/03/08 to `triad-v1.7`; the cited statements are unchanged (S2). Correct the §12.3 row: Triadic now pins `ofn-v0.12` and its T-6r C1 cites `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` as an interface constraint, not an import. The current Triadic planar carrier is real. No carrier is selected by OFN |
+| P03 | TRIAD v1.7 | **accept** | Repin the Triadic components of RF-O08-02/03/08 to `triad-v1.7`, scoped: record the §6.18 coefficient-clock/extension boundary (S2 r2); Genesis v2.8.5 components keep their claim pins. Correct the §12.3 row: Triadic now pins `ofn-v0.12` and its T-6r C1 cites `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` as an interface constraint, not an import. The current Triadic planar carrier is real. No carrier is selected by OFN |
 | P04 | Programme v1.4 | **accept** | Move the companion pin to `programme-v1.4`; OPEN-P0 changes only its OFN pointer (S5). Programme IF03 still names OFN v0.10 for Finding A while TDR-G imports it at v0.12. That is a Programme-side current-use item and is not OFN's to edit (agrees with the Atlas F7 note) |
 | P05 | RECOG v0.3.27 | **accept with change** | Repin RECOG imports to `recog-v0.3.27` (S1, S4). In RF-O09-02, replace "under (D5)" for the decoder chain with the v0.3.27 reading: the (D5) qualifier is discharged by RECOG-ALG-A1C-JET-REMAINDER-BOUNDS with DYAD-THM-LPHASE-ROWA-BRIDGE and DYAD-THM-OPEN3-SPIRAL-REM imported. Keep the chart/domain and at-least-two-usable-slip conditions. Keep R9 wherever a claim depends on it — the Dyadic T1/T2 and OPEN 21 transfer statements and RECOG-THM-A1A-CD-IDENTIFICATION. The discharge concerns (D5) only, not R9. No event principle, injectivity, write-through or OPA verdict follows |
 | P06 | DYAD v6.4.24 | **accept** | Repin DYAD imports to `dyad-v6.4.24` (15 declaring lines identical, S1). In IMP-O08-12, replace "registered provisional" with the owner's scope marker: the Programme's reference map, generator selection open under RTG-OPEN-GENERATOR-SELECTION / OPEN-P0. This does not select the generator |
