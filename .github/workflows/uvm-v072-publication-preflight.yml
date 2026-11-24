@@ -1,0 +1,34 @@
+name: UVM v0.7.2 publication preflight
+on:
+  push:
+    branches:
+      - chatgpt/uvm-v072-publication-check-20261124
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify status-only publication and generate release reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          work="$RUNNER_TEMP/uvm-publish"
+          mkdir -p "$work"
+          git show 4a916c2d7e09156828656a56a402466e98d509c1:dsn/RTG_OPEN_M_DSN.md > "$work/candidate.md"
+          git show uvm-v0.7.1:dsn/RTG_OPEN_M_DSN.md > "$work/predecessor.md"
+          git rev-parse HEAD
+          python3 --version
+          node --version
+          python3 -I evidence/uvm/scripts/publish_uvm_v0_7_2.py "$work/candidate.md" dsn/RTG_OPEN_M_DSN.md evidence/uvm/v0.7.2-candidate/publication_transform.json --check
+          git worktree add --detach "$work/reviewed" 4a916c2d7e09156828656a56a402466e98d509c1
+          (cd "$work/reviewed" && node evidence/uvm/v0.7.2-candidate/validate.mjs --write-intermediate "$work/intermediate.md" && python3 -I tools/check_compaction.py "$work/intermediate.md" dsn/RTG_OPEN_M_DSN.md evidence/uvm/v0.7.2-candidate/stage_b_revision_map.json --report "$work/compaction.json")
+          python3 tools/dsn_lint.py dsn/RTG_OPEN_M_DSN.md --prev "$work/predecessor.md" --json "$work/lint.json"
+          python3 tools/pipes_index.py --check
+          sha256sum "$work/compaction.json" "$work/lint.json"
+          python3 -c 'import base64,pathlib,sys; print("UVM_COMPACTION_REPORT_B64="+base64.b64encode(pathlib.Path(sys.argv[1]).read_bytes()).decode()); print("UVM_SIZE_REPORT_B64="+base64.b64encode(pathlib.Path(sys.argv[2]).read_bytes()).decode())' "$work/compaction.json" "$work/lint.json"

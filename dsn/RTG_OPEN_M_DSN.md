@@ -1,16 +1,16 @@
 # RTG_OPEN_M_DSN_v0.7.2
 
-**Title:** RTG UV Completion (OPEN M) — Scoped Errata and Source-Custody Candidate
+**Title:** RTG UV Completion (OPEN M) — Scoped Errata and Source-Custody Release
 **Date:** 24 November 2026
 **Scope:** Continuous-branch UV source/restoring completion; correction of source attribution, target and representation scope, evidence custody, and owner interfaces. No new physical model or numerical campaign.
 **Document class:** Technical scientific ledger
-**Document status:** DRAFT — v0.7.2 candidate, prepared at PI direction by ChatGPT; independent Claude review and PI adoption pending. Governing edition remains uvm-v0.7.1.
-**Supersedes:** RTG_OPEN_M_DSN_v0.7.1 (proposed upon adoption), SHA-256 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e.
-**Companion documents:** Programme v1.4 (programme-v1.4); Methodology v1.4 (methodology-v1.4); Genesis v2.10 (gen-v2.10), with historical GCL locators at v2.8.5; Dyadic v6.4.24 (dyad-v6.4.24), historical v6.4.10 where stated; Triadic v1.7 (triad-v1.7), historical CN locators at v1.6; OFN v0.12 (ofn-v0.12); Pre-Legacy v0.8 (prelegacy-v0.8). RRF v0.8.4 (rrf-v0.8.4), PI-approved reference-only typing dependency for this candidate; no physical transport is imported.
+**Document status:** ADOPTED — PI, 24 November 2026; scoped errata and source-custody release. Reviewed scientific payload unchanged at publication. Preparation-stage synchronization labels in §7 record the reviewed scope; reference-only RRF inclusion is adopted, not a physical bridge. Release record: `records/uvm/UVM_v0_7_2_RELEASE_RECORD.md`.
+**Supersedes:** RTG_OPEN_M_DSN_v0.7.1, SHA-256 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e.
+**Companion documents:** Programme v1.4 (programme-v1.4); Methodology v1.4 (methodology-v1.4); Genesis v2.10 (gen-v2.10), with historical GCL locators at v2.8.5; Dyadic v6.4.24 (dyad-v6.4.24), historical v6.4.10 where stated; Triadic v1.7 (triad-v1.7), historical CN locators at v1.6; OFN v0.12 (ofn-v0.12); Pre-Legacy v0.8 (prelegacy-v0.8). RRF v0.8.4 (rrf-v0.8.4), PI-approved reference-only typing dependency for this edition; no physical transport is imported.
 **DSN Methodology:** DSN_METHODOLOGY_v1.4. Technical-ledger profile: expanded §1 preserves the imported operator/target inventory rather than truncating its conditions.
 **Status summary:** The UV source and restoring block remain open. R14's reproduced correlations are descriptive associations across nine selected stage-labelled packs, not a demonstrated single growth trajectory; T100 near-pass values are pack-specific. R15 remains a calibration-conditional diagnostic, with $h$ cancelling under $m=C_mh$ on its nondegenerate domain. There is no certified numerical OPEN-M deficit factor. The target inherits the reduced-wrapper estimate, single-jet hypothesis, conditional 9C premise, large-positive-$g$ limit and physical state/window/source matching. OPEN-M-6 has a reviewed session-level stage-1 record; physical source typing and C3 await Genesis. Source recovery is partial.
 **Revision editor:** ChatGPT
-**Candidate record:** records/uvm/UVM_V072_CANDIDATE_CHANGE_RECORD.md (review and PI decision pending).
+**Release record:** `records/uvm/UVM_v0_7_2_RELEASE_RECORD.md`; candidate change and review history: `records/uvm/UVM_V072_CANDIDATE_CHANGE_RECORD.md`.
 **LIT dependencies:** none.
 
 ## Local Tag Aliases
@@ -567,13 +567,13 @@ Units and numerical conventions are native to the cited model; unknown physical 
 
 ## Appendix A — Version History
 
-### v0.7.2 — 24 November 2026 — DRAFT; adoption pending
+### v0.7.2 — 24 November 2026 — Adopted
 
-Scoped errata and source-custody candidate. The selected nine-pack numerical values remain unchanged; the mixed T100 attribution, unsupported within-run wording, conditional target/sign scopes and source attributions are corrected. Reviewed session-level source audit and stage-1 work are not adopted results. No new UV campaign, physical model, grade promotion or C3 closure. See records/uvm/UVM_V072_CANDIDATE_CHANGE_RECORD.md for exact edits and review boundaries.
+Scoped errata and source-custody release. The selected nine-pack numerical values remain unchanged; the mixed T100 attribution, unsupported within-run wording, conditional target/sign scopes and source attributions are corrected. Reviewed session-level source audit and stage-1 work are not adopted results. No new UV campaign, physical model, grade promotion or C3 closure. Release record: records/uvm/UVM_v0_7_2_RELEASE_RECORD.md.
 
 ### v0.7.1 — 7 October 2026 — adopted predecessor
 
-The complete predecessor and all earlier version-history entries are preserved at `uvm-v0.7.1` (Appendix A); the SHA-256 of the tagged DSN is 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e. The present document remains a candidate until the PI decides.
+The complete predecessor and all earlier version-history entries are preserved at `uvm-v0.7.1` (Appendix A); the SHA-256 of the tagged DSN is 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e.
 
 ## Appendix B — Retired and Replaced Current-Use Statements
 
@@ -606,4 +606,4 @@ Verbatim prior R15 current-use block and its correction are archived in the adop
 
 `[SUPERSEDED]` **“3-for-3 kinematic-vs-dynamical” interpretation.** Reason: two of its examples were retyped by current owners. No replacement physical pattern is asserted; the recurrent documented issue is representation/object typing.
 
-*END OF DOCUMENT — RTG_OPEN_M_DSN_v0.7.2 — DRAFT CANDIDATE; NOT ADOPTED*
+*END OF DOCUMENT — RTG_OPEN_M_DSN_v0.7.2 — ADOPTED, 24 November 2026*
