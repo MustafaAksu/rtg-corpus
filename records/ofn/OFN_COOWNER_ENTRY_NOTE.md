@@ -1,41 +1,37 @@
 # OFN co-owner entry note
 
-**Working memory — proposed 24 November 2026 resumption structure; co-owner readback pending.** This is the single discoverable OFN entry path under CONVENTIONS §9, not scientific authority or a second ledger. Earlier entry text (29 October 2026) is preserved at commit 9c51ba897ac2c8fb02fa0c22c639a62e76b3cea6. Its v0.10 reconciliation tasks are not a new queue: v0.11 and v0.12 were adopted and tagged.
+**Working memory — reconciled 24 November 2026 checkpoint.** Single discoverable OFN entry path under CONVENTIONS §9, not scientific authority or a second ledger. Previous entry text is preserved in Git (29 October checkpoint `9c51ba897ac2c8fb02fa0c22c639a62e76b3cea6` and merged receiving records #378/#379). Do not reopen completed v0.10 reconciliation tasks.
 
 ## Shared — current entry route
 
-Start from repository MustafaAksu/rtg-corpus; read CONVENTIONS.md, this note, BASELINE.md, pipes/OFN/INDEX.md and the active OFN PRs. Recompute current refs, tag and release identities, incoming/outgoing items and review states instead of copying this dated checkpoint as live state. Source science is the governing adopted tag plus release record. Use Atlas only for navigation, LIT under its own disclosure rules, and the Methodology for claims and release rules.
+Start from repository MustafaAksu/rtg-corpus; read CONVENTIONS.md, this note, BASELINE.md, pipes/OFN/INDEX.md and active OFN PRs. Recompute current refs, tag/release identities, incoming/outgoing items and review states. Source science is the governing adopted tag plus release/adoption record. Atlas is navigation only; use LIT under its disclosure rules and Methodology for claims and releases.
 
 Read:
-- records/ofn/ATLAS_ADVISORY_OFN_SYNC_20261124.md (merged PR #373, Atlas-owner ACCEPT comment 7128051843). It is a reviewed advisory, not owner disposition.
-- records/ofn/OFN_RECEIVING_DISPOSITION_CHATGPT_20261124.md (independent proposal, pending co-owner reconciliation; contains exact sources, P01–P09 and F1–F9, controls, and acceptance criteria).
-- records/ofn/OFN_v0_12_RELEASE_RECORD.md and the current tagged DSN.
+- `records/ofn/ATLAS_ADVISORY_OFN_SYNC_20261124.md` (#373, advisory only).
+- `records/ofn/OFN_RECEIVING_DISPOSITION_CHATGPT_20261124.md` (#378), `records/ofn/OFN_RECEIVING_DISPOSITION_CLAUDE_20261124.md` (#379) and `records/ofn/OFN_RECEIVING_RECONCILIATION_CLAUDE_20261124.md` (revised joint proposal; both PRs merged).
+- `records/ofn/OFN_v0_12_RELEASE_RECORD.md` and the current adopted DSN.
+- `records/ofn/OFN_v0_13_RELEASE_RECORD.md` on `chatgpt/ofn-v0.13-stage1` for the current DRAFT, edit-map/hash identities, verification extent and proposed receiving dispositions.
 
 ## Shared — durable boundaries and decisions
 
-At checkpoint 9c51ba897ac2c8fb02fa0c22c639a62e76b3cea6 (24 November), ofn-v0.12 is governing, Methodology v1.4. OFN file SHA-256 55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa, annotated tag target 2b2573f59244851455cba16a2baa79c76cc8ec66. Nine open and three closed OFN inbox items at that checkpoint. Do not reopen the v0.10 29-row list.
+OFN remains governed by `ofn-v0.12`, Methodology v1.4. Published DSN SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa`, annotated tag target `2b2573f59244851455cba16a2baa79c76cc8ec66`. Freeze checkpoint main `085e567be4c522f4b7e62044e2755e3af9d7a9b0`: nine open, three closed OFN inbox items. Reconciliation is merged, PI authorized the stage-1 build; no adoption decision. Candidate base checkpoint `c5acda99de18598108e9b5e368ad15fa74f5488d` includes adopted NUMGEN v1.22; new scoped P2 reference/receipt delta requires review, old NUMGEN claim pins retained.
 
-v0.11 resolved the mathematical regularity and positive-dimensional Standard C contract issues. v0.12 adopted the scoped REF-CLOSURE comparison, causal-interface statement and unselected isolation/independence evaluation frames. Keep all 21 OPEN statuses and adopted definitions unless an expressly reviewed scientific change warrants otherwise. Smooth C2 is not analytic or physical selection. I-comp/I-quiet/I-remove and U-form/U-class/C0/C1/J remain distinct; do not select a standard or infer primacy. Do not drop R9 from distinct conditional Dyadic claims on the basis of A1c's D5B premise discharge. The fixed-star result remains OFN-owned; custody transfer requires a separate joint decision. Tool PR #113 is merged. PR #183 is a separate noncanonical Binary Recognition review.
+v0.11 resolved mathematical regularity and positive-dimensional Standard C. v0.12 adopted scoped REF-CLOSURE, causal interface and unselected isolation/independence evaluation frames. Preserve all 21 OPEN statuses and definitions. Smooth C2 is not analytic or physical selection. I-comp/I-quiet/I-remove and U-form/U-class/C0/C1/J remain distinct. D5B discharge does not remove R9 where required. Finding A stays OFN-owned; custody transfer requires separate joint decision. Tool PR #113 merged; PR #183 separate. S-P4 gate defect confirmed; same-CAS actual ideals checked at the two constructed branches, universal proof prerequisites not settled. No regrade. GEN v2.8.5 and other unmatched historical pins retained. No activation of RRF/FMS by this build.
 
-PI authorized starting the OFN receiving work in the 24 November session. The current pass is scoped to OFN; it does not activate RRF or FMS or claim that the NUMGEN owner pass has been adopted. PI_PENDING: no successor/adoption decision has been requested yet; joint reconciliation must establish the actual scope before submitting a release plan.
+**PI_PENDING:** v0.13 exact candidate adoption decision only after other co-owner and Atlas delta review. No new release, merge, tag, custody or pipe-state change inferred.
 
 ## ChatGPT co-owner lane — 24 November 2026 checkpoint
 
-Goal: complete one source-checked receiving disposition and propose the smallest coherent content maintenance pass.
+Reconciled F1–F9/P01–P09 and built the authorized v0.13 candidate. Branch `chatgpt/ofn-v0.13-stage1`; build commit `8c052f6a809b95b2b7c5182db043b61575aceede`; validation commit `94b53578e1e8f555ceaba43ff927f296aacf8bbb`. Candidate SHA-256 `7f026a9d3da6c2572281972e7c35c7635fb74888307d9cfe28088087b14613d7`. 145 addressed edits, 11/11 gates, 20/20 negative controls caught, exact reverse recovery, 44 own RIDs and 101 anchors. Source report: 11 source identities, eight new external citations, 24 RID and 21 anchor checks. Execution was connector JavaScript, not native Node CLI, DSN lint or pipe-check replay. All scope/identity details in DRAFT release record. No changes to actual pipe states.
 
-Durable work: branch chatgpt/ofn-receiving-disposition-20261124, disposition record commit 26c39b180c139ad664d581c58a2b7326b3d2e70e. See the disposition record §§2–7. All nine open notices have proposed verdicts; actual pipe states remain unchanged pending reviewed dispositions. F1 and F2 have direct owner answers; F3 distinguishes corrected declared STAR domain from unchanged fixed-map algebra and adds a bounded SESSION census-interface observation; F4 distinguishes A1c's changed source premise from R9-dependent claims. F5–F9 and five Atlas keys have scoped decisions and verification limits.
-
-New evidence findings: ten recovered files independently rehashed against the intake manifest. The two FMS quintic scripts also match full digests printed in recovered SESSION notes. S-P4 in the disposition record identifies a wrong-direction ideal-containment success predicate in the recovered universal reflection checker; synthetic negative and positive controls executed with SymPy 1.14.0. This is a gate-adequacy finding, not a refutation of the FMS theorem. No producer script or old scientific campaign rerun. Evidence: evidence/ofn/scripts/ofn_receiving_controls.py and evidence/ofn/receiving_20261124/controls_output.txt.
-
-Next:
-1. Obtain the other OFN co-owner's independent readback and reconcile differences (including F1–F4 scope, S-P4 and the proposed entry-note structure). No merge by inference.
-2. On agreed receiving scope, prepare one assertion-gated content edit plan/builder, preserve historical pins where affected statements have not been matched, and recheck the inbox before freezing. Submit any proposed successor to PI authorization and adoption separately.
-3. For S-P4, if the evidence audit proceeds, run the identified unchanged FMS script/dependencies in scratch, then independently check L in the actual ideal for both swap branches, source bilinearity and other prerequisites; retain the historical artifacts. Do not block unrelated maintenance on this audit.
+Next: submit exact candidate for other co-owner and Atlas change-focused review, including native reproducibility and the late NUMGEN delta. After review, refer exact hash to PI for adoption decision. On authorization only, finalize publication status, verify final digest and perform the release workflow. The nine notices close after adopted tag, not by this build. Separate FMS finding and open universal-P4 audit do not block this maintenance candidate.
 
 ## Claude co-owner lane
 
-Reserved for the second OFN co-owner's own checkpoint and decisions. No readback or agreement is asserted here. The previous shared entry note remains retrievable at the commit above.
+Claude's authored checkpoint below is inserted from `records/ofn/OFN_RECEIVING_DISPOSITION_CLAUDE_20261124.md` §6, as agreed in the joint reconciliation §4. This is the earlier pre-reconciliation checkpoint; the subsequent merged reconciliation and PI build authorization supersede its pending build-start steps. No candidate-review verdict is asserted for Claude.
+
+> **24 November 2026 checkpoint.** Independent readback of the nine open notices: `records/ofn/OFN_RECEIVING_DISPOSITION_CLAUDE_20261124.md` (branch `claude/ofn-receiving-disposition-20261124`). Source comparisons S1–S6 and the S-P4 two-sided ideal check are in `evidence/ofn/receiving_20261124_claude/`. Held: v0.13 scope as in that record §4 (maintenance only; no RID or status change); S-P4 = gate defect confirmed, actual ideal $=\langle L\rangle$ in both branches (EV-RUN, same CAS), no regrade. Next: (1) read the ChatGPT record and reconcile row by row; (2) on agreement, build the v0.13 stage-1 candidate with gates as in v0.12; (3) file the S-P4 gate finding to `pipes/FMS/` after reconciliation. PI_PENDING: none yet (start of the v0.13 build needs PI authorization after reconciliation).
 
 ## Reopening conditions
 
-Reopen a scientific issue only on an actual changed premise, domain, counterexample, evidence failure or explicit PI-selected research question. A later tag or pipe filing alone is not a scientific error, receipt, acceptance or adopted use. Keep release records and frozen evidence unchanged; no automatic custody transfer, status change, physical selection, merge, tag or cross-stream repin.
+Reopen only on an actual changed premise, domain, counterexample, evidence failure or explicit PI-selected research question. A newer tag or pipe filing alone is not a scientific error, receipt, acceptance or adopted use. Keep release records and frozen evidence unchanged; no automatic custody transfer, status change, physical selection, merge, tag or cross-stream repin.
