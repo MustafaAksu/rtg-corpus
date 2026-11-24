@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-24",
+  "status": "[SESSION] connector-executed status-only publication transform; native Python reproduction not executed in this session",
+  "pi_decision_verbatim": "PI olarak v1.22'yi benimsiyorum. yapabildiğin işlemleri yap lütfen.",
+  "candidate_commit": "dafd8c7c274eb4a0ea25b9e7929fa90593ebf2ba",
+  "candidate_sha256": "fa28c0abe8bca5e9e7bb307e27ecb8f13c75399a7d804487a7a48b7a8b5c78b9",
+  "candidate_bytes": 282107,
+  "published_sha256": "36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b",
+  "published_bytes": 282105,
+  "changes": [
+    {
+      "line": 7,
+      "old": "**Document status:** DRAFT — v1.22 candidate (one content stage: receiving and synchronization), not adopted; v1.21 governs until PI adoption. Release record (DRAFT): `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`.  ",
+      "new": "**Document status:** ADOPTED — PI, 24 November 2026 (one content stage: receiving and synchronization, including the scoped P2 re-annotation and R1–R4 review repairs). Release record: `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`.  "
+    },
+    {
+      "line": 12,
+      "old": "**Release record:** `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md` (DRAFT). Version history: Appendix A.",
+      "new": "**Release record:** `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`. Version history: Appendix A."
+    },
+    {
+      "line": 2916,
+      "old": "### v1.22 — 24 November 2026 — DRAFT (not adopted)",
+      "new": "### v1.22 — 24 November 2026 — Adopted"
+    },
+    {
+      "line": 2923,
+      "old": "- **Records:** release record `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md` (DRAFT); predecessor tag `numgen-v1.21` (`4805760d…5701`).",
+      "new": "- **Records:** release record `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`; predecessor tag `numgen-v1.21` (`4805760d…5701`)."
+    },
+    {
+      "line": 2990,
+      "old": "*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.22 (DRAFT; not adopted).*",
+      "new": "*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.22 (ADOPTED, 24 November 2026).*"
+    }
+  ],
+  "checks": {
+    "input_hash": true,
+    "exact_once_replacements": 5,
+    "line_delta": 5,
+    "scientific_body_byte_identical": true,
+    "reverse_recovers_candidate": true,
+    "sha256_selftest": true
+  },
+  "publication_script": {
+    "path": "evidence/numgen/scripts/publish_numgen_v1_22.py",
+    "sha256": "286f41953eea85f616dad9d1484bbd948858d9ad7d45be60d416cde0d913c5d0",
+    "native_execution": "pending"
+  },
+  "review_basis": {
+    "claude_coowner": 7136733537,
+    "atlas_coowner": 7136961345,
+    "atlas_owner_separate_acceptance": "not located at publication preparation; not asserted"
+  }
+}

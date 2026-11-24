@@ -1,0 +1,359 @@
+{
+ "base_sha256": "4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701",
+ "candidate_sha256": "fa28c0abe8bca5e9e7bb307e27ecb8f13c75399a7d804487a7a48b7a8b5c78b9",
+ "round": 2,
+ "round1_candidate_sha256": "8ccc8e38f0ad054d68f59bf5d95c9364afa093f02cb3e418295625db3763148a",
+ "edits": [
+  {
+   "key": "H1",
+   "group": "header",
+   "row": "title",
+   "old": "# RTG_NUMBER_GENESIS_DSN_v1.21\n",
+   "new": "# RTG_NUMBER_GENESIS_DSN_v1.22\n",
+   "old_sha256": "39eeb59b66d16e4490f8dc8ca8b1371b4c6b39ced7c3c78cdcf5f51b14835917",
+   "new_sha256": "ca3da53e4dd64cb2e67422c3273a29bbc101890f1f13b7a016dbea5e70c67841"
+  },
+  {
+   "key": "H2",
+   "group": "header",
+   "row": "Date",
+   "old": "**Date:** 26 October 2026  \n",
+   "new": "**Date:** 24 November 2026  \n",
+   "old_sha256": "f4658ddf9a5e4aa070452b29dfc8311dbcbc589a91a40919d8af22b1f22cf010",
+   "new_sha256": "019766b3c638bffd4f2dedb7ce73bdbe1ba77250f67013c2cbc94902f55f1677"
+  },
+  {
+   "key": "H3",
+   "group": "header",
+   "row": "Document status",
+   "old": "**Document status:** ADOPTED — PI, 26 October 2026 (corrections of the reconciled v1.20.8 advisory and Methodology v1.4 compaction; stage 1 and stage 2 reviewed). Release record: `records/numgen/NUMGEN_v1_21_RELEASE_RECORD.md`.  \n",
+   "new": "**Document status:** DRAFT — v1.22 candidate (one content stage: receiving and synchronization), not adopted; v1.21 governs until PI adoption. Release record (DRAFT): `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`.  \n",
+   "old_sha256": "3ae30ecd646ad67326026941c4ce7d17926bcbfa569137f534ee74b81f98219d",
+   "new_sha256": "02873116e422e3f1e8f3e001e9a19f6c8da9dad268656ea29157414710e7797e"
+  },
+  {
+   "key": "H4",
+   "group": "header",
+   "row": "Supersedes",
+   "old": "**Supersedes:** `RTG_NUMBER_GENESIS_DSN_v1.20.8` (SHA-256 `835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e`; tag `numgen-v1.20.8`).",
+   "new": "**Supersedes:** `RTG_NUMBER_GENESIS_DSN_v1.21` (SHA-256 `4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701`; tag `numgen-v1.21`).",
+   "old_sha256": "d4eda2bd346db25ac61627fe12cdb5d672ced45dc6cc986a39717ff287ed4f8e",
+   "new_sha256": "f94a46cbcd23401963a17a2ddb5dd4da516a645890378a438b3a8dcdbc8e5452"
+  },
+  {
+   "key": "H5",
+   "group": "header",
+   "row": "Release record",
+   "old": "**Release record:** `records/numgen/NUMGEN_v1_21_RELEASE_RECORD.md`. Version history: Appendix A.",
+   "new": "**Release record:** `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md` (DRAFT). Version history: Appendix A.",
+   "old_sha256": "97a97b3c3151584d0df1e3b560bdcbd621fabdd4ddc9380bc385c2a6dd21be94",
+   "new_sha256": "3c67e4d8e42d817ce67865934803893e6823ba8f0d5c1b353d230dd488c01282"
+  },
+  {
+   "key": "I1",
+   "group": "P01 RIDs",
+   "row": "§1.1 TDR-G state space",
+   "old": "`[DEF]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1 | RID unavailable]` **Finite phase support — state space.**",
+   "new": "`[DEF]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.1 | TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE]` **Finite phase support — state space.**",
+   "old_sha256": "d2ec70ae1948eeb259e7d325b23a5d350fb61ec7caa11c400e573b9ece9f23b2",
+   "new_sha256": "65cb03c873d6b940a203dbce92377d08ffee0f3cc473f594aacd7613ef101d0c"
+  },
+  {
+   "key": "I2",
+   "group": "P01 RIDs",
+   "row": "§1.1 TDR-G recurrence",
+   "old": "`[THM]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.2 | RID unavailable]`",
+   "new": "`[THM]` `[import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.2 | TDRG-THM-RECURRENCE]`",
+   "old_sha256": "dd39d59e6a778e06b2c69bd67171cc21abd6dd1fc4d0819f2027460bf98dcd71",
+   "new_sha256": "3cc585a485913ceb5887a352401dfac7523d7df85db3c72a0f50c776520ec4b0"
+  },
+  {
+   "key": "I3",
+   "group": "P01 RIDs",
+   "row": "§1.1 firewall",
+   "old": "RTG_PROGRAMME_OVERVIEW_v1.3 SG-PROG-1 | RID unavailable]` **Cross-branch firewall.**",
+   "new": "RTG_PROGRAMME_OVERVIEW_v1.3 SG-PROG-1 | guard citations, no RID; SG-10 and SG-PROG-1 unchanged at tdrg-v2.13 and programme-v1.4]` **Cross-branch firewall.**",
+   "old_sha256": "b542fa8d4aa7e9dd8735c4a61842fc69b66202482abd72cb4bc82cc471ddfe7e",
+   "new_sha256": "da073ef6b99ccee0b32b85fa8a8c5b93826c77f985d1c57aafee3c726b67d27a"
+  },
+  {
+   "key": "Q1",
+   "group": "F1 hold",
+   "row": "§2 item 1 v1.20 sentence",
+   "old": "M-4 realization search HOLD pending the Discrete-owner P2 policy.",
+   "new": "M-4 realization search HOLD (reason below).",
+   "old_sha256": "f455aa0bb3f830ab0900ad11e23e684e2dc6995839ba0304dd18381382a3d97f",
+   "new_sha256": "dccba73c793d292fb4ff00f8babec7e695e3e6360c13fb99d9e802f18b6bfe5e"
+  },
+  {
+   "key": "Q2",
+   "group": "F1 hold",
+   "row": "§2 item 1 campaign hold",
+   "old": "**Campaign hold:** design/algebra may proceed, but the first C7C-M realization search (M-4) is not opened until the Discrete-Genesis owner resolves the P2 antipodal-endpoint presentation-covariance policy used by the current SWAP/P3 implementation. **TDR-G dependency:** the request for TDR-G's orientation-policy disposition at `S=0`, `|E|=N/2` is filed as `pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md` (`blocks: C7C-M4`); before any status change, the 40 convention-exposed DISC-2 witnesses (§6.6 P2 audit) receive a sensitivity audit under the policy TDR-G adopts. The abstract WD-DOM design continues meanwhile.",
+   "new": "**Campaign hold:** design/algebra may proceed; the first C7C-M realization search (M-4) stays on HOLD. The P2 policy question is answered: TDR-G adopted `TDRG-DEF-ORIENT` (`tdrg-v2.12.14`, unchanged at `tdrg-v2.13` §6.3: at `S=0`, `2E≡0 mod N` the path is a balanced tie), and the consumer re-annotation of the Census-1 witness universe under it is recorded (§6.6 P2 block; `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md`). The research target remains a certified non-degenerate composable three-stream witness: all 158 Census-1 TDR-G records (including the 40 quarantined ones) carry the stream pair `(SWAP, P3)`, so this TDR-G sub-universe contributes no candidate chain at either interface level (§6.6, Census-1 result). The P2 rule change alone does not remove that schema obstruction; the two continuous-dyad records are separate. M-4 stays HOLD pending approval of a design and preregistration capable of addressing the missing chain, with typed middle-interface witnesses, outer-pair admissibility and WD-DOM stated before outcome-sensitive computation. Finding the witness is the research objective, not a prerequisite to searching for it. A new evidence universe requires its own preregistration (Census-2). The abstract WD-DOM design continues; this release authorizes no campaign.",
+   "old_sha256": "d57f5d2b0300de6928a93d8d2ef39feb35c44a2f5a65926b03ef485799d14b9c",
+   "new_sha256": "f2bdb25aa0af061e6a18f675b05e0ac372e4348e7b77f1fac8c0c714264915af"
+  },
+  {
+   "key": "Z1",
+   "group": "F3 q-star",
+   "row": "§6.2 N-1C witness",
+   "old": "This is **uniqueness at the stated scan resolution**, not a global uniqueness theorem. Exact existence/location remains `[NUM]` until the accepted interval/Arb certificate is run.",
+   "new": "This is **uniqueness at the stated scan resolution**, not a global uniqueness theorem. Exact existence/location remains `[NUM]` until the accepted interval/Arb certificate is run. `q_*` is not Dyadic's branch-split value `q_{3/4} ≈ 1.2602142`, a zero of `rho_4` with `eta_6(q_{3/4})-q_{3/4} ≈ -0.5537` (`DYAD-THM-OPEN18-STEP-MONOTONE`, `dyad-v6.4.24` §6.8): different objects.",
+   "old_sha256": "ec7da327739705067a65d557e3618e9602caac74d178b168ac93590f67b03f4d",
+   "new_sha256": "b6c9debb4ca1cb80437c84a9da52fdf8bcce865b7ce514bcc34196678d3832c4"
+  },
+  {
+   "key": "P1",
+   "group": "F1/F2 P2",
+   "row": "§6.6 DISC-2 summary line",
+   "old": "Discrete-owner policy action is pending; DISC-1 requires the same audit.",
+   "new": "Discrete-owner policy: `TDRG-DEF-ORIENT` (`tdrg-v2.13` §6.3); under it 20/136 records change verdict or class and the ten labels are unchanged; DISC-1: 0/22 exposed (§6.6 P2 re-annotation).",
+   "old_sha256": "5ea0728cca1c44a7527aa6cf7685a0f7ad18cab982a2f843dabf6caddfe73d38",
+   "new_sha256": "37116b2e7003a714538c81a7e19232f387f61685d906a561693654bc92bcc256"
+  },
+  {
+   "key": "P2",
+   "group": "F1/F2 P2",
+   "row": "§6.6 DISC-1 evidence",
+   "old": "label projection `{2:1, 3:1}` unchanged under the tested reverse and inert alternative policies.",
+   "new": "label projection `{2:1, 3:1}` unchanged under the tested reverse and inert alternative policies. Execution artifact and the result under `TDRG-DEF-ORIENT` (0/22 exposed, 0/22 changed): §6.6 P2 re-annotation (`records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md`).",
+   "old_sha256": "d4d1e08ff3acb1907c41d69637490a89bc3cfffe6774d07f62e81268dbf53e36",
+   "new_sha256": "11fc2f427e4c78fa61377781fae4143373805d7d7d9493cdb5fdac901ade9c6b"
+  },
+  {
+   "key": "P3",
+   "group": "F1/F2 P2",
+   "row": "§6.6 DISC-2 evidence",
+   "old": "every admitted label with at least one unexposed witness; label set unchanged under the tested reverse and inert alternative policies.",
+   "new": "every admitted label with at least one unexposed witness; label set unchanged under the tested reverse and inert alternative policies and under `TDRG-DEF-ORIENT` (§6.6 P2 re-annotation).",
+   "old_sha256": "ac680b7b4cbfe589debc4631dcc2386f337a4a194909f5868f6fdc95f66eadf4",
+   "new_sha256": "7e26ddad3857f70ee8db89cc05a1cff488cc6786a06649b451a05e5e484e1015"
+  },
+  {
+   "key": "P4",
+   "group": "F1/F2 P2",
+   "row": "§6.6 P2 guard + S1 block",
+   "old": "A Discrete-Genesis owner ruling on the antipodal endpoint policy (or a presentation-independent path-selection theorem) is required before future campaigns. DISC-1 requires the same audit separately.",
+   "new": "The Discrete-Genesis owner ruling is `TDRG-DEF-ORIENT` (`tdrg-v2.13` §6.3); future campaigns use it or a presentation-independent path-selection theorem. The re-annotation below changes no frozen record and no Census-1 decision.\n\n`[NUM]` `[scope: Census-1 TDR-G witness universe, DISC-1 22 + DISC-2 136; N=24, three nodes, k in {0,1,2,3}, bound_symmetric]` `[conv: pinned v18 engine with orient_path replaced by the TDR-G reference implementation of TDRG-DEF-ORIENT]` **P2 re-annotation under TDRG-DEF-ORIENT (v1.22 S1).** Positive control 158/158: unmodified v18 matches the frozen DISC-1 transport tuples (k=0..3, PASS_INT) and DISC-2 verdicts/base classes, both in tick-by-tick lockstep with their own frozen enumerators. DISC-2: 40 exposed; 20 change verdict or class — 8 change class with PASS kept (1:1→4:3 ×4, 1:1→3:2 ×4), 6 lose PASS with the base dual kept, 6 lose the base dual (5:2→NO_BASE_DUAL); 124/136 remain PASS; the ten admitted labels are unchanged. DISC-1: 0/22 exposed, 0/22 changed; `{2:1, 3:1}` unchanged. DISC-2 comparison: 136/136 verdicts/classes and v18 exposure indicators agree with the held v1.19 audit's `inert` comparison. The DISC-1 result is from S1's direct execution, not from that audit. Evidence: `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md`; `evidence/numgen/v1.22/s1/` (annotation `1819015a…3524`). Not a certificate replacement; Census-1 F6 decisions and its verdict are unchanged; no record is admitted retroactively.",
+   "old_sha256": "308d0b8197da1220153fedc5f747428af0f65d3c55b01022084e86b7b22828b7",
+   "new_sha256": "544ee5753e653f3335036ba04327c81793e1fe7681a97a0da059adcae33cd5ca"
+  },
+  {
+   "key": "P5",
+   "group": "F1 hold",
+   "row": "§6.6 M-4 HOLD",
+   "old": "`[HOLD]` **M-4 realization search** — pending the Discrete-owner P2 antipodal-endpoint policy ruling.",
+   "new": "`[HOLD]` **M-4 realization search** — the P2 policy is answered (`TDRG-DEF-ORIENT`; §6.6 P2 re-annotation); the hold awaits an approved design/preregistration addressing the missing composable-chain evidence object (§2 item 1).",
+   "old_sha256": "3318f83a0600b7ea84c9eb8cdb1e3de2d6298b64ad32490e3f032c73507410c7",
+   "new_sha256": "69b8039839555a14ba1dbf643faf0f63294e9dca0e1ed0db77934927777f7b4b"
+  },
+  {
+   "key": "D1",
+   "group": "F5 DZT",
+   "row": "§8 PROVENANCE",
+   "old": "No DZT document of that number is in the repository; the governing DZT edition is `dzt-v0.8` (`RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`).",
+   "new": "Two files labelled v0.17 are in the repository as received history without adoption record or tag (`upload/dzt-recovery-20261116/received/originals/downloads/`; DZT notice of 19 Nov 2026); they are not part of the DZT lineage. The governing DZT edition is `dzt-v0.19` (`RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md`). The audit-reported odd-support and denominator statements are covered there by `DZT-THM-CASCADE-NORM-LAW` (§6.3, a theorem assuming `DYAD-THM-Q403-PHASELAW`, for `p=4s≥12`, absolute real-subfield norm, sign outside the theorem), cited here as a locator only.",
+   "old_sha256": "58741ea0b6498137ac018bcbd37d7c4c844ba683e40b10ba81f1ea64932243b5",
+   "new_sha256": "2a406cec53d35d42a0e681988f6233d574c520444db7a43cb5dfed8ffdb7c280"
+  },
+  {
+   "key": "L1",
+   "group": "P06 pins",
+   "row": "§9.1 Programme import row",
+   "old": "read at `programme-v1.3` (SG-PROG-1–4 restated there as clarifications; this use unchanged); no status promotion |",
+   "new": "read at `programme-v1.3` (SG-PROG-1–4 restated there as clarifications; this use unchanged); SG-PROG-1–4 byte-identical at `programme-v1.4`; no status promotion |",
+   "old_sha256": "1d83d4c7f84302796fd5a95ea2853453e463027116562053ff0e5a15610d5db7",
+   "new_sha256": "69a41d7d1278ea742844c98eb7d2da9215bd58c5eca769c19c50392835480bf3"
+  },
+  {
+   "key": "L2",
+   "group": "P01 RIDs",
+   "row": "§9.1 TDR-G import row",
+   "old": "| TDR-G `Z_N`, finite recurrence, cross-branch firewall | `RTG_DISCRETE_GENESIS_DSN_v2.12.13 §6.1–§6.2`, SG-10 |",
+   "new": "| TDR-G `Z_N`, finite recurrence, cross-branch firewall | `RTG_DISCRETE_GENESIS_DSN_v2.13 §6.1–§6.2` (TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE, TDRG-THM-RECURRENCE; statements identical to v2.12.13), SG-10 (retained pin `tdrg-v2.12.13`, unchanged at v2.13) |",
+   "old_sha256": "ea7ac7db190d6e06715497237402de95529159e01420d8103a97db578802e41f",
+   "new_sha256": "db33e706f998742e19241f314cd9ec4c7e4ea1dbe2ad8893a58fbf84e3d1fa0f"
+  },
+  {
+   "key": "L3",
+   "group": "receiving",
+   "row": "§9.1 dispositions heading",
+   "old": "**Notice and request dispositions (v1.20.8).** Owner-side records only; no import follows from a receipt.",
+   "new": "**Notice and request dispositions.** Owner-side records only; no import follows from a receipt.",
+   "old_sha256": "a22a3837cd19adb3203cc53520b6a6712576048ce0bb011245154af8a2d36e8e",
+   "new_sha256": "79a414493196d36b778f7d92c2055ce1f00c6c789bd69d4b035c78bfb8c7f814"
+  },
+  {
+   "key": "L4",
+   "group": "receiving",
+   "row": "§9.1 dispositions rows (v1.22)",
+   "old": "| statement accepted as independent agreement (acceptance matrix below); not imported; custody of GAP-LOCK 1–3 and INF-1 unchanged |\n",
+   "new": "| statement accepted as independent agreement (acceptance matrix below); not imported; custody of GAP-LOCK 1–3 and INF-1 unchanged |\n| TDRG-DEF-ORIENT and eight producer RIDs; star / multistar domain | TDR-G (v2.12.14, v2.12.15) | accept with change: §1.1 cites three matched producer RIDs at `tdrg-v2.13`; the others are available, not newly consumed. The reference orientation is used for consumer re-annotation (§6.6). No affected NUMGEN claim relies on the earlier K1,3-only restriction: RF-06 uses fixed-centre token inversion; the DISC panels are birth-free |\n| `q_{3/4}` answer; N15 receipt; v6.4.24 unchanged imports | Dyadic (v6.4.23, v6.4.24) | accept: §6.2 disambiguation; NC-17 closed; no import changed |\n| REQ-O09-03 fulfilled; N-1A2 vocabulary use | OFN (v0.11, v0.12) | accept: consumer rows below; N-1A2 vocabulary only (no import of its closure); the L-BACKBONE and NG-7A reference scopes remain separate |\n| interface rows IF12–IF14, IF24, IF27, IF37, IF38 | Programme (v1.4) | accept: checked against this ledger; pin used stays v1.3 (guards unchanged) |\n| A1c explicit-`U` rows; GAP-LOCK Lemma 3 two-grade use | RECOG (v0.3.26, v0.3.27) | accept with change: consumer row below; A1c compared only, not imported |\n| v0.17 files and `DZT-THM-CASCADE-NORM-LAW` | DZT (v0.18, v0.19) | accept: §8 provenance; nothing imported |\n",
+   "old_sha256": "8dd2094bfce6fec44c5846e43819e7ca80bccdd4892ec46cfc17909280e60afa",
+   "new_sha256": "2176f54b45eeb4ec3c975871fae800ceba907f185f6088e93a551fbd4a1ad215"
+  },
+  {
+   "key": "C1",
+   "group": "P08 pins",
+   "row": "§9.1 consumers Dyadic map row",
+   "old": "| v6.4.18 (statements unchanged at v6.4.22) | `dyad-v6.4.22` | IF12 |",
+   "new": "| v6.4.18 (statements unchanged at v6.4.24) | `dyad-v6.4.24` | IF12 |",
+   "old_sha256": "180da3f07370c7a55f2c8dde9b02f49d994e5615774cc018880355ca74074605",
+   "new_sha256": "ac5bbbd0ff9c6a5404f8a076b1b0cdf45fe68efbccc86f8e021967e0f70e684b"
+  },
+  {
+   "key": "C2",
+   "group": "P08 pins",
+   "row": "§9.1 consumers Dyadic row A",
+   "old": "| v6.4.22 (producer v6.4.19) | `dyad-v6.4.22` | IF12 |",
+   "new": "| v6.4.22 (producer v6.4.19; unchanged at v6.4.24) | `dyad-v6.4.24` | IF12 |",
+   "old_sha256": "642fa5f5f0852ba97e9d934d08fcdff92a5f3b3436f60413bd6ffdd10405a1a1",
+   "new_sha256": "dd2115324555123c37ca904fd6fee3bf9f29f4cbdb1e632d7d3e6e9e715775ad"
+  },
+  {
+   "key": "C3",
+   "group": "P01 RIDs",
+   "row": "§9.1 consumers TDR-G row",
+   "old": "| import | TDR-G | `Z_N`, finite recurrence, SG-10 firewall, DISC harness input | v2.12.13 | `tdrg-v2.12.13` | IF13 |",
+   "new": "| import | TDR-G | `Z_N` (TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE), finite recurrence (TDRG-THM-RECURRENCE), SG-10 firewall | v2.13 (state/recurrence); v2.12.13 (retained SG-10 firewall pin) | `tdrg-v2.13` | IF13 |\n| evidence input | TDR-G | DISC harness input (frozen v18 conventions); TDRG-DEF-ORIENT for the bounded consumer re-annotation only (§6.6), not a new general theorem import | v2.12.13 (frozen evidence); v2.13 §6.3 | `tdrg-v2.13` | IF13 |",
+   "old_sha256": "dd8f1e076ef193ccd11d0f2e6794468b777c7f5caf28ab60c60e5243541a1e81",
+   "new_sha256": "e62595dd35943c1e0a91cfac597a7f5c2b08deeabdfa9f95c22b0ccdcd8c3615"
+  },
+  {
+   "key": "C4",
+   "group": "P05 pins",
+   "row": "§9.1 consumers OFN import row",
+   "old": "| import | OFN | §1.1 definitions, holonomy-rank diagnostic | v0.10 | `ofn-v0.10` | — |",
+   "new": "| import | OFN | §1.1 definitions, holonomy-rank diagnostic | v0.10 | `ofn-v0.12` | — |",
+   "old_sha256": "f6ed5f49ec432581e0422c67a232149416d3db26977a57d0b78f2a7f0603e0b9",
+   "new_sha256": "005c33e239235528e12fff7582184a37d09b444f92a07159f7efbe8d0b641539"
+  },
+  {
+   "key": "C5",
+   "group": "P06 pins",
+   "row": "§9.1 consumers Programme row",
+   "old": "| import | Programme | SG-PROG-1, SG-PROG-2 (`RTG-OPEN-GENERATOR-SELECTION`) | v1.3 | `programme-v1.3` | — |",
+   "new": "| import | Programme | SG-PROG-1, SG-PROG-2 (`RTG-OPEN-GENERATOR-SELECTION`) | v1.3 (byte-identical at v1.4) | `programme-v1.4` | — |",
+   "old_sha256": "1d25252d4c2a04813433fd7a0dee3b7b54c693fb631ee241a4ab3240394b0e86",
+   "new_sha256": "96df6ab81241c870cb0560823f75ecd44fedf10872dd0c6834cc02b4e4a2684a"
+  },
+  {
+   "key": "C6",
+   "group": "P06 pins",
+   "row": "§9.1 consumers Genesis import row",
+   "old": "| import | Genesis | §6.6 GEN-ART-SATURATION (NG-10 only) | v2.9 | `gen-v2.9` | — |",
+   "new": "| import | Genesis | §6.6 GEN-ART-SATURATION (NG-10 only) | v2.9 | `gen-v2.10` | IF37 |",
+   "old_sha256": "52deae4dc7491d06c7f90428956bd7561758351239b3ceeb2fd059c0e9fdb104",
+   "new_sha256": "446fc8740c31c040867f61975f7dab30c40a2badba03b45f299d1c3aadd23bba"
+  },
+  {
+   "key": "C7",
+   "group": "P07 consumers",
+   "row": "§9.1 consumers RECOG export row",
+   "old": "GAP-LOCK Lemma 3 as cited in RECOG §7 | v1.20.8 (RECOG keeps v1.15 producer pins where load-bearing) | `recog-v0.3.24` | IF14 |",
+   "new": "NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO at two grades (exact identity at ALG inside RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE, RECOG §6.16e; locking statement as HEUR cross-reference) | v1.21 (RECOG keeps v1.15 producer pins where load-bearing) | `recog-v0.3.27` | IF14 |",
+   "old_sha256": "50d053b3f8a749944328db8325f2bae7c514649b48787977192a146281aea935",
+   "new_sha256": "31638c53cf93a8c277855fff853d48370ba26e93efd381c1953a7d89cf9f7bb3"
+  },
+  {
+   "key": "C8",
+   "group": "P07 consumers",
+   "row": "§9.1 consumers RECOG received row",
+   "old": "| received | RECOG | A1a/A1b explicit-domain theorems: consumer-side confirmations (acceptance matrix above) | v0.3.24 | `recog-v0.3.24` | IF27 |",
+   "new": "| received | RECOG | A1a/A1b explicit-domain theorems: consumer-side confirmations (acceptance matrix above); A1c rows of v0.3.27 compared only, not imported | v0.3.24 (matrix baseline) | `recog-v0.3.27` | IF27 |",
+   "old_sha256": "d2e24f624cc3fc18e6fbe3c70ec5f79165893d34aa7cd652ed115e1641c32cfc",
+   "new_sha256": "c6c84f732406bbc92d0829ba0e66c8601beb1a2ec411b853d556ab215956ddcb"
+  },
+  {
+   "key": "C9",
+   "group": "P04/P05 consumers",
+   "row": "§9.1 consumers OFN export row",
+   "old": "| export | OFN | NG-7A additive operator and representation results (OFN §11 inspected NUMGEN v1.20.7 §6.8) | as declared in OFN §11 | `ofn-v0.10` | IF24 |",
+   "new": "| export | OFN | NG-7A additive operator and representation results (reference-only feedback); `NUMGEN-RESULT-N5AS1-L-BACKBONE` (REQ-O09-03); N-1A2 definitions as vocabulary only (OFN §5.5.4; closure not imported) | v1.21 (OFN §1.1, §6.8, §9.1, §12.3–§12.4) | `ofn-v0.12` | IF24 |\n| export | Genesis | `NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE` (§6.4): independent route to `G_2(Z)=0`; `GEN-ART-G2-CHRONO` stays custody-A at Genesis | v1.21 (Genesis §6.4, §7) | `gen-v2.10` | IF38 |",
+   "old_sha256": "11831cd293f3a93a0af6478add3f3a93e218bfc12c619acd352e4a45d4b29256",
+   "new_sha256": "737d193ebefd06422eb1bd1e59144560fb2c9727339cc01f3c131d77013459b9"
+  },
+  {
+   "key": "X1",
+   "group": "hash form",
+   "row": "RECOG v0.3.24 hash abbreviation",
+   "old": "`8c64bea2…69e7c1`",
+   "new": "`8c64bea2…e7c1`",
+   "old_sha256": "cf1439c19f378819c7489d1d4423681130fad98d11495ab17eb1c63be4efa15c",
+   "new_sha256": "2e814bb40a02ab9731ddd55904872d6ce74037cfbdb19240636b5876457b116c"
+  },
+  {
+   "key": "R1",
+   "group": "S1 evidence",
+   "row": "§9.2 NG_C7C_M_DESIGN row",
+   "old": "physical carrier closure/global WD-DOM not yet certified; M-4 search held pending P2 policy |",
+   "new": "physical carrier closure/global WD-DOM not yet certified; M-4 search held (§2 item 1) |",
+   "old_sha256": "3c91961144640dbff1b3d9631d803aedf9119b52262f00c52a56173e60027395",
+   "new_sha256": "6420fa021723b8f8bd65fd3f445244c19abd9307c00cfdab43c0b0cee873c049"
+  },
+  {
+   "key": "R2",
+   "group": "S1 evidence",
+   "row": "§9.2 S1 artifact row",
+   "old": "| `disc2_p2_antipodal_exposure_audit_v1.py` + `.log` |",
+   "new": "| `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md` + `evidence/numgen/v1.22/s1/` (script `4c5c2f17…8ae9`, annotation `1819015a…3524`) | P2 re-annotation of the 158 Census-1 TDR-G witnesses under TDRG-DEF-ORIENT; the frozen-record positive control; DISC-1 execution artifact | `[NUM]` — not a certificate replacement |\n| `disc2_p2_antipodal_exposure_audit_v1.py` + `.log` |",
+   "old_sha256": "86ad2706f9b43cabcc5542790b0f638380ebcc98a8d5c1600b111ae40d68dbef",
+   "new_sha256": "16ba09689479c677034da24515aea70921a1be39d4acbc2629a0a3610e1bbb2c"
+  },
+  {
+   "key": "A1",
+   "group": "history",
+   "row": "Appendix A v1.22 entry",
+   "old": "### v1.21 — 26 October 2026 — Adopted\n",
+   "new": "### v1.22 — 24 November 2026 — DRAFT (not adopted)\n\n- **Basis:** Atlas sync advisory of 23 Nov 2026 (rev. 2, `records/numgen/ATLAS_ADVISORY_NUMGEN_SYNC_20261123.md`); owner disposition (`records/numgen/NUMGEN_OWNER_DISPOSITION_SYNC_20261123_CLAUDE_20261124.md`); co-owner GO for S1 and for S2–S3 (24 Nov 2026).\n- **Evidence [NUM] (S1):** P2 re-annotation of the 158 Census-1 TDR-G witnesses under TDRG-DEF-ORIENT (§6.6; `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md`); DISC-1 0/22 now has an execution artifact.\n- **Receiving (S2):** eleven inbox notices dispositioned (`records/numgen/NUMGEN_v1_22_RECEIVING_LEDGER.md`); no new import.\n- **Synchronization (S3):** §1.1 TDR-G imports cite TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE and TDRG-THM-RECURRENCE at `tdrg-v2.13`; §2 item 1 and §6.6: C7C-M4 hold reason (P2 answered; approved design/preregistration for the missing composable chain still needed); §6.2 `q_*` vs Dyadic `q_{3/4}`; §8 DZT provenance (`dzt-v0.19`); §9.1 consumers and pins (Dyadic v6.4.24, TDR-G v2.13, OFN v0.12, Programme v1.4, Genesis v2.10 with the IF38 export, RECOG v0.3.27 two-grade GAP-LOCK 3 use); §9.2 S1 artifact row.\n- **Unchanged:** every claim grade and OPEN status; Census-1 INCONCLUSIVE / INCONCLUSIVE; C7C-M4 HOLD; DISC-3 deferred; the C7C algebra; the φ* comparison.\n- **Records:** release record `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md` (DRAFT); predecessor tag `numgen-v1.21` (`4805760d…5701`).\n\n### v1.21 — 26 October 2026 — Adopted\n",
+   "old_sha256": "69d939cb5405bf5e3d1029440f1c02a455d103da49f17327e0563a9e9758f21b",
+   "new_sha256": "9bf850e060c2ec7679ddbe1cd21438f407915a9e5b6e080d897415fa7cd7444f"
+  },
+  {
+   "key": "F1",
+   "group": "history",
+   "row": "footer",
+   "old": "*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.21 (ADOPTED, 26 October 2026).*",
+   "new": "*END OF DOCUMENT — RTG_NUMBER_GENESIS_DSN_v1.22 (DRAFT; not adopted).*",
+   "old_sha256": "b6b393a59eac5018de9f262d0fa33edf4eeedb63489252a8d56a4a2fe311f32e",
+   "new_sha256": "9a498be145bff399953f60069e96e70f22e44710f3bdcdae3d80ce2e3717a348"
+  },
+  {
+   "key": "RV1A",
+   "group": "review R1",
+   "row": "§6.6 C7C-M summary",
+   "old": "C7C-A not opened; M-4 HOLD (P2).",
+   "new": "C7C-A not opened; M-4 HOLD (approved design/preregistration for the missing composable chain pending; P2 answered).",
+   "old_sha256": "50aa51ee45baa61bc41fcecc843e27d81a14df711750f4f053e46e37cc681c3a",
+   "new_sha256": "86f4c4b59060454d8fc3d0a935636fb4d99eec57bc660110cb41c5dce0f862dc"
+  },
+  {
+   "key": "RV1B",
+   "group": "review R1",
+   "row": "§8 research queue",
+   "old": "full-interface typed WD-DOM OPEN; M-4 HOLD (P2). Then `C7C-A` only if the composition carrier survives.",
+   "new": "full-interface typed WD-DOM OPEN; M-4 HOLD (approved design/preregistration for the missing composable chain pending; P2 answered). Then `C7C-A` only if the composition carrier survives.",
+   "old_sha256": "6b5b0888141a9a2ff1373927e1b2900cafe9bacb33fcaec448772169e48fbf98",
+   "new_sha256": "d84b70f3cc735da440295c9b63b1b8ee1875aa445c6af657da18e9dda231a35f"
+  },
+  {
+   "key": "RV4A",
+   "group": "review R4",
+   "row": "§9.1 TDR-G evidence availability",
+   "old": "verified against live source; per-cycle `N=24,k=1` enumerator/export still pending in accessible corpus |",
+   "new": "verified against the owner statements; NUMGEN's held enumerators and S1 inputs are accessible (`upload/numgen-records/`, `evidence/numgen/v1.22/s1/`). The original owner-side BIND3-CYCLE-N24K1 enumeration/export (`TDRG-ART-BIND3-N24K1`, `tdrg-v2.13` §8) is still owner-reported missing (EV-SRC-REPORTED); the available NUMGEN reproductions are not that original artifact. |",
+   "old_sha256": "2839dab259c67cf7d8007485fa73a6b2b16fa2537c53d4c8f77a2bd9239b3e9b",
+   "new_sha256": "00663d2ac750de11fddb24e2c809c81162bd361b3f987dae73ce13e23e848c11"
+  },
+  {
+   "key": "RV4B",
+   "group": "review R1/R4",
+   "row": "§9.2 governance row",
+   "old": "`[GOVERNANCE]` — v2 pending; **v3 owner-policy update required before future SWAP/P3 campaigns** |",
+   "new": "`[GOVERNANCE]` — historical reproduction-gap note; P2 producer policy answered and S1 witness-panel re-annotation recorded. Original owner enumeration remains missing as reported at `tdrg-v2.13` §8; any future SWAP/P3 campaign needs its own approved design and current-policy reproduction scope. |",
+   "old_sha256": "eafe974b071a719706822b6551a6fb41f52d201e4b7e40e5bedc101826157f03",
+   "new_sha256": "c623df818bd027fff256df94ce2f8752ebec8b04d6a2dc74a077ee9af6ea6ca9"
+  }
+ ]
+}

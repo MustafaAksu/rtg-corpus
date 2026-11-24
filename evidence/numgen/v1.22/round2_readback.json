@@ -1,0 +1,152 @@
+{
+  "date": "2026-11-24",
+  "scope": "[SESSION] connector-assisted independent round-2 exact-edit readback; not native Python execution",
+  "review": "6041922508",
+  "parent": "fabb6c0122c6b8abd0daf84ba9be6b4466882bb2",
+  "base_sha256": "4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701",
+  "round1_sha256": "8ccc8e38f0ad054d68f59bf5d95c9364afa093f02cb3e418295625db3763148a",
+  "candidate_sha256": "fa28c0abe8bca5e9e7bb307e27ecb8f13c75399a7d804487a7a48b7a8b5c78b9",
+  "amended_edit_keys": [
+    "Q2",
+    "P4",
+    "P5",
+    "L2",
+    "L4",
+    "C3",
+    "A1"
+  ],
+  "additional_edit_keys": [
+    "RV1A",
+    "RV1B",
+    "RV4A",
+    "RV4B"
+  ],
+  "checks": {
+    "exact_once_edits": 39,
+    "per_edit_hashes": 78,
+    "round1_rebuild_matches_parent": true,
+    "round2_forward_rebuild": true,
+    "round2_reverse_rebuild": true,
+    "tag_delta": {
+      "NUM": 2,
+      "scope": 1,
+      "conv": 1
+    },
+    "external_rids_added": [
+      "DYAD-THM-OPEN18-STEP-MONOTONE",
+      "DZT-THM-CASCADE-NORM-LAW",
+      "GEN-ART-G2-CHRONO",
+      "TDRG-ART-BIND3-N24K1",
+      "TDRG-DEF-ORIENT",
+      "TDRG-DEF-PHYSICAL-STATE",
+      "TDRG-DEF-ZN-STATE",
+      "TDRG-THM-RECURRENCE"
+    ],
+    "rids_removed": [],
+    "numgen_rids_changed": [],
+    "status_count_lowered": [],
+    "header_fields": 10,
+    "review_guards": [
+      {
+        "key": "R1 stale HOLD",
+        "pass": true
+      },
+      {
+        "key": "R1 sub-universe",
+        "pass": true
+      },
+      {
+        "key": "R1 launch gate",
+        "pass": true
+      },
+      {
+        "key": "R2 DISC-2",
+        "pass": true
+      },
+      {
+        "key": "R2 DISC-1",
+        "pass": true
+      },
+      {
+        "key": "R3 star scope",
+        "pass": true
+      },
+      {
+        "key": "R3 OFN scope",
+        "pass": true
+      },
+      {
+        "key": "R3 pin",
+        "pass": true
+      },
+      {
+        "key": "R4 source",
+        "pass": true
+      },
+      {
+        "key": "R4 missing",
+        "pass": true
+      },
+      {
+        "key": "R4 stale availability",
+        "pass": true
+      }
+    ],
+    "targeted_negative_controls": [
+      {
+        "key": "NC12 stale M4 reason",
+        "caught": [
+          "R1 stale HOLD"
+        ]
+      },
+      {
+        "key": "NC13 unscoped inert agreement",
+        "caught": [
+          "R2 DISC-2"
+        ]
+      },
+      {
+        "key": "NC14 overbroad star scope",
+        "caught": [
+          "R3 star scope"
+        ]
+      },
+      {
+        "key": "NC15 stale owner export availability",
+        "caught": [
+          "R4 missing"
+        ]
+      }
+    ],
+    "receiving_ledger_proposed_use": true,
+    "entry_tdrg_scope": true,
+    "s1_and_pipe_files_changed": false
+  },
+  "identities": {
+    "dsn/RTG_NUMBER_GENESIS_DSN.md": {
+      "sha256": "fa28c0abe8bca5e9e7bb307e27ecb8f13c75399a7d804487a7a48b7a8b5c78b9",
+      "bytes": 282107
+    },
+    "evidence/numgen/scripts/build_numgen_v1_22.py": {
+      "sha256": "2c3356c2a4080c221125c1925ea6cd4bb75c2c796431692ce1823f5771c6a0b9",
+      "bytes": 22726
+    },
+    "evidence/numgen/scripts/check_numgen_v1_22.py": {
+      "sha256": "2d3b06fc1c0a56a8c20ef0df03e373f2a45227ba3127f1801f8b57e875d60ad0",
+      "bytes": 12604
+    },
+    "evidence/numgen/v1.22/edit_log.json": {
+      "sha256": "243ce7c62969a28e1e477e787d09ea5caef094cde8372f2fc97d75ae00765a60",
+      "bytes": 28219
+    },
+    "records/numgen/NUMGEN_COOWNER_ENTRY_NOTE.md": {
+      "sha256": "0403262a1ca6ab7235cfd57b87af2fc72b80a6c004a1b03afe5d85ec1f59ae4a",
+      "bytes": 4283
+    },
+    "records/numgen/NUMGEN_v1_22_RECEIVING_LEDGER.md": {
+      "sha256": "17341c762e6535742607af6831f409141ed78a535cb0e906efb8f9c6499aac1e",
+      "bytes": 4470
+    }
+  },
+  "limits": "Connector-side reconstruction and guards were executed, not the native Python builder/checker, existing NC1–NC11, lint, pipes validator or scientific engine. Round-1 native outputs are retained as history; native rerun is required for round-2 release review."
+}
