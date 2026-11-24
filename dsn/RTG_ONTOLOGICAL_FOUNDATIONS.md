@@ -1,19 +1,19 @@
-# RTG_ONTOLOGICAL_FOUNDATIONS_v0.12
+# RTG_ONTOLOGICAL_FOUNDATIONS_v0.13
 
 **Title:** Relational Time Geometry — Ontological Foundations and Model-Selection Layer  
-**Date:** 30 October 2026  
+**Date:** 24 November 2026  
 **Scope:** Foundational commitments, primitive-object hypotheses and model-selection criteria of RTG, including the genuine relational-triad model-selection contract for the FMS interface (§5.5); no physical generator, carrier or primitive object is selected.  
 **Document class:** Foundational ontology / model-selection ledger (Methodology v1.4 §0.5); nonstandard profile with the section map in §0.4.  
-**Document status:** ADOPTED — PI, 30 October 2026 (closure-versus-reference result; isolation and triadic-independence frames recorded, none selected; reviewed in two rounds). Release record: `records/ofn/OFN_v0_12_RELEASE_RECORD.md`.  
-**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.11` (tag `ofn-v0.11`, SHA-256 `38a2f44473323a7dd8405161c0d0439143bc234ac0a9cc75577628ac8a51e9e4`).  
-**Companion documents:** governing editions read for this edition — Programme Overview v1.3 (`programme-v1.3`), DSN Methodology v1.4 (`methodology-v1.4`), Dyadic Oscillator v6.4.22 (`dyad-v6.4.22`), Genesis Geometry v2.9 (`gen-v2.9`), RRF v0.8.4 (`rrf-v0.8.4`), Discrete Genesis v2.12.14 (`tdrg-v2.12.14`), Number Genesis v1.21 (`numgen-v1.21`), RECOG v0.3.26 (`recog-v0.3.26`), Triadic v1.6.1 (`triad-v1.6.1`); claim-level pins are stated at each use and in §11.  
+**Document status:** DRAFT — receiving/synchronization maintenance candidate; PI adoption pending. Release record: `records/ofn/OFN_v0_13_RELEASE_RECORD.md`.  
+**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.12` (tag `ofn-v0.12`, SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa`) upon adoption.  
+**Companion documents:** governing editions consulted at the build checkpoint — Programme Overview v1.4 (`programme-v1.4`), DSN Methodology v1.4 (`methodology-v1.4`), Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`), Genesis Geometry v2.10 (`gen-v2.10`), RRF v0.8.4 (`rrf-v0.8.4`), Discrete Genesis v2.13 (`tdrg-v2.13`), Number Genesis v1.22 (`numgen-v1.22`; earlier claim pins retained as stated), RECOG v0.3.27 (`recog-v0.3.27`), Triadic v1.7 (`triad-v1.7`); claim-level pins are stated at each use and in §11.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Status summary:** OFN holds seventeen registered definitions, the hypothesis FSP-U, five OFN local results and twenty-one foundational OPENs (twenty ACTIVE, one PARTIAL); no physical generator, carrier, primitive object, chirality or isolation regime is selected. In the genuine relational-triad contract the transported class C is the primary realized smooth mathematical candidate family: a real $C^\infty$ realization exists through two imported Dyadic theorems, while analytic realization (DYAD B-an/B-6) and physical selection remain open. Standard C is a positive-dimensional local $C^3$ invariant-manifold test, and the admitted FMS mathematical test class is real $C^\infty$ with analytic laws as a distinguished subclass. The closure-versus-reference comparison is recorded as the OFN local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; its physical reading, the physical-isolation contract and the standard of triadic independence remain open.  
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok — inherited attribution; separate approval by every listed contributor is not inferred.  
-**Revision editor:** Claude (OFN co-owner session `claude012ZC8x`, builder); change-focused review by the second OFN co-owner (ChatGPT).  
-**Programme document / placement:** Programme Overview v1.3; Tier 2, namespace `RTG-OFN`; criteria home for OPEN-P0 and OPEN-P2B (Programme v1.3 §5).  
-**Governing inputs:** the OFN co-owner working notes `records/ofn/OFN_ISOLATION_INTERFACE_WORKING_NOTE.md`, `records/ofn/OFN_REF_CLOSURE_WORKING_NOTE.md` and `records/ofn/OFN_3B_INDEPENDENCE_WORKING_NOTE.md` with their receiving reviews (PRs #120, #122, #124; ACCEPT SCOPED); PI start, 30 October 2026 (one new local-result RID authorized; no isolation contract or independence standard selected).  
-**Evidence boundary:** owner statements were read at the governing tags named above; no owner certificate is rerun. FMS SESSION results are reference-only (RF-O10-02); the universal finite-$a$ statement keeps its FMS P4 qualification. Evidence states follow Methodology v1.4 §12. OFN SESSION scripts for §2.4, §5.5.4 and §9 are under `evidence/ofn/scripts/` (§12.1).  
+**Revision editor:** ChatGPT (OFN co-owner, stage-1 builder); independent receiving review by the other OFN co-owner and Atlas review pending.  
+**Programme document / placement:** Programme Overview v1.4; Tier 2, namespace `RTG-OFN`; criteria home for OPEN-P0 and OPEN-P2B (Programme v1.4 §5).  
+**Governing inputs:** the two OFN receiving disposition records of 24 November 2026 and their revised reconciliation `records/ofn/OFN_RECEIVING_RECONCILIATION_CLAUDE_20261124.md` (PRs #378/#379 merged; #379 reviews 6042097108 and 6042580858); PI authorization to build the scoped maintenance edition, not adoption. Prior adopted v0.11/v0.12 decisions remain in their release records.  
+**Evidence boundary:** affected owner statements and source spans were compared at the recorded tags; historical proof pins and unverified comparisons remain explicit (§11). No old owner numerical or scientific certificate was rerun for the content build. FMS SESSION results remain reference-only (RF-O10-02); the universal finite-$a$ statement keeps its FMS P4 qualification; a separate same-CAS reflection-ideal receiving check is documented in §12.1, not a regrade. Evidence states follow Methodology v1.4 §12.  
 
 ## Local Tag Aliases
 
@@ -35,7 +35,7 @@ OFN owns the programme's foundational commitments, hypotheses about primitive re
 
 `[DEF]` O0–O3 denotes conceptual commitments; O4 specified models; O5 their consequences. This is neither historical chronology nor the Legacy L0/L1/L2 or Programme-tier classification.
 
-**v0.12 revision boundary:** the three OFN co-owner working notes of 30 October 2026 enter the live text. The closure/reference comparison is registered as the OFN local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` (§2.4) and OPEN-OFN-REF-CLOSURE is narrowed to its physical reading. The class-C causal-interface identity is recorded (§5.5.4), and the physical-isolation obligation of OPEN-OFN-TRIAD-CLASS is split into the contracts I-comp, I-quiet and I-remove, none selected. OPEN-OFN-3B receives an evaluation frame (U-form, U-class, C0, C1, J) with the position of class C; no standard of independence is selected. No definition or OPEN status changes and no physical selection is made. The §5.5 contract binds a *named model class* and is not a universal axiom, a primacy verdict or a physical selection (SG-OFN-SELECTION, SG-OFN-PRIMACY).
+**v0.13 revision boundary:** receiving and source-scope maintenance only. Finding A remains OFN-owned and its transfer is open; the answered TDR-G token-sum referral and corrected event-domain description, the RECOG A1c premise discharge, scoped producer references and evidence limits are recorded at their points of use. The v0.12 closure/reference result, causal-interface statement, isolation contracts and 3B evaluation frame remain in force; no new or removed OFN RID, definition, OPEN status or physical selection. The §5.5 contract binds a *named model class*, not a universal axiom or a primacy verdict (SG-OFN-SELECTION, SG-OFN-PRIMACY).
 
 ### 0.2 The Constraint Lattice, Not a Linear Pipeline
 
@@ -49,11 +49,11 @@ OFN owns the programme's foundational commitments, hypotheses about primitive re
 
 Definitions use `[DEF]`, hypotheses `[HYP]`, interpretation `[HEUR]` and research targets `[OPEN]`. A load-bearing import opens with the source truth tag and `[import:]`; `[RESULT] [from: TAG]` is reserved for a genuinely local synthesis. Standard mathematics may be stated under `[MATH]`; its physical application is separate.
 
-*v0.12:* registers one OFN local result (`RTG-OFN-ALG-REF-CLOSURE-COMPARISON`), changes no definition and adds no OPEN record.
+*v0.13:* maintenance only; no OFN scientific RID, definition, grade or OPEN status change.
 
 ### 0.4 Layer Boundary and Profile Map
 
-OFN owns commitments and selection questions, not technical-owner results. Imports require `[import:]`, `Depends on:` and §11 tracking. Under Methodology §§3.4/4.3, the narrowly proved consequences in §§4.1/4.5 have registered OFN local result IDs; they do not re-own their imported premises. Finding A's statement is accepted and used by TDR-G (`tdrg-v2.12.14` §7, SG-14); its custody transfer XFER-O08-01 is deferred by TDR-G to v2.13, so the RID remains OFN's and is not registered in the TDRG namespace.
+OFN owns commitments and selection questions, not technical-owner results. Imports require `[import:]`, `Depends on:` and §11 tracking. Under Methodology §§3.4/4.3, the narrowly proved consequences in §§4.1/4.5 have registered OFN local result IDs; they do not re-own their imported premises. Finding A's statement is accepted and imported by TDR-G at `ofn-v0.12` (`tdrg-v2.13` §7, SG-14); custody transfer XFER-O08-01 is open, a separate decision of both owners. The RID remains OFN's and is not registered in the TDRG namespace.
 
 | Required function | OFN location |
 |---|---|
@@ -74,7 +74,7 @@ Orientation core: §1, §§0.5/4.5/4.6, §5.2 and §9. This nonstandard profile 
 <a id="ofn-scope-guards"></a>
 ### 0.5 Foundational Scope Guards
 
-Programme SG-PROG-1–4 apply in their adopted v1.3 form (Programme v1.3 §8), with Methodology v1.4 §§3.3–3.4. The following local guards are adopted in v0.8; SG-ZN-GEOM remains in §4.6.
+Programme SG-PROG-1–4 apply in their adopted v1.4 form (Programme v1.4 §8.1; guard statements unchanged from v1.3), with Methodology v1.4 §§3.3–3.4. The following local guards are adopted in v0.8; SG-ZN-GEOM remains in §4.6.
 
 **[SG-OFN-EVIDENCE]** Do not promote an owner report, review deduction, historical note or completed archive task into physical or mathematical closure. Preserve source status separately from verification and unresolved contradictions.  
 Violation: authority or evidence access is substituted for the actual proof/identification.
@@ -148,7 +148,7 @@ Current technical references now provide positive local examples of persistent d
 
 `[HYP]` $K_3$ may be the minimal physically complete relational object. It is the first cycle in the simple undirected convention, but feedback loops, directed cycles and holonomy operators need their own definitions. Graph closure alone does not establish physical completeness.
 
-`[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.2 #sec-6-2-holonomy | TDRG-THM-HOLONOMY] For node-difference phases, $\Delta_{AB}+\Delta_{BC}+\Delta_{CA}\equiv0\pmod N$. This is a flat closure identity, not a nonintegrable-curvature signal.
+`[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.2 #sec-6-2-holonomy | TDRG-THM-HOLONOMY] For node-difference phases, $\Delta_{AB}+\Delta_{BC}+\Delta_{CA}\equiv0\pmod N$. This is a flat closure identity, not a nonintegrable-curvature signal.
 Owner RID: TDRG-THM-HOLONOMY (TDR-G §7 owner RID map); administrative entry IMP-O08-04.  
 Depends on: $\Delta_{ij}=\theta_i-\theta_j$ in the same discrete phase assignment. See §11.
 
@@ -194,7 +194,7 @@ Depends on: abelian-group algebra; (i)–(ii) are standard, (iii)–(iv) element
 
 `[HEUR]` Unresolved distinguishability motivates an interaction criterion. “Maximal distinction” does not by itself prove that continuation is impossible or fix an event threshold. The criterion must identify the comparator, state domain, conserved/accounted quantity and event response.
 
-`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.1 #sec-6-1-state | TDRG-DEF-BAND] TDR-G uses even $N$ and the defect band $\mathcal D_k=\{\Delta:\operatorname{dist}_{C_N}(\Delta,N/2)\le k\}$.
+`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.1 #sec-6-1-state | TDRG-DEF-BAND] TDR-G uses even $N$ and the defect band $\mathcal D_k=\{\Delta:\operatorname{dist}_{C_N}(\Delta,N/2)\le k\}$.
 Owner RID: TDRG-DEF-BAND (TDR-G §7 owner RID map); administrative entry IMP-O08-03.  
 Depends on: the source's cyclic-distance convention and discrete phase representation. This is a model definition, not an opposition-selection theorem. See §7 and §11.
 
@@ -204,7 +204,7 @@ Source status: TDR-G OPEN TDR-1 (`TDRG-OPEN-INTERACTION-ONSET`) remains active. 
 
 `[HEUR]` “Relational debt” is a candidate interpretation of a persistent distinction. No scalar debt functional, accumulation law, or discharge theorem is defined by that phrase here. A nonzero state remaining nonzero does not itself establish accumulation or a mandatory birth.
 
-`[ALG]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.5 #sec-6-5-twonode | TDRG-ALG-LEM-NOANNIHIL] In the discrete free-dyad model,
+`[ALG]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.5 #sec-6-5-twonode | TDRG-ALG-LEM-NOANNIHIL] In the discrete free-dyad model,
 $$F(\Delta,d)=(\Delta+d,d),\qquad
 F^t(\Delta_0,d_0)=(0,0)\iff(\Delta_0,d_0)=(0,0).$$
 Depends on: the relational pair $(\Delta,d)$, free inertia, arithmetic in $\mathbb Z_N$, and null defined as $(0,0)$; $t$ is a nonnegative integer. See IMP-O08-06 in §11.
@@ -215,9 +215,9 @@ Depends on: the relational pair $(\Delta,d)$, free inertia, arithmetic in $\math
 
 The proposed assessment questions are: internal specification of interaction; covariance under the actual gauge/presentation group; explicit accounting of changed state and topology; and a distinction between mathematical substrate and physical background. “Accounting” means specifying what changes and what is preserved. It does not mean that every event is injective, node count is fixed, or a chosen information functional is conserved.
 
-`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.3 #sec-6-3-interaction | TDRG-DEF-STAR] The star rule creates a node at the center's antipodal shadow with the stated copied token, and inverts the center token.
+`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.3 #sec-6-3-interaction | TDRG-DEF-STAR] The star rule creates a node at the center's antipodal shadow with the stated copied token, and inverts the center token.
 Owner RID: TDRG-DEF-STAR (TDR-G §7 owner RID map); administrative entry IMP-O08-09.  
-Depends on: the selected star component, snapshot/update convention and source policy. The rule specifies a state transformation; a physically selected conservation law is a separate question.
+Depends on: the selected single-star component (exactly one valid centre, with at least three pairwise non-adjacent defect neighbours; not restricted to a pure $K_{1,3}$), CONV-TICK snapshot/update convention and source policy. The centre/newborn rule is unchanged, and the other nodes of that component are inert for the tick (TDR-G v2.13 §6.3; declared-domain correction, not a changed engine). The rule specifies a state transformation; a physically selected conservation law is a separate question.
 
 `[COR]` Scope replacement recorded in Appendix B, OFN08-C05.
 
@@ -232,35 +232,37 @@ Depends on: the selected star component, snapshot/update convention and source p
 
 `[DEF]` [RID: RTG-OFN-DEF-STATE-COMPLETENESS] **State contract.** Each model must name its full state, admissible gauge/presentation transformations, observables and transition law. A reduced state is admissible only with a specified relation to the full model. The representation of a state by differences, ratios or invariants does not itself select ontology or establish completeness.
 
-`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.1 #sec-6-1-state | TDRG-DEF-ZN-STATE; TDRG-DEF-PHYSICAL-STATE; TDRG-DEF-REL-ADVANCE] TDR-G stores $X=(\theta_1,\ldots,\theta_M,\delta_1,\ldots,\delta_M)$, with phases and tokens in $\mathbb Z_N$, and declares global phase shifts $\theta_i\mapsto\theta_i+c$ as gauge; relative advances are $d_{ij}=\delta_i-\delta_j$.
+`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.1 #sec-6-1-state | TDRG-DEF-ZN-STATE; TDRG-DEF-PHYSICAL-STATE; TDRG-DEF-REL-ADVANCE] TDR-G stores $X=(\theta_1,\ldots,\theta_M,\delta_1,\ldots,\delta_M)$, with phases and tokens in $\mathbb Z_N$, and declares global phase shifts $\theta_i\mapsto\theta_i+c$ as gauge; relative advances are $d_{ij}=\delta_i-\delta_j$.
 Owner RIDs: TDRG-DEF-ZN-STATE, TDRG-DEF-PHYSICAL-STATE, TDRG-DEF-REL-ADVANCE (TDR-G §7 owner RID map); administrative entry IMP-O08-02.  
 Depends on: variable node count, the declared discrete rules and gauge action. OFN retains the tokens needed for the full update; it does not assert that the global-phase quotient also removes a common token shift.
 
 `[DEF]` [RID: RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY] **Discrete reduction boundary.** $(\Delta,d)$ is the free-dyad state, not automatically the full birth-capable quotient. A candidate gauge must preserve both observables and the transition law. Node-attached storage is permitted; any physically effective origin must be represented relationally or acknowledged as an extra model structure.
 
 <a id="ofn-star-token-shift"></a>
-`[RESULT]` `[from: ALG]` [RID: RTG-OFN-ALG-STAR-TOKEN-SHIFT] [scope: fixed local component maps; OFN custody; statement accepted by TDR-G, custody transfer deferred] **Finding A — common-token shifts.** For $B_c:\delta_i\mapsto\delta_i+c$, a fixed swap/path permutation commutes with $B_c$. The imported star rule has $(\delta_A',\delta_E')=(-\delta_A,\delta_A)$, hence
+`[RESULT]` `[from: ALG]` [RID: RTG-OFN-ALG-STAR-TOKEN-SHIFT] [scope: fixed local component maps; OFN custody; statement accepted by TDR-G, custody transfer open (separate joint decision)] **Finding A — common-token shifts.** For $B_c:\delta_i\mapsto\delta_i+c$, a fixed swap/path permutation commutes with $B_c$. The imported star rule has $(\delta_A',\delta_E')=(-\delta_A,\delta_A)$, hence
 $$d_{AE}'=-2\delta_A,\qquad
  d_{AE}'(B_cX)-d_{AE}'(X)=-2c\pmod N.$$
 Equivariance of this fixed star update therefore requires and suffices that $2c=0$; for even $N$ the surviving shifts are $c=0,N/2$. The accompanying free-history boost is $(\theta_i(n),\delta_i)\mapsto(\theta_i(n)+nc,\delta_i+c)$. It survives all token-permutation stages, and the stated star stage only for that residual subgroup, assuming the same covariantly selected event component.
-Depends on: IMP-O08-02/09, the declared star-token map and a fixed admissible component selection. Proof: the displayed output difference is zero exactly when $2c=0$; all other shifted outputs agree. Provenance and checks: `REVIEW_FINDINGS.md`. Receiver state: TDR-G accepts the statement and uses it in SG-14 (`tdrg-v2.12.14` §7: checked as one-line algebra on `TDRG-DEF-STAR` and against the engine, `EV-CODE`); the custody transfer XFER-O08-01 is deferred by TDR-G to v2.13 and the RID remains OFN's (§12.3, RF-O08-01).
+Depends on: IMP-O08-02/09, the declared star-token map and a fixed admissible component selection. Proof: the displayed output difference is zero exactly when $2c=0$; all other shifted outputs agree. Provenance and checks: `REVIEW_FINDINGS.md`. Receiver state: TDR-G accepts the statement and imports it at `ofn-v0.12` in `tdrg-v2.13` §7, SG-14 and its birth-spectrum nonclosure argument (original acceptance at `tdrg-v2.12.14`: one-line algebra and owner engine check, `EV-CODE`). Custody transfer XFER-O08-01 is open as a separate decision of both owners; the RID remains OFN's (§12.3, RF-O08-01).
 
-This establishes an obstruction to quotienting the **full** model by arbitrary common-token shifts. It does not remove common-phase gauge, prove that zero is a unique rest frame, or turn a formal step into external physical time. TDR-G now records that the common token shift lies outside its covariance group and is a symmetry of the birth-free sector only, not a gauge (SG-14). Covariance alone does not declare the residual symmetry to be gauge. No TDRG rule or custody transfer is enacted here; the transfer proposal is in `OFN_TDRG_FINDING_A_HANDOFF.md` and stays open until TDR-G v2.13 decides.
+This establishes an obstruction to quotienting the **full** model by arbitrary common-token shifts. It does not remove common-phase gauge, prove that zero is a unique rest frame, or turn a formal step into external physical time. TDR-G now records that the common token shift lies outside its covariance group and is a symmetry of the birth-free sector only, not a gauge (SG-14). Covariance alone does not declare the residual symmetry to be gauge. No TDRG rule or custody transfer is enacted here; the transfer proposal is in `OFN_TDRG_FINDING_A_HANDOFF.md` and remains open pending a separate two-owner custody decision; TDR-G v2.13 does not enact it.
+
+Reference-only example (RF-O08-04): TDR-G v2.13 §6.13 distinguishes exact no-birth spectrum conservation from nonclosure of the advance spectrum alone under births. The selected-centre token histogram is a sufficient one-step interface for the successor token census, not a selected physical state or a proof of autonomous event selection from census data.
 
 `[DEF]` [RID: RTG-OFN-DEF-CONTINUOUS-REPRESENTATION] **Continuous representation.** The selected dyad uses $(\rho,\eta)$; a lifted phase chart, a wrapped phase representative, the linear eigenframe and a nonlinear normal-form chart must be distinguished. A scalar $Q$ is an observable, not by itself a complete replacement for $(\rho,\eta)$. Pole-swap physical meaning is §6.4, not implied by writing a log-ratio coordinate.
 
-`[DEF]` [import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.1 #sec-6-1-primitive | GEN-DEF-PRIMITIVE-METRIC] The branch-local quadratic form is
+`[DEF]` [import: RTG_GENESIS_GEOMETRY_DSN_v2.10 §6.1 #sec-6-1-primitive | GEN-DEF-PRIMITIVE-METRIC] The branch-local quadratic form is
 $$B=\begin{pmatrix}1&-1/2\\-1/2&1\end{pmatrix},\qquad Q(\rho,\eta)=\rho^2-\rho\eta+\eta^2.$$
 Owner RID: GEN-DEF-PRIMITIVE-METRIC; IMP-O08-10 identifier request fulfilled at source-text scope.  
 Depends on: the specified real primitive chart and normalization, not an unrestricted wrapped or normal-form identification.
 
-`[THM]` [import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §6.1 #sec-6-1-primitive | GEN-THM-PRIMITIVE-METRIC-INVARIANCE] For $A=DT(0)$ in that model, $A^\top BA=B$.
+`[THM]` [import: RTG_GENESIS_GEOMETRY_DSN_v2.10 §6.1 #sec-6-1-primitive | GEN-THM-PRIMITIVE-METRIC-INVARIANCE] For $A=DT(0)$ in that model, $A^\top BA=B$.
 Owner RID: GEN-THM-PRIMITIVE-METRIC-INVARIANCE; IMP-O08-11 identifier request fulfilled at source-text scope.  
 Depends on: the selected $T$, linearization and $B$. This import does not make $B$ a generator-independent physical metric or require nonlinear $Q$ conservation.
 
 `[DEF]` [RID: RTG-OFN-DEF-FINITE-DESCRIPTION] **Finite description and finite domain.** A finite current node list, a finite alphabet per node, a uniform node-count cap, and a finite global state set are different specifications. Exact finite arithmetic is the adopted discrete-model practice; continuous approximation is not substituted into its primitive update without changing that model and satisfying the programme firewall.
 
-`[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.2 #sec-6-2-holonomy | TDRG-THM-RECURRENCE] A specified deterministic update on the fixed-cap finite state set is eventually periodic.
+`[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.2 #sec-6-2-holonomy | TDRG-THM-RECURRENCE] A specified deterministic update on the fixed-cap finite state set is eventually periodic.
 Owner RID: TDRG-THM-RECURRENCE (TDR-G §7 owner RID map); administrative entry IMP-O08-08.  
 Depends on: fixed $N$, a fixed node-count cap, a well-defined deterministic rule and finite auxiliary state. Uncapped growth is not covered.
 
@@ -270,7 +272,7 @@ Depends on: fixed $N$, a fixed node-count cap, a well-defined deterministic rule
 
 **Effective-model adoption.** The programme uses
 $$T(\rho,\eta)=\bigl(\rho-\sin\eta,\;\eta+e^\rho-1-\sin\eta\bigr)$$
-as its selected continuous dyad model, as recorded in Programme v1.3 OPEN-P0 and Dyadic v6.4.22 §6.1 (`DYAD-DEF-PRIMITIVE-MAP`; Genesis `GEN-DEF-PRIMITIVE-MAP` is its recognized alias). Its source definition and conventions are IMP-O08-12; adopting it is not deriving it. CUST-O09-01 is answered (§12.3).
+as its adopted reference continuous dyad model, as recorded in Programme v1.4 OPEN-P0 and Dyadic v6.4.24 §6.1 (`DYAD-DEF-PRIMITIVE-MAP`; Genesis `GEN-DEF-PRIMITIVE-MAP` is its recognized alias). Its source definition and conventions are IMP-O08-12; adopting it is not deriving it. CUST-O09-01 is answered (§12.3).
 
 `[HYP]` A relational selection principle, effective limit or universality argument might justify this model or a specified equivalent class. Scientific selection remains OPEN-OFN-1 / Programme OPEN-P0. The same openness does not demote complete mathematical results that explicitly assume $T$.
 
@@ -355,13 +357,13 @@ Provenance: the submitted reviewer traces the earlier proposed continuation argu
 
 `[DEF]` [RID: RTG-OFN-DEF-DIST-ZN] **OFN-DIST-ZN.** Separate (i) arithmetic on $\mathbb Z_N$, (ii) the specified cycle graph $C_N$ with cyclic order, arcs and graph distance, and (iii) derived physical lengths, metric structure and curvature. Graph distance is a mathematical metric; calling it proto-geometry means that it has not been identified with physical spacetime distance. The arithmetic alone does not make every possible generator/cyclic embedding canonical.
 
-`[ALG]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.5 #sec-6-5-twonode | TDRG-ALG-LEM-REACH] A free dyad orbit is the coset $\Delta_0+g\mathbb Z_N$, $g=\gcd(d,N)$; band reachability is $\mathcal D_k\cap(\Delta_0+g\mathbb Z_N)\ne\varnothing$.
+`[ALG]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.5 #sec-6-5-twonode | TDRG-ALG-LEM-REACH] A free dyad orbit is the coset $\Delta_0+g\mathbb Z_N$, $g=\gcd(d,N)$; band reachability is $\mathcal D_k\cap(\Delta_0+g\mathbb Z_N)\ne\varnothing$.
 Depends on: isolated free inertia, the specified cyclic graph/band and initial state. It is a branch-local representation of orbit–band intersection, not a continuous-dynamics bridge. See IMP-O08-05.
 
 **[SG-ZN-GEOM]** TDR-G may use its declared arithmetic, graph distance, arcs, cyclic order, antipode and orbit lattices. These are not physical metric lengths, physical curvature or a continuum geometry without a proved, typed bridge.  
 Violation: mathematical proto-geometry is substituted for a derived physical spacetime metric. This guard does not deny that graph distance is mathematically a metric.
 
-`[INTERP]` Three-node no-birth spectrum conservation and parity-conditioned history statistics are examples of possible relational structure below a physical metric layer. The exact spectrum and empirical memory are separate claims, with the source's SG-11–SG-13 and birth exclusions retained (IMP-O08-16; RF-O08-04). The magnitude multiset is not identified with its coarser gcd-spacing data. Neither result becomes a foundational law.
+`[INTERP]` Three-node no-birth spectrum conservation and parity-conditioned history statistics are examples of possible relational structure below a physical metric layer. The exact spectrum and empirical memory are separate claims, with the source's SG-11–SG-13 and birth exclusions retained (IMP-O08-16; RF-O08-04). The magnitude multiset is not identified with its coarser gcd-spacing data. The current n-node no-birth conservation and birth-spectrum nonclosure are separate owner results (TDR-G v2.13 §6.13; RF-O08-04). Neither the earlier nor the newer result becomes a foundational law.
 
 ---
 
@@ -475,7 +477,7 @@ with $N$ the λ-equivariant normal form (or $\mathcal F_{\kappa,\Phi}$ in a Boch
 | Clock | Primitive $T$; $T^6$ derived sampling. |
 | Domain | A local neighbourhood of 0. |
 | Readout chart | Transported ($z$ or $\Phi$). Raw-$W$ readouts carry static chart offsets and must subtract them or use transported modes (§5.5.6). |
-| κ values | The single κ table of §5.5 (other sites point here): **κ = 0** — decoupled reference (raw B), excluded from the coupled class by Q6. **κ = 1** — flat: raw A1 fails Q4; class C is flat; narrow-Q6 (i) holds via `GEN-THM-K3-SIXSTEP-FACTOR-NOGO`; this is not a failed coupling theorem. **κ = 2** — the closure multiplier $(1-\kappa)\lambda=-\lambda$ lies on the unit circle; the hyperbolic centre-manifold reduction does not apply; not a proved Q6 failure (Genesis γ ∈ {0,2} OPEN). **0 < κ < 2, κ ≠ 1** — linear attraction of the closure (mean) mode with modulus $\lvert1-\kappa\rvert$, the range of the stability statements; not a basin theorem. **κ ∉ {0, 1, 2}** — the formal class-C contract. The lock identities themselves do not "fail" at exceptional κ merely because a factor theorem excludes those values. γ ≡ κ is the declared parameter convention of Genesis §6.3c and RRF §6.2a, not a raw/transported model identity. |
+| κ values | The single κ table of §5.5 (other sites point here): **κ = 0** — decoupled reference (raw B), excluded from the coupled class by Q6. **κ = 1** — flat: raw A1 fails Q4; class C is flat; narrow-Q6 (i) holds via `GEN-THM-K3-SIXSTEP-FACTOR-NOGO`; this is not a failed coupling theorem. **κ = 2** — the closure multiplier $(1-\kappa)\lambda=-\lambda$ lies on the unit circle; the hyperbolic centre-manifold reduction does not apply; not a proved Q6 failure (Genesis γ ∈ {0,2} OPEN). **0 < κ < 2, κ ≠ 1** — linear attraction of the closure (mean) mode with modulus $\lvert1-\kappa\rvert$, the range of the stability statements; not a basin theorem. **κ ∉ {0, 1, 2}** — the formal class-C contract. The lock identities themselves do not "fail" at exceptional κ merely because a factor theorem excludes those values. γ ≡ κ is OFN's class-C parameter convention, also recorded by RRF §6.2a, applied to the Genesis family parameter γ (§6.3c); not a raw/transported model identity or an identification with the Genesis face-lift κ_f. |
 | Registration | Registered by RRF as a reference-only *model-contract row*, not a native profile (`rrf-v0.8.4` §6.2a, importing `RTG-OFN-DEF-TRIAD-MODEL-CONTRACT`), with a representation-level ψ-readout entry; OPEN-B/E1 stays locked (RF-O10-01). |
 
 Formal properties `[ALG]` [scope: formal family; for $\mathcal F_{\kappa,\Phi}$ real $C^\infty$] [provenance: OFN co-owner SESSION computation, recorded, not registered]:
@@ -535,7 +537,7 @@ Reference summary (RF-O10-02 carries the grades): for the chart family $g_a(z)=z
 
 ### 6.2 What a Derivation Would Look Like
 
-Under Programme v1.3 OPEN-P0, scientific routes include a stated variational/selection principle, an effective limit with explicit source/target/scaling, or a universality theorem for a defined model class and observable set. OPEN-P1 is a prerequisite for the discrete-limit route only. Event formalization is a prerequisite of an event-based selection argument, not automatically of every possible route.
+Under Programme v1.4 OPEN-P0, scientific routes include a stated variational/selection principle, an effective limit with explicit source/target/scaling, or a universality theorem for a defined model class and observable set. OPEN-P1 is a prerequisite for the discrete-limit route only. Event formalization is a prerequisite of an event-based selection argument, not automatically of every possible route.
 
 `[COR]` Scope replacement recorded in Appendix B, OFN08-C16.
 
@@ -554,14 +556,14 @@ Under Programme v1.3 OPEN-P0, scientific routes include a stated variational/sel
 | Local $Q$ contraction | Why this behavior and this observable in the intended physical sector? | IMP-O08-20 supplies an identified local bound; its physical selection is separate |
 | Birth and memory | Which response or retained consequence, if any, makes a distinguished token a physical interaction? | Current RECOG results are inventoried in RF-O09-02; independent retention is not made mandatory here |
 
-`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION] [scope: diagnostic power-character family] [provenance: source-read at `recog-v0.3.26`] For $r,s>0$, fixed real $k$, and the assumed law
+`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION] [scope: diagnostic power-character family] [provenance: source-read at `recog-v0.3.27`; matched §6.6a span] For $r,s>0$, fixed real $k$, and the assumed law
 $$g(rs)=g(r)+r^k g(s),\qquad g'(1)=1,$$
 the owner obtains
 $$g_k(r)=\frac{r^k-1}{k}\quad(k\ne0),\qquad g_0(r)=\log r.$$
 For $k\ne0$, the algebraic proportionality $g=c(r^k-1)$ uses no extra regularity assumption; normalization fixes $c=1/k$. For $k=0$, the stated measurable/continuous-at-a-point Cauchy class and normalization give the logarithm.
 Depends on: the composition law, the specified power character and source normalization/regularity assumptions. These premises are not adopted as physical laws by OFN. See IMP-O09-01.
 
-`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION] In the corresponding fixed-radial-row family, the cubic coefficient is
+`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION] In the corresponding fixed-radial-row family, the cubic coefficient is
 $$\mu_6(k)=-\frac{k^2}{2}-i\frac{\sqrt3}{3}(1+k^2),$$
 and it equals the selected primitive coefficient precisely when $|k|=1$.
 Depends on: that family and the source shear-jet law, not a uniqueness principle for all admissible generators. See IMP-O09-02. This is inverse identification from specified return data.
@@ -570,12 +572,12 @@ Depends on: that family and the source shear-jet law, not a uniqueness principle
 
 ### 6.3 What the Six-Step Resonance Structure Contributes
 
-`[THM]` [import: RTG_GENESIS_GEOMETRY_DSN_v2.9 §1 and §6.1 #sec-6-1-primitive | GEN-THM-LIN-ORDER6] The selected linearization has $\lambda=e^{\pm i\pi/3}$, $A^3=-I$ and $A^6=I$.
+`[THM]` [import: RTG_GENESIS_GEOMETRY_DSN_v2.10 §1 and §6.1 #sec-6-1-primitive | GEN-THM-LIN-ORDER6] The selected linearization has $\lambda=e^{\pm i\pi/3}$, $A^3=-I$ and $A^6=I$.
 Depends on: $A=DT(0)$ for the selected model. This is linear return, not $T^6=\mathrm{id}$. See IMP-O08-13; the primitive-map identity is `DYAD-DEF-PRIMITIVE-MAP` (IMP-O08-12).
 
 `[HYP]` A relational symmetry/minimality principle could select that resonance. The existing Dyadic $p$-programme and RECOG all-$p$ report make selection an explicit question rather than establishing its answer (RF-O08-05). Neither a family parameter nor an iteration count can be changed silently to identify different generators.
 
-A nonzero nonlinear return residual alone does not entail an additional correction, reset, interaction or birth (Triadic v1.6.1 SG-18; reference-only scope clarification).
+A nonzero nonlinear return residual alone does not entail an additional correction, reset, interaction or birth (Triadic v1.7 SG-18; reference-only scope clarification).
 
 <a id="ofn-comparator-interface"></a>
 ### 6.4 RECOG Definition and Symmetry Interface
@@ -584,20 +586,20 @@ A nonzero nonlinear return residual alone does not entail an additional correcti
 
 `[DEF]` [RID: RTG-OFN-DEF-COMPARATOR-TYPING] **Comparator typing.** A pole comparison within a dyad, a comparison of two dyad states, and a retained self-comparison over time must be named separately. OFN adopts only this vocabulary requirement in the proposed revision; RECOG retains its technical comparator definitions and proofs.
 
-`[DEF]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26 §6.1 #sec-6-1-comparators | RECOG-DEF-POLE-COMPARATOR] The pole comparator is $C_{\rm pole}=e^{i\eta}$ within one dyad.
+`[DEF]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27 §6.1 #sec-6-1-comparators | RECOG-DEF-POLE-COMPARATOR] The pole comparator is $C_{\rm pole}=e^{i\eta}$ within one dyad.
 Depends on: the source pole-phase convention; this is not the eigenframe angle or a physical trigger. Administrative entry IMP-O08-17, pole-definition component.
 
-`[DEF]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26 §6.1 #sec-6-1-comparators | RECOG-DEF-STATE-COMPARATOR] In the source's local lifted linear $p=6$ eigenframe, the state comparator is $C_\to(a,b)=\overline W_aW_b$; its normalization requires $Q_aQ_b>0$.
+`[DEF]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27 §6.1 #sec-6-1-comparators | RECOG-DEF-STATE-COMPARATOR] In the source's local lifted linear $p=6$ eigenframe, the state comparator is $C_\to(a,b)=\overline W_aW_b$; its normalization requires $Q_aQ_b>0$.
 Depends on: the declared lift, eigenframe normalization, orientation and nonzero-state domain. A nonlinear normal-form chart does not leave the comparator's formula unchanged without transporting it. Administrative entry IMP-O08-17, state-definition component; RF-O09-01 records the separate owner tracks without adopting new OFN vocabulary.
 
-`[ALG]` [assuming: the stated radial-covariance and Fourier-minimality premises] [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26 §6.4 #sec-6-4-selection | RECOG-ALG-SELECTION-SIN] With swap-odd radial coordinate, the specified covariance, $2\pi$-periodicity, endpoint stationarity and lowest nonzero Fourier harmonic, the radial forcing has the form $a_1\sin\eta$. The coefficient $a_1=-1$ and the full phase-shear function are not selected by this implication.
+`[ALG]` [assuming: the stated radial-covariance and Fourier-minimality premises] [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27 §6.4 #sec-6-4-selection | RECOG-ALG-SELECTION-SIN] With swap-odd radial coordinate, the specified covariance, $2\pi$-periodicity, endpoint stationarity and lowest nonzero Fourier harmonic, the radial forcing has the form $a_1\sin\eta$. The coefficient $a_1=-1$ and the full phase-shear function are not selected by this implication.
 Depends on: exactly those assumptions and the source's local radial-row construction. See IMP-O08-18. OFN does not adopt full pole-swap covariance as a physical axiom through this import.
 
-`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26 §6.6 #sec-6-6-swap-projection | RECOG-ALG-SWAP-SPLIT] For the coordinate action $S_o(\rho,\eta)=(-\rho,-\eta)$,
+`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27 §6.6 #sec-6-6-swap-projection | RECOG-ALG-SWAP-SPLIT] For the coordinate action $S_o(\rho,\eta)=(-\rho,-\eta)$,
 $$T\circ S_o-S_o\circ T=(0,2(\cosh\rho-1)).$$
 Depends on: the specified primitive map and lifted coordinate action, not an already established physical exchange operation. See IMP-O08-19.
 
-`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY] For
+`[ALG]` [import: RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY] For
 $$T_k(\rho,\eta)=(\rho-\sin\eta,\ \eta+g_k(e^\rho)-\sin\eta),\qquad S(\rho,\eta)=(-\rho,-\eta),$$
 the exact identity is
 $$S\circ T_k\circ S=T_{-k}\qquad(k\in\mathbb R).$$
@@ -618,11 +620,11 @@ Current owner results relevant to those questions are referenced in RF-O08-06 an
 
 TDR-G owns the state updates, component definitions, `CONV-TICK`, `CONV-P3CYC` and named policies. OFN records their role as adopted models and requests a complete covariance/accounting contract. It does not certify that `bound_symmetric` or any other rule is the unique background-independent solution.
 
-`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.3 #sec-6-3-interaction | TDRG-DEF-CONV-TICK] The update order is advance, snapshot/classify, then synchronous events using that snapshot, without a same-tick re-advance.
-Depends on: the source's actual update specification and policy; its reported script agreement is a separate engineering claim, not rerun here. See IMP-O08-14.
+`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.3 #sec-6-3-interaction | TDRG-DEF-CONV-TICK] The update order is advance, snapshot/classify, then synchronous events using that snapshot, without a same-tick re-advance.
+Depends on: the source's actual update specification and policy. Current CONV-TICK step 4 classifies in order: isolated node (no edge), single edge, single-star, multistar, path, cycle; balanced ties are path-rule outcomes, not a component class. The advance–snapshot–synchronous-event order is unchanged; its reported script agreement is a separate engineering claim, not rerun here. See IMP-O08-14.
 
-`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.3 #sec-6-3-interaction | TDRG-DEF-CONV-P3CYC] The oriented path uses successor-token shift.
-Depends on: a valid path orientation under `TDRG-DEF-ORIENT` (balanced path-tie on $S=0\wedge2E\equiv0$, `tdrg-v2.12.14` §6.3). On the canonical branch `bound_symmetric` the owner states relabelling covariance under SG-14 ($\mathrm{Sym}(V)\times\mathbb Z_N^{\rm phase}$, modulo newborn relabelling), supported by a finite equivariance check at $N=24$; other policy branches only once their covariance is separately established, and `largest_center`'s ID tie-break is a recorded exception (`TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK`). See IMP-O08-15 and RF-O08-01.
+`[DEF]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.3 #sec-6-3-interaction | TDRG-DEF-CONV-P3CYC] The oriented path uses successor-token shift.
+Depends on: a valid path orientation under `TDRG-DEF-ORIENT` (balanced path-tie on $S=0\wedge2E\equiv0$, `tdrg-v2.13` §6.3). On the canonical branch `bound_symmetric` the owner states relabelling covariance under SG-14 ($\mathrm{Sym}(V)\times\mathbb Z_N^{\rm phase}$, modulo newborn relabelling), supported by a finite equivariance check at $N=24$; other policy branches only once their covariance is separately established, and `largest_center`'s ID tie-break is a recorded exception (`TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK`). See IMP-O08-15 and RF-O08-01.
 
 ### 7.2 The Policy Branch Problem
 
@@ -636,10 +638,10 @@ Reference-only source report (RF-O08-07): TDR-G v2.12.14 §§6.3/6.6 reports dif
 
 `[DEF]` The present $\mathcal D_k$ is a wrapped graph-distance half-width around the discrete antipode (IMP-O08-03). It is not already a discretization of RECOG's continuous oriented excursion. Any proposed relation to that excursion needs a named bridge and the separate state/comparator maps.
 
-`[ALG]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.5 #sec-6-5-twonode | TDRG-ALG-LEM-RETRIG] Under the isolated-dyad snapshot semantics, an impact offset retriggers when $\varepsilon\in B_k\cap(B_k+d)$; the source states existence of such an offset iff $|d|_c\le2k$ in the stated narrow-band regime.
+`[ALG]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.5 #sec-6-5-twonode | TDRG-ALG-LEM-RETRIG] Under the isolated-dyad snapshot semantics, an impact offset retriggers when $\varepsilon\in B_k\cap(B_k+d)$; the source states existence of such an offset iff $|d|_c\le2k$ in the stated narrow-band regime.
 Depends on: $B_k=[-k,k]$ in the cyclic representation, even $N$, the narrow-band model domain, the actual impact phase, and no third-node interaction. The resulting displayed alternation has period dividing two; $d=0$ is the fixed-state case, as the owner now also states (OFN08-C12 fulfilled at `tdrg-v2.12.14`). See IMP-O08-07.
 
-`[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.12.14 §6.2 #sec-6-2-holonomy | TDRG-THM-NARROW-BAND-EXCLUSION] For $k<N/6$, a triangle cannot have all three pairs defect-related.
+`[THM]` [import: RTG_DISCRETE_GENESIS_DSN_v2.13 §6.2 #sec-6-2-holonomy | TDRG-THM-NARROW-BAND-EXCLUSION] For $k<N/6$, a triangle cannot have all three pairs defect-related.
 Owner RID: TDRG-THM-NARROW-BAND-EXCLUSION (TDR-G §7 owner RID map); administrative entry IMP-O08-04B.  
 Depends on: the source's node-difference closure and band definition, with the strict inequality. This constrains the defect graph, not physical triad existence in every model.
 
@@ -652,7 +654,7 @@ Depends on: the source's node-difference closure and band definition, with the s
 
 > **[Guard SG-OFN-PRIMACY applies]**
 
-OFN coordinates the ontological criterion; a designated technical owner must define any admissible triadic model and prove its relation to the dyad. Programme v1.3 distinguishes OPEN-P2A from P2B; the same distinction governs OPEN-OFN-3A/3B.
+OFN coordinates the ontological criterion; a designated technical owner must define any admissible triadic model and prove its relation to the dyad. Programme v1.4 distinguishes OPEN-P2A from P2B; the same distinction governs OPEN-OFN-3A/3B.
 
 `[DEF]` [RID: RTG-OFN-DEF-REDUCTION-TARGET] **Reduction target, not established construction.** Specify spaces, gauges, an independently motivated model class and an embedding $\iota$ such that
 $$T_3\circ\iota=\iota\circ T.$$
@@ -660,7 +662,7 @@ The submanifold must be invariant. Agreement of the longitudinal row on $c=0$ wi
 
 `[COR]` Scope replacement recorded in Appendix B, OFN08-C04.
 
-Reference-only source report (RF-O08-08): Triadic v1.6.1 and Genesis v2.8.5 (claim-level pin; statement not re-read at `gen-v2.9`) retain scoped dyadic-fracture/transverse-mode constructions, with the owner qualifications recorded in RF-O08-02/03/08. This is a different direction of construction from deriving an invariant dyadic subsystem of independently specified triadic dynamics. OFN neither merges those models nor transfers their proof ownership.
+Reference-only source report (RF-O08-08): Triadic v1.7 and Genesis v2.8.5 (claim-level pin; statement not re-read at `gen-v2.9`) retain scoped dyadic-fracture/transverse-mode constructions, with the owner qualifications recorded in RF-O08-02/03/08. This is a different direction of construction from deriving an invariant dyadic subsystem of independently specified triadic dynamics. OFN neither merges those models nor transfers their proof ownership.
 
 ---
 
@@ -706,7 +708,7 @@ Question: Which relational principle, if any, selects the complete TDR-G rule/po
 Closure criterion: Specify full state and gauge actions; establish update descent/presentation covariance; derive or explicitly delimit the event/policy law. Separate named model adoption from physical selection.  
 Dependencies: TDRG-OPEN-INTERACTION-ONSET; TDRG-OPEN-MULTISTAR-AXIOM; A8, IQP-E/OPA/FSP only where actually invoked.  
 Notify: TDRG, NUMGEN/DISC; Programme P1 routes.  
-Next required artifact or decision: the owner state/rule/covariance record is delivered (`tdrg-v2.12.14`: `TDRG-DEF-ZN-STATE`, SG-14, `TDRG-DEF-ORIENT`; Finding A statement accepted); recover the six-constraint list. A fixed-star $2c=0$ is not a covariance theorem for all policies, and TDR-G's ruling is not an ontological derivation of the rule.
+Next required artifact or decision: the owner state/rule/covariance record is delivered (`tdrg-v2.13`: `TDRG-DEF-ZN-STATE`, SG-14, `TDRG-DEF-ORIENT`; Finding A statement accepted); recover the six-constraint list and retain the distinction between the census with its supplied birth interface and a closed event-selection law (RF-O08-04). A fixed-star $2c=0$ is not a covariance theorem for all policies, and TDR-G's ruling is not an ontological derivation of the rule.
 
 ---
 
@@ -880,7 +882,7 @@ Dependencies: §1.2; IMP-O08-20 primitive contraction; NUMGEN local history/orde
 Notify: NUMGEN, RECOG, DYAD, TDRG; foundational users.  
 Next required artifact or decision: A physical clock/duration construction; no unique clock selected by inverse Q alone.
 
-`[THM]` [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.22 §6.14 | DYAD-THM-PRIM-CTR] [scope: selected primitive $T$; local real/lifted chart] For the owner's primitive $Q$,
+`[THM]` [import: RTG_DYADIC_OSCILLATOR_DSN_v6.4.24 §6.14 | DYAD-THM-PRIM-CTR] [scope: selected primitive $T$; local real/lifted chart] For the owner's primitive $Q$,
 $$0<Q-\frac32Q^2\le Q(T^6x)\le Q-\frac12Q^2<Q,\qquad0<Q\le\frac1{400}.$$
 The owner supplies the forward-invariant six-phase tube from $U=\{0<Q\le1/625\}$, $U_T=\bigcup_{j=0}^{5}T^j(U)$. For its six-step primitive-orbit sequence $Q_m=Q(T^{6m}x)$,
 $$Q_m\le\frac{Q_0}{1+\frac12Q_0m}.$$
@@ -982,8 +984,8 @@ This table records the programme remit and limits of rejection. A constitutional
 | Absolute phase as observable | Common-phase gauge must preserve predictions | Gauge-invariant token/relative variables cannot be deleted by this statement |
 | Primitive external-force ontology | Does not meet the internal relational programme aim | Force-like coordinates or an effective force are not thereby invalid |
 | Unbridged smooth coupling inserted into TDR-G | Not the current native discrete model; physical transfer remains gated | Continuous models are not rejected by that model restriction |
-| Arbitrary path label / first listed star center | Passive labels cannot choose physical outcomes | The owner rule is `TDRG-DEF-ORIENT` with the balanced path-tie and SG-14 covariance on the canonical branch (`tdrg-v2.12.14`); `largest_center`'s node-ID tie-break is the recorded surviving label-dependent instance (`TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK`) |
-| Total additive token sum as a physical conserved quantity | Under `TDRG-DEF-STAR` the sum $\Sigma\delta$ changes by $-\delta_A \pmod N$ at a star event and is preserved by the token permutations (swap, path successor shift, ties); exact conservation therefore fails on the birth-capable model | The common token shift is not a gauge of the full model (TDR-G SG-14: outside $G_{\rm cov}$, a symmetry of the birth-free sector only). Nonconservation and gauge dependence remain distinct: neither a physical-momentum reading nor a universal "unphysical" verdict follows without a named observable and physical contract. TDR-G's own "gauge-like" / "gauge artifact" labels are referred back to TDR-G (`pipes/TDRG/20261029-OFN-token-sum-gauge-label.md`) |
+| Arbitrary path label / first listed star center | Passive labels cannot choose physical outcomes | The owner rule is `TDRG-DEF-ORIENT` with the balanced path-tie and SG-14 covariance on the canonical branch (`tdrg-v2.13`); `largest_center`'s node-ID tie-break is the recorded surviving label-dependent instance (`TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK`) |
+| Total additive token sum as a physical conserved quantity | Under `TDRG-DEF-STAR` the sum $\Sigma\delta$ changes by $-x \pmod N$ at a birth with centre snapshot token $x$ (minus the sum of the centre tokens for simultaneous births) and is preserved by token permutations; exact conservation therefore fails in general on the birth-capable model | TDR-G v2.13 SG-3 and §6.13: the sum is invariant under the declared phase gauge and relabelling; "gauge-like" / "gauge artifact" were withdrawn as a wrong reason (OFN finding answered, `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md`). The common token shift is not a gauge of the full model (SG-14: outside $G_{\rm cov}$; birth-free symmetry only). Nonconservation, gauge invariance and physical interpretation remain distinct: the owner has not adopted the sum as a physical observable, and neither physical momentum nor universal unphysicality follows. |
 
 `[COR]` Scope replacement recorded in Appendix B, OFN08-C05/C18.
 
@@ -996,199 +998,203 @@ This table records the programme remit and limits of rejection. A constitutional
 
 The following imports reproduce only the specific owner statement used. “Source inspected” is not an assertion that the complete owner's science, numerical campaign or archived certificate was independently re-certified. Relevant missing RID and interpretation issues remain explicit. Source-version refresh does not promote a theorem, its physical application or the receiving OFN OPEN.
 
-Normative references: DSN Methodology v1.4 (`methodology-v1.4`) §§0.5–0.7, 1.1, 3.2–3.4, 4–5, 7, 8 and 12–13; Programme Overview v1.3 (`programme-v1.3`) §§3–5, §7 and §8 (SG-PROG-1–4). They are adopted references, not mathematical theorem imports.
+Normative references: DSN Methodology v1.4 (`methodology-v1.4`) §§0.5–0.7, 1.1, 3.2–3.4, 4–5, 7, 8 and 12–13; Programme Overview v1.4 (`programme-v1.4`) §§3–5, §7 and §8 (SG-PROG-1–4). They are adopted references, not mathematical theorem imports.
 
-**Governing editions at this edition** (claim-level pins are at each use): Programme v1.3, Methodology v1.4, Dyadic v6.4.22, Genesis v2.9, RRF v0.8.4, TDR-G v2.12.14, NUMGEN v1.21, RECOG v0.3.26, Triadic v1.6.1. A pin left on an older edition is a claim-level pin whose statement was not re-read at the governing tag; it is labelled so where it occurs (Methodology v1.4 §1.1 rule 4).
+**Governing editions at this build checkpoint** (claim-level pins are at each use): Programme v1.4, Methodology v1.4, Dyadic v6.4.24, Genesis v2.10, RRF v0.8.4, TDR-G v2.13, NUMGEN v1.22, RECOG v0.3.27, Triadic v1.7, DZT v0.19 and AZ v0.10. Matched statement pins move only at the stated scope. Older proof/evidence sources, Genesis v2.8.5 reference components, NUMGEN v1.21 uses and other unverified claim comparisons remain at their stated pins; a newer companion is not itself a claim re-verification (Methodology v1.4 §1.1 rule 4).
 
 The `IMP-O08-*` keys identify this consumer's administrative entries. They are not invented source RIDs. Owner RIDs are cited as the owner registers them; TDR-G's former labels (`LEM-*`, `CONV-*`) are aliases of the `TDRG-ALG-LEM-*` / `TDRG-DEF-CONV-*` RIDs of its §7 map, and `RID unavailable` remains only where the owner has registered none (IMP-O08-01).
 
 ### 11.2 Claim-Level Import Entries
 
-The inherited 21 administrative import entries remain, with three accepted RECOG additions IMP-O09-01–03 at their declared source scope. IMP-O08-17 records two independently identified source definitions under its preserved parent key. Updated blocks state their exact source and scope; the TDR-G imports carry the owner RIDs of `tdrg-v2.12.14` §7 with unchanged statements. Source inspection, file identity, source adoption and proof reproduction are separate. No original owner certificate is rerun in this release. Missing scientific IDs are requested from their owners, not replaced by module or artifact IDs.
+The inherited 21 administrative import entries remain, with three accepted RECOG additions IMP-O09-01–03 at their declared source scope. IMP-O08-17 records two independently identified source definitions under its preserved parent key. Updated blocks state their exact source and scope; the TDR-G imports retain their owner RIDs at `tdrg-v2.13`; the STAR event-domain and CONV-TICK classification corrections are recorded at their use, without changing the centre/newborn map or the tick order. Other matched statements retain their earlier scope. Source inspection, file identity, source adoption and proof reproduction are separate. No original owner certificate is rerun in this release. Missing scientific IDs are requested from their owners, not replaced by module or artifact IDs.
 
 <a id="imp-o08-01"></a>
-- **IMP-O08-01** :: Zero-origin and first-dyad definitions :: `RTG_GENESIS_GEOMETRY_DSN_v2.9` §6.1 #sec-6-1-primitive :: §1.3 notation only
-  Source identity: `RID unavailable` (Genesis registers no RID for these two blocks at `gen-v2.9`). Source status: `DEF`. Depends on: The formal definitions O0=0 and 0→(A,B), A+B=0; no physical creation/conservation theorem.
-  Reconciliation: The source expressions are retained unchanged at `gen-v2.9`; a dedicated Genesis identifier is Genesis's decision. OFN's own convention block now carries `RTG-OFN-DEF-ZERO-ORIGIN`.
+- **IMP-O08-01** :: Zero-origin and first-dyad definitions :: `RTG_GENESIS_GEOMETRY_DSN_v2.10` §6.1 #sec-6-1-primitive :: §1.3 notation only
+  Source identity: `RID unavailable` (Genesis registers no RID for these two blocks at `gen-v2.10`). Source status: `DEF`. Depends on: The formal definitions O0=0 and 0→(A,B), A+B=0; no physical creation/conservation theorem.
+  Reconciliation: The source expressions are retained unchanged at `gen-v2.10`; a dedicated Genesis identifier is Genesis's decision. OFN's own convention block now carries `RTG-OFN-DEF-ZERO-ORIGIN`.
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o08-02"></a>
-- **IMP-O08-02** [RID: TDRG-DEF-ZN-STATE; TDRG-DEF-PHYSICAL-STATE; TDRG-DEF-REL-ADVANCE] :: Full discrete phase/token state and global-phase gauge :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.1 #sec-6-1-state :: §4.1 state contract :: source definition and coordinate domain
+- **IMP-O08-02** [RID: TDRG-DEF-ZN-STATE; TDRG-DEF-PHYSICAL-STATE; TDRG-DEF-REL-ADVANCE] :: Full discrete phase/token state and global-phase gauge :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.1 #sec-6-1-state :: §4.1 state contract :: source definition and coordinate domain
   Source status: [DEF]. Depends on: Exact owner state, node count and action θ_i→θ_i+c. The source also has phase-only summary wording; OFN does not use it to delete tokens.
-  Synchronization: owner RIDs registered (`tdrg-v2.12.14` §7). `TDRG-DEF-PHYSICAL-STATE` still says "only $\Delta_{ij}$ are physical"; OFN does not use that phrase to delete tokens. Finding A: statement accepted by TDR-G, custody XFER-O08-01 deferred to v2.13; RF-O08-01.
+  Synchronization: owner RIDs registered (`tdrg-v2.13` §7). `TDRG-DEF-PHYSICAL-STATE` still says "only $\Delta_{ij}$ are physical"; OFN does not use that phrase to delete tokens. Finding A: statement accepted by TDR-G, custody XFER-O08-01 open, separate joint decision; OFN retains the RID; RF-O08-01.
 
 <a id="imp-o08-03"></a>
-- **IMP-O08-03** [RID: TDRG-DEF-BAND] :: Even-N cyclic defect band :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.1 #sec-6-1-state :: §§3.2/7.3 :: source definition and coordinate domain
+- **IMP-O08-03** [RID: TDRG-DEF-BAND] :: Even-N cyclic defect band :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.1 #sec-6-1-state :: §§3.2/7.3 :: source definition and coordinate domain
   Source status: [DEF]. Depends on: Declared cycle distance and half-width k; no opposition-selection theorem.
   Synchronization: owner RID registered; no continuous excursion identified.
 
 <a id="imp-o08-04"></a>
-- **IMP-O08-04** [RID: TDRG-THM-HOLONOMY] :: Node-difference triangle holonomy :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.2 #sec-6-2-holonomy :: flat closure example in §2.2 and OPEN-FRUSTRATION :: stated model and theorem domain
+- **IMP-O08-04** [RID: TDRG-THM-HOLONOMY] :: Node-difference triangle holonomy :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.2 #sec-6-2-holonomy :: flat closure example in §2.2 and OPEN-FRUSTRATION :: stated model and theorem domain
   Source status: [THM]. Depends on: Δ_ij=θ_i−θ_j over one node assignment; sign convention changes must be consistent.
   Synchronization: owner RID registered; no re-ownership or curvature promotion.
 
 <a id="imp-o08-04b"></a>
-- **IMP-O08-04B** [RID: TDRG-THM-NARROW-BAND-EXCLUSION] :: Strict narrow-band exclusion :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.2 #sec-6-2-holonomy :: §7.3 :: stated model and theorem domain
+- **IMP-O08-04B** [RID: TDRG-THM-NARROW-BAND-EXCLUSION] :: Strict narrow-band exclusion :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.2 #sec-6-2-holonomy :: §7.3 :: stated model and theorem domain
   Source status: [THM]. Depends on: Even N, the source band, and k<N/6, not the unrestricted or equality-boundary case.
   Synchronization: owner RID registered.
 
 <a id="imp-o08-05"></a>
-- **IMP-O08-05** [RID: TDRG-ALG-LEM-REACH] :: Free orbit as coset and band–orbit intersection :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.5 #sec-6-5-twonode :: §4.6 and OPEN-SECTOR :: stated model and algebraic domain
+- **IMP-O08-05** [RID: TDRG-ALG-LEM-REACH] :: Free orbit as coset and band–orbit intersection :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.5 #sec-6-5-twonode :: §4.6 and OPEN-SECTOR :: stated model and algebraic domain
   Source status: [ALG]. Depends on: Isolated free dyad on Z_N with fixed d; no many-node persistence claim.
   Synchronization: owner RID registered; `LEM-REACH` is its alias.
 
 <a id="imp-o08-06"></a>
-- **IMP-O08-06** [RID: TDRG-ALG-LEM-NOANNIHIL] :: No free return from non-null to (0,0) :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.5 #sec-6-5-twonode :: §3.3 :: stated model and algebraic domain
+- **IMP-O08-06** [RID: TDRG-ALG-LEM-NOANNIHIL] :: No free return from non-null to (0,0) :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.5 #sec-6-5-twonode :: §3.3 :: stated model and algebraic domain
   Source status: [ALG]. Depends on: F(Δ,d)=(Δ+d,d), null=(0,0), integer time and free evolution only.
   Synchronization: owner RID registered (`LEM-NOANNIHIL` its alias); scoped import and original axiom retirement preserved; no universal no-erasure or birth theorem.
 
 <a id="imp-o08-07"></a>
-- **IMP-O08-07** [RID: TDRG-ALG-LEM-RETRIG] :: Impact-overlap condition and threshold role of k :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.5 #sec-6-5-twonode :: §§4.5/7.3 :: stated model and algebraic domain
+- **IMP-O08-07** [RID: TDRG-ALG-LEM-RETRIG] :: Impact-overlap condition and threshold role of k :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.5 #sec-6-5-twonode :: §§4.5/7.3 :: stated model and algebraic domain
   Source status: [ALG]. Depends on: Isolated dyad, even N, source narrow-band domain, impact ε in B_k∩(B_k+d), TDRG-DEF-CONV-TICK.
   Synchronization: owner RID registered (`LEM-RETRIG` its alias). The owner now states "a 2-cycle for $d\neq0$, a fixed point for $d=0$"; the OFN08-C12 request is fulfilled and the OFN statement is unchanged.
 
 <a id="imp-o08-08"></a>
-- **IMP-O08-08** [RID: TDRG-THM-RECURRENCE] :: Deterministic fixed-cap finite-state recurrence :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.2 #sec-6-2-holonomy :: §4.1 :: stated model and theorem domain
+- **IMP-O08-08** [RID: TDRG-THM-RECURRENCE] :: Deterministic fixed-cap finite-state recurrence :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.2 #sec-6-2-holonomy :: §4.1 :: stated model and theorem domain
   Source status: [THM]. Depends on: Fixed finite alphabets, cap and complete deterministic update; not unbounded growth.
   Synchronization: owner RID registered; no universal thermodynamic or chaos inference.
 
 <a id="imp-o08-09"></a>
-- **IMP-O08-09** [RID: TDRG-DEF-STAR] :: Star creates antipodal-shadow node/copies token and inverts center :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.3 #sec-6-3-interaction :: §3.4 :: source definition and coordinate domain
-  Source status: [DEF]. Depends on: Selected component, source rule, snapshot and policy; token/node changes are not a selected conservation law.
-  Synchronization: owner RID registered. Finding A: statement accepted by TDR-G and used in SG-14; custody XFER-O08-01 deferred to TDR-G v2.13; the RID stays OFN's; RF-O08-01.
+- **IMP-O08-09** [RID: TDRG-DEF-STAR] :: Star creates antipodal-shadow node/copies token and inverts center :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.3 #sec-6-3-interaction :: §3.4 :: source definition and coordinate domain
+  Source status: [DEF]. Depends on: Selected single-star component with exactly one valid centre (including non-pure shapes, TDR-G v2.13 §6.3), source rule, snapshot and policy; centre/newborn formula unchanged; token/node changes are not a selected conservation law.
+  Synchronization: owner RID registered. Finding A: statement accepted by TDR-G and used in SG-14; custody XFER-O08-01 open as a separate decision of both owners; the RID stays OFN's; RF-O08-01.
 
 <a id="imp-o08-10"></a>
-- **IMP-O08-10** :: B and Q in the primitive real chart :: `RTG_GENESIS_GEOMETRY_DSN_v2.9` §6.1 #sec-6-1-primitive :: §4.1
+- **IMP-O08-10** :: B and Q in the primitive real chart :: `RTG_GENESIS_GEOMETRY_DSN_v2.10` §6.1 #sec-6-1-primitive :: §4.1
   Source identity: `GEN-DEF-PRIMITIVE-METRIC`. Source status: `DEF`. Depends on: The stated matrix, real chart and normalization; no exact primitive/normal-form equality.
   Reconciliation: Identifier request fulfilled by the inspected GEN definition; no physical metric or new OFN definition is selected.
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o08-11"></a>
-- **IMP-O08-11** :: A^T B A=B :: `RTG_GENESIS_GEOMETRY_DSN_v2.9` §6.1 #sec-6-1-primitive :: §4.1 branch-local naturality
+- **IMP-O08-11** :: A^T B A=B :: `RTG_GENESIS_GEOMETRY_DSN_v2.10` §6.1 #sec-6-1-primitive :: §4.1 branch-local naturality
   Source identity: `GEN-THM-PRIMITIVE-METRIC-INVARIANCE`. Source status: `THM`. Depends on: Selected A=DT(0) and B; not nonlinear conservation or physical spacetime geometry.
   Reconciliation: Dedicated identity located. RECOG invariant-form uniqueness is not silently added to this import.
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o08-12"></a>
-- **IMP-O08-12** :: Primitive continuous dyad map :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22` §6.1 #sec-6-1-map :: §4.2
-  Source identity: `DYAD-DEF-PRIMITIVE-MAP` (registered provisional, Dyadic custody). Source status: `DEF`. Depends on: Selected K=1 model and local/lifted coordinate convention; no all-p or global fixed-point assertion.
-  Reconciliation: Dyadic owns the definition; Genesis records `GEN-DEF-PRIMITIVE-MAP` as its alias (`gen-v2.9` §1). CUST-O09-01 / REQ-O09-04 answered (Dyadic notice N4 received).
+- **IMP-O08-12** :: Primitive continuous dyad map :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.24` §6.1 #sec-6-1-map :: §4.2
+  Source identity: `DYAD-DEF-PRIMITIVE-MAP` (Dyadic custody; scope: Programme's reference map, with generator selection open (RTG-OPEN-GENERATOR-SELECTION, OPEN-P0)). Source status: `DEF`. Depends on: Adopted reference K=1 model and local/lifted coordinate convention; no all-p or global fixed-point assertion.
+  Reconciliation: Dyadic owns the definition; Genesis records `GEN-DEF-PRIMITIVE-MAP` as its alias (`gen-v2.10` §1). CUST-O09-01 / REQ-O09-04 answered (Dyadic notice N4 received).
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o08-13"></a>
-- **IMP-O08-13** :: Order-six linear resonance, A^3=-I :: `RTG_GENESIS_GEOMETRY_DSN_v2.9` §1 / §6.1 #sec-6-1-primitive :: §6.3
+- **IMP-O08-13** :: Order-six linear resonance, A^3=-I :: `RTG_GENESIS_GEOMETRY_DSN_v2.10` §1 / §6.1 #sec-6-1-primitive :: §6.3
   Source identity: `GEN-THM-LIN-ORDER6`. Source status: `THM`. Depends on: The selected linearization; not nonlinear sixth-iterate identity or a physical orientation bit.
   Reconciliation: Dedicated result ID located. Primitive-map custody is resolved separately: `DYAD-DEF-PRIMITIVE-MAP` (Dyadic custody), with `GEN-DEF-PRIMITIVE-MAP` as the Genesis alias (IMP-O08-12; CUST-O09-01 answered, REQ-O09-04 fulfilled). The linear order-six result is distinct from map custody and from generator selection.
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o08-14"></a>
-- **IMP-O08-14** [RID: TDRG-DEF-CONV-TICK] :: Advance–snapshot–synchronous-event order :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.3 #sec-6-3-interaction :: §7.1 :: source definition and coordinate domain
-  Source status: [DEF] convention; separate ENG/script-certification report not imported. Depends on: Owner snapshot and no same-tick re-advance semantics.
+- **IMP-O08-14** [RID: TDRG-DEF-CONV-TICK] :: Advance–snapshot–synchronous-event order :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.3 #sec-6-3-interaction :: §7.1 :: source definition and coordinate domain
+  Source status: [DEF] convention; separate ENG/script-certification report not imported. Depends on: Owner snapshot and no same-tick re-advance semantics; component precedence and ties-as-path-outcomes as stated in §7.1.
   Synchronization: owner RID registered (`CONV-TICK` its alias); the source-reported v18 engineering audit is not rerun (`[conv: v18]`, `EV-NOT-RERUN`).
 
 <a id="imp-o08-15"></a>
-- **IMP-O08-15** [RID: TDRG-DEF-CONV-P3CYC] :: Successor-token path shift :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.3 #sec-6-3-interaction :: §7.1 :: source definition and coordinate domain
+- **IMP-O08-15** [RID: TDRG-DEF-CONV-P3CYC] :: Successor-token path shift :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.3 #sec-6-3-interaction :: §7.1 :: source definition and coordinate domain
   Source status: [DEF] convention; separate ENG/script-certification report not imported. Depends on: An oriented path under `TDRG-DEF-ORIENT`; the antipodal endpoint/presentation question is discharged on the canonical branch at SG-14 scope.
   Synchronization: owner RID registered (`CONV-P3CYC` its alias). REQ-O09-05 endpoint component answered: `TDRG-DEF-ORIENT` (balanced path-tie on $S=0\wedge2E\equiv0$), SG-14 covariance on the canonical branch with a finite $N=24$ equivariance check, `largest_center` exception recorded. Reported convention-sensitivity numerics are not imported as a definition; motif and BIND3 numerics keep `[conv: v18]`.
 
 <a id="imp-o08-16"></a>
-- **IMP-O08-16** [RID: TDRG-ALG-LEM-SPECCONS] :: Pairwise absolute-advance multiset conservation under three-node no-birth token permutations :: `RTG_DISCRETE_GENESIS_DSN_v2.12.14` §6.12 #sec-6-12-threenode :: §4.6 example :: stated model and algebraic domain
+- **IMP-O08-16** [RID: TDRG-ALG-LEM-SPECCONS] :: Pairwise absolute-advance multiset conservation under three-node no-birth token permutations :: `RTG_DISCRETE_GENESIS_DSN_v2.13` §6.12 #sec-6-12-threenode :: §4.6 example :: stated model and algebraic domain
   Source status: [ALG]. Depends on: Fixed three-node token multiset and swap/path/tie transformations; no star birth. Gcd spacings are not substituted for the richer magnitude data.
-  Synchronization: owner RID registered (`LEM-SPECCONS` its alias); BIND3 statistics remain separate, RF-O08-04.
+  Synchronization: owner RID registered (`LEM-SPECCONS` its alias); The n-node birth-free result and birth-spectrum laws are separate reference-only owner results; BIND3 statistics remain separate, RF-O08-04.
 
 <a id="imp-o08-17"></a>
-- **IMP-O08-17** :: Pole and state comparators: two source definitions :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26` §6.1 #sec-6-1-comparators :: §6.4
+- **IMP-O08-17** :: Pole and state comparators: two source definitions :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27` §6.1 #sec-6-1-comparators :: §6.4
   Source identity: `RECOG-DEF-POLE-COMPARATOR; RECOG-DEF-STATE-COMPARATOR`. Source status: `DEF`. Depends on: Pole phase for C_pole; local lifted linear eigenframe, orientation, scale and Q_a Q_b>0 for normalized state comparison.
   Reconciliation: Both definition requests are fulfilled. The preserved parent administrative key has separate pole/state imported blocks in §6.4; it is not a joint invented scientific RID. Candidate-release provenance remains explicit.
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o08-18"></a>
-- **IMP-O08-18** :: Conditional radial sine shape :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26` §6.4 #sec-6-4-selection :: §6.4 / §6.2a
+- **IMP-O08-18** :: Conditional radial sine shape :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27` §6.4 #sec-6-4-selection :: §6.4 / §6.2a
   Source identity: `RECOG-ALG-SELECTION-SIN`. Source status: `ALG`. Depends on: Swap-odd radial coordinate; radial-row covariance, periodicity, endpoint stationarity and lowest harmonic. Coefficient and phase shear not selected.
   Reconciliation: Existing statement and source identity retained with updated pin. It does not certify full-map covariance.
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o08-19"></a>
-- **IMP-O08-19** :: Coordinate non-equivariance of fixed T :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26` §6.6 #sec-6-6-swap-projection :: §6.4
+- **IMP-O08-19** :: Coordinate non-equivariance of fixed T :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27` §6.6 #sec-6-6-swap-projection :: §6.4
   Source identity: `RECOG-ALG-SWAP-SPLIT`. Source status: `ALG`. Depends on: S_o=-I and the specified lifted primitive map; physical exchange is not assumed.
   Reconciliation: Retained alongside the different family-conjugacy theorem IMP-O09-03. Do not replace one by the other.
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o08-20"></a>
-- **IMP-O08-20** :: Explicit primitive contraction, sufficient tube and decay bound :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22` §6.14 :: OPEN-OFN-7
+- **IMP-O08-20** :: Explicit primitive contraction, sufficient tube and decay bound :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.24` §6.14 :: OPEN-OFN-7
   Source identity: `DYAD-THM-PRIM-CTR`. Source status: `THM`. Depends on: Primitive Q, selected T, 0<Q≤1/400 and owner tube U_T from 0<Q≤1/625. The sequence is sampled every six primitive updates.
-  Reconciliation: Replacement, not a re-pin of the old asymptotic. The original v0.8 input is preserved in OFN09-C01; NUMGEN L-BACKBONE is the separate `NUMGEN-RESULT-N5AS1-L-BACKBONE` (RF-O08-09). Statement checked unchanged at `dyad-v6.4.22` §6.14.
+  Reconciliation: Replacement, not a re-pin of the old asymptotic. The original v0.8 input is preserved in OFN09-C01; NUMGEN L-BACKBONE is the separate `NUMGEN-RESULT-N5AS1-L-BACKBONE` (RF-O08-09). Statement checked unchanged at `dyad-v6.4.24` §6.14.
   Verification: source statement inspected; no owner certificate rerun. §12.1 and the source manifest record byte access and release scope separately.
 
 <a id="imp-o09-01"></a>
-- **IMP-O09-01** :: Power-character cocycle classification :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26` §6.6a #sec-6-6a-composition :: §6.2a
+- **IMP-O09-01** :: Power-character cocycle classification :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27` §6.6a #sec-6-6a-composition :: §6.2a
   Source identity: `RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION`. Source status: `[ALG]`. Depends on: Positive ratios; fixed real weight; assumed twisted composition; derivative normalization; source regularity for the trivial-character case. No physical composition premise selected.
-  Verification: source block read at `recog-v0.3.26` (statement unchanged); theorem/source custody remains RECOG; no certificate rerun.
+  Verification: source block read at `recog-v0.3.27` (matched §6.6a span); theorem/source custody remains RECOG; no certificate rerun.
 
 <a id="imp-o09-02"></a>
-- **IMP-O09-02** :: Cubic identification of the weight magnitude :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26` §6.6a #sec-6-6a-composition :: §6.2a
+- **IMP-O09-02** :: Cubic identification of the weight magnitude :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27` §6.6a #sec-6-6a-composition :: §6.2a
   Source identity: `RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION`. Source status: `[ALG]`. Depends on: The specified shear family and certified shear-jet coefficient. Matching the primitive coefficient is inverse model identification, not physical selection.
-  Verification: source block read at `recog-v0.3.26` (statement unchanged); theorem/source custody remains RECOG; no certificate rerun.
+  Verification: source block read at `recog-v0.3.27` (matched §6.6a span); theorem/source custody remains RECOG; no certificate rerun.
 
 <a id="imp-o09-03"></a>
-- **IMP-O09-03** :: Exact k↔−k family conjugacy :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.26` §6.6a #sec-6-6a-composition :: §6.4 / OPEN-OPA
+- **IMP-O09-03** :: Exact k↔−k family conjugacy :: `RTG_RELATIONAL_RECOGNITION_DSN_v0.3.27` §6.6a #sec-6-6a-composition :: §6.4 / OPEN-OPA
   Source identity: `RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY`. Source status: `[ALG]`. Depends on: The source T_k and S=-I on lifted dyadic coordinates, including k=0. No identity with nonlinear S_h or physical gauge adoption.
-  Verification: source block read at `recog-v0.3.26` (statement unchanged); theorem/source custody remains RECOG; no certificate rerun. The v0.3.20 edition's frozen status is documented by `records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md` (REQ-O09-02 fulfilled).
+  Verification: source block read at `recog-v0.3.27` (matched §6.6a span); theorem/source custody remains RECOG; no certificate rerun. The v0.3.20 edition's frozen status is documented by `records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md` (REQ-O09-02 fulfilled).
 
 ### 11.3 Reference-Only and Deferred Technical Feedback
 
 These records identify inspected owner statements, working-reference rules and explicit remaining tasks. They are not additional OFN theorem registrations or approvals of every source interpretation. Scientific grades remain with the named owner; source-specific words such as R_log, R_ind and representation profiles are attributed vocabulary. No original owner certificate or campaign is rerun. RRF is cited at its adopted working-standard scope.
 
 <a id="rf-o08-01"></a>
-- **RF-O08-01 — TDR-G covariance and presentation** :: TDR-G v2.12.14 §§6.1/6.3; NUMGEN v1.21 §1.1 RF-06 and C7B presentation-audit record
+- **RF-O08-01 — TDR-G covariance and presentation** :: TDR-G v2.13 §§6.1/6.3/6.12–6.13; NUMGEN v1.21 §1.1 RF-06 and C7B presentation-audit record; NUMGEN v1.22 §6.6 P2 re-annotation (later owner reference only)
 
-The OFN-owned star-token-shift finding is unchanged: fixed-star covariance requires 2c=0, with no unique-rest-frame or gauge-loss conclusion. NUMGEN acknowledges it and distinguishes the full birth-capable model from its frozen no-birth quotient. Its reported DISC-1 post-hoc antipodal-endpoint audit finds 0/22 witnesses exposed and retains labels {2:1, 3:1} under the tested reverse and inert alternative policies; this is a robustness record, not a new admission result. Its reported DISC-2 audit retains ten labels through unexposed witnesses while marking 40/136 original witnesses convention-exposed. Neither campaign was rerun here. TDR-G v2.12.14 has since ruled the endpoint policy (`TDRG-DEF-ORIENT`; SG-14; DISC-2 effect 20 of 136 records under the adopted rule, its §6.12).
-Action: TDR-G accepts the Finding A statement and defers the custody transfer XFER-O08-01 to v2.13; NUMGEN acknowledgment is not transfer acceptance. No new physics or v18 recertification is implied.
+The OFN-owned star-token-shift finding is unchanged: fixed-star covariance requires 2c=0, with no unique-rest-frame or gauge-loss conclusion. NUMGEN acknowledges it and distinguishes the full birth-capable model from its frozen no-birth quotient. NUMGEN v1.21's original post-hoc DISC-1 audit finds 0/22 witnesses exposed and retains labels {2:1, 3:1} under the tested reverse and inert alternative policies; DISC-2 marks 40/136 original witnesses convention-exposed, with each of the ten labels still supported by unexposed witnesses. TDR-G v2.13 §6.12 separately records the Atlas rerun of NUMGEN audit logic under the adopted endpoint rule (`TDRG-DEF-ORIENT`, SG-14): 20/136 verdict/class records change, 96 unexposed records remain unchanged, ten-label projection unchanged; not a TDR-G producer certificate. A later adopted NUMGEN v1.22 §6.6 P2 re-annotation (N=24, three nodes, k in {0,1,2,3}, bound_symmetric, pinned v18 with reference orient_path replacement; `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md`) reports 158/158 frozen positive controls, DISC-2 40 exposed / 20 changed / 124 PASS with ten labels unchanged, DISC-1 0/22 exposed and 0/22 changed with the same labels. This is NUMGEN's own scoped consumer execution, not the earlier Atlas rerun or a retroactive admission/certificate replacement. Census-1 verdict and M-4 HOLD remain. No DISC/BIND3 campaign was rerun by OFN.
+Action: TDR-G accepts Finding A and uses it at `ofn-v0.12`; custody XFER-O08-01 is open, a separate decision of both owners, with the RID retained by OFN. NUMGEN acknowledgment is not transfer acceptance. The token-sum referral is answered at TDR-G SG-3 (§10). No new physics or v18 recertification is implied.
 
 <a id="rf-o08-02"></a>
-- **RF-O08-02 — Continuous closure and mode representations** :: Triadic v1.6.1 §§6.15–6.18, SG-18 and CN-01–CN-05; Genesis v2.8.5 §§6.3–6.6 (claim-level pin; not re-read at `gen-v2.9`)
+- **RF-O08-02 — Continuous closure and mode representations** :: Triadic v1.7 §§6.15–6.18, SG-18 and CN-01–CN-05; Genesis v2.8.5 §§6.3–6.6 (claim-level pin; not re-read at `gen-v2.9`)
 
 Continuous node-mediated edge/mode constructions already exist. Triadic's corrected orientation-rate model withdraws current use of the old safety wedge, no-safe-basin and phase-steering obstruction chain; the source's 96:1 comparison remains coefficient bookkeeping pending model/mode/observable/clock correspondence.
-Action: use current owner-scoped statements only. Neither a sign correction nor a shared symbol proves that diagnostic and primitive models are equivalent. Triadic v1.6.1 §7.4 "Programme/OFN pass two" — OFN half recorded: corrected local algebra, numerical outcomes of the former mis-scaled model and physical interpretation are kept distinct; no cascade verdict, source deficit or ontology selection follows; no Triadic release is a precondition.
+
+In Triadic v1.7 §6.18 the Gram relation is a first-variation coefficient identity, not an exact discrete conservation law of the six-step map. The corrected tangency statement concerns the truncated coefficient ODE with $Q_s,Q_c>0$, in continuous time measured in six-step blocks; the off-root extension is not unique. For $D=\mathcal G/Q_s=Q_c(1-K)$ the owner distinguishes extension (b), $\dot D=0$, from extension (a), $\dot D=rq_1D$ (its $q_1$ as defined there). Tangency in these two extensions supplies no corrected finite-$u$, global stability or physical carrier conclusion. CN-02 also requests sign, extent, symbol and artifact interpretation at each use; conditional child/ratio and phase scopes remain as in RF-O08-03/08.
+Action: use current owner-scoped statements only. Neither a sign correction nor a shared symbol proves that diagnostic and primitive models are equivalent. Triadic v1.7 §7.4 records consumer states; the OFN half of the earlier "Programme/OFN pass two" was recorded at v1.6.1: corrected local algebra, numerical outcomes of the former mis-scaled model and physical interpretation are kept distinct; no cascade verdict, source deficit or ontology selection follows; no Triadic release is a precondition.
 
 <a id="rf-o08-03"></a>
-- **RF-O08-03 — Rank capacity, birth direction and physical transverse carrier** :: Genesis v2.8.5 GCL-05/06 and OPEN 5/2B (claim-level pin; not re-read at `gen-v2.9`); Triadic v1.6.1 T-6s/t/u
+- **RF-O08-03 — Rank capacity, birth direction and physical transverse carrier** :: Genesis v2.8.5 GCL-05/06 and OPEN 5/2B (claim-level pin; not re-read at `gen-v2.9`); Triadic v1.7 T-6s/t/u
 
 The unit-direction identity W(J_Qs)/W(s)=i is distinct from the leading physical-child expression W(c_0^[3])/W(s)=i kappa Q_s. The complete-child remainder depends on its admitted residual/event input. The former apex–UV slot identity is retracted; mode labels, seed ratios and graph counts do not themselves establish an independent physical third transverse carrier.
 Action: retain OFN rank/Gram definitions and physical-application OPENs. Ask the geometry and UV owners for the physical embedding/source map; do not restore withdrawn obstruction claims or infer a positive cascade.
 
 <a id="rf-o08-04"></a>
-- **RF-O08-04 — Discrete spectrum and statistical memory** :: TDR-G v2.12.14 §6.12, LEM-SPECCONS and BIND3
+- **RF-O08-04 — Discrete spectrum and statistical memory** :: TDR-G v2.13 §§6.12–6.13, LEM-SPECCONS, BIND3 and token/spectrum laws
 
 The richer absolute-advance multiset remains the object used by IMP-O08-16; gcd spacings are coarser data. BIND3 parity/history statistics remain numerical source reports at their finite, no-birth scope, not fundamental laws.
-Action: retain the existing discrete imports and their boundaries. Neither NUMGEN's abstract arithmetic nor continuous RECOG memory is an automatic physical bridge to these data.
+
+At TDR-G v2.13 §6.13, `TDRG-ALG-EVENT-INVENTORY`, `TDRG-ALG-TOKEN-CENSUS-LAW`, `TDRG-ALG-SPECCONS-N`, `TDRG-ALG-BIRTH-SPECTRUM-INJECTION` and `TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED` distinguish birth-free conservation from birth updates. Under the stated six-policy snapshot inventory, the census gains one minus-centre token per birth, the signed support classes are invariant, and the advance multiset gains the specified old–new and new–new pair entries. The spectrum alone does not determine its birth update (owner counterexample at $N=24$). A conditional interface restatement of the census law is $c_{t+1}(y)=c_t(y)+b_t(-y)$ for the histogram $b_t$ of selected snapshot centre tokens. For fixed $c_t$, $b_t(y)=c_{t+1}(-y)-c_t(-y)$, so this interface is one-step sufficient and quotient-minimal for the census output on the declared admissible states. It is not shown here that the census determines the selected centres, the full network dynamics or a physical gauge. The OFN conditional centre-token control in `records/ofn/OFN_RECEIVING_DISPOSITION_CHATGPT_20261124.md` §3 is not an engine reachability test or an additional OFN result RID. No bridge to continuous class C is inferred.
+Action: retain the existing discrete imports and their boundaries; the newer §6.13 laws and conditional census example are reference-only, not a new OFN theorem or selection. Neither NUMGEN's abstract arithmetic nor continuous RECOG memory is an automatic physical bridge to these data.
 
 <a id="rf-o08-05"></a>
-- **RF-O08-05 — All-p resonance and generator selection** :: Dyadic v6.4.22 §6.11 p-family; RECOG v0.3.26 §6.10 and §6.6a
+- **RF-O08-05 — All-p resonance and generator selection** :: Dyadic v6.4.24 §6.11 p-family; RECOG v0.3.26 §6.10 (reference pin retained) and v0.3.27 §6.6a (matched span)
 
 The owner reports the scoped all-p cubic-return results and the newer diagnostic composition/weight/orientation classification. A family parameter is not an iterate count of the fixed generator, and matching primitive return data does not independently select the family or k=+1.
 Action: §6.2a and IMP-O09-01–03 receive only their stated consequences. The earlier recommended RECOG→Dyadic general-theorem transfer is not presumed completed; Programme synchronization remains separate.
 
 <a id="rf-o08-06"></a>
-- **RF-O08-06 — RECOG chart reconciliation and exact-map retained memory** :: RECOG v0.3.26 §2 R8/R9/R10/R11, §6.13a #sec-6-13a-r9 and §6.14 #sec-6-14-chart-ledger
+- **RF-O08-06 — RECOG chart reconciliation and exact-map retained memory** :: RECOG v0.3.26 (retained claim-level reference) §2 R8/R9/R10/R11, §6.13a #sec-6-13a-r9 and §6.14 #sec-6-14-chart-ledger
 
 The source records R11 closed, R10 delivered/accepted, and R8/R9 closed at their stated theorem scopes. The old description “R11 open / R9 waiting for chart reconciliation” is superseded for this source. RECOG-THM-R9-MEMORY concerns the fixed h-chart and C_z comparator track; its full memory domain and smaller incompleteness window are not interchangeable (RF-O09-01).
 Action: record positive retained-memory evidence without defining a physical event, transporting the theorem to another comparator by renaming, or selecting a new carrier. REQ-O09-02 is fulfilled by `records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md` (SHA-256 `5c00f66d…9b55`), with that record's own evidence qualification (the verbatim exchange is not retained).
 
 <a id="rf-o08-07"></a>
-- **RF-O08-07 — Discrete policy and counter scope** :: TDR-G v2.12.14 §§6.3/6.6/6.11
+- **RF-O08-07 — Discrete policy and counter scope** :: TDR-G v2.12.14 §§6.3/6.6/6.11 (historical campaign reference); current policy and SG-3/SG-14 at v2.13 §§3/6.3
 
 Policy-dependent growth and convention-sensitivity reports remain tied to the source's policy, node cap, time horizon, statistic and conditioning. Conditional births per birth step and unconditional window rates require distinct definitions; this OFN edit does not repair or rerun those owner counters.
-Action: no universal asymptotic terminus or policy-selection theorem is imported from the finite comparison. Owner review remains queued.
+Action: no universal asymptotic terminus or policy-selection theorem is imported from the finite comparison. The token-sum referral is answered (RF-O08-01 and §10); the remaining policy-selection and counter-scope obligations are not closed.
 
 <a id="rf-o08-08"></a>
-- **RF-O08-08 — Birth and UV/cascade interpretation** :: Triadic v1.6.1 CN-01–CN-05; Genesis v2.8.5 GCL-01–11 (claim-level pin; not re-read at `gen-v2.9`); OPEN M v0.7.1 R15 and RESULT-M-3A/3B
+- **RF-O08-08 — Birth and UV/cascade interpretation** :: Triadic v1.7 CN-01–CN-05; Genesis v2.8.5 GCL-01–11 (claim-level pin; not re-read at `gen-v2.9`); OPEN M v0.7.1 R15 and RESULT-M-3A/3B
 
 Birth residual/child, physical lowering, secular sign, and the 9C raw-array premise remain typed and conditional in Genesis. OPEN M now records that m=C_m h cancels h from rho r^4=ell Q_s^2/(g C_m). Its proxy evaluation is not a measurement of harmonic-source amplitude; state/window matching, K_vac↔g and finite-g restoring normalization remain unresolved. There is no certified numerical deficit factor in either direction.
 Action: no new primitive, extra axis or orientation axiom is justified here by an alleged factor-two/factor-four shortage. The withdrawn wedge/no-basin/phase-steering arguments do not supply an alternative negative theorem, and their withdrawal does not prove sufficient amplitude.
 
 <a id="rf-o08-09"></a>
-- **RF-O08-09 — Local history, order, asymptotic and slip results** :: NUMGEN v1.21 §§6.4–6.6 and its named N-1/N-2/N-2-ORD/N5AS1-INF/GAP-LOCK blocks; Dyadic v6.4.22 §6.14
+- **RF-O08-09 — Local history, order, asymptotic and slip results** :: NUMGEN v1.21 §§6.4–6.6 and its named N-1/N-2/N-2-ORD/N5AS1-INF/GAP-LOCK blocks; Dyadic v6.4.24 §6.14
 
 NUMGEN records its local distinct-history construction, signed comparison and reachability order on the declared tube. L-BACKBONE (`NUMGEN-RESULT-N5AS1-L-BACKBONE`) supplies q_M=1/M+O(M^(-3/2)) and sum_(m<M) q_m=log M+C_Q+o(1), at source grade RESULT from ALG. The owner types q_m := Q_true(T^(6m) x), the block-sampled primitive observable on the declared tube, not the normalized-chart q=|z|^2 (`numgen-v1.21` §6.6; REQ-O09-03 fulfilled). No inclusion of NUMGEN's tube in an explicit DYAD or RECOG domain is inferred.
 NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO is already assigned. The physical 7-gap ratio has the separate GAP-LOCK proof; both limits equal exp(pi/(3 tau)) within the source scope without identifying the event sequences term by term. RECOG v0.3.26 §7.1 has synchronized the NUMGEN imports; the earlier v0.3.1→v1.19 missing-threshold-RID notice is no longer a live mismatch.
@@ -1202,7 +1208,7 @@ NG-7B retains the positive nonintegrable-source/non-Abelian questions. Programme
 Action: preserve FRUSTRATION as PARTIAL and HOLONOMY-RANK as ACTIVE. The A1 primacy link and A4 RRF reference are in OPEN-PRIMACY-3C / RF-O09-03. Correct passive transport does not create nonintegrability.
 
 <a id="rf-o08-11"></a>
-- **RF-O08-11 — OPA / antilinear-source hypothesis** :: OPEN M v0.7.1 §2 OPEN-M-7, UVM-OPEN-OPA-LINK; RECOG v0.3.26 §6.6a
+- **RF-O08-11 — OPA / antilinear-source hypothesis** :: OPEN M v0.7.1 §2 OPEN-M-7, UVM-OPEN-OPA-LINK; RECOG v0.3.27 §6.6a
 
 OPEN-M-7 remains a hypothesis, not a UV derivation or a selected physical orientation action. The OFN free-continuation finding remains kinematic non-entailment. The new exact family conjugacy sharpens orientation semantics but does not supply orientation conservation or an antipodal trigger.
 Action: REQ-O08-01 remains a definition/proof task, not presumed recovery of a completed certificate. June 19 provenance remains reviewer-reported; no transcript or completed construction is authenticated here.
@@ -1214,15 +1220,15 @@ Legacy reports recovered archives, inspected engine/data and scoped reanalysis. 
 Action: distinguish owner-reported recovery from locally supplied evidence and retain historical scope. Unchanged Pre-Legacy assertions are not silently upgraded by the newer Legacy release.
 
 <a id="rf-o08-13"></a>
-- **RF-O08-13 — DZT and AZ diagnostic homes** :: DZT v0.8 charter/§7; AZ v0.6 §0.1 and Thread C
+- **RF-O08-13 — DZT and AZ diagnostic homes** :: DZT v0.19 §§1/7; AZ v0.10 §0.1, SG-AZ-7 and Thread C
 
-These remain the supplied versions. DZT v0.17 is mentioned in NUMGEN audit provenance but is not supplied as an owner ledger. Neither arithmetic norms nor graph-spectral/null patterns are received as ontology, UV amplitude or a physical cross-branch bridge.
+DZT v0.17 is recovered, unadopted history, not an owner edition (DZT v0.18 release record §7); the governing source is `dzt-v0.19`. Its conditional cascade-norm result is not imported. AZ SG-AZ-7 guards against treating vocabulary similarity as a bridge; the tested static antipodal-band geometry is not a universal graph or dynamical claim. Neither arithmetic norms nor graph-spectral/null patterns are received as ontology, UV amplitude or a physical cross-branch bridge (SG-DZT-1 and SG-AZ-7).
 Action: retain source-scoped references only. Older independent review deductions are not installed as adopted DZT/AZ corrections by OFN.
 
 <a id="rf-o09-01"></a>
-- **RF-O09-01 — Comparator tracks and source-limited representation terminology** :: RECOG v0.3.26 §6.13a/§6.14; RRF v0.8.4 §4.1/§4.1a
+- **RF-O09-01 — Comparator tracks and source-limited representation terminology** :: RECOG v0.3.26 §6.13a/§6.14 (original reference windows retained); RRF v0.8.4 §4.1/§4.1a
 
-Owner example for SG-OFN-PRESENTATION: Dyadic v6.4.22 SG-19 distinguishes archival coordinate change, log-channel projection and polynomial conjugacy; this reference does not change the OFN guard or adopt new OFN vocabulary.
+Owner example for SG-OFN-PRESENTATION: Dyadic v6.4.24 SG-19 distinguishes archival coordinate change, log-channel projection and polynomial conjugacy; this reference does not change the OFN guard or adopt new OFN vocabulary.
 The owner distinguishes $C_z(a,b)=\bar z_a z_b$ from $C_W^{(h)}(a,b)=\overline{h(z_a)}h(z_b)$, generally different at cubic order. RRF calls these chart-native/redefined and transported, respectively; this is attributed terminology, not new OFN vocabulary or an annotation mandate. Likewise $Q_{\rm prim}=|h(z)|^2$ is not $q=|z|^2$.
 RECOG-THM-R9-MEMORY and its exact-map comparator-incompleteness corollary are on the $C_z$ track in the fixed DYAD-ALG-NF6 chart. The two complete source rows are:
 
@@ -1235,7 +1241,7 @@ Here $G=-(43+5611i\sqrt3)/1270080$ is the owner's coefficient. Its theorem inclu
 Action: no exact-map theorem is transferred to the transported-raw comparator without a separate proof. RRF's $S_h$ is an exact local involution with finite-order commutation statements; its physical pole-relabeling status remains OPEN-A. No new state variable, physical gauge or full-state incompleteness is deduced.
 
 <a id="rf-o09-02"></a>
-- **RF-O09-02 — Token, transition and retention inventory** :: RECOG v0.3.26 §§6.13a and 6.16–6.16f
+- **RF-O09-02 — Token, transition and retention inventory** :: RECOG v0.3.26 §§6.13a and 6.16–6.16f (retained inventory scope); v0.3.27 §§6.13b/6.16e (A1c premise update)
 
 The following are source dispositions at their own grades/domains, not adopted OFN event definitions:
 
@@ -1246,7 +1252,7 @@ The following are source dispositions at their own grades/domains, not adopted O
 | Certified primitive-map fold | Whitney-fold noninjectivity; no registered carrier both applies and retains the branch discriminator | No ontological-erasure or all-carriers no-memory theorem |
 | Lattice/chart threshold | Chart-dependent readable crossing and an asymptotic clock relation | No termwise equality to the canonical B/7-gap sequence |
 
-Recorded at `recog-v0.3.26` by exact claim, each with its own conditions, not as an event principle: `RECOG-RESULT-A1C-RECORD-PHASE-READOUT` (record-phase readout), the record-fiber constraint and the finite-prefix record-only outer decoder of the A1c chain (§6.13b; under (D5), chart/domain and at-least-two-usable-slip conditions where stated). No injectivity, connectedness, write-through, physical event or OPA closure is inferred; R9 and (D5) are not removed, and the two order sentences RECOG retracted in v0.3.26 Appendix B are not cited. The sharpened rows `RECOG-THM-R9-SHARPENED-ROWS` may be cited beside the unchanged RF-O09-01 table.
+Recorded by exact claim and source condition, not as an event principle: `RECOG-RESULT-A1C-RECORD-PHASE-READOUT`, the record-fiber constraint, the known-$a$ schedule and the finite-prefix record-only outer decoder with unknown $a$. At `recog-v0.3.27` (§2, §6.13b, §6.16e; release D5B), the named former (D5) qualifier is discharged by the imported `DYAD-THM-LPHASE-ROWA-BRIDGE`, `DYAD-THM-OPEN3-SPIRAL-REM` and the new `RECOG-ALG-A1C-JET-REMAINDER-BOUNDS` (D5A fallback not adopted). The owner preserves the chart/domain and at-least-two-usable-slip conditions where stated. No injectivity, connectedness, write-through, identification, physical event or OPA closure is inferred. R9 remains a premise wherever required, including the distinct Dyadic transfer/remainder claims; the two order sentences retracted in RECOG v0.3.26 Appendix B remain excluded. The sharpened rows `RECOG-THM-R9-SHARPENED-ROWS` are a distinct conditional use beside the unchanged RF-O09-01 table.
 In CELL-F3, RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE / RECOG-RESULT-R9-NO-TOKEN-WRITETHROUGH concern the registered single-dyad mechanism and certified order. They do not exclude additional physical carriers. The source distinction R_log/R_ind is retained as source terminology, not an OFN test imposed by this release.
 Action: sharpen OPEN-EVENT's unresolved retention question only. Preserve its existing event/accounting definition and do not equate a comparator fiber with the complete state.
 
@@ -1262,49 +1268,51 @@ Action: retain existing OFN/RRF/NUMGEN/Programme OPEN routing. No C19 family, ne
 - **RF-O09-04 — Partial physical composition and interface information** :: NUMGEN v1.21 §1.2 and §6.6 C7C-M / M2-1 / Census-1
 
 NUMGEN now uses “typed relational architecture with partial physical composition.” On an admitted common-context chain, its ALG identity gives Delta^(AC)_(pu:qv)=v Delta^(AB)_(p:q)+p Delta^(BC)_(u:v); the transported M2-1 version includes its specified interface-defect term. Neither identity supplies co-realization, the required outer-pair domain or quotient descent. Equal numerical labels do not retain all shared-interface provenance.
-Its current carrier has no unrestricted composition-closure/global-category theorem; associativity is scoped to admitted bracketings, and reciprocal labels are not a physical group inverse on that carrier. Census-1 is INCONCLUSIVE / INCONCLUSIVE because its admitted nondegenerate chain domain is empty, not because every realization is impossible.
+Its current carrier has no unrestricted composition-closure/global-category theorem; associativity is scoped to admitted bracketings, and reciprocal labels are not a physical group inverse on that carrier. Census-1 is INCONCLUSIVE / INCONCLUSIVE because its admitted nondegenerate chain domain is empty, not because every realization is impossible. NUMGEN v1.22 §6.6 retains this verdict after its P2 consumer re-annotation; M-4 remains HOLD pending approved design/preregistration for a missing composable-chain witness, not a prerequisite of already finding that witness. No OFN composition contract follows.
 Action: pose the consequences for physical operation and interface selection under existing OPENs. RTG-OFN-DEF-STATE-COMPLETENESS is unchanged; no global physical category, new operation contract or extra state field is adopted here.
 
 ### 11.4 v0.10 Claim-Level Imports
 
-These entries support §5.5. Source statements below were read in the cited owner files; no owner certificate is rerun. The Genesis and Dyadic pins are the claim-level sources; each cited statement was checked unchanged at `gen-v2.9` and `dyad-v6.4.22`.
+These entries support §5.5. The matched Genesis §6.3a–c and Dyadic RID blocks are cited at `gen-v2.10` and `dyad-v6.4.24`; the original proof/evidence editions and the unverified historical comparisons are retained below. Source-text comparison is not certificate replay.
 
 <a id="imp-o10-01"></a>
-- **IMP-O10-01** :: Raw-family six-step factor no-go :: `RTG_GENESIS_GEOMETRY_DSN_v2.8.9` (SHA-256 `d143673e…c6fc`, computed by OFN) :: §5.5.3 narrow-Q6 case (i); §5.5.5
+- **IMP-O10-01** :: Raw-family six-step factor no-go :: `RTG_GENESIS_GEOMETRY_DSN_v2.10` §6.3a–b (original source v2.8.9, SHA-256 `d143673e…c6fc`, computed by OFN) :: §5.5.3 narrow-Q6 case (i); §5.5.5
   Source identity: `GEN-THM-K3-PLANAR-FACTOR-NOGO`, `GEN-THM-K3-SIXSTEP-FACTOR-NOGO` (κ = 1); `GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO` (γ ≡ κ ∈ ℝ∖{0,2}, under (H_spec)). Source status: `THM`. Unchanged since v2.8.7.
   Depends on: the raw mean-feedback family and (H_spec). The primitive-clock family statement under (H_prim) is a Genesis companion without RID and is not imported; (H_prim) does not extend anything to κ = 2. Does not cover class C.
 
 <a id="imp-o10-02"></a>
-- **IMP-O10-02** :: Transported chiral six-step factor no-go :: `RTG_GENESIS_GEOMETRY_DSN_v2.8.9` §6.3c :: §5.5.3 narrow-Q6 case (ii); §5.5.5
+- **IMP-O10-02** :: Transported chiral six-step factor no-go :: `RTG_GENESIS_GEOMETRY_DSN_v2.10` §6.3c (original source v2.8.9) :: §5.5.3 narrow-Q6 case (ii); §5.5.5
   Source identity: `GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO`. Source status: `THM` (conditional). §6.3c read in full.
-  Depends on: real $C^3$ germs; (H-JET) third jet equal to the mean-feedback form over $N_3(z)=\lambda z+nz^2\bar z$; (H-μ) $\mu=6\bar\lambda n\ne0$; κ ∈ ℝ∖{0,2}; (H_spec); factor dimension $d\in\{1,2,3\}$; closed under $C^3$ conjugacy; algebraic dependency Lemma S (adopted branch). Guards G-JET, G-20, G-SEL, G-OFN apply. Class C satisfies (H-JET) with $n=n_{21}$, $\mu=\mu_6\ne0$ for instance C1 and for instance C2 in the owner's $C^\infty$ chart Φ (IMP-O10-07; Genesis v2.9 G-20 existence note: C2 non-vacuous at $C^\infty$).
+  Depends on: real $C^3$ germs; (H-JET) third jet equal to the mean-feedback form over $N_3(z)=\lambda z+nz^2\bar z$; (H-μ) $\mu=6\bar\lambda n\ne0$; κ ∈ ℝ∖{0,2}; (H_spec); factor dimension $d\in\{1,2,3\}$; closed under $C^3$ conjugacy; algebraic dependency Lemma S (adopted branch). Guards G-JET, G-20, G-SEL, G-OFN apply. Class C satisfies (H-JET) with $n=n_{21}$, $\mu=\mu_6\ne0$ for instance C1 and for instance C2 in the owner's $C^\infty$ chart Φ (IMP-O10-07; Genesis v2.10 G-20 existence note: C2 non-vacuous at $C^\infty$).
 
 <a id="imp-o10-03"></a>
-- **IMP-O10-03** :: Uniqueness of the formal ℤ₆ generator $J$ :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.13` §6.16 :: §5.5.4
+- **IMP-O10-03** :: Uniqueness of the formal ℤ₆ generator $J$ :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.24` §6.16 (original source v6.4.13) :: §5.5.4
   Source identity: `DYAD-THM-FORMAL-Z6-GENERATOR`, resting on `DYAD-THM-FORMAL-CENTRALIZER` (Theorem C). Source status: `THM` (formal).
   Depends on: formal maps commuting with $F=T^6$, $J^6=\mathrm{id}$, $DJ(0)=A$. Formal only; no convergence asserted. The FMS SESSION classification of the formal centralizer is corroboration, not a premise.
 
 <a id="imp-o10-04"></a>
-- **IMP-O10-04** :: Flat centralizer, smooth corollaries and the realization target :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.13` §6.17 and OPEN 20 :: §5.5.4; OPEN-OFN-OPA input
-  Source identity: `DYAD-CAND-FLAT-CENTRALIZER` (Lemma F), status `THM`, on its D1–D3 domain with value-level flat contact; `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` (F3), status `THM — conditional` on existence of the smooth object. `CAND` in these strings is an identity, not a status (Methodology v1.4 §4.2). OPEN 20 (`dyad-v6.4.22`): PARTIAL — B-∞ existence CLOSED by `DYAD-THM-SMOOTH-EMBEDDING` (IMP-O10-06), B-∞ flat uniqueness CLOSED, B-an and B-6 ACTIVE. Lemma F and F3 statements checked unchanged at `dyad-v6.4.22` §6.17.
+- **IMP-O10-04** :: Flat centralizer, smooth corollaries and the realization target :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.24` §6.17 and OPEN 20 (original source v6.4.13) :: §5.5.4; OPEN-OFN-OPA input
+  Source identity: `DYAD-CAND-FLAT-CENTRALIZER` (Lemma F), status `THM`, on its D1–D3 domain with value-level flat contact; `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` (F3), status `THM — conditional` on existence of the smooth object. `CAND` in these strings is an identity, not a status (Methodology v1.4 §4.2). OPEN 20 (`dyad-v6.4.24`): PARTIAL — B-∞ existence CLOSED by `DYAD-THM-SMOOTH-EMBEDDING` (IMP-O10-06), B-∞ flat uniqueness CLOSED, B-an and B-6 ACTIVE. Lemma F and F3 statements checked unchanged at `dyad-v6.4.24` §6.17.
   Depends on: an existing $C^\infty$ identity-tangent root, now supplied by IMP-O10-06. The §6.17 sequence $F^{-n}R_\infty F^n$ remains an unproved route, and RRF L-SHADOW-POLY is not imported.
 
 <a id="imp-o10-05"></a>
 - **IMP-O10-05** :: Single-dyad OPEN 3 results, edgewise on the lock surfaces only :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.14` / `v6.4.15` (OPEN 3 records); lifecycle status per `v6.4.16` :: §5.5.6
-  Source identity: `DYAD-ALG-OPEN3-LEADING` (`ALG`, v6.4.14); `DYAD-THM-OPEN3-SPIRAL-REM` (`THM`, per-row constants are suprema of majorants, v6.4.14); `DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS` (`THM`, v6.4.15); `DYAD-THM-OPEN3-ASYMPTOTIC-PHASE` (`THM`, conditional on RECOG R9, v6.4.15). Section anchors are as located in the owner OPEN 3 record; not re-verified line by line for this draft.
+  Source identity: `DYAD-ALG-OPEN3-LEADING` (`ALG`, v6.4.14); `DYAD-THM-OPEN3-SPIRAL-REM` (`THM`, per-row constants are suprema of majorants, v6.4.14); `DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS` (`THM`, v6.4.15); `DYAD-THM-OPEN3-ASYMPTOTIC-PHASE` (`THM`, conditional on RECOG R9, v6.4.15). Section anchors are as located in the owner OPEN 3 record; the four current RID blocks at `dyad-v6.4.24` §6.14 match those at `dyad-v6.4.22` (24 November 2026 source comparison). The original v6.4.14/15 source blocks, row assumptions, constants and proof/evidence chain were not re-verified line by line against the historical editions.
   Depends on: an isolated dyad. Applied only on $\mathcal S_0,\mathcal S_\pm$, edgewise; the surfaces exist in $C^\infty$ (§5.5.4). Constants hold in the dyad chart and domain where proved; in the Φ chart only qualitatively unless an explicit estimate is supplied (SG-19). R9-conditional statements keep their assumption. Static leading offsets transfer edgewise and class-wide at leading order. Nothing transfers off the surfaces or as a separator or basin statement. v6.4.16 (lifecycle-only) records OPEN 3 CLOSED within its scope and opens OPEN 21; no graded RID changed (RF-O10-04).
 
+The later `DYAD-THM-OPEN21-SHARP-ROWS` (dyad-v6.4.24 §6.14) is a companion conditional on `RECOG-THM-R9-SHARPENED-ROWS`, not a replacement for the earlier closing result or its rows. RECOG's separate explicit-domain R9-free phase-existence result does not discharge R9 in these Dyadic transfer/remainder theorems. No new import or Φ-domain constant is inferred.
+
 <a id="imp-o10-06"></a>
-- **IMP-O10-06** :: Smooth flow embedding of the six-step return (OPEN 20 B-∞ existence) :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22` §6.17 :: §5.5.3–§5.5.6; OPEN-OFN-3B, OPEN-OFN-OPA and OPEN-OFN-TRIAD-CLASS inputs
+- **IMP-O10-06** :: Smooth flow embedding of the six-step return (OPEN 20 B-∞ existence) :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.24` §6.17 :: §5.5.3–§5.5.6; OPEN-OFN-3B, OPEN-OFN-OPA and OPEN-OFN-TRIAD-CLASS inputs
   Source identity: `DYAD-THM-SMOOTH-EMBEDDING` (v6.4.18). Source status: `THM`, scope $C^\infty$ local germs at $P_1$, raw frame $W$, lifted chart.
   Depends on: (E1) a $C^\infty$ field $X$ with $j^\infty_0X=\log F$ and $F=\varphi^1_X$ on a ball of qualitative radius; (E2) uniqueness only among generators with $DX'(0)=0$; (E3) the roots $K_m=\varphi_X^{1/m}$ commute with $T$ and are unique (F3); (E4) $J=T\circ K_6^{-1}$ with $J^6=\mathrm{id}$, $DJ(0)=A$, $JT=TJ$, and $R=T^3\circ K_2^{-1}$. No numerical radius, finite-$C^k$ constant, analyticity (B-an, B-6) or physical exchange / G2 realization follows (owner §6.17 recorded distinctions).
-  Verification: statement read at `dyad-v6.4.22`; no certificate rerun. Receipt of Dyadic notice N14 recorded (§12.3).
+  Verification: statement read at `dyad-v6.4.24`; no certificate rerun. Receipt of Dyadic notice N14 recorded (§12.3).
 
 <a id="imp-o10-07"></a>
-- **IMP-O10-07** :: Smooth equivariant chart :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.22` §6.17 :: §5.5.3 (C2), §5.5.4
+- **IMP-O10-07** :: Smooth equivariant chart :: `RTG_DYADIC_OSCILLATOR_DSN_v6.4.24` §6.17 :: §5.5.3 (C2), §5.5.4
   Source identity: `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` (v6.4.20). Source status: `THM` (corollary of E3–E4, finite-group averaging).
   Depends on: the $C^\infty$ germ $J$ of IMP-O10-06; $\Phi=\tfrac16\sum_{k=0}^5A^{-k}J^k$ is a $C^\infty$ local diffeomorphism with $\Phi(0)=0$, $D\Phi(0)=I$, $\Phi\circ J=A\circ\Phi$, and $N_\Phi=\Phi T\Phi^{-1}$ commutes with $A$. Radius qualitative; $\Phi$ inherits none of the §6.14 finite-chart bounds (SG-19); no analyticity. The owner leaves its use to Genesis C2 and OFN class C; OFN uses it for class C (§5.5.4).
-  Verification: statement read at `dyad-v6.4.22`; no certificate rerun.
+  Verification: statement read at `dyad-v6.4.24`; no certificate rerun.
 
 ### 11.5 v0.10 Reference-Only Records
 
@@ -1339,7 +1347,7 @@ Action: noncanonical context only; nothing stronger that depends on ER-2B is use
 - **RF-O10-04 — DYAD v6.4.12–v6.4.16 source row** :: DYAD v6.4.12 (formal centralizer, Corollary U), v6.4.13 ($J$, Lemma F, F1–F3, OPEN 20 B-6), v6.4.14 (OPEN 3a), v6.4.15 (OPEN 3b), v6.4.16 (SHA-256 `33c14c5c…59e0` per its release record, not re-hashed by OFN)
 
 v6.4.16 is a **lifecycle-only** release: OPEN 3 CLOSED within its scope, OPEN 21 (`DYAD-OPEN-PRIMITIVE-PHASE-REMAINDER`) opened, OPEN 3c recorded as a model discrepancy, OPEN 20 unchanged, no scientific RID grade changed.
-Action: notice N9 answered at owner level by v0.10 (retained). Later DYAD editions to v6.4.22 (OPEN 20 B-∞ existence, smooth chart, `DYAD-DEF-PRIMITIVE-MAP`) are received in IMP-O08-12, IMP-O10-04, IMP-O10-06/07 and §12.3 (notices N4, N6, N14).
+Action: notice N9 answered at owner level by v0.10 (retained). Later DYAD editions to v6.4.24 (OPEN 20 B-∞ existence, smooth chart, `DYAD-DEF-PRIMITIVE-MAP`) are received in IMP-O08-12, IMP-O10-04, IMP-O10-06/07 and §12.3 (notices N4, N6, N14).
 
 <a id="rf-o10-05"></a>
 - **RF-O10-05 — Genesis v2.8.9 adoption and its OFN-Q6 notice erratum** :: Genesis v2.8.9 release record; `GENESIS_V2_8_9_NOTICE_ERRATUM_OFN_Q6_v0_1.md`
@@ -1361,9 +1369,10 @@ Evidence of earlier editions is listed in their release records and Appendix C e
 | RECOG v0.3.20 | Mathematical statement text supplied; the DSN header's "freeze candidate" defers the hash to an external record | That record is `records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md` (`5c00f66d…9b55`); REQ-O09-02 fulfilled. v0.11 cites the RECOG RIDs at `recog-v0.3.26` |
 | governing handoff v0.8.2 | SHA-256 `6e4fc3c3…564b1d`, computed by both co-owners | Historical single integration input for v0.10 §5.5; retained evidence baseline, amended in v0.11 by the joint owner reconciliation and current imports; co-owner handoff acceptance, not adoption |
 | OFN co-owner SESSION scripts | `iso_check.py` (`b92f6659…0d75e`), `iso_quadratic_nogo.py` (`91fd63f4…5308`), `transported_pq.py` (`2dcd4331…20bf6`), `transported_chiral_pq.py` (`09129ffc…73ac`), `transported_sim.py`, `basin_test.py`, `OFN_PSI_KAPPA_EXTENSION_v0_1.py` (`6566009c…5f88`), `OFN_PSI_KAPPA_ALL_MINOR_CHECK_v0_1.py` (`c56a01ac…a9e3`), `OFN_PSI_INVARIANT_C_CHECK_v0_1.py` (`18f10aa4…b114`), `OFN_PSI_INVARIANT_C_GAUGE_CHECK_v0_1.py` (`d3e5cedf…9781`), `OFN_PSI_REFLECTION_AUDIT_v0_1.py` (`e6d9b089…235a`), `OFN_STAB_F3_CHECK_v0_1.py` (`8b415461…e5ea9`) | Session evidence for §5.5 and RF-O10-02. The last six were executed by both co-owners. *v0.11:* eleven of the twelve, with the v0.10 release record, both draft builders, `release_ofn_v0_10.py` and Drafts 1–2, are on `upload/ofn-records/` (commit `c6fd574`, `SHA256SUMS.txt`, hashes equal to those printed here); `transported_chiral_pq.py` is held by neither OFN session (custody table in the v0.11 release record) |
-| FMS ψ scripts and notes | Notes read; `FMS_PSI_QUINTIC_FINITE_INVARIANT_v0_1.py` (`ad44f66a…445f4c`) and `FMS_PSI_QUINTIC_REFLECTION_TEST_v0_1.py` (`5af23da9…f409`) not rerun by OFN | Reference-only (RF-O10-02) |
+| FMS ψ scripts and notes | Recovered `FMS_PSI_QUINTIC_FINITE_INVARIANT_v0_1.py` (`ad44f66a…445f4c`) and `FMS_PSI_QUINTIC_REFLECTION_TEST_v0_1.py` (`5af23da9…f409`) match the full digests printed in the recovered SESSION notes and the intake manifest; original bytes retained under `upload/corpus-originals-20261123/`. Finite-invariant script not rerun in this pass. Reflection script: separate OFN receiving wrapper rerun, same CAS, actual P4 elimination ideals checked in both directions for the two swap branches (PR #379; `evidence/ofn/receiving_20261124_claude/p4_ideal_check_output.txt`). | Reference-only (RF-O10-02); the predicate defect is real but the two constructed ideals satisfy the fixed-line membership. Bilinearity and full universal-classification proof dependencies remain unverified; no grade change or new physical readout. |
 | Genesis v2.8.9; DYAD v6.4.13–v6.4.16; RRF v0.8.3 | Genesis SHA computed by OFN; DYAD v6.4.16 and RRF hashes per their records; cited sections read | Source statements at owner grade; no certificate rerun |
 | OFN co-owner working notes and scripts (30 Oct 2026) | `ofn_isolation_interface_check.py` (`17e91906…b8ef`), `ofn_ref_closure_check.py` (`4c469b41…0402`) and `ofn_3b_independence_check.py` (`139f7934…cc70`) under `evidence/ofn/scripts/`, each with positive and forced-failure outputs; notes and receiving reviews under `records/ofn/` | Evidence for §2.4, §5.5.4 and §9 (OPEN-OFN-3A, -3B, -TRIAD-CLASS, -REF-CLOSURE); EV-CODE, EV-RUN (rerun by the second co-owner, same CAS) |
+| Historical OFN / GEN intake (24 Nov 2026) | Recovered Genesis v2.8.5 (`41ed7660…75cf`), OFN v0.9 DSN (`5ae8fdab…9795`), v0.8/v0.9 release-record files and v0.9 synchronization request; ten intake hashes checked, see `records/ofn/OFN_RECEIVING_DISPOSITION_CHATGPT_20261124.md` §5. The older independent identities/approval contents of the name-only records are not thereby authenticated. | Genesis v2.8.5 OFN reference pins retained pending OFN's own claim comparison (UVM's decision does not transfer). Scoped negative intake search for `transported_chiral_pq.py`, ER-2B v0.3.1 and the two Finding A record names remains as reported in the Atlas advisory; no global absence claim. |
 
 ### 12.2 Contributions and Adoption Boundary
 
@@ -1375,7 +1384,7 @@ IMP/RF/CUST/REQ labels are administrative records, not newly assigned scientific
 
 | OFN record | Current custody/status | Current action |
 |---|---|---|
-| `RTG-OFN-ALG-STAR-TOKEN-SHIFT` | Registered OFN RESULT from ALG | Statement accepted by TDR-G and used in SG-14 (`tdrg-v2.12.14` §7); custody transfer XFER-O08-01 deferred by TDR-G to v2.13; the RID stays OFN's |
+| `RTG-OFN-ALG-STAR-TOKEN-SHIFT` | Registered OFN RESULT from ALG | Statement accepted and imported at `ofn-v0.12` by TDR-G v2.13 §7, used in SG-14 and birth-spectrum nonclosure; custody XFER-O08-01 open, separate decision of both owners; the RID stays OFN's |
 | `RTG-OFN-ALG-FREE-ANTIPODAL-CONTINUATION` | Registered OFN RESULT from ALG | Retained kinematic non-entailment, not a general rejection of OPA |
 | `RTG-OFN-HYP-FSP-U` | Registered OFN HYP | No capacity axiom adopted; same-sector compatibility question sharpened under its existing OPEN |
 | `RTG-OFN-DEF-TRIAD-MODEL-CONTRACT` | Registered v0.10, OFN definition | Registered 19 Oct 2026 (O10-P2) |
@@ -1390,20 +1399,20 @@ IMP/RF/CUST/REQ labels are administrative records, not newly assigned scientific
 
 | Consumer and exact location | Observed OFN input | Current disposition |
 |---|---|---|
-| NUMGEN v1.21 §1.1 RF-06 and three §1.1 DEF imports | `SG-OFN-STATE`; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`; `RTG-OFN-DEF-RELATIONAL-CONTENT`, `-PHASE-GAUGE`, `-BACKGROUND-TIME` | Actual named use at source grade; the opening imports are narrowed to one DEF import per OFN RID (NUMGEN notice received). |
-| NUMGEN v1.21 §6.8 (NG-7A Foundations export) and §9.1 | `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC` | Actual foundational-OPEN reference; not use of an OPEN identity as a theorem RID. |
+| NUMGEN v1.21 §1.1 RF-06 and three §1.1 DEF imports | `SG-OFN-STATE`; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`; `RTG-OFN-DEF-RELATIONAL-CONTENT`, `-PHASE-GAUGE`, `-BACKGROUND-TIME` | Actual named use at source grade; the opening imports are narrowed to one DEF import per OFN RID (NUMGEN v1.21 notice received); NUMGEN v1.22 §9.1 records receipt of OFN v0.11/v0.12 and the scoped P2 update (RF-O08-01). |
+| NUMGEN v1.21 §6.8 (NG-7A Foundations export) and §9.1 | `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC` | Actual foundational-OPEN reference; not use of an OPEN identity as a theorem RID. NUMGEN v1.22 §9.1 export row confirms the v1.21 reference and vocabulary-only N-1A2 use (no closure import). |
 | Legacy v0.7 §13.1 IMP-L07-01 | `RTG-OFN-DEF-RELATIONAL-CONTENT` | Actual definition import; historical scope remains. |
 | Legacy v0.7 §13.1 IMP-L07-02 | `RTG-OFN-DEF-RANK-TYPING` | Actual definition import; no new physical dimension claim. |
-| RECOG v0.3.26 §2 R1/R5 | OFN comparator/orientation disposition and selection questions (receipts of OFN v0.8 and v0.10) | Source acknowledges OFN's conditional disposition; no physical OPA closure. |
+| RECOG v0.3.27 §2 R1/R5, §7 OFN row | OFN comparator/orientation disposition and selection questions at `ofn-v0.12`; earlier OFN v0.8/v0.10 and v0.11 receipts | Source acknowledges conditional disposition; RF-O09-02 A1c premise update is reference-only; no physical OPA closure. |
 | RRF v0.8.4 §2.3 guard; §6.2a | `RTG-OFN-DEF-RANK-TYPING` (non-spatial reading of Re W / Im W); `RTG-OFN-DEF-TRIAD-MODEL-CONTRACT` (class-C model-contract row) | Actual named imports by RID. |
-| TDR-G v2.12.14 §7, SG-14 | `RTG-OFN-ALG-STAR-TOKEN-SHIFT` (import, statement accepted); O0–O3 as context | Custody transfer XFER-O08-01 deferred by TDR-G to v2.13; the RID stays OFN's. |
-| Genesis v2.9 §6.3c, §7 IF32 | OFN §5.5 / IMP-O10-01 interface | Reference consumer; no OFN claim imported into Genesis. |
-| Dyadic v6.4.22 §7 | OFN imports `DYAD-THM-PRIM-CTR`, `DYAD-DEF-PRIMITIVE-MAP`, `DYAD-THM-FORMAL-Z6-GENERATOR`, Lemma F / F3, OPEN 3 RIDs, `DYAD-THM-SMOOTH-EMBEDDING`, `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | Dyadic notices N4 (map custody), N6 (`DYAD-THM-LOCAL-INVOLUTION-GERM`; received, no OFN import) and N14 (B-∞ existence) received in v0.11. |
-| Triadic v1.6.1 | OFN v0.9 (pinned by Triadic) | Triadic's repin is its decision; OFN half of pass two recorded in RF-O08-02. |
+| TDR-G v2.13 §7, SG-14 | `RTG-OFN-ALG-STAR-TOKEN-SHIFT` (import at `ofn-v0.12`, statement accepted; also cited by `TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED`); O0–O3 as context | XFER-O08-01 open, separate decision of both owners; RID remains OFN's. OPEN-OFN-2 and IMP-O08-06/14 consumer locators at v0.12 are receipts, not new OFN claims. |
+| Genesis v2.10 §6.3a–c, §7 IF32 | OFN §5.5 / IMP-O10-01/02 interface and companion at `ofn-v0.12` | OFN v0.11/v0.12 notices received and closed accept by GEN; neither OFN11-C01 nor OFN11-C02 used; no OFN claim imported into Genesis. |
+| Dyadic v6.4.24 §7 | OFN imports `DYAD-THM-PRIM-CTR`, `DYAD-DEF-PRIMITIVE-MAP`, `DYAD-THM-FORMAL-Z6-GENERATOR`, Lemma F / F3, OPEN 3 RIDs, `DYAD-THM-SMOOTH-EMBEDDING`, `DYAD-THM-SMOOTH-EQUIVARIANT-CHART` | Dyadic notices N4 (map custody), N6 (`DYAD-THM-LOCAL-INVOLUTION-GERM`; received, no OFN import) and N14 (B-∞ existence) received in v0.11. DYAD v6.4.23/v6.4.24 consumer row names OFN v0.12 and IMP-O08-12/20, IMP-O10-03–07; both OFN notices were accepted and closed by DYAD. N4/N14 used, N6 received/no import. |
+| Triadic v1.7 §2 T-6r C1, §7/§7.4 | OFN v0.12; `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` cited as a carrier interface constraint (not an import) | Current planar carrier real; Triadic receipt of OFN v0.12: no action. OFN pass-two and the scoped Triadic reference use are recorded in RF-O08-02/03/08; no physical carrier selection. |
 
-**CUST-O09-01 — primitive-map identity: answered.** Dyadic owns `DYAD-DEF-PRIMITIVE-MAP` (`dyad-v6.4.22` §1, §6.1); Genesis records `GEN-DEF-PRIMITIVE-MAP` as its alias (`gen-v2.9` §1); both resolve to the same formula. IMP-O08-12 carries the Dyadic RID; REQ-O09-04 is fulfilled.
+**CUST-O09-01 — primitive-map identity: answered.** Dyadic owns `DYAD-DEF-PRIMITIVE-MAP` (`dyad-v6.4.24` §1, §6.1); Genesis records `GEN-DEF-PRIMITIVE-MAP` as its alias (`gen-v2.10` §1); both resolve to the same formula. IMP-O08-12 carries the Dyadic RID; REQ-O09-04 is fulfilled.
 
-Programme v1.3 (adopted) lists OFN v0.10 and names OFN §§5, 9 as the criteria home for OPEN-P0 and OPEN-P2B; the NUMGEN opening-import scope correction and the RRF citation request of `OFN_v0_9_PROGRAMME_AND_OWNER_SYNC_REQUEST.md` are answered (NUMGEN v1.21 §1.1; RRF v0.8.4 §2.3).
+Programme v1.4 lists OFN v0.12 as the criterion home for OPEN-P0 (§§5, 9) and OPEN-P2B (OPEN-OFN-3B), and its IF02/03/24/28/31/32 distinguish constraints, claim imports, reference-only feedback and representation contracts. IF03's Finding A claim pin v0.10 was correct at Programme adoption (4 Nov); TDR-G repinned on 12 Nov and uses `ofn-v0.12` at v2.13. The later Programme current-use register correction belongs to Programme; this is not an OFN edit or a technical-owner assignment for P2B. The NUMGEN opening-import scope correction and RRF citation request of `OFN_v0_9_PROGRAMME_AND_OWNER_SYNC_REQUEST.md` remain answered (NUMGEN v1.21 §1.1; RRF v0.8.4 §2.3).
 
 ### 12.4 FMS Handoff Disposition and Outstanding Requests
 
@@ -1417,14 +1426,14 @@ The supplied noncanonical handoff reports FMS-01 COVERED by existing OFN/RRF req
 | **REQ-O09-02 — FULFILLED** | RECOG v0.3.20 final freeze/adoption record, exact source hash | `records/recog/RECOG_v0_3_20_FREEZE_DECISION_PROVENANCE.md` (`5c00f66d…9b55`; "Fulfils REQ-O09-02"), with its evidence qualification |
 | **REQ-O09-03 — FULFILLED** | NUMGEN owner assignment of a dedicated L-BACKBONE theorem/result RID, with explicit confirmation of q_m, its observable/frame, sampling index and domain | `NUMGEN-RESULT-N5AS1-L-BACKBONE`; q_m typed as the block-sampled primitive Q_true (`numgen-v1.21` §6.6). IMP-O08-20 continues to use the DYAD contraction bound. |
 | **REQ-O09-04 — FULFILLED** | Dyadic/Genesis disposition of CUST-O09-01 | `DYAD-DEF-PRIMITIVE-MAP` (Dyadic custody), Genesis alias recorded |
-| **REQ-O09-05 — endpoint component FULFILLED; custody component deferred by the owner** | TDR-G endpoint-policy and XFER-O08-01 disposition | `TDRG-DEF-ORIENT` and SG-14 (`tdrg-v2.12.14`); XFER-O08-01 deferred to TDR-G v2.13, RID stays OFN's; the six-constraint list is not recovered (OPEN-OFN-2) |
+| **REQ-O09-05 — endpoint component FULFILLED; custody component OPEN** | TDR-G endpoint-policy and XFER-O08-01 disposition | `TDRG-DEF-ORIENT` and SG-14 (`tdrg-v2.13`; original ruling v2.12.14); XFER-O08-01 open, a separate decision of both owners; RID remains OFN's. The six-constraint list is not recovered (OPEN-OFN-2) |
 | **REQ-O09-06** | Primary FMS closeout/adoption record and evidence notes, if stronger claims are requested | Needed for independent verification of pilot history or declaring its final closure; scoped dependency references remain reviewable |
 
 The earlier REQ-O08-01 OPA definition/proof task and other unfulfilled owner requests remain at their existing scopes. Any later definition expansion needs a separate justified proposal and approval.
 
 ### 12.5 Edition Decisions
 
-Decisions O10-P1–P7 (adopted 19 October 2026) are summarized in the Appendix C v0.10 entry; the decision table and the v0.10 assembly record are preserved in §12.5 at tag `ofn-v0.10`. The v0.11 dispositions, by row of the joint owner reconciliation, are in `records/ofn/OFN_v0_11_RELEASE_RECORD.md`.
+Decisions O10-P1–P7 (adopted 19 October 2026) are summarized in the Appendix C v0.10 entry; the decision table and the v0.10 assembly record are preserved in §12.5 at tag `ofn-v0.10`. The v0.11 dispositions, by row of the joint owner reconciliation, are in `records/ofn/OFN_v0_11_RELEASE_RECORD.md`. The v0.13 receiving scope and evidence limitations are recorded in `records/ofn/OFN_v0_13_RELEASE_RECORD.md` and the merged revised receiving reconciliation.
 
 ---
 
@@ -1551,6 +1560,12 @@ The inherited Appendix B records remain unchanged. Both v0.9 reconciliation entr
 
 One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier, with their draft-stage entries, are preserved verbatim in Appendix C at tag `ofn-v0.10`; the v0.1–v0.6 entries are in `ARCHIVED_OFN_HISTORY_v0_7.md`, which is not supplied to the corpus.
 
+### v0.13 — 24 November 2026 — DRAFT / receiving and synchronization maintenance
+- **§§3–4, 7, 9–12 [source scope/receipts]:** Finding A statement/use distinguished from open custody; token-sum referral answered; corrected STAR domain and CONV-TICK classification precedence; newer spectrum and census-interface reference example, with NUMGEN's later P2 owner re-annotation separately identified. No new model law or bridge.
+- **§§5–6, 8, 11–12 [pins/limits]:** matched DYAD, GEN, TRIAD, TDR-G, RECOG and Programme use; A1c D5B premise update with R9 retained where required; Triadic coefficient-level clock/extension limits; convention attribution; DZT/AZ reference homes and evidence custody. Original proof provenance and unmatched historical reference pins retained.
+- **Unchanged:** seventeen definitions, five OFN local results, FSP-U and all twenty-one OPEN statuses (twenty ACTIVE, one PARTIAL); Standard C, Q1–Q6, no physical selection, no custody transfer or new OFN RID.
+- **Record:** `records/ofn/OFN_v0_13_RELEASE_RECORD.md`; predecessor tag `ofn-v0.12`; adoption pending.
+
 ### v0.12 — 30 October 2026 — ADOPTED / closure-versus-reference result; isolation and independence frames
 - **§2.4 / §9 [result/scope]:** `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` registered (closure sector canonically isomorphic to node data modulo the common origin, $Q_{\rm node}\cong C_0$; the global comparison with one relation as reference is an isomorphism iff multiplication by $n$ is bijective; node and edge actions differ); OPEN-OFN-REF-CLOSURE narrowed to the physical reading.
 - **§5.5.4 / §9 [isolation]:** class-C causal-interface identity recorded; OPEN-OFN-TRIAD-CLASS isolation obligation split into I-comp, I-quiet and I-remove (none selected); OPEN-OFN-3A pointer.
@@ -1595,4 +1610,4 @@ One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier
 
 ---
 
-*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.12*
+*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.13 — DRAFT*
