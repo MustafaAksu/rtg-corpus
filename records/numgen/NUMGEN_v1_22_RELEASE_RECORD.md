@@ -41,11 +41,15 @@ Fields marked *(to be filled)* depend on steps that have not happened yet. This 
 | `evidence/numgen/v1.22/dsn_lint.txt` (round 1, informational) | `dde570e2cfcbb01e6a5cbbb0b30f0130d78ab4e434831ae7be848c5ba5bd9138` |
 | `records/numgen/NUMGEN_v1_22_RECEIVING_LEDGER.md` | `17341c762e6535742607af6831f409141ed78a535cb0e906efb8f9c6499aac1e` |
 | `evidence/numgen/v1.22/round2_readback.json` (round-2 connector-side rebuild and controls) | `f61900932a5103645b627ad6ba0999d1b30860be11a52c5e0b32e086877bb020` |
+| `evidence/numgen/v1.22/round2_check_output.txt` (round 2, native: C0–C10 PASS) | `28fcccdd382f7cb58690693f820126b5adb5656c31e82cdef6d69c04e2785460` |
+| `evidence/numgen/v1.22/round2_negative_controls_output.txt` (round 2, native: NC1–NC15 caught) | `ccc5b707b3356cd3d81161e42c67e9be206d7b827b5aaa54d4a246331e5f3a93` |
+| `evidence/numgen/v1.22/round2_dsn_lint.txt` (round 2, informational) | `7e28828950c5839c0216d4a0c08082e3c50859bdf21b2acf90354b65da57b177` |
+| `evidence/numgen/v1.22/round2_pipes_check.txt` (round 2: OK, 149 items in 20 inboxes) | `6a8820015bf7afa2fa4adf458baedb7d4cd0657a0bbb340f19cf5f8d2a5822da` |
 | S1: script / annotation / manifest | `4c5c2f17…8ae9` / `1819015a…3524` / `3981cfe6…67dc` |
 
 **Reproduce:**
 1. `git show numgen-v1.21:dsn/RTG_NUMBER_GENESIS_DSN.md > v.md`
-2. `python3 -I evidence/numgen/scripts/build_numgen_v1_22.py v.md OUT LOG` gives `fa28c0ab…78b9` (round 2; native run pending).
+2. `python3 -I evidence/numgen/scripts/build_numgen_v1_22.py v.md OUT LOG` gives `fa28c0ab…78b9` (round 2; native rerun 24 Nov 2026 reproduced the candidate and the edit log byte-identically).
 3. `python3 -I evidence/numgen/scripts/check_numgen_v1_22.py v.md OUT LOG --root .`, and again with `--controls`.
 
 ## 3. Edits by group
@@ -70,20 +74,20 @@ The tag census (gate C3) changes exactly by `[NUM] +2`, `[scope: …] +1` and `[
 - the S1 `[NUM]` block with its scope and convention tags;
 - the `[NUM]` status label of the new §9.2 artifact row.
 
-No other grade tag changes. No edit lowers OPEN, CLOSED or INCONCLUSIVE (C4). No NUMGEN RID is added or removed. The eight newly cited external RIDs include `TDRG-ART-BIND3-N24K1` (owner v2.13 §8, missing-artifact locator only). No new NUMGEN RID or truth-status change. Round-2 native C5 rerun remains pending.
+No other grade tag changes. No edit lowers OPEN, CLOSED or INCONCLUSIVE (C4). No NUMGEN RID is added or removed. The eight newly cited external RIDs include `TDRG-ART-BIND3-N24K1` (owner v2.13 §8, missing-artifact locator only). No new NUMGEN RID or truth-status change. Round-2 native C5 rerun: PASS (no NUMGEN RID changed; all eight external RIDs declared at the named tags).
 
 ## 4. Checks
 
-Round-1 native output files are retained unchanged and refer to the superseded candidate. Round 2 was rebuilt and reversed against the exact tagged base by a connector-side independent readback, including edit hashes, tag/status/RID checks and the four targeted negative controls. The Python builder/checker and its full controls, lint and pipes validator must be rerun on round 2 during the Atlas check; no round-2 native PASS is claimed.
+Round-1 native output files are retained unchanged and refer to the superseded candidate. Round 2 was rebuilt and reversed against the exact tagged base by a connector-side independent readback, including edit hashes, tag/status/RID checks and the four targeted negative controls. The Python builder, checker with full controls, lint and pipes validator were then rerun natively on round 2 by the Claude co-owner session (24 Nov 2026, Python 3.13): candidate and edit log reproduced byte-identically; C0–C10 PASS; NC1–NC15 each caught by a substantive gate; pipes OK. Outputs: `evidence/numgen/v1.22/round2_*.txt`. The atlas row check may rerun them independently.
 
 | Check | Evidence key | Result |
 |---|---|---|
 | Round-1 `check_numgen_v1_22.py` C0–C9 | EV-RUN | PASS on round 1 only |
 | Round-2 independent connector readback (`round2_readback.json`) | EV-HASH, EV-BYTES | 39/39 exact-once, 78/78 edit hashes, forward/reverse reconstruction, review guards and 4/4 targeted negative controls PASS |
-| Round-2 Python C0–C10 and NC1–NC15 | pending | native rerun required |
+| Round-2 Python C0–C10 and NC1–NC15 | EV-RUN (Claude, 24 Nov 2026) | C0–C10 PASS; NC1–NC15 all caught |
 | Round-1 negative controls NC1–NC11 | EV-RUN | all caught on round 1 |
-| `tools/dsn_lint.py` | EV-RUN (round 1) | round-2 informational rerun pending |
-| `tools/pipes_index.py --check` | EV-RUN (round 1) | round-2 rerun pending; pipe files and index unchanged by round 2 |
+| `tools/dsn_lint.py` | EV-RUN (round 2) | informational; one more `historical` phrase than v1.21 (the R4 governance row), otherwise as at v1.21 |
+| `tools/pipes_index.py --check` | EV-RUN (round 2) | OK; pipe files and index unchanged by round 2 |
 | S1 re-annotation (G1–G7) | EV-RUN | PASS, with independent co-owner recheck (comment `7128043448`) |
 | N-5, C7A, DISC and Census-1 campaigns | EV-NOT-RERUN | not rerun |
 
@@ -125,8 +129,8 @@ Round 2 clarifies the §9.1 availability row: NUMGEN enumerators and S1 inputs a
 
 ## 9. Remaining steps
 
-1. Round-2 change-focused readback of R1–R4.
-2. Atlas row check including native round-2 builder/checker, controls, lint and pipes validation.
+1. Round-2 change-focused readback of R1–R4: done by the Claude co-owner session (24 Nov 2026; PR #377 comment).
+2. Atlas row check (native round-2 outputs are on the branch; independent rerun optional).
 3. PI adoption.
 4. Publication transform (status lines only).
 5. PI merge (#374 → #375 → v1.22 PR) and tag `numgen-v1.22`.
