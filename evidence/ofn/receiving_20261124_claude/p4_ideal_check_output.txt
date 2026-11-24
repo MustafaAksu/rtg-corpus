@@ -1,0 +1,35 @@
+dim V (S3+lambda-equivariant quintic, real) = 12
+dim V cap Im A = 4   => first-order quintic moduli in S3 class = 8
+number of independent functionals = 8
+left null dim 49
+(P1) REFLECTED PAIR kappa=1, a=0, b=(17sqrt3/513) i mu: swap False #eqs 16 G=[1]: True 
+(P1) REFLECTED PAIR kappa=1, a=0, b=(17sqrt3/513) i mu: swap True #eqs 16 G=[1]: True 
+(P2) CONTROL identical pair: swap False #eqs 12 G=[1]: False [(w - 1)*(w**2 + w + 1), z - 1]
+(P2) CONTROL identical pair: swap True #eqs 12 G=[1]: False [(w - 1)*(w**2 + w + 1), z - 1]
+(P2) CONTROL B=diag(lam,1) conjugate: swap False #eqs 12 G=[1]: False [(w + 1)*(w**2 - w + 1), z - 1]
+(P2) CONTROL B=diag(lam,1) conjugate: swap True #eqs 12 G=[1]: False [(w + 1)*(w**2 - w + 1), z - 1]
+t=0 swap=False deg_r(f5)={0, 1} #eqs=16 elimination ideal in r: [(1026*r - 17*sqrt(3))/1026]  G=[1]: False
+t=0 swap=True deg_r(f5)={0, 1} #eqs=16 elimination ideal in r: [(1026*r - 17*sqrt(3))/1026]  G=[1]: False
+   solutions r: {r: 17*sqrt(3)/1026}   reflection fixed point r* = 17*sqrt(3)/1026   only fixed point: True
+   solutions r: {r: 17*sqrt(3)/1026}   reflection fixed point r* = 17*sqrt(3)/1026   only fixed point: True
+t=1 swap=False deg_r(f5)={0, 1} #eqs=16 elimination ideal in r: [(1026*r - 89*sqrt(3))/1026]  G=[1]: False
+t=1 swap=True deg_r(f5)={0, 1} #eqs=16 elimination ideal in r: [(1026*r - 89*sqrt(3))/1026]  G=[1]: False
+   solutions r: {r: 89*sqrt(3)/1026}   reflection fixed point r* = 89*sqrt(3)/1026   only fixed point: True
+   solutions r: {r: 89*sqrt(3)/1026}   reflection fixed point r* = 89*sqrt(3)/1026   only fixed point: True
+t=-1/2 swap=False deg_r(f5)={0, 1} #eqs=16 elimination ideal in r: [(54*r + sqrt(3))/54]  G=[1]: False
+t=-1/2 swap=True deg_r(f5)={0, 1} #eqs=16 elimination ideal in r: [(54*r + sqrt(3))/54]  G=[1]: False
+   solutions r: {r: -sqrt(3)/54}   reflection fixed point r* = -sqrt(3)/54   only fixed point: True
+   solutions r: {r: -sqrt(3)/54}   reflection fixed point r* = -sqrt(3)/54   only fixed point: True
+(P3) symbolic reflected family: only the fixed point solves: True
+f5 bilinear in (r,t): verified at check point
+swap False  elimination ideal in (r,t): [(-72*sqrt(3)*T + 1026*r - 17*sqrt(3))/1026]
+swap True  elimination ideal in (r,t): [(-72*sqrt(3)*T + 1026*r - 17*sqrt(3))/1026]
+(P4) symbolic (r,t): elimination ideal = fixed-point line only: True
+ALL PASS
+
+FMS script exit code: 0
+swap branch 0: elimination basis [-4*sqrt(3)*T/57 + r - 17*sqrt(3)/1026]
+  C1 L in I_el: True   C2 I_el in <L>: True   C3 wrong-direction control (L(r-1) passes C2-form, fails C1): True
+swap branch 1: elimination basis [-4*sqrt(3)*T/57 + r - 17*sqrt(3)/1026]
+  C1 L in I_el: True   C2 I_el in <L>: True   C3 wrong-direction control (L(r-1) passes C2-form, fails C1): True
+RESULT: PASS
