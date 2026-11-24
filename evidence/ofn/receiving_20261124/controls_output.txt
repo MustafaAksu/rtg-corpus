@@ -1,0 +1,12 @@
+Census interface inverse, centre=1: PASS
+Spectrum injection, centre=1: PASS
+  next spectrum = [1, 1, 2, 2, 2, 3, 4, 4, 5, 6]
+Census interface inverse, centre=3: PASS
+Spectrum injection, centre=3: PASS
+  next spectrum = [1, 1, 2, 2, 3, 4, 4, 6, 7, 8]
+Same input census, different prescribed centre tokens, different output spectra: PASS
+P4 predicate accepts synthetic product ideal: PASS
+Ideal-membership test rejects synthetic product ideal: PASS
+Extra solution branch in synthetic control: PASS
+Linear-ideal positive control: PASS
+RESULT: PASS (SESSION controls only; actual FMS P4 not executed)
