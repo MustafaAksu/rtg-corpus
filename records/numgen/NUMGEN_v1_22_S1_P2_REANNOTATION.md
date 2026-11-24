@@ -7,7 +7,7 @@
 
 ## 1. What was run
 
-Script: `evidence/numgen/v1.22/s1/numgen_v1_22_s1_p2_reannotation.py` (`4c5c2f17…67dc`), run from the repository root.
+Script: `evidence/numgen/v1.22/s1/numgen_v1_22_s1_p2_reannotation.py` (`4c5c2f17…8ae9`), run from the repository root.
 
 The universe is the Census-1 TDR-G witness universe: DISC-1 22 + DISC-2 136 = 158 records (`NG_C7C_M2_CENSUS1_UTDRG_UNIVERSE_v1.json`), at k ∈ {0,1,2,3}.
 
@@ -24,14 +24,14 @@ Everything else is unchanged:
 | Input | Path | SHA-256 |
 |---|---|---|
 | owner engine v18 | `upload/tdrg-records/genesis_mode_b_mc_v18.py` | `9d787b43…675e` |
-| TDR-G reference orientation (`tdrg-v2.13`) | `evidence/tdrg/scripts/tdrg_orient_v2_12_14.py` | `ca59e9b9…d77c` |
+| TDR-G reference orientation (`tdrg-v2.13`) | `evidence/tdrg/scripts/tdrg_orient_v2_12_14.py` | `ca59e9b9…d59c` |
 | Census-1 TDR-G universe | `upload/numgen-records/NG_C7C_M2_CENSUS1_UTDRG_UNIVERSE_v1.json` | `80b0c3b1…13e9` |
 | DISC-1 enumerator / result | `upload/numgen-records/bind3_enumerate_k0123_v1.py` / `disc1_result.json` | `41a86011…e929` / `92593b8c…6f70` |
-| DISC-2 enumerator / witness report | `upload/numgen-records/disc2_supplementary_enumerator_v3_1.py` / `disc2_witness_report.json` | `b7cee922…35df` / `ccc84570…faa7d` |
+| DISC-2 enumerator / witness report | `upload/numgen-records/disc2_supplementary_enumerator_v3_1.py` / `disc2_witness_report.json` | `b7cee922…35df` / `ccc84570…aa7d` |
 | held v1.19 audit (comparison only) | `upload/numgen-records/disc2_p2_antipodal_exposure_audit_v1.py` | `89a1466f…fe1c` |
 
 Outputs, in `evidence/numgen/v1.22/s1/`:
-- `numgen_v1_22_s1_witness_annotation.jsonl` (`1819015a…3cc524`): 158 records. Each has the frozen record, the v18 and TDRG-DEF-ORIENT tuples (k=0..3), verdicts and classes, antipodal hits, the exposed and changed flags, and, for DISC-2, the audit's `inert` column.
+- `numgen_v1_22_s1_witness_annotation.jsonl` (`1819015a…3524`): 158 records. Each has the frozen record, the v18 and TDRG-DEF-ORIENT tuples (k=0..3), verdicts and classes, antipodal hits, the exposed and changed flags, and, for DISC-2, the audit's `inert` column.
 - `numgen_v1_22_s1_manifest.json`.
 - `numgen_v1_22_s1_output.txt`.
 
@@ -81,5 +81,10 @@ The run was executed twice; the annotation hash was identical both times.
 - §6.6 line 1600 and line 1969: "DISC-1 requires the same audit" is replaced by the DISC-1 0/22 result with this record as evidence.
 - §6.6 line 1912: the v1.20.6 robustness record now points to this artifact.
 - §9.2 artifact row for this record.
+
+## 6. Errata (24 Nov 2026, after co-owner review comment `7128043448`)
+
+- Three abbreviated hashes in this record were wrong in their suffix: S1 script, orientation and annotation. A fourth was not in the four-character form: the witness report. All four are corrected above. The full SHA-256 values in `numgen_v1_22_s1_manifest.json` were correct throughout.
+- The docstring of the executed script `numgen_v1_22_s1_p2_reannotation.py` writes the orientation pin as `ca59e9b9…d77c`. The correct abbreviation is `ca59e9b9…d59c`. The script's `PINS` table holds the correct full value `ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c`, and gate G1 checked that value. The executed bytes (`4c5c2f17…8ae9`) are kept unchanged; this erratum replaces a corrected copy.
 
 *END OF RECORD.*
