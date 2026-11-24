@@ -1,0 +1,54 @@
+UVM v0.7.2 candidate bounded replay and scope validation
+Execution: ChatGPT connector-side JavaScript; SHA-256 abc self-test PASS
+Stage A1: dfe37264b0bf35a4ccd134ce9fad013366530ad5 5696a765f82463c531da56d359fdfd2aa6e1dc80b684a7bb7387a336dc0e0932
+Stage A2: 8b6a46ec8ace905cf7400f2e43f2129b326fb6f5 a49d2454854099b676eb218ce04d153915899a690134e939b529fd3964c8ee47
+Candidate SHA-256: 857a3dbc53df7a68cb4fe2d55605b0c5bba2e88c8fe949cde9e30437e41b871d
+Stage B: all text outside Appendix A byte-identical
+PASS 01 tagged base identity
+PASS 02 Stage A1 identity
+PASS 03 Stage A1 map non-overlapping
+PASS 04 all A1 source spans exact
+PASS 05 exact replay A1
+PASS 06 A2 parent identity
+PASS 07 all A2 literal guards
+PASS 08 exact replay A2
+PASS 09 corrected intermediate hash
+PASS 10 candidate hash
+PASS 11 exactly one structural operation
+PASS 12 unique ordered history bounds
+PASS 13 archive identity
+PASS 14 complete removed history occurs in adopted archive
+PASS 15 exact Stage B replay
+PASS 16 entire outside-history text byte-identical
+PASS 17 Stage B history-only heading
+PASS 18 unique live local RID declarations
+PASS 19 OPEN and R14 identities distinct
+PASS 20 R14 selected panel scope twice
+PASS 21 no former single-series assertion
+PASS 22 ultra panel identity
+PASS 23 gentle panel identity
+PASS 24 correlations retained
+PASS 25 R14 numerical grade
+PASS 26 independent-correlation/causal limits
+PASS 27 single jet target contract
+PASS 28 positive-m branch and signed magnitude
+PASS 29 nondegenerate R15 quotient
+PASS 30 exact diagnostic conversion retained
+PASS 31 prelegacy finite scope
+PASS 32 proxy not physical identification
+PASS 33 THM-3G only scoped reported evidence
+PASS 34 old audit missing artifact
+PASS 35 stage 1 not adopted
+PASS 36 RRF provisional reference
+PASS 37 owner source receipt not inferred
+PASS 38 all four missing original items named
+PASS 39 DRAFT not adopted
+PASS 40 one final footer
+PASS 41 no compound RESULT companion tags
+PASS negative: source corruption (rejected by 01 tagged base identity)
+PASS negative: undeclared A1 change (rejected by 02 Stage A1 identity)
+PASS negative: undeclared A2 change (rejected by 08 exact replay A2)
+PASS negative: B modifies live result even with matching candidate hash (rejected by 15 exact Stage B replay)
+PASS negative: B removes live conditional phrase even with matching hash (rejected by 15 exact Stage B replay)
+SUMMARY: 41/41 checks PASS; 5/5 negative controls rejected.
+This is bounded document/replay verification, not a scientific certificate, independent Claude review, or execution of tools/check_compaction.py / tools/test_check_compaction.py / tools/dsn_lint.py.

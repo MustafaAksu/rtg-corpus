@@ -1,0 +1,127 @@
+{
+ "base_sha256": "e4e8fa53f52400da10843ed0acdb36150486d6b63881b8ef23f91e9d7371ec3e",
+ "candidate_sha256": "22d14dd8e086c9be25d966b860bcf79db03270e874abe939e8246b80da03fc57",
+ "map_sha256": "722e71e80be6f3ad52db463ebd09ec22b2d013f28217697d76067e45faf4878f",
+ "operations": [
+  {
+   "id": "B01",
+   "op": "replace-section",
+   "class": "history-appendix",
+   "result": "PASS",
+   "detail": "section relocated (12570 chars), found in ['uvm-v0.7.1']"
+  }
+ ],
+ "claim_blocks": {
+  "base": 119,
+  "identical": 119,
+  "declared_change": 0,
+  "unexplained": []
+ },
+ "profile": {
+  "history_appendix": "A",
+  "checked_tag_prefixes": [
+   "uvm-",
+   "gen-",
+   "triad-",
+   "ofn-",
+   "programme-",
+   "rrf-",
+   "prelegacy-",
+   "methodology-"
+  ],
+  "known_tags": [
+   "uvm-v0.7.1",
+   "gen-v2.10",
+   "dyad-v6.4.24",
+   "triad-v1.7",
+   "ofn-v0.12",
+   "programme-v1.4",
+   "methodology-v1.4",
+   "rrf-v0.8.4",
+   "prelegacy-v0.8",
+   "az-v0.10"
+  ]
+ },
+ "checks": [
+  {
+   "check": "base identity",
+   "result": "PASS",
+   "detail": "map base_sha256 vs file"
+  },
+  {
+   "check": "candidate identity",
+   "result": "PASS",
+   "detail": "map candidate_sha256 vs file"
+  },
+  {
+   "check": "archive identity uvm-v0.7.1",
+   "result": "PASS",
+   "detail": "0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e"
+  },
+  {
+   "check": "mechanical scope (re-derivation)",
+   "result": "PASS",
+   "detail": "candidate equals base + declared operations"
+  },
+  {
+   "check": "operation B01 (history-appendix)",
+   "result": "PASS",
+   "detail": "section relocated (12570 chars), found in ['uvm-v0.7.1']"
+  },
+  {
+   "check": "history appendix region",
+   "result": "PASS",
+   "detail": "Appendix A is the unique history region in base and candidate; operation B01 replaces exactly it"
+  },
+  {
+   "check": "qualified claim blocks",
+   "result": "PASS",
+   "detail": "119 claim blocks in base live text: 119 byte-identical, 0 changed by declared operations, 0 unexplained"
+  },
+  {
+   "check": "RID set preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "heading anchors preserved",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "source hashes preserved in live text",
+   "result": "PASS",
+   "detail": "missing: []"
+  },
+  {
+   "check": "qualifier tags preserved",
+   "result": "PASS",
+   "detail": "lost: []"
+  },
+  {
+   "check": "references resolve",
+   "result": "PASS",
+   "detail": "Appendix references, H-labels and tags resolve; 0 archive targets found in the pinned archive"
+  },
+  {
+   "check": "presentation (header, footer)",
+   "result": "PASS",
+   "detail": "required fields present; one predecessor; one footer"
+  }
+ ],
+ "warnings": [],
+ "result": "PASS",
+ "limitations": [
+  "Blocks are compared as bytes; equivalence of rewritten prose is not assessed (Methodology v1.4 §12.4).",
+  "Claim tags, qualifiers, RIDs, math spans and hashes are found by regular expressions; LaTeX is not parsed.",
+  "RID pattern covers the registered namespace prefixes listed in the script (RTG-… and RTG-OFN-… with category and description; DYAD, RECOG, GEN, TRIAD, NUMGEN, UVM, RRF, DZT, AZ, TDRG and the other listed prefixes); other identifiers (e.g. PL, L0L1, L2) are not tracked.",
+  "History region: Appendix A bounded by Appendix B, or the appendix named by profile key history_appendix up to the next '## ' heading or the footer; it is excluded from the live text. With the key, its heading is unique in base and candidate, one history-appendix operation replaces exactly it, and hashes leave the live text only by declared relocation (relocate_hashes).",
+  "Reference resolution: in the sentence of each tagged-edition pointer, H-labels (as '**H-n** —' definitions), 'Appendix X' headings, 'Local Tag Aliases' and version entries ('### vX') are looked up in the pinned archive; section numbers (§n.m) are not resolved.",
+  "Reference substitutions may change only reference vocabulary (REF_WORDS, labels, versions, tags, punctuation); any other changed word fails.",
+  "tag_examples/navigation relocations need a registered region (hash, kind) and a reviewer confirmation; unconfirmed regions give PENDING. In a tag_examples region an identifier may occur only inside a tag spelling in a table row (and must survive in the live text); a navigation region may carry no identifier and only [DEF] tags.",
+  "An H-label resolves if the archive defines it ('**H-n** —') or defines its lettered group ('**H-na** —').",
+  "Archive membership is a byte-substring test against the named archive files.",
+  "Study profile (map key 'profile'): extra history words, extra reference words and the status-summary source (base header summary, optionally base §1) are calibration inputs declared in the map and printed in the report.",
+  "A 'move' (class reorder) cuts one whole blank-line-delimited block and reinserts it byte-identical before a unique block-starting anchor inside the same section of the live text; it can change no text, tag, RID, math or hash (re-derivation and the block-multiset test)."
+ ]
+}
