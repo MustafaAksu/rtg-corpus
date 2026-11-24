@@ -1,0 +1,40 @@
+name: UVM v0.7.2 exact-head compaction check
+on:
+  push:
+    branches:
+      - chatgpt/uvm-v072-compaction-check-20261124
+permissions:
+  contents: read
+jobs:
+  compaction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout exact reviewed candidate (read only)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: '4a916c2d7e09156828656a56a402466e98d509c1'
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify candidate identities and reconstruct intermediate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "4a916c2d7e09156828656a56a402466e98d509c1"
+          git rev-parse HEAD
+          git rev-parse 'uvm-v0.7.1^{commit}'
+          python3 --version
+          node --version
+          sha256sum tools/check_compaction.py
+          work="$RUNNER_TEMP/uvm-compaction"
+          mkdir -p "$work"
+          node evidence/uvm/v0.7.2-candidate/validate.mjs --write-intermediate "$work/stage-a-revised.md"
+          printf '%s  %s\n' 'e4e8fa53f52400da10843ed0acdb36150486d6b63881b8ef23f91e9d7371ec3e' "$work/stage-a-revised.md" '22d14dd8e086c9be25d966b860bcf79db03270e874abe939e8246b80da03fc57' 'dsn/RTG_OPEN_M_DSN.md' | sha256sum --check
+      - name: Run unmodified official compaction checker
+        shell: bash
+        run: |
+          set -euo pipefail
+          work="$RUNNER_TEMP/uvm-compaction"
+          python3 -I tools/check_compaction.py "$work/stage-a-revised.md" dsn/RTG_OPEN_M_DSN.md evidence/uvm/v0.7.2-candidate/stage_b_revision_map.json --report "$work/compaction.json"
+          sha256sum "$work/compaction.json"
+          printf '\nOfficial compaction checker exit=0\n'
