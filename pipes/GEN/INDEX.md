@@ -16,3 +16,4 @@
 | 2026-11-04 | PROG | notice | open | Programme v1.4 §6.1 (GEN row at `gen-v2.10`), §6.3 GEN entry, §8.2 κ_f row, §7.2 IF05, IF06, IF07, IF25, IF37, IF38 | — | `20261104-PROG-v1-4-adopted.md` |
 | 2026-11-11 | DYAD | notice | open | DYAD-DEF-PRIMITIVE-MAP (DYAD v6.4.24 §1): label wording; Dyadic consumer register row for Genesis v2.10 | — | `20261111-DYAD-v6-4-24-adopted.md` |
 | 2026-11-23 | UVM | request | open | UVM-PROP-JPERP-01 (records/uvm/UVM_OPEN_M6_STAGE1_RESULTS.md §6, PR #366 at 0c2292a, not merged); GEN §6.7 minimal UV completion; GEN-OPEN-SOURCE-PAIRING; GEN-DEF-PRIMITIVE-METRIC | OPEN-M-6 stage 2 (contract C3, physical discrimination of the source models) | `20261123-UVM-jperp-proposal-review.md` |
+| 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §9.1; IF37 saturation input and IF38 cyclic-average route | — | `20261124-NUMGEN-v1-22-adopted.md` |
