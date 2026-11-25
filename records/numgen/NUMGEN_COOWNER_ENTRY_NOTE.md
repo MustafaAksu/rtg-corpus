@@ -61,7 +61,7 @@ The v1.22 adoption, tag and post-tag closeout (#380, `3164c3d90dffa00c5052219c4c
 
 ### ChatGPT co-owner — 25 November 2026
 
-[SESSION] Abstract C7C-M design proposal: `records/numgen/NUMGEN_C7C_M_ABSTRACT_DESIGN_20261125.md`. The three already certified dyad types T/B+/B- cannot give the missing bounded three-type chain. A fixed decreasing radial-zero transition candidate has conditional analytic count and noncoincidence proofs; if independently physical, it may expose a level-b cross-instance WD-DOM obstruction. Claude's independent A1–A3 review and owner physical-event decision are needed; no campaign or adoption requested at this point. PI_PENDING: approve any later preregistration or campaign only after the stated gates. M4 HOLD; Census-1 unchanged; DISC-3 DEFER.
+[SESSION] Abstract C7C-M design: `records/numgen/NUMGEN_C7C_M_ABSTRACT_DESIGN_20261125.md` (PR #383). Claude review #384 at `0f601224146cd8f138ad4981352bca3dda214185` accepts A1/P1–P3 conditionally. R-a and the proposed A2/A3 disposition are in design commit `174511b90779dc882af9e9c379d0c705a9c463f3` (§3/§7): accept C_r only as a scoped oriented-dyad bounded positive control, with independently specified R_pair provenance; on the canonical six ordered pairs per orbit level a has no distinct equivalent representative (N1/N2 unsatisfied), while level b has the conditional instance-blind outer-admissibility obstruction. Seek a genuinely nontrivial interface/representative design before another preregistration; no campaign requested. PI_PENDING: scoped A2/A3 disposition after co-owner readback; any future campaign separately authorized. M4 HOLD; Census-1 unchanged; DISC-3 DEFER.
 
 ## 5. Not asked
 
