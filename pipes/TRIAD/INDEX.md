@@ -12,3 +12,4 @@
 | 2026-11-04 | PROG | notice | open | Programme v1.4 §6.1 (TRIAD row at `triad-v1.7`), §6.3 TRIAD entry, §7.2 IF04, IF06, IF07, IF11, IF29, §7.3 CN-05 | — | `20261104-PROG-v1-4-adopted.md` |
 | 2026-11-11 | DYAD | notice | open | DYAD-DEF-PRIMITIVE-MAP (DYAD v6.4.24 §1): label wording; Dyadic consumer register row for Triadic v1.7 | — | `20261111-DYAD-v6-4-24-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 RF-O08-02/03/08; T-6r C1 and §6.18 scope | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-25 | UVM | notice | open | UVM v0.7.2 §§1.3, 2, 3, 6–7; R-CHIRALITY-RECONCILIATION; CN-02/CN-04/CN-05 | — | `20261125-UVM-v0-7-2-adopted.md` |

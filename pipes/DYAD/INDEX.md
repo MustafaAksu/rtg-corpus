@@ -29,3 +29,4 @@
 | 2026-11-20 | DZT | notice | open | DYAD-THM-Q403-PHASELAW (dyad-v6.4.24 §6.11, closed form of Q_p) used as the explicit assumption of a DZT theorem; for Dyadic's consumer register | — | `20261120-DZT-v0-19-adopted.md` |
 | 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §§6.2, 6.6, 9.1; NC-17 q-star disambiguation and N15 receipt | — | `20261124-NUMGEN-v1-22-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 IMP-O08-12 and IMP-O10-05; DYAD reference-map and conditional OPEN21 scope | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-25 | UVM | notice | open | UVM v0.7.2 SG-M-7, R9/R11/R16, §7; UVM-ALG-2B-ASSEMBLY, UVM-ALG-H3AUDIT, UVM-RESULT-AUDIT1 | — | `20261125-UVM-v0-7-2-adopted.md` |
