@@ -1,0 +1,40 @@
+name: UVM post-tag pipe generation and preservation check
+on:
+  push:
+    branches:
+      - chatgpt/uvm-post-tag-pipes-check-20261125
+permissions:
+  contents: read
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out exact maintenance payload
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: 'f7bd089f19e4d3c98dc2da8ff6b2e6ef0e56eb09'
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Generate indexes with the repository tool and validate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = 'f7bd089f19e4d3c98dc2da8ff6b2e6ef0e56eb09'
+          test "$(git rev-parse HEAD^)" = 'c7b7a3c149832bf06f66f2b7b2d68da7faab9e7d'
+          git diff --quiet 'c7b7a3c149832bf06f66f2b7b2d68da7faab9e7d' HEAD -- dsn/ BASELINE.md upload/ evidence/ tools/ records/uvm/UVM_v0_7_2_RELEASE_RECORD.md
+          test "$(git rev-parse HEAD:dsn/RTG_OPEN_M_DSN.md)" = "$(git rev-parse uvm-v0.7.2:dsn/RTG_OPEN_M_DSN.md)"
+          printf '%s  %s\n' '2bd854dfd0168906159f8add900ad70c86782bc8d06b420614308959f807880f' 'dsn/RTG_OPEN_M_DSN.md' | sha256sum --check
+          python3 -I tools/pipes_index.py --selftest
+          python3 -I tools/pipes_index.py
+          python3 -I tools/pipes_index.py --check
+          python3 - <<'PY'
+          import base64, hashlib, json, pathlib, subprocess
+          paths = subprocess.check_output(["git","diff","--name-only"], text=True).splitlines()
+          expected = sorted("pipes/"+s+"/INDEX.md" for s in ["UVM","GEN","DYAD","TRIAD","OFN","PROG","AZ","ATLAS","RRF","PREL"])
+          assert sorted(paths) == expected, (paths, expected)
+          for name in sorted(paths):
+              data = pathlib.Path(name).read_bytes()
+              print("UVM_INDEX_RESULT="+json.dumps({"path":name,"sha256":hashlib.sha256(data).hexdigest(),"b64":base64.b64encode(data).decode()},separators=(",",":")))
+          print("PASS native generation exactly ten derived INDEX.md files")
+          PY
