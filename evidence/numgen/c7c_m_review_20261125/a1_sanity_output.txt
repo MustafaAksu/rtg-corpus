@@ -1,0 +1,4 @@
+steps 120000 N_C 20000 N_+ 19999 N_- 20000 max|N_C-N_+| 1
+delta_T range 1.0435770346729774 1.0507953744900471 (L-MONO: pi/6..pi/2 = 0.5235987755982989 1.5707963267948966 )
+same-revolution lag B+ -> next C_r: {2: 19948, 1: 51}
+token classes (C, B+, B-): {'(False, False, False)': 60001, '(True, False, False)': 20000, '(False, False, True)': 20000, '(False, True, False)': 19999}
