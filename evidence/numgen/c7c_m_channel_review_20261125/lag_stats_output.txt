@@ -1,0 +1,6 @@
+steps 120000 {'P+': 19999, 'H-': 20000, 'M-': 20000, 'P-': 20000, 'H+': 20000, 'M+': 20000}
+P+ at n -> H- at n+1: 19999/19999 (100.00%); lag distribution {1: 19999}
+P+ at n -> M- at n+2: 19948/19999 (99.74%); lag distribution {1: 51, 2: 19948}
+P+ at n -> P- at n+3: 19948/19999 (99.74%); lag distribution {2: 51, 3: 19948}
+P+ at n -> H+ at n+4: 19948/19999 (99.74%); lag distribution {3: 51, 4: 19948}
+P+ at n -> M+ at n+5: 19999/19999 (100.00%); lag distribution {5: 19999}
