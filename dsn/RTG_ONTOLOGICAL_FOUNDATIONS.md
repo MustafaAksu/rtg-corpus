@@ -1399,7 +1399,7 @@ IMP/RF/CUST/REQ labels are administrative records, not newly assigned scientific
 
 | Consumer and exact location | Observed OFN input | Current disposition |
 |---|---|---|
-| NUMGEN v1.21 §1.1 RF-06 and three §1.1 DEF imports | `SG-OFN-STATE`; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`; `RTG-OFN-DEF-RELATIONAL-CONTENT`, `-PHASE-GAUGE`, `-BACKGROUND-TIME` | Actual named use at source grade; the opening imports are narrowed to one DEF import per OFN RID (NUMGEN v1.21 notice received); NUMGEN v1.22 §9.1 records receipt of OFN v0.11/v0.12 and the scoped P2 update (RF-O08-01). |
+| NUMGEN v1.21 §1.1 RF-06 and three §1.1 DEF imports | `SG-OFN-STATE`; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`; `RTG-OFN-DEF-RELATIONAL-CONTENT`, `-PHASE-GAUGE`, `-BACKGROUND-TIME` | Actual named use at source grade; the opening imports are narrowed to one DEF import per OFN RID (NUMGEN v1.21 notice received); NUMGEN v1.22 §9.1 records receipt of OFN v0.11/v0.12 (REQ-O09-03 fulfilled; N-1A2 vocabulary only); its separate §6.6 P2 re-annotation is recorded at RF-O08-01. |
 | NUMGEN v1.21 §6.8 (NG-7A Foundations export) and §9.1 | `RTG-OFN-OPEN-HOLONOMY-RANK-DIAGNOSTIC` | Actual foundational-OPEN reference; not use of an OPEN identity as a theorem RID. NUMGEN v1.22 §9.1 export row confirms the v1.21 reference and vocabulary-only N-1A2 use (no closure import). |
 | Legacy v0.7 §13.1 IMP-L07-01 | `RTG-OFN-DEF-RELATIONAL-CONTENT` | Actual definition import; historical scope remains. |
 | Legacy v0.7 §13.1 IMP-L07-02 | `RTG-OFN-DEF-RANK-TYPING` | Actual definition import; no new physical dimension claim. |

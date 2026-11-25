@@ -1069,7 +1069,7 @@
       "group": "F3",
       "reason": "Original OFN use and current NUMGEN consumer metadata, not a blanket pin",
       "old": "| NUMGEN v1.21 §1.1 RF-06 and three §1.1 DEF imports | `SG-OFN-STATE`; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`; `RTG-OFN-DEF-RELATIONAL-CONTENT`, `-PHASE-GAUGE`, `-BACKGROUND-TIME` | Actual named use at source grade; the opening imports are narrowed to one DEF import per OFN RID (NUMGEN notice received). |",
-      "new": "| NUMGEN v1.21 §1.1 RF-06 and three §1.1 DEF imports | `SG-OFN-STATE`; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`; `RTG-OFN-DEF-RELATIONAL-CONTENT`, `-PHASE-GAUGE`, `-BACKGROUND-TIME` | Actual named use at source grade; the opening imports are narrowed to one DEF import per OFN RID (NUMGEN v1.21 notice received); NUMGEN v1.22 §9.1 records receipt of OFN v0.11/v0.12 and the scoped P2 update (RF-O08-01). |"
+      "new": "| NUMGEN v1.21 §1.1 RF-06 and three §1.1 DEF imports | `SG-OFN-STATE`; `RTG-OFN-ALG-STAR-TOKEN-SHIFT`; `RTG-OFN-DEF-RELATIONAL-CONTENT`, `-PHASE-GAUGE`, `-BACKGROUND-TIME` | Actual named use at source grade; the opening imports are narrowed to one DEF import per OFN RID (NUMGEN v1.21 notice received); NUMGEN v1.22 §9.1 records receipt of OFN v0.11/v0.12 (REQ-O09-03 fulfilled; N-1A2 vocabulary only); its separate §6.6 P2 re-annotation is recorded at RF-O08-01. |"
     },
     {
       "id": "E1394",

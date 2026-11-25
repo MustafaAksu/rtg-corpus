@@ -1,7 +1,7 @@
 {
   "date": "2026-11-24",
   "checkpoint": "c5acda99de18598108e9b5e368ad15fa74f5488d",
-  "candidate_sha256": "7f026a9d3da6c2572281972e7c35c7635fb74888307d9cfe28088087b14613d7",
+  "candidate_sha256": "8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e",
   "mode": "EV-HASH and EV-SRC-READ, connector-returned exact UTF-8; source declarations/anchors, not proof replay",
   "sources": [
     {
@@ -617,5 +617,19 @@
       "ok": true
     }
   ],
-  "pass": true
+  "pass": true,
+  "round2_delta": {
+    "date": "2026-11-25",
+    "review_pr": 382,
+    "reviewed_head": "2cc3af56d3c85a0193c4c9a996d92bdb140d0afe",
+    "edit": "E1393",
+    "scope": "Only the NUMGEN receipt wording changes; original 11-source hash/locator checks retained, not rerun. NUMGEN v1.22 §9.1 receipt/export rows 2782/2813 and §6.6 P2 re-annotation line 1971 independently reread at the same tag. P2 re-annotation is not an OFN receipt.",
+    "source_tag": "numgen-v1.22",
+    "source_lines": [
+      1971,
+      2782,
+      2813
+    ],
+    "prior_candidate_sha256": "7f026a9d3da6c2572281972e7c35c7635fb74888307d9cfe28088087b14613d7"
+  }
 }

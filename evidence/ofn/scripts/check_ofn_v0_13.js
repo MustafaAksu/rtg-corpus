@@ -1,6 +1,6 @@
 // OFN v0.13 independent validation and synthetic negative controls.
 // Connector execution used these functions with self-tested JS SHA-256; Node CLI uses native SHA-256.
-const H={"base":"55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa","map":"b46574cb6daaf437a384ec3622b0edb2f3109d41d1ee55eeb6ad3335424feb21","candidate":"7f026a9d3da6c2572281972e7c35c7635fb74888307d9cfe28088087b14613d7","source":"02e90f12f6b785757d2d384f22d1972e08ca0692eaf3d919c3f099ce2f5ee0be"};
+const H={"base":"55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa","map":"6ad9a1274ef7140733ae1b5034d528a415c5d29c5fbf58e9c669b1911947b2f1","candidate":"8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e","source":"3e23c0afb35d98c9dc59efd85a1d602fe59cdfee7172b355aec47dc789760ea4"};
 function req(ok,g,msg){if(!ok)throw Error(g+": "+msg);}
 
 function eq(a,b){return JSON.stringify(a)===JSON.stringify(b);}
