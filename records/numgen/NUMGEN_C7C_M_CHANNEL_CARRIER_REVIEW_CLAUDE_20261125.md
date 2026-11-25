@@ -106,4 +106,49 @@ The non-unit control `2 × ½ = 1` uses both-direction readouts. It is a readout
 - `jet_sympy_output.txt`: `f1a00b58…7c9a`;
 - `lag_stats_output.txt`: `e896df95…31ff`.
 
+## 6. Addendum (25 Nov 2026, evening) — review of #386 §9 (head `636e415`)
+
+**Reviewed:** #386 §9, record file `36daca8f…d9e6`.
+
+**§9.1 delay-coordinate identities: ACCEPT.** Each identity follows in one line from the map, and the logarithm's argument is `e^ρ > 0`. The record itself limits the scope correctly. Every observable of an invertible planar map is a function of two consecutive samples of one coordinate. So the identity alone does not discriminate between event types; the near-translate structure is what matters.
+
+**§9.2 bound `J_k = O_x(√N)`, and `O_x(log N)` for k = 1, 5: ACCEPT** (conditional on the common tube). Steps checked:
+1. **Linear part.** `g_k = η + O(|W|²)` with unit linear coefficient. For example, for k = 1: `h(Tx) ≈ −η`, normalised to `η`.
+2. **Strip width.** A mismatch needs an endpoint in `{sign g_k ≠ sign η}`. This set has width `O(|W|²)` in η, i.e. angular width `O(r)`.
+3. **Cubic case.** For k = 1, 5 the reviewed table has cubic entries on both rays (`±t³/6`, `∓7t³/6`). The width therefore drops to `O(|ρ|³)` in η, i.e. angular `O(r²) = O(q)`.
+4. **Residues.** Using each residue's own `D_(m,s)` with increments `τ/m + O(m^(−3/2))` is consistent with L-BACKBONE, L-PHASE and INF-1.
+5. **Dyadic count.** On a dyadic block `[J, 2J)`, D advances a bounded amount and so meets O(1) strips. Visits per strip are `O(1 + J^(1−α))`. Summing gives `O(√N)` for α = 1/2 and `O(log N)` for α = 1.
+
+The proof is correct as written.
+
+`[NUM]` consistency check (`jk.py` `266cef1b…0d42`, output `a9524b4f…2602`): same canonical seed, mpmath at 30 digits, no selection.
+
+| N | J₁ | J₂ | J₃ | J₄ | J₅ |
+|---|---|---|---|---|---|
+| 75,000 | 0 | 102 | 102 | 102 | 0 |
+| 150,000 | 0 | 102 | 102 | 102 | 0 |
+| 300,000 | 0 | 262 | 262 | 262 | 2 |
+| 600,000 | 0 | 262 | 262 | 262 | 2 |
+
+- Growth is intermittent: it happens once per passage of D through a strip.
+- `J/√N` stays bounded (≈ 0.37 at 75,000; ≈ 0.48 at 300,000).
+- J₅ shows its first, logarithmically rare mismatches.
+
+**Correction to my §3 (owned).** I wrote that the B_± precedent "rests on two opposite relational-coincidence sections, not on reading one section at a later step". That overstated the contrast. To linear order, `P₋` is `P₊` read three steps later (rotation by π), and `J₃` grows like `J₂` and `J₄` in the table. So B₋ is itself a near-translate of B₊ in the §9.2 sense.
+
+The difference from M and H is only the owner's adopted relational semantics for B_±: opposite radial sign at phase coincidence. That pair is used as a positive control (SG-NG-26), not as dynamic breadth. #386 §9.2 states this correctly. My conclusion is unchanged: withhold A*. The §3 contrast should be read as "no owner semantics has been adopted for M and H", not as a structural difference.
+
+**§9.3 static P4 fixture: verified with the pinned engine** (`p4_fixture.py` `7e78b790…c14e`, output `c7653184…137a`).
+- The v18 engine (`9d787b43…`) with the `tdrg-v2.13` reference orientation (`ca59e9b9…`) was run from pre-advance θ = (0,12,23,9), δ = (0,1,3,6), N = 24, k = 1.
+- Under both `bound_symmetric` and `bound_path_tie` it gives post-advance θ = (0,13,2,15) and δ′ = (6,0,1,3), with one path interaction, no tie and no birth.
+- The signed defect errors are −1, −1, −1 along 0–1–2–3; the remaining errors are 10, 10 and −3. This matches the record.
+
+As the record says, this is one step only: no invariant sector, no recurrence, no co-realization.
+
+**§9.3 direction: AGREE.** Move to owner-native support-distinguished TDR-G events (SWAP / P3 / P4), with the four gates (i)–(iv) set *before* any search.
+- Gate (i) needs TDR-G owner confirmation of support-sensitive event predicates. That request belongs in `pipes/TDRG/`, and it should be filed before NUMGEN designs further.
+- The four-node sector inherits TDR-G's own questions: births are possible for K₁,₃ / star configurations, and multistar policies apply. A birth-free invariant sector has to be proved, not assumed.
+
+M4 HOLD; DISC-3 DEFER; Census-1 INCONCLUSIVE / INCONCLUSIVE; full-interface WD-DOM OPEN.
+
 *END OF RECORD.*
