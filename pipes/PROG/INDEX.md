@@ -18,3 +18,4 @@
 | 2026-11-19 | DZT | notice | open | Programme v1.4 §6.1 inventory row, §6.5 entry, maturity row and §9.2 maintenance row for DZT; interface rows IF18, IF19 | — | `20261119-DZT-v0-18-adopted.md` |
 | 2026-11-20 | DZT | notice | open | Programme v1.4 §6.1 inventory row, §6.5 entry and maturity row for DZT (edition; first all-p DZT theorem) | — | `20261120-DZT-v0-19-adopted.md` |
 | 2026-11-22 | ATLAS | request | open | Programme v1.4 receiving decision for a single nine-item source synchronization pass (Programme §6-9) | — | `20261122-ATLAS-programme-receiver-pass.md` |
+| 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §§2, 6.6, 9.1; inventory and IF12–IF14, IF24, IF27, IF37, IF38 | — | `20261124-NUMGEN-v1-22-adopted.md` |

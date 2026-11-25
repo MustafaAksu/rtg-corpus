@@ -16,3 +16,4 @@
 | 2026-11-12 | TDRG | notice | open | answer to pipes/TDRG/20261029-OFN-token-sum-gauge-label.md (SG-3, TDR-6 row, Appendix B); RTG-OFN-ALG-STAR-TOKEN-SHIFT (Finding A) repinned in TDR-G §7; TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED | — | `20261112-TDRG-v2-12-15-adopted.md` |
 | 2026-11-16 | TDRG | notice | open | TDR-G pins of OPEN-OFN-2 (RTG-OFN-OPEN-DISC-INTERACTION), IMP-O08-06 and IMP-O08-14; custody transfer XFER-O08-01 | — | `20261116-TDRG-v2-13-adopted.md` |
 | 2026-11-19 | DZT | notice | open | OFN RF-O08-13 (DZT and AZ diagnostic homes): DZT edition and section pointer | — | `20261119-DZT-v0-18-adopted.md` |
+| 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §9.1; REQ-O09-03 fulfilled and N-1A2 vocabulary use | — | `20261124-NUMGEN-v1-22-adopted.md` |
