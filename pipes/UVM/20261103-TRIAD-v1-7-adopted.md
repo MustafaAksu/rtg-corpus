@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: notice
 object: Triadic v1.7 adopted; CN-02, CN-04, CN-05 (§7.4) and exports TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY, TRIAD-ALG-T6T-JACOBI-MODE-SIGNS, TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC
 tags: [triad-v1.7, uvm-v0.7.1]
-state: open
+state: closed
+disposition: 2026-11-25 · accept · records/uvm/UVM_v0_7_2_POST_TAG_CLOSEOUT.md §1.4
 ---
 Triadic v1.7 was adopted by the PI on 3 Nov 2026 and tagged `triad-v1.7`. The DSN SHA-256 is `506f3403…e64a`; the release record is `records/triad/TRIAD_v1_7_RELEASE_RECORD.md`.
 
