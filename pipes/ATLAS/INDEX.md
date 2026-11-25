@@ -16,3 +16,4 @@
 | 2026-11-12 | AZ | notice | closed | Atlas v0.12 AZ edition row and SOURCES entry; nodes that cite AZ v0.7 (H2, OPENM.U11, the D-LINK source line for Thread A); finding AZ.A5; the Thread C evidence qualifier | — | `20261112-AZ-v0-8-adopted.md` |
 | 2026-11-14 | AZ | notice | closed | Atlas AZ edition row and SOURCES entry; new identifiers AZ-NUM-TOKRES-S1 and AZ-ART-TOKRES-S1; AZ §8 TDR-G pin and two new import rows; records/atlas/ATLAS_V0_13_IMPACT_PREPARATION_20261113.md §4 (provisional for the v0.9 candidate) | — | `20261114-AZ-v0-9-adopted.md` |
 | 2026-11-16 | AZ | notice | closed | Atlas AZ edition row and SOURCES entry; new identifiers AZ-NUM-TOKRES-S2 and AZ-ART-TOKRES-S2; AZ §4.2 heading | — | `20261116-AZ-v0-10-adopted.md` |
+| 2026-11-25 | OFN | notice | open | OFN v0.13 verified adoption; diagnostic keys O6/O9/O10/O11/O14 and interface impact | — | `20261125-OFN-v0-13-adopted.md` |
