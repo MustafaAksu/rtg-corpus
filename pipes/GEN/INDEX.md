@@ -18,3 +18,5 @@
 | 2026-11-23 | UVM | request | open | UVM-PROP-JPERP-01 (records/uvm/UVM_OPEN_M6_STAGE1_RESULTS.md §6, PR #366 at 0c2292a, not merged); GEN §6.7 minimal UV completion; GEN-OPEN-SOURCE-PAIRING; GEN-DEF-PRIMITIVE-METRIC | OPEN-M-6 stage 2 (contract C3, physical discrimination of the source models) | `20261123-UVM-jperp-proposal-review.md` |
 | 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §9.1; IF37 saturation input and IF38 cyclic-average route | — | `20261124-NUMGEN-v1-22-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 §5.5 and IF32; matched factor scope and historical Genesis reference pins | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-25 | UVM | request | open | UVM-GEN-RID-QUERY; producer identity mapping for scoped GEN definitions/algebra in UVM v0.7.2 §§1.1–1.2 and §7 | — | `20261125-UVM-gen-rid-query.md` |
+| 2026-11-25 | UVM | notice | open | UVM v0.7.2 §§0.3, 1–3, 6–7; UVM-ALG-2B-ASSEMBLY, UVM-RESULT-M3B, UVM-RESULT-AUDIT1, UVM-OPEN-H3AUDIT | — | `20261125-UVM-v0-7-2-adopted.md` |

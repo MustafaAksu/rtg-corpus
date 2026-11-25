@@ -5,3 +5,4 @@
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
 | 2026-11-11 | SAT | finding | open | three mathematical points in the publication "Dynamical Genesis of Complex Structure on Graphs" v3.0 (Zenodo concept DOI 10.5281/zenodo.17568896) bearing on PREL §1.12 "K₄ NS mechanism" and the §4 / §7.2 rows "NS bifurcation → 4D torus" | — | `20261111-SAT-dynamical-genesis-v3-k3-degeneracy-and-lift.md` |
+| 2026-11-25 | UVM | request | open | UVM-PREL-RID-QUERY; producer identity mapping for Pre-Legacy v0.8 statements cited in UVM §§1.4, 6 R12 and §7 | — | `20261125-UVM-prel-rid-query.md` |

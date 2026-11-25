@@ -11,3 +11,4 @@
 | 2026-11-03 | GEN | notice | open | GEN v2.9 and v2.10 changes relevant to RRF §2 (Genesis row pinned at v2.8.9: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO); §7 export protocol | — | `20261103-GEN-v2-10-adopted.md` |
 | 2026-11-03 | TRIAD | notice | open | Triadic v1.7 adopted; CN-05 planar metric convention (Triadic §6.18 metric-unit block; RRF v0.8.4 §3.1) | — | `20261103-TRIAD-v1-7-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 §5.5 convention attribution; class-C model contract unchanged | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-25 | UVM | notice | open | UVM v0.7.2 OPEN-M-6/SG-M-7/§7; RRF §§0.3, 3, 3.1, 6.2 | — | `20261125-UVM-v0-7-2-adopted.md` |
