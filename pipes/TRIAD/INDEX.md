@@ -11,3 +11,4 @@
 | 2026-11-03 | GEN | notice | open | GEN v2.10 §2 and §7 Triadic import rows (TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY, TRIAD-ALG-T6T-JACOBI-MODE-SIGNS, TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC); §7 Consumers row IF06 | — | `20261103-GEN-v2-10-adopted.md` |
 | 2026-11-04 | PROG | notice | open | Programme v1.4 §6.1 (TRIAD row at `triad-v1.7`), §6.3 TRIAD entry, §7.2 IF04, IF06, IF07, IF11, IF29, §7.3 CN-05 | — | `20261104-PROG-v1-4-adopted.md` |
 | 2026-11-11 | DYAD | notice | open | DYAD-DEF-PRIMITIVE-MAP (DYAD v6.4.24 §1): label wording; Dyadic consumer register row for Triadic v1.7 | — | `20261111-DYAD-v6-4-24-adopted.md` |
+| 2026-11-25 | OFN | notice | open | OFN v0.13 RF-O08-02/03/08; T-6r C1 and §6.18 scope | — | `20261125-OFN-v0-13-adopted.md` |

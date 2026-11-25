@@ -10,3 +10,4 @@
 | 2026-10-30 | OFN | notice | closed | REQ-O09-02 (RECOG v0.3.20 freeze record `5c00f66d…9b55`); RECOG imports repinned to `recog-v0.3.26`; A1c witnesses (OFN v0.11 §6.4, §11, §12.4) | — | `20261030-OFN-v0-11-adopted.md` |
 | 2026-11-11 | DYAD | notice | open | DYAD-THM-OPEN21-SHARP-ROWS (DYAD v6.4.24 §6.14), conditional on RECOG-THM-R9-SHARPENED-ROWS; DYAD §7 import row for that RID; RECOG-ALG-A1C-JET-REMAINDER-BOUNDS (offer in the RECOG v0.3.27 notice) | — | `20261111-DYAD-v6-4-24-adopted.md` |
 | 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §9.1 consumer record; GAP-LOCK 3; A1c comparison-only | — | `20261124-NUMGEN-v1-22-adopted.md` |
+| 2026-11-25 | OFN | notice | open | OFN v0.13 RF-O09-02 and OPEN-OFN-OPA; D5B premise and R9 scope | — | `20261125-OFN-v0-13-adopted.md` |
