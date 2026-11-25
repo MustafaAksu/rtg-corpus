@@ -4,7 +4,11 @@
 
 ## ENTRY — authority and reading route
 
-Start with GitHub `CONVENTIONS.md`, this note, `BASELINE.md`, `pipes/UVM/INDEX.md` and active PRs. Governing source: `uvm-v0.7.2`, `dsn/RTG_OPEN_M_DSN.md`, SHA-256 2bd854dfd0168906159f8add900ad70c86782bc8d06b420614308959f807880f, release `records/uvm/UVM_v0_7_2_RELEASE_RECORD.md` at that tag. PI adopted 24 November 2026, PR #376 merged 085e567be4c522f4b7e62044e2755e3af9d7a9b0, annotated tag object 8e52b1db74ff9ee0e30cc89792aa6bcc742b9975. Methodology v1.4; full adopted scope and immutable provenance are the release record and the DSN. Owner statements prevail over Atlas. Current tag/release/BASELINE identity must be rechecked at each consequential pass. No automatic repin.
+Start with GitHub `CONVENTIONS.md`, this note, `BASELINE.md`, `pipes/UVM/INDEX.md` and active PRs. Governing source: `uvm-v0.7.2`, `dsn/RTG_OPEN_M_DSN.md`, SHA-256 2bd854dfd0168906159f8add900ad70c86782bc8d06b420614308959f807880f, release `records/uvm/UVM_v0_7_2_RELEASE_RECORD.md` at that tag. PI adopted 24 November 2026, PR #376 merged 085e567be4c522f4b7e62044e2755e3af9d7a9b0, annotated tag object 8e52b1db74ff9ee0e30cc89792aa6bcc742b9975. Methodology v1.4; full adopted scope and immutable provenance are the release record and the DSN. Owner statements prevail over Atlas.
+
+**Roles (PI assignment, 21 November 2026; current).** Claude: UVM scientific co-owner, preparer and triage owner. ChatGPT: independent mathematical reviewer and second co-owner. PI: final authority over scientific scope, campaigns, adoption and publication. Neither co-owner adopts science. The v0.7.2 errata was prepared by ChatGPT and reviewed by Claude under a PI authorization specific to that edition; this is not a standing change of roles.
+
+Current tag/release/BASELINE identity must be rechecked at each consequential pass. No automatic repin.
 
 Prior source/adoption search completed in the bounded custody audit; original v0.7.1 governance bytes and old-side comparisons recovered, with specified exceptions (including old DYAD B locator). Read `records/uvm/UVM_S0_CUSTODY_AUDIT.md`, `records/uvm/UVM_REACTIVATION_TRIAGE.md` and `records/uvm/UVM_V072_CANDIDATE_CHANGE_RECORD.md` at their recorded revisions. S0-3 stays PARTIAL; four missing scripts and original outputs/ESM packs in release §6 and audit §7. Earlier v0.7.1 source/authority remains retrievable from tag; do not infer all old tags exist. External evidence arrives unchanged via upload/* and hashes; distinguish historical result, new rerun, independent proof and owner adoption.
 
@@ -25,7 +29,7 @@ Reporter has no built-in UVM profile; verify its custom arguments/coverage and t
 
 [OWNER: UVM v0.7.2 §§0–3,6–9] UVM owns proposed UV-source/restoring data; Genesis retains reduced cascade harness, physical lowering/geometry and verdict custody. SG-M-7 target is conditional (single-jet, reduced wrapper, 9C, large-positive-g, matching state/clock/metric/source); R15 nondegenerate m=C_m h cancels h, proxy diagnostic only, no certified physical deficit. R14 is descriptive nine selected packs across run continuations, not one trajectory or common byte-identical bootstrap. T100 pack attribution corrected. R9 archival NUM only; Stage 1 SESSION; no physical source-bundle lift. No discrete import without named bridge. Source pins by claim in §7, RRF v0.8.4 reference-only. Do not advance a result from a pipe item or compaction test.
 
-Durable checkpoints: merged entry reports #357/#358 and comparison #359; triage #361; stage-1 #366 and its evidence; S0 custody #370; adopted errata #376 (Claude review 6042021923 ACCEPT; post-tag comment 7137443109). The post-tag receiving/notice pass is `records/uvm/UVM_v0_7_2_POST_TAG_CLOSEOUT.md` (maintenance PR, integration pending until verified). Old Atlas U1–U11 are advisory; adopted delta and remaining scope in closeout §3. PI's earlier onboarding assignment (21 Nov 2026) retained in previous revision; PI instructed ChatGPT to prepare v0.7.2 and Claude to review, then adopted exact candidate 24 Nov. No new release or campaign is authorized by this working note.
+Durable checkpoints: merged entry reports #357/#358 and comparison #359; triage #361; stage-1 #366 and its evidence; S0 custody #370; adopted errata #376 (Claude review 6042021923 ACCEPT; post-tag comment 7137443109). The post-tag receiving/notice pass is `records/uvm/UVM_v0_7_2_POST_TAG_CLOSEOUT.md` (PR #387, merged `b1273f14`; Claude readback 6054869123). Old Atlas U1–U11 are advisory; adopted delta and remaining scope in closeout §3. Roles: see ENTRY. The PI adopted the exact reviewed v0.7.2 candidate on 24 Nov. No new release or campaign is authorized by this working note.
 
 ## CHATGPT LANE — UVM co-owner
 
@@ -40,4 +44,9 @@ Next actions (in order, subject to scientific eligibility):
 
 ## CLAUDE LANE — UVM co-owner
 
-**Check stamp:** to be supplied by Claude on its own readback. Last durable reviewer checkpoint is PR #376 review 6042021923 (ACCEPT on 4a916c2d; cited, not a new Claude statement). Claude owns this lane; no new decision or execution inferred. Requested review: changed maintenance files and the receiver/notice scope, not the adopted scientific DSN or unchanged campaigns. Fill next checkpoint and remaining actions after independent review.
+**Check stamp:** 25 November 2026, `main` `b1273f14`. Readback of PR #387 at `c65fe099`: ACCEPT (review 6054869123); earlier checkpoints are PR #376 reviews 6037156148 and 6042021923 and the custody audit (#370).
+Role: preparer and triage owner (see ENTRY). Open items in this lane:
+1. OPEN-M-6 C3 waits on the GEN answer to `pipes/GEN/20261123-UVM-jperp-proposal-review.md`. Do not start stage 2 before it arrives and the PI authorizes it.
+2. S0-3 PARTIAL: `uvjet_equivariant_classification.py`, `esm_harmonic_report.py`, `t103_defect_carrier_test.py` and `EDIT_A_wiring_instructions.txt` are still missing. When the PI delivers them, check their hashes and record them in the custody audit.
+3. Watch for answers to `UVM-GEN-RID-QUERY` and `UVM-PREL-RID-QUERY`. Answers are owner identity mappings; a later edition may repoint the §7 locators, but only under a PI decision.
+4. Any new bounded science question (e.g. R16 bridge, finite-g target, 9C selection, legal/illegal Hodge typing) is proposed to the PI with assumptions and a falsifier, and starts only after the PI authorizes it.
