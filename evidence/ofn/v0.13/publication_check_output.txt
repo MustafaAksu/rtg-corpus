@@ -1,0 +1,13 @@
+P1 PASS exact adopted candidate digest
+P2 PASS fixed eight-line metadata plan
+P3 PASS exact publication and digest
+P4 PASS eight changed lines, every other byte identical
+P5 PASS reverse recovers candidate
+P6 PASS 44 RIDs, 21 OPEN status lines, 101 anchors
+X1 altered candidate caught
+X2 extra scientific edit caught
+X3 footer left draft caught
+X4 missing metadata edit caught
+X5 status modified caught
+X6 RID modified caught
+RESULT: PASS 4a2d266bf89cd2130e901b7543bacbaf7fa3e844c60e355a2e3c23ef4f075a49

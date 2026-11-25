@@ -1,0 +1,21 @@
+NC1 altered base caught by C0
+NC2 altered edit map caught by C1
+NC3 undeclared candidate edit caught by C2
+NC4 local RID changed caught by C3
+NC5 Standard C weakened caught by C4
+NC6 Q6 weakened caught by C4
+NC7 OPEN status changed caught by C5
+NC8 anchor removed caught by C6
+NC9 historical entry changed caught by C6
+NC10 stale custody target caught by C7
+NC11 stale provisional label caught by C7
+NC12 old D5 assumption caught by C7
+NC13 R9 removed caught by C8
+NC14 Triadic scope lost caught by C8
+NC15 Genesis historical pin moved caught by C8
+NC16 physical isolation selected caught by C8
+NC17 FMS universal-P4 overclaim caught by C8
+NC18 source report tampered caught by C9
+NC19 new external RID mistyped caught by C9
+NC20 premature adoption caught by C10
+CONTROLS: PASS

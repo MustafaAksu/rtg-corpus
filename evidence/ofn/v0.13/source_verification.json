@@ -1,0 +1,635 @@
+{
+  "date": "2026-11-24",
+  "checkpoint": "c5acda99de18598108e9b5e368ad15fa74f5488d",
+  "candidate_sha256": "8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e",
+  "mode": "EV-HASH and EV-SRC-READ, connector-returned exact UTF-8; source declarations/anchors, not proof replay",
+  "sources": [
+    {
+      "key": "DYAD",
+      "tag": "dyad-v6.4.24",
+      "path": "dsn/RTG_DYADIC_OSCILLATOR_DSN.md",
+      "sha256": "10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16",
+      "expected_sha256": "10fbdacc19544596480acae03faeba076f21103a01b903a8d3305cfa8ed7bc16",
+      "blob": "1ab27d7fe0e95b2777fa0698e87d3e34782144f3"
+    },
+    {
+      "key": "GEN",
+      "tag": "gen-v2.10",
+      "path": "dsn/RTG_GENESIS_GEOMETRY_DSN.md",
+      "sha256": "63c3b020d9c63a43a2e5e9a43c411fad2d07dfcab33995bd928683435bb13d62",
+      "expected_sha256": "63c3b020d9c63a43a2e5e9a43c411fad2d07dfcab33995bd928683435bb13d62",
+      "blob": "400a7f27af3bc2822e8532ba98e69d662f3a6be2"
+    },
+    {
+      "key": "TRIAD",
+      "tag": "triad-v1.7",
+      "path": "dsn/RTG_TRIADIC_BIRTH_LIFT_DSN.md",
+      "sha256": "506f3403628ca01d5a904f885df055d9bfbdf1ef5e474e24e83d4797c122e64a",
+      "expected_sha256": "506f3403628ca01d5a904f885df055d9bfbdf1ef5e474e24e83d4797c122e64a",
+      "blob": "1f9eb93ac729cd5fff6757befd45170e7ea0a957"
+    },
+    {
+      "key": "TDRG",
+      "tag": "tdrg-v2.13",
+      "path": "dsn/RTG_DISCRETE_GENESIS_DSN.md",
+      "sha256": "98b4cba5ecb30f23f9dd97be27a7896191aa514ddefc402fd129ea673f0357f6",
+      "expected_sha256": "98b4cba5ecb30f23f9dd97be27a7896191aa514ddefc402fd129ea673f0357f6",
+      "blob": "77b11fdb6f88ad2609968f658e89e231a43bb689"
+    },
+    {
+      "key": "RECOG",
+      "tag": "recog-v0.3.27",
+      "path": "dsn/RTG_RELATIONAL_RECOGNITION_DSN.md",
+      "sha256": "19556f913f51b98599faa6ad88c363dda0a278345677f3bd69f3b892d810e1f1",
+      "expected_sha256": "19556f913f51b98599faa6ad88c363dda0a278345677f3bd69f3b892d810e1f1",
+      "blob": "a9f8fe07577fc827a78d4f8ac7b9c6de454f4846"
+    },
+    {
+      "key": "PROG",
+      "tag": "programme-v1.4",
+      "path": "dsn/RTG_PROGRAMME_OVERVIEW.md",
+      "sha256": "37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0",
+      "expected_sha256": "37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0",
+      "blob": "2e78ea684d3a2ff9934f02e55d32d556db022ed5"
+    },
+    {
+      "key": "NUMGEN",
+      "tag": "numgen-v1.22",
+      "path": "dsn/RTG_NUMBER_GENESIS_DSN.md",
+      "sha256": "36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b",
+      "expected_sha256": "36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b",
+      "blob": "0972ffd8af574cc436f639640b5a371a3fca8dfa"
+    },
+    {
+      "key": "DZT",
+      "tag": "dzt-v0.19",
+      "path": "dsn/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN.md",
+      "sha256": "2b959f46b8e23363beac087183caf4946d63d1e8d5ac597bdb7d9230143bf6ce",
+      "expected_sha256": "2b959f46b8e23363beac087183caf4946d63d1e8d5ac597bdb7d9230143bf6ce",
+      "blob": "7411e5d8c4b897d8f8b84d91fc739248eb4544f9"
+    },
+    {
+      "key": "AZ",
+      "tag": "az-v0.10",
+      "path": "dsn/RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN.md",
+      "sha256": "0cc84c9a587bab270624a824d5e004a327f20f41f0c03307e01a6725afe80e6e",
+      "expected_sha256": "0cc84c9a587bab270624a824d5e004a327f20f41f0c03307e01a6725afe80e6e",
+      "blob": "da4d9fff46c8acd60c7f510f4ad27e335032883a"
+    },
+    {
+      "key": "RRF",
+      "tag": "rrf-v0.8.4",
+      "path": "dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+      "sha256": "2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce",
+      "expected_sha256": "2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce",
+      "blob": "6882fd517e548e5d6a9aecad9c958af74fe447dc"
+    },
+    {
+      "key": "METH",
+      "tag": "methodology-v1.4",
+      "path": "dsn/DSN_METHODOLOGY.md",
+      "sha256": "cdacab5feb79161cd86313086065ca67313ef354e30ceaf205386cf2f3a0f2df",
+      "expected_sha256": "cdacab5feb79161cd86313086065ca67313ef354e30ceaf205386cf2f3a0f2df",
+      "blob": "8a8866fee9304788ef548d09cf500092bd680efa"
+    }
+  ],
+  "new_external_references": [
+    {
+      "rid": "TDRG-ALG-EVENT-INVENTORY",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        851
+      ],
+      "ok": true
+    },
+    {
+      "rid": "TDRG-ALG-TOKEN-CENSUS-LAW",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        855
+      ],
+      "ok": true
+    },
+    {
+      "rid": "TDRG-ALG-SPECCONS-N",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        859
+      ],
+      "ok": true
+    },
+    {
+      "rid": "TDRG-ALG-BIRTH-SPECTRUM-INJECTION",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        857
+      ],
+      "ok": true
+    },
+    {
+      "rid": "TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        861
+      ],
+      "ok": true
+    },
+    {
+      "rid": "DYAD-THM-LPHASE-ROWA-BRIDGE",
+      "tag": "dyad-v6.4.24",
+      "lines": [
+        924
+      ],
+      "ok": true
+    },
+    {
+      "rid": "RECOG-ALG-A1C-JET-REMAINDER-BOUNDS",
+      "tag": "recog-v0.3.27",
+      "lines": [
+        757
+      ],
+      "ok": true
+    },
+    {
+      "rid": "DYAD-THM-OPEN21-SHARP-ROWS",
+      "tag": "dyad-v6.4.24",
+      "lines": [
+        894
+      ],
+      "ok": true
+    }
+  ],
+  "changed_explicit_imports": [
+    {
+      "edit": "E0151",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.2 #sec-6-2-holonomy"
+    },
+    {
+      "edit": "E0197",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.1 #sec-6-1-state"
+    },
+    {
+      "edit": "E0207",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.5 #sec-6-5-twonode"
+    },
+    {
+      "edit": "E0218",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.3 #sec-6-3-interaction"
+    },
+    {
+      "edit": "E0235",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.1 #sec-6-1-state"
+    },
+    {
+      "edit": "E0252",
+      "tag": "gen-v2.10",
+      "locator": "§6.1 #sec-6-1-primitive"
+    },
+    {
+      "edit": "E0257",
+      "tag": "gen-v2.10",
+      "locator": "§6.1 #sec-6-1-primitive"
+    },
+    {
+      "edit": "E0263",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.2 #sec-6-2-holonomy"
+    },
+    {
+      "edit": "E0358",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.5 #sec-6-5-twonode"
+    },
+    {
+      "edit": "E0557",
+      "tag": "recog-v0.3.27",
+      "locator": "§6.6a #sec-6-6a-composition"
+    },
+    {
+      "edit": "E0564",
+      "tag": "recog-v0.3.27",
+      "locator": "§6.6a #sec-6-6a-composition"
+    },
+    {
+      "edit": "E0573",
+      "tag": "gen-v2.10",
+      "locator": "§1 and §6.1 #sec-6-1-primitive"
+    },
+    {
+      "edit": "E0587",
+      "tag": "recog-v0.3.27",
+      "locator": "§6.1 #sec-6-1-comparators"
+    },
+    {
+      "edit": "E0590",
+      "tag": "recog-v0.3.27",
+      "locator": "§6.1 #sec-6-1-comparators"
+    },
+    {
+      "edit": "E0593",
+      "tag": "recog-v0.3.27",
+      "locator": "§6.4 #sec-6-4-selection"
+    },
+    {
+      "edit": "E0596",
+      "tag": "recog-v0.3.27",
+      "locator": "§6.6 #sec-6-6-swap-projection"
+    },
+    {
+      "edit": "E0600",
+      "tag": "recog-v0.3.27",
+      "locator": "§6.6a #sec-6-6a-composition"
+    },
+    {
+      "edit": "E0621",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.3 #sec-6-3-interaction"
+    },
+    {
+      "edit": "E0624",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.3 #sec-6-3-interaction"
+    },
+    {
+      "edit": "E0639",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.5 #sec-6-5-twonode"
+    },
+    {
+      "edit": "E0642",
+      "tag": "tdrg-v2.13",
+      "locator": "§6.2 #sec-6-2-holonomy"
+    },
+    {
+      "edit": "E0883",
+      "tag": "dyad-v6.4.24",
+      "locator": "§6.14"
+    }
+  ],
+  "import_rid_checks": [
+    {
+      "edit": "E0151",
+      "rid": "TDRG-THM-HOLONOMY",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        530
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0197",
+      "rid": "TDRG-DEF-BAND",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        522
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0207",
+      "rid": "TDRG-ALG-LEM-NOANNIHIL",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        627
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0218",
+      "rid": "TDRG-DEF-STAR",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        575
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0235",
+      "rid": "TDRG-DEF-ZN-STATE",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        514
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0235",
+      "rid": "TDRG-DEF-PHYSICAL-STATE",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        516
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0235",
+      "rid": "TDRG-DEF-REL-ADVANCE",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        518
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0252",
+      "rid": "GEN-DEF-PRIMITIVE-METRIC",
+      "tag": "gen-v2.10",
+      "lines": [
+        657
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0257",
+      "rid": "GEN-THM-PRIMITIVE-METRIC-INVARIANCE",
+      "tag": "gen-v2.10",
+      "lines": [
+        659
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0263",
+      "rid": "TDRG-THM-RECURRENCE",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        540
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0358",
+      "rid": "TDRG-ALG-LEM-REACH",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        625
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0557",
+      "rid": "RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION",
+      "tag": "recog-v0.3.27",
+      "lines": [
+        472
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0564",
+      "rid": "RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION",
+      "tag": "recog-v0.3.27",
+      "lines": [
+        482
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0573",
+      "rid": "GEN-THM-LIN-ORDER6",
+      "tag": "gen-v2.10",
+      "lines": [
+        34
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0587",
+      "rid": "RECOG-DEF-POLE-COMPARATOR",
+      "tag": "recog-v0.3.27",
+      "lines": [
+        360
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0590",
+      "rid": "RECOG-DEF-STATE-COMPARATOR",
+      "tag": "recog-v0.3.27",
+      "lines": [
+        362
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0593",
+      "rid": "RECOG-ALG-SELECTION-SIN",
+      "tag": "recog-v0.3.27",
+      "lines": [
+        421
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0596",
+      "rid": "RECOG-ALG-SWAP-SPLIT",
+      "tag": "recog-v0.3.27",
+      "lines": [
+        456
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0600",
+      "rid": "RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY",
+      "tag": "recog-v0.3.27",
+      "lines": [
+        478
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0621",
+      "rid": "TDRG-DEF-CONV-TICK",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        546
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0624",
+      "rid": "TDRG-DEF-CONV-P3CYC",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        561
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0639",
+      "rid": "TDRG-ALG-LEM-RETRIG",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        629
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0642",
+      "rid": "TDRG-THM-NARROW-BAND-EXCLUSION",
+      "tag": "tdrg-v2.13",
+      "lines": [
+        534
+      ],
+      "ok": true
+    },
+    {
+      "edit": "E0883",
+      "rid": "DYAD-THM-PRIM-CTR",
+      "tag": "dyad-v6.4.24",
+      "lines": [
+        789
+      ],
+      "ok": true
+    }
+  ],
+  "import_anchor_checks": [
+    {
+      "edit": "E0151",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-2-holonomy",
+      "ok": true
+    },
+    {
+      "edit": "E0197",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-1-state",
+      "ok": true
+    },
+    {
+      "edit": "E0207",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-5-twonode",
+      "ok": true
+    },
+    {
+      "edit": "E0218",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-3-interaction",
+      "ok": true
+    },
+    {
+      "edit": "E0235",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-1-state",
+      "ok": true
+    },
+    {
+      "edit": "E0252",
+      "tag": "gen-v2.10",
+      "anchor": "sec-6-1-primitive",
+      "ok": true
+    },
+    {
+      "edit": "E0257",
+      "tag": "gen-v2.10",
+      "anchor": "sec-6-1-primitive",
+      "ok": true
+    },
+    {
+      "edit": "E0263",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-2-holonomy",
+      "ok": true
+    },
+    {
+      "edit": "E0358",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-5-twonode",
+      "ok": true
+    },
+    {
+      "edit": "E0557",
+      "tag": "recog-v0.3.27",
+      "anchor": "sec-6-6a-composition",
+      "ok": true
+    },
+    {
+      "edit": "E0564",
+      "tag": "recog-v0.3.27",
+      "anchor": "sec-6-6a-composition",
+      "ok": true
+    },
+    {
+      "edit": "E0573",
+      "tag": "gen-v2.10",
+      "anchor": "sec-6-1-primitive",
+      "ok": true
+    },
+    {
+      "edit": "E0587",
+      "tag": "recog-v0.3.27",
+      "anchor": "sec-6-1-comparators",
+      "ok": true
+    },
+    {
+      "edit": "E0590",
+      "tag": "recog-v0.3.27",
+      "anchor": "sec-6-1-comparators",
+      "ok": true
+    },
+    {
+      "edit": "E0593",
+      "tag": "recog-v0.3.27",
+      "anchor": "sec-6-4-selection",
+      "ok": true
+    },
+    {
+      "edit": "E0596",
+      "tag": "recog-v0.3.27",
+      "anchor": "sec-6-6-swap-projection",
+      "ok": true
+    },
+    {
+      "edit": "E0600",
+      "tag": "recog-v0.3.27",
+      "anchor": "sec-6-6a-composition",
+      "ok": true
+    },
+    {
+      "edit": "E0621",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-3-interaction",
+      "ok": true
+    },
+    {
+      "edit": "E0624",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-3-interaction",
+      "ok": true
+    },
+    {
+      "edit": "E0639",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-5-twonode",
+      "ok": true
+    },
+    {
+      "edit": "E0642",
+      "tag": "tdrg-v2.13",
+      "anchor": "sec-6-2-holonomy",
+      "ok": true
+    }
+  ],
+  "pass": true,
+  "round2_delta": {
+    "date": "2026-11-25",
+    "review_pr": 382,
+    "reviewed_head": "2cc3af56d3c85a0193c4c9a996d92bdb140d0afe",
+    "edit": "E1393",
+    "scope": "Only the NUMGEN receipt wording changes; original 11-source hash/locator checks retained, not rerun. NUMGEN v1.22 §9.1 receipt/export rows 2782/2813 and §6.6 P2 re-annotation line 1971 independently reread at the same tag. P2 re-annotation is not an OFN receipt.",
+    "source_tag": "numgen-v1.22",
+    "source_lines": [
+      1971,
+      2782,
+      2813
+    ],
+    "prior_candidate_sha256": "7f026a9d3da6c2572281972e7c35c7635fb74888307d9cfe28088087b14613d7"
+  }
+}
