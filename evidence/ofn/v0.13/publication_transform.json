@@ -1,0 +1,50 @@
+{
+  "schema": "ofn-publication-v1",
+  "adoption_date": "2026-11-25",
+  "pi_decision": "PI olarak ben de benimsiyorum.",
+  "candidate_head": "a541d1d89ea2ff16c58550c78aae083d682eea3a",
+  "candidate_sha256": "8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e",
+  "published_sha256": "4a2d266bf89cd2130e901b7543bacbaf7fa3e844c60e355a2e3c23ef4f075a49",
+  "edits": [
+    {
+      "line": 4,
+      "old": "**Date:** 24 November 2026  ",
+      "new": "**Date:** 25 November 2026  "
+    },
+    {
+      "line": 7,
+      "old": "**Document status:** DRAFT — receiving/synchronization maintenance candidate; PI adoption pending. Release record: `records/ofn/OFN_v0_13_RELEASE_RECORD.md`.  ",
+      "new": "**Document status:** ADOPTED — PI, 25 November 2026 (receiving and source-scope maintenance; both OFN co-owners accepted, Atlas review ACCEPT SCOPED). Release record: `records/ofn/OFN_v0_13_RELEASE_RECORD.md`.  "
+    },
+    {
+      "line": 8,
+      "old": "**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.12` (tag `ofn-v0.12`, SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa`) upon adoption.  ",
+      "new": "**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.12` (tag `ofn-v0.12`, SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa`).  "
+    },
+    {
+      "line": 13,
+      "old": "**Revision editor:** ChatGPT (OFN co-owner, stage-1 builder); independent receiving review by the other OFN co-owner and Atlas review pending.  ",
+      "new": "**Revision editor:** ChatGPT (OFN co-owner, stage-1 builder); independent review by Claude (PR #382, round 2 ACCEPT); Atlas change-focused review by ChatGPT (PR #381, review 6053706402, ACCEPT SCOPED).  "
+    },
+    {
+      "line": 15,
+      "old": "**Governing inputs:** the two OFN receiving disposition records of 24 November 2026 and their revised reconciliation `records/ofn/OFN_RECEIVING_RECONCILIATION_CLAUDE_20261124.md` (PRs #378/#379 merged; #379 reviews 6042097108 and 6042580858); PI authorization to build the scoped maintenance edition, not adoption. Prior adopted v0.11/v0.12 decisions remain in their release records.  ",
+      "new": "**Governing inputs:** the two OFN receiving disposition records of 24 November 2026 and their revised reconciliation `records/ofn/OFN_RECEIVING_RECONCILIATION_CLAUDE_20261124.md` (PRs #378/#379 merged; #379 reviews 6042097108 and 6042580858); PI authorization to build the scoped maintenance edition and explicit PI adoption of the reviewed round-2 candidate on 25 November 2026 (release record). Prior adopted v0.11/v0.12 decisions remain in their release records.  "
+    },
+    {
+      "line": 1563,
+      "old": "### v0.13 — 24 November 2026 — DRAFT / receiving and synchronization maintenance",
+      "new": "### v0.13 — 25 November 2026 — ADOPTED / receiving and synchronization maintenance"
+    },
+    {
+      "line": 1567,
+      "old": "- **Record:** `records/ofn/OFN_v0_13_RELEASE_RECORD.md`; predecessor tag `ofn-v0.12`; adoption pending.",
+      "new": "- **Record:** `records/ofn/OFN_v0_13_RELEASE_RECORD.md`; predecessor tag `ofn-v0.12`; PI adoption 25 November 2026."
+    },
+    {
+      "line": 1613,
+      "old": "*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.13 — DRAFT*",
+      "new": "*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.13*"
+    }
+  ]
+}

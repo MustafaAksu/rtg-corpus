@@ -1,11 +1,11 @@
 # OFN v0.13 release record
 
-**Date:** 24 November 2026  
-**Status:** DRAFT — receiving/synchronization maintenance candidate; not adopted.  
-**Governing OFN:** `ofn-v0.12` and `records/ofn/OFN_v0_12_RELEASE_RECORD.md`.  
+**Date:** 25 November 2026  
+**Status:** ADOPTED by the PI, 25 November 2026, on the exact reviewed round-2 candidate; publication prepared, merge and annotated tag pending. `ofn-v0.12` remains governing until the verified adopted tag exists.  
+**Predecessor / governing until tag:** `ofn-v0.12` and `records/ofn/OFN_v0_12_RELEASE_RECORD.md`.  
 **Methodology:** `methodology-v1.4`.  
-**Builder:** ChatGPT, OFN co-owner. Round 1 reviewed by Claude (PR #382: ACCEPT WITH CHANGE); round-2 delta/native readback and Atlas review pending.  
-**Authority:** PI authorized the reconciled maintenance build, branch creation and the two receiving-record merges; the current instruction requests completion of ChatGPT's build responsibilities. No PI adoption, publication, tag or pipe-state change is authorized by that instruction.
+**Builder:** ChatGPT, OFN co-owner. Claude round 1 ACCEPT WITH CHANGE, round 2 ACCEPT (#382 §5); Atlas co-owner review ACCEPT SCOPED (#381 review 6053706402; not blind independent).  
+**Authority:** PI authorized the reconciled maintenance build and explicitly adopted the reviewed round-2 candidate on 25 November 2026: “PI olarak ben de benimsiyorum.” This covers the exact candidate and metadata-only publication, not new scientific selection, custody transfer or consumer adoption. PI merge/tag remain pending (§7); receiving closures follow the tag.
 
 ## 1. Inputs and source checkpoint
 
@@ -21,7 +21,11 @@
 | Object | SHA-256 |
 |---|---|
 | Adopted OFN v0.12 base | 55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa |
-| OFN v0.13 DRAFT candidate | 8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e |
+| OFN v0.13 round-2 adopted candidate (review-stage bytes) | 8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e |
+| OFN v0.13 publication bytes | 4a2d266bf89cd2130e901b7543bacbaf7fa3e844c60e355a2e3c23ef4f075a49 |
+| evidence/ofn/v0.13/publication_transform.json | e3e191add0065b288cbc1d2ec7e31c601b6743843f1d186fdfc77749f3b7901e |
+| evidence/ofn/scripts/publish_ofn_v0_13.js | 7d6596694af2fabf0ee750d9ad5aa35315c9835934d6ebf27cf32c959bf8edb0 |
+| evidence/ofn/v0.13/publication_check_output.txt | d4626609e0287a3d3c8afb57af17e115744c026cc17bbf615ff7388e42540858 |
 | evidence/ofn/v0.13/edit_map.json | 6ad9a1274ef7140733ae1b5034d528a415c5d29c5fbf58e9c669b1911947b2f1 |
 | evidence/ofn/v0.13/edit_log.json | 54b65a989e0167029837bbd71d981b267d878337f64f8a01ff6f6ffcf3ed3a5c |
 | evidence/ofn/scripts/build_ofn_v0_13.js | 75c7811b092e467f461f36d6bcb516a675dfa0073003f330f51b4f8d136805bf |
@@ -32,26 +36,28 @@
 
 Round-2 candidate: 212,184 UTF-8 bytes, 1,613 newline-terminated lines. 145 exact, ordered, original-base-line-addressed edits; each old payload is checked at its immutable address. Edit map contains the full old/new payloads and reasons. Edit log records both payload hashes and each before/after document hash. No compaction stage. Round-1 candidate commit `8c052f6a809b95b2b7c5182db043b61575aceede`; source-verification commit `06eb42cfefd63d14f4e2a8c781e1507b3b56fd9e`; validation commit `94b53578e1e8f555ceaba43ff927f296aacf8bbb`.
 
-**[EV-RUN, EV-HASH]** Builder and checker function bodies were actually executed in the connection-assisted JavaScript runtime, with a self-tested SHA-256 implementation. The independent replay reconstructs every unchanged segment and each new payload, checks all 290 payload hashes and document hash links, and reverses to the exact base. The saved scripts expose those functions through Node CLI adapters. Claude ran the native CLI adapters independently on round 1 (Node v22.23.5, Python 3.13.18; PR #382 §1): candidate/log and both checker outputs byte-identical, native SHA-256 matched. Round 2 was rebuilt and checked in connector JavaScript; independent native replay of the revised hash is pending. The checker CLI uses Node's native SHA-256. This is structural/build verification, not a new mathematical proof or independent scientific engine.
+**[EV-RUN, EV-HASH]** Builder and checker function bodies were actually executed in the connection-assisted JavaScript runtime, with a self-tested SHA-256 implementation. The independent replay reconstructs every unchanged segment and each new payload, checks all 290 payload hashes and document hash links, and reverses to the exact base. The saved scripts expose those functions through Node CLI adapters. Claude ran the native CLI adapters independently on round 1 (Node v22.23.5, Python 3.13.18; PR #382 §1): candidate/log and both checker outputs byte-identical, native SHA-256 matched. Round 2 was rebuilt and checked in connector JavaScript and independently replayed by Claude (same native environment, #382 §5 at `76c54a465dc91ef47e3f2d38671d1ca36e0fdedf`, PR #381 comment 7155415144): candidate, log and both output files byte-identical; native SHA-256 matched. Atlas review 6053706402 rehashed 9/9 recorded identities, independently reconstructed the candidate and reverse, and checked 11/11 source hashes/blob IDs; inspected, not rerun, the native CLI. The checker CLI uses Node's native SHA-256. This is structural/build verification, not a new mathematical proof or independent scientific engine.
 
-To reproduce from a checkout of the candidate:
+To reproduce the reviewed candidate from the publication checkout (live DSN is the publication form):
 
 ```sh
 tmp=$(mktemp -d)
 git show ofn-v0.12:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md > "$tmp/base.md"
 node evidence/ofn/scripts/build_ofn_v0_13.js "$tmp/base.md" evidence/ofn/v0.13/edit_map.json "$tmp/out.md" "$tmp/log.json"
-cmp "$tmp/out.md" dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md
+git show a541d1d89ea2ff16c58550c78aae083d682eea3a:dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md > "$tmp/reviewed.md"
+cmp "$tmp/out.md" "$tmp/reviewed.md"
 cmp "$tmp/log.json" evidence/ofn/v0.13/edit_log.json
-node evidence/ofn/scripts/check_ofn_v0_13.js "$tmp/base.md" evidence/ofn/v0.13/edit_map.json evidence/ofn/v0.13/edit_log.json dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md evidence/ofn/v0.13/source_verification.json --controls
-python3 -I tools/dsn_lint.py dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md --prev "$tmp/base.md"
+node evidence/ofn/scripts/check_ofn_v0_13.js "$tmp/base.md" evidence/ofn/v0.13/edit_map.json evidence/ofn/v0.13/edit_log.json "$tmp/reviewed.md" evidence/ofn/v0.13/source_verification.json --controls
+python3 -I tools/dsn_lint.py "$tmp/reviewed.md" --prev "$tmp/base.md"
+node evidence/ofn/scripts/publish_ofn_v0_13.js "$tmp/reviewed.md" evidence/ofn/v0.13/publication_transform.json dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md --check --controls
 python3 -I tools/pipes_index.py --check
 ```
 
-Claude's round-1 native DSN lint was informational (+5.5%); pipes check OK (149 items at the reviewed checkout); 22 import and 44 section-anchor locators re-resolved from tags without problems. These results apply to round 1, not the new head or current main. Round-2 native replay and independent delta review remain requested.
+Claude's round-1 native lint was informational (+5.5%); round-2 lint +11,179 bytes over v0.12 (+71 over round 1). Both rounds: 22 import and 44 section-anchor locators resolve. Native review-branch pipes check: 149 items; separate main check at `3164c3d90dffa00c5052219c4c55b782968a0d6c`: 156 items (20 inboxes), as recorded by Claude. Publication-transform gates executed separately in connector JavaScript (§7); native publication and merged-tree checks remain a publication step.
 
 ## 3. Content boundary and edit rationale
 
-| Finding | Candidate disposition (not adoption) |
+| Finding | Adopted maintenance disposition (scope only) |
 |---|---|
 | F1 | Finding A's statement acceptance/import at TDR-G v2.13 is recorded separately from custody. Nine obsolete deferred-target sites and the associated scope label are corrected; XFER-O08-01 remains open, a separate two-owner decision. OFN owns the RID; fixed-map algebra and Appendix C history unchanged. |
 | F2 | Answered token-sum referral recorded. Birth nonconservation is not gauge dependence. The declared phase gauge and relabelling invariance are retained; no physical-observable adoption or conservation law follows. |
@@ -63,7 +69,7 @@ Claude's round-1 native DSN lint was informational (+5.5%); pipes check OK (149 
 | F8 | Current diagnostic homes DZT v0.19 and AZ v0.10; reference only, no imported operator or bridge. DZT v0.17 remains recovered unadopted history. |
 | F9 | Evidence accessibility/verification state and remaining qualifications recorded accurately. No O6 allocation. Prior P4 receiving audit did not certify all prerequisites; no promotion or new FMS work in this release. |
 
-**Post-reconciliation bounded delta (review explicitly requested).** NUMGEN v1.22 was adopted and tagged before the build. At §6.6 and §9.1, the owner now records its own scoped P2 re-annotation and OFN receipt/export roles. RF-O08-01 separates (a) original v1.21 audit 40/136 exposed, (b) TDR-G's record of the Atlas rerun, and (c) NUMGEN's later owner execution: 158/158 frozen positive controls; DISC-2 40 exposed, 20 changed, 124 PASS, same ten-label projection; DISC-1 0/22 exposed and unchanged. Census-1 remains INCONCLUSIVE / INCONCLUSIVE and M-4 HOLD pending approved design/preregistration. No retroactive witness admission, certificate replacement or OFN DISC/BIND3 rerun. This is a reference/receipt update only: old NUMGEN claim pins remain v1.21 as stated. See NUMGEN v1.22 release record and `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md`. No new NUMGEN notice was present in the freeze OFN inbox. Main readback `3164c3d90dffa00c5052219c4c55b782968a0d6c` on 25 November shows a later open notice, scoped to §9.1 receipt/export, not §6.6 P2. The P2 update originates in the OFN source read; see P10 below.
+**Post-reconciliation bounded delta (reviewed and adopted at reference/receipt scope).** NUMGEN v1.22 was adopted and tagged before the build. At §6.6 and §9.1, the owner now records its own scoped P2 re-annotation and OFN receipt/export roles. RF-O08-01 separates (a) original v1.21 audit 40/136 exposed, (b) TDR-G's record of the Atlas rerun, and (c) NUMGEN's later owner execution: 158/158 frozen positive controls; DISC-2 40 exposed, 20 changed, 124 PASS, same ten-label projection; DISC-1 0/22 exposed and unchanged. Census-1 remains INCONCLUSIVE / INCONCLUSIVE and M-4 HOLD pending approved design/preregistration. No retroactive witness admission, certificate replacement or OFN DISC/BIND3 rerun. This is a reference/receipt update only: old NUMGEN claim pins remain v1.21 as stated. See NUMGEN v1.22 release record and `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md`. No new NUMGEN notice was present in the freeze OFN inbox. Main readback `3164c3d90dffa00c5052219c4c55b782968a0d6c` on 25 November shows a later open notice, scoped to §9.1 receipt/export, not §6.6 P2. The P2 update originates in the OFN source read; see P10 below.
 
 **Preservation:** no new or removed OFN RID; no definition, truth-grade or OPEN-status change; no selection of generator, carrier, primitive object, chirality, isolation contract or independence standard. Standard C, Q1–Q6, SG-OFN guards, REF-CLOSURE and class-C core preserved; all inherited Appendix A/B/C content and anchors preserved. The two authorized §9 edits are the OPEN-OFN-2 accounting wording and the matched contraction source pin. Eight newly cited external RIDs are existing source identities, not OFN registrations. No custody transfer and no source-owner DSN edits.
 
@@ -74,9 +80,9 @@ PR #382 review record `records/ofn/OFN_v0_13_CANDIDATE_REVIEW_CLAUDE_20261125.md
 | Finding | Disposition |
 |---|---|
 | N1 | ACCEPT. E1393 separates the §9.1 receipt (REQ-O09-03 fulfilled; N-1A2 vocabulary only) from the §6.6 P2 re-annotation. Direct read of `numgen-v1.22` lines 1971, 2782, 2813; full source digest matched. |
-| N2 | Original nine reconciled items retained; later main has a tenth open notice, P10 proposed for scoped receipt only. |
+| N2 | Original nine reconciled items retained; later main has a tenth open notice, P10 scoped receipt confirmed by Claude §5 and accepted in Atlas review. |
 | N3 | Optional: deferred; valid historical campaign pin unchanged. |
-| N4 | Round-1 native evidence recorded in §2; round-2 replay pending. |
+| N4 | Both native replays recorded in §2, round 2 ACCEPT. |
 | N5 | Claude's supplied checkpoint in his lane; dated shared/ChatGPT readback updated. |
 
 The entire DSN delta is the single E1393 clause (+71 UTF-8 bytes). Builder from adopted base, C0–C10 and NC1–NC20 executed; check/controls outputs byte-identical to round 1. Source report retains the original checks with a dated round-2 delta, not a new eleven-source proof audit. Old bytes and digests retained in Git at the reviewed head. No scientific status, custody or selection change.
@@ -100,11 +106,11 @@ The source report is a captured result of connector reads; the saved checker val
 
 S-P4 evidence: PR #378's synthetic controls identify the wrong-direction ideal gate; PR #379's reported same-CAS execution of the unchanged FMS script checks both constructed elimination ideals, each generated by L/1026. This closes the gate-adequacy concern only for those constructed ideals, not the universal finite-a classification or source bilinearity/stabilizer/completeness prerequisites. See the two receiving records and `evidence/ofn/receiving_20261124_claude/`. No FMS regrade; separate FMS finding not filed by this build.
 
-## 5. Receiving ledger — proposed post-tag dispositions
+## 5. Receiving ledger — agreed post-tag dispositions
 
-P01–P09 are the original agreed proposals. P10 is a late scoped receipt proposal pending co-owner confirmation. Nine notices open at original branch freeze; ten open on main at `3164c3d90dffa00c5052219c4c55b782968a0d6c`; three closed in both. These notices do not themselves establish adoption or consumer acceptance of OFN v0.13.
+P01–P09 are the original agreed dispositions adopted at their stated scope. P10 is the late scoped receipt confirmed by Claude and accepted in the Atlas review; no new DSN change. Nine notices open at original branch freeze; ten open on main at `3164c3d90dffa00c5052219c4c55b782968a0d6c`; three closed in both. These notices do not themselves establish adoption or consumer acceptance of OFN v0.13.
 
-| P | File under pipes/OFN/ | Proposed disposition after adoption/tag |
+| P | File under pipes/OFN/ | Agreed disposition to record after tag |
 |---|---|---|
 | P01 | 20261030-DYAD-v6-4-23-adopted.md | Accept scoped receipt; N4/N14 used, N6 received without import. |
 | P02 | 20261103-GEN-v2-10-adopted.md | Accept; matched factor scopes and companion pointer, no imported OFN claim inferred. |
@@ -115,14 +121,22 @@ P01–P09 are the original agreed proposals. P10 is a late scoped receipt propos
 | P07 | 20261112-TDRG-v2-12-15-adopted.md | Accept with change; token-sum answer and corrected STAR/CONV-TICK scope. |
 | P08 | 20261116-TDRG-v2-13-adopted.md | Accept with change; Finding A statement use distinguished from open custody. |
 | P09 | 20261119-DZT-v0-18-adopted.md | Accept with change; current diagnostic reference homes DZT v0.19/AZ v0.10. |
-| P10 (late; proposed) | 20261124-NUMGEN-v1-22-adopted.md | Accept scoped receipt: REQ-O09-03 fulfilled; L-BACKBONE typing; N-1A2 vocabulary only; NG-7A reference-only; proof pins retained. Separate from P2. Co-owner confirmation pending. |
+| P10 (late; confirmed) | 20261124-NUMGEN-v1-22-adopted.md | Accept scoped receipt: REQ-O09-03 fulfilled; L-BACKBONE typing; N-1A2 vocabulary only; NG-7A reference-only; proof pins retained. Separate from P2. Both co-owners confirmed; Atlas ACCEPT SCOPED. |
 
-The three previously closed items stay closed and are not reopened. After an adopted tag, record the nine agreed dispositions and, subject to receiving review of P10, the tenth disposition; regenerate/check the index in the appropriate receiving transaction. Review outgoing notices to DYAD, GEN, TRIAD, TDR-G, RECOG, Programme, DZT, AZ, NUMGEN and, if affected by the attribution clarification, RRF. No notice in this list has been prepared as a pipe item, sent, accepted or adopted by a consumer in this build. A separate S-P4 finding to FMS belongs to its own evidence/owner process, not a prerequisite for this maintenance edition.
+The three previously closed items stay closed and are not reopened. After the verified adopted tag, record all ten agreed dispositions and regenerate/check the index in the receiving transaction. Review outgoing notices to DYAD, GEN, TRIAD, TDR-G, RECOG, Programme, DZT, AZ, NUMGEN and, if affected by the attribution clarification, RRF. No notice in this list has been prepared as a pipe item, sent, accepted or adopted by a consumer in this build. A separate S-P4 finding to FMS belongs to its own evidence/owner process, not a prerequisite for this maintenance edition.
 
 ## 6. Remaining obligations and approval boundary
 
 [OPEN] Full historical GEN v2.8.5 claim comparison, historical DYAD proof-source comparisons where not performed, incomplete recovered-source authentication, universal FMS P4 prerequisites and separate finding, six-constraint list and physical selection questions remain open at their stated scopes. Finding A custody awaits an actual joint decision. PR #183 remains separate. LIT dependencies: none.
 
-**Requested reviews:** other OFN co-owner — round-2 native replay and E1393 delta, N2/P10 scoped receipt and record changes (all 145 edits covered by round-1 review); Atlas — change-focused registry/interface impact and release-record consistency. Do not require unchanged expensive scientific campaigns to be repeated without cause.
+**Reviews completed:** Claude round 2 ACCEPT on `a541d1d89ea2ff16c58550c78aae083d682eea3a` and P10 CONFIRM (#382 §5, commit `76c54a465dc91ef47e3f2d38671d1ca36e0fdedf`, comment 7155415144); Atlas ACCEPT SCOPED on the same head and hash (#381 review 6053706402). No blocking change. Atlas reviewer also prepared the candidate; Claude's independent review is separate evidence. Do not repeat unchanged expensive scientific campaigns.
 
-**PI_PENDING:** after those reviews, decide whether to adopt the exact DRAFT hash (or require revisions). Only an explicitly authorized adoption may produce the publication-status transform, final digest, BASELINE update, merge and adopted tag. Then perform the receiving closures and notices. This record is draft, not an adoption/release decision.
+**PI decision:** given, 25 November 2026, exact candidate `8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e`. Merge and annotated tag pending; no pipe changes before tag. See §7.
+
+## 7. PI adoption and publication transform
+
+- PI adoption (25 November 2026, OFN session, verbatim): “PI olarak ben de benimsiyorum.” Accepted object: round-2 head `a541d1d89ea2ff16c58550c78aae083d682eea3a`, SHA-256 `8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e`. F1–F9/P01–P10 at their reviewed scopes; no new OFN result, grade, RID, OPEN closure, physical selection or custody transfer.
+- Independent co-owner review: `records/ofn/OFN_v0_13_CANDIDATE_REVIEW_CLAUDE_20261125.md` §5 at `76c54a465dc91ef47e3f2d38671d1ca36e0fdedf` (SHA-256 `277aa5590fd1d5060d71facff0382b79fade23240a066c216954905e1866efa4`); `evidence/ofn/v0.13_review_claude/review_output_round2.txt` (SHA-256 `7fe9bff6ea57df3a87259e30623e1b97d37f3092206c7a4087d894fadd26b45a`). #382 is the separate review-evidence PR; preserve by merge before tagging.
+- Atlas #381 review 6053706402 ACCEPT SCOPED. Future Atlas refresh: O6/O11 retain, O9/O14 resolve at wording scope, O10 update (universal P4 still open). No Atlas edition or consumer repin adopted.
+- Publication: eight metadata lines (4, 7, 8, 13, 15, 1563, 1567, 1613; date, status, predecessor condition, editor/review, governing-input lifecycle, Appendix C edition heading/record, footer). All other bytes preserved; 1,613 newline-terminated lines, 212,367 UTF-8 bytes. Published SHA-256 `4a2d266bf89cd2130e901b7543bacbaf7fa3e844c60e355a2e3c23ef4f075a49`. P1–P6 PASS, X1–X6 caught, exact inverse recovers adopted candidate. See `evidence/ofn/v0.13/publication_transform.json`, `evidence/ofn/scripts/publish_ofn_v0_13.js`, `evidence/ofn/v0.13/publication_check_output.txt`. Transform/checker cores executed with self-tested connector SHA-256; native Node crypto reproduction is available through §2 and not claimed run here.
+- BASELINE on the publication branch carries only the planned OFN v0.13 row change; newer unrelated main rows must be preserved in the merge. PI merge of #382 then #381 (merge commits), fresh merged-tree checks including exact publication bytes, and annotated `ofn-v0.13` naming the final digest remain pending. Verify and record actual merge/tag identities and receiving/outgoing notices in a dated post-tag record, not by editing this release record. Until then `ofn-v0.12` governs. No merge/tag/pipe-state change is implied.

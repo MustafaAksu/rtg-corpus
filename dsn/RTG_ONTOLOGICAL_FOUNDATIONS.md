@@ -1,18 +1,18 @@
 # RTG_ONTOLOGICAL_FOUNDATIONS_v0.13
 
 **Title:** Relational Time Geometry — Ontological Foundations and Model-Selection Layer  
-**Date:** 24 November 2026  
+**Date:** 25 November 2026  
 **Scope:** Foundational commitments, primitive-object hypotheses and model-selection criteria of RTG, including the genuine relational-triad model-selection contract for the FMS interface (§5.5); no physical generator, carrier or primitive object is selected.  
 **Document class:** Foundational ontology / model-selection ledger (Methodology v1.4 §0.5); nonstandard profile with the section map in §0.4.  
-**Document status:** DRAFT — receiving/synchronization maintenance candidate; PI adoption pending. Release record: `records/ofn/OFN_v0_13_RELEASE_RECORD.md`.  
-**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.12` (tag `ofn-v0.12`, SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa`) upon adoption.  
+**Document status:** ADOPTED — PI, 25 November 2026 (receiving and source-scope maintenance; both OFN co-owners accepted, Atlas review ACCEPT SCOPED). Release record: `records/ofn/OFN_v0_13_RELEASE_RECORD.md`.  
+**Supersedes:** `RTG_ONTOLOGICAL_FOUNDATIONS_v0.12` (tag `ofn-v0.12`, SHA-256 `55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa`).  
 **Companion documents:** governing editions consulted at the build checkpoint — Programme Overview v1.4 (`programme-v1.4`), DSN Methodology v1.4 (`methodology-v1.4`), Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`), Genesis Geometry v2.10 (`gen-v2.10`), RRF v0.8.4 (`rrf-v0.8.4`), Discrete Genesis v2.13 (`tdrg-v2.13`), Number Genesis v1.22 (`numgen-v1.22`; earlier claim pins retained as stated), RECOG v0.3.27 (`recog-v0.3.27`), Triadic v1.7 (`triad-v1.7`); claim-level pins are stated at each use and in §11.  
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`).  
 **Status summary:** OFN holds seventeen registered definitions, the hypothesis FSP-U, five OFN local results and twenty-one foundational OPENs (twenty ACTIVE, one PARTIAL); no physical generator, carrier, primitive object, chirality or isolation regime is selected. In the genuine relational-triad contract the transported class C is the primary realized smooth mathematical candidate family: a real $C^\infty$ realization exists through two imported Dyadic theorems, while analytic realization (DYAD B-an/B-6) and physical selection remain open. Standard C is a positive-dimensional local $C^3$ invariant-manifold test, and the admitted FMS mathematical test class is real $C^\infty$ with analytic laws as a distinguished subclass. The closure-versus-reference comparison is recorded as the OFN local result `RTG-OFN-ALG-REF-CLOSURE-COMPARISON`; its physical reading, the physical-isolation contract and the standard of triadic independence remain open.  
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok — inherited attribution; separate approval by every listed contributor is not inferred.  
-**Revision editor:** ChatGPT (OFN co-owner, stage-1 builder); independent receiving review by the other OFN co-owner and Atlas review pending.  
+**Revision editor:** ChatGPT (OFN co-owner, stage-1 builder); independent review by Claude (PR #382, round 2 ACCEPT); Atlas change-focused review by ChatGPT (PR #381, review 6053706402, ACCEPT SCOPED).  
 **Programme document / placement:** Programme Overview v1.4; Tier 2, namespace `RTG-OFN`; criteria home for OPEN-P0 and OPEN-P2B (Programme v1.4 §5).  
-**Governing inputs:** the two OFN receiving disposition records of 24 November 2026 and their revised reconciliation `records/ofn/OFN_RECEIVING_RECONCILIATION_CLAUDE_20261124.md` (PRs #378/#379 merged; #379 reviews 6042097108 and 6042580858); PI authorization to build the scoped maintenance edition, not adoption. Prior adopted v0.11/v0.12 decisions remain in their release records.  
+**Governing inputs:** the two OFN receiving disposition records of 24 November 2026 and their revised reconciliation `records/ofn/OFN_RECEIVING_RECONCILIATION_CLAUDE_20261124.md` (PRs #378/#379 merged; #379 reviews 6042097108 and 6042580858); PI authorization to build the scoped maintenance edition and explicit PI adoption of the reviewed round-2 candidate on 25 November 2026 (release record). Prior adopted v0.11/v0.12 decisions remain in their release records.  
 **Evidence boundary:** affected owner statements and source spans were compared at the recorded tags; historical proof pins and unverified comparisons remain explicit (§11). No old owner numerical or scientific certificate was rerun for the content build. FMS SESSION results remain reference-only (RF-O10-02); the universal finite-$a$ statement keeps its FMS P4 qualification; a separate same-CAS reflection-ideal receiving check is documented in §12.1, not a regrade. Evidence states follow Methodology v1.4 §12.  
 
 ## Local Tag Aliases
@@ -1560,11 +1560,11 @@ The inherited Appendix B records remain unchanged. Both v0.9 reconciliation entr
 
 One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier, with their draft-stage entries, are preserved verbatim in Appendix C at tag `ofn-v0.10`; the v0.1–v0.6 entries are in `ARCHIVED_OFN_HISTORY_v0_7.md`, which is not supplied to the corpus.
 
-### v0.13 — 24 November 2026 — DRAFT / receiving and synchronization maintenance
+### v0.13 — 25 November 2026 — ADOPTED / receiving and synchronization maintenance
 - **§§3–4, 7, 9–12 [source scope/receipts]:** Finding A statement/use distinguished from open custody; token-sum referral answered; corrected STAR domain and CONV-TICK classification precedence; newer spectrum and census-interface reference example, with NUMGEN's later P2 owner re-annotation separately identified. No new model law or bridge.
 - **§§5–6, 8, 11–12 [pins/limits]:** matched DYAD, GEN, TRIAD, TDR-G, RECOG and Programme use; A1c D5B premise update with R9 retained where required; Triadic coefficient-level clock/extension limits; convention attribution; DZT/AZ reference homes and evidence custody. Original proof provenance and unmatched historical reference pins retained.
 - **Unchanged:** seventeen definitions, five OFN local results, FSP-U and all twenty-one OPEN statuses (twenty ACTIVE, one PARTIAL); Standard C, Q1–Q6, no physical selection, no custody transfer or new OFN RID.
-- **Record:** `records/ofn/OFN_v0_13_RELEASE_RECORD.md`; predecessor tag `ofn-v0.12`; adoption pending.
+- **Record:** `records/ofn/OFN_v0_13_RELEASE_RECORD.md`; predecessor tag `ofn-v0.12`; PI adoption 25 November 2026.
 
 ### v0.12 — 30 October 2026 — ADOPTED / closure-versus-reference result; isolation and independence frames
 - **§2.4 / §9 [result/scope]:** `RTG-OFN-ALG-REF-CLOSURE-COMPARISON` registered (closure sector canonically isomorphic to node data modulo the common origin, $Q_{\rm node}\cong C_0$; the global comparison with one relation as reference is an isomorphism iff multiplication by $n$ is bijective; node and edge actions differ); OPEN-OFN-REF-CLOSURE narrowed to the physical reading.
@@ -1610,4 +1610,4 @@ One entry per edition (Methodology v1.4). The full entries for v0.10 and earlier
 
 ---
 
-*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.13 — DRAFT*
+*END OF DOCUMENT — RTG_ONTOLOGICAL_FOUNDATIONS_v0.13*
