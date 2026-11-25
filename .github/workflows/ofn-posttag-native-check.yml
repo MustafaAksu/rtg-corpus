@@ -1,0 +1,45 @@
+name: OFN v0.13 post-tag exact-head validation
+on:
+  push:
+    branches:
+      - chatgpt/ofn-posttag-native-check-20261125
+permissions:
+  contents: read
+jobs:
+  pipes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Checkout exact closeout PR head
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: '4012175a165fedb95377ace428d840703db4edfe'
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify publication and native pipe index
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "4012175a165fedb95377ace428d840703db4edfe"
+          test "$(git cat-file -t ofn-v0.13)" = "tag"
+          test "$(git rev-parse 'ofn-v0.13^{commit}')" = "3f266eb4337c10d6e88a0ea90527dbe732922319"
+          printf '%s  %s\n' '4a2d266bf89cd2130e901b7543bacbaf7fa3e844c60e355a2e3c23ef4f075a49' 'dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md' | sha256sum --check
+          printf '%s  %s\n' '08ca61de6b46c8ca716ec535368491e47b285faf6ae7779730c80731819a3d3e' 'records/ofn/OFN_v0_13_RELEASE_RECORD.md' | sha256sum --check
+          git diff --exit-code ofn-v0.13 -- dsn/ BASELINE.md records/ofn/OFN_v0_13_RELEASE_RECORD.md evidence/ upload/
+          python3 --version
+          python3 -I tools/pipes_index.py --check
+          test "$(grep -c '| closed |' pipes/OFN/INDEX.md)" = 13
+          test "$(grep -c '| open |' pipes/OFN/INDEX.md || true)" = 0
+          test "$(find pipes -name '20261125-OFN-v0-13-adopted.md' | wc -l)" = 11
+          test "$(git diff --name-only ofn-v0.13 | wc -l)" = 35
+          printf 'OFN_POSTTAG_NATIVE_PASS\n'
+      - name: Verify merge with exact current main snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout --detach '3f266eb4337c10d6e88a0ea90527dbe732922319'
+          git -c user.name='CI verification' -c user.email='ci@example.invalid' merge --no-commit --no-ff '4012175a165fedb95377ace428d840703db4edfe'
+          git diff --cached --exit-code HEAD -- dsn/ BASELINE.md records/ofn/OFN_v0_13_RELEASE_RECORD.md evidence/ upload/
+          python3 -I tools/pipes_index.py --check
+          git merge --abort
+          printf 'OFN_POSTTAG_MERGE_CHECK_PASS\n'
