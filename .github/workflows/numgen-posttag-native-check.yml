@@ -1,0 +1,42 @@
+name: NUMGEN v1.22 post-tag exact-head validation
+on:
+  push:
+    branches:
+      - chatgpt/numgen-posttag-native-check-20261125
+permissions:
+  contents: read
+jobs:
+  pipes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Checkout exact closeout PR head
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: '3b78744bd5c01ab978753bd2e78972dc34e6141c'
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify publication and native pipe index
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "3b78744bd5c01ab978753bd2e78972dc34e6141c"
+          test "$(git cat-file -t numgen-v1.22)" = "tag"
+          test "$(git rev-parse 'numgen-v1.22^{commit}')" = "c5acda99de18598108e9b5e368ad15fa74f5488d"
+          printf '%s  %s\n' '36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b' 'dsn/RTG_NUMBER_GENESIS_DSN.md' | sha256sum --check
+          git diff --exit-code numgen-v1.22 -- dsn/RTG_NUMBER_GENESIS_DSN.md records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md evidence/numgen upload/numgen-records
+          python3 --version
+          python3 -I tools/pipes_index.py --check
+          test "$(grep -c '| closed |' pipes/NUMGEN/INDEX.md)" = 12
+          test "$(find pipes -name '20261124-NUMGEN-v1-22-adopted.md' | wc -l)" = 7
+          printf 'NUMGEN_POSTTAG_NATIVE_PASS\n'
+      - name: Verify merge with exact current main snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout --detach '085e567be4c522f4b7e62044e2755e3af9d7a9b0'
+          git -c user.name='CI verification' -c user.email='ci@example.invalid' merge --no-commit --no-ff '3b78744bd5c01ab978753bd2e78972dc34e6141c'
+          git diff --cached --exit-code HEAD -- dsn/ records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md evidence/numgen upload/numgen-records
+          python3 -I tools/pipes_index.py --check
+          git merge --abort
+          printf 'NUMGEN_POSTTAG_MERGE_CHECK_PASS\n'
