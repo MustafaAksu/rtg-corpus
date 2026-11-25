@@ -1,0 +1,124 @@
+DZT v0.18 stage 1 edit log
+base dzt-v0.8 cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2
+result sha256 fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d, 54833 bytes
+
+E00a programme-pin     set-line      
+    old: line 7, sha256 9fde05ee696cd4db
+    new: 66 chars
+    why: Programme pin at the governing tag (row 9)
+E00b companion-pins    substitute    
+    old: '`RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` (source of truth for all OPEN 9 arithmetic) · `RTG_A
+    new: 'Dyadic Oscillator v6.4.24 (`dyad-v6.4.24`; source of truth for all OPEN 9 arithmetic) · A
+    why: Dyadic, AZ and OFN pins at the governing tags (row 9); Methodology pin unchanged here
+E01 aliases            replace-range 
+    old: lines 15-25, sha256 f5be314f44d1c2e9
+    new: 18 lines
+    why: aliases under Methodology v1.4 §8.4; [import-ref] a label, not a status alias; standard clause [RECOVERED] (row 16)
+E02 vanish-ids         substitute    
+    old: 'Dyadic DYAD-ALG-VANISH-B2/B3/B4'
+    new: 'Dyadic DYAD-ALG-VANISH-B2, DYAD-ALG-VANISH-B3, DYAD-ALG-VANISH-B4'
+    why: three owner RIDs (Dyadic Appendix F)
+E02b 0A-cascade-art    substitute    
+    old: '(DYAD-ART-CASCADE-Q4-03, hash-pinned)'
+    new: '(Dyadic extractor DYAD-ART-Q403-EXTRACT; §7)'
+    why: owner artifact RID per Appendix F; byte identity not claimed (§7)
+E02c 0A-cascade-abs    substitute    
+    old: 'is rational at all points; 2-power on'
+    new: 'is rational at all points; its absolute value is a 2-power on'
+    why: the 2-power statement is about |N_+| (row 1)
+E03 section1           replace-range 
+    old: lines 56-69, sha256 230e54cc26157530
+    new: 12 lines
+    why: §1 keeps readouts with RIDs and pointers (Methodology §1.1 rule 3); |N_+| labels (row 1); table and anomaly scopes stated together (row 8); [HEUR diagnostic] unpacked (row 13)
+E04 priority-2         set-line      
+    old: line 72, sha256 39c20ddb5501f894
+    new: 311 chars
+    why: [HEUR/ALG finite horizon] unpacked; mechanism by pointer (one home)
+E05 0B-R verified      substitute    
+    old: 'Verified `[ALG finite horizon, p≤1000, 249 pts]`: computing $N_+(M_p)$ from'
+    new: 'Verified `[ALG]` `[scope: finite horizon p≤1000, 249 points]`: computing $\\lvert N_+(M_p
+    why: grade token unpacked; |N_+|
+E06 0B-R target        set-line      
+    old: line 105, sha256 c2ca6bd4435ff4d8
+    new: 900 chars
+    why: version label removed; Dyadic RID; grade token unpacked; mechanism kept `[HYP]`; source dependency on the Dyadic factorization stated (review R2)
+E07 HR norm            set-line      
+    old: line 182, sha256 354b7b669e512604
+    new: 344 chars
+    why: |N_+|; table and audit scopes; [ALG fin-hor] unpacked
+E08 HR phase           set-line      
+    old: line 183, sha256 e82a4bc09ffeb712
+    new: 231 chars
+    why: Dyadic RID per Appendix F
+E09 b5-import          set-line      
+    old: line 198, sha256 6e83c6ca55312798
+    new: 365 chars
+    why: Methodology §3.3 import form; owner result RID; lifecycle RID kept
+E10 6.3-heading        set-line      
+    old: line 215, sha256 b8c81cc9cba4e577
+    new: 80 chars
+    why: mixed-content heading (Methodology §3.5); anchor kept
+E11 phase-import       set-line      
+    old: line 217, sha256 ff6202358fd1d023
+    new: 812 chars
+    why: M_p defined, not |Q_p| (row 1); Dyadic RIDs (row 10); [THM/ALG] and [ALG all-p] unpacked (row 13); version label removed
+E12 cascade-norm       replace-range 
+    old: lines 219-222, sha256 1724ac9361ec4bf9
+    new: 4 lines
+    why: |N_+| labels and sign statement (row 1); runs marked source-reported (row 16)
+E12b p12-home          set-line      
+    old: line 225, sha256 6aac76dad48bda4f
+    new: 789 chars
+    why: full statement at its §6.3 home, including the computation and evidence pointer formerly only in §1
+E13 survives           replace-range 
+    old: lines 227-232, sha256 60842972e2ff58af
+    new: 2 lines
+    why: superseded [OBS] 'p=40 isolated' and its [COR] leave the live text; recorded in Appendix B (row 8)
+E14 anomaly-set        set-line      
+    old: line 229, sha256 e925e3fedb13849e
+    new: 523 chars
+    why: [ALG finite horizon] unpacked (row 13); |N_+| (row 1); run source-reported (row 16)
+E15 note-correction    set-line      
+    old: line 231, sha256 5d3138055917f5ef
+    new: 786 chars
+    why: undeclared alias [HEUR diagnostic] unpacked: verified finite statement [ALG], mechanism [HYP] (row 13)
+E16 imports            replace-range 
+    old: lines 237-253, sha256 aa0afb19ff3ceb56
+    new: 25 lines
+    why: Import Ledger in Methodology §4.3 form at dyad-v6.4.24, per Dyadic Appendix F; no alias
+E17 artifacts          replace-range 
+    old: lines 264-273, sha256 5b6f899662e94795
+    new: 21 lines
+    why: recovered files by path and SHA-256; evidence states; exit codes source-reported
+E18 prov-283           substitute    
+    old: '| `[ALG fin-hor]` |'
+    new: '| `[ALG]` `[scope: finite horizon]` |'
+    why: grade token unpacked
+E19 prov-286           substitute    
+    old: '(isolated outlier) | Claude (v0.6) | `[OBS]` |'
+    new: '(isolated outlier; superseded, Appendix B) | Claude (v0.6) | `[OBS]` |'
+    why: superseded observation marked
+E20 prov-289           substitute    
+    old: '| `[ALG fin-hor]`/`[HEUR]` |'
+    new: '| `[ALG]` `[scope: finite horizon p≤1000]`; mechanism `[HYP]` |'
+    why: compound token unpacked
+E21 prov-291           substitute    
+    old: '| `[THM/ALG]` |'
+    new: '| factorization `[THM]` (Dyadic, DYAD-THM-Q403-PHASELAW); norm object all-$p$ `[ALG]` `[s
+    why: compound token unpacked into its two components, each with its grade and owner (review R1)
+E22 prov-292           substitute    
+    old: '| `[scope]` |'
+    new: '| `[DEF]` (scope rule) |'
+    why: non-tag replaced
+E23 prov-294           substitute    
+    old: '| `[THM]`/`[ALG fin-hor]` |'
+    new: '| `[THM]` (Dyadic, at `dyad-v6.4.24`) |'
+    why: owner grade at the pinned edition
+E23b prov-294-label    substitute    
+    old: '| Imported Dyadic all-$p$ THMs (P1, reality, LEAD) + phase law |'
+    new: '| Imported Dyadic phase law (DYAD-THM-Q403-PHASELAW); P1, reality and LEAD are its compon
+    why: components named as such, not as separate owner theorems (review N1)
+E24 appendix-b         insert        
+    old: before line 352
+    new: 8 lines
+    why: two [SUPERSEDED] records: |N_+| labels and M_p wording (with the scope of the v0.5 [FAIL] record, review N2); v0.6 'p=40 isolated' observation

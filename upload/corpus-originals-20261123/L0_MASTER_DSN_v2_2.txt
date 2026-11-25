@@ -1,0 +1,188 @@
+@D ID:D_L0_MASTER_v2_2
+  LAYER: L0
+  STATUS: ✓ Locked (Definitions + Protocol + ESM-TETRA empirical characterization; provenance explicit)
+
+──────────────────────────────────────────────────────────────
+AXIOM (Relational Primacy)
+──────────────────────────────────────────────────────────────
+No node possesses intrinsic measurable properties in isolation.
+All measurable structure arises from binary relations.
+Nodes are endpoints of persistent relational structures.
+
+AXIOM_CONSEQUENCE_NOTE (Deferred formal inversion)
+  Relational-primacy-consistent inversion (U_ij primary → Ĵ_i derived as fixed su(2) axis
+  of incident transports) is consistent with this axiom but deferred.
+  Current construction (Ĵ_i derived directly from θ_i) is operationally equivalent in weak
+  frustration; not guaranteed equivalent under strong frustration. Inversion is a forward
+  research item (L1 development + strong-frustration regime).
+
+──────────────────────────────────────────────────────────────
+PRINCIPLE (Configurational Only)
+──────────────────────────────────────────────────────────────
+L0 objects are functions of a static snapshot {θ_i} ∈ T^N and fixed substrate data.
+No γ, dt, update operators, Jacobians, NS thresholds, stability margins, or time averages.
+Snapshot-universal: equilibrium is not required at L0.
+
+Gauge (U(1)):
+  θ_i → θ_i + φ leaves μ_i invariant.
+  Operational gauge-fix: set one reference angle θ_ref = 0.
+  (Avoid R^N orthogonal projection on T^N phases without explicit unwrapping policy.)
+
+──────────────────────────────────────────────────────────────
+SUBSTRATE (ESM Tetrahedral 3-Complex)
+──────────────────────────────────────────────────────────────
+A_base    : undirected base edge set
+T_base    : tetrahedra list (3-simplices)
+F_base    : triangles derived from T_base
+r_geom_ij : geometric edge length (when exported)
+
+──────────────────────────────────────────────────────────────
+NODE (L0 Atom)
+──────────────────────────────────────────────────────────────
+n_i := (μ_i, Ĵ_i)
+
+μ_i (Local Frustration Magnitude)
+  μ_i := Σ_{j~i in A_base} w_ij · |sin((θ_j − θ_i) − α_ij)|
+  μ_i ≥ 0
+  α_ij := 0 unless explicitly stored
+  Computed ONCE on A_base (monotonic filtration guarantee)
+
+WEIGHT SELECTION POLICY (Compliance table)
+  (A) ESM-TETRA substrates with exported r_geom:
+      Canonical: w_ij := r_geom_ij^{-2}
+      Empirical scaling constants (0.0507, 0.127) apply ONLY under this convention.
+      Caveat: imports metric substrate attribute; background-independence is weakened
+      at the substrate level (ESM-specific).
+  (B) Kuramoto/Genesis substrates with exported coupling κ̂:
+      Canonical: w_ij := |κ̂_ij|
+      Phase-3 bottleneck stress comparisons are aligned with this convention.
+      Scaling constants (0.0507, 0.127) NOT validated here; revalidation required.
+  Rule: Do not mix weight conventions while claiming shared scaling constants.
+
+Ĵ_i (Local Frame Generator; current construction)
+  Ĵ_i := exp(−i θ_i σ_3 / 2) σ_1 exp(+i θ_i σ_3 / 2)
+  Unit-normalized in su(2)
+
+──────────────────────────────────────────────────────────────
+SU(2) OBSERVABLES (Non-Abelian Defect Seed)
+──────────────────────────────────────────────────────────────
+Edge Transport (canonical base channel):
+  U_ij := exp( −i ((θ_j − θ_i) − α_ij) σ_3 / 2 )
+
+Face Holonomy (oriented triangle f=(i,j,k) ∈ F_base):
+  H_f := U_ij U_jk U_ki
+
+Trace-Gap (pure closure failure; background-independent):
+  Δ_f^(0) := 1 − (1/2)Tr(H_f)
+  Δ_f^(0) ∈ [0,2] with Δ=0 ↔ H=I, Δ=2 ↔ H=−I
+
+TRACE_GAP_PROVENANCE (Phase-3 audit note)
+  Canonical L0: Δ_f^(0) = 1 − (1/2)Tr(H_f)
+  Prior Phase-3/Hodge reports (e.g., “75.2% Hodge-irreducible curvature”) were computed
+  under L1/L2-conditional target-curvature form:
+    Δ_f = (1/2)Tr(H_f) − cos(F_△/2)
+  Status: Phase-3 Hodge result is valid at L1/L2 interpretation layer.
+  Required before gauge-invariant Q development at L0/compact-fork: recompute Hodge
+  decomposition under Δ_f^(0) to assess stability of the 75.2% figure.
+
+──────────────────────────────────────────────────────────────
+FILTRATION (Monotone Resonance Percolation)
+──────────────────────────────────────────────────────────────
+Edge metric:
+  d_ij := |μ_i − μ_j| for (i,j) ∈ A_base
+
+Active edge set:
+  A_active(ε) := {(i,j) ∈ A_base : d_ij < ε}
+
+Monotonicity guarantee:
+  ε1 ≤ ε2 ⇒ A_active(ε1) ⊆ A_active(ε2)
+  Condition: μ fixed on A_base; do not recompute μ on A_active.
+
+Computation order (mandatory):
+  STEP1 load A_base,{θ},α,w
+  STEP2 compute μ on A_base
+  STEP3 build A_active(ε) by thresholding d_ij
+  STEP4 compute topology/holonomy only on A_active(ε)
+
+NEAR_VACUUM (Filter collapse bound)
+  Hard bound: if ε ≥ μ_spread then A_active(ε) = A_base (filtration becomes trivial).
+  Practical bound: keep ε < μ_spread to preserve structural differentiation.
+
+──────────────────────────────────────────────────────────────
+ESM-TETRA TOPOLOGY OBSERVABLES (Derived Diagnostics)
+──────────────────────────────────────────────────────────────
+F_active(ε) := {f ∈ F_base : all 3 edges of f are in A_active(ε)}
+T_active(ε) := {τ ∈ T_base : all 4 faces of τ are in F_active(ε)}
+
+Graph observables:
+  β0(ε)       : connected components
+  S(ε)        : |LCC|/N
+  β1_graph(ε) = E(ε) − N + β0(ε)
+
+Euler–Poincaré Handle Proxy (3-complex corrected):
+  β1_EP(ε) := β1_graph(ε) − |F_active(ε)| + |T_active(ε)|
+  Interpretation: β1_EP = β1 − β2 + β3 (Euler–Poincaré proxy).
+
+β1_EP VALIDITY RANGE (important)
+  β1_EP is an accurate proxy for β1 in sparse/bottleneck regime (ε well below collapse),
+  where enclosed voids are negligible (β2≈0) and higher cavities are absent (β3≈0).
+  As ε increases toward collapse, β2 can grow due to enclosed tetrahedral surfaces; then
+  β1_EP systematically underestimates true β1.
+  Operational guardrail: track |T_active| and interpret β1_EP cautiously when
+  |T_active(ε)|/|F_active(ε)| becomes non-negligible (heuristic threshold allowed).
+
+──────────────────────────────────────────────────────────────
+CRITICAL THRESHOLD POLICY (L0)
+──────────────────────────────────────────────────────────────
+Primary (finite-size robust):
+  ε_c := argmax_ε (dS/dε)
+Secondary (reporting check):
+  ε_c50 := smallest ε with S(ε) ≥ 0.5
+
+──────────────────────────────────────────────────────────────
+VACUUM PROTOCOL (Silent Regime)
+──────────────────────────────────────────────────────────────
+If:
+  max_i μ_i < ε_machine  AND  max_f Δ_f^(0) < ε_machine
+Then:
+  Return Empty Structure for μ/Δ-derived features.
+  Substrate may exist as bookkeeping, but no active relational geometry is present.
+
+──────────────────────────────────────────────────────────────
+EMPIRICAL SCALING LAW (Provenance explicit; ESM-TETRA, w=r_geom^{-2})
+──────────────────────────────────────────────────────────────
+Define:
+  μ_spread := max(μ_i) − min(μ_i)
+
+Ensemble (ESM-TETRA) result:
+  ε_c / μ_spread         ≈ 0.0507  (std ≈ 0.0238)
+  ε_β1peak / μ_spread    ≈ 0.1274  (std ≈ 0.0499)
+
+Provenance:
+  Substrate: ESM tetra snapshots
+  Weight: w_ij=r_geom^{-2}
+  Threshold: ε_c via argmax(dS/dε)
+  Ensemble: 10 runs (run_17..run_26), N≈150
+
+Interpretation (scale invariance):
+  Transition governed by relative μ-contrast, not absolute magnitude.
+  Do not extrapolate constants beyond stated provenance without revalidation.
+
+──────────────────────────────────────────────────────────────
+BOTTLE­NECK DIAGNOSTICS (L0)
+──────────────────────────────────────────────────────────────
+Bridge count:
+  B(ε) := number of graph bridges in A_active(ε)
+
+Bottleneck–Bridge Score:
+  BBS(ε) := mean(μ_i on bridge-incident nodes) / mean(μ_i on non-bridge nodes)
+
+Observation:
+  BBS is regime-dependent; high μ ↔ bridges is configuration-dependent.
+
+──────────────────────────────────────────────────────────────
+L0 BOUNDARY (Explicit)
+──────────────────────────────────────────────────────────────
+L1+ required for:
+  time-averaging ⟨·⟩_T, stability margins, NS bifurcation, mobility directionality,
+  any γ/dt dependence, conservation claims on compact forks requiring gauge-irreducible Q.

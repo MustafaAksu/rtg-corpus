@@ -1,0 +1,144 @@
+{
+ "study": "ATLAS",
+ "query_time_utc": "2026-11-09T07:21:08+00:00",
+ "repo": "MustafaAksu/rtg-corpus",
+ "unverified": [],
+ "refs": {
+  "local_origin_main": "e4f3dbf1ba97cf115c3615c335e613f9d0d62953",
+  "remote_main": "e4f3dbf1ba97cf115c3615c335e613f9d0d62953",
+  "local_is_current": true
+ },
+ "governing": {
+  "newest_tag": "atlas-v0.10",
+  "note": "newest tag by version; adoption is shown by the release record below, not by the tag",
+  "tag_type": "tag",
+  "target": "28516ddf10cf7ba67634cdecf17bec0e6e6b4404",
+  "file_sha256_at_tag": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
+  "file_sha256_at_main": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
+  "main_equals_tag": true,
+  "release_record": [
+   "records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md"
+  ],
+  "release_record_status_line": "PI ACCEPTED, 6 November 2026. The merges of PR #186 and PR #185 and the annotated tag `atlas-v0.10` are pending (§4). `atlas-v0.9` stays the tagged Atlas until ",
+  "release_record_names_tag_hash": true,
+  "commits_after_tag_on_study_paths": [
+   "81b3abf Atlas v0.10 post-release: tag verification, ATLAS inbox closed"
+  ]
+ },
+ "open_prs": {
+  "scanned": 10,
+  "matched": [
+   {
+    "number": 113,
+    "branch": "claude/tool-check-compaction-rtg-ofn",
+    "base": "main",
+    "draft": false,
+    "head": "74ca65eacf9e",
+    "title": "tools/check_compaction.py: track RTG-OFN identifiers; history_appendix profile key",
+    "files": [
+     "evidence/atlas/tools/check_compaction_20261029/ofn_v0_11/check_compaction_fixed_tool.txt",
+     "evidence/atlas/tools/check_compaction_20261029/ofn_v0_11/check_compaction_fixed_tool_history_appendix_C.txt",
+     "evidence/atlas/tools/check_compaction_20261029/ofn_v0_11/check_compaction_main_tool.txt",
+     "evidence/atlas/tools/check_compaction_20261029/ofn_v0_11/gap_fixtures_output.txt",
+     "evidence/atlas/tools/check_compaction_20261029/ofn_v0_11/ofn_f5_fixture.py",
+     "evidence/atlas/tools/check_compaction_20261029/ofn_v0_11/ofn_gap_fixtures.py",
+     "evidence/atlas/tools/check_compaction_20261029/ofn_v0_11/owner_guards_fixed_tool.txt",
+     "evidence/atlas/tools/check_compaction_20261029/ofn_v0_11/owner_guards_main_tool.txt"
+    ],
+    "files_total": 59,
+    "via": "changed paths"
+   },
+   {
+    "number": 114,
+    "branch": "chatgpt/check-compaction-pr113-review",
+    "base": "main",
+    "draft": false,
+    "head": "b977b8aaff73",
+    "title": "PR #113 receiving review, round 2 — boundaries fixed; hash-binding REVISE",
+    "files": [
+     "evidence/atlas/tools/pr113_receiving_chatgpt/receiving_controls_output.txt",
+     "evidence/atlas/tools/pr113_receiving_chatgpt/round2/receiving_output.txt",
+     "evidence/atlas/tools/pr113_receiving_chatgpt/round2/test_pr113_round2_binding.py",
+     "evidence/atlas/tools/pr113_receiving_chatgpt/test_pr113_receiving.py",
+     "records/atlas/TOOL_CHECK_COMPACTION_PR113_RECEIVING_REVIEW_CHATGPT.md"
+    ],
+    "files_total": 5,
+    "via": "changed paths"
+   },
+   {
+    "number": 188,
+    "branch": "chatgpt/atlas-session-orientation-pilot",
+    "base": "main",
+    "draft": false,
+    "head": "6a3cc5e5b46a",
+    "title": "Atlas orientation pilot: generated state + owner-maintained intent (tests pending)",
+    "files": [
+     "records/atlas/ATLAS_COOWNER_SESSION_ORIENTATION.md"
+    ],
+    "files_total": 1,
+    "via": "changed paths"
+   },
+   {
+    "number": 189,
+    "branch": "chatgpt/methodology-v1.5-session-orientation",
+    "base": "main",
+    "draft": true,
+    "head": "ebd97b02f24c",
+    "title": "DEFERRED — Methodology session-continuity proposal (no standalone release)",
+    "via": "names matched PR(s) [188]"
+   },
+   {
+    "number": 190,
+    "branch": "claude/tool-orient",
+    "base": "main",
+    "draft": false,
+    "head": "029524acb311",
+    "title": "tools/orient.py: read-only reporter for session-orientation LIVE_STATE",
+    "files": [
+     "evidence/atlas/tools/orient_20261106/atlas_run.json",
+     "evidence/atlas/tools/orient_20261106/atlas_run.md",
+     "evidence/atlas/tools/orient_20261106/atlas_run_github_denied.md",
+     "tools/orient.py"
+    ],
+    "files_total": 4,
+    "via": "changed paths"
+   },
+   {
+    "number": 191,
+    "branch": "claude/atlas-orientation-owner-lane",
+    "base": "chatgpt/atlas-session-orientation-pilot",
+    "draft": false,
+    "head": "e673840fbbf5",
+    "title": "Atlas orientation pilot: owner lane and PI_PENDING (stacked on #188)",
+    "files": [
+     "records/atlas/ATLAS_COOWNER_SESSION_ORIENTATION.md"
+    ],
+    "files_total": 1,
+    "via": "changed paths"
+   },
+   {
+    "number": 192,
+    "branch": "chatgpt/orient-pr190-receiving-review",
+    "base": "main",
+    "draft": false,
+    "head": "2ec275bf8e4d",
+    "title": "records/atlas: orient.py PR190 receiving review — REVISE with executed controls",
+    "files": [
+     "evidence/atlas/tools/orient_receiving/round1_output.txt",
+     "evidence/atlas/tools/orient_receiving/test_orient_receiving.py",
+     "records/atlas/ORIENT_PR190_RECEIVING_REVIEW_CHATGPT.md"
+    ],
+    "files_total": 3,
+    "via": "changed paths"
+   }
+  ]
+ },
+ "pipes": {
+  "inbox": {
+   "closed": 7
+  },
+  "outbound_not_closed": {},
+  "not_closed_items": []
+ },
+ "status": "COMPLETE (observations only; no adoption inferred)"
+}

@@ -1,0 +1,65 @@
+{
+ "schema": "az_tokres_contact_tables_manifest_v2",
+ "status": "FROZEN - PI decision of 17 Nov 2026 on the four settings; script reviewed PASS 5933459799 at 19c3b58",
+ "frozen_script_sha256": "78822775de7d52540f4700d923ab55a5750df6aa06245c9178a2ed91e952611b",
+ "cells_registered": [
+  "S1-C1"
+ ],
+ "cells_registered_note": "proposal of design \u00a75 (120, 8); S1-C2 (N = 122) and the Stage 2 cells are not included; any extension is a listed amendment before first access",
+ "cells_test": [
+  "TEST-C1"
+ ],
+ "arms": [
+  "BASE",
+  "O1R",
+  "O1D",
+  "O2R",
+  "O2D",
+  "SHAM"
+ ],
+ "pairs": [
+  [
+   "O1R",
+   "O1D"
+  ],
+  [
+   "O2R",
+   "O2D"
+  ]
+ ],
+ "endpoint": "Y = 1{M >= 100 at tick 800}; a run capped before tick 800 counts positive (Stage 1 endpoint)",
+ "time_grid": [
+  1,
+  2,
+  5,
+  10,
+  20,
+  50,
+  100,
+  200,
+  400,
+  800
+ ],
+ "birth_time_for_J4": 100,
+ "joint_tables": {
+  "J1": "per pair: (Y_R, Y_D) by slot membership in the first-contact graph (R, D)",
+  "J2": "per pair: (Y_R, Y_D) by the strict common-contact condition of design \u00a74.2",
+  "J3": "per arm: Y by unique-centre star in the first-contact graph",
+  "J4": "per arm: Y by first birth at or before birth_time_for_J4"
+ },
+ "inputs": [
+  {
+   "hashes_file": "upload/az-token-resonance-stage1/HASHES.txt",
+   "sha256": "5ddbc60516acbeb75f2fc09fabdcaa017a320a68d88ee4904767c1c59b88500a",
+   "commit": "95db7afd2cc09fe02b1ea25fa13a83a4df78aea1",
+   "inventory": "the trusted list names 39 files; for S1-C1 the four record files S1-C1_{00000_00375,00375_00750,00750_01125,01125_01500}.jsonl and their .manifest.json; every selected piece is bound to it by hash"
+  }
+ ],
+ "pins": {
+  "engine": "4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608",
+  "orient": "ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c",
+  "runner": "75c5f139a453a4b2595eba76760e34cddc32c990370259ae6e84ec5379408992",
+  "stage1_analysis_library": "490b3d4f06ef52d6d39b217d0821bd8361d0a8ed37941f32f9c154113c91dc80"
+ },
+ "arms_note": "descriptor arms; Q2R exists only at N = 122 (S1-C2/TEST-C2) and is listed only if such a cell is selected"
+}

@@ -1,0 +1,3 @@
+STAGE=4 evaluated=4037 excluded=2576 split=785 retained_final=676 unresolved=0 budget_pending=0 budget_valid_no_split=0 depth_cap=676 frontier_cap=0 finalL1=3.223882e-05 stop=REFINEMENT_CAP
+STATUS=REFINEMENT_CAP input=897 stages=1 evaluations=4037 budget=4200 final_boxes=676 L1_256=3732999916436855825052688974102440895822637379942020182587183471355933763 finalL1=3.223882e-05
+SESSION_ONLY; valid C1C2 exclusions conditional on graph/tube premises.

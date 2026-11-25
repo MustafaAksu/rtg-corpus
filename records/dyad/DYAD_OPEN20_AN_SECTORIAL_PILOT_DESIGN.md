@@ -1,10 +1,10 @@
 # DYAD OPEN 20 (analytic branch) — written design of a sectorial pilot for one formal branch
 
-**Date:** 23 October 2026 (revised the same day after the receiving review `records/dyad/DYAD_LH2012_PILOT_RECEIVING_REVIEW.md`: P-R3 domains, P-R4 inverse branch and full-map quotients, the §6 bookkeeping guards). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It is a written design; stage 1 (exact preparation, §7) is complete and stage 2 (limited `[NUM]` scouting, §5 item 2) has been run. No sectorial sum, jump or Stokes quantity has been computed. §8 (3 Nov 2026) records the a-priori route check for stage 3 after the LIT constants (INF-009/010); stage 3 itself is not authorized.
+**Date:** 23 October 2026 (revised the same day after the receiving review `records/dyad/DYAD_LH2012_PILOT_RECEIVING_REVIEW.md`: P-R3 domains, P-R4 inverse branch and full-map quotients, the §6 bookkeeping guards). **From:** Dyadic DSN owner (Claude). **Status:** working record (SESSION). It is a written design; stage 1 (exact preparation, §7) is complete and stage 2 (limited `[NUM]` scouting, §5 item 2) has been run. §8 (3 Nov 2026) records the a-priori route check for stage 3 after the LIT constants (INF-009/010). §9 (11 Nov 2026) collects the inputs to the stage-3b design, including LIT's two literature replies. Stage 2b (11 Nov 2026, `[NUM]`, authorized by the PI) measured one sectorial jump numerically; it is in its own record and is not a certificate. No certified sectorial sum, jump or Stokes quantity exists. Stage 3c is not authorized.
 
 **Authority:** receiving review `records/dyad/DYAD_LH2012_RECEIVING_REVIEW.md` §6 ("WRITTEN PILOT DESIGN SUPPORTED"), on `records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md`.
 
-**Governing edition:** DYAD v6.4.22. OPEN 20 B-an and B-6 are ACTIVE.
+**Governing edition:** DYAD v6.4.22 when the design was written; v6.4.24 (`dyad-v6.4.24`) since 11 November 2026, whose OPEN 20 entry records the pilot's state. OPEN 20 B-an and B-6 are ACTIVE.
 
 **Notation:**
 - $F=T^6$ in the complexified raw frame $z=\rho+\omega\eta$, $w=\rho+\bar\omega\eta$ ($z=W$). This $z$ is not the normalized NF coordinate.
@@ -166,7 +166,7 @@ What stage 1 does **not** do: no domain, contraction, tail or inverse-branch bou
 - No map value is computed. The only inputs are the exact normalized-jet coefficients of `stage1_prep.json` (§7) and the stage-2 Borel-scale range.
 
 The argument:
-1. Any admissible constant is at least the modulus of the corresponding Taylor coefficient. Let Y → 0 and then ξ → 0 in the INF-010 bounds. This gives K₁ ≥ \|[ξ⁴Y]F₁\| ≈ 12.82, K₂ ≥ \|[ξ⁵]F₁\| ≈ 0.723, K₃ ≥ \|[ξ³Y²]F₂\| ≈ 35.67, K₄ ≥ \|[ξ⁴Y]F₂\| ≈ 5.54 and Ψ ≥ \|ψ(0)\| ≈ 0.306. The coefficients are large because of the scaling ξ = c₊x, with \|c₊\| ≈ 0.461.
+1. Any admissible constant is at least the modulus of the corresponding Taylor coefficient, by Cauchy estimates in Y and ξ → 0 (wording corrected on 11 Nov 2026; see the LIT use check below). This gives K₁ ≥ \|[ξ⁴Y]F₁\| ≈ 12.82, K₂ ≥ \|[ξ⁵]F₁\| ≈ 0.723, K₃ ≥ \|[ξ³Y²]F₂\| ≈ 35.67, K₄ ≥ \|[ξ⁴Y]F₂\| ≈ 5.54 and Ψ ≥ \|ψ(0)\| ≈ 0.306. The coefficients are large because of the scaling ξ = c₊x, with \|c₊\| ≈ 0.461.
 2. Every INF-009/010 constant is nondecreasing in these constants (gate M checks this). So the radius obtained with the lower bounds is the largest the INF-009/010 route can give for this branch, whatever the true constants are.
 3. The formulas were transcribed independently of LIT's scripts. They reproduce the values printed in INF-010 for LIT's test germ (gate L: ρ, δ′, C, B₀(1), B₀(2), κ, r_k, e₁, h_d). LIT is asked to validate the transcription and steps 1–2 (`pipes/LIT/20261103-DYAD-inf009-inf010-use-validation.md`).
 
@@ -182,6 +182,18 @@ The argument:
 | radius at which the expected jump exp(−A_ξ/\|ξ\|³) is 10⁻¹⁰⁰ / 10⁻¹⁰⁰⁰ (model A_ξ = 2π/3) | 0.209 / 0.097 |
 | decimal digits needed to resolve the jump at the best E4 radius, minimum over the η grid (A_ξ = 1.77) | ≈ 1.0·10²⁷ |
 | digits needed at the E3 cap ρ = 0.019 (A_ξ = 1.77–2.09) | ≈ 1.1–1.3·10⁵ |
+
+**LIT use check (4 Nov 2026; recorded here 11 Nov 2026).** LIT checked this calculation at DYAD's request and answered "accept with change" (`pipes/DYAD/20261104-LIT-inf009-inf010-use-check.md`; LIT record at rtg-lit merge `5b0d253b…`).
+- **Transcription.** It matches INF-009/010 at rtg-lit `564a1ee`. LIT re-ran the script and got the same numbers. The polydisc conditions the script omits can only enlarge the radius, which is the safe direction for a negative verdict.
+- **Step 1, corrected derivation.** The first version of this record, and the script's docstring, said "let Y → 0 and then ξ → 0". That order recovers only K₂ and Ψ. The correct derivation:
+  - K₂ and Ψ: set Y = 0, divide by \|ξ\|⁵, let ξ → 0;
+  - K₁ and K₃: let ξ → 0 first at fixed small Y, then Y → 0;
+  - K₄: a Cauchy estimate in Y on \|Y\| = ε\|ξ\|, then ξ → 0, then ε → 0.
+  The lower bounds and every number below are unchanged. The script is frozen evidence and is not edited; its docstring keeps the old wording.
+- **Step 2.** Monotonicity holds analytically, not only by gate M: every constant is a sum or product of nonnegative increasing terms.
+- **Scope: the verdict is chart-relative.** It holds for the normalized chart fixed here (m = 2). Under the scaling Y = λY′, K₁ and K₃ scale with \|λ\| and Ψ with 1/\|λ\|, while K₂ and K₄ are unchanged.
+- **Grid-free bound (LIT's co-owner; checked by LIT).** Using only K₂ ≥ 0.72268998 and K₄ ≥ 5.54117445 (rounded down), B₀(2) > 5.68·10⁵. So \|ξ\| < 1.76·10⁻⁶ for every η, ρ, δ and λ, and the jump there would need more than 1.4·10¹⁷ digits. The owner's own scan over λ, with the η-uniform bound below, is consistent with it (minimum B₀(2) ≈ 1.66·10⁶ at \|λ\| ≈ 10⁻¹·⁸).
+- **Not examined.** A larger m, or other polynomial normalizations.
 
 **η-uniform form (added 3 Nov 2026, after the co-owner review of PR #159).**
 - The negative result does not depend on the η grid. B₀(2) is bounded below for every η ∈ (0, π/2), using:
@@ -209,3 +221,75 @@ The argument:
 - **3c. Certification run.** Only after 3b is reviewed and the PI authorizes it.
 
 Guards (§6) unchanged: no change to the DSN, RIDs or OPEN statuses from this record. B-an and B-6 stay ACTIVE. The recording of this state in the DSN is proposed for v6.4.24 (backlog S3).
+
+## 9. Inputs to the stage-3b design (11 November 2026; owner reading, SESSION; nothing authorized)
+
+**LIT's answer to the literature request** (`pipes/DYAD/20261111-LIT-validated-stokes-numerics-search.md`; LIT report at rtg-lit `9e521288…`, bounded search with stated limits):
+- **No published method applies directly.** LIT found no validated enclosure of a sectorial jump for a two-dimensional map tangent to the identity that is not area-preserving. Validated Borel summation exists for linear ODEs only.
+- **Three analogue levels:**
+  - theory: Gelfreich–Naudot 2008, splitting invariants in ℂ² without area preservation, but for a Jordan-block linear part;
+  - computer-assisted Stokes constants of inner equations: Baldomá–Capiński–Guardia–Seara 2023 and successors (ODEs), and one thesis for area-preserving maps;
+  - a-posteriori existence theorems for parabolic manifolds (Baldomá–Fontich–Martín 2020), without explicit constants.
+- **Consequence.** The 3b method has to be DYAD's own. Its proof obligations cannot be discharged by citation.
+
+**Sign convention (LIT [ALG]; checked here).** In the survey convention F̃₂ = y + α_s xᵏy, the pilot has α_s = −α, so Re α_s = +102/19 > 0 and Hakim's two-dimensional parabolic domains do not exist along the pilot direction. This is the same fact as INF-014's Re(b/a) = Re α < 0 (assessment §6), in another convention. Along the attracting ray the normal multiplier grows like n^{34/19}: the curve is transversally expanding under F and contracting under F⁻¹.
+
+**LIT's open question on T (report §6.6).** Already answered in this design: T exchanges Γ₊ and Γ₋ (§1; assessment L9), and T² maps Γ₊ to itself, so the six overlaps of one branch fall into two T²-classes (§3). Two jumps per branch are independent at most. No relation between the two classes is known.
+
+**Owner reading of LIT's suggestions** (they are [HEUR] and nonbinding):
+
+| Suggestion | Owner reading |
+|---|---|
+| Seek Δ ≠ 0 first, not an interval for a Stokes constant | **Adopt as the 3b target.** It is the decision rule of §5 already. A certified nonzero same-branch jump gives divergence of Γ₊ and, under P1-c-5 Lemma 5b-1, of log F. It does not close B-an or B-6 |
+| Evaluate where the jump is large | **Adopt.** The leading model gives a jump near 10⁻¹⁵ at \|ξ\| = 0.4, 10⁻³⁴ at 0.3, 10⁻⁵⁸ at 0.25 and 10⁻¹¹⁴ at 0.2. D8/D9 fix arg ξ* = π/6 but not \|ξ*\|; the leading-order formulas lose accuracy as \|ξ\| grows, so the choice needs numerical scouting |
+| Certify locally and transport by the dynamics | **Candidate architecture.** Transport outward along a selected curve uses F⁻¹ on the forward petal (transversally contracting) and F on the inverse petal. The local certificate is the open part: the a-priori radius is at most 1.76·10⁻⁶ (§8), and an orbit from \|ξ\| = 0.05 needs about 10¹⁷ steps to get there. So the certificate must hold at \|ξ\| of order 10⁻², from an a-posteriori bound around a high-order truncation of Γ̂₊ |
+| Raise the order of the approximate solution | **Needed for the local certificate.** Stage 2 has a₂…a₂₁₆ in ball arithmetic. The price is an explicit weighted-norm bound for the linearized operator at that order. That bound is DYAD's own proof obligation and is not written |
+| Parameterization form Γ(t+1) = F(Γ(t)) | **To be compared** with the graph form in the 3b design. It makes the Fatou coordinate part of the unknown |
+
+**Proposed order of work** (each item is a separate decision; none is authorized by this record):
+1. **Stage 2b, `[NUM]` scouting of the jump itself.** At two or three points ξ* on arg ξ = π/6, compute both sectorial values by shooting. φ₀(ξ*) is the Y whose forward orbit meets the truncated series at small \|ξ\|; φ₁(ξ*) is the same for the backward orbit. Then test Δ = φ₁ − φ₀ against the leading law in \|ξ*\|.
+   - Inputs: the stage-2 coefficients and the full map. Cost: a few thousand map steps at 100–200 digits per point.
+   - What it decides: whether a nonzero jump is numerically visible, its size and the Borel scale that stage 2 left INCONCLUSIVE, and the precision a certificate would need.
+   - What it is not: a certificate. A numerically zero result would redirect the whole analytic branch.
+   - It computes a Stokes-type quantity for the first time, so it needs the PI's authorization, with stage-2-style conditions (label `[NUM]`, stability under N, precision and the matching radius; negative controls).
+2. **3b design note.** Compare the operator-with-transport route and the Borel–Laplace route using the stage-2b numbers; state the proof obligations of the chosen route (local a-posteriori theorem with explicit constants, validated transport, the common-point subtraction).
+3. **Review and PI decision** on the design. Stage 3c stays not authorized.
+
+LIT answered the request on subpetal orbit constants later on 11 November 2026; the owner disposition is at the end of this section.
+
+**Status, 11 November 2026 (later the same day).** The PI authorized stage 2b. It was run: `records/dyad/DYAD_OPEN20_AN_STAGE2B_JUMP_SCOUTING_NUM.md` (`[NUM]`, OWNER-RUN).
+- The jump on S₀ ∩ S₁ is numerically nonzero: \|ΔY\| from 1.6·10⁻⁵ at \|ξ*\| = 0.45 to 7.3·10⁻⁵⁰ at 0.24, stable to 33–79 digits; the zero-jump control returns 10⁻¹⁶⁰.
+- In the Fatou time of the restricted map it decays like exp(−2πT), with local slopes −2π·(0.984 … 0.9988). The low apparent scale of stage 2 is a pre-asymptotic effect of the leading-time variable.
+- For the 3b design: the certificate can aim at \|ξ*\| ≈ 0.40–0.45, where enclosures to about 10⁻¹⁰ suffice. The table above (10⁻¹¹⁴ at 0.2, from the leading model) overstated the required precision, because the model time 1/(3\|ξ\|³) is larger than the Fatou time at these radii.
+- Items 2 and 3 of the order of work stand. Stage 3c stays not authorized.
+
+**LIT's answer on subpetal orbit constants (11 November 2026; owner disposition: accept; SESSION).** Item `pipes/DYAD/20261111-LIT-subpetal-orbit-constant-search.md`; LIT report at rtg-lit `e053e73e07b7cdeac55b44a01539d23a83d1b015` (bounded search; its limits are stated there). It answers the request of 3 November (`pipes/LIT/20261103-DYAD-subpetal-orbit-constant-search.md`).
+
+What LIT reports:
+- **Published.** No bound with an explicit radius was found. The published form is qualitative: M. Arizzi, J. Raissy, *On Écalle–Hakim's theorems in holomorphic dynamics*, arXiv:1106.1710v2, Lemma 6.2 (after Hakim 1998, Lemma 4.2, which LIT did not obtain). It gives \|xₙ\|ᵏ ≤ 2\|x\|ᵏ/\|1 + n xᵏ\| for "r small enough", in another normalization and for a base map prepared to order 2k+1.
+- **LIT derivation (`[ALG]`, SESSION; not published; not a DYAD result).** Under INF-009 (i) and ε₀ < sin η: \|fⁿ(x)\|ᵏ ≤ \|x\|ᵏ / ((1 − ε₀/sin η)\|1 + kn xᵏ\|), uniformly over the f_u family. With the denominator 1 + kn\|x\|ᵏ an extra factor sec(θ/2), θ = \|arg xᵏ\|, is needed and is sharp. It equals √2 at the overlap direction arg ξ³ = π/2.
+- **Radius.** With K = K₁ + K₂ = 13.52, INF-009's majorant admits ρ < 0.0184 (ε₀ = 0.25), 0.0369 (ε₀ < 1/2), 0.0522 (ε₀ < sin π/4) and 0.0737 (ε₀ < 1, the supremum over η). These are caps of this criterion in this chart, not of the map.
+- **E4.** A sharper orbit constant does not rescue the a-priori route: the E4 radius is about 2.1·10⁻⁸ even with C = 1 (§8).
+- **Suggestion (`[HEUR]`, nonbinding).** The published proof gains from a more prepared chart (base map normalized to order 2k+1, a corrected coordinate with logarithmic terms, a class of curves close to a higher-order approximation), not from a sharper constant.
+
+Owner check (OWNER-RUN): `evidence/dyad/scripts/dyad_open20_lit_subpetal_reply_check.py`, run `evidence/dyad/open20-an/lit-subpetal-reply/run.sh`; gates G0, T1–T6 PASS; the controls KCLASS and SEC each exit 1 at the named gate.
+- The four radii and the example constants (1.5469, 2.1877, 4.0423; INF-009's C = 7.66) are reproduced.
+- The inequality \|1 + te^{iθ}\|² − cos²(θ/2)(1 + t)² = (1 − cos θ)(1 − t)²/2 is exact; equality at t = 1.
+- The owner read LIT's four-line proof (LIT screen §3). It uses only Steps 1–3 of INF-009 and the identity k(w + n) = x^{−k}(1 + kn xᵏ) in the coordinate w = 1/(kxᵏ). The owner found no gap. This is a reading, not a DYAD proof record.
+- `[NUM]` illustration only: no violation along 40 seeded orbits of 2000 steps with a saturating perturbation (largest ratio to the bound 0.65, the value LIT reports).
+
+Owner note on the class of curves:
+- LIT's caps use K = K₁ + K₂, the class \|u\| ≤ \|ξ\| of INF-009's f_u version. The stage-3a calculation of §8 used K = 2K₁ + K₂, the radius-2 ball of INF-010.
+- The "ρ ≤ 0.019" of §8 is the cap of that larger class with ε₀ < 1/2 (0.01896). It is not LIT's row ε₀ = 0.25 (0.01849). The two numbers are close because E(ρ) ≈ Kρ.
+- For the radius-2 class the four caps are 0.0095, 0.0190, 0.0268 and 0.0379. No conclusion of §8 or of LIT's reply depends on the difference.
+
+Consequences for the 3b design (owner reading; nothing authorized):
+1. **The matching radius is outside this criterion.** Stage 2b met the truncated series at \|ξ\| = 0.08, 0.10 and 0.12. All three exceed the largest cap, 0.0737. So the local enclosure at \|ξ\| ≈ 0.1 cannot take its orbit control from INF-009 in the m = 2 chart, whatever the orbit constant.
+2. **Orbit control has to come from the restricted map itself.** On curves in a narrow tube around the truncated series, the restricted map is a known function up to a small error. Stage 2b computed its formal Fatou coordinate, truncated at J = 12 (A₃, A₂, A₁, κ, B_j; Abel defect 1.2·10⁻¹⁸ at one orbit point, `[NUM]`). In such a coordinate the per-step error is of high order in \|ξ\| by construction, where the m = 2 chart has K\|ξ\|. This is LIT's "prepared chart" suggestion in the pilot's terms. A bound for that error on the range of \|ξ\| used is DYAD's own obligation and is not computed; feasibility is not known.
+3. **Tail near 0.** If the 3b proof needs an analytic estimate on a small petal, the modulus form can be used there, with constant 1.55 in place of 7.66 at η = π/4 and ε₀ = 0.25. It has to be written out in the DYAD proof record; LIT's derivation is not imported.
+4. **Form of the bound.** At the overlap direction no bound with denominator 1 + kn\|x\|ᵏ has a constant below √2. Tail sums in 3b should use \|1 + kn xᵏ\|.
+5. **Stage 3a stands.** The a-priori route stays set aside.
+
+Not taken: no source of this reply is cited in the DSN, and nothing is imported. LIT's limits apply (Hakim 1998 and Kotus–Urbański 2023, ch. 15 not obtained; the near-parabolic renormalization literature not opened).
+
+**3b design note (11 November 2026).** Written: `records/dyad/DYAD_OPEN20_AN_STAGE3B_DESIGN.md`, with `[NUM]` sampling in `evidence/dyad/open20-an/stage3b-design/`. It proposes a tube route in place of the operator route of §4 (E3–E6); E1, E2 and E7 remain. Revision r2 of the same day applies the co-owner's review `5858511915` (REVISE; items R1–R5): local domains with a guard property, the seed made precise, uniqueness through López-Hernanz 2012 Theorem 4.2(3), the common arc and the fibre enclosure as proof obligations. The co-owner's read-back `5858796744` accepted r2 as a scoped design, and the PI accepted it on 11 November 2026 as the basis for the stage-3c certificate design (design note §12). Stage 3c is not authorized.

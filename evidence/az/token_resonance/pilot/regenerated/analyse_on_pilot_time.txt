@@ -1,0 +1,8 @@
+runs=252 N=120 k=8 tail(M>=100)=8 (0.0317)  births>0: 252  median M=41  frozen(M<=5)=0
+deg          spearman(M)=+0.064 perm_p=0.3068 | 0:n=212,tail=7,medM=40  1:n=40,tail=1,medM=41
+n_slow       spearman(M)=+0.103 perm_p=0.1069 | 0:n=135,tail=3,medM=40  1:n=94,tail=4,medM=42  2:n=18,tail=1,medM=42  3:n=5,tail=0,medM=49
+tau_min      spearman(M)=-0.111 perm_p=0.0815 | 1:n=117,tail=5,medM=42  2:n=36,tail=3,medM=44  3:n=36,tail=0,medM=39  4:n=33,tail=0,medM=39  5:n=15,tail=0,medM=38  6:n=4,tail=0,medM=40  7:n=7,tail=0,medM=44  8:n=4,tail=0,medM=53
+n_diff_bind  spearman(M)=-0.005 perm_p=0.9400 | 0:n=36,tail=2,medM=42  1:n=103,tail=2,medM=39  2:n=57,tail=2,medM=41  3:n=39,tail=2,medM=40  4:n=7,tail=0,medM=45  5:n=4,tail=0,medM=45  6:n=6,tail=0,medM=48
+n_sum_bind   spearman(M)=+0.072 perm_p=0.2549 | 0:n=45,tail=1,medM=40  1:n=67,tail=2,medM=39  2:n=93,tail=4,medM=41  3:n=35,tail=0,medM=42  4:n=10,tail=1,medM=41  6:n=2,tail=0,medM=45
+tail: n=8 mean top-class share=0.986 mean #abs classes=3.88 mean #distinct tokens=4.62
+bulk: n=244 mean top-class share=0.538 mean #abs classes=3.84 mean #distinct tokens=7.32

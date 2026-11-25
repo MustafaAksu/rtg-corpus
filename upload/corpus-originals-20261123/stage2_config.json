@@ -1,0 +1,20 @@
+{
+ "R_LO": "0.03",
+ "R_MID": "0.05",
+ "R_HI": "0.08",
+ "H_IN": "0.0025",
+ "H_OUT": "0.005",
+ "TAU_LO": "0",
+ "TAU_HI": "2",
+ "HTAU": "0.5",
+ "K": 6,
+ "DPS": 30,
+ "N_LIST": [
+  7,
+  8
+ ],
+ "KT": "1",
+ "engine": "triad_tm_engine_v3_2.py",
+ "poly": "age_family_polynomials_kt1.json",
+ "results": "stage2_results.jsonl"
+}

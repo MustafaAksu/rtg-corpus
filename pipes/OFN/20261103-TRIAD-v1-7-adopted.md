@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: notice
 object: Triadic v1.7 adopted; T-6r acceptance contract C1 cites RTG-OFN-ALG-REF-CLOSURE-COMPARISON as an interface constraint; OFN reference rows RF-O08-02, RF-O08-03, RF-O08-08
 tags: [triad-v1.7, ofn-v0.12]
-state: open
+state: closed
+disposition: 2026-11-25 · accept · records/ofn/OFN_v0_13_RELEASE_RECORD.md §5 P03
 ---
 Triadic v1.7 was adopted by the PI on 3 Nov 2026 and tagged `triad-v1.7`. The DSN SHA-256 is `506f3403…e64a`; the release record is `records/triad/TRIAD_v1_7_RELEASE_RECORD.md`.
 

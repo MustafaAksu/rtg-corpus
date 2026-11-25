@@ -1,0 +1,157 @@
+{
+  "python": "3.13.16",
+  "mode": "offline unchanged reporter; deterministic subprocess fixtures",
+  "tool_sha256": "dfbcb1da0a7ac4d3ec942cae4a125875caa1030ddebd103821bf5c75b0c5cd0c",
+  "tool_git_blob": "6848b4f0c15713f6063be797a396f066f4dafa06",
+  "tool_bytes": 14135,
+  "baseline_harness_sha256": "f585abf7f23ebcbabcd2621795ffebb3dc7625e62ed636e6ad9af8c970762681",
+  "baseline": {
+    "cases": 21,
+    "passed": 21,
+    "failed": 0,
+    "exit": 0
+  },
+  "additional": {
+    "cases": 6,
+    "passed": 6,
+    "failed": 0
+  },
+  "cases": [
+    {
+      "id": "R2-E1",
+      "name": "v0.10 must not use the v0.10.1 release record",
+      "contract_pass": true,
+      "observation": {
+        "status": "PARTIAL/UNVERIFIED",
+        "unverified": [
+          "no release record matching records/atlas/RTG_STATE_ATLAS_v*_RELEASE_RECORD.md for atlas-v0.10; adoption UNVERIFIED"
+        ],
+        "release_record": null,
+        "pipes": {
+          "inbox": {
+            "closed": 1
+          },
+          "outbound_not_closed": {},
+          "not_closed_items": [],
+          "unreadable": [],
+          "complete": true
+        },
+        "stdout": "## ATLAS — derived state, 2026-11-09T07:48:25+00:00  ·  PARTIAL/UNVERIFIED\n- refs: local origin/main aaaaaaaaaaaa, remote main aaaaaaaaaaaa, local current: True\n- newest tag atlas-v0.10 (tag) -> bbbbbbbbbbbb; atlas/RTG_STATE_ATLAS.md sha256 at tag 00cc45a89a9a…, main equals tag: True\n- release record: None; status line: n/a; names the tag hash: n/a\n- commits after the tag on study paths: 0\n- open PRs scanned: 0; matched: 0\n- pipes/ATLAS/ inbox: {'closed': 1}; outbound not closed: none\n- UNVERIFIED:\n    no release record matching records/atlas/RTG_STATE_ATLAS_v*_RELEASE_RECORD.md for atlas-v0.10; adoption UNVERIFIED\n",
+        "exception": null
+      }
+    },
+    {
+      "id": "R2-E2",
+      "name": "exact v0.10 record with adjacent v0.10.1 is unambiguous",
+      "contract_pass": true,
+      "observation": {
+        "status": "COMPLETE (observations only; no adoption inferred)",
+        "unverified": [],
+        "release_record": [
+          "records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md"
+        ],
+        "pipes": {
+          "inbox": {
+            "closed": 1
+          },
+          "outbound_not_closed": {},
+          "not_closed_items": [],
+          "unreadable": [],
+          "complete": true
+        },
+        "stdout": "## ATLAS — derived state, 2026-11-09T07:48:25+00:00  ·  COMPLETE (observations only; no adoption inferred)\n- refs: local origin/main aaaaaaaaaaaa, remote main aaaaaaaaaaaa, local current: True\n- newest tag atlas-v0.10 (tag) -> bbbbbbbbbbbb; atlas/RTG_STATE_ATLAS.md sha256 at tag 00cc45a89a9a…, main equals tag: True\n- release record: ['records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md']; status line: PI ACCEPTED; names the tag hash: True\n- commits after the tag on study paths: 0\n- open PRs scanned: 0; matched: 0\n- pipes/ATLAS/ inbox: {'closed': 1}; outbound not closed: none\n",
+        "exception": null
+      }
+    },
+    {
+      "id": "R1-E1",
+      "name": "failed individual pipe read is not an observed empty inbox",
+      "contract_pass": true,
+      "observation": {
+        "status": "PARTIAL/UNVERIFIED",
+        "unverified": [
+          "git show origin/main:pipes/ATLAS/20261106-DYAD-fixture.md…: fixture individual pipe read denied",
+          "pipes/ATLAS/20261106-DYAD-fixture.md: not readable or front matter missing; counts below are incomplete"
+        ],
+        "release_record": [
+          "records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md"
+        ],
+        "pipes": {
+          "inbox": {},
+          "outbound_not_closed": {},
+          "not_closed_items": [],
+          "unreadable": [
+            "pipes/ATLAS/20261106-DYAD-fixture.md"
+          ],
+          "complete": false
+        },
+        "stdout": "## ATLAS — derived state, 2026-11-09T07:48:25+00:00  ·  PARTIAL/UNVERIFIED\n- refs: local origin/main aaaaaaaaaaaa, remote main aaaaaaaaaaaa, local current: True\n- newest tag atlas-v0.10 (tag) -> bbbbbbbbbbbb; atlas/RTG_STATE_ATLAS.md sha256 at tag 00cc45a89a9a…, main equals tag: True\n- release record: ['records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md']; status line: PI ACCEPTED; names the tag hash: True\n- commits after the tag on study paths: 0\n- open PRs scanned: 0; matched: 0\n- pipes/ATLAS/: INCOMPLETE — 1 item(s) unreadable, counts are lower bounds: inbox {}; outbound not closed {}\n    UNREADABLE pipes/ATLAS/20261106-DYAD-fixture.md\n- UNVERIFIED:\n    git show origin/main:pipes/ATLAS/20261106-DYAD-fixture.md…: fixture individual pipe read denied\n    pipes/ATLAS/20261106-DYAD-fixture.md: not readable or front matter missing; counts below are incomplete\n",
+        "exception": null
+      }
+    },
+    {
+      "id": "R4-E1",
+      "name": "default --json must refuse a dangling symlink destination",
+      "contract_pass": true,
+      "observation": {
+        "status": null,
+        "unverified": null,
+        "release_record": null,
+        "pipes": null,
+        "stdout": "## ATLAS — derived state, 2026-11-09T07:48:25+00:00  ·  COMPLETE (observations only; no adoption inferred)\n- refs: local origin/main aaaaaaaaaaaa, remote main aaaaaaaaaaaa, local current: True\n- newest tag atlas-v0.10 (tag) -> bbbbbbbbbbbb; atlas/RTG_STATE_ATLAS.md sha256 at tag 00cc45a89a9a…, main equals tag: True\n- release record: ['records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md']; status line: PI ACCEPTED; names the tag hash: True\n- commits after the tag on study paths: 0\n- open PRs scanned: 0; matched: 0\n- pipes/ATLAS/ inbox: {'closed': 1}; outbound not closed: none\n- JSON not written: /tmp/orient-r2-symlink-qnlkg_bm/observation.json is a symbolic link; the reporter writes only a regular file it creates itself\n",
+        "exception": null,
+        "source_target_created": false,
+        "output_is_symlink": true
+      }
+    },
+    {
+      "id": "R2-P1",
+      "name": "exact underscore-format v0_10 record remains supported",
+      "contract_pass": true,
+      "observation": {
+        "status": "COMPLETE (observations only; no adoption inferred)",
+        "unverified": [],
+        "release_record": [
+          "records/atlas/RTG_STATE_ATLAS_v0_10_RELEASE_RECORD.md"
+        ],
+        "pipes": {
+          "inbox": {
+            "closed": 1
+          },
+          "outbound_not_closed": {},
+          "not_closed_items": [],
+          "unreadable": [],
+          "complete": true
+        },
+        "stdout": "## ATLAS — derived state, 2026-11-09T07:48:25+00:00  ·  COMPLETE (observations only; no adoption inferred)\n- refs: local origin/main aaaaaaaaaaaa, remote main aaaaaaaaaaaa, local current: True\n- newest tag atlas-v0.10 (tag) -> bbbbbbbbbbbb; atlas/RTG_STATE_ATLAS.md sha256 at tag 00cc45a89a9a…, main equals tag: True\n- release record: ['records/atlas/RTG_STATE_ATLAS_v0_10_RELEASE_RECORD.md']; status line: PI ACCEPTED; names the tag hash: True\n- commits after the tag on study paths: 0\n- open PRs scanned: 0; matched: 0\n- pipes/ATLAS/ inbox: {'closed': 1}; outbound not closed: none\n",
+        "exception": null
+      }
+    },
+    {
+      "id": "R2-P2",
+      "name": "two actual representations of the same release flag ambiguity",
+      "contract_pass": true,
+      "observation": {
+        "status": "PARTIAL/UNVERIFIED",
+        "unverified": [
+          "2 release records match atlas-v0.10; identity ambiguous"
+        ],
+        "release_record": [
+          "records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md",
+          "records/atlas/RTG_STATE_ATLAS_v0_10_RELEASE_RECORD.md"
+        ],
+        "pipes": {
+          "inbox": {
+            "closed": 1
+          },
+          "outbound_not_closed": {},
+          "not_closed_items": [],
+          "unreadable": [],
+          "complete": true
+        },
+        "stdout": "## ATLAS — derived state, 2026-11-09T07:48:25+00:00  ·  PARTIAL/UNVERIFIED\n- refs: local origin/main aaaaaaaaaaaa, remote main aaaaaaaaaaaa, local current: True\n- newest tag atlas-v0.10 (tag) -> bbbbbbbbbbbb; atlas/RTG_STATE_ATLAS.md sha256 at tag 00cc45a89a9a…, main equals tag: True\n- release record: ['records/atlas/RTG_STATE_ATLAS_v0.10_RELEASE_RECORD.md', 'records/atlas/RTG_STATE_ATLAS_v0_10_RELEASE_RECORD.md']; status line: PI ACCEPTED; names the tag hash: True\n- commits after the tag on study paths: 0\n- open PRs scanned: 0; matched: 0\n- pipes/ATLAS/ inbox: {'closed': 1}; outbound not closed: none\n- UNVERIFIED:\n    2 release records match atlas-v0.10; identity ambiguous\n",
+        "exception": null
+      }
+    }
+  ]
+}

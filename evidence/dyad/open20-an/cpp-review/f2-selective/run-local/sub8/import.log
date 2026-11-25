@@ -1,0 +1,5 @@
+TRANSFER_SOURCE_SHA256 6ca8c663061ce2fa9e062938a1e6046c932da4cbddccc6e3e2c3de4df68c477e
+COUNT 39 coefficient boxes and one c box
+DISPLAY_PADS coeff=1e-65; c=1e-32; source Arb radii reported below 1e-300
+OUTPUT_SHA256 3fea1c3d194d691a7bfd4d0a853f0acbd16c6f11f6ee873fa48603092719fae8
+STATUS SESSION input adaptation only; coefficients not independently regenerated

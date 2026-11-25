@@ -1,49 +1,70 @@
-# Note to the Number Genesis co-owners — current state, the advisory, and what is asked of you
+# Note to the Number Genesis co-owners — current state and entry route
 
-**Date:** 26 October 2026. **From:** the atlas owner (Claude), with the PI. **To:** the Number Genesis (NUMGEN) DSN co-owner sessions. **Status:** working note; PI decisions of 26 Oct 2026: *v1.21 with the Methodology v1.4 migration (two stages); the NUMGEN co-owners build; cross-stream items go through the per-stream pipes (`pipes/`, PR #66), nothing is routed through the PI, the receiving co-owners decide autonomously; the atlas owner advises and reviews.*
+**Date:** 24 November 2026. Earlier version: 26 October 2026, in git history.
+**From:** NUMGEN co-owner sessions (Claude; post-tag update by ChatGPT).
+**Status:** [SESSION] working note. It is operational context only: not scientific authority, not an approval, and not recovered memory of earlier chats.
 
-**Purpose.** NUMGEN v1.20.8 (adopted 21 Oct 2026) was a maintenance release. Since then RECOG adopted v0.3.23 and v0.3.24 (explicit-U theorems on your objects, custody left with you), Dyadic adopted the row-A theorem you said you would import in your next edition, Genesis moved to v2.9, Programme to v1.3, Methodology to v1.4. Two independent advisories were written against your edition and reconciled; this note hands you the reconciled list.
+**Entry route** (Programme project instructions):
+1. Read `CONVENTIONS.md` and this note.
+2. Check yourself: the adopted tag and its release record, the open PRs, and `pipes/NUMGEN/`.
 
-## 1. How we work now
+## 1. How we work
 
-Full rules: `CONVENTIONS.md` (repository root) and Methodology v1.4 (`dsn/DSN_METHODOLOGY.md`). Read `CONVENTIONS.md` before any edit. In short: the repository is the source (`dsn/RTG_NUMBER_GENESIS_DSN.md`; governing edition = latest `numgen-v…` tag with its release record; no versioned copies); current-only live file (v1.4 §1.1; one compact Appendix A entry per edition; history at the tags); releases through a branch → change-focused review by the other co-owner and the atlas owner → release record → PI adoption → merge commit (never squash) and annotated tag by the PI; two stages when layout changes (stage 1 corrections with an assertion-gated script and checker, stage 2 layout-only compaction checked by `tools/check_compaction.py`); evidence in `evidence/numgen/`; every session pushes its own branch and opens a PR; never invent hashes, RIDs or approvals. **Cross-stream items** are files in the receiving stream's inbox `pipes/<STREAM>/` (`pipes/README.md`; validator `python3 -I tools/pipes_index.py --check`). An item is a request, offer, finding, question or notice; it carries no scientific authority and is never adopted use by itself — adopted use is asserted only by your Import Ledger row or release record. You read `pipes/NUMGEN/` at three checkpoints: at the start of the owner pass, before freezing the stage-1 intermediate / finalising the release record, and when blocked. You set the item's `state` (open → acknowledged → dispositioned → closed) and write its `disposition` (`YYYY-MM-DD · accept | accept with change | reject | defer | no action · <pointer>`). Nothing goes through the PI. Precedents to copy: Genesis v2.9 (`records/gen/GEN_v2_9_RELEASE_RECORD.md`, `evidence/gen/scripts/`) and RECOG v0.3.24 (`records/recog/RECOG_v0_3_24_RELEASE_RECORD.md`).
+The full rules are in `CONVENTIONS.md` and Methodology v1.4 (`dsn/DSN_METHODOLOGY.md`, tag `methodology-v1.4`).
 
-## 2. Your edition in the repository
+**Source.** The source is `dsn/RTG_NUMBER_GENESIS_DSN.md`. The governing edition is the latest `numgen-v…` tag together with its release record. The live file holds the current state only. Appendix A has one compact entry per edition; older history is at the tags.
+
+**Release route.**
+1. Work on a branch (`claude/*` for this session) and open a PR.
+2. The other co-owner and the atlas owner review the change.
+3. Write the release record.
+4. The PI adopts.
+5. The PI makes a merge commit (never squash) and the annotated tag.
+
+**Stages.** One content stage suffices when the layout does not change. Layout compaction is a separate stage 2, checked by `tools/check_compaction.py`.
+
+**Evidence and identifiers.**
+- Evidence goes in `evidence/numgen/`.
+- Held records are on the branch `upload/numgen-records`, now merged; see `records/numgen/NUMGEN_UPLOAD_HASH_CHECK_20261026.md`.
+- Never invent hashes, RIDs or approvals.
+
+**Cross-stream items** (`pipes/README.md`):
+- Inbox `pipes/NUMGEN/`.
+- The receiver sets `state` and `disposition`.
+- A notice never creates adopted use.
+- Validator: `python3 -I tools/pipes_index.py --check`.
+
+## 2. Current state
 
 | Item | Value |
 |---|---|
-| File | `dsn/RTG_NUMBER_GENESIS_DSN.md` |
-| Governing edition | v1.20.8, tag `numgen-v1.20.8`, SHA-256 `835a56f82b2641343a0e2fa116b049a167c62efd4d13fe41236966c117f4817e` (3,412 lines; `BASELINE.md` row NUMGEN) |
-| Declared methodology | v1.3 (v1.4 lets a document keep its edition until migrated; the PI decided to migrate in v1.21) |
-| Records on `main` | `records/numgen/` — the two advisories and the reconciliation (after PRs #62/#65 merge). The v1.20.x release records are not in the repository: if your sessions hold `NUMGEN_v1_20_8_RELEASE_RECORD.md` and earlier records/packages, place them unchanged on an `upload/numgen-records` branch; the atlas owner hash-checks them (as for Genesis, `records/gen/GEN_UPLOAD_HASH_CHECK_20261024.md`). Nothing is reconstructed. |
-| Consumers (Programme v1.3 §7.2) | RECOG (IF14, pin v1.20.8, by RID: `NUMGEN-DEF-N5AS1-DEFECT`, `NUMGEN-RESULT-N5AS1-INF1`, L1, N1C, GAP-LOCK); OFN (IF24, holonomy operator, recorded import in OFN §11); RECOG records you as "informed" of A1b (IF27 at v0.3.22 → now v0.3.24) |
-| Producers you pin | DYAD v6.4.18 (governing v6.4.22; v6.4.19 added `DYAD-THM-LPHASE-ROWA-REMAINDER`), TDRG v2.12.13 (IF13), Genesis v2.8.9 companion (governing v2.9), OFN v0.10, Programme v1.2 (governing v1.3) |
+| Governing edition | v1.22, tag `numgen-v1.22`, SHA-256 `36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b`; release record `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`; publication addendum `records/numgen/NUMGEN_v1_22_POST_TAG_20261124.md` |
+| Release completion | PRs #374, #375, #377 merged; PI annotated tag verified. No later NUMGEN edition in progress in this checkpoint. |
+| Work list for v1.22 | `records/numgen/ATLAS_ADVISORY_NUMGEN_SYNC_20261123.md` (rev. 2); owner disposition `records/numgen/NUMGEN_OWNER_DISPOSITION_SYNC_20261123_CLAUDE_20261124.md` (PR #374) |
+| S1 evidence | `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md` (PR #375): P2 re-annotation of 158 witnesses under TDRG-DEF-ORIENT |
+| Inbox | Eleven v1.22 dispositions recorded in `records/numgen/NUMGEN_v1_22_RECEIVING_LEDGER.md`; their closure is proposed in the post-tag PR. Recheck live `pipes/NUMGEN/INDEX.md` at entry. |
+| Outbound | Four items of 26 Oct closed by their receivers; seven v1.22 notices proposed in the post-tag PR. Filing does not imply receiver acceptance or adopted use. |
 
-## 3. The list you work from
+## 3. Open scientific frontier (unchanged by v1.22)
 
-`records/numgen/ATLAS_ADVISORY_NUMGEN_v1_20_8_RECONCILIATION.md` §3 (merged from `ATLAS_ADVISORY_NUMGEN_v1_20_8.md` and `…_INDEPENDENT_CHATGPT.md`; the two passes agree everywhere). The items that need an **owner decision**, not an editorial one:
+- **C7C-M.** The target is a non-degenerate composable three-stream witness and full-interface typed WD-DOM (OPEN).
+  - M-4 stays on HOLD pending approval of a design/preregistration for the missing non-degenerate composable-chain witness (middle-interface and outer-pair admissibility). The P2 policy is answered. All 158 Census-1 TDR-G records are `(SWAP, P3)`; the two dyad records are separate. Finding the witness is the target, not a prerequisite to launching a properly authorized search.
+  - Census-1 stays INCONCLUSIVE / INCONCLUSIVE.
+  - A new evidence universe needs its own preregistration (Census-2).
+- **C7B global breadth** is OPEN. DISC-3 is deferred.
+- **N-4, N-6 and full NG-8** are OPEN.
+- **φ* vs `C_D^ext`** stays OPEN as a comparison. No identification is claimed.
 
-- **NA-01 / I01–I03 (P0).** RECOG's `RECOG-THM-A1A-PHASE-EXISTENCE-U` and `RECOG-THM-A1B-SLIP-SCHEDULE-U` prove on the explicit Dyadic tube U={0<Q₀≤1/625} what you hold existentially: C_D^ext without R9/INF-1; gap alphabet {6,7}; s(M)=(3τ/π)log M+O(1); M_{k+1}/M_k → e^{π/(3τ)} (your §6.6 lines 2269–2307 as `[RESULT] [from: ALG]`). RECOG leaves GAP-LOCK 1–3 and INF-1 with you. Build the acceptance matrix: one row per statement × (event predicate, lift, base vs full tube, clock/block index, estimate domain, grade) × state (independent agreement / consumed theorem / not adopted). Type the three errors separately (15/2 increment bound; backbone/tail constant; slip-schedule ε_k). **Custody form is yours** to decide per statement (PI principle of 26 Oct: the receiving co-owners decide autonomously; an incoming item is a request or offer): the default is to record RECOG's theorems in §9.1 as *consumer-side confirmations, no custody change*, and to import by RID only where you decide to consume a statement. The RECOG "NUMGEN is informed" sentence is waiting for you as the pipe item `pipes/NUMGEN/20261026-RECOG-a1b-slip-schedule-informed.md` (kind notice, state open); dispose of it with a pointer to the acceptance matrix.
-- **NA-02 / I04 (P1).** Execute or explicitly decline the import of `DYAD-THM-LPHASE-ROWA-REMAINDER` (§6.6 line 2196 OPEN; §9.1 N15 line 2750 "deferred to a NUMGEN edition after v1.20.8"): one receiving-decision row, states received/accepted/adopted-use kept separate; no bulk repin of your v6.4.18 imports.
-- **NA-03 / I08 (P1).** Three domains share "U/U_T" (your existential L1 tube; DYAD's explicit base and tube; RECOG's base). A domain alias table plus unambiguous labels at every theorem scope; a global rename is your choice.
-- **NB-07/NB-08 / I05, I13 (P1).** Six RIDs exist. Priority list for new ones: GAP-LOCK 1–3 (consumers cite "no RID"), INF-2, C7C-M2, M-1A/M2-1, DISC-1/2, the ten-label bound, L1, N1C, the first-nonlinear cyclic-average theorem (Genesis and RECOG both route G₂=0 through it). Closed results under module OPEN keys get result RIDs; no mass retagging.
-- **I06 (P0, cross-owner — no NUMGEN edit).** TDR-G's path-orientation degeneracy at S=0, |E|=N/2 (40/136 DISC-2 witnesses; v18 tie-break is implementation agreement, not relabelling covariance). Hold the C7C-M4 realization campaign, continue the abstract WD-DOM design, and record the dependency in your §2 and release record. The request to TDR-G is filed as the pipe item `pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md` (`from: NUMGEN`, `filed_by: ATLAS`, `blocks: C7C-M4`); TDR-G reads it at its own turn and decides. You are its scientific source: amend it on your branch if it misstates your finding. No PI routing.
+## 4. Next checkpoint
 
-Three more outbound items were filed from your advisory on your behalf, all `from: NUMGEN`, `filed_by: ATLAS`, state open, amendable by you and committing you to nothing: `pipes/RECOG/20261026-NUMGEN-gap-lock-3-grade-of-import.md` (GAP-LOCK 3 grade of import), `pipes/GEN/20261026-NUMGEN-cyclic-average-route-to-g2-zero.md` (the first-nonlinear cyclic-average theorem both Genesis and RECOG route G₂=0 through), `pipes/DYAD/20261026-NUMGEN-q-star-branch-split.md` (Q* branch split).
+The v1.22 adoption and tag are complete; the post-tag addendum records the publication identities and queue closeout. The closeout PR still needs review/merge. Scientific next step, only if authorized: formulate a design/preregistration capable of targeting a certified non-degenerate composable chain, including middle-interface witnesses, outer-pair admissibility and typed WD-DOM. M4 remains HOLD; DISC-3 remains DEFER. No realization campaign, new release or Atlas refresh is authorized by this note.
 
-Everything else is bounded: stale pointers (NA-04/I09: §7 "Dyadic v6.4.10" vs the changelog's v6.4.9 fix; DZT v0.17 vs `dzt-v0.8`; Programme v1.2; Genesis v2.8.9; "carried into v1.19"); N-1A0/N-1A1 scope words (NA-05); superseded §6.6 LOGSLIP blocks to history (NA-06); evidence states at in-ledger-proof claims (NB-09); changelog-only facts (NB-11); the §9.2 RECOG consumer row updated to v0.3.24 naming both the HEUR cross-reference tag and the ALG use (NC-16); clock-ratio cross-citation (NC-12); Dyadic identity RIDs (NC-13); φ* vs C_D^ext kept OPEN with conventions listed (NC-14/I02); NG-7A/7B hand-off wording (I11); Imports/Exports/Consumers/Pins structure (NC-19/I09); C7C algebra ≠ physical composition guard (I07).
+## 5. Not asked
 
-## 4. What is asked of you, in order
+- No rerun of the N-5, C7A or DISC campaigns.
+- No change to the C7C algebra or Census-1.
+- No ALG→THM promotion by header edit.
+- No new compaction or general regrading.
+- No receiver-side changes to other streams' inboxes; only the seven declared outbound notices.
 
-1. Read `CONVENTIONS.md` (§7 as amended by PR #66), `pipes/README.md`, Methodology v1.4 §§1.1, 3.4, 4, 12, 13.6–13.9, the three records in §3, and your inbox `pipes/NUMGEN/` (one item).
-2. **Disposition records**, one per co-owner session (`records/numgen/NUMGEN_OWNER_DISPOSITION_ADVISORY_v1_20_8_<session>_<date>.md`): accept / accept with change / reject with reason / defer for every row of the reconciliation §3; where the two of you differ, say so — the atlas owner reconciles, the PI decides.
-3. **Build v1.21** after the PI fixes the dispositions: stage 1 (script under `evidence/numgen/scripts/`, exact-once edits logged with hashes, checker with negative controls, frozen intermediate hash); stage 2 (Methodology v1.4 compaction: header current-only with one predecessor and its hash, Appendix A one entry per edition, the 518-line changelog and the three legacy "Result/Change Notes" to the tag; movement map, `tools/check_compaction.py`, negative fixtures); release record `records/numgen/NUMGEN_v1_21_RELEASE_RECORD.md` (DRAFT) with dispositions, hashes, the live-file exceptions you keep on purpose, the disposition of every `pipes/NUMGEN/` item, and the consumers affected (RECOG, OFN, TDR-G, Genesis, Dyadic). After the tag, you file one `kind: notice` item per affected consumer in its inbox; the PI is not a relay.
-4. **Review**: the other co-owner reviews stage 1 and stage 2 change-focused; the atlas owner runs its row checks and reruns your scripts (as `records/gen/ATLAS_ROW_CHECK_GEN_v2_9_STAGE1.md`/`STAGE2.md`). Then PI adoption, merge commit, tag `numgen-v1.21`; the atlas owner verifies the tag and refreshes the atlas (D2/D5 NUMGEN nodes, H4/H5/H8).
-
-## 5. What is not asked
-
-No rerun of the N-5/C7A/DISC campaigns or certificates; no change to the C7C algebra results (M-1A, M2-1, C7C-0) or to Census-1's INCONCLUSIVE verdict; no promotion of ALG results to THM by header edit; no identification of φ* with C_D^ext; no claim that RECOG's theorems settle your existential-tube statements beyond the acceptance matrix; no action on the four outbound items beyond amending their text if it misstates you — the receivers answer at their own turn. The custody form for the RECOG exchange (consumer confirmation vs import by RID) is your decision per statement; state it in the disposition record and the acceptance matrix.
-
-## 6. Pointers
-
-Atlas `atlas-v0.5` (noncanonical): D2.L5 NUMGEN.N-* rows and D5 DISC rows carry the diagnostics behind the advisory; H4 (RID vacuum), H5 (explicit-domain phase existence), H8 (tube naming). Programme v1.3 §7.2 IF12–IF14, IF24, IF27; §8.2 κ table. RECOG v0.3.24 §6.13b (A1a/A1b, "NUMGEN is informed"), §6.16e; DYAD v6.4.22 §6.14. Pipes: `pipes/README.md`, `pipes/NUMGEN/INDEX.md` (generated), `records/programme/CROSS_STREAM_PIPES_PROPOSAL_v0_1.md`. Questions to the atlas owner as PR comments, as a record in `records/numgen/`, or as a `kind: question` item in `pipes/ATLAS/`.
+*END OF NOTE.*

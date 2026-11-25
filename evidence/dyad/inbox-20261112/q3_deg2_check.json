@@ -1,0 +1,52 @@
+{
+ "all_pass": true,
+ "gates": {
+  "CONTROL_P3_no_cancellation_for_p_3": true,
+  "CONTROL_WRONGS_no_cancellation_for_s_plus_1": true,
+  "FORMULA_coefficient_02_of_the_s_step_map": true,
+  "VANISH_p_6_to_30_step_3": true
+ },
+ "info": {
+  "VANISH": {
+   "12": {
+    "remainder_is_zero": true,
+    "s": 4
+   },
+   "15": {
+    "remainder_is_zero": true,
+    "s": 5
+   },
+   "18": {
+    "remainder_is_zero": true,
+    "s": 6
+   },
+   "21": {
+    "remainder_is_zero": true,
+    "s": 7
+   },
+   "24": {
+    "remainder_is_zero": true,
+    "s": 8
+   },
+   "27": {
+    "remainder_is_zero": true,
+    "s": 9
+   },
+   "30": {
+    "remainder_is_zero": true,
+    "s": 10
+   },
+   "6": {
+    "remainder_is_zero": true,
+    "s": 2
+   },
+   "9": {
+    "remainder_is_zero": true,
+    "s": 3
+   }
+  }
+ },
+ "script": "dyad_inbox_20261112_q3_deg2_check.py",
+ "status": "SESSION owner check; registers nothing",
+ "sympy": "1.14.0"
+}

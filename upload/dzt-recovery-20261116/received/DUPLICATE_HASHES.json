@@ -1,0 +1,93 @@
+[
+    {
+        "sha256":  "0f8c4b1566e62f0cb97513bc9b9e2b57d9fd712a314f24f66ba8ad7b0a7f7dd3",
+        "occurrences":  [
+                            "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-002 (1).md",
+                            "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-002.md"
+                        ]
+    },
+    {
+        "sha256":  "c8b5ee22297c9db7d51581ff3272b06281187e98c7985909e042635ca14f8e09",
+        "occurrences":  [
+                            "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-003 (1).md",
+                            "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-003.md"
+                        ]
+    },
+    {
+        "sha256":  "94f3f458d1d491ea231803520636bd00d558854832669c80731fde84d4c12f55",
+        "occurrences":  [
+                            "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-004 (1).md",
+                            "originals/downloads/DYAD_RESPONSE_TO_DZT_REQ-004.md"
+                        ]
+    },
+    {
+        "sha256":  "54c02ce01d9559348782d62e4f98708c69fcb2832c01f0db9d42fa19f5fd64f1",
+        "occurrences":  [
+                            "originals/downloads/dzt_0b_den_law_check (1).py",
+                            "originals/downloads/dzt_0b_den_law_check.py"
+                        ]
+    },
+    {
+        "sha256":  "d9dd7bd90bb9fd2340f6e5259129437db4850d5c057be0d5f527bbc78183555a",
+        "occurrences":  [
+                            "originals/downloads/dzt_casev_norm_closed_form_p8_1000 (1).csv",
+                            "originals/downloads/dzt_casev_norm_closed_form_p8_1000.csv"
+                        ]
+    },
+    {
+        "sha256":  "4d3d3ca374d884377cf1ad5faa83fa218897c10dd69d9e119e076a73f7edb10e",
+        "occurrences":  [
+                            "originals/downloads/dzt_casev_norm_from_closed_form (1).py",
+                            "originals/downloads/dzt_casev_norm_from_closed_form.py"
+                        ]
+    },
+    {
+        "sha256":  "e38b5f7e0d809bc9333df91968ee741c89fecad5ea8fcd10fbfd3eecd65aa6ed",
+        "occurrences":  [
+                            "originals/downloads/dzt_casev_norm_from_closed_form (2).py",
+                            "originals/downloads/dzt_casev_norm_from_closed_form (3).py"
+                        ]
+    },
+    {
+        "sha256":  "3791b110b94fb7e6988c05109d963522f1fbc9e2907034945152d74ff7ba5c7e",
+        "occurrences":  [
+                            "originals/downloads/dzt_open_0a_verify (1).py",
+                            "originals/downloads/dzt_open_0a_verify (2).py"
+                        ]
+    },
+    {
+        "sha256":  "9ce5e99f012319d5cd5d095ed32261857e009d905ed8cf9cf3274f7b6355a30f",
+        "occurrences":  [
+                            "originals/downloads/DZT_OPEN_0B_R_odd_support_proof_note (1).md",
+                            "originals/downloads/DZT_OPEN_0B_R_odd_support_proof_note.md"
+                        ]
+    },
+    {
+        "sha256":  "6b6d62faa3543f042679c5c753bfe307795c5ead7bc640a1d81b34fbf6550714",
+        "occurrences":  [
+                            "originals/downloads/dzt_q4_03_numeric_probe.py",
+                            "originals/legacy-src/rtg-toolkit/scripts/dyadic/dzt_q4_03_numeric_probe.py"
+                        ]
+    },
+    {
+        "sha256":  "beda44ab07bc0b14ad3ab7802dec5ac83019db8356b88b7f18bb861b6707b5cc",
+        "occurrences":  [
+                            "originals/downloads/dzt_q4_03_profile_exact.py",
+                            "originals/legacy-src/rtg-toolkit/scripts/dyadic/dzt_q4_03_profile_exact.py"
+                        ]
+    },
+    {
+        "sha256":  "ed6bf3630e65a0873f692277c3e36dab1c18d6a7083b35756c388bcabc7f97f9",
+        "occurrences":  [
+                            "originals/downloads/DZT_REQUEST_TO_DYADIC__REQ-002_second_channel (1).md",
+                            "originals/downloads/DZT_REQUEST_TO_DYADIC__REQ-002_second_channel.md"
+                        ]
+    },
+    {
+        "sha256":  "cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2",
+        "occurrences":  [
+                            "originals/downloads/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8 (1).md",
+                            "originals/legacy-src/rtg-toolkit/scripts/dyadic/DSN/RTG_DYADIC_ARITHMETIC_RESONANCE_TRANSFORM_DSN_v0_8.md"
+                        ]
+    }
+]

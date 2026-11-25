@@ -1,0 +1,340 @@
+{
+ "base_sha256": "3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392",
+ "base_tag": "tdrg-v2.12.14",
+ "candidate_sha256": "1e35be54a37bb227cd75e34fc1cd6732ae95782bdc147a76e736f16760c92e64",
+ "declared_new_tdrg_rids": [
+  "TDRG-ALG-EVENT-INVENTORY",
+  "TDRG-ALG-NARROW-BAND-CLASSES",
+  "TDRG-ALG-TOKEN-CENSUS-LAW",
+  "TDRG-ALG-BIRTH-SPECTRUM-INJECTION",
+  "TDRG-ALG-SPECCONS-N",
+  "TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED",
+  "TDRG-ALG-PARENT-CHILD-PHASE",
+  "TDRG-NUM-TOKEN-LAW-CHECK",
+  "TDRG-ART-TOKEN-LAW-CHECKS"
+ ],
+ "check_script": "evidence/tdrg/scripts/check_tdrg_v2_12_15.py",
+ "edit_count": 32,
+ "edits": [
+  {
+   "key": "E01",
+   "group": "REG",
+   "row": "header title",
+   "mode": "line",
+   "old_sha256": "df6bd6fcc7b877d669c56829888ac92d889e3f176cffed727a4cba6812ea8c00",
+   "new_sha256": "9dfc1c56f7933d7300a834346c330abbb3f28371017436f57aa2472e2379f74c",
+   "old": "# RTG_DISCRETE_GENESIS_DSN_v2.12.14",
+   "new": "# RTG_DISCRETE_GENESIS_DSN_v2.12.15"
+  },
+  {
+   "key": "E02",
+   "group": "REG",
+   "row": "header date",
+   "mode": "line",
+   "old_sha256": "3178c6e3e02d093d31a9799dbb9a00c6e4eb43f71d97b207e22a4f232d8678f0",
+   "new_sha256": "4135d97c93b9ec7d9afa54cb4dd6ca129bb1da10f45ef4e2ea562a756f2d6d5b",
+   "old": "**Date:** October 2026 (v2.12.14, corrections only; the scientific content of the v2.12 line is dated June 2026)  ",
+   "new": "**Date:** November 2026 (v2.12.15, scientific scope edition: star event domain stated as implemented, token laws, TDR-6 partial; the scientific content of the v2.12 line is otherwise dated June 2026)  "
+  },
+  {
+   "key": "E03",
+   "group": "REG",
+   "row": "header supersedes",
+   "mode": "line",
+   "old_sha256": "358a56c333a7dab0c8e2ee03a89e6fb4fbd913ca94fa3840918a1dc34f264581",
+   "new_sha256": "1b7c37867222a3f0bc3ed3c63e3f59eb0c7e75925d8185ee7749a54a569ebab4",
+   "old": "**Supersedes:** `RTG_DISCRETE_GENESIS_DSN_v2.12.13` (tag `tdrg-v2.12.13`, SHA-256 `aa232643f6f631694b0eda1532be213e5a517ef109cd66794f8e638e24fc053f`); the earlier lineage is in the footer and Appendix A (compaction is v2.13 work)  ",
+   "new": "**Supersedes:** `RTG_DISCRETE_GENESIS_DSN_v2.12.14` (tag `tdrg-v2.12.14`, SHA-256 `3be72923cd40523399363e0dc044bba6246862d12b2bca190c74969e2cce2392`); the earlier lineage is in the footer and Appendix A (compaction is v2.13 work)  "
+  },
+  {
+   "key": "E04",
+   "group": "PINS",
+   "row": "header companion editions",
+   "mode": "line",
+   "old_sha256": "af5eb58a5ce8126650d386dddb17c80d516d1fe0f473bd787f1e79b51a3cf330",
+   "new_sha256": "7b745cb1a6198241fbc8b042044a0313c3976bb7a01426aa178bd9fd8c1bb7ad",
+   "old": "**Companion documents (governing editions, October 2026):** Programme Overview v1.3 (`programme-v1.3`) · Ontological Foundations v0.10 (`ofn-v0.10`) · DSN Methodology v1.4 (`methodology-v1.4`). Claim-specific historical pins (Programme v1.1, OFN v0.6/v0.7) stay where a statement cites them.  ",
+   "new": "**Companion documents (governing editions, November 2026):** Programme Overview v1.4 (`programme-v1.4`) · Ontological Foundations v0.12 (`ofn-v0.12`) · DSN Methodology v1.4 (`methodology-v1.4`). Claim-specific historical pins (Programme v1.1, OFN v0.6/v0.7) stay where a statement cites them.  "
+  },
+  {
+   "key": "E05",
+   "group": "PINS",
+   "row": "header declared methodology",
+   "mode": "line",
+   "old_sha256": "a86c59bfe3988805f0cdc12f1b88f00e4c6ba075701a7e5f1740c1064c773d74",
+   "new_sha256": "b96bafcf5a514e1b7f916ad6494806fe5d7daf97875859b85ce853d4615072ef",
+   "old": "**DSN Methodology:** DSN_METHODOLOGY_v1.2 (declared; kept for this corrections edition by PI decision of 27 Oct 2026 — the v1.4 migration is v2.13)  ",
+   "new": "**DSN Methodology:** DSN_METHODOLOGY_v1.2 (declared; kept for the v2.12.x line by PI decision of 27 Oct 2026 — the v1.4 migration is v2.13)  "
+  },
+  {
+   "key": "E06",
+   "group": "REG",
+   "row": "status summary sentence",
+   "mode": "str",
+   "old_sha256": "b423a83d8cf8ec253d2d01c76f3f0ee82facc2913d8760a1376f5ae0bd74c607",
+   "new_sha256": "a2c1cd91e5491b94d50df9ab3c81866e8522231f343d806582b19e14ac2aa5a9",
+   "old": "results computed with the superseded completion keep `[conv: v18 path orientation]` and `EV-NOT-RERUN` (census bound, §6.12).",
+   "new": "results computed with the superseded completion keep `[conv: v18 path orientation]` and `EV-NOT-RERUN` (census bound, §6.12). **v2.12.15 (scientific scope edition):** the star event is stated on the domain the dynamics always used — every component with exactly one valid centre, any shape (owner finding N4); the token-alphabet and census law, the exact birth update of the advance spectrum, the $n$-node birth-free spectrum conservation (resolving the LEM-SPECCONS conjecture) and a parent–child phase law are registered as `[ALG]` (§6.13, proposed by AZ, verified on the pinned engine); TDR-6 is PARTIAL; $P$ is reworded (not conserved at births, not a gauge quantity)."
+  },
+  {
+   "key": "E07",
+   "group": "TDR6",
+   "row": "TDR-6 status PARTIAL",
+   "mode": "str",
+   "old_sha256": "e3a74ed972d99271d6286224855d14b2a1757aae8d7afed34ff3fecf4d7aec09",
+   "new_sha256": "a87eb3892137897541f41ac5ce5f001ce4d6cfed079a0a4f8e2499156ceb2953",
+   "old": "Status: ACTIVE  \nQuestion: Identify a purely relational invariant preserved (or predictably changed) across star blow-up.",
+   "new": "Status: ACTIVE — PARTIAL *(v2.12.15)*  \nQuestion: Identify a purely relational invariant preserved (or predictably changed) across star blow-up."
+  },
+  {
+   "key": "E08",
+   "group": "P",
+   "row": "TDR-6 P row",
+   "mode": "str",
+   "old_sha256": "5699d16643dbb30b5e4c90df1f453965b8675d3f3a3f1a330dc2cfc85c79e316",
+   "new_sha256": "7ab0008faac944520734c2e71e118d88511e98488973515a07aac1259785728b",
+   "old": "- Total additive momentum $P$: `[FAIL]` — gauge artifact.",
+   "new": "- Total additive momentum $P$: `[FAIL]` as a birth invariant — it changes by $-x$ at a birth with centre token $x$; it is invariant under the declared gauge, so not a gauge artifact (SG-3, v2.12.15 `[COR]`)."
+  },
+  {
+   "key": "E09",
+   "group": "TDR6",
+   "row": "TDR-6 pairwise multiset row",
+   "mode": "str",
+   "old_sha256": "213b6093dd1bac6a5d9d371f95609f5266346aec6cdc4a14563050eaa2a33480",
+   "new_sha256": "5049d0246a88a3213908dae8879977284b4d10f8fe8b14f16e448eec87838b73",
+   "old": "- Pairwise difference multiset: `[OPEN]`",
+   "new": "- Token census and pairwise difference multiset: **predictable-change law** `[ALG]` *(v2.12.15)* — TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-BIRTH-SPECTRUM-INJECTION (§6.13): exact, given the centre token(s) and the token census; the multiset alone does not determine its update (TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED). The sub-item is resolved in that form: the full pairwise-advance spectrum is not preserved at births, and $D_{t+1}$ is not a function of $D_t$ alone, so no closed update law computable from $D_t$ exists.\n- Signed-class set $\\mathcal I(X_t)=\\{[\\delta_i]_\\pm: i\\in V_t\\}$, $[x]_\\pm=\\{x,-x\\}$: **exactly invariant** `[ALG]` *(v2.12.15)* — TDRG-ALG-TOKEN-CENSUS-LAW (iii): preserved at every tick, births included, for all six policies; a token-state quantity, unchanged by the declared phase gauge and by relabelling (SG-14). Whether it meets the purely relational condition of this question is undecided, so it does not close TDR-6. Pointed out by the ChatGPT co-owner change-focused review (PR #250)."
+  },
+  {
+   "key": "E10",
+   "group": "TDR6",
+   "row": "OPEN-SPECCONS-STAR current status",
+   "mode": "str",
+   "old_sha256": "b553ddf71bf2adf7c1f427f44857659f4a519dbe56a0000ed9cf0799ed7dcdb5",
+   "new_sha256": "12a2878254d0c1fc2522cbb8434706e9c420ef2e56e8f9b342422732e8201b8a",
+   "old": "Either outcome is valuable; neither is assumed (SG-12).",
+   "new": "Either outcome is valuable; neither is assumed (SG-12).\n\n**Current status (v2.12.15):** the birth update is exact (TDRG-ALG-BIRTH-SPECTRUM-INJECTION) and the token support is fixed at $t=0$ (TDRG-ALG-TOKEN-CENSUS-LAW): a birth extends the spectrum by an explicit injection that depends on the centre token and the census, not on the spectrum alone (TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED). This is a characterized extension law for each birth. Still open: a spectrum-level quantity preserved across births, or updated by a law closed on the spectrum (the token-level invariant of TDRG-ALG-TOKEN-CENSUS-LAW (iii) is not a function of the spectrum), and which centre tokens fire (a dynamical question). Status stays ACTIVE."
+  },
+  {
+   "key": "E11",
+   "group": "P",
+   "row": "SG-3",
+   "mode": "line",
+   "old_sha256": "ddd6e21d2226167912de55fdb257d7134200a45ccf965e0856b6b937537f814a",
+   "new_sha256": "a3a2de7f092b107cb60143f96e60bb213f7baa184fc872b9eb805f4e33fc6700",
+   "old": "**[SG-3]** Total additive momentum $P = \\sum \\delta_i$ is not a physical observable.  ",
+   "new": "**[SG-3]** Total additive momentum $P = \\sum \\delta_i$ is not adopted as a physical observable. *(v2.12.15 `[COR]`; OFN finding `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md`)* $P$ is not conserved across star births — a birth at centre token $x$ changes it by $-x \\pmod N$ (TDRG-ALG-BIRTH-SPECTRUM-INJECTION) — and it is invariant under the declared phase gauge (SG-2) and under relabelling (SG-14), so it is not a gauge quantity; the earlier labels \"gauge-like\" and \"gauge artifact\" gave a wrong reason.  "
+  },
+  {
+   "key": "E12",
+   "group": "P",
+   "row": "SG-3 violation",
+   "mode": "str",
+   "old_sha256": "a1a185cc905aaa1496a021ddd92d02724c34f48e65a76a70c16af6591b4dfc83",
+   "new_sha256": "1226eed84e60f4b31a0c7aa34957856160a02607c3bbde7d7fdfbbfa78b73237",
+   "old": "Violation: Using $P$-conservation as a constraint on interaction rules. ($P$ is gauge-like; $P$ changes under birth.)",
+   "new": "Violation: Using $P$-conservation as a constraint on interaction rules; calling $P$ a gauge quantity."
+  },
+  {
+   "key": "E13",
+   "group": "TDR6",
+   "row": "SG-12",
+   "mode": "str",
+   "old_sha256": "b6f169cd5aa27f1ae76a57c728c4ccdbda1876cad19f1f863b2edda17abb6a40",
+   "new_sha256": "69bcfb2656792ae603534eac4c21e9acb0646459479aaacbf20fac15ff0c561d",
+   "old": "Star blow-up creates a new node and new pairwise advances; spectrum conservation (or any controlled extension) across star blow-up is `[OPEN]` and must not be assumed.",
+   "new": "*(v2.12.15)* Its $n$-node birth-free form is TDRG-ALG-SPECCONS-N; across a birth the update is exact but needs the centre token and the census (TDRG-ALG-BIRTH-SPECTRUM-INJECTION, TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED). Spectrum conservation across births, or a spectrum-level invariant of the full dynamics, is `[OPEN]` and must not be assumed."
+  },
+  {
+   "key": "E14",
+   "group": "PINS",
+   "row": "§6.2 AZ citation at az-v0.7",
+   "mode": "str",
+   "old_sha256": "7c5258ea159e35206186917897218d90203f008140353c5cb49a0b2e656a08b1",
+   "new_sha256": "b2c4805534ef9cb294c0e88ad7b178519c5e27b200e4d5cb1e7bf48246daffb9",
+   "old": "`AZ-ALG-ANTIPODAL-LOWORDER` (`az-v0.6`) is the same",
+   "new": "`AZ-ALG-ANTIPODAL-LOWORDER` (`az-v0.7`; statement unchanged from `az-v0.6`) is the same"
+  },
+  {
+   "key": "E15",
+   "group": "N4",
+   "row": "CONV-TICK step 4 precedence",
+   "mode": "str",
+   "old_sha256": "f1dbd00dc994de89139269d63415b2e06a6a58622837733e9cc80904d219791b",
+   "new_sha256": "349b3d3220975cc24106771a1f0f942a6e3e131cd6b7d30651febef4c106961b",
+   "old": "4. Classify each component as isolated edge, path, cycle, clean star, multistar, or tie.",
+   "new": "4. Classify each component, in this order: no edge (isolated node); single edge; single-star component (exactly one valid centre, TDRG-DEF-STAR); multistar (two or more valid centres); path; cycle. *(v2.12.15 `[COR]`: the precedence as implemented; ties are outcomes of the path rule, not a class; under the narrow band no other class occurs, TDRG-ALG-NARROW-BAND-CLASSES.)*"
+  },
+  {
+   "key": "E16",
+   "group": "N4",
+   "row": "TDRG-DEF-STAR event domain",
+   "mode": "line",
+   "old_sha256": "068f21484b1a3aa4ed28d989415349ed283c5df0234e2d76a605383f802ae688",
+   "new_sha256": "eac6ee7bce4afe438955cbd676d4d6ab3534eb69ef5154b89a09b50bdddd4efe",
+   "old": "`[DEF]` [RID: TDRG-DEF-STAR] **Star blow-up** ($K_{1,3}$ with center $A$, leaves $L_1, L_2, L_3$): new node $E$ created at $\\theta_E = (\\theta_A + N/2) \\bmod N$, $\\delta_E = \\delta_A$; center inverts: $\\delta_A \\mapsto -\\delta_A \\bmod N$.",
+   "new": "`[DEF]` [RID: TDRG-DEF-STAR] **Star blow-up** *(v2.12.15 `[COR]` — event domain stated as implemented; owner finding N4)*. A **valid centre** of a defect component is a node with at least three defect neighbours that are pairwise non-adjacent; under the narrow band every node of defect degree $\\ge3$ is one (TDRG-ALG-NARROW-BAND-CLASSES). A **single-star component** is a component with exactly one valid centre $A$: the pure stars $K_{1,m}$ ($m\\ge3$, $K_{1,3}$ the minimal case) and every other shape with one such node — trees with longer branches, and components containing a cycle. Blow-up: a new node $E$ is created at $\\theta_E = (\\theta_A + N/2) \\bmod N$ with $\\delta_E = \\delta_A$, and the centre inverts, $\\delta_A \\mapsto -\\delta_A \\bmod N$, both read from the CONV-TICK snapshot; every other node of the component is inert for that tick. **Superseded wording:** v2.12.14 and earlier stated the event on $K_{1,3}$ only. The pinned engines (`star_centers`, `classify_component`, `blow_up_star_with_snapshot`) and every TDR-G result — the microscopic birth law included, whose counter `clean_star_components` counts every single-star component — used the domain stated here. The correction widens the declared event domain of the model to the rule the dynamics always applied; no result changes (`EV-CODE`; in a mixed-policy owner sample 3,773 of 17,466 single-star events were not pure stars, TDRG-NUM-TOKEN-LAW-CHECK)."
+  },
+  {
+   "key": "E17",
+   "group": "N4",
+   "row": "TDRG-DEF-MULTISTAR",
+   "mode": "line",
+   "old_sha256": "6cb00b2f4117c6adac7be9ac35c76a6a400a2b810829d8459cec3d98300bcffa",
+   "new_sha256": "d74c5e0a8280d7c0056babc519d63f2b2e8470356ff553feb0557a3e8426cf3d",
+   "old": "`[DEF]` [RID: TDRG-DEF-MULTISTAR] **Multistar** ($K_{m,c}$-like, $m \\geq 2$ valid star centers): component with multiple equally valid blow-up centers. Policy fork required.",
+   "new": "`[DEF]` [RID: TDRG-DEF-MULTISTAR] **Multistar** (two or more valid centres, any shape; *v2.12.15 `[COR]`: stated with the precision of TDRG-DEF-STAR*): a component with several equally valid blow-up centres. Policy fork required (table below): `trap` and the `bound_*` policies leave it inert; `largest_center` fires one centre (TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK); `all_centers` fires every centre, each against the snapshot."
+  },
+  {
+   "key": "E18",
+   "group": "TOK",
+   "row": "LEM-SPECCONS conjecture resolved",
+   "mode": "str",
+   "old_sha256": "e12e6caddab5437de29d88d7da272615440302a2ad06619b15765b78ba8b3886",
+   "new_sha256": "8c25b54df4b1bbb4790b42462c9c5dcf24a0615e0929500717ce516b8629d016",
+   "old": "**Generalization:** $n$-node signed-permutation invariance is conjectured for swap/path-cycle sectors; **star blow-up creates a new node and new pairwise advances and is `[OPEN]` (SG-12)**.",
+   "new": "**Generalization** *(v2.12.15 `[COR]`)*: the $n$-node birth-free statement is proved, TDRG-ALG-SPECCONS-N (§6.13), replacing the former conjecture; across star blow-up the update is exact but not determined by the spectrum (TDRG-ALG-BIRTH-SPECTRUM-INJECTION, TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED), and a spectrum-level invariant of the full dynamics is `[OPEN]` (SG-12)."
+  },
+  {
+   "key": "E19",
+   "group": "TOK",
+   "row": "§6.13 token laws",
+   "mode": "str",
+   "old_sha256": "391f71bf74fc42f3614288291b69eec2d5b49eb43aee365c6d1e6fd6389f4f30",
+   "new_sha256": "8aed2d3df2c55ce32a947f27cfb515b2445e208ea491c51443ad9e2932562355",
+   "old": "\n\n---\n\n## §7. Import Ledger {#sec-7-imports}",
+   "new": "\n\n### §6.13 Token Alphabet and Birth Laws `[ALG]` {#sec-6-13-tokens} *(new in v2.12.15)*\n\n> **[SG-12 applies.]** These are statements about tokens and the unlabelled advance spectrum under the event rules of §6.3. They describe the token and spectrum updates exactly; none closes TDR-6 or OPEN-SPECCONS-STAR, and none is a growth mechanism or a bridge (SG-10). Sources: proposed by the AZ co-owner, `records/az/AZ_TOKEN_RESONANCE_PREREGISTRATION.md` §2 (SHA-256 `198d2f4a…fb829`; Propositions 1–3, Corollaries 1.1–1.2), offered as `pipes/TDRG/20261112-AZ-token-alphabet-law-offer.md`; verified by the TDR-G owner sessions (`records/tdrg/TDRG_OWNER_INBOX_DISPOSITION_20261112_claude01SKePJ.md`, §3 and §7) and registered here as TDR-G results, credited to AZ. AZ's registered Stage 1 campaign and its numbers are not part of them.\n\n`[ALG]` [RID: TDRG-ALG-EVENT-INVENTORY] `[scope: the six policies of §6.3, either orientation rule]` **Token-changing events (E).** In one tick the tokens change only by (a) a permutation of the tokens of one component (antipodal swap; path successor shift), (b) identity (isolated nodes, balanced path ties, cycle bound states, multistars under `trap` and the `bound_*` policies, every non-centre node of a star component), or (c) the star map at a valid centre with snapshot token $x$: centre $x\\mapsto-x$, newborn $x$. Snapshot components are disjoint, so no node is written by two events in one tick, and the several centres of one tick (several single-star components, or `all_centers`) are distinct nodes read from the snapshot. *Proof:* the DEFs of §6.3 under CONV-TICK. ∎ `[ENG]` conformance: the pinned engines write tokens in exactly three places — `apply_single_edge_swap`, `apply_path_cycle`, `blow_up_star_with_snapshot` — and the node cap ends a run before a step instead of suppressing a birth inside one (`EV-CODE`, `records/tdrg/TDRG_OWNER_INBOX_DISPOSITION_20261112_claude01SKePJ.md` §3.1).\n\n`[ALG]` [RID: TDRG-ALG-NARROW-BAND-CLASSES] **Under the narrow band every component with an edge has a class.** If $k<N/6$, a node of defect degree $\\ge3$ is a valid centre (two adjacent neighbours would close a fully defective $K_3$, excluded by TDRG-THM-NARROW-BAND-EXCLUSION); a connected graph of maximum degree $\\le2$ is a path or a cycle, and $C_3$ is excluded. ∎ So the engine's residual classes (`triangle_forbidden_or_wideband`, `ambiguous_*`) are empty under the narrow band, and the precedence of CONV-TICK step 4 is a complete classification.\n\n`[ALG]` [RID: TDRG-ALG-TOKEN-CENSUS-LAW] **Signed token alphabet and census law.** Let $A_0$ be the set of initial tokens, $S_0=A_0\\cup(-A_0)$, and $c_t(y)$ the number of nodes with token $y$ at tick $t$. Under TDRG-ALG-EVENT-INVENTORY: (i) $\\delta_i(t)\\in S_0$ for every node and tick, so at most $|S_0|\\le2|A_0|$ distinct tokens ever occur; (ii) a tick whose births have centre snapshot tokens $x_1,\\dots,x_m$ changes the census by $c_{t+1}(y)-c_t(y)=\\#\\{a: y\\equiv-x_a\\}$, so $c_t$ is coordinatewise non-decreasing and $\\sum_y c_t(y)=M_t$; (iii) the set of signed classes present, $\\mathcal I(X_t)=\\{[\\delta_i]_\\pm\\}$ with $[x]_\\pm=\\{x,-x\\}$, is invariant at every tick, births included: $\\mathcal I(X_t)=\\{[a]_\\pm: a\\in A_0\\}$. *Proof.* (a) and (b) leave the multiset of tokens unchanged; in (c) the centre's $x$ becomes $-x$ and the newborn adds $x$, a net gain of one $-x$; distinct centres compose; (i) follows by induction because $S_0=-S_0$. (iii): by (ii) no token count decreases, so no class disappears, and a birth adds only $-x$, whose class $[x]_\\pm$ is already present at the centre. ∎ The object is the global multiset, not node identity: the centre's own token is not conserved. Item (iii) was pointed out by the ChatGPT co-owner change-focused review (PR #250).\n\n`[ALG]` [RID: TDRG-ALG-BIRTH-SPECTRUM-INJECTION] **Birth update of the advance spectrum.** Let $C_t$ be the token multiset before the tick and $D(C)$ the multiset of $|y-y'|_c$ over unordered pairs of $C$. With births at centre snapshot tokens $x_1,\\dots,x_m$: $C_{t+1}=C_t\\uplus\\{-x_1,\\dots,-x_m\\}$ and $$D(C_{t+1})=D(C_t)\\uplus\\{|x_a+y|_c: 1\\le a\\le m,\\ y\\in C_t\\}\\uplus\\{|x_a-x_b|_c: a<b\\},$$ which adds $mM_t+\\binom m2$ entries; the token sum changes by $-\\sum_a x_a \\pmod N$. *Proof:* census law (ii) and $|{-x_a}-y|_c=|x_a+y|_c$. ∎ This is an identity of unlabelled multisets, not a list of edges at the newborn: the centre's own differences change ($|x-y|_c\\to|x+y|_c$) and the identity holds only after the centre's and the newborn's contributions are combined. Applying the one-birth form $m$ times against the pre-tick multiset would miss the newborn–newborn pairs.\n\n`[ALG]` [RID: TDRG-ALG-SPECCONS-N] **$n$-node birth-free conservation.** On any tick without a star event, for any number of nodes, the token multiset and hence $\\{|d_{ij}|_c\\}_{i<j}$ are exactly conserved. *Proof:* only events (a) and (b) occur. ∎ This proves the $n$-node generalization that LEM-SPECCONS recorded as conjectured (§6.12); for three nodes it is LEM-SPECCONS.\n\n`[ALG]` [RID: TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED] **The spectrum alone does not determine its birth update.** At $N=24$, $C=(1,3,4,5)$ and $C'=(2,4,5,6)$ have $D(C)=D(C')=\\{1,1,2,2,3,4\\}$; a birth at the centre with token $1$, respectively $2$, adds $\\{2,4,5,6\\}$, respectively $\\{4,6,7,8\\}$. Both are realised on the pinned engine with one geometry ($k=1$, post-advance $\\theta=(0,11,12,13)$, a $K_{1,3}$ at centre 0; fixture F2 of TDRG-NUM-TOKEN-LAW-CHECK). So $D_{t+1}$ is not a function of $D_t$: the update needs the centre token(s) and the census. $C'=C+1$ is a common token shift: $D$ is shift-invariant and the star map is not (imported Finding A, §7). Counterexample from the ChatGPT co-owner review (`records/tdrg/TDRG_OWNER_INBOX_DISPOSITION_20261112_claude01SKePJ.md` §7.2).\n\n`[ALG]` [RID: TDRG-ALG-PARENT-CHILD-PHASE] `[scope: two-body kinematics under a token-persistence hypothesis]` **Free parent–child phase law and order classification.** If a star event at tick $t_0$ has centre $A$ with snapshot token $x$ and newborn $E$, and the next $j$ advances use $\\delta_A=-x$ and $\\delta_E=x$, then after the advance of tick $t_0+j$, $\\theta_E-\\theta_A\\equiv N/2+2jx \\pmod N$. *Proof:* the separation is $N/2$ at birth (TDRG-DEF-STAR) and each advance adds $2x$. ∎ Along the free orbit — the hypothesis holding for every $j\\ge0$ — the separation stays in $\\{N/2,0\\}$ for all $j$ iff $4x\\equiv0 \\pmod N$; already $j=1$ forces $2x\\in\\{0,N/2\\}$, so the same holds on any window with at least one advance, while a window with no advance imposes no condition. Equivalently $\\operatorname{ord}(2x)\\le2$: $\\operatorname{ord}(2x)=1$ iff $x\\in\\{0,N/2\\}$, and $\\operatorname{ord}(2x)=2$ iff $4\\mid N$ and $x\\in\\{N/4,3N/4\\}$; for $N\\equiv2 \\pmod 4$ no token has order 2. This is a kinematic identity, not a bond-persistence or growth mechanism: in a many-node universe further events usually break the hypothesis, and it has no bearing on TDRG-OPEN-LOCKING-FAIL or TDR-26.\n\n`[NUM]` [RID: TDRG-NUM-TOKEN-LAW-CHECK] `[scope: pinned v18 engine with TDRG-DEF-ORIENT; six policies × (N,k) ∈ {(24,1),(30,2),(60,4),(120,8)} × 30 random four-node starts, up to 400 ticks or 70 nodes]` **Owner check of the token laws on the engine.** 223,651 ticks (21,838 with births; 33,121 births): census law and alphabet on every tick, birth injection on every birth tick ($M_{\\rm post}$ up to 136), birth-free conservation on all 201,813 birth-free ticks, and the phase law on 765,224 parent–child advances with the parent taken from the engine's own birth call — 0 violations. Single-star events in the same sample: 17,466, of which pure $K_{1,3}$ 4,648, pure $K_{1,m}$ with $m\\ge4$ 9,045, and not pure 3,773 (trees 1,944; containing a cycle 1,829); the shares in the canonical scans are not measured. Fixtures: F1 (a five-node tailed tree blown up as a single star) and F2 (above). Evidence: `evidence/tdrg/inbox_20261112/owner_token_law_check_v2.py` (`491cee3b…`), output `owner_token_law_check_v2_output.json` (`acbc55db…`). AZ's own machine checks (exhaustive at $N=6,k=0$ and $N=8,k=1$, 16 ticks) are `EV-SRC-REPORTED`. A finite check, not a proof.\n\n---\n\n## §7. Import Ledger {#sec-7-imports}"
+  },
+  {
+   "key": "E20",
+   "group": "PINS",
+   "row": "§7 Finding A repinned",
+   "mode": "str",
+   "old_sha256": "c8f5eac7fae6bccca061ec68db5aab87b418f868652213e8118b77e90c14597d",
+   "new_sha256": "6b30764913fa22dd49a79a27c125d69154bdcd7f579a764e9109b7bf37af2e8d",
+   "old": "[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.10 §4.1 | RTG-OFN-ALG-STAR-TOKEN-SHIFT]",
+   "new": "[import: RTG_ONTOLOGICAL_FOUNDATIONS_v0.12 §4.1 | RTG-OFN-ALG-STAR-TOKEN-SHIFT]"
+  },
+  {
+   "key": "E21",
+   "group": "PINS",
+   "row": "§7 import note and contributions",
+   "mode": "str",
+   "old_sha256": "a6a7a4c52a5911f205049db5f69b8bfce700a998e197286e2920eac6a69e7020",
+   "new_sha256": "bfde734ee254e1729f7694d02b781079ec88ea04851adc27eb5689c817856d0b",
+   "old": "OFN REQ-O09-05 is answered by TDRG-DEF-ORIENT (endpoint policy) and this entry.",
+   "new": "OFN REQ-O09-05 is answered by TDRG-DEF-ORIENT (endpoint policy) and this entry. *(v2.12.15: repinned from `ofn-v0.10` to `ofn-v0.12`; the statement text is byte-identical at both tags, only OFN's scope tag changed. Also cited by TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED.)*\n- Contributions registered as TDR-G results, not imports *(v2.12.15)*: the token laws of §6.13, proposed by AZ (`records/az/AZ_TOKEN_RESONANCE_PREREGISTRATION.md` §2 (SHA-256 `198d2f4a…fb829`; Propositions 1–3, Corollaries 1.1–1.2)) and verified by the owner; the RIDs are TDR-G's, credited to AZ."
+  },
+  {
+   "key": "E22",
+   "group": "PINS",
+   "row": "§7 context editions",
+   "mode": "str",
+   "old_sha256": "b78222192aa2e042b3eae891318365bef4994fef92192e5ae809bb1d0249fe1c",
+   "new_sha256": "68fc46cc2e64d69710c7a98b9ab9ae539b82f3397f82b4fce5611b583757123a",
+   "old": "- Context only (not imported): Programme Overview v1.3 SG-PROG-1–SG-PROG-4; OFN v0.10 O0–O3 motivational layer",
+   "new": "- Context only (not imported): Programme Overview v1.4 SG-PROG-1–SG-PROG-4; OFN v0.12 O0–O3 motivational layer"
+  },
+  {
+   "key": "E23",
+   "group": "PINS",
+   "row": "§7 consumers table",
+   "mode": "block",
+   "old_sha256": "9109dd47ee29b13171e0d8d5f07d5caa65e539d2499dc3e382172156c09d7bae",
+   "new_sha256": "88ca93860d5a7939c586e1d463b500b50ed8241d2becc2952c8a33351868ec04",
+   "old": "| Consumer (edition) | What it uses | State at v2.12.14 | Effect of v2.12.14 |\n|---|---|---|---|\n| NUMGEN v1.21 (`numgen-v1.21`) | state, recurrence and v18 event conventions for DISC-1/DISC-2 (\"RID unavailable\" imports); request `pipes/TDRG/20261026-NUMGEN-orientation-policy-s0-e-half-n.md` | received; request dispositioned (accept) | TDRG-DEF-ORIENT ruling; DISC-2 effect 20 of 136 records (§6.12); RIDs available; the C7C-M4 release is NUMGEN's |\n| OFN v0.10 (`ofn-v0.10`) | IMP-O08-02 to IMP-O08-16 (state, band, holonomy, narrow-band exclusion, recurrence, star, CONV-TICK, CONV-P3CYC, four lemmas); Finding A offered under XFER-O08-01; REQ-O09-05 | Finding A: statement accepted, custody deferred | owner RIDs below replace \"RID unavailable\"; REQ-O09-05 answered |\n| AZ v0.6 (`az-v0.6`) | Threads B/C: state (`TDRG-ZN-STATE`), LEM-REACH, LEM-RETRIG, LEM-SPECCONS | reference | `TDRG-ZN-STATE` resolves (map below); narrow-band exclusion cites `AZ-ALG-ANTIPODAL-LOWORDER` (§6.2) |\n| Genesis (Programme IF25) | `TDRG-EXPORT-POLICY-PHASE` | blocked (below) | none |",
+   "new": "| Consumer (edition) | What it uses | State at v2.12.15 | Effect of v2.12.15 |\n|---|---|---|---|\n| NUMGEN v1.21 (`numgen-v1.21`) | state, recurrence and event conventions for DISC-1/DISC-2; TDRG-DEF-ORIENT | request closed (accept, v2.12.14) | none on its panels: the event domain they ran on is unchanged (TDRG-DEF-STAR states it) |\n| OFN v0.12 (`ofn-v0.12`) | IMP-O08-02 to IMP-O08-16 (owner RIDs); Finding A (XFER-O08-01); token-sum finding `pipes/TDRG/20261029-OFN-token-sum-gauge-label.md` | Finding A statement accepted (repinned); token-sum finding dispositioned (accept with change) | SG-3, TDR-6 and Appendix B reworded on $P$; custody transfer still deferred to v2.13 |\n| AZ v0.7 (`az-v0.7`) | Threads B/C: state, LEM-REACH, LEM-RETRIG, LEM-SPECCONS; token-alphabet offer `pipes/TDRG/20261112-AZ-token-alphabet-law-offer.md` | v0.7 notice closed (no action); offer dispositioned (accept with change) | token laws registered in §6.13, credited to AZ; §6.2 citation at `az-v0.7` |\n| Programme v1.4 (`programme-v1.4`) | §6.4 TDRG entry and launch gate; IF03, IF13, IF25 | notice dispositioned (accept) | `TDRG-EXPORT-DISCRETE-TRIAD` names the A → B → C gate; companion pin `programme-v1.4` |\n| Genesis (Programme IF25) | `TDRG-EXPORT-POLICY-PHASE` | blocked (below) | none |"
+  },
+  {
+   "key": "E24",
+   "group": "PINS",
+   "row": "§7 pins",
+   "mode": "str",
+   "old_sha256": "27bb0f841f90de772c2e52ce13cd4f10e80191a9f05efa7bbd11321349a4d0bf",
+   "new_sha256": "f808351b4f7b075f6b76f6eb0627bba1ca68e4bb5b8627e13143645ee34ae643",
+   "old": "**Pins.** Governing editions at this release: Programme Overview v1.3, OFN v0.10, DSN Methodology v1.4 (this edition still declares v1.2; the migration is v2.13).",
+   "new": "**Pins.** Governing editions at this release: Programme Overview v1.4, OFN v0.12, AZ v0.7, DSN Methodology v1.4 (this edition still declares v1.2; the migration is v2.13)."
+  },
+  {
+   "key": "E25",
+   "group": "REG",
+   "row": "§7 RID map header",
+   "mode": "str",
+   "old_sha256": "80e1c402211f1992876a6fdef0ebc23b98b2c1f8bcaaf13df574d26279129978",
+   "new_sha256": "eaa3950f68fc445be85ffb36e4ac642bed31713db9ed01b5d50936fb245150a6",
+   "old": "**Owner RID map** (v2.12.14).",
+   "new": "**Owner RID map** (v2.12.14; rows for v2.12.15 added at the end)."
+  },
+  {
+   "key": "E26",
+   "group": "REG",
+   "row": "§7 RID map rows",
+   "mode": "str",
+   "old_sha256": "c6d2f45210ee76c12a4d19a4cb575b3ae11d55ed4a9749f74874a3bca5cf0b49",
+   "new_sha256": "c74262a59be0c48ad6d706d31b4f8dbfb338500417c881fb225ee47dfc15f6b0",
+   "old": "| TDRG-ART-SESSION-SCRIPTS, TDRG-ART-ORIENT-V2-12-14, TDRG-ART-ORIENT-COVARIANCE-CHECKS | artifacts | §8 | — |",
+   "new": "| TDRG-ART-SESSION-SCRIPTS, TDRG-ART-ORIENT-V2-12-14, TDRG-ART-ORIENT-COVARIANCE-CHECKS | artifacts | §8 | — |\n| TDRG-ALG-EVENT-INVENTORY, TDRG-ALG-NARROW-BAND-CLASSES | token-changing events (E); complete classification under the narrow band | §6.13 | AZ \"(E)\" |\n| TDRG-ALG-TOKEN-CENSUS-LAW | signed token alphabet and census law | §6.13 | AZ Proposition 1 |\n| TDRG-ALG-BIRTH-SPECTRUM-INJECTION | birth update of the advance spectrum | §6.13 | AZ Corollary 1.1 |\n| TDRG-ALG-SPECCONS-N | $n$-node birth-free spectrum conservation | §6.13 | AZ Corollary 1.2 |\n| TDRG-ALG-BIRTH-SPECTRUM-NOT-CLOSED | spectrum does not determine its birth update | §6.13 | — |\n| TDRG-ALG-PARENT-CHILD-PHASE | free parent–child phase law; order classification | §6.13 | AZ Propositions 2–3 |\n| TDRG-NUM-TOKEN-LAW-CHECK, TDRG-ART-TOKEN-LAW-CHECKS | owner check of the token laws; its artifacts | §6.13, §8 | — |"
+  },
+  {
+   "key": "E27",
+   "group": "GATE",
+   "row": "§7 export row gate",
+   "mode": "str",
+   "old_sha256": "2d9dd0405b8a9678cb461c75780ce1331ef2de87ebe66dcc9b2c4cb5c799a4e3",
+   "new_sha256": "dc2d0b3f0621de272bb080f967417fa4364582a888b2ee8a527ea477d0a25a38",
+   "old": "- [RID: TDRG-EXPORT-DISCRETE-TRIAD] :: Native discrete triad orientation / survival statistics for TDR-T :: blocked by TDR-24D/A/B and TDR-T0.",
+   "new": "- [RID: TDRG-EXPORT-DISCRETE-TRIAD] :: Native discrete triad orientation / survival statistics for TDR-T :: blocked by TDR-24A → TDR-24B → TDR-24C and TDR-T0 (TDR-24D and TDR-24F are closed at the mechanism level, §1). *(v2.12.15 `[COR]`: the row named the earlier D/A/B gate; Programme v1.4 §6.4 notice.)*"
+  },
+  {
+   "key": "E28",
+   "group": "REG",
+   "row": "§8 token-law artifacts",
+   "mode": "str",
+   "old_sha256": "b2f0b3d3d7f507c929a2fa824cbbd0e66bb8a9ad066e55d5404a8745bec8f8f1",
+   "new_sha256": "5576445f849449200ad6567252908ff21e23d336cb79a6eb27ba9de5f06f1e18",
+   "old": "- Post-edition data, not cited by any claim here:",
+   "new": "- [RID: TDRG-ART-TOKEN-LAW-CHECKS] :: `evidence/tdrg/inbox_20261112/` (owner token-law checks v1 and v2 with fixtures F1–F2; `SHA256SUMS.txt`) and the v2.12.15 builder and checker (`evidence/tdrg/scripts/build_tdrg_v2_12_15.py`, `check_tdrg_v2_12_15.py`) :: evidence for §6.3 (N4) and §6.13 :: `[ENG]` **placed**.\n- Post-edition data, not cited by any claim here:"
+  },
+  {
+   "key": "E29",
+   "group": "REG",
+   "row": "Appendix A entry",
+   "mode": "str",
+   "old_sha256": "af39b7d641e5e1ddb0d7d934f8a15a2af2966604d5269233568532a7ab4e9025",
+   "new_sha256": "13c720c088fc47d890972ce49bb069d67e0118399f007bff05d4d8b7d641586c",
+   "old": "## Appendix A — Version History {#appendix-a}\n\n### v2.12.14 — October 2026",
+   "new": "## Appendix A — Version History {#appendix-a}\n\n### v2.12.15 — November 2026\n\nScientific scope edition on the PI's decision of 12 Nov 2026 (Methodology v1.2 kept as declared; no layout compaction; no rerun). Predecessor `tdrg-v2.12.14` (SHA-256 `3be72923…2392`). Release record `records/tdrg/TDRG_v2_12_15_RELEASE_RECORD.md`; owner record `records/tdrg/TDRG_OWNER_INBOX_DISPOSITION_20261112_claude01SKePJ.md`; edit log `evidence/tdrg/v2.12.15/edit_log.json`.\n- **§6.3 [COR]:** TDRG-DEF-STAR states the event domain as implemented — every component with exactly one valid centre, any shape, only the centre and the newborn changing (owner finding N4); TDRG-DEF-MULTISTAR aligned; CONV-TICK step 4 gives the classification precedence.\n- **§6.13 [NEW]:** token laws — TDRG-ALG-EVENT-INVENTORY, -NARROW-BAND-CLASSES, -TOKEN-CENSUS-LAW, -BIRTH-SPECTRUM-INJECTION, -SPECCONS-N, -BIRTH-SPECTRUM-NOT-CLOSED, -PARENT-CHILD-PHASE; owner check TDRG-NUM-TOKEN-LAW-CHECK. Proposed by AZ, verified by the owner, credited to AZ.\n- **§6.12 [COR]:** the LEM-SPECCONS $n$-node conjecture resolved by TDRG-ALG-SPECCONS-N.\n- **§2 [COR]:** TDR-6 PARTIAL (the pairwise-multiset sub-item resolved as a predictable-change law; the signed-class set registered as an exact invariant, its relational status undecided — ChatGPT co-owner review, PR #250); OPEN-SPECCONS-STAR current status.\n- **§3 [COR]:** SG-3 — $P$ not conserved at births and not a gauge quantity (OFN finding); SG-12 updated.\n- **§7 [COR]:** export row `TDRG-EXPORT-DISCRETE-TRIAD` on the A → B → C gate (Programme v1.4 notice); Finding A repinned to `ofn-v0.12`; consumers, context and pins at Programme v1.4, OFN v0.12, AZ v0.7; RID map rows.\n- **§6.2, §8, header, Appendix B [COR/NEW]:** AZ citation at `az-v0.7`; TDRG-ART-TOKEN-LAW-CHECKS; companion editions; $P$ row reworded.\n- **Not changed:** every number of earlier editions; the engine; Appendix A history; layout (v2.13).\n\n### v2.12.14 — October 2026"
+  },
+  {
+   "key": "E30",
+   "group": "P",
+   "row": "Appendix B P row",
+   "mode": "str",
+   "old_sha256": "79e7569bc478eedb2ba545e837d040e93dcd067d6a711f42d1784846a0303b3e",
+   "new_sha256": "677cf481a3cd430a27423802da56a2a7ecc405dcae4409065c3d77f5f5915df9",
+   "old": "- [FAIL] Total additive momentum $P = \\sum \\delta_i$ as a conserved physical observable — gauge artifact.",
+   "new": "- [FAIL] Total additive momentum $P = \\sum \\delta_i$ as a conserved physical observable — not conserved across births ($\\Delta P\\equiv-x$ for centre token $x$). *(v2.12.15 `[COR]`: formerly \"gauge artifact\"; $P$ is invariant under the declared gauge, SG-3.)*"
+  },
+  {
+   "key": "E31",
+   "group": "REG",
+   "row": "footer title",
+   "mode": "str",
+   "old_sha256": "8a8db523dc00a629dfbe609432c9b214c3b2653ef1e736062809961ac34f5367",
+   "new_sha256": "48a76ab75e4ed418099a1c2944fd8722863c68ad24c3ba5429e1182eeb7fb960",
+   "old": "*END OF DOCUMENT — RTG_DISCRETE_GENESIS_DSN_v2.12.14*",
+   "new": "*END OF DOCUMENT — RTG_DISCRETE_GENESIS_DSN_v2.12.15*"
+  },
+  {
+   "key": "E32",
+   "group": "REG",
+   "row": "footer supersedes",
+   "mode": "str",
+   "old_sha256": "fdddac4978ea80d7a4c97e4219279018c215d9fe584255527b5a060bfa9c6d1a",
+   "new_sha256": "7a5fb2d24a4f9c83e44873e23dba3e1357f867de731450835e21849204a23d0f",
+   "old": "*Supersedes RTG_DISCRETE_GENESIS_DSN_v2.12.13 (tag `tdrg-v2.12.13`),",
+   "new": "*Supersedes RTG_DISCRETE_GENESIS_DSN_v2.12.14 (tag `tdrg-v2.12.14`), RTG_DISCRETE_GENESIS_DSN_v2.12.13 (tag `tdrg-v2.12.13`),"
+  }
+ ]
+}

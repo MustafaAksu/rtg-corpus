@@ -1,0 +1,891 @@
+{
+ "base_sha256": "dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a",
+ "candidate_sha256": "2294d2a3287651802824a77ea22fb8f3896f6837cca1162fd8479ff02839fc94",
+ "edits": [
+  {
+   "id": "E01",
+   "triage_rows": "edition",
+   "kind": "line",
+   "base_lines": 1,
+   "old": [
+    "# RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6"
+   ],
+   "new": [
+    "# RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.7"
+   ],
+   "old_sha256": "f29333f332fd9e5c6b18655481ea93798dd30b6a41eb68bb2b30624d3a17ea69",
+   "new_sha256": "02cec9121038b863b1b8c3fb1311b9ed4d28fb6bd5cf3cc1b68d1e27e1899b2e"
+  },
+  {
+   "id": "E02",
+   "triage_rows": "edition",
+   "kind": "line",
+   "base_lines": 4,
+   "old": [
+    "**Date:** June 2026  "
+   ],
+   "new": [
+    "**Date:** November 2026 (v0.7, corrections only; the scientific content is that of v0.6, June 2026)  "
+   ],
+   "old_sha256": "5ca1dceeca1515145193890993657437d8a65aaf5a0f4277b20abfde18e3d8b6",
+   "new_sha256": "0c881a951fced6f96da8fa3afc78a929f5c571d040db569b5cb7d9819dbd2884"
+  },
+  {
+   "id": "E03",
+   "triage_rows": "8",
+   "kind": "line",
+   "base_lines": 6,
+   "old": [
+    "**DSN Methodology:** DSN_METHODOLOGY_v1.2  "
+   ],
+   "new": [
+    "**DSN Methodology:** DSN_METHODOLOGY_v1.2 (declared; kept for this corrections edition by PI decision of 10 Nov 2026 — the governing Methodology is v1.4, `methodology-v1.4`; the v1.4 migration is a separate edition)  "
+   ],
+   "old_sha256": "8c48f031a0027edad374df9c77ba0aa04f61998928c5816f306caf2f6a9cadef",
+   "new_sha256": "b608263d1ed60dee334b8d7f49d690a4e83d5888b5027496997fdec5bc7fbbef"
+  },
+  {
+   "id": "E04",
+   "triage_rows": "7",
+   "kind": "line",
+   "base_lines": 10,
+   "old": [
+    "**Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.5`  "
+   ],
+   "new": [
+    "**Supersedes:** `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6` (tag `az-v0.6`, SHA-256 `dec78a4721d2f34711218d9b79ba0ce6438523060098f770cad5dd3f5eb70b8a`)  "
+   ],
+   "old_sha256": "39e7f9abca652a9798f9d5799f19de9273451843ae244979582711fd73ed7c2d",
+   "new_sha256": "e17ab7d15472452ece1cd7f589c010d7b575815c9cb3d66d2273c00787993420"
+  },
+  {
+   "id": "E05",
+   "triage_rows": "2,3,4,5,6,8",
+   "kind": "line",
+   "base_lines": 11,
+   "old": [
+    "**Companion documents:** `RTG_PROGRAMME_OVERVIEW_v1.1` · `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` · `RTG_DISCRETE_GENESIS_DSN_v2.12` · `RTG_GENESIS_GEOMETRY_DSN_v2.8.4` · `DSN_METHODOLOGY_v1.2`  "
+   ],
+   "new": [
+    "**Companion documents (governing editions, November 2026):** Programme Overview v1.4 (`programme-v1.4`) · Dyadic Oscillator v6.4.23 (`dyad-v6.4.23`) · Discrete Genesis v2.12.14 (`tdrg-v2.12.14`) · Genesis Geometry v2.10 (`gen-v2.10`) · OPEN-M v0.7.1 (`uvm-v0.7.1`) · DSN Methodology v1.4 (`methodology-v1.4`; this document declares v1.2, see above)  "
+   ],
+   "old_sha256": "8bd3b5d46a6723ca777b3b33a2a28b8454ac4b6c49d5007e83302674aa474842",
+   "new_sha256": "435eb34325ce2869d2684c223c23d5895313a269a6a1c80ccb98ddb1c1395958"
+  },
+  {
+   "id": "E06",
+   "triage_rows": "edition",
+   "kind": "str",
+   "base_lines": 13,
+   "old": [
+    "**Status summary:** This document remains an infrastructure ledger, not an active scientific study, and Maturity remains **Level A**. v0.6 is a **ledger-state update** over v0.5: it records that the five Thread C `[ENG-blocker]` items and the `[ENG-open]` items are now closed (AZ-1A/AZ-1B/AZ-1C `[ENG PASS]`); it registers the AZ-OPEN-EDGE architectural decision as RESOLVED (directed, both orientations); it registers one `[THM-ALG]` (PROP-AZ-CORE-EQUIV) and one `[ALG]` low-order obstruction arising from the Thread C engineering work; and it registers the **first Phase-2 diagnostic result** — the Core(G_T) Hashimoto `4|q` angular rule — together with its reclassification as **static $\\mathbb{Z}_N$ antipodal-band geometry, not a TDR-G dynamical signal**. Milestone AZ-2 is recorded as **attempted, negative-clarifying**: the most tempting angular observable was tested and **disqualified** as a bridge-candidate. **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.** A visible correction/retraction block is added (§4.3.4 and Appendix B)."
+   ],
+   "new": [
+    "**Status summary:** This document remains an infrastructure ledger, not an active scientific study, and Maturity remains **Level A**. v0.6 is a **ledger-state update** over v0.5: it records that the five Thread C `[ENG-blocker]` items and the `[ENG-open]` items are now closed (AZ-1A/AZ-1B/AZ-1C `[ENG PASS]`); it registers the AZ-OPEN-EDGE architectural decision as RESOLVED (directed, both orientations); it registers one `[THM-ALG]` (PROP-AZ-CORE-EQUIV) and one `[ALG]` low-order obstruction arising from the Thread C engineering work; and it registers the **first Phase-2 diagnostic result** — the Core(G_T) Hashimoto `4|q` angular rule — together with its reclassification as **static $\\mathbb{Z}_N$ antipodal-band geometry, not a TDR-G dynamical signal**. Milestone AZ-2 is recorded as **attempted, negative-clarifying**: the most tempting angular observable was tested and **disqualified** as a bridge-candidate. **No Level B promotion. No OPEN-P1 / Dyadic bridge-candidate is promoted.** A visible correction/retraction block is added (§4.3.4 and Appendix B). **v0.7 is a corrections-only edition:** every owner pin, identifier and imported statement is synchronized with the current adopted owner editions named in the header; the withdrawn OPEN-M \"legal ×2\" reading is removed (§6, Appendix B); the Thread C evidence files are recorded as not available in the repository (§9). No new scientific claim is made, no grade of an AZ-owned result changes, and Thread C is unchanged."
+   ],
+   "old_sha256": "30ef691423da1a9c9a66020eb323880b8b633f003e3daa1ae3496e25c7b0e5ae",
+   "new_sha256": "63e107dfe95fe09f5c3d3db780e7daa41f610cd57991cab2fac62c0a33604a8b"
+  },
+  {
+   "id": "E07",
+   "triage_rows": "3",
+   "kind": "str",
+   "base_lines": 63,
+   "old": [
+    "| Continuous $p$-resonance arithmetic, OPEN 9, low-degree vanishing, subgroup/missing-slot formalism | `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` | `[import-ref]`; ownership remains Dyadic |"
+   ],
+   "new": [
+    "| Continuous $p$-resonance arithmetic, OPEN 9, low-degree vanishing, subgroup/missing-slot formalism | `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 (`dyad-v6.4.23`) | `[import-ref]`; ownership remains Dyadic |"
+   ],
+   "old_sha256": "c8dc718287e739fd82d6c426a97a7d7f15caadcdb88c0545084f6eaf651f5e0b",
+   "new_sha256": "84479c14f1d1463d42b4cb49607ac42db8eca9f8aa80419678085d17c37504f8"
+  },
+  {
+   "id": "E08",
+   "triage_rows": "4",
+   "kind": "str",
+   "base_lines": 64,
+   "old": [
+    "| TDR-G $\\mathbb{Z}_N$ state space, reachability, superselection, cyclic memory, advance-spectrum conservation, BIND3 arithmetic/parity diagnostics | `RTG_DISCRETE_GENESIS_DSN_v2.12` | branch-local context / `[bridge-candidate]`; no cross-branch import |"
+   ],
+   "new": [
+    "| TDR-G $\\mathbb{Z}_N$ state space, reachability, superselection, cyclic memory, advance-spectrum conservation, BIND3 arithmetic/parity diagnostics | `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`) | branch-local context / `[bridge-candidate]`; no cross-branch import |"
+   ],
+   "old_sha256": "34f84b3203f7d6e7b9ee2704bb8abffe5e10332e8021baafa79f13f05eda7072",
+   "new_sha256": "578059f4748925d79ef87d4d8b81830d6fcd5e10bb5d6d7caab3c58e93d78579"
+  },
+  {
+   "id": "E09",
+   "triage_rows": "28",
+   "kind": "str",
+   "base_lines": 69,
+   "old": [
+    "| Programme placement and dependency graph | `RTG_PROGRAMME_OVERVIEW` | patch requested; this DSN cannot self-register at Tier 0 |"
+   ],
+   "new": [
+    "| Programme placement and dependency graph | `RTG_PROGRAMME_OVERVIEW` v1.4 (`programme-v1.4`) | registered there as a Tier 5 infrastructure entry (its §6.1, §6.5) with interfaces IF20 and IF21 (its §7.2); see §7 |"
+   ],
+   "old_sha256": "a829f5360e4cc1cc3059068caf23e6379b6717a6b0396321aaad06b84a18b3a2",
+   "new_sha256": "27ea230f00386ff4d9d981afc0eeb63b83957ff35e07f2bdd2cbc0dfecae2c0c"
+  },
+  {
+   "id": "E10",
+   "triage_rows": "5,6",
+   "kind": "str",
+   "base_lines": 70,
+   "old": [
+    "| Genesis cascade criterion and OPEN-M amplitude cascade | `RTG_GENESIS_GEOMETRY_DSN_v2.8.4` / `RTG_OPEN_M_DSN_v0.6` | companion/bridge context only; arithmetic-horizon or graph-zeta observables cannot substitute for UV inputs |"
+   ],
+   "new": [
+    "| Genesis cascade criterion and OPEN-M amplitude cascade | `RTG_GENESIS_GEOMETRY_DSN` v2.10 (`gen-v2.10`) / `RTG_OPEN_M_DSN` v0.7.1 (`uvm-v0.7.1`) | companion/bridge context only; arithmetic-horizon or graph-zeta observables cannot substitute for UV inputs |"
+   ],
+   "old_sha256": "b7d489c0f222f855b12290ff53986ab4b66163231283c87caa281c0317019470",
+   "new_sha256": "8bb6962d246111de3ec231ec98e7e0f970806af7bf5a0285e589db3a84e78eef"
+  },
+  {
+   "id": "E11",
+   "triage_rows": "3",
+   "kind": "str",
+   "base_lines": 98,
+   "old": [
+    "- `[import-ref]` **$p=5$ lattice cancellation is unique.** $G_{\\rm lattice}(5)=0$ with both sides nonzero and equal: a non-trivial degree-4 lattice bridge cancellation with no analogue at other tested $p$. `[ALG]` `[RID: DYAD-ALG-GLATTICE5]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`"
+   ],
+   "new": [
+    "- `[import-ref]` **$p=5$ lattice cancellation is unique.** $G_{\\rm lattice}(5)=0$ with both sides nonzero and equal: a non-trivial degree-4 lattice bridge cancellation with no analogue at other tested $p$. `[ALG]` `[RID: DYAD-ALG-GLATTICE5]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`"
+   ],
+   "old_sha256": "b5fedf850e2fdb000e35fafc92d40e9c52099fb2d68d7f3e717dda8abca55743",
+   "new_sha256": "98c3fb011ff5f85279b515decbbf6a78087a478875646769e718f32128dae2de"
+  },
+  {
+   "id": "E12",
+   "triage_rows": "10",
+   "kind": "line",
+   "base_lines": 103,
+   "old": [
+    "- `[import-ref]` **The dyadic channel boundary is closed at $b=4$.** Universal pure anti-holomorphic raw vanishing holds iff $b\\le4$ for the dyadic map and fails at $b=5$ for every $p\\ge6$; all-$b\\ge5$ persistence and general-coefficient versions remain `[OPEN]`. `[ALG]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`"
+   ],
+   "new": [
+    "- `[import-ref]` **The dyadic channel boundary at $b=4$.** Universal pure anti-holomorphic raw vanishing (for $p\\ge b+2$) holds for $b\\in\\{2,3,4\\}$ and fails at $b=5$ for every $p\\ge6$; all-$b\\ge5$ persistence and general-coefficient versions remain `[OPEN]`, so no \"iff $b\\le4$\" statement is made (the owner withdrew that shorthand). `[ALG]` `[RID: DYAD-ALG-B5-ALLP-NONVANISHING]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`"
+   ],
+   "old_sha256": "bef89dbfd661027a2bf82b11377ba327f2a99259aea3f7b20b0d1f7ed7d27865",
+   "new_sha256": "67adae3fbc5c9565eebcdf3deb0e458a264065410373547335db9ac11ba9d3f9"
+  },
+  {
+   "id": "E13",
+   "triage_rows": "2,27",
+   "kind": "block",
+   "base_lines": [
+    151,
+    157
+   ],
+   "old": [
+    "Programme-level guards from `RTG_PROGRAMME_OVERVIEW_v1.1` apply in full. Sub-study guards specific to this document follow.",
+    "",
+    "**[SG-PROG-1]** No result may flow between the discrete and continuous branches without a named bridge theorem. This is the primary firewall governing Thread B (§4) of this study. `[source: RTG_PROGRAMME_OVERVIEW_v1.1]`",
+    "",
+    "**[SG-PROG-2]** No continuous-branch coefficient may be described as physically primitive until OPEN-P0 is resolved. All Thread A results (§4.1) carry this programme-level condition. `[source: RTG_PROGRAMME_OVERVIEW_v1.1]`",
+    "",
+    "**[SG-PROG-4]** No result from Tier 4 or Tier 5 may be used to strengthen a result in Tier 3 without an explicit bridge theorem. This study is Tier 5 and must not inject Thread B/C items into Thread A or vice versa. `[source: RTG_PROGRAMME_OVERVIEW_v1.1]`"
+   ],
+   "new": [
+    "Programme-level guards SG-PROG-1 to SG-PROG-4 of `RTG_PROGRAMME_OVERVIEW` v1.4 (`programme-v1.4`) §8 apply in full. Their governing text is there and is not quoted here; the three entries below state only how each applies to this study. Sub-study guards specific to this document follow.",
+    "",
+    "**[SG-PROG-1]** (cross-branch physical use). No physical law, coefficient, observable identification or evidential strengthening passes between the discrete and continuous branches of this study without a named, proved bridge. This is the primary firewall governing Thread B (§4) of this study. `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`",
+    "",
+    "**[SG-PROG-2]** (model selection is not local proof status). All Thread A results (§4.1) are conditional on the selected continuous generator and are not described as physically primitive while OPEN-P0 is open. `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`",
+    "",
+    "**[SG-PROG-4]** (document location does not create transfer authority). This study's Tier 5 hub placement is not a bridge: Thread B/C items are not injected into Thread A or vice versa. `[source: RTG_PROGRAMME_OVERVIEW v1.4 §8]`"
+   ],
+   "old_sha256": "65d07858de6d7fcb13be445190ea0996131464e44f47ac3c5d4aee4ac7769ac4",
+   "new_sha256": "c3a95544b77b135a003d5d72c0702b58134a72abbd2258375c5ffd4937b8d7a1"
+  },
+  {
+   "id": "E14",
+   "triage_rows": "3",
+   "kind": "str",
+   "base_lines": 199,
+   "old": [
+    "**Ownership:** `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1`, §2 and §6.11.  "
+   ],
+   "new": [
+    "**Ownership:** `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 (`dyad-v6.4.23`), §2 and §6.11.  "
+   ],
+   "old_sha256": "02de191b2c385a9b424da5743186983f4c1eed4df83320808eddf8336ff763b9",
+   "new_sha256": "a4efae43588146451060219762f0a0636bd63c406184dd21c64839b64c4c0686"
+  },
+  {
+   "id": "E15",
+   "triage_rows": "3",
+   "kind": "str",
+   "base_lines": 200,
+   "old": [
+    "**Status here:** Reference only. All results cited as `[import-ref]`. This document does not own, retag, or add sub-items to Dyadic OPEN 9. v0.6 carries the Thread A ledger forward from v0.5 unchanged in content; no Thread A item is altered by the Thread C work."
+   ],
+   "new": [
+    "**Status here:** Reference only. All results cited as `[import-ref]`. This document does not own, retag, or add sub-items to Dyadic OPEN 9. v0.7 synchronizes the Thread A ledger with Dyadic v6.4.23 (pins, identifiers and owner corrections; Appendix A); no Thread A item is altered by the Thread C work."
+   ],
+   "old_sha256": "e271ddea066df7a5985a39e8b6fd6d947188e46b291f2780058659b10e58203f",
+   "new_sha256": "1cfd7bce31dc5bb81bfe89e31dddc498bdd6c4a85b4d6112d7294ccf1f2ecd1b"
+  },
+  {
+   "id": "E16",
+   "triage_rows": "9",
+   "kind": "line",
+   "base_lines": 204,
+   "old": [
+    "`[import-ref]` `[THM]` **Raw cubic theorem.** The raw cubic coefficient of the $p$-step map is exact. `[RID: DYAD-THM-RAW-CUBIC]`"
+   ],
+   "new": [
+    "`[import-ref]` `[THM]` **Raw cubic theorem.** For the declared $K_p$ family in the raw $Z_p$ eigenframe, the $z^2\\bar z$ coefficient of the **raw one-step map** is exact, for $p\\ge3$. It is not a statement about the raw $p$-step map. Owner caveat: the formula is recovered and algebraically verified; its identity with the historical proposition is not yet established (Dyadic Appendix E). `[RID: DYAD-THM-RAW-CUBIC]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §2 OPEN 9]`"
+   ],
+   "old_sha256": "45851b38fee4892030f9db531ef00acbfc9c5eba81a61a31dfff0f83a51f1398",
+   "new_sha256": "3937ccc1b4598b5b7b277c43cbad606a7af26e9ab4b9df73ad0772c812b3a458"
+  },
+  {
+   "id": "E17",
+   "triage_rows": "18",
+   "kind": "line",
+   "base_lines": 208,
+   "old": [
+    "- $p=5$: $\\nu_5^{(5)}$ exact over $\\mathbb{Q}(\\sqrt5, \\sqrt{10+2\\sqrt5})$"
+   ],
+   "new": [
+    "- $p=5$: $\\nu_5^{(5)}$ exact in $\\mathbb{Q}(\\zeta_5)$ (real and imaginary parts in $\\mathbb{Q}(\\sqrt5,\\sqrt{10+2\\sqrt5})$)"
+   ],
+   "old_sha256": "f57830e522cda1ca052b9b44496bdd625cb510ded7e5754666b56afb2aa84855",
+   "new_sha256": "5ac92942cebe3160f603ff6858d995a4f9f3924df6d04205cb8524cff5859f2e"
+  },
+  {
+   "id": "E18",
+   "triage_rows": "11",
+   "kind": "after",
+   "base_lines": 220,
+   "old": [],
+   "new": [
+    "`[import-ref]` `[THM]` `[scope: all $p=4s$, $s\\ge2$]` **Cubic cascade $q=4$, $(0,3)$ phase/factorization law.** $Q_p=i\\,\\zeta_p^3\\,M_p$ with $M_p\\in\\mathbb{Q}(\\zeta_p)^+$; $p=8$ is the zero degeneracy ($Q_8=0$). This closes the exact cascade formula for the family $p=4s$; it is not a generic-$s$ formula. `[RID: DYAD-THM-Q403-PHASELAW]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`",
+    ""
+   ],
+   "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "new_sha256": "b67b7d8a45dd248ad0cdbd96c8888ada6319173505e9a9152436bd070bd3b789"
+  },
+  {
+   "id": "E19",
+   "triage_rows": "3,10",
+   "kind": "str",
+   "base_lines": 229,
+   "old": [
+    "`[import-ref]` `[ALG]` **Channel classification boundary at $b=4$ (dyadic map).** Universal pure anti-holomorphic raw vanishing for $p\\ge b+2$ holds for $b\\in\\{2,3,4\\}$ and fails at $b=5$ for every $p\\ge6$. The all-$p$ $b=5$ failure is proved by secular-mode extraction plus cyclotomic non-division, not merely finite scan. The all-$b\\ge5$ persistence and general-coefficient versions remain `[OPEN]`. `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`"
+   ],
+   "new": [
+    "`[import-ref]` `[ALG]` **Channel classification boundary at $b=4$ (dyadic map).** Universal pure anti-holomorphic raw vanishing for $p\\ge b+2$ holds for $b\\in\\{2,3,4\\}$ and fails at $b=5$ for every $p\\ge6$. The all-$p$ $b=5$ failure is proved by secular-mode extraction plus cyclotomic non-division, not merely finite scan. The all-$b\\ge5$ persistence and general-coefficient versions remain `[OPEN]`. `[RID: DYAD-ALG-B5-ALLP-NONVANISHING]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`"
+   ],
+   "old_sha256": "cc046caedcb282a434afdb0973eb43de677f55bebc040ce7855ff83cd632c4df",
+   "new_sha256": "c4d53f6293153b02e78afef1caa93300f1fe0c7e4c91d70bc5069d2576fa1d34"
+  },
+  {
+   "id": "E20",
+   "triage_rows": "10,17",
+   "kind": "str",
+   "base_lines": 231,
+   "old": [
+    "`[import-ref]` `[ALG, exact]` **Direct-accumulation weight vanishing.** For channel $(0,b)$, the direct accumulation weight is $\\lambda^{-(b+1)k}$, and the $p$-fold orbit sum vanishes when $p\\nmid(b+1)$. This is an arithmetic kernel of the $b\\le4$ vanishing boundary. Scope precision: the all-$p$ $b=5$ failure is not a consequence of the direct-weight argument alone; it uses a separate secular-coefficient nonvanishing and cyclotomic non-division proof for the dyadic map (`DYAD-OPEN-B5-ALLP`, with `DYAD-ART-B5-SECULAR` as the secular-coefficient artifact). `[RID: DYAD-ALG-DIRECT-WEIGHT]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`"
+   ],
+   "new": [
+    "`[import-ref]` `[ALG, exact]` **Direct-accumulation weight vanishing.** For channel $(0,b)$, the direct accumulation weight is $\\lambda^{-(b+1)k}$, and the $p$-fold orbit sum vanishes when $p\\nmid(b+1)$. This is an arithmetic kernel of the $b\\le4$ vanishing boundary. Scope precision: the all-$p$ $b=5$ failure is not a consequence of the direct-weight argument alone; it uses a separate secular-coefficient nonvanishing and cyclotomic non-division proof for the dyadic map (`DYAD-ALG-B5-ALLP-NONVANISHING`, with `DYAD-ART-B5-SECULAR` as the secular-coefficient artifact; `DYAD-OPEN-B5-ALLP` is the closed lifecycle identifier). `[RID: DYAD-ALG-DIRECT-WEIGHT]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §2 OPEN 9]`"
+   ],
+   "old_sha256": "41b7bb8199ecebbe871ae4aa717b3ab6e6b28b929d9268611ec3f9aa4e40419e",
+   "new_sha256": "6a6172df9e9cdccb8f305b1e45a64e0601b981a98da3d40b43d529d7e18b7a87"
+  },
+  {
+   "id": "E21",
+   "triage_rows": "17",
+   "kind": "str",
+   "base_lines": 233,
+   "old": [
+    "`[import-ref]` `[ALG, exact]` **Cyclotomic cross-term identity.** $\\tfrac12[(\\sum_j\\lambda^{2j})^2-\\sum_j\\lambda^{4j}]=0$ for all $p\\ge5$. This exact cyclotomic sum cancellation is used in the degree-4 vanishing proof to eliminate the only possible cross-path contribution in the clean range. `[RID: DYAD-ALG-CROSS-IDENTITY]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §6.11]`"
+   ],
+   "new": [
+    "`[import-ref]` `[ALG, exact]` **Cyclotomic cross-term identity.** $\\tfrac12[(\\sum_j\\lambda^{2j})^2-\\sum_j\\lambda^{4j}]=0$ for all $p\\ge5$. This exact cyclotomic sum cancellation is used in the degree-4 vanishing proof to eliminate the only possible cross-path contribution in the clean range. `[RID: DYAD-ALG-CROSS-IDENTITY]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §2 OPEN 9]`"
+   ],
+   "old_sha256": "d65085c192f70127d351f9fb163fdd840c33d858abe32e450f9aeded754d415f",
+   "new_sha256": "cfecaad6bbb5f85e0c602d8d69a7ca241badd1f2caba33dee051a5cb8a0bfbab"
+  },
+  {
+   "id": "E22",
+   "triage_rows": "14,15",
+   "kind": "str",
+   "base_lines": 235,
+   "old": [
+    "`[import-ref]` `[ALG]` `[conv: raw Birkhoff-strobe]` **Degree-2 $q=3$ anti-holomorphic cancellation theorem.** For all $p>3$ with $3\\mid p$, $\\operatorname{Coeff}_{(0,2)}[\\tau_{\\le D}(L_p^{-p/3} f_p^{p/3}-\\mathrm{Id})]=0$ for all $D\\ge2$. Two-component structure: (a) reachability — the $(0,2)$ slot is dynamically active in the one-step map for $p>3$, so the zero is not vacuous; (b) cancellation — the $s$-step strobe kills the reachable slot by a geometric phase sum of a primitive $s$-th root of unity at the direct-averaging layer, anchored by the eigenframe linear-part lemma. This is a closed general sub-horizon cancellation theorem and a clear source-scoped example of composite-horizon cyclic-subgroup structure producing a selection rule. `[RID: DYAD-ALG-Q3-CANCEL]` `[source: RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 §2 OPEN 9]`"
+   ],
+   "new": [
+    "`[import-ref]` `[ALG]` `[conv: raw Birkhoff-strobe]` **Degree-2 $q=3$ anti-holomorphic cancellation theorem.** For all $p>3$ with $3\\mid p$, $\\operatorname{Coeff}_{(0,2)}[\\tau_{\\le D}(L_p^{-p/3} f_p^{p/3}-\\mathrm{Id})]=0$ for all $D\\ge2$. Two-component structure: (a) reachability — the $(0,2)$ slot is dynamically active in the one-step map for $p>3$, so the zero is not vacuous; (b) cancellation — the $s$-step strobe kills the reachable slot by a geometric phase sum of a primitive $s$-th root of unity at the direct-averaging layer, anchored by the eigenframe linear-part lemma (the owner keeps that lemma `[ALG]`; its statement is not recovered, Dyadic Appendix D). This is a closed general sub-horizon cancellation theorem and a clear source-scoped example of composite-horizon cyclic-subgroup structure producing a selection rule. `[RID: DYAD-ALG-Q3-DEG2-CANCEL]` `[source: RTG_DYADIC_OSCILLATOR_DSN v6.4.23 §6.11]`"
+   ],
+   "old_sha256": "b49be9861edb5e47bccc8563aa0d71c34d5027049272b52e25948c1a3d9ee7de",
+   "new_sha256": "fe410083d714b2f8ea48d12148862ef1278954bcf8c3d9e87be04e9b77510d2b"
+  },
+  {
+   "id": "E23",
+   "triage_rows": "15",
+   "kind": "str",
+   "base_lines": 237,
+   "old": [
+    "`[import-ref]` `[ALG]` **Subgroup-charge projector formalism.** Current OPEN 9 canonical objects include $\\mathcal{Q}(p)$, $s=p/q$, $\\chi_p(a,b)=a-b-1\\pmod p$, $K^{\\rm extra}_{p,q}$, $\\Pi^{\\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\\mathcal{B}^{extra}_{p,q,D}$, $Z^{\\rm miss}_{p,q,D}$, $C^{\\rm mult}_{\\rm sub}$, $C^{\\rm uniq}_{\\rm sub}$, and $\\Delta_{\\rm overlap}$. The closed cardinality lemma $|K^{\\rm extra}_{p,q}|=s-1$ makes the formalism computable without raw case enumeration in the registered sub-horizon setting. `[source: DYAD-OPEN-P-RESONANCE]`"
+   ],
+   "new": [
+    "`[import-ref]` `[ALG]` **Subgroup-charge projector formalism.** Current OPEN 9 canonical objects include $\\mathcal{Q}(p)$, $s=p/q$, $\\chi_p(a,b)=a-b-1\\pmod p$, $K^{\\rm extra}_{p,q}$, $\\Pi^{\\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\\mathcal{B}^{extra}_{p,q,D}$, $Z^{\\rm miss}_{p,q,D}$, $C^{\\rm mult}_{\\rm sub}$, $C^{\\rm uniq}_{\\rm sub}$, and $\\Delta_{\\rm overlap}$. The closed cardinality lemma $|K^{\\rm extra}_{p,q}|=s-1$ makes the formalism computable without raw case enumeration in the registered sub-horizon setting. Owner evidence boundary (Dyadic Appendix D): $\\chi_p$, $K^{\\rm extra}_{p,q}$ and the cardinality lemma are defined; the other eight objects ($\\mathcal{Q}(p)$, $\\Pi^{\\rm extra}_{p,q}$, $J^{extra,raw}_{p,q,D}$, $\\mathcal{B}^{extra}_{p,q,D}$, $Z^{\\rm miss}_{p,q,D}$, $C^{\\rm mult}_{\\rm sub}$, $C^{\\rm uniq}_{\\rm sub}$, $\\Delta_{\\rm overlap}$) keep their names without a recovered definition, so they are not usable here for independent computation. `[source: DYAD-OPEN-P-RESONANCE]`"
+   ],
+   "old_sha256": "928c794b2857d0da8474d496853235ec793eb49094036b9a3eb681dcc05a98a1",
+   "new_sha256": "eac97139130a67b515f69994d7783b1a48cc1498690d68eab05b18c47001f578"
+  },
+  {
+   "id": "E24",
+   "triage_rows": "3,13",
+   "kind": "line",
+   "base_lines": 243,
+   "old": [
+    "The following items are owned by `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1` OPEN 9. They are listed here as programme context only. Progress on them is tracked in the Dyadic DSN, not here."
+   ],
+   "new": [
+    "The following items are owned by `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 OPEN 9. They are listed here as programme context only. Progress on them is tracked in the Dyadic DSN, not here; the owner's current list is Dyadic §2 OPEN 9 (active sub-items), which also holds items not repeated here."
+   ],
+   "old_sha256": "5bab25d2343d6f1a8e343cb16632d5b70c3ee7fb084d42e71d740df9da906ca7",
+   "new_sha256": "3442cfa85fde430353fcb1a51079b2f9e46effba04447cc7c4797466654139e1"
+  },
+  {
+   "id": "E25",
+   "triage_rows": "11",
+   "kind": "delete",
+   "base_lines": 245,
+   "old": [
+    "- Exact cubic cascade formula for $q=4,(0,3)$: why does $p=8$ cancel while $p=12$ survives at $-13+15\\sqrt3/2$?"
+   ],
+   "new": [],
+   "old_sha256": "1907fe9778c08dcbfcd9c0c2f9f3725ed5f070e17112a66f69b850311200bdda",
+   "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "id": "E26",
+   "triage_rows": "12,13",
+   "kind": "line",
+   "base_lines": 250,
+   "old": [
+    "- Near-cancellation structure of $-13+15\\sqrt3/2\\approx0.0096$ at the $p=12$, $q=4$, $(0,3)$ cascade boundary; algebraic nonzero is closed, structural explanation remains `[OPEN]`."
+   ],
+   "new": [
+    "- Near-cancellation structure at the $p=12$, $q=4$, $(0,3)$ cascade boundary, $-13+15\\sqrt3/2\\approx-0.0096$ (modulus $0.0096$): algebraic nonzero is closed and the exact cascade formula is closed (`DYAD-THM-Q403-PHASELAW`, §4.1.1); the structural explanation — in the owner's current form, the exact large-$p$ behaviour of $|Q_p|$ — remains `[OPEN]`."
+   ],
+   "old_sha256": "4a2a8ec8c865a509da6f6eb3b07ae36a1059b29d2ed316ae62925a2edfc5550f",
+   "new_sha256": "4164ebceaaf77cf3655a46896e84b8b0ce4aabe5fa63d2e42894f71e855a7ea4"
+  },
+  {
+   "id": "E27",
+   "triage_rows": "4",
+   "kind": "str",
+   "base_lines": 268,
+   "old": [
+    "**Ownership:** `RTG_DISCRETE_GENESIS_DSN_v2.12`.  "
+   ],
+   "new": [
+    "**Ownership:** `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`).  "
+   ],
+   "old_sha256": "0e004dbb43b009a058689b8ecd076c2efb06761b770d7fb8ccdcba6e39aba606",
+   "new_sha256": "7e5299ec16befcb73223ca43c9740da9645940bc9c4c26402ca134f036f63fa0"
+  },
+  {
+   "id": "E28",
+   "triage_rows": "4",
+   "kind": "str",
+   "base_lines": 269,
+   "old": [
+    "**Status here:** Branch-local context and bridge-candidate observable family under OPEN-P1. SG-PROG-1, SG-PROG-4, SG-AZ-3, and SG-AZ-0.4 apply. No TDR-G result is imported as a cross-branch claim, and no TDR-G fact is used as evidence for a Dyadic claim. v0.6 carries Thread B forward unchanged."
+   ],
+   "new": [
+    "**Status here:** Branch-local context and bridge-candidate observable family under OPEN-P1. SG-PROG-1, SG-PROG-4, SG-AZ-3, and SG-AZ-0.4 apply. No TDR-G result is imported as a cross-branch claim, and no TDR-G fact is used as evidence for a Dyadic claim. v0.7 synchronizes Thread B with TDR-G v2.12.14 (owner RIDs and owner corrections; Appendix A)."
+   ],
+   "old_sha256": "6d56db3fb54e758acc8ee64a52109bb0c9c4bdb5c948e9e7ecbed5ce52331c1f",
+   "new_sha256": "bf73ef5d510389fbd0256c0c3254619e55b1cf33dd3bfc4b8d7dd366018ad67a"
+  },
+  {
+   "id": "E29",
+   "triage_rows": "19",
+   "kind": "str",
+   "base_lines": 271,
+   "old": [
+    "`[bridge-candidate]` **$\\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\\Delta_{ij}=(\\theta_i-\\theta_j)\\bmod N$, and absolute phases gauge. The defect band is $\\mathcal{D}_k=\\{\\Delta\\in\\mathbb{Z}_N: \\operatorname{dist}_{\\mathbb{Z}_N}(\\Delta,N/2)\\le k\\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[source: RTG_DISCRETE_GENESIS_DSN_v2.12 §1]`"
+   ],
+   "new": [
+    "`[bridge-candidate]` **$\\mathbb{Z}_N$ finite-state substrate.** TDR-G is defined on $\\mathbb{Z}_N$ with even $N$, variable node count, relational phases $\\Delta_{ij}=(\\theta_i-\\theta_j)\\bmod N$, and absolute phases gauge. The defect band is $\\mathcal{D}_k=\\{\\Delta\\in\\mathbb{Z}_N: \\operatorname{dist}_{\\mathbb{Z}_N}(\\Delta,N/2)\\le k\\}$. This gives Thread B a concrete arithmetic memory horizon $(N,k)$, but not yet a bridge to Dyadic $p$-resonance. `[RID: TDRG-DEF-ZN-STATE]` (phase universe and variable-size state) `[RID: TDRG-DEF-PHYSICAL-STATE]` (physical state as the quotient by global phase; relational phases) `[RID: TDRG-DEF-BAND]` (defect band) `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §6.1]`"
+   ],
+   "old_sha256": "4673d5a6c5f8c5c5f7cb1413b464a37c2b996d1fcade26226fa60c4af19e3083",
+   "new_sha256": "f08088256c4fe9de8ca9136069f7ee55d220fead48481e37d1a226c78b4b2c4e"
+  },
+  {
+   "id": "E30",
+   "triage_rows": "20",
+   "kind": "str",
+   "base_lines": 273,
+   "old": [
+    "`[bridge-candidate]` **Reachability / superselection.** For $k=0$, two-node interaction occurs iff $\\gcd(d,N)\\mid(N/2-\\Delta_0)$; unreachable pairs are superselection sectors. v2.12 adds the band-form extension LEM-REACH: $\\mathcal{D}_k$ is reachable iff $\\mathcal{D}_k\\cap(\\Delta_0+g\\mathbb{Z}_N)\\neq\\varnothing$; superselection persists at $k>0$ in the two-node universe. `[THM/ALG in source]` `[scope: branch-local]`"
+   ],
+   "new": [
+    "`[bridge-candidate]` **Reachability / superselection.** For $k=0$, two-node interaction occurs iff $\\gcd(d,N)\\mid(N/2-\\Delta_0)$; unreachable pairs are superselection sectors. The band-form extension is LEM-REACH (`TDRG-ALG-LEM-REACH`; the $k=0$ statement is `TDRG-THM-REACHABILITY-K0`): $\\mathcal{D}_k$ is reachable iff $\\mathcal{D}_k\\cap(\\Delta_0+g\\mathbb{Z}_N)\\neq\\varnothing$; superselection persists at $k>0$ in the two-node universe. `[THM/ALG in source]` `[scope: branch-local]`"
+   ],
+   "old_sha256": "1af7f845a2ce8d20304ae20daaa15f2f5c9dfbdb5a9b08efb8ddd5da9f1c7d51",
+   "new_sha256": "66242bcd253d35d4959e86ee57c59a5d4137291d8f2647c2b3ef7b7dd8883e56"
+  },
+  {
+   "id": "E31",
+   "triage_rows": "21",
+   "kind": "str",
+   "base_lines": 275,
+   "old": [
+    "`[bridge-candidate]` **Retrigger / binding threshold.** LEM-RETRIG gives an exact two-node period-2 retrigger criterion: $\\varepsilon\\in B_k\\cap(B_k+d)$, possible iff $|d|_c\\le2k$. This is arithmetic memory inside TDR-G only; it is not evidence for Dyadic resonance closure. `[ALG in source]` `[scope: two-node TDR-G]`"
+   ],
+   "new": [
+    "`[bridge-candidate]` **Retrigger / binding threshold.** LEM-RETRIG (`TDRG-ALG-LEM-RETRIG`) gives an exact two-node retrigger criterion for a bound state of period dividing 2 (least period 2 for $d\\ne0$; $d=0$ is a fixed point): $\\varepsilon\\in B_k\\cap(B_k+d)$, possible iff $|d|_c\\le2k$. This is arithmetic memory inside TDR-G only; it is not evidence for Dyadic resonance closure. `[ALG in source]` `[scope: two-node TDR-G]`"
+   ],
+   "old_sha256": "0bfa06b11836836db6321b4af23ce062532d9914afbbcce04df28029cac46933",
+   "new_sha256": "d1ebef0a2cf6e5cdbe06bf84c44b435e86487067c68f6429d051556f0ea25f70"
+  },
+  {
+   "id": "E32",
+   "triage_rows": "22",
+   "kind": "str",
+   "base_lines": 277,
+   "old": [
+    "`[bridge-candidate]` **Advance-spectrum conservation.** LEM-SPECCONS states that in the three-node no-birth universe the multiset $\\{|d_{AB}|_c,|d_{BC}|_c,|d_{CA}|_c\\}$ is exactly conserved under swap/$P_3$/tie events. Equivalently, the multiset of orbit-lattice spacings $\\{\\gcd(d_{ij},N)\\}$ is conserved. Star blow-up creates new nodes and new pairwise advances; generalization beyond the no-birth sector remains source-scoped/open. `[ALG]` `[scope: 3 nodes, no star blow-up]`"
+   ],
+   "new": [
+    "`[bridge-candidate]` **Advance-spectrum conservation.** LEM-SPECCONS (`TDRG-ALG-LEM-SPECCONS`) states that in the three-node no-birth universe the multiset $\\{|d_{AB}|_c,|d_{BC}|_c,|d_{CA}|_c\\}$ is exactly conserved under swap/$P_3$/tie events. In particular, the multiset of orbit-lattice spacings $\\{\\gcd(d_{ij},N)\\}$ is conserved; this is a consequence only — the converse fails (owner counterexample at $N=24$: $|d|_c=1$ and $|d|_c=5$ share $\\gcd=1$). Star blow-up creates new nodes and new pairwise advances; generalization beyond the no-birth sector remains source-scoped/open. `[ALG]` `[scope: 3 nodes, no star blow-up]`"
+   ],
+   "old_sha256": "a89648fb7c8dd4a733cead1a923580743b3915e04292e068dd283a7612751861",
+   "new_sha256": "52c1da9c2ef0c87d5e03d3d6b254a97a74d8554bae97845ded95d707339d6789"
+  },
+  {
+   "id": "E33",
+   "triage_rows": "23",
+   "kind": "str",
+   "base_lines": 279,
+   "old": [
+    "`[bridge-candidate]` **BIND3 arithmetic/parity diagnostics.** In the exact three-node $N=24,k=1$ BIND3 enumeration, the isolated period-2 bound dyad is not a persistent primitive: most bound-entry ICs become multi-pair recurrent scattering cycles with bond transfer; pure-bound survival is confined to even-advance parity sectors; conserved spectrum gates autonomous retrigger. BIND3-KNIFE is `[FAIL]`/`[REPLACED]`, and the odd-sector memory claim is `[COR]` as a composition artifact. `[ALG/NUM strong in source]` `[scope: N=24,k=1; no-birth/three-node]`"
+   ],
+   "new": [
+    "`[bridge-candidate]` **BIND3 arithmetic/parity diagnostics.** In the exact three-node $N=24,k=1$ BIND3 enumeration, the isolated period-2 bound dyad is not a persistent primitive: most bound-entry ICs become multi-pair recurrent scattering cycles with bond transfer; pure-bound survival is confined to even-advance parity sectors; conserved spectrum gates autonomous retrigger. BIND3-KNIFE is `[FAIL]`/`[REPLACED]`, and the odd-sector memory claim is `[COR]` as a composition artifact. `[ALG/NUM strong in source]` `[scope: N=24,k=1; no-birth/three-node]` `[conv: v18 path orientation]` (owner RIDs: `TDRG-ALG-BIND3-CYCLE-N24K1`; `TDRG-NUM-BIND3-PARITY`, `TDRG-NUM-BIND3-SPECTRAL-GATE`, `TDRG-NUM-BIND3-MEMORY-PARITY`, `TDRG-NUM-BIND3-XFER`, `TDRG-NUM-BIND3-REGEN`; these numbers were computed with the orientation completion the owner has since superseded and are not rerun by the owner)"
+   ],
+   "old_sha256": "8e8e45934b48c01f8f33f82d1c2d075eeb1f57e489c22b4e7fc148cd22c35b18",
+   "new_sha256": "bc1dda75bf6b1515218db5f5c161478b172b78bef9aabdfd75cd63b41f9d44d6"
+  },
+  {
+   "id": "E34",
+   "triage_rows": "4",
+   "kind": "str",
+   "base_lines": 281,
+   "old": [
+    "`[bridge-candidate]` **$k/N$ and N-scaling.** TDR-G v2.12 reports that $k/N$ controls entry into the growth regime and that the canonical clean branch (`bound_symmetric`) shows bulk-conditioned birth rate"
+   ],
+   "new": [
+    "`[bridge-candidate]` **$k/N$ and N-scaling.** TDR-G v2.12.14 reports that $k/N$ controls entry into the growth regime and that the canonical clean branch (`bound_symmetric`) shows bulk-conditioned birth rate"
+   ],
+   "old_sha256": "990a361f7e53203ca144af1b252d8f2a43809cb37b8e0a1d92f7244f259f1be0",
+   "new_sha256": "83761600c469e5bce3377479e39c681a81308f12d58aaf11f60df26dd402303c"
+  },
+  {
+   "id": "E35",
+   "triage_rows": "24",
+   "kind": "line",
+   "base_lines": 283,
+   "old": [
+    "at fixed $k/N=1/15$, $T=5000$, over $N=120$–$1440$, excluding tail runs $M>500$. This strongly supports thermodynamic crystallization but remains `[HEUR strong]` rather than theorem-grade. `[NUM strong / HEUR strong in source]`"
+   ],
+   "new": [
+    "at fixed $k/N=1/15$, $T=5000$, over $N=120$–$1440$, excluding tail runs $M>500$ (full-range composite fit). The exponent is window-dependent: read on $N=480$–$1440$ the same scan gives $N^{-0.730}$, and $-0.869$ is the owner's full-range value, not a structural constant. Thermodynamic crystallization in the $N\\to\\infty$ limit is a `[HEUR]` extrapolation in the source, not theorem-grade. `[NUM]` (fit) / `[HEUR]` (limit) in source `[conv: v18 path orientation]` `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §1; TDRG-OPEN-NSCALING, TDRG-OPEN-CRYSTALLIZATION]`"
+   ],
+   "old_sha256": "dadb5ffbfad2e6e4a125a5d9f25dd1a8db38b49630f608b2765b364bf429af6e",
+   "new_sha256": "8c5b56b79ff050f81df952224ca1eb4aeb620bf918ba98322ddfa33221759cd9"
+  },
+  {
+   "id": "E36",
+   "triage_rows": "4,26",
+   "kind": "str",
+   "base_lines": 285,
+   "old": [
+    "`[bridge-candidate]` **TDR-26 birth-anchored discriminator.** Discrete Genesis v2.12 records a birth-anchored dataset fact over $[\\mathrm{fb},\\mathrm{fb}+200)$, where $\\mathrm{fb}$ is first-birth step: the rule $b/\\text{step}\\ge0.30\\wedge ms_{\\rm abs}\\le0.25$ is satisfied by both known defective/crystallization-failure runs and by none of the 198 known bulk runs across $N=720$ and $N=722$ (combined TP=2, FP=0, FN=0, TN=198). Source tag split must be preserved: the dataset separation is `[NUM cross-cell, n=2]`, while the classifier/out-of-sample claim remains `[HEUR]` pending batch-scale validation. For this DSN it is a branch-local memory-window observable only, not a bridge theorem. `[source: RTG_DISCRETE_GENESIS_DSN_v2.12 TDR-26]`"
+   ],
+   "new": [
+    "`[bridge-candidate]` **TDR-26 birth-anchored discriminator.** Discrete Genesis v2.12.14 records (OPEN TDR-26, `TDRG-OPEN-LOCKING-FAIL`) a birth-anchored dataset fact over $[\\mathrm{fb},\\mathrm{fb}+200)$, where $\\mathrm{fb}$ is first-birth step: the rule $b/\\text{step}\\ge0.30\\wedge ms_{\\rm abs}\\le0.25$ is satisfied by both known defective/crystallization-failure runs and by none of the 198 known bulk runs across $N=720$ and $N=722$ (combined TP=2, FP=0, FN=0, TN=198). Source tag split must be preserved: the dataset separation is `[NUM cross-cell, n=2]`, while the classifier/out-of-sample claim remains `[HEUR]` pending batch-scale validation. For this DSN it is a branch-local memory-window observable only, not a bridge theorem. `[source: RTG_DISCRETE_GENESIS_DSN v2.12.14 §2 OPEN TDR-26]`"
+   ],
+   "old_sha256": "2d1daf2bba7260e75b89da94ec97545610e870c82ce5db3728b33a77b348b290",
+   "new_sha256": "c1bfed823feff363a12dbb375215dc2140c8e4f7ba8e0c6ae6eb4b8ac8dec28e"
+  },
+  {
+   "id": "E37",
+   "triage_rows": "25",
+   "kind": "line",
+   "base_lines": 287,
+   "old": [
+    "`[bridge-candidate]` **TDR-24 frontier.** The immediate discrete frontier is the TDR-24 derivation chain: slot-volume identity, topological filtering, and geometric compression. It must close before discrete triadic dynamics can be studied. This DSN may track arithmetic/zeta observables that could assist TDR-24 or future OPEN-P1, but cannot promote them without source-DSN closure and bridge routing."
+   ],
+   "new": [
+    "`[bridge-candidate]` **TDR-24 frontier.** The immediate discrete frontier is the TDR-24 derivation chain. In TDR-G v2.12.14 the slot-volume identity (TDR-24D) and the structural-to-slot projection (TDR-24F) are closed at the mechanism level, with their analytic constants open; the gate before discrete triadic dynamics is TDR-24A (topological filtering, `TDRG-OPEN-TOPO-FILTER`) → TDR-24B (pair-to-component compression, `TDRG-OPEN-CHI-SCALING`) → TDR-24C (thermodynamic suppression, `TDRG-OPEN-THERMO-SUPPRESS`). This DSN may track arithmetic/zeta observables that could assist TDR-24 or future OPEN-P1, but cannot promote them without source-DSN closure and bridge routing."
+   ],
+   "old_sha256": "638fe14702cc09e4ca8cd22f78e90abd8ec791a1bcfb7009bd867f34961c891b",
+   "new_sha256": "b5149f71c5c5d42e5055ed6994eae45b0456fb037bbeacaaee3e4a960d208a18"
+  },
+  {
+   "id": "E38",
+   "triage_rows": "4",
+   "kind": "str",
+   "base_lines": 410,
+   "old": [
+    "| TDR-G arithmetic structure | Branch-local / `[bridge-candidate]` from Discrete Genesis v2.12 | Active cross-branch import; evidence for Dyadic/bridge claim | SG-PROG-1, SG-AZ-3 |"
+   ],
+   "new": [
+    "| TDR-G arithmetic structure | Branch-local / `[bridge-candidate]` from Discrete Genesis v2.12.14 | Active cross-branch import; evidence for Dyadic/bridge claim | SG-PROG-1, SG-AZ-3 |"
+   ],
+   "old_sha256": "caf53187145761b804f8b24f2665c844783cfebbe74ec5e92ed06d85ef9c08ee",
+   "new_sha256": "fc23291362df228a23c121fe0bcd7e03fd41fd4a158e1353a6fa6d3839c7ac44"
+  },
+  {
+   "id": "E39",
+   "triage_rows": "3,11,13",
+   "kind": "line",
+   "base_lines": 427,
+   "old": [
+    "Thread A collects the current Dyadic arithmetic horizon as an import-ref ledger from `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1`. The active arithmetic frontier remains cubic cascade $q=4,(0,3)$, universal missing-slot rules, bridge-gap smooth baseline, near-cancellation structure, all-$b\\ge5$ persistence/general-coefficient extension, and the universal $\\nu_5^{(p)}$ theorem."
+   ],
+   "new": [
+    "Thread A collects the current Dyadic arithmetic horizon as an import-ref ledger from `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23. The active arithmetic frontier listed in §4.1.2 is: universal missing-slot rules, bridge-gap smooth baseline, near-cancellation structure, all-$b\\ge5$ persistence/general-coefficient extension, and the universal $\\nu_5^{(p)}$ theorem; the exact cubic cascade formula for $q=4,(0,3)$ is closed in Dyadic (`DYAD-THM-Q403-PHASELAW`). The owner's current list is Dyadic §2 OPEN 9."
+   ],
+   "old_sha256": "165e56268f46705dd8044aa30a4121ba68819c9c5418f1ffc2fbf5f98373204b",
+   "new_sha256": "1e80e4ee60a0d1381d437266f39e436bf7ea661b28864a6de9d899de1962b7d8"
+  },
+  {
+   "id": "E40",
+   "triage_rows": "5,29",
+   "kind": "str",
+   "base_lines": 437,
+   "old": [
+    "`[bridge-candidate]` Genesis v2.8.4 closes OPEN 1C and certifies that the $\\mathcal{P}_4$-only cascade is impossible in the reduced birth-race model; the cascade question routes through OPEN M. A Thread C spectral observable could in principle serve as an independent discriminator for crystallizing-vs-growth TDR-G policy branches — but only a DYNAMICAL one would qualify; the angular spectrum does not (§4.3.4). Speculative; `[SG-AZ-3, SG-AZ-4, SG-PROG-1, SG-AZ-7 apply]`."
+   ],
+   "new": [
+    "`[bridge-candidate]` In Genesis v2.10, OPEN 1C (triad chiral admissibility surface, `GEN-OPEN-CHIRAL-ADMISS`) is closed `[THM]`. Separately, within OPEN 1 (`GEN-OPEN-PHASE-DIST`, active) the $\\mathcal{P}_4$-only cascade is impossible `[RESULT]` `[scope: reduced birth-race model]` — a statement about the reduced model, not about arbitrary phase measures; cascade then requires a non-$\\mathcal{P}_4$ source, and the question routes through OPEN-GEN-II-7B (`GEN-OPEN-UVJET-ALPHAF`) and OPEN M. A Thread C spectral observable could in principle serve as an independent discriminator for crystallizing-vs-growth TDR-G policy branches — but only a DYNAMICAL one would qualify; the angular spectrum does not (§4.3.4). Speculative; `[SG-AZ-3, SG-AZ-4, SG-PROG-1, SG-AZ-7 apply]`."
+   ],
+   "old_sha256": "c295211abea2475cad1e698886877c0b9e0216dd44b5c47e14bb955075747787",
+   "new_sha256": "d9ba7ff4322250e096230ebd4cf4647ead3a953e74e58c81bc4e4ead569b0401"
+  },
+  {
+   "id": "E41",
+   "triage_rows": "1,6",
+   "kind": "line",
+   "base_lines": 440,
+   "old": [
+    "`[bridge-candidate]` The $p=6/K_4$ face-flux identity $\\lambda=e^{iF_f/2}$ is a Dyadic import-ref. The SU(2) energy ratio $E_{\\rm full}/E_{\\rm half}=4$ is source-scoped, but the OPEN-M cascade test is linear in $\\|H\\|_B$ (amplitude), so the legal correction is $\\times2$, not $\\times4$; applying $\\times4$ is a certified dimensional type error under AUDIT-1-DIMENSIONAL in the OPEN-M ledger. No arithmetic-horizon or graph-zeta result in this DSN contributes to or supersedes that verdict. `[SG-AZ-6, SG-PROG-4]`"
+   ],
+   "new": [
+    "`[bridge-candidate]` The $p=6/K_4$ face-flux identity $\\lambda=e^{iF_f/2}$ is a Dyadic import-ref. The SU(2) energy ratio $E_{\\rm full}/E_{\\rm half}=4$ is source-scoped, and the OPEN-M cascade test is linear in the admitted source amplitude $\\|H\\|_B$. OPEN-M v0.7.1 certifies no numerical deficit factor: R16 (`UVM-RESULT-AUDIT1`, `[COR]`) withdraws the earlier \"legal SU(2) correction $=2\\times$\" as a physical conclusion — the $2\\times$ branch is conditional on two unproved bridges (the source identification and an $E\\propto A^2$ constitutive relation), and the $4\\times$ energy factor is likewise not directly admissible in the amplitude-linear inequality — and R15 (`UVM-NUM-2F-RHO`) is a calibration-conditional proxy diagnostic. No arithmetic-horizon or graph-zeta result in this DSN contributes to or supersedes that verdict. `[source: RTG_OPEN_M_DSN v0.7.1 R15, R16]` `[SG-AZ-6, SG-PROG-4]`"
+   ],
+   "old_sha256": "f15a3601a2745f10199b40780c6d428d0fcbb68167a447da41c065b6c43c671c",
+   "new_sha256": "fc71379e59509c2e34e8d36155d3a89f84aa1b667c6d05612fc97f0a729f67bc"
+  },
+  {
+   "id": "E42",
+   "triage_rows": "28",
+   "kind": "line",
+   "base_lines": 443,
+   "old": [
+    "This study is a Tier 5 infrastructure entry. The Programme Overview should be updated to register `RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6`. See §7 Note."
+   ],
+   "new": [
+    "This study is a Tier 5 infrastructure entry and is registered in Programme Overview v1.4 (its §6.1, §6.5 and §7.2). See §7."
+   ],
+   "old_sha256": "534d4b8e4d3f126d34ed965589600d3950d08e5dd3b129f94ab196b37ac6ace8",
+   "new_sha256": "dba77973c0bdec992db35dd9ff8ddd87806279cb2c04914818709eb459ae0094"
+  },
+  {
+   "id": "E43",
+   "triage_rows": "2,28",
+   "kind": "block",
+   "base_lines": [
+    449,
+    471
+   ],
+   "old": [
+    "`[DEF]` The Programme Overview `RTG_PROGRAMME_OVERVIEW_v1.1` should be patched to register this study at its current version. Proposed Tier 5 entry:",
+    "",
+    "```md",
+    "**`RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN`** (current: v0.6)",
+    "",
+    "Physical question: Does arithmetic horizon structure — period length, divisibility, prime/composite",
+    "obstruction, cyclic memory, advance-spectrum conservation, and zeta/transfer spectra — play a genuine",
+    "structural role in RTG resonance dynamics, discrete relational memory, or future discrete-continuous",
+    "bridge observables?",
+    "",
+    "Maturity: Level A — infrastructure and ledger. Thread C engineering certified (AZ-1 closed,",
+    "[ENG PASS]); first Phase-2 diagnostic executed and reclassified as static Z_N substrate geometry;",
+    "no Zeta-owned cross-branch scientific result; no bridge-candidate promoted.",
+    "Imports from (by reference only): RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1 (OPEN 9 ledger).",
+    "Branch-local context from: RTG_DISCRETE_GENESIS_DSN_v2.12 (Z_N arithmetic, reachability,",
+    "advance-spectrum/BIND3/N-scaling; bridge-candidate only).",
+    "Bridge-candidate connections: OPEN-P1 (TDR-G Z_N arithmetic as candidate observable family);",
+    "NOTE the Core(G_T) 4|q angular observable is bridge-DISQUALIFIED (static Z_N geometry).",
+    "Cross-branch: SG-PROG-1, SG-PROG-4, SG-AZ-3, SG-AZ-0.4 apply; threads separated until a named",
+    "bridge theorem exists.",
+    "```",
+    "",
+    "Also: in the cross-study dependency graph, keep the dashed `[reference / bridge-candidate]` edges from Dyadic OPEN 9 and to `[RTG_DISCRETE_CONTINUOUS_BRIDGE]`, and the dashed branch-local context edge from `RTG_DISCRETE_GENESIS_DSN_v2.12`; annotate the latter `[TDR-G arithmetic context; no cross-branch import; 4|q observable bridge-disqualified]`."
+   ],
+   "new": [
+    "`[DEF]` This study is registered in `RTG_PROGRAMME_OVERVIEW` v1.4 (`programme-v1.4`): the document inventory (its §6.1; Tier 5, canonical infrastructure), the study entry (its §6.5), the cross-study dependency graph (its §7.1; a reference edge from Dyadic to Thread A and an edge from TDR-G to Threads B/C) and the interface register (its §7.2; IF20 Dyadic → AZ, reference-only, and IF21 TDR-G → AZ). The request carried through v0.6 that the Programme Overview be patched to register this study is met and closed; the proposed entry text is removed. The Programme's maintenance proposals for this study (its §6.7 and §9.2) are Programme records and are not adopted by this edition."
+   ],
+   "old_sha256": "1fe9b32fd98e0be310252c2df1bc2ee8d10925272c70b75a9743d57becbaa906",
+   "new_sha256": "1bc1b43e0e1a0c76e0d9e6270f8395b9b4b2cb0f9f051aa75eeafaeb16f5b0cd"
+  },
+  {
+   "id": "E44",
+   "triage_rows": "3",
+   "kind": "str",
+   "base_lines": 477,
+   "old": [
+    "This document makes no active cross-branch imports. All Dyadic OPEN 9 results cited in §4.1 are `[import-ref]` — owned by `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1`. TDR-G facts cited in §4.2 are branch-local context / `[bridge-candidate]`. The Thread C internal results (§4.3.2) and Phase-2 diagnostic (§4.3.3) are owned by this DSN and are not imports."
+   ],
+   "new": [
+    "This document makes no active cross-branch imports. All Dyadic OPEN 9 results cited in §4.1 are `[import-ref]` — owned by `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23. TDR-G facts cited in §4.2 are branch-local context / `[bridge-candidate]`. The Thread C internal results (§4.3.2) and Phase-2 diagnostic (§4.3.3) are owned by this DSN and are not imports."
+   ],
+   "old_sha256": "4524dcda6e57a5a111b1927f57812879190874866397a7dfab8bae8cc0003960",
+   "new_sha256": "2b74d06bbabf2fcab6fe2452fb93626d1a0ba9e555eec347c9d7c64a0abc63ec"
+  },
+  {
+   "id": "E45",
+   "triage_rows": "3",
+   "kind": "line",
+   "base_lines": 479,
+   "old": [
+    "### Reference imports from `RTG_DYADIC_OSCILLATOR_DSN_v6.4.8.1`"
+   ],
+   "new": [
+    "### Reference imports from `RTG_DYADIC_OSCILLATOR_DSN` v6.4.23 (`dyad-v6.4.23`)"
+   ],
+   "old_sha256": "335707707aeaefa38f806f0fed7609f5ea93ab60a3da800c1bd7ee57b68d81b7",
+   "new_sha256": "1fee8067f777b971c041f1bb392576137576d2c3047a405d28d5676770d665e0"
+  },
+  {
+   "id": "E46",
+   "triage_rows": "9",
+   "kind": "line",
+   "base_lines": 481,
+   "old": [
+    "- [RID: DYAD-THM-RAW-CUBIC] :: Raw cubic theorem :: `[import-ref]` `[THM]`"
+   ],
+   "new": [
+    "- [RID: DYAD-THM-RAW-CUBIC] :: Raw cubic theorem (raw one-step map, $p\\ge3$; owner caveat on the historical proposition) :: `[import-ref]` `[THM]`"
+   ],
+   "old_sha256": "73c96d1c38e6f1041dd2cb583a5a7c607430d73feef0888441ac7f31488152f7",
+   "new_sha256": "54ee7e08c4e321a8f426620ff8afd138096d480597a78cec749bf16400331a5d"
+  },
+  {
+   "id": "E47",
+   "triage_rows": "16",
+   "kind": "line",
+   "base_lines": 484,
+   "old": [
+    "- [RID: DYAD-OPEN-P-RESONANCE — sub-items] :: $G_{04}(10)=0$ reinterpretation; $p=12$ cascade boundary; $p=7$ transparency `[FAIL]`; universal $q=4,(0,3)$ `[FAIL]`; subgroup-projector/missing-slot formalism :: `[import-ref]`"
+   ],
+   "new": [
+    "- [RID: DYAD-OPEN-P-RESONANCE] (named sub-items of the owner's OPEN 9 record; the sub-labels are not identifiers) :: $G_{04}(10)=0$ reinterpretation; $p=12$ cascade boundary; $p=7$ transparency `[FAIL]`; universal $q=4,(0,3)$ `[FAIL]`; subgroup-projector/missing-slot formalism; cardinality lemma $|K^{\\rm extra}_{p,q}|=s-1$ `[ALG]` :: `[import-ref]`"
+   ],
+   "old_sha256": "60e361227ce735225c8e58800c7a77d43ec2db741d9800d941b5851a6db2eef9",
+   "new_sha256": "00e08a8e33306796561e9935fc64c5b37faa7c34a3993214ccb928e529a6b4d8"
+  },
+  {
+   "id": "E48",
+   "triage_rows": "10,16",
+   "kind": "line",
+   "base_lines": 488,
+   "old": [
+    "- [RID: DYAD-OPEN-P-RESONANCE — b-boundary] :: vanishing iff $b\\le4$, $b=5$ failure for $p\\ge6$ :: `[import-ref]` `[ALG]` :: dyadic-map scope; all-$b\\ge5$/general-coefficient `[OPEN]`"
+   ],
+   "new": [
+    "- [RID: DYAD-ALG-B5-ALLP-NONVANISHING] :: channel boundary at $b=4$: vanishing for $b\\in\\{2,3,4\\}$, failure at $b=5$ for every $p\\ge6$ :: `[import-ref]` `[ALG]` :: dyadic-map scope; all-$b\\ge5$/general-coefficient `[OPEN]`; `DYAD-OPEN-B5-ALLP` is the closed lifecycle identifier"
+   ],
+   "old_sha256": "4874c0e0ca2f5af83725fed067e652604b74b21a1137f071a9f363be0146b03a",
+   "new_sha256": "93e2336c181eb16426ff92b21c4ed7afc916e2c9f55182bd7daceef89f9eb36b"
+  },
+  {
+   "id": "E49",
+   "triage_rows": "14",
+   "kind": "str",
+   "base_lines": 491,
+   "old": [
+    "- [RID: DYAD-ALG-Q3-CANCEL] :: degree-2 $q=3$ anti-holomorphic cancellation (raw Birkhoff-strobe) :: `[import-ref]` `[ALG]`"
+   ],
+   "new": [
+    "- [RID: DYAD-ALG-Q3-DEG2-CANCEL] :: degree-2 $q=3$ anti-holomorphic cancellation (raw Birkhoff-strobe) :: `[import-ref]` `[ALG]`"
+   ],
+   "old_sha256": "ad0e8a6e2c9b6fb7c3a1925181b0f90abf38256e3c1a3fe8699563ff812bb7ed",
+   "new_sha256": "340272f27bd195aabb00cc49347b7d4a98972a4785fc21ff8cbf937847108a62"
+  },
+  {
+   "id": "E50",
+   "triage_rows": "16",
+   "kind": "delete",
+   "base_lines": 492,
+   "old": [
+    "- [RID: DYAD-OPEN-P-RESONANCE — subgroup cardinality] :: $|K^{\\rm extra}_{p,q}|=s-1$ :: `[import-ref]` `[ALG]`"
+   ],
+   "new": [],
+   "old_sha256": "4879a9865898c645929d63b27aeb87bec514b828ddc3d1828095458681ae1109",
+   "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "id": "E51",
+   "triage_rows": "11",
+   "kind": "after",
+   "base_lines": 493,
+   "old": [],
+   "new": [
+    "- [RID: DYAD-THM-Q403-PHASELAW] :: cubic cascade $q=4,(0,3)$ phase/factorization law, $p=4s$, $s\\ge2$ :: `[import-ref]` `[THM]`"
+   ],
+   "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "new_sha256": "094ade6afdefa63a4dea9ac7dbdc0b2301e902aeffe3e071c2f6fcc5afeec02b"
+  },
+  {
+   "id": "E52",
+   "triage_rows": "4",
+   "kind": "line",
+   "base_lines": 495,
+   "old": [
+    "### Branch-local context from `RTG_DISCRETE_GENESIS_DSN_v2.12`"
+   ],
+   "new": [
+    "### Branch-local context from `RTG_DISCRETE_GENESIS_DSN` v2.12.14 (`tdrg-v2.12.14`)"
+   ],
+   "old_sha256": "0c2346221990c8645d5e10dfa2b9b0a736f7d6f31260d7a5d71262f0446694d5",
+   "new_sha256": "01848ba4980375a19868ef7d635ad8bc134ec8f990ba6742c460a7b8d450fe84"
+  },
+  {
+   "id": "E53",
+   "triage_rows": "19,20,21,22,23,24,25,26",
+   "kind": "block",
+   "base_lines": [
+    497,
+    503
+   ],
+   "old": [
+    "- [RID: TDRG-ZN-STATE] :: $\\mathbb{Z}_N$ system, defect band $\\mathcal{D}_k$, relational phases, absolute-phase gauge :: `[bridge-candidate]`",
+    "- [RID: LEM-REACH] :: band-form reachability/superselection :: `[bridge-candidate]` `[THM/ALG in source]`",
+    "- [RID: LEM-RETRIG] :: two-node retrigger threshold :: `[bridge-candidate]` `[ALG in source]`",
+    "- [RID: LEM-SPECCONS] :: three-node no-birth advance-spectrum conservation :: `[bridge-candidate]` `[ALG in source]`",
+    "- [RID: BIND3-*] :: cycle enumeration / NKSCAN; survival parity, spectral gate, even-sector memory correction :: `[bridge-candidate]` `[ALG/NUM strong in source]`",
+    "- [RID: TDR-24 / N-SCALING] :: $k/N$ growth control, `bound_symmetric` $N^{-0.869}$ scaling, crystallization `[HEUR strong]`, TDR-24 frontier :: `[bridge-candidate]`",
+    "- [RID: TDR-26-BIRTH-ANCHOR] :: birth-anchored discriminator over $[\\mathrm{fb},\\mathrm{fb}+200)$, $N=720,722$ :: `[bridge-candidate]` `[NUM cross-cell, n=2; classifier HEUR]`"
+   ],
+   "new": [
+    "- [RID: TDRG-DEF-ZN-STATE] :: $\\mathbb{Z}_N$ phase universe, variable-size state :: `[bridge-candidate]` :: the consumer name `TDRG-ZN-STATE` resolves to it through the owner's §7 map",
+    "- [RID: TDRG-DEF-PHYSICAL-STATE] :: physical state as the quotient by global phase shift; relational phases $\\Delta_{ij}$ (absolute-phase gauge) :: `[bridge-candidate]`",
+    "- [RID: TDRG-DEF-BAND] :: defect band $\\mathcal{D}_k$ :: `[bridge-candidate]`",
+    "- [RID: TDRG-ALG-LEM-REACH] :: band-form reachability/superselection ($k=0$: `TDRG-THM-REACHABILITY-K0`) :: `[bridge-candidate]` `[THM/ALG in source]`",
+    "- [RID: TDRG-ALG-LEM-RETRIG] :: two-node retrigger threshold; bound state of period dividing 2 :: `[bridge-candidate]` `[ALG in source]`",
+    "- [RID: TDRG-ALG-LEM-SPECCONS] :: three-node no-birth advance-spectrum conservation; the gcd multiset as a consequence only :: `[bridge-candidate]` `[ALG in source]`",
+    "- [RID: TDRG-ALG-BIND3-CYCLE-N24K1; TDRG-NUM-BIND3-PARITY; TDRG-NUM-BIND3-SPECTRAL-GATE; TDRG-NUM-BIND3-MEMORY-PARITY; TDRG-NUM-BIND3-XFER; TDRG-NUM-BIND3-REGEN; TDRG-OPEN-BIND3-NKSCAN] :: cycle enumeration / NKSCAN; survival parity, spectral gate, even-sector memory correction :: `[bridge-candidate]` `[ALG/NUM strong in source]` `[conv: v18 path orientation]`",
+    "- [RID: TDRG-OPEN-NSCALING; TDRG-OPEN-CRYSTALLIZATION; TDRG-OPEN-TOPO-FILTER; TDRG-OPEN-CHI-SCALING; TDRG-OPEN-THERMO-SUPPRESS] :: $k/N$ growth control, `bound_symmetric` full-range $N^{-0.869}$ fit (window-dependent exponent), crystallization `[HEUR]`, TDR-24A → 24B → 24C gate :: `[bridge-candidate]`",
+    "- [RID: TDRG-OPEN-LOCKING-FAIL] :: OPEN TDR-26 birth-anchored discriminator over $[\\mathrm{fb},\\mathrm{fb}+200)$, $N=720,722$ :: `[bridge-candidate]` `[NUM cross-cell, n=2; classifier HEUR]`"
+   ],
+   "old_sha256": "beda953445cdc7ec01252c7aded0702bae9bce1b6474f80815613f4376ac6b09",
+   "new_sha256": "486b2bf40b24ab555e708947bbe247385aad941982fc7e5cfe47e963c8d4d436"
+  },
+  {
+   "id": "E54",
+   "triage_rows": "31",
+   "kind": "line",
+   "base_lines": 516,
+   "old": [
+    "**Current status (v0.6):** the engine and Phase-2 artifacts are real and named. `[COR]` SHA-256 hashes are stored in `AZ-ART-AZV5-REGISTRY` and the per-result artifact manifests; this DSN lists RID-level artifact identities and points to that hash source rather than duplicating hashes inline (SG-AZ-5 provenance is satisfied by the manifest reference). The prior `v3 historical / v4,v5 planned` placeholder registry is superseded."
+   ],
+   "new": [
+    "**Current status (v0.7):** the engine and Phase-2 artifacts are named below by RID. **Availability:** none of these files, including the hash registry `AZ-ART-AZV5-REGISTRY`, is in the repository as of this edition, and they are not described as recreated. The certifications and hashes are therefore source-reported from the June 2026 Thread C work (`EV-SRC-REPORTED`), and nothing was rerun for this edition (`EV-NOT-RERUN`). This DSN lists RID-level artifact identities and points to that registry and the per-result artifact manifests as the hash source rather than duplicating hashes inline; SG-AZ-5 provenance is by pointer to that manifest and cannot be inspected from the repository until the files are supplied unchanged and hash-checked against the registry. The existing grades are kept with this verification limit; it applies wherever this document calls a Thread C artifact hashed or certified (§4.3.1, §5). The prior `v3 historical / v4,v5 planned` placeholder registry is superseded."
+   ],
+   "old_sha256": "4bb43bae09c39b7ac331d1d1d53f9b8c8e462140901e297877c5abf20c85d516",
+   "new_sha256": "d66e957150d7285c79416b0f12e6ef8f5cba353d1329e780c6f486cac4d9ccaf"
+  },
+  {
+   "id": "E55",
+   "triage_rows": "edition",
+   "kind": "after",
+   "base_lines": 533,
+   "old": [],
+   "new": [
+    "- **November 2026 — v0.7 corrections edition.** Prepared from v0.6 (tag `az-v0.6`) against the current adopted owner editions (Dyadic v6.4.23, TDR-G v2.12.14, Genesis v2.10, Programme v1.4, OPEN-M v0.7.1), limited to list (i) of `records/az/AZ_REACTIVATION_TRIAGE.md` as decided by the PI on 10 Nov 2026. No new science and no Thread C change; edit-level record in `records/az/AZ_v0_7_RELEASE_RECORD.md`."
+   ],
+   "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "new_sha256": "471162aae3607993ecd69e8dc850610d8463e05f7c9e15545a270695cfb9712c"
+  },
+  {
+   "id": "E56",
+   "triage_rows": "edition",
+   "kind": "after",
+   "base_lines": 543,
+   "old": [],
+   "new": [
+    "### v0.7 — November 2026",
+    "",
+    "Corrections only over v0.6 (tag `az-v0.6`). No new scientific claim; no grade change of an AZ-owned result; Thread C (§4.3) unchanged. Edit-level record: `records/az/AZ_v0_7_RELEASE_RECORD.md`.",
+    "",
+    "- **Header [COR]:** Version → v0.7; Supersedes → v0.6 with its hash; companion documents repinned to the governing editions. DSN Methodology v1.2 stays declared (v1.4 governs; the migration is a separate edition).",
+    "- **Pins [COR]:** Programme v1.1 → v1.4; Dyadic v6.4.8.1 → v6.4.23; TDR-G v2.12 → v2.12.14; Genesis v2.8.4 → v2.10; OPEN-M v0.6 → v0.7.1.",
+    "- **§3 [COR]:** SG-PROG-1/2/4 cited by pointer to Programme v1.4 §8 with this study's application; the v1.1 wording is no longer quoted.",
+    "- **§1.2 / §4.1 [COR]:** raw cubic theorem restated at the owner's scope (raw one-step map, $p\\ge3$, owner caveat); the \"iff $b\\le4$\" wording removed; cubic cascade $q=4,(0,3)$ registered as closed (`DYAD-THM-Q403-PHASELAW`) and removed from the open frontier; sign of the $p=12$ value in §4.1.2; $\\mathbb{Q}(\\zeta_5)$ field label; `DYAD-ALG-Q3-CANCEL` → `DYAD-ALG-Q3-DEG2-CANCEL`; `DYAD-ALG-B5-ALLP-NONVANISHING` cited for the $b=5$ result; owner evidence boundary recorded for the eigenframe lemma and eight projector objects; source pointers corrected; the frontier list points to Dyadic §2 OPEN 9.",
+    "- **§4.2 [COR]:** owner RIDs cited; LEM-RETRIG \"period dividing 2\"; LEM-SPECCONS gcd multiset as a consequence only; BIND3 and N-scaling carry `[conv: v18 path orientation]`; N-scaling exponent window-dependent and crystallization `[HEUR]`; TDR-24D/F closed at mechanism level, gate TDR-24A → 24B → 24C; TDR-26 cited as `TDRG-OPEN-LOCKING-FAIL`.",
+    "- **§6 [COR]:** \"To OPEN M\" rewritten against OPEN-M v0.7.1 R15/R16 (Appendix B); Genesis OPEN 1C and the reduced-model $\\mathcal{P}_4$ statement cited as two entries of Genesis v2.10; Dyadic frontier sentence synchronized.",
+    "- **§0.1 / §6 / §7 [COR]:** the Programme Overview registration is recorded as met; the patch request and the proposed entry text are removed.",
+    "- **§8 [COR]:** Import Ledger rows carry the owner RIDs and editions; the `DYAD-OPEN-P-RESONANCE` sub-labels are no longer printed as identifiers.",
+    "- **§9 [COR]:** availability of the Thread C files stated (`EV-SRC-REPORTED`, not in the repository, `EV-NOT-RERUN`); the present-tense \"provenance is satisfied\" claim replaced.",
+    ""
+   ],
+   "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "new_sha256": "3d01cf7d9c034c7d659d663238080af4bf828885649645ae3800de40609262e3"
+  },
+  {
+   "id": "E57",
+   "triage_rows": "1",
+   "kind": "after",
+   "base_lines": 596,
+   "old": [],
+   "new": [
+    "",
+    "### Corrections registered at v0.7",
+    "`[COR]` §6 \"To OPEN M\" (as printed in v0.6): \"the legal correction is $\\times2$, not $\\times4$; applying $\\times4$ is a certified dimensional type error under AUDIT-1-DIMENSIONAL in the OPEN-M ledger.\" Withdrawn as a current statement. Reason: OPEN-M v0.7.1 R16 (`UVM-RESULT-AUDIT1`) withdrew the \"legal $2\\times$\" verdict as a physical conclusion and records that no certified numerical deficit factor exists. Replacement: §6 \"To OPEN M\". The sentence reported an owner reading; it was never an AZ result, and no AZ grade depended on it."
+   ],
+   "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "new_sha256": "9de43c0c2c9a060e7d0b652a6d81f266c1cca823cf5f8835517ce46be3f4bf31"
+  },
+  {
+   "id": "E58",
+   "triage_rows": "edition",
+   "kind": "line",
+   "base_lines": 600,
+   "old": [
+    "*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.6*  "
+   ],
+   "new": [
+    "*END OF DOCUMENT — RTG_ARITHMETIC_RESONANCE_AND_ZETA_DSN_v0.7*  "
+   ],
+   "old_sha256": "5fd48959b9f5791c8686dd60891dda299c7827ae39e9d1fd1cc122918b63413f",
+   "new_sha256": "fdbcac559c8757215287c82684104757be1e7c91ea6f89c52173ede5e5129d5c"
+  },
+  {
+   "id": "E59",
+   "triage_rows": "edition",
+   "kind": "str",
+   "base_lines": 601,
+   "old": [
+    "*Supersedes v0.5. Infrastructure and ledger document. Thread C engineering certified (`[ENG PASS]`, AZ-1 closed); one Phase-2 diagnostic registered and reclassified as static $\\mathbb{Z}_N$ substrate geometry; no Zeta-owned cross-branch scientific result; no OPEN-P1/Dyadic bridge-candidate promoted (the `4|q` angular observable is bridge-disqualified). Maturity: Level A. Promotion to Level B requires a reproducible, null-gated, TDR-G-DYNAMICAL (non-substrate) observable plus satisfaction of the success criterion in §1.1.*"
+   ],
+   "new": [
+    "*Supersedes v0.6 (corrections only; no new science). Infrastructure and ledger document. Thread C engineering certified (`[ENG PASS]`, AZ-1 closed); one Phase-2 diagnostic registered and reclassified as static $\\mathbb{Z}_N$ substrate geometry; no Zeta-owned cross-branch scientific result; no OPEN-P1/Dyadic bridge-candidate promoted (the `4|q` angular observable is bridge-disqualified). Maturity: Level A. Promotion to Level B requires a reproducible, null-gated, TDR-G-DYNAMICAL (non-substrate) observable plus satisfaction of the success criterion in §1.1.*"
+   ],
+   "old_sha256": "f1fc724a1e98fb2c9116a2f6b5809d6d04f09c3f9dd6c0d36ad5755af8e929d4",
+   "new_sha256": "75753be4c58d58550c03edfe9956e7da68be53338b3d63b59aaa055df52e08a0"
+  }
+ ]
+}

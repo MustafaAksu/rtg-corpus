@@ -1,0 +1,17 @@
+H3_REFINED_STRUCTURE_PASS mode=h3_324 children=324 frozen_refine2_survivors=324
+excluded=4 retained=320 unresolved=0
+prior_L1_256=1292 final_L1_256=1292
+prior_L1=1.115792977318e-74 final_L1=1.115792977318e-74 reduction=0.000000%
+Dr_gt_M3=0; M3_min_exact_256=2 M3_max_exact_256=2
+SESSION_ONLY: preserved 924+256+252 inherited exclusions; graph/tube hypotheses conditional; no jump
+STRUCTURE_MUTATION_PASS mode=h3_324 negative=8
+H3_REFINED_STRUCTURE_PASS mode=h3_split2 children=1296 frozen_refine2_survivors=324
+excluded=200 retained=1096 unresolved=0
+prior_L1_256=1292 final_L1_256=1099
+prior_L1=1.115792977318e-74 final_L1=9.491149242049e-75 reduction=14.938080%
+Dr_gt_M3=0; M3_min_exact_256=2 M3_max_exact_256=2
+SESSION_ONLY: preserved 924+256+252 inherited exclusions; graph/tube hypotheses conditional; no jump
+STRUCTURE_MUTATION_PASS mode=h3_split2 negative=8
+FROZEN_MUTATION_PASS negative=6; TEST_H3_REFINED_STRUCTURE_PASS
+FROZEN_CHAIN_PARSER_PASS 400/144 -> 576/324
+CPP_PARSER_NEGATIVE_PASS

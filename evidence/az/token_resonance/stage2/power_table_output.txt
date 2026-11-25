@@ -1,0 +1,18 @@
+pairs per contrast n = 1500; family of 10; interval quantile z = 2.807034; delta* = 0.05; numpy seed 20261113
+scenario                            true RD      reps  SUPPORTED    NOT SUPP.  INCONCLUSIVE  mean half-width
+Stage 1 PC1 risks                    +0.243     20000     1.0000       0.0000        0.0000  0.0329
+Stage 1 PC2 risks                    +0.161     20000     1.0000       0.0000        0.0000  0.0303
+Stage 1 PC3 risks (N = 122)          +0.220     20000     1.0000       0.0000        0.0000  0.0315
+half of the Stage 1 PC2 effect       +0.081     20000     0.7613       0.0000        0.2387  0.0249
+RD 0.10                              +0.100     20000     0.9970       0.0000        0.0030  0.0257
+RD 0.08                              +0.080     20000     0.7617       0.0000        0.2383  0.0240
+RD 0.07                              +0.070     20000     0.3402       0.0000        0.6597  0.0231
+RD 0.06                              +0.060     20000     0.0488       0.0001        0.9512  0.0222
+RD = delta* (boundary), base 0.02    +0.050    400000     0.0016       0.0035        0.9949  0.0211
+RD = delta* (boundary), base 0.005   +0.050    400000     0.0012       0.0048        0.9939  0.0174
+RD 0.03                              +0.030     20000     0.0000       0.5699        0.4300  0.0188
+RD 0.02                              +0.020     20000     0.0000       0.9707        0.0293  0.0175
+no effect, base 0.02                 +0.000     20000     0.0000       1.0000        0.0000  0.0144
+no effect, base 0.005                +0.000     20000     0.0000       1.0000        0.0000  0.0074
+At the boundary RD = delta* a SUPPORTED reading is an error of the minimum-effect rule; the nominal one-sided rate
+per contrast is 0.05 / (2 x 10) = 0.0025, and the Monte Carlo standard error of a rate near it with 400,000 repetitions is 0.00008.

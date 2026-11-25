@@ -1,0 +1,10 @@
+AZ fork BASE-only pilot - tag AZ-FORK-BASEPILOT-P1, N=120, k=8, cap=300, q=100, n=500
+status: contact 500, no_contact_by_L 0, terminated_before_contact 0
+     L     k    F(L)            Wilson  elig C-  elig C+     both  centre   pos-   pos+
+   100   500  1.0000 [ 0.9924, 1.0000]      500      500      500       4      0      0
+   200   500  1.0000 [ 0.9924, 1.0000]      500      500      500       4      0      0
+   400   500  1.0000 [ 0.9924, 1.0000]      500      500      500       4      0      0
+   800   500  1.0000 [ 0.9924, 1.0000]      500      500      500       4      0      0
+rule: min L with F >= 0.95  ->  L* = 100
+manifest sha256 c218cad90e9bfd7d3911a630168aa356e8ff6aad1b448383b4ed27f8a7e44203; script sha256 a91ada53dd6f629cade2b8a2b6addc9b7ad2f5818ae06e023f084c6feb17d0a1
+tau_C quantiles (contacts): {"max": 22, "min": 1, "p50": 2, "p90": 5, "p95": 7}; tau_free != tau_C in 125 contacts

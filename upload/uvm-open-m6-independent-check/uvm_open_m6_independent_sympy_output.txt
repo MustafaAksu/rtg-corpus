@@ -1,0 +1,8 @@
+SYMPY-INDEPENDENT-PASS: E0-E6, G0-G6, P2, A1' degree2, A1' degrees2..6, P3, C2a1, A2, GL2R full 6-jet
+f degree2:  ANP([MPQ(1,12), MPQ(1,12)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z**2 + ANP([MPQ(1,6), MPQ(-1,6)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z*bz - ANP([MPQ(1,6)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*bz**2
+h degree2:  -ANP([MPQ(1,12), MPQ(1,12)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z**2 - ANP([MPQ(1,3)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z*bz - ANP([MPQ(1,24), MPQ(-1,24)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*bz**2
+Jw degree2: ANP([MPQ(1,12), MPQ(1,12)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z**2 + ANP([MPQ(1,6), MPQ(-1,6)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z*bz - ANP([MPQ(1,6)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*bz**2
+W-source defect degree2: -ANP([MPQ(1,6)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z**2 - ANP([MPQ(1,6), MPQ(1,6)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z*bz - ANP([MPQ(1,12), MPQ(-1,12)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*bz**2
+P3 degree2: -ANP([MPQ(1,24), MPQ(1,24)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z**2 + ANP([MPQ(1,3)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z*bz - ANP([MPQ(1,12), MPQ(-1,12)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*bz**2
+GL2R A and B degree0/1: ANP([MPQ(1,12), MPQ(1,12)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z + ANP([MPQ(1,6)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*bz + ANP([MPQ(1,1)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ) ANP([MPQ(1,6)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*z + ANP([MPQ(1,24), MPQ(-1,24)], [MPQ(1,1), MPQ(0,1), MPQ(3,1)], QQ)*bz
+coefficient counts: 23 26 {2: 3, 3: 4, 4: 5, 5: 6, 6: 7}

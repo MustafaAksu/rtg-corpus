@@ -1,0 +1,29 @@
+face-set overlap |F_row & F_col| / |F_row|
+        T80   T89   T90   T91   T92   T93   T94  T100  T120
+T80    1.00  0.56  0.54  0.66  0.61  0.55  0.41  0.39  0.38
+T89    0.51  1.00  0.43  0.48  0.46  0.51  0.39  0.37  0.38
+T90    0.48  0.42  1.00  0.42  0.42  0.44  0.44  0.36  0.42
+T91    0.58  0.47  0.42  1.00  0.57  0.49  0.43  0.38  0.45
+T92    0.53  0.45  0.41  0.57  1.00  0.57  0.35  0.35  0.36
+T93    0.47  0.48  0.43  0.48  0.56  1.00  0.43  0.38  0.47
+T94    0.35  0.37  0.43  0.41  0.34  0.43  1.00  0.31  0.47
+T100   0.31  0.33  0.32  0.35  0.32  0.35  0.29  1.00  0.44
+T120   0.25  0.28  0.32  0.34  0.28  0.37  0.37  0.37  1.00
+T80->T89: nested=False shared=45/80
+T89->T90: nested=False shared=38/89
+T90->T91: nested=False shared=38/90
+T91->T92: nested=False shared=52/91
+T92->T93: nested=False shared=52/92
+T93->T94: nested=False shared=40/93
+T94->T100: nested=False shared=29/94
+T100->T120: nested=False shared=44/100
+
+growth log, first row (step 81):
+  T80_to_T93_2e_loadtest   step=81 Q=0.00012125637367788045 C=0.6741553926994499 nm=1
+  T80_to_T100_gentle       step=81 Q=0.09018783122445839 C=0.7609349782131891 nm=0
+
+provenance metadata:
+  mid40_to_T80_minref      auditpack created_at=2026-06-12 17:29:02
+  T80_to_T93_2e_loadtest   auditpack created_at=2026-06-12 21:34:19
+  T80_to_T100_gentle       auditpack created_at=2026-06-12 15:59:47
+  T80_to_T100_gentle input_cluster=runs/open_m_2d_seed_001/locked_bootstrap_rank_2/open_m_2d_seed_001_rank_2_T80_v2_resume_cluster.json

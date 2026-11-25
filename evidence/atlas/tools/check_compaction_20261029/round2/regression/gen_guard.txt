@@ -1,0 +1,11 @@
+[CAUGHT] F1 undeclared edit in §6.3c: exit 1; must fail 'mechanical scope'
+[CAUGHT] F2 history names a non-live RID: exit 1; must fail 'operation S2-A'
+[CAUGHT] F3 status summary adds a claim: exit 1; must fail 'operation S2-H'
+[CAUGHT] F4 archive hash mismatch: exit 1; must fail 'archive identity'
+[CAUGHT] F5 §6.3c relocated as history: exit 1; must fail 'operation S2-X'
+[CAUGHT] F6 two predecessors in Supersedes: exit 1; must fail 'presentation'
+[CAUGHT] F7 two footer lines: exit 1; must fail 'presentation'
+[CAUGHT] F8 move across sections: exit 1; must fail 'operation S2-M'
+[CAUGHT] F9 GA-01 text changed through a declared edit: guards G1, G3 must fail (failed ['G1', 'G3', 'G7'])
+
+all fixtures caught

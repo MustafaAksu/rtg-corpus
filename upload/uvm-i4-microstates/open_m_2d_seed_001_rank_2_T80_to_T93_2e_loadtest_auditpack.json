@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "created_at": "2026-06-12 21:34:19",
+    "run_dir": "runs\\open_m_2d_seed_001\\locked_bootstrap_rank_2",
+    "source_snapshot": "esm_snapshot.npz",
+    "lock_manifest": "lock_manifest.json"
+  },
+  "cluster": {
+    "triads": 93,
+    "nodes": 85,
+    "edges": 186,
+    "boundary_edges": 93,
+    "internal_edges": 93,
+    "nonmanifold_edges": 0,
+    "Q_centered": 0.005768133632702899,
+    "C_centered": 0.7381658565468436,
+    "curl_rms_centered": 1.2244087520897313,
+    "raw_obj": 1.2301768857224342
+  },
+  "stats": {
+    "z_edge_centered": {
+      "name": "z_edge_centered",
+      "n": 186,
+      "min": -1.359341155371311,
+      "max": 2.6119117024850134,
+      "mean": 0.157420218081859,
+      "std": 0.7709847588262282
+    },
+    "z_edge_raw": {
+      "name": "z_edge_raw",
+      "n": 186,
+      "min": 6.802831043892066,
+      "max": 10.77408390174839,
+      "mean": 8.319592417345236,
+      "std": 0.7709847588262283
+    },
+    "dphi_edge": {
+      "name": "dphi_edge",
+      "n": 186,
+      "min": -2.7188628736125406,
+      "max": 2.390154578712913,
+      "mean": 0.0827537641955319,
+      "std": 0.7856048570931301
+    },
+    "r_geo_edge": {
+      "name": "r_geo_edge",
+      "n": 186,
+      "min": 0.2042586524587799,
+      "max": 0.5146016883338741,
+      "mean": 0.3365477201604569,
+      "std": 0.08319382215586117
+    },
+    "r_em_edge": {
+      "name": "r_em_edge",
+      "n": 186,
+      "min": 330.40211884348315,
+      "max": 15958.980556328688,
+      "mean": 1836.1323645694065,
+      "std": 1967.2604674238446
+    },
+    "domega_edge": {
+      "name": "domega_edge",
+      "n": 186,
+      "min": 1.1803082036852743e+20,
+      "max": 5.701088037517004e+21,
+      "mean": 1.7682007414772927e+21,
+      "std": 1.1046980297977535e+21
+    },
+    "boundary_z_centered": {
+      "name": "boundary_z_centered",
+      "n": 93,
+      "min": -1.359341155371311,
+      "max": 1.9433165353476767,
+      "mean": 6.202294228712795e-05,
+      "std": 0.7381658539411653
+    },
+    "boundary_z_raw": {
+      "name": "boundary_z_raw",
+      "n": 93,
+      "min": 6.802831043892066,
+      "max": 10.105488734611054,
+      "mean": 8.162234222205663,
+      "std": 0.7381658539411653
+    },
+    "internal_z_centered": {
+      "name": "internal_z_centered",
+      "n": 93,
+      "min": -1.0416345317632842,
+      "max": 2.6119117024850134,
+      "mean": 0.31477841322143085,
+      "std": 0.7709883044539765
+    },
+    "internal_z_raw": {
+      "name": "internal_z_raw",
+      "n": 93,
+      "min": 7.120537667500093,
+      "max": 10.77408390174839,
+      "mean": 8.476950612484808,
+      "std": 0.7709883044539765
+    }
+  },
+  "notes": {
+    "z_convention": "z_raw = ln(r_em) - ln(r_geo); z = z_raw - ln(s) = ln(r_em) - ln(s*r_geo)",
+    "z_raw_definition": "z_raw = ln(r_em) - ln(r_geo)",
+    "z_centered_definition": "z = z_raw - ln(s) = ln(r_em) - ln(s*r_geo)",
+    "dphi_edge_definition": "dphi = wrap(phi[u]-phi[v]) \u2208 (\u2212\u03c0, \u03c0]",
+    "r_em_formula": "r_em = (2\u03c0 c) / |\u0394\u03c9| (KAPPA constant, \u03c9 in rad/s, c in fm/s)",
+    "curl_proxy": "curl(tri a<b<c) = z_ab + z_bc - z_ac; curl_rms = RMS over faces",
+    "objective": "wQ*|Q| + lambda_gauge*curl_rms + lambda_defect*nm (+ penalties)"
+  }
+}

@@ -1,0 +1,167 @@
+{
+ "base_sha256": "0f8ba5c0e34dcbbaaa11858e2d568a9f5d5ced63aeca8ee69a44c973d7a1a6c2",
+ "candidate_sha256": "ace0b408def88c78291e7f26eaa8e358ade87205b738a9dcf8f7952a9818a5d6",
+ "stage": "v0.11 D3 pilot, stage 2a (deletion only)",
+ "records": [
+  {
+   "base": "RECOG-ALG-QUADRATURE-TYPING#1",
+   "cand": "RECOG-ALG-QUADRATURE-TYPING#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "dfc9498a849dc3176a74416c34e7d01ca4b8b25c88b733b184b7c7d1cb14db33",
+     "cand_sha256": "48e728f33a35a7f0f0a7a3583d7b2051c30ce2c71e188a5b58a79ff3f75462c9",
+     "reason": "span deletion inside the field: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1)"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY#1",
+   "cand": "RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "b58e810f1a8f58aab1b801711cfcdf7ce5406a803a314a85614bbe52dbe70d20",
+     "cand_sha256": "b888e68ca805e12ec7dd9c860cf9ccdb506b0a70d4dd21ae922a4c0bd1f98e63",
+     "reason": "span deletion inside the field: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1)"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-THM-R9-MEMORY#1",
+   "cand": "RECOG-THM-R9-MEMORY#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "8fca4406c36028b652b05e1448fe4f5ba6c3599c9dcfc70abd072f96228c43ed",
+     "cand_sha256": "b5a603b6a79ab0b257963abc1858d69279cf6030e922efed92157c5cac8b912b",
+     "reason": "span deletion inside the field: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1); proof/method detail beyond a one-line pointer (Method v0.2 §4.7); cert and @owner§ pointers kept"
+    },
+    {
+     "base_sha256": "a15d5d9e8e192c4d4501c29dc8f9c22850038ecd205681047ca0a441b99f8855",
+     "cand_sha256": "34331e1773802c8ecabc5512ec96a3ba2b2739cd0a501bf077f118d25035de8f",
+     "reason": "span deletion inside the field: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1); proof/method detail beyond a one-line pointer (Method v0.2 §4.7); cert and @owner§ pointers kept"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-THM-A1A-LIFT-ALIGNMENT#1",
+   "cand": "RECOG-THM-A1A-LIFT-ALIGNMENT#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "3cf523f08421f0240f0270dd91eae5fea0f71a5a2a012d408ef7ee6cb782bc8d",
+     "cand_sha256": null,
+     "reason": "whole field deleted: proof/method detail beyond a one-line pointer (Method v0.2 §4.7); cert and @owner§ pointers kept"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-THM-A1A-RECIPROCAL-AMPLITUDE#1",
+   "cand": "RECOG-THM-A1A-RECIPROCAL-AMPLITUDE#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "194bb2b8b75cc100f1b0b307758e37b749f93289dfa9d96d26f5c6d9d7b0816d",
+     "cand_sha256": null,
+     "reason": "whole field deleted: proof/method detail beyond a one-line pointer (Method v0.2 §4.7); cert and @owner§ pointers kept"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-THM-A1B-SLIP-SCHEDULE-U#1",
+   "cand": "RECOG-THM-A1B-SLIP-SCHEDULE-U#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "fd87c0d56c4aae9f9173ca1c4f76d56ce8362774c213a68ed0a9dd8d40a92b73",
+     "cand_sha256": "0dbdf893c469a664eb74f4c3b5458e120e93073e6bf967514b7b1b7e32fef5cd",
+     "reason": "span deletion inside the field: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1)"
+    },
+    {
+     "base_sha256": "647c3c45404124a880d8670246aef02d0e765f9b8825c501ecc5e59c52ba41a0",
+     "cand_sha256": "25449a63c1040ef4d840912794f9f81d06c5736baaf9080dc1da327bc6a0e882",
+     "reason": "span deletion inside the field: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1)"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-ALG-A1C-JET-REMAINDER-BOUNDS#1",
+   "cand": "RECOG-ALG-A1C-JET-REMAINDER-BOUNDS#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "32e3ed13b18f091c15e41bafc17fb9c7e1dc94c161a50d56b2d825d7d8427985",
+     "cand_sha256": "c49f4440d6efeb44caf550f53f242aead5d4d60c9b8f25b84ab454e583620cd5",
+     "reason": "span deletion inside the field: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1)"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-ALG-A1C-LOGFREE-ENVELOPE#1",
+   "cand": "RECOG-ALG-A1C-LOGFREE-ENVELOPE#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "ee68fcb7b4e65606129abf0d268d41471cd9cf97b23d46d45cc07692421d24a5",
+     "cand_sha256": "a02c9eb4210e5303a6db267e56020a715b73d8ac13b3c06b73bd79489812f6e4",
+     "reason": "span deletion inside the field: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1)"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-THM-P2-HET#1",
+   "cand": "RECOG-THM-P2-HET#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "2932f1c3850f8b937fed99811cc8496482eaee582d237859ea3e6a1006b204e3",
+     "cand_sha256": "7fdc17571604d751072277cf9260005b67df7659fabb078b195ff5568ddce1c9",
+     "reason": "span deletion inside the field: proof/method detail beyond a one-line pointer (Method v0.2 §4.7); cert and @owner§ pointers kept"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-THM-P2-C0-FIRST#1",
+   "cand": "RECOG-THM-P2-C0-FIRST#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "b08af53b0514853453d332400e54d090b7841f60430534f1a7676f48ec3093dc",
+     "cand_sha256": "6091b540ffd37d208e451272db06af2174fbe7b4749e456e30bff6937c05edfd",
+     "reason": "span deletion inside the field: proof/method detail beyond a one-line pointer (Method v0.2 §4.7); cert and @owner§ pointers kept"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-THM-TWIN-STAGE2-NONUNIVERSAL#1",
+   "cand": "RECOG-THM-TWIN-STAGE2-NONUNIVERSAL#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "1176b8724c3d80d1bd2acce09c5f99b2d547534c7ac8a56e735a507c6b43ea95",
+     "cand_sha256": "71a622ed3e56a857e9729c96b2bce5affaee798d5ec20885806a584d675229bf",
+     "reason": "span deletion inside the field: proof/method detail beyond a one-line pointer (Method v0.2 §4.7); cert and @owner§ pointers kept"
+    }
+   ]
+  },
+  {
+   "base": "RECOG-THM-TWIN-C0-ACCESS#1",
+   "cand": "RECOG-THM-TWIN-C0-ACCESS#1",
+   "reason": "stage 2a deletion-only compaction",
+   "fields": [
+    {
+     "base_sha256": "ce414997cd4cc87dbd03a47f10c5b3df7da31063005f76103f34e1932e3773dc",
+     "cand_sha256": "244c809fa1c3079ff1154e8d38a0ad4ba31ecaf0e62ba4b999bbf647e3e1e4d3",
+     "reason": "span deletion inside the field: proof/method detail beyond a one-line pointer (Method v0.2 §4.7); cert and @owner§ pointers kept"
+    }
+   ]
+  },
+  {
+   "base": "L740",
+   "cand": "L740",
+   "reason": "stage 2a span deletion inside a raw line: owner-edition label; chronology of edits is not atlas content (Method v0.2 §4.1)"
+  }
+ ],
+ "inserts": []
+}

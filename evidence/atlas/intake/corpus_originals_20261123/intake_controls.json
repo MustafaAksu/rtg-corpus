@@ -1,0 +1,57 @@
+[
+ {
+  "id": "K1",
+  "what": "full digest and own name: NAME AND FULL DIGEST",
+  "as_expected": true
+ },
+ {
+  "id": "K2",
+  "what": "payload altered after the manifest was written: integrity error",
+  "as_expected": true
+ },
+ {
+  "id": "K3",
+  "what": "short prefix~suffix digest gets its own label, not the full-digest one",
+  "as_expected": true
+ },
+ {
+  "id": "K4",
+  "what": "a pattern row (empty WantedName) whose own name is wanted is found",
+  "as_expected": true
+ },
+ {
+  "id": "K5",
+  "what": "a file stored under a wrong name is found under its own name, and not under the stored one",
+  "as_expected": true
+ },
+ {
+  "id": "K6",
+  "what": "a corrupt nested zip is logged, coverage is reported incomplete",
+  "as_expected": true
+ },
+ {
+  "id": "K7",
+  "what": "the same content loose and in a zip: available \"loose and zip\", not zip-only",
+  "as_expected": true
+ },
+ {
+  "id": "K8",
+  "what": "two unequal copies of one name are both counted",
+  "as_expected": true
+ },
+ {
+  "id": "K9",
+  "what": "an archive beyond the depth limit is logged as skipped",
+  "as_expected": true
+ },
+ {
+  "id": "K10",
+  "what": "the same nested archive within the depth limit is read and the file found, zip-only",
+  "as_expected": true
+ },
+ {
+  "id": "K11",
+  "what": "a name whose only copy has another digest: NAME, DIGEST DIFFERS",
+  "as_expected": true
+ }
+]

@@ -1,0 +1,10 @@
+# owner replay of the unchanged ZIP (run_ubuntu_k5.sh, BUDGET 3600 DEPTH 1 FRONTIER 4096) vs PI run (upload/dyad-cpp-k5-results-20261120, 59ebfda2); cmp
+IDENTICAL driver/events.tsv
+IDENTICAL driver/final_frontier.tsv
+IDENTICAL driver/initial_frontier.tsv
+IDENTICAL driver/stages.tsv
+IDENTICAL driver/summary.txt
+IDENTICAL driver/stderr.txt
+# the runner ended with exit 3 here as on the PI server (check_k5.py argument order); RUN_SHA256SUMS.txt was therefore not written
+# recovered checker (PI recovery/check_k5_fixed.py) on the owner outputs: identical to PI recovery/check_fixed_result.txt
+e0ff12c9909be6a6f6e34f9b6e62a506fc8a89e37e845ae90e769bb7b1419bce  driver/events.tsv

@@ -1,0 +1,49 @@
+# General kappa: center manifold h=psi(u) tangent to closure plane, reduced 6-step resonant cubic,
+# chiral form u(f)=p u|u|^2 + q |v|^2 u ; rank-2 C^3 factor exists iff q=0.
+import sympy as sp, numpy as np, sys
+k=sp.Symbol('k')
+a,b,c_,d=sp.symbols('a b c d')   # u1=(a,b), u2=(c_,d) in (rho,eta); u3=-u1-u2
+U=[(a,b),(c_,d),(-a-c_,-b-d)]
+A=sp.Matrix([[1,-1],[1,0]])
+mons=[a**2,b**2,c_**2,d**2,a*b,a*c_,a*d,b*c_,b*d,c_*d]
+P=sp.symbols('p0:20')
+psi=[sum(P[i]*mons[i] for i in range(10)), sum(P[10+i]*mons[i] for i in range(10))]
+def apply_lin(expr):  # psi(A u): substitute each edge u_e -> A u_e
+    s={a:a-b,b:a,c_:c_-d,d:c_}
+    return expr.subs(s,simultaneous=True)
+lhs=[sp.expand(apply_lin(psi[0])),sp.expand(apply_lin(psi[1]))]
+Apsi=[psi[0]-psi[1],psi[0]]
+S=[0,sum(ue[0]**2 for ue in U)/2]          # sum_e T2(u_e), T2(rho,eta)=(0,rho^2/2)
+rhs=[sp.expand((1-k)*(Apsi[i]+S[i])) for i in range(2)]
+eqs=[]
+for i in range(2):
+    pol=sp.Poly(lhs[i]-rhs[i],a,b,c_,d); eqs+=pol.coeffs()
+sol=sp.solve(eqs,P,dict=True)[0]
+psi_s=[sp.factor(sp.simplify(psi[i].subs(sol))) for i in range(2)]
+print("psi2 =",psi_s)
+psif=sp.lambdify((k,a,b,c_,d),psi_s,'numpy')
+s3=np.sqrt(3); lam=np.exp(1j*np.pi/3)
+def T(r): return np.c_[r[:,0]-np.sin(r[:,1]), r[:,1]+np.expm1(r[:,0])-np.sin(r[:,1])]
+def G(Uc,kv):
+    h=np.array(psif(kv,Uc[0,0],Uc[0,1],Uc[1,0],Uc[1,1]),dtype=float)
+    t=T(Uc+h/3); return t-t.mean(axis=0)
+def toW(r): return r[:,0]-r[:,1]/2+1j*s3*r[:,1]/2
+def fromW(W): eta=2*W.imag/s3; return np.c_[W.real+eta/2,eta]
+def G6(W,kv):
+    r=fromW(W)
+    for _ in range(6): r=G(r,kv)
+    return toW(r)
+def f3(w,kv):
+    W=np.array([w[0],w[1],-w[0]-w[1]])
+    g=lambda e:((G6(e*W,kv)-G6(-e*W,kv))/2-e*W)/e**3
+    return (4*g(5e-3)-g(1e-2))/3
+def fres(w,kv): return sum(lam**(-j)*f3(lam**j*np.asarray(w),kv) for j in range(6))/6
+rng=np.random.default_rng(3); Ps=rng.normal(size=(24,2))+1j*rng.normal(size=(24,2))
+Ps/=np.linalg.norm(Ps,axis=1)[:,None]
+def pq(kv):
+    Fs=np.array([fres(p,kv) for p in Ps]); uu=Ps[:,0]+lam*Ps[:,1]; vv=Ps[:,0]+np.conj(lam)*Ps[:,1]
+    uf=Fs[:,0]+lam*Fs[:,1]
+    X=np.c_[uu*abs(uu)**2, abs(vv)**2*uu]; co,*_=np.linalg.lstsq(X,uf,rcond=None)
+    return co, np.linalg.norm(X@co-uf)/np.linalg.norm(uf)
+for kv in [float(x) for x in sys.argv[1:]]:
+    co,r=pq(kv); print(f"kappa={kv:7.3f}  p={co[0]:.6f}  q={co[1]:.6f}  |q|={abs(co[1]):.6f}  fit_resid={r:.1e}")

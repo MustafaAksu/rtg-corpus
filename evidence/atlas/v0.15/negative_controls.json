@@ -1,0 +1,112 @@
+[
+ {
+  "id": "W1",
+  "what": "the theorem without its Dyadic assumption",
+  "detected": true
+ },
+ {
+  "id": "W2",
+  "what": "a sign read into the theorem",
+  "detected": true
+ },
+ {
+  "id": "W3",
+  "what": "the theorem extended to p=8",
+  "detected": true
+ },
+ {
+  "id": "W4",
+  "what": "the finite check presented as the proof",
+  "detected": true
+ },
+ {
+  "id": "W5",
+  "what": "the theorem made dependent on its own finite case",
+  "detected": true
+ },
+ {
+  "id": "W6",
+  "what": "the theorem under a DYAD locator",
+  "detected": true
+ },
+ {
+  "id": "W7",
+  "what": "a second home for the theorem",
+  "detected": true
+ },
+ {
+  "id": "W8",
+  "what": "the check artifact cited twice as a certificate",
+  "detected": true
+ },
+ {
+  "id": "W9",
+  "what": "the mod-4 [HYP] restored as current",
+  "detected": true
+ },
+ {
+  "id": "W10",
+  "what": "the FAIL record dropped",
+  "detected": true
+ },
+ {
+  "id": "W11",
+  "what": "the norm law shown as still open",
+  "detected": true
+ },
+ {
+  "id": "W12",
+  "what": "the closed frontier item listed twice",
+  "detected": true
+ },
+ {
+  "id": "W13",
+  "what": "\"no denominator law\" restored",
+  "detected": true
+ },
+ {
+  "id": "W14",
+  "what": "the tabulated norms read as signed values",
+  "detected": true
+ },
+ {
+  "id": "W15",
+  "what": "a note string restored on the phase-law reverse relation",
+  "detected": true
+ },
+ {
+  "id": "W16",
+  "what": "byte identity claimed for the Dyadic extractor",
+  "detected": true
+ },
+ {
+  "id": "W17",
+  "what": "retired DZT.Q1 reused",
+  "detected": true
+ },
+ {
+  "id": "W18",
+  "what": "METH.M1 still lists DZT",
+  "detected": true
+ },
+ {
+  "id": "W19",
+  "what": "SOURCES row older than the manifest (DZT)",
+  "detected": true
+ },
+ {
+  "id": "W20",
+  "what": "the compound head restored on the norm object",
+  "detected": true
+ },
+ {
+  "id": "W21",
+  "what": "AZ.A5 dropped",
+  "detected": true
+ },
+ {
+  "id": "W22",
+  "what": "the sign caveat dropped from the high-risk ledger",
+  "detected": true
+ }
+]

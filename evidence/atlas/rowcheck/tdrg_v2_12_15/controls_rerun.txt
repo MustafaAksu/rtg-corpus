@@ -1,0 +1,9 @@
+[CAUGHT] K1 K_{1,3}-only star text restored: failing ['C1 BUILD', 'C2 REVERSE', 'C6 CONTENT', 'C7 NUMBERS']
+[CAUGHT] K2 'gauge artifact' restored in TDR-6: failing ['C1 BUILD', 'C2 REVERSE', 'C6 CONTENT']
+[CAUGHT] K3 unlogged change: failing ['C1 BUILD', 'C2 REVERSE']
+[CAUGHT] K5 one new RID declaration dropped: failing ['C1 BUILD', 'C2 REVERSE', 'C4 RIDS']
+[CAUGHT] K6 Appendix A history edited: failing ['C1 BUILD', 'C2 REVERSE', 'C3 HISTORY']
+[CAUGHT] K8 TDR-6 universal negative restored (R1): failing ['C1 BUILD', 'C2 REVERSE', 'C6 CONTENT']
+[CAUGHT] K4 wrong number, consistent log: failing ['C7 NUMBERS']
+[CAUGHT] K7 star map without centre flip: C10 FAIL
+CONTROLS: PASS (all caught)

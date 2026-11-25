@@ -1,0 +1,16 @@
+ok  P1  expect PASS got PASS  history_appendix C: history paragraph and draft hash relocated
+ok  P2  expect PASS got PASS  bare namespace word `RTG-OFN` is not an identifier (removable as history)
+ok  P3  expect PASS got PASS  default profile (history in Appendix A) still accepts the same triple
+ok  N1  expect FAIL got FAIL  history entry names an RTG-OFN identifier absent from the live text
+         FAIL  operation T (history-appendix)  — history entry names identifiers absent from the live text: ['RTG-OFN-DEF-PHANTOM']
+ok  N2  expect FAIL got FAIL  history entry names a DYAD identifier absent from the live text
+         FAIL  operation T (history-appendix)  — history entry names identifiers absent from the live text: ['DYAD-THM-PHANTOM']
+ok  N3  expect FAIL got FAIL  draft hash deleted, not relocated
+         FAIL  source hashes preserved in live text  — missing: ['58e2dec5…3610']
+ok  N4  expect FAIL got FAIL  history-appendix operation replaces an appendix other than the declared one
+         FAIL  operation T (history-appendix)  — history-appendix operation does not replace the declared history appendix B
+ok  N5  expect FAIL got FAIL  an RTG-OFN identifier removed as history (default profile)
+         FAIL  operation E2 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: 'Recorded in v0.9 (superseded): `RTG-OFN-DEF-BETA` was renamed.\n\n'
+ok  N6  expect FAIL got FAIL  an RTG-OFN identifier removed as history (history_appendix C)
+         FAIL  operation E2 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: 'Recorded in v0.9 (superseded): `RTG-OFN-DEF-BETA` was renamed.\n\n'
+RESULT: PASS

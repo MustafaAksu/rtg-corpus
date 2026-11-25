@@ -59,11 +59,55 @@ Owner decision needed per row: register (name, scope) or record "no RID; cite th
     - §8 artifact entries for the stage scripts and outputs, with hashes.
   - B-an and B-6 stay ACTIVE. No statement is regraded. No LIT result is imported as an RTG result; LIT sources are cited by LIT-ID@version:label where they are used.
   - **Added 4 Nov 2026:** one `[SESSION]` sentence on the local orbit structure along Γ_σ (LIT INF-014, INF-015; owner check `records/dyad/DYAD_OPEN20_AN_LH2012_OWNER_ASSESSMENT.md` §6), with its qualifications. It is not a B-an statement.
+    - The sentence keeps four limits: complexified germ only (on the real slice \|w/z²\| = 1/\|z\| → ∞); FL-Q1 and IMRN-Q1; IMRN read from arXiv v1, not the journal version; and the 3-sum identification as a separate LIT step. With these open, it is not a `[THM]`.
+    - Candidate `[ALG]` line: P′(u) = α(c₄₀ + μu) identically (2A = αμ, B = αc₄₀), with §8 entries for `dyad_open20_lit_inf014_inf015_hypothesis_check.py` and the LIT-ID@version:label citations (co-owner proposal, PR #174 comment `6626218705`).
   - **Status (3 Nov 2026):** route check done (`evidence/dyad/open20-an/stage3-route/`). The a-priori route of INF-009/010 cannot reach the radius the jump needs. Stage 3 itself stays not authorized; a revised stage-3 design comes first.
 
 ## C2. Schedule
 
-Checkpoint **10 November 2026** (co-owner proposal, 3 Nov). If RECOG and NUMGEN have answered the v6.4.23 notices by then, their answers are included. Otherwise they are recorded as open dependencies and the v6.4.24 candidate is prepared. Until then: the X4 decisions and the v6.4.24 change matrix. This is a maintenance schedule, not a scientific requirement.
+Checkpoint **10 November 2026** (co-owner proposal, 3 Nov); held on 11 November, see §C3. If RECOG and NUMGEN have answered the v6.4.23 notices by then, their answers are included. Otherwise they are recorded as open dependencies and the v6.4.24 candidate is prepared. Until then: the X4 decisions and the v6.4.24 change matrix. This is a maintenance schedule, not a scientific requirement.
+
+## C3. State at the checkpoint of 11 November 2026
+
+Held one day after the planned date. Sources: `records/dyad/DYAD_INBOX_20261111_OWNER_DISPOSITION.md`; live state from `tools/orient.py` at `main` `fe73d56`.
+
+**Answers to the v6.4.23 notices and the 3 Nov notices:**
+
+| Receiver | State | For the v6.4.24 register (§7.0, §7) |
+|---|---|---|
+| RECOG | answered: `recog-v0.3.27` imports BRIDGE, SPIRAL-REM and C7-SHARP; c′_Q = 0.36916 used throughout | row at `recog-v0.3.27` |
+| GEN | answered: `gen-v2.10`; `DYAD-ALG-NU5-P5` label corrected, claim-level pin `dyad-v6.4.23` §6.11 | row at `gen-v2.10` |
+| AZ | answered: `az-v0.7` pins `dyad-v6.4.23`; owner RIDs used | row at `az-v0.7`; Appendix F re-read |
+| Programme | `programme-v1.4` adopted | companion pin |
+| NUMGEN, OFN | **open** | recorded as open dependencies; rows unchanged |
+| Triadic | bridge-note notice open; v1.7 row as in §A | row at `triad-v1.7` |
+| DZT, ER-2B, RER, RRF, UVM | open | rows unchanged |
+
+**Additions to the candidate scope since 3 November:**
+- S3 paragraph: the stage-3a verdict with its chart-relative scope and LIT's grid-free bound (design record §8); the INF-014/015 sentence with its four limits; the `[ALG]` line P′(u) = α(c₄₀ + μu).
+- §8 artifacts: the stage-3 route check, the INF-014/015 hypothesis check and the bridge-note check, with hashes.
+- No DYAD RID for RECOG's c_J and c_7 (disposition record, item 3).
+
+**Added 11 November 2026 (after the PI's decisions of that day: start the candidate; stage 2b authorized):**
+- S3 paragraph: one `[NUM]` sentence on stage 2b (`records/dyad/DYAD_OPEN20_AN_STAGE2B_JUMP_SCOUTING_NUM.md`): the jump on S₀ ∩ S₁ is numerically nonzero and decays like exp(−2πT) in the Fatou time. It is scouting; B-an and B-6 stay ACTIVE; no divergence statement is made.
+- §8 artifacts: the two stage-2b scripts and their outputs.
+
+**Not in v6.4.24, recorded for later:**
+- a sharper row-A constant built on `RECOG-ALG-A1C-JET-REMAINDER-BOUNDS` (optional; needs its own certificate);
+- the owner check of AZ §4.1.1 (answer to AZ by pipe; a DSN change only if the owner text is found unclear);
+- the OPEN 20 3b design (design record §9; stage 2b is done).
+
+**Schedule proposed by the owner** (maintenance schedule, not a scientific requirement):
+1. change matrix and X4 RID names: with the candidate;
+2. candidate build (assertion-gated script, checks, negative controls) and draft release record on `claude/dyad-v6.4.24`;
+3. co-owner review; corrections; read-back;
+4. PI adoption, merge and tag.
+
+NUMGEN and OFN answers are included if they arrive before step 3; otherwise they stay open dependencies in the release record.
+
+**Status, 11 November 2026:** steps 1 and 2 are done. Candidate r1 `7f22ea35…2327` is on `claude/dyad-v6.4.24`, with the draft release record `records/dyad/RTG_DYADIC_v6_4_24_RELEASE_RECORD.md`. Step 3 (co-owner review) is next.
+
+**Closed, 11 November 2026:** r1 reviewed (PR #213, `5856200509`), r2 `014e1ac3…8958` read back (`5857204402`, ACCEPT), adopted by the PI. Adopted file `10fbdacc…bc16`. This backlog is complete for v6.4.24; the items of §D carry over to the next edition.
 
 ## D. Not in v6.4.24
 

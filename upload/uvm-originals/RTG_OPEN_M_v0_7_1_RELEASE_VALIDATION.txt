@@ -1,0 +1,38 @@
+RTG OPEN-M v0.7.1 RELEASE VALIDATION
+Date: 7 October 2026
+
+Candidate SHA-256: ebbf23ea99fb281624accafb573a4e4b127a577da92956e778a37329fb41db95
+Release SHA-256:   0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e
+
+[PASS] release status adopted
+[PASS] release date
+[PASS] supersedes v0.7
+[PASS] accepted candidate pinned
+[PASS] no live DRAFT document status
+[PASS] adopted footer
+[PASS] release section 9
+[PASS] programme sync remains separate
+[PASS] candidate hash correct :: ebbf23ea99fb281624accafb573a4e4b127a577da92956e778a37329fb41db95
+[PASS] release hash in adoption record :: 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e
+[PASS] release hash in release record
+[PASS] adoption JSON adopted
+[PASS] no scientific release change
+[PASS] change record title finalized
+[PASS] change record points to Draft2
+[PASS] change record points to release
+[PASS] no certified deficit headline
+[PASS] M3A retained
+[PASS] M3B retained
+[PASS] R15 calibration conditional
+[PASS] OPEN-M-6 priority first
+[PASS] R12 numerical body exact vs v0.7 :: 1/1
+[PASS] R13 numerical body exact vs v0.7 :: 1/1
+[PASS] R14 numerical body exact vs v0.7 :: 1/1
+[PASS] R15 archive present
+[PASS] R15 archive byte exact vs v0.7 :: 1730/1730
+[PASS] release diff metadata/governance sized :: 34
+[PASS] release governance files exist
+[PASS] no candidate appendix heading
+[PASS] no draft footer
+
+ALL CHECKS: 30/30 PASS

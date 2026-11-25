@@ -1,0 +1,50 @@
+[SESSION] Actual receiving execution, 10 November 2026; Python 3.13.5.
+Object: PR #202 e71382de2e408c15b781b0dbcc6046df8e06a513.
+Unchanged tool: 17564 bytes, 205 lines.
+SHA-256 c78be1f29bae55642704bbeaaeef86c06b17983423a2c819ac8c2fe574a8b75a
+Git blob 67a16432b19e771d40e8d27f7b16130952929f54
+Both identities verified before execution. Connector-delivered source; direct shell retrieval failed DNS.
+No full Atlas extraction replay, D3 compaction or owner-science campaign.
+
+=== Unchanged producer selftest: exit 0 ===
+ok  P identity: MECHANICAL PASS {'EXACT': 8}
+ok  N dropped premise: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N operator changed q<1 -> q>1: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N pins swapped between two edge targets: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N custody marker removed: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N negative constraint merged away: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N untyped condition moved to another record: FAIL {'EXACT': 6, 'FAIL': 4}
+ok  N second occurrence of an identifier deleted: FAIL {'EXACT': 7, 'FAIL': 1}
+ok  N heading removed: FAIL {'EXACT': 6, 'FAIL': 3}
+ok  N record moved under another heading without declaration: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N grade changed: FAIL {'EXACT': 7, 'FAIL': 1}
+ok  N unexplained inserted line: FAIL {'EXACT': 8, 'FAIL': 1}
+ok  N diagnostic class changed: FAIL {'EXACT': 7, 'FAIL': 1}
+ok  N record mapped but dropped premise not declared: FAIL {'EXACT': 14, 'FAIL': 1}
+ok  N record mapped but swapped pins not declared: FAIL {'EXACT': 14, 'FAIL': 2}
+ok  N record mapped but untyped condition dropped: FAIL {'EXACT': 14, 'FAIL': 1}
+ok  P declared field edit is pending review, not preserved: MECHANICAL PASS {'EXACT': 8, 'DECLARED_PENDING_REVIEW': 1}
+ok  P declared move under another heading is MAPPED_EXACT: MECHANICAL PASS {'EXACT': 7, 'MAPPED_EXACT': 1}
+ok  P CRLF source identity and byte spans
+ok  P non-ASCII field: byte span binds the hash
+ok  P explicit_condition_marker is a marker flag only (false here although the text is conditional)
+SELFTEST PASS
+
+=== Independent receiving controls: exit 1 (five mismatches, not runtime failure) ===
+P_IDENTITY MATCH MECHANICAL PASS {'EXACT': 3}
+P_DECLARED_EDIT_PENDING MATCH MECHANICAL PASS {'EXACT': 4, 'DECLARED_PENDING_REVIEW': 1}
+P_IDENTITY_HASH_MISMATCH_REJECTED MATCH FAIL {'FAIL': 1, 'EXACT': 3}
+P_INLINE_PIN_SWAP_REJECTED MATCH FAIL {'EXACT': 2, 'FAIL': 2}
+N_FIELD_ORDER_BINDING MISMATCH MECHANICAL PASS {'EXACT': 8}
+N_RAW_OWNER_BINDING MISMATCH MECHANICAL PASS {'EXACT': 4}
+O_CONTEXT_CHANGE_IS_ONLY_A_BYTE_MOVE MATCH MECHANICAL PASS {'EXACT': 3, 'MAPPED_EXACT': 1}
+N_GRADE_DELETE_INSERT_ROUTE MISMATCH MECHANICAL PASS {'EXACT': 1, 'DECLARED_PENDING_REVIEW': 2}
+N_DIAGNOSTIC_DELETE_INSERT_ROUTE MISMATCH MECHANICAL PASS {'EXACT': 1, 'DECLARED_PENDING_REVIEW': 2}
+P_SAME_CONTEXT_MAPPED_MOVE MATCH MECHANICAL PASS {'EXACT': 3, 'MAPPED_EXACT': 1}
+P_UTF8_CRLF_BINDING MATCH
+N_SKIPPED_LEVEL_SIBLING_CONTEXT MISMATCH ['bb0de842239a9d34', '3020d4821514d1a6', '1ccce58b13c95ced']
+CONTROLS MATCHED 6 / 11 OBSERVATIONS 1
+
+The O_CONTEXT case reproduces the documented byte-move status and is a separate review-workflow observation, not an additional failed test. Five control mismatches remain: field order, raw owner binding, skipped-heading context, grade/class invariants through delete+insert. No pending row is asserted to have been silently promoted to EXACT.
+Harness SHA-256 39b1441121c74f184428fcb302b04beeb87a2a0c4adb7321bd455258681554ea
+Full generated JSON report SHA-256 c2e70ce0173703d31a3eeb946e7fce43d43e86534caa2cfe5f7bdc1a1ab16d8d (19401 bytes); reproducible from the receiving script and the pinned tool.

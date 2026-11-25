@@ -1,0 +1,42 @@
+{
+ "_about": "RER v0.2 adoption install manifest (21 Oct 2026). Adopted object, its release package, the Phase A release pin and the adoption record. NONCANONICAL working registry; PI adoption-scope decision 18 ADOPTED_SCOPED + 2 EXCLUDED_BLOCKED. Not an owner adoption, freeze or publication.",
+ "adopted_object": {
+  "file": "RTG_RELATIONAL_EMERGENCE_REGISTRY_v0_2.md",
+  "sha256": "58feee5ff1f16a37fc4ee029f24499928ea7439731de0a090d8794c1cbe57ad0",
+  "basis_r4_14_L1_sha256": "032f2211229ab55d6f5f2477f19b75bb29c55a32d7574682be514b18ae0070d3",
+  "release_kind": "metadata-only (header lines 1, 4, 7, 8); body byte-identical to r4.14-L1"
+ },
+ "adoption_record": {
+  "file": "RER_v0_2_ADOPTION_RECORD_20261021.md",
+  "sha256": "acd34e694034a9fb09cb0460638e6ed6e04a4461c291c623f8aafd1606fb2ef0",
+  "decision": "PI, 21 Oct 2026: Adopt, 18 + 2 scope"
+ },
+ "release_package": {
+  "file": "RER_v0_2_RELEASE.zip",
+  "sha256": "6b544e7173f51153819ce3e6e9e92c7a5f65613d7749c98d94a893b334b8b080",
+  "gates": "7/7; 7 controls"
+ },
+ "phaseA_release_pin": {
+  "file": "RER_phaseA_v0_2_RELEASE.zip",
+  "sha256": "979d1cf871149bcae316a42a241ff7bfee69cb3dc334a586184f97e48b88cc33",
+  "gates": "38/38; 230 controls",
+  "rows": 103,
+  "status_counts": "43/2/52/6",
+  "authentication_counts": "74/4/24/1",
+  "adoption_status_counts": {
+   "ADOPTED_SCOPED": 18,
+   "EXCLUDED_BLOCKED": 2
+  }
+ },
+ "review_chain": {
+  "L1_receiving_review": {
+   "file": "L1_RECEIVING_REVIEW_20261021.md",
+   "sha256": "822615825fccf0e3886fa9b029698042ed6b9db630f83a0c2bcec583148a7a1c"
+  },
+  "batch_receiving_review_sha256": "bd80f89de36cc5f7df744a23dbdbd122bf783df8de53d104f941504dc36b07fd",
+  "reference_dispositions_sha256": "3536c2079ca905318d1d06fab24a08c7cb3e3ef1e4a2e376531932f7471ab78d",
+  "phaseA_r21_L1_zip_sha256": "076fd118820996513d4367de001a58b6a2bf7c4e4dace5db0b90cdff984ed274",
+  "phaseA_r20_baseline_zip_sha256": "adfedefde08cd44294b5b8c2411c353268700739427579f342447d094f813abc"
+ },
+ "what_adoption_does_not_do": "no owner theorem re-adoption; RRF not normative; no physical carrier/clock selection; nothing certified globally (Stage-2 regional/global certificate OPEN); G6, graph completion, G2 §5b, physical realization OPEN; missing archives not authenticated."
+}

@@ -1,0 +1,18 @@
+base                       r=0.4  n=334  |Delta_Y|=1.9527560452e-8  on-curve=9.29e-20
+base                       r=0.3  n=334  |Delta_Y|=7.15979011799e-21  on-curve=9.29e-20
+smaller matching radius    r=0.4  n=652  |Delta_Y|=1.9527560452e-8  on-curve=9.33e-20
+smaller matching radius    r=0.3  n=651  |Delta_Y|=4.26485170832e-21  on-curve=9.33e-20
+larger matching radius     r=0.4  n=193  |Delta_Y|=1.9527560452e-8  on-curve=9.21e-20
+larger matching radius     r=0.3  n=193  |Delta_Y|=1.09128759291e-20  on-curve=9.22e-20
+fewer coefficients         r=0.4  n=334  |Delta_Y|=1.9527560452e-8  on-curve=9.29e-20
+fewer coefficients         r=0.3  n=334  |Delta_Y|=7.15979011799e-21  on-curve=9.29e-20
+higher precision           r=0.4  n=334  |Delta_Y|=1.9527560452e-8  on-curve=9.29e-20
+higher precision           r=0.3  n=334  |Delta_Y|=7.15979011799e-21  on-curve=9.29e-20
+G0_stage2_hash PASS
+G_NEWTON_converged PASS
+G_ON_map_and_series_agree FAIL
+G_ORBIT_stays_near_0 PASS
+G_SEC_secant_converged PASS
+G_STAB_across_N_rm_dps FAIL
+G_ZERO_control_at_rounding_level PASS
+RESULT FAIL (control WRONGMAP) | [NUM] scouting; not a certificate

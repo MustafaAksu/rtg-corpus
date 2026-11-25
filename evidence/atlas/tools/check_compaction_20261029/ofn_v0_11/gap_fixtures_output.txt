@@ -1,0 +1,20 @@
+# pre-fix tool (main), committed map
+baseline: exit 0 -> NOT CAUGHT | 
+GAP1_ofn_rid_phantom_in_history: exit 0 -> NOT CAUGHT | 
+GAP2_dyad_rid_phantom_in_history: exit 0 -> NOT CAUGHT | 
+S2-S1 new pointer RIDs: []
+S2-S2 new pointer RIDs: []
+S2-S5 new pointer RIDs: []
+F4_history_hash_deleted: exit 1 -> CAUGHT | FAIL  source hashes preserved in live text  — missing: ['58e2dec5…3610']
+candidate lines naming RTG-OFN-ALG-STAR-TOKEN-SHIFT : 5
+F5_ofn_rid_removed_as_history: exit 0 -> NOT CAUGHT | 
+# fixed tool, map + history_appendix C
+baseline: exit 0 -> NOT CAUGHT | 
+GAP1_ofn_rid_phantom_in_history: exit 1 -> CAUGHT | FAIL  operation S2-T (history-appendix)  — history entry names identifiers absent from the live text: ['RTG-OFN-DEF-PHANTOM']
+GAP2_dyad_rid_phantom_in_history: exit 1 -> CAUGHT | FAIL  operation S2-T (history-appendix)  — history entry names identifiers absent from the live text: ['DYAD-THM-PHANTOM']
+S2-S1 new pointer RIDs: []
+S2-S2 new pointer RIDs: []
+S2-S5 new pointer RIDs: []
+F4_history_hash_deleted: exit 1 -> CAUGHT | FAIL  source hashes preserved in live text  — missing: ['58e2dec5…3610']; relocated to the history appendix: ['56bc991d28c4a6f3e841eec5ac8c4550528fbaa
+candidate lines naming RTG-OFN-ALG-STAR-TOKEN-SHIFT : 5
+F5_ofn_rid_removed_as_history: exit 1 -> CAUGHT | FAIL  operation F5 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: '\nIn v0.10 ; FAIL  RID set preserved in live text  — missing: ['RTG-OFN-DEF-PHANTOM-TWO']

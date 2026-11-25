@@ -1,0 +1,82 @@
+{
+ "source_sha256": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
+ "source_bytes": 521243,
+ "regions": {
+  "heading": 135,
+  "raw": 615,
+  "blank": 116,
+  "diagnostic": 117,
+  "node": 560
+ },
+ "node_fields": {
+  "statement": 557,
+  "UNVERIFIED": 340,
+  "negative": 96,
+  "dep": 56,
+  "consumer": 83,
+  "derived": 22,
+  "scope": 88,
+  "cert": 83,
+  "locator": 356,
+  "alias": 50,
+  "premise": 6,
+  "tension": 3,
+  "evidence": 2,
+  "collision": 1
+ },
+ "multi_occurrence_ids": {
+  "*GEN:phase-drift-law": {
+   "count": 2,
+   "id_kind": "pseudo"
+  },
+  "*GEN:plateau-bridge": {
+   "count": 2,
+   "id_kind": "pseudo"
+  },
+  "*GEN:rank-obstruction": {
+   "count": 2,
+   "id_kind": "pseudo"
+  },
+  "*GEN:uniform-phase-sink": {
+   "count": 2,
+   "id_kind": "pseudo"
+  },
+  "*NUMGEN:C7B-T1..T4": {
+   "count": 2,
+   "id_kind": "pseudo"
+  },
+  "GEN-ART-JQ-PHASEDRIFT": {
+   "count": 2,
+   "id_kind": "artifact"
+  },
+  "GEN-ART-SATURATION": {
+   "count": 3,
+   "id_kind": "artifact"
+  },
+  "NUMGEN-N3D-FINITE-CHAR": {
+   "count": 2,
+   "id_kind": "scientific"
+  },
+  "RECOG-ALG-CHART-LAWS": {
+   "count": 2,
+   "id_kind": "scientific"
+  },
+  "RECOG-ALG-NU3-CLOSED-FORM": {
+   "count": 2,
+   "id_kind": "scientific"
+  },
+  "RECOG-THM-P2-C0-FIRST": {
+   "count": 2,
+   "id_kind": "scientific"
+  },
+  "RECOG-THM-P2-HET": {
+   "count": 2,
+   "id_kind": "scientific"
+  },
+  "RECOG-THM-R9-MEMORY": {
+   "count": 2,
+   "id_kind": "scientific"
+  }
+ },
+ "nodes_with_untyped_field": 243
+}

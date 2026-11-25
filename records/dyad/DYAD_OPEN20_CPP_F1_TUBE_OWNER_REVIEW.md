@@ -1,0 +1,506 @@
+# DYAD OPEN 20 — owner review of the C++ first-block tube bound and contractor (F1)
+
+**By:** Claude, Dyadic DSN owner and math auditor. **Date:** 17 November 2026. **Status:** [SESSION] owner review of a co-owner development package. Not an adoption, not a certificate, not stage 3c-b. B-an and B-6 stay ACTIVE.
+**Reviewed:** `DYAD_CPP_F1_TUBE_CONTRACTOR.zip`, SHA-256 `f8e66093fa2980ef48d96cd7d975aceca4532c9ca47dcdb05138c19961a5a567` (relayed by the PI on 17 November; 8 files; its `SHA256SUMS.txt` checks). It is **not yet on GitHub**; it should arrive unchanged on an `upload/...` branch.
+**Dependencies used (from branch `dyad-cpp-centered-20261116`, `upload/dyad-cpp-centered-20261116/received/`):** `DYAD_CPP_FORWARD_METHOD_BENCHMARK.zip` `6079c11b…176d` (bench.cpp: `tiles`, `direct6`, `Tcentered`, `read_data`, `xstar`), `DYAD_CPP_PHI40_B_EVALUATOR_DIAGNOSTIC_V2.zip` `98390698…6ecc` (`import_phi40.py`, `centered_evaluator.hpp`, `independent_core.cpp`: `necessary_disk`, `intersection`, `outside_disk`). Both packages' `SHA256SUMS.txt` check.
+**Request:** the co-owner's `OWNER_REVIEW_REQUEST.md`, items R1–R5, against proof record §§1, 4–5, 9 and the real-leg scale note §3.5 (PR #301).
+
+## Verdict
+
+**ACCEPT as a development checkpoint, at SESSION scope.** R1–R4 pass by reading; R4 also by a ball-arithmetic check; the package reproduces bit-for-bit in its summary lines on a second machine. One small owner-side finding (O-1) concerns the existing Python library, not this package. Nothing here proves that a curve exists, that it lies in the tube, or anything about the point jump.
+
+## R1 — M(X) is an upper bound of R₀ on X ∩ D₀
+
+`ForwardTube::upper` (real_f1_tube.cpp l. 116–152) against the library `Tube` (stage3c lib l. 756–790) and proof record §1:
+
+| item | code | check |
+|---|---|---|
+| normalisation | M = (1/500)·\|ξ^α\|/\|ξ*^α\|·(1.25/first)³·(second*/second)³ | equals ε\|ξ^α\|first⁻³second⁻³ with ε fixed by R(ξ*) = 0.002, first(ξ*) = 1.25, second(ξ*) = second* (library `eps`, q = 9). ✓ |
+| α, signs | exponent −(51/19)·log(\|ξ\|²/0.16) + (16√3/19)(θ − π/6) | Re(α log ξ) = −(102/19)ln\|ξ\| + (16√3/19) arg ξ; −51/19 = Re α/2 on \|ξ\|²; \|ξ*\|² = 0.16 = 4/25; Im α < 0 so only the upper end of θ is needed. ✓ |
+| angle | θ_hi = min(0.3π upper, atan(Im ξ/Re ξ) upper) | principal arg (Re ξ > 0 required, else only the chart cap). On D₀ the principal arg lies in (−0.20π, 0.30π), the library's chart and the definition of \|ξ^α\| (`xi_alpha`: principal log of ξ = cx). ✓ |
+| τ | fixed decimals A₃, A₂, A₁, κ; principal log of x | identical to `TAU_DECIMALS` (lib l. 433) and to `Tube.tau` (x = ξ/c, principal log). Re x ≤ 0 on the box → τ not evaluated, global floors used. ✓ |
+| first | Re τ − Re τ* + 5/4 | = Re τ − s₀ + 1 with s₀ = Re τ* − 0.25. ✓ |
+| second | Re(e^{i3π/8} τ), e^{i3π/8} = (√(2−√2)/2, √(2+√2)/2) | θ₀ = π/2 − π/8. ✓ |
+| floors | max(1, first.lower), max(c_wall.lower, second.lower) | valid for every x ∈ X ∩ D₀ (first > 1, second > c₀); no claim X ⊂ D₀ is made. ✓ |
+| ξ = 0 | refused (domain error → tile retained) | ✓ |
+
+## R2 — directed rounding of the elementary functions
+
+- **atan** on [0, 1]: alternating Leibniz series, N = 320 terms in interval arithmetic; the first omitted term u^{2N+1}/(2N+1) bounds the error with the right sign for even N (enclosure [S.l, S.h + err.h]). Terms decrease on [0, 1]. u > 1 by π/2 − atan(1/u); u < 0 by oddness; intervals by monotonicity of the endpoints. ✓ (At u near 1 the bound is wide, 1/641, but still valid; here Im ξ/Re ξ ≈ 0.5.)
+- **π** = 16 atan(1/5) − 4 atan(1/239) (Machin), both arguments exact points. ✓
+- **log** on u > 0: 2 atanh q, q = (u−1)/(u+1); remainder 2\|q\|^{2N+1}/((2N+1)(1−q²)) with the upper magnitude of q^{2N+1} and 1 − q² from its interval; endpoints by monotonicity. ✓
+- **e^{i3π/8}** algebraic, sqrt enclosures of the engine. ✓
+- **exp_c**: the engine routine of `independent_core.cpp` (Taylor sum with tail M^{N+1}/(N+1)!/(1 − M/(N+2)), large arguments refused), reviewed in the C++ independent review (#288). ✓
+- Unit gates (π, atan(1/2), log(1/2), R(ξ*) ∈ (1.99, 2.01)·10⁻³) pass, also under ASan/UBSan, empty sanitizer stderr.
+
+## R3 — contractor, derivative, coverage, no false discard
+
+- **Coverage.** `tiles(N)`: the square [−r, r]² with r = 1/500 rounded up, N×N boxes with outward-rounded edges; a box is skipped only if `outside_disk` proves it disjoint from \|d\| ≤ r; each kept box becomes `ball(box)` ⊇ box. 60 (N = 8) and 96 (N = 10) tiles. ✓
+- **Whole-tile derivative.** `from_lift(x*, tile, φ)` enters the fibre as `tile.box()` with tangent 1, so `r.b.d` encloses ∂d₁/∂d₀ on a set containing the tile disc. ✓
+- **Centre and radius.** f(a) is the enclosure of d₁ at the tile centre (separate point orbit), b = mid of its tangent (exact dyadic). `necessary_disk`: centre B.c − f(a)/b moved to its midpoint with the error added; radius (M + D·r)/\|b\|_lower with D = sup\|r.b.d − b\|, outward. This is C1–C2: \|f(d)\| ≤ M and f(d) = f(a) + b(d − a) + E, \|E\| ≤ D\|d − a\|. ✓
+- **Discard** only when the tile box and the box of the necessary disc are disjoint. Domain errors (pole, log, slope, ξ = 0) → UNRESOLVED, tile retained in the hull; other exceptions abort the run with exit 3 (never a discard). ✓
+- **Negative controls:** no arguments → exit 64; the JSON passed as transfer → exit 3 (`wrong transfer header`). ✓
+- **Consistency with the estimated true point** ([NUM], PR #301 §1): d* ≈ −4.32·10⁻⁹ + 1.99·10⁻⁸ i lies in tiles 26, 34 (N = 8) and 43, 53 (N = 10); all four are KEPT.
+
+## R4 — input dependence
+
+`import_phi40.py` pads the 80-digit midpoint strings `info.coefficients[k]` (k = 2..40) by 10⁻⁶⁵ and the 40-digit `info.c_pil` by 10⁻³². The strings are `mid().str(80, radius=False)` of the stage-2 balls (scout l. 105, 192). Owner check (`evidence/dyad/open20-an/cpp-review/f1-tube/dyad_open20_cpp_f1_transfer_check.py`, ball arithmetic, 400 digits, against the library recursion `coefficients(K, 40)` and `Consts().c`):
+- max over k of \|string − library ball\| ≤ **2.81·10⁻⁸¹** (pad 10⁻⁶⁵);
+- \|c string − c\| ≤ **3.86·10⁻⁴¹** (pad 10⁻³²).
+
+**PASS.** The transfer boxes contain the coefficient balls of the library, with margins of 16 and 8 orders. This replaces the display assumption by a check, but only relative to the library recursion of stage 2 (the source the proof record already uses); it is not an independent regeneration in C++.
+
+## R5 — scope
+
+Three levels, kept apart:
+1. **Theorem-type content of the code (if R1–R4 hold):** for every tile and every d in it, *if* the image base x₁(d) lies in D₀ and \|d₁(d)\| ≤ R₀(x₁(d)), then d lies in the necessary disc; tiles whose box misses it contain no such d.
+2. **Hypothesis not proved here:** that the curve through ξ* exists, is a graph over the fibre, and its first image lies in D₀ inside the tube (seed and tube lemmas; the point jump is not certified).
+3. **Numerical campaign:** the 8×8 and 10×10 results below and the mpmath spot-checks (352/352 and 562/562 samples inside D₀, max R/M = 0.712 and 0.765) are [NUM]/SESSION.
+
+## Reproduction (REVIEWER-REPLAYED, SESSION)
+
+Owner container, g++ 13.3.0, Boost.Multiprecision headers, the co-owner's `run_ubuntu_f1.sh` unchanged; outputs in `evidence/dyad/open20-an/cpp-review/f1-tube/run-local/` (transfer SHA-256 `3fea1c3d194d691a7bfd4d0a853f0acbd16c6f11f6ee873fa48603092719fae8`):
+
+| grid | tiles | unresolved | discarded | kept | M_min | M_max | hull radius |
+|---|---|---|---|---|---|---|---|
+| 8 | 60 | 0 | 44 | 16 | 2.708876·10⁻⁴ | 2.987379·10⁻⁴ | 1.526194·10⁻³ |
+| 10 | 96 | 0 | 80 | 16 | 2.516209·10⁻⁴ | 2.783942·10⁻⁴ | 1.198129·10⁻³ |
+
+These equal the co-owner's local figures. The hull shrinks from 0.002 to 1.2·10⁻³ in one block; the [NUM] target of #301 §3.2 is a factor 7. The PI server run is not needed for this review; it can be added later as a third machine.
+
+## Minor remarks (no change required)
+
+- m1. `check_m_samples.py`: the sample directions ±1/2 appear twice.
+- m2. The usage line advertises grid 16; the run script uses 8 and 10 only.
+- m3. When Re ξ ≤ 0 on a box, M falls back to the chart cap 0.3π; the fallback is correct. The details files do not record which tiles used it; a column for the flags `used_tau` / `used_local_angle` would make that visible.
+
+## O-1 (owner finding, Python library, outside this package)
+
+The library floors `second` with **`TB.cw.upper()`** (`R_upper` l. 1193, `_piece_check` l. 837, l. 956), while D_j is defined by second > c_j with c_j = second(ξ*) − 0.15, a real number of which `TB.cw` is a ball. Taken literally, second ≥ cw.upper does not follow from second > c_j; the gap is the ball radius (3·10⁻⁴⁶ at 160 bits, 4·10⁻³⁹⁸ at 400 digits), so it is a formal gap, not a numerical one. The C++ code uses `cwall.l` and is not affected.
+**Proposed resolution (needs a PI decision):** fix the wall constant as the dyadic upper end of the computed ball (c_j := cw.upper()), and say so in proof record §1. Then every use is consistent: the out-test (second ≤ cw in ball arithmetic) implies second ≤ c_j, the floors become exact, and ξ* stays inside with margin 0.15. Changing the code to `cw.lower()` would also close it but changes adopted evidence. This touches the 3c-a record and should be settled before any 3c-b production.
+
+## Next
+
+- PI: put `DYAD_CPP_F1_TUBE_CONTRACTOR.zip` unchanged on an `upload/...` branch (hash above).
+- Co-owner: proceed to horizon 2 and finer tiles per #301 §3; the review conditions of R3 carry over unchanged.
+- PI decision on O-1.
+
+---
+
+# Addendum — F2: two-block successor (17 November 2026, evening)
+
+**Reviewed:** `DYAD_CPP_F2_TUBE_CONTRACTOR.zip`, SHA-256 `b30dda66278ee6e21fde8b040f80abebb9ad534c906e3cb9613112b5e30d378e`, on branch `upload/dyad-cpp-f2-20261117` (head `596c2319f8edd27fc4ed136f7757cf43abc7d326`, pushed by the PI from the server together with his run outputs, `pi-run/`). Inner `SHA256SUMS.txt` 7/7 OK. Main source `real_f2_tube.cpp` (140 lines), read in full; it includes the unchanged F1 source and the reviewed engine.
+**Request:** the package's `OWNER_REVIEW_REQUEST.md`, F2-R1 to F2-R5.
+
+## Verdict
+
+**ACCEPT as a development checkpoint, at SESSION scope.** F2-R1 to F2-R4 pass by reading. The owner rerun of the unchanged runner gives outputs **byte-identical** to the PI's server run (§F2-R5). The status of everything is the same as for F1: conditional on the graph/tube hypotheses, not a certificate, no point jump.
+
+## F2-R1 — the two-step induction
+
+Hypothesis (as in R5 above, now for two blocks): the candidate d* satisfies, for k = 1, 2, x_k(d*) ∈ D₀ and \|d_k(d*)\| ≤ R₀(x_k(d*)).
+1. Step 1 is the F1 step unchanged in substance (same calls: whole-tile flow, centre point flow, mid slope, `necessary_disk`, box intersection). So d* ∈ tile implies d* ∈ after1 = tile box ∩ box of the first necessary disc.
+2. `split_box(after1, 4)`: the 16 rectangles cover after1 (below). So d* lies in some part P.
+3. `ball(P)` ⊇ P ∋ d*. Extra points in the disc only weaken the bound; they cannot remove d*.
+4. `iter(x*, ball(P), φ, 2)`: `from_lift` once, two `direct6` blocks, `lifted_readout` once at the end. `Tcentered` composes the tangent as Σ J_ij · tangent_j with J the Jacobian enclosure over the whole state box: the chain rule with an enclosure of DT on a set that contains every intermediate state. The tangent is never reset. So `R2.b.d` encloses ∂d₂/∂d₀ on all of ball(P), and `R2.a.v` encloses x₂ there.
+5. \|d₂(d*)\| ≤ R₀(x₂(d*)) ≤ M₂ := `upper(R2.a.v)` (F1-R1 applies unchanged, on X₂ ∩ D₀). C1–C2 then gives d* ∈ necessary disc 2, so d* ∈ P ∩ box(disc 2).
+Step 2 uses only the k = 2 condition on P ⊂ after1; it does not need to repeat k = 1. ✓
+
+## F2-R2 — the bound at both bases; exceptions; wall
+
+- M₁ = `upper(X₁)`, M₂ = `upper(X₂)`, each the F1-reviewed bound on X_k ∩ D₀; no claim X_k ⊂ D₀; no sampled or Python value enters. ✓
+- A `domain_error` at step 1 keeps the whole tile in the final hull; at step 2 it keeps P (the box the candidate is known to be in at that point). Other exceptions end the run with exit 3, never a discard. ✓
+- **Wall.** The C++ floor `cwall.l` is the lower end of a 256-bit enclosure of second(ξ*) − 0.15. It is ≤ c₀ for the current definition. It is also ≤ c₀ under the O-1 proposal (c_j := upper end of the library ball, which is ≥ the real value). So the C++ code is valid under both. ✓
+- **O-1 status.** The co-owner's request calls the proposal "PI-approved". This review has no record of a PI decision on O-1. Until the PI decides, O-1 is open. The co-owner's point is right: if adopted, c_j must be fixed as one exact dyadic number with its provenance (precision, routine), not as whatever `cw.upper()` gives at the working precision of a run.
+
+## F2-R3 — tiling, coverage, hull
+
+- `split_box`: with Δ = h − l ≥ 0, the pieces are [l + ⌊Δi/n⌋, l + ⌈Δ(i+1)/n⌉]. The first starts at l, the last ends at l + Δ = h, and each piece ends at or after the start of the next (⌈·⌉ ≥ ⌊·⌋). So the union is the whole box, for any signed l (only Δi ≥ 0 is divided). ✓ The unit test samples 17 × 17 points; the argument above covers all points.
+- Discard only on empty intersection; F1-excluded tiles leave no row in the final hull; unresolved tiles keep their whole box. ✓
+- **Hull radius.** `enclosing_disk` uses `norm_upper`, the \|Re\| + \|Im\| bound about the box centre. The printed radii are therefore L¹ radii, an upper bound on the Euclidean radius (at most √2 times it). The F1 radii above use the same convention, so the F1 → F2 comparison is like for like. ✓
+- Negative controls: no arguments → 64; JSON as transfer → 3; subdivision 7 → 3. ✓
+- Detail TSV: the package's integer checker passes on both grids. **Independent check against #301:** the estimated d* lies in subtiles (25,15), (26,12), (33,3), (34,0) for 8×8 and (42,15), (43,12), (52,3), (53,0) for 10×10. All are RETAINED at both steps.
+
+## F2-R4 — sources and dependencies
+
+- F2 zip hash matches on the PI server and here. Runner gates: the F2, F1, benchmark and V2 package sums and the pinned stage-2 JSON. ✓
+- The F1 source is included under a renamed `main`, unchanged; bench.cpp, `centered_evaluator.hpp` and `independent_core.cpp` come from the reviewed packages, unchanged. ✓
+- The coefficient transfer is the one checked in R4 above (against the library recursion; not a C++ regeneration). Output `phi40_outer_256.txt` is identical on both machines.
+- The PI's `unzip` prompt (an older SHA256SUMS not replaced): the PI-side `f2_package_checks.txt` equals the owner's, and every result file is byte-identical to the owner's run from the hash-verified zip. That rules out a stale source in effect.
+
+## F2-R5 — scope and the runs
+
+| run | status | grid / subdiv | step 1: excluded / kept | step 2: subtiles / excluded / kept | unresolved | M₂ range | L¹ radius F1 → F2 |
+|---|---|---|---|---|---|---|---|
+| PI server, 17 Nov 14:01 UTC | PI-RUN | 8 / 4 | 44 / 16 | 256 / 96 / 160 | 0 | 6.016285·10⁻⁵ – 8.930092·10⁻⁵ | 1.526194·10⁻³ → 1.296767·10⁻³ |
+| PI server | PI-RUN | 10 / 4 | 80 / 16 | 256 / 128 / 128 | 0 | 5.585222·10⁻⁵ – 7.644073·10⁻⁵ | 1.198129·10⁻³ → 9.656854·10⁻⁴ |
+| owner container | REVIEWER-REPLAYED | both | identical | identical | 0 | identical | identical |
+
+`compare_pi_vs_owner.txt` (evidence `cpp-review/f2-tube/`): 21 of 23 files identical; the two that differ are `environment.txt` (time, repo head, Python version) and `RUN_SHA256SUMS.txt`, which hashes `environment.txt`.
+The co-owner's local proxy figures (18-digit coefficients) are a third level ([NUM]); they agree to the printed digits but are not evidence for the source-backed run.
+
+**Reading of the numbers ([NUM]).** M₂ is about 1.3–2× the true R₀(ξ₂) ≈ 4.5·10⁻⁵ of #301, as a bound should be. The radius falls only about 15–20 % from F1 to F2, against the factor of about 30 that an exact derivative would give (#301 §3). The D·r term still dominates. Finer parts at step 2 (or per-T mean-value updates) will gain more than further blocks; adding blocks on the present parts mainly increases D.
+
+## Next
+
+- Co-owner: before a five-block run, measure on the step-2 parts how D·r and M₂ compare (one column each in the TSV is enough), and use that to choose subdivision against horizon.
+- PI: decide O-1. If accepted, the owner fixes c₀ and c₁ as exact dyadic numbers with provenance in proof record §1, on a separate branch.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 2 — selective second-stage refinement (18 November 2026)
+
+**Reviewed:** `DYAD_CPP_F2_SELECTIVE_REFINE.zip`, SHA-256 `a900d31a88725dc0a0870b84ab5ee0658971d62399b7da9583263fe98b35f3ae`, on `upload/dyad-cpp-f2-selective-20261118` (head `0a658b85fbc41659f4e72b2b7f0e550a730763e3`). The branch also carries the PI's 4×4 and 8×8 term runs (`pi-run/sub4`, `pi-run/sub8`). The PI's selective run is on `upload/dyad-cpp-f2-selective-results-20261118` (head `fc84ab66a7f49e21b2726d79147686a47a44f6c6`). Dependency used for the 8×8 source run: `DYAD_CPP_F2_TERM_AUDIT_SUB8.zip` `1677b05a…ea16` (on `main`, `upload/dyad-cpp-centered-20261116/received/`). Its diagnostic differs from the 4×4 term audit (`b2a0f428…d6c0`) only in admitting subdivision 8 and a limit up to 1024 (diff checked).
+**Request:** the package's `OWNER_REVIEW_REQUEST.md`, S1 to S5.
+
+## Verdict
+
+**ACCEPT as a development checkpoint, at SESSION scope.** S1 to S4 pass by reading. The owner replay of both the 8×8 source run and the selective run is byte-identical to the PI's runs in every result file. The status is unchanged: conditional on the graph/tube hypotheses; no certificate, no point jump.
+
+## S1 — the frozen source selection
+
+- `read_prior` rejects a wrong header, extra or missing fields, any row that is not VALID, any action other than RETAINED/EXCLUDED, indices out of range, duplicates, rows that break the integer identities Dr = ⌈D·r⌉ and radius = err + ⌈(M + Dr)/|b|⌉, and any run that does not have exactly 1024 rows, 100 RETAINED and 16 first-stage tiles with 64 rows each.
+- The 924 EXCLUDED parents are not replayed. Their exclusion rests on the 8×8 run of `f2_term_diagnostic_sub8.cpp`. That code is the reviewed F2 step (same `iter`, `upper`, `necessary_disk`, `intersection`; exclusion only on an empty intersection; `domain_error` → UNRESOLVED and kept). The log does not store the box endpoints, so an exclusion cannot be rechecked from the log alone. It is rechecked here by the **owner replay of the whole 8×8 run** (§S5), whose `terms.tsv` is byte-identical to the PI's.
+- The 100 RETAINED parents are recomputed by the original F2 calculation, and the run stops unless all seven recorded integers (M₂, Dr, D, r, |b|_lower, recentring error, radius) are equal. This also fixes the index correspondence between the log and `split_box(after1, 8)`. ✓
+
+## S2 — the retained set
+
+The parent rectangle is `intersection(part, N2.box())`, the same expression as `after2` in F2, recomputed from the same disc. `split_box(·, 2)` covers it (Addendum 1, F2-R3). A candidate in the parent lies in some child. Children are cut from the post-F2 rectangle, not from the wider part. ✓
+
+## S3 — the child bound
+
+For each child: `ball(child)`; two unreset `direct6` blocks from the lift; whole-disc tangent; M₂ from the child's own X₂ ∩ D₀ (`upper`, F1-R1); the C1–C2 disc, with its radius identity checked; exclusion only on an empty intersection with the child. A `domain_error` keeps the child box. At the parent level a `domain_error` ends the run with exit 2 and no narrower claim. Other exceptions → exit 3. The final hull is required to lie inside the prior hull. ✓
+
+## S4 — the output
+
+The package checker, re-run here, passes: every child is `split_four(parent)[k]`, lies in its parent, and the four children of each parent are all present; every VALID row satisfies the integer identities; RETAINED ⇔ non-empty intersection, and the stored final box equals that intersection; 400 rows, 100 parents. The prior hull is recomputed from the 100 parent rectangles and equals the 8×8 run's `final_L1_hull` (5.723708·10⁻⁴). The counts 100 + 400 involve no repetition of the 924. ✓
+
+## S5 — evidence and replay
+
+| run | status | result |
+|---|---|---|
+| 8×8 source (grid 8, sub 8) | PI-RUN 17 Nov; REVIEWER-REPLAYED 18 Nov | 1024 rows: 924 excluded, 100 retained, 0 unresolved; L¹ hull 5.723708·10⁻⁴; `terms.tsv` SHA-256 `1f5fa762…6e72` |
+| selective (100 parents × 2×2) | PI-RUN 18 Nov; REVIEWER-REPLAYED 18 Nov | 400 children: 256 excluded, 144 retained, 0 unresolved; L¹ hull 2.501176·10⁻⁴; `selective_children.tsv` SHA-256 `3566a7c7…6579` |
+
+Byte comparison (`evidence/dyad/open20-an/cpp-review/f2-selective/compare_pi_vs_owner.txt`): every result file is identical. The only files that differ are `environment.txt` (time, repo head, Python), the `RUN_SHA256SUMS.txt` that hashes it, and `stage2_source_check.txt` (it prints the local path). The executables were not compared.
+This is a replay of the same code on a second machine, not an independent implementation. The co-owner's integer check of the outputs (#305 comment `6974990978`) is a third, independent reading of the same rows.
+
+**Matched scaling (co-owner's `matched_scaling.py`, re-run here on the PI 4×4 log and the owner's 8×8 log):** median child/parent ratios r 0.5, D 0.443, D·r 0.221, M₂ 0.759, D·r/M₂ 0.292. These are the figures of comment `6971328504`, now from deposited files.
+
+## Reading ([NUM])
+
+- On the selected children, D·r/M₂ has median 0.549 and max 0.555 (min 0.081). The derivative term is now below the tube term on every child. Further subdivision gains less than before. The radius M₂/|b| becomes the main limit.
+- The L¹ hull is 2.5·10⁻⁴, about 8 times smaller than 0.002. The W8 distance between the two centres (about 1.95·10⁻⁸, co-owner's figure) is still about 10⁴ times smaller. Two blocks cannot close this gap: M₂ itself is of order 10⁻⁵ to 10⁻⁴. The next lever is the horizon (more blocks shrink M_k, #301 §1), now on the small retained set rather than on the whole fibre.
+
+## Next
+
+- Co-owner: a horizon step (k = 3 to 5) on the 144 retained children, with the same rules (own M_k, whole-disc derivative, unresolved kept), and the D·r/M_k column. Compare its cost with one more 2×2 split.
+- The 924 + 256 exclusions stay valid only together with the logs they come from; any later stage must cite both run hashes above.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 3 — horizon 3 against a further 2×2 split (18 November 2026, evening)
+
+**Reviewed:** `DYAD_CPP_F3_HORIZON_DIAGNOSTIC.zip`, SHA-256 `0bee93e58d7df73525a5817e7340a9258d8e13bb63065ddbbdc535accceec379`, on `upload/dyad-cpp-f3-horizon-20261118` (head `c500a6dc1b1598fce9c08c766bf89668c609b335`); inner `SHA256SUMS.txt` 10/10 OK. PI run on `upload/dyad-cpp-f3-horizon-results-20261118` (head `1c980e945a870d4d14db77cf19dca0831e8b457c`). New source `horizon.cpp` (193 lines), read in full; it includes the reviewed selective, F2, F1 and engine sources unchanged.
+**Request:** H1 to H5 of the package's `OWNER_REVIEW_REQUEST.md`.
+
+## Verdict
+
+**ACCEPT as a development experiment, at SESSION scope.** H1 to H4 pass by reading; the owner replay of `compare` gives the same `details.tsv` for both modes and the same counts, M ranges, ratios and radii; only wall-clock times differ. Scope as before; for `h3` the hypothesis now also covers k = 3 (x₃ ∈ D₀, \|d₃\| ≤ R₀(x₃)).
+
+## H1 — frozen source
+
+`load_checked_source` rejects a wrong header, missing or extra fields, inverted boxes, IDs out of range, duplicates, non-VALID rows, broken integer identities (Dr, radius, and necessary-box width = 2·radius), a child that is not `split_box(parent, 2)[k]`, a RETAINED row whose final box is not the intersection, an EXCLUDED row whose intersection is not empty, and any count other than 400 / 144 / 256 / 100 parents with four children each. Each of the 144 retained rows is then recomputed by the unchanged F2 code, and the run stops unless all seven integers, the necessary box and the final box agree. The 256 excluded rows are not recomputed; they rest on the selective run, which was replayed (Addendum 2). ✓
+
+## H2 — the horizon step
+
+`h3`: on each retained final box b, `ball(b)`, three `direct6` blocks from the original lift (`f2::iter(…, 3)`, tangent never reset), M₃ = `upper(X₃)` from the box's own base, C1–C2 at k = 3. `refine2`: `split_box(b, 2)` and the k = 2 step on each child. Both are necessary conditions on the same candidate set; their results could also be intersected. `h5` exists and was not run. ✓
+
+## H3 — retention and arithmetic
+
+Exclusion only on an empty intersection with the probe box; `domain_error` keeps the probe box (a subset of b); other exceptions → exit 3; counts are checked (144 replays; 144 or 576 evaluations) and the final hull must lie in the source hull. The package checker (`check_horizon.py`) passes on both modes here. ✓
+
+## H4, H5 — comparison and provenance
+
+| mode | evaluations | excluded / retained / unresolved | M range | Dr/M median | L¹ hull 2.501176·10⁻⁴ → | owner time |
+|---|---|---|---|---|---|---|
+| h3 | 144 | 4 / 140 / 0 | 1.79–4.46·10⁻⁵ | 8.39 | 2.499532·10⁻⁴ | 74 s |
+| refine2 | 576 | 252 / 324 / 0 | 4.49–4.82·10⁻⁵ | 0.144 | 1.707123·10⁻⁴ | 137 s |
+
+PI-RUN and REVIEWER-REPLAYED agree in every result file (`evidence/dyad/open20-an/cpp-review/f3-horizon/compare_pi_vs_owner.txt`; 25 files identical, the rest differ only in times, local paths or the hash lists of those). Same code on two machines, not an independent implementation. Coefficient transfer as in R4. ✓
+
+## Reading ([NUM]) — where the two-block route stops
+
+From the `details.tsv` files (owner computation):
+- `refine2`: box radius r ≈ 1.6·10⁻⁵ (median), but the necessary-disc radius is ≈ 8.5·10⁻⁵, with the tube-only part M₂/\|b₂\| ≥ 6.95·10⁻⁵ (median 7.4·10⁻⁵, \|b₂\| ≈ 0.65). The discs are already about five times larger than the boxes. Further 2×2 splits at k = 2 can only cut the candidate set down to roughly the intersection of these discs, a set of radius of order M₂/\|b₂\| ≈ 7·10⁻⁵. **The two-block route saturates near an L¹ hull of about 10⁻⁴**, a factor below 2 from the present 1.7·10⁻⁴.
+- `h3`: the tube-only part is smaller, M₃/\|b₃\| from 2.2·10⁻⁵ (median 5.5·10⁻⁵), but D₃·r is about 8 M₃ on the present boxes (r ≈ 3.1·10⁻⁵). With D ∝ r^{1.17} (Addendum 2), halving r divides D·r by about 4.5, so on the 324 `refine2` boxes (r ≈ 1.6·10⁻⁵) one expects D₃·r ≈ 2 M₃, and on their 2×2 children ≈ 0.4 M₃.
+- So the next gain needs both: smaller boxes **and** k = 3. A horizon step pays only once r is below about M_k/D_k (per unit of r).
+
+## Next
+
+- Co-owner proposal (a k = 3 pilot on the 324 `refine2` boxes): agreed. A subset is not needed: from the times above, all 324 at k = 3 cost about 3 minutes. In the same run, k = 3 on their 2×2 children (1296 evaluations, about 11 minutes) gives the combined split + horizon point, which the estimate above says is the one that should work.
+- The 252 new `refine2` exclusions depend on the selective run and on the 8×8 run; cite all three log hashes.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 4 — k = 3 on the 324 refined survivors (19 November 2026)
+
+**Reviewed:** `DYAD_CPP_F3_ON_REFINED_324.zip`, SHA-256 `499db143cb952a2d663c967e64866c136064487a84d00ecc7ac4ee857c8b5c74`, on `upload/dyad-cpp-h3-refined-20261118` (head `f873c643299ef99a79d9985673dbc997de4fafe7`); inner sums OK. PI run on `upload/dyad-cpp-h3-refined-results-20261118` (head `c7699269162b4debf42815d2d5b56d35b5c687de`). New source `h3_refined.cpp` (197 lines), read in full; it includes `horizon.cpp` and everything below it unchanged.
+**Request:** K1 to K5 of the package's `OWNER_REVIEW_REQUEST.md`.
+
+## Verdict
+
+**ACCEPT as a development experiment, at SESSION scope.** K1 to K3 pass by reading. The owner replay of `compare` gives byte-identical `details.tsv` for both modes (SHA-256 `b285d0dc…dd0d` for `h3_324`, `3f3ac0df…7325` for `h3_split2`); summaries differ only in times. The hypothesis now covers k = 1, 2, 3.
+
+## K1 — the cumulative cover
+
+`load_frozen` reads the `refine2` log of the horizon run (SHA-256 `bf9d4507…7a1a`, identical to the owner's replay in Addendum 3) on top of the checked selective log. It rejects wrong headers or fields, inverted boxes, IDs out of range or not among the 144 selective survivors, duplicates, non-VALID rows, a parent rectangle different from the selective final box, a child that is not `split_box(parent, 2)[k]`, broken integer identities, RETAINED/EXCLUDED rows inconsistent with the stored intersection, and any count other than 576 / 144 parents × 4 / 324 kept / 252 excluded. Then the 144 selective survivors (`horizon::replay`) and the 324 `refine2` survivors (`replay_frozen`, unchanged F2) are recomputed, and the run stops on any difference in the seven integers, the necessary box or the final box. The earlier exclusions (924 + 256 + 252) are not re-evaluated or counted again. ✓
+
+## K2 — the two k = 3 modes
+
+`h3_324`: each of the 324 final rectangles; `h3_split2`: `split_box(·, 2)` of each (1296). Both use `f2::iter(…, 3)` from the original lift over the current disc, M₃ = `upper(X₃)` of that disc, the C1–C2 disc, exclusion only on an empty intersection, `domain_error` → the current rectangle kept, other exceptions → exit 3; counts and hull inclusion are checked. ✓
+
+## K3, K4 — output and replay
+
+The package checker passes here on both modes. Results (identical PI-RUN and REVIEWER-REPLAYED):
+
+| mode | evaluations | excluded / retained / unresolved | M₃ range | Dr/M₃ median | L¹ hull 1.707123·10⁻⁴ → | owner time |
+|---|---|---|---|---|---|---|
+| h3_324 | 324 | 72 / 252 / 0 | 1.68–2.50·10⁻⁵ | 2.88 | 1.659646·10⁻⁴ | 160 s |
+| h3_split2 | 1296 | 972 / 324 / 0 | 1.63–1.97·10⁻⁵ | 0.818 | 8.790759·10⁻⁵ | 396 s |
+
+Owner recomputation from the TSV files confirms the co-owner's figures (#305 comment `7018240286`): the 324 retained children come from 100 of the 324 parents (0 / 1 / 2 / 4 children kept for 224 / 4 / 32 / 64 parents); on them, median r = 7.81·10⁻⁶, M₃/\|b₃\| = 2.42·10⁻⁵ (minimum 2.41·10⁻⁵), necessary radius 4.39·10⁻⁵, \|b₃\| ≈ 0.81.
+
+## K5 — scope
+
+Same-engine conditional numerical development; not an independent implementation, not a proof of the graph or tube, not a jump. O-1 is PR #312, not merged at the time of writing.
+
+## Reading ([NUM], [HEUR])
+
+- The pattern of Addendum 3 repeats one block later. At k = 2 the cover stalled at a disc floor M₂/\|b₂\| ≈ 7·10⁻⁵; at k = 3 the floor is M₃/\|b₃\| ≈ 2.4·10⁻⁵, a factor of about 3 per block, and the retained boxes (r ≈ 8·10⁻⁶) are again about 5 times smaller than the discs. Further splitting at k = 3 cannot go much below an L¹ hull of a few 10⁻⁵.
+- So the working rule is: **at each horizon, split until D_k·r is below M_k, then add a block.** The number of live boxes then stays roughly constant (here 100 to 300), and each evaluation costs k blocks.
+- Scale to the target, from the #301 table (true R₀ along the orbit, not enclosures): the tube-only floor is about 0.002 × 1.7·10⁻³ ≈ 3·10⁻⁶ at k = 5, 2·10⁻⁷ at k = 10 and 7·10⁻⁹ at k = 20, against the W8 centre distance ≈ 2·10⁻⁸. The present enclosed floors are within a factor of about 2 of the true ones at k = 2, 3. A horizon of about 15 to 20 blocks is therefore the order needed, not 4 or 5. This is an estimate for planning, not a claim.
+
+## Next
+
+- The co-owner's 4-block comparison (direct and with 2×2) is a reasonable next measurement. Expected [HEUR]: direct k = 4 on the 324 boxes behaves like `h3_324` (Dr/M₄ of a few); k = 4 with 2×2 works.
+- More useful than one more pairwise comparison would be a small **adaptive driver** that applies the rule above: for k = 4, 5, …, split the retained boxes until the median Dr/M_k < 0.5, evaluate, keep the log, and stop at a fixed budget. Same rules as before (own M_k, whole-disc tangent from the original lift, unresolved kept, hashes of all source logs). Its output would show directly how the floor and the cost grow with k.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 5 — bounded adaptive driver, k = 4 (19 November 2026, night)
+
+**Reviewed:** `DYAD_CPP_ADAPTIVE_HORIZON.zip`, SHA-256 `0e664496627904aa50c44cccfbc2cdfc557693f01e3e1014a93bcbc2a8df5707`, on `upload/dyad-cpp-adaptive-20261119` (head `337a78c355ae99bdb05935b77651eb074b42509e`); inner sums OK. PI run on `upload/dyad-cpp-adaptive-results-20261119` (head `bab839a726147bdd73516f430b04139789726bac`), parameters K = 4..6, budget 1600, depth 2, frontier 4096. New source `adaptive.cpp` (264 lines), read in full; it includes `h3_refined.cpp` and everything below it unchanged.
+**Request:** A1 to A6 of the package's `OWNER_REVIEW_REQUEST.md`.
+
+## Verdict
+
+**ACCEPT as a development experiment, at SESSION scope; the run itself is INCONCLUSIVE (budget), as reported.** A1 to A4 pass by reading. The owner replay with the same parameters is byte-identical to the PI run in every result file, including `events.tsv` (only the pin file's printed paths and the environment differ). No candidate is lost; nothing beyond k = 4 was reached.
+
+## A1 — sources
+
+`load_seeds` reads the `h3_split2` log (SHA-256 `3f3ac0df…7325`) on top of the checked `refine2` and selective logs, with the same header, ID, partition, integer-identity, intersection and count checks as before (1296 rows, 324 parents × 4, 324 kept, 972 excluded). `execute` replays 144 + 324 + 324 survivors bit-exactly before stage 4; the frontier starts as the 324 `h3_split2` final boxes. Five source hashes are gated by the runner. Inherited exclusions 924 + 256 + 252 + 972 are not recounted. ✓
+
+## A2, A3 — the stage
+
+For each queued box: `ball(box)`, `f2::iter(…, k)` from the original lift, M_k = `upper(X_k)`, C1–C2. Exclusion only on an empty intersection. A box with 2·Dr > M (heuristic only) and room in depth, frontier and budget is marked SPLIT; its **post-contractor intersection** is split by `split_box(·, 2)` and the four children are queued and evaluated in the same stage. A SPLIT box never enters the frontier itself; its children do. `domain_error` keeps the box. The new hull must lie inside the old one. Depth resets per k, but boxes are not changed by the reset. ✓
+
+## A4 — budgets and completeness
+
+Budget exhaustion before evaluation writes `NOT_EVALUATED / BUDGET_KEEP` and keeps the box; other exceptions → exit 3; the run returns 2 unless all stages up to MAX_K are READY. The package's integer checker passes here (`ADAPTIVE_INDEPENDENT_INTEGER_PASS`). The accounting identities hold: 324 + 4·319 = 1600 evaluations; 324 + 3·319 − 384 = 897 final boxes. ✓
+Minor remarks (no soundness issue):
+- a1. The counter `budget_kept` mixes two cases: unevaluated `BUDGET_KEEP` rows, and evaluated boxes kept because a split would not fit in the budget. Here all 897 are of the second kind (no `NOT_EVALUATED` rows). Two counters would make summaries unambiguous.
+- a2. `can_split` reserves budget for the whole queue (total + queue + 4 ≤ budget). With budget 1600 = 324 + 4·319, no depth-1 box could split; the stop at depth 1 is by construction.
+- a3. `tests/test_adaptive_structure.py` imports from a sibling directory `../DYAD_CPP_F3_ON_REFINED_324/tests` that is not an argument of the runner; the replay here needed that layout. Not hash-relevant (the H3 package is gated), but a hidden path dependency.
+
+## A5 — replay
+
+Owner container, same parameters, wall time 704 s (≈ 0.44 s per k = 4 evaluation including source replays). `compare_pi_vs_owner.txt` in `evidence/dyad/open20-an/cpp-review/adaptive-k4/`: 35 files identical; `events.tsv` identical. Same engine on two machines, not an independent implementation.
+
+## A6 — reading ([NUM])
+
+By split depth (owner computation, `depth_breakdown_owner.txt`; medians):
+
+| depth | action | n | Dr/M₄ | M₄ | M₄/\|b₄\| | r | Dr |
+|---|---|---|---|---|---|---|---|
+| 0 | SPLIT | 319 | 4.36 | 4.32·10⁻⁵ | 4.84·10⁻⁵ | 7.81·10⁻⁶ | 1.88·10⁻⁴ |
+| 0 | EXCLUDED / RETAINED | 4 / 1 | 1.12 / 3.47 | | | | |
+| 1 | EXCLUDED | 380 | 1.27 | 1.27·10⁻⁵ | 1.43·10⁻⁵ | 2.93·10⁻⁶ | 1.62·10⁻⁵ |
+| 1 | RETAINED | 896 | 2.03 | 1.55·10⁻⁵ | 1.74·10⁻⁵ | 3.91·10⁻⁶ | 3.15·10⁻⁵ |
+
+Two observations:
+1. **M₄ is set by the base enclosure, not by R₀.** On the same boxes where `h3_split2` had M₃ = 1.63–1.97·10⁻⁵, the depth-0 M₄ is 4.3·10⁻⁵, larger, although R₀ falls along the orbit (#301 §1). When r halves, M₄ falls by a factor 2.8. R₀ itself hardly changes across a box of radius 8·10⁻⁶ in d. So M₄ is dominated by the width of the enclosure X₄ of the base after four blocks, which grows with the box.
+2. **D₄ also wraps more strongly.** From depth 0 to 1, D·r falls by a factor of about 6 for a factor 2 in r, so D₄ scales like r^{1.6} here (r^{1.17} at k = 2).
+Both are effects of the long interval flow from the original lift, and both improve with r. They also mean that the k = 2, 3 trend (tube floor −3× per block) cannot be read off directly for k ≥ 4; the planning estimate of Addendum 4 stays an estimate.
+
+## Next (owner suggestions; the choice is the co-owner's and the PI's)
+
+1. **Mean-value base enclosure (cheap, local).** The readout already holds the tangent of the base coordinate (`whole.a.d`, an enclosure of ∂x_k/∂d over the disc). For d in a disc of radius r about c, x_k(d) ∈ x_k(c) + A·B(0, r) with A = `whole.a.d` (mean value along the segment; the disc is convex). Take X_k := `point.a.v` + A·B(0, r), intersected with `whole.a.v`, and M_k = `upper(X_k)`. This is the same kind of centring already used for d, keeps every rule, and should bring M₄ close to the true R₀ on the present boxes. It can be tested first by recomputing M₄ on the 1600 logged k = 4 boxes, without any split.
+2. **Checkpoint and resume**, as the co-owner proposes: start from `final_frontier.tsv` (hash-pinned) rather than from k = 3. A depth-2 continuation of the 896 boxes is 3584 evaluations, about 25 minutes at the measured cost.
+3. Separate counters (a1) and an explicit argument for the sibling test path (a3).
+
+No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 6 — mean-value base enclosure and resume driver (20 November 2026)
+
+**Reviewed:** `DYAD_CPP_MV_RESUME.zip`, SHA-256 `4c55165e9ca7db345397c3edc0a3ca76a5df688f1163d2109dc6996fc2f07b38` (relayed by the PI as an attachment; **not yet on an `upload/` branch**); inner sums 10/10 OK. New source `mv_resume.cpp` (282 lines), read in full; it includes `adaptive.cpp` and everything below it unchanged.
+**Request:** R1 to R6 of the package's `OWNER_REVIEW_REQUEST.md`. This addendum is a **pre-run review plus an owner pilot run**; the PI's pilot output is not yet deposited.
+
+## Verdict
+
+**R1 to R5 ACCEPT by reading (SESSION).** The owner pilot on the pinned Stage-2 transfer completes (1600/1600, exit 0, package checker `MV_PILOT_INTEGER_PASS`). R6 (byte comparison with the PI) is pending the PI run.
+
+## R1 — the mean-value base bound
+
+- x_k is a holomorphic function of d on the evaluation disc (the engine propagates one complex tangent through complexified T; the C1–C2 step already relies on this). `whole.a.d` encloses ∂x_k/∂d on the whole disc (`lifted_readout` builds the base jet from the whole-disc state and tangent). The disc is convex, so x_k(d) − x_k(c) = ∫₀¹ x_k′(c + t(d − c))(d − c) dt and \|x_k(d) − x_k(c)\| ≤ sup\|x_k′\|·r. `abs_upper` is an outward Euclidean bound (ceil-sqrt of squared outward magnitudes), the product is rounded up (`cd`), `point.a.v` is an enclosure of x_k(c), and `inflate` adds the radius on both axes (box ⊇ disc). ✓
+- X_whole ∩ X_mv contains every x_k(d); a disjoint pair aborts (runtime error, exit 3), never an empty cover. ✓
+- `upper(X)` is a valid bound of R₀ on X ∩ D₀ for any enclosure X (F1-R1), so each of the three values is valid and their minimum is valid. A `domain_error` in an optional bound keeps the raw bound. ✓
+- The new necessary disc has the same centre and a smaller radius; `measure` checks old ⊇ new. ✓
+
+## R2, R3 — sources and pilot
+
+The seven pins include the adaptive `events.tsv` (`276701a0…8a1f`) and `final_frontier.tsv` (`4cb41a4f…5c2f`), equal to the owner replay of Addendum 5. `replay_frozen_events` reconstructs the original FIFO (324 depth-0 inputs; children of SPLIT rows in order) and the 897-box frontier exactly; the 144 + 324 + 324 source survivors are replayed. In `pilot`, each of the 1600 logged discs is recomputed and its seven old integers, necessary box and old action must match before the new bound is recorded. ✓
+Minor: in `pilot`, the printed column `intersection_M_256` calls `upper(effective)` again outside the `try`; a `domain_error` there would end the pilot as INCONCLUSIVE (safe, but it would lose a valid row). It did not occur.
+
+## R4, R5 — resume
+
+`resume` starts from the 897 frozen final rectangles with their depths (1 at 0, 896 at 1), evaluates them at k = 4 with the new bound, splits only post-contractor intersections, resets depth only for k ≥ 5, and keeps every box on budget, cap or domain paths. The two budget counters are now separate (`budget_pending`, `budget_valid_no_split`). The run returns 2 unless all stages to MAX_K are READY. ✓
+
+## Owner pilot ([NUM], REVIEWER-RUN)
+
+Owner container, pinned transfer, wall time 785 s. `base_pilot.tsv` SHA-256 `5ff09c47…04b8` (kept for comparison with the PI run). By depth (`pilot_breakdown_owner.txt`; medians):
+
+| depth | old action | n | M₄ new/old | Dr/M₄ new | M₄/\|b₄\| new | radius old → new | new action |
+|---|---|---|---|---|---|---|---|
+| 0 | SPLIT | 319 | 0.18 | 24.2 | 8.73·10⁻⁶ | 2.59 → 2.20·10⁻⁴ | 319 retained |
+| 1 | RETAINED | 896 | 0.50 | 4.06 | 8.69·10⁻⁶ | 5.27 → 4.40·10⁻⁵ | 784 retained, **112 newly excluded** |
+| 1 | EXCLUDED | 380 | 0.61 | 2.09 | 8.68·10⁻⁶ | | 380 excluded |
+
+**Reading.**
+1. The diagnosis of Addendum 5 is confirmed: with the mean-value base, M₄ falls on every disc (1600/1600), and the tube part of the necessary radius becomes **M₄/\|b₄\| ≈ 8.7·10⁻⁶, independent of box size**. That is the k = 4 tube floor. The floors are now 7.4·10⁻⁵ (k = 2), 2.4·10⁻⁵ (k = 3), 8.7·10⁻⁶ (k = 4): the factor of about 3 per block returns.
+2. The derivative term now dominates (Dr/M₄ ≈ 4 at r ≈ 3.9·10⁻⁶). With D₄ ∝ r^{1.6} (Addendum 5), one more halving gives about 1.3 and two give about 0.4.
+3. Applied to the frozen frontier, the new bound alone removes 112 of the 896 depth-1 boxes.
+
+## Advice on the resume parameters
+
+The co-owner's resume line uses budget 1800, depth 2. The budget rule reserves room for the whole queue: after re-evaluating the 897 boxes, a split is allowed only while total + queue + 4 ≤ budget. With about 785 high-ratio survivors, all of them split only if the budget is at least about 897 + 4·785 ≈ 4040. With 1800, about 225 split and the run stops INCONCLUSIVE again. **Suggested: `resume 4 4200 2 4096`** (k = 4 only, about 30–35 minutes at the measured 0.44 s per evaluation). The frontier cap 4096 is enough (≈ 3140 children).
+Also: the MV package should go to an `upload/` branch unchanged before or with the PI's results.
+
+No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 7 — MV pilot and k = 4 resume, PI runs compared (20 November 2026)
+
+**Deposited:** package `upload/dyad-cpp-mv-resume-20261119` (head `46f9f0831b26046ed2f266e9c0b63e4440b0ccb7`; ZIP SHA-256 `4c55165e…7b38`, equal to the copy reviewed in Addendum 6); resume results `upload/dyad-cpp-mv-resume-results-20261119` (head `801e69ac703e8609774f76edcf569e5d302f5a43`). The pilot results were not uploaded, because the package's upload script has one fixed results-branch name; the PI relayed their hashes instead.
+
+## R6 — comparison
+
+- **Pilot:** the PI's `base_pilot.tsv`, `structure_check.txt` and `summary.txt` have the SHA-256 values of the owner pilot (`5ff09c47…04b8`, `a7654db3…fd60`, `3722e190…fb14`).
+- **Resume (`resume 4 4200 2 4096`):** owner replay (wall time 1758 s, exit 2, `REFINEMENT_CAP`) and PI run agree in 39 files, including `events.tsv` (`2646cf7c…01c0`), `final_frontier.tsv` (`6eccf626…85e1`) and `stages.tsv` (`fcca8378…4942`). Only `environment.txt`, the pin file (local paths) and the run hash list differ.
+R6 is met at the level of same-engine replay. **The MV package is accepted as a development checkpoint (SESSION)**, together with Addendum 6.
+
+Minor finding on the package: `upload_mv_evidence.sh` uses one fixed results branch, so a pilot and a resume cannot both be deposited. A per-run suffix would fix it.
+
+## Result ([NUM])
+
+897 frozen boxes → 4037 evaluations, 785 splits, 2576 exclusions, **676 boxes**, 0 unresolved, 0 pending; L¹ hull 8.790759·10⁻⁵ → **3.223882·10⁻⁵** (−63.3 %). The stop is the depth cap (676 boxes at depth 2), not the budget (163 evaluations unused). Accounting: 897 + 4·785 = 4037; 897 + 3·785 − 2576 = 676.
+
+By depth (`depth_breakdown_owner.txt`; medians): at depth 1, Dr/M₄ = 4.06 with r = 3.9·10⁻⁶; at depth 2, Dr/M₄ = 0.86 with r = 1.95·10⁻⁶ and necessary radius 1.6·10⁻⁵. M₄/\|b₄\| = 8.7·10⁻⁶ at every depth.
+
+## Reading and next step
+
+- One halving cut Dr/M₄ by a factor 4.7 with M₄ fixed: here D₄ scales like r^{1.25}.
+- The k = 4 discs (1.6·10⁻⁵) are within a factor of two of the k = 4 tube floor (8.7·10⁻⁶). Another k = 4 split (2704 evaluations) could bring the hull to about 2·10⁻⁵ at most.
+- **Owner advice: move to k = 5 on the 676 boxes**, splitting at most once (depth 1): at most 676·5 ≈ 3400 evaluations, about 30–40 minutes. If the factor of about 3 per block holds, the k = 5 floor is near 3·10⁻⁶.
+- This needs a small successor: `resume` is fixed to start from the 897-box frontier at k = 4; it should start from this run's hash-pinned `final_frontier.tsv` (676 boxes) at k = 5, with the same rules (MV base, own M_k, whole-disc tangent from the original lift, unresolved kept).
+
+No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 8 — k = 5 from the MV frontier, and where D comes from (20 November 2026)
+
+**Reviewed:** `DYAD_CPP_K5_FROM_MV_FRONTIER.zip`, SHA-256 `2c90712f4c0cdd135fd66cdd8b9924f325b6549916847ca32be0635566d81b41`, on `upload/dyad-cpp-k5-20261120` (head `6ddc4760e1cfbb49bee586e06eb4edd36c3aec9c`); inner sums 9/9 OK. PI run on `upload/dyad-cpp-k5-results-20261120` (head `59ebfda24413fa8f44c0efd6b73fcbe688ca5c22`), parameters budget 3600, depth 1, frontier 4096, with a `recovery/` folder. New source `k5.cpp` (152 lines), read in full; it includes `mv_resume.cpp` and everything below it unchanged.
+**Request:** K5-X1 to K5-X6.
+
+## Verdict
+
+**ACCEPT as a development experiment, at SESSION scope**, with one package defect (X4). The k = 5 run is INCONCLUSIVE (`REFINEMENT_CAP`).
+
+## X1, X2 — sources and intake
+
+Ten pinned files and all package and run manifests are gated. `load_k4_events` checks header, fields, k = 4, depth ≤ 2, VALID only, unique IDs, the integer identities, the necessary-box width, and the intersection/action consistency, and requires the counts 4037 / 785 / 2576 / 676. `verify_mv_fifo` rebuilds the k = 4 FIFO from the 897 initial boxes and requires the 676 final boxes and the exact L¹ integer of Addendum 7. The 144 + 324 + 324 earlier survivors are recomputed. The 4037 k = 4 events are replayed as a log, not re-evaluated; they rest on the k = 4 run replayed in Addendum 7. ✓
+
+## X3 — the k = 5 stage
+
+Depth is reset to 0 for the new horizon only. `mvresume::stage` at k = 5: five blocks from the original lift, whole-disc tangent never reset, per-disc MV base enclosure and M₅, C1–C2, exclusion only on an empty intersection, splits of post-contractor rectangles, and every failure or cap path keeps the box. ✓
+
+## X4 — output and the checker defect
+
+The run's `check_k5.py` call passes `summary` as the sixth positional argument, but `verify()` receives it in the ninth place (`verify(…, a.budget, a.depth, a.cap, a.summary)` against the signature order). The checker then misreads the stop accounting and raises; the runner exits 3. **The C++ outputs are complete and unaffected.** The PI's `recovery/` folder records this: the original exit code (3), the console log, the corrected checker (`check_k5_fixed.py`, one-line change of argument order, diff checked here), and its PASS on the unchanged outputs. The owner replay hits the same exit 3; the corrected checker on the owner outputs prints the same line as the PI recovery (`K5_INDEPENDENT_INTEGER_PASS … final=2640 … stop=REFINEMENT_CAP`). The fix belongs in the package source.
+Accounting: 676 + 4·660 = 3316 evaluations; 676 + 3·660 − 16 = 2640 boxes; the stop is the depth cap (2640 at depth 1), with 284 evaluations unused.
+
+## X5, X6 — results and replay
+
+Owner replay of the unchanged ZIP (wall time 1777 s): `events.tsv`, `final_frontier.tsv`, `initial_frontier.tsv`, `stages.tsv`, `summary.txt` and `stderr.txt` are byte-identical to the PI run. Same engine on two machines.
+
+| depth | action | n | Dr/M₅ | M₅/\|b₅\| | Dr/\|b₅\| | r | necessary radius |
+|---|---|---|---|---|---|---|---|
+| 0 | EXCLUDED | 16 | 1.81 | 4.79·10⁻⁶ | 8.7·10⁻⁶ | 6.5·10⁻⁷ | 1.3·10⁻⁵ |
+| 0 | SPLIT | 660 | 36.3 | 4.80·10⁻⁶ | 1.74·10⁻⁴ | 1.95·10⁻⁶ | 1.79·10⁻⁴ |
+| 1 | RETAINED | 2640 | 4.79 | 4.79·10⁻⁶ | 2.30·10⁻⁵ | 9.8·10⁻⁷ | 2.78·10⁻⁵ |
+
+L¹ hull 3.223882·10⁻⁵ → 3.207925·10⁻⁵. The k = 5 tube floor is M₅/\|b₅\| = 4.8·10⁻⁶ (k = 4: 8.7·10⁻⁶); the derivative term is 83 % of the necessary radius at depth 1. These figures equal the co-owner's.
+
+## Where D comes from (owner diagnostic, [NUM])
+
+`evidence/dyad/open20-an/cpp-review/k5/d-growth/`: `dgrow.cpp` includes the unchanged chain and, for four of the 676 k = 4 final boxes, computes for k = 1…5 the enclosed D_k = ‖`whole.b.d` − slope‖ (as in C1–C2) and a sampled D_k: the largest ‖b_k(d) − slope‖ over eight point orbits on the disc (four on the boundary, four at 0.7 r). b_k − b_k(c) is holomorphic, so its maximum on the disc is on the boundary; the sample is a lower estimate of the true sup, not a bound.
+
+| k | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| D enclosed (box 0, r = 6.4·10⁻⁷) | 1.19·10⁻³ | 1.75·10⁻² | 0.153 | 1.00 | 12.2 |
+| D sampled | 4.9·10⁻⁶ | 8.7·10⁻⁶ | 1.2·10⁻⁵ | 1.4·10⁻⁵ | 1.7·10⁻⁵ |
+| ratio | 2.4·10² | 2.0·10³ | 1.3·10⁴ | 7.0·10⁴ | 7.2·10⁵ |
+
+The four boxes give the same ratios to three digits. So:
+- The true variation of b_k across the disc is small and grows slowly (second derivative about 26 at k = 5, consistent with the #301 fibre estimate of about 20).
+- Since D_sample ≤ D_true ≤ D_encl, the printed ratio D_encl/D_sample is an **upper estimate** of the overestimation factor D_encl/D_true, not its proven value; likewise D_sample/r ≈ 26 is not a certified bound on \|f_k″\| (co-owner, 20 Nov). With that reading: the ratio is 240 after one block and grows by a factor 6–15 per block, which points to wrapping of the tangent enclosure rather than to the dynamics.
+- The four boxes have r ≈ 6.4·10⁻⁷ (they are k = 4 final rectangles cut by their necessary discs), while the k = 5 depth-1 median is r ≈ 9.8·10⁻⁷. Since D_encl scales faster than r, comparisons must use the same boxes and radii (co-owner, 20 Nov).
+- If a certified D close to the sampled value can be obtained, D·r at k = 5 would be about 10⁻¹¹, far below M₅ ≈ 5·10⁻⁶; the necessary radius would be about the tube floor 4.8·10⁻⁶ without any splitting.
+
+The tangent is propagated as J(X)·t with J the Jacobian over the whole state box. A centred form for the tangent (point Jacobian along the centre orbit plus a remainder, or a second-order jet giving D ≤ sup‖∂²d_k/∂d₀²‖·r) should remove most of this factor. This supports the co-owner's plan (decompose D₅, tighten it on a sample, then decide), and gives its first target: bring the k = 1 ratio from 240 towards 1.
+
+## Next
+
+- Package: fix the `check_k5.py` argument order in the source; give the upload helper a per-run branch suffix.
+- Co-owner: a D-tightening prototype measured on the same four boxes (and then a sample of the 2640) against the sampled values above, before any new campaign.
+- No 3c-b, no certificate, no point jump. B-an and B-6 ACTIVE.
+
+---
+
+# Addendum 8a — certified lower estimate for the sampled D (20 November 2026)
+
+**Correction (co-owner, 20 Nov).** `dgrow.cpp` sampled ‖mid(b_k(d_j)) − slope‖ with the L¹ upper norm. The midpoint of an enclosure is not the derivative, and an upper norm is not a lower bound, so the chain D_sample ≤ D_true ≤ D_encl did not follow from that code.
+**Fix.** `dgrow_cert.cpp` (same evidence folder) differs in one line: D_lower = max_j `norm_lower`(b_k(d_j) − slope), where b_k(d_j) is the point-orbit enclosure and `norm_lower` is the L^∞ lower bound (≤ Euclidean modulus). The same disc, centre, radius, lift and slope are used. Now, with D_true := sup over the disc of \|b_k(d) − slope\|,
+D_lower ≤ D_true ≤ D_encl (D_encl uses `norm_upper`, the L¹ upper bound, ≥ Euclidean).
+
+| k | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| D_encl (box 0, r = 6.36·10⁻⁷) | 1.19·10⁻³ | 1.75·10⁻² | 0.153 | 1.00 | 12.2 |
+| D_lower, certified | 3.52·10⁻⁶ | 6.09·10⁻⁶ | 8.43·10⁻⁶ | 1.00·10⁻⁵ | 1.20·10⁻⁵ |
+| D_encl / D_lower | 3.4·10² | 2.9·10³ | 1.8·10⁴ | 1.0·10⁵ | 1.0·10⁶ |
+
+The four boxes agree to three digits (`dgrow_cert_output.txt`). D_encl/D_lower is a certified **upper** bound of the overestimation factor D_encl/D_true; it includes the norm factors (L¹ against L^∞, at most 2). The values are about 0.7 of the earlier sampled ones; the conclusion of Addendum 8 is unchanged.
+
+**On the co-owner's second-order jet (20 Nov), owner check.** The jet recursions for T are correct: with J = [[1, −cos η], [e^ρ, 1 − cos η]], p⁺ = J p and q⁺ = J q + (sin η · p_η², e^ρ p_ρ² + sin η · p_η²). For the contractor three more pieces are needed:
+1. The initial lift is affine in d₀ (z₀ = x*, w₀ = φ(x*) + x*² d₀), and (ρ, η) ↔ (z, w) is linear, so q₀ = 0 and the jets transform linearly.
+2. f_k is the **readout** d_k = (w − φ_N(z))/z², not a component of T⁶. Its second derivative needs the chain rule through the readout: d_k″ = [w″ − φ′z″ − φ″z′²]/z² − 4z′(w′ − φ′z′)/z³ + (w − φ)(6z′²/z⁴ − 2z″/z³), with every factor enclosed on the whole disc.
+3. C1–C2 computes D inside `necessary_disk` from a derivative box. Using D_jet = δ + r·H needs a variant that takes D directly (or min(D_old, D_jet)). Wrapping the jet into a box b ± D_jet would lose up to a factor 2 through the L¹ norm.
+The whole-disc first jet p (width up to about 12 at k = 5) enters the source terms p², so H may be wide too. It is multiplied by r, so even H of order 10³–10⁴ would give D_jet of order 10⁻³ at k = 5, against D_encl = 12. This is an expectation, not a result; the acceptance test is the co-owner's (H_k a valid bound; report D_lower, D_old, D_jet, δ and the necessary radius on the same boxes).

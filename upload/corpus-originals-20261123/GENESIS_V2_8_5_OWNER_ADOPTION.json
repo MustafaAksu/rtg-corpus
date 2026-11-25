@@ -1,0 +1,18 @@
+{
+  "study": "RTG_GENESIS_GEOMETRY_DSN",
+  "adopted_version": "v2.8.5",
+  "date": "2026-10-05",
+  "decision": "ADOPTED",
+  "authority": "Authorized co-owner decision delegated by user/PI in the final review turn.",
+  "reviewed_draft": {
+    "file": "RTG_GENESIS_GEOMETRY_DSN_v2_8_5_DRAFT_r2.md",
+    "sha256": "883644f5009fb54cbefa202846b0ecaf8bfd1e91d04d59756ad025428beb7cec"
+  },
+  "adopted_owner": {
+    "file": "RTG_GENESIS_GEOMETRY_DSN_v2_8_5.md",
+    "sha256": "41ed76602c1c87c42972ac5b3f0a53f6973ac484427473ac371c57db1ab475cf"
+  },
+  "scientific_change_at_adoption": "none; exact reviewed r2 scientific payload with metadata/governance-only release transformation",
+  "optional_vector_orientation_sentence": "deferred to v0.20 integration; not inserted into adopted bytes",
+  "supersedes": "RTG_GENESIS_GEOMETRY_DSN_v2.8.4"
+}

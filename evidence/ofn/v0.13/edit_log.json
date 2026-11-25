@@ -1,0 +1,1457 @@
+{
+  "schema": "ofn-stage1-line-addressed-v1",
+  "base_sha256": "55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa",
+  "candidate_sha256": "8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e",
+  "edits": [
+    {
+      "id": "E0001",
+      "line": 1,
+      "group": "H",
+      "reason": "Version heading",
+      "old_sha256": "a2b5ce94551c5c0ccb66c1500930f5b1b2e2b3e49141c9d06212139b9517b1a9",
+      "new_sha256": "e60034ea5813f69f881fc80097e2103ae7ed29b7acc2f36b8f26a69132c5292e",
+      "doc_sha256_before": "55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa",
+      "doc_sha256_after": "1237005e3fe3c701e537f80ab425263e2caac3d2cdd352c6a6fb91affdf21a07"
+    },
+    {
+      "id": "E0004",
+      "line": 4,
+      "group": "H",
+      "reason": "Candidate date",
+      "old_sha256": "b2ac8e8f6bffea490a4501321bce52d8d3b1a5aeaae9a630a3cf051afaff7e7d",
+      "new_sha256": "9c6903e8d395256cd9fb7b060be84bd502767f4839d1e8a8d320c3cdb592356f",
+      "doc_sha256_before": "1237005e3fe3c701e537f80ab425263e2caac3d2cdd352c6a6fb91affdf21a07",
+      "doc_sha256_after": "f45804abc8966587d5d5fbcdba2abe1a184a01e23ca3f613c9c5efb3892ebd0f"
+    },
+    {
+      "id": "E0007",
+      "line": 7,
+      "group": "H",
+      "reason": "DRAFT, adoption pending",
+      "old_sha256": "3a481c827599002e5aa1d94225c1821c98fa1966911e4a61c4a366eb3391bd0f",
+      "new_sha256": "83fbb2c447953d3e8f66ce6f9bcf57b0d620f5d111189d5217ebf57b6bb48318",
+      "doc_sha256_before": "f45804abc8966587d5d5fbcdba2abe1a184a01e23ca3f613c9c5efb3892ebd0f",
+      "doc_sha256_after": "a8ee78769fae0aedd308c7583ae47d685549e54f48c30e8946e99b163632378a"
+    },
+    {
+      "id": "E0008",
+      "line": 8,
+      "group": "H",
+      "reason": "Immediately preceding adopted edition",
+      "old_sha256": "5e80cc5ce3c8380e33e0da49f95b2237e9ce425403fb535f3279666fd7dfa64d",
+      "new_sha256": "a5986bda8a66c35b01def0d7c646be12d9bbc3aeb49a0acbf893da11d3377c7b",
+      "doc_sha256_before": "a8ee78769fae0aedd308c7583ae47d685549e54f48c30e8946e99b163632378a",
+      "doc_sha256_after": "0ba1be2bb2ff8359cc7e73b03edf95357b355d77c1409f17ccc4d6182ea1cb56"
+    },
+    {
+      "id": "E0009",
+      "line": 9,
+      "group": "H/F7/F3",
+      "reason": "Current companion inventory; NUMGEN v1.22 post-reconciliation delta, old use pins retained",
+      "old_sha256": "edd096b3883901c13a80c5d694b35ff50abbe17ec056783e39e52a40176fa055",
+      "new_sha256": "e6311d8d76f821f6927de58a1efbabfb544925f5db7021a6d3971e81e2d2b6b5",
+      "doc_sha256_before": "0ba1be2bb2ff8359cc7e73b03edf95357b355d77c1409f17ccc4d6182ea1cb56",
+      "doc_sha256_after": "8b7c7fdf48839b5b92b1fc60f689e9058d6f217420c1eb75d8f81cfacfde9488"
+    },
+    {
+      "id": "E0013",
+      "line": 13,
+      "group": "H",
+      "reason": "Actual roles; no receiving verdict assumed",
+      "old_sha256": "a2c19630920672d01cd776ed0487dc1c401c9447747225468fb8a9bf45551459",
+      "new_sha256": "83226f174deb647154ec3aa56815dd6395b0b538314d52a795cd270d71e1983c",
+      "doc_sha256_before": "8b7c7fdf48839b5b92b1fc60f689e9058d6f217420c1eb75d8f81cfacfde9488",
+      "doc_sha256_after": "49bf18db745a18f88e9a80c6afb870aedf1785f922499c14c3dbb1416c62cc4f"
+    },
+    {
+      "id": "E0014",
+      "line": 14,
+      "group": "H/F7",
+      "reason": "Programme pointer",
+      "old_sha256": "a28b73cf504533c447f50f179901e93997c6619a730b28132512958c19cff6e3",
+      "new_sha256": "490594880086713df1a8d74a9286af77873b5a92e94feb1d54f0eeb3be78c3d6",
+      "doc_sha256_before": "49bf18db745a18f88e9a80c6afb870aedf1785f922499c14c3dbb1416c62cc4f",
+      "doc_sha256_after": "09675fc0d455b874387359ca9cab1087321484b393d477eedcbeaf07cd22643e"
+    },
+    {
+      "id": "E0015",
+      "line": 15,
+      "group": "H",
+      "reason": "Reconciled source of authorized build",
+      "old_sha256": "480956e6327b1a96c29ef06d7ce022aa8417959b83317562d019143b9755fd78",
+      "new_sha256": "39e96f5d7b464fb03d3510efd8a8919739de11c3d32514035cf3020754255d37",
+      "doc_sha256_before": "09675fc0d455b874387359ca9cab1087321484b393d477eedcbeaf07cd22643e",
+      "doc_sha256_after": "b241d6b2562349aa1a8ee2299e9f63a5cb7b6dbb9150e4b4f61bff4ed68b3cc1"
+    },
+    {
+      "id": "E0016",
+      "line": 16,
+      "group": "H/F9",
+      "reason": "Truthful evidence boundary",
+      "old_sha256": "451809936363ff1b31e7b5e3b69bd25179c6393536a759732c76efc8dfde17a5",
+      "new_sha256": "7c5c310e440f9d70eef479c88d3ff7a91771a4ae159d8776d28cc77d0ffc146a",
+      "doc_sha256_before": "b241d6b2562349aa1a8ee2299e9f63a5cb7b6dbb9150e4b4f61bff4ed68b3cc1",
+      "doc_sha256_after": "75f72a2442dcb0bc90b91c9d0def6e2316de26388000c29c043b74532473302e"
+    },
+    {
+      "id": "E0038",
+      "line": 38,
+      "group": "H",
+      "reason": "Current revision boundary; previous decisions stay operative",
+      "old_sha256": "9da646a5b0054f9d92193fe675f27b0901de7a9c0ffe0136a4d1d02911e05860",
+      "new_sha256": "0cb45eed9623e4580304e973ff38b88aa535140458a48dbf6789bc7a19c29d3b",
+      "doc_sha256_before": "75f72a2442dcb0bc90b91c9d0def6e2316de26388000c29c043b74532473302e",
+      "doc_sha256_after": "026d60ac6675bd7a17f302ac96eb55f0a08e04ef23ef91d59324a2db913d21ec"
+    },
+    {
+      "id": "E0052",
+      "line": 52,
+      "group": "H",
+      "reason": "Current RID/register boundary",
+      "old_sha256": "7f85be0b409acc1155f7f49941d433f37419508c7455cfff45ae0a6a7a2dcb5d",
+      "new_sha256": "fb938d06d152b1f296aa2a9450898a0c803e3c8c4b09bffa46d8c69a3f7fa10d",
+      "doc_sha256_before": "026d60ac6675bd7a17f302ac96eb55f0a08e04ef23ef91d59324a2db913d21ec",
+      "doc_sha256_after": "a49b8a3b12723ae3e7a181a55fc104b261c201eafe6c1443cd5cf0ae991841c1"
+    },
+    {
+      "id": "E0056",
+      "line": 56,
+      "group": "F1",
+      "reason": "Custody no longer deferred to future v2.13",
+      "old_sha256": "e3e4f0aad2386fab8c4feae2e16f92fd5249730311d4e4fef50e9a73c72c9162",
+      "new_sha256": "a1bbffe96ad36e9758c001e67aea2279b1af2d083927872fc202cd9b56637a34",
+      "doc_sha256_before": "a49b8a3b12723ae3e7a181a55fc104b261c201eafe6c1443cd5cf0ae991841c1",
+      "doc_sha256_after": "6ca8de259221396289f265ca9fd68b0a624fa75c5c649c5c702dad56faff18eb"
+    },
+    {
+      "id": "E0077",
+      "line": 77,
+      "group": "F7",
+      "reason": "Programme guards unchanged in current source",
+      "old_sha256": "e30528b14ca22cedd9630a94782a1cf153f36fa4fbfea3ad66338e4e8551767f",
+      "new_sha256": "990db65b3a358fe9cdaa670ba9d213bf90eaaa5f267f5eac7eb0d5ec9f7ce6c6",
+      "doc_sha256_before": "6ca8de259221396289f265ca9fd68b0a624fa75c5c649c5c702dad56faff18eb",
+      "doc_sha256_after": "640b85d0104be06fc6132d6377904a05d7dc996dd0f93d5ef3fcd8482830fe91"
+    },
+    {
+      "id": "E0151",
+      "line": 151,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "88926cc84277b7e8a18d34f488cfe659cedf41aab5c5a4fffe0851951533383d",
+      "new_sha256": "ee22bc735108724cc9ee59bd2aaba20c6204bdc4f7631ef1989f844f195df93b",
+      "doc_sha256_before": "640b85d0104be06fc6132d6377904a05d7dc996dd0f93d5ef3fcd8482830fe91",
+      "doc_sha256_after": "b43a9abfb27d2cc0214c45a63c8ea56c2995abaca617b09a6aa271d97d79eb01"
+    },
+    {
+      "id": "E0197",
+      "line": 197,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "291333f44fa553c95c395cab0fe2a301f0244142be1a3eb7f783643725e4395b",
+      "new_sha256": "a39f8fdcb89e3adf50f5cda34527a19673ad252a3472d9065dccaa64ffad02f3",
+      "doc_sha256_before": "b43a9abfb27d2cc0214c45a63c8ea56c2995abaca617b09a6aa271d97d79eb01",
+      "doc_sha256_after": "8e098720102240db71ae62f2add340b735ac3b771235afdda65445947cd69ed2"
+    },
+    {
+      "id": "E0207",
+      "line": 207,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "f2701ab9b1925a4d86a3e0235e0cf61aa3776019adbc4a3b32c9c50b3a177399",
+      "new_sha256": "1bd84c027e52f61c4c36900ede51c76a214fb0f1f077bc9a20eceb80712c1f11",
+      "doc_sha256_before": "8e098720102240db71ae62f2add340b735ac3b771235afdda65445947cd69ed2",
+      "doc_sha256_after": "92cfa499461eb50be22a4994450a8981bb5ae2320809df4d48cd73a49c3e3c06"
+    },
+    {
+      "id": "E0218",
+      "line": 218,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "1d43c1ccfd841717c7cab376f8052f59542c8e26e19a261e112a20860832cd0e",
+      "new_sha256": "55306e21da170395962be617258d38b20307f6e3acc288a93fea296ebc3d865d",
+      "doc_sha256_before": "92cfa499461eb50be22a4994450a8981bb5ae2320809df4d48cd73a49c3e3c06",
+      "doc_sha256_after": "aee08ee34c20201286ad2178609f64b70014e661fe59117a3ae72d8fe2e56b78"
+    },
+    {
+      "id": "E0220",
+      "line": 220,
+      "group": "F3",
+      "reason": "Corrected declared STAR domain without changing centre/newborn map",
+      "old_sha256": "9f010dceb9148bf40dc4e4a616250c6b2b5e40d5c0d2586d9d0cf120b1e7f236",
+      "new_sha256": "f1a659fc48a4876cc01ed795201bc182c7c99732d9399285034d48575d900064",
+      "doc_sha256_before": "aee08ee34c20201286ad2178609f64b70014e661fe59117a3ae72d8fe2e56b78",
+      "doc_sha256_after": "3bd63d4853406b912eac8fd0ffe8041405a41b030bd441ae1f18554e8267678d"
+    },
+    {
+      "id": "E0235",
+      "line": 235,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "3c420662eb9d1be786a10e4e7ac48a33539b7bdf2d00cdd0fb86742b9129fd08",
+      "new_sha256": "73ef849ac25b3cc485790c6e8ec1a53c87c7172650b0cf275be4beaded779ebd",
+      "doc_sha256_before": "3bd63d4853406b912eac8fd0ffe8041405a41b030bd441ae1f18554e8267678d",
+      "doc_sha256_after": "291474fd70c565289a466fda96071f1a8e4a1b4f47e8ea69da7f52ebc99189be"
+    },
+    {
+      "id": "E0242",
+      "line": 242,
+      "group": "F1",
+      "reason": "Local result metadata only; fixed component retained",
+      "old_sha256": "7ba542875d9bfe71fbc70d10a863088edee83d5ee81b106f1d9e76af795f30d0",
+      "new_sha256": "0340fc46a01bee73d977e5622279673eb88cd23b20754b268ab5b937e52db93b",
+      "doc_sha256_before": "291474fd70c565289a466fda96071f1a8e4a1b4f47e8ea69da7f52ebc99189be",
+      "doc_sha256_after": "bc836c312f1ab4a3c8ad83424dcdbc7c485d2c5440849d23e304e509aac7d534"
+    },
+    {
+      "id": "E0246",
+      "line": 246,
+      "group": "F1",
+      "reason": "Separate current use from historical acceptance evidence",
+      "old_sha256": "b169096616bd9c5401dfecf70238944bb56dc84c18af77634c65be4dc323fd18",
+      "new_sha256": "5039a199e471175c510f37ba1046b3e93ba7c9bfd5deb59dd7f6d44897259489",
+      "doc_sha256_before": "bc836c312f1ab4a3c8ad83424dcdbc7c485d2c5440849d23e304e509aac7d534",
+      "doc_sha256_after": "59958bb1dfc293522f3be8c80064058c06de9144e1ec0c2e4d226b09d8723ebb"
+    },
+    {
+      "id": "E0248",
+      "line": 248,
+      "group": "F1 / F3",
+      "reason": "Remove obsolete future-edition target only; Reference-only discrete reduced-state example, no reachability claim",
+      "old_sha256": "64adfd0b15c3739cc69025891a41ccbdd78b23a43933f4f813bedc6f0b7e13ea",
+      "new_sha256": "b47e54816c4eff8736b24f75071d1e62504c67e220515d22a7af766afe0f317f",
+      "doc_sha256_before": "59958bb1dfc293522f3be8c80064058c06de9144e1ec0c2e4d226b09d8723ebb",
+      "doc_sha256_after": "079a21aa66696ada759a71865c9ddcf611d8477554468fa2f386cdba11091e5f"
+    },
+    {
+      "id": "E0252",
+      "line": 252,
+      "group": "F5/P02",
+      "reason": "Matched Genesis §6.1 source statements",
+      "old_sha256": "ce0d9fc74a297688d2660a0380fb3e6ca189d0ccda476e4d19e2872803a36c23",
+      "new_sha256": "59f079c5b13b6d7f5bd16dfd1c4de37ed1d92ee6aaad42bb6f30f50743ab23a1",
+      "doc_sha256_before": "079a21aa66696ada759a71865c9ddcf611d8477554468fa2f386cdba11091e5f",
+      "doc_sha256_after": "aaf4f52d12b38071c8aee69f1322c2fb8417597a73b33f75f4e46b6dbc57b5f9"
+    },
+    {
+      "id": "E0257",
+      "line": 257,
+      "group": "F5/P02",
+      "reason": "Matched Genesis §6.1 source statements",
+      "old_sha256": "7cb4ccb4ca1c9399e63e052d72f8c2f598293d8a39ed143686666c1ff4cdd79e",
+      "new_sha256": "5a01d9252c877d47e4bdff8130bf701cacfb47822757f3d3900e7f7c038aed97",
+      "doc_sha256_before": "aaf4f52d12b38071c8aee69f1322c2fb8417597a73b33f75f4e46b6dbc57b5f9",
+      "doc_sha256_after": "e4fe1e0985b89dc0b416929808dcdc2f9fd558352c31d9f63f5cf4d93ea6069d"
+    },
+    {
+      "id": "E0263",
+      "line": 263,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "4fbf665a6b58477266fd5baf84acc015a66a7c3a8a498dcbb1df9b39b5fc0934",
+      "new_sha256": "a64b8c6ab219b0c5bfe4503ffa1a9610a5d25c82cee08ccb0c3eb05042c96e79",
+      "doc_sha256_before": "e4fe1e0985b89dc0b416929808dcdc2f9fd558352c31d9f63f5cf4d93ea6069d",
+      "doc_sha256_after": "cf647070bada46054fc800c9bc006793bae13756bab198c970d9d710c6e98dde"
+    },
+    {
+      "id": "E0273",
+      "line": 273,
+      "group": "F7/P04 / F5/P06",
+      "reason": "Programme current criterion reference; Effective reference map, not selected generator",
+      "old_sha256": "5549b182af692e3df7310c0abf8db3be9bbb633e8e04cc65f50c5cde7f208bc6",
+      "new_sha256": "a53f7f526b02d430ccb93d6e1497e1fe3e0a8f3b9fd7eab1a5c14267970a80f1",
+      "doc_sha256_before": "cf647070bada46054fc800c9bc006793bae13756bab198c970d9d710c6e98dde",
+      "doc_sha256_after": "0d0d48abbc4251d2031b5b071e770699fd077c2488aef09e3ae94c851ccd651a"
+    },
+    {
+      "id": "E0358",
+      "line": 358,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "01bdf2277d41e28ffd6d551201fa374039fe4c692fb568207fa7286d9663ac48",
+      "new_sha256": "26100103ca6f4552d91158e19924ceee3a383cbb9aeda2ccb84e2f973966e81b",
+      "doc_sha256_before": "0d0d48abbc4251d2031b5b071e770699fd077c2488aef09e3ae94c851ccd651a",
+      "doc_sha256_after": "57a04c1b614226da9cf9a96f7c8a36f7b05df435b8301a4d24f148db6ac8fad4"
+    },
+    {
+      "id": "E0364",
+      "line": 364,
+      "group": "F3",
+      "reason": "Link new model example without altering historical three-node lemma",
+      "old_sha256": "d160795971d5137900d94e54c74d68fd4fbc91494c0227d3d94c6216cf3d0442",
+      "new_sha256": "11ffdb1823523eb96c1258810b287de20410af88975668424a5165ef72726a37",
+      "doc_sha256_before": "57a04c1b614226da9cf9a96f7c8a36f7b05df435b8301a4d24f148db6ac8fad4",
+      "doc_sha256_after": "1778b97168b037f18da542d804cd10e6fe34bc51da2f23324f532f62cd7f1990"
+    },
+    {
+      "id": "E0478",
+      "line": 478,
+      "group": "F5/O14",
+      "reason": "Correct convention attribution",
+      "old_sha256": "de6f2f04df57d926be3d6a73c9e8f0a3070a68d6b4cadf3573505f1543d7d158",
+      "new_sha256": "a42e71625f1a7ca121d957197900181a1490830caffcdfb129beb90d76fcadef",
+      "doc_sha256_before": "1778b97168b037f18da542d804cd10e6fe34bc51da2f23324f532f62cd7f1990",
+      "doc_sha256_after": "62554366b1b75c41e4f341125ee6f182773c3875247e855bbdd9f55ecbdc5dc9"
+    },
+    {
+      "id": "E0538",
+      "line": 538,
+      "group": "F7/P04",
+      "reason": "Programme current criterion reference",
+      "old_sha256": "33471929e3eb2509c557642c266232450559fae823c4c9619433d35fa8942e2d",
+      "new_sha256": "15186975ce26bd01fe5cd286c60bcbd220a96d8982d54a879fa6129d25522928",
+      "doc_sha256_before": "62554366b1b75c41e4f341125ee6f182773c3875247e855bbdd9f55ecbdc5dc9",
+      "doc_sha256_after": "8ee4801b9659204cc987256169e0b60f9fcf6841961e46fb808505a93984a5b5"
+    },
+    {
+      "id": "E0557",
+      "line": 557,
+      "group": "F4/P05 / F4/P05",
+      "reason": "Matched RECOG comparator/shear import source; Exact §6.6a source span compared",
+      "old_sha256": "c55c215d16603a59d2736f309791788740428a18d77a82b9cb661cbd70c6d550",
+      "new_sha256": "972a394bed9111b95c72fb30dc75f9cc1e17c09d5a80d1574829243466018622",
+      "doc_sha256_before": "8ee4801b9659204cc987256169e0b60f9fcf6841961e46fb808505a93984a5b5",
+      "doc_sha256_after": "40fd93f3cdc959d6b591533568c64545a3e0746b616861197ea12e7df9a384b4"
+    },
+    {
+      "id": "E0564",
+      "line": 564,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "e9ea5c94e043a968081efad69ba4f9e1dc7ab0f9862dac7b7efb129b7f55c35c",
+      "new_sha256": "6c6f51dc52f8ce3d1c19c2843aa1f444fcdf4efbc4f5ae0917861b0ada656efc",
+      "doc_sha256_before": "40fd93f3cdc959d6b591533568c64545a3e0746b616861197ea12e7df9a384b4",
+      "doc_sha256_after": "4855cb640f819a711a3353f54b2270fa852b2e6111f792e33d9126ff3661cbdc"
+    },
+    {
+      "id": "E0573",
+      "line": 573,
+      "group": "F5/P02",
+      "reason": "Matched Genesis §6.1 source statements",
+      "old_sha256": "e757f738603882dcca9f584576098c3ab559732cde4543684786edf8d8171c95",
+      "new_sha256": "47a1b5db83ef0c851ffde430df69c04093538a640951fc202a4759ec95e51213",
+      "doc_sha256_before": "4855cb640f819a711a3353f54b2270fa852b2e6111f792e33d9126ff3661cbdc",
+      "doc_sha256_after": "36dc600f57964dbc1fde0e081994be4d6fc85796ef19497c1dab1ff64359defe"
+    },
+    {
+      "id": "E0578",
+      "line": 578,
+      "group": "F6",
+      "reason": "Matched SG-18 reference",
+      "old_sha256": "7a77978e9674a65b97309f94fd6542c768c33c65c61e08705a7ac3cd3fc084cf",
+      "new_sha256": "cb415a1335eec9225a36c4c13d6be63ae303c8c5848b312f0e8dc7d90a97eee5",
+      "doc_sha256_before": "36dc600f57964dbc1fde0e081994be4d6fc85796ef19497c1dab1ff64359defe",
+      "doc_sha256_after": "6cdc41b4631c0865eaafd2fc33f19397521716bc83df2d4b2dcb5096ff803a8e"
+    },
+    {
+      "id": "E0587",
+      "line": 587,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "6d6913fea24e0f24dc4a350d4ea4f84f725e170bea299089672870a0808718cf",
+      "new_sha256": "df6950644b5255f28882a6a29414a1cac406ee72be40e2bc17fc9b68663b5a5e",
+      "doc_sha256_before": "6cdc41b4631c0865eaafd2fc33f19397521716bc83df2d4b2dcb5096ff803a8e",
+      "doc_sha256_after": "cf060e576e5a9c7b66c54a72f4cb3acfcbc13811537a79d04d8deb2235831668"
+    },
+    {
+      "id": "E0590",
+      "line": 590,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "0ae029fcf83bb90924b3538864bdb93bb82c161e9ed0788581aed3ea97cf3dc2",
+      "new_sha256": "932aaf30424d49d202d32c836126a9e223e94ddf61f3a57136ecd1834fd0ac3e",
+      "doc_sha256_before": "cf060e576e5a9c7b66c54a72f4cb3acfcbc13811537a79d04d8deb2235831668",
+      "doc_sha256_after": "3c49441f220ab5bf1dd150b258d9caf22a3895e33e3c77a8491bd903b630af72"
+    },
+    {
+      "id": "E0593",
+      "line": 593,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "44fe8e195599f6081d30f08ca2c8d64ebdebec1a5b20e56def1ef67cde685205",
+      "new_sha256": "6eb560fc782b81f1046d6cc9c713cc8bdbdcf51536ed9f8c117c2e9ac4be068b",
+      "doc_sha256_before": "3c49441f220ab5bf1dd150b258d9caf22a3895e33e3c77a8491bd903b630af72",
+      "doc_sha256_after": "2a931cee4ebc11b6e03324242529e2475262e93793831d73ee93647562ec98b4"
+    },
+    {
+      "id": "E0596",
+      "line": 596,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "55bc17d0c318e69c1304a4141fbb89aa8ba7785dc1da88db49d206e3974f74ca",
+      "new_sha256": "f9ef5ed08e6414fb69ec0982f18bae653c6235b57c644e8502dc92e73999f2dd",
+      "doc_sha256_before": "2a931cee4ebc11b6e03324242529e2475262e93793831d73ee93647562ec98b4",
+      "doc_sha256_after": "f157c1165a79bdfdf8f98ecf5ed93fb0f2e48b8b1e04f8f3e426d33c84820ca4"
+    },
+    {
+      "id": "E0600",
+      "line": 600,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "ba3b5c771c3af21931e599a2ee558ffb7fa4960fd3521780f12f8da8fcbf6923",
+      "new_sha256": "eb38426dbc222d96126ff82e2c98d357144dadd6ba7c12311f70e79204bb5abc",
+      "doc_sha256_before": "f157c1165a79bdfdf8f98ecf5ed93fb0f2e48b8b1e04f8f3e426d33c84820ca4",
+      "doc_sha256_after": "3ef7f39c411265fb51a6839fe06975bdc7ff5bd8d99d4c6f597036af649b1cdf"
+    },
+    {
+      "id": "E0621",
+      "line": 621,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "41d1dc57e22933dcb44f960f2ad147a9774da3f174f2652b3ac0c471f60254b5",
+      "new_sha256": "d0c870bcbdac4375d2e80cf22a26d9e54665db8413f76404615518bb4ff46888",
+      "doc_sha256_before": "3ef7f39c411265fb51a6839fe06975bdc7ff5bd8d99d4c6f597036af649b1cdf",
+      "doc_sha256_after": "25e747370fdd51086349707b8b22af8302c0fd9d68a44c581eb873c621eb9106"
+    },
+    {
+      "id": "E0622",
+      "line": 622,
+      "group": "F3/P07",
+      "reason": "Classification precedence separate from preserved tick order",
+      "old_sha256": "4deab53af449eb36ee6eebeaf410473ffebd8e7fdcacce8db2e700ec295f05c1",
+      "new_sha256": "9c5a794c43775ad6059c24a0fcd221f62ad0cdd1063d3e18f13174216ecf9ffe",
+      "doc_sha256_before": "25e747370fdd51086349707b8b22af8302c0fd9d68a44c581eb873c621eb9106",
+      "doc_sha256_after": "eb28d6b8a366737df497b7d429f2555f6f847c95efb086b088e0cf0c54adcdf4"
+    },
+    {
+      "id": "E0624",
+      "line": 624,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "6a27198e118705cb35bf5e87a6e71c82c44ea6755e698921ee7b00da1fd2410a",
+      "new_sha256": "11f8c8aeaa080579e05ff2f2c81bf990afde76659cfed4eb8d18ee6364250603",
+      "doc_sha256_before": "eb28d6b8a366737df497b7d429f2555f6f847c95efb086b088e0cf0c54adcdf4",
+      "doc_sha256_after": "27a0bbe98d84ed8fa34f98fe789d90c6b278df0a7f3d5f18a43bec64296e4de8"
+    },
+    {
+      "id": "E0625",
+      "line": 625,
+      "group": "F3",
+      "reason": "Matched current orientation definition and SG-14 scope",
+      "old_sha256": "081e98b4e2c6dbed3acc8e3bb2ba62a1b50303b2ca2c6ca2e3510a572e27919d",
+      "new_sha256": "f418f6f6af8a07535a435dd6e9c2f9492d1dbcb6b8f8898958233a59e2ea5aa6",
+      "doc_sha256_before": "27a0bbe98d84ed8fa34f98fe789d90c6b278df0a7f3d5f18a43bec64296e4de8",
+      "doc_sha256_after": "586543ec75e1bb7bac50dc6ed8e956a8f9d0c63ffdba01012cf5cf9a78cbc93c"
+    },
+    {
+      "id": "E0639",
+      "line": 639,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "debb1c8d080e66f7055c4dc797bdf8a3df9c9e7753388d5591f781542bd7f1b8",
+      "new_sha256": "dcd2202bfbbd267b9a4832a171b025653b74ef6de4bd7f49075d83886c7c27f0",
+      "doc_sha256_before": "586543ec75e1bb7bac50dc6ed8e956a8f9d0c63ffdba01012cf5cf9a78cbc93c",
+      "doc_sha256_after": "b482f37c980758d0555e27c6d610ad8bd34bd834f932872565b52d4e2f496598"
+    },
+    {
+      "id": "E0642",
+      "line": 642,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "0b65473207092e5f5ec06b654e2ecec084c34d835dbb5bb9ffe63bd2ab9e1ca1",
+      "new_sha256": "9cd827d8ad1476418dc1518ff42bdfa1bbd9ceb85c0c2297a6990a7743263402",
+      "doc_sha256_before": "b482f37c980758d0555e27c6d610ad8bd34bd834f932872565b52d4e2f496598",
+      "doc_sha256_after": "20bd970f74231d4b28e9017c1f9d31ba698177a62f70d1c64ef9d134980945f1"
+    },
+    {
+      "id": "E0655",
+      "line": 655,
+      "group": "F7/P04",
+      "reason": "Programme current criterion reference",
+      "old_sha256": "835237dee7323ba0c3dac4da53a5eb5643062d0af40f072c485e55351ab7dc54",
+      "new_sha256": "2b5fe95efa1ffd01bed2fddb8c8d6b7a84fa025a20074bd299eb68fcfe3e1859",
+      "doc_sha256_before": "20bd970f74231d4b28e9017c1f9d31ba698177a62f70d1c64ef9d134980945f1",
+      "doc_sha256_after": "273926dabc4b0d11705f146ebed2e85a35989d59a7c474e385ab54c43d0ec22e"
+    },
+    {
+      "id": "E0663",
+      "line": 663,
+      "group": "F6",
+      "reason": "Split reference pin; keep GEN v2.8.5 component",
+      "old_sha256": "59373c00bab2e70e11686334a3060d19d4c895f069e404c1cea3688e7631b9c9",
+      "new_sha256": "8389d39972f7ac28642c3d72323b9db01402fd866a5d0ba5fed300022c189e3e",
+      "doc_sha256_before": "273926dabc4b0d11705f146ebed2e85a35989d59a7c474e385ab54c43d0ec22e",
+      "doc_sha256_after": "215d4d1e958b03a33cbb1f4454f8a3c5ff10b0c5b1be52f6b9747d8962c0b6ae"
+    },
+    {
+      "id": "E0709",
+      "line": 709,
+      "group": "F1/F3 / F3",
+      "reason": "Update owner-delivered state/rule record; preserve six-constraint gap; Existing OPEN-OFN-2 accounting gate not closed",
+      "old_sha256": "60858ba76c07ef31724a3dd2d1a14aea82110aa43bd2ea4f7771f859186adec6",
+      "new_sha256": "b4be526e8b6f0e6d24c092db5e9f92073996a4ccd4ac20830007652453165f53",
+      "doc_sha256_before": "215d4d1e958b03a33cbb1f4454f8a3c5ff10b0c5b1be52f6b9747d8962c0b6ae",
+      "doc_sha256_after": "2e7acfb40b6a4b8228ca8e0494b896f5bbfae39bbf0eb3ca968bf687fdf672e2"
+    },
+    {
+      "id": "E0883",
+      "line": 883,
+      "group": "F5/P06",
+      "reason": "Matched contraction claim",
+      "old_sha256": "0be9fa0559f780e9b234d8d9b9e8d066fc9dd4a5401eec3de19919466d5c993d",
+      "new_sha256": "f3685ac11c16acdd05c9dea3027b026005ac22669d5a7cf84a8184af9f25208c",
+      "doc_sha256_before": "2e7acfb40b6a4b8228ca8e0494b896f5bbfae39bbf0eb3ca968bf687fdf672e2",
+      "doc_sha256_after": "d31197a875dc7f1b1fc2b8831c3c0e82c04b49d4c2038fb475573ae3a8b49c08"
+    },
+    {
+      "id": "E0985",
+      "line": 985,
+      "group": "F2/F3",
+      "reason": "Owner orientation/covariance current locator",
+      "old_sha256": "949dbe56c3fce4251b9839d7c1395ba8baa3c4d37c3ef1e5b157aa8500ffb191",
+      "new_sha256": "4b2899050c5dcbbb9889d34fe9515e113e1ef9b78bb93441691d5dbacbd8cc4e",
+      "doc_sha256_before": "d31197a875dc7f1b1fc2b8831c3c0e82c04b49d4c2038fb475573ae3a8b49c08",
+      "doc_sha256_after": "10dcd9977f2aed913cfa6859c2b9c393086db1218d910cf8994a97a67e4b42c1"
+    },
+    {
+      "id": "E0986",
+      "line": 986,
+      "group": "F2",
+      "reason": "Answered token-sum label and multi-birth scope",
+      "old_sha256": "d7d2eb7fe345934eb4d121bc20ab0ea21be85de693eb7fc88a1368336f890569",
+      "new_sha256": "46d51ed473a4c9d9bfd23224a782beb35a4b5f0167d9cf80b3768553b5a9e5af",
+      "doc_sha256_before": "10dcd9977f2aed913cfa6859c2b9c393086db1218d910cf8994a97a67e4b42c1",
+      "doc_sha256_after": "e1742e203c5dc76b1e04051939dae3d7b3896790fb1d6a8fd4bcbe401f9cd9ea"
+    },
+    {
+      "id": "E0999",
+      "line": 999,
+      "group": "F7/P04",
+      "reason": "Programme current criterion reference",
+      "old_sha256": "c3e07b532a1360541a96696938daf9c8bdc578abddadec54226c88103ed1efff",
+      "new_sha256": "a97e9909943b1ed4e009a9bde9d4048399528171edfbcb8af52a05c36b1e7507",
+      "doc_sha256_before": "e1742e203c5dc76b1e04051939dae3d7b3896790fb1d6a8fd4bcbe401f9cd9ea",
+      "doc_sha256_after": "5c01d17e60a4bf7ca1fb1ff6ab1f708d7258583aafd82736dee4b169e9382615"
+    },
+    {
+      "id": "E1001",
+      "line": 1001,
+      "group": "F7/F3",
+      "reason": "Current governing inventory plus explicit historical pin boundary",
+      "old_sha256": "bdd361c3834bebefecea413bfb37f4a5d3fa4dfcbe8b189bc1736eca83ac73d9",
+      "new_sha256": "685a9cef54e28466bbbe2fca57c51967bf74ebc3509b058e0b45a913072b07cc",
+      "doc_sha256_before": "5c01d17e60a4bf7ca1fb1ff6ab1f708d7258583aafd82736dee4b169e9382615",
+      "doc_sha256_after": "db988d67eda64fc689dafd4aa94db99f23ef966f114efe74fbe7166ec286d4af"
+    },
+    {
+      "id": "E1007",
+      "line": 1007,
+      "group": "F3",
+      "reason": "Distinguish corrected STAR and CONV-TICK from unchanged scoped statements",
+      "old_sha256": "e91059afaec47c334b12bffd3e9c34b1acd78a6d5a88cb4391e6e6c9029ca42b",
+      "new_sha256": "26fef201fce05e0232994e14a51f78add5f8eaa7330fca37e6b5bf22da15376a",
+      "doc_sha256_before": "db988d67eda64fc689dafd4aa94db99f23ef966f114efe74fbe7166ec286d4af",
+      "doc_sha256_after": "e134fcc478800358848a14e576fce18b4c91fbe6fb19ef82556a76991f35179f"
+    },
+    {
+      "id": "E1010",
+      "line": 1010,
+      "group": "F5/P02",
+      "reason": "Matched Genesis §6.1 source statements",
+      "old_sha256": "170e6d8681a9a832a93251e77b5f57d69a5079ad5f561aad029e0ceb4b85f9d2",
+      "new_sha256": "7b30a10ca9b9ee716c27b9e64731000685bde79f389e2cca3bb25b8296ebc62f",
+      "doc_sha256_before": "e134fcc478800358848a14e576fce18b4c91fbe6fb19ef82556a76991f35179f",
+      "doc_sha256_after": "0a22bf17cecca7501a263953b4ed67ea89069d1c9d4ff95541dce08aa05836fd"
+    },
+    {
+      "id": "E1011",
+      "line": 1011,
+      "group": "F5/P02",
+      "reason": "Matched no-RID definition block",
+      "old_sha256": "a97a07d2983d09262e681766ad3016f2cb56ac1308963dd1ef4e030f66b29398",
+      "new_sha256": "28e5e1f48a28c8e2a7cf1a8ce4bbf0d430fded0d4ac2d4566b91d1d4de4c5707",
+      "doc_sha256_before": "0a22bf17cecca7501a263953b4ed67ea89069d1c9d4ff95541dce08aa05836fd",
+      "doc_sha256_after": "52e133b7c1d06686dbbaf9a778e147b5cbbf65a4ed9728ae5d6a527669a9a11d"
+    },
+    {
+      "id": "E1012",
+      "line": 1012,
+      "group": "F5/P02",
+      "reason": "Matched no-RID definition block",
+      "old_sha256": "d47219d6007ce1d17c89835a6485cc9882bbbf822ab0a962dcb4ea8da3d14fe0",
+      "new_sha256": "45be26da7c3f94573fe9f05e49d6ba02291e4246a511ef2877af469222e353c2",
+      "doc_sha256_before": "52e133b7c1d06686dbbaf9a778e147b5cbbf65a4ed9728ae5d6a527669a9a11d",
+      "doc_sha256_after": "19e52db0bb2e139dd37d30c25973af2d6db34c4d9e5d9b6d9acdc11fac250ecb"
+    },
+    {
+      "id": "E1016",
+      "line": 1016,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "cb334ca7490d818205b1837b1c9824b02f2bd437e1c3b2f1577dc5a4b840d3c4",
+      "new_sha256": "79fbf2ce0efdd371788cbbb04ab93222d3354fa34da5873143cf64c8446ae0f9",
+      "doc_sha256_before": "19e52db0bb2e139dd37d30c25973af2d6db34c4d9e5d9b6d9acdc11fac250ecb",
+      "doc_sha256_after": "5e28e4b4a5800d64d9d7145dbcaa33f9cc11f380b98039c4e31f71172fc799db"
+    },
+    {
+      "id": "E1018",
+      "line": 1018,
+      "group": "F1 / F1",
+      "reason": "Current consumer/custody status; Custody open",
+      "old_sha256": "2f7b819275965ffffa11e20e86b4dcc20fa5cf2c47bd76955faf068748bc364a",
+      "new_sha256": "c67ad2229bf20582f5679606e10fe20058eb92c34b4e604e7098a790dbd48111",
+      "doc_sha256_before": "5e28e4b4a5800d64d9d7145dbcaa33f9cc11f380b98039c4e31f71172fc799db",
+      "doc_sha256_after": "ac179991d0f3d9dd29d312f097039aa7aa91a7c771e3ee8ef631a100d6f4c16a"
+    },
+    {
+      "id": "E1021",
+      "line": 1021,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "fbaf41f73300bb9590d7431c7c7068cb4e70ba85865ff4e5910324c9825db32f",
+      "new_sha256": "1c013582976f56c09758592996551f16620b2b50e70519e39edf492745547eaa",
+      "doc_sha256_before": "ac179991d0f3d9dd29d312f097039aa7aa91a7c771e3ee8ef631a100d6f4c16a",
+      "doc_sha256_after": "569172b269f8f69632387fe8c2df9374668d00d0f3ead059e658308724b48546"
+    },
+    {
+      "id": "E1026",
+      "line": 1026,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "9859178109ff3e8424c24900911cde7b0fa99439747d012ed1ca442528ab50a2",
+      "new_sha256": "b11ba2ff8acd61c073f54a88fc4996a723b325053aa7e83e2247d47631de3f18",
+      "doc_sha256_before": "569172b269f8f69632387fe8c2df9374668d00d0f3ead059e658308724b48546",
+      "doc_sha256_after": "206a8b4cf0446c723197b1485b491b6365f52add3bee110c143dac61ec48c175"
+    },
+    {
+      "id": "E1031",
+      "line": 1031,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "e7f9ac09ebb3c94a9188b45ac576b1bd564eb47b2b8e966ccaa6da437d5e9706",
+      "new_sha256": "24b143535ceb41d3042998e588d91b351e76393380aacfb2a377bedb1932189a",
+      "doc_sha256_before": "206a8b4cf0446c723197b1485b491b6365f52add3bee110c143dac61ec48c175",
+      "doc_sha256_after": "22a71f347c0fbf54d76f11dfb248d9983bf2c0e57ec1959475beee7577481716"
+    },
+    {
+      "id": "E1036",
+      "line": 1036,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "4f164d6a862d90321e84a73d6824f7db14b3e467a89e10c2e4449522082c12c3",
+      "new_sha256": "153e3e84b26d4bee242a19dd3ad870b5896bcd092efd1fac3d90ebf9a20d7959",
+      "doc_sha256_before": "22a71f347c0fbf54d76f11dfb248d9983bf2c0e57ec1959475beee7577481716",
+      "doc_sha256_after": "75982ecd86bc0f74252e07df2bd3ae3f36dbbccae32c9baabfe528d915136385"
+    },
+    {
+      "id": "E1041",
+      "line": 1041,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "65c84ab36fd0dcccd72a3e779fc8fd414e40a6b7a68ea45fcab6b67a573b7cdc",
+      "new_sha256": "9ee6f710798c0b2a3ab71f83d1bbb4a753d816a2cbf876cb1063b3d3540f3e77",
+      "doc_sha256_before": "75982ecd86bc0f74252e07df2bd3ae3f36dbbccae32c9baabfe528d915136385",
+      "doc_sha256_after": "33a2182e01cb26374c58a12c9c8f913da616069c71a2843f5e10e4540d56e102"
+    },
+    {
+      "id": "E1046",
+      "line": 1046,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "6f4d72e49184ab6c0195cce4ad0df210c550358423838afdbba93a87a64315d1",
+      "new_sha256": "8104e65c9c34cc283ee9ba9a81e414a38a8e31fc316ebba1b48c1620c6ee73c1",
+      "doc_sha256_before": "33a2182e01cb26374c58a12c9c8f913da616069c71a2843f5e10e4540d56e102",
+      "doc_sha256_after": "3b3a5df8228aa6fdf04a918fd9b268e31ef39a778fb703d298d0b7264177f684"
+    },
+    {
+      "id": "E1051",
+      "line": 1051,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "6b12931fdbba30a74b20faad2f17367cf62803e1ce9231af094aaca1288e3b4c",
+      "new_sha256": "10ffc78f00d2c5a5248cf888610eeff0577f847ccf38bf51a165dd20f8d95154",
+      "doc_sha256_before": "3b3a5df8228aa6fdf04a918fd9b268e31ef39a778fb703d298d0b7264177f684",
+      "doc_sha256_after": "82efe476c6b838f7863e2acb74d0e284f00751c387b1284cc68cae4d7523860a"
+    },
+    {
+      "id": "E1056",
+      "line": 1056,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "71b4f27a2b56b9a939ac4e05fd8d0a3611a63ea8ed194bb4a69e32a00a180d8e",
+      "new_sha256": "feb6121da7eaa0b05f9291513bfaadcd741aacafbc33f0dbfa74befeed2c6239",
+      "doc_sha256_before": "82efe476c6b838f7863e2acb74d0e284f00751c387b1284cc68cae4d7523860a",
+      "doc_sha256_after": "525fc06fe1fb89da72265282a96f0f75e132a8fcb7ff21958da9961a4e5175ee"
+    },
+    {
+      "id": "E1057",
+      "line": 1057,
+      "group": "F3",
+      "reason": "Selected single-star component definition; preserve source policy",
+      "old_sha256": "597813b52e0a9d706573fa0bc0a40961972d18be044454e75283cf58d3ebecda",
+      "new_sha256": "caa31e670bf7c9106c9bb68913153d3f9bd9bd796c232d5fa66bc0cc83b59553",
+      "doc_sha256_before": "525fc06fe1fb89da72265282a96f0f75e132a8fcb7ff21958da9961a4e5175ee",
+      "doc_sha256_after": "dd2dca603b0235806c1d9203efba0f7a16c470864ad1641b88966276d7c44242"
+    },
+    {
+      "id": "E1058",
+      "line": 1058,
+      "group": "F1",
+      "reason": "Custody open",
+      "old_sha256": "43cf9ca3f1fbe00d092232c805c0b1e38a6f6c0ea33927fbc8048193e3d85db2",
+      "new_sha256": "fdd6ad6ed0fad4a4c77978f0f24a26b6d84193f10aaba3ecf59e265e077b04c0",
+      "doc_sha256_before": "dd2dca603b0235806c1d9203efba0f7a16c470864ad1641b88966276d7c44242",
+      "doc_sha256_after": "e2ca30aa10ee4ba2e3d211f20c48988ffeaa7af60f731ee1fb7f2792d04dc2c1"
+    },
+    {
+      "id": "E1061",
+      "line": 1061,
+      "group": "F5/P02",
+      "reason": "Matched Genesis §6.1 source statements",
+      "old_sha256": "abeb405e6d50e5d1b3ad43a7eb1c3d673bab5db8eab38123747ceaa1396e5cc8",
+      "new_sha256": "a65c17bdf04a09eae28b8058c13553ff5461f97fe37fb517d065807f6872b1b9",
+      "doc_sha256_before": "e2ca30aa10ee4ba2e3d211f20c48988ffeaa7af60f731ee1fb7f2792d04dc2c1",
+      "doc_sha256_after": "6418f9247187578123817533dd872b63a7af45d281d9464d0d72ff23ce7c0551"
+    },
+    {
+      "id": "E1067",
+      "line": 1067,
+      "group": "F5/P02",
+      "reason": "Matched Genesis §6.1 source statements",
+      "old_sha256": "92e599bac9edce6e2dc76ec32635e6bc1004cf0b054a3262917c3351230f63b1",
+      "new_sha256": "1012a371c5272029f5e5865e52807170498e01105aace6a7a2d6b13565e9de2a",
+      "doc_sha256_before": "6418f9247187578123817533dd872b63a7af45d281d9464d0d72ff23ce7c0551",
+      "doc_sha256_after": "8925da8cbb1c556355eec5c46bf9b1843ff77e1e4ed30c8a22c8ea4bc0e3675d"
+    },
+    {
+      "id": "E1073",
+      "line": 1073,
+      "group": "F5/P06",
+      "reason": "Matched current DYAD source claim",
+      "old_sha256": "33ab6f0f8decb0776797589758ab014a8c42cde392bfa520b7f2e5d341248ade",
+      "new_sha256": "8daf27ee0ade615e85296087e2812e039b3d34b1f09bae959e1fb18f92ecf928",
+      "doc_sha256_before": "8925da8cbb1c556355eec5c46bf9b1843ff77e1e4ed30c8a22c8ea4bc0e3675d",
+      "doc_sha256_after": "579e4163f5f814e13df0b1afdf8a5321528f5cf67378b8cf65123e91b9e16056"
+    },
+    {
+      "id": "E1074",
+      "line": 1074,
+      "group": "F5/R379-1 / F5/R379-1",
+      "reason": "Owner reference-map scope marker, not provisional; Avoid physical selection wording",
+      "old_sha256": "8dae28237451b5aaab24f9116d78aec17898b29fe7ab17273067bd13a0810207",
+      "new_sha256": "2496cf6dfd5c7a8c1179d0193a9aa722e4647b0d6ade149d4befb99d1f4063d3",
+      "doc_sha256_before": "579e4163f5f814e13df0b1afdf8a5321528f5cf67378b8cf65123e91b9e16056",
+      "doc_sha256_after": "d2ccc6f0ed51cabf5da21604eba190249b11086c18e7e086cb16c7b0e6a53d88"
+    },
+    {
+      "id": "E1075",
+      "line": 1075,
+      "group": "F5/P02",
+      "reason": "Matched GEN map alias",
+      "old_sha256": "dd464c32e2c2d85c9c2ab941196a5cf5b4d6e4946711e659162a8ea303330570",
+      "new_sha256": "18df3922b87b37a995bf9ab7e5b28adb6dbf3068b8711a3c06f452ffef3c64da",
+      "doc_sha256_before": "d2ccc6f0ed51cabf5da21604eba190249b11086c18e7e086cb16c7b0e6a53d88",
+      "doc_sha256_after": "4605da7d01df6d12a833c992bb32c97c5ba29ff8a04b9235862113d2e4ee0204"
+    },
+    {
+      "id": "E1079",
+      "line": 1079,
+      "group": "F5/P02",
+      "reason": "Matched Genesis §6.1 source statements",
+      "old_sha256": "2bf2959c037ae86bdae5ad039af16d68208e05176d5fee799a0b18ed51df7217",
+      "new_sha256": "3668892fce6ff367021d7156ad6dd1fefbe0db76e411ebd74f2e871ff18d27be",
+      "doc_sha256_before": "4605da7d01df6d12a833c992bb32c97c5ba29ff8a04b9235862113d2e4ee0204",
+      "doc_sha256_after": "c44544e23aada2120c30311af25947a9b39d937550577bc6fec084d1f14bd66d"
+    },
+    {
+      "id": "E1085",
+      "line": 1085,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "b605aa59966a82d97ea614cd41a4c65c1135c69fd4a16cdaeebcb06a62297c29",
+      "new_sha256": "df92c04f2c1e017dd30d565cf6889a43977e2f3149e851f1f14eb9c5463f63c0",
+      "doc_sha256_before": "c44544e23aada2120c30311af25947a9b39d937550577bc6fec084d1f14bd66d",
+      "doc_sha256_after": "8d70ca0cbc56393231369efad5c00b74b26de4b016ef778e54a1bd47c84b077a"
+    },
+    {
+      "id": "E1086",
+      "line": 1086,
+      "group": "F3",
+      "reason": "Current component precedence, not a new tick-order rule",
+      "old_sha256": "b5480a387b3cfca26db613a5dce0c1fb2c20baa11840d0c6a2b7e48913ed41f4",
+      "new_sha256": "aa24cd37cce7fc9e14a50c8f5c55d601a110bd12e2e8889dd5af79a8d97d43cc",
+      "doc_sha256_before": "8d70ca0cbc56393231369efad5c00b74b26de4b016ef778e54a1bd47c84b077a",
+      "doc_sha256_after": "5049b5a2d244a9fb14adf39b47773ffd61f6810ae75ad5a8d4befe57eefbc4a6"
+    },
+    {
+      "id": "E1090",
+      "line": 1090,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "6a02f526a6f9017feff5d7c44f0de86ca969a4d1b9b4fb1fa78d761f976b9639",
+      "new_sha256": "416f70c3e594c9dafbbc167d5c84e4a3e3fed6ccd247c4ae20bd98d6741bb813",
+      "doc_sha256_before": "5049b5a2d244a9fb14adf39b47773ffd61f6810ae75ad5a8d4befe57eefbc4a6",
+      "doc_sha256_after": "b41c5569e2477d0611f5ac1b044e878b6c8e5b6286af3e9512451857800316fe"
+    },
+    {
+      "id": "E1095",
+      "line": 1095,
+      "group": "F3/P07/P08",
+      "reason": "Matched TDR-G claim locator; STAR and CONV-TICK corrected domain addressed separately",
+      "old_sha256": "368c55c25922354b6eb1cbd1b7978daeedd4cd44fbe231b6fb64e46183ccbd59",
+      "new_sha256": "82ea7745808df9721cf49dfc64e134e9c9cc4352b0bee9ef2490ebb9c0904702",
+      "doc_sha256_before": "b41c5569e2477d0611f5ac1b044e878b6c8e5b6286af3e9512451857800316fe",
+      "doc_sha256_after": "5030330c8645d783e87eca6a941a1208de462381295cbbd5f0d93418f9d68de3"
+    },
+    {
+      "id": "E1097",
+      "line": 1097,
+      "group": "F3",
+      "reason": "Keep three-node import separate from generalization",
+      "old_sha256": "e60e8731539da88da92f71a63041da0b10c85de0cfcd071ff50f19c2a6824566",
+      "new_sha256": "5a58543fec99ea3e6375f4b19bb4f8b7da03dfd50f2e060b9e5769bf37e9f466",
+      "doc_sha256_before": "5030330c8645d783e87eca6a941a1208de462381295cbbd5f0d93418f9d68de3",
+      "doc_sha256_after": "c653f896009faef9debba0dc692490a9d99a1e30edf8cadafbb6d958e59185e9"
+    },
+    {
+      "id": "E1100",
+      "line": 1100,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "9a291a42dfe6ece5991cbef458954cd811c25ebda90c26056187e969306af736",
+      "new_sha256": "af0137dd001af02838ea7b31b2c96859118e4432e0885c05cacbe56f56e2d850",
+      "doc_sha256_before": "c653f896009faef9debba0dc692490a9d99a1e30edf8cadafbb6d958e59185e9",
+      "doc_sha256_after": "3f74c5ee0137fc104520465d69ff9761bd7b8d09e549002d96e259d72adaaf75"
+    },
+    {
+      "id": "E1106",
+      "line": 1106,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "42154f20687200c0670805acc948f5be3fb33ce00fbf4a7d1593a184de060794",
+      "new_sha256": "2f243cdbe8657403c17eece1e9febd8692d60a141d2ddd81f3e7de04de921aa5",
+      "doc_sha256_before": "3f74c5ee0137fc104520465d69ff9761bd7b8d09e549002d96e259d72adaaf75",
+      "doc_sha256_after": "4a8d8870bfc0fbcfbfb2528188d57e89d7e54b5cb02f26f8823a4a8866dc905a"
+    },
+    {
+      "id": "E1112",
+      "line": 1112,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "39408c1866ed8909a455108f748287013e524c447d65ea69c4cb48d175a35494",
+      "new_sha256": "296ac2747b9b3ca729a2b749511aa97fcd9fb416bd85c52fe4d3f0ceed65bebe",
+      "doc_sha256_before": "4a8d8870bfc0fbcfbfb2528188d57e89d7e54b5cb02f26f8823a4a8866dc905a",
+      "doc_sha256_after": "55438f2d43ffbe9fbe55af79bfeaa12fcd6eb4388a46ab81235da997b562c274"
+    },
+    {
+      "id": "E1118",
+      "line": 1118,
+      "group": "F5/P06",
+      "reason": "Matched current DYAD source claim",
+      "old_sha256": "97851f5709e935226151f6ed5eaed3800e424c9d705f30d185606cd852fede95",
+      "new_sha256": "44c2344cb708c3af03bbed51b27d37afc1f494c2eb3b0f19ebe471c615c71ff2",
+      "doc_sha256_before": "55438f2d43ffbe9fbe55af79bfeaa12fcd6eb4388a46ab81235da997b562c274",
+      "doc_sha256_after": "acd099196d29198cea328de56895896d103bd630ec55bca4e5e303dbc5706377"
+    },
+    {
+      "id": "E1120",
+      "line": 1120,
+      "group": "F5/P06",
+      "reason": "Current source matched without re-proving old asymptotic",
+      "old_sha256": "e88a44924338ae5e9ae31fc2abaa34abd5c9fd016dbbe30d0f0b351643f0ca68",
+      "new_sha256": "75a33abbb4c11b9efe7e99fbb260f5a2dc2ca7a99e5f4129a9b6b8ee6cf4f9bb",
+      "doc_sha256_before": "acd099196d29198cea328de56895896d103bd630ec55bca4e5e303dbc5706377",
+      "doc_sha256_after": "25d7520ba6aec57cacf969f5d211bed36bf3460de9ab7bb2435a93cd1cc4946a"
+    },
+    {
+      "id": "E1124",
+      "line": 1124,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "6c9681a187cb8afb767e7bd01e9382c3c1a4489d71daaf9d1a817efe14bc25d2",
+      "new_sha256": "76ca587a3dfafacc1cb65e0a8cd217ff936f174d112b7f64f9957f7e29aaa97d",
+      "doc_sha256_before": "25d7520ba6aec57cacf969f5d211bed36bf3460de9ab7bb2435a93cd1cc4946a",
+      "doc_sha256_after": "f1fd062e8e32d2631f520d03d54fdc012af1185051b798e903bea293d479e048"
+    },
+    {
+      "id": "E1126",
+      "line": 1126,
+      "group": "F4/P05",
+      "reason": "Matched source text, not rerun",
+      "old_sha256": "dcd7d40b59c63be6c4551cd197dfe195d078c4708f0f38d39846aee238eda2c9",
+      "new_sha256": "acf3a2bc7b2e0bc4d6f6a70e33e6c5b52a12214eb27c4a9098c9caec24ebeab4",
+      "doc_sha256_before": "f1fd062e8e32d2631f520d03d54fdc012af1185051b798e903bea293d479e048",
+      "doc_sha256_after": "d033baed25662a7574a40dcf6098dbc09e8e90bbdd1f33678f77224ae90f4727"
+    },
+    {
+      "id": "E1129",
+      "line": 1129,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "1b2fbc3fd2948f9aca6e152e4633d6492b80464b4d18b81cd828baad492f9d02",
+      "new_sha256": "912e019344d649f6dcf057e41d521f5c23542dbbff8ace9b6eb33a851e68bef1",
+      "doc_sha256_before": "d033baed25662a7574a40dcf6098dbc09e8e90bbdd1f33678f77224ae90f4727",
+      "doc_sha256_after": "88d06c9dc71423aea29b6f8834c05d4803a11fdcc79a2c8fd2b716268d24be91"
+    },
+    {
+      "id": "E1131",
+      "line": 1131,
+      "group": "F4/P05",
+      "reason": "Matched source text, not rerun",
+      "old_sha256": "dcd7d40b59c63be6c4551cd197dfe195d078c4708f0f38d39846aee238eda2c9",
+      "new_sha256": "acf3a2bc7b2e0bc4d6f6a70e33e6c5b52a12214eb27c4a9098c9caec24ebeab4",
+      "doc_sha256_before": "88d06c9dc71423aea29b6f8834c05d4803a11fdcc79a2c8fd2b716268d24be91",
+      "doc_sha256_after": "1c1c8ca303d71685cb53766c856a8dc3c9db76ff637afa0db9c16c91fc57ed64"
+    },
+    {
+      "id": "E1134",
+      "line": 1134,
+      "group": "F4/P05",
+      "reason": "Matched RECOG comparator/shear import source",
+      "old_sha256": "37a229df2125e543fa6a360f8300fe7e508f4d6bb106733427f53bb2146bbde5",
+      "new_sha256": "cbfcf2ec896ccfec4efda08587ce346efd3eb6e704e4cedc48caa7978e411be1",
+      "doc_sha256_before": "1c1c8ca303d71685cb53766c856a8dc3c9db76ff637afa0db9c16c91fc57ed64",
+      "doc_sha256_after": "1ef2cdd7f0f39a5d378a0570b5630334b62683e236db2045591f4c8ee591eb15"
+    },
+    {
+      "id": "E1136",
+      "line": 1136,
+      "group": "F4/P05",
+      "reason": "Matched source text, not rerun",
+      "old_sha256": "ce1025800f98955339b697e411d50b9b7913702a09befe6d09d9d724668dc726",
+      "new_sha256": "f2ac35f1dd45dcf080c2934fbcb5d2071bf278279bc247e9001ee54af33db3e2",
+      "doc_sha256_before": "1ef2cdd7f0f39a5d378a0570b5630334b62683e236db2045591f4c8ee591eb15",
+      "doc_sha256_after": "9af09b8a0a8207b528bb47cbbcda0cb8d802fb9ec7d81066812e8886890b3dd2"
+    },
+    {
+      "id": "E1143",
+      "line": 1143,
+      "group": "F1/F3",
+      "reason": "Current owner source and distinguish original/later NUMGEN evidence",
+      "old_sha256": "f36450df204129d1d7b9cc725eda19504f9a8189a1ddfb69efd8671585a632f4",
+      "new_sha256": "b0d97426343f83cbbbb60c8d87265e4388349ea108c33c677b1bc5ef115b723e",
+      "doc_sha256_before": "9af09b8a0a8207b528bb47cbbcda0cb8d802fb9ec7d81066812e8886890b3dd2",
+      "doc_sha256_after": "ee5d3bcc45427df316480488e68d048b4c13e0e67f384f39a6563a9d9077bbc6"
+    },
+    {
+      "id": "E1145",
+      "line": 1145,
+      "group": "F2/F3",
+      "reason": "Preserve original audit, distinct later rerun and new NUMGEN owner reannotation",
+      "old_sha256": "469a6d72b8e176fbcc613040e92fa739897e4a6a7925e6cc07897ea1f2be2f71",
+      "new_sha256": "24cf322779d25a58388225c9052c6a3a6ddcd908cb556db0084dd00c2ae7b3a1",
+      "doc_sha256_before": "ee5d3bcc45427df316480488e68d048b4c13e0e67f384f39a6563a9d9077bbc6",
+      "doc_sha256_after": "0842e38c23c4a0708257469952673dc09a982aa4d1cc560c9df40aa80d87eb1f"
+    },
+    {
+      "id": "E1146",
+      "line": 1146,
+      "group": "F1/F2",
+      "reason": "Custody and answered referral distinct",
+      "old_sha256": "00798f85aaee5328c505f326bf0c0ef97c5ce10d0149438fd39fd928976e41b1",
+      "new_sha256": "225f57ab5fc8514f2b556dd5e1cd757e52b89f3a8c027feefaeb9eeb88355ffa",
+      "doc_sha256_before": "0842e38c23c4a0708257469952673dc09a982aa4d1cc560c9df40aa80d87eb1f",
+      "doc_sha256_after": "9b5e3c19be5e4794f6f327d89b0ed51e96f4252aa5ddded1111d3322a9eb0587"
+    },
+    {
+      "id": "E1149",
+      "line": 1149,
+      "group": "F6/R379-2",
+      "reason": "TRIAD component only; GEN historical pin retained",
+      "old_sha256": "19aadc5945dbf2c92e81e75ff7db5870eed044508f172d63e96b3ec0a8ff5b8b",
+      "new_sha256": "74a40b39980958317e593278b6aa689b2d44d4cb537b69c482ebd272175f9ba8",
+      "doc_sha256_before": "9b5e3c19be5e4794f6f327d89b0ed51e96f4252aa5ddded1111d3322a9eb0587",
+      "doc_sha256_after": "89d05580ff40849f19aed5b54379a788de5cac0449ffb9c9286d926df862306e"
+    },
+    {
+      "id": "E1151",
+      "line": 1151,
+      "group": "F6/R379-2",
+      "reason": "Scope of changed TRIAD §6.18",
+      "old_sha256": "0ad32f03488e0e4a3538b5246718ac1d6903948ba7ca994559805bcf94ef8133",
+      "new_sha256": "e8a605c0bd2859c8b2bb2953fd7ac66684341489572ea5cf84e0006a955e0c63",
+      "doc_sha256_before": "89d05580ff40849f19aed5b54379a788de5cac0449ffb9c9286d926df862306e",
+      "doc_sha256_after": "9ad9dbc90942546ffcf44dc613f0f0413c7398998734cecb32523026255f1e11"
+    },
+    {
+      "id": "E1152",
+      "line": 1152,
+      "group": "F6",
+      "reason": "Current owner matrix and earlier OFN receipt provenance",
+      "old_sha256": "b1f12cf922b16ea6560509f3bdeb1502f1330661c25196b501f0eada29d3ab79",
+      "new_sha256": "3ccd7b1243c37bd5e42a6040880d33eea4c65690df398c9ab2ee7a49e68bec6f",
+      "doc_sha256_before": "9ad9dbc90942546ffcf44dc613f0f0413c7398998734cecb32523026255f1e11",
+      "doc_sha256_after": "5ea28c2a63ab3741bf7babfbe1255083ee388cedd06652e97505cfc6e5f3c18a"
+    },
+    {
+      "id": "E1155",
+      "line": 1155,
+      "group": "F6/R379-2",
+      "reason": "TRIAD component only; GEN historical pin retained",
+      "old_sha256": "0c52058b7df76ac6e243e731db44b895a8cb9f2a1ebb100f296bc8cfbe4a7040",
+      "new_sha256": "af9c0c83d9941f917c6186bcf3d8b8aca43e9488f88e639897867038d7f55c3f",
+      "doc_sha256_before": "5ea28c2a63ab3741bf7babfbe1255083ee388cedd06652e97505cfc6e5f3c18a",
+      "doc_sha256_after": "d3ac3670878a0f6286858a9836f49e47f50e95ee6d273a8ac8d12c2932eb9600"
+    },
+    {
+      "id": "E1161",
+      "line": 1161,
+      "group": "F3",
+      "reason": "Keep historical lemma and BIND3, current §6.13 owner scope",
+      "old_sha256": "73e2937b05b4a09eaa0bda3f42f795bfc5772f328e1685507b8812831f635177",
+      "new_sha256": "c7e26bca760eb252a3cc1a2f0eb5f5d8f94023c23e8e57742ff661b3e3eabd13",
+      "doc_sha256_before": "d3ac3670878a0f6286858a9836f49e47f50e95ee6d273a8ac8d12c2932eb9600",
+      "doc_sha256_after": "b9a06e9065ed85f45891dc967a0cbece2937bfe8eef291cb1c57b717829469e6"
+    },
+    {
+      "id": "E1163",
+      "line": 1163,
+      "group": "F3",
+      "reason": "Reference-only census and spectrum result, explicitly conditional",
+      "old_sha256": "19efb2ba95c454973e79febd8fb02c476f863c69c9414112f2adae7e172e24a4",
+      "new_sha256": "45a942299a705d38dfb57be926389d846da40f80c96f727ded476d77db6926aa",
+      "doc_sha256_before": "b9a06e9065ed85f45891dc967a0cbece2937bfe8eef291cb1c57b717829469e6",
+      "doc_sha256_after": "c98e951f9e549a40bbb353eb21b579007c952115eded73f66ee59ab42a411148"
+    },
+    {
+      "id": "E1164",
+      "line": 1164,
+      "group": "F3",
+      "reason": "Retain reference-only source boundaries",
+      "old_sha256": "4730c4c408641de5defbe95cb01050b74a3a794e31c404565180931724e67a11",
+      "new_sha256": "34c438a2b0e5eafdcc99d40490ca4e52869d655627a6a67879ab39507945cc39",
+      "doc_sha256_before": "c98e951f9e549a40bbb353eb21b579007c952115eded73f66ee59ab42a411148",
+      "doc_sha256_after": "ad175179da2ee82bba47e8bcbc4b50cb329405cf5b26018686cee7a14088e759"
+    },
+    {
+      "id": "E1167",
+      "line": 1167,
+      "group": "F5",
+      "reason": "Matched DYAD p-family section; hold other historical reference separately",
+      "old_sha256": "f6782ce10cadbb43bd3cbe3e24235bb8bec5ab6d8871863c961f8d2d78f9b64c",
+      "new_sha256": "acfbd23e94ff2db59a76aaef83a66ae1c966061a204b38a1a0c8979379aef2e7",
+      "doc_sha256_before": "ad175179da2ee82bba47e8bcbc4b50cb329405cf5b26018686cee7a14088e759",
+      "doc_sha256_after": "72305f44c70e7efe9f09f8e896d3d6ccea1bdde22de2e23b6f83dbf7ee7479cc"
+    },
+    {
+      "id": "E1173",
+      "line": 1173,
+      "group": "F4",
+      "reason": "Keep historic R9 and chart references with later comparison caveat",
+      "old_sha256": "de54898f5a85e7e5259028b7ee8464d8b8dc43556360ade19b47139d97a1bcad",
+      "new_sha256": "7471b7eaac7f9994f5ccf5e41dee0de4d512fd7b4c0fefff3d4e407e73d77b1a",
+      "doc_sha256_before": "72305f44c70e7efe9f09f8e896d3d6ccea1bdde22de2e23b6f83dbf7ee7479cc",
+      "doc_sha256_after": "5e52529900b201279d32f73b206aa9e725b64e134fdda77c00dbbb688cde5548"
+    },
+    {
+      "id": "E1179",
+      "line": 1179,
+      "group": "F3",
+      "reason": "Keep historical campaign source pin; current policy source locator",
+      "old_sha256": "b176c943354a0f1cd0a27f111c27e602e030e034debcb6562ddf85a9145d2cfe",
+      "new_sha256": "b0a0c131b3548151dfdbdab63866a96662e01b60e422ad1ac532f404cf205fd4",
+      "doc_sha256_before": "5e52529900b201279d32f73b206aa9e725b64e134fdda77c00dbbb688cde5548",
+      "doc_sha256_after": "4c92f5221a297dfef1387008d11b5f6757b3e07a36d5ad8bf41441dcf13f049d"
+    },
+    {
+      "id": "E1182",
+      "line": 1182,
+      "group": "F2/F3",
+      "reason": "Record answered referral and distinct policy gap",
+      "old_sha256": "8e955da06f6ce2072f491f1a969be34bb7843b85912eb1c452bd59f94ef6edb2",
+      "new_sha256": "264486d94c6c6ed64f15bf958148830deeaa6a42ccd843fd815d6764ec2b63dc",
+      "doc_sha256_before": "4c92f5221a297dfef1387008d11b5f6757b3e07a36d5ad8bf41441dcf13f049d",
+      "doc_sha256_after": "ae2062de6b2becf8fb3bd49bae8a0713c0a7b6b8d777fc563e54e6f11ac44b50"
+    },
+    {
+      "id": "E1185",
+      "line": 1185,
+      "group": "F6/R379-2",
+      "reason": "TRIAD component only; GEN historical pin retained",
+      "old_sha256": "08acf437263f21c4b440bc7ff8817d97c80bc51e727c81e2da5d4fbfcb538d2c",
+      "new_sha256": "619fcd9f740a7dd498f849749da6d66e2f7959dc85e506074b18b24836d015d5",
+      "doc_sha256_before": "ae2062de6b2becf8fb3bd49bae8a0713c0a7b6b8d777fc563e54e6f11ac44b50",
+      "doc_sha256_after": "c3b4ada4d5aa8835a46461c89941dff589eeedc90a18e10a712341d87f2a372d"
+    },
+    {
+      "id": "E1191",
+      "line": 1191,
+      "group": "F5",
+      "reason": "Matched DYAD contraction block, preserve NUMGEN reference",
+      "old_sha256": "fa7c5cd6fa9e35a5ff95f01f15c01b23b1d09e7ecc48119d6c5769448c85e1a6",
+      "new_sha256": "923fb82bd06bb62a8a2ebfd9ace8d68d96b95735386706f52cf5a4a1fa8e0209",
+      "doc_sha256_before": "c3b4ada4d5aa8835a46461c89941dff589eeedc90a18e10a712341d87f2a372d",
+      "doc_sha256_after": "5c3e18414ea01cdaddf5513cdf9b922ace0d440304f5f9624b04b60c6efa7c48"
+    },
+    {
+      "id": "E1205",
+      "line": 1205,
+      "group": "F4",
+      "reason": "Matched §6.6a reference",
+      "old_sha256": "d4bb842a4556073a05c1e753c8df9e21347a9848dca644243178317e9e7aadb7",
+      "new_sha256": "d47ca3943f96b8e6aec758dca43aa751b1327329806acba3e04f86d9bf7e9270",
+      "doc_sha256_before": "5c3e18414ea01cdaddf5513cdf9b922ace0d440304f5f9624b04b60c6efa7c48",
+      "doc_sha256_after": "4b9b92293dcb6bd374b171205004e306add1c8409971b78066ae8b822fa1553e"
+    },
+    {
+      "id": "E1217",
+      "line": 1217,
+      "group": "F8",
+      "reason": "Current diagnostic homes only",
+      "old_sha256": "7ae483850843fefcd8f10d1ed91eabb4248d3d39197d49c4335606d0cd46e121",
+      "new_sha256": "402e537da82d2d046574e0a03db82e3f5095be9b44136fdefe8a288ecb691877",
+      "doc_sha256_before": "4b9b92293dcb6bd374b171205004e306add1c8409971b78066ae8b822fa1553e",
+      "doc_sha256_after": "29297558893d09f03b70b2b0652794a361d08acff8a92c58eb26b311b8ccafdb"
+    },
+    {
+      "id": "E1219",
+      "line": 1219,
+      "group": "F8",
+      "reason": "Received history distinct from adopted edition; keep firewall",
+      "old_sha256": "a16e88359358cd90127f8466e04232187e83385fd8f78e572d730fc4209003ed",
+      "new_sha256": "351856da8197ca6fda0624e7563dd3e787abd00ab9d0cd41113c76c1b9a73d6a",
+      "doc_sha256_before": "29297558893d09f03b70b2b0652794a361d08acff8a92c58eb26b311b8ccafdb",
+      "doc_sha256_after": "de1502cb23d6ed87cd6b2c29fb714bf0496834352dc5ab412d63d72f6f495d35"
+    },
+    {
+      "id": "E1223",
+      "line": 1223,
+      "group": "F4/F5",
+      "reason": "Preserve original R9 proof/reference scope",
+      "old_sha256": "0e9c42e96a9d37f0aaf77f2302ede9ab29b4a280409313f803453e8d9e2da6d6",
+      "new_sha256": "52c7f6b02a8876727fa636dbbfcf391198eb915dafefb2a31ea1e52b0e4ab8f9",
+      "doc_sha256_before": "de1502cb23d6ed87cd6b2c29fb714bf0496834352dc5ab412d63d72f6f495d35",
+      "doc_sha256_after": "2e9775d118352400a796aa3d034d473dc6e81a2d8431cca9cb78ac0120e77b03"
+    },
+    {
+      "id": "E1225",
+      "line": 1225,
+      "group": "F5",
+      "reason": "Matched SG-19 text",
+      "old_sha256": "7300e43d5db4bee4ce4c2ba4406a3c362aac8d9905cd475d0ecf1830bcd25b97",
+      "new_sha256": "f8e61e5dc79f539eaf18200aa65c17b85a2dd3265cb9f88a7453906d997ced91",
+      "doc_sha256_before": "2e9775d118352400a796aa3d034d473dc6e81a2d8431cca9cb78ac0120e77b03",
+      "doc_sha256_after": "9c898f6e9ff59cd4cffdb2eeee008c435a2779e4f972894232fcd496876086e7"
+    },
+    {
+      "id": "E1238",
+      "line": 1238,
+      "group": "F4",
+      "reason": "Distinguish earlier inventory and new premise scope",
+      "old_sha256": "5bbb400bb47556ce4f9ae0591d2e1a1d49b1be8214de730f5c9a31729dc06102",
+      "new_sha256": "d10c70c769c936416e7b0d5450f21af9671e5fee539d0b19cb2404f7c3220a9f",
+      "doc_sha256_before": "9c898f6e9ff59cd4cffdb2eeee008c435a2779e4f972894232fcd496876086e7",
+      "doc_sha256_after": "5d2381fa2b90c95a041771a16ccc7762a17584b9a2b4842eb55924d610a90b2c"
+    },
+    {
+      "id": "E1249",
+      "line": 1249,
+      "group": "F4/P05",
+      "reason": "D5B only, known-a versus unknown-a outer decoder and remaining limits",
+      "old_sha256": "0926e8cf6dfd797c5243cb2b116e11d16782bc59a434a86ce6cfc020c80e1b06",
+      "new_sha256": "371c998573e595cee42008f88f599987e3326ce190d5c3c653955f5e41ba4a35",
+      "doc_sha256_before": "5d2381fa2b90c95a041771a16ccc7762a17584b9a2b4842eb55924d610a90b2c",
+      "doc_sha256_after": "c30ee903bf306faac9b9de39528f169734afd229d49661f3bf22ae725a4ea235"
+    },
+    {
+      "id": "E1265",
+      "line": 1265,
+      "group": "F3",
+      "reason": "Later NUMGEN evidence only, no changed C7C claim",
+      "old_sha256": "0d73fb3e625d08f5d63c0a1a3e779bcb4b740cd31d21c7da8990ae20b4d586d0",
+      "new_sha256": "010295bdf50c981c4fb253513ec8c45fa0ca12e2012626e590bf56f832bf58fa",
+      "doc_sha256_before": "c30ee903bf306faac9b9de39528f169734afd229d49661f3bf22ae725a4ea235",
+      "doc_sha256_after": "9b26c2de738e141611aa41d8b6d42c6ec37ba4f87d1e60f8dc8f9ffc6c1ae94b"
+    },
+    {
+      "id": "E1270",
+      "line": 1270,
+      "group": "F5",
+      "reason": "Current matched statements and preserved original provenance",
+      "old_sha256": "c69070f72f20176b808e68a18fe0b780ea14559b72273022b6a5a74b3fb1e711",
+      "new_sha256": "c0be02ec5e948e4b3e8b2c8aaa70c9924667ac81fe47ae1045fd5de808676e2c",
+      "doc_sha256_before": "9b26c2de738e141611aa41d8b6d42c6ec37ba4f87d1e60f8dc8f9ffc6c1ae94b",
+      "doc_sha256_after": "ec41f228ed893fba3eb4a228ab07213351f44c169a4eaf4add131045a90d4544"
+    },
+    {
+      "id": "E1273",
+      "line": 1273,
+      "group": "F5/P02",
+      "reason": "Matched GEN span, retain original evidence hash",
+      "old_sha256": "1b0e44959667aace46cf6fe3a6ee536ecddc1e46ef70d762f2505a5ffa5fc6d7",
+      "new_sha256": "7e60e75c698dab3f397ab634a8797f06fe5a6f85dc063ad9dd37f90e9d460ff7",
+      "doc_sha256_before": "ec41f228ed893fba3eb4a228ab07213351f44c169a4eaf4add131045a90d4544",
+      "doc_sha256_after": "8d2311e985fd4decc7e54125c4697c5de31e01136d0c5d1e73b60d6585089658"
+    },
+    {
+      "id": "E1278",
+      "line": 1278,
+      "group": "F5/P02",
+      "reason": "Matched GEN §6.3c, retain original source",
+      "old_sha256": "d93e4e2328fd9a5836fda7f3b07289864ece1f37ff67d123cf262578156f8d9a",
+      "new_sha256": "918a2b19db556a30c58d096af4c65a799a25a589b2f1f3bb0a1c0386ad5643b7",
+      "doc_sha256_before": "8d2311e985fd4decc7e54125c4697c5de31e01136d0c5d1e73b60d6585089658",
+      "doc_sha256_after": "693dd1df754bb19d048f296f16581906802afdc769de4483aa816a725f6137bd"
+    },
+    {
+      "id": "E1280",
+      "line": 1280,
+      "group": "F5",
+      "reason": "Matched G-20 statement",
+      "old_sha256": "f7e5d45960b12dbcd563351fd449902b06ea6827568a25ee85838b85c34c6261",
+      "new_sha256": "8714c4613671d3d7322de954a1b9d03b9bb2a9245763a9351cdf0ce212994158",
+      "doc_sha256_before": "693dd1df754bb19d048f296f16581906802afdc769de4483aa816a725f6137bd",
+      "doc_sha256_after": "197a19104c2151549b20ec23c490f9711c930c40291484df03eb2793aecc1a60"
+    },
+    {
+      "id": "E1283",
+      "line": 1283,
+      "group": "F5/P06",
+      "reason": "Matched formal generator block, original proof pin recorded",
+      "old_sha256": "1e2169f95ec19626839fe558f5aba70820035711ada4fad4661b85767bb38141",
+      "new_sha256": "171c4bf85fdaaf669d6d5490b850ef91d02b7a6692cd887661eddbc9013e5723",
+      "doc_sha256_before": "197a19104c2151549b20ec23c490f9711c930c40291484df03eb2793aecc1a60",
+      "doc_sha256_after": "7e807b0f9fc46aa218f9e0818dac79a947d965d2c657008cf0eb7b3dc97c8e88"
+    },
+    {
+      "id": "E1288",
+      "line": 1288,
+      "group": "F5/P06",
+      "reason": "Matched Lemma F/F3, preserve original source",
+      "old_sha256": "cfa328b5bfd72bb5e2207b8f0bb891b8173429def3d15ea9d14d8a3daa19066c",
+      "new_sha256": "006b1654968f68a17d6b9301e0a9b28579a50a27fe38920960bee61f809951f7",
+      "doc_sha256_before": "7e807b0f9fc46aa218f9e0818dac79a947d965d2c657008cf0eb7b3dc97c8e88",
+      "doc_sha256_after": "fb80436af45bbeeabca5fcb71927cd05de62a2d225b487f3d86d9aee9cc7eaf2"
+    },
+    {
+      "id": "E1289",
+      "line": 1289,
+      "group": "F5/P06",
+      "reason": "Current OPEN 20 and matched lemma declarations and bodies",
+      "old_sha256": "d8f786d00b2235a462ed8280c017d6bc2f2fd8926dc40bc206384ca13bf5a914",
+      "new_sha256": "8fb6cf9e77b1c2c885b4de869a7d1842035301f8814bf496aa2fc59b0513c788",
+      "doc_sha256_before": "fb80436af45bbeeabca5fcb71927cd05de62a2d225b487f3d86d9aee9cc7eaf2",
+      "doc_sha256_after": "b41ba641a1f241d432840b2958b06e37f3635051b97c74e72765fa836d1f8ed7"
+    },
+    {
+      "id": "E1294",
+      "line": 1294,
+      "group": "F5/O9",
+      "reason": "Accurate dated limitation; current block comparison not historical proof replay",
+      "old_sha256": "d4bb1827e7f3f67e452fb5b1a1dcacde8ea6b6856a001bc74eb3ee43a2dac6b1",
+      "new_sha256": "a2a3438e693a0bf413efbb0afb9fe9ac2565df41b38ccebfadb409375626a214",
+      "doc_sha256_before": "b41ba641a1f241d432840b2958b06e37f3635051b97c74e72765fa836d1f8ed7",
+      "doc_sha256_after": "269eea3d22c1775a76cebd0cd27087dd3db74436e8bed9326e6910052be94c86"
+    },
+    {
+      "id": "E1295",
+      "line": 1295,
+      "group": "F5/O11/R379-1",
+      "reason": "Companion is not replacement; no R9 discharge",
+      "old_sha256": "cd3954d435fc63102105c2fcb8b584eefcae664389a02ec7587652b0f25a15eb",
+      "new_sha256": "ca29485cf428c3835894217cf540f9b8aca14b2185b9a3ac97534df8a0bc0e57",
+      "doc_sha256_before": "269eea3d22c1775a76cebd0cd27087dd3db74436e8bed9326e6910052be94c86",
+      "doc_sha256_after": "088c958052e630fea4d3defbe2be0e0399004faa1d051214da3753a9fccdb120"
+    },
+    {
+      "id": "E1298",
+      "line": 1298,
+      "group": "F5/P06",
+      "reason": "Matched current DYAD source claim",
+      "old_sha256": "c50b56de761a538ec5d51b7c5c2af478aac635384a6c36adf93358dd66b1692e",
+      "new_sha256": "f5d7383d8043d2282bdcad9d3f509827e969a922f5e8d6315903e1f7373c324e",
+      "doc_sha256_before": "088c958052e630fea4d3defbe2be0e0399004faa1d051214da3753a9fccdb120",
+      "doc_sha256_after": "0c0341bd10a366358fa8fb7d8636e535a7a6cf3918e6026634d58740fb364549"
+    },
+    {
+      "id": "E1301",
+      "line": 1301,
+      "group": "F5/P06",
+      "reason": "Matched smooth statements, no certificate replay",
+      "old_sha256": "b59b6ed15e76cf97bdfc077f65b74fae09f7a6d3c47d1c4b4f056b3f39e220ea",
+      "new_sha256": "9059f19002868fb10b74cfe53a7b0fb434035f84759cee981c0b6bda193b0cd9",
+      "doc_sha256_before": "0c0341bd10a366358fa8fb7d8636e535a7a6cf3918e6026634d58740fb364549",
+      "doc_sha256_after": "97af4aa6554aaf6fef75f92f5b984c5656c1233a04faf314b28a0edb8deee5cb"
+    },
+    {
+      "id": "E1304",
+      "line": 1304,
+      "group": "F5/P06",
+      "reason": "Matched current DYAD source claim",
+      "old_sha256": "33f39b52f499120a9bed73568ed09525e671f406d12d7533db6cd977fb01f6f0",
+      "new_sha256": "e5f7977f2024bb7cd16c91802d15508ef6bf76c24b3d0c01e3b8b8a30c8e52a6",
+      "doc_sha256_before": "97af4aa6554aaf6fef75f92f5b984c5656c1233a04faf314b28a0edb8deee5cb",
+      "doc_sha256_after": "ff676a892f45238b39da4f8244a451e31f13613d25258750a461bcbc044582d0"
+    },
+    {
+      "id": "E1307",
+      "line": 1307,
+      "group": "F5/P06",
+      "reason": "Matched smooth statements, no certificate replay",
+      "old_sha256": "a8fb0231b19aa4f101fe4eb0ef5f74223c8a0bbe45f9f2855ff36305469755e2",
+      "new_sha256": "f8ce3a05835f6b97eddde74d7255350e594931fdaea86d5785c4f923117fa326",
+      "doc_sha256_before": "ff676a892f45238b39da4f8244a451e31f13613d25258750a461bcbc044582d0",
+      "doc_sha256_after": "a5e9ef958637cd5ba59cf4757dc4bc01bc83be5d265a4cf2e293ca673082ff4b"
+    },
+    {
+      "id": "E1342",
+      "line": 1342,
+      "group": "F5/P06",
+      "reason": "Current receiving context; historical lifecycle retained",
+      "old_sha256": "6add4482b74520a28e520d302c7cbe1608027bcb0285bfc0551b7c5f37051fa7",
+      "new_sha256": "fba86bcff88d258206cfbdb1adbaf8aa5e6baf100f2474601bd91db0ad1072b4",
+      "doc_sha256_before": "a5e9ef958637cd5ba59cf4757dc4bc01bc83be5d265a4cf2e293ca673082ff4b",
+      "doc_sha256_after": "1c31a8da30dc25ea87837758fab1725b1ba2319f51c36c9127e02ec24a8effd6"
+    },
+    {
+      "id": "E1364",
+      "line": 1364,
+      "group": "F9/O10",
+      "reason": "Actual recovered source access and separate same-CAS rerun without regrading",
+      "old_sha256": "4a4dde98f128aab44f7a1970abefc54c2d495c6098377c450c8d32bd544a6ada",
+      "new_sha256": "ed9f6d9b45400c5febe905272975d5737a49e07903db8e5bfc76fa48c85faab7",
+      "doc_sha256_before": "1c31a8da30dc25ea87837758fab1725b1ba2319f51c36c9127e02ec24a8effd6",
+      "doc_sha256_after": "e5238910c691bff6b097e73b7ba234f4793db8da56e8ed00ff177d5444a377c4"
+    },
+    {
+      "id": "E1366",
+      "line": 1366,
+      "group": "F9",
+      "reason": "Record newly recovered source availability without changing frozen history",
+      "old_sha256": "1f9d759e6fdf1c57bc9c7aa89259ebb38ea2de880525b026dde4e08561cde267",
+      "new_sha256": "a3fe4f159e68747d25fcc2ec22620e96c5e7fdb63d0465c0d3e958d404c20ba9",
+      "doc_sha256_before": "e5238910c691bff6b097e73b7ba234f4793db8da56e8ed00ff177d5444a377c4",
+      "doc_sha256_after": "1628b150b6c8692cacfa7f536778b48997aa3cf6faa0de44714d187f63116f5e"
+    },
+    {
+      "id": "E1378",
+      "line": 1378,
+      "group": "F1",
+      "reason": "Current Finding A use, custody open",
+      "old_sha256": "e8010afd73287f927381468affe4e7df69c64659fe3a2d68dae1e265840a5fb9",
+      "new_sha256": "7d73bc846ed0f9984ff7f82140ad2562e15f62f401a2ccc1c774f427f10cfc70",
+      "doc_sha256_before": "1628b150b6c8692cacfa7f536778b48997aa3cf6faa0de44714d187f63116f5e",
+      "doc_sha256_after": "e7d14992bebcce080f61374f98159328cb74432b593416276ad666d39440aef0"
+    },
+    {
+      "id": "E1393",
+      "line": 1393,
+      "group": "F3",
+      "reason": "Original OFN use and current NUMGEN consumer metadata, not a blanket pin",
+      "old_sha256": "7470a440bcc45a520e3e3e94009563b2d745b2da0444a633658e54bbdffd35ce",
+      "new_sha256": "3ab1e4a8bb29093b922191e3dc8e177d8ccdc846162963d4e4d3857455cb5d26",
+      "doc_sha256_before": "e7d14992bebcce080f61374f98159328cb74432b593416276ad666d39440aef0",
+      "doc_sha256_after": "51c605cb63697c1530c3a0a0da2952ce550aee64b8e96397e9ddbf102e89d0f0"
+    },
+    {
+      "id": "E1394",
+      "line": 1394,
+      "group": "F3",
+      "reason": "Current actual vocabulary use, no import of N-1A2 closure",
+      "old_sha256": "38bfe1cce393d171ed5bc505423ca1283862b7d445220aeb65bc2e75c4507cc7",
+      "new_sha256": "f29a1b26f5825b70969982cefc4891d6731d1a043f9713309091ae9ed81133a6",
+      "doc_sha256_before": "51c605cb63697c1530c3a0a0da2952ce550aee64b8e96397e9ddbf102e89d0f0",
+      "doc_sha256_after": "ebe5f517e656b0e602fba19d32fb6ad619f7bae40a12e832ffab56d25b99f1a8"
+    },
+    {
+      "id": "E1397",
+      "line": 1397,
+      "group": "F4/P05",
+      "reason": "RECOG current consumer and receipt record",
+      "old_sha256": "6c89b578f8e2ec0e9b3cb597ff6f8816bb6e0d2c8a62cad4a8c2e5886ded0888",
+      "new_sha256": "42476c5701ed717a027f9697561ea5317560e6eccc9b9af49a27ac86930800e0",
+      "doc_sha256_before": "ebe5f517e656b0e602fba19d32fb6ad619f7bae40a12e832ffab56d25b99f1a8",
+      "doc_sha256_after": "3b3f85b169e221b7dc91fc90206db9dd0909fe9efb4ea69389a5d082981aff06"
+    },
+    {
+      "id": "E1399",
+      "line": 1399,
+      "group": "F1/P08",
+      "reason": "TDR-G current actual use, not custody transfer",
+      "old_sha256": "5d14d838c779196e9b0b6467bcda5f0dcb3d913f1a250b0e4b6360b631981fa8",
+      "new_sha256": "8060c9627d159609b12fcf0c7d03fcb8a233851ded7fd3bca02dd486700737cf",
+      "doc_sha256_before": "3b3f85b169e221b7dc91fc90206db9dd0909fe9efb4ea69389a5d082981aff06",
+      "doc_sha256_after": "b2dc879108434abee1a02c99cc451d14e57065f76feaefac0a9996d9e0c8e081"
+    },
+    {
+      "id": "E1400",
+      "line": 1400,
+      "group": "F5/P02",
+      "reason": "GEN receipt and reference use",
+      "old_sha256": "1902607828f4d4d94909dafc5da178c33155ef8ec3e39b167d1b1903902f383e",
+      "new_sha256": "5eedcdb0d1b996f49f0ff14cb71ad84149056687e4a9c623efa00baf7933cff3",
+      "doc_sha256_before": "b2dc879108434abee1a02c99cc451d14e57065f76feaefac0a9996d9e0c8e081",
+      "doc_sha256_after": "337553e01e69838dd51b421becef1a1876c0d4545ec50308546261564a26280f"
+    },
+    {
+      "id": "E1401",
+      "line": 1401,
+      "group": "F5/P01/P06 / F5/P01/P06",
+      "reason": "Current Dyad consumer record, preserve historical receipt roles; Receipt of two OFN notices recorded",
+      "old_sha256": "eddad8f8f6db5799aadeea68213579eb09e945a0507f42bb97aae62b4eb63ef6",
+      "new_sha256": "bcc14ebccaed94380ba1e8044b99c9462d099f08b0579f1886fc0a3de6179135",
+      "doc_sha256_before": "337553e01e69838dd51b421becef1a1876c0d4545ec50308546261564a26280f",
+      "doc_sha256_after": "b7deec701ee1678ce276dd9b0c23a4cbd9308cd39141033df67f205d027dd7fd"
+    },
+    {
+      "id": "E1402",
+      "line": 1402,
+      "group": "F6",
+      "reason": "TRIAD actual reference, not claim import",
+      "old_sha256": "2ce3d82c3733eb5e3ab78358cf6dac1502e80fe7cbf0fa9fe90e35ec8adfd733",
+      "new_sha256": "1e63621e65b23512e87f1e4418d51e750c44ed43cfc66e9863fccc853e0be2f8",
+      "doc_sha256_before": "b7deec701ee1678ce276dd9b0c23a4cbd9308cd39141033df67f205d027dd7fd",
+      "doc_sha256_after": "b179a081526982208478905be1ab9967bdb6707f0e9efb7861d21423b6eea73d"
+    },
+    {
+      "id": "E1404",
+      "line": 1404,
+      "group": "F5",
+      "reason": "Matched owner map and alias locators",
+      "old_sha256": "ee3129bc30cec7fd9529ef05d07821bbf711838dd2b2789d84c4401281866458",
+      "new_sha256": "10f26ed5e91dab7fc48cc31ba815e85511616bccbb5092e2cebb18507950ce12",
+      "doc_sha256_before": "b179a081526982208478905be1ab9967bdb6707f0e9efb7861d21423b6eea73d",
+      "doc_sha256_after": "751f46a43b0ba6abeaefd402fd53b869f7d5373ad0c182524a632976445cca0d"
+    },
+    {
+      "id": "E1406",
+      "line": 1406,
+      "group": "F7",
+      "reason": "Actual Programme criterion homes and later IF03 mismatch",
+      "old_sha256": "11fa399ce02ebdd2dfceaee171eac2c0c2594885d26d0003956eebbd5f995d92",
+      "new_sha256": "dc364673495c7bcf293a926005f4e98f2e7e30525886a0889c8a4060b83eb668",
+      "doc_sha256_before": "751f46a43b0ba6abeaefd402fd53b869f7d5373ad0c182524a632976445cca0d",
+      "doc_sha256_after": "c1031fd099de296ba6fed8893edc0bec03d1522c2726c45dc60c44b96b47c735"
+    },
+    {
+      "id": "E1420",
+      "line": 1420,
+      "group": "F1",
+      "reason": "Endpoint fulfilled, custody open, remaining list unrecovered",
+      "old_sha256": "967e8de486dead7ca044dd1ae666bd0a98774fdb71e607b40f076935ffb9c852",
+      "new_sha256": "760bda6575381a9b0d0480f6fe0c1f64c4eb5796dd122e5c7296e1842ad708eb",
+      "doc_sha256_before": "c1031fd099de296ba6fed8893edc0bec03d1522c2726c45dc60c44b96b47c735",
+      "doc_sha256_after": "eb7ac092f3c372ea40203102702e72bd1c17f39f6c3de6ca19586c66c715273a"
+    },
+    {
+      "id": "E1427",
+      "line": 1427,
+      "group": "H",
+      "reason": "Current disposition pointer, keep earlier decisions",
+      "old_sha256": "45af9ce6d6863453aa7aa430244259e1f32eada7dbaddcce014c37bfdaf82133",
+      "new_sha256": "26f48d66a2f20a2b65edeaec356cf614077d40473bb657427fc49d39cf360638",
+      "doc_sha256_before": "eb7ac092f3c372ea40203102702e72bd1c17f39f6c3de6ca19586c66c715273a",
+      "doc_sha256_after": "cc3cce75e7c89314d53cc126d9e778e23fb92c275090ae4175b6e3d7ce2fa922"
+    },
+    {
+      "id": "E1554",
+      "line": 1554,
+      "group": "H",
+      "reason": "New draft history entry; inherited entries byte-identical",
+      "old_sha256": "5a36b9d8d2a1356c6215543a6ff38bb625c3922d4a7d9aba2c5610883098b51f",
+      "new_sha256": "51fe928956058fa91d0ffa1d02e94fe6d548ba43ebeed8634d58f19b1e4ca4a8",
+      "doc_sha256_before": "cc3cce75e7c89314d53cc126d9e778e23fb92c275090ae4175b6e3d7ce2fa922",
+      "doc_sha256_after": "12df66c8e25c11b04a18f0c97d5fe9838ce586c8186ecbd13180bbb57aa2b204"
+    },
+    {
+      "id": "E1598",
+      "line": 1598,
+      "group": "H",
+      "reason": "Draft footer",
+      "old_sha256": "b60d7adc631a83295ea166a32c19962349e192fcb52345251948b2322626616c",
+      "new_sha256": "7d927c419aa0a0188ea1271f4f1eaf0ee6f8d396d4cda28577a3d92d9ff80545",
+      "doc_sha256_before": "12df66c8e25c11b04a18f0c97d5fe9838ce586c8186ecbd13180bbb57aa2b204",
+      "doc_sha256_after": "8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[PASS] C0 base — 1e35be54a37bb227
+[PASS] C1 build — 29 edits; intermediate 472e26e99a1da054
+[PASS] C2 confined — every changed base paragraph carries a logged anchor
+[PASS] C3 RIDs — lost/changed declarations []; new identifiers ['RTG-OFN-OPEN-DISC-INTERACTION']
+[PASS] C4 tags — out {'`[COR]`': 11, '`[REVISED]`': 1, '`[RESULT]`': 1}, in {'`[ALG]`': 3, '`[HEUR]`': 1, '`[FAIL]`': 1, '`[NUM]`': 1, '`[ENG]`': 5}
+[PASS] C5 OPEN — 21 OPEN records, headings and Status lines identical
+[PASS] C6 pins — AZ entry sha 126ae4a30440 at v0.6/v0.7/v0.8; stale strings []
+[PASS] C7 §1 — 407 words; 12 RIDs named, undeclared []; 24 homes checked, missing []
+[PASS] C8 §A.sim — table 847 bytes, verbatim in §8; closing [RESULT] not in the live text
+[PASS] C9 App. B — original statement quoted; removed from §2
+[PASS] C10 header — 3 summary sentences; numbers ['0.869', '120', '1440', '6.12', '6.13', '6.5'] found in the live text
+RESULT: 11/11 gates pass

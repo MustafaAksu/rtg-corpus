@@ -1,0 +1,39 @@
+{
+  "record": "initial triad closure test \u2014 proposed source contract",
+  "status": "NO_TARGET_VECTOR_LAW_SELECTED",
+  "registry_version": "0.1",
+  "entry_ids": [
+    "RER-T01",
+    "RER-T02"
+  ],
+  "primary_readout": {
+    "Phi": "(Qs,Qc,Isc,Omega_G)",
+    "Omega_G": "sqrt(3)/2*(s_eta*c_rho-s_rho*c_eta)",
+    "constraint": "QsQc-Isc^2=Omega_G^2",
+    "domain_patch": "Qs>0, other actual-source restrictions to be supplied"
+  },
+  "needed_source_fields": {
+    "target_branch": null,
+    "state_carrier_and_incidence": null,
+    "independent_vector_law_or_jet": null,
+    "time_block_or_flow_convention": null,
+    "metric_orientation_and_transports": null,
+    "admissible_domain_and_events": null,
+    "full_action_if_claimed_physical_quotient": null,
+    "precision_remainder_if_truncated": null,
+    "source_owner_version_hash_and_evidence": null
+  },
+  "test": "Phi(x)=Phi(xprime) => Phi(T(x))=Phi(T(xprime)) on a common admissible domain. For an event, also establish admissibility from the reduced state or retain the event variable.",
+  "acceptable_first_outputs": [
+    "Source-pinned exact closed update on Phi(X), with proof and domain.",
+    "Source-checkable same-readout/different-successor witness.",
+    "A finite-jet result explicitly retaining higher-order/domain obligations."
+  ],
+  "not_admitted_shortcuts": [
+    "defining Tpost by the desired quotient identity and citing it as a source discovery",
+    "using M_root closure as proof of microscopic reduction",
+    "replacing standalone K3 by K4 at d=0",
+    "using isolated-dyad h as a joint network normal form",
+    "inferring finite-memory closure from the R9 memory theorem"
+  ]
+}

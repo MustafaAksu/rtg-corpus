@@ -1,0 +1,33 @@
+candidate ref: origin/chatgpt/ofn-v0.13-stage1 = 2cc3af56d3c85a0193c4c9a996d92bdb140d0afe
+v22.23.5
+Python 3.13.18
+7f026a9d3da6c2572281972e7c35c7635fb74888307d9cfe28088087b14613d7  dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md
+75c7811b092e467f461f36d6bcb516a675dfa0073003f330f51b4f8d136805bf  evidence/ofn/scripts/build_ofn_v0_13.js
+fb4ac57d36789fe12bfb3f82a7b5afa2078f4a8916c8f46e2e2df9b565ab72bc  evidence/ofn/scripts/check_ofn_v0_13.js
+4584a2ab39f92e9cc1cbdc01a97659dc2aaf8d9151bfa05210d53b368c90d845  evidence/ofn/v0.13/check_output.txt
+47460f49d787541b8e1485ccee42f6768ba388f043626bcaad523f523df77a2e  evidence/ofn/v0.13/edit_log.json
+b46574cb6daaf437a384ec3622b0edb2f3109d41d1ee55eeb6ad3335424feb21  evidence/ofn/v0.13/edit_map.json
+e587dca5ffbab44ff1bb3a05ccfcc3e44583ada611a3f1c23c6e208414f6561d  evidence/ofn/v0.13/negative_controls_output.txt
+02e90f12f6b785757d2d384f22d1972e08ca0692eaf3d919c3f099ce2f5ee0be  evidence/ofn/v0.13/source_verification.json
+55ff8ba85d4bb48b52266bdd9a44aa84efcd2cc19903d059266fa406a6bb76aa
+R1 native build
+BUILD PASS 145 7f026a9d3da6c2572281972e7c35c7635fb74888307d9cfe28088087b14613d7
+  candidate byte-identical
+  edit log byte-identical
+  native sha256 of rebuilt candidate: 7f026a9d3da6c2572281972e7c35c7635fb74888307d9cfe28088087b14613d7
+R2 native checker (Node crypto SHA-256)
+  check output byte-identical (RESULT: PASS)
+  negative-control output byte-identical (21 lines)
+R3 informational DSN lint (--prev ofn-v0.12)
+previous: {"file": "/tmp/tmp.mkRn2gC5te/base.md", "bytes": 201005}
+growth_bytes: 11108
+growth_percent: 5.5
+new_rids: 8
+growth_per_new_rid: 1388.5
+(informational report; no gate)
+R4 pipes index
+pipes OK: 149 items in 20 inboxes
+R5 import and section-anchor locators re-resolved from tags (independent of source_verification.json)
+  [import:] locators: 22; problems: 0
+  [import:] pins: {'tdrg-v2.13': 11, 'gen-v2.10': 3, 'recog-v0.3.27': 7, 'dyad-v6.4.24': 1}
+  section-anchor locators: 44; problems: 0

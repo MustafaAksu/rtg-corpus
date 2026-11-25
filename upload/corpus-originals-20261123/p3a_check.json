@@ -1,0 +1,20 @@
+{
+  "P3_eta": "-(-e + 8*r)*(e**2 - e*r + r**2)/6",
+  "P3_rho": "-(-8*e + 7*r)*(e**2 - e*r + r**2)/6",
+  "gates": {
+    "E1": true,
+    "E2": true,
+    "E3": true,
+    "J1": true,
+    "J2": true,
+    "J3": true,
+    "J4": true,
+    "J5": true
+  },
+  "negative_controls_pass_should_be_false": {
+    "N1": false,
+    "N2": false,
+    "N3": false,
+    "N4": false
+  }
+}

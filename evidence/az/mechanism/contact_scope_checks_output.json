@@ -1,0 +1,125 @@
+{
+  "added_boundary_tau": 12,
+  "added_nonzero_relative_advance_unreachable": true,
+  "common_advance_shift_checks": 240,
+  "even_N": [
+    2,
+    40
+  ],
+  "exhaustive_pair_cases": 62804,
+  "no_growth_endpoint_evaluated": true,
+  "one_arm_absence_fixture": {
+    "D": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tau": 2
+    },
+    "N": 120,
+    "R": {
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "tau": 2
+    },
+    "delta_D": [
+      1,
+      41,
+      21,
+      96
+    ],
+    "delta_R": [
+      0,
+      41,
+      21,
+      96
+    ],
+    "k": 8,
+    "slot": 0,
+    "theta": [
+      109,
+      97,
+      80,
+      2
+    ]
+  },
+  "review_284_targeted_exact_t_equals_N_cases": 0,
+  "review_284_targeted_times": {
+    "120,8": [
+      null,
+      1,
+      1,
+      1,
+      1,
+      94,
+      95
+    ],
+    "122,8": [
+      null,
+      1,
+      1,
+      1,
+      1,
+      96,
+      97
+    ],
+    "240,16": [
+      null,
+      1,
+      1,
+      1,
+      1,
+      198,
+      191
+    ],
+    "242,16": [
+      null,
+      1,
+      1,
+      1,
+      1,
+      200,
+      193
+    ],
+    "480,32": [
+      null,
+      1,
+      1,
+      1,
+      1,
+      406,
+      383
+    ]
+  },
+  "scope": "synthetic exact arithmetic; no engine or campaign data",
+  "stationary_cycle_graph": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "stationary_cycle_ticks_checked": 120,
+  "status": "PASS"
+}

@@ -1,0 +1,5325 @@
+{
+  "artifact": "disc2_p2_antipodal_exposure_annotation_v1",
+  "per_witness": {
+    "sup_11_0_20_12": {
+      "convention_exposed": true,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_0_20_8": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_0_21_21": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_0_4_12": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_0_4_16": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_11_20_12": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_11_20_8": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "STABLE_NO_CONTINGENCY"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_11_3_0": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_11_4_12": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "STABLE_NO_CONTINGENCY"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_11_4_16": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_12_19_15": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_12_20_12": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_12_20_8": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_12_21_21": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_12_3_0": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_12_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_12_4_12": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_12_4_16": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_13_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_13_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_15_20_5": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_17_21_11": {
+      "convention_exposed": false,
+      "original_label": "5:1",
+      "policies": {
+        "inert": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_17_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_18_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_1_21_8": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_20_20_5": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_22_21_13": {
+      "convention_exposed": false,
+      "original_label": "7:2",
+      "policies": {
+        "inert": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_23_19_19": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": "11:1",
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": "11:1",
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": "11:1",
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        }
+      }
+    },
+    "sup_11_23_20_12": {
+      "convention_exposed": true,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_23_20_20": {
+      "convention_exposed": false,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_23_3_0": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_23_3_17": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "15:16"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "15:16"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "15:16"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_23_4_16": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_23_4_9": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_3_21_14": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_4_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_4_5_7": {
+      "convention_exposed": false,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_5_3_11": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "10:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "10:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "10:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_7_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_7_5_7": {
+      "convention_exposed": false,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_8_21_11": {
+      "convention_exposed": false,
+      "original_label": "5:1",
+      "policies": {
+        "inert": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_11_8_21_14": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_0_21_12": {
+      "convention_exposed": true,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": null,
+          "classes_by_k": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": "3:4"
+          },
+          "touches_antipodal": true,
+          "verdict": "NO_BASE_DUAL"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "13:15"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "13:15"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_0_21_9": {
+      "convention_exposed": true,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": null,
+          "classes_by_k": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "touches_antipodal": true,
+          "verdict": "NO_BASE_DUAL"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "1:4"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "1:3"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_0_3_15": {
+      "convention_exposed": true,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": null,
+          "classes_by_k": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": "3:4"
+          },
+          "touches_antipodal": true,
+          "verdict": "NO_BASE_DUAL"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "13:15"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "13:15"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_0_3_22": {
+      "convention_exposed": false,
+      "original_label": "2:1",
+      "policies": {
+        "inert": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "reverse": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "v18": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        }
+      }
+    },
+    "sup_12_0_5_2": {
+      "convention_exposed": false,
+      "original_label": "2:1",
+      "policies": {
+        "inert": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "reverse": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "v18": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        }
+      }
+    },
+    "sup_12_11_20_12": {
+      "convention_exposed": false,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "5:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "5:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "5:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_11_20_8": {
+      "convention_exposed": false,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "11:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "11:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "11:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_11_21_21": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_11_4_0": {
+      "convention_exposed": false,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_11_4_16": {
+      "convention_exposed": true,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_12_19_21": {
+      "convention_exposed": false,
+      "original_label": "2:1",
+      "policies": {
+        "inert": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "reverse": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "v18": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        }
+      }
+    },
+    "sup_12_12_21_12": {
+      "convention_exposed": true,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": null,
+          "classes_by_k": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": "3:4"
+          },
+          "touches_antipodal": true,
+          "verdict": "NO_BASE_DUAL"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "13:15"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "13:15"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_12_21_19": {
+      "convention_exposed": false,
+      "original_label": "2:1",
+      "policies": {
+        "inert": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "reverse": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "v18": {
+          "base_class": "2:1",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "2:1",
+            "2": "2:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        }
+      }
+    },
+    "sup_12_12_3_12": {
+      "convention_exposed": true,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": null,
+          "classes_by_k": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "touches_antipodal": true,
+          "verdict": "NO_BASE_DUAL"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "1:4"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "1:3"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_12_3_15": {
+      "convention_exposed": true,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": null,
+          "classes_by_k": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": "3:4"
+          },
+          "touches_antipodal": true,
+          "verdict": "NO_BASE_DUAL"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "13:15"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": "5:2",
+            "1": "5:2",
+            "2": "5:2",
+            "3": "13:15"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_13_20_12": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_13_20_8": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "STABLE_NO_CONTINGENCY"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_13_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_13_21_21": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_13_3_0": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_13_4_12": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_13_4_16": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_13_5_20": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_15_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_16_19_15": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_16_21_13": {
+      "convention_exposed": false,
+      "original_label": "7:2",
+      "policies": {
+        "inert": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_16_3_14": {
+      "convention_exposed": false,
+      "original_label": "5:1",
+      "policies": {
+        "inert": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": "2:1",
+            "1": "5:1",
+            "2": "5:1",
+            "3": "84:97"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": "2:1",
+            "1": "5:1",
+            "2": "5:1",
+            "3": "84:97"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": "2:1",
+            "1": "5:1",
+            "2": "5:1",
+            "3": "84:97"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_18_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_1_19_15": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_1_20_12": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_1_20_8": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_1_21_21": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_1_3_0": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_1_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_1_4_12": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "STABLE_NO_CONTINGENCY"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_1_4_16": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_20_19_15": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_20_21_13": {
+      "convention_exposed": false,
+      "original_label": "7:2",
+      "policies": {
+        "inert": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_21_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_23_20_12": {
+      "convention_exposed": true,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_23_20_20": {
+      "convention_exposed": false,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_23_3_0": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_23_4_12": {
+      "convention_exposed": false,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "11:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "11:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "11:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_23_4_16": {
+      "convention_exposed": false,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "5:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "5:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "5:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_3_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_4_21_11": {
+      "convention_exposed": false,
+      "original_label": "5:1",
+      "policies": {
+        "inert": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": "2:1",
+            "1": "5:1",
+            "2": "5:1",
+            "3": "84:97"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": "2:1",
+            "1": "5:1",
+            "2": "5:1",
+            "3": "84:97"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": "2:1",
+            "1": "5:1",
+            "2": "5:1",
+            "3": "84:97"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_4_3_16": {
+      "convention_exposed": false,
+      "original_label": "7:2",
+      "policies": {
+        "inert": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_4_5_20": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_6_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_8_3_16": {
+      "convention_exposed": false,
+      "original_label": "7:2",
+      "policies": {
+        "inert": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "17:8"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_8_5_20": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_12_9_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_0_20_12": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_0_20_8": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "STABLE_NO_CONTINGENCY"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_0_21_21": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_0_4_12": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "STABLE_NO_CONTINGENCY"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_0_4_16": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_11_3_16": {
+      "convention_exposed": false,
+      "original_label": "7:2",
+      "policies": {
+        "inert": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "7:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "7:2",
+            "2": "7:2",
+            "3": "1:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_12_20_12": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_12_20_5": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_12_21_14": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "15:16"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "15:16"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "15:16"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_12_21_21": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_12_4_0": {
+      "convention_exposed": false,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_12_4_16": {
+      "convention_exposed": true,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_12_5_0": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": "11:1",
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": "11:1",
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": "11:1",
+            "1": "1:1",
+            "2": "1:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_BDY_ONLY"
+        }
+      }
+    },
+    "sup_13_13_20_12": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_13_20_8": {
+      "convention_exposed": true,
+      "original_label": "4:3",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_13_3_0": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:4"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_13_4_12": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_13_4_16": {
+      "convention_exposed": true,
+      "original_label": "3:2",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_14_3_11": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_16_3_17": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_17_19_2": {
+      "convention_exposed": false,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_17_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_18_21_8": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "10:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "10:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "10:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_1_20_12": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_1_20_8": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "1:1"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:3",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:3",
+            "2": "4:3",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "9:7"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_1_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_1_21_21": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_1_3_0": {
+      "convention_exposed": false,
+      "original_label": "9:4",
+      "policies": {
+        "inert": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "9:4",
+          "classes_by_k": {
+            "0": null,
+            "1": "9:4",
+            "2": "9:4",
+            "3": "5:6"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_1_4_12": {
+      "convention_exposed": false,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "3:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_1_4_16": {
+      "convention_exposed": true,
+      "original_label": "1:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "7:6"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:2",
+            "2": "3:2",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "1:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "1:1",
+            "2": "1:1",
+            "3": "22:19"
+          },
+          "touches_antipodal": true,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_1_5_20": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_20_19_2": {
+      "convention_exposed": false,
+      "original_label": "5:2",
+      "policies": {
+        "inert": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:2",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:2",
+            "2": "5:2",
+            "3": "7:2"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_20_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_21_3_14": {
+      "convention_exposed": false,
+      "original_label": "5:1",
+      "policies": {
+        "inert": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_21_3_17": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_2_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_2_3_16": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "1:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_4_4_9": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "26:11"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_6_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_6_3_14": {
+      "convention_exposed": false,
+      "original_label": "5:1",
+      "policies": {
+        "inert": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "5:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "5:1",
+            "2": "5:1",
+            "3": "14:9"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_7_21_13": {
+      "convention_exposed": false,
+      "original_label": "3:1",
+      "policies": {
+        "inert": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "3:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "3:1",
+            "2": "3:1",
+            "3": "7:3"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    },
+    "sup_13_9_4_9": {
+      "convention_exposed": false,
+      "original_label": "4:1",
+      "policies": {
+        "inert": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "reverse": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        },
+        "v18": {
+          "base_class": "4:1",
+          "classes_by_k": {
+            "0": null,
+            "1": "4:1",
+            "2": "4:1",
+            "3": "2:1"
+          },
+          "touches_antipodal": false,
+          "verdict": "PASS_INT"
+        }
+      }
+    }
+  },
+  "policy_status": "POSTHOC-DIAG; does not alter frozen admission protocol",
+  "scope": "136 ratified DISC-2 PASS witnesses only",
+  "source_witness_report": "disc2_witness_report.json",
+  "summary": {
+    "antipodal_events_in_eventual_cycles": 216,
+    "antipodal_events_in_preperiods": 32,
+    "convention_exposed": 40,
+    "cycle_events_by_k": {
+      "0": 12,
+      "1": 26,
+      "2": 26,
+      "3": 152
+    },
+    "ratified_witnesses": 136,
+    "unexposed": 96
+  }
+}

@@ -50,4 +50,8 @@ Body: one to ten lines — the finding or expectation, the owner lines quoted or
 - **`from: LIT`** items (`finding`, `offer`, `notice`) bring a literature result, a validation scope or a screening verdict to a stream. They name only sources whose LIT record says `disclosure: citable`, cite them bibliographically (published article or citable preprint; DOI where one exists) with LIT-ID, version, label and the rtg-lit commit, and never carry a source's full text or substantial excerpts. In every LIT item, in either direction, `tags` are rtg-corpus tags of the RTG object concerned (LIT has no tags of its own).
 - **`to: LIT`** items (`request`, `question`, or a report of use) go to `pipes/LIT/`. Typical requests are a literature search, a prior-art check before a novelty claim, validation of a cited external step, and a report that a stream used, verified or refuted a LIT result. LIT's co-owners read the inbox at the start of each LIT work cycle and set `state`/`disposition` as any receiver.
 
+## SAT — satellite repository key
+
+`SAT` stands for the co-owners of the public satellite repository `MustafaAksu/rtg-sat` (studies inspired by RTG but outside it). It is a filing key only: it has no DSN, no study tag and no `BASELINE.md` row, and nothing it files is an RTG result or transfers authority (SG-PROG-4). The form of the satellite interface (one `SAT` key versus per-study keys or `filed_by`) remains the PROG receiver's decision on `pipes/PROG/20261109-SAT-satellite-interface.md`; this key lets those items validate meanwhile.
+
 This pilot changes no Methodology text. `CONVENTIONS.md` §7 is amended in the same PR to point here; a Methodology clause follows after one cycle if the pilot proves useful (`records/methodology/`).

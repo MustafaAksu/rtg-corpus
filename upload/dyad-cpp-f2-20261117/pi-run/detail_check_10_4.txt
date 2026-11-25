@@ -1,0 +1,2 @@
+F2_DETAILS_STRUCTURE_PASS grid 10 subdiv 4 rows 336 first_excluded 80 second_excluded 128 final_hull_L1 9.656854e-04
+SESSION_ONLY: no independent numerical/analytic proof of tube bounds

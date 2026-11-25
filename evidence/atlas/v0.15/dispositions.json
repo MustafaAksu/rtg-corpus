@@ -1,0 +1,58 @@
+[
+ {
+  "key": "DZT.Q1",
+  "disposition": "retired",
+  "reason": "DZT v0.18/v0.19 (dzt-v0.19 §7): the row recorded nine DYAD strings printed by DZT v0.8 §7 that are not owner RIDs. At dzt-v0.19 §7 cites DYAD v6.4.24 by owner RID only (DYAD-THM-Q403-PHASELAW, DYAD-ART-Q403-EXTRACT, DYAD-ART-Q403-CERT, DYAD-ALG-B5-ALLP-NONVANISHING, DYAD-ALG-VANISH-B2/B3/B4, DYAD-ALG-P6-FACEFLUX), names the parts of the phase law without separate RIDs as DYAD App F classifies them, and cites the p=12 value as text; none of the nine strings occurs in the owner text. Nothing of the row remains. H3, which summarised it, is retired with it.",
+  "previous_sha256": "59dae5ca07d10b569cd4d2f40cb0d981df1e9457fa7d06d214d997b14efd62f3",
+  "current_sha256": null
+ },
+ {
+  "key": "DZT.Q4",
+  "disposition": "retired",
+  "reason": "DZT v0.18 (Methodology v1.4 migration): the row recorded the compound grades [THM/ALG] and [HEUR/ALG finite horizon]. At dzt-v0.19 no compound grade token occurs; the norm object is [ALG] [scope: object-level, all p=4s≥12] with the imported factorization DYAD's [THM], and DZT-ALG-CASCADE-ANOMALY-SET is [ALG] [scope: finite horizon p≤1000] in every section (the only [HEUR] is the Dirichlet diagnostic of §1). Nothing of the row remains.",
+  "previous_sha256": "6348154018b73dbc21563adaa2f1128925e05136442a099a2f42db2093a8e1e2",
+  "current_sha256": null
+ },
+ {
+  "key": "DZT.Q5",
+  "disposition": "retired",
+  "reason": "DZT v0.18/v0.19 (§1): the row recorded that the §1 table covered p=12–52 against §6.3 p=12–64, and that §1 stated \"pure 2-powers except p=40\" without the p≤1000 correction. At dzt-v0.19 §1 states the validation table as p=12–64, 14 points, with the p≤1000 closed-form audit as the canonical computation, and states the all-p law with all 20 anomaly points p≤1000. Nothing of the row remains.",
+  "previous_sha256": "24c990d6d6ccab072d4e0895783359536c5998fa52088009cafd7cafc81a0cd7",
+  "current_sha256": null
+ },
+ {
+  "key": "AZ.A5",
+  "disposition": "retained",
+  "reason": "unchanged: AZ v0.10 and DZT v0.19 both keep the anomaly set p=8ℓ^a and the 4|q rule apart (SG-DZT-1, SG-AZ-7); the theorem does not create a relation",
+  "previous_sha256": "8f753715c8e86e5ef0b72ed49d27453ab5d0e3a374708dcf426eb7bbcf79516f",
+  "current_sha256": "8f753715c8e86e5ef0b72ed49d27453ab5d0e3a374708dcf426eb7bbcf79516f"
+ },
+ {
+  "key": "METH.M1",
+  "disposition": "reworded",
+  "reason": "reworded; operations: METH.M1: DZT leaves the row",
+  "previous_sha256": "c716e9c7a530ee3cef42af17bc1bae22daee97156f6711319b49cf37267d35cb",
+  "current_sha256": "e9e8400b355a934d684267073ef8a1c9cf09a7e4e4a61a4c1fe76b6422cf647b"
+ },
+ {
+  "key": "PROG.G6",
+  "disposition": "reworded",
+  "reason": "reworded; operations: PROG.G6: DZT state after the Programme record",
+  "previous_sha256": "b3ab68f36284f3ab8df8814db90277ac51d0aa60be62ffb2e2a248471e74c0be",
+  "current_sha256": "18e5643a027a08e1c438b6587eeb050c0fdefa2632250fedb6df40e6564ca30e"
+ },
+ {
+  "key": "NUMGEN.N-I1",
+  "disposition": "reworded",
+  "reason": "reworded; operations: pipe census at 357b963",
+  "previous_sha256": "4d0816e4194452e0166c14e7c70b8472cfd56196d109f4e5891385a433537094",
+  "current_sha256": "e9e670f7da4294c4d2818758eeb1e4feb6881052e32afdb1acc150908b20d901"
+ },
+ {
+  "key": "H3",
+  "disposition": "retired (headline)",
+  "reason": "H3 summarised DZT.Q1 only (DZT's note strings; AZ and PROG already cited the owner RID). With DZT.Q1 retired nothing of it remains. H-numbers are display order only; H4–H12 keep theirs.",
+  "previous_sha256": "f0e50592b326080adcc6326fe0745327cdf23e64db0016e6594d0a5e14e7e059",
+  "current_sha256": null
+ }
+]

@@ -1,0 +1,148 @@
+{
+  "status": "SESSION design observations; no comparator run",
+  "date": "2026-11-10",
+  "python": "3.13.5",
+  "extractor_sha256": "5809873f739e144e042b51330ce8511d2eaee7f581090cf3db4f078a27b3b9b2",
+  "extractor_blob": "f98ceec30f6c46e6daa9dffc78d461f2f81344a3",
+  "extractor_bytes": 5785,
+  "observations": [
+    {
+      "id": "BYTE_SPAN_UNITS",
+      "reproduced": true,
+      "declared": "byte spans",
+      "actual": "Unicode code-point offsets",
+      "spans": [
+        [
+          17,
+          20
+        ],
+        [
+          23,
+          30
+        ],
+        [
+          33,
+          40
+        ]
+      ],
+      "char_checks": [
+        true,
+        true,
+        true
+      ],
+      "byte_checks": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "RAW_SOURCE_CRLF_IDENTITY",
+      "reproduced": true,
+      "actual_sha256": "f23e33a9de77ebecf9e8bbfcbc6000b53f71faeae3c462befe4d0a81a0fc545d",
+      "reported_sha256": "d9c234a9dced1a2f86dbde47fed8dba0be78c42b04d3a6041f032f31ea403309",
+      "subprocess_exit": 0
+    },
+    {
+      "id": "OPERATOR_NOT_CAPTURED",
+      "reproduced": true,
+      "left": "q<1",
+      "right": "q>1",
+      "identical_signature": {
+        "rids": [],
+        "pins": [],
+        "markers": [],
+        "numbers": [
+          "1"
+        ]
+      },
+      "raw_hashes_differ": true
+    },
+    {
+      "id": "NUMBER_ROLE_NOT_CAPTURED",
+      "reproduced": true,
+      "left": "x=1,y=2",
+      "right": "x=2,y=1",
+      "identical_signature": {
+        "rids": [],
+        "pins": [],
+        "markers": [],
+        "numbers": [
+          "1",
+          "2"
+        ]
+      },
+      "raw_hashes_differ": true
+    },
+    {
+      "id": "EDGE_PIN_ASSOCIATION_NOT_CAPTURED",
+      "reproduced": true,
+      "left": "<DYAD-ALG-X [dyad-v1.0]; GEN-ALG-Y [gen-v2.0]",
+      "right": "<DYAD-ALG-X [gen-v2.0]; GEN-ALG-Y [dyad-v1.0]",
+      "identical_signature": {
+        "rids": [
+          "DYAD-ALG-X",
+          "GEN-ALG-Y"
+        ],
+        "pins": [
+          "dyad-v1.0",
+          "gen-v2.0"
+        ],
+        "markers": [],
+        "numbers": []
+      },
+      "raw_hashes_differ": true
+    },
+    {
+      "id": "RID_MULTIPLICITY_COLLAPSED",
+      "reproduced": true,
+      "left": "<DYAD-ALG-X DYAD-ALG-X",
+      "right": "<DYAD-ALG-X",
+      "left_rids": [
+        "DYAD-ALG-X"
+      ],
+      "right_rids": [
+        "DYAD-ALG-X"
+      ]
+    },
+    {
+      "id": "CONDITION_FLAG_IS_SYNTAX_ONLY",
+      "reproduced": true,
+      "conditional": false,
+      "statement": "If H holds, P follows.",
+      "interpretation": "No syntactic flag is not proof of unconditionality."
+    },
+    {
+      "id": "HEADING_HAS_NO_SOURCE_SPAN",
+      "reproduced": true,
+      "content_lines": [
+        2
+      ],
+      "section_string": "Global scope: formal only",
+      "interpretation": "Heading is context text, not an independently hash-bound source region."
+    },
+    {
+      "id": "TIER_B_REQUIRES_OWNER_BINDING",
+      "reproduced": true,
+      "source_owner": "TEST-ALG-X",
+      "target_owner": "TEST-ALG-Y",
+      "unchanged_untyped_hash": "c337a0c4aecc8727becebf6c9bedfbad1ae8e65feb4057b72d3f63b7245719b0"
+    },
+    {
+      "id": "NODE_SET_DOES_NOT_PRESERVE_OCCURRENCES",
+      "reproduced": true,
+      "before": 2,
+      "after": 1,
+      "identical_id_set": [
+        "TEST-ALG-X"
+      ]
+    }
+  ],
+  "observation_count": 10,
+  "all_reproduced": true,
+  "not_run": [
+    "whole Atlas extraction",
+    "compare stage (not implemented)",
+    "owner scientific certificates"
+  ]
+}

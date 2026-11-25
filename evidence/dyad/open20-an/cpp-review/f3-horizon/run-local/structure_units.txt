@@ -1,0 +1,22 @@
+HORIZON_STRUCTURE_PASS mode=h3 children=144 parent_rows=144
+evaluated=144 excluded=13 retained=131 unresolved=0
+previous_L1_256= 444 next_L1_256= 444
+previous_L1=3.834458838462e-75 next_L1=3.834458838462e-75 reduction=0.0000%
+SESSION_ONLY; conditional graph/tube premises; not certification or jump
+POSITIVE h3
+NEGATIVES h3 5
+HORIZON_STRUCTURE_PASS mode=refine2 children=576 parent_rows=144
+evaluated=576 excluded=49 retained=527 unresolved=0
+previous_L1_256= 444 next_L1_256= 444
+previous_L1=3.834458838462e-75 next_L1=3.834458838462e-75 reduction=0.0000%
+SESSION_ONLY; conditional graph/tube premises; not certification or jump
+POSITIVE refine2
+NEGATIVES refine2 5
+HORIZON_STRUCTURE_PASS mode=h5 children=144 parent_rows=144
+evaluated=144 excluded=13 retained=131 unresolved=0
+previous_L1_256= 444 next_L1_256= 444
+previous_L1=3.834458838462e-75 next_L1=3.834458838462e-75 reduction=0.0000%
+SESSION_ONLY; conditional graph/tube premises; not certification or jump
+POSITIVE h5
+NEGATIVES h5 5
+SOURCE_TRUNCATION_REJECTED; STRUCTURE_TESTS_PASS

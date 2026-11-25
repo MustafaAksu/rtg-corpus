@@ -1,0 +1,7222 @@
+{
+ "schema": "atlas-preservation-compare/3",
+ "obligations": {
+  "pending_review": 12,
+  "context_reviews": [
+   {
+    "item": "L754",
+    "target": "L754",
+    "base_context": [
+     "736516f7d089a61f",
+     "90dabc36fd5897fc",
+     "8e865c750b6403ff",
+     "0a20b5f7cb4bd27b"
+    ],
+    "candidate_context": [
+     "736516f7d089a61f",
+     "90dabc36fd5897fc",
+     "8e865c750b6403ff",
+     "0a20b5f7cb4bd27b"
+    ],
+    "base_anchor": "RECOG-THM-P2-C0-FIRST#2",
+    "candidate_anchor": "RECOG-THM-P2-C0-FIRST#1"
+   },
+   {
+    "item": "L755",
+    "target": "L755",
+    "base_context": [
+     "736516f7d089a61f",
+     "90dabc36fd5897fc",
+     "8e865c750b6403ff",
+     "0a20b5f7cb4bd27b"
+    ],
+    "candidate_context": [
+     "736516f7d089a61f",
+     "90dabc36fd5897fc",
+     "8e865c750b6403ff",
+     "0a20b5f7cb4bd27b"
+    ],
+    "base_anchor": "RECOG-THM-P2-C0-FIRST#2",
+    "candidate_anchor": "RECOG-THM-P2-C0-FIRST#1"
+   }
+  ]
+ },
+ "base_sha256": "443b5990e6082599d1f43fca7d4d24e512e7a632ec395aa56f05bed16f53dbf7",
+ "candidate_sha256": "0f8ba5c0e34dcbbaaa11858e2d568a9f5d5ced63aeca8ee69a44c973d7a1a6c2",
+ "base_bytes": 521243,
+ "candidate_bytes": 521832,
+ "counts": {
+  "EXACT": 1414,
+  "DECLARED_PENDING_REVIEW": 12,
+  "MAPPED_EXACT": 7
+ },
+ "result": "MECHANICAL PASS",
+ "note": "MECHANICAL PASS means no loss or unexplained text; DECLARED_PENDING_REVIEW items are not preserved content until reviewed, and a MAPPED_EXACT move that changes the heading context or anchor certifies bytes only: zero pending items is not proof that inherited scope survived (see obligations.context_reviews).",
+ "rows": [
+  {
+   "status": "EXACT",
+   "item": "L1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L4",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L5",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L6",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L7",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L8",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L9",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L10",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L11",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L12",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L13",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L14",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L15",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L16",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L17",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L18",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L19",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L20",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L21",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L22",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L23",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L24",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L26",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L27",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L28",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L29",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L30",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L31",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L32",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L34",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L35",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L36",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L37",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L38",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L39",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L40",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L41",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L43",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H7#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H8#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H9#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H10#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H11#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "H12#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L57",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L58",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L60",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L61",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L62",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L63",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L64",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L65",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L66",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L67",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L68",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L69",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L70",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L71",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L72",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L73",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L74",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L75",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L76",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L78",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L80",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L81",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L83",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L84",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PROG-BRANCHES#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PROG-TIERS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PROG-MATURITY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PROG-INTERFACE-TYPES#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L89",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "O-K2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "O-K3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "O-NET#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "O-BUILD#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L94",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-ZERO-ORIGIN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-DIST-ZN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L97",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-DISCRETE-REDUCTION-BOUNDARY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-CONTINUOUS-REPRESENTATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-FINITE-DESCRIPTION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L101",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L102",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L103",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L104",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "O-CHIRAL-CONV#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L106",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "CLASS-C#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L108",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-SYNTAX#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-DYAD-WRAPPED#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-DYAD-LIFT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-DYAD-W#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-DYAD-NF#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-NF-REFUSAL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L115",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-ARROWS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-CN05#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF-CYCLE-INV#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L119",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L120",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L121",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L122",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L124",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L125",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-FEEDBACK#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-RELATIONAL-CONTENT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-PHASE-GAUGE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-BACKGROUND-TIME#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-PRESENTATION-COVARIANCE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:remit#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-STATE-COMPLETENESS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-RANK-TYPING#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-INERTIA-A8#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-HYP-FSP-U#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:FSP#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:IQP-E#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L138",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L139",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:tetrad-coincidence#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L141",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L142",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:A8-noannihil#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:reach#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:retrig#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:narrow-band#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:flat-closure#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:finite-recurrence#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:specs#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L150",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L151",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L152",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L153",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L154",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L155",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-TRIAD-MODEL-CONTRACT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RTG-OFN-DEF-STANDARD-C#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L158",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RRF:passive-vs-reimposed#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L160",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L161",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:causal-interface#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L163",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:class-C-defect#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L165",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:class-C-realization#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RRF:odd-chart-root-equivalence#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L168",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L169",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L170",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:raw-readout-guard#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:lock-imports#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:canonicity#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L174",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L175",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RRF:covariance-pair#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L177",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RRF:symmetrisation-order#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RRF:swap-identity#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RRF:event-transport#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RRF:alignment≠composition#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RRF:F4-interface#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L183",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L184",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L185",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L186",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L187",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L188",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L189",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L190",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L191",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L192",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L193",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L194",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L196",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L197",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L198",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L199",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L200",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L201",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L202",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L203",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L204",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L205",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L206",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L207",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L208",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L209",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L210",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L211",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L212",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L213",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L214",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L215",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L216",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L217",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L218",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L219",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L220",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*OFN:continuous-closure#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L222",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L223",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L224",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L226",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L227",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L228",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L229",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L230",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L231",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L232",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L233",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L234",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L235",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L236",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L238",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OFN.O6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OFN.O9#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OFN.O10#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OFN.O11#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OFN.O14#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF.F2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF.F3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF.F4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF.F5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RRF.F7#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PROG.G5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PROG.G6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "METH.M1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "METH.M2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L254",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L256",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L257",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L259",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L260",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-DEF-PRIMITIVE-MAP#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L262",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L263",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-DEF-CRITICAL-CURVE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L265",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L266",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L267",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-ISP-MAPS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-QC-CRITICAL-AMPLITUDE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L270",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L271",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L272",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L273",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L274",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L275",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L276",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L277",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L278",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L279",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L280",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L281",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L282",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L283",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-DEF-N5AS1-PRIMITIVE-LIFT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L285",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-DEF-N5AS1-DEFECT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L287",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L288",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L289",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L290",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L291",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L292",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L293",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L294",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L295",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L296",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT-DEF-CHANNEL-TRANSFORM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT-DEF-CHANNEL-STATE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT-DEF-AMBIENT-FIELD#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DZT:dirichlet#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L301",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L302",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L303",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L304",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L305",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L306",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L307",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L308",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L309",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L310",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L311",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L312",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L314",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L315",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:not-area-preserving#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:P2-saddle#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-Q-INVARIANT-FORM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-TAU-DETB#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-C21#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-CUBIC-PARABOLIC#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N3CP-CYCLIC-AVERAGE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-P6-FACEFLUX#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:SU2-period#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L326",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:p6-linear-order#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:homological-resonance#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:classification-by-p#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:cubic-rate-across-p#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L331",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:1-step-resonance#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N3C+-projector#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L334",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L335",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L337",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-SIXSTEP-CUBIC-JET#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:raw-complex-form#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-L1-PRIMITIVE-CONTRACTION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-P5-RADIAL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-PRIM-CTR#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L343",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:six-phase-tube#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L345",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-RAW-ANGULAR-MEAN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-ONE-BLOCK-BURST#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:cubic-vector-truncation#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:leading-decay#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L350",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L351",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N5AS1-L-BACKBONE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L353",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:qstar-identities#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:qstar-3000#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L357",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-NF6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:h2-quadratic#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-NF6-OBS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:chart-gaps#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:h-J-provenance#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-BRIDGE-LEMMA#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-KP-FRAME-SCALE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-NF-INV#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-NF-REM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-NF-REM-C7-SHARP#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-NF6-DEG10#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:Im-nu5-gauge#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L370",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L371",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-ALIAS-PHASE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L375",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-OPEN3-LEADING#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-OPEN3-SPIRAL-REM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-OPEN3-PHASE-OFFSET#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-OPEN3-PHASE-OFFSET-BOUNDS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-OPEN3-ASYMPTOTIC-PHASE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L382",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N5AS1-L-MONO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N5AS1-L-PHASE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-LPHASE-ROWA-REMAINDER#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-LPHASE-ROWA-BRIDGE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L387",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:LPHASE-exponent-NUM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:LPHASE-indep-NUM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L390",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N5AS1-INF1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:imp-DYAD-phase#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L395",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-N5AS1-SECTION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:section-identity#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:gate1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:gate3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:gate4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N5AS1-INF2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N5AS1-GAPLOCK-ALPHABET#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N5AS1-GAPLOCK-COUNT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-RESULT-N5AS1-GAPLOCK-SLIP-RATIO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-THM-N5AS1-DEFECT-THRESHOLD-RATIO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:long-horizon#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:LOGSLIP-NUM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L408",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-N5A#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L410",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L411",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L413",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:ISP-frame#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L415",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L416",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L417",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L418",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L422",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-LOCAL-INVOLUTION-GERM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-CENT-KERNEL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-FORMAL-CENTRALIZER#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-FORMAL-INVOLUTION-UNIQUE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-FORMAL-Z6-GENERATOR#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:realization-hierarchy#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-ANALYTIC-CLOCK-BRIDGE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-CAND-FLAT-CENTRALIZER#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-SMOOTH-EMBEDDING#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-SMOOTH-EQUIVARIANT-CHART#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L435",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-RAW-CUBIC#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-P567-LEDGER#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-NU5-P5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-GLATTICE5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:G04-10#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-DIRECT-WEIGHT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-CROSS-IDENTITY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-VANISH-B2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-VANISH-B3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-VANISH-B4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT-ALG-B234-STRUCTURAL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-B5-ALLP-NONVANISHING#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L448",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-THM-Q403-PHASELAW#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L450",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L451",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L452",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT-ALG-P12-NORM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L454",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L455",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT-HYP-MAHLER-NEARMISS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L457",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DZT:mechanism#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L459",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-Q3-DEG2-CANCEL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:OPEN9-micro#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-ALG-PROTECTION-MATRIX#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:Bessel-projector#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*AZ:A-heur#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L466",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L468",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-DEF-BRIDGE-EXPORT-CONTRACT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:E-odd#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*DYAD:birth-kinematics#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD-CAND-P0-DYADIC#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L474",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:central-thesis#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L476",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:three-tracks#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:arrow-first#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:U1-quotient-nontest#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:no-global-log#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L481",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:firewall#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L483",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L485",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L486",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-N1A1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-ALG-N1A-MIN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-N1A2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L490",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N1B-MIN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:state-vs-history#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-N1C#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L494",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L495",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L496",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:block-freeness#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-N1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L499",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L501",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-N2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L503",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-N2-ORDER#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:P3-injectivity#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L507",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-N3A-DECK-TRIVIAL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-N3B-CHAR-ISO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-N3C-PULLBACK#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-N3D-FINITE-CHAR#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L513",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N5-C1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L515",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N5-C2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N5-C3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N5-C4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N5-C5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N5-C6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:N5-PHYS-1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:C7A#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:C7B-T1..T4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:Qdyn-lower-bound#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L525",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:C7C-0#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:M-1A#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:M-1B#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:M2-1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:C7C-M-fails#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:C7C-M-partial#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:Census-1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L534",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-REC-HOL-OPERATOR#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:NG7A-abelian#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L537",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-REC-HOL-SOURCE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-TWO-FIVES-ORBIT-CARDINAL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-OPEN-TWO-FIVES-REBLOCK#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ART-SATURATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L543",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L544",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L545",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L546",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L547",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L548",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L549",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L550",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L552",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L553",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L554",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L555",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L556",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L557",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L558",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L559",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L560",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L561",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L563",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L564",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L565",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L566",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L567",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L568",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L569",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L570",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L572",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L573",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L574",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD.X1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT.Q1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-A#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-D#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-B#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-E#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD.X8#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L582",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L583",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L584",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-L1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-L2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-L4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-SC1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-R1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-R2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD.X4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD.X11#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DYAD.X6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ.A2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L595",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-C#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-F#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-C1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-D1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-T1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT.Q4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DZT.Q5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ.A5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN.N-I1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L606",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L608",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L609",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L611",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L612",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L613",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L614",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L615",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L616",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L617",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L618",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L619",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L620",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L621",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L622",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L623",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L624",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L625",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L626",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L627",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L628",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L629",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L630",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L631",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L632",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L633",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L634",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L635",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L637",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L639",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L640",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-INVARIANT-FORM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L642",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L643",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L644",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L645",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L647",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:return-germ#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:p6-defect#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:remainder-by-frame#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L651",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:no-period6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:distinction-anchoring#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:phase-readability#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L655",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L657",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:fixed-points#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L659",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SWAP-ODD-RHO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SELECTION-SIN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L663",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:chart-free-invariants#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:loop-stratum#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:discriminant#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-QUADRATURE-TYPING#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-POLE-STRATUM-PERIODIC-INVENTORY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-OPEN-INTERSECTION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L670",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:event-essence#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L673",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SWAP-SPLIT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:twin-rank-stratum#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SHEAR-COCYCLE-CLASSIFICATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SHEAR-INVERSION-PROJECTION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SHEAR-WEIGHT-IDENTIFICATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L680",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L682",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SHEAR-JET#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:shear-instances#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:mu-break#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L686",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-CUBIC-RETURN-RIGIDITY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L688",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L689",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:twin-heuristic#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L692",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L693",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:three-quarters#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L696",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-LEADING-RETURN-EQUIVARIANCE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-COMPARATOR-CLOSURE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L699",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L700",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:Kp-frame#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-NU3-NONVANISHING#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:finite-ledger#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:radial-identity#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:p5-quartic#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:p8#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:mu_p-zero#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L710",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:frame-correction#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-LATTICE-STRENGTH#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L713",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L714",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L715",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:EM-kernel#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:alias-form#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-R9-COMPARATOR-INCOMPLETENESS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:R9-hierarchy#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:R9-budget#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L723",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-DEF-A1A-PHASE-INTERFACE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-A1A-LIFT-ALIGNMENT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-A1A-RECIPROCAL-AMPLITUDE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:A1a-finite-block#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-A1A-PHASE-EXISTENCE-ALT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L729",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-A1A-CD-IDENTIFICATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L731",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-A1A-CD-PRIMITIVE-EXPANSION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-A1A-PHASE-EXISTENCE-U#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:A1a-NUM#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:A1a-scope#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-A1B-SLIP-SCHEDULE-U#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-A1C-RECIPROCAL-DRIFT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-A1C-JET-REMAINDER-BOUNDS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-A1C-LOGFREE-ENVELOPE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L740",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L742",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L743",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:refusal-line#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:comparator-tracks#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:relabeling-Sh#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:network-guard#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:minus-z#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L751",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:negative-half-plane#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L757",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L758",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-FAIL-K-FROM-SADDLE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-P2-C0-WHITNEY-FOLD#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L761",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L763",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-NUM-E1-TWIN-SURVEY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-TWIN-EXPANSION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-TWIN-ANNULUS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L767",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L768",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-TWIN-RADIAL-ACCESS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-TWIN-STAGE2-COMPACTNESS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-NUM-E3A1-SURVIVOR-PROBE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L772",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L773",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-TWIN-STAGE2-NONUNIVERSAL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L775",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-THM-TWIN-C0-ACCESS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L777",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-TWIN-CROSSING-RANK-SAFE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L779",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L781",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L782",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:representation-safety#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-DEF-EVENT-TOKEN-SCHEMA#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-CHART-SHADOW#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L786",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L787",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L788",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L789",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-BTOKEN-TRANSPORT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-SH-SECTION-SHADOW#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L792",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:fold-discriminator#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L794",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L795",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L796",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:criterion5-refinement#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L799",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L800",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:F3-wellposed#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:F3-common-driver#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:C2-definition#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG-ALG-CONTINUOUS-CARRIER-NOWRITE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L805",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L806",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:F4-ledger#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L808",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L809",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:closed-modules#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L812",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L813",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L814",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L815",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L817",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L818",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L819",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L820",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L821",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L822",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L823",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*RECOG:event-carrier-interface#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L825",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L827",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L828",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L829",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L830",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L831",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L832",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L833",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L834",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L835",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L836",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L837",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L838",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L839",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L840",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L841",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L842",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L843",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L844",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L846",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG.R-L1b#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG.R-L2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG.R-L5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG.R-L6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG.R-R2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG.R-Y1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG.R-Y2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RECOG.R-D1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L856",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L858",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L859",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L861",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L862",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L863",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L864",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L865",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L866",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L867",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L868",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L869",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L870",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L871",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L872",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L873",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L874",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L875",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L876",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L877",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L878",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-COND#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-CLASSES#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L881",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L882",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L883",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L884",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L885",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L886",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L887",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L888",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L889",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L890",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L891",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RER-SCHEMA#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RER-AXES#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RER-OBJ-distinct#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L895",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L896",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L898",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L900",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:pure-chiral#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:antisym-channel#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:master-parity#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L904",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:healing-typed#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:residual-cubic-jet#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L907",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L908",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L910",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:birth-leading#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:birth-remainder#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:policy-graphs#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L914",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:λ∥#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T2b#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-OPEN-WPHASE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-OPEN-WPHASE-GSPLIT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L919",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L920",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L922",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "RER-E-CONJ#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C04#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C05#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C01#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C02#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C03#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C06#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C07#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C08#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C09#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:K3-source-cubic#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*ATLAS:chiral-dictionary#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-K3-PLANAR-FACTOR-NOGO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-CHIRAL-CUBIC-FACTOR-LEMMA#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-K3-SIXSTEP-FACTOR-NOGO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:meanfeedback-cubic#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-MEANFEEDBACK-SIXSTEP-NOGO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:H_spec-sufficient#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:transported-primitive#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:transported-instances#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L944",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L946",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L947",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L948",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L949",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L950",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L951",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L952",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L953",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L954",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L955",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L956",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L957",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L958",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L959",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L960",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L961",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L962",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L963",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L964",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-A4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "ER2B-C12#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L968",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-R3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-R4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-R4-C5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L972",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L973",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L974",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L975",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L976",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L977",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L978",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-12#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-12A#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-12B#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-12C#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "FMS-12D#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L985",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L986",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L987",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L989",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L990",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L991",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L992",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L993",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L994",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L995",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L996",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L997",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L998",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L999",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1000",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1001",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1002",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1004",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1005",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1006",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1008",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T1-pump#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:return-coefficients#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T4h-escape#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:apex-backreaction#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:C4-threshold#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T6a1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T6a2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T6b#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T6d-ledger#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1018",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1019",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:orthogonal-not-invariant#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:chiral-motor#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:r2-equilibrium#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T6d-seed-classes#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T6d-records#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1026",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TRIAD-ALG-T6E-ORIENTATION-NORMALIZATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:K1-tangency#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TRIAD-ALG-T6L-NORMALIZED-TORSION-SIGN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TRIAD:T6g#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TRIAD-ALG-T6M-REFERENCE-QUARTER-TURN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TRIAD-NUM-T6J2-ROOT-CLOSED-EXCURSION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1034",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TRIAD-ALG-T6T-JACOBI-MODE-SIGNS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-OPEN-APEX-SLOT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-OPEN-TRIAD-PHASE-IMPORT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TRIAD-EXPORT-PROTOCOL-2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1042",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:rank-obstruction#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:chrono-protection#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:P4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-DELTA-QC#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ALG-P4-DRIFT-IDENTITY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:NF-vs-primitive-sign#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ART-G3D-SEED#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ART-DELTA-QS-SHADOW#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ALG-BIRTH-SYMMETRY-SEED#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1053",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:uniform-phase-sink#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:moment-closure#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1056",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:plateau-bridge#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ART-JQ-PHASEDRIFT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:phase-drift-law#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ART-SATURATION#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1061",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1062",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1064",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1065",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1066",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1067",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1068",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1069",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1070",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1071",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1072",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1073",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1074",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1075",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1077",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1078",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1079",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1080",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1081",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1082",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1083",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1084",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1085",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1087",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F7#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F8#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F11#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F12#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F13#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F14#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F22#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F23#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F24#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F25#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F26#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F27#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F28#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F29#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F30#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "F32#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1111",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1113",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1114",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1115",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1116",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1118",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UV-FRAME#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-MANDATE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UV-CUSTODY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1122",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1123",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1124",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1125",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-DEF-NORM-BNATIVE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UV-NORM-TYPING#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-ESM-BANDS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1129",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1130",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1132",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1134",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-QH-NOGO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1136",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:rank-obstruction#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:cycle-average-metric#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-SINGLE-FACE-METRIC#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-SOURCED-JUNCTION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:apex-foam#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:dependency#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1144",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:secular-K−#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ALG-SCALARM-RESOLVENT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-THM-SCALARM-EIGEN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1148",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1149",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-OPEN-MSPIN2-ANISO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1151",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-RESULT-M3B#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1154",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-OPEN-UVJET-SCOPE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:alpha-threshold#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:single-jet#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:HYP-B#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1160",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-R1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-R2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1163",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1164",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1165",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1166",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-LEM-M-CENTRAL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1168",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1169",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-R5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-R6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1172",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-HYP-IDENT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1174",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-R4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1176",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1178",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1179",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1180",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1182",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-IMPORT-P0-DYADIC#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1184",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-CAND-APEX-T6U#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*UVM:R-CHIRALITY-RECONCILIATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1187",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*UVM:deficit-chain#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1190",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1191",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1192",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1193",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1194",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1195",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "UVM-HYP-PREFRACTURE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1197",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1198",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1200",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:uniform-phase-sink#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:plateau-bridge#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ART-JQ-PHASEDRIFT#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1204",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*GEN:phase-drift-law#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-ART-SATURATION#3",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1207",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1209",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-OPEN-REGGE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN-OPEN-KAPPA-RTG#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1212",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1214",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1215",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1216",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1217",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1218",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1219",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1220",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1221",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1222",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1223",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1224",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1225",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1226",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1227",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1228",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1229",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1230",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1231",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1232",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1233",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1234",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1235",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1236",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1238",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1239",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1240",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1241",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1242",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1244",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN.D3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN.D5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN.D6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN.D7#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "GEN.D17#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1253",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U7#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U8#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1258",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U10#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "OPENM.U11#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1262",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1264",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1265",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1267",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-DEF-ZN-STATE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-DEF-BAND#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1270",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-DEF-SWAP#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1272",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-DEF-ORIENT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-ORIENT-NOGO#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-ORIENT-ANTIPODAL-FIXTURE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-NUM-ORIENT-EQUIVARIANCE-N24#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-MIRROR-NOT-STEP-SYMMETRY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-LARGEST-CENTER-ID-TIEBREAK#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-DEF-CYCLE-BOUND#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-DEF-STAR#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-DEF-MULTISTAR#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-OBS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-VALID-LOG#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-LAYERS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ-GOAL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ-THREADS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1287",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "DEF-AZ-CORE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "CONV-AZ-STATS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "NUMGEN-C7B-objects#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1291",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1293",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1294",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-THM-HOLONOMY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-THM-NARROW-BAND-EXCLUSION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ-ALG-ANTIPODAL-LOWORDER#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-THM-RECURRENCE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-THM-REACHABILITY-K0#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-LEM-REACH#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-LEM-NOANNIHIL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-LEM-RETRIG#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:two-node-regimes#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-LEM-SPECCONS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1306",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:birth-rate-invariant#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1308",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:microscopic-birth-law#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:dynamic-equivalence#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1311",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1312",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1313",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1315",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:policies#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:k/N-regimes#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:long-horizon#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:N-scaling-table#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:bulk-fits#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:crystallization#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1322",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1323",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:OPEN-POLICY-GEOMETRY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:branch-response-tensor#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1327",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1328",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1329",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1330",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1332",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-ALG-BIND3-CYCLE-N24K1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1334",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-NUM-BIND3-PARITY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-NUM-BIND3-SPECTRAL-GATE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-NUM-BIND3-MEMORY-PARITY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-NUM-BIND3-XFER#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-NUM-BIND3-REGEN#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*BIND3:synthesis#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1342",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1343",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:C7B-T1..T4#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:DISC-1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:DISC-2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1347",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*NUMGEN:P2-exposure#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1349",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1350",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1353",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1354",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1355",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG-AZ-STATIC-ZN-4Q#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ-2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*AZ:retractions#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1359",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1360",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1361",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1362",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1364",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1365",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1366",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1367",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1368",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1369",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1370",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1371",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1372",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1373",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1374",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1375",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1377",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1378",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1379",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*TDRG:retired#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1381",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1382",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1383",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1385",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG.G8#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG.G9#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG.G10#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "TDRG.G11#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ.A1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ.A2#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ.A3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ.A5#2",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "AZ.A7#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "D5.X1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "D5.X3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1397",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1398",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1400",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1402",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1403",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1404",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1406",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1407",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "LEG-LAYERS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1409",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-ESM-GROWTH#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1411",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1412",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1413",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-BEAT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-SIGMAS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1416",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-Z#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-TEMPS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-GVT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-PUBLICATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1421",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "LEG-FRUSTRATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "LEG-PERCOLATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1424",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1425",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-HODGE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1427",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1428",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "LEG-L2-DEFS#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "LEG-L2-ENSEMBLE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1431",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1432",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1434",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1435",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L0L1-ALG-SEED-PHASE-INDEPENDENCE#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L0L1-ALG-TRACE-GAP-DICTIONARY#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L2-ALG-DENSITY-DENOMINATOR-NULL#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1439",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:RG#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:RG-universality#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1442",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:forces#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:corridor-not-gauged#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:chronological-consistency#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:log-force#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:HMC-gravity#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:Cornell#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:Maxwell#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1450",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:CHSH#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:spectroscopy#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:photon#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:proton#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:EFT#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:Ca40#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:K3-loop#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1458",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:holonomy-deficit#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:k-top#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:dark-state#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1462",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1463",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1464",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1465",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1466",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1467",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1468",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1469",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1470",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1471",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1472",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1473",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:ESM-deficit#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:screening#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1476",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:proto-gravity#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:kappa3-dark-energy#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:cosmo-drift#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:four-pillars#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1481",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:metric-pipeline#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1483",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:GR-pipeline#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1485",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:thermo#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1487",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:BH#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*PL:expansion#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1490",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PL-HEUR-K4-SELECTION-BY-ELIMINATION#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1492",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*LEG:monotone#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1494",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*LEG:L0-reports#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*LEG:QR-brackets#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1497",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*LEG:L1-reports#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "*LEG:L1-hyp#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1500",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1501",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1502",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1503",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1504",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1505",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1506",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1508",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1509",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1510",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1511",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1512",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1513",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1514",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1515",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1516",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1517",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1518",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1520",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1521",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1522",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1523",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1524",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1525",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1526",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1528",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1529",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "LEGACY.Y2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "LEGACY.Y3#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PREL.P4#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1533",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PREL.P5#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PREL.P6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PREL.P7#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "LEGACY.Y6#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "PREL.P8#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "D6.X1#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "D6.X2#1",
+   "detail": ""
+  },
+  {
+   "status": "EXACT",
+   "item": "L1542",
+   "detail": ""
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "RECOG-ALG-CHART-LAWS#1",
+   "detail": "declared deletion: stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "RECOG-THM-R9-MEMORY#1",
+   "detail": "declared deletion: stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "RECOG-THM-P2-HET#1",
+   "detail": "declared deletion: stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "RECOG-THM-P2-C0-FIRST#1",
+   "detail": "declared deletion: stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "RECOG-ALG-NU3-CLOSED-FORM#1",
+   "detail": "declared deletion: stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "status": "MAPPED_EXACT",
+   "item": "RECOG-ALG-NU3-CLOSED-FORM#2",
+   "detail": "moved to RECOG-ALG-NU3-CLOSED-FORM#1; same heading context"
+  },
+  {
+   "status": "MAPPED_EXACT",
+   "item": "RECOG-THM-R9-MEMORY#2",
+   "detail": "moved to RECOG-THM-R9-MEMORY#1; same heading context"
+  },
+  {
+   "status": "MAPPED_EXACT",
+   "item": "RECOG-ALG-CHART-LAWS#2",
+   "detail": "moved to RECOG-ALG-CHART-LAWS#1; same heading context"
+  },
+  {
+   "status": "MAPPED_EXACT",
+   "item": "RECOG-THM-P2-HET#2",
+   "detail": "moved to RECOG-THM-P2-HET#1; same heading context"
+  },
+  {
+   "status": "MAPPED_EXACT",
+   "item": "RECOG-THM-P2-C0-FIRST#2",
+   "detail": "moved to RECOG-THM-P2-C0-FIRST#1; same heading context"
+  },
+  {
+   "status": "MAPPED_EXACT",
+   "item": "L754",
+   "detail": "moved to L754; CONTEXT CHANGED — inherited scope must be reviewed"
+  },
+  {
+   "status": "MAPPED_EXACT",
+   "item": "L755",
+   "detail": "moved to L755; CONTEXT CHANGED — inherited scope must be reviewed"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "NUMGEN-N3D-FINITE-CHAR#2",
+   "detail": "declared deletion: stage 1: second home of the claim replaced by a typed cross-reference (dispositions record §4)"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "cand L373",
+   "detail": "declared insertion: stage 1: cross-reference line replacing RECOG-ALG-CHART-LAWS#1"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "cand L392",
+   "detail": "declared insertion: stage 1: cross-reference line replacing RECOG-THM-R9-MEMORY#1"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "cand L419",
+   "detail": "declared insertion: stage 1: cross-reference line replacing RECOG-THM-P2-HET#1"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "cand L420",
+   "detail": "declared insertion: stage 1: cross-reference line replacing RECOG-THM-P2-C0-FIRST#1"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "cand L462",
+   "detail": "declared insertion: stage 1: cross-reference line replacing RECOG-ALG-NU3-CLOSED-FORM#1"
+  },
+  {
+   "status": "DECLARED_PENDING_REVIEW",
+   "item": "cand L1351",
+   "detail": "declared insertion: stage 1: cross-reference line replacing NUMGEN-N3D-FINITE-CHAR#2"
+  }
+ ]
+}

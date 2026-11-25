@@ -1,6 +1,6 @@
-# RTG State Atlas — Method v0.2
+# RTG State Atlas — Method v0.3
 
-**Status:** working method of a derived, NONCANONICAL product. Owner of the method and of the atlas: Claude (atlas owner), under PI (Mustafa) authority. Not a DSN. The method changes by a new version of this file. Versions and their acceptance records are in git (tag `atlas-v<version>`, `records/atlas/`).
+**Status:** working method of a derived, NONCANONICAL product. Owner of the method and of the atlas: Claude (atlas owner), under PI (Mustafa) authority. Not a DSN. The method changes by a new version of this file, accepted by the PI after review. Atlas versions are tagged `atlas-v<version>`; a method version is tagged `atlas-method-v<version>` when it is adopted between atlas editions (v0.2 was adopted with, and is identified by, `atlas-v0.2`). Acceptance records are under `records/atlas/`.
 
 ## 1. Purpose
 
@@ -26,8 +26,8 @@ Priority order of optimization:
 
 ## 3. Inputs and source snapshot
 
-- **Inputs.** The files in `dsn/` and `noncanonical/` of `rtg-corpus`, each at its governing tag as listed in `BASELINE.md`. For a canonical source this is the latest adopted tag. A noncanonical source is used at the tagged snapshot the PI selected, and its class and status (NONCANONICAL, SESSION, adopted scope) are kept as node metadata; a tag alone does not establish adoption. The DSN Methodology contributes grade and identifier semantics to L0 only.
-- **Frozen snapshot.** A build starts by freezing a source manifest (`evidence/atlas/source_manifest_v<version>.json`). For each source it records: owner key, path, edition, class, tag, resolved commit, full SHA-256, and the authority record.
+- **Inputs.** The files in `dsn/` and `noncanonical/` of `rtg-corpus`, each at its governing tag as listed in `BASELINE.md`. Other repositories of the programme (the literature corpus `rtg-lit`, satellite studies in `rtg-sat`) are not inputs: their content reaches the atlas only through an adopted edition of an `rtg-corpus` source that imports it. For a canonical source this is the latest adopted tag. A noncanonical source is used at the tagged snapshot the PI selected, and its class and status (NONCANONICAL, SESSION, adopted scope) are kept as node metadata; a tag alone does not establish adoption. The DSN Methodology contributes grade and identifier semantics to L0 only.
+- **Frozen snapshot.** A build starts by freezing a source manifest (`evidence/atlas/v<version>/source_manifest.json`). For each source it records: owner key, path, edition, class, tag, resolved commit, full SHA-256, and the authority record.
 - **Header.** The atlas header carries a compact source table (key, document, edition, tag, class).
 - **Changes during a build.** A source that changes after the freeze is a declared divergence, handled in the next refresh. Inputs are never switched halfway through a build.
 - **"Unchanged" means equal bytes.** A source is unchanged only if the bytes of the previous build's input equal the bytes of the new tagged input. Where the previous input hash was not retained, the equality is recorded as unverified.
@@ -41,13 +41,13 @@ Priority order of optimization:
    - unresolved scientific interfaces;
    - current evidence limitations.
 
-   It excludes the chronology of edits, reviews, advisory dispositions and notice handling. Obsolete diagnostics are absent from the live atlas; their removal and justification stay in the versioned review record under `records/atlas/`. Source identity, source class and scoped acceptance are kept as metadata, not narrated as release history.
+   It excludes the chronology of edits, reviews, advisory dispositions and notice handling. A label that only says in which owner edition a result appeared or was reworded is chronology and is not carried. An edition that is identity or scope is carried: the source table, a consumer's import pin (rule 10), and an edition named because two editions state different things. Obsolete diagnostics are absent from the live atlas; their removal and justification stay in the versioned review record under `records/atlas/`. Source identity, source class and scoped acceptance are kept as metadata, not narrated as release history.
 2. **Evidence boundaries are current state.** Statements such as "source-reported", "not rerun", "certificate unavailable" and "conditional use" stay. A retracted assertion is not a theorem of its falsity.
 3. **Rejected claims are current state.** FAIL and RETRACTED entries are kept compactly, at their scope, as live constraints ("this route is closed").
-4. **One node per object and per claim.** An imported claim is not restated; the consumer gets an edge to the owner's node. A module that is no longer open leaves L3, but the results that closed it stay in L2.
+4. **One node per object and per claim.** An imported claim is not restated; the consumer gets an edge to the owner's node. Where a consumer domain needs the claim at hand, it carries a typed cross-reference line, not a record: `→ RID (cross-domain reference, not a node; the node is in D<n>) | <use in this domain> | <RID (D<n>) | @OWNER§`. Such a line holds the pointer, the consumer-domain use and nothing the node lacks, except text that exists nowhere else, which is kept verbatim and marked as an atlas reading. A module that is no longer open leaves L3, but the results that closed it stay in L2.
 5. **No stream partitioning.** Stream labels (DYAD, GEN, …) mark provenance only, never structure.
-6. **No fact is dropped for size.** The size target (≈60–90k tokens) yields to completeness. Wording compression is a separate pass.
-7. **Proofs are not summarized.** A claim carries at most a one-line method pointer; full proofs stay in the owner DSN.
+6. **No fact is dropped for size.** Completeness and the structure of §5 govern. The atlas is made smaller only by what rules 1, 4 and 7 already remove; it is not split into parts, and facts are not replaced by pointers to meet a size target. The former quantitative size target is withdrawn. Size is reported at each edition and reconsidered by the PI after the sources consolidate.
+7. **Proofs are not summarized.** A claim carries at most a one-line method pointer; full proofs stay in the owner DSN. Parameters and intermediate values of a certificate run (grids, step counts, margins, shell constants) are proof detail; the method name, the `cert` pointer and the owner locator stay. A constant that is part of the statement is not proof detail.
 8. **Clearly wrong facts.** A fact clearly wrong against the rest of the established corpus is not used as a node. It is recorded as one L5 D-WRONG line (claim, location, conflicting evidence), never silently dropped. Unproved or uncertain facts are included at their stated grade.
 9. **Atlas-derived links** (identities, dependencies or equivalences the atlas notices but no owner records) are marked `~` and must be verified before use.
 10. **Owner state and consumer pins are separate.** An edge from a consumer to an owner node carries the edition the consumer actually imports. It is joined to the current owner node only through a documented same-claim, same-scope relation. An edge whose target is no longer in the latest owner file is kept, as a typed reference or diagnostic, until owner, claim identity, imported edition and scope have been checked. Absence from the latest file is not by itself grounds for deletion or for repinning.
@@ -107,14 +107,19 @@ Facts the atlas checked are placed at their content layer with a scoped evidence
 
 **Build.** Each source is read and transcribed into the record format. Its slice is merged into the master atlas: objects are unified and imports collapse to owner nodes.
 
+**Editions are built, not hand-edited.** Every atlas edition is produced by a script from the bytes of the previous tagged edition, as a list of anchored operations (each names the unique old text and its replacement), with a log from which a reviewer can replay the build and compare hashes. The script asserts its input hash and stops on any failed check.
+
 **Refresh (impact-based).**
 - **Triggers:** a new governing tag of a source, a schema change or a change of diagnostic semantics.
 - **Changed sources:** a changed source is re-extracted in full.
 - **Affected records:** every edge into a changed source, and every diagnostic whose truth or meaning depends on changed inputs or changed semantics, is validated against the new snapshot. Unchanged owners are not reread unless affected.
 - **L5 dispositions:** each L5 item receives a current-snapshot disposition (retained, reworded, deleted, new). Text about unchanged sources is carried forward only when its dependencies and governing semantics are also unchanged. Dispositions and their reasons are recorded under `records/atlas/`.
 - **Certificates:** scientific certificates are not rerun for an atlas refresh.
+- **Cleaning while open:** when a domain is opened for a refresh, the removals of rules 4.1 and 4.7 are applied there as deletions of declared spans, each logged with its rule; nothing is reworded for that purpose.
 
-**Checks** (`tools/atlas_check.py`; report-only, with PASS, FAIL and UNVERIFIED kept separate):
+**Edition without source movement.** An edition may also be made when no source moved: to bring records to rule 4.4, to apply rules 4.1 and 4.7, or to correct the atlas against a pinned source. Its manifest copies the source entries unchanged and says so. A change of grade, qualifier, identifier or diagnostic class is never part of a cleaning step: it is a separate, reviewed item with its owner evidence. `tools/atlas_preservation.py` may be used to show that everything outside the declared changes is byte-identical; its MECHANICAL PASS is not semantic equivalence, and every declared change is read by the reviewer.
+
+**Checks** (`tools/atlas_check.py`; report-only, with PASS, FAIL and UNVERIFIED kept separate). The checker is run with the edition's own source manifest, its coverage map and the cumulative list of retired L5 keys; a run on the tool's defaults is not evidence for an edition:
 - **sources:** the source table matches the frozen manifest and `BASELINE.md`;
 - **typed coverage:** each live owner item of a re-extracted source maps to a home: a node whose ID is that item, a reviewed shared home (an OPEN record or a shared record listed in the coverage map with its reason), a `cert` reference (artifacts only), or a justified out-of-scope disposition. A dependency mention, an index or L0 mention, an L5 mention or an unrelated `cert` field is not a home;
 - **owner-resolved links:** each cited RID resolves to an active declaration in its owner's file at the snapshot. Owner-denied names, historical labels and consumer strings classified by the owner are typed as such (documented unresolved), never as resolved; unrecognized declaration syntax stays UNVERIFIED;
@@ -129,6 +134,6 @@ Unparsed or unchecked items are not counted as PASS. Content fidelity remains a 
 - the stream owner records a disposition for each row;
 - accepted fixes go through the stream's own release cycle; the atlas never edits a DSN and is refreshed from the adopted result.
 
-Advisories and dispositions live under `records/<study>/` and are never mentioned in the atlas.
+Where a stream has no active owner session, the advisory goes to the PI, who dispositions each row (fix now, with the stream's rework, or accept the recorded state; the last defers a known debt and does not resolve it). Advisories and dispositions live under `records/<study>/`, or under `records/atlas/` when addressed to the PI across streams, and are never mentioned in the atlas.
 
 **Acceptance.** An atlas version is accepted by the PI after a change-focused review. A short acceptance record (`records/atlas/`) pins the atlas, method and source-manifest identities. The PI creates the annotated tag `atlas-v<version>`. The tag identifies a noncanonical derived artifact; it adopts no owner science.

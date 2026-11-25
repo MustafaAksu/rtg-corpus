@@ -1,0 +1,79 @@
+{
+ "L_star": 100,
+ "manifest_sha256": "c218cad90e9bfd7d3911a630168aa356e8ff6aad1b448383b4ed27f8a7e44203",
+ "n": 500,
+ "rows": [
+  {
+   "F": 1.0,
+   "L": 100,
+   "centre_cases": 4,
+   "eligible_both": 500,
+   "eligible_minus": 500,
+   "eligible_plus": 500,
+   "k": 500,
+   "n": 500,
+   "pos_minus": 0,
+   "pos_plus": 0,
+   "wilson_hi": 1.0,
+   "wilson_lo": 0.9923756595384479
+  },
+  {
+   "F": 1.0,
+   "L": 200,
+   "centre_cases": 4,
+   "eligible_both": 500,
+   "eligible_minus": 500,
+   "eligible_plus": 500,
+   "k": 500,
+   "n": 500,
+   "pos_minus": 0,
+   "pos_plus": 0,
+   "wilson_hi": 1.0,
+   "wilson_lo": 0.9923756595384479
+  },
+  {
+   "F": 1.0,
+   "L": 400,
+   "centre_cases": 4,
+   "eligible_both": 500,
+   "eligible_minus": 500,
+   "eligible_plus": 500,
+   "k": 500,
+   "n": 500,
+   "pos_minus": 0,
+   "pos_plus": 0,
+   "wilson_hi": 1.0,
+   "wilson_lo": 0.9923756595384479
+  },
+  {
+   "F": 1.0,
+   "L": 800,
+   "centre_cases": 4,
+   "eligible_both": 500,
+   "eligible_minus": 500,
+   "eligible_plus": 500,
+   "k": 500,
+   "n": 500,
+   "pos_minus": 0,
+   "pos_plus": 0,
+   "wilson_hi": 1.0,
+   "wilson_lo": 0.9923756595384479
+  }
+ ],
+ "rule": "F",
+ "script_sha256": "a91ada53dd6f629cade2b8a2b6addc9b7ad2f5818ae06e023f084c6feb17d0a1",
+ "status_counts": {
+  "contact": 500,
+  "no_contact_by_L": 0,
+  "terminated_before_contact": 0
+ },
+ "tau_C_quantiles": {
+  "max": 22,
+  "min": 1,
+  "p50": 2,
+  "p90": 5,
+  "p95": 7
+ },
+ "tau_free_differs": 125,
+ "threshold": 0.95
+}

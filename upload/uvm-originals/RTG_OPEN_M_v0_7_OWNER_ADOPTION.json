@@ -1,0 +1,28 @@
+{
+  "record_type": "OWNER_ADOPTION",
+  "study": "RTG_OPEN_M",
+  "version": "v0.7",
+  "date": "2026-10-06",
+  "status": "ADOPTED",
+  "adoption_authority": {
+    "maintaining_co_owner": "ChatGPT",
+    "basis": "Project owner explicitly delegated the adoption decision to the maintaining owner after the review chain; final reviewer reported no remaining findings."
+  },
+  "accepted_candidate": {
+    "filename": "RTG_OPEN_M_DSN_v0_7_DRAFT3_1.md",
+    "sha256": "4950d54dbaf2ce5e1ac7f6f7e6c512a86708ae6d00fe849c7946eabdb0de89d7",
+    "review_state": "consumer-faithfulness review complete; independent overstatement/stale-import review complete; final residue verification complete; no remaining findings"
+  },
+  "released_owner_file": {
+    "filename": "RTG_OPEN_M_DSN_v0_7.md",
+    "sha256": "fea80656f23501db81e2c9c3a4df151254aafa7a596b16b6bc102d84869b7540"
+  },
+  "supersedes": "RTG_OPEN_M_DSN_v0.6",
+  "publication_scope": "Release-state metadata/history only; reviewed Draft 3.1 scientific content adopted without further scientific change.",
+  "non_claims": [
+    "No new theorem or numerical result is created by adoption.",
+    "No certificate or numerical campaign is rerun by adoption.",
+    "No Programme, OFN, Dyadic, Triadic, Genesis, Pre-Legacy or other owner document is modified by this release.",
+    "OPEN M remains unresolved."
+  ]
+}

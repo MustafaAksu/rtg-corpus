@@ -1,0 +1,30 @@
+{
+ "base_sha256": "ace0b408def88c78291e7f26eaa8e358ade87205b738a9dcf8f7952a9818a5d6",
+ "candidate_sha256": "66f0b2ebdad84a578a7159d727c2d51d3831ebea15f18c07d9b17744173c20da",
+ "stage": "v0.11 D3 pilot, stage 2b (source correction)",
+ "records": [
+  {
+   "base": "RECOG-THM-A1B-SLIP-SCHEDULE-U#1",
+   "cand": "RECOG-THM-A1B-SLIP-SCHEDULE-U#1",
+   "reason": "stage 2b source correction: stale (D5) [assuming:] replaced by the owner import of recog-v0.3.27",
+   "fields": [
+    {
+     "base_sha256": "25449a63c1040ef4d840912794f9f81d06c5736baaf9080dc1da327bc6a0e882",
+     "cand_sha256": "256c4cf67fccf914f64f1470fe9dc0984c5569aaf899cd089ecc91a076ee6d5b",
+     "reason": "stage 2b source correction: stale (D5) [assuming:] replaced by the owner import of recog-v0.3.27"
+    }
+   ]
+  },
+  {
+   "base": "L740",
+   "cand": "L740",
+   "reason": "stage 2b source correction: stale (D5) [assuming:] replaced by the owner import of recog-v0.3.27"
+  },
+  {
+   "base": "L823",
+   "cand": "L823",
+   "reason": "stage 2b source correction: stale (D5) [assuming:] replaced by the owner import of recog-v0.3.27"
+  }
+ ],
+ "inserts": []
+}

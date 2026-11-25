@@ -1,0 +1,46 @@
+ok  P0   expect PASS got PASS           unmutated inputs
+ok  N1   expect FAIL got FAIL           silent deletion of an [assuming:] qualifier (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 99: derived 'assuming: RECOG-THM-R9-MEMORY]` `[v6.4.15]` **Asymptotic-phase transfe
+         FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained
+         FAIL  qualifier tags preserved  — lost: ['`[assuming: RECOG-THM-R9-MEMORY]`']
+ok  N2   expect FAIL got FAIL           deletion of an [assuming:] qualifier declared as history removal
+         FAIL  operation X2 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: 'assuming: RECOG-THM-R9-MEMORY]` `['
+         FAIL  qualifier tags preserved  — lost: ['`[assuming: RECOG-THM-R9-MEMORY]`']
+ok  N3   expect FAIL got FAIL           scope widening ($p\ge5$ → $p\ge3$) declared as a reference substitution
+         FAIL  operation X3 (ref-subst)  — changed text is not reference text: 'ge5$. Owner: RECOG. Not a statement about arbitrary generators, finite amplitud
+ok  N4   expect FAIL got FAIL           result re-attributed to another RID, declared as a reference substitution
+         FAIL  operation X4 (ref-subst)  — changed text is not reference text: 'SPIRAL-REM`, §6.14' (offending: ['SPIRAL', 'REM', '`', '§6', '14'])
+ok  N4b  expect FAIL got FAIL           result re-attributed to another RID (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 97: derived 'SPIRAL-REM`, §6.14). OPEN 3 is CLOSED within its defined scope (v6.4.1
+         FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained
+ok  N5   expect FAIL got FAIL           pointer repointed to a nonexistent tagged edition
+         FAIL  references resolve  — unknown tag dyad-v6.4.99
+ok  N5b  expect FAIL got FAIL           pointer to a nonexistent appendix
+         FAIL  references resolve  — Appendix Q (no such appendix): 'e text are rendered by the tag normalization map of v6.4.20 Appendix Q; every rendering ke
+ok  N6   expect FAIL got FAIL           removed passages not present in the named archive
+         FAIL  operation M01 (presentation)  — old header not found in archive
+         FAIL  operation M03 (history-section)  — removed section not found byte-identical in the named archive
+         FAIL  operation M05 (history-removal)  — removed span not found byte-identical in the named archive
+ok  N7   expect FAIL got FAIL           live results (§6.17) relocated as a history section
+         FAIL  mechanical scope (re-derivation)  — M14: old text occurs 0 times in base
+         FAIL  operation X7 (history-section)  — section carries claim tags; a live result cannot be relocated
+         FAIL  operation M18 (history-section)  — section bounds not resolved
+ok  N8   expect FAIL got FAIL           two footer lines
+         FAIL  mechanical scope (re-derivation)  — first difference at line 1561: derived 'RTG_DYADIC_OSCILLATOR_DSN_v6.4.21 (DRAFT candidate, 22 October 2026)
+         FAIL  presentation (header, footer)  — 2 footer lines (exactly one required); text after the footer line
+ok  N9   expect FAIL got FAIL           source hash pin altered (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 864: derived 'd59b0ff68b4341debf5e8a7542bf3865b63dd63e36546952db95298c2bd5c6ce`, in
+         FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained
+ok  N10  expect FAIL got FAIL           a result paragraph deleted (undeclared)
+         FAIL  mechanical scope (re-derivation)  — first difference at line 103: derived '`[THM]` `[v6.4.18]` `[scope: $C^\\infty$ local germs at $P_1$]` **Smo
+         FAIL  qualified claim blocks  — 609 claim blocks in base live text: 572 byte-identical, 36 changed by declared operations, 1 unexplained
+         FAIL  qualifier tags preserved  — lost: ['`[scope: $C^\\infty$ local germs at $P_1$]`']
+ok  REVIEW-N1 expect FAIL got FAIL           'with zero linear part' removed, declared as ref-subst with a valid tag
+         FAIL  operation XR1 (ref-subst)  — changed text is not reference text: 'generators with zero linear part' (offending: ['generators', 'with', 'zero', '
+ok  REVIEW-N2 expect FAIL got FAIL           archive pointer to nonexistent H-999 with the valid tag kept
+         FAIL  references resolve  — H-999 not defined in dyad-v6.4.20
+ok  REVIEW-N3 expect FAIL got FAIL           live §6.7 result body replaced by a pointer, declared tag_examples
+         FAIL  operation XR3 (history-section)  — tag_examples/navigation requires a registered region (regions file)
+ok  REVIEW-N3b expect FAIL got FAIL           same, with §6.7 registered and confirmed as a tag_examples region
+         FAIL  operation XR3 (history-section)  — region RX: identifier DYAD-ALG-SIXSTEP-CUBIC-JET occurs outside a tag spelling in a table row; a region carry
+RESULT: PASS (16/16 controls rejected)

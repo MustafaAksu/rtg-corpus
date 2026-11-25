@@ -1,0 +1,20 @@
+PASS adopted-source-hash :: 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e
+PASS base-main-identity :: 9ab42f4754bfcce9dd95516b0272ebe6ef84babb
+PASS nonoverlapping assertion-gated source edits :: 85
+PASS history-A untouched in stage A
+PASS candidate not adopted
+PASS R14 split
+PASS T100 panel identity
+PASS R14 correlations preserved
+PASS no duplicate R14/OPEN RID
+PASS R15 nondegenerate domain
+PASS single-jet target contract
+PASS THM-3G diagnostic not promoted
+PASS RRF approval pending
+PASS stage 1 session only
+PASS source no-go missing proof
+PASS no compound from tags
+PASS one footer
+PASS historical original archive present
+PASS 18/18 Stage A bounded checks (JavaScript connector-side execution; not the Python release checker)
+Stage A SHA-256 5696a765f82463c531da56d359fdfd2aa6e1dc80b684a7bb7387a336dc0e0932

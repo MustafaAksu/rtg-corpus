@@ -1,0 +1,18 @@
+ok  P0   expect PASS got PASS           unmutated inputs
+ok  N1   expect FAIL got FAIL           undeclared deletion of a [DEF] tag in §4
+ok  N2   expect FAIL got FAIL           undeclared edit of the §6.1 inventory table
+         invariants: ['§6.1 table']
+ok  N3   expect FAIL got FAIL           Appendix B relocated as history (claim-tag spellings in prose)
+         invariants: ['Appendix B', 'anchors [\'<a id="prog-corrections"></a>\']']
+ok  N4   expect FAIL got FAIL           ref-subst that changes a non-reference word
+ok  N5   expect FAIL got FAIL           pointer to a nonexistent tagged edition (declared)
+ok  N6   expect FAIL got FAIL           two footer lines
+ok  N7   expect FAIL got FAIL           OPEN-P status changed, declared as ref-subst
+         invariants: ['ACTIVE count']
+ok  N8   expect FAIL got FAIL           SG-PROG-2 removed, declared as history-section (tool-blind; invariants catch it)
+         invariants: ['SG-PROG-2 text']
+ok  N9   expect FAIL got FAIL           undeclared removal of an <a id> anchor
+         invariants: ['anchors [\'<a id="prog-guards"></a>\']']
+ok  N10  expect FAIL got FAIL           §7.2 register row edited undeclared
+         invariants: ['§7.2 register']
+RESULT: PASS (10/10 controls rejected)

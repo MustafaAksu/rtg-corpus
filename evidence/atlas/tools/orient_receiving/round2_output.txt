@@ -1,0 +1,8 @@
+BASELINE: 21/21 PASS; 0 FAIL; exit=0
+R2-E1: FAIL — v0.10 must not use the v0.10.1 release record; status=COMPLETE (observations only; no adoption inferred); exception=None
+R2-E2: FAIL — exact v0.10 record with adjacent v0.10.1 is unambiguous; status=PARTIAL/UNVERIFIED; exception=None
+R1-E1: FAIL — failed individual pipe read is not an observed empty inbox; status=PARTIAL/UNVERIFIED; exception=None
+R4-E1: FAIL — default --json must refuse a dangling symlink destination; status=COMPLETE (observations only; no adoption inferred); exception=None
+R2-P1: PASS — exact underscore-format v0_10 record remains supported; status=COMPLETE (observations only; no adoption inferred); exception=None
+R2-P2: PASS — two actual representations of the same release flag ambiguity; status=PARTIAL/UNVERIFIED; exception=None
+ADDITIONAL: 2/6 PASS; 4 FAIL

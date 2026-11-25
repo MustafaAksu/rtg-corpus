@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-19",
+  "status": "REVIEW CANDIDATES — NOT ADOPTED",
+  "inputs": {
+    "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_2.md": {
+      "bytes": 88773,
+      "sha256": "f09dbb12f4b65b13c3f08ec049dcd701b04ca24c4b55876b565868f288555461"
+    },
+    "RTG_RRF_G2_PRIMITIVE_EXCHANGE_INTERFACE_REVIEW_v0_3.md": {
+      "bytes": 16164,
+      "sha256": "d3203739c3eb9125bf5aaa301fe93fa4d60a45aee5c6f63fc8cd6cefe867c9c3"
+    },
+    "RTG_DYADIC_OSCILLATOR_DSN_v6_4_13.md": {
+      "bytes": 187458,
+      "sha256": "5958f7fe8a3e0ec94546cb7e915c5f690d09827a3d680d13a17c9d880b968542"
+    }
+  },
+  "outputs": {
+    "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3_REVIEW_CANDIDATE.md": {
+      "bytes": 95971,
+      "sha256": "35e01361cac991610c9b66287a07370f8879588eca26b0ee95180b54a0f191c1"
+    },
+    "RTG_RRF_G2_PRIMITIVE_EXCHANGE_INTERFACE_REVIEW_v0_4_REVIEW_CANDIDATE.md": {
+      "bytes": 18099,
+      "sha256": "6851de3b3c801fbb446bcccfadd41ca65b1a12c4007a90fecf1d551be89bfba2"
+    },
+    "RTG_RRF_v0_8_2_ADOPTED_to_v0_8_3_REVIEW_CANDIDATE.diff": {
+      "bytes": 29687,
+      "sha256": "9fccf0b29b7c257a94ef91b764d6f06c60dce2cd4373be95487f42fd5288d150"
+    },
+    "RTG_RRF_G2_v0_3_to_v0_4_REVIEW_CANDIDATE.diff": {
+      "bytes": 13878,
+      "sha256": "30b78dc9dde8fb0980a6ac1294cdad3d8acb35520aee4cc6d04c6909583c8575"
+    },
+    "RTG_RRF_SH_R0_FIRST_DIFFERENCE_SESSION_NOTE_v0_1.md": {
+      "bytes": 3336,
+      "sha256": "87a67a90452ec980254b415c28fdf472402bc6d0ef21b47ff12671bf70f087bf"
+    }
+  },
+  "checks": {
+    "base historical v0.8.2 changelog intact": true,
+    "v0.8.2 publication boundary intact": true,
+    "v0.8.2 source receipt intact": true,
+    "new owner Lemma F RID": true,
+    "new owner smooth RID": true,
+    "new owner J RID": true,
+    "open B-6 listed": true,
+    "C infinity exact update in RRF": true,
+    "network factor distinction": true,
+    "RRF not adopted": true,
+    "G2 noncanonical not adopted": true,
+    "G2 exact F1 update": true,
+    "G2 odd chart smooth consequence": true,
+    "G2 history v0.3 intact": true,
+    "DYAD owner v6.4.13 adopted": true,
+    "exact patch RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3_REVIEW_CANDIDATE.md": true,
+    "exact patch RTG_RRF_G2_PRIMITIVE_EXCHANGE_INTERFACE_REVIEW_v0_4_REVIEW_CANDIDATE.md": true,
+    "G2 formula no control chars": true,
+    "RRf live G2 grade labels conform": true,
+    "adopted v0.8.2 SHA verified": true
+  },
+  "source_review": "DYAD v6.4.13 §§2,6.15-6.17, §7/N9, Appendix A and RRF v0.8.2 / G2 v0.3 affected regions inspected; no external owner Lemma F certificate was rerun",
+  "missing": [
+    "standalone DYAD_LEMMA_F_FLAT_CENTRALIZER_PROOF_RECORD_v0_3.md (owner text read, separate proof record unavailable)",
+    "N8/N9 separate revised handoff / latest OFN v0.10 unavailable"
+  ]
+}

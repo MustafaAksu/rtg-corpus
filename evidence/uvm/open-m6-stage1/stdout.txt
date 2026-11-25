@@ -1,0 +1,41 @@
+PASS   E0  linear part of f is lambda*W
+PASS   E1  h_2 equals the owner h_2  -- {'x^2 xb^0': '-1/12 + (-1/12)*i*sqrt3', 'x^1 xb^1': '-1/3', 'x^0 xb^2': '1/24 + (-1/24)*i*sqrt3'}
+PASS   E2  h_3 nonzero exactly in channels (3,0),(1,2),(0,3)
+PASS   E3  h has 23 nonzero coefficients incl. linear  -- count=23
+PASS   E4  one-step normal form n equals the owner n (n_21, n_32, n_05)  -- {'x^1 xb^0': '1/2 + (1/2)*i*sqrt3', 'x^2 xb^1': '1/8 + (-7/72)*i*sqrt3', 'x^3 xb^2': '-5/432 + (23/3888)*i*sqrt3', 'x^0 xb^5': '43/17280 + (-227/155520)*i*sqrt3'}
+PASS   E5  J_{<=6}(f o h - h o n) = 0
+PASS   E6  six-step jet J_NF = J_{<=5} n^6 equals the owner (mu, a_32, a_05)  -- {'x^1 xb^0': '1', 'x^2 xb^1': '-1/2 + (-2/3)*i*sqrt3', 'x^3 xb^2': '-97/432 + (197/324)*i*sqrt3', 'x^0 xb^5': '-49/8640 + (-307/25920)*i*sqrt3'}
+PASS   G0  F = f^6 is tangent to the identity
+PASS   G1  K^6 = F through degree 6 (tangent-to-identity sixth root)
+PASS   G2  K commutes with f through degree 6
+PASS   G3  J_W := f o K^{-1} has linear part lambda
+PASS   G4  J_W^6 = id through degree 6
+PASS   G5  J_W commutes with f through degree 6
+PASS   G6  h^{-1} o h = id through degree 6
+PASS   P2  J_{<=6}(h^{-1} J_Z6 h) = A  (generator is linear in the NF chart)  -- {'x^1 xb^0': '1/2 + (1/2)*i*sqrt3'}
+PASS   P4  quadratic part of J_W equals delta_2 = h_2(lam W, lamb Wb) - lam h_2(W, Wb)  -- {'x^2 xb^0': '1/12 + (1/12)*i*sqrt3', 'x^1 xb^1': '-1/6 + (1/6)*i*sqrt3', 'x^0 xb^2': '-1/6'}
+PASS   A1  C1 is covariant under J_Z6 through degree 6 (constant fibre action lamb)
+PASS   A2  covariant source monomials through degree 6 are exactly zb, z zb^2, z^5, z^2 zb^3  -- [(0, 1), (1, 2), (5, 0), (2, 3)]
+PASS   A2b covariant degrees are {1,3,5}; the only degree-1 member is conj(z)
+PASS   A3  psi1: commutes with A; source stays in the weight class; degree-1 coefficient invariant; cubic member = -conj(c_21) != 0  -- {'x^0 xb^1': '1', 'x^1 xb^2': '-1/7 + (2/5)*i*sqrt3', 'x^2 xb^3': '-513/1225 + (-8/35)*i*sqrt3'}
+PASS   A3  psi2: commutes with A; source stays in the weight class; degree-1 coefficient invariant; cubic member = -conj(c_21) != 0  -- {'x^0 xb^1': '1', 'x^1 xb^2': '3/11 + (1/4)*i*sqrt3', 'x^5 xb^0': '-5/17 + (3/8)*i*sqrt3', 'x^2 xb^3': '-3251/17424 + (28/143)*i*sqrt3'}
+PASS   A1' C2 is NOT covariant under J_Z6 with a constant fibre action: defect nonzero at degree 2 and equal to conj(delta_2)  -- {'x^2 xb^0': '-1/6', 'x^1 xb^1': '-1/6 + (-1/6)*i*sqrt3', 'x^0 xb^2': '1/12 + (-1/12)*i*sqrt3'}
+PASS   A1'b defect of C2 is nonzero at every degree 2..6  -- {2: 3, 3: 4, 4: 5, 5: 6, 6: 7}
+PASS   P3  s_C1^W - s_C2 = -conj(h_2(W, Wb)) at degree 2, nonzero  -- {'x^2 xb^0': '-1/24 + (-1/24)*i*sqrt3', 'x^1 xb^1': '1/3', 'x^0 xb^2': '1/12 + (-1/12)*i*sqrt3'}
+PASS   C2a-1 no C^1 complex-scalar fibre action absorbs the degree-2 defect (coefficient of W^2 in the defect is nonzero, so defect/conj(W) is not C^1 at 0)  -- -1/6
+PASS   C2a-2 a real-linear state-dependent fibre action alpha*s + beta*conj(s) absorbs it through degree 2  -- alpha={'x^0 xb^0': '1/2 + (-1/2)*i*sqrt3', 'x^1 xb^0': '-1/6 + (-1/6)*i*sqrt3', 'x^0 xb^1': '1/12 + (-1/12)*i*sqrt3'} beta={'x^1 xb^0': '-1/6'}
+PASS   C2a-3 a real-linear state-dependent re-trivialization carries C1 (raw frame) onto C2 through degree 2: with unrestricted fibre gauge C2a is C1 in another trivialization  -- g: s -> ({'x^0 xb^0': '1', 'x^1 xb^0': '-1/3', 'x^0 xb^1': '-1/12 + (1/12)*i*sqrt3'}) s + ({'x^1 xb^0': '1/24 + (1/24)*i*sqrt3'}) conj(s)
+PASS   Q1  left multiplication by lambda acts as (lambda z, conj(lambda) y): j-component has weight -1
+PASS   Q2  H = j Lambda conj(z) on Pi_par satisfies H(lambda z) = lambda H(z); its coefficient function is Lambda conj(z)
+PASS   Q3  the word q j Lambda conj(q) q is left-equivariant for general q and gives j Lambda z conj(z)^2 on Pi_par
+PASS   CONTROL-Q4 the full-space linear word j Lambda conj(q) is NOT left-equivariant off Pi_par (the minimal coupling is a statement on Pi_par only)
+PASS   C0-0 base map in the NF chart equals the normal form n through degree 6
+PASS   C0-1 NF -> W, fixed trivialization (g = 1): transported model reproduces the observable, steps 1..3
+PASS   C0-2 NF -> W with a fibre re-trivialization g(x): update-form rule s~ = g(b x) s(x) reproduces it
+PASS   C0-3 W -> NF, fixed trivialization: transported model reproduces the observable
+PASS   C0-4 W -> NF with a fibre re-trivialization: update-form rule reproduces it
+PASS   CONTROL-C0-5 section-form rule s~ = g(x) s(x) with nonconstant g is detected as wrong
+PASS   CONTROL-C0-6 re-imposing Lambda conj(W) in the raw frame differs from the transported source at degree 2
+PASS   CONTROL-P2 a perturbed h_2 coefficient is detected: generator no longer linear in that chart
+
+SUMMARY: 39 checks, 39 passed, 0 failed

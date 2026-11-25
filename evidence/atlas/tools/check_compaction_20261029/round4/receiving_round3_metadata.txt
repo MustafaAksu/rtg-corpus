@@ -1,0 +1,9 @@
+P_HEADER_LIVE_DECL: expected PASS, observed PASS, exit 0, MATCH
+  PASS missing: []; declared relocations to the history appendix: ['58e2dec5…3610']
+N_HEADER_AUTHORIZATION: expected FAIL, observed FAIL, exit 1, MATCH
+  FAIL missing: ['58e2dec5…3610']; invalid relocation declarations: ['HEADER:58e2dec5…3610 (declared on a header/footer operation)']
+P_FOOTER_LIVE_DECL: expected PASS, observed PASS, exit 0, MATCH
+  PASS missing: []; declared relocations to the history appendix: ['58e2dec5…3610']
+N_FOOTER_AUTHORIZATION: expected FAIL, observed FAIL, exit 1, MATCH
+  FAIL missing: ['58e2dec5…3610']; invalid relocation declarations: ['FOOTER:58e2dec5…3610 (declared on a header/footer operation)']
+MISMATCHES 0

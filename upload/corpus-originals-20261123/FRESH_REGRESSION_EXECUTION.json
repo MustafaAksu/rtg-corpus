@@ -1,0 +1,27 @@
+{
+  "exit": 0,
+  "elapsed_seconds": 18.176374613000007,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-u",
+    "triad_stage2_regression.py"
+  ],
+  "script_sha256": "2802f97bd28871412bcef6e716cfb1a9bcd7ae251d8b203bcf87912320e44e2a",
+  "original_input_hashes": {
+    "triad_stage2_regression.py": "2802f97bd28871412bcef6e716cfb1a9bcd7ae251d8b203bcf87912320e44e2a",
+    "triad_stage2_driver.py": "4dd936ec388f28ccfe591046d4cdd4aac0824fc9294e79b5bf356e1df82905ce",
+    "triad_stage2_contract.py": "8af038c85241d889b8f50d7e5da18cf8a1b572d6e8f544d3efc1080ab811746c",
+    "triad_stage2_coverage.py": "a298cf467799ee1f5bcab726870f0424f6864e1e922ab98ef28f508b6e4e9968",
+    "triad_tm_engine_v3_2.py": "7d4e8ec24e75c35bd8296121425b56e28049efd5846b6a932b7e2f64a6716716",
+    "age_family_polynomials_kt1.json": "03042f84016aa2128ca7ac425a0782d84a617e4b74c490d4f0c7b912c300d83c",
+    "reg_config.json": "38a80edebe29d32d54f97f3660879fec4eac3a88ef338c46426dfb9042b6144b",
+    "W_inner.jsonl": "61082183889b800848f153a53dfa30c7f5ec1bb4bec23dee8ae33deca3f887c3",
+    "W_outer.jsonl": "eb8b874d4df26f5d57ba4cfcde6597db0f03e2409592d5ad3532996a187ed1ab"
+  },
+  "original_inputs_unchanged": true,
+  "expectations": 41,
+  "passed": 41,
+  "stderr_bytes": 0,
+  "scope": "Rerun of supplied implementations; infrastructure only; no independent Taylor-model proof; one K=4 resume test may execute"
+}

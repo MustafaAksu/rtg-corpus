@@ -1,0 +1,12 @@
+C0 PASS adopted base identity
+C1 PASS 145 exact unique line-addressed edits
+C2 PASS independent rebuild; 290 payload hashes and all document hash links; exact reverse
+C3 PASS 44 OFN RID declarations (17 DEF, 5 ALG results, 1 HYP, 21 OPEN)
+C4 PASS local definitions, guards, Q1-Q6, REF-CLOSURE and class-C core, Finding A and claim-opening grades
+C5 PASS 20 ACTIVE + 1 PARTIAL; registry exact except two authorized edits
+C6 PASS 101 anchors and inherited Appendices A/B/C
+C7 PASS live stale wording removed
+C8 PASS required scopes, preserved limitations and no selected isolation/independence/custody
+C9 PASS source report: 11 source hashes, 8 external RIDs, 24 import RID and 21 anchor checks
+C10 PASS DRAFT-only boundary
+RESULT: PASS

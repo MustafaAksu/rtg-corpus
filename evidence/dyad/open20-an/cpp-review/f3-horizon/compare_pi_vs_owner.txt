@@ -1,0 +1,37 @@
+# owner replay vs PI run (upload/dyad-cpp-f3-horizon-results-20261118, 1c980e94), cmp; executables not compared
+DIFFERS ./RUN_SHA256SUMS.txt
+IDENTICAL ./benchmark_package_checks.txt
+DIFFERS ./comparison.txt
+IDENTICAL ./cpp_parser_unit.txt
+DIFFERS ./environment.txt
+IDENTICAL ./f1_package_checks.txt
+IDENTICAL ./f2_package_checks.txt
+DIFFERS ./h3/SHA256SUMS.txt
+IDENTICAL ./h3/details.tsv
+IDENTICAL ./h3/stderr.txt
+IDENTICAL ./h3/structure_check.txt
+DIFFERS ./h3/summary.txt
+IDENTICAL ./horizon_package_checks.txt
+IDENTICAL ./import.log
+IDENTICAL ./negative_controls.txt
+IDENTICAL ./phi40_outer_256.txt
+DIFFERS ./refine2/SHA256SUMS.txt
+IDENTICAL ./refine2/details.tsv
+IDENTICAL ./refine2/stderr.txt
+IDENTICAL ./refine2/structure_check.txt
+DIFFERS ./refine2/summary.txt
+IDENTICAL ./sanitizer_parser.txt
+IDENTICAL ./sanitizer_stderr.txt
+DIFFERS ./selective_children_sha_check.txt
+IDENTICAL ./selective_package_checks.txt
+IDENTICAL ./source_selective_run_checks.txt
+IDENTICAL ./source_selective_structure_check.txt
+IDENTICAL ./source_sub8_completion_check.txt
+IDENTICAL ./source_sub8_run_checks.txt
+IDENTICAL ./source_sub8_terms_check.txt
+DIFFERS ./stage2_sha_check.txt
+IDENTICAL ./structure_units.txt
+IDENTICAL ./sub8_package_checks.txt
+DIFFERS ./sub8_terms_sha_check.txt
+IDENTICAL ./v2_package_checks.txt
+# h3/summary.txt and refine2/summary.txt differ only in elapsed_seconds; comparison.txt only in times and their ratio; the *_sha_check.txt files print local paths

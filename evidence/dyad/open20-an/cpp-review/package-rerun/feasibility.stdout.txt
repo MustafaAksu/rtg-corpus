@@ -1,0 +1,4 @@
+owner_raw_point horizon=334 value_width_display=7.74324573e-71 derivative_width_display=1.41417545e-66 PASS
+synthetic_lift_point horizon=334 value_width_display=1.91659174e-67 derivative_width_display=3.94801294e-63 PASS
+synthetic_lift_disk horizon=334 value_width_display=4.80814497e-18 derivative_width_display=2.52318111e-17 PASS
+RESULT PASS; development feasibility only; synthetic lift, no DYAD tube or jump

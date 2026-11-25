@@ -1,0 +1,9 @@
+Part A  exact, p = 12..4000 step 4: 998 points; A1-A8 on every point; p = 8 vanishes
+        CSV rows compared (p = 12..1000): 248; DZT §6.3 table: 14 values
+        anomaly points (p <= 4000): 53; first ones [40, 72, 104, 136, 200, 232]; p <= 1000: 20
+Part B  sign, p = 12..1000: 248 points; |prod| vs exact max rel err 2.72e-47; real form vs closed form max rel err 2.09e-46;
+        max |Im sigma_a(M)|/|sigma_a(M)| 2.08e-46; sign = (-1)^(c1+c2) at every point; negative points <= 1000: 47
+        negative points of the 14-point table: [16, 20, 24, 32, 36, 44, 48, 52, 64]
+Part C  pattern, p = 12..100000: 24998 points; negative 1456; exceptions to the LIT §5 rule: 0
+FAILURES: 0 []
+RESULT: PASS

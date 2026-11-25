@@ -1,0 +1,12 @@
+F1: live §6.6 sentence changed (undeclared) -> caught: FAIL  mechanical scope (re-derivation)
+F2: base_history_from pointed at a live section (§9) -> caught: FAIL  base history region
+F3: base_history_from heading absent from the base -> caught: FAIL  base history region; FAIL  RID set preserved in live text; FAIL  source hashes preserved in live text; FAIL  qualifier tags preserved
+F5: Appendix A names an identifier absent from the live text -> caught: FAIL  operation S2-T (history-appendix)
+F6: two footer lines -> caught: FAIL  presentation (header, footer)
+F7: status summary gains a sentence not in the base summary -> caught: FAIL  operation S2-H (replace-header)
+F8: archive replaced by unrelated bytes -> caught: FAIL  operation S2-H (replace-header); FAIL  operation S2-T (history-appendix); FAIL  base history region
+F9: Supersedes lists two predecessors -> caught: FAIL  presentation (header, footer)
+F4: an Appendix B record deleted inside the declared tail -> caught: G2 APPENDIX B
+F10: Appendix B records reordered -> caught: G2 APPENDIX B
+F11: Working Thesis sentence changed inside the declared tail -> caught: G3 APPENDIX C
+RESULT: PASS (all fixtures caught)

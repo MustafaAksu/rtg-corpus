@@ -1,0 +1,10 @@
+deg-3 coeff z^2 Zb: I*c*(4*sqrt(3) - 3*I)*(C*c - 1)/6
+Z^5 coefficient (general h2,h3): -I*(-307*sqrt(3)*C**5 + 147*I*C**5 - 17280*sqrt(3)*C*h02**2 + 12960*I*C*h02**2 + 307*sqrt(3)*c - 147*I*c)/25920
+Z^5 coefficient with h2=0: -I*(307*sqrt(3) - 147*I)*(-C**5 + c)/25920
+c = 1  dim ker (quadratic G2(x,y)) = 0
+c = -1  dim ker (quadratic G2(x,y)) = 0
+c = 1/2 + sqrt(3)*I/2  dim ker (quadratic G2(x,y)) = 0
+c = exp(7*I/10)  dim ker (quadratic G2(x,y)) = 0
+generic-t rank: 20 of 20
+det factor: 16983563041*(t**2 + 1)**40/1259712
+real roots: []

@@ -1,0 +1,75 @@
+{
+  "scope": {
+    "data_dir": "C:\\GIT\\rtg-resonance-2025\\rtg-ns-bifurcations\\src\\rtg-toolkit\\data_phase3",
+    "files": [
+      "k3_scan_seed17.csv",
+      "k3_scan_seed18.csv",
+      "k3_scan_seed19.csv",
+      "k3_scan_seed20.csv",
+      "k3_scan_seed21.csv",
+      "k3_scan_seed22.csv",
+      "k3_scan_seed23.csv",
+      "k3_scan_seed24.csv",
+      "k3_scan_seed25.csv",
+      "k3_scan_seed26.csv"
+    ],
+    "gate": {
+      "ratio_min": 2.6,
+      "gap_max": 0.01,
+      "n_active_min": 2
+    },
+    "split": {
+      "boundary": "n_active_faces <= 2",
+      "core": "n_active_faces >= 3"
+    }
+  },
+  "counts": {
+    "total_rows": 1200,
+    "typeI_rows": 283,
+    "boundary_rows": 169,
+    "core_rows": 114,
+    "n_seeds_loaded": 10
+  },
+  "stress_anatomy": {
+    "boundary": {
+      "median": 2.3659121448617864,
+      "median_ci": {
+        "ci": 0.95,
+        "lo": 2.227178314739839,
+        "hi": 2.547647231777284
+      },
+      "mean": 2.6132448243010504,
+      "n": 169
+    },
+    "core": {
+      "median": 1.796335527099366,
+      "median_ci": {
+        "ci": 0.95,
+        "lo": 1.6723620485166104,
+        "hi": 1.8607065928380253
+      },
+      "mean": 1.9116308749131579,
+      "n": 114
+    },
+    "tests": {
+      "mann_whitney_u": {
+        "U": 15764.0,
+        "p_value": 1.097114227489548e-19,
+        "alternative": "two-sided",
+        "method": "asymptotic"
+      },
+      "effect_sizes": {
+        "cliffs_delta": 0.6364580089276446,
+        "cohens_d": 1.0757708305349987
+      }
+    }
+  },
+  "softening_optional": {
+    "q_present_any": false,
+    "evaluated": false,
+    "softening_pct": null,
+    "median_Q_opp": null,
+    "verdict": "NOT_EVALUATED",
+    "notes": "Q_opp is not produced by \u03c0/2 probe by default; treat as diagnostic unless derived from symmetric \u00b1\u03b1 quartic scans."
+  }
+}

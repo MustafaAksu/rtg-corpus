@@ -1,0 +1,8 @@
+Q1 exposed DISC-2 witnesses: 40; Census-1 F6/R6-P2 failures: 40; identical sets: True
+   Census-1 TDR-G records by stream pair: {'SWAP, P3': 158}
+Q2 inert-policy verdict/class changes: 20 (subset of exposed: True)
+   PASS_INT (1, 1) -> PASS_INT (3, 2): 4
+   PASS_INT (1, 1) -> PASS_INT (4, 3): 4
+   PASS_INT (1, 1) -> STABLE_NO_CONTINGENCY (1, 1): 4
+   PASS_INT (4, 3) -> STABLE_NO_CONTINGENCY (1, 1): 2
+   PASS_INT (5, 2) -> NO_BASE_DUAL None: 6

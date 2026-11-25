@@ -1,0 +1,16 @@
+{
+  "sha256": {
+    "lib/hashimoto.py": "9cc2137936bd43b2dcf02c4ffd4c5c039527076a9891edecea33d13abd5f1b70",
+    "lib/graphgen.py": "6bd34a917ec32ef3091ed0a70ad4c81ac176932efc29b4cb478d9d7b3058d4b8",
+    "lib/graphio.py": "4dcb913118fb2b7f3d7619c7c35ee992cfb07728a9af83004717bc049f76f6d8",
+    "lib/manifest.py": "ea845088f74992c34a8c673693daa41f1d22b5df7b354e42e9fd0571a72d0ec5",
+    "benchmark_ladder.py": "d771dfa2cbdefe23b780dc21c42df60d6cdf951e2ed59bd3f831f947ff2a4352",
+    "validate_solver.py": "50ff52e10f32cb553671a0c2d14fdba7daf2f1be18168112692b8cd7a69879ec",
+    "az1b_certify.py": "7a0f8aa5b9aa5e6debd3510c3c6e330b68bb15632ab1cbe8d0dfacddb1bcc02b",
+    "benchmarks/bouquet_2_4_hashimoto_matrix.json": "4c377fa704e8b08e648caf3baff516f97bb5551cafc17506d7a560501347ca01",
+    "benchmarks/bouquet_2_4_charpoly.txt": "6a6979b0d25b8a314f524a35a8f7114848701d4486f70b0a029b1c3313db788f",
+    "benchmarks/az_v5_synthetic_benchmark_report.json": "e6fd69680b80bb906a84bdb1a82cff806a033af996d51bafdf0e5088fc371a4e"
+  },
+  "version": "az_v5",
+  "phase": "AZ-1A + AZ-1B"
+}

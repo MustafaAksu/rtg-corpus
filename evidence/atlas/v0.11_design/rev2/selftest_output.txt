@@ -1,0 +1,31 @@
+ok  P identity: MECHANICAL PASS {'EXACT': 8}
+ok  N dropped premise: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N operator changed q<1 -> q>1: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N pins swapped between two edge targets: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N custody marker removed: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N negative constraint merged away: FAIL {'EXACT': 7, 'FAIL': 2}
+ok  N untyped condition moved to another record: FAIL {'EXACT': 6, 'FAIL': 4}
+ok  N second occurrence of an identifier deleted: FAIL {'EXACT': 7, 'FAIL': 1}
+ok  N heading removed: FAIL {'EXACT': 6, 'FAIL': 3}
+ok  N record moved under another heading without declaration: FAIL {'EXACT': 6, 'FAIL': 4}
+ok  N grade changed: FAIL {'FAIL': 2, 'EXACT': 7}
+ok  N unexplained inserted line: FAIL {'EXACT': 8, 'FAIL': 1}
+ok  N diagnostic class changed: FAIL {'FAIL': 2, 'EXACT': 7}
+ok  N record mapped but dropped premise not declared: FAIL {'EXACT': 14, 'FAIL': 1}
+ok  N record mapped but swapped pins not declared: FAIL {'EXACT': 14, 'FAIL': 2}
+ok  N record mapped but untyped condition dropped: FAIL {'EXACT': 14, 'FAIL': 1}
+ok  P declared field edit is pending review, not preserved: MECHANICAL PASS {'EXACT': 8, 'DECLARED_PENDING_REVIEW': 1}
+ok  P declared move under another heading is MAPPED_EXACT: MECHANICAL PASS {'EXACT': 7, 'MAPPED_EXACT': 1}
+ok  P CRLF source identity and byte spans
+ok  P non-ASCII field: byte span binds the hash
+ok  P explicit_condition_marker is a marker flag only (false here although the text is conditional)
+ok  N scopes exchanged between two statements of one record (field order): FAIL {'EXACT': 6, 'FAIL': 2}
+ok  P the same exchange with a declared reorder stays pending: MECHANICAL PASS {'EXACT': 6, 'DECLARED_PENDING_REVIEW': 2}
+ok  N raw continuation line moved under another record: FAIL {'EXACT': 3, 'FAIL': 2}
+ok  N two unchanged records swapped without declaration: FAIL {'EXACT': 2, 'FAIL': 1}
+ok  N grade changed through delete + insert: FAIL {'FAIL': 1, 'EXACT': 1, 'DECLARED_PENDING_REVIEW': 2}
+ok  N diagnostic class changed through delete + insert: FAIL {'FAIL': 1, 'EXACT': 1, 'DECLARED_PENDING_REVIEW': 2}
+ok  P duplicate occurrence deleted by declaration is pending, not a grade failure: MECHANICAL PASS {'EXACT': 2, 'DECLARED_PENDING_REVIEW': 1}
+ok  P declared move across headings is MAPPED_EXACT with a visible context obligation: MECHANICAL PASS {'EXACT': 3, 'MAPPED_EXACT': 1}
+ok  P skipped-level sibling headings: context is D/B, not D/A/B
+SELFTEST PASS

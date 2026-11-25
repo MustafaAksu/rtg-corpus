@@ -1,0 +1,483 @@
+{
+ "all_pass": true,
+ "control": null,
+ "gates": {
+  "C2_second_order_coefficients_sound": true,
+  "G0_stage2_input": true,
+  "INV_local_inverse_verified_and_sound": true,
+  "J2_second_order_series": true,
+  "M_circle_bounds_and_tails": true,
+  "REM_remainder_constants_sound": true,
+  "TUBE_step_on_tube_pieces_sound": true
+ },
+ "info": {
+  "C2": [
+   {
+    "abs_x": "1.0",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.156
+   },
+   {
+    "abs_x": "1.0",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 2.88e-05
+   },
+   {
+    "abs_x": "0.87",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.0998
+   },
+   {
+    "abs_x": "0.87",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 1.89e-05
+   },
+   {
+    "abs_x": "0.5",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.0528
+   },
+   {
+    "abs_x": "0.5",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 1.04e-05
+   },
+   {
+    "abs_x": "0.2",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.0444
+   },
+   {
+    "abs_x": "0.2",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 8.78e-06
+   },
+   {
+    "abs_x": "0.05",
+    "misses": [],
+    "relative_radius": "0.005",
+    "relrad_c2": 0.0423
+   },
+   {
+    "abs_x": "0.05",
+    "misses": [],
+    "relative_radius": "0.000001",
+    "relrad_c2": 8.37e-06
+   }
+  ],
+  "INV": [
+   {
+    "L": 0.302,
+    "Rp": 0.005,
+    "abs_x": "0.87",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 0.000158,
+    "margin_ii": 0.00107,
+    "misses": [],
+    "r_over_rp": 4.4342,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.8057
+   },
+   {
+    "L": 0.284,
+    "Rp": 0.005,
+    "abs_x": "0.87",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 0.000156,
+    "margin_ii": 0.000595,
+    "misses": [],
+    "r_over_rp": 12675.0,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.7167
+   },
+   {
+    "L": 0.286,
+    "Rp": 0.002,
+    "abs_x": "0.87",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 6.09e-05,
+    "margin_ii": 0.0014,
+    "misses": [],
+    "r_over_rp": 2.7735,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.6762
+   },
+   {
+    "L": 0.27,
+    "Rp": 0.002,
+    "abs_x": "0.87",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 6.08e-05,
+    "margin_ii": 0.000493,
+    "misses": [],
+    "r_over_rp": 4941.7,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.6195
+   },
+   {
+    "L": 0.0958,
+    "Rp": 0.0001,
+    "abs_x": "0.6",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-06,
+    "margin_ii": 0.000368,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.1844
+   },
+   {
+    "L": 0.0922,
+    "Rp": 0.0001,
+    "abs_x": "0.6",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-06,
+    "margin_ii": 5.66e-06,
+    "misses": [],
+    "r_over_rp": 51.99,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.1785
+   },
+   {
+    "L": 0.0118,
+    "Rp": 1e-07,
+    "abs_x": "0.3",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-09,
+    "margin_ii": 0.000353,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.0465
+   },
+   {
+    "L": 0.0114,
+    "Rp": 1e-07,
+    "abs_x": "0.3",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-09,
+    "margin_ii": 6.96e-08,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.0459
+   },
+   {
+    "L": 0.000419,
+    "Rp": 1e-10,
+    "abs_x": "0.1",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-12,
+    "margin_ii": 0.000125,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.0306
+   },
+   {
+    "L": 0.000403,
+    "Rp": 1e-10,
+    "abs_x": "0.1",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-12,
+    "margin_ii": 2.49e-08,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.0305
+   },
+   {
+    "L": 1.11e-05,
+    "Rp": 1e-14,
+    "abs_x": "0.03",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-16,
+    "margin_ii": 3.75e-05,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.005",
+    "rho_over_Rp": 1.03
+   },
+   {
+    "L": 1.07e-05,
+    "Rp": 1e-14,
+    "abs_x": "0.03",
+    "conditions_verified": true,
+    "found": true,
+    "margin_i": 3e-16,
+    "margin_ii": 7.5e-09,
+    "misses": [],
+    "r_over_rp": 1.25,
+    "relative_radius": "0.000001",
+    "rho_over_Rp": 1.03
+   }
+  ],
+  "J2": {
+   "leading_coefficients_ok": true,
+   "overlap_with_w2a_series": true,
+   "report": {
+    "all_contain_zero": true,
+    "max_radius": 1.320882013035527e-272
+   }
+  },
+  "M": {
+   "D": 360,
+   "X": 1.1,
+   "arcs": 16000,
+   "cauchy_constants": {
+    "ET44": 0.70522,
+    "G0": 1.6338,
+    "M3": 1234.5,
+    "P4": 3.836,
+    "Q4": 2.1095,
+    "S2": 28555.0
+   },
+   "tails_at_1p02": {
+    "ET44": 1.41e-11,
+    "G0": 3.26e-11,
+    "M3": 2.46e-08,
+    "P4": 7.66e-11,
+    "Q4": 4.21e-11,
+    "S2": 5.7e-07
+   }
+  },
+  "NUM_inverse_series": {
+   "kth_roots_of_z_and_w_coefficients": {
+    "120": [
+     1.0587,
+     1.0483
+    ],
+    "180": [
+     1.081,
+     1.074
+    ],
+    "60": [
+     1.0016,
+     0.98211
+    ]
+   },
+   "max_ball_radius": 6.245951296973712e-154,
+   "n": 240,
+   "note": "observation only: ratios above 1 mean a radius of convergence below 1 in x; the points of D1 near the common point have |x| up to about 0.9",
+   "ratios_of_successive_z_coefficients": {
+    "198": 1.1301,
+    "208": 1.1305,
+    "218": 1.1309,
+    "228": 1.1312,
+    "238": 1.1315
+   }
+  },
+  "REM_constants": [
+   {
+    "M3": 109.39,
+    "MZ3": 65.437,
+    "X": 0.9,
+    "arcs": 8000,
+    "rho": 0.02,
+    "theta": 0.12988
+   },
+   {
+    "M3": 680.86,
+    "MZ3": 117.37,
+    "X": 1.03,
+    "arcs": 32000,
+    "rho": 0.02,
+    "theta": 0.21767
+   }
+  ],
+  "REM_samples": [
+   {
+    "abs_x": 1.02,
+    "true_over_bound_Phi": 0.0425,
+    "true_over_bound_Z": 0.0293
+   },
+   {
+    "abs_x": 0.95,
+    "true_over_bound_Phi": 0.03,
+    "true_over_bound_Z": 0.014
+   },
+   {
+    "abs_x": 0.87,
+    "true_over_bound_Phi": 0.124,
+    "true_over_bound_Z": 0.012
+   },
+   {
+    "abs_x": 0.5,
+    "true_over_bound_Phi": 0.0157,
+    "true_over_bound_Z": 0.00126
+   },
+   {
+    "abs_x": 0.2,
+    "true_over_bound_Phi": 0.00124,
+    "true_over_bound_Z": 5.4e-05
+   }
+  ],
+  "TUBE": [
+   {
+    "abs_x": "1.0",
+    "dev_hi_over_rho": 1.3973,
+    "dev_lo_over_rho": 1.1318,
+    "dtau_dev_over_abs_dtau0": 0.0788,
+    "gt_dev_over_abs_g": 0.0584,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 0.005,
+    "true_over_bound_dtau_dev": 0.799,
+    "true_over_bound_gt_dev": 0.987
+   },
+   {
+    "abs_x": "1.0",
+    "dev_hi_over_rho": 1.3143,
+    "dev_lo_over_rho": 1.2197,
+    "dtau_dev_over_abs_dtau0": 0.0714,
+    "gt_dev_over_abs_g": 0.0572,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 0.005,
+    "true_over_bound_dtau_dev": 0.865,
+    "true_over_bound_gt_dev": 0.998
+   },
+   {
+    "abs_x": "0.87",
+    "dev_hi_over_rho": 1.2173,
+    "dev_lo_over_rho": 1.0971,
+    "dtau_dev_over_abs_dtau0": 0.0713,
+    "gt_dev_over_abs_g": 0.0605,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 0.005,
+    "true_over_bound_dtau_dev": 0.894,
+    "true_over_bound_gt_dev": 0.986
+   },
+   {
+    "abs_x": "0.87",
+    "dev_hi_over_rho": 1.1778,
+    "dev_lo_over_rho": 1.1379,
+    "dtau_dev_over_abs_dtau0": 0.068,
+    "gt_dev_over_abs_g": 0.0594,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 0.005,
+    "true_over_bound_dtau_dev": 0.939,
+    "true_over_bound_gt_dev": 0.999
+   },
+   {
+    "abs_x": "0.87",
+    "dev_hi_over_rho": 1.2039,
+    "dev_lo_over_rho": 1.1105,
+    "dtau_dev_over_abs_dtau0": 0.0272,
+    "gt_dev_over_abs_g": 0.0242,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 0.002,
+    "true_over_bound_dtau_dev": 0.935,
+    "true_over_bound_gt_dev": 0.994
+   },
+   {
+    "abs_x": "0.87",
+    "dev_hi_over_rho": 1.1654,
+    "dev_lo_over_rho": 1.1503,
+    "dtau_dev_over_abs_dtau0": 0.026,
+    "gt_dev_over_abs_g": 0.0237,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 0.002,
+    "true_over_bound_dtau_dev": 0.976,
+    "true_over_bound_gt_dev": 1.0
+   },
+   {
+    "abs_x": "0.5",
+    "dev_hi_over_rho": 1.0284,
+    "dev_lo_over_rho": 1.0216,
+    "dtau_dev_over_abs_dtau0": 0.00128,
+    "gt_dev_over_abs_g": 0.00127,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 0.0001,
+    "true_over_bound_dtau_dev": 0.994,
+    "true_over_bound_gt_dev": 0.986
+   },
+   {
+    "abs_x": "0.5",
+    "dev_hi_over_rho": 1.0251,
+    "dev_lo_over_rho": 1.025,
+    "dtau_dev_over_abs_dtau0": 0.00127,
+    "gt_dev_over_abs_g": 0.00125,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 0.0001,
+    "true_over_bound_dtau_dev": 1.0,
+    "true_over_bound_gt_dev": 1.0
+   },
+   {
+    "abs_x": "0.2",
+    "dev_hi_over_rho": 1.0017,
+    "dev_lo_over_rho": 1.0014,
+    "dtau_dev_over_abs_dtau0": 1.27e-07,
+    "gt_dev_over_abs_g": 1.29e-07,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 1e-08,
+    "true_over_bound_dtau_dev": 0.999,
+    "true_over_bound_gt_dev": 0.99
+   },
+   {
+    "abs_x": "0.2",
+    "dev_hi_over_rho": 1.0016,
+    "dev_lo_over_rho": 1.0016,
+    "dtau_dev_over_abs_dtau0": 1.27e-07,
+    "gt_dev_over_abs_g": 1.27e-07,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 1e-08,
+    "true_over_bound_dtau_dev": 1.0,
+    "true_over_bound_gt_dev": 1.0
+   },
+   {
+    "abs_x": "0.05",
+    "dev_hi_over_rho": 1.0,
+    "dev_lo_over_rho": 1.0,
+    "dtau_dev_over_abs_dtau0": 1.28e-11,
+    "gt_dev_over_abs_g": 1.3e-11,
+    "misses": [],
+    "relative_radius": "0.005",
+    "rho": 1e-12,
+    "true_over_bound_dtau_dev": 1.0,
+    "true_over_bound_gt_dev": 0.985
+   },
+   {
+    "abs_x": "0.05",
+    "dev_hi_over_rho": 1.0,
+    "dev_lo_over_rho": 1.0,
+    "dtau_dev_over_abs_dtau0": 1.28e-11,
+    "gt_dev_over_abs_g": 1.28e-11,
+    "misses": [],
+    "relative_radius": "0.000001",
+    "rho": 1e-12,
+    "true_over_bound_dtau_dev": 1.0,
+    "true_over_bound_gt_dev": 1.0
+   }
+  ]
+ },
+ "script": "dyad_open20_an_stage3c_w2b_check.py",
+ "status": "stage 3c-a development run; not a certificate"
+}

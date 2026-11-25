@@ -1,0 +1,21 @@
+PASS  base identity  — map base_sha256 vs file
+PASS  candidate identity  — map candidate_sha256 vs file
+PASS  archive identity stage1-intermediate  — fbfbc00dcb0e7c3e4770ea39e33e80a42324a8cf81dbac8f40fc36f44850716d
+PASS  archive identity dzt-v0.8  — cad20982d294775d52592c304d743695c6ec2d8cf4975c78de203db3d6a92ff2
+PASS  mechanical scope (re-derivation)  — candidate equals base + declared operations
+PASS  operation S2-H (presentation)  — header replaced; status-summary sentences are a subset of the base summary (header/section1)
+PASS  operation S2-L1 (history-removal)  — history span removed (7 chars), found in ['stage1-intermediate']
+PASS  operation S2-L2 (history-removal)  — history span removed (7 chars), found in ['stage1-intermediate']
+PASS  operation S2-L3 (history-removal)  — history span removed (7 chars), found in ['stage1-intermediate']
+PASS  operation S2-L4 (history-removal)  — history span removed (6 chars), found in ['stage1-intermediate']
+PASS  operation S2-L5 (history-removal)  — history span removed (7 chars), found in ['stage1-intermediate']
+PASS  operation S2-A (history-appendix)  — section relocated (9133 chars), found in ['stage1-intermediate', 'dzt-v0.8']
+PASS  operation S2-F (presentation)  — footer replaced
+PASS  qualified claim blocks  — 99 claim blocks in base live text: 96 byte-identical, 3 changed by declared operations, 0 unexplained
+PASS  RID set preserved in live text  — missing: []
+PASS  heading anchors preserved  — missing: []
+PASS  source hashes preserved in live text  — missing: []
+PASS  qualifier tags preserved  — lost: []
+PASS  references resolve  — Appendix references, H-labels and tags resolve; 1 archive targets found in the pinned archive
+PASS  presentation (header, footer)  — required fields present; one predecessor; one footer
+RESULT: PASS

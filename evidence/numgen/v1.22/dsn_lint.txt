@@ -1,0 +1,15 @@
+file: dsn/RTG_NUMBER_GENESIS_DSN.md
+bytes: 280405
+lines: 2990
+header_chars: 2417
+live_body_chars: 271830
+appendix_a_chars: 4841
+section1_words: 1764
+orientation_core: {"chars": 36914, "lines": 271, "words": 4876, "core_end_marker_present": false}
+header_fields: {"Title": 117, "Date": 28, "Scope": 494, "Document class": 462, "Document status": 217, "Supersedes": 146, "Companion documents": 98, "DSN Methodology": 53, "Status summary": 655, "Release record": 105}
+appendix_a_words_per_edition: 4 editions, max 198 words
+footer_lines: 1
+history_phrases_live: {"historical": 11, "superseded": 6, "former": 6, "retained as": 4, "no longer": 5}
+near_duplicate_paragraphs: 0
+rids_total: 77
+(informational report; no gate)

@@ -1,0 +1,43 @@
+{
+ "cells": [
+  "T2-C240",
+  "T2-C242",
+  "T2-C480"
+ ],
+ "confirmatory": false,
+ "finished_utc": "2026-11-13T09:11:33Z",
+ "fixtures_skipped": false,
+ "jobs": 2,
+ "pilot_supplied": false,
+ "plan": "s2test",
+ "platform": "Linux-6.18.44-fc-v445-x86_64-with-glibc2.39",
+ "python": "3.13.18",
+ "records": {
+  "T2-C240": 64,
+  "T2-C242": 40,
+  "T2-C480": 40
+ },
+ "resumed": false,
+ "schema": "az_tokres_s2_campaign_v1",
+ "seconds": 51.8,
+ "sha256": {
+  "HASHES.txt": "f0eef715e6302556045479557ea7063b7b8f3fe4b2343dcd7d12cca7eeef50c7",
+  "analysis_s1": "490b3d4f06ef52d6d39b217d0821bd8361d0a8ed37941f32f9c154113c91dc80",
+  "analysis_s2": "f89737e778578bcce2f771544515d0230550b63775e82d1744937ef998c894db",
+  "driver": "4652ecd31861674c3270a1aaf698c3b9e059b879c62a076d8a94fc98ea887b89",
+  "engine": "4c94d8741dc43780394cc563d04be9b2ee5c9767a43a048878fc67640dafa608",
+  "fixtures": "da9256dc01d786355e2fc28938647b1b800d54b1425e2e927af1febff2f9cb86",
+  "golden": "40eba43073fba138130244f75cc0790ef20bffcbeda7599ff4e372b95427c134",
+  "orient": "ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c",
+  "runner": "75c5f139a453a4b2595eba76760e34cddc32c990370259ae6e84ec5379408992"
+ },
+ "started_utc": "2026-11-13T09:10:41Z",
+ "steps": [
+  "Stage 2 analysis self-test: exit code 0",
+  "fixtures: exit code 0",
+  "cell T2-C240: 2 shard(s), all exit codes 0, record counts as expected",
+  "cell T2-C242: 2 shard(s), all exit codes 0, record counts as expected",
+  "cell T2-C480: 2 shard(s), all exit codes 0, record counts as expected",
+  "analysis s2test: exit code 0"
+ ]
+}

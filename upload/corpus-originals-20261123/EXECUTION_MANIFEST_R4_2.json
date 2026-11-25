@@ -1,0 +1,220 @@
+{
+  "record": "fresh r4.2 execution; old r4.1 logs remain under inputs/r4_1",
+  "date": "2026-10-05",
+  "candidate_sha256": "420eaf3e0b98ee150d4a44de805480ae05764f6bdcac753a9c73e14e0e5a9bf0",
+  "runs": [
+    {
+      "name": "build",
+      "command": [
+        "python",
+        "-B",
+        "scripts/build_r4_2.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 0,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 0.5428628049999702
+    },
+    {
+      "name": "recovered_t6l",
+      "command": [
+        "python",
+        "-B",
+        "inputs/recovered_producers/triad_analytic_phase_steering_t6l_patched.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 0,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 1.2871959679999918
+    },
+    {
+      "name": "torsion_object",
+      "command": [
+        "python",
+        "-B",
+        "scripts/triad_torsion_object_check_r4_2.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 17,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 1.4260242119999589
+    },
+    {
+      "name": "normalization",
+      "command": [
+        "python",
+        "-B",
+        "scripts/triad_orientation_normalization_audit.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 15,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 4.186023373000012
+    },
+    {
+      "name": "primary",
+      "command": [
+        "python",
+        "-B",
+        "scripts/triad_t6u_apex_source_v1_6.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 47,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 2.1922649090000164
+    },
+    {
+      "name": "point_use",
+      "command": [
+        "python",
+        "-B",
+        "scripts/triad_v1_6_r2_point_use_checks.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 16,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 1.1492403390000163
+    },
+    {
+      "name": "historical_t6s",
+      "command": [
+        "python",
+        "-B",
+        "inputs/historical/triad_t6s_chirality.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 0,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 1.0841290430000186
+    },
+    {
+      "name": "historical_t6t",
+      "command": [
+        "python",
+        "-B",
+        "inputs/historical/triad_thread4_chirality_count.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 0,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 0.8446835369999803
+    },
+    {
+      "name": "historical_t6u",
+      "command": [
+        "python",
+        "-B",
+        "inputs/historical/triad_t6u_apex_source.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 0,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 0.9280688169999962
+    },
+    {
+      "name": "negative_K_rate",
+      "command": [
+        "python",
+        "-B",
+        "scripts/triad_torsion_object_check_r4_2.py",
+        "--negative-keep-K-in-rate"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "accepted": true,
+      "intended_negative_assertion": "FAIL NEGATIVE: retain numerator K as angular-rate factor off K=1",
+      "PASS_lines": 17,
+      "FAIL_lines": 1,
+      "stderr_bytes": 98,
+      "elapsed_seconds": 1.5192060989999732
+    },
+    {
+      "name": "negative_conflate",
+      "command": [
+        "python",
+        "-B",
+        "scripts/triad_t6u_apex_source_v1_6.py",
+        "--negative-conflate-readings"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "accepted": true,
+      "intended_negative_assertion": "FAIL NEGATIVE: increment diagnostic is the first seeded state norm",
+      "PASS_lines": 47,
+      "FAIL_lines": 1,
+      "stderr_bytes": 99,
+      "elapsed_seconds": 2.2750675379999734
+    },
+    {
+      "name": "negative_mixed",
+      "command": [
+        "python",
+        "-B",
+        "scripts/triad_t6u_apex_source_v1_6.py",
+        "--negative-only-c3-dependent"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "accepted": true,
+      "intended_negative_assertion": "FAIL NEGATIVE: mixed channels add no kappa-dependent q^4 term",
+      "PASS_lines": 47,
+      "FAIL_lines": 1,
+      "stderr_bytes": 94,
+      "elapsed_seconds": 2.1085210319999987
+    },
+    {
+      "name": "validator",
+      "command": [
+        "python",
+        "-B",
+        "scripts/validate_r4_2.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "accepted": true,
+      "intended_negative_assertion": null,
+      "PASS_lines": 33,
+      "FAIL_lines": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 0.5348237509999763
+    }
+  ],
+  "all_pass": true,
+  "scope": "source-level algebra/current-use regression only; no microscopic extraction, trajectory or physical theorem campaign"
+}

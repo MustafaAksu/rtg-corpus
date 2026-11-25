@@ -1,0 +1,55 @@
+{
+  "reviewed_head": "4a916c2d7e09156828656a56a402466e98d509c1",
+  "candidate_sha256": "22d14dd8e086c9be25d966b860bcf79db03270e874abe939e8246b80da03fc57",
+  "published_sha256": "2bd854dfd0168906159f8add900ad70c86782bc8d06b420614308959f807880f",
+  "release_record": "records/uvm/UVM_v0_7_2_RELEASE_RECORD.md",
+  "publication_date": "24 November 2026",
+  "scope": "Header, Appendix A version/status metadata, single footer only. All other bytes preserved.",
+  "operations": [
+    {
+      "line": 3,
+      "old": "**Title:** RTG UV Completion (OPEN M) — Scoped Errata and Source-Custody Candidate",
+      "new": "**Title:** RTG UV Completion (OPEN M) — Scoped Errata and Source-Custody Release"
+    },
+    {
+      "line": 7,
+      "old": "**Document status:** DRAFT — v0.7.2 candidate, prepared at PI direction by ChatGPT; independent Claude review and PI adoption pending. Governing edition remains uvm-v0.7.1.",
+      "new": "**Document status:** ADOPTED — PI, 24 November 2026; scoped errata and source-custody release. Reviewed scientific payload unchanged at publication. Preparation-stage synchronization labels in §7 record the reviewed scope; reference-only RRF inclusion is adopted, not a physical bridge. Release record: `records/uvm/UVM_v0_7_2_RELEASE_RECORD.md`."
+    },
+    {
+      "line": 8,
+      "old": "**Supersedes:** RTG_OPEN_M_DSN_v0.7.1 (proposed upon adoption), SHA-256 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e.",
+      "new": "**Supersedes:** RTG_OPEN_M_DSN_v0.7.1, SHA-256 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e."
+    },
+    {
+      "line": 9,
+      "old": "**Companion documents:** Programme v1.4 (programme-v1.4); Methodology v1.4 (methodology-v1.4); Genesis v2.10 (gen-v2.10), with historical GCL locators at v2.8.5; Dyadic v6.4.24 (dyad-v6.4.24), historical v6.4.10 where stated; Triadic v1.7 (triad-v1.7), historical CN locators at v1.6; OFN v0.12 (ofn-v0.12); Pre-Legacy v0.8 (prelegacy-v0.8). RRF v0.8.4 (rrf-v0.8.4), PI-approved reference-only typing dependency for this candidate; no physical transport is imported.",
+      "new": "**Companion documents:** Programme v1.4 (programme-v1.4); Methodology v1.4 (methodology-v1.4); Genesis v2.10 (gen-v2.10), with historical GCL locators at v2.8.5; Dyadic v6.4.24 (dyad-v6.4.24), historical v6.4.10 where stated; Triadic v1.7 (triad-v1.7), historical CN locators at v1.6; OFN v0.12 (ofn-v0.12); Pre-Legacy v0.8 (prelegacy-v0.8). RRF v0.8.4 (rrf-v0.8.4), PI-approved reference-only typing dependency for this edition; no physical transport is imported."
+    },
+    {
+      "line": 13,
+      "old": "**Candidate record:** records/uvm/UVM_V072_CANDIDATE_CHANGE_RECORD.md (review and PI decision pending).",
+      "new": "**Release record:** `records/uvm/UVM_v0_7_2_RELEASE_RECORD.md`; candidate change and review history: `records/uvm/UVM_V072_CANDIDATE_CHANGE_RECORD.md`."
+    },
+    {
+      "line": 570,
+      "old": "### v0.7.2 — 24 November 2026 — DRAFT; adoption pending",
+      "new": "### v0.7.2 — 24 November 2026 — Adopted"
+    },
+    {
+      "line": 572,
+      "old": "Scoped errata and source-custody candidate. The selected nine-pack numerical values remain unchanged; the mixed T100 attribution, unsupported within-run wording, conditional target/sign scopes and source attributions are corrected. Reviewed session-level source audit and stage-1 work are not adopted results. No new UV campaign, physical model, grade promotion or C3 closure. See records/uvm/UVM_V072_CANDIDATE_CHANGE_RECORD.md for exact edits and review boundaries.",
+      "new": "Scoped errata and source-custody release. The selected nine-pack numerical values remain unchanged; the mixed T100 attribution, unsupported within-run wording, conditional target/sign scopes and source attributions are corrected. Reviewed session-level source audit and stage-1 work are not adopted results. No new UV campaign, physical model, grade promotion or C3 closure. Release record: records/uvm/UVM_v0_7_2_RELEASE_RECORD.md."
+    },
+    {
+      "line": 576,
+      "old": "The complete predecessor and all earlier version-history entries are preserved at `uvm-v0.7.1` (Appendix A); the SHA-256 of the tagged DSN is 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e. The present document remains a candidate until the PI decides.",
+      "new": "The complete predecessor and all earlier version-history entries are preserved at `uvm-v0.7.1` (Appendix A); the SHA-256 of the tagged DSN is 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e."
+    },
+    {
+      "line": 609,
+      "old": "*END OF DOCUMENT — RTG_OPEN_M_DSN_v0.7.2 — DRAFT CANDIDATE; NOT ADOPTED*",
+      "new": "*END OF DOCUMENT — RTG_OPEN_M_DSN_v0.7.2 — ADOPTED, 24 November 2026*"
+    }
+  ]
+}

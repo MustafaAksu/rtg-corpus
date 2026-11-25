@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: request
 object: literature search — validated (computer-assisted) enclosures of sectorial jumps / Stokes constants for parabolic or Briot–Bouquet germs; DYAD OPEN 20 stage 3
 tags: [dyad-v6.4.23]
-state: open
+state: closed
+disposition: 2026-11-11 · accept · pipes/DYAD/20261111-LIT-validated-stokes-numerics-search.md
 ---
 Literature search request.
 - **Context.** DYAD's sectorial pilot needs a certified enclosure of one sectorial jump Δ₊,ⱼ(z*) of a strong Hakim curve (k = 3, m = 2, α = −102/19 − 16√3/19 i). The expected size is about exp(−A/|ξ*|³), with A ≈ 1.8–2.1. This needs |ξ*| of order 0.1–0.2 at feasible precision.

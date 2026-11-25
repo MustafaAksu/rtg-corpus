@@ -1,0 +1,12 @@
+pack                                                             N  nE  nF nint corrFrac sig_h_int  nm dimH   L_zh  sha256[:16]
+T80_to_T89_2e_loadtest_microstate.npz                           90 191  89   76    0.197    0.2057   0   14  0.232  03d0ca258f923a61
+T80_to_T90_2e_loadtest_microstate.npz                           97 196  90   74    0.230    0.1146   0   11  0.105  0be4353819857aaa
+T80_to_T91_2e_loadtest_microstate.npz                           85 179  91   92    0.196    0.2305   1    7  0.290  e23578108a0e4030
+T80_to_T92_2e_loadtest_microstate.npz                           83 185  92   89    0.213    0.1535   2   13  0.361  18415a68fd88268c
+T80_to_T93_2e_loadtest_microstate.npz                           85 186  93   93    0.226    0.2591   0   12  0.613  e284530a1d19e4bf
+T80_to_T94_2e_loadtest_microstate.npz                           98 194  94   86    0.151    0.0906   1    6  0.266  32d81648f9cb840d
+T80_to_T100_gentle_microstate.npz                              103 214 100   86    0.302    0.2521   0   13  0.343  484082dfdd604f34
+T93_to_T102_2e_microstate.npz                                   87 196 102  109    0.220    0.2083   1   10  0.529  942fd8fa717b66b6
+T98_to_T100_2e_ultra_microstate.npz                             89 193 100  105    0.267    0.2949   2   10  0.527  7778b064638bda11
+mid40_to_T80_minref_microstate.npz                              77 159  80   81    0.185    0.1888   0    4  0.577  de8b66685877758d
+v13_loose_T80_to_T120_microstate.npz                           108 235 120  118    0.305    0.2749   7   14  0.518  ccf527abce1ff106

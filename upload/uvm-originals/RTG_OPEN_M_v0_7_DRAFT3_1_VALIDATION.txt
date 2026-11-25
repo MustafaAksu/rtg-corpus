@@ -1,0 +1,32 @@
+RTG OPEN-M v0.7 Draft 3.1 validation
+SHA-256: 4950d54dbaf2ce5e1ac7f6f7e6c512a86708ae6d00fe849c7946eabdb0de89d7
+Checks: 28/28 PASS
+
+[PASS] draft sha256 computed :: 4950d54dbaf2ce5e1ac7f6f7e6c512a86708ae6d00fe849c7946eabdb0de89d7
+[PASS] R12 present in base and draft
+[PASS] R12 byte-identical line to v0.6
+[PASS] R13 present in base and draft
+[PASS] R13 byte-identical line to v0.6
+[PASS] R14 present in base and draft
+[PASS] R14 byte-identical line to v0.6
+[PASS] R15 present in base and draft
+[PASS] R15 byte-identical line to v0.6
+[PASS] R12 COR names three-way identity as interpretive
+[PASS] R12 COR separates R11 gate
+[PASS] R14 COR withdraws standing tension
+[PASS] R14 preserves raw band contrast only
+[PASS] 2E coupling no longer called superseded
+[PASS] 2E coupling explicitly neither confirmed nor refuted
+[PASS] RUN05 retained as cleanup evidence
+[PASS] scalar-g qualifier retained
+[PASS] no rep multiplier admitted
+[PASS] T6u scope guard retained
+[PASS] CN05 wording retained
+[PASS] R12 source proxy retained
+[PASS] R14 mixed-band correction retained
+[PASS] Draft 3.1 header marker
+[PASS] Draft 3.1 footer marker
+[PASS] R12 body correction follows body
+[PASS] R14 body correction follows body
+[PASS] no unexpected control characters :: []
+[PASS] UTF-8 roundtrip

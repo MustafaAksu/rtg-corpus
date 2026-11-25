@@ -1,0 +1,213 @@
+{
+ "engine_sha256": "7d4e8ec24e75c35bd8296121425b56e28049efd5846b6a932b7e2f64a6716716",
+ "config_semantic_sha256": "4e3ef602cfcb0260b5b99280e9e53b790282bc3b702343a00b01e3c03f6e1300",
+ "poly_sha256": "03042f84016aa2128ca7ac425a0782d84a617e4b74c490d4f0c7b912c300d83c",
+ "scope": "infrastructure regression; genuine K=4 coarse-tiling engine rows for the positive path; mutations derived from a genuine row",
+ "results": [
+  {
+   "name": "genuine worker rows: all PASS and self-valid",
+   "ok": true,
+   "detail": "104 rows"
+  },
+  {
+   "name": "two-worker merge -> exit 0, RECORD COVERAGE COMPLETE wording (not CERTIFIED)",
+   "ok": true,
+   "detail": "   RECORD COVERAGE COMPLETE (engine-reported upper bounds; Taylor-model lemma review pendi"
+  },
+  {
+   "name": "one worker alone -> exit 1 (missing boxes)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "mutation rejected: negative K (K_raw=K_up=-1)",
+   "ok": true,
+   "detail": "K_up<0,K_raw<0,K_up inconsistent with bound_B_up/R_eff^(N+1)"
+  },
+  {
+   "name": "mutation rejected: infinite K",
+   "ok": true,
+   "detail": "field:InvalidOperation:nonfinite"
+  },
+  {
+   "name": "mutation rejected: R_eff=1 above Rmax",
+   "ok": true,
+   "detail": "R_eff vs plan,R_eff>Rmax"
+  },
+  {
+   "name": "mutation rejected: rho_s = NaN",
+   "ok": true,
+   "detail": "field:InvalidOperation:nonfinite"
+  },
+  {
+   "name": "mutation rejected: negative step fresh_s",
+   "ok": true,
+   "detail": "step fresh_s<0"
+  },
+  {
+   "name": "mutation rejected: non-numeric comp_bounds",
+   "ok": true,
+   "detail": "field:InvalidOperation:[<class 'decimal.ConversionSyntax'>]"
+  },
+  {
+   "name": "mutation rejected: wrong endpoint",
+   "ok": true,
+   "detail": "endpoints"
+  },
+  {
+   "name": "mutation rejected: wrong Taylor degree",
+   "ok": true,
+   "detail": "K_deg"
+  },
+  {
+   "name": "mutation rejected: wrong engine hash",
+   "ok": true,
+   "detail": "engine_sha256"
+  },
+  {
+   "name": "mutation rejected: five step records",
+   "ok": true,
+   "detail": "steps!=6"
+  },
+  {
+   "name": "mutation rejected: down-rounded K (K_up < K_raw)",
+   "ok": true,
+   "detail": "K_up<K_raw,K_up inconsistent with bound_B_up/R_eff^(N+1)"
+  },
+  {
+   "name": "mutation rejected: wrong tau_plus",
+   "ok": true,
+   "detail": "tau_plus"
+  },
+  {
+   "name": "mutation rejected: R_eff below plan (too small)",
+   "ok": true,
+   "detail": "R_eff vs plan,K_up inconsistent with bound_B_up/R_eff^(N+1),K_perp_up inconsiste"
+  },
+  {
+   "name": "mutation rejected: Rmax below plan",
+   "ok": true,
+   "detail": "Rmax vs plan"
+  },
+  {
+   "name": "mutation rejected: K_up inconsistent with bound_B_up",
+   "ok": true,
+   "detail": "K_up inconsistent with bound_B_up/R_eff^(N+1)"
+  },
+  {
+   "name": "mutation rejected: kt=2 inside record",
+   "ok": true,
+   "detail": "kt"
+  },
+  {
+   "name": "genuine + 16 invalid rows -> invalid rows listed, still exit 0 (they never count)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "identical scientific payload duplicate (only seconds differ) -> deduplicated, exit 0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "conflict row is itself a VALID record (so the test is about payload conflict)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "conflicting valid payload (K_perp_up only) -> key quarantined, exit 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "third repeat of the original does NOT resurrect the key -> still quarantined, exit 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "a FAIL row does not block an existing valid PASS (retry policy) -> exit 0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "driver does NOT skip jobs on hash-only minimal PASS rows (runs 1 job)",
+   "ok": true,
+   "detail": "done 1 runs this session"
+  },
+  {
+   "name": "driver resume on complete genuine inner file -> 0 runs",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "driver reports a quarantined key and does not rerun it",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "changing only \"results\" leaves the semantic config hash unchanged",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "changing a mathematical field changes the semantic hash",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "--results override honoured by the driver (worker files exist and were used)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "config with KT=2 refused before any resume/evaluation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "config naming a different coefficient table refused",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "engine itself refuses a non-pinned table it is asked to load",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "engine reports the SHA of the table it actually loaded = pinned",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "dec_up(inf) raises instead of returning \"0\"",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "dec_down(inf) raises instead of returning \"0\"",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "dec_up(-inf) raises instead of returning \"0\"",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "dec_down(-inf) raises instead of returning \"0\"",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "dec_up(nan) raises instead of returning \"0\"",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "dec_down(nan) raises instead of returning \"0\"",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

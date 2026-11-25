@@ -1,0 +1,14 @@
+Atlas row check, TDR-G v2.13 candidate — independent rerun, 16 November 2026
+PR #265 head fba3ea137c4771946fc2bd746fe0f4a7d140638b (branch claude/tdrg-v2-13), clean detached worktree
+stage-1 intermediate (git show fd96f8a:...)    472e26e99a1da054447b57c4755adf50cacfc9dbe56ea7b8d5eaa2beb17856ff
+stage-1 builder rebuild                        byte-identical to the intermediate; edit log byte-identical (29 edits)
+stage-1 checker C0-C10                         byte-identical to check_output.txt (11/11)
+stage-1 controls K1-K10                        byte-identical to controls_output.txt (10/10 caught)
+stage-2 builder                                candidate c89eb81b8456b3d77e5608d2e288378d581477d36bb0acc80ee1c8b21c3a0a14 and movement map byte-identical (43 operations)
+tools/check_compaction.py                      exit 0; output equal to check_compaction_output.txt
+stage-2 controls P0, N1-N8                     byte-identical to stage2_negative_controls_output.txt
+RID declarations                               81 at tdrg-v2.12.15, 81 in the candidate, same set; no compound grade tag in the candidate
+TDRG identifiers cited by the Atlas v0.13 candidate  all present in the candidate except four absent from tdrg-v2.12.15 too (TDRG-AZ-STATIC-ZN-4Q is AZ's; TDRG-LAYERS, TDRG-OBS, TDRG-VALID-LOG are atlas pseudo-labels)
+AZ-ALG-ANTIPODAL-LOWORDER defining line        byte-identical at az-v0.8 and az-v0.9
+trial merges onto main 54cddd7                 #263, #268, #265 each clean; in the order 263 -> 268 -> 265 clean; records/tdrg/TDRG_v2_13_EDIT_PLAN.md identical on #263 and #265
+not rerun                                      no engine, no campaign (EV-NOT-RERUN)

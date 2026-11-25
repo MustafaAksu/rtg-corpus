@@ -1,0 +1,235 @@
+{
+ "base_sha256": "9f874ccc1cd684482f26a27fca13b37102977cba2a80a75e762ecd7b300425cb",
+ "edits": [
+  {
+   "id": "ED-1",
+   "new_sha256": "1789344682d33c37ca73d304f3a4752e5ec2f38c3d7471f979bebf0ca17ac3de",
+   "old_sha256": "7b62ebe1438c277eb5e96bc4a6e07a2538f3d90af352f3a71f5d60ff1e0abdac",
+   "what": "title"
+  },
+  {
+   "id": "ED-2",
+   "new_sha256": "2b94ed32fea94367128b1350be413e1f8d9222add27054c9bb76b551f0f47328",
+   "old_sha256": "139404a5b2353d550d3e63a8b85a2198bfe423905b5e68a246ce6562ed8aeec2",
+   "what": "header date"
+  },
+  {
+   "id": "ED-3",
+   "new_sha256": "0e908cec9d7bd26a44a4bf2e8299f9273f1276ee9e23a2d2579077cf08d01d24",
+   "old_sha256": "f91fd36e49d5a3e6fbbe7c42d722612ea653bed93ef1372e16e42cbee03d6383",
+   "what": "header status"
+  },
+  {
+   "id": "ED-4",
+   "new_sha256": "f0f8c0aa0d63d36d8be5f3bb398e953b2acb0b024a0f88abb2cd2b8c057efa91",
+   "old_sha256": "54b8de75ff558d99438267fb1132238685518a9358e02caabcda79838bad4d0d",
+   "what": "header supersedes"
+  },
+  {
+   "id": "ED-5",
+   "new_sha256": "4e35c94cc885bf4eeb8f050157e143371a489a3bb9326cbd57ec3cb42f0887f3",
+   "old_sha256": "bfd0e82408dececfe14f643b438f0819c8ea0641a13a561d5a5622b4897d8df0",
+   "what": "header release record"
+  },
+  {
+   "id": "ED-6",
+   "new_sha256": "6a629bf76374208e90941ea3a290f03ca62cc99d08a1bcbcfa422ac950667c2c",
+   "old_sha256": "d85ed5cbf67b0b92ddd2f766528b866f67e2284a23f4e7bce1eca62e18742299",
+   "what": "Appendix G note"
+  },
+  {
+   "id": "ED-7",
+   "new_sha256": "77047d2c82f91ef2b553d0c36e65b4bfb3e19e168e54a4522dd9d1344bd6c2b2",
+   "old_sha256": "8998ea1a8ff75d53749f522411574274151e147a15591b240c982cd01ed02921",
+   "what": "footer"
+  },
+  {
+   "id": "ED-8",
+   "new_sha256": "9896c8f0cc9c424bfcebb24fd27cb4582b6b17757b683f38327cd1d1693e58b8",
+   "old_sha256": "bfce699975bf5350212d51792cf24c3236b6a68844df426408b040d436cb1caf",
+   "what": "Appendix A entry"
+  },
+  {
+   "id": "ED-9",
+   "new_sha256": "5f2e9142ad5193d0e16bfc3f1a2856d1c4b3a3343db34733bfbc08b72025930e",
+   "old_sha256": "36bc05101a713623a4056eae6f4f150ceda46d510249f30eb8b16d8104af17d7",
+   "what": "Section 7.0 own row"
+  },
+  {
+   "id": "S1-1",
+   "new_sha256": "2241a06bd53e959ad0a32e7457668fdabbe05e7413c6f25c1866f7bf62310179",
+   "old_sha256": "419c7df3c20eb693bc2d57f8e78d27e9cc7de37932464f14646f444e5cc39c04",
+   "what": "header summary pointer"
+  },
+  {
+   "id": "S1-2",
+   "new_sha256": "4a6cf3e87b9993e6d4e18b803d5de3096c3fbb4ee3feaa580f1332662fc60c89",
+   "old_sha256": "381a8b398fc07459d9305edd30df7b97bbe77aa54ac4fd567dda02a30dce50a1",
+   "what": "OPEN 21 registry pointer"
+  },
+  {
+   "id": "S1-3",
+   "new_sha256": "30336e42f16c4d30144b7ae3f46274835aec2334d3bbdb3d41183703a001ea94",
+   "old_sha256": "d9618ea731c4cfadcbea836dfc99c593dab555044b144beecb462da86b120900",
+   "what": "Section 6.14 new result"
+  },
+  {
+   "id": "R1-1",
+   "new_sha256": "0011250b681997e0accf8e1d6267fa250666dbba40b3eb5df77fcecf91c9beb5",
+   "old_sha256": "c6ed61d4411dc58b802dac7c9fbf11421d55e839b89896d5fc234a7767d09df6",
+   "what": "Section 7 claim-level import row"
+  },
+  {
+   "id": "X4-1",
+   "new_sha256": "f25df4d3a3c23e69d0878018758fdf48f156a1ca93817b803a44b3b6e62504e6",
+   "old_sha256": "b0028dbc9feb0cee141231c3e698548f02371d21df486cc582aab8cf8fec26b5",
+   "what": "Section 1 readout, not area-preserving"
+  },
+  {
+   "id": "X4-2",
+   "new_sha256": "7f3f64124bd0563c5d2bf2b721075808ffb3b6e534043a79514575a087ff947e",
+   "old_sha256": "2ec5884b3ed0cfc8b57bb33ed7477a6f965cc06daab68e4c912aa380802429aa",
+   "what": "Section 6.1 RID, not area-preserving"
+  },
+  {
+   "id": "X4-3",
+   "new_sha256": "7a3a7462c8a746fcd2ec8ce213108aa768d07f771ccb8647aa41161564a312a4",
+   "old_sha256": "ccc259a5eda8f770645f34561d8bcf7bdab44a0247027606d175203a14813557",
+   "what": "Section 6.6 RID, p=6 linear order"
+  },
+  {
+   "id": "X4-4",
+   "new_sha256": "2ca7c93a77a73476d8a6b71e67e4122aebc2acd82542f642a58e69e1aba41135",
+   "old_sha256": "9e3e9ebfb14517a081d5d5a31761a2d5b9c73fdcf815f6737acc7cb1650135fa",
+   "what": "Section 6.6 RID, homological resonance"
+  },
+  {
+   "id": "B2-1",
+   "new_sha256": "e12d6ce2bcfe6e56ec65e3aff8382d0dca7536e2a917d9120997803637761ca4",
+   "old_sha256": "2c938863d98e21e264ea5ec357b951ed23b977bdbf83ed0cae8979e3b833d2fe",
+   "what": "primitive map label"
+  },
+  {
+   "id": "B2-2",
+   "new_sha256": "730ce8d4b4ee9ea7bba57614db22303359723f05fdd6753286cdf8d6702d2dbd",
+   "old_sha256": "ac1a45ff5bbe070c13455a5718ab04da45aa92226594df09b4bfde5ea715debb",
+   "what": "bridge note source"
+  },
+  {
+   "id": "S3-1",
+   "new_sha256": "e769e076400282685933aae1ca50ded83534a4299a226a9951507e0731003ba2",
+   "old_sha256": "717a3c7abb78c89880ae6c667afe0bff6c5aded311fb6c1cf017e3147dfcf485",
+   "what": "OPEN 20 pilot paragraph"
+  },
+  {
+   "id": "ART-1",
+   "new_sha256": "08b8024e28940eaa1e55b6918a2fe3ccf3c190477bcb79dc30f24bef7d5d1a53",
+   "old_sha256": "bb797f0feefa6fbc1fae949d47540a45eb9791e9f2de01f4276eaf17e9487781",
+   "what": "Section 8 new artifact entries"
+  },
+  {
+   "id": "E-1",
+   "new_sha256": "ff5eba7056df1238d68ece6078d9b47dcf67af4bfc18b442f273ef0498e4e039",
+   "old_sha256": "8679efe4cd55adea8a395ac77c038e7ebe4d781167d8dce73ce948d22615560f",
+   "what": "Appendix E.1 rows"
+  },
+  {
+   "id": "E-2",
+   "new_sha256": "d4bd4f0c49c3f13910143312a0e7bedd181514ffc25530836e6f9bf10f988ac1",
+   "old_sha256": "8edb0ce05b16538aaa0cf1b007cc45d28030c1cfd4e9410904e9c5c471dd2a87",
+   "what": "Appendix E.2 rows"
+  },
+  {
+   "id": "REG-1",
+   "new_sha256": "6e9704d038654f0adda66b6800de7ef546f7e54f1ed9f47cc19e92bc7d8b62b5",
+   "old_sha256": "e641cbd38647150dfb6726b35b0b28873429b187f32621eb0f62e02ea579d5e6",
+   "what": "RECOG current row"
+  },
+  {
+   "id": "REG-2",
+   "new_sha256": "6194bdab936346a4adf7c405fe896a89139877e3ab71f2ae43f33a3aba8d5831",
+   "old_sha256": "2d4da1313b42788fe3ec839b0aa868d28c6f584abd4e84c558ba8372375005af",
+   "what": "Genesis row"
+  },
+  {
+   "id": "REG-3",
+   "new_sha256": "fcc012d32877fd6a8e7ba77975f6d505a01e969fef83d736afa0ea0bb6106292",
+   "old_sha256": "424ef31a787addc8ee481d16b203092e0b815e34322489353447dd86f6559d52",
+   "what": "Triadic row"
+  },
+  {
+   "id": "REG-4",
+   "new_sha256": "7b3058c14161c8d027825dd2ac1729198cf4f43ef4969b102736978fd7b63211",
+   "old_sha256": "c9247bd2b1369445a3749e6fc290f50e59617bace79dc9fbde0982365dc73104",
+   "what": "Programme row"
+  },
+  {
+   "id": "REG-5",
+   "new_sha256": "ee97b63ad056ee9aa5c0ee18aa9bbe98554a971ff8e16aac303adbc1082bf078",
+   "old_sha256": "7db7add69b8805a0852994b82205f3b485a8a30b838fb07520dd7a6004430a62",
+   "what": "AZ row"
+  },
+  {
+   "id": "REG-6",
+   "new_sha256": "2dae411e77396a6bab1d09e8f4e729351bf9b670e4a305f71cbd80c722b764e7",
+   "old_sha256": "f8b3c1bf849af016c28d8187d479a37906bda5a62ae1b5028dfa6ed8a000760d",
+   "what": "programme context line"
+  },
+  {
+   "id": "REG-7",
+   "new_sha256": "ce4145f442725edad6aa80fc3890a08aae5a52104728fb8dae242242b3a09d10",
+   "old_sha256": "c8e4e14993f73af7115b24ca2a40bba7c6dee37a56ff01b974abffcb655318a0",
+   "what": "RECOG context line"
+  },
+  {
+   "id": "REG-8",
+   "new_sha256": "59a6472521a6f94bbb43d5dcf196294fcd8fa0ddb7ad3d5ba21da3b27bfd21f9",
+   "old_sha256": "5e8d0be2d853637d392401e247b5b352e874979238040eb62ba1d97dbb9f8a4c",
+   "what": "Triadic export line"
+  },
+  {
+   "id": "REG-9",
+   "new_sha256": "e1481060767c7b7391b090fc41e5560034a4cb6b60e6073eab8c7b76001bce61",
+   "old_sha256": "f667e335a757cbf5e34e84fc602c282461c2c5a9b876e5a1ac5a0ebade77a147",
+   "what": "Genesis export line, edition"
+  },
+  {
+   "id": "REG-9b",
+   "new_sha256": "9214acda647b37014ea3ffe6137ab95a596d08313953cd5f5f36a916b143cd41",
+   "old_sha256": "fcda8f374724025c773ee050bd716be38a8e047177666898cbbd4575551d49ef",
+   "what": "Genesis export line, pins"
+  },
+  {
+   "id": "REG-10",
+   "new_sha256": "552b388932a95f4f942cd7a27045857b52eb4ade76cb4611a1f3bca02334f92d",
+   "old_sha256": "5239aa68a25b38ab8323b9eb7ac4b4a055b2b6889e4fdaccab2152a78a5cbf4e",
+   "what": "RECOG consumer line"
+  },
+  {
+   "id": "REG-11",
+   "new_sha256": "0175ea9ca8d791ef2e9c8e68c980ef7592819ff2082d0a0c05a1b035a735adad",
+   "old_sha256": "9985a478cce50aab3ba707e51f52bb9c0663ec5e80dbdfdedacdc54745db4837",
+   "what": "notice table sentence"
+  },
+  {
+   "id": "REG-12",
+   "new_sha256": "e8d7a81a8ba7e1b9f4386ae0aefa781385c4a9e1621c3ecf015284d52a0c9681",
+   "old_sha256": "8144e1ae1b6d74b847680ff6dadcaec68ae9285bb34dbdf14e148a8b0b7f8f8d",
+   "what": "Appendix F intro"
+  },
+  {
+   "id": "F-1",
+   "new_sha256": "a06d58012b5fd5e6fd39f8ff8bad29c0d42bbc45d9485ebc7bc09cce38869dde",
+   "old_sha256": "4ea9be2077ed0d2627f07faa0d6a13f0efa64b83d23e6667c7479a86bb06580f",
+   "what": "Appendix F AZ rows at az-v0.7"
+  },
+  {
+   "id": "F-2",
+   "new_sha256": "6152b19e0b2a6d2edcf3cda2844ffeda6c6e291f17fb13614b1cd92257e2164d",
+   "old_sha256": "3a00bb6f44c3ad80d8e5b60c88e76e38980343c01900cd5f6563a7075c4e3049",
+   "what": "Appendix F table header"
+  }
+ ],
+ "n_edits": 38,
+ "out_sha256": "014e1ac3be8c21d0e70afb72f23f7592528b01ffc5cd6390628721cc69e98958"
+}

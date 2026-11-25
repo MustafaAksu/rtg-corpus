@@ -1,0 +1,85 @@
+SESSION executed readback — PR #113 round 3
+Execution date: 2026-11-09
+Python: 3.13.5
+Checker commit: 74ca65eacf9e6a516776aaebd45a4513f74b230f
+
+=== PRODUCER_PROFILE ===
+ok  P1  expect PASS got PASS  history_appendix C: history paragraph and draft hash relocated
+ok  P2  expect PASS got PASS  bare namespace word `RTG-OFN` is not an identifier (removable as history)
+ok  P3  expect PASS got PASS  default profile (history in Appendix A) still accepts the same triple
+ok  N1  expect FAIL got FAIL  history entry names an RTG-OFN identifier absent from the live text
+         FAIL  operation T (history-appendix)  — history entry names identifiers absent from the live text: ['RTG-OFN-DEF-PHANTOM']
+ok  N2  expect FAIL got FAIL  history entry names a DYAD identifier absent from the live text
+         FAIL  operation T (history-appendix)  — history entry names identifiers absent from the live text: ['DYAD-THM-PHANTOM']
+ok  N3  expect FAIL got FAIL  draft hash deleted, not relocated
+         FAIL  source hashes preserved in live text  — missing: ['58e2dec5…3610']; invalid relocation declarations: ['E1:58e2dec5…3610']
+ok  N4  expect FAIL got FAIL  history-appendix operation replaces an appendix other than the declared one
+         FAIL  operation T (history-appendix)  — history-appendix operation does not replace the declared history appendix B
+         FAIL  history appendix region  — the history-appendix operation does not remove exactly the base history region (beyond it only rule and footer lines may go)
+ok  N5  expect FAIL got FAIL  an RTG-OFN identifier removed as history (default profile)
+         FAIL  operation E2 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: 'Recorded in v0.9 (superseded): `RTG-OFN-DEF-BETA` was renamed.\n\n'
+ok  N6  expect FAIL got FAIL  an RTG-OFN identifier removed as history (history_appendix C)
+         FAIL  operation E2 (history-removal)  — removed span carries a claim tag, qualifier, RID or math: 'Recorded in v0.9 (superseded): `RTG-OFN-DEF-BETA` was renamed.\n\n'
+ok  N7  expect FAIL got FAIL  candidate renames the history appendix (C -> D); phantom in it
+         FAIL  history appendix region  — heading '## Appendix C' occurs 1 times in the base and 0 times in the candidate (exactly once each required)
+         FAIL  source hashes preserved in live text  — missing: []; invalid relocation declarations: ['E1:58e2dec5…3610']
+ok  N8  expect FAIL got FAIL  history replacement injects a new live section with a theorem
+         FAIL  history appendix region  — the history-appendix operation does not insert exactly the candidate history region
+ok  N9  expect FAIL got FAIL  history replacement to end of file deletes a following live appendix
+         FAIL  history appendix region  — the history-appendix operation does not remove exactly the base history region (beyond it only rule and footer lines may go)
+ok  N10 expect FAIL got FAIL  a second Appendix C heading in the candidate
+         FAIL  history appendix region  — heading '## Appendix C' occurs 1 times in the base and 2 times in the candidate (exactly once each required)
+         FAIL  source hashes preserved in live text  — missing: []; invalid relocation declarations: ['E1:58e2dec5…3610']
+ok  N11 expect FAIL got FAIL  single-character programme RID description in the history entry
+         FAIL  operation T (history-appendix)  — history entry names identifiers absent from the live text: ['RTG-OPEN-X']
+ok  N12 expect FAIL got FAIL  default profile: a live source hash deleted; a copy already in history must not mask it
+         FAIL  source hashes preserved in live text  — missing: ['aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa']
+ok  N13 expect FAIL got FAIL  history_appendix C: hash relocated without a declaration
+         FAIL  source hashes preserved in live text  — missing: ['58e2dec5…3610']
+ok  N14 expect FAIL got FAIL  history_appendix C: a declared relocation whose hash is not in the history text
+         FAIL  source hashes preserved in live text  — missing: ['58e2dec5…3610']; invalid relocation declarations: ['E1:58e2dec5…3610']
+ok  N15 expect FAIL got FAIL  relocation declared on the history-appendix operation (old and new both carry the hash) authorizes an undeclared live deletion
+         FAIL  source hashes preserved in live text  — missing: ['58e2dec5…3610']; invalid relocation declarations: ['T:58e2dec5…3610 (declared on the history-appendix operation)']
+ok  N16 expect FAIL got FAIL  a declared relocation whose only target is the footer line
+         FAIL  source hashes preserved in live text  — missing: ['58e2dec5…3610']; invalid relocation declarations: ['E1:58e2dec5…3610']
+RESULT: PASS
+PROCESS_EXIT=0
+
+=== PR114_ORIGINAL_RECEIVING ===
+CHECKER afcfe064a178d90a3557629c530b60a41c376990b01a4b9451c0bd83e1f3e3ae
+P0 expected PASS observed PASS MATCH
+N1 expected FAIL observed FAIL MATCH
+N2 expected FAIL observed FAIL MATCH
+N3 expected FAIL observed FAIL MATCH
+N4 expected FAIL observed FAIL MATCH
+N5 expected FAIL observed FAIL MATCH
+N6 expected FAIL observed FAIL MATCH
+MISMATCHES 0
+PROCESS_EXIT=0
+
+=== PR114_ROUND2_BINDING ===
+CHECKER afcfe064a178d90a3557629c530b60a41c376990b01a4b9451c0bd83e1f3e3ae
+FIXTURES 45c3cbb5d28d550f2ddae00620b4c759c6aefa51384588c87b6977f951f78ec7
+P_DECLARED expected PASS observed PASS MATCH
+  PASS history appendix region — Appendix C is the unique history region in base and candidate; operation T replaces exactly it
+  PASS source hashes preserved in live text — missing: []; declared relocations to the history appendix: ['58e2dec5…3610']
+N_WRONG_OPERATION expected FAIL observed FAIL MATCH
+  PASS history appendix region — Appendix C is the unique history region in base and candidate; operation T replaces exactly it
+  FAIL source hashes preserved in live text — missing: ['58e2dec5…3610']; invalid relocation declarations: ['T:58e2dec5…3610 (declared on the history-appendix operation)']
+N_FOOTER_TARGET expected FAIL observed FAIL MATCH
+  PASS history appendix region — Appendix C is the unique history region in base and candidate; operation T replaces exactly it
+  FAIL source hashes preserved in live text — missing: ['58e2dec5…3610']; invalid relocation declarations: ['E1:58e2dec5…3610']
+MISMATCHES 0
+PROCESS_EXIT=0
+
+=== METADATA_SOURCE_BINDING ===
+P_HEADER_LIVE_DECL: expected PASS, observed PASS, exit 0, MATCH
+  PASS missing: []; declared relocations to the history appendix: ['58e2dec5…3610']
+N_HEADER_AUTHORIZATION: expected FAIL, observed PASS, exit 0, MISMATCH
+  PASS missing: []; declared relocations to the history appendix: ['58e2dec5…3610']
+P_FOOTER_LIVE_DECL: expected PASS, observed PASS, exit 0, MATCH
+  PASS missing: []; declared relocations to the history appendix: ['58e2dec5…3610']
+N_FOOTER_AUTHORIZATION: expected FAIL, observed PASS, exit 0, MISMATCH
+  PASS missing: []; declared relocations to the history appendix: ['58e2dec5…3610']
+MISMATCHES 2
+PROCESS_EXIT=1

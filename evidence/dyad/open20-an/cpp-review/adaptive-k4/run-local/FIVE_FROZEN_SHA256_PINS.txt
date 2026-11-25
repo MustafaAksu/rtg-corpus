@@ -1,0 +1,5 @@
+/home/claude/rtg-corpus/evidence/dyad/open20-an/stage2/scout_N216_dps840.json: OK
+/tmp/claude-0/-home-claude/e3965833-f9c7-57c5-9a1d-478bc677ca20/scratchpad/selrun/sub8/terms.tsv: OK
+/tmp/claude-0/-home-claude/e3965833-f9c7-57c5-9a1d-478bc677ca20/scratchpad/selrun/selective/selective_children.tsv: OK
+/tmp/claude-0/-home-claude/e3965833-f9c7-57c5-9a1d-478bc677ca20/scratchpad/h3run/out/refine2/details.tsv: OK
+/tmp/claude-0/-home-claude/e3965833-f9c7-57c5-9a1d-478bc677ca20/scratchpad/h3rrun/out/h3_split2/details.tsv: OK

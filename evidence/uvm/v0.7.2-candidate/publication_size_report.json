@@ -1,0 +1,83 @@
+{
+ "file": "dsn/RTG_OPEN_M_DSN.md",
+ "bytes": 103683,
+ "lines": 609,
+ "header_chars": 2413,
+ "live_body_chars": 99905,
+ "appendix_a_chars": 768,
+ "counting_method": "- bytes and lines of the UTF-8 file; characters for regions.\n- regions: header = start of file to the first \"## \" heading; live body = header end to\n  \"## Appendix A\" plus \"## Appendix B\" to the footer; Appendix A = its own region.\n- §1 words: whitespace-separated tokens between the \"## §1.\" heading and the next \"## \" heading.\n- RIDs: registered-namespace identifiers (pattern in check_compaction.py); new RIDs = RIDs in\n  FILE absent from PREVIOUS_EDITION.\n- header fields: characters per \"**Field:**\" line of the header.\n- Appendix A words per edition: tokens under each \"### v…\" heading.\n- history phrases: case-insensitive counts in the live body of the phrases in HISTORY.\n- orientation core (Methodology v1.4 §6.1): \"## §1.\" up to \"## §5.\" for a standard technical\n  ledger; characters, lines and words; whether the AI_CONTEXT_CORE_END marker is present.\n- near-duplicates: paragraphs of at least 200 characters whose 8-word shingle sets have\n  Jaccard similarity >= 0.8 with another paragraph of the live body.",
+ "section1_words": 1302,
+ "orientation_core": {
+  "chars": 34419,
+  "lines": 189,
+  "words": 4365,
+  "core_end_marker_present": true
+ },
+ "header_fields": {
+  "Title": 80,
+  "Date": 26,
+  "Scope": 212,
+  "Document class": 47,
+  "Document status": 346,
+  "Supersedes": 112,
+  "Companion documents": 464,
+  "DSN Methodology": 168,
+  "Status summary": 715,
+  "Revision editor": 28,
+  "Release record": 151,
+  "LIT dependencies": 27
+ },
+ "appendix_a_words_per_edition": {
+  "v0.7.2 — 24 November 2026 — Adopted": 52,
+  "v0.7.1 — 7 October 2026 — adopted predecessor": 22
+ },
+ "footer_lines": 1,
+ "history_phrases_live": {
+  "historical": 53,
+  "superseded": 13,
+  "former": 3,
+  "retained as": 1,
+  "no longer": 1
+ },
+ "near_duplicate_paragraphs": [],
+ "rids_total": 84,
+ "previous": {
+  "file": "/home/runner/work/_temp/uvm-publish/predecessor.md",
+  "bytes": 92170
+ },
+ "growth_bytes": 11513,
+ "growth_percent": 12.5,
+ "new_rids": [
+  "DYAD-ALG-NF6",
+  "DYAD-ALG-P6-FACEFLUX",
+  "DYAD-THM-C21",
+  "DYAD-THM-NF-INV",
+  "DYAD-THM-NF-REM",
+  "DYAD-THM-SMOOTH-EMBEDDING",
+  "DYAD-THM-SMOOTH-EQUIVARIANT-CHART",
+  "GEN-ART-QH-NOGO",
+  "GEN-DEF-NORM-BNATIVE",
+  "GEN-DEF-PRIMITIVE-METRIC",
+  "GEN-OPEN-APEX-SLOT",
+  "GEN-OPEN-UVJET-ALPHAF",
+  "GEN-OPEN-UVJET-SCOPE",
+  "GEN-OPEN-WPHASE",
+  "GEN-OPEN-WPHASE-GSPLIT",
+  "GEN-THM-QH-NOGO",
+  "PRE-LEGACY",
+  "RTG-OFN-OPEN-OPA",
+  "TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY",
+  "TRIAD-ALG-T6T-JACOBI-MODE-SIGNS",
+  "TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC",
+  "UVM-ALG-CENTRAL-WEIGHTS",
+  "UVM-ALG-HINDEX",
+  "UVM-ALG-LOCK-EQUATION",
+  "UVM-ALG-SOURCE-TOWER",
+  "UVM-ALG-SPIN2-JET",
+  "UVM-GEN-RID-QUERY",
+  "UVM-HEUR-SINGLEJET-NATURALNESS",
+  "UVM-HYP-PARAMETER-COUNT",
+  "UVM-PREL-RID-QUERY"
+ ],
+ "growth_per_new_rid": 383.8
+}

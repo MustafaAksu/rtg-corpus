@@ -1,0 +1,14 @@
+Atlas row check, TDR-G v2.13 — round 4 (AZ v0.10 repin), 16 November 2026
+PR #265 head 811dc6a98526ede1147babf2c9817ecceec37a1f, clean detached worktree
+stage-1 intermediate (git show b7687f1:...)    a27c3c525a4500ee4f62974ae5d508dbc5fdb450a4e2fe06ae8f6f46716775eb (192,047 bytes)
+stage-1 builder rebuild                        byte-identical; edit log byte-identical (29 edits)
+stage-1 checker C0-C10                         byte-identical; C6: AZ entry identical at v0.6-v0.10, consumer scope True, no stale string
+stage-1 controls K1-K10                        byte-identical; K1 (pin back to az-v0.9) caught
+stage-2 builder                                candidate 6a4b94d5ec6946cad177889d453044a69eb4aa451763a2e81148b2e11739de88 (157,864 bytes) and map byte-identical (43 operations)
+tools/check_compaction.py                      exit 0; output byte-identical
+stage-2 controls P0, N1-N8                     output byte-identical
+candidate 40d8235 -> 811dc6a                   exactly four lines differ: §6.2 pin, AZ consumer row, pin line ("verified source editions used by this release"), Appendix A v2.13 entry
+RID declarations                               81, same set as tdrg-v2.12.15
+pipes/TDRG AZ v0.9 and v0.10 notices           dispositioned on the branch (accept)
+trial merge onto main 65a4f32                  clean; pipes_index --check OK
+not rerun                                      no engine, no campaign (EV-NOT-RERUN)
