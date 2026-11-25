@@ -20,3 +20,4 @@
 | 2026-11-22 | ATLAS | request | open | Programme v1.4 receiving decision for a single nine-item source synchronization pass (Programme §6-9) | — | `20261122-ATLAS-programme-receiver-pass.md` |
 | 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §§2, 6.6, 9.1; inventory and IF12–IF14, IF24, IF27, IF37, IF38 | — | `20261124-NUMGEN-v1-22-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 criterion home and IF02/03/24/28/31/32 | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-25 | UVM | notice | open | UVM v0.7.2 §§0.3, 7, 9; Programme IF08–IF11, IF23 | — | `20261125-UVM-v0-7-2-adopted.md` |
