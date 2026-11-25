@@ -1,7 +1,7 @@
 # Note to the Number Genesis co-owners — current state and entry route
 
 **Date:** 24 November 2026. Earlier version: 26 October 2026, in git history.
-**From:** the NUMGEN co-owner session (Claude).
+**From:** NUMGEN co-owner sessions (Claude; post-tag update by ChatGPT).
 **Status:** [SESSION] working note. It is operational context only: not scientific authority, not an approval, and not recovered memory of earlier chats.
 
 **Entry route** (Programme project instructions):
@@ -38,12 +38,12 @@ The full rules are in `CONVENTIONS.md` and Methodology v1.4 (`dsn/DSN_METHODOLOG
 
 | Item | Value |
 |---|---|
-| Governing edition | v1.21, tag `numgen-v1.21`, SHA-256 `4805760d683bb3abddfdaab4737f6bb75beed392906bd4c54d8ae79245f15701`; release record `records/numgen/NUMGEN_v1_21_RELEASE_RECORD.md` |
-| In progress | v1.22, one content stage (receiving and synchronization); DRAFT on branch `claude/numgen-v1.22`; release record `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md` (DRAFT) |
+| Governing edition | v1.22, tag `numgen-v1.22`, SHA-256 `36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b`; release record `records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md`; publication addendum `records/numgen/NUMGEN_v1_22_POST_TAG_20261124.md` |
+| Release completion | PRs #374, #375, #377 merged; PI annotated tag verified. No later NUMGEN edition in progress in this checkpoint. |
 | Work list for v1.22 | `records/numgen/ATLAS_ADVISORY_NUMGEN_SYNC_20261123.md` (rev. 2); owner disposition `records/numgen/NUMGEN_OWNER_DISPOSITION_SYNC_20261123_CLAUDE_20261124.md` (PR #374) |
 | S1 evidence | `records/numgen/NUMGEN_v1_22_S1_P2_REANNOTATION.md` (PR #375): P2 re-annotation of 158 witnesses under TDRG-DEF-ORIENT |
-| Inbox | eleven notices dispositioned in `records/numgen/NUMGEN_v1_22_RECEIVING_LEDGER.md` (on the v1.22 branch); to be closed after the tag |
-| Outbound | the four items of 26 Oct 2026 are closed by their receivers |
+| Inbox | Eleven v1.22 dispositions recorded in `records/numgen/NUMGEN_v1_22_RECEIVING_LEDGER.md`; their closure is proposed in the post-tag PR. Recheck live `pipes/NUMGEN/INDEX.md` at entry. |
+| Outbound | Four items of 26 Oct closed by their receivers; seven v1.22 notices proposed in the post-tag PR. Filing does not imply receiver acceptance or adopted use. |
 
 ## 3. Open scientific frontier (unchanged by v1.22)
 
@@ -57,7 +57,7 @@ The full rules are in `CONVENTIONS.md` and Methodology v1.4 (`dsn/DSN_METHODOLOG
 
 ## 4. Next checkpoint
 
-PR #377 round 2: the ChatGPT co-owner applied the bounded R1–R4 repairs requested in review `6041922508`. Rebuild/check records and the previous candidate identity are in the draft release record. Read the receiving inbox again before the final release record; native builder/checker rerun and Atlas row check precede PI adoption. No campaign or merge is authorized by this checkpoint.
+The v1.22 adoption and tag are complete; the post-tag addendum records the publication identities and queue closeout. The closeout PR still needs review/merge. Scientific next step, only if authorized: formulate a design/preregistration capable of targeting a certified non-degenerate composable chain, including middle-interface witnesses, outer-pair admissibility and typed WD-DOM. M4 remains HOLD; DISC-3 remains DEFER. No realization campaign, new release or Atlas refresh is authorized by this note.
 
 ## 5. Not asked
 
@@ -65,6 +65,6 @@ PR #377 round 2: the ChatGPT co-owner applied the bounded R1–R4 repairs reques
 - No change to the C7C algebra or Census-1.
 - No ALG→THM promotion by header edit.
 - No new compaction or general regrading.
-- No action on other streams' inboxes.
+- No receiver-side changes to other streams' inboxes; only the seven declared outbound notices.
 
 *END OF NOTE.*

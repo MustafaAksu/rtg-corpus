@@ -1,0 +1,193 @@
+{
+  "parent": "dfe37264b0bf35a4ccd134ce9fad013366530ad5",
+  "source_sha256": "5696a765f82463c531da56d359fdfd2aa6e1dc80b684a7bb7387a336dc0e0932",
+  "output_sha256": "a49d2454854099b676eb218ce04d153915899a690134e939b529fd3964c8ee47",
+  "operations": [
+    {
+      "old": "RESULT-M-3A distinguishes owner-reported THM-3G's $K_{\\rm vac}$ is a scalar",
+      "new": "RESULT-M-3A records the owner-reported THM-3G coefficient $K_{\\rm vac}$ as a scalar",
+      "count": 1,
+      "reason": "Grammar and I-3 evidence attribution"
+    },
+    {
+      "old": "The assembly contract and target contract of §3 apply.",
+      "new": "R11's assembly scope and the target contract SG-M-7 (§3) apply.",
+      "count": 1,
+      "reason": "Internal pointer"
+    },
+    {
+      "old": "proxy-calibration assembler .",
+      "new": "proxy-calibration assembler.",
+      "count": 1,
+      "reason": "Punctuation"
+    },
+    {
+      "old": "inherits the Genesis SG-M-7 single-jet",
+      "new": "inherits the UVM SG-M-7 single-jet",
+      "count": 1,
+      "reason": "Correct guard ownership"
+    },
+    {
+      "old": "assumptions; does not treat $0.024$",
+      "new": "assumptions; it does not treat $0.024$",
+      "count": 1,
+      "reason": "Grammar"
+    },
+    {
+      "old": "exact spectrum R3B",
+      "new": "exact spectrum RESULT-M-3B",
+      "count": 1,
+      "reason": "Internal pointer"
+    },
+    {
+      "old": "For the supplied diagnostic target 0.024, exact arithmetic gives $\\rho r^4\\gtrsim4/125$; at $Q_s=r^2=0.1$, $\\rho\\gtrsim16/5$.",
+      "new": "For the stipulated inequality $(\\|H\\|_B/g)|w|\\ge0.024$, exact arithmetic at the optimum gives $\\rho r^4\\ge4/125$; at $Q_s=r^2=0.1$, $\\rho\\ge16/5$. For an approximate input target, the converted thresholds inherit that approximation; the physical threshold is not derived.",
+      "count": 1,
+      "reason": "I-1 exact conversion versus estimated input"
+    },
+    {
+      "old": "only at weights $a-b\\equiv-1\\ (\\mathrm{mod}\\ 6)$: degrees 1, 3, 5.",
+      "new": "only at weights $a-b\\equiv-1\\ (\\mathrm{mod}\\ 6)$: the classified tower through degree 5 has degrees 1, 3, 5.",
+      "count": 1,
+      "reason": "Finite tower scope; no new stage-1 result"
+    },
+    {
+      "old": "The original panel implements a 0.28 floor; the stated band and optional previous-stage SG-M-14 retention check are distinct.",
+      "new": "The original panel implements a 0.28 floor, not an upper-band check. The full stated band and the optional previous-stage retention test (called SG-M-14 in the historical script) are separate; that script label is not the present DSN birth/phase guard SG-M-14.",
+      "count": 1,
+      "reason": "I-4 panel evidence and label disambiguation"
+    },
+    {
+      "old": "runner substituted only the input folder",
+      "new": "runner asserts exactly one input-folder substitution and logs the original script SHA-256",
+      "count": 1,
+      "reason": "I-4 execution provenance"
+    },
+    {
+      "old": "DYAD v6.4.10 §6.12 (recovered old file, custody audit §4.1)",
+      "new": "DYAD v6.4.10 recovered source line 594 (custody audit §4.1)",
+      "count": 1,
+      "reason": "Historical source locator"
+    },
+    {
+      "old": "| RID unavailable for the distinct algebraic statement]` The documented secular",
+      "new": "| GEN-OPEN-SOURCE-PAIRING (owner OPEN module and scoped registry; no dedicated algebra RID)]` The documented secular",
+      "count": 1,
+      "reason": "GEN v2.10 §8 line 1274 covers 9B-tau in owner registry"
+    },
+    {
+      "old": "- RID unavailable :: secular minus-branch reconstruction",
+      "new": "- GEN-OPEN-SOURCE-PAIRING (owner OPEN module and scoped registry; dedicated algebra RID unavailable) :: secular minus-branch reconstruction",
+      "count": 1,
+      "reason": "Same owner identity and limitation in import ledger"
+    },
+    {
+      "old": "**Errata retained from v0.6:**",
+      "new": "**ESM convention guards:**",
+      "count": 1,
+      "reason": "Current-only presentation"
+    },
+    {
+      "old": "R12 + v0.7 correction",
+      "new": "R12",
+      "count": 1,
+      "reason": "Current result pointer"
+    },
+    {
+      "old": "R11 + v0.7.1 COR / SG-M-6/7 / RESULT-M-3B",
+      "new": "R11 / SG-M-6/7 / RESULT-M-3B",
+      "count": 1,
+      "reason": "Current result pointer"
+    },
+    {
+      "old": "| Recipient / governing source | Notice sent | Received | Statement accepted | Adopted use |\n|---|---|---|---|---|",
+      "new": "| Recipient / governing source | Notice sent | Received | Statement accepted | Adopted use | Source-text reference (not a receipt) |\n|---|---|---|---|---|---|",
+      "count": 1,
+      "reason": "Separate source reference and notice states"
+    },
+    {
+      "old": "| not established | source references v0.7.1 | not established | ",
+      "new": "| not established | not established | not established | not established | ",
+      "count": 4,
+      "reason": "No inferred receipt or adoption from reference"
+    },
+    {
+      "old": "| Genesis v2.10 | OPEN-M-6 proposal item filed in pipes/GEN/20261123-UVM-jperp-proposal-review.md | receiver receipt not established | not established | not established |",
+      "new": "| Genesis v2.10 | transmission not established; queue item filed | not established | not established | not established | OPEN-M-6 proposal: pipes/GEN/20261123-UVM-jperp-proposal-review.md |",
+      "count": 1,
+      "reason": "Proposal queue event distinct from notice receipt"
+    },
+    {
+      "old": "**Status (v0.7.1): EXECUTED algebraically — physical normalization/target matching OPEN.** The R11 source/stiffness maps and exact $\\theta_f=2\\pi/3$ angular optimum are retained in their admitted assembly frame. The displayed $\\rho r^4\\ge4/125$ target inherits the Genesis reduced-wrapper estimate $|\\alpha_f|\\gtrsim0.012$, the single-jet hypothesis, the conditional 9C branch and the large-positive-$g$ replacement $\\|M\\|_B\\to2g$; it is not a first-principles OPEN-M threshold. The $h$–$\\ell$ bridge, physical lowering, finite-$g$ restoring norm, and state/window matching remain OPEN. R11's assembly scope and the target contract SG-M-7 (§3) apply. HYP-IDENT is not derived.",
+      "new": "**Status: EXECUTED algebraically — physical normalization/target matching OPEN.** The R11 source/stiffness maps and exact $\\theta_f=2\\pi/3$ angular optimum are retained in their admitted assembly frame. The displayed $\\rho r^4\\ge4/125$ target inherits the Genesis reduced-wrapper estimate $|\\alpha_f|\\gtrsim0.012$, the single-jet hypothesis, the conditional 9C branch and the large-positive-$g$ replacement $\\|M\\|_B\\to2g$; it is not a first-principles OPEN-M threshold. The $h$–$\\ell$ bridge, physical lowering, finite-$g$ restoring norm, and state/window matching remain OPEN. R11's assembly scope and the target contract SG-M-7 (§3) apply. HYP-IDENT is not derived.",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Status (v0.7.1): EXECUTED diagnostic; no certified deficit factor.** In the assembler, $m=C_mh$ makes $h$ cancel identically on $gC_mh\\ne0$, so the total quantity is $\\rho r^4=\\ell Q_s^2/(gC_m)$. The reported $0.007$–$0.008$ therefore comes from one measured **proxy statistic** $\\ell:=\\sigma(z_{\\rm centered})$ plus the declared choices $C_m=1$, scalar $g=1$, and $Q_s=0.1$; the Hodge amplitude campaign does not determine the total value. $Q_s=0.1$ is the most favorable edge of the declared primitive window $(0,0.1]$, not a selected physical state. The comparison target $0.032$ independently inherits the reduced-wrapper, single-jet, conditional-9C, large-positive-$g$ and state/window/source-normalization assumptions (§3). Outcome: the proxy diagnostic is reproducible, but neither its magnitude relative to the target nor any $\\sim4\\times$ physical source deficit is certified.",
+      "new": "**Status: EXECUTED diagnostic; no certified deficit factor.** In the assembler, $m=C_mh$ makes $h$ cancel identically on $gC_mh\\ne0$, so the total quantity is $\\rho r^4=\\ell Q_s^2/(gC_m)$. The reported $0.007$–$0.008$ therefore comes from one measured **proxy statistic** $\\ell:=\\sigma(z_{\\rm centered})$ plus the declared choices $C_m=1$, scalar $g=1$, and $Q_s=0.1$; the Hodge amplitude campaign does not determine the total value. $Q_s=0.1$ is the most favorable edge of the declared primitive window $(0,0.1]$, not a selected physical state. The comparison target $0.032$ independently inherits the reduced-wrapper, single-jet, conditional-9C, large-positive-$g$ and state/window/source-normalization assumptions (§3). Outcome: the proxy diagnostic is reproducible, but neither its magnitude relative to the target nor any $\\sim4\\times$ physical source deficit is certified.",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Status (v0.6): OPEN / definition required.** Subcomplex deletion is not a valid legal/illegal split (removing defect-touching faces un-kills cycles, inflating dimH 14→31). Candidate route: support/projector-based classification using defect-neighborhood masks (RUN10's 3.15× defect-adjacency harmonic concentration suggests it separates cleanly). **Load-bearing for HYP-M-PREFRACTURE:** this is the falsifier — can a *legal* β₁ (bulk-interior tunnel) carry the source the way illegal defects do, or is the awakening fracture necessarily nonmanifold? Until closed, RUN10's \"dimH 14\" carries the `[algebraic null-space]` qualifier.",
+      "new": "**Status: OPEN / definition required.** Subcomplex deletion is not a valid legal/illegal split (removing defect-touching faces un-kills cycles, inflating dimH 14→31). Candidate route: support/projector-based classification using defect-neighborhood masks (RUN10's 3.15× defect-adjacency harmonic concentration suggests it separates cleanly). **Load-bearing for HYP-M-PREFRACTURE:** this is the falsifier — can a *legal* β₁ (bulk-interior tunnel) carry the source the way illegal defects do, or is the awakening fracture necessarily nonmanifold? Until closed, RUN10's \"dimH 14\" carries the `[algebraic null-space]` qualifier.",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Status (v0.7.1): EXECUTED `[NUM]`; selected-panel evidence; R15 diagnostic.** Pack-native $x_{\\rm link}$ is $\\Delta\\omega^*$-normalized (ERR-M-2F-CONV). R14 records the selected nine-pack association between corridor occupancy and harmonic loading and the $z_h^2$-weighted mixed-source split. R15 is a calibration-conditional proxy diagnostic $\\rho r^4=\\ell Q_s^2/(gC_m)$, not a measured source deficit; band-attributed gate failures are algebraic consequences of a sub-gate total because each attribution fraction satisfies $f_{\\rm band}\\le1$. No certified SU(2) amplitude multiplier is applied. Architectural ownership remains unchanged. Guards: SG-M-ESM-CAL, ERR-M-2F-CONV, ERR-M-2F-THRESH.",
+      "new": "**Status: EXECUTED `[NUM]`; selected-panel evidence; R15 diagnostic.** Pack-native $x_{\\rm link}$ is $\\Delta\\omega^*$-normalized (ERR-M-2F-CONV). R14 records the selected nine-pack association between corridor occupancy and harmonic loading and the $z_h^2$-weighted mixed-source split. R15 is a calibration-conditional proxy diagnostic $\\rho r^4=\\ell Q_s^2/(gC_m)$, not a measured source deficit; band-attributed gate failures are algebraic consequences of a sub-gate total because each attribution fraction satisfies $f_{\\rm band}\\le1$. No certified SU(2) amplitude multiplier is applied. Architectural ownership remains unchanged. Guards: SG-M-ESM-CAL, ERR-M-2F-CONV, ERR-M-2F-THRESH.",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Status (v0.7): REDEFINED / physical slot identification withdrawn.** Adopted Triadic v1.7 T-6t establishes independently signable **mode labels** in the stated Jacobi construction, not a physically independent transverse/out-of-plane source direction. T-6u retains four typed leading primitive seed diagnostics; its strongest stated comparison has minimum shortfall $16/\\sqrt7>6$ against the **stipulated conditional $\\sqrt2$ diagnostic benchmark**, and SG-17 explicitly forbids interpreting that as a HINDEX, finite-amplitude, arbitrary-$\\kappa$ or universal-source bound. Genesis v2.10 retains the result of the former apex-slot/frame-map review and the retraction of the apex–UV slot identity while retaining the $d$-mode and primitive seeds. Therefore the former “$\\mathcal P_4$ apex certified weak / UV-source apex next” binary is retired. A future physical apex/UV relation would require a new explicit enlarged carrier, metric, embedding and source map; none is currently certified.",
+      "new": "**Status: REDEFINED / physical slot identification withdrawn.** Adopted Triadic v1.7 T-6t establishes independently signable **mode labels** in the stated Jacobi construction, not a physically independent transverse/out-of-plane source direction. T-6u retains four typed leading primitive seed diagnostics; its strongest stated comparison has minimum shortfall $16/\\sqrt7>6$ against the **stipulated conditional $\\sqrt2$ diagnostic benchmark**, and SG-17 explicitly forbids interpreting that as a HINDEX, finite-amplitude, arbitrary-$\\kappa$ or universal-source bound. Genesis v2.10 retains the result of the former apex-slot/frame-map review and the retraction of the apex–UV slot identity while retaining the $d$-mode and primitive seeds. Therefore the former “$\\mathcal P_4$ apex certified weak / UV-source apex next” binary is retired. A future physical apex/UV relation would require a new explicit enlarged carrier, metric, embedding and source map; none is currently certified.",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Status (v0.7.1): PARTIAL — typing and norm audit recorded; physical bridge remains OPEN.** RESULT-M-3A records the owner-reported THM-3G coefficient $K_{\\rm vac}$ as a scalar log-conformal Hessian/stiffness coefficient, while Genesis $g$ is the isotropic coefficient of the transverse covariant restoring block $M_{\\rm spin2}:V\\to V^*$; no current theorem identifies them. RESULT-M-3B shows that the $0.024$ target uses the single-jet hypothesis, conditional 9C family plus $\\|M\\|_B\\to2g$ in the large-$g$ regime, and no present bound justifies that approximation at $g=1$; the registered soft branch already gives $|D|/g=1/2$. Remaining tasks: derive or refute $K_{\\rm vac}^{(\\rm conformal)}=g^{(\\rm spin2)}$, type the exact object/index placement, and re-derive the cascade target with the exact finite-$g$ norm and matched physical state. No direction of any normalization shift is inferred.",
+      "new": "**Status: PARTIAL — typing and norm audit recorded; physical bridge remains OPEN.** RESULT-M-3A records the owner-reported THM-3G coefficient $K_{\\rm vac}$ as a scalar log-conformal Hessian/stiffness coefficient, while Genesis $g$ is the isotropic coefficient of the transverse covariant restoring block $M_{\\rm spin2}:V\\to V^*$; no current theorem identifies them. RESULT-M-3B shows that the $0.024$ target uses the single-jet hypothesis, conditional 9C family plus $\\|M\\|_B\\to2g$ in the large-$g$ regime, and no present bound justifies that approximation at $g=1$; the registered soft branch already gives $|D|/g=1/2$. Remaining tasks: derive or refute $K_{\\rm vac}^{(\\rm conformal)}=g^{(\\rm spin2)}$, type the exact object/index placement, and re-derive the cascade target with the exact finite-$g$ norm and matched physical state. No direction of any normalization shift is inferred.",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Status (v0.3): CLOSED, verdict (C), category-scoped.** Within the constant-coefficient polynomial word category, one coupling term cannot supply both $H$ and $w$. By R10, the $\\mu$-sector is the homogeneous cube sector $\\{q^3,\\bar q^3\\}$, while the $\\sigma_3$-source sector is the six mixed degree-3 words; no degree-3 word carries both. Therefore single-jet as one constant-coefficient polynomial coupling term is refuted. Mechanism-level single origin remains possible only if one deeper physical object generates two distinct word sectors/coupling insertions; that question is routed to OPEN-M-2. SG-M-2 stands; HYP-IDENT is **not derived by this category** (and not falsified).",
+      "new": "**Status: CLOSED, verdict (C), category-scoped.** Within the constant-coefficient polynomial word category, one coupling term cannot supply both $H$ and $w$. By R10, the $\\mu$-sector is the homogeneous cube sector $\\{q^3,\\bar q^3\\}$, while the $\\sigma_3$-source sector is the six mixed degree-3 words; no degree-3 word carries both. Therefore single-jet as one constant-coefficient polynomial coupling term is refuted. Mechanism-level single origin remains possible only if one deeper physical object generates two distinct word sectors/coupling insertions; that question is routed to OPEN-M-2. SG-M-2 stands; HYP-IDENT is **not derived by this category** (and not falsified).",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Status (v0.3): CLOSED.** Selector label: word homogeneity. Homogeneous cubes select the $\\mu$-sector; mixed words select the $\\sigma_3$-sector.",
+      "new": "**Status: CLOSED.** Selector label: word homogeneity. Homogeneous cubes select the $\\mu$-sector; mixed words select the $\\sigma_3$-sector.",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Status (v0.7): PARTIAL — algebraic compatibility retained; physical 9C selection OPEN.** R8 remains an exact compatibility statement inside the minimal-jet/HYP-IDENT branch **if** the positive-m nondegenerate HYP-IDENT branch, additional raw-array 9C premise and the stated $K_-$ sign branch are adopted. Genesis v2.10 retains the distinction that 9B typing does not imply the raw-array $B$-self-adjointness premise and that the physical $\\pm\\Delta M_f$ sign/energy branch is open. Therefore THM-M-LOCK no longer closes physical 9C admissibility; it shows only that the selected algebraic branch is internally compatible with the weak-stiffness minimum.",
+      "new": "**Status: PARTIAL — algebraic compatibility retained; physical 9C selection OPEN.** R8 remains an exact compatibility statement inside the minimal-jet/HYP-IDENT branch **if** the positive-m nondegenerate HYP-IDENT branch, additional raw-array 9C premise and the stated $K_-$ sign branch are adopted. Genesis v2.10 retains the distinction that 9B typing does not imply the raw-array $B$-self-adjointness premise and that the physical $\\pm\\Delta M_f$ sign/energy branch is open. Therefore THM-M-LOCK no longer closes physical 9C admissibility; it shows only that the selected algebraic branch is internally compatible with the weak-stiffness minimum.",
+      "count": 1,
+      "reason": "Remove dated label from current registry"
+    },
+    {
+      "old": "**Archive — OPEN-M-2C pre-registration text (superseded).** Original v0.5 pre-registration (outcomes A/B/C/D) is preserved in the v0.5 addendum; outcome realized = C/B-boundary. *(Not an active registry entry.)*\n\n",
+      "new": "",
+      "count": 1,
+      "reason": "Move retired preregistration pointer to Appendix B"
+    },
+    {
+      "old": "## Appendix B — Retired and Replaced Current-Use Statements (v0.7.1)",
+      "new": "## Appendix B — Retired and Replaced Current-Use Statements\n\n`[SUPERSEDED]` **OPEN-M-2C pre-registration.** The original v0.5 A/B/C/D pre-registration is historical (v0.5 addendum); realized outcome C/B-boundary. No new registry entry or outcome is introduced by this correction.\n\n`[SUPERSEDED]` **R14 single-trajectory wording and mixed T100 attribution (v0.7.1).** The nine listed packs are stage-labelled samples from several run continuations within the recorded seed_001/rank_2 context. A common byte-identical bootstrap is not established. The former 0.252/0.527/nm=2 combination mixed gentle and ultra; §2 and R14 now distinguish the packets. The reproduced correlations retain their numerical grade and are descriptive, not causal or within-run evolution claims. See the adopted predecessor, custody audit §6 and PR #370.\n\n`[SUPERSEDED]` **R12 proxy and Legacy attribution wording.** Retain the reported numbers; h:=z_h² is a construction proxy, and Pre-Legacy v0.8 §1.9 supplies the finite N=175 observation and separate heuristics, not a theorem that absence of β₁ excludes vacuum. See R12 and the predecessor.\n\n`[SUPERSEDED]` **Unscoped target and sign uses.** SG-M-7, R8, R11 and R15 now carry the explicit input assumptions, state/window typing and nondegenerate signed domain. No new target magnitude or physical pole selection is asserted.",
+      "count": 1,
+      "reason": "Explicit correction and historical pointer"
+    },
+    {
+      "old": "Reason: THM-3G is OPEN-M-native and protects the conformal-mode stiffness equal to bare $K_{\\rm vac}$; Genesis $g$ is a different typed restoring-block coefficient.",
+      "new": "Reason: THM-3G is an OPEN-M-native, owner-reported conformal-stiffness result in the tested topology class; its recovered script and synthetic rerun do not establish a general theorem or the transverse bridge. Genesis $g$ is a different typed restoring-block coefficient.",
+      "count": 1,
+      "reason": "Preserve I-3 evidence distinction in archive explanation"
+    }
+  ]
+}

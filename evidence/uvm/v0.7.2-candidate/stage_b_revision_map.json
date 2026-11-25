@@ -1,0 +1,49 @@
+{
+  "base_sha256": "e4e8fa53f52400da10843ed0acdb36150486d6b63881b8ef23f91e9d7371ec3e",
+  "candidate_sha256": "22d14dd8e086c9be25d966b860bcf79db03270e874abe939e8246b80da03fc57",
+  "archives": [
+    {
+      "name": "uvm-v0.7.1",
+      "git": "uvm-v0.7.1:dsn/RTG_OPEN_M_DSN.md",
+      "sha256": "0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e"
+    }
+  ],
+  "profile": {
+    "history_appendix": "A",
+    "checked_tag_prefixes": [
+      "uvm-",
+      "gen-",
+      "triad-",
+      "ofn-",
+      "programme-",
+      "rrf-",
+      "prelegacy-",
+      "methodology-"
+    ],
+    "known_tags": [
+      "uvm-v0.7.1",
+      "gen-v2.10",
+      "dyad-v6.4.24",
+      "triad-v1.7",
+      "ofn-v0.12",
+      "programme-v1.4",
+      "methodology-v1.4",
+      "rrf-v0.8.4",
+      "prelegacy-v0.8",
+      "az-v0.10"
+    ]
+  },
+  "operations": [
+    {
+      "id": "B01",
+      "op": "replace-section",
+      "class": "history-appendix",
+      "start": "## Appendix A — Version History",
+      "end": "## Appendix B — Retired and Replaced Current-Use Statements",
+      "new": "## Appendix A — Version History\n\n### v0.7.2 — 24 November 2026 — DRAFT; adoption pending\n\nScoped errata and source-custody candidate. The selected nine-pack numerical values remain unchanged; the mixed T100 attribution, unsupported within-run wording, conditional target/sign scopes and source attributions are corrected. Reviewed session-level source audit and stage-1 work are not adopted results. No new UV campaign, physical model, grade promotion or C3 closure. See records/uvm/UVM_V072_CANDIDATE_CHANGE_RECORD.md for exact edits and review boundaries.\n\n### v0.7.1 — 7 October 2026 — adopted predecessor\n\nThe complete predecessor and all earlier version-history entries are preserved at `uvm-v0.7.1` (Appendix A); the SHA-256 of the tagged DSN is 0a51644de0a15035797ab03945207cf319fd6d7514a04b8cae441d9d6e93f53e. The present document remains a candidate until the PI decides.\n\n",
+      "archive": [
+        "uvm-v0.7.1"
+      ]
+    }
+  ]
+}

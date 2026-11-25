@@ -1,0 +1,37 @@
+Review revision 6037156148 — connector-side bounded JavaScript execution; SHA-256 known-answer check PASS
+Reviewed head e9efaddc722a5157d1217ac632bf72d9f4403e32
+Reconstructed Stage A SHA-256 e4e8fa53f52400da10843ed0acdb36150486d6b63881b8ef23f91e9d7371ec3e
+Revised candidate SHA-256 22d14dd8e086c9be25d966b860bcf79db03270e874abe939e8246b80da03fc57
+PASS R01 original identities
+PASS R02 exact original B replay
+PASS R03 review parents match
+PASS R04 revised intermediate
+PASS R05 exact revision replay and candidate hash
+PASS R06 B01 operation, archive and profile unchanged
+PASS R07 revised B exact replay
+PASS R08 outside Appendix A byte-identical
+PASS R09 history unchanged and archived
+PASS R10 all 50 predecessor RIDs retained
+PASS R11 exactly seven approved new RIDs
+PASS R12 no duplicate declarations
+PASS R13 carrier NUM provenance
+PASS R14 in-grow ENG and 4dp
+PASS R15 doclint ENG scope
+PASS R16 artifact grades
+PASS R17 R9 scoped NUM and separate OPEN
+PASS R18 complete R14 scope sentence twice
+PASS R19 R14 values and grade retained
+PASS R20 all 16 SG-M guards retained
+PASS R21 RRF reference only
+PASS R22 C3 and stage1 status
+PASS R23 draft status
+PASS R24 target domain and values
+PASS R25 missing originals remain explicit
+PASS negative: lost RID rejected by R05 exact revision replay and candidate hash
+PASS negative: grade promotion rejected by R05 exact revision replay and candidate hash
+PASS negative: RRF broadening rejected by R05 exact revision replay and candidate hash
+PASS negative: n=11 rejected by R05 exact revision replay and candidate hash
+PASS negative: stage1 adoption rejected by R05 exact revision replay and candidate hash
+PASS negative: history status rejected by R05 exact revision replay and candidate hash
+SUMMARY 25/25 PASS; 6/6 negative controls rejected.
+Original 41/5 validator and official checker were run by Claude on the old head; updated Node CLI and official checker on this revision remain receiving-review checks. No campaign run.
