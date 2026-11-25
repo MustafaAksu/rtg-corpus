@@ -1,7 +1,7 @@
 # NUMGEN C7C-M — Three native channels, nontrivial interface fibres and saturated composition
 
 **Date:** 25 November 2026.  
-**Status:** [SESSION] conditional mathematical design, not a preregistration freeze, physical admission, scientific adoption, new RID or campaign.  
+**Status:** [SESSION] reviewed conditional mathematical mechanism control; A* physical-admission proposal withdrawn after #388 (§9 governs the disposition and supersedes the proposed next gates in §7). No preregistration freeze, physical admission, scientific adoption, new RID or campaign.  
 **Purpose:** construct physically distinguishable (within the selected oriented model) yet interface-compatible pair representatives on one actual common primitive-prefix context, and separate a genuine nontrivial typed descent control from a global WD-DOM obstruction.  
 **Governance:** M4 HOLD; DISC-3 DEFER; frozen Census-1 INCONCLUSIVE / INCONCLUSIVE; canonical full-interface WD-DOM OPEN. This is a new prospective instrument proposal, not a change to frozen M2, its equivalences or its verdict matrix. It does not authorize Census-2. PI and independent co-owner review are required before any physical event admission.
 
@@ -124,5 +124,51 @@ Recommended next step is a scoped co-owner review of §§2–6 (especially the h
 - `evidence/numgen/c7c_m_channel_carrier_20261125/channel_carrier_exact_output.txt`, 712 bytes, SHA-256 `a556a8f72187ce94096da11b287ef17bdf1bcc9e0b74b6259648e2bc30fb84c7`, Git blob `4ae1319c6663b9efca02d4c3aa5828d11df37fe2`.
 - Executed in-session on Python 3.13.5 using only the standard library (Fraction exact arithmetic); reproducible with `python3 -I evidence/numgen/c7c_m_channel_carrier_20261125/channel_carrier_exact_check.py`. Local executed script/output Git blob hashes match the connector readback of both repository files. The exact jet table was also derived using SymPy before writing the Fraction checker. EV-RUN for algebra/type logic only, no independent-engine physical campaign.
 - With both-directions mode included: 54 ordered cross-channel records per fixed context, 24 typed pair fibres, 270 compatible source chains (including distinct but compatible middle directions), 2550 representative replacement checks, and explicit same-instance collision and nonunit controls. These are finite *abstract type-logic* counts conditional on A*, not a census of physical realizations. No trajectories, seeds, section scans or deformation panels were examined; no new frozen evidence universe. A full written proof for the conditional count and domain claims is in this record.
+
+## 9. Post-review co-owner disposition and analytic near-translate strengthening
+
+**Review receipt:** #388, head `a058bd670be3e3598a911cb541fff1f140dddc04`, record `records/numgen/NUMGEN_C7C_M_CHANNEL_CARRIER_REVIEW_CLAUDE_20261125.md`, #386 comment `7158383325`. The review was read in full. The stored replay and author's output have identical Git blob `4ae1319c6663b9efca02d4c3aa5828d11df37fe2`; the independent SymPy output reproduces the 30 entries, and the lag output records the stated occurrence-level statistics on the one 120,000-step seed prefix. This is stored-output readback, not a new numerical run or an independent execution by this session. Reread NUMGEN v1.22 SG-NG-20/23/26, §6.6 L-BACKBONE/L-MONO/L-PHASE/INF-1/2 at the governing tag.
+
+**Disposition (ChatGPT co-owner; PI adoption not implied):**
+- ACCEPT SCOPED the conditional §2–4 mathematical results and the independently checked algebra/type-logic evidence. Keep the conditional same-instance outer self-collision even if its physical premises are never admitted.
+- WITHDRAW A* as a physical-admission proposal in this form. The exact lack of global fixed-step predicate identity does not establish independent physical event types. Likewise, the review's near-translation evidence does not logically prove physical non-independence or a violation of SG-NG-20 by every possible interpretation. It identifies insufficient positive evidence for admission.
+- §5–6: retain as a **mechanism/type-logic control only**. The outer-pair premise A* admits all cross-channel pairs and the key preserves channel/context; hence admissibility saturation in that restricted domain is guaranteed by the construction. It has no independent evidential weight for physical WD-DOM. Factoring actual admissibility through an independently specified interface is the intended WD-DOM theorem; imposing that factorization through carrier admission is not evidence for it. The optional 2 × (1/2) = 1 control is readout multiplicity only (SG-NG-26). No M2 verdict, no physical carrier or arithmetic admission.
+- The earlier #383 A2 recommendation for M_- = C_r is withdrawn at the same scope; its reviewed mathematics and proposed conditional controls are not retracted. The adopted B_± precedent is not changed.
+
+### 9.1 Exact delay-coordinate dependence
+
+[ALG] (SESSION) In the local lifted primitive model, writing h(x)=η(Tx)−η(x), the exact map gives
+
+    η(Tx)−ρ(x) = η−sin η + e^ρ−1−ρ,
+    h(x)−ρ(Tx) = e^ρ−1−ρ,
+    ρ(x) = log(1 + η(Tx)−η(x) + sin η(x)).
+
+The log argument is exactly e^ρ>0. Thus consecutive local phase samples determine both H and M. This is a two-sample state-reconstruction identity, not an assertion of physical time, a globally unwrapped phase measurement, or a proof that all distinct deterministic event predicates are physically identical. It sharpens the review's linear-order observation without introducing a new physical criterion.
+
+### 9.2 A bound on full-word disagreement with phase translations
+
+[THM] (SESSION; new analytic result, independent review pending) On the common forward-invariant local tube of §3, let E_k, k=0,…,5, denote the Boolean directed transition indicators in cyclic order (P_+,H_-,M_-,P_-,H_+,M_+). For any fixed admissible starting state x define
+
+    J_k(N;x)=Σ_(n=0)^(N−1) |E_k(T^(n+k)x)−E_0(T^n x)|.
+
+Then J_k(N;x)=O_x(√N) for all k, with J_0=0. For k=1 and k=5, the reviewed cubic zero-curve jets sharpen this to O_x(log(N+2)). In particular the normalized full-word disagreement tends to zero, and the disagreement bound is o(N_{P_+}(N)) by INF-2. N counts primitive transitions; this is neither metric time nor a uniform-in-start finite-horizon bound.
+
+Proof:
+1. Let g_k(x) be the corresponding scalar observable at T^k x with sign chosen positive for its increasing crossing and negative for its decreasing crossing. By the cyclic order and the exact linear rotation of T, g_k(x)=η(x)+O(|W|²), with the same linear coefficient, and ∂_η g_k(0)=1. The translated indicator is exactly 1_{g_k(x)<0≤g_k(Tx)}; the source uses η instead of g_k. The half-open convention includes equality. Outside a strip |η|≤C|W|² their sign classifications agree. A mismatch requires one of the two endpoints in that strip. In angle coordinates this is distance to the family πℤ of order O(|W|).
+2. For k=1,5 the §4 reviewed table at (ρ,0), both rays, gives g_k(ρ,0)=O(|ρ|³). The mean-value theorem with ∂_η g_k≥1/2 after shrinking shows that sign disagreement requires |η|≤C'|ρ|³, hence angular distance to πℤ of order O(|W|²). This is the cubic improvement. The general safe width is O(√Q), not O(Q) for every pairing; §4 also has quadratic differences. No universal cubic-width premise is used.
+3. Split the state indices into the six residues n=6m+s. Apply the owner's block laws to the start T^s x in the same common tube. Set q_(m,s)=Q_true(T^(6m+s)x) and D_(m,s)=2πm−(φ̂_(6m+s)−φ̂_s). L-BACKBONE and L-PHASE yield q_(m,s)=1/m+O_x(m^(−3/2)) and D_(m+1,s)−D_(m,s)=τ/m+O_x(m^(−3/2)). In particular, for large m these increments lie between a/m and b/m for positive constants. The actual angle is φ̂_s−D_(m,s) modulo 2π. This use of each residue's own defect avoids replacing its angle by a block-start approximation at the smaller strip width.
+4. On an integer dyadic block J≤m<2J, D_(m,s) advances a bounded amount, uniformly for large J; at most O(1) lifted strip intervals are intersected. Each has width O(J^(−α)), with α=1/2 generally and α=1 for k=1,5. Since successive D values are at least a/(2J) apart, there are O(1+J^(1−α)) visits on the block. Sum over dyadic blocks and six residues, and count each visited state as a possible mismatch endpoint of at most two adjacent comparisons. This gives O_x(√N) or O_x(log(N+2)), respectively, plus finitely many early states. ∎
+
+**Scope:** This bound is a density statement about the full shifted Boolean words; it is stronger in coverage but not a replay of the review's finite, occurrence-matching statistic. It does not prove finitely many mismatches, exact translation on each orbit, or a physical re-indexing/no-independence theorem. The §4 nonidentity and the §9.2 asymptotic closeness are compatible. The known B_+ and B_- also have a phase-offset relation, so neither this bound nor delay-coordinate reconstructibility can automatically invalidate the adopted B_± control. They motivate withholding A*, not changing SG-NG-20 or SG-NG-26. Proof is in-ledger SESSION, no new trajectory or executable run.
+
+### 9.3 Next eligible research direction (design only)
+
+Do not select another dyad ray after these findings. The next candidate should be a genuinely owner-native event/support distinction, with physical co-realization certified separately from comparison keys. TDR-G v2.13 §6.3 (`TDRG-DEF-CONV-TICK`, `TDRG-DEF-CONV-P3CYC`, `TDRG-DEF-ORIENT`) and §6.13 (`TDRG-ALG-EVENT-INVENTORY`) distinguish permutations by component and support. A possible extension is SWAP, P3 and P4 successor shifts in a four-node, birth-free sector under the current balanced-tie orientation policy. P4 uses a different native support arity; it is not claimed to be a physically independent certified counting type merely by that arity. A capped birth count cannot be cofinally repeatable; an inert tie is not promoted into a third token-changing event.
+
+[ALG] (SESSION; one-step static fixture, not a search or a recurrence witness) At N=24, k=1, take the post-advance phases θ=(0,13,2,15) and snapshot tokens δ=(0,1,3,6); equivalently pre-advance phases (0,12,23,9). The defect graph is exactly the path 0–1–2–3: successive signed errors −1,−1,−1; the other absolute errors are 10,10,3. S=−3, so the adopted orientation reverses the path and the native successor shift gives δ'=(6,0,1,3). All four entries change. This establishes the existence of a non-tie native four-support path event at one step (read at the pinned TDR-G rule, not an engine run). It gives no invariant birth-free sector, no cofinal triple-stream orbit, no comparable physical replacement, no bounded class, and no WD-DOM test.
+
+Required next design gates, before any preregistration or search: (i) owner-confirmed support-sensitive event predicates with gauge/covariance, no mere labels, and an invariant sector/appropriate recurrence proof; (ii) actual same-context co-realization and cofinality of three accepted event types; (iii) physically distinct compatible replacements and an independent outer-pair certificate (or independent falsifier) not assumed by key design; (iv) SG-NG-26 discrimination separately if claiming dynamic admission. Use existing certified evidence or analytic arguments before proposing a new universe. The static P4 fixture is only a concrete feasibility check for the first candidate, not authorization to scan cycles.
+
+**Final disposition for this checkpoint:** mechanism control retained; A* not supported; C7C-M full-interface WD-DOM OPEN; M4 HOLD; DISC-3 DEFER; Census-1 INCONCLUSIVE / INCONCLUSIVE. No DSN/RID/frozen evidence change, no new campaign, no PI adoption. Independent review requested only for the new analytic bound/precision and the scope of this disposition; unchanged algebra campaigns need no rerun.
 
 *END OF RECORD.*
