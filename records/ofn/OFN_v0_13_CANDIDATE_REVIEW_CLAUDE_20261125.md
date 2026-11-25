@@ -77,3 +77,35 @@ I read all 145 edits from `edit_map.json` and checked each substantive new text 
 - No OFN RID, grade, OPEN status or definition changes.
 - No custody transfer, physical selection or FMS regrade.
 - The nine OFN inbox items stay open. The post-tag dispositions proposed in the release record §5 are acceptable as proposals.
+
+## 5. Round 2 — head `a541d1d89ea2ff16c58550c78aae083d682eea3a`, candidate `8659d0bc046a204aae2dc0a7a9d3de3c302771e4b66fbde607730933cdbb283e`
+
+**Verdict: ACCEPT.** I have no remaining required change.
+
+**Native replay.** The same script was run on the new head; output in `evidence/ofn/v0.13_review_claude/review_output_round2.txt`.
+- R1: BUILD PASS with 145 edits. The candidate and `edit_log.json` are byte-identical, and the native SHA-256 is `8659d0bc…283e`.
+- R2: `check_output.txt` and the negative-control output are byte-identical; C0–C10 PASS and NC1–NC20 caught.
+- R3: lint +11,179 bytes, i.e. +71 bytes against round 1, which matches the release record.
+- R5: 22 `[import:]` and 44 section-anchor locators, 0 problems.
+- Pipes check on current main `3164c3d9`: `pipes OK: 156 items in 20 inboxes`. The script's R4 line (149 items) ran on this review branch, which is based on the older main.
+
+**Delta check.** Between `2cc3af56` and `a541d1d8` the DSN changes in exactly one line, E1393, which now carries the N1 text verbatim. The other changes are limited to:
+- the checker's frozen identity constants (map, candidate, source);
+- the edit map and edit log entries for E1393, and the resulting hash links;
+- a dated `round2_delta` block in `source_verification.json`;
+- the release record and the entry note.
+
+**Dispositions of N2–N5.**
+- N2: accepted as updated. `pipes/OFN/20261124-NUMGEN-v1-22-adopted.md` is now on main (open).
+- N3: deferral accepted; the pin is correct.
+- N4: recorded in release record §2.
+- N5: the Claude lane text is the text I supplied.
+
+**P10 (`pipes/OFN/20261124-NUMGEN-v1-22-adopted.md`): CONFIRM the proposed scoped receipt.** I read the notice and `numgen-v1.22` §9.1. The proposed row says:
+- REQ-O09-03 fulfilled, with the L-BACKBONE typing of $q_m$ as block-sampled primitive $Q_{\rm true}$ (§9.1, the REQ-O09-03 ANSWERED row);
+- N-1A2 vocabulary only, with no closure import (the §9.1 OFN row and export row);
+- NG-7A reference-only, and proof pins retained.
+
+All of these match the source. The notice asks for nothing, and the candidate's E1393/E1394 already record this receipt, so the receipt requires no further DSN edit. P10 is separate from the §6.6 P2 re-annotation. Close P10 with the other nine after an adopted tag.
+
+**Release record and entry note (round 2).** Consistent with the facts above. After this readback, the release-record phrase "round-2 native replay pending" will be outdated. Updating it can wait for the adoption transaction or happen now; it does not affect the candidate hash.
