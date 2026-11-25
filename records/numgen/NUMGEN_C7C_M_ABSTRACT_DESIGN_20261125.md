@@ -142,4 +142,14 @@ Proposed R_pair provenance for each of (B_+,C_r), (B_-,C_r) and their orientatio
 
 This proposal changes no scientific adoption, frozen artifact, Census-1 result, DSN or RID. Full-interface WD-DOM OPEN, M4 HOLD, DISC-3 DEFER. The next decision is the scoped A2/A3 disposition, not approval of a campaign.
 
+## 8. Follow-up disposition after #386 / #388 (25 November 2026)
+
+[SESSION] The follow-up three-channel study and independent review are recorded in PR #386 (disposition commit `636e415426a4e07164783af038fa49597f28e4ef`, §9) and PR #388 (review head `a058bd670be3e3598a911cb541fff1f140dddc04`, comment `7158383325`).
+
+The A2 recommendation in §7 is **withdrawn as a physical-admission proposal**: C_r=M_- is retained only as a candidate mathematical crossing/readout and conditional machinery control. The independently reviewed A1, P1–P3, common-tube clarification and A3 conditional deductions are not retracted. The evidence of near-translation from the owner B_+ stream motivates withholding physical acceptance; it does not prove physical non-independence in every interpretation. No A2 acceptance was adopted by the PI or entered into the DSN.
+
+The same-instance outer self-collision result in #386 §2 adds a conditional obstruction beyond the cross-instance obstruction of §4 here. The channel-typed positive construction in #386 §5–6 is a mechanism control, with saturation guaranteed by the stipulated carrier; it is not independent evidence of physical WD-DOM. The new analytic full-word disagreement bounds and their precise scope are in #386 §9.2, independent review pending.
+
+**Next route:** do not add further dyad sections to rescue admission. Investigate owner-native event/support distinctions, with independently established co-realization, repeatability and outer-pair admissibility. A one-step native P4 feasibility fixture in the discrete branch is recorded in #386 §9.3; it is not a recurrence witness or an approved search design. No campaign, new preregistration, DSN/RID change or adoption. M4 HOLD; DISC-3 DEFER; Census-1 unchanged.
+
 *END OF RECORD.*
