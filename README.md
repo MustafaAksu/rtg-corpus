@@ -31,4 +31,4 @@ Documents keep their own DSN status (DRAFT, ADOPTED, …). Working notes are mar
 
 See `CONVENTIONS.md` for how a stream works here: the live file, releases, evidence, uploads and notices.
 
-RRF co-owner entry (proposed under CONVENTIONS §9): [RRF session orientation](records/rrf/RRF_COOWNER_SESSION_ORIENTATION.md).
+RRF co-owner entry (CONVENTIONS §9): [RRF session orientation](records/rrf/RRF_COOWNER_SESSION_ORIENTATION.md).
