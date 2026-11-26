@@ -11,7 +11,7 @@
 | Adopted base | rrf-v0.8.4, d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d |
 | Base SHA-256 / bytes | 2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce / 108615 |
 | S1 matrix blob | 8a32eba5578a791227af3c7de1f4bff43588a839 |
-| Intermediate SHA-256 / bytes | 369938efd9779d9f12361851fe5d7be18835247258a6e7829f5b06ec2fe053e2 / 123958 |
+| Intermediate SHA-256 / bytes | 9f162a7fb4c5f32e899a147edea43dbed0410a1db1c80aa629ac6ddcde8f89f9 / 124197 |
 | Build plan | `evidence/rrf/v0.9/s2a_build_plan.json` (38 nonoverlapping anchored operations) |
 | Builder | `evidence/rrf/scripts/build_rrf_s2a.py` |
 
@@ -52,3 +52,7 @@ Header DRAFT, §0 status grammar, §7.1–7.3 provisional source/consumer and OP
 - A5 final release preparation (later PI decision): actual import/reference ledger, size report, source and consumer notices, release record, tag; no historical evidence overwritten. LIT dependencies: none.
 
 Native Python replay and linter, independent content acceptance, S2b and publication pending. No source science regraded or newly proved by these checks.
+
+## Preparer structural readback repair
+
+Initial draft commit `c6f0f874a6a46d5b4c54d36c7b2dd5be1a90711d` (not submitted as an acceptance target) reproduced from its plan but exposed one new Markdown pipe delimiter in D1. Corrected the inline import delimiter; all tables now have uniform row width. Clarified the GEN G1 primitive-clock statement as a scoped exclusion, made H-JET cubic and target regularity explicit, restored the exact sourced-junction hypothesis σ_f≠0 in G2, retained the NUMGEN owner result grade, and removed nested code-delimiter ambiguity in T1. No adopted claim, numerical value, owner proof pin or scope was changed by these readback repairs. Same 38 anchored operation groups. Final exact intermediate identity above controls. Native replay still pending.
