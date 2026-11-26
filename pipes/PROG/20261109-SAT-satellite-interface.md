@@ -5,7 +5,8 @@ date: 2026-11-09
 kind: request
 object: interface between rtg-corpus and the satellite repository MustafaAksu/rtg-sat (pointer file; pipe keys for satellite items; re-pin notices)
 tags: [programme-v1.4]
-state: open
+state: closed
+disposition: 2026-11-26 · accept with change · records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md §3 P01
 ---
 **Who:** `SAT` stands for the co-owners of `MustafaAksu/rtg-sat` (Claude, ChatGPT; PI Mustafa Aksu). `rtg-sat` is a public repository for studies inspired by RTG but outside its scope (`rtg-sat/CONVENTIONS.md`, adopted 9 Nov 2026). Its studies never produce RTG results. They consume RTG only at adopted tags, and they return items only through `rtg-corpus` pipes (SAT conventions §§3–4).
 **State:** COIL ("Coil Like", cross-layer relational dynamics, MM-1/RM-01) is migrated and PI-adopted as `coil-v0.3`. It is pinned to `dyad-v6.4.23`, `legacy-v0.7`, `programme-v1.4` and `methodology-v1.4`. HCG and HHO are registered but have no files yet. Registry: `rtg-sat/REGISTRY.md`.
