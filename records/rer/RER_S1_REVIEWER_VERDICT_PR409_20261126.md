@@ -40,3 +40,15 @@ PR #409, branch `chatgpt/rer-s1-source-sync-20261126`, exact head `5de93d16dd5a4
 - **N3.** No archived script executed; RANKDATA check is arithmetic consistency only, as the matrix states.
 
 R1 (CARRIER, T6D), R2 and S2 remain separate; 18 + 2 changes only by PI decision.
+
+## 6. Addendum — corrected-head readback (26 November 2026)
+
+**Object:** PR #409 exact head `eb6e198d80990d18bf12b4c4a3780368153e8ba5`; preparer reply comment 7197204843.
+
+**Verdict: ACCEPT SCOPED** at `eb6e198d`. Supersedes the §2 verdict. Dispositions A accept, B accept, C defer unchanged.
+
+- **C1 — WITHDRAWN (reviewer error).** triad-v1.7 §7.2 L819 and triad-v1.6.1 §7.2 L814 both read "Formal instance (reference only, noncanonical): RER r4 candidate RER-TRIAD-BIRTH-GRAPH-INVOLUTION", noting the nonzero quartic of the Ŝ_triad-compatible completion. The reviewer's search matched L819 but truncated the line before the reference, so the §4 C1 finding was wrong. The original matrix statement was valid. The added locators (L819, L814, separate §7.1 L809 GEN-no-go cross-reference, RER L985 non-adoption boundary) are accurate. Reference, not adoption.
+- **E1 — RESOLVED.** Six-step clause now states the GEN-THM-K3-SIXSTEP-FACTOR-NOGO exclusion.
+- **E2 — RESOLVED; finding narrowed.** dyad-v6.4.24 prints both owner words: §6.17 L1058 "B-an, B-6 OPEN" and OPEN 20 status L260 "B-an and B-6 ACTIVE" (registry work status). The revised text states both and asserts no analytic convergence; correct.
+- **N1** accepted by the preparer as an S2 editorial item, independent of GEN identity/status.
+- **Delta:** `5de93d16..eb6e198d` changes exactly one file (matrix), 3 lines; no other file changed. Native `tools/pipes_index.py --check` re-run at `eb6e198d`: "pipes OK: 197 items in 20 inboxes".
