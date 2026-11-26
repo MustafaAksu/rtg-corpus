@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: notice
 object: DYAD-ALG-KP-FRAME-SCALE; DYAD-THM-SMOOTH-EQUIVARIANT-CHART (v6.4.20 content)
 tags: [dyad-v6.4.23, rer-v0.2]
-state: open
+state: dispositioned
+disposition: 2026-11-26 · accept · records/rer/RER_S1_SOURCE_INTERFACE_MATRIX_20261126.md
 ---
 Dyadic `dyad-v6.4.23` (SHA-256 `9f874ccc…25cb`). This notice carries the still-unmet content of the Dyadic notices N20 (prepared 22 Oct 2026 for PI routing and never sent; disposition `records/dyad/DYAD_NOTICES_N16_N21.md` §"Disposition, 3 November 2026"). Sections below are those of v6.4.23.
 - `DYAD-ALG-KP-FRAME-SCALE` (§6.9): frame qualifier for the bridge lemma; $\kappa_{\rm shear}$ unchanged.
