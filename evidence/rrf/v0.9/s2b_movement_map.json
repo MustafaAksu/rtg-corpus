@@ -1,0 +1,1512 @@
+{
+  "format": "RRF-S2B-exact-span-v1",
+  "status": "PROPOSED profile-specific movement map; independent review required; no generic checker PASS claimed",
+  "base": {
+    "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+    "commit": "98da97c311a917d1539b9c31afaba779bc75a73f",
+    "path": "dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+    "sha256": "390f75e447b7d5a9dcb01810d7eb513e9feef3c157f0de2f2f79afb259b39d72",
+    "lines": 691,
+    "bytes": 131089
+  },
+  "candidate": {
+    "path": "dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+    "sha256": "6f258d1833cfe7d67d47addf4ff32f9873c08987b484d803c96e9745183f5dd2",
+    "bytes": 120196,
+    "lines": 654
+  },
+  "pi_scope": "PI 26 Nov 2026 accepted S2b and authorized merges of #406/#410; closure-criterion wording accepted for candidate, no adoption/release.",
+  "operations": [
+    {
+      "id": "M001",
+      "kind": "editorial",
+      "reason": "YAML to current draft header; no publication, no altered scientific statement. Status summary readout of §§0,6,8.",
+      "source": [
+        1,
+        17
+      ],
+      "source_sha256": "46814f85babeb34d3bf0169c2dbc6a30437d84bf025938d17bd61a36c8d0ac3e",
+      "destination": [
+        1,
+        12
+      ],
+      "destination_sha256": "09d1b863cfb76d0f9367374756380f067082c1d150df96928093417cdd3b6aef",
+      "text": "# RTG — RRF Representation Registry — v0.9\n\n**Title:** RTG — RRF Representation Registry\n**Version:** v0.9\n**Date:** 26 November 2026\n**Scope:** Isolated continuous dyad (four profiles) and one provisional network profile; working representation standard only.\n**Document class:** Infrastructure / representation registry; declared nonstandard section map (§0). §1 is equation-annotation syntax rather than a 200–400 word state summary.\n**Document status:** DRAFT — S2b review candidate; not adopted. `rrf-v0.8.4` governs until the PI adoption and release.\n**Supersedes:** RTG_RRF_REPRESENTATION_REGISTRY.md at `rrf-v0.8.4` (SHA-256 `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce`), proposed successor only.\n**Companion documents:** §0.2 current-source table and §7 import/use records; historical PRR Wrap-up v0.2 §§20, 26 (NONCANONICAL parent).\n**DSN Methodology:** `methodology-v1.4`.\n**Status summary:** The registry produces no new physics; it makes representation mistakes of the R11 type mechanically visible. All dyad statements are conditional on the postulated generator T. OPEN-A/B/E remain ACTIVE."
+    },
+    {
+      "id": "M002",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        18,
+        20
+      ],
+      "source_sha256": "fe292184c1d29f8380b5d7d1894644c3480527b047ed8f29721e3326f6cd69f3",
+      "destination": [
+        13,
+        15
+      ],
+      "destination_sha256": "fe292184c1d29f8380b5d7d1894644c3480527b047ed8f29721e3326f6cd69f3"
+    },
+    {
+      "id": "M003",
+      "kind": "archive",
+      "reason": "S2a staging paragraph and superseded v0.8.2–v0.8.4 publication/OPEN20 overlays; current scope and smooth/analytic status retained in §§0.2,2.4b–c,6.2,8.12; exact bytes in frozen commit.",
+      "source": [
+        21,
+        30
+      ],
+      "source_sha256": "9311a450aa878b7d6146b96688ec58746def600d8c9725d1dad6290fd197d5a0",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          21,
+          30
+        ],
+        "sha256": "9311a450aa878b7d6146b96688ec58746def600d8c9725d1dad6290fd197d5a0"
+      }
+    },
+    {
+      "id": "M004",
+      "kind": "navigation",
+      "reason": "Declared infrastructure/registry layout; navigation only.",
+      "destination": [
+        16,
+        16
+      ],
+      "destination_sha256": "c73c80213c14e1fe580f3a9df71e778e7211ae7ca89823d90e8578255a0635c4",
+      "text": "**Section map:** §0 scope, evidence discipline and current state; §1 equation syntax; §§2–5 profiles, transport, comparators and cycles; §6 interface contracts and OPEN register; §7 owner uses, consumers, evidence and unregistered objects; §8 standing scope guards; Appendices A/B change and correction routing."
+    },
+    {
+      "id": "M005",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        31,
+        36
+      ],
+      "source_sha256": "77401764e94e78a691a0709c5376978f061d4a2e3df03d5932b084a9ce4fb774",
+      "destination": [
+        17,
+        22
+      ],
+      "destination_sha256": "77401764e94e78a691a0709c5376978f061d4a2e3df03d5932b084a9ce4fb774"
+    },
+    {
+      "id": "M006",
+      "kind": "editorial",
+      "reason": "Remove stage-work instruction from live grammar.",
+      "source": [
+        37,
+        37
+      ],
+      "source_sha256": "64bb0e307209a1a20b6b8b61c10df88a54f3f28cc333425611cc06ee1f535fc2",
+      "destination": [
+        23,
+        23
+      ],
+      "destination_sha256": "52099c7b8cf71eba846a53959e9e0099584691a11d3056583862ff5ebe63dd1f",
+      "text": "**Status grammar (Methodology v1.4).** §§0.6, 3–5, 12.2 govern. Claim status, model assumptions, physical interpretation, evidence, OPEN lifecycle and document adoption are independent. Retain owner `[DEF]`, `[ALG]`, `[THM]`, `[NUM]`, `[HYP]`, `[OPEN]`, `[RESULT] [from: …]` and `[COR]` distinctions; an artifact identifier is not a theorem RID. `RID unavailable` identifies an unnumbered owner statement without inventing a RID or borrowing an OPEN ID as a theorem ID. Exact source versions, local use, inherited scope, depends-on and verification belong to the import record. Historical syntax is a migration input; reference-only use is distinct from scientific import."
+    },
+    {
+      "id": "M007",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        38,
+        38
+      ],
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination": [
+        24,
+        24
+      ],
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "M008",
+      "kind": "editorial",
+      "reason": "Remove editorial stage label.",
+      "source": [
+        39,
+        39
+      ],
+      "source_sha256": "79f39b47a30f31d59decab6ebdca1d7df201c7613d379b6a4a237a1262e84f54",
+      "destination": [
+        25,
+        25
+      ],
+      "destination_sha256": "2db9796afd84b74efcfd0ba14a4c985e1687ae50b401e3eeaae6e5df11bbd8a0",
+      "text": "**Provenance vocabulary.**"
+    },
+    {
+      "id": "M009",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        40,
+        46
+      ],
+      "source_sha256": "df43aa0919ec0b069dee759242ffc47744b8da8a93f9bb9d8a70acaa5f28b518",
+      "destination": [
+        26,
+        32
+      ],
+      "destination_sha256": "df43aa0919ec0b069dee759242ffc47744b8da8a93f9bb9d8a70acaa5f28b518"
+    },
+    {
+      "id": "M010",
+      "kind": "archive",
+      "reason": "Dated v0.7 reading/finalization account; old reading extent and exact source snapshots remain in frozen §10 and S0/S1 records; non-rerun limitations retained in §7.3 and source blocks.",
+      "source": [
+        47,
+        50
+      ],
+      "source_sha256": "3be0493a27c0df30846931e9fbb9fca17f4b64e7269c8ae1baf64d3bcc35ebbf",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          47,
+          50
+        ],
+        "sha256": "3be0493a27c0df30846931e9fbb9fca17f4b64e7269c8ae1baf64d3bcc35ebbf"
+      }
+    },
+    {
+      "id": "M011",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        51,
+        56
+      ],
+      "source_sha256": "58d9acef187e3be8ea16205c2105d4580a3319ce6e73e6513f759536da6b96e3",
+      "destination": [
+        33,
+        38
+      ],
+      "destination_sha256": "58d9acef187e3be8ea16205c2105d4580a3319ce6e73e6513f759536da6b96e3"
+    },
+    {
+      "id": "M012",
+      "kind": "editorial",
+      "reason": "Distinguish historical load-bearing source receipts from live owner status.",
+      "source": [
+        57,
+        57
+      ],
+      "source_sha256": "12e426e220715c3e55e1798fca4677e3b140b677f8af6dc06f92db9fb9beb53b",
+      "destination": [
+        39,
+        39
+      ],
+      "destination_sha256": "1cd32631482bf100b00b9e8b6a0fefc946e1e0a0451b8896e5ce096a64fe2f6f",
+      "text": "### 0.1 Retained proof-source receipts and dependency boundary"
+    },
+    {
+      "id": "M013",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        58,
+        85
+      ],
+      "source_sha256": "f7d444f944aeb61ef2b9c8caca17f105a9b0e5c14fa03bdb5e46fa65e71e775a",
+      "destination": [
+        40,
+        67
+      ],
+      "destination_sha256": "f7d444f944aeb61ef2b9c8caca17f105a9b0e5c14fa03bdb5e46fa65e71e775a"
+    },
+    {
+      "id": "M014",
+      "kind": "editorial",
+      "reason": "Resolve removed §10 navigation; no repin.",
+      "source": [
+        86,
+        86
+      ],
+      "source_sha256": "46943f5993e79ec0905a355039c96aca8c3159d654da162ab5b901391fbc9e0d",
+      "destination": [
+        68,
+        68
+      ],
+      "destination_sha256": "e7734127bf5eadfab69ca6f78be9d9bbd6eb00f6452f161e73e74c7dcc30f6db",
+      "text": "Dated provenance and proof-source pins are distinct from the current-use table (see §§0.1, 7.3). The updated live RECOG uses in §§2–4, 6.3 are checked at v0.3.27; proof evidence at v0.3.14 and v0.3.20/21 is retained as such. DYAD v6.4.10/12/13/18, GEN v2.8.9 and NUMGEN v1.20.7 retained proof/source pins are not silently superseded. OFN's v0.9 covariance/rank-typing source and v0.10 readout history remain traceable; amended contracts use ofn-v0.13. See §7.2."
+    },
+    {
+      "id": "M015",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        87,
+        87
+      ],
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination": [
+        69,
+        69
+      ],
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "M016",
+      "kind": "archive",
+      "reason": "Explicitly historical predecessor §0.2 block restored by S2a C1. Exact bytes recoverable from frozen S2a L88–107 and adopted rrf-v0.8.4 L69–86; current RF-O09-03/04 and SG-15 retained immediately below.",
+      "source": [
+        88,
+        107
+      ],
+      "source_sha256": "77db77a33301b2401d3ecfff81fdf576dfc23bb52f4319fa99710061f233e2e8",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          88,
+          107
+        ],
+        "sha256": "77db77a33301b2401d3ecfff81fdf576dfc23bb52f4319fa99710061f233e2e8"
+      }
+    },
+    {
+      "id": "M017",
+      "kind": "editorial",
+      "reason": "Remove historical block end marker, retain current guard and pointers byte-for-byte after marker.",
+      "source": [
+        108,
+        108
+      ],
+      "source_sha256": "f7844a76df233465c8585917b4670eda216a3fcef2ce69c7d065c83ed3dc1a82",
+      "destination": [
+        70,
+        70
+      ],
+      "destination_sha256": "77d181b654d5c491151438d39253c300d9e551ddaff4813666505329656cef5d",
+      "text": "OFN v0.13 retains RF-O09-03/04; the old v0.9 locator remains a historical receipt (recovered `upload/corpus-originals-20261123/RTG_ONTOLOGICAL_FOUNDATIONS_v0_9.md`, blob fefb1549f80ff4637ed67a69aea354711f7234e1, targeted text read; no ofn-v0.9 tag asserted). TRIAD v1.7 §6.15, SG-15 remains operative: unit direction, policy-scaled child and source operator are distinct; no-gain bound requires the declared coherent source construction and real weight 0≤g2≤2. These references do not select physical source, carrier or node-coincidence axiom."
+    },
+    {
+      "id": "M018",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        109,
+        111
+      ],
+      "source_sha256": "6e3dee6e74b82f8470533b413d8c24e053bdba5e96885f8ef80b209c6fe0839e",
+      "destination": [
+        71,
+        73
+      ],
+      "destination_sha256": "6e3dee6e74b82f8470533b413d8c24e053bdba5e96885f8ef80b209c6fe0839e"
+    },
+    {
+      "id": "M019",
+      "kind": "navigation",
+      "reason": "Attach already proposed local identity to its statement home, not an owner theorem import.",
+      "destination": [
+        74,
+        74
+      ],
+      "destination_sha256": "ffc1198cf6d08c925fbee8c1f61eb9847f89ff39835c2c83b88b2437782f155f",
+      "text": "**Local candidate identity:** `RRF-DEF-PASSIVE-TRANSPORT` — passive transport / reimposed-model distinction; registration awaits adoption."
+    },
+    {
+      "id": "M020",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        112,
+        115
+      ],
+      "source_sha256": "8066baf078049c9ce0882ec12e3369e3fe142e486b291c96fa1e4ca1a086498e",
+      "destination": [
+        75,
+        78
+      ],
+      "destination_sha256": "8066baf078049c9ce0882ec12e3369e3fe142e486b291c96fa1e4ca1a086498e"
+    },
+    {
+      "id": "M021",
+      "kind": "archive",
+      "reason": "Superseded v0.8 evaluation boundary; historical approval/evidence provenance in immutable base.",
+      "source": [
+        116,
+        117
+      ],
+      "source_sha256": "b5927b6c9692c3b68385346f6689069813b0e986f523b7ff19ef5f9866cab256",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          116,
+          117
+        ],
+        "sha256": "b5927b6c9692c3b68385346f6689069813b0e986f523b7ff19ef5f9866cab256"
+      }
+    },
+    {
+      "id": "M022",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        118,
+        226
+      ],
+      "source_sha256": "05c2059866ba58508c26a49fdf71d2a68c2a15738a907d078832bae239d176a7",
+      "destination": [
+        79,
+        187
+      ],
+      "destination_sha256": "05c2059866ba58508c26a49fdf71d2a68c2a15738a907d078832bae239d176a7"
+    },
+    {
+      "id": "M023",
+      "kind": "editorial",
+      "reason": "Remove dated draft title; content retained.",
+      "source": [
+        227,
+        227
+      ],
+      "source_sha256": "e3ab5acecec9975c8e059a1992bb6d772e38ad5368acc1ad4d1eae33f5606b6f",
+      "destination": [
+        188,
+        188
+      ],
+      "destination_sha256": "ad4c9d02cf1cf6a5a64fb97fbee84001389c13b74d063cd7d0c8543f3807d082",
+      "text": "### 2.4b Formal involution and local existence (not a new profile)"
+    },
+    {
+      "id": "M024",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        228,
+        242
+      ],
+      "source_sha256": "415920f408ab7c3a8b9fa0d8c1203a1699f91e92f84fba3d982657b896844dd4",
+      "destination": [
+        189,
+        203
+      ],
+      "destination_sha256": "415920f408ab7c3a8b9fa0d8c1203a1699f91e92f84fba3d982657b896844dd4"
+    },
+    {
+      "id": "M025",
+      "kind": "navigation",
+      "reason": "Attach already proposed local identity to its statement home, not an owner theorem import.",
+      "destination": [
+        204,
+        204
+      ],
+      "destination_sha256": "8343c9bb4b4bd10d5458067a76251d8c55bee27710ea3df0355d351d6bcf6c47",
+      "text": "**Local candidate identity:** `RRF-ALG-ODD-ROOT-EQUIVALENCE` — conditional class-wise local existence equivalence; registration awaits adoption."
+    },
+    {
+      "id": "M026",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        243,
+        246
+      ],
+      "source_sha256": "28639bf65389481d2153dfb2601ef827017d40aa0e45ac8c7b85b0d204b47fa5",
+      "destination": [
+        205,
+        208
+      ],
+      "destination_sha256": "28639bf65389481d2153dfb2601ef827017d40aa0e45ac8c7b85b0d204b47fa5"
+    },
+    {
+      "id": "M027",
+      "kind": "editorial",
+      "reason": "Current-state heading; no mathematical change.",
+      "source": [
+        247,
+        247
+      ],
+      "source_sha256": "1323a03807adf4ba4e17d6a6ba444edd9175256a4a4efc951b28f3464849a9fb",
+      "destination": [
+        209,
+        209
+      ],
+      "destination_sha256": "12d52308d8764dc8a87c370a2c4dfbc118e5eb13ed728e4455053cc1771ba5f4",
+      "text": "### 2.4c Formal ℤ₆ and smooth centralizer"
+    },
+    {
+      "id": "M028",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        248,
+        330
+      ],
+      "source_sha256": "3c53cc00ceebcd723d7f078a4ed6fd36fe6daf8059c18d68ff28d58c0e130199",
+      "destination": [
+        210,
+        292
+      ],
+      "destination_sha256": "3c53cc00ceebcd723d7f078a4ed6fd36fe6daf8059c18d68ff28d58c0e130199"
+    },
+    {
+      "id": "M029",
+      "kind": "navigation",
+      "reason": "Attach already proposed local identity to its statement home, not an owner theorem import.",
+      "destination": [
+        293,
+        293
+      ],
+      "destination_sha256": "f368f19d183877e11d978430ce918257b9b36895b6e1dc37b8f2fa3bca89e9b3",
+      "text": "**Local candidate identity:** `RRF-ALG-S-DECOMPOSITION` — local nonzero comparator decomposition; registration awaits adoption."
+    },
+    {
+      "id": "M030",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        331,
+        367
+      ],
+      "source_sha256": "8cf949fd49ef4c139c33c99432243340ed8e46a6eac9223a6413d3c3522a4138",
+      "destination": [
+        294,
+        330
+      ],
+      "destination_sha256": "8cf949fd49ef4c139c33c99432243340ed8e46a6eac9223a6413d3c3522a4138"
+    },
+    {
+      "id": "M031",
+      "kind": "navigation",
+      "reason": "Attach already proposed local identity to its statement home, not an owner theorem import.",
+      "destination": [
+        331,
+        331
+      ],
+      "destination_sha256": "e394ba375dec90e5fcd9c66c3a2ee458b33114a07f64db5fd41b2a1015caec8c",
+      "text": "**Local candidate identity:** `RRF-ALG-FINITE-SWAP-TRANSPORT` — exact representation-level involution transport, not exact dynamical commutation; registration awaits adoption."
+    },
+    {
+      "id": "M032",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        368,
+        373
+      ],
+      "source_sha256": "32a4f94936f93522077271a4a9612cd2ccb12b692174ef57814c838c2540f7af",
+      "destination": [
+        332,
+        337
+      ],
+      "destination_sha256": "32a4f94936f93522077271a4a9612cd2ccb12b692174ef57814c838c2540f7af"
+    },
+    {
+      "id": "M033",
+      "kind": "navigation",
+      "reason": "Attach already proposed local identity to its statement home, not an owner theorem import.",
+      "destination": [
+        338,
+        338
+      ],
+      "destination_sha256": "f3ff69d9a02dd3fbad893144a689938173144ec26ac2d783c639f225d49de2cb",
+      "text": "**Local candidate identity:** `RRF-DEF-TYPED-COVARIANCE` — typed observable/action criterion, not physical gauge selection; registration awaits adoption."
+    },
+    {
+      "id": "M034",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        374,
+        391
+      ],
+      "source_sha256": "87169c449a0724f3974f45dc21401a87e2574b4c0f8f4b9a945e45449114a9db",
+      "destination": [
+        339,
+        356
+      ],
+      "destination_sha256": "87169c449a0724f3974f45dc21401a87e2574b4c0f8f4b9a945e45449114a9db"
+    },
+    {
+      "id": "M035",
+      "kind": "navigation",
+      "reason": "Attach already proposed local identity to its statement home, not an owner theorem import.",
+      "destination": [
+        357,
+        357
+      ],
+      "destination_sha256": "8f7fc519cb3abb94b8716771a83849304b84b22f30f50caa16b00508295a93a0",
+      "text": "**Local candidate identity:** `RRF-DEF-EVENT-TRANSPORT` — representation/admissibility convention only; RECOG-ALG-BTOKEN-TRANSPORT remains the owner result; registration awaits adoption."
+    },
+    {
+      "id": "M036",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        392,
+        507
+      ],
+      "source_sha256": "4fda8017582ec1e94f8bcb17fb9731a6474cbe12715e8885a5c4e361e5957c2d",
+      "destination": [
+        358,
+        473
+      ],
+      "destination_sha256": "4fda8017582ec1e94f8bcb17fb9731a6474cbe12715e8885a5c4e361e5957c2d"
+    },
+    {
+      "id": "M037",
+      "kind": "navigation",
+      "reason": "Relocate unchanged OPEN table to its live dependency section; maintain local aliases.",
+      "destination": [
+        474,
+        474
+      ],
+      "destination_sha256": "7cd39449120b8ea8be3a36d196737ccd7da347fe190372f4b64c52721bef4e3c",
+      "text": "### 6.5 OPEN register (representation scope)"
+    },
+    {
+      "id": "M038",
+      "kind": "exact",
+      "reason": "Move OPEN preamble from former §7.3.",
+      "source": [
+        543,
+        544
+      ],
+      "source_sha256": "30e5cdb1eea4029b2c948113ec7d449c63ab7070a4b2989c7a22e52faf40294d",
+      "destination": [
+        475,
+        476
+      ],
+      "destination_sha256": "30e5cdb1eea4029b2c948113ec7d449c63ab7070a4b2989c7a22e52faf40294d"
+    },
+    {
+      "id": "M039",
+      "kind": "editorial",
+      "reason": "PI decision on wording only; preserve remainder of scope and no closure rule adoption.",
+      "source": [
+        545,
+        545
+      ],
+      "source_sha256": "175a1e5253daabdf9ec1b45e58954b8ada7e263aaf75ae41dbb934c156f995f8",
+      "destination": [
+        477,
+        477
+      ],
+      "destination_sha256": "cf2e9ac80d8befa11ae6b972d326573227ec8fd34e248e3e386f86b8cb39dced",
+      "text": "**Closure criteria (PI-approved for the v0.9 candidate, 26 November 2026).** The final column contains the accepted candidate wording, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. It is not an adopted closure rule and establishes neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged."
+    },
+    {
+      "id": "M040",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        546,
+        546
+      ],
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination": [
+        478,
+        478
+      ],
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "M041",
+      "kind": "editorial",
+      "reason": "PI-approved wording; table column metadata only.",
+      "source": [
+        547,
+        547
+      ],
+      "source_sha256": "d13f17d5a71c466091f0db47c4f1b5b44f354779666ade4275316cdecb006418",
+      "destination": [
+        479,
+        479
+      ],
+      "destination_sha256": "9a6377e7ed3bc28ada69b2d5a6aa71d57781c5a533a3627ca883debb5589caf2",
+      "text": "| Local alias / proposed RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Closure criterion (candidate); relevant interfaces |"
+    },
+    {
+      "id": "M042",
+      "kind": "exact",
+      "reason": "Move exact four OPEN rows and BR-Q2 boundary.",
+      "source": [
+        548,
+        555
+      ],
+      "source_sha256": "37cb338dedfb933f75ab9d184575ab9e3ee390cd59f1531bc89309fd766b778d",
+      "destination": [
+        480,
+        487
+      ],
+      "destination_sha256": "37cb338dedfb933f75ab9d184575ab9e3ee390cd59f1531bc89309fd766b778d"
+    },
+    {
+      "id": "M043",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        556,
+        557
+      ],
+      "source_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+      "destination": [
+        488,
+        489
+      ],
+      "destination_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090"
+    },
+    {
+      "id": "M044",
+      "kind": "editorial",
+      "reason": "Current section navigation; preserve existing §7 references.",
+      "source": [
+        508,
+        509
+      ],
+      "source_sha256": "242b1393a86fc9d6dfa065959fe96a06f026d2921536a41eb5578b2532debe6b",
+      "destination": [
+        490,
+        491
+      ],
+      "destination_sha256": "1ffd69ac17d32aff37d5b1af1d18329103d94a319bc66848f981c34dd46c566b",
+      "text": "# 7. Owner uses, consumer references, evidence and unregistered objects\n"
+    },
+    {
+      "id": "M045",
+      "kind": "editorial",
+      "reason": "Remove stage marker from reference-only register heading.",
+      "source": [
+        516,
+        516
+      ],
+      "source_sha256": "70b974d2a32b7ff571554bd1e91529420b9f69018665e034cddf5634a0edfc23",
+      "destination": [
+        492,
+        492
+      ],
+      "destination_sha256": "9b62feee53cdcbb12b0441756e80ac78e3389ae146c40e1d7a4706d2aac9880a",
+      "text": "## 7.1 Reference-only consumer and boundary register"
+    },
+    {
+      "id": "M046",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        517,
+        527
+      ],
+      "source_sha256": "9293e0cba97b8b8252fb15681af55a5faa1dc95c7d96fd8d8bace14e1dd83c81",
+      "destination": [
+        493,
+        503
+      ],
+      "destination_sha256": "9293e0cba97b8b8252fb15681af55a5faa1dc95c7d96fd8d8bace14e1dd83c81"
+    },
+    {
+      "id": "M047",
+      "kind": "editorial",
+      "reason": "Replace stage instruction by navigation. Ledger is scoped, no new claim.",
+      "source": [
+        528,
+        528
+      ],
+      "source_sha256": "d24b2921507bb8e21bab59ee68eac613b80ee29111d4959cecf355adfa469236",
+      "destination": [
+        504,
+        504
+      ],
+      "destination_sha256": "f59334797d071670939fc78554f6edb4b7549b51a5f27b13f6d81d0e0990b73a",
+      "text": "Claim-level source and scope entries remain at their technical homes in §§2–6; the accepted S1 matrix and S2a build record identify every checked owner version, decision record, point of use and inherited scope. Current checks are EV-SRC-READ; source hashes/identity EV-HASH from S1, not EV-RUN. Baseline proof pins and historically load-bearing evidence are retained. The following current references are separate from owner imports: sharper C7/R9 rows (§§2.4,4.1a); frame scale (§3.1); R9-dependent DYAD phase and independent A1a existence (§4.1a); OFN SESSION isolation/modulus (§6.2a); GEN current G-20 and export guard (§§6.2a,6.3); CN-05 owner OPEN convention (§3.1); NUMGEN P2 re-annotation (§6.1); RER and UVM (§§6.4,7.1). No new owner proof or certificate rerun. Historical evidence pointers, source access gaps, precise import entries and missing-owner-RID routing are retained below; no fabricated owner RID. The historical v0.8 QA JSON and PRR review ZIP remain missing. S0 check is pinned to S0, not a prospective verifier after DSN changes."
+    },
+    {
+      "id": "M048",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        529,
+        529
+      ],
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination": [
+        505,
+        505
+      ],
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "M049",
+      "kind": "navigation",
+      "reason": "Navigation ledger of all frozen inline imports; exact source tags preserved at use, no new scientific assertion. DYAD §6.12 locator directly checked in v6.4.24.",
+      "destination": [
+        506,
+        572
+      ],
+      "destination_sha256": "0196ff30676cbec1a196c3b32db0d1b6be70cce6713e20b72b3c1fca950851d1",
+      "text": "#### Import ledger — claim/use index\n\nEach entry points to the complete local claim/use block at the identified section and line in this review candidate; the inherited scope, assumptions, chart, domain, clock and dependency conditions are the ones at that block and the actual owner pin, not a new inference. The frozen-source locator and corresponding candidate locator are also in the movement map. Line numbers are candidate navigation; section and exact source identity control. Source status is distinguished from RRF use. For historical receipts, S0 custody and S1's exact-source matrix govern verification; no certificate execution is asserted here. Unnumbered source blocks remain `RID unavailable`; owner-RID assignment follow-up is unresolved, and no sent governance request is inferred. Evidence RIDs do not stand in for scientific claim RIDs.\n\n| Use key | Actual source pin / RID or exact source locator | Source status / local use boundary | Local use, inherited scope and depends-on | Verification / synchronization |\n|---|---|---|---|---|\n| I-01 | DYAD v6.4.10 §1, definition Q_true; RID unavailable | RID unavailable; owner assignment follow-up | §2.1; use line 109; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-02 | DYAD v6.4.10 §6.4 ISP (#sec-6-4-isp), anti-correlation frame; RID unavailable | RID unavailable; owner assignment follow-up | §2.1; use line 109; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-03 | DYAD v6.4.24 §1; RID: DYAD-DEF-PRIMITIVE-MAP | Owner definition/contract | §2.2; use line 123; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-04 | RECOG v0.3.14 §6.14, cert check 9; evidence RID: RECOG-ART-R11-LEDGER | Evidence pointer (not theorem RID) | §2.2; use line 126; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-05 | RECOG v0.3.14 §6.4 and §6.7; RID unavailable | RID unavailable; owner assignment follow-up | §2.2; use line 126; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-06 | DYAD v6.4.10 §6.14, definition 𝓛; RID unavailable | RID unavailable; owner assignment follow-up | §2.3; use line 136; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-07 | DYAD v6.4.10 §1; OFN v0.8 | Source block; no new grade asserted | §2.3; use line 139; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-08 | DYAD v6.4.10; RID: DYAD-THM-C21 (actual historical source pin) | Owner THM at stated scope | §2.3; use line 139; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-09 | RECOG v0.3.14 §6.14, cert check 9; evidence RID: RECOG-ART-R11-LEDGER | Evidence pointer (not theorem RID) | §2.3; use line 142; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-10 | RECOG v0.3.14 §6.14; evidence RID: RECOG-ART-R11-LEDGER | Evidence pointer (not theorem RID) | §2.3; use line 143; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-11 | DYAD v6.4.10 §6.12, definition E_odd; RID unavailable | RID unavailable; owner assignment follow-up | §2.3; use line 144; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-12 | OFN v0.9 §4.4 #ofn-rank-typing; RID: RTG-OFN-DEF-RANK-TYPING | Owner definition/contract | §2.3; use line 147; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-13 | DYAD v6.4.10 §6.14; RID: DYAD-ALG-NF6 | Owner ALG at stated scope | §2.4; use line 154; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-14 | RECOG v0.3.14 §6.14, refusal line; evidence RID: RECOG-ART-R11-LEDGER | Evidence pointer (not theorem RID) | §2.4; use line 155; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-15 | DYAD v6.4.10 §6.14; RID: DYAD-ALG-NF6-OBS | Owner ALG at stated scope | §2.4; use line 155; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-16 | DYAD v6.4.10 §6.14; RID: DYAD-THM-NF-REM | Owner THM at stated scope | §2.4; use line 159; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-17 | RECOG v0.3.14 §6.13a; RID: RECOG-THM-R9-MEMORY | Owner THM at stated scope | §2.4; use line 161; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-18 | RECOG v0.3.14 §6.14; evidence RID: RECOG-ART-R11-LEDGER | Evidence pointer (not theorem RID) | §2.4; use line 163; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-19 | DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE | Owner THM at stated scope | §2.4; use line 164; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-20 | DYAD v6.4.12 §6.14; RID: DYAD-ALG-NF6-DEG10 | Owner ALG at stated scope | §2.4a; use line 180; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-21 | DYAD v6.4.12 §6.16 #sec-6-16-centralizer; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE | Owner THM at stated scope | §2.4b; use line 190; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-22 | DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-CENTRALIZER | Owner THM at stated scope | §2.4b; use line 196; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-23 | DYAD v6.4.12 §6.16; RID: DYAD-ALG-CENT-KERNEL | Owner ALG at stated scope | §2.4b; use line 196; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-24 | DYAD v6.4.12 §6.15 #sec-6-15-involution; RID: DYAD-THM-ANALYTIC-CLOCK-BRIDGE | Owner THM at stated scope | §2.4b; use line 200; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-25 | DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES | Source block; no new grade asserted | §2.4b; use line 200; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-26 | DYAD v6.4.13 §§2, 6.16–6.17; RID: DYAD-OPEN-INVOLUTION-REALIZATION | Owner OPEN/status or conditional consequence; not theorem RID | §2.4b; use line 202; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-27 | DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES | Source block; no new grade asserted | §2.4b; use line 205; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-28 | DYAD v6.4.13 §§2, 6.16; RID: DYAD-OPEN-INVOLUTION-REALIZATION | Owner OPEN/status or conditional consequence; not theorem RID | §2.4b; use line 205; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-29 | DYAD v6.4.24 §6.17 \\| DYAD-THM-SMOOTH-EMBEDDING | Owner THM at stated scope | §2.4b; use line 207; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-30 | DYAD v6.4.13 §6.16; RID: DYAD-THM-FORMAL-Z6-GENERATOR | Owner THM at stated scope | §2.4c; use line 211; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-31 | DYAD v6.4.13 §6.16; RID: DYAD-OPEN-INVOLUTION-REALIZATION | Owner OPEN/status or conditional consequence; not theorem RID | §2.4c; use line 211; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-32 | DYAD v6.4.13 §6.17; RID: DYAD-CAND-FLAT-CENTRALIZER | Source block; no new grade asserted | §2.4c; use line 213; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-33 | DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES | Source block; no new grade asserted | §2.4c; use line 215; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-34 | DYAD v6.4.24 §6.17 \\| DYAD-THM-SMOOTH-EQUIVARIANT-CHART | Owner THM at stated scope | §2.4c; use line 219; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-35 | Triadic v1.6 §7.4 and CN-05; RID unavailable; owner notice CN-05 | RID unavailable; owner assignment follow-up | §3.1; use line 258; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-36 | RECOG v0.3.14 §6.14, comparator tracks, cert checks 5–7; evidence RID: RECOG-ART-R11-LEDGER | Evidence pointer (not theorem RID) | §4.1; use line 289; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-37 | RECOG v0.3.14 §6.14, cert checks 5–7 and 9; evidence RID: RECOG-ART-R11-LEDGER | Evidence pointer (not theorem RID) | §4.1; use line 291; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-38 | DYAD v6.4.24 §6.12 (current exact-text locator; previous inline unversioned guard; RID unavailable) | Owner source guard; RID unavailable; assignment follow-up | §4.1; use line 298; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-39 | RECOG v0.3.27 §6.13a \\| RECOG-THM-R9-MEMORY | Owner THM at stated scope | §4.1a; use line 302; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-40 | RECOG v0.3.27 §6.13a \\| RECOG-THM-R9-MEMORY | Owner THM at stated scope | §4.1a; use line 304; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-41 | DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE | Owner THM at stated scope | §4.2; use line 334; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-42 | DYAD v6.4.12 §6.15; RID: DYAD-THM-ANALYTIC-CLOCK-BRIDGE | Owner THM at stated scope | §4.2; use line 334; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-43 | RECOG v0.3.27 §§6.7,6.15 \\| RECOG-THM-TWIN-RADIAL-ACCESS | Owner THM at stated scope | §4.2; use line 341; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-44 | RECOG v0.3.27 §6.6a #sec-6-6a-composition \\| RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY | Owner ALG at stated scope | §4.2a; use line 347; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-45 | RECOG v0.3.27 §6.16b \\| RECOG-ALG-BTOKEN-TRANSPORT | Owner ALG at stated scope | §4.3; use line 358; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-46 | NUMGEN v1.20.7 §6.4 N-3A; RID: NUMGEN-N3A-DECK-TRIVIAL | Source block; no new grade asserted | §5.; use line 379; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-47 | NUMGEN v1.20.7 §6.8 NG-7A; RID: NUMGEN-OPEN-REC-HOL-OPERATOR | Source block; no new grade asserted | §5.; use line 381; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-48 | NUMGEN v1.20.7 §6.6 C7C-M, M2-1 transported chain identity; RID unavailable for this sub-result | RID unavailable; owner assignment follow-up | §6.1; use line 395; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-49 | DYAD v6.4.24 §6.17 \\| DYAD-THM-SMOOTH-EMBEDDING | Owner THM at stated scope | §6.2; use line 405; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-50 | OFN v0.9, complete-state covariance / OPEN-PRIMACY-3B/3C; RTG_ER2B_CONSOLIDATED_STUDY_v0_2.md; RTG_RRF_COINCIDENCE_ADMISSIBILITY_REVIEW_v0_1.md; RTG_RRF_RESPONSE_TO_OFN_COINCIDENCE_v0_2.md | Reference-only source bundle | §6.2; use line 418; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-51 | DYAD v6.4.18 §6.17; RID: DYAD-THM-SMOOTH-EMBEDDING | Owner THM at stated scope | §6.2; use line 422; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-52 | DYAD v6.4.12 §6.15; RID: DYAD-THM-LOCAL-INVOLUTION-GERM | Owner THM at stated scope | §6.2; use line 422; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-53 | DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE | Owner THM at stated scope | §6.2; use line 422; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-54 | DYAD v6.4.12 §6.15; RID: DYAD-THM-ANALYTIC-CLOCK-BRIDGE | Owner THM at stated scope | §6.2; use line 422; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-55 | DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES | Source block; no new grade asserted | §6.2; use line 422; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-56 | OFN v0.13 §§5.5.2,5.5.4 \\| RTG-OFN-DEF-TRIAD-MODEL-CONTRACT | Owner definition/contract | §6.2a; use line 430; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-57 | OFN v0.13 §5.5.2 \\| RTG-OFN-DEF-STANDARD-C | Owner definition/contract | §6.2a; use line 432; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-58 | Genesis v2.8.9 §6.3c; RID: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO | Owner THM at stated scope | §6.2a; use line 441; complete block and referenced domain/guard at that site | Historical proof/receipt pin; current-source check as recorded at point of use; EV-NOT-RERUN |\n| I-59 | RECOG v0.3.27 §6.16g \\| RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS | Owner RESULT (grade at use) | §6.3; use line 454; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n| I-60 | RECOG v0.3.27 §6.16g; RID: RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS | Owner RESULT (grade at use) | §6.3; use line 460; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |\n"
+    },
+    {
+      "id": "M050",
+      "kind": "editorial",
+      "reason": "Move OPEN register to §6.5, retain candidate native ID index.",
+      "source": [
+        530,
+        530
+      ],
+      "source_sha256": "cd16786c684871aea3273914fe91dee4649924932b03139dc678c95ce3950bab",
+      "destination": [
+        573,
+        573
+      ],
+      "destination_sha256": "f7ee29f0a159c09fac5996f6d98d1782d6694343b471d8a6816f545fb6ffea7f",
+      "text": "## 7.3 Proposed RRF-native identifier routing (candidate only)"
+    },
+    {
+      "id": "M051",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        531,
+        531
+      ],
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination": [
+        574,
+        574
+      ],
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "M052",
+      "kind": "editorial",
+      "reason": "Editorial navigation after move.",
+      "source": [
+        532,
+        532
+      ],
+      "source_sha256": "a639054a08821d50cd0fe2cacb7eec3f84c545b7df15e291ca6c6ddfa170d3d6",
+      "destination": [
+        575,
+        575
+      ],
+      "destination_sha256": "ddbf13c6a7489ca68a76bd9afea7e582049ab6485ed88267871db9454dec2cbe",
+      "text": "The four dyad profiles and one provisional network profile keep their existing identifiers. Existing transport keys T-h, T-L, T-exp and T-net, and the local NF→WRAPPED composite keep direction, domain and loss as in §3; T-net remains OPEN. No profile or arrow added. `RRF-CND-01` remains the existing proposed coincidence admissibility interface. The following are proposed local identity labels for unchanged RRF-owned conventions/implications, not owner theorem RIDs and not registered until PI adoption. Identifier annotations point to the actual statement homes without changing their predicates."
+    },
+    {
+      "id": "M053",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        533,
+        542
+      ],
+      "source_sha256": "5b3ec746b4aaae0b37ca38f5194c9b393ce25f0e504a8a7f9047d6086c74dfcc",
+      "destination": [
+        576,
+        585
+      ],
+      "destination_sha256": "5b3ec746b4aaae0b37ca38f5194c9b393ce25f0e504a8a7f9047d6086c74dfcc"
+    },
+    {
+      "id": "M054",
+      "kind": "navigation",
+      "reason": "Move unregistered profile list from former §7 root; keep §7 navigation.",
+      "destination": [
+        586,
+        587
+      ],
+      "destination_sha256": "391d1ec3fac4ef171a800f8dba86e9820c6e1f6a5d32847dad46fd523c28f907",
+      "text": "### 7.4 Not registered\n"
+    },
+    {
+      "id": "M055",
+      "kind": "exact",
+      "reason": "Move exact unregistered list.",
+      "source": [
+        510,
+        515
+      ],
+      "source_sha256": "0d52b3e8f67695d4e4713fd41be2335ea891c4bc696736c8e99c8b3ffeebb7a0",
+      "destination": [
+        588,
+        593
+      ],
+      "destination_sha256": "0d52b3e8f67695d4e4713fd41be2335ea891c4bc696736c8e99c8b3ffeebb7a0"
+    },
+    {
+      "id": "M056",
+      "kind": "navigation",
+      "reason": "Move still load-bearing source identity rows from dated §10.",
+      "destination": [
+        594,
+        599
+      ],
+      "destination_sha256": "8e4351cd3a60976b5d185990f5340e0da2c540bb19cbad46c46bdac19928d5bc",
+      "text": "### 7.5 Retained evidence identities and reproduction boundaries\n\nThe following source identities are retained as printed in the dated receipts, not newly verified claims about current availability. Full source custody, recovered archives and remaining missing identities are in `records/rrf/RRF_S0_SOURCE_CUSTODY_20261126.md`, the S1 matrix and the adopted predecessor §10. The evidence scope at each technical use controls; no owner certificates were rerun in the v0.9 maintenance cycle.\n\n| Historical proof source (as printed in v0.7 snapshot) | SHA-256 | Role recorded at that date |\n|---|---|---|"
+    },
+    {
+      "id": "M057",
+      "kind": "exact",
+      "reason": "Historical source identities of retained proof pins, exact rows.",
+      "source": [
+        625,
+        627
+      ],
+      "source_sha256": "f81d92efb6973738a2c7611521a313175521f6da99c2aba6aee9a45928b476b1",
+      "destination": [
+        600,
+        602
+      ],
+      "destination_sha256": "f81d92efb6973738a2c7611521a313175521f6da99c2aba6aee9a45928b476b1"
+    },
+    {
+      "id": "M058",
+      "kind": "navigation",
+      "reason": "Separate source table from evidence receipts.",
+      "destination": [
+        603,
+        603
+      ],
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    {
+      "id": "M059",
+      "kind": "exact",
+      "reason": "Preserve R11 source-reported script identity and precise check number.",
+      "source": [
+        632,
+        633
+      ],
+      "source_sha256": "e000f7e046f1ea67f76b7985fe65e7ab1a2e0e657c2cf1cbfebbff7affc6baf3",
+      "destination": [
+        604,
+        605
+      ],
+      "destination_sha256": "e000f7e046f1ea67f76b7985fe65e7ab1a2e0e657c2cf1cbfebbff7affc6baf3"
+    },
+    {
+      "id": "M060",
+      "kind": "editorial",
+      "reason": "Explicitly historical snapshot label; original evidence-limits paragraph unchanged. Current S0 custody and §2.4a control availability.",
+      "source": [
+        634,
+        635
+      ],
+      "source_sha256": "e2b41a08ac8417fac633ffb78c4d472f31cf7f218d22ed271de2c366cdf4447a",
+      "destination": [
+        606,
+        609
+      ],
+      "destination_sha256": "983b6688c4c46f4e36ada7520cbfe6d34b2a9ea65b904bc4f219d7f3439cac1f",
+      "text": "**v0.7 evidence-availability receipt (5 October 2026; not current inventory):**\n\n**Unavailable for a new artifact-level rerun:** the current R11, R9, R8/B3, symmetric-twin and F2 certificate packages, the original P2-B v2 evidence archive and full `certificate.json`, and the original independent degree-ten package. Some older algebra/referee files are mounted, but none was executed here. Written owner records and the existing VF-1 verification note are not replaced by inferred script results.\n"
+    },
+    {
+      "id": "M061",
+      "kind": "exact",
+      "reason": "Retained v0.8.2 proof-source and installer manifest evidence receipt, exact lines.",
+      "source": [
+        667,
+        668
+      ],
+      "source_sha256": "56f6dba8561331a494d47fbbab2905efc4f83de0f718aa02f2f2a3283407b8aa",
+      "destination": [
+        610,
+        611
+      ],
+      "destination_sha256": "56f6dba8561331a494d47fbbab2905efc4f83de0f718aa02f2f2a3283407b8aa"
+    },
+    {
+      "id": "M062",
+      "kind": "exact",
+      "reason": "Retained v0.8.3 proof-source and G2 evidence locator, exact lines.",
+      "source": [
+        677,
+        678
+      ],
+      "source_sha256": "cddfe9f1a5d3ea506e0defc3cd8abcebb3641c2ae8140f43af62442790bcba90",
+      "destination": [
+        612,
+        613
+      ],
+      "destination_sha256": "cddfe9f1a5d3ea506e0defc3cd8abcebb3641c2ae8140f43af62442790bcba90"
+    },
+    {
+      "id": "M063",
+      "kind": "exact",
+      "reason": "Unique RRF-only SESSION mathematics non-promotion guard.",
+      "source": [
+        680,
+        680
+      ],
+      "source_sha256": "57e80661d4aa68d9a0d98a43fa9f61923f0af040fbe97eede5fadaab63671841",
+      "destination": [
+        614,
+        614
+      ],
+      "destination_sha256": "57e80661d4aa68d9a0d98a43fa9f61923f0af040fbe97eede5fadaab63671841"
+    },
+    {
+      "id": "M064",
+      "kind": "navigation",
+      "reason": "Section separation.",
+      "destination": [
+        615,
+        617
+      ],
+      "destination_sha256": "316deeb28892b1cdebfe5c12c2cd620b5b8f29289c1ffe3d4f5fc1b2e6a4ea7d",
+      "text": "\n---\n"
+    },
+    {
+      "id": "M065",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        558,
+        574
+      ],
+      "source_sha256": "83cb47faf0f775728170f8df8bdb794832a81455cee136dde336a0f8729bf806",
+      "destination": [
+        618,
+        634
+      ],
+      "destination_sha256": "83cb47faf0f775728170f8df8bdb794832a81455cee136dde336a0f8729bf806"
+    },
+    {
+      "id": "M066",
+      "kind": "editorial",
+      "reason": "Current scope heading; preserve guards.",
+      "source": [
+        575,
+        575
+      ],
+      "source_sha256": "1923f6118596c3af7975753fa098375e6ece4102583ceabce8bfb90c02605755",
+      "destination": [
+        635,
+        635
+      ],
+      "destination_sha256": "c0deb7527ddbe779bdcb3c9ebcc3a50b47e29c03288014d5059ab7c941ac827f",
+      "text": "### 8.1 Source/adoption nonclaims"
+    },
+    {
+      "id": "M067",
+      "kind": "exact",
+      "reason": "retained byte-identical qualified content",
+      "source": [
+        576,
+        584
+      ],
+      "source_sha256": "b93fecabee9adfd0c2925361e6d0e32592ce6913dd0a3bd13aed7f635f3dc287",
+      "destination": [
+        636,
+        644
+      ],
+      "destination_sha256": "b93fecabee9adfd0c2925361e6d0e32592ce6913dd0a3bd13aed7f635f3dc287"
+    },
+    {
+      "id": "M068",
+      "kind": "editorial",
+      "reason": "Compact current change entry; history accessible by immutable source.",
+      "source": [
+        585,
+        587
+      ],
+      "source_sha256": "3e1f848e58e594da216f415d368cd0eb536889280baca35a91e61fe9ffe27270",
+      "destination": [
+        645,
+        647
+      ],
+      "destination_sha256": "cee2fcd0309a35a351a6752797f1a40ad518460c9339da9c461e026c7418e2e5",
+      "text": "## Appendix A — Change record\n\n- **v0.9 — DRAFT (26 Nov 2026):** accepted S1 owner-source/interface synchronization and S2a corrections, followed by S2b structural migration. Standard C/class-C scope, smooth/analytic/finite separation, R9 additional rows, M4 HOLD reason, RER noncanonical and UVM reference scope; proposed local identifiers and OPEN aliases retained. Historical bytes and earlier release/evidence records remain retrievable from `rrf-v0.8.4` and the frozen S2a commit. No owner theorem, physical model, BR-Q2 result, OPEN closure or adoption."
+    },
+    {
+      "id": "M069",
+      "kind": "archive",
+      "reason": "Superseded release history and dated §10 source snapshot introduction/old revision base; archived verbatim, operative source identities retained in §7.5.",
+      "source": [
+        588,
+        624
+      ],
+      "source_sha256": "25b8dd620b75eee9e94749c68d362dd9f2c69857589dcbb6512e119da6b540bf",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          588,
+          624
+        ],
+        "sha256": "25b8dd620b75eee9e94749c68d362dd9f2c69857589dcbb6512e119da6b540bf"
+      }
+    },
+    {
+      "id": "M070",
+      "kind": "archive",
+      "reason": "Dated superseded Methodology/OFN/Programme identities; old tag/receipt preserves these noncurrent pins.",
+      "source": [
+        628,
+        631
+      ],
+      "source_sha256": "dbf0731eaede76e2a43acb4819100203cf182d1e5a96e25b341b38cb01e3567c",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          628,
+          631
+        ],
+        "sha256": "dbf0731eaede76e2a43acb4819100203cf182d1e5a96e25b341b38cb01e3567c"
+      }
+    },
+    {
+      "id": "M071",
+      "kind": "archive",
+      "reason": "Historical v0.7/v0.8 publication statements, superseded consumer pins and obsolete source inventory. Current references and all scope guards at §§0,6–8; complete exact history remains in frozen commit.",
+      "source": [
+        636,
+        666
+      ],
+      "source_sha256": "6a99bcb9497ced78367a1f7877b24cdc56935de6690e835f87053db8e93a5df8",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          636,
+          666
+        ],
+        "sha256": "6a99bcb9497ced78367a1f7877b24cdc56935de6690e835f87053db8e93a5df8"
+      }
+    },
+    {
+      "id": "M072",
+      "kind": "archive",
+      "reason": "Dated prior predecessor/adoption/review metadata. Current non-transfer and owner status in §§2.4,6,8.",
+      "source": [
+        669,
+        676
+      ],
+      "source_sha256": "82e07ec92d7de0e4361241f58eee87ea24d7d2f787c8c87211268866cb1476b0",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          669,
+          676
+        ],
+        "sha256": "82e07ec92d7de0e4361241f58eee87ea24d7d2f787c8c87211268866cb1476b0"
+      }
+    },
+    {
+      "id": "M073",
+      "kind": "archive",
+      "reason": "Historical non-transfer summary duplicated in current qualified §§2.4b–c,4.2,6.2 and 8.12.",
+      "source": [
+        679,
+        679
+      ],
+      "source_sha256": "a90052e8d0d1ed04b67e1fd10c5d5571b93b4295328ea85217aafeedd28fbd05",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          679,
+          679
+        ],
+        "sha256": "a90052e8d0d1ed04b67e1fd10c5d5571b93b4295328ea85217aafeedd28fbd05"
+      }
+    },
+    {
+      "id": "M074",
+      "kind": "archive",
+      "reason": "Superseded review/publication gates and older release snapshots; immutable archival source, not live statuses.",
+      "source": [
+        681,
+        691
+      ],
+      "source_sha256": "f763f5488999935f2e3dff25ed17c149c771c7c9513b164b19a1f308dab2f977",
+      "archive": {
+        "git": "98da97c311a917d1539b9c31afaba779bc75a73f:dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+        "lines": [
+          681,
+          691
+        ],
+        "sha256": "f763f5488999935f2e3dff25ed17c149c771c7c9513b164b19a1f308dab2f977"
+      }
+    },
+    {
+      "id": "M075",
+      "kind": "navigation",
+      "reason": "Correction and immutable-history routing; one draft footer.",
+      "destination": [
+        648,
+        653
+      ],
+      "destination_sha256": "952e4e5b1d0c00ddee29663646aa7cc2ea4d079d008bae08a1192f14a433e9b3",
+      "text": "\n## Appendix B — Correction routing\n\nThe scoped content delta is the independently accepted S2a (review 6076472389), not a compaction inference. The accepted S1 matrix and `records/rrf/RRF_V0_9_S2A_BUILD_REVIEW.md` map each correction to its source and point of use, including Standard C/class-C, current owner statuses, the fixed finite chart versus smooth/analytic distinction, and the distinct R9 rows. Historical rejected/limited claims and evidence remain in the adopted predecessor and owner correction records; operative refusals remain in §8. No new scientific correction in S2b.\n\n*END OF DOCUMENT — RRF v0.9 DRAFT*"
+    },
+    {
+      "id": "M076",
+      "kind": "navigation",
+      "reason": "Final LF terminator",
+      "destination": [
+        654,
+        654
+      ],
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    }
+  ],
+  "import_use_index": [
+    {
+      "key": "I-01",
+      "source_line": 148,
+      "candidate_line": 109,
+      "source": "DYAD v6.4.10 §1, definition Q_true; RID unavailable"
+    },
+    {
+      "key": "I-02",
+      "source_line": 148,
+      "candidate_line": 109,
+      "source": "DYAD v6.4.10 §6.4 ISP (#sec-6-4-isp), anti-correlation frame; RID unavailable"
+    },
+    {
+      "key": "I-03",
+      "source_line": 162,
+      "candidate_line": 123,
+      "source": "DYAD v6.4.24 §1; RID: DYAD-DEF-PRIMITIVE-MAP"
+    },
+    {
+      "key": "I-04",
+      "source_line": 165,
+      "candidate_line": 126,
+      "source": "RECOG v0.3.14 §6.14, cert check 9; evidence RID: RECOG-ART-R11-LEDGER"
+    },
+    {
+      "key": "I-05",
+      "source_line": 165,
+      "candidate_line": 126,
+      "source": "RECOG v0.3.14 §6.4 and §6.7; RID unavailable"
+    },
+    {
+      "key": "I-06",
+      "source_line": 175,
+      "candidate_line": 136,
+      "source": "DYAD v6.4.10 §6.14, definition 𝓛; RID unavailable"
+    },
+    {
+      "key": "I-07",
+      "source_line": 178,
+      "candidate_line": 139,
+      "source": "DYAD v6.4.10 §1; OFN v0.8"
+    },
+    {
+      "key": "I-08",
+      "source_line": 178,
+      "candidate_line": 139,
+      "source": "DYAD v6.4.10; RID: DYAD-THM-C21 (actual historical source pin)"
+    },
+    {
+      "key": "I-09",
+      "source_line": 181,
+      "candidate_line": 142,
+      "source": "RECOG v0.3.14 §6.14, cert check 9; evidence RID: RECOG-ART-R11-LEDGER"
+    },
+    {
+      "key": "I-10",
+      "source_line": 182,
+      "candidate_line": 143,
+      "source": "RECOG v0.3.14 §6.14; evidence RID: RECOG-ART-R11-LEDGER"
+    },
+    {
+      "key": "I-11",
+      "source_line": 183,
+      "candidate_line": 144,
+      "source": "DYAD v6.4.10 §6.12, definition E_odd; RID unavailable"
+    },
+    {
+      "key": "I-12",
+      "source_line": 186,
+      "candidate_line": 147,
+      "source": "OFN v0.9 §4.4 #ofn-rank-typing; RID: RTG-OFN-DEF-RANK-TYPING"
+    },
+    {
+      "key": "I-13",
+      "source_line": 193,
+      "candidate_line": 154,
+      "source": "DYAD v6.4.10 §6.14; RID: DYAD-ALG-NF6"
+    },
+    {
+      "key": "I-14",
+      "source_line": 194,
+      "candidate_line": 155,
+      "source": "RECOG v0.3.14 §6.14, refusal line; evidence RID: RECOG-ART-R11-LEDGER"
+    },
+    {
+      "key": "I-15",
+      "source_line": 194,
+      "candidate_line": 155,
+      "source": "DYAD v6.4.10 §6.14; RID: DYAD-ALG-NF6-OBS"
+    },
+    {
+      "key": "I-16",
+      "source_line": 198,
+      "candidate_line": 159,
+      "source": "DYAD v6.4.10 §6.14; RID: DYAD-THM-NF-REM"
+    },
+    {
+      "key": "I-17",
+      "source_line": 200,
+      "candidate_line": 161,
+      "source": "RECOG v0.3.14 §6.13a; RID: RECOG-THM-R9-MEMORY"
+    },
+    {
+      "key": "I-18",
+      "source_line": 202,
+      "candidate_line": 163,
+      "source": "RECOG v0.3.14 §6.14; evidence RID: RECOG-ART-R11-LEDGER"
+    },
+    {
+      "key": "I-19",
+      "source_line": 203,
+      "candidate_line": 164,
+      "source": "DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE"
+    },
+    {
+      "key": "I-20",
+      "source_line": 219,
+      "candidate_line": 180,
+      "source": "DYAD v6.4.12 §6.14; RID: DYAD-ALG-NF6-DEG10"
+    },
+    {
+      "key": "I-21",
+      "source_line": 229,
+      "candidate_line": 190,
+      "source": "DYAD v6.4.12 §6.16 #sec-6-16-centralizer; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE"
+    },
+    {
+      "key": "I-22",
+      "source_line": 235,
+      "candidate_line": 196,
+      "source": "DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-CENTRALIZER"
+    },
+    {
+      "key": "I-23",
+      "source_line": 235,
+      "candidate_line": 196,
+      "source": "DYAD v6.4.12 §6.16; RID: DYAD-ALG-CENT-KERNEL"
+    },
+    {
+      "key": "I-24",
+      "source_line": 239,
+      "candidate_line": 200,
+      "source": "DYAD v6.4.12 §6.15 #sec-6-15-involution; RID: DYAD-THM-ANALYTIC-CLOCK-BRIDGE"
+    },
+    {
+      "key": "I-25",
+      "source_line": 239,
+      "candidate_line": 200,
+      "source": "DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES"
+    },
+    {
+      "key": "I-26",
+      "source_line": 241,
+      "candidate_line": 202,
+      "source": "DYAD v6.4.13 §§2, 6.16–6.17; RID: DYAD-OPEN-INVOLUTION-REALIZATION"
+    },
+    {
+      "key": "I-27",
+      "source_line": 243,
+      "candidate_line": 205,
+      "source": "DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES"
+    },
+    {
+      "key": "I-28",
+      "source_line": 243,
+      "candidate_line": 205,
+      "source": "DYAD v6.4.13 §§2, 6.16; RID: DYAD-OPEN-INVOLUTION-REALIZATION"
+    },
+    {
+      "key": "I-29",
+      "source_line": 245,
+      "candidate_line": 207,
+      "source": "DYAD v6.4.24 §6.17 | DYAD-THM-SMOOTH-EMBEDDING"
+    },
+    {
+      "key": "I-30",
+      "source_line": 249,
+      "candidate_line": 211,
+      "source": "DYAD v6.4.13 §6.16; RID: DYAD-THM-FORMAL-Z6-GENERATOR"
+    },
+    {
+      "key": "I-31",
+      "source_line": 249,
+      "candidate_line": 211,
+      "source": "DYAD v6.4.13 §6.16; RID: DYAD-OPEN-INVOLUTION-REALIZATION"
+    },
+    {
+      "key": "I-32",
+      "source_line": 251,
+      "candidate_line": 213,
+      "source": "DYAD v6.4.13 §6.17; RID: DYAD-CAND-FLAT-CENTRALIZER"
+    },
+    {
+      "key": "I-33",
+      "source_line": 253,
+      "candidate_line": 215,
+      "source": "DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES"
+    },
+    {
+      "key": "I-34",
+      "source_line": 257,
+      "candidate_line": 219,
+      "source": "DYAD v6.4.24 §6.17 | DYAD-THM-SMOOTH-EQUIVARIANT-CHART"
+    },
+    {
+      "key": "I-35",
+      "source_line": 296,
+      "candidate_line": 258,
+      "source": "Triadic v1.6 §7.4 and CN-05; RID unavailable; owner notice CN-05"
+    },
+    {
+      "key": "I-36",
+      "source_line": 327,
+      "candidate_line": 289,
+      "source": "RECOG v0.3.14 §6.14, comparator tracks, cert checks 5–7; evidence RID: RECOG-ART-R11-LEDGER"
+    },
+    {
+      "key": "I-37",
+      "source_line": 329,
+      "candidate_line": 291,
+      "source": "RECOG v0.3.14 §6.14, cert checks 5–7 and 9; evidence RID: RECOG-ART-R11-LEDGER"
+    },
+    {
+      "key": "I-38",
+      "source_line": 335,
+      "candidate_line": 298,
+      "source": "DYAD v6.4.24 §6.12 (current exact-text locator; previous inline unversioned guard; RID unavailable)"
+    },
+    {
+      "key": "I-39",
+      "source_line": 339,
+      "candidate_line": 302,
+      "source": "RECOG v0.3.27 §6.13a | RECOG-THM-R9-MEMORY"
+    },
+    {
+      "key": "I-40",
+      "source_line": 341,
+      "candidate_line": 304,
+      "source": "RECOG v0.3.27 §6.13a | RECOG-THM-R9-MEMORY"
+    },
+    {
+      "key": "I-41",
+      "source_line": 370,
+      "candidate_line": 334,
+      "source": "DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE"
+    },
+    {
+      "key": "I-42",
+      "source_line": 370,
+      "candidate_line": 334,
+      "source": "DYAD v6.4.12 §6.15; RID: DYAD-THM-ANALYTIC-CLOCK-BRIDGE"
+    },
+    {
+      "key": "I-43",
+      "source_line": 376,
+      "candidate_line": 341,
+      "source": "RECOG v0.3.27 §§6.7,6.15 | RECOG-THM-TWIN-RADIAL-ACCESS"
+    },
+    {
+      "key": "I-44",
+      "source_line": 382,
+      "candidate_line": 347,
+      "source": "RECOG v0.3.27 §6.6a #sec-6-6a-composition | RECOG-ALG-SHEAR-ORIENTATION-CONJUGACY"
+    },
+    {
+      "key": "I-45",
+      "source_line": 392,
+      "candidate_line": 358,
+      "source": "RECOG v0.3.27 §6.16b | RECOG-ALG-BTOKEN-TRANSPORT"
+    },
+    {
+      "key": "I-46",
+      "source_line": 413,
+      "candidate_line": 379,
+      "source": "NUMGEN v1.20.7 §6.4 N-3A; RID: NUMGEN-N3A-DECK-TRIVIAL"
+    },
+    {
+      "key": "I-47",
+      "source_line": 415,
+      "candidate_line": 381,
+      "source": "NUMGEN v1.20.7 §6.8 NG-7A; RID: NUMGEN-OPEN-REC-HOL-OPERATOR"
+    },
+    {
+      "key": "I-48",
+      "source_line": 429,
+      "candidate_line": 395,
+      "source": "NUMGEN v1.20.7 §6.6 C7C-M, M2-1 transported chain identity; RID unavailable for this sub-result"
+    },
+    {
+      "key": "I-49",
+      "source_line": 439,
+      "candidate_line": 405,
+      "source": "DYAD v6.4.24 §6.17 | DYAD-THM-SMOOTH-EMBEDDING"
+    },
+    {
+      "key": "I-50",
+      "source_line": 452,
+      "candidate_line": 418,
+      "source": "OFN v0.9, complete-state covariance / OPEN-PRIMACY-3B/3C; RTG_ER2B_CONSOLIDATED_STUDY_v0_2.md; RTG_RRF_COINCIDENCE_ADMISSIBILITY_REVIEW_v0_1.md; RTG_RRF_RESPONSE_TO_OFN_COINCIDENCE_v0_2.md"
+    },
+    {
+      "key": "I-51",
+      "source_line": 456,
+      "candidate_line": 422,
+      "source": "DYAD v6.4.18 §6.17; RID: DYAD-THM-SMOOTH-EMBEDDING"
+    },
+    {
+      "key": "I-52",
+      "source_line": 456,
+      "candidate_line": 422,
+      "source": "DYAD v6.4.12 §6.15; RID: DYAD-THM-LOCAL-INVOLUTION-GERM"
+    },
+    {
+      "key": "I-53",
+      "source_line": 456,
+      "candidate_line": 422,
+      "source": "DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE"
+    },
+    {
+      "key": "I-54",
+      "source_line": 456,
+      "candidate_line": 422,
+      "source": "DYAD v6.4.12 §6.15; RID: DYAD-THM-ANALYTIC-CLOCK-BRIDGE"
+    },
+    {
+      "key": "I-55",
+      "source_line": 456,
+      "candidate_line": 422,
+      "source": "DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES"
+    },
+    {
+      "key": "I-56",
+      "source_line": 464,
+      "candidate_line": 430,
+      "source": "OFN v0.13 §§5.5.2,5.5.4 | RTG-OFN-DEF-TRIAD-MODEL-CONTRACT"
+    },
+    {
+      "key": "I-57",
+      "source_line": 466,
+      "candidate_line": 432,
+      "source": "OFN v0.13 §5.5.2 | RTG-OFN-DEF-STANDARD-C"
+    },
+    {
+      "key": "I-58",
+      "source_line": 475,
+      "candidate_line": 441,
+      "source": "Genesis v2.8.9 §6.3c; RID: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO"
+    },
+    {
+      "key": "I-59",
+      "source_line": 488,
+      "candidate_line": 454,
+      "source": "RECOG v0.3.27 §6.16g | RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS"
+    },
+    {
+      "key": "I-60",
+      "source_line": 494,
+      "candidate_line": 460,
+      "source": "RECOG v0.3.27 §6.16g; RID: RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS"
+    }
+  ],
+  "archive_review": "Explicit archive classification remains for independent reviewer, not mechanically proved semantics."
+}
