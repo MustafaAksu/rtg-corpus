@@ -1,0 +1,30 @@
+name: NUMGEN OFN receipt exact-head validation
+on:
+  push:
+    branches:
+      - chatgpt/numgen-ofn-receipt-native-check-20261126
+permissions:
+  contents: read
+jobs:
+  pipes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Checkout exact PR 391 head
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: '24748cefdb19185990d756be81298aaf400d8d0d'
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate native pipes and preserved scientific sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "24748cefdb19185990d756be81298aaf400d8d0d"
+          test "$(git rev-parse 'numgen-v1.22^{commit}')" = "c5acda99de18598108e9b5e368ad15fa74f5488d"
+          printf '%s  %s\n' '36b31755c1bd73f1d5f69117c63b1556afacc18c2505e1b865b7a3adf512d40b' 'dsn/RTG_NUMBER_GENESIS_DSN.md' | sha256sum --check
+          git diff --exit-code 'c92deb13c153d695a88136f24a9aac28eaf41622' HEAD -- dsn/ evidence/ upload/ records/numgen/NUMGEN_v1_22_RELEASE_RECORD.md
+          python3 -I tools/pipes_index.py --check
+          test "$(grep -c '| closed |' pipes/NUMGEN/INDEX.md)" = 13
+          if grep -q '| open |' pipes/NUMGEN/INDEX.md; then exit 1; fi
+          printf 'NUMGEN_OFN_RECEIPT_NATIVE_PASS\n'
