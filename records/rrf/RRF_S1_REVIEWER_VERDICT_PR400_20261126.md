@@ -54,3 +54,27 @@
 S1 is accepted once C1–C4 are applied or bound as S2 entry conditions and the PI merges. S2 stays HOLD pending a PI decision on S2 workflow. BR-Q2 can be opened as a separate scoped scientific item. This record opens nothing.
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+## 5. Correction readback — corrected head `2c087763e94ac23768c8b778aecc3bb8a57e508d`
+
+**Verdict: ACCEPT SCOPED.** S1-A1–A4 are met at this head. The preparer applied C1–C4 directly to the matrix. Each corrected row was rechecked against the owner text:
+
+| Item | Readback against owner text |
+|---|---|
+| C1 D1 | Matches the DYAD §1 fixed-point table L55–59 verbatim in content: lift points $(0,m\pi)$, $m\in\mathbb Z$; zero-winding $P_1=(0,0)$, $P_2=(0,\pi)$; winding $k\ge1$ wrapped points not fixed in the lift. |
+| C2 O2 | Only the family clause is updated, quoting OFN §5.5.5 "primary realized smooth mathematical candidate family; analytic exact realization and physical selection open". Lock surfaces and the related properties keep the SESSION "recorded, not registered" provenance. No Genesis adoption of class C is inferred. |
+| C3 O4 | The identity carries its SESSION `[ALG]` provenance and no RID. The isolation frame is "recorded; none selected", with I-quiet failing for κ≠0. The ψ-modulus is classified through degree 5 within the reduced-map scope, with only the "not conjugate" direction carried to full models (κ∉{0,2}). FMS P4 is source-reported, unaudited by OFN. The sampled κ∈{1,1/2,3} matches OFN L1334. |
+| C4 T1 | The owner `[OPEN]` tag is retained alongside convention-only; birth/mode identification is unresolved. |
+| N1 TD1 | `2c≡0 (mod N)`, with `RTG-OFN-ALG-STAR-TOKEN-SHIFT` marked "statement accepted" and custody transfer open. Matches TDRG L875. |
+| N2 P1 | IF30 and IF33 are added. Notices are deferred to an authorized successor release; acceptable. |
+| N3 R3 | RECOG's v6.4.23 pin is kept; the owner is attributed at v6.4.24. |
+| N4 | The orientation ENTRY now places BR-Q2 after S1 acceptance and the PI merge. |
+| R4 locator | The §6.13a → §6.13b change is correct: A1a is RECOG §6.13b, L667. No statement change. |
+
+Checks on the corrected head:
+- **Scope:** the only changed paths against `main` `024a2d3e` are `README.md` and the two `records/rrf/` files. There are no changes under `dsn/`, `noncanonical/`, `upload/`, `pipes/`, `evidence/` or `BASELINE.md`.
+- **Pipes:** `pipes_index.py --check` reports 197 items in 20 inboxes.
+- **Claude lane:** unchanged against `main`.
+- **Merge order:** `main` + #400 at `2c087763` + #401 merges without conflict. Pipes then still pass, and the Claude lane carries the S1 stamp.
+
+S1 is ACCEPTED SCOPED on the PI's merge of #400 and #401. The scope is source/interface synchronization only. The matrix is a receiving recommendation for S2a, not adopted use.
