@@ -1,0 +1,9 @@
+r2 native rerun, 2026-11-25T09:34Z, Python 3.13.18, from evidence/ofn/binary_recognition/scripts/
+d4e540deb7107b28b51fe4cb88bebf4e8ce975c972bd79f4a470b8545496f6d3  evidence/ofn/binary_recognition/scripts/binary_recognition_wrapup_checks.py
+3b9843083a9407cc1d8edb73d03198f3ee5004c6330508624b4bd59c308f2257  evidence/ofn/binary_recognition/wrapup/binary_recognition_wrapup_checks.json
+main run exit: 0
+PASS: 403/403 checks
+stored JSON reproduced byte for byte (3b9843083a9407cc1d8edb73d03198f3ee5004c6330508624b4bd59c308f2257)
+control zero-equals-short-for-all-n exit: 1 (FAILED: C6 n=30 and n=45 are outside the classified set)
+control sector-injective-only-at-powers-of-two exit: 1 (FAILED: C7 n=13: sector parity descent iff 2^a or odd prime)
+control parity-needs-original-component exit: 1 (FAILED: C8 n=12: parity descends through retained components D iff 2h in D)

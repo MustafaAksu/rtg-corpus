@@ -1,0 +1,45 @@
+PASS B1a Z_1(CX) = -Z_1(X) on all 2^1 states
+PASS B1a Z_2(CX) = -Z_2(X) on all 2^2 states
+PASS B1a Z_3(CX) = -Z_3(X) on all 2^3 states
+PASS B1a Z_4(CX) = -Z_4(X) on all 2^4 states
+PASS B1a Z_5(CX) = -Z_5(X) on all 2^5 states
+PASS B1a Z_6(CX) = -Z_6(X) on all 2^6 states
+PASS B1a Z_7(CX) = -Z_7(X) on all 2^7 states
+PASS B1a Z_8(CX) = -Z_8(X) on all 2^8 states
+PASS B1a Z_9(CX) = -Z_9(X) on all 2^9 states
+PASS B1a Z_10(CX) = -Z_10(X) on all 2^10 states
+PASS B1a parity is C-invariant iff n even (n=1..10)
+PASS B1a n=1 (=2^0): Z_1 injective, but parity is C-odd (not gauge-invariant)
+PASS B1b m=1: X=(0) has empty S (vanishing empty sum) but Z_1=1 != 0 -> equivalence fails
+PASS B1b m=3: Z_m(X)=0 iff sum_(u in S_X) zeta_m^u = 0 (all 2^3 states)
+PASS B1b m=5: Z_m(X)=0 iff sum_(u in S_X) zeta_m^u = 0 (all 2^5 states)
+PASS B1b m=7: Z_m(X)=0 iff sum_(u in S_X) zeta_m^u = 0 (all 2^7 states)
+PASS B1b m=9: Z_m(X)=0 iff sum_(u in S_X) zeta_m^u = 0 (all 2^9 states)
+PASS B1b m=15: Z_m(X)=0 iff sum_(u in S_X) zeta_m^u = 0 (all 2^15 states)
+PASS B5 retention p'=b with f=b: fixed states (0,0),(1,1) -> no four-cycle
+PASS B5 retention with f=1-p: single four-cycle (alternation added)
+PASS B5 retention with f=p: reversible but two-cycles/fixed points
+PASS BR-Q3 h=1: C_h free, 1 = 2^(h-1) classes, parity descends to X_h/C: False (expected False)
+PASS BR-Q3 h=2: C_h free, 2 = 2^(h-1) classes, parity descends to X_h/C: True (expected True)
+PASS BR-Q3 h=4: C_h free, 8 = 2^(h-1) classes, parity descends to X_h/C: True (expected True)
+PASS BR-Q3 h=8: C_h free, 128 = 2^(h-1) classes, parity descends to X_h/C: True (expected True)
+PASS B6 n=1: shared-C invariant; one-sided C multiplies by (-1)^n
+PASS B6 n=2: shared-C invariant; one-sided C multiplies by (-1)^n
+PASS B6 n=3: shared-C invariant; one-sided C multiplies by (-1)^n
+PASS B6 n=4: shared-C invariant; one-sided C multiplies by (-1)^n
+PASS B6 n=5: shared-C invariant; one-sided C multiplies by (-1)^n
+PASS B6 n=6: shared-C invariant; one-sided C multiplies by (-1)^n
+PASS B6 n=7: shared-C invariant; one-sided C multiplies by (-1)^n
+PASS B6 n=8: shared-C invariant; one-sided C multiplies by (-1)^n
+PASS B2 rep_k: Z_kn(rep_k X) = Z_n(X) and pi_kn(rep_k X) = (k mod 2) pi_n(X) (n<=5, k<=4)
+PASS B2 n=2,k=2,X=(1,0): parity 1 -> 0 under replication
+PASS B3 n=1: |Zero| = |Short| = 0
+PASS B3 n=3: |Zero| = |Short| = 2
+PASS B3 n=9: |Zero| = |Short| = 8
+PASS B3 n=15: |Zero| = |Short| = 38
+PASS B3 n=30: (2^p+2^q-2)^k = 1444, 2^(kq)+2^(kp)-2^k = 1084 (stated 1444/1084, 54872/33272)
+PASS B3 n=45: (2^p+2^q-2)^k = 54872, 2^(kq)+2^(kp)-2^k = 33272 (stated 1444/1084, 54872/33272)
+PASS B3 witness n=30: Z=0 and period 2n
+PASS B3 witness n=45: Z=0 and period 2n
+
+RESULT: PASS 43/43

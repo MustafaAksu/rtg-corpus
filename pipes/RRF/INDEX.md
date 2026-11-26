@@ -10,5 +10,6 @@
 | 2026-11-03 | DYAD | notice | open | R9-conditional Dyadic rows; $S_h$ routing (§6.15); DYAD-ALG-KP-FRAME-SCALE; R11 owner labels (Appendix C) | — | `20261103-DYAD-notices-n16-n21.md` |
 | 2026-11-03 | GEN | notice | open | GEN v2.9 and v2.10 changes relevant to RRF §2 (Genesis row pinned at v2.8.9: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO); §7 export protocol | — | `20261103-GEN-v2-10-adopted.md` |
 | 2026-11-03 | TRIAD | notice | open | Triadic v1.7 adopted; CN-05 planar metric convention (Triadic §6.18 metric-unit block; RRF v0.8.4 §3.1) | — | `20261103-TRIAD-v1-7-adopted.md` |
+| 2026-11-04 | OFN | question | open | RRF v0.8.4 §4.1 comparator typing and S-decomposition, §4.2 typed-covariance criterion; RECOG v0.3.27 SG-R14; records/ofn/NODE_BINARY_RECOGNITION_WRAPUP.md §3B, §6 COR-BR-10/11, §7 BR-Q2 | — | `20261104-OFN-binary-recognition-sign-typing.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 §5.5 convention attribution; class-C model contract unchanged | — | `20261125-OFN-v0-13-adopted.md` |
 | 2026-11-25 | UVM | notice | open | UVM v0.7.2 OPEN-M-6/SG-M-7/§7; RRF §§0.3, 3, 3.1, 6.2 | — | `20261125-UVM-v0-7-2-adopted.md` |
