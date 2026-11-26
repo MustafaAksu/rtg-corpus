@@ -1,0 +1,72 @@
+{
+  "status": "Informational only; connector JS independently computed metrics using tools/dsn_lint.py counting method, with Programme profile-specific section/core locators. Not native linter output. Reviewer native lint on adopted candidate is recorded in 7185742029; published native lint pending.",
+  "file": "dsn/RTG_PROGRAMME_OVERVIEW.md",
+  "sha256": "9c53159f64feddfba7cfcb2452f9eca1c61bac63b744cb05421417d384bf9611",
+  "bytes": 81177,
+  "lines": 641,
+  "previous": {
+    "tag": "programme-v1.4",
+    "bytes": 74750
+  },
+  "growth_bytes": 6427,
+  "growth_percent": 8.6,
+  "header_chars": 2987,
+  "live_body_chars": 72749,
+  "appendix_a_chars": 4651,
+  "section1_words": 124,
+  "section1_note": "Programme profile, heading-delimited span; heading's four tokens removed, next-section anchor counted if in span; advisory.",
+  "orientation_core": {
+    "profile": "Programme §0.2 noncontiguous core: header, §0.1, §§3–5, §6.1, §7.2, §8 (concatenated heading-delimited spans, adjacent anchors retained)",
+    "chars": 42399,
+    "lines": 315,
+    "words": 6055,
+    "technical_ledger_marker_not_applicable": true
+  },
+  "header_fields": {
+    "Title": 76,
+    "Date": 26,
+    "Scope": 287,
+    "Document class": 72,
+    "Document status": 318,
+    "Supersedes": 170,
+    "Repository": 288,
+    "Companion documents": 208,
+    "DSN Methodology": 106,
+    "Status summary": 644,
+    "Authors": 146,
+    "Revision editor": 238,
+    "Release record": 173,
+    "Archive reference": 160
+  },
+  "appendix_a_words_per_edition": {
+    "v1.5 — 26 November 2026 — Adopted": 63,
+    "v1.4 — 4 November 2026 — Adopted": 222,
+    "v1.3 — 24 October 2026 — Adopted": 173,
+    "v1.2 — 20 September 2026 — Adopted": 40,
+    "v1.1 — June 2026": 25,
+    "v1.0 — June 2026": 28
+  },
+  "history_phrases_live": {
+    "historical": 46,
+    "former": 1,
+    "retained as": 3
+  },
+  "near_duplicate_paragraphs": [],
+  "rids_total": 32,
+  "new_rids": [
+    "AZ-NUM-TOKRES-S1",
+    "AZ-OPEN-PROMO",
+    "DYAD-THM-OPEN21-SHARP-ROWS",
+    "DYAD-THM-Q403-PHASELAW",
+    "DZT-OPEN-NORM-LAW",
+    "DZT-THM-CASCADE-NORM-LAW",
+    "RECOG-RESULT-BTOKEN-LOG-EQUIVALENCE",
+    "RECOG-THM-R9-SHARPENED-ROWS",
+    "TDRG-DEF-ORIENT",
+    "TDRG-EXPORT-POLICY-PHASE",
+    "UVM-PROP-JPERP-01"
+  ],
+  "growth_per_new_rid": 584.3,
+  "rid_count_note": "Lexical registered-prefix identifiers per native lint regex; new strings are not new local Programme RID declarations. Includes discussion-only UVM-PROP-JPERP-01.",
+  "footer_lines": 1
+}
