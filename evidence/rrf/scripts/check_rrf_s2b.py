@@ -74,8 +74,8 @@ def verify(base, candidate, plan):
         require(len(rows)==1 and "| ACTIVE | RRF |" in rows[0], "OPEN state " + i)
     require(sum(line.startswith("*END OF DOCUMENT") for line in c)==1, "one footer")
     require("**Document status:** DRAFT" in candidate, "draft status")
-    require("**Closure criterion wording: PI_PENDING.**" in candidate, "closure decision must remain pending at this review head")
-    require("Proposed closure criterion (PI_PENDING); relevant interfaces" in candidate, "closure column metadata")
+    require("**Closure criteria (PI-approved for the v0.9 candidate, 26 November 2026; [decision record](https://github.com/MustafaAksu/rtg-corpus/pull/417#issuecomment-7202555052)).**" in candidate, "explicit PI closure decision citation")
+    require("Closure criterion (PI-approved candidate); relevant interfaces" in candidate, "closure column metadata")
     require("records/rrf/RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_ADOPTION_RECORD.md" in candidate, "predecessor adoption-record pointer")
     return len(src),len(dst)
 

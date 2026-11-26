@@ -11,11 +11,11 @@
   },
   "candidate": {
     "path": "dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
-    "sha256": "90fc4eb5cb732d4511ce958bac7708e9420b4ab62a3332fa79f6fa600e6dd47e",
-    "bytes": 121151,
+    "sha256": "2950dbc0a2fd3468005a9b86190fe4513068019a21444fd8c431124043ba942d",
+    "bytes": 121279,
     "lines": 654
   },
-  "pi_scope": "PI 26 Nov 2026 authorized S2b work and merges of #406/#410 records. No separate explicit approval record for proposed OPEN closure criteria has been established; wording remains PI_PENDING. No adoption/release.",
+  "pi_scope": "PI 26 Nov 2026 authorized S2b work and record merges #406/#410; explicitly approved all four narrowed OPEN closure criteria for the v0.9 candidate in #417 comment 7202555052. All OPENs ACTIVE; no adoption, registration, release or new scientific decision.",
   "operations": [
     {
       "id": "M001",
@@ -577,8 +577,8 @@
     },
     {
       "id": "M039",
-      "kind": "exact",
-      "reason": "C2: restore exact frozen S2a wording and PI_PENDING metadata; no separate explicit PI closure-criteria approval recorded.",
+      "kind": "editorial",
+      "reason": "C2 approval metadata only; explicit PI decision #417 comment 7202555052. No closure criterion row, scope, dependency or OPEN lifecycle changed.",
       "source": [
         545,
         545
@@ -588,7 +588,8 @@
         477,
         477
       ],
-      "destination_sha256": "175a1e5253daabdf9ec1b45e58954b8ada7e263aaf75ae41dbb934c156f995f8"
+      "destination_sha256": "877d73ad79e481ce771314309b486fea3cc0d9d49329a023b984f705ddd9e018",
+      "text": "**Closure criteria (PI-approved for the v0.9 candidate, 26 November 2026; [decision record](https://github.com/MustafaAksu/rtg-corpus/pull/417#issuecomment-7202555052)).** The final column contains the approved candidate wording, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. It is not an adopted closure rule and establishes neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged."
     },
     {
       "id": "M040",
@@ -607,8 +608,8 @@
     },
     {
       "id": "M041",
-      "kind": "exact",
-      "reason": "C2: restore exact frozen S2a wording and PI_PENDING metadata; no separate explicit PI closure-criteria approval recorded.",
+      "kind": "editorial",
+      "reason": "C2 approval metadata only; explicit PI decision #417 comment 7202555052. No closure criterion row, scope, dependency or OPEN lifecycle changed.",
       "source": [
         547,
         547
@@ -618,7 +619,8 @@
         479,
         479
       ],
-      "destination_sha256": "d13f17d5a71c466091f0db47c4f1b5b44f354779666ade4275316cdecb006418"
+      "destination_sha256": "05aa3b26921908804f1c7e05a93f0875761705579985cc6f7b0e6986f12a233f",
+      "text": "| Local alias / proposed RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Closure criterion (PI-approved candidate); relevant interfaces |"
     },
     {
       "id": "M042",
@@ -1519,5 +1521,11 @@
       "The frozen baseline must remain an ancestor of HEAD and of the published history."
     ],
     "review": "PR #418 head 1917fc9ffbbde63467291fe4a8126d1db83a3548; review 6079644693"
+  },
+  "closure_decision": {
+    "date": "2026-11-26",
+    "comment": 7202555052,
+    "url": "https://github.com/MustafaAksu/rtg-corpus/pull/417#issuecomment-7202555052",
+    "scope": "four closure criteria for candidate only; no OPEN closure or adoption"
   }
 }
