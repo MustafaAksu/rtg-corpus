@@ -131,7 +131,7 @@
     "sha256": "acd34e694034a9fb09cb0460638e6ed6e04a4461c291c623f8aafd1606fb2ef0"
   },
   "install_manifest": "upload/corpus-originals-20261123/RER_v0_2_INSTALL_MANIFEST.json",
-  "archive_locator_rule": "Resolve each suffix uniquely within its pinned archive; reject zero or multiple matches. Individual member hashes not printed here are in the nested SHA256SUMS.txt; selectors require independent readback.",
+  "archive_locator_rule": "Resolve each suffix uniquely within its pinned archive; reject zero or multiple matches. Individual member hashes not printed here are in the exact Phase A archive member RER_phaseA_v0_2_RELEASE/SHA256SUMS.txt; selectors require independent readback.",
   "archive_members": [
     {
       "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
@@ -163,43 +163,43 @@
       "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
       "nested": "RER_phaseA_v0_2_RELEASE.zip",
       "member_suffix": "out/RER_REGISTRY_v0_2_RELEASE_PHASEA.json",
-      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+      "hash_source": "RER_phaseA_v0_2_RELEASE/SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
     },
     {
       "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
       "nested": "RER_phaseA_v0_2_RELEASE.zip",
       "member_suffix": "catalog_records.json",
-      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+      "hash_source": "RER_phaseA_v0_2_RELEASE/SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
     },
     {
       "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
       "nested": "RER_phaseA_v0_2_RELEASE.zip",
       "member_suffix": "catalog_sources.json",
-      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+      "hash_source": "RER_phaseA_v0_2_RELEASE/SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
     },
     {
       "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
       "nested": "RER_phaseA_v0_2_RELEASE.zip",
       "member_suffix": "PINS.json",
-      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+      "hash_source": "RER_phaseA_v0_2_RELEASE/SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
     },
     {
       "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
       "nested": "RER_phaseA_v0_2_RELEASE.zip",
       "member_suffix": "build_phaseA.py",
-      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+      "hash_source": "RER_phaseA_v0_2_RELEASE/SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
     },
     {
       "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
       "nested": "RER_phaseA_v0_2_RELEASE.zip",
       "member_suffix": "out/BLOCKED_SOURCE_REGISTER.md",
-      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+      "hash_source": "RER_phaseA_v0_2_RELEASE/SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
     },
     {
       "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
       "nested": "RER_phaseA_v0_2_RELEASE.zip",
       "member_suffix": "check_phaseA_output.txt",
-      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+      "hash_source": "RER_phaseA_v0_2_RELEASE/SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
     }
   ],
   "name_only": [
