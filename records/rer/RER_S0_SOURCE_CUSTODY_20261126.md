@@ -1,0 +1,17 @@
+# RER S0 — source custody and operational continuity
+
+**Date:** 26 November 2026. **Status:** [SESSION] / NONCANONICAL; proposed custody, independent review and PI integration pending.
+**Checkpoint:** f2056cf842f6b0edf275fc402542ff310dcd9714; PR #402 merged. [PI assignment](https://github.com/MustafaAksu/rtg-corpus/pull/402#issuecomment-7191897848); [Claude's independent Atlas ACCEPT and native archive check](https://github.com/MustafaAksu/rtg-corpus/pull/402#issuecomment-7192685483).
+
+## Identity and scope
+The annotated rer-v0.2 tag points to d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d; tagged and checkpoint main RER share blob 5c0897a08da373ac1943bcd77f5781d0d293ae88. The original adoption record was read in full and is placed by identical Git blob, without reserialization. Its digest and the RER digest match the install manifest and Claude's independent byte checks. BASELINE links the original decision, not a second adoption. 18 REVIEWED_SCOPED, 2 BLOCKED_SOURCE_UNVERIFIED (T6D and CARRIER), 16 original machine entries remain unchanged.
+
+## Custody and limitations
+[Locator manifest](../../evidence/rer/s0/custody_manifest.json) pins upload sources and nested release/Phase A packages. The unique-suffix member selectors and nested manifest references permit access without duplicating archive bytes; exact internal paths and individual member digests require reviewer readback. Claude verified 8/8, 217/217, 10/10 manifests and four metadata-line release delta. No archive extraction, SHA-256 recomputation, stored checker execution or scientific campaign by this preparer. Stored PASS is not a new execution.
+ER-2B byte condition met per prior independent review, not receiving acceptance. HARM/ANGLE_DATA/RANKDATA and RRF v0.8 recovered; historical receipts unchanged. COINC_CERT is name plus present digest only; G2NOTE04 name-only historical match; GIIL019 discrepancy needs GEN disposition. STAGE2_TM_LEMMA_REVIEW_20261019.md not found in 529 loose objects and 8,484 archive members or Phase A release per Claude; keep receiver-reported. S2REPLAY historical manifest self-entry discrepancy retained. No RER body, pipe, upload or Atlas changes. No owner proofs re-audited.
+
+## Entry reading extent
+CONVENTIONS including §9; tagged Methodology v1.4 profile/revision passages and Programme v1.5 RER inventory/routing; release identity passages; BASELINE; tagged RER header and source-table excerpts; original adoption and install manifest; Atlas advisory and review comments; intake RER/RRF passages, RRF S0 record, all three open RER pipe payloads; targeted Atlas v0.15 RER lines. Not a full scientific reread.
+
+## Acceptance gates
+A tag and adoption identity; B exact original placement; C BASELINE provenance only; D locator/hash manifest with missing/name-only distinctions; E Phase A pin and unique member resolution; F one entry and README link; G protected RER, pipes, uploads and Atlas unchanged; H Claude exact-head review and PI integration. S1 follows accepted S0; R1 separate CARRIER/T6D review after relevant custody verification; R2 value assessment before separately PI-authorized new campaigns. No adoption-scope change.

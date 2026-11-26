@@ -1,0 +1,224 @@
+{
+  "status": "SESSION; independent review pending",
+  "checkpoint": "f2056cf842f6b0edf275fc402542ff310dcd9714",
+  "hash_provenance": "Atlas advisory and Claude PR #402 comment 7192685483; v0.1 draft from intake and RER §7; not freshly recomputed by preparer",
+  "governing": {
+    "tag": "rer-v0.2",
+    "tag_object": "26895d3318d8ca9fc58c0f83cf2907556da1c021",
+    "commit": "d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d",
+    "path": "noncanonical/RTG_RELATIONAL_EMERGENCE_REGISTRY.md",
+    "git_blob": "5c0897a08da373ac1943bcd77f5781d0d293ae88",
+    "sha256": "58feee5ff1f16a37fc4ee029f24499928ea7439731de0a090d8794c1cbe57ad0"
+  },
+  "objects": [
+    {
+      "path": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_RECORD_20261021.md",
+      "sha256": "acd34e694034a9fb09cb0460638e6ed6e04a4461c291c623f8aafd1606fb2ef0",
+      "git_blob": "bd52686aa8225912409a0b521ddd518b149ef57c",
+      "bytes": 5892,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_ER2B_CONSOLIDATED_STUDY_v0_2.md",
+      "sha256": "ea26d3d1a4853ac88d1938dcb66c76eda4d55980ebf6f4d61091b97d67b2bb5e",
+      "git_blob": "2cea313a9acad7550ec21330177041f96d47628e",
+      "bytes": 50183,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_ER2B_CONSOLIDATED_v0_2.zip",
+      "sha256": "8c6352906143653a1736848e289da9765876927e3d2f089389c3a29326a048ee",
+      "git_blob": "a7ef476c66724d6cf4a6c96d9fdb741da764d5a2",
+      "bytes": 170556,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/ER2B_COINCIDENCE_SIXSTEP_AUDIT_v0_1.zip",
+      "sha256": "ac9ddaf1b9b5e966684325693cf6bd53ae713ea25a42718d1e272da9352d7fea",
+      "git_blob": "28e6f4fd91c2ac699a9ac0f1f5b0f15f0473f971",
+      "bytes": 2259,
+      "limitation": "present digest only, no historical expected hash"
+    },
+    {
+      "path": "upload/corpus-originals-20261123/TRIAD_RECEIVING_REVIEW_AND_HARMONICS.md",
+      "sha256": "7a888515c95c53c35e37eea348dacc3c1ecb44aa545e3c0f860207494e832acd",
+      "git_blob": "17de4700609a34e815ef93e12bcd0014efe021f2",
+      "bytes": 9709,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/COMMON_ANGLE_JET.json",
+      "sha256": "8b558388adb2cc40f5766c9dd65affce891342a44c7642fc84d92c2def853483",
+      "git_blob": "48e4118aa34deed21dd79eed20b663526061e8cd",
+      "bytes": 2456,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/EXACT_RANK_CERTIFICATE.json",
+      "sha256": "3daa611c7002cb862445baf89964678f0cfd3e7affbe1c92d67b64708ac5ac33",
+      "git_blob": "74c4afad42ab88aeccde698251fbc1f91e330d61",
+      "bytes": 2217,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_RRF_REPRESENTATION_REGISTRY_v0_8.md",
+      "sha256": "c4ec1f10da0cdf3b95a84b3013909e04db49212e0119b858c170e5fd8f42b44a",
+      "git_blob": "2e25132c42969550b940fe5b5ff6603b88090592",
+      "bytes": 75580,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_RRF_RER_DYNAMICAL_CLOSURE_PROPOSAL_v0_1.md",
+      "sha256": "65186f393985ed502512c875601891cec999830abc2cc7db2fe01dd94f554e86",
+      "git_blob": "cfb6d5aabd2c25ba85229878195ab4b9fcc977cb",
+      "bytes": 3847,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_RRF_RESPONSE_TO_OFN_COINCIDENCE_v0_2.md",
+      "sha256": "897bfad065aa20c995b471c09cab564d4c1b6ac610769ae5b3f0fa1eb401126d",
+      "git_blob": "da1bac5ba393d3b215c64205cb198bc07a8fd2a6",
+      "bytes": 8809,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_RRF_COINCIDENCE_ADMISSIBILITY_REVIEW_v0_1.md",
+      "sha256": "ef89db5c9aa6544c286cdc62b3841f4c7787ac90bf6512594865af122d472a53",
+      "git_blob": "4a3f9c872e5fcba5767f8bfa100b59cd3d3185c7",
+      "bytes": 5975,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_GENESIS_IDENTIFICATION_INHERITANCE_LEDGER_v0_19_DRAFT.md",
+      "sha256": "f6320914190b434332058b69fe0974ce584d1a8167ae40e2650091be5bdbe2f8",
+      "git_blob": "09d5513687f075a606f1411c3fa1462a418a7328",
+      "bytes": 198306,
+      "limitation": "GIIL019 discrepancy pending owner disposition"
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_RELATIONAL_EMERGENCE_REGISTRY_v0_1_20261008.zip",
+      "sha256": "033d6742af8e20133d6f803302c779f2d016ff9ba1fb374963431f15d5105c1c",
+      "git_blob": "ddd6430cad6fb7daedf2d3ade1b34a2129c6db59",
+      "bytes": 730647,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/STAGE2_REPLAY_20261014.zip",
+      "sha256": "d782a7018ed7a9405d6dd04f48ca036f01d14dbcfbc6ea8e7d1b2dd02aae9be8",
+      "git_blob": "16fcba7f7f5bbb23c5c277c6d5712546aa208df9",
+      "bytes": 190576,
+      "limitation": "historical self-manifest discrepancy"
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "sha256": "f3db1070fd29c1d670aea9b65f90f743629c734e6a04baa2f387deb5b9aadc2a",
+      "git_blob": "593e4d4c89a1ecd9cf35b510fbd31e0d0e06bcae",
+      "bytes": 3579193,
+      "limitation": null
+    },
+    {
+      "path": "upload/corpus-originals-20261123/RTG_RELATIONAL_EMERGENCE_REGISTRY_v0_1_DRAFT.md",
+      "sha256": "886a249ad41f97b99c3473cc06bb0b3e27dcfe2946053539518228e23babbbdb",
+      "git_blob": "6fd6874a540ebd1de055fdb9fac9d24f87b6022f",
+      "bytes": 58964,
+      "limitation": null
+    }
+  ],
+  "placement": {
+    "source": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_RECORD_20261021.md",
+    "destination": "records/rer/RER_v0_2_ADOPTION_RECORD_20261021.md",
+    "git_blob": "bd52686aa8225912409a0b521ddd518b149ef57c",
+    "sha256": "acd34e694034a9fb09cb0460638e6ed6e04a4461c291c623f8aafd1606fb2ef0"
+  },
+  "install_manifest": "upload/corpus-originals-20261123/RER_v0_2_INSTALL_MANIFEST.json",
+  "archive_locator_rule": "Resolve each suffix uniquely within its pinned archive; reject zero or multiple matches. Individual member hashes not printed here are in the nested SHA256SUMS.txt; selectors require independent readback.",
+  "archive_members": [
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "member_suffix": "RER_v0_2_RELEASE.zip",
+      "sha256": "6b544e7173f51153819ce3e6e9e92c7a5f65613d7749c98d94a893b334b8b080"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "member_suffix": "RER_phaseA_v0_2_RELEASE.zip",
+      "sha256": "979d1cf871149bcae316a42a241ff7bfee69cb3dc334a586184f97e48b88cc33"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "member_suffix": "L1_RECEIVING_REVIEW_20261021.md",
+      "sha256": "822615825fccf0e3886fa9b029698042ed6b9db630f83a0c2bcec583148a7a1c"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "member_suffix": "RER_v0_2_ADOPTION_RECORD_20261021.md",
+      "sha256": "acd34e694034a9fb09cb0460638e6ed6e04a4461c291c623f8aafd1606fb2ef0"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "nested": "RER_v0_2_RELEASE.zip",
+      "member_suffix": "RTG_RELATIONAL_EMERGENCE_REGISTRY_v0_2_DRAFT_r4_14_L1.md",
+      "sha256": "032f2211229ab55d6f5f2477f19b75bb29c55a32d7574682be514b18ae0070d3"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "nested": "RER_phaseA_v0_2_RELEASE.zip",
+      "member_suffix": "out/RER_REGISTRY_v0_2_RELEASE_PHASEA.json",
+      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "nested": "RER_phaseA_v0_2_RELEASE.zip",
+      "member_suffix": "catalog_records.json",
+      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "nested": "RER_phaseA_v0_2_RELEASE.zip",
+      "member_suffix": "catalog_sources.json",
+      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "nested": "RER_phaseA_v0_2_RELEASE.zip",
+      "member_suffix": "PINS.json",
+      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "nested": "RER_phaseA_v0_2_RELEASE.zip",
+      "member_suffix": "build_phaseA.py",
+      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "nested": "RER_phaseA_v0_2_RELEASE.zip",
+      "member_suffix": "out/BLOCKED_SOURCE_REGISTER.md",
+      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+    },
+    {
+      "archive": "upload/corpus-originals-20261123/RER_v0_2_ADOPTION_20261021.zip",
+      "nested": "RER_phaseA_v0_2_RELEASE.zip",
+      "member_suffix": "check_phaseA_output.txt",
+      "hash_source": "nested SHA256SUMS.txt (Claude verified 217/217); not independently extracted here"
+    }
+  ],
+  "name_only": [
+    {
+      "path": "upload/corpus-originals-20261123/DYAD_RRF_OFN_G2_CONSOLIDATED_NOTE_v0_4.md",
+      "git_blob": "59b63fdf9997e874f0d0f15f7578d46e5791b472",
+      "bytes": 20649,
+      "limitation": "No expected historical digest; original browser filename includes (1)"
+    }
+  ],
+  "missing": [
+    "STAGE2_TM_LEMMA_REVIEW_20261019.md — not found in inspected scope; receiver-reported only"
+  ],
+  "scope": {
+    "reviewed_scoped": 18,
+    "excluded_blocked": [
+      "RER-ER2B-T6D",
+      "RER-ER2B-CARRIER"
+    ],
+    "legacy_machine_entries": 16
+  }
+}
