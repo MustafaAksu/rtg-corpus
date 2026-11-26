@@ -11,16 +11,16 @@
   },
   "candidate": {
     "path": "dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
-    "sha256": "0163284ed22973ff65d5869d62726f4539e481ac0c199bba588d225bdd0c5d24",
-    "bytes": 121071,
+    "sha256": "90fc4eb5cb732d4511ce958bac7708e9420b4ab62a3332fa79f6fa600e6dd47e",
+    "bytes": 121151,
     "lines": 654
   },
-  "pi_scope": "PI 26 Nov 2026 accepted S2b and authorized merges of #406/#410; closure-criterion wording accepted for candidate, no adoption/release.",
+  "pi_scope": "PI 26 Nov 2026 authorized S2b work and merges of #406/#410 records. No separate explicit approval record for proposed OPEN closure criteria has been established; wording remains PI_PENDING. No adoption/release.",
   "operations": [
     {
       "id": "M001",
       "kind": "editorial",
-      "reason": "YAML to current draft header; no publication, no altered scientific statement. Status summary readout of §§0,6,8.",
+      "reason": "YAML to current draft header; no publication, no altered scientific statement. Status summary readout of §§0,6,8. C1 restores the exact predecessor adoption-record pointer from frozen header.",
       "source": [
         1,
         17
@@ -30,8 +30,8 @@
         1,
         12
       ],
-      "destination_sha256": "09d1b863cfb76d0f9367374756380f067082c1d150df96928093417cdd3b6aef",
-      "text": "# RTG — RRF Representation Registry — v0.9\n\n**Title:** RTG — RRF Representation Registry\n**Version:** v0.9\n**Date:** 26 November 2026\n**Scope:** Isolated continuous dyad (four profiles) and one provisional network profile; working representation standard only.\n**Document class:** Infrastructure / representation registry; declared nonstandard section map (§0). §1 is equation-annotation syntax rather than a 200–400 word state summary.\n**Document status:** DRAFT — S2b review candidate; not adopted. `rrf-v0.8.4` governs until the PI adoption and release.\n**Supersedes:** RTG_RRF_REPRESENTATION_REGISTRY.md at `rrf-v0.8.4` (SHA-256 `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce`), proposed successor only.\n**Companion documents:** §0.2 current-source table and §7 import/use records; historical PRR Wrap-up v0.2 §§20, 26 (NONCANONICAL parent).\n**DSN Methodology:** `methodology-v1.4`.\n**Status summary:** The registry produces no new physics; it makes representation mistakes of the R11 type mechanically visible. All dyad statements are conditional on the postulated generator T. OPEN-A/B/E remain ACTIVE."
+      "destination_sha256": "c0267156df5fee00aadc62e664826ea7508beafc4577a67fe7fb10339975adf1",
+      "text": "# RTG — RRF Representation Registry — v0.9\n\n**Title:** RTG — RRF Representation Registry\n**Version:** v0.9\n**Date:** 26 November 2026\n**Scope:** Isolated continuous dyad (four profiles) and one provisional network profile; working representation standard only.\n**Document class:** Infrastructure / representation registry; declared nonstandard section map (§0). §1 is equation-annotation syntax rather than a 200–400 word state summary.\n**Document status:** DRAFT — S2b review candidate; not adopted. `rrf-v0.8.4` governs until the PI adoption and release.\n**Supersedes:** RTG_RRF_REPRESENTATION_REGISTRY.md at `rrf-v0.8.4` (SHA-256 `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce`), proposed successor only.\n**Companion documents:** §0.2 current-source table and §7 import/use records; historical PRR Wrap-up v0.2 §§20, 26 (NONCANONICAL parent); predecessor adoption record `records/rrf/RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_ADOPTION_RECORD.md`.\n**DSN Methodology:** `methodology-v1.4`.\n**Status summary:** The registry produces no new physics; it makes representation mistakes of the R11 type mechanically visible. All dyad statements are conditional on the postulated generator T. OPEN-A/B/E remain ACTIVE."
     },
     {
       "id": "M002",
@@ -252,7 +252,7 @@
     {
       "id": "M016",
       "kind": "archive",
-      "reason": "Explicitly historical predecessor §0.2 block restored by S2a C1. Exact bytes recoverable from frozen S2a L88–107 and adopted rrf-v0.8.4 L69–86; current RF-O09-03/04 and SG-15 retained immediately below.",
+      "reason": "Explicitly historical predecessor §0.2 block restored by S2a C1. Complete archived span is available byte-exact at frozen S2a L88–107 only; the embedded predecessor receipt body also occurs in rrf-v0.8.4 L69–86. Current RF-O09-03/04 and SG-15 retained.",
       "source": [
         88,
         107
@@ -577,8 +577,8 @@
     },
     {
       "id": "M039",
-      "kind": "editorial",
-      "reason": "PI decision on wording only; preserve remainder of scope and no closure rule adoption.",
+      "kind": "exact",
+      "reason": "C2: restore exact frozen S2a wording and PI_PENDING metadata; no separate explicit PI closure-criteria approval recorded.",
       "source": [
         545,
         545
@@ -588,8 +588,7 @@
         477,
         477
       ],
-      "destination_sha256": "cf2e9ac80d8befa11ae6b972d326573227ec8fd34e248e3e386f86b8cb39dced",
-      "text": "**Closure criteria (PI-approved for the v0.9 candidate, 26 November 2026).** The final column contains the accepted candidate wording, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. It is not an adopted closure rule and establishes neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged."
+      "destination_sha256": "175a1e5253daabdf9ec1b45e58954b8ada7e263aaf75ae41dbb934c156f995f8"
     },
     {
       "id": "M040",
@@ -608,8 +607,8 @@
     },
     {
       "id": "M041",
-      "kind": "editorial",
-      "reason": "PI-approved wording; table column metadata only.",
+      "kind": "exact",
+      "reason": "C2: restore exact frozen S2a wording and PI_PENDING metadata; no separate explicit PI closure-criteria approval recorded.",
       "source": [
         547,
         547
@@ -619,8 +618,7 @@
         479,
         479
       ],
-      "destination_sha256": "9a6377e7ed3bc28ada69b2d5a6aa71d57781c5a533a3627ca883debb5589caf2",
-      "text": "| Local alias / proposed RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Closure criterion (candidate); relevant interfaces |"
+      "destination_sha256": "d13f17d5a71c466091f0db47c4f1b5b44f354779666ade4275316cdecb006418"
     },
     {
       "id": "M042",
@@ -1508,5 +1506,18 @@
       "source": "RECOG v0.3.27 §6.16g; RID: RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS"
     }
   ],
-  "archive_review": "Explicit archive classification remains for independent reviewer, not mechanically proved semantics."
+  "archive_review": "Explicit archive classification remains for independent reviewer, not mechanically proved semantics.",
+  "release_gate": {
+    "G1": "At release name the exact S2a intermediate baseline commit and SHA-256 in the release record; #417 must be integrated by merge commit, not squash/rebase. Verify the frozen commit is an ancestor of candidate HEAD and of main after authorized integration.",
+    "base_only_archive_spans": [
+      "M003",
+      "M016"
+    ],
+    "checker_limits": [
+      "Archive/editorial classification is not mechanically established; independent review carries it.",
+      "Navigation content is unconstrained beyond declared bytes; independent review carries its scope and grade readouts.",
+      "The frozen baseline must remain an ancestor of HEAD and of the published history."
+    ],
+    "review": "PR #418 head 1917fc9ffbbde63467291fe4a8126d1db83a3548; review 6079644693"
+  }
 }

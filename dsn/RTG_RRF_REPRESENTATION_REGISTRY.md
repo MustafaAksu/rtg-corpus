@@ -7,7 +7,7 @@
 **Document class:** Infrastructure / representation registry; declared nonstandard section map (§0). §1 is equation-annotation syntax rather than a 200–400 word state summary.
 **Document status:** DRAFT — S2b review candidate; not adopted. `rrf-v0.8.4` governs until the PI adoption and release.
 **Supersedes:** RTG_RRF_REPRESENTATION_REGISTRY.md at `rrf-v0.8.4` (SHA-256 `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce`), proposed successor only.
-**Companion documents:** §0.2 current-source table and §7 import/use records; historical PRR Wrap-up v0.2 §§20, 26 (NONCANONICAL parent).
+**Companion documents:** §0.2 current-source table and §7 import/use records; historical PRR Wrap-up v0.2 §§20, 26 (NONCANONICAL parent); predecessor adoption record `records/rrf/RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_ADOPTION_RECORD.md`.
 **DSN Methodology:** `methodology-v1.4`.
 **Status summary:** The registry produces no new physics; it makes representation mistakes of the R11 type mechanically visible. All dyad statements are conditional on the postulated generator T. OPEN-A/B/E remain ACTIVE.
 
@@ -474,9 +474,9 @@ Current GEN v2.10 §§1–2,6.9,7 and TRIAD v1.7 §§6.18,7.4 preserve the unit-
 ### 6.5 OPEN register (representation scope)
 **OPEN register — proposed descriptive identities, existing obligations unchanged.** Status and owner fields below concern RRF representation work only; owner science stays with the respective scientific owners. All remain ACTIVE. The local names OPEN-A, OPEN-B, OPEN-E1 and OPEN-E2 are retained as aliases (Methodology §§4.2,5.1); proposed descriptive RIDs are not registered until PI adoption.
 
-**Closure criteria (PI-approved for the v0.9 candidate, 26 November 2026).** The final column contains the accepted candidate wording, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. It is not an adopted closure rule and establishes neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged.
+**Closure criterion wording: PI_PENDING.** The final column contains candidate wording for PI approval, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. It is not an adopted closure rule and establishes neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged.
 
-| Local alias / proposed RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Closure criterion (candidate); relevant interfaces |
+| Local alias / proposed RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Proposed closure criterion (PI_PENDING); relevant interfaces |
 |---|---|---|---|---|---|
 | OPEN-A / RRF-OPEN-POLE-RELABELING | ACTIVE | RRF | §4.2: (1) whether the registered representation-level involution is physical pole relabeling; (2) whether WRAPPED inversion is the same physical operation. Distinct smooth/formal actions and bookkeeping; no selected action. | No other RRF OPEN prerequisite declared in §4.2. | Justified resolution of both existing questions at their declared scope. Smooth existence alone does not settle either. Relevant: OFN OPEN-OPA, RECOG R1 and G2 contract. |
 | OPEN-B / RRF-OPEN-IDENTIFICATION-PRIMITIVE | ACTIVE | RRF | §6: Genesis identification primitive, node identity versus pole-role identity. | No RRF OPEN prerequisite declared for B in §6. | Resolve the stated identification question before canonical network-state selection. Relevant: GEN/OFN, RECOG F4. |

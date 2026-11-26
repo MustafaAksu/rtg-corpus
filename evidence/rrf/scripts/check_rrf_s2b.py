@@ -3,8 +3,11 @@
 
 The general checker has no profile support for this input's YAML header,
 cross-section moves, or explicitly tagged historical receipts. This is a
-proposed scoped adapter, not a replacement for global tooling. Mechanical
-coverage is not approval of archival classification or rewritten prose.
+scoped adapter accepted for this edition in review 6079644693, subject to
+corrected-head readback. Mechanical coverage is not approval of archival or
+editorial classification. Navigation content is not constrained beyond declared
+bytes. The archive commit must remain an ancestor of HEAD; verify ancestry
+again on main after authorized merge-commit integration.
 """
 import argparse, copy, hashlib, json, re, subprocess
 from pathlib import Path
@@ -71,7 +74,9 @@ def verify(base, candidate, plan):
         require(len(rows)==1 and "| ACTIVE | RRF |" in rows[0], "OPEN state " + i)
     require(sum(line.startswith("*END OF DOCUMENT") for line in c)==1, "one footer")
     require("**Document status:** DRAFT" in candidate, "draft status")
-    require("Closure criterion wording: PI_PENDING." not in candidate, "PI scope metadata not updated")
+    require("**Closure criterion wording: PI_PENDING.**" in candidate, "closure decision must remain pending at this review head")
+    require("Proposed closure criterion (PI_PENDING); relevant interfaces" in candidate, "closure column metadata")
+    require("records/rrf/RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_ADOPTION_RECORD.md" in candidate, "predecessor adoption-record pointer")
     return len(src),len(dst)
 
 def main():
@@ -80,6 +85,12 @@ def main():
     args=ap.parse_args()
     root=args.root.resolve()
     plan=json.loads((root / "evidence/rrf/v0.9/s2b_movement_map.json").read_text(encoding="utf-8"))
+    frozen = "98da97c311a917d1539b9c31afaba779bc75a73f"
+    require(plan["base"]["commit"] == frozen, "reviewed archive commit")
+    require(plan["base"]["git"] == frozen + ":dsn/RTG_RRF_REPRESENTATION_REGISTRY.md", "reviewed archive path")
+    ancestry = subprocess.run(["git", "-C", str(root), "merge-base", "--is-ancestor", frozen, "HEAD"])
+    require(ancestry.returncode == 0, "frozen archive commit must be ancestor of HEAD")
+    print("PASS archive base ancestry:", frozen)
     base=subprocess.check_output(["git","-C",str(root),"show",plan["base"]["git"]]).decode("utf-8")
     candidate=(root / plan["candidate"]["path"]).read_bytes().decode("utf-8")
     require(plan["base"]["sha256"]=="390f75e447b7d5a9dcb01810d7eb513e9feef3c157f0de2f2f79afb259b39d72", "expected reviewed freeze")
