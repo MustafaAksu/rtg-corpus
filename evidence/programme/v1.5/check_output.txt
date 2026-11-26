@@ -1,0 +1,25 @@
+[SESSION] Connector JS bounded reproduction (not native CLI or proof audit).
+base 37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0
+candidate abe033d06206f1615ad72a5234882645e8a63bf18d59c0a28e5ce6ec9b7fb618
+edits 82
+C0 exact rebuild/hash chain PASS
+C1 reverse bytes PASS
+C2 five programme RIDs PASS
+C3 five ACTIVE statuses PASS
+C4 mission/architecture PASS
+C5 maturity semantics PASS
+C6 only authorized OPEN metadata addresses PASS
+C7 remaining OPEN registry exact PASS
+C8 guards/high-risk readings exact PASS
+C9 38 IF identities PASS
+C10 anchors preserved PASS
+C11 inherited history and Appendix B PASS
+C12 DRAFT boundary PASS
+NC1 altered base rejected
+NC2 undeclared candidate edit rejected
+NC3 OPEN status change rejected
+NC4 guard change rejected
+NC5 IF rename rejected
+NC6 history change rejected
+NC7 premature adoption rejected
+RESULT: PASS
