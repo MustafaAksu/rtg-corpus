@@ -260,9 +260,9 @@
     {
       "id": "E0313",
       "line": 313,
-      "reason": "TDR-G custody and migration",
+      "reason": "TDR-G custody and migration; O3 align IF21",
       "old": "**TDRG — Discrete Genesis** (v2.12.14, `tdrg-v2.12.14`). Owns native cyclic-state/event definitions, policy branches, kinematic/BIND3 modules and the growth/suppression programme; imports OFN (its §7 claim pin v0.10; historical v0.6/v0.7 pins at its §2) and cites the Programme as context (v1.3). Exports to Number Genesis (DISC) and AZ (Threads B/C). Its owner pass since v1.2 is executed in part: v2.12.14 is a corrections edition under its declared Methodology v1.2, and records the state of the four owner-review tasks of Programme v1.2 §6 in its §2; the Methodology v1.4 migration is planned for its v2.13.",
-      "new": "**TDRG — Discrete Genesis** (v2.13, `tdrg-v2.13`). Owns native cyclic-state/event definitions, policy branches, kinematic/BIND3 modules and the growth/suppression programme. Its §7 imports Finding A (`RTG-OFN-ALG-STAR-TOKEN-SHIFT`) at `ofn-v0.12`, with custody retained by OFN (XFER-O08-01 open), and cites Programme v1.4 as context. Exports scoped inputs to Number Genesis (DISC) and AZ (Threads B/C); Methodology v1.4 migration is executed. Outstanding owner-review tasks remain TDR-G's §2 obligations, not Programme closures."
+      "new": "**TDRG — Discrete Genesis** (v2.13, `tdrg-v2.13`). Owns native cyclic-state/event definitions, policy branches, kinematic/BIND3 modules and the growth/suppression programme. Its §7 imports Finding A (`RTG-OFN-ALG-STAR-TOKEN-SHIFT`) at `ofn-v0.12`, with custody retained by OFN (XFER-O08-01 open), and cites Programme v1.4 as context. Exports scoped inputs to Number Genesis (DISC); AZ cites TDR-G as branch-local context (IF21). Methodology v1.4 migration is executed. Outstanding owner-review tasks remain TDR-G's §2 obligations, not Programme closures."
     },
     {
       "id": "E0315",
@@ -302,9 +302,9 @@
     {
       "id": "E0333",
       "line": 333,
-      "reason": "SAT policy for review/adoption",
+      "reason": "SAT policy for review/adoption; B3 A6 locator; O1 requested route and validator; O2 permission only",
       "old": "",
-      "new": "\n**External satellite and literature interfaces.** The stable external pointer is [rtg-sat/REGISTRY.md](https://github.com/MustafaAksu/rtg-sat/blob/main/REGISTRY.md), not a duplicated satellite-version table or another RTG home. SAT identifies a repository/filing interface, never a study, maturity tier, scientific namespace or owner result. LIT is the separate literature service governed by CONVENTIONS §8. Recovered but unplaced PRR Wrap-up sources are not additional governing homes without a separate source/status decision (Programme work list A6). Neither service changes the inventory count.\n\n**Satellite queue policy (Programme receiver scope).** Retain `SAT` as the common sender key for satellite-to-RTG filings; identify the satellite study and scoped source in object/body where applicable. Use `filed_by` only for a valid stream key when different from the source. For RTG-to-satellite synchronization the relevant RTG owner, or Atlas acting as identified filer, may propose one notice for each actually affected satellite receiver in `rtg-sat/pipes/<KEY>/` after checking its declared pin and the new adopted RTG tag. Name old/new source identities, changed statement/scope and impact; no automatic repin. Satellite owners review/disposition under `rtg-sat/CONVENTIONS.md` §§3–5 and its native checker. This is RTG-side routing, not an amendment to the satellite repository, a satellite decision, publication of restricted material or adopted use. Pending recipient decisions do not block an unrelated RTG release."
+      "new": "\n**External satellite and literature interfaces.** The stable external pointer is [rtg-sat/REGISTRY.md](https://github.com/MustafaAksu/rtg-sat/blob/main/REGISTRY.md), not a duplicated satellite-version table or another RTG home. SAT identifies a repository/filing interface, never a study, maturity tier, scientific namespace or owner result. LIT is the separate literature service governed by CONVENTIONS §8. Recovered but unplaced PRR Wrap-up sources are not additional governing homes without a separate source/status decision (Atlas work list `records/atlas/ATLAS_PROGRAMME_WORK_LIST_20261120.md`, row A6). Neither service changes the inventory count.\n\n**Satellite queue policy (Programme receiver scope).** Retain `SAT` as the common sender key for satellite-to-RTG filings; identify the satellite study and scoped source in object/body where applicable. Use `filed_by` only for a valid stream key when different from the source. For RTG-to-satellite synchronization the relevant RTG owner may propose one notice for each actually affected satellite receiver in `rtg-sat/pipes/<KEY>/` after checking its declared pin and the new adopted RTG tag; Atlas may act as an identified filer when requested by the relevant owner or the PI, not under a standing monitoring or notification duty. Name old/new source identities, changed statement/scope and impact; no automatic repin. This route responds to the satellite-side request 3 in `pipes/PROG/20261109-SAT-satellite-interface.md` (P01); `rtg-sat/tools/sat_check.py` permits RTG stream senders including ATLAS, although `rtg-sat/CONVENTIONS.md` §5 does not yet expressly describe this route. Satellite owners review/disposition under their rules and native checker; any clarification of their conventions is for the SAT co-owners. This is RTG-side routing, not an amendment to the satellite repository, a satellite decision, publication of restricted material or adopted use. Pending recipient decisions do not block an unrelated RTG release."
     },
     {
       "id": "E0353",
@@ -358,9 +358,9 @@
     {
       "id": "E0429",
       "line": 429,
-      "reason": "IF09 open gate",
+      "reason": "IF09 open gate; B2 proposal identifier",
       "old": "| IF09 | UVM → GEN | requested-deliverable | UV blocks and physical source/stiffness data | UVM §0.2–§0.3 | open; no cascade implied |",
-      "new": "| IF09 | UVM → GEN | requested-deliverable | UV blocks and physical source/stiffness data; UVM-PROP-JPERP-01 is a SESSION review request, C3 unresolved | UVM §0.2–§0.3, §9; `pipes/GEN/20261123-UVM-jperp-proposal-review.md` | open; no cascade implied |"
+      "new": "| IF09 | UVM → GEN | requested-deliverable | UV blocks and physical source/stiffness data; discussion identifier `UVM-PROP-JPERP-01` (SESSION proposal, `records/uvm/UVM_OPEN_M6_STAGE1_RESULTS.md` §6; not an RID, not adopted); C3 unresolved | UVM §0.2–§0.3, §9; `pipes/GEN/20261123-UVM-jperp-proposal-review.md` | open; no cascade implied |"
     },
     {
       "id": "E0430",
@@ -421,9 +421,9 @@
     {
       "id": "E0446",
       "line": 446,
-      "reason": "IF26 conditional companion",
+      "reason": "IF26 conditional companion; B3 complete RID",
       "old": "| IF26 | RECOG → DYAD | declared-import | `RECOG-THM-R9-MEMORY` as the stated assumption of Dyadic's OPEN 3/21 asymptotic-phase theorems (`[THM] [assuming: RECOG-THM-R9-MEMORY]`); `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | DYAD §6.14, §7 | v0.3.22 (claim-level; its §7.0 names v0.3.26 as current companion) |",
-      "new": "| IF26 | RECOG → DYAD | declared-import | `RECOG-THM-R9-MEMORY` as the stated assumption of Dyadic's OPEN 3/21 asymptotic-phase theorems (`[THM] [assuming: RECOG-THM-R9-MEMORY]`); `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | DYAD §6.14, §7 | v0.3.22 claim-level (v0.3.20 historical); v0.3.26 for RECOG-THM-R9-SHARPENED-ROWS, conditional companion OPEN21-SHARP-ROWS; v0.3.27 current companion |"
+      "new": "| IF26 | RECOG → DYAD | declared-import | `RECOG-THM-R9-MEMORY` as the stated assumption of Dyadic's OPEN 3/21 asymptotic-phase theorems (`[THM] [assuming: RECOG-THM-R9-MEMORY]`); `RECOG-THM-A1A-RECIPROCAL-AMPLITUDE` | DYAD §6.14, §7 | v0.3.22 claim-level (v0.3.20 historical); v0.3.26 for RECOG-THM-R9-SHARPENED-ROWS, conditional companion `DYAD-THM-OPEN21-SHARP-ROWS`; v0.3.27 current companion |"
     },
     {
       "id": "E0447",
