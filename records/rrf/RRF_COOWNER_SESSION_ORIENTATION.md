@@ -18,10 +18,10 @@ Next steps: (1) C1–C4 exact-head reviewer readback and PI merge #400/#401, com
 Check stamp: 2026-11-26; checkpoint `main` `f2056cf8`.
 - S0: ACCEPT SCOPED on #397 at `44fac173`.
 - S1: ACCEPT SCOPED after readback on #400 at `2c087763`.
-- S2a: ACCEPT WITH CHANGES on #404 at `6a7b27de` (`records/rrf/RRF_S2A_REVIEWER_VERDICT_PR404_20261126.md`). A1 and A2 are met. A3 has two required changes: C1 restores three dropped pointers (RF-O09-03, SG-15, the P2-B v2 evidence zip), with `evidence/rrf/scripts/rrf_s2a_preservation_check.py` exiting 0; C2 sets the OPEN ID format, with the closure-criteria wording a PI item.
+- S2a: ACCEPT WITH CHANGES on #404 at `6a7b27de`; C1/C2 readback ACCEPT SCOPED at `98da97c3`, freeze hash `390f75e4…9d72` pending the PI decision on the closure wording (`records/rrf/RRF_S2A_REVIEWER_VERDICT_PR404_20261126.md` §5). A1 and A2 are met. A3 has two required changes: C1 restores three dropped pointers (RF-O09-03, SG-15, the P2-B v2 evidence zip), with `evidence/rrf/scripts/rrf_s2a_preservation_check.py` exiting 0; C2 sets the OPEN ID format, with the closure-criteria wording a PI item.
 
 Held: no science opened. PRR v0.3, GIIL, S2b and release are PI or owner decisions. Tried and rejected: none.
 
 Next:
-1. Readback of C1/C2 at the corrected #404 head, done when the preservation check and the builder pass and the IDs are resolved.
+1. S2b review from the frozen hash, done when every moved block is matched by the compaction map and the preservation check passes against `390f75e4…`.
 2. BR-Q2 independent derivation, done when there is a verdict with scope, an explicit bridge or refusal, and a counterexample search on record.
