@@ -18,3 +18,4 @@
 | 2026-11-19 | DZT | notice | closed | OFN RF-O08-13 (DZT and AZ diagnostic homes): DZT edition and section pointer | — | `20261119-DZT-v0-18-adopted.md` |
 | 2026-11-24 | NUMGEN | notice | closed | NUMGEN v1.22 §9.1; REQ-O09-03 fulfilled and N-1A2 vocabulary use | — | `20261124-NUMGEN-v1-22-adopted.md` |
 | 2026-11-25 | UVM | notice | open | UVM v0.7.2 OPEN-M-7, SG-M-7, R15/R16; UVM-OPEN-OPA-LINK, UVM-NUM-2F-RHO, UVM-RESULT-AUDIT1 | — | `20261125-UVM-v0-7-2-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 §5 P0/P2B; IF02/03/24/28/31/32 and §8.2 | — | `20261126-PROG-v1-5-adopted.md` |

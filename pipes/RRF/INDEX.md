@@ -13,3 +13,4 @@
 | 2026-11-04 | OFN | question | open | RRF v0.8.4 §4.1 comparator typing and S-decomposition, §4.2 typed-covariance criterion; RECOG v0.3.27 SG-R14; records/ofn/NODE_BINARY_RECOGNITION_WRAPUP.md §3B, §6 COR-BR-10/11, §7 BR-Q2 | — | `20261104-OFN-binary-recognition-sign-typing.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 §5.5 convention attribution; class-C model contract unchanged | — | `20261125-OFN-v0-13-adopted.md` |
 | 2026-11-25 | UVM | notice | open | UVM v0.7.2 OPEN-M-6/SG-M-7/§7; RRF §§0.3, 3, 3.1, 6.2 | — | `20261125-UVM-v0-7-2-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 IF29/31/32, §6.5 and §8.2; RRF §6.2a | — | `20261126-PROG-v1-5-adopted.md` |

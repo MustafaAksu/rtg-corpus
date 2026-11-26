@@ -31,3 +31,4 @@
 | 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §§6.2, 6.6, 9.1; NC-17 q-star disambiguation and N15 receipt | — | `20261124-NUMGEN-v1-22-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 IMP-O08-12 and IMP-O10-05; DYAD reference-map and conditional OPEN21 scope | — | `20261125-OFN-v0-13-adopted.md` |
 | 2026-11-25 | UVM | notice | open | UVM v0.7.2 SG-M-7, R9/R11/R16, §7; UVM-ALG-2B-ASSEMBLY, UVM-ALG-H3AUDIT, UVM-RESULT-AUDIT1 | — | `20261125-UVM-v0-7-2-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 §5 P0; IF02, 10, 18, 20, 26 and 32 | — | `20261126-PROG-v1-5-adopted.md` |

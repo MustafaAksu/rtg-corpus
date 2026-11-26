@@ -20,3 +20,4 @@
 | 2026-11-25 | OFN | notice | open | OFN v0.13 §5.5 and IF32; matched factor scope and historical Genesis reference pins | — | `20261125-OFN-v0-13-adopted.md` |
 | 2026-11-25 | UVM | request | open | UVM-GEN-RID-QUERY; producer identity mapping for scoped GEN definitions/algebra in UVM v0.7.2 §§1.1–1.2 and §7 | — | `20261125-UVM-gen-rid-query.md` |
 | 2026-11-25 | UVM | notice | open | UVM v0.7.2 §§0.3, 1–3, 6–7; UVM-ALG-2B-ASSEMBLY, UVM-RESULT-M3B, UVM-RESULT-AUDIT1, UVM-OPEN-H3AUDIT | — | `20261125-UVM-v0-7-2-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 §5 P3, IF08/09/11/23/32/37/38 and §8.2 | — | `20261126-PROG-v1-5-adopted.md` |

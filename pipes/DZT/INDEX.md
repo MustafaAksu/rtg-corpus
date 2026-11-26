@@ -11,3 +11,4 @@
 | 2026-11-18 | LIT | finding | dispositioned | supplement to pipes/DZT/20261113-LIT-norm-law-proof-candidate.md; DZT-ALG-CASCADE-NORM (DZT §6.3 validation table); LIT record rtg-lit records/lit/dzt2026/DZT_NORM_SIGN_NOTE.md at rtg-lit commit da9d5bcb34e8a89bbe2ec1b409b178fe9a6a6873 | — | `20261118-LIT-norm-sign-supplement.md` |
 | 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §8 provenance; DZT-THM-CASCADE-NORM-LAW (reference only) | — | `20261124-NUMGEN-v1-22-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 RF-O08-13; DZT reference-only diagnostic home | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 §§4, 6.3, 7.2 IF18/19 and 9.2 | — | `20261126-PROG-v1-5-adopted.md` |

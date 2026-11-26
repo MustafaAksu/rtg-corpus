@@ -11,3 +11,4 @@
 | 2026-11-16 | TDRG | notice | closed | answer to pipes/TDRG/20261114-AZ-v0-9-adopted.md and pipes/TDRG/20261116-AZ-v0-10-adopted.md; TDR-G §6.2 citation of AZ-ALG-ANTIPODAL-LOWORDER; TDR-G §7 AZ consumer row | — | `20261116-TDRG-v2-13-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 RF-O08-13; AZ reference-only diagnostic home | — | `20261125-OFN-v0-13-adopted.md` |
 | 2026-11-25 | UVM | notice | open | UVM v0.7.2 R11/R15/R16, SG-M-7; UVM-NUM-2F-RHO, UVM-RESULT-AUDIT1 | — | `20261125-UVM-v0-7-2-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 §§4, 6.5, 6.7, 7.2 IF20/21 and 9.2; AZ §7–8 | — | `20261126-PROG-v1-5-adopted.md` |
