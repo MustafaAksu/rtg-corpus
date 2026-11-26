@@ -30,3 +30,5 @@ Earlier archive: Zenodo DOI 10.5281/zenodo.17568897.
 Documents keep their own DSN status (DRAFT, ADOPTED, …). Working notes are marked SESSION / NONCANONICAL in their headers. Presence in this repository is not adoption.
 
 See `CONVENTIONS.md` for how a stream works here: the live file, releases, evidence, uploads and notices.
+
+RRF co-owner entry (proposed under CONVENTIONS §9): [RRF session orientation](records/rrf/RRF_COOWNER_SESSION_ORIENTATION.md).

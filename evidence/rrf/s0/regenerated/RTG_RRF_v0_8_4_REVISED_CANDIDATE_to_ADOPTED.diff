@@ -1,0 +1,46 @@
+--- RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_REVISED_REVIEW_CANDIDATE.md
++++ RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4.md
+@@ -3,22 +3,22 @@
+ version: "v0.8.4"
+ date: "20 October 2026"
+ class: "working artefact / representation discipline"
+-status: "REVIEW CANDIDATE — NOT ADOPTED; RRF v0.8.4 source and interface synchronization only"
+-intended superseded standard if adopted: "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3.md — ADOPTED 19 October 2026; SHA-256 b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187"
++status: "ADOPTED — RRF v0.8.4 working representation standard; 20 October 2026"
++supersedes: "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3.md — ADOPTED 19 October 2026; SHA-256 b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187"
+ review scope: "DYAD v6.4.18 N14 C-infinity existence; RECOG v0.3.21 RF-1 W3 owner alignment; OFN v0.10 N-O10-3 (O10-P3) class-C model contract and psi readout; Genesis v2.8.9 conditional Q6 owner pin; no profile or physical choice"
+ revision base: "RTG_RRF_REPRESENTATION_REGISTRY_v0_8_3.md (ADOPTED; SHA-256 b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187); historical publication text preserved"
+ predecessor source draft: "RTG_RRF_REPRESENTATION_REGISTRY_v0_7_DRAFT.md; preserved unchanged"
+ predecessor adoption record: "RTG_RRF_REPRESENTATION_REGISTRY_v0_7_ADOPTION_RECORD.md"
+ predecessor revision editor: "ChatGPT; 5 October 2026 scoped v0.7 finalization, unchanged history"
+-revision editor: "ChatGPT; 20 October 2026 v0.8.4 review candidate; adoption pending"
+-adoption: "NOT ADOPTED; adopted v0.8.3 and its separate adoption record remain governing"
++revision editor: "ChatGPT; 20 October 2026 v0.8.4 working-standard adoption"
++adoption: "ADOPTED at RRF working-representation scope; separate RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_ADOPTION_RECORD.md"
+ parent: "RTG_PRIMORDIAL_RELATIONAL_REPRESENTATION_WRAPUP_v0_2 §20, §26"
+ governing methodology: "DSN_METHODOLOGY_v1.3"
+ ---
+ 
+ # 0. Purpose, scope, status grammar, lock
+ 
+-**v0.8.4 candidate overlay (20 October 2026; NOT ADOPTED).** This overlay synchronizes adopted DYAD v6.4.18 smooth existence (N14), adopted RECOG v0.3.21 RF-1 owner W3, adopted OFN v0.10 model-contract request N-O10-3 (O10-P3) and its modulus-readout limitations, and conditional Genesis v2.8.9 Q6. The original v0.8.3 publication text and earlier §9/§10 histories below remain archival facts and are not retrospectively revised. This draft adopts no theorem, physics, carrier, clock, native profile or OPEN-A/B/E closure.
++**v0.8.4 review-stage overlay (20 October 2026; subsequently adopted).** This overlay synchronizes adopted DYAD v6.4.18 smooth existence (N14), adopted RECOG v0.3.21 RF-1 owner W3, adopted OFN v0.10 model-contract request N-O10-3 (O10-P3) and its modulus-readout limitations, and conditional Genesis v2.8.9 Q6. The original v0.8.3 publication text and earlier §9/§10 histories below remain archival facts and are not retrospectively revised. This reviewed update adopts no new scientific theorem, physics, carrier, clock, native profile or OPEN-A/B/E closure.
+ 
+ **v0.8.3 publication boundary (19 October 2026).** This adopted RRF working-standard successor to v0.8.2 uses adopted DYAD v6.4.13 §§6.16–6.17 as scientific owner for Lemma F / F1–F3 and the formal ℤ₆ generator. The independent review requested a single §2.4c scope correction: B-6 ⇔ B-an ∧ B-3, so B-6 ⇒ B-an; no strictness claim. Earlier v0.8.2/v0.8.1 histories and source receipts remain historical text. The preceding v0.8.3 review overlay records the *prepublication* state, not the current adoption status. Adoption covers RRF working representation discipline only, and not new physics, mathematical theorem ownership, analytic/smooth existence or G2 realization. See the separate v0.8.3 adoption record and §10.3.
+ 
+@@ -500,7 +500,7 @@
+ 
+ # 9. Change log
+ 
+-- **v0.8.4 — REVIEW CANDIDATE (20 Oct 2026; NOT ADOPTED):** DYAD v6.4.18 E1–E4 / N14 B-∞ C∞ existence CLOSED with E2 scope and proof-route guards; RECOG v0.3.21 owner W3 RF-1 same-space wording and explicitly OPEN interspace extension; OFN v0.10 N-O10-3 (O10-P3) class-C conditional model-contract row and ψ-modulus readout guards, with Genesis v2.8.9 Q6 conditional RID; owner-first RECOG/OFN source receipts. Older v0.8.3 and preceding histories unchanged. RER Phase A G9 request answered in separate editor response; 4 dyad + 1 provisional profiles and OPEN-A/B/E preserved. No owner mathematics, executable certification or physics adoption.
++- **v0.8.4 — ADOPTED (20 Oct 2026; RRF working representation standard):** DYAD v6.4.18 E1–E4 / N14 B-∞ C∞ existence CLOSED with E2 scope and proof-route guards; RECOG v0.3.21 owner W3 RF-1 same-space wording and explicitly OPEN interspace extension; OFN v0.10 N-O10-3 (O10-P3) class-C conditional model-contract row and ψ-modulus readout guards, with Genesis v2.8.9 Q6 conditional RID; owner-first RECOG/OFN source receipts. Older v0.8.3 and preceding histories unchanged. RER Phase A G9 request answered in separate editor response; 4 dyad + 1 provisional profiles and OPEN-A/B/E preserved. No owner mathematics, executable certification or physics adoption.
+ 
+ - **v0.8.3 — ADOPTED as RRF working representation standard (19 Oct 2026):** DYAD v6.4.13 N8/N9 source receipts for formal ℤ₆ generator (`DYAD-THM-FORMAL-Z6-GENERATOR`), owner-adopted Lemma F (`DYAD-CAND-FLAT-CENTRALIZER` [THM]) and F1–F3 (`DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` [THM conditional]); OPEN 20 B-∞ flat uniqueness CLOSED while B-an, B-6 and B-∞ existence OPEN. The C∞/analytic odd-chart–square-root *existence equivalence* is registered as an algebraic consequence of those owner results and the G2 averaging chart, not as an existence proof. C∞ six-step involution exact primitive commutation adopted at §6.17 domains; network factor clocks remain distinct. The reviewer-requested §2.4c qualifier limits B-6 to `B-6 ⇔ B-an ∧ B-3` (hence `B-6 ⇒ B-an`), without claiming strictness. Four dyad profiles, OPEN-A/B/E and predecessor publication history unchanged; source and certificate boundaries in §10.3 and separate adoption record.
+ 
+@@ -599,3 +599,6 @@
+ ### 10.4 v0.8.4 candidate receipt — 20 October 2026
+ 
+ The successor candidate is based on the exact adopted v0.8.3 bytes (SHA-256 `b393657e75e78ce46aea8920f4e5c25480e523caaa105589920a34ee55d4a187`). Sources directly inspected in this editorial update: DYAD v6.4.18 §6.17 / N14, RECOG v0.3.21 §6.16g / RF-1, OFN v0.10 §5.5.3–§5.5.7 / RF-O10-01–02, Genesis v2.8.9 §6.3c and RER's 20 Oct request. No scientific scripts were executed. The candidate is NOT ADOPTED; v0.8.3 governs until independent review and a separate adoption record. The old source-receipt tables and dated publication boundaries above are retained as historical text; new current-state overlays supersede only their live status claims.
++
++
++**v0.8.4 adoption boundary (20 October 2026).** The immediately preceding §10.4 candidate receipt remains an unchanged historical review-state record. The independently reviewed revised candidate (107,629 bytes; SHA-256 `fc53acff20c17e152884bc1835d4de2d4354a406f4d63262cdb04c200e2cab9e`) was accepted without further scientific text revision. Publication changes release metadata, marks this version adopted at RRF working-standard scope, and adds this separate adoption boundary and adoption record. The two input diffs from the review are identified in the adoption record. Adopted predecessor v0.8.3 and all earlier publication paragraphs remain unchanged. DYAD owner certificates were not rerun; no OPEN-A/B/E, analytic B-an/B-6, physical G2, RER receiver gate or external consumer adoption status is changed. The optional §6.2a F3 owner-RID restatement and §2.4b wording refinement are deferred editorial suggestions, not adoption conditions.
