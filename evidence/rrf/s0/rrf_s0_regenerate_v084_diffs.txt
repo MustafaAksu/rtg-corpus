@@ -1,0 +1,7 @@
+PASS input sha v0.8.3 
+PASS input sha revised candidate 
+PASS input sha v0.8.4 upload = tagged dsn 
+PASS control: generator reproduces archived Review diff A 36647 bytes e4b666fadd181551428b1407c6df2edd45f583887c8ae2d8be378a83ef433385
+PASS regenerated RTG_RRF_v0_8_4_REVISED_CANDIDATE_to_ADOPTED.diff 7893 bytes e8eb5193a71fc573f4003cad1052c6b0b2cbe15290c584b06ac0a14c973403ce
+PASS regenerated RTG_RRF_v0_8_3_ADOPTED_to_v0_8_4_ADOPTED.diff 37612 bytes bcb8c9b5721ea4fbeb22f1be88d9578f193e1555f56ef8f7f7e414817321a967
+PASS negative control: perturbed input does not match 
