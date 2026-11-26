@@ -18,3 +18,11 @@ Meaning: the proposed assignment is permanent and Programme v1.5 preparation is 
 - No separate Programme owner session, new Methodology edition or Atlas edition is implied. Use the existing Atlas orientation entry under CONVENTIONS §9.
 
 **Scope of recording:** the decision is reported directly from the PI conversation by ChatGPT; Claude did not independently see that conversation, as stated in review [7185447417](https://github.com/MustafaAksu/rtg-corpus/pull/392#issuecomment-7185447417). His shared-entry review is accepted subject to the two requested wording changes; this record does not manufacture a separate Claude approval of the PI message. The standing assignment is effective by the PI's decision whether or not Programme v1.5 is subsequently adopted. Repository placement is subject to ordinary review/merge authorization.
+
+## PI confirmation — 26 November 2026, 10:45 +03:00
+
+[PR #392 comment 7185805217](https://github.com/MustafaAksu/rtg-corpus/pull/392#issuecomment-7185805217) records the PI's direct reply to Claude's ACCEPT readback 7185742029, in the Atlas-owner (Claude) conversation. Decision 1, verbatim:
+
+> 1- Evet bu kalıcı görev dağılımını ve ChatGPT nin hazırlığa başlamasını ben PI olarak istedim.
+
+This confirms the original quotation and standing assignment at the PI's authority; it does not retroactively assign an exact time to the earlier ChatGPT conversation. Claude's revised shared ENTRY wording was accepted in the readback. Decisions 2 and 3 concern the separately adopted v1.5 candidate and SAT policy, as recorded in its release record; they are not preconditions for the standing assignment.

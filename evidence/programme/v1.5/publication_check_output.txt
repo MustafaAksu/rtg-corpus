@@ -1,0 +1,12 @@
+[SESSION] Publication preparation — connector JS, 26 November 2026; not native Python execution or trial merge.
+PI decision 7185805217; independent readback 7185742029 verified in this session.
+candidate c07689b0f6e617c0b4a6a29d95d194b99bbbe3f4c3c8a686ccfd02d492c0811c
+published 9c53159f64feddfba7cfcb2452f9eca1c61bac63b744cb05421417d384bf9611
+candidate bytes 81061; published bytes 81177; lines 641
+P0 adopted and predecessor full SHA-256 PASS
+P1 four accepted build evidence hashes PASS (earlier publication preflight in this session)
+P2 exactly ten line anchors and changed-line address set PASS: 7, 8, 14, 258, 285, 560, 569, 572, 573, 641
+P3 forward and inverse exact UTF-8 bytes PASS
+P4 mission, maturity, five OPENs, all IF rows, guards/symbols, SAT policy and inherited history protected PASS
+P5 BASELINE exactly one Programme row change PASS
+RESULT: PASS (metadata-only publication transformation; final merge/tag and native validation pending)

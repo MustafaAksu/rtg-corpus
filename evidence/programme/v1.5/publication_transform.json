@@ -1,0 +1,72 @@
+{
+  "schema": "programme-v1.5-publication-v1",
+  "adopted_candidate_commit": "bad1314c08287aabd6fbc7114dc391764bc96a89",
+  "adopted_candidate_sha256": "c07689b0f6e617c0b4a6a29d95d194b99bbbe3f4c3c8a686ccfd02d492c0811c",
+  "published_sha256": "9c53159f64feddfba7cfcb2452f9eca1c61bac63b744cb05421417d384bf9611",
+  "pi_decision_comment": 7185805217,
+  "independent_readback_comment": 7185742029,
+  "publication_date": "26 November 2026",
+  "scope": "Exactly ten fixed-line metadata substitutions, including self-inventory and own-edition labels. All other bytes preserved; inverse returns adopted candidate. No merge or tag performed.",
+  "operations": [
+    {
+      "line": 7,
+      "reason": "header adoption status and release authority",
+      "old": "**Document status:** DRAFT — Programme v1.5 maintenance candidate; PI adoption pending. Governing edition remains `programme-v1.4`. Release record: `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`.",
+      "new": "**Document status:** ADOPTED — PI, 26 November 2026 (exact candidate adoption and SAT policy assent, PR #392; reviewed scientific and coordination content unchanged at publication). Governs upon verified annotated tag `programme-v1.5`. Release record: `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`."
+    },
+    {
+      "line": 8,
+      "reason": "header immediate predecessor no longer conditional",
+      "old": "**Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.4` (tag `programme-v1.4`, SHA-256 `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`, adopted 4 November 2026) upon adoption.",
+      "new": "**Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.4` (tag `programme-v1.4`, SHA-256 `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`, adopted 4 November 2026)."
+    },
+    {
+      "line": 14,
+      "reason": "header reviewer status",
+      "old": "**Revision editor:** ChatGPT (Atlas co-owner, Programme preparer), by standing PI assignment of 26 November 2026; independent Programme review by Claude (Atlas owner) pending. Atlas production/review roles unchanged.",
+      "new": "**Revision editor:** ChatGPT (Atlas co-owner, Programme preparer), by standing PI assignment of 26 November 2026; independent Programme review by Claude (Atlas owner), ACCEPT (PR #392, 7185742029). Atlas production/review roles unchanged."
+    },
+    {
+      "line": 258,
+      "reason": "self-inventory edition/status only",
+      "old": "| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.5 (this candidate) | `programme-v1.5` on adoption (governing predecessor `programme-v1.4`) | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |",
+      "new": "| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.5 (this document) | `programme-v1.5` | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |"
+    },
+    {
+      "line": 285,
+      "reason": "self-description status only",
+      "old": "**PROG — Programme Overview** (v1.5 candidate; edition and tag in §6.1). Owns navigation: inventory, programme OPEN coordination, maturity semantics, programme guards. All five programme OPEN records remain ACTIVE (§5). Under the standing PI assignment, ChatGPT prepares Programme maintenance and Claude independently reviews it; PI decisions govern policy, adoption and publication. Neither editor acquires technical-owner claims.",
+      "new": "**PROG — Programme Overview** (v1.5, this document; edition and tag in §6.1). Owns navigation: inventory, programme OPEN coordination, maturity semantics, programme guards. All five programme OPEN records remain ACTIVE (§5). Under the standing PI assignment, ChatGPT prepares Programme maintenance and Claude independently reviews it; PI decisions govern policy, adoption and publication. Neither editor acquires technical-owner claims."
+    },
+    {
+      "line": 560,
+      "reason": "publication tag locator",
+      "old": "Adoption is the PI's decision, recorded in the release record; publication is a merge commit on `main` and the edition's annotated tag (`programme-v1.5` after adoption) naming the adopted file's SHA-256. The v1.2 release record, change record and the three administrative registers of the v1.2 package were searched for and not found (PI, 23 October 2026); they are recorded as missing, not reconstructed. Scientific OPENs remain; unresolved contradictions are not described as reconciled.",
+      "new": "Adoption is the PI's decision, recorded in the release record; publication is a merge commit on `main` and the edition's annotated tag (`programme-v1.5` for this edition) naming the adopted file's SHA-256. The v1.2 release record, change record and the three administrative registers of the v1.2 package were searched for and not found (PI, 23 October 2026); they are recorded as missing, not reconstructed. Scientific OPENs remain; unresolved contradictions are not described as reconciled."
+    },
+    {
+      "line": 569,
+      "reason": "Appendix A edition heading",
+      "old": "### v1.5 — 26 November 2026 — DRAFT / maintenance",
+      "new": "### v1.5 — 26 November 2026 — Adopted"
+    },
+    {
+      "line": 572,
+      "reason": "Appendix A approved policy status only",
+      "old": "- **Inventory/interfaces:** current owner tags, actual consumer pins, reference/evidence distinctions, retained programme criteria; external SAT routing proposal and maintenance state. No technical scientific grade, maturity assignment, owner custody or programme OPEN status changes.",
+      "new": "- **Inventory/interfaces:** current owner tags, actual consumer pins, reference/evidence distinctions, retained programme criteria; PI-approved external SAT routing policy and maintenance state. No technical scientific grade, maturity assignment, owner custody or programme OPEN status changes."
+    },
+    {
+      "line": 573,
+      "reason": "Appendix A adoption metadata",
+      "old": "- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`; no adoption or publication yet.",
+      "new": "- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`; PI adoption recorded, governing on verified tag."
+    },
+    {
+      "line": 641,
+      "reason": "footer status",
+      "old": "*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.5 — DRAFT; PI adoption pending.*",
+      "new": "*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.5 — ADOPTED, 26 November 2026; governs upon verified annotated tag.*"
+    }
+  ]
+}

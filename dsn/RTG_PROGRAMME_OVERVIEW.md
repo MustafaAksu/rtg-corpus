@@ -4,14 +4,14 @@
 **Date:** 26 November 2026
 **Scope:** Maintenance synchronization of the adopted v1.4 inventory, actual owner/consumer interfaces, maintenance record and receiving items; standing Programme editorial assignment and external satellite interface. No technical owner science or programme closure criterion is changed.
 **Document class:** Programme overview, under DSN Methodology v1.4 §0.5.
-**Document status:** DRAFT — Programme v1.5 maintenance candidate; PI adoption pending. Governing edition remains `programme-v1.4`. Release record: `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`.
-**Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.4` (tag `programme-v1.4`, SHA-256 `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`, adopted 4 November 2026) upon adoption.
+**Document status:** ADOPTED — PI, 26 November 2026 (exact candidate adoption and SAT policy assent, PR #392; reviewed scientific and coordination content unchanged at publication). Governs upon verified annotated tag `programme-v1.5`. Release record: `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`.
+**Supersedes:** `RTG_PROGRAMME_OVERVIEW_v1.4` (tag `programme-v1.4`, SHA-256 `37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0`, adopted 4 November 2026).
 **Repository:** `MustafaAksu/rtg-corpus`, `main`. A study's governing edition is its latest adopted tag with its release record (Methodology v1.4 §13.9); `BASELINE.md` lists the governing editions with their SHA-256; `CONVENTIONS.md` gives the working rules. Project copies mirror `main`.
 **Companion documents:** the governing editions in §6.1 (by tag). The list is not a substitute for claim-level imports; each consumer's own pins are in its Import Ledger (§7.2 records them where they differ).
 **DSN Methodology:** v1.4 (tag `methodology-v1.4`); v1.2 was adopted under v1.3; v1.3 and v1.4 under v1.4.
 **Status summary:** Two physical research branches, continuous and discrete, with shared foundational, historical and diagnostic documents whose contents remain branch-typed. The inventory (§6.1) records fifteen canonical document homes in `dsn/`, including the RRF representation registry adopted as a working standard, three noncanonical registries and studies in `noncanonical/`, and one derived map (the State Atlas) that is never a source. All five programme-level scientific OPEN records (P0, P1, P2A, P2B, P3) remain ACTIVE; no maturity grade, scope guard or scientific status is changed by this edition. No physical bridge is certified.
 **Authors:** Mustafa (PI) · Claude · ChatGPT · Gemini · Grok — inherited authorship; separate approval by other inherited authors is not inferred.
-**Revision editor:** ChatGPT (Atlas co-owner, Programme preparer), by standing PI assignment of 26 November 2026; independent Programme review by Claude (Atlas owner) pending. Atlas production/review roles unchanged.
+**Revision editor:** ChatGPT (Atlas co-owner, Programme preparer), by standing PI assignment of 26 November 2026; independent Programme review by Claude (Atlas owner), ACCEPT (PR #392, 7185742029). Atlas production/review roles unchanged.
 **Release record:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`; predecessor record: `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`.
 **Archive reference:** rtgtheory.org · Zenodo DOI 10.5281/zenodo.17568897 — inherited programme locator, not a claim that this release has been deposited there.
 ---
@@ -255,7 +255,7 @@ with coordinate/gauge equivalence expressed explicitly where used. A longitudina
 | Key | Document (fixed path) | Governing edition | Tag | Class | Tier | Role / physical scope |
 |---|---|---|---|---|---:|---|
 | METH | `dsn/DSN_METHODOLOGY.md` | v1.4 | `methodology-v1.4` | canonical governance | 1 | Adopted grammar, profiles, evidence and revision rules |
-| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.5 (this candidate) | `programme-v1.5` on adoption (governing predecessor `programme-v1.4`) | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |
+| PROG | `dsn/RTG_PROGRAMME_OVERVIEW.md` | v1.5 (this document) | `programme-v1.5` | canonical governance | 0 | Inventory, architecture, programme OPENs, guards |
 | OFN | `dsn/RTG_ONTOLOGICAL_FOUNDATIONS.md` | v0.13 | `ofn-v0.13` | canonical foundational | 2 | O0–O3 commitments; model selection; class-C model contract; foundational OPENs |
 | RRF | `dsn/RTG_RRF_REPRESENTATION_REGISTRY.md` | v0.8.4 | `rrf-v0.8.4` | adopted working standard | 5 | Representation conventions, interface contracts and identifiers (`RRF` namespace, Methodology v1.4 §4.2); not an owner of physics |
 | LEGACY | `dsn/RTG_L0_L1_L2_BRIDGE_LEGACY_DSN.md` | v0.7 | `legacy-v0.7` | canonical historical | 2 | L0/L1/L2 revalidation ledger; not a current branch |
@@ -282,7 +282,7 @@ Each entry gives custody and the programme-relevant interfaces. The owner's curr
 
 **METH — Methodology** (v1.4, `methodology-v1.4`). Owns the grammar, profiles, evidence and revision rules, the namespace registry (§4.2; `RRF` added in v1.4) and the release discipline (two-stage releases, release records, governing edition = tag + release record, §13). Programme v1.3 onward uses it. Existing owner files keep their declared Methodology edition until individually migrated.
 
-**PROG — Programme Overview** (v1.5 candidate; edition and tag in §6.1). Owns navigation: inventory, programme OPEN coordination, maturity semantics, programme guards. All five programme OPEN records remain ACTIVE (§5). Under the standing PI assignment, ChatGPT prepares Programme maintenance and Claude independently reviews it; PI decisions govern policy, adoption and publication. Neither editor acquires technical-owner claims.
+**PROG — Programme Overview** (v1.5, this document; edition and tag in §6.1). Owns navigation: inventory, programme OPEN coordination, maturity semantics, programme guards. All five programme OPEN records remain ACTIVE (§5). Under the standing PI assignment, ChatGPT prepares Programme maintenance and Claude independently reviews it; PI decisions govern policy, adoption and publication. Neither editor acquires technical-owner claims.
 
 **OFN — Ontological Foundations** (v0.13, `ofn-v0.13`). Owns commitments, competing primitive hypotheses, model-selection questions, the class-C model contract and the foundational OPENs (OPEN-OFN-3B, -FRUSTRATION, -OPA among them). Imports claim-level statements from DYAD, RECOG, GEN and TDR-G (OFN §11.2, §11.4) and records TRIAD, OPEN M and NUMGEN feedback as reference-only (OFN §11.3, §11.5); it does not acquire the proofs it cites, and a TDR-G import into this foundational document is not a cross-branch physical bridge.
 
@@ -557,7 +557,7 @@ Remaining original maintenance-sequence item: Pre-Legacy. The sequence is admini
 
 This revision has no physics computation and no scientific certificate. Its evidence is administrative: the build scripts, edit logs, checker outputs and movement map under `evidence/programme/`, and the release record under `records/programme/`. Hashes establish file identity only; the checks establish that the inventory and interface pins agree with `BASELINE.md` and the tags, that the five programme OPEN RIDs, the four scope-guard identifiers and the section anchors are retained, and that no scientific tag is introduced. They do not re-prove owner mathematics or certify the completeness of the corpus dependency graph.
 
-Adoption is the PI's decision, recorded in the release record; publication is a merge commit on `main` and the edition's annotated tag (`programme-v1.5` after adoption) naming the adopted file's SHA-256. The v1.2 release record, change record and the three administrative registers of the v1.2 package were searched for and not found (PI, 23 October 2026); they are recorded as missing, not reconstructed. Scientific OPENs remain; unresolved contradictions are not described as reconciled.
+Adoption is the PI's decision, recorded in the release record; publication is a merge commit on `main` and the edition's annotated tag (`programme-v1.5` for this edition) naming the adopted file's SHA-256. The v1.2 release record, change record and the three administrative registers of the v1.2 package were searched for and not found (PI, 23 October 2026); they are recorded as missing, not reconstructed. Scientific OPENs remain; unresolved contradictions are not described as reconciled.
 
 ---
 
@@ -566,11 +566,11 @@ Adoption is the PI's decision, recorded in the release record; publication is a 
 
 One compact entry per edition (Methodology v1.4 §1.1). Full entries of v1.0–v1.2, the Draft 1 history of v1.2 and the adopted replacement ledger's provenance are in Appendix A of v1.2 (tag `programme-v1.2`); the full stage-1 draft entry of v1.3 is at the stage-1 commit named in the release record.
 
-### v1.5 — 26 November 2026 — DRAFT / maintenance
+### v1.5 — 26 November 2026 — Adopted
 
 - **Basis:** standing PI Programme editorial assignment (ChatGPT prepares, Claude reviews; PI adopts); #360 advisory and thirteen-item receiving checkpoint.
-- **Inventory/interfaces:** current owner tags, actual consumer pins, reference/evidence distinctions, retained programme criteria; external SAT routing proposal and maintenance state. No technical scientific grade, maturity assignment, owner custody or programme OPEN status changes.
-- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`; no adoption or publication yet.
+- **Inventory/interfaces:** current owner tags, actual consumer pins, reference/evidence distinctions, retained programme criteria; PI-approved external SAT routing policy and maintenance state. No technical scientific grade, maturity assignment, owner custody or programme OPEN status changes.
+- **Records:** `records/programme/RTG_PROGRAMME_OVERVIEW_v1_5_RELEASE_RECORD.md`; PI adoption recorded, governing on verified tag.
 
 ### v1.4 — 4 November 2026 — Adopted
 
@@ -638,4 +638,4 @@ These administrative keys are not fabricated historical theorem RIDs. Each entry
 
 ---
 
-*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.5 — DRAFT; PI adoption pending.*
+*END OF DOCUMENT — RTG_PROGRAMME_OVERVIEW_v1.5 — ADOPTED, 26 November 2026; governs upon verified annotated tag.*
