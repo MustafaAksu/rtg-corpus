@@ -110,7 +110,7 @@ The non-unit control `2 × ½ = 1` uses both-direction readouts. It is a readout
 
 **Reviewed:** #386 §9, record file `36daca8f…d9e6`.
 
-**§9.1 delay-coordinate identities: ACCEPT.** Each identity follows in one line from the map, and the logarithm's argument is `e^ρ > 0`. The record itself limits the scope correctly. Every observable of an invertible planar map is a function of two consecutive samples of one coordinate. So the identity alone does not discriminate between event types; the near-translate structure is what matters.
+**§9.1 delay-coordinate identities: ACCEPT.** Each identity follows in one line from the map, and the logarithm's argument is `e^ρ > 0`. The record itself limits the scope correctly. For NUMGEN's map the two-sample observation `(η(x), η(Tx))` is injective on the tube, and every local observable is a function of it. (Erratum, 26 Nov 2026: I first wrote that this holds for every invertible planar map. It does not: the identity map is a counterexample, and injectivity of the delay map is required. #386 comment `7174411169`.) So the identity alone does not discriminate between event types; the near-translate structure is what matters.
 
 **§9.2 bound `J_k = O_x(√N)`, and `O_x(log N)` for k = 1, 5: ACCEPT** (conditional on the common tube). Steps checked:
 1. **Linear part.** `g_k = η + O(|W|²)` with unit linear coefficient. For example, for k = 1: `h(Tx) ≈ −η`, normalised to `η`.
