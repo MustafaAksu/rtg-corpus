@@ -18,3 +18,4 @@
 | 2026-11-25 | OFN | notice | open | OFN v0.13 Finding A / OPEN-OFN-2; P07/P08 and conditional census interface | — | `20261125-OFN-v0-13-adopted.md` |
 | 2026-11-26 | NUMGEN | offer | open | TDRG-DEF-BAND, TDRG-DEF-EDGE-SET, TDRG-DEF-STAR, TDRG-DEF-ORIENT (TDRG §§6.1–6.3); NUMGEN C7C-M SESSION lemma (PR #386, comment 7174411169) | — | `20261126-NUMGEN-four-node-birth-free-sector.md` |
 | 2026-11-26 | NUMGEN | request | open | TDRG-DEF-SWAP, TDRG-DEF-CONV-P3CYC, TDRG-DEF-ORIENT, TDRG-DEF-STAR, TDRG-ALG-EVENT-INVENTORY (TDRG §§6.3, 6.13); NUMGEN v1.22 §2 item 1, §6.6 (C7C-M) | NUMGEN C7C-M design of a non-degenerate composable-chain carrier (§2 item 1); M4 stays HOLD regardless | `20261126-NUMGEN-support-sensitive-event-typing.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 §6.4 launch gate, IF03/13/21/25 and §9.2 | — | `20261126-PROG-v1-5-adopted.md` |

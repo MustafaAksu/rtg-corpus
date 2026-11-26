@@ -8,3 +8,4 @@
 | 2026-11-03 | DYAD | notice | closed | R11 owner labels in Dyadic (Appendix C) | — | `20261103-DYAD-notices-n16-n21.md` |
 | 2026-11-03 | GEN | notice | closed | GEN v2.10; UVM §0.3/§7 Genesis pin v2.8.5 (Programme IF08) | — | `20261103-GEN-v2-10-adopted.md` |
 | 2026-11-03 | TRIAD | notice | closed | Triadic v1.7 adopted; CN-02, CN-04, CN-05 (§7.4) and exports TRIAD-ALG-T6S-COHERENT-CONJUGATE-FAMILY, TRIAD-ALG-T6T-JACOBI-MODE-SIGNS, TRIAD-ALG-T6U-APEX-SEED-DIAGNOSTIC | — | `20261103-TRIAD-v1-7-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 §5 P3; IF08–11/23/29 and §6.3/9.2 | — | `20261126-PROG-v1-5-adopted.md` |

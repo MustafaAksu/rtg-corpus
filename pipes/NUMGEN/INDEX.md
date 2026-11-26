@@ -17,3 +17,4 @@
 | 2026-11-19 | DZT | notice | closed | Number Genesis [PROVENANCE] paragraph on the audit-reported DZT "v0.17" (governing DZT edition; v0.17 files now in the repository) | — | `20261119-DZT-v0-18-adopted.md` |
 | 2026-11-20 | DZT | notice | closed | Number Genesis [PROVENANCE] paragraph on the audit-reported DZT "v0.17" all-p odd-support and denominator theorems | — | `20261120-DZT-v0-19-adopted.md` |
 | 2026-11-25 | OFN | notice | closed | OFN v0.13 §12.3; REQ-O09-03 receipt and RF-O08-01 | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 IF12–14, IF24, IF27, IF37/38; NUMGEN §9.1 | — | `20261126-PROG-v1-5-adopted.md` |

@@ -18,3 +18,4 @@
 | 2026-11-16 | AZ | notice | closed | Atlas AZ edition row and SOURCES entry; new identifiers AZ-NUM-TOKRES-S2 and AZ-ART-TOKRES-S2; AZ §4.2 heading | — | `20261116-AZ-v0-10-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 verified adoption; diagnostic keys O6/O9/O10/O11/O14 and interface impact | — | `20261125-OFN-v0-13-adopted.md` |
 | 2026-11-25 | UVM | notice | open | UVM v0.7.2 §§1–9 and Appendix B; OPENM.U1–U11, H2/H10/H11, UVM:deficit-chain, R14 node | — | `20261125-UVM-v0-7-2-adopted.md` |
+| 2026-11-26 | PROG | notice | open | Programme v1.5 source identity, interface register and maintenance diagnostics | — | `20261126-PROG-v1-5-adopted.md` |
