@@ -1,0 +1,18 @@
+SymPy 1.14.0
+SYMBOLIC_PATH_IDENTITY_PASS (derived weights; common Gaussian factor)
+RAW_JET_PASS p=8 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=12 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=16 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=20 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=24 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=28 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=32 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=36 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=40 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=44 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_JET_PASS p=72 (20 exact cases); ORDERED_SUM_PASS (2 cases)
+RAW_CUBIC_INDEPENDENCE_PASS 220/220
+EXACT_ORDERED_SUM_PASS 22/22
+CHANGED_CLOCK_NEGATIVE_CONTROLS_PASS 10/10 (steps=s+1)
+GAUSSIAN_QUOTIENT_POLYNOMIAL_PASS 64/64 (4<=p<=256, 4|p)
+ALL_CHECKS_PASS

@@ -1,0 +1,12 @@
+SymPy 1.14.0
+SYMBOLIC_PATH_IDENTITY_PASS (direct cubic weight -4, two ordered quadratic paths)
+RAW_JET_PASS p=8 (20 exact cases)
+RAW_JET_PASS p=12 (20 exact cases)
+RAW_JET_PASS p=16 (20 exact cases)
+RAW_JET_PASS p=24 (20 exact cases)
+RAW_JET_PASS p=32 (20 exact cases)
+RAW_JET_PASS p=40 (20 exact cases)
+RAW_JET_PASS p=72 (20 exact cases)
+RAW_CUBIC_INDEPENDENCE_PASS 140/140; changed-clock negative control PASS
+GAUSSIAN_QUOTIENT_POLYNOMIAL_PASS 64/64 (4<=p<=256, 4|p)
+ALL_CHECKS_PASS
