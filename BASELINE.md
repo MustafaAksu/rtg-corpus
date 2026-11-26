@@ -33,7 +33,7 @@ The table lists the **governing adopted editions**. Predecessor: Methodology v1.
 
 | Study | File | Version | SHA-256 | Verification | Tag |
 |---|---|---|---|---|---|
-| RER | `RTG_RELATIONAL_EMERGENCE_REGISTRY.md` | v0.2 ADOPTED (noncanonical) | `58feee5ff1f16a37fc4ee029f24499928ea7439731de0a090d8794c1cbe57ad0` | PI | `rer-v0.2` |
+| RER | `RTG_RELATIONAL_EMERGENCE_REGISTRY.md` | v0.2 ADOPTED (noncanonical) | `58feee5ff1f16a37fc4ee029f24499928ea7439731de0a090d8794c1cbe57ad0` | OWNER: original adoption record `records/rer/RER_v0_2_ADOPTION_RECORD_20261021.md`; SHA-256 verified in PR #402 review 7192685483 | `rer-v0.2` |
 | ER-2B | `RTG_ER2B_CONSOLIDATED_STUDY.md` | v0.3 | `80669c69ada042230c36883f5f1de7a0738e637793a4d1cf4b590990da57a134` | PI | `er2b-v0.3` |
 | FMS | `FMS_MODEL_SELECTION_LEDGER.md` | v0.6.4 (session) | `d6313b707464da7ae016662e32fc366981cae9cc5335033129acfcce515d3984` | PI | `fms-v0.6.4` |
 
