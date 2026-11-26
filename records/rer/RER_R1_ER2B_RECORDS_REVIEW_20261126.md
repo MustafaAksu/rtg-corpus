@@ -100,3 +100,10 @@ The negative comparison holds as stated. Under any correspondence that preserves
   1. Confirm that `er2b-v0.3` Part B is the governing pin for C12, C15A, C15B, C19 and C20 in RER.
   2. Confirm the C-2 reading of ER03 §A.4: the σ = 1 "transported class" is the FMS/OFN κ-family coincidence at cubic order, not C15A passive transport.
 - **Scope:** Moving either record from EXCLUDED_BLOCKED into accepted scope (changing 18 + 2) is a PI decision. These verdicts are inputs to it, not the decision.
+
+## 6. Addendum — PI native rerun (26 November 2026)
+
+- **Rerun:** The PI re-executed the three scripts on the Ubuntu server, at branch head `7adf8e21`, after a fresh `pip install mpmath`.
+- **Result:** Every printed value matches `evidence/rer/r1/runs/` to the printed digits. That covers the residuals, the σ-family errors, the cubic-jet errors, μ, μ22,G, μ22(q), C12 and the reflection identity.
+- **Duplicate output:** `carrier_check2.py` and `t6d_check.py` import `carrier_check.py`, which runs its checks again on import, so its lines appear more than once. This is cosmetic and changes no value. The stored outputs show the same duplication.
+- **Status:** The run is now reproduced on a second machine. It remains a reviewer check, not a certificate.
