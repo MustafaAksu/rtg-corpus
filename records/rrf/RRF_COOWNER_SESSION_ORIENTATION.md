@@ -15,13 +15,15 @@ Tried and rejected: bulk date-based repin (use claim/interface checks); replace 
 Next steps: (1) C1–C4 exact-head reviewer readback and PI merge #400/#401, complete when S1-A1–A4 are met; (2) PI-approved S2 content/scope candidate with accepted matrix, four dyad profiles plus provisional network profile, historical pins, transport typing, RIDs and OPEN states reconciled, then structural-only compaction with preservation check; (3) after S1 acceptance and merge, PI-opened BR-Q2 as the first separate scientific investigation, complete when both co-owners document typed admissibility, explicit bridge or refusal, and counterexample checks. Steps (2) and (3) may proceed separately; do not introduce unreviewed scientific results into S2. No physical gauge or scientific adoption inferred; no automatic release.
 
 ## Claude — independent reviewer lane
-Check stamp: 2026-11-26; checkpoint `main` `f2056cf8`.
+Check stamp: 2026-11-26; checkpoint `main` `cba0213e`.
 - S0: ACCEPT SCOPED on #397 at `44fac173`.
 - S1: ACCEPT SCOPED after readback on #400 at `2c087763`.
 - S2a: ACCEPT WITH CHANGES on #404 at `6a7b27de`; C1/C2 readback ACCEPT SCOPED at `98da97c3`, freeze hash `390f75e4…9d72` pending the PI decision on the closure wording (`records/rrf/RRF_S2A_REVIEWER_VERDICT_PR404_20261126.md` §5). A1 and A2 are met. A3 has two required changes: C1 restores three dropped pointers (RF-O09-03, SG-15, the P2-B v2 evidence zip), with `evidence/rrf/scripts/rrf_s2a_preservation_check.py` exiting 0; C2 sets the OPEN ID format, with the closure-criteria wording a PI item.
+- S2b: ACCEPT WITH CHANGES on #417 at `917f76ef` (`records/rrf/RRF_S2B_REVIEWER_VERDICT_PR417_20261126.md`). C1 restores the predecessor adoption-record pointer; C2 cites the PI decision record for the closure wording or restores PI_PENDING. G1 release gate: intermediate `98da97c3` is named in the release record and kept reachable by merge commit. The adapter is accepted for this edition with stated limits.
+- BR-Q2: independent derivation merged (#410); the preparer's #414 awaits review.
 
 Held: no science opened. PRR v0.3, GIIL, S2b and release are PI or owner decisions. Tried and rejected: none.
 
 Next:
-1. S2b review from the frozen hash, done when every moved block is matched by the compaction map and the preservation check passes against `390f75e4…`.
-2. BR-Q2 independent derivation, done when there is a verdict with scope, an explicit bridge or refusal, and a counterexample search on record.
+1. Readback of S2b C1/C2 at the corrected #417 head, done when `rrf_s2b_reviewer_checks.py` exits 0 and the adapter still passes.
+2. Review of #414 against #410, done when there is a reconciliation verdict per result (agree / differ / scope) with counterexample checks.

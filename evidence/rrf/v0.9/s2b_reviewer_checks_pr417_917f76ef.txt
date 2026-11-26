@@ -1,0 +1,16 @@
+FAIL C1 lost tokens only in archived spans lost=22 outside-archive=['RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_ADOPTION_RECORD.md']
+PASS C2 live import lines indexed live=46 unindexed=[]
+PASS C2 lost import tags only archived lost=1
+PASS C3 owner-grade readouts on cited owner line readouts=26 bad=[]
+PASS C4 archive base commit is ancestor of HEAD 98da97c311a9
+PASS C5 negative control: wrong grade detected
+INFO C6 M003 L21-30: base commit only
+INFO C6 M010 L47-50: verbatim in rrf-v0.8.4
+INFO C6 M016 L88-107: base commit only
+INFO C6 M021 L116-117: verbatim in rrf-v0.8.4
+INFO C6 M069 L588-624: verbatim in rrf-v0.8.4
+INFO C6 M070 L628-631: verbatim in rrf-v0.8.4
+INFO C6 M071 L636-666: verbatim in rrf-v0.8.4
+INFO C6 M072 L669-676: verbatim in rrf-v0.8.4
+INFO C6 M073 L679-679: verbatim in rrf-v0.8.4
+INFO C6 M074 L681-691: verbatim in rrf-v0.8.4
