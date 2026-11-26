@@ -1,0 +1,6 @@
+SymPy 1.14.0
+FULL_REGISTER_PASS s=1..7; 21844 states; affine/linear quotient separation
+SIGNED_LATTICE_PASS s=1..64; 576 charge and 128 ordered-sum checks
+FULL_REGISTER_PATH_IMAGE_PASS 128/128; odd-s misses doubled odd-weight block
+SPECTRAL_AFFINE_QUOTIENT_PASS 64/64; power-of-two=7; other=57; odd-s=32
+ALL_STAGE1_CHECKS_PASS
