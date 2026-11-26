@@ -1,6 +1,6 @@
-[SESSION] Connector JS bounded reproduction (not native CLI or proof audit).
+[SESSION] Revision 2 after review 7185447417. Connector JS bounded reproduction (not native CLI or proof audit).
 base 37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0
-candidate abe033d06206f1615ad72a5234882645e8a63bf18d59c0a28e5ce6ec9b7fb618
+candidate c07689b0f6e617c0b4a6a29d95d194b99bbbe3f4c3c8a686ccfd02d492c0811c
 edits 82
 C0 exact rebuild/hash chain PASS
 C1 reverse bytes PASS
@@ -22,4 +22,6 @@ NC4 guard change rejected
 NC5 IF rename rejected
 NC6 history change rejected
 NC7 premature adoption rejected
+Revision delta: exactly four existing map payloads changed (E0313 E0333 E0429 E0446); all other edit addresses and payloads identical to round 1.
+Forward/reverse and complete document hash chain reproduced. Initial-round native replay belongs to Claude (review 7185447417); revised native replay not executed here.
 RESULT: PASS
