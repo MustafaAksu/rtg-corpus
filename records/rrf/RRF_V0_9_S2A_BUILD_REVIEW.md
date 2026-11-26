@@ -11,7 +11,7 @@
 | Adopted base | rrf-v0.8.4, d7d661c0b89c6f3d9ceea2e205bf75fccfcfbf8d |
 | Base SHA-256 / bytes | 2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce / 108615 |
 | S1 matrix blob | 8a32eba5578a791227af3c7de1f4bff43588a839 |
-| Intermediate SHA-256 / bytes | 9f162a7fb4c5f32e899a147edea43dbed0410a1db1c80aa629ac6ddcde8f89f9 / 124197 |
+| Intermediate SHA-256 / bytes | 390f75e447b7d5a9dcb01810d7eb513e9feef3c157f0de2f2f79afb259b39d72 / 131089 |
 | Build plan | `evidence/rrf/v0.9/s2a_build_plan.json` (38 nonoverlapping anchored operations) |
 | Builder | `evidence/rrf/scripts/build_rrf_s2a.py` |
 
@@ -51,8 +51,18 @@ Header DRAFT, §0 status grammar, §7.1–7.3 provisional source/consumer and OP
 - A4 after acceptance freeze this intermediate; S2b only structural movement, deduplication and current-state/history separation with movement map and check_compaction + negative controls. Never treat this S2a candidate as adopted or merge it before release decision. The S0 custody checker is checkpoint-specific; verify old custody at the S0 commit, not by demanding current DSN equality.
 - A5 final release preparation (later PI decision): actual import/reference ledger, size report, source and consumer notices, release record, tag; no historical evidence overwritten. LIT dependencies: none.
 
-Native Python replay and linter, independent content acceptance, S2b and publication pending. No source science regraded or newly proved by these checks.
+Native Python replay and linter passed on the initial reviewed head 6a7b27de (reviewer #406); corrected-head replay and A3 readback, S2b and publication pending. No source science regraded or newly proved by these checks.
 
 ## Preparer structural readback repair
 
 Initial draft commit `c6f0f874a6a46d5b4c54d36c7b2dd5be1a90711d` (not submitted as an acceptance target) reproduced from its plan but exposed one new Markdown pipe delimiter in D1. Corrected the inline import delimiter; all tables now have uniform row width. Clarified the GEN G1 primitive-clock statement as a scoped exclusion, made H-JET cubic and target regularity explicit, restored the exact sourced-junction hypothesis σ_f≠0 in G2, retained the NUMGEN owner result grade, and removed nested code-delimiter ambiguity in T1. No adopted claim, numerical value, owner proof pin or scope was changed by these readback repairs. Same 38 anchored operation groups. Final exact intermediate identity above controls. Native replay still pending.
+
+## Reviewer C1–C2 disposition (preparer correction)
+
+Review 6075272150, PR #406 at `c5c0ddc753de32dda9080b2e86cb175db9dc1996`, full verdict read. A1 native replay (three negative controls) and A2 content review accepted at `6a7b27de16d60d5824aaebef8af8de82ee5c577d`; A3 required restoration of three pointers and OPEN identifier format. No new owner proof run. The reviewer lexical detector reports 89 tokens, 3 lost at that head. This correction uses the exact reviewer script blob `5375497448b582f4e6b2e095b7c1abef0064457f` without editing it, so it is available directly on #404; #406's independent copy is the same Git blob. Builder now enforces the same token coverage (one allowed predecessor header filename), exact historical-receipt body and archive identity, with an additional removed-pointer negative control. The native reviewer checker is not a semantic equivalence test; even 89/89 lexical coverage cannot by itself establish preservation of scientific qualifiers. Byte reconstruction is separate from content review; S2b movement map must preserve actual live claims and evidence, not just string presence.
+
+C1: the replaced predecessor §0.2 body (L69–86) is retained verbatim in a labelled historical block, not operative statements. RF-O09-03/04 current owner references and TRIAD §6.15 SG-15 scope retained separately. Historical OFN v0.9 file inspected at recovered upload path (no corresponding tag found); current ofn-v0.13 checked. Original P2-B v2 ZIP at `upload/dyad-sources/DYAD_RETURN_ENCLOSURE_P2B_v2_evidence.zip`, Git blob `ac305e2e0c9960c61a46e5874a6a183a2e4b4de4`, 121396 bytes, SHA-256 `e4e2bab004d4e39b76920e486607acc34749037ae2638809a9c2117d548fdbe4`: independently hashed from connector base64 bytes; no certificate re-audit/replay. The original third-reviewer ZIP remains missing. No change to historical proof provenance.
+
+C2: descriptive candidate identities RRF-OPEN-POLE-RELABELING, RRF-OPEN-IDENTIFICATION-PRIMITIVE, RRF-OPEN-NETWORK-VARIABLES and RRF-OPEN-JOINT-NF, with existing aliases OPEN-A/B/E1/E2. N2 adds explicit ACTIVE, owner RRF and declared dependencies. Earlier broad proposed closure alternatives (including refusal/obstruction as potential resolution) are not binding; the revised closure wording is restricted to the existing questions and clearly PI_PENDING, not a new sufficient closure rule. PI decision on that wording and candidate registration remains separate. N1 layout relocation to correct homes is S2b only; N3 distinguishes mechanical reconstruction, lexical preservation and independent content review. All six native ID candidates remain proposals, not registered. No BR-Q2 scientific result, no pipe disposition or merge.
+
+Preparer connector checks: 89 distinct reviewer tokens; the initial 3-token-loss control reproduced; corrected candidate lost 0 (1 explicit allowed header substitution), exact historical receipt span preserved, removal of RF-O09-03 detected; ZIP hash and size checked; anchored plan reconstruction and table widths pass. Corrected head native replay pending; run both scripts, then review C1/C2 and freeze only after reviewer acceptance and PI decision on closure wording.
