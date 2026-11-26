@@ -7,7 +7,7 @@
 - S2a freeze: #404 `98da97c311a917d1539b9c31afaba779bc75a73f`, SHA-256 `390f75e447b7d5a9dcb01810d7eb513e9feef3c157f0de2f2f79afb259b39d72`, 131,089 bytes; Claude ACCEPT SCOPED review 6076472389, merged reviewer record #406.
 - PI-authorized record merges: #406 `b29b5afc326f7af10761b881b53ec8f33aec3cc2`; #410 `5bb35b9aa531891659e8b7f4c99a027b0eef4b72` (BR-Q2 SESSION only).
 - Main checkpoint `5bb35b9aa531891659e8b7f4c99a027b0eef4b72`; RRF blob equals adopted rrf-v0.8.4. All twelve accepted S1 governing tags rechecked, same editions. Ten open RRF items at checkpoint; no queue change. #414 is separate, pending independent scientific review.
-- S2b candidate SHA-256 `6f258d1833cfe7d67d47addf4ff32f9873c08987b484d803c96e9745183f5dd2`, 120196 bytes, 654 split lines. The accepted S2a freeze is an ancestor of this review branch, not a versioned duplicate DSN or an adopted tag.
+- S2b candidate SHA-256 `0163284ed22973ff65d5869d62726f4539e481ac0c199bba588d225bdd0c5d24`, 121071 bytes, 654 split lines. The accepted S2a freeze is an ancestor of this review branch, not a versioned duplicate DSN or an adopted tag.
 
 ## Structural scope
 
@@ -36,3 +36,7 @@ python tools/dsn_lint.py dsn/RTG_RRF_REPRESENTATION_REGISTRY.md --prev "$tmp/s2a
 Review every archive span and editorial change against the frozen source (particularly operative source/evidence boundaries, §§0.1/0.2,6.5,7.2/7.5). Accept or correct the profile-specific checker and its negative controls; check import-ledger completeness and source locators, proposed local IDs and OPEN aliases, header and section map. Lint is informational. If the shared checker must run on raw RRF bytes, a separately reviewed profile extension is required; no such extension is included in this PR. Do not move to release until the independent reviewer has resolved this gate. S2a native check can still be reproduced on the immutable S2a checkout; it is not meant to compare against the compacted candidate.
 
 No protected owner DSN, BASELINE, pipe state, source archive, shared tooling or existing reviewer record changed. BR-Q2 research PR #414 remains separate, with no adoption inferred from #410's merge. Final adoption, outbound notices, tag and BASELINE update remain PI_PENDING. LIT dependencies: none.
+
+## Preparer import-index readback correction
+
+The initial navigation index classified certain grades from RID category strings. This was not sufficient evidence (RID category is not a grade). The final M049 navigation span instead uses directly inspected current owner statement grades and line locators, or leaves source blocks controlling where no independent grade readout was made. Historical pins remain unchanged. The historical OFN/ER2B bundle verification field is explicitly scoped. No original source claim or technical paragraph changed; only M049 navigation text, candidate identity, and associated preparer records changed. All source/destination spans were rehashed and reconstructed after this correction. Native independent review is still required.
