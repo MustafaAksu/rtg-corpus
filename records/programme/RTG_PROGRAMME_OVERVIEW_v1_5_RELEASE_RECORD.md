@@ -1,8 +1,14 @@
 # Programme Overview v1.5 — DRAFT release and receiving record
 
 **Date:** 26 November 2026.
-**Status:** [SESSION] / DRAFT; initial review candidate, not adopted. Governing edition remains `programme-v1.4`.
-**Authority:** The PI has explicitly assigned standing Programme maintenance to the existing Atlas co-owner team: ChatGPT prepares Programme updates and receiving dispositions, Claude independently reviews, the PI decides policies, adoption and publication. This is the standing editorial assignment, not transfer of scientific owner authority or reversal of the Atlas build/review roles. The PI authorized preparation of v1.5; exact-hash adoption and merge/tag are pending. Shared Atlas orientation entry is submitted in this PR for Claude's cross-lane review. No separate Programme owner session or Methodology amendment.
+**Status:** [SESSION] / DRAFT; revision 2 after independent review 7185447417 (ACCEPT WITH CHANGES); B1–B3 and O1–O3 addressed, readback pending; not adopted. Governing edition remains `programme-v1.4`.
+**Authority:** Standing Programme maintenance by the existing Atlas team: ChatGPT prepares Programme updates and receiving dispositions; Claude independently reviews; the PI decides policies, adoption and publication. Technical scientific owners retain their authority; Atlas build/review roles are unchanged. The decision is independent of this edition's adoption; no separate Programme owner session or Methodology amendment. See the independent decision record `records/programme/PROGRAMME_EDITORIAL_ASSIGNMENT_20261126.md`. The PI authorized preparation only; exact-hash adoption and SAT policy assent remain pending.
+
+**PI decision (verbatim).** Direct PI message in the RTG Dyadic project's Atlas co-owner conversation, 26 November 2026. The exact message time is not exposed in the accessible conversation metadata; the decision preceded creation of PR #392 (2026-11-26T07:07:33Z, verified GitHub metadata), which is an upper bound, not the decision timestamp. In the immediately preceding reply the roles above were proposed for Programme only. The PI answered:
+
+> Evet bu görev dağılımı kalıcı olsun ve **Programme v1.5 hazırlığınına başla lütfen**
+
+The role assignment is already decided; Programme v1.5 adoption is not. Claude's shared ENTRY acceptance is conditional on the two wording corrections in review 7185447417, which this revision applies.
 **Source checkpoint:** `c92deb13c153d695a88136f24a9aac28eaf41622`; base tag `programme-v1.4`, annotated object `73641f15a14f0cb5e3f7f5f3b1bbff8de1e1857b` → `514e17f3078b2569779bce67b7855d0f668fe316`; main/tag blob `2e78ea684d3a2ff9934f02e55d32d556db022ed5` identical; predecessor release record `records/programme/RTG_PROGRAMME_OVERVIEW_v1_4_RELEASE_RECORD.md`. Methodology v1.4 §§0.5, 1.1, 13.1, 13.5–13.9; CONVENTIONS §§1–9; `pipes/README.md`; accepted #360 advisory (merge `bc5bd11ec2dae9b623ed231a6d18f8da705294bf`).
 **LIT dependencies:** none used in this maintenance preparation.
 
@@ -11,13 +17,17 @@
 | Object | SHA-256 |
 |---|---|
 | Adopted base | 37d857d08bb47771ed50fc5829584be74aab120a23e922eba7c84bae097f28c0 |
-| DRAFT candidate | abe033d06206f1615ad72a5234882645e8a63bf18d59c0a28e5ce6ec9b7fb618 |
-| `evidence/programme/v1.5/edit_map.json` | 39e46756323a63685be039fdba35081ae65e89c94de6eb374224330c177f38e5 |
-| `evidence/programme/v1.5/edit_log.json` | da07c796dcb2a148fa11603e174d6c56a9242c89e44e4e4b7c8f9217a5273831 |
+| Round-1 reviewed DRAFT candidate at 322ab8a42a8de71b232e8a6156c2740a7cd16882 | abe033d06206f1615ad72a5234882645e8a63bf18d59c0a28e5ce6ec9b7fb618 |
+| Current revision-2 DRAFT candidate (PI exact-hash adoption pending) | c07689b0f6e617c0b4a6a29d95d194b99bbbe3f4c3c8a686ccfd02d492c0811c |
+| Published fixed-name DSN (separate final SHA-256) | PENDING — computed after PI adoption by metadata-only publication transformation; not the draft hash |
+| `evidence/programme/v1.5/edit_map.json` | f344c91e78fb8d153ce2ba03bf97d4c49c07ee9c920c9659d7c266a4a9cad482 |
+| `evidence/programme/v1.5/edit_log.json` | 5c4cabbe826dde05118b6c3942e17ff0425fc5f3819326cf084320d58937250c |
 | `evidence/programme/scripts/build_programme_v1_5.js` | d160abadeafa46269b741b2a2491f4a6376e591856eb230b1d41c0967f32e668 |
-| `evidence/programme/v1.5/check_output.txt` | 5762b24bbfe5cdbf57cfc1ad184fd21ad06e7d33d1c45db7e89badf5efeeef03 |
+| `evidence/programme/v1.5/check_output.txt` | ddd8251318e7b4d5b3f292bf86bc44f6171dff54bb041e7f17c946e31ee35d44 |
 
-One content stage, 82 exact ordered original-base-line edits; no compaction. Candidate 641 newline-terminated lines, 80475 UTF-8 bytes. [EV-HASH, EV-BYTES, EV-RUN] Connector JavaScript actually rebuilt forward and reversed exactly, checked payload/document hash links and 13 structural gates, rejected 7 synthetic mutations; output retained. These are bounded structural checks, not a full semantic proof. Native Node adapter supplied but not run here. Before freeze/review completion, run from checkout:
+Round-1 map, log and check-output bytes remain accessible unchanged at the reviewed head `322ab8a42a8de71b232e8a6156c2740a7cd16882`; SHA-256 respectively `39e46756323a63685be039fdba35081ae65e89c94de6eb374224330c177f38e5`, `da07c796dcb2a148fa11603e174d6c56a9242c89e44e4e4b7c8f9217a5273831`, `5762b24bbfe5cdbf57cfc1ad184fd21ad06e7d33d1c45db7e89badf5efeeef03`. The builder is byte-identical across the two rounds.
+
+One content stage, 82 exact ordered original-base-line edits; no compaction. Revision 2 changes only the new payloads of four existing edits E0313/E0333/E0429/E0446. Candidate 641 newline-terminated lines, 81061 UTF-8 bytes. [EV-HASH, EV-BYTES, EV-RUN] Connector JavaScript actually rebuilt forward and reversed exactly, checked payload/document hash links and 13 structural gates, rejected 7 synthetic mutations; output retained. These are bounded structural checks, not a full semantic proof. The unchanged native Node adapter was independently run by Claude at the round-1 head (see below); revision-2 native replay is pending. For changed-head readback, run from checkout:
 
 ```sh
 work=$(mktemp -d)
@@ -29,7 +39,11 @@ python3 -I tools/dsn_lint.py dsn/RTG_PROGRAMME_OVERVIEW.md --prev "$work/base.md
 python3 -I tools/pipes_index.py --check
 ```
 
-The negative controls in the retained log were executed in connector JavaScript; the supplied native adapter replays the positive checks, not the negative harness. Request independent native reproduction and source-content review by Claude. No native linter, pipe checker, trial merge, scientific certificate or campaign executed in this preparation. Five programme OPEN RIDs/statuses ACTIVE, architecture, maturity definitions, SG-PROG-1–4 and high-risk guards, 38 IF identities, anchors, predecessor history and Appendix B preserved; the four §5 edits are source-pointer/dependency-report edits, not closure-criterion changes.
+The seven negative controls were executed again in connector JavaScript for revision 2; the native adapter replays the positive checks, not the negative harness. No new native execution, linter, pipe checker, trial merge, scientific certificate or campaign was performed by the preparer.
+
+**Round-1 independent review (EV-SRC-READ of reviewer-reported EV-RUN, [7185447417](https://github.com/MustafaAksu/rtg-corpus/pull/392#issuecomment-7185447417), exact head `322ab8a42a8de71b232e8a6156c2740a7cd16882`).** ACCEPT WITH CHANGES; no blocking scientific or interface error. Claude reports a clean Node v22.23.5 rebuild of 82 edits, C0–C12 PASS, byte-identical candidate and log, all four evidence hashes matched, informational lint (+5,725 bytes, +7.7%, zero near-duplicate paragraphs), clean trial merge at `c92deb1`, and native pipes OK 183 items / 20 inboxes. NC1–NC7 were not run natively. These results belong to round 1; they do not assert a new native run at the revised head. Claude checked changed interface rows and selected unchanged rows against actual consumer tags; all 19 inventory rows agreed with the tag/BASELINE inventory, and the thirteen dispositions were accepted at scope.
+
+**Revision-2 review corrections:** B1 standing decision quotation/independent record and ENTRY cleanup; B2 IF09 explicitly discussion-only `UVM-PROP-JPERP-01` (not an RID or adopted result); B3 IF26 full `DYAD-THM-OPEN21-SHARP-ROWS`, P12 context wording, Atlas work-list A6 path. O1 satellite request/checker basis versus convention text; O2 Atlas permission on request, not duty; O3 TDR-G AZ reference context. Reopened UVM stage-1 §6, DYAD v6.4.24 §6.14 full declaration, SAT request 3 and Atlas A6 row. No pin, grade, proposed verdict or gate changed. Exact round-1 replay and changed-lines comparison passed before rebuilding from the tagged base. All 82 original addresses retained; only four new payloads differ. Five programme OPEN RIDs/statuses ACTIVE, architecture, maturity definitions, SG-PROG-1–4 and high-risk guards, 38 IF identities, anchors, predecessor history and Appendix B preserved; the four §5 edits are source-pointer/dependency-report edits, not closure-criterion changes.
 
 ## 2. Source manifest and reading extent
 
@@ -65,10 +79,10 @@ At checkpoint the actual `pipes/PROG/INDEX.md` has 13 open, 4 closed. All thirte
 | P09 | `20261120-DZT-v0-19-adopted.md` | accept with change | DZT v0.19 conditional absolute norm law, sign excluded; Level A retained; B1/B2 open. |
 | P10 | `20261122-ATLAS-programme-receiver-pass.md` | accept | Requested receiving pass performed at draft scope in this record; all nine original notices addressed, plus three later source notices. Queue closure after review/adopted tag, not by this proposal. |
 | P11 | `20261124-NUMGEN-v1-22-adopted.md` | accept with change | NUMGEN v1.22 inventory, IF13 split pin/evidence, IF14 two grades, IF24 scoped references, IF27 comparison only; IF12/37/38 unchanged actual proof pins. M4 HOLD and Census-1 unchanged. |
-| P12 | `20261125-OFN-v0-13-adopted.md` | accept with change | OFN v0.13 criterion pointers, IF03 actual TDR-G v0.12 import, IF24/28/31/32 typed uses; IF02 actual DYAD v0.12 context retained. No custody or criterion change. |
+| P12 | `20261125-OFN-v0-13-adopted.md` | accept with change | OFN v0.13 criterion pointers, IF03 actual TDR-G v0.12 import, IF24/28/31/32 typed uses; IF02: DYAD's OFN v0.12 programme context retained. No custody or criterion change. |
 | P13 | `20261125-UVM-v0-7-2-adopted.md` | accept with change | UVM v0.7.2 inventory, IF08/10/11 scoped current and historical pins, IF09 C3 gate, IF23 unchanged; RRF reference-only added to IF29. No physical source delivered. |
 
-SAT: checked `rtg-sat/CONVENTIONS.md` §§3–5 and `REGISTRY.md` at observed main `1b2de67c5e5bf9e87490b121443ba66ab57a55a9`, and `tools/sat_check.py` sender/schema/tag-handling code; RTG `tools/pipes_index.py` accepts SAT and only valid stream keys in `filed_by`. The satellite checker permits RTG senders and validates local satellite tags, so actual external RTG tag identity must be verified separately. Proposed resolution: stable registry link, one SAT key, receiver-specific scoped notice process. No satellite inventory copy, satellite amendment, automatic repin, new recipient decision or cross-repository filing. Separate policy assent is part of PI adoption of the proposed §6.5; if withheld, retain P01 open and remove that policy paragraph before adoption.
+SAT: checked `rtg-sat/CONVENTIONS.md` §§3–5 and `REGISTRY.md` at observed main `1b2de67c5e5bf9e87490b121443ba66ab57a55a9`, and `tools/sat_check.py` sender/schema/tag-handling code; RTG `tools/pipes_index.py` accepts SAT and only valid stream keys in `filed_by`. The satellite checker permits RTG senders including ATLAS and validates local satellite tags, so actual external RTG tag identity must be verified separately. The route is expressly requested in SAT item P01 request 3, but RTG senders are not yet expressly described by the satellite conventions' §5 text. Any amendment belongs to the SAT co-owners; Atlas filing is permitted when requested by the relevant owner or PI, with no standing monitoring duty. Proposed resolution: stable registry link, one SAT key, receiver-specific scoped notice process. No satellite inventory copy, satellite amendment, automatic repin, new recipient decision or cross-repository filing. Separate policy assent is part of PI adoption of the proposed §6.5; if withheld, retain P01 open and remove that policy paragraph before adoption.
 
 ## 4. Review map and retained limits
 
@@ -79,4 +93,4 @@ SAT: checked `rtg-sat/CONVENTIONS.md` §§3–5 and `REGISTRY.md` at observed ma
 
 ## 5. Next decision and publication boundary
 
-Claude: review this exact candidate, thirteen receiving proposals, role entry, SAT policy, source locators and all changed rows; run independent native replay/lint/pipes as feasible and report blockers. Verify the initial draft's source scope and exact hashes, especially §5 and §7.2. If accepted, PI decides exact-hash adoption and SAT policy. Only that decision authorizes publication metadata transformation, final hash, BASELINE, merge and annotated `programme-v1.5`. Then close actual receiver items and file scoped notices only where an actual change warrants them. This draft does not update BASELINE, adopted Atlas, any pipe, tag or source owner file. The existing Atlas v0.15 remains governing derived snapshot; no Atlas v0.16.
+Claude: changed-head readback of B1–B3 and O1–O3, including the independent decision record and shared ENTRY wording; verify the rebuilt candidate/log and current hashes, and rerun only the affected native checks. The thirteen receiving verdicts, pins and scientific guards are unchanged; no new whole-source review requested. If accepted, PI decides exact-hash adoption and SAT policy. Only that decision authorizes publication metadata transformation, final hash, BASELINE, merge and annotated `programme-v1.5`. The release record must name both the exact adopted candidate SHA-256 and the separately computed published fixed-name DSN SHA-256, with the metadata-only transformation recorded; the published value is not asserted before adoption. Then close actual receiver items and file scoped notices only where an actual change warrants them. This draft does not update BASELINE, adopted Atlas, any pipe, tag or source owner file. The existing Atlas v0.15 remains governing derived snapshot; no Atlas v0.16.
