@@ -16,3 +16,5 @@
 | 2026-11-16 | AZ | notice | closed | AZ-NUM-TOKRES-S2 (an AZ-owned diagnostic computed on the pinned TDR-G engine); AZ §8 local-use clauses of TDRG-ALG-TOKEN-CENSUS-LAW and TDRG-ALG-PARENT-CHILD-PHASE | — | `20261116-AZ-v0-10-adopted.md` |
 | 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §§1.1, 2, 6.6, 9.1; P2 consumer re-annotation; C7C-M4 HOLD | — | `20261124-NUMGEN-v1-22-adopted.md` |
 | 2026-11-25 | OFN | notice | open | OFN v0.13 Finding A / OPEN-OFN-2; P07/P08 and conditional census interface | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-26 | NUMGEN | offer | open | TDRG-DEF-BAND, TDRG-DEF-EDGE-SET, TDRG-DEF-STAR, TDRG-DEF-ORIENT (TDRG §§6.1–6.3); NUMGEN C7C-M SESSION lemma (PR #386, comment 7174411169) | — | `20261126-NUMGEN-four-node-birth-free-sector.md` |
+| 2026-11-26 | NUMGEN | request | open | TDRG-DEF-SWAP, TDRG-DEF-CONV-P3CYC, TDRG-DEF-ORIENT, TDRG-DEF-STAR, TDRG-ALG-EVENT-INVENTORY (TDRG §§6.3, 6.13); NUMGEN v1.22 §2 item 1, §6.6 (C7C-M) | NUMGEN C7C-M design of a non-degenerate composable-chain carrier (§2 item 1); M4 stays HOLD regardless | `20261126-NUMGEN-support-sensitive-event-typing.md` |

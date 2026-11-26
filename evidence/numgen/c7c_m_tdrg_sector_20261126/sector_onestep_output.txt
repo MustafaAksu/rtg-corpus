@@ -1,0 +1,7 @@
+genesis_mode_b_mc_v18.py 9d787b435c42fd2024c81e614e3c6e3e076dc2bd30ad1e7e286ada8e6dfe675e
+tdrg_orient_v2_12_14.py ca59e9b9a1bb260a6600f3f793adea488ba40c416879673219dc30f21f77d59c
+states checked 6144 failures 0 []
+one-step (edge count, (swap, path) increments): {('edges=0', (0, 0)): 2592, ('edges=1', (1, 0)): 2592, ('edges=2', (0, 1)): 576, ('edges=2', (2, 0)): 288, ('edges=3', (0, 1)): 96}
+post (0, 13, 14, 15) -> (6, 0, 12, 18) (swap, path, tie) + (1, 0, 0) births 0
+post (0, 13, 2, 3) -> (12, 0, 6, 18) (swap, path, tie) + (0, 1, 0) births 0
+post (0, 13, 2, 15) -> (18, 0, 6, 12) (swap, path, tie) + (0, 1, 0) births 0
