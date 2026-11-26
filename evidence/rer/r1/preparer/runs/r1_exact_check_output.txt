@@ -1,0 +1,12 @@
+quadratic homological cancellation: PASS
+q_sigma = k q_G: PASS
+C15B explicit closure-set mismatch: PASS
+isolated mu = -1/2 - 2i sqrt(3)/3 independent of k: PASS
+full projected six-step cubic for symbolic k (all 6 edge components): PASS
+C20 norm/area quartic identities and sharp shape bound: PASS
+C12 all signed-Gram coefficients and Gram differential: PASS
+cubic slot-2/3 reflection: PASS
+C12 to T6d normalization using Gram constraint: PASS
+T6d r^0 witness sign=+1: modal=5/8, diagnostic=-30 + 6*sqrt(3)
+T6d r^0 witness sign=-1: modal=5/8, diagnostic=-30 - 6*sqrt(3)
+All checks PASS; exact degree-three/four algebra only, no source script or reviewer script run.
