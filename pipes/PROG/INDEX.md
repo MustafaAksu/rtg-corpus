@@ -8,16 +8,16 @@
 | 2026-10-30 | OFN | notice | closed | OFN v0.11 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9); Programme v1.3 lists OFN v0.10 | — | `20261030-OFN-v0-11-adopted.md` |
 | 2026-10-30 | OFN | notice | closed | OFN v0.12 as criteria home for OPEN-P0 and OPEN-P2B (OFN §§5, 9) | — | `20261030-OFN-v0-12-adopted.md` |
 | 2026-11-03 | TRIAD | notice | closed | Triadic v1.7 adopted; interface register IF07 (TRIAD → GEN) and IF11 (TRIAD → UVM) pin v1.6; CN-05 Programme/OFN note (§7.4) | — | `20261103-TRIAD-v1-7-adopted.md` |
-| 2026-11-09 | SAT | request | open | interface between rtg-corpus and the satellite repository MustafaAksu/rtg-sat (pointer file; pipe keys for satellite items; re-pin notices) | — | `20261109-SAT-satellite-interface.md` |
-| 2026-11-11 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ; §7.2 IF20 and IF21 pins; §9.2 maintenance row; §8 SG-PROG-1/2/4 as cited by AZ §3 | — | `20261111-AZ-v0-7-adopted.md` |
-| 2026-11-12 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ; §6.7 proposal for AZ; §7.2 IF20 and IF21 pins; §9.2 maintenance row | — | `20261112-AZ-v0-8-adopted.md` |
-| 2026-11-12 | TDRG | notice | open | answer to pipes/TDRG/20261104-PROG-v1-4-adopted.md; TDRG-EXPORT-DISCRETE-TRIAD (TDR-G §7 export row); companion and context pins | — | `20261112-TDRG-v2-12-15-adopted.md` |
-| 2026-11-14 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ (edition, what AZ owns); §7.2 IF21 pin | — | `20261114-AZ-v0-9-adopted.md` |
-| 2026-11-16 | AZ | notice | open | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ (edition; what AZ owns) | — | `20261116-AZ-v0-10-adopted.md` |
-| 2026-11-16 | TDRG | notice | open | TDR-G Methodology v1.4 migration; TDRG-EXPORT-DISCRETE-TRIAD and TDRG-EXPORT-POLICY-PHASE (unchanged) | — | `20261116-TDRG-v2-13-adopted.md` |
-| 2026-11-19 | DZT | notice | open | Programme v1.4 §6.1 inventory row, §6.5 entry, maturity row and §9.2 maintenance row for DZT; interface rows IF18, IF19 | — | `20261119-DZT-v0-18-adopted.md` |
-| 2026-11-20 | DZT | notice | open | Programme v1.4 §6.1 inventory row, §6.5 entry and maturity row for DZT (edition; first all-p DZT theorem) | — | `20261120-DZT-v0-19-adopted.md` |
-| 2026-11-22 | ATLAS | request | open | Programme v1.4 receiving decision for a single nine-item source synchronization pass (Programme §6-9) | — | `20261122-ATLAS-programme-receiver-pass.md` |
-| 2026-11-24 | NUMGEN | notice | open | NUMGEN v1.22 §§2, 6.6, 9.1; inventory and IF12–IF14, IF24, IF27, IF37, IF38 | — | `20261124-NUMGEN-v1-22-adopted.md` |
-| 2026-11-25 | OFN | notice | open | OFN v0.13 criterion home and IF02/03/24/28/31/32 | — | `20261125-OFN-v0-13-adopted.md` |
-| 2026-11-25 | UVM | notice | open | UVM v0.7.2 §§0.3, 7, 9; Programme IF08–IF11, IF23 | — | `20261125-UVM-v0-7-2-adopted.md` |
+| 2026-11-09 | SAT | request | closed | interface between rtg-corpus and the satellite repository MustafaAksu/rtg-sat (pointer file; pipe keys for satellite items; re-pin notices) | — | `20261109-SAT-satellite-interface.md` |
+| 2026-11-11 | AZ | notice | closed | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ; §7.2 IF20 and IF21 pins; §9.2 maintenance row; §8 SG-PROG-1/2/4 as cited by AZ §3 | — | `20261111-AZ-v0-7-adopted.md` |
+| 2026-11-12 | AZ | notice | closed | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ; §6.7 proposal for AZ; §7.2 IF20 and IF21 pins; §9.2 maintenance row | — | `20261112-AZ-v0-8-adopted.md` |
+| 2026-11-12 | TDRG | notice | closed | answer to pipes/TDRG/20261104-PROG-v1-4-adopted.md; TDRG-EXPORT-DISCRETE-TRIAD (TDR-G §7 export row); companion and context pins | — | `20261112-TDRG-v2-12-15-adopted.md` |
+| 2026-11-14 | AZ | notice | closed | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ (edition, what AZ owns); §7.2 IF21 pin | — | `20261114-AZ-v0-9-adopted.md` |
+| 2026-11-16 | AZ | notice | closed | Programme v1.4 §6.1 inventory row and §6.5 entry for AZ (edition; what AZ owns) | — | `20261116-AZ-v0-10-adopted.md` |
+| 2026-11-16 | TDRG | notice | closed | TDR-G Methodology v1.4 migration; TDRG-EXPORT-DISCRETE-TRIAD and TDRG-EXPORT-POLICY-PHASE (unchanged) | — | `20261116-TDRG-v2-13-adopted.md` |
+| 2026-11-19 | DZT | notice | closed | Programme v1.4 §6.1 inventory row, §6.5 entry, maturity row and §9.2 maintenance row for DZT; interface rows IF18, IF19 | — | `20261119-DZT-v0-18-adopted.md` |
+| 2026-11-20 | DZT | notice | closed | Programme v1.4 §6.1 inventory row, §6.5 entry and maturity row for DZT (edition; first all-p DZT theorem) | — | `20261120-DZT-v0-19-adopted.md` |
+| 2026-11-22 | ATLAS | request | closed | Programme v1.4 receiving decision for a single nine-item source synchronization pass (Programme §6-9) | — | `20261122-ATLAS-programme-receiver-pass.md` |
+| 2026-11-24 | NUMGEN | notice | closed | NUMGEN v1.22 §§2, 6.6, 9.1; inventory and IF12–IF14, IF24, IF27, IF37, IF38 | — | `20261124-NUMGEN-v1-22-adopted.md` |
+| 2026-11-25 | OFN | notice | closed | OFN v0.13 criterion home and IF02/03/24/28/31/32 | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-25 | UVM | notice | closed | UVM v0.7.2 §§0.3, 7, 9; Programme IF08–IF11, IF23 | — | `20261125-UVM-v0-7-2-adopted.md` |
