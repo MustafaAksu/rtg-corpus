@@ -1,0 +1,4 @@
+projected cubic modal components: PASS
+unsigned Gram opposite-orientation quartic difference: 2*sqrt(3)*Q**2/9
+cubic-birth graph degree-five defect: b*(-sqrt(3)/3+i)*Q**2*z
+PASS; exact coefficient check only; no raw certificate or source script rerun
