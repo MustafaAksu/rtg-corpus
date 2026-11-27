@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: notice
 object: R9-conditional Dyadic rows; $S_h$ routing (§6.15); DYAD-ALG-KP-FRAME-SCALE; R11 owner labels (Appendix C)
 tags: [dyad-v6.4.23, rrf-v0.8.4]
-state: open
+state: closed
+disposition: 2026-11-27 · accept with change · records/rrf/RRF_V0_9_INBOX_CLOSEOUT_20261127.md §N04
 ---
 Dyadic `dyad-v6.4.23` (SHA-256 `9f874ccc…25cb`). This notice carries the still-unmet content of the Dyadic notices N19 and the v6.4.22 informational line (prepared 22 Oct 2026 for PI routing and never sent; disposition `records/dyad/DYAD_NOTICES_N16_N21.md` §"Disposition, 3 November 2026"). Sections below are those of v6.4.23.
 - R9-conditional rows: T1, T2 and the memory law (`DYAD-THM-OPEN3-ASYMPTOTIC-PHASE`) and `DYAD-THM-OPEN21-PRIMITIVE-PHASE-REMAINDER` are `[THM]` `[assuming: RECOG-THM-R9-MEMORY]` (§6.14, §7).
