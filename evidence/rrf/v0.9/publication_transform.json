@@ -1,0 +1,137 @@
+{
+  "status": "PI-adopted candidate publication preparation; review and publication pending",
+  "source": {
+    "commit": "8de7a8cd338f37bce3a73910648eecc9a5628b2c",
+    "path": "dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+    "sha256": "2950dbc0a2fd3468005a9b86190fe4513068019a21444fd8c431124043ba942d",
+    "bytes": 121279
+  },
+  "target": {
+    "path": "dsn/RTG_RRF_REPRESENTATION_REGISTRY.md",
+    "sha256": "28c9c101c715b402b5ed60eeab8bfa2c7e5e637fef3cd2b00961dfa60553075d",
+    "bytes": 121216
+  },
+  "decision": "https://github.com/MustafaAksu/rtg-corpus/pull/417#issuecomment-7213581950",
+  "operations": [
+    {
+      "line": 5,
+      "old": "**Date:** 26 November 2026",
+      "new": "**Date:** 27 November 2026",
+      "reason": "PI adoption date"
+    },
+    {
+      "line": 8,
+      "old": "**Document status:** DRAFT — S2b review candidate; not adopted. `rrf-v0.8.4` governs until the PI adoption and release.",
+      "new": "**Document status:** ADOPTED by the PI, 27 November 2026, at RRF working-representation-standard scope (decision and publication record: `records/rrf/RRF_v0_9_RELEASE_RECORD.md`). Governs on verified tagged publication; predecessor `rrf-v0.8.4` governs until then.",
+      "reason": "Adoption status only; no claim of completed publication"
+    },
+    {
+      "line": 9,
+      "old": "**Supersedes:** RTG_RRF_REPRESENTATION_REGISTRY.md at `rrf-v0.8.4` (SHA-256 `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce`), proposed successor only.",
+      "new": "**Supersedes:** RTG_RRF_REPRESENTATION_REGISTRY.md at `rrf-v0.8.4` (SHA-256 `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce`).",
+      "reason": "Supersession metadata"
+    },
+    {
+      "line": 74,
+      "old": "**Local candidate identity:** `RRF-DEF-PASSIVE-TRANSPORT` — passive transport / reimposed-model distinction; registration awaits adoption.",
+      "new": "**Local identity:** `RRF-DEF-PASSIVE-TRANSPORT` — passive transport / reimposed-model distinction; registered at RRF working-standard scope.",
+      "reason": "Registration metadata for approved exact candidate identity; no predicate change"
+    },
+    {
+      "line": 204,
+      "old": "**Local candidate identity:** `RRF-ALG-ODD-ROOT-EQUIVALENCE` — conditional class-wise local existence equivalence; registration awaits adoption.",
+      "new": "**Local identity:** `RRF-ALG-ODD-ROOT-EQUIVALENCE` — conditional class-wise local existence equivalence; registered at RRF working-standard scope.",
+      "reason": "Registration metadata for approved exact candidate identity; no predicate change"
+    },
+    {
+      "line": 293,
+      "old": "**Local candidate identity:** `RRF-ALG-S-DECOMPOSITION` — local nonzero comparator decomposition; registration awaits adoption.",
+      "new": "**Local identity:** `RRF-ALG-S-DECOMPOSITION` — local nonzero comparator decomposition; registered at RRF working-standard scope.",
+      "reason": "Registration metadata for approved exact candidate identity; no predicate change"
+    },
+    {
+      "line": 331,
+      "old": "**Local candidate identity:** `RRF-ALG-FINITE-SWAP-TRANSPORT` — exact representation-level involution transport, not exact dynamical commutation; registration awaits adoption.",
+      "new": "**Local identity:** `RRF-ALG-FINITE-SWAP-TRANSPORT` — exact representation-level involution transport, not exact dynamical commutation; registered at RRF working-standard scope.",
+      "reason": "Registration metadata for approved exact candidate identity; no predicate change"
+    },
+    {
+      "line": 338,
+      "old": "**Local candidate identity:** `RRF-DEF-TYPED-COVARIANCE` — typed observable/action criterion, not physical gauge selection; registration awaits adoption.",
+      "new": "**Local identity:** `RRF-DEF-TYPED-COVARIANCE` — typed observable/action criterion, not physical gauge selection; registered at RRF working-standard scope.",
+      "reason": "Registration metadata for approved exact candidate identity; no predicate change"
+    },
+    {
+      "line": 357,
+      "old": "**Local candidate identity:** `RRF-DEF-EVENT-TRANSPORT` — representation/admissibility convention only; RECOG-ALG-BTOKEN-TRANSPORT remains the owner result; registration awaits adoption.",
+      "new": "**Local identity:** `RRF-DEF-EVENT-TRANSPORT` — representation/admissibility convention only; RECOG-ALG-BTOKEN-TRANSPORT remains the owner result; registered at RRF working-standard scope.",
+      "reason": "Registration metadata for approved exact candidate identity; no predicate change"
+    },
+    {
+      "line": 475,
+      "old": "**OPEN register — proposed descriptive identities, existing obligations unchanged.** Status and owner fields below concern RRF representation work only; owner science stays with the respective scientific owners. All remain ACTIVE. The local names OPEN-A, OPEN-B, OPEN-E1 and OPEN-E2 are retained as aliases (Methodology §§4.2,5.1); proposed descriptive RIDs are not registered until PI adoption.",
+      "new": "**OPEN register — descriptive identities, existing obligations unchanged.** Status and owner fields below concern RRF representation work only; owner science stays with the respective scientific owners. All remain ACTIVE. The local names OPEN-A, OPEN-B, OPEN-E1 and OPEN-E2 are retained as aliases (Methodology §§4.2,5.1); descriptive RIDs are registered at RRF representation scope.",
+      "reason": "OPEN identity registration metadata only"
+    },
+    {
+      "line": 477,
+      "old": "**Closure criteria (PI-approved for the v0.9 candidate, 26 November 2026; [decision record](https://github.com/MustafaAksu/rtg-corpus/pull/417#issuecomment-7202555052)).** The final column contains the approved candidate wording, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. It is not an adopted closure rule and establishes neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged.",
+      "new": "**Closure criteria (PI-approved, 26 November 2026; [decision record](https://github.com/MustafaAksu/rtg-corpus/pull/417#issuecomment-7202555052)).** The final column contains the approved criteria, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. The criteria establish neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged.",
+      "reason": "Approved criteria status; all four criterion rows and no-auto-closure guard unchanged"
+    },
+    {
+      "line": 479,
+      "old": "| Local alias / proposed RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Closure criterion (PI-approved candidate); relevant interfaces |",
+      "new": "| Local alias / RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Closure criterion (PI-approved); relevant interfaces |",
+      "reason": "OPEN column status metadata"
+    },
+    {
+      "line": 486,
+      "old": "BR-Q2 is the separately authorized, not-yet-dispositioned OFN question `pipes/RRF/20261104-OFN-binary-recognition-sign-typing.md`. No new sign comparator, gauge choice, registration or BR-Q2 conclusion in this intermediate. OPEN-A then OPEN-B→E1→E2 remains the research sequence.",
+      "new": "BR-Q2 is the separately authorized, not-yet-dispositioned OFN question `pipes/RRF/20261104-OFN-binary-recognition-sign-typing.md`. No new sign comparator, gauge choice, registration or BR-Q2 conclusion in this edition. OPEN-A then OPEN-B→E1→E2 remains the research sequence.",
+      "reason": "Release-state wording only"
+    },
+    {
+      "line": 500,
+      "old": "| Existing DYAD / RECOG / TRIAD / OFN / NUMGEN references | Actual owner-pinned RRF references remain distinct from RRF scientific imports. Programme IF29–32, accepted S1 matrix and each owner import ledger determine scope; no consumer repin by this candidate. |",
+      "new": "| Existing DYAD / RECOG / TRIAD / OFN / NUMGEN references | Actual owner-pinned RRF references remain distinct from RRF scientific imports. Programme IF29–32, accepted S1 matrix and each owner import ledger determine scope; no consumer repin by this edition. |",
+      "reason": "Release-state wording only"
+    },
+    {
+      "line": 508,
+      "old": "Each entry points to the complete local claim/use block at the identified section and line in this review candidate; the inherited scope, assumptions, chart, domain, clock and dependency conditions are the ones at that block and the actual owner pin, not a new inference. The frozen-source locator and corresponding candidate locator are also in the movement map. Line numbers are candidate navigation; section and exact source identity control. Source status is distinguished from RRF use. For historical receipts, S0 custody and S1's exact-source matrix govern verification; no certificate execution is asserted here. Unnumbered source blocks remain `RID unavailable`; owner-RID assignment follow-up is unresolved, and no sent governance request is inferred. Evidence RIDs do not stand in for scientific claim RIDs. Explicit current-owner grades below are targeted source readouts, not deductions from RID category or substitutions for historical proof pins. Where a grade is not separately verified, the source block controls.",
+      "new": "Each entry points to the complete local claim/use block at the identified section and line in this edition; the inherited scope, assumptions, chart, domain, clock and dependency conditions are the ones at that block and the actual owner pin, not a new inference. The frozen-source locator and corresponding candidate locator are also in the movement map. Line numbers are edition navigation; section and exact source identity control. Source status is distinguished from RRF use. For historical receipts, S0 custody and S1's exact-source matrix govern verification; no certificate execution is asserted here. Unnumbered source blocks remain `RID unavailable`; owner-RID assignment follow-up is unresolved, and no sent governance request is inferred. Evidence RIDs do not stand in for scientific claim RIDs. Explicit current-owner grades below are targeted source readouts, not deductions from RID category or substitutions for historical proof pins. Where a grade is not separately verified, the source block controls.",
+      "reason": "Release-state navigation only"
+    },
+    {
+      "line": 573,
+      "old": "## 7.3 Proposed RRF-native identifier routing (candidate only)",
+      "new": "## 7.3 RRF-native identifier routing",
+      "reason": "Adopted identifier index heading"
+    },
+    {
+      "line": 575,
+      "old": "The four dyad profiles and one provisional network profile keep their existing identifiers. Existing transport keys T-h, T-L, T-exp and T-net, and the local NF→WRAPPED composite keep direction, domain and loss as in §3; T-net remains OPEN. No profile or arrow added. `RRF-CND-01` remains the existing proposed coincidence admissibility interface. The following are proposed local identity labels for unchanged RRF-owned conventions/implications, not owner theorem RIDs and not registered until PI adoption. Identifier annotations point to the actual statement homes without changing their predicates.",
+      "new": "The four dyad profiles and one provisional network profile keep their existing identifiers. Existing transport keys T-h, T-L, T-exp and T-net, and the local NF→WRAPPED composite keep direction, domain and loss as in §3; T-net remains OPEN. No profile or arrow added. `RRF-CND-01` remains the existing proposed coincidence admissibility interface. The following are registered local identity labels for unchanged RRF-owned conventions/implications, not owner theorem RIDs. Identifier annotations point to the actual statement homes without changing their predicates.",
+      "reason": "Registration status only"
+    },
+    {
+      "line": 577,
+      "old": "| Candidate local ID | Existing home and grade/scope |",
+      "new": "| Local ID | Existing home and grade/scope |",
+      "reason": "Registry status only"
+    },
+    {
+      "line": 647,
+      "old": "- **v0.9 — DRAFT (26 Nov 2026):** accepted S1 owner-source/interface synchronization and S2a corrections, followed by S2b structural migration. Standard C/class-C scope, smooth/analytic/finite separation, R9 additional rows, M4 HOLD reason, RER noncanonical and UVM reference scope; proposed local identifiers and OPEN aliases retained. Historical bytes and earlier release/evidence records remain retrievable from `rrf-v0.8.4` and the frozen S2a commit. No owner theorem, physical model, BR-Q2 result, OPEN closure or adoption.",
+      "new": "- **v0.9 — ADOPTED (27 Nov 2026):** accepted S1 owner-source/interface synchronization and S2a corrections, followed by S2b structural migration. Standard C/class-C scope, smooth/analytic/finite separation, R9 additional rows, M4 HOLD reason, RER noncanonical and UVM reference scope; local identifiers and OPEN aliases retained. Historical bytes and earlier release/evidence records remain retrievable from `rrf-v0.8.4` and the frozen S2a commit. No owner theorem, physical model, BR-Q2 result, or OPEN closure.",
+      "reason": "Appendix A status and remove draft adoption disclaimer"
+    },
+    {
+      "line": 653,
+      "old": "*END OF DOCUMENT — RRF v0.9 DRAFT*",
+      "new": "*END OF DOCUMENT — RRF v0.9 ADOPTED*",
+      "reason": "Footer status"
+    }
+  ]
+}
