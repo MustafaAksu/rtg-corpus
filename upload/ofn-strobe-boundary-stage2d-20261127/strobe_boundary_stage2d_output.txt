@@ -1,0 +1,6 @@
+SymPy 1.14.0
+FIXED_ACTION_SYMBOLIC_PASS; det = k**3*(k - 3)**2 ; residual/(2 eps rho^q) = -2*y*(k - 2)/(k - 3)
+ROOT_AND_TWIST_ARITHMETIC_PASS 62/62 horizons; 878 root/orbit-length pairs
+P=12 ORDER=6 FULL_JETS_PASS; J order, involutions, covariance, first split at 6, product twist
+P=16 ORDER=8 FULL_JETS_PASS; J order, involutions, covariance, first split at 8, product twist
+ALL_STAGE2D_CHECKS_PASS
