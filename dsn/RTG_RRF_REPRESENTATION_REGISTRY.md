@@ -2,11 +2,11 @@
 
 **Title:** RTG — RRF Representation Registry
 **Version:** v0.9
-**Date:** 26 November 2026
+**Date:** 27 November 2026
 **Scope:** Isolated continuous dyad (four profiles) and one provisional network profile; working representation standard only.
 **Document class:** Infrastructure / representation registry; declared nonstandard section map (§0). §1 is equation-annotation syntax rather than a 200–400 word state summary.
-**Document status:** DRAFT — S2b review candidate; not adopted. `rrf-v0.8.4` governs until the PI adoption and release.
-**Supersedes:** RTG_RRF_REPRESENTATION_REGISTRY.md at `rrf-v0.8.4` (SHA-256 `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce`), proposed successor only.
+**Document status:** ADOPTED by the PI, 27 November 2026, at RRF working-representation-standard scope (decision and publication record: `records/rrf/RRF_v0_9_RELEASE_RECORD.md`). Governs on verified tagged publication; predecessor `rrf-v0.8.4` governs until then.
+**Supersedes:** RTG_RRF_REPRESENTATION_REGISTRY.md at `rrf-v0.8.4` (SHA-256 `2fb0a0fe9d998be91618cb731e2dee7301952ffdbe374f4889dd5e61c5cbafce`).
 **Companion documents:** §0.2 current-source table and §7 import/use records; historical PRR Wrap-up v0.2 §§20, 26 (NONCANONICAL parent); predecessor adoption record `records/rrf/RTG_RRF_REPRESENTATION_REGISTRY_v0_8_4_ADOPTION_RECORD.md`.
 **DSN Methodology:** `methodology-v1.4`.
 **Status summary:** The registry produces no new physics; it makes representation mistakes of the R11 type mechanically visible. All dyad statements are conditional on the postulated generator T. OPEN-A/B/E remain ACTIVE.
@@ -71,7 +71,7 @@ OFN v0.13 retains RF-O09-03/04; the old v0.9 locator remains a historical receip
 
 ### 0.3 Model/carrier versus passive-chart safety rule
 
-**Local candidate identity:** `RRF-DEF-PASSIVE-TRANSPORT` — passive transport / reimposed-model distinction; registration awaits adoption.
+**Local identity:** `RRF-DEF-PASSIVE-TRANSPORT` — passive transport / reimposed-model distinction; registered at RRF working-standard scope.
 `[DEF] [scope: RRF representation discipline; conditional ER-2B illustration]` A **passive** diffeomorphic recharting transports the state, update, exchange action, incidence/closure operator, event predicate and comparison subset together. It retains the same model, so correctly transported fixed-set noninvariance cannot disappear. **Reimposing** linear addition, projection or incidence in the new coordinates creates a *different conditional model* unless an intertwining equivalence is proved. This distinction already exists in §§3/6; ER-2B v0.2 C15A–C20 supplies a bounded illustration, **not** a physical threshold or native RRF network profile.
 
 `[OPEN] [scope: non-transfer guard; physical bridge not selected]` `RRF-DYAD-W` and `RRF-NET-W-RAW` remain distinct types; additive closure of the latter is not automatically transported from isolated dyads. Neither a coordinate change, a source identification, nor a finite-order factor is evidence of a chosen physical carrier, incidence law or birth mechanism. OPEN-B → OPEN-E1 → OPEN-E2 remains locked.
@@ -201,7 +201,7 @@ is the **unique formal involution** with derivative `−I` commuting with `F`; i
 
 `[OPEN] [import: DYAD v6.4.13 §§2, 6.16–6.17; RID: DYAD-OPEN-INVOLUTION-REALIZATION]` **OPEN 20 (B-an):** analytic convergence of `R_0`/`F^{1/2}`; **(B-6):** analytic convergence of `F^{1/6}` / `J`; **(B-∞ existence): CLOSED** for local C∞ germs by DYAD v6.4.18 E1–E4; current DYAD v6.4.24 §2 OPEN20 PARTIAL, B-an/B-6 ACTIVE. `[THM] [scope: DYAD v6.4.13 §6.17 existing C∞ germs; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES]` **B-∞ flat uniqueness CLOSED** for existing germs by Lemma F and F1–F3. These are distinct from the unknown existence outcomes. Owner RIDs `DYAD-CAND-FLAT-CENTRALIZER` and `DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES` retain their historical spelling despite [THM] grade.
 
-**Local candidate identity:** `RRF-ALG-ODD-ROOT-EQUIVALENCE` — conditional class-wise local existence equivalence; registration awaits adoption.
+**Local identity:** `RRF-ALG-ODD-ROOT-EQUIVALENCE` — conditional class-wise local existence equivalence; registered at RRF working-standard scope.
 `[ALG] [scope: class-wise local existence equivalence, conditional on the owner clock/root results; not a physical realization] [import: DYAD v6.4.13 §6.17; RID: DYAD-CAND-SMOOTH-CENTRALIZER-COROLLARIES] [import: DYAD v6.4.13 §§2, 6.16; RID: DYAD-OPEN-INVOLUTION-REALIZATION]` In each of C∞ and analytic categories, a nonidentity primitive-commuting involution (equivalently an odd chart for primitive `T`) exists **iff** a tangent-to-identity square root `Q²=F` exists in that category. The easy direction is `Q=T³R`; the reverse uses F3 for C∞, and the analytic special case of F3 (or formal-root uniqueness plus analytic identity) for Cω, with `R=T³Q^{-1}`. The existence equivalence is an algebraic *consequence* of owner theorems plus the explicitly defined averaging chart (G2 v0.3 §4); it does not establish existence by itself. E1–E4 supply smooth existence separately; analytic existence remains OPEN. No G2 physical factor/encoding is claimed.
 
 **Current smooth existence (DYAD v6.4.24 §6.17; producer v6.4.18 N14).** `[THM] [import: DYAD v6.4.24 §6.17 | DYAD-THM-SMOOTH-EMBEDDING] [scope: C∞ germs at P₁; §6.15 local domain]` E1 supplies a smooth field `X` with `F=T⁶=φ_X¹`, `j∞X=log F`; E3 gives existing smooth tangent-to-identity roots `K_m=φ_X^{1/m}` commuting with `T`; E4 gives an existing smooth `J=T K_6^{-1}` and `R=T³ K_2^{-1}`. Hence **OPEN 20 B-∞ EXISTENCE CLOSED**; B-an/B-6 analytic existence remains OPEN, as does physical G2/OPEN-A. E2 uniqueness is restricted to smooth time-one generators with `DX'(0)=0`—not all generators. The owner construction passes by `G_∞^{-n}F^n`; convergence of the prior `F^{-n}R_∞ F^n` scheme remains unproved. L-SHADOW-POLY is not used. The radius is qualitative; finite-C^r exact commutation and physical exchange/G2 remain unestablished.
@@ -290,7 +290,7 @@ $\bar z_az_b\ne\overline{h(z_a)}h(z_b)$ in general `[import: RECOG v0.3.14 §6.1
 
 **Covariance belongs to the pair (observable, action), not to a chart.** The two tracks are now explicitly defined and checked in the CLOSED R11 ledger: transporting $C_W$ and $S_h$ together does not remove the covariance defect of $C_W$, while $C^W_{\rm cov}$ has exact covariance in raw coordinates `[ALG] [scope: fixed chart and specified involution] [import: RECOG v0.3.14 §6.14, cert checks 5–7 and 9; evidence RID: RECOG-ART-R11-LEDGER]`. This resolves the representation ledger, not uniqueness of the physically admissible observable algebra or physical pole-relabeling status. OPEN-A remains outside RECOG.
 
-**Local candidate identity:** `RRF-ALG-S-DECOMPOSITION` — local nonzero comparator decomposition; registration awaits adoption.
+**Local identity:** `RRF-ALG-S-DECOMPOSITION` — local nonzero comparator decomposition; registered at RRF working-standard scope.
 **$S$-decomposition** `[ALG] [scope: RRF discussion-local] [provenance: Claude-checked]`: on a simply connected local domain where $C\ne0$ and $C\circ S\ne0$, with a consistent square-root branch (branch near $1$ inside the certified tube),
 $C=C_-\,C_+$, $C_-=(C/C\circ S)^{1/2}$, $C_+=(C\cdot C\circ S)^{1/2}$; $C_-(Sx)=C_-(x)^{-1}$, $C_+(Sx)=C_+(x)$.
 For multiplicative comparators whose typed relabeling law is $C(Sx)=C(x)^{-1}$, $C_+\ne1$ measures the covariance defect. $C_+$ is $S$-even and cannot decide orientation. Not canonical globally without a branch choice.
@@ -328,14 +328,14 @@ Here $G=-(43+5611i\sqrt3)/1270080$ is the owner's averaging coefficient. The the
 | NF | $z\mapsto-z$ | exact symmetry of $\widehat f_{\rm form}$; degree-6 certified for $\widehat f_6$ |
 | NET | $\mathscr O_e$ (bookkeeping reorientation) | exact bookkeeping; **not** a pole-relabel candidate |
 
-**Local candidate identity:** `RRF-ALG-FINITE-SWAP-TRANSPORT` — exact representation-level involution transport, not exact dynamical commutation; registration awaits adoption.
+**Local identity:** `RRF-ALG-FINITE-SWAP-TRANSPORT` — exact representation-level involution transport, not exact dynamical commutation; registered at RRF working-standard scope.
 > **Established by registered transports:** $-I_{\rm NF}$, $S_h$ and $S_{\rm lift}$ are the same representation-level involution carried along `T-h` and `T-L` (by definition of $S_h$ and by exactness of $\mathcal L$). Involutivity is exact; commutation with the dynamics is finite-order (degree 6) or formal (for $\widehat f_{\rm form}$) — no all-order dynamical symmetry of the delivered maps is registered. **OPEN-A proper** consists of two questions only: (1) whether this involution is the physical pole relabeling; (2) whether the WRAPPED action $\zeta\mapsto\zeta^{-1}$ is the same physical operation — the two agree at linear order only and no exact transport of the involution across `T-exp` is registered. Six-step evidence: the raw return $F_W$ is not $-I$-odd ($F_4\ne0$) while the six-step jet $J$ is (DYAD §6.12).
 
 **Adopted DYAD owner formal-involution receipt (N7).** `[THM] [scope: formal] [import: DYAD v6.4.12 §6.16; RID: DYAD-THM-FORMAL-INVOLUTION-UNIQUE]` The unique formal `−I`-linear involution commuting with six-step `F=T^6` is `R_0=T^3F^{-1/2}=h_form(-I)h_form^{-1}`; its equality with the finite-chart `S_h` is **only through degree-six jet** under the stated shared normalization convention. Owner formal uniqueness **is now adopted**, not `source-pending`. `[THM] [scope: conditional analytic] [import: DYAD v6.4.12 §6.15; RID: DYAD-THM-ANALYTIC-CLOCK-BRIDGE]` A nonidentity analytic six-step commuting involution also commutes with primitive `T` under §6.15(b); analytic existence and physical pole relabeling are not established (DYAD OPEN 20; RRF OPEN-A). See §2.4b.
 
 **Smooth owner receipt.** DYAD v6.4.24 §§6.15–17 retains formal J/R0 and F1–F3; E3–E4 supply the distinct smooth R=T³K_2^(−1) commuting exactly with T (DYAD-THM-SMOOTH-EMBEDDING). Finite S_h remains an exact involution, with only degree-six dynamical commutation certified. RECOG v0.3.27 §6.14/SG-R14 distinguishes them (historical R11 evidence v0.3.14). No exact physical relabeling, finite-chart radius, section-shadow transfer to R or raw C_W covariance follows. B-an/B-6 OPEN; see §§2.4b–c.
 
-**Local candidate identity:** `RRF-DEF-TYPED-COVARIANCE` — typed observable/action criterion, not physical gauge selection; registration awaits adoption.
+**Local identity:** `RRF-DEF-TYPED-COVARIANCE` — typed observable/action criterion, not physical gauge selection; registered at RRF working-standard scope.
 Typed-covariance criterion for gauge status (Wrap-up §10.2): $O(Sx)=\tau_O(O(x))$ for every admissible $O$, with $\tau_O$ the type's relabeling law — not universal invariance.
 
 **Generator-family limit on OPEN-A.** `[import: RECOG v0.3.27 §§6.7,6.15 | RECOG-THM-TWIN-RADIAL-ACCESS] (historical v0.3.14 receipt)` The global radial-access theorem concerns the particular symmetric twin $T_s=(\rho-\sin\eta,\eta+\sinh\rho-\sin\eta)$: every initial state with $0<Q<7/200$ eventually reaches $|\rho|\ge\operatorname{arccosh}2$. It contrasts with the selected $T$'s certified local contraction. It is **not** a theorem that exact swap symmetry precludes healing for every admissible shear. RECOG §6.7 explicitly retains $g(\rho)=\tanh\rho$ as an odd, healing-at-cubic-order counterexample. The family law $\Re\mu_6=3b-4a^2$ for $g=\rho+a\rho^2+b\rho^3+\cdots$ has two routes to negative radial drift; removing the quadratic term does not force $b>0$. The diagnostic twins are not new registered RRF physical profiles. OPEN-A is not resolved in favor of a nonlinear physical swap by the $\sinh$ result; R1 remains PARTIAL in RECOG.
@@ -354,7 +354,7 @@ This is **conjugacy between two parameter-labelled maps**, not an exact symmetry
 
 ## 4.3 Event predicates and sections: transported is not reselected
 
-**Local candidate identity:** `RRF-DEF-EVENT-TRANSPORT` — representation/admissibility convention only; RECOG-ALG-BTOKEN-TRANSPORT remains the owner result; registration awaits adoption.
+**Local identity:** `RRF-DEF-EVENT-TRANSPORT` — representation/admissibility convention only; RECOG-ALG-BTOKEN-TRANSPORT remains the owner result; registered at RRF working-standard scope.
 `[ALG]` [scope: same registered exact map and complete event predicate, where its chart/transition domains are valid] [import: RECOG v0.3.27 §6.16b | RECOG-ALG-BTOKEN-TRANSPORT] (historical v0.3.14 receipt)
 
 Let the primitive B section be $\Sigma_B^W=\{W=t>0\}$, with the owner's full crossing predicate (including side/coorientation and $\rho$ restrictions). Under `T-h`,
@@ -472,18 +472,18 @@ Current GEN v2.10 §§1–2,6.9,7 and TRIAD v1.7 §§6.18,7.4 preserve the unit-
 `[DEF] [scope: reference-only; NON-NORMATIVE]` `rer-v0.2` (SHA-256 58feee5ff1f16a37fc4ee029f24499928ea7439731de0a090d8794c1cbe57ad0; PI adoption record `upload/corpus-originals-20261123/RER_v0_2_ADOPTION_RECORD_20261021.md`) is adopted at NONCANONICAL working-registry scope: 18 scoped records accepted at declared grades/limits; RER-ER2B-T6D and RER-ER2B-CARRIER retained BLOCKED_SOURCE_UNVERIFIED and excluded from scientific acceptance. G7–G10 reference the RRF guards at §§0.3,4.2a,6.2–4. S0 recovered original RRF closure proposal `records/rrf/RTG_RRF_RER_DYNAMICAL_CLOSURE_PROPOSAL_v0_1.md`, SHA-256 65186f393985ed502512c875601891cec999830abc2cc7db2fe01dd94f554e86; this pointer is NOT a mandatory profile field, theorem, numerical certificate or physical realization. RER reports K=6 pilot 8/8 (4/904 boxes per N), K=8 stopped at 1/8; regional/global Stage-2 certificate, multi-step error control, G6, all-order graph completion, G2 §5b carrier identification and physical realization remain OPEN. CONTROLLED_APPROXIMATE_CLOSURE not accepted. No evidence re-audit or new RER record acceptance inferred from recovered bytes. Historical RER source-pending statements remain in predecessor provenance. For admissibility use §§0.3,3,4,6.2–6.3.
 
 ### 6.5 OPEN register (representation scope)
-**OPEN register — proposed descriptive identities, existing obligations unchanged.** Status and owner fields below concern RRF representation work only; owner science stays with the respective scientific owners. All remain ACTIVE. The local names OPEN-A, OPEN-B, OPEN-E1 and OPEN-E2 are retained as aliases (Methodology §§4.2,5.1); proposed descriptive RIDs are not registered until PI adoption.
+**OPEN register — descriptive identities, existing obligations unchanged.** Status and owner fields below concern RRF representation work only; owner science stays with the respective scientific owners. All remain ACTIVE. The local names OPEN-A, OPEN-B, OPEN-E1 and OPEN-E2 are retained as aliases (Methodology §§4.2,5.1); descriptive RIDs are registered at RRF representation scope.
 
-**Closure criteria (PI-approved for the v0.9 candidate, 26 November 2026; [decision record](https://github.com/MustafaAksu/rtg-corpus/pull/417#issuecomment-7202555052)).** The final column contains the approved candidate wording, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. It is not an adopted closure rule and establishes neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged.
+**Closure criteria (PI-approved, 26 November 2026; [decision record](https://github.com/MustafaAksu/rtg-corpus/pull/417#issuecomment-7202555052)).** The final column contains the approved criteria, restricted to the questions already stated in rrf-v0.8.4 §§4.2 and 6. The criteria establish neither new prerequisites nor additional sufficient closure routes. In particular a scoped refusal or obstruction does not automatically close a module. Current governing questions and the B→E1→E2 dependency lock remain unchanged.
 
-| Local alias / proposed RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Closure criterion (PI-approved candidate); relevant interfaces |
+| Local alias / RID | Status | Owner study | Question (existing scope) | Dependencies (existing prerequisites) | Closure criterion (PI-approved); relevant interfaces |
 |---|---|---|---|---|---|
 | OPEN-A / RRF-OPEN-POLE-RELABELING | ACTIVE | RRF | §4.2: (1) whether the registered representation-level involution is physical pole relabeling; (2) whether WRAPPED inversion is the same physical operation. Distinct smooth/formal actions and bookkeeping; no selected action. | No other RRF OPEN prerequisite declared in §4.2. | Justified resolution of both existing questions at their declared scope. Smooth existence alone does not settle either. Relevant: OFN OPEN-OPA, RECOG R1 and G2 contract. |
 | OPEN-B / RRF-OPEN-IDENTIFICATION-PRIMITIVE | ACTIVE | RRF | §6: Genesis identification primitive, node identity versus pole-role identity. | No RRF OPEN prerequisite declared for B in §6. | Resolve the stated identification question before canonical network-state selection. Relevant: GEN/OFN, RECOG F4. |
 | OPEN-E1 / RRF-OPEN-NETWORK-VARIABLES | ACTIVE | RRF | §6: canonical choice of network state variables after B; W→NET identification bridge remains OPEN (§0.3/§3), provisional work only. | OPEN-B. | Justify the canonical choice of network variables in its declared domain; separately resolve the applicable carrier/transport obligations without inferring physical realization. Relevant: RER, RECOG, GEN/OFN. |
 | OPEN-E2 / RRF-OPEN-JOINT-NF | ACTIVE | RRF | §6: joint constrained normal form of the coupled triad; the single-dyad h is not the answer. | OPEN-E1 (and its OPEN-B prerequisite). | Establish the stated joint constrained normal form for the declared coupled model, at its declared scope, after E1; no substitution by the isolated h. |
 
-BR-Q2 is the separately authorized, not-yet-dispositioned OFN question `pipes/RRF/20261104-OFN-binary-recognition-sign-typing.md`. No new sign comparator, gauge choice, registration or BR-Q2 conclusion in this intermediate. OPEN-A then OPEN-B→E1→E2 remains the research sequence.
+BR-Q2 is the separately authorized, not-yet-dispositioned OFN question `pipes/RRF/20261104-OFN-binary-recognition-sign-typing.md`. No new sign comparator, gauge choice, registration or BR-Q2 conclusion in this edition. OPEN-A then OPEN-B→E1→E2 remains the research sequence.
 
 ---
 
@@ -497,7 +497,7 @@ BR-Q2 is the separately authorized, not-yet-dispositioned OFN question `pipes/RR
 | UVM | `uvm-v0.7.2` OPEN-M-6, SG-M-7, §7: PI-approved reference-only use of rrf-v0.8.4 §§0.3,3,3.1,6.2. C3 requires physical J_perp, group, covector dual/lowering, domain, source normalization, observable and restoring block; Stage 1 SESSION only. Archive/finite NF/smooth chart distinct, no UV source-bundle profile or arrow. Same-vector metric convention not applied to UVM Q_s=0.1. C3 remains GEN-facing. |
 | Programme | `programme-v1.5` IF29–33: actual RRF reference and owner-import pins are distinct from prospective synchronized pins. IF30/31 and IF33 change notices to PROG and scoped IF33 notice to RER are due only on authorized successor publication; consumer disposition separate. SG-PROG-1–4 apply; five programme OPENs ACTIVE; no new governing home or PRR status. |
 | RER | `rer-v0.2` G7–10 and adoption record: reference/record only, see §6.4. Historical pins and source limits remain as adopted; no automatic receiving acceptance of v0.9. |
-| Existing DYAD / RECOG / TRIAD / OFN / NUMGEN references | Actual owner-pinned RRF references remain distinct from RRF scientific imports. Programme IF29–32, accepted S1 matrix and each owner import ledger determine scope; no consumer repin by this candidate. |
+| Existing DYAD / RECOG / TRIAD / OFN / NUMGEN references | Actual owner-pinned RRF references remain distinct from RRF scientific imports. Programme IF29–32, accepted S1 matrix and each owner import ledger determine scope; no consumer repin by this edition. |
 
 ## 7.2 Source-use and evidence routing
 
@@ -505,7 +505,7 @@ Claim-level source and scope entries remain at their technical homes in §§2–
 
 #### Import ledger — claim/use index
 
-Each entry points to the complete local claim/use block at the identified section and line in this review candidate; the inherited scope, assumptions, chart, domain, clock and dependency conditions are the ones at that block and the actual owner pin, not a new inference. The frozen-source locator and corresponding candidate locator are also in the movement map. Line numbers are candidate navigation; section and exact source identity control. Source status is distinguished from RRF use. For historical receipts, S0 custody and S1's exact-source matrix govern verification; no certificate execution is asserted here. Unnumbered source blocks remain `RID unavailable`; owner-RID assignment follow-up is unresolved, and no sent governance request is inferred. Evidence RIDs do not stand in for scientific claim RIDs. Explicit current-owner grades below are targeted source readouts, not deductions from RID category or substitutions for historical proof pins. Where a grade is not separately verified, the source block controls.
+Each entry points to the complete local claim/use block at the identified section and line in this edition; the inherited scope, assumptions, chart, domain, clock and dependency conditions are the ones at that block and the actual owner pin, not a new inference. The frozen-source locator and corresponding candidate locator are also in the movement map. Line numbers are edition navigation; section and exact source identity control. Source status is distinguished from RRF use. For historical receipts, S0 custody and S1's exact-source matrix govern verification; no certificate execution is asserted here. Unnumbered source blocks remain `RID unavailable`; owner-RID assignment follow-up is unresolved, and no sent governance request is inferred. Evidence RIDs do not stand in for scientific claim RIDs. Explicit current-owner grades below are targeted source readouts, not deductions from RID category or substitutions for historical proof pins. Where a grade is not separately verified, the source block controls.
 
 | Use key | Actual source pin / RID or exact source locator | Source status / local use boundary | Local use, inherited scope and depends-on | Verification / synchronization |
 |---|---|---|---|---|
@@ -570,11 +570,11 @@ Each entry points to the complete local claim/use block at the identified sectio
 | I-59 | RECOG v0.3.27 §6.16g \| RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS | Current RECOG v0.3.27 L1134: [RESULT] [from: DEF] | §6.3; use line 454; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |
 | I-60 | RECOG v0.3.27 §6.16g; RID: RECOG-RESULT-F4-NETWORK-WELLPOSEDNESS | Current RECOG v0.3.27 L1134: [RESULT] [from: DEF] | §6.3; use line 460; complete block and referenced domain/guard at that site | Current owner statement/contract inspected; EV-SRC-READ, EV-NOT-RERUN |
 
-## 7.3 Proposed RRF-native identifier routing (candidate only)
+## 7.3 RRF-native identifier routing
 
-The four dyad profiles and one provisional network profile keep their existing identifiers. Existing transport keys T-h, T-L, T-exp and T-net, and the local NF→WRAPPED composite keep direction, domain and loss as in §3; T-net remains OPEN. No profile or arrow added. `RRF-CND-01` remains the existing proposed coincidence admissibility interface. The following are proposed local identity labels for unchanged RRF-owned conventions/implications, not owner theorem RIDs and not registered until PI adoption. Identifier annotations point to the actual statement homes without changing their predicates.
+The four dyad profiles and one provisional network profile keep their existing identifiers. Existing transport keys T-h, T-L, T-exp and T-net, and the local NF→WRAPPED composite keep direction, domain and loss as in §3; T-net remains OPEN. No profile or arrow added. `RRF-CND-01` remains the existing proposed coincidence admissibility interface. The following are registered local identity labels for unchanged RRF-owned conventions/implications, not owner theorem RIDs. Identifier annotations point to the actual statement homes without changing their predicates.
 
-| Candidate local ID | Existing home and grade/scope |
+| Local ID | Existing home and grade/scope |
 |---|---|
 | RRF-DEF-PASSIVE-TRANSPORT | §0.3 passive versus new-model discipline `[DEF]`; ER-2B illustration external |
 | RRF-ALG-S-DECOMPOSITION | §4.1 local nonzero multiplicative comparator with consistent square-root branch `[ALG]`, not global canonical decomposition |
@@ -644,10 +644,10 @@ The following source identities are retained as printed in the dated receipts, n
 
 ## Appendix A — Change record
 
-- **v0.9 — DRAFT (26 Nov 2026):** accepted S1 owner-source/interface synchronization and S2a corrections, followed by S2b structural migration. Standard C/class-C scope, smooth/analytic/finite separation, R9 additional rows, M4 HOLD reason, RER noncanonical and UVM reference scope; proposed local identifiers and OPEN aliases retained. Historical bytes and earlier release/evidence records remain retrievable from `rrf-v0.8.4` and the frozen S2a commit. No owner theorem, physical model, BR-Q2 result, OPEN closure or adoption.
+- **v0.9 — ADOPTED (27 Nov 2026):** accepted S1 owner-source/interface synchronization and S2a corrections, followed by S2b structural migration. Standard C/class-C scope, smooth/analytic/finite separation, R9 additional rows, M4 HOLD reason, RER noncanonical and UVM reference scope; local identifiers and OPEN aliases retained. Historical bytes and earlier release/evidence records remain retrievable from `rrf-v0.8.4` and the frozen S2a commit. No owner theorem, physical model, BR-Q2 result, or OPEN closure.
 
 ## Appendix B — Correction routing
 
 The scoped content delta is the independently accepted S2a (review 6076472389), not a compaction inference. The accepted S1 matrix and `records/rrf/RRF_V0_9_S2A_BUILD_REVIEW.md` map each correction to its source and point of use, including Standard C/class-C, current owner statuses, the fixed finite chart versus smooth/analytic distinction, and the distinct R9 rows. Historical rejected/limited claims and evidence remain in the adopted predecessor and owner correction records; operative refusals remain in §8. No new scientific correction in S2b.
 
-*END OF DOCUMENT — RRF v0.9 DRAFT*
+*END OF DOCUMENT — RRF v0.9 ADOPTED*
