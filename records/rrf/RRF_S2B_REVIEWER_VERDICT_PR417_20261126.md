@@ -73,3 +73,23 @@ At release:
 After C1 and C2 are applied and a readback at the corrected head, S2b is accepted for the release review. The candidate cannot be adopted before the PI decision, the release record (carrying G1 and §3's limits) and outbound notices (Programme IF30/31/33). BR-Q2 (#414) remains a separate review; nothing from it enters v0.9.
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+## 6. C1/C2 readback — corrected head `8de7a8cd338f37bce3a73910648eecc9a5628b2c`
+
+**Verdict: ACCEPT SCOPED.** S2b is accepted for the release review.
+
+| Check (native, full checkout) | Result |
+|---|---|
+| `check_rrf_s2b.py` | exit 0. Four negative controls PASS. Archive-base ancestry `98da97c3` PASS. `RRF_S2B_EXACT_MAP_PASS 691 / 654 / 76`. Candidate 121,279 bytes, SHA-256 `2950dbc0a2fd3468005a9b86190fe4513068019a21444fd8c431124043ba942d`, equal to the working tree. |
+| `rrf_s2b_reviewer_checks.py` (blob `6441801c…`, identical to #418) | exit 0. C1: 21 lost tokens, 0 outside archive. C2: 46/46 live import lines indexed. C3: 26/26 owner-grade readouts. C4: ancestry. C5: negative control. |
+| DSN change since `917f76ef` | Three lines only: the Companion-documents line gains the predecessor adoption-record path (C1); the §6.5 closure lead line and column header cite the PI decision record (C2). No other byte changes. |
+| C2 basis | PR #417 comment `7202555052`: the PI's explicit statement "dördünü de onaylıyorum" for criteria A, B, E1 and E2, at candidate scope. The PI also confirmed it directly in the RRF reviewer conversation on 27 Nov 2026. All four OPENs stay ACTIVE; no closure, gauge, carrier, BR-Q2 or adoption is implied. |
+| Adapter limits | Stated in the script docstring and in the build record, as required by §3. |
+| Scope | Changed paths are limited to the RRF DSN, `evidence/rrf/` and `records/rrf/`. Pipes 197/20. The Claude lane is unchanged against `main`. |
+
+**Release conditions, carried forward:**
+- **G1:** the release record names `98da97c3` and `390f75e4…9d72` as the intermediate baseline. #417 merges with a merge commit, and ancestry is re-verified on `main` after the merge.
+- The release record repeats the adapter limits.
+- Programme IF30/31/33 outbound notices are filed.
+
+v0.9 adoption, tag and BASELINE remain PI decisions.
