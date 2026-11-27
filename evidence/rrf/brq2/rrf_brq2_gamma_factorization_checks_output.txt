@@ -1,0 +1,15 @@
+SymPy 1.14.0
+n nonzero_states checked_pairs result
+1 2 4 FACTOR 
+2 4 16 FACTOR 
+3 6 36 FACTOR 
+4 16 256 FACTOR 
+5 30 63 COLLISION ((-1, (0, 0, 0, 0, 0), (0, 0, 1, 0, 0)), (1, (0, 0, 0, 1, 0), (0, 0, 0, 1, 0)), (1, 0, -1, 1))
+6 60 17 COLLISION ((-1, (0, 0, 0, 0, 0, 0), (0, 0, 0, 1, 0, 0)), (1, (0, 0, 0, 0, 0, 0), (0, 1, 0, 0, 0, 1)), (0, 0, 1, -1))
+7 126 261 COLLISION ((-1, (0, 0, 0, 0, 0, 0, 0), (1, 0, 1, 0, 0, 0, 1)), (1, (0, 0, 0, 0, 0, 1, 0), (0, 0, 0, 1, 0, 0, 0)), (0, 0, 0, 0, 1, -1))
+8 256 65536 FACTOR 
+9 504 65 COLLISION ((-1, (0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 1, 0, 0, 0)), (1, (0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 1, 0, 0, 0, 0, 0, 1)), (0, 0, 0, 1, 0, -1))
+PASS exact pair tests n=1..9
+PASS constructive witnesses / sampled exact decoder / phase controls n=1..32
+n=5 phase counterexample sign uses the analytic proof in the record
+PASS perturbed-sign negative control
