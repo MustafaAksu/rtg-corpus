@@ -5,7 +5,8 @@ date: 2026-11-03
 kind: notice
 object: Triadic v1.7 adopted; CN-05 planar metric convention (Triadic §6.18 metric-unit block; RRF v0.8.4 §3.1)
 tags: [triad-v1.7, rrf-v0.8.4]
-state: open
+state: closed
+disposition: 2026-11-27 · accept · records/rrf/RRF_V0_9_INBOX_CLOSEOUT_20261127.md §N06
 ---
 Triadic v1.7 was adopted by the PI on 3 Nov 2026 and tagged `triad-v1.7`. The DSN SHA-256 is `506f3403…e64a`; the release record is `records/triad/TRIAD_v1_7_RELEASE_RECORD.md`.
 

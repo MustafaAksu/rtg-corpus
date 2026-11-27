@@ -4,13 +4,13 @@
 
 | date | from | kind | state | object | blocks | file |
 |---|---|---|---|---|---|---|
-| 2026-10-29 | RECOG | notice | open | RECOG v0.3.23–v0.3.26 adopted (recog-v0.3.26, DSN SHA-256 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34); 30 new RECOG RIDs since recog-v0.3.22 (§6.3, §6.4, §6.5, §6.13a, §6.13b, §6.16e, §8); Appendix B RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325, RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325; OPEN registry unchanged | — | `20261029-RECOG-v0-3-26-adopted.md` |
-| 2026-10-30 | OFN | notice | open | OFN v0.11 §5.5.4 class-C reading; RRF v0.8.4 §6.2a model-contract row and readout entry; OFN11-C01, OFN11-C02 | — | `20261030-OFN-v0-11-adopted.md` |
-| 2026-10-30 | OFN | notice | open | OPEN-OFN-TRIAD-CLASS isolation frame (OFN v0.12 §9); class-C causal-interface identity (§5.5.4) | — | `20261030-OFN-v0-12-adopted.md` |
-| 2026-11-03 | DYAD | notice | open | R9-conditional Dyadic rows; $S_h$ routing (§6.15); DYAD-ALG-KP-FRAME-SCALE; R11 owner labels (Appendix C) | — | `20261103-DYAD-notices-n16-n21.md` |
-| 2026-11-03 | GEN | notice | open | GEN v2.9 and v2.10 changes relevant to RRF §2 (Genesis row pinned at v2.8.9: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO); §7 export protocol | — | `20261103-GEN-v2-10-adopted.md` |
-| 2026-11-03 | TRIAD | notice | open | Triadic v1.7 adopted; CN-05 planar metric convention (Triadic §6.18 metric-unit block; RRF v0.8.4 §3.1) | — | `20261103-TRIAD-v1-7-adopted.md` |
+| 2026-10-29 | RECOG | notice | closed | RECOG v0.3.23–v0.3.26 adopted (recog-v0.3.26, DSN SHA-256 45e307f8333c81a344158ada07ad34a1a3afab6e1b93b2aa04ee09f84878dd34); 30 new RECOG RIDs since recog-v0.3.22 (§6.3, §6.4, §6.5, §6.13a, §6.13b, §6.16e, §8); Appendix B RECOG-ALG-A1C-TAIL-HARMONICS-LIMITS-V0325, RECOG-THM-A1C-SHARPENED-SCHEDULE-ORDER-V0325; OPEN registry unchanged | — | `20261029-RECOG-v0-3-26-adopted.md` |
+| 2026-10-30 | OFN | notice | closed | OFN v0.11 §5.5.4 class-C reading; RRF v0.8.4 §6.2a model-contract row and readout entry; OFN11-C01, OFN11-C02 | — | `20261030-OFN-v0-11-adopted.md` |
+| 2026-10-30 | OFN | notice | closed | OPEN-OFN-TRIAD-CLASS isolation frame (OFN v0.12 §9); class-C causal-interface identity (§5.5.4) | — | `20261030-OFN-v0-12-adopted.md` |
+| 2026-11-03 | DYAD | notice | closed | R9-conditional Dyadic rows; $S_h$ routing (§6.15); DYAD-ALG-KP-FRAME-SCALE; R11 owner labels (Appendix C) | — | `20261103-DYAD-notices-n16-n21.md` |
+| 2026-11-03 | GEN | notice | closed | GEN v2.9 and v2.10 changes relevant to RRF §2 (Genesis row pinned at v2.8.9: GEN-THM-TRANSPORTED-CHIRAL-FACTOR-NOGO); §7 export protocol | — | `20261103-GEN-v2-10-adopted.md` |
+| 2026-11-03 | TRIAD | notice | closed | Triadic v1.7 adopted; CN-05 planar metric convention (Triadic §6.18 metric-unit block; RRF v0.8.4 §3.1) | — | `20261103-TRIAD-v1-7-adopted.md` |
 | 2026-11-04 | OFN | question | open | RRF v0.8.4 §4.1 comparator typing and S-decomposition, §4.2 typed-covariance criterion; RECOG v0.3.27 SG-R14; records/ofn/NODE_BINARY_RECOGNITION_WRAPUP.md §3B, §6 COR-BR-10/11, §7 BR-Q2 | — | `20261104-OFN-binary-recognition-sign-typing.md` |
-| 2026-11-25 | OFN | notice | open | OFN v0.13 §5.5 convention attribution; class-C model contract unchanged | — | `20261125-OFN-v0-13-adopted.md` |
-| 2026-11-25 | UVM | notice | open | UVM v0.7.2 OPEN-M-6/SG-M-7/§7; RRF §§0.3, 3, 3.1, 6.2 | — | `20261125-UVM-v0-7-2-adopted.md` |
-| 2026-11-26 | PROG | notice | open | Programme v1.5 IF29/31/32, §6.5 and §8.2; RRF §6.2a | — | `20261126-PROG-v1-5-adopted.md` |
+| 2026-11-25 | OFN | notice | closed | OFN v0.13 §5.5 convention attribution; class-C model contract unchanged | — | `20261125-OFN-v0-13-adopted.md` |
+| 2026-11-25 | UVM | notice | closed | UVM v0.7.2 OPEN-M-6/SG-M-7/§7; RRF §§0.3, 3, 3.1, 6.2 | — | `20261125-UVM-v0-7-2-adopted.md` |
+| 2026-11-26 | PROG | notice | closed | Programme v1.5 IF29/31/32, §6.5 and §8.2; RRF §6.2a | — | `20261126-PROG-v1-5-adopted.md` |
