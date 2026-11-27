@@ -107,3 +107,35 @@ The negative comparison holds as stated. Under any correspondence that preserves
 - **Result:** Every printed value matches `evidence/rer/r1/runs/` to the printed digits. That covers the residuals, the σ-family errors, the cubic-jet errors, μ, μ22,G, μ22(q), C12 and the reflection identity.
 - **Duplicate output:** `carrier_check2.py` and `t6d_check.py` import `carrier_check.py`, which runs its checks again on import, so its lines appear more than once. This is cosmetic and changes no value. The stored outputs show the same duplication.
 - **Status:** The run is now reproduced on a second machine. It remains a reviewer check, not a certificate.
+
+## 7. Reconciliation with the preparer's R1 work (27 November 2026)
+
+**Object:** PR #419, branch `chatgpt/rer-r1-exact-receiving-20261126`, exact head `ccfba6ff983fd150b41b486b161e60434b0bdb3f` (base `cba0213e`): `RER_R1_CARRIER_PREPARER_20261126.md`, `RER_R1_T6D_PREPARER_20261126.md`, `evidence/rer/r1/preparer/`, orientation shared line and ChatGPT lane. Preparer reconciliation comment on #416: 7202035613.
+
+**Reviewer verdict on #419: ACCEPT SCOPED.** The two R1 dispositions are reconciled: CARRIER ACCEPT SCOPED and T6D ACCEPT SCOPED, with C-1–C-3 and T-1–T-3 agreed by both sides. No disagreement remains.
+
+### 7.1 Checks on #419
+
+- **Evidence integrity:** `evidence/rer/r1/preparer/SHA256SUMS.txt` verifies 4/4.
+- **Reproduction:** both scripts re-executed here (Python 3, SymPy 1.14.0, `python3 -I -B`). The outputs are byte-identical to the committed `runs/`.
+- **Code read in full; the assertions are substantive:**
+  - `r1_exact_check.py` iterates the per-step-projected jet recurrence in exact ℚ[x,y,z,w,k]. It compares all six projected cubic components at symbolic k with the ν, χ closed form. It checks the C20 quartic N, S identities, every C12 coefficient with the Gram differential, cubic reflection, and the T6d normalization and witness.
+  - `r1_general_q_check.py` treats w, w̄ and the q coefficients as independent formal variables over ℚ(i√3). It establishes μ22(q), ν22 = μ22/3 and χ(q) in every projected component.
+- **Records:** they agree with the sources as read in §§1–4 of this review. Pins, line ranges, hashes and the ER-2B v0.3 = v0.2 Part B identity match.
+
+### 7.2 What #419 adds and how it relates to this review
+
+- **χ(q) general formula.** §3.1 left it untested. #419 establishes it exactly. Neither record imports it.
+- **Exact versus numerical.** The preparer's exact ℚ and ℚ(i√3) computations and this review's independent numerical direct iteration (80 digits) are different methods, and they agree on every shared claim.
+- **Higher chart jets.** #419 argues that h3 coboundaries telescope over six steps; §3.1 checked this numerically with c3 and c4 chart terms. The two are consistent.
+- **Fixed-readout T6d sign witness.** At Q_T = Q_cT = q > 0, I_T = 0, Ω_T = ±q (interior of the root radicand), the modal coefficient is 5q²/8 and the T6d r⁰ coefficient is (−30 ± 6√3)q² < 0.
+  - This needs no reflection-compatible domain, but it depends on the normalization bridge Q_T = 2Q_s, I_T = 2I_sc, Ω_T = −2S used as the readout pairing.
+  - It complements the §4 parity obstruction and does not replace it.
+  - Both are r⁰-coefficient statements. Neither is a T6d trajectory statement (r = 0 is an event guard).
+- **Reviewer note R-1 (conditional, not a claim).** In the T6d ledger, $\Delta Q_s^{(1)}$ and $\Delta Q_s^{(2)}$ depend on $Q_s$ only, so they are reflection-even. If the superscripts index powers of r and r is reflection-even, the reflection-odd part of the full $\Delta Q_s$ equals that of the r⁰ term at every r. The parity obstruction would then not be confined to r⁰. The T6d record should keep the r⁰ wording unless the T6d owner confirms the ledger's r-grading.
+
+### 7.3 Independence and integration
+
+- **Independence:** this review (§§1–5) was written before any preparer R1 work existed. #419 discloses that its author saw a synopsis of this review before computing, so its work is "independent implementation, not blind". The two implementations share no code.
+- **Merge test:** merging #419 and then #416 onto `cba0213e` produces no conflicts. The orientation hunks are disjoint.
+- **Integration:** joint integration is recommended. The ER-2B custodian disposition (pin `er2b-v0.3` Part B; §A.4 reading per C-2) and the PI scope decision (18 + 2, or 20 + 0 in the S2 successor) remain separate and pending.
