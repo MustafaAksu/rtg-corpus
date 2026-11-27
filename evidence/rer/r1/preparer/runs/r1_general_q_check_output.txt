@@ -1,0 +1,3 @@
+C20 generic mu22(q), both conjugate components: PASS
+C14 nu22=mu22/3 and C07 generic chi(q), all projected components: PASS
+Exact quadratic-composition sector only; no all-order or physical claim.
